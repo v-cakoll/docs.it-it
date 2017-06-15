@@ -1,5 +1,5 @@
 ---
-title: Sviluppo di librerie con strumenti multipiattaforma
+title: Sviluppo di librerie con strumenti multipiattaforma| Microsoft Docs
 description: Sviluppo di librerie con strumenti multipiattaforma
 keywords: .NET, .NET Core
 author: cartermp
@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: e6286e65ac24de3318f9ec7c97ef6ee2c7b192ed
-ms.openlocfilehash: 15528cb0a12da07763613bee79180c4941224ddf
+ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
+ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
 ms.contentlocale: it-it
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 
@@ -46,7 +46,7 @@ Se non si ha molta familiarità con .NET Standard, leggere l'articolo [.NET Stan
 
 In questo articolo è presente una tabella in cui le diverse versioni di .NET Standard sono associate alle varie implementazioni:
 
-[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 Ecco cosa significa questa tabella ai fini della creazione di una libreria:
 
@@ -325,6 +325,7 @@ Scenari di utilizzo come questo indicano che le API a cui si accede devono avere
 Eseguire i seguenti comandi nel terminale in uso per ottenere la stessa struttura mostrata in questa Guida:
 
 ```console
+mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
@@ -332,9 +333,9 @@ mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
 cd ..
-dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core/csproj
-dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp/csproj
-dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
+dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
+dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
 Verranno aggiunti i tre progetti precedenti e un file soluzione che li collega.  La creazione del file di soluzione e il collegamento dei progetti consentono di ripristinare e compilare i progetti da un livello superiore.
@@ -344,7 +345,7 @@ Verranno aggiunti i tre progetti precedenti e un file soluzione che li collega. 
 Il metodo migliore per creare un riferimento a un progetto è l'uso dell'interfaccia della riga di comando di .NET per aggiungere un riferimento al progetto.  Dalle directory di progetto **AwesomeLibrary.CSharp** e **AwesomeLibrary.FSharp** è possibile eseguire il comando seguente:
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core.csproj
+$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 I file di progetto per **AwesomeLibrary.CSharp** e **AwesomeLibrary.FSharp** includeranno ora un riferimento a **AwesomeLibrary.Core** come destinazione `ProjectReference`.  È possibile verificare la presenza del riferimento cercando quanto segue nei file di progetto:
@@ -360,3 +361,4 @@ Se si preferisce non usare l'interfaccia della riga di comando .NET è possibile
 ### <a name="structuring-a-solution"></a>Definizione della struttura di una soluzione
 
 Un altro aspetto importante delle soluzioni basate su più progetti è quello di stabilire una buona struttura complessiva dei progetti. È possibile organizzare il codice come desiderato. A condizione che si colleghi ogni progetto al file di soluzione mediante `dotnet sln add`, sarà possibile eseguire `dotnet restore` e `dotnet build` a livello della soluzione.
+
