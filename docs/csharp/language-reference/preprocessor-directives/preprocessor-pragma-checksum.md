@@ -1,5 +1,5 @@
 ---
-title: '#pragma checksum (Riferimento C#) | Documentazione Microsoft'
+title: '#<a name="pragma-checksum-c-reference--microsoft-docs"></a>pragma checksum (Riferimento C#) | Documentazione Microsoft'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -41,7 +41,7 @@ Consente di generare i checksum per i file di origine facilitando in tal modo le
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```csharp
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
@@ -66,7 +66,7 @@ Consente di generare i checksum per i file di origine facilitando in tal modo le
   
 ## <a name="example"></a>Esempio  
   
-```  
+```csharp
 class TestClass  
 {  
     static int Main()  
@@ -80,3 +80,4 @@ class TestClass
  [Riferimenti per C#](../../../csharp/language-reference/index.md)   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+
