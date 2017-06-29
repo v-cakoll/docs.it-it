@@ -1,44 +1,49 @@
 ---
-title: "Creazione degli assembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "assembly [.NET Framework], creazione"
-  - "assembly [.NET Framework], su più file"
-  - "assembly su più file"
-  - "assembly su file singolo"
+title: Creazione degli assembly | Microsoft Docs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], multifile
+- single-file assemblies
+- assemblies [.NET Framework], creating
+- multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c131e82e2312e2c1b7fe1b6b2b6d0a6dfb626209
+ms.contentlocale: it-it
+ms.lasthandoff: 06/02/2017
+
 ---
-# Creazione degli assembly
-È possibile creare assembly su singolo file o su più file utilizzando un IDE, ad esempio [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], o altri compilatori e strumenti forniti da [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  Il tipo di assembly più semplice è costituito da un singolo file con nome semplice caricato in un singolo dominio applicazione.  Non sono consentiti riferimenti a tale assembly da parte di assembly esterni alla directory dell'applicazione e tale assembly non viene sottoposto a verifica della versione.  Per disinstallare l'applicazione costituita dall'assembly, è sufficiente eliminare la directory in cui si trova tale assembly.  In alcuni casi, l'utilizzo di un assembly con questo tipo di funzionalità è sufficiente agli sviluppatori per distribuire un'applicazione.  
+# <a name="creating-assemblies"></a>Creazione degli assembly
+È possibile creare assembly su uno o più file tramite un ambiente IDE, ad esempio [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], o tramite i compilatori e gli strumenti forniti da [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. L'assembly più semplice è costituito da un unico file con un nome semplice, caricato in un unico dominio dell'applicazione. Altri assembly all'esterno della directory dell'applicazione non possono fare riferimento a questo assembly, che non può neanche essere sottoposto al controllo della versione. Per disinstallare l'applicazione costituita dall'assembly, è sufficiente eliminare la directory in cui si trova. Per molti sviluppatori un assembly con queste funzionalità è tutto ciò che serve per distribuire un'applicazione.  
   
- È possibile creare un assembly su più file basandosi su svariati moduli di codice e file di risorse  o creare un assembly che possa essere condiviso da più applicazioni.  Un assembly condiviso, a cui è necessario assegnare un nome sicuro, può essere distribuito nella Global Assembly Cache.  
+ È possibile creare un assembly su più file da diversi moduli di codice e file di risorse. È anche possibile creare un assembly che può essere condiviso da più applicazioni. Un assembly condiviso deve avere un nome sicuro e può essere distribuito nella Global Assembly Cache.  
   
- Per il raggruppamento di moduli di codice e risorse in assembly sono disponibili svariate opzioni, che tengono conto dei seguenti fattori:  
+ Quando si raggruppano moduli di codice e risorse negli assembly, sono disponibili diverse opzioni in base ai fattori seguenti:  
   
 -   Controllo delle versioni  
   
-     Raggruppare moduli in cui è necessario che siano contenute le stesse informazioni sulla versione.  
+     Raggruppare i moduli che devono avere le stesse informazioni sulla versione.  
   
 -   Distribuzione  
   
-     Raggruppare moduli di codice e risorse che supportano il modello di distribuzione desiderato.  
+     Raggruppare i moduli di codice e le risorse che supportano il modello di distribuzione usato.  
   
--   Riutilizzo  
+-   Riuso  
   
-     Raggruppare i moduli se è possibile utilizzarli insieme in modo logico per un qualche scopo.  È ad esempio possibile inserire nello stesso assembly un assembly costituito da tipi e delle classi utilizzate raramente per la manutenzione del programma.  Si consiglia inoltre di raggruppare in un assembly i tipi che si desidera condividere con più applicazioni e di firmare tale assembly con un nome sicuro.  
+     Raggruppare i moduli se possono essere usati insieme in modo logico per uno scopo. Ad esempio, è possibile inserire nello stesso assembly un assembly costituito da tipi e classi usati raramente per la manutenzione di programmi. In più, i tipi che si intende condividere più applicazioni devono essere raggruppati in un assembly, che deve essere firmato con un nome sicuro.  
   
 -   Sicurezza  
   
@@ -46,14 +51,14 @@ caps.handback.revision: 8
   
 -   Ambito  
   
-     Raggruppare moduli contenenti tipi di cui è necessario limitare la visibilità allo stesso assembly.  
+     Raggruppare moduli contenenti tipi la cui visibilità deve essere limitata allo stesso assembly.  
   
- Quando si rendono disponibili assembly Common Language Runtime per applicazioni COM non gestite, sono necessarie alcune considerazioni specifiche.  Per ulteriori informazioni sull'utilizzo del codice non gestito, vedere [Exposing .NET Framework Components to COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).  
+ Sono necessarie considerazioni speciali quando si rendono disponibili assembly Common Language Runtime ad applicazioni COM non gestite. Per altre informazioni sull'uso di codice non gestito, vedere [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)   
  [Controllo delle versioni degli assembly](../../../docs/framework/app-domains/assembly-versioning.md)   
- [Procedura: compilare un assembly su singolo file](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)   
+ [Procedura: Compilare un assembly su singolo file](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)   
  [Procedura: Compilare un assembly su più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [Assembly su più file](../../../docs/framework/app-domains/multifile-assemblies.md)

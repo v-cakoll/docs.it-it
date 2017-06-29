@@ -1,36 +1,38 @@
 ---
-title: "Procedura: Creare un dominio dell&#39;applicazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "domini dell'applicazione, creazione"
+title: 'Procedura: Creare un dominio dell&quot;applicazione | Microsoft Docs'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application domains, creating
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 928a5d897e7df288f07ec32aff43f28617ef9623
+ms.contentlocale: it-it
+ms.lasthandoff: 06/02/2017
+
 ---
-# Procedura: Creare un dominio dell&#39;applicazione
-I domini applicazione vengono automaticamente creati dagli host di Common Language Runtime quando necessario.  È tuttavia possibile creare i propri domini applicazione e caricarvi gli assembly che si desidera gestire personalmente.  È inoltre possibile creare domini applicazione da cui eseguire codice.  
+# <a name="how-to-create-an-application-domain"></a>Procedura: Creare un dominio dell'applicazione
+I domini dell'applicazione vengono creati automaticamente dall'host Common Language Runtime quando necessario. È tuttavia possibile creare i propri domini dell'applicazione e caricarvi gli assembly che si vuole gestire personalmente. È anche possibile creare domini dell'applicazione da cui eseguire codice.  
   
- Per creare un nuovo dominio dell'applicazione, utilizzare uno dei metodi di overload **CreateDomain** della classe <xref:System.AppDomain?displayProperty=fullName>.  È possibile assegnare un nome al dominio applicazione e fare riferimento al dominio applicazione utilizzando tale nome.  
+ Per creare un nuovo dominio dell'applicazione, usare uno dei metodi di overload **CreateDomain** nella classe <xref:System.AppDomain?displayProperty=fullName>. È possibile assegnare un nome al dominio dell'applicazione da usare per fare riferimento al dominio.  
   
- L'esempio seguente consente di creare un nuovo dominio applicazione, di assegnare il nome `MyDomain` a tale dominio e infine di stampare il nome del dominio host e del dominio applicazione figlio appena creato sulla console.  
+ L'esempio seguente crea un nuovo dominio dell'applicazione, assegna al dominio il nome `MyDomain` e quindi stampa il nome del dominio host e del dominio dell'applicazione figlio appena creato nella console.  
   
-## Esempio  
- [!code-cpp[ADCreateDomain#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADCreateDomain/CPP/source2.cpp#2)]
- [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)]
- [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
+## <a name="example"></a>Esempio  
+ [!code-cpp[ADCreateDomain#2](../../../samples/snippets/cpp/VS_Snippets_CLR/ADCreateDomain/CPP/source2.cpp#2)] [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)] [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
-## Vedere anche  
- [Hosting Overview](http://msdn.microsoft.com/it-it/ea527626-99e3-4995-81c4-c8f3e60eb6d5)   
- [Programming with Application Domains](http://msdn.microsoft.com/it-it/bd36055b-56bd-43eb-b4d8-820c37172131)   
+## <a name="see-also"></a>Vedere anche  
+ [Programmazione con i domini applicazione](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)

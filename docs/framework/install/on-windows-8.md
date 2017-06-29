@@ -1,5 +1,5 @@
 ---
-title: Installazione di .NET Framework in Windows 8
+title: Installare .NET Framework in Windows 8 | Microsoft Docs
 description: Informazioni sull&quot;installazione di .NET Framework in Windows 8
 author: rlander
 keywords: .NET Framework, Installare
@@ -9,21 +9,21 @@ ms.prod: .net-framework-4.6
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cda1d5-c9a4-4eb5-93e6-4f478de07ff7
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 628b3d0daa9d80a2a086516076b28282cee8a997
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 3746f31c316d5c79f9672c4e785fc2bb82411db9
 ms.contentlocale: it-it
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 
-# <a name="installing-the-net-framework-on-windows-8"></a>Installazione di .NET Framework in Windows 8
+# <a name="install-the-net-framework-on-windows-8"></a>Installare .NET Framework in Windows 8
 
 Potrebbe essere necessario disporre di .NET Framework per eseguire un'applicazione in Windows 8. Le istruzioni seguenti possono essere usate come supporto e variano a seconda della versione di .NET Framework richiesta.
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-È possibile installare [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?linkid=845529&source=dotnetdocs) o versioni successive in Windows 8. 
+È possibile installare [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?linkid=845529&source=dotnetdocs) o versioni successive in Windows 8.
 
 .NET Framework 4.6.2 è incluso nell'[Aggiornamento dell'anniversario di Windows 10](https://www.microsoft.com/software-download/windows10).
 

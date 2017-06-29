@@ -1,60 +1,61 @@
 ---
-title: "How to: Create an XML Documentation File Using CodeDOM | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CodeDOM, generating XML documentation"
-  - "XML documentation, creating using CodeDOM"
-  - "Code Document Object Model, generating XML documentation"
+title: 'Procedura: Creare un file di documentazione XML tramite CodeDOM | Microsoft Docs'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CodeDOM, generating XML documentation
+- XML documentation, creating using CodeDOM
+- Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: f9f90a91511b846a9ade9dc197c49caed082d57b
+ms.contentlocale: it-it
+ms.lasthandoff: 06/02/2017
+
 ---
-# How to: Create an XML Documentation File Using CodeDOM
-CodeDOM può essere utilizzato per creare codice in grado di generare documentazione XML.  Il processo comporta la creazione del grafico CodeDOM che contiene i commenti per la documentazione XML, la generazione del codice e la compilazione del codice generato con l'opzione che crea l'output di tale documentazione.  
+# <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Procedura: creare un file di documentazione XML tramite CodeDOM
+CodeDOM consente di creare codice che genera documentazione XML. Il processo comporta la creazione del grafo CodeDOM contenente i commenti per la documentazione XML, la generazione del codice e la compilazione del codice generato con l'opzione del compilatore che crea l'output della documentazione XML.  
   
-### Per creare un grafico CodeDOM contenente i commenti per la documentazione XML  
+### <a name="to-create-a-codedom-graph-that-contains-xml-documentation-comments"></a>Per creare un grafo CodeDOM contenente i commenti per la documentazione XML  
   
-1.  Creare un oggetto <xref:System.CodeDom.CodeCompileUnit> contenente il grafico CodeDOM per l'applicazione di esempio.  
+1.  Creare un oggetto <xref:System.CodeDom.CodeCompileUnit> contenente il grafo CodeDOM per l'applicazione di esempio.  
   
-2.  Utilizzare il costruttore <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> con il parametro `docComment` impostato su `true` per creare il testo e gli elementi di commento della documentazione XML.  
+2.  Usare il costruttore <xref:System.CodeDom.CodeCommentStatement.%23ctor%2A> con il parametro `docComment` impostato su `true` per creare il testo e gli elementi di commento della documentazione XML.  
   
-     [!code-csharp[CodeDomHelloWorldSample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#4)]
-     [!code-vb[CodeDomHelloWorldSample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#4)]  
+     [!code-csharp[CodeDomHelloWorldSample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#4)]  [!code-vb[CodeDomHelloWorldSample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#4)]  
   
-### Per generare il codice da CodeCompileUnit  
+### <a name="to-generate-the-code-from-the-codecompileunit"></a>Per generare il codice da CodeCompileUnit  
   
-1.  Utilizzare il metodo <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> per generare il codice e creare un file di origine da compilare.  
+1.  Usare il metodo <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> per generare il codice e creare un file di origine da compilare.  
   
-     [!code-csharp[CodeDomHelloWorldSample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#5)]
-     [!code-vb[CodeDomHelloWorldSample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#5)]  
+     [!code-csharp[CodeDomHelloWorldSample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#5)]  [!code-vb[CodeDomHelloWorldSample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#5)]  
   
-### Per compilare il codice e generare il file di documentazione  
+### <a name="to-compile-the-code-and-generate-the-documentation-file"></a>Per compilare il codice e generare il file di documentazione  
   
-1.  Aggiungere l'opzione di compilazione **\/doc** alla proprietà <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> di un oggetto <xref:System.CodeDom.Compiler.CompilerParameters> e passare l'oggetto al metodo <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> per creare il file di documentazione XML quando il codice viene compilato.  
+1.  Aggiungere l'opzione del compilatore **/doc** alla proprietà <xref:System.CodeDom.Compiler.CompilerParameters.CompilerOptions%2A> di un oggetto <xref:System.CodeDom.Compiler.CompilerParameters> e passare l'oggetto al metodo <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A> per creare il file di documentazione XML quando il codice viene compilato.  
   
-     [!code-csharp[CodeDomHelloWorldSample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#6)]
-     [!code-vb[CodeDomHelloWorldSample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#6)]  
+     [!code-csharp[CodeDomHelloWorldSample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#6)]  [!code-vb[CodeDomHelloWorldSample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#6)]  
   
-## Esempio  
- Nell'esempio di codice seguente viene creato un grafico CodeDOM con i commenti della documentazione, viene generato un file di codice a partire da tale grafico, viene compilato il file e viene creato un file di documentazione XML associato.  
+## <a name="example"></a>Esempio  
+ L'esempio di codice seguente crea un grafo CodeDOM con i commenti della documentazione, genera un file di codice dal grafo e compila il file e crea un file di documentazione XML associato.  
   
- [!code-csharp[CodeDomHelloWorldSample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#1)]
- [!code-vb[CodeDomHelloWorldSample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#1)]  
+ [!code-csharp[CodeDomHelloWorldSample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#1)] [!code-vb[CodeDomHelloWorldSample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#1)]  
   
- Nell'esempio di codice viene creata la documentazione XML seguente nel file HelloWorldDoc.xml.  
+ L'esempio di codice crea la documentazione XML seguente nel file HelloWorldDoc.xml.  
   
-```  
+```xml  
 <?xml version="1.0" ?>   
 <doc>  
   <assembly>  
@@ -77,11 +78,11 @@ CodeDOM può essere utilizzato per creare codice in grado di generare documentaz
 </doc>  
 ```  
   
-## Compilazione del codice  
+## <a name="compiling-the-code"></a>Compilazione del codice  
   
 -   Per essere eseguito correttamente, questo esempio di codice richiede il set di autorizzazioni `FullTrust`.  
   
-## Vedere anche  
- [Documenting Your Code with XML](../Topic/Documenting%20Your%20Code%20with%20XML%20\(Visual%20Basic\).md)   
- [Commenti relativi alla documentazione XML](../Topic/XML%20Documentation%20Comments%20\(C%23%20Programming%20Guide\).md)   
- [Documentazione di XML](../Topic/XML%20Documentation%20\(Visual%20C++\).md)
+## <a name="see-also"></a>Vedere anche  
+ [Documentazione del codice tramite XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)   
+ [Commenti relativi alla documentazione XML](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
+ [Documentazione di XML](/cpp/ide/xml-documentation-visual-cpp)

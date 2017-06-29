@@ -1,53 +1,58 @@
 ---
-title: "Global Assembly Cache | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elenchi di controllo di accesso [.NET Framework]"
-  - "ACL [.NET Framework]"
-  - "assembly [.NET Framework], Global Assembly Cache"
-  - "cache [.NET Framework], Global Assembly Cache"
-  - "GAC (Global Assembly Cache)"
-  - "Global Assembly Cache"
-  - "Global Assembly Cache, informazioni"
+title: Global Assembly Cache | Microsoft Docs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], global assembly cache
+- GAC (global assembly cache)
+- ACLs [.NET Framework]
+- global assembly cache
+- cache [.NET Framework], global assembly cache
+- global assembly cache, about
+- access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 caps.latest.revision: 13
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 13
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 0a40c6dcc51728bb069381b8af4652ce533bb08c
+ms.contentlocale: it-it
+ms.lasthandoff: 06/02/2017
+
 ---
-# Global Assembly Cache
-Ogni computer in cui è installato Common Language Runtime dispone di una cache del codice a livello di macchina denominata Global Assembly Cache.  Nella Global Assembly Cache vengono archiviati gli assembly che verranno utilizzati da più applicazioni presenti sul computer.  
+# <a name="global-assembly-cache"></a>Global Assembly Cache
+Ogni computer in cui è installato Common Language Runtime ha una cache di codice a livello di computer detta Global Assembly Cache. La Global Assembly Cache memorizza gli assembly specificamente designati per essere condivisi da più applicazioni sul computer.  
   
- Gli assembly devono essere installati nella Global Assembly Cache solo quando è necessario condividerli.  È consigliabile mantenere private le dipendenze degli assembly e inserire gli assembly nella directory dell'applicazione, a meno che non vi sia la specifica esigenza di condividerli.  Non è inoltre necessario installare assembly nella Global Assembly Cache per renderli accessibili all'interoperabilità COM o al codice gestito.  
+ Per condividere gli assembly è opportuno installarli nella Global Assembly Cache solo quando è necessario. Come regola generale, mantenere le dipendenze degli assembly private e individuare gli assembly nella directory dell'applicazione, a meno che la condivisione di un assembly non venga richiesta in modo esplicito. Non è inoltre necessario installare gli assembly nella Global Assembly Cache per renderli accessibili al codice non gestito o all'interoperabilità COM.  
   
 > [!NOTE]
->  In alcune situazioni si preferisce non installare un assembly nella Global Assembly Cache.  Se si inserisce nella Global Assembly Cache uno degli assembly che costituiscono un'applicazione, non sarà più possibile replicare o installare l'applicazione copiando la relativa directory con il comando **xcopy**.  Occorrerà infatti spostare anche l'assembly contenuto nella Global Assembly Cache.  
+>  Esistono scenari in cui si sceglie in modo esplicito di non installare un assembly nella Global Assembly Cache. Se si inserisce uno degli assembly che costituiscono un'applicazione nella Global Assembly Cache, non sarà più possibile replicare o installare l'applicazione usando il comando **xcopy** per copiare la directory dell'applicazione. È necessario spostare anche l'assembly nella Global Assembly Cache.  
   
- Un assembly può essere distribuito nella Global Assembly Cache in due modi:  
+ Esistono due modi per implementare un assembly nella Global Assembly Cache:  
   
--   Utilizzando un programma di installazione in grado di gestire la Global Assembly Cache.  Questa è la soluzione più indicata.  
+-   Usare un programma di installazione progettato per funzionare con la Global Assembly Cache. Questa è l'opzione preferita per l'installazione degli assembly nella Global Assembly Cache.  
   
--   Utilizzando uno strumento di sviluppo denominato [strumento Global Assembly Cache \(Gacutil.exe\)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), fornito con [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+-   Usare uno strumento per sviluppatori denominato [strumento Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), disponibile con [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
     > [!NOTE]
-    >  Ai fini della distribuzione, per installare gli assembly nella Global Assembly Cache è necessario utilizzare Windows Installer.  Utilizzare lo strumento della Global Assembly Cache solo in scenari di sviluppo. In questo modo non viene infatti fornito il conteggio dei riferimenti agli assembly e altre funzionalità offerte invece da Windows Installer.  
+    >  Ai fini della distribuzione, per installare gli assembly nella Global Assembly Cache è necessario utilizzare Windows Installer. Usare lo strumento Global Assembly Cache solo in scenari di sviluppo, poiché non prevede il conteggio dei riferimenti di assembly né altre funzionalità disponibili con il programma di installazione di Windows.  
   
- A partire da .NET Framework 4, per impostazione predefinita la Global Assembly Cache è **%windir%\\Microsoft.NET\\assembly**.  Nelle versioni precedenti di .NET Framework, il percorso predefinito è **%windir%\\assembly**.  
+ A partire da .NET Framework 4, il percorso predefinito della Global Assembly Cache è **%windir%\Microsoft.NET\assembly**. Nelle versioni precedenti di .NET Framework, il percorso predefinito è **%windir%\assembly**.  
   
- La directory systemroot viene spesso protetta dagli amministratori tramite un elenco di controllo di accesso \(ACL, Access Control List\) che consente di controllare l'accesso in lettura e in esecuzione.  Poiché la Global Assembly Cache è installata in una sottodirectory della directory systemroot, ne eredita l'elenco di controllo di accesso.  Si consiglia di consentire l'eliminazione di file dalla Global Assembly Cache solo agli utenti che dispongono di privilegi di amministratore.  
+ Gli amministratori spesso proteggono la directory Systemroot usando un elenco di controllo di accesso (ACL) per controllare l'accesso in scrittura ed esecuzione. Poiché la Global Assembly Cache viene installata in una sottodirectory della directory Systemroot, eredita l'ACL di tale directory. È consigliabile che solo gli utenti con privilegi di amministratore siano autorizzati a eliminare file dalla Global Assembly Cache.  
   
- È necessario che gli assembly distribuiti nella Global Assembly Cache abbiano un nome sicuro.  Quando si aggiunge un assembly alla Global Assembly Cache, viene verificata l'integrità di tutti i file che lo costituiscono.  Tale controllo viene svolto dalla cache per accertare che l'assembly non sia stato compromesso, ad esempio per l'eventualità in cui un file sia stato modificato e il manifesto non rispecchi tale modifica.  
+ Gli assembly implementati nella Global Assembly Cache devono avere un nome sicuro. Quando si aggiunge un assembly alla Global Assembly Cache, vengono eseguiti controlli di integrità su tutti i file che compongono l'assembly. La cache esegue questi controlli di integrità per garantire che un assembly non sia stato manomesso, ad esempio quando un file è stato modificato ma il manifesto non riflette la modifica.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
- [Utilizzo di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
+ [Uso di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
  [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md)

@@ -1,40 +1,45 @@
 ---
-title: "Posizione dell&#39;assembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "assembly [.NET Framework], posizione"
-  - "individuazione di assembly"
+title: Posizione dell&quot;assembly | Microsoft Docs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- locating assemblies
+- assemblies [.NET Framework], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4ee16bb622b03a5c9975a896aab951ae74d184a9
+ms.contentlocale: it-it
+ms.lasthandoff: 06/02/2017
+
 ---
-# Posizione dell&#39;assembly
-La posizione di un assembly consente di stabilire se Common Language Runtime è in grado di individuarlo quando vi si fa riferimento e consente inoltre di stabilire se è possibile condividere l'assembly con altri assembly.  È possibile distribuire un assembly nelle seguenti posizioni:  
+# <a name="assembly-location"></a>Posizione dell'assembly
+La posizione dell'assembly determina se Common Language Runtime può individuarlo quando rileva un riferimento all'assembly e può determinare se l'assembly è condivisibile con altri assembly. È possibile distribuire un assembly nelle seguenti posizioni:  
   
--   La directory o le sottodirectory dell'applicazione.  
+-   Directory o sottodirectory dell'applicazione.  
   
-     L'assembly viene solitamente distribuito in questa posizione.  Le sottodirectory della directory radice di un'applicazione possono essere basate sulla lingua o sulle impostazioni cultura.  Se nell'attributo relativo alle impostazioni cultura di un assembly sono contenute informazioni, è necessario inserire tale assembly in una sottodirectory della directory dell'applicazione a cui è assegnato il nome delle impostazioni cultura specificate.  
+     Questa è la posizione più comune per la distribuzione di un assembly. Le sottodirectory della directory radice di un'applicazione possono essere basate sulla lingua o sulle impostazioni cultura. Se un assembly dispone di informazioni nell'attributo delle impostazioni cultura, deve trovarsi in una sottodirectory della directory dell'applicazione con il nome delle impostazioni cultura specificato nell'attributo.  
   
--   La Global Assembly Cache.  
+-   Global Assembly Cache.  
   
-     Si tratta di una cache di codice binario, installata a ogni installazione di Common Language Runtime.  Nella maggior parte dei casi, se si desidera condividere un assembly con più applicazioni, si consiglia di distribuire tale assembly nella Global Assembly Cache.  
+     Cache di codice a livello dell'intero computer che viene installata nella stessa posizione di Common Language Runtime. Nella maggior parte dei casi se si prevede di condividere un assembly con più applicazioni è cosigliabile distribuirlo nella Global Assembly Cache.  
   
--   Un server HTTP.  
+-   In un server HTTP.  
   
-     È necessario che un assembly distribuito su un server HTTP disponga di un nome sicuro. Si punta all'assembly dalla sezione relativa alla base di codice del file di configurazione dell'applicazione.  
+     Un assembly distribuito in un server HTTP deve avere un nome sicuro. È possibile specificare l'assembly nella sezione codebase del file di configurazione dell'applicazione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)   
  [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)   
  [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
