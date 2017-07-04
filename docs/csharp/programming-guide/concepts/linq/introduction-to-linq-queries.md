@@ -38,7 +38,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
 ms.openlocfilehash: 317ea9a17a792bcbfd11c5f1085218e2b0f2a312
 ms.contentlocale: it-it
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introduzione alle query LINQ (C#)
@@ -62,13 +62,13 @@ Una *query* è un'espressione che recupera dati da un'origine dati. Le query son
  ![Operazione di query LINQ completa](../../../../csharp/programming-guide/concepts/linq/media/linq_query.png "LINQ_Query")  
   
 ## <a name="the-data-source"></a>Origine dati  
- Nell'esempio precedente, perché l'origine dati è una matrice, in modo implicito supporta generica <xref:System.Collections.Generic.IEnumerable%601> interfaccia. Ciò significa che è possibile eseguire query con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Viene eseguita una query in un `foreach` istruzione e `foreach` richiede <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. I tipi che supportano <xref:System.Collections.Generic.IEnumerable%601> o un'interfaccia derivata, ad esempio il tipo generico <xref:System.Linq.IQueryable%601> vengono chiamati *tipi queryable*.  
+ Poiché nell'esempio precedente è stata usata una matrice come origine dati, viene supportata implicitamente l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>. Ciò significa che è possibile eseguire query con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Viene eseguita una query in un'istruzione `foreach` e `foreach` richiede <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. I tipi che supportano <xref:System.Collections.Generic.IEnumerable%601> o un'interfaccia derivata, ad esempio l'interfaccia generica <xref:System.Linq.IQueryable%601> sono denominati *tipi queryable*.  
   
- Un tipo queryable non richiede alcuna modifica o trattamento speciale per essere usato come origine dati [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Se i dati di origine non sono già in memoria come tipi queryable, il provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] deve rappresentarli come tali. Ad esempio, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] carica un documento XML in un tipo queryable <xref:System.Xml.Linq.XElement> tipo:  
+ Un tipo queryable non richiede alcuna modifica o trattamento speciale per essere usato come origine dati [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Se i dati di origine non sono già in memoria come tipi queryable, il provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] deve rappresentarli come tali. Ad esempio, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] carica un documento XML in un tipo <xref:System.Xml.Linq.XElement> queryable:  
   
  [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
- Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] è necessario creare prima un mapping relazionale a oggetti in fase di progettazione, manualmente o usando gli [Strumenti LINQ to SQL in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). È possibile scrivere le query sugli oggetti e in fase di esecuzione [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] gestisce la comunicazione con il database. Nell'esempio seguente, `Customers` rappresenta una tabella specifica nel database e il tipo del risultato della query, <xref:System.Linq.IQueryable%601>, deriva da <xref:System.Collections.Generic.IEnumerable%601>.  
+ Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] è necessario creare prima un mapping relazionale a oggetti in fase di progettazione, manualmente o usando gli [Strumenti LINQ to SQL in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). È possibile scrivere le query sugli oggetti e in fase di esecuzione [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] gestisce la comunicazione con il database. Nell'esempio seguente `Customers` rappresenta una tabella specifica nel database e il tipo del risultato della query, <xref:System.Linq.IQueryable%601>, deriva da <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -80,10 +80,10 @@ IQueryable<Customer> custQuery =
     select cust;  
 ```  
   
- Per altre informazioni sulla creazione di tipi specifici di origini dati, vedere la documentazione dei diversi provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Tuttavia, la regola di base è molto semplice: un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origine dati è qualsiasi oggetto che supporta il tipo generico <xref:System.Collections.Generic.IEnumerable%601> interfaccia o un'interfaccia che eredita da esso.  
+ Per altre informazioni sulla creazione di tipi specifici di origini dati, vedere la documentazione dei diversi provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Tuttavia, la regola di base è molto semplice: un'origine dati [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] è qualsiasi oggetto che supporti l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> o un'interfaccia da essa ereditata.  
   
 > [!NOTE]
->  Tipi, ad esempio <xref:System.Collections.ArrayList> che supportano il tipo non generico <xref:System.Collections.IEnumerable> interfaccia può essere utilizzata anche come un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origine dati. Per altre informazioni, vedere [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
+>  È anche possibile usare come origine dati [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] tipi come <xref:System.Collections.ArrayList> che supportano l'interfaccia non generica <xref:System.Collections.IEnumerable>. Per altre informazioni, vedere [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
 ##  <a name="query"></a> Query  
  La query specifica le informazioni da recuperare dall'origine o dalle origini dati. Una query può anche specificare il modo in cui ordinare, raggruppare e definire le informazioni prima che vengano restituite. Una query viene archiviata in una variabile di query e inizializzata con un'espressione di query. Per semplificare la scrittura delle query, in C# è stata introdotta una nuova sintassi della query.  
@@ -109,7 +109,7 @@ IQueryable<Customer> custQuery =
   
  [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
- Per forzare l'esecuzione immediata di una query e i risultati nella cache, è possibile chiamare il <xref:System.Linq.Enumerable.ToList%2A> o <xref:System.Linq.Enumerable.ToArray%2A> metodi.  
+ Per forzare l'esecuzione immediata di una query e memorizzarne nella cache i risultati, è possibile chiamare i metodi <xref:System.Linq.Enumerable.ToList%2A> o <xref:System.Linq.Enumerable.ToArray%2A>.  
   
  [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
