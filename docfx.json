@@ -41,7 +41,6 @@
           "src": "docs",
           "dest": ".",
           "exclude": [
-	"api/*.yml"
 	"**/includes/**", 
 	"***/contributing.md",
 	"framework/add-ins/**",
