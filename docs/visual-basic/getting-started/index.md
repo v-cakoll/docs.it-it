@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 3f3d00e8145620520697941c9002ea81f8de9044
 ms.contentlocale: it-it
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Guida introduttiva a Visual Basic
@@ -61,22 +61,22 @@ Elenca le nuove funzionalità di ogni versione di Visual Basic .NET.
  Vengono forniti collegamenti a pagine in cui è introdotta la programmazione orientata a oggetti, la creazione di oggetti personalizzati e l'utilizzo degli oggetti per semplificare l'attività di codifica.  
   
  [Esempi](../../visual-basic/sample-applications.md)  
- Vengono forniti i collegamenti ai codici di esempio in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Vengono forniti i collegamenti ai codici di esempio in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Procedure dettagliate](../../visual-basic/walkthroughs.md)  
- Viene fornito un elenco delle pagine della Guida in cui vengono illustrati gli aspetti del linguaggio [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Viene fornito un elenco delle pagine della Guida in cui vengono illustrati gli aspetti del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Comunicazioni con Microsoft](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
  Vengono fornite informazioni su come richiedere assistenza e inviare commenti e suggerimenti.  
   
  [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
- Vengono forniti i collegamenti alla documentazione di [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ Vengono forniti i collegamenti alla documentazione di [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [C#](../../csharp/csharp.md)  
- Vengono forniti i collegamenti alla documentazione relativa allo sviluppo di applicazioni con [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].  
+ Vengono forniti i collegamenti alla documentazione relativa allo sviluppo di applicazioni con [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Visual C++](https://docs.microsoft.com/cpp/)  
  Vengono forniti collegamenti alla documentazione di Visual C++.  
   
  [Sviluppo di Office e SharePoint](https://msdn.microsoft.com/library/d2tx7z6d)  
- Vengono fornite informazioni sull'utilizzo di Microsoft Office e [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] come parte di un'applicazione aziendale.
+ Vengono fornite informazioni sull'utilizzo di Microsoft Office e [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] come parte di un'applicazione aziendale.

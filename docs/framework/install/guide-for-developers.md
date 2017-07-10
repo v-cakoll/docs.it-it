@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 348ef65fdb6c1a54abf379278d79ed1a9f626780
+ms.sourcegitcommit: 0248602661b93eb0372e12fbea1055515a9abca3
+ms.openlocfilehash: b7b7cb8d8f10d8d7f437b7bcf91f99237003ca74
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 
@@ -151,7 +151,7 @@ Entrambi i programmi di installazione offline e Web sono progettati per computer
 <a name="standalone_language_packs"></a>   
 ## <a name="to-install-language-packs"></a>Per installare i Language Pack
 
- I Language Pack sono file eseguibili in cui sono contenute risorse localizzate (ad esempio messaggi di errore e testi di interfacce utente tradotti) per le lingue supportate. Se non si installa un Language Pack, i messaggi di errore di .NET Framework e altri testi verranno visualizzati in inglese.  Tramite il programma di installazione Web viene installato automaticamente il Language Pack corrispondente al sistema operativo, ma è possibile scaricare Language Pack aggiuntivi nel computer. I programmi di installazione offline non prevedono Language Pack. I Language Pack, inoltre, non sono disponibili per .NET Framework 4.7.
+ I Language Pack sono file eseguibili in cui sono contenute risorse localizzate (ad esempio messaggi di errore e testi di interfacce utente tradotti) per le lingue supportate. Se non si installa un Language Pack, i messaggi di errore di .NET Framework e altri testi verranno visualizzati in inglese.  Tramite il programma di installazione Web viene installato automaticamente il Language Pack corrispondente al sistema operativo, ma è possibile scaricare Language Pack aggiuntivi nel computer. I programmi di installazione offline non prevedono Language Pack. 
   
 > [!IMPORTANT]
 > Nei Language Pack non sono contenuti i componenti .NET Framework necessari per eseguire un'applicazione, pertanto è necessario eseguire il programma di installazione Web oppure offline prima di installare un Language Pack. Se il Language Pack è ancora installato, disinstallarlo, installare .NET Framework e quindi reinstallare il Language Pack.  
