@@ -1,7 +1,7 @@
 ---
 title: Comando dotnet-test - Interfaccia della riga di comando di .NET Core | Microsoft Docs
-description: Il comando `dotnet test` viene usato per eseguire unit test in un determinato progetto.
-keywords: dotnet-test, interfaccia della riga di comando, comando dell&quot;interfaccia della riga di comando, .NET Core
+description: Il comando "dotnet test" viene usato per eseguire unit test in un determinato progetto.
+keywords: dotnet-test, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/25/2017
@@ -11,24 +11,32 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
-ms.openlocfilehash: 734cf337fdd0d33f6c2b6d929b795b2307135550
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: 0537dbbdfa61503069f6329c4163278f2c9b0af3
 ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-#<a name="dotnet-test"></a>dotnet-test
+<a id="dotnet-test" class="xliff"></a>
 
-## <a name="name"></a>Nome
+#dotnet-test
+
+<a id="name" class="xliff"></a>
+
+## Nome
 
 `dotnet-test`: driver di test .NET usato per eseguire gli unit test.
 
-## <a name="synopsis"></a>Riepilogo
+<a id="synopsis" class="xliff"></a>
+
+## Riepilogo
 
 `dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
-## <a name="description"></a>Descrizione
+<a id="description" class="xliff"></a>
+
+## Descrizione
 
 Il comando `dotnet test` viene usato per eseguire unit test in un determinato progetto. Gli unit test sono progetti dell'applicazione console con dipendenze nel framework di unit test (ad esempio MSText, NUnit o xUnit) e nel Test Runner dotnet per il framework di unit test. Sono disponibili come pacchetti NuGet e vengono ripristinati come dipendenze ordinarie per il progetto.
 
@@ -36,7 +44,9 @@ Anche i progetti di test devono specificare il Test Runner. Quest'ultimo viene s
 
 [!code-xml[Modello di base XUnit](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-## <a name="options"></a>Opzioni
+<a id="options" class="xliff"></a>
+
+## Opzioni
 
 `PROJECT`
     
@@ -90,7 +100,9 @@ Non compila il progetto di test prima di eseguirlo.
 
 Imposta il livello di dettaglio del comando. I valori consentiti sono `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
-## <a name="examples"></a>Esempi
+<a id="examples" class="xliff"></a>
+
+## Esempi
 
 Eseguire i test nel progetto nella directory corrente:
 
@@ -100,7 +112,9 @@ Eseguire i test nel progetto `test1`:
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-## <a name="filter-option-details"></a>Dettagli dell'opzione filter
+<a id="filter-option-details" class="xliff"></a>
+
+## Dettagli dell'opzione filter
 
 `--filter <EXPRESSION>`
 
@@ -129,14 +143,16 @@ Le espressioni possono essere unite con operatori condizionali:
 
 | Operatore | Funzione |
 | :------: | :------: |
-| `|`      | OR       |
+| <code>&#124;</code>      | OR       |
 | `&`      | AND      |
 
 È possibile racchiudere le espressioni tra parentesi quando si usano gli operatori condizionali (ad esempio, `(Name~TestMethod1) | (Name~TestMethod2)`).
 
-Per altre informazioni e per esempi sull'uso del filtro degli unit test selettivi, vedere [Running selective unit tests](../testing/selective-unit-tests.md) (Esecuzione di unit test selettivi).
+Per altre informazioni e per esempi sull'uso del filtro degli unit test selettivi, vedere [Esecuzione di unit test selettivi](../testing/selective-unit-tests.md).
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche
 
 [Framework e destinazioni](../../standard/frameworks.md)   
 [Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)
