@@ -1,5 +1,5 @@
 ---
-title: "Ereditarietà in C#"
+title: "Ereditarietà in C# | Microsoft Docs"
 description: "Informazioni su come usare l&quot;ereditarietà nelle applicazioni e nelle librerie C#."
 keywords: "ereditarietà (C#), classi di base, classi derivate, classi di base astratte"
 author: rpetrusha
@@ -12,23 +12,31 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 0c76bbcc8e60a2739b8c2735b3576842bd4f0942
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: ebb4c4eb754e456ae8a16226c282dc1698dcdd0d
 ms.contentlocale: it-it
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="inheritance-in-c-and-net"></a>Ereditarietà in C# e .NET #
+<a id="inheritance-in-c-and-net" class="xliff"></a>
 
-## <a name="introduction"></a>Introduzione ##
+# Ereditarietà in C# e .NET #
+
+<a id="introduction" class="xliff"></a>
+
+## Introduzione ##
 
 Questa esercitazione presenta l'ereditarietà in C#. L'ereditarietà è una caratteristica dei linguaggi di programmazione orientati a oggetti che consente di definire una classe di base con funzionalità specifiche (relative a dati e comportamento) e classi derivate che ereditano o eseguono l'override di tali funzionalità.
 
-## <a name="prerequisites"></a>Prerequisiti ##
+<a id="prerequisites" class="xliff"></a>
+
+## Prerequisiti ##
 
 In questa esercitazione si presuppone che sia stato installato .NET Core. Per le istruzioni di installazione, vedere [.NET Core installation guide](https://www.microsoft.com/net/core) (Guida all'installazione di .NET Core). È necessario anche un editor di codice. In questa esercitazione viene usato [Visual Studio Code](https://code.visualstudio.com), ma è possibile usare qualsiasi editor di codice desiderato.
 
-## <a name="running-the-examples"></a>Esecuzione degli esempi ##
+<a id="running-the-examples" class="xliff"></a>
+
+## Esecuzione degli esempi ##
 
 Per creare ed eseguire gli esempi in questa esercitazione, viene usata l'utilità [dotnet](../../core/tools/dotnet.md) dalla riga di comando. Eseguire questi passaggi per ogni esempio:
 
@@ -42,7 +50,9 @@ Per creare ed eseguire gli esempi in questa esercitazione, viene usata l'utilit�
 
 1. Per compilare ed eseguire l'esempio, immettere il comando [dotnet run](../../core/tools/dotnet-run.md).
 
-## <a name="background-what-is-inheritance"></a>Informazioni generali: che cos'è l'ereditarietà? ##
+<a id="background-what-is-inheritance" class="xliff"></a>
+
+## Informazioni generali: che cos'è l'ereditarietà? ##
 
 Il concetto di *ereditarietà* è uno degli attributi fondamentali della programmazione orientata a oggetti. L'ereditarietà consente di definire una classe figlio che riutilizza (eredita), estende o modifica il comportamento di una classe padre. La classe i cui membri vengono ereditati è denominata *classe di base*. Quella che eredita i membri della classe di base è denominata *classe derivata*.
 
@@ -117,7 +127,9 @@ L'ereditarietà si applica solo alle classi e alle interfacce. Le altre categori
    }
    ```
 
-## <a name="implicit-inheritance"></a>Ereditarietà implicita ##
+<a id="implicit-inheritance" class="xliff"></a>
+
+## Ereditarietà implicita ##
 
 Oltre ai tipi da cui possono ereditare tramite l'ereditarietà singola, tutti i tipi nel sistema di tipi .NET ereditano in modo implicito da @System.Object o da un tipo derivato. In questo modo le funzionalità comuni saranno disponibili per qualsiasi tipo.
 
@@ -156,7 +168,9 @@ Nella tabella seguente sono elencate le categorie di tipi che è possibile crear
 | enum | @System.Enum, System.ValueType, @System.Object |
 | delegato | @System.MulticastDelegate, @System.Delegate, @System.Object |
 
-## <a name="inheritance-and-an-is-a-relationship"></a>Ereditarietà e relazione "è un" ##
+<a id="inheritance-and-an-is-a-relationship" class="xliff"></a>
+
+## Ereditarietà e relazione "è un" ##
 
 In genere l'ereditarietà consente di esprimere una relazione "è un" tra una classe di base e una o più classi derivate, in cui le classi derivate sono versioni specializzate della classe di base. La classe derivata è un tipo della classe di base. La classe `Publication` rappresenta ad esempio una pubblicazione di qualsiasi tipo e le classi `Book` e `Magazine` rappresentano tipi specifici di pubblicazioni.
 
@@ -172,11 +186,15 @@ In questo caso è opportuno non fare affidamento sull'ereditarietà per rapprese
 
 È preferibile applicare una relazione "è un" basata sull'ereditarietà a una classe di base e a classi derivate che aggiungono altri membri alla classe di base o che richiedono funzionalità aggiuntive non presenti nella classe di base.
 
-## <a name="designing-the-base-class-and-derived-classes"></a>Progettazione della classe di base e delle classi derivate ##
+<a id="designing-the-base-class-and-derived-classes" class="xliff"></a>
+
+## Progettazione della classe di base e delle classi derivate ##
 
 Si esaminerà ora il processo di progettazione della classe di base e delle relative classi derivate. In questa sezione si definirà una classe di base, `Publication`, che rappresenta una pubblicazione di qualsiasi tipo, ad esempio un libro, una rivista, un giornale, un diario, un articolo e così via. Si definirà anche una classe `Book` che deriva da `Publication`. L'esempio può essere facilmente esteso alla definizione di altre classi derivate, ad esempio `Magazine`, `Journal`, `Newspaper` e `Article`.
 
-### <a name="the-base-publication-class"></a>La classe di base `Publication` ###
+<a id="the-base-publication-class" class="xliff"></a>
+
+### La classe di base `Publication` ###
 
 Per progettare la classe `Publication`, è necessario prendere alcune decisioni di progettazione:
 
@@ -245,7 +263,9 @@ La figura seguente illustra la relazione tra la classe di base `Publication` e l
 
 ![Classi Object e Publication](media/publication-class.jpg)
 
-### <a name="the-book-class"></a>Classe `Book` ###
+<a id="the-book-class" class="xliff"></a>
+
+### Classe `Book` ###
 
 La classe `Book` rappresenta un libro come tipo specializzato di pubblicazione. L'esempio seguente illustra il codice sorgente della classe `Book`.
 
@@ -301,7 +321,9 @@ Nell'esempio seguente vengono usati gli oggetti derivati da `Shape`. Viene creat
 
 [!code-csharp[Ereditarietà](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>Vedere anche ##
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche ##
 
 [Classi e oggetti](../tour-of-csharp/classes-and-objects.md)</br>
 [Ereditarietà (Guida per programmatori C#)](../programming-guide/classes-and-structs/inheritance.md)

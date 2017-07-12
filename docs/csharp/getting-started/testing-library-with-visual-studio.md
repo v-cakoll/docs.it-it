@@ -1,5 +1,5 @@
 ---
-title: Test di una libreria di classi con .NET Core in Visual Studio 2017
+title: Test di una libreria di classi con .NET Core in Visual Studio 2017 | Microsoft Docs
 description: Informazioni su come testare una libreria di classi scritta in C# usando Visual Studio 2017
 keywords: ".NET Core, libreria di classi .NET Standard, Visual Studio 2017 testing unità"
 author: BillWagner
@@ -11,22 +11,26 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 629af913bb5172b890161bb82f45a65e6bb6498d
+ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
+ms.openlocfilehash: f07ba05a617f5e270f0e08f2006b25cecc04f05b
 ms.contentlocale: it-it
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Test di una libreria di classi con .NET Core in Visual Studio 2017
+<a id="testing-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
+
+# Test di una libreria di classi con .NET Core in Visual Studio 2017
 
 In [Creazione di una libreria di classi con #C e .NET Core in Visual Studio 2017](library-with-visual-studio.md) è stata creata una libreria di classi semplice che aggiunge un metodo di estensione alla classe @System.String. Ora verrà creato uno unit test per verificare che tale libreria funzioni nel modo previsto. Il progetto unit test verrà aggiunto alla soluzione creata nell'argomento precedente.
 
-## <a name="creating-a-unit-test-project"></a>Creazione di un progetto unit test
+<a id="creating-a-unit-test-project" class="xliff"></a>
+
+## Creazione di un progetto unit test
 
 Per creare un progetto unit test, seguire questa procedura:
 
-1. In **Esplora soluzioni** aprire il menu di scelta rapida per il nodo della soluzione **ClassLibraryProject** e selezionare **Aggiungi** > **Nuovo progetto**.
+1. In **Esplora soluzioni** aprire il menu di scelta rapida per il nodo della soluzione **ClassLibraryProjects** e selezionare **Aggiungi** > **Nuovo progetto**.
 
    <!-- Need a VS 2017 version  [!NOTE] In addition to a Unit Test project, you can also use Visual Studio to create an xUnit test project for .NET Core. For a walkthrough that includes an xUnit test project, see [Getting started with .NET Core on Windows, using Visual Studio 2015](../../core/tutorials/using-on-windows.md). --> 
 
@@ -54,7 +58,9 @@ Per creare un progetto unit test, seguire questa procedura:
 
    ![Gestione riferimenti](./media/testing-library-with-visual-studio/referencemanager.png)
 
-## <a name="adding-and-running-unit-test-methods"></a>Aggiunta ed esecuzione di metodi unit test
+<a id="adding-and-running-unit-test-methods" class="xliff"></a>
+
+## Aggiunta ed esecuzione di metodi unit test
 
 Quando Visual Studio esegue uno unit test, esegue tutti i metodi contrassegnati con l'attributo [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) in una classe unit test, ovvero la classe a cui è applicato l'attributo [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx). Un metodo di test termina quando viene rilevato il primo errore o quando tutti i test contenuti nel metodo stesso hanno avuto esito positivo.
 
@@ -98,7 +104,9 @@ Per creare i metodi di test:
 
    ![Finestra Esplora test](./media/testing-library-with-visual-studio/firsttest.png)
 
-## <a name="handling-test-failures"></a>Gestione degli errori di test
+<a id="handling-test-failures" class="xliff"></a>
+
+## Gestione degli errori di test
 
 L'esecuzione dei test non ha generato errori ma è opportuno apportare qualche modifica in modo che uno dei metodi di test abbia esito negativo:
 
@@ -119,7 +127,9 @@ L'esecuzione dei test non ha generato errori ma è opportuno apportare qualche m
 
 1. Rimuovere il codice che è stato aggiunto (`"Error", `) e rieseguire il test. I test verranno superati.
 
-## <a name="testing-the-release-version-of-the-library"></a>Test della versione di rilascio della libreria
+<a id="testing-the-release-version-of-the-library" class="xliff"></a>
+
+## Test della versione di rilascio della libreria
 
 I test sono stati eseguiti con la versione di debug della libreria. Dopo che tutti i test sono stati superati e la libreria è stata testata in modo adeguato, è necessario ripetere i test con la versione di rilascio della libreria stessa. Esistono infatti alcuni fattori, ad esempio le ottimizzazioni del compilatore, in grado di generare a volte comportamenti diversi tra la versione di debug e quella di rilascio.
 

@@ -1,6 +1,6 @@
 ---
-title: Introduzione a Visual Studio Code | Guida a C#
-description: Informazioni su come creare la prima applicazione .NET Core in C# ed eseguirne il debug usando Visual Studio Code.
+title: Introduzione a Visual Studio Code - Guida a C# | Microsoft Docs
+description: Informazioni su come creare la prima applicazione .NET Core in C# ed eseguirne il debug tramite Visual Studio Code.
 keywords: C#, introduzione, acquisizione, installazione, Visual Studio Code, multipiattaforma
 author: kendrahavens
 ms.author: mairaw
@@ -11,24 +11,30 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
-ms.openlocfilehash: a8233995046e6fdf980bf630da18908a02d2bfb0
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: 14b1696c37f40f7ffc6eb295e08ce1ceee061e45
 ms.contentlocale: it-it
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="get-started-with-visual-studio-code"></a>Introduzione a Visual Studio Code
+<a id="get-started-with-visual-studio-code" class="xliff"></a>
+
+# Introduzione a Visual Studio Code
 
 .NET Core offre una piattaforma veloce e modulare per la creazione di applicazioni server eseguibili in Windows, Linux e macOS. Usare Visual Studio Code con l'estensione C# per ottenere un'efficace esperienza di programmazione con il supporto completo per IntelliSense C# (completamento intelligente del codice) e debug.
 
-## <a name="prerequisites"></a>Prerequisiti
+<a id="prerequisites" class="xliff"></a>
+
+## Prerequisiti
 
 1. Installare [Visual Studio Code](https://code.visualstudio.com/).
 2. Installare [.NET Core SDK](https://www.microsoft.com/net/download/core).
 3. Installare l'[estensione C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) da Visual Studio Code Marketplace.
 
-## <a name="hello-world"></a>Hello World
+<a id="hello-world" class="xliff"></a>
+
+## Hello World
 
 Si inizia con un semplice programma "Hello World" in .NET Core:
 
@@ -63,8 +69,10 @@ Si inizia con un semplice programma "Hello World" in .NET Core:
 
 Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) o [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu), è anche possibile guardare una breve esercitazione video.
 
-## <a name="debug"></a>Debug
-1. Aprire il file *Program.cs* facendo clic su di esso. La prima volta che si apre un file C# in Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) verrà caricato nell'editor.
+<a id="debug" class="xliff"></a>
+
+## Debug
+1. Aprire il file *Program.cs* facendo clic su di esso. La prima volta che si apre un file C# in Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) viene caricato nell'editor.
 
   ![Aprire il file Program.cs](media/with-visual-studio-code/opencs.png)
 
@@ -94,7 +102,9 @@ Per altre informazioni sull'installazione in [Windows](https://channel9.msdn.com
 > [!TIP] 
 > Per altre informazioni e per suggerimenti sul debug .NET Core con OmniSharp in Visual Studio Code, vedere [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (Istruzioni per l'impostazione del debugger .NET Core).
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche
 [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)  (Impostazione di Visual Studio Code)  
 [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Debug in Visual Studio Code)
 

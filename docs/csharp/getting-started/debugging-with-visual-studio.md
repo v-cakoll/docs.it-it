@@ -1,5 +1,5 @@
 ---
-title: Debug dell&quot;applicazione C# Hello World con Visual Studio 2017
+title: Debug dell&quot;applicazione C# Hello World con Visual Studio 2017 | Microsoft Docs
 description: Informazioni su come eseguire il debug di un&quot;applicazione Hello World scritta in C# con Visual Studio 2017.
 keywords: .NET Core, applicazione console .NET Core, debug .NET
 author: BillWagner
@@ -11,18 +11,22 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: a3ed6572d0c8f64f89f77527aa21df454b30982c
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 026158029bfc843bd6cd171933091dc9ac6d4dbe
 ms.contentlocale: it-it
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="debugging-your-c-hello-world-application-with-visual-studio-2017"></a>Debug dell'applicazione C# Hello World con Visual Studio 2017
+<a id="debugging-your-c-hello-world-application-with-visual-studio-2017" class="xliff"></a>
+
+# Debug dell'applicazione C# Hello World con Visual Studio 2017
 
 Finora è stata seguita la procedura descritta in [Creazione di un'applicazione C# Hello World con .NET Core in Visual Studio 2017](.\with-visual-studio.md) per creare ed eseguire una semplice applicazione console. Dopo aver scritto e compilato l'applicazione, è possibile iniziare a testarla. Visual Studio include un set completo di strumenti di debug che è possibile usare durante il test e la risoluzione dei problemi dell'applicazione.
 
-## <a name="debugging-in-debug-mode"></a>Debug in modalità di debug
+<a id="debugging-in-debug-mode" class="xliff"></a>
+
+## Debug in modalità di debug
 
 Le modalità *Debug* e *Rilascio* sono due configurazioni di compilazione predefinite di Visual Studio. La configurazione di compilazione corrente viene visualizzata sulla barra degli strumenti. Nell'immagine della barra degli strumenti seguente è possibile vedere che Visual Studio è configurato per compilare l'applicazione in modalità **Debug**.
 
@@ -30,7 +34,9 @@ Le modalità *Debug* e *Rilascio* sono due configurazioni di compilazione predef
 
 È necessario iniziare sempre eseguendo il test del programma in modalità Debug. La modalità Debug disattiva la maggior parte delle ottimizzazioni del compilatore e offre informazioni più dettagliate durante il processo di compilazione.
 
-## <a name="setting-a-breakpoint"></a>Impostazione di un punto di interruzione
+<a id="setting-a-breakpoint" class="xliff"></a>
+
+## Impostazione di un punto di interruzione
 
 Eseguire il programma in modalità Debug e provare alcune funzionalità di debug:
 
@@ -62,7 +68,9 @@ Eseguire il programma in modalità Debug e provare alcune funzionalità di debug
 
 1. Premere un tasto qualsiasi per chiudere l'applicazione e uscire dalla modalità di debug.
 
-## <a name="setting-a-conditional-breakpoint"></a>Impostazione di un punto di interruzione condizionale
+<a id="setting-a-conditional-breakpoint" class="xliff"></a>
+
+## Impostazione di un punto di interruzione condizionale
 
 Il programma visualizza la stringa immessa dall'utente. Ma cosa succede se l'utente non immette alcuna stringa? È possibile testare questa eventualità con un'utile funzionalità di debug, il *punto di interruzione condizionale*, che interrompe l'esecuzione del programma quando vengono soddisfatte una o più condizioni.
 
@@ -104,7 +112,9 @@ Per impostare un punto di interruzione condizionale e verificare cosa succede qu
 
 1. Rimuovere il punto di interruzione facendo clic sul punto sul margine sinistro della finestra del codice oppure scegliendo la voce di menu **Debug > Imposta/Rimuovi punto di interruzione** per la riga selezionata.
 
-## <a name="stepping-through-a-program"></a>Esecuzione delle singole istruzioni di un programma
+<a id="stepping-through-a-program" class="xliff"></a>
+
+## Esecuzione delle singole istruzioni di un programma
 
 Visual Studio consente anche di esaminare il programma una riga alla volta e di monitorarne l'esecuzione. In genere si imposta un punto di interruzione e si usa questa funzionalità per seguire il flusso del programma, anche attraverso una piccola parte del codice. Dal momento che il programma è di piccole dimensioni, è possibile esaminarlo per intero seguendo questa procedura:
 
@@ -132,7 +142,9 @@ Visual Studio consente anche di esaminare il programma una riga alla volta e di 
 
 1. Premere un tasto qualsiasi per chiudere la finestra della console e uscire dalla modalità di debug.
 
-## <a name="building-a-release-version"></a>Compilazione di una versione di rilascio
+<a id="building-a-release-version" class="xliff"></a>
+
+## Compilazione di una versione di rilascio
 
 Dopo aver testato la compilazione di debug dell'applicazione, è necessario anche compilare e testare la versione di rilascio. La versione di rilascio integra le ottimizzazioni del compilatore che possono talvolta influire negativamente sul comportamento di un'applicazione. Ad esempio, le ottimizzazioni del compilatore progettate per migliorare le prestazioni possono creare condizioni di competizione nelle applicazioni asincrone o multithreading.
 

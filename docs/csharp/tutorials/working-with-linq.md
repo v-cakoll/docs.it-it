@@ -1,5 +1,5 @@
 ---
-title: Uso di LINQ
+title: Uso di LINQ | Microsoft Docs
 description: "Questa esercitazione illustra come generare sequenze con LINQ, come scrivere i metodi da usare nelle query LINQ e come distinguere le modalità di valutazione eager e lazy."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,16 +11,20 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 81ae0a1bd54aff6a5be39ef75cf24eb29d3e0671
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="working-with-linq"></a>Uso di LINQ
+<a id="working-with-linq" class="xliff"></a>
 
-## <a name="introduction"></a>Introduzione
+# Uso di LINQ
+
+<a id="introduction" class="xliff"></a>
+
+## Introduzione
 
 Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#. Verranno affrontati gli argomenti seguenti:
 
@@ -36,17 +40,23 @@ Ai fini dell'esercitazione, questa tecnica offre un modo scherzoso per illustrar
 
 Questa esercitazione prevede diversi passaggi. Dopo ogni passaggio, è possibile eseguire l'applicazione e verificare lo stato di avanzamento. È anche possibile vedere l'[esempio completo](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq) disponibile nel repository dotnet/docs su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Prerequisiti
+<a id="prerequisites" class="xliff"></a>
+
+## Prerequisiti
 
 È necessario configurare il computer per l'esecuzione di .NET Core. Le istruzioni di installazione sono disponibili nella pagina [.NET Core](https://www.microsoft.com/net/core). Questa applicazione può essere eseguita in Windows, Ubuntu Linux, OS X o in un contenitore Docker. È necessario installare l'editor di codice preferito. Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma, ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
 
-## <a name="create-the-application"></a>Creare l'applicazione
+<a id="create-the-application" class="xliff"></a>
+
+## Creare l'applicazione
 
 Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt dei comandi e creare una nuova directory per l'applicazione, impostandola come directory corrente. Digitare il comando `dotnet new console` al prompt dei comandi per creare i file di avvio per un'applicazione "Hello World" di base.
 
 Se non si è mai usato C#, [questa esercitazione](console-teleprompter.md) illustra la struttura di un programma C#. È possibile leggerla e tornare qui per ottenere altre informazioni su LINQ. 
 
-## <a name="creating-the-data-set"></a>Creazione del set di dati
+<a id="creating-the-data-set" class="xliff"></a>
+
+## Creazione del set di dati
 
 Si creerà innanzitutto un mazzo di carte. Eseguire questa operazione usando una query LINQ con due origini, una per i quattro semi e l'altra per i 13 valori. Le due origini verranno combinate in un mazzo da 52 carte. Un'istruzione `Console.WriteLine` all'interno di un ciclo `foreach` visualizza le carte.
 
@@ -100,7 +110,9 @@ Andare avanti ed eseguire l'esempio che si è creato finora. Verranno visualizza
 
 ![Finestra della console con l'applicazione che scrive 52 carte](./media/working-with-linq/console.png)
 
-## <a name="manipulating-the-order"></a>Modifica dell'ordine
+<a id="manipulating-the-order" class="xliff"></a>
+
+## Modifica dell'ordine
 
 A questo punto, si creerà un metodo di utilità che può eseguire il miscuglio. Il primo passaggio consiste nel tagliare il mazzo in due. I metodi `Take()` e `Skip()` inclusi nelle API LINQ offrono questa funzionalità:
 
@@ -173,7 +185,9 @@ public static void Main(string[] args)
 }
 ```
 
-## <a name="comparisons"></a>Confronti
+<a id="comparisons" class="xliff"></a>
+
+## Confronti
 
 Per vedere quante volte è necessario mischiare il mazzo per ripristinare l'ordine originale è necessario scrivere un metodo che determina se due sequenze sono uguali. Una volta creato tale metodo, sarà necessario inserire in un ciclo il codice per mischiare il mazzo e verificare quando viene ripristinato l'ordine originale.
 
@@ -207,7 +221,9 @@ Console.WriteLine(times);
 
 Eseguire l'esempio e vedere come viene riordinato il mazzo a ogni iterazione, finché non viene ripristinata la configurazione originale dopo 8 iterazioni.
 
-## <a name="optimizations"></a>Ottimizzazioni
+<a id="optimizations" class="xliff"></a>
+
+## Ottimizzazioni
 
 L'esempio creato finora *mischia solo le carte interne*, lasciando le carte in cima e in fondo al mazzo sempre nella stessa posizione, ma è possibile introdurre una variazione e *mischiare anche le carte esterne*, cambiando la posizione di tutte e 52 le schede. Per mischiare il mazzo in questo modo, si alternano le carte in modo che la prima carta della metà inferiore diventi la prima carta del mazzo. Di conseguenza, l'ultima carta della metà superiore diventerà l'ultima carta del mazzo. Si tratta semplicemente di una modifica di riga. Aggiornare la chiamata al metodo shuffle per modificare l'ordine della metà superiore e di quella inferiore del mazzo:
 
@@ -285,7 +301,9 @@ Non interpretare erroneamente questo esempio pensando che tutte le query devono 
 
 In pratica, per alcuni algoritmi è più efficiente la valutazione eager, mentre per altri è preferibile la valutazione lazy. Quest'ultima rappresenta in genere la scelta migliore quando l'origine dati è costituita da un processo separato, ad esempio un motore di database. In questi casi, la valutazione lazy consente alle query più complesse di eseguire un solo round trip al processo di database. LINQ supporta entrambi i tipi di valutazione. Scegliere l'opzione migliore per il proprio caso.
 
-## <a name="preparing-for-new-features"></a>Preparazione per le nuove funzionalità
+<a id="preparing-for-new-features" class="xliff"></a>
+
+## Preparazione per le nuove funzionalità
 
 Il codice scritto in questa esercitazione offre un esempio di come creare un prototipo semplice per eseguire un'operazione. Questo è un ottimo modo per esaminare un problema e, per molte funzionalità, può rappresentare la migliore soluzione definitiva. Sono stati usati *tipi anonimi* per le carte e ogni carta è rappresentata da stringhe.
 
@@ -329,7 +347,9 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 
 Compilare e ripetere l'esecuzione. L'output è un po' più pulito e il codice è leggermente più chiaro e può essere esteso con più facilità.
 
-## <a name="conclusion"></a>Conclusione
+<a id="conclusion" class="xliff"></a>
+
+## Conclusione
 
 Questo esempio ha illustrato alcuni dei metodi usati in LINQ e come creare metodi personalizzati da usare facilmente con il codice abilitato per LINQ. Ha inoltre mostrato le differenze tra le modalità di valutazione lazy e eager e l'effetto che può avere tale decisione sulle prestazioni.
 

@@ -1,5 +1,5 @@
 ---
-title: Struct C# | Panoramica del linguaggio C#
+title: Struct C# - Panoramica del linguaggio C# | Microsoft Docs
 description: Informazioni di base sui tipi di valori C# denominati struct
 keywords: .NET, C#, struct, tipo valore
 author: BillWagner
@@ -11,14 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 38ce3cdf3aaa033d84bb2c1a421cb04c6f928ab4
-ms.openlocfilehash: 04b1784b461961496856d62aa6cb70b5978e2437
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 1061144a10a95b254c01db4d12144fdc5619a085
 ms.contentlocale: it-it
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="structs"></a>Struct
+<a id="structs" class="xliff"></a>
+
+# Struct
 
 Analogamente alle classi, i tipi ***struct*** sono strutture dati che possono contenere membri dati e membri funzione. A differenza delle classi, tuttavia, i tipi struct sono tipi valore e non richiedono l'allocazione dell'heap. Una variabile di un tipo struct archivia direttamente i relativi dati, mentre una variabile di un tipo classe archivia un riferimento a un oggetto allocato in modo dinamico. I tipi struct non supportano l'ereditarietà specificata dall'utente. Tutti i tipi struct ereditano implicitamente dal tipo <xref:System.ValueType>, che a sua volta eredita implicitamente da `object`.
 

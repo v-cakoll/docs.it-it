@@ -1,5 +1,5 @@
 ---
-title: Applicazione console
+title: Applicazione console | Microsoft Docs
 description: "Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,16 +11,20 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 360e93af03e00547116d1af1816c2b9b29524881
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 7e8cc0ed7093a90a51d1b0c50123adb73ca968aa
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="console-application"></a>Applicazione console
+<a id="console-application" class="xliff"></a>
 
-## <a name="introduction"></a>Introduzione
+# Applicazione console
+
+<a id="introduction" class="xliff"></a>
+
+## Introduzione
 Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#. Verranno affrontati gli argomenti seguenti:
 *    Nozioni di base sull'interfaccia della riga di comando di .NET Core
 *    Struttura di un'applicazione console in C#
@@ -31,9 +35,13 @@ Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e ne
 Verrà creata un'applicazione in grado di leggere un file di testo e restituire il contenuto del file alla console. La velocità di riproduzione dell'output della console verrà quindi configurata in modo da consentirne la lettura ad alta voce. È possibile aumentare o diminuire la velocità premendo il tasto < o >.
 
 In questa esercitazione verranno create anche numerose funzionalità. 
-## <a name="prerequisites"></a>Prerequisiti
+<a id="prerequisites" class="xliff"></a>
+
+## Prerequisiti
 È necessario configurare il computer per l'esecuzione di .NET Core. Le istruzioni di installazione sono disponibili nella pagina [.NET Core](https://www.microsoft.com/net/core). Questa applicazione può essere eseguita in Windows, Linux, macOS o in un contenitore Docker. È necessario installare l'editor di codice preferito. 
-## <a name="create-the-application"></a>Creare l'applicazione
+<a id="create-the-application" class="xliff"></a>
+
+## Creare l'applicazione
 Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt dei comandi e creare una nuova directory per l'applicazione, impostandola come directory corrente. Digitare il comando `dotnet new console` al prompt dei comandi Questa operazione crea i file iniziali per un'applicazione "Hello World" di base.
 
 Prima di iniziare ad apportare modifiche, è opportuno ripercorrere i passaggi necessari per eseguire l'applicazione Hello World semplice. Dopo aver creato l'applicazione, digitare `dotnet restore` al prompt dei comandi. Questo comando esegue il processo di ripristino dei pacchetti NuGet. Lo strumento NuGet consente di gestire pacchetti .NET. Questo comando scarica eventuali dipendenze mancanti per il progetto. Poiché si tratta di un nuovo progetto, non è ancora presente alcuna dipendenza e con la prima esecuzione verrà quindi scaricato .NET Core Framework. Dopo questo passaggio iniziale, sarà sufficiente eseguire `dotnet restore` quando si aggiungono nuovi pacchetti dipendenti o si aggiorna la versione di una delle dipendenze. Questo processo consente anche di creare il file di blocco del progetto (project.lock.json) nella directory del progetto. Con questo file è possibile gestire le dipendenze del progetto. Contiene infatti il percorso locale di tutte le dipendenze del progetto. Non è necessario inserire il file nel controllo del codice sorgente. Verrà generato quando si esegue `dotnet restore`. 
@@ -53,7 +61,9 @@ Questa istruzione indica al compilatore che qualsiasi tipo dello spazio dei nomi
 namespace TeleprompterConsole
 ```
 
-## <a name="reading-and-echoing-the-file"></a>Lettura e restituzione del file
+<a id="reading-and-echoing-the-file" class="xliff"></a>
+
+## Lettura e restituzione del file
 La prima funzionalità da aggiungere è la capacità di leggere un file di testo e visualizzare tutto il testo nella console. Si aggiungerà innanzitutto un file di testo. Copiare il file [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) dal repository GitHub di questo [esempio](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) alla directory del progetto. Questo file verrà usato come script per l'applicazione. Per informazioni su come scaricare l'app di esempio per questo argomento, vedere le istruzioni nell'argomento [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Aggiungere quindi il metodo seguente alla classe Program (immediatamente sotto il metodo `Main`):
@@ -99,7 +109,9 @@ foreach (var line in lines)
 
 Eseguire il programma, usando `dotnet run` in modo da poter visualizzare ogni riga visualizzata nella console.  
 
-## <a name="adding-delays-and-formatting-output"></a>Aggiunta di ritardi e formattazione dell'output
+<a id="adding-delays-and-formatting-output" class="xliff"></a>
+
+## Aggiunta di ritardi e formattazione dell'output
 Il testo restituito viene visualizzato troppo velocemente per potere essere letto a voce alta. È quindi necessario aggiungere ritardi nell'output. Si inizierà creando codice di base che consenta l'elaborazione asincrona. Questi primi passaggi dovranno tuttavia seguire alcuni anti-pattern, evidenziati nei commenti mentre si aggiunge il codice, e il codice verrà aggiornato nei passaggi successivi.
 
 Questa sezione è articolata in due fasi. Nella prima fase si aggiornerà il metodo iteratore in modo che restituisca singole parole anziché righe intere. A questo scopo è necessario apportare le modifiche seguenti. Sostituire la funzione `yield return line;` con il codice seguente:
@@ -152,7 +164,9 @@ if (lineLength > 70)
  
 Eseguire l'esempio. Sarà possibile ora leggere ad alta voce alla velocità prestabilita.
 
-## <a name="async-tasks"></a>Attività asincrone
+<a id="async-tasks" class="xliff"></a>
+
+## Attività asincrone
 In questa fase finale si aggiungerà il codice per scrivere l'output in modo asincrono in un'attività e si eseguirà anche un'altra attività per leggere l'input dell'utente, nel caso in cui si voglia velocizzare o rallentare la visualizzazione del testo. Sarà necessario eseguire alcuni passaggi ma, al termine, saranno implementati tutti gli aggiornamenti necessari.
 Il primo passaggio consiste nel creare un metodo di restituzione asincrono @System.Threading.Tasks.Task che rappresenta il codice creato finora per leggere e visualizzare il file.
 
@@ -312,7 +326,9 @@ public void SetDone()
 }
 ```
 
-## <a name="conclusion"></a>Conclusione
+<a id="conclusion" class="xliff"></a>
+
+## Conclusione
 In questa esercitazione sono state illustrate diverse funzionalità del linguaggio C# e presentate le librerie .NET Core correlate all'uso di applicazioni console.
 A partire da queste informazioni è possibile approfondire la conoscenza del linguaggio e delle classi presentate nell'esercitazione. Sono state inoltre fornite nozioni di base sulle operazioni di input/output del file e della console e sull'uso bloccante e non bloccante del modello di programmazione asincrona basato sulle attività, è stata offerta una panoramica del linguaggio C# ed è stata descritta l'organizzazione dei programmi C# e degli strumenti e dell'interfaccia della riga di comando di .NET Core.
  

@@ -1,5 +1,5 @@
 ---
-title: Classi e oggetti in C# | Panoramica del linguaggio C#
+title: Classi e oggetti in C# - Panoramica del linguaggio C# | Microsoft Docs
 description: "Introduzione a C# Leggere questa panoramica su classi, oggetti ed ereditarietà"
 keywords: ".NET, csharp, classe, istanza, oggetto, ereditarietà, polimorfismo"
 author: BillWagner
@@ -11,13 +11,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
-ms.openlocfilehash: 6fe6b83d4a2b50a5eb7c2f6b23d4bda367666ac9
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: e4af598747b991757912880102cb18bf1835cc56
 ms.contentlocale: it-it
-ms.lasthandoff: 05/05/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="classes-and-objects"></a>Classi e oggetti
+<a id="classes-and-objects" class="xliff"></a>
+
+# Classi e oggetti
 
 Le *classi* sono il tipo C# più importante. Una classe è una struttura di dati che combina in una singola unità lo stato (campi) e le azioni (metodi e altri membri di funzione). Una classe fornisce una definizione per *istanze* della classe create dinamicamente, note anche come *oggetti*. Le classi supportano l'*ereditarietà* e il *polimorfismo*, meccanismi in base ai quali le *classi derivate* possono estendere e specializzare le *classi di base*.
 
@@ -33,7 +35,9 @@ Le istanze delle classi vengono create usando l'operatore `new`, che alloca memo
 
 La memoria occupata da un oggetto viene automaticamente recuperata nel momento in cui l'oggetto non è più raggiungibile. In C# non è possibile, né necessario, deallocare oggetti in modo esplicito.
 
-## <a name="members"></a>Membri
+<a id="members" class="xliff"></a>
+
+## Membri
 
 I membri di una classe possono essere membri statici o membri di istanza. I primi appartengono a classi, mentre i secondi appartengono a oggetti, ovvero a istanze di classi.
 
@@ -60,7 +64,9 @@ Di seguito viene fornita una panoramica dei tipi di membri che può contenere un
 * Tipi
     - Tipi annidati dichiarati dalla classe
 
-## <a name="accessibility"></a>Accessibilità
+<a id="accessibility" class="xliff"></a>
+
+## Accessibilità
 
 A ogni membro di una classe è associata una caratteristica di accessibilità, che controlla le aree di testo del programma in grado di accedere al membro. Esistono cinque diverse forme di accessibilità, riepilogate nella tabella seguente.
 
@@ -75,7 +81,9 @@ A ogni membro di una classe è associata una caratteristica di accessibilità, c
 * `private`
     - Accesso limitato a questa classe
 
-## <a name="type-parameters"></a>Parametri di tipo
+<a id="type-parameters" class="xliff"></a>
+
+## Parametri di tipo
 
 Una definizione di classe può specificare un set di parametri di tipo se si fa seguire il nome della classe da un elenco di nomi di parametri di tipo, racchiuso tra parentesi uncinate. I parametri di tipo possono essere quindi usati nel corpo delle dichiarazioni di classe per definire i membri della classe. Nell'esempio seguente i parametri di tipo di `Pair` sono `TFirst` e `TSecond`:
 
@@ -88,7 +96,9 @@ Quando si usa la classe generica, è necessario specificare argomenti di tipo pe
 
 Un tipo generico per il quale sono stati specificati argomenti di tipo, come `Pair<int,string>` nell'esempio precedente, prende il nome di *tipo costruito*.
 
-## <a name="base-classes"></a>Classi di base
+<a id="base-classes" class="xliff"></a>
+
+## Classi di base
 
 Una dichiarazione di classe può specificare una classe di base se si fa seguire il nome della classe e i parametri di tipo dai due punti e dal nome della classe di base. L'omissione della specifica della classe di base equivale alla derivazione dal tipo `object`. Nell'esempio seguente la classe di base di `Point3D` è `Point` e quella di `Point` è `object`:
 
@@ -100,7 +110,9 @@ Un tipo di classe viene implicitamente convertito in uno dei relativi tipi di cl
 
 [!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
-## <a name="fields"></a>Campi
+<a id="fields" class="xliff"></a>
+
+## Campi
 
 Un *campo* è una variabile associata a una classe o a un'istanza di una classe.
 
@@ -114,7 +126,9 @@ Nell'esempio seguente ogni istanza della classe `Color` include una copia distin
 
 Come illustrato nell'esempio precedente, i *campi di sola lettura* possono essere dichiarati con un modificatore `readonly`. L'assegnazione a un campo `readonly` può avvenire solo nell'ambito della dichiarazione del campo o in un costruttore della stessa classe.
 
-## <a name="methods"></a>Metodi
+<a id="methods" class="xliff"></a>
+
+## Metodi
 
 Un *metodo* è un membro che implementa un calcolo o un'azione che può essere eseguita da un oggetto o una classe. I *metodi statici* sono accessibili tramite la classe, mentre i *metodi di istanza* sono accessibili tramite istanze della classe.
 
@@ -124,7 +138,9 @@ Come i tipi, anche i metodi possono avere un set di parametri di tipo per i qual
 
 La *firma* di un metodo deve essere univoca nell'ambito della classe in cui viene dichiarato il metodo. La firma di un metodo è costituita dal nome del metodo, dal numero di parametri di tipo e dal numero, dai modificatori e dai tipi dei rispettivi parametri. Nella firma di un metodo non è incluso il tipo restituito.
 
-### <a name="parameters"></a>Parametri
+<a id="parameters" class="xliff"></a>
+
+### Parametri
 
 I parametri consentono di passare ai metodi valori o riferimenti a variabili. I parametri di un metodo ottengono i valori effettivi dagli *argomenti* specificati quando viene richiamato il metodo. Esistono quattro tipi di parametri: parametri di valore, parametri di riferimento, i parametri di output e matrici di parametri.
 
@@ -152,7 +168,9 @@ All'interno di un metodo, una matrice di parametri si comporta esattamente come 
 
 [!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
 
-### <a name="method-body-and-local-variables"></a>Corpo del metodo e variabili locali
+<a id="method-body-and-local-variables" class="xliff"></a>
+
+### Corpo del metodo e variabili locali
 
 Il corpo di un metodo specifica le istruzioni da eseguire quando viene richiamato il metodo.
 
@@ -164,7 +182,9 @@ In C# è necessario *assegnare esplicitamente* una variabile locale prima di pot
 
 Un metodo può usare istruzioni `return` per restituire il controllo al chiamante. In un metodo che restituisce `void`, le istruzioni `return` non possono specificare un'espressione. In un metodo che restituisce un valore diverso da void, le istruzioni `return` devono includere un'espressione che calcola il valore restituito.
 
-### <a name="static-and-instance-methods"></a>Metodi statici e di istanza
+<a id="static-and-instance-methods" class="xliff"></a>
+
+### Metodi statici e di istanza
 
 Un metodo dichiarato con un modificatore static è un *metodo statico*. Questo metodo non agisce su un'istanza specifica e può accedere direttamente solo a membri statici.
 
@@ -184,7 +204,9 @@ Nell'esempio seguente viene illustrato l'uso della classe Entity.
 
 Osservare come, mentre i metodi statici `SetNextSerialNo` e `GetNextSerialNo` vengono richiamati sulla classe, il metodo di istanza `GetSerialNo` viene richiamato su istanze della classe.
 
-### <a name="virtual-override-and-abstract-methods"></a>Metodi virtuali, di override e astratti
+<a id="virtual-override-and-abstract-methods" class="xliff"></a>
+
+### Metodi virtuali, di override e astratti
 
 Se una dichiarazione di metodo di istanza include un modificatore `virtual`, il metodo viene definito *metodo virtuale*. Se non è presente alcun modificatore virtual, il metodo diventa un *metodo non virtuale*.
 
@@ -210,7 +232,9 @@ Il programma seguente usa le classi `Expression` per valutare l'espressione `x *
 
 [!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
 
-### <a name="method-overloading"></a>Overload di un metodo
+<a id="method-overloading" class="xliff"></a>
+
+### Overload di un metodo
 
 L'*overload* di un metodo consente a più metodi della stessa classe di avere lo stesso nome, purché abbiano firme univoche. Quando si compila una chiamata di un metodo di overload, il compilatore usa la *risoluzione dell'overload* per determinare il metodo specifico da richiamare. La risoluzione dell'overload trova il metodo che meglio corrisponde agli argomenti o segnala un errore se non riesce a trovare alcuna corrispondenza. Nell'esempio seguente viene illustrato il funzionamento effettivo della risoluzione dell'overload. Il commento relativo a ogni chiamata del metodo `Main` mostra il metodo effettivamente richiamato.
 
@@ -218,7 +242,9 @@ L'*overload* di un metodo consente a più metodi della stessa classe di avere lo
 
 Come illustrato nell'esempio, è sempre possibile selezionare un metodo specifico eseguendo in modo esplicito il cast degli argomenti ai tipi di parametro corretti e/o specificando in modo esplicito gli argomenti di tipo.
 
-## <a name="other-function-members"></a>Altri membri di funzione
+<a id="other-function-members" class="xliff"></a>
+
+## Altri membri di funzione
 
 I membri che contengono codice eseguibile sono noti come *membri funzione* di una classe. Nella sezione precedente sono stati descritti i metodi, che costituiscono i membri di funzione principali. In questa sezione vengono descritti altri membri di funzione supportati da C#: costruttori, proprietà, indicizzatori, eventi, operatori e finalizzatori.
 
@@ -226,7 +252,9 @@ Di seguito è illustrata una classe generica denominata List<T>, che implementa 
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 
-### <a name="constructors"></a>Costruttori
+<a id="constructors" class="xliff"></a>
+
+### Costruttori
 
 C# supporta sia costruttori di istanza sia costruttori statici. Un *costruttore di istanza* è un membro che implementa le azioni necessarie per inizializzare un'istanza di una classe, mentre un *costruttore statico* è un membro che implementa le azioni necessarie per inizializzare una classe nel momento in cui viene caricata per la prima volta.
 
@@ -238,7 +266,9 @@ I costruttori di istanza possono essere sottoposti a overload e possono avere pa
 
 A differenza di altri membri, i costruttori di istanza non vengono ereditati e una classe non può contenere costruttori di istanza diversi da quelli effettivamente dichiarati nella classe. Se per una classe non è specificato alcun costruttore di istanza, ne viene automaticamente fornito uno vuoto senza parametri.
 
-### <a name="properties"></a>Proprietà
+<a id="properties" class="xliff"></a>
+
+### Proprietà
 
 Le *proprietà* sono una naturale estensione dei campi. Entrambi sono membri denominati con tipi associati e la sintassi per accedere ai campi e alle proprietà è identica. A differenza dei campi, tuttavia, le proprietà non denotano posizioni di memoria, ma hanno *funzioni di accesso* che specificano le istruzioni da eseguire nel momento in cui ne vengono letti o scritti i valori.
 
@@ -256,7 +286,9 @@ Come per i campi e i metodi, C# supporta sia proprietà di istanza sia propriet�
 
 Le funzioni di accesso di una proprietà possono essere virtuali. Se una dichiarazione di proprietà contiene un modificatore `virtual`, `abstract` o `override`, questo viene applicato anche alle funzioni di accesso della proprietà.
 
-### <a name="indexers"></a>Indicizzatori
+<a id="indexers" class="xliff"></a>
+
+### Indicizzatori
 
 Un *indicizzatore* è un membro che consente di indicizzare gli oggetti esattamente come una matrice. Un indicizzatore viene dichiarato come una proprietà, ma a differenza di questa il nome del membro è seguito da un elenco di parametri scritti tra i delimitatori `[` e `]`. I parametri sono disponibili nelle funzioni di accesso dell'indicizzatore. Analogamente alle proprietà, gli indicizzatori possono essere di lettura/scrittura, di sola lettura o di sola scrittura e le funzioni di accesso di un indicizzatore possono essere virtuali.
 
@@ -266,7 +298,9 @@ La classe `List` dichiara un indicizzatore di lettura/scrittura che accetta un p
 
 Gli indicizzatori possono essere sottoposti a overload, ovvero una classe può dichiarare più indicizzatori purché includano un numero o tipi diversi di parametri.
 
-### <a name="events"></a>Eventi
+<a id="events" class="xliff"></a>
+
+### Eventi
 
 Un *evento* è un membro che consente a una classe o a un oggetto di inviare notifiche. Un evento viene dichiarato come un campo, con la sola differenza che la dichiarazione deve includere una parola chiave evento e il tipo deve essere un tipo delegato.
 
@@ -280,7 +314,9 @@ I client rispondono agli eventi tramite *gestori eventi*, che possono essere agg
 
 Negli scenari avanzati in cui è auspicabile controllare l'archiviazione sottostante di un evento, una dichiarazione di evento può fornire in modo esplicito le funzioni di accesso `add` e `remove`, simili alla funzione di accesso `set` di una proprietà.
 
-### <a name="operators"></a>Operatori
+<a id="operators" class="xliff"></a>
+
+### Operatori
 
 Un *operatore* è un membro che definisce il significato dell'applicazione di un particolare operatore di espressione alle istanze di una classe. È possibile definire tre tipi di operatori: unari, binari e di conversione. Tutti gli operatori devono essere dichiarati come `public` e `static`.
 
@@ -290,7 +326,9 @@ La classe `List<T>` dichiara due operatori, `operator ==` e `operator !=`, attri
 
 Il primo `Console.WriteLine` restituisce `True` perché i due elenchi contengono lo stesso numero di oggetti con gli stessi valori e nello stesso ordine. Se in `List<T>` non fosse stato definito l'operatore `operator ==`, il primo `Console.WriteLine` avrebbe restituito `False` perché `a` e `b` fanno riferimento a istanze di `List<int>` diverse.
 
-### <a name="finalizers"></a>Finalizzatori
+<a id="finalizers" class="xliff"></a>
+
+### Finalizzatori
 
 Un *finalizzatore* è un membro che implementa le azioni necessarie per finalizzare un'istanza di una classe. I finalizzatori non possono contenere parametri o modificatori di accessibilità e non possono essere richiamati in modo esplicito. Il finalizzatore di un'istanza viene richiamato automaticamente durante la procedura di Garbage Collection.
 

@@ -1,5 +1,5 @@
 ---
-title: Matrici C# | Panoramica del linguaggio C#
+title: Matrici C# - Panoramica del linguaggio C# | Microsoft Docs
 description: Le matrici costituiscono il tipo di raccolta di base del linguaggio C#
 keywords: .NET, csharp, matrice, raccolta
 author: BillWagner
@@ -10,14 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e3a029a1199c32cf2d943a02ce196512e44bd79a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 8816ac61cda27a086746fe2734d62f395058acd5
+ms.contentlocale: it-it
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="arrays"></a>Matrici
+<a id="arrays" class="xliff"></a>
+
+# Matrici
 
 Una ***matrice*** è una struttura di dati contenente una serie di variabili accessibili tramite indici calcolati. Le variabili contenute in una matrice, chiamate anche ***elementi*** della matrice, sono tutte dello stesso tipo, definito ***tipo di elemento*** della matrice.
 
