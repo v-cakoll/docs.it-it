@@ -1,95 +1,118 @@
 ---
-title: "Visual Basic Language Reference | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic language reference"
-  - "run-time libraries, Visual Basic"
-  - "libraries, Visual Basic run-time"
-  - "Visual Basic code, run-time libraries"
-  - "Visual Basic code, language reference"
-  - "language reference, Visual Basic"
-  - "Visual Basic, language reference"
+title: Riferimenti al linguaggio Visual Basic | Microsoft Docs
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic language reference
+- run-time libraries, Visual Basic
+- libraries, Visual Basic run-time
+- Visual Basic code, run-time libraries
+- Visual Basic code, language reference
+- language reference, Visual Basic
+- Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# Visual Basic Language Reference
-[!INCLUDE[vs2017banner](../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: ada35fcbbbe84f6339f47af736a8581db85cfb56
+ms.contentlocale: it-it
+ms.lasthandoff: 05/26/2017
 
-In questa sezione sono disponibili informazioni su vari aspetti del linguaggio [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+---
+<a id="visual-basic-language-reference" class="xliff"></a>
+
+# Riferimenti al linguaggio Visual Basic
+Questa sezione include informazioni di riferimento su vari aspetti del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-## In questa sezione  
- [Typographic and Code Conventions](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- Viene illustrato brevemente come sono formattati parole chiave, segnaposto e altri elementi del linguaggio nella documentazione di [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+<a id="in-this-section" class="xliff"></a>
+
+## Contenuto della sezione  
+ [Convenzioni tipografiche e di scrittura del codice](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
+ Offre una breve descrizione della formattazione di parole chiave, segnaposto e altri elementi del linguaggio usata nella documentazione [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Visual Basic Runtime Library Members](../../visual-basic/language-reference/runtime-library-members.md)  
- Vengono elencate le classi e i moduli dello spazio dei nomi <xref:Microsoft.VisualBasic?displayProperty=fullName>, con collegamenti alle relative funzioni membro, metodi, proprietà, costanti ed enumerazioni.  
+ [Membri della libreria di runtime di Visual Basic](../../visual-basic/language-reference/runtime-library-members.md)  
+ Elenca le classi e i moduli dello spazio dei nomi <xref:Microsoft.VisualBasic?displayProperty=fullName> con collegamenti a funzioni dei membri, metodi, proprietà, costanti ed enumerazioni.  
   
  [Parole chiave](../../visual-basic/language-reference/keywords/index.md)  
- Vengono elencate tutte le parole chiave di Visual Basic e vengono forniti collegamenti a ulteriori informazioni.  
+ Elenca tutte le parole chiave di Visual Basic e include collegamenti ad altre informazioni.  
   
- [Attributes](../../visual-basic/language-reference/attributes.md)  
- Vengono illustrati gli attributi disponibili in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ [Attributi (Visual Basic)](../../visual-basic/language-reference/attributes.md)  
+ Illustra gli attributi disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Constants and Enumerations](../../visual-basic/language-reference/constants-and-enumerations.md)  
- Vengono illustrate le costanti e le enumerazioni disponibili in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ [Costanti ed enumerazioni](../../visual-basic/language-reference/constants-and-enumerations.md)  
+ Illustra le costanti e le enumerazioni disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Data Types](../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Vengono illustrati i tipi di dati disponibili in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ [Tipi di dati](../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ Illustra i tipi di dati disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Directives](../../visual-basic/language-reference/directives/directives.md)  
- Vengono illustrate le direttive del compilatore disponibili in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ [Direttive](../../visual-basic/language-reference/directives/directives.md)  
+ Illustra le direttive del compilatore disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Funzioni](../../visual-basic/language-reference/functions/index.md)  
- Vengono illustrate le funzioni di runtime disponibili in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ Illustra le funzioni di run-time disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Modifiers](../../visual-basic/language-reference/modifiers/index.md)  
- Vengono elencati i modificatori di runtime di Visual Basic e vengono forniti collegamenti a ulteriori informazioni.  
+ [Modificatori](../../visual-basic/language-reference/modifiers/index.md)  
+ Elenca i modificatori di run-time di Visual Basic e include collegamenti ad altre informazioni.  
   
- [Modules](../../visual-basic/language-reference/modules.md)  
- Vengono illustrati i moduli disponibili in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] e i relativi membri.  
+ [Moduli](../../visual-basic/language-reference/modules.md)  
+ Illustra i moduli disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e i relativi membri.  
   
  [Nothing](../../visual-basic/language-reference/nothing.md)  
- Viene descritto il valore predefinito di qualsiasi tipo di dati.  
+ Illustra il valore predefinito di tutti i tipi di dati.  
   
- [Objects](../../visual-basic/language-reference/objects/index.md)  
- Vengono illustrati gli oggetti disponibili in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] e i relativi membri.  
+ [Oggetti](../../visual-basic/language-reference/objects/index.md)  
+ Illustra gli oggetti disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e i relativi membri.  
   
- [Operators](../../visual-basic/language-reference/operators/index.md)  
- Vengono illustrati gli operatori disponibili in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ [Operatori](../../visual-basic/language-reference/operators/index.md)  
+ Illustra gli operatori disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Properties](../../visual-basic/language-reference/properties.md)  
- Vengono illustrate le proprietà disponibili in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ [Proprietà](../../visual-basic/language-reference/properties.md)  
+ Illustra le proprietà disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Queries](../../visual-basic/language-reference/queries/queries.md)  
- Vengono fornite le informazioni di riferimento sull'utilizzo delle espressioni [!INCLUDE[vbteclinqext](../../csharp/getting-started/includes/vbteclinqext-md.md)] nel codice.  
+ [Query](../../visual-basic/language-reference/queries/queries.md)  
+ Include informazioni di riferimento sull'uso delle espressioni [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] nel codice.  
   
- [Statements](../../visual-basic/language-reference/statements/index.md)  
- Vengono illustrate le istruzioni di dichiarazione ed eseguibili disponibili in [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ [Istruzioni](../../visual-basic/language-reference/statements/index.md)  
+ Illustra le istruzioni di dichiarazione ed eseguibili disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [XML Comment Tags](../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
- Vengono descritti i commenti della documentazione per i quali è disponibile IntelliSense nell'editor del codice di [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ [Tag di commento XML](../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
+ Descrive i commenti della documentazione per i quali è disponibile IntelliSense nell'editor di codice [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [XML Axis Properties](../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
- Vengono forniti collegamenti alle informazioni sull'utilizzo delle proprietà axis XML per accedere direttamente a XML nel codice.  
+ [Proprietà Axis XML](../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ Include i collegamenti alle informazioni sull'uso delle proprietà asse XML per accedere a XML direttamente nel codice.  
   
- [XML Literals](../../visual-basic/language-reference/xml-literals/index.md)  
- Vengono forniti collegamenti alle informazioni sull'utilizzo dei valori letterali XML per incorporare XML direttamente nel codice.  
+ [Valori letterali XML](../../visual-basic/language-reference/xml-literals/index.md)  
+ Include i collegamenti alle informazioni sull'uso dei valori letterali XML per incorporare XML direttamente nel codice.  
   
- [Error Messages](../../visual-basic/language-reference/error-messages/index.md)  
- Vengono forniti un elenco dei messaggi di errore di runtime e del compilatore di [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] e istruzioni su come gestirli.  
+ [Messaggi di errore](../../visual-basic/language-reference/error-messages/index.md)  
+ Offre un elenco di messaggi di errore di run-time e del compilatore di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e indicazioni su come gestirli.  
   
+<a id="related-sections" class="xliff"></a>
+
 ## Sezioni correlate  
  [Visual Basic](../../visual-basic/index.md)  
- Vengono fornite informazioni dettagliate relative a tutte le aree del linguaggio [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ Offre informazioni dettagliate su tutte le aree del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Visual Basic Command\-Line Compiler](../../visual-basic/reference/command-line-compiler/index.md)  
- Viene illustrato come utilizzare un compilatore dalla riga di comando come alternativa alla compilazione di programmi dall'ambiente di sviluppo integrato \(IDE, Integrated Development Environment\) di [!INCLUDE[vsprvs](../../csharp/includes/vsprvs-md.md)].
+ [Compilatore della riga di comando di Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
+ Descrive come usare il compilatore da riga di comando come alternativa per compilare programmi dall'interno dell'ambiente di sviluppo integrato (IDE) di [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].
