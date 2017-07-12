@@ -10,33 +10,39 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 6c08f16690a8c081ac17484c6bc7a331d9041356
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: 21e6b786c8a9a00cc1ed09d2c3891c3cfa433ef5
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="getting-started-with-net-core-on-macos"></a>Introduzione a .NET Core su macOS
+<a id="getting-started-with-net-core-on-macos" class="xliff"></a>
+
+# Introduzione a .NET Core su macOS
 
 Questo documento specifica i passaggi e il flusso di lavoro da seguire per creare una soluzione .NET Core per macOS. Si imparerà come creare progetti, unit test, usare gli strumenti di debug e incorporare librerie di terze parti tramite [NuGet](https://www.nuget.org/).
 
 > [!NOTE]
 > In questo articolo [Visual Studio Code](http://code.visualstudio.com) viene usato su macOS.
 
-## <a name="prerequisites"></a>Prerequisiti
+<a id="prerequisites" class="xliff"></a>
+
+## Prerequisiti
 
 Installare [.NET Core SDK](https://www.microsoft.com/net/core). .NET Core SDK include la versione più recente del framework e del runtime di .NET Core.
 
-Installare [Visual Studio Code](http://code.visualstudio.com). Nel corso di questo articolo, si installeranno anche le estensioni di Visual Studio Code che consentono di migliorare l'esperienza di sviluppo .NET Core.
+Installare [Visual Studio Code](http://code.visualstudio.com). Nel corso di questo articolo, si installeranno anche le estensioni di Visual Studio Code che migliorano l'esperienza di sviluppo in .NET Core.
 
 Installare l'estensione C# di Visual Studio Code aprendo Visual Studio Code e premendo <kbd>F1</kbd> per aprire la tavolozza di Visual Studio Code. Digitare **ext install** per visualizzare l'elenco delle estensioni. Selezionare l'estensione C#. Riavviare Visual Studio Code per attivare l'estensione. Per altre informazioni, vedere la [documentazione dell'estensione C# di Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="getting-started"></a>Per iniziare
+<a id="getting-started" class="xliff"></a>
+
+## Per iniziare
 
 In questa esercitazione si creeranno tre progetti: un progetto di libreria, i test per tale progetto e un'applicazione console che usa la libreria. È possibile [visualizzare o scaricare il codice sorgente](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden) per questo argomento nel repository dotnet/docs su GitHub. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Avviare Visual Studio Code. Premere <kbd>Ctrl</kbd> + <kbd> \` </kbd> (carattere di barra rovesciata o apice inverso) oppure selezionare **Visualizza > Terminale integrato** dal menu per aprire un terminale incorporato in Visual Studio Code. È anche possibile aprire una shell esterna con il comando **Apri nel prompt dei comandi** in Esplora risorse (**Apri nel terminale** su Mac o Linux) se si preferisce lavorare esternamente a Visual Studio Code.
+Avviare Visual Studio Code. Premere <kbd>CTRL</kbd> + <kbd> \` </kbd> (carattere virgoletta aperta o apice inverso) oppure selezionare **Visualizza > Terminale integrato** dal menu per aprire un terminale incorporato in Visual Studio Code. È anche possibile aprire una shell esterna con il comando **Apri nel prompt dei comandi** in Esplora risorse (**Apri nel terminale** in Mac o Linux) se si preferisce lavorare esternamente a Visual Studio Code.
 
 Iniziare creando un file di soluzione, che funge da contenitore per uno o più progetti .NET Core. Nel terminale, creare una cartella *golden* e aprire la cartella, ossia la cartella radice della soluzione. Eseguire il comando [`dotnet new`](../tools/dotnet-new.md) per creare una nuova soluzione, *golden.sln*:
 
@@ -111,7 +117,9 @@ Compilare la libreria con il comando [`dotnet build`](../tools/dotnet-build.md).
 dotnet build
 ```
 
-## <a name="create-the-test-project"></a>Creare il progetto di test
+<a id="create-the-test-project" class="xliff"></a>
+
+## Creare il progetto di test
 
 Compilare un progetto di test per la libreria. Dalla cartella *golden*, creare un nuovo progetto di test:
 
@@ -174,7 +182,9 @@ Modificare il file *UnitTest1.cs* e modificare l'asserzione da `Assert.NotEqual`
 dotnet test test-library/test-library.csproj
 ```
 
-## <a name="create-the-console-app"></a>Creare l'applicazione console
+<a id="create-the-console-app" class="xliff"></a>
+
+## Creare l'applicazione console
 
 L'applicazione console creata tramite i passaggi seguenti stabilisce una dipendenza sul progetto di libreria creato in precedenza e ne richiama il metodo di libreria quando è in esecuzione. Usando questo modello di sviluppo, è possibile vedere come creare librerie riutilizzabili per più progetti.
 
@@ -215,11 +225,13 @@ Eseguire il `dotnet run` comando seguente per avviare l'eseguibile, dove l'opzio
 dotnet run -p app/app.csproj
 ```
 
-## <a name="debug-the-application"></a>Eseguire il debug dell'applicazione
+<a id="debug-the-application" class="xliff"></a>
+
+## Eseguire il debug dell'applicazione
 
 Impostare un punto di interruzione nell'istruzione `WriteLine` nel metodo `Main`. A tale scopo, premere il tasto <kbd>F9</kbd> quando il cursore è posizionato sulla riga `WriteLine` o fare clic sul margine sinistro della riga in cui si vuole inserire il punto di interruzione. Verrà visualizzato un cerchio rosso sul margine accanto alla riga di codice. Quando viene raggiunto il punto di interruzione, l'esecuzione del codice si interrompe *prima* che venga eseguita la riga del punto di interruzione.
 
-Aprire la scheda del debugger selezionando l'icona per il debug sulla barra degli strumenti di Visual Studio Code, selezionando **Visualizza > Debug** nella barra dei menu o mediante il tasto di scelta rapida <kbd>CTRL</kbd>+<kbd>MAIUSC</kbd>+<kbd>D</kbd>:
+Aprire la scheda del debugger selezionando l'icona Debug sulla barra degli strumenti di Visual Studio Code, selezionando **Visualizza > Debug** nella barra dei menu o tramite il tasto di scelta rapida <kbd>CTRL</kbd>+<kbd>MAIUSC</kbd>+<kbd>D</kbd>:
 
 ![Debugger di Visual Studio Code](./media/using-on-macos/vscodedebugger.png)
 

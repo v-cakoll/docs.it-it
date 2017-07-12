@@ -1,5 +1,5 @@
 ---
-title: "Testing unità in .NET Core tramite il test dotnet | Microsoft Docs"
+title: "Testing unità in .NET Core usando il test dotnet e xUnit | Microsoft Docs"
 description: "Testing unità in .NET Core usando il test dotnet"
 keywords: .NET, .NET Core
 author: ardalis
@@ -10,18 +10,21 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: cc2e823be1a3d1c0267d98c95b25126bd7d048d4
+ms.sourcegitcommit: 06e1ecc181847f87df9ed3a527638008ca6857fc
+ms.openlocfilehash: b5c6d162adf363da41c4c60fdd9fe38e1d58d27a
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 05/22/2017
 
 ---
+<a id="unit-testing-in-net-core-using-dotnet-test-and-xunit" class="xliff"></a>
 
-# <a name="unit-testing-in-net-core-using-dotnet-test"></a>Testing unità in .NET Core tramite il test dotnet
+# Testing unità in .NET Core usando il test dotnet e xUnit
 
 In questa esercitazione viene illustrata un'esperienza interattiva di compilazione passo passo di una soluzione di esempio finalizzata all'apprendimento dei concetti base del testing unità. Se si preferisce seguire l'esercitazione usando una soluzione preesistente, [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/) prima di iniziare. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="creating-the-source-project"></a>Creazione del progetto di origine
+<a id="creating-the-source-project" class="xliff"></a>
+
+### Creazione del progetto di origine
 
 Aprire una finestra della shell. Creare una directory denominata *unit-testing-using-dotnet-test* in cui archiviare la soluzione. All'interno di questa nuova directory creare una directory *PrimeService*. La struttura della directory fino a questo momento è la seguente:
 
@@ -47,7 +50,9 @@ namespace Prime.Services
 }
 ```
 
-### <a name="creating-the-test-project"></a>Creazione del progetto di test
+<a id="creating-the-test-project" class="xliff"></a>
+
+### Creazione del progetto di test
 
 Tornare alla directory *unit-testing-using-dotnet-test* e creare la directory *PrimeService.Tests*. La struttura della directory è la seguente:
 
@@ -97,7 +102,9 @@ Di seguito è riportato il layout finale della soluzione:
         PrimeServiceTests.csproj
 ```
 
-## <a name="creating-the-first-test"></a>Creazione del primo test
+<a id="creating-the-first-test" class="xliff"></a>
+
+## Creazione del primo test
 
 Prima di compilare la libreria o i test, è necessario eseguire [`dotnet restore`](../tools/dotnet-restore.md) nella directory *PrimeService.Tests*. Questo comando ripristina tutti i pacchetti NuGet necessari a ogni progetto.
 
@@ -146,7 +153,9 @@ public bool IsPrime(int candidate)
 
 Nella directory *PrimeService.Tests* eseguire di nuovo `dotnet test`. Il comando `dotnet test` esegue prima una compilazione del progetto `PrimeService` e quindi del progetto `PrimeService.Tests`. Dopo la compilazione di entrambi i progetti, verrà eseguito il test singolo, che viene superato.
 
-### <a name="adding-more-features"></a>Aggiunta di altre funzionalità
+<a id="adding-more-features" class="xliff"></a>
+
+### Aggiunta di altre funzionalità
 
 Ora che il test è stato superato, è necessario scriverne altri. Esistono alcuni altri casi semplici per i numeri primi: 0, -1. È possibile aggiungerli come nuovi test, con l'attributo `[Fact]`, ma questa operazione risulta rapidamente noiosa. Sono disponibili altri attributi xUnit che consentono di scrivere una suite di test analoghi.  Un attributo `[Theory]` rappresenta una suite di test che eseguono lo stesso codice, ma hanno argomenti di input diversi. È possibile usare l'attributo `[InlineData]` per specificare i valori per tali input. 
  

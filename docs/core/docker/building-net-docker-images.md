@@ -1,5 +1,5 @@
 ---
-title: Compilazione di immagini Docker per .NET Core
+title: Compilazione di immagini Docker per .NET Core | Microsoft Docs
 description: Informazioni sulle immagini Docker e su .NET Core
 keywords: .NET, .NET Core, Docker
 author: spboyer
@@ -11,19 +11,23 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 007d96cf7d174e7849a2b9c8439cfac893c7aa5c
+ms.sourcegitcommit: 7f6be5a87923a12eef879b2f5acdafc1347588e3
+ms.openlocfilehash: a8ade58a9ff1f5e68865506d91c200681cec2aeb
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 06/26/2017
 
 ---
  
 
-#<a name="building-docker-images-for-net-core-applications"></a>Compilazione di immagini Docker per applicazioni .NET Core
+<a id="building-docker-images-for-net-core-applications" class="xliff"></a>
+
+#Compilazione di immagini Docker per applicazioni .NET Core
 
 Per comprendere in che modo usare insieme .NET Core e Docker, è necessario prima conoscere le diverse immagini Docker disponibili e i casi in cui è opportuno usarle. Di seguito verranno illustrate in modo dettagliato le variazioni offerte, verrà creata un'API Web ASP.NET Core, verranno usati gli strumenti Yeoman Docker per creare un contenitore sottoponibile a debug e verrà mostrato in che modo è possibile usare Visual Studio Code per l'esecuzione del processo. 
 
-## <a name="docker-image-optimizations"></a>Ottimizzazioni delle immagini Docker
+<a id="docker-image-optimizations" class="xliff"></a>
+
+## Ottimizzazioni delle immagini Docker
 
 Quando si creano immagini Docker per gli sviluppatori, è opportuno concentrare l'attenzione su tre scenari principali:
 
@@ -33,13 +37,15 @@ Quando si creano immagini Docker per gli sviluppatori, è opportuno concentrare 
 
 Perché tre immagini?
 Durante lo sviluppo, la compilazione e l'esecuzione di applicazioni nei contenitori, è necessario tenere conto di diverse priorità.
-- **Sviluppo:** qual è la velocità di iterazione delle modifiche? È possibile eseguirne il debug? Le dimensioni dell'immagine non sono essenziali, mentre è importante la possibilità di apportare modifiche al codice e visualizzare rapidamente tali modifiche. Alcuni degli strumenti Microsoft, ad esempio [yo docker](https://aka.ms/yodocker), da usare nel codice Visual Studio utilizzano questa immagine durante la fase di sviluppo. 
+- **Sviluppo:** qual è la velocità di iterazione delle modifiche? È possibile eseguirne il debug? Le dimensioni dell'immagine non sono essenziali, mentre è importante la possibilità di apportare modifiche al codice e visualizzare rapidamente tali modifiche. Alcuni degli strumenti Microsoft, ad esempio [yo docker](https://aka.ms/yodocker), da usare in Visual Studio Code usano questa immagine durante la fase di sviluppo. 
 - **Compilazione:** quali sono gli elementi necessari per compilare l'app? Questi elementi includono il compilatore e qualsiasi altra dipendenza necessaria per ottimizzare i file binari. Questa immagine non è quella che verrà distribuita, ma piuttosto un'immagine usata per compilare il contenuto inserito in un'immagine di produzione. Questa immagine verrà usata nell'integrazione continuativa o nell'ambiente di compilazione. Ad esempio, anziché installare le dipendenze direttamente in un agente di compilazione, quest'ultimo creerà un'istanza dell'immagine di compilazione per compilare l'applicazione contenuta nell'immagine stessa con tutte le dipendenze necessarie. Per l'agente di compilazione è necessario soltanto sapere come eseguire questa immagine Docker. 
 - **Produzione:** con quale velocità è possibile distribuire e avviare l'immagine? Questa immagine ha dimensioni ridotte, motivo per cui può passare rapidamente attraverso la rete dal registro Docker agli host Docker. Il contenuto è pronto per l'esecuzione, rendendo minimo l'intervallo tra l'esecuzione Docker e l'elaborazione dei risultati. Nel modello Docker non modificabile non è necessaria la compilazione dinamica del codice. Il contenuto inserito in questa immagine sarà limitato ai file binari e al contenuto necessario per eseguire l'applicazione, ad esempio l'output pubblicato usando `dotnet publish` e contenente i file binari, le immagini e i file con estensione js e css compilati. Nel corso del tempo si vedranno immagini contenenti pacchetti PreJit.  
 
 Anche se sono presenti più versioni dell'immagine .NET Core, tutte queste versioni condividono uno o più layer. La quantità di spazio su disco necessaria per l'archiviazione o per il delta per effettuare il pull dal Registro di sistema è molto minore dell'insieme delle immagini, perché tutte le immagini condividono lo stesso layer di base e potenzialmente altri layer.  
 
-## <a name="docker-image-variations"></a>Variazioni delle immagini Docker
+<a id="docker-image-variations" class="xliff"></a>
+
+## Variazioni delle immagini Docker
 
 Per raggiungere gli obiettivi sopra descritti, in [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) sono disponibili varianti delle immagini.
 
@@ -47,7 +53,9 @@ Per raggiungere gli obiettivi sopra descritti, in [microsoft/dotnet](https://hub
 
 - `microsoft/dotnet:<version>-core` : ovvero **microsoft/dotnet:1.0.0-core**. Questa immagine esegue [applicazioni .NET Core portabili](../deploying/index.md) ed è ottimizzata per l'esecuzione dell'applicazione nella fase di **produzione**. Non contiene l'SDK ed è finalizzata all'acquisizione dell'output ottimizzato di `dotnet publish`. Il runtime portabile è adatto agli scenari Docker di contenitore poiché l'esecuzione di più contenitori trae vantaggio dai layer di immagine condivisi.  
 
-## <a name="alternative-images"></a>Immagini alternative
+<a id="alternative-images" class="xliff"></a>
+
+## Immagini alternative
 
 Oltre agli scenari ottimizzati di sviluppo, compilazione e produzione, Microsoft fornisce immagini aggiuntive:
 
@@ -76,12 +84,15 @@ microsoft/dotnet    latest                  03c10abbd08a        540.4 MB
 microsoft/dotnet    1.0.0-core              b8da4a1fd280        253.2 MB
 ```
 
-## <a name="prerequisites"></a>Prerequisiti
+<a id="prerequisites" class="xliff"></a>
+
+## Prerequisiti
 
 Per la compilazione e l'esecuzione è necessario che nel computer siano installati gli elementi seguenti:
 
 - [.NET Core](http://dot.net)
-- [Docker](https://www.docker.com/products/docker), per eseguire localmente i contenitori Docker 
+- [Docker](https://www.docker.com/products/docker), per eseguire localmente i contenitori Docker
+- [Node.js](https://nodejs.org/)
 - [Generatore Yeoman per ASP.NET](https://github.com/omnisharp/generator-aspnet), per creare l'applicazione API Web
 - [Generatore Yeoman per Docker](http://aka.ms/yodocker), fornito da Microsoft
 
@@ -94,7 +105,9 @@ npm install -g yo generator-aspnet generator-docker
 > [!NOTE]
 > Questo esempio userà [Visual Studio Code](http://code.visualstudio.com) per l'editor.
 
-## <a name="creating-the-web-api-application"></a>Creazione dell'applicazione API Web
+<a id="creating-the-web-api-application" class="xliff"></a>
+
+## Creazione dell'applicazione API Web
 
 Come punto di riferimento, prima di inserire l'applicazione nei contenitori, eseguirla localmente. 
 
@@ -125,7 +138,9 @@ Testare l'applicazione usando `dotnet run` e i valori disponibili in **http://lo
 
 Usare `Ctrl+C` per arrestare l'applicazione.
 
-## <a name="adding-docker-support"></a>Aggiunta del supporto per Docker
+<a id="adding-docker-support" class="xliff"></a>
+
+## Aggiunta del supporto per Docker
 
 Per aggiungere al progetto il supporto per Docker usare il generatore Yeoman fornito da Microsoft. Questo generatore attualmente supporta progetti .NET Core, Node.js e Go mediante la creazione di un documento Dockerfile e di script che consentono di compilare ed eseguire progetti all'interno dei contenitori. Vengono aggiunti anche specifici file Visual Studio Code (launch.json, tasks.json) per il debug dell'editor e il supporto del riquadro comandi.
 
@@ -174,7 +189,9 @@ Il generatore crea due documenti Dockerfile.
 
 **Dockerfile**: si tratta dell'immagine della versione basata su **microsoft/dotnet:1.0.0-core** e deve essere usata per la produzione. Quando eseguita, questa immagine è pari a circa 253 MB.
 
-### <a name="creating-the-docker-images"></a>Creazione di immagini Docker
+<a id="creating-the-docker-images" class="xliff"></a>
+
+### Creazione di immagini Docker
 Usando lo script `dockerTask.sh` o `dockerTask.ps1` è possibile compilare o comporre l'immagine e il contenitore dell'applicazione **api** per un ambiente specifico. Compilare l'immagine di **debug** eseguendo il comando seguente.
 
 ```bash
@@ -192,7 +209,7 @@ api                 debug                70e89fbc5dbe        a few seconds ago  
 
 Un altro modo per generare l'immagine ed eseguire l'applicazione all'interno del contenitore Docker consiste nell'aprire l'applicazione in Visual Studio Code e usare gli strumenti di debug. 
 
-Selezionare l'icona per il debug nella barra di sinistra di Visual Studio Code.
+Selezionare l'icona di debug nella barra delle visualizzazioni a sinistra di Visual Studio Code.
 
 ![icona per il debug di Visual Studio Code](./media/building-net-docker-images/debugging_debugicon.png)
 
@@ -216,7 +233,9 @@ api                 debug                70e89fbc5dbe        1 hour ago        7
 api                 latest               ef17184c8de6        1 hour ago        260.7 MB
 ```
 
-## <a name="summary"></a>Riepilogo
+<a id="summary" class="xliff"></a>
+
+## Riepilogo
 
 L'uso del generatore Docker per aggiungere i file necessari all'applicazione API Web semplifica il processo di creazione delle versioni di sviluppo e produzione delle immagini.  Gli strumenti sono multipiattaforma e forniscono anche uno script PowerShell per ottenere gli stessi risultati riguardo all'integrazione di Windows e Visual Studio Code, con procedure per il debug dell'applicazione all'interno del contenitore. La comprensione delle varianti delle immagini e degli scenari di destinazione consente di ottimizzare i processi di sviluppo a ciclo interno, ottenendo al tempo stesso immagini ottimizzate per le distribuzioni di produzione.  
 

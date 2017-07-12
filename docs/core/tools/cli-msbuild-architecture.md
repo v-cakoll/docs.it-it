@@ -9,18 +9,23 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7fff0f61-ac23-42f0-9661-72a7240a4456
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 515c4d4914fd2a967b4bd9d9947d6835e678388a
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: 10e565af67056dee1ea51e4949f32e1e1de54600
+ms.contentlocale: it-it
+ms.lasthandoff: 05/27/2017
 
 ---
 
-# <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Panoramica generale delle modifiche agli strumenti di .NET Core
+<a id="high-level-overview-of-changes-in-the-net-core-tools" class="xliff"></a>
+
+# Panoramica generale delle modifiche agli strumenti di .NET Core
 
 Questo documento offre una descrizione di alto livello dei cambiamenti derivanti dal passaggio da *project.json* a MSBuild e al sistema di progetto *.csproj*. Viene illustrata la nuova organizzazione su più livelli degli strumenti, vengono descritti i nuovi elementi disponibili e la loro collocazione nella struttura complessiva. Dopo la lettura di questo articolo gli utenti avranno una migliore comprensione degli elementi che compongono il set di strumenti di .NET Core dopo il passaggio a MSBuild e a *.csproj*. 
 
-## <a name="moving-away-from-projectjson"></a>Abbandono di project.json
+<a id="moving-away-from-projectjson" class="xliff"></a>
+
+## Abbandono di project.json
 Il cambiamento più significativo negli strumenti di .NET Core è il [passaggio da project.json a csproj](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/) come sistema di progetto. Le versioni più recenti degli strumenti da riga di comando non supportano i file *project.json*. Questo significa che non può essere usata per creare, eseguire o pubblicare applicazioni e librerie basate su project.json. Per usare questa versione degli strumenti, è necessario eseguire la migrazione dei progetti esistenti o avviarne di nuovi. 
 
 Come parte di questo passaggio, il motore di compilazione personalizzato sviluppato per i progetti project.json è stato sostituito da un motore di compilazione maturo e dotato di funzionalità complete denominato [MSBuild](https://github.com/Microsoft/msbuild). MSBuild è un motore noto nella community .NET: è stato infatti una tecnologia fondamentale fin dalla prima versione della piattaforma. Naturalmente, poiché è necessario per la compilazione di applicazioni .NET Core, MSBuild è stato portato in .NET Core e può essere usato su qualsiasi piattaforma in cui viene eseguito .NET Core. Una delle promesse principali di .NET Core è la realizzazione di uno stack di sviluppo multipiattaforma, e Microsoft ha mantenuto tale promessa.
@@ -28,14 +33,16 @@ Come parte di questo passaggio, il motore di compilazione personalizzato svilupp
 > [!NOTE]
 > Se non si ha familiarità con MSBuild e per altre informazioni su MSBuild, leggere l'articolo [MSBuild Concepts](https://docs.microsoft.com/visualstudio/msbuild/msbuild-concepts) (Concetti relativi a MSBuild). 
 
-## <a name="the-tooling-layers"></a>Livelli degli strumenti
+<a id="the-tooling-layers" class="xliff"></a>
+
+## Livelli degli strumenti
 Con l'abbandono del sistema di progetto esistente e dei commutatori del motore di compilazione, la domanda da porsi è la seguente: uno qualsiasi di questi cambiamenti modificherà i livelli complessivi dell'ecosistema degli strumenti .NET Core? Esistono nuovi elementi e componenti?
 
 Nella figura seguente viene fornito un breve riepilogo dei livelli dell'anteprima 2:
 
 ![Architettura di alto livello degli strumenti dell'anteprima 2](media/cli-msbuild-architecture/p2-arch.png)
 
-L'organizzazione su più livelli degli strumenti è piuttosto semplice. Al livello più basso, come base, si trovano gli strumenti della riga di comando di .NET Core. Tutti gli altri strumenti di livello più alto, ad esempio Visual Studio o VS Code, dipendono e si basano sull'interfaccia della riga di comando per la compilazione dei progetti, il ripristino delle dipendenze e così via. Ad esempio, questo significa che, se Visual Studio voleva eseguire un'operazione di ripristino, doveva chiamare il comando `dotnet restore` nell'interfaccia della riga di comando. 
+L'organizzazione su più livelli degli strumenti è piuttosto semplice. Al livello più basso, come base, si trovano gli strumenti della riga di comando di .NET Core. Tutti gli altri strumenti di livello più alto, ad esempio Visual Studio o Visual Studio Code, dipendono e si basano sull'interfaccia della riga di comando per la compilazione dei progetti, il ripristino delle dipendenze e così via. Ad esempio, questo significa che, se Visual Studio voleva eseguire un'operazione di ripristino, doveva chiamare il comando `dotnet restore` nell'interfaccia della riga di comando. 
 
 Con il passaggio al nuovo sistema di progetto, il diagramma precedente risulta modificato nel modo illustrato di seguito: 
 
@@ -48,7 +55,9 @@ La differenza principale è che l'interfaccia della riga di comando non è più 
 
 Tutti i set di strumenti, inclusa l'interfaccia della riga di comando, utilizzano ora il componente SDK condiviso e le relative destinazioni. Ad esempio, la prossima versione di Visual Studio non chiamerà il comando `dotnet restore` per ripristinare le dipendenze per i progetti .NET Core, ma userà direttamente la destinazione "Restore". Poiché si tratta di destinazioni MSBuild, è anche possibile usare direttamente MSBuild per eseguirle mediante il comando [dotnet-msbuild](dotnet-msbuild.md). 
 
-### <a name="cli-commands"></a>Comandi dell'interfaccia della riga di comando
+<a id="cli-commands" class="xliff"></a>
+
+### Comandi dell'interfaccia della riga di comando
 Con l'introduzione del componente SDK condiviso, la maggior parte dei comandi dell'interfaccia della riga di comando esistenti sono stati reimplementati come attività e destinazioni MSBuild. Cosa significa questo per i comandi dell'interfaccia della riga di comando e per l'utilizzo del set di strumenti? 
 
 La modalità di utilizzo dell'interfaccia della riga di comando non viene modificata. Nell'interfaccia della riga di comando sono infatti ancora disponibili i comandi base presenti nell'anteprima 2:
