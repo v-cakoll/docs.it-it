@@ -25,9 +25,8 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/23/2017
 
 ---
-<a id="obsolete-members-in-the-net-framework" class="xliff"></a>
-
 # Membri obsoleti in .NET Framework
+<a id="obsolete-members-in-the-net-framework" class="xliff"></a>
 Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] \(incluse le rispettive versioni intermedie, come [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]\) e in [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] \(incluse le rispettive versioni intermedie\), organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di membri obsoleti e le alternative consigliate in ogni assembly. In questo argomento non vengono elencati i membri di tipi obsoleti. Per un elenco dei tipi obsoleti, vedere [Tipi obsoleti](../../../docs/framework/whats-new/obsolete-types.md).  
   
 -   [Membri obsoleti negli assembly di sistema](#SystemMembers)  
@@ -97,15 +96,13 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
     -   [Microsoft.VisualBasic.dll](#visualbasic)  
   
 <a name="SystemMembers"></a>   
-<a id="obsolete-members-in-system-assemblies" class="xliff"></a>
-
-## Membri obsoleti negli assembly di sistema  
+## Membri obsoleti negli assembly di sistema
+<a id="obsolete-members-in-system-assemblies" class="xliff"></a>  
  Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly di sistema. Questi assembly vengono usati per lo sviluppo di applicazioni generiche destinate a .NET Framework.  
   
 <a name="mscorlib"></a>   
-<a id="assembly-mscorlibdll" class="xliff"></a>
-
-### Assembly: mscorlib.dll  
+### Assembly: mscorlib.dll
+<a id="assembly-mscorlibdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -271,9 +268,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Threading.WaitHandle?displayProperty=fullName>|<xref:System.Threading.WaitHandle.Handle%2A>|In alternativa, usare la                                          proprietà <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=fullName>.|  
   
 <a name="PresentationCore"></a>   
-<a id="assembly-presentationcoredll" class="xliff"></a>
-
-### Assembly: PresentationCore.dll  
+### Assembly: PresentationCore.dll
+<a id="assembly-presentationcoredll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -308,9 +304,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Windows.Media.Media3D.Viewport3DVisual?displayProperty=fullName>|<xref:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffectInput%2A>|Gli effetti bitmap sono deprecati e non funzionano più. In alternativa, si consideri l'uso di                                          <xref:System.Windows.Media.Effects.Effect?displayProperty=fullName> laddove appropriato.|  
   
 <a name="PresFW"></a>   
-<a id="assembly-presentationframeworkdll" class="xliff"></a>
-
-### Assembly: PresentationFramework.dll  
+### Assembly: PresentationFramework.dll
+<a id="assembly-presentationframeworkdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -320,9 +315,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Windows.Data.ListCollectionView?displayProperty=fullName>|<xref:System.Windows.Data.ListCollectionView.OnBeginChangeLogging%2A>|Sostituito da                                          <xref:System.Windows.Data.ListCollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=fullName>.|  
   
 <a name="Act"></a>   
-<a id="assembly-systemactivitiesdll" class="xliff"></a>
-
-### Assembly: System.Activities.dll  
+### Assembly: System.Activities.dll
+<a id="assembly-systemactivitiesdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -330,9 +324,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=fullName>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> Non usare questo costruttore. In alternativa, usare                                           <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=fullName> o                                          <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=fullName>.|  
   
 <a name="ActPres"></a>   
-<a id="assembly-systemactivitiespresentationdll" class="xliff"></a>
-
-### Assembly: System.Activities.Presentation.dll  
+### Assembly: System.Activities.Presentation.dll
+<a id="assembly-systemactivitiespresentationdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -347,9 +340,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.PropertiesChanged%2A>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> Non usare questa proprietà. In alternativa, usare                                          <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>.|  
   
 <a name="core"></a>   
-<a id="assembly-systemcoredll" class="xliff"></a>
-
-### Assembly: System.Core.dll  
+### Assembly: System.Core.dll
+<a id="assembly-systemcoredll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -392,9 +384,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Runtime.CompilerServices.RuntimeOps?displayProperty=fullName>|<xref:System.Runtime.CompilerServices.RuntimeOps.Quote%2A>|L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> Non usare questo metodo.|  
   
 <a name="data"></a>   
-<a id="assembly-systemdatadll" class="xliff"></a>
-
-### Assembly: System.Data.dll  
+### Assembly: System.Data.dll
+<a id="assembly-systemdatadll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -416,9 +407,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Data.SqlClient.SqlParameterCollection?displayProperty=fullName>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29> è stato deprecato. Usare                                          <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A?displayProperty=fullName>.|  
   
 <a name="entity"></a>   
-<a id="assembly-systemdataentitydll" class="xliff"></a>
-
-### Assembly: System.Data.Entity.dll  
+### Assembly: System.Data.Entity.dll
+<a id="assembly-systemdataentitydll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -428,9 +418,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Data.Objects.ObjectContext?displayProperty=fullName>|<xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Boolean%29>|In alternativa, usare                                          <xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Data.Objects.SaveOptions%29>.|  
   
 <a name="oracleclient"></a>   
-<a id="assembly-systemdataoracleclientdll" class="xliff"></a>
-
-### Assembly: System.Data.OracleClient.dll  
+### Assembly: System.Data.OracleClient.dll
+<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -439,9 +428,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Data.OracleClient.OracleParameterCollection?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29> è stato deprecato. Usare                                          <xref:System.Data.OracleClient.OracleParameterCollection.AddWithValue%2A?displayProperty=fullName>.|  
   
 <a name="design"></a>   
-<a id="assembly-systemdesigndll" class="xliff"></a>
-
-### Assembly: System.Design.dll  
+### Assembly: System.Design.dll
+<a id="assembly-systemdesigndll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -494,9 +482,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Windows.Forms.Design.ControlDesigner?displayProperty=fullName>|<xref:System.Windows.Forms.Design.ControlDesigner.OnSetComponentDefaults%2A>|Questo metodo è stato deprecato. In alternativa, usare                                           <xref:System.Windows.Forms.Design.ControlDesigner.InitializeNewComponent%2A?displayProperty=fullName>.|  
   
 <a name="system"></a>   
-<a id="assembly-systemdll" class="xliff"></a>
-
-### Assembly: System.dll  
+### Assembly: System.dll
+<a id="assembly-systemdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -608,9 +595,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Security.Claims.DynamicRoleClaimProvider?displayProperty=fullName>|<xref:System.Security.Claims.DynamicRoleClaimProvider.AddDynamicRoleClaims%2A>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> Usare                                          <xref:System.Security.Claims.ClaimsAuthenticationManager?displayProperty=fullName> per aggiungere attestazioni a un                                          <xref:System.Security.Claims.ClaimsIdentity>.|  
   
 <a name="drawing"></a>   
-<a id="assembly-systemdrawingdll" class="xliff"></a>
-
-### Assembly: System.Drawing.dll  
+### Assembly: System.Drawing.dll
+<a id="assembly-systemdrawingdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -618,9 +604,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=fullName>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> Questo costruttore è stato deprecato. Usare                                          <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>.|  
   
 <a name="messaging"></a>   
-<a id="assembly-systemmessagingdll" class="xliff"></a>
-
-### Assembly: System.Messaging.dll  
+### Assembly: System.Messaging.dll
+<a id="assembly-systemmessagingdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -628,9 +613,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Messaging.MessageQueue?displayProperty=fullName>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|Questo metodo restituisce un                                          <xref:System.Messaging.MessageEnumerator?displayProperty=fullName> che implementa la                                          famiglia di metodi <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=fullName> in modo non corretto. Usare invece <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=fullName>.|  
   
 <a name="servicemodel"></a>   
-<a id="assembly-systemservicemodeldll" class="xliff"></a>
-
-### Assembly: System.ServiceModel.dll  
+### Assembly: System.ServiceModel.dll
+<a id="assembly-systemservicemodeldll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -642,9 +626,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=fullName>|<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>|Questa proprietà è deprecata e viene mantenuta solo per compatibilità con le versioni precedenti. I criteri del computer locale verranno usati per determinare se è necessario usare l'autenticazione NTLM.|  
   
 <a name="smDisc"></a>   
-<a id="assembly-systemservicemodeldiscoverydll" class="xliff"></a>
-
-### Assembly: System.ServiceModel.Discovery.dll  
+### Assembly: System.ServiceModel.Discovery.dll
+<a id="assembly-systemservicemodeldiscoverydll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -652,18 +635,16 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=fullName>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> La                                          proprietà <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> è obsoleta. È consigliabile usare                                          <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=fullName> per impostare le proprietà del trasporto.|  
   
 <a name="datavisualization"></a>   
-<a id="assembly-systemwebdatavisualizationdll" class="xliff"></a>
-
-### Assembly: System.Web.DataVisualization.dll  
+### Assembly: System.Web.DataVisualization.dll
+<a id="assembly-systemwebdatavisualizationdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=fullName>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A> è stato deprecato. In alternativa, analizzare                                           <xref:System.Web.UI.Control.ViewState%2A?displayProperty=fullName>.|  
   
 <a name="web"></a>   
-<a id="assembly-systemwebdll" class="xliff"></a>
-
-### Assembly: System.Web.dll  
+### Assembly: System.Web.dll
+<a id="assembly-systemwebdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -698,18 +679,16 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Web.UI.WebControls.Xml?displayProperty=fullName>|<xref:System.Web.UI.WebControls.Xml.Document%2A>|L'alternativa consigliata è la                                          proprietà <xref:System.Web.UI.WebControls.Xml.XPathNavigator%2A?displayProperty=fullName>. Creare un                                          <xref:System.Xml.XPath.XPathDocument?displayProperty=fullName> e chiamare                                          <xref:System.Xml.XPath.XPathDocument.CreateNavigator%2A?displayProperty=fullName> per creare un                                          <xref:System.Xml.XPath.XPathNavigator?displayProperty=fullName>.|  
   
 <a name="dynamicdata"></a>   
-<a id="assembly-systemwebdynamicdatadll" class="xliff"></a>
-
-### Assembly: System.Web.DynamicData.dll  
+### Assembly: System.Web.DynamicData.dll
+<a id="assembly-systemwebdynamicdatadll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
 |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=fullName>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|Usare la                                          proprietà `EnablePersistedSelection` su un controllo con associazione a dati, ad esempio                                          <xref:System.Web.UI.WebControls.GridView?displayProperty=fullName> o                                          <xref:System.Web.UI.WebControls.ListView?displayProperty=fullName>.|  
   
 <a name="extensions"></a>   
-<a id="assembly-systemwebextensionsdll" class="xliff"></a>
-
-### Assembly: System.Web.Extensions.dll  
+### Assembly: System.Web.Extensions.dll
+<a id="assembly-systemwebextensionsdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -723,9 +702,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=fullName>|<xref:System.Web.UI.ScriptResourceAttribute.TypeName%2A>|Questa proprietà è obsoleta. In alternativa, usare                                          <xref:System.Web.UI.ScriptResourceAttribute.StringResourceClientTypeName%2A?displayProperty=fullName>.|  
   
 <a name="services"></a>   
-<a id="assembly-systemwebservicesdll" class="xliff"></a>
-
-### Assembly: System.Web.Services.dll  
+### Assembly: System.Web.Services.dll
+<a id="assembly-systemwebservicesdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -733,9 +711,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=fullName>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|Questa proprietà verrà rimossa da una versione futura. La presenza di una particolare intestazione in un messaggio SOAP non viene più applicata.|  
   
 <a name="forms"></a>   
-<a id="assembly-systemwindowsformsdll" class="xliff"></a>
-
-### Assembly: System.Windows.Forms.dll  
+### Assembly: System.Windows.Forms.dll
+<a id="assembly-systemwindowsformsdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -752,9 +729,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=fullName>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|La proprietà è stata deprecata. In alternativa, usare la                                          proprietà <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=fullName>.|  
   
 <a name="xaml"></a>   
-<a id="assembly-systemxamldll" class="xliff"></a>
-
-### Assembly: System.Xaml.dll  
+### Assembly: System.Xaml.dll
+<a id="assembly-systemxamldll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -762,9 +738,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=fullName>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|L'argomento `expressionType` non viene usato dal parser XAML. Per specificare il tipo restituito previsto, usare                                          <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=fullName>. Per specificare la gestione personalizzata per i tipi di espressione, usare                                          <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=fullName>.|  
   
 <a name="xml"></a>   
-<a id="assembly-systemxmldll" class="xliff"></a>
-
-### Assembly: System.Xml.dll  
+### Assembly: System.Xml.dll
+<a id="assembly-systemxmldll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -786,30 +761,26 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:System.Xml.Serialization.XmlSerializerFactory?displayProperty=fullName>|<xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%2CSystem.String%2CSystem.Security.Policy.Evidence%29>|Questo metodo è obsoleto e sarà rimosso nelle versioni future di .NET Framework. Usare un overload di                                          <xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%2A?displayProperty=fullName> che non accetta un                                          parametro <xref:System.Security.Policy.Evidence?displayProperty=fullName>.|  
   
 <a name="MicrosoftMembers"></a>   
-<a id="obsolete-members-in-microsoft-assemblies" class="xliff"></a>
-
-## Membri obsoleti negli assembly Microsoft  
+## Membri obsoleti negli assembly Microsoft
+<a id="obsolete-members-in-microsoft-assemblies" class="xliff"></a>  
  Nelle tabelle seguenti sono elencati i membri obsoleti negli assembly Microsoft. Questi ultimi sono assembly speciali, tra cui assembly destinati a un unico linguaggio (ad esempio Microsoft.VisualBasic.dll) o un sistema di compilazione (ad esempio Microsoft.Build.Engine.dll).  
   
 <a name="IEHost"></a>   
-<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>
-
-### Assembly: IEHost.dll e IEExec.exe  
+### Assembly: IEHost.dll e IEExec.exe
+<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
  Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti i rispettivi tipi e membri sono obsoleti e non sono supportati in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Questi assembly sono usati per eseguire l'hosting dei controlli Windows Form ed eseguire i file eseguibili in Internet Explorer. Le alternative a questa tecnologia includono ClickOnce, le applicazioni browser XAML (XBAP) e Microsoft Silverlight.  
   
 <a name="isymwrapper"></a>   
-<a id="assembly-isymwrapperdll" class="xliff"></a>
-
-### Assembly: ISymWrapper.dll  
+### Assembly: ISymWrapper.dll
+<a id="assembly-isymwrapperdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=fullName>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|L'alternativa consigliata è <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=fullName>.                                          <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=fullName> accetta un puntatore all'interfaccia dell'utilità di importazione come un                                          <xref:System.IntPtr?displayProperty=fullName> anziché un                                          <xref:System.Int32?displayProperty=fullName> e pertanto funziona su architetture a 32 bit e a 64 bit.|  
   
 <a name="conversion"></a>   
-<a id="assembly-microsoftbuildconversionv40dll" class="xliff"></a>
-
-### Assembly: Microsoft.Build.Conversion.v4.0.dll  
+### Assembly: Microsoft.Build.Conversion.v4.0.dll
+<a id="assembly-microsoftbuildconversionv40dll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -819,9 +790,8 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=fullName>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory%28Microsoft.Build.BuildEngine.Engine%2CMicrosoft.Build.BuildEngine.ProjectLoadSettings%29>|Usare invece il                                          metodo <xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory?displayProperty=fullName> senza parametri.|  
   
 <a name="engine"></a>   
-<a id="assembly-microsoftbuildenginedll" class="xliff"></a>
-
-### Assembly: Microsoft.Build.Engine.dll  
+### Assembly: Microsoft.Build.Engine.dll
+<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -829,36 +799,32 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|Se si passa semplicemente nel percorso di .NET Framework come                                          <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>, modificare semplicemente nel costruttore                                          <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName> senza parametri. In caso contrario, è possibile definire set di strumenti personalizzati nel Registro di sistema o nel file di configurazione oppure aggiungere elementi al                                          <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=fullName> del motore. Quindi, usare invece il costruttore                                          <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName> o                                          <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=fullName>.|  
   
 <a name="BuildFW"></a>   
-<a id="assembly-microsoftbuildframeworkdll" class="xliff"></a>
-
-### Assembly: Microsoft.Build.Framework.dll  
+### Assembly: Microsoft.Build.Framework.dll
+<a id="assembly-microsoftbuildframeworkdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=fullName>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> In alternativa, usare la                                          proprietà <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=fullName>.|  
   
 <a name="BuildUtil4"></a>   
-<a id="assembly-microsoftbuildutilitiesv40dll" class="xliff"></a>
-
-### Assembly: Microsoft.Build.Utilities.v4.0.dll  
+### Assembly: Microsoft.Build.Utilities.v4.0.dll
+<a id="assembly-microsoftbuildutilitiesv40dll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=fullName>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|Usare la                                          proprietà <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=fullName>.|  
   
 <a name="data_entity_tasks"></a>   
-<a id="assembly-microsoftdataentitybuildtasksdll" class="xliff"></a>
-
-### Assembly: Microsoft.Data.Entity.Build.Tasks.dll  
+### Assembly: Microsoft.Data.Entity.Build.Tasks.dll
+<a id="assembly-microsoftdataentitybuildtasksdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
 |<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=fullName> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|Deprecata inizialmente in .NET Framework 4.5.<br /><br /> Usato solo per compatibilità con la versione 3.5.|  
   
 <a name="visualbasic"></a>   
-<a id="assembly-microsoftvisualbasicdll" class="xliff"></a>
-
-### Assembly: Microsoft.VisualBasic.dll  
+### Assembly: Microsoft.VisualBasic.dll
+<a id="assembly-microsoftvisualbasicdll" class="xliff"></a>  
   
 |Tipo|Member|Messaggio|  
 |----------|------------|-------------|  
@@ -875,8 +841,7 @@ Le tabelle in questo articolo elencano i membri di tipo obsoleti in [!INCLUDE[ne
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=fullName>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|L'utilizzo di questo membro genera un errore del compilatore.<br /><br /> Non usare questo metodo.|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=fullName>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|La chiave del Registro di sistema `DynData` funziona solo su Win9x, che non è supportato da questa versione di .NET Framework. Usare invece la chiave del Registro di sistema `PerformanceData`. Questa proprietà verrà rimossa da una versione futura di Framework.|  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## Vedere anche
+<a id="see-also" class="xliff"></a>  
  [Elementi obsoleti nella libreria di classi](../../../docs/framework/whats-new/whats-obsolete.md)   
  [Tipi obsoleti](../../../docs/framework/whats-new/obsolete-types.md)
