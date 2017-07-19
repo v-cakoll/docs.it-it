@@ -1,57 +1,80 @@
 ---
-title: "Objects (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "objects [Visual Basic]"
+title: Oggetti (Visual Basic) | Microsoft Docs
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
----
-# Objects (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 6d4ed7e551c9a0d039f0206a86fa3a748dd728ef
+ms.contentlocale: it-it
+ms.lasthandoff: 05/26/2017
 
-In questo argomento vengono forniti i collegamenti ad altri argomenti in cui sono descritti gli oggetti di runtime di Visual Basic e sono disponibili tabelle delle routine, delle proprietà e degli eventi dei relativi membri.  
+---
+<a id="objects-visual-basic" class="xliff"></a>
+
+# Oggetti (Visual Basic)
+Questo argomento contiene collegamenti ad altri argomenti che illustrano gli oggetti runtime di Visual Basic e contengono tabelle di procedure, proprietà ed eventi dei relativi membri.  
   
-## Oggetti di runtime di Visual Basic  
+<a id="visual-basic-run-time-objects" class="xliff"></a>
+
+## Oggetti runtime di Visual Basic  
   
 |||  
-|-|-|  
-|<xref:Microsoft.VisualBasic.Collection>|Consente di considerare un gruppo correlato di elementi come se si trattasse di un unico oggetto.|  
-|<xref:Microsoft.VisualBasic.Information.Err%2A>|Contiene informazioni relative a errori di runtime.|  
-|L'oggetto `My.Application` è costituito dalle classi seguenti:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> fornisce i membri disponibili in tutti i progetti.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> fornisce i membri disponibili nelle applicazioni Windows Form.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> fornisce i membri disponibili nelle applicazioni console.|Fornisce solo i dati associati all'applicazione o alla DLL corrente.  L'oggetto `My.Application` non altera le informazioni a livello di sistema.<br /><br /> Alcuni membri sono disponibili solo per i Windows Form o le applicazioni console.|  
-|`My.Application.Info` \(<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Info%2A>\)|Fornisce le proprietà per ottenere informazioni su un'applicazione, ad esempio il numero della versione, la descrizione, gli assembly caricati e così via.|  
-|`My.Application.Log` \(<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>\)|Fornisce una proprietà e i metodi per scrivere le informazioni relative all'evento e all'eccezione sui listener di log dell'applicazione.|  
-|`My.Computer` \(<xref:Microsoft.VisualBasic.Devices.Computer>\)|Fornisce le proprietà per la gestione dei componenti del computer come audio, orologio, tastiera, file system e così via.|  
-|`My.Computer.Audio` \(<xref:Microsoft.VisualBasic.Devices.Audio>\)|Fornisce i metodi per la riproduzione di suoni.|  
-|`My.Computer.Clipboard` \(<xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>\)|Fornisce metodi per la modifica degli Appunti.|  
-|`My.Computer.Clock` \(<xref:Microsoft.VisualBasic.Devices.Clock>\)|Fornisce le proprietà per accedere all'ora locale corrente e al tempo universale coordinato \(UTC\), equivalente all'ora di Greenwich, dall'orologio di sistema.|  
-|`My.Computer.FileSystem` \(<xref:Microsoft.VisualBasic.FileIO.FileSystem>\)|Fornisce le proprietà e i metodi per l'utilizzo di unità, file e directory.|  
-|`My.Computer.FileSystem.SpecialDirectories` \(<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>\)|Fornisce le proprietà necessarie per accedere alle directory cui si fa riferimento più comunemente.|  
-|`My.Computer.Info` \(<xref:Microsoft.VisualBasic.Devices.ComputerInfo>\)|Fornisce le proprietà che consentono di ottenere informazioni sulla memoria, sugli assembly caricati, sul nome e sul sistema operativo del computer.|  
-|`My.Computer.Keyboard` \(<xref:Microsoft.VisualBasic.Devices.Keyboard>\)|Fornisce le proprietà per accedere allo stato corrente della tastiera, ad esempio ai tasti attualmente premuti, e un metodo per inviare le sequenze di tasti alla finestra attiva.|  
-|`My.Computer.Mouse` \(<xref:Microsoft.VisualBasic.Devices.Mouse>\)|Fornisce le proprietà per ottenere informazioni sul formato e la configurazione del mouse installato nel computer locale.|  
-|`My.Computer.Network` \(<xref:Microsoft.VisualBasic.Devices.Network>\)|Fornisce una proprietà, un evento e dei metodi per l'interazione con la rete a cui è connesso il computer.|  
-|`My.Computer.Ports` \(<xref:Microsoft.VisualBasic.Devices.Ports>\)|Fornisce una proprietà e un metodo per accedere alle porte seriali del computer.|  
-|`My.Computer.Registry` \(<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>\)|Fornisce proprietà e metodi per la modifica del Registro di sistema.|  
-|[My.Forms Object](../../../visual-basic/language-reference/objects/my-forms-object.md)|Fornisce le proprietà che consentono di accedere alle istanze di ciascun Windows Form dichiarato nel progetto corrente.|  
-|`My.Log` \(<xref:Microsoft.VisualBasic.Logging.AspLog>\)|Fornisce una proprietà e metodi per scrivere informazioni su eventi ed eccezioni nei listener del log dell'applicazione per le applicazioni Web.|  
-|[My.Request Object](../../../visual-basic/language-reference/objects/my-request-object.md)|Ottiene l'oggetto <xref:System.Web.HttpRequest> per la pagina richiesta.  L'oggetto `My.Request` contiene le informazioni relative alla richiesta HTTP corrente.<br /><br /> L'oggetto `My.Request` è disponibile solo per le applicazioni [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp-md.md)].|  
-|[My.Resources Object](../../../visual-basic/language-reference/objects/my-resources-object.md)|Fornisce proprietà e classi per accedere alle risorse di un'applicazione.|  
-|[My.Response Object](../../../visual-basic/language-reference/objects/my-response-object.md)|Ottiene l'oggetto <xref:System.Web.HttpResponse> associato a <xref:System.Web.UI.Page>.  Questo oggetto consente di inviare i dati di una risposta HTTP a un client e contiene informazioni su quella risposta.<br /><br /> L'oggetto `My.Response` è disponibile solo per le applicazioni [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp-md.md)].|  
-|[My.Settings Object](../../../visual-basic/language-reference/objects/my-settings-object.md)|Fornisce proprietà e metodi per accedere alle impostazioni di un'applicazione.|  
-|`My.User` \(<xref:Microsoft.VisualBasic.ApplicationServices.User>\)|Fornisce l'accesso alle informazioni relative all'utente corrente.|  
-|[My.WebServices Object](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Fornisce proprietà per la creazione e l'accesso a una singola istanza di ciascun servizio Web a cui fa riferimento il progetto corrente.|  
+|---|---|  
+|<xref:Microsoft.VisualBasic.Collection>|Rappresenta un modo pratico di visualizzare un gruppo correlato di elementi come un singolo oggetto.|  
+|<xref:Microsoft.VisualBasic.Information.Err%2A>|Contiene informazioni sugli errori di runtime.|  
+|L'oggetto `My.Application` è costituito dalle classi seguenti:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> specifica i membri disponibili in tutti i progetti.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> specifica i membri disponibili nelle applicazioni Windows Form.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> specifica i membri disponibili nelle applicazioni console.|Specifica i dati associati solo all'applicazione o DLL corrente. Nessuna informazione a livello di sistema può essere modificata con `My.Application`.<br /><br /> Alcuni membri sono disponibili solo per le applicazioni console o Windows Form.|  
+|`My.Application.Info` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Info%2A>)|Specifica le proprietà necessarie per ottenere le informazioni relative a un'applicazione, ad esempio il numero di versione, la descrizione, gli assembly caricati e così via.|  
+|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|Fornisce una proprietà e i metodi per scrivere le informazioni relative a eventi ed eccezioni nei listener di log dell'applicazione.|  
+|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|Specifica le proprietà per la modifica dei componenti del computer, ad esempio audio, orologio, tastiera, file system e così via.|  
+|`My.Computer.Audio` (<xref:Microsoft.VisualBasic.Devices.Audio>)|Specifica i metodi per la riproduzione di suoni.|  
+|`My.Computer.Clipboard` (<xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>)|Specifica i metodi per la modifica degli Appunti.|  
+|`My.Computer.Clock` (<xref:Microsoft.VisualBasic.Devices.Clock>)|Offre proprietà che consentono di accedere all'ora locale corrente e all'ora UTC (Universal Coordinated Time), equivalente all'ora di Greenwich, dal clock di sistema.|  
+|`My.Computer.FileSystem` (<xref:Microsoft.VisualBasic.FileIO.FileSystem>)|Specifica proprietà e metodi per l'uso di unità, file e directory.|  
+|`My.Computer.FileSystem.SpecialDirectories` (<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)|Specifica le proprietà per l'accesso alle directory a cui si fa comunemente riferimento.|  
+|`My.Computer.Info` (<xref:Microsoft.VisualBasic.Devices.ComputerInfo>)|Offre proprietà che consentono di ottenere informazioni su memoria del computer, assembly caricati, nome e sistema operativo.|  
+|`My.Computer.Keyboard` (<xref:Microsoft.VisualBasic.Devices.Keyboard>)|Offre proprietà che consentono di accedere allo stato corrente della tastiera, per sapere ad esempio quali tasti vengono attualmente premuti, e un metodo per inviare le sequenze di tasti alla finestra attiva.|  
+|`My.Computer.Mouse` (<xref:Microsoft.VisualBasic.Devices.Mouse>)|Offre proprietà che consentono di ottenere informazioni sul formato e sulla configurazione del mouse installato nel computer locale.|  
+|`My.Computer.Network` (<xref:Microsoft.VisualBasic.Devices.Network>)|Specifica una proprietà, un evento e i metodi per l'interazione con la rete a cui è connesso il computer.|  
+|`My.Computer.Ports` (<xref:Microsoft.VisualBasic.Devices.Ports>)|Specifica una proprietà e un metodo per l'accesso alle porte seriali del computer.|  
+|`My.Computer.Registry` (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)|Specifica proprietà e metodi per la modifica del Registro di sistema.|  
+|[Oggetto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)|Offre proprietà per l'accesso a un'istanza di ogni Windows Form dichiarato nel progetto corrente.|  
+|`My.Log` (<xref:Microsoft.VisualBasic.Logging.AspLog>)|Specifica una proprietà e i metodi per la scrittura di informazioni relative a eventi ed eccezioni nei listener di log dell'applicazione per le applicazioni Web.|  
+|[Oggetto My.Request](../../../visual-basic/language-reference/objects/my-request-object.md)|Ottiene l'oggetto <xref:System.Web.HttpRequest> per la pagina richiesta. L'oggetto `My.Request` contiene informazioni sulla richiesta HTTP corrente.<br /><br /> L'oggetto `My.Request` è disponibile solo per le applicazioni [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].|  
+|[Oggetto My.Resources](../../../visual-basic/language-reference/objects/my-resources-object.md)|Specifica proprietà e classi per l'accesso alle risorse di un'applicazione.|  
+|[Oggetto My.Response](../../../visual-basic/language-reference/objects/my-response-object.md)|Ottiene l'oggetto <xref:System.Web.HttpResponse> associato a <xref:System.Web.UI.Page>. Questo oggetto consente di inviare dati di risposta HTTP a un client e contiene informazioni su tale risposta.<br /><br /> L'oggetto `My.Response` è disponibile solo per le applicazioni [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].|  
+|[Oggetto My.Settings](../../../visual-basic/language-reference/objects/my-settings-object.md)|Specifica proprietà e metodi per l'accesso alle impostazioni di un'applicazione.|  
+|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|Offre l'accesso alle informazioni sull'utente corrente.|  
+|[Oggetto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|Specifica le proprietà per la creazione e l'accesso a una singola istanza di ogni servizio Web a cui fa riferimento il progetto corrente.|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|Fornisce i metodi e le proprietà per l'analisi dei file di testo strutturati.|  
   
+<a id="see-also" class="xliff"></a>
+
 ## Vedere anche  
- [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)   
+ [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)   
  [Visual Basic](../../../visual-basic/index.md)

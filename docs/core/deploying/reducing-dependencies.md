@@ -1,5 +1,5 @@
 ---
-title: Riduzione delle dipendenze dei pacchetti con project.json
+title: Riduzione delle dipendenze dei pacchetti con project.json | Microsoft Docs
 description: Riduzione delle dipendenze dei pacchetti con project.json
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,24 +9,31 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: aaa29f82cc89593fd29d469d5633bc60fa434ad7
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 616fb3f4b2ed3fda9a2a49ac3ec83ff466c43968
+ms.contentlocale: it-it
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="reducing-package-dependencies-with-projectjson"></a>Riduzione delle dipendenze dei pacchetti con project.json
+<a id="reducing-package-dependencies-with-projectjson" class="xliff"></a>
+
+# Riduzione delle dipendenze dei pacchetti con project.json
 
 Questo articolo descrive cosa è necessario conoscere sulla riduzione delle dipendenze dei pacchetti durante la creazione di librerie `project.json`. Al termine dell'articolo, si apprenderà come creare la libreria in modo che usi solo le dipendenze necessarie. 
 
-## <a name="why-its-important"></a>Perché è importante?
+<a id="why-its-important" class="xliff"></a>
+
+## Perché è importante?
 
 .NET Core è un prodotto costituito da pacchetti NuGet.  Un pacchetto fondamentale è il [metapacchetto della libreria .NET Standard](https://www.nuget.org/packages/NETStandard.Library), che è un pacchetto NuGet composto da altri pacchetti.  Fornisce il set di pacchetti in grado di funzionare su più implementazioni di .NET, ad esempio .NET Framework, .NET Core e Xamarin/Mono.
 
 È tuttavia probabile che la libreria non usi tutti i pacchetti che contiene.  Quando si crea una libreria e la si distribuisce tramite NuGet, è opportuno ridurre il numero delle dipendenze ai soli pacchetti che vengono effettivamente usati.  In questo modo, si otterrà un impatto minore per i pacchetti NuGet.
 
-## <a name="how-to-do-it"></a>Come procedere?
+<a id="how-to-do-it" class="xliff"></a>
+
+## Come procedere?
 
 Attualmente non è disponibile un comando `dotnet` ufficiale che consenta di ridurre il numero di riferimenti nel pacchetto.  È tuttavia possibile eseguire questa operazione manualmente.  Il processo generale è simile al seguente:
 
@@ -42,7 +49,9 @@ Attualmente non è disponibile un comando `dotnet` ufficiale che consenta di rid
 1. Tentativi ed errori.  Questo metodo fa riferimento alla rimozione di un pacchetto, al relativo ripristino, se la libreria continua a eseguire la compilazione, e alla ripetizione del processo.
 2. Tramite uno strumento come [ILSpy](http://ilspy.net) o [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) per la selezione dei riferimenti in modo da visualizzare quali vengono effettivamente usati dal codice.  A questo punto, è possibile rimuovere i pacchetti che non corrispondono ai tipi in uso.
 
-## <a name="example"></a>Esempio 
+<a id="example" class="xliff"></a>
+
+## Esempio 
 
 Si supponga di aver scritto una libreria che offre funzionalità aggiuntive per tipi di raccolte generiche.  Tale libreria deve dipendere da pacchetti come `System.Collections`, ma può non dipendere da pacchetti come `System.Net.Http`.  Di conseguenza, può essere opportuno ridurre le dipendenze dei pacchetti alla quantità necessaria per la libreria.
 

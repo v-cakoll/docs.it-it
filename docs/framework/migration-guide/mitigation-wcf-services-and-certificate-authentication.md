@@ -16,19 +16,25 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4c2156087ca168bafb1b7333310066cef73f3334
+ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
+ms.openlocfilehash: 0b32fa96cd002e927fa00e8c2a797d1ff6b17cb8
 ms.contentlocale: it-it
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/30/2017
 
 ---
-# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mitigazione: Autenticazione del certificato e servizi WCF
+<a id="mitigation-wcf-services-and-certificate-authentication" class="xliff"></a>
+
+# Mitigazione: Autenticazione del certificato e servizi WCF
 .NET Framework 4.6 aggiunge TLS 1.1 e TLS 1.2 all'elenco predefinito dei controlli SSL WCF. Quando .NET Framework 4.6 o versione successiva è installato sia nei computer client che nei server, per la negoziazione viene usato TLS 1.2.  
   
-## <a name="impact"></a>Impatto  
+<a id="impact" class="xliff"></a>
+
+## Impatto  
  TLS 1.2 non supporta l'autenticazione dei certificati MD5. Di conseguenza, se un cliente usa un certificato SSL che a sua volta usa MD5 per l'algoritmo hash, il client di WCF non riesce a connettersi al servizio WCF. Per altre informazioni, vedere [Mitigation: WCF Services and Certificate Authentication](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md) (Mitigazione: Servizi WCF e autenticazione dei certificati).  
   
-## <a name="mitigation"></a>Attenuazione  
+<a id="mitigation" class="xliff"></a>
+
+## Attenuazione  
  È possibile risolvere questo problema in modo che un client WCF possa connettersi a un server WCF effettuando una delle operazioni seguenti:  
   
 -   Aggiornare il certificato in modo che non usi l'algoritmo MD5. Si tratta della soluzione consigliata.  
@@ -59,11 +65,13 @@ ms.lasthandoff: 04/18/2017
     </configuration>  
     ```  
   
--   Se l'associazione è configurata in modo dinamico nel codice sorgente, aggiornare la proprietà <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> in modo che usi TLS 1.1 (<xref:System.Security.Authentication.SslProtocols?displayProperty=fullName>) o una versione precedente del protocollo nel codice sorgente.  
+-   Se l'associazione è configurata in modo dinamico nel codice sorgente, aggiornare la proprietà <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> in modo che usi TLS 1.1(<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=fullName>) o una versione precedente del protocollo nel codice sorgente.  
   
     > [!CAUTION]
     >  Questa soluzione non è consigliata, poiché un certificato con l'algoritmo hash MD5 viene considerato non protetto.  
   
-## <a name="see-also"></a>Vedere anche  
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche  
  [Modifiche al runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 

@@ -1,33 +1,37 @@
 ---
-title: Introduzione a .NET
+title: Introduzione a .NET | Microsoft Docs
 description: Introduzione alla famiglia di tecnologie .NET.
 keywords: ".NET, .NET Core, introduzione, novità"
 author: richlander
 ms.author: mairaw
-ms.date: 05/11/2017
+ms.date: 07/03/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
-ms.openlocfilehash: 315b24896797badd0a7540477f79f3f220e5c300
+ms.sourcegitcommit: c12811f3eb8b0aeeeeab6d41ba2983ee9a0ae0f9
+ms.openlocfilehash: 7055438edf0ce4466f3ae6a5d8eb9216b324d3b7
 ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 07/06/2017
 
 ---
 
-# <a name="welcome-to-net"></a>Introduzione a .NET
+<a id="welcome-to-net" class="xliff"></a>
+
+# Introduzione a .NET
 
 Per imparare a creare app .NET Core, vedere [Introduzione a .NET Core](core/get-started.md).
 
 Con .NET è possibile compilare molti tipi di app, ad esempio cloud, IoT e giochi, usando strumenti gratuiti per più piattaforme. Le app possono essere eseguite in Android, iOS, Linux, macOS e Windows. È possibile distribuire le app in server e desktop e pubblicarle in Store specifici per la distribuzione nei dispositivi mobili. .NET è accessibile per studenti e dilettanti e tutti gli utenti sono invitati a partecipare a una vivace community di sviluppatori internazionale e a fornire il loro contribuito diretto a molte delle tecnologie .NET.
 
-## <a name="news"></a>Novità
+<a id="news" class="xliff"></a>
+
+## Novità
 
 - [Introducing .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/) (Introduzione a .NET Standard)
-- [Announcing .NET Core 2.0 Preview 1 (Annuncio di .NET Core 2.0 Preview 1)](https://blogs.msdn.microsoft.com/dotnet/2017/05/10/announcing-net-core-2-0-preview-1/)
-- [Announcing ASP.NET 2.0 Preview 1 and Updates for .NET Web Developers (Annuncio di ASP.NET 2.0 Preview 1 e aggiornamenti per sviluppatori Web .NET](https://blogs.msdn.microsoft.com/webdev/2017/05/10/aspnet-2-preview-1/)
+- [Annuncio di .NET Core 2.0 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2017/06/28/announcing-net-core-2-0-preview-2/)
+- [Introduzione a ASP.NET Core 2.0 Preview 2](https://blogs.msdn.microsoft.com/webdev/2017/06/28/introducing-asp-net-core-2-0-preview-2/)
 - [A fresh update to Visual Studio 2017 and the next preview (Notizie aggiornate su Visual Studio 2017 e la prossima anteprima)](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/update-to-visual-studio-2017-and-next-preview/)
 - [Visual Studio for Mac: now generally available (Visual Studio per Mac: ora disponibile a livello generale)](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/visual-studio-for-mac-now-generally-available/)
 - [Announcing .NET Core Tools 1.0 (.NET Core 1.0.4, .NET Core 1.1.1, .NET Core SDK 1.0.1) [Annuncio di .NET Core Tools 1.0 (.NET Core 1.0.4, .NET Core 1.1.1, .NET Core SDK 1.0.1)]](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)
@@ -40,7 +44,9 @@ Con .NET è possibile compilare molti tipi di app, ad esempio cloud, IoT e gioch
 - [The week in .NET](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/) (Post di blog settimanali su .NET)
 - [Build 2017 su Channel 9 - Video sulle tecnologie e le novità più recenti di Microsoft](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
 
-## <a name="documentation"></a>Documentazione
+<a id="documentation" class="xliff"></a>
+
+## Documentazione
 
 Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaforme e linguaggi.  È possibile iniziare a conoscere .NET e i suoi linguaggi nelle sezioni seguenti:
 
@@ -53,7 +59,9 @@ Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaf
 
 È anche possibile esplorare i [riferimenti alle API .NET](https://docs.microsoft.com/dotnet/api).
 
-## <a name="open-source"></a>Open source
+<a id="open-source" class="xliff"></a>
+
+## Open source
 
 Questa documentazione è completamente [open source](https://github.com/dotnet/docs).  È possibile contribuire in qualsiasi modo, sottoponendo problemi o scrivendo la documentazione.  Anche la maggior parte di .NET è open source:
 

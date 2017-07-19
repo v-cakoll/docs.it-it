@@ -21,13 +21,15 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: de78bfda263071817535157522430de080d4f6a4
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 7efef9e445d542e4575c94af78179316bf628aa1
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programmazione asincrona con Async e Await (Visual Basic)
+<a id="asynchronous-programming-with-async-and-await-visual-basic" class="xliff"></a>
+
+# Programmazione asincrona con Async e Await (Visual Basic)
 È possibile evitare colli di bottiglia nelle prestazioni e migliorare la risposta generale dell'applicazione utilizzando la programmazione asincrona. Le tecniche tradizionali per la scrittura di applicazioni asincrone, tuttavia, possono essere complesse, rendendone difficile la scrittura, il debug e la gestione.  
   
  Visual Studio 2012 introduce un approccio semplificato, la programmazione asincrona, che sfrutta il supporto asincrono in .NET Framework 4.5 e versioni successive oltre che in Windows Runtime. Il compilatore esegue il lavoro difficile che prima veniva svolto dallo sviluppatore e l'applicazione mantiene una struttura logica simile al codice sincrono. Di conseguenza, si ottengono tutti i vantaggi della programmazione asincrona con meno lavoro richiesto.  
@@ -103,7 +105,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 -   Il nome di un metodo asincrono termina per convenzione con un suffisso "Async".  
   
--   Il tipo restituito è uno dei seguenti:  
+-   Il tipo di valore restituito è uno dei seguenti:  
   
     -   <xref:System.Threading.Tasks.Task%601> se nel metodo è presente un'istruzione return in cui l'operando è di tipo TResult.  
   
@@ -156,16 +158,16 @@ Dim urlContents As String = Await client.GetStringAsync()
  Per altre informazioni sul flusso di controllo, vedere [Flusso di controllo in programmi asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
 ##  <a name="BKMK_APIAsyncMethods"></a> Metodi asincroni per API  
- Metodi come `GetStringAsync` che supportano la programmazione asincrona In .NET Framework 4.5 o versioni successive sono presenti diversi membri che utilizzano `Async` e `Await`. È possibile riconoscere questi membri dal suffisso "Async" associato al nome del membro e dal tipo restituito di <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Ad esempio, la classe `System.IO.Stream` contiene metodi quali <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>, oltre ai metodi sincroni <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> e <xref:System.IO.Stream.Write%2A>.  
+ Metodi come `GetStringAsync` che supportano la programmazione asincrona In .NET Framework 4.5 o versioni successive sono presenti diversi membri che utilizzano `Async` e `Await`. È possibile riconoscere questi membri dal suffisso "Async" associato al nome del membro e dal tipo restituito di <xref:System.Threading.Tasks.Task> o di <xref:System.Threading.Tasks.Task%601>. Ad esempio, la classe `System.IO.Stream` contiene metodi come <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A> insieme ai metodi sincroni <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> e <xref:System.IO.Stream.Write%2A>.  
   
  Windows Runtime contiene inoltre molti metodi che è possibile usare con `Async` e `Await` in app Windows. Per altre informazioni e metodi di esempio, vedere [Guida introduttiva: Chiamata di API asincrone in C# o Visual Basic](http://go.microsoft.com/fwlink/?LinkId=248545), [Programmazione asincrona (app di Windows Runtime)](http://go.microsoft.com/fwlink/?LinkId=259592) e [WhenAny: bridging tra .NET Framework e Windows Runtime](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx).  
   
 ##  <a name="BKMK_Threads"></a> Thread  
  I metodi asincroni vengono considerati operazioni non bloccanti. Un'espressione `Await` in un metodo asincrono non blocca il thread corrente quando l'attività attesa è in esecuzione. Al contrario, l'espressione registra il resto del metodo come continuazione e restituisce il controllo al chiamante del metodo asincrono.  
   
- Le parole chiave `Async` e `Await` non determinano la creazione di thread aggiuntivi. I metodi asincroni non richiedono multithreading perché un metodo asincrono non viene eseguito nel proprio thread. Il metodo viene eseguito nel contesto di sincronizzazione corrente e utilizza il tempo sul thread solo se il metodo è attivo. È possibile usare <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=fullName> per spostare un processo associato alla CPU in un thread in background. Quest'ultimo, tuttavia, non è di alcun ausilio in un processo che attende solo che i risultati diventino disponibili.  
+ Le parole chiave `Async` e `Await` non determinano la creazione di thread aggiuntivi. I metodi asincroni non richiedono multithreading perché un metodo asincrono non viene eseguito nel proprio thread. Il metodo viene eseguito nel contesto di sincronizzazione corrente e utilizza il tempo sul thread solo se il metodo è attivo. È possibile utilizzare <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=fullName> per spostare un lavoro associato alla CPU in un thread in background. Quest'ultimo tuttavia non è di alcun ausilio in un processo che attende solo che i risultati diventino disponibili.  
   
- L'approccio alla programmazione asincrona basato su async è quasi sempre preferibile agli approcci esistenti. In particolare, questo approccio è preferibile a <xref:System.ComponentModel.BackgroundWorker> per le operazioni di I/O poiché il codice è più semplice e non è necessario proteggersi da situazioni di race condition. In combinazione con <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=fullName>, la programmazione asincrona è migliore di <xref:System.ComponentModel.BackgroundWorker> per le operazioni associate alla CPU perché separa i dettagli di coordinamento per l'esecuzione del codice dal processo che `Task.Run` trasferisce al pool di thread.  
+ L'approccio alla programmazione asincrona basato su async è quasi sempre preferibile agli approcci esistenti. In particolare, questo approccio è preferibile a <xref:System.ComponentModel.BackgroundWorker> per le operazioni di I/O poiché il codice è più semplice e non è necessario proteggersi da situazioni di race condition. Insieme a <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=fullName>, la programmazione asincrona è migliore di <xref:System.ComponentModel.BackgroundWorker> per le operazioni associate alla CPU perché separa i dettagli di coordinamento per l'esecuzione del codice dal lavoro che `Task.Run` trasferisce al pool di thread.  
   
 ##  <a name="BKMK_AsyncandAwait"></a> Async e Await  
  Se si specifica che un metodo è asincrono usando un modificatore [Async](../../../../visual-basic/language-reference/modifiers/async.md), vengono attivate le due funzionalità seguenti.  
@@ -185,13 +187,13 @@ Dim urlContents As String = Await client.GetStringAsync()
 -   [Operatore Await](../../../../visual-basic/language-reference/operators/await-operator.md)  
   
 ##  <a name="BKMK_ReturnTypesandParameters"></a> Tipi restituiti e parametri  
- Nella programmazione .NET Framework un metodo asincrono restituisce in genere <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. In un metodo asincrono un operatore `Await` viene applicato a un'attività restituita da una chiamata a un altro metodo asincrono.  
+ Nella programmazione .NET Framework un metodo asincrono in genere restituisce <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. In un metodo asincrono un operatore `Await` viene applicato a un'attività restituita da una chiamata a un altro metodo asincrono.  
   
  Specificare <xref:System.Threading.Tasks.Task%601> come tipo restituito se il metodo contiene un'istruzione [Return](../../../../visual-basic/language-reference/statements/return-statement.md) che specifica un operando di tipo `TResult`.  
   
  Utilizzare `Task` come tipo restituito se il metodo non include un'istruzione return o contiene un'istruzione return che non restituisce un operando.  
   
- Nell'esempio seguente viene illustrato come dichiarare e chiamare un metodo che restituisce <xref:System.Threading.Tasks.Task%601> o <xref:System.Threading.Tasks.Task>.  
+ Di seguito viene illustrato come dichiarare e chiamare un metodo che restituisce <xref:System.Threading.Tasks.Task%601> o <xref:System.Threading.Tasks.Task>.  
   
 ```vb  
 ' Signature specifies Task(Of Integer)  
@@ -235,9 +237,9 @@ Await Task_MethodAsync()
   
  Nella programmazione Windows Runtime, alle API asincrone è associato uno dei tipi restituiti seguenti, che sono simili alle attività:  
   
--   [IAsyncOperation](http://go.microsoft.com/fwlink/p/?LinkId=261896), corrispondente a <xref:System.Threading.Tasks.Task%601>  
+-   [IAsyncOperation](http://go.microsoft.com/fwlink/p/?LinkId=261896) che corrisponde a <xref:System.Threading.Tasks.Task%601>  
   
--   [IAsyncAction](http://go.microsoft.com/fwlink/p/?LinkId=261897), corrispondente a <xref:System.Threading.Tasks.Task>  
+-   [IAsyncAction](http://go.microsoft.com/fwlink/p/?LinkId=261897) che corrisponde a <xref:System.Threading.Tasks.Task>  
   
 -   [IAsyncActionWithProgress](http://go.microsoft.com/fwlink/p/?LinkId=261898)  
   
@@ -261,8 +263,8 @@ Await Task_MethodAsync()
 |[Flusso di controllo in programmi asincroni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|Traccia in dettaglio il flusso di controllo con una successione di espressioni await in un programma asincrono.|[Async Sample: Control Flow in Async Programs](http://go.microsoft.com/fwlink/p/?LinkID=255285&clcid=0x409) (Esempio di attività asincrona: Flusso di controllo in programmi asincroni)|  
 |[Ottimizzazione dell'applicazione Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|Mostra come aggiungere la seguente funzionalità alla soluzione asincrono:<br /><br /> -   [Annullare un'attività asincrona o un elenco di attività (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [Annullare attività asincrone dopo un periodo di tempo (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [Annullare le attività asincrone rimanenti dopo che ne è stata completata una(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [Avviare più attività asincrone ed elaborarle quando vengono completate (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/p/?LinkID=255046&clcid=0x409) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)|  
 |[Gestione della reentrancy nelle applicazioni asincrone (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|Viene illustrato come gestire i casi in cui un'operazione asincrona attiva viene riavviata mentre è in esecuzione.||  
-|[WhenAny: bridging tra .NET Framework e Windows Runtime](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)|Viene illustrato come eseguire il bridging tra tipi di attività in .NET Framework e IAsyncOperations in [!INCLUDE[wrt](../../../../csharp/includes/wrt_md.md)] per usare <xref:System.Threading.Tasks.Task.WhenAny%2A> con un metodo [!INCLUDE[wrt](../../../../csharp/includes/wrt_md.md)].|[Async Sample: Bridging between .NET and Windows Runtime (AsTask and WhenAny)](http://go.microsoft.com/fwlink/p/?LinkID=260638) (Esempio di attività asincrona: Bridging tra .NET e Windows Runtime (AsTask e WhenAny))|  
-|Annullamento asincrono: bridging tra .NET Framework e Windows Runtime|Viene illustrato come eseguire il bridging tra tipi di attività in .NET Framework e IAsyncOperations in [!INCLUDE[wrt](../../../../csharp/includes/wrt_md.md)] per usare <xref:System.Threading.CancellationTokenSource> con un metodo [!INCLUDE[wrt](../../../../csharp/includes/wrt_md.md)].|[Async Sample: Bridging between .NET and Windows Runtime (AsTask & Cancellation)](http://go.microsoft.com/fwlink/p/?LinkId=263004) (Esempio di attività asincrona: Bridging tra .NET e Windows Runtime (AsTask e Cancellation))|  
+|[WhenAny: bridging tra .NET Framework e Windows Runtime](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)|Descrive come integrare i tipi di attività in .NET Framework e IAsyncOperations in [!INCLUDE[wrt](~/includes/wrt-md.md)] per usare <xref:System.Threading.Tasks.Task.WhenAny%2A> con un metodo [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Async Sample: Bridging between .NET and Windows Runtime (AsTask and WhenAny)](http://go.microsoft.com/fwlink/p/?LinkID=260638) (Esempio di attività asincrona: Bridging tra .NET e Windows Runtime (AsTask e WhenAny))|  
+|Annullamento asincrono: bridging tra .NET Framework e Windows Runtime|Descrive come integrare i tipi di attività in .NET Framework e IAsyncOperations in [!INCLUDE[wrt](~/includes/wrt-md.md)] per usare <xref:System.Threading.CancellationTokenSource> con un metodo [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Async Sample: Bridging between .NET and Windows Runtime (AsTask & Cancellation)](http://go.microsoft.com/fwlink/p/?LinkId=263004) (Esempio di attività asincrona: Bridging tra .NET e Windows Runtime (AsTask e Cancellation))|  
 |[Uso della funzionalità Async per l'accesso ai file (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|Vengono elencati e illustrati i vantaggi dell'utilizzo di async e await per accedere ai file.||  
 |[Modello asincrono basato su attività (TAP)](http://msdn.microsoft.com/library/8cef1fcf-6f9f-417c-b21f-3fd8bac75007)|Descrive un nuovo modello per la modalità asincrona in .NET Framework. Il modello è basato sui tipi <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>.||  
 |[Video sulla modalità asincrona su Channel 9](http://go.microsoft.com/fwlink/p/?LinkID=267466)|Vengono forniti collegamenti a una serie di video sulla programmazione asincrona.||  
@@ -331,7 +333,9 @@ End Class
 ' Length of the downloaded string: 41763.  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche  
  [Operatore Await](../../../../visual-basic/language-reference/operators/await-operator.md)   
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 

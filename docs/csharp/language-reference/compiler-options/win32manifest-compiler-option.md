@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b9a5c7c994644d512d4049dbc5aab3fbea70d6ae
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bb28bf28c3d8a426322e1c1795941de7e9aa4bf6
+ms.openlocfilehash: fd8c0a9a398c8f8d6c589ffcf0426a375a82a6a8
+ms.contentlocale: it-it
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="win32manifest-c-compiler-options"></a>/win32manifest (opzioni del compilatore C#)
@@ -42,7 +43,7 @@ Usare l'opzione **/win32manifest** per specificare un file manifesto dell'applic
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 /win32manifest: filename  
 ```  
   
@@ -51,7 +52,7 @@ Usare l'opzione **/win32manifest** per specificare un file manifesto dell'applic
  Nome e percorso del file manifesto personalizzato.  
   
 ## <a name="remarks"></a>Note  
- Per impostazione predefinita, il compilatore [!INCLUDE[csharp_current_short](../../../csharp/language-reference/compiler-options/includes/csharp_current_short_md.md)] incorpora un manifesto dell'applicazione che specifica il livello di esecuzione richiesto "asInvoker". Viene creato il manifesto nella stessa cartella in cui viene compilato l'eseguibile, in genere la cartella bin\Debug o bin\Release quando si utilizza Visual Studio. Se si desidera fornire un manifesto personalizzato, ad esempio per specificare un livello di esecuzione richiesto "highestAvailable" o "requireAdministrator", utilizzare questa opzione per specificare il nome del file.  
+ Per impostazione predefinita, il compilatore [!INCLUDE[csharp_current_short](~/includes/csharp-current-short-md.md)] incorpora un manifesto dell'applicazione che specifica il livello di esecuzione richiesto "asInvoker". Viene creato il manifesto nella stessa cartella in cui viene compilato l'eseguibile, in genere la cartella bin\Debug o bin\Release quando si utilizza Visual Studio. Se si desidera fornire un manifesto personalizzato, ad esempio per specificare un livello di esecuzione richiesto "highestAvailable" o "requireAdministrator", utilizzare questa opzione per specificare il nome del file.  
   
 > [!NOTE]
 >  Questa opzione e l'opzione [/win32res (opzioni del compilatore c#)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) si escludono a vicenda. Se si tenta di usare entrambe le opzioni nella stessa riga di comando si otterrà un errore di compilazione.  
@@ -64,7 +65,7 @@ Usare l'opzione **/win32manifest** per specificare un file manifesto dell'applic
   
 -   Si indica un manifesto personalizzato che non specifica un livello di esecuzione richiesto.  
   
- [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] crea un file manifesto predefinito e lo memorizza nelle directory di debug e versione insieme al file eseguibile. Per aggiungere un manifesto personalizzato, crearne uno in qualsiasi editor di testo e quindi aggiungere il file al progetto. In alternativa, fare clic con il pulsante destro del mouse sull'icona **Progetto** in **Esplora soluzioni**, fare clic su **Aggiungi nuovo elemento** e quindi scegliere **File manifesto applicazione**. Dopo aver aggiunto il file manifesto nuovo o esistente, il file apparirà nell'elenco a discesa **Manifesto**. Per altre informazioni, vedere [Pagina Applicazione, Creazione progetti (C#)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp).  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] crea un file manifesto predefinito e lo memorizza nelle directory di debug e versione insieme al file eseguibile. Per aggiungere un manifesto personalizzato, crearne uno in qualsiasi editor di testo e quindi aggiungere il file al progetto. In alternativa, fare clic con il pulsante destro del mouse sull'icona **Progetto** in **Esplora soluzioni**, fare clic su **Aggiungi nuovo elemento** e quindi scegliere **File manifesto applicazione**. Dopo aver aggiunto il file manifesto nuovo o esistente, il file apparirà nell'elenco a discesa **Manifesto**. Per altre informazioni, vedere [Pagina Applicazione, Creazione progetti (C#)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp).  
   
  È possibile inserire il manifesto dell'applicazione come passaggio personalizzato dopo la compilazione o come parte di un file di risorse Win32 usando l'opzione [/nowin32manifest (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md). Usare la stessa opzione se si vuole che l'applicazione sia sottoposta alla virtualizzazione dei file o del Registro di sistema in Windows Vista. Ciò impedirà al compilatore di creare e incorporare un manifesto predefinito nel file eseguibile portabile (PE).  
   
@@ -74,7 +75,7 @@ Usare l'opzione **/win32manifest** per specificare un file manifesto dell'applic
 > [!NOTE]
 >  Il compilatore inserisce un nome di applicazione standard "MyApplication.app" nel file XML. Si tratta di una soluzione alternativa per consentire l'esecuzione delle applicazioni in Windows Server 2003 Service Pack 3.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
   <assemblyIdentity version="1.0.0.0" name="MyApplication.app"/>  

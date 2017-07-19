@@ -1,7 +1,7 @@
 ---
-title: Installazione di .NET Framework 3.5 in Windows 8, Windows 8.1 e Windows 10 | Microsoft Docs
+title: Risoluzione dei problemi di installazione di .NET Framework 3.5 in Windows 8, Windows 8.1 e Windows 10 | Microsoft Docs
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 04/20/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -17,13 +17,14 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f48ef7a29e05824834395fdd9fd850a017a5f7e6
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: d935648da22db51b004a2f209070bde737a6908d
 ms.contentlocale: it-it
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
+
 # <a name="installing-the-net-framework-35-on-windows-8-windows-81-and-windows-10"></a>Installazione di .NET Framework 3.5 in Windows 8, Windows 8.1 e Windows 10
 .NET Framework è parte integrante di molte applicazioni in esecuzione su Windows e fornisce funzionalità comuni per l'esecuzione di tali applicazioni. Per gli sviluppatori, .NET Framework fornisce un modello di programmazione coerente per la costruzione di applicazioni. Se si usa il sistema operativo Windows, .NET Framework potrebbe essere già installato nel computer. In particolare, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] è incluso in [!INCLUDE[win8](../../../includes/win8-md.md)]e [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] è incluso in [!INCLUDE[win81](../../../includes/win81-md.md)] e [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] è incluso in Windows 10.  
   
@@ -73,3 +74,4 @@ ms.lasthandoff: 05/11/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida all'installazione](../../../docs/framework/get-started/index.md)
+

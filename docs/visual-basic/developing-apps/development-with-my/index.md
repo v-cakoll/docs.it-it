@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 815f459a651adf98dfb78a8444f4b873dece8283
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 76055b9c0a611fa3688e5bada1dd8e7d426765e3
+ms.contentlocale: it-it
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="development-with-my-visual-basic"></a>Sviluppo con My (Visual Basic)
@@ -59,7 +60,7 @@ Visual Basic fornisce nuove funzionalità per lo sviluppo rapido di applicazioni
  Vengono descritti gli oggetti `My.Resources` e `My.Settings`, che consentono di accedere alle risorse e alle impostazioni di un'applicazione.  
   
  [Cenni preliminari sul modello di applicazione Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Viene descritto il modello di [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] per l'avvio e l'arresto dell'applicazione.  
+ Viene descritto il modello di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] per l'avvio e l'arresto dell'applicazione.  
   
  [Dipendenza di My dal tipo di progetto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Vengono forniti dettagli sulle caratteristiche di `My` disponibili per i diversi tipi di progetto.  

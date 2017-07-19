@@ -1,29 +1,29 @@
 ---
-title: Installazione di .NET Framework in Windows 7 SP1
-description: Informazioni sull&quot;installazione di .NET Framework in Windows 7 SP1
+title: Installare .NET Framework in Windows 7 SP1 | Microsoft Docs
+description: Informazioni sull'installazione di .NET Framework in Windows 7 SP1
 author: rlander
 keywords: .NET Framework, Installare
 ms.date: 03/28/2017
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cda1d5-c9a4-4eb5-93e6-4f878de07fd7
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: e39ad57d6cd4b6356cec51790af557ccfd951969
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: cd104f5771f356fd284d6dee0dc3fc0da9d34f00
 ms.contentlocale: it-it
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 
-# <a name="installing-the-net-framework-on-windows-7-sp1"></a>Installazione di .NET Framework in Windows 7 SP1
+# <a name="install-the-net-framework-on-windows-7-sp1"></a>Installare .NET Framework in Windows 7 SP1
 
 Potrebbe essere necessario disporre di .NET Framework per eseguire un'applicazione in Windows 7 SP1. È possibile installare le versioni supportate più recenti seguendo le istruzioni seguenti. Le istruzioni variano a seconda della versione di .NET Framework richiesta.
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-È possibile installare [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?linkid=845529&source=dotnetdocs) o versioni successive in Windows 7. 
+È possibile installare [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?linkid=845529&source=dotnetdocs) o versioni successive in Windows 7.
 
 .NET Framework 4.6.2 è incluso nell'[Aggiornamento dell'anniversario di Windows 10](https://www.microsoft.com/software-download/windows10).
 
@@ -38,3 +38,4 @@ Potrebbe essere necessario disporre di .NET Framework per eseguire un'applicazio
 ## <a name="help"></a>?
 
 È possibile [contattare Microsoft per assistenza](mailto:dotnet-install-help@microsoft.com?subject=Help installing .NET Framework) se non si riesce a installare la versione corretta di .NET Framework.
+

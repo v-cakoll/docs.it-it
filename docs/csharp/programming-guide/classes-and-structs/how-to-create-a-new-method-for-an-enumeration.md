@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3d15cbcdd81584ea5c6ab40d231183f883a7a805
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: f015ec08818de7f99c5f16d237114c489edae1b6
+ms.contentlocale: it-it
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Procedura: creare un nuovo metodo per una enumerazione (Guida per programmatori C#)
@@ -46,7 +47,7 @@ ms.lasthandoff: 03/13/2017
  Si noti che la classe `Extensions` contiene anche una variabile statica aggiornata in modo dinamico e che il valore restituito dal metodo di estensione riflette il valore corrente di tale variabile. Ciò dimostra che dietro le quinte i metodi di estensione vengono chiamati direttamente per la classe statica nella quale sono definiti.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Per eseguire questo codice, copiarlo e incollarlo nel progetto di applicazione console di Visual C# creato in [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs_current_short_md.md)]. Per impostazione predefinita, questo progetto usa la versione 3.5 di [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] e contiene un riferimento a System.Core.dll e una direttiva `using` per System.Linq. Se uno o più di questi requisiti non sono presenti nel progetto, è possibile aggiungerli manualmente.   
+ Per eseguire questo codice, copiarlo e incollarlo nel progetto di applicazione console di Visual C# creato in [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)]. Per impostazione predefinita, questo progetto usa la versione 3.5 di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] e contiene un riferimento a System.Core.dll e una direttiva `using` per System.Linq. Se uno o più di questi requisiti non sono presenti nel progetto, è possibile aggiungerli manualmente.   
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   

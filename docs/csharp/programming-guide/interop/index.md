@@ -30,18 +30,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: c29504e18aa716cbe106dbbe00c608fd465d9ac2
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: be95d675d22dedcbf45c8eb1e8fd8d9f5ce0b56c
+ms.contentlocale: it-it
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="interoperability-c-programming-guide"></a>Interoperabilità (Guida per programmatori C#)
+<a id="interoperability-c-programming-guide" class="xliff"></a>
+
+# Interoperabilità (Guida per programmatori C#)
 L'interoperabilità consente di preservare e sfruttare appieno gli investimenti effettuati in codice non gestito. Il codice eseguito sotto il controllo del Common Language Runtime (CLR) è detto *codice gestito*, mentre quello eseguito all'esterno è detto *codice non gestito*. Esempi di codice non gestito sono i componenti COM, COM+, C++, i componenti ActiveX e le API Microsoft Win32.  
   
- [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] consente l'interoperabilità con il codice non gestito tramite i servizi platform invoke, lo spazio dei nomi <xref:System.Runtime.InteropServices>, l'interoperabilità C++ e l'interoperabilità COM.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] consente l'interoperabilità con il codice non gestito tramite i servizi platform invoke, lo spazio dei nomi <xref:System.Runtime.InteropServices>, l'interoperabilità C++ e l'interoperabilità COM.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+<a id="in-this-section" class="xliff"></a>
+
+## Contenuto della sezione  
  [Cenni preliminari sull'interoperabilità](../../../csharp/programming-guide/interop/interoperability-overview.md)  
  Vengono descritti i metodi per l'interoperabilità tra codice C# gestito e non gestito.  
   
@@ -60,10 +65,14 @@ L'interoperabilità consente di preservare e sfruttare appieno gli investimenti 
  [Esempio di classe COM](../../../csharp/programming-guide/interop/example-com-class.md)  
  Viene illustrato come esporre una classe C# come oggetto COM.  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+<a id="c-language-specification" class="xliff"></a>
+
+## Specifiche del linguaggio C#  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=fullName>   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Interoperabilità con codice non gestito](https://msdn.microsoft.com/library/sd10k43k)   

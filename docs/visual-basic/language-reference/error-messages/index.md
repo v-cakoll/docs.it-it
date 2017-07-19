@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
-ms.openlocfilehash: 8c42c213a3933f35750d2ad7db9c88867aacd549
-ms.lasthandoff: 04/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 9f1cb93d5aaf7f90fc332594a2ca2a7cfc0c9c2f
+ms.contentlocale: it-it
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="error-messages-visual-basic"></a>Messaggi di errore (Visual Basic)
@@ -50,7 +51,7 @@ Quando si scrive, compila o esegue un'applicazione Visual Basic, possono verific
  Per altre informazioni sulla risoluzione di problemi specifici, vedere [Risorse aggiuntive per i programmatori Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Errori di runtime  
- Se un'applicazione Visual Basic tenta di effettuare un'azione che il sistema non è in grado di eseguire, si verifica un errore di runtime e [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] genera un oggetto `Exception`. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] può generare errori personalizzati di ogni tipo di dati, inclusi gli oggetti `Exception`, usando l'istruzione `Throw`. Un'applicazione può identificare l'errore visualizzando il numero e il messaggio di errore di un'eccezione rilevata. Se non viene rilevato alcun errore, l'applicazione termina.  
+ Se un'applicazione Visual Basic tenta di effettuare un'azione che il sistema non è in grado di eseguire, si verifica un errore di runtime e [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] genera un oggetto `Exception`. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] può generare errori personalizzati di ogni tipo di dati, inclusi gli oggetti `Exception`, usando l'istruzione `Throw`. Un'applicazione può identificare l'errore visualizzando il numero e il messaggio di errore di un'eccezione rilevata. Se non viene rilevato alcun errore, l'applicazione termina.  
   
  Il codice può intercettare e analizzare errori di runtime. Se si include il codice che genera l'errore in un blocco `Try`, è possibile rilevare qualsiasi errore generato all'interno di un blocco `Catch` corrispondente. Per informazioni su come intercettare gli errori di runtime e gestirli nel codice, vedere [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   

@@ -29,14 +29,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 7e2310df174a7c38fafba3fed4e4bd3de4fa377a
+ms.sourcegitcommit: cf8206e856a31882f5f30ee61d965ad5672f518e
+ms.openlocfilehash: 4bc2cd0e4fc165ef68338c2cda3b8c57c1bf18b2
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Utilizzo del tipo dinamico (Guida per programmatori C#)
-[!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] introduce un nuovo tipo, `dynamic`. Il tipo è statico, ma un oggetto di tipo `dynamic` ignora il controllo del tipo statico. Nella maggior parte dei casi, funziona come se disponesse del tipo `object`. In fase di compilazione, si presume che un elemento tipizzato come `dynamic`dynamic supporti qualsiasi operazione. Non è pertanto importante se l'oggetto ottiene il valore da un'API COM, da un linguaggio dinamico quale IronPython, dal modello DOM (Document Object Model) HTML, dalla reflection o da un altro elemento del programma. Se, tuttavia, il codice non è valido, vengono intercettati errori in fase di esecuzione.  
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] introduce un nuovo tipo, `dynamic`. Il tipo è statico, ma un oggetto di tipo `dynamic` ignora il controllo del tipo statico. Nella maggior parte dei casi, funziona come se disponesse del tipo `object`. In fase di compilazione, si presume che un elemento tipizzato come `dynamic`dynamic supporti qualsiasi operazione. Non è pertanto importante se l'oggetto ottiene il valore da un'API COM, da un linguaggio dinamico quale IronPython, dal modello DOM (Document Object Model) HTML, dalla reflection o da un altro elemento del programma. Se, tuttavia, il codice non è valido, vengono intercettati errori in fase di esecuzione.  
   
  Se, ad esempio, il metodo di istanza `exampleMethod1` nel codice seguente dispone di un solo parametro, il compilatore riconosce che la prima chiamata al metodo, `ec.exampleMethod1(10, 4)`, non è valida perché contiene due argomenti. La chiamata genera errori di compilazione. La seconda chiamata al metodo, `dynamic_ec.exampleMethod1(10, 4)`, non viene controllata dal compilatore poiché il tipo di `dynamic_ec` è `dynamic`. Non viene, pertanto, segnalato alcun errore del compilatore. L'errore, tuttavia, non viene ignorato indefinitamente. Viene intercettato in fase di esecuzione e provoca un'eccezione in fase di esecuzione.  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/10/2017
  DLR (Dynamic Language Runtime) è una nuova API in [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]. Fornisce l'infrastruttura che supporta il tipo `dynamic` in C# oltre all'implementazione di linguaggi di programmazione dinamici, quali IronPython e IronRuby. Per altre informazioni su DLR, vedere [Dynamic Language Runtime Overview](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Panoramica su Dynamic Language Runtime).  
   
 ## <a name="com-interop"></a>Interoperabilità COM  
- [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] include diverse funzionalità che migliorano l'interoperabilità con le API COM, ad esempio le API di automazione di Office. Tra i miglioramenti è compreso l'utilizzo del tipo `dynamic` e di [argomenti denominati e facoltativi](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
+ [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] include diverse funzionalità che migliorano l'interoperabilità con le API COM, ad esempio le API di automazione di Office. Tra i miglioramenti è compreso l'utilizzo del tipo `dynamic` e di [argomenti denominati e facoltativi](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
  Diversi metodi COM consentono la variazione nei tipi di argomento e nel tipo restituito designando i tipi come `object`. Per questo motivo è necessario il cast esplicito dei valori per la coordinazione con le variabili fortemente tipizzate in C#. Se si esegue la compilazione usando l'opzione [/link (Opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/link-compiler-option.md), l'introduzione del tipo `dynamic` consente di trattare le occorrenze di `object` nelle firme COM come se fossero di tipo `dynamic` e di evitare in tal modo gran parte del cast. Le istruzioni seguenti sono ad esempio in contrasto con la modalità di accesso a una cella in un foglio di calcolo di Microsoft Office Excel con il tipo `dynamic` e senza il tipo `dynamic`.  
   
@@ -91,4 +91,5 @@ ms.lasthandoff: 05/10/2017
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|Viene descritto l'utilizzo della parola chiave `dynamic`.|  
 |[Dynamic Language Runtime Overview](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Panoramica su Dynamic Language Runtime)|Viene fornita una panoramica di DLR, un ambiente di runtime che estende Common Language Runtime (CLR) con un set di servizi per linguaggi dinamici.|  
 |[Procedura dettagliata: Creazione e utilizzo di oggetti dinamici](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)|Fornisce istruzioni dettagliate per la creazione di un oggetto dinamico personalizzato e per la creazione di un progetto che accede a una libreria `IronPython`.|  
+
 |[Procedura: Accedere agli oggetti di interoperabilità di Office usando le funzionalità di Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)|Viene illustrato come creare un progetto che usa argomenti denominati e facoltativi, il tipo `dynamic` e altri miglioramenti che semplificano l'accesso agli oggetti API di Office.|

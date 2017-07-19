@@ -32,21 +32,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4892ed6dcfb3843bd6cb2de2d3e032bfeb1efdf9
-ms.openlocfilehash: 2c2db6fcbbd3d3736d9ab0e1e9190c2516a17937
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: ee5a7731acb52b3f7891ac9490ff227ad478426f
 ms.contentlocale: it-it
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Oggetti e classi in Visual Basic
 Un *oggetto* è una combinazione di codice e dati che è possibile considerare come singola unità. Un oggetto può essere una parte di un'applicazione, ad esempio un controllo o un form. Anche un'intera applicazione può essere un oggetto.
 
-Durante la creazione di un'applicazione in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], si utilizzano costantemente degli oggetti. È possibile usare oggetti forniti da [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], ad esempio controlli, form e oggetti di accesso ai dati. All'interno dell'applicazione [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] in uso è anche possibile richiamare oggetti di altre applicazioni. È inoltre possibile creare oggetti personalizzati e definire per essi proprietà e metodi aggiuntivi. Per i programmi, gli oggetti svolgono la stessa funzione dei blocchi predefiniti. Consentono infatti di scrivere un pezzo di codice una sola volta e di riutilizzarlo quanto necessario.  
+Durante la creazione di un'applicazione in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], si utilizzano costantemente degli oggetti. È possibile usare oggetti forniti da [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], ad esempio controlli, form e oggetti di accesso ai dati. All'interno dell'applicazione [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] in uso è anche possibile richiamare oggetti di altre applicazioni. È inoltre possibile creare oggetti personalizzati e definire per essi proprietà e metodi aggiuntivi. Per i programmi, gli oggetti svolgono la stessa funzione dei blocchi predefiniti. Consentono infatti di scrivere un pezzo di codice una sola volta e di riutilizzarlo quanto necessario.  
   
 Questo argomento fornisce informazioni dettagliate sugli oggetti.  
 
 ## <a name="objects-and-classes"></a>Oggetti e classi
-Ogni oggetto di [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] è definito da una *classe* che ne descrive le variabili, le proprietà, le routine e gli eventi. Gli oggetti sono istanze di classi. Dopo aver definito una classe, sarà possibile creare tutti gli oggetti necessari.
+Ogni oggetto di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] è definito da una *classe* che ne descrive le variabili, le proprietà, le routine e gli eventi. Gli oggetti sono istanze di classi. Dopo aver definito una classe, sarà possibile creare tutti gli oggetti necessari.
 
 Per comprendere la relazione esistente tra un oggetto e la classe di appartenenza, si pensi alla relazione tra gli stampi per biscotti e i biscotti. La classe è lo stampo che definisce le caratteristiche di ogni biscotto, ad esempio le dimensioni e la forma. La classe viene usata per creare oggetti. Gli oggetti sono i biscotti.
 
@@ -190,7 +190,7 @@ D'altra parte, i membri dichiarati all'interno di un modulo sono accessibili pub
 ## <a name="reusing-classes-and-objects"></a>Riutilizzo di classi e oggetti  
 Grazie agli oggetti, è possibile dichiarare variabili e routine una sola volta e quindi riutilizzarle quando necessario. Se, ad esempio, si desidera aggiungere un correttore ortografico a un'applicazione, è possibile definire tutte le variabili e le funzioni di supporto per fornire la funzionalità di correttore ortografico. Se il controllo ortografico viene creato come classe, sarà possibile riutilizzarlo in altre applicazioni aggiungendo un riferimento all'assembly compilato. Soluzione ancora migliore, sarà possibile risparmiare lavoro usando una classe correttore ortografico già sviluppata da altri programmatori.
 
-In [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] vengono forniti numerosi esempi di componenti pronti per l'uso. Nell'esempio seguente viene usata la classe <xref:System.TimeZone> nello spazio dei nomi <xref:System>. La classe <xref:System.TimeZone> specifica i membri che consentono di recuperare le informazioni sul fuso orario del computer corrente.
+In [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] vengono forniti numerosi esempi di componenti pronti per l'uso. Nell'esempio seguente viene usata la classe <xref:System.TimeZone> nello spazio dei nomi <xref:System>. La classe <xref:System.TimeZone> specifica i membri che consentono di recuperare le informazioni sul fuso orario del computer corrente.
 
 ```vb
 Public Sub examineTimeZone()
@@ -258,7 +258,7 @@ Verificare che il compilatore possa accedere alla classe da cui si vuole derivar
 Un altro tipo di relazione tra oggetti è la *relazione di contenimento*. Gli oggetti contenitore incapsulano logicamente altri oggetti. Ad esempio, l'oggetto <xref:System.OperatingSystem> contiene logicamente un oggetto <xref:System.Version>, restituito tramite la proprietà <xref:System.OperatingSystem.Version%2A>. Tenere presente che l'oggetto contenitore non contiene fisicamente altri oggetti.
 
 #### <a name="collections"></a>Raccolte
-Un tipo particolare di contenimento degli oggetti è rappresentato dalle *raccolte*. Le raccolte sono gruppi di oggetti simili che possono essere enumerati. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] supporta una sintassi specifica nell'[istruzione For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) che consente di scorrere gli elementi di una raccolta. Inoltre, le raccolte consentono spesso di usare un <xref:Microsoft.VisualBasic.Collection.Item%2A> per recuperare gli elementi in base al relativo indice o tramite l'associazione a una stringa univoca. Le raccolte possono risultare di uso più semplice rispetto alle matrici, in quanto consentono di aggiungere o rimuovere elementi senza ricorrere agli indici. Grazie alla loro facilità d'uso, vengono spesso usate per l'archiviazione di form e controlli.
+Un tipo particolare di contenimento degli oggetti è rappresentato dalle *raccolte*. Le raccolte sono gruppi di oggetti simili che possono essere enumerati. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] supporta una sintassi specifica nell'[istruzione For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) che consente di scorrere gli elementi di una raccolta. Inoltre, le raccolte consentono spesso di usare un <xref:Microsoft.VisualBasic.Collection.Item%2A> per recuperare gli elementi in base al relativo indice o tramite l'associazione a una stringa univoca. Le raccolte possono risultare di uso più semplice rispetto alle matrici, in quanto consentono di aggiungere o rimuovere elementi senza ricorrere agli indici. Grazie alla loro facilità d'uso, vengono spesso usate per l'archiviazione di form e controlli.
 
 ## <a name="related-topics"></a>Argomenti correlati  
  [Procedura dettagliata: Definizione delle classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
@@ -281,4 +281,3 @@ Un tipo particolare di contenimento degli oggetti è rappresentato dalle *raccol
 
  [Procedura: Dedurre tipi e nomi di proprietà nelle dichiarazioni di tipo anonimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  Viene descritto come dedurre nomi e tipi di proprietà nelle dichiarazioni di tipo anonimo. Vengono forniti esempi di inferenze riuscite e non riuscite.
-

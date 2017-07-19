@@ -1,5 +1,5 @@
 ---
-title: Struttura del programma C# | Panoramica del linguaggio C#
+title: Struttura del programma C# - Panoramica del linguaggio C# | Microsoft Docs
 description: Informazioni sui blocchi predefiniti di un programma C#
 keywords: .NET, .NET Core
 author: BillWagner
@@ -10,14 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ef19d7fa2164990edd5e27651d28aa085ec90ad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 3642b6525691d6179eca66f11d5002377323cdf3
+ms.contentlocale: it-it
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="program-structure"></a>Struttura del programma
+<a id="program-structure" class="xliff"></a>
+
+# Struttura del programma
 
 I concetti organizzativi chiave di C# sono i ***programmi***, gli ***spazi dei nomi***, i ***tipi***, i ***membri*** e gli ***assembly***. I programmi C# sono costituiti da uno o più file di origine. I programmi dichiarano i tipi, che contengono i membri e possono essere organizzati in spazi dei nomi. Le classi e le interfacce sono esempi di tipi. I campi, i metodi, le proprietà e gli eventi sono esempi di membri. Quando vengono compilati, i programmi C# vengono inseriti fisicamente in assembly. Gli assembly in genere hanno l'estensione `.exe` o `.dll`, a seconda che implementino rispettivamente ***applicazioni*** o ***librerie***.
 

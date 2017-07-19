@@ -10,9 +10,10 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
 ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.contentlocale: it-it
 ms.lasthandoff: 03/10/2017
 
 ---
@@ -346,7 +347,7 @@ Tipo non conforme | Descrizione | Alternativa alla conformità a CLS
  
  Nella libreria di classi .NET Framework o in qualsiasi altra libreria di classi possono essere inclusi altri tipi non conformi a CLS; ad esempio: 
  
- * Tipi di valore boxed. Nell'esempio C# seguente viene creata una classe con una proprietà pubblica di tipo `int`*denominata `Value`. Poiché `int`* è un tipo di valore boxed, il compilatore lo contrassegna come non conforme a CLS.
+ * Tipi di valore boxed. Nell'esempio C# seguente viene creata una classe con una proprietà pubblica di tipo `int` *denominata `Value`. Poiché `int`* è un tipo di valore boxed, il compilatore lo contrassegna come non conforme a CLS.
 
   ```csharp
   using System;

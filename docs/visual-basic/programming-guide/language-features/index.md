@@ -31,18 +31,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31cf21a3db5f5fc7ad980765cb54041c0e99c24b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 1cc54088723bf8a7ff644cc418dd4f6212fc91f3
+ms.contentlocale: it-it
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="visual-basic-language-features"></a>Funzionalità del linguaggio Visual Basic
-Gli argomenti seguenti introducono e illustrano i componenti essenziali di [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], un linguaggio di programmazione orientato a oggetti. Dopo aver creato l'interfaccia utente per l'applicazione usando form e controlli, è necessario scrivere il codice per la definizione del comportamento dell'applicazione. Analogamente a qualsiasi linguaggio di programmazione moderno, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] supporta numerosi costrutti di programmazione ed elementi di linguaggio comuni.  
+Gli argomenti seguenti introducono e illustrano i componenti essenziali di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], un linguaggio di programmazione orientato a oggetti. Dopo aver creato l'interfaccia utente per l'applicazione usando form e controlli, è necessario scrivere il codice per la definizione del comportamento dell'applicazione. Analogamente a qualsiasi linguaggio di programmazione moderno, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] supporta numerosi costrutti di programmazione ed elementi di linguaggio comuni.  
   
- Se si conoscono altri linguaggi di programmazione, molti dei concetti trattati in questa sezione potrebbero sembrare familiari. Mentre la maggior parte dei costrutti è simile a quelli di altri linguaggi, la natura basata sugli eventi di [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] introduce alcune piccole differenze.  
+ Se si conoscono altri linguaggi di programmazione, molti dei concetti trattati in questa sezione potrebbero sembrare familiari. Mentre la maggior parte dei costrutti è simile a quelli di altri linguaggi, la natura basata sugli eventi di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] introduce alcune piccole differenze.  
   
- Se non si ha esperienza di programmazione, le informazioni in questa sezione possono fungere da introduzione ai concetti fondamentali per la scrittura di codice. Dopo aver appreso le nozioni di base, è possibile creare applicazioni elaborate usando [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Se non si ha esperienza di programmazione, le informazioni in questa sezione possono fungere da introduzione ai concetti fondamentali per la scrittura di codice. Dopo aver appreso le nozioni di base, è possibile creare applicazioni elaborate usando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -79,7 +80,7 @@ Gli argomenti seguenti introducono e illustrano i componenti essenziali di [!INC
  Descrizione delle caratteristiche delle interfacce e di come si possono usare nelle applicazioni.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Collegamenti agli argomenti introduttivi alle funzionalità e alla programmazione di [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext_md.md)].  
+ Collegamenti agli argomenti introduttivi alle funzionalità e alla programmazione di [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
  [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  Panoramica di oggetti e classi, di come vengono usati, delle relazioni tra questi elementi e delle proprietà, dei metodi e degli eventi che espongono.  
@@ -107,4 +108,4 @@ Gli argomenti seguenti introducono e illustrano i componenti essenziali di [!INC
  Descrizione di alcuni dei tipi di raccolte disponibili in .NET Framework. Viene mostrato come usare raccolte semplici e raccolte di coppie chiave/valore.  
   
  [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)  
- Informazioni di riferimento su diversi aspetti della programmazione con [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].
+ Informazioni di riferimento su diversi aspetti della programmazione con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].

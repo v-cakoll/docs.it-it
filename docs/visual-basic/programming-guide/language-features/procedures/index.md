@@ -35,14 +35,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 56f39e82e9295a9c1d9f862e3486373590a32e7f
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 06b649ef8351601918d1cb92ee0c3646d747f8f3
 ms.contentlocale: it-it
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="procedures-in-visual-basic"></a>Routine in Visual Basic
-Una *routine* è un blocco di istruzioni [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] racchiuse tra un'istruzione di dichiarazione (`Function`, `Sub`, `Operator`, `Get`, `Set`) e una dichiarazione `End` corrispondente. Tutte le istruzioni eseguibili in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] devono essere incluse in routine.  
+Una *routine* è un blocco di istruzioni [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] racchiuse tra un'istruzione di dichiarazione (`Function`, `Sub`, `Operator`, `Get`, `Set`) e una dichiarazione `End` corrispondente. Tutte le istruzioni eseguibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] devono essere incluse in routine.  
   
 ## <a name="calling-a-procedure"></a>Chiamata di una routine  
  Una routine viene richiamata da altre parti del codice. Questa operazione è nota come *chiamata di routine*. Al termine dell'esecuzione della routine, il controllo viene restituito al codice che ha richiamato la routine, noto come *codice chiamante*. Il codice chiamante è un'istruzione o un'espressione all'interno di un'istruzione, che specifica la routine tramite nome e le trasferisce il controllo.  
@@ -60,7 +60,7 @@ Una *routine* è un blocco di istruzioni [!INCLUDE[vbprvb](../../../../csharp/pr
  Nella maggior parte dei casi, una routine deve usare dati diversi ogni volta che viene chiamata. È possibile passare queste informazioni alla routine come parte della chiamata di routine. La routine definisce zero o più *parametri*, ognuno dei quali rappresenta un valore necessario da passare alla routine. A ogni parametro della definizione della routine corrisponde un *argomento* nella chiamata di routine. Un argomento rappresenta il valore passato al parametro corrispondente in una chiamata di routine specifica.  
   
 ## <a name="types-of-procedures"></a>Tipi di routine  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] usa diversi tipi di routine:  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] usa diversi tipi di routine:  
   
 -   Le [routine Sub](./sub-procedures.md) eseguono operazioni ma non restituiscono un valore al codice chiamante.  
   

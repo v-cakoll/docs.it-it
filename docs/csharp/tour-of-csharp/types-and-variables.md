@@ -1,5 +1,5 @@
 ---
-title: Tipi e variabili C# | Panoramica del linguaggio C#
+title: Tipi e variabili C# - Panoramica del linguaggio C# | Microsoft Docs
 description: Informazioni sulla definizione di tipi e la dichiarazione di variabili nel linguaggio C#
 keywords: .NET, csharp, tipo, tipo riferimento, tipo valore
 author: BillWagner
@@ -10,14 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93d09003ea4c54e6851ce00bbc4edecf039d0324
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 5c22d1087d27b03cfbf71d319a72e9e02203e9f2
+ms.contentlocale: it-it
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="types-and-variables"></a>Tipi e variabili
+<a id="types-and-variables" class="xliff"></a>
+
+# Tipi e variabili
 
 In C# esistono due generi di tipi: *tipi valore* e *tipi riferimento*. Le variabili dei tipi valore contengono direttamente i propri dati, mentre le variabili dei tipi riferimento archiviano i riferimenti ai propri dati, noti come oggetti. Con i tipi riferimento, due variabili possono fare riferimento allo stesso oggetto e di conseguenza le operazioni su una delle due variabili possono influire sull'oggetto a cui fa riferimento l'altra. Con i tipi valore, ogni variabile ha una propria copia dei dati e non è possibile che le operazioni su una variabile influiscano sull'altra (tranne nel caso delle variabili di parametro `ref` e `out`).
 
@@ -89,7 +92,7 @@ Un tipo `interface` definisce un contratto come un set denominato di membri funz
 
 Un tipo `delegate` rappresenta i riferimenti ai metodi, con un elenco di parametri e un tipo restituito particolari. I delegati consentono di trattare i metodi come entità che è possibile assegnare a variabili e passare come parametri. I delegati sono analoghi ai tipi funzione forniti dai linguaggi funzionali. Sono inoltre simili al concetto di puntatori a funzione disponibili in altri linguaggi. A differenza dei puntatori a funzione, tuttavia, i delegati sono orientati agli oggetti e indipendenti dai tipi.
 
-I tipi classe, `struct`, `interface` e `delegate` supportano tutti generics, in base ai quali possono essere parametrizzati con altri tipi.
+I tipi `class`, `struct`, `interface` e `delegate` supportano tutti generics, in base ai quali possono essere parametrizzati con altri tipi.
 
 Un tipo `enum` è un tipo distinto con costanti denominate. Ogni tipo `enum` ha un tipo sottostante, che deve essere uno degli otto tipi integrali. Il set di valori di un tipo `enum` coincide con il set di valori del tipo sottostante.
 

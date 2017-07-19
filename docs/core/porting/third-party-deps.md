@@ -1,5 +1,5 @@
 ---
-title: "Portabilità in .NET Core - Analisi delle dipendenze di terze parti"
+title: "Portabilità in .NET Core - Analisi delle dipendenze di terze parti | Microsoft Docs"
 description: "Portabilità in .NET Core - Analisi delle dipendenze di terze parti"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,22 +9,29 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 5b7bbc0718817365df63db4d8ca7e4cf8871abae
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: c4c97f7f1aa6f574e4acae91320c92c2a76147ea
+ms.contentlocale: it-it
+ms.lasthandoff: 06/20/2017
 
 ---
 
-# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Portabilità in .NET Core - Analisi delle dipendenze di terze parti
+<a id="porting-to-net-core---analyzing-your-third-party-party-dependencies" class="xliff"></a>
+
+# Portabilità in .NET Core - Analisi delle dipendenze di terze parti
 
 Il primo passaggio nel processo di trasferimento consiste nel comprendere le dipendenze di terze parti.  È necessario capire se alcune di esse non vengono ancora eseguite su .NET Core e sviluppare un piano di emergenza adeguato.
 
-## <a name="prerequisites"></a>Prerequisiti
+<a id="prerequisites" class="xliff"></a>
+
+## Prerequisiti
 
 Questo articolo presuppone che si usino Windows e Visual Studio e che si disponga di codice attualmente in esecuzione su .NET Framework.
 
-## <a name="analyzing-nuget-packages"></a>Analisi dei pacchetti NuGet
+<a id="analyzing-nuget-packages" class="xliff"></a>
+
+## Analisi dei pacchetti NuGet
 
 L'analisi dei pacchetti NuGet per la portabilità è molto semplice.  Poiché un pacchetto NuGet è un set di cartelle che contengono gli assembly specifici della piattaforma, è sufficiente verificare se è presente una cartella che contiene un assembly .NET Core.
 
@@ -54,7 +61,7 @@ portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-Si tratta dei Target Framework Moniker (TFM) che corrispondono alle versioni della [libreria .NET Standard](../../standard/library.md) e dei profili tradizionali della libreria di classi portabile compatibili con .NET Core.  Si noti che `netcoreapp1.0`, anche se compatibile, è adatto alle applicazioni non alle librerie.  Anche se non vi sono problemi con l'uso di una libreria basata su `netcoreapp1.0`, è possibile che tale libreria non sia prevista per un utilizzo *diverso* da quello per le applicazioni `netcoreapp1.0`.
+Si tratta dei Target Framework Moniker (TFM) che corrispondono alle versioni della [libreria .NET Standard](../../standard/net-standard.md) e dei profili tradizionali della libreria di classi portabile compatibili con .NET Core.  Si noti che `netcoreapp1.0`, anche se compatibile, è adatto alle applicazioni non alle librerie.  Anche se non vi sono problemi con l'uso di una libreria basata su `netcoreapp1.0`, è possibile che tale libreria non sia prevista per un utilizzo *diverso* da quello per le applicazioni `netcoreapp1.0`.
 
 Sono disponibili anche alcuni TFM legacy usati nelle versioni provvisorie di .NET Core che possono essere compatibili:
 
@@ -73,7 +80,9 @@ dotnet5.5
 > [!NOTE]
 > Per usare un pacchetto che ha come destinazione una libreria di classi portabile tradizionale o una versione provvisoria di .NET Core, è necessario usare la direttiva `imports` nel file `project.json`.
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Operazioni da eseguire quando una dipendenza del pacchetto NuGet non viene eseguita in .NET Core
+<a id="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core" class="xliff"></a>
+
+### Operazioni da eseguire quando una dipendenza del pacchetto NuGet non viene eseguita in .NET Core
 
 Se la dipendenza da un pacchetto NuGet non viene eseguita in .NET Core, è possibile effettuare alcune operazioni.
 
@@ -89,11 +98,15 @@ Se non si riesce a risolvere il problema con nessuna delle indicazioni precedent
 
 Per il team di .NET è molto importante sapere quali librerie risultano più importanti, al fine di migliorare il supporto di .NET Core. È possibile anche inviare un messaggio di posta elettronica sulle librerie preferite all'indirizzo dotnet@microsoft.com.
 
-## <a name="analyzing-dependencies-which-arent-nuget-packages"></a>Analisi delle dipendenze non appartenenti ai pacchetti NuGet
+<a id="analyzing-dependencies-which-arent-nuget-packages" class="xliff"></a>
+
+## Analisi delle dipendenze non appartenenti ai pacchetti NuGet
 
 È possibile disporre di dipendenze non appartenenti a un pacchetto NuGet, ad esempio una DLL nel file system.  L'unico modo per determinare la portabilità di tale dipendenza è l'esecuzione dello [strumento ApiPort](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/).
 
-## <a name="next-steps"></a>Passaggi successivi
+<a id="next-steps" class="xliff"></a>
+
+## Passaggi successivi
 
 Se si esegue il trasferimento di una libreria, consultare [Porting your Libraries](libraries.md) (Portabilità delle librerie).
 

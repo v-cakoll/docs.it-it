@@ -34,17 +34,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 957ab9907c16e494f87873934fe4caccc146c975
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 317ea9a17a792bcbfd11c5f1085218e2b0f2a312
+ms.contentlocale: it-it
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introduzione alle query LINQ (C#)
-Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato. Nel tempo sono stati sviluppati diversi linguaggi per i vari tipi di origini dati, ad esempio SQL per database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] semplifica questa situazione offrendo un modello coerente per l'uso dei dati con tutti i diversi tipi di origini e formati dati. In una query [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] vengono sempre usati gli oggetti. Vengono usati gli stessi criteri di codifica di base per eseguire una query e trasformare i dati in documenti XML, database SQL, dataset [!INCLUDE[vstecado](~/includes/vstecado-md.md)], raccolte .NET e qualsiasi altro formato per il quale sia disponibile un provider [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)].  
+Una *query* è un'espressione che recupera dati da un'origine dati. Le query sono in genere espresse in un linguaggio di query specializzato. Nel tempo sono stati sviluppati diversi linguaggi per i vari tipi di origini dati, ad esempio SQL per database relazionali e XQuery per XML. Gli sviluppatori hanno dovuto pertanto imparare un nuovo linguaggio di query per ogni tipo di origine dati o formato dati supportato. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] semplifica questa situazione offrendo un modello coerente per l'uso dei dati con tutti i diversi tipi di origini e formati dati. In una query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vengono sempre usati gli oggetti. Vengono usati gli stessi criteri di codifica di base per eseguire una query e trasformare i dati in documenti XML, database SQL, dataset [!INCLUDE[vstecado](~/includes/vstecado-md.md)], raccolte .NET e qualsiasi altro formato per il quale sia disponibile un provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
 ## <a name="three-parts-of-a-query-operation"></a>Tre parti di un'operazione di query  
- Tutte le operazioni di query [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] sono costituite da tre azioni distinte:  
+ Tutte le operazioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sono costituite da tre azioni distinte:  
   
 1.  Ottenere l'origine dati.  
   
@@ -56,18 +57,18 @@ Una *query* è un'espressione che recupera dati da un'origine dati. Le query son
   
  [!code-cs[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
   
- Nella figura seguente viene illustrata l'operazione di query completa. In [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] l'esecuzione della query è distinta dalla query stessa; in altre parole i dati non vengono recuperati solo creando una variabile di query.  
+ Nella figura seguente viene illustrata l'operazione di query completa. In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] l'esecuzione della query è distinta dalla query stessa; in altre parole i dati non vengono recuperati solo creando una variabile di query.  
   
  ![Operazione di query LINQ completa](../../../../csharp/programming-guide/concepts/linq/media/linq_query.png "LINQ_Query")  
   
 ## <a name="the-data-source"></a>Origine dati  
- Poiché nell'esempio precedente è stata usata una matrice come origine dati, viene supportata implicitamente l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>. Ciò significa che è possibile eseguire query con [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. Viene eseguita una query in un'istruzione `foreach` e `foreach` richiede <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. I tipi che supportano <xref:System.Collections.Generic.IEnumerable%601> o un'interfaccia derivata, ad esempio l'interfaccia generica <xref:System.Linq.IQueryable%601>, sono denominati *tipi queryable*.  
+ Poiché nell'esempio precedente è stata usata una matrice come origine dati, viene supportata implicitamente l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601>. Ciò significa che è possibile eseguire query con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Viene eseguita una query in un'istruzione `foreach` e `foreach` richiede <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. I tipi che supportano <xref:System.Collections.Generic.IEnumerable%601> o un'interfaccia derivata, ad esempio l'interfaccia generica <xref:System.Linq.IQueryable%601> sono denominati *tipi queryable*.  
   
- Un tipo queryable non richiede alcuna modifica o trattamento speciale per essere usato come origine dati [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. Se i dati di origine non sono già in memoria come tipi queryable, il provider [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] deve rappresentarli come tali. Ad esempio, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] carica un documento XML in un tipo <xref:System.Xml.Linq.XElement> queryable:  
+ Un tipo queryable non richiede alcuna modifica o trattamento speciale per essere usato come origine dati [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Se i dati di origine non sono già in memoria come tipi queryable, il provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] deve rappresentarli come tali. Ad esempio, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] carica un documento XML in un tipo <xref:System.Xml.Linq.XElement> queryable:  
   
  [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
- Con [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] è necessario creare prima un mapping relazionale a oggetti in fase di progettazione, manualmente o usando gli [Strumenti LINQ to SQL in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). È possibile scrivere le query sugli oggetti e in fase di esecuzione [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] gestisce la comunicazione con il database. Nell'esempio seguente, `Customers` rappresenta una tabella specifica nel database e il tipo del risultato della query, <xref:System.Linq.IQueryable%601>, deriva da <xref:System.Collections.Generic.IEnumerable%601>.  
+ Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] è necessario creare prima un mapping relazionale a oggetti in fase di progettazione, manualmente o usando gli [Strumenti LINQ to SQL in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2). È possibile scrivere le query sugli oggetti e in fase di esecuzione [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] gestisce la comunicazione con il database. Nell'esempio seguente `Customers` rappresenta una tabella specifica nel database e il tipo del risultato della query, <xref:System.Linq.IQueryable%601>, deriva da <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -77,18 +78,17 @@ IQueryable<Customer> custQuery =
     from cust in db.Customers  
     where cust.City == "London"  
     select cust;  
-  
 ```  
   
- Per altre informazioni sulla creazione di tipi specifici di origini dati, vedere la documentazione dei diversi provider [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. Tuttavia, la regola di base è molto semplice: un'origine dati [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] è qualsiasi oggetto che supporti l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> o un'interfaccia da essa ereditata.  
+ Per altre informazioni sulla creazione di tipi specifici di origini dati, vedere la documentazione dei diversi provider [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Tuttavia, la regola di base è molto semplice: un'origine dati [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] è qualsiasi oggetto che supporti l'interfaccia generica <xref:System.Collections.Generic.IEnumerable%601> o un'interfaccia da essa ereditata.  
   
 > [!NOTE]
->  È anche possibile usare come origine dati [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] i tipi come <xref:System.Collections.ArrayList>, che supportano l'interfaccia non generica <xref:System.Collections.IEnumerable>. Per altre informazioni, vedere [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
+>  È anche possibile usare come origine dati [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] tipi come <xref:System.Collections.ArrayList> che supportano l'interfaccia non generica <xref:System.Collections.IEnumerable>. Per altre informazioni, vedere [Procedura: Eseguire una query su un ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
 ##  <a name="query"></a> Query  
  La query specifica le informazioni da recuperare dall'origine o dalle origini dati. Una query può anche specificare il modo in cui ordinare, raggruppare e definire le informazioni prima che vengano restituite. Una query viene archiviata in una variabile di query e inizializzata con un'espressione di query. Per semplificare la scrittura delle query, in C# è stata introdotta una nuova sintassi della query.  
   
- La query nell'esempio precedente restituisce tutti i numeri pari dalla matrice di valori interi. L'espressione di query contiene tre clausole: `from`, `where` e `select`. Se si ha dimestichezza con SQL, si sarà notato che l'ordine delle clausole è inverso rispetto all'ordine in SQL. La clausola `from` specifica l'origine dati, la clausola `where` applica il filtro e la clausola `select` specifica il tipo degli elementi restituiti. Queste e le altre clausole di query vengono illustrate dettagliatamente nella sezione [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md). L'aspetto importante per il momento è che in [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] la variabile di query stessa non effettua alcuna azione e non restituisce dati. Archivia solo le informazioni richieste per generare i risultati quando successivamente viene eseguita la query. Per altre informazioni sul modo in cui le query vengono costruite automaticamente, vedere [Panoramica degli operatori query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)[Panoramica degli operatori query standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ La query nell'esempio precedente restituisce tutti i numeri pari dalla matrice di valori interi. L'espressione di query contiene tre clausole: `from`, `where` e `select`. Se si ha dimestichezza con SQL, si sarà notato che l'ordine delle clausole è inverso rispetto all'ordine in SQL. La clausola `from` specifica l'origine dati, la clausola `where` applica il filtro e la clausola `select` specifica il tipo degli elementi restituiti. Queste e le altre clausole di query vengono illustrate dettagliatamente nella sezione [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md). L'aspetto importante per il momento è che in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] la variabile di query stessa non effettua alcuna azione e non restituisce dati. Archivia solo le informazioni richieste per generare i risultati quando successivamente viene eseguita la query. Per altre informazioni sul modo in cui le query vengono costruite automaticamente, vedere [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 > [!NOTE]
 >  Le query possono anche essere espresse usando la sintassi del metodo. Per altre informazioni, vedere [Sintassi di query e sintassi di metodi in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
@@ -122,3 +122,5 @@ IQueryable<Customer> custQuery =
  [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)   
  [Parole chiave di query (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
+
+

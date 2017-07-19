@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d94b2238f6908a29efeb2465c1c11babc54a3704
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: debacd82cc2da645a83c21e6557f2805b426e7b1
+ms.contentlocale: it-it
+ms.lasthandoff: 06/21/2017
 
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Procedura: Creare una struttura ad albero da un XmlReader (C#)
-Questo argomento mostra come creare una struttura ad albero XML direttamente da un oggetto <xref:System.Xml.XmlReader>. Per creare un <xref:System.Xml.Linq.XElement> da un <xref:System.Xml.XmlReader>, è necessario posizionare <xref:System.Xml.XmlReader> su un nodo elemento. <xref:System.Xml.XmlReader> ignorerà i commenti e le istruzioni di elaborazione, ma se <xref:System.Xml.XmlReader> è posizionato in un nodo di testo, verrà generato un errore. Per evitare tali errori, posizionare sempre <xref:System.Xml.XmlReader> in un elemento prima di creare la struttura ad albero XML da <xref:System.Xml.XmlReader>.  
+In questo argomento viene illustrato come creare un albero XML direttamente da un oggetto <xref:System.Xml.XmlReader>. Per creare <xref:System.Xml.Linq.XElement> da <xref:System.Xml.XmlReader>, è necessario posizionare <xref:System.Xml.XmlReader> in un nodo di elemento. <xref:System.Xml.XmlReader> ignorerà i commenti e le istruzioni di elaborazione, ma se <xref:System.Xml.XmlReader> è posizionato in un nodo di testo, verrà generato un errore. Per evitare tali errori, posizionare <xref:System.Xml.XmlReader> in un elemento prima di creare l'albero XML da <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Esempio  
  Questo esempio usa il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
