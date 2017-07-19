@@ -53,4 +53,5 @@ ms.lasthandoff: 07/03/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ e ADO.NET](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)   
+
  [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

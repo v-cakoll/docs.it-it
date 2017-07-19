@@ -87,3 +87,4 @@ Ciascuna versione di .NET Framework contiene Common Language Runtime (CLR), libr
 [Criteri relativi al ciclo di vita del supporto Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607)   
 [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 
+

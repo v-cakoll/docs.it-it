@@ -123,3 +123,4 @@ IQueryable<Customer> custQuery =
  [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)   
  [Parole chiave di query (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
 
+
