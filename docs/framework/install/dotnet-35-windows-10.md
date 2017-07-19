@@ -1,11 +1,11 @@
 ---
 title: Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8 | Microsoft Docs
-description: Informazioni sull&quot;installazione di .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8
+description: Informazioni sull'installazione di .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8
 author: rlander
 keywords: .NET Framework, Installare
 ms.date: 04/20/2017
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
