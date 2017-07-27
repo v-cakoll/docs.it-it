@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bba53c8d175d95aa3b89ba458517d439a8d2bb11
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 95b35941e18d22e2d484017262d9adbe8a081a8a
+ms.contentlocale: it-it
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Procedura: creare un file o una cartella (Guida per programmatori C#)
@@ -42,7 +43,7 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
 ## <a name="example"></a>Esempio  
  [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
- Se la cartella esiste già, <xref:System.IO.Directory.CreateDirectory%2A> non produce effetti e non vengono generate eccezioni. <xref:System.IO.File.Create%2A?displayProperty=fullName>, tuttavia, sostituisce un file esistente con un nuovo file. Nell'esempio viene usata un'istruzione `if`-`else` per evitare la sostituzione di un file esistente.  
+ Se la cartella esiste già, <xref:System.IO.Directory.CreateDirectory%2A> non esegue alcuna operazione e non viene generata alcuna eccezione. <xref:System.IO.File.Create%2A?displayProperty=fullName>, tuttavia, sostituisce un file esistente con un nuovo file. Nell'esempio viene usata un'istruzione `if`-`else` per evitare la sostituzione di un file esistente.  
   
  Apportando le modifiche seguenti nell'esempio, è possibile specificare risultati diversi in base all'esistenza o meno di un file con un determinato nome. Se il file non esiste, il codice ne crea uno. Se il file esiste, il codice aggiunge i dati a questo.  
   
@@ -54,7 +55,6 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
   
     // Replace that line with the following assignment.  
     string fileName = "MyNewFile.txt";  
-  
     ```  
   
 -   Sostituire l'istruzione `if`-`else` con l'istruzione `using` riportata nel codice seguente.  
@@ -67,7 +67,6 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
             fs.WriteByte(i);  
         }  
     }  
-  
     ```  
   
  Eseguire l'esempio più volte per verificare che i dati vengano aggiunti al file ogni volta.  
@@ -76,7 +75,7 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
   
  Le seguenti condizioni possono generare un'eccezione:  
   
--   Il formato del nome della cartella non è valido. È possibile ad esempio che contenga caratteri non validi o sia costituito solo da uno spazio (classe <xref:System.ArgumentException>). Per creare nomi di percorso validi, usare la classe <xref:System.IO.Path>.  
+-   Il formato del nome della cartella non è valido. Ad esempio, contiene caratteri non validi o è costituito solo da spazi (classe <xref:System.ArgumentException>). Per creare nomi di percorso validi, usare la classe <xref:System.IO.Path>.  
   
 -   La cartella padre della cartella da creare è di sola lettura (classe <xref:System.IO.IOException>).  
   
@@ -84,14 +83,15 @@ A livello di codice è possibile creare una cartella, una sottocartella e un fil
   
 -   Il nome della cartella è troppo lungo (classe <xref:System.IO.PathTooLongException>).  
   
--   Il nome della cartella è composto solo dai due punti, ":" (classe <xref:System.IO.PathTooLongException>).  
+-   Il nome della cartella è composto solo da un carattere due punti, ":" (classe <xref:System.IO.PathTooLongException>).  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- In condizioni di attendibilità parziale è possibile che venga generata un'istanza della classe <xref:System.Security.SecurityException>.  
+ In situazioni di attendibilità parziale può essere generata un'istanza della classe <xref:System.Security.SecurityException>.  
   
- Se l'utente non dispone dell'autorizzazione per creare la cartella, l'esempio genera un'istanza della classe <xref:System.UnauthorizedAccessException>.  
+ Se l'utente non è autorizzato a creare la cartella, l'esempio genera un'istanza della classe <xref:System.UnauthorizedAccessException>.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.IO?displayProperty=fullName>   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [File system e Registro di sistema (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/index.md)
+
