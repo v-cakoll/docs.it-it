@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: combinare query LINQ con espressioni regolari (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: Combinare query LINQ con espressioni regolari (Visual Basic) | Microsoft Docs'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,15 +20,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 283b5e844c91da22aadd7bcf88ea327ccc080be7
+ms.translationtype: MT
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: d9d63a729a31394b96a78479bc115125a1a7baeb
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/26/2017
 
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Procedura: combinare query LINQ con espressioni regolari (Visual Basic)
-In questo esempio viene illustrato come utilizzare la <xref:System.Text.RegularExpressions.Regex>classe per creare un'espressione regolare per la corrispondenza più complessa nelle stringhe di testo.</xref:System.Text.RegularExpressions.Regex> La query LINQ consente di filtrare esattamente i file che si desidera eseguire la ricerca con espressioni regolari e di elaborare i risultati.  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Procedura: Combinare query LINQ con espressioni regolari (Visual Basic)
+In questo esempio viene illustrato come usare la classe <xref:System.Text.RegularExpressions.Regex> per creare un'espressione regolare per una corrispondenza più complessa nelle stringhe di testo. La query LINQ consente di filtrare esattamente i file che si vuole cercare tramite l'espressione regolare e di dare forma ai risultati.  
   
 ## <a name="example"></a>Esempio  
   
@@ -97,12 +97,12 @@ Class LinqRegExVB
 End Class  
 ```  
   
- Si noti che è anche possibile eseguire una query di <xref:System.Text.RegularExpressions.MatchCollection>oggetto restituito da un `RegEx` search.</xref:System.Text.RegularExpressions.MatchCollection> In questo esempio viene generato solo il valore di ogni corrispondenza nei risultati. Tuttavia, è anche possibile utilizzare LINQ per eseguire tutti i tipi di filtro, ordinamento e raggruppamento su tale insieme. Poiché <xref:System.Text.RegularExpressions.MatchCollection>è di tipo non generico <xref:System.Collections.IEnumerable>raccolta, è necessario dichiarare in modo esplicito il tipo della variabile di intervallo nella query.</xref:System.Collections.IEnumerable> </xref:System.Text.RegularExpressions.MatchCollection>  
+ Si noti che è anche possibile eseguire una query sull'oggetto <xref:System.Text.RegularExpressions.MatchCollection> restituito da una ricerca `RegEx`. In questo esempio viene generato nei risultati solo il valore di ogni corrispondenza. Tuttavia, è anche possibile usare LINQ per eseguire tutti i tipi di filtro, ordinamento e raggruppamento sulla raccolta. Poiché <xref:System.Text.RegularExpressions.MatchCollection> è una raccolta non generica <xref:System.Collections.IEnumerable>, è necessario dichiarare esplicitamente il tipo della variabile di intervallo nella query.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+ Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  (LINQ e le stringhe (Visual Basic))  
+ [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))
 
