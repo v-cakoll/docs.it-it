@@ -1,5 +1,5 @@
 ---
-title: Associazione anticipata e tardiva (Visual Basic) | Microsoft Docs
+title: Associazione anticipata e tardiva (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -39,16 +39,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 54b7e96c8b7cab8fba3dc295dfe124fcf3847118
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 66a34580417fb8b4a814b237ec36ffe700b1b30a
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="early-and-late-binding-visual-basic" class="xliff"></a>
-
-# Associazione anticipata e tardiva (Visual Basic)
+# <a name="early-and-late-binding-visual-basic"></a>Associazione anticipata e tardiva (Visual Basic)
 Quando un oggetto viene assegnato a una variabile oggetto, il compilatore [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] esegue un processo denominato `binding`. Un oggetto è *ad associazione anticipata* quando viene assegnato a una variabile di un tipo object specifico. Gli oggetti ad associazione anticipata consentono al compilatore di allocare memoria ed effettuare altre ottimizzazioni prima dell'esecuzione di un'applicazione. Il frammento di codice seguente, ad esempio, dichiara una variabile di tipo <xref:System.IO.FileStream>:  
   
  [!code-vb[VbVbalrOOP#90](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_1.vb)]  
@@ -59,17 +57,14 @@ Quando un oggetto viene assegnato a una variabile oggetto, il compilatore [!INCL
   
  [!code-vb[VbVbalrOOP#91](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_2.vb)]  
   
-<a id="advantages-of-early-binding" class="xliff"></a>
-
-## Vantaggi offerti dall'associazione anticipata  
+## <a name="advantages-of-early-binding"></a>Vantaggi offerti dall'associazione anticipata  
  Quando possibile, è consigliabile usare oggetti ad associazione anticipata. Tali oggetti consentono infatti al compilatore di eseguire ottimizzazioni significative che aumentano l'efficienza delle applicazioni. Gli oggetti ad associazione anticipata sono notevolmente più veloci di quelli ad associazione tardiva e facilitano la lettura e la gestione del codice dichiarando esattamente il tipo degli oggetti usati. Un altro vantaggio offerto dall'associazione anticipata è l'abilitazione di funzionalità utili quali il completamento automatico del codice e la Guida dinamica, perché l'ambiente di sviluppo integrato (IDE) [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] è in grado di determinare esattamente quale tipo di oggetto viene utilizzato durante la modifica del codice. L'associazione anticipata riduce il numero e la gravità degli errori di run-time poiché consente al compilatore di segnalare gli errori al momento della compilazione di un programma.  
   
 > [!NOTE]
 >  L'associazione tardiva può essere usata soltanto per accedere ai membri di tipi che vengono dichiarati come `Public`. L'accesso a membri dichiarati come `Friend` o `Protected Friend` determina un errore di run-time.  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>   
  [Object Lifetime: How Objects Are Created and Destroyed](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  (Durata degli oggetti: come creare e distruggere oggetti)  
  [Tipo di dati Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Programmazione asincrona con Async e Await (C#) | Microsoft Docs
+title: Programmazione asincrona con Async e Await
 ms.date: 2017-05-22
 ms.prod: .net
 ms.technology:
@@ -16,16 +16,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 45d2357336b6ffade3a9767ff13343cdfc2965be
-ms.openlocfilehash: a7c89d56bb3d2c40804ae7a2cc191a0f2f722764
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d087951ce3e3f05c7f1e8f9c99529eab2f76b8d5
 ms.contentlocale: it-it
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="asynchronous-programming-with-async-and-await-c" class="xliff"></a>
-
-# Programmazione asincrona con async e await (C#)
+# <a name="asynchronous-programming-with-async-and-await-c"></a>Programmazione asincrona con async e await (C#)
 È possibile evitare colli di bottiglia nelle prestazioni e migliorare la risposta generale dell'applicazione utilizzando la programmazione asincrona. Le tecniche tradizionali per la scrittura di applicazioni asincrone, tuttavia, possono essere complesse, rendendone difficile la scrittura, il debug e la gestione.  
   
 [C# 5](../../../whats-new/index.md#previous-versions) introduce un approccio semplificato, la programmazione asincrona, che sfrutta il supporto asincrono in .NET Framework 4.5 e versioni successive, .NET Core e Windows Runtime. Il compilatore esegue il lavoro difficile che prima veniva svolto dallo sviluppatore e l'applicazione mantiene una struttura logica simile al codice sincrono. Di conseguenza, si ottengono tutti i vantaggi della programmazione asincrona con meno lavoro richiesto.  
@@ -350,9 +348,7 @@ namespace AsyncFirstExample
 // Length of the downloaded string: 41564.  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [async](../../../../csharp/language-reference/keywords/async.md)   
  [await](../../../../csharp/language-reference/keywords/await.md)
 

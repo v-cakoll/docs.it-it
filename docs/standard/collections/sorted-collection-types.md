@@ -1,5 +1,5 @@
 ---
-title: Tipi di raccolta ordinati | Microsoft Docs
+title: Tipi di raccolta ordinati
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -19,16 +19,14 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 375babff42f13c41852651811f92f6bdda91b1e2
-ms.openlocfilehash: 7b4a762e3021e80a15d66b15589eec2e269a2888
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 210582c6cf31b59f7f6c4b577c0e8a2c2f25ddd6
 ms.contentlocale: it-it
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="sorted-collection-types" class="xliff"></a>
-
-# Tipi di raccolta ordinati
+# <a name="sorted-collection-types"></a>Tipi di raccolta ordinati
 La classe <xref:System.Collections.SortedList?displayProperty=fullName> e le classi generiche <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> e <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> sono simili alla classe <xref:System.Collections.Hashtable> e alla classe generica <xref:System.Collections.Generic.Dictionary%602> in quanto implementano l'interfaccia <xref:System.Collections.IDictionary>, ma gestiscono l'ordinamento degli elementi in base alla chiave e non hanno la caratteristica di inserimento e recupero O(1) propria delle tabelle hash. Le tre classi hanno diverse funzionalità in comune:  
   
 -   Le tre classi implementano tutte l'interfaccia <xref:System.Collections.IDictionary?displayProperty=fullName>. Le due classi generiche implementano anche l'interfaccia generica <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>.  
@@ -58,9 +56,7 @@ La classe <xref:System.Collections.SortedList?displayProperty=fullName> e le cla
   
  A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], la classe <xref:System.Collections.Generic.SortedSet%601> presenta una struttura ad albero auto-bilanciata che mantiene ordinati i dati dopo inserimenti, eliminazioni e ricerche. Questa classe e la classe <xref:System.Collections.Generic.HashSet%601> implementano l'interfaccia <xref:System.Collections.Generic.ISet%601>.  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Collections.IDictionary?displayProperty=fullName>   
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   

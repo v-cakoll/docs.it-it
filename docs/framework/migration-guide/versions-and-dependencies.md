@@ -1,5 +1,5 @@
 ---
-title: Versioni e dipendenze di .NET Framework | Microsoft Docs
+title: Versioni e dipendenze di .NET Framework
 ms.custom: 
 ms.date: 05/02/2017
 ms.prod: .net-framework
@@ -16,11 +16,11 @@ caps.latest.revision: 122
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c12811f3eb8b0aeeeeab6d41ba2983ee9a0ae0f9
-ms.openlocfilehash: 66d3b5c521581686bac2c9783bd4e014a880eb97
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2e3e87f94dec62f6a55e5ef87ee8028f24a5f0e
 ms.contentlocale: it-it
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versioni e dipendenze di .NET Framework
@@ -86,5 +86,4 @@ Ciascuna versione di .NET Framework contiene Common Language Runtime (CLR), libr
 [Compatibilità tra le versioni](../../../docs/framework/migration-guide/version-compatibility.md)   
 [Criteri relativi al ciclo di vita del supporto Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607)   
 [Risolvere i problemi relativi alle installazioni e alle disinstallazioni bloccate di .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
-
 

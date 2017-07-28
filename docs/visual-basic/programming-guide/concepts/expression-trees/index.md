@@ -1,5 +1,5 @@
 ---
-title: Alberi delle espressioni (Visual Basic) | Microsoft Docs
+title: Alberi delle espressioni (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 5f22d535ea6fb55ccadba4476e2e61f32b7a64f2
-ms.lasthandoff: 03/31/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e67f6696ab6e41e9185c7d1356b98113e1473a87
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="expression-trees-visual-basic"></a>Alberi delle espressioni (Visual Basic)
@@ -33,10 +34,10 @@ Gli alberi delle espressioni rappresentano codice in una struttura dei dati simi
   
  Gli alberi delle espressioni sono anche usati in Dynamic Language Runtime (DLR) per fornire interoperabilità tra linguaggi dinamici e .NET Framework e per consentire ai writer dei compilatori di creare alberi delle espressioni invece di codice MSIL (Microsoft Intermediate Language). Per altre informazioni su DLR, vedere [Dynamic Language Runtime Overview](https://msdn.microsoft.com/library/dd233052) (Panoramica su Dynamic Language Runtime).  
   
- È possibile creare un albero delle espressioni tramite il compilatore di C# o di Visual Basic in base a un'espressione lambda anonima oppure manualmente tramite lo spazio dei nomi <xref:System.Linq.Expressions>.  
+ È possibile creare un albero delle espressioni tramite il compilatore di C# o di Visual Basic in base a un'espressione lambda anonima o creare tali alberi di espressioni manualmente tramite il nome spazio <xref:System.Linq.Expressions>.  
   
-## <a name="creating-expression-trees-from-lambda-expressions"></a>Creazione di alberi delle espressioni da espressioni lambda  
- Quando un'espressione lambda viene assegnata a una variabile di tipo <xref:System.Linq.Expressions.Expression%601>, il compilatore genera codice per compilare un albero delle espressioni che rappresenti l'espressione lambda.  
+## <a name="creating-expression-trees-from-lambda-expressions"></a>Creazione di alberi di espressioni da espressioni lambda  
+ Quando un'espressione lambda viene assegnata a una variabile di tipo <xref:System.Linq.Expressions.Expression%601>, il compilatore genera codice per compilare un albero delle espressioni che rappresenta l'espressione lambda.  
   
  Il compilatore di Visual Basic può generare alberi delle espressioni solo da espressioni lambda, o lambda su una sola riga. Non possono analizzare espressioni lambda dell'istruzione (o le espressioni lambda a più righe). Per altre informazioni sulle espressioni lambda in Visual Basic, vedere [Espressioni lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
@@ -48,7 +49,7 @@ Dim lambda As Expression(Of Func(Of Integer, Boolean)) =
 ```  
   
 ## <a name="creating-expression-trees-by-using-the-api"></a>Creazione di alberi delle espressioni tramite l'API  
- Per creare alberi delle espressioni tramite l'API, usare la classe <xref:System.Linq.Expressions.Expression>. Questa classe contiene metodi factory statici che creano nodi degli alberi delle espressioni di tipi specifici, come ad esempio <xref:System.Linq.Expressions.ParameterExpression>, che rappresenta una variabile o un parametro, o <xref:System.Linq.Expressions.MethodCallExpression>, che rappresenta una chiamata al metodo. Anche <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression>, e gli altri tipi specifici per espressione sono definiti nello spazio dei nomi <xref:System.Linq.Expressions>. Questi tipi derivano dal tipo astratto <xref:System.Linq.Expressions.Expression>.  
+ Per creare alberi delle espressioni tramite l'API, usare la classe <xref:System.Linq.Expressions.Expression>. Questa classe contiene metodi factory statici che creano nodi degli alberi delle espressioni di tipi specifici, ad esempio <xref:System.Linq.Expressions.ParameterExpression>, che rappresenta una variabile o un parametro, o <xref:System.Linq.Expressions.MethodCallExpression>, che rappresenta una chiamata al metodo. Anche <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression> e gli altri tipi specifici delle espressioni sono definiti nello spazio dei nomi <xref:System.Linq.Expressions>. Questi tipi derivano dal tipo astratto <xref:System.Linq.Expressions.Expression>.  
   
  L'esempio di codice seguente illustra come creare un albero delle espressioni che rappresenti l'espressione lambda `Function(num) num < 5` usando l'API.  
   
@@ -131,7 +132,7 @@ Console.WriteLine(String.Format("Decomposed expression: {0} => {1} {2} {3}",
  Gli alberi delle espressioni devono essere non modificabili. Ciò significa che per modificare un albero delle espressioni è necessario costruirne uno nuovo copiando quello esistente e sostituendone i nodi. È possibile usare un visitatore dell'albero delle espressioni per attraversare l'albero delle espressioni esistente. Per altre informazioni, vedere [How to: Modify Expression Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md) (Procedura: Modificare alberi delle espressioni (Visual Basic)).  
   
 ## <a name="compiling-expression-trees"></a>Compilazione degli alberi delle espressioni  
- Il tipo <xref:System.Linq.Expressions.Expression%601> specifica il metodo <xref:System.Linq.Expressions.Expression%601.Compile%2A> che compila il codice rappresentato da un albero dell'espressione in un delegato eseguibile.  
+ Il tipo <xref:System.Linq.Expressions.Expression%601> fornisce il metodo <xref:System.Linq.Expressions.Expression%601.Compile%2A> che compila il codice rappresentato da un albero delle espressioni in un delegato eseguibile.  
   
  L'esempio di codice seguente illustra come compilare un albero delle espressioni ed eseguire il codice risultante.  
   
@@ -165,3 +166,4 @@ Console.WriteLine(expr.Compile()(4))
  [Espressioni lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
  [Dynamic Language Runtime Overview](https://msdn.microsoft.com/library/dd233052)  (Panoramica su Dynamic Language Runtime)  
  [Programming Concepts (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md) (Concetti di programmazione (Visual Basic))
+

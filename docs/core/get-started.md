@@ -1,5 +1,5 @@
 ---
-title: Introduzione a .NET Core | Microsoft Docs
+title: Introduzione a .NET Core
 description: Risorse per imparare a creare applicazioni .NET Core in Windows, Linux e macOS.
 keywords: .NET, .NET Core
 author: mairaw
@@ -9,23 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: b187cae8477a0395ca9b7edbbe170ae9e6be4220
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 890e6af3095866608e9c91ea26b4d0edb6d81e29
 ms.contentlocale: it-it
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="get-started-with-net-core" class="xliff"></a>
-
-# Introduzione a .NET Core
+# <a name="get-started-with-net-core"></a>Introduzione a .NET Core
 
 .NET Core viene eseguito su [Windows](#windows), [Linux](#linux) e [macOS/OS X](#os-x--macos).
 
-<a id="windows" class="xliff"></a>
-
-## Windows
+## <a name="windows"></a>Windows
 
 Installare .NET Core in [Windows](https://www.microsoft.com/net/core#windows). 
 
@@ -39,9 +35,7 @@ Installare .NET Core in [Windows](https://www.microsoft.com/net/core#windows).
 
 Per un elenco delle versioni Windows supportate, vedere l'argomento [Prerequisites for Windows development](windows-prerequisites.md) (Prerequisiti per lo sviluppo in Windows). 
 
-<a id="linux" class="xliff"></a>
-
-## Linux
+## <a name="linux"></a>Linux
 
 Installare .NET Core nella distribuzione/versione in uso:
 
@@ -59,9 +53,7 @@ Installare .NET Core nella distribuzione/versione in uso:
 
 .NET Core è supportato per le distribuzioni e le versioni Linux elencate in precedenza nei collegamenti di installazione.
 
-<a id="os-x--macos" class="xliff"></a>
-
-## OS X/macOS
+## <a name="os-x--macos"></a>OS X/macOS
 
 Installare .NET Core per [macOS](https://www.microsoft.com/net/core#macos). .NET Cre è supportato in OS X El Capitan (versione 10.11) e macOS Sierra (versione 10.12).
 

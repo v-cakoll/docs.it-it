@@ -1,5 +1,5 @@
 ---
-title: Eccezioni e gestione delle eccezioni (Guida per programmatori C#) | Microsoft Docs
+title: Eccezioni e gestione delle eccezioni (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e9faf744717980468afb995eceeb31bda93443b9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e372cfa3239c39af86a29cda06b5817f0aeff0a2
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Eccezioni e gestione delle eccezioni (Guida per programmatori C#)
@@ -66,7 +66,7 @@ Le funzionalità di gestione delle eccezioni del linguaggio C# sono utili per ge
   
 -   Il codice in un blocco `finally` viene eseguito anche se viene generata un'eccezione. Usare un blocco `finally` per rilasciare le risorse, ad esempio per chiudere eventuali flussi o file aperti nel blocco `try`.  
   
--   Le eccezioni gestite in .NET Framework vengono implementate sulla base del meccanismo di gestione strutturata delle eccezioni in Win32. Per altre informazioni, vedere [Gestione strutturata delle eccezioni (C/C++)](https://docs.microsoft.com/cpp/cpp/structured-exception-handling-c-cpp) e [A Crash Course on the Depths of Win32 Structured Exception Handling](http://go.microsoft.com/fwlink/?LinkId=119654) (Corso intensivo su tutti i concetti fondamentali della gestione delle eccezioni strutturata in Win32).  
+-   Le eccezioni gestite in .NET Framework vengono implementate sulla base del meccanismo di gestione strutturata delle eccezioni in Win32. Per altre informazioni, vedere [Gestione strutturata delle eccezioni (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) e [A Crash Course on the Depths of Win32 Structured Exception Handling](http://go.microsoft.com/fwlink/?LinkId=119654) (Corso intensivo su tutti i concetti fondamentali della gestione delle eccezioni strutturata in Win32).  
   
 ## <a name="related-sections"></a>Sezioni correlate  
  Per altre informazioni sulle eccezioni e la gestione delle eccezioni, vedere gli argomenti seguenti:  
@@ -98,3 +98,4 @@ Le funzionalità di gestione delle eccezioni del linguaggio C# sono utili per ge
  [Gerarchia delle eccezioni](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
  [Scrittura di codice .NET affidabile](http://go.microsoft.com/fwlink/?LinkId=112400)   
  [Minidump per eccezioni specifiche](http://go.microsoft.com/fwlink/?LinkId=112408)
+

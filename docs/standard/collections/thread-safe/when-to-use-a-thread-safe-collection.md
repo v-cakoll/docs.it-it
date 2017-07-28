@@ -1,5 +1,5 @@
 ---
-title: Quando usare una raccolta thread-safe | Documenti di Microsoft
+title: Quando utilizzare una raccolta thread-safe
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,14 +15,14 @@ caps.latest.revision: 9
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 87898a4a6ba3d3ef4c53fd1c6b8f94ff353f10e4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5166b7b7be38fae9bf809cb0b3aa79b76efd41ac
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="when-to-use-a-thread-safe-collection"></a>Quando utilizzare una raccolta thread-safe
+# <a name="when-to-use-a-thread-safe-collection"></a>Quando usare una raccolta thread-safe
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduce cinque nuovi tipi di raccolta creati specificamente per il supporto di operazioni di aggiunta e rimozione multithread. Per ottenere la thread safety, questi nuovi tipi usano vari nuovi meccanismi di sincronizzazione, sia di blocco che senza blocco. La sincronizzazione aggiunge sovraccarico a un'operazione. La quantità di sovraccarico dipende dal tipo di sincronizzazione usato, dal tipo di operazioni eseguite e da altri fattori, quali il numero di thread che provano ad accedere contemporaneamente alla raccolta.  
   
  In determinati scenari il sovraccarico della sincronizzazione è trascurabile e consente al tipo con multithread un'elaborazione molto più rapida e una miglior scalabilità rispetto al tipo equivalente non thread-safe se protetto da un blocco esterno. In altri scenari il sovraccarico può far sì che la scalabilità e le prestazioni del tipo thread-safe risultino uguali o più lente rispetto alla versione del tipo non thread-safe con blocco esterno.  
@@ -74,3 +74,4 @@ ms.lasthandoff: 05/22/2017
  <xref:System.Collections.Concurrent?displayProperty=fullName>   
  [Raccolte thread-safe](../../../../docs/standard/collections/thread-safe/index.md)   
  [Programmazione parallela](../../../../docs/standard/parallel-programming/index.md)
+

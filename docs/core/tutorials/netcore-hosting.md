@@ -1,5 +1,5 @@
 ---
-title: Hosting di .NET Core | Microsoft Docs
+title: Hosting di .NET Core
 description: Hosting del runtime di .NET Core da codice nativo
 keywords: .NET, .NET Core, Hosting, Hosting di .NET Core
 author: mjrousos
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d866cf8eab2b8db936d813ccae7882f8d7db5720
-ms.openlocfilehash: cf420d4379afbdb3c6db048c7817a4c143c124d9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 61c321b512b1920718196319d367f467f9291b2a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -23,7 +23,7 @@ Come tutto il codice gestito, le applicazioni .NET Core sono eseguite da un host
 
 L'hosting del runtime di .NET Core rappresenta uno scenario avanzato e, nella maggior parte dei casi, gli sviluppatori .NET Core non devono occuparsi dell'hosting poiché i processi di compilazione di .NET Core includono un host predefinito per l'esecuzione delle applicazioni .NET Core. Tuttavia, in alcune circostanze particolari può essere utile ospitare in modo esplicito il runtime di .NET Core per richiamare il codice gestito in un processo nativo o per avere maggior controllo sul funzionamento del runtime.
 
-Questo articolo offre una panoramica dei passaggi necessari per avviare il runtime di .NET Core da codice nativo, creare un dominio di applicazione iniziale (<xref:System.AppDomain>) ed eseguire il codice gestito in tale dominio.
+Questo articolo offre una panoramica dei passaggi necessari per avviare il runtime di .NET Core da codice nativo, creare un dominio di applicazione iniziale (<xref:System.AppDomain>) ed eseguirvi il codice gestito.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -110,9 +110,9 @@ Se `ExecuteAssembly` non soddisfa le esigenze dell'host, un'altra opzione consis
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
   domainId,
-  L"HW, Version=1.0.0.0, Culture=neutral",    // Target managed assembly
+  L"HW, Version=1.0.0.0, Culture=neutral",  // Target managed assembly
   L"ConsoleApplication.Program",            // Target managed type
-  L"Main",                                    // Target entry point (static method)
+  L"Main",                                  // Target entry point (static method)
   (INT_PTR*)&pfnDelegate);
 
 ((MainMethodFp*)pfnDelegate)(NULL);

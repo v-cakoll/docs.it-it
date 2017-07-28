@@ -1,0 +1,1 @@
+bitmap indipendente dal dispositivo (DIB)

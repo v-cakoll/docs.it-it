@@ -1,0 +1,1 @@
+Secure Hash Algorithm versione 1.0 (SHA1)

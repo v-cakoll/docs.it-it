@@ -1,5 +1,5 @@
 ---
-title: Stringhe (Guida per programmatori C#) | Microsoft Docs
+title: Stringhe (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,26 +28,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4f1f23bd4d95e617fadc64f4d3a30c5fa1fda85b
-ms.openlocfilehash: 699e9291400797ed1bedcb3686fdfe7848305726
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e41a7b68d890aa7a96aeddd660e0dca90596d998
 ms.contentlocale: it-it
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="strings-c-programming-guide" class="xliff"></a>
-
-# Stringhe (Guida per programmatori C#)
+# <a name="strings-c-programming-guide"></a>Stringhe (Guida per programmatori C#)
 Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. Internamente il testo viene archiviato come una raccolta di sola lettura sequenziale di oggetti <xref:System.Char>. Le stringhe C# non presentano un carattere di terminazione null alla fine, pertanto una stringa C# può contenere qualsiasi numero di caratteri null incorporati ('\0'). La proprietà <xref:System.String.Length%2A> di una stringa rappresenta il numero di oggetti `Char` in essa contenuti e non il numero di caratteri Unicode. Per accedere ai singoli punti di codice Unicode in una stringa usare l'oggetto <xref:System.Globalization.StringInfo>.  
   
-<a id="string-vs-systemstring" class="xliff"></a>
-
-## string e System.String  
+## <a name="string-vs-systemstring"></a>string e System.String  
  In Visual Basic la parola chiave `string` è un alias per <xref:System.String>. `String` e `string` sono pertanto equivalenti ed è possibile usare la convenzione di denominazione che si preferisce. La classe `String` fornisce molti metodi per creare, modificare e confrontare stringhe in modo sicuro. Inoltre, il linguaggio C# esegue l'overload di alcuni operatori per semplificare le operazioni comuni sulle stringhe. Per altre informazioni sull'uso della parola chiave, vedere [string](../../../csharp/language-reference/keywords/string.md). Per altre informazioni sul tipo e sui relativi metodi, vedere <xref:System.String>.  
   
-<a id="declaring-and-initializing-strings" class="xliff"></a>
-
-## Dichiarazione e inizializzazione di stringhe  
+## <a name="declaring-and-initializing-strings"></a>Dichiarazione e inizializzazione di stringhe  
  È possibile dichiarare e inizializzare stringhe in vari modi, come mostrato nell'esempio seguente:  
   
  [!code-cs[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
@@ -56,9 +50,7 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
   
  Inizializzare una stringa con il valore costante <xref:System.String.Empty> per creare un nuovo oggetto <xref:System.String> con stringa di lunghezza zero. La rappresentazione del valore letterale stringa di una stringa di lunghezza zero è "". L'inizializzazione di stringhe con il valore <xref:System.String.Empty> anziché con [null](../../../csharp/language-reference/keywords/null.md) riduce le probabilità di un errore <xref:System.NullReferenceException>. Usare il metodo statico <xref:System.String.IsNullOrEmpty%28System.String%29> per verificare il valore di una stringa prima di provare ad accedere alla stringa.  
   
-<a id="immutability-of-string-objects" class="xliff"></a>
-
-## Immutabilità degli oggetti stringa  
+## <a name="immutability-of-string-objects"></a>Immutabilità degli oggetti stringa  
  Gli oggetti stringa sono *immutabili*, ovvero non possono essere modificati una volta creati. Tutti i metodi <xref:System.String> e gli operatori C# che sembrano modificare una stringa in realtà restituiscono i risultati in un nuovo oggetto stringa. Nell'esempio seguente, quando il contenuto di `s1` e `s2` viene concatenato per formare un'unica stringa, le due stringhe originali restano immutate. L'operatore `+=` crea una nuova stringa che contiene il contenuto delle due stringhe combinato. Il nuovo oggetto viene assegnato alla variabile `s1` e l'oggetto originale assegnato a `s1` viene rilasciato per l'operazione di Garbage Collection perché nessun'altra variabile contiene un riferimento a tale oggetto.  
   
  [!code-cs[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
@@ -69,9 +61,7 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
   
  Per altre informazioni su come creare nuove stringhe basate su modifiche quali operazioni di ricerca e sostituzione sulla stringa originale, vedere [Procedura: modificare il contenuto delle stringhe](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
-<a id="regular-and-verbatim-string-literals" class="xliff"></a>
-
-## Valori letterali stringa normali e verbatim  
+## <a name="regular-and-verbatim-string-literals"></a>Valori letterali stringa normali e verbatim  
  Usare valori letterali stringa normali quando è necessario incorporare caratteri di escape forniti da C#, come mostrato nell'esempio seguente:  
   
  [!code-cs[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
@@ -80,9 +70,7 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
   
  [!code-cs[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
   
-<a id="string-escape-sequences" class="xliff"></a>
-
-## Sequenze di escape delle stringhe  
+## <a name="string-escape-sequences"></a>Sequenze di escape delle stringhe  
   
 |Sequenza di escape|Nome carattere|Codifica Unicode|  
 |---------------------|--------------------|----------------------|  
@@ -104,25 +92,19 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
 > [!NOTE]
 >  In fase di compilazione, le stringhe verbatim vengono convertite in stringhe normali con tutte le stesse sequenze di escape. Pertanto, se si visualizza una stringa verbatim nella finestra Espressioni di controllo del debugger, si vedranno i caratteri di escape aggiunti dal compilatore e non la versione verbatim del codice sorgente. Ad esempio, la stringa verbatim @"C:\file.txt" verrà visualizzata nella finestra Espressioni di controllo come "C:\\\file.txt".  
   
-<a id="format-strings" class="xliff"></a>
-
-## Stringhe di formato  
+## <a name="format-strings"></a>Stringhe di formato  
  Una stringa di formato è una stringa il cui contenuto può essere determinato dinamicamente in fase di esecuzione. Si crea una stringa di formato tramite il metodo <xref:System.String.Format%2A> statico e incorporando tra parentesi graffe i segnaposto che verranno sostituiti da altri valori in fase di esecuzione. L'esempio seguente usa una stringa di formato per restituire il risultato di ogni iterazione di un ciclo:  
   
  [!code-cs[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
   
  Un overload del metodo <xref:System.Console.WriteLine%2A> accetta una stringa di formato come parametro. Pertanto, è possibile incorporare solo un valore letterale stringa di formato senza una chiamata esplicita al metodo. Se tuttavia si usa il metodo <xref:System.Diagnostics.Trace.WriteLine%2A> per visualizzare l'output di debug nella finestra **Output** di Visual Studio è necessario chiamare in modo esplicito il metodo <xref:System.String.Format%2A>, perché <xref:System.Diagnostics.Trace.WriteLine%2A> accetta solo una stringa, non una stringa di formato. Per altre informazioni sulle stringhe di formato, vedere [Formattazione di tipi](../../../standard/base-types/formatting-types.md).  
   
-<a id="substrings" class="xliff"></a>
-
-## Sottostringhe  
+## <a name="substrings"></a>Sottostringhe  
  Una sottostringa è qualsiasi sequenza di caratteri contenuta in una stringa. Usare il metodo <xref:System.String.Substring%2A> per creare una nuova stringa da una parte della stringa originale. È possibile cercare una o più occorrenze di una sottostringa tramite il metodo <xref:System.String.IndexOf%2A>. Usare il metodo <xref:System.String.Replace%2A> per sostituire tutte le occorrenze di una sottostringa specificata con una nuova stringa. Come il metodo <xref:System.String.Substring%2A>, anche <xref:System.String.Replace%2A> restituisce una nuova stringa e non modifica la stringa originale. Per altre informazioni, vedere [Procedura: eseguire la ricerca di stringhe tramite metodi stringa](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md) e [Procedura: modificare il contenuto delle stringhe](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
  [!code-cs[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
-<a id="accessing-individual-characters" class="xliff"></a>
-
-## Accesso a caratteri singoli  
+## <a name="accessing-individual-characters"></a>Accesso a caratteri singoli  
  È possibile utilizzare la notazione di matrice con un valore di indice per ottenere l'accesso in sola lettura a singoli caratteri, come nell'esempio seguente:  
   
  [!code-cs[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
@@ -131,9 +113,7 @@ Una stringa è un oggetto di tipo <xref:System.String> il cui valore è testo. I
   
  [!code-cs[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
   
-<a id="null-strings-and-empty-strings" class="xliff"></a>
-
-## Stringhe null e stringhe vuote  
+## <a name="null-strings-and-empty-strings"></a>Stringhe null e stringhe vuote  
  Una stringa vuota è un'istanza di un oggetto <xref:System.String?displayProperty=fullName> che contiene zero caratteri. Le stringhe vuote sono utilizzate di frequente in diversi scenari di programmazione per rappresentare un campo di testo vuoto. È possibile chiamare metodi su stringhe vuote, perché sono oggetti <xref:System.String?displayProperty=fullName> validi. Le stringhe vuote vengono inizializzate come indicato di seguito:  
   
 ```  
@@ -144,9 +124,7 @@ string s = String.Empty;
   
  [!code-cs[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
   
-<a id="using-stringbuilder-for-fast-string-creation" class="xliff"></a>
-
-## Uso di StringBuilder per la creazione veloce di stringhe  
+## <a name="using-stringbuilder-for-fast-string-creation"></a>Uso di StringBuilder per la creazione veloce di stringhe  
  Le operazioni sulle stringhe in .NET sono altamente ottimizzate e nella maggior parte dei casi non influiscono sulle prestazioni in modo significativo. Tuttavia, in alcuni scenari, ad esempio cicli rigidi eseguiti molte centinaia o migliaia di volte, le operazioni sulle stringhe possono incidere sulle prestazioni. La classe <xref:System.Text.StringBuilder> crea un buffer di stringhe che offre prestazioni migliori se il programma esegue numerose modifiche di stringhe. La stringa <xref:System.Text.StringBuilder> consente anche di riassegnare singoli caratteri, un'operazione non supportata dal tipo di dati string incorporato. Questo codice, ad esempio, consente di modificare il contenuto di una stringa senza crearne una nuova:  
   
  [!code-cs[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
@@ -155,14 +133,10 @@ string s = String.Empty;
   
  [!code-cs[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
   
-<a id="strings-extension-methods-and-linq" class="xliff"></a>
-
-## Stringhe, metodi di estensione e LINQ  
+## <a name="strings-extension-methods-and-linq"></a>Stringhe, metodi di estensione e LINQ  
  Poiché il tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601> è possibile usare i metodi di estensione definiti nella classe <xref:System.Linq.Enumerable> sulle stringhe. Per evitare confusioni a livello visivo questi metodi sono esclusi da IntelliSense per il tipo <xref:System.String>, ma sono comunque disponibili. È anche possibile usare le espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sulle stringhe. Per altre informazioni, vedere [LINQ e stringhe](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  
   
-<a id="related-topics" class="xliff"></a>
-
-## Argomenti correlati  
+## <a name="related-topics"></a>Argomenti correlati  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  

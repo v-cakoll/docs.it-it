@@ -1,6 +1,6 @@
 ---
-title: Classi e struct (Guida per programmatori C#) | Microsoft Docs
-description: "Descrive le modalità d&quot;uso di classi e strutture (struct) in C#."
+title: Classi e struct (Guida per programmatori C#)
+description: "Descrive le modalità d'uso di classi e strutture (struct) in C#."
 keywords: classi (C#), struct (C#), strutture (struct) (C#), tipi riferimento (C#), tipi valore (C#)
 ms.date: 2016-01-17
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: d855989586fdee8b98bd994125ebb5c59776040a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2076de96c58fb89813495cb59adacb8a0082d93c
 ms.contentlocale: it-it
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Classi e struct (Guida per programmatori C#)
@@ -127,3 +127,4 @@ Classi e struct sono due dei costrutti di base del Common Type System in .NET Fr
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Riferimenti al linguaggio Visual Basic | Microsoft Docs
+title: Riferimenti al linguaggio Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,21 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: ada35fcbbbe84f6339f47af736a8581db85cfb56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ac47bde27397e80993a6bb5d2512715f44acfc1
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-language-reference" class="xliff"></a>
-
-# Riferimenti al linguaggio Visual Basic
+# <a name="visual-basic-language-reference"></a>Riferimenti al linguaggio Visual Basic
 Questa sezione include informazioni di riferimento su vari aspetti del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Contenuto della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Convenzioni tipografiche e di scrittura del codice](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
  Offre una breve descrizione della formattazione di parole chiave, segnaposto e altri elementi del linguaggio usata nella documentazione [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
@@ -108,11 +104,10 @@ Questa sezione include informazioni di riferimento su vari aspetti del linguaggi
  [Messaggi di errore](../../visual-basic/language-reference/error-messages/index.md)  
  Offre un elenco di messaggi di errore di run-time e del compilatore di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e indicazioni su come gestirli.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [Visual Basic](../../visual-basic/index.md)  
  Offre informazioni dettagliate su tutte le aree del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Compilatore della riga di comando di Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
  Descrive come usare il compilatore da riga di comando come alternativa per compilare programmi dall'interno dell'ambiente di sviluppo integrato (IDE) di [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].
+

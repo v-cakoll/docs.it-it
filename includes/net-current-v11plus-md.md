@@ -1,0 +1,1 @@
+Disponibile dalla 1.1

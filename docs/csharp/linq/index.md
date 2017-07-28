@@ -1,5 +1,5 @@
 ---
-title: LINQ (Language Integrated Query) | Microsoft Docs
+title: LINQ (Language-Integrated Query)
 description: Introduzione a LINQ (Language-Integrated Query) in C#
 keywords: .NET, .NET Core, LINQ, C#
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 21e4420d385bff07173b265782dd23f89f61e797
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: da116ce67428e9349e03dea60b35abd52dcffee2
 ms.contentlocale: it-it
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -38,7 +38,7 @@ L'esempio seguente mostra l'operazione di query completa. L'operazione completa 
   
 -   Una query non viene eseguita finché non si esegue l'iterazione della variabile di query, ad esempio in un'istruzione `foreach`. Per altre informazioni, vedere [Introduzione alle query LINQ](../programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
--   In fase di compilazione, le espressioni di query vengono convertite in chiamate al metodo dell'operatore query standard secondo le regole definite nella specifica C#. Le query che possono essere espresse usando la sintassi di query possono essere espresse anche usando la sintassi dei metodi. Nella maggior parte dei casi, tuttavia, la sintassi di query è più leggibile e concisa. Per altre informazioni, vedere [Specifiche del linguaggio C#](../language-reference/language-specification.md) e [Panoramica degli operatori di query standard](../programming-guide/concepts/linq/standard-query-operators-overview.md).  
+-   In fase di compilazione, le espressioni di query vengono convertite in chiamate al metodo dell'operatore query standard secondo le regole definite nella specifica C#. Le query che possono essere espresse usando la sintassi di query possono essere espresse anche usando la sintassi dei metodi. Nella maggior parte dei casi, tuttavia, la sintassi di query è più leggibile e concisa. Per altre informazioni, vedere [Specifiche del linguaggio C#](../language-reference/language-specification/index.md) e [Panoramica degli operatori di query standard](../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 -   Come regola di scrittura delle query LINQ, è consigliabile usare la sintassi di query quando possibile e la sintassi dei metodi quando necessario. Tra le due diverse forme non esiste differenza semantica o a livello di prestazioni. Le espressioni di query sono spesso più leggibili delle espressioni equivalenti scritte nella sintassi dei metodi.  
   

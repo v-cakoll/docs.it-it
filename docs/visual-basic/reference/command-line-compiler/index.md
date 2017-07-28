@@ -1,5 +1,5 @@
 ---
-title: Compilatore della riga di comando di Visual Basic | Microsoft Docs
+title: Compilatore della riga di comando di Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.reviewer: 
@@ -33,21 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 7c62eb47ba748cb119855e9a3987cab8c6a5b74b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 850aac4098dc22bacd377362f7886fa70219d365
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-command-line-compiler" class="xliff"></a>
-
-# Compilatore della riga di comando di Visual Basic
+# <a name="visual-basic-command-line-compiler"></a>Compilatore della riga di comando di Visual Basic
 Il compilatore a riga di comando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornisce un'alternativa alla compilazione dei programmi dall'interno dell'ambiente di sviluppo integrato (IDE) [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Questa sezione fornisce descrizioni per le opzioni del compilatore [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Contenuto della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
  Descrive il compilatore a riga di comando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], che viene fornito come alternativa alla compilazione dei programmi dall'interno dell'ambiente di sviluppo integrato (IDE) [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
@@ -57,11 +53,10 @@ Il compilatore a riga di comando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] for
  [Opzioni del compilatore Visual Basic elencate per categoria](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
  Presenta le opzioni del compilatore in gruppi funzionali.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [NIB: Gestione delle proprietà del progetto con Progettazione progetti](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)  
  In questo articolo viene descritto come usare Creazione progetti per specificare impostazioni globali per il progetto.  
   
  [Visual Basic](../../../visual-basic/index.md)  
  Il punto di partenza per la Guida [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+

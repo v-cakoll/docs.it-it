@@ -1,5 +1,5 @@
 ---
-title: 'Mitigazione: Supporto di tocco e stilo basato su puntatore | Documenti di Microsoft'
+title: 'Mitigazione: Supporto di tocco e stilo basato su puntatore'
 ms.custom: 
 ms.date: 04/07/2017
 ms.prod: .net-framework
@@ -17,10 +17,11 @@ caps.latest.revision: 2
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: f93c914e0c1d285cc0f6117e5ae7a0f6338bc549
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 053ff4c5fba7b4f2b5a4c29a35c954e888cb095a
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigazione: Supporto di tocco e stilo basato su puntatore
@@ -63,5 +64,5 @@ Rimuovendo questa voce o impostandone il valore su `false`, questo stack facolta
 
 ## <a name="see-also"></a>Vedere anche
 
-[Reindirizzamento delle modifiche in .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+[Retargeting Changes in the .NET Framework 4.7 (Reindirizzamento delle modifiche in .NET Framework 4.7)](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
 

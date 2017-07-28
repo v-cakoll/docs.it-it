@@ -1,5 +1,5 @@
 ---
-title: Stringhe in Visual Basic | Microsoft Docs
+title: Stringhe in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 3bfb94cf3b3e40164ccd9ff6021e1b624c963039
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 05cb6db768779895ebf3e57a0feb7bb58c65fc2a
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="strings-in-visual-basic" class="xliff"></a>
-
-# Stringhe in Visual Basic
+# <a name="strings-in-visual-basic"></a>Stringhe in Visual Basic
 Questa sezione descrive i concetti fondamentali relativi all'uso delle stringhe in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Contenuto della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Introduzione alle stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
  Elenca argomenti che descrivono i concetti fondamentali relativi all'uso delle stringhe in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
@@ -64,7 +60,6 @@ Questa sezione descrive i concetti fondamentali relativi all'uso delle stringhe 
  [Procedura dettagliata: Crittografia e decrittografia di stringhe in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  Illustra come crittografare e decrittografare le stringhe usando la versione del provider del servizio di crittografia dell'algoritmo Triple Data Encryption Standard.  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità del linguaggio Visual Basic](../../../../visual-basic/programming-guide/language-features/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Operatori ed espressioni in Visual Basic | Microsoft Docs
+title: Operatori ed espressioni in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,23 +36,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 069178fe753c3e09116c8a4845f96faf13eb72ec
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3675af3ac8a0a80b5fb5f208c1679dc28ab77acf
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="operators-and-expressions-in-visual-basic" class="xliff"></a>
-
-# Operatori ed espressioni in Visual Basic
+# <a name="operators-and-expressions-in-visual-basic"></a>Operatori ed espressioni in Visual Basic
 Un *operatore* è un elemento di codice che esegue un'operazione su uno o più elementi di codice che contengono valori. Gli elementi di valore includono variabili, costanti, valori letterali, proprietà, espressioni e valori restituiti da procedure `Function` e `Operator`.  
   
  Un'*espressione* è una serie di elementi di valore combinati con operatori che restituisce un nuovo valore. Gli operatori agiscono sugli elementi di valore mediante l'esecuzione di calcoli, confronti o altre operazioni.  
   
-<a id="types-of-operators" class="xliff"></a>
-
-## Tipi di operatori  
+## <a name="types-of-operators"></a>Tipi di operatori  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] include i tipi di operatori seguenti:  
   
 -   Gli [operatori aritmetici](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) eseguono calcoli comuni su valori numerici, inclusa l'inversione degli schemi di bit.  
@@ -65,9 +61,7 @@ Un *operatore* è un elemento di codice che esegue un'operazione su uno o più e
   
  Gli elementi di valore che vengono combinati con un operatore sono detti *operandi* di tale operatore. Gli operatori combinati con elementi di valore formano espressioni, ad eccezione dell'operatore di assegnazione che forma un'*istruzione*. Per altre informazioni, vedere [Istruzioni](../../../../visual-basic/programming-guide/language-features/statements.md).  
   
-<a id="evaluation-of-expressions" class="xliff"></a>
-
-## Valutazione delle espressioni  
+## <a name="evaluation-of-expressions"></a>Valutazione delle espressioni  
  Il risultato finale di un'espressione rappresenta un valore, in genere espresso con un tipo di dati comune quale `Boolean`, `String` o un tipo numerico.  
   
  Di seguito sono riportati esempi di espressioni.  
@@ -96,9 +90,8 @@ Un *operatore* è un elemento di codice che esegue un'operazione su uno o più e
   
  Per altre informazioni ed esempi, vedere [Overload di operatori in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Operatori](../../../../visual-basic/language-reference/operators/index.md)   
  [Combinazione efficace di operatori](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)   
  [Istruzioni](../../../../visual-basic/language-reference/statements/index.md)
+
