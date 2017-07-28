@@ -1,5 +1,5 @@
 ---
-title: Creazione di un&quot;applicazione C# Hello World con .NET Core in Visual Studio 2017 | Microsoft Docs
+title: Creazione di un'applicazione C# Hello World con .NET Core in Visual Studio 2017
 description: Informazioni su come creare una semplice applicazione console .NET Core usando Visual Studio 2017.
 keywords: .NET Core, applicazione console .NET Core, Visual Studio 2017
 author: BillWagner
@@ -11,30 +11,24 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 08c8e18a95c25477eb81bd6df10cf593b284bf64
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b19bf07b2a2bba944bb33ddb1c887f77331ba8d1
 ms.contentlocale: it-it
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017" class="xliff"></a>
-
-# Creazione di un'applicazione C# Hello World con .NET Core in Visual Studio 2017
+# <a name="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Creazione di un'applicazione C# Hello World con .NET Core in Visual Studio 2017
 
 Questo argomento offre un'introduzione dettagliata per la creazione, il debug e la pubblicazione di una semplice applicazione console .NET Core usando Visual Studio 2017. Visual Studio 2017 offre un ambiente di sviluppo completo per la creazione di applicazioni .NET Core. Se l'applicazione non ha alcuna dipendenza specifica della piattaforma, è possibile eseguirla su qualsiasi piattaforma usata come destinazione da .NET Core o su qualsiasi sistema in cui è installato .NET Core.
 
-<a id="prerequisites" class="xliff"></a>
-
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 [Visual Studio 2017](https://www.visualstudio.com/downloads/) con il carico di lavoro "Sviluppo multipiattaforma .NET Core" installato. 
 
 Per altre informazioni, vedere [Prerequisiti per .NET Core in Windows](../../core/windows-prerequisites.md).
 
-<a id="a-simple-hello-world-application" class="xliff"></a>
-
-## Semplice applicazione Hello World
+## <a name="a-simple-hello-world-application"></a>Semplice applicazione Hello World
 
 Di seguito viene descritta la creazione di una semplice applicazione console "Hello World". Attenersi ai passaggi riportati di seguito.
 
@@ -64,9 +58,7 @@ Di seguito viene descritta la creazione di una semplice applicazione console "He
 
 1. Premere un tasto qualsiasi per chiudere la finestra della console.
 
-<a id="enhancing-the-hello-world-application" class="xliff"></a>
-
-## Miglioramento dell'applicazione Hello World
+## <a name="enhancing-the-hello-world-application"></a>Miglioramento dell'applicazione Hello World
 
 Migliorare l'applicazione per richiedere il nome dell'utente e visualizzarlo insieme alla data e ora. Per modificare e testare il programma, seguire questa procedura:
 
@@ -92,9 +84,7 @@ L'applicazione è stata creata ed eseguita. Per sviluppare un'applicazione profe
 
 - Per informazioni sullo sviluppo e la pubblicazione di una versione distribuibile dell'applicazione, vedere [Pubblicazione dell'applicazione Hello World con Visual Studio 2017](publishing-with-visual-studio.md).
 
-<a id="related-topics" class="xliff"></a>
-
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 Anziché un'applicazione console, è possibile creare una libreria di classi con .NET Core e Visual Studio 2017. Per un'introduzione dettagliata, vedere [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](library-with-visual-studio.md).
 
