@@ -41,3 +41,4 @@ Nel contesto di un'espressione di query è possibile chiamare qualsiasi metodo. 
 
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni di query LINQ](index.md)
+

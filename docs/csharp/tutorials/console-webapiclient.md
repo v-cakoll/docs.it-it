@@ -1,5 +1,5 @@
 ---
-title: Creare un client REST tramite .NET Core | Microsoft Docs
+title: Creare un client REST usando .NET Core
 description: "Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,24 +11,20 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: e39e4f606d4bd1f17f5cb84940a48ef4bd53bd2d
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
 ms.contentlocale: it-it
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="rest-client" class="xliff"></a>
+# <a name="rest-client"></a>Client REST
 
-# Client REST
-
-<a id="introduction" class="xliff"></a>
-
-## Introduzione
+## <a name="introduction"></a>Introduzione
 Questa esercitazione illustra alcune funzionalità disponibili in .NET Core e nel linguaggio C#. Verranno affrontati gli argomenti seguenti:
-*    Nozioni di base sull'interfaccia della riga di comando di .NET Core
+*   Nozioni di base sull'interfaccia della riga di comando di .NET Core
 *   Panoramica delle funzionalità del linguaggio C#
-*    Gestione delle dipendenze con NuGet
+*   Gestione delle dipendenze con NuGet
 *   Comunicazioni HTTP
 *   Elaborazione delle informazioni JSON
 *   Gestione della configurazione con attributi 
@@ -39,22 +35,16 @@ In questa esercitazione verranno create anche numerose funzionalità.
 
 Se si vuole proseguire, è possibile scaricare l'[esempio finale](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) di questo argomento. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-<a id="prerequisites" class="xliff"></a>
-
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 È necessario configurare il computer per l'esecuzione di .NET core. Le istruzioni di installazione sono disponibili nella pagina [.NET Core](https://www.microsoft.com/net/core). Questa applicazione può essere eseguita in Windows, Linux, macOS o in un contenitore Docker. È necessario installare l'editor di codice preferito. Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma, ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
-<a id="create-the-application" class="xliff"></a>
-
-## Creare l'applicazione
+## <a name="create-the-application"></a>Creare l'applicazione
 Il primo passaggio consiste nel creare una nuova applicazione. Aprire un prompt dei comandi e creare una nuova directory per l'applicazione, impostandola come directory corrente. Digitare il comando `dotnet new console` al prompt dei comandi Questa operazione crea i file iniziali per un'applicazione "Hello World" di base.
 
 Prima di iniziare ad apportare modifiche, è opportuno ripercorrere i passaggi necessari per eseguire l'applicazione Hello World semplice. Dopo aver creato l'applicazione, digitare `dotnet restore` al prompt dei comandi. Questo comando esegue il processo di ripristino dei pacchetti NuGet. Lo strumento NuGet consente di gestire pacchetti .NET. Questo comando scarica eventuali dipendenze mancanti per il progetto. Poiché si tratta di un nuovo progetto, non è ancora presente alcuna dipendenza e con la prima esecuzione verrà quindi scaricato .NET Core Framework. Dopo questo passaggio iniziale, sarà sufficiente eseguire `dotnet restore` quando si aggiungono nuovi pacchetti dipendenti o si aggiorna la versione di una delle dipendenze.  
 
 Dopo aver ripristinato i pacchetti, eseguire `dotnet build` per avviare il motore di compilazione e creare l'applicazione. Eseguire infine `dotnet run` per avviare l'applicazione.
 
-<a id="adding-new-dependencies" class="xliff"></a>
-
-## Aggiunta di nuove dipendenze
+## <a name="adding-new-dependencies"></a>Aggiunta di nuove dipendenze
 Uno dei principali obiettivi di progettazione di .NET Core è ridurre al minimo le dimensioni dell'installazione di .NET Framework. Il framework dell'applicazione .NET Core contiene solo gli elementi più comuni di un framework .NET completo. Se per alcune delle funzionalità di un'applicazione sono necessarie altre librerie, è possibile aggiungere tali dipendenze al file di progetto C# (*.csproj). Per questo esempio sarà necessario aggiungere il pacchetto `System.Runtime.Serialization.Json` per consentire all'applicazione di elaborare le risposte JSON.
 
 Aprire il file di progetto `csproj`. La prima riga del file dovrebbe essere simile alla seguente:
@@ -74,9 +64,7 @@ La maggior parte degli editor di codice offre funzioni di completamento per le d
 
 Dopo aver apportato queste modifiche, eseguire nuovamente `dotnet restore` per consentire l'installazione del pacchetto nel sistema.
 
-<a id="making-web-requests" class="xliff"></a>
-
-## Esecuzione di richieste Web
+## <a name="making-web-requests"></a>Esecuzione di richieste Web
 Si è ora pronti per iniziare a recuperare dati dal Web. In questa applicazione si leggeranno informazioni dall'[API GitHub](https://developer.github.com/v3/). In particolare, si leggeranno informazioni sui progetti nell'ambito di [.NET Foundation](http://www.dotnetfoundation.org/). Si inizierà inviando all'API GitHub la richiesta di recuperare informazioni sui progetti. L'endpoint usato sarà: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Poiché si vuole recuperare tutte le informazioni su questi progetti, si userà una richiesta HTTP GET.
 Anche il browser usa richieste HTTP GET ed è quindi possibile incollare l'URL nel browser per visualizzare le informazioni che si riceveranno ed elaboreranno.
 
@@ -142,9 +130,7 @@ Dopo aver configurato l'oggetto @System.Net.Http.HttpClient, si eseguirà una ri
 Le ultime due righe di questo metodo attendono che l'attività sia completata e visualizzano la risposta nella console.
 Compilare l'app ed eseguirla. Il messaggio di avviso non viene più visualizzato perché `ProcessRepositories` contiene ora un operatore `await`. Verrà visualizzata una lunga schermata di testo JSON formattato.   
 
-<a id="processing-the-json-result" class="xliff"></a>
-
-## Elaborazione del risultato JSON
+## <a name="processing-the-json-result"></a>Elaborazione del risultato JSON
 
 A questo punto è stato scritto il codice per recuperare una risposta da un server Web e visualizzare il testo contenuto nella risposta. Si convertirà ora la risposta JSON in oggetti C#.
 
@@ -206,9 +192,7 @@ foreach (var repo in repositories)
 
 Compilare l'applicazione ed eseguirla. Verranno stampati i nomi dei repository che fanno parte di .NET Foundation.
 
-<a id="controlling-serialization" class="xliff"></a>
-
-## Controllo della serializzazione
+## <a name="controlling-serialization"></a>Controllo della serializzazione
 
 Prima di aggiungere altre funzionalità, è necessario indirizzare il tipo `repo` e renderlo conforme ad altre convenzioni C# standard. A questo scopo, è necessario annotare il tipo `repo` con *attributi* che controllano il funzionamento del serializzatore JSON. In questo caso, si useranno questi attributi per definire un mapping tra i nomi di chiavi JSON e i nomi di membri e classi C#. In particolare, verranno usati i due attributi `DataContract` e `DataMember`. Per convenzione, tutte le classi di attributo terminano con il suffisso `Attribute`. Questo suffisso, tuttavia, non deve essere necessariamente usato quando si applica un attributo. 
 
@@ -305,9 +289,7 @@ public static void Main(string[] args)
 
 L'accesso alla proprietà `Result` di un'attività è bloccato fino al completamento dell'attività. In genere, si preferisce attendere il completamento dell'attività con un'espressione `await`, come nel metodo `ProcessRepositories`, ma questa possibilità non è prevista nel metodo `Main`.
 
-<a id="reading-more-information" class="xliff"></a>
-
-## Lettura di altre informazioni
+## <a name="reading-more-information"></a>Lettura di altre informazioni
 
 Per completare l'esercitazione si elaboreranno ora altre proprietà del pacchetto JSON inviato dall'API di GitHub. Non si intende acquisire tutte le informazioni possibili ma, aggiungendo alcune proprietà, sarà possibile illustrare qualche altra funzionalità del linguaggio C#.
 
@@ -384,9 +366,7 @@ Console.WriteLine(repo.LastPush);
 
 La versione dell'app dovrebbe ora corrispondere all'[esempio completo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
  
-<a id="conclusion" class="xliff"></a>
-
-## Conclusione
+## <a name="conclusion"></a>Conclusione
 
 In questa esercitazione sono state descritte le procedure necessarie per eseguire richieste Web, analizzare i risultati e visualizzare le proprietà dei risultati. Sono stati inoltre aggiunti nuovi pacchetti come dipendenze del progetto e sono state illustrate alcune delle funzionalità del linguaggio C# che supportano tecniche orientate agli oggetti.
 

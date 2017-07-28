@@ -1,5 +1,5 @@
 ---
-title: Uso di una libreria di classi con .NET Core in Visual Studio 2017 | Microsoft Docs
+title: Utilizzo di una libreria di classi con .NET Core in Visual Studio 2017
 description: Informazioni su come chiamare i membri di una libreria di classi con Visual Studio 2017.
 keywords: .NET Core, libreria di classi .NET Core, .NET Standard, distribuzione della libreria di classi .NET Standard
 author: BillWagner
@@ -11,16 +11,14 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: d7b94076-1108-4174-94e7-a18f00072bb7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 5ad07e4116c75eb9b9d513c2a4fe43dfe62660d5
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d980ae6c3c2f903dcabf18b26670c18fa9a49f22
 ms.contentlocale: it-it
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="consuming-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
-
-# Utilizzo di una libreria di classi con .NET Core in Visual Studio 2017
+# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Utilizzo di una libreria di classi con .NET Core in Visual Studio 2017
 
 Dopo aver seguito le procedure descritte negli articoli [Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](./library-with-visual-studio.md) e [Test di una libreria di classi con .NET Core in Visual Studio 2017](testing-library-with-visual-studio.md) per compilare e testare la libreria di classi e dopo aver compilato una versione di rilascio della libreria, il passaggio successivo consiste nel rendere tale libreria disponibile ai chiamanti. Questa operazione può essere eseguita in due modi diversi:
 
@@ -28,9 +26,7 @@ Dopo aver seguito le procedure descritte negli articoli [Creazione di una librer
 
 * Se la libreria sarà accessibile a livello generale, è possibile distribuirla come pacchetto NuGet.
 
-<a id="including-a-library-as-a-project-in-a-solution" class="xliff"></a>
-
-## Inclusione di una libreria in una soluzione come progetto
+## <a name="including-a-library-as-a-project-in-a-solution"></a>Inclusione di una libreria in una soluzione come progetto
 
 È possibile includere l'applicazione come parte della soluzione, allo stesso modo in cui sono stati inclusi unit test nella soluzione della libreria di classi. Ad esempio, è possibile usare la libreria di classi in un'applicazione console che chiede all'utente di immettere una stringa e segnala se il primo carattere è in maiuscolo:
 
@@ -66,9 +62,7 @@ Dopo aver seguito le procedure descritte negli articoli [Creazione di una librer
 
 È possibile eseguire il debug e pubblicare l'applicazione che usa questa libreria seguendo i passaggi illustrati in [Debugging your C# Hello World application with Visual Studio 2017](debugging-with-visual-studio.md) (Esecuzione del debug dell'applicazione C# Hello World con Visual Studio 2017) e [Publishing your Hello World Application with Visual Studio 2017](publishing-with-visual-studio.md) (Pubblicazione dell'applicazione Hello World con Visual Studio 2017).
 
-<a id="distributing-the-library-in-a-nuget-package" class="xliff"></a>
-
-## Distribuzione della libreria in un pacchetto NuGet
+## <a name="distributing-the-library-in-a-nuget-package"></a>Distribuzione della libreria in un pacchetto NuGet
 
 Per rendere la libreria di classi disponibile sul Web, è possibile pubblicarla come pacchetto NuGet. Visual Studio non supporta la creazione di pacchetti NuGet. Per creare un pacchetto, usare l'[utilità della riga di comando `dotnet`](../../core/tools/dotnet.md):
 
