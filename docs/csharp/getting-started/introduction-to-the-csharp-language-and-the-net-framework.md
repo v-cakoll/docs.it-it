@@ -1,5 +1,5 @@
 ---
-title: Introduzione al linguaggio C# e a .NET Framework | Microsoft Docs
+title: Introduzione al linguaggio C# e a .NET Framework
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e63a964956e2fbe91573a970c7df3fc29d848c9c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d828e5e1914e73193e6449d4fb6d8fb3f0d0775b
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introduzione al linguaggio C# e a .NET Framework
@@ -64,7 +64,7 @@ C# è un linguaggio elegante, orientato a oggetti e indipendente dai tipi che co
   
  Di seguito sono riportate alcune risorse aggiuntive su C#:  
   
--   Per un'introduzione generale al linguaggio, vedere il capitolo 1 di [Specifiche del linguaggio C#](../../csharp/language-reference/language-specification.md).  
+-   Per un'introduzione generale al linguaggio, vedere il capitolo 1 di [Specifiche del linguaggio C#](../../csharp/language-reference/language-specification/index.md).  
   
 -   Per informazioni dettagliate su aspetti specifici del linguaggio C#, vedere [Riferimenti per C#](../../csharp/language-reference/index.md).  
   
@@ -89,4 +89,5 @@ C# è un linguaggio elegante, orientato a oggetti e indipendente dai tipi che co
   
 ## <a name="see-also"></a>Vedere anche  
  [C#](../../csharp/csharp.md)   
- [Guida introduttiva a Visual C# e Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Guida introduttiva a Visual C# e Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+

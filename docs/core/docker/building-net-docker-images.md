@@ -1,5 +1,5 @@
 ---
-title: Compilazione di immagini Docker per .NET Core | Microsoft Docs
+title: Compilazione di immagini Docker per .NET Core
 description: Informazioni sulle immagini Docker e su .NET Core
 keywords: .NET, .NET Core, Docker
 author: spboyer
@@ -10,24 +10,20 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7f6be5a87923a12eef879b2f5acdafc1347588e3
-ms.openlocfilehash: a8ade58a9ff1f5e68865506d91c200681cec2aeb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b0e227bb932abe68db26f1d05e6170af399d0d39
 ms.contentlocale: it-it
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
  
 
-<a id="building-docker-images-for-net-core-applications" class="xliff"></a>
-
-#Compilazione di immagini Docker per applicazioni .NET Core
+#<a name="building-docker-images-for-net-core-applications"></a>Compilazione di immagini Docker per applicazioni .NET Core
 
 Per comprendere in che modo usare insieme .NET Core e Docker, è necessario prima conoscere le diverse immagini Docker disponibili e i casi in cui è opportuno usarle. Di seguito verranno illustrate in modo dettagliato le variazioni offerte, verrà creata un'API Web ASP.NET Core, verranno usati gli strumenti Yeoman Docker per creare un contenitore sottoponibile a debug e verrà mostrato in che modo è possibile usare Visual Studio Code per l'esecuzione del processo. 
 
-<a id="docker-image-optimizations" class="xliff"></a>
-
-## Ottimizzazioni delle immagini Docker
+## <a name="docker-image-optimizations"></a>Ottimizzazioni delle immagini Docker
 
 Quando si creano immagini Docker per gli sviluppatori, è opportuno concentrare l'attenzione su tre scenari principali:
 
@@ -43,9 +39,7 @@ Durante lo sviluppo, la compilazione e l'esecuzione di applicazioni nei contenit
 
 Anche se sono presenti più versioni dell'immagine .NET Core, tutte queste versioni condividono uno o più layer. La quantità di spazio su disco necessaria per l'archiviazione o per il delta per effettuare il pull dal Registro di sistema è molto minore dell'insieme delle immagini, perché tutte le immagini condividono lo stesso layer di base e potenzialmente altri layer.  
 
-<a id="docker-image-variations" class="xliff"></a>
-
-## Variazioni delle immagini Docker
+## <a name="docker-image-variations"></a>Variazioni delle immagini Docker
 
 Per raggiungere gli obiettivi sopra descritti, in [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) sono disponibili varianti delle immagini.
 
@@ -53,9 +47,7 @@ Per raggiungere gli obiettivi sopra descritti, in [microsoft/dotnet](https://hub
 
 - `microsoft/dotnet:<version>-core` : ovvero **microsoft/dotnet:1.0.0-core**. Questa immagine esegue [applicazioni .NET Core portabili](../deploying/index.md) ed è ottimizzata per l'esecuzione dell'applicazione nella fase di **produzione**. Non contiene l'SDK ed è finalizzata all'acquisizione dell'output ottimizzato di `dotnet publish`. Il runtime portabile è adatto agli scenari Docker di contenitore poiché l'esecuzione di più contenitori trae vantaggio dai layer di immagine condivisi.  
 
-<a id="alternative-images" class="xliff"></a>
-
-## Immagini alternative
+## <a name="alternative-images"></a>Immagini alternative
 
 Oltre agli scenari ottimizzati di sviluppo, compilazione e produzione, Microsoft fornisce immagini aggiuntive:
 
@@ -84,9 +76,7 @@ microsoft/dotnet    latest                  03c10abbd08a        540.4 MB
 microsoft/dotnet    1.0.0-core              b8da4a1fd280        253.2 MB
 ```
 
-<a id="prerequisites" class="xliff"></a>
-
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 Per la compilazione e l'esecuzione è necessario che nel computer siano installati gli elementi seguenti:
 
@@ -105,9 +95,7 @@ npm install -g yo generator-aspnet generator-docker
 > [!NOTE]
 > Questo esempio userà [Visual Studio Code](http://code.visualstudio.com) per l'editor.
 
-<a id="creating-the-web-api-application" class="xliff"></a>
-
-## Creazione dell'applicazione API Web
+## <a name="creating-the-web-api-application"></a>Creazione dell'applicazione API Web
 
 Come punto di riferimento, prima di inserire l'applicazione nei contenitori, eseguirla localmente. 
 
@@ -138,9 +126,7 @@ Testare l'applicazione usando `dotnet run` e i valori disponibili in **http://lo
 
 Usare `Ctrl+C` per arrestare l'applicazione.
 
-<a id="adding-docker-support" class="xliff"></a>
-
-## Aggiunta del supporto per Docker
+## <a name="adding-docker-support"></a>Aggiunta del supporto per Docker
 
 Per aggiungere al progetto il supporto per Docker usare il generatore Yeoman fornito da Microsoft. Questo generatore attualmente supporta progetti .NET Core, Node.js e Go mediante la creazione di un documento Dockerfile e di script che consentono di compilare ed eseguire progetti all'interno dei contenitori. Vengono aggiunti anche specifici file Visual Studio Code (launch.json, tasks.json) per il debug dell'editor e il supporto del riquadro comandi.
 
@@ -189,9 +175,7 @@ Il generatore crea due documenti Dockerfile.
 
 **Dockerfile**: si tratta dell'immagine della versione basata su **microsoft/dotnet:1.0.0-core** e deve essere usata per la produzione. Quando eseguita, questa immagine è pari a circa 253 MB.
 
-<a id="creating-the-docker-images" class="xliff"></a>
-
-### Creazione di immagini Docker
+### <a name="creating-the-docker-images"></a>Creazione di immagini Docker
 Usando lo script `dockerTask.sh` o `dockerTask.ps1` è possibile compilare o comporre l'immagine e il contenitore dell'applicazione **api** per un ambiente specifico. Compilare l'immagine di **debug** eseguendo il comando seguente.
 
 ```bash
@@ -233,9 +217,7 @@ api                 debug                70e89fbc5dbe        1 hour ago        7
 api                 latest               ef17184c8de6        1 hour ago        260.7 MB
 ```
 
-<a id="summary" class="xliff"></a>
-
-## Riepilogo
+## <a name="summary"></a>Riepilogo
 
 L'uso del generatore Docker per aggiungere i file necessari all'applicazione API Web semplifica il processo di creazione delle versioni di sviluppo e produzione delle immagini.  Gli strumenti sono multipiattaforma e forniscono anche uno script PowerShell per ottenere gli stessi risultati riguardo all'integrazione di Windows e Visual Studio Code, con procedure per il debug dell'applicazione all'interno del contenitore. La comprensione delle varianti delle immagini e degli scenari di destinazione consente di ottimizzare i processi di sviluppo a ciclo interno, ottenendo al tempo stesso immagini ottimizzate per le distribuzioni di produzione.  
 

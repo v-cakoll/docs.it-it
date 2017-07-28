@@ -1,5 +1,5 @@
 ---
-title: Introduzione a C# | Microsoft Docs
+title: Introduzione a C#
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 4dd406d40bd6f3dc12db19087be80c13644419d7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 14022b0272d5ad356c76bf0153f6ea5dfda91994
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="getting-started-with-c"></a>Introduzione a C#
@@ -47,7 +47,7 @@ I seguenti argomenti consentono di iniziare lo sviluppo di applicazioni con C#. 
  Vengono forniti i collegamenti a siti Web e newsgroup in cui trovare le risposte ai problemi più comuni.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Using the Visual Studio Development Environment for C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp) (Uso dell'ambiente di sviluppo di Visual Studio per C#)  
+ [Using the Visual Studio Development Environment for C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp) (Uso dell'ambiente di sviluppo di Visual Studio per C#)  
  Fornisce una Guida all'utilizzo dell'ambiente di sviluppo integrato [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Guida per programmatori C#](../../csharp/programming-guide/index.md)  
@@ -56,12 +56,13 @@ I seguenti argomenti consentono di iniziare lo sviluppo di applicazioni con C#. 
  [Riferimenti per C#](../../csharp/language-reference/index.md)  
  Fornisce informazioni di riferimento dettagliate su parole chiave, operatori, direttive del preprocessore, opzioni del compilatore ed errori e avvisi del compilatore in C#.  
   
- [Esempi di Visual Studio](https://docs.microsoft.com/visualstudio/ide/visual-studio-samples)  
+ [Esempi di Visual Studio](/visualstudio/ide/visual-studio-samples)  
  Vengono fornite informazioni su come accedere agli esempi online.  
   
  [Procedure dettagliate](../../csharp/walkthroughs.md)  
  Vengono forniti collegamenti alle procedure dettagliate di programmazione che usano C# e a una breve descrizione di ciascuna procedura dettagliata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida introduttiva a Visual C# e Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Guida introduttiva a Visual C# e Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
  [Beginner Developer Learning Center](http://go.microsoft.com/fwlink/?LinkId=123826)
+

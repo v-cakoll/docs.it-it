@@ -1,6 +1,6 @@
 ---
-title: Esecuzione di unit test selettivi | Microsoft Docs
-description: Illustra come utilizzare un&quot;espressione di filtro per eseguire unit test selettivi con il comando dotnet test.
+title: Esecuzione di unit test selettivi
+description: Illustra come utilizzare un'espressione di filtro per eseguire unit test selettivi con il comando dotnet test.
 keywords: .NET, .NET Core, unit test, test selettivo
 author: smadala
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13d01272-bbf8-456c-a97a-560001d1a7f2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
-ms.openlocfilehash: aceb0dc92b6c355a2b36a541d59cf1cd3cf4d0d4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: af832d04d2cba530a93710a90701ab119a66deef
 ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -107,5 +107,5 @@ Nell'esempio di codice, i tratti definiti con le chiavi `Category` e `Priority` 
 | ---------- | ------ |
 | <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | Esegue i test che hanno `TestClass1` in `FullyQualifiedName` **o la cui**  `Category` è `Nightly`. |
 | `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"` | Esegue i test che hanno `TestClass1` in `FullyQualifiedName` **e la cui**  `Category` è `Nightly`. |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | Esegue i test che hanno `FullyQualifiedName` contenente `TestClass1` **e la cui**  `Category` è `CategoryA` **o la cui ** `Priority` è 1. |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | Esegue i test che hanno `FullyQualifiedName` contenente `TestClass1` **e la cui**  `Category` è `CategoryA` **o la cui**  `Priority` è 1. |
 
