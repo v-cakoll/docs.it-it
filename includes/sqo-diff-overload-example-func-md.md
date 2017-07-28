@@ -1,0 +1,2 @@
+> [!NOTE]
+>  In questo esempio di codice viene usato un overload di questo metodo diverso da quello specifico descritto in questo argomento. Per estendere l'esempio a questo argomento, modificare il corpo della funzione `selector`.

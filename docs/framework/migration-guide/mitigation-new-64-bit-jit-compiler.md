@@ -1,5 +1,5 @@
 ---
-title: 'Mitigazione: Nuovo compilatore JIT a 64 bit | Documenti di Microsoft'
+title: 'Mitigazione: Nuovo compilatore JIT a 64 bit'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,19 +19,17 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 407b31c8b5825093d9ba6bab6329aaf8dd821572
-ms.openlocfilehash: f5bab95cc5a4ff49a0ff81e209f0a71c78914976
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b67c622531321e5cd1efa7db657d62d94c0f73e4
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# Mitigazione: Nuovo compilatore JIT a 64 bit
-<a id="mitigation-new-64-bit-jit-compiler" class="xliff"></a>
+# <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigazione: Nuovo compilatore JIT a 64 bit
 A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 64 bit per la compilazione JIT. Questa modifica non riguarda il compilatore JIT a 32 bit.  
   
-## Comportamento imprevisto o eccezioni
-<a id="unexpected-behavior-or-exceptions" class="xliff"></a>  
+## <a name="unexpected-behavior-or-exceptions"></a>Comportamento imprevisto o eccezioni  
  In alcuni casi, la compilazione con il nuovo compilatore JIT a 64 bit comporta un'eccezione di runtime o un comportamento che non viene osservato durante l'esecuzione di codice compilato dal compilatore JIT a 64 bit precedente. Le differenze note includono quanto segue:  
   
 > [!IMPORTANT]
@@ -52,8 +50,7 @@ A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 6
 -   In determinate condizioni, se un'istruzione `if` viene usata per testare una condizione prima di immettere un blocco `try` e in uscita dal blocco `try`, e la stessa condizione viene valutata nel blocco `catch` o `finally`, il nuovo compilatore JIT a 64 bit rimuove la condizione `if` dal blocco `catch` o `finally` quando ottimizza il codice. Di conseguenza, il codice contenuto nell'istruzione `if` nel blocco `catch` o `finally` viene eseguita in modo non condizionale.  
   
 <a name="General"></a>   
-## Mitigazione dei problemi noti
-<a id="mitigation-of-known-issues" class="xliff"></a>  
+## <a name="mitigation-of-known-issues"></a>Mitigazione dei problemi noti  
  Se si verificano i problemi elencati in precedenza, è possibile risolverli effettuando una delle operazioni seguenti:  
   
 -   Eseguire l'aggiornamento a .NET Framework 4.6.2. Il nuovo compilatore a 64 bit incluso in .NET Framework 4.6.2 risolve tutti questi problemi noti.  
@@ -63,8 +60,7 @@ A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 6
 -   Eseguire la compilazione con la versione precedente del compilatore JIT a 64 bit. Vedere la sezione [Mitigazione di altri problemi](#Other) per altre informazioni su come eseguire questa operazione.  
   
 <a name="Other"></a>   
-## Mitigazione di altri problemi
-<a id="mitigation-of-other-issues" class="xliff"></a>  
+## <a name="mitigation-of-other-issues"></a>Mitigazione di altri problemi  
  Nel caso di qualsiasi altra differenza nel comportamento tra il codice compilato con la versione precedente del compilatore a 64 bit e quello compilato con la versione nuova, oppure tra le versioni di debug e rilascio dell'app compilate entrambe con il nuovo compilatore JIT a 64 bit, è possibile eseguire le operazioni seguenti per compilare l'app con la versione precedente del compilatore JIT a 64 bit:  
   
 -   In base all'applicazione, è possibile aggiungere l'elemento [\<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) al file di configurazione dell'applicazione. Le operazioni seguenti consentono di disattivare la compilazione con il nuovo compilatore JIT a 64 bit e usare invece il compilatore JIT a 64 bit legacy.  
@@ -84,8 +80,7 @@ A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 6
   
  È possibile inoltre inviare i dettagli sul problema segnalando un bug in [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Modifiche al runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
  [\<useLegacyJit> Element](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) (Elemento useLegacyJit>)
 

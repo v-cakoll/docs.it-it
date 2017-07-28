@@ -1,0 +1,1 @@
+identificatore univoco globale (GUID)

@@ -1,5 +1,5 @@
 ---
-title: Applicazioni a 64 bit | Microsoft Docs
+title: Applicazioni a 64 bit
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 53
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 987c7063c5e6dce10233761b6e37ed102d5878a9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9930b44e8ab711f319140e43ad0a36d5d78a7ffb
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="64-bit-applications"></a>Applicazioni a 64 bit
@@ -74,3 +74,4 @@ Quando si compila un'applicazione, è possibile specificare che deve essere eseg
  Per determinare se un file EXE o un file DLL deve essere eseguito solo su una piattaforma specifica o in WOW64, usare [CorFlags.exe (strumento di conversione CorFlags)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) senza opzioni. È anche possibile usare CorFlags.exe per modificare lo stato della piattaforma di un file EXE o di un file DLL. Il numero di versione del runtime principale dell'intestazione CLR di un assembly di Visual Studio è impostato su 2, mentre quello secondario è impostato su 5. Le applicazioni con la versione di runtime secondaria impostata su 0 sono considerate applicazioni legacy e vengono sempre eseguite in WOW64.  
   
  Per eseguire query a livello di codice di un file EXE o DLL per determinare se deve essere eseguito solo su una piattaforma specifica o in WOW64, usare il metodo <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName>.
+

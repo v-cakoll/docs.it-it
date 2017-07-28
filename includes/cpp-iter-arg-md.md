@@ -1,0 +1,1 @@
+Tipo di un elemento nella sequenza controllata.

@@ -1,0 +1,1 @@
+Per altre informazioni, vedere la [specifica del linguaggio C#](~/docs/csharp/language-reference/language-specification/index.md). La specifica del linguaggio costituisce il riferimento ufficiale principale per la sintassi e l'uso di C#.

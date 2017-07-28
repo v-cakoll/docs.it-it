@@ -1,5 +1,5 @@
 ---
-title: Migrazione da .NET Framework 1.1 | Documenti di Microsoft
+title: Migrazione da .NET Framework 1.1
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6a9df183b13a84f8ded047892c0e4b7f7d5f0d60
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5757894a63ed556413147b8ef8c85c2d31ef11a5
 ms.contentlocale: it-it
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migrazione da .NET Framework 1.1
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/18/2017
   
 -   Modifiche ai documenti relative alle[Modifiche in .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkID=186989) tra [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] e [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].  
   
--   Modifiche ai documenti relativi ai[Problemi di migrazione di .NET Framework 4](http://msdn.microsoft.com/library/ee941656\(v=vs.100\).aspx) tra [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] e [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+-   Modifiche ai documenti relativi ai[Problemi di migrazione di .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) tra [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] e [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
 ## <a name="obsolete-types-and-members"></a>Tipi e membri obsoleti  
  L'impatto di tipi e membri deprecati è piuttosto diverso per le applicazioni reindirizzate e quelle ricompilate. L'utilizzo di tipi e membri obsoleti non influirà su un'applicazione reindirizzata a meno che il tipo o il membro obsoleto non siano stati fisicamente rimossi dall'assembly. La ricompilazione di un'applicazione che usa tipi o membri obsoleti di solito produce un avviso del compilatore piuttosto che un errore del compilatore. Tuttavia, in alcuni casi, produce un errore del compilatore e il codice che usa il tipo o il membro obsoleto non esegue correttamente la compilazione. In questo caso, è necessario riscrivere il codice sorgente che chiama il tipo o il membro obsoleto prima di ricompilare l'applicazione. Per altre informazioni sui tipi e sui membri obsoleti, vedere [Elementi obsoleti nella libreria di classi](../../../docs/framework/whats-new/whats-obsolete.md).  
