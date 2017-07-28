@@ -1,5 +1,5 @@
 ---
-title: Interfacce (Visual Basic) | Microsoft Docs
+title: Interfacce (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,16 +33,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: a95f3cfc8213c6a34953ae3ce87c6f5da9c0f8ca
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1da2458f39886a5d5f0bbf17fd9e63550ed80adf
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="interfaces-visual-basic" class="xliff"></a>
-
-# Interfacce (Visual Basic)
+# <a name="interfaces-visual-basic"></a>Interfacce (Visual Basic)
 Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi possono implementare. Le interfacce consentono di definire funzionalità come piccoli gruppi di proprietà, metodi ed eventi strettamente correlati fra loro. In questo modo si riducono i problemi di compatibilità, grazie alla possibilità di sviluppare implementazioni migliorate per le interfacce senza compromettere il codice esistente. È possibile aggiungere nuove funzionalità in qualsiasi momento, sviluppando interfacce e implementazioni aggiuntive.  
   
  Le interfacce offrono anche altri vantaggi rispetto all'ereditarietà di classe:  
@@ -55,9 +53,7 @@ Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi p
   
 -   Sono utili quando non è possibile usare l'ereditarietà di classe. Le strutture, ad esempio, non possono ereditare dalle classi, ma possono implementare interfacce.  
   
-<a id="declaring-interfaces" class="xliff"></a>
-
-## Dichiarazione di interfacce  
+## <a name="declaring-interfaces"></a>Dichiarazione di interfacce  
  Le definizioni di interfaccia sono racchiuse tra istruzioni `Interface` e `End Interface`. Subito dopo l'istruzione `Interface` è possibile aggiungere un'istruzione `Inherits` facoltativa in cui sono elencate una o più interfacce ereditate. Le istruzioni `Inherits` devono precedere qualsiasi altra istruzione della dichiarazione, ad eccezione dei commenti. Le restanti istruzioni della definizione di interfaccia dovrebbero essere istruzioni `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure` e `Enum`. Le interfacce non possono contenere codice di implementazione o istruzioni ad esso associate, come `End Sub` o `End Property`.  
   
  Per impostazione predefinita, in uno spazio dei nomi le istruzioni di interfaccia sono `Friend`, ma possono anche essere dichiarate in modo esplicito come `Public` o `Friend`. Per impostazione predefinita, le interfacce definite all'interno di classi, moduli, interfacce e strutture sono `Public`, ma possono anche essere dichiarate in modo esplicito come `Public`, `Friend`, `Protected` o `Private`.  
@@ -69,19 +65,13 @@ Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi p
   
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
-<a id="implementing-interfaces" class="xliff"></a>
-
-## Implementazione di interfacce  
+## <a name="implementing-interfaces"></a>Implementazione di interfacce  
  La parola riservata `Implements` di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] viene usata in due modi. L'istruzione `Implements` indica che una classe o una struttura implementa un'interfaccia. La parola chiave `Implements` indica che un membro di classe o di struttura implementa un membro di interfaccia specifico.  
   
-<a id="implements-statement" class="xliff"></a>
-
-### Istruzione Implements  
+### <a name="implements-statement"></a>Istruzione Implements  
  Se una classe o una struttura implementa una o più interfacce, deve includere l'istruzione `Implements` immediatamente dopo l'istruzione `Class` o `Structure`. L'istruzione `Implements` richiede un elenco separato da virgole di interfacce implementate da una classe. La classe o la struttura deve implementare tutti i membri di interfaccia mediante la parola chiave `Implements`.  
   
-<a id="implements-keyword" class="xliff"></a>
-
-### Parola chiave Implements  
+### <a name="implements-keyword"></a>Parola chiave Implements  
  La parola chiave `Implements` richiede un elenco separato da virgole di membri di interfaccia da implementare. In genere viene specificato un solo membro di interfaccia, anche se è possibile specificarne diversi. La specifica di un membro di interfaccia è composta dal nome dell'interfaccia, che è necessario includere in un'istruzione Implements all'interno della classe, seguito da un punto, quindi dal nome della funzione, della proprietà o dell'evento da implementare. Il nome di un membro che implementa un membro di interfaccia può usare qualsiasi identificatore valido e non è limitato alla convenzione `InterfaceName_MethodName` usata nelle versioni precedenti di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  Il codice seguente, ad esempio, illustra come dichiarare una subroutine denominata `Sub1` che implementa un metodo di un'interfaccia:  
@@ -98,9 +88,7 @@ Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi p
   
  Per implementare un membro di interfaccia, è possibile usare un membro privato. Quando un membro privato implementa un membro di un'interfaccia, diventa disponibile tramite l'interfaccia anche se non è disponibile direttamente sulle variabili oggetto della classe.  
   
-<a id="interface-implementation-examples" class="xliff"></a>
-
-### Esempi di implementazione dell'interfaccia  
+### <a name="interface-implementation-examples"></a>Esempi di implementazione dell'interfaccia  
  È necessario che le classi che implementano un'interfaccia ne implementino tutte le proprietà, i metodi e gli eventi.  
   
  L'esempio seguente definisce due interfacce. La seconda interfaccia, `Interface2`, eredita `Interface1` e definisce una proprietà e un metodo aggiuntivi.  
@@ -117,11 +105,10 @@ Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi p
   
  È possibile implementare una proprietà ReadOnly usando una proprietà ReadWrite (in altri termini, non è necessario dichiararla ReadOnly nella classe di implementazione).  L'implementazione di un'interfaccia consente di implementare almeno i membri dichiarati dall'interfaccia, ma è possibile offrire maggiori funzionalità, ad esempio rendendo la proprietà accessibile in scrittura.  
   
-<a id="related-topics" class="xliff"></a>
-
-## Argomenti correlati  
+## <a name="related-topics"></a>Argomenti correlati  
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Procedura dettagliata: Creazione e implementazione di interfacce](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Fornisce una procedura dettagliata che illustra il processo di definizione e implementazione di interfacce personalizzate.|  
 |[Varianza nelle interfacce generiche](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)|Illustra la covarianza e la controvarianza nelle interfacce generiche e fornisce un elenco di interfacce generiche variant in .NET Framework.|
+

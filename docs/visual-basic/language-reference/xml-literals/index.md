@@ -1,5 +1,5 @@
 ---
-title: Valori letterali XML (Visual Basic) | Microsoft Docs
+title: Valori letterali XML (Visual Basic)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.reviewer: 
@@ -34,21 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 7398d02ddd73576fb502a10559891127307b96c0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9182402167c64d6683670ae240cd0dd58ee9d1ef
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="xml-literals-visual-basic" class="xliff"></a>
-
-# Valori letterali XML (Visual Basic)
+# <a name="xml-literals-visual-basic"></a>Valori letterali XML (Visual Basic)
 Gli argomenti di questa sezione descrivono la sintassi dei valori letterali XML in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. La sintassi dei valori letterali XML consente di incorporare XML direttamente nel codice.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Contenuto della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Descrizione|  
 |-----------|-----------------|  
@@ -58,7 +54,6 @@ Gli argomenti di questa sezione descrivono la sintassi dei valori letterali XML 
 |[Valore letterale di commento XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|Descrive la sintassi per i valori letterali che rappresentano oggetti <xref:System.Xml.Linq.XComment>.|  
 |[Valore letterale istruzione di elaborazione XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|Descrive la sintassi per i valori letterali che rappresentano oggetti <xref:System.Xml.Linq.XProcessingInstruction>.|  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+

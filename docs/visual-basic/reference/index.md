@@ -1,5 +1,5 @@
 ---
-title: Riferimenti (Visual Basic) | Microsoft Docs
+title: Riferimenti (Visual Basic)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: c730caa8b3beaa3e26e63b324a5394a4a0c46d64
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c341ec68a12019814d0185cab9b89ad5928d171
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-visual-basic"></a>Riferimenti (Visual Basic)
@@ -48,7 +48,7 @@ Questo argomento include informazioni di riferimento su diversi aspetti della pr
  [Informazioni di riferimento su .NET Framework](../../visual-basic/reference/net-framework-reference-information.md)  
  Fornisce collegamenti a informazioni sull'uso della libreria di classi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
- [Specifica del linguaggio Visual Basic](../../visual-basic/reference/language-specification.md)  
+ [Specifica del linguaggio Visual Basic](../../visual-basic/reference/language-specification/index.md)  
  Fornisce collegamenti alla specifica completa del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], che contiene informazioni dettagliate su tutti gli aspetti del linguaggio stesso.  
   
 ## <a name="reference"></a>Riferimento  
@@ -59,11 +59,12 @@ Questo argomento include informazioni di riferimento su diversi aspetti della pr
  Questo spazio dei nomi fornisce un componente che consente di stampare un facsimile di un form così come visualizzato sullo schermo.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Elementi generali dell'interfaccia utente (Visual Studio)](https://docs.microsoft.com/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
+ [Elementi generali dell'interfaccia utente (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
  Contiene argomenti relativi alle finestre di dialogo e alle finestre usate in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [Strumenti XML in Visual Studio](https://docs.microsoft.com/visualstudio/xml-tools/xml-tools-in-visual-studio)  
+ [Strumenti XML in Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Fornisce collegamenti ad argomenti sui vari strumenti XML disponibili in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [Automation and Extensibility Reference](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf) (Riferimenti su automazione ed estendibilità)  
  Fornisce collegamenti ad argomenti sull'automazione e l'estendibilità in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], sia per i componenti condivisi che per quelli specifici del linguaggio.
+

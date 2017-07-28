@@ -1,5 +1,5 @@
 ---
-title: Riferimenti per C# | Microsoft Docs
+title: Riferimenti per C#
 ms.date: 2017-02-14
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
-ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4a988a8a2c5999351061254da2b7877bdffd8a32
 ms.contentlocale: it-it
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-reference"></a>Riferimenti per C#
@@ -61,7 +61,7 @@ Questa sezione offre informazioni di riferimento su parole chiave, operatori, ca
  [Errori del compilatore C#](../../csharp/language-reference/compiler-messages/index.md)  
  Include frammenti di codice che illustrano la causa e la correzione per gli errori del compilatore e gli avvisi di C#.  
   
- [Specifiche del linguaggio C#](../../csharp/language-reference/language-specification.md)  
+ [Specifiche del linguaggio C#](../../csharp/language-reference/language-specification/index.md)  
  Fornisce i puntatori alla versione più recente della specifica del linguaggio C# in formato Microsoft Word.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
@@ -75,7 +75,7 @@ Questa sezione offre informazioni di riferimento su parole chiave, operatori, ca
  [C#](../../csharp/csharp.md)  
  Fornisce un portale per la documentazione di Visual C#.  
   
- [Using the Visual Studio Development Environment for C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp) (Uso dell'ambiente di sviluppo di Visual Studio per C#)  
+ [Using the Visual Studio Development Environment for C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp) (Uso dell'ambiente di sviluppo di Visual Studio per C#)  
  Fornisce i collegamenti ad argomenti relativi a concetti e attività che descrivono IDE e l'editor.  
   
  [Guida per programmatori C#](../../csharp/programming-guide/index.md)  

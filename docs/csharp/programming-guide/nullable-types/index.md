@@ -1,5 +1,5 @@
 ---
-title: Tipi nullable (Guida per programmatori C#) | Microsoft Docs
+title: Tipi nullable (Guida per programmatori C#)
 ms.date: 2017-05-15
 ms.prod: .net
 ms.technology:
@@ -29,25 +29,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fd5f6cccdc5c91eb435ba024c9c37351febc952a
-ms.openlocfilehash: 2d13fdbef24ee16855261a3c1e26d7fca4f986f2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 909c90da69d85512399eacd16e1ba6db7aad2291
 ms.contentlocale: it-it
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="nullable-types-c-programming-guide" class="xliff"></a>
-
-# Tipi nullable (Guida per programmatori C#)
+# <a name="nullable-types-c-programming-guide"></a>Tipi nullable (Guida per programmatori C#)
 I tipi nullable sono istanze dello struct <xref:System.Nullable%601?displayProperty=fullName>. Un tipo nullable può rappresentare l'intervallo di valori corretto del tipo valore sottostante, più un valore `null` aggiuntivo. Ad esempio, a un tipo `Nullable<Int32>`, detto anche "Nullable of Int32", può essere assegnato qualsiasi valore compreso tra -2147483648 e 2147483647. In alternativa, può essere assegnato il valore `null`. A un tipo `Nullable<bool>` può essere assegnato il valore [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) o [null](../../../csharp/language-reference/keywords/null.md). La possibilità di assegnare il valore `null` a tipi numerici e booleani è particolarmente utile quando si gestiscono database e altri tipi di dati contenenti elementi a cui non è possibile assegnare un valore. Ad esempio, un campo booleano di un database può archiviare i valori `true` o `false` oppure può essere non definito. 
   
 [!code-cs[tipi nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
 Per altri esempi, vedere [Uso dei tipi nullable](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
   
-<a id="nullable-types-overview" class="xliff"></a>
-
-## Panoramica dei tipi nullable  
+## <a name="nullable-types-overview"></a>Panoramica dei tipi nullable  
  I tipi nullable hanno le caratteristiche seguenti:  
   
 -   I tipi nullable rappresentano variabili di tipo valore a cui può essere assegnato il valore `null`. Non è possibile creare un tipi nullable sulla base di un tipo riferimento. I tipi riferimento supportano già il valore `null`.  
@@ -72,9 +68,7 @@ Per altri esempi, vedere [Uso dei tipi nullable](../../../csharp/programming-gui
   
 -   I tipi nullable nidificati non sono consentiti. La riga seguente non verrà compilata: `Nullable<Nullable<int>> n;`  
   
-<a id="related-sections" class="xliff"></a>
-
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  Per ulteriori informazioni:  
   
 -   [Uso dei tipi nullable](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)  
@@ -83,14 +77,10 @@ Per altri esempi, vedere [Uso dei tipi nullable](../../../csharp/programming-gui
   
 -   [?? (operatore)](../../../csharp/language-reference/operators/null-conditional-operator.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Nullable>   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [C#](../../../csharp/csharp.md)   

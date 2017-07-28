@@ -1,5 +1,5 @@
 ---
-title: Errori del compilatore C# | Microsoft Docs
+title: Errori del compilatore C#
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,31 +30,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1570586c0bb6084fe9dfdfb15640c20c422492dd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f474528cd2833fd55435d9880d4a1d0d63846aa0
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-compiler-errors"></a>Errori del compilatore C#
 Per alcuni errori del compilatore C# sono disponibili articoli corrispondenti che spiegano il motivo per cui è stato generato l'errore e, in alcuni casi, spiegano come correggerlo. Per sapere se sono disponibili informazioni relative a un particolare messaggio di errore, seguire una di queste procedure.  
   
--   Individuare il numero dell'errore (ad esempio CS0029) nella [finestra di output](https://docs.microsoft.com/visualstudio/ide/reference/output-window), quindi cercare in MSDN.  
+-   Individuare il numero dell'errore (ad esempio CS0029) nella [finestra di output](/visualstudio/ide/reference/output-window), quindi cercare in MSDN.  
   
--   Scegliere il numero di errore (ad esempio CS0029) nella [finestra di output](https://docs.microsoft.com/visualstudio/ide/reference/output-window), quindi premere F1.  
+-   Scegliere il numero di errore (ad esempio CS0029) nella [finestra di output](/visualstudio/ide/reference/output-window), quindi premere F1.  
   
 -   Nell'indice immettere il numero di errore nella casella **Cerca**.  
   
  Se con nessuno di questi passaggi vengono reperite informazioni sull'errore, andare alla fine della pagina e inviare un commento inserendo il numero o il testo dell'errore.  
   
- Per informazioni su come configurare le opzioni relative agli errori e agli avvisi in C#, vedere [Pagina Compilazione, Progettazione progetti (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp).  
+ Per informazioni su come configurare le opzioni relative agli errori e agli avvisi in C#, vedere [Pagina Compilazione, Progettazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
  [Spiacenti, non abbiamo informazioni specifiche sull'errore C#](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)   
- [Build Page, Project Designer (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)  (Pagina Compilazione, Progettazione progetti (C#))  
+ [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)  (Pagina Compilazione, Progettazione progetti (C#))  
  [/warn (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)   
  [/nowarn (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)
+

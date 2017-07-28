@@ -1,5 +1,5 @@
 ---
-title: Parole chiave (Visual Basic) | Microsoft Docs
+title: Parole chiave (Visual Basic)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -35,21 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5474dd8cf57253a7783a272638081b0439483306
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6997ab8d05e2061a0f42ab86d6a7d7fb74b634fe
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="keywords-visual-basic" class="xliff"></a>
-
-# Parole chiave (Visual Basic)
+# <a name="keywords-visual-basic"></a>Parole chiave (Visual Basic)
 Le tabelle seguenti elencano tutte le parole chiave del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="reserved-keywords" class="xliff"></a>
-
-## Parole chiave riservate  
+## <a name="reserved-keywords"></a>Parole chiave riservate  
  Le parole chiave seguenti sono *riservate*, ovvero non possono essere usate come nomi di elementi di programmazione, ad esempio variabili o procedure. È possibile ignorare questa restrizione racchiudendo il nome tra parentesi quadre (`[``]`). Per altre informazioni, vedere "Escaped Names" (Nomi con caratteri di escape) in [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Nomi di elementi dichiarati).  
   
 > [!NOTE]
@@ -108,9 +104,7 @@ Le tabelle seguenti elencano tutte le parole chiave del linguaggio [!INCLUDE[vbp
 > [!NOTE]
 >  `EndIf`, `GoSub`, `Variant` e `Wend` vengono mantenute come parole chiave riservate anche se non sono più usate in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Il significato della parola chiave `Let` è stato modificato. `Let` viene ora usata nelle query LINQ. Per altre informazioni, vedere [Clausola let](../../../visual-basic/language-reference/queries/let-clause.md).  
   
-<a id="unreserved-keywords" class="xliff"></a>
-
-## Parole chiave non riservate  
+## <a name="unreserved-keywords"></a>Parole chiave non riservate  
  Le parole chiave seguenti non sono riservate, ovvero possono essere usate come nomi degli elementi di programmazione. Si consiglia tuttavia di non eseguire questa operazione poiché potrebbe rendere il codice di difficile lettura e causare errori difficili da rilevare.  
   
 |||||  
@@ -126,9 +120,7 @@ Le tabelle seguenti elencano tutte le parole chiave del linguaggio [!INCLUDE[vbp
 |[Until](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Where](../../../visual-basic/language-reference/queries/where-clause.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)|[#ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md)|  
 |[#Region](../../../visual-basic/language-reference/directives/region-directive.md)||||  
   
-<a id="related-topics" class="xliff"></a>
-
-## Argomenti correlati  
+## <a name="related-topics"></a>Argomenti correlati  
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
@@ -151,8 +143,6 @@ Le tabelle seguenti elencano tutte le parole chiave del linguaggio [!INCLUDE[vbp
 |[Riepilogo del Registro di sistema](../../../visual-basic/language-reference/keywords/registry-summary.md)|Elenca le funzioni usate per leggere, salvare ed eliminare le impostazioni del programma.|  
 |[Riepilogo della modifica delle stringhe](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Elenca le funzioni usate per modificare le stringhe.|  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Membri della libreria di runtime di Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 

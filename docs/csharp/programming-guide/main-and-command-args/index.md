@@ -1,5 +1,5 @@
 ---
-title: Main() e argomenti della riga di comando (Guida per programmatori C#) | Microsoft Docs
+title: Main() e argomenti della riga di comando (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,25 +35,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: eb1d380ee4dfd64081d8fe36880a06e3a450f639
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1b2950f7718cda66b545935229a64850449850d0
 ms.contentlocale: it-it
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="main-and-command-line-arguments-c-programming-guide" class="xliff"></a>
-
-# Main() e argomenti della riga di comando (Guida per programmatori C#)
+# <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() e argomenti della riga di comando (Guida per programmatori C#)
 Il metodo `Main` costituisce il punto di ingresso di un'applicazione console C# o di un'applicazione Windows. Le librerie e i servizi non richiedono un metodo `Main` come punto di ingresso. All'avvio dell'applicazione, `Main` è il primo metodo richiamato.  
   
  In un programma C# può essere presente un solo punto di ingresso. Se sono presenti più classi con un metodo `Main`, è necessario compilare il programma con l'opzione del compilatore **/main** per specificare quale metodo `Main` deve essere usato come punto di ingresso. Per altre informazioni, vedere [/main (Opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).  
   
  [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]  
   
-<a id="overview" class="xliff"></a>
-
-## Panoramica  
+## <a name="overview"></a>Panoramica  
   
 -   Il metodo `Main` è il punto di ingresso di un programma con estensione exe, ovvero il punto in cui il controllo del programma inizia e termina.  
   
@@ -63,9 +59,7 @@ Il metodo `Main` costituisce il punto di ingresso di un'applicazione console C# 
   
 -   Il metodo `Main` può essere dichiarato con o senza un parametro `string[]` contenente argomenti della riga di comando. Quando si usa [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] per creare applicazioni Windows Form, è possibile aggiungere il parametro manualmente o usare la classe <xref:System.Environment> per ottenere gli argomenti della riga di comando. I parametri vengono letti come argomenti della riga di comando a indice zero. A differenza di quanto avviene in C e C++, il nome del programma non viene considerato il primo argomento della riga di comando.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Contenuto della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
   
@@ -75,16 +69,13 @@ Il metodo `Main` costituisce il punto di ingresso di un'applicazione console C# 
   
 -   [Valori restituiti da Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Compilazione dalla riga di comando con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Contenuto di un programma C#](../../../csharp/programming-guide/inside-a-program/index.md)   
  [\<Applicazioni di esempio di C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+
