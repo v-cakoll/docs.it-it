@@ -1,5 +1,5 @@
 ---
-title: Risorse aggiuntive per i programmatori Visual Basic | Microsoft Docs
+title: Risorse aggiuntive per i programmatori Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,11 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 692e0a53391556c6327e493d3d45e811db4cfdb7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ebc788f629e011dff88c1db119ce25a3829e009
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="additional-resources-for-visual-basic-programmers"></a>Risorse aggiuntive per i programmatori Visual Basic
@@ -70,11 +70,11 @@ Nei siti Web seguenti è disponibile materiale sussidiario per trovare la soluzi
   
 |Termine|Definizione|  
 |----------|----------------|  
-|[Linguaggio Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)|Vengono illustrati il compilatore e la sintassi del linguaggio [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].|  
-|[Interoperabilità e aggiornamento di Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)|Vengono illustrati l'aggiornamento a [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] e l'uso delle funzionalità di interoperabilità.|  
-|[IDE di Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)|Viene illustrato l'uso dell'ambiente di sviluppo integrato di [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].|  
+|[Linguaggio Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)|Vengono illustrati il compilatore e la sintassi del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].|  
+|[Interoperabilità e aggiornamento di Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)|Vengono illustrati l'aggiornamento a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e l'uso delle funzionalità di interoperabilità.|  
+|[IDE di Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)|Viene illustrato l'uso dell'ambiente di sviluppo integrato di [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].|  
 |[Power pack di Visual Basic](http://social.msdn.microsoft.com/Forums/vbpowerpacks/threads)|Vengono illustrati i componenti aggiuntivi, i controlli, i componenti, gli esempi e gli strumenti inclusi nei Visual Basic Power Pack.|  
-|[Informazioni generali su Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)|Vengono illustrati i problemi relativi a [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] di cui non si parla negli altri forum.|  
+|[Informazioni generali su Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)|Vengono illustrati i problemi relativi a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] di cui non si parla negli altri forum.|  
   
 ### <a name="chats-and-discussion-groups"></a>Chat, forum e gruppi di discussione  
   
@@ -103,8 +103,9 @@ Nei siti Web seguenti è disponibile materiale sussidiario per trovare la soluzi
 |Termine|Definizione|  
 |----------|----------------|  
 |[Area di Visual Basic DevX](http://go.microsoft.com/fwlink/?LinkId=145978)|Vengono forniti articoli tecnici approfonditi per gli sviluppatori Visual Basic.|  
-|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|È possibile accedere a un forum di discussione sulle nuove funzionalità di [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] nei forum DevX.|  
+|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|È possibile accedere a un forum di discussione sulle nuove funzionalità di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nei forum DevX.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Introduzione](../../visual-basic/getting-started/index.md)   
- [Comunicazioni con Microsoft](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [Comunicazioni con Microsoft](/visualstudio/ide/talk-to-us)
+

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Generare eventi della classe base in classi derivate (Guida per programmatori C#) | Microsoft Docs'
+title: 'Procedura: generare eventi della classe base in classi derivate (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,14 +27,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4f3990959bb62676562dc21e1e5eabfb8ead20d5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 13501f51a1e99eb6fb792a1c6abe5c7029cc020a
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>Procedura: generare eventi della classe base in classi derivate (Guida per programmatori C#)
-L'esempio seguente illustra il metodo standard di dichiarazione degli eventi in una classe base in modo che possano essere generati anche dalle classi derivate. Questo modello è usato spesso nelle classi Windows Forms nella libreria di classi [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+L'esempio seguente illustra il metodo standard di dichiarazione degli eventi in una classe base in modo che possano essere generati anche dalle classi derivate. Questo modello è usato spesso nelle classi Windows Forms nella libreria di classi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
  Quando si crea una classe che può essere usata come classe base di altre classi, è necessario tenere presente che gli eventi sono un tipo speciale di delegati che possono essere richiamati solo dall'interno della classe che li ha dichiarati. Le classi derivate non possono richiamare direttamente gli eventi dichiarati all'interno della classe base. Nonostante sia necessario a volte un evento che possa essere generato solo dalla classe base, nella maggior parte dei casi è opportuno consentire alla classe derivata di richiamare eventi della classe base. A tale scopo, è possibile creare un metodo di chiamata protetto nella classe base che esegue il wrapping dell'evento. Le classi derivate possono richiamare indirettamente l'evento richiamando o eseguendo l'override di questo metodo di chiamata.  
   
@@ -50,3 +51,4 @@ L'esempio seguente illustra il metodo standard di dichiarazione degli eventi in 
  [Delegati](../../../csharp/programming-guide/delegates/index.md)   
  [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
  [Creazione di gestori eventi in Windows Form](https://msdn.microsoft.com/library/dacysss4.aspx)
+

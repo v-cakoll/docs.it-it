@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Caricare e scaricare gli assembly (C#) | Microsoft Docs'
+title: 'Procedura: Caricare e scaricare gli assembly (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 8efd5a9ccfedbea401b0c95d443fe8cdb6ea6c32
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6bf6de24f4cbc3f3bd855b6d2cafa8120ebd90ee
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>Procedura: Caricare e scaricare gli assembly (C#)
@@ -45,3 +45,4 @@ Gli assembly cui il programma fa riferimento verranno caricati automaticamente i
  [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)   
  [Assembly e Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
  [Procedura: Caricare assembly in un dominio dell'applicazione](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)
+

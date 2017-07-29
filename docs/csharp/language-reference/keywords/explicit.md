@@ -1,5 +1,5 @@
 ---
-title: explicit (Riferimenti per C#) | Documentazione Microsoft
+title: explicit (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a5c842eba24f0a30d357afc24aeed10c1447345e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f11a930f0be5d504c92271b66009613de5d68579
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="explicit-c-reference"></a>explicit (Riferimenti per C#)
@@ -73,3 +73,4 @@ La parola chiave `explicit` dichiara un operatore di conversione di tipo definit
  [Operatore (Riferimenti per C#)](../../../csharp/language-reference/keywords/operator.md)   
  [Procedura: Implementare conversioni tra struct definite dall'utente](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)   
  [Conversioni esplicite concatenate definite dall'utente in C#](http://go.microsoft.com/fwlink/?LinkId=112384)
+

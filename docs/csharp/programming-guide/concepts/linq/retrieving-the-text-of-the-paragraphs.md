@@ -1,5 +1,5 @@
 ---
-title: Recupero del testo dei paragrafi (C#) | Microsoft Docs
+title: Recupero del testo dei paragrafi (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f21a48aa5bf61485a45c3c76225463c47184f786
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b0a6e842359ae42be9e00ba35f6878d3a2a4aac4
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Recupero del testo dei paragrafi (C#)
@@ -37,7 +37,7 @@ Questo esempio si basa sull'esempio precedente, [Recupero dei paragrafi e dei re
   
  Per istruzioni per la creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- In questo esempio vengono usate classi dell'assembly WindowsBase Usa i tipi nello spazio dei nomi <xref:System.IO.Packaging?displayProperty=fullName>.  
+ In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=fullName>.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -157,3 +157,4 @@ StyleName:Code >Hello World<
 ## <a name="see-also"></a>Vedere anche  
  [Tutorial: Manipulating Content in a WordprocessingML Document (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  (Esercitazione sulla modifica del contenuto in un documento WordprocessingML (C#))  
  [Esecuzione posticipata e valutazione lazy in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+

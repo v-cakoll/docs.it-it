@@ -1,5 +1,5 @@
 ---
-title: Lettura da file in Visual Basic | Microsoft Docs
+title: Lettura da file in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6e2dbabb7ad2141840fbfaed054494e5604e24c3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 298f821cc2dd6e8152db71206669b243112b6a6a
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Lettura da file in Visual Basic
@@ -90,4 +90,5 @@ In questa sezione viene illustrato come eseguire attività associate alla lettur
  Illustra come usare la funzionalità `My` con i file e le directory.  
   
  [Procedura dettagliata: Modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Illustra come usare i metodi [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] con i file e le directory.
+ Illustra come usare i metodi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] con i file e le directory.
+

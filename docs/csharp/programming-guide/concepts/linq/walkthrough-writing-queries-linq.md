@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Scrittura di query in C# (LINQ) | Documentazione Microsoft'
+title: 'Procedura dettagliata: scrittura di query in C# (LINQ)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 5692bd4b2fae4c5e17d48c12e98eb2e18523ba61
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: aef03dca681f0b3d24f2ab55eef4ae29ee515132
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Procedura dettagliata: scrittura di query in C# (LINQ)
@@ -213,3 +213,4 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
  [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
  [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
  [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+

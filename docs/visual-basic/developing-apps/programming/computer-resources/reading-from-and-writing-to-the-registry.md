@@ -1,5 +1,5 @@
 ---
-title: Lettura e scrittura nel Registro di sistema (Visual Basic) | Microsoft Docs
+title: Lettura e scrittura nel Registro di sistema (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,17 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a093754423ba8b6942170792655e65e256df49bd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 742aeb48f028918040479593a31b1223fba1b02f
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Lettura e scrittura nel Registro di sistema (Visual Basic)
 Questo argomento descrive attività e concetti correlati al Registro di sistema.  
   
- Durante la programmazione in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] è possibile scegliere di accedere al Registro di sistema usando le funzioni di [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] o le classi del Registro di sistema di .NET Framework. Il Registro di sistema contiene informazioni provenienti dal sistema operativo nonché informazioni provenienti dalle applicazioni presenti nel computer. L'uso del Registro di sistema può compromettere la sicurezza poiché consente l'accesso inappropriato alle risorse di sistema o alle informazioni protette.  
+ Durante la programmazione in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] è possibile scegliere di accedere al Registro di sistema usando le funzioni di [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] o le classi del Registro di sistema di .NET Framework. Il Registro di sistema contiene informazioni provenienti dal sistema operativo nonché informazioni provenienti dalle applicazioni presenti nel computer. L'uso del Registro di sistema può compromettere la sicurezza poiché consente l'accesso inappropriato alle risorse di sistema o alle informazioni protette.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Procedura: Creare una chiave del Registro di sistema e impostarne il valore](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
@@ -55,7 +55,7 @@ Questo argomento descrive attività e concetti correlati al Registro di sistema.
  Viene descritto come usare il metodo `DeleteSubKey` della proprietà `My.Computer.Registry.CurrentUser` per eliminare una chiave del Registro di sistema.  
   
  [Lettura e scrittura nel Registro di sistema mediante lo spazio dei nomi Microsoft.Win32](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Viene descritto come usare le classi `Registry` e `RegistryKey` di [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] per accedere al Registro di sistema.  
+ Viene descritto come usare le classi `Registry` e `RegistryKey` di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per accedere al Registro di sistema.  
   
  [Sicurezza e Registro di sistema](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
  Vengono illustrati i problemi di sicurezza che riguardano il Registro di sistema.  
@@ -66,3 +66,4 @@ Questo argomento descrive attività e concetti correlati al Registro di sistema.
   
  <xref:Microsoft.Win32.Registry>  
  Viene presentata una panoramica della classe `Registry`, oltre a collegamenti a singoli membri e chiavi.
+

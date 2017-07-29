@@ -1,5 +1,5 @@
 ---
-title: Buffer a dimensione fissa (Guida per programmatori C#) | Microsoft Docs
+title: Buffer a dimensione fissa (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6c5cacb588dc263e5b72e4b3cd93ad10b4b681f2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e1a3dcf953cb56fc3436fdd5e7ecb60478a12922
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffer a dimensione fissa (Guida per programmatori C#)
@@ -77,3 +78,4 @@ private fixed char name[30];
  [Codice di tipo unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [Interoperabilità](../../../csharp/programming-guide/interop/index.md)
+

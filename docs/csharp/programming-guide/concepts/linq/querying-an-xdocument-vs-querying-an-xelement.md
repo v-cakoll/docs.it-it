@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di query su XDocument e su Esecuzione di query su XElement (C#) | Microsoft Docs
+title: Esecuzione di query su XDocument e su XElement (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,20 +14,20 @@ ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9a3da563618ad3dbc9797f252ab51588a43ce8e6
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa756d4adb1c361ef52e58bf6bdfd3bc2e31d13a
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Esecuzione di query su XDocument e su XElement (C#)
-Quando si carica un documento con <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName> si noterà che è necessario scrivere query in modo leggermente diverso rispetto a quando si esegue il caricamento con <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.  
+Quando si carica un documento tramite <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, si noterà che è necessario scrivere le query in modo leggermente diverso rispetto a quando si carica un documento tramite <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Confronto tra XDocument.Load e XElement.Load  
- Quando si carica un documento XML in un oggetto <xref:System.Xml.Linq.XElement> usando <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>, l'oggetto <xref:System.Xml.Linq.XElement> nella radice dell'albero XML contiene l'elemento radice del documento caricato. Tuttavia, quando si carica lo stesso documento XML in un oggetto <xref:System.Xml.Linq.XDocument> con <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, la radice dell'albero è un nodo <xref:System.Xml.Linq.XDocument> e l'elemento radice del documento caricato è l'unico nodo figlio <xref:System.Xml.Linq.XElement> consentito di <xref:System.Xml.Linq.XDocument>. Gli assi di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] eseguono operazioni in relazione al nodo radice.  
+ Quando si carica un documento XML in un oggetto <xref:System.Xml.Linq.XElement> tramite <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>, l'oggetto <xref:System.Xml.Linq.XElement> nella radice dell'albero XML contiene l'elemento radice del documento caricato. Tuttavia, quando si carica lo stesso documento XML in un oggetto <xref:System.Xml.Linq.XDocument> tramite <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, la radice dell'albero è un nodo <xref:System.Xml.Linq.XDocument>, mentre l'elemento radice del documento caricato è l'unico nodo <xref:System.Xml.Linq.XElement> figlio consentito di <xref:System.Xml.Linq.XDocument>. Gli assi di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eseguono operazioni in relazione al nodo radice.  
   
- In questo primo esempio viene caricato un albero XML usando <xref:System.Xml.Linq.XElement.Load%2A>. Viene quindi eseguita una query per gli elementi figlio della radice dell'albero.  
+ Nel primo esempio viene caricato un albero XML usando <xref:System.Xml.Linq.XElement.Load%2A>. Viene quindi eseguita una query per gli elementi figlio della radice dell'albero.  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -57,7 +57,7 @@ Querying tree loaded with XElement.Load
 <Child3>3</Child3>  
 ```  
   
- L'esempio seguente è identico a quello precedente, con l'eccezione che l'albero XML viene caricato in un oggetto <xref:System.Xml.Linq.XDocument> anziché in un oggetto <xref:System.Xml.Linq.XElement>.  
+ L'esempio seguente è identico a quello precedente, con l'eccezione che l'albero XML viene caricato in un oggetto <xref:System.Xml.Linq.XDocument> anziché in <xref:System.Xml.Linq.XElement>.  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -122,4 +122,5 @@ Querying tree loaded with XDocument.Load
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Basic Queries (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md) (Query di base (LINQ to XML) (C#)
+ [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+

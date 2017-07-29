@@ -1,5 +1,5 @@
 ---
-title: Esempio di concatenamento di query (C#) | Microsoft Docs
+title: Esempio di concatenamento di query (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5426fbf710917b537d44e25966a8bc51d78f298e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 70179c93c48f56614bd7c8b648f73e86ebe26ff4
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="chaining-queries-example-c"></a>Esempio di concatenamento di query (C#)
@@ -100,5 +99,5 @@ Main: str >GHI!!!<
 -   [Materializzazione intermedia (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazione: concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+ [Esercitazione: Concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Variabili locali tipizzate in modo implicito (Guida per programmatori C#) | Microsoft Docs
+title: Variabili locali tipizzate in modo implicito (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1aaa231a807ec50b8bcb922bf0dd218ec72d24ff
-ms.openlocfilehash: 21180ce100f81e38b327347e548929a47a2e029d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cc02c0f7ef5fbbbf3c60188426a8027f6a60fb89
 ms.contentlocale: it-it
-ms.lasthandoff: 04/25/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variabili locali tipizzate in modo implicito (Guida per programmatori C#)
@@ -69,7 +69,7 @@ Le variabili locali possono essere dichiarate senza specificare un tipo esplicit
  Per altre informazioni, vedere [Procedura: Usare variabili e matrici locali tipizzate in modo implicito in un'espressione di query](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).  
   
 ## <a name="var-and-anonymous-types"></a>var e tipi anonimi  
- In molti casi l'uso di `var` è facoltativo ed è solo una convenzione sintattica. Se però una variabile viene inizializzata con un tipo anonimo e si deve accedere alle proprietà dell'oggetto in un momento successivo, è necessario dichiarare la variabile come `var`. Si tratta di uno scenario comune nelle espressioni di query [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]. Per altre informazioni, vedere [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ In molti casi l'uso di `var` è facoltativo ed è solo una convenzione sintattica. Se però una variabile viene inizializzata con un tipo anonimo e si deve accedere alle proprietà dell'oggetto in un momento successivo, è necessario dichiarare la variabile come `var`. Si tratta di uno scenario comune nelle espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Per altre informazioni, vedere [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
  Dal punto di vista del codice sorgente, un tipo anonimo non ha nome. Se una variabile di query è stata inizializzata con `var`, l'unico modo per accedere alle proprietà nella sequenza di oggetti restituita è usare `var` come tipo della variabile di iterazione nell'istruzione `foreach`.  
   

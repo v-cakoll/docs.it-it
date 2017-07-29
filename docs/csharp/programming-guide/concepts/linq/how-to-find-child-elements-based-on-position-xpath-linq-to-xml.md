@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Trovare elementi figlio in base alla posizione (XPath-LINQ to XML) (C#) | Microsoft Docs'
+title: 'Procedura: Trovare elementi figlio in base alla posizione (XPath-LINQ to XML) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce711d5e0ce82d4fcb0351c21ac7a769c414b2a4
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 247cb8f2be3a005413045198443b132b25241775
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Procedura: Trovare elementi figlio in base alla posizione (XPath-LINQ to XML) (C#)
@@ -28,7 +28,7 @@ Talvolta si desidera individuare elementi in base alla posizione, ad esempio il 
   
  `Test[position() >= 2 and position() <= 4]`  
   
- Sono disponibili due approcci per la scrittura di query [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] in modalità lazy. È possibile usare gli operatori <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A> oppure è possibile usare l'overload di <xref:System.Linq.Enumerable.Where%2A> che accetta un indice. Quando si usa l'overload di <xref:System.Linq.Enumerable.Where%2A>, viene usata un'espressione lambda che accetta due argomenti. Nell'esempio seguente sono illustrati entrambi i metodi di selezione basata sulla posizione.  
+ Sono disponibili due approcci per la scrittura di query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in modalità lazy. È possibile usare gli operatori <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A> oppure l'overload <xref:System.Linq.Enumerable.Where%2A> che accetta un indice. Quando si usa l'overload <xref:System.Linq.Enumerable.Where%2A>, viene usata un'espressione lambda che accetta due argomenti. Nell'esempio seguente sono illustrati entrambi i metodi di selezione basata sulla posizione.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio vengono individuati gli elementi `Test` compresi tra il secondo e il quarto. Il risultato è una raccolta di elementi.  
@@ -92,3 +92,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ to XML per gli utenti di XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

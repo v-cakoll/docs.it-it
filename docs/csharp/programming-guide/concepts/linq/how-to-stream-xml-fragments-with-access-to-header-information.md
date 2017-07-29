@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#) | Microsoft Docs'
+title: 'Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,20 +19,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81d0ba2403726f76d50465e1776e6e91ea49d355
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b7a83c9fc88b6e59cc1c8308d92464591896d312
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#)
 A volte è necessario leggere file XML arbitrariamente grandi e scrivere l'applicazione in modo tale che il footprint di memoria dell'applicazione sia prevedibile. Se si tenta di popolare un albero XML con un file XML di grandi dimensioni, l'uso della memoria sarà proporzionale alla dimensione del file (ovvero, eccessivo). Pertanto, è necessario usare una tecnica di flusso in sostituzione.  
   
- Una delle opzioni disponibili consente di scrivere l'applicazione usando <xref:System.Xml.XmlReader>. Può tuttavia essere necessario usare [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] per eseguire una query nell'albero XML. In questo caso, è possibile scrivere un metodo dell'asse personalizzato. Per altre informazioni, vedere [Procedura: Scrivere un metodo dell'asse LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Una delle opzioni disponibili consiste nello scrivere l'applicazione usando <xref:System.Xml.XmlReader>. Può tuttavia essere necessario usare [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] per eseguire una query nell'albero XML. In questo caso, è possibile scrivere un metodo dell'asse personalizzato. Per altre informazioni, vedere [Procedura: Scrivere un metodo dell'asse LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
- Per scrivere un metodo dell'asse personalizzato, è possibile scrivere un metodo di piccole dimensioni che usa <xref:System.Xml.XmlReader> per leggere i nodi fino a raggiungere uno dei nodi di interesse. Il metodo quindi chiama <xref:System.Xml.Linq.XNode.ReadFrom%2A>, che legge da <xref:System.Xml.XmlReader> e crea un'istanza di un frammento XML. Restituisce quindi ogni frammento tramite `yield return` al metodo che sta enumerando il metodo dell'asse personalizzato. È quindi possibile scrivere query LINQ sul metodo dell'asse personalizzato.  
+ Per scrivere metodo dell'asse, scrivere un piccolo metodo che usa <xref:System.Xml.XmlReader> per leggere i nodi fino a raggiungere uno dei nodi di interesse. Il metodo chiama quindi <xref:System.Xml.Linq.XNode.ReadFrom%2A>, che legge da <xref:System.Xml.XmlReader> e crea un'istanza di un frammento XML. Restituisce quindi ogni frammento tramite `yield return` al metodo che sta enumerando il metodo dell'asse personalizzato. È quindi possibile scrivere query LINQ sul metodo dell'asse personalizzato.  
   
- Le tecniche di flusso sono maggiormente indicate nelle situazioni in cui è necessario elaborare solo una volta il documento di origine ed è possibile elaborare gli elementi in base all'ordine in cui sono riportati nel documento. Alcuni operatori query standard, ad esempio <xref:System.Linq.Enumerable.OrderBy%2A>, eseguono l'iterazione dell'origine, raccolgono tutti i dati, li ordinano e infine restituiscono il primo elemento della sequenza. Si noti che se si usa un operatore di query che materializza l'origine prima di restituire il primo elemento, non verrà mantenuto un footprint di memoria ridotto.  
+ Le tecniche di flusso sono maggiormente indicate nelle situazioni in cui è necessario elaborare solo una volta il documento di origine ed è possibile elaborare gli elementi in base all'ordine in cui sono riportati nel documento. Determinati operatori di query standard, ad esempio <xref:System.Linq.Enumerable.OrderBy%2A>, scorrono l'origine, raccolgono tutti i dati, li ordinano e infine restituiscono il primo elemento nella sequenza. Si noti che se si usa un operatore di query che materializza l'origine prima di restituire il primo elemento, non verrà mantenuto un footprint di memoria ridotto.  
   
 ## <a name="example"></a>Esempio  
  A volte il problema diventa più interessante. Nel documento XML seguente, il consumer del metodo dell'asse personalizzato deve conoscere anche il nome del cliente cui appartiene ogni elemento.  
@@ -184,3 +185,4 @@ static void Main(string[] args)
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

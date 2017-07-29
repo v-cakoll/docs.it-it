@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Filtrare in base a nomi di elementi (LINQ to XML) (C#) | Microsoft Docs'
+title: Procedura. Filtrare in base a nomi di elementi (LINQ to XML) (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 5c11af47434ec00e812f966d5937c138a5ac3640
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 03f1be79322882e49b7cb619ff4578fda94450a7
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Procedura. Filtrare in base a nomi di elementi (LINQ to XML) (C#)
-Quando si esegue una chiamata a uno dei metodi che restituiscono <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XElement>, è possibile filtrare in base al nome dell'elemento.  
+Quando si chiama uno dei metodi che restituisce l'oggetto <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XElement>, è possibile filtrare in base al nome dell'elemento.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene recuperata una raccolta di discendenti filtrata in maniera tale da includere solo i discendenti con il nome specificato.  
@@ -46,7 +45,7 @@ ProductName:Lawnmower
 ProductName:Baby Monitor  
 ```  
   
- Gli altri metodi che restituiscono <xref:System.Collections.Generic.IEnumerable%601> delle raccolte <xref:System.Xml.Linq.XElement> seguono lo stesso modello. Le firme sono simili a <xref:System.Xml.Linq.XContainer.Elements%2A> <xref:System.Xml.Linq.XContainer.Descendants%2A>. Di seguito è riportato l'elenco completo dei metodi con firme simili:  
+ Gli altri metodi che restituiscono l'oggetto <xref:System.Collections.Generic.IEnumerable%601> delle raccolte <xref:System.Xml.Linq.XElement> sono caratterizzati dallo stesso schema. Le relative firme sono simili a <xref:System.Xml.Linq.XContainer.Elements%2A> e <xref:System.Xml.Linq.XContainer.Descendants%2A>. Di seguito è riportato l'elenco completo dei metodi con firme simili:  
   
 -   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -86,3 +85,4 @@ foreach (XElement prdName in items)
   
 ## <a name="see-also"></a>Vedere anche  
  [Assi LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

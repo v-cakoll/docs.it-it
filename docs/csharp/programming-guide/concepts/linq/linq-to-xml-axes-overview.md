@@ -1,5 +1,5 @@
 ---
-title: Panoramica degli assi LINQ to XML (C#) | Microsoft Docs
+title: Panoramica degli assi LINQ to XML (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b43d3cb5cc7154c1133c5fa17e5bdacca97a38c9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdd4e6ffc17bc2c39d0dbeadbba955aacfe02dd9
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Panoramica degli assi LINQ to XML (C#)
@@ -27,9 +26,9 @@ Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML
   
  Come descritto in [Panoramica della classe XElement](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), un oggetto <xref:System.Xml.Linq.XElement> rappresenta il nodo di un unico elemento. Il contenuto di un elemento può essere semplice o complesso (talvolta definito contenuto strutturato). Un elemento semplice può essere vuoto o può contenere un valore. Se il nodo include contenuto strutturato, è possibile usare i diversi metodi dell'asse per recuperare enumerazioni di elementi discendente. I metodi dell'asse usati più di frequente sono <xref:System.Xml.Linq.XContainer.Elements%2A> e <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
- Oltre ai metodi dell'asse, che restituiscono raccolte, sono disponibili altri due metodi usati frequentemente nelle query [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Il metodo <xref:System.Xml.Linq.XContainer.Element%2A> restituisce un singolo oggetto <xref:System.Xml.Linq.XElement>. Il metodo <xref:System.Xml.Linq.XElement.Attribute%2A> restituisce un singolo oggetto <xref:System.Xml.Linq.XAttribute>.  
+ Oltre ai metodi dell'asse, che restituiscono raccolte, sono disponibili altri due metodi usati frequentemente nelle query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Il metodo <xref:System.Xml.Linq.XContainer.Element%2A> restituisce un singolo oggetto <xref:System.Xml.Linq.XElement>. Il metodo <xref:System.Xml.Linq.XElement.Attribute%2A> restituisce un singolo oggetto <xref:System.Xml.Linq.XAttribute>.  
   
- Per molti scopi, le query [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] costituiscono il modo più potente per esaminare un albero, estrarre dati da esso e trasformarlo. Le query [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] operano su oggetti che implementano <xref:System.Collections.Generic.IEnumerable%601>, mentre gli assi [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] restituiscono <xref:System.Collections.Generic.IEnumerable%601> di raccolte <xref:System.Xml.Linq.XElement> e <xref:System.Collections.Generic.IEnumerable%601> di raccolte <xref:System.Xml.Linq.XAttribute>. Tali raccolte sono necessarie per l'esecuzione delle query.  
+ Per molti scopi, le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] costituiscono il modo più potente per esaminare un albero, estrarre dati da esso e trasformarlo. Le query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operano su oggetti che implementano <xref:System.Collections.Generic.IEnumerable%601>, mentre gli assi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] restituiscono <xref:System.Collections.Generic.IEnumerable%601> di raccolte <xref:System.Xml.Linq.XElement> e <xref:System.Collections.Generic.IEnumerable%601> di raccolte <xref:System.Xml.Linq.XAttribute>. Tali raccolte sono necessarie per l'esecuzione delle query.  
   
  Oltre ai metodi dell'asse che recuperano raccolte di elementi e attributi, sono disponibili altri metodi dell'asse che consentono di scorrere l'albero con maggior dettaglio. Ad esempio, anziché gestire elementi e attributi, è possibile operare sui nodi dell'albero. I nodi costituiscono un livello di granularità più preciso rispetto a elementi e attributi. Quando usano i nodi, è possibile esaminare commenti XML, nodi di tipo text, istruzioni di elaborazione e altro ancora. Questa funzionalità è ad esempio utile per chi intende scrivere il codice per un elaboratore di testo e desidera salvare i documenti in formato XML. Tuttavia, la maggior parte dei programmatori XML è interessata principalmente a elementi, attributi e ai relativi valori.  
   
@@ -69,3 +68,4 @@ Dopo aver creato un albero XML o aver caricato un documento XML in un albero XML
   
 ## <a name="see-also"></a>Vedere anche  
  [Assi LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

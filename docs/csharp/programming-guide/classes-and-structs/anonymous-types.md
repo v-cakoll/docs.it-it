@@ -1,5 +1,5 @@
 ---
-title: Tipi anonimi (Guida per programmatori C#) | Microsoft Docs
+title: Tipi anonimi (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 6a6950680a733b3d99edd54fc9a9cfd0338e513c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 80a0d3c99f7765dba1166fd9c5ecc3e7fbadc7a1
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipi anonimi (Guida per programmatori C#)
@@ -75,7 +75,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  Non è possibile dichiarare un campo, una proprietà, un evento o il tipo restituito di un metodo specificando un tipo anonimo. In modo analogo, non è possibile dichiarare un parametro formale di un metodo, una proprietà, un costruttore o un indicizzatore specificando un tipo anonimo. Per passare un tipo anonimo o una raccolta contenente tipi anonimi come argomento a un metodo, è possibile dichiarare il parametro come oggetto di tipo. In questo modo si annulla tuttavia lo scopo della tipizzazione forte. Se è necessario archiviare i risultati delle query o passarli oltre i limiti del metodo, si consideri l'uso di uno struct o una classe con nome normale invece di un tipo anonimo.  
   
- Poiché i metodi <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A> dei tipi anonimi sono definiti in termini di metodi `Equals` e `GetHashCode` delle proprietà, due istanze dello stesso tipo anonimo sono uguali solo se tutte le rispettive proprietà sono uguali.  
+ I metodi <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A> nei tipi anonimi sono definiti in termini di metodi delle proprietà `Equals` e `GetHashCode`, di conseguenza due istanze dello stesso tipo anonimo sono uguali solo se tutte le relative proprietà sono uguali.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   

@@ -1,5 +1,5 @@
 ---
-title: "Novità in Visual Basic | Microsoft Docs"
+title: "Novità in Visual Basic"
 ms.date: 2017-04-27
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 18544a0311e24cf427111e364421db6e9fc27326
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0a9379d5dd2d1c6b3ed6820e350c19fb346ac84c
 ms.contentlocale: it-it
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="whats-new-for-visual-basic"></a>Novità in Visual Basic
@@ -105,7 +105,7 @@ A partire da C# 7, C# supporta i valori di riferimento restituiti. Pertanto, qua
 
 Ad esempio, la classe `Sentence` seguente scritta in C# include un metodo `FindNext` che rileva la parola successiva in una frase che inizia con una sottostringa specificata. La stringa viene restituita come valore di riferimento restituito. Una variabile `Boolean` passata dal riferimento al metodo indica se la ricerca ha avuto esito positivo. A questo punto il chiamante non solo può leggere il valore restituito, ma lo può anche modificare. Tale modifica si riflette sulla classe `Sentence`.
 
-[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
+[!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
 In parole semplici, è possibile modificare la parola trovata nella frase usando un codice simile al seguente. Si noti che non si sta assegnando un valore al metodo, ma all'espressione che il metodo restituisce, ovvero il valore di riferimento restituito.
 
@@ -191,5 +191,5 @@ End Interface
  Ora il compilatore userà le normali regole di risoluzione dell'overload per scegliere l'oggetto `GetDetails` più appropriato da chiamare ed è possibile dichiarare le relazioni tre le interfacce in Visual Basic, come quelle mostrate nell'esempio.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Novità di Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/ide/whats-new-in-visual-studio)
+ [Novità di Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
 

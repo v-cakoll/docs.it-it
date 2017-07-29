@@ -1,5 +1,5 @@
 ---
-title: Compilazione dalla riga di comando con csc.exe | Microsoft Docs
+title: Compilazione dalla riga di comando con csc.exe
 ms.date: 2017-04-19
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: d90dc35fd985cbe35cfe86f7c299bd12aed11365
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd47544e11222dfb0035f37196abcdf5654d5537
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="command-line-build-with-cscexe"></a>Compilazione dalla riga di comando con csc.exe
@@ -42,7 +42,7 @@ Se si usa la finestra **Prompt dei comandi per gli sviluppatori per Visual Studi
 
 Se si usa una finestra del prompt dei comandi standard, è necessario modificare il percorso prima di poter richiamare *csc.exe* da qualsiasi sottodirectory del computer. Si deve anche eseguire *vsvars32.bat* per impostare le variabili di ambiente necessarie per supportare le compilazioni da riga di comando. Per altre informazioni su *vsvars32.bat*, incluse istruzioni per trovare ed eseguire il file, vedere [How to: Set Environment Variables for the Visual Studio Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio).
 
-Se nel computer in uso è disponibile solo [!INCLUDE[winsdklong](../../../csharp/language-reference/compiler-options/includes/winsdklong_md.md)], è possibile usare il compilatore C# al **Prompt dei comandi di SDK** che viene visualizzato dall'opzione di menu **Microsoft .NET Framework SDK**.
+Se nel computer in uso è disponibile solo [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)], è possibile usare il compilatore C# al **Prompt dei comandi di SDK** che viene visualizzato dall'opzione di menu **Microsoft .NET Framework SDK**.
 
 È inoltre possibile utilizzare MSBuild per compilare programmi C# a livello di codice. Per altre informazioni, vedere [MSBuild](/visualstudio/msbuild/msbuild).
 
@@ -81,37 +81,37 @@ Il compilatore C# usa le regole seguenti per interpretare gli argomenti visualiz
 
 - Compila *File.cs* e crea *File.exe*:
 
-```
+```console
 csc File.cs 
 ```
 
 - Compila *File.cs* e crea *File.dll*:
 
-```
+```console
 csc /target:library File.cs
 ```
 
 - Compila *File.cs* e crea *My.exe*:
 
-```
+```console
 csc /out:My.exe File.cs
 ```
 
 - Compila tutti i file C# della directory corrente con le ottimizzazioni attivate e definisce il simbolo DEBUG. L'output è il *File2.exe*:
 
-```
+```console
 csc /define:DEBUG /optimize /out:File2.exe *.cs
 ```
 
 - Compila tutti i file C# della directory corrente generando una versione di debug del file *File2.dll*. Non viene visualizzato nessun logo e nessun avviso:
 
-```
+```console
 csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
 ```
 
 - Compila tutti i file C# della directory corrente creando un file *Something.xyz* (una DLL):
 
-```
+```console
 csc /target:library /out:Something.xyz *.cs
 ```
 

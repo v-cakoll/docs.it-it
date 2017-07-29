@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Leggere e scrivere un documento codificato (C#) | Microsoft Docs'
+title: 'Procedura: Leggere e scrivere un documento codificato (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6f599d279e804372ef8779514939f14cee15c5e3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fc7c21c1aa6f4035bfaee509c7bc542542635313
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>Procedura: Leggere e scrivere un documento codificato (C#)
@@ -30,9 +31,9 @@ Per creare un documento XML codificato, aggiungere un oggetto <xref:System.Xml.L
   
  Qualsiasi valore restituito da <xref:System.Text.Encoding.WebName%2A> è un valore valido.  
   
- Se si legge un documento codificato, la proprietà <xref:System.Xml.Linq.XDeclaration.Encoding%2A> viene impostata sul nome della tabella codici.  
+ Se si legge un documento codificato, la proprietà <xref:System.Xml.Linq.XDeclaration.Encoding%2A> verrà impostata sul nome della tabella codici.  
   
- Se si imposta <xref:System.Xml.Linq.XDeclaration.Encoding%2A> su un nome di tabella codici valido, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] esegue la serializzazione con la codifica specificata.  
+ Se si imposta <xref:System.Xml.Linq.XDeclaration.Encoding%2A> su un nome di tabella codici valido, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eseguirà la serializzazione con la codifica specificata.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono creati due documenti, uno con codifica utf-8 e uno con codifica utf-16. Vengono quindi caricati i documenti e viene stampata la codifica nella console.  
@@ -95,3 +96,4 @@ Encoding of loaded document is:utf-16
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
  [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

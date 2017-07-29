@@ -1,5 +1,5 @@
 ---
-title: return (Riferimenti per C#) | Microsoft Docs
+title: return (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce15455381a3279a8c77eaa1fb25494cfe5dfc2b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 596375a1cba8f5ecbad636a6829c1a0599f8c0f4
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="return-c-reference"></a>return (Riferimenti per C#)
@@ -55,5 +55,6 @@ L'istruzione `return` termina l'esecuzione del metodo in cui viene visualizzata 
  [Riferimenti per C#](../../../csharp/language-reference/index.md)   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [Istruzione return](https://docs.microsoft.com/cpp/cpp/return-statement-cpp)   
+ [Istruzione return](/cpp/cpp/return-statement-cpp)   
  [Istruzioni di spostamento](../../../csharp/language-reference/keywords/jump-statements.md)
+

@@ -1,5 +1,5 @@
 ---
-title: const (Riferimenti per C#) | Documentazione Microsoft
+title: const (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,18 +30,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 700e80272384a946609d538c5516f0480b7fed27
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b8f6d567deed513ff5693fe39bd21c8607677402
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="const-c-reference"></a>const (Riferimenti per C#)
 Si usa la parola chiave `const` per dichiarare un campo costante o una variabile locale costante. I campi e le variabili locali costanti non sono variabili e non sono quindi modificabili. Gli elementi costanti possono essere numeri, valori booleani, stringhe o un riferimento Null. Non creare una costante per rappresentare informazioni di cui si prevede la modifica in qualsiasi momento. Un campo costante, ad esempio, non deve essere usato per archiviare il prezzo di un servizio, il numero di versione di un prodotto o il nome dell'organizzazione di una società. Tali valori potrebbero cambiare nel tempo e, poiché i compilatori propagano le costanti, eventuale altro codice compilato con quelle librerie dovrebbe essere ricompilato per riflettere le modifiche. Vedere anche la parola chiave [readonly](../../../csharp/language-reference/keywords/readonly.md). Ad esempio:  
   
-```  
-      const int x = 0;  
+```csharp
+const int x = 0;  
 public const double gravitationalConstant = 6.673e-11;  
 private const string productName = "Visual C#";  
 ```  
@@ -53,7 +53,7 @@ private const string productName = "Visual C#";
   
  La dichiarazione di costante può includere più costanti, ad esempio:  
   
-```  
+```csharp
 public const double x = 1.0, y = 2.0, z = 3.0;  
 ```  
   
@@ -61,7 +61,7 @@ public const double x = 1.0, y = 2.0, z = 3.0;
   
  Una costante può far parte di un'espressione costante, ad esempio:  
   
-```  
+```csharp
 public const int c1 = 5;  
 public const int c2 = c1 + 100;  
 ```  

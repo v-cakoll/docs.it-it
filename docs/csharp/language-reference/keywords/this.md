@@ -1,5 +1,5 @@
 ---
-title: this (Riferimenti per C#) | Documentazione Microsoft
+title: this (Riferimenti per C#)
 description: Parola chiave this (Riferimenti per C#)
 keywords: this (C#), parola chiave this (C#), parola chiave this (Riferimenti per C#), parola chiave this (Riferimenti per il linguaggio C#)
 ms.custom: 
@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8e14a32f11b9661ae18fd718fb1a72385fa7f3a7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1e764bbd85d06a3b1898f6574064b2844f6d6813
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="this-c-reference"></a>this (Riferimenti per C#)
@@ -78,3 +78,4 @@ La parola chiave `this` fa riferimento all'istanza corrente della classe e viene
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
  [base](../../../csharp/language-reference/keywords/base.md)   
  [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
+

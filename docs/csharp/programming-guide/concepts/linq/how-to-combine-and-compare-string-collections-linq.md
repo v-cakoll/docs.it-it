@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#) | Microsoft Docs'
+title: 'Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 786939163001c6037ea248fe1e143400333e1554
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9738a804ac1bf58aa904b503544419a7eb5b7902
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)
@@ -185,8 +186,9 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto che usi .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
+ Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
  [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+

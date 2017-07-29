@@ -1,5 +1,5 @@
 ---
-title: Operazioni sugli elementi (C#) | Documentazione Microsoft
+title: Operazioni sugli elementi (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0cada4f5dae6eab5511870395133c2ef67ca796e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: da747e884960c89fabc45d3761da92f913d66362
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="element-operations-c"></a>Operazioni sugli elementi (C#)
@@ -47,3 +48,4 @@ Le operazioni sugli elementi restituiscono un singolo elemento specifico di una 
  <xref:System.Linq>   
  [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [Procedura: eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+

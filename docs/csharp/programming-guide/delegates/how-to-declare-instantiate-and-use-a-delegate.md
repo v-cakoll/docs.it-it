@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Dichiarare un delegato, crearne un&quot;istanza e usarlo (Guida per programmatori C#) | Microsoft Docs'
+title: 'Procedura: dichiarare un delegato, crearne un''istanza e utilizzarlo (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,15 +27,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: f80f50d7d6630aa5738c077cc2f278993e792eb8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5a16fe4c627989f701ba523769cd87839d074849
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# Procedura: dichiarare un delegato, crearne un'istanza e utilizzarlo (Guida per programmatori C#)
-<a id="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide" class="xliff"></a>
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Procedura: dichiarare un delegato, crearne un'istanza e utilizzarlo (Guida per programmatori C#)
 In C# 1.0 e versioni successive i delegati possono essere dichiarati come illustrato nell'esempio seguente.  
   
  [!code-cs[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_1.cs)]  
@@ -60,12 +59,10 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
  L'uso dei delegati consente la separazione ottimale delle funzionalità tra il database della libreria e il codice client. Il codice client non contiene alcuna informazione sulle modalità di archiviazione dei libri o sul meccanismo che consente al codice di individuare i tascabili. Il codice della libreria non contiene alcuna informazione sull'elaborazione effettuata sui tascabili individuati.  
   
-## Esempio
-<a id="example" class="xliff"></a>  
+## <a name="example"></a>Esempio  
  [!code-cs[csProgGuideDelegates#12](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_6.cs)]  
   
-## Programmazione efficiente
-<a id="robust-programming" class="xliff"></a>  
+## <a name="robust-programming"></a>Programmazione efficiente  
   
 -   Dichiarazione di un delegato.  
   
@@ -97,8 +94,8 @@ In C# 1.0 e versioni successive i delegati possono essere dichiarati come illust
   
      Un delegato può essere chiamato in modo sincrono, come in questo esempio, oppure in modo asincrono usando i metodi `BeginInvoke` e `EndInvoke`.  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Eventi](../../../csharp/programming-guide/events/index.md)   
  [Delegati](../../../csharp/programming-guide/delegates/index.md)
+

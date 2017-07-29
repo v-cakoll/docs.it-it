@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Inviare stringhe a porte seriali in Visual Basic | Documentazione Microsoft'
+title: 'Procedura: inviare stringhe a porte seriali in Visual Basic'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 14c5de8d0fa8195129b7ae65c1d373834307488a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 602b249d01252bbb1853ed02d9af86697d54b0a5
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Procedura: inviare stringhe a porte seriali in Visual Basic
-Questo argomento descrive come usare `My.Computer.Ports` per inviare stringhe alle porte seriali del computer in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+Questo argomento descrive come usare `My.Computer.Ports` per inviare stringhe alle porte seriali del computer in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ## <a name="example"></a>Esempio  
  In questo esempio si invia una stringa alla porta seriale COM1. Potrebbe essere necessario usare un'altra porta seriale nel computer in uso.  
@@ -68,3 +68,4 @@ Questo argomento descrive come usare `My.Computer.Ports` per inviare stringhe al
  <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
  [Procedura: Comporre numeri con modem collegati a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
  [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+

@@ -1,5 +1,5 @@
 ---
-title: implicit (Riferimenti per C#) | Microsoft Docs
+title: implicit (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7109a6e467539ca8161b3b44bfb50697314f3c13
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e4452a3bb6da2d0d294ca26d6b957f2c1c4402fd
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="implicit-c-reference"></a>implicit (Riferimenti per C#)
@@ -55,3 +55,4 @@ La parola chiave `implicit` viene usata per dichiarare un operatore di conversio
  [explicit](../../../csharp/language-reference/keywords/explicit.md)   
  [operator (Riferimenti per C#)](../../../csharp/language-reference/keywords/operator.md)   
  [Procedura: Implementare conversioni tra struct definite dall'utente](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+

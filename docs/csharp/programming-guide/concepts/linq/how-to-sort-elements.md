@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Ordinare elementi (C#) | Documentazione Microsoft'
+title: 'Procedura: Ordinare elementi (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aaada38cd0d8858989f808c42fcdc8853433d1f6
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a5c17b13f6f637559e2f99426b71947e795e0516
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-sort-elements-c"></a>Procedura: Ordinare elementi (C#)
@@ -51,7 +51,7 @@ foreach (decimal el in prices)
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per altre informazioni, vedere [Utilizzo degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Nell'esempio seguente è illustrata la stessa query per XML in uno spazio dei nomi. Per altre informazioni, vedere [Uso degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
  Questo esempio usa il documento XML seguente: [File XML di esempio: dati numerici in uno spazio dei nomi](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
@@ -82,3 +82,4 @@ foreach (decimal el in prices)
 ## <a name="see-also"></a>Vedere anche  
  [Ordinamento dei dati (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)   
  [Query di base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+

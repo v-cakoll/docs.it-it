@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#) | Microsoft Docs"
+title: "Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 20d198e313ed290ce6f8614bb1ffdc1f65418341
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 384449bf8202c707b1c7f5a75445410bc6270907
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)
@@ -150,9 +151,10 @@ foreach (var student in queryNamesScores2)
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto che usi .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
+ Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
  [Inizializzatori di oggetto e di insieme](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
  [Tipi anonimi](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+

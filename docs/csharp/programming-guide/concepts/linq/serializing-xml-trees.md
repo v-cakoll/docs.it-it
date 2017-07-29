@@ -1,5 +1,5 @@
 ---
-title: Serializzazione degli alberi XML (C#) | Documentazione Microsoft
+title: Serializzazione di alberi XML (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 348f9cab6fa93ada89eb87d0077e0e5838b449d7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f3b8ee68065a056cccbf02d96bf5f21e7ccea16b
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-xml-trees-c"></a>Serializzazione di alberi XML (C#)
@@ -36,8 +37,9 @@ Per serializzazione di un albero XML si intende la generazione di codice XML dal
 |-----------|-----------------|  
 |[Conservazione di spazi vuoti durante la serializzazione](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|Viene descritto come controllare il comportamento dello spazio vuoto durante la serializzazione di strutture ad albero XML.|  
 |[Serializzazione con una dichiarazione XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|Viene descritto come serializzare una struttura ad albero XML che include una dichiarazione XML.|  
-|[Serializzazione in base a File, TextWriter e XmlWriter](../../../../csharp/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|Viene descritto come serializzare un documento in un <xref:System.IO.File>, un <xref:System.IO.TextWriter> o un <xref:System.Xml.XmlWriter>.|  
-|[Serializzazione in base a un XmlReader (richiamo di XSLT) (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Viene descritto come creare un <xref:System.Xml.XmlReader> che consente a un altro modulo di leggere il contenuto di un albero XML.|  
+|[Serializzazione in base a File, TextWriter e XmlWriter](../../../../csharp/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|Viene descritto come serializzare un documento in un oggetto <xref:System.IO.File>, <xref:System.IO.TextWriter> o <xref:System.Xml.XmlWriter>.|  
+|[Serializzazione in base a un XmlReader (richiamo di XSLT) (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Viene descritto come creare un oggetto <xref:System.Xml.XmlReader> che consente a un altro modulo di leggere il contenuto di un albero XML.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

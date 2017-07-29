@@ -1,5 +1,5 @@
 ---
-title: Query compilate in modo statico (LINQ to XML) (C#) | Documentazione Microsoft
+title: Query compilate in modo statico (LINQ to XML) (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 10e4df75be88dc5609e0ca15666042a0354824bc
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8e9986524756c979226919d37318a9ca2562213a
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>Query compilate in modo statico (LINQ to XML) (C#)
@@ -107,3 +107,4 @@ reader.Close();
   
 ## <a name="see-also"></a>Vedere anche  
  [Prestazioni (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Clausola join (Riferimenti per C#) | Microsoft Docs
+title: Clausola join (Riferimento C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 26027418b70d211dcadf6ace58b24927d94e427a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3368ba14101eda38ed8e3ee2bdc81bcab74a9b82
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="join-clause-c-reference"></a>Clausola join (Riferimento C#)
@@ -74,7 +74,7 @@ Il clausola `join` è utile per l'associazione di elementi di sequenze di origin
  Per altre informazioni, vedere [Procedura: Eseguire join raggrupati](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).  
   
 ## <a name="left-outer-join"></a>Left Outer Join  
- In un left outer join vengono restituiti tutti gli elementi nella sequenza di origine a sinistra, anche se non sono disponibili elementi corrispondenti nella sequenza a destra. Per eseguire un left outer join in [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)], usare il metodo `DefaultIfEmpty` insieme a un group join per specificare di generare un elemento di destra predefinito se un elemento di sinistra non ha corrispondenze. È possibile usare `null` come valore predefinito per qualsiasi tipo di riferimento oppure specificare un tipo predefinito definito dall'utente. Nell'esempio seguente viene illustrato un tipo predefinito definito dall'utente:  
+ In un left outer join vengono restituiti tutti gli elementi nella sequenza di origine a sinistra, anche se non sono disponibili elementi corrispondenti nella sequenza a destra. Per eseguire un left outer join in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], usare il metodo `DefaultIfEmpty` insieme a un group join per specificare di generare un elemento di destra predefinito se un elemento di sinistra non ha corrispondenze. È possibile usare `null` come valore predefinito per qualsiasi tipo di riferimento oppure specificare un tipo predefinito definito dall'utente. Nell'esempio seguente viene illustrato un tipo predefinito definito dall'utente:  
   
  [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
@@ -87,9 +87,9 @@ Il clausola `join` è utile per l'associazione di elementi di sequenze di origin
  È possibile eseguire non equijoin, cross join e altre operazioni di join personalizzate usando più clausole `from` per introdurre indipendentemente nuove sequenze in una query. Per altre informazioni, vedere [Procedura: Eseguire operazioni di join personalizzate](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
   
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>Join su raccolte di oggetti e tabelle relazionali  
- In un'espressione di query [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] le operazioni di join vengono eseguite su raccolte di oggetti. Le raccolte di oggetti non possono essere "aggiunte" nello stesso modo in cui si aggiungono due tabelle relazionali. In [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] le clausole `join` esplicite sono necessarie solo quando due sequenze di origine non sono legate da una relazione. Quando si usa [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], le tabelle di chiavi esterne vengono rappresentate nel modello a oggetti come proprietà della tabella primaria. Nel database Northwind, ad esempio, la tabella Customer ha una relazione di chiavi esterne con la tabella Orders. Quando si esegue il mapping delle tabelle al modello a oggetti, la classe Customer presenta una proprietà Orders che contiene la raccolta degli ordini associati a tale cliente. In effetti, il join è già stato automaticamente eseguito.  
+ In un'espressione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] le operazioni di join vengono eseguite su raccolte di oggetti. Le raccolte di oggetti non possono essere "aggiunte" nello stesso modo in cui si aggiungono due tabelle relazionali. In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] le clausole `join` esplicite sono necessarie solo quando due sequenze di origine non sono legate da una relazione. Quando si usa [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], le tabelle di chiavi esterne vengono rappresentate nel modello a oggetti come proprietà della tabella primaria. Nel database Northwind, ad esempio, la tabella Customer ha una relazione di chiavi esterne con la tabella Orders. Quando si esegue il mapping delle tabelle al modello a oggetti, la classe Customer presenta una proprietà Orders che contiene la raccolta degli ordini associati a tale cliente. In effetti, il join è già stato automaticamente eseguito.  
   
- Per altre informazioni sull'esecuzione di una query in tabelle correlate nel contesto di [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], vedere [Procedura: Eseguire il mapping delle relazioni di database](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
+ Per altre informazioni sull'esecuzione di una query in tabelle correlate nel contesto di [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], vedere [Procedura: Eseguire il mapping delle relazioni di database](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
   
 ## <a name="composite-keys"></a>Chiavi composte  
  È possibile verificare l'uguaglianza di più valori usando una chiave composta. Per altre informazioni, vedere [Procedura: Eseguire un join usando chiavi composte](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md). Le chiavi composte possono essere usate anche nella clausola `group`.  
@@ -113,3 +113,4 @@ Il clausola `join` è utile per l'associazione di elementi di sequenze di origin
  [Procedura: Ordinare i risultati di una clausola join](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
  [Procedura: Eseguire un join usando chiavi composte](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
  [Procedura: Installare database di esempio](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
+

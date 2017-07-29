@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Scrivere testo in file della directory Documenti in Visual Basic| Microsoft Docs'
+title: 'Procedura: scrivere testo in file della directory Documenti in Visual Basic'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 848f7c3eac56f85d2af4c613645d54b70061d072
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c900072d184469ead75bb76a3e152edce357a34f
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Procedura: scrivere testo in file della directory Documenti in Visual Basic
@@ -75,3 +75,4 @@ L'oggetto `My.Computer.FileSystem.SpecialDirectories` consente di accedere a dir
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>
+

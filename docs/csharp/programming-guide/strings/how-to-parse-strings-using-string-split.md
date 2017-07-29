@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Analizzare le stringhe con String.Split (Guida per programmatori C#) | Microsoft Docs'
+title: 'Procedura: Analizzare le stringhe con String.Split (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,15 +31,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 1f5f15c305619c538aa276396c31296f42c8f40a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c0ef96f1cb074c32208457c192d53c69d95a102d
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-programming-guide"></a>Procedura: Analizzare le stringhe con String.Split (Guida per programmatori C#)
-L'esempio di codice seguente illustra come analizzare una stringa con il metodo <xref:System.String.Split%2A?displayProperty=fullName>. <xref:System.String.Split%2A> accetta come input una matrice di caratteri che indica quali caratteri separano le sottostringhe rilevanti della stringa di destinazione.  La funzione restituisce una matrice di sottostringhe.  
+L'esempio di codice seguente mostra come analizzare una stringa con il metodo <xref:System.String.Split%2A?displayProperty=fullName> . <xref:System.String.Split%2A> accetta come input una matrice di caratteri che indica quali caratteri separano le sottostringhe rilevanti della stringa di destinazione.  La funzione restituisce una matrice di sottostringhe.  
   
  Questo esempio usa spazi, virgole, punti, due punti e tabulazioni, tutti passati in una matrice che contiene questi caratteri di separazione per <xref:System.String.Split%2A>.  Ogni parola nella frase della stringa di destinazione viene visualizzata separatamente rispetto alla matrice di stringhe risultante.  
   

@@ -1,5 +1,5 @@
 ---
-title: Filtro di dati (C#) | Microsoft Docs
+title: Filtro di dati (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1d0efd313a670348a65870c348dd2ef5e079e5d0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: defa6716f677c44da5dd27cb64b3b1d140a65272
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="filtering-data-c"></a>Filtro di dati (C#)
@@ -41,7 +42,7 @@ Il filtro si riferisce all'operazione in base alla quale il set di risultati vie
 |OfType|Seleziona i valori, a seconda della loro capacità di eseguire il cast a un tipo specificato.|Non applicabile.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName>|  
 |Dove|Seleziona i valori che si basano su una funzione di predicato.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=fullName>|  
   
-## <a name="query-expression-syntax-example"></a>Esempi di sintassi delle espressioni di query  
+## <a name="query-expression-syntax-example"></a>Esempio di sintassi delle espressioni di query  
  Nell'esempio seguente viene usata la clausola `where` per filtrare da una matrice le stringhe con una lunghezza specifica.  
   
 ```csharp  
@@ -63,9 +64,10 @@ foreach (string str in query)
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Linq>   
- [Panoramica degli operatori query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [Clausola Where](../../../../csharp/language-reference/keywords/where-clause.md)   
  [Procedura: Specificare dinamicamente i filtri dei predicati in fase di esecuzione](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)   
  [Procedura: Eseguire una query sui metadati di un assembly tramite reflection (LINQ)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)   
  [Procedura: Eseguire una query per trovare i file con un attributo o un nome specifico (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)   
  [Procedura: Ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+

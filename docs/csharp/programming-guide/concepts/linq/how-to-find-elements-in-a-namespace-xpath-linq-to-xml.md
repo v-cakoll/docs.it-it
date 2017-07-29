@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Trovare elementi in uno spazio dei nomi (XPath-LINQ to XML) (C#) | Microsoft Docs'
+title: 'Procedura: Trovare elementi in uno spazio dei nomi (XPath-LINQ to XML) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,22 +14,22 @@ ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dc1b201a807b8e5c060720018195fe3639e748dc
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f67bea5244b69013a5f694415ded6f0bc94f77f7
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Procedura: Trovare elementi in uno spazio dei nomi (XPath-LINQ to XML) (C#)
-Le espressioni XPath consentono di trovare nodi in un determinato spazio dei nomi. Per specificare gli spazi dei nomi, nelle espressioni XPath si usano prefissi di spazio dei nomi. Per analizzare un'espressione XPath che contiene prefissi di spazio dei nomi, è necessario passare ai metodi XPath un oggetto che implementi <xref:System.Xml.IXmlNamespaceResolver>. Questo esempio usa <xref:System.Xml.XmlNamespaceManager>.  
+Le espressioni XPath consentono di trovare nodi in un determinato spazio dei nomi. Per specificare gli spazi dei nomi, nelle espressioni XPath si usano prefissi di spazio dei nomi. Per analizzare un'espressione XPath che contiene prefissi di spazio dei nomi, è necessario passare ai metodi XPath un oggetto che implementa <xref:System.Xml.IXmlNamespaceResolver>. In questo esempio viene usato <xref:System.Xml.XmlNamespaceManager>.  
   
  L'espressione XPath è:  
   
  `./aw:*`  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene letto un albero XML contenente due spazi dei nomi. Per leggere il documento XML viene usato <xref:System.Xml.XmlReader>. Si ottiene quindi <xref:System.Xml.XmlNameTable> da <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlNamespaceManager> da <xref:System.Xml.XmlNameTable>. Per selezionare gli elementi viene usato <xref:System.Xml.XmlNamespaceManager>.  
+ Nell'esempio seguente viene letto un albero XML contenente due spazi dei nomi. Per leggere il documento XML viene usato <xref:System.Xml.XmlReader>. Quindi si ottiene <xref:System.Xml.XmlNameTable> da <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlNamespaceManager> da <xref:System.Xml.XmlNameTable>. Viene usato <xref:System.Xml.XmlNamespaceManager> quando si selezionano gli elementi.  
   
 ```csharp  
 XmlReader reader = XmlReader.Create("ConsolidatedPurchaseOrders.xml");  
@@ -88,3 +88,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ to XML per gli utenti di XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

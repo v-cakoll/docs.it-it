@@ -1,5 +1,5 @@
 ---
-title: Aggiunta di elementi, attributi e nodi a un albero XML (C#) | Microsoft Docs
+title: Aggiunta di elementi, attributi e nodi a un albero XML (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,29 +14,29 @@ ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 858d5b2c5ed680a0e52e374b8ec98762d7fde043
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6894e0685d413297c01118df16d01f7d956ee333
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Aggiunta di elementi, attributi e nodi a un albero XML (C#)
 È possibile aggiungere contenuto (elementi, attributi, commenti, istruzioni di elaborazione, testo e CDATA) a un albero XML esistente.  
   
 ## <a name="methods-for-adding-content"></a>Metodi per l'aggiunta di contenuto  
- I metodi seguenti aggiungono contenuto figlio a <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>:  
+ I metodi seguenti consentono di aggiungere contenuto figlio a un oggetto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>:  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|Aggiunge contenuto alla fine del contenuto figlio di <xref:System.Xml.Linq.XContainer>.|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Aggiunge contenuto all'inizio del contenuto figlio di <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|Consente di aggiungere il contenuto alla fine del contenuto figlio di <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Consente di aggiungere il contenuto all'inizio del contenuto figlio di <xref:System.Xml.Linq.XContainer>.|  
   
- I seguenti metodi consentono di aggiungere contenuto come nodi di pari livello di <xref:System.Xml.Linq.XNode>. Il nodo più comune al quale si aggiunge contenuto di pari livello è <xref:System.Xml.Linq.XElement>, sebbene sia possibile aggiungere contenuto di pari livello valido ad altri tipi di nodi, ad esempio <xref:System.Xml.Linq.XText> o <xref:System.Xml.Linq.XComment>.  
+ I seguenti metodi consentono di aggiungere contenuto come nodi di pari livello di un oggetto <xref:System.Xml.Linq.XNode>. Il nodo più comune al quale viene aggiunto contenuto di pari livello è <xref:System.Xml.Linq.XElement>, anche se è possibile aggiungere contenuto di pari livello valido ad altri tipi di nodi, tra cui <xref:System.Xml.Linq.XText> o <xref:System.Xml.Linq.XComment>.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Aggiunge contenuto dopo <xref:System.Xml.Linq.XNode>.|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Consente di aggiungere contenuto dopo <xref:System.Xml.Linq.XNode>.|  
 |<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Aggiunge contenuto prima di <xref:System.Xml.Linq.XNode>.|  
   
 ## <a name="example"></a>Esempio  
@@ -91,3 +91,4 @@ Console.WriteLine(xmlTree);
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica degli alberi XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+

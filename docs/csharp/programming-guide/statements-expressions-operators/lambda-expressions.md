@@ -1,5 +1,5 @@
 ---
-title: Espressioni lambda (Guida per programmatori C#) | Microsoft Docs
+title: Espressioni lambda (Guida per programmatori C#)
 ms.date: 2017-03-03
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 43ba8cdf265efd930199f7c6a8a77e49f491e737
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c952c72d9108775fbd0f824f82cacdab5ba91d09
 ms.contentlocale: it-it
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Espressioni lambda (Guida per programmatori C#)
@@ -72,9 +72,9 @@ namespace ConsoleApplication1
   
  L'operatore `=>` ha la stessa precedenza dell'assegnazione (`=`) e [prevede l'associazione all'operando di destra](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (vedere la sezione "Associazione" dell'articolo sugli operatori).  
   
- Le espressioni lambda vengono utilizzate nelle query [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] basate sul metodo come argomenti dei metodi di operatori di query standard, quali <xref:System.Linq.Enumerable.Where%2A>.  
+ Le espressioni lambda vengono utilizzate nelle query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] basate sul metodo come argomenti dei metodi di operatori di query standard, quali <xref:System.Linq.Enumerable.Where%2A>.  
   
- Quando si utilizza la sintassi basata sul metodo per chiamare il metodo <xref:System.Linq.Enumerable.Where%2A> nella classe <xref:System.Linq.Enumerable>, come in [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] to Objects e [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], il parametro è un tipo <xref:System.Func%602?displayProperty=fullName> delegato. Un'espressione lambda è il modo più pratico per creare tale delegato. Quando, ad esempio, si chiama lo stesso metodo nella classe <xref:System.Linq.Queryable?displayProperty=fullName>, come in [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], il tipo di parametro è <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, dove Func è un qualsiasi delegato Func con un massimo di sedici parametri di input. Un'espressione lambda rappresenta quindi un modo rapido per costruire tale albero delle espressioni. Mediante le espressioni lambda, le chiamate `Where` risultano simili anche se in realtà il tipo di oggetto creato dall'espressione lambda è diverso.  
+ Quando si utilizza la sintassi basata sul metodo per chiamare il metodo <xref:System.Linq.Enumerable.Where%2A> nella classe <xref:System.Linq.Enumerable> , come in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], il parametro è un tipo <xref:System.Func%602?displayProperty=fullName>delegato. Un'espressione lambda è il modo più pratico per creare tale delegato. Quando, ad esempio, si chiama lo stesso metodo nella classe <xref:System.Linq.Queryable?displayProperty=fullName>, come in [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], il tipo di parametro è <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, dove Func è un qualsiasi delegato Func con un massimo di sedici parametri di input. Un'espressione lambda rappresenta quindi un modo rapido per costruire tale albero delle espressioni. Mediante le espressioni lambda, le chiamate `Where` risultano simili anche se in realtà il tipo di oggetto creato dall'espressione lambda è diverso.  
   
  Nell'esempio precedente si noti che la firma del delegato ha un parametro di input tipizzato in modo implicito di tipo `int`e restituisce un oggetto `int`. L'espressione lambda può essere convertita in un delegato di tale tipo poiché dispone anche di un parametro di input (`x`) e di un valore restituito che il compilatore può convertire in modo implicito nel tipo `int`. L'inferenza dei tipi viene illustrata più dettagliatamente nelle sezioni seguenti. Quando il delegato viene richiamato tramite un parametro di input pari a 5, restituisce un risultato di 25.  
   
@@ -188,9 +188,9 @@ Func<int, bool> myFunc = x => x == 5;
 bool result = myFunc(4); // returns false of course  
 ```  
   
- È inoltre possibile fornire un'espressione lambda quando il tipo di argomento è `Expression<Func>`, ad esempio negli operatori di query standard definiti in System.Linq.Queryable. Quando si specifica un argomento `Expression<Func>`, l'espressione lambda viene compilata in un albero delle espressioni.  
+ È inoltre possibile fornire un'espressione lambda quando il tipo di argomento è `Expression<Func>`, ad esempio negli operatori di query standard definiti in System.Linq.Queryable. Quando si specifica un argomento `Expression<Func>` , l'espressione lambda viene compilata in un albero delle espressioni.  
   
- Di seguito viene illustrato un operatore di query standard, il metodo <xref:System.Linq.Enumerable.Count%2A>:  
+ Di seguito viene illustrato un operatore di query standard, il metodo <xref:System.Linq.Enumerable.Count%2A> :  
   
 ```csharp  
 int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
@@ -290,7 +290,7 @@ class Test
 -   Un'espressione lambda non può contenere un'istruzione `goto` , `break` o `continue` , inclusa nella funzione lambda se la destinazione dell'istruzione jump è esterna al blocco. È altresì errato inserire all'esterno del blocco della funzione lambda un'istruzione jump se la destinazione è interna al blocco.  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>Capitoli del libro rappresentati  
  [Delegates, Events, and Lambda Expressions](http://go.microsoft.com/fwlink/?LinkId=195395) (Delegati, eventi ed espressioni lambda) in [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  

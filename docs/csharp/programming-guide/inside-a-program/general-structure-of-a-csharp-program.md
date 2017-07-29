@@ -1,5 +1,5 @@
 ---
-title: Struttura generale di un programma C# (Guida per programmatori C#) | Microsoft Docs
+title: Struttura generale di un programma C# (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ad2e4034bd74f66f87f15a37044b335ef975430e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d55ac6a6d35e5f47ab26da681afe9fb5555331ec
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Struttura generale di un programma C# (Guida per programmatori C#)
@@ -60,3 +60,4 @@ I programmi C# possono essere costituiti da uno o più file. Ciascun file può c
  [Contenuto di un programma C#](../../../csharp/programming-guide/inside-a-program/index.md)   
  [Riferimenti per C#](../../../csharp/language-reference/index.md)   
  [\<Applicazioni di esempio di C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+
