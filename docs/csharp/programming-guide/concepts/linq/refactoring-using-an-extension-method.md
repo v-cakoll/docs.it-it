@@ -1,5 +1,5 @@
 ---
-title: Refactoring con un metodo di estensione (C#) | Microsoft Docs
+title: Refactoring con un metodo di estensione (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,17 +14,17 @@ ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8d4df7081c765ce09f95f51822dbd7543876b87
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c4145e38a6fc49d53d274520dd155cffb5e7f9d5
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refactoring con un metodo di estensione (C#)
 Questo esempio si basa sull'esempio precedente [Recupero del testo dei paragrafi (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), effettuando il refactoring della concatenazione di stringhe usando una funzione pura che viene implementata come metodo di estensione.  
   
- Nell'esempio precedente viene usato l'operatore di query standard <xref:System.Linq.Enumerable.Aggregate%2A> per concatenare più stringhe in un'unica stringa. Se tuttavia si scrive un metodo di estensione per eseguire tale operazione, la query risultante sarà più semplice e ridotta.  
+ Nell'esempio precedente è stato usato l'operatore di query standard <xref:System.Linq.Enumerable.Aggregate%2A> per concatenare più stringhe in un'unica stringa. Se tuttavia si scrive un metodo di estensione per eseguire tale operazione, la query risultante sarà più semplice e ridotta.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene elaborato un documento WordprocessingML, recuperandone i paragrafi, nonché lo stile e il testo di ogni paragrafo. Questo esempio si basa su esempi precedenti di questa esercitazione.  
@@ -33,7 +33,7 @@ Questo esempio si basa sull'esempio precedente [Recupero del testo dei paragrafi
   
  Per istruzioni per la creazione del documento di origine di questo esempio, vedere [Creazione del documento Office Open XML di origine (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- In questo esempio vengono usate classi dell'assembly WindowsBase Usa i tipi nello spazio dei nomi <xref:System.IO.Packaging?displayProperty=fullName>.  
+ In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=fullName>.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -261,3 +261,4 @@ StyleName:Code >Hello World<
 ## <a name="see-also"></a>Vedere anche  
  [Tutorial: Manipulating Content in a WordprocessingML Document (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  (Esercitazione sulla modifica del contenuto in un documento WordprocessingML (C#))  
  [Refactoring in funzioni pure (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+

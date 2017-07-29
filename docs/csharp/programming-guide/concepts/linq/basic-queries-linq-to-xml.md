@@ -1,5 +1,5 @@
 ---
-title: Query di base (LINQ to XML) (C#) | Microsoft Docs
+title: Query di base (LINQ to XML) (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e3879dfe92f158c545a1f4a42c6bfc35aae06f3c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 272cfadeccb505960f7872274a2af8c18efc3679
 ms.contentlocale: it-it
-ms.lasthandoff: 05/24/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Query di base (LINQ to XML) (C#)
-Contenuto della sezione vengono forniti esempi di query [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] di base.  
+Contenuto della sezione vengono forniti esempi di query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] di base.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   
@@ -39,9 +38,10 @@ Contenuto della sezione vengono forniti esempi di query [!INCLUDE[sqltecxlinq](.
 |[Procedura: Trovare tutti i nodi in uno spazio dei nomi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|Viene illustrato come individuare tutti i nodi inclusi in uno spazio dei nomi specifico.|  
 |[Procedura: Ordinare elementi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements.md)|Viene illustrato come scrivere una query che ordina i relativi risultati.|  
 |[Procedura: Ordinare elementi in base a più chiavi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|Viene illustrato come ordinare elementi su più chiavi.|  
-|[Procedura: Calcolare valori intermedi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Illustra come usare la clausola `Let` per calcolare valori intermedi in una query [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].|  
+|[Procedura: Calcolare valori intermedi (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Illustra come usare la clausola `Let` per calcolare valori intermedi in una query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Procedura: Scrivere una query per trovare elementi basati sul contesto (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|Viene illustrato come selezionare elementi basati su altri elementi dell'albero.|  
 |[Procedura: Eseguire il debug di set di risultati vuoti di query (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Viene illustrata la correzione appropriata per il debug di query su codice XML incluso in uno spazio dei nomi predefinito.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di query su strutture ad albero XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+

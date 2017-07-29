@@ -1,5 +1,5 @@
 ---
-title: Panoramica della classe XAttribute (C#) | Microsoft Docs
+title: Panoramica della classe XAttribute (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1b461158fed20ea5824d89ec455abb667d3fef2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdac066fbd467768cedcf93f6258cbde0b6dd847
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="xattribute-class-overview-c"></a>Panoramica della classe XAttribute (C#)
 Gli attributi sono coppie nome/valore associate a un elemento. La classe <xref:System.Xml.Linq.XAttribute> rappresenta gli attributi XML.  
   
 ## <a name="overview"></a>Panoramica  
- Le modalità di utilizzo degli attributi in [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] sono simili a quelle degli elementi. I relativi costruttori sono simili. I metodi usati per recuperare le relative raccolte sono simili. Un'espressione di query [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] relativa a una raccolta di attributi ha un aspetto molto simile a quello di un'espressione di query [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] relativa a una raccolta di elementi.  
+ Le modalità di utilizzo degli attributi in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sono simili a quelle degli elementi. I relativi costruttori sono simili. I metodi usati per recuperare le relative raccolte sono simili. Un'espressione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] relativa a una raccolta di attributi ha un aspetto molto simile a quello di un'espressione di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] relativa a una raccolta di elementi.  
   
  L'ordine con cui gli attributi vengono aggiunti a un elemento viene mantenuto. Quando si scorrono gli attributi, questi vengono visualizzati nell'ordine in cui sono stati aggiunti.  
   
@@ -57,7 +58,7 @@ Console.WriteLine(phone);
 ```  
   
 ### <a name="functional-construction-of-attributes"></a>Costruzione funzionale di attributi  
- È possibile costruire oggetti <xref:System.Xml.Linq.XAttribute> in linea con la costruzione di oggetti <xref:System.Xml.Linq.XElement>, come indicato di seguito:  
+ È possibile costruire oggetti <xref:System.Xml.Linq.XAttribute> in linea con la costruzione di oggetti <xref:System.Xml.Linq.XElement>, come descritto di seguito:  
   
 ```csharp  
 XElement c = new XElement("Customers",  
@@ -91,9 +92,10 @@ Console.WriteLine(c);
 ```  
   
 ### <a name="attributes-are-not-nodes"></a>Attributi non nodi  
- Esistono alcune differenze tra attributi ed elementi. Gli oggetti <xref:System.Xml.Linq.XAttribute> non sono nodi nell'albero XML, ma sono coppie nome/valore associate a un elemento XML. A differenza del modello DOM (Document Object Model), questa definizione rispecchia maggiormente la struttura del codice XML. Benché gli oggetti <xref:System.Xml.Linq.XAttribute> non siano effettivamente nodi dell'albero XML, l'uso degli oggetti <xref:System.Xml.Linq.XAttribute> è molto simile a quello degli oggetti <xref:System.Xml.Linq.XElement>.  
+ Esistono alcune differenze tra attributi ed elementi. Gli oggetti <xref:System.Xml.Linq.XAttribute> non rappresentano nodi nell'albero XML, ma sono coppie nome/valore associate a un elemento XML. A differenza del modello DOM (Document Object Model), questa definizione rispecchia maggiormente la struttura del codice XML. Sebbene gli oggetti <xref:System.Xml.Linq.XAttribute> non siano effettivamente nodi dell'albero XML, le modalità di utilizzo degli oggetti <xref:System.Xml.Linq.XAttribute> sono molto simili a quelle degli oggetti <xref:System.Xml.Linq.XElement>.  
   
  Questa distinzione è di fondamentale importanza solo per gli sviluppatori che scrivono codice che riguarda gli alberi XML a livello di nodo. Non interessa quindi la maggior parte degli sviluppatori.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica della programmazione con LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Generare XML da file CSV (C#) | Microsoft Docs'
+title: 'Procedura: Generare XML da file CSV (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,18 @@ ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8297ec6c462a3b01548b156f10a1470b8a5e6173
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 749919868364d0f35bd60246460013b07c004643
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>Procedura: Generare XML da file CSV (C#)
-In questo esempio viene illustrato come usare [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] e [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] per generare un file XML da un file CSV con valori delimitati da virgole.  
+In questo esempio viene illustrato come usare [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per generare un file XML da un file CSV con valori delimitati da virgole.  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente consente di eseguire la query [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] su una matrice di stringhe.  
+ Il codice seguente consente di eseguire la query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] su una matrice di stringhe.  
   
  Nella query viene usata la clausola `let` per suddividere ogni stringa in una matrice di campi.  
   
@@ -120,4 +120,5 @@ Console.WriteLine(cust);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Projections and Transformations (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md) (Proiezioni e trasformazioni (LINQ to XML) (C#))
+ [Proiezioni e trasformazioni (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

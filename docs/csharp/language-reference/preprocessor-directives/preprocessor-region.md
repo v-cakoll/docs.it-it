@@ -1,5 +1,5 @@
 ---
-title: '#region (Riferimenti per C#) | Microsoft Docs'
+title: '#<a name="region-c-reference"></a>region (Riferimenti per C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2924daffcdc44c8f5ba5cf97c5b141c0dd07ca4a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f7685d23bc1d40a0d0b6c9ac9a644019e1186eb7
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="region-c-reference"></a>#region (Riferimenti per C#)
-`#region` consente di specificare un blocco di codice che è possibile espandere o comprimere quando viene usata la funzionalità [Struttura](https://docs.microsoft.com/visualstudio/ide/outlining) dell'editor di codice di Visual Studio. Nei file di codice più lunghi, è consigliabile essere in grado di comprimere o nascondere una o più aree in modo da potersi concentrare sulla parte del file su cui si sta lavorando. L'esempio seguente illustra come definire un'area:  
+`#region` consente di specificare un blocco di codice che è possibile espandere o comprimere quando viene usata la funzionalità [Struttura](/visualstudio/ide/outlining) dell'editor di codice di Visual Studio. Nei file di codice più lunghi, è consigliabile essere in grado di comprimere o nascondere una o più aree in modo da potersi concentrare sulla parte del file su cui si sta lavorando. L'esempio seguente illustra come definire un'area:  
   
-```  
+```csharp
 #region MyClass definition  
 public class MyClass   
 {  

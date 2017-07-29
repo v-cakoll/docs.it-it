@@ -1,5 +1,5 @@
 ---
-title: Sicurezza in LINQ to XML (C#) | Microsoft Docs
+title: Sicurezza in LINQ to XML (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d4da76c120b8028c12a8c2ac58e5130d89a01e05
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b55a9b70ad4291bc74b629e289bdc168a30702ca
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-security-c"></a>Sicurezza in LINQ to XML (C#)
@@ -31,16 +32,16 @@ In questo argomento vengono descritti i problemi di sicurezza associati a LINQ t
 ## <a name="linq-to-xml-security-overview"></a>Cenni preliminari sulla sicurezza in LINQ to XML  
  LINQ to XML è progettato più per semplificare la programmazione che per applicazioni lato server con requisiti rigorosi di sicurezza. La maggior parte degli scenari XML sono costituiti dall'elaborazione di documenti XML attendibili, anziché dall'elaborazione di documenti XML non attendibili caricati in un server. LINQ to XML è ottimizzato per questi scenari.  
   
- Se è necessario elaborare dati non attendibili provenienti da origini sconosciute, è consigliabile usare un'istanza della classe <xref:System.Xml.XmlReader> configurata per filtrare gli attacchi di tipo Denial of Service XML noti.  
+ Se è necessario elaborare dati non attendibili provenienti da origini sconosciute, si consiglia di usare un'istanza della classe <xref:System.Xml.XmlReader> configurata per filtrare gli attacchi di tipo Denial of Service XML noti.  
   
- Se è stata configurata una classe <xref:System.Xml.XmlReader> per limitare gli attacchi Denial of Service, è possibile usare il lettore per popolare l'albero LINQ to XML e trarre comunque vantaggio dai miglioramenti di LINQ to XML per la produttività nella programmazione. Diverse tecniche implicano la creazione di lettori configurati per limitare i problemi di sicurezza e quindi la creazione di istanze di un albero XML tramite il lettore configurato.  
+ Se è stata configurata una classe <xref:System.Xml.XmlReader> per limitare gli attacchi Denial of Service, è possibile usare tale lettore per popolare l'albero LINQ to XML e trarre comunque vantaggio dai miglioramenti di LINQ to XML per la produttività nella programmazione. Diverse tecniche implicano la creazione di lettori configurati per limitare i problemi di sicurezza e quindi la creazione di istanze di un albero XML tramite il lettore configurato.  
   
  XML è intrinsecamente vulnerabile agli attacchi di tipo Denial of Service, perché i documenti non presentano vincoli in termine di dimensioni, complessità, dimensioni dei nomi degli elementi e così via. Indipendentemente dal componente usato per l'elaborazione XML, è necessario essere sempre pronti a riciclare il dominio dell'applicazione se usa una quantità eccessiva di risorse.  
   
 ## <a name="mitigation-of-xml-xsd-xpath-and-xslt-attacks"></a>Limitazione degli attacchi XML, XSD, XPath e XSLT  
- LINQ to XML è basato su <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter>. LINQ to XML supporta XSD e XPath tramite i metodi di estensione negli spazi dei nomi <xref:System.Xml.Schema?displayProperty=fullName> e <xref:System.Xml.XPath?displayProperty=fullName>. Usando le classi <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator> e <xref:System.Xml.XmlWriter> in associazione a LINQ to XML, è possibile richiamare XSLT per trasformare gli alberi XML.  
+ LINQ to XML si basa su <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter>. LINQ to XML supporta XSD e XPath tramite i metodi di estensione negli spazi dei nomi <xref:System.Xml.Schema?displayProperty=fullName> e <xref:System.Xml.XPath?displayProperty=fullName>. Usando le classi <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator> e <xref:System.Xml.XmlWriter> insieme a LINQ to XML, è possibile richiamare XSLT per trasformare le alberi XML.  
   
- Se si opera in ambienti meno protetti, è necessario tenere conto di diversi problemi di sicurezza associati a XML e all'uso delle classi in <xref:System.Xml?displayProperty=fullName>, <xref:System.Xml.Schema?displayProperty=fullName>, <xref:System.Xml.XPath?displayProperty=fullName> e <xref:System.Xml.Xsl?displayProperty=fullName>. Di seguito sono riportati solo alcuni di questi problemi:  
+ Se si opera in ambienti meno protetti, è necessario tenere conto di diversi problemi di sicurezza associati a XML e all'utilizzo delle classi in <xref:System.Xml?displayProperty=fullName>, <xref:System.Xml.Schema?displayProperty=fullName>, <xref:System.Xml.XPath?displayProperty=fullName> e <xref:System.Xml.Xsl?displayProperty=fullName>. Di seguito sono riportati solo alcuni di questi problemi:  
   
 -   XSD, XPath e XSLT sono linguaggi basati su stringa in cui è possibile specificare operazioni che richiedono quantità elevate di tempo o memoria. È responsabilità dei programmatori di applicazioni che ottengono stringhe XSD, XPath o XSLT da origini non attendibili verificare che tali stringhe non siano dannose o monitorare e limitare la possibilità che la valutazione delle stringhe comporti un consumo eccessivo delle risorse di sistema.  
   
@@ -54,7 +55,7 @@ In questo argomento vengono descritti i problemi di sicurezza associati a LINQ t
   
 -   I documenti XML particolarmente complessi possono presentare problemi di Denial of Service. È preferibile limitare la complessità dei documenti XML.  
   
--   Non accettare componenti di supporto, ad esempio oggetti <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager> e <xref:System.Xml.XmlResolver> provenienti da assembly non attendibili.  
+-   Non accettare componenti di supporto, ad esempio oggetti <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager>, e <xref:System.Xml.XmlResolver>, provenienti da assembly non attendibili.  
   
 -   Leggere i dati in blocchi per limitare gli attacchi a documenti di grandi dimensioni.  
   
@@ -79,7 +80,7 @@ In questo argomento vengono descritti i problemi di sicurezza associati a LINQ t
   
  Se il codice di un assembly con autorizzazioni maggiori chiama <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> in un gestore eventi e quindi l'albero XML viene passato a un assembly dannoso con autorizzazioni limitate, l'assembly dannoso può causare la generazione di un evento. Poiché l'evento esegue codice incluso nell'assembly con autorizzazioni maggiori, l'assembly dannoso opererebbe in questo caso con privilegi elevati.  
   
- È consigliabile non eseguire mai chiamate a <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> in un gestore eventi.  
+ Si consiglia di non eseguire mai chiamate a <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> in un gestore eventi.  
   
 ### <a name="dtds-are-not-secure"></a>Le dichiarazioni DTD non sono protette  
  Le entità nelle dichiarazioni DTD sono intrinsecamente non protette. È possibile che un documento XML dannoso contenente una dichiarazione DTD provochi l'uso di tutta la memoria e il tempo CPU disponibili da parte del parser, generando un attacco Denial of Service. Pertanto, in LINQ to XML l'elaborazione DTD è disattivata per impostazione predefinita. Non accettare DTD provenienti da origini non attendibili.  
@@ -117,3 +118,4 @@ In questo argomento vengono descritti i problemi di sicurezza associati a LINQ t
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

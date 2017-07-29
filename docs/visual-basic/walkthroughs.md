@@ -1,5 +1,5 @@
 ---
-title: Procedure dettagliate relative al linguaggio Visual Basic | Microsoft Docs
+title: Procedure dettagliate relative al linguaggio Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f88f7dcc7880621cf0f482b32ad7c1e5f1b51257
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4b4e9eba6d086d0094c8368d7c3d67c676fe0bd3
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Procedure dettagliate relative al linguaggio Visual Basic
@@ -44,19 +44,19 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Viene illustrato come creare una soluzione asincrona usando [Async](../visual-basic/language-reference/modifiers/async.md) e [Await](../visual-basic/language-reference/operators/await-operator.md).  
   
  [Dichiarazione e generazione di eventi](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- Viene illustrato come dichiarare e generare eventi in [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Viene illustrato come dichiarare e generare eventi in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Gestione degli eventi](../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)  
  Spiega come gestire gli eventi usando la parola chiave standard `WithEvents` o le nuove parole chiave `AddHandler` / `RemoveHandler`.  
   
  [Creazione e implementazione di interfacce](../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)  
- Viene illustrato come dichiarare e implementare le interfacce in [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Viene illustrato come dichiarare e implementare le interfacce in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Definizione delle classi](../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  Descrive la procedura di dichiarazione di una classe e dei relativi campi, proprietà, metodi ed eventi.  
   
  [Scrittura delle query in Visual Basic](../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- Viene illustrato come usare le funzionalità del linguaggio Visual Basic per scrivere le espressioni di query [!INCLUDE[vbteclinqext](../csharp/getting-started/includes/vbteclinqext_md.md)].  
+ Viene illustrato come usare le funzionalità del linguaggio Visual Basic per scrivere le espressioni di query [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
  [Implementazione di IEnumerable(Of T) in Visual Basic](../visual-basic/programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
  Viene illustrato come creare una classe che implementa l'interfaccia `IEnumerable(Of String)` e una classe che implementa l'interfaccia `IEnumerator(Of String)` per leggere un file di testo una riga alla volta.  
@@ -65,10 +65,10 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Spiega come usare le istruzioni `Declare` e chiamare le API di Windows. Include informazioni sull'uso degli attributi per controllare il marshalling per la chiamata API e su come esporre una chiamata API come metodo di una classe.  
   
  [Creazione di oggetti COM con Visual Basic](../visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md)  
- Viene illustrato come creare oggetti COM in [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], con e senza il modello di classe COM.  
+ Viene illustrato come creare oggetti COM in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], con e senza il modello di classe COM.  
   
  [Implementazione dell'ereditarietà con gli oggetti COM](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- Spiega come usare [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 6.0 per creare un oggetto COM contenente una classe che verrà poi usata come classe di base in [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Spiega come usare [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 per creare un oggetto COM contenente una classe che verrà poi usata come classe di base in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Multithreading](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  Viene illustrato come creare un'applicazione multithreading che cerca le occorrenze di una parola in un file di testo.  
@@ -95,13 +95,14 @@ Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, ch
  Illustra come usare la classe <xref:System.Security.Cryptography.DESCryptoServiceProvider> per crittografare e decrittografare le stringhe.  
   
  [Modifica di file e cartelle in Visual Basic](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Viene illustrato come usare le funzioni [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] per determinare informazioni su un file, cercare una stringa in un file e scrivere in un file.  
+ Viene illustrato come usare le funzioni [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] per determinare informazioni su un file, cercare una stringa in un file e scrivere in un file.  
   
  [Modifica di file mediante i metodi .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Viene illustrato come usare i metodi [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] per determinare informazioni su un file, cercare una stringa in un file e scrivere in un file.  
+ Viene illustrato come usare i metodi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per determinare informazioni su un file, cercare una stringa in un file e scrivere in un file.  
   
  [Persistenza di un oggetto in Visual Basic](http://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
  Viene illustrato come creare un oggetto semplice e rendere persistenti i relativi dati in un file.  
   
  [Supporto test preliminare con la funzionalità di generazione dall'utilizzo](http://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
  Spiega come eseguire uno sviluppo con test preliminare, in cui prima si scrivono gli unit test e successivamente il codice sorgente in modo che il test abbia esito positivo.
+

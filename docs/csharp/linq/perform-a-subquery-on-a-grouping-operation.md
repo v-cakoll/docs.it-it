@@ -1,6 +1,6 @@
 ---
-title: Eseguire una sottoquery su un&quot;operazione di raggruppamento
-description: Come eseguire una sottoquery su un&quot;operazione di raggruppamento.
+title: Eseguire una sottoquery su un'operazione di raggruppamento
+description: Come eseguire una sottoquery su un'operazione di raggruppamento.
 keywords: .NET, .NET Core, C#
 author: BillWagner
 manager: wpickett
@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c2c95479db10d81e748349e156f2314a6d4fccf
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 68acc07e0c33d042123d3cd403a73d58a7c3d245
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>Eseguire una sottoquery su un'operazione di raggruppamento
@@ -34,3 +35,4 @@ Questo argomento descrive due diversi modi per creare una query che ordina i dat
    
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni di query LINQ](index.md)
+

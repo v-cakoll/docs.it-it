@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Persistenza di un oggetto in Visual Studio (C#) | Microsoft Docs'
+title: 'Procedura dettagliata: Persistenza di un oggetto in Visual Studio (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f76e40e2503bf857922490d728c3a9f3432aa31f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>Procedura dettagliata: Persistenza di un oggetto in Visual Studio (C#)
@@ -44,7 +45,7 @@ Sebbene sia possibile impostare le proprietà di un oggetto sui valori predefini
   
 ### <a name="to-create-the-loan-class"></a>Per creare la classe Loan  
   
-1.  Creare un nuovo progetto di libreria di classi denominato "LoanClass". Per altre informazioni, vedere [Creazione di soluzioni e progetti](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1.  Creare un nuovo progetto di libreria di classi denominato "LoanClass". Per altre informazioni, vedere [Creazione di soluzioni e progetti](/visualstudio/ide/creating-solutions-and-projects).  
   
 2.  In **Esplora soluzioni** aprire il menu di scelta rapida per il file Class1 e scegliere **Rinomina**. Rinominare il file `Loan` e premere INVIO. Modificando il nome del file, anche la classe verrà rinominata `Loan`.  
   

@@ -1,5 +1,5 @@
 ---
-title: Riproduzione di suoni (Visual Basic) | Microsoft Docs
+title: Riproduzione di suoni (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -37,11 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c9790c9bcd8731546b5d5e1e4aba7ba6f93fe5b1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a15efff54bd54fdaced6c741cd6acf5c8b544cdd
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="playing-sounds-visual-basic"></a>Riproduzione di suoni (Visual Basic)
@@ -67,7 +67,7 @@ Il metodo `My.Computer.Audio` offre metodi per la riproduzione di suoni.
   
  [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
   
- L'esempio di codice precedente è disponibile anche come frammento di codice IntelliSense. Nello strumento di selezione dei frammenti di codice il frammento di codice si trova in **Applicazioni Windows Form > Audio**. Per altre informazioni, vedere [Code Snippets](https://docs.microsoft.com/visualstudio/ide/code-snippets) (Frammenti di codice).  
+ L'esempio di codice precedente è disponibile anche come frammento di codice IntelliSense. Nello strumento di selezione dei frammenti di codice il frammento di codice si trova in **Applicazioni Windows Form > Audio**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).  
   
  In generale, quando un'applicazione riproduce un file audio a ciclo continuo, la riproduzione dovrà prima o poi essere interrotta.  
   
@@ -80,7 +80,7 @@ Il metodo `My.Computer.Audio` offre metodi per la riproduzione di suoni.
   
  [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
   
- L'esempio di codice precedente è disponibile anche come frammento di codice IntelliSense. Nello strumento di selezione dei frammenti di codice il frammento di codice si trova in **Applicazioni Windows Form > Audio**. Per altre informazioni, vedere [Code Snippets](https://docs.microsoft.com/visualstudio/ide/code-snippets) (Frammenti di codice).  
+ L'esempio di codice precedente è disponibile anche come frammento di codice IntelliSense. Nello strumento di selezione dei frammenti di codice il frammento di codice si trova in **Applicazioni Windows Form > Audio**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).  
   
 ## <a name="playing-system-sounds"></a>Riproduzione di suoni di sistema  
  Usare il metodo `My.Computer.Audio.PlaySystemSound` per riprodurre il suono di sistema specificato.  
@@ -97,3 +97,4 @@ Il metodo `My.Computer.Audio` offre metodi per la riproduzione di suoni.
  <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>   
  <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A>   
  <xref:Microsoft.VisualBasic.AudioPlayMode>
+

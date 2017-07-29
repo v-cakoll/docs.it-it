@@ -1,5 +1,5 @@
 ---
-title: Operazioni di concatenazione (C#) | Microsoft Docs
+title: Operazioni di concatenazione (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fb2ae007e3eba4b6534203ac07d93e58416e35f6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1f87b2e8f9cb8b5eae900228a8758c08fbfed426
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="concatenation-operations-c"></a>Operazioni di concatenazione (C#)
@@ -42,5 +43,6 @@ Il termine concatenazione descrive l'operazione che consiste nell'accodare una s
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Linq>   
- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ [Panoramica degli operatori query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+

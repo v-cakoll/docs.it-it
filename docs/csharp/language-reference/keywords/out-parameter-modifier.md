@@ -1,5 +1,5 @@
 ---
-title: Modificatore del parametro out (Riferimenti per C#) | Microsoft Docs
+title: Modificatore del parametro out (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: a2f2e9b9239836b051820bda66523822e95cdf52
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 227241d1b290dde2e9de66e6c0e3c904b432bae0
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificatore del parametro out (Riferimenti per C#)
@@ -77,7 +77,7 @@ L'overload può essere eseguito, tuttavia, se un metodo accetta un argomento `re
   
  [!code-cs[csrefKeywordsMethodParams#4](../../../../samples/snippets/csharp/language-reference/keywords/out/out-4.cs)]  
 
- Il [modello Try](https://docs.microsoft.com/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md) prevede la restituzione di `bool` per indicare se l'operazione è riuscita e la restituzione del valore prodotto dall'operazione in un argomento `out`. Numerosi metodi di analisi, ad esempio il metodo @System.DateTime.TryParse(System.String,@System.DateTime), usano questo modello.
+ Il [modello Try](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md) prevede la restituzione di `bool` per indicare se l'operazione è riuscita e la restituzione del valore prodotto dall'operazione in un argomento `out`. Numerosi metodi di analisi, ad esempio il metodo @System.DateTime.TryParse(System.String,@System.DateTime), usano questo modello.
    
 ## <a name="calling-a-method-with-an-out-argument"></a>Chiamata a un metodo con un argomento `out`
 
@@ -101,3 +101,4 @@ Nell'esempio precedente la variabile `number` è fortemente tipizzata come `int`
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
  [Parametri dei metodi](../../../csharp/language-reference/keywords/method-parameters.md)
+

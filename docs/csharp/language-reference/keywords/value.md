@@ -1,5 +1,5 @@
 ---
-title: value (Riferimenti per C#) | Microsoft Docs
+title: value (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: de1106994ec513e27bf3c6a011e905684fcd41af
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 012cf622091687996fec477a8b5b821b190bbc29
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="value-c-reference"></a>value (Riferimenti per C#)
@@ -50,3 +50,4 @@ La parola chiave contestuale `value` viene usata nella funzione di accesso set n
  [Riferimenti per C#](../../../csharp/language-reference/index.md)   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+

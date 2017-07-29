@@ -1,5 +1,5 @@
 ---
-title: Serializzazione di oggetti grafici contenenti oggetti XElement (C#) | Documentazione Microsoft
+title: Serializzazione di oggetti grafici contenenti oggetti XElement (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 752092f7455fa0a10efcaa41166b66ff1f87b16e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4e7b1d6365eb27596477de39577caa4144aa3501
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-c"></a>Serializzazione di oggetti grafici contenenti oggetti XElement (C#)
-In questo argomento viene presentata la funzionalità di serializzazione di oggetti grafico contenenti riferimenti a oggetti di tipo <xref:System.Xml.Linq.XElement>. Per semplificare questo tipo di serializzazione, <xref:System.Xml.Linq.XElement> implementa l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable>.  
+In questo argomento viene presentata la funzionalità di serializzazione di oggetti grafici contenenti riferimenti a oggetti di tipo <xref:System.Xml.Linq.XElement>. Per semplificare questo tipo di serializzazione, <xref:System.Xml.Linq.XElement> implementa l'interfaccia <xref:System.Xml.Serialization.IXmlSerializable>.  
   
  Si noti che solo la classe <xref:System.Xml.Linq.XElement> implementa la serializzazione.  
   
@@ -39,3 +40,4 @@ In questo argomento viene presentata la funzionalità di serializzazione di ogge
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

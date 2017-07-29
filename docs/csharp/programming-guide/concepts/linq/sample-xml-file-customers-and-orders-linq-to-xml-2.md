@@ -1,5 +1,5 @@
 ---
-title: 'File XML di esempio: Customers e Orders (LINQ to XML) | Microsoft Docs'
+title: 'File XML di esempio: Customers e Orders (LINQ to XML)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0517fd9aee4645f4449c863a802bd910259e81ae
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b289cbbc5bb735565549d550940b09b0d8a35f6a
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>File XML di esempio: Customers e Orders (LINQ to XML)
-Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Contiene Customers e Orders.  
+Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Contiene Customers e Orders.  
   
  L'argomento [File XSD di esempio: Customers e Orders](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) contiene uno schema XSD che può essere usato per convalidare questo documento. Lo schema usa le funzionalità `xs:key` e `xs:keyref` di XSD per stabilire che l'attributo `CustomerID` dell'elemento `Customer` è una chiave e per stabilire una relazione tra l'elemento `CustomerID` in ogni elemento `Order` e l'attributo `CustomerID` in ogni elemento `Customer`.  
   
@@ -452,3 +453,4 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
   
 ## <a name="see-also"></a>Vedere anche  
  [Documenti XML di esempio (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

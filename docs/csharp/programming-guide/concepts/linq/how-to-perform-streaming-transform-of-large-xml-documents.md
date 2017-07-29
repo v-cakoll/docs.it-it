@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (C#) | Microsoft Docs'
+title: 'Procedura: Eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: fc8716c2190ac42b66ba8d76ccfec152ea804c4a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 952fad19f9abdea464e2763b721446ab5fe68301
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Procedura: Eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (C#)
@@ -33,7 +33,7 @@ A volte è necessario trasformare file XML di grandi dimensioni e scrivere l'app
   
  Anche se viene usata la tecnica descritta in [Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), se si tenta di assemblare un albero XML che contiene il documento trasformato, l'uso della memoria sarà eccessivo.  
   
- Sono disponibili due approcci principali: il primo consiste nell'usare le caratteristiche di elaborazione posticipata di <xref:System.Xml.Linq.XStreamingElement>. L'altro prevede la creazione di un oggetto <xref:System.Xml.XmlWriter> e l'uso delle funzionalità di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] per scrivere elementi in un oggetto <xref:System.Xml.XmlWriter>. In questo argomento vengono descritti entrambi gli approcci.  
+ Sono disponibili due approcci principali: il primo consiste nell'usare le caratteristiche di elaborazione posticipata di <xref:System.Xml.Linq.XStreamingElement>. L'altro prevede la creazione di un oggetto <xref:System.Xml.XmlWriter> e l'uso delle funzionalità di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per scrivere elementi in un oggetto <xref:System.Xml.XmlWriter>. In questo argomento vengono descritti entrambi gli approcci.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente si basa sull'esempio in [Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
@@ -208,7 +208,7 @@ static void Main(string[] args)
 ## <a name="example"></a>Esempio  
  L'esempio seguente si basa sull'esempio in [Procedura: Generare un flusso di frammenti XML con accesso a informazioni di intestazione (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- In questo esempio viene usata la funzionalità di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] per scrivere elementi in <xref:System.Xml.XmlWriter>. È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.  
+ In questo esempio viene usata la funzionalità di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per scrivere elementi in <xref:System.Xml.XmlWriter>. È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.  
   
  Si noti che il metodo dell'asse personalizzato (`StreamCustomerItem`) è stato scritto in modo tale da prevedere un documento contenente elementi `Customer`, `Name` e `Item`, disposti come nel documento Source.xml seguente. Tuttavia, un'implementazione più affidabile convaliderebbe il documento di origine con uno schema XSD oppure verrebbe preparata per analizzare un documento non valido.  
   
@@ -341,3 +341,4 @@ static void Main(string[] args)
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

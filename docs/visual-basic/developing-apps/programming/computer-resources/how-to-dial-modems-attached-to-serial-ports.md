@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Comporre numeri con modem collegati a porte seriali in Visual Basic | Documentazione Microsoft'
+title: 'Procedura: comporre numeri con modem collegati a porte seriali in Visual Basic'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,15 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 5670e930324740ca1ef16b3d27b0dee0e934d284
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0daaf35cdebac3d69ddc536124d4c86b96955b11
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Procedura: comporre numeri con modem collegati a porte seriali in Visual Basic
-In questo argomento viene descritto come usare `My.Computer.Ports` per comporre numeri con modem in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+In questo argomento viene descritto come usare `My.Computer.Ports` per comporre numeri con modem in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  In genere, il modem è collegato a una delle porte seriali del computer. Affinché l'applicazione comunichi con il modem, è necessario inviare i comandi alla porta seriale appropriata.  
   
@@ -65,7 +65,7 @@ In questo argomento viene descritto come usare `My.Computer.Ports` per comporre 
 ## <a name="example"></a>Esempio  
  [!code-vb[VbVbalrMyComputer#27](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-dial-modems-attached-to-serial-ports_4.vb)]  
   
- Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella selezione del frammento di codice si trova in **Connettività e rete**. Per altre informazioni, vedere [Code Snippets](https://docs.microsoft.com/visualstudio/ide/code-snippets) (Frammenti di codice).  
+ Questo esempio di codice è disponibile anche come frammento di codice IntelliSense. Nella selezione del frammento di codice si trova in **Connettività e rete**. Per altre informazioni, vedere [Code Snippets](/visualstudio/ide/code-snippets) (Frammenti di codice).  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Nell'esempio è richiesto un riferimento allo spazio dei nomi <xref:System?displayProperty=fullName>.  
@@ -83,3 +83,4 @@ In questo argomento viene descritto come usare `My.Computer.Ports` per comporre 
  [Procedura: Inviare stringhe a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   
  [Procedura: Ricevere stringhe da porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)   
  [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+

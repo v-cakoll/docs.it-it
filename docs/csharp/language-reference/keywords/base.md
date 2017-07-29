@@ -1,5 +1,5 @@
 ---
-title: base (Riferimenti per C#) | Microsoft Docs
+title: base (Riferimenti per C#)
 description: parola chiave base (C#)
 keywords: base (C#), parola chiave base (C#), parola chiave base (Riferimenti per C#), parola chiave base (Riferimenti per il linguaggio C#)
 ms.custom: 
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: adebe9f77cf1fe40a4aa8b00a2ef65c499d27ad3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c875ca834fc66e0bf6cd596f376773badca757e3
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="base-c-reference"></a>base (Riferimenti per C#)
@@ -74,3 +74,4 @@ La parola chiave `base` viene usata per accedere ai membri della classe di base 
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
  [this](../../../csharp/language-reference/keywords/this.md)
+

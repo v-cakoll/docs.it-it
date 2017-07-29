@@ -1,5 +1,5 @@
 ---
-title: Modifiche importanti di Visual Basic in Visual Studio | Microsoft Docs
+title: Modifiche importanti di Visual Basic in Visual Studio
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 12a8222081a1082a36d7b2710686ab33db474652
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f9822ea140584a5b978b5fa8802a40db257ad7f8
 ms.contentlocale: it-it
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-basic-breaking-changes-in-visual-studio"></a>Modifiche importanti di Visual Basic in Visual Studio
@@ -47,3 +47,4 @@ Se non si apportano modifiche in Visual Basic in Visual Studio 2015, non sarà p
  [Istruzione For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md)   
  [Introduzione](../../visual-basic/getting-started/index.md)   
  [In quali casi una correzione di linguaggio non sostanziale è importante?](http://go.microsoft.com/fwlink/?LinkId=259542)
+

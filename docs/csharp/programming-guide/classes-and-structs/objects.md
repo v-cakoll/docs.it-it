@@ -1,5 +1,5 @@
 ---
-title: Oggetti (Guida per programmatori C#) | Microsoft Docs
+title: Oggetti (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: fe548eb5d520945e3f0d52750bbf89935947116e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2a23d02e4ea95e908f97bc7264ee64d6899aee8
 ms.contentlocale: it-it
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="objects-c-programming-guide"></a>Oggetti (Guida per programmatori C#)
@@ -52,7 +52,7 @@ Una definizione di classe o struct è simile a un progetto iniziale in cui vengo
   
  [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
- La memoria per `p1` e `p2` viene allocata nello stack di thread. La memoria viene recuperata insieme al tipo o al metodo in cui è stata dichiarata. Questo è il motivo per cui gli struct vengono copiati per assegnazione. Al contrario, la memoria allocata per l'istanza di una classe viene recuperata automaticamente (tramite Garbage Collection) da Common Language Runtime quando tutti i riferimenti all'oggetto sono usciti dall'ambito. Non è possibile eliminare in modo deterministico un oggetto di classe come avviene in C++. Per altre informazioni su Garbage Collection in [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)], vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
+ La memoria per `p1` e `p2` viene allocata nello stack di thread. La memoria viene recuperata insieme al tipo o al metodo in cui è stata dichiarata. Questo è il motivo per cui gli struct vengono copiati per assegnazione. Al contrario, la memoria allocata per l'istanza di una classe viene recuperata automaticamente (tramite Garbage Collection) da Common Language Runtime quando tutti i riferimenti all'oggetto sono usciti dall'ambito. Non è possibile eliminare in modo deterministico un oggetto di classe come avviene in C++. Per altre informazioni su Garbage Collection in [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], vedere [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
 >  L'allocazione e la deallocazione di memoria sull'heap gestito sono estremamente ottimizzate in Common Language Runtime. Nella maggior parte dei casi non esistono differenze significative in termini di impatto sulle prestazioni tra l'allocazione di un'istanza di classe sull'heap e l'allocazione di un'istanza di struttura sullo stack.  
@@ -91,3 +91,4 @@ Una definizione di classe o struct è simile a un progetto iniziale in cui vengo
  [struct](../../../csharp/language-reference/keywords/struct.md)   
  [Operatore new](../../../csharp/language-reference/keywords/new-operator.md)   
  [Common Type System](../../../standard/base-types/common-type-system.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Convenzioni di codifica C# (Guida per programmatori C#) | Microsoft Docs
+title: Convenzioni di codifica C# (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 85e113f66998157a69be3f1d9065a5c4c1117773
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f32fdc0eb1954cdac30c39e05c74d43301d850c
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenzioni di codifica C# (Guida per programmatori C#)
@@ -60,7 +60,7 @@ La [specifica del linguaggio C#](http://go.microsoft.com/fwlink/?LinkId=199552) 
 ## <a name="layout-conventions"></a>Convenzioni di layout  
  Un layout appropriato usa la formattazione per mettere in evidenza la struttura del codice e per facilitare la lettura del codice. Gli esempi Microsoft sono conformi alle convenzioni seguenti:  
   
--   Usare le impostazioni dell'Editor di codice predefinite (rientri intelligenti, rientri di quattro caratteri, tabulazioni salvate come spazi). Per altre informazioni, vedere [Opzioni, Editor di testo, C#, Formattazione](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
+-   Usare le impostazioni dell'Editor di codice predefinite (rientri intelligenti, rientri di quattro caratteri, tabulazioni salvate come spazi). Per altre informazioni, vedere [Opzioni, Editor di testo, C#, Formattazione](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
 -   Scrivere una sola istruzione per riga.  
   
@@ -221,3 +221,4 @@ La [specifica del linguaggio C#](http://go.microsoft.com/fwlink/?LinkId=199552) 
 ## <a name="see-also"></a>Vedere anche  
  [Convenzioni di codifica di Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)   
  [Linee guida per la generazione di codice sicuro](../../../standard/security/secure-coding-guidelines.md)
+

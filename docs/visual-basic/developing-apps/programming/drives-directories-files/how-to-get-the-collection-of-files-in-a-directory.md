@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Ottenere la raccolta di file di una directory in Visual Basic | Microsoft Docs'
+title: 'Procedura: ottenere la raccolta di file di una directory in Visual Basic'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 1884195983856b3331b0c40e5b3844b0731e75ac
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 023fb90622b45fe0067cd146f62bc3edb326b5ef
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Procedura: ottenere la raccolta di file di una directory in Visual Basic
@@ -43,7 +43,7 @@ Gli overload del metodo <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2
   
 -   Usare l'overload <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> per eseguire una ricerca di file semplice in una directory specificata senza cercare nelle sottodirectory.  
   
--   Usare l'overload <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles(System.String,Microsoft.VisualBasic.FileIO.SearchOption,System.String[])> per specificare opzioni aggiuntive per la ricerca. È possibile usare il parametro `wildCards` per specificare un criterio di ricerca. Per includere le sottodirectory nella ricerca, impostare il parametro `searchType` su <xref:Microsoft.VisualBasic.FileIO.SearchOption?displayProperty=fullName>.  
+-   Usare l'overload <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles(System.String,Microsoft.VisualBasic.FileIO.SearchOption,System.String[])> per specificare opzioni aggiuntive per la ricerca. È possibile usare il parametro `wildCards` per specificare un criterio di ricerca. Per includere le sottodirectory nella ricerca, impostare il parametro `searchType` su <xref:Microsoft.VisualBasic.FileIO.SearchOption.SearchAllSubDirectories?displayProperty=fullName>.  
   
  Se non vengono trovati file corrispondenti al criterio specificato, verrà restituita una raccolta vuota.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Recuperare una raccolta di attributi (LINQ to XML) (C#) | Microsoft Docs'
+title: 'Procedura: Recuperare una raccolta di attributi (LINQ to XML) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: a49ee7a3-b2c2-4d49-9b5c-b7c6c41f4f13
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 646e012392c3c49de1f89b170416fc00f24e5dae
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5cfd1e46dd6ad261844bd7ba1715b382cbe6a870
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>Procedura: Recuperare una raccolta di attributi (LINQ to XML) (C#)
-Questo argomento presenta il metodo <xref:System.Xml.Linq.XElement.Attributes%2A> che consente di recuperare gli attributi di un elemento.  
+In questo argomento viene descritto il metodo <xref:System.Xml.Linq.XElement.Attributes%2A>, che consente di recuperare gli attributi di un elemento.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come scorrere la raccolta di attributi di un elemento.  
@@ -50,3 +50,4 @@ ConvertableTo="double"
   
 ## <a name="see-also"></a>Vedere anche  
  [Assi LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Elaborazione di unità, directory e file (Visual Basic) | Microsoft Docs"
+title: "Elaborazione di unità, directory e file (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4cbb2ead7075e8cda58ac4ec33d9fb6535d3284a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8cb9735b82d381dfb57211bf37ce29dfbb7374aa
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Elaborazione di unità, directory e file (Visual Basic)
-È possibile usare [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] per elaborare unità, cartelle e file con l'oggetto `My.Computer.FileSystem` che offre prestazioni migliori ed è più semplice da usare rispetto ai metodi tradizionali, ad esempio le funzioni `FileOpen` e `Write`, che sono tuttavia ancora disponibili. Le sezioni seguenti descrivono questi metodi in dettaglio.  
+È possibile usare [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] per elaborare unità, cartelle e file con l'oggetto `My.Computer.FileSystem` che offre prestazioni migliori ed è più semplice da usare rispetto ai metodi tradizionali, ad esempio le funzioni `FileOpen` e `Write`, che sono tuttavia ancora disponibili. Le sezioni seguenti descrivono questi metodi in dettaglio.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Accesso ai file con Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/22/2017
  Offre una panoramica dei concetti relativi alla funzionalità di I/O di file in .NET Framework, inclusi flussi, spazio di memorizzazione isolato, eventi di file, attributi di file e accesso ai file.  
   
  [Procedura dettagliata: Modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Descrive come usare [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] per modificare file e cartelle.  
+ Descrive come usare [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] per modificare file e cartelle.  
   
  [Procedura dettagliata: modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Descrive come usare l'oggetto `My.Computer.FileSystem` per modificare file e cartelle.  
@@ -64,3 +64,4 @@ ms.lasthandoff: 05/22/2017
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Documentazione di riferimento dell'oggetto `My.Computer.FileSystem` e i relativi membri.
+

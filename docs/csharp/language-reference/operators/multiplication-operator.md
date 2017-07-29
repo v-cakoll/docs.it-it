@@ -1,5 +1,5 @@
 ---
-title: '* Operatore . (Riferimenti per C#) | Microsoft Docs'
+title: '* Operatore (Riferimenti per C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: 7b25091b422de68391b925b492ca1e4cef720467
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 165ca8f797eb8d03ae1dec8c0ec5e1f4b31cb050
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="-operator-c-reference"></a>Operatore * (Riferimenti per C#)
@@ -58,3 +58,4 @@ L'operatore di moltiplicazione (`*`), che calcola il prodotto degli operandi.  L
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [Operatori C#](../../../csharp/language-reference/operators/index.md)
+

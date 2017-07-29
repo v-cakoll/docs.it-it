@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eliminare una chiave del Registro di sistema in Visual Basic'
+title: 'Procedura: eliminare una chiave del Registro di sistema in Visual Basic'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -37,11 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a50ee5a0853e6209c3bf5d5224d536f4cc6bbe11
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0fc37aff9f6a0ae3a7953377ebf95179d01bb693
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Procedura: eliminare una chiave del Registro di sistema in Visual Basic
@@ -77,3 +77,4 @@ ms.lasthandoff: 05/22/2017
  <xref:Microsoft.Win32.RegistryKey>   
  [Security and the Registry](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  (Sicurezza e Registro di sistema)  
  [Lettura e scrittura nel Registro di sistema](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+

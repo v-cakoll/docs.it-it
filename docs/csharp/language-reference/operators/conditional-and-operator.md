@@ -1,5 +1,5 @@
 ---
-title: '&amp;Operatore &amp; (Riferimenti per C#) | Microsoft Docs'
+title: '&amp;&amp; Operatore (Riferimenti per C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,14 +30,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f60d50510a4b6233e248fda87cfbb05a4c299312
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1da61947cbc85e5b3045513e99e013d1e4fae4b3
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ampamp-operator-c-reference"></a>&amp;Operatore &amp; (Riferimenti per C#)
+# <a name="ampamp-operator-c-reference"></a>&amp;&amp; Operatore (Riferimenti per C#)
 L'operatore AND condizionale (`&&`) esegue un AND logico sugli operandi `bool`, ma valuta il secondo operando solo se necessario.  
   
 ## <a name="remarks"></a>Note  
@@ -69,3 +69,4 @@ x & y
  [Riferimenti per C#](../../../csharp/language-reference/index.md)   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Operatori C#](../../../csharp/language-reference/operators/index.md)
+

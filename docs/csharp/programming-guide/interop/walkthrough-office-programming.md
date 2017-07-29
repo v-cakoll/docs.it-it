@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Programmazione di Office (C# e Visual Basic) | Microsoft Docs'
+title: 'Procedura dettagliata: programmazione di Office (C# e Visual Basic)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 836c648dd5da964b0d48e612f273778f4ffb2db0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 73713d29be0ffc79a9feb54c39b1f75a39b35df6
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procedura dettagliata: programmazione di Office (C# e Visual Basic)
@@ -47,9 +47,9 @@ In questa procedura dettagliata queste funzionalità vengono illustrate nel cont
 
 Per completare questa procedura dettagliata è necessario aver installato Microsoft Office Excel o Microsoft Office Word nel computer.  
   
- Se si usa un sistema operativo precedente a [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)], assicurarsi che [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] sia installato.  
+ Se si usa un sistema operativo precedente a [!INCLUDE[windowsver](~/includes/windowsver-md.md)], assicurarsi che [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] sia installato.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-set-up-an-excel-add-in-application"></a>Per impostare un componente aggiuntivo di Excel  
   
@@ -73,7 +73,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
 1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto e scegliere **Aggiungi riferimento**. Viene visualizzata la finestra di dialogo **Aggiungi riferimento**.  
   
-2.  Nella scheda **Assembly** selezionare **Microsoft.Office.Interop.Excel**, versione `<version>.0.0.0` (per conoscere il numero versione del prodotto Office, vedere [Versioni Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)) nell'elenco **Nome componente**. Tenere premuto CTRL e selezionare **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Se gli assembly non sono visibili, può essere necessario verificare che siano installati e visualizzati (vedere [Procedura: Installare assembly di interoperabilità primari di Office](https://docs.microsoft.com/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2.  Nella scheda **Assembly** selezionare **Microsoft.Office.Interop.Excel**, versione `<version>.0.0.0` (per conoscere il numero versione del prodotto Office, vedere [Versioni Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)) nell'elenco **Nome componente**. Tenere premuto CTRL e selezionare **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Se gli assembly non sono visibili, può essere necessario verificare che siano installati e visualizzati (vedere [Procedura: Installare assembly di interoperabilità primari di Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
 3.  Fare clic su **OK**.  
   
@@ -105,7 +105,7 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
      In questo metodo vengono usati due nuove funzionalità di C#. Entrambe queste funzionalità sono già esistenti in Visual Basic.  
   
-    -   Il metodo [Add](http://go.microsoft.com/fwlink/?LinkId=210910) usa un *parametro facoltativo* per specificare un modello particolare. I parametri facoltativi, una novità di [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)], consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nell'esempio precedente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `excelApp.Workbooks.Add(Type.Missing)`.  
+    -   Il metodo [Add](http://go.microsoft.com/fwlink/?LinkId=210910) usa un *parametro facoltativo* per specificare un modello particolare. I parametri facoltativi, una novità di [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], consentono di omettere l'argomento per il parametro se si vuole usare il valore predefinito del parametro. Poiché nessun argomento viene inviato nell'esempio precedente, `Add` usa il modello predefinito e crea una nuova cartella di lavoro. L'istruzione equivalente nelle precedenti versioni di C# richiede un argomento segnaposto: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Per altre informazioni, vedere [Argomenti denominati e facoltativi](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
@@ -215,3 +215,4 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
  [Procedura dettagliata: Creazione del primo componente aggiuntivo VSTO per Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)   
  [Interoperabilità COM](../../../visual-basic/programming-guide/com-interop/index.md)   
  [Interoperabilità](../../../csharp/programming-guide/interop/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare annotazioni per trasformare alberi LINQ to XML in uno stile XSLT (C#) | Microsoft Docs'
+title: 'Procedura: Usare annotazioni per trasformare alberi LINQ to XML in uno stile XSLT (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aabc07212e46b98e86ec0050474a4c2e34449550
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29cdf1ef54545bdbd96395dd4fe1d7c6b9f375e9
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Procedura: Usare annotazioni per trasformare alberi LINQ to XML in uno stile XSLT (C#)
@@ -46,7 +47,7 @@ Le annotazioni possono essere usate per facilitare le trasformazioni di un alber
   
  In dettaglio, l'approccio è costituito dai seguenti passaggi:  
   
--   Eseguire una o più query LINQ to XML che restituiscono il set di elementi da trasformare da una forma a un'altra. Per ogni elemento della query aggiungere un nuovo oggetto <xref:System.Xml.Linq.XElement> come annotazione all'elemento. Questo nuovo elemento sostituirà l'elemento annotato nel nuovo albero trasformato. Il codice da scrivere è semplice, come illustrato nell'esempio.  
+-   Eseguire una o più query LINQ to XML che restituiscono il set di elementi da trasformare da una forma a un'altra. Per ogni elemento della query, aggiungere un nuovo oggetto <xref:System.Xml.Linq.XElement> come annotazione all'elemento. Questo nuovo elemento sostituirà l'elemento annotato nel nuovo albero trasformato. Il codice da scrivere è semplice, come illustrato nell'esempio.  
   
 -   Il nuovo elemento aggiunto come annotazione può contenere nuovi nodi figlio e può formare un sottoalbero con la forma desiderata.  
   
@@ -449,3 +450,4 @@ After Transform
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Uso della varianza nei delegati (C#) | Microsoft Docs
+title: Uso della varianza nei delegati (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fbcf08eafe05e3299379b0455640fc08ec80e0ca
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a3ab3b62b20d6e4992421ac4fd98b73bded04c9
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-variance-in-delegates-c"></a>Uso della varianza nei delegati (C#)
@@ -96,3 +97,4 @@ public Form1()
 ## <a name="see-also"></a>Vedere anche  
  [Varianza nei delegati (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)   
  [Uso della varianza per i delegati generici Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Informazioni sul chiamante (C#) | Microsoft Docs
+title: Informazioni sul chiamante (C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,16 +16,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 087b547cfc558fb4c82026e9af6ac621809e0ca0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8c514266b474f6d4cd3f02e6f9008bef053c407a
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="caller-information-c"></a>Informazioni sul chiamante (C#)
 Gli attributi di informazioni sul chiamante consentono di ottenere informazioni sul chiamante di un metodo. È possibile ottenere il percorso del file del codice sorgente, il numero di riga nel codice sorgente e il nome del chiamante. Queste informazioni sono utili per la tracciatura, il debug e la creazione di strumenti diagnostici.  
   
- Per ottenere queste informazioni, utilizzare gli attributi applicati ai parametri facoltativi, a ognuno dei quali è associato un valore predefinito. La tabella seguente elenca gli attributi di informazioni sul chiamante definiti nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=fullName>:  
+ Per ottenere queste informazioni, utilizzare gli attributi applicati ai parametri facoltativi, a ognuno dei quali è associato un valore predefinito. Nella tabella seguente sono elencati gli attributi di informazioni sul chiamante definiti nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=fullName>:  
   
 |Attributo|Descrizione|Tipo|  
 |---|---|---|  
@@ -93,3 +94,4 @@ public void TraceMessage(string message,
  [Attributi comuni (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)   
  [Argomenti denominati e facoltativi](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
  [Nozioni di base sulla programmazione (C#)](../../../csharp/programming-guide/concepts/index.md)
+
