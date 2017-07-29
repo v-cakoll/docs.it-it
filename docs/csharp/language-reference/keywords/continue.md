@@ -1,5 +1,5 @@
 ---
-title: continue (Riferimenti per C#) | Microsoft Docs
+title: continue (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d12dc62cfacd13e5914d5f25edf18769c83d6b6a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4a0dcedb32b153c31ec5ed799f66062463307db9
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="continue-c-reference"></a>continue (Riferimenti per C#)
@@ -53,5 +53,6 @@ L'istruzione `continue` passa il controllo all'iterazione successiva dell'istruz
  [Riferimenti per C#](../../../csharp/language-reference/index.md)   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [Istruzione break](https://docs.microsoft.com/cpp/cpp/break-statement-cpp)   
+ [Istruzione break](/cpp/cpp/break-statement-cpp)   
  [Istruzioni di spostamento](../../../csharp/language-reference/keywords/jump-statements.md)
+

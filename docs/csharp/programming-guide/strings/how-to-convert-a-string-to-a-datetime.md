@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Convertire una stringa in un oggetto DateTime (Guida per programmatori C#) | Microsoft Docs'
+title: 'Procedura: Convertire una stringa in un oggetto DateTime (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,14 +28,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f31deeb2b29495ab48781c7e673fed37e8ad8dce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15ef1ec4debf242cdabc42f26add890bd4b61507
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a>Procedura: Convertire una stringa in un oggetto DateTime (Guida per programmatori C#)
-I programmi consentono generalmente agli utenti di immettere le date come valori stringa. Per convertire una data basata su stringa in un oggetto <xref:System.DateTime?displayProperty=fullName>, è possibile usare il metodo <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> o il metodo statico <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> come illustrato nell'esempio seguente.  
+I programmi consentono generalmente agli utenti di immettere le date come valori stringa. Per convertire una data basata su stringa in un oggetto <xref:System.DateTime?displayProperty=fullName> , è possibile usare il metodo <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> o il metodo statico <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> , come illustrato nell'esempio seguente.  
   
  **Impostazioni cultura**.  In base alle diverse impostazioni cultura nel mondo le stringhe data vengono scritte in modi diversi.  Negli Stati Uniti, ad esempio, 01/20/2008 è il 20 gennaio 2008.  In Francia questo genera un'eccezione InvalidFormatException. Questo perché in Francia la data viene letta come giorno/mese/anno, mentre negli Stati Uniti è mese/giorno/anno.  
   
@@ -45,7 +46,7 @@ I programmi consentono generalmente agli utenti di immettere le date come valori
   
  Di seguito viene riportato un esempio semplice di conversione di una stringa in dateTime.  
   
- Per altri esempi di stringhe di data, vedere <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>.  
+ Per altri esempi di stringhe data, vedere <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>.  
   
 ```csharp  
 string dateTime = "01/08/2008 14:50:50.42";  
@@ -73,3 +74,4 @@ Press any key to continue . . .
   
 ## <a name="see-also"></a>Vedere anche  
  [Stringhe](../../../csharp/programming-guide/strings/index.md)
+

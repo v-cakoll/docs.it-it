@@ -1,5 +1,5 @@
 ---
-title: Operatore false (Riferimenti per C#) | Documentazione Microsoft
+title: Operatore false (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 22aaef73efc1d3327774336bf5b2c5475950ce25
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e12de403ca31952837913fdaaa8b221986f0e5fe
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="false-operator-c-reference"></a>Operatore false (Riferimenti per C#)
@@ -58,3 +58,4 @@ Restituisce il valore [bool](../../../csharp/language-reference/keywords/bool.md
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
  [Operatori C#](../../../csharp/language-reference/operators/index.md)   
  [true](../../../csharp/language-reference/keywords/true.md)
+

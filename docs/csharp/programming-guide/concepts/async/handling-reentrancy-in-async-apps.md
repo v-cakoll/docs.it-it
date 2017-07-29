@@ -1,5 +1,5 @@
 ---
-title: Gestione della reentrancy nelle app asincrone (C#) | Microsoft Docs
+title: Gestione della reentrancy nelle app asincrone (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7be76ad572be522071d9e8c2ae9cf8c770fd1fd0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd51c81c9589831146942ad9f0eae3642d4678e9
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Gestione della reentrancy nelle app asincrone (C#)
@@ -157,7 +157,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  Per configurare questo scenario, apportare le modifiche seguenti al codice di base fornito in [Revisione ed esecuzione dell'app di esempio](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). È anche possibile scaricare l'app finita da [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571) (Esempio di progetti asincroni: reentrancy in applicazioni desktop .NET). Il nome di questo progetto è CancelAndRestart.  
   
-1.  Dichiarare una variabile <xref:System.Threading.CancellationTokenSource>, `cts` che esiste nell'ambito di tutti i metodi.  
+1.  Dichiarare una variabile <xref:System.Threading.CancellationTokenSource>, `cts`, che sia compresa nell'ambito per tutti i metodi.  
   
     ```csharp  
     public partial class MainWindow : Window   // Or class MainPage  
@@ -236,7 +236,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
 -   Aggiungere un parametro per accettare il token di annullamento da `StartButton_Click`.  
   
--   Usare il metodo <xref:System.Net.Http.HttpClient.GetAsync%2A> per scaricare i siti Web in quanto `GetAsync` accetta un argomento <xref:System.Threading.CancellationToken>.  
+-   Usare il metodo <xref:System.Net.Http.HttpClient.GetAsync%2A> per scaricare i siti Web, in quanto `GetAsync` accetta un argomento <xref:System.Threading.CancellationToken>.  
   
 -   Prima di chiamare `DisplayResults` per visualizzare i risultati per ogni sito Web scaricato, controllare `ct` per verificare che l'operazione corrente non sia stata annullata.  
   
@@ -313,7 +313,7 @@ TOTAL bytes returned:  890591
 ###  <a name="BKMK_RunMultipleOperations"></a> Eseguire più operazioni e mettere in coda l'output  
  Il terzo esempio è il più complesso in quanto l'app avvia un'altra operazione asincrona ogni volta che l'utente sceglie il pulsante **Start** e tutte le operazioni vengono eseguite fino al completamento. Tutte le operazioni richieste scaricano i siti Web dall'elenco in modo asincrono, ma l'output delle operazioni viene visualizzato in sequenza. In altre parole, l'attività di download effettiva è di tipo interleaved, come illustrato nell'output in [Riconoscimento della reentrancy](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), ma l'elenco dei risultati per ogni gruppo viene visualizzato separatamente.  
   
- Le operazioni condividono un oggetto <xref:System.Threading.Tasks.Task> globale, `pendingWork`, che funge da gatekeeper per il processo di visualizzazione.  
+ Le operazioni condividono un codice <xref:System.Threading.Tasks.Task> globale, `pendingWork`, che funge da gatekeeper per il processo di visualizzazione.  
   
  È possibile eseguire questo esempio incollando le modifiche nel codice in [Compilazione dell'app](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) oppure è possibile attenersi alle istruzioni riportate in [Download dell'app](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) per scaricare l'esempio ed eseguire il progetto QueueResults.  
   
@@ -615,7 +615,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
      Nella visualizzazione **Progettazione** di MainWindow.xaml viene visualizzata una finestra semplice contenente una casella di testo e un pulsante.  
   
-8.  Aggiungere un riferimento a <xref:System.Net.Http>.  
+8.  Aggiunge un riferimento a <xref:System.Net.Http>.  
   
 9. In **Esplora soluzioni** aprire il menu di scelta rapida per MainWindow.xaml.cs e scegliere **Visualizza codice**.  
   

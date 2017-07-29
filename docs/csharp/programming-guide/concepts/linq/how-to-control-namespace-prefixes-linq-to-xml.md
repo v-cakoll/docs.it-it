@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Controllare i prefissi dello spazio dei nomi (C#) (LINQ to XML) | Microsoft Docs'
+title: 'Procedura: controllare i prefissi dello spazio dei nomi (C#) (LINQ to XML)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 96bc6d1187aa72f8653cd01b2027306009634fd5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1e56dcf74725940019cda1bf340b2f3ac4e1f6c4
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Procedura: controllare i prefissi dello spazio dei nomi (C#) (LINQ to XML)
@@ -36,7 +37,7 @@ In questo argomento viene descritto come controllare i prefissi degli spazi dei 
   
  Il controllo dei prefissi degli spazi dei nomi viene richiesto anche quando si desidera che gli utenti modifichino manualmente il documento XML e si desidera creare prefissi che l'utente può digitare con maggior comodità. Ad esempio, se si intende generare un documento XSD, le convenzioni degli schemi consigliano l'uso di `xs` o `xsd` come prefisso per lo spazio dei nomi dello schema.  
   
- Per controllare i prefissi degli spazi dei nomi, si inseriscono attributi che dichiarano gli spazi dei nomi. Se si dichiarano gli spazi dei nomi con prefissi specifici, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] tenterà di rispettare tali prefissi durante la serializzazione.  
+ Per controllare i prefissi degli spazi dei nomi, si inseriscono attributi che dichiarano gli spazi dei nomi. Se si dichiarano gli spazi dei nomi con prefissi specifici, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] tenterà di rispettare tali prefissi durante la serializzazione.  
   
  Per creare un attributo che dichiara uno spazio dei nomi con un prefisso, viene creato un attributo in cui lo spazio dei nomi del nome dell'attributo è <xref:System.Xml.Linq.XNamespace.Xmlns%2A> e il nome dell'attributo è il prefisso dello spazio dei nomi. Il valore dell'attributo è l'URI dello spazio dei nomi.  
   
@@ -72,3 +73,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

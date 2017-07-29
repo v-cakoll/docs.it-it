@@ -1,5 +1,5 @@
 ---
-title: Esecuzione posticipata e valutazione lazy in LINQ to XML (C#) | Microsoft Docs
+title: Esecuzione posticipata e valutazione lazy in LINQ to XML (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f9d60242c75b996d25997b2adc83ccafcc538de
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 10ecebc2563df5a12b71a743727b1be21b19b671
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Esecuzione posticipata e valutazione lazy in LINQ to XML (C#)
@@ -50,3 +50,4 @@ Operazioni di query e su asse vengono spesso implementate in modo da usare l'ese
  [Concetti e terminologia (trasformazione funzionale) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)   
  [Operazioni di aggregazione (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)   
  [yield](../../../../csharp/language-reference/keywords/yield.md)
+

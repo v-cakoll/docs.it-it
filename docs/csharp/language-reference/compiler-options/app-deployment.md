@@ -1,5 +1,5 @@
 ---
-title: Distribuzione di applicazioni C# | Microsoft Docs
+title: Distribuzione di applicazioni C#
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,18 +31,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cc3aa401ae0f44fe7904f1d426ce0051c452078b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fe9c4d38836821364bec3fea746676cd1df4ba8e
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deployment-of-c-applications"></a>Distribuzione di applicazioni C#
 Dopo aver completato la compilazione dell'applicazione C#, il passaggio successivo è la distribuzione. C# è un linguaggio .NET. Pertanto, la distribuzione di qualsiasi file C# eseguibile in altri computer richiede che .NET Framework sia installato in tali computer, e possibilmente altre dipendenze specifiche dell'applicazione. È disponibile un'ampia gamma di opzioni per la distribuzione di .NET Framework. Per una panoramica, vedere [Deployment Guide for Developers](https://msdn.microsoft.com/library/ee942965) (Guida alla distribuzione per sviluppatori).  
   
- Lo spostamento di applicazioni complete in altri computer viene in genere definito distribuzione. L'ambiente di sviluppo Microsoft offre meccanismi per la distribuzione. Per altre informazioni, vedere [Deploying Applications and Components](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components) (Distribuzione di applicazioni e componenti).  
+ Lo spostamento di applicazioni complete in altri computer viene in genere definito distribuzione. L'ambiente di sviluppo Microsoft offre meccanismi per la distribuzione. Per altre informazioni, vedere [Deploying Applications and Components](/visualstudio/deployment/deploying-applications-services-and-components) (Distribuzione di applicazioni e componenti).  
   
  Se si compila e si distribuisce principalmente dalla riga di comando, potrebbe essere necessario prendere in considerazione altri metodi di distribuzione e ridistribuzione delle dipendenze.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione dalla riga di comando con csc.exe](command-line-building-with-csc-exe.md)
+

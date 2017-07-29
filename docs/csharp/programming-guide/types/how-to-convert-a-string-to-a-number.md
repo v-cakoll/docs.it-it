@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Convertire una stringa in un numero (Guida per programmatori C#) | Microsoft Docs'
+title: 'Procedura: convertire una stringa in un numero (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: d406f1731db1e0979be8bba8d10301e57a2281e9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 08d13e40a385ce8e9011b508b04361b2e050f904
 ms.contentlocale: it-it
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procedura: convertire una stringa in un numero (Guida per programmatori C#)
@@ -80,3 +80,4 @@ ms.lasthandoff: 05/14/2017
  [Tipi](../../../csharp/programming-guide/types/index.md)   
  [Procedura: Determinare se una stringa rappresenta un valore numerico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)   
  [.NET Framework 4 Formatting Utility](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d) (Utilità di formattazione in .NET Framework 4)
+

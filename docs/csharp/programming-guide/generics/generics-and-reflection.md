@@ -1,5 +1,5 @@
 ---
-title: Generics e reflection (Guida per programmatori C#) | Microsoft Docs
+title: Generics e reflection (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,17 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 2eeb2f0b833d3b5cc658ec96570d95c2d167b40b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 201806cca08be0633d41e10ecb7641a0f03c975b
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Generics e reflection (Guida per programmatori C#)
 Poiché Common Language Runtime (CLR) ha accesso alle informazioni sui tipi generici in fase di esecuzione, è possibile usare il processo di reflection per ottenere informazioni sui tipi generici, analogamente a quanto avviene per i tipi non generici. Per altre informazioni, vedere [Generics nel runtime](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
   
- Per abilitare le informazioni di runtime per i tipi generici, in [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] sono stati aggiunti nuovi membri alla classe <xref:System.Type>. Vedere la documentazione su queste classi per altre informazioni su come usare tali metodi e proprietà. Anche lo spazio dei nomi <xref:System.Reflection.Emit> contiene nuovi membri che supportano i generics. Vedere [Procedura: Definire un tipo generico tramite reflection emit](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+ Per abilitare le informazioni di runtime per i tipi generici, in [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] sono stati aggiunti nuovi membri alla classe <xref:System.Type>. Vedere la documentazione su queste classi per altre informazioni su come usare tali metodi e proprietà. Anche lo spazio dei nomi <xref:System.Reflection.Emit> contiene nuovi membri che supportano i generics. Vedere [Procedura: Definire un tipo generico tramite reflection emit](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
   
  Per un elenco delle condizioni invariabili relative ai termini usati dal processo di reflection generico, vedere i commenti sulla proprietà <xref:System.Type.IsGenericType%2A>.  
   
@@ -71,4 +71,5 @@ Poiché Common Language Runtime (CLR) ha accesso alle informazioni sui tipi gene
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Generics](../../../csharp/programming-guide/generics/index.md)   
  [Reflection e tipi generici](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)   
- [Generics](https://msdn.microsoft.com/library/ms172192)
+ [Generics](~/docs/standard/generics/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Creazione di interfacce generiche varianti (C#) | Microsoft Docs
+title: Creazione di interfacce generiche varianti (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3dcc75151a3cff601869b4f8a3a4de698d2dc47
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 122b56e34582fdd84424fd3f5d2fd5904b401775
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Creazione di interfacce generiche varianti (C#)
@@ -35,7 +36,7 @@ ms.lasthandoff: 03/13/2017
  È possibile dichiarare le interfacce generiche varianti usando le parole chiave `in` e `out` per i parametri di tipo generico.  
   
 > [!IMPORTANT]
-> I parametri  `ref` e `out` in C# non possono essere varianti. Anche i tipi di valore non supportano la varianza.  
+>  I parametri `ref` e `out` in C# non possono essere varianti. Anche i tipi di valore non supportano la varianza.  
   
  È possibile dichiarare un parametro di tipo generico covariante usando la parola chiave `out`. Il tipo covariante deve soddisfare le condizioni seguenti:  
   
