@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire il cast sicuro da bool? a bool (Guida per programmatori C#) | Microsoft Docs'
+title: 'Procedura: eseguire il cast sicuro da bool? a bool (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 7648b9bb5d54b58dc13371e1308f038289df8e56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c8a3dc3280b7dca802b327d9454c7f0ba9ed44be
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>Procedura: eseguire il cast sicuro da bool? a bool (Guida per programmatori C#)
@@ -70,3 +70,4 @@ if((bool)test) //now this cast is safe
  [Parole chiave letterali](../../../csharp/language-reference/keywords/literal-keywords.md)   
  [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md)   
  [?? (operatore)](../../../csharp/language-reference/operators/null-conditional-operator.md)
+
