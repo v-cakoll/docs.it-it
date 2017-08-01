@@ -1,5 +1,5 @@
 ---
-title: Interfacce C# - Panoramica del linguaggio C# | Microsoft Docs
+title: Interfacce C# - Panoramica del linguaggio C#
 description: Le interfacce definiscono contratti implementati dai tipi in C#
 keywords: ".NET, csharp, interfacce, ereditarietà multipla, polimorfismo"
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 6c18de7a4aa86a321b65b4ce65e07c48ca1dbc24
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 673ac56f3f5732fcda02d313b6f4273708ae365f
 ms.contentlocale: it-it
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="interfaces" class="xliff"></a>
-
-# Interfacce
+# <a name="interfaces"></a>Interfacce
 
 Un'***interfaccia*** definisce un contratto che può essere implementato da classi e struct. Può contenere metodi, proprietà, eventi e indicizzatori. Un'interfaccia non fornisce le implementazioni dei membri che definisce, ma specifica semplicemente i membri che devono essere forniti dalle classi o dai tipi struct che la implementano.
 
