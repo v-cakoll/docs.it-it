@@ -1,5 +1,5 @@
 ---
-title: Tipi e variabili C# - Panoramica del linguaggio C# | Microsoft Docs
+title: Tipi e variabili C# - Panoramica del linguaggio C#
 description: Informazioni sulla definizione di tipi e la dichiarazione di variabili nel linguaggio C#
 keywords: .NET, csharp, tipo, tipo riferimento, tipo valore
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 5c22d1087d27b03cfbf71d319a72e9e02203e9f2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1f1031384520b9ed37246361da8bbc1b42addb0b
 ms.contentlocale: it-it
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="types-and-variables" class="xliff"></a>
-
-# Tipi e variabili
+# <a name="types-and-variables"></a>Tipi e variabili
 
 In C# esistono due generi di tipi: *tipi valore* e *tipi riferimento*. Le variabili dei tipi valore contengono direttamente i propri dati, mentre le variabili dei tipi riferimento archiviano i riferimenti ai propri dati, noti come oggetti. Con i tipi riferimento, due variabili possono fare riferimento allo stesso oggetto e di conseguenza le operazioni su una delle due variabili possono influire sull'oggetto a cui fa riferimento l'altra. Con i tipi valore, ogni variabile ha una propria copia dei dati e non è possibile che le operazioni su una variabile influiscano sull'altra (tranne nel caso delle variabili di parametro `ref` e `out`).
 

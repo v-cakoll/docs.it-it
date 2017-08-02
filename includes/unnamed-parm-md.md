@@ -1,0 +1,1 @@
+Alcuni metodi, in particolare gli operatori, dichiarano un tipo per un parametro ma non specificano un nome di parametro. Tale parametro viene definito *parametro senza nome*. Nella documentazione relativa a questi metodi il segnaposto *__unnamed0* rappresenta il parametro senza nome.
