@@ -1,7 +1,7 @@
 ---
-title: Comando dotnet-list reference - Interfaccia della riga di comando di .NET Core | Microsoft Docs
-description: Il comando dotnet-list reference offre un&quot;opzione utile per visualizzare un elenco dei riferimenti da progetto a progetto.
-keywords: dotnet-list, interfaccia della riga di comando, comando dell&quot;interfaccia della riga di comando, .NET Core
+title: Comando dotnet-list reference - Interfaccia della riga di comando di .NET Core
+description: Il comando dotnet-list reference offre un'opzione utile per visualizzare un elenco dei riferimenti da progetto a progetto.
+keywords: dotnet-list, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
 author: spboyer
 ms.author: mairaw
 ms.date: 03/15/2017
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8f954a0c-03f8-4fbc-a529-b313ab12c623
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: fdaf2a6f66801be68507ccabe7e0f2fea5433e65
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 701345e4db51d26b9eefe8f02b6c0526934de5c9
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 

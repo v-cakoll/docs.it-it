@@ -1,5 +1,5 @@
 ---
-title: Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac | Microsoft Docs
+title: Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
 description: Questo argomento descrive il processo di creazione di una soluzione .NET Core contenente una libreria riutilizzabile e unit test.
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
@@ -9,44 +9,34 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
-ms.openlocfilehash: a54100a4eda6997b73b60d88b583e290973acb8e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 60179fb0435803c3235b75ba012e588c6f1b35d3
 ms.contentlocale: it-it
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac" class="xliff"></a>
-
-# Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
+# <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
 
 Visual Studio per Mac offre un ambiente di sviluppo integrato completo per lo sviluppo di applicazioni .NET Core. Questo argomento descrive il processo di creazione di una soluzione .NET Core contenente una libreria riutilizzabile e unit test.
 
 In questa esercitazione viene illustrato come creare un'applicazione che accetta una parola di ricerca e una stringa di testo dall'utente, conta il numero di volte in cui la parola di ricerca appare nella stringa usando un metodo in una libreria di classi e restituisce il risultato all'utente. La soluzione include anche unit test per la libreria di classi come introduzione ai concetti relativi allo sviluppo basato su test. Se si preferisce continuare l'esercitazione con un esempio completo, scaricare la [soluzione di esempio](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Per istruzioni sul download, vedere [Esempi ed esercitazioni](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 > [!NOTE]
-> Visual Studio per Mac è un software di anteprima. Come per qualsiasi versione di anteprima di prodotti Microsoft, il feedback dei clienti è sempre tenuto in grande considerazione. Sono disponibili due modi per comunicare al team di sviluppatori la propria opinione su Visual Studio per Mac:
-> * In Visual Studio per Mac scegliere **? > Segnala un problema** dal menu o **Segnala un problema** dalla schermata iniziale per visualizzare una finestra per l'archiviazione di un report di bug.
-> * Per inviare un suggerimento, scegliere **? > Invia un suggerimento** dal menu o **Invia un suggerimento** dalla schermata iniziale per aprire la [pagina Web UserVoice di Visual Studio per Mac](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac).
+> Microsoft considera di fondamentale importanza i commenti e i suggerimenti degli utenti. Sono disponibili due modi per comunicare al team di sviluppatori la propria opinione su Visual Studio per Mac:
+> * In Visual Studio per Mac scegliere **Aiuto** > **Segnala un problema** dal menu o **Segnala un problema** dalla schermata iniziale per visualizzare una finestra per la registrazione di un report sul bug. È possibile tenere traccia dei commenti e dei suggerimenti inviati nel portale della [community di sviluppatori](https://developercommunity.visualstudio.com/spaces/41/index.html).
+> * Per inviare un suggerimento, scegliere **Aiuto** > **Invia un suggerimento** dal menu o **Invia un suggerimento** dalla schermata iniziale per aprire la [pagina Web UserVoice di Visual Studio per Mac](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac).
 
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Prerequisiti
 
-## Prerequisiti
+- OpenSSL (per .NET Core 1.1): vedere l'argomento [Prerequisiti per .NET Core in Mac](../macos-prerequisites.md).
+- [.NET Core SDK 1.1 o versione successiva](https://www.microsoft.com/net/core#macos)
+- [Visual Studio 2017 per Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 
-Per altre informazioni sui prerequisiti, vedere [Prerequisiti per .NET Core in Mac](../../core/macos-prerequisites.md).
+Per altre informazioni sui prerequisiti, vedere [Prerequisiti per .NET Core in Mac](../../core/macos-prerequisites.md). Per informazioni su tutti i requisiti di sistema per Visual Studio 2017 per Mac, vedere [Requisiti di sistema della famiglia di prodotti Visual Studio 2017 per Mac](https://www.visualstudio.com/productinfo/vs2017-system-requirements-mac).
 
-<a id="getting-started" class="xliff"></a>
-
-## Per iniziare
-
-Se i prerequisiti e Visual Studio per Mac sono già installati, ignorare questa sezione e passare a [Creazione di una libreria](#building-a-library). Seguire questa procedura per installare i prerequisiti e Visual Studio per Mac:
-
-Scaricare il [programma di installazione di Visual Studio per Mac](https://www.visualstudio.com/vs/visual-studio-mac/). Eseguire il programma di installazione. Leggere e accettare il contratto di licenza. Durante l'installazione viene offerta la possibilità di installare Xamarin, una tecnologia per lo sviluppo di app per dispositivi mobili multipiattaforma. L'installazione di Xamarin e dei relativi componenti è facoltativa per lo sviluppo di .NET Core. Per una descrizione dettagliata del processo di installazione di Visual Studio per Mac, vedere [Presentazione di Visual Studio per Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/). Al termine dell'installazione, avviare l'IDE di Visual Studio per Mac.
-
-<a id="building-a-library" class="xliff"></a>
-
-## Creazione di una libreria
+## <a name="building-a-library"></a>Creazione di una libreria
 
 1. Nella schermata iniziale selezionare **Nuovo progetto**. Nella finestra di dialogo **Nuovo progetto**, nel nodo **Multiplatform** (Multipiattaforma), selezionare il modello **.NET Standard Library** (Libreria .NET Standard). Scegliere **Avanti**.
 
@@ -60,7 +50,7 @@ Scaricare il [programma di installazione di Visual Studio per Mac](https://www.v
 
    [!code-csharp[Principale](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
 
-1. Salvare il file adottando uno di questi tre metodi: usare l'abbreviazione da tastiera <kbd>&#8984;</kbd>+<kbd>s</kbd>, scegliere **File > Salva** dal menu o fare clic con il pulsante destro del mouse sulla scheda del file e scegliere **Salva** dal menu di scelta rapida. Nell'immagine seguente viene visualizzata la finestra dell'IDE:
+1. Salvare il file adottando uno di questi tre metodi: usare la scelta rapida da tastiera <kbd>&#8984;</kbd>+<kbd>s</kbd>, scegliere **File** > **Salva** dal menu o fare clic con il pulsante destro del mouse sulla scheda del file e scegliere **Salva** dal menu di scelta rapida. Nell'immagine seguente viene visualizzata la finestra dell'IDE:
 
    ![Finestra dell'IDE con la libreria di classi TextUtils, il file di classe WordCount, la classe statica WordCount e il metodo GetWordCount](./media/using-on-mac-vs-full-solution/vsmacfull03.png)
 
@@ -68,19 +58,17 @@ Scaricare il [programma di installazione di Visual Studio per Mac](https://www.v
 
    ![Margine inferiore della finestra dell'IDE con il pulsante Errori](./media/using-on-mac-vs-full-solution/vsmacfull03b.png)
 
-1. Scegliere **Compila > Compila tutto** dal menu.
+1. Scegliere **Compila** > **Compila tutto** dal menu.
 
    La soluzione viene compilata e il riquadro dell'output di compilazione indica che la compilazione ha avuto esito positivo.
 
    ![Riquadro dell'output di compilazione del pannello Errori con il messaggio di compilazione riuscita](./media/using-on-mac-vs-full-solution/vsmacfull04.png)
 
-<a id="creating-a-test-project" class="xliff"></a>
+## <a name="creating-a-test-project"></a>Creazione di un progetto di test
 
-## Creazione di un progetto di test
+Gli unit test forniscono test software automatici durante le fasi di sviluppo e pubblicazione. Il framework di test usato in questa esercitazione è [xUnit (versione 2.2.0 o successiva)](https://xunit.github.io/), installato automaticamente quando il progetto di test xUnit viene aggiunto alla soluzione nella procedura seguente:
 
-Gli unit test forniscono test software automatici durante le fasi di sviluppo e pubblicazione. Il framework di test usato in questa esercitazione è [xUnit](https://xunit.github.io/).
-
-1. Nella barra laterale **Soluzione** fare clic con il pulsante destro del mouse sulla soluzione `WordCounter` e scegliere **Aggiungi > Aggiungi nuovo progetto**.
+1. Nella barra laterale **Soluzione** fare clic con il pulsante destro del mouse sulla soluzione `WordCounter` e scegliere **Aggiungi** > **Aggiungi nuovo progetto**.
 
 1. Nella finestra di dialogo **Nuovo progetto** selezionare **Test** sotto il nodo **.NET Core**. Selezionare **xUnit Test Project** (Progetto di test xUnit) e quindi scegliere **Avanti**.
 
@@ -120,23 +108,31 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
    }
    ```
 
-   Nell'immagine seguente viene visualizzato l'IDE con il codice dell'unit test. Prestare attenzione all'istruzione `Assert.NotEquals`.
+   Nell'immagine seguente viene visualizzato l'IDE con il codice dell'unit test. Prestare attenzione all'istruzione `Assert.NotEqual`.
 
    ![Unit test iniziale per verificare GetWordCount nella finestra principale dell'IDE](./media/using-on-mac-vs-full-solution/vsmacfull08.png)
 
    Quando si usa lo sviluppo basato su test, è importante fare in modo che il nuovo test la prima volta abbia esito negativo per verificare che la logica di test sia corretta. Il metodo passa il nome "Jack" (lettere maiuscole) e una stringa con "Jack" e "jack" (lettere maiuscole e minuscole). Se il metodo `GetWordCount` funziona correttamente, viene restituito un conteggio di due istanze della parola di ricerca. Per fare in modo che il test non riesca, è necessario prima implementare il test asserendo che dal metodo `GetWordCount` non vengono restituite due istanze della parola di ricerca "Jack". Andare quindi al passaggio successivo per fare in modo che il test abbia esito negativo.
 
-1. Attualmente, Visual Studio per Mac non integra test xUnit nel Test Runner predefinito e i test xUnit devono essere quindi eseguiti nella console. Fare clic con il pulsante destro del mouse sul progetto `TestLibrary` e scegliere **Strumenti > Apri nel terminale** dal menu di scelta rapida. Al prompt dei comandi eseguire `dotnet test`.
+1. Aprire il pannello **Unit test** sul lato destro dello schermo.
+
+![Pannello Unit test](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
+
+1. Fare clic sull'icona **Ancora** per mantenere aperto il pannello.
+
+![Icona di ancoraggio del pannello Unit test](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
+
+1. Fare clic sul pulsante **Esegui tutto**.
    
-   Il test ha esito negativo, che è il risultato previsto. Il metodo di test indica che dalla stringa "Jack Jack" fornita al metodo `GetWordCount` non vengono restituite due istanze della stringa `inputString`, "Jack". Poiché nel metodo `GetWordCount` è stato escluso l'uso delle maiuscole/minuscole, vengono invece restituite due istanze. L'asserzione che 2 *non è uguale a* 2 ha esito negativo. Questo è il risultato previsto e la logica del test è corretta. Lasciare aperta la finestra della console mentre nel passaggio successivo si preparerà l'ambiente per modificare il test per la versione finale.
+   Il test ha esito negativo, che è il risultato previsto. Il metodo di test indica che dalla stringa "Jack Jack" fornita al metodo `GetWordCount` non vengono restituite due istanze della stringa `inputString`, "Jack". Poiché nel metodo `GetWordCount` è stato escluso l'uso delle maiuscole/minuscole, vengono invece restituite due istanze. L'asserzione che 2 *non è uguale a* 2 ha esito negativo. Questo è il risultato previsto e la logica del test è corretta.
 
-   ![Esito negativo del test nella finestra della console. Totale test: 1 Esito positivo: 0 Esito negativo: 1. Esecuzione dei test non riuscita.](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
+   ![Errore del test](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
 
-1. Modificare il metodo di test `IgnoreCasing` sostituendo `Assert.NotEqual` con `Assert.Equal`. Salvare il file usando l'abbreviazione da tastiera <kbd>&#8984;</kbd>+<kbd>s</kbd>, selezionando **File > Salva** dal menu o facendo clic con il pulsante destro del mouse sulla scheda del file e scegliendo **Salva** dal menu di scelta rapida.
+1. Modificare il metodo di test `IgnoreCasing` sostituendo `Assert.NotEqual` con `Assert.Equal`. Salvare il file usando la scelta rapida da tastiera <kbd>&#8984;</kbd>+<kbd>s</kbd>, selezionando **File** > **Salva** dal menu o facendo clic con il pulsante destro del mouse sulla scheda del file e scegliendo **Salva** dal menu di scelta rapida.
 
-   Si prevede che l'oggetto `searchWord` "Jack" restituisca due istanze con la stringa `inputString` "Jack jack" passata a `GetWordCount`. Nella finestra della console eseguire di nuovo `dotnet test`. Il test ha esito positivo. Nella stringa "Jack jack" (senza distinzione tra maiuscole e minuscole) sono presenti due istanze di "Jack" e l'asserzione del test è `true`.
+   Si prevede che l'oggetto `searchWord` "Jack" restituisca due istanze con la stringa `inputString` "Jack jack" passata a `GetWordCount`. Eseguire di nuovo il test: fare clic sul pulsante **Esegui test** nel pannello **Unit test** o sul pulsante **Riesegui test** nel pannello **Risultati test** nella parte inferiore della schermata. Il test ha esito positivo. Nella stringa "Jack jack" (senza distinzione tra maiuscole e minuscole) sono presenti due istanze di "Jack" e l'asserzione del test è `true`.
 
-   ![Esito positivo del test nella finestra della console. Totale test: 1 Esito positivo: 1 Esito negativo: 0. Esecuzione dei test completata.](./media/using-on-mac-vs-full-solution/vsmacfull10.png)
+   ![Superamento del test](./media/using-on-mac-vs-full-solution/vsmacfull10.png)
 
 1. La restituzione di singoli valori di test con un oggetto `Fact` è solo una delle operazioni che è possibile eseguire con gli unit test. Grazie a un'altra tecnica molto efficace, è possibile eseguire il test di più valori contemporaneamente usando un oggetto `Theory`. Aggiungere il metodo seguente alla classe `TextUtils_GetWordCountShould`. Dopo aver aggiunto il metodo alla classe sono disponibili due metodi:
 
@@ -149,26 +145,24 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
                                        string searchWord, 
                                        string inputString)
    {
-       Assert.Equal(count, WordCount.GetWordCount(searchWord,
+       Assert.NotEqual(count, WordCount.GetWordCount(searchWord,
                                                   inputString));
    }
    ```
 
-   `CountInstancesCorrectly` verifica che il metodo `GetWordCount` esegua il conteggio in modo corretto. L'oggetto `InlineData` fornisce un conteggio, una parola di ricerca e una stringa di input da verificare. Il metodo di test viene eseguito una volta per ogni riga di dati. Tenere presente che, ancora una volta, si sta asserendo prima un esito negativo tramite `Assert.NotEqual`, anche se si è certi che i conteggi dei dati siano corretti e che i valori corrispondano ai conteggi restituiti dal metodo `GetWordCount`. Anche se, in un primo momento, l'esecuzione del test con esito negativo sembra una perdita di tempo, la verifica della logica del test tramite la generazione di un esito negativo consente in realtà di attestarne la correttezza. Successivamente si potrà trovare un metodo di test che ha esito positivo quando invece dovrebbe avere esito negativo e si identificherà un errore nella logica del test. Vale quindi la pena eseguire questo passaggio ogni volta che si crea un metodo di test.
+   `CountInstancesCorrectly` verifica che il metodo `GetWordCount` esegua il conteggio in modo corretto. L'oggetto `InlineData` fornisce un conteggio, una parola di ricerca e una stringa di input da verificare. Il metodo di test viene eseguito una volta per ogni riga di dati. Tenere presente che, ancora una volta, si sta asserendo un esito negativo prima di tutto tramite `Assert.NotEqual`, anche se si è certi che i conteggi dei dati siano corretti e che i valori corrispondano ai conteggi restituiti dal metodo `GetWordCount`. Anche se, in un primo momento, l'esecuzione del test con esito negativo sembra una perdita di tempo, la verifica della logica del test tramite la generazione di un esito negativo consente in realtà di attestarne la correttezza. Quando si riscontra un metodo di test che ha esito positivo quando invece dovrebbe avere esito negativo, si è trovato un bug nella logica del test. Vale quindi la pena eseguire questo passaggio ogni volta che si crea un metodo di test.
    
-1. Salvare il file ed eseguire `dotnet test` nella finestra della console. Il test delle maiuscole/minuscole ha esito positivo, mentre i tre test del conteggio hanno esito negativo. Questo è esattamente il risultato previsto.
+1. Salvare il file ed eseguire di nuovo i test. Il test delle maiuscole/minuscole ha esito positivo, mentre i tre test del conteggio hanno esito negativo. Questo è esattamente il risultato previsto.
 
-   ![Esito negativo del test nella finestra della console. Totale test: 4 Esito positivo: 1 Esito negativo: 3. Esecuzione dei test non riuscita.](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
+   ![Errore del test](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
 
-1. Modificare il metodo di test `CountInstancesCorrectly` sostituendo `Assert.NotEqual` con `Assert.Equal`. Salvare il file. Eseguire di nuovo `dotnet test` nella finestra della console. Tutti i test hanno esito positivo.
+1. Modificare il metodo di test `CountInstancesCorrectly` sostituendo `Assert.NotEqual` con `Assert.Equal`. Salvare il file. Eseguire di nuovo i test. Tutti i test hanno esito positivo.
 
-   ![Esito positivo del test nella finestra della console. Totale test: 4 Esito positivo: 4 Esito negativo: 0. Esecuzione dei test completata.](./media/using-on-mac-vs-full-solution/vsmacfull12.png)
+   ![Superamento del test](./media/using-on-mac-vs-full-solution/vsmacfull12.png)
 
-<a id="adding-a-console-app" class="xliff"></a>
+## <a name="adding-a-console-app"></a>Aggiunta di un'app console
 
-## Aggiunta di un'app console
-
-1. Nella barra laterale **Soluzione** fare clic con il pulsante destro del mouse sulla soluzione `WordCounter`. Aggiungere un nuovo progetto **Applicazione console** selezionando il modello corrispondente dai modelli **.NET Core > App**. Scegliere **Avanti**. Assegnare al progetto il nome **WordCounterApp**. Scegliere **Crea** per creare il progetto nella soluzione.
+1. Nella barra laterale **Soluzione** fare clic con il pulsante destro del mouse sulla soluzione `WordCounter`. Aggiungere un nuovo progetto **Applicazione console** selezionando il modello corrispondente dai modelli **.NET Core** > **App**. Scegliere **Avanti**. Assegnare al progetto il nome **WordCounterApp**. Scegliere **Crea** per creare il progetto nella soluzione.
 
 1. Nella barra laterale **Soluzioni** fare clic con il pulsante destro del mouse sul nodo **Dipendenze** del nuovo progetto **WordCounterApp**. Nella finestra di dialogo **Modifica riferimenti** selezionare **TextUtils** e scegliere **OK**.
 
@@ -176,15 +170,15 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
    [!code-csharp[Principale](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
-1. Per eseguire l'app in una finestra della console anziché nell'IDE, fare clic con il pulsante destro del mouse sul progetto `WordCounterApp`, scegliere **Opzioni** e aprire il nodo **Predefinito** in **Configurazioni**. Selezionare la casella di controllo **Esegui in console esterna**. Lasciare selezionata l'opzione **Sospendi output della console**. Con questa impostazione l'app viene generata in una finestra della console in cui è possibile digitare l'input per le istruzioni `Console.ReadLine`. Se invece si lascia che l'app venga generata nell'ambiente IDE, è possibile vedere solo l'output delle istruzioni `Console.WriteLine`. Le istruzioni `Console.ReadLine` non funzionano nel pannello **Output applicazione** dell'ambiente IDE.
+1. Per eseguire l'app in una finestra della console anziché nell'IDE, fare clic con il pulsante destro del mouse sul progetto `WordCounterApp`, scegliere **Opzioni** e aprire il nodo **Predefinito** in **Configurazioni**. Selezionare la casella di controllo **Esegui in console esterna**. Lasciare selezionata l'opzione **Sospendi output della console**. Con questa impostazione l'app viene generata in una finestra della console in cui è possibile digitare l'input per le istruzioni `Console.ReadLine`. Se invece si lascia che l'app venga eseguita nell'ambiente IDE, è possibile vedere solo l'output delle istruzioni `Console.WriteLine`. Le istruzioni `Console.ReadLine` non funzionano nel pannello **Output applicazione** dell'ambiente IDE.
 
    ![Finestra Opzioni di progetto](./media/using-on-mac-vs-full-solution/vsmacfull13.png)
 
-1. Poiché con l'anteprima di Visual Studio per Mac non è possibile eseguire i test quando è in esecuzione la soluzione, si esegue direttamente l'app console. Fare clic con il pulsante destro del mouse sul progetto `WordCounterApp` e scegliere **Run item** (Esegui elemento) dal menu di scelta rapida. Se si prova a eseguire l'applicazione con il pulsante di riproduzione, l'esecuzione del Test Runner e dell'app avranno esito negativo. Per altre informazioni sullo stato del lavoro inerente a questo problema, vedere [xunit/xamarinstudio.xunit (#60)](https://github.com/xunit/xamarinstudio.xunit/issues/60). Con l'app in esecuzione, specificare i valori relativi alla parola di ricerca e alla stringa di input quando vengono richiesti nella finestra della console. L'app indica il numero di volte in cui la parola di ricerca appare nella stringa.
+1. Dato che la versione corrente di Visual Studio per Mac non supporta l'esecuzione dei test quando è in esecuzione la soluzione, si esegue direttamente l'app console. Fare clic con il pulsante destro del mouse sul progetto `WordCounterApp` e scegliere **Run item** (Esegui elemento) dal menu di scelta rapida. Se si prova a eseguire l'applicazione con il pulsante di riproduzione, l'esecuzione del Test Runner e dell'app avranno esito negativo. Per altre informazioni sullo stato del lavoro inerente a questo problema, vedere [xunit/xamarinstudio.xunit (#60)](https://github.com/xunit/xamarinstudio.xunit/issues/60). Con l'app in esecuzione, specificare i valori relativi alla parola di ricerca e alla stringa di input quando vengono richiesti nella finestra della console. L'app indica il numero di volte in cui la parola di ricerca appare nella stringa.
 
    ![Finestra della console in cui viene eseguita la ricerca della parola "olives" nella stringa "Iro ate olives by the lake, and the olives were wonderful". L'app risponde "The search word olives appears 2 times."](./media/using-on-mac-vs-full-solution/vsmacfull14.png)
 
-1. Si esaminerà infine la funzionalità di debug con Visual Studio per Mac. Impostare un punto di interruzione nell'istruzione `Console.WriteLine` e selezionare il margine sinistro della riga 23. Verrà visualizzato un cerchio rosso accanto alla riga di codice. In alternativa, selezionare un punto qualsiasi nella riga di codice e scegliere **Esegui > Imposta/Rimuovi punto di interruzione** dal menu.
+1. Si esaminerà infine la funzionalità di debug con Visual Studio per Mac. Impostare un punto di interruzione nell'istruzione `Console.WriteLine` e selezionare il margine sinistro della riga 23. Verrà visualizzato un cerchio rosso accanto alla riga di codice. In alternativa, selezionare un punto qualsiasi nella riga di codice e scegliere **Esegui** > **Imposta/Rimuovi punto di interruzione** dal menu.
 
    ![Punto di interruzione impostato sulla riga 23, istruzione Console.WriteLine](./media/using-on-mac-vs-full-solution/vsmacfull15.png)
 
@@ -202,10 +196,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
    ![Il conteggio della parola di ricerca è ora impostato su 999 nell'output dell'applicazione](./media/using-on-mac-vs-full-solution/vsmacfull19.png)
 
-<a id="next-steps" class="xliff"></a>
+## <a name="see-also"></a>Vedere anche
 
-## Passaggi successivi
-
-* Funzionalità aggiuntive di Visual Studio per Mac sono disponibili in [Introducing Visual Studio for Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/) (Introduzione a Visual Studio per Mac) sul sito Web di Xamarin Developer.
-* Per un'analisi più approfondita delle funzionalità di Visual Studio per Mac, vedere la guida [Xamarin Studio Tour](https://developer.xamarin.com/guides/cross-platform/xamarin-studio/ide-tour/) (Tour di Xamarin Studio).
+[Note sulla versione di Visual Studio 2017 per Mac](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)
 

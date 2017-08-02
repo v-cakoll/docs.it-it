@@ -1,7 +1,7 @@
 ---
-title: Comando dotnet-remove package - Interfaccia della riga di comando di .NET Core | Microsoft Docs
-description: Il comando dotnet-remove package offre un&quot;opzione utile per rimuovere il riferimento al pacchetto NuGet in un progetto.
-keywords: dotnet-remove, interfaccia della riga di comando, comando dell&quot;interfaccia della riga di comando, .NET Core
+title: Comando dotnet-remove package - Interfaccia della riga di comando di .NET Core
+description: Il comando dotnet-remove package offre un'opzione utile per rimuovere il riferimento al pacchetto NuGet in un progetto.
+keywords: dotnet-remove, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
 author: spboyer
 ms.author: mairaw
 ms.date: 03/15/2017
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2fcc8d37-16b3-4581-8038-832160e72d36
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: a321610540534a63bd12a8f878950b75e882c3d4
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a3fef846d5850e2c2a158ccd1f30a84e8f23f793
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -52,3 +53,4 @@ Stampa una breve guida per il comando.
 Rimuove il pacchetto NuGet `Newtonsoft.Json` da un progetto nella directory corrente:
 
 `dotnet remove package Newtonsoft.Json`
+

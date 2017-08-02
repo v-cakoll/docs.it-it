@@ -1,7 +1,7 @@
 ---
-title: Comando dotnet-nuget-delete - Interfaccia della riga di comando di .NET Core | Microsoft Docs
-description: Il comando dotnet-nuget-delete rimuove dall&quot;elenco o elimina un pacchetto dal server.
-keywords: dotnet-nuget-delete, interfaccia della riga di comando, comando dell&quot;interfaccia della riga di comando, .NET Core
+title: Comando dotnet-nuget-delete - Interfaccia della riga di comando di .NET Core
+description: Il comando dotnet-nuget-delete rimuove dall'elenco o elimina un pacchetto dal server.
+keywords: dotnet-nuget-delete, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
 author: karann-msft
 ms.author: mairaw
 ms.date: 03/15/2017
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 6ddffde4-c789-4e90-990e-d35f6a6565d4
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 4b8694b83089d85646c9abd7e7f598cdb5879162
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ce6886f2f4cc8cc633cfc61215fe17550f746c91
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Informazioni di riferimento di csproj | Microsoft Docs
+title: Informazioni di riferimento su csproj
 description: Informazioni sulle differenze tra i file csproj esistenti e .NET Core
 keywords: informazioni di riferimento, csproj, .NET Core
 author: blackdwarf
@@ -9,23 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e47bec77aa3b87f7a46b1c60387cbf8c1193ff17
-ms.openlocfilehash: bbbf3616e7836d029116fe0b307b00001ecdd7da
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 63c7a6f0aa3a926c7ae01ad6c434ecf296c81811
 ms.contentlocale: it-it
-ms.lasthandoff: 06/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="additions-to-the-csproj-format-for-net-core" class="xliff"></a>
+# <a name="additions-to-the-csproj-format-for-net-core"></a>Aggiunte al formato csproj per .NET Core
 
-# Aggiunte al formato csproj per .NET Core
+Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito del passaggio da *project.json* a *csproj* e a [MSBuild](https://github.com/Microsoft/MSBuild). Per altre informazioni sulla sintassi generale dei file di progetto e informazioni di riferimento, vedere la documentazione del [file di progetto MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
 
-Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito del passaggio da *project.json* a *csproj* e a [MSBuild](https://github.com/Microsoft/MSBuild). Per altre informazioni sulla sintassi generale dei file di progetto e informazioni di riferimento, vedere la documentazione del [file di progetto MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-project-file-schema-reference).  
-
-<a id="implicit-package-references" class="xliff"></a>
-
-## Riferimenti impliciti al pacchetto
+## <a name="implicit-package-references"></a>Riferimenti impliciti al pacchetto
 È possibile fare riferimento ai metapacchetti in modo implicito in base ai framework di destinazione specificati nella proprietà `<TargetFramework>` o `<TargetFrameworks>` del file di progetto. `<TargetFrameworks>` viene ignorato se è specificato `<TargetFramework>`, indipendentemente dall'ordine.
 
 ```xml
@@ -40,9 +36,7 @@ Questo documento descrive le modifiche aggiunte ai file di progetto nell'ambito 
  </PropertyGroup>
  ```
 
-<a id="recommendations" class="xliff"></a>
-
-### Suggerimenti
+### <a name="recommendations"></a>Suggerimenti
 Poiché si fa riferimento ai metapacchetti `Microsoft.NETCore.App` o `NetStandard.Library` in modo implicito, ecco le procedure consigliate:
 
 * Non fare mai riferimento in modo esplicito ai metapacchetti `Microsoft.NETCore.App` o `NetStandard.Library` tramite l'elemento `<PackageReference>` nel file di progetto.
@@ -50,9 +44,7 @@ Poiché si fa riferimento ai metapacchetti `Microsoft.NETCore.App` o `NetStandar
     * Ciò può avvenire se si usano [distribuzioni autosufficienti](../deploying/index.md#self-contained-deployments-scd) e occorre una versione specifica, ad esempio, della patch del runtime 1.0.0 LTS.
 * Se occorre una versione specifica del metapacchetto `NetStandard.Library`, è possibile usare la proprietà `<NetStandardImplicitPackageVersion>` e impostare la versione necessaria. 
 
-<a id="default-compilation-includes-in-net-core-projects" class="xliff"></a>
-
-## Dichiarazioni Include di compilazione predefinite nei progetti .NET Core
+## <a name="default-compilation-includes-in-net-core-projects"></a>Dichiarazioni Include di compilazione predefinite nei progetti .NET Core
 Con il passaggio al formato *csproj* nelle ultime versioni dell'SDK, per gli elementi di compilazione e le risorse incorporate le dichiarazioni Include ed Exclude predefinite sono state spostate nei file delle proprietà dell'SDK. Ciò significa che non è più necessario specificare queste dichiarazioni nel file di progetto. 
 
 Il motivo principale di questo cambiamento è la riduzione del disordine nel file di progetto. Le dichiarazioni predefinite presenti nell'SDK coprono i casi di utilizzo più comuni, pertanto non c'è alcuna necessità di ripeterle per ogni progetto creato. Di conseguenza, i file di progetto sono più piccoli e molto più semplici da comprendere e, se necessario, da modificare manualmente. 
@@ -80,16 +72,12 @@ Se si imposta questa proprietà su `false`, si esegue l'override dell'inclusione
 
 Questa modifica non influisce sulle funzioni principali delle altre dichiarazioni Include. Se tuttavia si vogliono specificare, ad esempio, alcuni file da pubblicare con l'app, è ancora possibile usare i meccanismi noti in *csproj*, ad esempio l'elemento `<Content>`.
 
-<a id="recommendation" class="xliff"></a>
-
-### Consiglio
+### <a name="recommendation"></a>Consiglio
 Con csproj è consigliabile rimuovere i GLOB predefiniti dal progetto e aggiungere solo i percorsi di file con GLOB per gli elementi necessari all'app o alla libreria per diversi scenari (ad esempio, runtime e creazione di pacchetti NuGet).
 
-<a id="how-to-see-the-whole-project-as-msbuild-sees-it" class="xliff"></a>
+## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>Visualizzare l'intero progetto come lo vede MSBuild
 
-## Visualizzare l'intero progetto come lo vede MSBuild
-
-Mentre le modifiche di csproj semplificano notevolmente i file di progetto, si potrebbe voler vedere il progetto completamente espanso come lo vede MSBuild dopo che vengono inclusi l'SDK e le relative destinazioni. Pre-elaborare il progetto con [l'opzione `/pp`](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-command-line-reference#preprocess) del comando [`dotnet msbuild`](dotnet-msbuild.md), che specifica i file importati, le relative risorse e i relativi contributi alla build senza compilare il progetto:
+Mentre le modifiche di csproj semplificano notevolmente i file di progetto, si potrebbe voler vedere il progetto completamente espanso come lo vede MSBuild dopo che vengono inclusi l'SDK e le relative destinazioni. Pre-elaborare il progetto con [l'opzione `/pp`](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) del comando [`dotnet msbuild`](dotnet-msbuild.md), che specifica i file importati, le relative risorse e i relativi contributi alla build senza compilare il progetto:
 
 `dotnet msbuild /pp:fullproject.xml`
 
@@ -97,37 +85,27 @@ Se il progetto contiene più framework di destinazione, i risultati del comando 
 
 `dotnet msbuild /p:TargetFramework=netcoreapp2.0 /pp:fullproject.xml`
 
-<a id="additions" class="xliff"></a>
+## <a name="additions"></a>Aggiornamenti
 
-## Aggiornamenti
-
-<a id="sdk-attribute" class="xliff"></a>
-
-### Attributo Sdk 
-L'elemento `<Project>` del file *.csproj* ha un nuovo attributo, denominato `Sdk`. `Sdk` specifica l'SDK che viene usato dal progetto. l'SDK, come descritto dal [documento sui livelli](cli-msbuild-architecture.md), è un set di [attività](https://docs.microsoft.com/visualstudio/msbuild/msbuild-tasks) e [destinazioni](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets) di MSBuild che consente di compilare codice .NET Core. Con gli strumenti di .NET Core vengono forniti due SDK principali:
+### <a name="sdk-attribute"></a>Attributo Sdk 
+L'elemento `<Project>` del file *.csproj* ha un nuovo attributo, denominato `Sdk`. `Sdk` specifica l'SDK che viene usato dal progetto. l'SDK, come descritto dal [documento sui livelli](cli-msbuild-architecture.md), è un set di [attività](/visualstudio/msbuild/msbuild-tasks) e [destinazioni](/visualstudio/msbuild/msbuild-targets) di MSBuild che consente di compilare codice .NET Core. Con gli strumenti di .NET Core vengono forniti due SDK principali:
 
 1. .NET Core SDK con l'ID di `Microsoft.NET.Sdk`
 2. .NET Core Web SDK con l'ID di `Microsoft.NET.Sdk.Web`
 
 Per usare gli strumenti di .NET Core e compilare il codice, è necessario impostare l'attributo `Sdk` su uno di questi ID nell'elemento `<Project>`. 
 
-<a id="packagereference" class="xliff"></a>
-
-### PackageReference
+### <a name="packagereference"></a>PackageReference
 Elemento che specifica una dipendenza NuGet nel progetto. L'attributo `Include` specifica l'ID del pacchetto. 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-<a id="version" class="xliff"></a>
+#### <a name="version"></a>Versione
+`Version` specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema di [numerazione delle versioni NuGet](/nuget/create-packages/dependency-versions#version-ranges). Il comportamento predefinito prevede la corrispondenza esatta della versione. Ad esempio, specificare `Version="1.2.3"` equivale alla notazione NuGet `[1.2.3]` per la versione esatta 1.2.3 del pacchetto.
 
-#### Versione
-`Version` specifica la versione del pacchetto da ripristinare. L'elemento rispetta le regole dello schema di numerazione delle versioni NuGet.
-
-<a id="includeassets-excludeassets-and-privateassets" class="xliff"></a>
-
-#### IncludeAssets, ExcludeAssets e PrivateAssets
+#### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets e PrivateAssets
 L'attributo `IncludeAssets` specifica quali asset appartenenti al pacchetto specificato dall'elemento `<PackageReference>` devono essere usati. 
 
 L'attributo `ExcludeAssets` specifica quali asset appartenenti al pacchetto specificato dall'elemento `<PackageReference>` non devono essere usati.
@@ -151,44 +129,32 @@ In alternativa, l'attributo può contenere:
 * `None`: nessuno degli asset viene usato.
 * `All`: vengono usati tutti gli asset.
 
-<a id="dotnetclitoolreference" class="xliff"></a>
-
-### DotNetCliToolReference
+### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
 L'elemento `<DotNetCliToolReference>` specifica lo strumento dell'interfaccia della riga di comando che si vuole ripristinare nel contesto del progetto. Si tratta di una sostituzione per il nodo `tools` in *project.json*. 
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-<a id="version" class="xliff"></a>
+#### <a name="version"></a>Versione
+`Version` specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema di [numerazione delle versioni NuGet](/nuget/create-packages/dependency-versions#version-ranges). Il comportamento predefinito prevede la corrispondenza esatta della versione. Ad esempio, specificare `Version="1.2.3"` equivale alla notazione NuGet `[1.2.3]` per la versione esatta 1.2.3 del pacchetto.
 
-#### Versione
-`Version` specifica la versione del pacchetto da ripristinare. L'attributo rispetta le regole dello schema di numerazione delle versioni NuGet.
-
-<a id="runtimeidentifiers" class="xliff"></a>
-
-### Identificatori di runtime
+### <a name="runtimeidentifiers"></a>Identificatori di runtime
 L'elemento `<RuntimeIdentifiers>` consente di specificare un elenco delimitato da punto e virgola di [identificatori di runtime (RID)](../rid-catalog.md) per il progetto. I RID consentono di pubblicare distribuzioni autonome. 
 
 ```xml
 <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 ```
 
-
-<a id="runtimeidentifier" class="xliff"></a>
-
-### RuntimeIdentifier
+### <a name="runtimeidentifier"></a>RuntimeIdentifier
 L'elemento `<RuntimeIdentifier>` consente di specificare un solo [identificatore di runtime (RID)](../rid-catalog.md) per il progetto. I RID consentono di pubblicare una distribuzione autonoma. 
 
 ```xml
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
 ```
 
-
-<a id="packagetargetfallback" class="xliff"></a>
-
-### PackageTargetFallback 
-L'elemento `<PackageTargetFallback>` consente di specificare un set di destinazioni compatibili da usare durante il ripristino di pacchetti. È progettato per consentire ai pacchetti che usano il [TxM (Target x Moniker)](https://docs.microsoft.com/nuget/schema/target-frameworks) di .NET di interagire con pacchetti che non dichiarano un TxM di .NET. Se il progetto usa il TxM di .NET, devono averlo anche tutti i pacchetti da cui il progetto dipende, a meno che non si aggiunga `<PackageTargetFallback>` al progetto, in modo da rendere compatibili con .NET le piattaforme che non lo sono. 
+### <a name="packagetargetfallback"></a>PackageTargetFallback 
+L'elemento `<PackageTargetFallback>` consente di specificare un set di destinazioni compatibili da usare durante il ripristino di pacchetti. È progettato per consentire ai pacchetti che usano il [TxM (Target x Moniker)](/nuget/schema/target-frameworks) di .NET di interagire con pacchetti che non dichiarano un TxM di .NET. Se il progetto usa il TxM di .NET, devono averlo anche tutti i pacchetti da cui il progetto dipende, a meno che non si aggiunga `<PackageTargetFallback>` al progetto, in modo da rendere compatibili con .NET le piattaforme che non lo sono. 
 
 L'esempio seguente include i fallback per tutte le destinazioni nel progetto: 
 
@@ -206,151 +172,93 @@ L'esempio seguente specifica i fallback solo per la destinazione `netcoreapp1.0`
 </PackageTargetFallback >
 ```
 
-<a id="nuget-metadata-properties" class="xliff"></a>
-
-## Proprietà dei metadati NuGet
+## <a name="nuget-metadata-properties"></a>Proprietà dei metadati NuGet
 Con il passaggio a MSbuild, i metadati di input usati per la creazione di un pacchetto NuGet sono stati spostati da file *project.json* a file *.csproj*. Gli input sono proprietà di MSBuild, quindi devono trovarsi all'interno di un gruppo `<PropertyGroup>`. L'elenco seguente include le proprietà usate come input per il processo di creazione del pacchetto quando si usa il comando `dotnet pack` o la destinazione di MSBuild `Pack` che fa parte dell'SDK. 
 
-<a id="ispackable" class="xliff"></a>
-
-### IsPackable
+### <a name="ispackable"></a>IsPackable
 Valore booleano che specifica se dal progetto può essere creato un pacchetto. Il valore predefinito è `true`. 
 
-<a id="packageversion" class="xliff"></a>
-
-### PackageVersion
+### <a name="packageversion"></a>PackageVersion
 Specifica la versione che avrà il pacchetto risultante. Accetta tutte le forme della stringa di versione NuGet. Il valore predefinito corrisponde al valore di `$(Version)`, vale a dire della proprietà `Version` nel progetto. 
 
-<a id="packageid" class="xliff"></a>
-
-### PackageId
+### <a name="packageid"></a>PackageId
 Specifica il nome del pacchetto risultante. Se non specificato, l'impostazione predefinita per l'operazione `pack` corrisponde all'uso di `AssemblyName` o del nome della directory come nome del pacchetto. 
 
-<a id="title" class="xliff"></a>
-
-### Titolo
+### <a name="title"></a>Titolo
 Titolo del pacchetto facilmente comprensibile per l'utente, usato di solito per la visualizzazione dell'interfaccia utente, ad esempio in nuget.org e in Gestione pacchetti in Visual Studio. Se non specificato, viene usato l'ID del pacchetto.
 
-<a id="authors" class="xliff"></a>
-
-### Autori
+### <a name="authors"></a>Autori
 Elenco con valori delimitati da punto e virgola di autori di pacchetti, corrispondenti ai nomi di profilo in nuget.org. Questi, visualizzati nella raccolta NuGet in nuget.org, vengono usati per creare riferimenti incrociati ai pacchetti dello stesso autore.
 
-<a id="description" class="xliff"></a>
-
-### Descrizione
+### <a name="description"></a>Descrizione
 Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente.
 
-<a id="copyright" class="xliff"></a>
-
-### Copyright
+### <a name="copyright"></a>Copyright
 Informazioni sul copyright per il pacchetto.
 
-<a id="packagerequirelicenseacceptance" class="xliff"></a>
-
-### PackageRequireLicenseAcceptance
+### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 Valore booleano che specifica se il client deve richiedere al consumer di accettare la licenza del pacchetto prima di installarlo. Il valore predefinito è `false`.
 
-<a id="packagelicenseurl" class="xliff"></a>
-
-### PackageLicenseUrl
+### <a name="packagelicenseurl"></a>PackageLicenseUrl
 URL della licenza applicabile al pacchetto.
 
-<a id="packageprojecturl" class="xliff"></a>
-
-### PackageProjectUrl
+### <a name="packageprojecturl"></a>PackageProjectUrl
 URL della pagina iniziale del pacchetto, spesso visualizzato nell'interfaccia utente e in nuget.org.
 
-<a id="packageiconurl" class="xliff"></a>
-
-### PackageIconUrl
+### <a name="packageiconurl"></a>PackageIconUrl
 URL di un'immagine 64 x 64 con sfondo trasparente da usare come icona per il pacchetto nella visualizzazione dell'interfaccia utente.
 
-<a id="packagereleasenotes" class="xliff"></a>
-
-### PackageReleaseNotes
+### <a name="packagereleasenotes"></a>PackageReleaseNotes
 Note sulla versione per il pacchetto.
 
-<a id="packagetags" class="xliff"></a>
-
-### PackageTags
+### <a name="packagetags"></a>PackageTags
 Elenco di tag con valori delimitati da punto e virgola che designa il pacchetto.
 
-<a id="packageoutputpath" class="xliff"></a>
-
-### PackageOutputPath
+### <a name="packageoutputpath"></a>PackageOutputPath
 Determina il percorso di output in cui verrà rilasciato il pacchetto creato. Il valore predefinito è `$(OutputPath)`. 
 
-<a id="includesymbols" class="xliff"></a>
-
-### IncludeSymbols
+### <a name="includesymbols"></a>IncludeSymbols
 Valore booleano che indica se al momento della creazione del pacchetto deve essere creato un pacchetto aggiuntivo di simboli. Questo pacchetto, con estensione *.symbols.nupkg*, copierà i file PDB insieme ai file DLL e ad altri file di output.
 
-<a id="includesource" class="xliff"></a>
-
-### IncludeSource
+### <a name="includesource"></a>IncludeSource
 Valore booleano che indica se il processo di creazione del pacchetto deve creare un pacchetto di origine. Il pacchetto di origine contiene il codice sorgente della libreria, nonché i file PDB. I file di origine vengono posizionati nella directory `src/ProjectName` del file del pacchetto risultante. 
 
-<a id="istool" class="xliff"></a>
-
-### IsTool
+### <a name="istool"></a>IsTool
 Specifica se tutti i file di output devono essere copiati nella cartella *tools* anziché nella cartella *lib*. È diverso da `DotNetCliTool`, che viene specificato impostando `PackageType` nel file *.csproj*.
 
-<a id="repositoryurl" class="xliff"></a>
-
-### RepositoryUrl
+### <a name="repositoryurl"></a>RepositoryUrl
 Specifica l'URL per l'archivio in cui si trova il codice sorgente per il pacchetto e/o da cui il codice sorgente viene compilato. 
 
-<a id="repositorytype" class="xliff"></a>
-
-### RepositoryType
+### <a name="repositorytype"></a>RepositoryType
 Specifica il tipo dell'archivio. Il valore predefinito è "git". 
 
-<a id="nopackageanalysis" class="xliff"></a>
-
-### NoPackageAnalysis
+### <a name="nopackageanalysis"></a>NoPackageAnalysis
 Specifica che pack non deve eseguire l'analisi del pacchetto dopo la compilazione di quest'ultimo.
 
-<a id="minclientversion" class="xliff"></a>
-
-### MinClientVersion
+### <a name="minclientversion"></a>MinClientVersion
 Specifica la versione minima del client NuGet, imposta da nuget.exe e da Gestione pacchetti di Visual Studio, che può installare questo pacchetto.
 
-<a id="includebuildoutput" class="xliff"></a>
-
-### IncludeBuildOutput
+### <a name="includebuildoutput"></a>IncludeBuildOutput
 Valore booleano che specifica se gli assembly di output di compilazione devono essere compresi nel file *.nupkg*.
 
-<a id="includecontentinpack" class="xliff"></a>
-
-### IncludeContentInPack
+### <a name="includecontentinpack"></a>IncludeContentInPack
 Questo valore booleano specifica se gli elementi con tipo `Content` verranno inclusi automaticamente nel pacchetto risultante. Il valore predefinito è `true`. 
 
-<a id="buildoutputtargetfolder" class="xliff"></a>
-
-### BuildOutputTargetFolder
+### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
 Specifica la cartella in cui posizionare gli assembly di output. Gli assembly di output (e altri file di output) vengono copiati nelle rispettive cartelle per framework.
 
-<a id="contenttargetfolders" class="xliff"></a>
-
-### ContentTargetFolders
+### <a name="contenttargetfolders"></a>ContentTargetFolders
 Questa proprietà specifica il percorso predefinito in cui devono essere posizionati tutti i file di contenuto se per tali file `PackagePath` non è specificato. Il valore predefinito è "content;contentFiles".
 
-<a id="nuspecfile" class="xliff"></a>
-
-### NuspecFile
+### <a name="nuspecfile"></a>NuspecFile
 Percorso relativo o assoluto per il file *.nuspec* usato per la creazione del pacchetto. 
 
 > [!NOTE]
 > Se il file *.nuspec* è specificato, viene usato **esclusivamente** per le informazioni di creazione del pacchetto e le informazioni nei progetti non vengono usate. 
 
-<a id="nuspecbasepath" class="xliff"></a>
-
-### NuspecBasePath
+### <a name="nuspecbasepath"></a>NuspecBasePath
 Percorso di base per il file *.nuspec*.
 
-<a id="nuspecproperties" class="xliff"></a>
-
-### NuspecProperties
+### <a name="nuspecproperties"></a>NuspecProperties
 Elenco con valori delimitati da punto e virgola di coppie chiave=valore.
 

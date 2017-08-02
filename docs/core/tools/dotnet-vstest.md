@@ -1,7 +1,7 @@
 ---
-title: Comando dotnet-vstest | Microsoft Docs
+title: Comando dotnet-vstest
 description: Il comando dotnet-vstest consente di compilare un progetto e tutte le relative dipendenze.
-keywords: dotnet-vstest, interfaccia della riga di comando, comando dell&quot;interfaccia della riga di comando, .NET Core
+keywords: dotnet-vstest, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
 author: guardrex
 ms.author: mairaw
 ms.date: 03/09/2017
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0e36c070-2242-41d3-96f1-aea0aca48d4d
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: 27b96e74ae1abc83ba527cb799db33bec7af35bf
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 740e0e002b8fde1c5bfd1eb8e53be54b4113c74d
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 

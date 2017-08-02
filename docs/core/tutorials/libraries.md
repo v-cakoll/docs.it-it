@@ -1,6 +1,6 @@
 ---
-title: Sviluppo di librerie con strumenti multipiattaforma| Microsoft Docs
-description: Sviluppo di librerie con strumenti multipiattaforma
+title: Sviluppo di librerie con strumenti multipiattaforma
+description: Informazioni su come creare librerie per .NET usando gli strumenti dell'interfaccia della riga di comando di .NET Core.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -10,39 +10,39 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: f1af698557abecc61d6f4ecdb8e4602ef69d9dc1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2d95d281655c33927030666f101570da2d3e42ca
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
 # <a name="developing-libraries-with-cross-platform-tools"></a>Sviluppo di librerie con strumenti multipiattaforma
 
-Questo articolo illustra come scrivere librerie per .NET usando gli strumenti dell'interfaccia della riga di comando multipiattaforma.  L'interfaccia della riga di comando offre un'esperienza efficace e di basso livello per qualsiasi sistema operativo supportato.  È comunque sempre possibile creare librerie con Visual Studio. Se si preferisce questo tipo di esperienza, [consultare la Guida di Visual Studio](libraries-with-vs.md).
+Questo articolo illustra come scrivere librerie per .NET usando gli strumenti dell'interfaccia della riga di comando multipiattaforma. L'interfaccia della riga di comando offre un'esperienza efficace e di basso livello per qualsiasi sistema operativo supportato. È comunque sempre possibile creare librerie con Visual Studio. Se si preferisce questo tipo di esperienza, [consultare la Guida di Visual Studio](libraries-with-vs.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 È necessario che [l'SDK e l'interfaccia della riga di comando di .NET Core](https://www.microsoft.com/net/core) siano installati nel computer.
 
-Per le sezioni di questo documento relative alle versioni di .NET Framework è necessario avere [.NET Framework](http://getdotnet.azurewebsites.net/) installato in un computer Windows.  
+Per le sezioni di questo documento relative alle versioni di .NET Framework è necessario avere [.NET Framework](http://getdotnet.azurewebsites.net/) installato in un computer Windows.
 
-Inoltre, se si desidera supportare destinazioni precedenti di .NET Framework, è necessario installare Targeting/Developer Pack per versioni precedenti del framework dalla [pagina delle piattaforme di destinazione .NET](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html).  Fare riferimento a questa tabella:
+Inoltre, se si desidera supportare destinazioni precedenti di .NET Framework, è necessario installare Targeting/Developer Pack per versioni precedenti del framework dalla [pagina delle piattaforme di destinazione .NET](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html). Fare riferimento a questa tabella:
 
-| Versione di .NET Framework | Pacchetto da scaricare |
-| ---------------------- | ----------------- |
-| 4.6.1 | .NET Framework 4.6.1 Targeting Pack |
-| 4.6 | .NET Framework 4.6 Targeting Pack |
-| 4.5.2 | .NET Framework 4.5.2 Developer Pack |
-| 4.5.1 | .NET Framework 4.5.1 Developer Pack |
-| 4.5 | Windows Software Development Kit per Windows 8 |
-| 4.0 | Windows SDK per Windows 7 e .NET Framework 4 |
-| 2.0, 3.0 e 3.5 | Runtime di .NET Framework 3.5 SP1 (o versione per Windows 8 o successiva) |
+| Versione di .NET Framework | Pacchetto da scaricare                                       |
+| ---------------------- | ------------------------------------------------------ |
+| 4.6.1                  | .NET Framework 4.6.1 Targeting Pack                    |
+| 4.6                    | .NET Framework 4.6 Targeting Pack                      |
+| 4.5.2                  | .NET Framework 4.5.2 Developer Pack                    |
+| 4.5.1                  | .NET Framework 4.5.1 Developer Pack                    |
+| 4.5                    | Windows Software Development Kit per Windows 8         |
+| 4.0                    | Windows SDK per Windows 7 e .NET Framework 4         |
+| 2.0, 3.0 e 3.5      | Runtime di .NET Framework 3.5 SP1 (o versione per Windows 8 o successiva) |
 
 ## <a name="how-to-target-the-net-standard"></a>Come definire .NET Standard come destinazione
 
-Se non si ha molta familiarità con .NET Standard, leggere l'articolo [.NET Standard Library](../../standard/net-standard.md) (Libreria .NET Standard) per altre informazioni.
+Se non si ha molta familiarità con .NET Standard, leggere l'articolo [.NET Standard](../../standard/net-standard.md) per altre informazioni.
 
 In questo articolo è presente una tabella in cui le diverse versioni di .NET Standard sono associate alle varie implementazioni:
 
@@ -50,7 +50,7 @@ In questo articolo è presente una tabella in cui le diverse versioni di .NET St
 
 Ecco cosa significa questa tabella ai fini della creazione di una libreria:
 
-La versione di .NET Standard selezionata sarà un compromesso tra l'accesso alle API più recenti e la possibilità di definire come destinazione più piattaforme .NET e versioni di .NET Framework.  Per controllare l'intervallo di piattaforme e versioni definibili come destinazione selezionare una versione di `netstandardX.X` (dove `X.X` è un numero di versione) e aggiungerla al file di progetto (`.csproj` o `.fsproj`).
+La versione di .NET Standard selezionata sarà un compromesso tra l'accesso alle API più recenti e la possibilità di definire come destinazione più piattaforme .NET e versioni di .NET Framework. Per controllare l'intervallo di piattaforme e versioni definibili come destinazione selezionare una versione di `netstandardX.X` (dove `X.X` è un numero di versione) e aggiungerla al file di progetto (`.csproj` o `.fsproj`).
 
 Quando si definisce .NET Standard come destinazione sono disponibili tre opzioni principali, a seconda delle esigenze.
 
@@ -58,24 +58,24 @@ Quando si definisce .NET Standard come destinazione sono disponibili tre opzioni
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
-        <PropertyGroup>
-            <TargetFramework>netstandard1.4</TargetFramework>
-        </PropertyGroup>
+      <PropertyGroup>
+        <TargetFramework>netstandard1.4</TargetFramework>
+      </PropertyGroup>
     </Project>
     ```
 
 2. È possibile usare una versione inferiore o superiore di .NET Standard modificando il valore nel nodo `TargetFramework` del file di progetto.
     
-    Le versioni di .NET Standard sono compatibili con le versioni precedenti. Ciò significa che le librerie `netstandard1.0` possono essere eseguite su piattaforme `netstandard1.1` e versioni successive.  Tuttavia, non è prevista la compatibilità con le versioni successive. Le piattaforme .NET Standard precedenti non possono fare riferimento a quelle più recenti.  Ciò significa che le librerie `netstandard1.0` non possono fare riferimento alle librerie `netstandard1.1` o versioni successive.  Selezionare la versione di .NET Standard che contiene la combinazione di API e supporto per piattaforme più adatta alle proprie esigenze.  Attualmente è consigliabile selezionare `netstandard1.4`.
+    Le versioni di .NET Standard sono compatibili con le versioni precedenti. Ciò significa che le librerie `netstandard1.0` possono essere eseguite su piattaforme `netstandard1.1` e versioni successive. Tuttavia, non è prevista la compatibilità con le versioni successive. Le piattaforme .NET Standard precedenti non possono fare riferimento a quelle più recenti. Ciò significa che le librerie `netstandard1.0` non possono fare riferimento alle librerie `netstandard1.1` o versioni successive. Selezionare la versione di .NET Standard che contiene la combinazione di API e supporto per piattaforme più adatta alle proprie esigenze. Attualmente è consigliabile selezionare `netstandard1.4`.
     
 3. Se si vuole definire come destinazione .NET Framework 4.0 o versione precedente, o si desidera usare un'API disponibile in .NET Framework ma non in .NET Standard (ad esempio, `System.Drawing`), leggere le sezioni seguenti per apprendere come definire più destinazioni.
 
 ## <a name="how-to-target-the-net-framework"></a>Come definire .NET Framework come destinazione
 
 > [!NOTE]
-> Queste istruzioni presuppongono che nel computer sia installato .NET Framework.  Vedere la sezione [Prerequisiti](#prerequisites) per informazioni sulle dipendenze da installare.
+> Queste istruzioni presuppongono che nel computer sia installato .NET Framework. Vedere la sezione [Prerequisiti](#prerequisites) per informazioni sulle dipendenze da installare.
 
-Tenere presente che alcune delle versioni di .NET Framework indicate in questo argomento non sono più supportate.  Per informazioni sulle versioni non supportate, vedere [Domande frequenti sui criteri relativi al ciclo di vita del supporto per Microsoft .NET Framework](https://support.microsoft.com/gp/framework_faq/en-us).
+Tenere presente che alcune delle versioni di .NET Framework indicate in questo argomento non sono più supportate. Per informazioni sulle versioni non supportate, vedere [Domande frequenti sui criteri relativi al ciclo di vita del supporto per Microsoft .NET Framework](https://support.microsoft.com/gp/framework_faq/en-us).
 
 Se si vuole raggiungere il numero massimo di sviluppatori e progetti, usare .NET Framework 4.0 come destinazione di base. Per definire .NET Framework come destinazione, è necessario iniziare usando il TFM (Target Framework Moniker) corretto, corrispondente alla versione di .NET Framework da supportare.
 
@@ -90,25 +90,25 @@ Se si vuole raggiungere il numero massimo di sviluppatori e progetti, usare .NET
 .NET Framework 4.6   --> net46
 .NET Framework 4.6.1 --> net461
 .NET Framework 4.6.2 --> net462
-.NET Framework 4.7 --> net47
+.NET Framework 4.7   --> net47
 ```
 
-Quindi inserire il TFM nella sezione `TargetFramework` del file di progetto.  Ad esempio, ecco come scrivere una libreria con destinazione .NET Framework 4.0:
+Quindi inserire il TFM nella sezione `TargetFramework` del file di progetto. Ad esempio, ecco come scrivere una libreria con destinazione .NET Framework 4.0:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>net40</TargetFramework>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net40</TargetFramework>
+  </PropertyGroup>
 </Project>
 ```
 
-L'operazione è ora completata.  Anche se compilata solo per .NET Framework 4, la libreria può essere usata nelle versioni più recenti di .NET Framework.
+L'operazione è ora completata. Anche se compilata solo per .NET Framework 4, la libreria può essere usata nelle versioni più recenti di .NET Framework.
 
 ## <a name="how-to-multitarget"></a>Come definire più destinazioni
 
 > [!NOTE]
-> Le istruzioni seguenti presuppongono che nel computer sia installato .NET Framework.  Vedere la sezione [Prerequisiti](#prerequisites) per informazioni sulle dipendenze da installare e sull'area da cui scaricarle.
+> Le istruzioni seguenti presuppongono che nel computer sia installato .NET Framework. Vedere la sezione [Prerequisiti](#prerequisites) per informazioni sulle dipendenze da installare e sull'area da cui scaricarle.
 
 Quando il progetto supporta sia .NET Framework che .NET Core, può essere opportuno definire come destinazione le versioni precedenti di .NET Framework. In questo scenario, per usare API e costrutti di linguaggio più recenti per le destinazioni più recenti, inserire direttive `#if` nel codice. Può anche essere necessario aggiungere diversi pacchetti e dipendenze per ogni piattaforma di destinazione per includere le diverse API necessarie per ogni caso.
 
@@ -138,29 +138,12 @@ Il file di progetto può avere un aspetto simile al seguente:
 Si noteranno tre modifiche principali:
 
 1. Il nodo `TargetFramework` è stato sostituito da `TargetFrameworks` e all'interno sono espressi tre TFM.
-2. Un nodo `<ItemGroup>` per la destinazione `net40 ` chiama un riferimento di .NET Framework.
-3. Un nodo `<ItemGroup>` per la destinazione `net45` chiama due riferimenti di .NET Framework.
+1. Un nodo `<ItemGroup>` per la destinazione `net40 ` chiama un riferimento di .NET Framework.
+1. Un nodo `<ItemGroup>` per la destinazione `net45` chiama due riferimenti di .NET Framework.
 
 Il sistema di compilazione è in grado di riconoscere i seguenti simboli di preprocessore usati nelle direttive `#if`:
 
-```
-.NET Framework 2.0   --> NET20
-.NET Framework 3.5   --> NET35
-.NET Framework 4.0   --> NET40
-.NET Framework 4.5   --> NET45
-.NET Framework 4.5.1 --> NET451
-.NET Framework 4.5.2 --> NET452
-.NET Framework 4.6   --> NET46
-.NET Framework 4.6.1 --> NET461
-.NET Framework 4.6.2 --> NET462
-.NET Standard 1.0    --> NETSTANDARD1_0
-.NET Standard 1.1    --> NETSTANDARD1_1
-.NET Standard 1.2    --> NETSTANDARD1_2
-.NET Standard 1.3    --> NETSTANDARD1_3
-.NET Standard 1.4    --> NETSTANDARD1_4
-.NET Standard 1.5    --> NETSTANDARD1_5
-.NET Standard 1.6    --> NETSTANDARD1_6
-```
+[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
 Ecco un esempio che usa la compilazione condizionale basata sulla destinazione:
 
@@ -181,8 +164,8 @@ namespace MultitargetLib
     public class Library
     {
 #if NET40
-         private readonly WebClient _client = new WebClient();
-         private readonly object _locker = new object();
+        private readonly WebClient _client = new WebClient();
+        private readonly object _locker = new object();
 #else
         private readonly HttpClient _client = new HttpClient();
 #endif
@@ -208,19 +191,19 @@ namespace MultitargetLib
             return $"Dotnet Foundation mentions .NET {dotNetCount} times!";
         }
 #else
-         // .NET 4.5+ can use async/await!
-         public async Task<string> GetDotNetCountAsync()
-         {
-             string url = "http://www.dotnetfoundation.org/";
+        // .NET 4.5+ can use async/await!
+        public async Task<string> GetDotNetCountAsync()
+        {
+            string url = "http://www.dotnetfoundation.org/";
 
-             // HttpClient is thread-safe, so no need to explicitly lock here
-             var result = await _client.GetStringAsync(url);
+            // HttpClient is thread-safe, so no need to explicitly lock here
+            var result = await _client.GetStringAsync(url);
 
-             int dotNetCount = Regex.Matches(result, ".NET").Count;
+            int dotNetCount = Regex.Matches(result, ".NET").Count;
 
-             return $"dotnetfoundation.org mentions .NET {dotNetCount} times in its HTML!";
-         }
- #endif
+            return $"dotnetfoundation.org mentions .NET {dotNetCount} times in its HTML!";
+        }
+#endif
     }
 }
 ```
@@ -237,51 +220,52 @@ Ogni directory contiene i file `.dll` per ciascuna destinazione.
 
 ## <a name="how-to-test-libraries-on-net-core"></a>Come testare le librerie in .NET Core
 
-È importante essere in grado di eseguire test tra diverse piattaforme.  È possibile usare [xUnit](http://xunit.github.io/) o MSTest senza modifiche.  Entrambi sono adatti per gli unit test della libreria in .NET Core.  La modalità di configurazione della soluzione con progetti di test dipende dalla [struttura della soluzione](#structuring-a-solution).  Nell'esempio seguente si presuppone che le directory di test e di origine si trovino nella stessa directory di livello superiore.
+È importante essere in grado di eseguire test tra diverse piattaforme. È possibile usare [xUnit](http://xunit.github.io/) o MSTest senza modifiche. Entrambi sono adatti per gli unit test della libreria in .NET Core. La modalità di configurazione della soluzione con progetti di test dipende dalla [struttura della soluzione](#structuring-a-solution). Nell'esempio seguente si presuppone che le directory di test e di origine si trovino nella stessa directory di livello superiore.
 
-> [!INFO] Questa procedura usa alcuni [comandi CLI .NET](../tools/index.md).  Per altre informazioni, vedere [dotnet new](../tools/dotnet-new.md) e [dotnet sln](../tools/dotnet-sln.md).
+> [!NOTE]
+> Questa procedura usa alcuni [comandi dell'interfaccia della riga di comando di .NET Core](../tools/index.md). Per altre informazioni, vedere [dotnet new](../tools/dotnet-new.md) e [dotnet sln](../tools/dotnet-sln.md).
 
-1. Configurare la soluzione.  È possibile farlo con i comandi seguenti:
+1. Configurare la soluzione. È possibile farlo con i comandi seguenti:
 
-```bash
-mkdir SolutionWithSrcAndTest
-cd SolutionWithSrcAndTest
-dotnet new sln
-dotnet new classlib -o MyProject
-dotnet new xunit -o MyProject.Test
-dotnet sln add MyProject/MyProject.csproj
-dotnet sln add MyProject.Test/MyProject.Test.csproj
-```
+   ```bash
+   mkdir SolutionWithSrcAndTest
+   cd SolutionWithSrcAndTest
+   dotnet new sln
+   dotnet new classlib -o MyProject
+   dotnet new xunit -o MyProject.Test
+   dotnet sln add MyProject/MyProject.csproj
+   dotnet sln add MyProject.Test/MyProject.Test.csproj
+   ```
 
-I progetti vengono creati e collegati in una soluzione.  La directory per `SolutionWithSrcAndTest` ha un aspetto simile al seguente:
+   I progetti vengono creati e collegati in una soluzione. La directory per `SolutionWithSrcAndTest` ha un aspetto simile al seguente:
 
-```    
-/SolutionWithSrcAndTest
-|__SolutionWithSrcAndTest.sln
-|__MyProject/
-|__MyProject.Test/
-```
+   ```
+   /SolutionWithSrcAndTest
+   |__SolutionWithSrcAndTest.sln
+   |__MyProject/
+   |__MyProject.Test/
+   ```
 
-2. Passare alla directory del progetto di test e aggiungere un riferimento a `MyProject.Test` da `MyProject`.
+1. Passare alla directory del progetto di test e aggiungere un riferimento a `MyProject.Test` da `MyProject`.
 
-```bash
-cd MyProject.Test
-dotnet add reference ../MyProject/MyProject.csproj
-```
+   ```bash
+   cd MyProject.Test
+   dotnet add reference ../MyProject/MyProject.csproj
+   ```
 
-3. Ripristinare i pacchetti e compilare i progetti:
+1. Ripristinare i pacchetti e compilare i progetti:
 
-```bash
-dotnet restore
-dotnet build
-```
+   ```bash
+   dotnet restore
+   dotnet build
+   ```
 
-4. Verificare che xUnit sia in esecuzione con il comando `dotnet test`.  Se si sceglie di usare MSTest, va invece eseguita l'utilità di test delle console MSTest.
+1. Verificare che xUnit sia in esecuzione con il comando `dotnet test`. Se si sceglie di usare MSTest, va invece eseguita l'utilità di test delle console MSTest.
     
-L'operazione è ora completata.  È ora possibile testare la libreria su tutte le piattaforme usando gli strumenti da riga di comando.  Una volta completata la configurazione, è possibile procedere con il testing della libreria in modo molto semplice:
+L'operazione è ora completata. È ora possibile testare la libreria su tutte le piattaforme usando gli strumenti da riga di comando. Una volta completata la configurazione, è possibile procedere con il testing della libreria in modo molto semplice:
 
 1. Eseguire le opportune modifiche nella libreria.
-2. Eseguire i test dalla riga di comando, nella directory di test, usando il comando `dotnet test`.
+1. Eseguire i test dalla riga di comando, nella directory di test, usando il comando `dotnet test`.
 
 Il codice viene ricompilato automaticamente quando si richiama il comando `dotnet test`.
 
@@ -289,26 +273,23 @@ Il codice viene ricompilato automaticamente quando si richiama il comando `dotne
 
 Per le librerie di maggiori dimensioni, è spesso necessario inserire funzionalità in progetti diversi.
 
-Si supponga di voler creare una libreria che sia utilizzabile in C# e F# idiomatico.  Ciò significa che la libreria viene utilizzata in modi che sono naturali per C# o F#.  In C#, ad esempio, la libreria può essere utilizzata in un modo simile al seguente:
+Si supponga di voler creare una libreria che sia utilizzabile in C# e F# idiomatico. Ciò significa che la libreria viene utilizzata in modi che sono naturali per C# o F#. In C#, ad esempio, la libreria può essere utilizzata in un modo simile al seguente:
 
 ```csharp
 using AwesomeLibrary.CSharp;
 
-...
 public Task DoThings(Data data)
 {
     var convertResult = await AwesomeLibrary.ConvertAsync(data);
     var result = AwesomeLibrary.Process(convertResult);
     // do something with result
 }
-```  
+```
 
 In F#, invece, può assumere l'aspetto seguente:
 
 ```fsharp
 open AwesomeLibrary.FSharp
-
-...
 
 let doWork data = async {
     let! result = AwesomeLibrary.AsyncConvert data // Uses an F# async function rather than C# async method
@@ -338,11 +319,11 @@ dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
 dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
-Verranno aggiunti i tre progetti precedenti e un file soluzione che li collega.  La creazione del file di soluzione e il collegamento dei progetti consentono di ripristinare e compilare i progetti da un livello superiore.
+Verranno aggiunti i tre progetti precedenti e un file soluzione che li collega. La creazione del file di soluzione e il collegamento dei progetti consentono di ripristinare e compilare i progetti da un livello superiore.
 
 ### <a name="project-to-project-referencing"></a>Definizione di riferimenti da progetto a progetto
 
-Il metodo migliore per creare un riferimento a un progetto è l'uso dell'interfaccia della riga di comando di .NET per aggiungere un riferimento al progetto.  Dalle directory di progetto **AwesomeLibrary.CSharp** e **AwesomeLibrary.FSharp** è possibile eseguire il comando seguente:
+Il modo migliore per creare un riferimento a un progetto è l'uso dell'interfaccia della riga di comando di .NET Core per aggiungere un riferimento al progetto. Dalle directory di progetto **AwesomeLibrary.CSharp** e **AwesomeLibrary.FSharp** è possibile eseguire il comando seguente:
 
 ```console
 $ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
@@ -352,11 +333,11 @@ I file di progetto per **AwesomeLibrary.CSharp** e **AwesomeLibrary.FSharp** inc
 
 ```xml
 <ItemGroup>
-    <ProjectReference Include="..\AwesomeLibrary.Core\AwesomeLibrary.Core.csproj" />
+  <ProjectReference Include="..\AwesomeLibrary.Core\AwesomeLibrary.Core.csproj" />
 </ItemGroup>
 ```
 
-Se si preferisce non usare l'interfaccia della riga di comando .NET è possibile aggiungere manualmente questa sezione a ogni file di progetto.
+Se si preferisce non usare l'interfaccia della riga di comando .NET Core, è possibile aggiungere manualmente questa sezione a ogni file di progetto.
 
 ### <a name="structuring-a-solution"></a>Definizione della struttura di una soluzione
 

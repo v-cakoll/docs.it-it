@@ -1,7 +1,7 @@
 ---
-title: Comando dotnet-migrate - Interfaccia della riga di comando di .NET Core | Microsoft Docs
+title: Comando dotnet-migrate - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet-migrate consente di eseguire la migrazione di un progetto e di tutte le relative dipendenze.
-keywords: dotnet-migrate, interfaccia della riga di comando, comando dell&quot;interfaccia della riga di comando, .NET Core
+keywords: dotnet-migrate, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/15/2017
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0da07253-5ae1-42e9-9455-bffee9950952
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: bde4df1c9e84e103c75b0ccc32d7e970b7708b53
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e8491d69b2e0df7b3bd2741e34abdb9631777019
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -106,3 +107,4 @@ Eseguire la migrazione di tutti i progetti inclusi nel file *global.json*:
 Eseguire solo la migrazione del progetto corrente e non delle dipendenze da progetto a progetto. Usare una versione specifica dell'SDK:
 
 `dotnet migrate -s -v 1.0.0-preview4`
+
