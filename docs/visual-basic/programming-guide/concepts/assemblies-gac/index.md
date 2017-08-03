@@ -1,5 +1,5 @@
 ---
-title: Assembly e Global Assembly Cache (Visual Basic) | Microsoft Docs
+title: Assembly e Global Assembly Cache (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b712132becfe47d50d1c06c0e8fd9940b8035e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c5a1a3a651fc7d2b42f8ac55ab6f2d832f258bb0
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Assembly e Global Assembly Cache (Visual Basic)
@@ -41,7 +42,7 @@ Gli assembly costituiscono l'unità fondamentale della distribuzione, del contro
   
 -   È possibile ottenere informazioni su un assembly a livello di codice tramite reflection. Per altre informazioni, vedere [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
   
--   Se si vuole caricare un assembly solo per esaminarlo, usare un metodo quale <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
+-   Per caricare un assembly solo per esaminarlo, usare un metodo come <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
   
 ## <a name="assembly-manifest"></a>Manifesto dell'assembly  
  All'interno di ogni assembly è presente un *manifesto dell'assembly*. Il manifesto dell'assembly è simile a un indice e contiene quanto segue:  
@@ -74,3 +75,4 @@ Gli assembly costituiscono l'unità fondamentale della distribuzione, del contro
  [Procedura: Creare e usare assembly dalla riga di comando (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)   
  [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
  [Procedura dettagliata: Incorporamento delle informazioni sui tipi da assembly di Microsoft Office in Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+

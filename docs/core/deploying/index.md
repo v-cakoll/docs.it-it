@@ -1,5 +1,5 @@
 ---
-title: Distribuzione di applicazioni .NET Core | Microsoft Docs
+title: Distribuzione di applicazioni .NET Core
 description: Distribuzione di un'applicazione .NET Core.
 keywords: .NET, .NET Core, distribuzione di .NET Core
 author: rpetrusha
@@ -9,17 +9,15 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
-ms.openlocfilehash: 5e2b03d0731e13e1d5261679a65b1e01cd1d3fe4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 199bb132df201175dbdbdd19634de5c3551b5f3b
 ms.contentlocale: it-it
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core-application-deployment" class="xliff"></a>
-
-# Distribuzione di applicazioni .NET Core
+# <a name="net-core-application-deployment"></a>Distribuzione di applicazioni .NET Core
 
 È possibile creare due tipi di distribuzioni per le applicazioni .NET Core:
 
@@ -27,15 +25,11 @@ ms.lasthandoff: 07/05/2017
 
 - Distribuzione autonoma. A differenza delle distribuzioni dipendenti dal framework, una distribuzione autonoma non si basa sulla presenza dei componenti condivisi nel sistema di destinazione. Tutti i componenti, inclusi librerie e runtime di .NET Core, sono inclusi nell'applicazione e isolati dalle altre applicazioni .NET Core. Le distribuzioni autonome includono un file eseguibile (ad esempio *app.exe* su piattaforme Windows per un'applicazione denominata `app`), che è una versione ridenominata dell'host .NET Core specifico della piattaforma, e un file con estensione *dll* (ad esempio *app.dll*), che indica l'applicazione.
 
-<a id="framework-dependent-deployments-fdd" class="xliff"></a>
-
-## Distribuzioni dipendenti dal framework
+## <a name="framework-dependent-deployments-fdd"></a>Distribuzioni dipendenti dal framework
 
 Per una distribuzione dipendente dal framework, viene distribuita solo l'app e le dipendenze di terze parti. Non è necessario distribuire .NET Core, perché l'app userà la versione di .NET Core presente nel sistema di destinazione. Si tratta del modello di distribuzione predefinito per le app .NET Core.
 
-<a id="why-create-a-framework-dependent-deployment" class="xliff"></a>
-
-### Perché creare una distribuzione dipendente dal framework?
+### <a name="why-create-a-framework-dependent-deployment"></a>Perché creare una distribuzione dipendente dal framework?
 
 Una distribuzione dipendente dal framework offre numerosi vantaggi:
 
@@ -51,15 +45,13 @@ Sono presenti anche alcuni svantaggi:
 
 - Nelle versioni successive è possibile che il runtime e le librerie di .NET Core vengano modificate senza notificare l'utente. In rari casi, questo scenario può comportare la modifica del comportamento dell'app.
 
-<a id="self-contained-deployments-scd" class="xliff"></a>
-
-## Distribuzioni autonome
+## <a name="self-contained-deployments-scd"></a>Distribuzioni autonome
 
 Per una distribuzione autonoma, si distribuiscono l'app e le eventuali dipendenze di terze parti richieste, insieme alla versione di .NET Core usata per compilare l'app. Poiché la creazione di una distribuzione autonoma non include le [dipendenze native di .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) su più piattaforme, queste dipendenze devono essere presenti prima di eseguire l'applicazione.
 
-<a id="why-deploy-a-self-contained-deployment" class="xliff"></a>
+Le distribuzioni dipendenti dal framework e le distribuzioni autonome usano eseguibili host separati, quindi è possibile firmare un eseguibile host per una distribuzione autonoma con la firma del server di pubblicazione.
 
-### Perché distribuire una distribuzione autonoma?
+### <a name="why-deploy-a-self-contained-deployment"></a>Perché distribuire una distribuzione autonoma?
 
 Una distribuzione autonoma offre due vantaggi principali:
 
@@ -75,9 +67,7 @@ Sono presenti anche alcuni svantaggi:
 
 - La distribuzione di numerose app .NET Core autonome a un sistema comporta l'utilizzo di quantità significative di spazio su disco, poiché ogni app duplica i file di .NET Core.
 
-<a id="step-by-step-examples" class="xliff"></a>
-
-## Esempi dettagliati
+## <a name="step-by-step-examples"></a>Esempi dettagliati
 
 Per esempi dettagliati della distribuzione di app .NET Core con gli strumenti dell'interfaccia della riga di comando, vedere [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Distribuzione di app .NET Core con gli strumenti dell'interfaccia della riga di comando). Per esempi dettagliati della distribuzione di app .NET Core con Visual Studio, vedere [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Distribuzione di app .NET Core con Visual Studio). Ogni argomento include esempi delle distribuzioni seguenti:
 
@@ -86,9 +76,7 @@ Per esempi dettagliati della distribuzione di app .NET Core con gli strumenti de
 - Distribuzione autonoma
 - Distribuzione autonoma con dipendenze di terze parti
 
-<a id="see-also" class="xliff"></a>
-
-# Vedere anche
+# <a name="see-also"></a>Vedere anche
 
 [Deploying .NET Core Apps with CLI Tools (Distribuzione di app .NET Core con gli strumenti dell'interfaccia della riga di comando)](deploy-with-cli.md)   
 [Deploying .NET Core Apps with Visual Studio (Distribuzione di app .NET Core con Visual Studio)](deploy-with-vs.md)   

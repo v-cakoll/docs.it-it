@@ -1,5 +1,5 @@
 ---
-title: Panoramica degli attributi (Visual Basic) | Microsoft Docs
+title: Panoramica degli attributi (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81f6275334a0ba1507dcff2bcd85e0b1aa276067
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0464de06390a9899cbe312b16cbad41d0b6639eb
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="attributes-overview-visual-basic"></a>Panoramica degli attributi (Visual Basic)
@@ -50,7 +51,7 @@ Gli attributi offrono un metodo efficace per l'associazione di metadati o inform
 End Class  
 ```  
   
- Un metodo con l'attributo <xref:System.Runtime.InteropServices.DllImportAttribute> viene dichiarato nel modo seguente:  
+ Un metodo con l'attributo <xref:System.Runtime.InteropServices.DllImportAttribute> è dichiarato come segue:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -130,7 +131,7 @@ Module: CLSCompliant(True)>
   
 -   Descrizione delle proprietà COM per classi, metodi e interfacce.  
   
--   Chiamata di codice non gestito mediante la classe <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+-   Chiamata al codice non gestito che usa la classe <xref:System.Runtime.InteropServices.DllImportAttribute>.  
   
 -   Descrizione dell'assembly con indicazione di titolo, versione, descrizione o marchio.  
   
@@ -163,3 +164,4 @@ Module: CLSCompliant(True)>
  [Guida per programmatori Visual Basic](../../../../visual-basic/programming-guide/index.md)   
  [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
  [Attributi](https://msdn.microsoft.com/library/5x6cd29c)
+

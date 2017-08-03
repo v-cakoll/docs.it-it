@@ -1,52 +1,68 @@
 ---
-title: "Constants and Enumerations in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "enumerations [Visual Basic]"
-  - "Visual Basic code, constants"
-  - "constants"
-  - "object libraries, Object Browser"
-  - "Visual Basic code, enumerations"
-  - "declaring constants, enumerations"
-  - "naming conventions, constants"
-  - "Visual Basic code, improving readability with constants"
+title: Costanti ed enumerazioni in Visual Basic
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- enumerations [Visual Basic]
+- Visual Basic code, constants
+- constants
+- object libraries, Object Browser
+- Visual Basic code, enumerations
+- declaring constants, enumerations
+- naming conventions, constants
+- Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# Constants and Enumerations in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ef8ade1100bb660af4d968d4b600aba41073fc2
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
-Le costanti consentono di utilizzare nomi significativi al posto di un valore non modificabile.  Nelle costanti sono memorizzati valori che, come suggerisce il nome, rimangono costanti durante l'esecuzione di un'applicazione.  L'utilizzo delle costanti consente di fornire nomi significativi invece di numeri, rendendo più leggibile il codice.  
+---
+# <a name="constants-and-enumerations-in-visual-basic"></a>Costanti ed enumerazioni in Visual Basic
+Le costanti consentono di usare nomi significativi al posto di un valore che non cambia. Archiviano i valori che, come suggerisce il nome, rimangono costanti durante l'esecuzione di un'applicazione. È possibile usare le costanti per specificare nomi descrittivi, anziché numeri, rendendo il codice più leggibile.  
   
- Le enumerazioni costituiscono un comodo mezzo per utilizzare set di costanti correlate e di associare i valori costanti a nomi.  È possibile, ad esempio, dichiarare un'enumerazione per un set di costanti integer associate ai giorni della settimana e quindi utilizzare nel codice i nomi dei giorni invece dei valori integer corrispondenti.  
+ Le enumerazioni offrono un modo pratico per usare i set di costanti correlate e per associare i valori delle costanti ai nomi. Ad esempio, si può dichiarare un'enumerazione per un set di costanti integer associate ai giorni della settimana e quindi usare i nomi dei giorni anziché i relativi valori integer nel codice.  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
-|||  
-|-|-|  
 |Termine|Definizione|  
-|[Constants Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|Negli argomenti che compongono la presente sezione vengono descritte le costanti e l'utilizzo che ne viene fatto.|  
-|[Enumerations Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|Negli argomenti che compongono la presente sezione vengono descritte le enumerazioni e l'utilizzo che ne viene fatto.|  
+|---|---|  
+|[Cenni preliminari sulle costanti](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|Gli argomenti di questa sezione descrivono le costanti e il relativo utilizzo.|  
+|[Cenni preliminari sulle enumerazioni](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|Gli argomenti di questa sezione descrivono le enumerazioni e il relativo utilizzo.|  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
   
-|||  
-|-|-|  
 |Termine|Definizione|  
-|[Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md)|Viene descritto `Const` istruzione, utilizzato per dichiarare costanti.|  
-|[Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)|Viene descritto `Enum` l'istruzione, utilizzata per la creazione delle enumerazioni.|  
-|[Option Explicit Statement](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Viene descritto `Option Explicit` l'istruzione, utilizzata a livello di modulo per imporre la dichiarazione esplicita di tutte le variabili di tale modulo.|  
-|[Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Viene descritta l'istruzione `Option Infer` che consente l'utilizzo dell'inferenza del tipo locale nella dichiarazione di variabili.|  
-|[Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Viene descritta l'istruzione `Option Strict` che limita le conversioni dei tipi di dati impliciti solo alle conversioni verso un tipo di dati più grande e impedisce l'associazione tardiva e la tipizzazione implicita che determina un tipo `Object`.|
+|---|---|  
+|[Istruzione Const](../../../../visual-basic/language-reference/statements/const-statement.md)|Viene descritta l'istruzione `Const`, usata per dichiarare le costanti.|  
+|[Istruzione Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)|Viene descritta l'istruzione `Enum`, usata per creare le enumerazioni.|  
+|[Istruzione Option Explicit](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)|Viene descritta l'istruzione `Option Explicit`, usata a livello di modulo per imporre la dichiarazione esplicita di tutte le variabili di tale modulo.|  
+|[Istruzione Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)|Viene descritta l'istruzione `Option Infer`, che abilita l'uso dell'inferenza del tipo di variabile locale nelle variabili dichiaranti.|  
+|[Istruzione Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Viene descritta l'istruzione `Option Strict`, che limita le conversioni implicite di tipi di dati sollo alle conversioni verso tipi di dati più grandi, non consente l'associazione tardiva né la tipizzazione implicita che genera un tipo `Object`.|
+

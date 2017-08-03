@@ -1,58 +1,79 @@
 ---
-title: "Codice unsafe e puntatori (Guida per programmatori C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "sicurezza [C#], indipendenza dai tipi"
-  - "C# (linguaggio), codice unsafe"
-  - "indipendenza dai tipi [C#]"
-  - "unsafe (parola chiave) [C#]"
-  - "codice unsafe [C#]"
-  - "C# (linguaggio), puntatori"
-  - "puntatori [C#], informazioni"
+title: Codice unsafe e puntatori (Guida per programmatori C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- security [C#], type safety
+- C# language, unsafe code
+- type safety [C#]
+- unsafe keyword [C#]
+- unsafe code [C#]
+- C# language, pointers
+- pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
 caps.latest.revision: 24
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 24
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75e11b34f0749270650e0e5b5a2a191a1b9e9f9a
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
+
 ---
-# Codice unsafe e puntatori (Guida per programmatori C#)
-Per garantire la sicurezza e assicurare l'indipendenza dai tipi, per impostazione predefinita in C\# non è supportata l'aritmetica dei puntatori.  Tuttavia, utilizzando la parola chiave [unsafe](../../../csharp/language-reference/keywords/unsafe.md), è possibile definire un contesto unsafe in cui utilizzare i puntatori.  Per ulteriori informazioni sui puntatori, vedere l'argomento [Tipi di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  
+# <a name="unsafe-code-and-pointers-c-programming-guide"></a>Codice unsafe e puntatori (Guida per programmatori C#)
+Per mantenere l'indipendenza dai tipi e la sicurezza, C# non supporta il puntatore aritmetico per impostazione predefinita. Tuttavia, se si usa la parola chiave [unsafe](../../../csharp/language-reference/keywords/unsafe.md), è possibile definire un contesto non sicuro in cui si possono usare i puntatori. Per altre informazioni sui puntatori, vedere l'argomento [Tipi di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  
   
 > [!NOTE]
->  Nell'ambiente Common Language Runtime \(CLR\) il codice unsafe viene indicato come codice non verificabile.  In C\# il codice unsafe non è necessariamente pericoloso. Si tratta semplicemente di un codice che non può essere sottoposto a un controllo di sicurezza da parte di CLR.  Quest'ultimo, pertanto, eseguirà soltanto codice unsafe contenuto all'interno di un assembly completamente attendibile.  Se si utilizza codice unsafe, è responsabilità del programmatore garantire che tale codice non introduca problemi di sicurezza o errori di puntatore.  
+>  Nel supporto Common Language Runtime (CLR) il codice di tipo unsafe è detto codice non verificabile. Il codice unsafe in C# non è necessariamente pericoloso, è solo codice di cui il supporto CLR non può verificare la sicurezza. CLR pertanto eseguirà il codice unsafe solo se si trova in un assembly completamente attendibile. Se si usa codice unsafe, è responsabilità dell'utente verificare che il codice non introduca rischi per la sicurezza o errori dei puntatori.  
   
-## Cenni preliminari sul codice unsafe  
- Di seguito sono elencate le proprietà del codice unsafe:  
+## <a name="unsafe-code-overview"></a>Panoramica del codice unsafe  
+ Il codice unsafe presenta le proprietà seguenti:  
   
--   I metodi, i tipi e i blocchi di codice possono essere definiti come unsafe.  
+-   Metodi, tipi e blocchi di codice possono essere definiti come unsafe.  
   
--   In alcuni casi, il codice unsafe può migliorare le prestazioni di un'applicazione grazie alla rimozione dei controlli sui limiti delle matrici.  
+-   In alcuni casi il codice unsafe può migliorare le prestazioni di un'applicazione poiché vengono rimosse le verifiche dei limiti di matrice.  
   
--   Il codice unsafe è necessario quando si chiamano funzioni native che richiedono puntatori.  
+-   Il codice unsafe è necessario quando si chiamano funzioni native che richiedono i puntatori.  
   
--   L'utilizzo di codice unsafe introduce problemi di sicurezza e di stabilità.  
+-   L'uso del codice unsafe implica rischi per la sicurezza e la stabilità.  
   
--   Per compilare codice unsafe in C\#, è necessario compilare l'applicazione con l'opzione [\/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
+-   Affinché C# compili il codice unsafe, l'applicazione deve essere compilata con [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
   
-## Sezioni correlate  
- Per ulteriori informazioni, vedere:  
+## <a name="related-sections"></a>Sezioni correlate  
+ Per altre informazioni, vedere:  
   
 -   [Tipi di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
   
 -   [Buffer a dimensione fissa](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
   
--   [Procedura: utilizzare puntatori per copiare una matrice di byte](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
+-   [Procedura: Usare i puntatori per copiare una matrice di byte](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
   
--   [non protette](../../../csharp/language-reference/keywords/unsafe.md)  
+-   [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
   
-## Specifiche del linguaggio C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## Vedere anche  
- [Guida per programmatori C\#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+

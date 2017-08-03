@@ -1,5 +1,5 @@
 ---
-title: Matrici in Visual Basic | Microsoft Docs
+title: Matrici in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
-ms.openlocfilehash: cc7f5e28831cfe6ec12526d7dac5b12c208fb05a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
 ms.contentlocale: it-it
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Matrici in Visual Basic
@@ -224,7 +224,7 @@ Elementi della matrice "students"
   
  Potrebbe essere necessario creare una matrice di lunghezza zero nelle circostanze seguenti:  
   
--   Senza correre il rischio di generare un'eccezione <xref:System.NullReferenceException>, il codice deve accedere ai membri della classe <xref:System.Array>, ad esempio <xref:System.Array.Length%2A> o <xref:System.Array.Rank%2A> oppure chiamare una funzione [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], come ad esempio <xref:Microsoft.VisualBasic.Information.UBound%2A>.  
+-   Senza correre il rischio di un'eccezione <xref:System.NullReferenceException> , il codice deve accedere ai membri della classe <xref:System.Array> , ad esempio <xref:System.Array.Length%2A> o <xref:System.Array.Rank%2A>oppure chiamare una funzione [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] come <xref:Microsoft.VisualBasic.Information.UBound%2A>.  
   
 -   È consigliabile semplificare il codice che la usa escludendo la verifica della presenza di `Nothing` come caso particolare.  
   
@@ -235,13 +235,13 @@ Elementi della matrice "students"
   
  L'esempio seguente illustra come dichiarare una matrice tridimensionale.  
   
-```  
+```vb
 Dim prices(3, 4, 5) As Long  
 ```  
   
  La dimensione complessiva della matrice nella variabile `prices` è (3 + 1) x (4 + 1) x (5 + 1) = 120.  
   
- È possibile determinare le dimensioni di una matrice usando la proprietà <xref:System.Array.Length%2A>. È possibile determinare la lunghezza di ogni dimensione di una matrice multidimensionale usando il metodo <xref:System.Array.GetLength%2A>.  
+ È possibile determinare le dimensioni di una matrice usando la proprietà <xref:System.Array.Length%2A>. È possibile determinare la lunghezza di ogni dimensione di una matrice multidimensionale usando il metodo <xref:System.Array.GetLength%2A> .  
   
  Per ridimensionare una variabile di matrice è possibile assegnare un nuovo oggetto matrice o usare l'istruzione `ReDim` .  
   
@@ -250,7 +250,7 @@ Dim prices(3, 4, 5) As Long
 |||  
 |---|---|  
 |Lunghezza delle dimensioni|L'indice di ogni dimensione è compreso tra 0 e il relativo limite superiore. La lunghezza di una determinata dimensione è quindi maggiore di 1 rispetto al limite superiore dichiarato di tale dimensione.|  
-|Limiti di lunghezza|La lunghezza di ogni dimensione di una matrice è limitata al valore massimo del tipo di dati `Integer`, ovvero (2 ^ 31) - 1. La dimensione totale di una matrice, tuttavia, è limitata anche dalla memoria disponibile nel sistema. Se si tenta di inizializzare una matrice che supera la quantità di RAM disponibile, Common Language Runtime genera un'eccezione <xref:System.OutOfMemoryException>.|  
+|Limiti di lunghezza|La lunghezza di ogni dimensione di una matrice è limitata al valore massimo del tipo di dati `Integer`, ovvero (2 ^ 31) - 1. La dimensione totale di una matrice, tuttavia, è limitata anche dalla memoria disponibile nel sistema. Se si tenta di inizializzare una matrice che supera la quantità di RAM disponibile, Common Language Runtime genera un'eccezione <xref:System.OutOfMemoryException> .|  
 |Dimensione ed elementi della matrice|La dimensione di una matrice è indipendente dal tipo di dati dei relativi elementi. La dimensione rappresenta sempre il numero totale di elementi e non il numero di byte necessari per la loro archiviazione.|  
 |Consumo di memoria|Non è possibile fare ipotesi sulla modalità di archiviazione di una matrice in memoria. L'archiviazione dipende dalla larghezza dei dati delle diverse piattaforme. Di conseguenza, è possibile che l'archiviazione di una stessa matrice richieda più memoria in un sistema a 64 bit che in un sistema a 32 bit. A seconda della configurazione di sistema al momento dell'inizializzazione di una matrice, Common Language Runtime (CLR) può assegnare la memoria in modo da compattare al massimo gli elementi oppure in modo da allinearli tutti in base ai limiti dell'hardware. Per le informazioni di controllo di una matrice è richiesto un sovraccarico di archiviazione che aumenta con ogni dimensione aggiunta.|  
   
@@ -278,7 +278,7 @@ Dim prices(3, 4, 5) As Long
   
  Per alcune raccolte è possibile assegnare una chiave a qualsiasi oggetto inserito nella raccolta in modo da recuperare rapidamente l'oggetto usando la chiave.  
   
- Se la raccolta contiene elementi di un solo tipo di dati, è possibile usare una delle classi nello spazio dei nomi <xref:System.Collections.Generic?displayProperty=fullName>. In una raccolta generica viene imposta l'indipendenza dai tipi, in modo da impedire che vengano aggiunti altri tipi di dati alla raccolta. Quando si recupera un elemento da una raccolta generica, non è necessario determinarne il tipo di dati né convertirlo.  
+ Se la raccolta contiene elementi di un solo tipo di dati, è possibile usare una delle classi nello spazio dei nomi <xref:System.Collections.Generic?displayProperty=fullName> . In una raccolta generica viene imposta l'indipendenza dai tipi, in modo da impedire che vengano aggiunti altri tipi di dati alla raccolta. Quando si recupera un elemento da una raccolta generica, non è necessario determinarne il tipo di dati né convertirlo.  
   
  Per altre informazioni sulle raccolte, vedere [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
