@@ -1,19 +1,20 @@
 ---
-title: script dotnet-install | Microsoft Docs
-description: Informazioni sugli script dotnet-install per l&quot;installazione degli strumenti dell&quot;interfaccia della riga di comando di .NET Core e del runtime condiviso.
+title: Script dotnet-install
+description: Informazioni sugli script dotnet-install per l'installazione degli strumenti dell'interfaccia della riga di comando di .NET Core e del runtime condiviso.
 keywords: dotnet-install, script dotnet-install, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: fbc1ce8d864a5c2150c61f4b8bf7cb8544921634
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8af168e96f8f5b57626b126135d8b5e509fbb059
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -57,15 +58,28 @@ Nota: le opzioni variano a seconda delle implementazioni degli script.
 
 `-Channel <CHANNEL>`
 
-Specifica il canale di origine per l'installazione. I valori sono `future`, `preview` e `production`. Il valore predefinito è `production`.
+Specifica il canale di origine per l'installazione. I valori possibili sono:
+
+- `Current` - Versione corrente
+- `LTS` - Canale di supporto a lungo termine (versione supportata corrente)
+- Versione in due parti nel formato X.Y che rappresenta una versione specifica, ad esempio `2.0` o `1.0`
+- Nome del ramo, ad esempio, `release/2.0.0`, `release/2.0.0-preview2` o `master` per la versione più recente dal ramo `master` (versioni notturne "all'avanguardia")
+
+Il valore predefinito è `LTS`. Per altre informazioni sui canali di supporto per .NET, vedere l'argomento [.NET Core Support Lifecycle](https://www.microsoft.com/net/core/support) (Ciclo di vita del supporto per .NET Core).
 
 `-Version <VERSION>`
 
-Specifica la versione dell'interfaccia della riga di comando da installare. La versione deve essere specificata con un numero a tre parti (ad esempio, 1.0.0-13232). Se omessa, per impostazione predefinita viene usato il primo file [global.json](global-json.md) contenente la proprietà `version`. Se non è presente, verrà usata l'ultima versione.
+Rappresenta una versione di build nel canale di origine (vedere l'opzione `-Channel`). I valori possibili sono:
+
+- `latest` - Ultima build per il canale
+- `coherent` - Ultima build coerente per il canale; usa la combinazione di pacchetti stabile più recente
+- Versione in tre parti nel formato X.Y..Z, che rappresenta una versione di build specifica (ad esempio `1.0.x`, dove `x` rappresenta la versione di patch oppure una build specifica, come `2.0.0-preview2-006120`)
+
+Se omessa, per `-Version` viene usato per impostazione predefinita il primo file [global.json](global-json.md) contenente il membro `version`. Se non è presente, il valore predefinito per `-Version` è `latest`.
 
 `-InstallDir <DIRECTORY>`
 
-Specifica il percorso di installazione. Se la directory non esiste, verrà creata. Il valore predefinito è *%LocalAppData%\.dotnet*.
+Specifica il percorso di installazione. Se la directory non esiste, verrà creata. Il valore predefinito è *%LocalAppData%\.dotnet*. Si noti che i file binari vengono inseriti direttamente nella directory.
 
 `-Architecture <ARCHITECTURE>`
 
@@ -84,7 +98,7 @@ Se impostata, il programma di installazione include i simboli di debug nell'inst
 
 `-DryRun`
 
-Se impostata, lo script non esegue l'installazione ma visualizza la riga di comando da usare per installare in modo coerente la versione attualmente richiesta dell'interfaccia della riga di comando .NET. Se ad esempio si specifica la versione `latest`, verrà visualizzato un collegamento con la versione specifica in modo che questo comando possa essere usato in modo deterministico in uno script di compilazione. Viene visualizzato anche il percorso del file binario se si preferisce installarlo o scaricarlo manualmente.
+Se impostata, lo script non esegue l'installazione, ma visualizza la riga di comando da usare per installare in modo coerente la versione attualmente richiesta dell'interfaccia della riga di comando di .NET Core. Se ad esempio si specifica la versione `latest`, verrà visualizzato un collegamento con la versione specifica in modo che questo comando possa essere usato in modo deterministico in uno script di compilazione. Viene visualizzato anche il percorso del file binario se si preferisce installarlo o scaricarlo manualmente.
 
 `-NoPath`
 
@@ -102,13 +116,26 @@ Se impostata, il programma di installazione usa il proxy durante le richieste We
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--shared-runtime] [--debug-symbols] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--help]`
 
-`--channel <CHANNEL>`
+`-Channel <CHANNEL>`
 
-Specifica il canale di origine per l'installazione. I valori sono `future`, `dev` e `production`. Il valore predefinito è `production`.
+Specifica il canale di origine per l'installazione. I valori possibili sono:
 
-`--version <VERSION>`
+- `Current` - Versione corrente
+- `LTS` - Canale di supporto a lungo termine (versione supportata corrente)
+- Versione in due parti nel formato X.Y che rappresenta una versione specifica, ad esempio `2.0` o `1.0`
+- Nome del ramo, ad esempio, `release/2.0.0`, `release/2.0.0-preview2` o `master` per la versione più recente dal ramo `master` (versioni notturne "all'avanguardia")
 
-Specifica la versione dell'interfaccia della riga di comando da installare. La versione deve essere specificata con un numero a tre parti (ad esempio, 1.0.0-13232). Se omessa, per impostazione predefinita viene usato il primo file [global.json](global-json.md) contenente la proprietà `version`. Se non è presente, verrà usata l'ultima versione.
+Il valore predefinito è `LTS`. Per altre informazioni sui canali di supporto per .NET, vedere l'argomento [.NET Core Support Lifecycle](https://www.microsoft.com/net/core/support) (Ciclo di vita del supporto per .NET Core).
+
+`-Version <VERSION>`
+
+Rappresenta una versione di build nel canale di origine (vedere l'opzione `-Channel`). I valori possibili sono:
+
+- `latest` - Ultima build per il canale
+- `coherent` - Ultima build coerente per il canale; usa la combinazione di pacchetti stabile più recente
+- Versione in tre parti nel formato X.Y..Z, che rappresenta una versione di build specifica (ad esempio `1.0.x`, dove `x` rappresenta la versione di patch oppure una build specifica, come `2.0.0-preview2-006120`)
+
+Se omessa, per `-Version` viene usato per impostazione predefinita il primo file [global.json](global-json.md) contenente il membro `version`. Se non è presente, il valore predefinito per `-Version` è `latest`.
 
 `--install-dir <DIRECTORY>`
 
@@ -131,7 +158,7 @@ Se impostata, il programma di installazione include i simboli di debug nell'inst
 
 `--dry-run`
 
-Se impostata, lo script non esegue l'installazione ma visualizza la riga di comando da usare per installare in modo coerente la versione attualmente richiesta dell'interfaccia della riga di comando .NET. Se ad esempio si specifica la versione `latest`, verrà visualizzato un collegamento con la versione specifica in modo che questo comando possa essere usato in modo deterministico in uno script di compilazione. Viene visualizzato anche il percorso del file binario se si preferisce installarlo o scaricarlo manualmente.
+Se impostata, lo script non esegue l'installazione, ma visualizza la riga di comando da usare per installare in modo coerente la versione attualmente richiesta dell'interfaccia della riga di comando di .NET Core. Se ad esempio si specifica la versione `latest`, verrà visualizzato un collegamento con la versione specifica in modo che questo comando possa essere usato in modo deterministico in uno script di compilazione. Viene visualizzato anche il percorso del file binario se si preferisce installarlo o scaricarlo manualmente.
 
 `--no-path`
 
@@ -170,3 +197,9 @@ Windows:
 macOS/Linux:
 
 `./dotnet-install.sh --channel preview --install-dir ~/cli`
+
+## <a name="see-also"></a>Vedere anche
+
+[Versioni di .NET Core](https://github.com/dotnet/core/releases)   
+[.NET Core Runtime and SDK download archive](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) (Archivio di download per runtime e SDK di .NET Core)
+

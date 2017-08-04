@@ -1,7 +1,7 @@
 ---
-title: Comando dotnet-pack - Interfaccia della riga di comando di .NET Core | Microsoft Docs
+title: Comando dotnet-pack - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet-pack consente di creare pacchetti NuGet per il progetto .NET Core.
-keywords: dotnet-pack, interfaccia della riga di comando, comando dell&quot;interfaccia della riga di comando, .NET Core
+keywords: dotnet-pack, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/15/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 14c2e01ab0c30c9f1cbfdcc53ea85fe51a4d8c2e
-ms.openlocfilehash: 5a2ea69825fa336b1d8ce2283e214d02c16347e3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 04b967fdf6578098caae8c21604c5d6160eb6775
 ms.contentlocale: it-it
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

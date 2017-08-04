@@ -1,6 +1,6 @@
 ---
-title: "Testing unità in .NET Core | Microsoft Docs"
-description: "Testing unità in .NET Core"
+title: "Testing unità in .NET Core"
+description: "Il testing unità non è mai stato così facile. Sono disponibili informazioni sull'uso del testing unità nei progetti .NET Core."
 keywords: .NET, .NET Core
 author: ardalis
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 4983af5386efc6b713f10f200687535b7dc36a11
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 22647a9ad7723bbfcf0d54530b3c0538198e7c35
 ms.contentlocale: it-it
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -28,12 +28,12 @@ L'uso di un gruppo di test automatizzati è uno dei modi migliori per verificare
 > [!NOTE]
 > Gli sviluppatori hanno spesso difficoltà a scegliere i nomi appropriati per i metodi e le classi di test. Come punto di partenza, è possibile fare riferimento alle [convenzioni](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) adottate dal team del prodotto ASP.NET.
 
-Quando si scrivono unit test, fare attenzione a non introdurre accidentalmente dipendenze dall'infrastruttura. Queste dipendenze tendono a rendere i test più lenti e fragili ed è quindi consigliabile usarle solo nei test di integrazione. È possibile evitare queste dipendenze nascoste nel codice dell'applicazione seguendo il [principio delle dipendenze esplicite](http://deviq.com/explicit-dependencies-principle/) e usando la tecnica di [inserimento delle dipendenze](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection) per richiedere le dipendenze dal framework. È inoltre possibile mantenere gli unit test in un progetto separato dai test di integrazione e verificare che il progetto di unit test non includa riferimenti o dipendenze relative a pacchetti dell'infrastruttura.
+Quando si scrivono unit test, fare attenzione a non introdurre accidentalmente dipendenze dall'infrastruttura. Queste dipendenze tendono a rendere i test più lenti e fragili ed è quindi consigliabile usarle solo nei test di integrazione. È possibile evitare queste dipendenze nascoste nel codice dell'applicazione seguendo il [principio delle dipendenze esplicite](http://deviq.com/explicit-dependencies-principle/) e usando la tecnica di [inserimento delle dipendenze](/aspnet/core/fundamentals/dependency-injection) per richiedere le dipendenze dal framework. È inoltre possibile mantenere gli unit test in un progetto separato dai test di integrazione e verificare che il progetto di unit test non includa riferimenti o dipendenze relative a pacchetti dell'infrastruttura.
 
 Altre informazioni sul testing unità sono disponibili nei progetti .NET Core:
 
-* Provare questa [procedura dettagliata per la creazione di unit test con xUnit e l'interfaccia CLI di .NET](unit-testing-with-dotnet-test.md). 
+* Provare questa [procedura dettagliata per la creazione di unit test con xUnit e l'interfaccia della riga di comando di .NET Core](unit-testing-with-dotnet-test.md). 
 * Il team di xUnit ha scritto un'esercitazione che illustra [come usare xUnit con .NET Core e Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
-* Se si preferisce usare MSTest, provare la [procedura dettagliata sulla creazione di unit test con MSTest e l'interfaccia CLI di .NET](unit-testing-with-mstest.md).
+* Se si preferisce usare MSTest, provare la [procedura dettagliata per la creazione di unit test con MSTest e l'interfaccia della riga di comando di .NET](unit-testing-with-mstest.md).
 * Per altre informazioni e per esempi sull'uso del filtro degli unit test selettivi, vedere [Running selective unit tests](../testing/selective-unit-tests.md) (Esecuzione di unit test selettivi).
 

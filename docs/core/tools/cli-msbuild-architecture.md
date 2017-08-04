@@ -1,5 +1,5 @@
 ---
-title: Architettura degli strumenti della riga di comando di .NET Core | Microsoft Docs
+title: Architettura degli strumenti della riga di comando di .NET Core
 description: "Informazioni sui livelli degli strumenti di .NET Core e sulle modifiche apportate nelle versioni più recenti."
 keywords: .NET Core, MSBuild, architettura
 author: blackdwarf
@@ -9,33 +9,27 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7fff0f61-ac23-42f0-9661-72a7240a4456
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 10e565af67056dee1ea51e4949f32e1e1de54600
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6830cc46994aa44d46a9c862efff525142578003
 ms.contentlocale: it-it
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="high-level-overview-of-changes-in-the-net-core-tools" class="xliff"></a>
+# <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Panoramica generale delle modifiche agli strumenti di .NET Core
 
-# Panoramica generale delle modifiche agli strumenti di .NET Core
+Questo documento descrive le modifiche associate al passaggio da *project.json* a MSBuild e al sistema di progetti *csproj* con informazioni sulle modifiche ai livelli degli strumenti .NET Core e all'implementazione dei comandi dell'interfaccia della riga di comando. Queste modifiche sono state introdotte con il rilascio di .NET Core SDK 1.0 e Visual Studio 2017 il 7 marzo 2017 (vedere l'[annuncio](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)), ma sono state implementate inizialmente con il rilascio di .NET Core SDK Preview 3.
 
-Questo documento offre una descrizione di alto livello dei cambiamenti derivanti dal passaggio da *project.json* a MSBuild e al sistema di progetto *.csproj*. Viene illustrata la nuova organizzazione su più livelli degli strumenti, vengono descritti i nuovi elementi disponibili e la loro collocazione nella struttura complessiva. Dopo la lettura di questo articolo gli utenti avranno una migliore comprensione degli elementi che compongono il set di strumenti di .NET Core dopo il passaggio a MSBuild e a *.csproj*. 
-
-<a id="moving-away-from-projectjson" class="xliff"></a>
-
-## Abbandono di project.json
+## <a name="moving-away-from-projectjson"></a>Abbandono di project.json
 Il cambiamento più significativo negli strumenti di .NET Core è il [passaggio da project.json a csproj](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/) come sistema di progetto. Le versioni più recenti degli strumenti da riga di comando non supportano i file *project.json*. Questo significa che non può essere usata per creare, eseguire o pubblicare applicazioni e librerie basate su project.json. Per usare questa versione degli strumenti, è necessario eseguire la migrazione dei progetti esistenti o avviarne di nuovi. 
 
 Come parte di questo passaggio, il motore di compilazione personalizzato sviluppato per i progetti project.json è stato sostituito da un motore di compilazione maturo e dotato di funzionalità complete denominato [MSBuild](https://github.com/Microsoft/msbuild). MSBuild è un motore noto nella community .NET: è stato infatti una tecnologia fondamentale fin dalla prima versione della piattaforma. Naturalmente, poiché è necessario per la compilazione di applicazioni .NET Core, MSBuild è stato portato in .NET Core e può essere usato su qualsiasi piattaforma in cui viene eseguito .NET Core. Una delle promesse principali di .NET Core è la realizzazione di uno stack di sviluppo multipiattaforma, e Microsoft ha mantenuto tale promessa.
 
 > [!NOTE]
-> Se non si ha familiarità con MSBuild e per altre informazioni su MSBuild, leggere l'articolo [MSBuild Concepts](https://docs.microsoft.com/visualstudio/msbuild/msbuild-concepts) (Concetti relativi a MSBuild). 
+> Se non si ha familiarità con MSBuild e per altre informazioni su MSBuild, leggere l'articolo [MSBuild Concepts](/visualstudio/msbuild/msbuild-concepts) (Concetti relativi a MSBuild). 
 
-<a id="the-tooling-layers" class="xliff"></a>
-
-## Livelli degli strumenti
+## <a name="the-tooling-layers"></a>Livelli degli strumenti
 Con l'abbandono del sistema di progetto esistente e dei commutatori del motore di compilazione, la domanda da porsi è la seguente: uno qualsiasi di questi cambiamenti modificherà i livelli complessivi dell'ecosistema degli strumenti .NET Core? Esistono nuovi elementi e componenti?
 
 Nella figura seguente viene fornito un breve riepilogo dei livelli dell'anteprima 2:
@@ -51,13 +45,11 @@ Con il passaggio al nuovo sistema di progetto, il diagramma precedente risulta m
 La differenza principale è che l'interfaccia della riga di comando non è più il livello di base. Tale ruolo viene ora svolto dal "componente SDK condiviso". Questo componente SDK condiviso è un set di destinazioni e attività associate responsabili della compilazione e della pubblicazione del codice, della creazione di pacchetti NuGet e così via. L'SDK stesso è open source ed è disponibile in GitHub nel [repository SDK](https://github.com/dotnet/sdk). 
 
 > [!NOTE]
-> "Destinazione" è un termine di MSBuild che indica un'operazione denominata che può essere richiamata da MSBuild. La destinazione è in genere associata a una o più attività che eseguono la logica dell'operazione. MSBuild supporta diverse destinazioni predefinite, ad esempio `Copy` o `Execute`. Consente inoltre agli utenti di scrivere le proprie attività usando codice gestito e definire destinazioni per eseguire tali attività. Per altre informazioni, vedere [Attività di MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-tasks). 
+> "Destinazione" è un termine di MSBuild che indica un'operazione denominata che può essere richiamata da MSBuild. La destinazione è in genere associata a una o più attività che eseguono la logica dell'operazione. MSBuild supporta diverse destinazioni predefinite, ad esempio `Copy` o `Execute`. Consente inoltre agli utenti di scrivere le proprie attività usando codice gestito e definire destinazioni per eseguire tali attività. Per altre informazioni, vedere [Attività di MSBuild](/visualstudio/msbuild/msbuild-tasks). 
 
 Tutti i set di strumenti, inclusa l'interfaccia della riga di comando, utilizzano ora il componente SDK condiviso e le relative destinazioni. Ad esempio, la prossima versione di Visual Studio non chiamerà il comando `dotnet restore` per ripristinare le dipendenze per i progetti .NET Core, ma userà direttamente la destinazione "Restore". Poiché si tratta di destinazioni MSBuild, è anche possibile usare direttamente MSBuild per eseguirle mediante il comando [dotnet-msbuild](dotnet-msbuild.md). 
 
-<a id="cli-commands" class="xliff"></a>
-
-### Comandi dell'interfaccia della riga di comando
+### <a name="cli-commands"></a>Comandi dell'interfaccia della riga di comando
 Con l'introduzione del componente SDK condiviso, la maggior parte dei comandi dell'interfaccia della riga di comando esistenti sono stati reimplementati come attività e destinazioni MSBuild. Cosa significa questo per i comandi dell'interfaccia della riga di comando e per l'utilizzo del set di strumenti? 
 
 La modalità di utilizzo dell'interfaccia della riga di comando non viene modificata. Nell'interfaccia della riga di comando sono infatti ancora disponibili i comandi base presenti nell'anteprima 2:
@@ -81,3 +73,4 @@ Questo comando pubblica un'applicazione in una cartella `pub` usando la configur
    `dotnet msbuild /t:Publish /p:OutputPath=pub /p:Configuration=Release`
 
 La principale eccezione a questa regola sono i comandi `new` e `run`, che non sono stati implementati come destinazioni MSBuild.
+

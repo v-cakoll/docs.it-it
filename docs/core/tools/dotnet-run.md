@@ -1,7 +1,7 @@
 ---
-title: Comando dotnet-run - Interfaccia della riga di comando di .NET Core | Microsoft Docs
-description: Il comando dotnet-run offre un modo pratico per eseguire l&quot;applicazione dal codice sorgente.
-keywords: dotnet-run, interfaccia della riga di comando, comando dell&quot;interfaccia della riga di comando, .NET Core
+title: Comando dotnet-run - Interfaccia della riga di comando di .NET Core
+description: Il comando dotnet-run offre un modo pratico per eseguire l'applicazione dal codice sorgente.
+keywords: dotnet-run, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/22/2017
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 40d4e60f-9900-4a48-b03c-0bae06792d91
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 49e6738a90663645f761bb7748a723624ad8fdc6
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f0a6fce4f83808076b7cbcabdaa948badde2cf80
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 

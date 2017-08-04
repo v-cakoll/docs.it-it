@@ -1,6 +1,6 @@
 ---
-title: Telemetria degli strumenti di .NET Core | Microsoft Docs
-description: .NET Core
+title: Telemetria degli strumenti di .NET Core
+description: "Informazioni sulle funzionalità di telemetria degli strumenti di .NET Core che raccolgono informazioni sull'utilizzo per l'analisi."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -10,25 +10,21 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: b7de81f38c0d4fa259f1c9d8ada675197930e945
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1816b9fbad1f671820c9f970674c8af2147a230e
 ms.contentlocale: it-it
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core-tools-telemetry" class="xliff"></a>
-
-# Telemetria degli strumenti di .NET Core
+# <a name="net-core-tools-telemetry"></a>Telemetria degli strumenti di .NET Core
 
 Gli strumenti di .NET Core includono una [funzionalità di telemetria](https://github.com/dotnet/cli/pull/2145) che raccoglie le informazioni sull'utilizzo. È importante che il team di .NET comprenda come vengono usati gli strumenti per consentire a Microsoft di migliorarne le funzionalità.
 
 I dati raccolti sono anonimi e verranno pubblicati in forma aggregata per l'uso da parte dei tecnici Microsoft e della community in base alla [licenza Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/).
 
-<a id="scope" class="xliff"></a>
-
-## Ambito
+## <a name="scope"></a>Ambito
 
 Il comando `dotnet` viene usato per avviare sia le applicazioni sia gli strumenti di .NET Core. La raccolta dei dati di telemetria non viene eseguita dal comando `dotnet` stesso, ma dagli strumenti di .NET Core tramite il comando `dotnet`.
 
@@ -44,15 +40,11 @@ Comandi di .NET Core (con funzionalità di telemetria non abilitata):
 - `dotnet restore`
 - `dotnet run`
 
-<a id="behavior" class="xliff"></a>
-
-## Comportamento
+## <a name="behavior"></a>Comportamento
 
 La funzionalità di telemetria degli strumenti di .NET Core è abilitata per impostazione predefinita. È possibile rifiutare esplicitamente questa funzionalità impostando una variabile di ambiente DOTNET_CLI_TELEMETRY_OPTOUT (ad esempio `export` in macOS/Linux, `set` in Windows) su true (ad esempio "true", 1).
 
-<a id="data-points" class="xliff"></a>
-
-## Punti dati
+## <a name="data-points"></a>Punti dati
 
 La funzionalità raccoglie i dati seguenti:
 
@@ -66,9 +58,7 @@ La funzionalità raccoglie i dati seguenti:
 
 La funzionalità non raccoglie invece i dati personali, ad esempio i nomi utente o gli indirizzi di posta elettronica. Non esegue l'analisi del codice e non estrae i dati a livello di progetto che possono essere considerati sensibili, ad esempio nome, repository o autore (se si impostano quelli in project.json). Microsoft è interessata a conoscere come vengono usati gli strumenti e non i progetti realizzati con gli strumenti. Se si riscontra un caso in cui vengono raccolti dati sensibili, il problema è dovuto a un bug. Si invitano gli utenti a [segnalare problemi](https://github.com/dotnet/cli/issues) di questo tipo affinché possano essere corretti.
 
-<a id="license" class="xliff"></a>
-
-## Licenza
+## <a name="license"></a>Licenza
 
 La distribuzione Microsoft di .NET Core è concessa in base alle [condizioni di licenza di MICROSOFT .NET LIBRARY](https://aka.ms/dotnet-core-eula). Nelle condizioni è inclusa la sezione "DATA", riportata anche di seguito, per l'abilitazione della telemetria.
 
@@ -76,9 +66,7 @@ Questa licenza viene usata anche dai [pacchetti NuGet .NET](https://www.nuget.or
 
 > 2. DATI. Il software può raccogliere informazioni sull'utente e sull'uso del software e inviarle a Microsoft. Microsoft può usare queste informazioni per migliorare i prodotti e i servizi. Per altre informazioni sulla raccolta dei dati, sull'uso nella documentazione della Guida e sull'informativa sulla privacy, vedere http://go.microsoft.com/fwlink/?LinkId=528096. L'uso del software viene considerato come autorizzazione all'applicazione di queste pratiche.
 
-<a id="disclosure" class="xliff"></a>
-
-## Divulgazione
+## <a name="disclosure"></a>Divulgazione
 
 La prima volta che si esegue uno dei comandi, ad esempio `dotnet restore`, gli strumenti di .NET Core visualizzano il testo seguente. Questa prima esperienza riguarda la modalità di notifica della raccolta dei dati da parte di Microsoft. Inizialmente viene anche popolata la cache NuGet con le librerie di .NET Core SDK, evitando così l'invio di richieste relative a queste librerie a NuGet.org (o altri feed NuGet).
 

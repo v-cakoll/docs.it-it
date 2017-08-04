@@ -1,5 +1,5 @@
 ---
-title: Serializzazione (Visual Basic) | Microsoft Docs
+title: Serializzazione (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fb4404bf648f108a3b98952234d29e2bc1d4189
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b88f78b86e79802238b78cfe097a0ccc73bfe778
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serialization-visual-basic"></a>Serializzazione (Visual Basic)
@@ -40,9 +41,9 @@ Il termine serializzazione indica il processo di conversione di un oggetto in un
  La serializzazione consente allo sviluppatore di salvare lo stato di un oggetto per ricrearlo quando necessario, consentendo sia l'archiviazione di oggetti sia lo scambio di dati. Grazie alla serializzazione, uno sviluppatore può eseguire azioni quali l'invio dell'oggetto a un'applicazione remota tramite un servizio Web, il passaggio di un oggetto da un dominio a un altro, il passaggio di un oggetto attraverso un firewall come stringa XML o la gestione su diverse applicazioni di informazioni sulla sicurezza o specifiche dell'utente.  
   
 ### <a name="making-an-object-serializable"></a>Rendere un oggetto serializzabile  
- Per serializzare un oggetto, sono necessari l'oggetto da serializzare, un flusso che contenga l'oggetto serializzato e un <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> contiene le classi necessarie per serializzare e deserializzare gli oggetti.  
+ Per serializzare un oggetto, sono necessari l'oggetto da serializzare, un flusso che contenga l'oggetto serializzato e un <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> contiene classi necessarie per la serializzazione e la deserializzazione di oggetti.  
   
- Applicare l'attributo <xref:System.SerializableAttribute> a un tipo per indicare che le istanze di tale tipo possono essere serializzate. Se si prova a serializzare un tipo ma questo non presenta l'attributo <xref:System.SerializableAttribute>, viene generata un'eccezione <xref:System.Runtime.Serialization.SerializationException>.  
+ Applicare l'attributo <xref:System.SerializableAttribute> a un tipo per indicare che le istanze di tale tipo possono essere serializzate. Viene generata un'eccezione <xref:System.Runtime.Serialization.SerializationException> se si tenta di serializzare ma il tipo non ha l'attributo <xref:System.SerializableAttribute>.  
   
  Se si vuole evitare che un campo della classe venga serializzato, applicare l'attributo <xref:System.NonSerializedAttribute>. Se un campo di un tipo serializzabile contiene un puntatore, un handle o un'altra struttura di dati specifica di un particolare ambiente e tale campo non può essere ricostituito in modo corretto in un ambiente diverso, è necessario renderlo non serializzabile.  
   
@@ -68,7 +69,7 @@ Il termine serializzazione indica il processo di conversione di un oggetto in un
  Quando si usa la serializzazione di base, è possibile che il controllo delle versioni degli oggetti crei problemi. In questo caso, può essere preferibile la serializzazione personalizzata. La serializzazione di base è il modo più semplice per eseguire la serializzazione, ma non assicura il controllo completo del processo.  
   
 ### <a name="custom-serialization"></a>Serializzazione personalizzata  
- Con la serializzazione personalizzata è possibile specificare esattamente quali oggetti verranno serializzati e il modo in cui verrà eseguita la serializzazione. È necessario che la classe sia contrassegnata con <xref:System.SerializableAttribute> e implementi l'interfaccia <xref:System.Runtime.Serialization.ISerializable>.  
+ Con la serializzazione personalizzata è possibile specificare esattamente quali oggetti verranno serializzati e il modo in cui verrà eseguita la serializzazione. La classe deve essere contrassegnata con <xref:System.SerializableAttribute> e implementare l'interfaccia <xref:System.Runtime.Serialization.ISerializable>.  
   
  Se si vuole che un oggetto venga anche deserializzato in modo personalizzato, è necessario usare un costruttore personalizzato.  
   
@@ -80,7 +81,8 @@ Il termine serializzazione indica il processo di conversione di un oggetto in un
  Dimostra in che modo è possibile usare la serializzazione per rendere persistenti i dati di un oggetto tra le istanze, consentendo di archiviare i valori e di recuperarli alla successiva creazione di un'istanza dell'oggetto.  
   
  [Procedura: Leggere dati oggetto in un file XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- Viene illustrato in che modo è possibile leggere i dati della classe precedentemente scritti in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
+ Spiega come leggere i dati della classe precedentemente scritti in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
  [Procedura: Scrivere dati oggetto in un file XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
- Viene illustrato in che modo è possibile scrivere i dati di una classe in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.
+ Spiega come scrivere l'oggetto da una classe in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.
+

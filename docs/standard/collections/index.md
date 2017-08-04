@@ -1,5 +1,5 @@
 ---
-title: Raccolte e strutture di dati | Microsoft Docs
+title: Raccolte e strutture di dati
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,28 +20,28 @@ caps.latest.revision: 36
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 27c475b8d29eb295bb3d6be24aa9ee9188f5c114
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2538f300ef2af6051c2750e749674c8ea7145530
 ms.contentlocale: it-it
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="collections-and-data-structures"></a>Raccolte e strutture di dati
-Dati simili possono spesso essere gestiti in modo più efficiente quando memorizzati e modificati come una raccolta. È possibile usare la classe <xref:System.Array?displayProperty=fullName> o le classi nello spazio dei nomi <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable per aggiungere, rimuovere e modificare singoli elementi o un intervallo di elementi in una raccolta.  
+Dati simili possono spesso essere gestiti in modo più efficiente quando memorizzati e modificati come una raccolta. È possibile usare la classe <xref:System.Array?displayProperty=fullName> o le classi negli spazi dei nomi <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> e System.Collections.Immutable per aggiungere, rimuovere e modificare singoli elementi o un intervallo di elementi nella raccolta.  
   
- Esistono due tipi principali di raccolte: raccolte generiche e raccolte non generiche. Le raccolte generiche sono state aggiunte in.NET Framework 2.0 e sono indipendenti dai tipi in fase di compilazione. Per questo motivo, le raccolte generiche offrono in genere prestazioni migliori. Le raccolte generiche accettano un parametro di tipo quando vengono costruite e non richiedono il cast da e verso il tipo <xref:System.Object> quando si aggiungono o rimuovono elementi dalla raccolta.  Inoltre, gran parte delle raccolte generiche sono supportate nelle applicazioni [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Le raccolte non generiche memorizzano elementi come <xref:System.Object>, richiedono il cast e molte non sono supportate per lo sviluppo di applicazioni [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Tuttavia, si possono vedere raccolte non generiche nel codice precedente.  
+ Esistono due tipi principali di raccolte: raccolte generiche e raccolte non generiche. Le raccolte generiche sono state aggiunte in.NET Framework 2.0 e sono indipendenti dai tipi in fase di compilazione. Per questo motivo, le raccolte generiche offrono in genere prestazioni migliori. Le raccolte generiche accettano un parametro di tipo quando vengono costruite e non è necessario eseguire il cast da e verso il tipo <xref:System.Object> quando si aggiungono o rimuovono elementi dalla raccolta.  Inoltre, gran parte delle raccolte generiche sono supportate nelle applicazioni [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Le raccolte non generiche memorizzano elementi come <xref:System.Object>, richiedono il cast e molte non sono supportate per lo sviluppo di applicazioni [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Tuttavia, si possono vedere raccolte non generiche nel codice precedente.  
   
  A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], le raccolte nello spazio dei nomi <xref:System.Collections.Concurrent> forniscono operazioni thread-safe efficienti per accedere agli elementi della raccolta da più thread. Le classi di raccolte non modificabili dello spazio dei nomi System.Collections.Immutable ([Pacchetto NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) sono intrinsecamente thread-safe, perché le operazioni vengono eseguite su una copia della raccolta originale, che non può essere modificata.  
   
   
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>Funzionalità comuni delle raccolte  
- Tutte le raccolte forniscono metodi per l'aggiunta, la rimozione o la ricerca di elementi nella raccolta. Inoltre, tutte le raccolte che implementano direttamente o indirettamente l'interfaccia <xref:System.Collections.ICollection> o <xref:System.Collections.Generic.ICollection%601> condividono le funzionalità seguenti:  
+ Tutte le raccolte forniscono metodi per l'aggiunta, la rimozione o la ricerca di elementi nella raccolta. In aggiunta, tutte le raccolte che implementano direttamente o indirettamente l'interfaccia <xref:System.Collections.ICollection> o l'interfaccia <xref:System.Collections.Generic.ICollection%601> condividono le funzionalità seguenti:  
   
 -   **La possibilità di enumerare la raccolta**  
   
-     Le raccolte di .NET Framework implementano <xref:System.Collections.IEnumerable?displayProperty=fullName> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> per consentire l'iterazione attraverso la raccolta. Un enumeratore può essere considerato come un puntatore che si sposta a qualsiasi elemento nella raccolta. L'istruzione [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) e [For Each...Next](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) usano l'enumeratore esposto dal metodo <xref:System.Collections.IEnumerable.GetEnumerator%2A> e nascondono la complessità di gestione dell'enumeratore. Inoltre, qualsiasi raccolta che implementi <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> vene considerata un *tipo queryable* e può essere sottoposta a query con LINQ. Le query LINQ forniscono un modello comune per l'accesso ai dati. In genere sono più concise e leggibili dei cicli `foreach` standard e forniscono funzionalità di filtro, ordinamento e raggruppamento. Le query LINQ possono inoltre migliorare le prestazioni. Per altre informazioni, vedere [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) e [Introduzione alle query LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+     Le raccolte di .NET Framework implementano <xref:System.Collections.IEnumerable?displayProperty=fullName> oppure <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> per consentire l'iterazione della raccolta. Un enumeratore può essere considerato come un puntatore che si sposta a qualsiasi elemento nella raccolta. Le istruzioni [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) e [For Each...Next](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) usano l'enumeratore esposto dal metodo <xref:System.Collections.IEnumerable.GetEnumerator%2A> e nascondono la complessità di gestione dell'enumeratore. Inoltre, qualsiasi raccolta che implementi <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> viene considerata un *tipo queryable* e può essere sottoposta a query con LINQ. Le query LINQ forniscono un modello comune per l'accesso ai dati. In genere sono più concise e leggibili dei cicli `foreach` standard e forniscono funzionalità di filtro, ordinamento e raggruppamento. Le query LINQ possono inoltre migliorare le prestazioni. Per altre informazioni, vedere [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) e [Introduzione alle query LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
 -   **La possibilità di copiare il contenuto della raccolta in una matrice**  
   
@@ -55,7 +55,7 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
   
      La capacità della maggior parte delle raccolte si espande automaticamente quando viene raggiunta la capacità corrente. La memoria viene riallocata e gli elementi vengono copiati dalla raccolta precedente a quella nuova. Ciò riduce la quantità di codice necessario per usare la raccolta. Tuttavia, le prestazioni della raccolta possono essere influenzate negativamente. Ad esempio, per <xref:System.Collections.Generic.List%601>, se <xref:System.Collections.Generic.List%601.Count%2A> è minore di <xref:System.Collections.Generic.List%601.Capacity%2A>, l'aggiunta di un elemento è un'operazione O(1). Se la capacità deve essere incrementata per far posto al nuovo elemento, l'aggiunta di un elemento diventa un'operazione O(n), dove n è <xref:System.Collections.Generic.List%601.Count%2A>. Il modo migliore per evitare una riduzione delle prestazioni causata da più riallocazioni consiste nell'impostare la capacità iniziale sulla dimensione prevista della raccolta.  
   
-     Un <xref:System.Collections.BitArray> è un caso speciale: la sua capacità corrisponde alla lunghezza, che equivale al conteggio.  
+     Un <xref:System.Collections.BitArray> è un caso speciale: la sua capacità corrisponde alla sua lunghezza, che corrisponde al relativo conteggio.  
   
 -   **Un limite inferiore coerente**  
   
@@ -63,7 +63,7 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
   
 -   **Sincronizzazione per l'accesso da più thread** (solo classi <xref:System.Collections>).  
   
-     I tipi di raccolta non generici nello spazio dei nomi <xref:System.Collections> forniscono la thread safety con sincronizzazione e sono in genere esposti attraverso i membri <xref:System.Collections.ICollection.SyncRoot%2A> e <xref:System.Collections.ICollection.IsSynchronized%2A>. Queste raccolte non sono thread-safe per impostazione predefinita. Se si richiede un accesso multithreading scalabile ed efficiente a una raccolta, usare una delle classi nello spazio dei nomi <xref:System.Collections.Concurrent> o considerare l'uso di una raccolta non modificabile. Per altre informazioni, vedere [Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
+     I tipi di raccolta non generica nello spazio dei nomi <xref:System.Collections> forniscono una determinata thread safety con la sincronizzazione, in genere esposte attraverso i membri <xref:System.Collections.ICollection.SyncRoot%2A> e <xref:System.Collections.ICollection.IsSynchronized%2A>. Queste raccolte non sono thread-safe per impostazione predefinita. Se si richiede un accesso multithreading scalabile ed efficiente a una raccolta, usare una delle classi nello spazio dei nomi <xref:System.Collections.Concurrent> o considerare l'uso di una raccolta non modificabile. Per altre informazioni, vedere [Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
   
 <a name="BKMK_Choosingacollection"></a>   
 ## <a name="choosing-a-collection"></a>Scelta di una raccolta  
@@ -86,12 +86,12 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
 |Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Selezione di una classe Collection](../../../docs/standard/collections/selecting-a-collection-class.md)|Vengono descritte le diverse raccolte e come selezionarne una per lo scenario.|  
-|[Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)|Descrive i tipi di raccolta generici e non generici comunemente usati, ad esempio <xref:System.Array?displayProperty=fullName>, <xref:System.Collections.Generic.List%601?displayProperty=fullName> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>.|  
+|[Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)|Vengono descritti i tipi di raccolta generici e non generici comunemente usati, quali <xref:System.Array?displayProperty=fullName>, <xref:System.Collections.Generic.List%601?displayProperty=fullName> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>.|  
 |[Quando utilizzare raccolte generiche](../../../docs/standard/collections/when-to-use-generic-collections.md)|Viene illustrato l'utilizzo di tipi di raccolta generici.|  
 |[Confronti e ordinamenti all'interno delle raccolte](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Viene illustrato l'utilizzo di confronti di uguaglianza e ordinamento nelle raccolte.|  
 |[Tipi di raccolta ordinati](../../../docs/standard/collections/sorted-collection-types.md)|Vengono descritte le caratteristiche e le prestazioni di raccolte ordinate|  
 |[Tipi di Collection Hashtable e Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Vengono descritte le funzionalità dei tipi di dizionario basati su hash generici e non generici.|  
-|[Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md)|Descrive i tipi di raccolta, come <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName>, che supportano l'accesso simultaneo, sicuro ed efficiente da più thread.|  
+|[Raccolte thread-safe](../../../docs/standard/collections/thread-safe/index.md)|Vengono descritti i tipi di raccolta quali <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName> che supportano l'accesso simultaneo sicuro ed efficiente da più thread.|  
 |System.Collections.Immutable|Introduce le raccolte non modificabili e fornisce collegamenti ai tipi di raccolta.|  
   
 <a name="BKMK_Reference"></a>   
@@ -109,3 +109,4 @@ Dati simili possono spesso essere gestiti in modo più efficiente quando memoriz
  <xref:System.Linq?displayProperty=fullName>  
   
  System.Collections.Immutable
+

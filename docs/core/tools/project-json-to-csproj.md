@@ -1,5 +1,5 @@
 ---
-title: Confronto tra project.json e csproj - .NET Core | Microsoft Docs
+title: Confronto tra project.json e csproj - .NET Core
 description: Vedere il mapping tra gli elementi project.json e csproj.
 keywords: project.json, csproj, .NET Core, MSBuild
 author: natemcmaster
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
-ms.openlocfilehash: 7062102ff17c13b7cf25a1cfbb266c696221151b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f82e82c6a11220e24c85cef19bc131e12c77bf0
 ms.contentlocale: it-it
-ms.lasthandoff: 04/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -56,7 +56,7 @@ Per impostazione predefinita, il nome del file di progetto specifica anche il va
 </PropertyGroup>
 ```
 
-La proprietà `<AssemblyName>` avrà un valore diverso di `<PackageId>` se la proprietà `buildOptions\outputName` è stata definita in project.json. Per altre informazioni, vedere [Altre opzioni comuni di compilazione](#other-common-build-options).
+La proprietà `<AssemblyName>` avrà un valore diverso da `<PackageId>` se la proprietà `buildOptions\outputName` è stata definita in project.json. Per altre informazioni, vedere [Altre opzioni comuni di compilazione](#other-common-build-options).
 
 ### <a name="version"></a>version
 
@@ -494,7 +494,7 @@ Non è disponibile nessuna opzione equivalente per l'elemento `owners` in MSBuil
 }
 ```
 
-Gli equivalenti in MSBuild sono i [target](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets):
+Gli equivalenti in MSBuild sono i [target](/visualstudio/msbuild/msbuild-targets):
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -562,12 +562,12 @@ La proprietà "System.GC.Server" viene migrata nel file csproj:
 }
 ```
 
-Non supportato in csproj. È invece necessario creare e includere i file di contenuto nel file *.nuspec*. Per altre informazioni, vedere [Including content files](https://docs.microsoft.com/nuget/schema/nuspec#including-content-files) (Includere i file di contenuto).
+Non supportato in csproj. È invece necessario creare e includere i file di contenuto nel file *.nuspec*. Per altre informazioni, vedere [Including content files](/nuget/schema/nuspec#including-content-files) (Includere i file di contenuto).
 
 ## <a name="files"></a>file
 
 In *project.json*, la compilazione e la creazione di pacchetti possono essere estese per compilare e incorporare da cartelle diverse.
-In MSBuild, questa operazione viene eseguita tramite [items](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items). L'esempio seguente illustra una conversione comune:
+In MSBuild, questa operazione viene eseguita tramite [items](/visualstudio/msbuild/common-msbuild-project-items). L'esempio seguente illustra una conversione comune:
 
 ```json
 {
@@ -620,7 +620,7 @@ Tutti gli elementi `ItemGroup` di MSBuild supportano `Include`, `Exclude` e `Rem
 
 Il layout del pacchetto all'interno di .nupkg può essere modificato con `PackagePath="path"`.
 
-Ad eccezione di `Content`, la maggior parte dei gruppi di elementi richiedono in modo esplicito l'aggiunta di `Pack="true"` nel pacchetto. `Content` verrà incluso nella cartella *content* in un pacchetto poiché la proprietà `<IncludeContentInPack>` di MSBuild è impostata su `true` per impostazione predefinita. Per altre informazioni, vedere [Including content in a package](https://docs.microsoft.com/nuget/schema/msbuild-targets#including-content-in-a-package) (Includere contenuto in un pacchetto).
+Ad eccezione di `Content`, la maggior parte dei gruppi di elementi richiedono in modo esplicito l'aggiunta di `Pack="true"` nel pacchetto. `Content` verrà incluso nella cartella *content* in un pacchetto poiché la proprietà `<IncludeContentInPack>` di MSBuild è impostata su `true` per impostazione predefinita. Per altre informazioni, vedere [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package) (Includere contenuto in un pacchetto).
 
 `PackagePath="%(Identity)"` è un modo breve di impostare il percorso di un pacchetto sul percorso del file relativo al progetto.
 

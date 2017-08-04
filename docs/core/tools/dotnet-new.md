@@ -1,7 +1,7 @@
 ---
-title: Comando dotnet-new - Interfaccia della riga di comando di .NET Core | Microsoft Docs
+title: Comando dotnet-new - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet-new consente di creare nuovi progetti .NET Core nella directory corrente.
-keywords: dotnet-new, interfaccia della riga di comando, comando dell&quot;interfaccia della riga di comando, .NET Core
+keywords: dotnet-new, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/15/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
-ms.openlocfilehash: 14279ea6fdf4af52c0492f2dad1171d8150ac95b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 56033295b2448b045d5a51dbd84d5429aed77451
 ms.contentlocale: it-it
-ms.lasthandoff: 05/05/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -118,7 +118,7 @@ Creare un nuovo progetto di applicazione MVC ASP.NET Core C# nella directory cor
  
 Creare una nuova applicazione xUnit con destinazione .NET Core 1.1:
 
-`dotnet new xunit --Framework netcoreapp1.1`
+`dotnet new xunit --framework netcoreapp1.1`
 
 Elencare tutti i modelli disponibili per MVC:
 

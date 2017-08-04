@@ -1,6 +1,6 @@
 ---
-title: Distribuzione di app .NET Core con strumenti CLI | Microsoft Docs
-description: Informazioni sulla distribuzione di app .NET Core con strumenti dell&quot;interfaccia della riga di comando (CLI)
+title: Distribuzione di app .NET Core con strumenti dell'interfaccia della riga di comando
+description: Informazioni sulla distribuzione di app .NET Core con strumenti dell'interfaccia della riga di comando (CLI)
 keywords: .NET, .NET Core, distribuzione di .NET Core
 author: rpetrusha
 ms.author: ronpet
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3ffe3909902659a22cb25bac6dc5aaa4f5b9fde2
-ms.openlocfilehash: e3736d44c05e8740451ff72b28cd01c384ecd34d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 005355868eefdbf21e3107f6db5230d7952276b2
 ms.contentlocale: it-it
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -85,7 +85,7 @@ In una distribuzione dipendente dal framework con una o più dipendenze di terze
 
 1. Se non lo si è già fatto, scaricare il pacchetto NuGet contenente la dipendenza di terze parti. Per scaricare il pacchetto, eseguire il comando `dotnet restore` dopo l'aggiunta della dipendenza. Poiché la dipendenza viene risolta dalla cache NuGet locale in fase di pubblicazione, deve essere disponibile nel sistema.
 
-Si noti che la portabilità di una distribuzione dipendente dal framework con dipendenze di terze parti corrisponde esattamente alla portabilità delle dipendenze. Se ad esempio una libreria di terze parti supporta solo macOS, l'app non è portabile in sistemi Windows. Questa situazione si verifica se la dipendenza di terze parti stessa dipende da codice nativo. Un buon esempio è il [server Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), che richiede una dipendenza nativa da [libuv](https://github.com/libuv/libuv). Quando viene creata una distribuzione dipendente dal framework per un'applicazione con questo tipo di dipendenze di terze parti, l'output pubblicato contiene una cartella per ogni [identificatore di runtime (RID)](../rid-catalog.md#what-are-rids) supportato dalla dipendenza nativa (e presente nel relativo pacchetto NuGet).
+Si noti che la portabilità di una distribuzione dipendente dal framework con dipendenze di terze parti corrisponde esattamente alla portabilità delle dipendenze. Se ad esempio una libreria di terze parti supporta solo macOS, l'app non è portabile in sistemi Windows. Questa situazione si verifica se la dipendenza di terze parti stessa dipende da codice nativo. Un buon esempio è il [server Kestrel](/aspnet/core/fundamentals/servers/kestrel), che richiede una dipendenza nativa da [libuv](https://github.com/libuv/libuv). Quando viene creata una distribuzione dipendente dal framework per un'applicazione con questo tipo di dipendenze di terze parti, l'output pubblicato contiene una cartella per ogni [identificatore di runtime (RID)](../rid-catalog.md#what-are-rids) supportato dalla dipendenza nativa (e presente nel relativo pacchetto NuGet).
 
 ## <a name="simpleSelf"></a> Distribuzione autonoma senza dipendenze di terze parti
 

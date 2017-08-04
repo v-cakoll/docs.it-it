@@ -1,7 +1,7 @@
 ---
-title: Comando dotnet-nuget-locals - Interfaccia della riga di comando di .NET Core | Microsoft Docs
+title: Comando dotnet-nuget-locals - Interfaccia della riga di comando di .NET Core
 description: Il comando dotnet-nuget-locals cancella o elenca risorse NuGet locali quali cache delle richieste HTTP, cache temporanea o cartella globale dei pacchetti a livello di computer.
-keywords: dotnet-nuget-locals, interfaccia della riga di comando, comando dell&quot;interfaccia della riga di comando, .NET Core
+keywords: dotnet-nuget-locals, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
 author: karann-msft
 ms.author: mairaw
 ms.date: 03/15/2017
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d0acfaa6ff1a11f49a0d3751b675ea94bd6ae3a3
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2c9ea7b3b7c61b347cb7c56254773290f04a0cd6
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -95,5 +96,5 @@ Cancella tutti i file presenti nella directory locale della cache temporanea:
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Per informazioni su problemi ed errori comuni relativi all'uso del comando `dotnet nuget locals`, vedere [Managing the NuGet cache](https://docs.microsoft.com/nuget/consume-packages/managing-the-nuget-cache) (Gestione della cache NuGet).
+Per informazioni su problemi ed errori comuni relativi all'uso del comando `dotnet nuget locals`, vedere [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache) (Gestione della cache NuGet).
 

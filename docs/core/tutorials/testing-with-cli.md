@@ -1,7 +1,7 @@
 ---
-title: Organizzazione e test di progetti con la riga di comando di .NET Core | Microsoft Docs
+title: Organizzazione e test di progetti con la riga di comando di .NET Core
 description: Questa esercitazione illustra come organizzare e testare i progetti .NET Core dalla riga di comando.
-keywords: .NET, .NET Core, unit test, .NET CLI, xUnit
+keywords: .NET, .NET Core, unit test, interfaccia della riga di comando di .NET Core, xUnit
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
-ms.openlocfilehash: 1e6e987777678ade860f108aed05bba926a6d4fd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a0a0554b28600821fb15f64d31c6bce74a17136
 ms.contentlocale: it-it
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -260,3 +260,4 @@ Test execution time: 1.6634 Seconds
 I test hanno esito positivo. I metodi dei tipi di animali da compagnia restituiscono i valori corretti nei messaggi trasmessi al proprietario.
 
 Si sono apprese tecniche per l'organizzazione e il test di progetti con xUnit. Continuare con queste tecniche applicandole nei propri progetti. *Buona codifica!*
+

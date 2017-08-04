@@ -1,45 +1,63 @@
 ---
-title: "Statements (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "statements [Visual Basic]"
+title: Istruzioni (Visual Basic)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Statements (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 30d7fb19e5f11b538b780bf7225917ec50ed765b
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
-Gli argomenti elencati di seguito contengono tabelle con le istruzioni di dichiarazione ed eseguibili di Visual Basic e informazioni importanti valide per molte istruzioni.  
+---
+# <a name="statements-visual-basic"></a>Istruzioni (Visual Basic)
+Gli argomenti di questa sezione contengono tabelle con le istruzioni eseguibili e di dichiarazione di Visual Basic e con elenchi importanti applicabili a numerose istruzioni.  
   
-## In questa sezione  
- [A\-E Statements](../../../visual-basic/language-reference/statements/a-e-statements.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Istruzioni A-E](../../../visual-basic/language-reference/statements/a-e-statements.md)  
   
- [F\-P Statements](../../../visual-basic/language-reference/statements/f-p-statements.md)  
+ [Istruzioni F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)  
   
- [Q\-Z Statements](../../../visual-basic/language-reference/statements/q-z-statements.md)  
+ [Istruzioni Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)  
   
- [Clauses](../../../visual-basic/language-reference/statements/clauses.md)  
+ [Clausole](../../../visual-basic/language-reference/statements/clauses.md)  
   
- [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
+ [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
   
- [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md)  
+ [Elenco degli attributi](../../../visual-basic/language-reference/statements/attribute-list.md)  
   
- [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Elenco dei parametri](../../../visual-basic/language-reference/statements/parameter-list.md)  
   
- [Type List](../../../visual-basic/language-reference/statements/type-list.md)  
+ [Elenco dei tipi](../../../visual-basic/language-reference/statements/type-list.md)  
   
-## Sezioni correlate  
- [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)
+

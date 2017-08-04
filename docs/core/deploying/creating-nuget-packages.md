@@ -1,6 +1,6 @@
 ---
-title: Creazione di un pacchetto NuGet con strumenti multipiattaforma | Microsoft Docs
-description: Creazione di un pacchetto NuGet con strumenti multipiattaforma
+title: Creazione di un pacchetto NuGet con strumenti multipiattaforma
+description: Informazioni su come creare un pacchetto NuGet con il comando 'dotnet pack'.
 keywords: .NET, .NET Core, NuGet
 author: cartermp
 ms.author: mairaw
@@ -10,17 +10,15 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 2b2081bce1725fb4a019881521604e4171b85028
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e5c762de0a14407c92c9752edc9619caa07d500
 ms.contentlocale: it-it
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="how-to-create-a-nuget-package-with-cross-platform-tools" class="xliff"></a>
-
-# Come creare un pacchetto NuGet con strumenti multipiattaforma
+# <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Come creare un pacchetto NuGet con strumenti multipiattaforma
 
 > [!NOTE]
 > Di seguito sono riportati esempi dalla riga di comando che usano Unix.  Il comando `dotnet pack` funziona allo stesso modo in Windows, come illustrato di seguito.
@@ -65,9 +63,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 Sono ora disponibili i file necessari per pubblicare un pacchetto NuGet.
 
-<a id="dont-confuse-dotnet-pack-with-dotnet-publish" class="xliff"></a>
-
-## Non confondere `dotnet pack` con `dotnet publish`
+## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Non confondere `dotnet pack` con `dotnet publish`
 
 È importante notare che il comando `dotnet publish` non viene affatto coinvolto.  Il comando `dotnet publish` viene usato per la distribuzione di applicazioni con tutte le relative dipendenze nello stesso bundle, non per la generazione di un pacchetto NuGet per la distribuzione e l'uso mediante NuGet.
 
