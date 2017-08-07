@@ -36,10 +36,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5b8b7951c01ac5a82c79a0942fdc99368c2d0175
+ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
+ms.openlocfilehash: 906fa362c249c3e5abbd6f2ed3ba879a81334aeb
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="types-c-programming-guide"></a>Tipi (Guida per programmatori C#)
@@ -140,7 +140,7 @@ char c = 'Z';
  Tutte le enumerazioni ereditano da <xref:System.Enum?displayProperty=fullName>, che eredita da <xref:System.ValueType?displayProperty=fullName>. Tutte le regole valide per i tipi struct sono valide anche per le enumerazioni. Per altre informazioni sulle enumerazioni, vedere [Tipi di enumerazione](../../../csharp/programming-guide/enumeration-types.md).  
   
 ### <a name="reference-types"></a>Tipi riferimento  
- Un tipo definito come [classe](../../../csharp/language-reference/keywords/class.md), [delegato](../../../csharp/language-reference/keywords/delegate.md), matrice o [interfaccia](../../../csharp/language-reference/keywords/interface.md) è un *tipo riferimento*. In fase di esecuzione, quando si dichiara una variabile di un tipo riferimento, la variabile contiene il valore [null](../../../csharp/language-reference/keywords/null.md) fino a quando non si crea in modo esplicito un'istanza dell'oggetto usando l'operatore [new](../../../csharp/language-reference/keywords/new.md) o non la si assegna a un oggetto creato altrove tramite `new, as shown in the following example:`.  
+ Un tipo definito come [classe](../../../csharp/language-reference/keywords/class.md), [delegato](../../../csharp/language-reference/keywords/delegate.md), matrice o [interfaccia](../../../csharp/language-reference/keywords/interface.md) è un *tipo riferimento*. In fase di esecuzione, quando si dichiara una variabile di un tipo di riferimento, la variabile contiene il valore [null](../../../csharp/language-reference/keywords/null.md) fino a quando non si crea in modo esplicito un'istanza dell'oggetto usando l'operatore [new](../../../csharp/language-reference/keywords/new.md) o fino a quando non le viene assegnato un oggetto creato altrove tramite `new`, come illustrato nell'esempio seguente:
   
 ```csharp  
 MyClass mc = new MyClass();  
