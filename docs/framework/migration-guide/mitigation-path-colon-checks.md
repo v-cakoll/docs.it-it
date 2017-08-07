@@ -1,5 +1,5 @@
 ---
-title: 'Mitigazione: Verifica della presenza dei due punti nel percorso | Documenti di Microsoft'
+title: 'Mitigazione: Verifica della presenza dei due punti nel percorso'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,27 +15,27 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b5e2426fc81c8fd38994a4124cf71af8ec445bfb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8eb6864213aa4420f7a4373b9abbf173880f035f
 ms.contentlocale: it-it
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-path-colon-checks"></a>Mitigazione: Verifica della presenza dei due punti nel percorso
 A partire dalle applicazioni dedicate a [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], sono state apportate alcune modifiche per supportare i percorsi in precedenza non supportati (entrambi in termini di lunghezza e il formato). In particolare, i controlli per la sintassi del separatore dell'unità appropriata (due punti) sono stati resi più corretti.  
   
 ## <a name="impact"></a>Impatto  
- Queste modifiche bloccano alcuni percorsi URI che i metodi <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName> supportavano in precedenza.  
+ Queste modifiche bloccano alcuni percorsi URI supportati in precedenza dai metodi <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName>.  
   
 ## <a name="mitigation"></a>Attenuazione  
- Per risolvere il problema di un percorso precedentemente accettabile che non è più supportato dai metodi <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName> è possibile eseguire le operazioni seguenti:  
+ Per risolvere il problema di un percorso in precedenza accettabile che non è più supportato dai metodi <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName>, è possibile eseguire queste operazioni:  
   
 -   Rimuovere manualmente lo schema da un URL. Ad esempio, rimuovere `file://` da un URL.  
   
 -   Passare l'URI a un costruttore <xref:System.Uri> e recuperare il valore della proprietà <xref:System.Uri.LocalPath%2A?displayProperty=fullName>.  
   
--   Rifiutare esplicitamente la normalizzazione percorso nuovo impostando il commutatore `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> su `true`.  
+-   Rifiutare esplicitamente la normalizzazione del nuovo percorso impostando il commutatore `Switch.System.IO.UseLegacyPathHandling`<xref:System.AppContext> su `true`.  
   
     ```xml  
     <runtime>  

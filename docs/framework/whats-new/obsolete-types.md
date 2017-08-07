@@ -1,5 +1,5 @@
 ---
-title: Tipi obsoleti in .NET Framework | Microsoft Docs
+title: Tipi obsoleti in .NET Framework
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,15 +18,14 @@ caps.latest.revision: 41
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
-ms.openlocfilehash: b7040d4c82c9434b2d24a579a93602660479ec59
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15ab48dedaef24ea209c38939ee87a0321da55cf
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# Tipi obsoleti in .NET Framework
-<a id="obsolete-types-in-the-net-framework" class="xliff"></a>
+# <a name="obsolete-types-in-the-net-framework"></a>Tipi obsoleti in .NET Framework
 <a name="introduction"></a> Le tabelle in questo articolo elencano i tipi obsoleti in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], organizzati per assembly. Usare i seguenti collegamenti per vedere un elenco di tipi obsoleti e le alternative consigliate in ogni assembly. Poiché questi tipi sono obsoleti, lo sono anche tutti i relativi membri. Per un elenco di altri membri obsoleti nella libreria di classi .NET Framework, vedere [Membri obsoleti](../../../docs/framework/whats-new/obsolete-members.md).  
   
 -   [Tipi obsoleti negli assembly di sistema](#obsolete_types_in_system_assemblies)  
@@ -82,13 +81,11 @@ ms.lasthandoff: 05/22/2017
     -   [Microsoft.VisualC.dll](#visualc)  
   
 <a name="obsolete_types_in_system_assemblies"></a>   
-## Tipi obsoleti negli assembly di sistema
-<a id="obsolete-types-in-system-assemblies" class="xliff"></a>  
+## <a name="obsolete-types-in-system-assemblies"></a>Tipi obsoleti negli assembly di sistema  
  Nelle seguenti tabelle sono elencati i tipi dichiarati obsoleti negli assembly di sistema. Questi assembly vengono usati per lo sviluppo di applicazioni generiche destinate a .NET Framework.  
   
 <a name="mscorlib"></a>   
-### Assembly: mscorlib.dll
-<a id="assembly-mscorlibdll" class="xliff"></a>  
+### <a name="assembly-mscorlibdll"></a>Assembly: mscorlib.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -153,8 +150,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="Core"></a>   
-### Assembly: System.Core.dll
-<a id="assembly-systemcoredll" class="xliff"></a>  
+### <a name="assembly-systemcoredll"></a>Assembly: System.Core.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -163,8 +159,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="data"></a>   
-### Assembly: System.Data.dll
-<a id="assembly-systemdatadll" class="xliff"></a>  
+### <a name="assembly-systemdatadll"></a>Assembly: System.Data.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -176,8 +171,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="oracleclient"></a>   
-### Assembly: System.Data.OracleClient.dll
-<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
+### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -193,8 +187,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="design"></a>   
-### Assembly: System.Design.dll
-<a id="assembly-systemdesigndll" class="xliff"></a>  
+### <a name="assembly-systemdesigndll"></a>Assembly: System.Design.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -216,8 +209,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="system"></a>   
-### Assembly: System.dll
-<a id="assembly-systemdll" class="xliff"></a>  
+### <a name="assembly-systemdll"></a>Assembly: System.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -232,8 +224,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="enterpriseservices"></a>   
-### Assembly: System.EnterpriseServices.dll
-<a id="assembly-systementerpriseservicesdll" class="xliff"></a>  
+### <a name="assembly-systementerpriseservicesdll"></a>Assembly: System.EnterpriseServices.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -242,8 +233,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="net"></a>   
-### Assembly: System.Net.dll
-<a id="assembly-systemnetdll" class="xliff"></a>  
+### <a name="assembly-systemnetdll"></a>Assembly: System.Net.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -260,8 +250,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="servicemodel"></a>   
-### Assembly: System.ServiceModel.dll
-<a id="assembly-systemservicemodeldll" class="xliff"></a>  
+### <a name="assembly-systemservicemodeldll"></a>Assembly: System.ServiceModel.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -277,8 +266,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="web"></a>   
-### Assembly: System.Web.dll
-<a id="assembly-systemwebdll" class="xliff"></a>  
+### <a name="assembly-systemwebdll"></a>Assembly: System.Web.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -299,8 +287,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="mobile"></a>   
-### Assembly: System.Web.Mobile.dll
-<a id="assembly-systemwebmobiledll" class="xliff"></a>  
+### <a name="assembly-systemwebmobiledll"></a>Assembly: System.Web.Mobile.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -500,57 +487,53 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="workflow_activities"></a>   
-### Assembly: System.Workflow.Activities.dll
-<a id="assembly-systemworkflowactivitiesdll" class="xliff"></a>  
+### <a name="assembly-systemworkflowactivitiesdll"></a>Assembly: System.Workflow.Activities.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Activities?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Activities?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
   
  [Torna all'inizio](#introduction)  
   
 <a name="workflow_componentmodel"></a>   
-### Assembly: System.Workflow.ComponentModel.dll
-<a id="assembly-systemworkflowcomponentmodeldll" class="xliff"></a>  
+### <a name="assembly-systemworkflowcomponentmodeldll"></a>Assembly: System.Workflow.ComponentModel.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel> fatta eccezione per <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=fullName> e <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel.Compiler> fatta eccezione per <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=fullName> e <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel.Design> fatta eccezione per <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel> fatta eccezione per <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=fullName> e <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel.Compiler> fatta eccezione per <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=fullName> e <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.ComponentModel.Design> fatta eccezione per <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=fullName>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
   
  [Torna all'inizio](#introduction)  
   
 <a name="workflow_runtime"></a>   
-### Assembly: System.Workflow.Runtime.dll
-<a id="assembly-systemworkflowruntimedll" class="xliff"></a>  
+### <a name="assembly-systemworkflowruntimedll"></a>Assembly: System.Workflow.Runtime.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------| 
 |<xref:System.Activities.Statements.Interop>|Deprecato inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>.\*.|  
 |<xref:System.Activities.Tracking.InteropTrackingRecord>|Deprecato inizialmente in .NET Framework 4.5.<br /><br />I tipi di Workflow Foundation 3.0 sono stati deprecati. Usare invece i nuovi tipi Workflow 4.0 da <xref:System.Activities>.\*.|   
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Configuration>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.DebugEngine> fatta eccezione per <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Hosting> fatta eccezione per <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
-|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Tracking>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono stati deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Configuration>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.DebugEngine> fatta eccezione per <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Hosting> fatta eccezione per <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
+|Tutti i tipi nello spazio dei nomi <xref:System.Workflow.Runtime.Tracking>|Deprecato inizialmente in .NET Framework 4.5.<br /><br /> I tipi System.Workflow.\* sono deprecati. Usare invece i nuovi tipi da <xref:System.Activities>.\*.|  
   
  [Torna all'inizio](#introduction)  
   
 <a name="workflowservices"></a>   
-### Assembly: System.WorkflowServices.dll
-<a id="assembly-systemworkflowservicesdll" class="xliff"></a>  
+### <a name="assembly-systemworkflowservicesdll"></a>Assembly: System.WorkflowServices.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -579,8 +562,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="xaml"></a>   
-### Assembly: System.Xaml.dll
-<a id="assembly-systemxamldll" class="xliff"></a>  
+### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -589,8 +571,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="xml"></a>   
-### Assembly: System.Xml.dll
-<a id="assembly-systemxmldll" class="xliff"></a>  
+### <a name="assembly-systemxmldll"></a>Assembly: System.Xml.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -603,8 +584,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="WindowsBase"></a>   
-### Assembly: WindowsBase.dll
-<a id="assembly-windowsbasedll" class="xliff"></a>  
+### <a name="assembly-windowsbasedll"></a>Assembly: WindowsBase.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -613,20 +593,17 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="obsolete_types_in_microsoft_assemblies"></a>   
-## Tipi obsoleti negli assembly Microsoft
-<a id="obsolete-types-in-microsoft-assemblies" class="xliff"></a>  
+## <a name="obsolete-types-in-microsoft-assemblies"></a>Tipi obsoleti negli assembly Microsoft  
  Nelle seguenti sezioni sono elencati i tipi obsoleti contenuti negli assembly Microsoft. Questi ultimi sono assembly speciali, ad esempio assembly destinati a un unico linguaggio (es. Microsoft.JScript.dll o Microsoft.VisualC.dll).  
   
 <a name="IEHost"></a>   
-### Assembly: IEHost.dll e IEExec.exe
-<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
+### <a name="assembly-iehostdll-and-ieexecexe"></a>Assembly: IEHost.dll e IEExec.exe  
  Gli assembly IEHost.dll e IEExec.dll sono stati rimossi da .NET Framework. Tutti i loro tipi e i membri sono obsoleti e non sono supportati da [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Questi assembly sono usati per eseguire l'hosting dei controlli Windows Form ed eseguire i file eseguibili in Internet Explorer. Le alternative consigliate includono ClickOnce, le applicazioni browser XAML (XBAP) e Microsoft Silverlight.  
   
  [Torna all'inizio](#introduction)  
   
 <a name="Engine"></a>   
-### Assembly: Microsoft.Build.Engine.dll
-<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildenginedll"></a>Assembly: Microsoft.Build.Engine.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -636,8 +613,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="jscript"></a>   
-### Assembly: Microsoft.JScript.dll
-<a id="assembly-microsoftjscriptdll" class="xliff"></a>  
+### <a name="assembly-microsoftjscriptdll"></a>Assembly: Microsoft.JScript.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -663,8 +639,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="VBCompat"></a>   
-### Assembly: Microsoft.VisualBasic.Compatibility.dll
-<a id="assembly-microsoftvisualbasiccompatibilitydll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Assembly: Microsoft.VisualBasic.Compatibility.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -739,8 +714,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="VBCompatData"></a>   
-### Assembly: Microsoft.VisualBasic.Compatibility.Data.dll
-<a id="assembly-microsoftvisualbasiccompatibilitydatadll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Assembly: Microsoft.VisualBasic.Compatibility.Data.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -797,8 +771,7 @@ ms.lasthandoff: 05/22/2017
  [Torna all'inizio](#introduction)  
   
 <a name="visualc"></a>   
-### Assembly: Microsoft.VisualC.dll
-<a id="assembly-microsoftvisualcdll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualcdll"></a>Assembly: Microsoft.VisualC.dll  
   
 |Tipo|Messaggio|  
 |----------|-------------|  
@@ -813,8 +786,7 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=fullName>|Microsoft.VisualC.dll è un assembly obsoleto e viene mantenuto ai soli fini della compatibilità con le versioni precedenti.|  
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=fullName>|Microsoft.VisualC.dll è un assembly obsoleto e viene mantenuto ai soli fini della compatibilità con le versioni precedenti.|  
   
-## Vedere anche
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vedere anche  
  [Elementi obsoleti nella libreria di classi](../../../docs/framework/whats-new/whats-obsolete.md)   
  [Membri obsoleti](../../../docs/framework/whats-new/obsolete-members.md)
 

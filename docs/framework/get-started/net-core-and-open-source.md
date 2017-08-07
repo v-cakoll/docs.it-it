@@ -1,5 +1,5 @@
 ---
-title: Componenti di base e open-source di .NET | Microsoft Docs
+title: Componenti di base e open-source di .NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,22 +14,18 @@ caps.latest.revision: 8
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 24ae3c7e78d43960cf8c4127a164caa7edb69254
-ms.openlocfilehash: c6e7a2658cffa5692ffe515f6d07918f550d72c6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b61533260a86f10beda0b6652771c858828ec62c
 ms.contentlocale: it-it
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="net-core-and-open-source" class="xliff"></a>
-
-# Componenti di base e open-source di .NET
+# <a name="net-core-and-open-source"></a>Componenti di base e open-source di .NET
 Questo argomento fornisce una breve descrizione di .NET Core e illustra come trovare altre informazioni. Per l'elenco completo degli argomenti relativi a .NET Core, vedere la [Guida a .NET Core](../../core/index.md).
   
 <a name="BKMK_WhatisNETCore"></a>   
-<a id="what-is-net-core" class="xliff"></a>
-
-## Informazioni su .NET Core  
+## <a name="what-is-net-core"></a>Informazioni su .NET Core  
  .NET Core è un'implementazione generica, modulare, multi-piattaforma e open source di .NET Platform. Contiene molte delle stesse API di .NET Framework (ma .NET Core è un set più piccolo) e include componenti di runtime, del framework, del compilatore e degli strumenti in grado di supportare un'ampia gamma di sistemi operativi e chip di destinazione. L'implementazione di .NET Core è basata principalmente sui carichi di lavoro di ASP.NET Core, ma anche sulla necessità e la volontà di avere un runtime più moderno. Può essere usata in scenari di dispositivi, cloud e IoT/incorporati.  
   
  Per iniziare a usare .NET Core, visitare la [home page di .NET Core](https://www.microsoft.com/net/core).  
@@ -44,9 +40,7 @@ Questo argomento fornisce una breve descrizione di .NET Core e illustra come tro
 
 -   **Modulare:** .NET Core è modulare perché viene rilasciato tramite NuGet in pacchetti di assembly di dimensioni ridotte. Invece di un unico assembly grande contenente la maggior parte delle funzionalità di base, .NET Core è disponibile sotto forma di pacchetti più piccoli incentrati sulle funzionalità. Questa struttura consente un modello di sviluppo più agile e offre agli utenti l'opportunità di ottimizzare le app includendo solo i pacchetti NuGet effettivamente necessari. Una riduzione della superficie occupata dall'app offre anche diversi vantaggi, tra cui una maggiore sicurezza, una riduzione delle esigenze di assistenza, un miglioramento delle prestazioni e una diminuzione dei costi in un modello di pagamento basato sul consumo effettivo.  
   
-<a id="the-net-core-platform" class="xliff"></a>
-
-## La piattaforma .NET Core  
+## <a name="the-net-core-platform"></a>La piattaforma .NET Core  
  La piattaforma .NET Core è costituita da vari componenti, tra cui i compilatori gestiti, il runtime, le librerie di classi base e numerosi modelli applicativi come ASP.NET Core. Per informazioni sui vari componenti disponibili è possibile visitare i seguenti repository [GitHub](https://github.com/):  
   
 -   [.NET Core](https://github.com/dotnet/core)  
@@ -61,9 +55,8 @@ Questo argomento fornisce una breve descrizione di .NET Core e illustra come tro
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Home page di .NET core](https://www.microsoft.com/net/core)   
- [Sito della documentazione di .NET Core](../core/index.md)   
+ [Guida a .NET Core](../../core/index.md)   
  [Documentazione di ASP.NET Core](/aspnet/core/)
+
