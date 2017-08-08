@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40930b572b385c5407d309ddcacdcc86097a9919
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 4fc68a3dbdec634d8e92a066a46939ba19c65db7
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -47,7 +47,7 @@ Il processo consigliato per la portabilità fa riferimento alla serie di passagg
 
 Di seguito è riportato un breve elenco degli strumenti che possono risultare utili:
 
-* NuGet: [Nuget Client](https://dist.nuget.org/index.html) o [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer), gestione di pacchetti Microsoft per la piattaforma .NET.
+* NuGet: [Nuget Client](https://dist.nuget.org/index.html) o [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer), gestione di pacchetti Microsoft per le implementazioni di .NET.
 * API Portability Analyzer: [strumento da riga di comando](https://github.com/Microsoft/dotnet-apiport/releases) o [estensione di Visual Studio](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b), una toolchain in grado di generare un report sulla portabilità del codice tra .NET Framework e .NET Core, con un'analisi dettagliata dei problemi basata sugli assembly.  Per altre informazioni, vedere [Tooling to help you on the process](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/) (Strumenti utili per il processo).
 * Reverse Package Search: un [servizio Web utile](https://packagesearch.azurewebsites.net) che consente di eseguire le ricerche in base al tipo e di trovare pacchetti contenenti tale tipo.
 

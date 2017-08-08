@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e002411d9856bc5f98566ed1bd9d8122e884d5d
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 51f21e49623231f08d2c4a72e9b99c1141563e5e
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -124,13 +124,13 @@ In .NET Core è disponibile una combinazione di librerie specifiche della piatta
 - [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) e [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) sono specifiche della piattaforma, dato che le API di archiviazione e crittografia differiscono in modo significativo in ogni sistema operativo. 
 - [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) e [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq) sono indipendenti dalla piattaforma, dato che creano e operano su strutture di dati.
 
-## <a name="comparisons-to-other-net-platforms"></a>Confronto con altre piattaforme .NET
+## <a name="comparisons-to-other-net-implementations"></a>Confronto con altre implementazioni di .NET
 
-Per semplificare la comprensione dell'importanza di .NET Core, può essere utile un confronto con altre piattaforme .NET esistenti. 
+Per semplificare la comprensione dell'importanza di .NET Core, può essere utile un confronto con altre implementazioni di .NET esistenti. 
 
 ### <a name="comparison-with-net-framework"></a>Confronto con .NET Framework
 
-La piattaforma .NET è stata annunciata per la prima volta da Microsoft nel 2000 e da quel momento ha conosciuto una notevole evoluzione. .NET Framework è stato il prodotto .NET principale prodotto da Microsoft durante oltre 15 anni. 
+La piattaforma .NET è stata annunciata per la prima volta da Microsoft nel 2000 e da quel momento ha conosciuto una notevole evoluzione. .NET Framework è stata l'implementazione di .NET principale prodotta da Microsoft durante oltre 15 anni. 
 
 Differenze principali tra .NET Core e .NET Framework: 
 
@@ -140,7 +140,7 @@ Differenze principali tra .NET Core e .NET Framework:
 - **Piattaforme**: .NET Framework supporta Windows e Windows Server, mentre .NET Core supporta anche macOS e Linux.
 - **Open Source**: .NET Core è open source, mentre in [.NET Framework è open source un sottoinsieme di sola lettura](https://github.com/microsoft/referencesource).
 
-.NET Core è univoco e presenta differenze significative rispetto a .NET Framework e altre piattaforme .NET, ma consente di condividere il codice in modo molto semplice tramite l'origine o tecniche di condivisione binaria. 
+.NET Core è univoco e presenta differenze significative rispetto a .NET Framework e altre implementazioni di .NET, ma consente di condividere il codice in modo molto semplice tramite le tecniche di condivisione del codice sorgente o di condivisione binaria. 
 
 ### <a name="comparison-with-mono"></a>Confronto con Mono
 
