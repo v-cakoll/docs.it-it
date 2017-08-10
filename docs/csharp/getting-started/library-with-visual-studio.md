@@ -11,16 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 709b05dc9baeae1e99481a37287b91730b395f63
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 96a6a936ad1dbd412bfa07bc642eef975dd80e6c
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017
 
-La *libreria di classi* definisce tipi e metodi chiamati da un'applicazione. Una libreria di classi sviluppata usando .NET Core supporta .NET Standard, che consente di chiamare la libreria dell'utente da qualsiasi piattaforma .NET che supporti tale versione di .NET Standard. Dopo aver completato la libreria di classi, è possibile decidere se si vuole distribuirla come componente di terze parti o se si vuole includerla come componente in bundle con una o più applicazioni.
+La *libreria di classi* definisce tipi e metodi chiamati da un'applicazione. Una libreria di classi sviluppata usando .NET Core supporta .NET Standard, che consente di chiamare la libreria dell'utente da qualsiasi implementazione di .NET che supporti tale versione di .NET Standard. Dopo aver completato la libreria di classi, è possibile decidere se si vuole distribuirla come componente di terze parti o se si vuole includerla come componente in bundle con una o più applicazioni.
 
 > [!NOTE]
 > Per un elenco delle versioni di .NET Standard e delle piattaforme supportate, vedere [.NET Standard](../../standard/net-standard.md).

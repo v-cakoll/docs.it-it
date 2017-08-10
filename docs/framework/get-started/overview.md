@@ -1,5 +1,5 @@
 ---
-title: Panoramica di .NET Framework | Documenti di Microsoft
+title: Panoramica di .NET Framework
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,16 +19,14 @@ caps.latest.revision: 34
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: f7af2ff5db3d6d06383906fc271ae60d68f43731
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6e4cd4dc15fb8da942e947a031567b180327a7d6
 ms.contentlocale: it-it
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="overview-of-the-net-framework" class="xliff"></a>
-
-# Panoramica di .NET Framework
+# <a name="overview-of-the-net-framework"></a>Panoramica di .NET Framework
 .NET Framework è una tecnologia che supporta la compilazione e l'esecuzione di applicazioni di ultima generazione e servizi Web XML. .NET Framework è progettata per ottenere gli obiettivi indicati di seguito:  
   
 -   Fornire un ambiente di programmazione orientato agli oggetti coerente, sia che il codice degli oggetti sia memorizzato ed eseguito localmente, eseguito localmente ma distribuito su Internet oppure eseguito in modalità remota.  
@@ -61,9 +59,7 @@ ms.lasthandoff: 05/19/2017
   
  Nelle sezioni seguenti vengono descritte più dettagliatamente le principali funzionalità di .NET Framework.  
   
-<a id="features-of-the-common-language-runtime" class="xliff"></a>
-
-## Funzionalità di Common Language Runtime  
+## <a name="features-of-the-common-language-runtime"></a>Funzionalità di Common Language Runtime  
  Common Language Runtime gestisce la memoria, l'esecuzione di thread, l'esecuzione del codice, la verifica della sicurezza del codice, la compilazione e altri servizi di sistema. Queste funzionalità sono intrinseche al codice gestito che viene eseguito sul Common Language Runtime.  
   
  Per quanto riguarda la sicurezza, ai componenti gestiti vengono assegnati vari gradi di attendibilità in base a diversi fattori fra cui l'origine, ad esempio Internet, una rete aziendale o un computer locale. Un componente gestito quindi può essere o non essere in grado di eseguire operazioni di accesso a file, o al registro di sistema o altre funzioni riservate anche se utilizzato nella stessa applicazione attiva.  
@@ -82,9 +78,7 @@ ms.lasthandoff: 05/19/2017
   
  L'hosting del runtime può essere infine eseguito da applicazioni lato server a elevate prestazioni, quali Microsoft SQL Server e Internet Information Services (IIS). Questa infrastruttura consente di utilizzare il codice gestito per scrivere logica aziendale personalizzata, continuando a sfruttare le prestazioni superiori dei migliori server aziendali del settore che supportano l'hosting del runtime.  
   
-<a id="net-framework-class-library" class="xliff"></a>
-
-## Libreria di classi .NET Framework  
+## <a name="net-framework-class-library"></a>Libreria di classi .NET Framework  
  La libreria di classi .NET Framework è una raccolta di tipi riutilizzabili che si integrano strettamente con Common Language Runtime. La libreria di classi è orientata agli oggetti e fornisce tipi dai quali il codice gestito può derivare le funzionalità. In questo modo non solo viene semplificato l'utilizzo dei tipi .NET Framework ma viene anche ridotto il tempo necessario all'apprendimento delle nuove funzionalità di .NET Framework. È inoltre possibile integrare uniformemente i componenti di altri produttori nelle classi in .NET Framework.  
   
  Le classi di raccolte .NET Framework implementano ad esempio un set di interfacce che può essere utilizzato per sviluppare classi di raccolte personalizzate. Le classi di raccolte si mescoleranno in modo uniforme alle classi in .NET Framework.  
@@ -107,12 +101,11 @@ ms.lasthandoff: 05/19/2017
   
  Le classi Windows Form ad esempio sono un insieme completo di tipi riutilizzabili che semplificano ampiamente lo sviluppo di GUI Windows. Se si scrive un'applicazione Web Form ASP.NET, è possibile utilizzare le classi Web Form.  
   
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Requisiti di sistema](../../../docs/framework/get-started/system-requirements.md)   
  [Guida all'installazione](../../../docs/framework/install/index.md)   
  [Guida di sviluppo](../../../docs/framework/development-guide.md)   
  [Strumenti](../../../docs/framework/tools/index.md)   
  [Esempi di .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   
  [Libreria di classi .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)
+

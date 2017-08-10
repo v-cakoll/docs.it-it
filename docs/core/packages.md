@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d9a3b8904f88fc20d84082d85f89a7f65c584e0f
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 07/28/2017
 
 .NET Core è una piattaforma costituita da pacchetti NuGet. Alcuni prodotti traggono vantaggio da una definizione dei pacchetti con granularità fine, mentre altri da una definizione con granularità più grossolana. Per tenere conto di questo dualismo, il prodotto viene distribuito come set di pacchetti con granularità fine e quindi viene descritto in blocchi più grossolani con un tipo di pacchetto denominato in modo informale "metapacchetto".
 
-Ciascuno dei pacchetti .NET Core supporta l'esecuzione su più runtime .NET, rappresentati come framework. Alcuni di questi framework sono tradizionali, ad esempio `net46`, e rappresentano l'istanza .NET Framework. Un altro insieme è costituito da nuovi framework che possono essere considerati come "framework basati su pacchetti", il che stabilisce un nuovo modello di definizione dei framework stessi. Questi framework basati su pacchetti sono interamente formati e definiti come pacchetti, creando una forte relazione tra pacchetti e framework.
+Ciascuno dei pacchetti .NET Core supporta l'esecuzione su più implementazioni di .NET, rappresentate come framework. Alcuni di questi framework sono tradizionali, ad esempio `net46`, e rappresentano l'istanza .NET Framework. Un altro insieme è costituito da nuovi framework che possono essere considerati come "framework basati su pacchetti", il che stabilisce un nuovo modello di definizione dei framework stessi. Questi framework basati su pacchetti sono interamente formati e definiti come pacchetti, creando una forte relazione tra pacchetti e framework.
 
 ## <a name="packages"></a>Pacchetti
 

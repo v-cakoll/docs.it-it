@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4f59c0ba38168960bf5d662e4719d9b31ef553d
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 4708abcbd14f47089859ea1dba143a6648c845e5
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -83,7 +83,7 @@ Per .NET Core sono presenti due metapacchetti principali.
 
 - Versione 1.6 a partire da .NET Core 1.0 (queste versioni non corrispondono né tipicamente né intenzionalmente).
 - Viene mappato al framework `netstandard`. 
-- Descrive i pacchetti considerati necessari per lo sviluppo di app moderne e che le piattaforme .NET devono implementare per essere considerate piattaforme [.NET Standard](../../standard/net-standard.md).
+- Descrive i pacchetti considerati necessari per lo sviluppo di app moderne e che devono essere applicati dalle implementazioni di .NET per essere considerate piattaforme [.NET Standard](../../standard/net-standard.md).
 
 **Microsoft.NETCore.App**
 
@@ -97,7 +97,7 @@ Nota: [`Microsoft.NETCore.Portable.Compatibility`](https://www.nuget.org/package
 
 Le versioni del framework vengono aggiornate quando si aggiungono nuove API. Non includono alcun concetto della versione patch, poiché rappresentano la forma dell'API e non problemi di implementazione. La definizione delle versioni major e minor seguirà le regole SemVer specificate in precedenza.
 
-Il framework `netcoreapp` è legato alla distribuzione di .NET Core e seguirà il numero di versione usato da quest'ultimo. Ad esempio, quando viene rilasciata la versione .NET Core 2.0, avrà come destinazione `netcoreapp2.0`. Il framework `netstandard` non corrisponderà allo schema di versionamento di alcun runtime .NET, poiché è ugualmente applicabile a tutti questi runtime.
+Il framework `netcoreapp` è legato alla distribuzione di .NET Core e seguirà il numero di versione usato da quest'ultimo. Ad esempio, quando viene rilasciata la versione .NET Core 2.0, avrà come destinazione `netcoreapp2.0`. Il framework `netstandard` non corrisponderà allo schema di versionamento di alcuna implementazione di .NET, poiché è ugualmente applicabile a tutti questi runtime.
 
 ## <a name="versioning-in-practice"></a>Versionamento in pratica
 

@@ -1,5 +1,5 @@
 ---
-title: 'Mitigazione: Impostazioni cultura e operazioni asincrone | Documenti di Microsoft'
+title: 'Mitigazione: Impostazioni cultura e operazioni asincrone'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,25 +15,25 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c2dbf60cacf47be3c448b5683b771840ef85ddaf
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: debcae8281c832d2815e1b9896fbbcb725c8ffc3
 ms.contentlocale: it-it
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-culture-and-asynchronous-operations"></a>Mitigazione: Impostazioni cultura e operazioni asincrone
-Per le app destinate a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e versioni successive, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> vengono archiviate nell'oggetto <xref:System.Threading.ExecutionContext> di un thread, che passa attraverso operazioni asincrone.  
+Per app destinate a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e versioni successive, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> vengono archiviate nell'oggetto <xref:System.Threading.ExecutionContext> del thread, che passa attraverso operazioni asincrone.  
   
 ## <a name="impact"></a>Impatto  
- Come risultato di questa modifica, eventuali modifiche alle proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> o <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> si rifletteranno nelle attività che verranno avviate in seguito in modo asincrono. Questo comportamento è diverso dal comportamento delle versioni precedenti di .NET Framework, in cui le proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> sarebbero state riportate alle impostazioni predefinite di sistema in tutte le attività asincrone.  
+ In seguito a questa modifica, le modifiche a <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> o <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> si riflettono sulle attività eseguite successivamente in modo asincrono. Questo comportamento è diverso rispetto alle versioni precedenti di .NET Framework, in cui gli oggetti <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> vengono reimpostati sui valori predefiniti del sistema in tutte le attività asincrone.  
   
 ## <a name="mitigation"></a>Attenuazione  
  Le app interessate da questa modifica possono aggirare il problema in uno dei due modi:  
   
 -   Impostando in modo esplicito la proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> o <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> come prima operazione in un'attività asincrona.  
   
--   Consentendo il comportamento precedente di non propagazione delle proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> e aggiungendo l'elemento `AppContextSwitchOverrides` seguente al file di configurazione dell'applicazione:  
+-   Scegliendo come in precedenza di non propagare <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> aggiungendo il seguente elemento `AppContextSwitchOverrides` al file di configurazione dell'applicazione:  
   
     ```xml  
     <configuration>  
@@ -43,7 +43,7 @@ Per le app destinate a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e ve
     </configuration>  
     ```  
   
--   Consentendo il comportamento precedente di non propagazione delle proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> e impostando il commutatore di compatibilità seguente in modo programmatico:  
+-   Scegliendo come in precedenza di non propagare <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> impostando la seguente opzione di compatibilità a livello di codice:  
   
     ```csharp  
     AppContext.SetSwitch("Switch.System.Globalization.NoAsyncCurrentCulture", true);  

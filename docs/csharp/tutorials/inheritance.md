@@ -12,16 +12,13 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c3004d84e9a87fcf86737b18fe58bb200eefd33b
+ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
+ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-
 # <a name="inheritance-in-c-and-net"></a>Ereditarietà in C# e .NET
-
-## <a name="introduction"></a>Introduzione
 
 Questa esercitazione presenta l'ereditarietà in C#. L'ereditarietà è una caratteristica dei linguaggi di programmazione orientati a oggetti che consente di definire una classe di base con funzionalità specifiche (relative a dati e comportamento) e classi derivate che ereditano o eseguono l'override di tali funzionalità.
 
@@ -122,13 +119,13 @@ Per comprendere il significato dell'ereditarietà implicita, si definirà una nu
 
 [!code-csharp[Ereditarietà](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-È quindi possibile usare la reflection, che consente di esaminare i metadati del tipo per ottenere informazioni su di esso, per generare un elenco dei membri che appartengono al tipo `SimpleClass`. Anche se non è stato definito alcun membro nella classe `SimpleClass`, l'output dell'esempio indica che ha effettivamente nove membri. Uno di questi membri è un costruttore senza parametri (o predefinito) fornito automaticamente per il tipo `SimpleClass` dal compilatore C#. Gli altri otto sono membri di <xref:System.Object>, il tipo da cui tutte le classi e le interfacce nel sistema di tipi .NET ereditano in modo implicito.
+È quindi possibile usare la reflection, che consente di esaminare i metadati del tipo per ottenere informazioni su di esso, per generare un elenco dei membri che appartengono al tipo `SimpleClass`. Anche se non è stato definito alcun membro nella classe `SimpleClass`, l'output dell'esempio indica che ha effettivamente nove membri. Uno di questi membri è un costruttore senza parametri (o predefinito) fornito automaticamente per il tipo `SimpleClass` dal compilatore C#. I rimanenti otto sono membri di <xref:System.Object>, il tipo da cui ereditano in modo implicito tutte le classi e le interfacce nel sistema di tipi .NET.
 
 [!code-csharp[Ereditarietà](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 L'ereditarietà implicita dalla classe <xref:System.Object> rende disponibili questi metodi per la classe `SimpleClass`:
 
-- Il metodo pubblico `ToString`, che converte un oggetto `SimpleClass` nella relativa rappresentazione stringa, ovvero il nome di tipo completo. In questo caso il metodo `ToString` restituisce la stringa "SimpleClass".
+- Il metodo pubblico `ToString`, che converte un oggetto `SimpleClass` nella relativa rappresentazione stringa, restituisce il nome di tipo completo. In questo caso il metodo `ToString` restituisce la stringa "SimpleClass".
 
 - Tre metodi che verificano l'uguaglianza di due oggetti: il metodo pubblico di istanza `Equals(Object)`, il metodo statico pubblico `Equals(Object, Object)` e il metodo statico pubblico `ReferenceEquals(Object, Object)`. Per impostazione predefinita, questi metodi verificano l'uguaglianza dei riferimenti. Ciò significa che, per essere uguali, due variabili di oggetto devono fare riferimento allo stesso oggetto.
 
@@ -160,7 +157,7 @@ In genere l'ereditarietà consente di esprimere una relazione "è un" tra una cl
 > [!NOTE]
 > Una classe o un tipo struct può implementare una o più interfacce. Anche se l'implementazione dell'interfaccia è spesso presentata come una soluzione alternativa all'ereditarietà singola o come modo per usare l'ereditarietà con struct, è stata ideata per esprimere una relazione diversa (una relazione "può fare") tra un'interfaccia e il relativo tipo di implementazione rispetto all'ereditarietà. Un'interfaccia definisce un subset di funzionalità che rende disponibili per i tipi di implementazione, ad esempio le funzionalità per verificare l'uguaglianza, confrontare o ordinare gli oggetti, nonché supportare la formattazione e l'analisi in base alle impostazioni cultura.
 
-Si noti che "è un" esprime anche la relazione tra un tipo e un'istanza specifica di quel tipo. Nell'esempio seguente `Automobile` è una classe che ha tre proprietà univoche di sola lettura: `Moke`, il produttore dell'automobile, `Model`, il tipo di automobile e `Year`, l'anno di produzione. La classe `Automobile` include anche un costruttore i cui argomenti vengono assegnati ai valori delle proprietà ed esegue l'override del metodo <xref:System.Object.ToString%2A?displayProperty=fullName> per generare una stringa che identifica in modo univoco l'istanza `Automobile` anziché la classe `Automobile`.
+Si noti che "è un" esprime anche la relazione tra un tipo e un'istanza specifica di quel tipo. Nell'esempio seguente `Automobile` è una classe che ha tre proprietà univoche di sola lettura: `Make`, il produttore dell'automobile, `Model`, il tipo di automobile e `Year`, l'anno di produzione. La classe `Automobile` include anche un costruttore i cui argomenti vengono assegnati ai valori delle proprietà ed esegue l'override del metodo <xref:System.Object.ToString%2A?displayProperty=fullName> per generare una stringa che identifica in modo univoco l'istanza `Automobile` anziché la classe `Automobile`.
 
 [!code-csharp[Ereditarietà](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 

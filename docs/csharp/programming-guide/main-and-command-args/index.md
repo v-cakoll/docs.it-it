@@ -1,6 +1,6 @@
 ---
 title: Main() e argomenti della riga di comando (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 2017-08-02
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -36,46 +36,37 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1b2950f7718cda66b545935229a64850449850d0
+ms.sourcegitcommit: d019d1c5757a961c03439d756e808ae13fd8a67b
+ms.openlocfilehash: 51408654abd0dcd2f7159438b507c44bd579bfd9
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() e argomenti della riga di comando (Guida per programmatori C#)
-Il metodo `Main` costituisce il punto di ingresso di un'applicazione console C# o di un'applicazione Windows. Le librerie e i servizi non richiedono un metodo `Main` come punto di ingresso. All'avvio dell'applicazione, `Main` è il primo metodo richiamato.  
-  
- In un programma C# può essere presente un solo punto di ingresso. Se sono presenti più classi con un metodo `Main`, è necessario compilare il programma con l'opzione del compilatore **/main** per specificare quale metodo `Main` deve essere usato come punto di ingresso. Per altre informazioni, vedere [/main (Opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).  
-  
- [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]  
-  
-## <a name="overview"></a>Panoramica  
-  
--   Il metodo `Main` è il punto di ingresso di un programma con estensione exe, ovvero il punto in cui il controllo del programma inizia e termina.  
-  
--   `Main` viene dichiarato in una classe o in un tipo struct. `Main` deve essere impostato su [static](../../../csharp/language-reference/keywords/static.md) e non su [public](../../../csharp/language-reference/keywords/public.md). Nell'esempio precedente riceve l'accesso predefinito di [private](../../../csharp/language-reference/keywords/private.md). Non è necessario che la classe o il tipo struct che lo contiene sia statico.  
-  
--   `Main` può avere un tipo restituito `void` o `int`.  
-  
--   Il metodo `Main` può essere dichiarato con o senza un parametro `string[]` contenente argomenti della riga di comando. Quando si usa [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] per creare applicazioni Windows Form, è possibile aggiungere il parametro manualmente o usare la classe <xref:System.Environment> per ottenere gli argomenti della riga di comando. I parametri vengono letti come argomenti della riga di comando a indice zero. A differenza di quanto avviene in C e C++, il nome del programma non viene considerato il primo argomento della riga di comando.  
-  
-## <a name="in-this-section"></a>Contenuto della sezione  
-  
--   [Argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
-  
--   [Procedura: Visualizzare gli argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-  
--   [Procedura: Accedere agli argomenti della riga di comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
-  
--   [Valori restituiti da Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
-  
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Vedere anche  
- [Compilazione dalla riga di comando con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Contenuto di un programma C#](../../../csharp/programming-guide/inside-a-program/index.md)   
- [\<Applicazioni di esempio di C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+
+Il metodo `Main` è il punto di ingresso di un'applicazione C#. Le librerie e i servizi non richiedono un metodo `Main` come punto di ingresso. All'avvio dell'applicazione, `Main` è il primo metodo richiamato.
+
+ In un programma C# può essere presente un solo punto di ingresso. Se sono presenti più classi con un metodo `Main`, è necessario compilare il programma con l'opzione del compilatore **/main** per specificare quale metodo `Main` deve essere usato come punto di ingresso. Per altre informazioni, vedere [/main (Opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).
+
+ [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]
+
+## <a name="overview"></a>Panoramica
+
+- Il metodo `Main` è il punto di ingresso di un programma eseguibile, ovvero il punto in cui il controllo del programma inizia e termina.
+- `Main` viene dichiarato in una classe o in un tipo struct. `Main` deve essere [static](../../../csharp/language-reference/keywords/static.md) e non [public](../../../csharp/language-reference/keywords/public.md). Nell'esempio precedente riceve l'accesso predefinito di [private](../../../csharp/language-reference/keywords/private.md). Non è necessario che la classe o il tipo struct che lo contiene sia statico.
+- Il tipo restituito da `Main` può essere `void`, `int` o, a partire da C# 7.1, `Task` o `Task<int>`.
+- Se e solo se `Main` restituisce `Task` o `Task<int>`, la dichiarazione di `Main` può includere il modificatore [`async`](../../language-reference/keywords/async.md). Si noti che questo esclude specificamente un metodo `async void Main`.
+- Il metodo `Main` può essere dichiarato con o senza un parametro `string[]` contenente argomenti della riga di comando. Quando si usa [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] per creare applicazioni Windows, è possibile aggiungere il parametro manualmente o usare la classe <xref:System.Environment> per ottenere gli argomenti della riga di comando. I parametri vengono letti come argomenti della riga di comando a indice zero. A differenza di quanto avviene in C e C++, il nome del programma non viene considerato il primo argomento della riga di comando.
+
+L'aggiunta dei tipi restituiti `async`, `Task` e `Task<int>` semplifica il codice del programma quando è necessario avviare le applicazioni console e per operazioni asincrone `await` in `Main`.
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Vedere anche
+[Compilazione dalla riga di comando con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+[Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+[Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
+[Contenuto di un programma C#](../../../csharp/programming-guide/inside-a-program/index.md)
 

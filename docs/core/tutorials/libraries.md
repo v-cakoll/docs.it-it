@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2d95d281655c33927030666f101570da2d3e42ca
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: c0525462ac5efaa8d96ac2bf4c12a823ef40df31
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -50,7 +50,7 @@ In questo articolo è presente una tabella in cui le diverse versioni di .NET St
 
 Ecco cosa significa questa tabella ai fini della creazione di una libreria:
 
-La versione di .NET Standard selezionata sarà un compromesso tra l'accesso alle API più recenti e la possibilità di definire come destinazione più piattaforme .NET e versioni di .NET Framework. Per controllare l'intervallo di piattaforme e versioni definibili come destinazione selezionare una versione di `netstandardX.X` (dove `X.X` è un numero di versione) e aggiungerla al file di progetto (`.csproj` o `.fsproj`).
+La versione di .NET Standard selezionata sarà un compromesso tra l'accesso alle API più recenti e la possibilità di definire come destinazione più implementazioni di .NET e versioni di .NET Standard. Per controllare l'intervallo di piattaforme e versioni definibili come destinazione selezionare una versione di `netstandardX.X` (dove `X.X` è un numero di versione) e aggiungerla al file di progetto (`.csproj` o `.fsproj`).
 
 Quando si definisce .NET Standard come destinazione sono disponibili tre opzioni principali, a seconda delle esigenze.
 
