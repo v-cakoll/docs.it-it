@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7cce50df0862a93c8ce144cd30965fb5b5705ed
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -32,10 +32,10 @@ In questo articolo si presuppone che:
 È anche consigliabile avere familiarità con il contenuto degli argomenti seguenti:
 
 [.NET Standard](~/docs/standard/net-standard.md)   
-Questo argomento descrive la specifica formale delle API .NET che devono essere disponibili in tutti i runtime .NET.
+Questo argomento descrive la specifica formale delle API .NET che devono essere disponibili in tutte le implementazioni di .NET.
 
 [Pacchetti, metapacchetti e framework](~/docs/core/packages.md)   
-Questo articolo descrive le modalità di definizione e uso dei pacchetti in .NET Core e come i pacchetti supportano l'esecuzione del codice in più runtime .NET.
+Questo articolo descrive le modalità di definizione e uso dei pacchetti in .NET Core e come i pacchetti supportano l'esecuzione del codice in più implementazioni di .NET.
 
 [Sviluppo di librerie con strumenti multipiattaforma](~/docs/core/tutorials/libraries.md)   
 Questo argomento spiega come scrivere librerie per .NET usando gli strumenti dell'interfaccia della riga di comando multipiattaforma.

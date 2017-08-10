@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 283b9405000cba328c348fada81c70683b700a8b
+ms.translationtype: HT
+ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
+ms.openlocfilehash: 8e0fd8db2810c36358a7bcf94f4bc5e7d2aa399e
 ms.contentlocale: it-it
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -33,7 +33,7 @@ Installare [Microsoft Visual Studio 2017](https://www.visualstudio.com/) con il 
 
 Un'attività di configurazione necessaria è l'impostazione di **[Shared Drives](https://docs.docker.com/docker-for-windows/#shared-drives)** (Unità condivise) in Docker for Windows. Questa impostazione è necessaria per il mapping dei volumi e il supporto del debug.
 
-Fare clic con il pulsante destro del mouse sull'icona Docker sulla barra delle applicazioni, scegliere Settings (Impostazioni) e quindi selezionare Shared Drives (Unità condivise).
+Fare clic con il pulsante destro del mouse sull'icona di Docker sulla barra delle applicazioni, scegliere **Settings** (Impostazioni) e quindi selezionare **Shared Drives** (Unità condivise). Selezionare l'unità in cui Docker archivierà i file e applicherà le modifiche.
 
 ![Shared Drives (Unità condivise)](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png)
 
@@ -48,6 +48,8 @@ Menu Progetto
 Menu di scelta rapida Progetto
 
 ![Fare clic con il pulsante destro del mouse su Add Docker Support (Aggiungi supporto Docker)](./media/visual-studio-tools-for-docker/right-click-add-docker-support.png)
+
+Quando si aggiunge il supporto di Docker al progetto, è possibile scegliere i contenitori Windows o Linux. L'host Docker deve eseguire lo stesso tipo di contenitore. Se è necessario modificare il tipo di contenitore nell'istanza di Docker in esecuzione, fare clic con il pulsante destro del mouse sull'icona di **Docker** sulla barra delle applicazioni e scegliere **Switch to Windows containers** (Passa ai contenitori Windows) o **Switch to Linux containers** (Passa ai contenitori Linux). 
 
 Al progetto verranno aggiunti i file seguenti:
 
