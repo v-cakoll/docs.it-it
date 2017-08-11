@@ -1,10 +1,7 @@
 ---
 title: Concetti di programmazione (Visual Basic)
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -20,10 +17,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 11e93cbb48a0d47dccef8ceb2e501ca5cf4d18f4
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: 96c9ec0a5bd9f6b0b2a460e8be15b4f936432016
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="programming-concepts-visual-basic"></a>Concetti di programmazione (Visual Basic)
@@ -38,12 +35,12 @@ Questa sezione illustra i concetti della programmazione in linguaggio Visual Bas
 |[Panoramica degli attributi (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Viene spiegato come offrire informazioni aggiuntive su elementi di programmazione quali tipi, campi, metodi e proprietà usando gli attributi.|  
 |[Informazioni sul chiamante (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Viene descritto come ottenere informazioni relative al chiamante di un metodo. Queste informazioni includono il percorso del file e il numero di righe del codice sorgente, nonché il nome del chiamante.|  
 |[Raccolte (Visual Basic)](../../../visual-basic/programming-guide/concepts/collections.md)|Vengono descritti alcuni dei tipi di raccolte disponibili in .NET Framework. Viene mostrato come usare raccolte semplici e raccolte di coppie chiave/valore.|  
-|[Covarianza e controvarianza (Visual Basic)](../../../visual-basic/programming-guide/concepts/covariance-contravariance/covariance-and-contravariance.md)|Viene mostrato come abilitare la conversione implicita di parametri di tipo generico in interfacce e delegati.|  
+|[Covarianza e controvarianza (Visual Basic)](../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)|Viene mostrato come abilitare la conversione implicita di parametri di tipo generico in interfacce e delegati.|  
 |[Alberi delle espressioni (Visual Basic)](../../../visual-basic/programming-guide/concepts/expression-trees/index.md)|Viene illustrato come è possibile usare gli alberi delle espressioni per abilitare la modifica dinamica del codice eseguibile.|  
 |[Iteratori [Visual Basic]](../../../visual-basic/programming-guide/concepts/iterators.md)|Vengono descritti gli iteratori, che consentono di scorrere le raccolte e restituire gli elementi uno alla volta.|  
 |[LINQ (Language-Integrated Query) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)|Vengono discusse le potenti funzionalità di query della sintassi del linguaggio Visual Basic e viene descritto il modello per l'esecuzione di query nei database relazionali, nei documenti XML, nei set di dati e nelle raccolte in memoria.|  
 |[Programmazione orientata a oggetti (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|Vengono descritti concetti comuni della programmazione orientata a oggetti, inclusi incapsulamento, ereditarietà e polimorfismo.|  
-|[Reflection (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Viene illustrato in che modo è possibile usare la reflection per creare dinamicamente un'istanza di un tipo, associare il tipo a un oggetto esistente oppure ottenere il tipo da un oggetto esistente e richiamarne i metodi o accedere ai relativi campi e proprietà.|  
+|[Reflection (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Viene illustrato in che modo è possibile usare la reflection per creare dinamicamente un'istanza di un tipo, associare il tipo a un oggetto esistente oppure ottenere il tipo da un oggetto esistente e richiamarne i metodi o accedere ai relativi campi e proprietà.|
 |[Serializzazione (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|Vengono descritti i concetti chiave della serializzazione binaria, XML e SOAP.|  
 |[Threading (Visual Basic)](../../../visual-basic/programming-guide/concepts/threading/index.md)|Viene offerta una panoramica del modello di threading di .NET e viene illustrato come scrivere codice in grado di eseguire più attività contemporaneamente per migliorare le prestazioni e la velocità di risposta delle applicazioni.|  
   
@@ -51,5 +48,5 @@ Questa sezione illustra i concetti della programmazione in linguaggio Visual Bas
   
 |||  
 |---|---|  
-|[Suggerimenti sulle prestazioni](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) | Vengono discusse diverse regole base che consentono di migliorare le prestazioni dell'applicazione.|
+|[Suggerimenti sulle prestazioni](../../../framework/performance/performance-tips.md) | Vengono discusse diverse regole base che consentono di migliorare le prestazioni dell'applicazione.|
 
