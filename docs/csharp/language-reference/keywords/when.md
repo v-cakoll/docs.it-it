@@ -62,7 +62,7 @@ Nell'esempio seguente viene usata la parola chiave `when` per eseguire in modo c
 A partire da 7 non è più necessario che le etichette `case` siano reciprocamente esclusive e l'ordine in cui le etichette `case` appaiono in un'istruzione `switch` può determinare quale blocco switch eseguire. La parola chiave `when` può essere usata per specificare una condizione di filtro che fa sì che l'etichetta case associata sia vera solo se è vera anche la condizione di filtro. La sintassi è la seguente:
 
 ```csharp
-case (expr) where (when-condition):
+case (expr) when (when-condition):
 ```
 dove *expr* è un modello costante o un modello del tipo che viene confrontato con l'espressione di corrispondenza e *when-condition* è qualsiasi espressione booleana. 
 
