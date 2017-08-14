@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bbb524e50d74207227420d073afd5758d3d5aaa7
+ms.translationtype: HT
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 659a3366b00d6abe6598c31774d008c6b8f400fd
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -58,7 +58,7 @@ Il compilatore usa solitamente l'inferenza del tipo per determinare i tipi di pa
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#3)]
 
-Si noti che nell'esempio precedente il corpo di un'espressione lambda dell'espressione può essere costituito da una chiamata al metodo. Se si creano tuttavia alberi delle espressioni valutati al di fuori di .NET Framework, ad esempio in SQL Server o in Entity Framework, non è consigliabile usare chiamate al metodo nelle espressioni lambda. I metodi non avranno infatti alcun significato all'esterno del contesto del runtime .NET. Se si sceglie comunque di usare le chiamate al metodo, testarle attentamente per assicurarsi che possano essere risolte correttamente.
+Si noti che nell'esempio precedente il corpo di un'espressione lambda dell'espressione può essere costituito da una chiamata al metodo. Se tuttavia si creano alberi delle espressioni valutati al di fuori di .NET Framework, ad esempio in SQL Server o in Entity Framework, non è consigliabile usare chiamate al metodo nelle espressioni lambda. I metodi non avranno infatti alcun significato fuori dal contesto dell'implementazione .NET. Se si sceglie comunque di usare le chiamate al metodo, testarle attentamente per assicurarsi che possano essere risolte correttamente.
 
 ## <a name="statement-lambdas"></a>Espressioni lambda dell'istruzione ##
 
