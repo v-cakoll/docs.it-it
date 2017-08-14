@@ -1,0 +1,2 @@
+> [!WARNING]
+> La serializzazione binaria può rappresentare un pericolo. Non deserializzare mai dati da un'origine non attendibile e non eseguire il round trip per i dati serializzati verso sistemi non sotto il proprio controllo.
