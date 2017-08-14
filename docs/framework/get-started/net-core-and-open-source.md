@@ -15,10 +15,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b61533260a86f10beda0b6652771c858828ec62c
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: db4689ee58b48fad2e3696e5e64aa187710f4868
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="net-core-and-open-source"></a>Componenti di base e open-source di .NET
@@ -26,7 +26,7 @@ Questo argomento fornisce una breve descrizione di .NET Core e illustra come tro
   
 <a name="BKMK_WhatisNETCore"></a>   
 ## <a name="what-is-net-core"></a>Informazioni su .NET Core  
- .NET Core è un'implementazione generica, modulare, multi-piattaforma e open source di .NET Platform. Contiene molte delle stesse API di .NET Framework (ma .NET Core è un set più piccolo) e include componenti di runtime, del framework, del compilatore e degli strumenti in grado di supportare un'ampia gamma di sistemi operativi e chip di destinazione. L'implementazione di .NET Core è basata principalmente sui carichi di lavoro di ASP.NET Core, ma anche sulla necessità e la volontà di avere un runtime più moderno. Può essere usata in scenari di dispositivi, cloud e IoT/incorporati.  
+ .NET Core è un'implementazione generica, modulare, multi-piattaforma e open source dello standard .NET. Contiene molte delle stesse API di .NET Framework (ma .NET Core è un set più piccolo) e include componenti runtime, framework, compilatore e strumenti che supportano un'ampia gamma di sistemi operativi e chip di destinazione. L'implementazione di .NET Core nasce dall'esigenza di gestire i carichi di lavoro di ASP.NET Core, ma anche dalla necessità di un'implementazione più moderna. Può essere usata in scenari di dispositivi, cloud e IoT/incorporati.  
   
  Per iniziare a usare .NET Core, visitare la [home page di .NET Core](https://www.microsoft.com/net/core).  
   
