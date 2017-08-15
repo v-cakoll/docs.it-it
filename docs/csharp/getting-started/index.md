@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
-ms.openlocfilehash: 923875aa48fb78c63e8e3e9e17095ff424c8e49d
+ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
+ms.openlocfilehash: 81132887a1abdc79b87e7095350f1e66368bce33
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="get-started-with-c"></a>Introduzione a C# #
@@ -23,15 +23,15 @@ Questa sezione include brevi esercitazioni semplici che illustrano come creare v
 
 Sono disponibili gli argomenti seguenti:
 
-* [Creazione di un'applicazione C# Hello World con .NET Core in Visual Studio 2017](with-visual-studio.md)
+* [Creazione di un'applicazione C# Hello World con .NET Core in Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio 2017, la versione più recente di Visual Studio, è un ambiente di sviluppo integrato per Windows che supporta attività di scrittura del codice, compilazione, esecuzione, debug, profilatura e pubblicazione delle applicazioni.
 
-   Le informazioni in questo argomento consentono di creare ed eseguire una semplice applicazione Hello World e quindi modificarla per ottenere un'applicazione Hello World leggermente più interattiva. Dopo aver completato la creazione e l'esecuzione dell'applicazione, verranno presentate anche le procedure per [eseguirne il debug](debugging-with-visual-studio.md) e [pubblicarla](publishing-with-visual-studio.md) in modo che possa essere eseguita su qualsiasi piattaforma supportata da .NET Core.
+   Le informazioni in questo argomento consentono di creare ed eseguire una semplice applicazione Hello World e quindi modificarla per ottenere un'applicazione Hello World leggermente più interattiva. Dopo aver completato la creazione e l'esecuzione dell'applicazione, verranno presentate anche le procedure per [eseguirne il debug](../../core/tutorials/debugging-with-visual-studio.md) e [pubblicarla](../../core/tutorials/publishing-with-visual-studio.md) in modo che possa essere eseguita su qualsiasi piattaforma supportata da .NET Core.
 
-* [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md) (Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017)
+* [Building a class library with C# and .NET Core in Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md) (Creazione di una libreria di classi con C# e .NET Core in Visual Studio 2017)
 
-   Una libreria di classi consente di definire i tipi e i membri dei tipi che possono essere chiamati da un'altra applicazione. Questo argomento illustra come creare una libreria di classi con un solo metodo che determina se una stringa inizia con un carattere maiuscolo. Dopo aver completato la compilazione della libreria, è possibile sviluppare un [unit test](testing-library-with-visual-studio.md) per assicurarsi che funzioni come previsto, quindi è possibile renderla disponibile per [applicazioni che vogliono usarla](consuming-library-with-visual-studio.md).
+   Una libreria di classi consente di definire i tipi e i membri dei tipi che possono essere chiamati da un'altra applicazione. Questo argomento illustra come creare una libreria di classi con un solo metodo che determina se una stringa inizia con un carattere maiuscolo. Dopo aver completato la compilazione della libreria, è possibile sviluppare un [unit test](../../core/tutorials/testing-library-with-visual-studio.md) per assicurarsi che funzioni come previsto, quindi è possibile renderla disponibile per [applicazioni che vogliono usarla](../../core/tutorials/consuming-library-with-visual-studio.md).
 
 - [Introduzione a C# e Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 
