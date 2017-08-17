@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire una query su un ArrayList con LINQ (C#) | Microsoft Docs'
+title: 'Procedura: Eseguire una query su un ArrayList con LINQ (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,27 +19,27 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 09489e2dabd34da0446a623e91cd85de35c3c70b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5aece8a49762898f4ea3af41a9290daa22bfe96d
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Procedura: Eseguire una query su un ArrayList con LINQ (C#)
-Quando si usa LINQ per eseguire una query su raccolte <xref:System.Collections.IEnumerable> non generiche, come ad esempio <xref:System.Collections.ArrayList>, è necessario dichiarare in modo esplicito il tipo della variabile di intervallo in base al tipo specifico di oggetti nella raccolta. Ad esempio, se si ha un <xref:System.Collections.ArrayList> di oggetti `Student`, la [clausola from](../../../../csharp/language-reference/keywords/from-clause.md) dovrebbe essere così:  
+Quando si usa LINQ per eseguire una query su raccolte <xref:System.Collections.IEnumerable> non generiche, ad esempio <xref:System.Collections.ArrayList>, è necessario dichiarare in modo esplicito il tipo della variabile di intervallo in base al tipo specifico di oggetti nella raccolta. Se ad esempio si ha un elemento <xref:System.Collections.ArrayList> di oggetti `Student`, la [clausola From](../../../../csharp/language-reference/keywords/from-clause.md) deve essere simile alla seguente:  
   
 ```  
 var query = from Student s in arrList  
 ...  
 ```  
   
- Specificando il tipo della variabile di intervallo, si esegue il cast di ogni elemento dell'<xref:System.Collections.ArrayList> in `Student`.  
+ Specificando il tipo della variabile di intervallo, si esegue il cast di ogni elemento di <xref:System.Collections.ArrayList> in `Student`.  
   
- L'uso di una variabile di intervallo tipizzata in modo esplicito in un'espressione di query è equivalente alla chiamata del metodo <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> genera un'eccezione se non è possibile eseguire il cast specificato. <xref:System.Linq.Enumerable.Cast%2A> e <xref:System.Linq.Enumerable.OfType%2A> sono i due metodi di operatore query standard che operano su tipi <xref:System.Collections.IEnumerable> non generici. Per altre informazioni, vedere [Relazioni tra i tipi nelle operazioni di query LINQ](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
+ L'uso di una variabile di intervallo tipizzata in modo esplicito in un'espressione di query è equivalente alla chiamata del metodo <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> genera un'eccezione se non è possibile eseguire il cast specificato. <xref:System.Linq.Enumerable.Cast%2A> e <xref:System.Linq.Enumerable.OfType%2A> sono i due metodi dell'operatore query standard che operano sui tipi <xref:System.Collections.IEnumerable> non generici. Per altre informazioni, vedere [Relazioni tra i tipi nelle operazioni di query LINQ](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una semplice query su un <xref:System.Collections.ArrayList>. Si noti che in questo esempio vengono usati gli inizializzatori di oggetto quando il codice chiama il metodo <xref:System.Collections.ArrayList.Add%2A>, ma questo non è un requisito.  
+ L'esempio seguente mostra una query semplice su un oggetto <xref:System.Collections.ArrayList>. Si noti che questo esempio usa gli inizializzatori di oggetto quando il codice chiama il metodo <xref:System.Collections.ArrayList.Add%2A>, anche se non si tratta di un requisito.  
   
 ```csharp  
 using System;  
