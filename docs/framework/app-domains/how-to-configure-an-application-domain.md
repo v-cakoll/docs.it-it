@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Configurare un dominio dell&quot;applicazione | Microsoft Docs'
+title: 'Procedura: configurare un dominio applicazione'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 22da4e19b3103892f42e5afee02c6b3ffa2d0581
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4f8c91a11deac63e2ad44628a609ed4ca6501e84
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-configure-an-application-domain"></a>Procedura: configurare un dominio applicazione
@@ -40,3 +40,4 @@ La classe <xref:System.AppDomainSetup> consente di specificare Common Language R
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione con i domini applicazione](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)
+

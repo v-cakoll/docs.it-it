@@ -1,5 +1,5 @@
 ---
-title: SOS.dll (estensione del debugger SOS) | Microsoft Docs
+title: SOS.dll (estensione del debugger SOS)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 55
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 98109bdd2261fce22bdb00679d0822223363c2be
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 41338111c92cb4af7f175c00c8ec87e48dc9c228
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (estensione del debugger SOS)
@@ -222,3 +222,4 @@ L'estensione del debugger SOS (SOS.dll) facilita l'esecuzione del debug di progr
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti](../../../docs/framework/tools/index.md)   
  [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

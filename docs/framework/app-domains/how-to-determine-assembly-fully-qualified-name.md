@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Determinare il nome completo di un assembly | Microsoft Docs'
+title: 'Procedura: Determinare il nome completo di un assembly'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 28fb4d677be7a9387863798dc34b091abc24efa0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 673c836ea761c24e2627e97ab3bcb5dd3c35d141
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Procedura: Determinare il nome completo di un assembly
@@ -52,3 +52,4 @@ Per individuare il nome completo di un assembly nella Global Assembly Cache, usa
  [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)   
  [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

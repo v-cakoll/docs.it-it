@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Compilare un assembly su singolo file | Microsoft Docs'
+title: 'Procedura: compilare un assembly su singolo file'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,18 +22,18 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0ddf25f1d588c0972381a54ee0da4b35e3c0dc33
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a584e6ded79489e5e33b07d02dde618541c6cc8
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Procedura: compilare un assembly su singolo file
 Un assembly su singolo file, che rappresenta il tipo di assembly più semplice, contiene le informazioni e l'implementazione relative al tipo, oltre al [manifesto dell'assembly](../../../docs/framework/app-domains/assembly-manifest.md). Per creare un assembly su singolo file, è possibile usare i compilatori della riga di comando o [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]. Per impostazione predefinita, il file di assembly creato dal compilatore ha l'estensione exe.  
   
 > [!NOTE]
-> È possibile usare  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] per C# e Visual Basic solo per la creazione di assembly su singolo file. Per creare assembly su più file, è necessario usare i compilatori della riga di comando o [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] per Visual C++.  
+>  È possibile usare [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] per C# e Visual Basic solo per la creazione di assembly su singolo file. Per creare assembly su più file, è necessario usare i compilatori della riga di comando o [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] per Visual C++.  
   
  Le procedure seguenti illustrano come creare assembly su singolo file usando i compilatori della riga di comando.  
   
@@ -99,3 +99,4 @@ vbc /out:myCodeLibrary.dll /t:library myCode.vb
  [Multifile Assemblies](../../../docs/framework/app-domains/multifile-assemblies.md)  (Assembly su più file)  
  [Procedura: Compilare un assembly su più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

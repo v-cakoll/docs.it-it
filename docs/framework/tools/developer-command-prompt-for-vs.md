@@ -1,5 +1,5 @@
 ---
-title: Prompt dei comandi per gli sviluppatori per Visual Studio | Documenti di Microsoft
+title: Prompt dei comandi per gli sviluppatori per Visual Studio
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 45
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 6138fab11f30fdee646768ce807fbdba57fcabb3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0287c3f250a57f7a685191702be3ad5cc28fbec6
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Prompt dei comandi per gli sviluppatori per Visual Studio
@@ -104,3 +104,4 @@ Il prompt dei comandi per gli sviluppatori per Visual Studio imposta automaticam
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti](../../../docs/framework/tools/index.md)   
  [Gestione di strumenti esterni](/visualstudio/ide/managing-external-tools)
+

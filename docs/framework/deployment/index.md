@@ -1,5 +1,5 @@
 ---
-title: Distribuzione di .NET Framework e delle applicazioni | Microsoft Docs
+title: Distribuzione di .NET Framework e delle applicazioni
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3fc00af210ae777e2749767c6426405c87c9c097
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Distribuzione di .NET Framework e delle applicazioni
@@ -175,7 +175,7 @@ Questo articolo consente di iniziare a distribuire .NET Framework con l'applicaz
 |[Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)|Descrive il gestore di riavvio, che impedisce automaticamente il riavvio quando possibile, e viene illustrato come le applicazioni che installano .NET Framework possano usufruirne.|  
 |[Guida alla distribuzione per amministratori](../../../docs/framework/deployment/guide-for-administrators.md)|Illustra le modalità in cui un amministratore di sistema può distribuire .NET Framework e le relative dipendenze di sistema attraverso una rete usando System Center Configuration Manager (SCCM).|  
 |[Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)|Illustra come gli sviluppatori possono installare .NET Framework nei computer dei rispettivi utenti con le rispettive applicazioni.|  
-|[Distribuzione di applicazioni, servizi e componenti](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components)|Illustra le opzioni di distribuzione di Visual Studio, incluse le istruzioni per la pubblicazione di un'applicazione usando le tecnologie ClickOnce e Windows Installer.| 
+|[Distribuzione di applicazioni, servizi e componenti](/visualstudio/deployment/deploying-applications-services-and-components)|Illustra le opzioni di distribuzione di Visual Studio, incluse le istruzioni per la pubblicazione di un'applicazione usando le tecnologie ClickOnce e Windows Installer.| 
 |[Pubblicazione di applicazioni ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Descrive come creare il pacchetto di un'applicazione Windows Forms e distribuirla con ClickOnce nei computer client di una rete.|  
 |[Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Descrive il modello hub e spoke usato da .NET Framework per creare pacchetti e distribuire le risorse. Vengono illustrate le convenzioni di denominazione, i processi di fallback e le possibilità alternative di creazione di pacchetti delle risorse.|  
 |[Distribuzione di una applicazione di interoperabilità](../../../docs/framework/interop/deploying-an-interop-application.md)|Illustra come fornire e installare applicazioni di interoperabilità, che in genere includono un assembly client .NET Framework, uno o più assembly di interoperabilità che rappresentano librerie dei tipi COM distinte e uno o più componenti COM registrati.|  

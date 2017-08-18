@@ -1,5 +1,5 @@
 ---
-title: Guida alla distribuzione di .NET Framework per sviluppatori | Microsoft Docs
+title: Guida alla distribuzione di .NET Framework per sviluppatori
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 108
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 5ceb8014ce3b6cea08e8e6c8c347ccb1658ee0ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 043338d73e67ee36d2888b748402d824ee6d5daf
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guida alla distribuzione di .NET Framework per sviluppatori
@@ -76,8 +76,8 @@ Per i collegamenti ai download, vedere la sezione [Pacchetti ridistribuibili](#r
 
 |Strategia di distribuzione per l'applicazione|Metodi di distribuzione disponibili|Pacchetto ridistribuibile di .NET Framework da usare|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|Installazione dal Web|- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Programma di installazione Web](#redistributable-packages)|
-|Installazione da disco|- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Programma di installazione offline](#redistributable-packages)|
+|Installazione dal Web|- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Web installer](#redistributable-packages)|
+|Installazione da disco|- [InstallShield](#installshield-deployment)<br />- [Set di strumenti WiX](#wix)<br />- [Installazione manuale](#installing_manually)|[Offline installer](#redistributable-packages)|
 |Installazione da una rete locale (per applicazioni aziendali)|- [ClickOnce](#clickonce-deployment)|[Programma di installazione Web](#redistributable-packages) (vedere [ClickOnce](#clickonce-deployment) per le restrizioni) o [programma di installazione offline](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>Pacchetti ridistribuibili
@@ -92,7 +92,7 @@ Per i collegamenti ai download, vedere la sezione [Pacchetti ridistribuibili](#r
 |Metodo di distribuzione|Supporta tutti i metodi:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Installazione manuale](#installing_manually)<br />- [Impostazione personalizzata (concatenamento)](#chaining)|Supporta tutti i metodi:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Installazione manuale](#installing_manually)<br />- [Impostazione personalizzata (concatenamento)](#chaining)|
 |Percorso di download per la distribuzione ClickOnce|Area download Microsoft:<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Proprio server o Area download Microsoft:<br /><br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
- \* Il programma di installazione offline è di dimensioni maggiori perché contiene i componenti per tutte le piattaforme di destinazione. Al termine dell'installazione, il sistema operativo Windows memorizza nella cache solo il programma di installazione usato. Se il programma di installazione offline viene eliminato dopo l'installazione, lo spazio su disco usato equivale a quello usato dal programma di installazione Web. Se lo strumento usato per creare il programma di installazione dell'app, ad esempio [InstallShield](#installshield-deployment), fornisce una cartella per i file di installazione che viene rimossa dopo l'installazione, il programma di installazione offline può essere eliminato automaticamente inserendolo nella cartella di installazione.
+ \* Il programma di installazione offline è di dimensioni maggiori perché contiene i componenti per tutte le piattaforme di destinazione. Al termine dell'installazione, il sistema operativo Windows memorizza nella cache solo il programma di installazione usato. Se il programma di installazione offline viene eliminato dopo l'installazione, lo spazio su disco usato equivale a quello usato dal programma di installazione Web. Se lo strumento usato, ad esempio [InstallShield](#installshield-deployment), per creare il programma di installazione dell'applicazione fornisce una cartella per i file di installazione che viene rimossa dopo l'installazione, il programma di installazione offline può essere eliminato automaticamente inserendolo nella cartella di installazione.
 
  ** Se si usa il programma di installazione Web con l'installazione personalizzata, è possibile usare le impostazioni predefinite della lingua basate sull'impostazione dell'interfaccia utente multilingue (MUI) oppure specificare un diverso Language Pack usando l'opzione `/LCID` sulla riga di comando. Per alcuni esempi, vedere la sezione [Concatenamento usando l'interfaccia utente predefinita di .NET Framework](#chaining_default) .
 
@@ -103,7 +103,7 @@ Per i collegamenti ai download, vedere la sezione [Pacchetti ridistribuibili](#r
 
     - usare la [distribuzione ClickOnce](#clickonce-deployment) (disponibile in Visual Studio)
 
-    - creare un [progetto InstallShield](#installshield-deployment) (disponibile in Visual Studio)
+    - Creare un [progetto InstallShield](#installshield-deployment) (disponibile in Visual Studio)
 
     - usare il [set di strumenti WiX (Windows Installer XML)](#wix)
 
@@ -143,7 +143,7 @@ Se si usa ClickOnce, InstallShield o WiX per distribuire l'applicazione, è poss
 
 8.  Nella finestra di dialogo **Pagine delle proprietà** scegliere **OK**.
 
-### <a name="installshield-deployment"></a>Distribuzione con InstallShield
+### <a name="installshield-deployment"></a>Distribuzione InstallShield
  In Visual Studio scegliere la distribuzione InstallShield e aggiungere una dipendenza da .NET Framework:
 
 1.  Nella barra dei menu di Visual Studio scegliere **File**, **Nuovo**, **Progetto**.
@@ -161,7 +161,7 @@ Se si usa ClickOnce, InstallShield o WiX per distribuire l'applicazione, è poss
 7.  Aprire il menu di scelta rapida per il progetto di installazione e scegliere **Compila**.
 
 <a name="wix"></a> 
-### <a name="windows-installer-xml-wix-deployment"></a>Distribuzione con Windows Installer XML (WiX)
+### <a name="windows-installer-xml-wix-deployment"></a>Distribuzione di Windows Installer XML (WiX)
  Il set di strumenti Windows Installer XML (WiX) compila i pacchetti di installazione di Windows dal codice sorgente XML. WiX supporta un ambiente della riga di comando che può essere integrato nei processi di compilazione per compilare pacchetti di installazione MSM e MSI. Con l'uso di WiX è possibile [specificare .NET Framework come prerequisito](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)o [creare un concatenatore](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) per controllare completamente l'esperienza di distribuzione di .NET Framework. Per altre informazioni su WiX, vedere il sito Web del [set di strumenti Windows Installer XML (WiX)](http://wixtoolset.org/) .
 
 <a name="installing_manually"></a> 
@@ -169,7 +169,7 @@ Se si usa ClickOnce, InstallShield o WiX per distribuire l'applicazione, è poss
  In alcune situazioni l'installazione automatica di .NET Framework con l'applicazione potrebbe risultare poco pratica. In tali casi, è possibile l'installazione manuale di .NET Framework da parte degli utenti. Il pacchetto ridistribuibile è disponibile in [due pacchetti](#redistributable-packages). Quindi, nel processo di installazione è necessario fornire istruzioni sulle modalità con cui gli utenti dovranno individuare e installare .NET Framework.
 
 <a name="chaining"></a> 
-## <a name="chaining-the-net-framework-installation-to-your-apps-setup"></a>Concatenamento dell'installazione di .NET Framework all'installazione dell'app
+## <a name="chaining-the-net-framework-installation-to-your-apps-setup"></a>Concatenare l'installazione di .NET Framework all'installazione dell'applicazione
  Se si crea un programma di installazione personalizzato per l'applicazione, è possibile concatenare (includere) il processo di installazione di .NET Framework. nel processo di installazione dell'applicazione. Il concatenamento fornisce due opzioni dell'interfaccia utente per l'installazione di .NET Framework:
 
 - usare l'interfaccia utente predefinita fornita dal programma di installazione di .NET Framework.
@@ -183,7 +183,7 @@ Se si usa ClickOnce, InstallShield o WiX per distribuire l'applicazione, è poss
 - Se si usa il programma di installazione offline, è possibile includere il set completo dei pacchetti di installazione di .NET Framework con i supporti di ridistribuzione in modo che gli utenti non debbano scaricare dal Web eventuali file aggiuntivi durante l'installazione.
 
 <a name="chaining_default"></a> 
-### <a name="chaining-by-using-the-default-net-framework-ui"></a>Concatenamento tramite l'interfaccia utente predefinita di .NET Framework
+### <a name="chaining-by-using-the-default-net-framework-ui"></a>Concatenamento usando l'interfaccia utente predefinita di .NET Framework
  Per concatenare automaticamente il processo di installazione di .NET Framework e fare in modo che il programma di installazione di .NET Framework fornisca l'interfaccia utente, aggiungere il comando seguente al programma di installazione:
 
 ```
@@ -219,7 +219,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
  Per un elenco completo di opzioni, vedere la sezione [Opzioni della riga di comando](#command-line-options) .
 
- Per codici restituiti comuni, vedere la sezione [Codici restituiti](#return-codes).
+ Per i codici restituiti comuni, vedere la sezione [Codici restituiti](#return-codes) .
 
 <a name="chaining_custom"></a>
 ### <a name="chaining-by-using-a-custom-ui"></a>Concatenamento tramite un'interfaccia utente personalizzata
@@ -232,7 +232,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
     > [!IMPORTANT]
     > Per determinare se è già installata la versione corretta di .NET Framework, è necessario controllare se è installata la versione di destinazione *o* una versione successiva, non se è installata la versione di destinazione. In altre parole, è necessario valutare se la combinazione di tasti di rilascio che si recupera dal Registro di sistema è maggiore o uguale alla combinazione di tasti di rilascio della versione di destinazione, *non* se è uguale alla combinazione di tasti di rilascio della versione di destinazione.
 
-- [Rilevare](#detecting-the-language-packs) se i Language Pack sono già installati nel computer dell'utente.
+- [Stabilire](#detecting-the-language-packs) se i Language Pack sono già installati nel computer dell'utente.
 
 - Se si vuole controllare la distribuzione, avviare automaticamente il processo di installazione di .NET Framework e tenerne traccia (vedere [How to: Get Progress from the .NET Framework 4.5 Installer](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
 
@@ -298,7 +298,7 @@ Type: DWORD
 > [!IMPORTANT]
 > I Language Pack non contengono i componenti di .NET Framework necessari per eseguire un'applicazione. È necessario installare .NET Framework usando il programma di installazione Web o offline prima di installare un Language Pack.
 
- A partire da [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], i nomi dei pacchetti sono in formato NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe, dove `version` è il numero di versione di .NET Framework, `number` è il numero di un articolo della Microsoft Knowledge Base e `culture` specifica [un paese o un'area geografica](#supported-languages). Un esempio di uno di questi pacchetti è `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`. I nomi di pacchetto sono elencati nella sezione [Pacchetti ridistribuibili](#redistributable-packages) più indietro in questo articolo.
+ A partire da [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], i nomi dei pacchetti sono in formato NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe, dove `version` è il numero di versione di .NET Framework, `number` è il numero di un articolo della Microsoft Knowledge Base e `culture` specifica [un paese o un'area geografica](#supported-languages). Un esempio di uno di questi pacchetti è `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`. I nomi di pacchetto sono elencati nella sezione [Redistributable Packages](#redistributable-packages) precedente di questo articolo.
 
  Per installare un Language Pack con il programma di installazione offline di .NET Framework, è necessario concatenarlo all'installazione dell'applicazione. Per distribuire il programma di installazione offline di [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] con il Language Pack per la lingua giapponese, ad esempio, usare il comando seguente:
 
@@ -308,7 +308,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 
  Non è necessario concatenare i Language Pack se si usa il programma di installazione Web. Verrà installato il Language Pack corrispondente alle impostazioni MUI dell'utente. Se si vuole installare una lingua diversa, è possibile usare l'opzione `/LCID` per specificare un Language Pack.
 
- Per un elenco completo di opzioni della riga di comando, vedere la sezione [Opzioni della riga di comando](#command-line-options).
+ Per un elenco completo di opzioni della riga di comando, vedere la sezione [Opzioni della riga di comando](#command-line-options) .
 
 ### <a name="troubleshooting"></a>Risoluzione dei problemi
 
@@ -355,11 +355,11 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |------------|-----------------|
 |**/CEIPConsent**|Sostituisce il comportamento predefinito e invia un commento anonimo a Microsoft al fine di migliorare le future esperienze di distribuzione. È possibile usare questa opzione solo se il programma di installazione richiede il consenso e se l'utente concede l'autorizzazione a inviare commenti anonimi a Microsoft.|
 |**/chainingpackage** `packageName`|Specifica il nome dell'eseguibile che esegue il concatenamento. Queste informazioni vengono inviate a Microsoft come commento anonimo per contribuire a migliorare le future esperienze di distribuzione.<br /><br /> Se il nome del pacchetto include spazi, usare le virgolette doppie come delimitatori, ad esempio: **/chainingpackage "Lucerne Publishing"**. Per un esempio di un pacchetto di concatenamento, vedere [Ottenere informazioni sullo stato di avanzamento da un pacchetto di installazione](http://go.microsoft.com/fwlink/?LinkId=181926) in MSDN Library.|
-|**/LCID**  `LCID`<br /><br /> dove `LCID` specifica un identificatore delle impostazioni locali (vedere le [lingue supportate](#supported-languages)).|Installa il Language Pack specificato da `LCID` e forza la visualizzazione dell'interfaccia utente in tale lingua, a meno che non sia impostata la modalità non interattiva.<br /><br /> Per il programma di installazione Web, questa opzione concatena-installa il Language Pack dal Web. **Nota:** usare questa opzione solo con il programma di installazione Web.|
+|**/LCID**  `LCID`<br /><br /> dove `LCID` specifica un identificatore delle impostazioni locali (vedere [lingue supportate](#supported-languages)).|Installa il Language Pack specificato da `LCID` e forza la visualizzazione dell'interfaccia utente in tale lingua, a meno che non sia impostata la modalità non interattiva.<br /><br /> Per il programma di installazione Web, questa opzione concatena-installa il Language Pack dal Web. **Nota:** usare questa opzione solo con il programma di installazione Web.|
 |**/log** `file` &#124; `folder`|Specifica il percorso del file di log. Il valore predefinito è la cartella temporanea per il processo e il nome del file predefinito è basato sul pacchetto. Se l'estensione del file è TXT, viene prodotto un log in formato testo. Se si specifica un'altra estensione o nessuna estensione, viene creato un log in formato HTML.|
 |**/msioptions**|Specifica le opzioni da passare per gli elementi MSI e MSP, ad esempio: `/msioptions "PROPERTY1='Value'"`.|
 |**/norestart**|Impedisce il riavvio automatico del programma di installazione. Se si usa questa opzione, l'applicazione di concatenamento deve acquisire il codice restituito e gestire il riavvio (vedere [Recupero di informazioni sullo stato di avanzamento da un pacchetto di installazione](http://go.microsoft.com/fwlink/?LinkId=179606) in MSDN Library).|
-|**/passive**|Imposta la modalità passiva. Visualizza la barra di stato per indicare che l'installazione è in corso, ma non presenta prompt o messaggi di errore all'utente. In questa modalità, se concatenato da un programma di installazione, il pacchetto di concatenamento deve gestire i [codici restituiti](#return-codes).|
+|**/passive**|Imposta la modalità passiva. Visualizza la barra di stato per indicare che l'installazione è in corso, ma non presenta prompt o messaggi di errore all'utente. In questa modalità, se concatenato da un programma di installazione, il pacchetto di concatenamento deve gestire [codici restituiti](#return-codes).|
 |**/pipe**|Crea un canale di comunicazione per consentire a un pacchetto di concatenamento di ottenere lo stato di avanzamento.|
 |**/promptrestart**|Solo modalità passiva, se il programma di installazione richiede un riavvio, viene visualizzato un prompt di richiesta. Questa opzione richiede l'interazione dell'utente se è richiesto un riavvio.|
 |**/q**|Imposta la modalità non interattiva.|
@@ -405,3 +405,4 @@ Nella tabella seguente sono elencati i Language Pack di .NET Framework disponibi
  [Risolvere i problemi relativi alle installazioni e disinstallazioni bloccate di .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)   
  [Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)   
  [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+

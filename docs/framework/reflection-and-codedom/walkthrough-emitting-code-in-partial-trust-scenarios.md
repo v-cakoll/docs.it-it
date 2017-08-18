@@ -1,5 +1,5 @@
 ---
-title: "Procedura dettagliata: Creazione di codice in scenari di attendibilità parziale | Microsoft Docs"
+title: "Procedura dettagliata: creazione di codice in scenari di attendibilità parziale"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,18 +23,18 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 73618a140daa4146f80472872a54884b7032da9a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db8bb0ae8b1ea45bcc3a4034f73b75758ffc35b3
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procedura dettagliata: creazione di codice in scenari di attendibilità parziale
 La reflection emit usa le stesse API in scenari di attendibilità sia parziale che completa, ma alcune funzionalità richiedono autorizzazioni speciali nel codice parzialmente attendibile. Inoltre, la reflection emit include una funzionalità, i metodi dinamici ospitati in modo anonimo, progettata per l'uso in situazioni di attendibilità parziale da parte di assembly trasparenti per la sicurezza.  
   
 > [!NOTE]
->  Prima di [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)], la creazione di codice richiedeva <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=fullName>. Questa autorizzazione è inclusa per impostazione predefinita nei set di autorizzazioni denominati `FullTrust` e `Intranet`, ma non nel set di autorizzazioni `Internet`. Di conseguenza, una libreria può essere usata con attendibilità parziale solo se in essa era presente l'attributo <xref:System.Security.SecurityCriticalAttribute> e veniva eseguito un metodo <xref:System.Security.PermissionSet.Assert%2A> per <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tali librerie richiedono un'attenta revisione della sicurezza perché eventuali errori nel codice potrebbe produrre delle vulnerabilità. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] consente di generare codice in scenari di attendibilità parziale senza emettere alcuna richiesta di sicurezza, poiché la generazione di codice di per sé non è un'operazione con privilegi. Ovvero, il codice generato non dispone di ulteriori autorizzazioni rispetto all'assembly che lo genera. Questo consente alle librerie che generano il codice di essere trasparenti per la sicurezza ed elimina la necessità di asserire <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, quindi la scrittura di una libreria protetta non richiede una revisione completa della sicurezza.  
+>  Prima di [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)], la creazione di codice richiedeva <xref:System.Security.Permissions.ReflectionPermission> con il flag <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=fullName>. Questa autorizzazione è inclusa per impostazione predefinita nei set di autorizzazioni denominati `FullTrust` e `Intranet`, ma non nel set di autorizzazioni `Internet`. Di conseguenza, una libreria può essere usata con attendibilità parziale solo se in essa era presente l'attributo <xref:System.Security.SecurityCriticalAttribute> e veniva eseguito un metodo <xref:System.Security.PermissionSet.Assert%2A> per <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tali librerie richiedono un'attenta revisione della sicurezza perché eventuali errori nel codice potrebbe produrre delle vulnerabilità. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] consente di generare codice in scenari con attendibilità parziale senza creare alcuna richiesta di sicurezza, poiché la generazione di codice non è implicitamente un'operazione con privilegi. Ovvero, il codice generato non dispone di ulteriori autorizzazioni rispetto all'assembly che lo genera. Questo consente alle librerie che generano il codice di essere trasparenti per la sicurezza ed elimina la necessità di asserire <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, quindi la scrittura di una libreria protetta non richiede una revisione completa della sicurezza.  
   
  Questa procedura dettagliata illustra le attività seguenti:  
   
@@ -208,3 +208,4 @@ La reflection emit usa le stesse API in scenari di attendibilità sia parziale c
 ## <a name="see-also"></a>Vedere anche  
  [Security Issues in Reflection Emit](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  (Problemi di sicurezza nella reflection emit)  
  [Procedura: eseguire codice parzialmente attendibile in un oggetto sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+

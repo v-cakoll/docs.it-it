@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare un dominio dell&quot;applicazione | Microsoft Docs'
+title: 'Procedura: Creare un dominio dell''applicazione'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -16,11 +16,11 @@ caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 928a5d897e7df288f07ec32aff43f28617ef9623
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 39d8db32f82827e76d9517d387e2fc001fc209aa
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-an-application-domain"></a>Procedura: Creare un dominio dell'applicazione
@@ -36,3 +36,4 @@ I domini dell'applicazione vengono creati automaticamente dall'host Common Langu
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione con i domini applicazione](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)
+

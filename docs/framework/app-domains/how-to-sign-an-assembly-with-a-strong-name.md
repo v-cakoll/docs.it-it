@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Firmare un assembly con un nome sicuro | Documentazione Microsoft'
+title: 'Procedura: firmare un assembly con un nome sicuro'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 23
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 548cc4ffd0f894c4f522552c5f032be4c94d3585
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7758871a22b8b58d7df5cf2df481db185c07a987
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedura: firmare un assembly con un nome sicuro
@@ -33,7 +33,7 @@ Sono disponibili diversi modi per firmare un assembly con un nome sicuro:
   
 -   Usando [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) per collegare un modulo di codice di .NET Framework (un file con estensione netmodule) con un file di chiave.  
   
--   Utilizzando attributi dell'assembly per inserire le informazioni relative al nome sicuro nel codice. È possibile utilizzare l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute>, a seconda della posizione del file di chiave da utilizzare.  
+-   Utilizzando attributi dell'assembly per inserire le informazioni relative al nome sicuro nel codice. È possibile utilizzare l'attributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> , a seconda della posizione del file di chiave da utilizzare.  
   
 -   Utilizzando le opzioni del compilatore.  
   
@@ -108,3 +108,4 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
  [Ritardo della firma di un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)   
  [Gestione delle firme di assembly e manifesti](/visualstudio/ide/managing-assembly-and-manifest-signing)   
  [Pagina Firma, Creazione progetti](https://msdn.microsoft.com/library/0k50fs3b)
+
