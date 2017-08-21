@@ -1,13 +1,9 @@
 ---
-title: Ritardo della firma di un assembly | Microsoft Docs
-ms.custom: 
-ms.date: 03/30/2017
+title: Ritardo della firma di un assembly
+ms.date: 07/31/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deferring assembly signing
@@ -20,11 +16,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2fce2174da6b5d954e0197d7c834289070c09a22
+ms.translationtype: HT
+ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
+ms.openlocfilehash: 2c50a652c834dba80595f2ea419bc75148e13419
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="delay-signing-an-assembly"></a>Ritardo della firma di un assembly
@@ -62,8 +58,8 @@ ms.lasthandoff: 06/02/2017
   
      Con l'opzione **-Vr** o **-Vk** è possibile includere un file con estensione snk per la firma con una chiave di test.  
   
-    > [!CAUTION]
-    >  Usare l'opzione **-Vr** o **–Vk** solo durante lo sviluppo. L'aggiunta di un assembly all'elenco di omissione della verifica rende vulnerabile il sistema di sicurezza. Un assembly dannoso potrebbe usare il nome completamente specificato (nome assembly, versione, impostazioni cultura e token della chiave pubblica) dell'assembly aggiunto all'elenco di omissione della verifica per camuffare la propria identità. La verifica verrebbe omessa quindi anche per l'assembly dannoso.  
+    > [!WARNING]
+    > Non usare i nomi sicuri per la sicurezza, poiché forniscono solo un'identità univoca.
   
     > [!NOTE]
     >  Se si usa il ritardo della firma durante lo sviluppo con Visual Studio in un computer a 64 bit e si compila un assembly per **Qualsiasi CPU**, potrebbe essere necessario applicare due volte l'opzione **-Vr**. In Visual Studio **Qualsiasi CPU** è un valore della proprietà di compilazione **Piattaforma di destinazione**. Quando si esegue la compilazione dalla riga di comando, è l'impostazione predefinita. Per eseguire l'applicazione dalla riga di comando o da Esplora risorse, usare la versione a 64 bit di [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) per applicare l'opzione **-Vr** all'assembly. Per caricare l'assembly in Visual Studio in fase di progettazione, ad esempio se l'assembly contiene componenti usati da altri assembly nell'applicazione, usare la versione a 32 bit dello strumento Nome sicuro. Questo perché il compilatore JIT compila l'assembly nel codice nativo a 64 bit quando l'assembly viene eseguito dalla riga di comando e nel codice nativo a 32 bit quando l'assembly viene caricato nell'ambiente di progettazione.  
@@ -81,3 +77,4 @@ ms.lasthandoff: 06/02/2017
  [Procedura: Creare una coppia di chiavi pubblica/privata](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
  [Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
  [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

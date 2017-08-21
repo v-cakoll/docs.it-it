@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sui servizi delle applicazioni client | Microsoft Docs
+title: Cenni preliminari sui servizi delle applicazioni client
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3ec7d3a3cf4c43349f0a10cac95cff507b59cfc5
-ms.openlocfilehash: a519f85a30d13e631f7003e935533f7d071ab6d2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ed6264230579fa48903b26896c814d478950e184
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="client-application-services-overview"></a>Cenni preliminari sui servizi delle applicazioni client
@@ -101,3 +101,4 @@ I servizi delle applicazioni client consentono l'accesso semplificato ai servizi
  [Autenticazione ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)   
  [Gestione delle autorizzazioni tramite ruoli](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)   
  [Creazione e configurazione del database dei servizi dell'applicazione per SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+

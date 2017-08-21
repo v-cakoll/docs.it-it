@@ -1,5 +1,5 @@
 ---
-title: Global Assembly Cache | Microsoft Docs
+title: Global Assembly Cache
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0a40c6dcc51728bb069381b8af4652ce533bb08c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bad9e339896b0d62dce75a4044b18f3ae6a69332
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
@@ -56,3 +56,4 @@ Ogni computer in cui è installato Common Language Runtime ha una cache di codic
  [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
  [Uso di assembly e della Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
  [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md)
+

@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Reperire informazioni su tipo e membro da un assembly | Microsoft Docs'
+title: 'Procedura: reperire informazioni su tipo e membro da un assembly'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 42a950493d6042581d98d3be3f4787df9752af16
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 702567b7b05f8469f796b03a59f2ead71c0a9c22
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a>Procedura: reperire informazioni su tipo e membro da un assembly
@@ -36,3 +36,4 @@ Lo spazio dei nomi <xref:System.Reflection> contiene numerosi metodi per il recu
  [Programmazione con i domini applicazione](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)   
  [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)
+

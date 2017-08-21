@@ -1,6 +1,6 @@
 ---
 title: Introduzione - Guida a C#
-description: Introduzione a C#
+description: Esercitazioni brevi e semplici per imparare velocemente i concetti introduttivi relativi a C# e come scrivere applicazioni .NET Core.
 keywords: C#, introduzione, acquisizione, installare
 author: rpetrusha
 ms.author: ronpet
@@ -9,12 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 81132887a1abdc79b87e7095350f1e66368bce33
+ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
+ms.openlocfilehash: 347c88a66363ab04d519d10fdf7973692fcadde9
 ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="get-started-with-c"></a>Introduzione a C# #
@@ -33,7 +32,7 @@ Sono disponibili gli argomenti seguenti:
 
    Una libreria di classi consente di definire i tipi e i membri dei tipi che possono essere chiamati da un'altra applicazione. Questo argomento illustra come creare una libreria di classi con un solo metodo che determina se una stringa inizia con un carattere maiuscolo. Dopo aver completato la compilazione della libreria, è possibile sviluppare un [unit test](../../core/tutorials/testing-library-with-visual-studio.md) per assicurarsi che funzioni come previsto, quindi è possibile renderla disponibile per [applicazioni che vogliono usarla](../../core/tutorials/consuming-library-with-visual-studio.md).
 
-- [Introduzione a C# e Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
+* [Introduzione a C# e Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 
    Visual Studio Code è un editor di codice gratuito ottimizzato per la compilazione e il debug di applicazioni cloud e Web moderne. Supporta IntelliSense ed è disponibile per Linux, macOS e Windows.
 
