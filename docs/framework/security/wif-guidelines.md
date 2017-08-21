@@ -1,24 +1,31 @@
 ---
-title: "Linee guida di WIF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Linee guida di WIF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2fc76a0b-e33c-44c1-8f32-44934eb03dd4
 caps.latest.revision: 2
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 2
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a8f6f1cd79cd56995fabe974331dd3b3dd3aad22
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Linee guida di WIF
+# <a name="wif-guidelines"></a>Linee guida di WIF
 -   [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
   
 -   [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
   
-## Vedere anche  
- [Windows Identity Foundation](../../../docs/framework/security/windows-identity-foundation.md)
+## <a name="see-also"></a>Vedere anche  
+ [Windows Identity Foundation](../../../docs/framework/security/index.md)
+
