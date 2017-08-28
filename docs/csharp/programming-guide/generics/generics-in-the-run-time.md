@@ -1,57 +1,77 @@
 ---
-title: "Generics nel runtime (Guida per programmatori C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "generics [C#], in fase di esecuzione"
+title: Generics nel runtime (Guida per programmatori C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
 caps.latest.revision: 18
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 18
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 661dff2d8ec2e12ab6a459660a5378f74e93b9c5
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
+
 ---
-# Generics nel runtime (Guida per programmatori C#)
-Quando un metodo o un tipo generico viene compilato in MSIL \(Microsoft intermediate language\), contiene metadati che lo identificano come dotato di parametri di tipo.  Le modalità di utilizzo di MSIL per un tipo generico variano a seconda che il parametro di tipo fornito sia un tipo valore o un tipo riferimento.  
+# <a name="generics-in-the-run-time-c-programming-guide"></a>Generics nel runtime (Guida per programmatori C#)
+Quando un tipo o un metodo generico viene compilato in Microsoft Intermediate Language (MSIL), contiene metadati che lo identificano come contenente parametri di tipo. L'uso di MSIL per un tipo generico differisce a seconda che il parametro di tipo sia un tipo valore o un tipo riferimento.  
   
- Quando un tipo generico viene costruito per la prima volta con un tipo valore come parametro, viene creato un tipo generico specializzato con il parametro o i parametri forniti sostituiti nelle posizioni appropriate in MSIL.  I tipi generici specializzati vengono creati una volta per ogni tipo valore univoco utilizzato come parametro.  
+ La prima volta che viene costruito un tipo generico con un tipo valore come parametro, il runtime crea un tipo generico specializzato con il parametro o i parametri specificati sostituiti nelle posizioni appropriate in MSIL. I tipi generici specializzati vengono creati una sola volta per ogni tipo valore univoco usato come parametro.  
   
- Si supponga, ad esempio, che il codice del programma abbia dichiarato uno stack costituito da interi:  
+ Ad esempio, si supponga che il codice programma abbia dichiarato uno stack costituito da interi:  
   
  [!code-cs[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
   
- A questo punto viene generata una versione specializzata della classe <xref:System.Collections.Generic.Stack%601> con l'intero sostituito in modo corretto con il parametro relativo.  In questo modo, ogni volta che il codice del programma utilizza uno stack di interi, viene riutilizzata la classe specializzata <xref:System.Collections.Generic.Stack%601> generata.  Nell'esempio riportato di seguito, vengono create due istanze di uno stack di interi che condividono una singola istanza del codice `Stack<int>`:  
+ A questo punto, il runtime genera una versione specializzata della classe <xref:System.Collections.Generic.Stack%601> sostituendo l'intero nel modo appropriato per il parametro. D'ora in poi, ogni volta che il codice programma usa uno stack di interi, il runtime riutilizzerà la classe <xref:System.Collections.Generic.Stack%601> specializzata generata. Nell'esempio seguente vengono create due istanze di uno stack di interi che condividono un'istanza singola nel codice `Stack<int>`:  
   
  [!code-cs[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
   
- Si supponga ora che un'altra classe <xref:System.Collections.Generic.Stack%601> con un tipo valore diverso, ad esempio `long`, o con una struttura definita dall'utente come relativo parametro venga creata in un altro punto nel codice.  Di conseguenza, viene generata un'altra versione del tipo generico e il valore `long` viene sostituito nelle posizioni appropriate in MSIL.  Le conversioni non sono più necessarie poiché ogni classe generica specializzata contiene a livello nativo il tipo di valore.  
+ Tuttavia, si supponga che venga creata un'altra classe <xref:System.Collections.Generic.Stack%601> con un tipo valore diverso, ad esempio `long`, o una struttura definita dall'utente come parametro in un altro punto del codice. Di conseguenza, il runtime genererà un'altra versione del tipo generico e sostituirà un valore `long` nelle posizioni appropriate in MSIL. Le conversioni non sono più necessarie, perché ogni classe generica specializzata contiene il tipo valore in modo nativo.  
   
- Il funzionamento dei generics presenta alcune lievi differenze rispetto a quello dei tipi riferimento.  Quando un tipo generico viene costruito per la prima volta con un tipo di riferimento qualsiasi, viene creato un tipo generico specializzato con riferimenti a oggetti sostituiti dai parametri in MSIL.  In seguito, ogni volta che viene creata un'istanza di un tipo costruito utilizzando come relativo parametro un tipo riferimento qualsiasi, verrà riutilizzata la versione specializzata del tipo generico creata in precedenza.  Questa situazione è possibile perché tutti i riferimenti presentano le stesse dimensioni.  
+ I generics hanno un funzionamento leggermente diverso con i tipi riferimento. La prima volta che viene costruito un tipo generico con qualsiasi tipo riferimento, il runtime crea un tipo generico specializzato con riferimenti a oggetti sostituiti per i parametri in MSIL. Quindi, ogni volta che viene creata un'istanza di un tipo costruito con un tipo riferimento come parametro, indipendentemente dal tipo, il runtime riutilizza la versione specializzata precedentemente creata del tipo generico. Questo è possibile perché tutti i riferimenti hanno le stesse dimensioni.  
   
- Si supponga, ad esempio, di disporre di due tipi riferimento, una classe `Customer` e una classe `Order`, e di aver creato uno stack di tipi `Customer`:  
+ Ad esempio, si supponga di avere due tipi riferimento, una classe `Customer` e una classe `Order`, e di aver creato uno stack di tipi `Customer`:  
   
  [!code-cs[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
   
  [!code-cs[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
   
- A questo punto, viene generata una versione specializzata della classe <xref:System.Collections.Generic.Stack%601> che, anziché archiviare dati, archivia riferimenti a oggetti che verranno inseriti in seguito.  Si supponga inoltre che la riga di codice successiva crei uno stack di un altro tipo riferimento, denominato `Order`:  
+ A questo punto, il runtime genera una versione specializzata della classe <xref:System.Collections.Generic.Stack%601> in cui sono archiviati riferimenti a oggetti che verranno compilati successivamente invece di archiviare i dati. Si supponga che la riga di codice successiva crei uno stack di un altro tipo riferimento, chiamato `Order`:  
   
  [!code-cs[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
   
- Diversamente dai tipi di valore, non viene creata un'altra versione specializzata della classe <xref:System.Collections.Generic.Stack%601> per il tipo `Order`.  Viene invece creata un'istanza della versione specializzata della classe <xref:System.Collections.Generic.Stack%601> e viene impostata la variabile `orders` per farvi riferimento.  Si supponga di trovare successivamente una riga di codice per creare uno stack di un tipo `Customer`:  
+ Diversamente dai tipi valore, non viene creata un'altra versione specializzata della classe <xref:System.Collections.Generic.Stack%601> per il tipo `Order`. Viene invece creata un'istanza della versione specializzata della classe <xref:System.Collections.Generic.Stack%601> e viene impostata la variabile `orders` per referenziarla. Si supponga di individuare una riga di codice per la creazione di uno stack di un tipo `Customer`:  
   
  [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
   
- Analogamente all'utilizzo precedente della classe <xref:System.Collections.Generic.Stack%601> creata con il tipo `Order`, viene creata un'altra istanza della classe <xref:System.Collections.Generic.Stack%601> specializzata.  I puntatori in essa contenuti vengono impostati per fare riferimento a un'area di memoria con le dimensioni di un tipo `Customer`.  Poiché il numero di tipi riferimento può variare notevolmente da un programma a un altro, l'implementazione di C\# dei generics riduce in modo significativo la quantità di codice riducendo a una le classi specializzate create dal compilatore per le classi generiche di tipi riferimento.  
+ Come per l'uso precedente della classe <xref:System.Collections.Generic.Stack%601> creata con il tipo `Order`, verrà creata un'altra istanza della classe <xref:System.Collections.Generic.Stack%601> specializzata. I puntatori contenuti vengono impostati in modo da fare riferimento a un'area di memoria delle dimensioni di un tipo `Customer`. Poiché il numero di tipi riferimento può variare ampiamente a seconda del programma, l'implementazione C# di generics riduce notevolmente la quantità di codice limitando a uno il numero di classi specializzate create dal compilatore per classi generiche di tipi riferimento.  
   
- Inoltre, quando viene creata un'istanza di una classe C\# generica con un parametro di tipo valore o di tipo riferimento, è possibile sottoporla a query in fase di esecuzione utilizzando la reflection e determinare sia il tipo che il parametro di tipo relativi.  
+ Inoltre, quando viene creata un'istanza di una classe C# generica usando un tipo valore o un parametro di tipo riferimento, la reflection può eseguire query sulla classe, accertandone il tipo effettivo e il parametro di tipo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Collections.Generic>   
- [Guida per programmatori C\#](../../../csharp/programming-guide/index.md)   
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [Generics](../Topic/Generics%20in%20the%20.NET%20Framework.md)
+ [Generics](~/docs/standard/generics/index.md)
+

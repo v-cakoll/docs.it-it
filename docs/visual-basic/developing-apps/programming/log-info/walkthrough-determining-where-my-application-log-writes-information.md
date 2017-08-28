@@ -1,5 +1,5 @@
 ---
-title: Individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic) | Microsoft Docs
+title: Individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 44e6dc6add43050897bbcae6eff3d2e58d027821
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36c91f607a5a9d0dcf65ee6e049b9a49cdd37929
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Procedura dettagliata: individuazione della posizione di inserimento delle informazioni con My.Application.Log (Visual Basic)
@@ -50,7 +50,7 @@ L'oggetto `My.Application.Log` può scrivere le informazioni in diversi listener
   
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Per determinare i listener per My.Application.Log  
   
-1.  Individuare il file di configurazione dell'assembly. Se si sta sviluppando l'assembly, è possibile accedere al file app.config in [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] da **Esplora soluzioni**. In caso contrario, il nome del file di configurazione sarà il nome dell'assembly seguito da ".config" e si troverà nella stessa directory dell'assembly.  
+1.  Individuare il file di configurazione dell'assembly. Se si sta sviluppando l'assembly, è possibile accedere al file app.config in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] da **Esplora soluzioni**. In caso contrario, il nome del file di configurazione sarà il nome dell'assembly seguito da ".config" e si troverà nella stessa directory dell'assembly.  
   
     > [!NOTE]
     >  Non tutti gli assembly hanno un file di configurazione.  
@@ -61,7 +61,7 @@ L'oggetto `My.Application.Log` può scrivere le informazioni in diversi listener
   
      Se queste sezioni non esistono, è possibile configurare i listener di log `My.Application.Log` nel file di configurazione del computer. I passaggi seguenti descrivono come determinare ciò che viene definito dal file di configurazione del computer:  
   
-    1.  Individuare il file machine.config del computer. Il file si trova in genere nella directory *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , dove `SystemRoot` è la directory del sistema operativo e `frameworkVersion` è la versione di [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+    1.  Individuare il file machine.config del computer. Il file si trova in genere nella directory *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , dove `SystemRoot` è la directory del sistema operativo e `frameworkVersion` è la versione di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
          È possibile eseguire l'override delle impostazioni del file machine.config con il file di configurazione di un'applicazione.  
   
@@ -81,9 +81,9 @@ L'oggetto `My.Application.Log` può scrivere le informazioni in diversi listener
   
     -   Il listener <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> scrive le informazioni in un log file, come descritto nell'introduzione.  
   
-    -   Il listener <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> scrive le informazioni nel log eventi del computer specificato dal parametro `initializeData`. Per visualizzare un log eventi, è possibile usare **Esplora server** o **Visualizzatore eventi di Windows**. Per altre informazioni, vedere [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
+    -   Il listener <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> scrive le informazioni nel log eventi del computer specificato dal parametro `initializeData` . Per visualizzare un log eventi, è possibile usare **Esplora server** o **Visualizzatore eventi di Windows**. Per altre informazioni, vedere [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
   
-    -   I listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> scrivono le informazioni nel file specificato nel parametro `initializeData`.  
+    -   I listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> scrivono le informazioni nel file specificato nel parametro `initializeData` .  
   
     -   Il listener <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> scrive le informazioni nella console della riga di comando.  
   
@@ -103,3 +103,4 @@ L'oggetto `My.Application.Log` può scrivere le informazioni in diversi listener
  [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
  [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)  (Eventi ETW in .NET Framework)  
  [Risoluzione dei problemi: Listener di log](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+

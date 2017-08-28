@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Definire l&quot;uguaglianza di valori per un tipo (Guida per programmatori C#) | Microsoft Docs'
+title: 'Procedura: definire l''uguaglianza di valori per un tipo (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 33b2ab2252fac8442caa7b2f3e9b5b311cc0f9b6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e008be022765ff7d2bb440f0a37193b882038b76
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Procedura: definire l'uguaglianza di valori per un tipo (Guida per programmatori C#)
@@ -50,19 +51,19 @@ Quando si definisce una classe o uno struct, si decide se è opportuno creare un
   
 5.  x.`Equals`(null) restituisce `false`. Tuttavia, null.Equals(null) genera un'eccezione in quanto non rispetta la regola numero 2 precedente.  
   
- Gli struct definiti hanno già un'implementazione predefinita di uguaglianza di valore che ereditano dalla sostituzione <xref:System.ValueType?displayProperty=fullName> del metodo <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>. Questa implementazione usa il processo di reflection per esaminare tutti i campi e tutte le proprietà nel tipo. Sebbene questa implementazione produca risultati corretti, è relativamente lenta rispetto a un'implementazione personalizzata che viene scritta specificamente per il tipo.  
+ Gli struct definiti hanno già un'implementazione predefinita di uguaglianza di valore che eredita dall'override <xref:System.ValueType?displayProperty=fullName> del metodo <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>. Questa implementazione usa il processo di reflection per esaminare tutti i campi e tutte le proprietà nel tipo. Sebbene questa implementazione produca risultati corretti, è relativamente lenta rispetto a un'implementazione personalizzata che viene scritta specificamente per il tipo.  
   
  I dettagli di implementazione per l'uguaglianza di valori sono diversi per le classi e gli struct. Tuttavia, sia le classi che gli struct richiedono gli stessi passaggi di base per l'implementazione dell'uguaglianza:  
   
-1.  Eseguire l'override del metodo [virtual](../../../csharp/language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>. Nella maggior parte dei casi l'implementazione di `bool Equals( object obj )` deve solo chiamare il metodo specifico per il tipo `Equals` che è l'implementazione dell'interfaccia <xref:System.IEquatable%601?displayProperty=fullName>. (Vedere il passaggio 2.)  
+1.  Eseguire l'override del metodo di tipo [virtual](../../../csharp/language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>. Nella maggior parte dei casi l'implementazione di `bool Equals( object obj )` deve solo chiamare il metodo `Equals` specifico per il tipo, che è l'implementazione dell'interfaccia <xref:System.IEquatable%601?displayProperty=fullName>. (Vedere il passaggio 2.)  
   
-2.  Implementare l'interfaccia <xref:System.IEquatable%601?displayProperty=fullName>, definendo un metodo specifico per il tipo `Equals`. È in questo passaggio che viene eseguito il confronto di equivalenza effettivo. Ad esempio, è possibile definire l'uguaglianza confrontando solo uno o due campi nel tipo. Non generare eccezioni da `Equals`. Solo per le classi: questo metodo deve esaminare solo i campi che vengono dichiarati nella classe. Deve chiamare `base.Equals` per esaminare i campi presenti nella classe di base. Non eseguire questa operazione se il tipo eredita direttamente da <xref:System.Object>, in quanto l'implementazione <xref:System.Object> di <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> esegue un controllo di uguaglianza dei riferimenti.  
+2.  Implementare l'interfaccia <xref:System.IEquatable%601?displayProperty=fullName> definendo un metodo `Equals` specifico per il tipo. È in questo passaggio che viene eseguito il confronto di equivalenza effettivo. Ad esempio, è possibile definire l'uguaglianza confrontando solo uno o due campi nel tipo. Non generare eccezioni da `Equals`. Solo per le classi: questo metodo deve esaminare solo i campi che vengono dichiarati nella classe. Deve chiamare `base.Equals` per esaminare i campi presenti nella classe di base. Non eseguire questa operazione se il tipo eredita direttamente da <xref:System.Object>, perché l'implementazione <xref:System.Object> di <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> esegue un controllo di uguaglianza dei riferimenti.  
   
 3.  Facoltativo ma consigliato: eseguire l'overload degli operatori [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) e [!=](../../../csharp/language-reference/operators/not-equal-operator.md).  
   
-4.  Eseguire l'override di <xref:System.Object.GetHashCode%2A?displayProperty=fullName> in modo che due oggetti che presentano l'uguaglianza di valori producano lo stesso codice hash.  
+4.  Eseguire l'override di <xref:System.Object.GetHashCode%2A?displayProperty=fullName> in modo che due oggetti con uguaglianza di valori producano lo stesso codice hash.  
   
-5.  Facoltativo: per supportare le definizioni di "maggiore di" o "minore di", implementare l'interfaccia <xref:System.IComparable%601> per il tipo e sottoporre a overload anche gli operatori [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) e [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
+5.  Facoltativo: per supportare le definizioni di "maggiore di" o "minore di", implementare l'interfaccia <xref:System.IComparable%601> per il tipo e sottoporre anche a overload gli operatori [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) e [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
   
  Nel primo esempio che segue viene illustrata l'implementazione di una classe. Nel secondo esempio viene illustrata l'implementazione di uno struct.  
   
@@ -71,7 +72,7 @@ Quando si definisce una classe o uno struct, si decide se è opportuno creare un
   
  [!code-cs[csProgGuideStatements #19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
   
- Nelle classi (tipi riferimento), l'implementazione predefinita di entrambi i metodi <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> esegue un confronto di uguaglianza dei riferimenti, non un controllo di uguaglianza di valori. Quando un responsabile dell'implementazione esegue l'override del metodo virtuale, lo scopo è assegnare a tale metodo una semantica di uguaglianza di valore.  
+ Nelle classi (tipi riferimento) l'implementazione predefinita di entrambi i metodi <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> esegue un confronto di uguaglianza dei riferimenti, non un controllo di uguaglianza dei valori. Quando un responsabile dell'implementazione esegue l'override del metodo virtuale, lo scopo è assegnare a tale metodo una semantica di uguaglianza di valore.  
   
  Gli operatori `==` e `!=` possono essere usati con le classi anche se la classe non ne esegue l'overload. Tuttavia, il comportamento predefinito è eseguire una verifica dell'uguaglianza dei riferimenti. Se in una classe si esegue l'overload del metodo `Equals`, è consigliabile eseguire l'overload degli operatori `==` e `!=`, ma non è obbligatorio.  
   
@@ -80,7 +81,7 @@ Quando si definisce una classe o uno struct, si decide se è opportuno creare un
   
  [!code-cs[csProgGuideStatements #20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
   
- Per gli struct, l'implementazione predefinita di <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>, che è la versione sottoposta a override in <xref:System.ValueType?displayProperty=fullName>, esegue un controllo di uguaglianza di valori usando il processo di reflection per confrontare i valori di ogni campo nel tipo. Quando un responsabile dell'implementazione esegue l'override del metodo virtuale `Equals` in uno struct, lo scopo è specificare un mezzo più efficiente per la verifica dell'uguaglianza di valori e facoltativamente basare il confronto su alcuni subset del campo o delle proprietà dello struct.  
+ Per gli struct, l'implementazione predefinita di <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>, che è la versione sottoposta a override in <xref:System.ValueType?displayProperty=fullName>, esegue un controllo di uguaglianza dei valori usando il processo di reflection per confrontare i valori di ogni campo nel tipo. Quando un responsabile dell'implementazione esegue l'override del metodo virtuale `Equals` in uno struct, lo scopo è specificare un mezzo più efficiente per la verifica dell'uguaglianza di valori e facoltativamente basare il confronto su alcuni subset del campo o delle proprietà dello struct.  
   
  Gli operatori [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) e [!=](../../../csharp/language-reference/operators/not-equal-operator.md) non possono funzionare con uno struct a meno che lo struct non ne esegua esplicitamente l'overload.  
   

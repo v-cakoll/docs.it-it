@@ -1,5 +1,5 @@
 ---
-title: Operazioni sui set (C#) | Documentazione Microsoft
+title: Operazioni sui set (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 37841cde3aa5e4aaa6545b3a160422d024be5842
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 121dcd4d41dcfea332c45031a5fbed594e2f1e3e
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="set-operations-c"></a>Operazioni sui set (C#)
@@ -42,17 +43,17 @@ Le operazioni sui set in LINQ si riferiscono alle operazioni di query che genera
 ## <a name="comparison-of-set-operations"></a>Confronto tra le operazioni sui set  
   
 ### <a name="distinct"></a>Distinct  
- La figura seguente illustra il comportamento del metodo <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> su una sequenza di caratteri. La sequenza restituita contiene gli elementi univoci dalla sequenza di input.  
+ Nella figura seguente viene illustrato il comportamento del metodo <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> su una sequenza di caratteri. La sequenza restituita contiene gli elementi univoci dalla sequenza di input.  
   
  ![Grafico che mostra il comportamento di Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
   
 ### <a name="except"></a>Eccezione  
- La figura seguente illustra il comportamento di <xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName>. La sequenza restituita contiene solo gli elementi dalla prima sequenza di input che non sono presenti nella seconda sequenza di input.  
+ Nella figura seguente viene illustrato il comportamento di <xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName>. La sequenza restituita contiene solo gli elementi dalla prima sequenza di input che non sono presenti nella seconda sequenza di input.  
   
  ![Grafico che mostra l'azione di Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
   
 ### <a name="intersect"></a>Interseca  
- La figura seguente illustra il comportamento di <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName>. La sequenza restituita contiene gli elementi comuni a entrambe le sequenze di input.  
+ Nella figura seguente viene illustrato il comportamento di <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName>. La sequenza restituita contiene gli elementi comuni a entrambe le sequenze di input.  
   
  ![Grafico che mostra l'intersezione di due sequenze.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
   
@@ -63,6 +64,7 @@ Le operazioni sui set in LINQ si riferiscono alle operazioni di query che genera
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Linq>   
- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ [Panoramica degli operatori query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [Procedura: Combinare e confrontare Collection di stringhe (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)   
  [Procedura: Trovare la differenza dei set tra due elenchi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+

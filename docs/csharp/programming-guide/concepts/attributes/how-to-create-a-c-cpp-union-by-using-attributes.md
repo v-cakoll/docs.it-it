@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare un&quot;unione C-C++ tramite attributi (C#) | Microsoft Docs'
+title: 'Procedura: Creare un''unione C-C++ tramite attributi (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dd6bc60dfd1c6146d8fa72abdcfc6a00006817aa
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4532829080d994cf4cec92d64a12e3bf1890dc6a
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Procedura: Creare un'unione C-C++ tramite attributi (C#)
@@ -91,3 +92,4 @@ L'uso degli attributi consente di personalizzare la disposizione degli struct in
  [Attributes (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  (Attributi (C#))  
  [Creazione di attributi personalizzati (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)   
  [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))
+

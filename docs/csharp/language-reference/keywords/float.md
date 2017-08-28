@@ -1,5 +1,5 @@
 ---
-title: float (Riferimenti per C#) | Microsoft Docs
+title: float (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1c3a66e4f9c690effb35e280e00e29930ec64d75
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2f1fb02f84de504112eee826dbee1275fa3ccb7a
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="float-c-reference"></a>float (Riferimenti per C#)
@@ -78,7 +79,7 @@ float x = 3.5F;
  [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Single>   
@@ -87,6 +88,7 @@ float x = 3.5F;
  [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
  [Parole chiave di C#](index.md)   
  [Tabella dei tipi integrali](integral-types-table.md)   
- [Tabella dei tipi incorporati](built-in-types-table.md)   
+ [Tabella dei tipi predefiniti](built-in-types-table.md)   
  [Tabella delle conversioni numeriche implicite](implicit-numeric-conversions-table.md)   
  [Tabella delle conversioni numeriche esplicite](explicit-numeric-conversions-table.md)
+

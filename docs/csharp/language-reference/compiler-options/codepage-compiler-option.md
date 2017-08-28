@@ -1,46 +1,66 @@
 ---
-title: "/codepage (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/codepage"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/codepage compiler option [C#]"
-  - "codepage compiler option [C#]"
-  - "-codepage compiler option [C#]"
+title: -codepage (opzioni del compilatore C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /codepage
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /codepage compiler option [C#]
+- codepage compiler option [C#]
+- -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b80f6fcf8891d2f0b921af01cc094f624d807aa1
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
+
 ---
-# /codepage (C# Compiler Options)
-Con questa opzione viene specificata la tabella codici da utilizzare in fase di compilazione, se la tabella codici richiesta è diversa da quella corrente predefinita per il sistema.  
+# <a name="codepage-c-compiler-options"></a>/codepage (opzioni del compilatore C#)
+Questa opzione specifica la tabella codici da usare durante la compilazione, se la pagina richiesta non è la tabella codici predefinita corrente per il sistema.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 /codepage:id  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  `id`  
- Identificativo della tabella codici da utilizzare nella compilazione per tutti i file di codice sorgente.  
+ ID della tabella codici da usare per tutti i file di codice sorgente nella compilazione.  
   
-## Note  
- Se si esegue la compilazione di uno o più file di codice sorgente che non supportano l'utilizzo della tabella codici predefinita del computer in uso, è possibile utilizzare l'opzione **\/codepage** per specificare quale tabella codici utilizzare.  L'opzione **\/codepage** viene applicata a tutti i file di codice sorgente inclusi nella compilazione.  
+## <a name="remarks"></a>Note  
+ Se si compilano uno o più file di codice sorgente che non sono stati creati per usare la tabella codici predefinita nel computer in uso, è possibile usare l'opzione **/codepage** per specificare la tabella codici da usare. **/codepage** si applica a tutti i file di codice sorgente nella compilazione.  
   
- Se i file di codice sorgente sono stati creati con la stessa tabella codici attiva sul computer oppure con UNICODE o UTF\-8, non sarà necessario utilizzare **\/codepage**.  
+ Se i file di codice sorgente sono stati creati con la stessa tabella codici attiva nel computer in uso o se i file di codice sorgente sono stati creati con UNICODE o UTF-8, non sarà necessario usare **/codepage**.  
   
- Vedere [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371) per informazioni su come individuare le tabelle codici supportate nel sistema.  
+ Per informazioni su come individuare le tabelle codici supportate nel sistema, vedere [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371).  
   
  Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.  
   
-## Vedere anche  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Procedura: modificare le proprietà e le impostazioni di configurazione dei progetti](http://msdn.microsoft.com/it-it/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Vedere anche  
+ [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
+ [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+

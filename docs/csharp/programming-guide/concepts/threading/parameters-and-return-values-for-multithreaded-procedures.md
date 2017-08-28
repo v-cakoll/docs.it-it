@@ -1,5 +1,5 @@
 ---
-title: Parametri e valori restituiti per routine multithreading (C#) | Microsoft Docs
+title: Parametri e valori restituiti per routine multithreading (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 95fdc0f74c1f2c35a4f3b5c0a8f40f5d4fe9457c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5e377a006409dbae49b3c00297f69e8d55a01295
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a>Parametri e valori restituiti per routine multithreading (C#)
@@ -72,7 +73,7 @@ protected void TestArea()
  Si noti che la routine `TestArea` non verifica il valore del campo `Area` dopo che è stato chiamato il metodo `CalcArea`. Poiché `CalcArea` viene eseguita su un thread separato, il campo `Area` non sarà necessariamente impostato se lo si controlla subito dopo avere chiamato `Thread.Start`. La sezione seguente illustra un metodo più efficace per la restituzione di valori dalle routine multithreading.  
   
 ## <a name="returning-values-from-multithreaded-procedures"></a>Restituzione di valori da routine multithreading  
- La restituzione di valori da routine eseguite su thread diversi è resa complessa dal fatto che le routine non possono essere funzioni e non possono usare argomenti `ByRef`. Il modo più semplice per restituire i valori consiste nell'usare il componente <xref:System.ComponentModel.BackgroundWorker> per gestire i thread e generare un evento dopo aver completato l'attività, quindi elaborare i risultati con un gestore eventi.  
+ La restituzione di valori da routine eseguite su thread diversi è resa complessa dal fatto che le routine non possono essere funzioni e non possono usare argomenti `ByRef`. Il modo più semplice per restituire i valori consiste nell'usare il componente <xref:System.ComponentModel.BackgroundWorker> per gestire i thread e generare un evento dopo aver completato l'attività e quindi elaborare i risultati con un gestore eventi.  
   
  L'esempio seguente restituisce un valore generando un evento da una routine eseguita su un thread separato:  
   
@@ -141,3 +142,4 @@ private void BackgroundWorker1_RunWorkerCompleted(
  [Applicazioni multithreading (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [Delegati](../../../../csharp/programming-guide/delegates/index.md)   
  [Multithreading nei componenti](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
+

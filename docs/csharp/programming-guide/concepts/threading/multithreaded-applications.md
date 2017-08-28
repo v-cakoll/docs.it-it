@@ -1,5 +1,5 @@
 ---
-title: Applicazioni multithreading (C#) | Microsoft Docs
+title: Applicazioni multithreading (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a36fd71ff41eb219f4c4de36d4fa8da9b8ee179a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dfe0f9c6e911295270df8464d1070a524412466d
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="multithreaded-applications-c"></a>Applicazioni multithreading (C#)
@@ -33,7 +34,7 @@ Con C# è possibile scrivere applicazioni in grado di eseguire più attività co
 ## <a name="creating-and-using-threads"></a>Creazione e uso dei thread  
  Nel caso sia necessario un maggiore controllo sul comportamento dei thread dell'applicazione, è possibile gestirli personalmente. È tuttavia necessario tenere presente che la scrittura di applicazioni multithreading complesse può essere difficile: l'applicazione potrebbe non rispondere o essere soggetta a errori temporanei dovuti a race condition. Per altre informazioni, vedere [Componenti thread-safe](http://msdn.microsoft.com/library/4f7c7377-a782-4bd0-aaa3-9db8c12945ee).  
   
- Per creare un nuovo thread è necessario dichiarare una variabile di tipo <xref:System.Threading.Thread> e chiamare il costruttore, specificare il nome della routine o del metodo che si vuole eseguire nel nuovo thread. Nel codice seguente ne viene illustrato un esempio.  
+ Per creare un nuovo thread è necessario dichiarare una variabile di tipo <xref:System.Threading.Thread> e chiamare il costruttore, specificando il nome della routine o del metodo che si vuole eseguire nel nuovo thread. Nel codice seguente ne viene illustrato un esempio.  
   
 ```csharp  
 System.Threading.Thread newThread =  
@@ -53,12 +54,12 @@ newThread.Start();
 newThread.Abort();  
 ```  
   
- Oltre ad avviare e arrestare i thread, è anche possibile sospendere i thread chiamando il metodo <xref:System.Threading.Thread.Sleep%2A> o <xref:System.Threading.Thread.Suspend%2A>, riprendere l'esecuzione dei thread sospesi usando il metodo <xref:System.Threading.Thread.Resume%2A> ed eliminare definitivamente un thread usando il metodo <xref:System.Threading.Thread.Abort%2A>.  
+ Oltre a eseguire le operazioni di avvio e interruzione, è possibile anche sospendere un thread chiamando il metodo <xref:System.Threading.Thread.Sleep%2A> o <xref:System.Threading.Thread.Suspend%2A>, riprendere un thread sospeso usando il metodo <xref:System.Threading.Thread.Resume%2A> o eliminare un thread usando il metodo <xref:System.Threading.Thread.Abort%2A>.  
   
 ### <a name="thread-methods"></a>Metodi di thread  
  La tabella seguente descrive alcuni metodi che è possibile usare per controllare i singoli thread.  
   
-|Metodo|Azione|  
+|Metodo|Operazione|  
 |------------|------------|  
 |<xref:System.Threading.Thread.Start%2A>|Avvia l'esecuzione di un thread.|  
 |<xref:System.Threading.Thread.Sleep%2A>|Sospende un thread per un determinato periodo.|  
@@ -94,3 +95,4 @@ newThread.Abort();
  [Sincronizzazione di thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
  [Parametri e valori restituiti per routine multithreading (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)   
  [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)
+

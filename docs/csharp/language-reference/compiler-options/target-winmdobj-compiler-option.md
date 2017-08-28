@@ -1,5 +1,5 @@
 ---
-title: -target:winmdobj (opzioni del compilatore C# ) | Microsoft Docs
+title: -target:winmdobj (opzioni del compilatore C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -26,10 +26,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7581ec18db0d2741452b47ad6200482b63c102be
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3967f7f9326652271ce55aa286e9f42f94dee775
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetwinmdobj-c-compiler-options"></a>/target:winmdobj (opzioni del compilatore C#)
@@ -37,7 +38,7 @@ Se si usa l'opzione del compilatore **/target:winmdobj**, viene creato un file i
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 /target:winmdobj  
 ```  
   
@@ -58,17 +59,18 @@ Se si usa l'opzione del compilatore **/target:winmdobj**, viene creato un file i
   
 3.  Nell'elenco **Tipo di output** scegliere **File WinMD**.  
   
-     L'opzione **File WinMD** è disponibile solo per i modelli di applicazione [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)].  
+     L'opzione **File WinMD** è disponibile solo per i modelli di applicazione [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Esempio  
  Il seguente comando consente di compilare `filename.cs` in un file intermedio con estensione winmdobj.  
   
-```  
+```console  
 csc /target:winmdobj filename.cs  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
  [-target (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+

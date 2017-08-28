@@ -1,5 +1,5 @@
 ---
-title: uint (Riferimenti per C#) | Documentazione Microsoft
+title: uint (Riferimenti per C#)
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 24a47d83f9f8a778b6df53b5e1e5444eda819680
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4342c08ab536f45a2e3b5fa6fe94839436600a4a
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="uint-c-reference"></a>uint (Riferimenti per C#)
@@ -49,7 +49,7 @@ La parola chiave `uint` rappresenta un tipo integrale che archivia valori in bas
   
 ## <a name="literals"></a>Valori letterali  
 
-È possibile dichiarare e inizializzare una variabile `uint` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7) un valore letterale binario. Se il valore letterale intero non è incluso nell'intervallo `uint` (ovvero, se è minore di <xref:System.UInt32.MinValue?displayProperty=fullName> o maggiore di <xref:System.UInt32.MaxValue?displayProperty=fullName>) si verifica un errore di compilazione.
+È possibile dichiarare e inizializzare una variabile `uint` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7) un valore letterale binario. Se il valore letterale integer è esterno all'intervallo di `uint`, vale a dire se è minore di <xref:System.UInt32.MinValue?displayProperty=fullName> o maggiore di <xref:System.UInt32.MaxValue?displayProperty=fullName>, si verifica un errore di compilazione.
 
 Nell'esempio seguente, i valori interi uguali a 3.000.000.000 rappresentati come valori letterali decimali, esadecimali o binari vengono assegnati a valori `uint`.  
   
@@ -62,7 +62,7 @@ A partire da C# 7, è anche possibile usare il carattere di sottolineatura, `_`,
 
 [!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
  
- Valori letterali integer possono anche includere un suffisso che denota il tipo. Il suffisso `U` o 'u' denota un valore `uint` o `ulong`, a seconda del valore numerico del valore letterale. L'esempio seguente usa il suffisso `u` per indicare un intero senza segno di entrambi i tipi. Si noti che il primo valore letterale è un `uint` perché il suo valore è minore di <xref:System.UInt32.MaxValue?displayProperty=fullName>, mentre il secondo è un valore `ulong` perché il suo valore è maggiore di <xref:System.UInt32.MaxValue?displayProperty=fullName>.
+ Valori letterali integer possono anche includere un suffisso che denota il tipo. Il suffisso `U` o 'u' denota un valore `uint` o `ulong`, a seconda del valore numerico del valore letterale. L'esempio seguente usa il suffisso `u` per indicare un intero senza segno di entrambi i tipi. Si noti che il primo valore letterale è `uint` perché il relativo valore è minore di <xref:System.UInt32.MaxValue?displayProperty=fullName>, mentre il secondo è `ulong` perché il relativo valore è maggiore di <xref:System.UInt32.MaxValue?displayProperty=fullName>.
 
 [!code-cs[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]  
  
@@ -104,7 +104,7 @@ uint y = (uint)3.0;
  Per altre informazioni sulle regole di conversione numeriche implicite, vedere [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.UInt32>   
@@ -115,3 +115,4 @@ uint y = (uint)3.0;
  [Tabella dei tipi predefiniti](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

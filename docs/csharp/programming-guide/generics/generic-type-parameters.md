@@ -1,46 +1,66 @@
 ---
-title: "Parametri di tipo generico (Guida per programmatori C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "generics [C#], parametri di tipo"
-  - "parametri di tipo [C#]"
+title: Parametri di tipo generico (Guida per programmatori C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- generics [C#], type parameters
+- type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
 caps.latest.revision: 23
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 23
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ce1024215a381afb3a7b42f2127fe5e8c212d378
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
+
 ---
-# Parametri di tipo generico (Guida per programmatori C#)
-Nella definizione di un metodo o di un tipo generico, un parametro di tipo è un segnaposto per un tipo specificato da un client al momento della creazione di un'istanza di una variabile del tipo generico.  Una classe generica, ad esempio `GenericList<T>` elencata in [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md), non può essere utilizzata così com'è perché non rappresenta effettivamente un tipo, ma è piuttosto simile a un progetto iniziale per un tipo.  Per utilizzare `GenericList<T>`, il codice client deve dichiarare e creare un'istanza di un tipo costruito specificando un argomento di tipo racchiuso tra parentesi angolari.  L'argomento di tipo per questa classe particolare può essere qualsiasi tipo riconosciuto dal compilatore.  È possibile creare un numero indefinito di istanze di tipi costruiti, ognuna delle quali utilizza un argomento di tipo diverso, come riportato di seguito:  
+# <a name="generic-type-parameters-c-programming-guide"></a>Parametri di tipo generico (Guida per programmatori C#)
+In una definizione di tipo o metodo generico un parametro di tipo è un segnaposto per un determinato tipo specificato da un client durante la creazione di un'istanza di una variabile del tipo generico. Una classe generica, ad esempio `GenericList<T>`, elencata in [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md), non può essere usata in quanto tale perché non è effettivamente un tipo, ma è piuttosto un progetto iniziale per un tipo. Per usare `GenericList<T>`, il codice client deve dichiarare un tipo costruito e crearne un'istanza specificando un argomento tipo racchiuso tra parentesi angolari. L'argomento tipo per questa classe specifica può essere qualsiasi tipo riconosciuto dal compilatore. È possibile creare un numero qualsiasi di istanze del tipo costruito, ognuna con un argomento tipo diverso, in questo modo:  
   
  [!code-cs[csProgGuideGenerics#7](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-type-parameters_1.cs)]  
   
- In ognuna di queste istanze di `GenericList<T>`, tutte le occorrenze di `T` nella classe verranno sostituite in fase di esecuzione con l'argomento di tipo.  Tramite questa sostituzione, sono stati creati tre diversi oggetti efficienti e indipendenti dai tipi utilizzando una sola definizione di classe.  Per ulteriori informazioni sulle modalità di esecuzione di questa sostituzione da parte di CLR, vedere [Generics nel runtime](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
+ In ognuna di queste istanze di `GenericList<T>` ogni occorrenza di `T` nella classe verrà sostituita in fase di esecuzione con l'argomento tipo. Per mezzo di questa sostituzione, sono stati creati tre oggetti efficienti e indipendenti dai tipi separati usando un'unica definizione di classe. Per altre informazioni su come viene eseguita questa sostituzione da CLR, vedere [Generics nel runtime](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
   
-## Linee guida per l'assegnazione di nomi ai parametri di tipo  
+## <a name="type-parameter-naming-guidelines"></a>Linee guida per la denominazione dei parametri di tipo  
   
--   **Creare** parametri di tipo generico con nomi descrittivi, a meno che un nome composto da una singola lettera non sia già di facile comprensione e un nome descrittivo sarebbe superfluo.  
+-   **Assegnare** ai parametri di tipo generico nomi descrittivi, a meno che un nome di una sola lettera non sia già completamente comprensibile, senza che sia necessario un nome descrittivo più lungo.  
   
      [!code-cs[csProgGuideGenerics#8](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-type-parameters_2.cs)]  
   
--   **Considerare** l'utilizzo di T come nome di parametro per tipi con parametri di tipo composti da una singola lettera.  
+-   **Provare** a usare T come nome del parametro di tipo per i tipi con parametro di tipo di una sola lettera.  
   
      [!code-cs[csProgGuideGenerics#9](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-type-parameters_3.cs)]  
   
--   **Creare** nomi di parametri di tipo con prefissi descrittivi con "T".  
+-   **Aggiungere** ai nomi di parametro di tipo descrittivi il prefisso "T".  
   
      [!code-cs[csProgGuideGenerics#10](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-type-parameters_4.cs)]  
   
--   **Considerare** l'indicazione di vincoli posizionati su un parametro di tipo nel nome del parametro.  Ad esempio, un parametro vincolato a `ISession` potrebbe essere denominato `TSession`.  
+-   **Provare** a indicare i vincoli applicati a un parametro di tipo nel nome del parametro. Ad esempio, assegnare a un parametro vincolato a `ISession` il nome `TSession`.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Collections.Generic>   
- [Guida per programmatori C\#](../../../csharp/programming-guide/index.md)   
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Generics](../../../csharp/programming-guide/generics/index.md)   
- [Differenze tra modelli C\+\+ e generics C\#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)
+ [Differenze tra modelli C++ e generics C#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)
+

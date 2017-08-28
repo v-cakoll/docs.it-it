@@ -1,60 +1,80 @@
 ---
-title: "/win32res (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/win32res"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "win32res compiler option"
-  - "/win32res compiler option [C#]"
-  - "-win32res compiler option [C#]"
-  - "win32res compiler option [C#]"
+title: -win32res (opzioni del compilatore C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /win32res
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- win32res compiler option
+- /win32res compiler option [C#]
+- -win32res compiler option [C#]
+- win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4552b526767584e62106b2b10f8a1e6394a23b46
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
+
 ---
-# /win32res (C# Compiler Options)
-L'opzione **\/win32res** consente di inserire una risorsa Win32 nel file di output.  
+# <a name="win32res-c-compiler-options"></a>/win32res (opzioni del compilatore C#)
+L'opzione **/win32res** inserisce una risorsa Win32 nel file di output.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 /win32res:filename  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  `filename`  
- Rappresenta il file di risorse che si desidera aggiungere al file di output.  
+ Il file di risorse da aggiungere al file di output.  
   
-## Note  
- Un file di risorse Win32 può essere creato con il [Compilatore di risorse](http://go.microsoft.com/fwlink/?LinkId=148370).  Il Compilatore di risorse viene richiamato quando si compila un programma Visual C\+\+. Il file con estensione res viene creato dal file con estensione rc.  
+## <a name="remarks"></a>Note  
+ Un file di risorse Win32 può essere creato con il [compilatore di risorse](http://go.microsoft.com/fwlink/?LinkId=148370). Il Compilatore di risorse viene richiamato quando si compila un programma Visual C++. Dal file .rc viene creato un file .res.  
   
- Una risorsa Win32 può contenere informazioni sulla versione o su un'immagine bitmap \(icona\) che consentono di identificare l'applicazione in Esplora file.  Se l'opzione **\/win32res** non viene specificata, durante le compilazione verranno generate informazioni di versione basate sulla versione dell'assembly.  
+ In una risorsa Win32 può essere contenute le informazioni sulla versione o sulla bitmap (icona) che consentono di identificare l'applicazione in Esplora file. Se non si specifica **/win32res**, il compilatore genererà le informazioni sulla versione in base alla versione dell'assembly.  
   
- Per informazioni su come allegare o fare riferimento a un file di risorse .NET Framework, vedere rispettivamente [\/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) o [\/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md).  
+ Vedere [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (per fare riferimento a un file di risorse di .NET Framework) o [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (per associarlo).  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
 1.  Aprire la pagina **Proprietà** del progetto.  
   
 2.  Fare clic sulla pagina delle proprietà **Applicazione**.  
   
-3.  Fare clic sul pulsante **File di risorse** e scegliere un file tramite la casella combinata.  
+3.  Fare clic sul pulsante **File di risorse** e scegliere un file usando la casella combinata.  
   
-## Esempio  
- Compilare `in.cs` e allegare il file di risorse Win32 `rf.res` per generare `in.exe`:  
+## <a name="example"></a>Esempio  
+ Compilare `in.cs` e associare un file di risorse Win32 `rf.res` per produrre `in.exe`:  
   
-```  
+```console  
 csc /win32res:rf.res in.cs  
 ```  
   
-## Vedere anche  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Procedura: modificare le proprietà e le impostazioni di configurazione dei progetti](http://msdn.microsoft.com/it-it/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Vedere anche  
+ [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
+ [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+

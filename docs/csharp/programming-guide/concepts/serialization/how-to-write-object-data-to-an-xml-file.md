@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Scrivere i dati di un oggetto in un file XML (C#) | Microsoft Docs'
+title: 'Procedura: Scrivere i dati di un oggetto in un file XML (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 197e91be6d3785e437cb33541b2b4c9b4a2cbb84
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a4b2fde8f823e6b945d074327559013f4e748909
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Procedura: Scrivere i dati di un oggetto in un file XML (C#)
-Questo esempio scrive un oggetto da una classe in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
+Questo esempio scrive l'oggetto da una classe in un file XML usando la classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Esempio  
   
@@ -66,11 +67,11 @@ public class XMLWrite
 ## <a name="robust-programming"></a>Programmazione efficiente  
  Le seguenti condizioni possono generare un'eccezione:  
   
--   La classe da serializzare non ha un costruttore public senza parametri.  
+-   La classe da serializzare non ha un costruttore pubblico senza parametri.  
   
 -   Il file esiste ed è di sola lettura (<xref:System.IO.IOException>).  
   
--   Il percorso è troppo lungo (<xref:System.IO.PathTooLongException>).  
+-   Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).  
   
 -   Il disco è pieno (<xref:System.IO.IOException>).  
   
@@ -81,3 +82,4 @@ public class XMLWrite
  <xref:System.IO.StreamWriter>   
  [Leggere dati oggetto in un file XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
  [Serializzazione (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
+

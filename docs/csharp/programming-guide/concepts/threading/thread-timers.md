@@ -1,5 +1,5 @@
 ---
-title: Timer di thread (C#) | Documentazione Microsoft
+title: Timer di thread (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f91fde1340772c62f7779a2503bfb79aba7c3fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 30037b5b6d798796e7f76fa045f882b7f335e0d7
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-timers-c"></a>Timer di thread (C#)
-La classe <xref:System.Threading.Timer?displayProperty=fullName> è utile per l'esecuzione periodica di un'attività su un thread separato. Ad esempio, è possibile usare un timer di thread per controllare lo stato e l'integrità di un database o per eseguire il backup dei file critici.  
+La classe <xref:System.Threading.Timer?displayProperty=fullName> è utile per l'esecuzione periodica di un'attività in un thread distinto. Ad esempio, è possibile usare un timer di thread per controllare lo stato e l'integrità di un database o per eseguire il backup dei file critici.  
   
 ## <a name="thread-timer-example"></a>Esempio di timer di thread  
  Nell'esempio seguente viene avviata un'attività ogni due secondi e viene usato un flag per avviare il metodo <xref:System.IDisposable.Dispose%2A> che arresta il timer. Lo stato viene inserito nella finestra di output.  
@@ -83,8 +84,9 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- I timer di thread risultano particolarmente utili quando l'oggetto <xref:System.Windows.Forms.Timer?displayProperty=fullName> non è disponibile, come nel caso di sviluppo di applicazioni console.  
+ I timer di thread risultano particolarmente utili quando l'oggetto <xref:System.Windows.Forms.Timer?displayProperty=fullName> non è disponibile, come nel caso dello sviluppo di applicazioni console.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Threading>   
  [Applicazioni multithreading (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+

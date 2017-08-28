@@ -1,5 +1,5 @@
 ---
-title: Tuple | Guida per C#
+title: Tuple - Guida a C#
 description: Informazioni sui tipi di tupla denominati e non denominati in C#
 keywords: .NET, .NET Core, C#
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
-ms.openlocfilehash: 0ea7299d87dc69784e3bed93e48d83e4a0076a20
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0efb478491ab4c226ec56519c9a957b19ce0478f
 ms.contentlocale: it-it
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -25,8 +25,10 @@ Le tuple in C# sono tipi definiti tramite una sintassi leggera. I vantaggi inclu
 Questo argomento descrive le regole del linguaggio che controllano le tuple in C# 7, le diverse modalità di uso delle stesse e una guida iniziale per l'uso delle tuple.
 
 > [!NOTE]
-> Le nuove funzionalità delle tuple richiedono il tipo `System.ValueTuple`. Per Visual Studio 2017, è necessario aggiungere il pacchetto NuGet [System.ValueTuple](https://www.nuget.org/packages/System.ValueTuple/), disponibile nella Raccolta NuGet.
-> Senza questo pacchetto potrebbe essere riscontrato un errore di compilazione simile a `error CS8179: Predefined type 'System.ValueTuple``2' is not defined or imported` o `error CS8137: Cannot define a class or member that utilizes tuples because the compiler required type 'System.Runtime.CompilerServices.TupleElementNamesAttribute' cannot be found.`
+> Le nuove funzionalità delle tuple richiedono i tipi @System.ValueTuple.
+> È necessario aggiungere il pacchetto NuGet [ `System.ValueTuple` ](https://www.nuget.org/packages/System.ValueTuple/) per usarlo nelle piattaforme che non includono i tipi.
+>
+> È simile ad altre funzionalità del linguaggio basate sui tipi resi disponibili nel framework. Alcuni esempi sono `async` e `await`, basati sull'interfaccia `INotifyCompletion`, e LINQ, basato su `IEnumerable<T>`. Tuttavia, il meccanismo di distribuzione sta cambiando perché .NET sta diventando più indipendente dalla piattaforma. .NET Framework potrebbe non essere sempre distribuito secondo la stessa cadenza del compilatore del linguaggio. Quando nuove funzionalità del linguaggio si basano su nuovi tipi, tali tipi saranno disponibili come pacchetti NuGet al momento della distribuzione delle funzionalità del linguaggio. Una volta che questi nuovi tipi vengono aggiunti all'API standard .NET e distribuiti come parte del framework, il requisito del pacchetto NuGet viene rimosso.
 
 Iniziamo dai motivi dell'aggiunta del nuovo supporto per le tuple. I metodi restituiscono un oggetto singolo. Le tuple consentono di creare più facilmente pacchetti di valori multipli in questo oggetto singolo. 
 
@@ -43,7 +45,7 @@ Le tuple sono contenitori di dati più semplici e flessibili rispetto ai tipi `c
 
 ## <a name="named-and-unnamed-tuples"></a>Tuple con e senza nome
 
-Lo struct `ValueTuple` include campi denominati `Item1`, `Item2`, `Item3` e così via, più simili alle proprietà definite nei tipi `Tuple` esistenti.
+Lo struct `ValueTuple` include campi denominati `Item1`, `Item2`, `Item3` e così via, simili alle proprietà definite nei tipi `Tuple` esistenti.
 Questi nomi sono gli unici nomi che è possibile usare per le *tuple senza nome*. Quando non si forniscono alla tupla nomi alternativi per i campi, viene creata una tupla senza nome:
 
 [!code-csharp[Tupla senza nome](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Tupla senza nome")]

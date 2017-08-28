@@ -1,5 +1,5 @@
 ---
-title: char (Riferimenti per C#) | Microsoft Docs
+title: char (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,14 +31,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf4c71d6f33d66e5ca917f2cfeb6c882b19b9d22
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c6601a58804d6ecfcbedbc19da09560884e54e7f
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="char-c-reference"></a>char (Riferimenti per C#)
-La parola chiave `char` è usata per dichiarare un'istanza della struttura <xref:System.Char?displayProperty=fullName> che .NET Framework usa per rappresentare un carattere Unicode. Il valore di un oggetto `Char` è un valore numerico (ordinale) a 16 bit.  
+La parola chiave `char` è usata per dichiarare un'istanza della struttura <xref:System.Char?displayProperty=fullName> usata da .NET Framework per rappresentare un carattere Unicode. Il valore di un oggetto `Char` è un valore numerico (ordinale) a 16 bit.  
   
  I caratteri Unicode vengono usati per rappresentare la maggior parte delle lingue scritte di tutto il mondo.  
   
@@ -57,7 +58,7 @@ La parola chiave `char` è usata per dichiarare un'istanza della struttura <xref
  Il tipo <xref:System.Char?displayProperty=fullName> offre diversi metodi statici per usare i valori `char`.  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Char>   
@@ -70,3 +71,4 @@ La parola chiave `char` è usata per dichiarare un'istanza della struttura <xref
  [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
  [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md)   
  [Stringhe](../../../csharp/programming-guide/strings/index.md)
+

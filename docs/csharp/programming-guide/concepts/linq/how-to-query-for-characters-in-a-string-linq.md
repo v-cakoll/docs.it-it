@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire una query per trovare caratteri in una stringa (LINQ) (C#) | Microsoft Docs'
+title: 'Procedura: Eseguire una query per trovare caratteri in una stringa (LINQ) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 86c763d8f31a7021605d82ecab0664a290934e07
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e78ad4aa493a7f58c43e77772138900e2b20b18a
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Procedura: Eseguire una query per trovare caratteri in una stringa (LINQ) (C#)
@@ -77,3 +77,4 @@ class QueryAString
 ## <a name="see-also"></a>Vedere anche  
  [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
  [Procedura: Combinare query LINQ con espressioni regolari (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+

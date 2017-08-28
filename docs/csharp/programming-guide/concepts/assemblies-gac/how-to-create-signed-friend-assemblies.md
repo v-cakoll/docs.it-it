@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare assembly Friend firmati (C#) | Microsoft Docs'
+title: 'Procedura: Creare assembly Friend firmati (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 890cead4b28b8532dd7bd7f571defe7e280e4cdc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e9d56602eaffe73ff301ade95aaebeabab663be6
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Procedura: Creare assembly Friend firmati (C#)
@@ -46,7 +47,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Creare un file C# denominato `friend_signed_A` contenente il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare che friend_signed_B è un assembly Friend.  
+3.  Creare un file C# denominato `friend_signed_A` contenente il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare friend_signed_B come assembly Friend.  
   
      Ogni volta che viene eseguito, lo strumento Nome sicuro genera una chiave pubblica nuova. È pertanto necessario sostituire la chiave pubblica nel codice seguente con la chiave pubblica appena generata, come illustrato nell'esempio seguente.  
   
@@ -102,14 +103,15 @@ In questo esempio viene illustrato come usare assembly Friend e assembly con nom
      Il programma stampa la stringa "Class1.Test".  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Tra l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e la classe <xref:System.Security.Permissions.StrongNameIdentityPermission> esistono analogie. La differenza principale è che <xref:System.Security.Permissions.StrongNameIdentityPermission> può chiedere le autorizzazioni di sicurezza per l'esecuzione di una particolare sezione di codice, mentre il l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controlla la visibilità dei tipi e dei membri `internal`.  
+ Ci sono alcune analogie tra l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e la classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. La differenza principale è che <xref:System.Security.Permissions.StrongNameIdentityPermission> può chiedere le autorizzazioni di sicurezza per l'esecuzione di una particolare sezione di codice, mentre l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controlla la visibilità dei membri e dei tipi `internal`.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- [Assemblies and the Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  (Assembly e Global Assembly Cache (C#))  
+ [Assembly e Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
  [Assembly Friend (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
  [How to: Create Unsigned Friend Assemblies (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  (Procedura: Creare assembly Friend non firmati)  
  [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)   
  [Sn.exe (strumento Nome sicuro)](https://msdn.microsoft.com/library/k5b5tt23)   
  [Creazione e uso degli assembly con nome sicuro](https://msdn.microsoft.com/library/xwb8f617)   
  [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+

@@ -1,51 +1,71 @@
 ---
-title: "/target:module (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/target:module"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "-target compiler options [C#], /target:module"
-  - "target compiler options [C#], /target:module"
-  - "/target compiler options [C#], /target:module"
+title: -target:module (opzioni del compilatore C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /target:module
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- -target compiler options [C#], /target:module
+- target compiler options [C#], /target:module
+- /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 23c91fe0e4002ebf4c002eb4e0c7e25020fed356
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
+
 ---
-# /target:module (C# Compiler Options)
-Specificando questa opzione, il compilatore non genererà un manifesto assembly.  
+# <a name="targetmodule-c-compiler-options"></a>/target:module (opzioni del compilatore C#)
+Questa opzione indica al compilatore di non generare un manifesto dell'assembly.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 /target:module  
 ```  
   
-## Note  
- Per impostazione predefinita, il file di output creato eseguendo la compilazione e specificando questa opzione avrà estensione .netmodule.  
+## <a name="remarks"></a>Note  
+ Per impostazione predefinita, l'estensione del file di output creato eseguendo la compilazione con questa opzione sarà netmodule.  
   
- Non è possibile caricare in Common Language Runtime di .NET Framework i file privi di manifesto assembly.  È tuttavia possibile incorporare tali file nel manifesto assembly di un assembly mediante [\/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ Un file che non dispone di un manifesto dell'assembly non può essere caricato da Common Language Runtime di .NET Framework. È tuttavia possibile incorporare un file di questo tipo nel manifesto dell'assembly di un assembly tramite [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
   
- Se in un'unica compilazione vengono generati più moduli, i tipi [internal](../../../csharp/language-reference/keywords/internal.md) di un modulo verranno resi disponibili ad altri moduli della compilazione.  Quando il codice del modulo fa riferimento ai tipi `internal` di un altro modulo, sarà necessario incorporare entrambi i moduli in un manifesto assembly, tramite l'opzione **\/addmodule**.  
+ Se viene creato più di un modulo in un'unica compilazione, i tipi [internal](../../../csharp/language-reference/keywords/internal.md) in un modulo saranno disponibili per gli altri moduli nella compilazione. Quando il codice in un modulo fa riferimento a tipi `internal` in un altro modulo, sarà necessario incorporare entrambi i moduli in un manifesto dell'assembly tramite **/addmodule**.  
   
- La creazione di moduli non è supportata nell'ambiente di sviluppo di Visual Studio.  
+ La creazione di un modulo non è supportata nell'ambiente di sviluppo di Visual Studio.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
-## Esempio  
- Compilare `in.cs`, creando `in.netmodule`.  
+## <a name="example"></a>Esempio  
+ Compilare in `in.cs` creando in `in.netmodule`:  
   
-```  
+```console  
 csc /target:module in.cs  
 ```  
   
-## Vedere anche  
- [\/target \(Specify Output File Format\)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [-target (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
+ [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+

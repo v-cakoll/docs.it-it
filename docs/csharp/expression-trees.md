@@ -1,6 +1,6 @@
 ---
 title: Expression Trees
-description: Expression Trees
+description: "Informazioni sugli alberi delle espressioni in .NET Core e su come usarli per rappresentare il codice sotto forma di strutture che è possibile esaminare, modificare ed eseguire."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6ec60b6cdbe29def719f7970dad15fad65902e7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3935906d9fca81a094999eefdd49ae4ed56990bf
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -31,10 +31,10 @@ Si è probabilmente già scritto codice che usa gli alberi delle espressioni. Le
 Ciò consente a [Entity Framework](http://docs.efproject.net/en/latest/) di convertire la query scritta in C# in SQL che viene eseguito nel motore di database. Un altro esempio è [Moq](https://github.com/Moq/moq), che è un framework di simulazione tra i più diffusi per .NET.
 
 Le sezioni rimanenti di questa esercitazione illustreranno che cosa sono gli alberi delle espressioni, esamineranno le classi di framework che supportano gli alberi delle espressioni e spiegheranno come lavorare con gli alberi delle espressioni. Si apprenderà come leggere gli alberi delle espressioni, come creare alberi delle espressioni, come creare alberi delle espressioni modificati e come eseguire il codice rappresentato dagli alberi delle espressioni. Al termine, sarà possibile usare queste strutture per creare algoritmi adattivi completi.
-<style type="text/css"> ol { list-style-type: upper-roman; } </style>
+
 1. [Nozioni di base sugli alberi delle espressioni](expression-trees-explained.md)
 
-    Understand the structure and concepts behind *Expression Trees*.
+    Informazioni sulla struttura e sui concetti correlati agli *alberi delle espressioni*.
     
 2. [Tipi di framework che supportano alberi delle espressioni](expression-classes.md)
     

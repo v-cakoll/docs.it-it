@@ -1,64 +1,84 @@
 ---
-title: "Procedura: definire propriet&#224; astratte (Guida per programmatori C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "proprietà astratte [C#]"
-  - "proprietà [C#], abstract"
+title: "Procedura: definire proprietà astratte (Guida per programmatori C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- properties [C#], abstract
+- abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c6decaae138a21c24e94e2ed74111c860777f64b
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
+
 ---
-# Procedura: definire propriet&#224; astratte (Guida per programmatori C#)
-Nell'esempio seguente viene illustrato come definire proprietà [astratte](../../../csharp/language-reference/keywords/abstract.md).  La dichiarazione di una proprietà astratta non fornisce un'implementazione delle funzioni di accesso della proprietà. Viene dichiarato che la classe supporta le proprietà, ma l'implementazione delle funzioni di accesso viene demandata alle classi derivate.  Nell'esempio riportato di seguito viene illustrato come implementare le proprietà astratte ereditate da una classe base.  
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Procedura: definire proprietà astratte (Guida per programmatori C#)
+L'esempio seguente mostra come definire proprietà di tipo [abstract](../../../csharp/language-reference/keywords/abstract.md). La dichiarazione di una proprietà astratta non fornisce un'implementazione delle funzioni di accesso della proprietà. Dichiara che la classe supporta le proprietà, ma l'implementazione delle funzioni di accesso viene demandata alle classi derivate. L'esempio seguente illustra come implementare le proprietà astratte ereditate da una classe di base.  
   
- L'esempio include tre file, ciascuno dei quali viene compilato singolarmente e il cui assembly risultante viene utilizzato come riferimento nella compilazione successiva:  
+ L'esempio include tre file, ognuno dei quali viene compilato singolarmente e al cui assembly risultante viene fatto riferimento nella compilazione successiva:  
   
--   abstractshape.cs: la classe `Shape` che contiene una proprietà `Area` astratta.  
+-   abstractshape.cs: classe `Shape` che contiene una proprietà `Area` astratta.  
   
--   shapes.cs: le sottoclassi della classe `Shape`.  
+-   shapes.cs: sottoclassi della classe `Shape`.  
   
--   shapetest.cs: un programma di test per la visualizzazione delle aree di alcuni oggetti derivati da `Shape`.  
+-   shapetest.cs: programma di test per la visualizzazione delle aree di alcuni oggetti derivati da `Shape`.  
   
- Per compilare l'esempio, utilizzare il seguente comando:  
+ Per compilare l'esempio, usare il comando seguente:  
   
  `csc abstractshape.cs shapes.cs shapetest.cs`  
   
  Verrà creato il file eseguibile shapetest.exe.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Questo file dichiara la classe `Shape` che contiene la proprietà `Area` del tipo `double`.  
   
  [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
   
--   I modificatori della proprietà sono inseriti nella dichiarazione della proprietà stessa.  Di seguito è riportato un esempio:  
+-   I modificatori della proprietà vengono inseriti nella dichiarazione della proprietà stessa. Ad esempio:  
   
     ```  
     public abstract double Area  
     ```  
   
--   Quando si dichiara una proprietà astratta \(quale `Area`, in questo esempio\), è sufficiente indicare le funzioni di accesso disponibili per la proprietà, senza implementarle.  In questo esempio è disponibile solo una funzione di accesso [get](../../../csharp/language-reference/keywords/get.md), pertanto la proprietà è in sola lettura.  
+-   Quando si dichiara una proprietà astratta, come `Area` in questo esempio, è sufficiente indicare le funzioni di accesso disponibili per la proprietà, senza implementarle. In questo esempio è disponibile solo una funzione di accesso [get](../../../csharp/language-reference/keywords/get.md), quindi la proprietà è di sola lettura.  
   
-## Esempio  
- Nel codice riportato di seguito sono presenti tre sottoclassi di `Shape` di cui viene illustrato l'override della proprietà `Area` per fornire la propria implementazione.  
+## <a name="example"></a>Esempio  
+ Il codice seguente mostra tre sottoclassi di `Shape` e il modo in cui eseguono l'override della proprietà `Area` per fornire la propria implementazione.  
   
  [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
   
-## Esempio  
- Nel codice riportato di seguito viene illustrato un programma di test che crea una serie di oggetti derivati da `Shape` e ne stampa le aree.  
+## <a name="example"></a>Esempio  
+ Il codice seguente mostra un programma di test che crea diversi oggetti derivati da `Shape` e stampa le relative aree.  
   
  [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
   
-## Vedere anche  
- [Guida per programmatori C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
  [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [Procedura: Creare e usare assembly dalla riga di comando](../Topic/How%20to:%20Create%20and%20Use%20Assemblies%20Using%20the%20Command%20Line%20\(C%23%20and%20Visual%20Basic\).md)
+ [Procedura: Creare e usare assembly dalla riga di comando](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)
+

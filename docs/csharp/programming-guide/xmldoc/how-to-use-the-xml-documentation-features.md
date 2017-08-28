@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Usare le funzionalità relative alla documentazione XML (Guida per programmatori C#) | Microsoft Docs"
+title: "Procedura: utilizzare le funzionalità relative alla documentazione XML (Guida per programmatori C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f4e74e2da4a5f8ba0a9964a5eff4f2a492b8981f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eeee77db523bc0ad97f425d4ba8076ae5740dfe8
 ms.contentlocale: it-it
-ms.lasthandoff: 05/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Procedura: utilizzare le funzionalità relative alla documentazione XML (Guida per programmatori C#)
@@ -52,8 +52,8 @@ L'esempio seguente fornisce una panoramica di base di un tipo documentato.
  **\<summary>**  
  **Class level summary documentation goes here.\</summary>**  
  **\<remarks>**  
- **Longer comments can be associated with a type or member**   
- **through the remarks tag\</remarks>**  
+ **È possibile associare commenti più estesi a un tipo o un membro**   
+ **tramite il tag remarks\</remarks>**  
  **\</member>**  
  **\<member name="F:SomeClass.m_Name">**  
  **\<summary>**  
@@ -67,8 +67,8 @@ L'esempio seguente fornisce una panoramica di base di un tipo documentato.
  **Description for SomeMethod.\</summary>**  
  **\<param name="s"> Parameter description for s goes here\</param>**  
  **\<seealso cref="T:System.String">**  
- **You can use the cref attribute on any tag to reference a type or member**   
- **and the compiler will check that the reference exists. \</seealso>**  
+ **È possibile utilizzare l'attributo cref in qualsiasi tag per fare riferimento a un tipo o un membro.**   
+ **Il compilatore verificherà l'esistenza del riferimento. \</seealso>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeOtherMethod">**  
  **\<summary>**  
@@ -80,7 +80,7 @@ L'esempio seguente fornisce una panoramica di base di un tipo documentato.
  **\</member>**  
  **\<member name="M:SomeClass.Main(System.String[])">**  
  **\<summary>**  
- **The entry point for the application.**  
+ **Punto di ingresso dell'applicazione.**  
  **\</summary>**  
  **\<param name="args"> A list of command line arguments\</param>**  
  **\</member>**  
@@ -119,3 +119,4 @@ L'esempio seguente fornisce una panoramica di base di un tipo documentato.
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [/doc (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
  [Commenti relativi alla documentazione XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+

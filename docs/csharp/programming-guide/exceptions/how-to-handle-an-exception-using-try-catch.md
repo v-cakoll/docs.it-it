@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Gestire un&quot;eccezione usando try-catch (Guida per programmatori C#) | Microsoft Docs'
+title: 'Procedura: Gestire un''eccezione usando try-catch (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,17 +29,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 10eac61f4b9bb186d28044862ebc7273c6eb07b2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f6f714cd1b652845e77405ff74fbfc860e71dc21
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Procedura: gestire un'eccezione utilizzando Try/Catch (Guida per programmatori C#)
+# <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Procedura: Gestire un'eccezione usando try-catch (Guida per programmatori C#)
 Lo scopo di un blocco [try-catch](../../../csharp/language-reference/keywords/try-catch.md) è quello di rilevare e gestire un'eccezione generata da codice in esecuzione. Alcune eccezioni possono essere gestite in un blocco `catch` e il problema viene risolto senza che l'eccezione venga generata nuovamente. Molto spesso, invece, l'unica cosa che si possa fare è assicurarsi che venga generata l'eccezione appropriata.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio <xref:System.IndexOutOfRangeException> non è l'eccezione più appropriata: <xref:System.ArgumentOutOfRangeException> ha più senso per il metodo in quanto l'errore è causato dall'argomento `index` passato dal chiamante.  
+ In questo esempio <xref:System.IndexOutOfRangeException> non è l'eccezione più appropriata: <xref:System.ArgumentOutOfRangeException> ha più senso per il metodo perché l'errore è causato dall'argomento `index` passato dal chiamante.  
   
  [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-handle-an-exception-using-try-catch_1.cs)]  
   
@@ -50,3 +51,4 @@ Lo scopo di un blocco [try-catch](../../../csharp/language-reference/keywords/tr
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Eccezioni e gestione delle eccezioni](../../../csharp/programming-guide/exceptions/index.md)   
  [Gestione delle eccezioni](../../../csharp/programming-guide/exceptions/exception-handling.md)
+

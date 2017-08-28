@@ -1,5 +1,5 @@
 ---
-title: "Classificazione degli operatori di query standard in base alla modalità di esecuzione (C#) | Microsoft Docs"
+title: "Classificazione degli operatori di query standard in base alla modalità di esecuzione (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cb79fe22bd551599eef7f20bd34492a2930d5609
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4217cbce36bc055cf8c6dde446df4d7b7394430d
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Classificazione degli operatori di query standard in base alla modalità di esecuzione (C#)
@@ -34,7 +35,7 @@ Le implementazioni LINQ to Objects dei metodi degli operatori di query standard 
  L'esecuzione immediata indica che l'origine dei dati è in lettura e l'operazione viene eseguita in corrispondenza del punto del codice in cui viene dichiarata la query. Tutti gli operatori di query standard che restituiscono un risultato singolo non enumerabile vengono eseguiti immediatamente.  
   
 ### <a name="deferred"></a>Rinviata  
- L'esecuzione posticipata indica che l'operazione non viene eseguita in corrispondenza del punto del codice in cui viene dichiarata la query. L'operazione viene eseguita solo quando la variabile di query viene enumerata, ad esempio tramite un'istruzione `foreach`. Ciò significa che i risultati dell'esecuzione della query dipendono dal contenuto dell'origine dei dati nel momento in cui viene eseguita la query e non quando viene definita. Se la variabile di query viene enumerata più volte, i risultati potrebbero essere diversi ogni volta. Quasi tutti gli operatori di query standard il cui tipo restituito è <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IOrderedEnumerable%601> vengono eseguiti in modo posticipato.  
+ L'esecuzione posticipata indica che l'operazione non viene eseguita in corrispondenza del punto del codice in cui viene dichiarata la query. L'operazione viene eseguita solo quando la variabile di query viene enumerata, ad esempio tramite un'istruzione `foreach`. Ciò significa che i risultati dell'esecuzione della query dipendono dal contenuto dell'origine dei dati nel momento in cui viene eseguita la query e non quando viene definita. Se la variabile di query viene enumerata più volte, i risultati potrebbero essere diversi ogni volta. Quasi tutti gli operatori query standard con tipo restituito <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IOrderedEnumerable%601> vengono eseguiti in modo posticipato.  
   
  Gli operatori di query che usano l'esecuzione posticipata possono essere anche suddivisi in due categorie: di flusso e non di flusso.  
   
@@ -105,6 +106,7 @@ Le implementazioni LINQ to Objects dei metodi degli operatori di query standard 
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Linq.Enumerable>   
- [Panoramica degli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ [Panoramica degli operatori query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [Sintassi di espressione di query per operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)   
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+

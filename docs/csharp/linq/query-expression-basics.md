@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fd0ef3c71d66ceca28d3ae7025058df469655c2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be8e2374f89366c6a98df900674a957bd2f531cc
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="query-expression-basics"></a>Nozioni fondamentali sulle espressioni di query
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/13/2017
   
  In genere, i dati di origine vengono organizzati logicamente come una sequenza di elementi dello stesso tipo. Ad esempio, una tabella di database SQL contiene una sequenza di righe. In un file XML è presente una "sequenza" di elementi XML, anche se questi sono organizzati gerarchicamente in una struttura ad albero. Una raccolta in memoria contiene una sequenza di oggetti. 
   
- Dal punto di vista di un'applicazione, il tipo e la struttura specifici dei dati di origine non è importante. L'applicazione considera sempre i dati di origine come raccolta <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>. In LINQ to XML i dati di origine ad esempio sono resi visibili come oggetto `IEnumerable` \< <xref:System.Xml.Linq.XElement>>.  
+ Dal punto di vista di un'applicazione, il tipo e la struttura specifici dei dati di origine non è importante. L'applicazione considera sempre i dati di origine come raccolta <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>. In LINQ to XML, ad esempio, i dati di origine sono resi visibili come oggetto `IEnumerable`\<<xref:System.Xml.Linq.XElement>>.  
   
  Data questa sequenza di origine, una query può eseguire una delle tre operazioni seguenti:  
   

@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Ottenere informazioni relative a file, cartelle e unità (Guida per programmatori C#) | Microsoft Docs"
+title: "Procedura: ottenere informazioni relative a file, cartelle e unità (Guida per programmatori C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 16950f835938846804ade1a8ad23d907aa69b9c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6067ea9d51c31c9398c7b1fcd83ca8fa3a4fec76
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Procedura: ottenere informazioni relative a file, cartelle e unità (Guida per programmatori C#)
@@ -46,15 +47,15 @@ In .NET Framework è possibile accedere a informazioni sul file system mediante 
   
 -   <xref:System.IO.File?displayProperty=fullName>  
   
- Le classi <xref:System.IO.FileInfo> e <xref:System.IO.DirectoryInfo> rappresentano un file o una directory e contengono proprietà che espongono molti degli attributi di file che sono supportati dal file system NTFS. Contengono anche i metodi per l'apertura, la chiusura, lo spostamento e l'eliminazione di file e cartelle. È possibile creare istanze di queste classi passando al costruttore una stringa che rappresenta il nome del file, della cartella o dell'unità:  
+ Le classi <xref:System.IO.FileInfo> e <xref:System.IO.DirectoryInfo> rappresentano un file o una directory e contengono proprietà che espongono molti degli attributi di file supportati dal file system NTFS. Contengono anche i metodi per l'apertura, la chiusura, lo spostamento e l'eliminazione di file e cartelle. È possibile creare istanze di queste classi passando al costruttore una stringa che rappresenta il nome del file, della cartella o dell'unità:  
   
 ```csharp  
 System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");  
 ```  
   
- È anche possibile ottenere i nomi di file, cartelle o unità tramite le chiamate a <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=fullName>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=fullName>, e <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=fullName>.  
+ È anche possibile ottenere i nomi di file, cartelle o unità tramite chiamate a <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=fullName>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=fullName> e <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=fullName>.  
   
- Le classi <xref:System.IO.Directory?displayProperty=fullName> e <xref:System.IO.File?displayProperty=fullName> specificano metodi statici per il recupero di informazioni su file e directory.  
+ Le classi <xref:System.IO.Directory?displayProperty=fullName> e <xref:System.IO.File?displayProperty=fullName> forniscono metodi statici per il recupero di informazioni su file e directory.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra vari modi per accedere alle informazioni su file e cartelle.  
@@ -78,3 +79,4 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
  <xref:System.IO?displayProperty=fullName>   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [File system e Registro di sistema (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/index.md)
+

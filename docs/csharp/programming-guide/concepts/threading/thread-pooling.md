@@ -1,5 +1,5 @@
 ---
-title: Limitazione delle richieste di thread (C#) | Documentazione Microsoft
+title: Limitazione delle richieste di thread (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: da18d75f5d80cd7ad8a9a974bf0ffda196e7ea86
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-pooling-c"></a>Limitazione delle richieste di thread (C#)
@@ -36,7 +37,7 @@ Un *pool di thread* è una Collection di thread che è possibile usare per esegu
   
  È possibile implementare un pool di thread personalizzato, ma risulta più agevole usare quello fornito con .NET Framework tramite la classe <xref:System.Threading.ThreadPool>.  
   
- Per creare un pool di thread, si chiama il metodo <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> con un delegato per la routine che si desidera eseguire e tramite C# si crea il thread e si esegue la routine.  
+ Per creare un pool di thread, si chiama il metodo <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> con un delegato per la routine da eseguire e tramite C# si crea il thread e si esegue la routine.  
   
 ## <a name="thread-pooling-example"></a>Esempio di limitazione delle richieste di thread  
  Nell'esempio seguente viene illustrato come usare la limitazione delle richieste di thread per avviare svariate attività.  
@@ -68,7 +69,7 @@ private void AnotherLongTask(Object state)
 ## <a name="thread-pool-parameters-and-return-values"></a>Parametri e valori restituiti del pool di thread  
  La restituzione di valori da un thread del pool di thread non risulta semplicissima. Non è possibile avvalersi della soluzione standard per la restituzione di valori da una chiamata di funzione, poiché in un pool di thread possono essere accodate solo le routine `Sub`. Un modo per fornire parametri e restituire valori è incapsulando i parametri, i valori restituiti e i metodi in una classe wrapper come descritto in [Parametri e valori restituiti per routine multithreading (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).  
   
- Una soluzione più semplice per fornire parametri e valori restituiti consiste nell'uso della variabile facoltativa dell'oggetto di stato `ByVal` facoltativo del metodo <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Se si usa tale variabile per passare un riferimento a un'istanza di una classe, i membri dell'istanza potranno essere modificati dal thread del pool di thread e usati come valori restituiti.  
+ La variabile facoltativa dell'oggetto di stato `ByVal` del metodo <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> offre un metodo più semplice per fornire i parametri e restituire valori. Se si usa tale variabile per passare un riferimento a un'istanza di una classe, i membri dell'istanza potranno essere modificati dal thread del pool di thread e usati come valori restituiti.  
   
  Inizialmente potrebbe non essere evidente che è possibile modificare un oggetto a cui fa riferimento una variabile che viene passata per valore. Questa operazione può essere eseguita perché solo il riferimento oggetto viene inviato dal valore. Quando si apportano modifiche ai membri dell'oggetto indicato dal riferimento all'oggetto, le modifiche vengono applicate all'istanza di classe effettiva.  
   
@@ -82,3 +83,4 @@ private void AnotherLongTask(Object state)
  [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [Applicazioni multithreading (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [Sincronizzazione di thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
+

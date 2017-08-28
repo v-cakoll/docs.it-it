@@ -1,5 +1,5 @@
 ---
-title: "Annullare un&quot;attività asincrona o un elenco di attività (C#) | Microsoft Docs"
+title: "Annullare un'attività asincrona o un elenco di attività (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 9fbfa3602766b51c4be5078b793139501802a90c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e34344c9cdf0717291c4c7375bab703679515a7
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Annullare un'attività asincrona o un elenco di attività (C#)
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/24/2017
         CancellationTokenSource cts;  
     ```  
   
-2.  Aggiungere il gestore eventi seguente per il pulsante **Annulla**. Il gestore eventi usa il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> per notificare a `cts` quando l'utente richiede l'annullamento.  
+2.  Aggiungere il gestore eventi seguente per il pulsante **Annulla**. Il gestore dell'evento usa il metodo <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> per inviare notifica a `cts` quando l'utente richiede l'annullamento.  
   
     ```csharp  
     // ***Add an event handler for the Cancel button.  
@@ -113,7 +113,7 @@ ms.lasthandoff: 03/24/2017
         }  
         ```  
   
-4.  In `AccessTheWebAsync`, usare l'overload <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> del metodo `GetAsync` nel tipo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web. Passare `ct`, il parametro <xref:System.Threading.CancellationToken> di `AccessTheWebAsync`, come secondo argomento. Il token trasporta il messaggio se l'utente sceglie il pulsante **Annulla**.  
+4.  In `AccessTheWebAsync` usare l'overload <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> del metodo `GetAsync` nel tipo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web. Passare `ct`, il parametro <xref:System.Threading.CancellationToken> di `AccessTheWebAsync`, come secondo argomento. Il token trasporta il messaggio se l'utente sceglie il pulsante **Annulla**.  
   
      Il codice seguente illustra tutte le modifiche in `AccessTheWebAsync`.  
   
@@ -239,7 +239,6 @@ ms.lasthandoff: 03/24/2017
 5.  Se non si annulla il programma, viene prodotto l'output seguente.  
   
     ```  
-  
     Length of the downloaded string: 35939.  
   
     Length of the downloaded string: 237682.  
@@ -255,7 +254,6 @@ ms.lasthandoff: 03/24/2017
     Length of the downloaded string: 145790.  
   
     Downloads complete.  
-  
     ```  
   
      Se si sceglie il pulsante **Annulla** prima di aver completato i download, l'output contiene le lunghezze dei download completati prima dell'annullamento.  
@@ -268,11 +266,10 @@ ms.lasthandoff: 03/24/2017
     Length of the downloaded string: 128607.  
   
     Downloads canceled.  
-  
     ```  
   
 ##  <a name="BKMK_CompleteExamples"></a> Esempi completi  
- Le sezioni seguenti contengono il codice per ognuno degli esempi precedenti. Si noti che è necessario aggiungere un riferimento a <xref:System.Net.Http>.  
+ Le sezioni seguenti contengono il codice per ognuno degli esempi precedenti. Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.  
   
  È possibile scaricare i progetti da [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Esempio di attività asincrona: ottimizzazione dell'applicazione).  
   
@@ -535,6 +532,7 @@ namespace CancelAListOfTasks
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Threading.CancellationTokenSource>   
  <xref:System.Threading.CancellationToken>   
- [Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  (Programmazione asincrona con async e await (C#))  
+ [Programmazione asincrona con async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Ottimizzazione dell'applicazione asincrona (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Esempio di attività asincrona: ottimizzazione dell'applicazione)
+

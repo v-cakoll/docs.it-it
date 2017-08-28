@@ -1,5 +1,5 @@
 ---
-title: -target:appcontainerexe (opzioni del compilatore C#) | Documentazione Microsoft
+title: -target:appcontainerexe (opzioni del compilatore C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 168771506692308bc9b031df5c059e58e8d190b1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 77016d094ec7e82729a46208c17e2a77fe733103
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetappcontainerexe-c-compiler-options"></a>/target:appcontainerexe (opzioni del compilatore C#)
-Se si usa l'opzione del compilatore **/target:appcontainerexe**, il compilatore crea un file eseguibile di Windows (exe) che deve essere eseguito in un contenitore di app. Questa opzione equivale a [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), ma è progettata per le app [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)].  
+Se si usa l'opzione del compilatore **/target:appcontainerexe**, il compilatore crea un file eseguibile di Windows (exe) che deve essere eseguito in un contenitore di app. Questa opzione equivale a [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), ma è progettata per le app [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 /target:appcontainerexe  
 ```  
   
@@ -54,14 +55,14 @@ Se si usa l'opzione del compilatore **/target:appcontainerexe**, il compilatore 
   
 2.  Nell'elenco **Tipo di output** della scheda **Applicazione** scegliere **Applicazione Windows Store**.  
   
-     Questa opzione è disponibile solo per i modelli di app [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)].  
+     Questa opzione è disponibile solo per i modelli di app [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Esempio  
  Il seguente comando consente di compilare `filename.cs` in un file eseguibile di Windows che può essere eseguito solo in un contenitore di app.  
   
-```  
+```console  
 csc /target:appcontainerexe filename.cs  
 ```  
   
@@ -69,3 +70,4 @@ csc /target:appcontainerexe filename.cs
  [/target (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [/target:winexe (opzioni del compilatore C#)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)   
  [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+

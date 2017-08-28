@@ -1,5 +1,5 @@
 ---
-title: Varianza nei delegati (C#) | Microsoft Docs
+title: Varianza nei delegati (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: cd1b765faa734973bf5e184cee2ac934ebdf9241
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79de8218f3fcdf52dad84bb0bacffde01a222066
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="variance-in-delegates-c"></a>Varianza nei delegati (C#)
@@ -131,13 +131,13 @@ public static void Test()
   
 -   Delegati `Action` dallo spazio dei nomi <xref:System>, ad esempio <xref:System.Action%601> e <xref:System.Action%602>  
   
--   Delegati `Func` dallo spazio dei nomi <xref:System>, ad esempio <xref:System.Action%601> e <xref:System.Action%602>  
+-   Delegati `Func` dallo spazio dei nomi <xref:System>, ad esempio <xref:System.Func%601> e <xref:System.Func%602>  
   
--   Il delegato <xref:System.Predicate%601>  
+-   Delegato <xref:System.Predicate%601>.  
   
--   Il delegato <xref:System.Comparison%601>  
+-   Delegato <xref:System.Comparison%601>.  
   
--   Il delegato <xref:System.Converter%602>  
+-   Delegato <xref:System.Converter%602>.  
   
  Per altre informazioni ed esempi, vedere [Uso della varianza per i delegati generici Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
@@ -157,7 +157,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
-> I parametri  `ref`e `out` in C# non possono essere contrassegnati come varianti.  
+>  I parametri `ref`e `out` in C# non possono essere contrassegnati come varianti.  
   
  È anche possibile supportare sia la varianza che la covarianza nello stesso delegato, ma per parametri di tipo diverso. come illustrato nell'esempio riportato di seguito.  
   
@@ -214,6 +214,7 @@ public static void Test()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Generics](https://msdn.microsoft.com/library/ms172192)   
+ [Generics](~/docs/standard/generics/index.md)   
  [Uso della varianza per i delegati generici Func e Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)   
  [Procedura: Combinare delegati multicast](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+

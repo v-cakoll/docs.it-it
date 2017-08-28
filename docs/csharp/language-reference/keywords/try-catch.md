@@ -1,5 +1,5 @@
 ---
-title: try-catch (Riferimenti per C#) | Documentazione Microsoft
+title: try-catch (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 13684c7e32c52765f4d45d6a5bd2c6f8194efefe
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b7ec6c96ac21ba2115d1e7eead5700b6dbfcc952
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Riferimenti per C#)
@@ -57,7 +57,7 @@ try
 }  
 ```  
   
- Anche se la clausola `catch` può essere usata senza argomenti per intercettare qualsiasi tipo di eccezione, questo utilizzo non è consigliato. In generale, è consigliabile intercettare solo le eccezioni di cui si sa come eseguire il ripristino. Pertanto, è necessario specificare sempre un argomento di oggetto derivato da <xref:System.Exception?displayProperty=fullName>. Ad esempio:  
+ Anche se la clausola `catch` può essere usata senza argomenti per intercettare qualsiasi tipo di eccezione, questo utilizzo non è consigliato. In generale, è consigliabile intercettare solo le eccezioni di cui si sa come eseguire il ripristino. È quindi opportuno specificare sempre argomento di oggetto derivato da <xref:System.Exception?displayProperty=fullName>, ad esempio:  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -142,7 +142,7 @@ static void Main()
  Per altre informazioni su catch, vedere [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
   
 ## <a name="exceptions-in-async-methods"></a>Eccezioni nei metodi asincroni  
- Un metodo asincrono viene contrassegnato da un modificatore [async](../../../csharp/language-reference/keywords/async.md) e in genere contiene una o più espressioni o istruzioni await. Un'espressione await applica l'operatore [await](../../../csharp/language-reference/keywords/await.md) a un metodo <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>.  
+ Un metodo asincrono viene contrassegnato da un modificatore [async](../../../csharp/language-reference/keywords/async.md) e in genere contiene una o più espressioni o istruzioni await. Un'espressione await applica l'operatore [await](../../../csharp/language-reference/keywords/await.md) a un oggetto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>.  
   
  Quando il controllo raggiunge un oggetto `await` nel metodo asincrono, l'avanzamento nel metodo viene sospeso fino al completamento dell'attività attesa. Una volta completata l'attività, l'esecuzione del metodo può riprendere. Per altre informazioni, vedere [Programmazione asincrona con Async e Await](../../../csharp/programming-guide/concepts/async/index.md) e [Flusso di controllo in programmi asincroni](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
@@ -150,7 +150,7 @@ static void Main()
   
  Per intercettare l'eccezione, attendere l'attività in un blocco `try` e intercettare l'eccezione nel blocco `catch` associato. Per un esempio, vedere la sezione "Esempio".  
   
- Un'attività può essere in uno stato di errore perché si sono verificate più eccezioni nel metodo asincrono atteso. Ad esempio, l'attività potrebbe essere il risultato di una chiamata a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. Quando si attende tale attività, solo una delle eccezioni viene intercettata, ma non è possibile prevedere quale. Per un esempio, vedere la sezione "Esempio".  
+ Un'attività può essere in uno stato di errore perché si sono verificate più eccezioni nel metodo asincrono atteso. Ad esempio, l'attività può essere il risultato di una chiamata a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. Quando si attende tale attività, solo una delle eccezioni viene intercettata, ma non è possibile prevedere quale. Per un esempio, vedere la sezione "Esempio".  
   
 ## <a name="example"></a>Esempio  
  Nel seguente esempio, il blocco `try` contiene una chiamata al metodo `ProcessString` che potrebbe causare un'eccezione. La clausola `catch` contiene il gestore di eccezioni che visualizza solo un messaggio sullo schermo. Quando l'istruzione `throw` viene chiamata da `MyMethod`, il sistema cerca l'istruzione `catch` e visualizza il messaggio `Exception caught`.  
@@ -189,7 +189,7 @@ static void Main()
  [Riferimenti per C#](../../../csharp/language-reference/index.md)   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [Istruzioni try, throw e catch (C++)](https://docs.microsoft.com/cpp/cpp/try-throw-and-catch-statements-cpp)   
+ [Istruzioni try, throw e catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
  [Istruzioni di gestione delle eccezioni](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   

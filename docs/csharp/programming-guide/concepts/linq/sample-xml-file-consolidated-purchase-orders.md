@@ -1,5 +1,5 @@
 ---
-title: 'File XML di esempio: ordini di acquisto consolidati2 | Microsoft Docs'
+title: 'File XML di esempio: ordini di acquisto consolidati2'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: da0c55f413bf9ce3bd0b0c353b4cc332b9969c79
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 81699b266e67c006a707a3941349a41189a3b442
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>File XML di esempio: ordini di acquisto consolidati
-Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Questo file è costituito da un set di ordini di acquisto contenenti forme diverse e relativi a più società. Gli ordini di acquisto di ciascuna società sono inseriti in spazi dei nomi distinti.  
+Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Questo file è costituito da un set di ordini di acquisto contenenti forme diverse e relativi a più società. Gli ordini di acquisto di ciascuna società sono inseriti in spazi dei nomi distinti.  
   
 ## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  
   
@@ -162,3 +163,4 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
   
 ## <a name="see-also"></a>Vedere anche  
  [Documenti XML di esempio (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

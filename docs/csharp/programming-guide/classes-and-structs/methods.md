@@ -1,5 +1,5 @@
 ---
-title: Metodi (Guida per programmatori C#) | Microsoft Docs
+title: Metodi (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: da1abda4faec540c115d93e14a757dae24c5ae78
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf320a26e697943416cd8f1065f1b4ca4afeac07
 ms.contentlocale: it-it
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>Metodi (Guida per programmatori C#)
@@ -80,7 +80,18 @@ Un metodo è un blocco di codice che contiene una serie di istruzioni. Un progra
  Per altre informazioni su come passare i tipi di riferimento per riferimento e per valore, vedere [Passaggio di parametri di tipi di riferimento ](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) e [Tipi di riferimento](../../../csharp/language-reference/keywords/reference-types.md).  
   
 ## <a name="return-values"></a>Valori restituiti  
- I metodi possono restituire un valore al chiamante. Se il tipo restituito, il tipo elencato prima del nome del metodo, non è `void`, il metodo può restituire il valore usando la parola chiave `return` . Un'istruzione con la parola chiave `return` seguita da un valore corrispondente al tipo restituito restituirà tale valore al chiamante del metodo. La parola chiave `return` interrompe anche l'esecuzione del metodo. Se il tipo restituito è `void`, un'istruzione `return` senza un valore è tuttavia utile per interrompere l'esecuzione del metodo. Senza la parola chiave `return` , l'esecuzione del metodo verrà interrotta quando verrà raggiunta la fine del blocco di codice. Per usare la parola chiave `return` per restituire un valore, sono obbligatori metodi con un tipo restituito non void. Ad esempio, questi due metodi usano la parola chiave `return` per restituire numeri interi:  
+I metodi possono restituire un valore al chiamante. Se il tipo restituito, il tipo elencato prima del nome del metodo, non è `void`, il metodo può restituire il valore usando la parola chiave `return` . Un'istruzione con la parola chiave `return` seguita da un valore corrispondente al tipo restituito restituirà tale valore al chiamante del metodo. 
+
+Il valore può essere restituito dal chiamante per valore o, a partire dalla versione C# 7, [per riferimento](ref-returns.md). I valori vengono restituiti al chiamante per riferimento se la parola chiave `ref` viene usata nella firma del metodo e se segue ogni parola chiave `return`. La firma del metodo e l'istruzione di restituzione seguenti, ad esempio, indicano che il metodo restituisce al chiamante i nomi di una variabile `estDistance` per riferimento.
+
+```csharp
+public ref double GetEstimatedDistance()
+{
+   return ref estDistance;
+}
+```
+
+La parola chiave `return` interrompe anche l'esecuzione del metodo. Se il tipo restituito è `void`, un'istruzione `return` senza un valore è tuttavia utile per interrompere l'esecuzione del metodo. Senza la parola chiave `return` , l'esecuzione del metodo verrà interrotta quando verrà raggiunta la fine del blocco di codice. Per usare la parola chiave `return` per restituire un valore, sono obbligatori metodi con un tipo restituito non void. Ad esempio, questi due metodi usano la parola chiave `return` per restituire numeri interi:  
   
  [!code-cs[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
   
@@ -91,8 +102,14 @@ Un metodo è un blocco di codice che contiene una serie di istruzioni. Un progra
  [!code-cs[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
   
  L'uso di una variabile locale, in questo caso `result`, per archiviare un valore è facoltativo. Potrebbe migliorare la leggibilità del codice o potrebbe essere necessario se si desidera archiviare il valore originale dell'argomento per l'intero ambito del metodo.  
-  
- Non è necessario restituire una matrice multidimensionale da un metodo, M, che modifica il contenuto della matrice, se la funzione chiamante ha passato la matrice a M. Si può restituire la matrice risultante da M per un flusso di valori corretto o funzionale, ma non è necessario.  Il motivo per cui non è necessario restituire la matrice modificata è che C# passa tutti i tipi riferimento per valore e il valore di un riferimento della matrice è il puntatore alla matrice. Nel metodo M, eventuali modifiche apportate al contenuto della matrice sono osservabili da qualsiasi codice che presenti un riferimento alla matrice, come illustrato nell'esempio seguente.  
+
+Per usare un valore restituito da un metodo per riferimento, è necessario dichiarare una variabile [locale ref](ref-returns.md#ref-locals) se si vuole modificarne il valore. Se, ad esempio, il metodo `Planet.GetEstimatedDistance` restituisce un valore <xref:System.Double> per riferimento, è possibile definirlo come variabile locale ref con un codice simile al seguente:
+
+```csharp
+ref int distance = plant 
+```
+
+Non è necessario restituire una matrice multidimensionale da un metodo, `M`, che modifica il contenuto della matrice, se la funzione chiamante ha passato la matrice a `M`.  Si può restituire la matrice risultante da `M` per un flusso di valori corretto o funzionale, ma non è necessario perché C# passa tutti i tipi riferimento per valore e il valore di un riferimento a una matrice è il puntatore alla matrice. Nel metodo `M`, eventuali modifiche apportate al contenuto della matrice sono osservabili da qualsiasi codice che presenti un riferimento alla matrice, come illustrato nell'esempio seguente.  
   
 ```csharp  
 static void Main(string[] args)  
@@ -124,7 +141,7 @@ static void Main(string[] args)
 > [!NOTE]
 >  Un metodo async viene restituito al chiamante quando rileva il primo oggetto atteso che non è ancora completo o raggiunge la fine del metodo async, qualunque si verifichi prima.  
   
- Un metodo asincrono può avere un tipo restituito <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> o void. Il tipo restituito void viene usato principalmente per definire i gestori eventi, dove un tipo restituito void è necessario. Un metodo asincrono che restituisce void non può essere atteso e il chiamante di un metodo che restituisce void non può intercettare eccezioni generate dal metodo.  
+ Un metodo asincrono può avere un tipo restituito <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>o void. Il tipo restituito void viene usato principalmente per definire i gestori eventi, dove un tipo restituito void è necessario. Un metodo asincrono che restituisce void non può essere atteso e il chiamante di un metodo che restituisce void non può intercettare eccezioni generate dal metodo.  
   
  Nel seguente esempio, `DelayAsync` è un metodo asincrono con un tipo restituito <xref:System.Threading.Tasks.Task%601>. `DelayAsync` ha un'istruzione `return` che restituisce un numero intero. La dichiarazione del metodo di `DelayAsync` deve quindi avere un tipo restituito `Task<int>`. Poiché il tipo restituito è `Task<int>`, la valutazione dell'espressione `await` in `DoSomethingAsync` genera un numero intero come illustra l'istruzione seguente: `int result = await delayTask`.  
   
@@ -155,7 +172,7 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  Per chiamare un iteratore dal codice client, usare un'istruzione [foreach](../../../csharp/language-reference/keywords/foreach-in.md) .  
   
- Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.  
+ Il tipo restituito di un iteratore può essere <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.  
   
  Per altre informazioni, vedere [Iteratori](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   

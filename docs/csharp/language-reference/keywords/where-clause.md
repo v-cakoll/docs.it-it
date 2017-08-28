@@ -1,5 +1,5 @@
 ---
-title: Clausola where (Riferimenti per C#) | Microsoft Docs
+title: Clausola where (Riferimento C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1094f68293dd05fdfe69a39016689cbaa3fd6290
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 97d7c16d6bf8048e621141fff52a47907881fd2f
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="where-clause-c-reference"></a>Clausola where (Riferimento C#)
@@ -57,9 +58,9 @@ La clausola `where` viene usata in un'espressione di query per specificare quali
 ## <a name="remarks"></a>Note  
  La clausola `where` è un meccanismo di filtro. Può essere posizionata praticamente ovunque in un'espressione di query, ma non può essere la prima o l'ultima clausola. Una clausola `where` la può apparire prima o dopo una clausola [group](../../../csharp/language-reference/keywords/group-clause.md) a seconda se gli elementi di origine devono essere filtrati prima o dopo essere stati raggruppati.  
   
- Se un predicato specificato non è valido per gli elementi nell'origine dati, si verificherà un errore in fase di compilazione. Questo è uno dei vantaggi del controllo efficace del tipo offerto da [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)].  
+ Se un predicato specificato non è valido per gli elementi nell'origine dati, si verificherà un errore in fase di compilazione. Questo è uno dei vantaggi del controllo efficace del tipo offerto da [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
- In fase di compilazione la parola chiave `where` viene convertita in una chiamata al metodo <xref:System.Linq.Enumerable.Where%2A> dell'operatore query standard.  
+ In fase di compilazione, la parola chiave `where` viene convertita in una chiamata al metodo <xref:System.Linq.Enumerable.Where%2A> dell'operatore query standard.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Parole chiave di query (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
@@ -68,3 +69,4 @@ La clausola `where` viene usata in un'espressione di query per specificare quali
  [Filtraggio dei dati](http://msdn.microsoft.com/library/cee88d0f-31aa-4c60-9452-cc122ed0057d)   
  [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Nozioni di base su LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+

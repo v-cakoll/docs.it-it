@@ -1,6 +1,6 @@
 ---
 title: Programmazione asincrona
-description: Programmazione asincrona
+description: Informazioni sul modello di programmazione asincrona a livello del linguaggio C# fornito da .NET Core.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 2983dccc63c38884a24f4183d41b406797d5d10f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ddaa82e6f8492142523e9d240b0d337cfccffd8
 ms.contentlocale: it-it
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -32,7 +32,7 @@ Per il codice associato a I/O, si usa `await` per l'operazione che restituisce u
 
 Per il codice associato alla CPU, si usa `await` per l'operazione che viene avviata in un thread in background con il metodo `Task.Run`.
 
-La parola chiave `await` cede il controllo al chiamante del metodo che ha eseguito `await`.  Ciò consente a un'interfaccia utente di essere reattiva e a un sevizio di essere flessibile.
+La parola chiave `await` è l'elemento cruciale. Restituisce il controllo al chiamante del metodo che esegue `await` ed è questo che in ultima analisi consente a un'interfaccia utente di essere reattiva o a un servizio di essere flessibile.
 
 Sono disponibili altri modi per trattare il codice asincrono rispetto a `async` e `await` illustrati nell'articolo su TAP visto precedentemente, per cui questo documento illustrerà da questo momento in poi le attività sui costrutti a livello di linguaggio.
 
@@ -74,7 +74,7 @@ private DamageResult CalculateDamageDone()
 
 calculateButton.Clicked += async (o, e) =>
 {
-    // This line will yield control to the UI CalculateDamageDone()
+    // This line will yield control to the UI while CalculateDamageDone()
     // performs its work.  The UI thread is free to perform other work.
     var damageResult = await Task.Run(() => CalculateDamageDone());
     DisplayDamage(damageResult);
@@ -105,7 +105,7 @@ I primi due esempi di questa guida hanno illustrato come usare `async` e `await`
 
 Rispondere a queste due domande prima di scrivere il codice:
 
-1. Il codice deve "attendere" l'esecuzione di operazioni, ad esempio ricezione di dati da un database?
+1. Il codice deve "attendere" l'esecuzione di operazioni, ad esempio la ricezione di dati da un database?
 
     Se la risposta è "Sì", l'operazione è **associata a I/O**.
 
@@ -180,7 +180,6 @@ Ci si potrebbe trovare in una situazione in cui è necessario recuperare più el
 Questo esempio illustra come è possibile acquisire dati `User` per un set di `userId`.
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:
@@ -205,7 +204,6 @@ public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
 Questo è un altro modo per scrivere il codice in maniera più concisa tramite LINQ:
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:

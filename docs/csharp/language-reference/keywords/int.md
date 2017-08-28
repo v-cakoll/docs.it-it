@@ -1,5 +1,5 @@
 ---
-title: int (Riferimenti per C#) | Microsoft Docs
+title: int (Riferimenti per C#)
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 48283ce80bbbff4182362ea9ae6258d31e175e0d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2722ddad74023cb8c1be86d3a628313a45d35d8a
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="int-c-reference"></a>int (Riferimenti per C#)
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/24/2017
   
 ## <a name="literals"></a>Valori letterali  
  
-È possibile dichiarare e inizializzare una variabile `int` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7) un valore letterale binario.  Se il valore letterale intero non è incluso nell'intervallo `int` (ovvero, se è minore di <xref:System.Int32.MinValue?displayProperty=fullName> o maggiore di <xref:System.Int32.MaxValue?displayProperty=fullName>) si verifica un errore di compilazione. 
+È possibile dichiarare e inizializzare una variabile `int` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7) un valore letterale binario.  Se il valore letterale Integer è esterno all'intervallo di `int`, vale a dire se è minore di <xref:System.Int32.MinValue?displayProperty=fullName> o maggiore di <xref:System.Int32.MaxValue?displayProperty=fullName>, si verifica un errore di compilazione. 
 
 Nell'esempio seguente, i valori interi uguali a 16.342 rappresentati come valori letterali decimali, esadecimali o binari vengono assegnati a valori `int`.  
   
@@ -95,7 +95,7 @@ int y = (int)3.0;    // OK: explicit conversion.
  Per altre informazioni sulle espressioni aritmetiche con tipi a virgola mobile e tipi integrali, vedere [float](../../../csharp/language-reference/keywords/float.md) e [double](../../../csharp/language-reference/keywords/double.md).  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Int32>   
@@ -106,3 +106,4 @@ int y = (int)3.0;    // OK: explicit conversion.
  [Tabella dei tipi predefiniti](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

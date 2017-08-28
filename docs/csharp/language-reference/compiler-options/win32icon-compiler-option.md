@@ -1,59 +1,79 @@
 ---
-title: "/win32icon (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/win32icon"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "win32icon compiler option [C#]"
-  - "/win32icon compiler option [C#]"
-  - "-win32icon compiler option [C#]"
+title: -win32icon (opzioni del compilatore C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /win32icon
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- win32icon compiler option [C#]
+- /win32icon compiler option [C#]
+- -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 caps.latest.revision: 18
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 18
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: af5b9c3a44163167d932d378cbac4976e07eacbf
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
+
 ---
-# /win32icon (C# Compiler Options)
-L'opzione **\/win32icon** consente di inserire nel file di output un file .ico, che conferisce al file di output l'aspetto desiderato in Esplora file.  
+# <a name="win32icon-c-compiler-options"></a>/win32icon (opzioni del compilatore C#)
+Con l'opzione **/win32icon** viene inserito un file con estensione ico nel file di output, che assume l'aspetto desiderato in Esplora file.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 /win32icon:filename  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  `filename`  
- Rappresenta il file ICO che si desidera aggiungere al file di output.  
+ Il file con estensione ico da aggiungere al file di output.  
   
-## Note  
- Un file .ico può essere creato mediante il [Compilatore di risorse](http://go.microsoft.com/fwlink/?LinkId=148370).  Il compilatore di risorse viene richiamato quando si compila un programma Visual C\+\+ e il file ICO viene creato sulla base del file RC.  
+## <a name="remarks"></a>Note  
+ Un file con estensione ico può essere creato mediante il [compilatore di risorse](http://go.microsoft.com/fwlink/?LinkId=148370). Il Compilatore di risorse viene richiamato quando si compila un programma Visual C++. Dal file .rc viene creato un file .ico.  
   
- Per informazioni su come allegare o fare riferimento a un file di risorse .NET Framework, vedere rispettivamente [\/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) o [\/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md).  Per informazioni sull'importazione di un file RES, vedere [\/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md).  
+ Vedere [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (per fare riferimento a un file di risorse di .NET Framework) o [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (per associarlo). Vedere [/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) per importare un file con estensione res.  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire le pagine **Proprietà** del progetto.  
+1.  Aprire la pagina **Proprietà** del progetto.  
   
 2.  Fare clic sulla pagina delle proprietà **Applicazione**.  
   
-3.  Modificare la proprietà **Icona applicazione**.  
+3.  Modificare la proprietà **Icona dell'applicazione**.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.  
   
-## Esempio  
- Compilare `in.cs` e allegare il file ICO `rf.ico` per generare `in.exe`:  
+## <a name="example"></a>Esempio  
+ Compilare `in.cs` e associare un file con estensione ico `rf.ico` per produrre `in.exe`:  
   
-```  
+```console  
 csc /win32icon:rf.ico in.cs  
 ```  
   
-## Vedere anche  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Procedura: modificare le proprietà e le impostazioni di configurazione dei progetti](http://msdn.microsoft.com/it-it/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Vedere anche  
+ [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
+ [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+
