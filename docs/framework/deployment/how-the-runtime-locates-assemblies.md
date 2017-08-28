@@ -1,5 +1,5 @@
 ---
-title: Come il runtime individua gli assembly | Microsoft Docs
+title: Come il runtime individua gli assembly
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 78805f7139bff90127885af267c8ade9090fbd62
+ms.translationtype: HT
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
@@ -42,13 +42,13 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
 >  Per visualizzare le informazioni di associazione nel file di log, usare il [Visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), incluso in [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
 ## <a name="initiating-the-bind"></a>Avvio dell'associazione  
- Il processo di individuazione e associazione di un assembly inizia quando il runtime tenta di risolvere un riferimento a un altro assembly. Questo riferimento può essere statico o dinamico. I compilatore registra i riferimenti statici nei metadati del manifesto dell'assembly in fase di compilazione. I riferimenti dinamici vengono costruiti nel momento in cui vengono chiamati i diversi metodi, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
+ Il processo di individuazione e associazione di un assembly inizia quando il runtime tenta di risolvere un riferimento a un altro assembly. Questo riferimento può essere statico o dinamico. I compilatore registra i riferimenti statici nei metadati del manifesto dell'assembly in fase di compilazione. I riferimenti dinamici vengono costruiti al momento, in base ai risultati delle chiamate a diversi metodi, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
   
  Il modo migliore per fare riferimento a un assembly consiste nell'usare un riferimento completo che includa il nome dell'assembly, la versione, le impostazioni cultura il e token di chiave pubblica (se presente). Il runtime usa queste informazioni per individuare l'assembly, seguendo i passaggi descritti più avanti in questa sezione. Il runtime usa lo stesso processo di risoluzione a prescindere che il riferimento riguardi un assembly statico o dinamico.  
   
  Un riferimento dinamico a un assembly può essere eseguito anche fornendo il metodo di chiamata solo con informazioni parziali sull'assembly, ad esempio specificando solo il nome dell'assembly. In questo caso, l'assembly viene cercato solo nella directory dell'applicazione e non vengono eseguiti altri controlli. È possibile creare un riferimento parziale usando uno dei diversi metodi per il caricamento degli assembly, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> o <xref:System.AppDomain.Load%2A?displayProperty=fullName>.  
   
- È infine possibile creare un riferimento dinamico usando un metodo come [System.Reflection.Assembly.Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) e specificare solo informazioni parziali. In seguito verranno specificate informazioni complete sul riferimento usando l'elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) nel file di configurazione dell'applicazione. Questo elemento consente di specificare le informazioni di riferimento complete (nome, versione, impostazioni cultura e, se applicabile, il token di chiave pubblica) nel file di configurazione dell'applicazione anziché nel codice. Questa tecnica si usa quando si vuole completare un riferimento a un assembly di fuori della directory dell'applicazione oppure se si vuole fare riferimento a un assembly nella Global Assembly Cache, ma si preferisce definirlo in modo completo nel file di configurazione anziché nel codice.  
+ È infine possibile creare un riferimento dinamico usando un metodo come <xref:System.Reflection.Assembly.Load*?displayProperty=fullName> e specificare solo informazioni parziali. In seguito verranno specificate informazioni complete sul riferimento usando l'elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) nel file di configurazione dell'applicazione. Questo elemento consente di specificare le informazioni di riferimento complete (nome, versione, impostazioni cultura e, se applicabile, il token di chiave pubblica) nel file di configurazione dell'applicazione anziché nel codice. Questa tecnica si usa quando si vuole completare un riferimento a un assembly di fuori della directory dell'applicazione oppure se si vuole fare riferimento a un assembly nella Global Assembly Cache, ma si preferisce definirlo in modo completo nel file di configurazione anziché nel codice.  
   
 > [!NOTE]
 >  Questo tipo di riferimento parziale non deve essere usato con gli assembly condivisi tra diverse applicazioni. Poiché le impostazioni di configurazione vengono applicate per applicazione e non per assembly, per usare questo tipo di riferimento parziale in un assembly condiviso ogni applicazione che usa l'assembly condiviso dovrebbe disporre delle informazioni complete nel file di configurazione.  
@@ -66,7 +66,7 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
   
 4.  [Individua tramite probe l'assembly](#step4) usando la procedura seguente:  
   
-    1.  Se i criteri dell'editore e della configurazione non hanno effetto sul riferimento originale e se la richiesta di associazione è stata creata usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>, il runtime cerca suggerimenti per la posizione.  
+    1.  Se i criteri dell'editore e della configurazione non hanno effetto sul riferimento originale e se la richiesta di associazione è stata creata usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> , il runtime cerca suggerimenti per la posizione.  
   
     2.  Se viene trovata una codebase nei file di configurazione, il runtime controlla solo questo percorso. Se la probe non riesce, il runtime determina che la richiesta di associazione non è riuscita e non vengono eseguite altre individuazioni tramite probe.  
   
@@ -193,7 +193,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Il nome, ovvero il nome dell'assembly di riferimento.  
   
--   L'attributo `privatePath` dell'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), ovvero l'elenco definito dall'utente delle sottodirectory del percorso radice. Questo percorso può essere specificato nel file di configurazione dell'applicazione e nel codice gestito mediante la proprietà <xref:System.AppDomain.AppendPrivatePath%2A> di un dominio applicazione. Quando è specificato nel codice gestito, viene eseguita prima l'individuazione tramite probe del codice gestito `privatePath`, seguita dal percorso specificato nel file di configurazione dell'applicazione.  
+-   L'attributo `privatePath` dell'elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), ovvero l'elenco definito dall'utente delle sottodirectory del percorso radice. Questo percorso può essere specificato nel file di configurazione dell'applicazione e nel codice gestito mediante la proprietà <xref:System.AppDomain.AppendPrivatePath%2A> di un dominio applicazione. Quando è specificato nel codice gestito, viene eseguita prima l'individuazione tramite probe del codice gestito `privatePath` , seguita dal percorso specificato nel file di configurazione dell'applicazione.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Individuazione tramite probe delle directory Application Base e Culture  
  Il runtime avvia sempre l'individuazione tramite probe nella base dell'applicazione, che può essere un URL o la directory radice dell'applicazione in un computer. Se l'assembly di riferimento non viene trovato nella base dell'applicazione e non viene fornita alcuna informazione sulle impostazioni cultura, il runtime cerca il nome dell'assembly in tutte le sottodirectory. Le directory di cui viene eseguita l'individuazione tramite probe includono:  
@@ -265,3 +265,4 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate per il caricamento di assembly](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
  [Distribuzione](../../../docs/framework/deployment/index.md)
+

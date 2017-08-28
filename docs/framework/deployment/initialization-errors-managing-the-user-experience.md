@@ -1,5 +1,5 @@
 ---
-title: 'Errori di inizializzazione di .NET Framework: gestione dell&quot;interfaccia utente | Microsoft Docs'
+title: 'Errori di inizializzazione di .NET Framework: gestione dell''interfaccia utente'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 70f0515b2b4219dcb7e143b0c81f91d3855fd433
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ad1a40319a1571643d022536bba93686d82a3d9f
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Errori di inizializzazione di .NET Framework: gestione dell'interfaccia utente
@@ -106,3 +106,4 @@ Prompt per l'installazione di .NET Framework 3.5 su richiesta
  [Procedura: Configurare un'app per supportare .NET Framework 4 o 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)   
  [Procedura: Debug dei problemi di attivazione CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)   
  [Installare .NET Framework 3.5 in Windows 10, Windows 8.1 e Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md)
+

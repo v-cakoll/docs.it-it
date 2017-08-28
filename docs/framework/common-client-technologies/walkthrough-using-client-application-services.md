@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: utilizzo di servizi delle applicazioni client | Documentazione Microsoft'
+title: 'Procedura dettagliata: utilizzo di servizi delle applicazioni client'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: c5c36c371c43e6cba8875c0b6bea98c228438218
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 64a27269ee6f3711f0c51f2c97cd8876c3ea6103
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-using-client-application-services"></a>Procedura dettagliata: utilizzo di servizi delle applicazioni client
@@ -78,7 +78,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
  A questo punto l'applicazione è configurata per accedere a tutti e tre i servizi dallo stesso host. Nella sezione successiva verrà creato l'host come semplice applicazione del servizio Web in modo che sia possibile testare la configurazione client.  
   
 ## <a name="creating-the-application-services-host"></a>Creazione dell'host per i servizi delle applicazioni  
- In questa sezione verrà creata una semplice applicazione servizio Web in grado di accedere ai dati dell'utente da un file di database di SQL Server Compact locale. Quindi, il database verrà popolato usando lo [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Questa semplice configurazione consente di testare rapidamente l'applicazione client. In alternativa, è possibile configurare l'host del servizio Web per accedere ai dati dell'utente da un database SQL Server completo o mediante le classi personalizzate <xref:System.Web.Security.MembershipProvider> e <xref:System.Web.Security.RoleProvider>. Per altre informazioni, vedere [Creazione e configurazione del database dei servizi dell'applicazione per SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
+ In questa sezione verrà creata una semplice applicazione servizio Web in grado di accedere ai dati dell'utente da un file di database di SQL Server Compact locale. Quindi, il database verrà popolato usando lo [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Questa semplice configurazione consente di testare rapidamente l'applicazione client. In alternativa, è possibile configurare l'host del servizio Web per accedere ai dati dell'utente da un database SQL Server completo o mediante le classi personalizzate <xref:System.Web.Security.MembershipProvider> e <xref:System.Web.Security.RoleProvider> . Per altre informazioni, vedere [Creating and Configuring the Application Services Database for SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
   
  Nella procedura seguente viene creato e configurato il servizio Web di AppServices.  
   
@@ -271,10 +271,10 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
 > [!NOTE]
 >  Se non si è in grado di eseguire l'applicazione, provare ad arrestare il server di sviluppo ASP.NET. Al riavvio del server verificare che la porta sia impostata su 55555.  
   
- Per visualizzare invece il messaggio di errore, modificare i parametri <xref:System.Web.Security.Membership.ValidateUser%2A>. Sostituire ad esempio il secondo parametro `"manager!"` con una password non corretta come `"MANAGER"`.  
+ Per visualizzare invece il messaggio di errore, modificare i parametri <xref:System.Web.Security.Membership.ValidateUser%2A> . Sostituire ad esempio il secondo parametro `"manager!"` con una password non corretta come `"MANAGER"`.  
   
 ## <a name="adding-a-login-form-as-a-credentials-provider"></a>Aggiunta di un form di accesso come provider di credenziali  
- È possibile acquisire le credenziali utente nel codice dell'applicazione e passarli al metodo <xref:System.Web.Security.Membership.ValidateUser%2A>. Tuttavia, è spesso utile separare il codice di acquisizione delle credenziali da quello dell'applicazione, qualora dovesse essere necessario modificarlo in seguito.  
+ È possibile acquisire le credenziali utente nel codice dell'applicazione e passarli al metodo <xref:System.Web.Security.Membership.ValidateUser%2A> . Tuttavia, è spesso utile separare il codice di acquisizione delle credenziali da quello dell'applicazione, qualora dovesse essere necessario modificarlo in seguito.  
   
  Nella procedura seguente viene configurata l'applicazione per usare un provider di credenziali e quindi viene modificata la chiamata al metodo <xref:System.Web.Security.Membership.ValidateUser%2A> in modo da passare <xref:System.String.Empty> per entrambi i parametri. Le stringhe vuote indicano al metodo <xref:System.Web.Security.Membership.ValidateUser%2A> di chiamare il metodo <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> del provider di credenziali configurato.  
   
@@ -305,9 +305,9 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
      [!code-csharp[ClientApplicationServices#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)]  [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
   
 ### <a name="creating-a-login-form"></a>Creazione di un form di accesso  
- Un provider di credenziali è una classe che implementa l'interfaccia <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider>. Questa interfaccia contiene un solo metodo denominato <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> che restituisce un oggetto <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials>. Le procedure seguenti illustrano come creare una finestra di dialogo di accesso che implementi <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> in modo che venga visualizzata la finestra stessa e vengano restituite le credenziali specificate dall'utente.  
+ Un provider di credenziali è una classe che implementa l'interfaccia <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> . Questa interfaccia contiene un solo metodo denominato <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> che restituisce un oggetto <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> . Le procedure seguenti illustrano come creare una finestra di dialogo di accesso che implementi <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> in modo che venga visualizzata la finestra stessa e vengano restituite le credenziali specificate dall'utente.  
   
- È necessario seguire procedure separate per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e C# perché [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] include un modello **Form di accesso**, che consente di risparmiare tempo richiedendo meno codice da scrivere.  
+ È necessario seguire procedure separate per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] e C# perché [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] include un modello **Form di accesso** , che consente di risparmiare tempo richiedendo meno codice da scrivere.  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>Per creare una finestra di dialogo di accesso come provider di credenziali in Visual Basic  
   
@@ -339,11 +339,11 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
      [!code-vb[ClientApplicationServices#120](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Login.vb#120)]  
   
- La procedura C# seguente fornisce l'elenco di codice completo per la generazione di una semplice finestra di dialogo di accesso. La parte importante di questa finestra di dialogo dal layout piuttosto essenziale è costituita dall'implementazione di <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A>.  
+ La procedura C# seguente fornisce l'elenco di codice completo per la generazione di una semplice finestra di dialogo di accesso. La parte importante di questa finestra di dialogo dal layout piuttosto essenziale è costituita dall'implementazione di <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> .  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-c"></a>Per creare una finestra di dialogo di accesso come provider di credenziali in C#  
   
-1.  In **Esplora soluzioni** selezionare il progetto ClientAppServicesDemo, quindi scegliere **Aggiungi classe** dal menu **Progetto**.  
+1.  In **Esplora soluzioni**selezionare il progetto ClientAppServicesDemo, quindi scegliere **Aggiungi classe** dal menu **Progetto**.  
   
 2.  Nella finestra di dialogo **Aggiungi nuovo elemento** modificare il **Nome** in `Login.cs`, quindi fare clic su **Aggiungi**.  
   
@@ -383,12 +383,12 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 5.  Aggiungere il metodo seguente alla fine della classe Form1.  
   
-     Questo metodo chiama il metodo <xref:System.Security.Principal.IPrincipal.IsInRole%2A> dell'oggetto <xref:System.Security.Principal.IPrincipal> restituito dalla proprietà `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName>. Per le applicazioni configurate per l'uso dei servizi delle applicazioni client, questa proprietà restituisce un oggetto <xref:System.Web.ClientServices.ClientRolePrincipal>. Poiché questa classe implementa l'interfaccia <xref:System.Security.Principal.IPrincipal>, non è necessario farvi riferimento in modo esplicito.  
+     Questo metodo chiama il metodo <xref:System.Security.Principal.IPrincipal.IsInRole%2A> dell'oggetto <xref:System.Security.Principal.IPrincipal> restituito dalla proprietà `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> . Per le applicazioni configurate per l'uso dei servizi delle applicazioni client, questa proprietà restituisce un oggetto <xref:System.Web.ClientServices.ClientRolePrincipal>. Poiché questa classe implementa l'interfaccia <xref:System.Security.Principal.IPrincipal> , non è necessario farvi riferimento in modo esplicito.  
   
-     Se l'utente appartiene al ruolo "manager", il metodo `DisplayButtonForManagerRole` imposta la proprietà <xref:System.Windows.Forms.Control.Visible%2A> di `managerOnlyButton` su `true`. Se viene generata un'eccezione <xref:System.Net.WebException>, questo metodo visualizza anche un messaggio di errore che indica che il servizio dei ruoli non è disponibile.  
+     Se l'utente appartiene al ruolo "manager", il metodo `DisplayButtonForManagerRole` imposta la proprietà <xref:System.Windows.Forms.Control.Visible%2A> di `managerOnlyButton` su `true`. Se viene generata un'eccezione <xref:System.Net.WebException> , questo metodo visualizza anche un messaggio di errore che indica che il servizio dei ruoli non è disponibile.  
   
     > [!NOTE]
-    >  Il metodo <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> restituirà sempre `false` se l'accesso utente è scaduto. Questo messaggio di errore non viene visualizzato se l'applicazione chiama il metodo <xref:System.Security.Principal.IPrincipal.IsInRole%2A> una volta subito dopo l'autenticazione, come illustrato nel codice di esempio nella presente procedura dettagliata. Se l'applicazione deve recuperare ruoli utente in altri momenti, è necessario aggiungere il codice per riconvalidare gli utenti con accesso scaduto. Se tutti gli utenti validi sono stati assegnati ai ruoli, è possibile determinare se l'accesso è scaduto chiamando il metodo <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName>. Se non viene restituito alcun ruolo, l'accesso è scaduto. Per un esempio di questa funzionalità, vedere il metodo <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A>. Questa funzionalità è necessaria solo se è stato selezionato **Richiedi agli utenti di accedere di nuovo a ogni scadenza del cookie del server** nella configurazione dell'applicazione. Per altre informazioni, vedere [Procedura: Configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+    >  Il metodo <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> restituirà sempre `false` se l'accesso utente è scaduto. Questo messaggio di errore non viene visualizzato se l'applicazione chiama il metodo <xref:System.Security.Principal.IPrincipal.IsInRole%2A> una volta subito dopo l'autenticazione, come illustrato nel codice di esempio nella presente procedura dettagliata. Se l'applicazione deve recuperare ruoli utente in altri momenti, è necessario aggiungere il codice per riconvalidare gli utenti con accesso scaduto. Se tutti gli utenti validi sono stati assegnati ai ruoli, è possibile determinare se l'accesso è scaduto chiamando il metodo <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName> . Se non viene restituito alcun ruolo, l'accesso è scaduto. Per un esempio di questa funzionalità, vedere il metodo <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> . Questa funzionalità è necessaria solo se è stato selezionato **Richiedi agli utenti di accedere di nuovo a ogni scadenza del cookie del server** nella configurazione dell'applicazione. Per altre informazioni, vedere [Procedura: Configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]  [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
@@ -419,7 +419,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 6.  Nella finestra di progettazione aggiungere un controllo <xref:System.Windows.Forms.TextBox> al form.  
   
-7.  Nella finestra **Proprietà** specificare una valore  **per** (Name)`webSettingsTestTextBox`.  
+7.  Nella finestra **Proprietà** specificare una valore **per** (Name) `webSettingsTestTextBox`.  
   
 8.  Nell'editor del codice aggiungere il codice seguente alla fine del metodo `Form1_Load` .  
   
@@ -440,13 +440,13 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 10. Selezionare il modulo nella finestra di progettazione, quindi fare clic sul pulsante **Eventi** nella finestra **Proprietà**.  
   
-11. Selezionare l'evento <xref:System.Windows.Forms.Form.FormClosing>, quindi premere INVIO per generare un gestore eventi.  
+11. Selezionare l'evento <xref:System.Windows.Forms.Form.FormClosing> , quindi premere INVIO per generare un gestore eventi.  
   
 12. Sostituire il metodo generato con il codice seguente.  
   
-     Il gestore eventi <xref:System.Windows.Forms.Form.FormClosing> chiama il metodo `SaveSettings` che viene usato anche dalla funzionalità di disconnessione che verrà aggiunta nella sezione successiva. Il metodo `SaveSettings` verifica innanzitutto che l'utente non sia disconnesso. Questa operazione viene eseguita controllando la proprietà <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> dell'oggetto <xref:System.Security.Principal.IIdentity> restituito dall'entità corrente, L'entità corrente viene recuperata usando la proprietà `static` <xref:System.Threading.Thread.CurrentPrincipal%2A>. Se l'utente è stato autenticato per i servizi delle applicazioni client, il tipo di autenticazione sarà "ClientForms." Il metodo `SaveSettings` non può controllare solo la proprietà <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName> perché l'utente potrebbe usare un'identità di Windows valida dopo la disconnessione.  
+     Il gestore eventi <xref:System.Windows.Forms.Form.FormClosing> chiama il metodo `SaveSettings` che viene usato anche dalla funzionalità di disconnessione che verrà aggiunta nella sezione successiva. Il metodo `SaveSettings` verifica innanzitutto che l'utente non sia disconnesso. Questa operazione viene eseguita controllando la proprietà <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> dell'oggetto <xref:System.Security.Principal.IIdentity> restituito dall'entità corrente, la quale viene recuperata mediante la proprietà `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> . Se l'utente è stato autenticato per i servizi delle applicazioni client, il tipo di autenticazione sarà "ClientForms." Il metodo `SaveSettings` non può controllare solo la proprietà <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName> perché l'utente potrebbe usare un'identità di Windows valida dopo la disconnessione.  
   
-     Se l'utente non si è disconnesso, il metodo `SaveSettings` chiama il metodo <xref:System.Configuration.ApplicationSettingsBase.Save%2A> della classe `Settings` generata precedentemente in questa procedura. Questo metodo può generare un'eccezione <xref:System.Net.WebException> se il cookie di autenticazione è scaduto. Questa situazione si verifica solo se è stata selezionata l'opzione **Richiedi agli utenti di accedere di nuovo a ogni scadenza del cookie del server** nella configurazione dell'applicazione. Per altre informazioni, vedere [Procedura: Configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). Il metodo `SaveSettings` gestisce la scadenza del cookie chiamando <xref:System.Web.Security.Membership.ValidateUser%2A> per visualizzare la finestra di dialogo di accesso. Se l'utente accede correttamente, il metodo `SaveSettings` tenta di salvare nuovamente le impostazioni chiamando se stesso.  
+     Se l'utente non si è disconnesso, il metodo `SaveSettings` chiama il metodo <xref:System.Configuration.ApplicationSettingsBase.Save%2A> della classe `Settings` generata precedentemente in questa procedura. Questo metodo può generare un'eccezione <xref:System.Net.WebException> se il cookie di autenticazione è scaduto. Questa situazione si verifica solo se è stata selezionata l'opzione **Richiedi agli utenti di accedere di nuovo a ogni scadenza del cookie del server** nella configurazione dell'applicazione. Per altre informazioni, vedere [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md). Il metodo `SaveSettings` gestisce la scadenza del cookie chiamando <xref:System.Web.Security.Membership.ValidateUser%2A> per visualizzare la finestra di dialogo di accesso. Se l'utente accede correttamente, il metodo `SaveSettings` tenta di salvare nuovamente le impostazioni chiamando se stesso.  
   
      Come nel codice precedente, il metodo `SaveSettings` visualizza un messaggio di errore se il servizio remoto non è disponibile. Se il provider delle impostazioni non può accedere al servizio remoto, le impostazioni vengono ancora salvate nella cache locale e ricaricate all'avvio dell'applicazione.  
   
@@ -454,7 +454,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 13. Aggiungere il metodo seguente alla fine della classe Form1.  
   
-     Questo codice gestisce l'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=fullName> e visualizza un messaggio di avviso se non è stato possibile salvare un'impostazione. L'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> non si verifica se il servizio delle impostazioni non è disponibile o se il cookie di autenticazione è scaduto. L'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> si verifica ad esempio se l'utente si è già disconnesso. È possibile testare questo gestore eventi aggiungendo il codice di disconnessione al metodo `SaveSettings` direttamente prima della chiamata al metodo <xref:System.Configuration.ApplicationSettingsBase.Save%2A>. Il codice di disconnessione che è possibile usare verrà descritto nella sezione successiva.  
+     Questo codice gestisce l'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved?displayProperty=fullName> e visualizza un messaggio di avviso se non è stato possibile salvare un'impostazione. L'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> non si verifica se il servizio delle impostazioni non è disponibile o se il cookie di autenticazione è scaduto. L'evento <xref:System.Web.ClientServices.Providers.ClientSettingsProvider.SettingsSaved> si verifica ad esempio se l'utente si è già disconnesso. È possibile testare questo gestore eventi aggiungendo il codice di disconnessione al metodo `SaveSettings` direttamente prima della chiamata al metodo <xref:System.Configuration.ApplicationSettingsBase.Save%2A> . Il codice di disconnessione che è possibile usare verrà descritto nella sezione successiva.  
   
      [!code-csharp[ClientApplicationServices#090](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#090)]  [!code-vb[ClientApplicationServices#090](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#090)]  
   
@@ -479,7 +479,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 4.  Sostituire il metodo `logoutButton_Click` generato con il codice seguente.  
   
-     Questo gestore eventi chiama innanzitutto il metodo `SaveSettings` aggiunto nella sezione precedente. Il gestore eventi chiama quindi il metodo <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=fullName>. Se il servizio di autenticazione non è disponibile, il metodo <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> genererà un'eccezione <xref:System.Net.WebException>. In questo caso, il metodo `logoutButton_Click` visualizza un messaggio di avviso e passa temporaneamente alla modalità offline per disconnettere l'utente. La modalità offline viene descritta nella sezione successiva.  
+     Questo gestore eventi chiama innanzitutto il metodo `SaveSettings` aggiunto nella sezione precedente. Il gestore eventi chiama quindi il metodo <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A?displayProperty=fullName> . Se il servizio di autenticazione non è disponibile, il metodo <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.Logout%2A> genererà un'eccezione <xref:System.Net.WebException>. In questo caso, il metodo `logoutButton_Click` visualizza un messaggio di avviso e passa temporaneamente alla modalità offline per disconnettere l'utente. La modalità offline viene descritta nella sezione successiva.  
   
      Con la disconnessone viene eliminato il cookie di autenticazione locale in modo che all'avvio dell'applicazione vengano richieste le credenziali di accesso. Dopo la disconnessione il gestore eventi riavvia l'applicazione. Al riavvio dell'applicazione viene visualizzato il messaggio di benvenuto seguito dalla finestra di dialogo di accesso. Il messaggio di benvenuto serve a indicare in modo esplicito che l'applicazione è stata riavviata. Questo processo semplifica le operazioni qualora l'utente dovesse effettuare l'accesso per salvare le impostazioni e quindi eseguire di nuovo l'accesso a causa del riavvio dell'applicazione.  
   
@@ -488,7 +488,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
  Per testare la funzionalità di disconnessione, eseguire l'applicazione e selezionare **Memorizza dati** nella finestra di dialogo Accesso. Quindi, chiudere e riavviare l'applicazione per assicurarsi di non dover più eseguire l'accesso. Riavviare quindi l'applicazione facendo clic su Disconnessione.  
   
 ## <a name="enabling-offline-mode"></a>Abilitazione della modalità offline  
- Nella procedura seguente viene aggiunta una casella di controllo al form per consentire all'utente di attivare la modalità offline. L'applicazione indica che è attiva la modalità offline impostando la proprietà `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=fullName> su `true`. Lo stato offline viene archiviato sul disco rigido locale nel percorso indicato dalla proprietà <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName>. Ciò significa che lo stato offline viene archiviato in base all'utente e all'applicazione.  
+ Nella procedura seguente viene aggiunta una casella di controllo al form per consentire all'utente di attivare la modalità offline. L'applicazione indica che è attiva la modalità offline impostando la proprietà `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=fullName> su `true`. Lo stato offline viene archiviato sul disco rigido locale nel percorso indicato dalla proprietà <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> . Ciò significa che lo stato offline viene archiviato in base all'utente e all'applicazione.  
   
  In modalità offline, tutte le richieste dei servizi delle applicazioni client recuperano i dati dalla cache locale anziché tentare di accedere ai servizi. Nella configurazione predefinita, i dati locali includono la password crittografata dell'utente, per consentire all'utente di effettuare l'accesso mentre l'applicazione è in modalità offline. Per altre informazioni, vedere [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
@@ -502,7 +502,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
   
 4.  Nella finestra **Proprietà** fare clic sul pulsante **Eventi**.  
   
-5.  Selezionare l'evento <xref:System.Windows.Forms.CheckBox.CheckedChanged>, quindi premere INVIO per generare un gestore eventi.  
+5.  Selezionare l'evento <xref:System.Windows.Forms.CheckBox.CheckedChanged> , quindi premere INVIO per generare un gestore eventi.  
   
 6.  Sostituire il metodo generato con il codice seguente.  
   
@@ -533,7 +533,7 @@ Questo argomento descrive come creare un'applicazione Windows che usa i servizi 
  [Servizi applicazioni client](../../../docs/framework/common-client-technologies/client-application-services.md)   
  [Cenni preliminari sui servizi delle applicazioni client](../../../docs/framework/common-client-technologies/client-application-services-overview.md)   
  [Procedura: Configurare i servizi delle applicazioni client](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)   
- [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)   
+ [Strumento Amministrazione sito Web di ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)   
  [Creazione e configurazione del database dei servizi dell'applicazione per SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)   
  [Procedura dettagliata: utilizzo di servizi delle applicazioni client](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
 

@@ -1,13 +1,9 @@
 ---
-title: Creazione e uso di assembly con nome sicuro | Microsoft Docs
-ms.custom: 
-ms.date: 03/30/2017
+title: Creazione e utilizzo degli assembly con nome sicuro
+ms.date: 08/01/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
@@ -24,17 +20,17 @@ caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 7c694fc26d65fee277c7a6873494c8d1900408b2
+ms.translationtype: HT
+ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
+ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Creazione e utilizzo degli assembly con nome sicuro
 <a name="top"></a> Un nome sicuro è costituito dall'identità dell'assembly, corrispondente al nome semplice in formato testo, al numero di versione e alle informazioni sulle impostazioni cultura eventualmente disponibili, nonché da una chiave pubblica e da una firma digitale. Questo nome viene generato da un file di assembly usando la chiave privata corrispondente. Il file di assembly contiene il manifesto dell'assembly, che include i nomi e gli hash di tutti i file che costituiscono l'assembly.  
   
- Gli assembly con nome sicuro possono usare solo tipi da altri assembly con nome sicuro. In caso contrario, la sicurezza dell'assembly con nome sicuro risulterebbe compromessa.  
+ Gli assembly con nome sicuro possono usare solo tipi da altri assembly con nome sicuro. In caso contrario, l'integrità dell'assembly con nome sicuro risulterebbe compromessa.  
   
  In questa panoramica sono incluse le sezioni seguenti:  
   
@@ -61,7 +57,7 @@ ms.lasthandoff: 06/02/2017
 4.  Common Language Runtime verifica la firma con nome sicuro quando l'assembly viene inserito nella Global Assembly Cache. Quando si esegue l'associazione in base al nome sicuro in runtime, Common Language Runtime confronta la chiave archiviata nel manifesto dell'assembly B con la chiave usata per generare il nome sicuro per l'assembly A. Se i controlli di sicurezza di .NET Framework vengono superati e l'associazione riesce, l'assembly B ha la garanzia che i bit dell'assembly A non siano stati manomessi e che questi bit provengono in effetti dagli sviluppatori dell'assembly A.  
   
 > [!NOTE]
->  Questo scenario non permette di risolvere i problemi di attendibilità. Gli assembly possono contenere firme Microsoft Authenticode complete oltre a un nome sicuro. Le firme Authenticode includono un certificato che definisce l'attendibilità. È importante tenere presente che i nomi sicuri non richiedono che il codice sia firmato in questo modo. Infatti, le chiavi usate per generare la firma con nome sicuro non devono essere le stesse usate per generare una firma Authenticode.  
+>  Questo scenario non permette di risolvere i problemi di attendibilità. Gli assembly possono contenere firme Microsoft Authenticode complete oltre a un nome sicuro. Le firme Authenticode includono un certificato che definisce l'attendibilità. È importante tenere presente che i nomi sicuri non richiedono che il codice sia firmato in questo modo. I nomi sicuri forniscono solo un'identità univoca.  
   
  [Torna all'inizio](#top)  
   
@@ -94,6 +90,7 @@ ms.lasthandoff: 06/02/2017
 |[Procedura: Aggiungere un riferimento a un assembly con nome sicuro](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Descrive come fare riferimento a tipi o risorse in un assembly con nome sicuro in fase di compilazione o di esecuzione.|  
 |[Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Descrive come disabilitare la funzionalità che consente di ignorare la convalida delle firme con nome sicuro. Questa funzionalità può essere disabilitata per tutte le applicazioni o per applicazioni specifiche.|  
 |[Creazione degli assembly](../../../docs/framework/app-domains/create-assemblies.md)|Offre una panoramica degli assembly a file singolo e su più file.|  
-|[Procedura: Ritardare la firma di un assembly (Visual Studio)](http://msdn.microsoft.com/en-us/cab63b7a-591e-4674-b236-d77cd29a79ea)|Descrive come firmare un assembly con un nome sicuro dopo la creazione dell'assembly.|  
+|[Ritardare la firma di un assembly in Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Descrive come firmare un assembly con un nome sicuro dopo la creazione dell'assembly.|  
 |[Sn.exe (strumento Nome sicuro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|Descrive lo strumento incluso in .NET Framework che permette di creare assembly con nomi sicuri. In questo strumento sono disponibili opzioni per la gestione delle chiavi nonché per la generazione e la verifica delle firme.|  
 |[Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)|Descrive lo strumento incluso in .NET Framework che genera un file contenente un manifesto dell'assembly da moduli o file di risorse.|
+
