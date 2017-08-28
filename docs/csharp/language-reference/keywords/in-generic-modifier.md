@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a2c20a74b48fad8eb7021e23002d06e78a1fd624
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: 663fa75a7e214ed97efb45dda2c9ac298559653d
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (Modificatore generico) (Riferimenti per C#)
@@ -46,7 +46,7 @@ Per i parametri di tipo generico, la parola chiave `in` specifica che il paramet
   
  A un delegato controvariante può essere assegnato un altro delegato dello stesso tipo, ma con un parametro di tipo generico meno derivato.  
   
- Per altre informazioni, vedere [Covarianza e controvarianza](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8).  
+ Per altre informazioni, vedere [Covarianza e controvarianza](../../programming-guide/concepts/covariance-contravariance/index.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra come dichiarare, estendere e implementare un'interfaccia generica controvariante. L'esempio descrive anche come usare la conversione implicita per le classi che implementano quest'interfaccia.  
@@ -63,6 +63,6 @@ Per i parametri di tipo generico, la parola chiave `in` specifica che il paramet
   
 ## <a name="see-also"></a>Vedere anche  
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
- [Covarianza e controvarianza](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
+ [Covarianza e controvarianza](../../programming-guide/concepts/covariance-contravariance/index.md)   
  [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)
 

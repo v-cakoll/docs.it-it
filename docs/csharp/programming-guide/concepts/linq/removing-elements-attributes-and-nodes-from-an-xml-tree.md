@@ -1,10 +1,7 @@
 ---
 title: Rimozione di elementi, attributi e nodi da un albero XML (C#)
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-csharp
 ms.topic: article
@@ -15,10 +12,10 @@ caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6cbf2b0e05307cd8d70603d5fa3ad1cc55123503
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: 40be8959c731746df9392e3cbf29c88fce222b0b
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Rimozione di elementi, attributi e nodi da un albero XML (C#)
@@ -32,8 +29,8 @@ ms.lasthandoff: 07/28/2017
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|[XAttribute.Remove](https://msdn.microsoft.com/library/system.xml.linq.xattribute.remove\(v=vs.110\).aspx)|Rimuove un oggetto <xref:System.Xml.Linq.XAttribute> dal relativo elemento padre.|  
-|[XContainer.RemoveNodes](https://msdn.microsoft.com/library/system.xml.linq.xcontainer.removenodes\(v=vs.110\).aspx)|Rimuove i nodi figlio da un oggetto <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=fullName>|Rimuove un oggetto <xref:System.Xml.Linq.XAttribute> dal relativo elemento padre.|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=fullName>|Rimuove i nodi figlio da un oggetto <xref:System.Xml.Linq.XContainer>.|  
 |<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|Rimuove il contenuto e gli attributi da un oggetto <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|Rimuove gli attributi di un oggetto <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|Se viene passato `null` come valore, rimuove l'attributo.|  
