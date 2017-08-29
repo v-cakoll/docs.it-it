@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2722ddad74023cb8c1be86d3a628313a45d35d8a
+ms.sourcegitcommit: 935428cc9442a3e1d15eeb8942176c237bff4e22
+ms.openlocfilehash: 6e87893bcd9800b61297e71b782028fec5116479
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="int-c-reference"></a>int (Riferimenti per C#)
@@ -47,9 +47,9 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="literals"></a>Valori letterali  
  
-È possibile dichiarare e inizializzare una variabile `int` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7) un valore letterale binario.  Se il valore letterale Integer è esterno all'intervallo di `int`, vale a dire se è minore di <xref:System.Int32.MinValue?displayProperty=fullName> o maggiore di <xref:System.Int32.MaxValue?displayProperty=fullName>, si verifica un errore di compilazione. 
+È possibile dichiarare e inizializzare una variabile `int` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7) un valore letterale binario.  Se il valore letterale integer è esterno all'intervallo di `int`, vale a dire se è minore di <xref:System.Int32.MinValue?displayProperty=fullName> o maggiore di <xref:System.Int32.MaxValue?displayProperty=fullName>, si verifica un errore di compilazione. 
 
-Nell'esempio seguente, i valori interi uguali a 16.342 rappresentati come valori letterali decimali, esadecimali o binari vengono assegnati a valori `int`.  
+Nell'esempio seguente, i valori interi uguali a 90.946 rappresentati come valori letterali decimali, esadecimali o binari vengono assegnati a valori `int`.  
   
 [!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Int)]  
 
