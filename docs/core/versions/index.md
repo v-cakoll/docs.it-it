@@ -3,16 +3,16 @@ title: Controllo delle versioni di .NET Core
 description: Informazioni sul funzionamento del controllo delle versioni di .NET Core.
 author: bleroy
 ms.author: mairaw
-ms.date: 08/11/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: c5a80e487d4351e0eaf20e510df06999e212e096
-ms.openlocfilehash: d672e93a3e4f70439aa42aef04674500b0b0566d
+ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
+ms.openlocfilehash: 48343ad8d42ad576b1975e81cd764b4ec6f5bc76
 ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="net-core-versioning"></a>Controllo delle versioni di .NET Core
@@ -103,7 +103,7 @@ Può capitare che una versione dell'SDK contenga più di una versione del runtim
 
 ##### <a name="preview-versions"></a>Versioni di anteprima
 
-I responsabili della manutenzione dei pacchetti possono decidere di includere versioni di anteprima del runtime e dell'SDK. Non includere queste versioni di anteprima nel pacchetto `dotnet-sdk` senza controllo delle versioni, ma è possibile rilasciarle come pacchetti sottoposti a controllo delle versioni, aggiungendo un indicatore di anteprima nelle sezioni della versione principale e secondaria del nome. Ad esempio, potrebbe esistere un pacchetto `dotnet-sdk-2.0-preview-1-final`.
+I responsabili della manutenzione dei pacchetti possono decidere di includere versioni di anteprima del runtime e dell'SDK. Non includere queste versioni di anteprima nel pacchetto `dotnet-sdk` senza controllo delle versioni, ma è possibile rilasciarle come pacchetti sottoposti a controllo delle versioni, aggiungendo un indicatore di anteprima nelle sezioni della versione principale e secondaria del nome. Ad esempio, potrebbe esistere un pacchetto `dotnet-sdk-2.0-preview1-final`.
 
 ### <a name="docker"></a>Docker
 
@@ -153,7 +153,7 @@ Quando sono presenti più modifiche, viene incrementato l'elemento maggiore inte
 
 ### <a name="preview-versions"></a>Versioni di anteprima
 
-Le versioni di anteprima hanno un `-preview-[number]-([build]|"final")` aggiunto alla versione. Ad esempio `2.0.0-preview-1-final`.
+Le versioni di anteprima hanno un `-preview[number]-([build]|"final")` aggiunto alla versione. Ad esempio `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Versioni di manutenzione
 

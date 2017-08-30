@@ -8,7 +8,6 @@
 ## [Metodi generici](generic-methods.md)
 ## [Generics e matrici](generics-and-arrays.md)
 ## [Delegati generici](generic-delegates.md)
-## [Parola chiave default in codice generico](default-keyword-in-generic-code.md)
 ## [Differenze tra modelli C++ e generics C#](differences-between-cpp-templates-and-csharp-generics.md)
 ## [Generics in fase di esecuzione](generics-in-the-run-time.md)
 ## [Generics nella libreria di classi .NET Framework](generics-in-the-net-framework-class-library.md)
