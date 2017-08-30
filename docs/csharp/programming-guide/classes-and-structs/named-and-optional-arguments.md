@@ -37,10 +37,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c4da026d7ad38976565cbaad930652670aed2854
+ms.sourcegitcommit: 0dc2fcee3903b80816c98bab47e2b9a2e5ef78b0
+ms.openlocfilehash: a7f05e3e0b19bf6457989f8db2b46741cf6b28c1
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argomenti denominati e facoltativi (Guida per programmatori C#)
@@ -85,7 +85,7 @@ In [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] sono stati 
   
 -   un'espressione del form `new ValType()`, dove `ValType` è un tipo di valore, ad esempio [enum](../../../csharp/language-reference/keywords/enum.md) o [struct](../../../csharp/programming-guide/classes-and-structs/structs.md);  
   
--   un'espressione del form [default(ValType)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md), dove `ValType` è un tipo di valore.  
+-   un'espressione del form [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), dove `ValType` è un tipo di valore.  
   
  I parametri facoltativi sono definiti alla fine dell'elenco di parametri, dopo eventuali parametri obbligatori. Se il chiamante specifica un argomento per un parametro di una successione di parametri facoltativi, deve specificare gli argomenti per tutti i parametri facoltativi precedenti. I gap delimitati da virgole nell'elenco di argomenti non sono supportati. Nel codice seguente, ad esempio, il metodo di istanza `ExampleMethod` viene definito con un parametro obbligatorio e due parametri facoltativi.  
   
