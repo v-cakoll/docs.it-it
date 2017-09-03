@@ -1,5 +1,6 @@
 ---
 title: Tabella dei valori predefiniti (Riferimenti per C#)
+descripton: Learn what are the default values of value types returned by the default constructors.
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,46 +37,46 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d609403269a5cbfe6715647a240c44b254a4d8f9
+ms.sourcegitcommit: f8cf12317f1f0163028db003ff31604480da5d1c
+ms.openlocfilehash: 975d416259778e0741347829d8a9c79aaa6cfc8c
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="default-values-table-c-reference"></a>Tabella dei valori predefiniti (Riferimenti per C#)
-La tabella seguente mostra i valori predefiniti dei tipi valore restituiti dai costruttori predefiniti. I costruttori predefiniti vengono richiamati con l'operatore `new`, in questo modo:  
-  
-```  
-int myInt = new int();  
-```  
-  
- L'istruzione precedente ha lo stesso effetto dell'istruzione seguente:  
-  
-```  
-int myInt = 0;  
-```  
-  
- Tenere presente che l'uso di variabili non inizializzate in C# non è consentito.  
-  
-|Tipo valore|Valore predefinito|  
-|----------------|-------------------|  
-|[bool](../../../csharp/language-reference/keywords/bool.md)|`false`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|0|  
-|[char](../../../csharp/language-reference/keywords/char.md)|'\0'|  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|0.0M|  
-|[double](../../../csharp/language-reference/keywords/double.md)|0.0D|  
-|[enum](../../../csharp/language-reference/keywords/enum.md)|Valore prodotto dall'espressione (E)0, dove E è l'identificatore di enumerazione.|  
-|[float](../../../csharp/language-reference/keywords/float.md)|0.0F|  
-|[int](../../../csharp/language-reference/keywords/int.md)|0|  
-|[long](../../../csharp/language-reference/keywords/long.md)|0L|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|0|  
-|[short](../../../csharp/language-reference/keywords/short.md)|0|  
-|[struct](../../../csharp/language-reference/keywords/struct.md)|Valore prodotto impostando tutti i campi dei tipi valore sui rispettivi valori predefiniti e tutti i campi dei tipi riferimento su `null`.|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|0|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|0|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|0|  
-  
-## <a name="see-also"></a>Vedere anche  
+La tabella seguente mostra i valori predefiniti dei tipi valore restituiti dai costruttori predefiniti. I costruttori predefiniti vengono richiamati con l'operatore `new`, in questo modo:
+
+```csharp
+int myInt = new int();
+```
+
+L'istruzione precedente ha lo stesso effetto dell'istruzione seguente:
+
+```csharp
+int myInt = 0;
+```
+
+Tenere presente che l'uso di variabili non inizializzate in C# non è consentito.
+
+|Tipo valore|Valore predefinito|
+|----------------|-------------------|
+|[bool](../../../csharp/language-reference/keywords/bool.md)|`false`|
+|[byte](../../../csharp/language-reference/keywords/byte.md)|0|
+|[char](../../../csharp/language-reference/keywords/char.md)|'\0'|
+|[decimal](../../../csharp/language-reference/keywords/decimal.md)|0.0M|
+|[double](../../../csharp/language-reference/keywords/double.md)|0.0D|
+|[enum](../../../csharp/language-reference/keywords/enum.md)|Valore prodotto dall'espressione (E)0, dove E è l'identificatore di enumerazione.|
+|[float](../../../csharp/language-reference/keywords/float.md)|0.0F|
+|[int](../../../csharp/language-reference/keywords/int.md)|0|
+|[long](../../../csharp/language-reference/keywords/long.md)|0L|
+|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|0|
+|[short](../../../csharp/language-reference/keywords/short.md)|0|
+|[struct](../../../csharp/language-reference/keywords/struct.md)|Valore prodotto impostando tutti i campi dei tipi valore sui rispettivi valori predefiniti e tutti i campi dei tipi riferimento su `null`.|
+|[uint](../../../csharp/language-reference/keywords/uint.md)|0|
+|[ulong](../../../csharp/language-reference/keywords/ulong.md)|0|
+|[ushort](../../../csharp/language-reference/keywords/ushort.md)|0|
+
+## <a name="see-also"></a>Vedere anche
  [Riferimenti per C#](../../../csharp/language-reference/index.md)   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Tabella dei tipi valore](../../../csharp/language-reference/keywords/value-types-table.md)   

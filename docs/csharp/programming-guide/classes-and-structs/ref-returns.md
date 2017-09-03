@@ -10,10 +10,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 753c620e1352dfc5fc57c380c66479c8e2d9b0ee
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
@@ -44,7 +44,7 @@ Esistono alcune restrizioni per il valore che un metodo può restituire come val
  
 - Il valore restituito non può essere una costante, un membro di enumerazione o una proprietà di un oggetto `class` o `struct`. Se si tenta di restituire questi valori, viene generato l'errore del compilatore CS8156, "Non è possibile usare un'espressione in questo contesto perché non può essere restituita per riferimento".
 
-Inoltre, poiché un metodo asincrono può effettuare la restituzione prima di aver terminato l'esecuzione e che il relativo valore restituito sia noto, i valori restituiti di riferimento non sono consentiti nei metodi `async`.
+Inoltre, poiché un metodo asincrono può eseguire la restituzione prima di aver terminato l'esecuzione mentre il relativo valore restituito non è ancora noto, i valori restituiti di riferimento non sono consentiti nei metodi asincroni.
  
 ## <a name="defining-a-ref-return-value"></a>Definizione di un valore restituito ref
 

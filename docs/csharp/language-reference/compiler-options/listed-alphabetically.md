@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 291c35f73b47167289a88f0b7655c26699fdc009
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 8a32dcab0a64fdb715871806088825e227f08abb
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opzioni del compilatore C# in ordine alfabetico
@@ -85,6 +85,8 @@ Le seguenti opzioni del compilatore sono ordinate alfabeticamente. Per un elenco
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Specifica la lingua da utilizzare per l'output del compilatore.|  
 |[/recurse](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|Include tutti i file presenti nella directory corrente e nelle relative sottodirectory in base alle specifiche dei caratteri jolly.|  
 |[/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|Fa riferimento ai metadati dei file di assembly specificati.|  
+|[/refout](refout-compiler-option.md)|Generare un assembly di riferimento oltre all'assembly principale.|  
+|[/refonly](refonly-compiler-option.md)|Generare un assembly di riferimento invece dell'assembly principale.|  
 |[/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|Incorpora la risorsa specificata.|  
 |/ruleset:\<file>|Specificare un file di set di regole che disabilita la diagnostica specifica.|  
 |[/subsystemversion](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|Specifica la versione minima del sottosistema che può essere utilizzata dal file eseguibile.|  
