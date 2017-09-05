@@ -1,6 +1,6 @@
 ---
-title: Guida introduttiva a Visual Basic
-ms.date: 2017-08-07
+title: Introduzione a Visual Basic
+ms.date: 2017-08-10
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -8,8 +8,8 @@ ms.topic: article
 dev_langs:
 - VB
 helpviewer_keywords:
-- getting started, Visual Basic
-- Visual Basic, getting started
+- get started, Visual Basic
+- Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
@@ -30,16 +30,22 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 168d37a4e4ada31b09ea68b6e0ef5eb41fb1e55f
-ms.openlocfilehash: 5b8a13e850369affe203440c79496047b24053f0
+ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
+ms.openlocfilehash: fe0c7b1e523cd36bae1dd02e43c5ff568f282f2e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/29/2017
 
 ---
-# <a name="getting-started-with-visual-basic"></a>Guida introduttiva a Visual Basic
+# <a name="get-started-with-visual-basic"></a>Introduzione a Visual Basic
 Questa sezione della documentazione fornisce informazioni introduttive per lo sviluppo di applicazione di Visual Basic.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="get-started-with-visual-basic-and-net-core"></a>Introduzione a Visual Basic e .NET Core
+
+[Creazione di un'applicazione Hello World in Visual Basic con .NET Core in Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md)
+
+[Creazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md)  
+
+## <a name="additional-information"></a>Informazioni aggiuntive
 
 [Novità in Visual Basic](whats-new.md)   
 Elenca le nuove funzionalità di ogni versione di Visual Basic .NET.
@@ -49,12 +55,19 @@ Vengono elencate le modifiche in questa versione che potrebbero impedire la comp
   
 [Risorse aggiuntive per i programmatori Visual Basic](additional-resources.md)  
 Viene fornito un elenco di siti Web e newsgroup in cui individuare risposte ai problemi più comuni.  
-  
+
+## <a name="develop-net-core-applications-with-visual-basic"></a>Sviluppare applicazioni .NET Core con Visual Basic
+
+[Compilare un'app Hello World usando Visual Basic con .NET Core in Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md) 
+
+[Creazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md) 
+
 ## <a name="see-also"></a>Vedere anche
  [Ottenere Visual Basic](https://www.visualstudio.com/downloads/)  
  Fornisce i collegamenti ai download per le versioni di Visual Studio che includono il supporto di Visual Basic, comprese le versioni gratuite.  
 
- [Visual Basic Fundamentals for Absolute Beginners](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) (Nozioni fondamentali di Visual Basic per assoluti principianti) Corso Microsoft Virtual Academy che illustra le nozioni di base della programmazione con Visual Basic.
+ [Concetti di base su Visual Basic per principianti](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)   
+ Corso Microsoft Virtual Academy che illustra le nozioni di base della programmazione con Visual Basic.
 
  [Programmazione orientata ad oggetti](../programming-guide/concepts/object-oriented-programming.md)  
  Vengono forniti collegamenti a pagine in cui è introdotta la programmazione orientata a oggetti, la creazione di oggetti personalizzati e l'utilizzo degli oggetti per semplificare l'attività di codifica.  
