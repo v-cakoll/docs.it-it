@@ -1,6 +1,6 @@
 ---
 title: default (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 2017-08-04
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -31,23 +31,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b4167f53d64f80fc4665a9f1171c050bf0fa433
+ms.sourcegitcommit: 0dc2fcee3903b80816c98bab47e2b9a2e5ef78b0
+ms.openlocfilehash: 60607855e4a947af694c8ad8a9a3f0515ebb1700
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/28/2017
 
 ---
+
 # <a name="default-c-reference"></a>default (Riferimenti per C#)
-Parola chiave `default`.  
-  
- È possibile usare la parola chiave `default` nell'istruzione `switch` o in codice generico:  
-  
--   [Istruzione switch](../../../csharp/language-reference/keywords/switch.md): specifica l'etichetta predefinita.  
-  
--   [Codice generico](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md): specifica il valore predefinito del parametro di tipo. Questo valore sarà null per i tipi riferimento e zero per i tipi valore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+
+Parola chiave `default`.
+
+È possibile usare la parola chiave `default` nell'istruzione `switch` o in un'espressione con valore predefinito:
+
+- [Istruzione switch](switch.md): specifica l'etichetta predefinita.
+
+- [Espressioni con valore predefinito](../../programming-guide/statements-expressions-operators/default-value-expressions.md): producono il valore predefinito del tipo. Questo valore sarà null per i tipi riferimento e zero per i tipi valore e seguirà lo schema di bit 0 per gli struct.
+
+## <a name="see-also"></a>Vedere anche
+
+ [Riferimenti per C#](../index.md)   
+ [Guida per programmatori C#](../../programming-guide/index.md)   
+ [Parole chiave di C#](index.md)   
 

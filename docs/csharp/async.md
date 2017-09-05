@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ddaa82e6f8492142523e9d240b0d337cfccffd8
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -128,7 +128,7 @@ Gli esempi seguenti illustrano i diversi modi in cui è possibile scrivere codic
 Questo frammento di codice scarica il contenuto HTML da www.dotnetfoundation.org e conta il numero di volte in cui che la stringa ".NET" è inclusa nel contenuto HTML.  Usa MVC di ASP.NET per definire un metodo del controller Web che esegue questa attività, restituendo il numero.
 
 > [!NOTE]
-> Se si prevede di eseguire l'analisi HTML effettiva, non è consigliabile usare espressioni regolari.  Usare invece una libreria di analisi, se questo è l'obiettivo del codice di produzione.
+> Se si prevede di eseguire l'analisi del codice HTML nel codice di produzione, non usare le espressioni regolari. Usare invece una libreria di analisi.
 
 ```csharp
 private readonly HttpClient _httpClient = new HttpClient();

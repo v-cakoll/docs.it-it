@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: eca5febd448a135eb7ec52e4243ae341563190df
+ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
+ms.openlocfilehash: 3f8804f9b7522e385b145a9643dec942cc1aab9f
 ms.contentlocale: it-it
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="discards---c-guide"></a>Variabili discard - Guida di C#
@@ -33,7 +33,7 @@ In C# 7 le variabili discard sono supportate nelle assegnazioni nei seguenti con
 - Chiamate a metodi con parametri `out`.
 - Un `_` standalone quando l'ambito non include nessun `_`.
 
-Quando `_` è una variabile discard valida, se si prova a recuperarne il valore o a usarla in un'operazione di assegnazione viene generato l'errore di compilazione CS0301: "Il nome '_' non esiste nel contesto corrente". L'errore si verifica perché a `_` non è assegnato nessun valore e potrebbe non essere assegnata nessuna posizione di archiviazione. Se si trattasse di una vera variabile non sarebbe possibile rimuovere più di un valore, come nell'esempio precedente.
+Quando `_` è una variabile discard valida, se si prova a recuperarne il valore o a usarla in un'operazione di assegnazione viene generato l'errore di compilazione CS0301, "Il nome '\_' non esiste nel contesto corrente". L'errore si verifica perché a `_` non è assegnato nessun valore e potrebbe non essere assegnata nessuna posizione di archiviazione. Se si trattasse di una vera variabile non sarebbe possibile rimuovere più di un valore, come nell'esempio precedente.
 
 ## <a name="tuple-and-object-deconstruction"></a>Decostruzione di tuple e oggetti
 
