@@ -26,10 +26,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a396280e1095497b86e4792f4debb9cf0435f50
+ms.sourcegitcommit: 6118956a5681ddbeb110f6e01f090b85cdd65089
+ms.openlocfilehash: 465a395a33c027132b7890e02d540438096e2073
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="null-conditional-operators-c-and-visual-basic"></a>Operatori condizionali Null (C# e Visual Basic)
@@ -47,7 +47,7 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- Nell'ultimo esempio viene dimostrato che gli operatori con condizione Null causano un corto circuito.  Se un'operazione in una catena di operazioni condizionali di indice e accesso ai membri restituisce Null, l'esecuzione delle altre operazioni della catena viene interrotta.  L'esecuzione di altre operazioni con precedenza inferiore nell'espressione invece può continuare.  Ad esempio, nel codice seguente `E` viene sempre eseguita e le operazioni `??` e `==` vengono eseguite.  
+ Nell'ultimo esempio viene dimostrato che gli operatori con condizione Null causano un corto circuito.  Se un'operazione in una catena di operazioni condizionali di indice e accesso ai membri restituisce Null, l'esecuzione delle altre operazioni della catena viene interrotta.  L'esecuzione di altre operazioni con precedenza inferiore nell'espressione invece può continuare.  Ad esempio, nel codice seguente `E` viene eseguita nella seconda riga e le operazioni `??` e `==` vengono eseguite.  Nella prima riga `??` restituisce un corto circuito e `E` non viene eseguita quando il lato sinistro restituisce un valore non Null.
   
 ```csharp
 A?.B?.C?[0] ?? E  
