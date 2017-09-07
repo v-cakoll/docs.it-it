@@ -3,17 +3,23 @@ title: Guida a C#
 description: Informazioni su come la Guida a C# consente di ampliare la propria conoscenza del linguaggio C# agli sviluppatori sia nuovi che esperti.
 keywords: .NET, .NET Core
 author: BillWagner
-ms.date: 08/03/2016
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
+helpviewer_keywords:
+- documentation [C#]
+- Help, Visual C# documentation
+- C# language
+- Visual C#
+ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 18e26035e41c97af135f0075075bd2441182f157
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 5cb79aa1fd89e080e8dc67c379a0a927102a6419
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 
@@ -32,7 +38,7 @@ La Guida a C# offre un'ampia gamma di informazioni sul linguaggio C#. Questo sit
  
 ## <a name="how-the-c-guide-is-organized"></a>Organizzazione della Guida a C#
 
-La Guida a C# è organizzata in sette sezioni. È possibile leggere le sezioni nell'ordine in cui sono presentate oppure è possibile passare direttamente a quelle ritenute di maggiore interesse. Alcune sezioni riguardano soprattutto il linguaggio, mentre altre offrono scenari end-to-end per illustrare alcuni dei tipi di programmi che è possibile creare con C# e .NET Framework.
+La Guida a C# è organizzata in varie sezioni. È possibile leggere le sezioni nell'ordine in cui sono presentate oppure è possibile passare direttamente a quelle ritenute di maggiore interesse. Alcune sezioni riguardano soprattutto il linguaggio, mentre altre offrono scenari end-to-end per illustrare alcuni dei tipi di programmi che è possibile creare con C# e .NET Framework.
 
 * [Introduzione a C#](getting-started/index.md):
     - Questa sezione illustra gli elementi necessari per installare un ambiente di sviluppo C# nella piattaforma preferita. I diversi argomenti della sezione spiegano come creare il primo programma in C# in differenti ambienti supportati.
@@ -52,6 +58,25 @@ La Guida a C# è organizzata in sette sezioni. È possibile leggere le sezioni n
 <!--* [.NET Compiler Platform SDK](roslyn/index.md):
     - The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end to end scenarios, and links to other libraries with more examples using these APIs.
 -->
+* [Using the Visual Studio Development Environment for C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp) (Uso dell'ambiente di sviluppo di Visual Studio per C#)  
+    - Viene illustrato l'ambiente di sviluppo di [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+
+* [Guida per programmatori C#](../csharp/programming-guide/index.md)  
+    - Vengono forniti esempi pratici e informazioni sull'utilizzo dei costrutti del linguaggio C#.  
+
+* [Esempi di C#](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+    - MSDN Code Gallery filtrata per C#.  
+  
+* [Procedure dettagliate](../csharp/walkthroughs.md)  
+    - Vengono forniti collegamenti alle procedure dettagliate di programmazione che usano C# e a una breve descrizione di ciascuna procedura dettagliata.  
+
 * [Riferimenti per C#](language-reference/index.md):
-    - Questa sezione contiene materiale di riferimento su C# che consentirà di comprendere la sintassi e la semantica di questo linguaggio. 
+    - Questa sezione contiene materiale di riferimento su C# che consentirà di comprendere la sintassi e la semantica di questo linguaggio. Vengono forniti anche materiali di riferimento per i tipi, gli operatori, gli attributi, le direttive del preprocessore, le opzioni del compilatore, nonché per errori e avvisi generati dal compilatore.
+  
+* [Specifiche del linguaggio C#](../csharp/language-reference/language-specification/index.md)  
+    - Vengono forniti collegamenti alla versione più aggiornata delle specifiche C# in formato Microsoft Word.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Guida introduttiva a Visual C# e Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Sviluppo .NET](https://msdn.microsoft.com/library/ff361664)
 

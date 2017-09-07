@@ -42,10 +42,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee13c7dec733dcc8e3067ea2bf9421177a284d54
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: eb8c4f11e540aa2685989ef11b2515a32d8d1fd6
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-operators"></a>Operatori [C#]
@@ -80,7 +80,7 @@ C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md): disabilita il controllo di overflow per le operazioni con numeri interi.  Questo è il comportamento predefinito per il compilatore.  
   
- [default(T)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md): restituisce il valore inizializzato predefinito di tipo T, `null` per i tipi di riferimento, zero per i tipi numerici e inserimento di zero/`null` nei membri per i tipi struct.  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md): restituisce il valore predefinito di tipo T, `null` per i tipi di riferimento, zero per i tipi numerici e inserimento di zero/`null` nei membri per i tipi struct.  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md): dichiara e restituisce un'istanza di delegato.  
   
@@ -235,7 +235,6 @@ C# fornisce diversi operatori, ovvero simboli che specificano quali operazioni (
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti per C#](../../../csharp/language-reference/index.md)   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/csharp.md)   
- [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
+ [C#](../../../csharp/index.md) [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
 

@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
-ms.openlocfilehash: fe0c7b1e523cd36bae1dd02e43c5ff568f282f2e
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 4e3c1a1e6728d4a5e256b81b0f8a8b29851dc625
 ms.contentlocale: it-it
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="get-started-with-visual-basic"></a>Introduzione a Visual Basic
@@ -84,8 +84,7 @@ Viene fornito un elenco di siti Web e newsgroup in cui individuare risposte ai p
  [Visual Studio](/visualstudio/)  
  Vengono forniti i collegamenti alla documentazione di [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [C#](../../csharp/csharp.md)  
- Vengono forniti i collegamenti alla documentazione relativa allo sviluppo di applicazioni con [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ [C#](../../csharp/index.md) Vengono forniti i collegamenti alla documentazione relativa allo sviluppo di applicazioni con [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Visual C++](/cpp/)  
  Vengono forniti collegamenti alla documentazione di Visual C++.  
