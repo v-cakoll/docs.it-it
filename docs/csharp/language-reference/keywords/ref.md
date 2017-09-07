@@ -143,4 +143,3 @@ Quando il chiamante archivia il valore restituito dal metodo `GetBookByTitle` co
  [Passaggio di parametri](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
  [Parametri di metodo](../../../csharp/language-reference/keywords/method-parameters.md)   
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
-
