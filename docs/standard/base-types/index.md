@@ -1,5 +1,5 @@
 ---
-title: Uso dei tipi di base in .NET | Microsoft Docs
+title: Uso dei tipi di base in .NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: e1451f41b463e28a5fa305f23f3790bcfc066c30
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d6b1c760fb8667850d4f4e88ca8fe5bcf0b0a662
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="working-with-base-types-in-net"></a>Uso dei tipi di base in .NET
@@ -46,3 +46,4 @@ Questa sezione descrive le operazioni sui tipi di base .NET, tra cui la formatta
   
  [Date, ore e fusi orari](../../../docs/standard/datetime/index.md)  
  Viene descritto come usare fusi orari e conversioni di fusi orari in applicazioni che dipendono dal fuso orario.
+
