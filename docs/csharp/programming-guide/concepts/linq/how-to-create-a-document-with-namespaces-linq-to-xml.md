@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare un documento con spazi dei nomi (C#) (LINQ to XML) | Microsoft Docs'
+title: 'Procedura: creare un documento con spazi dei nomi (C#) (LINQ to XML)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 23cc762b1dcd5e39b923c1a57b6f171c7885f0ad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cecd2012012ba789ad2c2935b6b69c282718a066
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Procedura: creare un documento con spazi dei nomi (C#) (LINQ to XML)
@@ -31,7 +32,7 @@ In questo argomento viene illustrato come creare documenti con spazi dei nomi.
 ## <a name="example"></a>Esempio  
  Per creare un elemento o un attributo in uno spazio dei nomi, è prima necessario dichiarare e inizializzare un oggetto <xref:System.Xml.Linq.XNamespace>. È quindi possibile usare l'overload dell'operatore di addizione per combinare lo spazio dei nomi con il nome locale, espresso come stringa.  
   
- Nell'esempio seguente viene creato un documento con un solo spazio dei nomi. Per impostazione predefinita, in [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] questo documento viene serializzato con uno spazio dei nomi predefinito.  
+ Nell'esempio seguente viene creato un documento con un solo spazio dei nomi. Per impostazione predefinita, in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] questo documento viene serializzato con uno spazio dei nomi predefinito.  
   
 ```csharp  
 // Create an XML tree in a namespace.  
@@ -51,7 +52,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene creato un documento con un solo spazio dei nomi. nonché un attributo che dichiara lo spazio dei nomi con un prefisso. Per creare un attributo che dichiara uno spazio dei nomi con un prefisso, è possibile creare un attributo il cui nome sia il prefisso dello spazio dei nomi e si trovi nello spazio dei nomi <xref:System.Xml.Linq.XNamespace.Xmlns%2A>. Il valore di questo attributo è l'URI dello spazio dei nomi.  
+ Nell'esempio seguente viene creato un documento con un solo spazio dei nomi. nonché un attributo che dichiara lo spazio dei nomi con un prefisso. Per creare un attributo che dichiara uno spazio dei nomi con un prefisso, è possibile creare un attributo il cui nome è il prefisso dello spazio dei nomi e tale nome si trova nello spazio dei nomi <xref:System.Xml.Linq.XNamespace.Xmlns%2A>. Il valore di questo attributo è l'URI dello spazio dei nomi.  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  
@@ -137,7 +138,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Esempio  
  È possibile ottenere lo stesso risultato anche usando nomi espansi anziché dichiarando e creando un oggetto <xref:System.Xml.Linq.XNamespace>.  
   
- Questo approccio può tuttavia incidere sulle prestazioni. Ogni volta che si passa una stringa che contiene un nome espanso a [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] deve analizzare il nome, individuare lo spazio dei nomi atomicizzato e individuare il nome atomicizzato. Questo processo impiega il tempo della CPU. Se le prestazioni sono importanti, è necessario dichiarare e usare un oggetto <xref:System.Xml.Linq.XNamespace> in modo esplicito.  
+ Questo approccio può tuttavia incidere sulle prestazioni. Ogni volta che si passa una stringa che contiene un nome espanso a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] deve analizzare il nome, individuare lo spazio dei nomi atomicizzato e individuare il nome atomicizzato. Questo processo impiega il tempo della CPU. Se le prestazioni sono importanti, è consigliabile dichiarare e usare un oggetto <xref:System.Xml.Linq.XNamespace> in modo esplicito.  
   
  Se le prestazioni rappresentano un problema rilevante, per altre informazioni vedere [Pre-atomizzazione di oggetti XName (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md).  
   
@@ -160,3 +161,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

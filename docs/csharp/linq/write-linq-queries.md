@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2e08c8e3594bedeab763895c8b6f7d78a2bbf56d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7051e33a185b0ab898c4b9d7368f8f0e6883c119
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -49,7 +50,7 @@ Questo argomento illustra i tre modi in cui è possibile scrivere una query LINQ
 ## <a name="example"></a>Esempio  
   
 ## <a name="method-syntax"></a>Sintassi di metodo  
- Alcune operazioni di query devono essere espresse come una chiamata al metodo. I metodi più comuni sono quelli che restituiscono valori numerici singleton, ad esempio <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> e così via. Questi metodi devono sempre essere chiamati per ultimi in una query poiché rappresentano solo un singolo valore e non possono essere usati come origine per un'operazione di query aggiuntiva. Nell'esempio seguente viene illustrata una chiamata al metodo in un'espressione di query:  
+ Alcune operazioni di query devono essere espresse come una chiamata al metodo. I più comuni di tali metodi sono quelli che restituiscono valori numerici singleton, ad esempio <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> e così via. Questi metodi devono sempre essere chiamati per ultimi in una query poiché rappresentano solo un singolo valore e non possono essere usati come origine per un'operazione di query aggiuntiva. Nell'esempio seguente viene illustrata una chiamata al metodo in un'espressione di query:  
   
  [!code-cs[csProgGuideLINQ#6](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]  
   
@@ -58,7 +59,7 @@ Questo argomento illustra i tre modi in cui è possibile scrivere una query LINQ
   
  [!code-cs[csProgGuideLINQ#7](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]  
   
- Nelle query precedenti solo la query n. 4 viene immediatamente eseguita. Questo avviene perché restituisce un singolo valore e non una raccolta <xref:System.Collections.Generic.IEnumerable%601> generica. Il metodo stesso deve usare `foreach` per calcolare il proprio valore.  
+ Nelle query precedenti solo la query n. 4 viene immediatamente eseguita. Ciò è dovuto al fatto che viene restituito un valore singolo invece di una raccolta <xref:System.Collections.Generic.IEnumerable%601> generica. Il metodo stesso deve usare `foreach` per calcolare il proprio valore.  
   
  Ognuna delle query precedenti può essere scritta usando la tipizzazione implicita con [var](../language-reference/keywords/var.md), come illustrato nell'esempio seguente:  
   
@@ -95,3 +96,4 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
   [Procedura dettagliata: Scrittura di query in C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
  [Espressioni di query LINQ](index.md)   
  [Clausola where](../language-reference/keywords/where-clause.md)
+

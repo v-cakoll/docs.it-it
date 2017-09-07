@@ -1,5 +1,5 @@
 ---
-title: -lib (opzioni del compilatore C#) | Microsoft Docs
+title: -lib (opzioni del compilatore C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 27bcca456a7a5c884c33de6429e06c94afc9536a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e6d928c0ac1cbb4e65d9747ab2c9133aacdbea8e
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="lib-c-compiler-options"></a>/lib (opzioni del compilatore C#)
@@ -92,4 +92,5 @@ csc /lib:c:\ /reference:t2.dll t2.cs
   
 ## <a name="see-also"></a>Vedere anche  
  [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
- [NIB Procedura: Modificare le proprietà e le impostazioni di configurazione dei progetti](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+

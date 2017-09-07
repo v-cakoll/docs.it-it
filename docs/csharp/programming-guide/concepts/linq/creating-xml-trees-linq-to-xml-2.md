@@ -1,5 +1,5 @@
 ---
-title: Creazione di alberi XML in C# (LINQ to XML) | Microsoft Docs
+title: Creazione di alberi in C# (LINQ to XML)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92ba0d345183ec503d61254355f948f82a18f053
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ac95fcf49736b554c8a3d4d0061f63b3ac4d3f65
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Creazione di alberi in C# (LINQ to XML)
@@ -31,11 +32,11 @@ In questa sezione vengono fornite informazioni sulla creazione di alberi XML in 
  Per informazioni sull'uso dei risultati delle query LINQ come contenuto per un oggetto <xref:System.Xml.Linq.XElement>, vedere [Costruzione funzionale (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
 ## <a name="constructing-elements"></a>Costruzione di elementi  
- Le firme dei costruttori <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XAttribute> consentono di passare al costruttore il contenuto dell'elemento o dell'attributo sotto forma di argomenti. Poiché uno dei costruttori accetta un numero variabile di argomenti, è possibile passare un qualsiasi numero di elementi figlio. Ognuno degli elementi figlio può naturalmente contenere elementi figlio. Per qualsiasi elemento è possibile aggiungere un qualsiasi numero di attributi.  
+ Le firme dei costruttori <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XAttribute> consentono di passare come argomenti del costruttore il contenuto dell'elemento o dell'attributo. Poiché uno dei costruttori accetta un numero variabile di argomenti, è possibile passare un qualsiasi numero di elementi figlio. Ognuno degli elementi figlio può naturalmente contenere elementi figlio. Per qualsiasi elemento è possibile aggiungere un qualsiasi numero di attributi.  
   
- Quando si aggiungono oggetti <xref:System.Xml.Linq.XNode> (incluso <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute>, se il nuovo contenuto non ha un padre, gli oggetti vengono semplicemente collegati all'albero XML. Se invece il nuovo contenuto include già elementi padre e fa parte di un altro albero XML, viene duplicato e quindi collegato all'albero XML. Tale comportamento è illustrato nell'ultimo esempio di questo argomento.  
+ Se quando si aggiungono oggetti <xref:System.Xml.Linq.XNode> (incluso <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute>, il nuovo contenuto non ha elementi padre, gli oggetti vengono semplicemente collegati all'albero XML. Se invece il nuovo contenuto include già elementi padre e fa parte di un'altra struttura ad albero XML, viene duplicato e quindi collegato alla struttura ad albero XML. Tale comportamento è illustrato nell'ultimo esempio di questo argomento.  
   
- Per creare un oggetto `contacts` <xref:System.Xml.Linq.XElement>, è possibile usare il codice seguente:  
+ Per creare un oggetto `contacts`<xref:System.Xml.Linq.XElement>, è possibile usare il codice seguente:  
   
 ```csharp  
 XElement contacts =  
@@ -61,10 +62,10 @@ XElement contacts =
 |Costruttore|Descrizione|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|Crea un oggetto <xref:System.Xml.Linq.XElement>. Il parametro `name` specifica il nome dell'elemento, mentre il parametro `content` ne specifica il contenuto.|  
-|`XElement(XName name)`|Crea un oggetto <xref:System.Xml.Linq.XElement> con il relativo <xref:System.Xml.Linq.XName> inizializzato sul nome specificato.|  
-|`XElement(XName name, params object[] content)`|Crea un oggetto <xref:System.Xml.Linq.XElement> con il relativo <xref:System.Xml.Linq.XName> inizializzato sul nome specificato. Gli attributi e/o elementi figlio vengono creati dal contenuto dell'elenco di parametri.|  
+|`XElement(XName name)`|Crea un oggetto <xref:System.Xml.Linq.XElement> il cui <xref:System.Xml.Linq.XName> viene inizializzato in base al nome specificato.|  
+|`XElement(XName name, params object[] content)`|Crea un oggetto <xref:System.Xml.Linq.XElement> il cui <xref:System.Xml.Linq.XName> viene inizializzato in base al nome specificato. Gli attributi e/o elementi figlio vengono creati dal contenuto dell'elenco di parametri.|  
   
- Il parametro `content` è estremamente flessibile. Supporta qualsiasi tipo di oggetto che sia un elemento figlio valido di un oggetto <xref:System.Xml.Linq.XElement>. Ai tipi diversi di oggetti passati in questo parametro si applicano le regole seguenti:  
+ Il parametro `content` è estremamente flessibile. Supporta qualsiasi tipo di oggetto che corrisponde a un elemento figlio valido di un oggetto <xref:System.Xml.Linq.XElement>. Ai tipi diversi di oggetti passati in questo parametro si applicano le regole seguenti:  
   
 -   Una stringa viene aggiunta come contenuto di tipo testo.  
   
@@ -72,14 +73,14 @@ XElement contacts =
   
 -   Un oggetto <xref:System.Xml.Linq.XAttribute> viene aggiunto come attributo.  
   
--   Un oggetto <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> o <xref:System.Xml.Linq.XText> viene aggiunto come contenuto figlio.  
+-   Un oggetto <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> o <xref:System.Xml.Linq.XText> viene aggiunto come contenuto di elemento figlio.  
   
 -   Viene enumerato un oggetto <xref:System.Collections.IEnumerable> e queste regole vengono applicate in modo ricorsivo ai risultati.  
   
 -   Per qualsiasi altro tipo viene chiamato il metodo `ToString` e il risultato viene aggiunto come contenuto di tipo testo.  
   
 ### <a name="creating-an-xelement-with-content"></a>Creazione di un XElement con contenuto  
- È possibile creare un oggetto <xref:System.Xml.Linq.XElement> con contenuto semplice usando una sola chiamata al metodo. A tale scopo, specificare il contenuto come secondo parametro, come illustrato di seguito:  
+ È possibile creare un oggetto <xref:System.Xml.Linq.XElement> con contenuto semplice usando una sola chiamata di metodo. A tale scopo, specificare il contenuto come secondo parametro, come illustrato di seguito:  
   
 ```csharp  
 XElement n = new XElement("Customer", "Adventure Works");  
@@ -126,7 +127,7 @@ Console.WriteLine(shippingUnit);
 ```  
   
 ### <a name="creating-an-xelement-with-multiple-child-elements"></a>Creazione di un XElement con più elemento figlio  
- È possibile passare un numero di oggetti <xref:System.Xml.Linq.XElement> per il contenuto. Ogni oggetto <xref:System.Xml.Linq.XElement> viene incluso come elemento figlio.  
+ È possibile passare più oggetti <xref:System.Xml.Linq.XElement> per il contenuto. Ognuno degli oggetti <xref:System.Xml.Linq.XElement> viene incluso come elemento figlio.  
   
 ```csharp  
 XElement address = new XElement("Address",  
@@ -186,7 +187,7 @@ Console.WriteLine(contacts);
 ```  
   
 ### <a name="creating-an-empty-element"></a>Creazione di un elemento vuoto  
- Per creare un oggetto <xref:System.Xml.Linq.XElement> vuoto, non viene passato alcun contenuto al costruttore. Nell'esempio seguente creato un elemento vuoto.  
+ Per creare un oggetto <xref:System.Xml.Linq.XElement> vuoto, non viene passato nessun contenuto al costruttore. Nell'esempio seguente creato un elemento vuoto.  
   
 ```csharp  
 XElement n = new XElement("Customer");  
@@ -199,8 +200,8 @@ Console.WriteLine(n);
 <Customer />  
 ```  
   
-### <a name="attaching-vs-cloning"></a>Collegamento e clonazione  
- Come indicato in precedenza, quando si aggiungono oggetti <xref:System.Xml.Linq.XNode> (incluso <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute>, se il nuovo contenuto non ha un padre, gli oggetti vengono semplicemente collegati all'albero XML. Se invece il nuovo contenuto include già elementi padre e fa parte di un altro albero XML, viene duplicato e quindi collegato all'albero XML.  
+### <a name="attaching-vs-cloning"></a>Collegamento e duplicazione  
+ Come accennato in precedenza, se quando si aggiungono oggetti <xref:System.Xml.Linq.XNode> (incluso <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute>, il nuovo contenuto non ha elementi padre, gli oggetti vengono semplicemente collegati all'albero XML. Se invece il nuovo contenuto include già elementi padre e fa parte di un altro albero XML, viene duplicato e quindi collegato all'albero XML.  
   
 ```csharp  
 // Create a tree with a child element.  
@@ -237,3 +238,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione di alberi XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

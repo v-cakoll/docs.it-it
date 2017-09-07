@@ -1,5 +1,5 @@
 ---
-title: Creazione di assembly satellite per applicazioni desktop | Microsoft Docs
+title: Creazione di assembly satellite per applicazioni desktop
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -32,11 +32,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: b4ae5474ebf910389148745105adbe9a0ae608bb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: febb9d50bd61eef53f39bb0f36cd4e3a6049e9f5
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Creazione di assembly satellite per applicazioni desktop
@@ -61,7 +61,7 @@ I file di risorse svolgono un ruolo centrale nelle applicazioni localizzate. Que
   
  La figura seguente illustra una struttura di directory di esempio e i requisiti relativi alla posizione per le applicazioni che non si intende installare nella [Global Assembly Cache](../../../docs/framework/app-domains/gac.md). Gli elementi con estensione txt e resources non verranno forniti con l'applicazione finale. Questi sono file di risorse intermedi usati per creare gli assembly di risorse satellite finali. In questo esempio è possibile sostituire il file con estensione resx per i file con estensione txt. Per altre informazioni, vedere [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
- ![Satellite assemblies](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
+ ![Assembly satellite](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
 Directory dell'assembly satellite  
   
 ## <a name="compiling-satellite-assemblies"></a>compilazione di assembly satellite  

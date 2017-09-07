@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Aggiungere metodi personalizzati per query LINQ (C#) | Microsoft Docs'
+title: 'Procedura: Aggiungere metodi personalizzati per query LINQ (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 5f3ac26abe3eccc19b928375059e2562c4aa6a80
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c1a7ec7c5c719839d7a1a63568541a26a8216377
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Procedura: Aggiungere metodi personalizzati per query LINQ (C#)
-È possibile estendere il set di metodi da usare per le query LINQ aggiungendo metodi di estensione per l'interfaccia <xref:System.Collections.Generic.IEnumerable%601>. Oltre alla media standard o a un numero massimo di operazioni, ad esempio, è possibile creare un metodo di aggregazione personalizzato per calcolare un singolo valore da una sequenza di valori. È anche possibile creare un metodo che funzioni come un filtro personalizzato o una trasformazione di dati specifica per una sequenza di valori che restituisca una nuova sequenza. Esempi di tali metodi sono <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Reverse%2A>.  
+È possibile estendere il set di metodi da usare per le query LINQ aggiungendo metodi di estensione all'interfaccia <xref:System.Collections.Generic.IEnumerable%601>. Oltre alla media standard o a un numero massimo di operazioni, ad esempio, è possibile creare un metodo di aggregazione personalizzato per calcolare un singolo valore da una sequenza di valori. È anche possibile creare un metodo che funzioni come un filtro personalizzato o una trasformazione di dati specifica per una sequenza di valori che restituisca una nuova sequenza. Esempi di tali metodi sono <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Reverse%2A>.  
   
- Quando si estende l'interfaccia <xref:System.Collections.Generic.IEnumerable%601>, è possibile applicare i metodi personalizzati per qualsiasi raccolta enumerabile. Per altre informazioni, vedere [Metodi di estensione](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
+ Quando si estende l'interfaccia <xref:System.Collections.Generic.IEnumerable%601>, è possibile applicare i metodi personalizzati a qualsiasi raccolta enumerabile. Per altre informazioni, vedere [Metodi di estensione](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
   
 ## <a name="adding-an-aggregate-method"></a>Aggiunta di un metodo di aggregazione  
  Un metodo di aggregazione calcola un singolo valore da un set di valori. LINQ offre diversi metodi di aggregazione, tra cui <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A> e <xref:System.Linq.Enumerable.Max%2A>. È possibile creare il proprio metodo di aggregazione aggiungendo un metodo di estensione all'interfaccia <xref:System.Collections.Generic.IEnumerable%601>.  
@@ -130,7 +130,7 @@ Console.WriteLine("int: Median = " + query2);
 #### <a name="to-create-a-generic-overload"></a>Per creare un overload generico  
  È anche possibile creare un overload che accetti una sequenza di oggetti generici. Questo overload accetta un delegato come parametro e lo usa per convertire una sequenza di oggetti di un tipo generico in un tipo specifico.  
   
- Nel codice seguente viene illustrato l'overload del metodo `Median` che accetta il delegato <xref:System.Func%602> come parametro. Questo delegato accetta un oggetto di tipo generico T e restituisce un oggetto di tipo `double`.  
+ Il codice seguente mostra un overload del metodo `Median` che accetta il delegato <xref:System.Func%602> come parametro. Questo delegato accetta un oggetto di tipo generico T e restituisce un oggetto di tipo `double`.  
   
 ```csharp  
 // Generic overload.  
@@ -144,7 +144,7 @@ public static double Median<T>(this IEnumerable<T> numbers,
   
  È ora possibile chiamare il metodo `Median` per una sequenza di oggetti di qualsiasi tipo. Se il tipo non ha un proprio overload del metodo, è necessario passare un parametro del delegato. In C# è possibile usare un'espressione lambda a questo scopo. Solo in Visual Basic, se si usa la clausola `Aggregate` o `Group By` anziché la chiamata al metodo, è possibile passare qualsiasi valore o espressione che si trovi nell'ambito della clausola.  
   
- L'esempio di codice seguente illustra come chiamare il metodo `Median` per una matrice di numeri interi e una matrice di stringhe. Per le stringhe, viene calcolato il valore mediano della lunghezza delle stringhe nella matrice. Nell'esempio viene illustrato come passare il parametro del delegato <xref:System.Func%602> al metodo `Median` per ogni caso.  
+ L'esempio di codice seguente illustra come chiamare il metodo `Median` per una matrice di numeri interi e una matrice di stringhe. Per le stringhe, viene calcolato il valore mediano della lunghezza delle stringhe nella matrice. L'esempio mostra come passare il parametro del delegato <xref:System.Func%602> al metodo `Median` per ogni caso.  
   
 ```csharp  
 int[] numbers3 = { 1, 2, 3, 4, 5 };  
@@ -175,7 +175,7 @@ Console.WriteLine("String: Median = " + query4);
 */  
 ```   
 ## <a name="adding-a-method-that-returns-a-collection"></a>Aggiunta di un metodo che restituisce una raccolta  
- È possibile estendere l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> con un metodo di query personalizzato che restituisce una sequenza di valori. In questo caso il metodo deve restituire una raccolta di tipo <xref:System.Collections.Generic.IEnumerable%601>. Tali metodi possono essere usati per applicare filtri o trasformazioni di dati in una sequenza di valori.  
+ È possibile estendere l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> con un metodo di query personalizzato che restituisce una sequenza di valori. In questo caso, il metodo deve restituire una raccolta di tipo <xref:System.Collections.Generic.IEnumerable%601>. Tali metodi possono essere usati per applicare filtri o trasformazioni di dati in una sequenza di valori.  
   
  Nell'esempio seguente viene illustrato come creare un metodo di estensione denominato `AlternateElements` che restituisce tutti gli altri elementi in una raccolta, a partire dal primo elemento.  
   
@@ -225,3 +225,4 @@ foreach (var element in query)
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Collections.Generic.IEnumerable%601>   
  [Metodi di estensione](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+

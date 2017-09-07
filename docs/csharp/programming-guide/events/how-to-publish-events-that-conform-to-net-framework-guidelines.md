@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework (Guida per programmatori C#) | Microsoft Docs'
+title: 'Procedura: pubblicare eventi conformi alle linee guida di .NET Framework (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,24 +27,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 6d529e60643966fbabd5290543146977b4dc83c5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 21badd504a54c7000fef76e901cc952134eff61e
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Procedura: pubblicare eventi conformi alle linee guida di .NET Framework (Guida per programmatori C#)
-La procedura seguente illustra come aggiungere a classi e struct gli eventi che seguono il modello standard [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]. Tutti gli eventi della libreria di classi [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] si basano sul delegato <xref:System.EventHandler>, che viene definito come segue:  
+La procedura seguente illustra come aggiungere a classi e struct gli eventi che seguono il modello standard [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Tutti gli eventi della libreria di classi [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] si basano sul delegato <xref:System.EventHandler>, che viene definito come segue:  
   
 ```csharp  
 public delegate void EventHandler(object sender, EventArgs e);  
 ```  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] introduce una versione generica di questo delegato, <xref:System.EventHandler%601>. Negli esempi seguenti viene illustrato l'uso di entrambe le versioni.  
+>  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] introduce una versione generica di questo delegato, <xref:System.EventHandler%601>. Negli esempi seguenti viene illustrato l'uso di entrambe le versioni.  
   
- Anche se gli eventi nelle classi che vengono definite possono essere basati su qualsiasi tipo di delegato valido, inclusi i delegati che restituiscono un valore, è consigliabile basare gli eventi sul modello [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] usando <xref:System.EventHandler>, come illustrato nell'esempio seguente.  
+ Anche se gli eventi nelle classi che vengono definite possono essere basati su qualsiasi tipo di delegato valido, inclusi i delegati che restituiscono un valore, è in genere consigliabile basare gli eventi sullo schema [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usando <xref:System.EventHandler>, come illustrato nell'esempio seguente.  
   
 ### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>Per pubblicare eventi basati sul modello EventHandler  
   
@@ -65,7 +65,7 @@ public delegate void EventHandler(object sender, EventArgs e);
     }  
     ```  
   
-2.  Ignorare questo passaggio se si usa la versione generica di <xref:System.EventHandler%601>. Dichiarare un delegato nella classe di pubblicazione. Assegnargli un nome che termini con *EventHandler*. Il secondo parametro specifica il tipo EventArgs personalizzato.  
+2.  Ignorare questo passaggio se si sta usando la versione generica di <xref:System.EventHandler%601>. Dichiarare un delegato nella classe di pubblicazione. Assegnargli un nome che termini con *EventHandler*. Il secondo parametro specifica il tipo EventArgs personalizzato.  
   
     ```csharp  
     public delegate void CustomEventHandler(object sender, CustomEventArgs a);  
@@ -73,7 +73,7 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 3.  Dichiarare l'evento nella classe di pubblicazione usando uno dei passaggi seguenti.  
   
-    1.  Se non si ha una classe EventArgs personalizzata, il tipo di evento sarà il delegato EventHandler non generico. Non è necessario dichiarare il delegato poiché è già stato dichiarato nello spazio dei nomi <xref:System> che viene incluso quando si crea il progetto in C#. Aggiungere il codice seguente alla classe dell'editore.  
+    1.  Se non si ha una classe EventArgs personalizzata, il tipo di evento sarà il delegato EventHandler non generico. Non è necessario dichiarare il delegato perché è già dichiarato nello spazio dei nomi <xref:System>, incluso quando si crea il progetto C#. Aggiungere il codice seguente alla classe dell'editore.  
   
         ```csharp  
         public event EventHandler RaiseCustomEvent;  
@@ -101,3 +101,4 @@ public delegate void EventHandler(object sender, EventArgs e);
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Eventi](../../../csharp/programming-guide/events/index.md)   
  [Delegati](../../../csharp/programming-guide/delegates/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Criteri di ricerca | Guida a C#
+title: Criteri di ricerca - Guida a C#
 description: Informazioni sulle espressioni di criteri di ricerca in C#
 keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
@@ -9,10 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c5b1ef4b6de108e2ea3967630e9e37e52a97245c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf17b68514ff263b784bcb42d2015d27015328d9
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -50,7 +51,7 @@ Questo codice diventa più semplice con l'uso di estensioni dell'espressione `is
 
 In questa versione aggiornata l'espressione `is` esegue il test della variabile e la assegna a una nuova variabile del tipo appropriato. Si noti anche che questa versione include il tipo `Rectangle` che è uno `struct`. La nuova espressione `is` può essere usata con tipi di valore e tipi di riferimento.
 
-Le regole del linguaggio per i criteri di ricerca consentono di evitare un uso errato dei risultati di un'espressione di confronto. Nell'esempio precedente le variabili `s`,  `c` e `r` sono nell'ambito e assegnate definitivamente solo quando le relative espressioni di criteri di ricerca hanno risultati `true`. Se si tenta di usare una variabile in un altro percorso, il codice genera errori del compilatore.
+Le regole del linguaggio per i criteri di ricerca consentono di evitare un uso errato dei risultati di un'espressione di confronto. Nell'esempio precedente le variabili `s`, `c` e `r` sono nell'ambito e assegnate definitivamente solo quando le relative espressioni di criteri di ricerca hanno risultati `true`. Se si tenta di usare una variabile in un altro percorso, il codice genera errori del compilatore.
 
 Vengono ora esaminate entrambe le regole nel dettaglio iniziando con l'ambito. La variabile `c` è nell'ambito solo nel ramo `else` della prima istruzione `if`. La variabile `s` è nell'ambito nel metodo `ComputeArea`. Ciò accade perché ogni ramo di un'istruzione `if` definisce un ambito separato per le variabili. Tuttavia, l'istruzione `if` stessa non esegue questa operazione. Ciò significa che le variabili dichiarate nell'istruzione `if` sono nello stesso ambito dell'istruzione `if` (in questo caso, il metodo). Questo comportamento non è specifico dei criteri di ricerca, ma è il comportamento definito per gli ambiti delle variabili e le istruzioni `if` e `else`.
 
@@ -111,7 +112,7 @@ Dopo aver aggiunto le forme con area 0, si aggiungono due tipi di forme aggiunti
 
 [!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Aggiunta del caso null")]
 
-Il caso particolare del criterio `null` è interessante poiché la costante `null` non ha un tipo ma può essere convertita in qualsiasi tipo di riferimento o nullable. 
+Lo speciale comportamento del criterio `null` è interessante perché la costante `null` nel criterio non ha un tipo, ma può essere convertita in qualsiasi tipo di riferimento o nullable. Anziché convertire una costante `null` in un tipo, il linguaggio definisce che un valore `null` non corrisponderà ad alcun criterio del tipo, indipendentemente dal tipo in fase di compilazione della variabile. Questo comportamento rende il nuovo criterio del tipo basato su `switch` coerente con l'istruzione `is`: le istruzioni `is` restituiscono sempre `false` quando il valore controllato è `null`. È anche più semplice: dopo aver controllato il tipo, non è necessario un controllo null aggiuntivo. Questo è dimostrato dal fatto che non è presente alcun controllo null in nessuno dei blocchi di casi degli esempi precedenti: i controlli non sono necessari poiché la corrispondenza del criterio del tipo garantisce già un valore non null.
 
 ## <a name="conclusions"></a>Conclusioni
 

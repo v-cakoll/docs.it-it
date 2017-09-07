@@ -1,5 +1,5 @@
 ---
-title: Creazione di listener di log personalizzati (Visual Basic) | Microsoft Docs
+title: Creazione di listener di log personalizzati (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,18 +31,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 98cec8d5077e777f18c18ad1af0040b3359151f7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bc6fde8dcbb27157f3fd180ad393bb406222195e
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Procedura dettagliata: creazione di listener di log personalizzati (Visual Basic)
 Questa procedura spiega come creare un listener di log personalizzato e configurarlo in modo che resti in ascolto dell'output dell'oggetto `My.Application.Log`.  
   
 ## <a name="getting-started"></a>Introduzione  
- I listener di log devono ereditare dalla classe <xref:System.Diagnostics.TraceListener>.  
+ I listener di log devono ereditare dalla <xref:System.Diagnostics.TraceListener> classe.  
   
 #### <a name="to-create-the-listener"></a>Per creare il listener  
   
@@ -136,3 +136,4 @@ Questa procedura spiega come creare un listener di log personalizzato e configur
  [Procedura: Registrare eccezioni](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
  [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [Procedura dettagliata: Modifica della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+

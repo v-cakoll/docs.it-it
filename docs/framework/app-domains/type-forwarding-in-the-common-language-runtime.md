@@ -45,7 +45,7 @@ L'inoltro dei tipi consente di spostare un tipo in un altro assembly senza dover
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
     ```  
   
-    ```cpp#  
+    ```cpp  
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   

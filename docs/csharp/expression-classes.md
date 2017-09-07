@@ -1,6 +1,6 @@
 ---
 title: Tipi di framework che supportano alberi delle espressioni
-description: Tipi di framework che supportano alberi delle espressioni
+description: Informazioni sui tipi di framework che supportano gli alberi delle espressioni, sulla creazione di alberi delle espressioni e sulle tecniche per l'uso delle API degli alberi delle espressioni.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64b3b7999b6ff01bdf28cb7902ba50087d191cb4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ed89b286eee9b4c2e11bb27d18e50f777f94f33e
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 03/13/2017
 [Precedente -- Expression Trees Explained (Nozioni di base sugli alberi delle espressioni)](expression-trees-explained.md)
 
 In .NET Core Framework esiste un lungo elenco di classi che funzionano con gli alberi delle espressioni.
-È possibile visualizzare l'elenco completo [qui](https://docs.microsoft.com/dotnet/core/api/System.Linq.Expressions).
+È possibile visualizzare l'elenco completo [qui](/dotnet/core/api/System.Linq.Expressions).
 Anziché rivedere l'elenco completo, cerchiamo di comprendere come sono state progettate le classi del framework.
 
 Nella progettazione del linguaggio, un'espressione è un corpo di codice che valuta e restituisce un valore. Le espressioni possono essere molto semplici: l'espressione costante `1` restituisce il valore costante 1. Possono essere più complicate: l'espressione `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` restituisce una radice di un'equazione quadratica (nel caso in cui l'equazione abbia una soluzione).  

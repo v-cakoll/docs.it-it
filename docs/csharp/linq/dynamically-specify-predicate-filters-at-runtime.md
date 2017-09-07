@@ -11,15 +11,16 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8b9ad2603a9c57855f9a8ebd7ff3f5261aa44157
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e724428bce09e2b2fa20b9391ad131424e16413
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Specificare dinamicamente i filtri dei predicati in fase di esecuzione
 
-In alcuni casi, fino alla fase di esecuzione non si sa quanti predicati è necessario applicare agli elementi di origine nella clausola `where`. Un modo per specificare dinamicamente più filtri di predicato è usare il metodo <xref:System.Linq.Enumerable.Contains%2A>, come mostrato nell'esempio seguente. L'esempio si costruisce in due modi. Innanzitutto viene eseguito il progetto applicando filtri basati sui valori forniti nel programma. Il progetto viene quindi eseguito di nuovo usando l'input fornito in fase di esecuzione.  
+In alcuni casi, fino alla fase di esecuzione non si sa quanti predicati è necessario applicare agli elementi di origine nella clausola `where`. Un modo per specificare dinamicamente più filtri di predicato consiste nell'usare il metodo <xref:System.Linq.Enumerable.Contains%2A>, come illustrato nell'esempio seguente. L'esempio si costruisce in due modi. Innanzitutto viene eseguito il progetto applicando filtri basati sui valori forniti nel programma. Il progetto viene quindi eseguito di nuovo usando l'input fornito in fase di esecuzione.  
   
 ## <a name="to-filter-by-using-the-contains-method"></a>Per applicare un filtro usando il metodo Contains  
   
@@ -79,3 +80,4 @@ In alcuni casi, fino alla fase di esecuzione non si sa quanti predicati è neces
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni di query LINQ](index.md)   
  [Clausola where](../language-reference/keywords/where-clause.md)
+

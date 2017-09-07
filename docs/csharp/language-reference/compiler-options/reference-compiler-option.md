@@ -1,5 +1,5 @@
 ---
-title: -reference (opzioni del compilatore C#) | Microsoft Docs
+title: -reference (opzioni del compilatore C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,11 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 11bb7fc9490879714542bfbd77a81d58e7d8e8ed
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f057da85202dc5b677af7b9106468b3bc1af6d3f
 ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-c-compiler-options"></a>/reference (opzioni del compilatore C#)
@@ -84,7 +84,7 @@ Con l'opzione **/reference** il compilatore importa nel progetto corrente le inf
  Per impostazione predefinita, viene usato il file di risposta csc (.rsp), che fa riferimento agli assembly .NET Framework di uso comune. Usare [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) se non si vuole che il compilatore usi csc.rsp.  
   
 > [!NOTE]
-> In Visual Studio usare la finestra di dialogo **Aggiungi riferimento**. Per altre informazioni, vedere [Procedura: Aggiungere o rimuovere riferimenti mediante Gestione riferimenti](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Per garantire un comportamento equivalente tra l'aggiunta di riferimenti usare `/reference` e aggiungere riferimenti tramite la finestra di dialogo **Aggiungi riferimento**, impostando la proprietà **Incorpora tipi di interoperabilità** su **False** per l'assembly che si vuole aggiungere. Per questa proprietà il valore predefinito è **True**.  
+> In Visual Studio usare la finestra di dialogo **Aggiungi riferimento**. Per altre informazioni, vedere [Procedura: Aggiungere o rimuovere riferimenti mediante Gestione riferimenti](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Per garantire un comportamento equivalente tra l'aggiunta di riferimenti usare `/reference` e aggiungere riferimenti tramite la finestra di dialogo **Aggiungi riferimento**, impostando la proprietà **Incorpora tipi di interoperabilità** su **False** per l'assembly che si vuole aggiungere. Per questa proprietà il valore predefinito è **True**.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente illustra come usare la funzionalità [extern alias](../../../csharp/language-reference/keywords/extern-alias.md).  
@@ -115,4 +115,5 @@ GridV2::Grid
   
 ## <a name="see-also"></a>Vedere anche  
  [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
- [NIB Procedura: Modificare le proprietà e le impostazioni di configurazione dei progetti](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+

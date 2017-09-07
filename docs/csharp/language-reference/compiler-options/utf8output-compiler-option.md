@@ -1,37 +1,57 @@
 ---
-title: "/utf8output (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/utf8output"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "utf8output compiler option [C#]"
-  - "/utf8output compiler option [C#]"
-  - "-utf8output compiler option [C#]"
+title: -utf8output (opzioni del compilatore C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /utf8output
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- utf8output compiler option [C#]
+- /utf8output compiler option [C#]
+- -utf8output compiler option [C#]
 ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 11f79ee8c64c8331f75ac021f10de8c5f54728f6
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
+
 ---
-# /utf8output (C# Compiler Options)
-L'opzione **\/utf8output** consente di visualizzare l'output del compilatore mediante la codifica UTF\-8.  
+# <a name="utf8output-c-compiler-options"></a>/utf8output (opzioni del compilatore C#)
+L'opzione **/utf8output** visualizza l'output del compilatore usando la codifica UTF-8.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 /utf8output  
 ```  
   
-## Note  
- Alcune configurazioni internazionali non consentono di visualizzare correttamente nella console l'output del compilatore.  In questi casi è necessario utilizzare l'opzione **\/utf8output** e reindirizzare l'output del compilatore a un file.  
+## <a name="remarks"></a>Note  
+ In alcune configurazioni internazionali, l'output del compilatore non può essere visualizzato correttamente nella console. In queste configurazioni, usare **/utf8output** e reindirizzare l'output del compilatore in un file.  
   
  Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.  
   
-## Vedere anche  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Classi statiche e membri di classi statiche (Guida per programmatori C#) | Documentazione Microsoft
+title: Classi statiche e membri di classi statiche (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f93706bb5df41e46c860ca70d131d94015a6348f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 63f46f9ae35b3c699744f7bf61cad3b08b796509
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classi statiche e membri di classi statiche (Guida per programmatori C#)
@@ -58,7 +59,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- Come per tutti i tipi di classi, le informazioni sul tipo di una classe statica vengono caricate da [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] Common Language Runtime (CLR) durante il caricamento del programma che fa riferimento alle classi. Il programma non può specificare esattamente quando la classe verrà caricata. Tuttavia, è garantito che la classe sarà caricata, che i suoi campi saranno inizializzati e che il costruttore statico sarà chiamato prima che il programma faccia riferimento per la prima volta alla classe stessa. Un costruttore statico viene chiamato solo un volta e una classe statica rimane in memoria per la durata del dominio dell'applicazione in cui risiede il programma.  
+ Come per tutti i tipi di classi, le informazioni sul tipo di una classe statica vengono caricate da [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Common Language Runtime (CLR) durante il caricamento del programma che fa riferimento alle classi. Il programma non può specificare esattamente quando la classe verrà caricata. Tuttavia, è garantito che la classe sarà caricata, che i suoi campi saranno inizializzati e che il costruttore statico sarà chiamato prima che il programma faccia riferimento per la prima volta alla classe stessa. Un costruttore statico viene chiamato solo un volta e una classe statica rimane in memoria per la durata del dominio dell'applicazione in cui risiede il programma.  
   
 > [!NOTE]
 >  Per creare una classe non statica che consente la creazione di un'unica istanza di se stessa, vedere [Implementing Singleton in C#](http://go.microsoft.com/fwlink/?LinkID=100567) (Implementare Singleton in C#).  
@@ -106,7 +107,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Una chiamata a un metodo statico genera un'istruzione call in Microsoft Intermediate Language (MSIL), mentre una chiamata a un metodo di istanza genera un'istruzione `callvirt` che verifica anche la presenza di riferimenti a un oggetto null. Tuttavia, nella maggior parte dei casi, la differenza di prestazioni tra i due non è significativa.  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
@@ -115,3 +116,4 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  [class](../../../csharp/language-reference/keywords/class.md)   
  [Costruttori statici](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)   
  [Costruttori di istanza](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
+

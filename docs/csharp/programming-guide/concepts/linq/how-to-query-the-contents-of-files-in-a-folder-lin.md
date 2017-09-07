@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Eseguire una query sul contenuto dei file in una cartella (LINQ) (C#) | Microsoft Docs'
+title: 'Procedura: Eseguire una query sul contenuto dei file di testo in una cartella (LINQ) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,13 +19,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9e5d5af4e8f0d9fb19e854c62799e67aedc6ff0e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1aa2ef581dcba5814657681daebd07be70e498b1
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-c"></a>Procedura: Eseguire una query sul contenuto dei file in una cartella (LINQ) (C#)
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Procedura: Eseguire una query sul contenuto dei file di testo in una cartella (LINQ) (C#)
 Questo esempio illustra come eseguire una query su tutti i file in un albero di directory specificato, aprire ogni file e controllarne il contenuto. Questo tipo di tecnica può essere usato per creare indici o indici inversi del contenuto di un albero di directory. In questo esempio viene eseguita una semplice ricerca di una stringa. Tuttavia, con un'espressione regolare è possibile eseguire tipi di criteri di ricerca più complessi. Per altre informazioni, vedere [Procedura: Combinare query LINQ con espressioni regolari (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).  
   
 ## <a name="example"></a>Esempio  
@@ -87,8 +88,9 @@ class QueryContents
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto che usi .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
+ Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)   
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+

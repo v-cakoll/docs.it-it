@@ -1,27 +1,23 @@
 ---
 title: Refactoring in funzioni pure (C#)
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e3bb704cab77d4ad9895624bf7f721920000378
+ms.sourcegitcommit: 9bb17207ba72bb22f5d6db55e9d1bd77e3013445
+ms.openlocfilehash: 2bce781df80a777203ed8e713bedf83f1c7779a8
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactoring in funzioni pure (C#)
+
 Per le trasformazioni funzionali pure, è fondamentale comprendere come eseguire il refactoring del codice usando funzioni pure.  
   
 > [!NOTE]
@@ -95,7 +91,7 @@ public class Program
 >  Per i tipi di riferimenti, se un parametro viene passato per valore, il risultato è una copia del riferimento a un oggetto passato. Questa copia è ancora associata agli stessi dati di istanza del riferimento originale, finché la variabile di riferimento non viene assegnata a un nuovo oggetto. La chiamata per riferimento non è necessariamente richiesta affinché una funzione modifichi un parametro.  
   
 ### <a name="pure-function"></a>Funzione pura  
- Nella versione successiva del programma viene illustrato come implementare la funzione `HypenatedConcat` come funzione pura.  
+Nella versione successiva del programma viene illustrato come implementare la funzione `HypenatedConcat` come funzione pura.  
   
 ```csharp  
 class Program  

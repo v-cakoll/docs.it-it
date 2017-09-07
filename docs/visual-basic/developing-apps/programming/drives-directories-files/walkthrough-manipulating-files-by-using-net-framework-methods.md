@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Modifica di file con i metodi .NET Framework (Visual Basic) | Microsoft Docs'
+title: 'Procedura dettagliata: Modifica di file con i metodi .NET Framework (Visual Basic)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -41,20 +41,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a16d2168548dadf9210b653d90ce229d99469b64
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eab8ebe0f1e6f3e86b9c4aa7c3b24a2763a27ffc
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Procedura dettagliata: modifica di file mediante i metodi .NET Framework (Visual Basic)
 Questa procedura dettagliata spiega come aprire e leggere un file usando la classe <xref:System.IO.StreamReader>, verificare se un file è accessibile, cercare una stringa all'interno di un file letto con un'istanza della classe <xref:System.IO.StreamReader> e scrivere in un file usando la classe <xref:System.IO.StreamWriter>.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>Creare l'applicazione  
- Avviare [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] e iniziare il progetto creando un form che l'utente può usare per scrivere il file specificato.  
+ Avviare [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] e iniziare il progetto creando un form che l'utente può usare per scrivere il file specificato.  
   
 #### <a name="to-create-the-project"></a>Per creare il progetto  
   
@@ -64,7 +64,7 @@ Questa procedura dettagliata spiega come aprire e leggere un file usando la clas
   
 3.  Nella casella **Nome** digitare `MyDiary` e fare clic su **OK**.  
   
-     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] aggiunge il progetto a **Esplora soluzioni** e viene aperto **Progettazione Windows Form**.  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] aggiunge il progetto a **Esplora soluzioni** e viene aperto **Progettazione Windows Form**.  
   
 4.  Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
   

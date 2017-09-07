@@ -1,6 +1,6 @@
 ---
 title: La programmazione asincrona in dettaglio
-description: Spiegazione approfondita di come funziona il codice asincrono in .NET
+description: "Informazioni su come la scrittura di codice asincrono associato a I/O e CPU risulta notevolmente semplificata dall'uso del modello asincrono basato su attività di .NET."
 keywords: .NET, .NET Core, .NET standard
 author: cartermp
 ms.author: wiwagn
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 92d94fd7f148bb4c1bbad50212d90d722214085f
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
+ms.contentlocale: it-it
+ms.lasthandoff: 08/28/2017
 
 ---
 
 # <a name="async-in-depth"></a>La programmazione asincrona in dettaglio
 
-La scrittura di codice asincrono associato a I/O e CPU risulta notevolmente semplificata dall'uso del modello asincrono basato su attività di .NET. Il modello viene esposto dai tipi `Task` e `Task<T>` e dalle parole chiave del linguaggio `async` e `await`. In questo articolo viene illustrato come usare il codice asincrono di .NET e vengono specificate informazioni approfondite sul framework asincrono che ne è alla base.
+La scrittura di codice asincrono associato a I/O e CPU risulta notevolmente semplificata dall'uso del modello asincrono basato su attività di .NET. Il modello viene esposto dai tipi `Task` e `Task<T>` e dalle parole chiave `async` e `await` in C# e Visual Basic. Le risorse specifiche del linguaggio sono disponibili nella sezione [Vedere anche](#see-also). In questo articolo viene illustrato come usare il codice asincrono di .NET e vengono specificate informazioni approfondite sul framework asincrono che ne è alla base.
 
 ## <a name="task-and-tasklttgt"></a>Task e Task&lt;T&gt;
 
@@ -32,9 +33,9 @@ Le attività sono costrutti usati per implementare il cosiddetto [Modello di con
 
 Le attività espongono un protocollo di API per il monitoraggio, attendendo il valore risultante di un'attività cui poi accedono (nel caso di `Task<T>`). L'integrazione del linguaggio, con la parola chiave `await`, offre un'astrazione di livello superiore per l'uso delle attività. 
 
-L'uso di `await` consente all'applicazione o al servizio di eseguire operazioni utili mentre viene eseguita un'attività, cedendo il controllo al chiamante fino al completamento dell'attività. Non è necessario che il codice si basi su callback o eventi perché continui a essere eseguito dopo il completamento dell'attività. Sono il linguaggio e l'integrazione dell'API dell'attività a occuparsi di questo. Se si usa `Task<T>`, al completamento dell'attività la parola chiave `await` "dispiegherà" ulteriormente il valore restituito.  I dettagli di questo processo sono illustrati più sotto.
+L'uso di `await` consente all'applicazione o al servizio di eseguire operazioni utili mentre viene eseguita un'attività, cedendo il controllo al chiamante fino al completamento dell'attività. Non è necessario che il codice si basi su callback o eventi perché continui a essere eseguito dopo il completamento dell'attività. Sono il linguaggio e l'integrazione dell'API dell'attività a occuparsi di questo. Se si usa `Task<T>`, al completamento dell'attività la parola chiave `await` annullerà il wrapping del valore restituito.  I dettagli di questo processo sono illustrati più sotto.
 
-Per altre informazioni sulle attività e i diversi modi per interagire con esse, vedere l'articolo [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/library/hh873175.aspx) (Modello asincrono basato su attività).
+Per altre informazioni sulle attività e i diversi modi per interagire con esse, vedere l'argomento [Task-based Asynchronous Pattern (TAP)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modello asincrono basato su attività).
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Approfondimento sulle attività per un'operazione associata ai I/O
 
@@ -45,7 +46,7 @@ Nel primo esempio viene chiamato un metodo asincrono e viene restituita un'attiv
 ```csharp
 public Task<string> GetHtmlAsync()
 {
-     // Execution is synchronous here
+    // Execution is synchronous here
     var client = new HttpClient();
     
     return client.GetStringAsync("http://www.dotnetfoundation.org");
@@ -147,3 +148,10 @@ Quando viene rilevato `await`, l'esecuzione di `CalculateResult()` viene ceduta 
 ### <a name="why-does-async-help-here"></a>In che modo il codice asincrono risulta utile in questo scenario?
 
 `async` e `await` sono la procedura consigliata per la gestione di attività associate alla CPU quando è necessaria velocità di risposta. Vi sono diversi modelli per l'uso di codice asincrono con attività associate alla CPU. È importante tenere presente che esiste un costo minimo per l'uso del codice asincrono e che tale uso è sconsigliato per cicli ridotti.  Spetta all'utente determinare come scrivere il codice in base a questa nuova funzionalità.
+
+## <a name="see-also"></a>Vedere anche
+
+[Programmazione asincrona in C#](~/docs/csharp/async.md)   
+[Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)  (Programmazione asincrona in F#)  
+[Programmazione asincrona con Async e Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+

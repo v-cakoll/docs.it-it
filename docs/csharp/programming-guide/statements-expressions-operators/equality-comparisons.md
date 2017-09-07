@@ -1,5 +1,5 @@
 ---
-title: Confronto di uguaglianze (Guida per programmatori C#) | Microsoft Docs
+title: Confronto di uguaglianze (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 9f7d8c6e816efe248739d0771d332a784b1e185f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 948bbc1b5b8535cc31ea362497fa69a816b43edc
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Confronto di uguaglianze (Guida per programmatori C#)
@@ -43,9 +43,9 @@ A volte è necessario confrontare due valori per verificarne l'uguaglianza. In a
   
  [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
   
- In questo codice vengono creati due oggetti, ma dopo l'istruzione di assegnazione, entrambi i riferimenti fanno riferimento allo stesso oggetto. Di conseguenza, esiste un'uguaglianza dei riferimenti. Usare il metodo <xref:System.Object.ReferenceEquals%2A> per determinare se i due riferimenti fanno riferimento allo stesso oggetto.  
+ In questo codice vengono creati due oggetti, ma dopo l'istruzione di assegnazione, entrambi i riferimenti fanno riferimento allo stesso oggetto. Di conseguenza, esiste un'uguaglianza dei riferimenti. Usare il metodo <xref:System.Object.ReferenceEquals%2A> per determinare se due riferimenti fanno riferimento allo stesso oggetto.  
   
- Il concetto di uguaglianza dei riferimenti si applica solo ai tipi di riferimento. Per gli oggetti di tipo di valore non può esistere l'uguaglianza dei riferimenti poiché quando un'istanza di un tipo di valore viene assegnata a una variabile, viene creata una copia del valore. Di conseguenza, non è possibile avere due struct unboxed che fanno riferimento alla stessa posizione in memoria. Inoltre, se si usa <xref:System.Object.ReferenceEquals%2A> per confrontare due tipi di valore, il risultato sarà sempre `false`, anche se i valori contenuti negli oggetti sono tutti identici. Ciò avviene perché ogni variabile è di tipo boxed in un'istanza separata dell'oggetto. Per altre informazioni, vedere [Procedura: Testare l'uguaglianza dei riferimenti (identità)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md).  
+ Il concetto di uguaglianza dei riferimenti si applica solo ai tipi di riferimento. Per gli oggetti di tipo di valore non può esistere l'uguaglianza dei riferimenti poiché quando un'istanza di un tipo di valore viene assegnata a una variabile, viene creata una copia del valore. Di conseguenza, non è possibile avere due struct unboxed che fanno riferimento alla stessa posizione in memoria. Se inoltre si usa <xref:System.Object.ReferenceEquals%2A> per confrontare due tipi valore, il risultato sarà sempre `false`, anche se i valori contenuti negli oggetti sono tutti identici. Ciò avviene perché ogni variabile è di tipo boxed in un'istanza separata dell'oggetto. Per altre informazioni, vedere [Procedura: Testare l'uguaglianza dei riferimenti (identità)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md).  
   
 ## <a name="value-equality"></a>uguaglianza di valori  
  Uguaglianza di valori significa che due oggetti contengono lo stesso valore o gli stessi valori. Per i tipi di valore primitivi, ad esempio [int](../../../csharp/language-reference/keywords/int.md) o [bool](../../../csharp/language-reference/keywords/bool.md), i test per verificare l'uguaglianza di valori sono semplici. È possibile usare l'operatore [==](../../../csharp/language-reference/operators/equality-comparison-operator.md), come indicato nell'esempio seguente.  
@@ -66,7 +66,7 @@ if( b == a)
  Tuttavia, nessun requisito prevede che l'equivalenza sia basata su tutti i campi in un tipo. Può essere basata su un subset. Quando si confrontano i tipi di cui non si è proprietari, è necessario assicurarsi di sapere esattamente in che modo viene definita l'equivalenza per quel tipo. Per altre informazioni su come definire l'uguaglianza di valori nelle classi e negli struct, vedere [Procedura: Definire l'uguaglianza di valori per un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
   
 ### <a name="value-equality-for-floating-point-values"></a>Uguaglianza di valori per i valori a virgola mobile  
- I confronti di uguaglianza dei valori a virgola mobile ([double](../../../csharp/language-reference/keywords/double.md) e [float](../../../csharp/language-reference/keywords/float.md)) sono problematici a causa dell'imprecisione dell'aritmetica a virgola mobile nei computer binari. Per altre informazioni, vedere le osservazioni nell'argomento <xref:System.Double?displayProperty=fullName>.  
+ I confronti di uguaglianza dei valori a virgola mobile ([double](../../../csharp/language-reference/keywords/double.md) e [float](../../../csharp/language-reference/keywords/float.md)) sono problematici a causa dell'imprecisione dell'aritmetica a virgola mobile nei computer binari. Per altre informazioni, vedere le note nell'argomento <xref:System.Double?displayProperty=fullName>.  
   
 ## <a name="related-topics"></a>Argomenti correlati  
   
@@ -79,3 +79,4 @@ if( b == a)
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Serializzazione in base a File, TextWriter e XmlWriter1 | Documentazione Microsoft
+title: Serializzazione in base a File, TextWriter e XmlWriter1
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,18 +19,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f61324395e81509e5800e99b654a8c669d4397f0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 94a2b3e16703496d2e59b08677395db30d944d56
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Serializzazione in base a File, TextWriter e XmlWriter
-È possibile serializzare l'albero XML in un oggetto <xref:System.IO.File>, <xref:System.IO.TextWriter> o <xref:System.Xml.XmlWriter>.  
+È possibile serializzare gli alberi XML in un oggetto <xref:System.IO.File>, <xref:System.IO.TextWriter> o <xref:System.Xml.XmlWriter>.  
   
- È possibile serializzare qualsiasi componente XML, tra cui <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement> in una stringa tramite il metodo `ToString`.  
+ È possibile serializzare qualsiasi componente XML, incluso <xref:System.Xml.Linq.XDocument> e <xref:System.Xml.Linq.XElement>, in una stringa usando il metodo `ToString`.  
   
- Se si desidera eliminare la formattazione durante la serializzazione in una stringa, è possibile usare il metodo <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=fullName>.  
+ Per eliminare la formattazione quando si esegue la serializzazione in una stringa, usare il metodo <xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=fullName>.  
   
  Il comportamento predefinito quando si esegue la serializzazione in un file implica la formattazione, ovvero l'impostazione di rientri, nel documento XML. Quando si impostano i rientri, lo spazio vuoto non significativo nell'albero XML non viene conservato. Per serializzare e formattare al contempo il documento, usare uno degli overload dei metodi seguenti che non accettano <xref:System.Xml.Linq.SaveOptions> come argomento:  
   
@@ -47,4 +48,5 @@ ms.lasthandoff: 03/13/2017
  Per gli esempi, vedere l'argomento di riferimento appropriato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Serializzazione di strutture ad albero XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+ [Serializzazione di alberi XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+

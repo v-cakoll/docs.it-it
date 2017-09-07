@@ -1,5 +1,5 @@
 ---
-title: -subsystemversion (opzioni del compilatore C#) | Documentazione Microsoft
+title: -subsystemversion (opzioni del compilatore C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -25,10 +25,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8766904cad739b29c7dfe80b29305ea2b3bd2e6f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c7992086eb33577d795496025820ed8f7bb51c24
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="subsystemversion-c-compiler-options"></a>/subsystemversion (opzioni del compilatore C#)
@@ -39,7 +40,7 @@ Specifica la versione minima del sottosistema in cui è possibile eseguire il fi
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 /subsystemversion:major.minor  
 ```  
   
@@ -60,7 +61,7 @@ Specifica la versione minima del sottosistema in cui è possibile eseguire il fi
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
 |Windows Server 2008|6.01|  
-|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8_md.md)]|6.02|  
+|[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Valori predefiniti  
  Il valore predefinito dell'opzione del compilatore **/subsystemversion** dipende dalle condizioni elencate di seguito:  
@@ -73,12 +74,13 @@ Specifica la versione minima del sottosistema in cui è possibile eseguire il fi
   
     -   [/platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
--   Il valore predefinito è 6.00 se si usa MSBuild, con destinazione [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net_v45_md.md)], e non è stata impostata una delle opzioni del compilatore specificate in precedenza in questo elenco.  
+-   Il valore predefinito è 6.00 se si usa MSBuild, con destinazione [!INCLUDE[net_v45](~/includes/net-v45-md.md)], e non è stata impostata una delle opzioni del compilatore specificate in precedenza in questo elenco.  
   
 -   Il valore predefinito è 4.00 se nessuna di queste condizioni è vera.  
   
 ## <a name="setting-this-option"></a>Impostazione di questa opzione  
- Per impostare l'opzione del compilatore **/subsystemversion** in Visual Studio, è necessario aprire il file con estensione csproj e specificare un valore per la proprietà `SubsystemVersion` nel codice XML di MSBuild. Non è possibile impostare questa opzione nell'IDE di Visual Studio. Per altre informazioni, vedere "Valori predefiniti" più indietro in questo argomento o [Proprietà di progetto MSBuild comuni](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties).  
+ Per impostare l'opzione del compilatore **/subsystemversion** in Visual Studio, è necessario aprire il file con estensione csproj e specificare un valore per la proprietà `SubsystemVersion` nel codice XML di MSBuild. Non è possibile impostare questa opzione nell'IDE di Visual Studio. Per altre informazioni, vedere "Valori predefiniti" più indietro in questo argomento o [Proprietà di progetto MSBuild comuni](/visualstudio/msbuild/common-msbuild-project-properties).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+

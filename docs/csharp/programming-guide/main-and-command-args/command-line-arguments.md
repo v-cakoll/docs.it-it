@@ -1,5 +1,5 @@
 ---
-title: Argomenti della riga di comando (Guida per programmatori C#) | Microsoft Docs
+title: Argomenti della riga di comando (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4034f1575321c94f003a12a83df617d4a0d50702
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f0d404ae0384ec97b0eb78c6284e07cac8065548
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argomenti della riga di comando (Guida per programmatori C#)
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
->  Per attivare gli argomenti della riga di comando nel metodo `Main` in un'applicazione Windows Form, è necessario modificare manualmente la firma di `Main` in program.cs. Il codice generato da Progettazione Windows Form crea un `Main` senza un parametro di input. È anche possibile usare <xref:System.Environment.CommandLine%2A?displayProperty=fullName> o <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName> per accedere agli argomenti della riga di comando da qualsiasi posizione in una console o un'applicazione Windows.  
+>  Per attivare gli argomenti della riga di comando nel metodo `Main` in un'applicazione Windows Form, è necessario modificare manualmente la firma di `Main` in program.cs. Il codice generato da Progettazione Windows Form crea un `Main` senza un parametro di input. È anche possibile usare <xref:System.Environment.CommandLine%2A?displayProperty=fullName> o <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName> per accedere agli argomenti della riga di comando da qualsiasi punto in un'applicazione console o Windows.  
   
  Il parametro del metodo `Main` è una matrice <xref:System.String> che rappresenta gli argomenti della riga di comando. In genere si determina se gli argomenti esistono eseguendo il test della proprietà `Length`, ad esempio:  
   
@@ -91,7 +92,7 @@ long num = Convert.ToInt64(s);
 5.  Il comando produce il seguente output: `The factorial of 3 is 6.`  
   
 > [!NOTE]
->  Quando si esegue un'applicazione in Visual Studio, è possibile specificare argomenti della riga di comando nella [Pagina Debug, Progettazione progetti](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer).  
+>  Quando si esegue un'applicazione in Visual Studio, è possibile specificare argomenti della riga di comando nella [Pagina Debug, Progettazione progetti](/visualstudio/ide/reference/debug-page-project-designer).  
   
  Per altri esempi d'uso degli argomenti della riga di comando, vedere [Procedura: Creare e usare assembly dalla riga di comando](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
   
@@ -103,3 +104,4 @@ long num = Convert.ToInt64(s);
  [Procedura: Accedere agli argomenti della riga di comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
  [Valori restituiti da Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)   
  [Classi](../../../csharp/programming-guide/classes-and-structs/classes.md)
+

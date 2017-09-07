@@ -1,5 +1,5 @@
 ---
-title: Programmazione con nodi (C#) | Documentazione Microsoft
+title: Programmazione con nodi (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,20 +19,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b5cc31077c31d6ba08521a9ba6d602409734e695
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6afa5c9ca5fdf4a8c64be826ead86e96aa94a446
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="programming-with-nodes-c"></a>Programmazione con nodi (C#)
-Gli sviluppatori di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] che hanno la necessità di scrivere programmi come un editor XML, un sistema di trasformazioni o un writer di rapporti, spesso devono scrivere programmi che funzionano a un livello di granularità maggiore rispetto a elementi e attributi. Devono spesso operare a livello di nodo, modificando i nodi di testo, elaborando istruzioni e commenti. In questo argomento vengono forniti dettagli sulla programmazione a livello di nodo.  
+Gli sviluppatori di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] che hanno la necessità di scrivere programmi come un editor XML, un sistema di trasformazioni o un writer di rapporti, spesso devono scrivere programmi che funzionano a un livello di granularità maggiore rispetto a elementi e attributi. Devono spesso operare a livello di nodo, modificando i nodi di testo, elaborando istruzioni e commenti. In questo argomento vengono forniti dettagli sulla programmazione a livello di nodo.  
   
 ## <a name="node-details"></a>Dettagli sui nodi  
  I programmatori che operano a livello di nodo devono conoscere diversi dettagli di programmazione.  
   
 ### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>La proprietà padre dei nodi figlio di XDocument è impostata su Null  
- La proprietà <xref:System.Xml.Linq.XObject.Parent%2A> contiene l'elemento padre <xref:System.Xml.Linq.XElement>, non il nodo padre. I nodi figlio di <xref:System.Xml.Linq.XDocument> non hanno elementi padre <xref:System.Xml.Linq.XElement>. L'elemento padre è il documento, pertanto la proprietà <xref:System.Xml.Linq.XObject.Parent%2A> per tali nodi è impostata su Null.  
+ La proprietà <xref:System.Xml.Linq.XObject.Parent%2A> contiene l'elemento padre <xref:System.Xml.Linq.XElement>, non il nodo padre. I nodi figlio di <xref:System.Xml.Linq.XDocument> non hanno un elemento <xref:System.Xml.Linq.XElement> padre. L'elemento padre è il documento, pertanto la proprietà <xref:System.Xml.Linq.XObject.Parent%2A> per tali nodi è impostata su Null.  
   
  Questo concetto è illustrato nell'esempio seguente:  
   
@@ -50,7 +51,7 @@ True
 ```  
   
 ### <a name="adjacent-text-nodes-are-possible"></a>I nodi di testo adiacenti sono possibili  
- In diversi modelli di programmazione XML i nodi di testo adiacenti vengono sempre uniti. Questa operazione è denominata normalizzazione dei nodi di testo. In [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] i nodi di testo non vengono normalizzati. Se si aggiungono due nodi di testo allo stesso elemento, si otterranno nodi di testo adiacenti. Tuttavia, se si aggiunge contenuto specificato come stringa anziché come nodo <xref:System.Xml.Linq.XText>, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] la stringa potrebbe essere unita a un nodo di testo adiacente.  
+ In diversi modelli di programmazione XML i nodi di testo adiacenti vengono sempre uniti. Questa operazione è denominata normalizzazione dei nodi di testo. In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i nodi di testo non vengono normalizzati. Se si aggiungono due nodi di testo allo stesso elemento, si otterranno nodi di testo adiacenti. Se, tuttavia, si aggiunge contenuto specificato come stringa anziché come nodo <xref:System.Xml.Linq.XText>, è possibile che in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] la stringa venga unita con un nodo di testo adiacente.  
   
  Questo concetto è illustrato nell'esempio seguente:  
   
@@ -110,13 +111,13 @@ Console.WriteLine(child2);
   
  Questo esempio produce il seguente output:  
   
-```  
+```xml  
 <Child1></Child1>  
 <Child2 />  
 ```  
   
 ### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>Gli spazi dei nomi sono attributi nell'albero LINQ to XML  
- Anche se la sintassi delle dichiarazioni di spazi dei nomi è identica a quella degli attributi, in alcune interfacce di programmazione, ad esempio XSLT e XPath, le dichiarazioni di spazi dei nomi non sono considerati attributi. Tuttavia, in [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] gli spazi dei nomi vengono archiviati come oggetti <xref:System.Xml.Linq.XAttribute> nell'albero XML. Se si scorrono gli attributi per un elemento che contiene una dichiarazione di spazio dei nomi, le dichiarazioni di spazi dei nomi verranno visualizzate come uno degli elementi nella raccolta restituita.  
+ Anche se la sintassi delle dichiarazioni di spazi dei nomi è identica a quella degli attributi, in alcune interfacce di programmazione, ad esempio XSLT e XPath, le dichiarazioni di spazi dei nomi non sono considerati attributi. Tuttavia, in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gli spazi dei nomi vengono archiviati come oggetti <xref:System.Xml.Linq.XAttribute> nell'albero XML. Se si scorrono gli attributi per un elemento che contiene una dichiarazione di spazio dei nomi, le dichiarazioni di spazi dei nomi verranno visualizzate come uno degli elementi nella raccolta restituita.  
   
  La proprietà <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> indica se un attributo è una dichiarazione di spazio dei nomi.  
   
@@ -139,7 +140,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>I metodi dell'asse di XPath non restituiscono lo spazio vuoto figlio di XDocument  
- In [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] è possibile usare nodi di testo figlio di un oggetto <xref:System.Xml.Linq.XDocument>, purché i nodi di testo contengano solo spazio vuoto. Tuttavia, il modello a oggetti di XPath non include lo spazio vuoto come nodi figlio di un documento, pertanto quando si scorrono gli elementi figlio di <xref:System.Xml.Linq.XDocument> usando l'asse <xref:System.Xml.Linq.XContainer.Nodes%2A>, verranno restituiti nodi di testo di tipo spazio vuoto. Quando si scorrono gli elementi figlio di <xref:System.Xml.Linq.XDocument> usando i metodi dell'asse di XPath, i nodi di testo di tipo spazio vuoto non verranno restituiti.  
+ In [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] è possibile usare nodi di testo figlio di un oggetto <xref:System.Xml.Linq.XDocument>, purché i nodi di testo contengano solo spazio vuoto. Tuttavia, il modello a oggetti di XPath non include lo spazio vuoto come nodi figlio di un documento, pertanto quando si scorrono gli elementi figlio di <xref:System.Xml.Linq.XDocument> usando l'asse <xref:System.Xml.Linq.XContainer.Nodes%2A>, verranno restituiti nodi di testo di tipo spazio vuoto. Tuttavia, quando si scorrono gli elementi figlio di <xref:System.Xml.Linq.XDocument> usando i metodi dell'asse di XPath, i nodi di testo di tipo spazio vuoto non verranno restituiti.  
   
 ```csharp  
 // Create a document with some white space child nodes of the document.  
@@ -190,3 +191,4 @@ Console.WriteLine(doc.Nodes().Count());
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione LINQ to XML avanzata (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

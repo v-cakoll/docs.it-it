@@ -1,5 +1,5 @@
 ---
-title: Parte relativa allo stile di un documento WordprocessingML | Documentazione Microsoft
+title: Parte relativa allo stile di un documento WordprocessingML1
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93ce8c799b6fb7e8c4f64203e0fbfa39bb421212
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ad635d5e7df887ac079d2a7267a40b762829298
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Parte relativa allo stile di un documento WordprocessingML
@@ -153,4 +153,5 @@ In questo argomento è illustrato un esempio della parte di stile del documento 
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dettagli di documenti WordprocessingML Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+ [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))
+

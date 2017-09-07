@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4a988a8a2c5999351061254da2b7877bdffd8a32
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 1ad08fd188e901f49e01803816407870af37729d
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-reference"></a>Riferimenti per C#
@@ -72,8 +72,7 @@ Questa sezione offre informazioni di riferimento su parole chiave, operatori, ca
  [Articoli KB su C# nella Microsoft Knowledge Base](http://go.microsoft.com/fwlink/?LinkId=70368)  
  Apre una pagina di ricerca Microsoft per gli articoli della Knowledge Base disponibili in MSDN.  
   
- [C#](../../csharp/csharp.md)  
- Fornisce un portale per la documentazione di Visual C#.  
+ [C#](../../csharp/index.md) Fornisce un portale per la documentazione di Visual C#.  
   
  [Using the Visual Studio Development Environment for C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp) (Uso dell'ambiente di sviluppo di Visual Studio per C#)  
  Fornisce i collegamenti ad argomenti relativi a concetti e attività che descrivono IDE e l'editor.  

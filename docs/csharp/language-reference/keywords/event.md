@@ -1,5 +1,5 @@
 ---
-title: event (Riferimenti per C#) | Microsoft Docs
+title: event (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,24 +32,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 60a6322f8e120c6a443638b4f6e409acdfa0b235
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 674e36625a68243afff75f6c5028309dc7aff02a
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="event-c-reference"></a>event (Riferimenti per C#)
 La parola chiave `event` viene usata per dichiarare un evento in una classe autore.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente illustra come dichiarare e generare un evento che usa <xref:System.EventHandler> come tipo delegate sottostante. Per l'esempio di codice completo in cui viene illustrato come usare il tipo delegate generico <xref:System.EventHandler%601> e come sottoscrivere un evento e creare un metodo per la gestione eventi, vedere [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
+ L'esempio seguente illustra come dichiarare e generare un evento che usa <xref:System.EventHandler> come tipo di delegato sottostante. Per l'esempio di codice completo che illustra anche come usare il tipo di delegato generico <xref:System.EventHandler%601> e come sottoscrivere un evento e creare un metodo per il gestore dell'evento, vedere [Procedura: Pubblicare eventi conformi alle linee guida di .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
   
  [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
   
  Gli eventi sono un tipo di delegati multicast speciali che possono essere chiamati solo dall'interno della classe o dello struct in cui sono dichiarati (la classe autore). Se altre classi o altri struct sottoscrivono l'evento, i metodi di gestione eventi corrispondenti verranno chiamati quando la classe publisher genera l'evento. Per altre informazioni e altri esempi di codice, vedere [Eventi](../../../csharp/programming-guide/events/index.md) e [Delegati](../../../csharp/programming-guide/delegates/index.md).  
   
- Gli eventi possono essere contrassegnati come [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o `protected``internal`. Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere all'evento. Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Gli eventi possono essere contrassegnati come [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o `protected internal`. Questi modificatori di accesso definiscono in che modo gli utenti della classe possono accedere all'evento. Per altre informazioni, vedere [Modificatori di accesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ## <a name="keywords-and-events"></a>Parole chiave ed eventi  
  Agli eventi si applicano le parole chiave seguenti.  
@@ -76,3 +76,4 @@ La parola chiave `event` viene usata per dichiarare un evento in una classe auto
  [remove](../../../csharp/language-reference/keywords/remove.md)   
  [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)   
  [Procedura: Combinare delegati (delegati multicast)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+

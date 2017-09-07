@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Trovare elementi di pari livello precedenti (XPath-LINQ to XML) (C#) | Microsoft Docs'
+title: 'Procedura: Trovare elementi di pari livello precedenti (XPath-LINQ to XML) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,21 +14,21 @@ ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 964a85548b7cf5fd7334c46f21e2d50a9ff17987
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c49dd8998b0ad1e2a579b44f07462fb1111f3094
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Procedura: Trovare elementi di pari livello precedenti (XPath-LINQ to XML) (C#)
-In questo argomento viene confrontato l'asse XPath `preceding-sibling` con l'asse [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> figlio.  
+Questo argomento confronta l'asse `preceding-sibling` XPath con l'asse <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> dell'elemento figlio di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  L'espressione XPath è:  
   
  `preceding-sibling::*`  
   
- Si noti che i risultati di <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> e di <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> sono nell'ordine del documento.  
+ Notare che i risultati di <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> e <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>, sono espressi nell'ordine dei documenti.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene cercato l'elemento `FullAddress` e quindi vengono recuperati gli elementi precedenti usando l'asse `preceding-sibling`.  
@@ -67,3 +67,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ to XML per gli utenti di XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

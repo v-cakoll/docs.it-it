@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Accedere agli argomenti della riga di comando utilizzando foreach (Guida per programmatori C#) |Documentazione Microsoft'
+title: 'Procedura: accedere agli argomenti della riga di comando utilizzando foreach (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,17 +27,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2f0e3bce88beafd45a21773a7b26ffb2bb41215d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 766b5cd0879edec1dc409e07c4f62ee693fd615d
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>Procedura: accedere agli argomenti della riga di comando utilizzando foreach (Guida per programmatori C#)
 Un altro approccio per eseguire l'iterazione della matrice consiste nell'usare l'istruzione [foreach](../../../csharp/language-reference/keywords/foreach-in.md), come illustrato in questo esempio. L'istruzione `foreach` può essere usata per eseguire l'iterazione di una matrice, una classe di raccolte .NET Framework o qualsiasi classe o struct che implementa l'interfaccia <xref:System.Collections.IEnumerable>.  
   
 > [!NOTE]
->  Quando si esegue un'applicazione in Visual Studio, è possibile specificare argomenti della riga di comando nella [Pagina Debug, Progettazione progetti](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer).  
+>  Quando si esegue un'applicazione in Visual Studio, è possibile specificare argomenti della riga di comando nella [Pagina Debug, Progettazione progetti](/visualstudio/ide/reference/debug-page-project-designer).  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come stampare gli argomenti della riga di comando usando `foreach`.  
@@ -55,3 +56,4 @@ Un altro approccio per eseguire l'iterazione della matrice consiste nell'usare l
  [Main() e argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [Procedura: Visualizzare gli argomenti della riga di comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
  [Valori restituiti da Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+

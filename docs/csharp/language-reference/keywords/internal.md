@@ -1,5 +1,5 @@
 ---
-title: internal (Riferimenti per C#) | Microsoft Docs
+title: internal (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6b50c4c2a6e545e0313beb0450d9ca5ff170ad05
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5674a78e2c317357c31d9e2661a25ce86cbf4f6a
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="internal-c-reference"></a>internal (Riferimenti per C#)
@@ -59,7 +59,7 @@ public class BaseClass
  Non è corretto fare riferimento a un tipo o a un membro con accesso interno all'esterno dell'assembly in cui è stato definito.  
   
 ## <a name="example"></a>Esempio  
- Questo esempio contiene due file, `Assembly1.cs` e `Assembly1`_`a.cs`. Il primo file contiene una classe di base interna, `BaseClass`. Nel secondo file, un tentativo di creare un'istanza di `BaseClass` genererà un errore.  
+ Questo esempio contiene due file, `Assembly1.cs` e `Assembly1_a.cs`. Il primo file contiene una classe di base interna, `BaseClass`. Nel secondo file, un tentativo di creare un'istanza di `BaseClass` genererà un errore.  
   
 ```  
 // Assembly1.cs  
@@ -120,3 +120,4 @@ public class TestAccess
  [public](../../../csharp/language-reference/keywords/public.md)   
  [private](../../../csharp/language-reference/keywords/private.md)   
  [protected](../../../csharp/language-reference/keywords/protected.md)
+

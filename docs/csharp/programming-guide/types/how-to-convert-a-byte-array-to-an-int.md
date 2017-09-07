@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Convertire una matrice di byte in un Integer (Guida per programmatori C#) | Microsoft Docs'
+title: 'Procedura: convertire una matrice di byte in un Integer (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,14 +29,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2d26bb4821e09c6633d1c5a4dd40e132e57acf94
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 86ecfe95ab6fb5ce60e7568050cdf974d0dc3d88
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Procedura: convertire una matrice di byte in un Integer (Guida per programmatori C#)
-Questo esempio descrive l'uso della classe <xref:System.BitConverter> per la conversione di una matrice di byte in un [Integer](../../../csharp/language-reference/keywords/int.md) e quindi di nuovo in una matrice di byte. Può essere necessario ad esempio convertire i byte in un tipo di dati predefinito dopo la lettura dei byte dalla rete. In aggiunta al metodo [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) dell'esempio, nella tabella seguente sono elencati i metodi della classe <xref:System.BitConverter> che convertono i byte di una matrice di byte in altri tipi predefiniti.  
+Questo esempio mostra come usare la classe <xref:System.BitConverter> per convertire una matrice di byte in un valore [int](../../../csharp/language-reference/keywords/int.md) e di nuovo in una matrice di byte. Può essere necessario ad esempio convertire i byte in un tipo di dati predefinito dopo la lettura dei byte dalla rete. Oltre al metodo [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) dell'esempio, la tabella seguente elenca i metodi della classe <xref:System.BitConverter> che convertono i byte (di una matrice di byte) in altri tipi predefiniti.  
   
 |Tipo restituito|Metodo|  
 |-------------------|------------|  
@@ -60,7 +61,7 @@ Questo esempio descrive l'uso della classe <xref:System.BitConverter> per la con
  [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
   
 ## <a name="example"></a>Esempio  
- In questo esempio il metodo <xref:System.BitConverter.GetBytes%28System.Int32%29> della classe <xref:System.BitConverter> viene chiamato per convertire un valore `int` in una matrice di byte.  
+ In questo esempio viene chiamato il metodo <xref:System.BitConverter.GetBytes%28System.Int32%29> della classe <xref:System.BitConverter> per convertire un valore `int` in una matrice di byte.  
   
 > [!NOTE]
 >  L'output può variare a seconda del tipo di architettura del computer (little endian o big endian).  

@@ -1,5 +1,5 @@
 ---
-title: Gestione delle eccezioni (Guida per programmatori C#) | Microsoft Docs
+title: Gestione delle eccezioni (Guida per programmatori C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 481621ab8c3d6e1c98c9ad38590ac030827c26c5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ab03e00a6b62d0c737c90fdb489be2a78f7ab6af
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="exception-handling-c-programming-guide"></a>Gestione delle eccezioni (Guida per programmatori C#)
@@ -55,7 +55,7 @@ I programmatori C# usano un blocco [try](../../../csharp/language-reference/keyw
   
  È necessario intercettare le eccezioni quando le condizioni seguenti sono vere:  
   
--   Si è compreso il motivo per cui è stata generata l'eccezione ed è possibile implementare un recupero specifico, come richiedere all'utente di immettere un nuovo nome di file quando si intercetta un oggetto <xref:System.IO.FileNotFoundException>.  
+-   Si è compreso il motivo per cui è stata generata l'eccezione ed è possibile implementare un recupero specifico, ad esempio chiedendo all'utente di immettere un nuovo nome di file quando si intercetta un oggetto <xref:System.IO.FileNotFoundException>.  
   
 -   È possibile creare e generare una nuova eccezione più specifica.  
   
@@ -85,3 +85,4 @@ I programmatori C# usano un blocco [try](../../../csharp/language-reference/keyw
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)   
  [Istruzione using](../../../csharp/language-reference/keywords/using-statement.md)
+

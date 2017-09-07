@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: leggere da un file di testo (Guida per programmatori C#) | Documentazione Microsoft'
+title: 'Procedura: leggere da un file di testo (Guida per programmatori C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,16 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d545aa7f25da49b3ca0fc50b0c5a55c9c0d2b967
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd0ad3e062c4d4b32fb6140cacba9a4a32674759
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Procedura: leggere da un file di testo (Guida per programmatori C#)
-Questo esempio legge i contenuti di un file di testo tramite i metodi statici <xref:System.IO.File.ReadAllText%2A> e <xref:System.IO.File.ReadAllLines%2A> dalla classe <xref:System.IO.File?displayProperty=fullName>.  
+Questo esempio legge il contenuto di un file di testo usando i metodi statici <xref:System.IO.File.ReadAllText%2A> e <xref:System.IO.File.ReadAllLines%2A> della classe <xref:System.IO.File?displayProperty=fullName>.  
   
- Per un esempio che usa <xref:System.IO.StreamReader>, vedere [How to: Read a Text File One Line at a Time](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md) (Procedura: leggere un file di testo una riga per volta).  
+ Per un esempio che usa <xref:System.IO.StreamReader>, vedere [Procedura: leggere un file di testo una riga alla volta](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
   
 > [!NOTE]
 >  I file che vengono usati in questo esempio sono creati nell'argomento [How to: Write to a Text File](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md) (Procedura: scrivere un file di testo).  
@@ -66,3 +67,4 @@ Questo esempio legge i contenuti di un file di testo tramite i metodi statici <x
  <xref:System.IO?displayProperty=fullName>   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [File system e Registro di sistema (Guida per programmatori C#)](../../../csharp/programming-guide/file-system/index.md)
+

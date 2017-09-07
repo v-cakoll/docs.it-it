@@ -22,7 +22,7 @@ ms.lasthandoff: 08/04/2017
 
 Un'*espressione lambda* è un blocco di codice costituito da espressioni o da istruzioni che viene trattato come oggetto. Tale blocco può essere passato come argomento ai metodi e può anche essere restituito dalle chiamate al metodo. Le espressioni lambda sono spesso usate per eseguire le attività seguenti:
 
-- Passaggio del codice da eseguire a metodi asincroni, ad esempio @System.Threading.Tasks.Task.Run(System. Action).
+- Passaggio del codice da eseguire a metodi asincroni, ad esempio @System.Threading.Tasks.Task.Run (System. Action).
 
 - Scrittura di [espressioni di query LINQ](linq/index.md).
 

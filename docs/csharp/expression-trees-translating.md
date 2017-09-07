@@ -1,6 +1,6 @@
 ---
 title: Traduzione degli alberi delle espressioni
-description: Traduzione degli alberi delle espressioni
+description: Informazioni su come visitare ogni nodo in un albero delle espressioni, creando una copia modificata di tale albero delle espressioni.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 01cc83bc46d2cbe6beaaa5c3212b18bb8608ec82
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 602a17591d27ebfd098516453b9028bca37ad5e3
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/13/2017
 
 [Precedente -- Creazione di espressioni](expression-trees-building.md)
 
-In questa sezione finale si apprenderà come visitare ogni nodo in un albero delle espressioni, compilando una copia di tale albero delle espressioni modificato. Queste sono le tecniche che verranno usate in due scenari importanti. La prima consiste nel comprendere gli algoritmi espressi da un albero delle espressioni in modo che possa essere traslato in un altro ambiente. La seconda si applica quando si desidera modificare l'algoritmo creato. È possibile aggiungere la registrazione, intercettare chiamate al metodo e tenerne traccia, oltre ad altri scopi.
+In questa sezione finale si apprenderà come visitare ogni nodo in un albero delle espressioni, creando una copia modificata di tale albero delle espressioni. Queste sono le tecniche che verranno usate in due scenari importanti. La prima consiste nel comprendere gli algoritmi espressi da un albero delle espressioni in modo che possa essere traslato in un altro ambiente. La seconda si applica quando si desidera modificare l'algoritmo creato. È possibile aggiungere la registrazione, intercettare chiamate al metodo e tenerne traccia, oltre ad altri scopi.
 
 ## <a name="translating-is-visiting"></a>Traslare è sinonimo di visitare
 

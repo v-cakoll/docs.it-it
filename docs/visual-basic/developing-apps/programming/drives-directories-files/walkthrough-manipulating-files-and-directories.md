@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Modifica di file e directory in Visual Basic | Microsoft Docs'
+title: Modifica di file e directory in Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -41,19 +41,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a5ae7f4a720c04639191edf36425426dfc339a37
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e66d062df07fc23dfbd5d509e08ccd08813db15
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: modifica di file e directory in Visual Basic
-Questa procedura dettagliata offre un'introduzione ai principi di base degli elementi I/O di file in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Descrive come creare una piccola applicazione in cui vengono elencati ed esaminati i file di testo di una directory. Per ogni file di testo selezionato, l'applicazione specifica gli attributi di file e la prima riga del contenuto. È disponibile un'opzione per la scrittura di informazioni in un file di log.  
+Questa procedura dettagliata offre un'introduzione ai principi di base degli elementi I/O di file in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Descrive come creare una piccola applicazione in cui vengono elencati ed esaminati i file di testo di una directory. Per ogni file di testo selezionato, l'applicazione specifica gli attributi di file e la prima riga del contenuto. È disponibile un'opzione per la scrittura di informazioni in un file di log.  
   
- In questa procedura dettagliata vengono usati i membri di `My.Computer.FileSystem Object`, che sono disponibili in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Al termine della procedura dettagliata è riportato un esempio equivalente che usa le classi dello spazio dei nomi <xref:System.IO>.  
+ In questa procedura dettagliata vengono usati i membri di `My.Computer.FileSystem Object`, che sono disponibili in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Al termine della procedura dettagliata è riportato un esempio equivalente che usa le classi dello spazio dei nomi <xref:System.IO>.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-the-project"></a>Per creare il progetto  
   
@@ -65,7 +65,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
   
 3.  Nella casella **Nome** digitare `FileExplorer` per impostare il nome del progetto e quindi fare clic su **OK**.  
   
-     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] aggiunge il progetto a **Esplora soluzioni** e viene aperto Progettazione Windows Form.  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] aggiunge il progetto a **Esplora soluzioni** e viene aperto Progettazione Windows Form.  
   
 4.  Aggiungere i controlli della tabella seguente al form e impostare i valori corrispondenti per le relative proprietà.  
   

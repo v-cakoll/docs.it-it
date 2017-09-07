@@ -1,5 +1,5 @@
 ---
-title: -highentropyva (opzioni del compilatore C#) | Microsoft Docs
+title: -highentropyva (opzioni del compilatore C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c1b49faa2fb388b330c24bdff28d00872828b110
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4cb21c109fc33a30da016fd6a42285a3a3da02e2
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="highentropyva-c-compiler-options"></a>/highentropyva (opzioni del compilatore C#)
@@ -55,3 +55,4 @@ L'opzione del compilatore **/highentropyva** indica al kernel di Windows se un p
  Con l'opzione **/highentropyva**, nelle versioni compatibili del kernel di Windows è possibile usare livelli di entropia più elevati per la scelta casuale del layout dello spazio degli indirizzi di un processo in quanto parte di ASLR. L'utilizzo di livelli più elevati di entropia indica la possibilità di allocare un numero maggiore di indirizzi ad aree della memoria quali stack e heap. Di conseguenza, è più difficile indovinare la posizione di una determinata area di memoria.  
   
  Quando l'opzione del compilatore **/highentropyva** è specificata, l'eseguibile di destinazione e tutti i moduli da cui dipende devono essere in grado di gestire i valori di puntatore maggiori di 4 gigabyte (GB) quando sono in esecuzione come processi a 64 bit.
+

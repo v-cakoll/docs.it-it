@@ -1,5 +1,5 @@
 ---
-title: Filtro dell&quot;output di My.Application.Log (Visual Basic) | Microsoft Docs
+title: Filtro dell'output di My.Application.Log (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: c0b8b0a4174527d1fc512b461355d2508e34e152
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Procedura dettagliata: filtro dell'output di My.Application.Log
@@ -48,7 +48,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
 #### <a name="to-build-the-sample-application"></a>Per compilare l'applicazione di esempio  
   
-1.  Aprire un nuovo progetto Applicazione Windows in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+1.  Aprire un nuovo progetto Applicazione Windows in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 2.  Aggiungere un pulsante denominato Button1 a Form1.  
   
@@ -68,7 +68,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
   
 6.  Chiudere l'applicazione.  
   
-     Per informazioni su come visualizzare la finestra di output di debug dell'applicazione, vedere [Finestra di output](https://docs.microsoft.com/visualstudio/ide/reference/output-window). Per informazioni sul percorso del file di log dell'applicazione, vedere [Procedura dettagliata: Individuazione della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
+     Per informazioni su come visualizzare la finestra di output di debug dell'applicazione, vedere [Finestra di output](/visualstudio/ide/reference/output-window). Per informazioni sul percorso del file di log dell'applicazione, vedere [Procedura dettagliata: Individuazione della posizione di inserimento delle informazioni con My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
     > [!NOTE]
     >  Per impostazione predefinita, l'applicazione elimina l'output del file di log alla chiusura dell'applicazione.  
@@ -162,7 +162,7 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
 9. Impostare di nuovo il valore dell'attributo `value` su "Information".  
   
     > [!NOTE]
-    >  L'impostazione dell'opzione `DefaultSwitch` controlla solo `My.Application.Log`. Non modifica il comportamento delle classi <xref:System.Diagnostics.Trace?displayProperty=fullName> e <xref:System.Diagnostics.Debug?displayProperty=fullName> di [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+    >  L'impostazione dell'opzione `DefaultSwitch` controlla solo `My.Application.Log`. Non modifica il comportamento delle classi <xref:System.Diagnostics.Trace?displayProperty=fullName> e <xref:System.Diagnostics.Debug?displayProperty=fullName> di [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Filtro individuale per i listener di My.Application.Log  
  Nell'esempio precedente viene illustrato come modificare il filtro per tutto l'output di `My.Application.Log`. Questo esempio illustra come filtrare un singolo listener di log. Per impostazione predefinita, un'applicazione ha due listener che scrivono nell'output di debug dell'applicazione e nel file di log.  
@@ -281,3 +281,4 @@ Questa procedura dettagliata illustra come modificare il filtro di log predefini
  [Procedura: Scrivere messaggi di log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [Opzioni di traccia](../../../../framework/debug-trace-profile/trace-switches.md)   
  [Registrazione di informazioni relative all'applicazione](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+

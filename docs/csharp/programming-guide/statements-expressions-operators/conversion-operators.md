@@ -1,53 +1,74 @@
 ---
-title: "Operatori di conversione (Guida per programmatori C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "C# (linguaggio), operatori di conversione"
-  - "operatori di conversione [C#]"
-  - "operatori [C#], conversione"
-  - "conversioni definite dall'utente [C#]"
+title: Operatori di conversione (Guida per programmatori C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# language, conversion operators
+- conversion operators [C#]
+- operators [C#], conversion
+- user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
 caps.latest.revision: 22
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 22
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c12fd13d6526d79363f973ce2a944c4823bf4104
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
+
 ---
-# Operatori di conversione (Guida per programmatori C#)
-Il linguaggio C\# consente ai programmatori di dichiarare conversioni su classi o strutture in modo che le classi o le strutture possano essere convertite in e\/o da altre classi o strutture oppure tipi di base.  Le conversioni vengono definite come operatori e vengono denominate sulla base del tipo verso cui viene effettuata la conversione.  Il tipo dell'argomento da convertire oppure il tipo del risultato della conversione, ma non entrambi, deve essere il tipo che lo contiene.  
+# <a name="conversion-operators-c-programming-guide"></a>Operatori di conversione (Guida per programmatori C#)
+C# consente ai programmatori di dichiarare conversioni in classi o struct, in modo che sia possibile convertire le classi o gli struct da e/o in altre classi o altri struct oppure tipi di base. Le conversioni vengono definite come operatori e sono denominate in base al tipo di destinazione della conversione. Il tipo dell'argomento da convertire oppure il tipo del risultato della conversione, ma non entrambi, deve essere il tipo contenitore.  
   
  [!code-cs[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
-## Cenni preliminari sugli operatori di conversione  
- Di seguito sono riportate le caratteristiche principali degli operatori di conversione:  
+## <a name="conversion-operators-overview"></a>Panoramica degli operatori di conversione  
+ Gli operatori di conversione hanno le proprietà seguenti:  
   
--   Le conversioni dichiarate come `implicit` vengono eseguite automaticamente in caso di necessità.  
+-   Le conversioni dichiarate come `implicit` vengono eseguite automaticamente quando è necessario.  
   
--   Per chiamare conversioni dichiarate come `explicit`, è necessario un cast.  
+-   Le conversioni dichiarate come `explicit` richiedono che venga chiamato un cast.  
   
--   Tutte le conversioni devono essere dichiarate `static`.  
+-   Tutte le conversioni devono essere dichiarate come `static`.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  Per ulteriori informazioni:  
   
--   [Utilizzo degli operatori di conversione](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
+-   [Uso degli operatori di conversione](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
   
--   [Cast e conversioni di tipi \(C\#\)](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+-   [Cast e conversioni di tipi](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
   
--   [Procedura: implementare conversioni tra struct definite dall'utente](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+-   [Procedura: Implementare conversioni tra struct definite dall'utente](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
   
--   [esplicita](../../../csharp/language-reference/keywords/explicit.md)  
+-   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [impliciti](../../../csharp/language-reference/keywords/implicit.md)  
+-   [implicit](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [statiche](../../../csharp/language-reference/keywords/static.md)  
+-   [static](../../../csharp/language-reference/keywords/static.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Convert>   
- [Guida per programmatori C\#](../../../csharp/programming-guide/index.md)   
- [Conversioni esplicite definite dall'utente concatenate in C](http://go.microsoft.com/fwlink/?LinkId=112384)
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
+ [Conversioni esplicite concatenate definite dall'utente in C#](http://go.microsoft.com/fwlink/?LinkId=112384)
+

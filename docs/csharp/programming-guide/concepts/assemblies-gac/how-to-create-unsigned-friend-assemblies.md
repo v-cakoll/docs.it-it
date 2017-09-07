@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Creare assembly Friend non firmati (C#) | Documentazione Microsoft'
+title: 'Procedura: Creare assembly Friend non firmati (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c7d2924f0a619c234871232e155bb6f23e43aee4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 967436204ab0824a510c12dc4c6e288d91d7dfa0
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Procedura: Creare assembly Friend non firmati (C#)
@@ -32,7 +33,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
   
 1.  Aprire un prompt dei comandi.  
   
-2.  Creare un file C# denominato `friend_signed_A.` contenente il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare che friend_signed_B è un assembly Friend.  
+2.  Creare un file C# denominato `friend_signed_A.` contenente il codice seguente. Il codice usa l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> per dichiarare friend_signed_B come assembly Friend.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -104,7 +105,7 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
      Il programma stampa due stringhe: "Class1.Test" e "Class2.Test".  
   
 ## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
- Tra l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e la classe <xref:System.Security.Permissions.StrongNameIdentityPermission> esistono analogie. La differenza principale è che <xref:System.Security.Permissions.StrongNameIdentityPermission> può chiedere le autorizzazioni di sicurezza per l'esecuzione di una particolare sezione di codice, mentre il l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controlla la visibilità dei tipi e dei membri `internal`.  
+ Ci sono alcune analogie tra l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e la classe <xref:System.Security.Permissions.StrongNameIdentityPermission>. La differenza principale è che <xref:System.Security.Permissions.StrongNameIdentityPermission> può chiedere le autorizzazioni di sicurezza per l'esecuzione di una particolare sezione di codice, mentre l'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controlla la visibilità dei membri e dei tipi `internal`.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
@@ -112,3 +113,4 @@ In questo esempio viene illustrato come usare assembly Friend e assembly non fir
  [Assembly Friend (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
  [Procedura: Creare assembly Friend firmati (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
  [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)
+

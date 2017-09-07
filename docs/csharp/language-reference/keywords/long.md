@@ -1,5 +1,5 @@
 ---
-title: long (Riferimenti per C#) | Microsoft Docs
+title: long (Riferimenti per C#)
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 0ea7f109ab934660418aab1a88bff7206ef23a37
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5f7d2d6a3d5781b4e120b8399c7206d4429dd98e
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="long-c-reference"></a>long (Riferimenti per C#)
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/24/2017
   
 |Tipo|Intervallo|Dimensioni|Tipo .NET Framework|  
 |----------|-----------|----------|-------------------------|  
-|`long`|Da –9,223,372,036,854,775,808 a 9,223,372,036,854,775,807|Numero intero con segno a 64 bit|<xref:System.Int64?displayProperty=fullName>|  
+|`long`|Da -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807|Numero intero con segno a 64 bit|<xref:System.Int64?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Valori letterali 
 
@@ -119,7 +119,7 @@ long y = (long)3.0;   // OK: explicit conversion
 ```  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Int64>   
@@ -130,3 +130,4 @@ long y = (long)3.0;   // OK: explicit conversion
  [Tabella dei tipi predefiniti](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

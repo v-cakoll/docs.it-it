@@ -1,5 +1,5 @@
 ---
-title: Ambito degli spazi dei nomi predefiniti in C#1 | Microsoft Docs
+title: Ambito degli spazi dei nomi predefiniti in C#1
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 760716dc81f5cd946ae014ed22b6c5a7df64a5dd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f1c8d8106f7e3e01bb546ce24dd4153b90a0142d
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>Ambito degli spazi dei nomi predefiniti in C#
@@ -69,7 +70,7 @@ End of result set
 ## <a name="example"></a>Esempio  
  In questo esempio vengono illustrate la creazione di codice XML in uno spazio dei nomi e una query codificata correttamente.  
   
- Contrariamente all'esempio di codice errato precedente, l'approccio corretto in C# consiste nel dichiarare e inizializzare un oggetto <xref:System.Xml.Linq.XNamespace> e usarlo se si specificano oggetti <xref:System.Xml.Linq.XName>. In questo caso l'argomento verso il metodo <xref:System.Xml.Linq.XElement.Elements%2A> è un oggetto <xref:System.Xml.Linq.XName>.  
+ Contrariamente all'esempio di codice errato precedente, l'approccio corretto in C# consiste nel dichiarare e inizializzare un oggetto <xref:System.Xml.Linq.XNamespace> e usarlo se si specificano oggetti <xref:System.Xml.Linq.XName>. In questo caso l'argomento del metodo <xref:System.Xml.Linq.XElement.Elements%2A> è un oggetto <xref:System.Xml.Linq.XName>.  
   
 ### <a name="code"></a>Codice  
   
@@ -106,3 +107,4 @@ End of result set
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso degli spazi dei nomi XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

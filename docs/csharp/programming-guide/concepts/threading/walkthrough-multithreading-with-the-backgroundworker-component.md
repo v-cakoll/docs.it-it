@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Multithreading con il componente BackgroundWorker (C#) | Microsoft Docs'
+title: 'Procedura dettagliata: Multithreading con il componente BackgroundWorker (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a27591c62e55295b3cf2b9716776b25d984865a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>Procedura dettagliata: Multithreading con il componente BackgroundWorker (C#)
@@ -64,7 +65,7 @@ Questa procedura dettagliata spiega come creare un'applicazione Windows Form mul
   
 ### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>Per creare un componente BackgroundWorker e sottoscrivere i relativi eventi  
   
-1.  Aggiungere al form un componente <xref:System.ComponentModel.BackgroundWorker> della sezione **Componenti** della **Casella degli strumenti**. Verrà visualizzato nella barra dei componenti del form.  
+1.  Aggiungere al form un componente <xref:System.ComponentModel.BackgroundWorker> dalla sezione **Componenti** della **casella degli strumenti**. Verrà visualizzato nella barra dei componenti del form.  
   
 2.  Impostare le proprietà seguenti per l'oggetto backgroundWorker1.  
   
@@ -293,3 +294,4 @@ Questa procedura dettagliata spiega come creare un'applicazione Windows Form mul
 ## <a name="see-also"></a>Vedere anche  
  [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [Procedura: Eseguire e annullare la sottoscrizione a eventi](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
+

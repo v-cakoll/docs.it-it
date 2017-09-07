@@ -1,5 +1,5 @@
 ---
-title: "Annullare attività asincrone dopo un periodo di tempo (C#) | Microsoft Docs"
+title: "Annullare attività asincrone dopo un periodo di tempo (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aebb133062c5b552f65279d06c950f36ad453615
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 450749c67854dbc0020094fe587c34e50d82b8b8
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Annullare attività asincrone dopo un periodo di tempo (C#)
@@ -104,7 +105,7 @@ Downloads canceled.
 ## <a name="complete-example"></a>Esempio completo  
  Il codice seguente è il testo completo del file MainWindow.xaml.cs per l'esempio. Gli asterischi contrassegnano gli elementi che sono stati aggiunti per questo esempio.  
   
- Si noti che è necessario aggiungere un riferimento a <xref:System.Net.Http>.  
+ Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.  
   
  È possibile scaricare il progetto da [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Esempio di attività asincrona: ottimizzazione dell'applicazione).  
   
@@ -235,3 +236,4 @@ namespace CancelAfterTime
  [Annullare un'attività asincrona o un elenco di attività (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)   
  [Ottimizzazione dell'applicazione asincrona (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Esempio di attività asincrona: ottimizzazione dell'applicazione)
+

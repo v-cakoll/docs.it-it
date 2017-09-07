@@ -1,5 +1,5 @@
 ---
-title: Debug degli alberi delle espressioni in Visual Studio (C#) | Documentazione Microsoft
+title: Debug degli alberi delle espressioni in Visual Studio (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 14ab67e78a3b4c4819ddca36a406526e78f5485e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0cf40b38ca9a6f743aca2894506e1d0ea80c9d57
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Debug degli alberi delle espressioni in Visual Studio (C#)
-È possibile analizzare la struttura e il contenuto degli alberi delle espressioni durante il debug delle applicazioni. Per una breve panoramica della struttura ad albero dell'espressione, è possibile usare la proprietà `DebugView`, disponibile solo nella modalità di debug. Per altre informazioni sul debug, vedere [Debug in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio).  
+È possibile analizzare la struttura e il contenuto degli alberi delle espressioni durante il debug delle applicazioni. Per una breve panoramica della struttura ad albero dell'espressione, è possibile usare la proprietà `DebugView`, disponibile solo nella modalità di debug. Per altre informazioni sul debug, vedere [Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
- Per rappresentare meglio il contenuto degli alberi delle espressioni, la proprietà `DebugView` usa i visualizzatori di Visual Studio. Per altre informazioni, vedere [Creare visualizzatori personalizzati](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data).  
+ Per rappresentare meglio il contenuto degli alberi delle espressioni, la proprietà `DebugView` usa i visualizzatori di Visual Studio. Per altre informazioni, vedere [Creare visualizzatori personalizzati](/visualstudio/debugger/create-custom-visualizers-of-data).  
   
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Per aprire un visualizzatore per un albero delle espressioni  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/13/2017
  Ogni tipo di espressione viene visualizzato nel visualizzatore come descritto nelle sezioni seguenti.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- I nomi di variabili <xref:System.Linq.Expressions.ParameterExpression> vengono visualizzati con un simbolo "$" all'inizio.  
+ I nomi delle variabili <xref:System.Linq.Expressions.ParameterExpression> vengono visualizzati con un simbolo "$" all'inizio.  
   
  Se un parametro non ha un nome, viene assegnato un nome generato automaticamente, ad esempio `$var1` o `$var2`.  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 03/13/2017
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int));`|`$var1`|  
   
 ## <a name="constantexpressions"></a>ConstantExpressions  
- Per gli oggetti <xref:System.Linq.Expressions.ConstantExpression> che rappresentano valori intero, stringhe e `null`, viene visualizzato il valore della costante.  
+ Per gli oggetti <xref:System.Linq.Expressions.ConstantExpression> che rappresentano valori interi, stringhe e `null`, viene visualizzato il valore della costante.  
   
  Per i tipi numerici che usano suffissi standard come valori letterali in C#, il suffisso viene aggiunto al valore. La tabella seguente mostra i suffissi associati ai vari tipi numerici.  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 03/13/2017
 |`double num = 10; ConstantExpression expr = Expression.Constant(num);`|10D|  
   
 ## <a name="blockexpression"></a>BlockExpression  
- Se il tipo di un oggetto <xref:System.Linq.Expressions.BlockExpression> differisce dal tipo dell'ultima espressione nel block, il tipo viene visualizzato nella proprietà `DebugInfo` tra bracket angolari (\< e >). In caso contrario, il tipo dell'oggetto <xref:System.Linq.Expressions.BlockExpression> non viene visualizzato.  
+ Se il tipo di un oggetto <xref:System.Linq.Expressions.BlockExpression> differisce dal tipo dell'ultima espressione nel blocco, il tipo viene visualizzato nella proprietà `DebugInfo` tra parentesi angolari (\< e >). In caso contrario, il tipo dell'oggetto <xref:System.Linq.Expressions.BlockExpression> non viene visualizzato.  
   
 ### <a name="examples"></a>Esempi  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 03/13/2017
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
   
 ## <a name="lambdaexpression"></a>LambdaExpression  
- Gli oggetti <xref:System.Linq.Expressions.LambdaExpression> vengono visualizzati insieme ai relativi tipi di delegati.  
+ Gli oggetti <xref:System.Linq.Expressions.LambdaExpression> vengono visualizzati insieme ai rispettivi tipi delegato.  
   
  Se un'espressione lamda non ha un nome, viene assegnato un nome generato automaticamente, ad esempio `#Lambda1` o `#Lambda2`.  
   
@@ -121,5 +122,6 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Alberi delle espressioni (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
- [Debugging in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)  (Debug in Visual Studio)  
- [Creazione di visualizzatori personalizzati](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)
+ [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  (Debug in Visual Studio)  
+ [Creazione di visualizzatori personalizzati](/visualstudio/debugger/create-custom-visualizers-of-data)
+

@@ -1,23 +1,19 @@
 ---
 title: Strumenti dell'interfaccia della riga di comando di .NET Core
-description: "Panoramica degli strumenti e delle funzionalità dell'interfaccia della riga di comando."
-keywords: interfaccia della riga di comando, strumenti dell'interfaccia della riga di comando, .NET, .NET Core
-author: blackdwarf
+description: "Panoramica degli strumenti e delle funzionalità dell'interfaccia della riga di comando di .NET Core."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/20/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a8c91621095ea187dd4236db7533520556840c59
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: f56b571e61f82132718ecf5890024c0f1c177227
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
-
 # <a name="net-core-command-line-interface-cli-tools"></a>Strumenti dell'interfaccia della riga di comando di .NET Core
 
 L'interfaccia della riga di comando di .NET Core è una nuova toolchain multipiattaforma per lo sviluppo di applicazioni .NET. È un elemento di base su cui possono essere costruiti altri strumenti di livello più elevato, come gli ambienti di sviluppo integrato (IDE, Integrated Development Environment), gli editor e gli agenti di orchestrazione della compilazione.
@@ -35,7 +31,43 @@ Per impostazione predefinita, l'interfaccia della riga di comando viene installa
 
 Per impostazione predefinita vengono installati i comandi seguenti:
 
-### <a name="basic-commands"></a>Comandi di base
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+**Comandi di base**
+
+* [new](dotnet-new.md)
+* [restore](dotnet-restore.md)
+* [build](dotnet-build.md)
+* [publish](dotnet-publish.md)
+* [run](dotnet-run.md)
+* [test](dotnet-test.md)
+* [vstest](dotnet-vstest.md)
+* [pack](dotnet-pack.md)
+* [migrate](dotnet-migrate.md)
+* [clean](dotnet-clean.md)
+* [sln](dotnet-sln.md)
+* [help](dotnet-help.md)
+* [store](dotnet-store.md)
+
+**Comandi per la modifica dei progetti**
+
+* [add package](dotnet-add-package.md)
+* [add reference](dotnet-add-reference.md)
+* [remove package](dotnet-remove-package.md)
+* [remove reference](dotnet-remove-reference.md)
+* [list reference](dotnet-list-reference.md)
+
+**Comandi avanzati**
+
+* [nuget delete](dotnet-nuget-delete.md)
+* [nuget locals](dotnet-nuget-locals.md)
+* [nuget push](dotnet-nuget-push.md)
+* [msbuild](dotnet-msbuild.md)
+* [dotnet install script](dotnet-install-script.md)
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+**Comandi di base**
 
 * [new](dotnet-new.md)
 * [restore](dotnet-restore.md)
@@ -49,7 +81,7 @@ Per impostazione predefinita vengono installati i comandi seguenti:
 * [clean](dotnet-clean.md)
 * [sln](dotnet-sln.md)
 
-### <a name="project-modification-commands"></a>Comandi di modifica dei progetti
+**Comandi per la modifica dei progetti**
 
 * [add package](dotnet-add-package.md)
 * [add reference](dotnet-add-reference.md)
@@ -57,7 +89,7 @@ Per impostazione predefinita vengono installati i comandi seguenti:
 * [remove reference](dotnet-remove-reference.md)
 * [list reference](dotnet-list-reference.md)
 
-### <a name="advanced-commands"></a>Comandi avanzati
+**Comandi avanzati**
 
 * [nuget delete](dotnet-nuget-delete.md)
 * [nuget locals](dotnet-nuget-locals.md)
@@ -65,11 +97,23 @@ Per impostazione predefinita vengono installati i comandi seguenti:
 * [msbuild](dotnet-msbuild.md)
 * [dotnet install script](dotnet-install-script.md)
 
+---
+
 L'interfaccia della riga di comando adotta un modello di estendibilità che consente di specificare altri strumenti per i progetti. Per altre informazioni, vedere l'argomento [Modello di estendibilità dell'interfaccia della riga di comando di .NET Core](extensibility.md).
 
 ## <a name="command-structure"></a>Struttura dei comandi
 
 La struttura dei comandi dell'interfaccia della riga di comando è composta dal [driver ("dotnet")](#driver), dal [comando (o "verbo")](#command-verb) e, in alcuni casi, dagli [argomenti](#arguments) e dalle [opzioni](#options). Questo modello può essere osservato nella maggior parte delle operazioni eseguite dalla riga di comando, inclusa la creazione di una nuova app console e la relativa esecuzione dalla riga di comando, come illustrato dai comandi seguenti quando vengono eseguiti da una directory denominata *my_app*:
+
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+```console
+dotnet new console
+dotnet build --output /build_output
+dotnet /build_output/my_app.dll
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```console
 dotnet new console
@@ -78,17 +122,19 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
+---
+
 ### <a name="driver"></a>Driver
 
 Il driver, denominato [dotnet](dotnet.md), ha due compiti: eseguire un'[app dipendente dal framework](../deploying/index.md) ed eseguire un comando. `dotnet` non è accompagnato da un comando solo quando viene usato per avviare un'applicazione.
 
 Per eseguire un'applicazione dipendente dal framework, specificare l'app dopo il driver, ad esempio `dotnet /path/to/my_app.dll`. Se si esegue il comando dalla cartella in cui si trova la DLL dell'app, è sufficiente eseguire `dotnet my_app.dll`.
 
-Nel momento in cui si fornisce un comando al driver, `dotnet.exe` avvia il processo di esecuzione del comando dell'interfaccia della riga di comando. Come prima operazione, il driver determina la versione degli strumenti da usare. Se la versione non è specificata nelle opzioni di comando, il driver usa la versione più recente disponibile. Per specificare una versione diversa dall'ultima versione installata, usare l'opzione `--fx-version <VERSION>` (vedere l'articolo di riferimento sul [comando dotnet](dotnet.md)). Dopo aver determinato la versione dell'SDK, il driver esegue il comando.
+Nel momento in cui si fornisce un comando al driver, `dotnet.exe` avvia il processo di esecuzione del comando dell'interfaccia della riga di comando. Come prima operazione, il driver determina la versione dell'SDK da usare. Se la versione non è specificata nelle opzioni di comando, il driver usa la versione più recente disponibile. Per specificare una versione diversa dall'ultima versione installata, usare l'opzione `--fx-version <VERSION>` (vedere l'articolo di riferimento sul [comando dotnet](dotnet.md)). Dopo aver determinato la versione dell'SDK, il driver esegue il comando.
 
 ### <a name="command-verb"></a>Comando ("verbo")
 
-Il comando (o "verbo") è semplicemente un comando che esegue un'azione. Ad esempio, `dotnet build` compila il codice, mentre `dotnet publish` pubblica il codice. I comandi vengono implementati come un'applicazione console usando una convenzione `dotnet-{verb}`. 
+Il comando (o "verbo") è semplicemente un comando che esegue un'azione. Ad esempio, `dotnet build` compila il codice, mentre `dotnet publish` pubblica il codice. I comandi vengono implementati come un'applicazione console usando una convenzione `dotnet {verb}`.
 
 ### <a name="arguments"></a>Argomenti
 
@@ -102,8 +148,7 @@ Le opzioni passate alla riga di comando sono le opzioni per il comando richiamat
 
 Se si sono usati gli strumenti della Preview 2 per generare progetti basati su *project.json*, consultare l'argomento [dotnet migrate](dotnet-migrate.md) per informazioni sulla migrazione del progetto in MSBuild/*.csproj* per l'uso con gli strumenti di rilascio. Per i progetti .NET Core creati prima del rilascio degli strumenti della Preview 2, aggiornare manualmente il progetto seguendo le istruzioni disponibili in [Migrazione da DNX all'interfaccia della riga di comando di .NET Core (project.json)](../migration/from-dnx.md) e usare `dotnet migrate` o aggiornare direttamente i progetti.
 
-## <a name="additional-resources"></a>Risorse aggiuntive
+## <a name="see-also"></a>Vedere anche
 
-* [Repository GitHub dotnet/CLI](https://github.com/dotnet/cli/)
-* [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guida all'installazione di .NET Core)
-
+ [dotnet/CLI GitHub Repository](https://github.com/dotnet/cli/)   
+ [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guida all'installazione di .NET Core)   

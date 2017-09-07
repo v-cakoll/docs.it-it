@@ -5,17 +5,17 @@ keywords: "ereditarietà (C#), classi di base, classi derivate, classi di base a
 author: rpetrusha
 manager: wpickett
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
-ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
+ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
+ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
 ms.contentlocale: it-it
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="inheritance-in-c-and-net"></a>Ereditarietà in C# e .NET
@@ -216,13 +216,13 @@ L'esempio seguente illustra il codice sorgente della classe `Publication`, nonch
 
 - Due proprietà relative alla pubblicazione
 
-  `Title` è una proprietà <xref:System.String> di sola lettura il cui valore viene fornito chiamando il costruttore `Publication`, che archivia il valore in un campo privato denominato `pubTitle`.
+  `Title` è una proprietà <xref:System.String> di sola lettura il cui valore viene fornito chiamando il costruttore `Publication`.
 
   `Pages` è una proprietà <xref:System.Int32> di lettura/scrittura che indica il numero totale di pagine contenute nella pubblicazione. Il valore viene archiviato in un campo privato denominato `totalPages`. Deve essere un numero positivo, altrimenti viene generata un'eccezione <xref:System.ArgumentOutOfRangeException>.
 
 - Membri relativi all'editore
 
-  Due proprietà di sola lettura, `Publisher` e `Type`, restituiscono il valore dei campi privati `pubName` e `pubType`. I valori sono forniti in origine tramite la chiamata al costruttore di classe `Publication`.
+  Due proprietà di sola lettura, `Publisher` e `Type`. I valori sono forniti in origine tramite la chiamata al costruttore di classe `Publication`.
 
 - Membri relativi alla pubblicazione
 
@@ -230,7 +230,7 @@ L'esempio seguente illustra il codice sorgente della classe `Publication`, nonch
 
 - Membri relativi al copyright
 
-  Il metodo `Copyright` accetta come argomenti il nome del titolare del copyright e l'anno del copyright e li assegna ai campi privati `copyrName` e `copyrDate`. I valori possono essere recuperati dalle proprietà `CopyrightName` e `CopyrightDate`.
+  Il metodo `Copyright` accetta come argomenti il nome del titolare del copyright e l'anno del copyright e li assegna alle proprietà `CopyrightName` e `CopyrightDate`.
 
 - Override del metodo `ToString`
 
@@ -250,13 +250,13 @@ Oltre ai membri che eredita da `Publication`, la classe `Book` definisce i membr
 
 - Due costruttori
 
-  I due costruttori `Book` condividono tre parametri comuni. Due, *title* e *publisher*, corrispondono ai parametri del costruttore `Publication`. Il terzo è *author*, che viene archiviato in un campo privato `authorName`. Un costruttore include un parametro *isbn*, che viene archiviato in un campo privato `id`.
+  I due costruttori `Book` condividono tre parametri comuni. Due, *title* e *publisher*, corrispondono ai parametri del costruttore `Publication`. Il terzo è *author*, che viene archiviato in un campo privato `authorName`. Un costruttore include un parametro *isbn*, che viene archiviato nella proprietà automatica `ISBN`.
 
-  Il primo costruttore usa la parola chiave [this](../language-reference/keywords/this.md) per chiamare l'altro costruttore. Si tratta di un modello comune per la definizione dei costruttori. I costruttori con meno parametri forniscono i valori predefiniti quando chiamano il costruttore con il maggior numero di parametri.
+  Il primo costruttore usa la parola chiave [this](../language-reference/keywords/this.md) per chiamare l'altro costruttore. Questo è un modello comune per la definizione di costruttori. I costruttori con meno parametri forniscono i valori predefiniti quando chiamano il costruttore con il maggior numero di parametri.
 
   Il secondo costruttore usa la parola chiave [base](../language-reference/keywords/base.md) per passare il titolo e il nome dell'editore al costruttore della classe di base. Se non si esegue una chiamata esplicita a un costruttore della classe di base nel codice sorgente, il compilatore C# effettua automaticamente una chiamata al costruttore della classe di base predefinito o senza parametri.
 
-- Una proprietà `ISBN` di sola lettura, che restituisce il numero ISBN (International Standard Book Number) dell'oggetto `Book`, un numero univoco a 10 o 13 cifre. Il numero ISBN viene fornito come argomento a uno dei costruttori `Book` e viene archiviato nel campo privato `id`.
+- Una proprietà `ISBN` di sola lettura, che restituisce il numero ISBN (International Standard Book Number) dell'oggetto `Book`, un numero univoco a 10 o 13 cifre. Il numero ISBN viene fornito come argomento a uno dei costruttori `Book`. Il numero ISBN viene archiviato in un campo sottostante privato, che viene generato automaticamente dal compilatore.
 
 - Una proprietà `Author` di sola lettura. Il nome dell'autore viene fornito come argomento a entrambi i costruttori `Book` e viene archiviato nel campo privato `authorName`.
 

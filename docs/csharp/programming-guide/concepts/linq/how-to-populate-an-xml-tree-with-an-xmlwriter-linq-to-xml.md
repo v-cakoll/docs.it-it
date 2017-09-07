@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Popolare un albero XML con XmlWriter (LINQ to XML) (C#) | Microsoft Docs'
+title: 'Procedura: Popolare un albero XML con XmlWriter (LINQ to XML) (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,19 +19,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 225aa8a39a973ba8d4f199ccfce68e2dc16d8aa2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9d74e6bd3d8454f5ed37fa8d190beb0c44399fa7
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Procedura: Popolare un albero XML con XmlWriter (LINQ to XML) (C#)
-Per popolare un albero XML è possibile usare <xref:System.Xml.Linq.XContainer.CreateWriter%2A> per creare un <xref:System.Xml.XmlWriter> e quindi scrivere in <xref:System.Xml.XmlWriter>. L'albero XML viene popolato con tutti i nodi scritti in <xref:System.Xml.XmlWriter>.  
+Per popolare un albero XML, è possibile usare <xref:System.Xml.Linq.XContainer.CreateWriter%2A> per creare <xref:System.Xml.XmlWriter>e quindi scrivere in <xref:System.Xml.XmlWriter>. L'albero XML viene popolato con tutti i nodi scritti in <xref:System.Xml.XmlWriter>.  
   
- In genere si usa questo metodo quando si usa [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] con un'altra classe che prevede di scrivere in <xref:System.Xml.XmlWriter>, ad esempio <xref:System.Xml.Xsl.XslCompiledTransform>.  
+ Questo metodo viene in genere impiegato quando si usa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con un'altra classe che prevede di scrivere in un oggetto <xref:System.Xml.XmlWriter>, ad esempio <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ## <a name="example"></a>Esempio  
- È possibile usare <xref:System.Xml.Linq.XContainer.CreateWriter%2A> per richiamare una trasformazione XSLT. In questo esempio vengono creati un albero XML, un oggetto <xref:System.Xml.XmlReader> dall'albero XML, un nuovo documento e infine un oggetto <xref:System.Xml.XmlWriter> per scrivere nel nuovo documento. In seguito viene richiamata la trasformazione XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter>. Dopo il completamento della trasformazione, il nuovo albero XML viene popolato con i relativi risultati.  
+ Un possibile utilizzo di <xref:System.Xml.Linq.XContainer.CreateWriter%2A> è il richiamo di una trasformazione XSLT. In questo esempio viene creato un albero XML da cui viene creato un oggetto <xref:System.Xml.XmlReader>. Viene quindi creato un nuovo documento e infine viene creato un oggetto <xref:System.Xml.XmlWriter> per scrivere nel nuovo documento. Viene quindi richiamata la trasformazione XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter>. Dopo il completamento della trasformazione, il nuovo albero XML viene popolato con i relativi risultati.  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -83,3 +84,4 @@ Console.WriteLine(newTree);
  <xref:System.Xml.XmlWriter>   
  <xref:System.Xml.Xsl.XslCompiledTransform>   
  [Creazione di alberi XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

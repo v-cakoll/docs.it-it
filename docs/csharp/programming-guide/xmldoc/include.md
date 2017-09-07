@@ -1,57 +1,76 @@
 ---
-title: "&lt;include&gt; (Guida per programmatori C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "include"
-  - "<include>"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<include> (tag XML C#)"
-  - "include (tag XML C#)"
+title: '&lt;include&gt; (Guida per programmatori C#)'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- include
+- <include>
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- <include> C# XML tag
+- include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: df0438dd742db802bb0f935d840006236d5d9bf9
+ms.openlocfilehash: 0cabcc25c4e35027c600e4af2bccfad7f9db1514
+ms.contentlocale: it-it
+ms.lasthandoff: 08/29/2017
+
 ---
-# &lt;include&gt; (Guida per programmatori C#)
-## Sintassi  
+# <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (Guida per programmatori C#)
+## <a name="syntax"></a>Sintassi  
   
-```  
+```xml  
 <include file='filename' path='tagpath[@name="id"]' />  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `filename`  
- Nome del file XML che contiene la documentazione.  È possibile qualificare il nome del file tramite un percorso.  Racchiudere `filename` tra virgolette singole \(' '\).  
+ Nome del file XML che contiene la documentazione. È possibile qualificare il nome del file con un percorso. Racchiudere `filename` tra virgolette singole (' ').  
   
  `tagpath`  
- Percorso dei tag di `filename` che porta al `name` del tag.  Racchiudere il percorso tra virgolette singole \(' '\).  
+ Percorso dei tag di `filename` che porta al `name` del tag. Racchiudere il percorso tra virgolette singole (' ').  
   
  `name`  
  Identificatore del nome contenuto nel tag che precede i commenti. `name` ha sempre un `id`.  
   
  `id`  
- ID del tag che precede i commenti.  Racchiudere l'ID tra virgolette doppie \(" "\).  
+ ID del tag che precede i commenti. Racchiudere l'ID tra virgolette doppie (" ").  
   
-## Note  
- Il tag \<include\> consente di fare riferimento ai commenti in un altro file che descrivono i tipi e i membri del codice sorgente,  eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.  Inserendo la documentazione in un file separato, è possibile applicare separatamente il controllo del codice sorgente alla documentazione dal codice sorgente.  Una persona può disporre del file di codice sorgente estratto e un altro utente può disporre del file della documentazione estratto.  
+## <a name="remarks"></a>Note  
+ Il tag \<include> consente di fare riferimento ai commenti di un altro file per la descrizione dei tipi e dei membri del codice sorgente, eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente. Inserendo la documentazione in un file separato, è possibile applicare alla documentazione il controllo del codice sorgente separatamente dal codice sorgente. Una persona, ad esempio, può avere il file di codice sorgente estratto e un'altra il file della documentazione estratto.  
   
- Il tag \<include\> utilizza la sintassi XML XPath.  Per informazioni sulla personalizzazione dell'utilizzo di \<include\>, consultare la documentazione relativa a XPath.  
+ Il tag \<include> usa la sintassi XML XPath. Per informazioni sulla personalizzazione dell'utilizzo di \<include>, consultare la documentazione relativa a XPath.  
   
-## Esempio  
- In questo esempio vengono presi in considerazione più file.  Il primo file, che utilizza \<include\>, è riportato di seguito.  
+## <a name="example"></a>Esempio  
+ In questo esempio vengono presi in considerazione più file. Di seguito è riportato il primo file, che usa \<include>:  
   
  [!code-cs[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
   
- Nel secondo file, xml\_include\_tag.doc, sono contenuti i seguenti commenti relativi alla documentazione:  
+ Il secondo file, xml_include_tag.doc, contiene i commenti alla documentazione seguenti:  
   
-```  
+```xml  
 <MyDocs>  
   
 <MyMembers name="test">  
@@ -69,10 +88,10 @@ The summary for this other type.
 </MyDocs>  
 ```  
   
-## Output di programma  
- L'output seguente viene generato quando si compilano le classi Test e Test2 con la riga di comando seguente: `/doc:DocFileName.xml.`. In Visual Studio, è possibile specificare l'opzione dei commenti XML relativi alla documentazione nel riquadro Compilazione della Progettazione progetti.  Se tramite il compilatore C\# viene visualizzato il tag \<include\>, i commenti relativi alla documentazione verranno cercati nel file xml\_include\_tag.doc anziché nel file di origine corrente.  Il compilatore genera quindi il file DocFileName.xml utilizzato dagli strumenti della documentazione come [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) \(la pagina potrebbe essere in inglese\) per realizzare la documentazione finale.  
+## <a name="program-output"></a>Output di programma  
+ L'output seguente viene generato quando si compilano le classi Test e Test2 con la riga di comando seguente: `/doc:DocFileName.xml.`. In Visual Studio, è possibile specificare l'opzione dei commenti XML alla documentazione nel riquadro Compilazione di Creazione progetti. Se il compilatore C# rileva il tag \<include>, la ricerca dei commenti alla documentazione verrà eseguita nel file xml_include_tag.doc anziché nel file di origine corrente. Il compilatore genera quindi il file DocFileName.xml, che verrà usato dagli strumenti della documentazione come [Sandcastle](https://github.com/EWSoftware/SHFB) per realizzare la documentazione finale.  
   
-```  
+```xml  
 <?xml version="1.0"?>   
 <doc>   
     <assembly>   
@@ -93,6 +112,7 @@ The summary for this other type.
 </doc>   
 ```  
   
-## Vedere anche  
- [Guida per programmatori C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Tag consigliati per i commenti relativi alla documentazione](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

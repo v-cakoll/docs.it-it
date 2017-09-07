@@ -1,5 +1,5 @@
 ---
-title: ulong (Riferimenti per C#) | Documentazione Microsoft
+title: ulong (Riferimenti per C#)
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: a0889086fbc986a37d052917469fbdb5442df44f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c2da253e4da7a5d6cfa71116e4fcba7816441e92
 ms.contentlocale: it-it
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong (Riferimenti per C#)
@@ -47,7 +47,7 @@ La parola chiave `ulong` denota un tipo integrale che archivia valori in base al
   
 ## <a name="literals"></a>Valori letterali  
 
-È possibile dichiarare e inizializzare una variabile `ulong` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7) un valore letterale binario.  Se il valore letterale intero non è incluso nell'intervallo `ulong` (ovvero, se è minore di <xref:System.UInt64.MinValue?displayProperty=fullName> o maggiore di <xref:System.UInt64.MaxValue?displayProperty=fullName>) si verifica un errore di compilazione. 
+È possibile dichiarare e inizializzare una variabile `ulong` assegnandole un valore letterale decimale, un valore letterale esadecimale o (a partire da C# 7) un valore letterale binario.  Se il valore letterale integer è esterno all'intervallo di `ulong`, vale a dire se è minore di <xref:System.UInt64.MinValue?displayProperty=fullName> o maggiore di <xref:System.UInt64.MaxValue?displayProperty=fullName>, si verifica un errore di compilazione. 
 
 Nell'esempio seguente, i valori interi uguali a 7.934.076.125 rappresentati come valori letterali decimali, esadecimali o binari vengono assegnati a valori `ulong`.  
   
@@ -60,7 +60,7 @@ A partire da C# 7, è anche possibile usare il carattere di sottolineatura, `_`,
 
 [!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- Valori letterali integer possono anche includere un suffisso che denota il tipo. Il suffisso `UL` o `ul` identifica in modo inequivocabile un valore letterale numerico come valore `ulong`. Il suffisso `L` indica un valore `ulong` se il valore letterale supera <xref:System.Int64.MaxValue?displayProperty=fullName>. Infine, il suffisso `U` o `u` indica un valore `ulong` se il valore letterale supera <xref:System.UInt32.MaxValue?displayProperty=fullName>. L'esempio seguente usa il suffisso `ul` per indicare un valore long integer:
+ Valori letterali integer possono anche includere un suffisso che denota il tipo. Il suffisso `UL` o `ul` identifica in modo inequivocabile un valore letterale numerico come valore `ulong`. Il suffisso `L` indica `ulong` se il valore letterale supera <xref:System.Int64.MaxValue?displayProperty=fullName>. Il suffisso `U` o `u` indica `ulong` se il valore letterale supera <xref:System.UInt32.MaxValue?displayProperty=fullName>. L'esempio seguente usa il suffisso `ul` per indicare un valore long integer:
  
 [!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
 
@@ -112,7 +112,7 @@ ulong y = (ulong)3.0;
  Per altre informazioni sulle regole di conversione numeriche implicite, vedere [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.UInt64>   
@@ -123,3 +123,4 @@ ulong y = (ulong)3.0;
  [Tabella dei tipi predefiniti](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

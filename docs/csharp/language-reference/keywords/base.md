@@ -1,8 +1,6 @@
 ---
 title: base (Riferimenti per C#)
-description: parola chiave base (C#)
-keywords: base (C#), parola chiave base (C#), parola chiave base (Riferimenti per C#), parola chiave base (Riferimenti per il linguaggio C#)
-ms.custom: 
+description: Informazioni sulla parola chiave base, usata per accedere ai membri della classe di base dall'interno di una classe derivata in C#.
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,43 +33,43 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c875ca834fc66e0bf6cd596f376773badca757e3
+ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
+ms.openlocfilehash: b3a389d92373b6ba5995a7644b0440f9d8fad9ac
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="base-c-reference"></a>base (Riferimenti per C#)
-La parola chiave `base` viene usata per accedere ai membri della classe di base dall'interno di una classe derivata:  
-  
--   Chiamare un metodo sulla classe di base che è stato sostituito da un altro metodo.  
-  
--   Specificare quale costruttore di classe di base deve essere chiamato durante la creazione di istanze della classe derivata.  
-  
- Una classe di base di accesso è consentita solo in un costruttore, in un metodo di istanza o in una funzione di accesso alla proprietà dell'istanza.  
-  
- Non è possibile usare la parola chiave `base` dall'interno di un metodo statico.  
-  
- La classe di base alla quale si accede è la classe di base specificata nella dichiarazione di classe. Ad esempio, se si specifica `class ClassB : ClassA`, i membri di ClassA sono accessibili da ClassB, indipendentemente dalla classe di base di ClassA.  
-  
-## <a name="example"></a>Esempio  
- In questo esempio, la classe di base `Person` e la classe derivata `Employee` hanno un metodo denominato `Getinfo`. Tramite la parola chiave `base` è possibile chiamare il meotod `Getinfo` sulla classe di base, dall'interno della classe derivata.  
-  
- [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]  
-  
- Per altri esempi, vedere [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) e [override](../../../csharp/language-reference/keywords/override.md).  
-  
-## <a name="example"></a>Esempio  
- Questo esempio illustra come specificare il costruttore della classe di base chiamato durante la creazione di istanze di una classe derivata.  
-  
- [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]  
-  
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Vedere anche  
+
+La parola chiave `base` viene usata per accedere ai membri della classe di base dall'interno di una classe derivata:
+
+- Chiamare un metodo sulla classe di base che è stato sostituito da un altro metodo.
+
+- Specificare quale costruttore di classe di base deve essere chiamato durante la creazione di istanze della classe derivata.
+
+Una classe di base di accesso è consentita solo in un costruttore, in un metodo di istanza o in una funzione di accesso alla proprietà dell'istanza.
+
+Non è possibile usare la parola chiave `base` dall'interno di un metodo statico.
+
+La classe di base alla quale si accede è la classe di base specificata nella dichiarazione di classe. Ad esempio, se si specifica `class ClassB : ClassA`, i membri di ClassA sono accessibili da ClassB, indipendentemente dalla classe di base di ClassA.
+
+## <a name="example"></a>Esempio
+In questo esempio, la classe di base `Person` e la classe derivata `Employee` hanno un metodo denominato `Getinfo`. Tramite la parola chiave `base` è possibile chiamare il meotod `Getinfo` sulla classe di base, dall'interno della classe derivata.
+
+[!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]
+
+Per altri esempi, vedere [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) e [override](../../../csharp/language-reference/keywords/override.md).
+
+## <a name="example"></a>Esempio
+Questo esempio illustra come specificare il costruttore della classe di base chiamato durante la creazione di istanze di una classe derivata.
+
+[!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]
+
+## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Vedere anche
  [Riferimenti per C#](../../../csharp/language-reference/index.md)   
  [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
  [this](../../../csharp/language-reference/keywords/this.md)
-

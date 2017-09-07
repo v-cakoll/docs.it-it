@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f49b0e0dac7df20fc6e5015b9707208ee65a48d6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ddd028a3aad5186ef6773b32e9f9e8e1cbff95fc
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="group-results-by-contiguous-keys"></a>Raggruppare i risultati per chiavi contigue
@@ -46,7 +47,7 @@ Nell'esempio seguente viene illustrato come raggruppare elementi in blocchi che 
   
  La soluzione viene implementata come metodo di estensione thread-safe che restituisce i risultati in modalità di flusso. In altre parole, i gruppi vengono prodotti man mano che ci si sposta lungo la sequenza di origine. A differenza degli operatori `group` o `orderby`, questa soluzione può iniziare a restituire i gruppi al chiamante prima che sia stata letta tutta la sequenza.  
   
- La caratteristica thread-safe viene ottenuta effettuando una copia di ogni gruppo o blocco nel corso dell'iterazione della sequenza di origine, come spiegato nei commenti del codice sorgente. Se nella sequenza di origine è inclusa una serie numerosa di elementi contigui, Common Language Runtime potrebbe generare <xref:System.OutOfMemoryException>.  
+ La caratteristica thread-safe viene ottenuta effettuando una copia di ogni gruppo o blocco nel corso dell'iterazione della sequenza di origine, come spiegato nei commenti del codice sorgente. Se la sequenza di origine include una sequenza di grandi dimensioni di elementi contigui, Common Language Runtime potrebbe generare un'eccezione <xref:System.OutOfMemoryException>.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato sia il metodo di estensione che il codice client usato.  
@@ -58,3 +59,4 @@ Nell'esempio seguente viene illustrato come raggruppare elementi in blocchi che 
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni di query LINQ](index.md)   
  
+

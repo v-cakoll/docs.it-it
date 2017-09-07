@@ -1,5 +1,5 @@
 ---
-title: typeof (Riferimenti per C#) | Microsoft Docs
+title: typeof (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0590aa8a339dc58b7215722a530a71f8973864d4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdb335e44a5a3634520d3a86495a4508597b4f70
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="typeof-c-reference"></a>typeof (Riferimenti per C#)
@@ -52,7 +52,7 @@ int i = 0;
 System.Type type = i.GetType();  
 ```  
   
- Non è possibile eseguire l'overload dell'operatore `typeof`.  
+ Non è possibile sottoporre l'operatore `typeof` a overload.  
   
  L'operatore `typeof` può essere usato anche su tipi generici aperti. I tipi con più di un parametro di tipo devono avere il numero appropriato di virgole nella specifica. Nell'esempio seguente viene illustrato come determinare se il tipo restituito di un metodo è un elemento <xref:System.Collections.Generic.IEnumerable%601> generico. Si supponga che il metodo sia un'istanza di tipo MethodInfo:  
   
@@ -79,3 +79,4 @@ string s = method.ReturnType.GetInterface
  [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
  [is](../../../csharp/language-reference/keywords/is.md)   
  [Parole chiave per gli operatori](../../../csharp/language-reference/keywords/operator-keywords.md)
+

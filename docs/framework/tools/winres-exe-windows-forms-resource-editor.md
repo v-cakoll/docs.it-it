@@ -1,5 +1,5 @@
 ---
-title: Winres.exe (editor di risorse di Windows Form) | Microsoft Docs
+title: Winres.exe (editor di risorse di Windows Form)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2149e21f82b224e40cc4b2dd80a7decd9988385d
+ms.translationtype: HT
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: e2a2121d97cd1f7de211a72ed95e2fdf24bfac60
 ms.contentlocale: it-it
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (editor di risorse di Windows Form)
@@ -146,7 +146,7 @@ winres /?
   
 4.  Per salvare la versione localizzata del file con estensione resx o resources, fare clic sull'icona **Salva** o scegliere il comando corrispondente dal menu **File**. Verrà visualizzata la finestra **Seleziona impostazioni cultura**.  
   
-5.  Selezionare le impostazioni cultura e la modalità file appropriate, quindi scegliere **OK**. Il file verrà salvato secondo le convenzioni di denominazione previste per i file di risorse localizzati. Se si localizza, ad esempio, il file `TestApp.resources` per la lingua tedesca in Germania, il file verrà salvato come `TestApp.de-DE.resources`. Se si localizza `TestApp.resx` per la lingua tedesca in Germania, il file verrà salvato come `TestApp.de-DE.resx`. Per altre informazioni sulle convenzioni di denominazione dei file di risorse, vedere [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Per un elenco dei nomi di impostazioni cultura predefiniti usati dal runtime, vedere la [classe CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).  
+5.  Selezionare le impostazioni cultura e la modalità file appropriate, quindi scegliere **OK**. Il file verrà salvato secondo le convenzioni di denominazione previste per i file di risorse localizzati. Se si localizza, ad esempio, il file `TestApp.resources` per la lingua tedesca in Germania, il file verrà salvato come `TestApp.de-DE.resources`. Se si localizza `TestApp.resx` per la lingua tedesca in Germania, il file verrà salvato come `TestApp.de-DE.resx`. Per altre informazioni sulle convenzioni di denominazione dei file di risorse, vedere [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Per un elenco dei nomi di impostazioni cultura predefiniti usati dal runtime, vedere la classe <xref:System.Globalization.CultureInfo>.  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.ComponentModel.LocalizableAttribute>   
@@ -157,3 +157,4 @@ winres /?
  [Strumenti](../../../docs/framework/tools/index.md)   
  [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)   
  [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)
+

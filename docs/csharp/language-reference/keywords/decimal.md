@@ -1,5 +1,5 @@
 ---
-title: decimal (Riferimenti per C#) | Microsoft Docs
+title: decimal (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,24 +30,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 336a4a7bb485a48282dd740bafb81421e0cba693
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c06d14f01302a21427845d0269fc8181a380914
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="decimal-c-reference"></a>decimal (Riferimenti per C#)
-La parola chiave `decimal` indica un tipo di dati a 128 bit. Rispetto ai tipi a virgola mobile, il tipo `decimal` è caratterizzato da una maggiore precisione e da un intervallo ridotto che lo rendono appropriato per calcoli finanziari e monetari. Nella tabella riportata di seguito vengono indicati l'intervallo approssimativo e il grado di precisione del tipo `decimal`.  
+La parola chiave `decimal` indica un tipo di dati a 128 bit. Rispetto ad altri tipi a virgola mobile, il tipo `decimal` è caratterizzato da una maggiore precisione e da un intervallo minore, che lo rendono appropriato per calcoli finanziari e monetari. Nella tabella riportata di seguito vengono indicati l'intervallo approssimativo e il grado di precisione del tipo `decimal`.  
   
 |Tipo|Intervallo approssimativo|Precisione|Tipo .NET Framework|  
 |----------|-----------------------|---------------|-------------------------|  
-|`decimal`|(Da -7,9 x 10<sup>28</sup> a 7,9 x 10<sup>28</sup>) / (da 10<sup>0 a 28</sup>)|28-29 cifre significative|<xref:System.Decimal?displayProperty=fullName>|  
+|`decimal`|(Da -7,9 x 10<sup>28</sup> a 7,9 x 10<sup>28</sup>) / (da 10<sup>0</sup> a 10<sup>28</sup>)|28-29 cifre significative|<xref:System.Decimal?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Valori letterali  
  Se si desidera che un valore letterale numerico reale venga gestito come `decimal`, utilizzare il suffisso m o M, ad esempio:  
   
-```  
+```csharp
 decimal myMoney = 300.5m;  
 ```  
   
@@ -56,19 +56,19 @@ decimal myMoney = 300.5m;
 ## <a name="conversions"></a>Conversioni  
  I tipi integrali vengono convertiti in modo implicito in `decimal` e il risultato restituisce `decimal`. È pertanto possibile inizializzare una variabile decimale mediante un valore letterale Integer, senza il suffisso, ad esempio:  
   
-```  
+```csharp
 decimal myMoney = 300;  
 ```  
   
- Non esiste alcuna conversione implicita tra i tipi a virgola mobile e il tipo `decimal`. È pertanto necessario utilizzare un cast per operare una conversione tra questi due tipi. Ad esempio:  
+ Poiché non esiste alcuna conversione implicita tra altri tipi a virgola mobile e il tipo `decimal`, è necessario usare un cast per eseguire una conversione tra questi due tipi. Ad esempio:  
   
-```  
-      decimal myMoney = 99.9m;  
+```csharp
+decimal myMoney = 99.9m;  
 double x = (double)myMoney;  
 myMoney = (decimal)x;  
 ```  
   
- È inoltre possibile combinare tipi `decimal` e tipi integrali numerici nella stessa espressione. Tuttavia, la combinazione di tipi `decimal` e tipi a virgola mobile senza un cast genera un errore di compilazione.  
+ È inoltre possibile combinare tipi `decimal` e tipi integrali numerici nella stessa espressione. Tuttavia, la combinazione di `decimal` e altri tipi a virgola mobile senza un cast genera un errore di compilazione.  
   
  Per altre informazioni sulle conversioni numeriche implicite, vedere [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
@@ -105,7 +105,7 @@ Console.WriteLine((double)dec + dub);
  [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Decimal>   

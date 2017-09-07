@@ -1,5 +1,5 @@
 ---
-title: string (Riferimenti per C#) | Documentazione Microsoft
+title: string (Riferimenti per C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 737a0902a0cb010a74b59560abe43f5cfb6550db
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 56847aad4cb8b0427594a299df2306d21675506b
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="string-c-reference"></a>string (Riferimenti per C#)
@@ -93,7 +93,7 @@ Console.WriteLine(a);
 ```  
   
 > [!NOTE]
->  Il codice di escape `\`u`dddd` (dove `dddd` è un numero a quattro cifre) rappresenta il carattere Unicode U +`dddd`. Vengono riconosciuti anche i codici di escape Unicode a otto cifre: `\Udddddddd`.  
+>  Il codice di escape `\udddd` (dove `dddd` è un numero a quattro cifre) rappresenta il carattere Unicode U+`dddd`. Vengono riconosciuti anche i codici di escape Unicode a otto cifre: `\Udddddddd`.  
   
  I valori letterali della stringa verbatim iniziano con @ e sono anche racchiusi tra virgolette doppie. Ad esempio:  
   

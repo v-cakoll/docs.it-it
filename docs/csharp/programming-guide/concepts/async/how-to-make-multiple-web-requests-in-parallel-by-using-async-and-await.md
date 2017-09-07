@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#) | Microsoft Docs"
+title: "Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eb358daf212b171acd998a1aa74fe2ecd82a239a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bfa7781241b837f353fe34d43b8cc6ab82f15564
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Procedura: Eseguire più richieste Web in parallelo tramite async e await (C#)
@@ -64,7 +64,7 @@ var result = await myTask;
   
     -   Creare un'applicazione WPF che contenga una casella di testo e un pulsante. Denominare il pulsante `startButton` e la casella di testo `resultsTextBox`.  
   
-    -   Aggiungere un riferimento a <xref:System.Net.Http>.  
+    -   Aggiunge un riferimento a <xref:System.Net.Http>.  
   
     -   Nel file MainWindow.xaml.cs aggiungere una direttiva `using` per `System.Net.Http`.  
   
@@ -84,7 +84,7 @@ var result = await myTask;
   
 3.  Aggiungere i metodi di supporto seguenti al progetto:  
   
-    -   `ProcessURLAsync` usa un metodo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web come una matrice di byte. Il metodo di supporto `ProcessURLAsync` visualizza e restituisce la lunghezza della matrice.  
+    -   `ProcessURLAsync` usa un metodo <xref:System.Net.Http.HttpClient> per scaricare il contenuto di un sito Web come matrice di byte. Il metodo di supporto `ProcessURLAsync` visualizza e restituisce la lunghezza della matrice.  
   
     -   `DisplayResults` visualizza il numero di byte della matrice di byte per ogni URL. Questa visualizzazione indica quando ogni attività ha terminato il download.  
   

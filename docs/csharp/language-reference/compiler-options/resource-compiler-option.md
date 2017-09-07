@@ -1,76 +1,96 @@
 ---
-title: "/resource (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/resource"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "-resource compiler option [C#]"
-  - "/resource compiler option [C#]"
-  - "-res compiler option [C#]"
-  - "/res compiler option [C#]"
-  - "res compiler option [C#]"
-  - "resource compiler option [C#]"
+title: -resource (opzioni del compilatore C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /resource
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- -resource compiler option [C#]
+- /resource compiler option [C#]
+- -res compiler option [C#]
+- /res compiler option [C#]
+- res compiler option [C#]
+- resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdb7be630300e11c2e63d88bd6add7d229714bfa
+ms.contentlocale: it-it
+ms.lasthandoff: 07/28/2017
+
 ---
-# /resource (C# Compiler Options)
-Incorpora la risorsa specificata in un file di output.  
+# <a name="resource-c-compiler-options"></a>/resource (opzioni del compilatore C#)
+Incorpora la risorsa specificata nel file di output.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+```console  
 /resource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  `filename`  
- Rappresenta il file di risorse .NET Framework che si desidera incorporare nel file di output.  
+ File di risorse .NET Framework da incorporare nel file di output.  
   
- `identifier` \(facoltativo\)  
- Nome logico della risorsa, utilizzato per caricare la risorsa stessa.  Il valore predefinito è il nome del file.  
+ `identifier` (facoltativo)  
+ Nome logico della risorsa, usato per caricare la risorsa stessa. L'impostazione predefinita corrisponde al nome del file.  
   
- `accessibility-modifier` \(facoltativo\)  
- Rappresenta l'accessibilità della risorsa: public o private.  L'impostazione predefinita è public.  
+ `accessibility-modifier` (facoltativo)  
+ Accessibilità della risorsa: public o private. L'impostazione predefinita è public.  
   
-## Note  
- Utilizzare [\/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) per collegare una risorsa a un assembly senza aggiungere il file di risorse al file di output.  
+## <a name="remarks"></a>Note  
+ Usare [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) per collegare una risorsa a un assembly senza aggiungere il file di risorse al file di output.  
   
- Per impostazione predefinita, le risorse sono pubbliche nell'assembly quando vengono create utilizzando il compilatore C\#.  Per renderle private, specificare `private` come modificatore di accessibilità.  Non è consentito alcun valore di accessibilità diverso da `public` o `private`.  
+ Per impostazione predefinita, le risorse sono pubbliche nell'assembly quando vengono create tramite il compilatore C#. Per renderle private, specificare `private` come modificatore di accessibilità. Non è consentita alcuna accessibilità diversa da `public` o `private`.  
   
- Se `filename` è un file di risorse .NET Framework creato, ad esempio, tramite [Resgen.exe](../Topic/Resgen.exe%20\(Resource%20File%20Generator\).md) oppure nell'ambiente di sviluppo, sarà accessibile con i membri dello spazio dei nomi <xref:System.Resources>.  Per ulteriori informazioni, vedere <xref:System.Resources.ResourceManager?displayProperty=fullName>.  Per tutte le altre risorse, utilizzare i metodi `GetManifestResource`\* nella classe <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di esecuzione.  
+ Se `filename` è un file di risorse .NET Framework creato ad esempio da [Resgen.exe](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) oppure nell'ambiente di sviluppo, è possibile accedervi tramite i membri dello spazio dei nomi <xref:System.Resources>. Per altre informazioni, vedere <xref:System.Resources.ResourceManager?displayProperty=fullName>. Per tutte le altre risorse, usare i metodi `GetManifestResource`* della classe <xref:System.Reflection.Assembly> per accedere alla risorsa in fase di runtime.  
   
- **\/res** rappresenta la versione abbreviata di **\/resource**.  
+ **/res** rappresenta la versione abbreviata di **/resource**.  
   
  L'ordine delle risorse nel file di output è determinato dall'ordine specificato nella riga di comando.  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
 1.  Aggiungere un file di risorse al progetto.  
   
-2.  Selezionare il file che si desidera incorporare in **Esplora soluzioni**.  
+2.  Selezionare il file che si vuole incorporare in **Esplora soluzioni**.  
   
-3.  Nella finestra **Proprietà** selezionare **Operazione di compilazione** per il file.  
+3.  Selezionare **Azione di compilazione** per il file nella finestra **Proprietà**.  
   
-4.  Impostare **Operazione di compilazione** su **Risorsa incorporata**.  
+4.  Impostare **Azione di compilazione** su **Risorsa incorporata**.  
   
  Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.FileProperties2.BuildAction%2A>.  
   
-## Esempio  
- Compilare `in.cs` e allegare il file di risorse `rf.resource`:  
+## <a name="example"></a>Esempio  
+ Compilare `in.cs` e associare il file di risorse `rf.resource`:  
   
-```  
+```console  
 csc /resource:rf.resource in.cs  
 ```  
   
-## Vedere anche  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Procedura: modificare le proprietà e le impostazioni di configurazione dei progetti](http://msdn.microsoft.com/it-it/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Vedere anche  
+ [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
+ [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+
