@@ -1,26 +1,26 @@
 ---
 title: Indipendenza del linguaggio e componenti indipendenti dal linguaggio
-description: Indipendenza del linguaggio e componenti indipendenti dal linguaggio
+description: Informazioni su come sviluppare in uno dei molti linguaggi supportati in .NET, ad esempio C#, C++/interfaccia della riga di comando, F#, IronPython, VB, Visual COBOL e PowerShell.
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 3da0bc3c9abf28aeb588ec9277c4e0b503df4d8b
 ms.contentlocale: it-it
-ms.lasthandoff: 03/10/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 
-La piattaforma .NET è indipendente dal linguaggio. Questo significa che gli sviluppatori possono lavorare in uno dei diversi linguaggi che hanno come destinazione la piattaforma .NET, ad esempio C#, F# e Visual Basic. È possibile accedere a tipi e membri di librerie di classi sviluppate per la piattaforma .NET senza dover conoscere il linguaggio in cui sono stati originariamente scritti e senza dover seguire nessuna delle convenzioni del linguaggio originale. Se si è uno sviluppatore di componenti, è possibile accedere al componente da qualsiasi applicazione .NET, indipendentemente dal linguaggio.
+.NET è indipendente dal linguaggio. Questo significa che gli sviluppatori possono lavorare in uno dei diversi linguaggi che hanno come destinazione le implementazioni di .NET, ad esempio C#, F# e Visual Basic. È possibile accedere a tipi e membri di librerie di classi sviluppate per le implementazioni di .NET senza dover conoscere il linguaggio in cui sono stati originariamente scritti e senza dover seguire nessuna delle convenzioni del linguaggio originale. Se si è uno sviluppatore di componenti, è possibile accedere al componente da qualsiasi applicazione .NET, indipendentemente dal linguaggio.
 
 > [!NOTE]
 > La prima parte di questo articolo illustra la creazione di componenti indipendenti dal linguaggio, vale a dire componenti che possono essere usati da applicazioni scritte in qualsiasi linguaggio. È anche possibile creare un singolo componente o applicazione dal codice sorgente scritto in più linguaggi. Vedere [Interoperabilità tra linguaggi diversi](#cross-language-interoperability) nella seconda parte di questo articolo. 
@@ -347,7 +347,7 @@ Tipo non conforme | Descrizione | Alternativa alla conformità a CLS
  
  Nella libreria di classi .NET Framework o in qualsiasi altra libreria di classi possono essere inclusi altri tipi non conformi a CLS; ad esempio: 
  
- * Tipi di valore boxed. Nell'esempio C# seguente viene creata una classe con una proprietà pubblica di tipo `int` *denominata `Value`. Poiché `int`* è un tipo di valore boxed, il compilatore lo contrassegna come non conforme a CLS.
+ * Tipi di valore boxed. Nell'esempio C# seguente viene creata una classe con una proprietà pubblica di tipo `int`* denominata `Value`. Poiché `int`* è un tipo di valore boxed, il compilatore lo contrassegna come non conforme alle specifiche CLS.
 
   ```csharp
   using System;
@@ -1110,7 +1110,7 @@ Le matrici conformi a CLS sono conformi alle regole seguenti:
          Return numbersOut
      End Function
   End Module
-```
+  ```
 
 ### <a name="interfaces"></a>Interfacce
 
@@ -1628,7 +1628,7 @@ End Module
 
 I nomi di tipo generico sono codificati nel formato *name*'*n*, dove *name* è il nome del tipo, *`* è un valore letterale del carattere e *n* è il numero di parametri dichiarati nel tipo oppure, per i tipi generici annidati, il numero di parametri di tipo appena introdotti. Questa codifica dei nomi di tipo generico è principalmente di interesse per gli sviluppatori che usano la reflection per accedere ai tipi generici conformi a CLS in una libreria. 
 
-Se i vincoli vengono applicati a un tipo generico, anche tutti i tipi usati come vincoli devono essere conformi a CLS. Nell'esempio seguente viene definita una classe denominata `BaseClass` che non è conforme a CLS e una classe generica denominata `BaseCollection` il cui parametro di tipo deve derivare da `BaseClass`. Tuttavia, poiché `BaseClass` non è conforme a CLS, il compilatore genera un avviso. 
+Se i vincoli vengono applicati a un tipo generico, anche tutti i tipi usati come vincoli devono essere conformi a CLS. Nell'esempio seguente viene definita una classe denominata `BaseClass` che non è conforme a CLS e una classe generica denominata `BaseCollection` il cui parametro di tipo deve derivare da `BaseClass`. Tuttavia, poiché `BaseClass` non è conforme a CLS, viene generato un avviso dal compilatore. 
 
 ```csharp
 using System;
@@ -1660,7 +1660,6 @@ End Class
 '    
 '    Public Class BaseCollection(Of T As BaseClass)
 '                                        ~~~~~~~~~
-
 ```
 
 Se un tipo generico è derivato da un tipo base generico, è necessario dichiarare nuovamente tutti i vincoli in modo che sia possibile garantire che vengano soddisfatti anche i vincoli sul tipo base. Nell'esempio riportato di seguito viene definito un oggetto `Number<T>` che può rappresentare qualsiasi tipo numerico. Viene anche definita una classe `FloatingPoint<T>` che rappresenta un valore a virgola mobile. Tuttavia, il codice sorgente non viene compilato, perché non viene applicato il vincolo su `Number<T>` (che T deve essere un tipo di valore) a `FloatingPoint<T>`.
@@ -1938,7 +1937,7 @@ I costruttori nelle classi e strutture conformi a CLS devono rispettare queste r
 
 * Prima di accedere ai dati di istanza ereditati, un costruttore di una classe derivata deve chiamare il costruttore di istanze della relativa classe di base. Questo requisito è dovuto al fatto che i costruttori della classe di base non vengono ereditati dalle classi derivate. Questa regola non si applica alle strutture, che non supportano l'ereditarietà diretta. 
 
-  In genere, questa regola viene applicata dai compilatori indipendentemente dalla conformità a CLS, come illustrato dall'esempio riportato di seguito. Viene creata una classe `Doctor` derivata da una classe `Person`, ma la classe `Doctor` non riesce a chiamare il costruttore della classe `Person` per inizializzare i campi di istanza ereditati. 
+  In genere, questa regola viene applicata dai compilatori indipendentemente dalla conformità a CLS, come illustrato dall'esempio riportato di seguito. Viene creata una classe `Doctor` derivata da una classe `Person`, ma la classe `Doctor` non riuscirà a chiamare il costruttore della classe `Person` per inizializzare i campi di istanza ereditati. 
 
     ```csharp
     using System;

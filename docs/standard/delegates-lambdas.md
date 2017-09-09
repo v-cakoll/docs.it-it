@@ -1,6 +1,6 @@
 ---
 title: Delegati e lambda
-description: Delegati e lambda
+description: "Informazioni sul modo in cui i delegati definiscono un tipo, che specifica una firma del metodo particolare, che può essere chiamato direttamente o passato a un altro metodo e chiamato."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 1dbe9c72999c14e45910310eb0bbc91ebe9f1e4a
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -39,7 +40,6 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
 *   Nella riga 4 viene creato un tipo delegato di una determinata firma, in questo caso un metodo che accetta un parametro di stringa e quindi restituisce un parametro di stringa.
@@ -71,10 +71,9 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
-In questo esempio semplice, la presenza di un metodo definito all'esterno del metodo Main() non è necessaria. Per questa ragione è stato introdotto in .NET Framework 2.0 il concetto di **delegati anonimi**. I delegati anonimi consentono di creare delegati "incorporati" senza dover specificare tipi o metodi aggiuntivi. Sarà sufficiente incorporare la definizione del delegato dove necessario.
+In questo esempio semplice, la presenza di un metodo definito all'esterno del metodo Main() non è necessaria. Per questa ragione è stato introdotto in .NET Framework 2.0 il concetto di **delegati anonimi**. I delegati anonimi consentono di creare delegati "inline" senza dover specificare tipi o metodi aggiuntivi. Sarà sufficiente incorporare la definizione del delegato dove necessario.
 
 In questo esempio il delegato anonimo viene configurato e usato per visualizzare un elenco dei soli numeri pari che vengono quindi stampati nella console.
 
@@ -104,7 +103,6 @@ public class Program
     }
   }
 }
-
 ```
 
 Si notino le righe evidenziate. È possibile osservare che il corpo del delegato è costituito da un set di espressioni, come qualsiasi altro delegato. Ma anziché essere una definizione separata, il delegato è stato inserito _appositamente_ nella chiamata al metodo `FindAll()` del tipo `List<T>`.
@@ -136,7 +134,6 @@ public class Program
     }
   }
 }
-
 ```
 
 Nelle righe evidenziate è possibile osservare l'aspetto di un'espressione lambda. Anche in questo caso, si tratta soltanto di una sintassi **molto** pratica per l'uso di delegati con un funzionamento simile a quello del delegato anonimo.
@@ -153,7 +150,6 @@ public MainWindow()
         this.Title = "Loaded";
     };
 }
-
 ```
 
 ## <a name="further-reading-and-resources"></a>Altre informazioni e risorse
