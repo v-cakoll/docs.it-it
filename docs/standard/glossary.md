@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.translationtype: HT
-ms.sourcegitcommit: f8cf12317f1f0163028db003ff31604480da5d1c
-ms.openlocfilehash: d9a1b1aa2b19e80b885a2da87746667bff04e234
+ms.sourcegitcommit: 33b22ab80f9b4d42975f2c41c880543c615a3e01
+ms.openlocfilehash: c66f1b2b85d377c84712c0ad73682cdeeb7249fd
 ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 
@@ -141,13 +141,15 @@ Vedere [Pacchetti, metapacchetti e framework](../core/packages.md)
 
 ## <a name="mono"></a>Mono
 
-Alternativa open source a .NET Framework.
+Mono è un'implementazione di .NET usata principalmente quando è necessario un runtime di dimensioni ridotte. Si tratta del runtime su cui si basano le applicazioni Xamarin in Android, Mac, iOS, tvOS e watchOS ed è incentrato principalmente su app che richiedono un footprint ridotto.
 
-L'inizio dello sviluppo di Mono risale all'incirca all'epoca del primo rilascio di .NET Framework. Dal momento che .NET Framework non era open source, è stato necessario sviluppare Mono ex novo, di conseguenza si tratta di una reimplementazione di .NET Framework senza codice condiviso.
+Supporta tutte le versioni attualmente pubblicate di .NET Standard.
 
-Quando .NET Core è stato rilasciato in conformità alla licenza MIT, Microsoft ha rilasciato anche [estesi blocchi di codice di .NET Framework coperti dalla stessa licenza](https://github.com/microsoft/referencesource). In tal modo la community Mono ha potuto usare lo stesso codice di .NET Framework per aggiungere i componenti mancanti ed evitare differenze di comportamento.
+In precedenza, Mono implementava le API di dimensioni maggiori di .NET Framework ed emulava alcune delle funzionalità più diffuse su Unix. Viene a volte usato per eseguire applicazioni .NET che si basano su tali funzionalità in Unix.
 
-Mono viene usato principalmente per eseguire applicazioni .NET in Linux e macOS. Sono disponibili versioni di Mono per la portabilità in altre piattaforme. Vedere [Mono's Supported Platforms](http://www.mono-project.com/docs/about-mono/supported-platforms/) (Piattaforme supportate di Mono). Mono include implementazioni (anche se non necessariamente complete) di WinForms, ASP.NET e `System.Drawing`.
+Mono viene in genere usato con un compilatore JIT, ma include anche un compilatore statico completo (compilazione Ahead Of Time), usato in piattaforme quali iOS.
+
+Per altre informazioni su Mono, vedere la [documentazione Mono](http://www.mono-project.com/docs/).
 
 ## <a name="net"></a>.NET
 
@@ -209,7 +211,7 @@ Un pacchetto NuGet &mdash; o semplicemente un pacchetto &mdash; è un file *ZIP*
 
 Il file *ZIP* è caratterizzato dall'estensione *nupkg* e può contenere asset, quali file *DLL* e *XML*, da usare con più framework e versioni. Quando vengono installati in un'app o una libreria, gli asset appropriati vengono selezionati in base al framework di destinazione specificato dall'app o dalla libreria. Gli asset che definiscono l'interfaccia si trovano nella cartella *ref*, mentre quelli che definiscono l'implementazione si trovano nella cartella *lib*.
 
-## <a name="platform"></a>piattaforma
+## <a name="platform"></a>platform
 
 Sistema operativo e hardware in cui viene eseguito, ad esempio Windows, macOS, Linux, iOS e Android.
 
