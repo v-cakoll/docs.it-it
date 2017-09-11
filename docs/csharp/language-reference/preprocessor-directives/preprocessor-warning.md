@@ -36,17 +36,17 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="warning-c-reference"></a>#warning (Riferimenti per C#)
-`#warning` consente di generare un avviso di livello uno da una posizione specifica del codice. Ad esempio:  
+# <a name="warning-c-reference"></a><span data-ttu-id="c929c-102">#warning (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="c929c-102">#warning (C# Reference)</span></span>
+<span data-ttu-id="c929c-103">`#warning` consente di generare un avviso di livello uno da una posizione specifica del codice.</span><span class="sxs-lookup"><span data-stu-id="c929c-103">`#warning` lets you generate a level one warning from a specific location in your code.</span></span> <span data-ttu-id="c929c-104">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="c929c-104">For example:</span></span>  
   
 ```csharp
 #warning Deprecated code in this method.  
 ```  
   
-## <a name="remarks"></a>Note  
- La direttiva `#warning` viene generalmente usata nelle direttive condizionali. È possibile anche generare un errore definito dall'utente tramite [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md).  
+## <a name="remarks"></a><span data-ttu-id="c929c-105">Note</span><span class="sxs-lookup"><span data-stu-id="c929c-105">Remarks</span></span>  
+ <span data-ttu-id="c929c-106">La direttiva `#warning` viene generalmente usata nelle direttive condizionali.</span><span class="sxs-lookup"><span data-stu-id="c929c-106">A common use of `#warning` is in a conditional directive.</span></span> <span data-ttu-id="c929c-107">È possibile anche generare un errore definito dall'utente tramite [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md).</span><span class="sxs-lookup"><span data-stu-id="c929c-107">It is also possible to generate a user-defined error with [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md).</span></span>  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="c929c-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="c929c-108">Example</span></span>  
   
 ```csharp
 // preprocessor_warning.cs  
@@ -63,8 +63,8 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="c929c-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c929c-109">See Also</span></span>  
+ <span data-ttu-id="c929c-110">[Riferimenti per C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="c929c-110">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="c929c-111">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="c929c-111">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="c929c-112">Direttive per il preprocessore C#</span><span class="sxs-lookup"><span data-stu-id="c929c-112">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
 

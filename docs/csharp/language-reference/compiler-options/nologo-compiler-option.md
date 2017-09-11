@@ -39,21 +39,21 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="nologo-c-compiler-options"></a>/nologo (opzioni del compilatore C#)
-L'opzione **/nologo** disattiva la visualizzazione dell'intestazione di iscrizione all'avvio del compilatore e dei messaggi informativi durante la compilazione.  
+# <a name="nologo-c-compiler-options"></a><span data-ttu-id="f8de4-102">/nologo (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="f8de4-102">/nologo (C# Compiler Options)</span></span>
+<span data-ttu-id="f8de4-103">L'opzione **/nologo** disattiva la visualizzazione dell'intestazione di iscrizione all'avvio del compilatore e dei messaggi informativi durante la compilazione.</span><span class="sxs-lookup"><span data-stu-id="f8de4-103">The **/nologo** option suppresses display of the sign-on banner when the compiler starts up and display of informational messages during compiling.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="f8de4-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f8de4-104">Syntax</span></span>  
   
 ```console  
 /nologo  
 ```  
   
-## <a name="remarks"></a>Note  
- L'opzione non è disponibile all'interno dell'ambiente di sviluppo, ma soltanto durante la compilazione dalla riga di comando.  
+## <a name="remarks"></a><span data-ttu-id="f8de4-105">Note</span><span class="sxs-lookup"><span data-stu-id="f8de4-105">Remarks</span></span>  
+ <span data-ttu-id="f8de4-106">L'opzione non è disponibile all'interno dell'ambiente di sviluppo, ma soltanto durante la compilazione dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="f8de4-106">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
   
- Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.  
+ <span data-ttu-id="f8de4-107">Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="f8de4-107">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="f8de4-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f8de4-108">See Also</span></span>  
+ <span data-ttu-id="f8de4-109">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="f8de4-109">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="f8de4-110">Gestione delle proprietà di progetti e soluzioni</span><span class="sxs-lookup"><span data-stu-id="f8de4-110">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
 

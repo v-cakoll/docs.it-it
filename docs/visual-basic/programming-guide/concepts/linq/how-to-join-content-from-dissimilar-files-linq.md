@@ -20,18 +20,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 040290eb7ba768585254f92e17360c6f5d273311
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 728c2b268b9ce6185f1c4ef8bd28915f1bafc8c5
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Procedura: unire contenuto da file dissimili (LINQ) (Visual Basic)
-In questo esempio viene illustrato come unire i dati da due file delimitato da virgole che condividono un valore comune utilizzato come una chiave corrispondente. Questa tecnica può essere utile se è necessario combinare dati provenienti da due fogli di calcolo, o da un foglio di calcolo e da un file che dispone di un altro formato, in un nuovo file. È possibile modificare l'esempio funzioni con qualsiasi tipo di testo strutturati.  
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a><span data-ttu-id="b1a3c-102">Procedura: unire contenuto da file dissimili (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1a3c-102">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="b1a3c-103">In questo esempio viene illustrato come unire i dati da due file delimitato da virgole che condividono un valore comune utilizzato come una chiave corrispondente.</span><span class="sxs-lookup"><span data-stu-id="b1a3c-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="b1a3c-104">Questa tecnica può essere utile se è necessario combinare dati provenienti da due fogli di calcolo, o da un foglio di calcolo e da un file che dispone di un altro formato, in un nuovo file.</span><span class="sxs-lookup"><span data-stu-id="b1a3c-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="b1a3c-105">È possibile modificare l'esempio funzioni con qualsiasi tipo di testo strutturati.</span><span class="sxs-lookup"><span data-stu-id="b1a3c-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-### <a name="to-create-the-data-files"></a>Per creare i file di dati  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="b1a3c-106">Per creare i file di dati</span><span class="sxs-lookup"><span data-stu-id="b1a3c-106">To create the data files</span></span>  
   
-1.  Copiare le righe seguenti in un file denominato scores. csv e salvarlo nella cartella di progetto. Il file rappresenta i dati del foglio di calcolo. La colonna 1 è l'ID dello studente e colonne 2 a 5 sono i punteggi dei test.  
+1.  <span data-ttu-id="b1a3c-107">Copiare le righe seguenti in un file denominato scores. csv e salvarlo nella cartella di progetto.</span><span class="sxs-lookup"><span data-stu-id="b1a3c-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="b1a3c-108">Il file rappresenta i dati del foglio di calcolo.</span><span class="sxs-lookup"><span data-stu-id="b1a3c-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="b1a3c-109">La colonna 1 è l'ID dello studente e colonne 2 a 5 sono i punteggi dei test.</span><span class="sxs-lookup"><span data-stu-id="b1a3c-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +49,7 @@ In questo esempio viene illustrato come unire i dati da due file delimitato da v
     122, 94, 92, 91, 91  
     ```  
   
-2.  Copiare le righe seguenti in un file denominato Names. csv e salvarlo nella cartella di progetto. Il file rappresenta un foglio di calcolo che contiene il cognome dello studente, nome e ID dello studente.  
+2.  <span data-ttu-id="b1a3c-110">Copiare le righe seguenti in un file denominato Names. csv e salvarlo nella cartella di progetto.</span><span class="sxs-lookup"><span data-stu-id="b1a3c-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="b1a3c-111">Il file rappresenta un foglio di calcolo che contiene il cognome dello studente, nome e ID dello studente.</span><span class="sxs-lookup"><span data-stu-id="b1a3c-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -65,7 +66,7 @@ In questo esempio viene illustrato come unire i dati da due file delimitato da v
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="b1a3c-112">Esempio</span><span class="sxs-lookup"><span data-stu-id="b1a3c-112">Example</span></span>  
   
 ```vb  
 Class JoinStrings  
@@ -134,9 +135,9 @@ End Class
 '12 total names in list  
 ```  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="b1a3c-113">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="b1a3c-113">Compiling the Code</span></span>  
+ <span data-ttu-id="b1a3c-114">Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.</span><span class="sxs-lookup"><span data-stu-id="b1a3c-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="b1a3c-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b1a3c-115">See Also</span></span>  
+ <span data-ttu-id="b1a3c-116">[LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="b1a3c-116">[LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+<span data-ttu-id="b1a3c-117"> [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="b1a3c-117"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

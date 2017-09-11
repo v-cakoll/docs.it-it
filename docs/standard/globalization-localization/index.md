@@ -1,5 +1,5 @@
 ---
-title: Globalizzazione e localizzazione di applicazioni .NET Framework | Microsoft Docs
+title: Globalizzazione e localizzazione di applicazioni .NET Framework
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -21,63 +21,64 @@ caps.latest.revision: 42
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 46a0ccb9db4d468e68b1e8d1d278308e6e87e85e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 63832eb1b7c750bb4ef86660304ab883a7c3695f
 ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
-# <a name="globalizing-and-localizing-net-framework-applications"></a>Globalizzazione e localizzazione di applicazioni .NET Framework
-Lo sviluppo di [applicazioni internazionali](http://msdn.microsoft.com/goglobal/bb978433.aspx), tra cui un'applicazione che può essere localizzata in una o più lingue, include i seguenti tre passaggi: globalizzazione, analisi della localizzabilità e localizzazione.  
+# <a name="globalizing-and-localizing-net-framework-applications"></a><span data-ttu-id="cf22f-102">Globalizzazione e localizzazione di applicazioni .NET Framework</span><span class="sxs-lookup"><span data-stu-id="cf22f-102">Globalizing and Localizing .NET Framework Applications</span></span>
+<span data-ttu-id="cf22f-103">Lo sviluppo di [applicazioni internazionali](http://msdn.microsoft.com/goglobal/bb978433.aspx), tra cui un'applicazione che può essere localizzata in una o più lingue, include i seguenti tre passaggi: globalizzazione, analisi della localizzabilità e localizzazione.</span><span class="sxs-lookup"><span data-stu-id="cf22f-103">Developing a [world-ready application](http://msdn.microsoft.com/goglobal/bb978433.aspx), including an application that can be localized into one or more languages, involves three steps: globalization, localizability review, and localization.</span></span>  
   
- [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)  
- Questo passaggio implica la progettazione e la codifica di un'applicazione indipendente dalle impostazioni cultura e dalla lingua che supporti le interfacce utente e i dati internazionali localizzati per tutti gli utenti. Comporta decisioni di progettazione e programmazione non basate su presupposti impostazioni cultura specifiche. Quando un'applicazione globalizzata non viene localizzata, è tuttavia progettata e scritta in modo da poter essere successivamente localizzata in una o più lingue in modo relativamente semplice.  
+ [<span data-ttu-id="cf22f-104">Globalizzazione</span><span class="sxs-lookup"><span data-stu-id="cf22f-104">Globalization</span></span>](../../../docs/standard/globalization-localization/globalization.md)  
+ <span data-ttu-id="cf22f-105">Questo passaggio implica la progettazione e la codifica di un'applicazione indipendente dalle impostazioni cultura e dalla lingua che supporti le interfacce utente e i dati internazionali localizzati per tutti gli utenti.</span><span class="sxs-lookup"><span data-stu-id="cf22f-105">This step involves designing and coding an application that is culture-neutral and language-neutral, and that supports localized user interfaces and regional data for all users.</span></span> <span data-ttu-id="cf22f-106">Comporta decisioni di progettazione e programmazione non basate su presupposti impostazioni cultura specifiche.</span><span class="sxs-lookup"><span data-stu-id="cf22f-106">It involves making design and programming decisions that are not based on culture-specific assumptions.</span></span> <span data-ttu-id="cf22f-107">Quando un'applicazione globalizzata non viene localizzata, è tuttavia progettata e scritta in modo da poter essere successivamente localizzata in una o più lingue in modo relativamente semplice.</span><span class="sxs-lookup"><span data-stu-id="cf22f-107">While a globalized application is not localized, it nevertheless is designed and written so that it can be subsequently localized into one or more languages with relative ease.</span></span>  
   
- [Revisione della localizzabilità](../../../docs/standard/globalization-localization/localizability-review.md)  
- Questo passaggio prevede la revisione del codice e del progetto di un'applicazione per verificare che possa essere localizzata facilmente e per identificare potenziali problemi per la localizzazione e la verifica che il codice eseguibile dell'applicazione sia separato dalle relative risorse. Se la fase di globalizzazione ha avuto effetto, l'analisi della localizzabilità confermerà le scelte di codifica e di progettazione effettuate durante la globalizzazione. La fase di localizzabilità può inoltre identificare eventuali problemi rimanenti. In questo modo, il codice sorgente di un'applicazione non deve necessariamente essere modificato durante la fase di localizzazione.  
+ [<span data-ttu-id="cf22f-108">Revisione della localizzabilità</span><span class="sxs-lookup"><span data-stu-id="cf22f-108">Localizability Review</span></span>](../../../docs/standard/globalization-localization/localizability-review.md)  
+ <span data-ttu-id="cf22f-109">Questo passaggio prevede la revisione del codice e del progetto di un'applicazione per verificare che possa essere localizzata facilmente e per identificare potenziali problemi per la localizzazione e la verifica che il codice eseguibile dell'applicazione sia separato dalle relative risorse.</span><span class="sxs-lookup"><span data-stu-id="cf22f-109">This step involves reviewing an application's code and design to ensure that it can be localized easily and to identify potential roadblocks for localization, and verifying that the application's executable code is separated from its resources.</span></span> <span data-ttu-id="cf22f-110">Se la fase di globalizzazione ha avuto effetto, l'analisi della localizzabilità confermerà le scelte di codifica e di progettazione effettuate durante la globalizzazione.</span><span class="sxs-lookup"><span data-stu-id="cf22f-110">If the globalization stage was effective, the localizability review will confirm the design and coding choices made during globalization.</span></span> <span data-ttu-id="cf22f-111">La fase di localizzabilità può inoltre identificare eventuali problemi rimanenti. In questo modo, il codice sorgente di un'applicazione non deve necessariamente essere modificato durante la fase di localizzazione.</span><span class="sxs-lookup"><span data-stu-id="cf22f-111">The localizability stage may also identify any remaining issues so that an application's source code doesn't have to be modified during the localization stage.</span></span>  
   
- [Localizzazione](../../../docs/standard/globalization-localization/localization.md)  
- Questo passaggio prevede la personalizzazione di un'applicazione per impostazioni cultura e aree specifiche. Se i passaggi di globalizzazione e possibilità di localizzazione sono stati eseguiti correttamente, la localizzazione consiste principalmente nella traduzione dell'interfaccia utente.  
+ [<span data-ttu-id="cf22f-112">Localizzazione</span><span class="sxs-lookup"><span data-stu-id="cf22f-112">Localization</span></span>](../../../docs/standard/globalization-localization/localization.md)  
+ <span data-ttu-id="cf22f-113">Questo passaggio prevede la personalizzazione di un'applicazione per impostazioni cultura e aree specifiche.</span><span class="sxs-lookup"><span data-stu-id="cf22f-113">This step involves customizing an application for specific cultures or regions.</span></span> <span data-ttu-id="cf22f-114">Se i passaggi di globalizzazione e possibilità di localizzazione sono stati eseguiti correttamente, la localizzazione consiste principalmente nella traduzione dell'interfaccia utente.</span><span class="sxs-lookup"><span data-stu-id="cf22f-114">If the globalization and localizability steps have been performed correctly, localization consists primarily of translating the user interface.</span></span>  
   
- Se si ci attiene ai seguenti tre passaggi verranno offerti due vantaggi:  
+ <span data-ttu-id="cf22f-115">Se si ci attiene ai seguenti tre passaggi verranno offerti due vantaggi:</span><span class="sxs-lookup"><span data-stu-id="cf22f-115">Following these three steps provides two advantages:</span></span>  
   
--   In questo modo, non è necessario adattare un'applicazione progettata per supportare singole lingue, ad esempio Inglese US (Stati Uniti), per supportare le lingue aggiuntive.  
+-   <span data-ttu-id="cf22f-116">In questo modo, non è necessario adattare un'applicazione progettata per supportare singole lingue, ad esempio Inglese US (Stati Uniti), per supportare le lingue aggiuntive.</span><span class="sxs-lookup"><span data-stu-id="cf22f-116">It frees you from having to retrofit an application that is designed to support a single culture, such as U.S. English, to support additional cultures.</span></span>  
   
--   Restituisce applicazioni localizzate che sono più stabile e con meno bug.  
+-   <span data-ttu-id="cf22f-117">Restituisce applicazioni localizzate che sono più stabile e con meno bug.</span><span class="sxs-lookup"><span data-stu-id="cf22f-117">It results in localized applications that are more stable and have fewer bugs.</span></span>  
   
- In .NET Framework viene fornito supporto esteso per lo sviluppo di applicazioni internazionali e localizzate. In particolare, molti membri del tipo nella libreria di classi .NET Framework facilitano la globalizzazione restituendo valori che riflettono le convenzioni delle impostazioni cultura dell'utente o di impostazioni cultura specifiche. Inoltre, .NET Framework supporta gli assembly satellite, che semplificano il processo di localizzazione di un'applicazione.  
+ <span data-ttu-id="cf22f-118">In .NET Framework viene fornito supporto esteso per lo sviluppo di applicazioni internazionali e localizzate.</span><span class="sxs-lookup"><span data-stu-id="cf22f-118">The .NET Framework provides extensive support for the development of world-ready and localized applications.</span></span> <span data-ttu-id="cf22f-119">In particolare, molti membri del tipo nella libreria di classi .NET Framework facilitano la globalizzazione restituendo valori che riflettono le convenzioni delle impostazioni cultura dell'utente o di impostazioni cultura specifiche.</span><span class="sxs-lookup"><span data-stu-id="cf22f-119">In particular, many type members in the .NET Framework class library aid globalization by returning values that reflect the conventions of either the current user's culture or a specified culture.</span></span> <span data-ttu-id="cf22f-120">Inoltre, .NET Framework supporta gli assembly satellite, che semplificano il processo di localizzazione di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="cf22f-120">Also, the .NET Framework supports satellite assemblies, which facilitate the process of localizing an application.</span></span>  
   
- Per altre informazioni, vedere il [Developer Center sulla globalizzazione delle applicazioni](http://go.microsoft.com/fwlink/?LinkId=235015).  
+ <span data-ttu-id="cf22f-121">Per altre informazioni, vedere il [Developer Center sulla globalizzazione delle applicazioni](http://go.microsoft.com/fwlink/?LinkId=235015).</span><span class="sxs-lookup"><span data-stu-id="cf22f-121">For additional information, see the [Go Global Developer Center](http://go.microsoft.com/fwlink/?LinkId=235015).</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Globalizzazione](../../../docs/standard/globalization-localization/globalization.md)  
- Viene descritta la prima fase di creazione di un'applicazione internazionale, che include la progettazione e la codifica di un'applicazione indipendente dalla lingua e dalle impostazioni cultura.  
+## <a name="in-this-section"></a><span data-ttu-id="cf22f-122">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="cf22f-122">In This Section</span></span>  
+ [<span data-ttu-id="cf22f-123">Globalizzazione</span><span class="sxs-lookup"><span data-stu-id="cf22f-123">Globalization</span></span>](../../../docs/standard/globalization-localization/globalization.md)  
+ <span data-ttu-id="cf22f-124">Viene descritta la prima fase di creazione di un'applicazione internazionale, che include la progettazione e la codifica di un'applicazione indipendente dalla lingua e dalle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="cf22f-124">Discusses the first stage of creating a world-ready application, which involves designing and coding an application that is culture-neutral and language-neutral.</span></span>  
   
- [Revisione della localizzabilità](../../../docs/standard/globalization-localization/localizability-review.md)  
- Viene descritta la seconda fase di creazione di un'applicazione localizzata, che include l'identificazione dei potenziali blocchi stradali per la localizzazione.  
+ [<span data-ttu-id="cf22f-125">Revisione della localizzabilità</span><span class="sxs-lookup"><span data-stu-id="cf22f-125">Localizability Review</span></span>](../../../docs/standard/globalization-localization/localizability-review.md)  
+ <span data-ttu-id="cf22f-126">Viene descritta la seconda fase di creazione di un'applicazione localizzata, che include l'identificazione dei potenziali blocchi stradali per la localizzazione.</span><span class="sxs-lookup"><span data-stu-id="cf22f-126">Discusses the second stage of creating a localized application, which involves identifying potential roadblocks to localization.</span></span>  
   
- [Localizzazione](../../../docs/standard/globalization-localization/localization.md)  
- Viene illustrata la fase finale della creazione di un'applicazione localizzata, che include la personalizzazione di un'interfaccia utente dell'applicazione per le aree o le impostazioni cultura specifiche.  
+ [<span data-ttu-id="cf22f-127">Localizzazione</span><span class="sxs-lookup"><span data-stu-id="cf22f-127">Localization</span></span>](../../../docs/standard/globalization-localization/localization.md)  
+ <span data-ttu-id="cf22f-128">Viene illustrata la fase finale della creazione di un'applicazione localizzata, che include la personalizzazione di un'interfaccia utente dell'applicazione per le aree o le impostazioni cultura specifiche.</span><span class="sxs-lookup"><span data-stu-id="cf22f-128">Discusses the final stage of creating a localized application, which involves customizing an application's user interface for specific regions or cultures.</span></span>  
   
- [Operazioni sulle stringhe indipendenti dalle impostazioni cultura](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
- Viene descritto come utilizzare metodi e classi di .NET Framework definiti come dipendenti dalle impostazioni cultura per impostazione predefinita per ottenere risultati indipendenti dalle impostazioni cultura.  
+ [<span data-ttu-id="cf22f-129">Operazioni sulle stringhe indipendenti dalle impostazioni cultura</span><span class="sxs-lookup"><span data-stu-id="cf22f-129">Culture-Insensitive String Operations</span></span>](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
+ <span data-ttu-id="cf22f-130">Viene descritto come utilizzare metodi e classi di .NET Framework definiti come dipendenti dalle impostazioni cultura per impostazione predefinita per ottenere risultati indipendenti dalle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="cf22f-130">Describes how to use .NET Framework methods and classes that are culture-sensitive by default to obtain culture-insensitive results.</span></span>  
   
- [Procedure consigliate per lo sviluppo di applicazioni internazionali](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
- Vengono forniti alcuni suggerimenti per la globalizzazione, la localizzazione e lo sviluppo di applicazioni ASP.NET internazionali.  
+ [<span data-ttu-id="cf22f-131">Procedure consigliate per lo sviluppo di applicazioni internazionali</span><span class="sxs-lookup"><span data-stu-id="cf22f-131">Best Practices for Developing World-Ready Applications</span></span>](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
+ <span data-ttu-id="cf22f-132">Vengono forniti alcuni suggerimenti per la globalizzazione, la localizzazione e lo sviluppo di applicazioni ASP.NET internazionali.</span><span class="sxs-lookup"><span data-stu-id="cf22f-132">Describes the best practices to follow for globalization, localization, and developing world-ready ASP.NET applications.</span></span>  
   
-## <a name="reference"></a>Riferimento  
- Spazio dei nomi <xref:System.Globalization?displayProperty=fullName>  
- Contiene classi che definiscono informazioni sulle impostazioni cultura, tra cui la lingua, il paese, il calendario, il formato delle date, delle valute e dei numeri e il criterio di ordinamento delle stringhe.  
+## <a name="reference"></a><span data-ttu-id="cf22f-133">Riferimento</span><span class="sxs-lookup"><span data-stu-id="cf22f-133">Reference</span></span>  
+ <span data-ttu-id="cf22f-134">Spazio dei nomi <xref:System.Globalization?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="cf22f-134"><xref:System.Globalization?displayProperty=fullName> namespace</span></span>  
+ <span data-ttu-id="cf22f-135">Contiene classi che definiscono informazioni sulle impostazioni cultura, tra cui la lingua, il paese, il calendario, il formato delle date, delle valute e dei numeri e il criterio di ordinamento delle stringhe.</span><span class="sxs-lookup"><span data-stu-id="cf22f-135">Contains classes that define culture-related information, including the language, the country/region, the calendars in use, the format patterns for dates, currency, and numbers, and the sort order for strings.</span></span>  
   
- Spazio dei nomi <xref:System.Resources>  
- Vengono fornite le classi per la creazione, la manipolazione e l'uso di risorse.  
+ <span data-ttu-id="cf22f-136">Spazio dei nomi <xref:System.Resources></span><span class="sxs-lookup"><span data-stu-id="cf22f-136"><xref:System.Resources> namespace</span></span>  
+ <span data-ttu-id="cf22f-137">Vengono fornite le classi per la creazione, la manipolazione e l'uso di risorse.</span><span class="sxs-lookup"><span data-stu-id="cf22f-137">Provides classes for creating, manipulating, and using resources.</span></span>  
   
- Spazio dei nomi <xref:System.Text>  
- Contiene le classi che rappresentano le codifiche dei caratteri ASCII, ANSI, Unicode e altri tipi di codifiche.  
+ <span data-ttu-id="cf22f-138">Spazio dei nomi <xref:System.Text></span><span class="sxs-lookup"><span data-stu-id="cf22f-138"><xref:System.Text> namespace</span></span>  
+ <span data-ttu-id="cf22f-139">Contiene le classi che rappresentano le codifiche dei caratteri ASCII, ANSI, Unicode e altri tipi di codifiche.</span><span class="sxs-lookup"><span data-stu-id="cf22f-139">Contains classes representing ASCII, ANSI, Unicode, and other character encodings.</span></span>  
   
- [Resgen.exe (generatore di file di risorse)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
- Viene descritto l'utilizzo di Resgen.exe per convertire i file con estensione txt e resx (formato risorse basato su XML) in file binari con estensione resources di Common Language Runtime.  
+ [<span data-ttu-id="cf22f-140">Resgen.exe (generatore di file di risorse)</span><span class="sxs-lookup"><span data-stu-id="cf22f-140">Resgen.exe (Resource File Generator)</span></span>](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
+ <span data-ttu-id="cf22f-141">Viene descritto l'utilizzo di Resgen.exe per convertire i file con estensione txt e resx (formato risorse basato su XML) in file binari con estensione resources di Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="cf22f-141">Describes how to use Resgen.exe to convert .txt files and XML-based resource format (.resx) files to common language runtime binary .resources files.</span></span>  
   
- [Winres.exe (editor di risorse di Windows Form)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
- Viene descritto l'uso di Winres.exe per localizzare i form di Windows Form.
+ [<span data-ttu-id="cf22f-142">Winres.exe (editor di risorse di Windows Form)</span><span class="sxs-lookup"><span data-stu-id="cf22f-142">Winres.exe (Windows Forms Resource Editor)</span></span>](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
+ <span data-ttu-id="cf22f-143">Viene descritto l'uso di Winres.exe per localizzare i form di Windows Form.</span><span class="sxs-lookup"><span data-stu-id="cf22f-143">Describes how to use Winres.exe to localize Windows Forms forms.</span></span>
+

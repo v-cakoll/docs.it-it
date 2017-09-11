@@ -1,1 +1,1 @@
-tecnologia per l'accessibilità
+<span data-ttu-id="f65ac-101">tecnologia per l'accessibilità</span><span class="sxs-lookup"><span data-stu-id="f65ac-101">assistive technology</span></span>

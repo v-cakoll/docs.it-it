@@ -1,1 +1,1 @@
-Microsoft Windows Media Player
+<span data-ttu-id="c0260-101">Microsoft Windows Media Player</span><span class="sxs-lookup"><span data-stu-id="c0260-101">Microsoft Windows Media Player</span></span>

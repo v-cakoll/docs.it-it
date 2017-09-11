@@ -24,97 +24,97 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="enhanced-strong-naming"></a>Denominazione sicura avanzata
-Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'identificazione degli assembly. È una firma digitale a chiave pubblica che in genere si usa per verificare l'integrità dei dati passati da un autore (firmatario) a un destinatario (verificatore). Questa firma viene usata come identità univoca per un assembly e garantisce che i riferimenti all'assembly non siano ambigui. L'assembly è firmato come parte del processo di compilazione e quindi verificato quando viene caricato.  
+# <a name="enhanced-strong-naming"></a><span data-ttu-id="6835e-102">Denominazione sicura avanzata</span><span class="sxs-lookup"><span data-stu-id="6835e-102">Enhanced Strong Naming</span></span>
+<span data-ttu-id="6835e-103">Una firma con nome sicuro è un meccanismo di identità in .NET Framework per l'identificazione degli assembly.</span><span class="sxs-lookup"><span data-stu-id="6835e-103">A strong name signature is an identity mechanism in the .NET Framework for identifying assemblies.</span></span> <span data-ttu-id="6835e-104">È una firma digitale a chiave pubblica che in genere si usa per verificare l'integrità dei dati passati da un autore (firmatario) a un destinatario (verificatore).</span><span class="sxs-lookup"><span data-stu-id="6835e-104">It is a public-key digital signature that is typically used to verify the integrity of data being passed from an originator (signer) to a recipient (verifier).</span></span> <span data-ttu-id="6835e-105">Questa firma viene usata come identità univoca per un assembly e garantisce che i riferimenti all'assembly non siano ambigui.</span><span class="sxs-lookup"><span data-stu-id="6835e-105">This signature is used as a unique identity for an assembly and ensures that references to the assembly are not ambiguous.</span></span> <span data-ttu-id="6835e-106">L'assembly è firmato come parte del processo di compilazione e quindi verificato quando viene caricato.</span><span class="sxs-lookup"><span data-stu-id="6835e-106">The assembly is signed as part of the build process and then verified when it is loaded.</span></span>  
   
- Le firme con nome sicuro consentono di evitare che utenti malintenzionati possano manomettere un assembly e firmarlo nuovamente con la chiave del firmatario originale. Tuttavia, le chiavi con nome sicuro non contengono informazioni affidabili sul server di pubblicazione e non contengono una gerarchia di certificati. Una firma con nome sicuro non garantisce l'affidabilità della persona che ha firmato l'assembly né indica se la persona è un legittimo proprietario della chiave, indica solo che il proprietario della chiave ha firmato l'assembly. Di conseguenza, non è consigliabile usare una firma con nome sicuro come validator di sicurezza per concedere l'attendibilità a codice di terze parti. Microsoft Authenticode è lo strumento consigliato per l'autenticazione di codice.  
+ <span data-ttu-id="6835e-107">Le firme con nome sicuro consentono di evitare che utenti malintenzionati possano manomettere un assembly e firmarlo nuovamente con la chiave del firmatario originale.</span><span class="sxs-lookup"><span data-stu-id="6835e-107">Strong name signatures help prevent malicious parties from tampering with an assembly and then re-signing the assembly with the original signer’s key.</span></span> <span data-ttu-id="6835e-108">Tuttavia, le chiavi con nome sicuro non contengono informazioni affidabili sul server di pubblicazione e non contengono una gerarchia di certificati.</span><span class="sxs-lookup"><span data-stu-id="6835e-108">However, strong name keys don’t contain any reliable information about the publisher, nor do they contain a certificate hierarchy.</span></span> <span data-ttu-id="6835e-109">Una firma con nome sicuro non garantisce l'affidabilità della persona che ha firmato l'assembly né indica se la persona è un legittimo proprietario della chiave, indica solo che il proprietario della chiave ha firmato l'assembly.</span><span class="sxs-lookup"><span data-stu-id="6835e-109">A strong name signature does not guarantee the trustworthiness of the person who signed the assembly or indicate whether that person was a legitimate owner of the key; it indicates only that the owner of the key signed the assembly.</span></span> <span data-ttu-id="6835e-110">Di conseguenza, non è consigliabile usare una firma con nome sicuro come validator di sicurezza per concedere l'attendibilità a codice di terze parti.</span><span class="sxs-lookup"><span data-stu-id="6835e-110">Therefore, we do not recommend using a strong name signature as a security validator for trusting third-party code.</span></span> <span data-ttu-id="6835e-111">Microsoft Authenticode è lo strumento consigliato per l'autenticazione di codice.</span><span class="sxs-lookup"><span data-stu-id="6835e-111">Microsoft Authenticode is the recommended way to authenticate code.</span></span>  
   
-## <a name="limitations-of-conventional-strong-names"></a>Limitazioni dei nomi sicuri convenzionali  
- La tecnologia di denominazione sicura usata nelle versioni precedenti a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presenta queste limitazioni:  
+## <a name="limitations-of-conventional-strong-names"></a><span data-ttu-id="6835e-112">Limitazioni dei nomi sicuri convenzionali</span><span class="sxs-lookup"><span data-stu-id="6835e-112">Limitations of Conventional Strong Names</span></span>  
+ <span data-ttu-id="6835e-113">La tecnologia di denominazione sicura usata nelle versioni precedenti a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presenta queste limitazioni:</span><span class="sxs-lookup"><span data-stu-id="6835e-113">The strong naming technology used in versions before the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] has the following shortcomings:</span></span>  
   
--   Le chiavi sono costantemente sotto attacco e grazie all'uso di tecniche e hardware più evoluti è più semplice dedurre una chiave privata da una chiave pubblica. Per proteggersi dagli attacchi, sono necessarie chiavi di dimensioni maggiori. Le versioni di .NET Framework precedenti alla [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] offrono la possibilità di accedere con chiavi di qualsiasi dimensione (quella predefinita è 1024 bit), ma firmare un assembly con una nuova chiave interrompe tutti i file binari che fanno riferimento all'identità precedente dell'assembly. È quindi estremamente difficile aggiornare la dimensione di una chiave di firma se si vuole mantenere la compatibilità.  
+-   <span data-ttu-id="6835e-114">Le chiavi sono costantemente sotto attacco e grazie all'uso di tecniche e hardware più evoluti è più semplice dedurre una chiave privata da una chiave pubblica.</span><span class="sxs-lookup"><span data-stu-id="6835e-114">Keys are constantly under attack, and improved techniques and hardware make it easier to infer a private key from a public key.</span></span> <span data-ttu-id="6835e-115">Per proteggersi dagli attacchi, sono necessarie chiavi di dimensioni maggiori.</span><span class="sxs-lookup"><span data-stu-id="6835e-115">To guard against attacks, larger keys are necessary.</span></span> <span data-ttu-id="6835e-116">Le versioni di .NET Framework precedenti alla [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] offrono la possibilità di accedere con chiavi di qualsiasi dimensione (quella predefinita è 1024 bit), ma firmare un assembly con una nuova chiave interrompe tutti i file binari che fanno riferimento all'identità precedente dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="6835e-116">.NET Framework versions before the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] provide the ability to sign with any size key (the default size is 1024 bits), but signing an assembly with a new key breaks all binaries that reference the older identity of the assembly.</span></span> <span data-ttu-id="6835e-117">È quindi estremamente difficile aggiornare la dimensione di una chiave di firma se si vuole mantenere la compatibilità.</span><span class="sxs-lookup"><span data-stu-id="6835e-117">Therefore, it is extremely difficult to upgrade the size of a signing key if you want to maintain compatibility.</span></span>  
   
--   La firma con nome sicuro supporta solo l'algoritmo SHA-1. Si è scoperto di recente che SHA-1 non è adeguato per le applicazioni che usano l'algoritmo SHA. È quindi necessario un algoritmo più robusto, ad esempio SHA-256 o superiore. È possibile che in futuro SHA-1 non sia più conforme agli standard FIPS e questo può causare problemi agli utenti che scelgono di usare solo software e algoritmi conformi agli standard FIPS.  
+-   <span data-ttu-id="6835e-118">La firma con nome sicuro supporta solo l'algoritmo SHA-1.</span><span class="sxs-lookup"><span data-stu-id="6835e-118">Strong name signing supports only the SHA-1 algorithm.</span></span> <span data-ttu-id="6835e-119">Si è scoperto di recente che SHA-1 non è adeguato per le applicazioni che usano l'algoritmo SHA.</span><span class="sxs-lookup"><span data-stu-id="6835e-119">SHA-1 has recently been found to be inadequate for secure hashing applications.</span></span> <span data-ttu-id="6835e-120">È quindi necessario un algoritmo più robusto, ad esempio SHA-256 o superiore.</span><span class="sxs-lookup"><span data-stu-id="6835e-120">Therefore, a stronger algorithm (SHA-256 or greater) is necessary.</span></span> <span data-ttu-id="6835e-121">È possibile che in futuro SHA-1 non sia più conforme agli standard FIPS e questo può causare problemi agli utenti che scelgono di usare solo software e algoritmi conformi agli standard FIPS.</span><span class="sxs-lookup"><span data-stu-id="6835e-121">It is possible that SHA-1 will lose its FIPS-compliant standing, which would present problems for those who choose to use only FIPS-compliant software and algorithms.</span></span>  
   
-## <a name="advantages-of-enhanced-strong-names"></a>Vantaggi dei nomi sicuri avanzati  
- I vantaggi principali offerti dai nomi sicuri avanzati sono la compatibilità con nomi sicuri preesistenti e la possibilità di richiedere che un'identità sia equivalente a un'altra:  
+## <a name="advantages-of-enhanced-strong-names"></a><span data-ttu-id="6835e-122">Vantaggi dei nomi sicuri avanzati</span><span class="sxs-lookup"><span data-stu-id="6835e-122">Advantages of Enhanced Strong Names</span></span>  
+ <span data-ttu-id="6835e-123">I vantaggi principali offerti dai nomi sicuri avanzati sono la compatibilità con nomi sicuri preesistenti e la possibilità di richiedere che un'identità sia equivalente a un'altra:</span><span class="sxs-lookup"><span data-stu-id="6835e-123">The main advantages of enhanced strong names are compatibility with pre-existing strong names and the ability to claim that one identity is equivalent to another:</span></span>  
   
--   Gli sviluppatori che usano assembly firmati preesistenti possono eseguire la migrazione delle proprie identità agli algoritmi SHA-2 conservando la compatibilità con gli assembly che fanno riferimento alle identità precedenti.  
+-   <span data-ttu-id="6835e-124">Gli sviluppatori che usano assembly firmati preesistenti possono eseguire la migrazione delle proprie identità agli algoritmi SHA-2 conservando la compatibilità con gli assembly che fanno riferimento alle identità precedenti.</span><span class="sxs-lookup"><span data-stu-id="6835e-124">Developers who have pre-existing signed assemblies can migrate their identities to the SHA-2 algorithms while maintaining compatibility with assemblies that reference the old identities.</span></span>  
   
--   Gli sviluppatori che creano nuovi assembly e non ritengono rilevanti le firme con nome sicuro preesistenti possono usare gli algoritmi SHA-2, più sicuri, e firmare gli assembly come in precedenza.  
+-   <span data-ttu-id="6835e-125">Gli sviluppatori che creano nuovi assembly e non ritengono rilevanti le firme con nome sicuro preesistenti possono usare gli algoritmi SHA-2, più sicuri, e firmare gli assembly come in precedenza.</span><span class="sxs-lookup"><span data-stu-id="6835e-125">Developers who create new assemblies and are not concerned with pre-existing strong name signatures can use the more secure SHA-2 algorithms and sign the assemblies as they always have.</span></span>  
   
-## <a name="using-enhanced-strong-names"></a>Uso dei nomi sicuri avanzati  
- Le chiavi con nome sicuro sono costituite da una chiave di firma e una chiave di identità. L'assembly è firmato con la chiave di firma e identificato dalla chiave di identità. Prima della versione [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] queste due chiavi erano identiche. A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], la chiave di identità rimane la stessa come nelle versioni precedenti di .NET Framework, ma la chiave di firma è stata migliorata con un algoritmo hash più avanzato. Inoltre, la chiave di firma viene firmata con la chiave di identità per creare una controfirma.  
+## <a name="using-enhanced-strong-names"></a><span data-ttu-id="6835e-126">Uso dei nomi sicuri avanzati</span><span class="sxs-lookup"><span data-stu-id="6835e-126">Using Enhanced Strong Names</span></span>  
+ <span data-ttu-id="6835e-127">Le chiavi con nome sicuro sono costituite da una chiave di firma e una chiave di identità.</span><span class="sxs-lookup"><span data-stu-id="6835e-127">Strong name keys consist of a signature key and an identity key.</span></span> <span data-ttu-id="6835e-128">L'assembly è firmato con la chiave di firma e identificato dalla chiave di identità.</span><span class="sxs-lookup"><span data-stu-id="6835e-128">The assembly is signed with the signature key and is identified by the identity key.</span></span> <span data-ttu-id="6835e-129">Prima della versione [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] queste due chiavi erano identiche.</span><span class="sxs-lookup"><span data-stu-id="6835e-129">Prior to the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], these two keys were identical.</span></span> <span data-ttu-id="6835e-130">A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], la chiave di identità rimane la stessa come nelle versioni precedenti di .NET Framework, ma la chiave di firma è stata migliorata con un algoritmo hash più avanzato.</span><span class="sxs-lookup"><span data-stu-id="6835e-130">Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], the identity key remains the same as in earlier .NET Framework versions, but the signature key is enhanced with a stronger hash algorithm.</span></span> <span data-ttu-id="6835e-131">Inoltre, la chiave di firma viene firmata con la chiave di identità per creare una controfirma.</span><span class="sxs-lookup"><span data-stu-id="6835e-131">In addition, the signature key is signed with the identity key to create a counter-signature.</span></span>  
   
- L'attributo <xref:System.Reflection.AssemblySignatureKeyAttribute> consente ai metadati dell'assembly di usare la chiave pubblica preesistente per l'identità dell'assembly e quindi i vecchi riferimenti all'assembly continuano a funzionare.  L'attributo <xref:System.Reflection.AssemblySignatureKeyAttribute> usa la controfirma per verificare che il proprietario della nuova chiave di firma sia anche il proprietario della chiave di identità precedente.  
+ <span data-ttu-id="6835e-132">L'attributo <xref:System.Reflection.AssemblySignatureKeyAttribute> consente ai metadati dell'assembly di usare la chiave pubblica preesistente per l'identità dell'assembly e quindi i vecchi riferimenti all'assembly continuano a funzionare.</span><span class="sxs-lookup"><span data-stu-id="6835e-132">The <xref:System.Reflection.AssemblySignatureKeyAttribute> attribute enables the assembly metadata to use the pre-existing public key for assembly identity, which allows old assembly references to continue to work.</span></span>  <span data-ttu-id="6835e-133">L'attributo <xref:System.Reflection.AssemblySignatureKeyAttribute> usa la controfirma per verificare che il proprietario della nuova chiave di firma sia anche il proprietario della chiave di identità precedente.</span><span class="sxs-lookup"><span data-stu-id="6835e-133">The <xref:System.Reflection.AssemblySignatureKeyAttribute> attribute uses the counter-signature to ensure that the owner of the new signature key is also the owner of the old identity key.</span></span>  
   
-### <a name="signing-with-sha-2-without-key-migration"></a>Firma con SHA-2, senza migrazione delle chiavi  
- Eseguire i comandi seguenti da una finestra del prompt dei comandi per firmare un assembly senza eseguire la migrazione di una firma con nome sicuro:  
+### <a name="signing-with-sha-2-without-key-migration"></a><span data-ttu-id="6835e-134">Firma con SHA-2, senza migrazione delle chiavi</span><span class="sxs-lookup"><span data-stu-id="6835e-134">Signing with SHA-2, Without Key Migration</span></span>  
+ <span data-ttu-id="6835e-135">Eseguire i comandi seguenti da una finestra del prompt dei comandi per firmare un assembly senza eseguire la migrazione di una firma con nome sicuro:</span><span class="sxs-lookup"><span data-stu-id="6835e-135">Run the following commands from a Command Prompt window to sign an assembly without migrating a strong name signature:</span></span>  
   
-1.  Generare la nuova chiave di identità, se necessario.  
+1.  <span data-ttu-id="6835e-136">Generare la nuova chiave di identità, se necessario.</span><span class="sxs-lookup"><span data-stu-id="6835e-136">Generate the new identity key (if necessary).</span></span>  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2.  Estrarre la chiave pubblica di identità e specificare che deve essere usato un algoritmo SHA-2 per la firma con questa chiave.  
+2.  <span data-ttu-id="6835e-137">Estrarre la chiave pubblica di identità e specificare che deve essere usato un algoritmo SHA-2 per la firma con questa chiave.</span><span class="sxs-lookup"><span data-stu-id="6835e-137">Extract the identity public key, and specify that a SHA-2 algorithm should be used when signing with this key.</span></span>  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3.  Ritardare la firma dell'assembly con il file della chiave pubblica di identità.  
+3.  <span data-ttu-id="6835e-138">Ritardare la firma dell'assembly con il file della chiave pubblica di identità.</span><span class="sxs-lookup"><span data-stu-id="6835e-138">Delay-sign the assembly with the identity public key file.</span></span>  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4.  Firmare di nuovo l'assembly con la coppia di chiavi di identità completa.  
+4.  <span data-ttu-id="6835e-139">Firmare di nuovo l'assembly con la coppia di chiavi di identità completa.</span><span class="sxs-lookup"><span data-stu-id="6835e-139">Re-sign the assembly with the full identity key pair.</span></span>  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
-### <a name="signing-with-sha-2-with-key-migration"></a>Firma con SHA-2, con migrazione delle chiavi  
- Eseguire i comandi seguenti da una finestra del prompt dei comandi per firmare un assembly con una firma con nome sicuro migrata.  
+### <a name="signing-with-sha-2-with-key-migration"></a><span data-ttu-id="6835e-140">Firma con SHA-2, con migrazione delle chiavi</span><span class="sxs-lookup"><span data-stu-id="6835e-140">Signing with SHA-2, with Key Migration</span></span>  
+ <span data-ttu-id="6835e-141">Eseguire i comandi seguenti da una finestra del prompt dei comandi per firmare un assembly con una firma con nome sicuro migrata.</span><span class="sxs-lookup"><span data-stu-id="6835e-141">Run the following commands from a Command Prompt window to sign an assembly with a migrated strong name signature.</span></span>  
   
-1.  Generare una coppia di chiavi di identità e firma, se necessario.  
+1.  <span data-ttu-id="6835e-142">Generare una coppia di chiavi di identità e firma, se necessario.</span><span class="sxs-lookup"><span data-stu-id="6835e-142">Generate an identity and signature key pair (if necessary).</span></span>  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2.  Estrarre la chiave pubblica di firma e specificare che deve essere usato un algoritmo SHA-2 per la firma con questa chiave.  
+2.  <span data-ttu-id="6835e-143">Estrarre la chiave pubblica di firma e specificare che deve essere usato un algoritmo SHA-2 per la firma con questa chiave.</span><span class="sxs-lookup"><span data-stu-id="6835e-143">Extract the signature public key, and specify that a SHA-2 algorithm should be used when signing with this key.</span></span>  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3.  Estrarre la chiave pubblica di identità, che determina l'algoritmo hash che genera una controfirma.  
+3.  <span data-ttu-id="6835e-144">Estrarre la chiave pubblica di identità, che determina l'algoritmo hash che genera una controfirma.</span><span class="sxs-lookup"><span data-stu-id="6835e-144">Extract the identity public key, which determines the hash algorithm that generates a counter-signature.</span></span>  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4.  Generare i parametri per un attributo <xref:System.Reflection.AssemblySignatureKeyAttribute> e allegare l'attributo all'assembly.  
+4.  <span data-ttu-id="6835e-145">Generare i parametri per un attributo <xref:System.Reflection.AssemblySignatureKeyAttribute> e allegare l'attributo all'assembly.</span><span class="sxs-lookup"><span data-stu-id="6835e-145">Generate the parameters for a <xref:System.Reflection.AssemblySignatureKeyAttribute> attribute, and attach the attribute to the assembly.</span></span>  
   
     ```  
     sn -ac IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
     ```  
   
-5.  Ritardare la firma dell'assembly con la chiave pubblica di identità.  
+5.  <span data-ttu-id="6835e-146">Ritardare la firma dell'assembly con la chiave pubblica di identità.</span><span class="sxs-lookup"><span data-stu-id="6835e-146">Delay-sign the assembly with the identity public key.</span></span>  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6.  Firmare completamente l'assembly con la coppia di chiavi di firma.  
+6.  <span data-ttu-id="6835e-147">Firmare completamente l'assembly con la coppia di chiavi di firma.</span><span class="sxs-lookup"><span data-stu-id="6835e-147">Fully sign the assembly with the signature key pair.</span></span>  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Creazione e utilizzo degli assembly con nome sicuro](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="6835e-148">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6835e-148">See Also</span></span>  
+ [<span data-ttu-id="6835e-149">Creazione e utilizzo degli assembly con nome sicuro</span><span class="sxs-lookup"><span data-stu-id="6835e-149">Creating and Using Strong-Named Assemblies</span></span>](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 

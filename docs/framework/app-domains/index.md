@@ -23,34 +23,34 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 6dcf8e4c9bf2401309b1d80d2306bd619b96460d
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
-# <a name="programming-with-application-domains-and-assemblies"></a>Programmazione con i domini applicazione e gli assembly
-Gli host come Microsoft Internet Explorer, ASP.NET e la shell di Windows caricano Common Language Runtime in un processo, creano un [dominio dell'applicazione](../../../docs/framework/app-domains/application-domains.md) in tale processo e quindi caricano ed eseguono codice dell'utente in tale dominio dell'applicazione quando eseguono un'applicazione .NET Framework. Nella maggior parte dei casi, non è necessario occuparsi della creazione dei domini dell'applicazione e del caricamento di assembly all'interno degli stessi, perché è l'host di runtime a eseguire tali attività.  
+# <a name="programming-with-application-domains-and-assemblies"></a><span data-ttu-id="be581-102">Programmazione con i domini applicazione e gli assembly</span><span class="sxs-lookup"><span data-stu-id="be581-102">Programming with Application Domains and Assemblies</span></span>
+<span data-ttu-id="be581-103">Gli host come Microsoft Internet Explorer, ASP.NET e la shell di Windows caricano Common Language Runtime in un processo, creano un [dominio dell'applicazione](../../../docs/framework/app-domains/application-domains.md) in tale processo e quindi caricano ed eseguono codice dell'utente in tale dominio dell'applicazione quando eseguono un'applicazione .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="be581-103">Hosts such as Microsoft Internet Explorer, ASP.NET, and the Windows shell load the common language runtime into a process, create an [application domain](../../../docs/framework/app-domains/application-domains.md) in that process, and then load and execute user code in that application domain when running a .NET Framework application.</span></span> <span data-ttu-id="be581-104">Nella maggior parte dei casi, non è necessario occuparsi della creazione dei domini dell'applicazione e del caricamento di assembly all'interno degli stessi, perché è l'host di runtime a eseguire tali attività.</span><span class="sxs-lookup"><span data-stu-id="be581-104">In most cases, you do not have to worry about creating application domains and loading assemblies into them because the runtime host performs those tasks.</span></span>  
   
- Tuttavia, se si sta creando un'applicazione che ospita Common Language Runtime, strumenti o codice che si vogliono scaricare a livello di codice o componenti modulari che possono essere scaricati e ricaricati in tempo reale, si creano anche domini dell'applicazione personalizzati. Anche se non si sta creando un host di runtime, questa sezione fornisce importanti informazioni su come utilizzare i domini dell'applicazione e gli assembly caricati al loro interno.  
+ <span data-ttu-id="be581-105">Tuttavia, se si sta creando un'applicazione che ospita Common Language Runtime, strumenti o codice che si vogliono scaricare a livello di codice o componenti modulari che possono essere scaricati e ricaricati in tempo reale, si creano anche domini dell'applicazione personalizzati.</span><span class="sxs-lookup"><span data-stu-id="be581-105">However, if you are creating an application that will host the common language runtime, creating tools or code you want to unload programmatically, or creating pluggable components that can be unloaded and reloaded on the fly, you will be creating your own application domains.</span></span> <span data-ttu-id="be581-106">Anche se non si sta creando un host di runtime, questa sezione fornisce importanti informazioni su come utilizzare i domini dell'applicazione e gli assembly caricati al loro interno.</span><span class="sxs-lookup"><span data-stu-id="be581-106">Even if you are not creating a runtime host, this section provides important information on how to work with application domains and assemblies loaded in these application domains.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Argomenti relativi alle procedure per domini applicazione e assembly](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
- Fornisce i collegamenti a tutte le procedure contenute nella documentazione sui concetti relativi alla programmazione con domini dell'applicazione e assembly.  
+## <a name="in-this-section"></a><span data-ttu-id="be581-107">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="be581-107">In This Section</span></span>  
+ [<span data-ttu-id="be581-108">Argomenti relativi alle procedure per domini applicazione e assembly</span><span class="sxs-lookup"><span data-stu-id="be581-108">Application Domains and Assemblies How-to Topics</span></span>](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
+ <span data-ttu-id="be581-109">Fornisce i collegamenti a tutte le procedure contenute nella documentazione sui concetti relativi alla programmazione con domini dell'applicazione e assembly.</span><span class="sxs-lookup"><span data-stu-id="be581-109">Provides links to all How-to topics found in the conceptual documentation for programming with application domains and assemblies.</span></span>  
   
- [Uso dei domini dell'applicazione](../../../docs/framework/app-domains/use.md)  
- Fornisce esempi di creazione, configurazione e uso dei domini dell'applicazione.  
+ [<span data-ttu-id="be581-110">Uso dei domini dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="be581-110">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)  
+ <span data-ttu-id="be581-111">Fornisce esempi di creazione, configurazione e uso dei domini dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="be581-111">Provides examples of creating, configuring, and using application domains.</span></span>  
   
- [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- Descrive come creare, firmare e impostare attributi sugli assembly.  
+ [<span data-ttu-id="be581-112">Programmazione con gli assembly</span><span class="sxs-lookup"><span data-stu-id="be581-112">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ <span data-ttu-id="be581-113">Descrive come creare, firmare e impostare attributi sugli assembly.</span><span class="sxs-lookup"><span data-stu-id="be581-113">Describes how to create, sign, and set attributes on assemblies.</span></span>  
   
-## <a name="related-sections"></a>Sezioni correlate  
- [Creazione di assembly e metodi dinamici](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- Descrive come creare gli assembly dinamici.  
+## <a name="related-sections"></a><span data-ttu-id="be581-114">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="be581-114">Related Sections</span></span>  
+ [<span data-ttu-id="be581-115">Creazione di assembly e metodi dinamici</span><span class="sxs-lookup"><span data-stu-id="be581-115">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ <span data-ttu-id="be581-116">Descrive come creare gli assembly dinamici.</span><span class="sxs-lookup"><span data-stu-id="be581-116">Describes how to create dynamic assemblies.</span></span>  
   
- [Assembly in Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Viene fornita una panoramica sui concetti di base relativi agli assembly.  
+ [<span data-ttu-id="be581-117">Assembly in Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="be581-117">Assemblies in the Common Language Runtime</span></span>](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ <span data-ttu-id="be581-118">Viene fornita una panoramica sui concetti di base relativi agli assembly.</span><span class="sxs-lookup"><span data-stu-id="be581-118">Provides a conceptual overview of assemblies.</span></span>  
   
- [Domini dell'applicazione](../../../docs/framework/app-domains/application-domains.md)  
- Viene fornita una panoramica sui concetti di base relativi ai domini applicazione.  
+ [<span data-ttu-id="be581-119">Domini dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="be581-119">Application Domains</span></span>](../../../docs/framework/app-domains/application-domains.md)  
+ <span data-ttu-id="be581-120">Viene fornita una panoramica sui concetti di base relativi ai domini applicazione.</span><span class="sxs-lookup"><span data-stu-id="be581-120">Provides a conceptual overview of application domains.</span></span>  
   
- [Panoramica della reflection](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Descrive come usare la classe **Reflection** per ottenere informazioni su un assembly.
+ [<span data-ttu-id="be581-121">Panoramica della reflection</span><span class="sxs-lookup"><span data-stu-id="be581-121">Reflection Overview</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ <span data-ttu-id="be581-122">Descrive come usare la classe **Reflection** per ottenere informazioni su un assembly.</span><span class="sxs-lookup"><span data-stu-id="be581-122">Describes how to use the **Reflection** class to obtain information about an assembly.</span></span>
 

@@ -1,1 +1,1 @@
-**Le informazioni contenute in questo argomento sono valide per: ✓** .NET Core 1.x **✓** .NET Core 2.x
+<span data-ttu-id="fab93-101">**Le informazioni contenute in questo argomento sono valide per: ✓** .NET Core 1.x **✓** .NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="fab93-101">**This topic applies to: ✓** .NET Core 1.x **✓** .NET Core 2.x</span></span>

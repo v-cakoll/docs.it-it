@@ -37,20 +37,20 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="new-c-reference"></a>new (Riferimenti per C#)
-In C#, la parola chiave `new` può essere usata come operatore, modificatore o vincolo.  
+# <a name="new-c-reference"></a><span data-ttu-id="eb8b3-102">new (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="eb8b3-102">new (C# Reference)</span></span>
+<span data-ttu-id="eb8b3-103">In C#, la parola chiave `new` può essere usata come operatore, modificatore o vincolo.</span><span class="sxs-lookup"><span data-stu-id="eb8b3-103">In C#, the `new` keyword can be used as an operator, a modifier, or a constraint.</span></span>  
   
- [Operatore new](../../../csharp/language-reference/keywords/new-operator.md)  
- Usato per creare oggetti e richiamare costruttori.  
+ [<span data-ttu-id="eb8b3-104">Operatore new</span><span class="sxs-lookup"><span data-stu-id="eb8b3-104">new Operator</span></span>](../../../csharp/language-reference/keywords/new-operator.md)  
+ <span data-ttu-id="eb8b3-105">Usato per creare oggetti e richiamare costruttori.</span><span class="sxs-lookup"><span data-stu-id="eb8b3-105">Used to create objects and invoke constructors.</span></span>  
   
- [Modificatore new](../../../csharp/language-reference/keywords/new-modifier.md)  
- Usato per nascondere un membro ereditato da un membro della classe base.  
+ [<span data-ttu-id="eb8b3-106">Modificatore new</span><span class="sxs-lookup"><span data-stu-id="eb8b3-106">new Modifier</span></span>](../../../csharp/language-reference/keywords/new-modifier.md)  
+ <span data-ttu-id="eb8b3-107">Usato per nascondere un membro ereditato da un membro della classe base.</span><span class="sxs-lookup"><span data-stu-id="eb8b3-107">Used to hide an inherited member from a base class member.</span></span>  
   
- [Vincolo new](../../../csharp/language-reference/keywords/new-constraint.md)  
- Usato per limitare i tipi che possono essere usati come argomenti per un parametro di tipo in una dichiarazione generica.  
+ [<span data-ttu-id="eb8b3-108">Vincolo new</span><span class="sxs-lookup"><span data-stu-id="eb8b3-108">new Constraint</span></span>](../../../csharp/language-reference/keywords/new-constraint.md)  
+ <span data-ttu-id="eb8b3-109">Usato per limitare i tipi che possono essere usati come argomenti per un parametro di tipo in una dichiarazione generica.</span><span class="sxs-lookup"><span data-stu-id="eb8b3-109">Used to restrict types that might be used as arguments for a type parameter in a generic declaration.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="eb8b3-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="eb8b3-110">See Also</span></span>  
+ <span data-ttu-id="eb8b3-111">[Riferimenti per C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="eb8b3-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="eb8b3-112">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="eb8b3-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="eb8b3-113">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="eb8b3-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

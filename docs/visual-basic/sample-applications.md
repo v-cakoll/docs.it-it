@@ -35,13 +35,13 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="visual-basic-sample-applications"></a>Applicazioni di esempio di Visual Basic
-È possibile usare Visual Studio per scaricare ed installare esempi di applicazioni Visual Basic complete a pacchetti da [MSDN Code Gallery](http://go.microsoft.com/fwlink/?LinkId=254185).  
+# <a name="visual-basic-sample-applications"></a><span data-ttu-id="10bc7-102">Applicazioni di esempio di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="10bc7-102">Visual Basic Sample Applications</span></span>
+<span data-ttu-id="10bc7-103">È possibile usare Visual Studio per scaricare ed installare esempi di applicazioni Visual Basic complete a pacchetti da [MSDN Code Gallery](http://go.microsoft.com/fwlink/?LinkId=254185).</span><span class="sxs-lookup"><span data-stu-id="10bc7-103">You can use Visual Studio to download and install samples of full, packaged Visual Basic applications from the [MSDN Code Gallery](http://go.microsoft.com/fwlink/?LinkId=254185)</span></span>  
   
- È possibile scaricare ogni esempio singolarmente oppure scaricare un pacchetto di esempi contenente gli esempi correlati che condividono una tecnologia o un argomento. Quando vengono pubblicate modifiche al codice sorgente per gli esempi scaricati si riceve una notifica.  
+ <span data-ttu-id="10bc7-104">È possibile scaricare ogni esempio singolarmente oppure scaricare un pacchetto di esempi contenente gli esempi correlati che condividono una tecnologia o un argomento.</span><span class="sxs-lookup"><span data-stu-id="10bc7-104">You can download each sample individually, or you can download a Sample Pack, which contains related samples that share a technology or topic.</span></span> <span data-ttu-id="10bc7-105">Quando vengono pubblicate modifiche al codice sorgente per gli esempi scaricati si riceve una notifica.</span><span class="sxs-lookup"><span data-stu-id="10bc7-105">You’ll receive a notification when source code changes are published for any sample that you download.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Visual Studio Samples](http://go.microsoft.com/fwlink/?LinkId=150928)  (Esempi di Visual Studio)  
- [Guida per programmatori Visual Basic](../visual-basic/programming-guide/index.md)   
- [Visual Basic](../visual-basic/index.md)
+## <a name="see-also"></a><span data-ttu-id="10bc7-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="10bc7-106">See Also</span></span>  
+ <span data-ttu-id="10bc7-107">[Visual Studio Samples](http://go.microsoft.com/fwlink/?LinkId=150928)  (Esempi di Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="10bc7-107">[Visual Studio Samples](http://go.microsoft.com/fwlink/?LinkId=150928) </span></span>  
+ <span data-ttu-id="10bc7-108">[Guida per programmatori Visual Basic](../visual-basic/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="10bc7-108">[Visual Basic Programming Guide](../visual-basic/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="10bc7-109">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="10bc7-109">Visual Basic</span></span>](../visual-basic/index.md)
 

@@ -38,13 +38,13 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="out-c-reference"></a>out (Riferimenti per C#)
-È possibile usare la parola chiave contestuale `out` in due contesti:
+# <a name="out-c-reference"></a><span data-ttu-id="36ae7-102">out (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="36ae7-102">out (C# Reference)</span></span>
+<span data-ttu-id="36ae7-103">È possibile usare la parola chiave contestuale `out` in due contesti:</span><span class="sxs-lookup"><span data-stu-id="36ae7-103">You can use the `out` contextual keyword in two contexts:</span></span>
 
-- Come [modificatore di parametro](../../../csharp/language-reference/keywords/out-parameter-modifier.md), che consente di passare un argomento a un metodo per riferimento e non per valore.
+- <span data-ttu-id="36ae7-104">Come [modificatore di parametro](../../../csharp/language-reference/keywords/out-parameter-modifier.md), che consente di passare un argomento a un metodo per riferimento e non per valore.</span><span class="sxs-lookup"><span data-stu-id="36ae7-104">As a [parameter modifier](../../../csharp/language-reference/keywords/out-parameter-modifier.md), which lets you pass an argument to a method by reference rather than by value.</span></span>
 
-- In [dichiarazioni di parametri di tipo generico](../../../csharp/language-reference/keywords/out-generic-modifier.md) per interfacce e delegati e indica che un parametro tipo è covariante.
+- <span data-ttu-id="36ae7-105">In [dichiarazioni di parametri di tipo generico](../../../csharp/language-reference/keywords/out-generic-modifier.md) per interfacce e delegati e indica che un parametro tipo è covariante.</span><span class="sxs-lookup"><span data-stu-id="36ae7-105">In [generic type parameter declarations](../../../csharp/language-reference/keywords/out-generic-modifier.md) for interfaces and delegates, which specifies that a type parameter is covariant.</span></span>
    
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="36ae7-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="36ae7-106">See Also</span></span>  
+ [<span data-ttu-id="36ae7-107">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="36ae7-107">C# Reference</span></span>](../../../csharp/language-reference/index.md)
 

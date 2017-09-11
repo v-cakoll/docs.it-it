@@ -32,24 +32,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 795b1d47c2fef7246d23260b5a866ede8f4cadb8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 01152cdbce5db3379f25b58cb39e6c9c8446562b
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="identifier-expected"></a>È previsto un identificatore
-Un elemento di programmazione che non è un nome di elemento dichiarato riconoscibile si verifica in cui il contesto richiede un nome di elemento. Una possibile causa è un attributo è stato specificato in una posizione diversa all'inizio dell'istruzione.  
+# <a name="identifier-expected"></a><span data-ttu-id="1819e-102">È previsto un identificatore</span><span class="sxs-lookup"><span data-stu-id="1819e-102">Identifier expected</span></span>
+<span data-ttu-id="1819e-103">Un elemento di programmazione che non è un nome di elemento dichiarato riconoscibile si verifica in cui il contesto richiede un nome di elemento.</span><span class="sxs-lookup"><span data-stu-id="1819e-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="1819e-104">Una possibile causa è un attributo è stato specificato in una posizione diversa all'inizio dell'istruzione.</span><span class="sxs-lookup"><span data-stu-id="1819e-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  
   
- **ID errore:** BC30203  
+ <span data-ttu-id="1819e-105">**ID errore:** BC30203</span><span class="sxs-lookup"><span data-stu-id="1819e-105">**Error ID:** BC30203</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1819e-106">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="1819e-106">To correct this error</span></span>  
   
--   Verificare che tutti gli attributi dell'istruzione vengono inseriti all'inizio.  
+-   <span data-ttu-id="1819e-107">Verificare che tutti gli attributi dell'istruzione vengono inseriti all'inizio.</span><span class="sxs-lookup"><span data-stu-id="1819e-107">Verify that any attributes in the statement are all placed at the beginning.</span></span>  
   
--   Verificare che tutti i nomi di elementi nell'istruzione sono stati digitati correttamente.  
+-   <span data-ttu-id="1819e-108">Verificare che tutti i nomi di elementi nell'istruzione sono stati digitati correttamente.</span><span class="sxs-lookup"><span data-stu-id="1819e-108">Verify that all element names in the statement are spelled correctly.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Nomi elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="1819e-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1819e-109">See Also</span></span>  
+ <span data-ttu-id="1819e-110">[Nomi elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) </span><span class="sxs-lookup"><span data-stu-id="1819e-110">[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) </span></span>  
+<span data-ttu-id="1819e-111"> [Panoramica degli attributi](../../../visual-basic/programming-guide/concepts/attributes/index.md)</span><span class="sxs-lookup"><span data-stu-id="1819e-111"> [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)</span></span>
  

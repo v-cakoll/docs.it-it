@@ -1,1 +1,1 @@
-Disponibile dalla 4
+<span data-ttu-id="e7a83-101">Disponibile dalla 4</span><span class="sxs-lookup"><span data-stu-id="e7a83-101">Available since 4</span></span>

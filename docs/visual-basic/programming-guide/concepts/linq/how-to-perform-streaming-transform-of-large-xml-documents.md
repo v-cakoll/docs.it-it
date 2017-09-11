@@ -20,29 +20,30 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f35e42e29e316fe1610a011263aa68e622fb95a5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 730039a85c8c72b9379617cb4b3c019028c3a1e9
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Procedura: eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (Visual Basic)
-A volte è necessario trasformare file XML di grandi dimensioni e scrivere l'applicazione in modo tale che il footprint di memoria dell'applicazione sia prevedibile. Se si tenta di popolare un albero XML con un file XML molto grande, l'uso della memoria sarà proporzionale alla dimensione del file (ovvero, eccessivo). Pertanto, è necessario usare una tecnica di flusso in sostituzione.  
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a><span data-ttu-id="a986d-102">Procedura: eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a986d-102">How to: Perform Streaming Transform of Large XML Documents (Visual Basic)</span></span>
+<span data-ttu-id="a986d-103">A volte è necessario trasformare file XML di grandi dimensioni e scrivere l'applicazione in modo tale che il footprint di memoria dell'applicazione sia prevedibile.</span><span class="sxs-lookup"><span data-stu-id="a986d-103">Sometimes you have to transform large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="a986d-104">Se si tenta di popolare un albero XML con un file XML molto grande, l'uso della memoria sarà proporzionale alla dimensione del file (ovvero, eccessivo).</span><span class="sxs-lookup"><span data-stu-id="a986d-104">If you try to populate an XML tree with a very large XML file, your memory usage will be proportional to the size of the file (that is, excessive).</span></span> <span data-ttu-id="a986d-105">Pertanto, è necessario usare una tecnica di flusso in sostituzione.</span><span class="sxs-lookup"><span data-stu-id="a986d-105">Therefore, you should use a streaming technique instead.</span></span>  
   
- Le tecniche di flusso sono maggiormente indicate nelle situazioni in cui è necessario elaborare solo una volta il documento di origine ed è possibile elaborare gli elementi in base all'ordine in cui sono riportati nel documento. Standard determinati operatori di query, ad esempio <xref:System.Linq.Enumerable.OrderBy%2A>, scorrono l'origine, raccolgono tutti i dati, li ordinano e infine restituiscono il primo elemento nella sequenza.</xref:System.Linq.Enumerable.OrderBy%2A> Si noti che se si usa un operatore di query che materializza l'origine prima di restituire il primo elemento, non verrà mantenuto un footprint di memoria ridotto per l'applicazione.  
+ <span data-ttu-id="a986d-106">Le tecniche di flusso sono maggiormente indicate nelle situazioni in cui è necessario elaborare solo una volta il documento di origine ed è possibile elaborare gli elementi in base all'ordine in cui sono riportati nel documento.</span><span class="sxs-lookup"><span data-stu-id="a986d-106">Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order.</span></span> <span data-ttu-id="a986d-107">Standard determinati operatori di query, ad esempio <xref:System.Linq.Enumerable.OrderBy%2A>, scorrono l'origine, raccolgono tutti i dati, li ordinano e infine restituiscono il primo elemento nella sequenza.</xref:System.Linq.Enumerable.OrderBy%2A></span><span class="sxs-lookup"><span data-stu-id="a986d-107">Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence.</span></span> <span data-ttu-id="a986d-108">Si noti che se si usa un operatore di query che materializza l'origine prima di restituire il primo elemento, non verrà mantenuto un footprint di memoria ridotto per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="a986d-108">Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint for your application.</span></span>  
   
- Anche se si utilizza la tecnica descritta in [procedura: flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), se si tenta di assemblare un albero XML che contiene il documento trasformato, l'utilizzo della memoria sarà eccessivo.  
+ <span data-ttu-id="a986d-109">Anche se si utilizza la tecnica descritta in [procedura: flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), se si tenta di assemblare un albero XML che contiene il documento trasformato, l'utilizzo della memoria sarà eccessivo.</span><span class="sxs-lookup"><span data-stu-id="a986d-109">Even if you use the technique described in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), if you try to assemble an XML tree that contains the transformed document, memory usage will be too great.</span></span>  
   
- Sono disponibili due approcci principali: Un approccio consiste nell'utilizzare le caratteristiche di elaborazione posticipata di <xref:System.Xml.Linq.XStreamingElement>.</xref:System.Xml.Linq.XStreamingElement> Un altro approccio consiste nel creare un <xref:System.Xml.XmlWriter>e utilizzare le funzionalità di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] per scrivere elementi in un <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlWriter> In questo argomento vengono descritti entrambi gli approcci.  
+ <span data-ttu-id="a986d-110">Sono disponibili due approcci principali:</span><span class="sxs-lookup"><span data-stu-id="a986d-110">There are two main approaches.</span></span> <span data-ttu-id="a986d-111">Un approccio consiste nell'utilizzare le caratteristiche di elaborazione posticipata di <xref:System.Xml.Linq.XStreamingElement>.</xref:System.Xml.Linq.XStreamingElement></span><span class="sxs-lookup"><span data-stu-id="a986d-111">One approach is to use the deferred processing characteristics of <xref:System.Xml.Linq.XStreamingElement>.</span></span> <span data-ttu-id="a986d-112">Un altro approccio consiste nel creare un <xref:System.Xml.XmlWriter>e utilizzare le funzionalità di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] per scrivere elementi in un <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlWriter></span><span class="sxs-lookup"><span data-stu-id="a986d-112">Another approach is to create an <xref:System.Xml.XmlWriter>, and use the capabilities of [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] to write elements to an <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="a986d-113">In questo argomento vengono descritti entrambi gli approcci.</span><span class="sxs-lookup"><span data-stu-id="a986d-113">This topic demonstrates both approaches.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente si basa sull'esempio in [procedura: flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+## <a name="example"></a><span data-ttu-id="a986d-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="a986d-114">Example</span></span>  
+ <span data-ttu-id="a986d-115">Nell'esempio seguente si basa sull'esempio in [procedura: flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).</span><span class="sxs-lookup"><span data-stu-id="a986d-115">The following example builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).</span></span>  
   
- In questo esempio utilizza le funzionalità di esecuzione posticipata di <xref:System.Xml.Linq.XStreamingElement>per trasmettere l'output.</xref:System.Xml.Linq.XStreamingElement> È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.  
+ <span data-ttu-id="a986d-116">In questo esempio utilizza le funzionalità di esecuzione posticipata di <xref:System.Xml.Linq.XStreamingElement>per trasmettere l'output.</xref:System.Xml.Linq.XStreamingElement></span><span class="sxs-lookup"><span data-stu-id="a986d-116">This example uses the deferred execution capabilities of <xref:System.Xml.Linq.XStreamingElement> to stream the output.</span></span> <span data-ttu-id="a986d-117">È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.</span><span class="sxs-lookup"><span data-stu-id="a986d-117">This example can transform a very large document while maintaining a small memory footprint.</span></span>  
   
- Si noti che il metodo dell'asse personalizzato (`StreamCustomerItem`) è stato scritto in modo tale da prevedere un documento contenente elementi `Customer`, `Name` e `Item`, disposti come nel documento Source.xml seguente. Tuttavia, un'implementazione più solida sarebbe in grado di analizzare un documento non valido.  
+ <span data-ttu-id="a986d-118">Si noti che il metodo dell'asse personalizzato (`StreamCustomerItem`) è stato scritto in modo tale da prevedere un documento contenente elementi `Customer`, `Name` e `Item`, disposti come nel documento Source.xml seguente.</span><span class="sxs-lookup"><span data-stu-id="a986d-118">Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document.</span></span> <span data-ttu-id="a986d-119">Tuttavia, un'implementazione più solida sarebbe in grado di analizzare un documento non valido.</span><span class="sxs-lookup"><span data-stu-id="a986d-119">A more robust implementation, however, would be prepared to parse an invalid document.</span></span>  
   
- Il documento seguente, Source.xml, è il documento di origine:  
+ <span data-ttu-id="a986d-120">Il documento seguente, Source.xml, è il documento di origine:</span><span class="sxs-lookup"><span data-stu-id="a986d-120">The following is the source document, Source.xml:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -214,7 +215,7 @@ Public Class StreamCustomerItemEnumerator
 End Class  
 ```  
   
- L'output del codice è il seguente:  
+ <span data-ttu-id="a986d-121">L'output del codice è il seguente:</span><span class="sxs-lookup"><span data-stu-id="a986d-121">This code produces the following output:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -262,16 +263,16 @@ End Class
 </Root>  
 ```  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene inoltre si basa sull'esempio in [procedura: flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+## <a name="example"></a><span data-ttu-id="a986d-122">Esempio</span><span class="sxs-lookup"><span data-stu-id="a986d-122">Example</span></span>  
+ <span data-ttu-id="a986d-123">Nell'esempio seguente viene inoltre si basa sull'esempio in [procedura: flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).</span><span class="sxs-lookup"><span data-stu-id="a986d-123">The following example also builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).</span></span>  
   
- Questo esempio viene utilizzata la funzionalità di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] per scrivere elementi in un <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.  
+ <span data-ttu-id="a986d-124">Questo esempio viene utilizzata la funzionalità di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] per scrivere elementi in un <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter></span><span class="sxs-lookup"><span data-stu-id="a986d-124">This example uses the capability of [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] to write elements to an <xref:System.Xml.XmlWriter>.</span></span> <span data-ttu-id="a986d-125">È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.</span><span class="sxs-lookup"><span data-stu-id="a986d-125">This example can transform a very large document while maintaining a small memory footprint.</span></span>  
   
- Si noti che il metodo dell'asse personalizzato (`StreamCustomerItem`) è stato scritto in modo tale da prevedere un documento contenente elementi `Customer`, `Name` e `Item`, disposti come nel documento Source.xml seguente. Tuttavia, un'implementazione più affidabile convaliderebbe il documento di origine con uno schema XSD oppure verrebbe preparata per analizzare un documento non valido.  
+ <span data-ttu-id="a986d-126">Si noti che il metodo dell'asse personalizzato (`StreamCustomerItem`) è stato scritto in modo tale da prevedere un documento contenente elementi `Customer`, `Name` e `Item`, disposti come nel documento Source.xml seguente.</span><span class="sxs-lookup"><span data-stu-id="a986d-126">Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document.</span></span> <span data-ttu-id="a986d-127">Tuttavia, un'implementazione più affidabile convaliderebbe il documento di origine con uno schema XSD oppure verrebbe preparata per analizzare un documento non valido.</span><span class="sxs-lookup"><span data-stu-id="a986d-127">A more robust implementation, however, would either validate the source document with an XSD, or would be prepared to parse an invalid document.</span></span>  
   
- In questo esempio viene usato lo stesso documento di origine, Source.xml, dell'esempio precedente in questo argomento. Viene inoltre prodotto esattamente lo stesso output.  
+ <span data-ttu-id="a986d-128">In questo esempio viene usato lo stesso documento di origine, Source.xml, dell'esempio precedente in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="a986d-128">This example uses the same source document, Source.xml, as the previous example in this topic.</span></span> <span data-ttu-id="a986d-129">Viene inoltre prodotto esattamente lo stesso output.</span><span class="sxs-lookup"><span data-stu-id="a986d-129">It also produces exactly the same output.</span></span>  
   
- Utilizzo <xref:System.Xml.Linq.XStreamingElement>per il flusso di output che XML, è preferibile rispetto alla scrittura di un <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XStreamingElement>  
+ <span data-ttu-id="a986d-130">Utilizzo <xref:System.Xml.Linq.XStreamingElement>per il flusso di output che XML, è preferibile rispetto alla scrittura di un <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XStreamingElement></span><span class="sxs-lookup"><span data-stu-id="a986d-130">Using <xref:System.Xml.Linq.XStreamingElement> for streaming the output XML is preferred over writing to an <xref:System.Xml.XmlWriter>.</span></span>  
   
 ```vb  
 Module Module1  
@@ -409,7 +410,7 @@ Public Class StreamCustomerItemEnumerator
 End Class  
 ```  
   
- L'output del codice è il seguente:  
+ <span data-ttu-id="a986d-131">L'output del codice è il seguente:</span><span class="sxs-lookup"><span data-stu-id="a986d-131">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -456,5 +457,5 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to XML (Visual Basic) di programmazione avanzata](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="a986d-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a986d-132">See Also</span></span>  
+ [<span data-ttu-id="a986d-133">LINQ to XML (Visual Basic) di programmazione avanzata</span><span class="sxs-lookup"><span data-stu-id="a986d-133">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

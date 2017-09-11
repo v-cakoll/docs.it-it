@@ -33,82 +33,82 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="modifiers-visual-basic"></a>Modificatori (Visual Basic)
-Gli argomenti di questa sezione descrivono i modificatori di runtime di Visual Basic.  
+# <a name="modifiers-visual-basic"></a><span data-ttu-id="49dc4-102">Modificatori (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="49dc4-102">Modifiers (Visual Basic)</span></span>
+<span data-ttu-id="49dc4-103">Gli argomenti di questa sezione descrivono i modificatori di runtime di Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="49dc4-103">The topics in this section document Visual Basic run-time modifiers.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
+## <a name="in-this-section"></a><span data-ttu-id="49dc4-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="49dc4-104">In This Section</span></span>  
+ [<span data-ttu-id="49dc4-105">Ansi</span><span class="sxs-lookup"><span data-stu-id="49dc4-105">Ansi</span></span>](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [<span data-ttu-id="49dc4-106">Assembly</span><span class="sxs-lookup"><span data-stu-id="49dc4-106">Assembly</span></span>](../../../visual-basic/language-reference/modifiers/assembly.md)  
   
- [Async](../../../visual-basic/language-reference/modifiers/async.md)  
+ [<span data-ttu-id="49dc4-107">Async</span><span class="sxs-lookup"><span data-stu-id="49dc4-107">Async</span></span>](../../../visual-basic/language-reference/modifiers/async.md)  
   
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
+ [<span data-ttu-id="49dc4-108">Auto</span><span class="sxs-lookup"><span data-stu-id="49dc4-108">Auto</span></span>](../../../visual-basic/language-reference/modifiers/auto.md)  
   
- [ByRef](../../../visual-basic/language-reference/modifiers/byref.md)  
+ [<span data-ttu-id="49dc4-109">ByRef</span><span class="sxs-lookup"><span data-stu-id="49dc4-109">ByRef</span></span>](../../../visual-basic/language-reference/modifiers/byref.md)  
   
- [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)  
+ [<span data-ttu-id="49dc4-110">ByVal</span><span class="sxs-lookup"><span data-stu-id="49dc4-110">ByVal</span></span>](../../../visual-basic/language-reference/modifiers/byval.md)  
   
- [Default](../../../visual-basic/language-reference/modifiers/default.md)  
+ [<span data-ttu-id="49dc4-111">Default</span><span class="sxs-lookup"><span data-stu-id="49dc4-111">Default</span></span>](../../../visual-basic/language-reference/modifiers/default.md)  
   
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [<span data-ttu-id="49dc4-112">Friend</span><span class="sxs-lookup"><span data-stu-id="49dc4-112">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)  
   
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
+ [<span data-ttu-id="49dc4-113">In</span><span class="sxs-lookup"><span data-stu-id="49dc4-113">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
   
- [Iteratore](../../../visual-basic/language-reference/modifiers/iterator.md)  
+ [<span data-ttu-id="49dc4-114">Iteratore</span><span class="sxs-lookup"><span data-stu-id="49dc4-114">Iterator</span></span>](../../../visual-basic/language-reference/modifiers/iterator.md)  
   
- [Key](../../../visual-basic/language-reference/modifiers/key.md)  
+ [<span data-ttu-id="49dc4-115">Key</span><span class="sxs-lookup"><span data-stu-id="49dc4-115">Key</span></span>](../../../visual-basic/language-reference/modifiers/key.md)  
   
- [Modulo \<parola chiave>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
+ [<span data-ttu-id="49dc4-116">Modulo \<parola chiave></span><span class="sxs-lookup"><span data-stu-id="49dc4-116">Module \<keyword></span></span>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
   
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
+ [<span data-ttu-id="49dc4-117">MustInherit</span><span class="sxs-lookup"><span data-stu-id="49dc4-117">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [<span data-ttu-id="49dc4-118">MustOverride</span><span class="sxs-lookup"><span data-stu-id="49dc4-118">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
   
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
+ [<span data-ttu-id="49dc4-119">Narrowing</span><span class="sxs-lookup"><span data-stu-id="49dc4-119">Narrowing</span></span>](../../../visual-basic/language-reference/modifiers/narrowing.md)  
   
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
+ [<span data-ttu-id="49dc4-120">NotInheritable</span><span class="sxs-lookup"><span data-stu-id="49dc4-120">NotInheritable</span></span>](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [<span data-ttu-id="49dc4-121">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="49dc4-121">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)  
+ [<span data-ttu-id="49dc4-122">Optional</span><span class="sxs-lookup"><span data-stu-id="49dc4-122">Optional</span></span>](../../../visual-basic/language-reference/modifiers/optional.md)  
   
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
+ [<span data-ttu-id="49dc4-123">Out</span><span class="sxs-lookup"><span data-stu-id="49dc4-123">Out</span></span>](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [Overload](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [<span data-ttu-id="49dc4-124">Overload</span><span class="sxs-lookup"><span data-stu-id="49dc4-124">Overloads</span></span>](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [<span data-ttu-id="49dc4-125">Overridable</span><span class="sxs-lookup"><span data-stu-id="49dc4-125">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [<span data-ttu-id="49dc4-126">Overrides</span><span class="sxs-lookup"><span data-stu-id="49dc4-126">Overrides</span></span>](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
- [ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)  
+ [<span data-ttu-id="49dc4-127">ParamArray</span><span class="sxs-lookup"><span data-stu-id="49dc4-127">ParamArray</span></span>](../../../visual-basic/language-reference/modifiers/paramarray.md)  
   
- [Partial](../../../visual-basic/language-reference/modifiers/partial.md)  
+ [<span data-ttu-id="49dc4-128">Partial</span><span class="sxs-lookup"><span data-stu-id="49dc4-128">Partial</span></span>](../../../visual-basic/language-reference/modifiers/partial.md)  
   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [<span data-ttu-id="49dc4-129">Private</span><span class="sxs-lookup"><span data-stu-id="49dc4-129">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
   
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [<span data-ttu-id="49dc4-130">Protected</span><span class="sxs-lookup"><span data-stu-id="49dc4-130">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)  
   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+ [<span data-ttu-id="49dc4-131">Public</span><span class="sxs-lookup"><span data-stu-id="49dc4-131">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)  
   
- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
+ [<span data-ttu-id="49dc4-132">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="49dc4-132">ReadOnly</span></span>](../../../visual-basic/language-reference/modifiers/readonly.md)  
   
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [<span data-ttu-id="49dc4-133">Shadows</span><span class="sxs-lookup"><span data-stu-id="49dc4-133">Shadows</span></span>](../../../visual-basic/language-reference/modifiers/shadows.md)  
   
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [<span data-ttu-id="49dc4-134">Shared</span><span class="sxs-lookup"><span data-stu-id="49dc4-134">Shared</span></span>](../../../visual-basic/language-reference/modifiers/shared.md)  
   
- [Static](../../../visual-basic/language-reference/modifiers/static.md)  
+ [<span data-ttu-id="49dc4-135">Static</span><span class="sxs-lookup"><span data-stu-id="49dc4-135">Static</span></span>](../../../visual-basic/language-reference/modifiers/static.md)  
   
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
+ [<span data-ttu-id="49dc4-136">Unicode</span><span class="sxs-lookup"><span data-stu-id="49dc4-136">Unicode</span></span>](../../../visual-basic/language-reference/modifiers/unicode.md)  
   
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
+ [<span data-ttu-id="49dc4-137">Widening</span><span class="sxs-lookup"><span data-stu-id="49dc4-137">Widening</span></span>](../../../visual-basic/language-reference/modifiers/widening.md)  
   
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
+ [<span data-ttu-id="49dc4-138">WithEvents</span><span class="sxs-lookup"><span data-stu-id="49dc4-138">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)  
   
- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
+ [<span data-ttu-id="49dc4-139">WriteOnly</span><span class="sxs-lookup"><span data-stu-id="49dc4-139">WriteOnly</span></span>](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   
-## <a name="related-sections"></a>Sezioni correlate  
- [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="49dc4-140">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="49dc4-140">Related Sections</span></span>  
+ [<span data-ttu-id="49dc4-141">Riferimenti per il linguaggio Visual Basic</span><span class="sxs-lookup"><span data-stu-id="49dc4-141">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
   
- [Visual Basic](../../../visual-basic/index.md)
+ [<span data-ttu-id="49dc4-142">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="49dc4-142">Visual Basic</span></span>](../../../visual-basic/index.md)
 

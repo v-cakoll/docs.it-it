@@ -26,10 +26,10 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>File XML di esempio: Customers e Orders in uno spazio dei nomi
-Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Contiene Customers e Orders. L'XML si trova in uno spazio dei nomi.  
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="ced46-102">File XML di esempio: Customers e Orders in uno spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="ced46-102">Sample XML File: Customers and Orders in a Namespace</span></span>
+<span data-ttu-id="ced46-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ced46-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="ced46-104">Contiene Customers e Orders.</span><span class="sxs-lookup"><span data-stu-id="ced46-104">This file contains customers and orders.</span></span> <span data-ttu-id="ced46-105">L'XML si trova in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="ced46-105">The XML is in a namespace.</span></span>  
   
-## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  
+## <a name="customersordersinnamespacexml"></a><span data-ttu-id="ced46-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="ced46-106">CustomersOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -447,6 +447,6 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Documenti XML di esempio (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="ced46-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ced46-107">See Also</span></span>  
+ [<span data-ttu-id="ced46-108">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ced46-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

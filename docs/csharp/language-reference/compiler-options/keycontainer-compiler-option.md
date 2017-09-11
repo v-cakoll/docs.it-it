@@ -38,37 +38,37 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="keycontainer-c-compiler-options"></a>/keycontainer (opzioni del compilatore C#)
-Specifica il nome del contenitore di chiavi crittografiche.  
+# <a name="keycontainer-c-compiler-options"></a><span data-ttu-id="f669a-102">/keycontainer (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="f669a-102">/keycontainer (C# Compiler Options)</span></span>
+<span data-ttu-id="f669a-103">Specifica il nome del contenitore di chiavi crittografiche.</span><span class="sxs-lookup"><span data-stu-id="f669a-103">Specifies the name of the cryptographic key container.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="f669a-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="f669a-104">Syntax</span></span>  
   
 ```console  
 /keycontainer:string  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a><span data-ttu-id="f669a-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="f669a-105">Arguments</span></span>  
  `string`  
- Nome del contenitore di chiavi con nome sicuro.  
+ <span data-ttu-id="f669a-106">Nome del contenitore di chiavi con nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="f669a-106">The name of the strong name key container.</span></span>  
   
-## <a name="remarks"></a>Note  
- Quando viene usata l'opzione **/keycontainer**, il compilatore crea un componente condivisibile inserendo una chiave pubblica dal contenitore specificato nel manifesto dell'assembly e firmando l'assembly finale con la chiave privata. Per generare un file di chiave, digitare sn -k `file` nella riga di comando. sn -i installa la coppia di chiavi in un contenitore.  
+## <a name="remarks"></a><span data-ttu-id="f669a-107">Note</span><span class="sxs-lookup"><span data-stu-id="f669a-107">Remarks</span></span>  
+ <span data-ttu-id="f669a-108">Quando viene usata l'opzione **/keycontainer**, il compilatore crea un componente condivisibile inserendo una chiave pubblica dal contenitore specificato nel manifesto dell'assembly e firmando l'assembly finale con la chiave privata.</span><span class="sxs-lookup"><span data-stu-id="f669a-108">When the **/keycontainer** option is used, the compiler creates a sharable component by inserting a public key from the specified container into the assembly manifest and signing the final assembly with the private key.</span></span> <span data-ttu-id="f669a-109">Per generare un file di chiave, digitare sn -k `file` nella riga di comando.</span><span class="sxs-lookup"><span data-stu-id="f669a-109">To generate a key file, type sn -k `file` at the command line.</span></span> <span data-ttu-id="f669a-110">sn -i installa la coppia di chiavi in un contenitore.</span><span class="sxs-lookup"><span data-stu-id="f669a-110">sn -i installs the key pair into a container.</span></span>  
   
- Se si esegue la compilazione con [/target: module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), il nome del file di chiave verrà mantenuto nel modulo e incorporato nell'assembly quando il modulo verrà compilato in un assembly con [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ <span data-ttu-id="f669a-111">Se si esegue la compilazione con [/target: module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), il nome del file di chiave verrà mantenuto nel modulo e incorporato nell'assembly quando il modulo verrà compilato in un assembly con [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="f669a-111">If you compile with [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), the name of the key file is held in the module and incorporated into the assembly when you compile this module into an assembly with [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).</span></span>  
   
- Questa opzione può essere specificata anche come attributo personalizzato <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName> nel codice sorgente di qualsiasi modulo MSIL (Microsoft Intermediate Language).  
+ <span data-ttu-id="f669a-112">Questa opzione può essere specificata anche come attributo personalizzato <xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName> nel codice sorgente di qualsiasi modulo MSIL (Microsoft Intermediate Language).</span><span class="sxs-lookup"><span data-stu-id="f669a-112">You can also specify this option as a custom attribute (<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=fullName>) in the source code for any Microsoft intermediate language (MSIL) module.</span></span>  
   
- È possibile passare al compilatore le informazioni di crittografia anche tramite [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md). Usare [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) se si vuole aggiungere la chiave pubblica al manifesto dell'assembly, ma si preferisce rimandare la firma dell'assembly a dopo il test di questo.  
+ <span data-ttu-id="f669a-113">È possibile passare al compilatore le informazioni di crittografia anche tramite [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="f669a-113">You can also pass your encryption information to the compiler with [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md).</span></span> <span data-ttu-id="f669a-114">Usare [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) se si vuole aggiungere la chiave pubblica al manifesto dell'assembly, ma si preferisce rimandare la firma dell'assembly a dopo il test di questo.</span><span class="sxs-lookup"><span data-stu-id="f669a-114">Use [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) if you want the public key added to the assembly manifest but want to delay signing the assembly until it has been tested.</span></span>  
   
- Per altre informazioni, vedere [Creazione e uso degli assembly con nome sicuro](https://msdn.microsoft.com/library/xwb8f617) e [Ritardo della firma di un assembly](../../../framework/app-domains/delay-sign-assembly.md).  
+ <span data-ttu-id="f669a-115">Per altre informazioni, vedere [Creazione e uso degli assembly con nome sicuro](https://msdn.microsoft.com/library/xwb8f617) e [Ritardo della firma di un assembly](../../../framework/app-domains/delay-sign-assembly.md).</span><span class="sxs-lookup"><span data-stu-id="f669a-115">For more information, see [Creating and Using Strong-Named Assemblies](https://msdn.microsoft.com/library/xwb8f617) and [Delay Signing an Assembly](../../../framework/app-domains/delay-sign-assembly.md).</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="f669a-116">Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="f669a-116">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Questa opzione del compilatore non è disponibile nell'ambiente di sviluppo di Visual Studio.  
+1.  <span data-ttu-id="f669a-117">Questa opzione del compilatore non è disponibile nell'ambiente di sviluppo di Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="f669a-117">This compiler option is not available in the Visual Studio development environment.</span></span>  
   
- È possibile accedere a questa opzione del compilatore a livello di codice con <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>.  
+ <span data-ttu-id="f669a-118">È possibile accedere a questa opzione del compilatore a livello di codice con <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>.</span><span class="sxs-lookup"><span data-stu-id="f669a-118">You can programmatically access this compiler option with <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="f669a-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f669a-119">See Also</span></span>  
+ <span data-ttu-id="f669a-120">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="f669a-120">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="f669a-121">Gestione delle proprietà di progetti e soluzioni</span><span class="sxs-lookup"><span data-stu-id="f669a-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
 

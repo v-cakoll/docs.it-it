@@ -26,11 +26,11 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-serialize-using-datacontractserializer-c"></a>Procedura: Serializzare tramite DataContractSerializer (C#)
-In questo argomento viene illustrato un esempio in cui viene usato <xref:System.Runtime.Serialization.DataContractSerializer> per eseguire la serializzazione e la deserializzazione.  
+# <a name="how-to-serialize-using-datacontractserializer-c"></a><span data-ttu-id="6a930-102">Procedura: Serializzare tramite DataContractSerializer (C#)</span><span class="sxs-lookup"><span data-stu-id="6a930-102">How to: Serialize Using DataContractSerializer (C#)</span></span>
+<span data-ttu-id="6a930-103">In questo argomento viene illustrato un esempio in cui viene usato <xref:System.Runtime.Serialization.DataContractSerializer> per eseguire la serializzazione e la deserializzazione.</span><span class="sxs-lookup"><span data-stu-id="6a930-103">This topic shows an example that serializes and deserializes using <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente vengono creati diversi oggetti contenenti oggetti <xref:System.Xml.Linq.XElement>. Tali oggetti vengono quindi serializzati in file di testo e successivamente deserializzati dagli stessi file di testo.  
+## <a name="example"></a><span data-ttu-id="6a930-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="6a930-104">Example</span></span>  
+ <span data-ttu-id="6a930-105">Nell'esempio seguente vengono creati diversi oggetti contenenti oggetti <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="6a930-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="6a930-106">Tali oggetti vengono quindi serializzati in file di testo e successivamente deserializzati dagli stessi file di testo.</span><span class="sxs-lookup"><span data-stu-id="6a930-106">It then serializes them to text files, and then deserializes them from the text files.</span></span>  
   
 ```csharp  
 using System;  
@@ -97,7 +97,7 @@ public class XElementNullContainer
 }  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="6a930-107">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="6a930-107">This example produces the following output:</span></span>  
   
 ```  
 Testing for type: System.Xml.Linq.XElement  
@@ -108,6 +108,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Serializzazione di oggetti grafici contenenti oggetti XElement (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a><span data-ttu-id="6a930-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6a930-108">See Also</span></span>  
+ [<span data-ttu-id="6a930-109">Serializzazione di oggetti grafici contenenti oggetti XElement (C#)</span><span class="sxs-lookup"><span data-stu-id="6a930-109">Serializing Object Graphs that Contain XElement Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
 

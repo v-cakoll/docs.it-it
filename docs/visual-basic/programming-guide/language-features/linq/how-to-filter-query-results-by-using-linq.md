@@ -38,74 +38,74 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5aee7c3b07bcb8e623fb9090218a2b4bc8426ee3
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: d6197e39ffef5b09b87b1b47cab04d4339bcaf3f
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Procedura: filtrare i risultati di una query utilizzando LINQ (Visual Basic)
-Language-Integrated Query (LINQ) semplifica accedere alle informazioni di database ed eseguire query.  
+# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a><span data-ttu-id="6fdd5-102">Procedura: filtrare i risultati di una query utilizzando LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6fdd5-102">How to: Filter Query Results by Using LINQ (Visual Basic)</span></span>
+<span data-ttu-id="6fdd5-103">Language-Integrated Query (LINQ) semplifica accedere alle informazioni di database ed eseguire query.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-103">Language-Integrated Query (LINQ) makes it easy to access database information and execute queries.</span></span>  
   
- Nell'esempio seguente viene illustrato come creare una nuova applicazione che esegue query su un database di SQL Server e filtra i risultati in un determinato valore utilizzando il `Where` clausola. Per ulteriori informazioni, vedere [clausola Where](../../../../visual-basic/language-reference/queries/where-clause.md).  
+ <span data-ttu-id="6fdd5-104">Nell'esempio seguente viene illustrato come creare una nuova applicazione che esegue query su un database di SQL Server e filtra i risultati in un determinato valore utilizzando il `Where` clausola.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-104">The following example shows how to create a new application that performs queries against a SQL Server database and filters the results by a particular value by using the `Where` clause.</span></span> <span data-ttu-id="6fdd5-105">Per ulteriori informazioni, vedere [clausola Where](../../../../visual-basic/language-reference/queries/where-clause.md).</span><span class="sxs-lookup"><span data-stu-id="6fdd5-105">For more information, see [Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md).</span></span>  
   
- Gli esempi in questo argomento usano il database di esempio Northwind. Se si dispone di esempio Northwind nel computer di sviluppo, è possibile scaricarlo dal [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) sito Web. Per istruzioni, vedere [download dei database di esempio](https://msdn.microsoft.com/library/bb399411).  
+ <span data-ttu-id="6fdd5-106">Gli esempi in questo argomento usano il database di esempio Northwind.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-106">The examples in this topic use the Northwind sample database.</span></span> <span data-ttu-id="6fdd5-107">Se si dispone di esempio Northwind nel computer di sviluppo, è possibile scaricarlo dal [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) sito Web.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-107">If you do not have the Northwind sample database on your development computer, you can download it from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) Web site.</span></span> <span data-ttu-id="6fdd5-108">Per istruzioni, vedere [download dei database di esempio](https://msdn.microsoft.com/library/bb399411).</span><span class="sxs-lookup"><span data-stu-id="6fdd5-108">For instructions, see [Downloading Sample Databases](https://msdn.microsoft.com/library/bb399411).</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-connection-to-a-database"></a>Per creare una connessione a un database  
+### <a name="to-create-a-connection-to-a-database"></a><span data-ttu-id="6fdd5-109">Per creare una connessione a un database</span><span class="sxs-lookup"><span data-stu-id="6fdd5-109">To create a connection to a database</span></span>  
   
-1.  In Visual Studio, aprire **Esplora Server**/**Esplora Database** facendo **Esplora Server**/**Esplora Database** sul **visualizzazione** menu.  
+1.  <span data-ttu-id="6fdd5-110">In Visual Studio, aprire **Esplora Server**/**Esplora Database** facendo **Esplora Server**/**Esplora Database** sul **visualizzazione** menu.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-110">In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.</span></span>  
   
-2.  Fare doppio clic su **connessioni dati** in **Esplora Server**/**Esplora Database** e quindi fare clic su **Aggiungi connessione**.  
+2.  <span data-ttu-id="6fdd5-111">Fare doppio clic su **connessioni dati** in **Esplora Server**/**Esplora Database** e quindi fare clic su **Aggiungi connessione**.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-111">Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.</span></span>  
   
-3.  Specificare una connessione valida al database di esempio Northwind.  
+3.  <span data-ttu-id="6fdd5-112">Specificare una connessione valida al database di esempio Northwind.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-112">Specify a valid connection to the Northwind sample database.</span></span>  
   
-### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Per aggiungere un progetto che contiene un file LINQ to SQL  
+### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a><span data-ttu-id="6fdd5-113">Per aggiungere un progetto che contiene un file LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="6fdd5-113">To add a project that contains a LINQ to SQL file</span></span>  
   
-1.  In Visual Studio, nel **File** dal menu **New** e quindi fare clic su **progetto**. Selezionare Visual Basic **applicazione Windows Form** come tipo di progetto.  
+1.  <span data-ttu-id="6fdd5-114">In Visual Studio, nel **File** dal menu **New** e quindi fare clic su **progetto**.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-114">In Visual Studio, on the **File** menu, point to **New** and then click **Project**.</span></span> <span data-ttu-id="6fdd5-115">Selezionare Visual Basic **applicazione Windows Form** come tipo di progetto.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-115">Select Visual Basic **Windows Forms Application** as the project type.</span></span>  
   
-2.  Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**. Selezionare il **classi LINQ to SQL** modello di elemento.  
+2.  <span data-ttu-id="6fdd5-116">Nel menu **Progetto** fare clic su **Aggiungi nuovo elemento**.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-116">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="6fdd5-117">Selezionare il **classi LINQ to SQL** modello di elemento.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-117">Select the **LINQ to SQL Classes** item template.</span></span>  
   
-3.  Nome del file `northwind.dbml`. Fare clic su **Aggiungi**. Consente di aprire il Object Relational Designer (O/R Designer) per il file Northwind. dbml.  
+3.  <span data-ttu-id="6fdd5-118">Nome del file `northwind.dbml`.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-118">Name the file `northwind.dbml`.</span></span> <span data-ttu-id="6fdd5-119">Fare clic su **Aggiungi**.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-119">Click **Add**.</span></span> <span data-ttu-id="6fdd5-120">Consente di aprire il Object Relational Designer (O/R Designer) per il file Northwind. dbml.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-120">The Object Relational Designer (O/R Designer) opens for the northwind.dbml file.</span></span>  
   
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>Per aggiungere le tabelle di eseguire query O/R Designer  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a><span data-ttu-id="6fdd5-121">Per aggiungere le tabelle di eseguire query O/R Designer</span><span class="sxs-lookup"><span data-stu-id="6fdd5-121">To add tables to query to the O/R Designer</span></span>  
   
-1.  In **Esplora Server**/**Esplora Database**, espandere la connessione al database Northwind. Espandere il **tabelle** cartella.  
+1.  <span data-ttu-id="6fdd5-122">In **Esplora Server**/**Esplora Database**, espandere la connessione al database Northwind.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-122">In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database.</span></span> <span data-ttu-id="6fdd5-123">Espandere il **tabelle** cartella.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-123">Expand the **Tables** folder.</span></span>  
   
-     Se è stato chiuso O/R Designer, è possibile riaprirlo facendo doppio clic sul file Northwind. dbml aggiunto in precedenza.  
+     <span data-ttu-id="6fdd5-124">Se è stato chiuso O/R Designer, è possibile riaprirlo facendo doppio clic sul file Northwind. dbml aggiunto in precedenza.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-124">If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.</span></span>  
   
-2.  Fare clic sulla tabella Customers e trascinarlo nel riquadro sinistro della finestra di progettazione. Fare clic sulla tabella Orders e trascinarlo nel riquadro sinistro della finestra di progettazione.  
+2.  <span data-ttu-id="6fdd5-125">Fare clic sulla tabella Customers e trascinarlo nel riquadro sinistro della finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-125">Click the Customers table and drag it to the left pane of the designer.</span></span> <span data-ttu-id="6fdd5-126">Fare clic sulla tabella Orders e trascinarlo nel riquadro sinistro della finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-126">Click the Orders table and drag it to the left pane of the designer.</span></span>  
   
-     La finestra di progettazione crea nuovi `Customer` e `Order` gli oggetti per il progetto. Si noti che la finestra di progettazione vengono rilevati automaticamente relazioni tra le tabelle e crea figlio le proprietà degli oggetti correlati. Ad esempio, IntelliSense mostrerà che il `Customer` oggetto ha un `Orders` proprietà per tutti gli ordini relativi a quel cliente.  
+     <span data-ttu-id="6fdd5-127">La finestra di progettazione crea nuovi `Customer` e `Order` gli oggetti per il progetto.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-127">The designer creates new `Customer` and `Order` objects for your project.</span></span> <span data-ttu-id="6fdd5-128">Si noti che la finestra di progettazione vengono rilevati automaticamente relazioni tra le tabelle e crea figlio le proprietà degli oggetti correlati.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-128">Notice that the designer automatically detects relationships between the tables and creates child properties for related objects.</span></span> <span data-ttu-id="6fdd5-129">Ad esempio, IntelliSense mostrerà che il `Customer` oggetto ha un `Orders` proprietà per tutti gli ordini relativi a quel cliente.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-129">For example, IntelliSense will show that the `Customer` object has an `Orders` property for all orders related to that customer.</span></span>  
   
-3.  Salvare le modifiche e chiudere la finestra di progettazione.  
+3.  <span data-ttu-id="6fdd5-130">Salvare le modifiche e chiudere la finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-130">Save your changes and close the designer.</span></span>  
   
-4.  Salvare il progetto.  
+4.  <span data-ttu-id="6fdd5-131">Salvare il progetto.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-131">Save your project.</span></span>  
   
-### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Per aggiungere codice per eseguire query sul database e visualizzare i risultati  
+### <a name="to-add-code-to-query-the-database-and-display-the-results"></a><span data-ttu-id="6fdd5-132">Per aggiungere codice per eseguire query sul database e visualizzare i risultati</span><span class="sxs-lookup"><span data-stu-id="6fdd5-132">To add code to query the database and display the results</span></span>  
   
-1.  Dal **della casella degli strumenti**, trascinare un <xref:System.Windows.Forms.DataGridView>controllo nel Form di Windows predefinito per il progetto, Form1.</xref:System.Windows.Forms.DataGridView>  
+1.  <span data-ttu-id="6fdd5-133">Dal **della casella degli strumenti**, trascinare un <xref:System.Windows.Forms.DataGridView>controllo nel Form di Windows predefinito per il progetto, Form1.</xref:System.Windows.Forms.DataGridView></span><span class="sxs-lookup"><span data-stu-id="6fdd5-133">From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.</span></span>  
   
-2.  Fare doppio clic su Form1 per aggiungere il codice per il `Load` evento del form.  
+2.  <span data-ttu-id="6fdd5-134">Fare doppio clic su Form1 per aggiungere il codice per il `Load` evento del form.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-134">Double-click Form1 to add code to the `Load` event of the form.</span></span>  
   
-3.  Quando si aggiungono tabelle alla finestra di Progettazione relazionale, la finestra di progettazione aggiunge un <xref:System.Data.Linq.DataContext>oggetto per il progetto.</xref:System.Data.Linq.DataContext> Questo oggetto contiene il codice che è necessario disporre per accedere a tali tabelle, oltre ai singoli oggetti e raccolte per ogni tabella. Il <xref:System.Data.Linq.DataContext>oggetto per il progetto viene denominato in base al nome del file. dbml.</xref:System.Data.Linq.DataContext> Per questo progetto, il <xref:System.Data.Linq.DataContext>oggetto è denominato `northwindDataContext`.</xref:System.Data.Linq.DataContext>  
+3.  <span data-ttu-id="6fdd5-135">Quando si aggiungono tabelle alla finestra di Progettazione relazionale, la finestra di progettazione aggiunge un <xref:System.Data.Linq.DataContext>oggetto per il progetto.</xref:System.Data.Linq.DataContext></span><span class="sxs-lookup"><span data-stu-id="6fdd5-135">When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object for your project.</span></span> <span data-ttu-id="6fdd5-136">Questo oggetto contiene il codice che è necessario disporre per accedere a tali tabelle, oltre ai singoli oggetti e raccolte per ogni tabella.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-136">This object contains the code that you must have to access those tables, in addition to individual objects and collections for each table.</span></span> <span data-ttu-id="6fdd5-137">Il <xref:System.Data.Linq.DataContext>oggetto per il progetto viene denominato in base al nome del file. dbml.</xref:System.Data.Linq.DataContext></span><span class="sxs-lookup"><span data-stu-id="6fdd5-137">The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file.</span></span> <span data-ttu-id="6fdd5-138">Per questo progetto, il <xref:System.Data.Linq.DataContext>oggetto è denominato `northwindDataContext`.</xref:System.Data.Linq.DataContext></span><span class="sxs-lookup"><span data-stu-id="6fdd5-138">For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.</span></span>  
   
-     È possibile creare un'istanza di <xref:System.Data.Linq.DataContext>nel codice e query nelle tabelle specificate da O/R Designer.</xref:System.Data.Linq.DataContext>  
+     <span data-ttu-id="6fdd5-139">È possibile creare un'istanza di <xref:System.Data.Linq.DataContext>nel codice e query nelle tabelle specificate da O/R Designer.</xref:System.Data.Linq.DataContext></span><span class="sxs-lookup"><span data-stu-id="6fdd5-139">You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and query the tables specified by the O/R Designer.</span></span>  
   
-     Aggiungere il codice seguente per il `Load` query sulle tabelle che sono esposte come proprietà del contesto dati dell'evento. La query filtra i risultati e restituisce solo i clienti che si trovano in `London`.  
+     <span data-ttu-id="6fdd5-140">Aggiungere il codice seguente per il `Load` query sulle tabelle che sono esposte come proprietà del contesto dati dell'evento.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-140">Add the following code to the `Load` event to query the tables that are exposed as properties of your data context.</span></span> <span data-ttu-id="6fdd5-141">La query filtra i risultati e restituisce solo i clienti che si trovano in `London`.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-141">The query filters the results and returns only customers that are located in `London`.</span></span>  
   
-     [!code-vb[VbLINQToSQLHowTos&#11;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_1.vb)]  
+     <span data-ttu-id="6fdd5-142">[!code-vb[VbLINQToSQLHowTos&#11;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="6fdd5-142">[!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_1.vb)]</span></span>  
   
-4.  Premere F5 per eseguire il progetto e visualizzare i risultati.  
+4.  <span data-ttu-id="6fdd5-143">Premere F5 per eseguire il progetto e visualizzare i risultati.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-143">Press F5 to run your project and view the results.</span></span>  
   
-5.  Di seguito sono alcuni altri filtri che è possibile provare.  
+5.  <span data-ttu-id="6fdd5-144">Di seguito sono alcuni altri filtri che è possibile provare.</span><span class="sxs-lookup"><span data-stu-id="6fdd5-144">Following are some other filters that you can try.</span></span>  
   
-     [!code-vb[VbLINQToSQLHowTos&#12;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
+     <span data-ttu-id="6fdd5-145">[!code-vb[VbLINQToSQLHowTos&#12;](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="6fdd5-145">[!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Query](../../../../visual-basic/language-reference/queries/queries.md)   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
- [Metodi DataContext (O/R Designer)](https://docs.microsoft.com/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a><span data-ttu-id="6fdd5-146">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6fdd5-146">See Also</span></span>  
+ <span data-ttu-id="6fdd5-147">[LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md) </span><span class="sxs-lookup"><span data-stu-id="6fdd5-147">[LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md) </span></span>  
+<span data-ttu-id="6fdd5-148"> [Query](../../../../visual-basic/language-reference/queries/queries.md) </span><span class="sxs-lookup"><span data-stu-id="6fdd5-148"> [Queries](../../../../visual-basic/language-reference/queries/queries.md) </span></span>  
+<span data-ttu-id="6fdd5-149"> [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) </span><span class="sxs-lookup"><span data-stu-id="6fdd5-149"> [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) </span></span>  
+<span data-ttu-id="6fdd5-150"> [Metodi DataContext (O/R Designer)](https://docs.microsoft.com/visualstudio/data-tools/datacontext-methods-o-r-designer)</span><span class="sxs-lookup"><span data-stu-id="6fdd5-150"> [DataContext Methods (O/R Designer)](https://docs.microsoft.com/visualstudio/data-tools/datacontext-methods-o-r-designer)</span></span>
 

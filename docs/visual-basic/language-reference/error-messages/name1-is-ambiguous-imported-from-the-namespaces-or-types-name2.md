@@ -32,24 +32,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 90e1f77650845f9d0a49ba0b6c3b0b470dca5a9b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 435689c201452cff2cb9b9532cd70281f3061ec9
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>'&lt;nome1&gt;'è ambiguo, importato dagli spazi dei nomi o tipi'&lt;nome2&gt;'
-È stato specificato un nome che è ambiguo ed è quindi in conflitto con un altro nome. Il [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilatore non dispone di regole di risoluzione dei conflitti, è necessario evitare ambiguità nei nomi manualmente.  
+# <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a><span data-ttu-id="fa225-102">'&lt;nome1&gt;'è ambiguo, importato dagli spazi dei nomi o tipi'&lt;nome2&gt;'</span><span class="sxs-lookup"><span data-stu-id="fa225-102">&#39;&lt;name1&gt;&#39; is ambiguous, imported from the namespaces or types &#39;&lt;name2&gt;&#39;</span></span>
+<span data-ttu-id="fa225-103">È stato specificato un nome che è ambiguo ed è quindi in conflitto con un altro nome.</span><span class="sxs-lookup"><span data-stu-id="fa225-103">You have provided a name that is ambiguous and therefore conflicts with another name.</span></span> <span data-ttu-id="fa225-104">Il [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilatore non dispone di regole di risoluzione dei conflitti, è necessario evitare ambiguità nei nomi manualmente.</span><span class="sxs-lookup"><span data-stu-id="fa225-104">The [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compiler does not have any conflict resolution rules; you must disambiguate names yourself.</span></span>  
   
- **ID errore:** BC30561  
+ <span data-ttu-id="fa225-105">**ID errore:** BC30561</span><span class="sxs-lookup"><span data-stu-id="fa225-105">**Error ID:** BC30561</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="fa225-106">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="fa225-106">To correct this error</span></span>  
   
-1.  Evitare ambiguità nel nome rimuovendo le importazioni dello spazio dei nomi.  
+1.  <span data-ttu-id="fa225-107">Evitare ambiguità nel nome rimuovendo le importazioni dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="fa225-107">Disambiguate the name by removing namespace imports.</span></span>  
   
-2.  Specificare un nome completo.  
+2.  <span data-ttu-id="fa225-108">Specificare un nome completo.</span><span class="sxs-lookup"><span data-stu-id="fa225-108">Fully qualify the name.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [Istruzione Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)
+## <a name="see-also"></a><span data-ttu-id="fa225-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fa225-109">See Also</span></span>  
+ <span data-ttu-id="fa225-110">[Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) </span><span class="sxs-lookup"><span data-stu-id="fa225-110">[Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) </span></span>  
+<span data-ttu-id="fa225-111"> [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md) </span><span class="sxs-lookup"><span data-stu-id="fa225-111"> [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md) </span></span>  
+<span data-ttu-id="fa225-112"> [Istruzione Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)</span><span class="sxs-lookup"><span data-stu-id="fa225-112"> [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md)</span></span>

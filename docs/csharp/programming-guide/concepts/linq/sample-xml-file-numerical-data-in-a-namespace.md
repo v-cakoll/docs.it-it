@@ -26,10 +26,10 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>File XML di esempio: dati numerici in uno spazio dei nomi
-Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Questo file contiene dati numerici per il calcolo della somma e della media, nonché per il raggruppamento. L'XML si trova in uno spazio dei nomi.  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="4c9de-102">File XML di esempio: dati numerici in uno spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="4c9de-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="4c9de-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4c9de-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="4c9de-104">Questo file contiene dati numerici per il calcolo della somma e della media, nonché per il raggruppamento.</span><span class="sxs-lookup"><span data-stu-id="4c9de-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="4c9de-105">L'XML si trova in uno spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="4c9de-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a>Dati  
+## <a name="data"></a><span data-ttu-id="4c9de-106">Dati</span><span class="sxs-lookup"><span data-stu-id="4c9de-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -72,6 +72,6 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Documenti XML di esempio (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="4c9de-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4c9de-107">See Also</span></span>  
+ [<span data-ttu-id="4c9de-108">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="4c9de-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

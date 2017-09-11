@@ -21,15 +21,15 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Procedura: Trovare elementi con un attributo specifico (XPath-LINQ to XML) (C#)
-Talvolta si desidera individuare tutti gli elementi con un attributo specifico. Il contenuto dell'attributo non è rilevante perché si desidera solo individuare gli elementi in cui tale attributo è presente.  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="5bf5f-102">Procedura: Trovare elementi con un attributo specifico (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="5bf5f-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="5bf5f-103">Talvolta si desidera individuare tutti gli elementi con un attributo specifico.</span><span class="sxs-lookup"><span data-stu-id="5bf5f-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="5bf5f-104">Il contenuto dell'attributo non è rilevante</span><span class="sxs-lookup"><span data-stu-id="5bf5f-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="5bf5f-105">perché si desidera solo individuare gli elementi in cui tale attributo è presente.</span><span class="sxs-lookup"><span data-stu-id="5bf5f-105">Instead, you want to select based on the existence of the attribute.</span></span>  
   
- L'espressione XPath è:  
+ <span data-ttu-id="5bf5f-106">L'espressione XPath è:</span><span class="sxs-lookup"><span data-stu-id="5bf5f-106">The XPath expression is:</span></span>  
   
  `./*[@Select]`  
   
-## <a name="example"></a>Esempio  
- Nel codice seguente vengono selezionati solo gli elementi con attributo `Select`.  
+## <a name="example"></a><span data-ttu-id="5bf5f-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="5bf5f-107">Example</span></span>  
+ <span data-ttu-id="5bf5f-108">Nel codice seguente vengono selezionati solo gli elementi con attributo `Select`.</span><span class="sxs-lookup"><span data-stu-id="5bf5f-108">The following code selects just the elements that have the `Select` attribute.</span></span>  
   
 ```csharp  
 XElement doc = XElement.Parse(  
@@ -60,7 +60,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="5bf5f-109">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="5bf5f-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -68,6 +68,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to XML per gli utenti di XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="5bf5f-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5bf5f-110">See Also</span></span>  
+ [<span data-ttu-id="5bf5f-111">LINQ to XML per gli utenti di XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="5bf5f-111">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

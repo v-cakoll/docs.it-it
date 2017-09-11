@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 72c33700766362e41df226465759797192e36e8b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4b55af9f6e7834d35ee59847e1d6e57f6c5eb5a4
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a>File XML di esempio: ordini di acquisto consolidati
-Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Questo file è costituito da un set di ordini di acquisto contenenti forme diverse e relativi a più società. Gli ordini di acquisto di ciascuna società sono inseriti in spazi dei nomi distinti.  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="c88ba-102">File XML di esempio: ordini di acquisto consolidati</span><span class="sxs-lookup"><span data-stu-id="c88ba-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="c88ba-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].</span><span class="sxs-lookup"><span data-stu-id="c88ba-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="c88ba-104">Questo file è costituito da un set di ordini di acquisto contenenti forme diverse e relativi a più società.</span><span class="sxs-lookup"><span data-stu-id="c88ba-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="c88ba-105">Gli ordini di acquisto di ciascuna società sono inseriti in spazi dei nomi distinti.</span><span class="sxs-lookup"><span data-stu-id="c88ba-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="c88ba-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="c88ba-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -161,5 +162,5 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Documenti XML di esempio (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="c88ba-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c88ba-107">See Also</span></span>  
+ [<span data-ttu-id="c88ba-108">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c88ba-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

@@ -36,21 +36,21 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="floating-point-types-table-c-reference"></a>Tabella dei tipi a virgola mobile (Riferimenti per C#)
-La tabella seguente mostra la precisione e gli intervalli approssimativi per i tipi a virgola mobile.  
+# <a name="floating-point-types-table-c-reference"></a><span data-ttu-id="32287-102">Tabella dei tipi a virgola mobile (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="32287-102">Floating-Point Types Table (C# Reference)</span></span>
+<span data-ttu-id="32287-103">La tabella seguente mostra la precisione e gli intervalli approssimativi per i tipi a virgola mobile.</span><span class="sxs-lookup"><span data-stu-id="32287-103">The following table shows the precision and approximate ranges for the floating-point types.</span></span>  
   
-|Tipo|Intervallo approssimativo|Precisione|  
+|<span data-ttu-id="32287-104">Tipo</span><span class="sxs-lookup"><span data-stu-id="32287-104">Type</span></span>|<span data-ttu-id="32287-105">Intervallo approssimativo</span><span class="sxs-lookup"><span data-stu-id="32287-105">Approximate range</span></span>|<span data-ttu-id="32287-106">Precisione</span><span class="sxs-lookup"><span data-stu-id="32287-106">Precision</span></span>|  
 |----------|-----------------------|---------------|  
-|[float](float.md)|Da ±1.5e−45 e ±3.4e38|7 cifre|  
-|[double](double.md)|Da ±5.0e−324 a ±1.7e308|15-16 cifre|  
+|[<span data-ttu-id="32287-107">float</span><span class="sxs-lookup"><span data-stu-id="32287-107">float</span></span>](float.md)|<span data-ttu-id="32287-108">Da ±1.5e−45 e ±3.4e38</span><span class="sxs-lookup"><span data-stu-id="32287-108">±1.5e−45 to ±3.4e38</span></span>|<span data-ttu-id="32287-109">7 cifre</span><span class="sxs-lookup"><span data-stu-id="32287-109">7 digits</span></span>|  
+|[<span data-ttu-id="32287-110">double</span><span class="sxs-lookup"><span data-stu-id="32287-110">double</span></span>](double.md)|<span data-ttu-id="32287-111">Da ±5.0e−324 a ±1.7e308</span><span class="sxs-lookup"><span data-stu-id="32287-111">±5.0e−324 to ±1.7e308</span></span>|<span data-ttu-id="32287-112">15-16 cifre</span><span class="sxs-lookup"><span data-stu-id="32287-112">15-16 digits</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Tabella dei valori predefiniti](default-values-table.md)   
- [Tabella dei tipi predefiniti](built-in-types-table.md)   
- [Tabella dei tipi integrali](integral-types-table.md)   
- [Tabella di formattazione dei risultati numerici](formatting-numeric-results-table.md)   
- [Tabelle di riferimento per i tipi](reference-tables-for-types.md)   
- [decimal](decimal.md)
+## <a name="see-also"></a><span data-ttu-id="32287-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="32287-113">See Also</span></span>  
+ <span data-ttu-id="32287-114">[Riferimenti per C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="32287-114">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="32287-115">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="32287-115">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="32287-116">[Tabella dei valori predefiniti](default-values-table.md) </span><span class="sxs-lookup"><span data-stu-id="32287-116">[Default Values Table](default-values-table.md) </span></span>  
+ <span data-ttu-id="32287-117">[Tabella dei tipi predefiniti](built-in-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="32287-117">[Built-In Types Table](built-in-types-table.md) </span></span>  
+ <span data-ttu-id="32287-118">[Tabella dei tipi integrali](integral-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="32287-118">[Integral Types Table](integral-types-table.md) </span></span>  
+ <span data-ttu-id="32287-119">[Tabella di formattazione dei risultati numerici](formatting-numeric-results-table.md) </span><span class="sxs-lookup"><span data-stu-id="32287-119">[Formatting Numeric Results Table](formatting-numeric-results-table.md) </span></span>  
+ <span data-ttu-id="32287-120">[Tabelle di riferimento per i tipi](reference-tables-for-types.md) </span><span class="sxs-lookup"><span data-stu-id="32287-120">[Reference Tables for Types](reference-tables-for-types.md) </span></span>  
+ [<span data-ttu-id="32287-121">decimal</span><span class="sxs-lookup"><span data-stu-id="32287-121">decimal</span></span>](decimal.md)
 

@@ -26,24 +26,24 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="grouping-data-c"></a>Raggruppamento dei dati (C#)
-Il raggruppamento consiste nell'inserire i dati in gruppi in modo che gli elementi in ogni gruppo condividano un attributo comune.  
+# <a name="grouping-data-c"></a><span data-ttu-id="aa50e-102">Raggruppamento dei dati (C#)</span><span class="sxs-lookup"><span data-stu-id="aa50e-102">Grouping Data (C#)</span></span>
+<span data-ttu-id="aa50e-103">Il raggruppamento consiste nell'inserire i dati in gruppi in modo che gli elementi in ogni gruppo condividano un attributo comune.</span><span class="sxs-lookup"><span data-stu-id="aa50e-103">Grouping refers to the operation of putting data into groups so that the elements in each group share a common attribute.</span></span>  
   
- Nella figura seguente vengono illustrati i risultati del raggruppamento di una sequenza di caratteri. La chiave di ogni gruppo è il carattere.  
+ <span data-ttu-id="aa50e-104">Nella figura seguente vengono illustrati i risultati del raggruppamento di una sequenza di caratteri.</span><span class="sxs-lookup"><span data-stu-id="aa50e-104">The following illustration shows the results of grouping a sequence of characters.</span></span> <span data-ttu-id="aa50e-105">La chiave di ogni gruppo è il carattere.</span><span class="sxs-lookup"><span data-stu-id="aa50e-105">The key for each group is the character.</span></span>  
   
- ![Operazioni di raggruppamento LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ <span data-ttu-id="aa50e-106">![Operazioni di raggruppamento LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")</span><span class="sxs-lookup"><span data-stu-id="aa50e-106">![LINQ Grouping Operations](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")</span></span>  
   
- Nella sezione seguente vengono elencati i metodi degli operatori query standard che eseguono il raggruppamento degli elementi di dati.  
+ <span data-ttu-id="aa50e-107">Nella sezione seguente vengono elencati i metodi degli operatori query standard che eseguono il raggruppamento degli elementi di dati.</span><span class="sxs-lookup"><span data-stu-id="aa50e-107">The standard query operator methods that group data elements are listed in the following section.</span></span>  
   
-## <a name="methods"></a>Metodi  
+## <a name="methods"></a><span data-ttu-id="aa50e-108">Metodi</span><span class="sxs-lookup"><span data-stu-id="aa50e-108">Methods</span></span>  
   
-|Nome metodo|Descrizione|Sintassi di espressione della query C#|Altre informazioni|  
+|<span data-ttu-id="aa50e-109">Nome metodo</span><span class="sxs-lookup"><span data-stu-id="aa50e-109">Method Name</span></span>|<span data-ttu-id="aa50e-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="aa50e-110">Description</span></span>|<span data-ttu-id="aa50e-111">Sintassi di espressione della query C#</span><span class="sxs-lookup"><span data-stu-id="aa50e-111">C# Query Expression Syntax</span></span>|<span data-ttu-id="aa50e-112">Altre informazioni</span><span class="sxs-lookup"><span data-stu-id="aa50e-112">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|GroupBy|Raggruppa gli elementi che condividono un attributo comune. Ogni gruppo è rappresentato da un oggetto <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> -oppure-<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=fullName>|  
-|ToLookup|Inserisce gli elementi in un oggetto <xref:System.Linq.Lookup%602>, un dizionario uno-a-molti, sulla base di una funzione del selettore di chiavi.|Non applicabile.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>|  
+|<span data-ttu-id="aa50e-113">GroupBy</span><span class="sxs-lookup"><span data-stu-id="aa50e-113">GroupBy</span></span>|<span data-ttu-id="aa50e-114">Raggruppa gli elementi che condividono un attributo comune.</span><span class="sxs-lookup"><span data-stu-id="aa50e-114">Groups elements that share a common attribute.</span></span> <span data-ttu-id="aa50e-115">Ogni gruppo è rappresentato da un oggetto <xref:System.Linq.IGrouping%602>.</span><span class="sxs-lookup"><span data-stu-id="aa50e-115">Each group is represented by an <xref:System.Linq.IGrouping%602> object.</span></span>|`group … by`<br /><br /> <span data-ttu-id="aa50e-116">-oppure-</span><span class="sxs-lookup"><span data-stu-id="aa50e-116">-or-</span></span><br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=fullName>|  
+|<span data-ttu-id="aa50e-117">ToLookup</span><span class="sxs-lookup"><span data-stu-id="aa50e-117">ToLookup</span></span>|<span data-ttu-id="aa50e-118">Inserisce gli elementi in un oggetto <xref:System.Linq.Lookup%602>, un dizionario uno-a-molti, sulla base di una funzione del selettore di chiavi.</span><span class="sxs-lookup"><span data-stu-id="aa50e-118">Inserts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span>|<span data-ttu-id="aa50e-119">Non applicabile.</span><span class="sxs-lookup"><span data-stu-id="aa50e-119">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=fullName>|  
   
-## <a name="query-expression-syntax-example"></a>Esempio di sintassi delle espressioni di query  
- Nell'esempio di codice seguente viene illustrato come usare la clausola `group by` per raggruppare i numeri interi in un elenco a seconda che siano numeri pari o numeri dispari.  
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="aa50e-120">Esempio di sintassi delle espressioni di query</span><span class="sxs-lookup"><span data-stu-id="aa50e-120">Query Expression Syntax Example</span></span>  
+ <span data-ttu-id="aa50e-121">Nell'esempio di codice seguente viene illustrato come usare la clausola `group by` per raggruppare i numeri interi in un elenco a seconda che siano numeri pari o numeri dispari.</span><span class="sxs-lookup"><span data-stu-id="aa50e-121">The following code example uses the `group by` clause to group integers in a list according to whether they are even or odd.</span></span>  
   
 ```csharp  
 List<int> numbers = new List<int>() { 35, 44, 200, 84, 3987, 4, 199, 329, 446, 208 };  
@@ -76,13 +76,13 @@ foreach (var group in query)
 */  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq>   
- [Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Clausola group](../../../../csharp/language-reference/keywords/group-clause.md)   
- [Procedura: Creare un gruppo annidato](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)   
- [Procedura: Raggruppare file per estensione (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)   
- [Procedura: Raggruppare i risultati di una query](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)   
- [Procedura: Eseguire una sottoquery su un'operazione di raggruppamento](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)   
- [Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a><span data-ttu-id="aa50e-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aa50e-122">See Also</span></span>  
+ <span data-ttu-id="aa50e-123"><xref:System.Linq></span><span class="sxs-lookup"><span data-stu-id="aa50e-123"><xref:System.Linq></span></span>   
+ <span data-ttu-id="aa50e-124">[Cenni preliminari sugli operatori di query standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) </span><span class="sxs-lookup"><span data-stu-id="aa50e-124">[Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) </span></span>  
+ <span data-ttu-id="aa50e-125">[Clausola group](../../../../csharp/language-reference/keywords/group-clause.md) </span><span class="sxs-lookup"><span data-stu-id="aa50e-125">[group clause](../../../../csharp/language-reference/keywords/group-clause.md) </span></span>  
+ <span data-ttu-id="aa50e-126">[Procedura: Creare un gruppo annidato](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md) </span><span class="sxs-lookup"><span data-stu-id="aa50e-126">[How to: Create a Nested Group](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md) </span></span>  
+ <span data-ttu-id="aa50e-127">[Procedura: Raggruppare file per estensione (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md) </span><span class="sxs-lookup"><span data-stu-id="aa50e-127">[How to: Group Files by Extension (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md) </span></span>  
+ <span data-ttu-id="aa50e-128">[Procedura: Raggruppare i risultati di una query](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md) </span><span class="sxs-lookup"><span data-stu-id="aa50e-128">[How to: Group Query Results](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md) </span></span>  
+ <span data-ttu-id="aa50e-129">[Procedura: Eseguire una sottoquery su un'operazione di raggruppamento](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md) </span><span class="sxs-lookup"><span data-stu-id="aa50e-129">[How to: Perform a Subquery on a Grouping Operation](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md) </span></span>  
+ [<span data-ttu-id="aa50e-130">Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="aa50e-130">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
 

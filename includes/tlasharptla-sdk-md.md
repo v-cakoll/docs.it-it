@@ -1,1 +1,1 @@
-Software Development Kit (SDK)
+<span data-ttu-id="41230-101">Software Development Kit (SDK)</span><span class="sxs-lookup"><span data-stu-id="41230-101">software development kit (SDK)</span></span>

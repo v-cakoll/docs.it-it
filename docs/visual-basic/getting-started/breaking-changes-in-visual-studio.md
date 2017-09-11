@@ -35,16 +35,16 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="visual-basic-breaking-changes-in-visual-studio"></a>Modifiche importanti di Visual Basic in Visual Studio
-Per la documentazione più recente di Visual Studio 2017, vedere [Documentazione di Visual Studio 2017](http://docs.microsoft.com/visualstudio/).
+# <a name="visual-basic-breaking-changes-in-visual-studio"></a><span data-ttu-id="ca5c7-102">Modifiche importanti di Visual Basic in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="ca5c7-102">Visual Basic Breaking Changes in Visual Studio</span></span>
+<span data-ttu-id="ca5c7-103">Per la documentazione più recente di Visual Studio 2017, vedere [Documentazione di Visual Studio 2017](http://docs.microsoft.com/visualstudio/).</span><span class="sxs-lookup"><span data-stu-id="ca5c7-103">For the latest documentation on Visual Studio 2017, see [Visual Studio 2017 Documentation](http://docs.microsoft.com/visualstudio/).</span></span>
 
-Se non si apportano modifiche in Visual Basic in Visual Studio 2015, non sarà possibile compilare un'applicazione creata in Visual Basic in Visual Studio 2013 o modificarne il comportamento in fase di esecuzione.  
+<span data-ttu-id="ca5c7-104">Se non si apportano modifiche in Visual Basic in Visual Studio 2015, non sarà possibile compilare un'applicazione creata in Visual Basic in Visual Studio 2013 o modificarne il comportamento in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="ca5c7-104">No changes in Visual Basic in Visual Studio 2015 will prevent an application that was created in Visual Basic in Visual Studio 2013 from compiling or change the run-time behavior of such an application.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Matrici](../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Espressioni lambda](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Istruzione For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [Introduzione](../../visual-basic/getting-started/index.md)   
- [In quali casi una correzione di linguaggio non sostanziale è importante?](http://go.microsoft.com/fwlink/?LinkId=259542)
+## <a name="see-also"></a><span data-ttu-id="ca5c7-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ca5c7-105">See Also</span></span>  
+ <span data-ttu-id="ca5c7-106">[Matrici](../../visual-basic/programming-guide/language-features/arrays/index.md) </span><span class="sxs-lookup"><span data-stu-id="ca5c7-106">[Arrays](../../visual-basic/programming-guide/language-features/arrays/index.md) </span></span>  
+ <span data-ttu-id="ca5c7-107">[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md) </span><span class="sxs-lookup"><span data-stu-id="ca5c7-107">[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md) </span></span>  
+ <span data-ttu-id="ca5c7-108">[Espressioni lambda](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="ca5c7-108">[Lambda Expressions](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span></span>  
+ <span data-ttu-id="ca5c7-109">[Istruzione For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md) </span><span class="sxs-lookup"><span data-stu-id="ca5c7-109">[For Each...Next Statement](../../visual-basic/language-reference/statements/for-each-next-statement.md) </span></span>  
+ <span data-ttu-id="ca5c7-110">[Introduzione](../../visual-basic/getting-started/index.md) </span><span class="sxs-lookup"><span data-stu-id="ca5c7-110">[Getting Started](../../visual-basic/getting-started/index.md) </span></span>  
+ [<span data-ttu-id="ca5c7-111">In quali casi una correzione di linguaggio non sostanziale è importante?</span><span class="sxs-lookup"><span data-stu-id="ca5c7-111">When is a non-breaking language fix breaking?</span></span>](http://go.microsoft.com/fwlink/?LinkId=259542)
 

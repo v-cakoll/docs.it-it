@@ -26,20 +26,20 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/08/2017
 
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>Procedura: Eseguire una query su un ArrayList con LINQ (C#)
-Quando si usa LINQ per eseguire una query su raccolte <xref:System.Collections.IEnumerable> non generiche, ad esempio <xref:System.Collections.ArrayList>, è necessario dichiarare in modo esplicito il tipo della variabile di intervallo in base al tipo specifico di oggetti nella raccolta. Ad esempio, con un <xref:System.Collections.ArrayList> di oggetti `Student`, la [clausola from](../../../../csharp/language-reference/keywords/from-clause.md) sarà simile alla seguente:  
+# <a name="how-to-query-an-arraylist-with-linq-c"></a><span data-ttu-id="6ff88-102">Procedura: Eseguire una query su un ArrayList con LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="6ff88-102">How to: Query an ArrayList with LINQ (C#)</span></span>
+<span data-ttu-id="6ff88-103">Quando si usa LINQ per eseguire una query su raccolte <xref:System.Collections.IEnumerable> non generiche, ad esempio <xref:System.Collections.ArrayList>, è necessario dichiarare in modo esplicito il tipo della variabile di intervallo in base al tipo specifico di oggetti nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="6ff88-103">When using LINQ to query non-generic <xref:System.Collections.IEnumerable> collections such as <xref:System.Collections.ArrayList>, you must explicitly declare the type of the range variable to reflect the specific type of the objects in the collection.</span></span> <span data-ttu-id="6ff88-104">Ad esempio, con un <xref:System.Collections.ArrayList> di oggetti `Student`, la [clausola from](../../../../csharp/language-reference/keywords/from-clause.md) sarà simile alla seguente:</span><span class="sxs-lookup"><span data-stu-id="6ff88-104">For example, if you have an <xref:System.Collections.ArrayList> of `Student` objects, your [from clause](../../../../csharp/language-reference/keywords/from-clause.md) should look like this:</span></span>  
   
 ```  
 var query = from Student s in arrList  
 ...  
 ```  
   
- Specificando il tipo della variabile di intervallo, si esegue il cast di ogni elemento di <xref:System.Collections.ArrayList> in `Student`.  
+ <span data-ttu-id="6ff88-105">Specificando il tipo della variabile di intervallo, si esegue il cast di ogni elemento di <xref:System.Collections.ArrayList> in `Student`.</span><span class="sxs-lookup"><span data-stu-id="6ff88-105">By specifying the type of the range variable, you are casting each item in the <xref:System.Collections.ArrayList> to a `Student`.</span></span>  
   
- L'uso di una variabile di intervallo tipizzata in modo esplicito in un'espressione di query è equivalente alla chiamata del metodo <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> genera un'eccezione se non è possibile eseguire il cast specificato. <xref:System.Linq.Enumerable.Cast%2A> e <xref:System.Linq.Enumerable.OfType%2A> sono i due metodi dell'operatore query standard che operano sui tipi <xref:System.Collections.IEnumerable> non generici. Per altre informazioni, vedere [Relazioni tra i tipi nelle operazioni di query LINQ](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
+ <span data-ttu-id="6ff88-106">L'uso di una variabile di intervallo tipizzata in modo esplicito in un'espressione di query è equivalente alla chiamata del metodo <xref:System.Linq.Enumerable.Cast%2A>.</span><span class="sxs-lookup"><span data-stu-id="6ff88-106">The use of an explicitly typed range variable in a query expression is equivalent to calling the <xref:System.Linq.Enumerable.Cast%2A> method.</span></span> <span data-ttu-id="6ff88-107"><xref:System.Linq.Enumerable.Cast%2A> genera un'eccezione se non è possibile eseguire il cast specificato.</span><span class="sxs-lookup"><span data-stu-id="6ff88-107"><xref:System.Linq.Enumerable.Cast%2A> throws an exception if the specified cast cannot be performed.</span></span> <span data-ttu-id="6ff88-108"><xref:System.Linq.Enumerable.Cast%2A> e <xref:System.Linq.Enumerable.OfType%2A> sono i due metodi dell'operatore query standard che operano sui tipi <xref:System.Collections.IEnumerable> non generici.</span><span class="sxs-lookup"><span data-stu-id="6ff88-108"><xref:System.Linq.Enumerable.Cast%2A> and <xref:System.Linq.Enumerable.OfType%2A> are the two Standard Query Operator methods that operate on non-generic <xref:System.Collections.IEnumerable> types.</span></span> <span data-ttu-id="6ff88-109">Per altre informazioni, vedere [Relazioni tra i tipi nelle operazioni di query LINQ](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).</span><span class="sxs-lookup"><span data-stu-id="6ff88-109">For more information, see[Type Relationships in LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).</span></span>  
   
-## <a name="example"></a>Esempio  
- L'esempio seguente mostra una query semplice su un oggetto <xref:System.Collections.ArrayList>. Si noti che questo esempio usa gli inizializzatori di oggetto quando il codice chiama il metodo <xref:System.Collections.ArrayList.Add%2A>, anche se non si tratta di un requisito.  
+## <a name="example"></a><span data-ttu-id="6ff88-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="6ff88-110">Example</span></span>  
+ <span data-ttu-id="6ff88-111">L'esempio seguente mostra una query semplice su un oggetto <xref:System.Collections.ArrayList>.</span><span class="sxs-lookup"><span data-stu-id="6ff88-111">The following example shows a simple query over an <xref:System.Collections.ArrayList>.</span></span> <span data-ttu-id="6ff88-112">Si noti che questo esempio usa gli inizializzatori di oggetto quando il codice chiama il metodo <xref:System.Collections.ArrayList.Add%2A>, anche se non si tratta di un requisito.</span><span class="sxs-lookup"><span data-stu-id="6ff88-112">Note that this example uses object initializers when the code calls the <xref:System.Collections.ArrayList.Add%2A> method, but this is not a requirement.</span></span>  
   
 ```csharp  
 using System;  
@@ -100,6 +100,6 @@ namespace NonGenericLINQ
 */  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a><span data-ttu-id="6ff88-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6ff88-113">See Also</span></span>  
+ [<span data-ttu-id="6ff88-114">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="6ff88-114">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 

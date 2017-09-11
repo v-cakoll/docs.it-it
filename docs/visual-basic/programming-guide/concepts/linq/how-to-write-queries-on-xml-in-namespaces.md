@@ -20,21 +20,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5af26b7ec0a2ab465917cd0ee62f65a97f5f0e40
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d3f16cecf118e88b3309384e880cc895ed7f2674
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Procedura: scrivere query in XML negli spazi dei nomi (Visual Basic)
-Per scrivere una query su codice XML in uno spazio dei nomi, è necessario utilizzare <xref:System.Xml.Linq.XName>oggetti con lo spazio dei nomi corretto.</xref:System.Xml.Linq.XName>  
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a><span data-ttu-id="721cc-102">Procedura: scrivere query in XML negli spazi dei nomi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="721cc-102">How to: Write Queries on XML in Namespaces (Visual Basic)</span></span>
+<span data-ttu-id="721cc-103">Per scrivere una query su codice XML in uno spazio dei nomi, è necessario utilizzare <xref:System.Xml.Linq.XName>oggetti con lo spazio dei nomi corretto.</xref:System.Xml.Linq.XName></span><span class="sxs-lookup"><span data-stu-id="721cc-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
   
- In Visual Basic, l'approccio più comune consiste nel definire uno spazio dei nomi globale, quindi usare valori letterali e proprietà XML che usano lo spazio dei nomi globale. È possibile definire uno spazio dei nomi globale predefinito, nel qual caso gli elementi dei valori letterali XML saranno inclusi nello spazio dei nomi per impostazione predefinita. In alternativa, è possibile definire uno spazio dei nomi globale con un prefisso e quindi usare il prefisso come richiesto nei valori letterali e nelle proprietà XML. Come con altri tipi di XML, gli attributi non sono mai inclusi in alcuno spazio dei nomi per impostazione predefinita.  
+ <span data-ttu-id="721cc-104">In Visual Basic, l'approccio più comune consiste nel definire uno spazio dei nomi globale, quindi usare valori letterali e proprietà XML che usano lo spazio dei nomi globale.</span><span class="sxs-lookup"><span data-stu-id="721cc-104">In Visual Basic, the most common approach is to define a global namespace, and then use XML literals and XML properties that use the global namespace.</span></span> <span data-ttu-id="721cc-105">È possibile definire uno spazio dei nomi globale predefinito, nel qual caso gli elementi dei valori letterali XML saranno inclusi nello spazio dei nomi per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="721cc-105">You can define a global default namespace, in which case elements in the XML literals will be in the namespace by default.</span></span> <span data-ttu-id="721cc-106">In alternativa, è possibile definire uno spazio dei nomi globale con un prefisso e quindi usare il prefisso come richiesto nei valori letterali e nelle proprietà XML.</span><span class="sxs-lookup"><span data-stu-id="721cc-106">Alternatively, you can define a global namespace with a prefix, and then use the prefix as required in the XML literals, and in XML properties.</span></span> <span data-ttu-id="721cc-107">Come con altri tipi di XML, gli attributi non sono mai inclusi in alcuno spazio dei nomi per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="721cc-107">As with other forms of XML, attributes are always in no namespace by default.</span></span>  
   
- Il primo set di esempi in questo argomento viene illustrato come creare una struttura ad albero XML in uno spazio dei nomi predefinito. Il secondo set viene illustrato come creare una struttura ad albero XML in uno spazio dei nomi con un prefisso.  
+ <span data-ttu-id="721cc-108">Il primo set di esempi in questo argomento viene illustrato come creare una struttura ad albero XML in uno spazio dei nomi predefinito.</span><span class="sxs-lookup"><span data-stu-id="721cc-108">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="721cc-109">Il secondo set viene illustrato come creare una struttura ad albero XML in uno spazio dei nomi con un prefisso.</span><span class="sxs-lookup"><span data-stu-id="721cc-109">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene creato un albero XML incluso in uno spazio dei nomi predefinito. Viene quindi recuperata una raccolta di elementi.  
+## <a name="example"></a><span data-ttu-id="721cc-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="721cc-110">Example</span></span>  
+ <span data-ttu-id="721cc-111">Nell'esempio seguente viene creato un albero XML incluso in uno spazio dei nomi predefinito.</span><span class="sxs-lookup"><span data-stu-id="721cc-111">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="721cc-112">Viene quindi recuperata una raccolta di elementi.</span><span class="sxs-lookup"><span data-stu-id="721cc-112">It then retrieves a collection of elements.</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -60,7 +61,7 @@ Module Module1
 End Module  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="721cc-113">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="721cc-113">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -68,10 +69,10 @@ End Module
 3  
 ```  
   
-## <a name="example"></a>Esempio  
- In Visual Basic, tuttavia, la scrittura di query in un albero XML che usa uno spazio dei nomi con un prefisso, è piuttosto diversa dall'esecuzione di query in un albero XML con uno spazio dei nomi predefinito. Lo spazio dei nomi con un prefisso viene in genere importato usando l'istruzione `Imports`. Il prefisso viene quindi usato nei nomi di elementi e attributi quando si crea l'albero XML. Il prefisso viene inoltre usato durante l'esecuzione di query su un albero XML tramite proprietà XML.  
+## <a name="example"></a><span data-ttu-id="721cc-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="721cc-114">Example</span></span>  
+ <span data-ttu-id="721cc-115">In Visual Basic, tuttavia, la scrittura di query in un albero XML che usa uno spazio dei nomi con un prefisso, è piuttosto diversa dall'esecuzione di query in un albero XML con uno spazio dei nomi predefinito.</span><span class="sxs-lookup"><span data-stu-id="721cc-115">In Visual Basic, however, writing queries on an XML tree that uses a namespace with a prefix is quite different from querying an XML tree in a default namespace.</span></span> <span data-ttu-id="721cc-116">Lo spazio dei nomi con un prefisso viene in genere importato usando l'istruzione `Imports`.</span><span class="sxs-lookup"><span data-stu-id="721cc-116">Typically you use the `Imports` statement to import the namespace with a prefix.</span></span> <span data-ttu-id="721cc-117">Il prefisso viene quindi usato nei nomi di elementi e attributi quando si crea l'albero XML.</span><span class="sxs-lookup"><span data-stu-id="721cc-117">You then use the prefix in the element and attribute names when you construct the XML tree.</span></span> <span data-ttu-id="721cc-118">Il prefisso viene inoltre usato durante l'esecuzione di query su un albero XML tramite proprietà XML.</span><span class="sxs-lookup"><span data-stu-id="721cc-118">You also use the prefix when querying an XML tree using XML properties.</span></span>  
   
- Nell'esempio seguente viene creata una struttura ad albero XML inclusa in uno spazio dei nomi con un prefisso. Viene quindi recuperata una raccolta di elementi.  
+ <span data-ttu-id="721cc-119">Nell'esempio seguente viene creata una struttura ad albero XML inclusa in uno spazio dei nomi con un prefisso.</span><span class="sxs-lookup"><span data-stu-id="721cc-119">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="721cc-120">Viene quindi recuperata una raccolta di elementi.</span><span class="sxs-lookup"><span data-stu-id="721cc-120">It then retrieves a collection of elements.</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -97,7 +98,7 @@ Module Module1
 End Module  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="721cc-121">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="721cc-121">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -105,5 +106,5 @@ End Module
 3  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Utilizzo di spazi dei nomi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="721cc-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="721cc-122">See Also</span></span>  
+ [<span data-ttu-id="721cc-123">Utilizzo di spazi dei nomi XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="721cc-123">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

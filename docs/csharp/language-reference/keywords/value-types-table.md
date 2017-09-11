@@ -38,32 +38,32 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="value-types-table-c-reference"></a>Tabella dei tipi di valore (Riferimenti per C#)
-Nella tabella seguente sono elencati i tipi valore di C# per categoria.  
+# <a name="value-types-table-c-reference"></a><span data-ttu-id="0290f-102">Tabella dei tipi di valore (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="0290f-102">Value Types Table (C# Reference)</span></span>
+<span data-ttu-id="0290f-103">Nella tabella seguente sono elencati i tipi valore di C# per categoria.</span><span class="sxs-lookup"><span data-stu-id="0290f-103">The following table lists the C# value types by category.</span></span>  
   
-|Tipo valore|Categoria|Suffisso del tipo|  
+|<span data-ttu-id="0290f-104">Tipo valore</span><span class="sxs-lookup"><span data-stu-id="0290f-104">Value type</span></span>|<span data-ttu-id="0290f-105">Categoria</span><span class="sxs-lookup"><span data-stu-id="0290f-105">Category</span></span>|<span data-ttu-id="0290f-106">Suffisso del tipo</span><span class="sxs-lookup"><span data-stu-id="0290f-106">Type Suffix</span></span>|  
 |----------------|--------------|-----------------|  
-|[bool](../../../csharp/language-reference/keywords/bool.md)|Booleano||  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|Senza segno, numerico, integrale||  
-|[char](../../../csharp/language-reference/keywords/char.md)|Senza segno, numerico, integrale||  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|Numerico, decimale|M o m|  
-|[double](../../../csharp/language-reference/keywords/double.md)|Numerico, virgola mobile|D o d|  
-|[enum](../../../csharp/language-reference/keywords/enum.md)|Enumerazione||  
-|[float](../../../csharp/language-reference/keywords/float.md)|Numerico, virgola mobile|F o f|  
-|[int](../../../csharp/language-reference/keywords/int.md)|Con segno, numerico, integrale||  
-|[long](../../../csharp/language-reference/keywords/long.md)|Con segno, numerico, integrale|L o l|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|Con segno, numerico, integrale||  
-|[short](../../../csharp/language-reference/keywords/short.md)|Con segno, numerico, integrale||  
-|[struct](../../../csharp/language-reference/keywords/struct.md)|Struttura definita dall'utente||  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|Senza segno, numerico, integrale|U o u|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|Senza segno, numerico, integrale|UL o ul|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|Senza segno, numerico, integrale||  
+|[<span data-ttu-id="0290f-107">bool</span><span class="sxs-lookup"><span data-stu-id="0290f-107">bool</span></span>](../../../csharp/language-reference/keywords/bool.md)|<span data-ttu-id="0290f-108">Booleano</span><span class="sxs-lookup"><span data-stu-id="0290f-108">Boolean</span></span>||  
+|[<span data-ttu-id="0290f-109">byte</span><span class="sxs-lookup"><span data-stu-id="0290f-109">byte</span></span>](../../../csharp/language-reference/keywords/byte.md)|<span data-ttu-id="0290f-110">Senza segno, numerico, integrale</span><span class="sxs-lookup"><span data-stu-id="0290f-110">Unsigned, numeric, integral</span></span>||  
+|[<span data-ttu-id="0290f-111">char</span><span class="sxs-lookup"><span data-stu-id="0290f-111">char</span></span>](../../../csharp/language-reference/keywords/char.md)|<span data-ttu-id="0290f-112">Senza segno, numerico, integrale</span><span class="sxs-lookup"><span data-stu-id="0290f-112">Unsigned, numeric, integral</span></span>||  
+|[<span data-ttu-id="0290f-113">decimal</span><span class="sxs-lookup"><span data-stu-id="0290f-113">decimal</span></span>](../../../csharp/language-reference/keywords/decimal.md)|<span data-ttu-id="0290f-114">Numerico, decimale</span><span class="sxs-lookup"><span data-stu-id="0290f-114">Numeric, decimal</span></span>|<span data-ttu-id="0290f-115">M o m</span><span class="sxs-lookup"><span data-stu-id="0290f-115">M or m</span></span>|  
+|[<span data-ttu-id="0290f-116">double</span><span class="sxs-lookup"><span data-stu-id="0290f-116">double</span></span>](../../../csharp/language-reference/keywords/double.md)|<span data-ttu-id="0290f-117">Numerico, virgola mobile</span><span class="sxs-lookup"><span data-stu-id="0290f-117">Numeric, floating-point</span></span>|<span data-ttu-id="0290f-118">D o d</span><span class="sxs-lookup"><span data-stu-id="0290f-118">D or d</span></span>|  
+|[<span data-ttu-id="0290f-119">enum</span><span class="sxs-lookup"><span data-stu-id="0290f-119">enum</span></span>](../../../csharp/language-reference/keywords/enum.md)|<span data-ttu-id="0290f-120">Enumerazione</span><span class="sxs-lookup"><span data-stu-id="0290f-120">Enumeration</span></span>||  
+|[<span data-ttu-id="0290f-121">float</span><span class="sxs-lookup"><span data-stu-id="0290f-121">float</span></span>](../../../csharp/language-reference/keywords/float.md)|<span data-ttu-id="0290f-122">Numerico, virgola mobile</span><span class="sxs-lookup"><span data-stu-id="0290f-122">Numeric, floating-point</span></span>|<span data-ttu-id="0290f-123">F o f</span><span class="sxs-lookup"><span data-stu-id="0290f-123">F or f</span></span>|  
+|[<span data-ttu-id="0290f-124">int</span><span class="sxs-lookup"><span data-stu-id="0290f-124">int</span></span>](../../../csharp/language-reference/keywords/int.md)|<span data-ttu-id="0290f-125">Con segno, numerico, integrale</span><span class="sxs-lookup"><span data-stu-id="0290f-125">Signed, numeric, integral</span></span>||  
+|[<span data-ttu-id="0290f-126">long</span><span class="sxs-lookup"><span data-stu-id="0290f-126">long</span></span>](../../../csharp/language-reference/keywords/long.md)|<span data-ttu-id="0290f-127">Con segno, numerico, integrale</span><span class="sxs-lookup"><span data-stu-id="0290f-127">Signed, numeric, integral</span></span>|<span data-ttu-id="0290f-128">L o l</span><span class="sxs-lookup"><span data-stu-id="0290f-128">L or l</span></span>|  
+|[<span data-ttu-id="0290f-129">sbyte</span><span class="sxs-lookup"><span data-stu-id="0290f-129">sbyte</span></span>](../../../csharp/language-reference/keywords/sbyte.md)|<span data-ttu-id="0290f-130">Con segno, numerico, integrale</span><span class="sxs-lookup"><span data-stu-id="0290f-130">Signed, numeric, integral</span></span>||  
+|[<span data-ttu-id="0290f-131">short</span><span class="sxs-lookup"><span data-stu-id="0290f-131">short</span></span>](../../../csharp/language-reference/keywords/short.md)|<span data-ttu-id="0290f-132">Con segno, numerico, integrale</span><span class="sxs-lookup"><span data-stu-id="0290f-132">Signed, numeric, integral</span></span>||  
+|[<span data-ttu-id="0290f-133">struct</span><span class="sxs-lookup"><span data-stu-id="0290f-133">struct</span></span>](../../../csharp/language-reference/keywords/struct.md)|<span data-ttu-id="0290f-134">Struttura definita dall'utente</span><span class="sxs-lookup"><span data-stu-id="0290f-134">User-defined structure</span></span>||  
+|[<span data-ttu-id="0290f-135">uint</span><span class="sxs-lookup"><span data-stu-id="0290f-135">uint</span></span>](../../../csharp/language-reference/keywords/uint.md)|<span data-ttu-id="0290f-136">Senza segno, numerico, integrale</span><span class="sxs-lookup"><span data-stu-id="0290f-136">Unsigned, numeric, integral</span></span>|<span data-ttu-id="0290f-137">U o u</span><span class="sxs-lookup"><span data-stu-id="0290f-137">U or u</span></span>|  
+|[<span data-ttu-id="0290f-138">ulong</span><span class="sxs-lookup"><span data-stu-id="0290f-138">ulong</span></span>](../../../csharp/language-reference/keywords/ulong.md)|<span data-ttu-id="0290f-139">Senza segno, numerico, integrale</span><span class="sxs-lookup"><span data-stu-id="0290f-139">Unsigned, numeric, integral</span></span>|<span data-ttu-id="0290f-140">UL o ul</span><span class="sxs-lookup"><span data-stu-id="0290f-140">UL or ul</span></span>|  
+|[<span data-ttu-id="0290f-141">ushort</span><span class="sxs-lookup"><span data-stu-id="0290f-141">ushort</span></span>](../../../csharp/language-reference/keywords/ushort.md)|<span data-ttu-id="0290f-142">Senza segno, numerico, integrale</span><span class="sxs-lookup"><span data-stu-id="0290f-142">Unsigned, numeric, integral</span></span>||  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Tabella dei valori predefiniti](../../../csharp/language-reference/keywords/default-values-table.md)   
- [Tipi di valore](../../../csharp/language-reference/keywords/value-types.md)   
- [Tabella di formattazione dei risultati numerici](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
- [Tabelle di riferimento per i tipi](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+## <a name="see-also"></a><span data-ttu-id="0290f-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0290f-143">See Also</span></span>  
+ <span data-ttu-id="0290f-144">[Riferimenti per C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="0290f-144">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="0290f-145">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="0290f-145">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="0290f-146">[Tabella dei valori predefiniti](../../../csharp/language-reference/keywords/default-values-table.md) </span><span class="sxs-lookup"><span data-stu-id="0290f-146">[Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md) </span></span>  
+ <span data-ttu-id="0290f-147">[Tipi di valore](../../../csharp/language-reference/keywords/value-types.md) </span><span class="sxs-lookup"><span data-stu-id="0290f-147">[Value Types](../../../csharp/language-reference/keywords/value-types.md) </span></span>  
+ <span data-ttu-id="0290f-148">[Tabella di formattazione dei risultati numerici](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md) </span><span class="sxs-lookup"><span data-stu-id="0290f-148">[Formatting Numeric Results Table](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md) </span></span>  
+ [<span data-ttu-id="0290f-149">Tabelle di riferimento per i tipi</span><span class="sxs-lookup"><span data-stu-id="0290f-149">Reference Tables for Types</span></span>](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
 

@@ -36,63 +36,63 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="c-walkthroughs"></a>Procedure dettagliate di C#
-Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, che li rende un ottimo strumento per apprendere l'utilizzo del prodotto o di una determinata area funzionale.  
+# <a name="c-walkthroughs"></a><span data-ttu-id="cac60-102">Procedure dettagliate di C#</span><span class="sxs-lookup"><span data-stu-id="cac60-102">C# Walkthroughs</span></span>
+<span data-ttu-id="cac60-103">Le procedure dettagliate forniscono istruzioni specifiche per scenari comuni, che li rende un ottimo strumento per apprendere l'utilizzo del prodotto o di una determinata area funzionale.</span><span class="sxs-lookup"><span data-stu-id="cac60-103">Walkthroughs give step-by-step instructions for common scenarios, which makes them a good place to start learning about the product or a particular feature area.</span></span>  
   
- In questa sezione vengono forniti collegamenti a procedure dettagliate di programmazione di C#.  
+ <span data-ttu-id="cac60-104">In questa sezione vengono forniti collegamenti a procedure dettagliate di programmazione di C#.</span><span class="sxs-lookup"><span data-stu-id="cac60-104">This section contains links to C# programming walkthroughs.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a><span data-ttu-id="cac60-105">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="cac60-105">In This Section</span></span>  
 
- [Accesso al Web con Async e Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Viene illustrato come creare una soluzione asincrona usando [async](../csharp/language-reference/keywords/async.md) e [await](../csharp/language-reference/keywords/await.md).  
+ [<span data-ttu-id="cac60-106">Accesso al Web con Async e Await</span><span class="sxs-lookup"><span data-stu-id="cac60-106">Accessing the Web by Using Async and Await</span></span>](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ <span data-ttu-id="cac60-107">Viene illustrato come creare una soluzione asincrona usando [async](../csharp/language-reference/keywords/async.md) e [await](../csharp/language-reference/keywords/await.md).</span><span class="sxs-lookup"><span data-stu-id="cac60-107">Shows how to create an asynchronous solution by using [async](../csharp/language-reference/keywords/async.md) and [await](../csharp/language-reference/keywords/await.md).</span></span>  
   
- [Creazione di un componente di Windows Runtime in C# o Visual Basic e chiamata da JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
- Viene illustrato come creare un tipo [!INCLUDE[wrt](~/includes/wrt-md.md)], comprimerlo in un componente [!INCLUDE[wrt](~/includes/wrt-md.md)], quindi chiamare il componente da un'app [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] progettata per Windows usando JavaScript.  
+ [<span data-ttu-id="cac60-108">Creazione di un componente di Windows Runtime in C# o Visual Basic e chiamata da JavaScript</span><span class="sxs-lookup"><span data-stu-id="cac60-108">Creating a Windows Runtime Component in C# or Visual Basic and Calling it from JavaScript</span></span>](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
+ <span data-ttu-id="cac60-109">Viene illustrato come creare un tipo [!INCLUDE[wrt](~/includes/wrt-md.md)], comprimerlo in un componente [!INCLUDE[wrt](~/includes/wrt-md.md)], quindi chiamare il componente da un'app [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] progettata per Windows usando JavaScript.</span><span class="sxs-lookup"><span data-stu-id="cac60-109">Shows how to create a [!INCLUDE[wrt](~/includes/wrt-md.md)] type, package it in a [!INCLUDE[wrt](~/includes/wrt-md.md)] component, and then call the component from a [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] app that's built for Windows by using JavaScript.</span></span>  
   
- [Programmazione di Office (C# e Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
- Viene illustrato come creare una cartella di lavoro di Excel e un documento di Word usando C# e Visual Basic.  
+ [<span data-ttu-id="cac60-110">Programmazione di Office (C# e Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cac60-110">Office Programming (C# and Visual Basic)</span></span>](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
+ <span data-ttu-id="cac60-111">Viene illustrato come creare una cartella di lavoro di Excel e un documento di Word usando C# e Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="cac60-111">Shows how to create an Excel workbook and a Word document by using C# and Visual Basic.</span></span>  
   
- [Creazione e utilizzo di oggetti dinamici (C# e Visual Basic)](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
- Viene illustrato come creare un oggetto personalizzato che espone dinamicamente il contenuto di un file di testo e come creare un progetto che usi la libreria `IronPython`.  
+ [<span data-ttu-id="cac60-112">Creazione e utilizzo di oggetti dinamici (C# e Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cac60-112">Creating and Using Dynamic Objects (C# and Visual Basic)</span></span>](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
+ <span data-ttu-id="cac60-113">Viene illustrato come creare un oggetto personalizzato che espone dinamicamente il contenuto di un file di testo e come creare un progetto che usi la libreria `IronPython`.</span><span class="sxs-lookup"><span data-stu-id="cac60-113">Shows how to create a custom object that dynamically exposes the contents of a text file, and how to create a project that uses the `IronPython` library.</span></span>  
    
- [Modifica di un controllo composito con Visual C#](https://msdn.microsoft.com/library/a6h7e207.aspx)  
- Illustra la creazione di un semplice controllo composito e l'estensione delle sue funzionalità mediante ereditarietà.  
+ [<span data-ttu-id="cac60-114">Modifica di un controllo composito con Visual C#</span><span class="sxs-lookup"><span data-stu-id="cac60-114">Authoring a Composite Control with Visual C#</span></span>](https://msdn.microsoft.com/library/a6h7e207.aspx)  
+ <span data-ttu-id="cac60-115">Illustra la creazione di un semplice controllo composito e l'estensione delle sue funzionalità mediante ereditarietà.</span><span class="sxs-lookup"><span data-stu-id="cac60-115">Demonstrates creating a simple composite control and extending its functionality through inheritance.</span></span>  
   
- [Creazione di un controllo di Windows Form che usufruisca delle funzionalità offerte da Visual Studio in fase di progettazione](https://msdn.microsoft.com/library/35ea88wb.aspx)  
- Viene illustrato come creare una finestra di progettazione personalizzata per un controllo personalizzato.  
+ [<span data-ttu-id="cac60-116">Creazione di un controllo di Windows Form che usufruisca delle funzionalità offerte da Visual Studio in fase di progettazione</span><span class="sxs-lookup"><span data-stu-id="cac60-116">Creating a Windows Forms Control that Takes Advantage of Visual Studio Design-Time Features</span></span>](https://msdn.microsoft.com/library/35ea88wb.aspx)  
+ <span data-ttu-id="cac60-117">Viene illustrato come creare una finestra di progettazione personalizzata per un controllo personalizzato.</span><span class="sxs-lookup"><span data-stu-id="cac60-117">Illustrates how to create a custom designer for a custom control.</span></span>  
   
- [Eredità da un controllo di Windows Form con Visual C#](https://msdn.microsoft.com/library/5h0k2e6x.aspx)  
- Viene illustrata la creazione di un semplice pulsante ereditato. Questo pulsante eredita le funzionalità dal pulsante Windows Form standard ed espone un membro personalizzato.  
+ [<span data-ttu-id="cac60-118">Eredità da un controllo di Windows Form con Visual C#</span><span class="sxs-lookup"><span data-stu-id="cac60-118">Inheriting from a Windows Forms Control with Visual C#</span></span>](https://msdn.microsoft.com/library/5h0k2e6x.aspx)  
+ <span data-ttu-id="cac60-119">Viene illustrata la creazione di un semplice pulsante ereditato.</span><span class="sxs-lookup"><span data-stu-id="cac60-119">Demonstrates creating a simple inherited button control.</span></span> <span data-ttu-id="cac60-120">Questo pulsante eredita le funzionalità dal pulsante Windows Form standard ed espone un membro personalizzato.</span><span class="sxs-lookup"><span data-stu-id="cac60-120">This button inherits functionality from the standard Windows Forms button and exposes a custom member.</span></span>  
   
- [Debug di controlli di Windows Form personalizzati in fase di progettazione](https://msdn.microsoft.com/library/5ytx0z24.aspx)  
- Viene descritto come eseguire il debug del comportamento in fase di progettazione del controllo personalizzato.
+ [<span data-ttu-id="cac60-121">Debug di controlli di Windows Form personalizzati in fase di progettazione</span><span class="sxs-lookup"><span data-stu-id="cac60-121">Debugging Custom Windows Forms Controls at Design Time</span></span>](https://msdn.microsoft.com/library/5ytx0z24.aspx)  
+ <span data-ttu-id="cac60-122">Viene descritto come eseguire il debug del comportamento in fase di progettazione del controllo personalizzato.</span><span class="sxs-lookup"><span data-stu-id="cac60-122">Describes how to debug the design-time behavior of your custom control.</span></span>
 
- [Esecuzione di attività comuni usando gli smart tag nei controlli Windows Form](https://msdn.microsoft.com/library/xhz359sc.aspx)  
- Vengono illustrate alcune delle attività comunemente svolte quali l'aggiunta o la rimozione di una scheda in un `TabControl`, l'ancoraggio di un controllo al relativo elemento padre e la modifica dell'orientamento di un controllo `SplitContainer`.  
+ [<span data-ttu-id="cac60-123">Esecuzione di attività comuni usando gli smart tag nei controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="cac60-123">Performing Common Tasks Using Smart Tags on Windows Forms Controls</span></span>](https://msdn.microsoft.com/library/xhz359sc.aspx)  
+ <span data-ttu-id="cac60-124">Vengono illustrate alcune delle attività comunemente svolte quali l'aggiunta o la rimozione di una scheda in un `TabControl`, l'ancoraggio di un controllo al relativo elemento padre e la modifica dell'orientamento di un controllo `SplitContainer`.</span><span class="sxs-lookup"><span data-stu-id="cac60-124">Demonstrates some of the commonly performed tasks such as adding or removing a tab on a `TabControl`, docking a control to its parent, and changing the orientation of a `SplitContainer` control.</span></span>  
   
- [Scrittura di query in C# (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Vengono illustrate le funzionalità del linguaggio C# usate per scrivere espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ [<span data-ttu-id="cac60-125">Scrittura di query in C# (LINQ)</span><span class="sxs-lookup"><span data-stu-id="cac60-125">Writing Queries in C# (LINQ)</span></span>](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ <span data-ttu-id="cac60-126">Vengono illustrate le funzionalità del linguaggio C# usate per scrivere espressioni di query [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cac60-126">Demonstrates the C# language features that are used to write [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query expressions.</span></span>  
   
- [Modifica dei dati (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386927.aspx)  
- Descrive uno scenario [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] per l'aggiunta, la modifica e l'eliminazione di dati in un database.  
+ [<span data-ttu-id="cac60-127">Modifica dei dati (C#) (LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="cac60-127">Manipulating Data (C#) (LINQ to SQL)</span></span>](https://msdn.microsoft.com/library/bb386927.aspx)  
+ <span data-ttu-id="cac60-128">Descrive uno scenario [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] per l'aggiunta, la modifica e l'eliminazione di dati in un database.</span><span class="sxs-lookup"><span data-stu-id="cac60-128">Describes a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] scenario for adding, modifying, and deleting data in a database.</span></span>  
   
- [Modello a oggetti e query semplici (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
- Viene illustrato come creare una classe di entità e una semplice query per filtrare la classe di entità.  
+ [<span data-ttu-id="cac60-129">Modello a oggetti e query semplici (C#) (LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="cac60-129">Simple Object Model and Query (C#) (LINQ to SQL)</span></span>](https://msdn.microsoft.com/library/bb386940.aspx)  
+ <span data-ttu-id="cac60-130">Viene illustrato come creare una classe di entità e una semplice query per filtrare la classe di entità.</span><span class="sxs-lookup"><span data-stu-id="cac60-130">Demonstrates how to create an entity class and a simple query to filter the entity class.</span></span>  
   
- [Utilizzo solo di stored procedure (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb399407.aspx)  
- Viene illustrato come usare LINQ to SQL per accedere ai dati eseguendo solo stored procedure.  
+ [<span data-ttu-id="cac60-131">Utilizzo solo di stored procedure (C#) (LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="cac60-131">Using Only Stored Procedures (C#) (LINQ to SQL)</span></span>](https://msdn.microsoft.com/library/bb399407.aspx)  
+ <span data-ttu-id="cac60-132">Viene illustrato come usare LINQ to SQL per accedere ai dati eseguendo solo stored procedure.</span><span class="sxs-lookup"><span data-stu-id="cac60-132">Demonstrates how to use LINQ to SQL to access data by executing only stored procedures.</span></span>  
   
- [Esecuzione di query tra relazioni (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386951.aspx)  
- In questa procedura dettagliata viene descritto l'utilizzo delle associazioni [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] per rappresentare relazioni di chiave esterna nel database.  
+ [<span data-ttu-id="cac60-133">Esecuzione di query tra relazioni (C#) (LINQ to SQL)</span><span class="sxs-lookup"><span data-stu-id="cac60-133">Querying Across Relationships (C#) (LINQ to SQL)</span></span>](https://msdn.microsoft.com/library/bb386951.aspx)  
+ <span data-ttu-id="cac60-134">In questa procedura dettagliata viene descritto l'utilizzo delle associazioni [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] per rappresentare relazioni di chiave esterna nel database.</span><span class="sxs-lookup"><span data-stu-id="cac60-134">Demonstrates the use of [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] associations to represent foreign-key relationships in a database.</span></span>  
 
- [Scrittura di un visualizzatore in C#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
- Viene illustrato come scrivere un visualizzatore semplice usando C#.  
+ [<span data-ttu-id="cac60-135">Scrittura di un visualizzatore in C#</span><span class="sxs-lookup"><span data-stu-id="cac60-135">Writing a Visualizer in C#</span></span>](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
+ <span data-ttu-id="cac60-136">Viene illustrato come scrivere un visualizzatore semplice usando C#.</span><span class="sxs-lookup"><span data-stu-id="cac60-136">Shows how to write a simple visualizer by using C#.</span></span>  
   
-## <a name="related-sections"></a>Sezioni correlate  
- [Esempi e procedure dettagliate relative alla distribuzione](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
- Fornisce esempi dettagliati di scenari di distribuzione comuni.  
+## <a name="related-sections"></a><span data-ttu-id="cac60-137">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="cac60-137">Related Sections</span></span>  
+ [<span data-ttu-id="cac60-138">Esempi e procedure dettagliate relative alla distribuzione</span><span class="sxs-lookup"><span data-stu-id="cac60-138">Deployment Samples and Walkthroughs</span></span>](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
+ <span data-ttu-id="cac60-139">Fornisce esempi dettagliati di scenari di distribuzione comuni.</span><span class="sxs-lookup"><span data-stu-id="cac60-139">Provides step-by-step examples of common deployment scenarios.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../csharp/programming-guide/index.md)   
- [Esempi di Visual Studio](/visualstudio/ide/visual-studio-samples)
+## <a name="see-also"></a><span data-ttu-id="cac60-140">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cac60-140">See Also</span></span>  
+ <span data-ttu-id="cac60-141">[Guida per programmatori C#](../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="cac60-141">[C# Programming Guide](../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="cac60-142">Esempi di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="cac60-142">Visual Studio Samples</span></span>](/visualstudio/ide/visual-studio-samples)
 

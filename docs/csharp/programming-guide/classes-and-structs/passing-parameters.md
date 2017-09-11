@@ -38,23 +38,23 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="passing-parameters-c-programming-guide"></a>Passaggio di parametri (Guida per programmatori C#)
-In C# è possibile passare gli argomenti ai parametri per valore o per riferimento. Il passaggio per riferimento consente a membri di funzioni, metodi, proprietà, indicizzatori, operatori e costruttori di modificare il valore dei parametri e rendere permanenti le modifiche nell'ambiente chiamante. Per passare un parametro per riferimento, usare la parola chiave `ref` o `out`. Per semplicità, negli esempi riportati in questo argomento verrà utilizzata soltanto la parola chiave `ref`. Per altre informazioni sulla differenza tra `ref` e `out`, vedere [ref](../../../csharp/language-reference/keywords/ref.md), [out](../../../csharp/language-reference/keywords/out.md) e [Passaggio di matrici mediante ref e out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
+# <a name="passing-parameters-c-programming-guide"></a><span data-ttu-id="b7557-102">Passaggio di parametri (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="b7557-102">Passing Parameters (C# Programming Guide)</span></span>
+<span data-ttu-id="b7557-103">In C# è possibile passare gli argomenti ai parametri per valore o per riferimento.</span><span class="sxs-lookup"><span data-stu-id="b7557-103">In C#, arguments can be passed to parameters either by value or by reference.</span></span> <span data-ttu-id="b7557-104">Il passaggio per riferimento consente a membri di funzioni, metodi, proprietà, indicizzatori, operatori e costruttori di modificare il valore dei parametri e rendere permanenti le modifiche nell'ambiente chiamante.</span><span class="sxs-lookup"><span data-stu-id="b7557-104">Passing by reference enables function members, methods, properties, indexers, operators, and constructors to change the value of the parameters and have that change persist in the calling environment.</span></span> <span data-ttu-id="b7557-105">Per passare un parametro per riferimento, usare la parola chiave `ref` o `out`.</span><span class="sxs-lookup"><span data-stu-id="b7557-105">To pass a parameter by reference, use the `ref` or `out` keyword.</span></span> <span data-ttu-id="b7557-106">Per semplicità, negli esempi riportati in questo argomento verrà utilizzata soltanto la parola chiave `ref`.</span><span class="sxs-lookup"><span data-stu-id="b7557-106">For simplicity, only the `ref` keyword is used in the examples in this topic.</span></span> <span data-ttu-id="b7557-107">Per altre informazioni sulla differenza tra `ref` e `out`, vedere [ref](../../../csharp/language-reference/keywords/ref.md), [out](../../../csharp/language-reference/keywords/out.md) e [Passaggio di matrici mediante ref e out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).</span><span class="sxs-lookup"><span data-stu-id="b7557-107">For more information about the difference between `ref` and `out`, see [ref](../../../csharp/language-reference/keywords/ref.md), [out](../../../csharp/language-reference/keywords/out.md), and [Passing Arrays Using ref and out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).</span></span>  
   
- L'esempio seguente illustra la differenza fra parametri di valore e di riferimento.  
+ <span data-ttu-id="b7557-108">L'esempio seguente illustra la differenza fra parametri di valore e di riferimento.</span><span class="sxs-lookup"><span data-stu-id="b7557-108">The following example illustrates the difference between value and reference parameters.</span></span>  
   
- [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-parameters_1.cs)]  
+ <span data-ttu-id="b7557-109">[!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-parameters_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="b7557-109">[!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-parameters_1.cs)]</span></span>  
   
- Per altre informazioni, vedere i seguenti argomenti:  
+ <span data-ttu-id="b7557-110">Per altre informazioni, vedere i seguenti argomenti:</span><span class="sxs-lookup"><span data-stu-id="b7557-110">For more information, see the following topics:</span></span>  
   
--   [Passaggio di parametri di tipo di valore](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)  
+-   [<span data-ttu-id="b7557-111">Passaggio di parametri di tipo di valore</span><span class="sxs-lookup"><span data-stu-id="b7557-111">Passing Value-Type Parameters</span></span>](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)  
   
--   [Passaggio di parametri di tipo di riferimento](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)  
+-   [<span data-ttu-id="b7557-112">Passaggio di parametri di tipo di riferimento</span><span class="sxs-lookup"><span data-stu-id="b7557-112">Passing Reference-Type Parameters</span></span>](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a><span data-ttu-id="b7557-113">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="b7557-113">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
+## <a name="see-also"></a><span data-ttu-id="b7557-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b7557-114">See Also</span></span>  
+ <span data-ttu-id="b7557-115">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="b7557-115">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="b7557-116">Metodi</span><span class="sxs-lookup"><span data-stu-id="b7557-116">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)
 

@@ -1,1 +1,1 @@
-Tipo di un elemento nella sequenza controllata.
+<span data-ttu-id="831cf-101">Tipo di un elemento nella sequenza controllata.</span><span class="sxs-lookup"><span data-stu-id="831cf-101">The type of an element in the controlled sequence.</span></span>

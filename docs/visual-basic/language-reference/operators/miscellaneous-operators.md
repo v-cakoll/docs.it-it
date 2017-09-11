@@ -30,26 +30,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f576084f662f369d5de8483bd4e58a0ed80fa8c1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6989cd451cfee35d73132cf9e0205f258aa59364
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="miscellaneous-operators-visual-basic"></a>Operatori vari (Visual Basic)
-Di seguito sono riportati vari operatori definiti [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+# <a name="miscellaneous-operators-visual-basic"></a><span data-ttu-id="fe728-102">Operatori vari (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fe728-102">Miscellaneous Operators (Visual Basic)</span></span>
+<span data-ttu-id="fe728-103">Di seguito sono riportati vari operatori definiti [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="fe728-103">The following are miscellaneous operators defined in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
- [Operatore AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [<span data-ttu-id="fe728-104">Operatore AddressOf</span><span class="sxs-lookup"><span data-stu-id="fe728-104">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)  
   
- [Operatore Await](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [<span data-ttu-id="fe728-105">Operatore Await</span><span class="sxs-lookup"><span data-stu-id="fe728-105">Await Operator</span></span>](../../../visual-basic/language-reference/operators/await-operator.md)  
   
- [Operatore GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)  
+ [<span data-ttu-id="fe728-106">Operatore GetType</span><span class="sxs-lookup"><span data-stu-id="fe728-106">GetType Operator</span></span>](../../../visual-basic/language-reference/operators/gettype-operator.md)  
   
- [Espressione di funzione](../../../visual-basic/language-reference/operators/function-expression.md)  
+ [<span data-ttu-id="fe728-107">Espressione di funzione</span><span class="sxs-lookup"><span data-stu-id="fe728-107">Function Expression</span></span>](../../../visual-basic/language-reference/operators/function-expression.md)  
   
- [Operatore If](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [<span data-ttu-id="fe728-108">Operatore If</span><span class="sxs-lookup"><span data-stu-id="fe728-108">If Operator</span></span>](../../../visual-basic/language-reference/operators/if-operator.md)  
   
- [Operatore TypeOf](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [<span data-ttu-id="fe728-109">Operatore TypeOf</span><span class="sxs-lookup"><span data-stu-id="fe728-109">TypeOf Operator</span></span>](../../../visual-basic/language-reference/operators/typeof-operator.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a><span data-ttu-id="fe728-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fe728-110">See Also</span></span>  
+ [<span data-ttu-id="fe728-111">Elenco degli operatori per funzionalità</span><span class="sxs-lookup"><span data-stu-id="fe728-111">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

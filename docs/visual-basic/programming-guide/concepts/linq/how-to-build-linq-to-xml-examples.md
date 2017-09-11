@@ -20,17 +20,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6f1d67ad5dd0a8c6b1500ea9b0b953b70251b93
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: dd357346ed323df2e923414e394a1626edba53bb
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-build-linq-to-xml-examples-visual-basic"></a>Procedura: compilare in LINQ to XML esempi (Visual Basic)
-Nei vari frammenti ed esempi di questa documentazione vengono usati classi e tipi di un'ampia varietà di spazi dei nomi. Quando si compila codice di Visual Basic, è necessario fornire istruzioni `Imports` appropriate.  
+# <a name="how-to-build-linq-to-xml-examples-visual-basic"></a><span data-ttu-id="2311e-102">Procedura: compilare in LINQ to XML esempi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2311e-102">How to: Build LINQ to XML Examples (Visual Basic)</span></span>
+<span data-ttu-id="2311e-103">Nei vari frammenti ed esempi di questa documentazione vengono usati classi e tipi di un'ampia varietà di spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="2311e-103">The various snippets and examples in this documentation use classes and types from a variety of namespaces.</span></span> <span data-ttu-id="2311e-104">Quando si compila codice di Visual Basic, è necessario fornire istruzioni `Imports` appropriate.</span><span class="sxs-lookup"><span data-stu-id="2311e-104">When compiling Visual Basic code, you need to supply appropriate `Imports` statements.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nel codice seguente sono contenute le istruzioni `Imports` richieste per la compilazione e l'esecuzione degli esempi in Visual Basic. Non tutte le istruzioni `Imports` sono necessarie per ogni esempio.  
+## <a name="example"></a><span data-ttu-id="2311e-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="2311e-105">Example</span></span>  
+ <span data-ttu-id="2311e-106">Nel codice seguente sono contenute le istruzioni `Imports` richieste per la compilazione e l'esecuzione degli esempi in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="2311e-106">The following code contains the `Imports` statements that the Visual Basic examples require to build and run.</span></span> <span data-ttu-id="2311e-107">Non tutte le istruzioni `Imports` sono necessarie per ogni esempio.</span><span class="sxs-lookup"><span data-stu-id="2311e-107">Not all `Imports` statements are required for every example.</span></span>  
   
 ```vb  
 Imports System  
@@ -51,5 +52,5 @@ Imports System.Reflection
 Imports System.IO.Packaging  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to Cenni preliminari sulla programmazione XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a><span data-ttu-id="2311e-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2311e-108">See Also</span></span>  
+ [<span data-ttu-id="2311e-109">LINQ to Cenni preliminari sulla programmazione XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2311e-109">LINQ to XML Programming Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

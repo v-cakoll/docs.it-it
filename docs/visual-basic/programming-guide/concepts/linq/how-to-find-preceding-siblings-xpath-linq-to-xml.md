@@ -15,26 +15,27 @@ ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 250028f73eff7aad3926ee4916aef7d118b6fbea
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8a6487d52e99bbf937439c902b59bf75bb67c8e4
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare precedenti elementi di pari livello (XPath-LINQ to XML) (Visual Basic)
-In questo argomento viene confrontato con il `preceding-sibling` asse il [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] figlio <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>asse.</xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>  
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="0f2ed-102">Procedura: trovare precedenti elementi di pari livello (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f2ed-102">How to: Find Preceding Siblings (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="0f2ed-103">In questo argomento viene confrontato con il `preceding-sibling` asse il [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] figlio <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>asse.</xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="0f2ed-103">This topic compares the XPath `preceding-sibling` axis to the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] child <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> axis.</span></span>  
   
- L'espressione XPath è:  
+ <span data-ttu-id="0f2ed-104">L'espressione XPath è:</span><span class="sxs-lookup"><span data-stu-id="0f2ed-104">The XPath expression is:</span></span>  
   
  `preceding-sibling::*`  
   
- Si noti che i risultati di <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A>e <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>sono nell'ordine del documento.</xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> </xref:System.Xml.XPath.Extensions.XPathSelectElements%2A>  
+ <span data-ttu-id="0f2ed-105">Si noti che i risultati di <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A>e <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>sono nell'ordine del documento.</xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> </xref:System.Xml.XPath.Extensions.XPathSelectElements%2A></span><span class="sxs-lookup"><span data-stu-id="0f2ed-105">Note that the results of both <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> and <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> are in document order.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene cercato l'elemento `FullAddress` e quindi vengono recuperati gli elementi precedenti usando l'asse `preceding-sibling`.  
+## <a name="example"></a><span data-ttu-id="0f2ed-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="0f2ed-106">Example</span></span>  
+ <span data-ttu-id="0f2ed-107">Nell'esempio seguente viene cercato l'elemento `FullAddress` e quindi vengono recuperati gli elementi precedenti usando l'asse `preceding-sibling`.</span><span class="sxs-lookup"><span data-stu-id="0f2ed-107">The following example finds the `FullAddress` element, and then retrieves the previous elements using the `preceding-sibling` axis.</span></span>  
   
- In questo esempio viene utilizzato il documento XML seguente: [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ <span data-ttu-id="0f2ed-108">In questo esempio viene utilizzato il documento XML seguente: [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="0f2ed-108">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -58,7 +59,7 @@ For Each el As XElement In list2
 Next  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="0f2ed-109">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="0f2ed-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -68,5 +69,5 @@ Results are identical
 <Phone>(503) 555-7555</Phone>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="0f2ed-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0f2ed-110">See Also</span></span>  
+ [<span data-ttu-id="0f2ed-111">LINQ to XML per gli utenti di XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0f2ed-111">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

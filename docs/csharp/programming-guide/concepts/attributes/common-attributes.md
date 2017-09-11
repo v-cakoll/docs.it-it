@@ -20,77 +20,77 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98bb21ef0b5582202578b72fd6eaf459801747cc
+ms.sourcegitcommit: b03d44a7cf48adee593f749eb4d0d6dbec061b9d
+ms.openlocfilehash: 51e0b382ac3257540de3226c370a4704aca74933
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
-# <a name="common-attributes-c"></a>Attributi comuni (C#)
-Questo argomento descrive gli attributi usati più di frequente nei programmi C#.  
+# <a name="common-attributes-c"></a><span data-ttu-id="1cb69-102">Attributi comuni (C#)</span><span class="sxs-lookup"><span data-stu-id="1cb69-102">Common Attributes (C#)</span></span>
+<span data-ttu-id="1cb69-103">Questo argomento descrive gli attributi usati più di frequente nei programmi C#.</span><span class="sxs-lookup"><span data-stu-id="1cb69-103">This topic describes the attributes that are most commonly used in C# programs.</span></span>  
   
--   [Attributi globali](#Global)  
+-   [<span data-ttu-id="1cb69-104">Attributi globali</span><span class="sxs-lookup"><span data-stu-id="1cb69-104">Global Attributes</span></span>](#Global)  
   
--   [Attributo Obsolete](#Obsolete)  
+-   [<span data-ttu-id="1cb69-105">Attributo Obsolete</span><span class="sxs-lookup"><span data-stu-id="1cb69-105">Obsolete Attribute</span></span>](#Obsolete)  
   
--   [Attributo Conditional](#Conditional)  
+-   [<span data-ttu-id="1cb69-106">Attributo Conditional</span><span class="sxs-lookup"><span data-stu-id="1cb69-106">Conditional Attribute</span></span>](#Conditional)  
   
--   [Attributi informativi sul chiamante](#CallerInfo)  
+-   [<span data-ttu-id="1cb69-107">Attributi informativi sul chiamante</span><span class="sxs-lookup"><span data-stu-id="1cb69-107">Caller Info Attributes</span></span>](#CallerInfo)  
   
-##  <a name="Global"></a> Attributi globali  
- La maggior parte degli attributi viene applicata a elementi specifici del linguaggio quali classi o metodi. Alcuni attributi sono invece globali e vengono applicati a un intero assembly o a un intero modulo. Ad esempio, l'attributo <xref:System.Reflection.AssemblyVersionAttribute> può essere usato per incorporare informazioni sulla versione in un assembly, nel modo seguente:  
+##  <span data-ttu-id="1cb69-108"><a name="Global"></a> Attributi globali</span><span class="sxs-lookup"><span data-stu-id="1cb69-108"><a name="Global"></a> Global Attributes</span></span>  
+ <span data-ttu-id="1cb69-109">La maggior parte degli attributi viene applicata a elementi specifici del linguaggio quali classi o metodi. Alcuni attributi sono invece globali e vengono applicati a un intero assembly o a un intero modulo.</span><span class="sxs-lookup"><span data-stu-id="1cb69-109">Most attributes are applied to specific language elements such as classes or methods; however, some attributes are global—they apply to an entire assembly or module.</span></span> <span data-ttu-id="1cb69-110">Ad esempio, l'attributo <xref:System.Reflection.AssemblyVersionAttribute> può essere usato per incorporare informazioni sulla versione in un assembly, nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="1cb69-110">For example, the <xref:System.Reflection.AssemblyVersionAttribute> attribute can be used to embed version information into an assembly, like this:</span></span>  
   
 ```csharp  
 [assembly: AssemblyVersion("1.0.0.0")]  
 ```  
   
- Gli attributi globali appaiono nel codice sorgente dopo eventuali direttive `using` di primo livello e prima delle dichiarazioni di tipo, modulo o spazio dei nomi. Gli attributi globali possono apparire in più file di origine, ma i file devono essere compilati in un'unica operazione di compilazione. Nei progetti C# gli attributi globali vengono inseriti nel file AssemblyInfo.cs.  
+ <span data-ttu-id="1cb69-111">Gli attributi globali appaiono nel codice sorgente dopo eventuali direttive `using` di primo livello e prima delle dichiarazioni di tipo, modulo o spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="1cb69-111">Global attributes appear in the source code after any top-level `using` directives and before any type, module, or namespace declarations.</span></span> <span data-ttu-id="1cb69-112">Gli attributi globali possono apparire in più file di origine, ma i file devono essere compilati in un'unica operazione di compilazione.</span><span class="sxs-lookup"><span data-stu-id="1cb69-112">Global attributes can appear in multiple source files, but the files must be compiled in a single compilation pass.</span></span> <span data-ttu-id="1cb69-113">Nei progetti C# gli attributi globali vengono inseriti nel file AssemblyInfo.cs.</span><span class="sxs-lookup"><span data-stu-id="1cb69-113">In C# projects, global attributes are put in the AssemblyInfo.cs file.</span></span>  
   
- Gli attributi dell'assembly sono valori che forniscono informazioni relative a un assembly. Sono suddivisi nelle seguenti categorie:  
+ <span data-ttu-id="1cb69-114">Gli attributi dell'assembly sono valori che forniscono informazioni relative a un assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-114">Assembly attributes are values that provide information about an assembly.</span></span> <span data-ttu-id="1cb69-115">Sono suddivisi nelle seguenti categorie:</span><span class="sxs-lookup"><span data-stu-id="1cb69-115">They fall into the following categories:</span></span>  
   
--   Attributi relativi all'identità dell'assembly  
+-   <span data-ttu-id="1cb69-116">Attributi relativi all'identità dell'assembly</span><span class="sxs-lookup"><span data-stu-id="1cb69-116">Assembly identity attributes</span></span>  
   
--   Attributi informativi  
+-   <span data-ttu-id="1cb69-117">Attributi informativi</span><span class="sxs-lookup"><span data-stu-id="1cb69-117">Informational attributes</span></span>  
   
--   Attributi relativi al manifesto dell'assembly  
+-   <span data-ttu-id="1cb69-118">Attributi relativi al manifesto dell'assembly</span><span class="sxs-lookup"><span data-stu-id="1cb69-118">Assembly manifest attributes</span></span>  
   
-### <a name="assembly-identity-attributes"></a>Attributi relativi all'identità dell'assembly  
- Tre attributi (con un nome sicuro, se disponibile), consentono di determinare l'identità di un assembly: il nome, la versione e le impostazioni cultura. Questi attributi formano il nome completo dell'assembly e sono necessari per creare riferimenti all'assembly nel codice. È possibile usare gli attributi per impostare la versione e le impostazioni cultura di un assembly. Tuttavia il valore del nome viene impostato alla creazione dell'assembly dal compilatore (l'IDE di Visual Studio nella [finestra di dialogo informazioni Assembly](/visualstudio/ide/reference/assembly-information-dialog-box) oppure Assembly Linker, Al.exe), in base al file che contiene il manifesto dell'assembly. L'attributo <xref:System.Reflection.AssemblyFlagsAttribute> specifica se è supportata la coesistenza di più copie dell'assembly.  
+### <a name="assembly-identity-attributes"></a><span data-ttu-id="1cb69-119">Attributi relativi all'identità dell'assembly</span><span class="sxs-lookup"><span data-stu-id="1cb69-119">Assembly Identity Attributes</span></span>  
+ <span data-ttu-id="1cb69-120">Tre attributi (con un nome sicuro, se disponibile), consentono di determinare l'identità di un assembly: il nome, la versione e le impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="1cb69-120">Three attributes (with a strong name, if applicable) determine the identity of an assembly: name, version, and culture.</span></span> <span data-ttu-id="1cb69-121">Questi attributi formano il nome completo dell'assembly e sono necessari per creare riferimenti all'assembly nel codice.</span><span class="sxs-lookup"><span data-stu-id="1cb69-121">These attributes form the full name of the assembly and are required when you reference it in code.</span></span> <span data-ttu-id="1cb69-122">È possibile usare gli attributi per impostare la versione e le impostazioni cultura di un assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-122">You can set an assembly's version and culture using attributes.</span></span> <span data-ttu-id="1cb69-123">Tuttavia il valore del nome viene impostato alla creazione dell'assembly dal compilatore (l'IDE di Visual Studio nella [finestra di dialogo informazioni Assembly](/visualstudio/ide/reference/assembly-information-dialog-box) oppure Assembly Linker, Al.exe), in base al file che contiene il manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-123">However, the name value is set by the compiler, the Visual Studio IDE in the [Assembly Information Dialog Box](/visualstudio/ide/reference/assembly-information-dialog-box), or the Assembly Linker (Al.exe) when the assembly is created, based on the file that contains the assembly manifest.</span></span> <span data-ttu-id="1cb69-124">L'attributo <xref:System.Reflection.AssemblyFlagsAttribute> specifica se è supportata la coesistenza di più copie dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-124">The <xref:System.Reflection.AssemblyFlagsAttribute> attribute specifies whether multiple copies of the assembly can coexist.</span></span>  
   
- La tabella seguente visualizza gli attributi relativi all'identità.  
+ <span data-ttu-id="1cb69-125">La tabella seguente visualizza gli attributi relativi all'identità.</span><span class="sxs-lookup"><span data-stu-id="1cb69-125">The following table shows the identity attributes.</span></span>  
   
-|Attributo|Scopo|  
+|<span data-ttu-id="1cb69-126">Attributo</span><span class="sxs-lookup"><span data-stu-id="1cb69-126">Attribute</span></span>|<span data-ttu-id="1cb69-127">Scopo</span><span class="sxs-lookup"><span data-stu-id="1cb69-127">Purpose</span></span>|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyName>|Descrive in modo completo l'identità di un assembly.|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|Specifica la versione di un assembly.|  
-|<xref:System.Reflection.AssemblyCultureAttribute>|Specifica le impostazioni cultura supportate dall'assembly.|  
-|<xref:System.Reflection.AssemblyFlagsAttribute>|Specifica se un assembly supporta l'esecuzione side-by-side nello stesso computer, nello stesso processo o nello stesso dominio dell'applicazione.|  
+|<xref:System.Reflection.AssemblyName>|<span data-ttu-id="1cb69-128">Descrive in modo completo l'identità di un assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-128">Fully describes the identity of an assembly.</span></span>|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|<span data-ttu-id="1cb69-129">Specifica la versione di un assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-129">Specifies the version of an assembly.</span></span>|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|<span data-ttu-id="1cb69-130">Specifica le impostazioni cultura supportate dall'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-130">Specifies which culture the assembly supports.</span></span>|  
+|<xref:System.Reflection.AssemblyFlagsAttribute>|<span data-ttu-id="1cb69-131">Specifica se un assembly supporta l'esecuzione side-by-side nello stesso computer, nello stesso processo o nello stesso dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="1cb69-131">Specifies whether an assembly supports side-by-side execution on the same computer, in the same process, or in the same application domain.</span></span>|  
   
-### <a name="informational-attributes"></a>Attributi informativi  
- Gli attributi informativi consentono di fornire informazioni aggiuntive relative alla società o al prodotto per un assembly. La tabella seguente mostra gli attributi informativi definiti nello spazio dei nomi <xref:System.Reflection?displayProperty=fullName>.  
+### <a name="informational-attributes"></a><span data-ttu-id="1cb69-132">Attributi informativi</span><span class="sxs-lookup"><span data-stu-id="1cb69-132">Informational Attributes</span></span>  
+ <span data-ttu-id="1cb69-133">Gli attributi informativi consentono di fornire informazioni aggiuntive relative alla società o al prodotto per un assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-133">You can use informational attributes to provide additional company or product information for an assembly.</span></span> <span data-ttu-id="1cb69-134">La tabella seguente mostra gli attributi informativi definiti nello spazio dei nomi <xref:System.Reflection?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="1cb69-134">The following table shows the informational attributes defined in the <xref:System.Reflection?displayProperty=fullName> namespace.</span></span>  
   
-|Attributo|Scopo|  
+|<span data-ttu-id="1cb69-135">Attributo</span><span class="sxs-lookup"><span data-stu-id="1cb69-135">Attribute</span></span>|<span data-ttu-id="1cb69-136">Scopo</span><span class="sxs-lookup"><span data-stu-id="1cb69-136">Purpose</span></span>|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyProductAttribute>|Definisce un attributo personalizzato che specifica un nome prodotto per un manifesto dell'assembly.|  
-|<xref:System.Reflection.AssemblyTrademarkAttribute>|Definisce un attributo personalizzato che specifica un marchio registrato per un manifesto dell'assembly.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Definisce un attributo personalizzato che specifica una versione informativa per un manifesto dell'assembly.|  
-|<xref:System.Reflection.AssemblyCompanyAttribute>|Definisce un attributo personalizzato che specifica un nome società per un manifesto dell'assembly.|  
-|<xref:System.Reflection.AssemblyCopyrightAttribute>|Definisce un attributo personalizzato che specifica un copyright per un manifesto dell'assembly.|  
-|<xref:System.Reflection.AssemblyFileVersionAttribute>|Indica al compilatore di usare un numero di versione specifico per la risorsa della versione del file Win32.|  
-|<xref:System.CLSCompliantAttribute>|Indica se l'assembly è conforme a CLS (Common Language Specification).|  
+|<xref:System.Reflection.AssemblyProductAttribute>|<span data-ttu-id="1cb69-137">Definisce un attributo personalizzato che specifica un nome prodotto per un manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-137">Defines a custom attribute that specifies a product name for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyTrademarkAttribute>|<span data-ttu-id="1cb69-138">Definisce un attributo personalizzato che specifica un marchio registrato per un manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-138">Defines a custom attribute that specifies a trademark for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|<span data-ttu-id="1cb69-139">Definisce un attributo personalizzato che specifica una versione informativa per un manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-139">Defines a custom attribute that specifies an informational version for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyCompanyAttribute>|<span data-ttu-id="1cb69-140">Definisce un attributo personalizzato che specifica un nome società per un manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-140">Defines a custom attribute that specifies a company name for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyCopyrightAttribute>|<span data-ttu-id="1cb69-141">Definisce un attributo personalizzato che specifica un copyright per un manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-141">Defines a custom attribute that specifies a copyright for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyFileVersionAttribute>|<span data-ttu-id="1cb69-142">Indica al compilatore di usare un numero di versione specifico per la risorsa della versione del file Win32.</span><span class="sxs-lookup"><span data-stu-id="1cb69-142">Instructs the compiler to use a specific version number for the Win32 file version resource.</span></span>|  
+|<xref:System.CLSCompliantAttribute>|<span data-ttu-id="1cb69-143">Indica se l'assembly è conforme a CLS (Common Language Specification).</span><span class="sxs-lookup"><span data-stu-id="1cb69-143">Indicates whether the assembly is compliant with the Common Language Specification (CLS).</span></span>|  
   
-### <a name="assembly-manifest-attributes"></a>Attributi relativi al manifesto dell'assembly  
- È possibile usare gli attributi relativi al manifesto dell'assembly per includere informazioni nel manifesto dell'assembly. Queste informazioni includono il titolo, la descrizione, l'alias predefinito e la configurazione. La tabella seguente visualizza gli attributi del manifesto dell'assembly definiti nello spazio dei nomi <xref:System.Reflection?displayProperty=fullName>.  
+### <a name="assembly-manifest-attributes"></a><span data-ttu-id="1cb69-144">Attributi relativi al manifesto dell'assembly</span><span class="sxs-lookup"><span data-stu-id="1cb69-144">Assembly Manifest Attributes</span></span>  
+ <span data-ttu-id="1cb69-145">È possibile usare gli attributi relativi al manifesto dell'assembly per includere informazioni nel manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-145">You can use assembly manifest attributes to provide information in the assembly manifest.</span></span> <span data-ttu-id="1cb69-146">Queste informazioni includono il titolo, la descrizione, l'alias predefinito e la configurazione.</span><span class="sxs-lookup"><span data-stu-id="1cb69-146">This includes title, description, default alias, and configuration.</span></span> <span data-ttu-id="1cb69-147">La tabella seguente visualizza gli attributi del manifesto dell'assembly definiti nello spazio dei nomi <xref:System.Reflection?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="1cb69-147">The following table shows the assembly manifest attributes defined in the <xref:System.Reflection?displayProperty=fullName> namespace.</span></span>  
   
-|Attributo|Scopo|  
+|<span data-ttu-id="1cb69-148">Attributo</span><span class="sxs-lookup"><span data-stu-id="1cb69-148">Attribute</span></span>|<span data-ttu-id="1cb69-149">Scopo</span><span class="sxs-lookup"><span data-stu-id="1cb69-149">Purpose</span></span>|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyTitleAttribute>|Definisce un attributo personalizzato che specifica un titolo assembly per un manifesto dell'assembly.|  
-|<xref:System.Reflection.AssemblyDescriptionAttribute>|Definisce un attributo personalizzato che specifica una descrizione assembly per un manifesto dell'assembly.|  
-|<xref:System.Reflection.AssemblyConfigurationAttribute>|Definisce un attributo personalizzato che specifica una configurazione assembly per un manifesto dell'assembly.|  
-|<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Definisce un alias predefinito descrittivo per un manifesto dell'assembly.|  
+|<xref:System.Reflection.AssemblyTitleAttribute>|<span data-ttu-id="1cb69-150">Definisce un attributo personalizzato che specifica un titolo assembly per un manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-150">Defines a custom attribute that specifies an assembly title for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyDescriptionAttribute>|<span data-ttu-id="1cb69-151">Definisce un attributo personalizzato che specifica una descrizione assembly per un manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-151">Defines a custom attribute that specifies an assembly description for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyConfigurationAttribute>|<span data-ttu-id="1cb69-152">Definisce un attributo personalizzato che specifica una configurazione assembly per un manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-152">Defines a custom attribute that specifies an assembly configuration (such as retail or debug) for an assembly manifest.</span></span>|  
+|<xref:System.Reflection.AssemblyDefaultAliasAttribute>|<span data-ttu-id="1cb69-153">Definisce un alias predefinito descrittivo per un manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1cb69-153">Defines a friendly default alias for an assembly manifest</span></span>|  
   
-##  <a name="Obsolete"></a> Attributo Obsolete  
- L'attributo `Obsolete` contrassegna un'entità del programma il cui uso non è più consigliato. Ogni uso di un'entità contrassegnata con Obsolete genererà in seguito un avviso o errore, a seconda della configurazione dell'attributo. Ad esempio:  
+##  <span data-ttu-id="1cb69-154"><a name="Obsolete"></a> Attributo Obsolete</span><span class="sxs-lookup"><span data-stu-id="1cb69-154"><a name="Obsolete"></a> Obsolete Attribute</span></span>  
+ <span data-ttu-id="1cb69-155">L'attributo `Obsolete` contrassegna un'entità del programma il cui uso non è più consigliato.</span><span class="sxs-lookup"><span data-stu-id="1cb69-155">The `Obsolete` attribute marks a program entity as one that is no longer recommended for use.</span></span> <span data-ttu-id="1cb69-156">Ogni uso di un'entità contrassegnata con Obsolete genererà in seguito un avviso o errore, a seconda della configurazione dell'attributo.</span><span class="sxs-lookup"><span data-stu-id="1cb69-156">Each use of an entity marked obsolete will subsequently generate a warning or an error, depending on how the attribute is configured.</span></span> <span data-ttu-id="1cb69-157">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="1cb69-157">For example:</span></span>  
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -106,9 +106,9 @@ class B
 }  
 ```  
   
- Nel seguente esempio l'attributo `Obsolete` viene applicato alla classe `A` e al metodo `B.OldMethod`. Poiché il secondo argomento del costruttore dell'attributo applicato a `B.OldMethod` è impostato su `true` questo metodo genererà un errore del compilatore, mentre l'uso della classe `A` produrrà semplicemente un avviso. Tuttavia la chiamata di `B.NewMethod` non produrrà né un avviso né un errore.  
+ <span data-ttu-id="1cb69-158">Nel seguente esempio l'attributo `Obsolete` viene applicato alla classe `A` e al metodo `B.OldMethod`.</span><span class="sxs-lookup"><span data-stu-id="1cb69-158">In this example the `Obsolete` attribute is applied to class `A` and to method `B.OldMethod`.</span></span> <span data-ttu-id="1cb69-159">Poiché il secondo argomento del costruttore dell'attributo applicato a `B.OldMethod` è impostato su `true` questo metodo genererà un errore del compilatore, mentre l'uso della classe `A` produrrà semplicemente un avviso.</span><span class="sxs-lookup"><span data-stu-id="1cb69-159">Because the second argument of the attribute constructor applied to `B.OldMethod` is set to `true`, this method will cause a compiler error, whereas using class `A` will just produce a warning.</span></span> <span data-ttu-id="1cb69-160">Tuttavia la chiamata di `B.NewMethod` non produrrà né un avviso né un errore.</span><span class="sxs-lookup"><span data-stu-id="1cb69-160">Calling `B.NewMethod`, however, produces no warning or error.</span></span>  
   
- La stringa specificata come primo argomento al costruttore dell'attributo viene inclusa nell'avviso o nell'errore visualizzato. Ad esempio, se viene usato con le definizioni precedenti, il codice che segue genera due avvisi e un errore:  
+ <span data-ttu-id="1cb69-161">La stringa specificata come primo argomento al costruttore dell'attributo viene inclusa nell'avviso o nell'errore visualizzato.</span><span class="sxs-lookup"><span data-stu-id="1cb69-161">The string provided as the first argument to attribute constructor will be displayed as part of the warning or error.</span></span> <span data-ttu-id="1cb69-162">Ad esempio, se viene usato con le definizioni precedenti, il codice che segue genera due avvisi e un errore:</span><span class="sxs-lookup"><span data-stu-id="1cb69-162">For example, when you use it with the previous definitions, the following code generates two warnings and one error:</span></span>  
   
 ```csharp  
 // Generates 2 warnings:  
@@ -122,16 +122,16 @@ b.NewMethod();
 // b.OldMethod();  
 ```  
   
- Vengono generati due avvisi per la classe `A`: uno per la dichiarazione del riferimento alla classe e uno per il costruttore della classe.  
+ <span data-ttu-id="1cb69-163">Vengono generati due avvisi per la classe `A`: uno per la dichiarazione del riferimento alla classe e uno per il costruttore della classe.</span><span class="sxs-lookup"><span data-stu-id="1cb69-163">Two warnings for class `A` are generated: one for the declaration of the class reference, and one for the class constructor.</span></span>  
   
- L'attributo `Obsolete` può essere usato senza argomenti, ma è consigliabile includere la spiegazione del motivo per cui l'elemento è obsoleto e l'indicazione degli elementi di codice da usare come alternativa.  
+ <span data-ttu-id="1cb69-164">L'attributo `Obsolete` può essere usato senza argomenti, ma è consigliabile includere la spiegazione del motivo per cui l'elemento è obsoleto e l'indicazione degli elementi di codice da usare come alternativa.</span><span class="sxs-lookup"><span data-stu-id="1cb69-164">The `Obsolete` attribute can be used without arguments, but including an explanation of why the item is obsolete and what to use instead is recommended.</span></span>  
   
- `Obsolete` è un attributo monouso e può essere applicato a qualsiasi entità che supporta gli attributi. `Obsolete` è un alias per <xref:System.ObsoleteAttribute>.  
+ <span data-ttu-id="1cb69-165">`Obsolete` è un attributo monouso e può essere applicato a qualsiasi entità che supporta gli attributi.</span><span class="sxs-lookup"><span data-stu-id="1cb69-165">The `Obsolete` attribute is a single-use attribute and can be applied to any entity that allows attributes.</span></span> <span data-ttu-id="1cb69-166">`Obsolete` è un alias per <xref:System.ObsoleteAttribute>.</span><span class="sxs-lookup"><span data-stu-id="1cb69-166">`Obsolete` is an alias for <xref:System.ObsoleteAttribute>.</span></span>  
   
-##  <a name="Conditional"></a> Attributo Conditional  
- L'attributo `Conditional` rende l'esecuzione di un metodo dipendente da un identificatore di pre-elaborazione. L'attributo `Conditional` è un alias per <xref:System.Diagnostics.ConditionalAttribute> e può essere applicato a un metodo o a una classe Attribute.  
+##  <span data-ttu-id="1cb69-167"><a name="Conditional"></a> Attributo Conditional</span><span class="sxs-lookup"><span data-stu-id="1cb69-167"><a name="Conditional"></a> Conditional Attribute</span></span>  
+ <span data-ttu-id="1cb69-168">L'attributo `Conditional` rende l'esecuzione di un metodo dipendente da un identificatore di pre-elaborazione.</span><span class="sxs-lookup"><span data-stu-id="1cb69-168">The `Conditional` attribute makes the execution of a method dependent on a preprocessing identifier.</span></span> <span data-ttu-id="1cb69-169">L'attributo `Conditional` è un alias per <xref:System.Diagnostics.ConditionalAttribute> e può essere applicato a un metodo o a una classe Attribute.</span><span class="sxs-lookup"><span data-stu-id="1cb69-169">The `Conditional` attribute is an alias for <xref:System.Diagnostics.ConditionalAttribute>, and can be applied to a method or an attribute class.</span></span>  
   
- In questo esempio, `Conditional` viene applicato a un metodo per attivare o disattivare la visualizzazione di informazioni di diagnostica specifiche del programma:  
+ <span data-ttu-id="1cb69-170">In questo esempio, `Conditional` viene applicato a un metodo per attivare o disattivare la visualizzazione di informazioni di diagnostica specifiche del programma:</span><span class="sxs-lookup"><span data-stu-id="1cb69-170">In this example, `Conditional` is applied to a method to enable or disable the display of program-specific diagnostic information:</span></span>  
   
 ```csharp  
 #define TRACE_ON  
@@ -157,9 +157,9 @@ public class ProgramClass
 }  
 ```  
   
- Se l'identificatore `TRACE_ON` non è definito, non viene visualizzato nessun output di traccia.  
+ <span data-ttu-id="1cb69-171">Se l'identificatore `TRACE_ON` non è definito, non viene visualizzato nessun output di traccia.</span><span class="sxs-lookup"><span data-stu-id="1cb69-171">If the `TRACE_ON` identifier is not defined, no trace output will be displayed.</span></span>  
   
- L'attributo `Conditional` viene usato spesso con l'identificatore `DEBUG` per abilitare funzioni di traccia e registrazione nelle compilazioni di debug ma non nelle build di rilascio, come segue:  
+ <span data-ttu-id="1cb69-172">L'attributo `Conditional` viene usato spesso con l'identificatore `DEBUG` per abilitare funzioni di traccia e registrazione nelle compilazioni di debug ma non nelle build di rilascio, come segue:</span><span class="sxs-lookup"><span data-stu-id="1cb69-172">The `Conditional` attribute is often used with the `DEBUG` identifier to enable trace and logging features for debug builds but not in release builds, like this:</span></span>  
   
 ```csharp  
 [Conditional("DEBUG")]  
@@ -168,7 +168,7 @@ static void DebugMethod()
 }  
 ```  
   
- Quando viene chiamato un metodo contrassegnato come condizionale, la presenza o l'assenza del simbolo di pre-elaborazione specificato determina se la chiamata viene inclusa o omessa. Se il simbolo è definito la chiamata viene inclusa, in caso contrario viene omessa. L'uso di `Conditional` rappresenta un'alternativa più efficiente, elegante e meno soggetta a errori rispetto all'inclusione di metodi nei blocchi `#if…#endif` come segue:  
+ <span data-ttu-id="1cb69-173">Quando viene chiamato un metodo contrassegnato come condizionale, la presenza o l'assenza del simbolo di pre-elaborazione specificato determina se la chiamata viene inclusa o omessa.</span><span class="sxs-lookup"><span data-stu-id="1cb69-173">When a method marked as conditional is called, the presence or absence of the specified preprocessing symbol determines whether the call is included or omitted.</span></span> <span data-ttu-id="1cb69-174">Se il simbolo è definito la chiamata viene inclusa, in caso contrario viene omessa.</span><span class="sxs-lookup"><span data-stu-id="1cb69-174">If the symbol is defined, the call is included; otherwise, the call is omitted.</span></span> <span data-ttu-id="1cb69-175">L'uso di `Conditional` rappresenta un'alternativa più efficiente, elegante e meno soggetta a errori rispetto all'inclusione di metodi nei blocchi `#if…#endif` come segue:</span><span class="sxs-lookup"><span data-stu-id="1cb69-175">Using `Conditional` is a cleaner, more elegant, and less error-prone alternative to enclosing methods inside `#if…#endif` blocks, like this:</span></span>  
   
 ```csharp  
 #if DEBUG  
@@ -178,10 +178,10 @@ static void DebugMethod()
 #endif  
 ```  
   
- Un metodo condizionale deve essere un metodo in una dichiarazione di classe o struct e non deve avere un valore restituito.  
+ <span data-ttu-id="1cb69-176">Un metodo condizionale deve essere un metodo in una dichiarazione di classe o struct e non deve avere un valore restituito.</span><span class="sxs-lookup"><span data-stu-id="1cb69-176">A conditional method must be a method in a class or struct declaration and must not have a return value.</span></span>  
   
-### <a name="using-multiple-identifiers"></a>Usare più identificatori  
- Se un metodo ha più attributi `Conditional`, una chiamata al metodo è inclusa se è definito almeno uno dei simboli condizionali (in altre parole, se i simboli sono collegati tra loro a livello logico mediante l'operatore OR). In questo esempio la presenza di `A` o `B` determina una chiamata al metodo:  
+### <a name="using-multiple-identifiers"></a><span data-ttu-id="1cb69-177">Usare più identificatori</span><span class="sxs-lookup"><span data-stu-id="1cb69-177">Using Multiple Identifiers</span></span>  
+ <span data-ttu-id="1cb69-178">Se un metodo ha più attributi `Conditional`, una chiamata al metodo è inclusa se è definito almeno uno dei simboli condizionali (in altre parole, se i simboli sono collegati tra loro a livello logico mediante l'operatore OR).</span><span class="sxs-lookup"><span data-stu-id="1cb69-178">If a method has multiple `Conditional` attributes, a call to the method is included if at least one of the conditional symbols is defined (in other words, the symbols are logically linked together by using the OR operator).</span></span> <span data-ttu-id="1cb69-179">In questo esempio la presenza di `A` o `B` determina una chiamata al metodo:</span><span class="sxs-lookup"><span data-stu-id="1cb69-179">In this example, the presence of either `A` or `B` will result in a method call:</span></span>  
   
 ```csharp  
 [Conditional("A"), Conditional("B")]  
@@ -191,7 +191,7 @@ static void DoIfAorB()
 }  
 ```  
   
- Per ottenere il collegamento logico di simboli tramite l'operatore AND è possibile definire metodi condizionali seriali. Ad esempio, il secondo metodo riportato di seguito viene eseguito solo se sono definiti sia `A` sia `B`:  
+ <span data-ttu-id="1cb69-180">Per ottenere il collegamento logico di simboli tramite l'operatore AND è possibile definire metodi condizionali seriali.</span><span class="sxs-lookup"><span data-stu-id="1cb69-180">To achieve the effect of logically linking symbols by using the AND operator, you can define serial conditional methods.</span></span> <span data-ttu-id="1cb69-181">Ad esempio, il secondo metodo riportato di seguito viene eseguito solo se sono definiti sia `A` sia `B`:</span><span class="sxs-lookup"><span data-stu-id="1cb69-181">For example, the second method below will execute only if both `A` and `B` are defined:</span></span>  
   
 ```csharp
 [Conditional("A")]  
@@ -207,8 +207,8 @@ static void DoIfAandB()
 }  
 ```  
   
-### <a name="using-conditional-with-attribute-classes"></a>Usare Conditional con le classi di attributi  
- L'attributo `Conditional` può essere applicato anche a una definizione di classe Attribute. In questo esempio l'attributo personalizzato `Documentation` aggiunge le informazioni ai metadati solo se è definito l'elemento DEBUG.  
+### <a name="using-conditional-with-attribute-classes"></a><span data-ttu-id="1cb69-182">Usare Conditional con le classi di attributi</span><span class="sxs-lookup"><span data-stu-id="1cb69-182">Using Conditional with Attribute Classes</span></span>  
+ <span data-ttu-id="1cb69-183">L'attributo `Conditional` può essere applicato anche a una definizione di classe Attribute.</span><span class="sxs-lookup"><span data-stu-id="1cb69-183">The `Conditional` attribute can also be applied to an attribute class definition.</span></span> <span data-ttu-id="1cb69-184">In questo esempio l'attributo personalizzato `Documentation` aggiunge le informazioni ai metadati solo se è definito l'elemento DEBUG.</span><span class="sxs-lookup"><span data-stu-id="1cb69-184">In this example, the custom attribute `Documentation` will only add information to the metadata if DEBUG is defined.</span></span>  
   
 ```csharp  
 [Conditional("DEBUG")]  
@@ -233,24 +233,24 @@ class SampleClass
 }  
 ```  
   
-##  <a name="CallerInfo"></a> Attributi di informazioni sul chiamante  
- Gli attributi di informazioni sul chiamante consentono di ottenere informazioni sul chiamante di un metodo. È possibile ottenere il percorso del file del codice sorgente, il numero di riga nel codice sorgente e il nome del chiamante.  
+##  <span data-ttu-id="1cb69-185"><a name="CallerInfo"></a> Attributi di informazioni sul chiamante</span><span class="sxs-lookup"><span data-stu-id="1cb69-185"><a name="CallerInfo"></a> Caller Info Attributes</span></span>  
+ <span data-ttu-id="1cb69-186">Gli attributi di informazioni sul chiamante consentono di ottenere informazioni sul chiamante di un metodo.</span><span class="sxs-lookup"><span data-stu-id="1cb69-186">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="1cb69-187">È possibile ottenere il percorso del file del codice sorgente, il numero di riga nel codice sorgente e il nome del chiamante.</span><span class="sxs-lookup"><span data-stu-id="1cb69-187">You can obtain the file path of the source code, the line number in the source code, and the member name of the caller.</span></span>  
   
- È possibile ottenere informazioni sul chiamante usando gli attributi applicati ai parametri facoltativi. Ogni parametro facoltativo specifica un valore predefinito. Nella tabella seguente sono elencati gli attributi di informazioni sul chiamante definiti nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=fullName>:  
+ <span data-ttu-id="1cb69-188">È possibile ottenere informazioni sul chiamante usando gli attributi applicati ai parametri facoltativi.</span><span class="sxs-lookup"><span data-stu-id="1cb69-188">To obtain member caller information, you use attributes that are applied to optional parameters.</span></span> <span data-ttu-id="1cb69-189">Ogni parametro facoltativo specifica un valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="1cb69-189">Each optional parameter specifies a default value.</span></span> <span data-ttu-id="1cb69-190">Nella tabella seguente sono elencati gli attributi di informazioni sul chiamante definiti nello spazio dei nomi <xref:System.Runtime.CompilerServices?displayProperty=fullName>:</span><span class="sxs-lookup"><span data-stu-id="1cb69-190">The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=fullName> namespace:</span></span>  
   
-|Attributo|Descrizione|Tipo|  
+|<span data-ttu-id="1cb69-191">Attributo</span><span class="sxs-lookup"><span data-stu-id="1cb69-191">Attribute</span></span>|<span data-ttu-id="1cb69-192">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1cb69-192">Description</span></span>|<span data-ttu-id="1cb69-193">Tipo</span><span class="sxs-lookup"><span data-stu-id="1cb69-193">Type</span></span>|  
 |---|---|---|  
-|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Percorso completo del file di origine contenente il chiamante. È il percorso al momento della compilazione.|`String`|  
-|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Numero di riga nel file di origine da cui viene chiamato il metodo.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nome di una proprietà o di un metodo del chiamante. Per altre informazioni, vedere [Informazioni sul chiamante (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|<span data-ttu-id="1cb69-194">Percorso completo del file di origine contenente il chiamante.</span><span class="sxs-lookup"><span data-stu-id="1cb69-194">Full path of the source file that contains the caller.</span></span> <span data-ttu-id="1cb69-195">È il percorso al momento della compilazione.</span><span class="sxs-lookup"><span data-stu-id="1cb69-195">This is the path at compile time.</span></span>|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|<span data-ttu-id="1cb69-196">Numero di riga nel file di origine da cui viene chiamato il metodo.</span><span class="sxs-lookup"><span data-stu-id="1cb69-196">Line number in the source file from which the method is called.</span></span>|`Integer`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|<span data-ttu-id="1cb69-197">Nome di una proprietà o di un metodo del chiamante.</span><span class="sxs-lookup"><span data-stu-id="1cb69-197">Method name or property name of the caller.</span></span> <span data-ttu-id="1cb69-198">Per altre informazioni, vedere [Informazioni sul chiamante (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).</span><span class="sxs-lookup"><span data-stu-id="1cb69-198">For more information, see [Caller Information (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).</span></span>|`String`|  
   
- Per altre informazioni sugli attributi di informazioni sul chiamante, vedere [Informazioni sul chiamante (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).  
+ <span data-ttu-id="1cb69-199">Per altre informazioni sugli attributi di informazioni sul chiamante, vedere [Informazioni sul chiamante (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).</span><span class="sxs-lookup"><span data-stu-id="1cb69-199">For more information about the Caller Info attributes, see [Caller Information (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)   
- [Attributi](https://msdn.microsoft.com/library/5x6cd29c)   
- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [Accesso agli attributi tramite reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a><span data-ttu-id="1cb69-200">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1cb69-200">See Also</span></span>  
+ <span data-ttu-id="1cb69-201"><xref:System.Reflection></span><span class="sxs-lookup"><span data-stu-id="1cb69-201"><xref:System.Reflection></span></span>   
+ <span data-ttu-id="1cb69-202"><xref:System.Attribute></span><span class="sxs-lookup"><span data-stu-id="1cb69-202"><xref:System.Attribute></span></span>   
+ <span data-ttu-id="1cb69-203">[Guida per programmatori C#](../../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="1cb69-203">[C# Programming Guide](../../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="1cb69-204">[Attributi](https://msdn.microsoft.com/library/5x6cd29c) </span><span class="sxs-lookup"><span data-stu-id="1cb69-204">[Attributes](https://msdn.microsoft.com/library/5x6cd29c) </span></span>  
+ <span data-ttu-id="1cb69-205">[Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) </span><span class="sxs-lookup"><span data-stu-id="1cb69-205">[Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) </span></span>  
+ [<span data-ttu-id="1cb69-206">Accesso agli attributi tramite reflection (C#)</span><span class="sxs-lookup"><span data-stu-id="1cb69-206">Accessing Attributes by Using Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
 

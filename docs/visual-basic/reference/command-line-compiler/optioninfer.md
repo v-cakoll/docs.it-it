@@ -33,55 +33,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0c0b6d8361e2bd59837161d1135b100e66d40887
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4bcc35da2a255ca75805c8a918027d2ccb61b154
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="optioninfer"></a>/optioninfer
-Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni di variabile.  
+# <a name="optioninfer"></a><span data-ttu-id="16373-102">/optioninfer</span><span class="sxs-lookup"><span data-stu-id="16373-102">/optioninfer</span></span>
+<span data-ttu-id="16373-103">Consente di usare l'inferenza del tipo di variabile locale nelle dichiarazioni di variabile.</span><span class="sxs-lookup"><span data-stu-id="16373-103">Enables the use of local type inference in variable declarations.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="16373-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="16373-104">Syntax</span></span>  
   
 ```  
 /optioninfer[+ | -]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a><span data-ttu-id="16373-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="16373-105">Arguments</span></span>  
   
-|Termine|Definizione|  
+|<span data-ttu-id="16373-106">Termine</span><span class="sxs-lookup"><span data-stu-id="16373-106">Term</span></span>|<span data-ttu-id="16373-107">Definizione</span><span class="sxs-lookup"><span data-stu-id="16373-107">Definition</span></span>|  
 |---|---|  
-|`+` &#124; `-`|Facoltativo. Specificare `/optioninfer+` per abilitare l'inferenza del tipo di variabile locale o `/optioninfer-` per bloccarla. L'opzione `/optioninfer`, senza alcun valore specificato, equivale a `/optioninfer+`. Il valore predefinito, quando l'opzione `/optioninfer` non è presente, è anche `/optioninfer+`. Il valore predefinito viene impostato nel file di risposta Vbc.rsp.|  
+|<span data-ttu-id="16373-108">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="16373-108">`+` &#124; `-`</span></span>|<span data-ttu-id="16373-109">Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="16373-109">Optional.</span></span> <span data-ttu-id="16373-110">Specificare `/optioninfer+` per abilitare l'inferenza del tipo di variabile locale o `/optioninfer-` per bloccarla.</span><span class="sxs-lookup"><span data-stu-id="16373-110">Specify `/optioninfer+` to enable local type inference, or `/optioninfer-` to block it.</span></span> <span data-ttu-id="16373-111">L'opzione `/optioninfer`, senza alcun valore specificato, equivale a `/optioninfer+`.</span><span class="sxs-lookup"><span data-stu-id="16373-111">The `/optioninfer` option, with no value specified, is the same as `/optioninfer+`.</span></span> <span data-ttu-id="16373-112">Il valore predefinito, quando l'opzione `/optioninfer` non è presente, è anche `/optioninfer+`.</span><span class="sxs-lookup"><span data-stu-id="16373-112">The default value when the `/optioninfer` switch is not present is also `/optioninfer+`.</span></span> <span data-ttu-id="16373-113">Il valore predefinito viene impostato nel file di risposta Vbc.rsp.</span><span class="sxs-lookup"><span data-stu-id="16373-113">The default value is set in the Vbc.rsp response file.</span></span>|  
   
 > [!NOTE]
->  È possibile usare l'opzione `/noconfig` per mantenere le impostazioni predefinite interne del compilatore anziché quelle specificate in vbc.rsp. Il valore predefinito del compilatore per questa opzione è `/optioninfer-`.  
+>  <span data-ttu-id="16373-114">È possibile usare l'opzione `/noconfig` per mantenere le impostazioni predefinite interne del compilatore anziché quelle specificate in vbc.rsp.</span><span class="sxs-lookup"><span data-stu-id="16373-114">You can use the `/noconfig` option to retain the compiler's internal defaults instead of those specified in vbc.rsp.</span></span> <span data-ttu-id="16373-115">Il valore predefinito del compilatore per questa opzione è `/optioninfer-`.</span><span class="sxs-lookup"><span data-stu-id="16373-115">The compiler default for this option is `/optioninfer-`.</span></span>  
   
-## <a name="remarks"></a>Note  
- Se il file di codice di origine contiene un [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md), l'istruzione esegue l'override di `/optioninfer` impostazione del compilatore da riga di comando.  
+## <a name="remarks"></a><span data-ttu-id="16373-116">Note</span><span class="sxs-lookup"><span data-stu-id="16373-116">Remarks</span></span>  
+ <span data-ttu-id="16373-117">Se il file di codice di origine contiene un [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md), l'istruzione esegue l'override di `/optioninfer` impostazione del compilatore da riga di comando.</span><span class="sxs-lookup"><span data-stu-id="16373-117">If the source code file contains an [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md), the statement overrides the `/optioninfer` command-line compiler setting.</span></span>  
   
-### <a name="to-set-optioninfer-in-the-visual-studio-ide"></a>Per impostare /optioninfer nell'IDE di Visual Studio  
+### <a name="to-set-optioninfer-in-the-visual-studio-ide"></a><span data-ttu-id="16373-118">Per impostare /optioninfer nell'IDE di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="16373-118">To set /optioninfer in the Visual Studio IDE</span></span>  
   
-1.  Selezionare un progetto in **Esplora**. Nel **progetto** menu, fare clic su **proprietà**. Per ulteriori informazioni, vedere [NIB: gestione di proprietà del progetto con Progettazione](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+1.  <span data-ttu-id="16373-119">Selezionare un progetto in **Esplora**.</span><span class="sxs-lookup"><span data-stu-id="16373-119">Select a project in **Solution Explorer**.</span></span> <span data-ttu-id="16373-120">Nel **progetto** menu, fare clic su **proprietà**.</span><span class="sxs-lookup"><span data-stu-id="16373-120">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="16373-121">Per ulteriori informazioni, vedere [NIB: gestione di proprietà del progetto con Progettazione](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).</span><span class="sxs-lookup"><span data-stu-id="16373-121">For more information, see [NIB: Managing Project Properties with the Project Designer](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).</span></span>  
   
-2.  Nel **compilare** scheda, modificare il valore di **Option infer** casella.  
+2.  <span data-ttu-id="16373-122">Nel **compilare** scheda, modificare il valore di **Option infer** casella.</span><span class="sxs-lookup"><span data-stu-id="16373-122">On the **Compile** tab, modify the value in the **Option infer** box.</span></span>  
   
-## <a name="example"></a>Esempio  
- Il codice seguente compila `test.vb` con l'inferenza del tipo locale abilitata.  
+## <a name="example"></a><span data-ttu-id="16373-123">Esempio</span><span class="sxs-lookup"><span data-stu-id="16373-123">Example</span></span>  
+ <span data-ttu-id="16373-124">Il codice seguente compila `test.vb` con l'inferenza del tipo locale abilitata.</span><span class="sxs-lookup"><span data-stu-id="16373-124">The following code compiles `test.vb` with local type inference enabled.</span></span>  
   
 ```  
 vbc /optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)   
- [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)   
- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)   
- [Esempi di righe di comando compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Istruzione Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)   
- [Inferenza del tipo locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Finestra di dialogo Opzioni predefinite, progetti, Visual Basic](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)   
- [Compilazione (pagina), Creazione progetti (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)   
- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
- [Compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+## <a name="see-also"></a><span data-ttu-id="16373-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="16373-125">See Also</span></span>  
+ <span data-ttu-id="16373-126">[Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md) </span><span class="sxs-lookup"><span data-stu-id="16373-126">[Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) </span></span>  
+<span data-ttu-id="16373-127"> [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) </span><span class="sxs-lookup"><span data-stu-id="16373-127"> [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) </span></span>  
+<span data-ttu-id="16373-128"> [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) </span><span class="sxs-lookup"><span data-stu-id="16373-128"> [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) </span></span>  
+<span data-ttu-id="16373-129"> [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) </span><span class="sxs-lookup"><span data-stu-id="16373-129"> [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) </span></span>  
+<span data-ttu-id="16373-130"> [Esempi di righe di comando compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) </span><span class="sxs-lookup"><span data-stu-id="16373-130"> [Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) </span></span>  
+<span data-ttu-id="16373-131"> [Istruzione Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) </span><span class="sxs-lookup"><span data-stu-id="16373-131"> [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) </span></span>  
+<span data-ttu-id="16373-132"> [Inferenza del tipo locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) </span><span class="sxs-lookup"><span data-stu-id="16373-132"> [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) </span></span>  
+<span data-ttu-id="16373-133"> [Finestra di dialogo Opzioni predefinite, progetti, Visual Basic](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box) </span><span class="sxs-lookup"><span data-stu-id="16373-133"> [Visual Basic Defaults, Projects, Options Dialog Box](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box) </span></span>  
+<span data-ttu-id="16373-134"> [Compilazione (pagina), Creazione progetti (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) </span><span class="sxs-lookup"><span data-stu-id="16373-134"> [Compile Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) </span></span>  
+<span data-ttu-id="16373-135"> [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) </span><span class="sxs-lookup"><span data-stu-id="16373-135"> [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) </span></span>  
+<span data-ttu-id="16373-136"> [Compilazione dalla riga di comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)</span><span class="sxs-lookup"><span data-stu-id="16373-136"> [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)</span></span>

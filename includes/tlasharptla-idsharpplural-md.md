@@ -1,1 +1,1 @@
-identificatori (ID)
+<span data-ttu-id="f0652-101">identificatori (ID)</span><span class="sxs-lookup"><span data-stu-id="f0652-101">identifiers (IDs)</span></span>

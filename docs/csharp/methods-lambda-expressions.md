@@ -17,16 +17,16 @@ ms.lasthandoff: 08/11/2017
 
 ---
 
-# <a name="methods-and-lambda-expressions"></a>Metodi ed espressioni lambda
+# <a name="methods-and-lambda-expressions"></a><span data-ttu-id="a3a94-105">Metodi ed espressioni lambda</span><span class="sxs-lookup"><span data-stu-id="a3a94-105">Methods and Lambda Expressions</span></span>
 
-> **Nota**
+> <span data-ttu-id="a3a94-106">**Nota**</span><span class="sxs-lookup"><span data-stu-id="a3a94-106">**Note**</span></span>
 > 
-> Questo argomento non è ancora stato scritto. 
+> <span data-ttu-id="a3a94-107">Questo argomento non è ancora stato scritto.</span><span class="sxs-lookup"><span data-stu-id="a3a94-107">This topic hasn’t been written yet!</span></span> 
 >
-> Microsoft invita gli utenti a inviare commenti e suggerimenti per aiutare a definire l'ambito e l'approccio da adottare. È possibile tenere traccia dello stato e inviare il proprio input su questo [argomento](https://github.com/dotnet/docs/issues/488) in GitHub.
+> <span data-ttu-id="a3a94-108">Microsoft invita gli utenti a inviare commenti e suggerimenti per aiutare a definire l'ambito e l'approccio da adottare.</span><span class="sxs-lookup"><span data-stu-id="a3a94-108">We welcome your input to help shape the scope and approach.</span></span> <span data-ttu-id="a3a94-109">È possibile tenere traccia dello stato e inviare il proprio input su questo [argomento](https://github.com/dotnet/docs/issues/488) in GitHub.</span><span class="sxs-lookup"><span data-stu-id="a3a94-109">You can track the status and provide input on this [issue](https://github.com/dotnet/docs/issues/488) at GitHub.</span></span>
 > 
-> Per rivedere le prime bozze e le linee generali dell'argomento, inviare una nota con le proprie informazioni di contatto nell'apposita pagina.
+> <span data-ttu-id="a3a94-110">Per rivedere le prime bozze e le linee generali dell'argomento, inviare una nota con le proprie informazioni di contatto nell'apposita pagina.</span><span class="sxs-lookup"><span data-stu-id="a3a94-110">If you would like to review early drafts and outlines of this topic, please leave a note with your contact information in the issue.</span></span>
 >
-> Per altre informazioni su come offrire il proprio contributo, visitare questa pagina di [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).
+> <span data-ttu-id="a3a94-111">Per altre informazioni su come offrire il proprio contributo, visitare questa pagina di [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span><span class="sxs-lookup"><span data-stu-id="a3a94-111">Learn more about how you can contribute on [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
 >
 

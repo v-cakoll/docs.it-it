@@ -37,15 +37,15 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="false-c-reference"></a>false (Riferimenti per C#)
-Usato come operatore di overload o come valore letterale:  
+# <a name="false-c-reference"></a><span data-ttu-id="bac75-102">false (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="bac75-102">false (C# Reference)</span></span>
+<span data-ttu-id="bac75-103">Usato come operatore di overload o come valore letterale:</span><span class="sxs-lookup"><span data-stu-id="bac75-103">Used as an overloaded operator or as a literal:</span></span>  
   
--   [Operatore false](../../../csharp/language-reference/keywords/false-operator.md)  
+-   [<span data-ttu-id="bac75-104">Operatore false</span><span class="sxs-lookup"><span data-stu-id="bac75-104">false Operator</span></span>](../../../csharp/language-reference/keywords/false-operator.md)  
   
--   [Valore letterale false](../../../csharp/language-reference/keywords/false-literal.md)  
+-   [<span data-ttu-id="bac75-105">Valore letterale false</span><span class="sxs-lookup"><span data-stu-id="bac75-105">false Literal</span></span>](../../../csharp/language-reference/keywords/false-literal.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="bac75-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bac75-106">See Also</span></span>  
+ <span data-ttu-id="bac75-107">[Riferimenti per C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="bac75-107">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="bac75-108">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="bac75-108">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="bac75-109">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="bac75-109">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

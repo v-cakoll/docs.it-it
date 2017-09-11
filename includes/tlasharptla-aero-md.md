@@ -1,1 +1,1 @@
-Windows Aero
+<span data-ttu-id="63806-101">Windows Aero</span><span class="sxs-lookup"><span data-stu-id="63806-101">Windows Aero</span></span>

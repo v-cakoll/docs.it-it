@@ -21,17 +21,17 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4503774e8d6fc9b0a71c3a4ee390f98b485cc003
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 9cb53837ea2d272efa6bbb9b9f64231c84c42274
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>Procedura: serializzare mediante XmlSerializer (Visual Basic)
-In questo argomento viene illustrato un esempio che serializza e deserializza utilizzando <xref:System.Xml.Serialization.XmlSerializer>.</xref:System.Xml.Serialization.XmlSerializer>  
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a><span data-ttu-id="c85b1-102">Procedura: serializzare mediante XmlSerializer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c85b1-102">How to: Serialize Using XmlSerializer (Visual Basic)</span></span>
+<span data-ttu-id="c85b1-103">In questo argomento viene illustrato un esempio che serializza e deserializza utilizzando <xref:System.Xml.Serialization.XmlSerializer>.</xref:System.Xml.Serialization.XmlSerializer></span><span class="sxs-lookup"><span data-stu-id="c85b1-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene creato un numero di oggetti che contengono <xref:System.Xml.Linq.XElement>oggetti.</xref:System.Xml.Linq.XElement> Tali oggetti vengono quindi serializzati in un flusso di memoria e successivamente deserializzati dallo stesso flusso.  
+## <a name="example"></a><span data-ttu-id="c85b1-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="c85b1-104">Example</span></span>  
+ <span data-ttu-id="c85b1-105">Nell'esempio seguente viene creato un numero di oggetti che contengono <xref:System.Xml.Linq.XElement>oggetti.</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="c85b1-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="c85b1-106">Tali oggetti vengono quindi serializzati in un flusso di memoria e successivamente deserializzati dallo stesso flusso.</span><span class="sxs-lookup"><span data-stu-id="c85b1-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```vb  
 Imports System  
@@ -87,7 +87,7 @@ Public Class XLinqTest
 End Class  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="c85b1-107">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="c85b1-107">This example produces the following output:</span></span>  
   
 ```  
 Testing for type: XElementNullContainer  
@@ -98,6 +98,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Serializzazione di oggetti grafici contenenti oggetti XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a><span data-ttu-id="c85b1-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c85b1-108">See Also</span></span>  
+ [<span data-ttu-id="c85b1-109">Serializzazione di oggetti grafici contenenti oggetti XElement (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c85b1-109">Serializing Object Graphs that Contain XElement Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
 

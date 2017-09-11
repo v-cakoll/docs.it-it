@@ -21,28 +21,28 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="full-code-listings"></a>Listati di codice completi
-Questo argomento contiene il listato di codice completo per un'applicazione che usa le [modifiche e i processori a inerzia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md).  
+# <a name="full-code-listings"></a><span data-ttu-id="a53ef-102">Listati di codice completi</span><span class="sxs-lookup"><span data-stu-id="a53ef-102">Full Code Listings</span></span>
+<span data-ttu-id="a53ef-103">Questo argomento contiene il listato di codice completo per un'applicazione che usa le [modifiche e i processori a inerzia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md).</span><span class="sxs-lookup"><span data-stu-id="a53ef-103">This topic contains the entire code listing for an application that uses [Manipulations and Inertia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) processors.</span></span>  
   
-## <a name="gamepiece-class"></a>Classe GamePiece  
- Il codice seguente illustra l'intera classe **GamePiece**.  
+## <a name="gamepiece-class"></a><span data-ttu-id="a53ef-104">Classe GamePiece</span><span class="sxs-lookup"><span data-stu-id="a53ef-104">GamePiece class</span></span>  
+ <span data-ttu-id="a53ef-105">Il codice seguente illustra l'intera classe **GamePiece**.</span><span class="sxs-lookup"><span data-stu-id="a53ef-105">The following code shows the entire **GamePiece** class.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePieceClass](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiececlass)]  
+ <span data-ttu-id="a53ef-106">[!code-csharp[ManipulationXNA#_GamePieceClass](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiececlass)]</span><span class="sxs-lookup"><span data-stu-id="a53ef-106">[!code-csharp[ManipulationXNA#_GamePieceClass](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiececlass)]</span></span>  
   
-## <a name="gamepiececollection-class"></a>Classe GamePieceCollection  
- Il codice seguente illustra l'intera classe **GamePieceCollection**.  
+## <a name="gamepiececollection-class"></a><span data-ttu-id="a53ef-107">Classe GamePieceCollection</span><span class="sxs-lookup"><span data-stu-id="a53ef-107">GamePieceCollection class</span></span>  
+ <span data-ttu-id="a53ef-108">Il codice seguente illustra l'intera classe **GamePieceCollection**.</span><span class="sxs-lookup"><span data-stu-id="a53ef-108">The following code shows the entire **GamePieceCollection** class.</span></span>  
   
- [!code-csharp[ManipulationXNA#_GamePieceCollectionClass](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollectionclass)]  
+ <span data-ttu-id="a53ef-109">[!code-csharp[ManipulationXNA#_GamePieceCollectionClass](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollectionclass)]</span><span class="sxs-lookup"><span data-stu-id="a53ef-109">[!code-csharp[ManipulationXNA#_GamePieceCollectionClass](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiececollection.cs#_gamepiececollectionclass)]</span></span>  
   
-## <a name="game1-class"></a>Classe Game1  
- Il codice seguente illustra l'intera classe **Game1**.  
+## <a name="game1-class"></a><span data-ttu-id="a53ef-110">Classe Game1</span><span class="sxs-lookup"><span data-stu-id="a53ef-110">Game1 class</span></span>  
+ <span data-ttu-id="a53ef-111">Il codice seguente illustra l'intera classe **Game1**.</span><span class="sxs-lookup"><span data-stu-id="a53ef-111">The following code shows the entire **Game1** class.</span></span>  
   
- [!code-csharp[ManipulationXNA#_Game1Class](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1class)]  
+ <span data-ttu-id="a53ef-112">[!code-csharp[ManipulationXNA#_Game1Class](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1class)]</span><span class="sxs-lookup"><span data-stu-id="a53ef-112">[!code-csharp[ManipulationXNA#_Game1Class](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/game1.cs#_game1class)]</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Modifiche e inerzia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
- [Uso delle modifiche e dell'inerzia in un'applicazione XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
- [Creazione della classe GamePiece](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)   
- [Creazione della classe GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
- [Creazione della classe Game1](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
+## <a name="see-also"></a><span data-ttu-id="a53ef-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a53ef-113">See Also</span></span>  
+ <span data-ttu-id="a53ef-114">[Modifiche e inerzia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) </span><span class="sxs-lookup"><span data-stu-id="a53ef-114">[Manipulations and Inertia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) </span></span>  
+ <span data-ttu-id="a53ef-115">[Uso delle modifiche e dell'inerzia in un'applicazione XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md) </span><span class="sxs-lookup"><span data-stu-id="a53ef-115">[Using Manipulations and Inertia in an XNA Application](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md) </span></span>  
+ <span data-ttu-id="a53ef-116">[Creazione della classe GamePiece](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md) </span><span class="sxs-lookup"><span data-stu-id="a53ef-116">[Creating the GamePiece Class](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md) </span></span>  
+ <span data-ttu-id="a53ef-117">[Creazione della classe GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) </span><span class="sxs-lookup"><span data-stu-id="a53ef-117">[Creating the GamePieceCollection Class](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) </span></span>  
+ [<span data-ttu-id="a53ef-118">Creazione della classe Game1</span><span class="sxs-lookup"><span data-stu-id="a53ef-118">Creating the Game1 Class</span></span>](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
 

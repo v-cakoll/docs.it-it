@@ -1,1 +1,1 @@
-bit per pixel (BPP)
+<span data-ttu-id="76b28-101">bit per pixel (BPP)</span><span class="sxs-lookup"><span data-stu-id="76b28-101">bits per pixel (BPP)</span></span>

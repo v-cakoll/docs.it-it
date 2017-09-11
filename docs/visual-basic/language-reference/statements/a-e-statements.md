@@ -27,24 +27,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 82c97eae0ba9a41182b857a799303c1ce4f8053f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b6148e97de23ef7be9b3c26f40b3db10caed18a0
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="a-e-statements"></a>Istruzioni A-E
-Nella tabella seguente contiene un elenco di [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] istruzioni del linguaggio.  
+# <a name="a-e-statements"></a><span data-ttu-id="14c12-102">Istruzioni A-E</span><span class="sxs-lookup"><span data-stu-id="14c12-102">A-E Statements</span></span>
+<span data-ttu-id="14c12-103">Nella tabella seguente contiene un elenco di [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] istruzioni del linguaggio.</span><span class="sxs-lookup"><span data-stu-id="14c12-103">The following table contains a listing of [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] language statements.</span></span>  
   
 |||||  
 |---|---|---|---|  
-|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[Chiamata](../../../visual-basic/language-reference/statements/call-statement.md)|[Classe](../../../visual-basic/language-reference/statements/class-statement.md)|[Const](../../../visual-basic/language-reference/statements/const-statement.md)|  
-|[Continuare](../../../visual-basic/language-reference/statements/continue-statement.md)|[Dichiarare](../../../visual-basic/language-reference/statements/declare-statement.md)|[Delegato](../../../visual-basic/language-reference/statements/delegate-statement.md)|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|  
-|[Eseguire l'operazione... Ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Altro](../../../visual-basic/language-reference/statements/else-statement.md)|[Fine](../../../visual-basic/language-reference/statements/end-statement.md)|[Fine \<parola chiave >](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
-|[Enum](../../../visual-basic/language-reference/statements/enum-statement.md)|[Cancellazione](../../../visual-basic/language-reference/statements/erase-statement.md)|[Erroree](../../../visual-basic/language-reference/statements/error-statement.md)|[Evento](../../../visual-basic/language-reference/statements/event-statement.md)|  
-|[Uscita](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
+|[<span data-ttu-id="14c12-104">AddHandler</span><span class="sxs-lookup"><span data-stu-id="14c12-104">AddHandler</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[<span data-ttu-id="14c12-105">Chiamata</span><span class="sxs-lookup"><span data-stu-id="14c12-105">Call</span></span>](../../../visual-basic/language-reference/statements/call-statement.md)|[<span data-ttu-id="14c12-106">Classe</span><span class="sxs-lookup"><span data-stu-id="14c12-106">Class</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)|[<span data-ttu-id="14c12-107">Const</span><span class="sxs-lookup"><span data-stu-id="14c12-107">Const</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)|  
+|[<span data-ttu-id="14c12-108">Continuare</span><span class="sxs-lookup"><span data-stu-id="14c12-108">Continue</span></span>](../../../visual-basic/language-reference/statements/continue-statement.md)|[<span data-ttu-id="14c12-109">Dichiarare</span><span class="sxs-lookup"><span data-stu-id="14c12-109">Declare</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)|[<span data-ttu-id="14c12-110">Delegato</span><span class="sxs-lookup"><span data-stu-id="14c12-110">Delegate</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)|[<span data-ttu-id="14c12-111">Dim</span><span class="sxs-lookup"><span data-stu-id="14c12-111">Dim</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)|  
+|[<span data-ttu-id="14c12-112">Eseguire l'operazione... Ciclo</span><span class="sxs-lookup"><span data-stu-id="14c12-112">Do...Loop</span></span>](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[<span data-ttu-id="14c12-113">Altro</span><span class="sxs-lookup"><span data-stu-id="14c12-113">Else</span></span>](../../../visual-basic/language-reference/statements/else-statement.md)|[<span data-ttu-id="14c12-114">Fine</span><span class="sxs-lookup"><span data-stu-id="14c12-114">End</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)|[<span data-ttu-id="14c12-115">Fine \<parola chiave ></span><span class="sxs-lookup"><span data-stu-id="14c12-115">End \<keyword></span></span>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
+|[<span data-ttu-id="14c12-116">Enum</span><span class="sxs-lookup"><span data-stu-id="14c12-116">Enum</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)|[<span data-ttu-id="14c12-117">Cancellazione</span><span class="sxs-lookup"><span data-stu-id="14c12-117">Erase</span></span>](../../../visual-basic/language-reference/statements/erase-statement.md)|[<span data-ttu-id="14c12-118">Erroree</span><span class="sxs-lookup"><span data-stu-id="14c12-118">Error</span></span>](../../../visual-basic/language-reference/statements/error-statement.md)|[<span data-ttu-id="14c12-119">Evento</span><span class="sxs-lookup"><span data-stu-id="14c12-119">Event</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)|  
+|[<span data-ttu-id="14c12-120">Uscita</span><span class="sxs-lookup"><span data-stu-id="14c12-120">Exit</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
   
-## <a name="see-also"></a>Vedere anche  
- [Istruzioni F-P](../../../visual-basic/language-reference/statements/f-p-statements.md)   
- [Istruzioni Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md)   
- [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="14c12-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="14c12-121">See Also</span></span>  
+ <span data-ttu-id="14c12-122">[Istruzioni F-P](../../../visual-basic/language-reference/statements/f-p-statements.md) </span><span class="sxs-lookup"><span data-stu-id="14c12-122">[F-P Statements](../../../visual-basic/language-reference/statements/f-p-statements.md) </span></span>  
+<span data-ttu-id="14c12-123"> [Istruzioni Q-Z](../../../visual-basic/language-reference/statements/q-z-statements.md) </span><span class="sxs-lookup"><span data-stu-id="14c12-123"> [Q-Z Statements](../../../visual-basic/language-reference/statements/q-z-statements.md) </span></span>  
+<span data-ttu-id="14c12-124"> [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)</span><span class="sxs-lookup"><span data-stu-id="14c12-124"> [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)</span></span>

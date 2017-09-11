@@ -37,77 +37,77 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="abstract-c-reference"></a>abstract (Riferimenti per C#)
-Il modificatore `abstract` indica che l'oggetto in fase di modifica ha un'implementazione mancante o incompleta. Il modificatore abstract può essere usato con classi, metodi, proprietà, indicizzatori ed eventi. Usare il modificatore `abstract` in una dichiarazione di classe per indicare che una classe verrà usata solo come classe di base per altre classi. I membri contrassegnati come astratti o inclusi in una classe astratta devono essere implementati dalle classi che derivano dalla classe astratta.  
+# <a name="abstract-c-reference"></a><span data-ttu-id="ddf82-102">abstract (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="ddf82-102">abstract (C# Reference)</span></span>
+<span data-ttu-id="ddf82-103">Il modificatore `abstract` indica che l'oggetto in fase di modifica ha un'implementazione mancante o incompleta.</span><span class="sxs-lookup"><span data-stu-id="ddf82-103">The `abstract` modifier indicates that the thing being modified has a missing or incomplete implementation.</span></span> <span data-ttu-id="ddf82-104">Il modificatore abstract può essere usato con classi, metodi, proprietà, indicizzatori ed eventi.</span><span class="sxs-lookup"><span data-stu-id="ddf82-104">The abstract modifier can be used with classes, methods, properties, indexers, and events.</span></span> <span data-ttu-id="ddf82-105">Usare il modificatore `abstract` in una dichiarazione di classe per indicare che una classe verrà usata solo come classe di base per altre classi.</span><span class="sxs-lookup"><span data-stu-id="ddf82-105">Use the `abstract` modifier in a class declaration to indicate that a class is intended only to be a base class of other classes.</span></span> <span data-ttu-id="ddf82-106">I membri contrassegnati come astratti o inclusi in una classe astratta devono essere implementati dalle classi che derivano dalla classe astratta.</span><span class="sxs-lookup"><span data-stu-id="ddf82-106">Members marked as abstract, or included in an abstract class, must be implemented by classes that derive from the abstract class.</span></span>  
   
-## <a name="example"></a>Esempio  
- In questo esempio, la classe `Square` deve eseguire un'implementazione di `Area` poiché deriva da `ShapesClass`:  
+## <a name="example"></a><span data-ttu-id="ddf82-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="ddf82-107">Example</span></span>  
+ <span data-ttu-id="ddf82-108">In questo esempio, la classe `Square` deve eseguire un'implementazione di `Area` poiché deriva da `ShapesClass`:</span><span class="sxs-lookup"><span data-stu-id="ddf82-108">In this example, the class `Square` must provide an implementation of `Area` because it derives from `ShapesClass`:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
+ <span data-ttu-id="ddf82-109">[!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="ddf82-109">[!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]</span></span>  
   
- Le classi astratte hanno le caratteristiche seguenti:  
+ <span data-ttu-id="ddf82-110">Le classi astratte hanno le caratteristiche seguenti:</span><span class="sxs-lookup"><span data-stu-id="ddf82-110">Abstract classes have the following features:</span></span>  
   
--   Non è possibile creare un'istanza di una classe astratta.  
+-   <span data-ttu-id="ddf82-111">Non è possibile creare un'istanza di una classe astratta.</span><span class="sxs-lookup"><span data-stu-id="ddf82-111">An abstract class cannot be instantiated.</span></span>  
   
--   Una classe astratta può contenere funzioni di accesso e metodi astratti.  
+-   <span data-ttu-id="ddf82-112">Una classe astratta può contenere funzioni di accesso e metodi astratti.</span><span class="sxs-lookup"><span data-stu-id="ddf82-112">An abstract class may contain abstract methods and accessors.</span></span>  
   
--   Non è possibile modificare una classe astratta con il modificatore [sealed](../../../csharp/language-reference/keywords/sealed.md) perché i due modificatori hanno significati opposti. Il modificatore `sealed` impedisce a una classe che venga ereditata e il modificatore `abstract` richiede una classe da ereditare.  
+-   <span data-ttu-id="ddf82-113">Non è possibile modificare una classe astratta con il modificatore [sealed](../../../csharp/language-reference/keywords/sealed.md) perché i due modificatori hanno significati opposti.</span><span class="sxs-lookup"><span data-stu-id="ddf82-113">It is not possible to modify an abstract class with the [sealed](../../../csharp/language-reference/keywords/sealed.md) modifier because the two modifers have opposite meanings.</span></span> <span data-ttu-id="ddf82-114">Il modificatore `sealed` impedisce a una classe che venga ereditata e il modificatore `abstract` richiede una classe da ereditare.</span><span class="sxs-lookup"><span data-stu-id="ddf82-114">The `sealed` modifier prevents a class from being inherited and the `abstract` modifier requires a class to be inherited.</span></span>  
   
--   Una classe non astratta derivata da una classe astratta deve includere implementazioni effettive di tutte le funzioni di accesso e di tutti i metodi astratti ereditati.  
+-   <span data-ttu-id="ddf82-115">Una classe non astratta derivata da una classe astratta deve includere implementazioni effettive di tutte le funzioni di accesso e di tutti i metodi astratti ereditati.</span><span class="sxs-lookup"><span data-stu-id="ddf82-115">A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.</span></span>  
   
- Usare il modificatore `abstract` in una dichiarazione di metodo o proprietà per indicare che il metodo o proprietà non contiene implementazioni.  
+ <span data-ttu-id="ddf82-116">Usare il modificatore `abstract` in una dichiarazione di metodo o proprietà per indicare che il metodo o proprietà non contiene implementazioni.</span><span class="sxs-lookup"><span data-stu-id="ddf82-116">Use the `abstract` modifier in a method or property declaration to indicate that the method or property does not contain implementation.</span></span>  
   
- I metodi astratti hanno le caratteristiche seguenti:  
+ <span data-ttu-id="ddf82-117">I metodi astratti hanno le caratteristiche seguenti:</span><span class="sxs-lookup"><span data-stu-id="ddf82-117">Abstract methods have the following features:</span></span>  
   
--   Un metodo astratto è implicitamente un metodo virtuale.  
+-   <span data-ttu-id="ddf82-118">Un metodo astratto è implicitamente un metodo virtuale.</span><span class="sxs-lookup"><span data-stu-id="ddf82-118">An abstract method is implicitly a virtual method.</span></span>  
   
--   Le dichiarazioni di metodi astratti sono consentite solo in classi astratte.  
+-   <span data-ttu-id="ddf82-119">Le dichiarazioni di metodi astratti sono consentite solo in classi astratte.</span><span class="sxs-lookup"><span data-stu-id="ddf82-119">Abstract method declarations are only permitted in abstract classes.</span></span>  
   
--   Poiché una dichiarazione di un metodo astratto non offre alcuna implementazione effettiva, non c'è nessun corpo del metodo. La dichiarazione del metodo termina semplicemente con un punto e virgola e non ci sono parentesi graffe ({ }) dopo la firma. Ad esempio:  
+-   <span data-ttu-id="ddf82-120">Poiché una dichiarazione di un metodo astratto non offre alcuna implementazione effettiva, non c'è nessun corpo del metodo. La dichiarazione del metodo termina semplicemente con un punto e virgola e non ci sono parentesi graffe ({ }) dopo la firma.</span><span class="sxs-lookup"><span data-stu-id="ddf82-120">Because an abstract method declaration provides no actual implementation, there is no method body; the method declaration simply ends with a semicolon and there are no curly braces ({ }) following the signature.</span></span> <span data-ttu-id="ddf82-121">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="ddf82-121">For example:</span></span>  
   
     ```  
     public abstract void MyMethod();  
     ```  
   
-     L'implementazione viene specificata da un metodo di [override](../../../csharp/language-reference/keywords/override.md), che è un membro di una classe non astratta.  
+     <span data-ttu-id="ddf82-122">L'implementazione viene specificata da un metodo di [override](../../../csharp/language-reference/keywords/override.md), che è un membro di una classe non astratta.</span><span class="sxs-lookup"><span data-stu-id="ddf82-122">The implementation is provided by an overriding method[override](../../../csharp/language-reference/keywords/override.md), which is a member of a non-abstract class.</span></span>  
   
--   Non è possibile usare il modificatore [static](../../../csharp/language-reference/keywords/static.md) o [virtual](../../../csharp/language-reference/keywords/virtual.md) in una dichiarazione di un metodo astratto.  
+-   <span data-ttu-id="ddf82-123">Non è possibile usare il modificatore [static](../../../csharp/language-reference/keywords/static.md) o [virtual](../../../csharp/language-reference/keywords/virtual.md) in una dichiarazione di un metodo astratto.</span><span class="sxs-lookup"><span data-stu-id="ddf82-123">It is an error to use the [static](../../../csharp/language-reference/keywords/static.md) or [virtual](../../../csharp/language-reference/keywords/virtual.md) modifiers in an abstract method declaration.</span></span>  
   
- Le proprietà astratte si comportano come i metodi astratti, ad eccezione delle differenze nella sintassi di dichiarazione e di chiamata.  
+ <span data-ttu-id="ddf82-124">Le proprietà astratte si comportano come i metodi astratti, ad eccezione delle differenze nella sintassi di dichiarazione e di chiamata.</span><span class="sxs-lookup"><span data-stu-id="ddf82-124">Abstract properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>  
   
--   Non è possibile usare il modificatore `abstract` su una proprietà static.  
+-   <span data-ttu-id="ddf82-125">Non è possibile usare il modificatore `abstract` su una proprietà static.</span><span class="sxs-lookup"><span data-stu-id="ddf82-125">It is an error to use the `abstract` modifier on a static property.</span></span>  
   
--   Una proprietà astratta ereditata può essere sottoposta a override in una classe derivata includendo una dichiarazione di proprietà che usa il modificatore di [override](../../../csharp/language-reference/keywords/override.md).  
+-   <span data-ttu-id="ddf82-126">Una proprietà astratta ereditata può essere sottoposta a override in una classe derivata includendo una dichiarazione di proprietà che usa il modificatore di [override](../../../csharp/language-reference/keywords/override.md).</span><span class="sxs-lookup"><span data-stu-id="ddf82-126">An abstract inherited property can be overridden in a derived class by including a property declaration that uses the [override](../../../csharp/language-reference/keywords/override.md) modifier.</span></span>  
   
- Per altre informazioni sulle classi astratte, vedere [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+ <span data-ttu-id="ddf82-127">Per altre informazioni sulle classi astratte, vedere [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span><span class="sxs-lookup"><span data-stu-id="ddf82-127">For more information about abstract classes, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
- Una classe astratta deve specificare l'implementazione per tutti i membri di interfaccia.  
+ <span data-ttu-id="ddf82-128">Una classe astratta deve specificare l'implementazione per tutti i membri di interfaccia.</span><span class="sxs-lookup"><span data-stu-id="ddf82-128">An abstract class must provide implementation for all interface members.</span></span>  
   
- Una classe astratta che implementa un'interfaccia può eseguire il mapping dei metodi di interfaccia su metodi astratti. Ad esempio:  
+ <span data-ttu-id="ddf82-129">Una classe astratta che implementa un'interfaccia può eseguire il mapping dei metodi di interfaccia su metodi astratti.</span><span class="sxs-lookup"><span data-stu-id="ddf82-129">An abstract class that implements an interface might map the interface methods onto abstract methods.</span></span> <span data-ttu-id="ddf82-130">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="ddf82-130">For example:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
+ <span data-ttu-id="ddf82-131">[!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="ddf82-131">[!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]</span></span>  
   
-## <a name="example"></a>Esempio  
- In questo esempio, la classe `DerivedClass` è derivata da una classe di base astratta `BaseClass`. La classe astratta contiene un metodo astratto, `AbstractMethod`, e due proprietà astratte, `X` e `Y`.  
+## <a name="example"></a><span data-ttu-id="ddf82-132">Esempio</span><span class="sxs-lookup"><span data-stu-id="ddf82-132">Example</span></span>  
+ <span data-ttu-id="ddf82-133">In questo esempio, la classe `DerivedClass` è derivata da una classe di base astratta `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="ddf82-133">In this example, the class `DerivedClass` is derived from an abstract class `BaseClass`.</span></span> <span data-ttu-id="ddf82-134">La classe astratta contiene un metodo astratto, `AbstractMethod`, e due proprietà astratte, `X` e `Y`.</span><span class="sxs-lookup"><span data-stu-id="ddf82-134">The abstract class contains an abstract method, `AbstractMethod`, and two abstract properties, `X` and `Y`.</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
+ <span data-ttu-id="ddf82-135">[!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="ddf82-135">[!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]</span></span>  
   
- Nell'esempio precedente, se si prova a creare un'istanza della classe astratta tramite un'istruzione simile alla seguente:  
+ <span data-ttu-id="ddf82-136">Nell'esempio precedente, se si prova a creare un'istanza della classe astratta tramite un'istruzione simile alla seguente:</span><span class="sxs-lookup"><span data-stu-id="ddf82-136">In the preceding example, if you attempt to instantiate the abstract class by using a statement like this:</span></span>  
   
 ```  
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
- si otterrà un errore che informa che il compilatore non può creare un'istanza della classe astratta "BaseClass".  
+ <span data-ttu-id="ddf82-137">si otterrà un errore che informa che il compilatore non può creare un'istanza della classe astratta "BaseClass".</span><span class="sxs-lookup"><span data-stu-id="ddf82-137">you will get an error saying that the compiler cannot create an instance of the abstract class 'BaseClass'.</span></span>  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a><span data-ttu-id="ddf82-138">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="ddf82-138">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="ddf82-139">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ddf82-139">See Also</span></span>  
+ <span data-ttu-id="ddf82-140">[Riferimenti per C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="ddf82-140">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="ddf82-141">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="ddf82-141">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="ddf82-142">[Modificatori](../../../csharp/language-reference/keywords/modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="ddf82-142">[Modifiers](../../../csharp/language-reference/keywords/modifiers.md) </span></span>  
+ <span data-ttu-id="ddf82-143">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span><span class="sxs-lookup"><span data-stu-id="ddf82-143">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span></span>  
+ <span data-ttu-id="ddf82-144">[override](../../../csharp/language-reference/keywords/override.md) </span><span class="sxs-lookup"><span data-stu-id="ddf82-144">[override](../../../csharp/language-reference/keywords/override.md) </span></span>  
+ [<span data-ttu-id="ddf82-145">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="ddf82-145">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

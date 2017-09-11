@@ -26,10 +26,10 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a>File XML di esempio: libri (LINQ to XML)
-Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Il file contiene informazioni su libri.  
+# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="9d47c-102">File XML di esempio: libri (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="9d47c-102">Sample XML File: Books (LINQ to XML)</span></span>
+<span data-ttu-id="9d47c-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9d47c-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="9d47c-104">Il file contiene informazioni su libri.</span><span class="sxs-lookup"><span data-stu-id="9d47c-104">The file contains information about books.</span></span>  
   
-## <a name="booksxml"></a>books.xml  
+## <a name="booksxml"></a><span data-ttu-id="9d47c-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="9d47c-105">books.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Documenti XML di esempio (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="9d47c-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9d47c-106">See Also</span></span>  
+ [<span data-ttu-id="9d47c-107">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="9d47c-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

@@ -1,1 +1,1 @@
-Disponibile a partire dalla versione 4.6, solo in .NET Native
+<span data-ttu-id="dd9d3-101">Disponibile a partire dalla versione 4.6, solo in .NET Native</span><span class="sxs-lookup"><span data-stu-id="dd9d3-101">Available since 4.6, .NET Native only</span></span>

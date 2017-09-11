@@ -36,8 +36,8 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="boxing-nullable-types-c-programming-guide"></a>Conversione boxing di tipi nullable (Guida per programmatori C#)
-Gli oggetti basati su tipi nullable sono boxed solo se l'oggetto è diverso da null. Se <xref:System.Nullable%601.HasValue%2A> è `false`, il riferimento all'oggetto viene assegnato a `null` anziché alla conversione boxing. Ad esempio:  
+# <a name="boxing-nullable-types-c-programming-guide"></a><span data-ttu-id="0b244-102">Conversione boxing di tipi nullable (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="0b244-102">Boxing Nullable Types (C# Programming Guide)</span></span>
+<span data-ttu-id="0b244-103">Gli oggetti basati su tipi nullable sono boxed solo se l'oggetto è diverso da null.</span><span class="sxs-lookup"><span data-stu-id="0b244-103">Objects based on nullable types are only boxed if the object is non-null.</span></span> <span data-ttu-id="0b244-104">Se <xref:System.Nullable%601.HasValue%2A> è `false`, il riferimento all'oggetto viene assegnato a `null` anziché alla conversione boxing.</span><span class="sxs-lookup"><span data-stu-id="0b244-104">If <xref:System.Nullable%601.HasValue%2A> is `false`, the object reference is assigned to `null` instead of boxing.</span></span> <span data-ttu-id="0b244-105">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0b244-105">For example:</span></span>  
   
 ```csharp  
 bool? b = null;  
@@ -45,7 +45,7 @@ object o = b;
 // Now o is null.  
 ```  
   
- Se l'oggetto è diverso da null (ovvero se <xref:System.Nullable%601.HasValue%2A> è `true`) viene eseguita la conversione boxing, ma solo il tipo sottostante su cui è basato l'oggetto è boxed. La conversione boxing di un tipo valore nullable diverso da null converte il tipo valore stesso e non <xref:System.Nullable%601?displayProperty=fullName>, usato per il wrapping del tipo valore. Ad esempio:  
+ <span data-ttu-id="0b244-106">Se l'oggetto è diverso da null (ovvero se <xref:System.Nullable%601.HasValue%2A> è `true`) viene eseguita la conversione boxing, ma solo il tipo sottostante su cui è basato l'oggetto è boxed.</span><span class="sxs-lookup"><span data-stu-id="0b244-106">If the object is non-null -- if <xref:System.Nullable%601.HasValue%2A> is `true` -- then boxing occurs, but only the underlying type that the nullable object is based on is boxed.</span></span> <span data-ttu-id="0b244-107">La conversione boxing di un tipo valore nullable diverso da null converte il tipo valore stesso e non <xref:System.Nullable%601?displayProperty=fullName>, usato per il wrapping del tipo valore.</span><span class="sxs-lookup"><span data-stu-id="0b244-107">Boxing a non-null nullable value type boxes the value type itself, not the <xref:System.Nullable%601?displayProperty=fullName> that wraps the value type.</span></span> <span data-ttu-id="0b244-108">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0b244-108">For example:</span></span>  
   
 ```csharp  
 bool? b = false;  
@@ -54,17 +54,17 @@ object bBoxed = b; // bBoxed contains a boxed bool.
 object iBoxed = i; // iBoxed contains a boxed int.  
 ```  
   
- I due oggetti boxed sono identici a quelli creati dalla conversione boxing di tipi non nullable. E, proprio come i tipi boxed non nullable, possono essere boxed in tipi nullable, come illustrato nell'esempio seguente:  
+ <span data-ttu-id="0b244-109">I due oggetti boxed sono identici a quelli creati dalla conversione boxing di tipi non nullable.</span><span class="sxs-lookup"><span data-stu-id="0b244-109">The two boxed objects are identical to those created by boxing non-nullable types.</span></span> <span data-ttu-id="0b244-110">E, proprio come i tipi boxed non nullable, possono essere boxed in tipi nullable, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="0b244-110">And, just like non-nullable boxed types, they can be unboxed into nullable types, as in the following example:</span></span>  
   
 ```csharp  
 bool? b2 = (bool?)bBoxed;  
 int? i2 = (int?)iBoxed;  
 ```  
   
-## <a name="remarks"></a>Note  
- Il comportamento di tipi nullable boxed offre due vantaggi:  
+## <a name="remarks"></a><span data-ttu-id="0b244-111">Note</span><span class="sxs-lookup"><span data-stu-id="0b244-111">Remarks</span></span>  
+ <span data-ttu-id="0b244-112">Il comportamento di tipi nullable boxed offre due vantaggi:</span><span class="sxs-lookup"><span data-stu-id="0b244-112">The behavior of nullable types when boxed provides two advantages:</span></span>  
   
-1.  È possibile testare gli oggetti nullable e la relativa controparte boxed per i valori null:  
+1.  <span data-ttu-id="0b244-113">È possibile testare gli oggetti nullable e la relativa controparte boxed per i valori null:</span><span class="sxs-lookup"><span data-stu-id="0b244-113">Nullable objects and their boxed counterpart can be tested for null:</span></span>  
   
     ```csharp  
     bool? b = null;  
@@ -79,7 +79,7 @@ int? i2 = (int?)iBoxed;
     }  
     ```  
   
-2.  I tipi nullable boxed supportano la funzionalità del tipo sottostante:  
+2.  <span data-ttu-id="0b244-114">I tipi nullable boxed supportano la funzionalità del tipo sottostante:</span><span class="sxs-lookup"><span data-stu-id="0b244-114">Boxed nullable types fully support the functionality of the underlying type:</span></span>  
   
     ```csharp  
     double? d = 44.4;  
@@ -90,8 +90,8 @@ int? i2 = (int?)iBoxed;
     string str = ic.ToString();  
     ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md)   
- [Procedura: Identificare un tipo nullable](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
+## <a name="see-also"></a><span data-ttu-id="0b244-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0b244-115">See Also</span></span>  
+ <span data-ttu-id="0b244-116">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="0b244-116">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="0b244-117">[Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md) </span><span class="sxs-lookup"><span data-stu-id="0b244-117">[Nullable Types](../../../csharp/programming-guide/nullable-types/index.md) </span></span>  
+ [<span data-ttu-id="0b244-118">Procedura: Identificare un tipo nullable</span><span class="sxs-lookup"><span data-stu-id="0b244-118">How to: Identify a Nullable Type</span></span>](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
 

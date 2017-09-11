@@ -1,1 +1,1 @@
-Protocollo OData (Open Data)
+<span data-ttu-id="2e4f9-101">Protocollo OData (Open Data)</span><span class="sxs-lookup"><span data-stu-id="2e4f9-101">Open Data Protocol (OData)</span></span>

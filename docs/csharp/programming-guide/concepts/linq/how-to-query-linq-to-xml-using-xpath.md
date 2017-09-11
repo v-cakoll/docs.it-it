@@ -21,13 +21,13 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Procedura: Eseguire una query in LINQ to XML tramite XPath (C#)
-In questo argomento vengono presentati i metodi di estensione che consentono di eseguire una query su un albero XML usando XPath. Per informazioni dettagliate sull'utilizzo di questi metodi di estensione, vedere <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.  
+# <a name="how-to-query-linq-to-xml-using-xpath-c"></a><span data-ttu-id="3cde7-102">Procedura: Eseguire una query in LINQ to XML tramite XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="3cde7-102">How to: Query LINQ to XML Using XPath (C#)</span></span>
+<span data-ttu-id="3cde7-103">In questo argomento vengono presentati i metodi di estensione che consentono di eseguire una query su un albero XML usando XPath.</span><span class="sxs-lookup"><span data-stu-id="3cde7-103">This topic introduces the extension methods that enable you to query an XML tree by using XPath.</span></span> <span data-ttu-id="3cde7-104">Per informazioni dettagliate sull'utilizzo di questi metodi di estensione, vedere <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="3cde7-104">For detailed information about using these extension methods, see <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.</span></span>  
   
- A meno che non esista un motivo molto specifico per eseguire query tramite XPATH, ad esempio l'uso esteso di codice legacy, è preferibile non usare XPATH con LINQ to XML. Le query XPath non vengono eseguite con le stesse prestazioni delle query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ <span data-ttu-id="3cde7-105">A meno che non esista un motivo molto specifico per eseguire query tramite XPATH, ad esempio l'uso esteso di codice legacy, è preferibile non usare XPATH con LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="3cde7-105">Unless you have a very specific reason for querying using XPath, such as extensive use of legacy code, using XPath with LINQ to XML is not recommended.</span></span> <span data-ttu-id="3cde7-106">Le query XPath non vengono eseguite con le stesse prestazioni delle query [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3cde7-106">XPath queries will not perform as well as [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene creata un piccolo albero XML e viene usato <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> per selezionare un set di elementi.  
+## <a name="example"></a><span data-ttu-id="3cde7-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="3cde7-107">Example</span></span>  
+ <span data-ttu-id="3cde7-108">Nell'esempio seguente viene creata un piccolo albero XML e viene usato <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> per selezionare un set di elementi.</span><span class="sxs-lookup"><span data-stu-id="3cde7-108">The following example creates a small XML tree and uses <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> to select a set of elements.</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -43,7 +43,7 @@ foreach (XElement el in list)
     Console.WriteLine(el);  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="3cde7-109">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="3cde7-109">This example produces the following output:</span></span>  
   
 ```xml  
 <Child2>4</Child2>  
@@ -51,6 +51,6 @@ foreach (XElement el in list)
 <Child2>6</Child2>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Tecniche di query avanzate (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="3cde7-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3cde7-110">See Also</span></span>  
+ [<span data-ttu-id="3cde7-111">Tecniche di query avanzate (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="3cde7-111">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
 

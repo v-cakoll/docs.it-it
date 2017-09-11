@@ -33,24 +33,25 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2692478864007c787eb19367109e6ce01882ffb1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 131f8fd53fe025ac16450d9ff0019626444c6cc6
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="reference-required-to-assembly-39ltassemblynamegt39-containing-the-base-class-39ltclassnamegt39"></a>Necessario riferimento all'assembly '&lt;assemblyname&gt;'contenente la classe base'&lt;classname&gt;'
-Necessario riferimento all'assembly '\<assemblyname >' contenente la classe base\<classname >'. Aggiungerne uno al progetto.  
+# <a name="reference-required-to-assembly-39ltassemblynamegt39-containing-the-base-class-39ltclassnamegt39"></a><span data-ttu-id="7398b-102">Necessario riferimento all'assembly '&lt;assemblyname&gt;'contenente la classe base'&lt;classname&gt;'</span><span class="sxs-lookup"><span data-stu-id="7398b-102">Reference required to assembly &#39;&lt;assemblyname&gt;&#39; containing the base class &#39;&lt;classname&gt;&#39;</span></span>
+<span data-ttu-id="7398b-103">Necessario riferimento all'assembly '\<assemblyname >' contenente la classe base\<classname >'.</span><span class="sxs-lookup"><span data-stu-id="7398b-103">Reference required to assembly '\<assemblyname>' containing the base class '\<classname>'.</span></span> <span data-ttu-id="7398b-104">Aggiungerne uno al progetto.</span><span class="sxs-lookup"><span data-stu-id="7398b-104">Add one to your project.</span></span>  
   
- La classe è definita in una libreria a collegamento dinamico (DLL) o in un assembly a cui non si fa direttamente riferimento nel progetto. Il [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilatore richiede un riferimento per evitare ambiguità nel caso in cui la classe è definita in più di un file DLL o assembly.  
+ <span data-ttu-id="7398b-105">La classe è definita in una libreria a collegamento dinamico (DLL) o in un assembly a cui non si fa direttamente riferimento nel progetto.</span><span class="sxs-lookup"><span data-stu-id="7398b-105">The class is defined in a dynamic-link library (DLL) or assembly that is not directly referenced in your project.</span></span> <span data-ttu-id="7398b-106">Il [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilatore richiede un riferimento per evitare ambiguità nel caso in cui la classe è definita in più di un file DLL o assembly.</span><span class="sxs-lookup"><span data-stu-id="7398b-106">The [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compiler requires a reference to avoid ambiguity in case the class is defined in more than one DLL or assembly.</span></span>  
   
- **ID errore:** BC30007  
+ <span data-ttu-id="7398b-107">**ID errore:** BC30007</span><span class="sxs-lookup"><span data-stu-id="7398b-107">**Error ID:** BC30007</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7398b-108">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="7398b-108">To correct this error</span></span>  
   
--   Includere il nome della DLL o dell'assembly senza riferimento nei riferimenti del progetto.  
+-   <span data-ttu-id="7398b-109">Includere il nome della DLL o dell'assembly senza riferimento nei riferimenti del progetto.</span><span class="sxs-lookup"><span data-stu-id="7398b-109">Include the name of the unreferenced DLL or assembly in your project references.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [NIB Procedura: Aggiungere o rimuovere riferimenti usando la finestra di dialogo Aggiungi riferimento](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
- [Gestione dei riferimenti in un progetto](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)   
- [Risoluzione dei problemi relativi ai riferimenti interrotti](https://docs.microsoft.com/visualstudio/ide/troubleshooting-broken-references)
+## <a name="see-also"></a><span data-ttu-id="7398b-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7398b-110">See Also</span></span>  
+ <span data-ttu-id="7398b-111">[NIB Procedura: Aggiungere o rimuovere riferimenti usando la finestra di dialogo Aggiungi riferimento](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9) </span><span class="sxs-lookup"><span data-stu-id="7398b-111">[NIB How to: Add or Remove References By Using the Add Reference Dialog Box](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9) </span></span>  
+<span data-ttu-id="7398b-112"> [Gestione dei riferimenti in un progetto](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project) </span><span class="sxs-lookup"><span data-stu-id="7398b-112"> [Managing references in a project](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project) </span></span>  
+<span data-ttu-id="7398b-113"> [Risoluzione dei problemi relativi ai riferimenti interrotti](https://docs.microsoft.com/visualstudio/ide/troubleshooting-broken-references)</span><span class="sxs-lookup"><span data-stu-id="7398b-113"> [Troubleshooting Broken References](https://docs.microsoft.com/visualstudio/ide/troubleshooting-broken-references)</span></span>

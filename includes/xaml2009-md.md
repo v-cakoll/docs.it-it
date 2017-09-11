@@ -1,1 +1,1 @@
-XAML2009
+<span data-ttu-id="e4029-101">XAML2009</span><span class="sxs-lookup"><span data-stu-id="e4029-101">XAML2009</span></span>

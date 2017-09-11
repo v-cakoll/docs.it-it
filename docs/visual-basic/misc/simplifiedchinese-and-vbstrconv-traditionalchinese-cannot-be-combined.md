@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 57ab14cdcb3e4b27e821097dcfca4d97e1633035
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 981c1309f48f09c146c1a47c51828acde1321787
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="simplifiedchinese-and-vbstrconvtraditionalchinese-cannot-be-combined"></a>SimplifiedChinese e VbStrConv.TraditionalChinese non possono essere combinati
-L'applicazione sta tentando di combinare i membri `VbStrConv` e `SimplifiedChinese` dell'enumerazione `TraditionalChinese`, che si escludono reciprocamente.  
+# <a name="simplifiedchinese-and-vbstrconvtraditionalchinese-cannot-be-combined"></a><span data-ttu-id="eec7d-102">SimplifiedChinese e VbStrConv.TraditionalChinese non possono essere combinati</span><span class="sxs-lookup"><span data-stu-id="eec7d-102">SimplifiedChinese and VbStrConv.TraditionalChinese cannot be combined</span></span>
+<span data-ttu-id="eec7d-103">L'applicazione sta tentando di combinare i membri `VbStrConv` e `SimplifiedChinese` dell'enumerazione `TraditionalChinese`, che si escludono reciprocamente.</span><span class="sxs-lookup"><span data-stu-id="eec7d-103">Your application is attempting to combine the `VbStrConv` enumeration members `SimplifiedChinese` and `TraditionalChinese`, which are mutually exclusive.</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="eec7d-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="eec7d-104">To correct this error</span></span>  
   
--   Rimuovere `VbStrConv.SimplifiedChinese` o `VbStrConv.TraditionalChinese`.  
+-   <span data-ttu-id="eec7d-105">Rimuovere `VbStrConv.SimplifiedChinese` o `VbStrConv.TraditionalChinese`.</span><span class="sxs-lookup"><span data-stu-id="eec7d-105">Remove either `VbStrConv.SimplifiedChinese` or `VbStrConv.TraditionalChinese`.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Globalization>   
- [Enumerazione VbStrConv NOTINBUILD](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936)   
- [Introduzione alle applicazioni internazionali basate su .NET Framework](https://docs.microsoft.com/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+## <a name="see-also"></a><span data-ttu-id="eec7d-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="eec7d-106">See Also</span></span>  
+ <span data-ttu-id="eec7d-107"><xref:System.Globalization></span><span class="sxs-lookup"><span data-stu-id="eec7d-107"><xref:System.Globalization></span></span>   
+<span data-ttu-id="eec7d-108"> [Enumerazione VbStrConv NOTINBUILD](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936) </span><span class="sxs-lookup"><span data-stu-id="eec7d-108"> [NOTINBUILD VbStrConv Enumeration](http://msdn.microsoft.com/en-us/59f83dd9-6361-47df-a836-02ba9d4cb936) </span></span>  
+<span data-ttu-id="eec7d-109"> [Introduzione alle applicazioni internazionali basate su .NET Framework](https://docs.microsoft.com/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)</span><span class="sxs-lookup"><span data-stu-id="eec7d-109"> [Introduction to International Applications Based on the .NET Framework](https://docs.microsoft.com/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)</span></span>

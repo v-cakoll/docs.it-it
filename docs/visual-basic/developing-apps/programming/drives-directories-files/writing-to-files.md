@@ -41,48 +41,48 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="writing-to-files-in-visual-basic"></a>Scrittura su file in Visual Basic
-Questa sezione spiega come eseguire attività che riguardano la scrittura su file.  
+# <a name="writing-to-files-in-visual-basic"></a><span data-ttu-id="c8b50-102">Scrittura su file in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c8b50-102">Writing to Files in Visual Basic</span></span>
+<span data-ttu-id="c8b50-103">Questa sezione spiega come eseguire attività che riguardano la scrittura su file.</span><span class="sxs-lookup"><span data-stu-id="c8b50-103">This section explains how to perform tasks that involve writing to files.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Procedura: scrivere testo in file](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
- Illustra come scrivere testo in file di testo.  
+## <a name="in-this-section"></a><span data-ttu-id="c8b50-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="c8b50-104">In This Section</span></span>  
+ [<span data-ttu-id="c8b50-105">Procedura: scrivere testo in file</span><span class="sxs-lookup"><span data-stu-id="c8b50-105">How to: Write Text to Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
+ <span data-ttu-id="c8b50-106">Illustra come scrivere testo in file di testo.</span><span class="sxs-lookup"><span data-stu-id="c8b50-106">Demonstrates how to write to text files.</span></span>  
   
- [Procedura: aggiungere testo a file di testo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
- Illustra come aggiungere testo a un file di testo.  
+ [<span data-ttu-id="c8b50-107">Procedura: aggiungere testo a file di testo</span><span class="sxs-lookup"><span data-stu-id="c8b50-107">How to: Append to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-append-to-text-files.md)  
+ <span data-ttu-id="c8b50-108">Illustra come aggiungere testo a un file di testo.</span><span class="sxs-lookup"><span data-stu-id="c8b50-108">Demonstrates how to append text to a text file.</span></span>  
   
- [Procedura: scrivere all'interno di file binari](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
- Illustra come scrivere in un file binario.  
+ [<span data-ttu-id="c8b50-109">Procedura: scrivere all'interno di file binari</span><span class="sxs-lookup"><span data-stu-id="c8b50-109">How to: Write to Binary Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-to-binary-files.md)  
+ <span data-ttu-id="c8b50-110">Illustra come scrivere in un file binario.</span><span class="sxs-lookup"><span data-stu-id="c8b50-110">Demonstrates how to write to a binary file.</span></span>  
   
- [Procedura: scrivere testo in file della directory Documenti](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
- Illustra come creare e scrivere su in un file di testo nuovo nella directory **Documenti**.  
+ [<span data-ttu-id="c8b50-111">Procedura: scrivere testo in file della directory Documenti</span><span class="sxs-lookup"><span data-stu-id="c8b50-111">How to: Write Text to Files in the My Documents Directory</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
+ <span data-ttu-id="c8b50-112">Illustra come creare e scrivere su in un file di testo nuovo nella directory **Documenti**.</span><span class="sxs-lookup"><span data-stu-id="c8b50-112">Demonstrates how to create and write to a new text file in the **My Documents** directory.</span></span>  
   
- [Procedura: scrivere testo in file con un oggetto StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
- Illustra come scrivere in un file con un oggetto <xref:System.IO.StreamWriter?displayProperty=fullName>.  
+ [<span data-ttu-id="c8b50-113">Procedura: scrivere testo in file con un oggetto StreamWriter</span><span class="sxs-lookup"><span data-stu-id="c8b50-113">How to: Write Text to Files with a StreamWriter</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
+ <span data-ttu-id="c8b50-114">Illustra come scrivere in un file con un oggetto <xref:System.IO.StreamWriter?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="c8b50-114">Demonstrates how to write to a file with a <xref:System.IO.StreamWriter?displayProperty=fullName> object.</span></span>  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a><span data-ttu-id="c8b50-115">Riferimento</span><span class="sxs-lookup"><span data-stu-id="c8b50-115">Reference</span></span>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Descrive l'oggetto `My.Computer.FileSystem`, i relativi metodi e proprietà.  
+ <span data-ttu-id="c8b50-116">Descrive l'oggetto `My.Computer.FileSystem`, i relativi metodi e proprietà.</span><span class="sxs-lookup"><span data-stu-id="c8b50-116">Describes the `My.Computer.FileSystem` object and its methods and properties.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>  
- Descrive il metodo `OpenTextFileWriter`.  
+ <span data-ttu-id="c8b50-117">Descrive il metodo `OpenTextFileWriter`.</span><span class="sxs-lookup"><span data-stu-id="c8b50-117">Describes the `OpenTextFileWriter` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>  
- Descrive il metodo `WriteAllBytes`.  
+ <span data-ttu-id="c8b50-118">Descrive il metodo `WriteAllBytes`.</span><span class="sxs-lookup"><span data-stu-id="c8b50-118">Describes the `WriteAllBytes` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- Descrive il metodo `WriteAllText`.  
+ <span data-ttu-id="c8b50-119">Descrive il metodo `WriteAllText`.</span><span class="sxs-lookup"><span data-stu-id="c8b50-119">Describes the `WriteAllText` method.</span></span>  
   
-## <a name="related-sections"></a>Sezioni correlate  
- [Lettura da file](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- Spiega come eseguire le attività che implicano la lettura da file.  
+## <a name="related-sections"></a><span data-ttu-id="c8b50-120">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="c8b50-120">Related Sections</span></span>  
+ [<span data-ttu-id="c8b50-121">Lettura da file</span><span class="sxs-lookup"><span data-stu-id="c8b50-121">Reading from Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ <span data-ttu-id="c8b50-122">Spiega come eseguire le attività che implicano la lettura da file.</span><span class="sxs-lookup"><span data-stu-id="c8b50-122">Explains how to perform tasks that involve reading from files.</span></span>  
   
- [Creazione, eliminazione e spostamento di file e directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- Spiega come eseguire le attività che implicano la creazione, l'eliminazione, lo spostamento e la ridenominazione di file e directory.  
+ [<span data-ttu-id="c8b50-123">Creazione, eliminazione e spostamento di file e directory</span><span class="sxs-lookup"><span data-stu-id="c8b50-123">Creating, Deleting, and Moving Files and Directories</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
+ <span data-ttu-id="c8b50-124">Spiega come eseguire le attività che implicano la creazione, l'eliminazione, lo spostamento e la ridenominazione di file e directory.</span><span class="sxs-lookup"><span data-stu-id="c8b50-124">Explains how to perform tasks that involve creating, deleting, moving, and renaming files and directories.</span></span>  
   
- [Archiviazione e lettura di dati negli Appunti](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- Spiega come eseguire attività associate a `My.Computer.Clipboard`, ad esempio la lettura o la scrittura di dati negli Appunti.  
+ [<span data-ttu-id="c8b50-125">Archiviazione e lettura di dati negli Appunti</span><span class="sxs-lookup"><span data-stu-id="c8b50-125">Storing Data to and Reading from the Clipboard</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
+ <span data-ttu-id="c8b50-126">Spiega come eseguire attività associate a `My.Computer.Clipboard`, ad esempio la lettura o la scrittura di dati negli Appunti.</span><span class="sxs-lookup"><span data-stu-id="c8b50-126">Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.</span></span>  
   
- [Codifiche dei file](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
- Offre una panoramica della codifiche di file.
+ [<span data-ttu-id="c8b50-127">Codifiche dei file</span><span class="sxs-lookup"><span data-stu-id="c8b50-127">File Encodings</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ <span data-ttu-id="c8b50-128">Offre una panoramica della codifiche di file.</span><span class="sxs-lookup"><span data-stu-id="c8b50-128">Provides an overview of file encodings.</span></span>
 

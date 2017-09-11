@@ -37,25 +37,25 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="functions-visual-basic"></a>Funzioni (Visual Basic)
-Gli argomenti di questa sezione contengono tabelle delle funzioni membro di runtime di Visual Basic.  
+# <a name="functions-visual-basic"></a><span data-ttu-id="cf360-102">Funzioni (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf360-102">Functions (Visual Basic)</span></span>
+<span data-ttu-id="cf360-103">Gli argomenti di questa sezione contengono tabelle delle funzioni membro di runtime di Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="cf360-103">The topics in this section contain tables of the Visual Basic run-time member functions.</span></span>  
   
 > [!NOTE]
->  È anche possibile creare funzioni e chiamarle. Per alte informazioni, vedere [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md) e [Procedura: Creare una routine che restituisce un valore](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
+>  <span data-ttu-id="cf360-104">È anche possibile creare funzioni e chiamarle.</span><span class="sxs-lookup"><span data-stu-id="cf360-104">You can also create functions and call them.</span></span> <span data-ttu-id="cf360-105">Per alte informazioni, vedere [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md) e [Procedura: Creare una routine che restituisce un valore](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).</span><span class="sxs-lookup"><span data-stu-id="cf360-105">For more information, see [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md) and [How to: Create a Procedure that Returns a Value](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Funzioni di conversione](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cf360-106">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="cf360-106">In This Section</span></span>  
+ [<span data-ttu-id="cf360-107">Funzioni di conversione</span><span class="sxs-lookup"><span data-stu-id="cf360-107">Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/conversion-functions.md)  
   
- [Funzioni matematiche](../../../visual-basic/language-reference/functions/math-functions.md)  
+ [<span data-ttu-id="cf360-108">Funzioni matematiche</span><span class="sxs-lookup"><span data-stu-id="cf360-108">Math Functions</span></span>](../../../visual-basic/language-reference/functions/math-functions.md)  
   
- [Funzioni stringa](../../../visual-basic/language-reference/functions/string-functions.md)  
+ [<span data-ttu-id="cf360-109">Funzioni stringa</span><span class="sxs-lookup"><span data-stu-id="cf360-109">String Functions</span></span>](../../../visual-basic/language-reference/functions/string-functions.md)  
   
- [Funzioni di conversione del tipo](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [<span data-ttu-id="cf360-110">Funzioni di conversione del tipo</span><span class="sxs-lookup"><span data-stu-id="cf360-110">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
   
- [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)  
+ [<span data-ttu-id="cf360-111">Funzione CType</span><span class="sxs-lookup"><span data-stu-id="cf360-111">CType Function</span></span>](../../../visual-basic/language-reference/functions/ctype-function.md)  
   
-## <a name="related-sections"></a>Sezioni correlate  
- [Riferimenti per il linguaggio Visual Basic](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="cf360-112">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="cf360-112">Related Sections</span></span>  
+ [<span data-ttu-id="cf360-113">Riferimenti per il linguaggio Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cf360-113">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
   
- [Visual Basic](../../../visual-basic/index.md)
+ [<span data-ttu-id="cf360-114">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cf360-114">Visual Basic</span></span>](../../../visual-basic/index.md)
 

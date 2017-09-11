@@ -18,39 +18,39 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="dotnet-list-reference"></a>dotnet-list reference
+# <a name="dotnet-list-reference"></a><span data-ttu-id="a2d69-104">dotnet-list reference</span><span class="sxs-lookup"><span data-stu-id="a2d69-104">dotnet-list reference</span></span>
 
-## <a name="name"></a>Nome
+## <a name="name"></a><span data-ttu-id="a2d69-105">Nome</span><span class="sxs-lookup"><span data-stu-id="a2d69-105">Name</span></span>
 
-`dotnet-list reference`: visualizza un elenco dei riferimenti da progetto a progetto.
+<span data-ttu-id="a2d69-106">`dotnet-list reference`: visualizza un elenco dei riferimenti da progetto a progetto.</span><span class="sxs-lookup"><span data-stu-id="a2d69-106">`dotnet-list reference` - Lists project to project references.</span></span>
 
-## <a name="synopsis"></a>Riepilogo
+## <a name="synopsis"></a><span data-ttu-id="a2d69-107">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="a2d69-107">Synopsis</span></span>
 
 `dotnet list [<PROJECT>] reference [-h|--help]`
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a><span data-ttu-id="a2d69-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a2d69-108">Description</span></span>
 
-Il comando `dotnet list reference` offre un'opzione utile per visualizzare un elenco dei riferimenti al progetto per un progetto specificato.
+<span data-ttu-id="a2d69-109">Il comando `dotnet list reference` offre un'opzione utile per visualizzare un elenco dei riferimenti al progetto per un progetto specificato.</span><span class="sxs-lookup"><span data-stu-id="a2d69-109">The `dotnet list reference` command provides a convenient option to list project references for a given project.</span></span>
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a><span data-ttu-id="a2d69-110">Argomenti</span><span class="sxs-lookup"><span data-stu-id="a2d69-110">Arguments</span></span>
 
 `PROJECT`
 
-Specifica il file di progetto da usare per l'elenco dei riferimenti. Se non specificato, il comando cercherà un file di progetto nella directory corrente.
+<span data-ttu-id="a2d69-111">Specifica il file di progetto da usare per l'elenco dei riferimenti.</span><span class="sxs-lookup"><span data-stu-id="a2d69-111">Specifies the project file to use for listing references.</span></span> <span data-ttu-id="a2d69-112">Se non specificato, il comando cercherà un file di progetto nella directory corrente.</span><span class="sxs-lookup"><span data-stu-id="a2d69-112">If not specified, the command will search the current directory for a project file.</span></span>
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a><span data-ttu-id="a2d69-113">Opzioni</span><span class="sxs-lookup"><span data-stu-id="a2d69-113">Options</span></span>
 
 `-h|--help`
 
-Stampa una breve guida per il comando.
+<span data-ttu-id="a2d69-114">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="a2d69-114">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a><span data-ttu-id="a2d69-115">Esempi</span><span class="sxs-lookup"><span data-stu-id="a2d69-115">Examples</span></span>
 
-Visualizzare l'elenco dei riferimenti al progetto per il progetto specificato:
+<span data-ttu-id="a2d69-116">Visualizzare l'elenco dei riferimenti al progetto per il progetto specificato:</span><span class="sxs-lookup"><span data-stu-id="a2d69-116">List the project references for the specified project:</span></span>
 
 `dotnet list app/app.csproj reference`
 
-Visualizzare l'elenco dei riferimenti al progetto per il progetto nella directory corrente:
+<span data-ttu-id="a2d69-117">Visualizzare l'elenco dei riferimenti al progetto per il progetto nella directory corrente:</span><span class="sxs-lookup"><span data-stu-id="a2d69-117">List the project references for the project in the current directory:</span></span>
 
 `dotnet list reference`
 

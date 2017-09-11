@@ -26,20 +26,21 @@ caps.latest.revision: 97
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: d12492626a57fd4f09c25f97fb5a12c8bbf22ea1
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 47f68a3410eda53c2f5505b17aa319d516df335d
+ms.contentlocale: it-it
+ms.lasthandoff: 05/02/2017
 
 ---
-# <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Windows Presentation Foundation (WPF) in Visual Studio 2015 fornisce agli sviluppatori un modello di programmazione unificato per la compilazione di moderne applicazioni desktop line-of-business in Windows.  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="083fb-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="083fb-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="083fb-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 fornisce agli sviluppatori un modello di programmazione unificato per la compilazione di moderne applicazioni desktop line-of-business in Windows.</span><span class="sxs-lookup"><span data-stu-id="083fb-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
   
 > [!NOTE]
->  Il browser Mozilla Firefox disabilita l'estensione Microsoft Framework Assistant. Vedere [Come rimuovere .NET Framework Assistant per Firefox](https://support.microsoft.com/en-us/kb/963707) per informazioni su come rimuovere l'estensione da Firefox.  
+>  <span data-ttu-id="083fb-104">Il browser Mozilla Firefox disabilita l'estensione Microsoft Framework Assistant.</span><span class="sxs-lookup"><span data-stu-id="083fb-104">The Mozilla Firefox browser disables the Microsoft Framework Assistant extension.</span></span> <span data-ttu-id="083fb-105">Vedere [Come rimuovere .NET Framework Assistant per Firefox](https://support.microsoft.com/en-us/kb/963707) per informazioni su come rimuovere l'estensione da Firefox.</span><span class="sxs-lookup"><span data-stu-id="083fb-105">See [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) for information on how to remove the extension from Firefox.</span></span>  
   
- [Creare moderne applicazioni desktop con Windows Presentation Foundation](http://msdn.microsoft.com/library/8d6c7295-ff64-4681-b01c-5056e8504569)  
+ [<span data-ttu-id="083fb-106">Creare moderne applicazioni desktop con Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="083fb-106">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](http://msdn.microsoft.com/library/8d6c7295-ff64-4681-b01c-5056e8504569)  
   
- [Progettazione di XAML in Visual Studio e Blend per Visual Studio](http://msdn.microsoft.com/library/288e2415-9fcf-408e-bc35-9848315e14fd)  
+ [<span data-ttu-id="083fb-107">Progettazione di XAML in Visual Studio e Blend per Visual Studio</span><span class="sxs-lookup"><span data-stu-id="083fb-107">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](http://msdn.microsoft.com/library/288e2415-9fcf-408e-bc35-9848315e14fd)  
   
- [Scaricare Visual Studio](https://www.visualstudio.com/features/wpf-vs)
+ [<span data-ttu-id="083fb-108">Scaricare Visual Studio</span><span class="sxs-lookup"><span data-stu-id="083fb-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)

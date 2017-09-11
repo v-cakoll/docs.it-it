@@ -27,22 +27,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8dadb1f441031e9f74dfe7c7fa7b2f5ea38dbd40
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 50f25ffd4c10265e794241e7a5565b6199b52c59
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a>Impossibile ottenere i nomi delle porte seriali a causa di un errore di sistema interno
-Si è verificato un errore interno quando è stata chiamata la proprietà `My.Computer.Ports.SerialPortNames`.  
+# <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a><span data-ttu-id="e76cd-102">Impossibile ottenere i nomi delle porte seriali a causa di un errore di sistema interno</span><span class="sxs-lookup"><span data-stu-id="e76cd-102">Unable to get serial port names because of an internal system error</span></span>
+<span data-ttu-id="e76cd-103">Si è verificato un errore interno quando è stata chiamata la proprietà `My.Computer.Ports.SerialPortNames`.</span><span class="sxs-lookup"><span data-stu-id="e76cd-103">An internal error occurred when the `My.Computer.Ports.SerialPortNames` property was called.</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e76cd-104">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="e76cd-104">To correct this error</span></span>  
   
-1.  Vedere [Debugger nozioni di base](https://docs.microsoft.com/visualstudio/debugger/debugger-basics) per ulteriori informazioni sulla risoluzione dei problemi.  
+1.  <span data-ttu-id="e76cd-105">Vedere [Debugger nozioni di base](https://docs.microsoft.com/visualstudio/debugger/debugger-basics) per ulteriori informazioni sulla risoluzione dei problemi.</span><span class="sxs-lookup"><span data-stu-id="e76cd-105">See [Debugger Basics](https://docs.microsoft.com/visualstudio/debugger/debugger-basics) for more troubleshooting information.</span></span>  
   
-2.  Prendere nota delle circostanze in cui si è verificato l'errore e contattare il Servizio Supporto Tecnico Clienti Microsoft.  
+2.  <span data-ttu-id="e76cd-106">Prendere nota delle circostanze in cui si è verificato l'errore e contattare il Servizio Supporto Tecnico Clienti Microsoft.</span><span class="sxs-lookup"><span data-stu-id="e76cd-106">Note the circumstances under which the error occurred, and call Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A></xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A>   
- [Nozioni di base del debugger](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)   
- [Comunicazioni con Microsoft](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="e76cd-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e76cd-107">See Also</span></span>  
+ <span data-ttu-id="e76cd-108"><xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A></xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A></span><span class="sxs-lookup"><span data-stu-id="e76cd-108"><xref:Microsoft.VisualBasic.Devices.Ports.SerialPortNames%2A></span></span>   
+<span data-ttu-id="e76cd-109"> [Nozioni di base del debugger](https://docs.microsoft.com/visualstudio/debugger/debugger-basics) </span><span class="sxs-lookup"><span data-stu-id="e76cd-109"> [Debugger Basics](https://docs.microsoft.com/visualstudio/debugger/debugger-basics) </span></span>  
+<span data-ttu-id="e76cd-110"> [Comunicazioni con Microsoft](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span><span class="sxs-lookup"><span data-stu-id="e76cd-110"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span></span>

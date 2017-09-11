@@ -20,17 +20,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 19ef0cfd1115f8f2cf6137c7eeb8eb82292b223c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: cff3fecc9a563eff7b2a4ae51ba9f04444edc4df
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="namespaces-in-visual-basic-linq-to-xml"></a>Spazi dei nomi in Visual Basic (LINQ to XML)
-Inserire qui l'introduzione.  
+# <a name="namespaces-in-visual-basic-linq-to-xml"></a><span data-ttu-id="0432e-102">Spazi dei nomi in Visual Basic (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="0432e-102">Namespaces in Visual Basic (LINQ to XML)</span></span>
+<span data-ttu-id="0432e-103">Inserire qui l'introduzione.</span><span class="sxs-lookup"><span data-stu-id="0432e-103">Insert introduction here.</span></span>  
   
-## <a name="section-heading"></a>Intestazione della sezione  
- Inserire qui il corpo della sezione.  
+## <a name="section-heading"></a><span data-ttu-id="0432e-104">Intestazione della sezione</span><span class="sxs-lookup"><span data-stu-id="0432e-104">Section Heading</span></span>  
+ <span data-ttu-id="0432e-105">Inserire qui il corpo della sezione.</span><span class="sxs-lookup"><span data-stu-id="0432e-105">Insert section body here.</span></span>  
   
-### <a name="subsection-heading"></a>Intestazione della sottosezione  
- Inserire qui il corpo della sottosezione.
+### <a name="subsection-heading"></a><span data-ttu-id="0432e-106">Intestazione della sottosezione</span><span class="sxs-lookup"><span data-stu-id="0432e-106">Subsection Heading</span></span>  
+ <span data-ttu-id="0432e-107">Inserire qui il corpo della sottosezione.</span><span class="sxs-lookup"><span data-stu-id="0432e-107">Insert subsection body here.</span></span>

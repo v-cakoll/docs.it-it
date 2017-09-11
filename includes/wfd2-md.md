@@ -1,1 +1,1 @@
-Progettazione flussi di lavoro
+<span data-ttu-id="70e45-101">Progettazione flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="70e45-101">Workflow Designer</span></span>

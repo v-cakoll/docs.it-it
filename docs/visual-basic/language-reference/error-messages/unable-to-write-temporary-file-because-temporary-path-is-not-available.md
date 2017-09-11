@@ -32,22 +32,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d39f18d36b1884667d291e436015ebdffe703b19
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 78cbdb9f9156d8ebe98e6870e160ba6cee2751ec
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>Impossibile scrivere il file temporaneo perché il percorso temporaneo non è disponibile
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] non è riuscito a determinare il percorso in cui sono archiviati i file temporanei.  
+# <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a><span data-ttu-id="e1c03-102">Impossibile scrivere il file temporaneo perché il percorso temporaneo non è disponibile</span><span class="sxs-lookup"><span data-stu-id="e1c03-102">Unable to write temporary file because temporary path is not available</span></span>
+[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="e1c03-103"> non è riuscito a determinare il percorso in cui sono archiviati i file temporanei.</span><span class="sxs-lookup"><span data-stu-id="e1c03-103"> could not determine the path where temporary files are stored.</span></span>  
   
- **ID errore:** BC30698  
+ <span data-ttu-id="e1c03-104">**ID errore:** BC30698</span><span class="sxs-lookup"><span data-stu-id="e1c03-104">**Error ID:** BC30698</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e1c03-105">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="e1c03-105">To correct this error</span></span>  
   
-1.  Riavviare [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].  
+1.  <span data-ttu-id="e1c03-106">Riavviare [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].</span><span class="sxs-lookup"><span data-stu-id="e1c03-106">Restart [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].</span></span>  
   
-2.  Se il problema persiste, reinstallare [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].  
+2.  <span data-ttu-id="e1c03-107">Se il problema persiste, reinstallare [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].</span><span class="sxs-lookup"><span data-stu-id="e1c03-107">If the problem persists, reinstall [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)
+## <a name="see-also"></a><span data-ttu-id="e1c03-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e1c03-108">See Also</span></span>  
+ <span data-ttu-id="e1c03-109">[Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)</span><span class="sxs-lookup"><span data-stu-id="e1c03-109">[Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span></span>

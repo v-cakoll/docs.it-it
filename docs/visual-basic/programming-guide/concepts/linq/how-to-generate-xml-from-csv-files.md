@@ -16,18 +16,18 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3729a9494c3b7486555b01245036c3c8441bf7e0
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: a36818659adbeef13e2468170360aba090ecc1cb
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Procedura: generare XML da file CSV (Visual Basic)
-In questo esempio viene illustrato come usare [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] e [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] per generare un file XML da un file CSV con valori delimitati da virgole.  
+# <a name="how-to-generate-xml-from-csv-files-visual-basic"></a><span data-ttu-id="a814f-102">Procedura: generare XML da file CSV (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a814f-102">How to: Generate XML from CSV Files (Visual Basic)</span></span>
+<span data-ttu-id="a814f-103">In questo esempio viene illustrato come usare [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] e [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] per generare un file XML da un file CSV con valori delimitati da virgole.</span><span class="sxs-lookup"><span data-stu-id="a814f-103">This example shows how to use [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] and [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a>Esempio  
- Il codice seguente consente di eseguire la query [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] su una matrice di stringhe.  
+## <a name="example"></a><span data-ttu-id="a814f-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="a814f-104">Example</span></span>  
+ <span data-ttu-id="a814f-105">Il codice seguente consente di eseguire la query [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] su una matrice di stringhe.</span><span class="sxs-lookup"><span data-stu-id="a814f-105">The following code performs a [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] query on an array of strings.</span></span>  
   
 ```vb  
       ' Create the text file.  
@@ -62,7 +62,7 @@ Dim cust As XElement = _
 Console.WriteLine(cust)  
 ```  
   
- L'output del codice è il seguente:  
+ <span data-ttu-id="a814f-106">L'output del codice è il seguente:</span><span class="sxs-lookup"><span data-stu-id="a814f-106">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -121,6 +121,6 @@ Console.WriteLine(cust)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="a814f-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a814f-107">See Also</span></span>  
+ [<span data-ttu-id="a814f-108">Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a814f-108">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
 

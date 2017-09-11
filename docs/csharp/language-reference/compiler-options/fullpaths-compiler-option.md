@@ -40,20 +40,20 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="fullpaths-c-compiler-options"></a>/fullpaths (opzioni del compilatore C#)
-L'opzione **/fullpaths** fa in modo che il compilatore specifichi il percorso completo del file quando vengono elencati gli avvisi e gli errori di compilazione.  
+# <a name="fullpaths-c-compiler-options"></a><span data-ttu-id="eae45-102">/fullpaths (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="eae45-102">/fullpaths (C# Compiler Options)</span></span>
+<span data-ttu-id="eae45-103">L'opzione **/fullpaths** fa in modo che il compilatore specifichi il percorso completo del file quando vengono elencati gli avvisi e gli errori di compilazione.</span><span class="sxs-lookup"><span data-stu-id="eae45-103">The **/fullpaths** option causes the compiler to specify the full path to the file when listing compilation errors and warnings.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="eae45-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="eae45-104">Syntax</span></span>  
   
 ```console  
 /fullpaths  
 ```  
   
-## <a name="remarks"></a>Note  
- Per impostazione predefinita, per gli errori e gli avvisi generati dalla compilazione viene specificato il nome del file in cui si è verificato un errore. L'opzione **/fullpaths** fa in modo che il compilatore specifichi il percorso completo del file.  
+## <a name="remarks"></a><span data-ttu-id="eae45-105">Note</span><span class="sxs-lookup"><span data-stu-id="eae45-105">Remarks</span></span>  
+ <span data-ttu-id="eae45-106">Per impostazione predefinita, per gli errori e gli avvisi generati dalla compilazione viene specificato il nome del file in cui si è verificato un errore.</span><span class="sxs-lookup"><span data-stu-id="eae45-106">By default, errors and warnings that result from compilation specify the name of the file in which an error was found.</span></span> <span data-ttu-id="eae45-107">L'opzione **/fullpaths** fa in modo che il compilatore specifichi il percorso completo del file.</span><span class="sxs-lookup"><span data-stu-id="eae45-107">The **/fullpaths** option causes the compiler to specify the full path to the file.</span></span>  
   
- Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.  
+ <span data-ttu-id="eae45-108">Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="eae45-108">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="eae45-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="eae45-109">See Also</span></span>  
+ [<span data-ttu-id="eae45-110">Opzioni del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="eae45-110">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
 

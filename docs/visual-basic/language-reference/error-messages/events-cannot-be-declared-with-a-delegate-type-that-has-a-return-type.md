@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9829a0270d1969121f02bf6e46779b0e447cbb80
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c2606dd913e7c28c46a9667a6121d01810bebf08
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>Impossibile dichiarare gli eventi con un tipo delegato che ha un tipo restituito
-Un delegato è stato specificato per una routine di funzione.  
+# <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="20dae-102">Impossibile dichiarare gli eventi con un tipo delegato che ha un tipo restituito</span><span class="sxs-lookup"><span data-stu-id="20dae-102">Events cannot be declared with a delegate type that has a return type</span></span>
+<span data-ttu-id="20dae-103">Un delegato è stato specificato per una routine di funzione.</span><span class="sxs-lookup"><span data-stu-id="20dae-103">A delegate was specified for a function procedure.</span></span>  
   
- **ID errore:** BC31084  
+ <span data-ttu-id="20dae-104">**ID errore:** BC31084</span><span class="sxs-lookup"><span data-stu-id="20dae-104">**Error ID:** BC31084</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="20dae-105">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="20dae-105">To correct this error</span></span>  
   
--   Specificare un delegato per un `Sub` procedura.  
+-   <span data-ttu-id="20dae-106">Specificare un delegato per un `Sub` procedura.</span><span class="sxs-lookup"><span data-stu-id="20dae-106">Specify a delegate for a `Sub` procedure.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Eventi](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="20dae-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="20dae-107">See Also</span></span>  
+ [<span data-ttu-id="20dae-108">Eventi</span><span class="sxs-lookup"><span data-stu-id="20dae-108">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

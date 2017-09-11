@@ -21,17 +21,17 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Procedura: Trovare nodi di pari livello (XPath-LINQ to XML)(C#)
-Può essere necessario trovare tutti i gli elementi di pari livello di un nodo che hanno un nome specifico. La raccolta risultante può includere il nodo di contesto, se anche quest'ultimo ha il nome specifico.  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="0653a-102">Procedura: Trovare nodi di pari livello (XPath-LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="0653a-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="0653a-103">Può essere necessario trovare tutti i gli elementi di pari livello di un nodo che hanno un nome specifico.</span><span class="sxs-lookup"><span data-stu-id="0653a-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="0653a-104">La raccolta risultante può includere il nodo di contesto, se anche quest'ultimo ha il nome specifico.</span><span class="sxs-lookup"><span data-stu-id="0653a-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
   
- L'espressione XPath è:  
+ <span data-ttu-id="0653a-105">L'espressione XPath è:</span><span class="sxs-lookup"><span data-stu-id="0653a-105">The XPath expression is:</span></span>  
   
  `../Book`  
   
-## <a name="example"></a>Esempio  
- In questo esempio viene dapprima ricercato un elemento `Book` e quindi tutti gli elementi di pari livello denominati `Book`. La raccolta risultante include il nodo di contesto.  
+## <a name="example"></a><span data-ttu-id="0653a-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="0653a-106">Example</span></span>  
+ <span data-ttu-id="0653a-107">In questo esempio viene dapprima ricercato un elemento `Book` e quindi tutti gli elementi di pari livello denominati `Book`.</span><span class="sxs-lookup"><span data-stu-id="0653a-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="0653a-108">La raccolta risultante include il nodo di contesto.</span><span class="sxs-lookup"><span data-stu-id="0653a-108">The resulting collection includes the context node.</span></span>  
   
- Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ <span data-ttu-id="0653a-109">Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="0653a-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -61,7 +61,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="0653a-110">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="0653a-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -86,6 +86,6 @@ Results are identical
 </Book>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to XML per gli utenti di XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="0653a-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0653a-111">See Also</span></span>  
+ [<span data-ttu-id="0653a-112">LINQ to XML per gli utenti di XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="0653a-112">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

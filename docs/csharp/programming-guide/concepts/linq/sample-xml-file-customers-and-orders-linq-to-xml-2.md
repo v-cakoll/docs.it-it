@@ -26,14 +26,14 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>File XML di esempio: Customers e Orders (LINQ to XML)
-Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Contiene Customers e Orders.  
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="6a8cc-102">File XML di esempio: Customers e Orders (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="6a8cc-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
+<span data-ttu-id="6a8cc-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6a8cc-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="6a8cc-104">Contiene Customers e Orders.</span><span class="sxs-lookup"><span data-stu-id="6a8cc-104">This file contains customers and orders.</span></span>  
   
- L'argomento [File XSD di esempio: Customers e Orders](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) contiene uno schema XSD che può essere usato per convalidare questo documento. Lo schema usa le funzionalità `xs:key` e `xs:keyref` di XSD per stabilire che l'attributo `CustomerID` dell'elemento `Customer` è una chiave e per stabilire una relazione tra l'elemento `CustomerID` in ogni elemento `Order` e l'attributo `CustomerID` in ogni elemento `Customer`.  
+ <span data-ttu-id="6a8cc-105">L'argomento [File XSD di esempio: Customers e Orders](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) contiene uno schema XSD che può essere usato per convalidare questo documento.</span><span class="sxs-lookup"><span data-stu-id="6a8cc-105">The topic [Sample XSD File: Customers and Orders](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md) contains an XSD that can be used to validate this document.</span></span> <span data-ttu-id="6a8cc-106">Lo schema usa le funzionalità `xs:key` e `xs:keyref` di XSD per stabilire che l'attributo `CustomerID` dell'elemento `Customer` è una chiave e per stabilire una relazione tra l'elemento `CustomerID` in ogni elemento `Order` e l'attributo `CustomerID` in ogni elemento `Customer`.</span><span class="sxs-lookup"><span data-stu-id="6a8cc-106">It uses the `xs:key` and `xs:keyref` features of XSD to establish that the `CustomerID` attribute of the `Customer` element is a key, and to establish a relationship between the `CustomerID` element in each `Order` element and the `CustomerID` attribute in each `Customer` element.</span></span>  
   
- Per un esempio relativo alla scrittura di query LINQ in cui tale relazione viene sfruttata usando la clausola `Join`, vedere la [procedura di unione di due raccolte (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
+ <span data-ttu-id="6a8cc-107">Per un esempio relativo alla scrittura di query LINQ in cui tale relazione viene sfruttata usando la clausola `Join`, vedere la [procedura di unione di due raccolte (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="6a8cc-107">For an example of writing LINQ queries that take advantage of this relationship using the `Join` clause, see [How to: Join Two Collections (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).</span></span>  
   
-## <a name="customersordersxml"></a>CustomersOrders.xml  
+## <a name="customersordersxml"></a><span data-ttu-id="6a8cc-108">CustomersOrders.xml</span><span class="sxs-lookup"><span data-stu-id="6a8cc-108">CustomersOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -451,6 +451,6 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Documenti XML di esempio (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="6a8cc-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6a8cc-109">See Also</span></span>  
+ [<span data-ttu-id="6a8cc-110">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="6a8cc-110">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

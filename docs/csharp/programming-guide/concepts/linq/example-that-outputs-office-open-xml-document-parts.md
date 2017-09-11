@@ -21,13 +21,13 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Esempio che genera parti di documento Office Open XML (C#)
-In questo argomento viene illustrato come aprire un documento Office Open XML e accedere a parti del documento.  
+# <a name="example-that-outputs-office-open-xml-document-parts-c"></a><span data-ttu-id="8d7fa-102">Esempio che genera parti di documento Office Open XML (C#)</span><span class="sxs-lookup"><span data-stu-id="8d7fa-102">Example that Outputs Office Open XML Document Parts (C#)</span></span>
+<span data-ttu-id="8d7fa-103">In questo argomento viene illustrato come aprire un documento Office Open XML e accedere a parti del documento.</span><span class="sxs-lookup"><span data-stu-id="8d7fa-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene aperto un documento Office Open XML e le parti relative al documento e allo stile vengono visualizzate nella console.  
+## <a name="example"></a><span data-ttu-id="8d7fa-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="8d7fa-104">Example</span></span>  
+ <span data-ttu-id="8d7fa-105">Nell'esempio seguente viene aperto un documento Office Open XML e le parti relative al documento e allo stile vengono visualizzate nella console.</span><span class="sxs-lookup"><span data-stu-id="8d7fa-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=fullName>.  
+ <span data-ttu-id="8d7fa-106">In questo esempio vengono usate classi dell'assembly WindowsBase</span><span class="sxs-lookup"><span data-stu-id="8d7fa-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="8d7fa-107">e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="8d7fa-107">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -78,6 +78,6 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))
+## <a name="see-also"></a><span data-ttu-id="8d7fa-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8d7fa-108">See Also</span></span>  
+ <span data-ttu-id="8d7fa-109">[Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md) (Dettagli di documenti WordprocessingML Office Open XML (C#))</span><span class="sxs-lookup"><span data-stu-id="8d7fa-109">[Details of Office Open XML WordprocessingML Documents (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)</span></span>
 

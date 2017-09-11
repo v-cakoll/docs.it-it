@@ -38,9 +38,9 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="class-c-reference"></a>class (Riferimenti per C#)
+# <a name="class-c-reference"></a><span data-ttu-id="b98e6-102">class (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="b98e6-102">class (C# Reference)</span></span>
 
-Le classi vengono dichiarate usando la parola chiave `class`, come illustrato nell'esempio seguente:
+<span data-ttu-id="b98e6-103">Le classi vengono dichiarate usando la parola chiave `class`, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="b98e6-103">Classes are declared using the keyword `class`, as shown in the following example:</span></span>
 
 ```csharp
 class TestClass
@@ -50,76 +50,76 @@ class TestClass
 }
 ```
 
-## <a name="remarks"></a>Note
-In C# è consentita solo l'eredità singola. In altre parole, una classe può ereditare l'implementazione solo da una classe di base singola. Una classe può tuttavia implementare più di un'interfaccia. La tabella seguente illustra esempi di ereditarietà di classi e di implementazione di interfacce:
+## <a name="remarks"></a><span data-ttu-id="b98e6-104">Note</span><span class="sxs-lookup"><span data-stu-id="b98e6-104">Remarks</span></span>
+<span data-ttu-id="b98e6-105">In C# è consentita solo l'eredità singola.</span><span class="sxs-lookup"><span data-stu-id="b98e6-105">Only single inheritance is allowed in C#.</span></span> <span data-ttu-id="b98e6-106">In altre parole, una classe può ereditare l'implementazione solo da una classe di base singola.</span><span class="sxs-lookup"><span data-stu-id="b98e6-106">In other words, a class can inherit implementation from one base class only.</span></span> <span data-ttu-id="b98e6-107">Una classe può tuttavia implementare più di un'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="b98e6-107">However, a class can implement more than one interface.</span></span> <span data-ttu-id="b98e6-108">La tabella seguente illustra esempi di ereditarietà di classi e di implementazione di interfacce:</span><span class="sxs-lookup"><span data-stu-id="b98e6-108">The following table shows examples of class inheritance and interface implementation:</span></span>
 
-|Ereditarietà|Esempio|
+|<span data-ttu-id="b98e6-109">Ereditarietà</span><span class="sxs-lookup"><span data-stu-id="b98e6-109">Inheritance</span></span>|<span data-ttu-id="b98e6-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="b98e6-110">Example</span></span>|
 |-----------------|-------------|
-|Nessuno|`class ClassA { }`|
-|Single|`class DerivedClass: BaseClass { }`|
-|Nessuna, implementa due interfacce|`class ImplClass: IFace1, IFace2 { }`|
-|Singola, implementa una sola interfaccia|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|<span data-ttu-id="b98e6-111">Nessuno</span><span class="sxs-lookup"><span data-stu-id="b98e6-111">None</span></span>|`class ClassA { }`|
+|<span data-ttu-id="b98e6-112">Single</span><span class="sxs-lookup"><span data-stu-id="b98e6-112">Single</span></span>|`class DerivedClass: BaseClass { }`|
+|<span data-ttu-id="b98e6-113">Nessuna, implementa due interfacce</span><span class="sxs-lookup"><span data-stu-id="b98e6-113">None, implements two interfaces</span></span>|`class ImplClass: IFace1, IFace2 { }`|
+|<span data-ttu-id="b98e6-114">Singola, implementa una sola interfaccia</span><span class="sxs-lookup"><span data-stu-id="b98e6-114">Single, implements one interface</span></span>|`class ImplDerivedClass: BaseClass, IFace1 { }`|
 
-Una classe dichiarata direttamente all'interno di uno spazio dei nomi, non annidata all'interno di altre classi, può essere [public](../../../csharp/language-reference/keywords/public.md) o [internal](../../../csharp/language-reference/keywords/internal.md). Le classi sono `internal` per impostazione predefinita.
+<span data-ttu-id="b98e6-115">Una classe dichiarata direttamente all'interno di uno spazio dei nomi, non annidata all'interno di altre classi, può essere [public](../../../csharp/language-reference/keywords/public.md) o [internal](../../../csharp/language-reference/keywords/internal.md).</span><span class="sxs-lookup"><span data-stu-id="b98e6-115">Classes that you declare directly within a namespace, not nested within other classes, can be either [public](../../../csharp/language-reference/keywords/public.md) or [internal](../../../csharp/language-reference/keywords/internal.md).</span></span> <span data-ttu-id="b98e6-116">Le classi sono `internal` per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="b98e6-116">Classes are `internal` by default.</span></span>
 
-I membri delle classi, incluse le classi annidate, possono essere [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o [private](../../../csharp/language-reference/keywords/private.md). I membri sono [private](../../../csharp/language-reference/keywords/private.md) per impostazione predefinita.
+<span data-ttu-id="b98e6-117">I membri delle classi, incluse le classi annidate, possono essere [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o [private](../../../csharp/language-reference/keywords/private.md).</span><span class="sxs-lookup"><span data-stu-id="b98e6-117">Class members, including nested classes, can be [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), or [private](../../../csharp/language-reference/keywords/private.md).</span></span> <span data-ttu-id="b98e6-118">I membri sono [private](../../../csharp/language-reference/keywords/private.md) per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="b98e6-118">Members are [private](../../../csharp/language-reference/keywords/private.md) by default.</span></span>
 
-Per altre informazioni, vedere [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).
+<span data-ttu-id="b98e6-119">Per altre informazioni, vedere [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) (Modificatori di accesso).</span><span class="sxs-lookup"><span data-stu-id="b98e6-119">For more information, see [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).</span></span>
 
-È possibile dichiarare classi generiche che hanno parametri di tipo. Per altre informazioni, vedere [Generic Classes](../../../csharp/programming-guide/generics/generic-classes.md) (Classi generiche).
+<span data-ttu-id="b98e6-120">È possibile dichiarare classi generiche che hanno parametri di tipo.</span><span class="sxs-lookup"><span data-stu-id="b98e6-120">You can declare generic classes that have type parameters.</span></span> <span data-ttu-id="b98e6-121">Per altre informazioni, vedere [Generic Classes](../../../csharp/programming-guide/generics/generic-classes.md) (Classi generiche).</span><span class="sxs-lookup"><span data-stu-id="b98e6-121">For more information, see [Generic Classes](../../../csharp/programming-guide/generics/generic-classes.md).</span></span>
 
-Una classe può contenere dichiarazioni dei membri seguenti:
+<span data-ttu-id="b98e6-122">Una classe può contenere dichiarazioni dei membri seguenti:</span><span class="sxs-lookup"><span data-stu-id="b98e6-122">A class can contain declarations of the following members:</span></span>
 
-- [Costruttori](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [<span data-ttu-id="b98e6-123">Costruttori</span><span class="sxs-lookup"><span data-stu-id="b98e6-123">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 
-- [Costanti](../../../csharp/programming-guide/classes-and-structs/constants.md)
+- [<span data-ttu-id="b98e6-124">Costanti</span><span class="sxs-lookup"><span data-stu-id="b98e6-124">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)
 
-- [Campi](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [<span data-ttu-id="b98e6-125">Campi</span><span class="sxs-lookup"><span data-stu-id="b98e6-125">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)
 
-- [Finalizzatori](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [<span data-ttu-id="b98e6-126">Finalizzatori</span><span class="sxs-lookup"><span data-stu-id="b98e6-126">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 
-- [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [<span data-ttu-id="b98e6-127">Metodi</span><span class="sxs-lookup"><span data-stu-id="b98e6-127">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)
 
-- [Proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [<span data-ttu-id="b98e6-128">Proprietà</span><span class="sxs-lookup"><span data-stu-id="b98e6-128">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)
 
-- [Indicizzatori](../../../csharp/programming-guide/indexers/index.md)
+- [<span data-ttu-id="b98e6-129">Indicizzatori</span><span class="sxs-lookup"><span data-stu-id="b98e6-129">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)
 
-- [Operatori](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [<span data-ttu-id="b98e6-130">Operatori</span><span class="sxs-lookup"><span data-stu-id="b98e6-130">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
 
-- [Eventi](../../../csharp/programming-guide/events/index.md)
+- [<span data-ttu-id="b98e6-131">Eventi</span><span class="sxs-lookup"><span data-stu-id="b98e6-131">Events</span></span>](../../../csharp/programming-guide/events/index.md)
 
-- [Delegati](../../../csharp/programming-guide/delegates/index.md)
+- [<span data-ttu-id="b98e6-132">Delegati</span><span class="sxs-lookup"><span data-stu-id="b98e6-132">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)
 
-- [Classi](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [<span data-ttu-id="b98e6-133">Classi</span><span class="sxs-lookup"><span data-stu-id="b98e6-133">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)
 
-- [Interfacce](../../../csharp/programming-guide/interfaces/index.md)
+- [<span data-ttu-id="b98e6-134">Interfacce</span><span class="sxs-lookup"><span data-stu-id="b98e6-134">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)
 
-- [Struct](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [<span data-ttu-id="b98e6-135">Struct</span><span class="sxs-lookup"><span data-stu-id="b98e6-135">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
-## <a name="example"></a>Esempio
-L'esempio seguente illustra la dichiarazione di campi di classe, costruttori e metodi. Illustra anche la creazione di istanze di oggetti e la stampa dei dati di istanza. In questo esempio vengono dichiarate due classi. La prima classe `Child`, contiene due campi privati (`name` e `age`), due costruttori pubblici e un metodo pubblico. La seconda classe, `StringTest`, viene usata per contenere `Main`.
+## <a name="example"></a><span data-ttu-id="b98e6-136">Esempio</span><span class="sxs-lookup"><span data-stu-id="b98e6-136">Example</span></span>
+<span data-ttu-id="b98e6-137">L'esempio seguente illustra la dichiarazione di campi di classe, costruttori e metodi.</span><span class="sxs-lookup"><span data-stu-id="b98e6-137">The following example demonstrates declaring class fields, constructors, and methods.</span></span> <span data-ttu-id="b98e6-138">Illustra anche la creazione di istanze di oggetti e la stampa dei dati di istanza.</span><span class="sxs-lookup"><span data-stu-id="b98e6-138">It also demonstrates object instantiation and printing instance data.</span></span> <span data-ttu-id="b98e6-139">In questo esempio vengono dichiarate due classi.</span><span class="sxs-lookup"><span data-stu-id="b98e6-139">In this example, two classes are declared.</span></span> <span data-ttu-id="b98e6-140">La prima classe `Child`, contiene due campi privati (`name` e `age`), due costruttori pubblici e un metodo pubblico.</span><span class="sxs-lookup"><span data-stu-id="b98e6-140">The first class, `Child`, contains two private fields (`name` and `age`), two public constructors and one public method.</span></span> <span data-ttu-id="b98e6-141">La seconda classe, `StringTest`, viene usata per contenere `Main`.</span><span class="sxs-lookup"><span data-stu-id="b98e6-141">The second class, `StringTest`, is used to contain `Main`.</span></span>
 
-[!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
+<span data-ttu-id="b98e6-142">[!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="b98e6-142">[!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]</span></span>
 
-## <a name="comments"></a>Commenti
-Si noti che, nell'esempio precedente, i campi privati (`name` e `age`) sono accessibili solo tramite i metodi pubblici della classe `Child`. Ad esempio, non è possibile stampare il nome del figlio, dal metodo `Main`, usando un'istruzione simile alla seguente:
+## <a name="comments"></a><span data-ttu-id="b98e6-143">Commenti</span><span class="sxs-lookup"><span data-stu-id="b98e6-143">Comments</span></span>
+<span data-ttu-id="b98e6-144">Si noti che, nell'esempio precedente, i campi privati (`name` e `age`) sono accessibili solo tramite i metodi pubblici della classe `Child`.</span><span class="sxs-lookup"><span data-stu-id="b98e6-144">Notice that in the previous example the private fields (`name` and `age`) can only be accessed through the public method of the `Child` class.</span></span> <span data-ttu-id="b98e6-145">Ad esempio, non è possibile stampare il nome del figlio, dal metodo `Main`, usando un'istruzione simile alla seguente:</span><span class="sxs-lookup"><span data-stu-id="b98e6-145">For example, you cannot print the child's name, from the `Main` method, using a statement like this:</span></span>
 
 ```csharp
 Console.Write(child1.name);   // Error
 ```
 
-L'accesso ai membri private di `Child` da `Main` sarebbe possibile solo se `Main` fosse un membro della classe.
+<span data-ttu-id="b98e6-146">L'accesso ai membri private di `Child` da `Main` sarebbe possibile solo se `Main` fosse un membro della classe.</span><span class="sxs-lookup"><span data-stu-id="b98e6-146">Accessing private members of `Child` from `Main` would only be possible if `Main` were a member of the class.</span></span>
 
-I tipi dichiarati all'interno di una classe senza un modificatore di accesso vengono impostati automaticamente a `private`; in tal modo i membri dei dati in questo esempio sarebbero sempre `private`, anche se la parola chiave venisse rimossa.
+<span data-ttu-id="b98e6-147">I tipi dichiarati all'interno di una classe senza un modificatore di accesso vengono impostati automaticamente a `private`; in tal modo i membri dei dati in questo esempio sarebbero sempre `private`, anche se la parola chiave venisse rimossa.</span><span class="sxs-lookup"><span data-stu-id="b98e6-147">Types declared inside a class without an access modifier default to `private`, so the data members in this example would still be `private` if the keyword were removed.</span></span>
 
-Infine, si noti che per l'oggetto creato usando il costruttore predefinito (`child3`), il campo age (età) è stato inizializzato su zero per impostazione predefinita.
+<span data-ttu-id="b98e6-148">Infine, si noti che per l'oggetto creato usando il costruttore predefinito (`child3`), il campo age (età) è stato inizializzato su zero per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="b98e6-148">Finally, notice that for the object created using the default constructor (`child3`), the age field was initialized to zero by default.</span></span>
 
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#
+## <a name="c-language-specification"></a><span data-ttu-id="b98e6-149">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="b98e6-149">C# Language Specification</span></span>
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Vedere anche
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [Tipi di riferimento](../../../csharp/language-reference/keywords/reference-types.md)
+## <a name="see-also"></a><span data-ttu-id="b98e6-150">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b98e6-150">See Also</span></span>
+ <span data-ttu-id="b98e6-151">[Riferimenti per C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="b98e6-151">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="b98e6-152">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="b98e6-152">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="b98e6-153">[Parole chiave di C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="b98e6-153">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ [<span data-ttu-id="b98e6-154">Tipi di riferimento</span><span class="sxs-lookup"><span data-stu-id="b98e6-154">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)
 

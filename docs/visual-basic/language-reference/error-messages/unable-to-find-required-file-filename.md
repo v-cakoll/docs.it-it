@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 30214b5ef1af2bc7298934c653463f1f3d416bbf
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 7e83b19fcd931b53b2dd8af10c92e2e14aa93e73
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="unable-to-find-required-file-39ltfilenamegt39"></a>Impossibile trovare il file richiesto '&lt;filename&gt;'
-Un file richiesto da Visual Studio risulta mancante o danneggiato.  
+# <a name="unable-to-find-required-file-39ltfilenamegt39"></a><span data-ttu-id="aa56f-102">Impossibile trovare il file richiesto '&lt;filename&gt;'</span><span class="sxs-lookup"><span data-stu-id="aa56f-102">Unable to find required file &#39;&lt;filename&gt;&#39;</span></span>
+<span data-ttu-id="aa56f-103">Un file richiesto da Visual Studio risulta mancante o danneggiato.</span><span class="sxs-lookup"><span data-stu-id="aa56f-103">A file that is required by Visual Studio is missing or damaged.</span></span>  
   
- **ID errore:** BC30655  
+ <span data-ttu-id="aa56f-104">**ID errore:** BC30655</span><span class="sxs-lookup"><span data-stu-id="aa56f-104">**Error ID:** BC30655</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="aa56f-105">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="aa56f-105">To correct this error</span></span>  
   
--   Reinstallare Visual Studio.  
+-   <span data-ttu-id="aa56f-106">Reinstallare Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="aa56f-106">Reinstall Visual Studio.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)
+## <a name="see-also"></a><span data-ttu-id="aa56f-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aa56f-107">See Also</span></span>  
+ <span data-ttu-id="aa56f-108">[Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)</span><span class="sxs-lookup"><span data-stu-id="aa56f-108">[Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span></span>

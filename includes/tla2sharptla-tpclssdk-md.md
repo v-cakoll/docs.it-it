@@ -1,1 +1,1 @@
-Tablet PC SDK 1.7
+<span data-ttu-id="dd7bf-101">Tablet PC SDK 1.7</span><span class="sxs-lookup"><span data-stu-id="dd7bf-101">Tablet PC SDK 1.7</span></span>

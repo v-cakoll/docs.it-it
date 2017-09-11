@@ -40,32 +40,32 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Procedura: inviare stringhe a porte seriali in Visual Basic
-Questo argomento descrive come usare `My.Computer.Ports` per inviare stringhe alle porte seriali del computer in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+# <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a><span data-ttu-id="3e9e0-102">Procedura: inviare stringhe a porte seriali in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3e9e0-102">How to: Send Strings to Serial Ports in Visual Basic</span></span>
+<span data-ttu-id="3e9e0-103">Questo argomento descrive come usare `My.Computer.Ports` per inviare stringhe alle porte seriali del computer in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3e9e0-103">This topic describes how to use `My.Computer.Ports` to send strings to the computer's serial ports in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="example"></a>Esempio  
- In questo esempio si invia una stringa alla porta seriale COM1. Potrebbe essere necessario usare un'altra porta seriale nel computer in uso.  
+## <a name="example"></a><span data-ttu-id="3e9e0-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="3e9e0-104">Example</span></span>  
+ <span data-ttu-id="3e9e0-105">In questo esempio si invia una stringa alla porta seriale COM1.</span><span class="sxs-lookup"><span data-stu-id="3e9e0-105">This example sends a string to the COM1 serial port.</span></span> <span data-ttu-id="3e9e0-106">Potrebbe essere necessario usare un'altra porta seriale nel computer in uso.</span><span class="sxs-lookup"><span data-stu-id="3e9e0-106">You may need to use a different serial port on your computer.</span></span>  
   
- Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta. Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+ <span data-ttu-id="3e9e0-107">Usare il metodo `My.Computer.Ports.OpenSerialPort` per ottenere un riferimento alla porta.</span><span class="sxs-lookup"><span data-stu-id="3e9e0-107">Use the `My.Computer.Ports.OpenSerialPort` method to obtain a reference to the port.</span></span> <span data-ttu-id="3e9e0-108">Per altre informazioni, vedere <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.</span><span class="sxs-lookup"><span data-stu-id="3e9e0-108">For more information, see <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.</span></span>  
   
- Il blocco `Using` consente all'applicazione di chiudere la porta seriale anche se viene generata un'eccezione. Tutto il codice relativo alla porta seriale deve essere all'interno di questo blocco o di un blocco `Try...Catch...Finally`.  
+ <span data-ttu-id="3e9e0-109">Il blocco `Using` consente all'applicazione di chiudere la porta seriale anche se viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="3e9e0-109">The `Using` block allows the application to close the serial port even if it generates an exception.</span></span> <span data-ttu-id="3e9e0-110">Tutto il codice relativo alla porta seriale deve essere all'interno di questo blocco o di un blocco `Try...Catch...Finally`.</span><span class="sxs-lookup"><span data-stu-id="3e9e0-110">All code that manipulates the serial port should appear within this block or within a `Try...Catch...Finally` block.</span></span>  
   
- Il metodo <xref:System.IO.Ports.SerialPort.WriteLine%2A> invia i dati alla porta seriale.  
+ <span data-ttu-id="3e9e0-111">Il metodo <xref:System.IO.Ports.SerialPort.WriteLine%2A> invia i dati alla porta seriale.</span><span class="sxs-lookup"><span data-stu-id="3e9e0-111">The <xref:System.IO.Ports.SerialPort.WriteLine%2A> method sends the data to the serial port.</span></span>  
   
- [!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-send-strings-to-serial-ports_1.vb)]  
+ <span data-ttu-id="3e9e0-112">[!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-send-strings-to-serial-ports_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="3e9e0-112">[!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-send-strings-to-serial-ports_1.vb)]</span></span>  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
+## <a name="compiling-the-code"></a><span data-ttu-id="3e9e0-113">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="3e9e0-113">Compiling the Code</span></span>  
   
--   Questo esempio presuppone l'uso della porta `COM1`.  
+-   <span data-ttu-id="3e9e0-114">Questo esempio presuppone l'uso della porta `COM1`.</span><span class="sxs-lookup"><span data-stu-id="3e9e0-114">This example assumes the computer is using `COM1`.</span></span>  
   
-## <a name="robust-programming"></a>Programmazione efficiente  
- Questo esempio presuppone che il computer usi la porta `COM1`; per una maggiore flessibilità, il codice deve consentire all'utente di selezionare la porta seriale desiderata da un elenco di porte disponibili. Per altre informazioni, vedere [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+## <a name="robust-programming"></a><span data-ttu-id="3e9e0-115">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="3e9e0-115">Robust Programming</span></span>  
+ <span data-ttu-id="3e9e0-116">Questo esempio presuppone che il computer usi la porta `COM1`; per una maggiore flessibilità, il codice deve consentire all'utente di selezionare la porta seriale desiderata da un elenco di porte disponibili.</span><span class="sxs-lookup"><span data-stu-id="3e9e0-116">This example assumes the computer is using `COM1`; for more flexibility, the code should allow the user to select the desired serial port from a list of available ports.</span></span> <span data-ttu-id="3e9e0-117">Per altre informazioni, vedere [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).</span><span class="sxs-lookup"><span data-stu-id="3e9e0-117">For more information, see [How to: Show Available Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).</span></span>  
   
- Questo esempio usa un blocco `Using` per verificare che l'applicazione chiuda la porta anche se viene generata un'eccezione. Per altre informazioni, vedere [Istruzione using](../../../../visual-basic/language-reference/statements/using-statement.md).  
+ <span data-ttu-id="3e9e0-118">Questo esempio usa un blocco `Using` per verificare che l'applicazione chiuda la porta anche se viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="3e9e0-118">This example uses a `Using` block to make sure that the application closes the port even if it throws an exception.</span></span> <span data-ttu-id="3e9e0-119">Per altre informazioni, vedere [Istruzione using](../../../../visual-basic/language-reference/statements/using-statement.md).</span><span class="sxs-lookup"><span data-stu-id="3e9e0-119">For more information, see [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.Devices.Ports>   
- <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
- [Procedura: Comporre numeri con modem collegati a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
- [Procedura: Mostrare le porte seriali disponibili](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+## <a name="see-also"></a><span data-ttu-id="3e9e0-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3e9e0-120">See Also</span></span>  
+ <span data-ttu-id="3e9e0-121"><xref:Microsoft.VisualBasic.Devices.Ports></span><span class="sxs-lookup"><span data-stu-id="3e9e0-121"><xref:Microsoft.VisualBasic.Devices.Ports></span></span>   
+ <span data-ttu-id="3e9e0-122"><xref:System.IO.Ports.SerialPort?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="3e9e0-122"><xref:System.IO.Ports.SerialPort?displayProperty=fullName></span></span>   
+ <span data-ttu-id="3e9e0-123">[Procedura: Comporre numeri con modem collegati a porte seriali](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md) </span><span class="sxs-lookup"><span data-stu-id="3e9e0-123">[How to: Dial Modems Attached to Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md) </span></span>  
+ [<span data-ttu-id="3e9e0-124">Procedura: Mostrare le porte seriali disponibili</span><span class="sxs-lookup"><span data-stu-id="3e9e0-124">How to: Show Available Serial Ports</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
 

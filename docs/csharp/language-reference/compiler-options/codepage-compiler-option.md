@@ -38,29 +38,29 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="codepage-c-compiler-options"></a>/codepage (opzioni del compilatore C#)
-Questa opzione specifica la tabella codici da usare durante la compilazione, se la pagina richiesta non è la tabella codici predefinita corrente per il sistema.  
+# <a name="codepage-c-compiler-options"></a><span data-ttu-id="b2ab0-102">/codepage (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="b2ab0-102">/codepage (C# Compiler Options)</span></span>
+<span data-ttu-id="b2ab0-103">Questa opzione specifica la tabella codici da usare durante la compilazione, se la pagina richiesta non è la tabella codici predefinita corrente per il sistema.</span><span class="sxs-lookup"><span data-stu-id="b2ab0-103">This option specifies which codepage to use during compilation if the required page is not the current default codepage for the system.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="b2ab0-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b2ab0-104">Syntax</span></span>  
   
 ```console  
 /codepage:id  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a><span data-ttu-id="b2ab0-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="b2ab0-105">Arguments</span></span>  
  `id`  
- ID della tabella codici da usare per tutti i file di codice sorgente nella compilazione.  
+ <span data-ttu-id="b2ab0-106">ID della tabella codici da usare per tutti i file di codice sorgente nella compilazione.</span><span class="sxs-lookup"><span data-stu-id="b2ab0-106">The id of the code page to use for all source code files in the compilation.</span></span>  
   
-## <a name="remarks"></a>Note  
- Se si compilano uno o più file di codice sorgente che non sono stati creati per usare la tabella codici predefinita nel computer in uso, è possibile usare l'opzione **/codepage** per specificare la tabella codici da usare. **/codepage** si applica a tutti i file di codice sorgente nella compilazione.  
+## <a name="remarks"></a><span data-ttu-id="b2ab0-107">Note</span><span class="sxs-lookup"><span data-stu-id="b2ab0-107">Remarks</span></span>  
+ <span data-ttu-id="b2ab0-108">Se si compilano uno o più file di codice sorgente che non sono stati creati per usare la tabella codici predefinita nel computer in uso, è possibile usare l'opzione **/codepage** per specificare la tabella codici da usare.</span><span class="sxs-lookup"><span data-stu-id="b2ab0-108">If you compile one or more source code files that were not created to use the default code page on your computer, you can use the **/codepage** option to specify which code page should be used.</span></span> <span data-ttu-id="b2ab0-109">**/codepage** si applica a tutti i file di codice sorgente nella compilazione.</span><span class="sxs-lookup"><span data-stu-id="b2ab0-109">**/codepage** applies to all source code files in your compilation.</span></span>  
   
- Se i file di codice sorgente sono stati creati con la stessa tabella codici attiva nel computer in uso o se i file di codice sorgente sono stati creati con UNICODE o UTF-8, non sarà necessario usare **/codepage**.  
+ <span data-ttu-id="b2ab0-110">Se i file di codice sorgente sono stati creati con la stessa tabella codici attiva nel computer in uso o se i file di codice sorgente sono stati creati con UNICODE o UTF-8, non sarà necessario usare **/codepage**.</span><span class="sxs-lookup"><span data-stu-id="b2ab0-110">If the source code files were created with the same codepage that is in effect on your computer or if the source code files were created with UNICODE or UTF-8, you need not use **/codepage**.</span></span>  
   
- Per informazioni su come individuare le tabelle codici supportate nel sistema, vedere [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371).  
+ <span data-ttu-id="b2ab0-111">Per informazioni su come individuare le tabelle codici supportate nel sistema, vedere [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371).</span><span class="sxs-lookup"><span data-stu-id="b2ab0-111">See [GetCPInfo](http://go.microsoft.com/fwlink/?LinkId=148371) for information on how to find which code pages are supported on your system.</span></span>  
   
- Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.  
+ <span data-ttu-id="b2ab0-112">Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="b2ab0-112">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="b2ab0-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b2ab0-113">See Also</span></span>  
+ <span data-ttu-id="b2ab0-114">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="b2ab0-114">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="b2ab0-115">Gestione delle proprietà di progetti e soluzioni</span><span class="sxs-lookup"><span data-stu-id="b2ab0-115">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
 

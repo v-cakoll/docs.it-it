@@ -1,6 +1,6 @@
 ---
 title: Common Type System e Common Language Specification
-description: Common Type System e Common Language Specification
+description: "Informazioni sul modo in cui CTS (Common Type System) e CLS (Common Language Specification) consentono a .NET di supportare più linguaggi."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,54 +10,55 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 1680934b40c3055d2c33ed7457d8734dccbd0a8c
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 9c2cc090dfd5405def0cd6ab9ec1771be4a332a5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
 
 ---
 
-# <a name="common-type-system--common-language-specification"></a>Common Type System e Common Language Specification
+# <a name="common-type-system--common-language-specification"></a><span data-ttu-id="a2b08-104">Common Type System e Common Language Specification</span><span class="sxs-lookup"><span data-stu-id="a2b08-104">Common Type System & Common Language Specification</span></span>
 
-Siamo di fronte ancora una volta a due termini molto usati nel mondo di .NET e che sono effettivamente fondamentali per capire in che modo la piattaforma .NET consente lo sviluppo multi-linguaggio e per comprenderne il funzionamento.
+<span data-ttu-id="a2b08-105">Siamo di fronte ancora una volta a due termini molto usati nel mondo di .NET e che sono effettivamente fondamentali per capire in che modo un'implementazione di .NET consente lo sviluppo multi-linguaggio e per comprenderne il funzionamento.</span><span class="sxs-lookup"><span data-stu-id="a2b08-105">Again, two terms that are freely used in the .NET world, they actually are crucial to understand how a .NET implementation enables multi-language development and to understand how it works.</span></span>
 
-## <a name="common-type-system"></a>Common Type System
+## <a name="common-type-system"></a><span data-ttu-id="a2b08-106">Common Type System</span><span class="sxs-lookup"><span data-stu-id="a2b08-106">Common Type System</span></span>
 
-Per partire dall'inizio, tenere presente che la piattaforma .NET è _indipendente dal linguaggio_. Ciò non significa semplicemente che un programmatore può scrivere codice in qualsiasi linguaggio che possa essere compilato in linguaggio intermedio. Significa anche che il programmatore deve poter interagire con il codice scritto in altri linguaggi che possano essere usati nella piattaforma .NET.
+<span data-ttu-id="a2b08-107">Per partire dall'inizio, tenere presente che un'implementazione di .NET è _indipendente dal linguaggio_.</span><span class="sxs-lookup"><span data-stu-id="a2b08-107">To start from the beginning, remember that a .NET implementation is _language agnostic_.</span></span> <span data-ttu-id="a2b08-108">Ciò non significa semplicemente che un programmatore può scrivere codice in qualsiasi linguaggio che possa essere compilato in linguaggio intermedio.</span><span class="sxs-lookup"><span data-stu-id="a2b08-108">This doesn’t just mean that a programmer can write her code in any language that can be compiled to IL.</span></span> <span data-ttu-id="a2b08-109">Significa anche che il programmatore deve poter interagire con il codice scritto in altri linguaggi che possano essere usati nell'implementazione di .NET.</span><span class="sxs-lookup"><span data-stu-id="a2b08-109">It also means that she needs to be able to interact with code written in other languages that are able to be used on a .NET implementation.</span></span>
 
-Per poter far ciò in modo trasparente, deve esistere una modalità comune per descrivere tutti i tipi supportati. Questo è il compito di Common Type System (CTS). È stato realizzato per eseguire diverse operazioni:
+<span data-ttu-id="a2b08-110">Per poter far ciò in modo trasparente, deve esistere una modalità comune per descrivere tutti i tipi supportati.</span><span class="sxs-lookup"><span data-stu-id="a2b08-110">In order to do this transparently, there has to be a common way to describe all supported types.</span></span> <span data-ttu-id="a2b08-111">Questo è il compito di Common Type System (CTS).</span><span class="sxs-lookup"><span data-stu-id="a2b08-111">This is what the Common Type System (CTS) is in charge of doing.</span></span> <span data-ttu-id="a2b08-112">È stato realizzato per eseguire diverse operazioni:</span><span class="sxs-lookup"><span data-stu-id="a2b08-112">It was made to do several things:</span></span>
 
-*   Stabilire un framework per l'esecuzione di diversi linguaggi.
-*   Offrire un modello orientato a oggetti per supportare l'implementazione di vari linguaggi sulla piattaforma .NET.
-*   Definire un set di regole che tutti i linguaggi devono seguire quando si tratta di uso dei tipi.
-*   Specificare una libreria che contenga i tipi di dati primitivi di base, ad esempio `Boolean`, `Byte`, `Char` e così via, usati nello sviluppo delle applicazioni.
+*   <span data-ttu-id="a2b08-113">Stabilire un framework per l'esecuzione di diversi linguaggi.</span><span class="sxs-lookup"><span data-stu-id="a2b08-113">Establish a framework for cross-language execution.</span></span>
+*   <span data-ttu-id="a2b08-114">Offrire un modello orientato a oggetti per supportare l'implementazione di vari linguaggi in una implementazione di .NET.</span><span class="sxs-lookup"><span data-stu-id="a2b08-114">Provide an object-oriented model to support implementing various languages on a .NET implementation.</span></span>
+*   <span data-ttu-id="a2b08-115">Definire un set di regole che tutti i linguaggi devono seguire quando si tratta di uso dei tipi.</span><span class="sxs-lookup"><span data-stu-id="a2b08-115">Define a set of rules that all languages must follow when it comes to working with types.</span></span>
+*   <span data-ttu-id="a2b08-116">Specificare una libreria che contenga i tipi di dati primitivi di base, ad esempio `Boolean`, `Byte`, `Char` e così via, usati nello sviluppo delle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="a2b08-116">Provide a library that contains the basic primitive types that are used in application development (such as, `Boolean`, `Byte`, `Char` etc.)</span></span>
 
-CTS definisce due tipologie principali di tipi che devono essere supportati: riferimento e valore. I rispettivi nomi ne indicano la definizione.
+<span data-ttu-id="a2b08-117">CTS definisce due tipologie principali di tipi che devono essere supportati: riferimento e valore.</span><span class="sxs-lookup"><span data-stu-id="a2b08-117">CTS defines two main kinds of types that should be supported: reference and value types.</span></span> <span data-ttu-id="a2b08-118">I rispettivi nomi ne indicano la definizione.</span><span class="sxs-lookup"><span data-stu-id="a2b08-118">Their names point to their definitions.</span></span>
 
-Gli oggetti dei tipi riferimento sono rappresentati da un riferimento al valore effettivo dell'oggetto. In questo contesto un riferimento è simile a un puntatore in C/C++. Fa semplicemente riferimento a una posizione di memoria in cui si trovano i valori degli oggetti. Questo ha un impatto notevole sull'uso di questi tipi. Se si assegna un tipo riferimento a una variabile e quindi si passa tale variabile in un metodo, ad esempio, qualsiasi modifica all'oggetto si rifletterà sull'oggetto principale. Non si tratta di eseguire una copia.
+<span data-ttu-id="a2b08-119">Gli oggetti dei tipi riferimento sono rappresentati da un riferimento al valore effettivo dell'oggetto. In questo contesto un riferimento è simile a un puntatore in C/C++.</span><span class="sxs-lookup"><span data-stu-id="a2b08-119">Reference types’ objects are represented by a reference to the object’s actual value; a reference here is similar to a pointer in C/C++.</span></span> <span data-ttu-id="a2b08-120">Fa semplicemente riferimento a una posizione di memoria in cui si trovano i valori degli oggetti.</span><span class="sxs-lookup"><span data-stu-id="a2b08-120">It simply refers to a memory location where the objects’ values are.</span></span> <span data-ttu-id="a2b08-121">Questo ha un impatto notevole sull'uso di questi tipi.</span><span class="sxs-lookup"><span data-stu-id="a2b08-121">This has a profound impact on how these types are used.</span></span> <span data-ttu-id="a2b08-122">Se si assegna un tipo riferimento a una variabile e quindi si passa tale variabile in un metodo, ad esempio, qualsiasi modifica all'oggetto si rifletterà sull'oggetto principale. Non si tratta di eseguire una copia.</span><span class="sxs-lookup"><span data-stu-id="a2b08-122">If you assign a reference type to a variable and then pass that variable into a method, for instance, any changes to the object will be reflected on the main object; there is no copying.</span></span>
 
-I tipi valore sono l'opposto, in quanto gli oggetti sono rappresentati dai propri valori. Se si assegna un tipo valore a una variabile, si sta essenzialmente copiando un valore dell'oggetto.
+<span data-ttu-id="a2b08-123">I tipi valore sono l'opposto, in quanto gli oggetti sono rappresentati dai propri valori.</span><span class="sxs-lookup"><span data-stu-id="a2b08-123">Value types are the opposite, where the objects are represented by their values.</span></span> <span data-ttu-id="a2b08-124">Se si assegna un tipo valore a una variabile, si sta essenzialmente copiando un valore dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="a2b08-124">If you assign a value type to a variable, you are essentially copying a value of the object.</span></span>
 
-CTS definisce diverse categorie di tipi, ognuna con una semantica e un uso specifici:
+<span data-ttu-id="a2b08-125">CTS definisce diverse categorie di tipi, ognuna con una semantica e un uso specifici:</span><span class="sxs-lookup"><span data-stu-id="a2b08-125">CTS defines several categories of types, each with their specific semantics and usage:</span></span>
 
-*   Classi
-*   Strutture
-*   Enumerazioni
-*   Interfacce
-*   Delegati
+*   <span data-ttu-id="a2b08-126">Classi</span><span class="sxs-lookup"><span data-stu-id="a2b08-126">Classes</span></span>
+*   <span data-ttu-id="a2b08-127">Strutture</span><span class="sxs-lookup"><span data-stu-id="a2b08-127">Structures</span></span>
+*   <span data-ttu-id="a2b08-128">Enumerazioni</span><span class="sxs-lookup"><span data-stu-id="a2b08-128">Enums</span></span>
+*   <span data-ttu-id="a2b08-129">Interfacce</span><span class="sxs-lookup"><span data-stu-id="a2b08-129">Interfaces</span></span>
+*   <span data-ttu-id="a2b08-130">Delegati</span><span class="sxs-lookup"><span data-stu-id="a2b08-130">Delegates</span></span>
 
-CTS definisce anche tutte le altre proprietà dei tipi, ad esempio i modificatori di accesso, quali sono i membri di tipo valido, come funzionano ereditarietà e overload e così via. Sfortunatamente, un'analisi approfondita di tali aspetti va oltre l'ambito di un articolo introduttivo come questo, ma è possibile accedere alla sezione [Altre risorse](#more-resources) alla fine per collegamenti a contenuti più dettagliati su questi argomenti.
+<span data-ttu-id="a2b08-131">CTS definisce anche tutte le altre proprietà dei tipi, ad esempio i modificatori di accesso, quali sono i membri di tipo valido, come funzionano ereditarietà e overload e così via.</span><span class="sxs-lookup"><span data-stu-id="a2b08-131">CTS also defines all other properties of the types, such as access modifiers, what are valid type members, how inheritance and overloading works and so on.</span></span> <span data-ttu-id="a2b08-132">Sfortunatamente, un'analisi approfondita di tali aspetti va oltre l'ambito di un articolo introduttivo come questo, ma è possibile accedere alla sezione [Altre risorse](#more-resources) alla fine per collegamenti a contenuti più dettagliati su questi argomenti.</span><span class="sxs-lookup"><span data-stu-id="a2b08-132">Unfortunately, going deep into any of those is beyond the scope of an introductory article such as this, but you can consult [More resources](#more-resources) section at the end for links to more in-depth content that covers these topics.</span></span>
 
-## <a name="common-language-specification"></a>Common Language Specification
+## <a name="common-language-specification"></a><span data-ttu-id="a2b08-133">Common Language Specification</span><span class="sxs-lookup"><span data-stu-id="a2b08-133">Common Language Specification</span></span>
 
-Per abilitare scenari di interoperabilità completa, tutti gli oggetti creati nel codice devono basarsi su un aspetto comune ai linguaggi che li usano, definito _chiamante_. Poiché sono presenti numerosi linguaggi diversi, la piattaforma .NET ha specificato tali aspetti comuni in **Common Language Specification** (Specifiche CLS). CLS definisce un set di funzionalità necessarie per molte applicazioni comuni. Offre anche una sorta di "ricetta" per qualsiasi linguaggio che viene implementato sulla piattaforma .NET, specificando cosa debba supportare.
+<span data-ttu-id="a2b08-134">Per abilitare scenari di interoperabilità completa, tutti gli oggetti creati nel codice devono basarsi su un aspetto comune ai linguaggi che li usano, definito _chiamante_.</span><span class="sxs-lookup"><span data-stu-id="a2b08-134">To enable full interoperability scenarios, all objects that are created in code must rely on some commonality in the languages that are consuming them (are their _callers_).</span></span> <span data-ttu-id="a2b08-135">Poiché sono presenti numerosi linguaggi diversi, .NET ha specificato tali aspetti comuni in **Common Language Specification** (Specifiche CLS).</span><span class="sxs-lookup"><span data-stu-id="a2b08-135">Since there are numerous different languages, .NET has specified those commonalities in something called the **Common Language Specification** (CLS).</span></span> <span data-ttu-id="a2b08-136">CLS definisce un set di funzionalità necessarie per molte applicazioni comuni.</span><span class="sxs-lookup"><span data-stu-id="a2b08-136">CLS defines a set of features that are needed by many common applications.</span></span> <span data-ttu-id="a2b08-137">Offre anche una sorta di "ricetta" per qualsiasi linguaggio che viene implementato su .NET, specificando cosa debba supportare.</span><span class="sxs-lookup"><span data-stu-id="a2b08-137">It also provides a sort of recipe for any language that is implemented on top of .NET on what it needs to support.</span></span>
 
-CLS è un subset di CTS. Ciò significa che tutte le regole in CTS si applicano anche a CLS, a meno che le regole di CLS siano più restrittive. Se un componente viene compilato usando solo le regole in CLS, in altre parole espone solo le funzionalità di CLS nelle proprie API, viene definito come **conforme a CLS**. Ad esempio, le `<framework-librares>` sono conformi a CLS proprio per il fatto che devono funzionare per tutti i linguaggi supportati nella piattaforma .NET.
+<span data-ttu-id="a2b08-138">CLS è un subset di CTS.</span><span class="sxs-lookup"><span data-stu-id="a2b08-138">CLS is a subset of the CTS.</span></span> <span data-ttu-id="a2b08-139">Ciò significa che tutte le regole in CTS si applicano anche a CLS, a meno che le regole di CLS siano più restrittive.</span><span class="sxs-lookup"><span data-stu-id="a2b08-139">This means that all of the rules in the CTS also apply to the CLS, unless the CLS rules are more strict.</span></span> <span data-ttu-id="a2b08-140">Se un componente viene compilato usando solo le regole in CLS, in altre parole espone solo le funzionalità di CLS nelle proprie API, viene definito come **conforme a CLS**.</span><span class="sxs-lookup"><span data-stu-id="a2b08-140">If a component is built using only the rules in the CLS, that is, it exposes only the CLS features in its API, it is said to be **CLS-compliant**.</span></span> <span data-ttu-id="a2b08-141">Ad esempio, le `<framework-librares>` sono conformi alle specifiche CLS proprio per il fatto che devono funzionare per tutti i linguaggi supportati in .NET.</span><span class="sxs-lookup"><span data-stu-id="a2b08-141">For instance, the `<framework-librares>` are CLS-compliant precisely because they need to work across all of the languages that are supported on .NET.</span></span>
 
-È possibile vedere i documenti nella sezione [Altre risorse](#more-resources) qui sotto per una panoramica di tutte le funzionalità in CLS.
+<span data-ttu-id="a2b08-142">È possibile vedere i documenti nella sezione [Altre risorse](#more-resources) qui sotto per una panoramica di tutte le funzionalità in CLS.</span><span class="sxs-lookup"><span data-stu-id="a2b08-142">You can consult the documents in the [More Resources](#more-resources) section below to get an overview of all the features in the CLS.</span></span>
 
-## <a name="more-resources"></a>Altre risorse
+## <a name="more-resources"></a><span data-ttu-id="a2b08-143">Altre risorse</span><span class="sxs-lookup"><span data-stu-id="a2b08-143">More resources</span></span>
 
-*   [Common Type System](https://msdn.microsoft.com/library/zcx1eb1e.aspx)
-*   [Common Language Specification](https://msdn.microsoft.com/library/12a7a7h3.aspx)
+*   [<span data-ttu-id="a2b08-144">Common Type System</span><span class="sxs-lookup"><span data-stu-id="a2b08-144">Common Type System</span></span>](https://msdn.microsoft.com/library/zcx1eb1e.aspx)
+*   [<span data-ttu-id="a2b08-145">Common Language Specification</span><span class="sxs-lookup"><span data-stu-id="a2b08-145">Common Language Specification</span></span>](https://msdn.microsoft.com/library/12a7a7h3.aspx)
 

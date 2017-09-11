@@ -1,1 +1,1 @@
-identificatore univoco globale (GUID)
+<span data-ttu-id="db5df-101">identificatore univoco globale (GUID)</span><span class="sxs-lookup"><span data-stu-id="db5df-101">globally unique identifier (GUID)</span></span>

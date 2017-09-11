@@ -15,18 +15,19 @@ ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ff3d6988ce826fea0aee1987a7c546f5c863e71d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 04839f4f729158406c3107f2dcdfbff74753c29c
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="deferred-execution-example-visual-basic"></a>Esempio di esecuzione posticipata (Visual Basic)
-In questo argomento vengono illustrati gli effetti dell'esecuzione posticipata e della valutazione lazy sulle query LINQ to XML.  
+# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="79ff4-102">Esempio di esecuzione posticipata (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79ff4-102">Deferred Execution Example (Visual Basic)</span></span>
+<span data-ttu-id="79ff4-103">In questo argomento vengono illustrati gli effetti dell'esecuzione posticipata e della valutazione lazy sulle query LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="79ff4-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente è illustrato l'ordine di esecuzione quando si usa un metodo di estensione basato su esecuzione posticipata. Viene dichiarata una matrice di tre stringhe. Viene quindi scorsa la raccolta restituita da `ConvertCollectionToUpperCase`.  
+## <a name="example"></a><span data-ttu-id="79ff4-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="79ff4-104">Example</span></span>  
+ <span data-ttu-id="79ff4-105">Nell'esempio seguente è illustrato l'ordine di esecuzione quando si usa un metodo di estensione basato su esecuzione posticipata.</span><span class="sxs-lookup"><span data-stu-id="79ff4-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="79ff4-106">Viene dichiarata una matrice di tre stringhe.</span><span class="sxs-lookup"><span data-stu-id="79ff4-106">The example declares an array of three strings.</span></span> <span data-ttu-id="79ff4-107">Viene quindi scorsa la raccolta restituita da `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="79ff4-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -57,7 +58,7 @@ Module Module1
 End Module  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="79ff4-108">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="79ff4-108">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source abc  
@@ -68,9 +69,9 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- Si noti che quando si scorre la raccolta restituita da `ConvertCollectionToUpperCase`, ogni elemento viene recuperato dalla matrice di stringhe di origine e viene convertito in lettere maiuscole prima del recupero dell'elemento successivo.  
+ <span data-ttu-id="79ff4-109">Si noti che quando si scorre la raccolta restituita da `ConvertCollectionToUpperCase`, ogni elemento viene recuperato dalla matrice di stringhe di origine e viene convertito in lettere maiuscole prima del recupero dell'elemento successivo.</span><span class="sxs-lookup"><span data-stu-id="79ff4-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
   
- L'intera matrice di stringhe non viene convertita in lettere maiuscole prima dell'elaborazione nel ciclo `foreach` di `Main` di ogni elemento della raccolta restituita.  
+ <span data-ttu-id="79ff4-110">L'intera matrice di stringhe non viene convertita in lettere maiuscole prima dell'elaborazione nel ciclo `foreach` di `Main` di ogni elemento della raccolta restituita.</span><span class="sxs-lookup"><span data-stu-id="79ff4-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Esercitazione: Posticipata esecuzione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+## <a name="see-also"></a><span data-ttu-id="79ff4-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="79ff4-111">See Also</span></span>  
+ [<span data-ttu-id="79ff4-112">Esercitazione: Posticipata esecuzione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79ff4-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

@@ -20,45 +20,46 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 17324fb6dca653aa3c15e3bad2fcc5ac35828bef
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e2ccb8e6880d7836ee2aae2b7f3c3799c9ff2835
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Procedura: utilizzare annotazioni per trasformare LINQ a strutture ad albero XML in uno stile XSLT (Visual Basic)
-Le annotazioni possono essere usate per facilitare le trasformazioni di un albero XML.  
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a><span data-ttu-id="46cba-102">Procedura: utilizzare annotazioni per trasformare LINQ a strutture ad albero XML in uno stile XSLT (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="46cba-102">How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)</span></span>
+<span data-ttu-id="46cba-103">Le annotazioni possono essere usate per facilitare le trasformazioni di un albero XML.</span><span class="sxs-lookup"><span data-stu-id="46cba-103">Annotations can be used to facilitate transforms of an XML tree.</span></span>  
   
- Alcuni documenti XML sono "basati su documenti con contenuto misto". Con tali documenti, la forma dei nodi figlio di un elemento non è necessariamente nota. Ad esempio, un nodo che contiene testo può essere analogo al seguente:  
+ <span data-ttu-id="46cba-104">Alcuni documenti XML sono "basati su documenti con contenuto misto".</span><span class="sxs-lookup"><span data-stu-id="46cba-104">Some XML documents are "document centric with mixed content."</span></span> <span data-ttu-id="46cba-105">Con tali documenti, la forma dei nodi figlio di un elemento non è necessariamente nota.</span><span class="sxs-lookup"><span data-stu-id="46cba-105">With such documents, you don't necessarily know the shape of child nodes of an element.</span></span> <span data-ttu-id="46cba-106">Ad esempio, un nodo che contiene testo può essere analogo al seguente:</span><span class="sxs-lookup"><span data-stu-id="46cba-106">For instance, a node that contains text may look like this:</span></span>  
   
 ```xml  
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- Per ogni nodo di testo potrebbe essere disponibile un numero qualsiasi di elementi `<b>` e `<i>` figlio. Questo approccio è applicabile a diverse altre situazioni: ad esempio, le pagine che possono contenere una varietà di elementi figlio, ad esempio paragrafi normali, paragrafi puntati e bitmap. Le celle di una tabella possono contenere testo, elenchi a discesa o bitmap. Una delle caratteristiche principali dell'XML basato su documento è che non è noto quale sarà l'elemento figlio di un determinato elemento.  
+ <span data-ttu-id="46cba-107">Per ogni nodo di testo potrebbe essere disponibile un numero qualsiasi di elementi `<b>` e `<i>` figlio.</span><span class="sxs-lookup"><span data-stu-id="46cba-107">For any given text node, there may be any number of child `<b>` and `<i>` elements.</span></span> <span data-ttu-id="46cba-108">Questo approccio è applicabile a diverse altre situazioni: ad esempio, le pagine che possono contenere una varietà di elementi figlio, ad esempio paragrafi normali, paragrafi puntati e bitmap.</span><span class="sxs-lookup"><span data-stu-id="46cba-108">This approach extends to a number of other situations: such as, pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps.</span></span> <span data-ttu-id="46cba-109">Le celle di una tabella possono contenere testo, elenchi a discesa o bitmap.</span><span class="sxs-lookup"><span data-stu-id="46cba-109">Cells in a table may contain text, drop down lists, or bitmaps.</span></span> <span data-ttu-id="46cba-110">Una delle caratteristiche principali dell'XML basato su documento è che non è noto quale sarà l'elemento figlio di un determinato elemento.</span><span class="sxs-lookup"><span data-stu-id="46cba-110">One of the primary characteristics of document centric XML is that you do not know which child element any particular element will have.</span></span>  
   
- Se si desidera trasformare gli elementi di un albero e non si dispone necessariamente di molte informazioni sugli elementi figlio di tali elementi, questo approccio basato sull'utilizzo di annotazioni si rivela efficace.  
+ <span data-ttu-id="46cba-111">Se si desidera trasformare gli elementi di un albero e non si dispone necessariamente di molte informazioni sugli elementi figlio di tali elementi, questo approccio basato sull'utilizzo di annotazioni si rivela efficace.</span><span class="sxs-lookup"><span data-stu-id="46cba-111">If you want to transform elements in a tree where you don't necessarily know much about the children of the elements that you want to transform, then this approach that uses annotations is an effective approach.</span></span>  
   
- Il riepilogo dell'approccio è il seguente:  
+ <span data-ttu-id="46cba-112">Il riepilogo dell'approccio è il seguente:</span><span class="sxs-lookup"><span data-stu-id="46cba-112">The summary of the approach is:</span></span>  
   
--   Annotare gli elementi dell'albero con un elemento sostitutivo.  
+-   <span data-ttu-id="46cba-113">Annotare gli elementi dell'albero con un elemento sostitutivo.</span><span class="sxs-lookup"><span data-stu-id="46cba-113">First, annotate elements in the tree with a replacement element.</span></span>  
   
--   Scorrere l'intero albero, creando un nuovo albero in cui ogni elemento viene sostituito con la relativa annotazione. In questo esempio vengono implementate l'iterazione e la creazione del nuovo albero in una funzione denominato `XForm`.  
+-   <span data-ttu-id="46cba-114">Scorrere l'intero albero, creando un nuovo albero in cui ogni elemento viene sostituito con la relativa annotazione.</span><span class="sxs-lookup"><span data-stu-id="46cba-114">Second, iterate through the entire tree, creating a new tree where you replace each element with its annotation.</span></span> <span data-ttu-id="46cba-115">In questo esempio vengono implementate l'iterazione e la creazione del nuovo albero in una funzione denominato `XForm`.</span><span class="sxs-lookup"><span data-stu-id="46cba-115">This example implements the iteration and creation of the new tree in a function named `XForm`.</span></span>  
   
- In dettaglio, l'approccio è costituito dai seguenti passaggi:  
+ <span data-ttu-id="46cba-116">In dettaglio, l'approccio è costituito dai seguenti passaggi:</span><span class="sxs-lookup"><span data-stu-id="46cba-116">In detail, the approach consists of:</span></span>  
   
--   Eseguire una o più query LINQ to XML che restituiscono il set di elementi da trasformare da una forma a un'altra. Per ogni elemento nella query, aggiungere un nuovo <xref:System.Xml.Linq.XElement>oggetto come un'annotazione all'elemento.</xref:System.Xml.Linq.XElement> Questo nuovo elemento sostituirà l'elemento annotato nel nuovo albero trasformato. Il codice da scrivere è semplice, come illustrato nell'esempio.  
+-   <span data-ttu-id="46cba-117">Eseguire una o più query LINQ to XML che restituiscono il set di elementi da trasformare da una forma a un'altra.</span><span class="sxs-lookup"><span data-stu-id="46cba-117">Execute one or more LINQ to XML queries that return the set of elements that you want to transform from one shape to another.</span></span> <span data-ttu-id="46cba-118">Per ogni elemento nella query, aggiungere un nuovo <xref:System.Xml.Linq.XElement>oggetto come un'annotazione all'elemento.</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="46cba-118">For each element in the query, add a new <xref:System.Xml.Linq.XElement> object as an annotation to the element.</span></span> <span data-ttu-id="46cba-119">Questo nuovo elemento sostituirà l'elemento annotato nel nuovo albero trasformato.</span><span class="sxs-lookup"><span data-stu-id="46cba-119">This new element will replace the annotated element in the new, transformed tree.</span></span> <span data-ttu-id="46cba-120">Il codice da scrivere è semplice, come illustrato nell'esempio.</span><span class="sxs-lookup"><span data-stu-id="46cba-120">This is simple code to write, as demonstrated by the example.</span></span>  
   
--   Il nuovo elemento aggiunto come annotazione può contenere nuovi nodi figlio e può formare un sottoalbero con la forma desiderata.  
+-   <span data-ttu-id="46cba-121">Il nuovo elemento aggiunto come annotazione può contenere nuovi nodi figlio e può formare un sottoalbero con la forma desiderata.</span><span class="sxs-lookup"><span data-stu-id="46cba-121">The new element that is added as an annotation can contain new child nodes; it can form a sub-tree with any desired shape.</span></span>  
   
--   È necessario seguire una regola speciale: se un nodo figlio del nuovo elemento è incluso in uno spazio dei nomi diverso, ovvero uno spazio dei nomi creato appositamente (in questo esempio lo spazio dei nomi è `http://www.microsoft.com/LinqToXmlTransform/2007`), tale elemento figlio non viene copiato nel nuovo albero. Se invece lo spazio dei nomi è quello speciale citato in precedenza e il nome locale dell'elemento è `ApplyTransforms`, i nodi figlio dell'elemento nell'albero di origine vengono scorsi e quindi copiati nel nuovo albero, con l'eccezione che gli elementi figlio annotati vengono trasformati anch'essi in base a queste regole.  
+-   <span data-ttu-id="46cba-122">È necessario seguire una regola speciale: se un nodo figlio del nuovo elemento è incluso in uno spazio dei nomi diverso, ovvero uno spazio dei nomi creato appositamente (in questo esempio lo spazio dei nomi è `http://www.microsoft.com/LinqToXmlTransform/2007`), tale elemento figlio non viene copiato nel nuovo albero.</span><span class="sxs-lookup"><span data-stu-id="46cba-122">There is a special rule: If a child node of the new element is in a different namespace, a namespace that is made up for this purpose (in this example, the namespace is `http://www.microsoft.com/LinqToXmlTransform/2007`), then that child element is not copied to the new tree.</span></span> <span data-ttu-id="46cba-123">Se invece lo spazio dei nomi è quello speciale citato in precedenza e il nome locale dell'elemento è `ApplyTransforms`, i nodi figlio dell'elemento nell'albero di origine vengono scorsi e quindi copiati nel nuovo albero, con l'eccezione che gli elementi figlio annotati vengono trasformati anch'essi in base a queste regole.</span><span class="sxs-lookup"><span data-stu-id="46cba-123">Instead, if the namespace is the above mentioned special namespace, and the local name of the element is `ApplyTransforms`, then the child nodes of the element in the source tree are iterated, and copied to the new tree (with the exception that annotated child elements are themselves transformed according to these rules).</span></span>  
   
--   Questo comportamento è in una certa misura analogo alla specifica di trasformazioni in XSL. La query che seleziona un set di nodi è analoga all'espressione XPath per un modello. Il codice per creare il nuovo <xref:System.Xml.Linq.XElement>che viene salvato come annotazione è analoga al costruttore di sequenze in XSL e `ApplyTransforms` elemento è una funzione per il `xsl:apply-templates` elemento XSL.</xref:System.Xml.Linq.XElement>  
+-   <span data-ttu-id="46cba-124">Questo comportamento è in una certa misura analogo alla specifica di trasformazioni in XSL.</span><span class="sxs-lookup"><span data-stu-id="46cba-124">This is somewhat analogous to the specification of transforms in XSL.</span></span> <span data-ttu-id="46cba-125">La query che seleziona un set di nodi è analoga all'espressione XPath per un modello.</span><span class="sxs-lookup"><span data-stu-id="46cba-125">The query that selects a set of nodes is analogous to the XPath expression for a template.</span></span> <span data-ttu-id="46cba-126">Il codice per creare il nuovo <xref:System.Xml.Linq.XElement>che viene salvato come annotazione è analoga al costruttore di sequenze in XSL e `ApplyTransforms` elemento è una funzione per il `xsl:apply-templates` elemento XSL.</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="46cba-126">The code to create the new <xref:System.Xml.Linq.XElement> that is saved as an annotation is analogous to the sequence constructor in XSL, and the `ApplyTransforms` element is analogous in function to the `xsl:apply-templates` element in XSL.</span></span>  
   
--   Uno dei vantaggi di questo approccio è che le query formulate vengono sempre scritte sull'albero di origine non modificata. Non è necessario preoccuparsi degli effetti delle modifiche apportate all'albero sulle query che vengono scritte.  
+-   <span data-ttu-id="46cba-127">Uno dei vantaggi di questo approccio è che le query formulate vengono sempre scritte sull'albero di origine non modificata.</span><span class="sxs-lookup"><span data-stu-id="46cba-127">One advantage to taking this approach - as you formulate queries, you are always writing queries on the unmodified source tree.</span></span> <span data-ttu-id="46cba-128">Non è necessario preoccuparsi degli effetti delle modifiche apportate all'albero sulle query che vengono scritte.</span><span class="sxs-lookup"><span data-stu-id="46cba-128">You need not worry about how modifications to the tree affect the queries that you are writing.</span></span>  
   
-## <a name="transforming-a-tree"></a>Trasformazione di un albero  
- Nel primo esempio tutti i nodi `Paragraph` vengono rinominati in `para`.  
+## <a name="transforming-a-tree"></a><span data-ttu-id="46cba-129">Trasformazione di un albero</span><span class="sxs-lookup"><span data-stu-id="46cba-129">Transforming a Tree</span></span>  
+ <span data-ttu-id="46cba-130">Nel primo esempio tutti i nodi `Paragraph` vengono rinominati in `para`.</span><span class="sxs-lookup"><span data-stu-id="46cba-130">This first example renames all `Paragraph` nodes to `para`.</span></span>  
   
 ```vb  
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">  
@@ -89,7 +90,7 @@ Module Module1
 End Module  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="46cba-131">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="46cba-131">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -98,8 +99,8 @@ End Module
 </Root>  
 ```  
   
-## <a name="a-more-complicated-transform"></a>Trasformazioni più complicata  
- Nell'esempio seguente viene eseguita una query sull'albero e vengono calcolate la media e la somma degli elementi `Data`, che vengono aggiunte come nuovi elementi nell'albero.  
+## <a name="a-more-complicated-transform"></a><span data-ttu-id="46cba-132">Trasformazioni più complicata</span><span class="sxs-lookup"><span data-stu-id="46cba-132">A More Complicated Transform</span></span>  
+ <span data-ttu-id="46cba-133">Nell'esempio seguente viene eseguita una query sull'albero e vengono calcolate la media e la somma degli elementi `Data`, che vengono aggiunte come nuovi elementi nell'albero.</span><span class="sxs-lookup"><span data-stu-id="46cba-133">The following example queries the tree and calculates the average and sum of the `Data` elements, and adds them as new elements to the tree.</span></span>  
   
 ```vb  
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">  
@@ -150,7 +151,7 @@ Module Module1
 End Module   
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="46cba-134">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="46cba-134">This example produces the following output:</span></span>  
   
 ```  
 Before Transform  
@@ -172,10 +173,10 @@ After Transform
 </Root>  
 ```  
   
-## <a name="effecting-the-transform"></a>Esecuzione della trasformazione  
- Una piccola funzione, `XForm`, crea un nuovo albero trasformato dall'albero originale annotato.  
+## <a name="effecting-the-transform"></a><span data-ttu-id="46cba-135">Esecuzione della trasformazione</span><span class="sxs-lookup"><span data-stu-id="46cba-135">Effecting the Transform</span></span>  
+ <span data-ttu-id="46cba-136">Una piccola funzione, `XForm`, crea un nuovo albero trasformato dall'albero originale annotato.</span><span class="sxs-lookup"><span data-stu-id="46cba-136">A small function, `XForm`, creates a new transformed tree from the original, annotated tree.</span></span>  
   
--   Lo pseudo-codice per la funzione è piuttosto semplice:  
+-   <span data-ttu-id="46cba-137">Lo pseudo-codice per la funzione è piuttosto semplice:</span><span class="sxs-lookup"><span data-stu-id="46cba-137">The pseudo code for the function is quite simple:</span></span>  
   
 ```  
 The function takes an XElement as an argument and returns an XElement.   
@@ -201,7 +202,7 @@ If an element is not annotated
             is transformed by calling this function recursively.  
 ```  
   
- Di seguito è riportata l'implementazione di questa funzione:  
+ <span data-ttu-id="46cba-138">Di seguito è riportata l'implementazione di questa funzione:</span><span class="sxs-lookup"><span data-stu-id="46cba-138">Following is the implementation of this function:</span></span>  
   
 ```vb  
 ' Build a transformed XML tree per the annotations.  
@@ -243,8 +244,8 @@ Private Function GetExpandedNodes(ByVal n2 As XNode) As XNode
 End Function  
 ```  
   
-## <a name="complete-example"></a>Esempio completo  
- Il codice seguente è un esempio completo che include la funzione `XForm` e alcuni dei tipici utilizzi di questo tipo di trasformazione:  
+## <a name="complete-example"></a><span data-ttu-id="46cba-139">Esempio completo</span><span class="sxs-lookup"><span data-stu-id="46cba-139">Complete Example</span></span>  
+ <span data-ttu-id="46cba-140">Il codice seguente è un esempio completo che include la funzione `XForm`</span><span class="sxs-lookup"><span data-stu-id="46cba-140">The following code is a complete example that includes the `XForm` function.</span></span> <span data-ttu-id="46cba-141">e alcuni dei tipici utilizzi di questo tipo di trasformazione:</span><span class="sxs-lookup"><span data-stu-id="46cba-141">It includes a few of the typical uses of this type of transform:</span></span>  
   
 ```vb  
 Imports System  
@@ -361,7 +362,7 @@ Module Module1
 End Module   
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="46cba-142">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="46cba-142">This example produces the following output:</span></span>  
   
 ```  
 Before Transform  
@@ -395,5 +396,5 @@ After Transform
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to XML (Visual Basic) di programmazione avanzata](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="46cba-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="46cba-143">See Also</span></span>  
+ [<span data-ttu-id="46cba-144">LINQ to XML (Visual Basic) di programmazione avanzata</span><span class="sxs-lookup"><span data-stu-id="46cba-144">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

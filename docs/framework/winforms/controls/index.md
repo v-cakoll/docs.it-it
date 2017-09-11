@@ -27,31 +27,31 @@ ms.contentlocale: it-it
 ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="windows-forms-controls"></a>Controlli per Windows Form
-Durante la progettazione e la modifica dell'interfaccia utente delle Windows Forms Application, è necessario aggiungere, allineare e posizionare i controlli. I controlli sono gli oggetti contenuti all'interno di oggetti Form. Ogni tipo di controllo ha un proprio set di proprietà, metodi ed eventi che lo rendono appropriato per un particolare scopo. È possibile modificare i controlli nella finestra di progettazione e scrivere codice per aggiungere controlli in modo dinamico in fase di esecuzione.  
+# <a name="windows-forms-controls"></a><span data-ttu-id="de61b-102">Controlli per Windows Form</span><span class="sxs-lookup"><span data-stu-id="de61b-102">Windows Forms Controls</span></span>
+<span data-ttu-id="de61b-103">Durante la progettazione e la modifica dell'interfaccia utente delle Windows Forms Application, è necessario aggiungere, allineare e posizionare i controlli.</span><span class="sxs-lookup"><span data-stu-id="de61b-103">As you design and modify the user interface of your Windows Forms applications, you will need to add, align, and position controls.</span></span> <span data-ttu-id="de61b-104">I controlli sono gli oggetti contenuti all'interno di oggetti Form.</span><span class="sxs-lookup"><span data-stu-id="de61b-104">Controls are objects that are contained within form objects.</span></span> <span data-ttu-id="de61b-105">Ogni tipo di controllo ha un proprio set di proprietà, metodi ed eventi che lo rendono appropriato per un particolare scopo.</span><span class="sxs-lookup"><span data-stu-id="de61b-105">Each type of control has its own set of properties, methods, and events that make it suitable for a particular purpose.</span></span> <span data-ttu-id="de61b-106">È possibile modificare i controlli nella finestra di progettazione e scrivere codice per aggiungere controlli in modo dinamico in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="de61b-106">You can manipulate controls in the designer and write code to add controls dynamically at run time.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Inserimento di controlli in Windows Form](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
- Fornisce collegamenti correlati all'inserimento dei controlli nei form.  
+## <a name="in-this-section"></a><span data-ttu-id="de61b-107">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="de61b-107">In This Section</span></span>  
+ [<span data-ttu-id="de61b-108">Inserimento di controlli in Windows Form</span><span class="sxs-lookup"><span data-stu-id="de61b-108">Putting Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ <span data-ttu-id="de61b-109">Fornisce collegamenti correlati all'inserimento dei controlli nei form.</span><span class="sxs-lookup"><span data-stu-id="de61b-109">Provides links related to putting controls on forms.</span></span>  
   
- [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- Fornisce collegamenti correlati alla disposizione dei controlli nei form.  
+ [<span data-ttu-id="de61b-110">Disposizione di controlli in Windows Form</span><span class="sxs-lookup"><span data-stu-id="de61b-110">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ <span data-ttu-id="de61b-111">Fornisce collegamenti correlati alla disposizione dei controlli nei form.</span><span class="sxs-lookup"><span data-stu-id="de61b-111">Provides links related to arranging controls on forms.</span></span>  
   
- [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- Descrive gli usi di tasti di scelta rapida, etichette di testo nei controlli e tasti di modifica.  
+ [<span data-ttu-id="de61b-112">Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida</span><span class="sxs-lookup"><span data-stu-id="de61b-112">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ <span data-ttu-id="de61b-113">Descrive gli usi di tasti di scelta rapida, etichette di testo nei controlli e tasti di modifica.</span><span class="sxs-lookup"><span data-stu-id="de61b-113">Describes the uses of keyboard shortcuts, text labels on controls, and modifier keys.</span></span>  
   
- [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Elenca i controlli che funzionano con Windows Form e le operazioni di base che è possibile eseguire con ogni controllo.  
+ [<span data-ttu-id="de61b-114">Controlli da usare in Windows Form</span><span class="sxs-lookup"><span data-stu-id="de61b-114">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="de61b-115">Elenca i controlli che funzionano con Windows Form e le operazioni di base che è possibile eseguire con ogni controllo.</span><span class="sxs-lookup"><span data-stu-id="de61b-115">Lists the controls that work with Windows Forms, and basic things you can accomplish with each control.</span></span>  
   
- [Sviluppo di controlli Windows Form personalizzati con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- Fornisce informazioni complementari ed esempi per aiutare gli utenti a sviluppare controlli Windows Form personalizzati.  
+ [<span data-ttu-id="de61b-116">Sviluppo di controlli Windows Form personalizzati con .NET Framework</span><span class="sxs-lookup"><span data-stu-id="de61b-116">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ <span data-ttu-id="de61b-117">Fornisce informazioni complementari ed esempi per aiutare gli utenti a sviluppare controlli Windows Form personalizzati.</span><span class="sxs-lookup"><span data-stu-id="de61b-117">Provides background information and samples to help users develop custom Windows Forms controls.</span></span>  
   
- [Sviluppo di controlli Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- Descrive le tecniche per la creazione di controlli personalizzati attraverso la progettazione e l'ereditarietà.  
+ [<span data-ttu-id="de61b-118">Sviluppo di controlli Windows Form in fase di progettazione</span><span class="sxs-lookup"><span data-stu-id="de61b-118">Developing Windows Forms Controls at Design Time</span></span>](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ <span data-ttu-id="de61b-119">Descrive le tecniche per la creazione di controlli personalizzati attraverso la progettazione e l'ereditarietà.</span><span class="sxs-lookup"><span data-stu-id="de61b-119">Describes techniques for creating custom controls through design and inheritance.</span></span>  
   
-## <a name="related-sections"></a>Sezioni correlate  
- [Applicazioni client](../../../../docs/framework/develop-client-apps.md)  
- Fornisce una panoramica sullo sviluppo di applicazioni basate su Windows.  
+## <a name="related-sections"></a><span data-ttu-id="de61b-120">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="de61b-120">Related Sections</span></span>  
+ [<span data-ttu-id="de61b-121">Applicazioni client</span><span class="sxs-lookup"><span data-stu-id="de61b-121">Client Applications</span></span>](../../../../docs/framework/develop-client-apps.md)  
+ <span data-ttu-id="de61b-122">Fornisce una panoramica sullo sviluppo di applicazioni basate su Windows.</span><span class="sxs-lookup"><span data-stu-id="de61b-122">Provides an overview of developing Windows-based applications.</span></span>  
   
- [Procedure dettagliate su Windows Form](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)  
- Elenca gli argomenti delle procedure dettagliate su Windows Form e i controlli.
+ [<span data-ttu-id="de61b-123">Procedure dettagliate su Windows Form</span><span class="sxs-lookup"><span data-stu-id="de61b-123">Windows Forms Walkthroughs</span></span>](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)  
+ <span data-ttu-id="de61b-124">Elenca gli argomenti delle procedure dettagliate su Windows Form e i controlli.</span><span class="sxs-lookup"><span data-stu-id="de61b-124">Lists walkthrough topics about Windows Forms and controls.</span></span>

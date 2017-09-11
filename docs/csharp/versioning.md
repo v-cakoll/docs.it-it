@@ -18,59 +18,59 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="versioning-in-c"></a>Controllo delle versioni in C# #
+# <a name="versioning-in-c"></a><span data-ttu-id="b71a9-104">Controllo delle versioni in C#</span><span class="sxs-lookup"><span data-stu-id="b71a9-104">Versioning in C#</span></span> #
 
-In questa esercitazione si apprenderà il significato del controllo delle versioni in .NET. Si apprenderanno anche i fattori da considerare durante il controllo delle versioni della libreria, nonché durante l'aggiornamento a una nuova versione di una libreria.
+<span data-ttu-id="b71a9-105">In questa esercitazione si apprenderà il significato del controllo delle versioni in .NET.</span><span class="sxs-lookup"><span data-stu-id="b71a9-105">In this tutorial you'll learn what versioning means in .NET.</span></span> <span data-ttu-id="b71a9-106">Si apprenderanno anche i fattori da considerare durante il controllo delle versioni della libreria, nonché durante l'aggiornamento a una nuova versione di una libreria.</span><span class="sxs-lookup"><span data-stu-id="b71a9-106">You'll also learn the factors to consider when versioning your library as well as upgrading to a new version of the a library.</span></span>
 
-## <a name="authoring-libraries"></a>Creazione di librerie
+## <a name="authoring-libraries"></a><span data-ttu-id="b71a9-107">Creazione di librerie</span><span class="sxs-lookup"><span data-stu-id="b71a9-107">Authoring Libraries</span></span>
 
-Gli sviluppatori che hanno creato le librerie .NET per uso pubblico probabilmente si sono trovati in situazioni in cui è necessario distribuire i nuovi aggiornamenti. Le modalità di gestione di questo processo sono molto importanti poiché è necessario garantire che non si verifichino problemi durante la transizione del codice esistente alla nuova versione della libreria. Ecco alcuni aspetti da considerare quando si crea una nuova versione:
+<span data-ttu-id="b71a9-108">Gli sviluppatori che hanno creato le librerie .NET per uso pubblico probabilmente si sono trovati in situazioni in cui è necessario distribuire i nuovi aggiornamenti.</span><span class="sxs-lookup"><span data-stu-id="b71a9-108">As a developer who has created .NET libraries for public use, you've most likely been in situations where you have to roll out new updates.</span></span> <span data-ttu-id="b71a9-109">Le modalità di gestione di questo processo sono molto importanti poiché è necessario garantire che non si verifichino problemi durante la transizione del codice esistente alla nuova versione della libreria.</span><span class="sxs-lookup"><span data-stu-id="b71a9-109">How you go about this process matters a lot as you need to ensure that there's a seamless transition of existing code to the new version of your library.</span></span> <span data-ttu-id="b71a9-110">Ecco alcuni aspetti da considerare quando si crea una nuova versione:</span><span class="sxs-lookup"><span data-stu-id="b71a9-110">Here are several things to consider when creating a new release:</span></span>
 
-### <a name="semantic-versioning"></a>Versionamento Semantico
+### <a name="semantic-versioning"></a><span data-ttu-id="b71a9-111">Versionamento Semantico</span><span class="sxs-lookup"><span data-stu-id="b71a9-111">Semantic Versioning</span></span>
 
-[Versionamento Semantico](http://semver.org/) (SemVer per brevità) è una convenzione di denominazione applicata alle versioni della libreria per indicare cardine specifici.
-In teoria, le informazioni sulla versione applicate alla libreria consentono agli sviluppatori di determinare la compatibilità con i progetti che usano versioni precedenti di quella libreria.
+<span data-ttu-id="b71a9-112">[Versionamento Semantico](http://semver.org/) (SemVer per brevità) è una convenzione di denominazione applicata alle versioni della libreria per indicare cardine specifici.</span><span class="sxs-lookup"><span data-stu-id="b71a9-112">[Semantic versioning](http://semver.org/) (SemVer for short) is a naming convention applied to versions of your library to signify specific milestone events.</span></span>
+<span data-ttu-id="b71a9-113">In teoria, le informazioni sulla versione applicate alla libreria consentono agli sviluppatori di determinare la compatibilità con i progetti che usano versioni precedenti di quella libreria.</span><span class="sxs-lookup"><span data-stu-id="b71a9-113">Ideally, the version information you give your library should help developers determine the compatibility with their projects that make use of older versions of that same library.</span></span>
 
-L'approccio di base a SemVer è il formato a 3 componenti `MAJOR.MINOR.PATCH`, dove:
+<span data-ttu-id="b71a9-114">L'approccio di base a SemVer è il formato a 3 componenti `MAJOR.MINOR.PATCH`, dove:</span><span class="sxs-lookup"><span data-stu-id="b71a9-114">The most basic approach to SemVer is the 3 component format `MAJOR.MINOR.PATCH`, where:</span></span>
  
-* `MAJOR` viene incrementato quando si apportano modifiche incompatibili all'API
-* `MINOR` viene incrementato quando si aggiungono funzionalità compatibili con le versioni precedenti
-* `PATCH` viene incrementato quando si apportano correzioni dei bug compatibili con le versioni precedenti
+* <span data-ttu-id="b71a9-115">`MAJOR` viene incrementato quando si apportano modifiche incompatibili all'API</span><span class="sxs-lookup"><span data-stu-id="b71a9-115">`MAJOR` is incremented when you make incompatible API changes</span></span>
+* <span data-ttu-id="b71a9-116">`MINOR` viene incrementato quando si aggiungono funzionalità compatibili con le versioni precedenti</span><span class="sxs-lookup"><span data-stu-id="b71a9-116">`MINOR` is incremented when you add functionality in a backwards-compatible manner</span></span>
+* <span data-ttu-id="b71a9-117">`PATCH` viene incrementato quando si apportano correzioni dei bug compatibili con le versioni precedenti</span><span class="sxs-lookup"><span data-stu-id="b71a9-117">`PATCH` is incremented when you make backwards-compatible bug fixes</span></span>
 
-Esistono anche dei modi per specificare altri scenari, ad esempio le versioni non definitive, quando si applicano le informazioni sulla versione alla libreria .NET.
+<span data-ttu-id="b71a9-118">Esistono anche dei modi per specificare altri scenari, ad esempio le versioni non definitive, quando si applicano le informazioni sulla versione alla libreria .NET.</span><span class="sxs-lookup"><span data-stu-id="b71a9-118">There are also ways to specify other scenarios like pre-release versions etc. when applying version information to your .NET library.</span></span>
 
-### <a name="backwards-compatibility"></a>Compatibilità con le versioni precedenti
+### <a name="backwards-compatibility"></a><span data-ttu-id="b71a9-119">Compatibilità con le versioni precedenti</span><span class="sxs-lookup"><span data-stu-id="b71a9-119">Backwards Compatibility</span></span>
 
-Quando si rilasciano nuove versioni della libreria, la compatibilità con le versioni precedenti probabilmente è una delle principali preoccupazioni.
-Una nuova versione della libreria è compatibile a livello di codice sorgente con una versione precedente se il codice che dipende dalla versione precedente, quando viene ricompilato, funziona con la nuova versione. Una nuova versione della libreria è compatibile a livello binario se un'applicazione che dipende dalla versione precedente funziona, senza ricompilazione, con la nuova versione.
+<span data-ttu-id="b71a9-120">Quando si rilasciano nuove versioni della libreria, la compatibilità con le versioni precedenti probabilmente è una delle principali preoccupazioni.</span><span class="sxs-lookup"><span data-stu-id="b71a9-120">As you release new versions of your library, backwards compatibility with previous versions will most likely be one of your major concerns.</span></span>
+<span data-ttu-id="b71a9-121">Una nuova versione della libreria è compatibile a livello di codice sorgente con una versione precedente se il codice che dipende dalla versione precedente, quando viene ricompilato, funziona con la nuova versione.</span><span class="sxs-lookup"><span data-stu-id="b71a9-121">A new version of your library is source compatible with a previous version if code that depends on the previous version can, when recompiled, work with the new version.</span></span> <span data-ttu-id="b71a9-122">Una nuova versione della libreria è compatibile a livello binario se un'applicazione che dipende dalla versione precedente funziona, senza ricompilazione, con la nuova versione.</span><span class="sxs-lookup"><span data-stu-id="b71a9-122">A new version of your library is binary compatible if an application that depended on the old version can, without recompilation, work with the new version.</span></span>
 
-Di seguito sono riportati alcuni aspetti da considerare quando si tenta di gestire la compatibilità della libreria con le versioni precedenti:
+<span data-ttu-id="b71a9-123">Di seguito sono riportati alcuni aspetti da considerare quando si tenta di gestire la compatibilità della libreria con le versioni precedenti:</span><span class="sxs-lookup"><span data-stu-id="b71a9-123">Here are some things to consider when trying to maintain backwards compatibility with older versions of your library:</span></span>
 
-* Metodi virtuali: quando si trasforma un metodo virtuale in non virtuale nella nuova versione, sarà necessario aggiornare i progetti che eseguono l'override di tale metodo. Questa è una modifica sostanziale di grande impatto ed è fortemente sconsigliata.
-* Firme del metodo: quando l'aggiornamento del comportamento di un metodo richiede anche la modifica della firma, è necessario creare un overload in modo tale che il codice che chiama il metodo continui a funzionare.
-È sempre possibile modificare la firma del metodo precedente per chiamare la firma del nuovo metodo in modo che l'implementazione resti coerente.
-* [Attributo Obsolete](programming-guide/concepts/attributes/common-attributes.md#Obsolete): è possibile usare questo attributo nel codice per specificare le classi o i membri di classe deprecati che potrebbero essere rimossi nelle versioni future.
-Ciò consente di predisporre meglio gli sviluppatori che usano la libreria a eventuali modifiche di rilievo.
-* Argomenti di metodo facoltativi: se si rendono obbligatori argomenti di metodo che in precedenza erano facoltativi o si modifica il valore predefinito degli argomenti, tutto il codice che non specifica tali argomenti dovrà essere aggiornato.
+* <span data-ttu-id="b71a9-124">Metodi virtuali: quando si trasforma un metodo virtuale in non virtuale nella nuova versione, sarà necessario aggiornare i progetti che eseguono l'override di tale metodo.</span><span class="sxs-lookup"><span data-stu-id="b71a9-124">Virtual methods: When you make a virtual method non-virtual in your new version it means that projects that override that method will have to be updated.</span></span> <span data-ttu-id="b71a9-125">Questa è una modifica sostanziale di grande impatto ed è fortemente sconsigliata.</span><span class="sxs-lookup"><span data-stu-id="b71a9-125">This is a huge breaking change and is strongly discouraged.</span></span>
+* <span data-ttu-id="b71a9-126">Firme del metodo: quando l'aggiornamento del comportamento di un metodo richiede anche la modifica della firma, è necessario creare un overload in modo tale che il codice che chiama il metodo continui a funzionare.</span><span class="sxs-lookup"><span data-stu-id="b71a9-126">Method signatures: When updating a method behaviour requires you to change its signature as well, you should instead create an overload so that code calling into that method will still work.</span></span>
+<span data-ttu-id="b71a9-127">È sempre possibile modificare la firma del metodo precedente per chiamare la firma del nuovo metodo in modo che l'implementazione resti coerente.</span><span class="sxs-lookup"><span data-stu-id="b71a9-127">You can always manipulate the old method signature to call into the new method signature so that implementation remains consistent.</span></span>
+* <span data-ttu-id="b71a9-128">[Attributo Obsolete](programming-guide/concepts/attributes/common-attributes.md#Obsolete): è possibile usare questo attributo nel codice per specificare le classi o i membri di classe deprecati che potrebbero essere rimossi nelle versioni future.</span><span class="sxs-lookup"><span data-stu-id="b71a9-128">[Obsolete attribute](programming-guide/concepts/attributes/common-attributes.md#Obsolete): You can use this attribute in your code to specify classes or class members that are deprecated and likely to be removed in future versions.</span></span>
+<span data-ttu-id="b71a9-129">Ciò consente di predisporre meglio gli sviluppatori che usano la libreria a eventuali modifiche di rilievo.</span><span class="sxs-lookup"><span data-stu-id="b71a9-129">This ensures developers utilizing your library are better prepared for breaking changes.</span></span>
+* <span data-ttu-id="b71a9-130">Argomenti di metodo facoltativi: se si rendono obbligatori argomenti di metodo che in precedenza erano facoltativi o si modifica il valore predefinito degli argomenti, tutto il codice che non specifica tali argomenti dovrà essere aggiornato.</span><span class="sxs-lookup"><span data-stu-id="b71a9-130">Optional Method Arguments: When you make previously optional method arguments compulsory or change their default value then all code that does not supply those arguments will need to be updated.</span></span>
 > [!NOTE]
-> Rendere obbligatori gli argomenti facoltativi ha un impatto molto limitato, soprattutto se non modifica il comportamento del metodo.
+> <span data-ttu-id="b71a9-131">Rendere obbligatori gli argomenti facoltativi ha un impatto molto limitato, soprattutto se non modifica il comportamento del metodo.</span><span class="sxs-lookup"><span data-stu-id="b71a9-131">Making compulsory arguments optional should have very little effect especially if it doesn't change the method's behaviour.</span></span>
 
-Più è facile per gli utenti eseguire l'aggiornamento alla nuova versione della libreria, più rapido sarà l'aggiornamento.
+<span data-ttu-id="b71a9-132">Più è facile per gli utenti eseguire l'aggiornamento alla nuova versione della libreria, più rapido sarà l'aggiornamento.</span><span class="sxs-lookup"><span data-stu-id="b71a9-132">The easier you make it for your users to upgrade to the new version of your library, the more likely that they will upgrade sooner.</span></span>
 
-### <a name="application-configuration-file"></a>File di configurazione dell'applicazione
+### <a name="application-configuration-file"></a><span data-ttu-id="b71a9-133">File di configurazione dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="b71a9-133">Application Configuration File</span></span>
 
-Gli sviluppatori .NET molto probabilmente hanno trovato [il file `app.config`](https://msdn.microsoft.com/en-us/library/1fk1t1t0(v=vs.110).aspx) nella maggior parte dei tipi di progetto.
-Questo semplice file di configurazione è in grado di ottimizzare la distribuzione dei nuovi aggiornamenti. In genere è consigliabile progettare le librerie in modo che le informazioni che probabilmente cambieranno regolarmente vengano memorizzate nel file `app.config`. Quando le informazioni vengono aggiornate è sufficiente sostituire il file di configurazione delle versioni precedenti con il nuovo file senza dover ricompilare la libreria.
+<span data-ttu-id="b71a9-134">Gli sviluppatori .NET molto probabilmente hanno trovato [il file `app.config`](https://msdn.microsoft.com/en-us/library/1fk1t1t0(v=vs.110).aspx) nella maggior parte dei tipi di progetto.</span><span class="sxs-lookup"><span data-stu-id="b71a9-134">As a .NET developer there's a very high chance you've encountered [the `app.config` file](https://msdn.microsoft.com/en-us/library/1fk1t1t0(v=vs.110).aspx) present in most project types.</span></span>
+<span data-ttu-id="b71a9-135">Questo semplice file di configurazione è in grado di ottimizzare la distribuzione dei nuovi aggiornamenti.</span><span class="sxs-lookup"><span data-stu-id="b71a9-135">This simple configuration file can go a long way into improving the rollout of new updates.</span></span> <span data-ttu-id="b71a9-136">In genere è consigliabile progettare le librerie in modo che le informazioni che probabilmente cambieranno regolarmente vengano memorizzate nel file `app.config`. Quando le informazioni vengono aggiornate è sufficiente sostituire il file di configurazione delle versioni precedenti con il nuovo file senza dover ricompilare la libreria.</span><span class="sxs-lookup"><span data-stu-id="b71a9-136">You should generally design your libraries in such a way that information that is likely to change regularly is stored in the `app.config` file, this way when such information is updated the config file of older versions just needs to be replaced with the new one without the need for recompilation of the library.</span></span>
 
-## <a name="consuming-libraries"></a>Elaborazione delle librerie
+## <a name="consuming-libraries"></a><span data-ttu-id="b71a9-137">Elaborazione delle librerie</span><span class="sxs-lookup"><span data-stu-id="b71a9-137">Consuming Libraries</span></span>
 
-Uno sviluppatore che elabora librerie .NET compilate da altri sviluppatori probabilmente sa che una nuova versione di una libreria potrebbe non essere completamente compatibile con il progetto e che spesso è necessario aggiornare il codice perché funzioni con le modifiche.
+<span data-ttu-id="b71a9-138">Uno sviluppatore che elabora librerie .NET compilate da altri sviluppatori probabilmente sa che una nuova versione di una libreria potrebbe non essere completamente compatibile con il progetto e che spesso è necessario aggiornare il codice perché funzioni con le modifiche.</span><span class="sxs-lookup"><span data-stu-id="b71a9-138">As a developer that consumes .NET libraries built by other developers you're most likely aware that a new version of a library might not be fully compatible with your project and you might often find yourself having to update your code to work with those changes.</span></span>
 
-Sia C# che l'ecosistema .NET offrono funzionalità e tecniche che consentono di aggiornare facilmente l'applicazione in modo che funzioni con le nuove versioni delle librerie che potrebbero introdurre modifiche sostanziali.
+<span data-ttu-id="b71a9-139">Sia C# che l'ecosistema .NET offrono funzionalità e tecniche che consentono di aggiornare facilmente l'applicazione in modo che funzioni con le nuove versioni delle librerie che potrebbero introdurre modifiche sostanziali.</span><span class="sxs-lookup"><span data-stu-id="b71a9-139">Lucky for you C# and the .NET ecosystem comes with features and techniques that allow us to easily update our app to work with new versions of libraries that might introduce breaking changes.</span></span>
 
-### <a name="assembly-binding-redirection"></a>Reindirizzamento dell'associazione di assembly
+### <a name="assembly-binding-redirection"></a><span data-ttu-id="b71a9-140">Reindirizzamento dell'associazione di assembly</span><span class="sxs-lookup"><span data-stu-id="b71a9-140">Assembly Binding Redirection</span></span>
 
-È possibile usare il file `app.config` per aggiornare la versione di una libreria usata dall'applicazione. Aggiungendo il cosiddetto un [ *reindirizzamento di binding* ](https://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx) è possibile usare la nuova versione della libreria senza dover ricompilare l'applicazione. Nell'esempio seguente viene illustrato come aggiornare il file `app.config` dell'applicazione per usare la versione di patch `1.0.1` di `ReferencedLibrary` anziché la versione `1.0.0` con cui è stata compilata in origine.
+<span data-ttu-id="b71a9-141">È possibile usare il file `app.config` per aggiornare la versione di una libreria usata dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b71a9-141">You can use the `app.config` file to update the version of a library your app uses.</span></span> <span data-ttu-id="b71a9-142">Aggiungendo il cosiddetto un [ *reindirizzamento di binding* ](https://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx) è possibile usare la nuova versione della libreria senza dover ricompilare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b71a9-142">By adding what is called a [*binding redirect*](https://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx) your can use the new library version without having to recompile your app.</span></span> <span data-ttu-id="b71a9-143">Nell'esempio seguente viene illustrato come aggiornare il file `app.config` dell'applicazione per usare la versione di patch `1.0.1` di `ReferencedLibrary` anziché la versione `1.0.0` con cui è stata compilata in origine.</span><span class="sxs-lookup"><span data-stu-id="b71a9-143">The following example shows how you would update your app's `app.config` file to use the `1.0.1` patch version of `ReferencedLibrary` instead of the `1.0.0` version it was originally compiled with.</span></span>
 
 ```xml
 <dependentAssembly>
@@ -80,43 +80,43 @@ Sia C# che l'ecosistema .NET offrono funzionalità e tecniche che consentono di 
 ```
 
 > [!NOTE]
-> Questo approccio funziona solo se la nuova versione di `ReferencedLibrary` è compatibile a livello binario con l'applicazione.
-> Vedere la sezione [Compatibilità con le versioni precedenti](#backwards-compatibility) per verificare quando deve essere determinata la compatibilità.
+> <span data-ttu-id="b71a9-144">Questo approccio funziona solo se la nuova versione di `ReferencedLibrary` è compatibile a livello binario con l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b71a9-144">This approach will only work if the new version of `ReferencedLibrary` is binary compatible with your app.</span></span>
+> <span data-ttu-id="b71a9-145">Vedere la sezione [Compatibilità con le versioni precedenti](#backwards-compatibility) per verificare quando deve essere determinata la compatibilità.</span><span class="sxs-lookup"><span data-stu-id="b71a9-145">See the [Backwards Compatibility](#backwards-compatibility) section above for changes to look out for when determining compatibility.</span></span>
 
-### <a name="new"></a>new
+### <a name="new"></a><span data-ttu-id="b71a9-146">new</span><span class="sxs-lookup"><span data-stu-id="b71a9-146">new</span></span>
 
-Usare il modificatore `new` per nascondere i membri ereditati di una classe di base. In questo modo le classi derivate possono rispondere agli aggiornamenti nelle classi di base.
+<span data-ttu-id="b71a9-147">Usare il modificatore `new` per nascondere i membri ereditati di una classe di base.</span><span class="sxs-lookup"><span data-stu-id="b71a9-147">You use the `new` modifier to hide inherited members of a base class.</span></span> <span data-ttu-id="b71a9-148">In questo modo le classi derivate possono rispondere agli aggiornamenti nelle classi di base.</span><span class="sxs-lookup"><span data-stu-id="b71a9-148">This is one way derived classes can respond to updates in base classes.</span></span>
 
-Vedere l'esempio seguente:
+<span data-ttu-id="b71a9-149">Vedere l'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="b71a9-149">Take the following example:</span></span>
 
-[!code-csharp[Esempio di uso del modificatore new](../../samples/csharp/versioning/new/Program.cs#sample)]
+<span data-ttu-id="b71a9-150">[!code-csharp[Esempio di uso del modificatore new](../../samples/csharp/versioning/new/Program.cs#sample)]</span><span class="sxs-lookup"><span data-stu-id="b71a9-150">[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]</span></span>
 
-**Output**
+<span data-ttu-id="b71a9-151">**Output**</span><span class="sxs-lookup"><span data-stu-id="b71a9-151">**Output**</span></span>
 
 ```
 A base method
 A derived method
 ```
 
-Nell'esempio precedente si può vedere come `DerivedClass` nasconde il metodo `MyMethod` presente in `BaseClass`.
-Ciò significa che quando una classe di base nella nuova versione di una libreria aggiunge un membro già esistente nella classe derivata, è sufficiente usare il modificatore `new` per il membro della classe derivata per nascondere il membro della classe di base.
+<span data-ttu-id="b71a9-152">Nell'esempio precedente si può vedere come `DerivedClass` nasconde il metodo `MyMethod` presente in `BaseClass`.</span><span class="sxs-lookup"><span data-stu-id="b71a9-152">From the example above you can see how `DerivedClass` hides the `MyMethod` method present in `BaseClass`.</span></span>
+<span data-ttu-id="b71a9-153">Ciò significa che quando una classe di base nella nuova versione di una libreria aggiunge un membro già esistente nella classe derivata, è sufficiente usare il modificatore `new` per il membro della classe derivata per nascondere il membro della classe di base.</span><span class="sxs-lookup"><span data-stu-id="b71a9-153">This means that when a base class in the new version of a library adds a member that already exists in your derived class, you can simply use the `new` modifier on your derived class member to hide the base class member.</span></span>
 
-Se non si specifica alcun modificatore `new`, una classe derivata nasconderà per impostazione predefinita i membri in conflitto in una classe di base e il codice verrà comunque compilato anche se viene generato un avviso del compilatore. Ciò significa che la semplice aggiunta di nuovi membri a una classe esistente rende la nuova versione della libreria compatibile sia a livello di codice sorgente che a livello binario con il codice che dipende da essa.
+<span data-ttu-id="b71a9-154">Se non si specifica alcun modificatore `new`, una classe derivata nasconderà per impostazione predefinita i membri in conflitto in una classe di base e il codice verrà comunque compilato anche se viene generato un avviso del compilatore.</span><span class="sxs-lookup"><span data-stu-id="b71a9-154">When no `new` modifier is specified, a derived class will by default hide conflicting members in a base class, although a compiler warning will be generated the code will still compile.</span></span> <span data-ttu-id="b71a9-155">Ciò significa che la semplice aggiunta di nuovi membri a una classe esistente rende la nuova versione della libreria compatibile sia a livello di codice sorgente che a livello binario con il codice che dipende da essa.</span><span class="sxs-lookup"><span data-stu-id="b71a9-155">This means that simply adding new members to an existing class makes that new version of your library both source and binary compatible with code that depends on it.</span></span>
 
-### <a name="override"></a>override
+### <a name="override"></a><span data-ttu-id="b71a9-156">override</span><span class="sxs-lookup"><span data-stu-id="b71a9-156">override</span></span>
 
-Il modificatore `override` indica che un'implementazione derivata estende l'implementazione di un membro della classe di base anziché nasconderlo. È necessario che al membro della classe di base sia applicato il modificatore `virtual`.
+<span data-ttu-id="b71a9-157">Il modificatore `override` indica che un'implementazione derivata estende l'implementazione di un membro della classe di base anziché nasconderlo.</span><span class="sxs-lookup"><span data-stu-id="b71a9-157">The `override` modifier means a derived implementation extends the implementation of a base class member rather than hides it.</span></span> <span data-ttu-id="b71a9-158">È necessario che al membro della classe di base sia applicato il modificatore `virtual`.</span><span class="sxs-lookup"><span data-stu-id="b71a9-158">The base class member needs to have the `virtual` modifier applied to it.</span></span>
 
-[!code-csharp[Esempio di uso del modificatore override](../../samples/csharp/versioning/override/Program.cs#sample)]
+<span data-ttu-id="b71a9-159">[!code-csharp[Esempio di uso del modificatore override](../../samples/csharp/versioning/override/Program.cs#sample)]</span><span class="sxs-lookup"><span data-stu-id="b71a9-159">[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]</span></span>
 
-**Output**
+<span data-ttu-id="b71a9-160">**Output**</span><span class="sxs-lookup"><span data-stu-id="b71a9-160">**Output**</span></span>
 
 ```
 Base Method One: Method One
 Derived Method One: Derived Method One
 ```
 
-Il modificatore `override` viene valutato in fase di compilazione e il compilatore genera un errore se non trova un membro virtuale di cui eseguire l'override.
+<span data-ttu-id="b71a9-161">Il modificatore `override` viene valutato in fase di compilazione e il compilatore genera un errore se non trova un membro virtuale di cui eseguire l'override.</span><span class="sxs-lookup"><span data-stu-id="b71a9-161">The `override` modifier is evaluated at compile time and the compiler will throw an error if it doesn't find a virtual member to override.</span></span>
 
-Conoscere le tecniche descritte e sapere in quali situazioni usarle significa semplificare notevolmente la transizione da una versione all'altra di una libreria.
+<span data-ttu-id="b71a9-162">Conoscere le tecniche descritte e sapere in quali situazioni usarle significa semplificare notevolmente la transizione da una versione all'altra di una libreria.</span><span class="sxs-lookup"><span data-stu-id="b71a9-162">Your knowledge of the discussed techniques as well as your understanding of what situations to use them will go a long way to boost the ease of transition between versions of a library.</span></span>
 

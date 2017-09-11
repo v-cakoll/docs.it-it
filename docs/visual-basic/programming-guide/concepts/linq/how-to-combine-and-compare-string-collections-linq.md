@@ -20,18 +20,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b037b1aca378dc8a765fdc54746ace27703cee9f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c2b512695052485e6c19f44d3e53cd14b04d0f07
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procedura: combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)
-In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare, viene illustrato come eseguire una concatenazione semplice, un'unione e intersezione su due set di righe di testo.  
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="799e2-102">Procedura: combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="799e2-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="799e2-103">In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati.</span><span class="sxs-lookup"><span data-stu-id="799e2-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="799e2-104">In particolare, viene illustrato come eseguire una concatenazione semplice, un'unione e intersezione su due set di righe di testo.</span><span class="sxs-lookup"><span data-stu-id="799e2-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>Per impostare il progetto e i file di testo  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="799e2-105">Per impostare il progetto e i file di testo</span><span class="sxs-lookup"><span data-stu-id="799e2-105">To set up the project and the text files</span></span>  
   
-1.  Copiare questi nomi in un file di testo denominato names1. txt e salvarlo nella cartella del progetto:  
+1.  <span data-ttu-id="799e2-106">Copiare questi nomi in un file di testo denominato names1. txt e salvarlo nella cartella del progetto:</span><span class="sxs-lookup"><span data-stu-id="799e2-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +47,7 @@ In questo esempio viene illustrato come unire i file che contengono righe di tes
     Garcia, Debra  
     ```  
   
-2.  Copiare questi nomi in un file di testo denominato names2. txt e salvarlo nella cartella del progetto. Si noti che i due file hanno in comune alcuni nomi.  
+2.  <span data-ttu-id="799e2-107">Copiare questi nomi in un file di testo denominato names2. txt e salvarlo nella cartella del progetto.</span><span class="sxs-lookup"><span data-stu-id="799e2-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="799e2-108">Si noti che i due file hanno in comune alcuni nomi.</span><span class="sxs-lookup"><span data-stu-id="799e2-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +62,7 @@ In questo esempio viene illustrato come unire i file che contengono righe di tes
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="799e2-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="799e2-109">Example</span></span>  
   
 ```vb  
 Class ConcatenateStrings  
@@ -179,9 +180,9 @@ End Class
 ' 2 total names in list  
 ```  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="799e2-110">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="799e2-110">Compiling the Code</span></span>  
+ <span data-ttu-id="799e2-111">Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.</span><span class="sxs-lookup"><span data-stu-id="799e2-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="799e2-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="799e2-112">See Also</span></span>  
+ <span data-ttu-id="799e2-113">[LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="799e2-113">[LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+<span data-ttu-id="799e2-114"> [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="799e2-114"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

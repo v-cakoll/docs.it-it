@@ -20,22 +20,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5736403a7486b2721dd0a3c68db9af213e0b1452
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 05770c86df22220507087f54c9db07dc7f7a74b3
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="equality-operations-visual-basic"></a>Operazioni di uguaglianza (Visual Basic)
-I cui elementi corrispondenti sono uguali e che hanno lo stesso numero di elementi di due sequenze sono considerate uguali.  
+# <a name="equality-operations-visual-basic"></a><span data-ttu-id="79a4f-102">Operazioni di uguaglianza (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79a4f-102">Equality Operations (Visual Basic)</span></span>
+<span data-ttu-id="79a4f-103">I cui elementi corrispondenti sono uguali e che hanno lo stesso numero di elementi di due sequenze sono considerate uguali.</span><span class="sxs-lookup"><span data-stu-id="79a4f-103">Two sequences whose corresponding elements are equal and which have the same number of elements are considered equal.</span></span>  
   
-## <a name="methods"></a>Metodi  
+## <a name="methods"></a><span data-ttu-id="79a4f-104">Metodi</span><span class="sxs-lookup"><span data-stu-id="79a4f-104">Methods</span></span>  
   
-|Nome metodo|Descrizione|Sintassi delle espressioni di Query Visual Basic|Altre informazioni|  
+|<span data-ttu-id="79a4f-105">Nome metodo</span><span class="sxs-lookup"><span data-stu-id="79a4f-105">Method Name</span></span>|<span data-ttu-id="79a4f-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="79a4f-106">Description</span></span>|<span data-ttu-id="79a4f-107">Sintassi delle espressioni di Query Visual Basic</span><span class="sxs-lookup"><span data-stu-id="79a4f-107">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="79a4f-108">Altre informazioni</span><span class="sxs-lookup"><span data-stu-id="79a4f-108">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|SequenceEqual|Determina se due sequenze sono uguali confrontando gli elementi dichiarati in modo.|Non applicabile.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName></xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName></xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName>|  
+|<span data-ttu-id="79a4f-109">SequenceEqual</span><span class="sxs-lookup"><span data-stu-id="79a4f-109">SequenceEqual</span></span>|<span data-ttu-id="79a4f-110">Determina se due sequenze sono uguali confrontando gli elementi dichiarati in modo.</span><span class="sxs-lookup"><span data-stu-id="79a4f-110">Determines whether two sequences are equal by comparing elements in a pair-wise manner.</span></span>|<span data-ttu-id="79a4f-111">Non applicabile.</span><span class="sxs-lookup"><span data-stu-id="79a4f-111">Not applicable.</span></span>|<span data-ttu-id="79a4f-112"><xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName></xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="79a4f-112"><xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName></span></span><br /><br /> <span data-ttu-id="79a4f-113"><xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName></xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="79a4f-113"><xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName></span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq></xref:System.Linq>   
- [Cenni preliminari sugli operatori di Query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Procedura: confrontare il contenuto di due cartelle (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
+## <a name="see-also"></a><span data-ttu-id="79a4f-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="79a4f-114">See Also</span></span>  
+ <span data-ttu-id="79a4f-115"><xref:System.Linq></xref:System.Linq></span><span class="sxs-lookup"><span data-stu-id="79a4f-115"><xref:System.Linq></span></span>   
+<span data-ttu-id="79a4f-116"> [Cenni preliminari sugli operatori di Query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md) </span><span class="sxs-lookup"><span data-stu-id="79a4f-116"> [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md) </span></span>  
+<span data-ttu-id="79a4f-117"> [Procedura: confrontare il contenuto di due cartelle (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)</span><span class="sxs-lookup"><span data-stu-id="79a4f-117"> [How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)</span></span>

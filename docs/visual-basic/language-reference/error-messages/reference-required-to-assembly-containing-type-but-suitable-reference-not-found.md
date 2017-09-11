@@ -33,30 +33,31 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 38f016b9d0de053c9a95a6d4a4d810d55af903e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: bb5375366fa525a0ca9c16944d026ca499062ed8
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Necessario riferimento all'assembly '&lt;assemblyidentity&gt;'contenente il tipo'&lt;typename&gt;', ma non è stato possibile trovare un riferimento a causa dell'ambiguità tra i progetti&lt;projectname1&gt;'e'&lt;projectname2&gt;'
-In un'espressione viene usato un tipo, ad esempio una classe, una struttura, un'interfaccia, un'enumerazione o un delegato, definito all'esterno del progetto. Tuttavia, sono presenti riferimenti di progetto a più assembly che definiscono quel tipo.  
+# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a><span data-ttu-id="06b93-102">Necessario riferimento all'assembly '&lt;assemblyidentity&gt;'contenente il tipo'&lt;typename&gt;', ma non è stato possibile trovare un riferimento a causa dell'ambiguità tra i progetti&lt;projectname1&gt;'e'&lt;projectname2&gt;'</span><span class="sxs-lookup"><span data-stu-id="06b93-102">Reference required to assembly &#39;&lt;assemblyidentity&gt;&#39; containing type &#39;&lt;typename&gt;&#39;, but a suitable reference could not be found due to ambiguity between projects &#39;&lt;projectname1&gt;&#39; and &#39;&lt;projectname2&gt;&#39;</span></span>
+<span data-ttu-id="06b93-103">In un'espressione viene usato un tipo, ad esempio una classe, una struttura, un'interfaccia, un'enumerazione o un delegato, definito all'esterno del progetto.</span><span class="sxs-lookup"><span data-stu-id="06b93-103">An expression uses a type, such as a class, structure, interface, enumeration, or delegate, that is defined outside your project.</span></span> <span data-ttu-id="06b93-104">Tuttavia, sono presenti riferimenti di progetto a più assembly che definiscono quel tipo.</span><span class="sxs-lookup"><span data-stu-id="06b93-104">However, you have project references to more than one assembly defining that type.</span></span>  
   
- I progetti citati generano assembly con lo stesso nome. Pertanto, il compilatore non può determinare l'assembly da usare per il tipo a cui si accede.  
+ <span data-ttu-id="06b93-105">I progetti citati generano assembly con lo stesso nome.</span><span class="sxs-lookup"><span data-stu-id="06b93-105">The cited projects produce assemblies with the same name.</span></span> <span data-ttu-id="06b93-106">Pertanto, il compilatore non può determinare l'assembly da usare per il tipo a cui si accede.</span><span class="sxs-lookup"><span data-stu-id="06b93-106">Therefore, the compiler cannot determine which assembly to use for the type you are accessing.</span></span>  
   
- Accedere a un tipo definito in un altro assembly, il [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilatore deve avere un riferimento a tale assembly. Deve trattarsi di un riferimento unico, non ambiguo, che non generi riferimenti circolari tra i progetti.  
+ <span data-ttu-id="06b93-107">Accedere a un tipo definito in un altro assembly, il [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilatore deve avere un riferimento a tale assembly.</span><span class="sxs-lookup"><span data-stu-id="06b93-107">To access a type defined in another assembly, the [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compiler must have a reference to that assembly.</span></span> <span data-ttu-id="06b93-108">Deve trattarsi di un riferimento unico, non ambiguo, che non generi riferimenti circolari tra i progetti.</span><span class="sxs-lookup"><span data-stu-id="06b93-108">This must be a single, unambiguous reference that does not cause circular references among projects.</span></span>  
   
- **ID errore:** BC30969  
+ <span data-ttu-id="06b93-109">**ID errore:** BC30969</span><span class="sxs-lookup"><span data-stu-id="06b93-109">**Error ID:** BC30969</span></span>  
   
-## <a name="to-correct-this-error"></a>Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="06b93-110">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="06b93-110">To correct this error</span></span>  
   
-1.  Determinare quale progetto produce l'assembly migliore per il progetto a cui fare riferimento. Per questa decisione si potrebbero usare criteri quali la facilità di accesso al file e la frequenza di aggiornamenti.  
+1.  <span data-ttu-id="06b93-111">Determinare quale progetto produce l'assembly migliore per il progetto a cui fare riferimento.</span><span class="sxs-lookup"><span data-stu-id="06b93-111">Determine which project produces the best assembly for your project to reference.</span></span> <span data-ttu-id="06b93-112">Per questa decisione si potrebbero usare criteri quali la facilità di accesso al file e la frequenza di aggiornamenti.</span><span class="sxs-lookup"><span data-stu-id="06b93-112">For this decision, you might use criteria such as ease of file access and frequency of updates.</span></span>  
   
-2.  Nelle proprietà del progetto aggiungere un riferimento al file contenente l'assembly che definisce il tipo in uso.  
+2.  <span data-ttu-id="06b93-113">Nelle proprietà del progetto aggiungere un riferimento al file contenente l'assembly che definisce il tipo in uso.</span><span class="sxs-lookup"><span data-stu-id="06b93-113">In your project properties, add a reference to the file that contains the assembly that defines the type you are using.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Gestione dei riferimenti in un progetto](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)   
- [Riferimenti a elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [NIB Procedura: Aggiungere o rimuovere riferimenti usando la finestra di dialogo Aggiungi riferimento](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
- [NIB procedura: modificare le proprietà del progetto e le impostazioni di configurazione](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
- [Risoluzione dei problemi relativi ai riferimenti interrotti](https://docs.microsoft.com/visualstudio/ide/troubleshooting-broken-references)
+## <a name="see-also"></a><span data-ttu-id="06b93-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="06b93-114">See Also</span></span>  
+ <span data-ttu-id="06b93-115">[Gestione dei riferimenti in un progetto](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project) </span><span class="sxs-lookup"><span data-stu-id="06b93-115">[Managing references in a project](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project) </span></span>  
+<span data-ttu-id="06b93-116"> [Riferimenti a elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md) </span><span class="sxs-lookup"><span data-stu-id="06b93-116"> [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md) </span></span>  
+<span data-ttu-id="06b93-117"> [NIB Procedura: Aggiungere o rimuovere riferimenti usando la finestra di dialogo Aggiungi riferimento](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9) </span><span class="sxs-lookup"><span data-stu-id="06b93-117"> [NIB How to: Add or Remove References By Using the Add Reference Dialog Box](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9) </span></span>  
+<span data-ttu-id="06b93-118"> [NIB procedura: modificare le proprietà del progetto e le impostazioni di configurazione](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67) </span><span class="sxs-lookup"><span data-stu-id="06b93-118"> [NIB How to: Modify Project Properties and Configuration Settings](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67) </span></span>  
+<span data-ttu-id="06b93-119"> [Risoluzione dei problemi relativi ai riferimenti interrotti](https://docs.microsoft.com/visualstudio/ide/troubleshooting-broken-references)</span><span class="sxs-lookup"><span data-stu-id="06b93-119"> [Troubleshooting Broken References](https://docs.microsoft.com/visualstudio/ide/troubleshooting-broken-references)</span></span>

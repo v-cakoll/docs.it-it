@@ -42,22 +42,22 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="help--c-compiler-options"></a>/help, /? (Opzioni del compilatore C#)
-Questa opzione invia un elenco di opzioni del compilatore e una breve descrizione di ogni opzione a stdout.  
+# <a name="help--c-compiler-options"></a><span data-ttu-id="6ec1a-103">/help, /?</span><span class="sxs-lookup"><span data-stu-id="6ec1a-103">/help, /?</span></span> <span data-ttu-id="6ec1a-104">(Opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="6ec1a-104">(C# Compiler Options)</span></span>
+<span data-ttu-id="6ec1a-105">Questa opzione invia un elenco di opzioni del compilatore e una breve descrizione di ogni opzione a stdout.</span><span class="sxs-lookup"><span data-stu-id="6ec1a-105">This option sends a listing of compiler options, and a brief description of each option, to stdout.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="6ec1a-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="6ec1a-106">Syntax</span></span>  
   
 ```console  
 /help  
 /?  
 ```  
   
-## <a name="remarks"></a>Note  
- Se questa opzione è inclusa in una compilazione, non verrà creato alcun file di output e non avrà luogo alcuna compilazione.  
+## <a name="remarks"></a><span data-ttu-id="6ec1a-107">Note</span><span class="sxs-lookup"><span data-stu-id="6ec1a-107">Remarks</span></span>  
+ <span data-ttu-id="6ec1a-108">Se questa opzione è inclusa in una compilazione, non verrà creato alcun file di output e non avrà luogo alcuna compilazione.</span><span class="sxs-lookup"><span data-stu-id="6ec1a-108">If this option is included in a compilation, no output file will be created and no compilation will take place.</span></span>  
   
- Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.  
+ <span data-ttu-id="6ec1a-109">Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="6ec1a-109">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="6ec1a-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6ec1a-110">See Also</span></span>  
+ <span data-ttu-id="6ec1a-111">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="6ec1a-111">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="6ec1a-112">Gestione delle proprietà di progetti e soluzioni</span><span class="sxs-lookup"><span data-stu-id="6ec1a-112">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
 

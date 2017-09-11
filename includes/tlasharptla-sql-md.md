@@ -1,1 +1,1 @@
-Structured Query Language (SQL)
+<span data-ttu-id="b6cfd-101">Structured Query Language (SQL)</span><span class="sxs-lookup"><span data-stu-id="b6cfd-101">Structured Query Language (SQL)</span></span>

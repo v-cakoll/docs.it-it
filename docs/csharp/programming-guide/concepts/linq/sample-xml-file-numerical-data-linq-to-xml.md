@@ -26,10 +26,10 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>File XML di esempio: dati numerici (LINQ to XML)
-Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Questo file contiene dati numerici per il calcolo della somma e della media, nonché per il raggruppamento.  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="f4396-102">File XML di esempio: dati numerici (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f4396-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="f4396-103">Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f4396-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f4396-104">Questo file contiene dati numerici per il calcolo della somma e della media, nonché per il raggruppamento.</span><span class="sxs-lookup"><span data-stu-id="f4396-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a>Data.xml  
+## <a name="dataxml"></a><span data-ttu-id="f4396-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="f4396-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -72,6 +72,6 @@ Il file XML seguente viene usato in vari esempi nella documentazione di [!INCLUD
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Documenti XML di esempio (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="f4396-106">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f4396-106">See Also</span></span>  
+ [<span data-ttu-id="f4396-107">Documenti XML di esempio (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f4396-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

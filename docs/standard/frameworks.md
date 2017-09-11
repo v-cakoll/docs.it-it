@@ -1,156 +1,146 @@
 ---
-title: Framework di destinazione | Microsoft Docs
-description: Informazioni riguardanti i framework di destinazione per le applicazioni e le librerie .NET Core.
+title: Framework di destinazione
+description: Informazioni sui framework di destinazione per app e librerie di .NET Core.
 keywords: .NET, .NET Core, framework, TFM
 author: richlander
 ms.author: mairaw
-ms.date: 04/27/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 45835eb80642253f80ea630ae9db1ac766b72b9c
-ms.openlocfilehash: 11c1f11e4f8354b7573d03e680cf4a8a16fa26d9
+ms.translationtype: HT
+ms.sourcegitcommit: 18b2f7a1c0857abb5f7e09a39ca120b521ba4ddc
+ms.openlocfilehash: 7f25cdd52cf5249d3b201978eacb98aaa4a74fa9
 ms.contentlocale: it-it
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 
-# <a name="target-frameworks"></a>Framework di destinazione
+# <a name="target-frameworks"></a><span data-ttu-id="300d0-104">Framework di destinazione</span><span class="sxs-lookup"><span data-stu-id="300d0-104">Target frameworks</span></span>
 
-I *framework* definiscono gli oggetti, i metodi e gli strumenti utilizzabili per creare app e librerie. .NET Framework viene usato per creare app e librerie principalmente per l'esecuzione nei sistemi che eseguono un sistema operativo Windows. .NET Core include un framework che consente di compilare app e librerie eseguibili su una vasta gamma di sistemi operativi.
+<span data-ttu-id="300d0-105">Quando si specifica come destinazione un framework in un'app o in una libreria, si specifica il set di API da rendere disponibile all'app o alla libreria.</span><span class="sxs-lookup"><span data-stu-id="300d0-105">When you target a framework in an app or library, you're specifying the set of APIs that you'd like to make available to the app or library.</span></span> <span data-ttu-id="300d0-106">Per specificare il framework di destinazione nel file di progetto, usare i moniker framework di destinazione.</span><span class="sxs-lookup"><span data-stu-id="300d0-106">You specify the target framework in your project file using Target Framework Monikers (TFMs).</span></span>
 
-I termini *framework* e *piattaforma* talvolta possono generare confusione a seconda di come sono usati all'interno delle frasi. Nella sua interpretazione peggiore, il termine *piattaforma* ha significati diversi in contesti diversi. Ad esempio, ".NET Core" verrà descritto come "framework .NET Core" nel contesto della compilazione di app e librerie, ma potrà anche essere definito "piattaforma .NET Core" nell'ambito dell'esecuzione del codice di app e librerie. Una *piattaforma di elaborazione* descrive *dove e come* viene eseguita un'applicazione. Dal momento che .NET Core esegue il codice con [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr), è anche una piattaforma. Lo stesso vale per .NET Framework, che usa [Common Language Runtime (CLR)](clr.md) per eseguire il codice di app e librerie che è stato sviluppato con oggetti framework, metodi e strumenti di .NET Framework. Nella documentazione si usa spesso il termine "multipiattaforma", che significa essenzialmente "comune a più sistemi operativi e a più architetture (x86, x64, arm)", che è quello che l'autore intende effettivamente.
+<span data-ttu-id="300d0-107">Un'app o una libreria può specificare come destinazione una versione di [.NET Standard](~/docs/standard/net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="300d0-107">An app or library can target a version of [.NET Standard](~/docs/standard/net-standard.md).</span></span> <span data-ttu-id="300d0-108">Le versioni di .NET Standard rappresentano set standardizzati di API in tutte le implementazioni di .NET.</span><span class="sxs-lookup"><span data-stu-id="300d0-108">.NET Standard versions represent standardized sets of APIs across all .NET implementations.</span></span> <span data-ttu-id="300d0-109">Una libreria, ad esempio, può specificare come destinazione .NET Standard 1.6 e ottenere l'accesso ad API che possono essere usate in .NET Core e .NET Framework tramite la stessa codebase.</span><span class="sxs-lookup"><span data-stu-id="300d0-109">For example, a library can target .NET Standard 1.6 and gain access to APIs that function across .NET Core and .NET Framework using the same codebase.</span></span>
 
-Gli oggetti e i metodi dei framework sono chiamati Application Programming Interface (API). Le API dei framework sono usate in [Visual Studio](https://www.visualstudio.com/), [Visual Studio per Mac](https://www.visualstudio.com/vs/visual-studio-mac/), [Visual Studio Code](https://code.visualstudio.com/) e altri editor e ambienti di sviluppo integrato (IDE, Integrated Development Environment) per fornire il set corretto di oggetti e metodi per lo sviluppo. I framework vengono anche usati da [NuGet](https://www.nuget.org/) per la produzione e l'uso di pacchetti NuGet, in modo da garantire la creazione e l'uso di pacchetti appropriati per i framework definiti come destinazione all'interno dell'app o della libreria.
+<span data-ttu-id="300d0-110">Un'app o una libreria può anche indicare come destinazione un'implementazione specifica di .NET per ottenere l'accesso ad API specifiche dell'implementazione.</span><span class="sxs-lookup"><span data-stu-id="300d0-110">An app or library can also target a specific .NET implementation to gain access to implementation-specific APIs.</span></span> <span data-ttu-id="300d0-111">Ad esempio, un'app che specifica come destinazione Xamarin.iOS (come `Xamarin.iOS10`) ottiene l'accesso ai wrapper di API iOS forniti da Xamarin per iOS 10 oppure un'app che specifica come destinazione la piattaforma UWP (UWP, `uap10.0`) ottiene l'accesso alle API che consentono la compilazione per dispositivi che eseguono Windows 10.</span><span class="sxs-lookup"><span data-stu-id="300d0-111">For example, an app that targets Xamarin.iOS (for example, `Xamarin.iOS10`) gets access to Xamarin-provided iOS API wrappers for iOS 10, or an app that targets the Universal Windows Platform (UWP, `uap10.0`) has access to APIs that compile for devices that run Windows 10.</span></span>
 
-Quando si *definisce come destinazione uno o più framework*, sono già stati decisi i set di API e le versioni di tali API da usare. È possibile fare riferimento ai framework in diversi modi: per nome del prodotto, per nome del framework in formato esteso o breve e per famiglia.
+<span data-ttu-id="300d0-112">Per alcuni framework di destinazione, ad esempio .NET Framework, le API vengono definite dagli assembly installati dal framework in un sistema e potrebbero includere API del framework applicazione, ad esempio, ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="300d0-112">For some target frameworks (for example, the .NET Framework), the APIs are defined by the assemblies that the framework installs on a system and may include application framework APIs (for example, ASP.NET).</span></span>
 
-## <a name="referring-to-frameworks"></a>Riferimento ai framework
+<span data-ttu-id="300d0-113">Per i framework di destinazione basati su pacchetti, ad esempio .NET Standard e .NET Core, le API vengono definite dai pacchetti inclusi nell'app o nella libreria.</span><span class="sxs-lookup"><span data-stu-id="300d0-113">For package-based target frameworks (for example, .NET Standard and .NET Core), the APIs are defined by the packages included in the app or library.</span></span> <span data-ttu-id="300d0-114">Un *metapacchetto* è un pacchetto di NuGet che non ha alcun contenuto proprio ma è costituito da un elenco di dipendenze (altri pacchetti).</span><span class="sxs-lookup"><span data-stu-id="300d0-114">A *metapackage* is a NuGet package that has no content of its own but is a list of dependencies (other packages).</span></span> <span data-ttu-id="300d0-115">Un framework di destinazione basato su pacchetti NuGet specifica in modo implicito un metapacchetto che fa riferimento a tutti i pacchetti che costituiscono complessivamente il framework.</span><span class="sxs-lookup"><span data-stu-id="300d0-115">A NuGet package-based target framework implicitly specifies a metapackage that references all the packages that together make up the framework.</span></span>
 
-Esistono diversi modi per fare riferimento ai framework, la maggior parte dei quali viene usata all'interno della documentazione di .NET Core. Prendendo .NET Framework 4.6.2 come esempio, vengono usati i formati seguenti:
+## <a name="latest-target-framework-versions"></a><span data-ttu-id="300d0-116">Versioni più recenti dei framework di destinazione</span><span class="sxs-lookup"><span data-stu-id="300d0-116">Latest target framework versions</span></span>
 
-**Riferimento a un prodotto**
+<span data-ttu-id="300d0-117">La tabella seguente definisce i framework di destinazione più comuni, il modo in cui vengono creati i relativi riferimenti e le versioni [.NET Standard](~/docs/standard/net-standard.md) implementate da tali pacchetti.</span><span class="sxs-lookup"><span data-stu-id="300d0-117">The following table defines the most common target frameworks, how they're referenced, and which version of the [.NET Standard](~/docs/standard/net-standard.md) they implement.</span></span> <span data-ttu-id="300d0-118">Queste versioni di framework di destinazione sono le versioni stabili più recenti.</span><span class="sxs-lookup"><span data-stu-id="300d0-118">These target framework versions are the latest stable versions.</span></span> <span data-ttu-id="300d0-119">Non sono visualizzate le versioni non definitive.</span><span class="sxs-lookup"><span data-stu-id="300d0-119">Pre-release versions aren't shown.</span></span> <span data-ttu-id="300d0-120">Un moniker framework di destinazione è un formato di token standardizzato per specificare il framework di destinazione di un'app o di una libreria .NET.</span><span class="sxs-lookup"><span data-stu-id="300d0-120">A Target Framework Moniker (TFM) is a standardized token format for specifying the target framework of a .NET app or library.</span></span> 
 
-È possibile fare riferimento a una piattaforma .NET o runtime. Entrambi sono ugualmente validi.
+| <span data-ttu-id="300d0-121">Framework di destinazione</span><span class="sxs-lookup"><span data-stu-id="300d0-121">Target Framework</span></span>      | <span data-ttu-id="300d0-122">Ultima versione</span><span class="sxs-lookup"><span data-stu-id="300d0-122">Latest Version</span></span> | <span data-ttu-id="300d0-123">Moniker della versione di .NET Framework di destinazione (TFM, Target Framework Moniker)</span><span class="sxs-lookup"><span data-stu-id="300d0-123">Target Framework Moniker (TFM)</span></span> | <span data-ttu-id="300d0-124">Versione standard di .NET</span><span class="sxs-lookup"><span data-stu-id="300d0-124">.NET Standard Version</span></span> | <span data-ttu-id="300d0-125">Metapackage</span><span class="sxs-lookup"><span data-stu-id="300d0-125">Metapackage</span></span> |
+| :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
+| <span data-ttu-id="300d0-126">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="300d0-126">.NET Standard</span></span>         | <span data-ttu-id="300d0-127">2.0.0</span><span class="sxs-lookup"><span data-stu-id="300d0-127">2.0.0</span></span>          | <span data-ttu-id="300d0-128">netstandard2.0</span><span class="sxs-lookup"><span data-stu-id="300d0-128">netstandard2.0</span></span>                 | <span data-ttu-id="300d0-129">N/D</span><span class="sxs-lookup"><span data-stu-id="300d0-129">N/A</span></span>                   | [<span data-ttu-id="300d0-130">NETStandard.Library</span><span class="sxs-lookup"><span data-stu-id="300d0-130">NETStandard.Library</span></span>](https://www.nuget.org/packages/NETStandard.Library) |
+| <span data-ttu-id="300d0-131">Applicazione .NET Core</span><span class="sxs-lookup"><span data-stu-id="300d0-131">.NET Core Application</span></span> | <span data-ttu-id="300d0-132">2.0.0</span><span class="sxs-lookup"><span data-stu-id="300d0-132">2.0.0</span></span>          | <span data-ttu-id="300d0-133">netcoreapp2.0</span><span class="sxs-lookup"><span data-stu-id="300d0-133">netcoreapp2.0</span></span>                  | <span data-ttu-id="300d0-134">2.0</span><span class="sxs-lookup"><span data-stu-id="300d0-134">2.0</span></span>                   | [<span data-ttu-id="300d0-135">Microsoft.NETCore.App</span><span class="sxs-lookup"><span data-stu-id="300d0-135">Microsoft.NETCore.App</span></span>](https://www.nuget.org/packages/Microsoft.NETCore.App) |
+| <span data-ttu-id="300d0-136">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="300d0-136">.NET Framework</span></span>        | <span data-ttu-id="300d0-137">4.7</span><span class="sxs-lookup"><span data-stu-id="300d0-137">4.7</span></span>            | <span data-ttu-id="300d0-138">net47</span><span class="sxs-lookup"><span data-stu-id="300d0-138">net47</span></span>                          | <span data-ttu-id="300d0-139">1,5</span><span class="sxs-lookup"><span data-stu-id="300d0-139">1.5</span></span>                   | <span data-ttu-id="300d0-140">N/D</span><span class="sxs-lookup"><span data-stu-id="300d0-140">N/A</span></span> |
 
-* .NET Framework 4.6.2
-* .NET 4.6.2
+## <a name="supported-target-framework-versions"></a><span data-ttu-id="300d0-141">Versioni supportate dei framework di destinazione</span><span class="sxs-lookup"><span data-stu-id="300d0-141">Supported target framework versions</span></span>
 
-**Riferimento a un framework**
+<span data-ttu-id="300d0-142">Un framework di destinazione viene in genere specificato come riferimento da un moniker framework di destinazione.</span><span class="sxs-lookup"><span data-stu-id="300d0-142">A target framework is typically referenced by a TFM.</span></span> <span data-ttu-id="300d0-143">La tabella seguente mostra i framework di destinazione supportati da .NET Core SDK e dal client NuGet.</span><span class="sxs-lookup"><span data-stu-id="300d0-143">The following table shows the target frameworks supported by the .NET Core SDK and the NuGet client.</span></span> <span data-ttu-id="300d0-144">Gli equivalenti sono visualizzati tra parentesi quadre.</span><span class="sxs-lookup"><span data-stu-id="300d0-144">Equivalents are shown within brackets.</span></span> <span data-ttu-id="300d0-145">Ad esempio, `win81` è un moniker framework di destinazione equivalente a `netcore451`.</span><span class="sxs-lookup"><span data-stu-id="300d0-145">For example, `win81` is an equivalent TFM to `netcore451`.</span></span>
 
-È possibile fare riferimento a un framework o alla destinazione di un framework tramite forme brevi o lunghe del TFM. Entrambi sono ugualmente validi.
+| <span data-ttu-id="300d0-146">Framework di destinazione</span><span class="sxs-lookup"><span data-stu-id="300d0-146">Target Framework</span></span>           | <span data-ttu-id="300d0-147">TFM</span><span class="sxs-lookup"><span data-stu-id="300d0-147">TFM</span></span> |
+| -------------------------- | --- |
+| <span data-ttu-id="300d0-148">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="300d0-148">.NET Standard</span></span>              | <span data-ttu-id="300d0-149">netstandard1.0</span><span class="sxs-lookup"><span data-stu-id="300d0-149">netstandard1.0</span></span><br><span data-ttu-id="300d0-150">netstandard1.1</span><span class="sxs-lookup"><span data-stu-id="300d0-150">netstandard1.1</span></span><br><span data-ttu-id="300d0-151">netstandard1.2</span><span class="sxs-lookup"><span data-stu-id="300d0-151">netstandard1.2</span></span><br><span data-ttu-id="300d0-152">netstandard1.3</span><span class="sxs-lookup"><span data-stu-id="300d0-152">netstandard1.3</span></span><br><span data-ttu-id="300d0-153">netstandard1.4</span><span class="sxs-lookup"><span data-stu-id="300d0-153">netstandard1.4</span></span><br><span data-ttu-id="300d0-154">netstandard1.5</span><span class="sxs-lookup"><span data-stu-id="300d0-154">netstandard1.5</span></span><br><span data-ttu-id="300d0-155">netstandard1.6</span><span class="sxs-lookup"><span data-stu-id="300d0-155">netstandard1.6</span></span><br><span data-ttu-id="300d0-156">netstandard2.0</span><span class="sxs-lookup"><span data-stu-id="300d0-156">netstandard2.0</span></span> |
+| <span data-ttu-id="300d0-157">.NET Core</span><span class="sxs-lookup"><span data-stu-id="300d0-157">.NET Core</span></span>                  | <span data-ttu-id="300d0-158">netcoreapp1.0</span><span class="sxs-lookup"><span data-stu-id="300d0-158">netcoreapp1.0</span></span><br><span data-ttu-id="300d0-159">netcoreapp1.1</span><span class="sxs-lookup"><span data-stu-id="300d0-159">netcoreapp1.1</span></span><br><span data-ttu-id="300d0-160">netcoreapp2.0</span><span class="sxs-lookup"><span data-stu-id="300d0-160">netcoreapp2.0</span></span> |
+| <span data-ttu-id="300d0-161">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="300d0-161">.NET Framework</span></span>             | <span data-ttu-id="300d0-162">net11</span><span class="sxs-lookup"><span data-stu-id="300d0-162">net11</span></span><br><span data-ttu-id="300d0-163">net20</span><span class="sxs-lookup"><span data-stu-id="300d0-163">net20</span></span><br><span data-ttu-id="300d0-164">net35</span><span class="sxs-lookup"><span data-stu-id="300d0-164">net35</span></span><br><span data-ttu-id="300d0-165">net40</span><span class="sxs-lookup"><span data-stu-id="300d0-165">net40</span></span><br><span data-ttu-id="300d0-166">net403</span><span class="sxs-lookup"><span data-stu-id="300d0-166">net403</span></span><br><span data-ttu-id="300d0-167">net45</span><span class="sxs-lookup"><span data-stu-id="300d0-167">net45</span></span><br><span data-ttu-id="300d0-168">net451</span><span class="sxs-lookup"><span data-stu-id="300d0-168">net451</span></span><br><span data-ttu-id="300d0-169">net452</span><span class="sxs-lookup"><span data-stu-id="300d0-169">net452</span></span><br><span data-ttu-id="300d0-170">net46</span><span class="sxs-lookup"><span data-stu-id="300d0-170">net46</span></span><br><span data-ttu-id="300d0-171">net461</span><span class="sxs-lookup"><span data-stu-id="300d0-171">net461</span></span><br><span data-ttu-id="300d0-172">net462</span><span class="sxs-lookup"><span data-stu-id="300d0-172">net462</span></span><br><span data-ttu-id="300d0-173">net47</span><span class="sxs-lookup"><span data-stu-id="300d0-173">net47</span></span> |
+| <span data-ttu-id="300d0-174">Windows Store</span><span class="sxs-lookup"><span data-stu-id="300d0-174">Windows Store</span></span>              | <span data-ttu-id="300d0-175">netcore [netcore45]</span><span class="sxs-lookup"><span data-stu-id="300d0-175">netcore [netcore45]</span></span><br><span data-ttu-id="300d0-176">netcore45 [win] [win8]</span><span class="sxs-lookup"><span data-stu-id="300d0-176">netcore45 [win] [win8]</span></span><br><span data-ttu-id="300d0-177">netcore451 [win81]</span><span class="sxs-lookup"><span data-stu-id="300d0-177">netcore451 [win81]</span></span> |
+| <span data-ttu-id="300d0-178">.NET Micro Framework</span><span class="sxs-lookup"><span data-stu-id="300d0-178">.NET Micro Framework</span></span>       | <span data-ttu-id="300d0-179">netmf</span><span class="sxs-lookup"><span data-stu-id="300d0-179">netmf</span></span> |
+| <span data-ttu-id="300d0-180">Silverlight</span><span class="sxs-lookup"><span data-stu-id="300d0-180">Silverlight</span></span>                | <span data-ttu-id="300d0-181">sl4</span><span class="sxs-lookup"><span data-stu-id="300d0-181">sl4</span></span><br><span data-ttu-id="300d0-182">sl5</span><span class="sxs-lookup"><span data-stu-id="300d0-182">sl5</span></span> |
+| <span data-ttu-id="300d0-183">Windows Phone</span><span class="sxs-lookup"><span data-stu-id="300d0-183">Windows Phone</span></span>              | <span data-ttu-id="300d0-184">wp [wp7]</span><span class="sxs-lookup"><span data-stu-id="300d0-184">wp [wp7]</span></span><br><span data-ttu-id="300d0-185">wp7</span><span class="sxs-lookup"><span data-stu-id="300d0-185">wp7</span></span><br><span data-ttu-id="300d0-186">wp75</span><span class="sxs-lookup"><span data-stu-id="300d0-186">wp75</span></span><br><span data-ttu-id="300d0-187">wp8</span><span class="sxs-lookup"><span data-stu-id="300d0-187">wp8</span></span><br><span data-ttu-id="300d0-188">wp81</span><span class="sxs-lookup"><span data-stu-id="300d0-188">wp81</span></span><br><span data-ttu-id="300d0-189">wpa81</span><span class="sxs-lookup"><span data-stu-id="300d0-189">wpa81</span></span> |
+| <span data-ttu-id="300d0-190">Piattaforma UWP (Universal Windows Platform)</span><span class="sxs-lookup"><span data-stu-id="300d0-190">Universal Windows Platform</span></span> | <span data-ttu-id="300d0-191">uap [uap10.0]</span><span class="sxs-lookup"><span data-stu-id="300d0-191">uap [uap10.0]</span></span><br><span data-ttu-id="300d0-192">uap10.0 [win10] [netcore50]</span><span class="sxs-lookup"><span data-stu-id="300d0-192">uap10.0 [win10] [netcore50]</span></span> |
 
-* `.NETFramework,Version=4.6.2`
-* `net462`
+## <a name="how-to-specify-target-frameworks"></a><span data-ttu-id="300d0-193">Come specificare framework di destinazione</span><span class="sxs-lookup"><span data-stu-id="300d0-193">How to specify target frameworks</span></span>
 
-**Riferimento a una famiglia di framework**
+<span data-ttu-id="300d0-194">I framework di destinazione sono specificati nel file di progetto.</span><span class="sxs-lookup"><span data-stu-id="300d0-194">Target frameworks are specified in your project file.</span></span> <span data-ttu-id="300d0-195">Quando viene specificato un singolo framework di destinazione, usare l'elemento **TargetFramework**.</span><span class="sxs-lookup"><span data-stu-id="300d0-195">When a single target framework is specified, use the **TargetFramework** element.</span></span> <span data-ttu-id="300d0-196">Il file di progetto di app console seguente illustra come specificare come destinazione .NET Core 2.0:</span><span class="sxs-lookup"><span data-stu-id="300d0-196">The following console app project file demonstrates how to target .NET Core 2.0:</span></span>
 
-È possibile fare riferimento a una famiglia di framework tramite forme brevi o lunghe dell'ID del framework. Entrambi sono ugualmente validi.
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-* `.NETFramework`
-* `net`
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
 
-## <a name="latest-framework-versions"></a>Versioni più recenti dei framework
+</Project>
+```
 
-La tabella seguente definisce il set di framework che è possibile usare, come si creano i relativi riferimenti e quale versione della [libreria .NET Standard](library.md) viene implementata. Queste versioni di framework sono le versioni stabili più recenti. Non sono visualizzate le versioni non definitive.
+<span data-ttu-id="300d0-197">Quando si specificano più framework di destinazione, è possibile fare riferimento in modo condizionale agli assembly per ogni framework di destinazione.</span><span class="sxs-lookup"><span data-stu-id="300d0-197">When you specify multiple target frameworks, you may conditionally reference assemblies for each target framework.</span></span> <span data-ttu-id="300d0-198">Nel codice è possibile eseguire in modo condizionale la compilazione con tali assembly usando i simboli del preprocessore con logica *if-then-else*.</span><span class="sxs-lookup"><span data-stu-id="300d0-198">In your code, you can conditionally compile against those assemblies by using preprocessor symbols with *if-then-else* logic.</span></span>
 
-| Framework             | Ultima versione | Moniker della versione di .NET Framework di destinazione (TFM, Target Framework Moniker) | Moniker compatto della versione di .NET Framework di destinazione (TFM, Target Framework Moniker) | Versione standard di .NET | Metapackage |
-| :-------------------: | :------------: | :----------------------------: | :------------------------------------: | :-------------------: | :---------: |
-| .NET Standard         | 1.6.1          | .NET Standard, versione=1.6       | netstandard1.6                         | N/D                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| Applicazione .NET Core | 1.1.1          | .NETCoreApp, versione=1.1        | netcoreapp1.1                          | 1.6                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
-| .NET Framework        | 4.6.2          | .NETFramework, versione=4.6.2    | net462                                 | 1,5                   | N/D |
+<span data-ttu-id="300d0-199">Il file di progetto della libreria seguente specifica come destinazione le API di .NET Standard (`netstandard1.4`) e le API di .NET Framework (`net40` e `net45`).</span><span class="sxs-lookup"><span data-stu-id="300d0-199">The following library project file targets APIs of .NET Standard (`netstandard1.4`) and APIs of the .NET Framework (`net40` and `net45`).</span></span> <span data-ttu-id="300d0-200">Usare l'elemento **TargetFrameworks** plurale con più framework di destinazione.</span><span class="sxs-lookup"><span data-stu-id="300d0-200">Use the plural **TargetFrameworks** element with multiple target frameworks.</span></span> <span data-ttu-id="300d0-201">Si noti che gli attributi `Condition` includono pacchetti specifici dell'implementazione quando la libreria viene compilata per i due moniker framework di destinazione di .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="300d0-201">Note how the `Condition` attributes include implementation-specific packages when the library is compiled for the two .NET Framework TFMs:</span></span>
 
-## <a name="supported-frameworks"></a>Framework supportati
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-In genere si fa riferimento a un framework tramite un breve moniker del framework di destinazione o *TFM* (Target Framework Moniker). In .NET Standard questo viene inoltre generalizzato in *TxM* per consentire un unico riferimento a più framework. I client NuGet supportano i framework seguenti. Gli equivalenti sono visualizzati tra parentesi quadre (`[]`).
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.4;net40;net45</TargetFrameworks>
+  </PropertyGroup>
 
-| Nome                       | Abbreviazione | TFM/TxM                                    |
-| -------------------------- | ------------ | -------------------------------------------- |
-| .NET Standard              | netstandard  | netstandard1.0                               |
-|                            |              | netstandard1.1                               |
-|                            |              | netstandard1.2                               |
-|                            |              | netstandard1.3                               |
-|                            |              | netstandard1.4                               |
-|                            |              | netstandard1.5                               |
-|                            |              | netstandard1.6                               |
-| .NET Core                  | netcoreapp   | netcoreapp1.0                                |
-|                            |              | netcoreapp1.1                                |
-| .NET Framework             | net          | net11                                        |
-|                            |              | net20                                        |
-|                            |              | net35                                        |
-|                            |              | net40                                        |
-|                            |              | net403                                       |
-|                            |              | net45                                        |
-|                            |              | net451                                       |
-|                            |              | net452                                       |
-|                            |              | net46                                        |
-|                            |              | net461                                       |
-|                            |              | net462                                       |
-| Windows Store              | netcore      | netcore [netcore45]                          |
-|                            |              | netcore45 [win, win8]                        |
-|                            |              | netcore451 [win81]                           |
-| .NET Micro Framework       | netmf        | netmf                                        |
-| Silverlight                | sl           | sl4                                          |
-|                            |              | sl5                                          |
-| Windows Phone              | wp           | wp [wp7]                                     |
-|                            |              | wp7                                          |
-|                            |              | wp75                                         |
-|                            |              | wp8                                          |
-|                            |              | wp81                                         |
-|                            |              | wpa81                                        |
-| Piattaforma UWP (Universal Windows Platform) | uap          | uap [uap10.0]                                |
-|                            |              | uap10.0 [win10] [netcore50]                  |
+  <!-- Conditionally obtain references for the .NET Framework 4.0 target -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <Reference Include="System.Net" />
+  </ItemGroup>
 
-## <a name="deprecated-frameworks"></a>Framework deprecati
+  <!-- Conditionally obtain references for the .NET Framework 4.5 target -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Threading.Tasks" />
+  </ItemGroup>
 
-I framework seguenti sono deprecati. I pacchetti che hanno come destinazione questi framework devono essere migrati alle sostituzioni indicate.
+</Project>
+```
 
-| Framework deprecato | Sostituzione |
-| -------------------- | ----------- |
-| aspnet50             | netcoreapp  |
-| aspnetcore50         |             |
-| dnxcore50            |             |
-| dnx                  |             |
-| dnx45                |             |
-| dnx451               |             |
-| dnx452               |             |
-| dotnet               | netstandard |
-| dotnet50             |             |
-| dotnet51             |             |
-| dotnet52             |             |
-| dotnet53             |             |
-| dotnet54             |             |
-| dotnet55             |             |
-| dotnet56             |             |
-| netcore50            | uap10.0     |
-| win                  | netcore45   |
-| win8                 | netcore45   |
-| win81                | netcore451  |
-| win10                | uap10.0     |
-| winrt                | netcore45   |
+<span data-ttu-id="300d0-202">Nella libreria o nell'app scrivere codice condizionale per la compilazione per ogni framework di destinazione:</span><span class="sxs-lookup"><span data-stu-id="300d0-202">Within your library or app, you write conditional code to compile for each target framework:</span></span>
 
-## <a name="precedence"></a>Precedenza
+```csharp
+public class MyClass
+{
+    static void Main()
+    {
+#if NET40
+        Console.WriteLine("Target framework: .NET Framework 4.0");
+#elif NET45  
+        Console.WriteLine("Target framework: .NET Framework 4.5");
+#else
+        Console.WriteLine("Target framework: .NET Standard 1.4");
+#endif
+    }
+}
+```
 
-Alcuni framework sono correlati e compatibili tra loro, ma non necessariamente equivalenti:
+<span data-ttu-id="300d0-203">Il sistema di compilazione è compatibile con i simboli del preprocessore che rappresentano i framework di destinazione mostrati nella tabella [Versioni supportate dei framework di destinazione](#supported-target-framework-versions).</span><span class="sxs-lookup"><span data-stu-id="300d0-203">The build system is aware of preprocessor symbols representing the target frameworks shown in the [Supported target framework versions](#supported-target-framework-versions) table.</span></span> <span data-ttu-id="300d0-204">Quando si usa un simbolo che rappresenta un moniker framework di destinazione di .NET Standard o .NET Core, sostituire il punto con un carattere di sottolineatura e sostituire le lettere minuscole con lettere maiuscole, ad esempio il simbolo per `netstandard1.4` è `NETSTANDARD1_4`).</span><span class="sxs-lookup"><span data-stu-id="300d0-204">When using a symbol that represents a .NET Standard or .NET Core TFM, replace the dot with an underscore and change lowercase letters to uppercase (for example, the symbol for `netstandard1.4` is `NETSTANDARD1_4`).</span></span>
 
-| Framework                        | È possibile usare:   |
-| -------------------------------- | --------- |
-| uap (piattaforma UWP) | win81     |
-|                                  | wpa81     |
-|                                  | netcore50 |
-| win (Windows Store)              | winrt     |
-|                                  | winrt45   |
+<span data-ttu-id="300d0-205">L'elenco completo di simboli del preprocessore per il framework di destinazione di .NET Core è:</span><span class="sxs-lookup"><span data-stu-id="300d0-205">The complete list of preprocessor symbols for .NET Core target frameworks is:</span></span>
 
-## <a name="net-standard"></a>.NET Standard
+[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
-[.NET Standard](https://github.com/dotnet/standard) semplifica i riferimenti tra framework compatibili con il codice binario, consentendo a un framework di destinazione singolo di fare riferimento a una combinazione di altri framework. Per altre informazioni, vedere l'argomento [Libreria .NET Standard](library.md).
+## <a name="deprecated-target-frameworks"></a><span data-ttu-id="300d0-206">Framework di destinazione deprecati</span><span class="sxs-lookup"><span data-stu-id="300d0-206">Deprecated target frameworks</span></span>
 
-Lo [strumento Get Nearest Framework degli strumenti NuGet](http://nugettoolsdev.azurewebsites.net/) simula la logica di NuGet usata per la selezione di un framework da molte risorse di framework disponibili in un pacchetto sulla base del framework di progetto. Per usare questo strumento, inserire un framework di progetto e uno o più framework di pacchetto. Selezionare il pulsante **Submit** (Invia). Lo strumento indica se i framework di pacchetto elencati sono compatibili con il framework di progetto fornito.
+<span data-ttu-id="300d0-207">I framework di destinazione seguenti sono deprecati.</span><span class="sxs-lookup"><span data-stu-id="300d0-207">The following target frameworks are deprecated.</span></span> <span data-ttu-id="300d0-208">I pacchetti che hanno come destinazione questi framework di destinazione devono essere migrati alle sostituzioni indicate.</span><span class="sxs-lookup"><span data-stu-id="300d0-208">Packages targeting these target frameworks should migrate to the indicated replacements.</span></span>
 
-## <a name="portable-class-libraries"></a>Librerie di classi portabili
+| <span data-ttu-id="300d0-209">Moniker framework di destinazione deprecati</span><span class="sxs-lookup"><span data-stu-id="300d0-209">Deprecated TFM</span></span>                                                                             | <span data-ttu-id="300d0-210">Sostituzione</span><span class="sxs-lookup"><span data-stu-id="300d0-210">Replacement</span></span> |
+| ------------------------------------------------------------------------------------------ | ----------- |
+| <span data-ttu-id="300d0-211">aspnet50</span><span class="sxs-lookup"><span data-stu-id="300d0-211">aspnet50</span></span><br><span data-ttu-id="300d0-212">aspnetcore50</span><span class="sxs-lookup"><span data-stu-id="300d0-212">aspnetcore50</span></span><br><span data-ttu-id="300d0-213">dnxcore50</span><span class="sxs-lookup"><span data-stu-id="300d0-213">dnxcore50</span></span><br><span data-ttu-id="300d0-214">dnx</span><span class="sxs-lookup"><span data-stu-id="300d0-214">dnx</span></span><br><span data-ttu-id="300d0-215">dnx45</span><span class="sxs-lookup"><span data-stu-id="300d0-215">dnx45</span></span><br><span data-ttu-id="300d0-216">dnx451</span><span class="sxs-lookup"><span data-stu-id="300d0-216">dnx451</span></span><br><span data-ttu-id="300d0-217">dnx452</span><span class="sxs-lookup"><span data-stu-id="300d0-217">dnx452</span></span>                  | <span data-ttu-id="300d0-218">netcoreapp</span><span class="sxs-lookup"><span data-stu-id="300d0-218">netcoreapp</span></span>  |
+| <span data-ttu-id="300d0-219">dotnet</span><span class="sxs-lookup"><span data-stu-id="300d0-219">dotnet</span></span><br><span data-ttu-id="300d0-220">dotnet50</span><span class="sxs-lookup"><span data-stu-id="300d0-220">dotnet50</span></span><br><span data-ttu-id="300d0-221">dotnet51</span><span class="sxs-lookup"><span data-stu-id="300d0-221">dotnet51</span></span><br><span data-ttu-id="300d0-222">dotnet52</span><span class="sxs-lookup"><span data-stu-id="300d0-222">dotnet52</span></span><br><span data-ttu-id="300d0-223">dotnet53</span><span class="sxs-lookup"><span data-stu-id="300d0-223">dotnet53</span></span><br><span data-ttu-id="300d0-224">dotnet54</span><span class="sxs-lookup"><span data-stu-id="300d0-224">dotnet54</span></span><br><span data-ttu-id="300d0-225">dotnet55</span><span class="sxs-lookup"><span data-stu-id="300d0-225">dotnet55</span></span><br><span data-ttu-id="300d0-226">dotnet56</span><span class="sxs-lookup"><span data-stu-id="300d0-226">dotnet56</span></span> | <span data-ttu-id="300d0-227">netstandard</span><span class="sxs-lookup"><span data-stu-id="300d0-227">netstandard</span></span> |
+| <span data-ttu-id="300d0-228">netcore50</span><span class="sxs-lookup"><span data-stu-id="300d0-228">netcore50</span></span>                                                                                  | <span data-ttu-id="300d0-229">uap10.0</span><span class="sxs-lookup"><span data-stu-id="300d0-229">uap10.0</span></span>     |
+| <span data-ttu-id="300d0-230">win</span><span class="sxs-lookup"><span data-stu-id="300d0-230">win</span></span>                                                                                        | <span data-ttu-id="300d0-231">netcore45</span><span class="sxs-lookup"><span data-stu-id="300d0-231">netcore45</span></span>   |
+| <span data-ttu-id="300d0-232">win8</span><span class="sxs-lookup"><span data-stu-id="300d0-232">win8</span></span>                                                                                       | <span data-ttu-id="300d0-233">netcore45</span><span class="sxs-lookup"><span data-stu-id="300d0-233">netcore45</span></span>   |
+| <span data-ttu-id="300d0-234">win81</span><span class="sxs-lookup"><span data-stu-id="300d0-234">win81</span></span>                                                                                      | <span data-ttu-id="300d0-235">netcore451</span><span class="sxs-lookup"><span data-stu-id="300d0-235">netcore451</span></span>  |
+| <span data-ttu-id="300d0-236">win10</span><span class="sxs-lookup"><span data-stu-id="300d0-236">win10</span></span>                                                                                      | <span data-ttu-id="300d0-237">uap10.0</span><span class="sxs-lookup"><span data-stu-id="300d0-237">uap10.0</span></span>     |
+| <span data-ttu-id="300d0-238">winrt</span><span class="sxs-lookup"><span data-stu-id="300d0-238">winrt</span></span>                                                                                      | <span data-ttu-id="300d0-239">netcore45</span><span class="sxs-lookup"><span data-stu-id="300d0-239">netcore45</span></span>   |
 
-Per informazioni sulle librerie di classi portabili, vedere la sezione relativa alle [librerie di classi portabili](https://docs.microsoft.com/nuget/schema/target-frameworks#portable-class-libraries) dell'argomento *Target frameworks* (Framework di destinazione) nella documentazione di NuGet. Stephen Cleary ha creato uno strumento che elenca le librerie di classi portabili supportate. Per altre informazioni, vedere [Framework Profiles in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (Profili dei framework in .NET).
+## <a name="see-also"></a><span data-ttu-id="300d0-240">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="300d0-240">See also</span></span>
+
+[<span data-ttu-id="300d0-241">Pacchetti, metapacchetti e framework</span><span class="sxs-lookup"><span data-stu-id="300d0-241">Packages, Metapackages and Frameworks</span></span>](~/docs/core/packages.md)  
+[<span data-ttu-id="300d0-242">Sviluppo di librerie con strumenti multipiattaforma</span><span class="sxs-lookup"><span data-stu-id="300d0-242">Developing Libraries with Cross Platform Tools</span></span>](~/docs/core/tutorials/libraries.md)  
+[<span data-ttu-id="300d0-243">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="300d0-243">.NET Standard</span></span>](~/docs/standard/net-standard.md)  
+[<span data-ttu-id="300d0-244">Controllo delle versioni di .NET Core</span><span class="sxs-lookup"><span data-stu-id="300d0-244">.NET Core Versioning</span></span>](~/docs/core/versions/index.md)  
+<span data-ttu-id="300d0-245">[dotnet/standard GitHub repository](https://github.com/dotnet/standard) (Repository dotnet/standard di GitHub)</span><span class="sxs-lookup"><span data-stu-id="300d0-245">[dotnet/standard GitHub repository](https://github.com/dotnet/standard)</span></span>  
+<span data-ttu-id="300d0-246">[NuGet Tools GitHub Repository](https://github.com/joelverhagen/NuGetTools) (Repository di GitHub per strumenti NuGet)</span><span class="sxs-lookup"><span data-stu-id="300d0-246">[NuGet Tools GitHub Repository](https://github.com/joelverhagen/NuGetTools)</span></span>  
+<span data-ttu-id="300d0-247">[Framework Profiles in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (Profili di framework in .NET)</span><span class="sxs-lookup"><span data-stu-id="300d0-247">[Framework Profiles in .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)</span></span>
 

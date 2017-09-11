@@ -18,9 +18,9 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="store-the-results-of-a-query-in-memory"></a>Archiviare i risultati di una query in memoria
+# <a name="store-the-results-of-a-query-in-memory"></a><span data-ttu-id="f7d55-104">Archiviare i risultati di una query in memoria</span><span class="sxs-lookup"><span data-stu-id="f7d55-104">Store the results of a query in memory</span></span>
 
-Una query è fondamentalmente un set di istruzioni per il recupero e l'organizzazione dei dati. Le query vengono eseguite in modalità lazy poiché viene richiesto ogni elemento successivo nel risultato. Quando si usa `foreach` per scorrere i risultati, gli elementi vengono restituiti quando ne viene eseguito l'accesso. Per valutare una query e archiviare i risultati senza eseguire un ciclo di `foreach`, è sufficiente chiamare uno dei seguenti metodi sulla variabile di query:  
+<span data-ttu-id="f7d55-105">Una query è fondamentalmente un set di istruzioni per il recupero e l'organizzazione dei dati.</span><span class="sxs-lookup"><span data-stu-id="f7d55-105">A query is basically a set of instructions for how to retrieve and organize data.</span></span> <span data-ttu-id="f7d55-106">Le query vengono eseguite in modalità lazy poiché viene richiesto ogni elemento successivo nel risultato.</span><span class="sxs-lookup"><span data-stu-id="f7d55-106">Queries are executed lazily, as each subsequent item in the result is requested.</span></span> <span data-ttu-id="f7d55-107">Quando si usa `foreach` per scorrere i risultati, gli elementi vengono restituiti quando ne viene eseguito l'accesso.</span><span class="sxs-lookup"><span data-stu-id="f7d55-107">When you use `foreach` to iterate the results, items are returned as accessed.</span></span> <span data-ttu-id="f7d55-108">Per valutare una query e archiviare i risultati senza eseguire un ciclo di `foreach`, è sufficiente chiamare uno dei seguenti metodi sulla variabile di query:</span><span class="sxs-lookup"><span data-stu-id="f7d55-108">To evaluate a query and store its results without executing a `foreach` loop, just call one of the following methods on the query variable:</span></span>  
   
 -   <xref:System.Linq.Enumerable.ToList%2A>  
   
@@ -30,12 +30,12 @@ Una query è fondamentalmente un set di istruzioni per il recupero e l'organizza
   
 -   <xref:System.Linq.Enumerable.ToLookup%2A>  
   
- Quando si archiviano i risultati della query, assegnare l'oggetto Collection restituito a una nuova variabile, come illustrato nell'esempio seguente:  
+ <span data-ttu-id="f7d55-109">Quando si archiviano i risultati della query, assegnare l'oggetto Collection restituito a una nuova variabile, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="f7d55-109">We recommend that when you store the query results, you assign the returned collection object to a new variable as shown in the following example:</span></span>  
   
-## <a name="example"></a>Esempio  
- [!code-cs[csProgGuideLINQ#25](../../../samples/snippets/csharp/concepts/linq/how-to-store-the-results-of-a-query-in-memory_1.cs)]  
+## <a name="example"></a><span data-ttu-id="f7d55-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="f7d55-110">Example</span></span>  
+ <span data-ttu-id="f7d55-111">[!code-cs[csProgGuideLINQ#25](../../../samples/snippets/csharp/concepts/linq/how-to-store-the-results-of-a-query-in-memory_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="f7d55-111">[!code-cs[csProgGuideLINQ#25](../../../samples/snippets/csharp/concepts/linq/how-to-store-the-results-of-a-query-in-memory_1.cs)]</span></span>  
   
 
-## <a name="see-also"></a>Vedere anche  
- [Espressioni di query LINQ](index.md)
+## <a name="see-also"></a><span data-ttu-id="f7d55-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f7d55-112">See Also</span></span>  
+ [<span data-ttu-id="f7d55-113">Espressioni di query LINQ</span><span class="sxs-lookup"><span data-stu-id="f7d55-113">LINQ Query Expressions</span></span>](index.md)
 

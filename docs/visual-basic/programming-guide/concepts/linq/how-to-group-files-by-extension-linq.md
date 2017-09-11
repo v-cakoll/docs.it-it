@@ -20,17 +20,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f78785b4da3ae3b362603eea34d81207ed48a657
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8b78cbaf8b0f20c6b7ab14640dffd61e9657dc9b
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Procedura: raggruppare i file per estensione (LINQ) (Visual Basic)
-Questo esempio viene illustrato come utilizzare LINQ per eseguire operazioni sugli elenchi di file o cartelle avanzato raggruppamento e ordinamento. Viene inoltre illustrato come disporre l'output nella finestra della console utilizzando il <xref:System.Linq.Enumerable.Skip%2A>e <xref:System.Linq.Enumerable.Take%2A>metodi.</xref:System.Linq.Enumerable.Take%2A> </xref:System.Linq.Enumerable.Skip%2A>  
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a><span data-ttu-id="bf619-102">Procedura: raggruppare i file per estensione (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bf619-102">How to: Group Files by Extension (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="bf619-103">Questo esempio viene illustrato come utilizzare LINQ per eseguire operazioni sugli elenchi di file o cartelle avanzato raggruppamento e ordinamento.</span><span class="sxs-lookup"><span data-stu-id="bf619-103">This example shows how LINQ can be used to perform advanced grouping and sorting operations on lists of files or folders.</span></span> <span data-ttu-id="bf619-104">Viene inoltre illustrato come disporre l'output nella finestra della console utilizzando il <xref:System.Linq.Enumerable.Skip%2A>e <xref:System.Linq.Enumerable.Take%2A>metodi.</xref:System.Linq.Enumerable.Take%2A> </xref:System.Linq.Enumerable.Skip%2A></span><span class="sxs-lookup"><span data-stu-id="bf619-104">It also shows how to page output in the console window by using the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods.</span></span>  
   
-## <a name="example"></a>Esempio  
- La query seguente viene illustrato come raggruppare il contenuto di una struttura di directory specificato per l'estensione del nome file.  
+## <a name="example"></a><span data-ttu-id="bf619-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="bf619-105">Example</span></span>  
+ <span data-ttu-id="bf619-106">La query seguente viene illustrato come raggruppare il contenuto di una struttura di directory specificato per l'estensione del nome file.</span><span class="sxs-lookup"><span data-stu-id="bf619-106">The following query shows how to group the contents of a specified directory tree by the file name extension.</span></span>  
   
 ```vb  
 Module GroupByExtension  
@@ -108,11 +109,11 @@ Module GroupByExtension
 End Module  
 ```  
   
- L'output di questo programma può essere lungo, a seconda dei dettagli del file system locale e sul `startFolder` è impostata su. Per abilitare la visualizzazione di tutti i risultati, in questo esempio viene illustrato come scorrere i risultati. Applicare le stesse tecniche per applicazioni Web e Windows. Si noti che poiché il codice dispone gli elementi in un gruppo nidificato `For Each` ciclo è obbligatorio. È inoltre disponibile una logica aggiuntiva per calcolare la posizione corrente nell'elenco e per consentire all'utente di interrompere lo spostamento e uscire dal programma. In questo caso particolare, i risultati nella cache viene eseguita la query di paging dalla query originale. In altri contesti, ad esempio LINQ to SQL, tali la memorizzazione nella cache non è necessaria.  
+ <span data-ttu-id="bf619-107">L'output di questo programma può essere lungo, a seconda dei dettagli del file system locale e sul `startFolder` è impostata su.</span><span class="sxs-lookup"><span data-stu-id="bf619-107">The output from this program can be long, depending on the details of the local file system and what the `startFolder` is set to.</span></span> <span data-ttu-id="bf619-108">Per abilitare la visualizzazione di tutti i risultati, in questo esempio viene illustrato come scorrere i risultati.</span><span class="sxs-lookup"><span data-stu-id="bf619-108">To enable viewing of all results, this example shows how to page through results.</span></span> <span data-ttu-id="bf619-109">Applicare le stesse tecniche per applicazioni Web e Windows.</span><span class="sxs-lookup"><span data-stu-id="bf619-109">The same techniques can be applied to Windows and Web applications.</span></span> <span data-ttu-id="bf619-110">Si noti che poiché il codice dispone gli elementi in un gruppo nidificato `For Each` ciclo è obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="bf619-110">Notice that because the code pages the items in a group, a nested `For Each` loop is required.</span></span> <span data-ttu-id="bf619-111">È inoltre disponibile una logica aggiuntiva per calcolare la posizione corrente nell'elenco e per consentire all'utente di interrompere lo spostamento e uscire dal programma.</span><span class="sxs-lookup"><span data-stu-id="bf619-111">There is also some additional logic to compute the current position in the list, and to enable the user to stop paging and exit the program.</span></span> <span data-ttu-id="bf619-112">In questo caso particolare, i risultati nella cache viene eseguita la query di paging dalla query originale.</span><span class="sxs-lookup"><span data-stu-id="bf619-112">In this particular case, the paging query is run against the cached results from the original query.</span></span> <span data-ttu-id="bf619-113">In altri contesti, ad esempio LINQ to SQL, tali la memorizzazione nella cache non è necessaria.</span><span class="sxs-lookup"><span data-stu-id="bf619-113">In other contexts, such as LINQ to SQL, such caching is not required.</span></span>  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="bf619-114">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="bf619-114">Compiling the Code</span></span>  
+ <span data-ttu-id="bf619-115">Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.</span><span class="sxs-lookup"><span data-stu-id="bf619-115">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a   `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="bf619-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bf619-116">See Also</span></span>  
+ <span data-ttu-id="bf619-117">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span><span class="sxs-lookup"><span data-stu-id="bf619-117">[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) </span></span>  
+<span data-ttu-id="bf619-118"> [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="bf619-118"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

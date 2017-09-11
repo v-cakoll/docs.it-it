@@ -35,54 +35,54 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="pointer-types-c-programming-guide"></a>Tipi di puntatori (Guida per programmatori C#)
-In un contesto unsafe, un tipo può essere un tipo di puntatore, un tipo di valore o un tipo di riferimento. La dichiarazione di un tipo di puntatore può assumere uno dei seguenti formati:  
+# <a name="pointer-types-c-programming-guide"></a><span data-ttu-id="019f6-102">Tipi di puntatori (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="019f6-102">Pointer types (C# Programming Guide)</span></span>
+<span data-ttu-id="019f6-103">In un contesto unsafe, un tipo può essere un tipo di puntatore, un tipo di valore o un tipo di riferimento.</span><span class="sxs-lookup"><span data-stu-id="019f6-103">In an unsafe context, a type may be a pointer type, a value type, or a reference type.</span></span> <span data-ttu-id="019f6-104">La dichiarazione di un tipo di puntatore può assumere uno dei seguenti formati:</span><span class="sxs-lookup"><span data-stu-id="019f6-104">A pointer type declaration takes one of the following forms:</span></span>  
   
 ```  
 type* identifier;  
 void* identifier; //allowed but not recommended  
 ```  
   
- I tipi seguenti possono essere tipi di puntatore:  
+ <span data-ttu-id="019f6-105">I tipi seguenti possono essere tipi di puntatore:</span><span class="sxs-lookup"><span data-stu-id="019f6-105">Any of the following types may be a pointer type:</span></span>  
   
--   [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [byte](../../../csharp/language-reference/keywords/byte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [char](../../../csharp/language-reference/keywords/char.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), [decimal](../../../csharp/language-reference/keywords/decimal.md) o [bool](../../../csharp/language-reference/keywords/bool.md).  
+-   <span data-ttu-id="019f6-106">[sbyte](../../../csharp/language-reference/keywords/sbyte.md), [byte](../../../csharp/language-reference/keywords/byte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [char](../../../csharp/language-reference/keywords/char.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), [decimal](../../../csharp/language-reference/keywords/decimal.md) o [bool](../../../csharp/language-reference/keywords/bool.md).</span><span class="sxs-lookup"><span data-stu-id="019f6-106">[sbyte](../../../csharp/language-reference/keywords/sbyte.md), [byte](../../../csharp/language-reference/keywords/byte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [char](../../../csharp/language-reference/keywords/char.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), [decimal](../../../csharp/language-reference/keywords/decimal.md), or [bool](../../../csharp/language-reference/keywords/bool.md).</span></span>  
   
--   Qualsiasi tipo [enum](../../../csharp/language-reference/keywords/enum.md).  
+-   <span data-ttu-id="019f6-107">Qualsiasi tipo [enum](../../../csharp/language-reference/keywords/enum.md).</span><span class="sxs-lookup"><span data-stu-id="019f6-107">Any [enum](../../../csharp/language-reference/keywords/enum.md) type.</span></span>  
   
--   Qualsiasi tipo di puntatore.  
+-   <span data-ttu-id="019f6-108">Qualsiasi tipo di puntatore.</span><span class="sxs-lookup"><span data-stu-id="019f6-108">Any pointer type.</span></span>  
   
--   Qualsiasi tipo struct definito dall'utente che contenga campi solo di tipi non gestiti.  
+-   <span data-ttu-id="019f6-109">Qualsiasi tipo struct definito dall'utente che contenga campi solo di tipi non gestiti.</span><span class="sxs-lookup"><span data-stu-id="019f6-109">Any user-defined struct type that contains fields of unmanaged types only.</span></span>  
   
- I tipi di puntatore non ereditano da [object](../../../csharp/language-reference/keywords/object.md). Non sono inoltre previste conversioni tra i tipi di puntatore e `object`. Con i puntatori non sono inoltre supportate le operazioni di boxing e unboxing. È tuttavia possibile eseguire conversioni tra tipi di puntatore diversi e tra tipi di puntatore e tipi integrali.  
+ <span data-ttu-id="019f6-110">I tipi di puntatore non ereditano da [object](../../../csharp/language-reference/keywords/object.md). Non sono inoltre previste conversioni tra i tipi di puntatore e `object`.</span><span class="sxs-lookup"><span data-stu-id="019f6-110">Pointer types do not inherit from [object](../../../csharp/language-reference/keywords/object.md) and no conversions exist between pointer types and `object`.</span></span> <span data-ttu-id="019f6-111">Con i puntatori non sono inoltre supportate le operazioni di boxing e unboxing.</span><span class="sxs-lookup"><span data-stu-id="019f6-111">Also, boxing and unboxing do not support pointers.</span></span> <span data-ttu-id="019f6-112">È tuttavia possibile eseguire conversioni tra tipi di puntatore diversi e tra tipi di puntatore e tipi integrali.</span><span class="sxs-lookup"><span data-stu-id="019f6-112">However, you can convert between different pointer types and between pointer types and integral types.</span></span>  
   
- Quando si dichiarano più puntatori nella stessa dichiarazione, l'asterisco (*) viene scritto solo con il tipo sottostante. Non viene utilizzato come prefisso di ogni nome di puntatore. Ad esempio:  
+ <span data-ttu-id="019f6-113">Quando si dichiarano più puntatori nella stessa dichiarazione, l'asterisco (*) viene scritto solo con il tipo sottostante. Non viene utilizzato come prefisso di ogni nome di puntatore.</span><span class="sxs-lookup"><span data-stu-id="019f6-113">When you declare multiple pointers in the same declaration, the asterisk (*) is written together with the underlying type only; it is not used as a prefix to each pointer name.</span></span> <span data-ttu-id="019f6-114">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="019f6-114">For example:</span></span>  
   
 ```  
 int* p1, p2, p3;   // Ok  
 int *p1, *p2, *p3;   // Invalid in C#  
 ```  
   
- Un puntatore non può puntare a un riferimento o a uno [struct](../../../csharp/language-reference/keywords/struct.md) che contiene riferimenti, perché un riferimento a un oggetto può essere sottoposto a processi di Garbage Collection anche se un puntatore punta a esso. Il Garbage Collector non tiene traccia degli altri tipi di puntatore che puntano all'oggetto.  
+ <span data-ttu-id="019f6-115">Un puntatore non può puntare a un riferimento o a uno [struct](../../../csharp/language-reference/keywords/struct.md) che contiene riferimenti, perché un riferimento a un oggetto può essere sottoposto a processi di Garbage Collection anche se un puntatore punta a esso.</span><span class="sxs-lookup"><span data-stu-id="019f6-115">A pointer cannot point to a reference or to a [struct](../../../csharp/language-reference/keywords/struct.md) that contains references, because an object reference can be garbage collected even if a pointer is pointing to it.</span></span> <span data-ttu-id="019f6-116">Il Garbage Collector non tiene traccia degli altri tipi di puntatore che puntano all'oggetto.</span><span class="sxs-lookup"><span data-stu-id="019f6-116">The garbage collector does not keep track of whether an object is being pointed to by any pointer types.</span></span>  
   
- Il valore della variabile del puntatore di tipo `myType*` è l'indirizzo di una variabile di tipo `myType`. Di seguito sono riportati alcuni esempi di dichiarazioni di tipi di puntatore:  
+ <span data-ttu-id="019f6-117">Il valore della variabile del puntatore di tipo `myType*` è l'indirizzo di una variabile di tipo `myType`.</span><span class="sxs-lookup"><span data-stu-id="019f6-117">The value of the pointer variable of type `myType*` is the address of a variable of type `myType`.</span></span> <span data-ttu-id="019f6-118">Di seguito sono riportati alcuni esempi di dichiarazioni di tipi di puntatore:</span><span class="sxs-lookup"><span data-stu-id="019f6-118">The following are examples of pointer type declarations:</span></span>  
   
-|Esempio|Descrizione|  
+|<span data-ttu-id="019f6-119">Esempio</span><span class="sxs-lookup"><span data-stu-id="019f6-119">Example</span></span>|<span data-ttu-id="019f6-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="019f6-120">Description</span></span>|  
 |-------------|-----------------|  
-|`int* p`|`p` è un puntatore a un Integer.|  
-|`int** p`|`p` è un puntatore a un puntatore a un Integer.|  
-|`int*[] p`|`p` è una matrice unidimensionale di puntatori a Integer.|  
-|`char* p`|`p` è un puntatore a un carattere.|  
-|`void* p`|`p` è un puntatore a un tipo sconosciuto.|  
+|`int* p`|<span data-ttu-id="019f6-121">`p` è un puntatore a un Integer.</span><span class="sxs-lookup"><span data-stu-id="019f6-121">`p` is a pointer to an integer.</span></span>|  
+|`int** p`|<span data-ttu-id="019f6-122">`p` è un puntatore a un puntatore a un Integer.</span><span class="sxs-lookup"><span data-stu-id="019f6-122">`p` is a pointer to a pointer to an integer.</span></span>|  
+|`int*[] p`|<span data-ttu-id="019f6-123">`p` è una matrice unidimensionale di puntatori a Integer.</span><span class="sxs-lookup"><span data-stu-id="019f6-123">`p` is a single-dimensional array of pointers to integers.</span></span>|  
+|`char* p`|<span data-ttu-id="019f6-124">`p` è un puntatore a un carattere.</span><span class="sxs-lookup"><span data-stu-id="019f6-124">`p` is a pointer to a char.</span></span>|  
+|`void* p`|<span data-ttu-id="019f6-125">`p` è un puntatore a un tipo sconosciuto.</span><span class="sxs-lookup"><span data-stu-id="019f6-125">`p` is a pointer to an unknown type.</span></span>|  
   
- Per accedere al contenuto nella posizione a cui punta la variabile del puntatore, è possibile utilizzare *, ovvero l'operatore di riferimento indiretto a puntatore. Si consideri ad esempio la seguente dichiarazione:  
+ <span data-ttu-id="019f6-126">Per accedere al contenuto nella posizione a cui punta la variabile del puntatore, è possibile utilizzare *, ovvero l'operatore di riferimento indiretto a puntatore.</span><span class="sxs-lookup"><span data-stu-id="019f6-126">The pointer indirection operator * can be used to access the contents at the location pointed to by the pointer variable.</span></span> <span data-ttu-id="019f6-127">Si consideri ad esempio la seguente dichiarazione:</span><span class="sxs-lookup"><span data-stu-id="019f6-127">For example, consider the following declaration:</span></span>  
   
 ```  
 int* myVariable;  
 ```  
   
- L'espressione `*myVariable` indica la variabile `int` individuata all'indirizzo contenuto in `myVariable`.  
+ <span data-ttu-id="019f6-128">L'espressione `*myVariable` indica la variabile `int` individuata all'indirizzo contenuto in `myVariable`.</span><span class="sxs-lookup"><span data-stu-id="019f6-128">The expression `*myVariable` denotes the `int` variable found at the address contained in `myVariable`.</span></span>  
   
- Gli argomenti [Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md) e [Conversioni di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md) includono diversi esempi di puntatori.  Nell'esempio seguente viene illustrata la necessità della parola chiave `unsafe` e dell'istruzione `fixed` e come incrementare un puntatore interno.  È possibile incollare il codice nella funzione Main di un'applicazione console per eseguirlo. Ricordarsi di abilitare il codice unsafe in **Creazione progetti**. Scegliere **Progetto**, **Proprietà** nella barra dei menu e quindi selezionare **Consenti codice unsafe** nella scheda **Compilazione**.  
+ <span data-ttu-id="019f6-129">Gli argomenti [Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md) e [Conversioni di puntatori](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md) includono diversi esempi di puntatori.</span><span class="sxs-lookup"><span data-stu-id="019f6-129">There are several examples of pointers in the topics [fixed Statement](../../../csharp/language-reference/keywords/fixed-statement.md) and [Pointer Conversions](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md).</span></span>  <span data-ttu-id="019f6-130">Nell'esempio seguente viene illustrata la necessità della parola chiave `unsafe` e dell'istruzione `fixed` e come incrementare un puntatore interno.</span><span class="sxs-lookup"><span data-stu-id="019f6-130">The following example shows the need for the `unsafe` keyword and the `fixed` statement, and how to increment an interior pointer.</span></span>  <span data-ttu-id="019f6-131">È possibile incollare il codice nella funzione Main di un'applicazione console per eseguirlo.</span><span class="sxs-lookup"><span data-stu-id="019f6-131">You can paste this code into the Main function of a console application to run it.</span></span> <span data-ttu-id="019f6-132">Ricordarsi di abilitare il codice unsafe in **Creazione progetti**. Scegliere **Progetto**, **Proprietà** nella barra dei menu e quindi selezionare **Consenti codice unsafe** nella scheda **Compilazione**.</span><span class="sxs-lookup"><span data-stu-id="019f6-132">(Remember to enable unsafe code in the **Project Designer**; choose **Project**, **Properties** on the menu bar, and then select **Allow unsafe code** in the **Build** tab.)</span></span>  
   
 ```  
 // Normal pointer to an object.  
@@ -127,37 +127,37 @@ Console.ReadLine();
 //12  
 ```  
   
- Non è possibile applicare l'operatore di riferimento indiretto a un puntatore di tipo `void*`. È tuttavia possibile eseguire un cast per convertire un puntatore void in qualsiasi altro tipo e viceversa.  
+ <span data-ttu-id="019f6-133">Non è possibile applicare l'operatore di riferimento indiretto a un puntatore di tipo `void*`.</span><span class="sxs-lookup"><span data-stu-id="019f6-133">You cannot apply the indirection operator to a pointer of type `void*`.</span></span> <span data-ttu-id="019f6-134">È tuttavia possibile eseguire un cast per convertire un puntatore void in qualsiasi altro tipo e viceversa.</span><span class="sxs-lookup"><span data-stu-id="019f6-134">However, you can use a cast to convert a void pointer to any other pointer type, and vice versa.</span></span>  
   
- Un puntatore può essere `null`. Se l'operatore di riferimento indiretto viene applicato a un puntatore Null, si otterrà un comportamento definito dall'implementazione.  
+ <span data-ttu-id="019f6-135">Un puntatore può essere `null`.</span><span class="sxs-lookup"><span data-stu-id="019f6-135">A pointer can be `null`.</span></span> <span data-ttu-id="019f6-136">Se l'operatore di riferimento indiretto viene applicato a un puntatore Null, si otterrà un comportamento definito dall'implementazione.</span><span class="sxs-lookup"><span data-stu-id="019f6-136">Applying the indirection operator to a null pointer causes an implementation-defined behavior.</span></span>  
   
- Tenere presente che il passaggio di puntatori tra metodi può generare un comportamento non definito, ad esempio se un puntatore viene restituito a una variabile locale tramite un parametro Out o Ref oppure come risultato della funzione. Se il puntatore è stato impostato in un blocco fisso, la variabile a cui punta potrebbe non essere più fissa.  
+ <span data-ttu-id="019f6-137">Tenere presente che il passaggio di puntatori tra metodi può generare un comportamento non definito,</span><span class="sxs-lookup"><span data-stu-id="019f6-137">Be aware that passing pointers between methods can cause undefined behavior.</span></span> <span data-ttu-id="019f6-138">ad esempio se un puntatore viene restituito a una variabile locale tramite un parametro Out o Ref oppure come risultato della funzione.</span><span class="sxs-lookup"><span data-stu-id="019f6-138">Examples are returning a pointer to a local variable through an Out or Ref parameter or as the function result.</span></span> <span data-ttu-id="019f6-139">Se il puntatore è stato impostato in un blocco fisso, la variabile a cui punta potrebbe non essere più fissa.</span><span class="sxs-lookup"><span data-stu-id="019f6-139">If the pointer was set in a fixed block, the variable to which it points may no longer be fixed.</span></span>  
   
- Nella tabella riportata di seguito sono elencati gli operatori e le istruzioni che è possibile utilizzare con i puntatori in un contesto unsafe:  
+ <span data-ttu-id="019f6-140">Nella tabella riportata di seguito sono elencati gli operatori e le istruzioni che è possibile utilizzare con i puntatori in un contesto unsafe:</span><span class="sxs-lookup"><span data-stu-id="019f6-140">The following table lists the operators and statements that can operate on pointers in an unsafe context:</span></span>  
   
-|Operatore/istruzione|Uso|  
+|<span data-ttu-id="019f6-141">Operatore/istruzione</span><span class="sxs-lookup"><span data-stu-id="019f6-141">Operator/Statement</span></span>|<span data-ttu-id="019f6-142">Uso</span><span class="sxs-lookup"><span data-stu-id="019f6-142">Use</span></span>|  
 |-------------------------|---------|  
-|*|Esegue il riferimento indiretto al puntatore.|  
-|->|Accede a un membro di struct tramite un puntatore.|  
-|[]|Indicizza un puntatore.|  
-|`&`|Ottiene l'indirizzo di una variabile.|  
-|++ e --|Incrementa e decrementa puntatori.|  
-|+ e -|Utilizza l'aritmetica dei puntatori.|  
-|==, !=, \<, >, \<= e >=|Confronta puntatori.|  
-|`stackalloc`|Alloca memoria nello stack.|  
-|Istruzione `fixed`|Corregge temporaneamente una variabile per consentire di trovarne l'indirizzo.|  
+|*|<span data-ttu-id="019f6-143">Esegue il riferimento indiretto al puntatore.</span><span class="sxs-lookup"><span data-stu-id="019f6-143">Performs pointer indirection.</span></span>|  
+|->|<span data-ttu-id="019f6-144">Accede a un membro di struct tramite un puntatore.</span><span class="sxs-lookup"><span data-stu-id="019f6-144">Accesses a member of a struct through a pointer.</span></span>|  
+|<span data-ttu-id="019f6-145">[]</span><span class="sxs-lookup"><span data-stu-id="019f6-145">[]</span></span>|<span data-ttu-id="019f6-146">Indicizza un puntatore.</span><span class="sxs-lookup"><span data-stu-id="019f6-146">Indexes a pointer.</span></span>|  
+|`&`|<span data-ttu-id="019f6-147">Ottiene l'indirizzo di una variabile.</span><span class="sxs-lookup"><span data-stu-id="019f6-147">Obtains the address of a variable.</span></span>|  
+|<span data-ttu-id="019f6-148">++ e --</span><span class="sxs-lookup"><span data-stu-id="019f6-148">++ and --</span></span>|<span data-ttu-id="019f6-149">Incrementa e decrementa puntatori.</span><span class="sxs-lookup"><span data-stu-id="019f6-149">Increments and decrements pointers.</span></span>|  
+|<span data-ttu-id="019f6-150">+ e -</span><span class="sxs-lookup"><span data-stu-id="019f6-150">+ and -</span></span>|<span data-ttu-id="019f6-151">Utilizza l'aritmetica dei puntatori.</span><span class="sxs-lookup"><span data-stu-id="019f6-151">Performs pointer arithmetic.</span></span>|  
+|<span data-ttu-id="019f6-152">==, !=, \<, >, \<= e >=</span><span class="sxs-lookup"><span data-stu-id="019f6-152">==, !=, \<, >, \<=, and >=</span></span>|<span data-ttu-id="019f6-153">Confronta puntatori.</span><span class="sxs-lookup"><span data-stu-id="019f6-153">Compares pointers.</span></span>|  
+|`stackalloc`|<span data-ttu-id="019f6-154">Alloca memoria nello stack.</span><span class="sxs-lookup"><span data-stu-id="019f6-154">Allocates memory on the stack.</span></span>|  
+|<span data-ttu-id="019f6-155">Istruzione `fixed`</span><span class="sxs-lookup"><span data-stu-id="019f6-155">`fixed` statement</span></span>|<span data-ttu-id="019f6-156">Corregge temporaneamente una variabile per consentire di trovarne l'indirizzo.</span><span class="sxs-lookup"><span data-stu-id="019f6-156">Temporarily fixes a variable so that its address may be found.</span></span>|  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a><span data-ttu-id="019f6-157">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="019f6-157">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [Conversioni puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)   
- [Espressioni puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)   
- [Tipi](../../../csharp/language-reference/keywords/types.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
- [Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)   
- [Boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+## <a name="see-also"></a><span data-ttu-id="019f6-158">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="019f6-158">See Also</span></span>  
+ <span data-ttu-id="019f6-159">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="019f6-159">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="019f6-160">[Codice unsafe e puntatori](../../../csharp/programming-guide/unsafe-code-pointers/index.md) </span><span class="sxs-lookup"><span data-stu-id="019f6-160">[Unsafe Code and Pointers](../../../csharp/programming-guide/unsafe-code-pointers/index.md) </span></span>  
+ <span data-ttu-id="019f6-161">[Conversioni puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md) </span><span class="sxs-lookup"><span data-stu-id="019f6-161">[Pointer Conversions](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md) </span></span>  
+ <span data-ttu-id="019f6-162">[Espressioni puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="019f6-162">[Pointer Expressions](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md) </span></span>  
+ <span data-ttu-id="019f6-163">[Tipi](../../../csharp/language-reference/keywords/types.md) </span><span class="sxs-lookup"><span data-stu-id="019f6-163">[Types](../../../csharp/language-reference/keywords/types.md) </span></span>  
+ <span data-ttu-id="019f6-164">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span><span class="sxs-lookup"><span data-stu-id="019f6-164">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span></span>  
+ <span data-ttu-id="019f6-165">[Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md) </span><span class="sxs-lookup"><span data-stu-id="019f6-165">[fixed Statement](../../../csharp/language-reference/keywords/fixed-statement.md) </span></span>  
+ <span data-ttu-id="019f6-166">[stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) </span><span class="sxs-lookup"><span data-stu-id="019f6-166">[stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) </span></span>  
+ [<span data-ttu-id="019f6-167">Boxing e unboxing</span><span class="sxs-lookup"><span data-stu-id="019f6-167">Boxing and Unboxing</span></span>](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
 

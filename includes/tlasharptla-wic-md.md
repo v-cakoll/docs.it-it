@@ -1,1 +1,1 @@
-Componente Imaging di Microsoft Windows Presentation Foundation
+<span data-ttu-id="1820e-101">Componente Imaging di Microsoft Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="1820e-101">Microsoft Windows Presentation Foundation Imaging Component</span></span>

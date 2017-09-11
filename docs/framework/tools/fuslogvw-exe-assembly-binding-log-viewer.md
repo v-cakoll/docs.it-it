@@ -33,52 +33,52 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visualizzatore log associazioni assembly)
-Il Visualizzatore log associazione assembly consente di visualizzare i dettagli relativi alle associazioni di assembly. Queste informazioni facilitano la diagnosi delle cause dell'impossibilità di individuare un assembly in fase di esecuzione. Questi errori sono generalmente dovuti alla distribuzione di un assembly nel percorso errato, a un'immagine nativa che non è più valida o a una mancata corrispondenza di numeri di versione o impostazioni cultura. L'impossibilità da parte di Common Language Runtime di individuare un assembly produce generalmente un'eccezione <xref:System.TypeLoadException> nell'applicazione.  
+# <a name="fuslogvwexe-assembly-binding-log-viewer"></a><span data-ttu-id="c3280-102">Fuslogvw.exe (Visualizzatore log associazioni assembly)</span><span class="sxs-lookup"><span data-stu-id="c3280-102">Fuslogvw.exe (Assembly Binding Log Viewer)</span></span>
+<span data-ttu-id="c3280-103">Il Visualizzatore log associazione assembly consente di visualizzare i dettagli relativi alle associazioni di assembly.</span><span class="sxs-lookup"><span data-stu-id="c3280-103">The Assembly Binding Log Viewer displays details for assembly binds.</span></span> <span data-ttu-id="c3280-104">Queste informazioni facilitano la diagnosi delle cause dell'impossibilità di individuare un assembly in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="c3280-104">This information helps you diagnose why the .NET Framework cannot locate an assembly at run time.</span></span> <span data-ttu-id="c3280-105">Questi errori sono generalmente dovuti alla distribuzione di un assembly nel percorso errato, a un'immagine nativa che non è più valida o a una mancata corrispondenza di numeri di versione o impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="c3280-105">These failures are usually the result of an assembly deployed to the wrong location, a native image that is no longer valid, or a mismatch in version numbers or cultures.</span></span> <span data-ttu-id="c3280-106">L'impossibilità da parte di Common Language Runtime di individuare un assembly produce generalmente un'eccezione <xref:System.TypeLoadException> nell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="c3280-106">The common language runtime's failure to locate an assembly typically shows up as a <xref:System.TypeLoadException> in your application.</span></span>  
   
 > [!IMPORTANT]
->  È necessario eseguire fuslogvw.exe con privilegi di amministratore.  
+>  <span data-ttu-id="c3280-107">È necessario eseguire fuslogvw.exe con privilegi di amministratore.</span><span class="sxs-lookup"><span data-stu-id="c3280-107">You must run fuslogvw.exe with administrator privileges.</span></span>  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per gli sviluppatori (o il prompt dei comandi di Visual Studio in Windows 7) con credenziali di amministratore. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="c3280-108">Viene installato automaticamente con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="c3280-108">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="c3280-109">Per eseguire lo strumento, usare il prompt dei comandi per gli sviluppatori (o il prompt dei comandi di Visual Studio in Windows 7) con credenziali di amministratore.</span><span class="sxs-lookup"><span data-stu-id="c3280-109">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7) with administrator credentials.</span></span> <span data-ttu-id="c3280-110">Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="c3280-110">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- Al prompt dei comandi digitare quanto segue:  
+ <span data-ttu-id="c3280-111">Al prompt dei comandi digitare quanto segue:</span><span class="sxs-lookup"><span data-stu-id="c3280-111">At the command prompt, type the following:</span></span>  
   
 ```  
 fuslogvw  
 ```  
   
- Nel visualizzatore è riportata una voce per ciascuna associazione di assembly non riuscita. Per ciascun errore vengono descritti l'applicazione che ha avviato l'associazione, l'assembly interessato, inclusi il nome, la versione, le impostazioni cultura e la chiave pubblica, nonché la data e l'ora dell'errore.  
+ <span data-ttu-id="c3280-112">Nel visualizzatore è riportata una voce per ciascuna associazione di assembly non riuscita.</span><span class="sxs-lookup"><span data-stu-id="c3280-112">The viewer displays an entry for each failed assembly bind.</span></span> <span data-ttu-id="c3280-113">Per ciascun errore vengono descritti l'applicazione che ha avviato l'associazione, l'assembly interessato, inclusi il nome, la versione, le impostazioni cultura e la chiave pubblica, nonché la data e l'ora dell'errore.</span><span class="sxs-lookup"><span data-stu-id="c3280-113">For each failure, the viewer describes the application that initiated the bind; the assembly the bind is for, including name, version, culture and public key; and the date and time of the failure.</span></span>  
   
-### <a name="to-change-the-log-location-view"></a>Per modificare la visualizzazione del percorso del file di log  
+### <a name="to-change-the-log-location-view"></a><span data-ttu-id="c3280-114">Per modificare la visualizzazione del percorso del file di log</span><span class="sxs-lookup"><span data-stu-id="c3280-114">To change the log location view</span></span>  
   
-1.  Selezionare il pulsante di opzione **Predefinito** per visualizzare gli errori di associazione per tutti i tipi di applicazione. Per impostazione predefinita, le voci di log vengono archiviate in directory specifiche per utente su disco, nella cache wininet.  
+1.  <span data-ttu-id="c3280-115">Selezionare il pulsante di opzione **Predefinito** per visualizzare gli errori di associazione per tutti i tipi di applicazione.</span><span class="sxs-lookup"><span data-stu-id="c3280-115">Select the **Default** option button to view bind failures for all application types.</span></span> <span data-ttu-id="c3280-116">Per impostazione predefinita, le voci di log vengono archiviate in directory specifiche per utente su disco, nella cache wininet.</span><span class="sxs-lookup"><span data-stu-id="c3280-116">By default, log entries are stored in per-user directories on disk in the wininet cache.</span></span>  
   
-2.  Selezionare il pulsante di opzione **Personalizzato** per visualizzare gli errori di associazione in una directory personalizzata specificata. È necessario specificare il percorso personalizzato in cui il runtime deve archiviare i log impostando il percorso di log personalizzato su un nome di directory valido nella finestra di dialogo **Impostazioni log**. Tale directory deve essere pulita e contenere solo file generati dal runtime. Se contiene un file eseguibile che genera un errore da registrare, l'errore non verrà registrato poiché lo strumento cercherà di creare una directory con lo stesso nome del file eseguibile. Inoltre, il tentativo di esecuzione di un eseguibile dal percorso del log avrà esito negativo.  
+2.  <span data-ttu-id="c3280-117">Selezionare il pulsante di opzione **Personalizzato** per visualizzare gli errori di associazione in una directory personalizzata specificata.</span><span class="sxs-lookup"><span data-stu-id="c3280-117">Select the **Custom** option button to view bind failures in a custom directory that you specify.</span></span> <span data-ttu-id="c3280-118">È necessario specificare il percorso personalizzato in cui il runtime deve archiviare i log impostando il percorso di log personalizzato su un nome di directory valido nella finestra di dialogo **Impostazioni log**.</span><span class="sxs-lookup"><span data-stu-id="c3280-118">You must specify the custom location where you want the runtime to store the logs by setting the custom log location in the **Log Settings** dialog to a valid directory name.</span></span> <span data-ttu-id="c3280-119">Tale directory deve essere pulita e contenere solo file generati dal runtime.</span><span class="sxs-lookup"><span data-stu-id="c3280-119">This directory should be clean, and only contain files that the runtime generates.</span></span> <span data-ttu-id="c3280-120">Se contiene un file eseguibile che genera un errore da registrare, l'errore non verrà registrato poiché lo strumento cercherà di creare una directory con lo stesso nome del file eseguibile.</span><span class="sxs-lookup"><span data-stu-id="c3280-120">If it contains an executable that generates a failure to be logged, the failure will not be logged because the tool tries to create a directory with the same name as the executable.</span></span> <span data-ttu-id="c3280-121">Inoltre, il tentativo di esecuzione di un eseguibile dal percorso del log avrà esito negativo.</span><span class="sxs-lookup"><span data-stu-id="c3280-121">In addition, an attempt to run an executable from the log location will fail.</span></span>  
   
     > [!NOTE]
-    >  È preferibile usare il percorso di associazione predefinito anziché quello personalizzato. Il runtime archivia il percorso di associazione predefinito nella cache wininet ed effettua la pulizia automaticamente. Se si specifica un percorso di associazione personalizzato la pulizia dovrà essere eseguita manualmente.  
+    >  <span data-ttu-id="c3280-122">È preferibile usare il percorso di associazione predefinito anziché quello personalizzato.</span><span class="sxs-lookup"><span data-stu-id="c3280-122">The default bind location is preferable to the custom bind location.</span></span> <span data-ttu-id="c3280-123">Il runtime archivia il percorso di associazione predefinito nella cache wininet ed effettua la pulizia automaticamente.</span><span class="sxs-lookup"><span data-stu-id="c3280-123">The runtime stores the default bind location in the wininet cache, and therefore automatically cleans it out.</span></span> <span data-ttu-id="c3280-124">Se si specifica un percorso di associazione personalizzato la pulizia dovrà essere eseguita manualmente.</span><span class="sxs-lookup"><span data-stu-id="c3280-124">If you specify a custom bind location, you are responsible for cleaning it out.</span></span>  
   
-### <a name="to-view-details-about-a-specific-failure"></a>Per visualizzare i dettagli relativi a un errore specifico  
+### <a name="to-view-details-about-a-specific-failure"></a><span data-ttu-id="c3280-125">Per visualizzare i dettagli relativi a un errore specifico</span><span class="sxs-lookup"><span data-stu-id="c3280-125">To view details about a specific failure</span></span>  
   
-1.  Nel visualizzatore selezionare il nome dell'applicazione dalla voce desiderata.  
+1.  <span data-ttu-id="c3280-126">Nel visualizzatore selezionare il nome dell'applicazione dalla voce desiderata.</span><span class="sxs-lookup"><span data-stu-id="c3280-126">Select the application name of the desired entry in the viewer.</span></span>  
   
-2.  Fare clic sul pulsante **Visualizza file di log**. In alternativa è possibile fare doppio clic sulla voce selezionata.  
+2.  <span data-ttu-id="c3280-127">Fare clic sul pulsante **Visualizza file di log**.</span><span class="sxs-lookup"><span data-stu-id="c3280-127">Click the **View Log** button.</span></span> <span data-ttu-id="c3280-128">In alternativa è possibile fare doppio clic sulla voce selezionata.</span><span class="sxs-lookup"><span data-stu-id="c3280-128">Alternately, you can double-click the selected entry.</span></span>  
   
-     Vengono visualizzati i seguenti dettagli relativi all'errore di associazione selezionato:  
+     <span data-ttu-id="c3280-129">Vengono visualizzati i seguenti dettagli relativi all'errore di associazione selezionato:</span><span class="sxs-lookup"><span data-stu-id="c3280-129">The tool displays the following details about the selected bind failure:</span></span>  
   
-    -   Causa specifica dell'errore, ad esempio irreperibilità del file o versioni non corrispondenti.  
+    -   <span data-ttu-id="c3280-130">Causa specifica dell'errore, ad esempio irreperibilità del file o versioni non corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="c3280-130">The specific reason the bind failed, such as "file not found" or "version mismatch".</span></span>  
   
-    -   Informazioni sull'applicazione con cui è stata avviata l'associazione, inclusi il nome, la directory radice dell'applicazione (AppBase) e una descrizione del percorso di ricerca privato, se presente.  
+    -   <span data-ttu-id="c3280-131">Informazioni sull'applicazione con cui è stata avviata l'associazione, inclusi il nome, la directory radice dell'applicazione (AppBase) e una descrizione del percorso di ricerca privato, se presente.</span><span class="sxs-lookup"><span data-stu-id="c3280-131">Information about the application that initiated the bind, including its name, the application's root directory (AppBase), and a description of the private search path, if there is one.</span></span>  
   
-    -   Identità dell'assembly cercato.  
+    -   <span data-ttu-id="c3280-132">Identità dell'assembly cercato.</span><span class="sxs-lookup"><span data-stu-id="c3280-132">The identity of the assembly the tool is looking for.</span></span>  
   
-    -   Descrizione dei criteri di controllo delle versioni applicati a livello di applicazione, editore o amministratore.  
+    -   <span data-ttu-id="c3280-133">Descrizione dei criteri di controllo delle versioni applicati a livello di applicazione, editore o amministratore.</span><span class="sxs-lookup"><span data-stu-id="c3280-133">A description of any Application, Publisher, or Administrator version policies that have been applied.</span></span>  
   
-    -   Provenienza o meno dell'assembly dalla [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).  
+    -   <span data-ttu-id="c3280-134">Provenienza o meno dell'assembly dalla [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).</span><span class="sxs-lookup"><span data-stu-id="c3280-134">Whether the assembly was found in the [global assembly cache](../../../docs/framework/app-domains/gac.md).</span></span>  
   
-    -   Elenco di tutti gli URL di sondaggio.  
+    -   <span data-ttu-id="c3280-135">Elenco di tutti gli URL di sondaggio.</span><span class="sxs-lookup"><span data-stu-id="c3280-135">A list of all probing URLs.</span></span>  
   
- Nell'esempio seguente viene illustrata una voce di log in cui sono visualizzate informazioni dettagliate su un'associazione di assembly non riuscita.  
+ <span data-ttu-id="c3280-136">Nell'esempio seguente viene illustrata una voce di log in cui sono visualizzate informazioni dettagliate su un'associazione di assembly non riuscita.</span><span class="sxs-lookup"><span data-stu-id="c3280-136">The following sample log entry shows detailed information about a failed assembly bind.</span></span>  
   
 ```  
 *** Assembly Binder Log Entry  (3/5/2007 @ 12:54:20 PM) ***  
@@ -112,36 +112,36 @@ LOG: Attempting download of new URL file:///C:/Program Files/Microsoft.NET/Frame
 LOG: All probing URLs attempted and failed.  
 ```  
   
-### <a name="to-delete-a-single-entry-from-the-log"></a>Per eliminare una singola voce dal log  
+### <a name="to-delete-a-single-entry-from-the-log"></a><span data-ttu-id="c3280-137">Per eliminare una singola voce dal log</span><span class="sxs-lookup"><span data-stu-id="c3280-137">To delete a single entry from the log</span></span>  
   
-1.  Selezionare una voce nel visualizzatore.  
+1.  <span data-ttu-id="c3280-138">Selezionare una voce nel visualizzatore.</span><span class="sxs-lookup"><span data-stu-id="c3280-138">Select an entry in the viewer.</span></span>  
   
-2.  Fare clic sul pulsante **Elimina voce**.  
+2.  <span data-ttu-id="c3280-139">Fare clic sul pulsante **Elimina voce**.</span><span class="sxs-lookup"><span data-stu-id="c3280-139">Click the **Delete Entry** button.</span></span>  
   
-### <a name="to-delete-all-entries-from-the-log"></a>Per eliminare tutte le voci dal log  
+### <a name="to-delete-all-entries-from-the-log"></a><span data-ttu-id="c3280-140">Per eliminare tutte le voci dal log</span><span class="sxs-lookup"><span data-stu-id="c3280-140">To delete all entries from the log</span></span>  
   
--   Fare clic sul pulsante **Elimina tutto**.  
+-   <span data-ttu-id="c3280-141">Fare clic sul pulsante **Elimina tutto**.</span><span class="sxs-lookup"><span data-stu-id="c3280-141">Click the **Delete All** button.</span></span>  
   
-### <a name="to-refresh-the-user-interface"></a>Per aggiornare l'interfaccia utente  
+### <a name="to-refresh-the-user-interface"></a><span data-ttu-id="c3280-142">Per aggiornare l'interfaccia utente</span><span class="sxs-lookup"><span data-stu-id="c3280-142">To refresh the user interface</span></span>  
   
--   Fare clic sul pulsante **Aggiorna**. Il visualizzatore non rileva automaticamente le nuove voci di log mentre è in esecuzione. Per visualizzarle è necessario scegliere il pulsante **Aggiorna**.  
+-   <span data-ttu-id="c3280-143">Fare clic sul pulsante **Aggiorna**.</span><span class="sxs-lookup"><span data-stu-id="c3280-143">Click the **Refresh** button.</span></span> <span data-ttu-id="c3280-144">Il visualizzatore non rileva automaticamente le nuove voci di log mentre è in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="c3280-144">The viewer does not automatically detect new log entries while it is running.</span></span> <span data-ttu-id="c3280-145">Per visualizzarle è necessario scegliere il pulsante **Aggiorna**.</span><span class="sxs-lookup"><span data-stu-id="c3280-145">You must use the **Refresh** button to display them.</span></span>  
   
-### <a name="to-change-the-log-settings"></a>Per modificare le impostazioni di log  
+### <a name="to-change-the-log-settings"></a><span data-ttu-id="c3280-146">Per modificare le impostazioni di log</span><span class="sxs-lookup"><span data-stu-id="c3280-146">To change the log settings</span></span>  
   
--   Scegliere il pulsante **Impostazioni** per aprire la finestra di dialogo **Impostazioni log**.  
+-   <span data-ttu-id="c3280-147">Scegliere il pulsante **Impostazioni** per aprire la finestra di dialogo **Impostazioni log**.</span><span class="sxs-lookup"><span data-stu-id="c3280-147">Click the **Settings** button to open the **Log Settings** dialog.</span></span>  
   
-### <a name="to-view-the-about-dialog"></a>Per visualizzare la finestra di dialogo Informazioni su  
+### <a name="to-view-the-about-dialog"></a><span data-ttu-id="c3280-148">Per visualizzare la finestra di dialogo Informazioni su</span><span class="sxs-lookup"><span data-stu-id="c3280-148">To view the About dialog</span></span>  
   
--   Fare clic sul pulsante **Informazioni su**.  
+-   <span data-ttu-id="c3280-149">Fare clic sul pulsante **Informazioni su**.</span><span class="sxs-lookup"><span data-stu-id="c3280-149">Click the **About** button.</span></span>  
   
-## <a name="binding-logs-for-native-images"></a>Log di associazioni per immagini native  
- Per impostazione predefinita, Fuslogvw.exe registra le normali richieste di associazione di assembly. In alternativa, è possibile registrare le associazioni di assembly per le immagini native create usando [Ngen.exe (generatore di immagini native)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+## <a name="binding-logs-for-native-images"></a><span data-ttu-id="c3280-150">Log di associazioni per immagini native</span><span class="sxs-lookup"><span data-stu-id="c3280-150">Binding Logs for Native Images</span></span>  
+ <span data-ttu-id="c3280-151">Per impostazione predefinita, Fuslogvw.exe registra le normali richieste di associazione di assembly.</span><span class="sxs-lookup"><span data-stu-id="c3280-151">By default, Fuslogvw.exe logs normal assembly bind requests.</span></span> <span data-ttu-id="c3280-152">In alternativa, è possibile registrare le associazioni di assembly per le immagini native create usando [Ngen.exe (generatore di immagini native)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).</span><span class="sxs-lookup"><span data-stu-id="c3280-152">Alternatively, you can log assembly binds for native images that were created using the [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).</span></span>  
   
-#### <a name="to-log-assembly-binds-for-native-images"></a>Per registrare le associazioni di assembly per le immagini native  
+#### <a name="to-log-assembly-binds-for-native-images"></a><span data-ttu-id="c3280-153">Per registrare le associazioni di assembly per le immagini native</span><span class="sxs-lookup"><span data-stu-id="c3280-153">To log assembly binds for native images</span></span>  
   
--   Nel gruppo **Categorie log**, selezionare il pulsante di opzione **Immagini native**.  
+-   <span data-ttu-id="c3280-154">Nel gruppo **Categorie log**, selezionare il pulsante di opzione **Immagini native**.</span><span class="sxs-lookup"><span data-stu-id="c3280-154">In the **Log Categories** group, select the **Native Images** option button.</span></span>  
   
- Nel log seguente viene riportato un errore causato da una dipendenza inesistente nel momento in cui è stata creata l'immagine nativa per l'applicazione. Se le dipendenze in fase di esecuzione differiscono dalle dipendenze durante l'esecuzione di Ngen.exe, l'associazione a un'immagine nativa non è consentita.  
+ <span data-ttu-id="c3280-155">Nel log seguente viene riportato un errore causato da una dipendenza inesistente nel momento in cui è stata creata l'immagine nativa per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="c3280-155">The following log shows a failure caused by a dependency that did not exist when the native image was created for the application.</span></span> <span data-ttu-id="c3280-156">Se le dipendenze in fase di esecuzione differiscono dalle dipendenze durante l'esecuzione di Ngen.exe, l'associazione a un'immagine nativa non è consentita.</span><span class="sxs-lookup"><span data-stu-id="c3280-156">If the dependencies at run time differ from the dependencies when Ngen.exe is run, binding to a native image is not allowed.</span></span>  
   
 ```  
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:22:07 PM) ***  
@@ -165,7 +165,7 @@ WRN: No matching native image found.
 LOG: Bind to native image assembly did not succeed. Use IL image.  
 ```  
   
- Nel log seguente viene riportato un errore di associazione dell'immagine nativa che si è verificato perché le impostazioni di sicurezza del computer nel momento in cui è stata eseguita l'applicazione erano diverse da quelle impostate al momento della creazione dell'immagine nativa.  
+ <span data-ttu-id="c3280-157">Nel log seguente viene riportato un errore di associazione dell'immagine nativa che si è verificato perché le impostazioni di sicurezza del computer nel momento in cui è stata eseguita l'applicazione erano diverse da quelle impostate al momento della creazione dell'immagine nativa.</span><span class="sxs-lookup"><span data-stu-id="c3280-157">The following log shows a native image binding failure that occurred because the security settings on the computer when the application was run were different from the security settings at the time the native image was created.</span></span>  
   
 ```  
 *** Assembly Binder Log Entry  (12/8/2006 @ 5:29:09 PM) ***  
@@ -195,58 +195,58 @@ Rejecting native image because it failed the security check. The assembly's perm
 Discarding native image.  
 ```  
   
-## <a name="the-log-settings-dialog"></a>Finestra di dialogo Impostazioni log  
- È possibile usare la finestra di dialogo **Impostazioni log** per effettuare le seguenti operazioni.  
+## <a name="the-log-settings-dialog"></a><span data-ttu-id="c3280-158">Finestra di dialogo Impostazioni log</span><span class="sxs-lookup"><span data-stu-id="c3280-158">The Log Settings Dialog</span></span>  
+ <span data-ttu-id="c3280-159">È possibile usare la finestra di dialogo **Impostazioni log** per effettuare le seguenti operazioni.</span><span class="sxs-lookup"><span data-stu-id="c3280-159">You can use the **Log Settings** dialog to perform the following actions.</span></span>  
   
-#### <a name="to-disable-logging"></a>Per disabilitare la registrazione  
+#### <a name="to-disable-logging"></a><span data-ttu-id="c3280-160">Per disabilitare la registrazione</span><span class="sxs-lookup"><span data-stu-id="c3280-160">To disable logging</span></span>  
   
--   Selezionare il pulsante di opzione **Log disattivato**.  Questa opzione è selezionata per impostazione predefinita.  
+-   <span data-ttu-id="c3280-161">Selezionare il pulsante di opzione **Log disattivato**.</span><span class="sxs-lookup"><span data-stu-id="c3280-161">Select the **Log disabled** option button.</span></span>  <span data-ttu-id="c3280-162">Questa opzione è selezionata per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="c3280-162">Note that this option is selected by default.</span></span>  
   
-#### <a name="to-log-assembly-binds-in-exceptions"></a>Per registrare le associazioni di assembly in eccezioni  
+#### <a name="to-log-assembly-binds-in-exceptions"></a><span data-ttu-id="c3280-163">Per registrare le associazioni di assembly in eccezioni</span><span class="sxs-lookup"><span data-stu-id="c3280-163">To log assembly binds in exceptions</span></span>  
   
--   Selezionare il pulsante di opzione **Registra nel testo dell'eccezione**. Solo le informazioni meno dettagliate del log Fusion vengono registrate nel testo dell'eccezione. Per visualizzare le informazioni complete, usare una delle altre impostazioni.  
+-   <span data-ttu-id="c3280-164">Selezionare il pulsante di opzione **Registra nel testo dell'eccezione**.</span><span class="sxs-lookup"><span data-stu-id="c3280-164">Select the **Log in exception text** option button.</span></span> <span data-ttu-id="c3280-165">Solo le informazioni meno dettagliate del log Fusion vengono registrate nel testo dell'eccezione.</span><span class="sxs-lookup"><span data-stu-id="c3280-165">Only the least detailed fusion log information is logged in exception text.</span></span> <span data-ttu-id="c3280-166">Per visualizzare le informazioni complete, usare una delle altre impostazioni.</span><span class="sxs-lookup"><span data-stu-id="c3280-166">To view full information, use one of the other settings.</span></span>  
   
-     Vedere la nota Importante relativa agli assembly caricati come indipendenti dal dominio.  
+     <span data-ttu-id="c3280-167">Vedere la nota Importante relativa agli assembly caricati come indipendenti dal dominio.</span><span class="sxs-lookup"><span data-stu-id="c3280-167">See the Important note regarding assemblies that are loaded as domain neutral.</span></span>  
   
-#### <a name="to-log-assembly-bind-failures"></a>Per registrare gli errori di associazione di assembly  
+#### <a name="to-log-assembly-bind-failures"></a><span data-ttu-id="c3280-168">Per registrare gli errori di associazione di assembly</span><span class="sxs-lookup"><span data-stu-id="c3280-168">To log assembly bind failures</span></span>  
   
--   Selezionare il pulsante di opzione **Registra errori di associazione su disco**.  
+-   <span data-ttu-id="c3280-169">Selezionare il pulsante di opzione **Registra errori di associazione su disco**.</span><span class="sxs-lookup"><span data-stu-id="c3280-169">Select the **Log bind failures to disk** option button.</span></span>  
   
-     Vedere la nota Importante relativa agli assembly caricati come indipendenti dal dominio.  
+     <span data-ttu-id="c3280-170">Vedere la nota Importante relativa agli assembly caricati come indipendenti dal dominio.</span><span class="sxs-lookup"><span data-stu-id="c3280-170">See the Important note regarding assemblies that are loaded as domain neutral.</span></span>  
   
-#### <a name="to-log-all-assembly-binds"></a>Per registrare tutte le associazioni di assembly  
+#### <a name="to-log-all-assembly-binds"></a><span data-ttu-id="c3280-171">Per registrare tutte le associazioni di assembly</span><span class="sxs-lookup"><span data-stu-id="c3280-171">To log all assembly binds</span></span>  
   
--   Selezionare il pulsante di opzione **Registra tutte le associazioni su disco**.  
+-   <span data-ttu-id="c3280-172">Selezionare il pulsante di opzione **Registra tutte le associazioni su disco**.</span><span class="sxs-lookup"><span data-stu-id="c3280-172">Select the **Log all binds to disk** option button.</span></span>  
   
-     Vedere la nota Importante relativa agli assembly caricati come indipendenti dal dominio.  
+     <span data-ttu-id="c3280-173">Vedere la nota Importante relativa agli assembly caricati come indipendenti dal dominio.</span><span class="sxs-lookup"><span data-stu-id="c3280-173">See the Important note regarding assemblies that are loaded as domain neutral.</span></span>  
   
 > [!IMPORTANT]
->  Quando un assembly viene caricato come indipendente dal dominio, ad esempio impostando la proprietà <xref:System.AppDomainSetup.LoaderOptimization%2A> su <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> o <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>, l'abilitazione della registrazione può determinare una perdita di memoria in alcuni casi. Ciò può verificarsi se si crea una voce di log quando in un dominio applicazione viene caricato un modulo indipendente dal dominio e successivamente il dominio applicazione viene scaricato. È possibile che la voce di log non venga rilasciata fino alla fine del processo. Alcuni debugger prevedono l'abilitazione automatica della registrazione.  
+>  <span data-ttu-id="c3280-174">Quando un assembly viene caricato come indipendente dal dominio, ad esempio impostando la proprietà <xref:System.AppDomainSetup.LoaderOptimization%2A> su <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> o <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>, l'abilitazione della registrazione può determinare una perdita di memoria in alcuni casi.</span><span class="sxs-lookup"><span data-stu-id="c3280-174">When an assembly is loaded as domain neutral, for example by setting the <xref:System.AppDomainSetup.LoaderOptimization%2A> property to <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> or <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>, turning on logging might leak memory in some cases.</span></span> <span data-ttu-id="c3280-175">Ciò può verificarsi se si crea una voce di log quando in un dominio applicazione viene caricato un modulo indipendente dal dominio e successivamente il dominio applicazione viene scaricato.</span><span class="sxs-lookup"><span data-stu-id="c3280-175">This can happen if a log entry is made when a domain-neutral module is loaded into an application domain, and later the application domain is unloaded.</span></span> <span data-ttu-id="c3280-176">È possibile che la voce di log non venga rilasciata fino alla fine del processo.</span><span class="sxs-lookup"><span data-stu-id="c3280-176">The log entry might not be released until the process ends.</span></span> <span data-ttu-id="c3280-177">Alcuni debugger prevedono l'abilitazione automatica della registrazione.</span><span class="sxs-lookup"><span data-stu-id="c3280-177">Some debuggers automatically turn on logging.</span></span>  
   
-#### <a name="to-enable-a-custom-log-path"></a>Per impostare un percorso di log personalizzato  
+#### <a name="to-enable-a-custom-log-path"></a><span data-ttu-id="c3280-178">Per impostare un percorso di log personalizzato</span><span class="sxs-lookup"><span data-stu-id="c3280-178">To enable a custom log path</span></span>  
   
-1.  Selezionare il pulsante di opzione **Attiva percorso personalizzato log**.  
+1.  <span data-ttu-id="c3280-179">Selezionare il pulsante di opzione **Attiva percorso personalizzato log**.</span><span class="sxs-lookup"><span data-stu-id="c3280-179">Select the **Enable custom log path** option button.</span></span>  
   
-2.  Immettere il percorso nella casella di testo **Percorso personalizzato log**.  
+2.  <span data-ttu-id="c3280-180">Immettere il percorso nella casella di testo **Percorso personalizzato log**.</span><span class="sxs-lookup"><span data-stu-id="c3280-180">Enter the path into the **Custom log path** text box.</span></span>  
   
 > [!NOTE]
->  Per l'archiviazione del log associazioni del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) viene usata la cache di Internet Explorer. In seguito al danneggiamento occasionale della cache di Internet Explorer, è possibile che nella finestra di visualizzazione del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) non siano visualizzati i nuovi log associazioni. In tali circostanze l'infrastruttura di associazione di .NET (fusion) non è in grado di eseguire operazioni di scrittura o lettura dal log associazioni. Questo problema non viene rilevato se si usa un percorso di log personalizzato.  Per correggere il problema che ha causato il danneggiamento e riattivare la visualizzazione dei log associazioni in fusion, cancellare la cache di Internet Explorer eliminando i file Internet temporanei nella finestra di dialogo Opzioni Internet del programma.  
+>  <span data-ttu-id="c3280-181">Per l'archiviazione del log associazioni del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) viene usata la cache di Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="c3280-181">The [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) uses the Internet Explorer (IE) cache to store its binding log.</span></span> <span data-ttu-id="c3280-182">In seguito al danneggiamento occasionale della cache di Internet Explorer, è possibile che nella finestra di visualizzazione del [visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) non siano visualizzati i nuovi log associazioni.</span><span class="sxs-lookup"><span data-stu-id="c3280-182">Due to occasional corruption in the IE cache, the [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) can sometimes stop showing new binding logs in the viewing window.</span></span> <span data-ttu-id="c3280-183">In tali circostanze l'infrastruttura di associazione di .NET (fusion) non è in grado di eseguire operazioni di scrittura o lettura dal log associazioni.</span><span class="sxs-lookup"><span data-stu-id="c3280-183">As a result of this corruption, the .NET binding infrastructure (fusion) cannot write to or read from the binding log.</span></span> <span data-ttu-id="c3280-184">Questo problema non viene rilevato se si usa un percorso di log personalizzato.  Per correggere il problema che ha causato il danneggiamento e riattivare la visualizzazione dei log associazioni in fusion, cancellare la cache di Internet Explorer eliminando i file Internet temporanei nella finestra di dialogo Opzioni Internet del programma.</span><span class="sxs-lookup"><span data-stu-id="c3280-184">(This issue is not encountered if you use a custom log path.)  To fix the corruption and allow fusion to show binding logs again, clear the IE cache by deleting temporary internet files from within the IE Internet Options dialog.</span></span>  
 >   
->  Se l'applicazione non gestita ospita Common Language Runtime mediante l'implementazione delle interfacce `IHostAssemblyManager` e `IHostAssemblyStore`, le voci di logo non possono essere archiviate nella cache wininet.  Per visualizzare le voci di log di host personalizzati che implementano tali interfacce, è necessario specificare un percorso alternativo per il log.  
+>  <span data-ttu-id="c3280-185">Se l'applicazione non gestita ospita Common Language Runtime mediante l'implementazione delle interfacce `IHostAssemblyManager` e `IHostAssemblyStore`, le voci di logo non possono essere archiviate nella cache wininet.</span><span class="sxs-lookup"><span data-stu-id="c3280-185">If your unmanaged application hosts the common language runtime by implementing the `IHostAssemblyManager` and `IHostAssemblyStore` interfaces, log entries can't be stored in the wininet cache.</span></span>  <span data-ttu-id="c3280-186">Per visualizzare le voci di log di host personalizzati che implementano tali interfacce, è necessario specificare un percorso alternativo per il log.</span><span class="sxs-lookup"><span data-stu-id="c3280-186">To view log entries for custom hosts that implement these interfaces, you must specify an alternate log path.</span></span>  
   
-#### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Per abilitare la registrazione per le app eseguite nel contenitore delle app Windows  
+#### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a><span data-ttu-id="c3280-187">Per abilitare la registrazione per le app eseguite nel contenitore delle app Windows</span><span class="sxs-lookup"><span data-stu-id="c3280-187">To enable logging for apps running in the Windows app container</span></span>  
   
-1.  Abilitare un percorso di log personalizzato come descritto nella procedura precedente. Per impostazione predefinita, le app eseguite nel contenitore delle app Windows dispongono di accesso limitato al disco rigido. La directory specificata disporrà di accesso in lettura/scrittura su tutte le app nel contenitore.  
+1.  <span data-ttu-id="c3280-188">Abilitare un percorso di log personalizzato come descritto nella procedura precedente.</span><span class="sxs-lookup"><span data-stu-id="c3280-188">Enable a custom log path, as described in the previous procedure.</span></span> <span data-ttu-id="c3280-189">Per impostazione predefinita, le app eseguite nel contenitore delle app Windows dispongono di accesso limitato al disco rigido.</span><span class="sxs-lookup"><span data-stu-id="c3280-189">By default, apps that are running in the Windows app container have limited access to the hard disk.</span></span> <span data-ttu-id="c3280-190">La directory specificata disporrà di accesso in lettura/scrittura su tutte le app nel contenitore.</span><span class="sxs-lookup"><span data-stu-id="c3280-190">The directory you specify will have read/write access for all apps in the app container.</span></span>  
   
-2.  Selezionare la casella di controllo **Abilita registrazione immersiva**.  
+2.  <span data-ttu-id="c3280-191">Selezionare la casella di controllo **Abilita registrazione immersiva**.</span><span class="sxs-lookup"><span data-stu-id="c3280-191">Select the **Enable immersive logging** check box.</span></span>  
   
     > [!NOTE]
-    >  Questa casella è abilitata solo in Windows 8 o versioni successive.  
+    >  <span data-ttu-id="c3280-192">Questa casella è abilitata solo in Windows 8 o versioni successive.</span><span class="sxs-lookup"><span data-stu-id="c3280-192">This box is enabled only on Windows 8 or later.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.TypeLoadException>   
- [Strumenti](../../../docs/framework/tools/index.md)   
- [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)   
- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a><span data-ttu-id="c3280-193">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c3280-193">See Also</span></span>  
+ <span data-ttu-id="c3280-194"><xref:System.TypeLoadException></span><span class="sxs-lookup"><span data-stu-id="c3280-194"><xref:System.TypeLoadException></span></span>   
+ <span data-ttu-id="c3280-195">[Strumenti](../../../docs/framework/tools/index.md) </span><span class="sxs-lookup"><span data-stu-id="c3280-195">[Tools](../../../docs/framework/tools/index.md) </span></span>  
+ <span data-ttu-id="c3280-196">[Global Assembly Cache](../../../docs/framework/app-domains/gac.md) </span><span class="sxs-lookup"><span data-stu-id="c3280-196">[Global Assembly Cache](../../../docs/framework/app-domains/gac.md) </span></span>  
+ <span data-ttu-id="c3280-197">[Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) </span><span class="sxs-lookup"><span data-stu-id="c3280-197">[How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) </span></span>  
+ [<span data-ttu-id="c3280-198">Prompt dei comandi</span><span class="sxs-lookup"><span data-stu-id="c3280-198">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 

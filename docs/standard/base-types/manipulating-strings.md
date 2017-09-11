@@ -1,43 +1,41 @@
 ---
-title: "Modifica di stringhe in .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "modifica di stringhe"
-  - "stringhe [.NET Framework], modifica"
-ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+title: Modifica di stringhe
+description: Modifica di stringhe
+keywords: .NET, .NET Core
+author: stevehoag
+ms.author: shoag
+ms.date: 07/22/2016
+ms.topic: article
+ms.prod: .net
+ms.technology: dotnet-standard
+ms.devlang: dotnet
+ms.assetid: da3c277e-b06e-48bd-ae1f-1e7e4240b93e
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 0ad6a7ef456e7967b3c23e58cd7afa97a4b786de
+ms.contentlocale: it-it
+ms.lasthandoff: 03/02/2017
+
 ---
-# Modifica di stringhe in .NET Framework
-.NET Framework fornisce un insieme completo di routine che consentono di creare, confrontare e modificare stringhe in modo efficace e analizzare rapidamente elevate quantità di testo e dati per cercare, rimuovere e sostituire testo corrispondente a criteri specifici.  
-  
-## In questa sezione  
- [Procedure consigliate per l'utilizzo di stringhe](../../../docs/standard/base-types/best-practices-strings.md)  
- Vengono analizzati i metodi di ordinamento, confronto e gestione di maiuscole e minuscole per le stringhe in .NET Framework e vengono offerti suggerimenti per la selezione di un metodo di gestione delle stringhe.  
-  
- [Espressioni regolari di .NET Framework](../../../docs/standard/base-types/regular-expressions.md)  
- Vengono fornite informazioni dettagliate sulle espressioni regolari di .NET Framework, inclusi gli elementi del linguaggio, il comportamento delle espressioni regolari ed esempi.  
-  
- [Operazioni di base su stringhe](../../../docs/standard/base-types/basic-string-operations.md)  
- Vengono descritte operazioni di stringa fornite dalle classi <xref:System.String?displayProperty=fullName> e <xref:System.Text.StringBuilder?displayProperty=fullName>, inclusi la creazione di nuove stringhe da matrici di byte, il confronto dei valori delle stringhe e la modifica di stringhe esistenti.  
-  
-## Sezioni correlate  
- [Conversione di tipi in .NET Framework](../../../docs/standard/base-types/type-conversion.md)  
- Vengono illustrate le tecniche e le regole utilizzate per convertire i tipi tramite .NET Framework.  
-  
- [Formattazione di tipi](../../../docs/standard/base-types/formatting-types.md)  
- Viene illustrato come utilizzare la libreria di classi base per implementare la formattazione, come formattare tipi numerici e tipi di stringa e come eseguire la formattazione per determinate impostazioni cultura.  
-  
- [Analisi di stringhe](../../../docs/standard/base-types/parsing-strings.md)  
- Viene descritta l'inizializzazione di oggetti sui valori descritti dalle rappresentazioni in forma di stringa di tali oggetti.  L'analisi è l'operazione contraria alla formattazione.
+
+# <a name="manipulating-strings"></a><span data-ttu-id="385b1-104">Modifica di stringhe</span><span class="sxs-lookup"><span data-stu-id="385b1-104">Manipulating strings</span></span>
+
+<span data-ttu-id="385b1-105">.NET offre un insieme completo di routine che consentono di creare, confrontare e modificare stringhe in modo efficiente, nonché di analizzare rapidamente elevate quantità di testo e dati per cercare, rimuovere e sostituire pattern di testo.</span><span class="sxs-lookup"><span data-stu-id="385b1-105">.NET provides an extensive set of routines that enable you to efficiently create, compare, and modify strings as well as rapidly parse large amounts of text and data to search for, remove, and replace text patterns.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="385b1-106">In questa sezione</span><span class="sxs-lookup"><span data-stu-id="385b1-106">In this section</span></span>
+
+<span data-ttu-id="385b1-107">[Procedure consigliate per l'uso delle stringhe](best-practices-strings.md): esamina i metodi di ordinamento, confronto e combinazione di maiuscole e minuscole delle stringhe in .NET e offre suggerimenti per la selezione di un metodo di gestione delle stringhe.</span><span class="sxs-lookup"><span data-stu-id="385b1-107">[Best practices for using strings](best-practices-strings.md)  - Examines string-sorting, comparison, and casing methods in .NET, and provides recommendations for selecting a string-handling method .</span></span> 
+
+<span data-ttu-id="385b1-108">[Espressioni regolari](regular-expressions.md): include informazioni dettagliate sulle espressioni regolari di .NET, tra cui gli elementi del linguaggio, il comportamento delle espressioni regolari, oltre ad esempi.</span><span class="sxs-lookup"><span data-stu-id="385b1-108">[Regular expressions](regular-expressions.md) - Provides detailed information about .NET regular expressions, including language elements, regular expression behavior, and examples.</span></span>
+
+<span data-ttu-id="385b1-109">[Operazioni di base sulle stringhe](basic-string-operations.md): descrive le operazioni di stringa fornite dalle classi @System.String e @System.Text.StringBuilder, tra cui la creazione di nuove stringhe partendo da matrici di byte, il confronto dei valori delle stringhe e la modifica di stringhe esistenti.</span><span class="sxs-lookup"><span data-stu-id="385b1-109">[Basic string operations](basic-string-operations.md) - Describes string operations provided by the @System.String and @System.Text.StringBuilder classes, including creating new strings from arrays of bytes, comparing string values, and modifying existing strings.</span></span>
+
+<span data-ttu-id="385b1-110">[Codifica di caratteri in .NET](character-encoding.md): descrive come codificare e decodificare i formati carattere come Unicode.</span><span class="sxs-lookup"><span data-stu-id="385b1-110">[Character encoding in .NET](character-encoding.md) - Describes how to encode and decode character formats such as Unicode.</span></span>
+
+<span data-ttu-id="385b1-111">[Conversione di tipi](type-conversion.md): viene descritto come convertire un tipo in un altro.</span><span class="sxs-lookup"><span data-stu-id="385b1-111">[Type conversion](type-conversion.md) - Describes how to convert from one type to another.</span></span>
+
+<span data-ttu-id="385b1-112">[Formattazione di tipi](formatting-types.md): viene descritto come formattare le stringhe usando gli specificatori del formato stringa.</span><span class="sxs-lookup"><span data-stu-id="385b1-112">[Formatting types](formatting-types.md) - Describes how to format strings using the string format specifiers.</span></span>
+
+<span data-ttu-id="385b1-113">[Analisi di stringhe](parsing-strings.md): descrive come eseguire la conversione di stringhe in tipi.</span><span class="sxs-lookup"><span data-stu-id="385b1-113">[Parsing strings](parsing-strings.md) - Describes how to convert strings into types.</span></span>
+
+

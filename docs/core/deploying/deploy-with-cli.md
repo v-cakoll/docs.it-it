@@ -17,65 +17,65 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Distribuire app .NET Core con strumenti dell'interfaccia della riga di comando (CLI)
+# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a><span data-ttu-id="bb101-104">Distribuire app .NET Core con strumenti dell'interfaccia della riga di comando (CLI)</span><span class="sxs-lookup"><span data-stu-id="bb101-104">Deploying .NET Core apps with command-line interface (CLI) tools</span></span>
 
-È possibile distribuire un'app .NET Core come *distribuzione dipendente dal framework*, che include i file binari dell'applicazione ma dipende dalla presenza di .NET Core nel sistema di destinazione, oppure come *distribuzione autonoma*, che include l'applicazione e i file binari di .NET Core. Per una panoramica, vedere [Distribuzione di applicazioni .NET Core](index.md).
+<span data-ttu-id="bb101-105">È possibile distribuire un'app .NET Core come *distribuzione dipendente dal framework*, che include i file binari dell'applicazione ma dipende dalla presenza di .NET Core nel sistema di destinazione, oppure come *distribuzione autonoma*, che include l'applicazione e i file binari di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="bb101-105">You can deploy a .NET Core application either as a *framework-dependent deployment*, which includes your application binaries but depends on the presence of .NET Core on the target system, or as a *self-contained deployment*, which includes both your application and the .NET Core binaries.</span></span> <span data-ttu-id="bb101-106">Per una panoramica, vedere [Distribuzione di applicazioni .NET Core](index.md).</span><span class="sxs-lookup"><span data-stu-id="bb101-106">For an overview, see [.NET Core Application Deployment](index.md).</span></span>
 
-Le sezioni seguenti illustrano come usare gli [strumenti dell'interfaccia della riga di comando .NET Core](../tools/index.md) per creare i tipi di distribuzione seguenti:
+<span data-ttu-id="bb101-107">Le sezioni seguenti illustrano come usare gli [strumenti dell'interfaccia della riga di comando .NET Core](../tools/index.md) per creare i tipi di distribuzione seguenti:</span><span class="sxs-lookup"><span data-stu-id="bb101-107">The following sections show how to use [.NET Core command-line interface tools](../tools/index.md) to create the following kinds of deployments:</span></span>
 
-- Distribuzione dipendente dal framework
-- Distribuzione dipendente dal framework con dipendenze di terze parti
-- Distribuzione autonoma
-- Distribuzione autonoma con dipendenze di terze parti
+- <span data-ttu-id="bb101-108">Distribuzione dipendente dal framework</span><span class="sxs-lookup"><span data-stu-id="bb101-108">Framework-dependent deployment</span></span>
+- <span data-ttu-id="bb101-109">Distribuzione dipendente dal framework con dipendenze di terze parti</span><span class="sxs-lookup"><span data-stu-id="bb101-109">Framework-dependent deployment with third-party dependencies</span></span>
+- <span data-ttu-id="bb101-110">Distribuzione autonoma</span><span class="sxs-lookup"><span data-stu-id="bb101-110">Self-contained deployment</span></span>
+- <span data-ttu-id="bb101-111">Distribuzione autonoma con dipendenze di terze parti</span><span class="sxs-lookup"><span data-stu-id="bb101-111">Self-contained deployment with third-party dependencies</span></span>
 
-Con la riga di comando è possibile usare l'editor di codice desiderato. Se l'editor di codice è [Visual Studio Code](https://code.visualstudio.com) è possibile aprire una console dei comandi all'interno dell'ambiente di Visual Studio Code selezionando **Visualizza** > **Terminale integrato**.
+<span data-ttu-id="bb101-112">Con la riga di comando è possibile usare l'editor di codice desiderato.</span><span class="sxs-lookup"><span data-stu-id="bb101-112">When working from the command line, you can use a program editor of your choice.</span></span> <span data-ttu-id="bb101-113">Se l'editor di codice è [Visual Studio Code](https://code.visualstudio.com) è possibile aprire una console dei comandi all'interno dell'ambiente di Visual Studio Code selezionando **Visualizza** > **Terminale integrato**.</span><span class="sxs-lookup"><span data-stu-id="bb101-113">If your program editor is [Visual Studio Code](https://code.visualstudio.com), you can open a command console inside your Visual Studio Code environment by selecting **View** > **Integrated Terminal**.</span></span>
 
-## <a name="framework-dependent-deployment"></a>Distribuzione dipendente dal framework
+## <a name="framework-dependent-deployment"></a><span data-ttu-id="bb101-114">Distribuzione dipendente dal framework</span><span class="sxs-lookup"><span data-stu-id="bb101-114">Framework-dependent deployment</span></span>
 
-Una distribuzione dipendente dal framework senza dipendenze di terze parti richiede la compilazione, il testing e la pubblicazione dell'app. Il processo viene illustrato da un semplice esempio scritto in C#. 
+<span data-ttu-id="bb101-115">Una distribuzione dipendente dal framework senza dipendenze di terze parti richiede la compilazione, il testing e la pubblicazione dell'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-115">Deploying a framework-dependent deployment with no third-party dependencies simply involves building, testing, and publishing the app.</span></span> <span data-ttu-id="bb101-116">Il processo viene illustrato da un semplice esempio scritto in C#.</span><span class="sxs-lookup"><span data-stu-id="bb101-116">A simple example written in C# illustrates the process.</span></span> 
 
-1. Creare una directory del progetto.
+1. <span data-ttu-id="bb101-117">Creare una directory del progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-117">Create a project directory.</span></span>
 
-   Creare una directory per il progetto e impostarla come directory corrente.
+   <span data-ttu-id="bb101-118">Creare una directory per il progetto e impostarla come directory corrente.</span><span class="sxs-lookup"><span data-stu-id="bb101-118">Create a directory for your project and make it your current directory.</span></span>
 
-1. Creare il progetto.
+1. <span data-ttu-id="bb101-119">Creare il progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-119">Create the project.</span></span>
 
-   Nella riga di comando digitare [dotnet new console](../tools/dotnet-new.md) per creare un nuovo progetto console C# in tale directory.
+   <span data-ttu-id="bb101-120">Nella riga di comando digitare [dotnet new console](../tools/dotnet-new.md) per creare un nuovo progetto console C# in tale directory.</span><span class="sxs-lookup"><span data-stu-id="bb101-120">From the command line, type [dotnet new console](../tools/dotnet-new.md) to create a new C# console project in that directory.</span></span>
 
-1. Aggiungere il codice sorgente dell'applicazione.
+1. <span data-ttu-id="bb101-121">Aggiungere il codice sorgente dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="bb101-121">Add the application's source code.</span></span>
 
-   Aprire il file *Program.cs* nell'editor e sostituire il codice generato automaticamente con il codice seguente. Questo codice richiede all'utente di immettere del testo e visualizza le singole parole immesse dall'utente. Usa l'espressione regolare `\w+` per separare le parole nel testo di input.
+   <span data-ttu-id="bb101-122">Aprire il file *Program.cs* nell'editor e sostituire il codice generato automaticamente con il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="bb101-122">Open the *Program.cs* file in your editor and replace the auto-generated code with the following code.</span></span> <span data-ttu-id="bb101-123">Questo codice richiede all'utente di immettere del testo e visualizza le singole parole immesse dall'utente.</span><span class="sxs-lookup"><span data-stu-id="bb101-123">It prompts the user to enter text and displays the individual words entered by the user.</span></span> <span data-ttu-id="bb101-124">Usa l'espressione regolare `\w+` per separare le parole nel testo di input.</span><span class="sxs-lookup"><span data-stu-id="bb101-124">It uses the regular expression `\w+` to separate the words in the input text.</span></span>
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   <span data-ttu-id="bb101-125">[!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]</span><span class="sxs-lookup"><span data-stu-id="bb101-125">[!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]</span></span>
 
-1. Aggiornare le dipendenze e gli strumenti del progetto.
+1. <span data-ttu-id="bb101-126">Aggiornare le dipendenze e gli strumenti del progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-126">Update the project's dependencies and tools.</span></span>
  
-   Eseguire il comando [dotnet-restore](../tools/dotnet-restore.md) per ripristinare le dipendenze specificate nel progetto.
+   <span data-ttu-id="bb101-127">Eseguire il comando [dotnet-restore](../tools/dotnet-restore.md) per ripristinare le dipendenze specificate nel progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-127">Run the [dotnet restore](../tools/dotnet-restore.md) command to restore the dependencies specified in your project.</span></span>
 
-1. Creare una build di debug dell'app.
+1. <span data-ttu-id="bb101-128">Creare una build di debug dell'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-128">Create a Debug build of your app.</span></span>
 
-   Usare il comando [dotnet build](../tools/dotnet-build.md) per compilare l'applicazione o il comando [dotnet run](../tools/dotnet-run.md) per compilarla ed eseguirla.
+   <span data-ttu-id="bb101-129">Usare il comando [dotnet build](../tools/dotnet-build.md) per compilare l'applicazione o il comando [dotnet run](../tools/dotnet-run.md) per compilarla ed eseguirla.</span><span class="sxs-lookup"><span data-stu-id="bb101-129">Use the [dotnet build](../tools/dotnet-build.md) command to build your application or the [dotnet run](../tools/dotnet-run.md) command to build and run it.</span></span>
 
-1. Distribuire l'app.
+1. <span data-ttu-id="bb101-130">Distribuire l'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-130">Deploy your app.</span></span>
 
-   Dopo il debug e il test del programma, creare la distribuzione mediante il comando seguente:
+   <span data-ttu-id="bb101-131">Dopo il debug e il test del programma, creare la distribuzione mediante il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="bb101-131">After you've debugged and tested the program, create the deployment by using the following command:</span></span>
 
       ```console
       dotnet publish -f netcoreapp1.1 -c Release
       ```
-   In questo modo viene creata una versione di rilascio dell'app anziché una versione di debug. I file risultanti vengono inseriti in una directory *publish* in una sottodirectory della directory *bin* del progetto.
+   <span data-ttu-id="bb101-132">In questo modo viene creata una versione di rilascio dell'app anziché una versione di debug.</span><span class="sxs-lookup"><span data-stu-id="bb101-132">This creates a Release (rather than a Debug) version of your app.</span></span> <span data-ttu-id="bb101-133">I file risultanti vengono inseriti in una directory *publish* in una sottodirectory della directory *bin* del progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-133">The resulting files are placed in a directory named *publish* that's in a subdirectory of your project's *bin* directory.</span></span>
 
-Insieme ai file dell'applicazione, il processo di pubblicazione genera un file del database di programma (con estensione pdb) che contiene le informazioni di debug relative all'app. Il file è utile soprattutto per il debug delle eccezioni. È possibile scegliere di non distribuirlo con i file dell'applicazione. È tuttavia consigliabile salvarlo perché può risultare utile per il debug della build di rilascio dell'app.
+<span data-ttu-id="bb101-134">Insieme ai file dell'applicazione, il processo di pubblicazione genera un file del database di programma (con estensione pdb) che contiene le informazioni di debug relative all'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-134">Along with your application's files, the publishing process emits a program database (.pdb) file that contains debugging information about your app.</span></span> <span data-ttu-id="bb101-135">Il file è utile soprattutto per il debug delle eccezioni.</span><span class="sxs-lookup"><span data-stu-id="bb101-135">The file is useful primarily for debugging exceptions.</span></span> <span data-ttu-id="bb101-136">È possibile scegliere di non distribuirlo con i file dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="bb101-136">You can choose not to distribute it with your application's files.</span></span> <span data-ttu-id="bb101-137">È tuttavia consigliabile salvarlo perché può risultare utile per il debug della build di rilascio dell'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-137">You should, however, save it in the event that you want to debug the Release build of your app.</span></span>
 
-È possibile distribuire il set completo dei file dell'applicazione con il metodo desiderato. È ad esempio possibile inserire i file in un file zip, usare un semplice comando `copy` o distribuire i file con un pacchetto di installazione a scelta. Dopo aver completato l'installazione gli utenti possono eseguire l'applicazione usando il comando `dotnet` e fornendo il nome file dell'applicazione, ad esempio `dotnet fdd.dll`.
+<span data-ttu-id="bb101-138">È possibile distribuire il set completo dei file dell'applicazione con il metodo desiderato.</span><span class="sxs-lookup"><span data-stu-id="bb101-138">You can deploy the complete set of application files in any way you like.</span></span> <span data-ttu-id="bb101-139">È ad esempio possibile inserire i file in un file zip, usare un semplice comando `copy` o distribuire i file con un pacchetto di installazione a scelta.</span><span class="sxs-lookup"><span data-stu-id="bb101-139">For example, you can package them in a Zip file, use a simple `copy` command, or deploy them with any installation package of your choice.</span></span> <span data-ttu-id="bb101-140">Dopo aver completato l'installazione gli utenti possono eseguire l'applicazione usando il comando `dotnet` e fornendo il nome file dell'applicazione, ad esempio `dotnet fdd.dll`.</span><span class="sxs-lookup"><span data-stu-id="bb101-140">Once installed, users can execute your application by using the `dotnet` command and providing the application filename, such as `dotnet fdd.dll`.</span></span>
 
-Oltre ai file binari dell'applicazione, il programma di installazione deve aggregare il programma di installazione framework condiviso oppure rilevarlo come prerequisito durante l'installazione dell'applicazione.  L'installazione del framework condiviso richiede l'accesso amministratore o alla radice.
+<span data-ttu-id="bb101-141">Oltre ai file binari dell'applicazione, il programma di installazione deve aggregare il programma di installazione framework condiviso oppure rilevarlo come prerequisito durante l'installazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="bb101-141">In addition to the application binaries, your installer should also either bundle the shared framework installer or check for it as a prerequisite as part of the application installation.</span></span>  <span data-ttu-id="bb101-142">L'installazione del framework condiviso richiede l'accesso amministratore o alla radice.</span><span class="sxs-lookup"><span data-stu-id="bb101-142">Installation of the shared framework requires Administrator/root access.</span></span>
 
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Distribuzione dipendente dal framework con dipendenze di terze parti
+## <a name="framework-dependent-deployment-with-third-party-dependencies"></a><span data-ttu-id="bb101-143">Distribuzione dipendente dal framework con dipendenze di terze parti</span><span class="sxs-lookup"><span data-stu-id="bb101-143">Framework-dependent deployment with third-party dependencies</span></span>
 
-In una distribuzione dipendente dal framework con una o più dipendenze di terze parti, tali dipendenze devono essere disponibili per il progetto. Prima dell'esecuzione del comando `dotnet restore` è necessario eseguire due passaggi aggiuntivi:
+<span data-ttu-id="bb101-144">In una distribuzione dipendente dal framework con una o più dipendenze di terze parti, tali dipendenze devono essere disponibili per il progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-144">Deploying a framework-dependent deployment with one or more third-party dependencies requires that those dependencies be available to your project.</span></span> <span data-ttu-id="bb101-145">Prima dell'esecuzione del comando `dotnet restore` è necessario eseguire due passaggi aggiuntivi:</span><span class="sxs-lookup"><span data-stu-id="bb101-145">Two additional steps are required before you can run the `dotnet restore` command:</span></span>
 
-1. Aggiungere riferimenti alle librerie di terze parti necessarie nella sezione `<ItemGroup>` del file *csproj*. La sezione `<ItemGroup>` seguente contiene una dipendenza da [Json.NET](http://www.newtonsoft.com/json) come libreria di terze parti:
+1. <span data-ttu-id="bb101-146">Aggiungere riferimenti alle librerie di terze parti necessarie nella sezione `<ItemGroup>` del file *csproj*.</span><span class="sxs-lookup"><span data-stu-id="bb101-146">Add references to required third-party libraries to the `<ItemGroup>` section of your *csproj* file.</span></span> <span data-ttu-id="bb101-147">La sezione `<ItemGroup>` seguente contiene una dipendenza da [Json.NET](http://www.newtonsoft.com/json) come libreria di terze parti:</span><span class="sxs-lookup"><span data-stu-id="bb101-147">The following `<ItemGroup>` section contains a dependency on [Json.NET](http://www.newtonsoft.com/json) as a third-party library:</span></span>
 
       ```xml
       <ItemGroup>
@@ -83,33 +83,33 @@ In una distribuzione dipendente dal framework con una o più dipendenze di terze
       </ItemGroup>
       ```
 
-1. Se non lo si è già fatto, scaricare il pacchetto NuGet contenente la dipendenza di terze parti. Per scaricare il pacchetto, eseguire il comando `dotnet restore` dopo l'aggiunta della dipendenza. Poiché la dipendenza viene risolta dalla cache NuGet locale in fase di pubblicazione, deve essere disponibile nel sistema.
+1. <span data-ttu-id="bb101-148">Se non lo si è già fatto, scaricare il pacchetto NuGet contenente la dipendenza di terze parti.</span><span class="sxs-lookup"><span data-stu-id="bb101-148">If you haven't already, download the NuGet package containing the third-party dependency.</span></span> <span data-ttu-id="bb101-149">Per scaricare il pacchetto, eseguire il comando `dotnet restore` dopo l'aggiunta della dipendenza.</span><span class="sxs-lookup"><span data-stu-id="bb101-149">To download the package, execute the `dotnet restore` command after adding the dependency.</span></span> <span data-ttu-id="bb101-150">Poiché la dipendenza viene risolta dalla cache NuGet locale in fase di pubblicazione, deve essere disponibile nel sistema.</span><span class="sxs-lookup"><span data-stu-id="bb101-150">Because the dependency is resolved out of the local NuGet cache at publish time, it must be available on your system.</span></span>
 
-Si noti che la portabilità di una distribuzione dipendente dal framework con dipendenze di terze parti corrisponde esattamente alla portabilità delle dipendenze. Se ad esempio una libreria di terze parti supporta solo macOS, l'app non è portabile in sistemi Windows. Questa situazione si verifica se la dipendenza di terze parti stessa dipende da codice nativo. Un buon esempio è il [server Kestrel](/aspnet/core/fundamentals/servers/kestrel), che richiede una dipendenza nativa da [libuv](https://github.com/libuv/libuv). Quando viene creata una distribuzione dipendente dal framework per un'applicazione con questo tipo di dipendenze di terze parti, l'output pubblicato contiene una cartella per ogni [identificatore di runtime (RID)](../rid-catalog.md#what-are-rids) supportato dalla dipendenza nativa (e presente nel relativo pacchetto NuGet).
+<span data-ttu-id="bb101-151">Si noti che la portabilità di una distribuzione dipendente dal framework con dipendenze di terze parti corrisponde esattamente alla portabilità delle dipendenze.</span><span class="sxs-lookup"><span data-stu-id="bb101-151">Note that a framework-dependent deployment with third-party dependencies is only as portable as its third-party dependencies.</span></span> <span data-ttu-id="bb101-152">Se ad esempio una libreria di terze parti supporta solo macOS, l'app non è portabile in sistemi Windows.</span><span class="sxs-lookup"><span data-stu-id="bb101-152">For example, if a third-party library only supports macOS, the app isn't portable to Windows systems.</span></span> <span data-ttu-id="bb101-153">Questa situazione si verifica se la dipendenza di terze parti stessa dipende da codice nativo.</span><span class="sxs-lookup"><span data-stu-id="bb101-153">This happens if the third-party dependency itself depends on native code.</span></span> <span data-ttu-id="bb101-154">Un buon esempio è il [server Kestrel](/aspnet/core/fundamentals/servers/kestrel), che richiede una dipendenza nativa da [libuv](https://github.com/libuv/libuv).</span><span class="sxs-lookup"><span data-stu-id="bb101-154">A good example of this is [Kestrel server](/aspnet/core/fundamentals/servers/kestrel), which requires a native dependency on [libuv](https://github.com/libuv/libuv).</span></span> <span data-ttu-id="bb101-155">Quando viene creata una distribuzione dipendente dal framework per un'applicazione con questo tipo di dipendenze di terze parti, l'output pubblicato contiene una cartella per ogni [identificatore di runtime (RID)](../rid-catalog.md#what-are-rids) supportato dalla dipendenza nativa (e presente nel relativo pacchetto NuGet).</span><span class="sxs-lookup"><span data-stu-id="bb101-155">When an FDD is created for an application with this kind of third-party dependency, the published output contains a folder for each [Runtime Identifier (RID)](../rid-catalog.md#what-are-rids) that the native dependency supports (and that exists in its NuGet package).</span></span>
 
-## <a name="simpleSelf"></a> Distribuzione autonoma senza dipendenze di terze parti
+## <span data-ttu-id="bb101-156"><a name="simpleSelf"></a> Distribuzione autonoma senza dipendenze di terze parti</span><span class="sxs-lookup"><span data-stu-id="bb101-156"><a name="simpleSelf"></a> Self-contained deployment without third-party dependencies</span></span>
 
-Una distribuzione autonoma senza dipendenze di terze parti comporta la creazione del progetto, la modifica del file *csproj*, la compilazione, il test e la pubblicazione dell'app. Il processo viene illustrato da un semplice esempio scritto in C#. L'esempio seguente visualizza come creare una distribuzione autonoma con l'[utilità dotnet](../tools/dotnet.md) dalla riga di comando.
+<span data-ttu-id="bb101-157">Una distribuzione autonoma senza dipendenze di terze parti comporta la creazione del progetto, la modifica del file *csproj*, la compilazione, il test e la pubblicazione dell'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-157">Deploying a self-contained deployment without third-party dependencies involves creating the project, modifying the *csproj* file, building, testing, and publishing the app.</span></span> <span data-ttu-id="bb101-158">Il processo viene illustrato da un semplice esempio scritto in C#.</span><span class="sxs-lookup"><span data-stu-id="bb101-158">A simple example written in C# illustrates the process.</span></span> <span data-ttu-id="bb101-159">L'esempio seguente visualizza come creare una distribuzione autonoma con l'[utilità dotnet](../tools/dotnet.md) dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="bb101-159">The example shows how to create a self-contained deployment using the [dotnet utility](../tools/dotnet.md) from the command line.</span></span>
 
-1. Creare una directory per il progetto.
+1. <span data-ttu-id="bb101-160">Creare una directory per il progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-160">Create a directory for the project.</span></span>
 
-   Creare una directory per il progetto e impostarla come directory corrente.
+   <span data-ttu-id="bb101-161">Creare una directory per il progetto e impostarla come directory corrente.</span><span class="sxs-lookup"><span data-stu-id="bb101-161">Create a directory for your project, and make it your current directory.</span></span>
 
-1. Creare il progetto.
+1. <span data-ttu-id="bb101-162">Creare il progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-162">Create the project.</span></span>
 
-   Nella riga di comando digitare [dotnet new console](../tools/dotnet-new.md) per creare un nuovo progetto console C# in tale directory.
+   <span data-ttu-id="bb101-163">Nella riga di comando digitare [dotnet new console](../tools/dotnet-new.md) per creare un nuovo progetto console C# in tale directory.</span><span class="sxs-lookup"><span data-stu-id="bb101-163">From the command line, type [dotnet new console](../tools/dotnet-new.md) to create a new C# console project in that directory.</span></span>
 
-1. Aggiungere il codice sorgente dell'applicazione.
+1. <span data-ttu-id="bb101-164">Aggiungere il codice sorgente dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="bb101-164">Add the application's source code.</span></span>
 
-   Aprire il file *Program.cs* nell'editor e sostituire il codice generato automaticamente con il codice seguente. Questo codice richiede all'utente di immettere del testo e visualizza le singole parole immesse dall'utente. Usa l'espressione regolare `\w+` per separare le parole nel testo di input.
+   <span data-ttu-id="bb101-165">Aprire il file *Program.cs* nell'editor e sostituire il codice generato automaticamente con il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="bb101-165">Open the *Program.cs* file in your editor and replace the auto-generated code with the following code.</span></span> <span data-ttu-id="bb101-166">Questo codice richiede all'utente di immettere del testo e visualizza le singole parole immesse dall'utente.</span><span class="sxs-lookup"><span data-stu-id="bb101-166">It prompts the user to enter text and displays the individual words entered by the user.</span></span> <span data-ttu-id="bb101-167">Usa l'espressione regolare `\w+` per separare le parole nel testo di input.</span><span class="sxs-lookup"><span data-stu-id="bb101-167">It uses the regular expression `\w+` to separate the words in the input text.</span></span>
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   <span data-ttu-id="bb101-168">[!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]</span><span class="sxs-lookup"><span data-stu-id="bb101-168">[!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]</span></span>
 
-1. Definire le piattaforme di destinazione per l'app.
+1. <span data-ttu-id="bb101-169">Definire le piattaforme di destinazione per l'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-169">Define the platforms that your app will target.</span></span>
 
-   Creare un tag `<RuntimeIdentifiers>` nella sezione `<PropertyGroup>` del file *csproj* che definisce le piattaforme di destinazione dell'app e specificare l'identificatore di runtime di ogni piattaforma di destinazione. Si noti che è inoltre necessario aggiungere un punto e virgola per separare i RID. Per un elenco degli identificatori di runtime, vedere [Runtime IDentifier catalog](../rid-catalog.md) (Catalogo degli identificatori di runtime). 
+   <span data-ttu-id="bb101-170">Creare un tag `<RuntimeIdentifiers>` nella sezione `<PropertyGroup>` del file *csproj* che definisce le piattaforme di destinazione dell'app e specificare l'identificatore di runtime di ogni piattaforma di destinazione.</span><span class="sxs-lookup"><span data-stu-id="bb101-170">Create a `<RuntimeIdentifiers>` tag in the `<PropertyGroup>` section of your *csproj* file that defines the platforms your app targets and specify the runtime identifier (RID) for each platform that you target.</span></span> <span data-ttu-id="bb101-171">Si noti che è inoltre necessario aggiungere un punto e virgola per separare i RID.</span><span class="sxs-lookup"><span data-stu-id="bb101-171">Note that you also need to add a semicolon to separate the RIDs.</span></span> <span data-ttu-id="bb101-172">Per un elenco degli identificatori di runtime, vedere [Runtime IDentifier catalog](../rid-catalog.md) (Catalogo degli identificatori di runtime).</span><span class="sxs-lookup"><span data-stu-id="bb101-172">See [Runtime IDentifier catalog](../rid-catalog.md) for a list of runtime identifiers.</span></span> 
 
-   Ad esempio, la sezione `<PropertyGroup>` seguente indica che l'app viene eseguita in sistemi operativi Windows 10 a 64 bit e nel sistema operativo OS X versione 10.11 a 64 bit.
+   <span data-ttu-id="bb101-173">Ad esempio, la sezione `<PropertyGroup>` seguente indica che l'app viene eseguita in sistemi operativi Windows 10 a 64 bit e nel sistema operativo OS X versione 10.11 a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="bb101-173">For example, the following `<PropertyGroup>` section indicates that the app runs on 64-bit Windows 10 operating systems and the 64-bit OS X Version 10.11 operating system.</span></span>
 
      ```xml
      <PropertyGroup>
@@ -117,32 +117,32 @@ Una distribuzione autonoma senza dipendenze di terze parti comporta la creazione
      </PropertyGroup>
      ```
 
-   Si noti che l'elemento `<RuntimeIdentifiers>` può essere visualizzato in qualsiasi `<PropertyGroup>` nel file *csproj*. Un file di esempio *csproj* completo è disponibile più avanti in questa sezione.
+   <span data-ttu-id="bb101-174">Si noti che l'elemento `<RuntimeIdentifiers>` può essere visualizzato in qualsiasi `<PropertyGroup>` nel file *csproj*.</span><span class="sxs-lookup"><span data-stu-id="bb101-174">Note that the `<RuntimeIdentifiers>` element can appear in any `<PropertyGroup>` in your *csproj* file.</span></span> <span data-ttu-id="bb101-175">Un file di esempio *csproj* completo è disponibile più avanti in questa sezione.</span><span class="sxs-lookup"><span data-stu-id="bb101-175">A complete sample *csproj* file appears later in this section.</span></span>
 
-1. Aggiornare le dipendenze e gli strumenti del progetto.
+1. <span data-ttu-id="bb101-176">Aggiornare le dipendenze e gli strumenti del progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-176">Update the project's dependencies and tools.</span></span>
 
-   Eseguire il comando [dotnet-restore](../tools/dotnet-restore.md) per ripristinare le dipendenze specificate nel progetto.
+   <span data-ttu-id="bb101-177">Eseguire il comando [dotnet-restore](../tools/dotnet-restore.md) per ripristinare le dipendenze specificate nel progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-177">Run the [dotnet restore](../tools/dotnet-restore.md) command to restore the dependencies specified in your project.</span></span>
 
-1. Creare una build di debug dell'app.
+1. <span data-ttu-id="bb101-178">Creare una build di debug dell'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-178">Create a Debug build of your app.</span></span>
 
-   Dalla riga di comando usare il comando [dotnet build](../tools/dotnet-build.md).
+   <span data-ttu-id="bb101-179">Dalla riga di comando usare il comando [dotnet build](../tools/dotnet-build.md).</span><span class="sxs-lookup"><span data-stu-id="bb101-179">From the command line, use the [dotnet build](../tools/dotnet-build.md) command.</span></span>
 
-1. Dopo aver eseguito il debug e il test del programma creare i file da distribuire con l'app per ogni piattaforma di destinazione.
+1. <span data-ttu-id="bb101-180">Dopo aver eseguito il debug e il test del programma creare i file da distribuire con l'app per ogni piattaforma di destinazione.</span><span class="sxs-lookup"><span data-stu-id="bb101-180">After you've debugged and tested the program, create the files to be deployed with your app for each platform that it targets.</span></span>
 
-   Usare il comando `dotnet publish` per entrambe le piattaforme di destinazione come indicato di seguito:
+   <span data-ttu-id="bb101-181">Usare il comando `dotnet publish` per entrambe le piattaforme di destinazione come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="bb101-181">Use the `dotnet publish` command for both target platforms as follows:</span></span>
 
       ```console
       dotnet publish -c Release -r win10-x64
       dotnet publish -c Release -r osx.10.11-x64
       ```
 
-   In questo modo, viene creata una versione di rilascio dell'app per ogni piattaforma di destinazione anziché una versione di debug. I file risultanti vengono inseriti in una directory *publish* in una sottodirectory della directory *.\bin\Release\netcoreapp1.1\<runtime_identifier>* del progetto. Si noti che ogni sottodirectory contiene il set completo di file (i file dell'app e tutti i file di .NET Core) necessario per avviare l'app.
+   <span data-ttu-id="bb101-182">In questo modo, viene creata una versione di rilascio dell'app per ogni piattaforma di destinazione anziché una versione di debug.</span><span class="sxs-lookup"><span data-stu-id="bb101-182">This creates a Release (rather than a Debug) version of your app for each target platform.</span></span> <span data-ttu-id="bb101-183">I file risultanti vengono inseriti in una directory *publish* in una sottodirectory della directory *.\bin\Release\netcoreapp1.1\<runtime_identifier>* del progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-183">The resulting files are placed in a subdirectory named *publish* that's in a subdirectory of your project's *.\bin\Release\netcoreapp1.1\<runtime_identifier>* subdirectory.</span></span> <span data-ttu-id="bb101-184">Si noti che ogni sottodirectory contiene il set completo di file (i file dell'app e tutti i file di .NET Core) necessario per avviare l'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-184">Note that each subdirectory contains the complete set of files (both your app files and all .NET Core files) needed to launch your app.</span></span>
 
-Insieme ai file dell'applicazione, il processo di pubblicazione genera un file del database di programma (con estensione pdb) che contiene le informazioni di debug relative all'app. Il file è utile soprattutto per il debug delle eccezioni. È possibile scegliere di non includerlo nel pacchetto dei file dell'applicazione. È tuttavia consigliabile salvarlo perché può risultare utile per il debug della build di rilascio dell'app.
+<span data-ttu-id="bb101-185">Insieme ai file dell'applicazione, il processo di pubblicazione genera un file del database di programma (con estensione pdb) che contiene le informazioni di debug relative all'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-185">Along with your application's files, the publishing process emits a program database (.pdb) file that contains debugging information about your app.</span></span> <span data-ttu-id="bb101-186">Il file è utile soprattutto per il debug delle eccezioni.</span><span class="sxs-lookup"><span data-stu-id="bb101-186">The file is useful primarily for debugging exceptions.</span></span> <span data-ttu-id="bb101-187">È possibile scegliere di non includerlo nel pacchetto dei file dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="bb101-187">You can choose not to package it with your application's files.</span></span> <span data-ttu-id="bb101-188">È tuttavia consigliabile salvarlo perché può risultare utile per il debug della build di rilascio dell'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-188">You should, however, save it in the event that you want to debug the Release build of your app.</span></span>
 
-Distribuire i file pubblicati con il metodo desiderato. È ad esempio possibile inserire i file in un file zip, usare un semplice comando `copy` o distribuire i file con un pacchetto di installazione a scelta.
+<span data-ttu-id="bb101-189">Distribuire i file pubblicati con il metodo desiderato.</span><span class="sxs-lookup"><span data-stu-id="bb101-189">Deploy the published files in any way you like.</span></span> <span data-ttu-id="bb101-190">È ad esempio possibile inserire i file in un file zip, usare un semplice comando `copy` o distribuire i file con un pacchetto di installazione a scelta.</span><span class="sxs-lookup"><span data-stu-id="bb101-190">For example, you can package them in a Zip file, use a simple `copy` command, or deploy them with any installation package of your choice.</span></span>
 
-Di seguito è riportato il file *csproj* completo per questo progetto.
+<span data-ttu-id="bb101-191">Di seguito è riportato il file *csproj* completo per questo progetto.</span><span class="sxs-lookup"><span data-stu-id="bb101-191">The following is the complete *csproj* file for this project.</span></span>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -154,11 +154,11 @@ Di seguito è riportato il file *csproj* completo per questo progetto.
 </Project>
 ```
 
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>Distribuzione autonoma con dipendenze di terze parti
+## <a name="self-contained-deployment-with-third-party-dependencies"></a><span data-ttu-id="bb101-192">Distribuzione autonoma con dipendenze di terze parti</span><span class="sxs-lookup"><span data-stu-id="bb101-192">Self-contained deployment with third-party dependencies</span></span>
 
-Una distribuzione autonoma con una o più dipendenze di terze parti comporta l'aggiunta delle dipendenze. Prima dell'esecuzione del comando `dotnet restore` è necessario eseguire due passaggi aggiuntivi:
+<span data-ttu-id="bb101-193">Una distribuzione autonoma con una o più dipendenze di terze parti comporta l'aggiunta delle dipendenze.</span><span class="sxs-lookup"><span data-stu-id="bb101-193">Deploying a self-contained deployment with one or more third-party dependencies involves adding the dependencies.</span></span> <span data-ttu-id="bb101-194">Prima dell'esecuzione del comando `dotnet restore` è necessario eseguire due passaggi aggiuntivi:</span><span class="sxs-lookup"><span data-stu-id="bb101-194">Two additional steps are required before you can run the `dotnet restore` command:</span></span>
 
-1. Aggiungere i riferimenti alle eventuali librerie di terze parti alla sezione `<ItemGroup>` del file *csproj*. La sezione `<ItemGroup>` seguente usa Json.NET come libreria di terze parti.
+1. <span data-ttu-id="bb101-195">Aggiungere i riferimenti alle eventuali librerie di terze parti alla sezione `<ItemGroup>` del file *csproj*.</span><span class="sxs-lookup"><span data-stu-id="bb101-195">Add references to any third-party libraries to the `<ItemGroup>` section of your *csproj* file.</span></span> <span data-ttu-id="bb101-196">La sezione `<ItemGroup>` seguente usa Json.NET come libreria di terze parti.</span><span class="sxs-lookup"><span data-stu-id="bb101-196">The following `<ItemGroup>` section uses Json.NET as a third-party library.</span></span>
 
     ```xml
       <ItemGroup>
@@ -166,9 +166,9 @@ Una distribuzione autonoma con una o più dipendenze di terze parti comporta l'a
       </ItemGroup>
     ```
 
-1. Se non lo si è già fatto, scaricare nel sistema il pacchetto NuGet contenente la dipendenza di terze parti. Per rendere la dipendenza disponibile per l'app, eseguire il comando `dotnet restore` dopo l'aggiunta della dipendenza. Poiché la dipendenza viene risolta dalla cache NuGet locale in fase di pubblicazione, deve essere disponibile nel sistema.
+1. <span data-ttu-id="bb101-197">Se non lo si è già fatto, scaricare nel sistema il pacchetto NuGet contenente la dipendenza di terze parti.</span><span class="sxs-lookup"><span data-stu-id="bb101-197">If you haven't already, download the NuGet package containing the third-party dependency to your system.</span></span> <span data-ttu-id="bb101-198">Per rendere la dipendenza disponibile per l'app, eseguire il comando `dotnet restore` dopo l'aggiunta della dipendenza.</span><span class="sxs-lookup"><span data-stu-id="bb101-198">To make the dependency available to your app, execute the `dotnet restore` command after adding the dependency.</span></span> <span data-ttu-id="bb101-199">Poiché la dipendenza viene risolta dalla cache NuGet locale in fase di pubblicazione, deve essere disponibile nel sistema.</span><span class="sxs-lookup"><span data-stu-id="bb101-199">Because the dependency is resolved out of the local NuGet cache at publish time, it must be available on your system.</span></span>
 
-Di seguito è riportato il file *csproj* completo per questo progetto:
+<span data-ttu-id="bb101-200">Di seguito è riportato il file *csproj* completo per questo progetto:</span><span class="sxs-lookup"><span data-stu-id="bb101-200">The following is the complete *csproj* file for this project:</span></span>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -183,12 +183,12 @@ Di seguito è riportato il file *csproj* completo per questo progetto:
 </Project>
 ```
 
-Quando si distribuisce l'applicazione, anche le dipendenze di terze parti usate nell'app sono contenute nei file dell'applicazione. Non è necessario che le librerie di terze parti siano già presenti nel sistema in cui viene eseguita l'app.
+<span data-ttu-id="bb101-201">Quando si distribuisce l'applicazione, anche le dipendenze di terze parti usate nell'app sono contenute nei file dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="bb101-201">When you deploy your application, any third-party dependencies used in your app are also contained with your application files.</span></span> <span data-ttu-id="bb101-202">Non è necessario che le librerie di terze parti siano già presenti nel sistema in cui viene eseguita l'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-202">Third-party libraries aren't required on the system on which the app is running.</span></span>
 
-Si noti che è possibile distribuire una distribuzione autonoma solo con una libreria di terze parti alle piattaforme supportate da tale libreria. Il caso è simile alla presenza di dipendenze di terze parti con dipendenze native in una distribuzione dipendente dal framework, nella quale le dipendenze native devono essere compatibili con la piattaforma in cui viene distribuita l'app.
+<span data-ttu-id="bb101-203">Si noti che è possibile distribuire una distribuzione autonoma solo con una libreria di terze parti alle piattaforme supportate da tale libreria.</span><span class="sxs-lookup"><span data-stu-id="bb101-203">Note that you can only deploy a self-contained deployment with a third-party library to platforms supported by that library.</span></span> <span data-ttu-id="bb101-204">Il caso è simile alla presenza di dipendenze di terze parti con dipendenze native in una distribuzione dipendente dal framework, nella quale le dipendenze native devono essere compatibili con la piattaforma in cui viene distribuita l'app.</span><span class="sxs-lookup"><span data-stu-id="bb101-204">This is similar to having third-party dependencies with native dependencies in a framework-dependent deployment, where the native dependencies must be compatible with the platform to which the app is deployed.</span></span>
 
-# <a name="see-also"></a>Vedere anche
+# <a name="see-also"></a><span data-ttu-id="bb101-205">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bb101-205">See also</span></span>
 
-[Distribuzione di applicazioni .NET Core](index.md)   
-[Catalogo dei RID (Runtime IDentifier) di .NET Core](../rid-catalog.md)   
+<span data-ttu-id="bb101-206">[Distribuzione di applicazioni .NET Core](index.md) </span><span class="sxs-lookup"><span data-stu-id="bb101-206">[.NET Core Application Deployment](index.md) </span></span>  
+[<span data-ttu-id="bb101-207">Catalogo dei RID (Runtime IDentifier) di .NET Core</span><span class="sxs-lookup"><span data-stu-id="bb101-207">.NET Core Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)   
 

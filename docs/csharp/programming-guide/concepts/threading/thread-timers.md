@@ -26,11 +26,11 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="thread-timers-c"></a>Timer di thread (C#)
-La classe <xref:System.Threading.Timer?displayProperty=fullName> è utile per l'esecuzione periodica di un'attività in un thread distinto. Ad esempio, è possibile usare un timer di thread per controllare lo stato e l'integrità di un database o per eseguire il backup dei file critici.  
+# <a name="thread-timers-c"></a><span data-ttu-id="4f681-102">Timer di thread (C#)</span><span class="sxs-lookup"><span data-stu-id="4f681-102">Thread Timers (C#)</span></span>
+<span data-ttu-id="4f681-103">La classe <xref:System.Threading.Timer?displayProperty=fullName> è utile per l'esecuzione periodica di un'attività in un thread distinto.</span><span class="sxs-lookup"><span data-stu-id="4f681-103">The <xref:System.Threading.Timer?displayProperty=fullName> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="4f681-104">Ad esempio, è possibile usare un timer di thread per controllare lo stato e l'integrità di un database o per eseguire il backup dei file critici.</span><span class="sxs-lookup"><span data-stu-id="4f681-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  
   
-## <a name="thread-timer-example"></a>Esempio di timer di thread  
- Nell'esempio seguente viene avviata un'attività ogni due secondi e viene usato un flag per avviare il metodo <xref:System.IDisposable.Dispose%2A> che arresta il timer. Lo stato viene inserito nella finestra di output.  
+## <a name="thread-timer-example"></a><span data-ttu-id="4f681-105">Esempio di timer di thread</span><span class="sxs-lookup"><span data-stu-id="4f681-105">Thread Timer Example</span></span>  
+ <span data-ttu-id="4f681-106">Nell'esempio seguente viene avviata un'attività ogni due secondi e viene usato un flag per avviare il metodo <xref:System.IDisposable.Dispose%2A> che arresta il timer.</span><span class="sxs-lookup"><span data-stu-id="4f681-106">The following example starts a task every two seconds and uses a flag to initiate the <xref:System.IDisposable.Dispose%2A> method that stops the timer.</span></span> <span data-ttu-id="4f681-107">Lo stato viene inserito nella finestra di output.</span><span class="sxs-lookup"><span data-stu-id="4f681-107">This example posts status to the output window.</span></span>  
   
 ```csharp  
 private class StateObjClass  
@@ -84,9 +84,9 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- I timer di thread risultano particolarmente utili quando l'oggetto <xref:System.Windows.Forms.Timer?displayProperty=fullName> non è disponibile, come nel caso dello sviluppo di applicazioni console.  
+ <span data-ttu-id="4f681-108">I timer di thread risultano particolarmente utili quando l'oggetto <xref:System.Windows.Forms.Timer?displayProperty=fullName> non è disponibile, come nel caso dello sviluppo di applicazioni console.</span><span class="sxs-lookup"><span data-stu-id="4f681-108">Thread timers are particularly useful when the <xref:System.Windows.Forms.Timer?displayProperty=fullName> object is unavailable, such as when you are developing console applications.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading>   
- [Applicazioni multithreading (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+## <a name="see-also"></a><span data-ttu-id="4f681-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4f681-109">See Also</span></span>  
+ <span data-ttu-id="4f681-110"><xref:System.Threading></span><span class="sxs-lookup"><span data-stu-id="4f681-110"><xref:System.Threading></span></span>   
+ [<span data-ttu-id="4f681-111">Applicazioni multithreading (C#)</span><span class="sxs-lookup"><span data-stu-id="4f681-111">Multithreaded Applications (C#)</span></span>](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
 

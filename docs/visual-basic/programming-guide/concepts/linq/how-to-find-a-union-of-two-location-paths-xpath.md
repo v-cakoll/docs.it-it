@@ -16,26 +16,26 @@ caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 90fe1bd9a7992c5e3f4c57f5596a88e5be506917
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 63c3399a60f8c26e39ef9d575a569b85bd7c5f68
 ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare un'unione di due percorsi (XPath-LINQ to XML) (Visual Basic)
-In XPath è possibile trovare l'unione dei risultati di due percorsi di posizione XPath.  
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="3c636-102">Procedura: trovare un'unione di due percorsi (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3c636-102">How to: Find a Union of Two Location Paths (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="3c636-103">In XPath è possibile trovare l'unione dei risultati di due percorsi di posizione XPath.</span><span class="sxs-lookup"><span data-stu-id="3c636-103">XPath allows you to find the union of the results of two XPath location paths.</span></span>  
   
- L'espressione XPath è:  
+ <span data-ttu-id="3c636-104">L'espressione XPath è:</span><span class="sxs-lookup"><span data-stu-id="3c636-104">The XPath expression is:</span></span>  
   
  `//Category|//Price`  
   
- È possibile ottenere gli stessi risultati utilizzando il <xref:System.Linq.Enumerable.Concat%2A>operatore di query standard.</xref:System.Linq.Enumerable.Concat%2A>  
+ <span data-ttu-id="3c636-105">È possibile ottenere gli stessi risultati utilizzando il <xref:System.Linq.Enumerable.Concat%2A>operatore di query standard.</xref:System.Linq.Enumerable.Concat%2A></span><span class="sxs-lookup"><span data-stu-id="3c636-105">You can achieve the same results by using the <xref:System.Linq.Enumerable.Concat%2A> standard query operator.</span></span>  
   
-## <a name="example"></a>Esempio  
- In questo esempio vengono trovati tutti gli elementi `Category` e tutti gli elementi `Price`, che vengono concatenati in un'unica raccolta. Si noti che il [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] query chiama <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A>per ordinare i risultati.</xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> Anche i risultati della valutazione dell'espressione di XPath sono nell'ordine del documento.  
+## <a name="example"></a><span data-ttu-id="3c636-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="3c636-106">Example</span></span>  
+ <span data-ttu-id="3c636-107">In questo esempio vengono trovati tutti gli elementi `Category` e tutti gli elementi `Price`, che vengono concatenati in un'unica raccolta.</span><span class="sxs-lookup"><span data-stu-id="3c636-107">This example finds all of the `Category` elements and all of the `Price` elements, and concatenates them into a single collection.</span></span> <span data-ttu-id="3c636-108">Si noti che il [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] query chiama <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A>per ordinare i risultati.</xref:System.Xml.Linq.Extensions.InDocumentOrder%2A></span><span class="sxs-lookup"><span data-stu-id="3c636-108">Note that the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] query calls <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> to order the results.</span></span> <span data-ttu-id="3c636-109">Anche i risultati della valutazione dell'espressione di XPath sono nell'ordine del documento.</span><span class="sxs-lookup"><span data-stu-id="3c636-109">The results of the XPath expression evaluation are also in document order.</span></span>  
   
- In questo esempio viene utilizzato il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ <span data-ttu-id="3c636-110">In questo esempio viene utilizzato il documento XML seguente: [File XML di esempio: dati numerici (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="3c636-110">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -59,7 +59,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="3c636-111">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="3c636-111">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -79,6 +79,6 @@ Results are identical
 <Price>6.99</Price>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="3c636-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3c636-112">See Also</span></span>  
+ [<span data-ttu-id="3c636-113">LINQ to XML per gli utenti di XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3c636-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

@@ -1,6 +1,6 @@
 ---
 title: "Interoperabilità nativa"
-description: "Interoperabilità nativa"
+description: Informazioni su come interagire con i componenti nativi in .NET.
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
@@ -10,33 +10,34 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-translationtype: Human Translation
-ms.sourcegitcommit: d18b21b67c154c4a8cf8211aa5d1473066c53656
-ms.openlocfilehash: 13a4e4e7a588d55e82c5c4cde8f825c3b4502bb4
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
 
 ---
 
-# <a name="native-interoperability"></a>Interoperabilità nativa
+# <a name="native-interoperability"></a><span data-ttu-id="b42cd-104">Interoperabilità nativa</span><span class="sxs-lookup"><span data-stu-id="b42cd-104">Native Interoperability</span></span>
 
-In questo documento vengono descritti in modo approfondito i tre modi di ottenere l'"interoperabilità nativa" disponibili nella piattaforma .NET.
+<span data-ttu-id="b42cd-105">In questo documento vengono descritti in modo approfondito i tre modi di ottenere l'"interoperabilità nativa" disponibili in .NET.</span><span class="sxs-lookup"><span data-stu-id="b42cd-105">In this document, we will dive a little bit deeper into all three ways of doing "native interoperability" that are available using .NET.</span></span>
 
-Esistono alcuni motivi che rendono necessaria la chiamata del codice nativo:
+<span data-ttu-id="b42cd-106">Esistono alcuni motivi che rendono necessaria la chiamata del codice nativo:</span><span class="sxs-lookup"><span data-stu-id="b42cd-106">There are a few of reasons why you would want to call into native code:</span></span>
 
-*   Sistemi operativi dotati di un volume elevato di API che non sono presenti nelle librerie di classi gestite. Un ottimo esempio è l'accesso alle funzioni di gestione dell'hardware o del sistema operativo.
-*   Comunicazione con altri componenti che hanno o possono generare ABI di tipo C (ABI native). Questo può riguardare, ad esempio, codice Java esposto tramite [JNI (Java Native Interface)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) o qualsiasi altro linguaggio gestito in grado di generare un componente nativo.
-*   In Windows la maggior parte del software installato, ad esempio la suite Microsoft Office, registra i componenti COM che rappresentano i propri programmi e consente agli sviluppatori di automatizzarli o di usarli. Anche questo richiede interoperabilità nativa.
+*   <span data-ttu-id="b42cd-107">Sistemi operativi dotati di un volume elevato di API che non sono presenti nelle librerie di classi gestite.</span><span class="sxs-lookup"><span data-stu-id="b42cd-107">Operating Systems come with a large volume of APIs that are not present in the managed class libraries.</span></span> <span data-ttu-id="b42cd-108">Un ottimo esempio è l'accesso alle funzioni di gestione dell'hardware o del sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="b42cd-108">A prime example for this would be access to hardware or operating system management functions.</span></span>
+*   <span data-ttu-id="b42cd-109">Comunicazione con altri componenti che hanno o possono generare ABI di tipo C (ABI native).</span><span class="sxs-lookup"><span data-stu-id="b42cd-109">Communicating with other components that have or can produce C-style ABIs (native ABIs).</span></span> <span data-ttu-id="b42cd-110">Questo può riguardare, ad esempio, codice Java esposto tramite [JNI (Java Native Interface)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) o qualsiasi altro linguaggio gestito in grado di generare un componente nativo.</span><span class="sxs-lookup"><span data-stu-id="b42cd-110">This covers, for example, Java code that is exposed via [Java Native Interface (JNI)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) or any other managed language that could produce a native component.</span></span>
+*   <span data-ttu-id="b42cd-111">In Windows la maggior parte del software installato, ad esempio la suite Microsoft Office, registra i componenti COM che rappresentano i propri programmi e consente agli sviluppatori di automatizzarli o di usarli.</span><span class="sxs-lookup"><span data-stu-id="b42cd-111">On Windows, most of the software that gets installed, such as Microsoft Office suite, registers COM components that represent their programs and allow developers to automate them or use them.</span></span> <span data-ttu-id="b42cd-112">Anche questo richiede interoperabilità nativa.</span><span class="sxs-lookup"><span data-stu-id="b42cd-112">This also requires native interoperability.</span></span>
 
-L'elenco sopra riportato, naturalmente, non esaurisce tutti i potenziali scenari e situazioni in cui lo sviluppatore vuole, preferisce o ha bisogno di interfacciarsi con i componenti nativi. La libreria di classi .NET, ad esempio, usa il supporto per l'interoperabilità nativa per implementare un numero notevole di API, ad esempio il supporto e la manipolazione della console, l'accesso al file system e altro. È tuttavia importante notare che, qualora fosse necessaria, questa opzione è comunque disponibile.
+<span data-ttu-id="b42cd-113">L'elenco sopra riportato, naturalmente, non esaurisce tutti i potenziali scenari e situazioni in cui lo sviluppatore vuole, preferisce o ha bisogno di interfacciarsi con i componenti nativi.</span><span class="sxs-lookup"><span data-stu-id="b42cd-113">Of course, the list above does not cover all of the potential situations and scenarios in which the developer would want/like/need to interface with native components.</span></span> <span data-ttu-id="b42cd-114">La libreria di classi .NET, ad esempio, usa il supporto per l'interoperabilità nativa per implementare un numero notevole di API, ad esempio il supporto e la manipolazione della console, l'accesso al file system e altro.</span><span class="sxs-lookup"><span data-stu-id="b42cd-114">.NET class library, for instance, uses the native interoperability support to implement a fair number of its APIs, like console support and manipulation, file system access and others.</span></span> <span data-ttu-id="b42cd-115">È tuttavia importante notare che, qualora fosse necessaria, questa opzione è comunque disponibile.</span><span class="sxs-lookup"><span data-stu-id="b42cd-115">However, it is important to note that there is an option, should one need it.</span></span>
 
 > [!NOTE]
-> La maggior parte degli esempi riportati in questo documento viene presentata per tutte e tre le piattaforme supportate in .NET Core (Windows, Linux e macOS). Per alcuni esempi brevi e illustrativi, tuttavia, verrà presentata solo la versione che usa nomi file ed estensioni Windows, come "dll" per le librerie. Questo non significa che le funzionalità illustrate non siano disponibili in Linux o macOS. La scelta dipende infatti solo da motivi di praticità.
+> <span data-ttu-id="b42cd-116">La maggior parte degli esempi riportati in questo documento viene presentata per tutte e tre le piattaforme supportate in .NET Core (Windows, Linux e macOS).</span><span class="sxs-lookup"><span data-stu-id="b42cd-116">Most of the examples in this document will be presented for all three supported platforms for .NET Core (Windows, Linux and macOS).</span></span> <span data-ttu-id="b42cd-117">Per alcuni esempi brevi e illustrativi, tuttavia, verrà presentata solo la versione che usa nomi file ed estensioni Windows, come "dll" per le librerie.</span><span class="sxs-lookup"><span data-stu-id="b42cd-117">However, for some short and illustrative examples, just one sample is shown that uses Windows filenames and extensions (that is, "dll" for libraries).</span></span> <span data-ttu-id="b42cd-118">Questo non significa che le funzionalità illustrate non siano disponibili in Linux o macOS. La scelta dipende infatti solo da motivi di praticità.</span><span class="sxs-lookup"><span data-stu-id="b42cd-118">This does not mean that those features are not available on Linux or macOS, it was done merely for convenience sake.</span></span>
 
-## <a name="platform-invoke-pinvoke"></a>Platform Invoke (P/Invoke)
+## <a name="platform-invoke-pinvoke"></a><span data-ttu-id="b42cd-119">Platform Invoke (P/Invoke)</span><span class="sxs-lookup"><span data-stu-id="b42cd-119">Platform Invoke (P/Invoke)</span></span>
 
-P/Invoke è una tecnologia che consente di accedere dal codice gestito a strutture, callback e funzioni presenti in librerie non gestite. La maggior parte delle API di P/Invoke è contenuta in due spazi dei nomi: `System` e `System.Runtime.InteropServices`. Usando questi due spazi dei nomi è possibile accedere agli attributi che descrivono il modo in cui si vuole comunicare con il componente nativo.
+<span data-ttu-id="b42cd-120">P/Invoke è una tecnologia che consente di accedere dal codice gestito a strutture, callback e funzioni presenti in librerie non gestite.</span><span class="sxs-lookup"><span data-stu-id="b42cd-120">P/Invoke is a technology that allows you to access structs, callbacks and functions in unmanaged libraries from your managed code.</span></span> <span data-ttu-id="b42cd-121">La maggior parte delle API di P/Invoke è contenuta in due spazi dei nomi: `System` e `System.Runtime.InteropServices`.</span><span class="sxs-lookup"><span data-stu-id="b42cd-121">Most of the P/Invoke API is contained in two namespaces: `System` and `System.Runtime.InteropServices`.</span></span> <span data-ttu-id="b42cd-122">Usando questi due spazi dei nomi è possibile accedere agli attributi che descrivono il modo in cui si vuole comunicare con il componente nativo.</span><span class="sxs-lookup"><span data-stu-id="b42cd-122">Using these two namespaces will allow you access to the attributes that describe how you want to communicate with the native component.</span></span>
 
-Per iniziare viene mostrato l'esempio più comune, ovvero la chiamata di funzioni non gestite nel codice gestito. Di seguito viene visualizzata una finestra di messaggio da un'applicazione della riga di comando:
+<span data-ttu-id="b42cd-123">Per iniziare viene mostrato l'esempio più comune, ovvero la chiamata di funzioni non gestite nel codice gestito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-123">Let’s start from the most common example, and that is calling unmanaged functions in your managed code.</span></span> <span data-ttu-id="b42cd-124">Di seguito viene visualizzata una finestra di messaggio da un'applicazione della riga di comando:</span><span class="sxs-lookup"><span data-stu-id="b42cd-124">Let’s show a message box from a command-line application:</span></span>
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -53,18 +54,17 @@ public class Program {
         MessageBox(IntPtr.Zero, "Command-line message box", "Attention!", 0);
     }
 }
-
 ```
 
-L'esempio precedente è piuttosto semplice, ma mostra chiaramente gli elementi necessari per richiamare funzioni non gestite da un codice gestito. Di seguito l'esempio viene descritto in modo dettagliato:
+<span data-ttu-id="b42cd-125">L'esempio precedente è piuttosto semplice, ma mostra chiaramente gli elementi necessari per richiamare funzioni non gestite da un codice gestito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-125">The example above is pretty simple, but it does show off what is needed to invoke unmanaged functions from managed code.</span></span> <span data-ttu-id="b42cd-126">Di seguito l'esempio viene descritto in modo dettagliato:</span><span class="sxs-lookup"><span data-stu-id="b42cd-126">Let’s step through the example:</span></span>
 
-*   La riga 1 mostra l'uso dell'istruzione per `System.Runtime.InteropServices`, ovvero lo spazio dei nomi contenente tutti gli elementi necessari.
-*   La riga 5 introduce l'attributo `DllImport`. Questo attributo è fondamentale, in quanto comunica al runtime che deve caricare la DLL non gestita. Si tratta della DLL di cui si vuole richiamare il contenuto.
-*   La riga 6 è il punto cruciale dell'attività di P/Invoke. Definisce un metodo gestito che ha **esattamente la stessa firma** del metodo non gestito. Come è possibile notare, la dichiarazione dispone di una nuova parola chiave, `extern`, che indica al runtime che si tratta di un metodo esterno. Quando si richiama tale metodo, il runtime dovrebbe individuarlo nella DLL specificata nell'attributo `DllImport`.
+*   <span data-ttu-id="b42cd-127">La riga 1 mostra l'uso dell'istruzione per `System.Runtime.InteropServices`, ovvero lo spazio dei nomi contenente tutti gli elementi necessari.</span><span class="sxs-lookup"><span data-stu-id="b42cd-127">Line #1 shows the using statement for the `System.Runtime.InteropServices` which is the namespace that holds all of the items we need.</span></span>
+*   <span data-ttu-id="b42cd-128">La riga 5 introduce l'attributo `DllImport`.</span><span class="sxs-lookup"><span data-stu-id="b42cd-128">Line #5 introduces the `DllImport` attribute.</span></span> <span data-ttu-id="b42cd-129">Questo attributo è fondamentale, in quanto comunica al runtime che deve caricare la DLL non gestita.</span><span class="sxs-lookup"><span data-stu-id="b42cd-129">This attribute is crucial, as it tells the runtime that it should load the unmanaged DLL.</span></span> <span data-ttu-id="b42cd-130">Si tratta della DLL di cui si vuole richiamare il contenuto.</span><span class="sxs-lookup"><span data-stu-id="b42cd-130">This is the DLL into which we wish to invoke.</span></span>
+*   <span data-ttu-id="b42cd-131">La riga 6 è il punto cruciale dell'attività di P/Invoke.</span><span class="sxs-lookup"><span data-stu-id="b42cd-131">Line #6 is the crux of the P/Invoke work.</span></span> <span data-ttu-id="b42cd-132">Definisce un metodo gestito che ha **esattamente la stessa firma** del metodo non gestito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-132">It defines a managed method that has the **exact same signature** as the unmanaged one.</span></span> <span data-ttu-id="b42cd-133">Come è possibile notare, la dichiarazione dispone di una nuova parola chiave, `extern`, che indica al runtime che si tratta di un metodo esterno. Quando si richiama tale metodo, il runtime dovrebbe individuarlo nella DLL specificata nell'attributo `DllImport`.</span><span class="sxs-lookup"><span data-stu-id="b42cd-133">The declaration has a new keyword that you can notice, `extern`, which tells the runtime this is an external method, and that when you invoke it, the runtime should find it in the DLL specified in `DllImport` attribute.</span></span>
 
-La restante parte dell'esempio è semplicemente la chiamata del metodo, analoga alla chiamata di qualsiasi altro metodo gestito.
+<span data-ttu-id="b42cd-134">La restante parte dell'esempio è semplicemente la chiamata del metodo, analoga alla chiamata di qualsiasi altro metodo gestito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-134">The rest of the example is just invoking the method as you would any other managed method.</span></span>
 
-L'esempio è simile per macOS. Uno degli elementi che è necessario cambiare è, naturalmente, il nome della libreria nell'attributo `DllImport`, poiché macOS utilizza un differente schema di denominazione delle librerie dinamiche. Nell'esempio seguente viene usata la funzione `getpid(2)` per ottenere l'ID processo dell'applicazione e stamparlo nella console.
+<span data-ttu-id="b42cd-135">L'esempio è simile per macOS.</span><span class="sxs-lookup"><span data-stu-id="b42cd-135">The sample is similar for macOS.</span></span> <span data-ttu-id="b42cd-136">Uno degli elementi che è necessario cambiare è, naturalmente, il nome della libreria nell'attributo `DllImport`, poiché macOS utilizza un differente schema di denominazione delle librerie dinamiche.</span><span class="sxs-lookup"><span data-stu-id="b42cd-136">One thing that needs to change is, of course, the name of the library in the `DllImport` attribute, as macOS has a different scheme of naming dynamic libraries.</span></span> <span data-ttu-id="b42cd-137">Nell'esempio seguente viene usata la funzione `getpid(2)` per ottenere l'ID processo dell'applicazione e stamparlo nella console.</span><span class="sxs-lookup"><span data-stu-id="b42cd-137">The sample below uses the `getpid(2)` function to get the process ID of the application and print it out to the console.</span></span>
 
 ```csharp
 using System;
@@ -84,10 +84,9 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
-Naturalmente, il procedimento è simile in Linux. Il nome della funzione è lo stesso, dal momento che `getpid(2)` è la chiamata di sistema [POSIX](https://en.wikipedia.org/wiki/POSIX).
+<span data-ttu-id="b42cd-138">Naturalmente, il procedimento è simile in Linux.</span><span class="sxs-lookup"><span data-stu-id="b42cd-138">It is similar on Linux, of course.</span></span> <span data-ttu-id="b42cd-139">Il nome della funzione è lo stesso, dal momento che `getpid(2)` è la chiamata di sistema [POSIX](https://en.wikipedia.org/wiki/POSIX).</span><span class="sxs-lookup"><span data-stu-id="b42cd-139">The function name is same, since `getpid(2)` is [POSIX](https://en.wikipedia.org/wiki/POSIX) system call.</span></span>
 
 ```csharp
 using System;
@@ -107,14 +106,13 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
-### <a name="invoking-managed-code-from-unmanaged-code"></a>Richiamare codice gestito da codice non gestito
+### <a name="invoking-managed-code-from-unmanaged-code"></a><span data-ttu-id="b42cd-140">Richiamare codice gestito da codice non gestito</span><span class="sxs-lookup"><span data-stu-id="b42cd-140">Invoking managed code from unmanaged code</span></span>
 
-Il runtime consente naturalmente la comunicazione in entrambe le direzioni, permettendo di chiamare elementi gestiti da funzioni native usando puntatori alle funzioni. In un codice gestito l'elemento più simile a un puntatore a funzione è un **delegato**. Viene quindi usato un delegato per consentire i callback dal codice nativo al codice gestito.
+<span data-ttu-id="b42cd-141">Il runtime consente naturalmente la comunicazione in entrambe le direzioni, permettendo di chiamare elementi gestiti da funzioni native usando puntatori alle funzioni.</span><span class="sxs-lookup"><span data-stu-id="b42cd-141">Of course, the runtime allows communication to flow both ways which enables you to call into managed artifacts from native functions, using function pointers.</span></span> <span data-ttu-id="b42cd-142">In un codice gestito l'elemento più simile a un puntatore a funzione è un **delegato**. Viene quindi usato un delegato per consentire i callback dal codice nativo al codice gestito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-142">The closest thing to a function pointer in managed code is a **delegate**, so this is what is used to allow callbacks from native code into managed code.</span></span>
 
-La modalità di uso di questa funzionalità è simile al processo di passaggio dal codice gestito a quello nativo descritto in precedenza. Per un determinato callback, viene definito un delegato corrispondente alla firma. Tale delegato viene quindi passato al metodo esterno. Il runtime eseguirà tutte le altre operazioni.
+<span data-ttu-id="b42cd-143">La modalità di uso di questa funzionalità è simile al processo di passaggio dal codice gestito a quello nativo descritto in precedenza.</span><span class="sxs-lookup"><span data-stu-id="b42cd-143">The way to use this feature is similar to managed to native process described above.</span></span> <span data-ttu-id="b42cd-144">Per un determinato callback, viene definito un delegato corrispondente alla firma. Tale delegato viene quindi passato al metodo esterno.</span><span class="sxs-lookup"><span data-stu-id="b42cd-144">For a given callback, you define a delegate that matches the signature, and pass that into the external method.</span></span> <span data-ttu-id="b42cd-145">Il runtime eseguirà tutte le altre operazioni.</span><span class="sxs-lookup"><span data-stu-id="b42cd-145">The runtime will take care of everything else.</span></span>
 
 ```csharp
 using System;
@@ -130,7 +128,7 @@ namespace ConsoleApplication1 {
         // Import user32.dll (containing the function we need) and define
         // the method corresponding to the native function.
         [DllImport("user32.dll")]
-        static extern int EnumWindows(EnumWC hWnd, IntPtr lParam);
+        static extern int EnumWindows(EnumWC lpEnumFunc, IntPtr lParam);
 
         // Define the implementation of the delegate; here, we simply output the window handle.
         static bool OutputWindow(IntPtr hwnd, IntPtr lParam) {
@@ -144,21 +142,20 @@ namespace ConsoleApplication1 {
         }
     }
 }
-
 ```
 
-Prima di analizzare l'esempio, è opportuno esaminare le firme delle funzioni non gestite che è necessario utilizzare. La firma della funzione da chiamare per enumerare tutte le finestre è la seguente: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
+<span data-ttu-id="b42cd-146">Prima di analizzare l'esempio, è opportuno esaminare le firme delle funzioni non gestite che è necessario utilizzare.</span><span class="sxs-lookup"><span data-stu-id="b42cd-146">Before we walk through our example, it is good to go over the signatures of the unmanaged functions we need to work with.</span></span> <span data-ttu-id="b42cd-147">La firma della funzione da chiamare per enumerare tutte le finestre è la seguente: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`</span><span class="sxs-lookup"><span data-stu-id="b42cd-147">The function we want to call to enumerate all of the windows has the following signature: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`</span></span>
 
-Il primo parametro è un callback. La firma di tale callback è la seguente: `BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`
+<span data-ttu-id="b42cd-148">Il primo parametro è un callback.</span><span class="sxs-lookup"><span data-stu-id="b42cd-148">The first parameter is a callback.</span></span> <span data-ttu-id="b42cd-149">La firma di tale callback è la seguente: `BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`</span><span class="sxs-lookup"><span data-stu-id="b42cd-149">The said callback has the following signature: `BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`</span></span>
 
-Tenendo presente questo, passare ad analizzare l'esempio:
+<span data-ttu-id="b42cd-150">Tenendo presente questo, passare ad analizzare l'esempio:</span><span class="sxs-lookup"><span data-stu-id="b42cd-150">With this in mind, let’s walk through the example:</span></span>
 
-*   La riga 8 dell'esempio definisce un delegato che corrisponde alla firma del callback da un codice non gestito. Si noti che i tipi LPARAM e HWND vengono rappresentati usando `IntPtr` nel codice gestito.
-*   Le righe 10 e 11 introducono la funzione `EnumWindows` dalla libreria user32.dll.
-*   Le righe da 13 a 16 implementano il delegato. Per questo semplice esempio si vuole eseguire l'output dell'handle alla console.
-*   Nella riga 19, infine, il metodo esterno viene richiamato e passato al delegato.
+*   <span data-ttu-id="b42cd-151">La riga 8 dell'esempio definisce un delegato che corrisponde alla firma del callback da un codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-151">Line #8 in the example defines a delegate that matches the signature of the callback from unmanaged code.</span></span> <span data-ttu-id="b42cd-152">Si noti che i tipi LPARAM e HWND vengono rappresentati usando `IntPtr` nel codice gestito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-152">Notice how the LPARAM and HWND types are represented using `IntPtr` in the managed code.</span></span>
+*   <span data-ttu-id="b42cd-153">Le righe 10 e 11 introducono la funzione `EnumWindows` dalla libreria user32.dll.</span><span class="sxs-lookup"><span data-stu-id="b42cd-153">Lines #10 and #11 introduce the `EnumWindows` function from the user32.dll library.</span></span>
+*   <span data-ttu-id="b42cd-154">Le righe da 13 a 16 implementano il delegato.</span><span class="sxs-lookup"><span data-stu-id="b42cd-154">Lines #13 - 16 implement the delegate.</span></span> <span data-ttu-id="b42cd-155">Per questo semplice esempio si vuole eseguire l'output dell'handle alla console.</span><span class="sxs-lookup"><span data-stu-id="b42cd-155">For this simple example, we just want to output the handle to the console.</span></span>
+*   <span data-ttu-id="b42cd-156">Nella riga 19, infine, il metodo esterno viene richiamato e passato al delegato.</span><span class="sxs-lookup"><span data-stu-id="b42cd-156">Finally, in line #19 we invoke the external method and pass in the delegate.</span></span>
 
-Gli esempi Linux e macOS sono riportati di seguito. Per questi esempi viene usata la funzione `ftw` disponibile in `libc`, la libreria C. Questa funzione viene usata per scorrere le gerarchie di directory e accetta un puntatore a una funzione come uno dei propri parametri. Tale funzione ha la firma seguente: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
+<span data-ttu-id="b42cd-157">Gli esempi Linux e macOS sono riportati di seguito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-157">The Linux and macOS examples are shown below.</span></span> <span data-ttu-id="b42cd-158">Per questi esempi viene usata la funzione `ftw` disponibile in `libc`, la libreria C.</span><span class="sxs-lookup"><span data-stu-id="b42cd-158">For them, we use the `ftw` function that can be found in `libc`, the C library.</span></span> <span data-ttu-id="b42cd-159">Questa funzione viene usata per scorrere le gerarchie di directory e accetta un puntatore a una funzione come uno dei propri parametri.</span><span class="sxs-lookup"><span data-stu-id="b42cd-159">This function is used to traverse directory hierarchies and it takes a pointer to a function as one of its parameters.</span></span> <span data-ttu-id="b42cd-160">Tale funzione ha la firma seguente: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.</span><span class="sxs-lookup"><span data-stu-id="b42cd-160">The said function has the following signature: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.</span></span>
 
 ```csharp
 using System;
@@ -208,10 +205,9 @@ namespace PInvokeSamples {
             public long TimeLastStatusChange;
     }
 }
-
 ```
 
-Nell'esempio macOS viene usata la stessa funzione. L'unica differenza è l'argomento dell'attributo `DllImport`, dal momento che macOS mantiene `libc` in una posizione differente.
+<span data-ttu-id="b42cd-161">Nell'esempio macOS viene usata la stessa funzione. L'unica differenza è l'argomento dell'attributo `DllImport`, dal momento che macOS mantiene `libc` in una posizione differente.</span><span class="sxs-lookup"><span data-stu-id="b42cd-161">macOS example uses the same function, and the only difference is the argument to the `DllImport` attribute, as macOS keeps `libc` in a different place.</span></span>
 
 ```csharp
 using System;
@@ -261,26 +257,24 @@ namespace PInvokeSamples {
                 public long TimeLastStatusChange;
         }
 }
-
 ```
 
-Entrambi gli esempi precedenti dipendono da parametri e in entrambi i casi i parametri vengono forniti come tipi gestiti. Il runtime esegue le operazioni necessarie ed elabora i parametri ottenendo i relativi equivalenti sull'altro lato. Poiché questo processo è molto importante per la scrittura di codice di interoperabilità nativa di qualità, è opportuno sapere cosa succede quando il runtime _effettua il marshalling_ dei tipi.
+<span data-ttu-id="b42cd-162">Entrambi gli esempi precedenti dipendono da parametri e in entrambi i casi i parametri vengono forniti come tipi gestiti.</span><span class="sxs-lookup"><span data-stu-id="b42cd-162">Both of the above examples depend on parameters, and in both cases, the parameters are given as managed types.</span></span> <span data-ttu-id="b42cd-163">Il runtime esegue le operazioni necessarie ed elabora i parametri ottenendo i relativi equivalenti sull'altro lato.</span><span class="sxs-lookup"><span data-stu-id="b42cd-163">Runtime does the "right thing" and processes these into its equivalents on the other side.</span></span> <span data-ttu-id="b42cd-164">Poiché questo processo è molto importante per la scrittura di codice di interoperabilità nativa di qualità, è opportuno sapere cosa succede quando il runtime _effettua il marshalling_ dei tipi.</span><span class="sxs-lookup"><span data-stu-id="b42cd-164">Since this process is really important to writing quality native interop code, let’s take a look at what happens when the runtime _marshals_ the types.</span></span>
 
-## <a name="type-marshalling"></a>Marshalling dei tipi
+## <a name="type-marshalling"></a><span data-ttu-id="b42cd-165">Marshalling dei tipi</span><span class="sxs-lookup"><span data-stu-id="b42cd-165">Type marshalling</span></span>
 
-Il termine **marshalling** indica il processo di trasformazione dei tipi quando questi devono passare dal codice gestito a quello nativo e viceversa.
+<span data-ttu-id="b42cd-166">Il termine **marshalling** indica il processo di trasformazione dei tipi quando questi devono passare dal codice gestito a quello nativo e viceversa.</span><span class="sxs-lookup"><span data-stu-id="b42cd-166">**Marshalling** is the process of transforming types when they need to cross the managed boundary into native and vice versa.</span></span>
 
-Il motivo per cui il marshalling è necessario è che i tipi presenti nel codice gestito e quelli presenti nel codice non gestito sono differenti. Nel codice gestito, ad esempio, si ha un elemento `String`, mentre nell'ambiente non gestito le stringhe possono essere Unicode ("wide"), non Unicode, con terminazione null, ASCII, e così via. Per impostazione predefinita, il sottosistema di P/Invoke tenterà di eseguire le operazioni necessarie in base al comportamento predefinito descritto in [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx). Tuttavia, per i casi in cui è necessario un controllo aggiuntivo, è possibile usare l'attributo `MarshalAs` per specificare il tipo previsto sul lato non gestito. Ad esempio, se si vuole che la stringa venga inviata come stringa ANSI con terminazione null, è possibile usare un codice simile al seguente:
+<span data-ttu-id="b42cd-167">Il motivo per cui il marshalling è necessario è che i tipi presenti nel codice gestito e quelli presenti nel codice non gestito sono differenti.</span><span class="sxs-lookup"><span data-stu-id="b42cd-167">The reason marshalling is needed is because the types in the managed and unmanaged code are different.</span></span> <span data-ttu-id="b42cd-168">Nel codice gestito, ad esempio, si ha un elemento `String`, mentre nell'ambiente non gestito le stringhe possono essere Unicode ("wide"), non Unicode, con terminazione null, ASCII, e così via. Per impostazione predefinita, il sottosistema di P/Invoke tenterà di eseguire le operazioni necessarie in base al comportamento predefinito descritto in [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx).</span><span class="sxs-lookup"><span data-stu-id="b42cd-168">In managed code, for instance, you have a `String`, while in the unmanaged world strings can be Unicode ("wide"), non-Unicode, null-terminated, ASCII, etc. By default, the P/Invoke subsystem will try to do the Right Thing based on the default behavior which you can see on [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx).</span></span> <span data-ttu-id="b42cd-169">Tuttavia, per i casi in cui è necessario un controllo aggiuntivo, è possibile usare l'attributo `MarshalAs` per specificare il tipo previsto sul lato non gestito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-169">However, for those situations where you need extra control, you can employ the `MarshalAs` attribute to specify what is the expected type on the unmanaged side.</span></span> <span data-ttu-id="b42cd-170">Ad esempio, se si vuole che la stringa venga inviata come stringa ANSI con terminazione null, è possibile usare un codice simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="b42cd-170">For instance, if we want the string to be sent as a null-terminated ANSI string, we could do it like this:</span></span>
 
 ```csharp
-[DllImport("somenativelibrary.dll"]
+[DllImport("somenativelibrary.dll")]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
-
 ```
 
-### <a name="marshalling-classes-and-structs"></a>Marshalling di classi e strutture
+### <a name="marshalling-classes-and-structs"></a><span data-ttu-id="b42cd-171">Marshalling di classi e strutture</span><span class="sxs-lookup"><span data-stu-id="b42cd-171">Marshalling classes and structs</span></span>
 
-Un altro aspetto del marshalling dei tipi è il modo in cui è possibile passare una struttura a un metodo non gestito. Ad esempio, alcuni dei metodi non gestiti richiedono una struttura come parametro. In questi casi, è necessario creare una classe o una struttura corrispondente nel codice gestito per usarla come parametro. La semplice definizione della classe, tuttavia, non è sufficiente. È necessario anche indicare al gestore di marshalling come eseguire il mapping dei campi della classe alla struttura non gestita. A questo punto entra in gioco l'attributo `StructLayout`.
+<span data-ttu-id="b42cd-172">Un altro aspetto del marshalling dei tipi è il modo in cui è possibile passare una struttura a un metodo non gestito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-172">Another aspect of type marshalling is how to pass in a struct to an unmanaged method.</span></span> <span data-ttu-id="b42cd-173">Ad esempio, alcuni dei metodi non gestiti richiedono una struttura come parametro.</span><span class="sxs-lookup"><span data-stu-id="b42cd-173">For instance, some of the unmanaged methods require a struct as a parameter.</span></span> <span data-ttu-id="b42cd-174">In questi casi, è necessario creare una classe o una struttura corrispondente nel codice gestito per usarla come parametro.</span><span class="sxs-lookup"><span data-stu-id="b42cd-174">In these cases, we need to create a corresponding struct or a class in managed part of the world to use it as a parameter.</span></span> <span data-ttu-id="b42cd-175">La semplice definizione della classe, tuttavia, non è sufficiente. È necessario anche indicare al gestore di marshalling come eseguire il mapping dei campi della classe alla struttura non gestita.</span><span class="sxs-lookup"><span data-stu-id="b42cd-175">However, just defining the class is not enough, we also need to instruct the marshaler how to map fields in the class to the unmanaged struct.</span></span> <span data-ttu-id="b42cd-176">A questo punto entra in gioco l'attributo `StructLayout`.</span><span class="sxs-lookup"><span data-stu-id="b42cd-176">This is where the `StructLayout` attribute comes into play.</span></span>
 
 ```csharp
 [DllImport("kernel32.dll")]
@@ -303,10 +297,9 @@ public static void Main(string[] args) {
     GetSystemTime(st);
     Console.WriteLine(st.Year);
 }
-
 ```
 
-L'esempio precedente mostra una semplice chiamata alla funzione `GetSystemTime()`. La parte interessante è alla riga 4\. L'attributo specifica che i campi della classe devono essere mappati in modo sequenziale alla struttura sull'altro lato (non gestito). Questo significa che i nomi dei campi non sono rilevanti, ma che è importante solo l'ordine. È infatti necessario che i campi corrispondano alla struttura non gestita, come mostrato di seguito:
+<span data-ttu-id="b42cd-177">L'esempio precedente mostra una semplice chiamata alla funzione `GetSystemTime()`.</span><span class="sxs-lookup"><span data-stu-id="b42cd-177">The example above shows off a simple example of calling into `GetSystemTime()` function.</span></span> <span data-ttu-id="b42cd-178">La parte interessante è alla riga 4.</span><span class="sxs-lookup"><span data-stu-id="b42cd-178">The interesting bit is on line 4.</span></span> <span data-ttu-id="b42cd-179">L'attributo specifica che i campi della classe devono essere mappati in modo sequenziale allo struct sull'altro lato (non gestito).</span><span class="sxs-lookup"><span data-stu-id="b42cd-179">The attribute specifies that the fields of the class should be mapped sequentially to the struct on the other (unmanaged) side.</span></span> <span data-ttu-id="b42cd-180">Questo significa che i nomi dei campi non sono rilevanti, ma che è importante solo l'ordine. È infatti necessario che i campi corrispondano alla struttura non gestita, come mostrato di seguito:</span><span class="sxs-lookup"><span data-stu-id="b42cd-180">This means that the naming of the fields is not important, only their order is important, as it needs to correspond to the unmanaged struct, shown below:</span></span>
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -319,10 +312,9 @@ typedef struct _SYSTEMTIME {
   WORD wSecond;
   WORD wMilliseconds;
 } SYSTEMTIME, *PSYSTEMTIME*;
-
 ```
 
-La procedura per Linux e macOS è già stata mostrata nell'esempio precedente. Viene comunque mostrata anche di seguito.
+<span data-ttu-id="b42cd-181">La procedura per Linux e macOS è già stata mostrata nell'esempio precedente.</span><span class="sxs-lookup"><span data-stu-id="b42cd-181">We already saw the Linux and macOS example for this in the previous example.</span></span> <span data-ttu-id="b42cd-182">Viene comunque mostrata anche di seguito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-182">It is shown again below.</span></span>
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -341,14 +333,13 @@ public class StatClass {
         public long TimeLastModification;
         public long TimeLastStatusChange;
 }
-
 ```
 
-La classe `StatClass` rappresenta una struttura restituita dalla chiamata di sistema `stat` nei sistemi UNIX. Rappresenta informazioni su un determinato file. La classe precedente è la rappresentazione statica della struttura nel codice gestito. Anche in questo caso, i campi della classe devono essere nello stesso ordine della struttura nativa (per informazioni, consultare le pagine di manuale relative all'implementazione UNIX preferita) e devono essere dello stesso tipo sottostante.
+<span data-ttu-id="b42cd-183">La classe `StatClass` rappresenta una struttura restituita dalla chiamata di sistema `stat` nei sistemi UNIX.</span><span class="sxs-lookup"><span data-stu-id="b42cd-183">The `StatClass` class represents a structure that is returned by the `stat` system call on UNIX systems.</span></span> <span data-ttu-id="b42cd-184">Rappresenta informazioni su un determinato file.</span><span class="sxs-lookup"><span data-stu-id="b42cd-184">It represents information about a given file.</span></span> <span data-ttu-id="b42cd-185">La classe precedente è la rappresentazione statica della struttura nel codice gestito.</span><span class="sxs-lookup"><span data-stu-id="b42cd-185">The class above is the stat struct representation in managed code.</span></span> <span data-ttu-id="b42cd-186">Anche in questo caso, i campi della classe devono essere nello stesso ordine della struttura nativa (per informazioni, consultare le pagine di manuale relative all'implementazione UNIX preferita) e devono essere dello stesso tipo sottostante.</span><span class="sxs-lookup"><span data-stu-id="b42cd-186">Again, the fields in the class have to be in the same order as the native struct (you can find these by perusing man pages on your favorite UNIX implementation) and they have to be of the same underlying type.</span></span>
 
-## <a name="more-resources"></a>Altre risorse
+## <a name="more-resources"></a><span data-ttu-id="b42cd-187">Altre risorse</span><span class="sxs-lookup"><span data-stu-id="b42cd-187">More resources</span></span>
 
-*   [PInvoke.net wiki](http://www.pinvoke.net): accurata pagina wiki con informazioni sulle API Win32 più comuni e sul modo di richiamarle.
-*   [P/Invoke in MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [Documentazione su Mono in P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/)
+*   <span data-ttu-id="b42cd-188">[PInvoke.net wiki](http://www.pinvoke.net): accurata pagina wiki con informazioni sulle API Win32 più comuni e sul modo di richiamarle.</span><span class="sxs-lookup"><span data-stu-id="b42cd-188">[PInvoke.net wiki](http://www.pinvoke.net) an excellent Wiki with information on common Win32 APIs and how to call them.</span></span>
+*   [<span data-ttu-id="b42cd-189">P/Invoke in MSDN</span><span class="sxs-lookup"><span data-stu-id="b42cd-189">P/Invoke on MSDN</span></span>](https://msdn.microsoft.com/library/zbz07712.aspx)
+*   [<span data-ttu-id="b42cd-190">Documentazione su Mono in P/Invoke</span><span class="sxs-lookup"><span data-stu-id="b42cd-190">Mono documentation on P/Invoke</span></span>](http://www.mono-project.com/docs/advanced/pinvoke/)
 

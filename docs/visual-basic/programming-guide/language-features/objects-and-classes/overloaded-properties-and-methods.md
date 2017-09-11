@@ -38,75 +38,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6f379f04ca9b75161baf2bf2c33e87f05a9edf97
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 0b0040f78fd8e091027e32efae3a0f26c2a08622
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="overloaded-properties-and-methods-visual-basic"></a>Metodi e proprietà di overload (Visual Basic)
-Eseguire l'overload è la creazione di più routine, un costruttore di istanza o proprietà in una classe con lo stesso nome ma con diversi tipi di argomento.  
+# <a name="overloaded-properties-and-methods-visual-basic"></a><span data-ttu-id="bb5bf-102">Metodi e proprietà di overload (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb5bf-102">Overloaded Properties and Methods (Visual Basic)</span></span>
+<span data-ttu-id="bb5bf-103">Eseguire l'overload è la creazione di più routine, un costruttore di istanza o proprietà in una classe con lo stesso nome ma con diversi tipi di argomento.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-103">Overloading is the creation of more than one procedure, instance constructor, or property in a class with the same name but different argument types.</span></span>  
   
-## <a name="overloading-usage"></a>Utilizzo dell'overload  
- L'overload è particolarmente utile quando il modello a oggetti impone l'utilizzo di nomi identici per routine che operano sui tipi di dati diversi. Ad esempio, una classe che è possibile visualizzare diversi tipi di dati può presentare `Display` procedure simili al seguente:  
+## <a name="overloading-usage"></a><span data-ttu-id="bb5bf-104">Utilizzo dell'overload</span><span class="sxs-lookup"><span data-stu-id="bb5bf-104">Overloading Usage</span></span>  
+ <span data-ttu-id="bb5bf-105">L'overload è particolarmente utile quando il modello a oggetti impone l'utilizzo di nomi identici per routine che operano sui tipi di dati diversi.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-105">Overloading is especially useful when your object model dictates that you employ identical names for procedures that operate on different data types.</span></span> <span data-ttu-id="bb5bf-106">Ad esempio, una classe che è possibile visualizzare diversi tipi di dati può presentare `Display` procedure simili al seguente:</span><span class="sxs-lookup"><span data-stu-id="bb5bf-106">For example, a class that can display several different data types could have `Display` procedures that look like this:</span></span>  
   
- [!code-vb[&#64; VbVbalrOOP](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_1.vb)]  
+ <span data-ttu-id="bb5bf-107">[!code-vb[&#64; VbVbalrOOP](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="bb5bf-107">[!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_1.vb)]</span></span>  
   
- Senza l'overload, sarebbe necessario creare nomi distinti per ogni procedura, anche se si eseguono la stessa operazione, come indicato di seguito:  
+ <span data-ttu-id="bb5bf-108">Senza l'overload, sarebbe necessario creare nomi distinti per ogni procedura, anche se si eseguono la stessa operazione, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="bb5bf-108">Without overloading, you would need to create distinct names for each procedure, even though they do the same thing, as shown next:</span></span>  
   
- [!code-vb[VbVbalrOOP&#65;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_2.vb)]  
+ <span data-ttu-id="bb5bf-109">[!code-vb[VbVbalrOOP&#65;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="bb5bf-109">[!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_2.vb)]</span></span>  
   
- L'overload, è facile utilizzare metodi o proprietà in quanto fornisce una scelta dei tipi di dati che può essere utilizzato. Ad esempio, il metodo di overload `Display` metodo descritto in precedenza può essere chiamato con una qualsiasi delle righe di codice seguenti:  
+ <span data-ttu-id="bb5bf-110">L'overload, è facile utilizzare metodi o proprietà in quanto fornisce una scelta dei tipi di dati che può essere utilizzato.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-110">Overloading makes it easier to use properties or methods because it provides a choice of data types that can be used.</span></span> <span data-ttu-id="bb5bf-111">Ad esempio, il metodo di overload `Display` metodo descritto in precedenza può essere chiamato con una qualsiasi delle righe di codice seguenti:</span><span class="sxs-lookup"><span data-stu-id="bb5bf-111">For example, the overloaded `Display` method discussed previously can be called with any of the following lines of code:</span></span>  
   
- [!code-vb[VbVbalrOOP&#66;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]  
+ <span data-ttu-id="bb5bf-112">[!code-vb[VbVbalrOOP&#66;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]</span><span class="sxs-lookup"><span data-stu-id="bb5bf-112">[!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]</span></span>  
   
- In fase di esecuzione [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] specifichino la procedura corretta in base ai tipi di dati dei parametri è.  
+ <span data-ttu-id="bb5bf-113">In fase di esecuzione [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] specifichino la procedura corretta in base ai tipi di dati dei parametri è.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-113">At run time, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] calls the correct procedure based on the data types of the parameters you specify.</span></span>  
   
-## <a name="overloading-rules"></a>Regole di overload  
- Creare un membro di overload per una classe mediante l'aggiunta di due o più proprietà o metodi con lo stesso nome. Ad eccezione dei membri derivati, ogni membro di overload deve avere elenchi di parametri diversi e gli elementi seguenti non possono essere utilizzati come caratteristica di differenziazione quando l'overload di una proprietà o routine:  
+## <a name="overloading-rules"></a><span data-ttu-id="bb5bf-114">Regole di overload</span><span class="sxs-lookup"><span data-stu-id="bb5bf-114">Overloading Rules</span></span>  
+ <span data-ttu-id="bb5bf-115">Creare un membro di overload per una classe mediante l'aggiunta di due o più proprietà o metodi con lo stesso nome.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-115">You create an overloaded member for a class by adding two or more properties or methods with the same name.</span></span> <span data-ttu-id="bb5bf-116">Ad eccezione dei membri derivati, ogni membro di overload deve avere elenchi di parametri diversi e gli elementi seguenti non possono essere utilizzati come caratteristica di differenziazione quando l'overload di una proprietà o routine:</span><span class="sxs-lookup"><span data-stu-id="bb5bf-116">Except for overloaded derived members, each overloaded member must have different parameter lists, and the following items cannot be used as a differentiating feature when overloading a property or procedure:</span></span>  
   
--   Modificatori, ad esempio `ByVal` o `ByRef`, che si applicano a un membro o i parametri del membro.  
+-   <span data-ttu-id="bb5bf-117">Modificatori, ad esempio `ByVal` o `ByRef`, che si applicano a un membro o i parametri del membro.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-117">Modifiers, such as `ByVal` or `ByRef`, that apply to a member, or parameters of the member.</span></span>  
   
--   Nomi dei parametri  
+-   <span data-ttu-id="bb5bf-118">Nomi dei parametri</span><span class="sxs-lookup"><span data-stu-id="bb5bf-118">Names of parameters</span></span>  
   
--   Tipi restituiti di procedure  
+-   <span data-ttu-id="bb5bf-119">Tipi restituiti di procedure</span><span class="sxs-lookup"><span data-stu-id="bb5bf-119">Return types of procedures</span></span>  
   
- Il `Overloads` parola chiave è facoltativa quando l'overload, ma eventuali overload membro utilizza il `Overloads` (parola chiave), quindi tutti gli altri membri in overload con lo stesso nome devono inoltre specificare questa parola chiave.  
+ <span data-ttu-id="bb5bf-120">Il `Overloads` parola chiave è facoltativa quando l'overload, ma eventuali overload membro utilizza il `Overloads` (parola chiave), quindi tutti gli altri membri in overload con lo stesso nome devono inoltre specificare questa parola chiave.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-120">The `Overloads` keyword is optional when overloading, but if any overloaded member uses the `Overloads` keyword, then all other overloaded members with the same name must also specify this keyword.</span></span>  
   
- Le classi derivate possono eseguire l'overload di membri ereditati con membri che hanno parametri identici e tipi di parametro, un processo noto come *shadowing in base al nome e la firma*. Se il `Overloads` parola chiave viene utilizzata quando shadowing in base al nome e la firma, implementazione della classe derivata del membro sarà usato al posto di implementazione nella classe di base e tutti gli altri overload per tale membro sarà disponibile per le istanze della classe derivata.  
+ <span data-ttu-id="bb5bf-121">Le classi derivate possono eseguire l'overload di membri ereditati con membri che hanno parametri identici e tipi di parametro, un processo noto come *shadowing in base al nome e la firma*.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-121">Derived classes can overload inherited members with members that have identical parameters and parameter types, a process known as *shadowing by name and signature*.</span></span> <span data-ttu-id="bb5bf-122">Se il `Overloads` parola chiave viene utilizzata quando shadowing in base al nome e la firma, implementazione della classe derivata del membro sarà usato al posto di implementazione nella classe di base e tutti gli altri overload per tale membro sarà disponibile per le istanze della classe derivata.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-122">If the `Overloads` keyword is used when shadowing by name and signature, the derived class's implementation of the member will be used instead of the implementation in the base class, and all other overloads for that member will be available to instances of the derived class.</span></span>  
   
- Se il `Overloads` parola chiave viene omessa quando l'overload di un membro ereditato con un membro che dispone di parametri identici e tipi di parametro, quindi viene chiamato l'overload *shadowing in base al nome*. Shadowing in base al nome sostituisce l'implementazione ereditata di un membro e rende disponibili per le istanze della classe derivata e i relativi discendenti tutti gli altri overload.  
+ <span data-ttu-id="bb5bf-123">Se il `Overloads` parola chiave viene omessa quando l'overload di un membro ereditato con un membro che dispone di parametri identici e tipi di parametro, quindi viene chiamato l'overload *shadowing in base al nome*.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-123">If the `Overloads` keyword is omitted when overloading an inherited member with a member that has identical parameters and parameter types, then the overloading is called *shadowing by name*.</span></span> <span data-ttu-id="bb5bf-124">Shadowing in base al nome sostituisce l'implementazione ereditata di un membro e rende disponibili per le istanze della classe derivata e i relativi discendenti tutti gli altri overload.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-124">Shadowing by name replaces the inherited implementation of a member, and it makes all other overloads unavailable to instances of the derived class and its decedents.</span></span>  
   
- Il `Overloads` e `Shadows` i modificatori non utilizzati con lo stesso metodo o proprietà.  
+ <span data-ttu-id="bb5bf-125">Il `Overloads` e `Shadows` i modificatori non utilizzati con lo stesso metodo o proprietà.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-125">The `Overloads` and `Shadows` modifiers cannot both be used with the same property or method.</span></span>  
   
-### <a name="example"></a>Esempio  
- Nell'esempio seguente consente di creare metodi di overload che accettano un un `String` o `Decimal` rappresentazione di un importo in dollari e restituiscono una stringa contenente l'IVA.  
+### <a name="example"></a><span data-ttu-id="bb5bf-126">Esempio</span><span class="sxs-lookup"><span data-stu-id="bb5bf-126">Example</span></span>  
+ <span data-ttu-id="bb5bf-127">Nell'esempio seguente consente di creare metodi di overload che accettano un un `String` o `Decimal` rappresentazione di un importo in dollari e restituiscono una stringa contenente l'IVA.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-127">The following example creates overloaded methods that accept either a `String` or `Decimal` representation of a dollar amount and return a string containing the sales tax.</span></span>  
   
-##### <a name="to-use-this-example-to-create-an-overloaded-method"></a>Utilizzare questo esempio per creare un metodo di overload  
+##### <a name="to-use-this-example-to-create-an-overloaded-method"></a><span data-ttu-id="bb5bf-128">Utilizzare questo esempio per creare un metodo di overload</span><span class="sxs-lookup"><span data-stu-id="bb5bf-128">To use this example to create an overloaded method</span></span>  
   
-1.  Aprire un nuovo progetto e aggiungere una classe denominata `TaxClass`.  
+1.  <span data-ttu-id="bb5bf-129">Aprire un nuovo progetto e aggiungere una classe denominata `TaxClass`.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-129">Open a new project and add a class named `TaxClass`.</span></span>  
   
-2.  Aggiungere il codice seguente alla classe `TaxClass`.  
+2.  <span data-ttu-id="bb5bf-130">Aggiungere il codice seguente alla classe `TaxClass`.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-130">Add the following code to the `TaxClass` class.</span></span>  
   
-     [!code-vb[VbVbalrOOP&#67;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_4.vb)]  
+     <span data-ttu-id="bb5bf-131">[!code-vb[VbVbalrOOP&#67;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_4.vb)]</span><span class="sxs-lookup"><span data-stu-id="bb5bf-131">[!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_4.vb)]</span></span>  
   
-3.  Aggiungere la seguente procedura per il form.  
+3.  <span data-ttu-id="bb5bf-132">Aggiungere la seguente procedura per il form.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-132">Add the following procedure to your form.</span></span>  
   
-     [!code-vb[VbVbalrOOP&#68;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_5.vb)]  
+     <span data-ttu-id="bb5bf-133">[!code-vb[VbVbalrOOP&#68;](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_5.vb)]</span><span class="sxs-lookup"><span data-stu-id="bb5bf-133">[!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_5.vb)]</span></span>  
   
-4.  Aggiungere un pulsante al form e chiamare il `ShowTax` procedura il `Button1_Click` evento del pulsante.  
+4.  <span data-ttu-id="bb5bf-134">Aggiungere un pulsante al form e chiamare il `ShowTax` procedura il `Button1_Click` evento del pulsante.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-134">Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.</span></span>  
   
-5.  Eseguire il progetto e fare clic sul pulsante nel form per testare il metodo di overload `ShowTax` procedura.  
+5.  <span data-ttu-id="bb5bf-135">Eseguire il progetto e fare clic sul pulsante nel form per testare il metodo di overload `ShowTax` procedura.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-135">Run the project and click the button on the form to test the overloaded `ShowTax` procedure.</span></span>  
   
- In fase di esecuzione, il compilatore sceglie la funzione di overload appropriata che corrisponde ai parametri utilizzati. Quando si fa clic sul pulsante, il metodo di overload viene innanzitutto chiamato con un `Price` parametro che è una stringa e il messaggio "prezzo è una stringa. L'imposta è $5.12" viene visualizzato. `TaxAmount`viene chiamato con un `Decimal` valore per la seconda volta e il messaggio, "prezzo è un numero decimale. L'imposta è $5.12" viene visualizzato.  
+ <span data-ttu-id="bb5bf-136">In fase di esecuzione, il compilatore sceglie la funzione di overload appropriata che corrisponde ai parametri utilizzati.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-136">At run time, the compiler chooses the appropriate overloaded function that matches the parameters being used.</span></span> <span data-ttu-id="bb5bf-137">Quando si fa clic sul pulsante, il metodo di overload viene innanzitutto chiamato con un `Price` parametro che è una stringa e il messaggio "prezzo è una stringa.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-137">When you click the button, the overloaded method is called first with a `Price` parameter that is a string and the message, "Price is a String.</span></span> <span data-ttu-id="bb5bf-138">L'imposta è $5.12" viene visualizzato.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-138">Tax is $5.12" is displayed.</span></span> <span data-ttu-id="bb5bf-139">`TaxAmount`viene chiamato con un `Decimal` valore per la seconda volta e il messaggio, "prezzo è un numero decimale.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-139">`TaxAmount` is called with a `Decimal` value the second time and the message, "Price is a Decimal.</span></span> <span data-ttu-id="bb5bf-140">L'imposta è $5.12" viene visualizzato.</span><span class="sxs-lookup"><span data-stu-id="bb5bf-140">Tax is $5.12" is displayed.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Sub (istruzione)](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Nozioni fondamentali sull'ereditarietà](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [Ombreggiature](../../../../visual-basic/language-reference/modifiers/shadows.md)   
- [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)   
- [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)   
- [Overload](../../../../visual-basic/language-reference/modifiers/overloads.md)   
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
+## <a name="see-also"></a><span data-ttu-id="bb5bf-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bb5bf-141">See Also</span></span>  
+ <span data-ttu-id="bb5bf-142">[Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) </span><span class="sxs-lookup"><span data-stu-id="bb5bf-142">[Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) </span></span>  
+<span data-ttu-id="bb5bf-143"> [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md) </span><span class="sxs-lookup"><span data-stu-id="bb5bf-143"> [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md) </span></span>  
+<span data-ttu-id="bb5bf-144"> [Sub (istruzione)](../../../../visual-basic/language-reference/statements/sub-statement.md) </span><span class="sxs-lookup"><span data-stu-id="bb5bf-144"> [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md) </span></span>  
+<span data-ttu-id="bb5bf-145"> [Nozioni fondamentali sull'ereditarietà](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md) </span><span class="sxs-lookup"><span data-stu-id="bb5bf-145"> [Inheritance Basics](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md) </span></span>  
+<span data-ttu-id="bb5bf-146"> [Ombreggiature](../../../../visual-basic/language-reference/modifiers/shadows.md) </span><span class="sxs-lookup"><span data-stu-id="bb5bf-146"> [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) </span></span>  
+<span data-ttu-id="bb5bf-147"> [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) </span><span class="sxs-lookup"><span data-stu-id="bb5bf-147"> [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) </span></span>  
+<span data-ttu-id="bb5bf-148"> [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) </span><span class="sxs-lookup"><span data-stu-id="bb5bf-148"> [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) </span></span>  
+<span data-ttu-id="bb5bf-149"> [Overload](../../../../visual-basic/language-reference/modifiers/overloads.md) </span><span class="sxs-lookup"><span data-stu-id="bb5bf-149"> [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) </span></span>  
+<span data-ttu-id="bb5bf-150"> [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)</span><span class="sxs-lookup"><span data-stu-id="bb5bf-150"> [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)</span></span>

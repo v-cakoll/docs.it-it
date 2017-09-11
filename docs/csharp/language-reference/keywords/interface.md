@@ -36,49 +36,49 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="interface-c-reference"></a>interface (Riferimenti per C#)
-Un'interfaccia contiene solo le firme di [metodi](../../../csharp/programming-guide/classes-and-structs/methods.md), [proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md), [eventi](../../../csharp/programming-guide/events/index.md) o [indicizzatori](../../../csharp/programming-guide/indexers/index.md). Una classe o uno struct che implementa l'interfaccia deve implementarne i membri specificati nella definizione dell'interfaccia stessa. Nell'esempio seguente, la classe `ImplementationClass` deve implementare un metodo denominato `SampleMethod` che è privo di parametri e restituisce `void`.  
+# <a name="interface-c-reference"></a><span data-ttu-id="f25c0-102">interface (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="f25c0-102">interface (C# Reference)</span></span>
+<span data-ttu-id="f25c0-103">Un'interfaccia contiene solo le firme di [metodi](../../../csharp/programming-guide/classes-and-structs/methods.md), [proprietà](../../../csharp/programming-guide/classes-and-structs/properties.md), [eventi](../../../csharp/programming-guide/events/index.md) o [indicizzatori](../../../csharp/programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="f25c0-103">An interface contains only the signatures of [methods](../../../csharp/programming-guide/classes-and-structs/methods.md), [properties](../../../csharp/programming-guide/classes-and-structs/properties.md), [events](../../../csharp/programming-guide/events/index.md) or [indexers](../../../csharp/programming-guide/indexers/index.md).</span></span> <span data-ttu-id="f25c0-104">Una classe o uno struct che implementa l'interfaccia deve implementarne i membri specificati nella definizione dell'interfaccia stessa.</span><span class="sxs-lookup"><span data-stu-id="f25c0-104">A class or struct that implements the interface must implement the members of the interface that are specified in the interface definition.</span></span> <span data-ttu-id="f25c0-105">Nell'esempio seguente, la classe `ImplementationClass` deve implementare un metodo denominato `SampleMethod` che è privo di parametri e restituisce `void`.</span><span class="sxs-lookup"><span data-stu-id="f25c0-105">In the following example, class `ImplementationClass` must implement a method named `SampleMethod` that has no parameters and returns `void`.</span></span>  
   
- Per altre informazioni e altri esempi, vedere [Interfacce](../../../csharp/programming-guide/interfaces/index.md).  
+ <span data-ttu-id="f25c0-106">Per altre informazioni e altri esempi, vedere [Interfacce](../../../csharp/programming-guide/interfaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="f25c0-106">For more information and examples, see [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span></span>  
   
-## <a name="example"></a>Esempio  
- [!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_1.cs)]  
+## <a name="example"></a><span data-ttu-id="f25c0-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="f25c0-107">Example</span></span>  
+ <span data-ttu-id="f25c0-108">[!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="f25c0-108">[!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_1.cs)]</span></span>  
   
- Un'interfaccia può essere membro di uno spazio dei nomi o di una classe e contenere firme dei seguenti membri:  
+ <span data-ttu-id="f25c0-109">Un'interfaccia può essere membro di uno spazio dei nomi o di una classe e contenere firme dei seguenti membri:</span><span class="sxs-lookup"><span data-stu-id="f25c0-109">An interface can be a member of a namespace or a class and can contain signatures of the following members:</span></span>  
   
--   [Metodi](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+-   [<span data-ttu-id="f25c0-110">Metodi</span><span class="sxs-lookup"><span data-stu-id="f25c0-110">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
--   [Proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+-   [<span data-ttu-id="f25c0-111">Proprietà</span><span class="sxs-lookup"><span data-stu-id="f25c0-111">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [Indicizzatori](../../../csharp/programming-guide/indexers/using-indexers.md)  
+-   [<span data-ttu-id="f25c0-112">Indicizzatori</span><span class="sxs-lookup"><span data-stu-id="f25c0-112">Indexers</span></span>](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [Eventi](../../../csharp/language-reference/keywords/event.md)  
+-   [<span data-ttu-id="f25c0-113">Eventi</span><span class="sxs-lookup"><span data-stu-id="f25c0-113">Events</span></span>](../../../csharp/language-reference/keywords/event.md)  
   
- Un'interfaccia può ereditare da una o più interfacce di base.  
+ <span data-ttu-id="f25c0-114">Un'interfaccia può ereditare da una o più interfacce di base.</span><span class="sxs-lookup"><span data-stu-id="f25c0-114">An interface can inherit from one or more base interfaces.</span></span>  
   
- Quando un elenco di tipi di base contiene interfacce e una classe di base, la classe di base deve precedere le interfacce.  
+ <span data-ttu-id="f25c0-115">Quando un elenco di tipi di base contiene interfacce e una classe di base, la classe di base deve precedere le interfacce.</span><span class="sxs-lookup"><span data-stu-id="f25c0-115">When a base type list contains a base class and interfaces, the base class must come first in the list.</span></span>  
   
- Una classe che implementa un'interfaccia può implementare in modo esplicito i membri di tale interfaccia. Non è possibile accedere a un membro implementato in modo esplicito tramite un'istanza di classe, ma solo tramite un'istanza dell'interfaccia.  
+ <span data-ttu-id="f25c0-116">Una classe che implementa un'interfaccia può implementare in modo esplicito i membri di tale interfaccia.</span><span class="sxs-lookup"><span data-stu-id="f25c0-116">A class that implements an interface can explicitly implement members of that interface.</span></span> <span data-ttu-id="f25c0-117">Non è possibile accedere a un membro implementato in modo esplicito tramite un'istanza di classe, ma solo tramite un'istanza dell'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="f25c0-117">An explicitly implemented member cannot be accessed through a class instance, but only through an instance of the interface.</span></span>  
   
- Per altri dettagli e altri esempi di codice sull'implementazione esplicita delle interfacce, vedere [Implementazione esplicita dell'interfaccia](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md).  
+ <span data-ttu-id="f25c0-118">Per altri dettagli e altri esempi di codice sull'implementazione esplicita delle interfacce, vedere [Implementazione esplicita dell'interfaccia](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md).</span><span class="sxs-lookup"><span data-stu-id="f25c0-118">For more details and code examples on explicit interface implementation, see [Explicit Interface Implementation](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md).</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata un'implementazione dell'interfaccia. In questo esempio l'interfaccia contiene la dichiarazione di proprietà e la classe contiene l'implementazione. Qualsiasi istanza di una classe che implementa `IPoint` presenta proprietà `x` e `y` di tipo Integer.  
+## <a name="example"></a><span data-ttu-id="f25c0-119">Esempio</span><span class="sxs-lookup"><span data-stu-id="f25c0-119">Example</span></span>  
+ <span data-ttu-id="f25c0-120">Nell'esempio seguente viene illustrata un'implementazione dell'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="f25c0-120">The following example demonstrates interface implementation.</span></span> <span data-ttu-id="f25c0-121">In questo esempio l'interfaccia contiene la dichiarazione di proprietà e la classe contiene l'implementazione.</span><span class="sxs-lookup"><span data-stu-id="f25c0-121">In this example, the interface contains the property declaration and the class contains the implementation.</span></span> <span data-ttu-id="f25c0-122">Qualsiasi istanza di una classe che implementa `IPoint` presenta proprietà `x` e `y` di tipo Integer.</span><span class="sxs-lookup"><span data-stu-id="f25c0-122">Any instance of a class that implements `IPoint` has integer properties `x` and `y`.</span></span>  
   
- [!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_2.cs)]  
+ <span data-ttu-id="f25c0-123">[!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="f25c0-123">[!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_2.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a><span data-ttu-id="f25c0-124">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="f25c0-124">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [Tipi di riferimento](../../../csharp/language-reference/keywords/reference-types.md)   
- [Interfacce](../../../csharp/programming-guide/interfaces/index.md)   
- [Uso delle proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md)   
- [Uso degli indicizzatori](../../../csharp/programming-guide/indexers/using-indexers.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [struct](../../../csharp/language-reference/keywords/struct.md)   
- [Interfacce](../../../csharp/programming-guide/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="f25c0-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f25c0-125">See Also</span></span>  
+ <span data-ttu-id="f25c0-126">[Riferimenti per C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="f25c0-126">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="f25c0-127">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="f25c0-127">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="f25c0-128">[Parole chiave di C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="f25c0-128">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="f25c0-129">[Tipi di riferimento](../../../csharp/language-reference/keywords/reference-types.md) </span><span class="sxs-lookup"><span data-stu-id="f25c0-129">[Reference Types](../../../csharp/language-reference/keywords/reference-types.md) </span></span>  
+ <span data-ttu-id="f25c0-130">[Interfacce](../../../csharp/programming-guide/interfaces/index.md) </span><span class="sxs-lookup"><span data-stu-id="f25c0-130">[Interfaces](../../../csharp/programming-guide/interfaces/index.md) </span></span>  
+ <span data-ttu-id="f25c0-131">[Uso delle proprietà](../../../csharp/programming-guide/classes-and-structs/using-properties.md) </span><span class="sxs-lookup"><span data-stu-id="f25c0-131">[Using Properties](../../../csharp/programming-guide/classes-and-structs/using-properties.md) </span></span>  
+ <span data-ttu-id="f25c0-132">[Uso degli indicizzatori](../../../csharp/programming-guide/indexers/using-indexers.md) </span><span class="sxs-lookup"><span data-stu-id="f25c0-132">[Using Indexers](../../../csharp/programming-guide/indexers/using-indexers.md) </span></span>  
+ <span data-ttu-id="f25c0-133">[class](../../../csharp/language-reference/keywords/class.md) </span><span class="sxs-lookup"><span data-stu-id="f25c0-133">[class](../../../csharp/language-reference/keywords/class.md) </span></span>  
+ <span data-ttu-id="f25c0-134">[struct](../../../csharp/language-reference/keywords/struct.md) </span><span class="sxs-lookup"><span data-stu-id="f25c0-134">[struct](../../../csharp/language-reference/keywords/struct.md) </span></span>  
+ [<span data-ttu-id="f25c0-135">Interfacce</span><span class="sxs-lookup"><span data-stu-id="f25c0-135">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)
 

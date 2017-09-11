@@ -1,1 +1,1 @@
-Microsoft Internet Information Services (IIS) 7.0
+<span data-ttu-id="be91b-101">Microsoft Internet Information Services (IIS) 7.0</span><span class="sxs-lookup"><span data-stu-id="be91b-101">Microsoft Internet Information Services (IIS) 7.0</span></span>

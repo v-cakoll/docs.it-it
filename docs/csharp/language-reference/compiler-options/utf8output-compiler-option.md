@@ -38,20 +38,20 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="utf8output-c-compiler-options"></a>/utf8output (opzioni del compilatore C#)
-L'opzione **/utf8output** visualizza l'output del compilatore usando la codifica UTF-8.  
+# <a name="utf8output-c-compiler-options"></a><span data-ttu-id="ff53c-102">/utf8output (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="ff53c-102">/utf8output (C# Compiler Options)</span></span>
+<span data-ttu-id="ff53c-103">L'opzione **/utf8output** visualizza l'output del compilatore usando la codifica UTF-8.</span><span class="sxs-lookup"><span data-stu-id="ff53c-103">The **/utf8output** option displays compiler output using UTF-8 encoding.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="ff53c-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ff53c-104">Syntax</span></span>  
   
 ```console  
 /utf8output  
 ```  
   
-## <a name="remarks"></a>Note  
- In alcune configurazioni internazionali, l'output del compilatore non può essere visualizzato correttamente nella console. In queste configurazioni, usare **/utf8output** e reindirizzare l'output del compilatore in un file.  
+## <a name="remarks"></a><span data-ttu-id="ff53c-105">Note</span><span class="sxs-lookup"><span data-stu-id="ff53c-105">Remarks</span></span>  
+ <span data-ttu-id="ff53c-106">In alcune configurazioni internazionali, l'output del compilatore non può essere visualizzato correttamente nella console.</span><span class="sxs-lookup"><span data-stu-id="ff53c-106">In some international configurations, compiler output cannot correctly be displayed in the console.</span></span> <span data-ttu-id="ff53c-107">In queste configurazioni, usare **/utf8output** e reindirizzare l'output del compilatore in un file.</span><span class="sxs-lookup"><span data-stu-id="ff53c-107">In these configurations, use **/utf8output** and redirect compiler output to a file.</span></span>  
   
- Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.  
+ <span data-ttu-id="ff53c-108">Questa opzione del compilatore non è disponibile in Visual Studio e non può essere modificata a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="ff53c-108">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="ff53c-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff53c-109">See Also</span></span>  
+ [<span data-ttu-id="ff53c-110">Opzioni del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="ff53c-110">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
 

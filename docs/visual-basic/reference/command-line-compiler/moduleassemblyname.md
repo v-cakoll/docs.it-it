@@ -31,48 +31,49 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f6b042b26ad866f177158562653c91f4f7527c04
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6852b8a0d9874fd65e93cdd9507fe9b7119ce5b3
+ms.contentlocale: it-it
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="moduleassemblyname"></a>/moduleassemblyname
-Specifica il nome dell'assembly di cui fa parte il modulo.  
+# <a name="moduleassemblyname"></a><span data-ttu-id="3bd2d-102">/moduleassemblyname</span><span class="sxs-lookup"><span data-stu-id="3bd2d-102">/moduleassemblyname</span></span>
+<span data-ttu-id="3bd2d-103">Specifica il nome dell'assembly di cui fa parte il modulo.</span><span class="sxs-lookup"><span data-stu-id="3bd2d-103">Specifies the name of the assembly that this module will be a part of.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="3bd2d-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3bd2d-104">Syntax</span></span>  
   
 ```  
 /moduleassemblyname:assembly_name  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a><span data-ttu-id="3bd2d-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="3bd2d-105">Arguments</span></span>  
   
-|Termine|Definizione|  
+|<span data-ttu-id="3bd2d-106">Termine</span><span class="sxs-lookup"><span data-stu-id="3bd2d-106">Term</span></span>|<span data-ttu-id="3bd2d-107">Definizione</span><span class="sxs-lookup"><span data-stu-id="3bd2d-107">Definition</span></span>|  
 |---|---|  
-|`assembly_name`|Il nome dell'assembly che conterrà una parte di questo modulo.|  
+|`assembly_name`|<span data-ttu-id="3bd2d-108">Il nome dell'assembly che conterrà una parte di questo modulo.</span><span class="sxs-lookup"><span data-stu-id="3bd2d-108">The name of the assembly that this module will be a part of.</span></span>|  
   
-## <a name="remarks"></a>Note  
- Il compilatore elabora il `/moduleassemblyname` solo se opzione il `/target:module` è stata specificata l'opzione. Ciò indica al compilatore di creare un modulo. Il modulo creato dal compilatore è valido solo per l'assembly specificato con il `/moduleassemblyname` (opzione). Se si inserisce il modulo in un assembly diverso, si verificheranno errori in fase di esecuzione.  
+## <a name="remarks"></a><span data-ttu-id="3bd2d-109">Note</span><span class="sxs-lookup"><span data-stu-id="3bd2d-109">Remarks</span></span>  
+ <span data-ttu-id="3bd2d-110">Il compilatore elabora il `/moduleassemblyname` solo se opzione il `/target:module` è stata specificata l'opzione.</span><span class="sxs-lookup"><span data-stu-id="3bd2d-110">The compiler processes the `/moduleassemblyname` option only if the `/target:module` option has been specified.</span></span> <span data-ttu-id="3bd2d-111">Ciò indica al compilatore di creare un modulo.</span><span class="sxs-lookup"><span data-stu-id="3bd2d-111">This causes the compiler to create a module.</span></span> <span data-ttu-id="3bd2d-112">Il modulo creato dal compilatore è valido solo per l'assembly specificato con il `/moduleassemblyname` (opzione).</span><span class="sxs-lookup"><span data-stu-id="3bd2d-112">The module created by the compiler is valid only for the assembly specified with the `/moduleassemblyname` option.</span></span> <span data-ttu-id="3bd2d-113">Se si inserisce il modulo in un assembly diverso, si verificheranno errori in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="3bd2d-113">If you place the module in a different assembly, run-time errors will occur.</span></span>  
   
- Il `/moduleassemblyname` opzione è necessaria solo quando vengono soddisfatte le seguenti:  
+ <span data-ttu-id="3bd2d-114">Il `/moduleassemblyname` opzione è necessaria solo quando vengono soddisfatte le seguenti:</span><span class="sxs-lookup"><span data-stu-id="3bd2d-114">The `/moduleassemblyname` option is needed only when the following are true:</span></span>  
   
--   Un tipo di dati nel modulo deve accedere a un `Friend` tipo in un assembly di riferimento.  
+-   <span data-ttu-id="3bd2d-115">Un tipo di dati nel modulo deve accedere a un `Friend` tipo in un assembly di riferimento.</span><span class="sxs-lookup"><span data-stu-id="3bd2d-115">A data type in the module needs access to a `Friend` type in a referenced assembly.</span></span>  
   
--   L'assembly di riferimento ha concesso l'accesso assembly friend all'assembly in cui verrà compilato il modulo.  
+-   <span data-ttu-id="3bd2d-116">L'assembly di riferimento ha concesso l'accesso assembly friend all'assembly in cui verrà compilato il modulo.</span><span class="sxs-lookup"><span data-stu-id="3bd2d-116">The referenced assembly has granted friend assembly access to the assembly into which the module will be built.</span></span>  
   
- Per ulteriori informazioni sulla creazione di un modulo, vedere [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Per ulteriori informazioni sugli assembly friend, vedere [assembly Friend](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+ <span data-ttu-id="3bd2d-117">Per ulteriori informazioni sulla creazione di un modulo, vedere [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).</span><span class="sxs-lookup"><span data-stu-id="3bd2d-117">For more information about creating a module, see [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md).</span></span> <span data-ttu-id="3bd2d-118">Per ulteriori informazioni sugli assembly friend, vedere [assembly Friend](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).</span><span class="sxs-lookup"><span data-stu-id="3bd2d-118">For more information about friend assemblies, see [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).</span></span>  
   
 > [!NOTE]
->  Il `/moduleassemblyname` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio, è disponibile solo quando esegue la compilazione da un prompt dei comandi.  
+>  <span data-ttu-id="3bd2d-119">Il `/moduleassemblyname` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio, è disponibile solo quando esegue la compilazione da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="3bd2d-119">The `/moduleassemblyname` option is not available from within the Visual Studio development environment; it is available only when you compile from a command prompt.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: compilare un Assembly su più file](http://msdn.microsoft.com/library/261c5583-8a76-412d-bda7-9b8ee3b131e5)   
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
- [/Main](../../../visual-basic/reference/command-line-compiler/main.md)   
- [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
- [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)   
- [Gli assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Esempi di righe di comando compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Assembly Friend](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)
+## <a name="see-also"></a><span data-ttu-id="3bd2d-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3bd2d-120">See Also</span></span>  
+ <span data-ttu-id="3bd2d-121">[Procedura: compilare un Assembly su più file](http://msdn.microsoft.com/library/261c5583-8a76-412d-bda7-9b8ee3b131e5) </span><span class="sxs-lookup"><span data-stu-id="3bd2d-121">[How to: Build a Multifile Assembly](http://msdn.microsoft.com/library/261c5583-8a76-412d-bda7-9b8ee3b131e5) </span></span>  
+<span data-ttu-id="3bd2d-122"> [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md) </span><span class="sxs-lookup"><span data-stu-id="3bd2d-122"> [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) </span></span>  
+<span data-ttu-id="3bd2d-123"> [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) </span><span class="sxs-lookup"><span data-stu-id="3bd2d-123"> [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) </span></span>  
+<span data-ttu-id="3bd2d-124"> [/Main](../../../visual-basic/reference/command-line-compiler/main.md) </span><span class="sxs-lookup"><span data-stu-id="3bd2d-124"> [/main](../../../visual-basic/reference/command-line-compiler/main.md) </span></span>  
+<span data-ttu-id="3bd2d-125"> [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) </span><span class="sxs-lookup"><span data-stu-id="3bd2d-125"> [/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) </span></span>  
+<span data-ttu-id="3bd2d-126"> [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) </span><span class="sxs-lookup"><span data-stu-id="3bd2d-126"> [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) </span></span>  
+<span data-ttu-id="3bd2d-127"> [Gli assembly e Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md) </span><span class="sxs-lookup"><span data-stu-id="3bd2d-127"> [Assemblies and the Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md) </span></span>  
+<span data-ttu-id="3bd2d-128"> [Esempi di righe di comando compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) </span><span class="sxs-lookup"><span data-stu-id="3bd2d-128"> [Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) </span></span>  
+<span data-ttu-id="3bd2d-129"> [Assembly Friend](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)</span><span class="sxs-lookup"><span data-stu-id="3bd2d-129"> [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)</span></span>

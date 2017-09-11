@@ -35,25 +35,25 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="pointer-expressions-c-programming-guide"></a>Espressioni puntatore (Guida per programmatori C#)
-In questa sezione vengono illustrate le seguenti espressioni puntatore:  
+# <a name="pointer-expressions-c-programming-guide"></a><span data-ttu-id="6b54c-102">Espressioni puntatore (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="6b54c-102">Pointer Expressions (C# Programming Guide)</span></span>
+<span data-ttu-id="6b54c-103">In questa sezione vengono illustrate le seguenti espressioni puntatore:</span><span class="sxs-lookup"><span data-stu-id="6b54c-103">In this section, the following pointer expressions are discussed:</span></span>  
   
- [Acquisizione del valore di una variabile](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md)  
+ [<span data-ttu-id="6b54c-104">Acquisizione del valore di una variabile</span><span class="sxs-lookup"><span data-stu-id="6b54c-104">Obtaining the Value of a Variable</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md)  
   
- [Acquisizione dell'indirizzo di una variabile](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-address-of-a-variable.md)  
+ [<span data-ttu-id="6b54c-105">Acquisizione dell'indirizzo di una variabile</span><span class="sxs-lookup"><span data-stu-id="6b54c-105">Obtaining the Address of a Variable</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-address-of-a-variable.md)  
   
- [Procedura: Accedere a un membro con un puntatore](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md)  
+ [<span data-ttu-id="6b54c-106">Procedura: Accedere a un membro con un puntatore</span><span class="sxs-lookup"><span data-stu-id="6b54c-106">How to: Access a Member with a Pointer</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md)  
   
- [Procedura: Accedere a un elemento di matrice con un puntatore](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)  
+ [<span data-ttu-id="6b54c-107">Procedura: Accedere a un elemento di matrice con un puntatore</span><span class="sxs-lookup"><span data-stu-id="6b54c-107">How to: Access an Array Element with a Pointer</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)  
   
- [Modifica dei puntatori](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+ [<span data-ttu-id="6b54c-108">Modifica dei puntatori</span><span class="sxs-lookup"><span data-stu-id="6b54c-108">Manipulating Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Conversioni puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)   
- [Tipi di puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)   
- [Tipi](../../../csharp/language-reference/keywords/types.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
- [Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a><span data-ttu-id="6b54c-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6b54c-109">See Also</span></span>  
+ <span data-ttu-id="6b54c-110">[Guida per programmatori C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="6b54c-110">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="6b54c-111">[Conversioni puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md) </span><span class="sxs-lookup"><span data-stu-id="6b54c-111">[Pointer Conversions](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md) </span></span>  
+ <span data-ttu-id="6b54c-112">[Tipi di puntatore](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span><span class="sxs-lookup"><span data-stu-id="6b54c-112">[Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span></span>  
+ <span data-ttu-id="6b54c-113">[Tipi](../../../csharp/language-reference/keywords/types.md) </span><span class="sxs-lookup"><span data-stu-id="6b54c-113">[Types](../../../csharp/language-reference/keywords/types.md) </span></span>  
+ <span data-ttu-id="6b54c-114">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span><span class="sxs-lookup"><span data-stu-id="6b54c-114">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span></span>  
+ <span data-ttu-id="6b54c-115">[Istruzione fixed](../../../csharp/language-reference/keywords/fixed-statement.md) </span><span class="sxs-lookup"><span data-stu-id="6b54c-115">[fixed Statement](../../../csharp/language-reference/keywords/fixed-statement.md) </span></span>  
+ [<span data-ttu-id="6b54c-116">stackalloc</span><span class="sxs-lookup"><span data-stu-id="6b54c-116">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
 

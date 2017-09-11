@@ -26,12 +26,12 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)
-In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare viene illustrato come eseguire una concatenazione semplice, un'unione e un'intersezione su due set di righe di testo.  
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a><span data-ttu-id="ed774-102">Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="ed774-102">How to: Combine and Compare String Collections (LINQ) (C#)</span></span>
+<span data-ttu-id="ed774-103">In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati.</span><span class="sxs-lookup"><span data-stu-id="ed774-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="ed774-104">In particolare viene illustrato come eseguire una concatenazione semplice, un'unione e un'intersezione su due set di righe di testo.</span><span class="sxs-lookup"><span data-stu-id="ed774-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>Per impostare il progetto e i file di testo  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="ed774-105">Per impostare il progetto e i file di testo</span><span class="sxs-lookup"><span data-stu-id="ed774-105">To set up the project and the text files</span></span>  
   
-1.  Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:  
+1.  <span data-ttu-id="ed774-106">Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:</span><span class="sxs-lookup"><span data-stu-id="ed774-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +46,7 @@ In questo esempio viene illustrato come unire i file che contengono righe di tes
     Garcia, Debra  
     ```  
   
-2.  Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto. Si noti che i due file hanno alcuni nomi in comune.  
+2.  <span data-ttu-id="ed774-107">Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto.</span><span class="sxs-lookup"><span data-stu-id="ed774-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="ed774-108">Si noti che i due file hanno alcuni nomi in comune.</span><span class="sxs-lookup"><span data-stu-id="ed774-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +61,7 @@ In questo esempio viene illustrato come unire i file che contengono righe di tes
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="ed774-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="ed774-109">Example</span></span>  
   
 ```csharp  
 class MergeStrings  
@@ -185,10 +185,10 @@ class MergeStrings
 */  
 ```  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="ed774-110">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="ed774-110">Compiling the Code</span></span>  
+ <span data-ttu-id="ed774-111">Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="ed774-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="ed774-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ed774-112">See Also</span></span>  
+ <span data-ttu-id="ed774-113">[LINQ e stringhe (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="ed774-113">[LINQ and Strings (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+ [<span data-ttu-id="ed774-114">Directory di file e LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="ed774-114">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 

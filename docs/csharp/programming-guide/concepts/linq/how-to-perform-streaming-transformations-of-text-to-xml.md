@@ -21,13 +21,13 @@ ms.contentlocale: it-it
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Procedura: Eseguire trasformazioni del flusso di testo in XML (C#)
-Uno degli approcci disponibili per l'elaborazione di un file di testo consiste nello scrivere un metodo di estensione che genera un flusso del file di testo, una riga alla volta, tramite il costrutto `yield return`. È quindi possibile scrivere una query LINQ che elabora il file di testo in modo posticipato lazy. Se poi si usa <xref:System.Xml.Linq.XStreamingElement> per il flusso di output, è possibile creare una trasformazione del file di testo in XML che usa una quantità minima di memoria, indipendentemente dalle dimensioni del file di testo di origine.  
+# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a><span data-ttu-id="71ad4-102">Procedura: Eseguire trasformazioni del flusso di testo in XML (C#)</span><span class="sxs-lookup"><span data-stu-id="71ad4-102">How to: Perform Streaming Transformations of Text to XML (C#)</span></span>
+<span data-ttu-id="71ad4-103">Uno degli approcci disponibili per l'elaborazione di un file di testo consiste nello scrivere un metodo di estensione che genera un flusso del file di testo, una riga alla volta, tramite il costrutto `yield return`.</span><span class="sxs-lookup"><span data-stu-id="71ad4-103">One approach to processing a text file is to write an extension method that streams the text file a line at a time using the `yield return` construct.</span></span> <span data-ttu-id="71ad4-104">È quindi possibile scrivere una query LINQ che elabora il file di testo in modo posticipato lazy.</span><span class="sxs-lookup"><span data-stu-id="71ad4-104">You then can write a LINQ query that processes the text file in a lazy deferred fashion.</span></span> <span data-ttu-id="71ad4-105">Se poi si usa <xref:System.Xml.Linq.XStreamingElement> per il flusso di output, è possibile creare una trasformazione del file di testo in XML che usa una quantità minima di memoria, indipendentemente dalle dimensioni del file di testo di origine.</span><span class="sxs-lookup"><span data-stu-id="71ad4-105">If you then use <xref:System.Xml.Linq.XStreamingElement> to stream output, you then can create a transformation from the text file to XML that uses a minimal amount of memory, regardless of the size of the source text file.</span></span>  
   
- È necessario tener conto di alcune considerazioni in relazione alle trasformazioni di flusso. Le trasformazioni di flusso sono ideali nelle situazioni in cui è possibile elaborare l'intero file una sola volta e se è possibile elaborare le righe nell'ordine in cui sono riportate nel documento di origine. Se è necessario elaborare il file più volte o ordinare le righe prima che sia possibile elaborarle, si perderanno molti dei vantaggi associati all'utilizzo di una tecnica di flusso.  
+ <span data-ttu-id="71ad4-106">È necessario tener conto di alcune considerazioni in relazione alle trasformazioni di flusso.</span><span class="sxs-lookup"><span data-stu-id="71ad4-106">There are some caveats regarding streaming transformations.</span></span> <span data-ttu-id="71ad4-107">Le trasformazioni di flusso sono ideali nelle situazioni in cui è possibile elaborare l'intero file una sola volta e se è possibile elaborare le righe nell'ordine in cui sono riportate nel documento di origine.</span><span class="sxs-lookup"><span data-stu-id="71ad4-107">A streaming transformation is best applied in situations where you can process the entire file once, and if you can process the lines in the order that they occur in the source document.</span></span> <span data-ttu-id="71ad4-108">Se è necessario elaborare il file più volte o ordinare le righe prima che sia possibile elaborarle, si perderanno molti dei vantaggi associati all'utilizzo di una tecnica di flusso.</span><span class="sxs-lookup"><span data-stu-id="71ad4-108">If you have to process the file more than once, or if you have to sort the lines before you can process them, you will lose many of the benefits of using a streaming technique.</span></span>  
   
-## <a name="example"></a>Esempio  
- Il file di testo seguente, People.txt, è l'origine di questo esempio.  
+## <a name="example"></a><span data-ttu-id="71ad4-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="71ad4-109">Example</span></span>  
+ <span data-ttu-id="71ad4-110">Il file di testo seguente, People.txt, è l'origine di questo esempio.</span><span class="sxs-lookup"><span data-stu-id="71ad4-110">The following text file, People.txt, is the source for this example.</span></span>  
   
 ```  
 #This is a comment  
@@ -36,7 +36,7 @@ Uno degli approcci disponibili per l'elaborazione di un file di testo consiste n
 3,David,Wright,Inventor  
 ```  
   
- Nel codice seguente è contenuto un metodo di estensione che genera il flusso delle righe del file di testo in modo posticipato.  
+ <span data-ttu-id="71ad4-111">Nel codice seguente è contenuto un metodo di estensione che genera il flusso delle righe del file di testo in modo posticipato.</span><span class="sxs-lookup"><span data-stu-id="71ad4-111">The following code contains an extension method that streams the lines of the text file in a deferred fashion.</span></span>  
   
 ```csharp  
 public static class StreamReaderSequence  
@@ -76,7 +76,7 @@ class Program
 }  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="71ad4-112">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="71ad4-112">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -98,7 +98,7 @@ class Program
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Linq.XStreamingElement>   
- [Tecniche di query avanzate (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="71ad4-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="71ad4-113">See Also</span></span>  
+ <span data-ttu-id="71ad4-114"><xref:System.Xml.Linq.XStreamingElement></span><span class="sxs-lookup"><span data-stu-id="71ad4-114"><xref:System.Xml.Linq.XStreamingElement></span></span>   
+ [<span data-ttu-id="71ad4-115">Tecniche di query avanzate (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="71ad4-115">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
 
