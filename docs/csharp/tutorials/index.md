@@ -4,17 +4,17 @@ description: "Esplorare queste esercitazioni di C# per apprendere come si compil
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
-ms.date: 06/20/2016
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43d6efd6535e4002be79af1c51dd58e6d26d218d
+ms.sourcegitcommit: 680f9f83e07d6b5e3ee1031fb1a2f6d04765e18d
+ms.openlocfilehash: 52f6b8a1000a8b8623c36cc1f76671f0a7a764b7
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 
@@ -30,8 +30,6 @@ Le esercitazioni seguenti consentono di creare programmi C# usando [.NET Core](.
 * [Uso di LINQ](working-with-linq.md): questa esercitazione illustra molte delle funzionalità di LINQ e gli elementi del linguaggio che supportano questa tecnologia.
 
 * [Microservizi ospitati in Docker](microservices.md): questa esercitazione illustra la procedura per creare un microservizio ASP.NET Core e ospitarlo in Docker.
-
-* [Ereditarietà](inheritance.md): questa esercitazione illustra come l'ereditarietà di classi e interfaccia consenta il riutilizzo del codice in C#.
 
 * [Interpolazione di stringhe](string-interpolation.md): questa esercitazione illustra molti degli usi dell'interpolazione di stringhe `$` in C#.
 
