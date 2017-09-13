@@ -13,10 +13,10 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 ms.translationtype: HT
-ms.sourcegitcommit: 20b0c1b36f705deb2f46ef4ab23653f829faf7ca
-ms.openlocfilehash: 8a0395e28c01363eed27f327ea623feb4832c844
+ms.sourcegitcommit: 93f77dd5c3ca61935ae98ddef15f9c5cf7644bbb
+ms.openlocfilehash: e9c8dcfacff689761d9ec891db8a1a4756acece0
 ms.contentlocale: it-it
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/08/2017
   
 - [Scaricare il programma di installazione di .NET Framework 3.5](http://www.microsoft.com/en-us/download/details.aspx?id=21) Nota: non viene scaricato direttamente .NET Framework, ma un programma di installazione che chiama Windows Update.  
   
-Durante l'installazione può verificarsi un errore 0x800f0906, 0x800f0907 o 0x800f081f. In tal caso, vedere [Errore di installazione di .NET Framework 3.5: 0x800f0906, 0x800f0907, 0x800f081f](https://support.microsoft.com/en-us/kb/2734782). Si noti che questo problema può essere risolto installando l' [aggiornamento della sicurezza 3005628](https://support.microsoft.com/kb/3005628).  
+Durante l'installazione può verificarsi un errore 0x800f0906, 0x800f0907 o 0x800f081f. In tal caso, vedere [Errore di installazione di .NET Framework 3.5: 0x800f0906, 0x800f0907, 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09). Si noti che questo problema può essere risolto installando l' [aggiornamento della sicurezza 3005628](https://support.microsoft.com/kb/3005628).  
   
 Se uno dei metodi sopra riportati non riesce o non è presente una connessione Internet, è necessario usare il supporto di installazione di Windows. Per altre informazioni, vedere Metodo 3 per l'errore 0x800f0906 nell'articolo [Errore di installazione .NET Framework 3.5](https://support.microsoft.com/en-us/kb/2734782). Se il supporto di installazione non è disponibile, vedere [Creare un supporto di installazione per Windows 8.1](http://windows.microsoft.com/en-US/windows-8/create-reset-refresh-media?woldogcb=0).  
   

@@ -1,24 +1,22 @@
 ---
 title: Comando dotnet - Interfaccia della riga di comando di .NET Core
 description: Informazioni sul comando dotnet (il driver generico per gli strumenti dell'interfaccia della riga di comando di .NET Core) e sul relativo utilizzo.
-keywords: dotnet, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 03/20/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1f377ea55278ae382f56a0dc0cbcf1bb99f49eca
+ms.sourcegitcommit: fa2e5ecbf41dc2a8cd90aabc6f7291db597e657e
+ms.openlocfilehash: 4c1c0e4ed1b1222abbcd104b2c10a44b1b99be8d
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/17/2017
 
 ---
-
 # <a name="dotnet-command"></a>Comando dotnet
+
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Nome
 
@@ -26,7 +24,15 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="synopsis"></a>Riepilogo
 
-`dotnet [command] [arguments] [--version] [--info] [-d|--diagnostics] [-v|--verbose] [--fx-version] [--additionalprobingpath] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+```
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]
+```
+---
 
 ## <a name="description"></a>Descrizione
 
@@ -38,9 +44,15 @@ Ogni funzionalità specifica viene implementata come un comando. Per usare la fu
 
 ## <a name="options"></a>Opzioni
 
-`-v|--verbose`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-Abilita l'output dettagliato.
+`--additionaldeps <PATH>`
+
+Percorso del file*deps.json* aggiuntivo.
+
+`--additionalprobingpath <PATH>`
+
+Percorso contenente i criteri di probe e gli assembly di cui eseguire il probe.
 
 `-d|--diagnostics`
 
@@ -48,64 +60,122 @@ Abilita l'output di diagnostica.
 
 `--fx-version <VERSION>`
 
-Versione del framework condiviso installato da usare per eseguire l'applicazione.
-
-`--additionalprobingpath <PATH>`
-
-Percorso contenente i criteri di probe e gli assembly di cui eseguire il probe.
-
-`--version`
-
-Stampa la versione degli strumenti dell'interfaccia della riga di comando.
-
-`--info`
-
-Stampa informazioni dettagliate sull'ambiente e sugli strumenti dell'interfaccia della riga di comando, ad esempio il sistema operativo corrente, l'Agente integrità sistema di commit per la versione e altre informazioni.
+Versione del runtime .NET Core installato da usare per eseguire l'applicazione.
 
 `-h|--help`
 
 Stampa una breve guida per il comando. Se usato con `dotnet`, stampa anche un elenco dei comandi disponibili.
 
+`--info`
+
+Stampa informazioni dettagliate sull'ambiente e sugli strumenti dell'interfaccia della riga di comando, ad esempio il sistema operativo corrente, l'Agente integrità sistema di commit per la versione e altre informazioni.
+
+`--roll-forward-on-no-candidate-fx`
+
+ Non esegue il roll forward su framework condiviso candidato.
+
+`-v|--verbose`
+
+Abilita l'output dettagliato.
+
+`--version`
+
+Stampa la versione di .NET Core SDK in uso.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`--additionalprobingpath <PATH>`
+
+Percorso contenente i criteri di probe e gli assembly di cui eseguire il probe.
+
+`-d|--diagnostics`
+
+Abilita l'output di diagnostica.
+
+`--fx-version <VERSION>`
+
+Versione del runtime .NET Core installato da usare per eseguire l'applicazione.
+
+`-h|--help`
+
+Stampa una breve guida per il comando. Se usato con `dotnet`, stampa anche un elenco dei comandi disponibili.
+
+`--info`
+
+Stampa informazioni dettagliate sull'ambiente e sugli strumenti dell'interfaccia della riga di comando, ad esempio il sistema operativo corrente, l'Agente integrità sistema di commit per la versione e altre informazioni.
+
+`-v|--verbose`
+
+Abilita l'output dettagliato.
+
+`--version`
+
+Stampa la versione di .NET Core SDK in uso.
+
+---
+
 ## <a name="dotnet-commands"></a>Comandi dotnet
 
 ### <a name="general"></a>Generale
 
-Comando | Funzione
---- | ---
-[dotnet-build](dotnet-build.md) | Compila un'applicazione .NET Core.
-[dotnet-clean](dotnet-clean.md) | Consente di pulire gli output di compilazione.
-[dotnet-migrate](dotnet-migrate.md) | Esegue la migrazione di un progetto Preview 2 in un progetto .NET Core SDK 1.0.
-[dotnet-msbuild](dotnet-msbuild.md) | Consente di accedere alla riga di comando di MSBuild.
-[dotnet-new](dotnet-new.md) | Inizializza un progetto C# o F# per un modello specificato.
-[dotnet-pack](dotnet-pack.md) | Crea un pacchetto NuGet del codice.
-[dotnet-publish](dotnet-publish.md) | Pubblica un'applicazione .NET dipendente dal framework o autonoma.
-[dotnet-restore](dotnet-restore.md) | Ripristina le dipendenze per una determinata applicazione.
-[dotnet-run](dotnet-run.md) | Esegue l'applicazione dall'origine.
-[dotnet-sln](dotnet-sln.md) | Opzioni per aggiungere, rimuovere ed elencare i progetti in un file di soluzione.
-[dotnet-test](dotnet-test.md) | Esegue test usando un Test Runner.
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+| Comando                             | Funzione                                                            |
+| ----------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)     | Compila un'applicazione .NET Core.                                     |
+| [dotnet clean](dotnet-clean.md)     | Pulisce gli output di compilazione.                                              |
+| [dotnet help](dotnet-help.md)       | Visualizza documentazione online dettagliata per il comando.           |
+| [dotnet migrate](dotnet-migrate.md) | Esegue la migrazione di un progetto Preview 2 in un progetto .NET Core SDK 1.0.  |
+| [dotnet msbuild](dotnet-msbuild.md) | Consente di accedere alla riga di comando di MSBuild.                        |
+| [dotnet new](dotnet-new.md)         | Inizializza un progetto C# o F# per un modello specificato.                |
+| [dotnet pack](dotnet-pack.md)       | Crea un pacchetto NuGet del codice.                               |
+| [dotnet publish](dotnet-publish.md) | Pubblica un'applicazione .NET dipendente dal framework o autonoma. |
+| [dotnet restore](dotnet-restore.md) | Ripristina le dipendenze per una determinata applicazione.                  |
+| [dotnet run](dotnet-run.md)         | Esegue l'applicazione dall'origine.                                   |
+| [dotnet sln](dotnet-sln.md)         | Opzioni per aggiungere, rimuovere ed elencare i progetti in un file di soluzione.       |
+| [dotnet store](dotnet-store.md)     | Archivia gli assembly nell'archivio pacchetti di runtime.                     |
+| [dotnet test](dotnet-test.md)       | Esegue test usando un Test Runner.                                     |
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+| Comando                             | Funzione                                                            |
+| ----------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)     | Compila un'applicazione .NET Core.                                     |
+| [dotnet clean](dotnet-clean.md)     | Pulisce gli output di compilazione.                                              |
+| [dotnet migrate](dotnet-migrate.md) | Esegue la migrazione di un progetto Preview 2 in un progetto .NET Core SDK 1.0.  |
+| [dotnet msbuild](dotnet-msbuild.md) | Consente di accedere alla riga di comando di MSBuild.                        |
+| [dotnet new](dotnet-new.md)         | Inizializza un progetto C# o F# per un modello specificato.                |
+| [dotnet pack](dotnet-pack.md)       | Crea un pacchetto NuGet del codice.                               |
+| [dotnet publish](dotnet-publish.md) | Pubblica un'applicazione .NET dipendente dal framework o autonoma. |
+| [dotnet restore](dotnet-restore.md) | Ripristina le dipendenze per una determinata applicazione.                  |
+| [dotnet run](dotnet-run.md)         | Esegue l'applicazione dall'origine.                                   |
+| [dotnet sln](dotnet-sln.md)         | Opzioni per aggiungere, rimuovere ed elencare i progetti in un file di soluzione.       |
+| [dotnet test](dotnet-test.md)       | Esegue test usando un Test Runner.                                     |
+
+---
 
 ### <a name="project-references"></a>Riferimenti al progetto
 
 Comando | Funzione
 --- | ---
-[dotnet-add reference](dotnet-add-reference.md) | Aggiungere un riferimento al progetto.
-[dotnet-list reference](dotnet-list-reference.md) | Elencare i riferimenti al progetto.
-[dotnet-remove reference](dotnet-remove-reference.md) | Rimuovere un riferimento al progetto.
+[dotnet add reference](dotnet-add-reference.md) | Aggiungere un riferimento al progetto.
+[dotnet list reference](dotnet-list-reference.md) | Elencare i riferimenti al progetto.
+[dotnet remove reference](dotnet-remove-reference.md) | Rimuovere un riferimento al progetto.
 
 ### <a name="nuget-packages"></a>Pacchetti NuGet
 
 Comando | Funzione
 --- | ---
-[dotnet-add package](dotnet-add-package.md) | Aggiungere un pacchetto NuGet.
-[dotnet-remove package](dotnet-remove-package.md) | Rimuovere un pacchetto NuGet.
+[dotnet add package](dotnet-add-package.md) | Aggiungere un pacchetto NuGet.
+[dotnet remove package](dotnet-remove-package.md) | Rimuovere un pacchetto NuGet.
 
 ### <a name="nuget-commands"></a>Comandi NuGet
 
 Comando | Funzione
 --- | ---
-[dotnet-nuget delete](dotnet-nuget-delete.md) | Rimuove dall'elenco o elimina un pacchetto dal server.
-[dotnet-nuget locals](dotnet-nuget-locals.md) | Cancella o elenca risorse NuGet locali come cache delle richieste HTTP, cache temporanea o cartella globale dei pacchetti a livello di computer.
-[dotnet-nuget push](dotnet-nuget-push.md) | Effettua il push di un pacchetto nel server e lo pubblica.
+[dotnet nuget delete](dotnet-nuget-delete.md) | Rimuove dall'elenco o elimina un pacchetto dal server.
+[dotnet nuget locals](dotnet-nuget-locals.md) | Cancella o elenca risorse NuGet locali come cache delle richieste HTTP, cache temporanea o cartella globale dei pacchetti a livello di computer.
+[dotnet nuget push](dotnet-nuget-push.md) | Effettua il push di un pacchetto nel server e lo pubblica.
 
 ## <a name="examples"></a>Esempi
 
