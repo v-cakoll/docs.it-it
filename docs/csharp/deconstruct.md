@@ -1,7 +1,7 @@
 ---
-title: Decostruzione di tuple e altri tipi | Microsoft Docs
-description: Informazioni su come decostruire le tuple e altri tipi
-keywords: .NET, .NET Core, C#0
+title: Decostruzione di tuple e altri tipi
+description: Informazioni su come decostruire le tuple e altri tipi.
+keywords: .NET, .NET Core e C#
 author: rpetrusha
 ms-author: ronpet
 ms.date: 07/18/2016
@@ -11,13 +11,12 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
 ms.translationtype: HT
-ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
-ms.openlocfilehash: f0946db700301a63109f23be5536f3a0505f4d60
+ms.sourcegitcommit: 863940512f33568ee10569da4712e7e646bc3ba7
+ms.openlocfilehash: ad0ed6568da073683545727ef47f6a223942c8d6
 ms.contentlocale: it-it
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/12/2017
 
 ---
-
 # <a name="deconstructing-tuples-and-other-types"></a>Decostruzione di tuple e altri tipi #
 
 Una tupla è un metodo semplice per recuperare più valori da una chiamata a un metodo. Tuttavia dopo aver recuperato la tupla è necessario gestirne i singoli elementi. Se eseguita un elemento alla volta, questa operazione può risultare molto laboriosa, come visualizzato nell'esempio seguente. Il metodo `QueryCityData` restituisce una tupla con 3 elementi e ogni elemento viene assegnato a una variabile in un'operazione separata.
@@ -44,21 +43,21 @@ Esistono due modi per decostruire una tupla:
 
 - È possibile usare la parola chiave `var` in modo che C# deduca il tipo di ogni variabile. Posizionare la parola chiave `var` all'esterno delle parentesi. Nell'esempio seguente viene usata l'inferenza del tipo questo approccio per decostruire la tupla con 3 elementi restituita dal metodo `QueryCityData`.
  
-      [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
+    [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
     È anche possibile usare la parola chiave `var` individualmente con una o con tutte le dichiarazioni di variabili all'interno delle parentesi. 
 
-      [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
+    [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
     Questo approccio è eccessivamente complesso e non è consigliato.
 
-Si noti che non è possibile usare un tipo specifico all'esterno delle parentesi, anche se ogni campo nella tupla presenta lo stesso tipo. Questa operazione genera l'errore del compilatore CS8136 "Nel form di decostruzione `var (...)` non è consentito un tipo specifico per `var`".
+Si noti che non è possibile usare un tipo specifico all'esterno delle parentesi, anche se ogni campo nella tupla presenta lo stesso tipo. Questa operazione genera l'errore del compilatore CS8136 "Nel form di decostruzione 'var (...)' non è consentito un tipo specifico per 'var'".
 
 Si noti anche che è necessario assegnare ogni elemento della tupla a una variabile. Se si omette un elemento, il compilatore genera l'errore CS8132: "Non è possibile decostruire una tupla di 'x' elementi in 'y' variabili".
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Decostruzione degli elementi della tupla con variabili discard
 
-Spesso quando si decostruisce una tupla si è interessati solo ai valori di alcuni elementi. A partire da C# 7 è possibile avvalersi del supporto in C# delle *variabili discard*, variabili di sola scrittura delle quali si è scelto di ignorare i valori. Una variabile discard è indicata da un carattere di sottolineatura ("_") in un'assegnazione. È possibile rimuovere il numero di valori desiderato; tutti sono rappresentati dalla variabile discard singola `_`.
+Spesso quando si decostruisce una tupla si è interessati solo ai valori di alcuni elementi. A partire da C# 7 è possibile avvalersi del supporto in C# delle *variabili discard*, variabili di sola scrittura delle quali si è scelto di ignorare i valori. Una variabile discard è indicata da un carattere di sottolineatura ("\_") in un'assegnazione. È possibile rimuovere il numero di valori desiderato; tutti sono rappresentati dalla variabile discard singola `_`.
 
 L'esempio seguente illustra l'uso delle tuple con le variabili discard. Il metodo `QueryCityDataForYears` restituisce una tupla con 6 elementi con il nome di una città, l'area della città, un anno, la popolazione della città per tale anno, un secondo anno e la popolazione della città per tale anno. L'esempio visualizza la variazione della popolazione tra questi due anni. Tra i dati resi disponibili dalla tupla non interessa l'area della città, mentre il nome della città e le due date sono già noti in fase di progettazione. Di conseguenza interessano soltanto i due valori di popolazione archiviati nella tupla, mentre gli altri valori possono essere gestiti come variabili discard.  
 
@@ -90,7 +89,7 @@ Il metodo `Deconstruct` con overload dell'esempio seguente visualizza una possib
 
 ## <a name="deconstructing-a-user-defined-type-with-discards"></a>Decostruzione di un tipo definito dall'utente con variabili discard
 
-Come per le [tuple](#deconstructing-tuple-elements-with-discards), è possibile usare le variabili discard per ignorare elementi selezionati restituiti da un metodo `Deconstruct`. Ogni variabile discard è definita da una variabile denominata "_" e una singola operazione di decostruzione può includere diverse variabili discard.
+Come per le [tuple](#deconstructing-tuple-elements-with-discards), è possibile usare le variabili discard per ignorare elementi selezionati restituiti da un metodo `Deconstruct`. Ogni variabile discard è definita da una variabile denominata \_ e una singola operazione di decostruzione può includere diverse variabili discard.
 
 L'esempio seguente esegue la decostruzione di un oggetto `Person` in quattro stringhe (nome, cognome, città e stato) ma rimuove il cognome e lo stato.
 
