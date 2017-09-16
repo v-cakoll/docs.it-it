@@ -1,6 +1,6 @@
 ---
 title: "Interoperabilità nativa"
-description: "Interoperabilità nativa"
+description: Informazioni su come interagire con i componenti nativi in .NET.
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-translationtype: Human Translation
-ms.sourcegitcommit: d18b21b67c154c4a8cf8211aa5d1473066c53656
-ms.openlocfilehash: 13a4e4e7a588d55e82c5c4cde8f825c3b4502bb4
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="native-interoperability"></a>Interoperabilità nativa
 
-In questo documento vengono descritti in modo approfondito i tre modi di ottenere l'"interoperabilità nativa" disponibili nella piattaforma .NET.
+In questo documento vengono descritti in modo approfondito i tre modi di ottenere l'"interoperabilità nativa" disponibili in .NET.
 
 Esistono alcuni motivi che rendono necessaria la chiamata del codice nativo:
 
@@ -53,7 +54,6 @@ public class Program {
         MessageBox(IntPtr.Zero, "Command-line message box", "Attention!", 0);
     }
 }
-
 ```
 
 L'esempio precedente è piuttosto semplice, ma mostra chiaramente gli elementi necessari per richiamare funzioni non gestite da un codice gestito. Di seguito l'esempio viene descritto in modo dettagliato:
@@ -84,7 +84,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 Naturalmente, il procedimento è simile in Linux. Il nome della funzione è lo stesso, dal momento che `getpid(2)` è la chiamata di sistema [POSIX](https://en.wikipedia.org/wiki/POSIX).
@@ -107,7 +106,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 ### <a name="invoking-managed-code-from-unmanaged-code"></a>Richiamare codice gestito da codice non gestito
@@ -130,7 +128,7 @@ namespace ConsoleApplication1 {
         // Import user32.dll (containing the function we need) and define
         // the method corresponding to the native function.
         [DllImport("user32.dll")]
-        static extern int EnumWindows(EnumWC hWnd, IntPtr lParam);
+        static extern int EnumWindows(EnumWC lpEnumFunc, IntPtr lParam);
 
         // Define the implementation of the delegate; here, we simply output the window handle.
         static bool OutputWindow(IntPtr hwnd, IntPtr lParam) {
@@ -144,7 +142,6 @@ namespace ConsoleApplication1 {
         }
     }
 }
-
 ```
 
 Prima di analizzare l'esempio, è opportuno esaminare le firme delle funzioni non gestite che è necessario utilizzare. La firma della funzione da chiamare per enumerare tutte le finestre è la seguente: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
@@ -208,7 +205,6 @@ namespace PInvokeSamples {
             public long TimeLastStatusChange;
     }
 }
-
 ```
 
 Nell'esempio macOS viene usata la stessa funzione. L'unica differenza è l'argomento dell'attributo `DllImport`, dal momento che macOS mantiene `libc` in una posizione differente.
@@ -261,7 +257,6 @@ namespace PInvokeSamples {
                 public long TimeLastStatusChange;
         }
 }
-
 ```
 
 Entrambi gli esempi precedenti dipendono da parametri e in entrambi i casi i parametri vengono forniti come tipi gestiti. Il runtime esegue le operazioni necessarie ed elabora i parametri ottenendo i relativi equivalenti sull'altro lato. Poiché questo processo è molto importante per la scrittura di codice di interoperabilità nativa di qualità, è opportuno sapere cosa succede quando il runtime _effettua il marshalling_ dei tipi.
@@ -273,9 +268,8 @@ Il termine **marshalling** indica il processo di trasformazione dei tipi quando 
 Il motivo per cui il marshalling è necessario è che i tipi presenti nel codice gestito e quelli presenti nel codice non gestito sono differenti. Nel codice gestito, ad esempio, si ha un elemento `String`, mentre nell'ambiente non gestito le stringhe possono essere Unicode ("wide"), non Unicode, con terminazione null, ASCII, e così via. Per impostazione predefinita, il sottosistema di P/Invoke tenterà di eseguire le operazioni necessarie in base al comportamento predefinito descritto in [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx). Tuttavia, per i casi in cui è necessario un controllo aggiuntivo, è possibile usare l'attributo `MarshalAs` per specificare il tipo previsto sul lato non gestito. Ad esempio, se si vuole che la stringa venga inviata come stringa ANSI con terminazione null, è possibile usare un codice simile al seguente:
 
 ```csharp
-[DllImport("somenativelibrary.dll"]
+[DllImport("somenativelibrary.dll")]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
-
 ```
 
 ### <a name="marshalling-classes-and-structs"></a>Marshalling di classi e strutture
@@ -303,10 +297,9 @@ public static void Main(string[] args) {
     GetSystemTime(st);
     Console.WriteLine(st.Year);
 }
-
 ```
 
-L'esempio precedente mostra una semplice chiamata alla funzione `GetSystemTime()`. La parte interessante è alla riga 4\. L'attributo specifica che i campi della classe devono essere mappati in modo sequenziale alla struttura sull'altro lato (non gestito). Questo significa che i nomi dei campi non sono rilevanti, ma che è importante solo l'ordine. È infatti necessario che i campi corrispondano alla struttura non gestita, come mostrato di seguito:
+L'esempio precedente mostra una semplice chiamata alla funzione `GetSystemTime()`. La parte interessante è alla riga 4. L'attributo specifica che i campi della classe devono essere mappati in modo sequenziale allo struct sull'altro lato (non gestito). Questo significa che i nomi dei campi non sono rilevanti, ma che è importante solo l'ordine. È infatti necessario che i campi corrispondano alla struttura non gestita, come mostrato di seguito:
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -319,7 +312,6 @@ typedef struct _SYSTEMTIME {
   WORD wSecond;
   WORD wMilliseconds;
 } SYSTEMTIME, *PSYSTEMTIME*;
-
 ```
 
 La procedura per Linux e macOS è già stata mostrata nell'esempio precedente. Viene comunque mostrata anche di seguito.
@@ -341,7 +333,6 @@ public class StatClass {
         public long TimeLastModification;
         public long TimeLastStatusChange;
 }
-
 ```
 
 La classe `StatClass` rappresenta una struttura restituita dalla chiamata di sistema `stat` nei sistemi UNIX. Rappresenta informazioni su un determinato file. La classe precedente è la rappresentazione statica della struttura nel codice gestito. Anche in questo caso, i campi della classe devono essere nello stesso ordine della struttura nativa (per informazioni, consultare le pagine di manuale relative all'implementazione UNIX preferita) e devono essere dello stesso tipo sottostante.

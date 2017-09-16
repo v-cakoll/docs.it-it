@@ -11,15 +11,18 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 252b67a528b9cc666a5353b7c4a4c7e2c488e7af
+ms.sourcegitcommit: 9dc52f3a8c74c1aa575a83cb3bbd579b93fae9ae
+ms.openlocfilehash: 0e679ffc22f52de5e2ce8194942efbb2f5299ee4
 ms.contentlocale: it-it
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 09/06/2017
 
 ---
- 
 
 #<a name="building-docker-images-for-net-core-applications"></a>Compilazione di immagini Docker per applicazioni .NET Core
+
+ 
+> [!IMPORTANT]
+> È in corso il processo di aggiornamento per .NET Core 2.0. Le istruzioni seguenti non sono aggiornate. Ci scusiamo per qualsiasi inconveniente.
 
 Per comprendere in che modo usare insieme .NET Core e Docker, è necessario prima conoscere le diverse immagini Docker disponibili e i casi in cui è opportuno usarle. Di seguito verranno illustrate in modo dettagliato le variazioni offerte, verrà creata un'API Web ASP.NET Core, verranno usati gli strumenti Yeoman Docker per creare un contenitore sottoponibile a debug e verrà mostrato in che modo è possibile usare Visual Studio Code per l'esecuzione del processo. 
 

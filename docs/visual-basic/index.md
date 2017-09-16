@@ -30,13 +30,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 00f3cb66a19af0d63e7bcd158ae39a5930b27c9f
+ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
+ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="visual-basic"></a>Visual Basic
+# <a name="visual-basic-guide"></a>Guida a Visual Basic
+
 Visual Basic è progettato per la compilazione efficiente di applicazioni indipendenti dai tipi e orientate a oggetti. Visual Basic consente lo sviluppo di applicazioni Windows, Web e per dispositivi mobili. Come avviene con tutti i linguaggi basati su Microsoft .NET Framework, i programmi scritti in Visual Basic usufruiscono delle funzionalità di sicurezza e interoperabilità dei linguaggi.  
   
  Questa generazione di Visual Basic continua ad assicurare la possibilità di creare applicazioni basate su .NET Framework in modo semplice e veloce.  

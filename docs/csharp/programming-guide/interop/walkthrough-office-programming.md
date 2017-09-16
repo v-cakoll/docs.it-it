@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 73713d29be0ffc79a9feb54c39b1f75a39b35df6
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 8c1195289d70e111d5c3551d004708de7722c8e9
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Procedura dettagliata: programmazione di Office (C# e Visual Basic)
@@ -83,7 +83,9 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
 2.  Aggiungere le seguenti istruzioni `Imports` (Visual Basic) o direttive `using` (C#) all'inizio del file di codice, se non sono già presenti.  
   
-     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]  [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]  
+     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
+
+     [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>Per creare un elenco di conti correnti bancari  
   
@@ -91,17 +93,23 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
 2.  Sostituire la definizione della classe `Account` con il codice seguente. Le definizioni delle classi usano le *proprietà implementate automaticamente*. Per altre informazioni, vedere [Proprietà implementate automaticamente](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
-     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]  [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
+     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
+
+     [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
   
 3.  Per creare un elenco `bankAccounts` contenente due conti, aggiungere il codice seguente al metodo `ThisAddIn_Startup` nei file *ThisAddIn.vb* o *ThisAddIn.cs*. Le dichiarazioni dell'elenco usano gli  *inizializzatori di insieme*. Per altre informazioni, vedere [Inizializzatori di insieme](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).  
   
-     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]  [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
+     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
+
+     [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
   
 ### <a name="to-export-data-to-excel"></a>Per esportare dati in Excel  
   
 1.  Nello stesso file, aggiungere il metodo seguente alla classe `ThisAddIn`. Il metodo configura una cartella di lavoro di Excel e vi esporta i dati.  
   
-     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]  [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
+     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
+
+     [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
   
      In questo metodo vengono usati due nuove funzionalità di C#. Entrambe queste funzionalità sono già esistenti in Visual Basic.  
   
@@ -123,7 +131,9 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
 2.  Aggiungere il seguente codice alla fine di `DisplayInExcel` per regolare la larghezza delle colonne in modo da adattarle al contenuto.  
   
-     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]  [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
+     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
+
+     [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
   
      Queste aggiunte dimostrano un'altra nuova funzionalità di C#: considerare i valori `Object` restituiti dagli host COM, ad esempio Office, come se il tipo fosse [dynamic](../../../csharp/language-reference/keywords/dynamic.md). Ciò avviene automaticamente quando l'opzione **Incorpora tipi di interoperabilità** è impostata sul valore predefinito,`True`, o allo stesso modo, quando si fa riferimento all'assembly con l'opzione del compilatore [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md). Il tipo `dynamic` consente l'associazione tardiva, già disponibile in Visual Basic, ed evita il cast esplicito richiesto in Visual C# 2008 e versioni precedenti del linguaggio.  
   
@@ -137,7 +147,9 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
 1.  Aggiungere il codice seguente alla fine del metodo `ThisAddIn_StartUp`. La chiamata a `DisplayInExcel` contiene due argomenti. Il primo argomento è il nome dell'elenco di conti da elaborare. Il secondo argomento è un'espressione lambda su più righe che definisce la modalità con cui i dati saranno elaborati. I valori `ID` e `balance` per ogni conto vengono visualizzati in celle adiacenti e la riga viene visualizzata in rosso se il saldo è inferiore a zero. Per altre informazioni, vedere [Espressioni lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]  [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
+     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
+
+     [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
   
 2.  Premere F5 per eseguire il programma. Viene visualizzato un foglio di lavoro di Excel che contiene i dati dei conti.  
   
@@ -145,7 +157,9 @@ Per completare questa procedura dettagliata è necessario aver installato Micros
   
 1.  Aggiungere il seguente codice alla fine del metodo `ThisAddIn_StartUp` per creare un documento di Word contenente un collegamento alla cartella di lavoro di Excel.  
   
-     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]  [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
+     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
+
+     [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
      In questo codice vengono illustrate diverse nuove funzionalità di C#: la possibilità di omettere la parola chiave `ref` nella programmazione COM, gli argomenti denominati e gli argomenti facoltativi. Queste funzionalità sono già esistenti in Visual Basic. Il metodo [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) ha sette parametri, ognuno dei quali è definito come parametro per riferimento facoltativo. Gli argomenti denominati e facoltativi consentono di indicare i parametri a cui si vuol accedere per nome e di inviare argomenti solo a tali parametri. In questo esempio gli argomenti vengono inviati per indicare che deve essere creato un collegamento alla cartella di lavoro negli Appunti (parametro `Link`), e che il collegamento deve essere visualizzato nel documento di Word come icona (parametro `DisplayAsIcon`). Visual C# consente anche di omettere la parola chiave `ref` per questi argomenti.
   
