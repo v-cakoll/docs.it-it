@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
-ms.openlocfilehash: 828a858f1c0679d72d59eb0a1db2d5e26aa7b88e
+ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
+ms.openlocfilehash: 9932555d5a5b029b4faaf3edcaa3ab523eebe77e
 ms.contentlocale: it-it
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 
@@ -23,12 +23,13 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 
 ## <a name="building-applications-with-visual-studio-2017"></a>Creazione di applicazioni con Visual Studio 2017
 
-- [Creazione di un'applicazione C# denominata Hello World](../../csharp/getting-started/with-visual-studio.md)
-- [Debug di un'applicazione C# denominata Hello World](../../csharp/getting-started/debugging-with-visual-studio.md)
-- [Pubblicazione di un'applicazione C# denominata Hello World](../../csharp/getting-started/publishing-with-visual-studio.md)
-- [Compilazione di una libreria di classi C#](../../csharp/getting-started/library-with-visual-studio.md)
-- [Test di una libreria di classi C#](../../csharp/getting-started/testing-library-with-visual-studio.md)
-- [Uso di una libreria di classi C# con .NET Core](../../csharp/getting-started/consuming-library-with-visual-studio.md)
+- [Creazione di un'applicazione C# denominata Hello World](with-visual-studio.md)
+- [Debug di un'applicazione C# denominata Hello World](debugging-with-visual-studio.md)
+- [Pubblicazione di un'applicazione C# denominata Hello World](publishing-with-visual-studio.md)
+- [Compilazione di una libreria di classi C#](library-with-visual-studio.md)
+- [Compilazione di una libreria di classi con Visual Basic](vb-library-with-visual-studio.md)
+- [Test di una libreria di classi](testing-library-with-visual-studio.md)
+- [Utilizzo di una libreria di classi](consuming-library-with-visual-studio.md)
 - [Compilare una soluzione completa C# con .NET in Windows](using-on-windows-full-solution.md)
 - [Esercitazione su NoSQL: Compilare un'applicazione console C# di DocumentDB in .Net Core](/azure/documentdb/documentdb-dotnetcore-get-started)
 
@@ -46,7 +47,7 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 
 - [Introduzione all'uso di .NET Core in Windows/Linux/macOS con gli strumenti dell'interfaccia CLI di .NET Core](using-with-xplat-cli.md)
 - [Organizing and testing projects with the .NET Core CLI tools](testing-with-cli.md) (Organizzazione e test di progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core)
-- [Introduzione a F#](../../fsharp/tutorials/getting-started/getting-started-command-line.md)
+- [Introduzione a F#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>Altro
 - [Testing unità in .NET Core tramite il test dotnet](../testing/unit-testing-with-dotnet-test.md)
@@ -54,6 +55,7 @@ Le esercitazioni seguenti includono informazioni e istruzioni sull'uso di .NET C
 - [Sviluppo di librerie con strumenti multipiattaforma](libraries.md)
 - [Come gestire le versioni delle dipendenze di pacchetto per .NET Core 1.0](managing-package-dependency-versions.md)
 - [Hosting di .NET Core da un codice nativo](netcore-hosting.md)
+- [Creare un modello personalizzato per dotnet new](create-custom-template.md)
 
 Per esercitazioni sullo sviluppo di applicazioni Web ASP.NET Core, vedere la [documentazione di ASP.NET Core](/aspnet/core/).
 
