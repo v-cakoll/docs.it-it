@@ -2,21 +2,20 @@
 title: Introduzione a .NET
 description: Introduzione alla famiglia di tecnologie .NET.
 keywords: ".NET, .NET Core, introduzione, novità"
-author: richlander
+author: mairaw
 ms.author: mairaw
-ms.date: 07/03/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0c6d4d9efbf51d8ae6308a34cbc4f522cceea001
+ms.sourcegitcommit: 03d1e3f0897713e25be7d7f893861a3eb4dac211
+ms.openlocfilehash: 303219086339a059a905e303a4ecd490e91ba7cc
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/11/2017
 
 ---
-
 # <a name="welcome-to-net"></a>Introduzione a .NET
 
 Per imparare a creare app .NET Core, vedere [Introduzione a .NET Core](core/get-started.md).
@@ -25,12 +24,15 @@ Con .NET è possibile compilare molti tipi di app, ad esempio cloud, IoT e gioch
 
 ## <a name="news"></a>Novità
 
+- [.NET Core 2.0 Released!](https://channel9.msdn.com/Blogs/dotnet/NET-Core-20-Released) (Rilascio di .NET Core 2.0)
+- [Announcing .NET Core 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-core-2-0/) (Annuncio di .NET Core 2.0)
+- [Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/) (Annuncio di .NET Standard 2.0)
+- [Announcing ASP.NET Core 2.0](https://blogs.msdn.microsoft.com/webdev/2017/08/14/announcing-asp-net-core-2-0/) (Annuncio di .NET Core 2.0)
+- [Announcing Entity Framework Core 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/) (Annuncio di Entity Framework Core 2.0)
+- [New for Visual Basic: .NET Standard Class Libraries and the dotnet CLI!](https://blogs.msdn.microsoft.com/vbteam/2017/08/14/new-for-visual-basic-net-standard-class-libraries-and-the-dotnet-cli/) (Novità per Visual Basic: Librerie di classi .NET Standard e interfaccia della riga di comando di dotnet)
+- [Visual Studio 2017 Version 15.3 Released](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/visual-studio-2017-version-15-3-released/) (Rilascio di Visual Studio 2017 versione 15.3)
 - [Introducing .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/) (Introduzione a .NET Standard)
-- [Annuncio di .NET Core 2.0 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2017/06/28/announcing-net-core-2-0-preview-2/)
-- [Introduzione a ASP.NET Core 2.0 Preview 2](https://blogs.msdn.microsoft.com/webdev/2017/06/28/introducing-asp-net-core-2-0-preview-2/)
-- [A fresh update to Visual Studio 2017 and the next preview (Notizie aggiornate su Visual Studio 2017 e la prossima anteprima)](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/update-to-visual-studio-2017-and-next-preview/)
 - [Visual Studio for Mac: now generally available (Visual Studio per Mac: ora disponibile a livello generale)](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/visual-studio-for-mac-now-generally-available/)
-- [Announcing .NET Core Tools 1.0 (.NET Core 1.0.4, .NET Core 1.1.1, .NET Core SDK 1.0.1) [Annuncio di .NET Core Tools 1.0 (.NET Core 1.0.4, .NET Core 1.1.1, .NET Core SDK 1.0.1)]](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)
 - [Announcing Visual Studio 2017 General Availability (Annuncio della disponibilità a livello generale di Visual Studio 2017)](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/)
 - [What's new for .NET Core and Visual Studio 2017 (Novità di .NET Core e Visual Studio 2017 - video](https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T108)
 - [Announcing the .NET Framework 4.7 (Annuncio di .NET Framework 4.7)](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)
@@ -44,7 +46,7 @@ Con .NET è possibile compilare molti tipi di app, ad esempio cloud, IoT e gioch
 
 Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaforme e linguaggi.  È possibile iniziare a conoscere .NET e i suoi linguaggi nelle sezioni seguenti:
 
-- [Guida alla piattaforma .NET](standard/index.md)
+- [Guida di .NET](standard/index.md)
 - [Guida a .NET Core](core/index.md)
 - [Guida a .NET Framework](framework/index.md)
 - [Guida a C#](csharp/index.md)
@@ -55,7 +57,7 @@ Questa documentazione illustra tutte le funzionalità di .NET attraverso piattaf
 
 ## <a name="open-source"></a>Open source
 
-Questa documentazione è completamente [open source](https://github.com/dotnet/docs).  È possibile contribuire in qualsiasi modo, sottoponendo problemi o scrivendo la documentazione.  Anche la maggior parte di .NET è open source:
+Questa documentazione è completamente [open source](https://github.com/dotnet/docs). È possibile contribuire in qualsiasi modo, sottoponendo problemi o scrivendo la documentazione.  Anche la maggior parte di .NET è open source:
 
 - [Home di .NET Core](https://github.com/dotnet/core)
 - [Librerie .NET](https://github.com/dotnet/corefx)
