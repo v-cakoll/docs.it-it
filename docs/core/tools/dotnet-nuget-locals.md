@@ -1,28 +1,26 @@
 ---
-title: Comando dotnet-nuget-locals - Interfaccia della riga di comando di .NET Core
-description: Il comando dotnet-nuget-locals cancella o elenca risorse NuGet locali quali cache delle richieste HTTP, cache temporanea o cartella globale dei pacchetti a livello di computer.
-keywords: dotnet-nuget-locals, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
+title: Comando dotnet nuget locals - Interfaccia della riga di comando di .NET Core
+description: Il comando dotnet nuget locals cancella o elenca le risorse NuGet locali, quali cache delle richieste HTTP, cache temporanea o cartella globale dei pacchetti a livello di computer.
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2c9ea7b3b7c61b347cb7c56254773290f04a0cd6
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 2b66198ac3e33c640abda0c96fb05944f5ea91df
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-# <a name="dotnet-nuget-locals"></a>dotnet-nuget locals
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nome
+## <a name="name"></a>nome
 
-`dotnet-nuget locals`: cancella o elenca risorse NuGet locali. 
+`dotnet nuget locals`: cancella o elenca risorse NuGet locali.
 
 ## <a name="synopsis"></a>Riepilogo
 
@@ -38,27 +36,16 @@ Il comando `dotnet nuget locals` cancella o elenca risorse NuGet locali presenti
 
 Uno dei valori seguenti:
 
-`all`
-
-Indica che l'operazione specificata viene applicata a tutti i tipi di cache, ovvero alla cache delle richieste HTTP, alla cache globale dei pacchetti e alla cache temporanea.
-
-`http-cache`
-
-Indica che l'operazione specificata viene applicata soltanto alla cache delle richieste HTTP. Le altre posizioni di cache non sono interessate.
-
-`global-packages`
-
-Indica che l'operazione specificata viene applicata soltanto alla cache globale dei pacchetti. Le altre posizioni di cache non sono interessate.
-
-`temp`
-
-Indica che l'operazione specificata viene applicata soltanto alla cache temporanea. Le altre posizioni di cache non sono interessate.
+* `all` - Indica che l'operazione specificata viene applicata a tutti i tipi di cache, ovvero alla cache delle richieste HTTP, alla cache globale dei pacchetti e alla cache temporanea.
+* `http-cache` - Indica che l'operazione specificata viene applicata soltanto alla cache delle richieste HTTP. Le altre posizioni di cache non sono interessate.
+* `global-packages` - Indica che l'operazione specificata viene applicata soltanto alla cache dei pacchetti globale. Le altre posizioni di cache non sono interessate.
+* `temp` - Indica che l'operazione specificata viene applicata soltanto alla cache temporanea. Le altre posizioni di cache non sono interessate.
 
 ## <a name="options"></a>Opzioni
 
 `-h|--help`
 
-Stampa una breve guida per il comando.  
+Stampa una breve guida per il comando.
 
 `-c|--clear`
 
@@ -97,4 +84,3 @@ Cancella tutti i file presenti nella directory locale della cache temporanea:
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
 Per informazioni su problemi ed errori comuni relativi all'uso del comando `dotnet nuget locals`, vedere [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache) (Gestione della cache NuGet).
-

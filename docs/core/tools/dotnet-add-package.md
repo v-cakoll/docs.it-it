@@ -1,52 +1,45 @@
 ---
-title: Comando dotnet-add package - Interfaccia della riga di comando di .NET Core
-description: Il comando dotnet-add package offre un'opzione utile per aggiungere il riferimento al pacchetto NuGet in un progetto.
-keywords: dotnet-add, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
-author: spboyer
+title: Comando dotnet add package - Interfaccia della riga di comando di .NET Core
+description: Il comando 'dotnet add package' offre un'opzione utile per aggiungere un riferimento al pacchetto NuGet in un progetto.
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 88e0da69-a5ea-46cc-8b46-5493242b7af9
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40ee7cac969d4752ede66ba8df6ff6cb3f439aec
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 54fe434c44c9354ae16ae096fe3496ee0134f6e0
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-add-package"></a>dotnet add package
 
-# <a name="dotnet-add-package"></a>dotnet-add package
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nome
+## <a name="name"></a>nome
 
-`dotnet-add package`: aggiunge il riferimento al pacchetto in un file di progetto.
+`dotnet add package`: aggiunge il riferimento al pacchetto in un file di progetto.
 
 ## <a name="synopsis"></a>Riepilogo
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory] [-h|--help]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
 
 ## <a name="description"></a>Descrizione
 
 Il comando `dotnet add package` offre un'opzione utile per aggiungere riferimenti al pacchetto in un file di progetto. Dopo l'esecuzione del comando, viene eseguito un controllo di compatibilità per verificare che il pacchetto sia compatibile con i framework del progetto. Se il controllo ha esito positivo, al file di progetto viene aggiunto un elemento `<PackageReference>` e viene eseguito [dotnet restore](dotnet-restore.md).
 
-Ad esempio, l'aggiunta di `Newtonsoft.Json` a *ToDo.csproj* determina un output simile al seguente:
+Ad esempio, l'aggiunta di `Newtonsoft.Json` a *ToDo.csproj* determina un output simile all'esempio seguente:
 
 ```
-Microsoft (R) Build Engine version 15.1.545.13942
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Writing /var/folders/gj/1mgg_4jx7mbdqbhw1kgcpcjr0000gn/T/tmpm0kTMD.tmp
-info : Adding PackageReference for package 'Newtonsoft.Json' into project 'ToDo.csproj'.
-log  : Restoring packages for ToDo.csproj...
+  Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
+info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
+log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
-info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json 119ms
-info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg
-info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg 27ms
-info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'ToDo.csproj'.
-info : PackageReference for package 'Newtonsoft.Json' version '9.0.1' added to file 'ToDo.csproj'.
+info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json 235ms
+info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'C:\projects\ToDo\ToDo.csproj'.
+info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to file 'C:\projects\ToDo\ToDo.csproj'.
 ```
 
 Il file *ToDo.csproj* contiene ora un elemento [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) per il pacchetto a cui viene fatto riferimento.
