@@ -1,33 +1,36 @@
 ---
-title: "Elemento &lt;Property&gt; (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;Property&gt; (.NET Native)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1df3d7368597abdb991facc399bcedf7412d4fdb
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Elemento &lt;Property&gt; (.NET Native)
+# <a name="ltpropertygt-element-net-native"></a>Elemento &lt;Property&gt; (.NET Native)
 Applica i criteri di reflection di runtime a una proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-  
 <Property Name="property_name"  
           Browse="policy_type"  
           Dynamic="policy_type"  
           Serialize="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -46,13 +49,13 @@ Applica i criteri di reflection di runtime a una proprietà.
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*nome_metodo*|Nome della proprietà. Il tipo della proprietà è definito dall'elemento padre [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) o [ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elemento.|  
+|*method_name*|Nome della proprietà. Il tipo di proprietà viene definito dall'elemento padre [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*policy_setting*|L'impostazione da applicare a questo tipo di criteri per la proprietà. I valori consentiti sono `Auto`, `Excluded`, `Included` e `Required`. Per ulteriori informazioni, vedere [impostazioni dei criteri della direttiva di Runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|L'impostazione da applicare a questo tipo di criteri per la proprietà. I valori consentiti sono `Auto`, `Excluded`, `Included` e `Required`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -61,8 +64,8 @@ Applica i criteri di reflection di runtime a una proprietà.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
   
 ## <a name="remarks"></a>Note  
  Se i criteri di una proprietà non sono definiti esplicitamente, la proprietà eredita i criteri di runtime dell'elemento padre.  
@@ -71,7 +74,6 @@ Applica i criteri di reflection di runtime a una proprietà.
  Nell'esempio seguente si usa la reflection per creare un'istanza di un oggetto `Book` e visualizzare i valori delle proprietà. Il file originale default.rd.xml per il progetto viene visualizzato come segue:  
   
 ```xml  
-  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
    <Application>  
       <Namespace Name="LibraryApplications"  Browse="Required Public" >  
@@ -79,23 +81,21 @@ Applica i criteri di reflection di runtime a una proprietà.
       </Namespace>  
    </Application>  
 </Directives>  
-  
 ```  
   
  Il file applica il valore `All` ai criteri `Activate` per la classe `Book`, che consente di accedere ai costruttori della classe tramite la reflection. I criteri `Browse` per la classe `Book` vengono ereditati dal relativo spazio dei nomi padre. Questa proprietà è impostata su `Required Public`, che rende disponibili i metadati in fase di esecuzione.  
   
- Di seguito viene riportato il codice sorgente per l'esempio. Il `outputBlock` variabile rappresenta un [TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx) controllo.  
+ Di seguito viene riportato il codice sorgente per l'esempio. La variabile `outputBlock` rappresenta un controllo [TextBlock](http://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx).  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   
- Tuttavia, la compilazione e l'esecuzione di questo esempio genera un [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) (eccezione). Anche se i metadati per il tipo `Book` sono stati resi disponibili, non è stato possibile rendere disponibili le implementazioni di funzioni Get di proprietà in modo dinamico. È possibile correggere l'errore in uno di due modi:  
+ Tuttavia, la compilazione e l'esecuzione di questo esempio genera un'eccezione [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). Anche se i metadati per il tipo `Book` sono stati resi disponibili, non è stato possibile rendere disponibili le implementazioni di funzioni Get di proprietà in modo dinamico. È possibile correggere l'errore in uno di due modi:  
   
--   definendo il `Dynamic` criteri per il `Book` digitare relativo [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) elemento.  
+-   Definendo i criteri `Dynamic` per il tipo `Book` nel relativo elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md).  
   
--   Aggiungendo un nidificata [ <> \> ](../../../docs/framework/net-native/property-element-net-native.md) (elemento) per ogni proprietà di cui si desidera richiamare, come nel seguente file default.rd.xml il metodo Get.  
+-   Aggiungendo un elemento [\<Property>](../../../docs/framework/net-native/property-element-net-native.md) annidato per ogni proprietà per cui si intende richiamare il getter, come nel seguente file default.rd.xml.  
   
-    ```  
-  
+    ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
        <Application>  
           <Namespace Name="LibraryApplications"  Browse="Required Public" >  
@@ -107,10 +107,10 @@ Applica i criteri di reflection di runtime a una proprietà.
           </Namespace>  
        </Application>  
     </Directives>  
-  
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [File di configurazione di runtime direttive (RD. XML)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
  [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+ [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)
+

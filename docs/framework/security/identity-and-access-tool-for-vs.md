@@ -22,7 +22,7 @@ ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Identity and Access Tool per Visual Studio 2012
-In questo argomento viene descritto il nuovo strumento Identity and Access Tool for Visual Studio 11 Lo strumento può essere scaricato da questo URL: [http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849) o direttamente da Visual Studio 11 cercando "identità" in Gestione estensioni.  
+In questo argomento viene descritto il nuovo strumento Identity and Access Tool for Visual Studio 11. Lo strumento può essere scaricato da questo URL: [http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849) o direttamente da Visual Studio 11 cercando "identità" in Gestione estensioni.  
   
  Identity and Access Tool for Visual Studio 11 offre un'esperienza notevolmente semplificata in fase di sviluppo con le caratteristiche principali seguenti:  
   

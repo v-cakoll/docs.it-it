@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Impostare criteri di cache predefiniti basati sull''ora per un''applicazione'
+title: 'Procedura: Impostare criteri di cache predefiniti basati sul tempo per un''applicazione'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -28,7 +28,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache predefiniti basati sull'ora per un'applicazione
+# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache predefiniti basati sul tempo per un'applicazione
 I criteri di cache basati sul tempo predefiniti consentono di definire il comportamento della cache per un'applicazione in base alle intestazioni inviate con la risorsa memorizzata nella cache e al comportamento della cache definito nelle sezioni 13 e 14 del documento RFC 2616, disponibile all'indirizzo [http://www.ietf.org](http://www.ietf.org/). Questo è il comportamento della cache appropriato per la maggior parte delle applicazioni.  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Per impostare i criteri automatici predefiniti per un'applicazione  

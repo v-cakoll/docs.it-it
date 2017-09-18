@@ -1,5 +1,5 @@
 ---
-title: criteri di cache basati sull'ora
+title: Criteri di cache basati sul tempo
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -39,7 +39,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="time-based-cache-policies"></a>criteri di cache basati sull'ora
+# <a name="time-based-cache-policies"></a>Criteri di cache basati sul tempo
 I criteri di cache basati sul tempo definiscono il livello di aggiornamento delle voci memorizzate nella cache usando l'ora di recupero della risorsa, le intestazioni restituite con la risorsa e l'ora corrente. Durante l'impostazione di criteri di cache basati sul tempo, è possibile usare il criterio basato sul tempo <xref:System.Net.Cache.HttpRequestCacheLevel.Default> oppure creare criteri personalizzati. Quando si usano i criteri basati sul tempo predefiniti per le risorse ottenute mediante HTTP (Hypertext Transfer Protocol), il comportamento esatto della cache è determinato dalle intestazioni incluse nella risposta memorizzata nella cache e dai comportamenti specificati nelle sezioni 13 e 14 del documento RFC 2616, disponibile all'indirizzo [http://www.ietf.org](http://www.ietf.org/). Per un esempio di codice che illustra l'impostazione di criteri basati sul tempo predefiniti per le risorse HTTP, vedere [Procedura: Impostare criteri di cache predefiniti basati sul tempo per un'applicazione](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Per esempi di codice che illustrano la creazione e l'uso dei criteri di cache, vedere [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Criteri per determinare il livello di aggiornamento delle voci memorizzate nella cache  

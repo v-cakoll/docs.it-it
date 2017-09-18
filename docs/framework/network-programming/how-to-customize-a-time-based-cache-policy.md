@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Personalizzare criteri di cache basati sull''ora'
+title: 'Procedura: Personalizzare criteri di cache basati sul tempo'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -28,7 +28,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="how-to-customize-a-time-based-cache-policy"></a>Procedura: Personalizzare criteri di cache basati sull'ora
+# <a name="how-to-customize-a-time-based-cache-policy"></a>Procedura: Personalizzare criteri di cache basati sul tempo
 Quando si creano criteri di cache basati sul tempo, è possibile personalizzare il comportamento di memorizzazione nella cache specificando i valori per durata massima, validità minima, obsolescenza massima o data di sincronizzazione della cache. L'oggetto <xref:System.Net.Cache.HttpRequestCachePolicy> fornisce più costruttori che consentono di specificare le combinazioni valide di questi valori.  
   
 ### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Per creare un criterio di cache basato sul tempo che usa una data di sincronizzazione della cache  

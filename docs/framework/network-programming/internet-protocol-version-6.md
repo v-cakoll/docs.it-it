@@ -1,5 +1,5 @@
 ---
-title: protocollo IPv6
+title: Protocollo IPv6
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -30,7 +30,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/21/2017
 
 ---
-# protocollo IPv6
+# Protocollo IPv6
 IPv6 (Internet Protocol version 6) è una nuova famiglia di protocolli standard per il livello di rete di Internet. IPv6 è progettato per risolvere molti dei problemi riscontrati nell'attuale versione della famiglia di protocolli IP (chiamata IPv4), relativi a esaurimento di indirizzi, sicurezza, configurazione automatica, estendibilità e così via. IPv6 estende le funzionalità di Internet in modo da permettere nuovi tipi di applicazioni, tra cui applicazioni peer-to-peer e per dispositivi mobili. Di seguito sono elencati i problemi principali dell'attuale protocollo IPv4:  
   
 -   Esaurimento rapido dello spazio di indirizzi.  

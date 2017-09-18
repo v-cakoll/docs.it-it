@@ -1,5 +1,5 @@
 ---
-title: criteri di cache basati sulla posizione
+title: Criteri di cache basati sulla posizione
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -37,7 +37,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="location-based-cache-policies"></a>criteri di cache basati sulla posizione
+# <a name="location-based-cache-policies"></a>Criteri di cache basati sulla posizione
 I criteri di cache basati sulla posizione definiscono l'aggiornamento delle voci memorizzate nella cache valide in base alla posizione da cui è possibile ricavare la risorsa richiesta. Una risorsa memorizzata nella cache è valida se l'uso non viola i requisiti di riconvalida specificati dal server. I criteri di cache basati sulla posizione vengono creati a livello di codice usando un costruttore di classe <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>. Il tipo dei criteri basati sulla posizione viene passato al costruttore usando un valore di enumerazione <xref:System.Net.Cache.RequestCacheLevel> o <xref:System.Net.Cache.HttpRequestCacheLevel>. Per esempi di codice che creano criteri di cache basati sulla posizione, vedere [Procedura: Impostare criteri di cache basati sulla posizione per un'applicazione](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). Le sezioni seguenti illustrano i diversi tipi di criteri di cache basati sulla posizione per le risorse Hypertext Transfer Protocol (HTTP e HTTPS).  
   
 ## <a name="cache-if-available-policy"></a>CacheIfAvailable (criterio)  

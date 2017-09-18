@@ -1,5 +1,5 @@
 ---
-title: Elementi direttiva di runtime
+title: Elementi delle direttive di runtime
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -21,7 +21,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="runtime-directive-elements"></a>Elementi direttiva di runtime
+# <a name="runtime-directive-elements"></a>Elementi delle direttive di runtime
 Il formato del file delle direttive di runtime (rd.xml) supporta i seguenti elementi direttiva di runtime. Per una rappresentazione gerarchica, vedere [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
  [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)  
