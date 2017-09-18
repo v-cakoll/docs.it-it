@@ -1,5 +1,5 @@
 ---
-title: Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)
+title: Riferimento a file di configurazione di direttive di runtime (rd.xml)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -21,7 +21,7 @@ ms.contentlocale: it-it
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="runtime-directives-rdxml-configuration-file-reference"></a>Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)
+# <a name="runtime-directives-rdxml-configuration-file-reference"></a>Riferimento a file di configurazione di direttive di runtime (rd.xml)
 Un file di direttive di runtime (rd.xml) è un file di configurazione XML che specifica se gli elementi del programma designato sono disponibili per la reflection. Ecco un esempio di un file di direttive di runtime:  
   
 ```xml  
