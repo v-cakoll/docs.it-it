@@ -1,30 +1,35 @@
 ---
-title: "Esempio di socket client sincrono | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "socket, esempi di codice"
-  - "socket client sincroni"
-  - "socket, socket client sincroni"
+title: Esempio di socket client sincrono
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, code examples
+- synchronous client sockets
+- sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 759585d1029742f6f45e9f7253282af05accc82e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Esempio di socket client sincrono
-Il codice riportato di seguito viene creato un client che si connette a un server.  Il client viene compilato con un socket sincrono, pertanto l'esecuzione dell'applicazione client viene sospeso finché il server non verrà restituita una risposta.  L'applicazione invia una stringa al server e visualizzare la stringa restituita dal server sulla console.  
+# <a name="synchronous-client-socket-example"></a>Esempio di socket client sincrono
+Il programma di esempio seguente crea un client che si connette a un server. Il client viene compilato con un socket sincrono, quindi l'esecuzione dell'applicazione client viene sospesa fino a quando il server non restituisce una risposta. L'applicazione invia una stringa al server e quindi visualizza la stringa restituita dal server nella console.  
   
 ```vb  
 Imports System  
@@ -92,7 +97,7 @@ public class SynchronousSocketClient {
         try {  
             // Establish the remote endpoint for the socket.  
             // This example uses port 11000 on the local computer.  
-            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName())  
+            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
             IPAddress ipAddress = ipHostInfo.AddressList[0];  
             IPEndPoint remoteEP = new IPEndPoint(ipAddress,11000);  
   
@@ -142,7 +147,8 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di socket server sincrono](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
  [Uso di un socket client sincrono](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
  [Esempi di codice socket](../../../docs/framework/network-programming/socket-code-examples.md)
+

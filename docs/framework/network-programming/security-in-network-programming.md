@@ -1,47 +1,53 @@
 ---
-title: "Sicurezza in programmazione di rete | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "invio di dati, sicurezza Internet"
-  - "protocolli, sicurezza Internet"
-  - "sicurezza rete"
-  - "risorse di rete, sicurezza Internet"
-  - "ricezione di dati, sicurezza Internet"
-  - "autenticazione [.NET Framework], sicurezza Internet"
-  - "Internet, sicurezza"
-  - "sicurezza [.NET Framework], Internet"
-  - "autorizzazioni [.NET Framework], Internet"
+title: Sicurezza in programmazione di rete
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sending data, Internet security
+- protocols, Internet security
+- Network security
+- network resources, Internet security
+- receiving data, Internet security
+- authentication [.NET Framework], Internet security
+- Internet, security
+- security [.NET Framework], Internet
+- permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c8adacd11aa256cd5d807cc92ec1a9c3c154ad77
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Sicurezza in programmazione di rete
-Le classi dello spazio dei nomi di .NET Framework <xref:System.Net> forniscono supporto incorporato per i meccanismi di autenticazione comuni di un'applicazione Internet e le autorizzazioni di accesso al codice .NET Framework.  
+# <a name="security-in-network-programming"></a>Sicurezza in programmazione di rete
+Le classi dello spazio dei nomi <xref:System.Net> di .NET Framework offrono il supporto predefinito per meccanismi diffusi di autenticazione delle applicazioni Internet e per le autorizzazioni di accesso di codice .NET Framework.  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Uso di Secure Sockets Layer](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
- Viene descritto come utilizzare le connessioni SSL \(Secure Sockets Layer \(SSL\).  
+ Descrizione di come usare connessioni Secure Sockets Layer (SSL).  
   
  [Autenticazione Internet](../../../docs/framework/network-programming/internet-authentication.md)  
- Viene descritto come utilizzare i metodi di autenticazione HTTP per stabilire connessioni autenticate ai server HTTP.  
+ Descrizione di come usare i metodi di autenticazione HTTP per stabilire connessioni autenticate a server HTTP.  
   
  [Autorizzazioni Web e socket](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
- Viene descritto come impostare la sicurezza per l'accesso al codice per le applicazioni che utilizzano connessioni Internet.  
+ Descrizione di come impostare la sicurezza dall'accesso di codice per applicazioni che usano connessioni Internet.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)  
- Vengono illustrate le classi in <xref:System.Net> e gli spazi dei nomi <xref:System.Net.Sockets>.
+ Introduzione alle classi negli spazi dei nomi <xref:System.Net> e <xref:System.Net.Sockets>.
+

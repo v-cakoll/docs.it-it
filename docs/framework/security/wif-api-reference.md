@@ -1,56 +1,63 @@
 ---
-title: "Riferimento per le API di WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Informazioni di riferimento sulle API WIF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ef439ff502fc39074d36f63d139fd23e42471d42
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Riferimento per le API di WPF
-Windows Identity Foundation \(WIF\) classes are split across the following assemblies: `mscorlib` \(mscorlib.dll\), `System.IdentityModel` \(System.IdentityModel.dll\), `System.IdentityModel.Services` \(System.IdentityModel.Services.dll\), and `System.ServiceModel` \(System.ServiceModel.dll\).  This topic provides links to the WIF namespaces and brief explanations of the classes that each namespace contains.  
+# <a name="wif-api-reference"></a>Informazioni di riferimento sulle API WIF
+Le classi WIF (Windows Identity Foundation) sono suddivise tra questi assembly: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) e `System.ServiceModel` (System.ServiceModel.dll). Questo argomento fornisce collegamenti agli spazi dei nomi WIF e una breve spiegazione delle classi contenute in ogni spazio dei nomi.  
   
 > [!IMPORTANT]
->  The following `System.IdentityModel` namespaces contain classes that implement the WCF claims\-based identity model: <xref:System.IdentityModel.Claims?displayProperty=fullName>, <xref:System.IdentityModel.Policy?displayProperty=fullName>, and <xref:System.IdentityModel.Selectors?displayProperty=fullName>.  Starting with .NET Framework 4.5, the WCF claims\-based identity model is superseded by WIF.  You should not use classes in these three namespaces when building solutions based on WIF.  
+>  Questi spazi dei nomi `System.IdentityModel` contengono classi che implementano il modello di identità basato sulle attestazioni di WCF: <xref:System.IdentityModel.Claims?displayProperty=fullName>, <xref:System.IdentityModel.Policy?displayProperty=fullName> e <xref:System.IdentityModel.Selectors?displayProperty=fullName>. A partire da .NET Framework 4.5, il modello di identità basata sulle attestazioni WCF è stato sostituito da WIF. Non usare le classi in questi tre spazi dei nomi per la compilazione di soluzioni basate su WIF.  
   
  <xref:System.IdentityModel?displayProperty=fullName>  
- Contains classes that represent cookie transforms, security token services, and specialized XML dictionary readers.  
+ Contiene le classi che rappresentano trasformazioni dei cookie, servizi token di sicurezza e lettori di dizionario XML specializzati.  
   
  <xref:System.IdentityModel.Configuration?displayProperty=fullName>  
- Contains classes that provide configuration for applications and services built using the Windows Identity Foundation \(WIF\).  Le classi dello spazio dei nomi rappresentano le impostazioni nell'elemento [\<identityConfiguration\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md).  
+ Contiene le classi che forniscono la configurazione per le applicazioni e i servizi creati con Windows Identity Foundation (WIF). Le classi in questo spazio dei nomi rappresentano le impostazioni nell'elemento [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md).  
   
  <xref:System.IdentityModel.Metadata?displayProperty=fullName>  
- Contains classes that represent elements in a Federation Metadata document.  
+ Contiene le classi che rappresentano gli elementi in un documento di metadati della federazione.  
   
  <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=fullName>  
- Contains classes that represent WS\-Trust artifacts.  
+ Contiene le classi che rappresentano elementi WS-Trust.  
   
  <xref:System.IdentityModel.Services?displayProperty=fullName>  
- Contains classes that are used in passive \(WS\-Federation\) scenarios.  Also contains some classes that represent settings under the [\<system.identityModel.services\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) element.  Settings under this element configure WS\-Federation for applications.  The `System.IdentityModel.Services.Configuration` namespace contains most of the classes that are used to configure WS\-Federation.  
+ Contiene le classi usate in scenari passivi (WS-Federation). Contiene anche alcune classi che rappresentano le impostazioni nell'elemento [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md). Le impostazioni in questo elemento configurano WS-Federation per le applicazioni. Lo spazio dei nomi `System.IdentityModel.Services.Configuration` contiene la maggior parte delle classi usate per configurare WS-Federation.  
   
  <xref:System.IdentityModel.Services.Configuration?displayProperty=fullName>  
- Contains classes that provide configuration for WIF applications that use the WS\-Federation protocol.  Le classi dello spazio dei nomi rappresentano le impostazioni nell'elemento [\<system.identityModel.services\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md).  The `System.IdentityModel.Services` namespace also contains some classes that are used to configure WS\-Federation.  
+ Contiene le classi che forniscono la configurazione per le applicazioni WIF che usano il protocollo WS-Federation. Le classi in questo spazio dei nomi rappresentano le impostazioni nell'elemento [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md). Lo spazio dei nomi `System.IdentityModel.Services` contiene anche alcune classi usate per configurare WS-Federation.  
   
  <xref:System.IdentityModel.Services.Tokens?displayProperty=fullName>  
- Contains specialized security token handlers for Web farm scenarios.  
+ Contiene i gestori di token di sicurezza specializzati per scenari Web farm.  
   
  <xref:System.IdentityModel.Tokens?displayProperty=fullName>  
- Contains classes that represent security tokens, security token handlers, and other security token artifacts.  
+ Contiene le classi che rappresentano token di sicurezza, gestori di token di sicurezza e altri elementi token di sicurezza.  
   
  <xref:System.Security.Claims?displayProperty=fullName>  
- Contains classes that represent claims, claims\-based identities, claims\-based principals, and other claims\-based identity model artifacts.  
+ Contiene le classi che rappresentano attestazioni, identità basate sulle attestazioni, entità basate sulle attestazioni e altri elementi modello di identità basati sulle attestazioni.  
   
  <xref:System.ServiceModel.Security?displayProperty=fullName>  
- Contains classes that represent WCF contracts, channels, service hosts and other artifacts that are used in active \(WS\-Trust\) scenarios.  This namespace also contains classes that are specific to Windows Communication Foundation \(WCF\) and that are not used by WIF.  
+ Contiene le classi che rappresentano contratti, canali, host servizio e altri elementi WCF usati in scenari attivi (WS-Trust). Questo spazio dei nomi contiene anche classi specifiche di Windows Communication Foundation (WCF) non usate da WIF.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento per la configurazione di WIF](../../../docs/framework/security/wif-configuration-reference.md)   
  [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+

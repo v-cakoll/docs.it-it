@@ -1,39 +1,45 @@
 ---
-title: "Configurazione automatica di IPv6 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Configurazione automatica di IPv6
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
 caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c46d4b8f6b9e3620c313e9737b556a6050da0126
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Configurazione automatica di IPv6
-Un obiettivo importante di l IPv6 è maggiore del plug e play il nodo.  Ovvero deve essere possibile inserire un nodo una rete IPv6 e farvi configurare automaticamente senza l'intervento umano.  
+# <a name="ipv6-auto-configuration"></a>Configurazione automatica di IPv6
+Un obiettivo importante per IPv6 consiste nel supportare la modalità Plug and Play per i nodi. Questo significa che deve essere possibile collegare un nodo in una rete IPv6 perché il nodo venga automaticamente configurato senza alcun intervento manuale.  
   
-## Tipo di Configurazione automatica  
- L'oggetto IPv6 supporta i seguenti tipi di automatica configurazioni:  
+## <a name="type-of-auto-configuration"></a>Tipo di configurazione automatica  
+ IPv6 supporta i tipi di configurazione automatica seguenti:  
   
--   **Stateful auto\-configuration**.  Questo tipo di configurazione richiede un determinato livello dell'intervento umano perché è necessario un DHCP per il server IPv6 \(DHCPv6\) per l'installazione e l'amministrazione di nodi.  Il server DHCPv6 mantiene un elenco di nodi che fornisce le informazioni di configurazione.  Anche gestisce le informazioni sullo stato in modo che il server è la durata di ogni indirizzo viene utilizzato e quando potrebbe essere disponibile per la nuova assegnazione.  
+-   **Configurazione automatica con stato**. Questo tipo di configurazione richiede un certo livello di intervento manuale, perché è necessario un server DHCPv6 (Dynamic Host Configuration Protocol for IPv6) per l'installazione e l'amministrazione dei nodi. Il server DHCPv6 mantiene un elenco di nodi a cui fornisce informazioni di configurazione. Mantiene inoltre le informazioni sullo stato in modo da determinare per quanto tempo ogni indirizzo è in uso e quando può essere disponibile per la riassegnazione.  
   
--   **Stateless auto\-configuration**.  Questo tipo di configurazione è appropriato per piccole organizzazioni e gli utenti.  In questo caso, ogni host determina gli indirizzi del contenuto degli annunci router ricevuti.  Mediante il provider standard IEEE EUI\-64 per definire parte della rete dell'indirizzo, infatti assumere l'univocità del computer host sul collegamento.  
+-   **Configurazione automatica senza stato**. Questo tipo di configurazione è adatto per piccole organizzazioni e singoli utenti. In questo caso, ogni host determina il proprio indirizzo dal contenuto degli annunci router ricevuti. Usando lo standard IEEE EUI-64 per definire la parte dell'ID di rete dell'indirizzo, l'host presuppone in modo ragionevole l'univocità dell'indirizzo host nel collegamento.  
   
- Indipendentemente da come indirizzo viene determinato, il nodo deve verificare che il relativo indirizzo potenziale sia univoco al collegamento locale.  Questa operazione viene eseguita inviando un messaggio adiacenti in uno all'indirizzo potenziale.  Se il nodo riceve una risposta, saprà che l'indirizzo è già utilizzato e deve determinare un altro indirizzo.  
+ Indipendentemente dal modo in cui viene determinato l'indirizzo, il nodo deve verificare che il proprio possibile indirizzo sia univoco per il collegamento locale. A questo scopo, viene inviato un messaggio Neighbor Solicitation al possibile indirizzo. Se il nodo riceve una risposta, sa che l'indirizzo è già in uso e deve determinarne un altro.  
   
-## Mobilità IPv6  
- La proliferazione di dispositivi mobili è stato introdotto un nuovo requisito: Un dispositivo deve essere in grado di modificare arbitrario le posizioni su Internet IPv6 e di gestire le connessioni esistenti.  Per fornire questa funzionalità, un nodo mobile è assegnato un indirizzo di gestione che può essere raggiunto sempre.  Quando il nodo mobile è da casa, si connette al collegamento della home page e utilizza il relativo indirizzo del cane.  Quando il nodo mobile è esterno a gestione, un agente home, in genere un router, messaggi di inoltro tra il nodo mobile e nodi con cui vengono passate.  
+## <a name="ipv6-mobility"></a>Mobilità di IPv6  
+ La grande diffusione di dispositivi mobili ha introdotto un nuovo requisito: un dispositivo deve essere in grado di cambiare arbitrariamente posizione nella rete Internet IPv6, mantenendo comunque le connessioni esistenti. Per fornire questa funzionalità, a un nodo mobile viene assegnato un indirizzo di posizione iniziale a cui può essere sempre raggiunto. Quando il nodo mobile si trova nella posizione iniziale, si connette al collegamento di questa posizione e usa il proprio indirizzo di posizione iniziale. Quando il nodo mobile si trova in un'altra posizione, un home agent, che è in genere un router, inoltra i messaggi tra il nodo mobile e i nodi con cui sta comunicando.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
  [Socket](../../../docs/framework/network-programming/sockets.md)
+

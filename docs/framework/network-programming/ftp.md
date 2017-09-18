@@ -1,38 +1,44 @@
 ---
-title: "FTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "FTP"
+title: FTP
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- FTP
 ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2274873140c415a970884389e71163be7f4cba6
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# FTP
-.NET Framework fornisce supporto completo del protocollo FTP con le classi <xref:System.Net.FtpWebResponse> e <xref:System.Net.FtpWebRequest>.  Queste classi che derivano da <xref:System.Net.WebRequest> e da <xref:System.Net.WebResponse>.  Nella maggior parte dei casi, <xref:System.Net.WebRequest> e le classi <xref:System.Net.WebResponse> forniscono tutto ciò che è necessario eseguire la richiesta, ma se è necessario accedere a funzionalità specifiche FTP\- esposte come proprietà, è possibile eseguire su di essi un cast queste classi in <xref:System.Net.FtpWebRequest> o a <xref:System.Net.FtpWebResponse>.  
+# <a name="ftp"></a>FTP
+.NET Framework offre supporto completo per il protocollo FTP con le classi <xref:System.Net.FtpWebRequest> e <xref:System.Net.FtpWebResponse>. Queste classi sono derivate da <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse>. Nella maggior parte dei casi, le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> rendono disponibile tutto ciò che serve per eseguire la richiesta. Se tuttavia è necessario accedere alle funzionalità specifiche di FTP esposte come proprietà, è possibile eseguire il cast di tipo di queste classi a <xref:System.Net.FtpWebRequest> o <xref:System.Net.FtpWebResponse>.  
   
-## Esempi  
- Per ulteriori informazioni, vedere i seguenti argomenti: [Procedura: Scaricare file con FTP](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md), [Procedura: Caricare file con FTP](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md)e [Procedura: Elencare il contenuto della directory con FTP](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md).  
+## <a name="examples"></a>Esempi  
+ Per altre informazioni, vedere gli argomenti seguenti: [Procedura: Scaricare file con FTP](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md), [Procedura: Caricare file con FTP](../../../docs/framework/network-programming/how-to-upload-files-with-ftp.md), e [Procedura: Elencare il contenuto della directory con FTP](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md).  
   
-## FTP e proxy  
- Se un proxy \(specificato dalla proprietà <xref:System.Net.FtpWebRequest.Proxy%2A> \) è un proxy HTTP, è solo <xref:System.Net.WebRequestMethods.Ftp.DownloadFile>, <xref:System.Net.WebRequestMethods.Ftp.ListDirectory>e i comandi <xref:System.Net.WebRequestMethods.Ftp.ListDirectoryDetails> sono supportati.  
+## <a name="ftp-and-proxies"></a>FTP e proxy  
+ Se un proxy (specificato dalla proprietà <xref:System.Net.FtpWebRequest.Proxy%2A>) è un proxy HTTP, sono supportati solo i comandi <xref:System.Net.WebRequestMethods.Ftp.DownloadFile>, <xref:System.Net.WebRequestMethods.Ftp.ListDirectory> e <xref:System.Net.WebRequestMethods.Ftp.ListDirectoryDetails>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Accesso a Internet con un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
  [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)   
- [Esempio client di tecnologia FTP](http://go.microsoft.com/fwlink/?LinkID=179557)   
- [Esempio di esplorazione di tecnologia FTP](http://go.microsoft.com/fwlink/?LinkID=179569)   
+ [Esempio relativo alle tecnologie di client FTP](http://go.microsoft.com/fwlink/?LinkID=179557)   
+ [FTP Explorer Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179569)  (Esempio relativo alle tecnologie di explorer FTP)  
  [Uso di protocolli applicativi](../../../docs/framework/network-programming/using-application-protocols.md)
+

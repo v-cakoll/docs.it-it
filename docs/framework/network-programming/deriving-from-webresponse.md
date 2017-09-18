@@ -1,56 +1,62 @@
 ---
-title: "Derivazione da WebResponse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Derivazione da WebResponse"
+title: Derivazione da WebResponse
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 627e5170dbf33b9b42ec7e46e77e6ff2fa874463
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Derivazione da WebResponse
-La classe <xref:System.Net.WebResponse> è una classe base astratta che fornisce metodi e proprietà di base per creare una risposta protocollo specifica che estende il modello di protocollo di .NET Framework.  Le applicazioni che utilizzano la classe <xref:System.Net.WebRequest> ai dati della richiesta le risorse ricevono le risposte in **WebResponse**.  i discendenti protocollo specifici **WebResponse** devono implementare i membri astratti della classe **WebResponse**.  
+# <a name="deriving-from-webresponse"></a>Derivazione da WebResponse
+La classe <xref:System.Net.WebResponse> è una classe base astratta che fornisce metodi e proprietà di base per creare un risposta specifica del protocollo adatta al modello di protocollo di collegamento di .NET Framework. Le applicazioni che usano la classe <xref:System.Net.WebRequest> per richiedere i dati dalle risorse ricevono le risposte in **WebResponse**. I discendenti specifici del protocollo **WebResponse** devono implementare i membri astratti della classe **WebResponse**.  
   
- La classe collegata **WebRequest** deve creare i discendenti **WebResponse**.  Ad esempio, le istanze <xref:System.Net.HttpWebResponse> vengono create solo come risultato della chiamata <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=fullName> o <xref:System.Net.HttpWebRequest.EndGetResponse%2A?displayProperty=fullName>.  Ogni **WebResponse** contiene il risultato di una richiesta a una risorsa e non deve essere riutilizzato.  
+ La classe **WebRequest** associata deve creare i discendenti di **WebResponse**. Le istanze di <xref:System.Net.HttpWebResponse>, ad esempio, vengono create solo come risultato della chiamata a <xref:System.Net.HttpWebRequest.GetResponse%2A?displayProperty=fullName> o <xref:System.Net.HttpWebRequest.EndGetResponse%2A?displayProperty=fullName>. Ogni elemento **WebResponse** contiene il risultato di una richiesta a una risorsa e non è destinato a essere riutilizzato.  
   
-## Proprietà di ContentLength  
- La proprietà <xref:System.Net.WebResponse.ContentLength%2A> indica il numero di byte di dati disponibili dal flusso restituito dal metodo <xref:System.Net.WebResponse.GetResponseStream%2A>.  La proprietà **ContentLength** non indica il numero di byte di intestazione o delle informazioni dei metadati restituite dal server; indica solo il numero di byte dei dati della risorsa richiesta stesso.  
+## <a name="contentlength-property"></a>Proprietà ContentLength  
+ La proprietà <xref:System.Net.WebResponse.ContentLength%2A> indica il numero di byte di dati disponibili dal flusso restituito dal metodo <xref:System.Net.WebResponse.GetResponseStream%2A>. La proprietà **ContentLength** non indica il numero di byte delle informazioni dell'intestazione o dei metadati restituite dal server. Indica solo il numero di byte di dati nella risorsa richiesta in sé.  
   
-## Proprietà di Tipocontenuto  
- La proprietà <xref:System.Net.WebResponse.ContentType%2A> fornisce tutte le informazioni specifiche del protocollo è necessario inviare al client per identificare il tipo di contenuto inviato dal server.  In genere questo è il tipo di contenuto MIME di tutti i dati restituiti.  
+## <a name="contenttype-property"></a>Proprietà ContentType  
+ La proprietà <xref:System.Net.WebResponse.ContentType%2A> fornisce le informazioni speciali che, in base al protocollo, devono essere inviate al client per identificare il tipo di contenuto inviato dal server. Si tratta in genere del tipo di contenuto MIME dei dati restituiti.  
   
-## Proprietà delle intestazioni  
- La proprietà <xref:System.Net.WebResponse.Headers%2A> contiene una raccolta arbitraria di coppie nome\/valore dei metadati associati alla risposta.  Tutti i metadati necessari dal protocollo che può essere espresso come coppia nome\/valore possono essere inclusi nella proprietà **Headers**.  
+## <a name="headers-property"></a>Proprietà Headers  
+ La proprietà <xref:System.Net.WebResponse.Headers%2A> contiene una raccolta arbitraria di coppie nome/valore dei metadati associati alla risposta. Tutti i metadati necessari per il protocollo che possono essere espressi come coppia di nome/valore possono essere inclusi nella proprietà **Headers**.  
   
- Non è necessario utilizzare la proprietà **Headers** per utilizzare i metadati dell'intestazione.  i metadati protocollo specifici possono essere esposti come proprietà; ad esempio, la proprietà <xref:System.Net.HttpWebResponse.LastModified%2A?displayProperty=fullName> espone l'intestazione HTTP **Last\-Modified**.  Quando si espone i metadati dell'intestazione come proprietà, non è necessario consentire la stessa proprietà da impostare utilizzando la proprietà **Headers**.  
+ Non è obbligatorio usare la proprietà **Headers** per usare i metadati dell'intestazione. I metadati specifici del protocollo possono essere esposti come proprietà. La proprietà <xref:System.Net.HttpWebResponse.LastModified%2A?displayProperty=fullName>, ad esempio, espone l'intestazione HTTP **Last-Modified**. Quando si espongono i metadati dell'intestazione come proprietà, non consentire l'impostazione della stessa proprietà tramite la proprietà **Headers**.  
   
-## Proprietà di ResponseUri  
- La proprietà <xref:System.Net.WebResponse.ResponseUri%2A> contiene l'uri della risorsa che effettivamente fornita dalla risposta.  Per i protocolli che non supportano il reindirizzamento, **ResponseUri** sarà lo stesso della proprietà <xref:System.Net.WebRequest.RequestUri%2A>**WebRequest** che ha creato la risposta.  Se i contenuti multimediali protocolli di reindirizzamento la richiesta, **ResponseUri** conterranno l'uri della risposta.  
+## <a name="responseuri-property"></a>Proprietà ResponseUri  
+ La proprietà <xref:System.Net.WebResponse.ResponseUri%2A> contiene l'URI della risorsa che ha effettivamente fornito la risposta. Per i protocolli che non supportano il reindirizzamento, **ResponseUri** sarà uguale alla proprietà <xref:System.Net.WebRequest.RequestUri%2A> dell'elemento **WebRequest** che ha creato la risposta. Se il protocollo supporta il reindirizzamento della richiesta, **ResponseUri** conterrà l'URI della risposta.  
   
-## Metodo close  
- Il metodo <xref:System.Net.WebResponse.Close%2A> chiuse tutte le connessioni dalla richiesta e la risposta e pulizia delle risorse utilizzate dalla risposta.  Il metodo **Close** chiudere tutte le istanze del flusso utilizzate dalla risposta, ma non genera un'eccezione se il flusso di risposte in precedenza è stato chiuso da una chiamata al metodo <xref:System.IO.Stream.Close%2A?displayProperty=fullName>.  
+## <a name="close-method"></a>Metodo Close  
+ Il metodo <xref:System.Net.WebResponse.Close%2A> chiude le connessioni eseguite dalla richiesta e dalla risposta e pulisce le risorse usate dalla risposta. Il metodo **Close** chiude le istanze del flusso usate dalla risposta, ma non genera un'eccezione se il flusso della risposta è stato chiuso prima da una chiamata al metodo <xref:System.IO.Stream.Close%2A?displayProperty=fullName>.  
   
-## Metodo di GetResponseStream  
- Il metodo <xref:System.Net.WebResponse.GetResponseStream%2A> restituisce un flusso che contiene la risposta alla risorsa richiesta.  Il flusso di risposte contiene solo i dati restituiti dalla risorsa, qualsiasi intestazione o importato di metadati nella risposta deve essere rimosso dalla risposta ed essere esposto all'applicazione tramite le proprietà specifiche del protocollo o la proprietà **Headers**.  
+## <a name="getresponsestream-method"></a>Metodo GetResponseStream  
+ Il metodo <xref:System.Net.WebResponse.GetResponseStream%2A> restituisce un flusso contenente la risposta dalla risorsa richiesta. Il flusso della risposta contiene solo i dati restituiti dalla risorsa. Le intestazioni o i metadati inclusi nella risposta devono essere rimossi dalla risposta ed esposti all'applicazione tramite le proprietà specifiche del protocollo o la proprietà **Headers**.  
   
- L'istanza del flusso restituita dal metodo **GetResponseStream** è posseduta dall'applicazione e può essere chiusa senza chiudere **WebResponse**.  Per convenzione, chiamare il metodo **WebResponse.Close** si chiude il flusso restituito da **GetResponse**.  
+ L'istanza del flusso restituita dal metodo **GetResponseStream** è di proprietà dell'applicazione e può essere chiusa senza chiudere **WebResponse**. Per convenzione, la chiamata al metodo **WebResponse.Close** chiude anche il flusso restituito da **GetResponse**.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.WebResponse>   
  <xref:System.Net.HttpWebResponse>   
  <xref:System.Net.FileWebResponse>   
  [Programmazione di protocolli di collegamento](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
  [Derivazione da WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+

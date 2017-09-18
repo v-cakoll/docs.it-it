@@ -1,57 +1,62 @@
 ---
-title: "openGenericCERCall MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), CER calls"
-  - "open generic CER calls"
-  - "constrained execution regions"
-  - "openGenericCERCall MDA"
-  - "CER calls"
-  - "managed debugging assistants (MDAs), CER calls"
-  - "generics [.NET Framework], open generic CER calls"
+title: openGenericCERCall (MDA)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), CER calls
+- open generic CER calls
+- constrained execution regions
+- openGenericCERCall MDA
+- CER calls
+- managed debugging assistants (MDAs), CER calls
+- generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 347f9efcf1b0cdaf9cd37bcf6045a42341e4f643
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# openGenericCERCall MDA
-L'assistente al debug gestito `openGenericCERCall` viene attivato per avvisare che il grafico di un'area a esecuzione vincolata \(CER, Constrained Execution Region\) con variabili di tipo generico nel metodo radice è in corso di elaborazione durante la compilazione JIT o la generazione dell'immagine nativa e che almeno una delle variabili di tipo generico è un tipo di riferimento a un oggetto.  
+# <a name="opengenericcercall-mda"></a>openGenericCERCall (MDA)
+L'assistente al debug gestito `openGenericCERCall` viene attivato per avvisare che il grafico dell'area a esecuzione vincolata con variabili di tipo generico in corrispondenza del metodo radice viene elaborato in fase di compilazione JIT o di generazione delle immagini native e almeno una delle variabili di tipo generico è un tipo riferimento oggetto.  
   
-## Sintomi  
- Codice CER che non viene eseguito quando viene interrotto un thread o viene scaricato un dominio applicazione.  
+## <a name="symptoms"></a>Sintomi  
+ Il codice dell'area a esecuzione vincolata non viene eseguito quando un thread viene interrotto o quando viene scaricato un dominio dell'applicazione.  
   
-## Causa  
- Durante la compilazione JIT, la creazione di un'istanza contenente un tipo di riferimento a un oggetto è solo rappresentativa poiché il codice risultante è condiviso e ognuna delle variabili potrebbe essere di qualsiasi tipo di riferimento a oggetto.  Ciò potrebbe impedire la preparazione anticipata di alcune risorse di runtime.  
+## <a name="cause"></a>Causa  
+ In fase di compilazione JIT, la creazione di un'istanza che contiene un tipo riferimento oggetto è rappresentativa solo perché il codice risultante è condiviso e ognuna delle variabili di tipo riferimento oggetto potrebbe essere qualsiasi tipo riferimento oggetto. Ciò può impedire la preparazione anticipata di alcune risorse in fase di esecuzione.  
   
- In particolare, i metodi con variabili di tipo generico possono allocare lentamente risorse in background.  Queste risorse sono dette voci di dizionario generiche.  Ad esempio, per l'istruzione `List<T> list = new List<T>();` \(dove `T` è una variabile di tipo generico\), il runtime deve cercare e possibilmente creare un'istanza esatta in fase di esecuzione, ad esempio, `List<Object>, List<String>`, `` e così via.  Questa operazione può avere esito negativo per una serie di motivi non soggetti al controllo dello sviluppatore, ad esempio l'esaurimento della memoria.  
+ In particolare, i metodi con variabili di tipo generico possono allocare risorse in background in modo differito. Queste sono note come voci di dizionario generiche. Ad esempio, per l'istruzione `List<T> list = new List<T>();` in cui `T` è una variabile di tipo generico, il runtime deve cercare ed eventualmente creare un'istanza esatta in fase di esecuzione, ad esempio `List<Object>, List<String>` e così via. Questa operazione può non riuscire per svariati motivi non sotto il controllo dello sviluppatore, ad esempio memoria insufficiente.  
   
- Questo assistente al debug gestito deve essere attivato soltanto al momento della compilazione JIT e non quando è presente un'istanza esatta.  
+ Questo assistente al debug gestito deve essere attivato solo in fase di compilazione JIT e non quando è prevista la creazione di un'istanza esatta.  
   
- Quando viene attivato, i sintomi più probabili sono che le CER non sono funzionali per la creazione di istanze non valide.  Common Language Runtime, infatti, non ha tentato di implementare una CER nelle circostanze che hanno causato l'attivazione dell'assistente al debug gestito.  Di conseguenza, se lo sviluppatore utilizza un'istanza condivisa della CER, gli errori di compilazione JIT, gli errori di caricamento di tipi generici o le interruzioni dei thread all'interno della CER non verranno intercettati.  
+ Quando viene attivato questo assistente al debug gestito, i sintomi più probabili sono il mancato funzionamento delle aree a esecuzione vincolata per le creazioni di istanze non valide. In effetti, il runtime non ha tentato di implementare un'area a esecuzione vincolata nelle circostanze che hanno causato l'attivazione dell'assistente al debug gestito. Pertanto, se lo sviluppatore usa la creazione d'istanza condivisa dell'area a esecuzione vincolata, gli errori di compilazione JIT, gli errori di caricamento di tipi generici o le interruzioni di thread all'interno dell'area a esecuzione vincolata prevista non vengono intercettati.  
   
-## Risoluzione  
- Non utilizzare variabili di tipo generico che sono di tipo di riferimento a oggetto per i metodi che possono contenere una CER.  
+## <a name="resolution"></a>Risoluzione  
+ Non usare variabili di tipo generico che sono di tipo riferimento oggetto per i metodi che possono contenere un'area a esecuzione vincolata.  
   
-## Effetto sul runtime  
- Questo assistente al debug gestito non produce effetti su CLR.  
+## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
+ L'assistente al debug gestito non ha alcun effetto su CLR.  
   
-## Output  
- Di seguito è riportato un esempio di output generato da questo assistente al debug gestito.  
+## <a name="output"></a>Output  
+ Di seguito è riportato un esempio di output di questo assistente al debug gestito.  
   
  `Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.`  
   
@@ -61,9 +66,9 @@ L'assistente al debug gestito `openGenericCERCall` viene attivato per avvisare c
   
  `declaringType name="OpenGenericCERCall"`  
   
-## Configurazione  
+## <a name="configuration"></a>Configurazione  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <openGenericCERCall/>  
@@ -71,8 +76,8 @@ L'assistente al debug gestito `openGenericCERCall` viene attivato per avvisare c
 </mdaConfig>  
 ```  
   
-## Esempio  
- Il codice CER non viene eseguito.  
+## <a name="example"></a>Esempio  
+ Il codice dell'area a esecuzione vincolata non viene eseguito.  
   
 ```  
 using System;  
@@ -116,7 +121,8 @@ class Program
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
  <xref:System.Runtime.ConstrainedExecution>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

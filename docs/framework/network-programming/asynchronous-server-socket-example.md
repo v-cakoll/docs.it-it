@@ -1,30 +1,35 @@
 ---
-title: "Esempio di socket server asincrono | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "socket, socket server asincroni"
-  - "socket, esempi di codice"
-  - "socket server asincroni"
+title: Esempio di socket server asincrono
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, asynchronous server sockets
+- sockets, code examples
+- asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cf150a1ac5465a898ca9e330b186659ec6423f0
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Esempio di socket server asincrono
-Il codice riportato di seguito viene creato un server che riceve le richieste di connessione da client.  Il server viene compilato con un socket asincrono, pertanto l'esecuzione dell'applicazione server non viene sospesa mentre attende una connessione da un client.  L'applicazione riceve una stringa dal client, visualizzare la stringa nella console e quindi è possibile visualizzare la stringa del client.  La stringa dal client deve contenere la stringa “\<EOF\>„ per segnalare la fine del messaggio.  
+# <a name="asynchronous-server-socket-example"></a>Esempio di socket server asincrono
+Il programma di esempio seguente crea un server che riceve le richieste di connessione dai client. Il server viene compilato con un socket asincrono, quindi l'esecuzione dell'applicazione server non è sospesa durante l'attesa di una connessione da un client. L'applicazione riceve una stringa dal client, visualizza la stringa nella console e quindi la restituisce al client. La stringa del client deve contenere la stringa "\<EOF>" per segnalare la fine del messaggio.  
   
 ```vb  
 Imports System  
@@ -302,7 +307,8 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempio di socket client asincrono](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)   
  [Uso di un socket server asincrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [Esempi di codice socket](../../../docs/framework/network-programming/socket-code-examples.md)
+

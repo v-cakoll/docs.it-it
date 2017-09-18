@@ -1,52 +1,57 @@
 ---
-title: "How to: Implement Callback Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "callback function, implementing"
+title: 'Procedura: implementare funzioni di callback'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d4382c956bf3d56426be485897cdda75453b4910
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# How to: Implement Callback Functions
-La procedura e l'esempio seguenti illustrano come un'applicazione gestita, usando il platform invoke, può stampare il valore di handle per ogni finestra sul computer locale.  In particolare, la procedura e l'esempio usano la funzione **EnumWindows** per esaminare l'elenco di finestre e una funzione di callback gestita \(denominata CallBack\) per visualizzare il valore di handle della finestra.  
+# <a name="how-to-implement-callback-functions"></a>Procedura: implementare funzioni di callback
+La procedura e l'esempio seguenti illustrano come un'applicazione gestita, usando il platform invoke, può stampare il valore di handle per ogni finestra sul computer locale. In particolare, la procedura e l'esempio usano la funzione **EnumWindows** per esaminare l'elenco di finestre e una funzione di callback gestita (denominata CallBack) per visualizzare il valore di handle della finestra.  
   
-### Per implementare una funzione di callback  
+### <a name="to-implement-a-callback-function"></a>Per implementare una funzione di callback  
   
-1.  Esaminare la firma per la funzione **EnumWindows** prima di procedere con l'implementazione.  **EnumWindows** presenta in genere la firma seguente:  
+1.  Esaminare la firma per la funzione **EnumWindows** prima di procedere con l'implementazione. **EnumWindows** presenta in genere la firma seguente:  
   
     ```  
     BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
     ```  
   
-     Un’indicazione per cui questa funzione richiede un callback è la presenza dell’argomento **lpEnumFunc**.  È frequente vedere il prefisso **lp** \(puntatore di tipo long\) combinato con il suffisso **Func** nel nome di argomenti che accettano un puntatore a una funzione di callback.  Per informazioni sulle funzioni Win32, vedere Microsoft Platform SDK.  
+     Un’indicazione del fatto che questa funzione richiede un callback è la presenza dell'argomento **lpEnumFunc**. È frequente vedere il prefisso **lp** (puntatore di tipo long) combinato con il suffisso **Func** nel nome di argomenti che accettano un puntatore a una funzione di callback. Per informazioni sulle funzioni Win32, vedere Microsoft Platform SDK.  
   
-2.  Creare la funzione di callback gestita.  Nell'esempio è dichiarato un tipo delegato, denominato `CallBack`, che accetta due argomenti \(**hwnd** e **lparam**\).  Il primo argomento è un handle alla finestra, mentre il secondo è definito dall'applicazione.  In questa versione entrambi gli argomenti devono essere numeri interi.  
+2.  Creare la funzione di callback gestita. L'esempio dichiara un tipo delegato, denominato `CallBack`, che accetta due argomenti (**hwnd** e **lparam**). Il primo argomento è un handle alla finestra, mentre il secondo è definito dall'applicazione. In questa versione entrambi gli argomenti devono essere numeri interi.  
   
-     Funzioni di callback restituiscono in genere valori diversi da zero per indicare l’esito positivo e zero per indicare l’esito negativo.  Questo esempio imposta in modo esplicito il valore restituito **true** per continuare l'enumerazione.  
+     Funzioni di callback restituiscono in genere valori diversi da zero per indicare l’esito positivo e zero per indicare l’esito negativo. Questo esempio imposta in modo esplicito il valore restituito su **true** per continuare l'enumerazione.  
   
-3.  Creare un delegato e passarlo come argomento per la funzione **EnumWindows**.  Platform invoke converte automaticamente il delegato in un formato di callback conosciuto.  
+3.  Creare un delegato e passarlo come argomento alla funzione **EnumWindows**. Platform invoke converte automaticamente il delegato in un formato di callback conosciuto.  
   
-4.  Assicurarsi che il garbage collector non recuperi il delegato prima che venga completata la funzione di callback.  Quando si passa un delegato come parametro o si passa un delegato contenuto come campo in una struttura, questo non viene interessato per la durata della chiamata.  Quindi, come nel seguente esempio di enumerazione, la funzione di callback viene completata prima che venga restituita la chiamata e non richiede operazioni aggiuntive dal chiamante gestito.  
+4.  Assicurarsi che il garbage collector non recuperi il delegato prima che venga completata la funzione di callback. Quando si passa un delegato come parametro o si passa un delegato contenuto come campo in una struttura, questo non viene interessato per la durata della chiamata. Quindi, come nel seguente esempio di enumerazione, la funzione di callback viene completata prima che venga restituita la chiamata e non richiede operazioni aggiuntive dal chiamante gestito.  
   
-     Se, tuttavia, la funzione di callback può essere richiamata dopo che viene restituita la chiamata, il chiamante gestito deve provvedere a garantire che il delegato non venga interessato fino al completamento della funzione di richiamata.  Per informazioni dettagliate su come evitare operazioni di garbage collection, vedere [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md) con Platform Invoke.  
+     Se, tuttavia, la funzione di callback può essere richiamata dopo che viene restituita la chiamata, il chiamante gestito deve provvedere a garantire che il delegato non venga interessato fino al completamento della funzione di richiamata. Per informazioni dettagliate su come evitare operazioni di Garbage Collection, vedere [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md) con platform invoke.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```vb  
 Imports System  
@@ -71,7 +76,6 @@ Public Class EnumReportApp
         Return True  
     End Function 'Report  
 End Class 'EnumReportApp  
-  
 ```  
   
 ```csharp  
@@ -98,7 +102,6 @@ public class EnumReportApp
         return true;  
     }  
 }  
-  
 ```  
   
 ```cpp  
@@ -137,6 +140,7 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Callback Functions](../../../docs/framework/interop/callback-functions.md)   
- [Calling a DLL Function](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni di callback](../../../docs/framework/interop/callback-functions.md)   
+ [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+

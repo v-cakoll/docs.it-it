@@ -1,30 +1,35 @@
 ---
-title: "Procedura: Rilevare la disponibilit&#224; della rete e le modifiche all&#39;indirizzo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Rete"
+title: "Procedura: Rilevare la disponibilità della rete e le modifiche all'indirizzo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 52c3bffb204c35d7741d7e4fb35b05a357f3811f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Procedura: Rilevare la disponibilit&#224; della rete e le modifiche all&#39;indirizzo
-In questo esempio viene illustrato come rilevare le modifiche nell'indirizzo di rete di un'interfaccia.  
+# <a name="how-to-detect-network-availability-and-address-changes"></a>Procedura: Rilevare la disponibilità della rete e le modifiche all'indirizzo
+Questo esempio mostra come rilevare le modifiche apportate all'indirizzo di rete di un'interfaccia.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 using System;  
@@ -55,7 +60,8 @@ namespace Examples.Net.AddressChanges
 }  
 ```  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli spazi dei nomi **System.Net**.
+-   Riferimenti allo spazio dei nomi **System.Net**.
+

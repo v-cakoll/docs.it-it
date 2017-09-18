@@ -1,46 +1,51 @@
 ---
-title: "Uso di Secure Sockets Layer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Servizi di rete"
-  - "SSL"
-  - "Secure Sockets Layer"
-  - "richiesta di dati da Internet, Secure Sockets Layer"
-  - "invio di dati, Secure Sockets Layer"
-  - "Risorse di rete"
-  - "richieste di dati, Secure Sockets Layer"
-  - "ricezione di dati, Secure Sockets Layer"
-  - "Internet, Secure Sockets Layer"
+title: Uso di Secure Sockets Layer
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Networking
+- SSL
+- Secure Sockets Layer
+- requesting data from Internet, Secure Sockets Layer
+- sending data, Secure Sockets Layer
+- Network Resources
+- data requests, Secure Sockets Layer
+- receiving data, Secure Sockets Layer
+- Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cb625971f0c0b52bcdcfc9b41d4c0f88814aef08
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Uso di Secure Sockets Layer
-Le classi <xref:System.Net> utilizzano Secure Sockets Layer \(SSL\) per crittografare la connessione per diversi protocolli di rete.  
+# <a name="using-secure-sockets-layer"></a>Uso di Secure Sockets Layer
+Le classi <xref:System.Net> usano Secure Sockets Layer (SSL) per crittografare la connessione per diversi protocolli di rete.  
   
- Per le connessioni HTTP, le classi <xref:System.Net.WebResponse> e <xref:System.Net.WebRequest> utilizzare SSL per comunicare con gli host Web che supportano SSL.  La decisione di utilizzare SSL viene effettuata dalla classe <xref:System.Net.WebRequest>, in base all'URI disponibile.  Se l'uri inizia con “HTTPS: „, SSL viene utilizzato; se l'uri inizia con “HTTP: „, una connessione crittografata non viene utilizzata.  
+ Per le connessioni HTTP, le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> usano SSL per comunicare con host Web che supportano SSL. La decisione di usare SSL avviene tramite la classe <xref:System.Net.WebRequest>, in base all'URI assegnato. Se l'URI inizia con "https:", viene usato SSL. Se l'URI inizia con "http:", viene usata una connessione non crittografata.  
   
- Per utilizzare SSL con protocollo FTP \(FTP\), impostare la proprietà <xref:System.Net.FtpWebRequest.EnableSsl> per allineare prima di chiamare <xref:System.Net.FtpWebRequest.GetResponse>.  Analogamente, utilizzare SSL con protocollo di trasporto \(SMTP\) di Simple Mail, impostare la proprietà <xref:System.Net.Mail.SmtpClient.EnableSsl> per allineare prima di inviare posta elettronica.  
+ Per usare SSL con FTP (File Transfer Protocol), impostare la proprietà <xref:System.Net.FtpWebRequest.EnableSsl> su true prima di chiamare <xref:System.Net.FtpWebRequest.GetResponse>. Analogamente, per usare SSL con SMTP (Simple Mail Transport Protocol), impostare la proprietà <xref:System.Net.Mail.SmtpClient.EnableSsl> su true prima di inviare messaggi di posta elettronica.  
   
- La classe <xref:System.Net.Security.SslStream> fornisce un'astrazione in base al flusso per SSL e fornisce molti modi per configurare il handshake SSL.  
+ La classe <xref:System.Net.Security.SslStream> fornisce un'astrazione basata su flussi per SSL e offre diversi modi per configurare l'handshake SSL.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```vb  
 Dim MyURI As String = "https://www.contoso.com/"  
@@ -64,12 +69,13 @@ request.Method = WebRequestMethods.Ftp.DeleteFile;
 FtpWebResponse response = (FtpWebResponse)request.GetResponse();  
 ```  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli spazi dei nomi **System.Net**.  
+-   Riferimenti allo spazio dei nomi **System.Net**.  
   
-## Vedere anche  
- [Sicurezza in programmazione di rete](../../../docs/framework/network-programming/security-in-network-programming.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Sicurezza nella programmazione di rete](../../../docs/framework/network-programming/security-in-network-programming.md)   
  [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)   
  [Selezione e convalida dei certificati](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+

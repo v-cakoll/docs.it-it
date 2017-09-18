@@ -1,57 +1,62 @@
 ---
-title: "memberInfoCacheCreation MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "member info cache creation"
-  - "MemberInfoCacheCreation MDA"
-  - "reflection, run-time errors"
-  - "MDAs (managed debugging assistants), cache"
-  - "cache [.NET Framework], reflection"
-  - "managed debugging assistants (MDAs), cache"
-  - "MemberInfo cache"
+title: MDA memberInfoCacheCreation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- member info cache creation
+- MemberInfoCacheCreation MDA
+- reflection, run-time errors
+- MDAs (managed debugging assistants), cache
+- cache [.NET Framework], reflection
+- managed debugging assistants (MDAs), cache
+- MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 991055f537bfcbb2a533384ffc787c070a0122d4
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# memberInfoCacheCreation MDA
-L'assistente al debug gestito `memberInfoCacheCreation` viene attivato in caso di creazione di una cache <xref:System.Reflection.MemberInfo>.  Questa condizione potrebbe indicare che un programma sta utilizzando funzionalità di reflection che richiedono un uso intensivo delle risorse.  
+# <a name="memberinfocachecreation-mda"></a>MDA memberInfoCacheCreation
+L'assistente al debug gestito `memberInfoCacheCreation` viene attivato al momento della creazione di una cache <xref:System.Reflection.MemberInfo>. Si tratta di un'indicazione chiara di un programma che usa funzionalità di reflection onerose a livello di risorse.  
   
-## Sintomi  
- Il working set di un programma aumenta perché il programma sta utilizzando funzionalità di reflection che richiedono un uso intensivo delle risorse.  
+## <a name="symptoms"></a>Sintomi  
+ Il working set di un programma aumenta perché il programma usa la reflection con uso intensivo delle risorse.  
   
-## Causa  
- Le operazioni di reflection che coinvolgono oggetti <xref:System.Reflection.MemberInfo> sono considerate molto esigenti in termini di risorse poiché devono leggere i metadati archiviati nelle pagine meno recenti e indicano in genere che il programma sta utilizzando un tipo di scenario con associazione tardiva.  
+## <a name="cause"></a>Causa  
+ Le operazioni di reflection che richiamano oggetti <xref:System.Reflection.MemberInfo> sono considerate onerose a livello di risorse perché devono leggere i metadati archiviati in pagine ad accesso sporadico e in genere indicano che il programma usa un qualche tipo di scenario di associazione tardiva.  
   
-## Risoluzione  
- È possibile determinare il punto del programma in cui viene utilizzata la funzionalità di reflection abilitando questo assistente al debug gestito ed eseguendo quindi il codice in un debugger o associando un debugger al momento dell'attivazione dell'assistente al debug gestito.  In questo modo sarà possibile ottenere una traccia dello stack indicante la posizione in cui è stata creata la cache <xref:System.Reflection.MemberInfo> e da cui è possibile determinare il punto del programma in cui è utilizzata la funzionalità di reflection.  
+## <a name="resolution"></a>Risoluzione  
+ Per determinare se il programma usa la reflection, è possibile abilitare questo assistente al debug gestito e quindi eseguire il codice in un debugger o collegare un debugger quando viene attivato l'assistente al debug gestito. In un debugger si otterrà un'analisi dello stack che mostra la posizione in cui è stata creata la cache <xref:System.Reflection.MemberInfo> e da tale informazione è possibile determinare dove il programma usa la reflection.  
   
- La soluzione dipende dagli obiettivi del codice.  Questo assistente al debug gestito indica che il programma sta utilizzando uno scenario con associazione tardiva.  In questo caso, è possibile analizzare le prestazioni di tale scenario oppure verificare se può essere sostituito con uno scenario con associazione anticipata.  
+ La risoluzione dipende dagli obiettivi del codice. Questo assistente al debug gestito segnala che il programma ha uno scenario di associazione tardiva. È possibile valutare la sostituzione con uno scenario di associazione anticipata oppure esaminare le prestazioni dello scenario di associazione tardiva.  
   
-## Effetto sul runtime  
- Questo assistente al debug gestito viene attivato per ogni cache <xref:System.Reflection.MemberInfo> creata.  L'impatto sulle prestazioni è trascurabile.  
+## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
+ Questo assistente al debug gestito viene attivato ogni volta che viene creata una cache <xref:System.Reflection.MemberInfo>. L'impatto sulle prestazioni è trascurabile.  
   
-## Output  
- L'assistente al debug gestito genera un messaggio che indica la creazione della cache <xref:System.Reflection.MemberInfo>.  Utilizzare un debugger per ottenere una traccia dello stack in cui è indicato il punto del programma in cui è utilizzata la funzionalità di reflection.  
+## <a name="output"></a>Output  
+ L'assistente al debug gestito genera un messaggio che indica che la cache <xref:System.Reflection.MemberInfo> è stata creata. Usare un debugger per ottenere un'analisi dello stack che mostra le posizioni in cui il programma usa la reflection.  
   
-## Configurazione  
+## <a name="configuration"></a>Configurazione  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <memberInfoCacheCreation/>  
@@ -59,7 +64,7 @@ L'assistente al debug gestito `memberInfoCacheCreation` viene attivato in caso d
 </mdaConfig>  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Questo codice di esempio attiverà l'assistente al debug gestito `memberInfoCacheCreation`.  
   
 ```  
@@ -74,6 +79,7 @@ public class Exe
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Reflection.MemberInfo>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

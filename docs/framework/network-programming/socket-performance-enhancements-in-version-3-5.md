@@ -1,52 +1,58 @@
 ---
-title: "Miglioramenti apportati alle prestazioni socket nella versione 3.5 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Miglioramenti apportati alle prestazioni socket nella versione 3.5
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3e0e648fb14e07b62f70c614af84a98a256f6095
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Miglioramenti apportati alle prestazioni socket nella versione 3.5
-La classe <xref:System.Net.Sockets.Socket?displayProperty=fullName> è stata migliorata nella versione 3,5 dalle applicazioni che utilizzano la rete asincrono I\/O per ottenere la restituzione elevato.  Una serie di nuove classi è stata aggiunta come parte di una serie di miglioramenti alla classe <xref:System.Net.Sockets.Socket> che forniscono un modello asincrono alternativo che può essere utilizzato da applicazioni a elevate prestazioni specifiche di socket.  Questi miglioramenti sono specificamente progettati per le applicazioni server di rete che richiedono prestazioni elevate.  Un'applicazione può utilizzare il modello asincrono avanzato separatamente, o solo nei campi caldi di destinazione dell'applicazione \(quando riceve una grande quantità di dati, ad esempio\).  
+# <a name="socket-performance-enhancements-in-version-35"></a>Miglioramenti apportati alle prestazioni socket nella versione 3.5
+La classe <xref:System.Net.Sockets.Socket?displayProperty=fullName> è stata migliorata nella versione 3.5 per l'uso da applicazioni che usano I/O di rete asincrono per ottenere le massime prestazioni. È stata aggiunta una serie di nuove classi nell'ambito di una serie di miglioramenti apportati alla classe <xref:System.Net.Sockets.Socket> che forniscono un modello asincrono alternativo che può essere usato da applicazioni socket ad alte prestazioni specializzate. Questi miglioramenti sono stati progettati in modo specifico per le applicazioni server di rete che richiedono prestazioni elevate. Un'applicazione può usare il modello asincrono migliorato in modo esclusivo o solo nelle aree dell'applicazione con esigenze particolari individuate, ad esempio per la ricezione di grandi quantità di dati.  
   
-## Miglioramenti della classe  
- Questi miglioramenti hanno lo scopo principale di impedire la sincronizzazione e l'allocazione ripetuta di oggetti durante l'I\/O del socket asincrono con volumi elevati di dati.  Il modello di progettazione fine di inizio\/attualmente implementato dalla classe <xref:System.Net.Sockets.Socket> per il socket asincrono I\/O richiede un oggetto <xref:System.IAsyncResult?displayProperty=fullName> viene allocato per ogni operazione di socket asincrona.  
+## <a name="class-enhancements"></a>Miglioramenti della classe  
+ La funzionalità principale di questi miglioramenti è evitare l'allocazione ripetuta e la sincronizzazione degli oggetti durante operazioni di I/O su socket asincrone con volumi elevati di dati. Lo schema progettuale basato su inizio/fine attualmente implementato dalla classe <xref:System.Net.Sockets.Socket> per le operazioni di I/O su socket asincrone richiede l'allocazione di un oggetto <xref:System.IAsyncResult?displayProperty=fullName> per ogni operazione su socket asincrona.  
   
- Nei nuovi miglioramenti della classe <xref:System.Net.Sockets.Socket>, le operazioni di socket asincrone vengono descritti gli oggetti di classi riutilizzabili <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName> allocati e gestiti dall'applicazione.  Le applicazioni socket a elevate prestazioni rilevano meglio la quantità di operazioni socket sovrapposte da sostenere.  L'applicazione è in grado di creare tutti gli oggetti <xref:System.Net.Sockets.SocketAsyncEventArgs> necessari.  Ad esempio, se un'applicazione server deve eseguire accettare sempre un socket 15 operazioni costanti per supportare le frequenze di ingresso di connessione client, è possibile allocare in anticipo 15 oggetti riutilizzabili <xref:System.Net.Sockets.SocketAsyncEventArgs> a tale scopo.  
+ Nei nuovi miglioramenti per la classe <xref:System.Net.Sockets.Socket>, le operazioni su socket asincrone sono descritte da oggetti classe <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName> riutilizzabili, allocati e gestiti dall'applicazione. Le applicazioni ad alte prestazioni che usano socket conoscono bene la quantità di operazioni su socket sovrapposte che occorre supportare. L'applicazione può creare il numero di oggetti <xref:System.Net.Sockets.SocketAsyncEventArgs> necessari. Ad esempio, se un'applicazione server deve disporre di 15 operazioni di accettazione socket in sospeso in qualsiasi momento per supportare le velocità di connessione client in ingresso, può allocare 15 oggetti <xref:System.Net.Sockets.SocketAsyncEventArgs> riutilizzabili in anticipo a tale scopo.  
   
- Il modello di esecuzione di un'operazione socket asincrona con questa classe è costituito dalla procedura seguente:  
+ Il modello per l'esecuzione di un'operazione socket asincrona con questa classe è costituito dai passaggi seguenti:  
   
-1.  Allocare un nuovo oggetto di contesto <xref:System.Net.Sockets.SocketAsyncEventArgs> o ottenerne uno libero da un pool di applicazioni.  
+1.  Allocare un nuovo oggetto contesto <xref:System.Net.Sockets.SocketAsyncEventArgs> oppure ottenerne uno libero da un pool di applicazioni.  
   
-2.  Impostare le proprietà nell'oggetto di contesto all'operazione da eseguire su \(il metodo delegato e il buffer di dati di callback, ad esempio\).  
+2.  Impostare le proprietà nell'oggetto contesto per l'operazione da eseguire, ad esempio il metodo delegato di callback e il buffer di dati.  
   
-3.  Chiamare il metodo socket appropriato \(xxxAsync\) per iniziare l'operazione asincrona.  
+3.  Chiamare il metodo socket appropriato (xxxAsync) per avviare l'operazione asincrona.  
   
-4.  Se il metodo di socket asincrono \(xxxAsync\) restituisce true nel callback, eseguire una query sulle proprietà di contesto dello stato di completamento.  
+4.  Se il metodo socket asincrono (xxxAsync) restituisce true nel callback, recuperare lo stato di completamento dalle proprietà di contesto.  
   
-5.  Se il metodo di socket asincrono \(xxxAsync\) restituisce false nel callback, l'operazione è stata completata in modo sincrono.  È possibile eseguire una query sulle proprietà del contesto per il risultato dell'operazione.  
+5.  Se il metodo socket asincrono (xxxAsync) restituisce false nel callback, l'operazione è stata completata in modo sincrono. È possibile recuperare il risultato dell'operazione dalle proprietà di contesto.  
   
-6.  Riutilizzare il contesto per un'altra operazione, inserirlo di nuovo nel pool o ignorarlo.  
+6.  Riutilizzare il contesto per un'altra operazione, inserirlo nuovamente nel pool o rimuoverlo.  
   
- La durata del nuovo oggetto di contesto asincrono di un'operazione di socket è determinata dai riferimenti nei riferimenti di I\/O asincrono codice dell'applicazione e.  Non è necessario per l'applicazione mantenere un riferimento a un oggetto di contesto dell'operazione socket asincrona dopo l'invio come parametro a uno dei metodi dell'operazione socket asincrona.  Il riferimento verrà mantenuto fino alla restituzione del callback di completamento.  Tuttavia è vantaggioso per l'applicazione mantenere il riferimento all'oggetto di contesto in modo da poter riutilizzare per un'operazione di socket asincrona futura.  
+ La durata del nuovo oggetto di contesto dell'operazione socket asincrona è determinata dai riferimenti nel codice dell'applicazione e dai riferimenti di I/O asincroni. Non è necessario che l'applicazione mantenga un riferimento a un oggetto di contesto dell'operazione socket asincrona dopo l'invio come parametro a uno dei metodi per operazioni socket asincrone. Il riferimento verrà mantenuto attivo fino a quando il callback di completamento non restituisce il controllo. È tuttavia vantaggioso che l'applicazione mantenga un riferimento all'oggetto di contesto, in modo da poterlo riutilizzare per un'operazione socket asincrona futura.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.Sockets.Socket?displayProperty=fullName>   
  <xref:System.Net.Sockets.SendPacketsElement?displayProperty=fullName>   
  <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName>   
  <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=fullName>   
  [Esempi di programmazione di rete](../../../docs/framework/network-programming/network-programming-samples.md)   
- [Esempio di tecnologia di prestazioni di socket](http://go.microsoft.com/fwlink/?LinkID=179570)
+ [Socket Performance Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179570) (Esempio di tecnologia per le prestazioni del socket)
+

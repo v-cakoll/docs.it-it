@@ -1,79 +1,85 @@
 ---
-title: "WSTrustChannelFactory e WSTrustChannel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: WSTrustChannelFactory e WSTrustChannel
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 caps.latest.revision: 9
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 9
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e400d68924f1ed57ea1e71892e52f5aae2f5eebc
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# WSTrustChannelFactory e WSTrustChannel
-Se si conosce già con Windows Communication Foundation \(WCF\), sapere che un client WCF è già federazione ricezione.  Configurando un client WCF con <xref:System.ServiceModel.WSFederationHttpBinding> o simile associazione personalizzata, è possibile abilitare l'autenticazione organizzata in modo federativo un servizio.  
+# <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory e WSTrustChannel
+Se si ha già familiarità con Windows Communication Foundation (WCF), si sa che un client WCF supporta già la federazione. Configurando un client WCF con <xref:System.ServiceModel.WSFederationHttpBinding> o un binding personalizzato simile, è possibile abilitare l'autenticazione federata in un servizio.  
   
- Il WCF ottiene il token che viene generato dal servizio token di sicurezza \(STS\) in background e utilizza questo token per autenticare il servizio.  La limitazione principale di questo approccio è che non esiste visibilità nelle comunicazioni client al server.  Il WCF genera automaticamente il token di sicurezza \(RST\) di richiesta al servizio token di sicurezza in base ai parametri simbolici pubblicati nell'associazione.  Ciò significa che il client non può variare i parametri di RST di richiesta, controllare la risposta \(RSTR\) del token di sicurezza di richiesta per ottenere informazioni quali richieste di visualizzazione, oppure memorizzare il token per un utilizzo futuro.  
+ WCF ottiene il token rilasciato dal servizio token di sicurezza in background e lo usa per l'autenticazione nel servizio. La limitazione principale a questo approccio è l'assenza di visibilità nelle comunicazioni del client con il server. WCF genera automaticamente il token di sicurezza delle richieste per il servizio token di sicurezza in base ai parametri del token rilasciato nel binding. Il client non può quindi variare i parametri del token di sicurezza delle richieste per una singola richiesta, esaminare la risposta del token di sicurezza delle richieste per ottenere informazioni come le attestazioni di visualizzazione o memorizzare nella cache il token per l'uso futuro.  
   
- Attualmente, il client WCF è adatto a scenari di base di federazione.  Tuttavia, uno degli scenari principali che costituiscono la base \(WIF\)identità Windows supporta richiede il RST a un livello che il WCF facilmente non consente.  Di conseguenza, WIF aggiunge funzionalità che consentono un controllo sulla comunicazione con il servizio token di sicurezza.  
+ Il client WCF è attualmente adatto per scenari di federazione di base. Uno degli scenari principali supportati da Windows Identity Foundation (WIF) richiede tuttavia il controllo sul token di sicurezza delle richieste a un livello non facilmente consentito da WCF. WIF aggiunge quindi funzionalità che offrono un maggiore controllo sulla comunicazione con il servizio token di sicurezza.  
   
- WIF supporta i seguenti scenari di federazione:  
+ WIF supporta gli scenari di federazione seguenti:  
   
--   Utilizzando un client WCF senza dipendenze di WIF da autenticare a un servizio organizzato in modo federativo  
+-   Uso di un client WCF senza dipendenze WIF per l'autenticazione in un servizio federato  
   
--   Abilitare WIF su un client WCF per inserire un elemento di OnBehalfOf o di ActAs in RST al servizio token di sicurezza  
+-   Possibilità per WIF in un client WCF di inserire un elemento ActAs o OnBehalfOf nel token di sicurezza delle richieste per il servizio token di sicurezza  
   
--   Utilizzando WIF da solo per ottenere un token dal servizio token di sicurezza per poi consentire a un client WCF per eseguire l'autenticazione con questo token.  Per [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) ulteriori informazioni, vedere l'esempio.  
+-   Uso solo di WIF per ottenere un token dal servizio token di sicurezza e quindi consentire a un client WCF di eseguire l'autenticazione con questo token. Per altre informazioni, vedere l'esempio [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406).  
   
- Il primo scenario è evidente: I client WCF esistenti continueranno a funzionare con componenti di WIF e il servizio token di sicurezza.  In questo argomento vengono illustrati i due scenari rimanenti.  
+ Il primo scenario è ovvio: i client WCF esistenti continueranno a usare i servizi token di sicurezza e le relying party WIF. Questo argomento illustra i due scenari rimanenti.  
   
-## Aggiornamento di un client WCF esistente con ActAs\/OnBehalfOf  
- In uno scenario tipico di delega di identità, un client chiama un servizio di livello intermedio, quindi chiama un servizio back\-end.  Il servizio di livello intermedio funge da, o opera per conto di, il client.  
+## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Miglioramento di un client WCF esistente con ActAs/OnBehalfOf  
+ In uno scenario di delega di identità tipico, un client chiama un servizio di livello intermedio, che chiama quindi un servizio back-end. Il servizio di livello intermedio funge da client o agisce per conto del client.  
   
 > [!TIP]
 >  Qual è la differenza tra ActAs e OnBehalfOf?  
 >   
->  Dal punto di vista di procotol di WS\- attendibilità:  
+>  Dal punto di vista del protocollo WS-Trust:  
 >   
->  1.  Un elemento di ActAs RST indica che il richiedente desidera un token che contiene le richieste su due entità distinte: il richiedente e un'entità esterna rappresentata dal token dell'elemento di ActAs.  
-> 2.  Un elemento di OnBehalfOf RST indica che il richiedente desidera un token che contiene le richieste solo su un'entità: l'entità esterna rappresentata dal token dell'elemento di OnBehalfOf.  
+>  1.  Un elemento token di sicurezza delle richieste ActAs indica che il richiedente vuole un token che include attestazioni relative a due entità distinte, ovvero il richiedente e un'entità esterna rappresentata dal token nell'elemento ActAs.  
+> 2.  Un elemento token di sicurezza delle richieste OnBehalfOf indica che il richiedente vuole un token che include attestazioni relative a una sola entità, ovvero l'entità esterna rappresentata dal token nell'elemento OnBehalfOf.  
 >   
->  La funzionalità di ActAs in genere utilizzata negli scenari che richiedono la delega composta, in cui il destinatario finale del token generato può controllare l'intera catena di delega e visualizzare appena il client, ma qualsiasi intermediari.  In questo modo la possibile eseguire il controllo di accesso, il controllo e altre attività correlate in base all'intera catena di delega di identità.  La funzionalità di ActAs viene utilizzata in sistemi a più livelli l'autenticazione e comunicare le informazioni sulle identità tra livelli senza dover comunicare le informazioni all'applicazione\/livello di logica di business.  
+>  La funzionalità ActAs viene usata in genere in scenari che richiedono la delega composita, dove il destinatario finale del token rilasciato può controllare l'intera catena di delega e vedere non solo il client, ma tutti gli intermediari. Ciò consente di eseguire il controllo di accesso, le attività di controllo e altre attività correlate basate sull'intera catena di delega di identità. La funzionalità ActAs viene in genere usata in sistemi multilivello per autenticare e passare informazioni sulle identità tra i livelli, senza dover passare tali informazioni a livello di applicazione/logica di business.  
 >   
->  La funzionalità di OnBehalfOf viene utilizzata negli scenari in cui solo all'identità del client originale è importante e viene efficacemente la stessa funzionalità di rappresentazione di identità disponibile in Windows.  Quando OnBehalfOf viene utilizzato, il destinatario finale del token generato può visualizzare solo le richieste sul client originale e informazioni sugli intermediari non vengono mantenute.  Un modello comune in cui la funzionalità di OnBehalfOf viene utilizzata è il modello di dominio in cui il client non può accedere al servizio token di sicurezza direttamente bensì comunica tramite un protocollo del proxy.  Il gateway del proxy autentica il chiamante e inserisce le informazioni sul chiamante nell'elemento di OnBehalfOf del messaggio di RST che invia al servizio token di sicurezza reale per l'elaborazione.  Il token risultante contiene solo le richieste relative al client del proxy, cedendo il proxy completamente trasparente al ricevitore del token pubblicato. Si noti che WIF non supporta \<wsse:SecurityTokenReference\> o \<wsa:EndpointReferences\> come figlio \<wst:OnBehalfOf\>.  La specifica di WS\- attendibilità consente l'invio di tre modi per identificare il richiedente originale \(per conto del proxy viene utilizzato\).  Tali valori sono:  
+>  La funzionalità OnBehalfOf viene usata negli scenari in cui è importante solo l'identità del client originale ed è in effetti uguale alla funzionalità di rappresentazione dell'identità disponibile in Windows. Quando viene usata la funzionalità OnBehalfOf, il destinatario finale del token rilasciato può visualizzare solo le attestazioni relative al client originale e le informazioni relative agli intermediari non vengono mantenute. Un modello comune in cui viene usata la funzionalità OnBehalfOf è il modello basato su proxy, nel quale il client non può accedere direttamente al servizio token di sicurezza, ma comunica invece tramite un gateway proxy. Il gateway proxy autentica il chiamante e inserisce le informazioni sul chiamante nell'elemento OnBehalfOf del messaggio del token di sicurezza delle richieste, che viene quindi inviato al vero servizio token di sicurezza per l'elaborazione. Il token risultante contiene solo attestazioni correlate al client del proxy, rendendo completamente trasparente il proxy al destinatario del token rilasciato. Si noti che WIF non supporta \<wsse:SecurityTokenReference> o \<wsa:EndpointReferences> come elemento figlio di \<wst:OnBehalfOf>. La specifica WS-Trust offre tre modi per identificare il richiedente originale, per conto del quale opera il proxy. Questi sono:  
 >   
->  -   Riferimento del token di sicurezza.  Un riferimento a un token, nel messaggio, o eventualmente recuperato dalla banda\).  
-> -   Riferimento dell'endpoint.  Utilizzato come chiave per cercare dati, nuovamente la banda.  
-> -   Token di sicurezza.  Identifica direttamente il richiedente originale.  
+>  -   Riferimento al token di sicurezza. Un riferimento a un token, all'interno del messaggio o eventualmente recuperato fuori banda.  
+> -   Riferimento all'endpoint. Usato come chiave per la ricerca dei dati, anche in questo caso fuori banda.  
+> -   Token di sicurezza. Identifica direttamente il richiedente originale.  
 >   
->  WIF supporta solo i token di sicurezza, crittografati o non crittografati, come elemento figlio diretto \<wst:OnBehalfOf\>.  
+>  WIF supporta solo i token di sicurezza, crittografati o non crittografati, come elemento figlio diretto di \<wst:OnBehalfOf>.  
   
- Queste informazioni vengono trasferite a un autorità di WS\- attendibilità utilizzando gli elementi di OnBehalfOf simbolici e di ActAs in RST.  
+ Queste informazioni vengono trasmesse a un'autorità di certificazione WS-Trust mediante gli elementi token ActAs e OnBehalfOf nel token di sicurezza delle richieste.  
   
- Il WCF espone un punto di estensibilità sull'associazione che consente agli elementi XML arbitrari da aggiungere al RST.  Tuttavia, poiché il punto di estensibilità è associato all'associazione, gli scenari che richiedono il RST soddisfa per variare di chiamata è necessario ricreare il client per ogni chiamata, che riduce le prestazioni.  WIF utilizza i metodi di estensione nella classe `ChannelFactory` per consentire agli sviluppatori possa connettersi qualsiasi token che si ottiene dalla banda al RST.  Nell'esempio di codice seguente viene illustrato come creare un token che rappresenta il client \(ad esempio uno X.509, un nome utente, o un token di \(SAML\) di linguaggio markup delle asserzioni di sicurezza\) e lo associa al RST inviata all'autorità.  
+ WCF espone un punto di estendibilità nel binding che consente di aggiungere elementi XML arbitrari al token di sicurezza delle richieste. Tuttavia, poiché il punto di estendibilità è collegato al binding, negli scenari in cui il contenuto del token di sicurezza delle richieste deve variare per ogni chiamata, è necessario ricreare il client per ogni chiamata, con un conseguente peggioramento delle prestazioni. WIF usa metodi di estensione nella classe `ChannelFactory` per consentire agli sviluppatori di allegare i token ottenuti fuori banda al token di sicurezza delle richieste. L'esempio di codice seguente illustra come accettare un token che rappresenta il client, ad esempio un token X.509, un nome utente o un token SAML (Security Assertion Markup Language), e allegarlo al token di sicurezza delle richieste inviato all'autorità di certificazione.  
   
 ```  
 IHelloService serviceChannel = channelFactory.CreateChannelActingAs<IHelloService>( clientSamlToken );  
-serviceChannel.Hello(“Hi!”);  
+serviceChannel.Hello("Hi!");  
 ```  
   
  WIF offre i vantaggi seguenti:  
   
--   Il RST può essere modificato per canale; pertanto, i servizi di livello intermedio non è necessario ricreare il channel factory per ciascun client, che consente di migliorare le prestazioni.  
+-   Il token di sicurezza delle richieste può essere modificato per ogni canale, quindi i servizi di livello intermedio non devono ricreare la factory canale per ogni client e ciò consente un miglioramento delle prestazioni.  
   
--   Questo funziona con i client esistenti WCF, che consente un percorso di aggiornamento semplice per i servizi di livello intermedio esistenti WCF che desiderano abilitare la semantica di delega di identità.  
+-   Funziona con i client WCF esistenti, rendendo possibile un facile percorso di aggiornamento per i servizi di livello intermedio WCF esistenti che vogliono abilitare la semantica di delega delle identità.  
   
- Tuttavia, non è ancora visibilità nella comunicazione del client al servizio token di sicurezza.  La trattazione nel terzo scenario.  
+ Anche in questo caso non c'è tuttavia visibilità nella comunicazione del client con il servizio token di sicurezza. Questo aspetto verrà esaminato nel terzo scenario.  
   
-## Comunicare direttamente con un autorità e utilizzando il token generato per autenticare  
- Per alcuni scenari avanzati, aggiornare un client WCF non è sufficiente.  Sviluppatori che utilizzano solo il messaggio di utilizzare WCF in genere in\/contratti del messaggio estrazione e gestiscono l'analisi lato client di risposta dell'autorità manualmente.  
+## <a name="communicating-directly-with-an-issuer-and-using-the-issued-token-to-authenticate"></a>Comunicazione diretta con un autorità di certificazione e uso del token rilasciato per l'autenticazione  
+ Per alcuni scenari avanzati, il miglioramento di un client WCF non è sufficiente. Gli sviluppatori che usano solo WCF usano in genere contratti Message In/Message Out e gestiscono manualmente l'analisi lato client della risposta dell'autorità di certificazione.  
   
- WIF vengono introdotte le classi <xref:System.ServiceModel.Security.WSTrustChannel> e <xref:System.ServiceModel.Security.WSTrustChannelFactory> per consentire il client comunicare direttamente con un autorità di WS\- attendibilità.  Le classi <xref:System.ServiceModel.Security.WSTrustChannel> e <xref:System.ServiceModel.Security.WSTrustChannelFactory> consentono agli oggetti fortemente tipizzati di RSTR e di RST al flusso tra il client e autorità emittente, come illustrato nell'esempio di codice.  
+ WIF introduce le classi <xref:System.ServiceModel.Security.WSTrustChannelFactory> e <xref:System.ServiceModel.Security.WSTrustChannel> per consentire al client di comunicare direttamente con un'autorità di certificazione WS-Trust. Le classi <xref:System.ServiceModel.Security.WSTrustChannelFactory> e <xref:System.ServiceModel.Security.WSTrustChannel> consentono il flusso di oggetti token di sicurezza delle richieste e risposta del token di sicurezza delle richieste fortemente tipizzati tra il client e l'autorità di certificazione, come illustrato nell'esempio di codice seguente.  
   
 ```  
 WSTrustChannelFactory trustChannelFactory = new WSTrustChannelFactory( stsBinding, stsAddress );  
@@ -84,25 +90,26 @@ RequestSecurityTokenResponse rstr = null;
 SecurityToken token = channel.Issue(rst, out rstr);  
 ```  
   
- Si noti che il parametro `out` nel metodo <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> consente l'accesso a RSTR per l'ispezione lato client.  
+ Si noti che il parametro `out` nel metodo <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> consente l'accesso alla risposta del token di sicurezza delle richieste per l'analisi sul lato client.  
   
- Finora, illustrato in precedenza solo come ottenere un token.  Il token restituito dall'oggetto <xref:System.ServiceModel.Security.WSTrustChannel> è `GenericXmlSecurityToken` che contiene tutte le informazioni necessarie per l'autenticazione a un componente.  Nell'esempio di codice seguente viene illustrato come utilizzare il token.  
+ Fino a questo momento è stato illustrato come ottenere un token. Il token restituito dall'oggetto <xref:System.ServiceModel.Security.WSTrustChannel> è un oggetto `GenericXmlSecurityToken` che contiene tutte le informazioni necessarie per l'autenticazione in una relying party. L'esempio di codice seguente illustra come usare questo token.  
   
 ```  
-IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token ); serviceChannel.Hello(“Hi!”);  
+IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token ); serviceChannel.Hello("Hi!");  
 ```  
   
- Il metodo di estensione <xref:System.ServiceModel.ChannelFactory%601.CreateChannelWithIssuedToken%2A> sull'oggetto `ChannelFactory` indica a WIF ottenuto un token dalla banda che deve interrompere la chiamata normale WCF all'autorità e utilizzare il token che si è verificato per autenticare al componente.  Ciò comporta i vantaggi seguenti:  
+ Il metodo di estensione <xref:System.ServiceModel.ChannelFactory%601.CreateChannelWithIssuedToken%2A> nell'oggetto `ChannelFactory` indica a WIF che è stato ottenuto un token fuori banda e che deve interrompere la normale chiamata WCF all'autorità di certificazione e usare invece il token ottenuto per autenticare la relying party. Questo metodo offre i vantaggi seguenti:  
   
--   Fornisce controllo completo sul processo token di emissione.  
+-   Consente il controllo completo sul processo di rilascio del token.  
   
--   Supporta scenari OnBehalfOf\/ActAs direttamente l'impostazione di queste proprietà su RST in uscita.  
+-   Supporta scenari ActAs/OnBehalfOf impostando direttamente queste proprietà sul token di sicurezza delle richieste in uscita.  
   
--   Attiva le decisioni sul lato client dinamiche di essere eseguito in base al contenuto del RSTR.  
+-   Consente di prendere decisioni dinamiche sull'attendibilità sul lato client in base al contenuto della risposta del token di sicurezza delle richieste.  
   
 -   Consente di memorizzare nella cache e riutilizzare il token restituito dal metodo <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A>.  
   
--   <xref:System.ServiceModel.Security.WSTrustChannelFactory> e <xref:System.ServiceModel.Security.WSTrustChannel> consentono un controllo della memorizzazione nella cache del canale, errore e la semantica di recupero in base alle procedure consigliate WCF.  
+-   <xref:System.ServiceModel.Security.WSTrustChannelFactory> e <xref:System.ServiceModel.Security.WSTrustChannel> consentono il controllo della semantica relativa a recupero, errori e memorizzazione nella cache del canale in base alle procedure consigliate per WCF.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzionalità di WIF](../../../docs/framework/security/wif-features.md)
+

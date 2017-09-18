@@ -1,31 +1,36 @@
 ---
-title: "Procedura: Impostare criteri di cache per una richiesta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "criteri di cache per le richieste"
+title: 'Procedura: Impostare criteri di cache per una richiesta'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4acef4b118422a8276260d083a5c31c41472eb68
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Procedura: Impostare criteri di cache per una richiesta
-Nell'esempio seguente viene illustrata l'impostazione dei criteri della cache per una richiesta.  l'input di esempio è un URI come http:\/\/www.contoso.com\/.  
+# <a name="how-to-set-cache-policy-for-a-request"></a>Procedura: Impostare criteri di cache per una richiesta
+L'esempio seguente illustra l'impostazione di criteri di cache per una richiesta. L'input di esempio è un URI, ad esempio http://www.contoso.com/.  
   
-## Esempio  
- Nell'esempio di codice vengono creati i criteri della cache che consentono la risorsa richiesta da utilizzare dalla cache se non è stato nella cache per il più tempo del giorno.  Viene visualizzato un messaggio che indica se la risorsa è stata utilizzata da in, ad esempio `"The response was retrieved from the cache : False."`— e visualizzare la risorsa.  Una richiesta può essere eseguita da qualsiasi cache tra client e server.  
+## <a name="example"></a>Esempio  
+ L'esempio di codice seguente crea un criterio di cache che consente di usare la risorsa richiesta dalla cache se non è rimasta nella cache per più di un giorno. L'esempio visualizza un messaggio che indica se la risorsa è stata usata dalla cache, ad esempio `"The response was retrieved from the cache : False."`, quindi visualizza la risorsa. Una richiesta può essere soddisfatta da qualsiasi cache tra il client e il server.  
   
 ```csharp  
 using System;  
@@ -110,12 +115,12 @@ Namespace Examples.System.Net.Cache
         End Sub  
     End Class  
 End Namespace  
-  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)   
  [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Elemento \<requestCaching\> \(Impostazioni di rete\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [Criteri di cache basati sul tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

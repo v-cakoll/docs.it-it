@@ -1,54 +1,61 @@
 ---
-title: "Convenzioni dello schema di configurazione di WIF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Convenzioni dello schema di configurazione di WIF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 caps.latest.revision: 3
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 3
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 092f6f4544e308dae45636f447f75100512a916a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Convenzioni dello schema di configurazione di WIF
-In questo argomento vengono illustrate le convenzioni utilizzate negli argomenti di configurazione di \(WIF\) della struttura dell'identità Windows e descritte alcune funzionalità comuni e attributi utilizzati in [\<system.identityModel\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) e le sezioni [\<system.identityModel.services\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md).  
+# <a name="wif-configuration-schema-conventions"></a>Convenzioni dello schema di configurazione di WIF
+Questo argomento illustra le convenzioni usate negli argomenti relativi alla configurazione di Windows Identity Foundation (WIF) e descrive alcuni attributi e funzionalità comuni usati nelle sezioni [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) e [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md).  
   
 <a name="BKMK_Modes"></a>   
-## Metodo  
- Molti degli elementi di configurazione di WIF dispongono di un attributo `mode`.  Questo attributo in genere verifica della classe utilizzata per effettuare una determinata parte dell'elaborazione e che gli elementi di configurazione è consentita come elementi figlio dell'elemento corrente.  Un errore di configurazione viene generato se gli elementi inclusi nel file di configurazione viene ignorato a causa delle impostazioni di sistema.  
+## <a name="modes"></a>Modalità  
+ Molti elementi di configurazione WIF hanno un attributo `mode`. Questo attributo controlla in genere la classe usata per eseguire una determinata parte dell'elaborazione e gli elementi di configurazione consentiti come elementi figlio dell'elemento corrente. Viene generato un errore di configurazione se gli elementi inclusi nel file di configurazione vengono ignorati a causa delle impostazioni della modalità.  
   
 <a name="BKMK_TimespanValues"></a>   
-## Valori timespan  
- Dove <xref:System.TimeSpan> viene utilizzato come tipo di attributo, vedere il metodo <xref:System.TimeSpan.Parse%28System.String%29> per visualizzare il formato consentiti.  Questo formato è conforme alla specifica seguente.  
+## <a name="timespan-values"></a>Valori TimeSpan  
+ Quando <xref:System.TimeSpan> viene usato come tipo di attributo, vedere il metodo <xref:System.TimeSpan.Parse%28System.String%29> per conoscere il formato consentito. Il formato è conforme alle specifiche seguenti.  
   
 ```  
 [ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]  
 ```  
   
- Ad esempio, "30 ", "30.00:00", "30.00:00: 00 " tutti media 30 giorni; e "00:05", "00:05: 00 ", "0.00:05: 00,00 " tutti media 5 minuti.  
+ Ad esempio, "30", "30.00:00", "30.00:00:00" indicano tutti 30 giorni e "00:05", "00:05:00", "0.00:05:00.00" indicano tutti 5 minuti.  
   
 <a name="BKMK_CertificateReferences"></a>   
-## Riferimenti del certificato  
- Alcuni riferimenti di ottenere elementi ai certificati mediante l'elemento `<certificateReference>`.  Per fare riferimento a un certificato, i seguenti attributi sono disponibili.  
+## <a name="certificate-references"></a>Riferimenti ai certificati  
+ Diversi elementi accettano riferimenti ai certificati tramite l'elemento `<certificateReference>`. Quando si fa riferimento a un certificato, sono disponibili gli attributi seguenti.  
   
 |||  
 |-|-|  
-|`storeLocation`|Un valore di enumerazione <xref:System.Security.Cryptography.X509Certificates.StoreLocation> : `CurrentUser` o `CurrentMachine`.|  
-|`storeName`|Un valore di enumerazione <xref:System.Security.Cryptography.X509Certificates.StoreName> ; il più utili per questo contesto sono `My` e `TrustedPeople`.|  
-|`x509FindType`|Un valore di enumerazione <xref:System.Security.Cryptography.X509Certificates.X509FindType> ; il più utili per questo contesto sono `FindBySubjectName` e `FindByThumbprint`.  Per eliminare la probabilità di errore, si consiglia del tipo `FindByThumbprint` viene utilizzato in ambienti di produzione.|  
-|`findValue`|Il valore utilizzato per trovare il certificato, in base all'attributo `x509FindType`.  Per eliminare la probabilità di errore, si consiglia del tipo `FindByThumbprint` viene utilizzato in ambienti di produzione.  Quando `FindByThumbPrint` viene specificato, questo attributo accetta un valore che rappresenta il formato stringa esadecimale dell'identificativo del certificato, ad esempio, "97249e1a5fa6bee5e515b82111ef524a4c91583f".|  
+|`storeLocation`|Un valore dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.StoreLocation>: `CurrentUser` o `CurrentMachine`.|  
+|`storeName`|Un valore dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.StoreName>. I valori più utili in questo contesto sono `My` e `TrustedPeople`.|  
+|`x509FindType`|Un valore dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.X509FindType>. I valori più utili in questo contesto sono `FindBySubjectName` e `FindByThumbprint`. Per eliminare le probabilità di errore, è consigliabile usare il tipo `FindByThumbprint` in ambienti di produzione.|  
+|`findValue`|Il valore usato per trovare il certificato, basato sull'attributo `x509FindType`. Per eliminare le probabilità di errore, è consigliabile usare il tipo `FindByThumbprint` in ambienti di produzione. Quando si specifica `FindByThumbPrint`, questo attributo accetta un valore che è la forma di stringa esadecimale dell'identificazione personale del certificato, ad esempio "97249e1a5fa6bee5e515b82111ef524a4c91583f".|  
   
 <a name="BKMK_CustomTypeReferences"></a>   
-## Riferimenti di tipo personalizzato  
- Diversi tipi di riferimento personalizzati di elementi utilizzando l'attributo `type`.  Questo attributo deve specificare il nome del tipo personalizzato.  Per fare riferimento a un tipo dalla Global Assembly Cache \(GAC\), un nome sicuro deve essere utilizzato.  Per fare riferimento a un tipo da un assembly nella directory di recipiente, un riferimento completo dell'assembly semplice può essere utilizzato.  I tipi definiti nella directory di App\_Code\/è possibile fare riferimento a semplicemente specificando il nome del tipo senza assembly di qualificazione.  
+## <a name="custom-type-references"></a>Riferimenti ai tipi personalizzati  
+ Diversi elementi fanno riferimento ai tipi personalizzati usando l'attributo `type`. Questo attributo deve specificare il nome del tipo personalizzato. Per fare riferimento a un tipo dalla Global Assembly Cache (GAC), è necessario usare un nome sicuro. Per fare riferimento a un tipo da un assembly nella directory Bin/, è possibile usare un semplice riferimento qualificato dall'assembly. È possibile fare riferimento anche ai tipi definiti nella directory App_Code/ specificando semplicemente il nome del tipo senza qualifica tramite assembly.  
   
- I tipi personalizzati devono essere derivato dal tipo specificato e devono fornire un costruttore predefinito `public` argomenti \(0\).  
+ I tipi personalizzati devono essere derivati dal tipo specificato e devono fornire un costruttore `public` predefinito (argomento 0).  
   
-## Vedere anche  
- [\<system.identityModel\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)   
- [\<system.identityModel.services\>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
+## <a name="see-also"></a>Vedere anche  
+ [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)   
+ [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
+

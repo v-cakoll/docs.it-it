@@ -1,43 +1,49 @@
 ---
-title: "Reliability | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server [.NET Framework]"
-  - "managed code, reliability"
-  - "reliability [.NET Framework]"
-  - "writing reliable code"
-  - "code, reliability"
+title: "Affidabilità"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server [.NET Framework]
+- managed code, reliability
+- reliability [.NET Framework]
+- writing reliable code
+- code, reliability
 ms.assetid: 294aa306-0afe-4cbe-b397-86ba9f1860f8
 caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd13a09e66c865630b9db3210bbd95bab14cb214
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Reliability
-È importante che il codice in esecuzione in ambienti server quale SQL Server garantisca protezione dalle eccezioni asincrone.  L'affidabilità, nei termini descritti in questo argomento, non è riferita specificamente a SQL Server, ma alla scrittura di codice affidabile per qualsiasi host in esecuzione in un ambiente .NET Framework versione 2.0.  Tuttavia, poiché SQL Server è il primo servizio che fa uso estensivo delle nuove funzionalità di ottimizzazione dell'affidabilità della versione 2.0, viene utilizzato come esempio.  
+# <a name="reliability"></a>Affidabilità
+È importante che il codice in esecuzione in ambienti server, ad esempio SQL Server, fornisca protezione contro le eccezioni asincrone. L'affidabilità, come descritto in questo argomento, non è specifica di SQL Server, ma della scrittura di codice affidabile per qualsiasi host in esecuzione in un ambiente .NET Framework versione 2.0. SQL Server è tuttavia il primo servizio che fa un uso completo delle nuove funzionalità di affidabilità della versione 2.0, quindi viene usato come esempio.  
   
- Il codice in esecuzione in SQL Server deve rispettare indicazioni di affidabilità più severe rispetto ad altri ambienti server.  Ciò è dovuto al funzionamento stabile di SQL Server al bordo dell'utilizzo delle risorse.  <xref:System.OutOfMemoryException> ed eccezioni di <xref:System.Threading.ThreadAbortException> non vengono utilizzate nell'ambiente SQL Server.  Le presenti indicazioni sono inerenti, più che all'affidabilità, al modo in cui è possibile consentire l'interruzione regolare del codice gestito completamente attendibile a fronte del riciclo a livello di <xref:System.AppDomain>, che rappresenta il mezzo principale con cui il server mantiene la coerenza e l'affidabilità.  
+ Il codice in esecuzione in SQL Server deve rispettare linee guida per l'affidabilità più rigorose rispetto ad altri ambienti server. Ciò è dovuto al funzionamento stabile di SQL Server fino al limite estremo di utilizzo delle risorse.  Le eccezioni <xref:System.OutOfMemoryException> e <xref:System.Threading.ThreadAbortException> non sono rare nell'ambiente SQL Server. Queste linee guida in generale sono incentrate meno sull'affidabilità e più su come consentire al codice gestito completamente attendibile di generare un errore non grave in caso di riciclo a livello di <xref:System.AppDomain>, che rappresenta il modo principale in cui il server mantiene la coerenza e la disponibilità.  
   
-## In questa sezione  
- [SQL Server Programming and Host Protection Attributes](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)  
- Viene illustrata la modalità con cui SQL Server utilizza l'attributo <xref:System.Security.Permissions.HostProtectionAttribute> per limitare l'esecuzione del codice gestito.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Programmazione per SQL Server e attributi di protezione host](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)  
+ Descrive come viene usato l'attributo <xref:System.Security.Permissions.HostProtectionAttribute> da SQL Server per limitare l'esecuzione del codice gestito.  
   
- [Reliability Best Practices](../../../docs/framework/performance/reliability-best-practices.md)  
- Vengono fornite indicazioni per la scrittura di codice che soddisfa i requisiti di affidabilità.  
+ [Procedure consigliate per l'ottimizzazione dell'affidabilità](../../../docs/framework/performance/reliability-best-practices.md)  
+ Fornisce linee guida per la scrittura di codice che soddisfa i requisiti di affidabilità.  
   
- [Constrained Execution Regions](../../../docs/framework/performance/constrained-execution-regions.md)  
- Viene fornita una descrizione della funzione e del comportamento delle aree a esecuzione vincolata \(CER, Constrained Execution Region\).  
+ [Aree a esecuzione vincolata](../../../docs/framework/performance/constrained-execution-regions.md)  
+ Descrive la funzione e il comportamento delle aree a esecuzione vincolata.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Security.Permissions.HostProtectionAttribute>  
   
  <xref:System.Security.Permissions.HostProtectionResource>
+

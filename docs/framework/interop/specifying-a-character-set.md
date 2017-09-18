@@ -1,78 +1,83 @@
 ---
-title: "Specifying a Character Set | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "platform invoke, attribute fields"
-  - "attribute fields in platform invoke, CharSet"
-  - "CharSet field"
+title: Specifica di un set di caratteri
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- platform invoke, attribute fields
+- attribute fields in platform invoke, CharSet
+- CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a1b0e444ef73deac6f6e353c8e1b67d1cf361ab2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Specifying a Character Set
-Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> consente di controllare il marshalling delle stringhe e di determinare la modalità con cui vengono trovati i nomi di funzione in una DLL mediante pInvoke.  In questo argomento vengono descritte entrambe le funzionalità.  
+# <a name="specifying-a-character-set"></a>Specifica di un set di caratteri
+Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> controlla il marshalling delle stringhe e determina in che modo la funzionalità platform invoke trova i nomi di funzione in una DLL. Questo argomento descrive entrambi i comportamenti.  
   
- Alcune API esportano due diverse versioni di ciascuna funzione che accetta argomenti stringa: una piccola \(ANSI\) e una grande \(Unicode\).  L'API Win32 include ad esempio la funzione **MessageBox** con i seguenti nomi di punto di ingresso:  
+ Alcune API esportano due versioni delle funzioni che accettano argomenti stringa: narrow (ANSI) e wide (Unicode). L'API Win32, ad esempio, include i seguenti nomi di punto di ingresso per la funzione **MessageBox**:  
   
 -   **MessageBoxA**  
   
-     Fornisce la formattazione ANSI con caratteri a byte singolo, che si distingue per il suffisso "A" aggiunto al nome del punto di ingresso.  Con le chiamate a **MessageBoxA** viene sempre eseguito il marshalling delle stringhe in formato ANSI, come avviene di solito nelle piattaforme Windows 95 e Windows 98.  
+     Fornisce la formattazione ANSI dei caratteri a 1 byte, con l'aggiunta di "A" al nome del punto di ingresso per poterla distinguere. Le chiamate a **MessageBoxA** eseguono sempre il marshalling delle stringhe in formato ANSI, come è comune per le piattaforme Windows 95 e Windows 98.  
   
 -   **MessageBoxW**  
   
-     Fornisce la formattazione Unicode con caratteri a byte doppio, che si distingue per il suffisso "W" aggiunto al nome del punto di ingresso.  Con le chiamate a **MessageBoxW** viene sempre eseguito il marshalling delle stringhe in formato Unicode, come avviene di solito nelle piattaforme Windows NT, Windows 2000 e Windows XP.  
+     Fornisce la formattazione Unicode dei caratteri a 2 byte, con l'aggiunta di "W" al nome del punto di ingresso per poterla distinguere. Le chiamate a **MessageBoxW** eseguono sempre il marshalling delle stringhe in formato Unicode, come è comune per le piattaforme Windows NT, Windows 2000 e Windows XP.  
   
-## Marshalling delle stringhe e corrispondenza dei nomi  
- Il campo **CharSet** accetta i seguenti valori:  
+## <a name="string-marshaling-and-name-matching"></a>Marshalling delle stringhe e corrispondenza dei nomi  
+ Il campo **CharSet** accetta i valori seguenti:  
   
- **CharSet.Ansi** \(valore predefinito\)  
+ **CharSet.Ansi** (valore predefinito)  
   
 -   Marshalling delle stringhe  
   
-     Platform invoke effettua il marshalling delle stringhe dal formato gestito \(Unicode\) al formato ANSI.  
+     La funzionalità platform invoke esegue il marshalling delle stringhe dal formato gestito (Unicode) al formato ANSI.  
   
 -   Corrispondenza dei nomi  
   
-     Quando il campo <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName> è impostato su **true**, ovvero l'impostazione predefinita in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], con pInvoke viene cercato soltanto il nome specificato.  Se ad esempio si specifica **MessageBox**, con platform invoke verrà cercato **MessageBox** e l'operazione avrà esito negativo in mancanza di un'esatta corrispondenza ortografica.  
+     Quando il campo <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName> è **true**, come per impostazione predefinita in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform invoke cerca solo il nome specificato. Ad esempio, se si specifica **MessageBox**, platform invoke cerca **MessageBox** e ha esito negativo quando non riesce a individuare la stringa con la stessa identica ortografia.  
   
-     Quando il campo **ExactSpelling** è impostato su **false** \(impostazione predefinita in C\+\+ e C\#\), con platform invoke viene cercato innanzitutto l'alias non modificato \(**MessageBox**\) e successivamente, in caso di esito negativo, viene cercato il nome modificato \(**MessageBoxA**\).  Si noti che il criterio adottato per la corrispondenza dei nomi ANSI differisce da quello adottato per la corrispondenza dei nomi Unicode.  
+     Quando il campo **ExactSpelling** è **false**, come avviene per impostazione predefinita in C++ e C#, platform invoke cerca prima di tutto l'alias non modificato (**MessageBox**), poi il nome modificato (**MessageBoxA**) se non viene trovato l'alias non modificato. Si noti che il comportamento di corrispondenza dei nomi ANSI differisce dal comportamento di corrispondenza dei nomi Unicode.  
   
  **CharSet.Unicode**  
   
 -   Marshalling delle stringhe  
   
-     Platform invoke copia le stringhe dal relativo formato gestito \(Unicode\) al formato Unicode.  
+     La funzionalità platform invoke copia le stringhe dal formato gestito (Unicode) al formato Unicode.  
   
 -   Corrispondenza dei nomi  
   
-     Quando il campo **ExactSpelling** è impostato su **true**, ovvero l'impostazione predefinita in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], con platform invoke viene cercato soltanto il nome specificato.  Se ad esempio si specifica **MessageBox**, con platform invoke verrà cercato **MessageBox** e l'operazione avrà esito negativo in mancanza di un'esatta corrispondenza ortografica.  
+     Quando il campo **ExactSpelling** è **true**, come per impostazione predefinita in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform invoke cerca solo il nome specificato. Ad esempio, se si specifica **MessageBox**, platform invoke cerca **MessageBox** e ha esito negativo se non riesce a individuare la stringa con la stessa identica ortografia.  
   
-     Quando il campo **ExactSpelling** è impostato su **false** \(impostazione predefinita in C\+\+ e C\#\), con platform invoke viene cercato innanzitutto il nome modificato \(**MessageBoxW**\) e successivamente, in caso di esito negativo, viene cercato l'alias non modificato \(**MessageBox**\).  Si noti che il criterio adottato per la corrispondenza dei nomi Unicode differisce da quello adottato per la corrispondenza dei nomi ANSI.  
+     Quando il campo **ExactSpelling** è **false**, come avviene per impostazione predefinita in C++ e C#, platform invoke cerca prima di tutto il nome modificato (**MessageBoxW**), poi l'alias non modificato (**MessageBox**) se non viene trovato il nome modificato. Si noti che il comportamento di corrispondenza dei nomi Unicode differisce dal comportamento di corrispondenza dei nomi ANSI.  
   
  **CharSet.Auto**  
   
--   In platform invoke, la scelta tra i formati ANSI e Unicode viene effettuata in fase di esecuzione, in base al sistema operativo di destinazione.  
+-   La funzionalità platform invoke sceglie tra i formati ANSI e Unicode in fase di esecuzione, in base alla piattaforma di destinazione.  
   
-## Specifica di un set di caratteri in Visual Basic  
- Nell'esempio riportato di seguito la funzione **MessageBox** viene dichiarata tre volte, ogni volta con un set di caratteri diverso.  In Visual Basic è possibile specificare il comportamento dei set di caratteri aggiungendo la parola chiave **Ansi**, **Unicode** o **Auto** all'istruzione di dichiarazione.  
+## <a name="specifying-a-character-set-in-visual-basic"></a>Specifica un set di caratteri in Visual Basic  
+ L'esempio seguente dichiara la funzione **MessageBox** tre volte, ogni volta con un diverso comportamento per il set di caratteri. È possibile specificare il comportamento per il set di caratteri in Visual Basic aggiungendo la parola chiave **Ansi**, **Unicode** o **Auto** nell'istruzione di dichiarazione.  
   
- Se si omette la parola chiave che specifica il set di caratteri, come avviene nella prima istruzione di dichiarazione, nel campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> verrà utilizzato per impostazione predefinita il set di caratteri ANSI.  La seconda e la terza istruzione dell'esempio specificano esplicitamente un set di caratteri utilizzando una parola chiave.  
+ Se si omette la parola chiave per il set di caratteri, come avviene nella prima istruzione di dichiarazione, il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> usa il set di caratteri ANSI per impostazione predefinita. La seconda e la terza istruzione nell'esempio specificano in modo esplicito un set di caratteri con una parola chiave.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -92,14 +97,13 @@ Public Class Win32
 End Class  
 ```  
   
-## Specifica di un set di caratteri in C\# e in C\+\+  
- Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> identifica il set di caratteri sottostante come ANSI o Unicode.  Il set di caratteri controlla il modo in cui deve essere effettuato il marshalling degli argomenti stringa passati a un metodo.  Per specificare il set di caratteri, utilizzare una delle seguenti forme:  
+## <a name="specifying-a-character-set-in-c-and-c"></a>Specifica di un set di caratteri in C# e C++  
+ Il campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> identifica il set di caratteri sottostante come ANSI o Unicode. Il set di caratteri controlla la modalità di marshalling degli argomenti stringa per un metodo. Usare una delle forme seguenti per indicare il set di caratteri:  
   
 ```csharp  
 [DllImport("dllname", CharSet=CharSet.Ansi)]  
 [DllImport("dllname", CharSet=CharSet.Unicode)]  
 [DllImport("dllname", CharSet=CharSet.Auto)]  
-  
 ```  
   
 ```cpp  
@@ -108,7 +112,7 @@ End Class
 [DllImport("dllname", CharSet=CharSet::Auto)]  
 ```  
   
- Nell'esempio riportato di seguito vengono illustrate tre definizioni gestite della funzione **MessageBox** dotate di attributi che specificano un determinato set di caratteri.  Nella prima definizione, l'omissione del campo **CharSet** ne determina l'impostazione sul set di caratteri ANSI predefinito.  
+ L'esempio seguente mostra tre definizioni gestite della funzione **MessageBox** attribuite a un set di caratteri specifico. Nella prima definizione, con l'omissione, il campo **CharSet** usa per impostazione predefinita il set di caratteri ANSI.  
   
 ```csharp  
 [DllImport("user32.dll")]  
@@ -120,7 +124,6 @@ End Class
 [DllImport("user32.dll", CharSet=CharSet.Auto)]  
     public static extern int MessageBox(int hWnd, String text,   
         String caption, uint type);  
-  
 ```  
   
 ```cpp  
@@ -148,8 +151,9 @@ extern "C" int MessageBox(HWND hWnd,
                           unsigned int uType);  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Platform Invoke Examples](../../../docs/framework/interop/platform-invoke-examples.md)   
- [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+ [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
+ [Esempi di platform invoke](../../../docs/framework/interop/platform-invoke-examples.md)   
+ [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+

@@ -1,28 +1,33 @@
 ---
-title: "Procedura: Elencare il contenuto della directory con FTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: 'Procedura: Elencare il contenuto della directory con FTP'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
 caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 08edb5be23d55a9a825ca80a8e575cb02b5f07a8
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Procedura: Elencare il contenuto della directory con FTP
-In questo esempio viene illustrato come elencare il contenuto della directory di un server FTP.  
+# <a name="how-to-list-directory-contents-with-ftp"></a>Procedura: Elencare il contenuto della directory con FTP
+Questo esempio mostra come elencare il contenuto delle directory di un server FTP.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```csharp  
 using System;  
@@ -58,11 +63,12 @@ namespace Examples.System.Net
 }  
 ```  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli spazi dei nomi **System.Net**.  
+-   Riferimenti allo spazio dei nomi **System.Net**.  
   
-## Programmazione efficiente  
+## <a name="robust-programming"></a>Programmazione efficiente  
   
-## Sicurezza di .NET Framework
+## <a name="net-framework-security"></a>Sicurezza di .NET Framework
+

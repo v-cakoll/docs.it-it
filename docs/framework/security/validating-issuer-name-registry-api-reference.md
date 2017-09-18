@@ -1,19 +1,26 @@
 ---
-title: "Convalida del riferimento API per il registro dei nomi delle autorit&#224; emittenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Convalida del riferimento API per il registro dei nomi delle autorità emittenti"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1ecb66f6-af65-47e9-93bc-afd1c1575a9a
 caps.latest.revision: 2
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 2
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7afec493cc62f84da6458127478e88999f6aed8c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Convalida del riferimento API per il registro dei nomi delle autorit&#224; emittenti
-Questa sezione contiene l'API di riferimento per l'estensione WIF di VINR \(Validating Issuer Name Registry\).
+# <a name="validating-issuer-name-registry-api-reference"></a>Convalida del riferimento API per il registro dei nomi delle autorità emittenti
+Questa sezione contiene le informazioni di riferimento sulle API per l'estensione WIF di convalida del registro dei nomi delle autorità emittenti.
+

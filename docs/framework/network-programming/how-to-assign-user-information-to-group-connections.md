@@ -1,32 +1,37 @@
 ---
-title: "Procedura: Assegnare informazioni utente a connessioni di gruppo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: 'Procedura: Assegnare informazioni utente a connessioni di gruppo'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b148066a9de0d41c0f798ca35d94737a78746598
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Procedura: Assegnare informazioni utente a connessioni di gruppo
-[Esempio di codice](#tskhowtoassignuserinformationtogroupconnectionsanchor1)  
+# <a name="how-to-assign-user-information-to-group-connections"></a>Procedura: Assegnare informazioni utente a connessioni di gruppo
+
   
- Nell'esempio seguente viene illustrato come assegnare le informazioni utente alle connessioni del gruppo, presupponendo che l'applicazione imposta *il nome utente*, *il SecurelyStoredPassword*e *il dominio* di variabili prima che questa sezione di codice viene chiamata e che *il nome utente* univoco.  
+ L'esempio seguente dimostra come assegnare informazioni utente a connessioni di gruppo, presupponendo che l'applicazione imposti le variabili *UserName*, *SecurelyStoredPassword* e *Domain* prima della chiamata di questa sezione di codice e che *UserName* sia univoco.  
   
-### Per assegnare informazioni utente a una connessione di gruppo  
+### <a name="to-assign-user-information-to-a-group-connection"></a>Per assegnare informazioni utente a una connessione di gruppo  
   
-1.  Creare un nome di gruppo di connessioni.  
+1.  Creare un nome del gruppo di connessione.  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -40,7 +45,7 @@ caps.handback.revision: 8
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  Creare una richiesta a un URL specifico.  Ad esempio, il codice seguente crea una richiesta di URL `http://www.contoso.com.`  
+2.  Creare una richiesta per un URL specifico. Ad esempio, il codice seguente crea una richiesta per l'URL `http://www.contoso.com.`  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -50,7 +55,7 @@ caps.handback.revision: 8
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  Impostare le credenziali e la connessione GroupName per la richiesta Web e la chiamata **GetResponse** di recuperare un oggetto **WebResponse**.  
+3.  Impostare le credenziali e il nome del gruppo di connessione per la richiesta Web e chiamare **GetResponse** per recuperare un oggetto **WebResponse**.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -64,14 +69,12 @@ caps.handback.revision: 8
     myWebRequest.ConnectionGroupName = secureGroupName  
   
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
-  
     ```  
   
-4.  Chiudere il flusso di risposte dopo avere utilizzato l'oggetto di WebRespose.  
+4.  Chiudere il flusso di risposta dopo aver usato l'oggetto WebResponse.  
   
     ```csharp  
     MyWebResponse.Close();  
-  
     ```  
   
     ```vb  
@@ -97,7 +100,6 @@ WebResponse myWebResponse=myWebRequest.GetResponse();
 // Insert the code that uses myWebResponse.  
   
 MyWebResponse.Close();  
-  
 ```  
   
 ```vb  
@@ -118,6 +120,7 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di connessioni](../../../docs/framework/network-programming/managing-connections.md)   
  [Raggruppamento delle connessioni](../../../docs/framework/network-programming/connection-grouping.md)
+

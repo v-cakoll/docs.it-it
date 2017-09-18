@@ -1,57 +1,62 @@
 ---
-title: "jitCompilationStart MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "JIT compilation"
-  - "MDAs (managed debugging assistants), JIT compilation"
-  - "JitCompilationStart MDA"
-  - "managed debugging assistants (MDAs), JIT compilation"
+title: MDA jitCompilationStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- JIT compilation
+- MDAs (managed debugging assistants), JIT compilation
+- JitCompilationStart MDA
+- managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 caps.latest.revision: 11
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 11
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eb6a36b9427c7d55aceba226a865cd51d076f448
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# jitCompilationStart MDA
-L'assistente al debug gestito `jitCompilationStart` viene attivato quando il compilatore JIT \(Just\-In\-Time\) avvia la compilazione di una funzione.  
+# <a name="jitcompilationstart-mda"></a>MDA jitCompilationStart
+L'assistente al debug gestito `jitCompilationStart` viene attivato per segnalare il momento in cui il compilatore JIT avvia la compilazione di una funzione.  
   
-## Sintomi  
- Le dimensioni del working set aumentano per un programma già nel formato immagine nativo in quanto il file mscorjit.dll è caricato nel processo.  
+## <a name="symptoms"></a>Sintomi  
+ Le dimensioni del working set per un programma che è già in formato di immagine nativa aumentano, perché mscorjit.dll viene caricato nel processo.  
   
-## Causa  
- Non tutti gli assembly da cui dipende il programma sono stati generati nel formato nativo oppure la registrazione di quelli che lo sono stati non è corretta.  
+## <a name="cause"></a>Causa  
+ Non tutti gli assembly da cui dipende il programma sono stati generati in formato nativo e quelli che lo sono non sono stati registrati correttamente.  
   
-## Risoluzione  
- L'attivazione di questo assistente consente di individuare la funzione compilata tramite JIT.  Verificare se l'assembly contenente la funzione viene generato nel formato nativo ed è registrato correttamente.  
+## <a name="resolution"></a>Risoluzione  
+ L'abilitazione di questo assistente al debug gestito permette di determinare quale funzione è stata compilata tramite JIT. Determinare se l'assembly che contiene la funzione è stato generato in formato nativo e registrato correttamente.  
   
-## Effetto sul runtime  
- Questo assistente registra un messaggio prima che un metodo venga compilato tramite JIT. Pertanto, la sua attivazione non ha un impatto significativo sulle prestazioni.  Se un metodo è inline, l'assistente in questione non genera un messaggio specifico.  
+## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
+ Poiché questo assistente al debug gestito registra un messaggio appena prima della compilazione JIT di un metodo, la sua abilitazione ha un notevole impatto sulle prestazioni. Si noti che se un metodo è inline, l'assistente al debug gestito non genera un messaggio separato.  
   
-## Output  
- Nell'esempio di codice riportato di seguito viene illustrato l'output di esempio.  Nel caso specifico, l'output indica che nell'assembly Test il metodo "m" sulla classe "ns2.CO" è stato compilato tramite JIT.  
+## <a name="output"></a>Output  
+ L'esempio di codice seguente mostra l'output di esempio. In questo caso, l'output mostra che nell'assembly Test il metodo "m" nella classe "ns2.CO" è stato compilato tramite JIT.  
   
 ```  
 method name="Test!ns2.C0::m"  
 ```  
   
-## Configurazione  
- Nel file di configurazione riportato di seguito vengono illustrati i diversi filtri che è possibile utilizzare per escludere dal rapporto i metodi alla relativa prima compilazione tramite JIT.  Per specificare l'inserimento nel rapporto di tutti i metodi è possibile impostare il valore dell'attributo name su \*.  
+## <a name="configuration"></a>Configurazione  
+ Il file di configurazione seguente mostra diversi filtri che è possibile usare per escludere i metodi segnalati quando vengono prima compilati tramite JIT. È possibile specificare che devono essere segnalati tutti i metodi impostando il valore dell'attributo name su *.  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <jitCompilationStart>  
@@ -69,8 +74,8 @@ method name="Test!ns2.C0::m"
 </mdaConfig>  
 ```  
   
-## Esempio  
- L'esempio di codice riportato di seguito è destinato a essere utilizzato con il file di configurazione precedente.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente mostra il codice da usare con il file di configurazione precedente.  
   
 ```  
 using System;  
@@ -167,7 +172,8 @@ namespace ns2
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+ [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+

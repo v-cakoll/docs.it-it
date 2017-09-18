@@ -1,31 +1,37 @@
 ---
-title: "Procedura: Compilare un&#39;applicazione ASP.NET in grado di riconoscere attestazioni con l&#39;autenticazione basata su moduli | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: Compilare un''applicazione ASP.NET in grado di riconoscere attestazioni con l''autenticazione basata su moduli'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 987157bc3663330d9c610c1016787890e9dc6137
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Procedura: Compilare un&#39;applicazione ASP.NET in grado di riconoscere attestazioni con l&#39;autenticazione basata su moduli
-## Si applica a  
+# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Procedura: Compilare un'applicazione ASP.NET in grado di riconoscere attestazioni con l'autenticazione basata su moduli
+## <a name="applies-to"></a>Si applica a  
   
--   Foundation \(WIF\) di identità di Microsoft® Windows®  
+-   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Form  
+-   Web Form ASP.NET®  
   
-## Riepilogo  
- In questa procedura vengono fornite le procedure dettagliate per creare un'applicazione Web Form su consapevole ASP.NET semplice che utilizza l'autenticazione basata su form.  Fornisce inoltre le istruzioni su come verificare l'applicazione per verificare che le richieste vengano visualizzate quando un utente in con l'autenticazione basata su form.  
+## <a name="summary"></a>Riepilogo  
+ Questo argomento include le procedure dettagliate per creare un'applicazione Web Form ASP.NET semplice, in grado di riconoscere attestazioni, che usa l'autenticazione basata su form. Sono inoltre disponibili istruzioni per testare l'applicazione al fine di assicurarsi che le attestazioni vengano presentate quando un utente accede con l'autenticazione basata su form.  
   
-## Contenuto  
+## <a name="contents"></a>Sommario  
   
 -   Obiettivi  
   
@@ -33,48 +39,48 @@ caps.handback.revision: 6
   
 -   Riepilogo dei passaggi  
   
--   Passaggio 1 \- creare un'applicazione Web Form ASP.NET semplice  
+-   Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
   
--   Passaggio 2 \- configurare l'applicazione Web Form ASP.NET per i reclami con l'autenticazione basata su form  
+-   Passaggio 2: configurare l'applicazione Web Form ASP.NET per le attestazioni usando l'autenticazione basata su form  
   
--   Passaggio 3 \- eseguire il test della soluzione  
+-   Passaggio 3: eseguire i test sulla soluzione  
   
-## Obiettivi  
+## <a name="objectives"></a>Obiettivi  
   
--   Configurare un'applicazione Web Form ASP.NET per le richieste utilizzando l'autenticazione basata su form  
+-   Configurare un'applicazione Web Form ASP.NET per le attestazioni usando l'autenticazione basata su form  
   
--   Verificare l'applicazione Web Form ASP.NET per verificare se funziona correttamente  
+-   Testare l'applicazione Web Form ASP.NET per verificare se funziona correttamente  
   
-## Panoramica  
- In .NET 4,5, WIF e la relativa all'autorizzazione basata su richieste sono stati inclusi come parte integrante del Framework.  In precedenza, si desiderasse le richieste da un utente ASP.NET, è stato richiesto di installare WIF quindi eseguire il cast delle interfacce agli oggetti principali come `Thread.CurrentPrincipal` o `HttpContext.Current.User`.  Ora, le richieste vengono gestite automaticamente da questi oggetti principali.  
+## <a name="overview"></a>Panoramica  
+ In .NET 4.5, WIF e l'autorizzazione basata sulle attestazioni sono diventati parte integrante del framework. In precedenza, per usare le attestazioni da un utente ASP.NET, era necessario installare WIF e quindi effettuare il cast delle interfacce su oggetti Principal come `Thread.CurrentPrincipal` o `HttpContext.Current.User`. Ora le attestazioni vengono gestite automaticamente da questi oggetti Principal.  
   
- L'autenticazione basata su form è tratto vantaggio dall'inclusione di WIF in .NET 4,5 perché tutti gli utenti autenticati automaticamente dai form sono richieste associate.  È possibile avviare utilizzando queste richieste immediatamente in un'applicazione ASP.NET che utilizza l'autenticazione basata su form, come in questa procedura vengono illustrate.  
+ L'autenticazione basata su form ha tratto vantaggio dall'inclusione di WIF in .NET 4.5, perché a tutti gli utenti autenticati con credenziali basate su form vengono associate automaticamente le attestazioni. È possibile iniziare subito a usare queste attestazioni in un'applicazione ASP.NET che usa l'autenticazione basata su form, come illustrato di seguito in questa procedura.  
   
-## Riepilogo dei passaggi  
+## <a name="summary-of-steps"></a>Riepilogo dei passaggi  
   
--   Passaggio 1 \- creare un'applicazione Web Form ASP.NET semplice  
+-   Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
   
--   Passaggio 2 \- configurare l'applicazione Web Form ASP.NET per i reclami con l'autenticazione basata su form  
+-   Passaggio 2: configurare l'applicazione Web Form ASP.NET per le attestazioni usando l'autenticazione basata su form  
   
--   Passaggio 3 \- eseguire il test della soluzione  
+-   Passaggio 3: eseguire i test sulla soluzione  
   
-## Passaggio 1 \- creare un'applicazione Web Form ASP.NET semplice  
- In questo passaggio, verrà creata una nuova applicazione Web Form ASP.NET.  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
+ In questo passaggio si creerà una nuova applicazione Web Form ASP.NET.  
   
-#### Per creare una semplice applicazione ASP.NET  
+#### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice  
   
-1.  Avviare Visual Studio e clic **File**, **Nuova**quindi **Progetto**.  
+1.  Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.  
   
-2.  Nella finestra **Nuovo progetto**, fare clic **Applicazione Web Form ASP.NET**.  
+2.  Nella finestra **Nuovo progetto** fare clic su **Applicazione Web Form ASP.NET**.  
   
-3.  In **Nome**, immettere `TestApp` e premere **OK**.  
+3.  In **Nome** immettere `TestApp` e fare clic su **OK**.  
   
-## Passaggio 2 \- configurare l'applicazione Web Form ASP.NET per i reclami con l'autenticazione basata su form  
- In questo passaggio verrà aggiunta una voce di configurazione al file *Web.config* e si modifica il file *Default.aspx* per visualizzare le informazioni delle richieste di un account.  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Passaggio 2: configurare l'applicazione Web Form ASP.NET per le attestazioni usando l'autenticazione basata su form  
+ In questo passaggio si aggiungerà una voce al file di configurazione *Web.config* e si modificherà il file *Default.aspx* per visualizzare le informazioni sulle attestazioni per un account.  
   
-#### Per configurare un'applicazione ASP.NET di richieste utilizzando l'autenticazione basata su form  
+#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Per configurare l'applicazione ASP.NET per le attestazioni usando l'autenticazione basata su form  
   
-1.  *Nel file Default.aspx*, sostituire il markup esistente con quello riportato di seguito:  
+1.  Nel file *Default.aspx* sostituire il markup esistente con il seguente:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TestApp._Default" %>  
@@ -91,12 +97,11 @@ caps.handback.revision: 6
             </asp:GridView>  
         </p>  
     </asp:Content>  
-  
     ```  
   
-     Questo passaggio aggiunge un controllo GridView alla *pagina Default.aspx* che verrà popolata con le richieste recuperate dall'autenticazione basata su form.  
+     Questo passaggio aggiunge alla pagina *Default.aspx* un controllo GridView che verrà popolato con le attestazioni recuperate dall'autenticazione basata su form.  
   
-2.  Salvare il file *Default.aspx*, quindi aprire il file code\-behind denominato *Default.aspx.cs*.  Sostituire il codice esistente con quello riportato di seguito:  
+2.  Salvare il file *Default.aspx* e quindi aprire il relativo file code-behind denominato *Default.aspx.cs*. Sostituire il codice esistente con quello seguente:  
   
     ```csharp  
     using System;  
@@ -121,15 +126,16 @@ caps.handback.revision: 6
     }  
     ```  
   
-     Il codice sopra visualizzare le richieste su un utente autenticato, inclusi gli utenti identificati dall'autenticazione basata su form.  
+     Il codice sopra riportato visualizzerà le attestazioni relative a un utente autenticato, inclusi gli utenti identificati dall'autenticazione basata su form.  
   
-## Passaggio 3 \- eseguire il test della soluzione  
- In questo passaggio verrà l'applicazione Web Form ASP.NET e verificato che le richieste vengano visualizzate quando un utente in con l'autenticazione basata su form.  
+## <a name="step-3--test-your-solution"></a>Passaggio 3: eseguire i test sulla soluzione  
+ In questo passaggio verrà testata l'applicazione Web Form ASP.NET e si verificherà che le attestazioni vengano presentate quando un utente accede con l'autenticazione basata su form.  
   
-#### Per testare l'applicazione Web Form ASP.NET per le richieste utilizzando l'autenticazione basata su form  
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Per testare le attestazioni con l'applicazione Web Form ASP.NET usando l'autenticazione basata su form  
   
-1.  Premere **F5** per compilare ed eseguire l'applicazione.  Dovrebbe essere visualizzata *Default.aspx,*con **Registra** e **Accedi** collegamento nella destra superiore della pagina.  Fare clic su **Registra**.  
+1.  Premere **F5** per compilare ed eseguire l'applicazione. Verrà visualizzata la pagina *Default.aspx*, con i collegamenti **Register** e **Log in** nella parte superiore destra. Fare clic su **Register**.  
   
-2.  Nella pagina **Registra**, creare un account utente e scegliere **Registra**.  L'account verrà creato utilizzando l'autenticazione basata su form e vengono impostati automaticamente firmato in.  
+2.  Nella pagina **Register** creare un account utente e quindi fare clic su **Register**. L'account verrà creato usando l'autenticazione basata su form e l'utente verrà automaticamente connesso.  
   
-3.  Dopo che è stato reindirizzato alla home page, verrà visualizzata una tabella nella direzione **Attestazioni** che include **Autorità emittente**, **OriginalIssuer**, **Tipo**, **Valore**e informazioni delle richieste **Tipovalore** sull'account.
+3.  Dopo il reindirizzamento alla home page, sotto il titolo **Your Claims** dovrebbe essere visualizzata una tabella che include le informazioni sulle attestazioni **Issuer**, **OriginalIssuer**, **Type**, **Value** e **ValueType** per l'account usato.
+

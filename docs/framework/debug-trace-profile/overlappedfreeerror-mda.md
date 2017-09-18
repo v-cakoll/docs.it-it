@@ -1,58 +1,63 @@
 ---
-title: "overlappedFreeError MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "OverlappedFreeError MDA"
-  - "overlapped free method call error"
-  - "managed debugging assistants (MDAs), overlapped structures"
-  - "overlapped structures"
-  - "MDAs (managed debugging assistants), overlapped structures"
-  - "freeing overlapped structures"
+title: MDA overlappedFreeError
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- OverlappedFreeError MDA
+- overlapped free method call error
+- managed debugging assistants (MDAs), overlapped structures
+- overlapped structures
+- MDAs (managed debugging assistants), overlapped structures
+- freeing overlapped structures
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 68d5098c1a26e186790ba9dafb27b66fedc3f1e9
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# overlappedFreeError MDA
-L'assistente al debug gestito `overlappedFreeError` viene attivato quando il metodo <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=fullName> viene chiamato prima del completamento dell'operazione sovrapposta.  
+# <a name="overlappedfreeerror-mda"></a>MDA overlappedFreeError
+L'assistente al debug gestito `overlappedFreeError` viene attivato quando il metodo <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=fullName> viene chiamato prima del completamento dell'attività sovrapposta.  
   
-## Sintomi  
- Violazioni di accesso o danneggiamento dell'heap sottoposto a Garbage Collection.  
+## <a name="symptoms"></a>Sintomi  
+ Violazioni di accesso o danneggiamento dell'heap di Garbage Collection.  
   
-## Causa  
- Una struttura sovrapposta è stata liberata prima del completamento dell'operazione.  È quindi possibile che la funzione che utilizza il puntatore sovrapposto scriva nella struttura dopo che questa è stata liberata.  Ciò può causare il danneggiamento dell'heap poiché tale area potrebbe essere già stata occupata da un altro oggetto.  
+## <a name="cause"></a>Causa  
+ Una struttura sovrapposta è stata liberata prima del completamento dell'operazione. La funzione che usa il puntatore sovrapposto potrebbe scrivere nella struttura in un secondo momento, dopo che è stata liberata. Ciò può causare il danneggiamento dell'heap perché un altro oggetto potrebbe ora occupare tale area.  
   
- Questo assistente al debug gestito può non rappresentare un errore se l'operazione sovrapposta non è stata avviata correttamente.  
+ L'assistente al debug gestito potrebbe non rappresentare un errore se l'operazione sovrapposta non è stata avviata correttamente.  
   
-## Risoluzione  
- Assicurarsi che l'operazione di I\/O in cui viene utilizzata la struttura sovrapposta sia completata prima della chiamata al metodo <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29>.  
+## <a name="resolution"></a>Risoluzione  
+ Assicurarsi che l'operazione di I/O che usa la struttura sovrapposta venga completata prima di chiamare il metodo <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29>.  
   
-## Effetto sul runtime  
- Questo assistente al debug gestito non produce effetti su CLR.  
+## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
+ L'assistente al debug gestito non ha alcun effetto su CLR.  
   
-## Output  
- Di seguito è riportato un esempio di output relativo a questo assistente al debug gestito.  
+## <a name="output"></a>Output  
+ Questo assistente al debug gestito produce l'output di esempio seguente.  
   
- `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the win32 function 'WriteFile' in module 'KERNEL32.DLL'.  If the AppDomain is shut down, this can cause heap corruption when the async I/O completes.  The best solution is to pass a NativeOverlappedStructure retrieved from a call to System.Threading.Overlapped.Pack().  If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
+ `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlappedStructure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
   
-## Configurazione  
+## <a name="configuration"></a>Configurazione  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <overlappedFreeError/>  
@@ -60,7 +65,8 @@ L'assistente al debug gestito `overlappedFreeError` viene attivato quando il met
 </mdaConfig>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+ [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+

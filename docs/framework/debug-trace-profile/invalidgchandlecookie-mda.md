@@ -1,53 +1,58 @@
 ---
-title: "invalidGCHandleCookie MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), invalid cookies"
-  - "cookies, invalid"
-  - "managed debugging assistants (MDAs), invalid cookies"
-  - "InvalidGCHandleCookie MDA"
-  - "invalid cookies"
+title: MDA invalidGCHandleCookie
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), invalid cookies
+- cookies, invalid
+- managed debugging assistants (MDAs), invalid cookies
+- InvalidGCHandleCookie MDA
+- invalid cookies
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fca1d010fd206de931cc057bc735179808686b51
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# invalidGCHandleCookie MDA
-L'assistente al debug gestito `invalidGCHandleCookie` viene attivato quando viene effettuato un tentativo di conversione da un cookie <xref:System.IntPtr> non valido in un <xref:System.Runtime.InteropServices.GCHandle>.  
+# <a name="invalidgchandlecookie-mda"></a>MDA invalidGCHandleCookie
+L'assistente al debug gestito `invalidGCHandleCookie` viene attivato quando si tenta una conversione da un cookie <xref:System.IntPtr> non valido a un oggetto <xref:System.Runtime.InteropServices.GCHandle>.  
   
-## Sintomi  
- Un comportamento indefinito, come le violazioni di accesso e il danneggiamento della memoria, durante il tentativo di utilizzo o di recupero di un <xref:System.Runtime.InteropServices.GCHandle> da un <xref:System.IntPtr>.  
+## <a name="symptoms"></a>Sintomi  
+ Comportamento indefinito, ad esempio violazioni di accesso e danneggiamento della memoria durante il tentativo di usare o recuperare un oggetto <xref:System.Runtime.InteropServices.GCHandle> da un cookie <xref:System.IntPtr>.  
   
-## Causa  
- Il cookie probabilmente non è valido perché non è stato originariamente creato da un <xref:System.Runtime.InteropServices.GCHandle>, rappresenta un <xref:System.Runtime.InteropServices.GCHandle> già liberato, è il cookie di un <xref:System.Runtime.InteropServices.GCHandle> di un dominio applicazione diverso oppure è stato sottoposto a marshalling nel codice nativo come <xref:System.Runtime.InteropServices.GCHandle>, ma passato come <xref:System.IntPtr> a CLR, dove è stato tentato un cast.  
+## <a name="cause"></a>Causa  
+ Il cookie è probabilmente non valido perché in origine non è stato creato da un oggetto <xref:System.Runtime.InteropServices.GCHandle>, rappresenta un oggetto <xref:System.Runtime.InteropServices.GCHandle> che è già stato liberato, è un cookie per un oggetto <xref:System.Runtime.InteropServices.GCHandle> in un dominio dell'applicazione diverso o è stato sottoposto a marshalling al codice nativo come <xref:System.Runtime.InteropServices.GCHandle> ma passato di nuovo a CLR come oggetto <xref:System.IntPtr>, in cui è stato tentato un cast.  
   
-## Risoluzione  
+## <a name="resolution"></a>Risoluzione  
  Specificare un cookie <xref:System.IntPtr> valido per <xref:System.Runtime.InteropServices.GCHandle>.  
   
-## Effetto sul runtime  
- Quando questo assistente viene attivato, il debugger non è più in grado di ricondurre le radici ai relativi oggetti in quanto i valori del cookie passati sono diversi da quelli restituiti quando l'assistente in oggetto non è attivato.  
+## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
+ Quando questo assistente al debug gestito è abilitato, il debugger non è più in grado di tracciare di nuovo le radici ai rispettivi oggetti perché i valori del cookie restituiti sono diversi da quelli restituiti quando l'assistente al debug gestito non è abilitato.  
   
-## Output  
- Il valore del cookie <xref:System.IntPtr> non valido viene inserito nel report.  
+## <a name="output"></a>Output  
+ Viene segnalato il valore non valido del cookie <xref:System.IntPtr>.  
   
-## Configurazione  
+## <a name="configuration"></a>Configurazione  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <invalidGCHandleCookie />  
@@ -55,7 +60,8 @@ L'assistente al debug gestito `invalidGCHandleCookie` viene attivato quando vien
 </mdaConfig>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>   
  <xref:System.Runtime.InteropServices.GCHandle>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

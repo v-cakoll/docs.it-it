@@ -1,106 +1,112 @@
 ---
-title: "Derivazione da WebRequest | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "WebRequest (classe), protocolli di collegamento"
-  - "gestore richieste specifico del protocollo"
-  - "invio di dati, protocolli di collegamento"
-  - "protocolli di collegamento, criteri di classe"
-  - "Internet, protocolli di collegamento"
-  - "ricezione di dati, protocolli di collegamento"
-  - "collegamento, protocolli"
+title: Derivazione da WebRequest
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- WebRequest class, pluggable protocols
+- protocol-specific request handler
+- sending data, pluggable protocols
+- pluggable protocols, class criteria
+- Internet, pluggable protocols
+- receiving data, pluggable protocols
+- protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ea66dd7fcb474977511b872ba3f917eee90ed2f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Derivazione da WebRequest
-La classe <xref:System.Net.WebRequest> è una classe base astratta che fornisce metodi e proprietà di base per creare un gestore di richieste protocollo specifico che estende il modello di protocollo di .NET Framework.  Le applicazioni che utilizzano la classe **WebRequest** possono dati della richiesta utilizzando qualsiasi protocollo supportato senza la necessità di specificare il protocollo utilizzato.  
+# <a name="deriving-from-webrequest"></a>Derivazione da WebRequest
+La classe <xref:System.Net.WebRequest> è una classe base astratta che fornisce metodi e proprietà di base per creare un gestore richieste specifico del protocollo adatto al modello di protocollo di collegamento di .NET Framework. Le applicazioni che usano la classe **WebRequest** possono richiedere i dati usando qualsiasi protocollo supportato senza dover specificare il protocollo usato.  
   
- Due modelli devono essere soddisfatti in modo che una classe protocollo specifica da utilizzare come protocollo innestabile: la classe deve implementare l'interfaccia <xref:System.Net.IWebRequestCreate> e deve registrare con il metodo <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>.  La classe deve eseguire l'override dei metodi e proprietà astratti **WebRequest** per fornire l'interfaccia di collegamento.  
+ Per usare una classe specifica del protocollo come protocollo di collegamento, è necessario che siano soddisfatti due criteri: la classe deve implementare l'interfaccia <xref:System.Net.IWebRequestCreate> e deve eseguire la registrazione con il metodo <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>. La classe deve eseguire l'override di tutti i metodi e le proprietà astratti di **WebRequest** per fornire l'interfaccia di collegamento.  
   
- Le istanze di**WebRequest** è previsto l'utilizzo di una volta; se si desidera eseguire un'altra richiesta, creare un nuovo **WebRequest**.  **WebRequest** supporta l'interfaccia <xref:System.Runtime.Serialization.ISerializable> per consentire agli sviluppatori di serializzare un modello **WebRequest** quindi per ricostruire il modello per le richieste aggiuntive.  
+ Le istanze di **WebRequest** sono monouso. Per eseguire un'altra richiesta, creare un nuovo elemento **WebRequest**. **WebRequest** supporta l'interfaccia <xref:System.Runtime.Serialization.ISerializable> per consentire agli sviluppatori di serializzare un modello **WebRequest** e quindi ricostruire il modello per richieste aggiuntive.  
   
-## IWebRequest crea il metodo  
- Il metodo <xref:System.Net.IWebRequestCreate.Create%2A> è responsabile di inizializzare una nuova istanza della classe protocollo specifica.  Quando nuovo **WebRequest** viene creato, il metodo <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> corrisponde all'URI obbligatorio con i prefissi URI registrati con il metodo **RegisterPrefix**.  Il metodo **Create** discendente protocollo specifico appropriato deve restituire un'istanza inizializzata discendenti in grado di eseguire una transazione standard\/risposta della richiesta per il protocollo senza la necessità di alcuni campi specifici protocollo modificati.  
+## <a name="iwebrequest-create-method"></a>Metodo IWebRequest Create  
+ Il metodo <xref:System.Net.IWebRequestCreate.Create%2A> è responsabile dell'inizializzazione di una nuova istanza della classe specifica del protocollo. Quando viene creato un nuovo elemento **WebRequest**, il metodo <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> fa corrispondere l'URI richiesto con i prefissi URI registrati con il metodo **RegisterPrefix**. Il metodo **Create** del discendente specifico del protocollo appropriato deve restituire un'istanza inizializzata del discendente in grado di eseguire una transazione di richiesta/risposta standard per il protocollo senza bisogno di modificare i campi specifici del protocollo.  
   
-## Proprietà di ConnectionGroupName  
- La proprietà <xref:System.Net.WebRequest.ConnectionGroupName%2A> viene utilizzata per assegnare un nome a un gruppo di connessioni a una risorsa in modo da poter eseguire più richieste da una sola connessione.  Per implementare connessione\- condividere, è necessario utilizzare un metodo specifico protocollo pool di connessioni e assegnare.  Ad esempio, la classe fornita <xref:System.Net.ServicePointManager> implementa la connessione che condivide per la classe <xref:System.Net.HttpWebRequest>.  La classe **ServicePointManager** crea <xref:System.Net.ServicePoint> che fornisce una connessione a un server specifico per ciascun gruppo di connessioni.  
+## <a name="connectiongroupname-property"></a>Proprietà ConnectionGroupName  
+ La proprietà <xref:System.Net.WebRequest.ConnectionGroupName%2A> viene usata per denominare un gruppo di connessioni a una risorsa in modo che si possano eseguire più richieste tramite una singola connessione. Per implementare la condivisione di connessioni, è necessario usare un metodo specifico del protocollo per il pool e l'assegnazione delle connessioni. La classe <xref:System.Net.ServicePointManager> fornita, ad esempio, implementa la condivisione di connessioni per la classe <xref:System.Net.HttpWebRequest>. La classe **ServicePointManager** crea un elemento <xref:System.Net.ServicePoint> che fornisce una connessione a un server specifico per ogni gruppo di connessioni.  
   
-## Proprietà di ContentLength  
- La proprietà <xref:System.Net.WebRequest.ContentLength%2A> specifica il numero di byte dei dati che verranno inviati al server quando carica i dati.  
+## <a name="contentlength-property"></a>Proprietà ContentLength  
+ La proprietà <xref:System.Net.WebRequest.ContentLength%2A> specifica il numero di byte di dati che verranno inviati al server durante il caricamento dei dati.  
   
- In genere la proprietà <xref:System.Net.WebRequest.Method%2A> deve essere impostata per indicare che un carico è in esecuzione verificano quando la proprietà **ContentLength** è impostata su un valore maggiore di zero.  
+ La proprietà <xref:System.Net.WebRequest.Method%2A> in genere deve essere impostata per indicare che è in corso un caricamento quando la proprietà **ContentLength** è impostata su un valore maggiore di zero.  
   
-## Proprietà di Tipocontenuto  
- La proprietà <xref:System.Net.WebRequest.ContentType%2A> fornisce tutte le informazioni specifiche del protocollo è necessario inviare al server per identificare il tipo di contenuto che si inviano.  In genere questo è il tipo di contenuto MIME di tutti i dati caricati.  
+## <a name="contenttype-property"></a>Proprietà ContentType  
+ La proprietà <xref:System.Net.WebRequest.ContentType%2A> fornisce le informazioni speciali che, in base al protocollo, devono essere inviate al server per identificare il tipo di contenuto inviato. Si tratta in genere del tipo di contenuto MIME dei dati caricati.  
   
-## Proprietà delle credenziali  
- La proprietà <xref:System.Net.WebRequest.Credentials%2A> contiene informazioni necessarie per autenticare la richiesta al server.  È necessario distribuire i dettagli del processo di autenticazione per il protocollo.  La classe <xref:System.Net.AuthenticationManager> è responsabile di autenticare le richieste e della disponibilità del token di autenticazione.  La classe che fornisce le credenziali utilizzate dal protocollo deve implementare l'interfaccia <xref:System.Net.ICredentials>.  
+## <a name="credentials-property"></a>Proprietà Credentials  
+ La proprietà <xref:System.Net.WebRequest.Credentials%2A> contiene le informazioni necessarie per autenticare la richiesta con il server. È necessario implementare i dettagli del processo di autenticazione per il protocollo. La classe <xref:System.Net.AuthenticationManager> ha la responsabilità di autenticare le richieste e di fornire un token di autenticazione. La classe che fornisce le credenziali usate dal protocollo deve implementare l'interfaccia <xref:System.Net.ICredentials>.  
   
-## Proprietà delle intestazioni  
- La proprietà <xref:System.Net.WebRequest.Headers%2A> contiene una raccolta arbitraria di coppie nome\/valore dei metadati associati alla richiesta.  Tutti i metadati necessari dal protocollo che può essere espresso come coppia nome\/valore possono essere inclusi nella proprietà **Headers**.  In genere queste informazioni devono essere incluse chiamare i metodi <xref:System.Net.WebRequest.GetResponse%2A> o <xref:System.Net.WebRequest.GetRequestStream%2A> ; è stata eseguita la richiesta una volta, i metadati viene considerata come di sola lettura.  
+## <a name="headers-property"></a>Proprietà Headers  
+ La proprietà <xref:System.Net.WebRequest.Headers%2A> contiene una raccolta arbitraria di coppie nome/valore dei metadati associati alla richiesta. Tutti i metadati necessari per il protocollo che possono essere espressi come coppia di nome/valore possono essere inclusi nella proprietà **Headers**. Queste informazioni in genere devono essere impostate prima di chiamare i metodi <xref:System.Net.WebRequest.GetRequestStream%2A> o <xref:System.Net.WebRequest.GetResponse%2A>. Dopo che la richiesta è stata eseguita, i metadati vengono considerati di sola lettura.  
   
- Non è necessario utilizzare la proprietà **Headers** per utilizzare i metadati dell'intestazione.  i metadati protocollo specifici possono essere esposti come proprietà; ad esempio, la proprietà <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName> espone l'intestazione HTTP **User\-Agent** .  Quando si espone i metadati dell'intestazione come proprietà, non è necessario consentire la stessa proprietà da impostare utilizzando la proprietà **Headers**.  
+ Non è obbligatorio usare la proprietà **Headers** per usare i metadati dell'intestazione. I metadati specifici del protocollo possono essere esposti come proprietà. La proprietà <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName>, ad esempio, espone l'intestazione HTTP **User-Agent**. Quando si espongono i metadati dell'intestazione come proprietà, non consentire l'impostazione della stessa proprietà tramite la proprietà **Headers**.  
   
-## Proprietà di metodo  
- La proprietà <xref:System.Net.WebRequest.Method%2A> contiene il verbo o l'azione che la richiesta viene richiesto il server di eseguire.  L'impostazione predefinita per la proprietà **Method** necessario attivare un'azione standard\/risposta delle richieste senza richiedere alcuna proprietà specifiche del protocollo di essere impostato.  Ad esempio, le impostazioni predefinite GET del metodo [HttpWebResponse](frlrfSystemNetHttpWebResponseClassMethodTopic), che richiedono una risorsa da un server Web e restituisce la risposta.  
+## <a name="method-property"></a>Proprietà Method  
+ La proprietà <xref:System.Net.WebRequest.Method%2A> contiene il verbo o l'azione che la richiesta chiede al server di eseguire. L'impostazione predefinita della proprietà **Method** deve consentire un'azione di richiesta/risposta standard senza richiedere l'impostazione di proprietà specifiche del protocollo. Il valore predefinito del metodo <xref:System.Net.HttpWebResponse.Method%2A> è GET, che richiede una risorsa da un server Web e restituisce la risposta.  
   
- In genere la proprietà **ContentLength** deve essere impostata su un valore maggiore di zero quando la proprietà **Method** è impostata su un verbo o a un'azione che indica che un carico è in esecuzione volta.  
+ La proprietà **ContentLength** in genere deve essere impostata su un valore maggiore di zero quando la proprietà **Method** è impostata su un verbo o un'azione indicante che è in corso un caricamento.  
   
-## Proprietà di PreAuthenticate  
- Le applicazioni impostare la proprietà <xref:System.Net.WebRequest.PreAuthenticate%2A> per indicare che le informazioni di autenticazione devono essere inviati con la richiesta iniziale anziché aspettare una sfida di autenticazione.  La proprietà **PreAuthenticate** è significativa solo se le credenziali di autenticazione dei supporti dei protocolli inviate con la richiesta iniziale.  
+## <a name="preauthenticate-property"></a>Proprietà PreAuthenticate  
+ Le applicazioni impostano la proprietà <xref:System.Net.WebRequest.PreAuthenticate%2A> per indicare che le informazioni sull'autenticazione devono essere inviate con la richiesta iniziale invece di attendere una richiesta di autenticazione. La proprietà **PreAuthenticate** è significativa solo se il protocollo supporta le credenziali di autenticazione inviate con la richiesta iniziale.  
   
-## Proprietà del proxy  
- La proprietà <xref:System.Net.WebRequest.Proxy%2A> contiene un'interfaccia <xref:System.Net.IWebProxy> utilizzata per accedere alla risorsa richiesta.  La proprietà **Proxy** è significativa solo se i supporti dei protocolli proxied le richieste.  Impostare il proxy predefinito se un oggetto è richiesto dal protocollo.  
+## <a name="proxy-property"></a>Proprietà Proxy  
+ La proprietà <xref:System.Net.WebRequest.Proxy%2A> contiene un'interfaccia <xref:System.Net.IWebProxy> usata per accedere alla risorsa richiesta. La proprietà **Proxy** è significativa solo se il protocollo supporta le richieste con proxy. È necessario impostare il proxy predefinito se ne è richiesto uno dal protocollo.  
   
- In alcuni ambienti, ad esempio protetto da un firewall aziendale, il protocollo potrebbe essere necessario utilizzare un proxy.  In tal caso, è necessario implementare l'interfaccia **IWebProxy** per creare una classe proxy che verrà eseguito per il protocollo.  
+ In alcuni ambienti, ad esempio dietro un firewall aziendale, il protocollo potrebbe essere necessario per usare un proxy. In tal caso, è necessario implementare l'interfaccia **IWebProxy** per creare una classe proxy che funzionerà per il protocollo.  
   
-## Proprietà di RequestUri  
- La proprietà <xref:System.Net.WebRequest.RequestUri%2A> contiene l'uri passato al metodo **WebRequest.Create**.  È di sola lettura e non può essere modificato dopo **WebRequest** è stato creato.  Se il reindirizzamento dei supporti dei protocolli, la risposta può derivare da una risorsa identificata da un URI diverso.  Se è necessario fornire l'accesso all'URI che ha risposto, è necessario fornire una proprietà aggiuntiva che contiene tale URI.  
+## <a name="requesturi-property"></a>Proprietà RequestUri  
+ La proprietà <xref:System.Net.WebRequest.RequestUri%2A> contiene l'URI passato al metodo **WebRequest.Create**. È di sola lettura e non può essere modificata dopo che l'elemento **WebRequest** è stato creato. Se il protocollo supporta il reindirizzamento, la risposta può provenire da una risorsa identificata da un URI diverso. Se è necessario fornire l'accesso all'URI che ha risposto, si deve fornire una proprietà aggiuntiva contenente tale URI.  
   
-## Proprietà interval  
- La proprietà <xref:System.Net.WebRequest.Timeout%2A> contiene la durata, in millisecondi, attendere prima della richiesta scade e genera un'eccezione.  **Timeout** si applica solo alle chiamate sincrone effettuate dal metodo <xref:System.Net.WebRequest.GetResponse%2A> ; le richieste asincrone devono utilizzare il metodo <xref:System.Net.WebRequest.Abort%2A> per annullare di una richiesta in attesa.  
+## <a name="timeout-property"></a>Proprietà timeout  
+ La proprietà <xref:System.Net.WebRequest.Timeout%2A> contiene il tempo di attesa, in millisecondi, prima che la richiesta raggiunga il timeout e generi un'eccezione. **Timeout** si applica solo alle richieste sincrone eseguite con il metodo <xref:System.Net.WebRequest.GetResponse%2A>. Le richieste asincrone devono usare il metodo <xref:System.Net.WebRequest.Abort%2A> per annullare una richiesta in sospeso.  
   
- Impostare la proprietà **Timeout** è significativo solo se la classe implementa protocollo specifica un processo di timeout.  
+ L'impostazione della proprietà **Timeout** è significativa solo se la classe specifica del protocollo implementa un processo di timeout.  
   
-## Metodo di interruzione  
- Il metodo <xref:System.Net.WebRequest.Abort%2A> annulla di una richiesta asincrona in attesa in un server.  Dopo che la richiesta è stata annullata, chiamando **GetResponse**, **BeginGetResponse**, **EndGetResponse**, **GetRequestStream**, **BeginGetRequestStream**, o **EndGetRequestStream** genereranno <xref:System.Net.WebException> con la proprietà <xref:System.Net.WebException.Status%2A> a [RequestCanceled](frlrfSystemNetWebExceptionStatusClassTopic).  
+## <a name="abort-method"></a>Metodo Abort  
+ Il metodo <xref:System.Net.WebRequest.Abort%2A> annulla una richiesta asincrona in sospeso a un server. Dopo l'annullamento della richiesta, la chiamata a **GetResponse**, **BeginGetResponse**, **EndGetResponse**, **GetRequestStream**, **BeginGetRequestStream** o **EndGetRequestStream** genererà <xref:System.Net.WebException> con la proprietà <xref:System.Net.WebException.Status%2A> impostata su <xref:System.Net.WebExceptionStatus>.  
   
-## Metodi di EndGetRequestStream e di BeginGetRequestStream  
- Il metodo <xref:System.Net.WebRequest.BeginGetRequestStream%2A> avvia una richiesta asincrona del flusso utilizzato per caricare i dati nel server.  Il metodo <xref:System.Net.WebRequest.EndGetRequestStream%2A> completa la richiesta asincrona e restituisce il flusso richiesto.  Questi metodi implementano il metodo **GetRequestStream** utilizzando il modello asincrono.NET Framework standard.  
+## <a name="begingetrequeststream-and-endgetrequeststream-methods"></a>Metodi BeginGetRequestStream e EndGetRequestStream  
+ Il metodo <xref:System.Net.WebRequest.BeginGetRequestStream%2A> avvia una richiesta asincrona per il flusso che viene usato per caricare i dati sul server. Il metodo <xref:System.Net.WebRequest.EndGetRequestStream%2A> completa la richiesta asincrona e restituisce il flusso richiesto. Questi metodi implementano il metodo **GetRequestStream** usando il modello asincrono di .NET Framework standard.  
   
-## Metodi di EndGetResponse e di BeginGetResponse  
- Il metodo <xref:System.Net.WebRequest.BeginGetResponse%2A> avvia una richiesta asincrona in un server.  Il metodo <xref:System.Net.WebRequest.EndGetResponse%2A> completa la richiesta asincrona e restituisce la risposta richiesta.  Questi metodi implementano il metodo **GetResponse** utilizzando il modello asincrono.NET Framework standard.  
+## <a name="begingetresponse-and-endgetresponse-methods"></a>Metodi BeginGetResponse ed EndGetResponse  
+ Il metodo <xref:System.Net.WebRequest.BeginGetResponse%2A> avvia una richiesta asincrona a un server. Il metodo <xref:System.Net.WebRequest.EndGetResponse%2A> completa la richiesta asincrona e restituisce la risposta richiesta. Questi metodi implementano il metodo **GetResponse** usando il modello asincrono di .NET Framework standard.  
   
-## Metodo di GetRequestStream  
- Il metodo <xref:System.Net.WebRequest.GetRequestStream%2A> restituisce un flusso utilizzato per scrivere i dati nel server.  Il flusso restituito deve essere un flusso di sola scrittura non viene trovato, è progettato come flusso di dati unidirezionale che vengono scritti sul server.  Il flusso restituisce false per le proprietà <xref:System.IO.Stream.CanSeek%2A> e <xref:System.IO.Stream.CanRead%2A> le righe per la proprietà <xref:System.IO.Stream.CanWrite%2A>.  
+## <a name="getrequeststream-method"></a>Metodo GetRequestStream  
+ Il metodo <xref:System.Net.WebRequest.GetRequestStream%2A> restituisce un flusso che viene usato per scrivere i dati nel server richiesto. Il flusso restituito deve essere un flusso di sola scrittura che non esegue ricerche. Viene usato come flusso di dati unidirezionale scritti sul server. Il flusso restituisce false per le proprietà <xref:System.IO.Stream.CanRead%2A> e <xref:System.IO.Stream.CanSeek%2A> e true per la proprietà <xref:System.IO.Stream.CanWrite%2A>.  
   
- Il metodo **GetRequestStream** in genere visualizzata una connessione al server e, prima di restituire il flusso, invia le informazioni di intestazione che indicano che i dati vengono inviandi al server.  Poiché **GetRequestStream** avvia la richiesta, impostare alcune proprietà **Header** o la proprietà **ContentLength** in genere non è consentito dopo aver chiamato **GetRequestStream**.  
+ Il metodo **GetRequestStream** in genere apre una connessione al server e, prima di restituire il flusso, invia le informazioni sull'intestazione indicanti che i dati vengono inviati al server. Poiché **GetRequestStream** inizia la richiesta, l'impostazione di proprietà **Header** o della proprietà **ContentLength** in genere non è consentita dopo la chiamata a **GetRequestStream**.  
   
-## Metodo di GetResponse  
- Il metodo <xref:System.Net.WebRequest.GetResponse%2A> restituisce un discendente protocollo specifico della classe <xref:System.Net.WebResponse> che rappresenta la risposta dal server.  A meno che la richiesta è già stata avviata dal metodo **GetRequestStream**, il metodo **GetResponse** crea una connessione alla risorsa identificata da **RequestUri**, invia le informazioni di intestazione che indicano il tipo di richiesta inviata e riceve una risposta dalla risorsa.  
+## <a name="getresponse-method"></a>Metodo GetResponse  
+ Il metodo <xref:System.Net.WebRequest.GetResponse%2A> restituisce un discendente specifico del protocollo della classe <xref:System.Net.WebResponse> che rappresenta la risposta dal server. A meno che la richiesta non sia già stata avviata dal metodo **GetRequestStream**, il metodo **GetResponse** crea una connessione alla risorsa identificata da **RequestUri**, invia le informazioni sull'intestazione indicanti il tipo di richiesta in esecuzione e quindi riceve la risposta dalla risorsa.  
   
- Una volta che il metodo **GetResponse** viene chiamato, tutte le proprietà devono essere considerate di sola lettura.  Le istanze di**WebRequest** è previsto l'utilizzo di una volta; se si desidera eseguire un'altra richiesta, è necessario creare un nuovo **WebRequest**.  
+ Dopo la chiamata al metodo **GetResponse**, tutte le proprietà sono da considerare di sola lettura. Le istanze di **WebRequest** sono monouso. Per eseguire un'altra richiesta, è consigliabile creare un nuovo elemento **WebRequest**.  
   
- Il metodo **GetResponse** è necessario creare un discendente appropriato **WebResponse** per contenere la risposta in ingresso.  
+ Il metodo **GetResponse** è responsabile della creazione di un discendente di **WebResponse** appropriato per contenere la risposta in arrivo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.WebRequest>   
  <xref:System.Net.HttpWebRequest>   
  <xref:System.Net.FileWebRequest>   
  [Programmazione di protocolli di collegamento](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
  [Derivazione da WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+
