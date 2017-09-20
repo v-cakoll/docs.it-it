@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: b29b402e859688dcced6bd4429b18298070fb5e4
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-updates-are-installed"></a>Procedura: determinare gli aggiornamenti di .NET Framework installati
@@ -44,7 +44,8 @@ Gli aggiornamenti installati per ogni versione di .NET Framework installata in u
 ## <a name="example"></a>Esempio  
  Il codice seguente consente di determinare gli aggiornamenti di .NET Framework installati in un computer a livello di codice. Per eseguire questo esempio, è necessario disporre delle credenziali di amministratore.  
   
- [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
+ [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)]
+ [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
   
  In questo esempio viene generato un output simile al seguente:  
   

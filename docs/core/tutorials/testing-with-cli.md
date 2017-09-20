@@ -14,7 +14,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1a0a0554b28600821fb15f64d31c6bce74a17136
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 
@@ -73,23 +73,23 @@ Creare la seguente struttura di cartelle con il contenuto di file indicato:
 
 *IPet.cs*:
 
-[!code-csharp[Interfaccia IPet](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
+[!code-csharp[IPet interface](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
 
 *Dog.cs*:
 
-[!code-csharp[Classe Dog](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
+[!code-csharp[Dog class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
 
 *Cat.cs*:
 
-[!code-csharp[Classe Cat](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
+[!code-csharp[Cat class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
 
 *Program.cs*:
 
-[!code-csharp[Principale](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]
+[!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]
 
 *NewTypes.csproj*:
 
-[!code-xml[File csproj NewTypes](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
+[!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
 
 Eseguire i seguenti comandi:
 
@@ -129,7 +129,7 @@ In alternativa è possibile aggiungere manualmente il riferimento al progetto ag
 
 *NewTypesTests.csproj*:
 
-[!code-xml[File csproj NewTypesTests](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
+[!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
 
 Il file *NewTypesTests.csproj* contiene quanto segue:
 
@@ -238,7 +238,7 @@ Test execution time: 2.1371 Seconds
 
 Modificare le asserzioni dei test da `Assert.NotEqual` a `Assert.Equal`:
 
-[!code-csharp[Classe PetTests](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
+[!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
 
 Eseguire nuovamente i test con il comando `dotnet test`. Si ottiene il seguente output:
 
