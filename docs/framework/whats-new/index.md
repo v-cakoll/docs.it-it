@@ -20,7 +20,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
 ms.openlocfilehash: 8d0818b770d94511736baf5d51abeba74a90c848
 ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 
@@ -190,7 +190,7 @@ Per un elenco delle nuove API aggiunte a .NET Framework 4.6.2, vedere l'argoment
 ### <a name="aspnet"></a>ASP.NET
  In [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET include i miglioramenti seguenti:
 
- **Migliore supporto per i messaggi di errore localizzati nei validator di annotazioni dei dat**  I validator di annotazioni dei dati consentono di eseguire la convalida aggiungendo uno o più attributi a una proprietà di classe. L'elemento <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> dell'attributo definisce il testo del messaggio di errore se la convalida non riesce. A partire da [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET semplifica la localizzazione dei messaggi di errore. I messaggi di errore verranno localizzati se:
+ **Migliore supporto per i messaggi di errore localizzati nei validator di annotazioni dei dat ** I validator di annotazioni dei dati consentono di eseguire la convalida aggiungendo uno o più attributi a una proprietà di classe. L'elemento <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> dell'attributo definisce il testo del messaggio di errore se la convalida non riesce. A partire da [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ASP.NET semplifica la localizzazione dei messaggi di errore. I messaggi di errore verranno localizzati se:
 
 1.  <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> viene indicato nell'attributo di convalida.
 
@@ -614,11 +614,13 @@ Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle reg
 
  L'esempio di codice seguente illustra quanto sia semplice generare una firma per un flusso di byte usando il nuovo supporto dei certificati X509 ECDSA incluso in [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].
 
- [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)] [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
+ [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
+ [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
 
  Emerge una netta differenza rispetto al codice necessario per generare una firma in .NET Framework 4.6.
 
- [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)] [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
+ [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
+ [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
 
 <a name="ADO.NET461"></a> 
 ### <a name="adonet"></a>ADO.NET
@@ -810,11 +812,13 @@ Per altre informazioni sulla struttura di <xref:System.TimeZoneInfo> e sulle reg
 
         - Miglioramenti all'API RSA in modo che le azioni comuni non richiedano più il cast. Ad esempio, la crittografia dei dati eseguita con un oggetto <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> richiede codice simile al seguente nelle versioni precedenti di .NET Framework.
 
-             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]    [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
+             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
+             [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
 
              Il codice che usa le nuove API di crittografia in Framework .NET 4.6 può essere riscritto nel modo seguente per evitare il cast.
 
-             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]    [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
+             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
+             [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
     - **Supporto per la conversione di date e ore da o verso l'ora di Unix**
 

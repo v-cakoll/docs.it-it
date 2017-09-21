@@ -1,28 +1,32 @@
 ---
-title: "Elemento &lt;Parameter&gt; (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;Parameter&gt; (.NET Native)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 87d2e08ece2f3a2f6f366d5b93fa75e2330d854d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Elemento &lt;Parameter&gt; (.NET Native)
+# <a name="ltparametergt-element-net-native"></a>Elemento &lt;Parameter&gt; (.NET Native)
 Applica criteri di reflection al tipo di argomento passato a un metodo.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-  
 <Parameter Name="parameter_name"  
            Activate="policy_type"  
            Browse="policy_type"  
@@ -34,7 +38,6 @@ Applica criteri di reflection al tipo di argomento passato a un metodo.
            MarshalObject="policy_type"  
            MarshalDelegate="policy_type"  
            MarshalStructure="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -49,9 +52,9 @@ Applica criteri di reflection al tipo di argomento passato a un metodo.
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.|  
 |`Dynamic`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.|  
 |`Serialize`|Serializzazione|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a costruttori, campi e proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie quali il serializzatore JSON di Newtonsoft.|  
-|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che utilizza il <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> (classe).|  
-|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che utilizza il <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> (classe).|  
-|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che utilizza il <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> (classe).|  
+|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
+|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
+|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
 |`MarshalObject`|Interoperabilità|Attributo facoltativo. Criteri di controlli per effettuare il marshalling dei tipi di riferimento per WinRT e COM.|  
 |`MarshalDelegate`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.|  
 |`MarshalStructure`|Interoperabilità|Attributo facoltativo. Controlla i criteri per il marshalling dei tipi di valore al codice nativo.|  
@@ -66,7 +69,7 @@ Applica criteri di reflection al tipo di argomento passato a un metodo.
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per ulteriori informazioni, vedere [impostazioni dei criteri della direttiva di Runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -75,13 +78,14 @@ Applica criteri di reflection al tipo di argomento passato a un metodo.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
   
 ## <a name="remarks"></a>Note  
- Il `<Parameter>` è un elemento figlio di [ <> \> ](../../../docs/framework/net-native/method-element-net-native.md) elemento e viene utilizzato per applicare criteri a un parametro di metodo specifico. Il parametro del metodo specifico viene specificato per nome anziché in base al tipo. Almeno un attributo che rappresenta un tipo di criterio, ad esempio `Activate` o `Dynamic`, deve essere presente.  
+ L'elemento `<Parameter>` è figlio dell'elemento [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) e viene usato per applicare criteri a un parametro di metodo specifico. Il parametro del metodo specifico viene specificato per nome anziché in base al tipo. Almeno un attributo che rappresenta un tipo di criterio, ad esempio `Activate` o `Dynamic`, deve essere presente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [<>\>Elemento](../../../docs/framework/net-native/method-element-net-native.md)   
- [File di configurazione di runtime direttive (RD. XML)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
+ [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)   
+ [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  (Impostazioni dei criteri delle direttive di runtime)  
  [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+

@@ -1,62 +1,67 @@
 ---
-title: "reentrancy MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "unmanaged code, debugging"
-  - "transitioning threads unmanaged to managed code"
-  - "reentrancy MDA"
-  - "reentrancy without an orderly transition"
-  - "managed debugging assistants (MDAs), reentrancy"
-  - "illegal reentrancy"
-  - "MDAs (managed debugging assistants), reentrancy"
-  - "threading [.NET Framework], managed debugging assistants"
-  - "managed code, debugging"
-  - "native debugging, MDAs"
+title: reentrancy MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- unmanaged code, debugging
+- transitioning threads unmanaged to managed code
+- reentrancy MDA
+- reentrancy without an orderly transition
+- managed debugging assistants (MDAs), reentrancy
+- illegal reentrancy
+- MDAs (managed debugging assistants), reentrancy
+- threading [.NET Framework], managed debugging assistants
+- managed code, debugging
+- native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: beefdb130c953c30d50d948ef9add7ad9d867e45
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# reentrancy MDA
-L'assistente al debug gestito `reentrancy` viene attivato quando si tenta di eseguire una transizione da codice nativo a codice gestito nei casi in cui un precedente passaggio da codice gestito a codice nativo non è stato eseguito mediante una transizione ordinata.  
+# <a name="reentrancy-mda"></a>reentrancy MDA
+L'assistente al debug gestito `reentrancy` viene attivato quando viene effettuato un tentativo di transizione da codice nativo a codice gestito nei casi in cui un precedente passaggio da codice gestito a nativo non è stato eseguito mediante una transizione ordinata.  
   
-## Sintomi  
- L'heap oggetti viene danneggiato o si verificano altri errori gravi durante il passaggio da codice nativo a codice gestito.  
+## <a name="symptoms"></a>Sintomi  
+ L'heap di oggetti è danneggiato o si stanno verificando altri errori gravi durante la transizione da codice nativo a codice gestito.  
   
- I thread che passano da codice nativo a codice gestito e viceversa devono eseguire una transizione ordinata.  Nel sistema operativo, tuttavia, esistono alcuni punti di estendibilità di basso livello, ad esempio il gestore delle eccezioni basato su vettori, che consentono il passaggio da codice gestito a codice nativo senza eseguire una transizione ordinata.  Questi passaggi sono controllati dal sistema operativo anziché da Common Language Runtime.  Qualsiasi codice nativo eseguito all'interno di questi punti di estendibilità deve evitare di richiamare codice gestito.  
+ I thread che passano da codice nativo a codice gestito e viceversa devono eseguire una transizione ordinata. Alcuni punti di estendibilità di basso livello nel sistema operativo, ad esempio il gestore di eccezioni con vettori, consentono tuttavia il passaggio da codice gestito a codice nativo senza eseguire una transizione ordinata.  Questi passaggi avvengono sotto il controllo del sistema operativo, invece che di Common Language Runtime (CLR).  Il codice nativo eseguito in questi punti di estendibilità deve evitare il callback nel codice gestito.  
   
-## Causa  
- Durante l'esecuzione di codice gestito è stato attivato un punto di estendibilità di basso livello del sistema operativo, ad esempio il gestore delle eccezioni basato su vettori.  Il codice dell'applicazione che viene richiamato tramite questo punto di estendibilità sta tentando di richiamare codice gestito.  
+## <a name="cause"></a>Causa  
+ Un punto di estendibilità di basso livello del sistema operativo, ad esempio il gestore di eccezioni con vettori, è stato attivato durante l'esecuzione di codice gestito.  Il codice dell'applicazione che viene richiamato tramite tale punto di estendibilità sta cercando di eseguire il callback nel codice gestito.  
   
  Questo problema è sempre causato dal codice dell'applicazione.  
   
-## Risoluzione  
- Esaminare la traccia dello stack per individuare il thread che ha attivato questo assistente al debug gestito.  Il thread sta tentando di eseguire una chiamata non valida nel codice gestito.  La traccia dello stack dovrebbe indicare il codice dell'applicazione che utilizza questo punto di estendibilità, il codice del sistema operativo che fornisce il punto di estendibilità e il codice gestito che è stato interrotto dal punto di estendibilità.  
+## <a name="resolution"></a>Risoluzione  
+ Esaminare l'analisi dello stack per il thread che ha attivato questo assistente al debug gestito.  Il thread sta cercando di eseguire una chiamata non valida nel codice gestito.  L'analisi dello stack indica il codice dell'applicazione che usa il punto di estendibilità, il codice del sistema operativo che fornisce il punto di estendibilità e il codice gestito interrotto dal punto di estendibilità.  
   
- L'assistente al debug gestito verrà attivato, ad esempio, se si tenta di chiamare codice gestito dall'interno di un gestore delle eccezioni basato su vettori.  Nello stack sarà indicato il codice di gestione delle eccezioni del sistema operativo e il codice gestito che sta generando un'eccezione quale <xref:System.DivideByZeroException> o <xref:System.AccessViolationException>.  
+ Si noterà, ad esempio, che l'assistente al debug gestito viene attivato in un tentativo di chiamare il codice gestito da un gestore di eccezioni con vettori.  Nello stack sarà possibile vedere il codice di gestione delle eccezioni del sistema operativo e il codice gestito che genera un'eccezione come <xref:System.DivideByZeroException> o <xref:System.AccessViolationException>.  
   
- In questo esempio la soluzione corretta consiste nell'implementare il gestore delle eccezioni basato su vettori completamente nel codice non gestito.  
+ In questo esempio la risoluzione corretta consiste nell'implementare il gestore di eccezioni con vettori completamente nel codice non gestito.  
   
-## Effetto sul runtime  
- Questo assistente al debug gestito non produce effetti su CLR.  
+## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
+ L'assistente al debug gestito non ha alcun effetto su CLR.  
   
-## Output  
- L'assistente al debug gestito indica un tentativo di rientranza non valido.  Esaminare lo stack del thread per determinare la causa del problema e una possibile soluzione.  Di seguito è riportato un output di esempio.  
+## <a name="output"></a>Output  
+ L'assistente al debug gestito indica il tentativo di reentrancy non valida.  Esaminare lo stack del thread per determinare il motivo per cui ciò si verifica e come risolvere il problema. Di seguito è riportato l'output di esempio.  
   
 ```  
 Additional Information: Attempting to call into managed code without   
@@ -66,9 +71,9 @@ low-level native extensibility points. Managed Debugging Assistant
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
   
-## Configurazione  
+## <a name="configuration"></a>Configurazione  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <reentrancy />  
@@ -76,8 +81,8 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 </mdaConfig>  
 ```  
   
-## Esempio  
- L'esempio di codice riportato di seguito causa la generazione di un'eccezione <xref:System.AccessViolationException>.  Nelle versioni di Windows che supportano la gestione delle eccezioni basata su vettori questa eccezione determina la chiamata del gestore delle eccezioni basato su vettori.  Se abilitato, l'assistente al debug gestito `reentrancy` verrà attivato durante il tentativo di chiamata a `MyHandler` dal codice di supporto della gestione delle eccezioni basata su vettori del sistema operativo.  
+## <a name="example"></a>Esempio  
+ Il codice seguente causa la generazione di un'eccezione <xref:System.AccessViolationException>.  Nelle versioni di Windows che supportano la gestione delle eccezioni con vettori, ciò causa la chiamata del gestore di eccezioni con vettori gestito.  Se l'assistente al debug gestito `reentrancy` è abilitato, verrà attivato durante il tentativo di chiamata a `MyHandler` dal codice di supporto di gestione delle eccezioni con vettori del sistema operativo.  
   
 ```  
 using System;  
@@ -114,5 +119,6 @@ public class Reenter
 }  
 ```  
   
-## Vedere anche  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Vedere anche  
+ [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

@@ -1,35 +1,41 @@
 ---
-title: "Raggruppamento delle connessioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Internet, connessioni"
-  - "connessioni [.NET Framework], raggruppamento"
-  - "WebRequest (classe), raggruppamento delle connessioni"
-  - "risorse di rete, connessioni"
-  - "pool di connessioni"
+title: Raggruppamento delle connessioni
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet, connections
+- connections [.NET Framework], grouping
+- WebRequest class, connection grouping
+- network resources, connections
+- connection pooling
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8f16a539bb7c2bef494c7b5551e1f12bc71de60f
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Raggruppamento delle connessioni
-Il raggruppamento di connessione associa le richieste specifiche l'interno di una singola applicazione a un pool di connessioni definito.  Ciò può essere richiesta da un'applicazione di livello intermedio che si connette a un server di back\-end un nome di un utente e utilizza un protocollo di autenticazione che supporta la delega Kerberos, come, o da un'applicazione di livello intermedio che fornisce le proprie credenziali, come nell'esempio riportato di seguito.  Si supponga, ad esempio un utente, Joe, visita un sito Web interno per visualizzare le informazioni dei fogli paga.  Dopo autenticante Operazione, il server di applicazioni di livello intermedio utilizzano le credenziali dell'operazione per connettersi al server di back\-end per recuperare le informazioni dei fogli paga.  Successivamente, Susan visita il sito e richiede le informazioni dei fogli paga.  Poiché l'applicazione di livello intermedio già stata eseguita una connessione utilizzando le credenziali dell'operazione, il server di back\-end risponde alle informazioni dell'operazione.  Tuttavia, se l'applicazione assegna ogni richiesta inviata al server di back\-end a un gruppo di connessioni formato dal nome utente, ogni utente appartiene a un pool di connessioni separato e non è possibile condividere accidentalmente le informazioni di autenticazione con un altro utente.  
+# <a name="connection-grouping"></a>Raggruppamento delle connessioni
+Con il raggruppamento delle connessioni le richieste specifiche eseguite all'interno di una singola applicazione vengono associate a un pool di connessioni definito. Questa operazione può essere necessaria in caso di connessione, tramite un'applicazione di livello intermedio, a un server back-end per conto di un utente mediante un protocollo di autenticazione che supporti la delega, ad esempio Kerberos, oppure in caso di uso di un'applicazione di livello intermedio in cui vengono fornite le credenziali dell'utente, come nell'esempio seguente. Si supponga ad esempio che un utente, Gianni, visiti un sito Web interno che visualizza informazioni sul suo stipendio. Dopo l'autenticazione, le credenziali di Gianni vengono usate dal server dell'applicazione di livello intermedio per connettersi al server back-end e recuperare le informazioni sullo stipendio. Il sito viene quindi visitato da Elena, che richiede informazioni sul proprio stipendio. Poiché tramite l'applicazione di livello intermedio è già stata stabilita una connessione con le credenziali di Gianni, la risposta fornita dal server back-end contiene le informazioni relative a Gianni. Se tuttavia ogni richiesta inviata al server back-end viene assegnata a un gruppo di connessioni basato sul nome utente, ogni utente apparterrà a un pool di connessioni distinto e non potrà condividere accidentalmente le informazioni di autenticazione con altri utenti.  
   
- Per assegnare una richiesta a un gruppo di connessioni specifico, è necessario assegnare un nome alla proprietà <xref:System.Net.WebRequest.ConnectionGroupName%2A> del <xref:System.Net.WebRequest> prima di effettuare la richiesta.  
+ Per assegnare una richiesta a un gruppo di connessioni specifico, è necessario assegnare un nome alla proprietà <xref:System.Net.WebRequest.ConnectionGroupName%2A> della classe <xref:System.Net.WebRequest> prima di effettuare la richiesta.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione di connessioni](../../../docs/framework/network-programming/managing-connections.md)   
  [Procedura: Assegnare informazioni utente a connessioni di gruppo](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)
+

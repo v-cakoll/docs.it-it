@@ -1,46 +1,51 @@
 ---
-title: "Uso di un socket client asincrono | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "protocolli applicativi, socket"
-  - "invio di dati, socket"
-  - "richieste dati, socket"
-  - "socket client asincroni"
-  - "Socket (classe), socket client asincroni"
-  - "richiesta di dati da Internet, socket"
-  - "socket, socket client asincroni"
-  - "ricezione di dati, socket"
-  - "protocolli, socket"
-  - "Internet, socket"
-  - "socket client"
+title: Uso di un socket client asincrono
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- data requests, sockets
+- asynchronous client sockets
+- Socket class, asynchronous client sockets
+- requesting data from Internet, sockets
+- sockets, asynchronous client sockets
+- receiving data, sockets
+- protocols, sockets
+- Internet, sockets
+- client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3f8bffcd94f3fb9c516e2201bd932480ab51c1a5
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Uso di un socket client asincrono
-Un socket client asincrono non sospende l'applicazione mentre attende operazioni di rete completare.  Invece, viene utilizzato il modello di programmazione asincrona.NET Framework standard per elaborare la connessione di rete su un thread mentre l'applicazione continua a essere in esecuzione sul thread originale.  I socket asincroni sono adatti per le applicazioni che fanno massiccio di rete o che non possono restare operazioni di rete per completare prima di continuare.  
+# <a name="using-an-asynchronous-client-socket"></a>Uso di un socket client asincrono
+Un socket client asincrono non sospende l'applicazione durante l'attesa del completamento delle operazioni di rete. Usa invece il modello di programmazione asincrona standard di .NET Framework per elaborare la connessione di rete su un singolo thread mentre l'esecuzione dell'applicazione continua sul thread originale. I socket asincroni sono appropriati per le applicazioni che fanno un uso massiccio della rete o che non possano attendere il completamento delle operazioni di rete prima di continuare.  
   
- La classe <xref:System.Net.Sockets.Socket> segue .NET Framework che denomina il modello per i metodi asincroni, ad esempio, il metodo sincrono <xref:System.Net.Sockets.Socket.Receive%2A> corrisponde a <xref:System.Net.Sockets.Socket.BeginReceive%2A> e metodi asincroni <xref:System.Net.Sockets.Socket.EndReceive%2A>.  
+ La classe <xref:System.Net.Sockets.Socket> segue il modello di denominazione di .NET Framework per i metodi asincroni. Ad esempio, il metodo sincrono <xref:System.Net.Sockets.Socket.Receive%2A> corrisponde ai metodi asincroni <xref:System.Net.Sockets.Socket.BeginReceive%2A> e <xref:System.Net.Sockets.Socket.EndReceive%2A>.  
   
- Le operazioni asincrone richiedono un metodo callback di restituire il risultato dell'operazione.  Se non è necessario conoscere il risultato, nessun metodo di callback è necessario.  Il codice di esempio in questa sezione viene illustrato l'utilizzo di un metodo per avviare la connessione a un dispositivo di rete e un metodo di callback per completare la connessione, un metodo per avviare inviare dati e un metodo di callback per il completamento dell'invio e un metodo per avviare la ricezione dei dati e il metodo di callback per terminare ricezione di dati.  
+ Le operazioni asincrone richiedono un metodo di callback per restituire il risultato dell'operazione. Se non è necessario che l'applicazione conosca il risultato, non sarà necessario alcun metodo di callback. L'esempio di codice in questa sezione illustra l'uso di un metodo per avviare la connessione a un dispositivo di rete e un metodo di callback per completare la connessione, un metodo per avviare l'invio dei dati e un metodo di callback per completare l'invio, un metodo per avviare la ricezione di dati e un metodo di callback per terminare la ricezione di dati.  
   
- Thread asincrone di utilizzo sockets dal pool di thread di sistema per elaborare le connessioni di rete.  Un thread è responsabile dell'invio e ricezione dei dati, altri thread terminano la connessione al dispositivo di rete e inviano e ricevono i dati.  Negli esempi seguenti, le istanze della classe <xref:System.Threading.ManualResetEvent?displayProperty=fullName> vengono utilizzate per sospendere l'esecuzione del thread principale e per segnalare quando l'esecuzione può continuare.  
+ I socket asincroni usano più thread dal pool di thread di sistema per elaborare le connessioni di rete. Un thread è responsabile dell'avvio dell'invio o della ricezione dei dati. Gli altri thread completano la connessione al dispositivo di rete e inviano o ricevono i dati. Negli esempi seguenti, le istanze della classe <xref:System.Threading.ManualResetEvent?displayProperty=fullName> vengono usate per sospendere l'esecuzione del thread principale e segnalare quando l'esecuzione può continuare.  
   
- Nell'esempio seguente, connettere un socket asincrono in un dispositivo di rete, il metodo `Connect`inizializza **Socket** quindi chiama il metodo [BeginConnect](frlrfsystemnetsocketssocketclassconnecttopic), passando un endpoint remoto che rappresenta il dispositivo di rete, il metodo callback di connettersi e un oggetto stato **Socket**\(client\), utilizzato per passare informazioni sullo stato tra le chiamate asincrone.  L'esempio implementa il metodo `Connect` per connettersi **Socket** specificato all'oggetto specificato.  Si presuppone **ManualResetEvent** globale denominato `connectDone`.  
+ Nell'esempio seguente, per connettere un socket asincrono a un dispositivo di rete, il metodo `Connect` inizializza un **Socket** e quindi chiama il metodo <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName>, passando un endpoint remoto che rappresenta il dispositivo di rete, il metodo di callback per la connessione e un oggetto di stato (il **Socket** client), che viene usato per passare le informazioni sullo stato tra chiamate asincrone. L'esempio implementa il metodo `Connect` per connettere il **Socket** specificato all'endpoint specificato. Si presuppone l'esistenza di un **ManualResetEvent** globale denominato `connectDone`.  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -60,7 +65,7 @@ public static void Connect(EndPoint remoteEP, Socket client) {
 }  
 ```  
   
- Il metodo di callback `ConnectCallback` di connettersi implementa il delegato <xref:System.AsyncCallback>.  Si connette al dispositivo remoto quando il dispositivo remoto è disponibile e segnala il thread dell'applicazione della connessione è piena impostando **ManualResetEvent**`connectDone`.  Il seguente codice implementa il metodo `ConnectCallback`.  
+ Il metodo di callback per la connessione `ConnectCallback` implementa il delegato <xref:System.AsyncCallback>. Si connette al dispositivo remoto quando è disponibile e segnala al thread dell'applicazione che la connessione è stata completata, impostando **ManualResetEvent** su `connectDone`. Il codice seguente implementa il metodo `ConnectCallback`.  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  
@@ -80,7 +85,6 @@ Private Shared Sub ConnectCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'ConnectCallback  
-  
 ```  
   
 ```csharp  
@@ -103,7 +107,7 @@ private static void ConnectCallback(IAsyncResult ar) {
 }  
 ```  
   
- Il metodo di esempio `Send` codifica i dati in formato stringa specificati in formato ASCII e viene inviato in modo asincrono al dispositivo di rete rappresentato dall'oggetto specificato.  Nell'esempio seguente viene implementato il metodo `Send`.  
+ Il metodo `Send` dell'esempio codifica i dati stringa specificati in formato ASCII e li invia in modo asincrono al dispositivo di rete rappresentato dal socket specificato. L'esempio seguente implementa il metodo `Send`.  
   
 ```vb  
 Private Shared Sub Send(client As Socket, data As [String])  
@@ -114,7 +118,6 @@ Private Shared Sub Send(client As Socket, data As [String])
     client.BeginSend(byteData, 0, byteData.Length, SocketFlags.None, _  
         AddressOf SendCallback, client)  
 End Sub 'Send  
-  
 ```  
   
 ```csharp  
@@ -128,7 +131,7 @@ private static void Send(Socket client, String data) {
 }  
 ```  
   
- Il metodo di callback `SendCallback` di inviare implementa il delegato <xref:System.AsyncCallback>.  Invia i dati quando il dispositivo di rete è possibile ricevere.  Il seguente esempio viene illustrata l'implementazione del metodo `SendCallback`.  Si presuppone **ManualResetEvent** globale denominato `sendDone`.  
+ Il metodo di callback per l'invio `SendCallback` implementa il delegato <xref:System.AsyncCallback> e invia i dati quando il dispositivo di rete è pronto a ricevere. L'esempio seguente mostra l'implementazione del metodo `SendCallback`. Si presuppone l'esistenza di un **ManualResetEvent** globale denominato `sendDone`.  
   
 ```vb  
 Private Shared Sub SendCallback(ar As IAsyncResult)  
@@ -146,7 +149,6 @@ Private Shared Sub SendCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'SendCallback  
-  
 ```  
   
 ```csharp  
@@ -167,7 +169,7 @@ private static void SendCallback(IAsyncResult ar) {
 }  
 ```  
   
- La lettura di dati da un socket client richiede un oggetto di stato con valori di sessioni tra le chiamate asincrone.  La classe è un oggetto stato di esempio per ricevere dati da un socket client.  Contiene un campo per il client socket, un buffer per i dati ricevuti e <xref:System.Text.StringBuilder> utilizzare la stringa di dati in ingresso.  Inserire questi campi nell'oggetto stato ai relativi valori da mantenere tra più chiamate per leggere i dati da socket client.  
+ Per la lettura dei dati da un socket client è necessario un oggetto stato che passa i valori tra chiamate asincrone. La classe seguente è un esempio di oggetto di stato per la ricezione di dati da un socket client. Contiene un campo per il socket client, un buffer per i dati ricevuti e un <xref:System.Text.StringBuilder> per contenere la stringa di dati in ingresso. Il posizionamento di questi campi nell'oggetto stato consente di mantenerne i valori tra più chiamate per leggere i dati dal socket client.  
   
 ```vb  
 Public Class StateObject  
@@ -180,7 +182,6 @@ Public Class StateObject
     ' Received data string.  
     Public sb As New StringBuilder()  
 End Class 'StateObject  
-  
 ```  
   
 ```csharp  
@@ -196,7 +197,7 @@ public class StateObject {
 }  
 ```  
   
- Il metodo `Receive` di esempio è installato l'oggetto stato e quindi chiama il metodo **BeginReceive** per leggere i dati da socket client in modo asincrono.  Nell'esempio seguente viene implementato il metodo `Receive`.  
+ Il metodo `Receive` dell'esempio imposta l'oggetto di stato e quindi chiama il metodo **BeginReceive** per leggere i dati dal socket client in modo asincrono. L'esempio seguente implementa il metodo `Receive`.  
   
 ```vb  
 Private Shared Sub Receive(client As Socket)  
@@ -212,7 +213,6 @@ Private Shared Sub Receive(client As Socket)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'Receive  
-  
 ```  
   
 ```csharp  
@@ -231,9 +231,9 @@ private static void Receive(Socket client) {
 }  
 ```  
   
- Il metodo di callback di ricezione `ReceiveCallback` implementa il delegato **AsyncCallback**.  Riceve dati dal dispositivo di rete e compila una stringa di messaggio.  Legge uno o più byte di dati dalla rete nel buffer di dati e quindi chiama il metodo **BeginReceive** nuovamente finché i dati inviati dal client non siano completi.  Dopo che tutti i dati vengono letti dal client, `ReceiveCallback` segnala il thread dell'applicazione che i dati completi impostando **ManualResetEvent** `sendDone`.  
+ Il metodo di callback per la ricezione `ReceiveCallback` implementa il delegato **AsyncCallback** e riceve i dati dal dispositivo di rete, quindi crea una stringa di messaggio. Questo metodo legge uno o più byte di dati dalla rete nel buffer di dati e quindi chiama di nuovo il metodo **BeginReceive** del metodo finché al completamento dei dati inviati dal client. Una volta letti tutti i dati dal client, `ReceiveCallback` segnala al thread dell'applicazione che i dati sono completi impostando **ManualResetEvent** su `sendDone`.  
   
- Il seguente codice di esempio viene implementato il metodo `ReceiveCallback`.  Si presuppone una stringa globale denominata `response` che è contenuta la stringa ricezione e **ManualResetEvent** globale denominati `receiveDone`.  Il server deve arrestare il client socket correttamente per terminare la sessione di rete.  
+ Il codice di esempio seguente implementa il metodo `ReceiveCallback`. Si presuppone l'esistenza di una stringa globale denominata `response` che contiene la stringa ricevuta e di un **ManualResetEvent** globale denominato `receiveDone`. Il server deve chiudere correttamente il socket client per terminare la sessione di rete.  
   
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  
@@ -266,7 +266,6 @@ Private Shared Sub ReceiveCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'ReceiveCallback  
-  
 ```  
   
 ```csharp  
@@ -298,7 +297,8 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Uso di un socket client sincrono](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
  [Attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)   
  [Esempio di socket client asincrono](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+

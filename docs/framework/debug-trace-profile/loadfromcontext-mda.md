@@ -1,60 +1,65 @@
 ---
-title: "loadFromContext MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), LoadFrom context"
-  - "managed debugging assistants (MDAs), LoadFrom context"
-  - "LoadFrom context"
-  - "LoadFromContext MDA"
+title: MDA loadFromContext
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), LoadFrom context
+- managed debugging assistants (MDAs), LoadFrom context
+- LoadFrom context
+- LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d693272adeb0b1bcfea196edb1a23e8b448516cb
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# loadFromContext MDA
-L'assistente al debug gestito `loadFromContext` viene attivato quando un assembly viene caricato nel contesto `LoadFrom`.  È possibile che questa situazione si verifichi in seguito alla chiamata al metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> o ad altri metodi simili.  
+# <a name="loadfromcontext-mda"></a>MDA loadFromContext
+L'assistente al debug gestito `loadFromContext` viene attivato se viene caricato un assembly nel contesto `LoadFrom`. Questa situazione può verificarsi come risultato di una chiamata di <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> o di altri metodi simili.  
   
-## Sintomi  
- L'utilizzo di alcuni metodi loader può determinare il caricamento degli assembly nel contesto `LoadFrom` e, a sua volta, l'utilizzo di questo contesto può causare un comportamento imprevisto per la serializzazione, l'esecuzione del cast e la risoluzione delle dipendenze.  Generalmente, per evitare questo problema è consigliabile caricare gli assembly nel contesto `Load`.  Senza questo assistente è difficile stabilire il contesto in cui è stato caricato un assembly.  
+## <a name="symptoms"></a>Sintomi  
+ L'uso di alcuni metodi di caricamento può determinare il caricamento di un assembly nel contesto `LoadFrom`. L'uso di questo contesto può provocare un comportamento imprevisto per la serializzazione, il cast e la risoluzione delle dipendenze. In generale, per evitare problemi è preferibile che gli assembly vengano caricati nel contesto `Load`. Senza questo assistente al debug gestito, è difficile determinare il contesto in cui è stato caricato un assembly.  
   
-## Causa  
- In genere, la causa è data dal caricamento di un assembly nel contesto `LoadFrom` se il caricamento è avvenuto da un percorso esterno al contesto `Load`, quale la Global Assembly Cache o la proprietà <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName>.  
+## <a name="cause"></a>Causa  
+ In genere, un assembly viene caricato nel contesto `LoadFrom` se è stato caricato da un percorso esterno al contesto `Load`, ad esempio la Global Assembly Cache o la proprietà <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName>.  
   
-## Risoluzione  
- Configurare le applicazioni in modo che non siano più necessarie chiamate a <xref:System.Reflection.Assembly.LoadFrom%2A>.  A tale scopo, è possibile utilizzare le tecniche indicate di seguito.  
+## <a name="resolution"></a>Risoluzione  
+ Configurare le applicazioni in modo che non siano più necessarie chiamate di <xref:System.Reflection.Assembly.LoadFrom%2A>. A questo scopo, è possibile usare le tecniche seguenti:  
   
 -   Installare gli assembly nella Global Assembly Cache.  
   
--   Inserire gli assembly nella directory <xref:System.AppDomainSetup.ApplicationBase%2A> di <xref:System.AppDomain>.  Nel caso del dominio predefinito, la directory <xref:System.AppDomainSetup.ApplicationBase%2A> corrisponde a quella che contiene il file eseguibile che ha avviato il processo.  In questo caso può anche essere necessario creare un nuovo <xref:System.AppDomain> se non è possibile spostare l'assembly.  
+-   Inserire gli assembly nella directory <xref:System.AppDomainSetup.ApplicationBase%2A> per <xref:System.AppDomain>. Nel caso del dominio predefinito, la directory <xref:System.AppDomainSetup.ApplicationBase%2A> è quella che contiene il file eseguibile che ha avviato il processo. In questo caso, può essere necessaria anche la creazione di un nuovo oggetto <xref:System.AppDomain> se non si vuole spostare l'assembly.  
   
--   Aggiungere un percorso di sondaggio al file di configurazione dell'applicazione \(config\) o ai domini applicazione secondari se gli assembly dipendenti si trovano nelle directory figlio dell'eseguibile.  
+-   Aggiungere un percorso di sondaggio al file di configurazione dell'applicazione (con estensione config) o ai domini dell'applicazione secondari se nelle directory figlio relative al file eseguibile sono presenti assembly dipendenti.  
   
- In ogni caso, è possibile modificare il codice per utilizzare il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
+ In ogni caso, il codice può essere modificato in modo da usare il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
   
-## Effetto sul runtime  
- L'assistente al debug gestito non produce effetti su CLR.  Genera un report del contesto utilizzato in seguito a una richiesta di caricamento.  
+## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
+ L'assistente al debug gestito non ha alcun effetto su CLR e segnala il contesto usato come risultato di una richiesta di caricamento.  
   
-## Output  
- L'assistente al debug gestito segnala che l'assembly è stato caricato nel contesto `LoadFrom` e specifica il percorso e il nome semplice dell'assembly.  Fornisce inoltre suggerimenti per evitare l'utilizzo del contesto `LoadFrom`.  
+## <a name="output"></a>Output  
+ L'assistente al debug gestito segnala che l'assembly è stato caricato nel contesto `LoadFrom`, specifica il nome semplice dell'assembly e il percorso e suggerisce anche le misure di prevenzione per evitare di usare il contesto `LoadFrom`.  
   
-## Configurazione  
+## <a name="configuration"></a>Configurazione  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <loadFromContext />  
@@ -62,8 +67,8 @@ L'assistente al debug gestito `loadFromContext` viene attivato quando un assembl
 </mdaConfig>  
 ```  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito viene illustrata una situazione in cui è possibile attivare l'assistente al debug gestito di questo argomento.  
+## <a name="example"></a>Esempio  
+ L'esempio di codice seguente mostra una situazione che può comportare l'attivazione dell'assistente al debug gestito:  
   
 ```  
 using System.Reflection;  
@@ -82,5 +87,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## Vedere anche  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Vedere anche  
+ [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

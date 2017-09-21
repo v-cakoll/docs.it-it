@@ -1,33 +1,36 @@
 ---
-title: "Elemento &lt;Field&gt; (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;Field&gt; (.NET Native)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 84b0e28fb09f730999a8cad6e5002338957ef6a2
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Elemento &lt;Field&gt; (.NET Native)
+# <a name="ltfieldgt-element-net-native"></a>Elemento &lt;Field&gt; (.NET Native)
 Applica i criteri di reflection di runtime a un campo.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-  
 <Field Name="field_name"  
        Browse="policy_type"  
        Dynamic="policy_type"  
        Serialize="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -46,13 +49,13 @@ Applica i criteri di reflection di runtime a un campo.
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*nome_metodo*|Nome del campo. Il tipo del campo è definito dall'elemento padre [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) o [ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elemento.|  
+|*method_name*|Nome del campo. Il tipo del campo viene definito dall'elemento [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) padre.|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*policy_setting*|L'impostazione da applicare a questo tipo di criteri per il campo. I valori consentiti sono `Auto`, `Excluded`, `Included` e `Required`. Per ulteriori informazioni, vedere [impostazioni dei criteri della direttiva di Runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|L'impostazione da applicare a questo tipo di criteri per il campo. I valori consentiti sono `Auto`, `Excluded`, `Included` e `Required`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -61,13 +64,14 @@ Applica i criteri di reflection di runtime a un campo.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
   
 ## <a name="remarks"></a>Note  
  Se i criteri di un campo non sono definiti esplicitamente, l'evento eredita i criteri di runtime dell'elemento padre.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [File di configurazione di runtime direttive (RD. XML)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+ [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)
+

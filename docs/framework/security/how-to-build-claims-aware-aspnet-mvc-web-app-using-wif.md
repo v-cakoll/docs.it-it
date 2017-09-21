@@ -1,81 +1,87 @@
 ---
-title: "Procedura: Compilare un&#39;applicazione Web ASP.NET MVC in grado di riconoscere attestazioni con WIF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: Compilare un''applicazione Web ASP.NET MVC in grado di riconoscere attestazioni con WIF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7065455e3459ad37a8e296107ca8c6991334b328
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Procedura: Compilare un&#39;applicazione Web ASP.NET MVC in grado di riconoscere attestazioni con WIF
-## Si applica a  
+# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Procedura: Compilare un'applicazione Web ASP.NET MVC in grado di riconoscere attestazioni con WIF
+## <a name="applies-to"></a>Si applica a  
   
--   Foundation \(WIF\) di identità di Microsoft® Windows®  
+-   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® MVC  
+-   MVC ASP.NET®  
   
-## Riepilogo  
- In questa procedura vengono fornite le procedure dettagliate per creare l'applicazione web su consapevole semplice MVC ASP.NET.  Fornisce inoltre le istruzioni come testare l'applicazione web su consapevole semplice MVC ASP.NET per la corretta implementazione di di autenticazione basata su richiesta.  In questa procedura non ha dettagliato le istruzioni per creare un servizio token di sicurezza \(STS\) e si presuppone sia già configurato un servizio token di sicurezza.  
+## <a name="summary"></a>Riepilogo  
+ Questo argomento include le procedure dettagliate per creare una semplice applicazione Web MVC ASP.NET in grado di riconoscere attestazioni. Sono inoltre disponibili istruzioni su come testare la semplice applicazione Web MVC ASP.NET in grado di riconoscere attestazioni per la corretta implementazione dell'autenticazione basata su attestazioni. La procedura decritta in questo argomento non include istruzioni dettagliate per la creazione di un servizio token di sicurezza e presuppone che il servizio sia già stato configurato.  
   
-## Contenuto  
+## <a name="contents"></a>Sommario  
   
 -   Obiettivi  
   
 -   Riepilogo dei passaggi  
   
--   Passaggio 1 \- creare un'applicazione semplice MVC ASP.NET  
+-   Passaggio 1: creare l'applicazione MVC ASP.NET semplice  
   
--   Passaggio 2 \- configurare l'applicazione MVC ASP.NET di autenticazione Basata su richiesta  
+-   Passaggio 2: configurare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
   
--   Passaggio 3 \- eseguire il test della soluzione  
+-   Passaggio 3: eseguire i test sulla soluzione  
   
 -   Elementi correlati  
   
-## Obiettivi  
+## <a name="objectives"></a>Obiettivi  
   
--   Configurare l'applicazione web ASP.NET per autenticazione basata su richiesta  
+-   Configurare l'applicazione Web MVC ASP.NET per l'autenticazione basata su attestazioni  
   
--   Verificare la corrispondenza applicazione web della ricezione di MVC ASP.NET  
+-   Testare l'applicazione Web MVC ASP.NET in grado di riconoscere attestazioni  
   
-## Riepilogo dei passaggi  
+## <a name="summary-of-steps"></a>Riepilogo dei passaggi  
   
--   Passaggio 1 \- creare un'applicazione semplice MVC ASP.NET  
+-   Passaggio 1: creare l'applicazione MVC ASP.NET semplice  
   
--   Passaggio 2 \- configurare l'applicazione MVC ASP.NET di autenticazione Basata su richiesta  
+-   Passaggio 2: configurare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
   
--   Passaggio 3 \- eseguire il test della soluzione  
+-   Passaggio 3: eseguire i test sulla soluzione  
   
-## Passaggio 1 \- creare un'applicazione semplice MVC ASP.NET  
- In questo passaggio, verrà creata una nuova applicazione MVC ASP.NET.  
+## <a name="step-1--create-simple-aspnet-mvc-application"></a>Passaggio 1: creare l'applicazione MVC ASP.NET semplice  
+ In questo passaggio si creerà una nuova applicazione MVC ASP.NET.  
   
-#### Per creare un'applicazione semplice MVC ASP.NET  
+#### <a name="to-create-simple-aspnet-mvc-application"></a>Per creare un'applicazione MVC ASP.NET semplice  
   
-1.  Avviare Visual Studio e clic **File**, **Nuova**quindi **Progetto**.  
+1.  Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.  
   
-2.  Nella finestra **Nuovo progetto**, fare clic **Applicazione Web ASP.NET MVC 3**.  
+2.  Nella finestra **Nuovo progetto** fare clic su **Applicazione Web MVC 3 ASP.NET**.  
   
-3.  In **Nome**, immettere `TestApp` e premere **OK**.  
+3.  In **Nome** immettere `TestApp` e fare clic su **OK**.  
   
-4.  Nella finestra di dialogo **Nuovo progetto ASP.NET MVC 3**, selezionare **Applicazione Internet** dai modelli disponibili, assicurarsi **Motore di visualizzazione** è impostato su **Razor**quindi fare clic **OK**.  
+4.  Nella finestra di dialogo **Nuovo progetto MVC 3 ASP.NET** selezionare **Applicazione Internet** tra i modelli disponibili, assicurarsi che **Motore di visualizzazione** sia impostato su **Razor** e quindi fare clic su **OK**.  
   
-5.  Quando il nuovo progetto viene aperto, fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e selezionare l'opzione **Proprietà**.  
+5.  All'apertura del nuovo progetto fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e scegliere **Proprietà**.  
   
-6.  Le proprietà del progetto pagina, fare clic su nella scheda **Web** a sinistra e verificare che l'opzione **Usa server Web IIS locale** è selezionata.  
+6.  Nella pagina delle proprietà del progetto fare clic sulla scheda **Web** a sinistra e assicurarsi che sia selezionata l'opzione **Usa server Web IIS locale**.  
   
-## Passaggio 2 \- configurare l'applicazione MVC ASP.NET di autenticazione Basata su richiesta  
- In questo passaggio si aggiungeranno voci di configurazione *nel file di configurazione Web.config* dell'applicazione web MVC ASP.NET rendono riconoscere attestazioni.  
+## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a>Passaggio 2: configurare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
+ In questo passaggio si aggiungeranno voci di configurazione al file di configurazione *Web.config* dell'applicazione Web MVC ASP.NET per renderla in grado di riconoscere attestazioni.  
   
-#### Per configurare un'applicazione ASP.NET MVC di autenticazione basata su richiesta  
+#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Per configurare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
   
-1.  Aggiungere le seguenti definizioni di sezione di configurazione *nel file di configurazione Web.config*.  Questi definiscono sezioni di configurazione richiesti dal fondamento di identità Windows.  Aggiungere le definizioni immediatamente dopo **\<configuration\>** l'elemento di apertura:  
+1.  Aggiungere le definizioni di sezione di configurazione seguenti nel file di configurazione *Web.config*, che definiscono le sezioni di configurazione richieste da Windows Identity Foundation. Aggiungere le definizioni subito dopo l'elemento di apertura **\<configuration>**:  
   
     ```xml  
     <configSections>  
@@ -84,7 +90,7 @@ caps.handback.revision: 6
     </configSections>  
     ```  
   
-2.  Aggiungere un elemento **\<location\>** che consente l'accesso ai metadati della federazione dell'applicazione:  
+2.  Aggiungere un **elemento \<location>** che consente l'accesso ai metadati di federazione dell'applicazione:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -96,7 +102,7 @@ caps.handback.revision: 6
     </location>  
     ```  
   
-3.  Aggiungere le voci seguenti di configurazione negli elementi **\<system.web\>** per negare gli utenti, disabilitare l'autenticazione nativa e consentono a WIF per gestire l'autenticazione.  
+3.  Aggiungere le seguenti voci di configurazione all'interno di elementi **\<system.web>** per negare le autorizzazioni agli utenti, disabilitare l'autenticazione nativa e abilitare WIF per gestire l'autenticazione.  
   
     ```xml  
     <authorization>  
@@ -105,7 +111,7 @@ caps.handback.revision: 6
     <authentication mode="None" />  
     ```  
   
-4.  Aggiungere seguente le voci di configurazione correlate di identità Windows di base e verificare che l'url e il numero di porta dell'applicazione ASP.NET corrispondono ai valori nella voce **\<audienceUris\>**, nell'attributo **area autenticazione** di elemento **\<wsFederation\>** e nell'attributo **rispondi** di elemento **\<wsFederation\>**.  Assicurarsi inoltre che il valore **autorità** appropriata il servizio token di sicurezza \(STS\) URL.  
+4.  Aggiungere le voci di configurazione correlate a Windows Identity Foundation seguenti e assicurarsi che l'URL e il numero di porta dell'applicazione ASP.NET corrispondano ai valori nella voce **\<audienceUris>**, all'attributo **realm** dell'elemento **\<wsFederation>** e all'attributo **reply** dell'elemento **\<wsFederation>**. Assicurarsi anche che il valore **issuer** sia appropriato per l'URL del servizio token di sicurezza.  
   
     ```xml  
     <system.identityModel>  
@@ -129,16 +135,16 @@ caps.handback.revision: 6
     </system.identityModel.services>  
     ```  
   
-5.  Aggiungere il riferimento all'assembly [System.IdentityModel](assetId:///System.IdentityModel?qualifyHint=False&amp;autoUpgrade=True).  
+5.  Aggiungere un riferimento all'assembly <xref:System.IdentityModel>.  
   
-6.  Compilare la soluzione per assicurarsi che non vi siano errori.  
+6.  Compilare la soluzione e assicurarsi che non ci siano errori.  
   
-## Passaggio 3 \- eseguire il test della soluzione  
- In questo passaggio verrà l'applicazione web ASP.NET MVC configurata per l'autenticazione basata su richiesta.  Per eseguire il test di base verrà aggiunto un codice semplice che visualizza le richieste del token generato dal servizio token di sicurezza \(STS\).  
+## <a name="step-3--test-your-solution"></a>Passaggio 3: eseguire i test sulla soluzione  
+ In questo passaggio si testerà l'applicazione Web MVC ASP.NET configurata per l'autenticazione basata sulle attestazioni. Per eseguire un test di base, si aggiungerà codice semplice che visualizza le attestazioni nel token rilasciato dal servizio token di sicurezza.  
   
-#### Per testare l'applicazione MVC ASP.NET di autenticazione basata su richiesta  
+#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a>Per testare l'applicazione MVC ASP.NET per l'autenticazione basata su attestazioni  
   
-1.  In **Esplora soluzioni**, espandere la cartella **Controller** e aprire il file *HomeController.cs* nell'editor.  Aggiungere il seguente codice al metodo **Indice** :  
+1.  In **Esplora soluzioni** espandere la cartella **Controller** e aprire il file *HomeController.cs* nell'editor. Aggiungere il codice seguente al metodo **Index**:  
   
     ```csharp  
     public ActionResult Index()  
@@ -147,13 +153,11 @@ caps.handback.revision: 6
   
         return View();  
     }  
-  
     ```  
   
-2.  In **Esplora soluzioni** espandere le cartelle **Pagina iniziale** quindi e **Visualizzazioni** e *il file di Index.cshtml* aperto nell'editor.  Eliminarne il contenuto e aggiungere il markup seguente:  
+2.  In **Esplora soluzioni** espandere le cartelle **Visualizzazioni** e **Home** e aprire il file *Index.cshtml* nell'editor. Eliminarne il contenuto e aggiungere il markup seguente:  
   
     ```html  
-  
     @{  
         ViewBag.Title = "Home Page";  
     }  
@@ -217,13 +221,13 @@ caps.handback.revision: 6
         </tr>  
     }  
     </table>  
-  
     ```  
   
-3.  Eseguire la soluzione premendo il tasto **F5**.  
+3.  Eseguire la soluzione premendo **F5**.  
   
-4.  Dovrebbe essere visualizzata la pagina che visualizza le richieste del token che è stato rimosso dal servizio token di sicurezza.  
+4.  Dovrebbe essere visualizzata la pagina che mostra le attestazioni nel token emesso dal servizio token di sicurezza.  
   
-## Elementi correlati  
+## <a name="related-items"></a>Elementi correlati  
   
--   [Procedura: Compilare un'applicazione Web Form ASP.NET in grado di riconoscere attestazioni con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+-   [Procedura: Compilare un'applicazione Web Form ASP.NET che può riconoscere attestazioni con WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+

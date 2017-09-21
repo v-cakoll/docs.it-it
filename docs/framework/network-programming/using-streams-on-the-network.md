@@ -1,48 +1,53 @@
 ---
-title: "Uso di flussi nella rete | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "richiesta di dati da Internet, flussi"
-  - "Servizi di rete"
-  - "risposta a richiesta Internet, flussi"
-  - "risorse di rete, funzionalità di flusso"
-  - "ricezione di dati, funzionalità di flusso"
-  - "Risorse di rete"
-  - "invio di dati, funzionalità di flusso"
-  - "download delle risorse Internet, flussi"
-  - "flussi, funzionalità"
-  - "Internet, flussi"
-  - "flussi"
+title: Uso di flussi nella rete
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, streams
+- Networking
+- response to Internet request, streams
+- network resources, stream capabilities
+- receiving data, stream capabilities
+- Network Resources
+- sending data, stream capabilities
+- downloading Internet resources, streams
+- streams, capabilities
+- Internet, streams
+- streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Uso di flussi nella rete
-Le risorse di rete sono rappresentate in .NET Framework come flusso.  Considerare i flussi genere, .NET Framework offre le funzionalità seguenti:  
+# <a name="using-streams-on-the-network"></a>Uso di flussi nella rete
+Le risorse di rete sono rappresentate in .NET Framework come flussi. Grazie alla possibilità di gestire i flussi in modo generico, .NET Framework offre le opportunità seguenti:  
   
--   Un metodo comune per inviare e ricevere i dati Web.  Qualsiasi l'effettivo contenuto del file — HTML, XML, o qualsiasi altro elemento — l'applicazione utilizzerà <xref:System.IO.Stream.Write%2A?displayProperty=fullName> e <xref:System.IO.Stream.Read%2A?displayProperty=fullName> per inviare e ricevere i dati.  
+-   Un modo comune per inviare e ricevere dati Web. Indipendentemente dal contenuto effettivo del file (HTML, XML o altro) l'applicazione userà <xref:System.IO.Stream.Write%2A?displayProperty=fullName> e <xref:System.IO.Stream.Read%2A?displayProperty=fullName> per inviare e ricevere dati.  
   
--   Compatibilità con i flussi tramite .NET Framework.  I flussi vengono utilizzati in.NET Framework, che include un'infrastruttura dettagliata per gestirli.  Ad esempio, è possibile modificare un'applicazione che legge i dati XML da <xref:System.IO.FileStream> per leggere i dati da <xref:System.Net.Sockets.NetworkStream> anziché modificando solo le poche righe di codice che consentono di inizializzare il flusso.  Le principali differenze tra la classe **NetworkStream** e altri flussi in **NetworkStream** non è seekable, la proprietà <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> restituisce sempre **false**e i metodi <xref:System.Net.Sockets.NetworkStream.Position%2A> e <xref:System.Net.Sockets.NetworkStream.Seek%2A> generano <xref:System.NotSupportedException>.  
+-   Compatibilità con i flussi in .NET Framework. I flussi vengono usati in tutte le parti di .NET Framework, che offre un'infrastruttura avanzata per gestirli. Ad esempio, è possibile modificare un'applicazione che legge dati XML da un <xref:System.IO.FileStream> in modo che legga invece i dati da un <xref:System.Net.Sockets.NetworkStream> modificando solo le poche righe di codice che inizializzano il flusso. Le differenze principali tra la classe **NetworkStream** e gli altri flussi sono che **NetworkStream** non supporta la ricerca, la proprietà <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> restituisce sempre **false** e i metodi <xref:System.Net.Sockets.NetworkStream.Seek%2A> e <xref:System.Net.Sockets.NetworkStream.Position%2A> generano <xref:System.NotSupportedException>.  
   
--   Elaborazione di dati come arrivo.  I flussi forniscono accesso ai dati quando arriva dalla rete, anziché forzare l'applicazione attendere un intero set di dati da scaricare.  
+-   Elaborazione dei dati all'arrivo. I flussi consentono l'accesso ai dati non appena arrivano dalla rete, anziché imporre a un'applicazione di attendere il completamento del download dell'intero set di dati.  
   
- Lo spazio dei nomi <xref:System.Net.Sockets> contiene una classe **NetworkStream** che implementa la classe <xref:System.IO.Stream> in modo specifico per l'utilizzo con le risorse di rete.  Le classi nello spazio dei nomi <xref:System.Net.Sockets> utilizzare la classe **NetworkStream** per rappresentare i flussi.  
+ Lo spazio dei nomi <xref:System.Net.Sockets> contiene una classe **NetworkStream** che implementa la classe <xref:System.IO.Stream> appositamente per l'uso con le risorse di rete. Le classi nello spazio dei nomi <xref:System.Net.Sockets> usano la classe **NetworkStream** per rappresentare i flussi.  
   
- Per inviare i dati alla rete utilizzando il flusso restituito, chiamare <xref:System.Net.WebRequest.GetRequestStream%2A> nel <xref:System.Net.WebRequest>.  **WebRequest** invierà le intestazioni di richiesta al server; è quindi possibile inviare dati alla risorsa di rete chiamando <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A>il metodo, o <xref:System.IO.Stream.Write%2A> nel flusso restituito.  Alcuni protocolli, ad esempio HTTP, può essere necessario impostare le proprietà specifiche del protocollo inviare dati.  Le esempio di codice seguente viene illustrato come impostare le proprietà HTTP\- specifiche per inviare i dati.  Si presuppone che `sendData` variabile contenga dati per l'invio e che `sendLength` variabile è il numero di byte dei dati da inviare.  
+ Per inviare dati alla rete usando il flusso restituito, chiamare <xref:System.Net.WebRequest.GetRequestStream%2A> su <xref:System.Net.WebRequest>. **WebRequest** invierà le intestazioni di richiesta al server, quindi è possibile inviare dati alla risorsa di rete tramite la chiamata del metodo <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A> o <xref:System.IO.Stream.Write%2A> sul flusso restituito. Alcuni protocolli, ad esempio HTTP, potrebbero richiedere di impostare proprietà specifiche del protocollo prima di inviare dati. L'esempio di codice seguente illustra come impostare le proprietà specifiche di HTTP per l'invio dei dati. Presuppone che la variabile `sendData` contenga i dati da inviare e che la variabile `sendLength` corrisponda al numero di byte di dati da inviare.  
   
 ```csharp  
 HttpWebRequest request =   
@@ -59,7 +64,6 @@ catch
 {  
    // Handle errors . . .  
 }  
-  
 ```  
   
 ```vb  
@@ -76,19 +80,19 @@ Catch
 End Try  
 ```  
   
- Per ricevere i dati dalla rete, chiamare <xref:System.Net.WebResponse.GetResponseStream%2A> nel <xref:System.Net.WebResponse>.  È quindi possibile leggere i dati dalla risorsa di rete chiamando <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A>il metodo, o <xref:System.IO.Stream.Read%2A> nel flusso restituito.  
+ Per ricevere dati dalla rete, chiamare <xref:System.Net.WebResponse.GetResponseStream%2A> su <xref:System.Net.WebResponse>. È quindi possibile leggere dati dalla risorsa di rete tramite la chiamata del metodo <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A> o <xref:System.IO.Stream.Read%2A> sul flusso restituito.  
   
- Nei flussi dalle risorse di rete, tenere presente i seguenti punti:  
+ Quando si usano flussi dalle risorse di rete, tenere presente quanto segue:  
   
--   La proprietà **CanSeek** restituisce sempre **false** poiché la classe **NetworkStream** non può modificare la posizione nel flusso.  i metodi **Position** e **Seek** generano **NotSupportedException**.  
+-   La proprietà **CanSeek** restituisce sempre **false** perché la classe **NetworkStream** non può cambiare posizione nel flusso. I metodi **Seek** e **Position** generano **NotSupportedException**.  
   
--   Quando si utilizza **WebRequest** e **WebResponse**, le istanze del flusso creato chiamando **GetResponseStream** sono di sola lettura e le istanze del flusso creato chiamando **GetRequestStream** sono di sola scrittura.  
+-   Quando si usa **WebRequest** e **WebResponse**, le istanze del flusso create chiamando **GetResponseStream** sono di sola lettura e quelle create chiamando **GetRequestStream** sono di sola scrittura.  
   
--   Utilizzare la classe <xref:System.IO.StreamReader> per rendere il codice più semplice.  Nell'esempio di codice riportato **StreamReader** per leggere un flusso ASCII\- codificato **WebResponse** nell'esempio non viene mostrata la richiesta\).  
+-   Usare la classe <xref:System.IO.StreamReader> per facilitare la codifica. L'esempio di codice seguente illustra come usare **StreamReader** per leggere un flusso con codifica ASCII da una **WebResponse** (l'esempio non include la creazione della richiesta).  
   
--   La chiamata a **GetResponse** può bloccare se le risorse di rete non sono disponibili.  È necessario utilizzare una richiesta asincrona con i metodi <xref:System.Net.WebRequest.EndGetResponse%2A> e <xref:System.Net.WebRequest.BeginGetResponse%2A>.  
+-   La chiamata a **GetResponse** può bloccarsi se non sono disponibili risorse di rete. È consigliabile prendere in considerazione l'uso di una richiesta asincrona con i metodi <xref:System.Net.WebRequest.BeginGetResponse%2A> e <xref:System.Net.WebRequest.EndGetResponse%2A>.  
   
--   La chiamata a **GetRequestStream** può bloccarsi mentre la connessione al server viene creata.  È necessario utilizzare una richiesta asincrona del flusso dei metodi <xref:System.Net.WebRequest.EndGetRequestStream%2A> e <xref:System.Net.WebRequest.BeginGetRequestStream%2A>.  
+-   La chiamata a **GetRequestStream** può bloccarsi mentre viene creata la connessione al server. È consigliabile prendere in considerazione l'uso di una richiesta asincrona per il flusso con i metodi <xref:System.Net.WebRequest.BeginGetRequestStream%2A> e <xref:System.Net.WebRequest.EndGetRequestStream%2A>.  
   
 ```csharp  
 // Create a response object.  
@@ -110,6 +114,7 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Procedura: Richiedere dati con la classe WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
  [Richiesta di dati](../../../docs/framework/network-programming/requesting-data.md)
+

@@ -1,34 +1,37 @@
 ---
-title: "Elemento &lt;MethodInstantiation&gt; (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;MethodInstantiation&gt; (.NET Native)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d247b2ea8a1b6a908e3eee5082638813545f144d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Elemento &lt;MethodInstantiation&gt; (.NET Native)
+# <a name="ltmethodinstantiationgt-element-net-native"></a>Elemento &lt;MethodInstantiation&gt; (.NET Native)
 Applica i criteri di reflection di runtime a un metodo generico costruito.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-  
 <MethodInstantiation Name="method_name"  
                      Signature="method_signature"  
                      Arguments="method_arguments"  
                      Browse="policy_type"  
                      Dynamic="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -48,7 +51,7 @@ Applica i criteri di reflection di runtime a un metodo generico costruito.
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*nome_metodo*|Nome del metodo. Il tipo del metodo è definito dall'elemento padre [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) o [ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elemento.|  
+|*method_name*|Nome del metodo. Il tipo di metodo viene definito dall'elemento padre [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).|  
   
 ## <a name="signature-attribute"></a>Attributo Signature  
   
@@ -66,7 +69,7 @@ Applica i criteri di reflection di runtime a un metodo generico costruito.
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*policy_setting*|L'impostazione da applicare a questo tipo di criteri per il metodo. I valori consentiti sono `Auto`, `Excluded`, `Included` e `Required`. Per ulteriori informazioni, vedere [impostazioni dei criteri della direttiva di Runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|L'impostazione da applicare a questo tipo di criteri per il metodo. I valori consentiti sono `Auto`, `Excluded`, `Included` e `Required`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -75,14 +78,15 @@ Applica i criteri di reflection di runtime a un metodo generico costruito.
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo e a tutti i membri.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito e a tutti i membri.|  
   
 ## <a name="remarks"></a>Note  
  L'elemento `<MethodInstantiation>` prevale sui criteri di reflection di runtime del corrispondente metodo generico aperto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [File di configurazione di runtime direttive (RD. XML)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
  [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
- [<>\>Elemento](../../../docs/framework/net-native/method-element-net-native.md)
+ [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  (Impostazioni dei criteri delle direttive di runtime)  
+ [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)
+

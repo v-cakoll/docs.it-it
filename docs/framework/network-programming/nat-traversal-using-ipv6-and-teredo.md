@@ -1,60 +1,65 @@
 ---
-title: "Attraversamento NAT con IPv6 e Teredo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Attraversamento NAT con IPv6 e Teredo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
 caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d1730e5af0ee3f837f46071992c80e81b118af1e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Attraversamento NAT con IPv6 e Teredo
-I miglioramenti sono stati fatti che forniscono il supporto per l'attraversamento di \(NAT\) di conversione indirizzo di rete.  Queste modifiche sono progettate per l'utilizzo con la IPv6 e Teredo, ma sono applicabili anche ad altre tecnologie di tunneling IP.  Questi miglioramenti influiscono sulle classi in <xref:System.Net> e gli spazi dei nomi correlati.  
+# <a name="nat-traversal-using-ipv6-and-teredo"></a>Attraversamento NAT con IPv6 e Teredo
+Sono stati introdotti miglioramenti per il supporto dell'attraversamento NAT (Network Address Translation). Queste modifiche sono progettate per l'uso con IPv6 e Teredo, ma sono applicabili anche ad altre tecnologie di tunneling IP. Questi miglioramenti hanno effetti sulle classi in <xref:System.Net> e sugli spazi dei nomi correlati.  
   
- Tali modifiche possono influire sulle applicazioni client e server che decidere di utilizzare tecnologie di tunneling IP.  
+ Queste modifiche possono influire sulle applicazioni client e server che prevedono di usare tecnologie di tunneling IP.  
   
- Le modifiche all'attraversamento NAT di supporto sono disponibili solo per le applicazioni con.NET Framework versione 4.  Queste funzionalità non disponibili nelle versioni precedenti di .NET Framework.  
+ Le modifiche per il supporto dell'attraversamento NAT sono disponibili solo per le applicazioni che usano .NET Framework versione 4. Queste funzionalità non sono disponibili nelle versioni precedenti di .NET Framework.  
   
-## Panoramica  
- La versione 4 \(IPv4\) del protocollo internet ha definito da un indirizzo IPv4 come 32 bit.  Pertanto, in l IPv4 supporta su 4 miliardi di indirizzi IP univoci \(2^32\).  Come numero di computer e dispositivi di rete su Internet espanso negli anni 90, i limiti dello spazio degli indirizzi IPv4 sono divengono evidenti.  
+## <a name="overview"></a>Panoramica  
+ Internet Protocol versione 4 (IPv4) definisce un indirizzo IPv4 con una lunghezza di 32 bit. Di conseguenza, IPv4 supporta circa 4 miliardi di indirizzi IP univoci (2^32). Con la grande crescita del numero di computer e dispositivi di rete in Internet negli anni '90 sono diventati evidenti i limiti dello spazio indirizzi IPv4.  
   
- Una delle numerose tecniche utilizzate per estendere la durata dell'IPv4 è stata di implementare il NAT per consentire a un singolo indirizzo IP pubblico univoco rappresenti un numero elevato di indirizzi IP privati \(Intranet privato\).  Gli indirizzi IP privati del dispositivo di NAT condividono il singolo indirizzo pubbliche IPv4.  Il dispositivo di NAT può essere un dispositivo hardware dedicato \(un punto di accesso wireless e un router economici, ad esempio\) o un computer che esegue un servizio per fornire il NAT.  Un dispositivo o un servizio per questo indirizzo IP pubblico converte i pacchetti di rete IP tra l'area Intranet pubbliche e private.  
+ Una delle diverse tecniche usate per estendere la durata di IPv4 è stata distribuire NAT per consentire a un singolo indirizzo IP pubblico univoco di rappresentare un numero elevato di indirizzi IP privati (Intranet privata). Gli indirizzi IP privati dietro il dispositivo NAT condividono un singolo indirizzo IPv4 pubblico. Il dispositivo NAT può essere un dispositivo hardware dedicato (ad esempio, un punto di accesso wireless e router economico) o un computer che esegue un servizio per fornire funzionalità NAT. Un dispositivo o un servizio per questo indirizzo IP pubblico converte i pacchetti di rete IP tra la rete Internet pubblica e la rete Intranet privata.  
   
- Questo schema è appropriato per le applicazioni client in esecuzione su una rete Intranet privato che invia richieste agli indirizzi IP \(in genere server\) in Internet.  Il dispositivo o il server di NAT può mantenere un mapping delle richieste del client quando una risposta le viene restituita conosce dove inviare la risposta.  Ma questa combinazione pone problemi per le applicazioni eseguite in Internet privato del dispositivo di NAT che desiderano fornire servizi, attendono pacchetti e rispondono.  Ciò è particolarmente l'argomento per le applicazioni peer\-to\-peer.  
+ Questo schema è appropriato per le applicazioni client eseguite sulla rete Intranet privata che inviano richieste ad altri indirizzi IP (in genere i server) su Internet. Il dispositivo NAT o il server può mantenere aggiornato un mapping delle richieste client, in modo che alla restituzione di una risposta sappia dove inviarla. Ma questo schema pone problemi per le applicazioni in esecuzione nella rete Intranet privata dietro il dispositivo NAT che vogliono fornire servizi, restare in ascolto dei pacchetti e rispondere. Ciò è vero in particolare per le applicazioni peer-to-peer.  
   
- Il protocollo IPv6 definita lungo un indirizzo IPv4 come 128 bit.  Pertanto, il IPv6 supporta molto grande spazio degli indirizzi IP di indirizzi univoci 3,2 x 10^38 \(2^128\).  Con lo spazio degli indirizzi di questa dimensione, è possibile per ogni dispositivo connesso a Internet da fornire un indirizzo univoco.  Esistono problemi.  Gran parte del mondo continua a utilizzare solo il IPv4.  In particolare, molti router esistenti e i punti di accesso wireless utilizzati dalle piccole imprese, le organizzazioni e da quelli non supportano in IPv6.  Anche alcuni provider di servizi Internet che eseguono i clienti non supportano o non hanno configurato il supporto per IPv6.  
+ Il protocollo IPv6 definisce un indirizzo IPv4 con una lunghezza di 128 bit. Di conseguenza, IPv6 supporta uno spazio indirizzi IP molto grande, pari a 3,2 x 10^38 indirizzi univoci (2^128). Con uno spazio indirizzi di queste dimensioni, a ogni dispositivo connesso a Internet può essere assegnato un indirizzo univoco. Ci sono però dei problemi. Gran parte del mondo continua a usare solo IPv4. In particolare, molti dei router e dei punti di accesso wireless esistenti usati da piccole imprese, organizzazioni e privati non supportano IPv6. Anche alcuni provider di servizi Internet che offrono i loro servizi a questo tipo di clienti non supportano o non hanno configurato il supporto per IPv6.  
   
- Diverse tecnologie di transizione IPv6 compilate eventi di tunneling gli indirizzi IPv6 in un pacchetto IPv4.  Queste tecnologie sono 6to4, ISATAP e di tunneling di Teredo che forniscono l'assegnazione e host \(host di indirizzo tunneling automatico per il traffico unicast IPv6 quando gli host IPv6 devono superare le reti IP4 per ottenere altre reti IPv6.  I pacchetti IPv6 vengono inviati con scavato il tunneling come pacchetti IPv4.  Diverse tecniche di tunneling vengono utilizzati che consentono all'attraversamento NAT per gli indirizzi IPv6 da un dispositivo di NAT.  
+ Sono state sviluppate varie tecnologie per la transizione a IPv6 per eseguire il tunneling di indirizzi IPv6 in un pacchetto IPv4. Queste tecnologie includono tunnel 6to4, ISATAP e Teredo che gestiscono l'assegnazione di indirizzi e il tunneling automatico da host a host per il traffico unicast IPv6 quando gli host IPv6 devono attraversare reti IPv4 per raggiungere altre reti IPv6. I pacchetti IPv6 vengono inviati tramite tunnel come pacchetti IPv4. Sono attualmente in uso varie tecniche di tunneling per consentire l'attraversamento NAT per gli indirizzi IPv6 attraverso un dispositivo NAT.  
   
- Il Teredo è una delle tecnologie di transizione IPv6 che porta la connettività IPv6 reti IPv4.  Il Teredo è documentato nello standard RFC 4380 pubblicato da Internet Engineering Task Force \(IETF\).  In Windows XP SP2 e versioni successive forniscono il supporto per un adattatore virtuale di Teredo che può fornire un indirizzo IPv6 pubblico nell'intervallo 2001:0::\/32.  Questo indirizzo IPv6 può essere utilizzato per ascoltare le connessioni in ingresso da Internet e può essere fornito ai client abilitati IPv6 che devono connettersi al servizio in ascolto.  Si libera un'applicazione da considerare eventuali come destinazione un computer protetto da un dispositivo di NAT, poiché l'applicazione può connettersi a tramite il relativo indirizzo di tipo Teredo IPv6.  
+ Teredo è una delle tecnologie per la transizione a IPv6 che rende disponibile la connettività IPv6 per le reti IPv4. Teredo è documentato nella specifica RFC 4380 pubblicata da Internet Engineering Task Force (IETF). Windows XP SP2 e versioni successive forniscono il supporto per una scheda Teredo virtuale che può fornire un indirizzo IPv6 pubblico nell'intervallo 2001:0::/32. Questo indirizzo IPv6 può essere usato per l'ascolto delle connessioni in ingresso da Internet e può essere fornito ai client abilitati per IPv6 che vogliono connettersi al servizio in ascolto. In questo modo, un'applicazione non deve preoccuparsi di come gestire l'indirizzo per un computer protetto da un dispositivo NAT, dato che può semplicemente connettersi a esso tramite il relativo indirizzo Teredo IPv6.  
   
-## Miglioramenti per supportare attraversamento NAT e Teredo  
- Miglioramenti vengono aggiunti a <xref:System.Net>, a <xref:System.Net.NetworkInformation>agli spazi dei nomi <xref:System.Net.Sockets> dell'attraversamento NAT supporto mediante IPv6 e Teredo.  
+## <a name="enhancements-to-support-nat-traversal-and-teredo"></a>Miglioramenti al supporto dell'attraversamento NAT e Teredo  
+ Sono stati introdotti miglioramenti per gli spazi dei nomi <xref:System.Net>, <xref:System.Net.NetworkInformation> e <xref:System.Net.Sockets> per il supporto dell'attraversamento NAT con IPv6 e Teredo.  
   
- Diversi metodi vengono aggiunti alla classe <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=fullName> per ottenere l'elenco di indirizzi IP unicasthost.  Inizia al metodo <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> una richiesta asincrona di recuperare la tabella di indirizzi IP unicast stabili nel computer locale.  Fine del metodo <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> di una richiesta asincrona in attesa di recuperare la tabella di indirizzi IP unicast stabili nel computer locale.  Il metodo <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> è una richiesta sincrona di recuperare la tabella di indirizzi IP unicast stabili nel computer locale, in attesa finché la tabella address non si stabilizzare se necessario.  
+ Sono stati aggiunti vari metodi alla classe <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=fullName> per ottenere l'elenco di indirizzi IP unicast nell'host. Il metodo <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> avvia una richiesta asincrona per recuperare la tabella di indirizzi IP unicast stabili nel computer locale. Il metodo <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> termina una richiesta asincrona in sospeso per recuperare la tabella di indirizzi IP unicast stabili nel computer locale. Il metodo <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> è una richiesta sincrona per recuperare la tabella di indirizzi IP unicast stabili nel computer locale, aspettando che la tabella di indirizzi si stabilizzi se necessario.  
   
- La proprietà <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=fullName> può essere utilizzata per determinare se <xref:System.Net.IPAddress> è un indirizzo di tipo Teredo IPv6.  
+ È possibile usare la proprietà <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=fullName> per determinare se un <xref:System.Net.IPAddress> è un indirizzo IPv6 Teredo.  
   
- Utilizzando questi nuovi metodi della classe <xref:System.Net.NetworkInformation.IPGlobalProperties> combinate alla proprietà <xref:System.Net.IPAddress.IsIPv6Teredo%2A> consente a un'applicazione trovare facilmente l'indirizzo di tipo Teredo.  Un'applicazione è in genere sufficiente conoscere l'indirizzo di tipo Teredo locale se vengono passate queste informazioni alle applicazioni remote.  Ad esempio, un'applicazione peer\-to\-peer può inviare tutti gli indirizzi IPv6 in un server di schema che può quindi inoltrarli ad altri scruta per consentire la comunicazione diretta.  
+ L'uso di questi nuovi metodi della classe <xref:System.Net.NetworkInformation.IPGlobalProperties> in combinazione con la proprietà <xref:System.Net.IPAddress.IsIPv6Teredo%2A> consente a un'applicazione di trovare con facilità l'indirizzo Teredo. Un'applicazione ha in genere solo l'esigenza di conoscere l'indirizzo Teredo locale se comunica queste informazioni ad applicazioni remote. Ad esempio, un'applicazione peer-to-peer potrebbe inviare tutti i relativi indirizzi IPv6 a un server di matchmaking che può quindi inoltrarli agli altri peer per consentire la comunicazione diretta.  
   
- Un'applicazione deve in genere impostarne il servizio in ascolto di ascolto su <xref:System.Net.IPAddress.IPv6Any?displayProperty=fullName> anziché l'indirizzo di tipo Teredo locale.  Se pertanto un client remoto o un peer ha una route mediante IPv6 all'host del servizio in ascolto, il client o il peer può connettersi direttamente mediante IPv6 e non devono utilizzare il Teredo eventi di tunneling pacchetti.  
+ Un'applicazione deve impostare normalmente il servizio di ascolto per l'ascolto di <xref:System.Net.IPAddress.IPv6Any?displayProperty=fullName> anziché dell'indirizzo Teredo locale. In questo modo, se un client remoto o peer dispone di una route IPv6 diretta all'host del servizio di ascolto, il client o il peer può connettersi direttamente tramite IPv6 senza dover usare Teredo per il tunneling dei pacchetti.  
   
- Per le applicazioni TCP, la classe <xref:System.Net.Sockets.TcpListener?displayProperty=fullName> dispone di un metodo <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> per consentire all'attraversamento NAT.  Per le applicazioni di UDP, la classe <xref:System.Net.Sockets.UdpClient?displayProperty=fullName> dispone di un metodo <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A> per consentire all'attraversamento NAT.  
+ Per le applicazioni TCP, la classe <xref:System.Net.Sockets.TcpListener?displayProperty=fullName> include un metodo <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A> per abilitare l'attraversamento NAT. Per le applicazioni UDP, la classe <xref:System.Net.Sockets.UdpClient?displayProperty=fullName> include un metodo <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A> per abilitare l'attraversamento NAT.  
   
- Per le applicazioni che utilizzano <xref:System.Net.Sockets.Socket?displayProperty=fullName> e le classi correlate, è <xref:System.Net.Sockets.Socket.GetSocketOption%2A> e i metodi <xref:System.Net.Sockets.Socket.SetSocketOption%2A> possono essere utilizzati con l'opzione di socket <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName> eseguire una query, abilitare, disabilitare o attraversamento NAT.  
+ Per le applicazioni che usano la classe <xref:System.Net.Sockets.Socket?displayProperty=fullName> e le classi correlate, è possibile usare i metodi <xref:System.Net.Sockets.Socket.GetSocketOption%2A> e <xref:System.Net.Sockets.Socket.SetSocketOption%2A> con l'opzione socket <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=fullName> per ottenere, abilitare o disabilitare l'attraversamento NAT.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=fullName>   
  <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=fullName>   
  <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=fullName>   
@@ -63,3 +68,4 @@ I miglioramenti sono stati fatti che forniscono il supporto per l'attraversament
  <xref:System.Net.Sockets.Socket.SetIPProtectionLevel%2A?displayProperty=fullName>   
  <xref:System.Net.Sockets.TcpListener.AllowNatTraversal%2A?displayProperty=fullName>   
  <xref:System.Net.Sockets.UdpClient.AllowNatTraversal%2A?displayProperty=fullName>
+

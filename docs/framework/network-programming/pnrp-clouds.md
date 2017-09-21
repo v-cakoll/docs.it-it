@@ -1,46 +1,52 @@
 ---
-title: "Cloud PNRP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Cloud PNRP
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 17770f43d04916ae55b1b62010c8b43e0e4c95e3
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Cloud PNRP
-Un PNRP “cloud„ rappresenta un set di nodi che possono comunicare tramite la rete.  Il termine “cloud„ è sinonimo con “mesh peer„ e “il grafico peer\-to\-peer„.  
+# <a name="pnrp-clouds"></a>Cloud PNRP
+Un "cloud" PNRP rappresenta un set di nodi che possono comunicare tra loro attraverso la rete. Il termine "cloud" è sinonimo di "rete di peer" e "grafico peer-to-peer".  
   
- La comunicazione tra nodi deve essere sempre contenuta in una stessa area.  Un'istanza di <xref:System.Net.PeerToPeer.Cloud> è identificata in modo univoco in base al proprio nome, che rileva la differenza tra maiuscole e minuscole.  Un determinato peer o nodo può essere connesso a più aree.  
+ Le comunicazioni tra i nodi non devono mai attraversare un cloud per raggiungerne un altro. Un'istanza di <xref:System.Net.PeerToPeer.Cloud> viene identificata in modo univoco in base al relativo nome, con distinzione tra maiuscole e minuscole. Un singolo peer o nodo può essere connesso a più di un cloud.  
   
- Le aree sono fortemente correlate alle interfacce di rete.  Il caso di un computer multi\-homed con due schede di rete collegato a subnet diverse prevede tre aree: una per ognuno degli indirizzi locali rispetto al collegamento per ogni interfaccia e un'unica area di ambito globale.  
+ I cloud sono strettamente legati alle interfacce di rete.  In un computer multihomed con due schede di rete collegate a subnet diverse, verranno restituiti tre cloud (uno per ognuno degli indirizzi locali al collegamento per ogni interfaccia) e un singolo cloud con ambito globale.  
   
- Cloud “ambiti„ di utilizzare tre di PNRP, in cui un ambito è un raggruppamento dei computer che possono cercarsi:  
+ PNRP usa tre "ambiti" di cloud. In questo contesto l'ambito è un raggruppamento di computer in grado di individuarsi reciprocamente:  
   
--   Il cloud complessivo corrisponde all'ambito globale di indirizzo IPv6 e agli indirizzi globali e rappresenta tutti i computer nell'intero Internet IPv6.  Esiste un solo cloud globale.  
+-   Il cloud globale corrisponde all'ambito globale di indirizzi IPv6 e indirizzi globali; rappresenta tutti i computer sull'intera Internet IPv6. Esiste solo un unico cloud globale.  
   
--   Il cloud relativi locale corrisponde a livello di indirizzo IPv6 relativi locale e agli indirizzi relativi locale.  Un cloud relativi locale a un collegamento specifico, che in genere è lo stesso della subnet locale associato.  Possono essere presenti più cloud relativi locale.  
+-   Il cloud locale al collegamento corrisponde all'ambito di indirizzi IPv6 locali al collegamento e di indirizzi locali al collegamento. Un cloud locale al collegamento riguarda un collegamento specifico, che generalmente coincide con la subnet collegata localmente. Sono possibili più cloud locali al collegamento.  
   
- Un terzo cloud, il cloud directory specifica, corrisponde a livello di indirizzo IPv6 del sito e indirizzi di directory locale.  Questo cloud è stato deprecato, sebbene sia supportato in PNRP.  
+ Un terzo cloud specifico del sito corrisponde all'ambito di indirizzi IPv6 del sito e indirizzi locali di sito. Questo cloud è deprecato, ma è ancora supportato in PNRP.  
   
-## Cloud  
- I cloud di PNRP sono rappresentati da istanze della classe <xref:System.Net.PeerToPeer.Cloud>.  I gruppi di cloud stato utilizzato un peer sono rappresentati da istanze della classe enumerabile <xref:System.Net.PeerToPeer.CloudCollection>.  Le raccolte di cloud di PNRP noti al peer corrente possono essere ottenute chiamando il metodo <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A>.  
+## <a name="clouds"></a>Cloud  
+ I cloud PNRP sono rappresentati da istanze della classe <xref:System.Net.PeerToPeer.Cloud>. I gruppi di cloud usati come peer sono rappresentati da istanze della classe enumerabile <xref:System.Net.PeerToPeer.CloudCollection>. Le raccolte di cloud PNRP note al peer corrente possono essere ottenute chiamando il metodo statico <xref:System.Net.PeerToPeer.Cloud.GetAvailableClouds%2A>.  
   
- I singoli cloud abbiano nomi univoci, rappresentati come stringa Unicode a 256 caratteri.  Questi nomi, con l'ambito suddetto, vengono utilizzati per creare istanze univoche tramite classe cloud.  Queste istanze possono essere serializzati e si compila nuovamente per l'utilizzo persistente.  
+ I singoli cloud hanno nomi univoci, rappresentati come una stringa Unicode di 256 caratteri. Questi nomi, insieme all'ambito sopra indicato, vengono usati per costruire istanze univoche della classe Cloud. Queste istanze possono essere serializzate e ricostruite per un utilizzo permanente.  
   
- Un'istanza di tipo cloud viene creata una volta o estratto, i nomi del peer possono essere registrati con per creare una mesh dei peer noti.  
+ Dopo aver creato e ottenuto un'istanza di Cloud, i nomi di peer possono essere registrati per tale istanza per creare una rete di peer noti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.PeerToPeer.Cloud>   
- [Protocollo PNRP \(Peer Name Resolution Protocol\)](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+ [Protocollo PNRP (Peer Name Resolution Protocol)](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
+

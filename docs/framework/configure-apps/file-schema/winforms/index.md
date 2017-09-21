@@ -1,7 +1,8 @@
 ---
-title: Sezione di configurazione di Windows Form | Microsoft Docs
+title: Sezione di configurazione di Windows Form
 ms.custom: 
 ms.date: 04/07/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -10,25 +11,25 @@ ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9ff485d8791960f24f727cfc60fbc5ab77203a92
-ms.openlocfilehash: fc062bf205db5b2f8883785eb2656eb9d3d8ca16
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b83f00f82de727812c5737915a6dc35ec98e4734
 ms.contentlocale: it-it
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="windows-forms-configuration-section"></a>Sezione di configurazione di Windows Form
 Le impostazioni di configurazione di Windows Form consentono a un'app Windows Form di archiviare e recuperare informazioni sulle impostazioni dell'applicazione personalizzate, ad esempio il supporto di più monitor, il supporto di valori DPI alti e altre impostazioni di configurazione predefinite.
 
-Le impostazioni di configurazione dell'applicazione Windows Form sono archiviate in un elemento `System.Windows.Forms.ConfigurationSection` del file di configurazione.
+Le impostazioni di configurazione dell'applicazione Windows Form sono archiviate in un elemento `System.Windows.Forms.ApplicationConfigurationSection` del file di configurazione.
 
 ## <a name="syntax"></a>Sintassi
 
 ```xml
 <configuration>
-  \<System.Windows.Forms.ConfigurationSection>
+  <System.Windows.Forms.ApplicationConfigurationSection>
   ...
-  \</System.Windows.Forms.ConfigurationSection>
+  </System.Windows.Forms.ApplicationConfigurationSection>
 </configuration>
 ```
 
@@ -54,12 +55,12 @@ Elemento  |Descrizione |
 
 ## <a name="remarks"></a>Note
 
-A partire da .NET Framework 4.7, l'elemento `<System.Windows.Forms.ConfigurationSection>` consente di configurare le applicazioni Windows Form in modo da sfruttare i vantaggi delle funzionalità aggiunte nelle versioni recenti di .NET Framework. 
+A partire da .NET Framework 4.7, l'elemento `<System.Windows.Forms.ApplicationConfigurationSection>` consente di configurare le applicazioni Windows Form in modo da sfruttare i vantaggi delle funzionalità aggiunte nelle versioni recenti di .NET Framework. 
 
-L'elemento `<System.Windows.Forms.ConfigurationSection>` può includere uno o più elementi [ `<add>` ](../../../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md) figlio, ognuno dei quali definisce un'impostazione di configurazione specifica.
+L'elemento `<System.Windows.Forms.ApplicationConfigurationSection>` può includere uno o più elementi [ `<add>` ](../../../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md) figlio, ognuno dei quali definisce un'impostazione di configurazione specifica.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Schema del file di configurazione](../index.md)
+[Schema dei file di configurazione](../index.md)   
 [Supporto di valori DPI alti in Windows Form](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
 

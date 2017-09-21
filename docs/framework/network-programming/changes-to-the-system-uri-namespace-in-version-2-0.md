@@ -1,31 +1,36 @@
 ---
-title: "Modifiche apportate allo spazio dei nomi System.Uri nella versione 2.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Modifiche apportate allo spazio dei nomi System.Uri nella versione 2.0
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Modifiche apportate allo spazio dei nomi System.Uri nella versione 2.0
-Diverse modifiche apportate alla classe <xref:System.Uri?displayProperty=fullName>.  Queste modifiche hanno corretto il comportamento non corretto, usabilità avanzato e con sicurezza avanzata.  
+# <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Modifiche apportate allo spazio dei nomi System.Uri nella versione 2.0
+Alla classe <xref:System.Uri?displayProperty=fullName> sono state apportate alcune modifiche allo scopo di correggerne il comportamento nonché di aumentarne le possibilità d'utilizzo e il livello di sicurezza.  
   
-## Membri obsoleti e deprecato  
+## <a name="obsolete-and-deprecated-members"></a>Membri obsoleti e deprecati  
  Costruttori:  
   
--   Tutti i costruttori che accettano un parametro `dontEscape`.  
+-   Tutti i costruttori che accettano `dontEscape` come parametro.  
   
  Metodi:  
   
@@ -45,39 +50,40 @@ Diverse modifiche apportate alla classe <xref:System.Uri?displayProperty=fullNam
   
 -   <xref:System.Uri.EscapeString%2A>  
   
-## Modifiche  
+## <a name="changes"></a>Modifiche  
   
--   Per gli schemi URI ritenuti di non disporre di una parte di query \(file, FTP e altre\), “?„ il carattere viene sempre utilizzato caratteri di escape e non è considerato l'inizio di una parte <xref:System.Uri.Query%2A>.  
+-   Nel caso di schemi URI in cui è notoriamente assente una parte relativa a query (file, ftp e altri), il punto interrogativo (?) deve essere sempre preceduto da un carattere di escape e non viene considerato come inizio di una parte <xref:System.Uri.Query%2A>.  
   
--   Per gli URI impliciti del file \(nel formato “c:\\directory\\file @name.txt„\), il \(" \# "\) del carattere del frammento viene utilizzato caratteri di escape sempre a meno che non utilizzare caratteri di escapee completo sia necessario o <xref:System.Uri.LocalPath%2A> è `true`.  
+-   Per gli URI di file impliciti, nel formato c:\directory\file@name.txt, il cancelletto (#) viene sempre preceduto da un carattere di escape tranne nei casi in cui è esplicitamente richiesta l'assenza totale di caratteri di escape oppure <xref:System.Uri.LocalPath%2A> è `true`.  
   
--   Il supporto di hostname UNC è stato rimosso, la specifica IDN per la rappresentazione di hostname internazionali è stata adottata.  
+-   Il supporto per nomi host UNC non è più disponibile. Per la rappresentazione dei nomi host internazionali è ora stata adottata la specifica IDN.  
   
--   <xref:System.Uri.LocalPath%2A> restituisce sempre una stringa completa senza codice di escape.  
+-   <xref:System.Uri.LocalPath%2A> restituisce sempre una stringa senza alcun carattere di escape.  
   
--   <xref:System.Uri.ToString%2A> non utilizzare caratteri di escape un “%„ utilizzato caratteri di escape, “? „, o “\#„.  
+-   <xref:System.Uri.ToString%2A> non rimuove l'eventuale carattere di escape che precede il segno di percentuale (%), il punto interrogativo (?) o il cancelletto (#).  
   
--   <xref:System.Uri.Equals%2A> ora include parte <xref:System.Uri.Query%2A> nel controllo di uguaglianza.  
+-   <xref:System.Uri.Equals%2A> include ora la parte <xref:System.Uri.Query%2A> nel controllo di uguaglianza.  
   
--   “\=\=„ Operatori e “\! \=„ vengono sostituiti e collegati a <xref:System.Uri.Equals%2A> il metodo.  
+-   Gli operatori == e != sono sottoposti a override e collegati al metodo <xref:System.Uri.Equals%2A>.  
   
--   <xref:System.Uri.IsLoopback%2A> ora disponibili i risultati coerenti.  
+-   <xref:System.Uri.IsLoopback%2A> è ora in grado di generare risultati coerenti.  
   
--   L'uri “`file:///path`„ non è più convertito in “file:\/\/path„.  
+-   L'URI `file:///path` non viene più convertito in file://path.  
   
--   “\#„ viene riconosciuto come carattere di terminazione di nome host.  Ovvero “http:\/\/consoto.com\#fragment„ viene convertito a “http:\/\/contoso.com\/\#fragment„.  
+-   Il cancelletto (#) viene ora riconosciuto come carattere di terminazione di nome host. In altre parole, http://contoso.com#frammento viene ora convertito in http://contoso.com/#frammento.  
   
--   Un bug quando si combinano un URI base con un frammento è stato corretto.  
+-   È stato corretto un bug relativo alla combinazione di un URI di base con un frammento.  
   
--   Un bug in <xref:System.Uri.HostNameType%2A> è corretto.  
+-   È stato corretto un bug in <xref:System.Uri.HostNameType%2A>.  
   
--   Un bug nell'analisi di NNTP è corretto.  
+-   È stato corretto un bug nell'analisi NNTP.  
   
--   Un URI del form HTTP: contoso.com ora genera un'eccezione di analisi.  
+-   Un URI nel formato HTTP:contoso.com genera ora un'eccezione di analisi.  
   
--   Framework gestisce correttamente il userinfo in un URI.  
+-   .NET Framework gestisce correttamente le informazioni utente in un URI.  
   
--   La compressione di percorso dell'URI è fissa in modo da non consentire a un URI interrotto il file system sulla radice.  
+-   La compressione dei percorsi URI è stata corretta in modo da impedire a un URI interrotto di attraversare il file system al di sopra della radice.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Uri?displayProperty=fullName>
+

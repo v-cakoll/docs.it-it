@@ -1,41 +1,46 @@
 ---
-title: "Procedura: Impostare criteri di cache predefiniti basati sull&#39;ora per un&#39;applicazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "criteri di cache basati sull'ora"
-  - "cache [.NET Framework], criteri basati sull'ora"
-  - "criteri di cache basati sull'ora predefiniti"
+title: 'Procedura: Impostare criteri di cache predefiniti basati sul tempo per un''applicazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- time-based cache policies
+- cache [.NET Framework], time-based policies
+- default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f462c55919025b92014a99d73b9a6b779465f98e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Procedura: Impostare criteri di cache predefiniti basati sull&#39;ora per un&#39;applicazione
-Criteri della cache basati sull'ora predefiniti consentono a un'applicazione del comportamento della cache definito dalle intestazioni inviate con la risorsa memorizzata nella cache e il comportamento della cache definito in parti 13 e 14 dello standard RFC 2616, disponibile su [http:\/\/www.ietf.org](http://www.ietf.org/).  Questo è il comportamento appropriato della cache per la maggior parte delle applicazioni.  
+# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Procedura: Impostare criteri di cache predefiniti basati sul tempo per un'applicazione
+I criteri di cache basati sul tempo predefiniti consentono di definire il comportamento della cache per un'applicazione in base alle intestazioni inviate con la risorsa memorizzata nella cache e al comportamento della cache definito nelle sezioni 13 e 14 del documento RFC 2616, disponibile all'indirizzo [http://www.ietf.org](http://www.ietf.org/). Questo è il comportamento della cache appropriato per la maggior parte delle applicazioni.  
   
-### Per impostare i criteri automatici predefiniti per un'applicazione  
+### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Per impostare i criteri automatici predefiniti per un'applicazione  
   
-1.  Creare un oggetto basati sull'ora di criteri predefinito.  
+1.  Creare un oggetto criteri basati sul tempo predefinito.  
   
-2.  Impostare l'oggetto di criteri come predefinito per il dominio applicazione.  
+2.  Impostare l'oggetto criteri come predefinito per il dominio dell'applicazione.  
   
-## Esempio  
- I due esempi riportati in questa sezione producono i criteri identici.  
+## <a name="example"></a>Esempio  
+ I due esempi in questa sezione producono criteri identici.  
   
- Nell'esempio vengono creati i criteri temporizzati predefiniti e impostarlo su come predefinito per il dominio applicazione.  
+ L'esempio seguente crea un criterio basato sul tempo predefinito e lo imposta come predefinito per il dominio dell'applicazione.  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy ()  
@@ -52,7 +57,7 @@ Public Shared Sub SetDefaultTimeBasedPolicy ()
 End Sub  
 ```  
   
- È inoltre possibile creare criteri della cache basati sull'ora predefiniti utilizzando la classe <xref:System.Net.Cache.RequestCachePolicy> come illustrato nel seguente esempio:  
+ È anche possibile creare criteri di cache basati sul tempo predefiniti usando la classe <xref:System.Net.Cache.RequestCachePolicy> come illustrato nell'esempio seguente:  
   
 ```csharp  
 public static void SetDefaultTimeBasedPolicy2()  
@@ -67,12 +72,12 @@ Public Shared Sub SetDefaultTimeBasedPolicy2()
     Dim policy As New RequestCachePolicy()  
     HttpWebRequest.DefaultCachePolicy = policy  
 End Sub  
-  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)   
  [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [Elemento \<requestCaching\> \(Impostazioni di rete\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [Criteri di cache basati sul tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [Elemento \<requestCaching> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

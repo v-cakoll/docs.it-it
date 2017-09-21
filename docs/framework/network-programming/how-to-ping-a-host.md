@@ -1,30 +1,35 @@
 ---
-title: "Procedura: Eseguire il ping di un host | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Ping"
+title: 'Procedura: Eseguire il ping di un host'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 96ce0167b1e382759c2bef89bc5677df51c1271d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Procedura: Eseguire il ping di un host
-In questo esempio viene illustrato come eseguire il ping un host remoto.  
+# <a name="how-to-ping-a-host"></a>Procedura: Eseguire il ping di un host
+Questo esempio mostra come eseguire il ping di un host remoto.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 using System;  
@@ -130,7 +135,8 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio presenta i requisiti seguenti:  
   
--   Riferimenti agli spazi dei nomi **System.Net**.
+-   Riferimenti allo spazio dei nomi **System.Net**.
+

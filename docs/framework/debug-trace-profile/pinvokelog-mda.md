@@ -1,46 +1,51 @@
 ---
-title: "pInvokeLog MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "signatures, platform invoke"
-  - "MDAs (managed debugging assistants), platform invoke"
-  - "platform invoke, run-time errors"
-  - "platform invoke log"
-  - "PInvokeLog MDA"
-  - "managed debugging assistants (MDAs), platform invoke"
+title: MDA pInvokeLog
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- signatures, platform invoke
+- MDAs (managed debugging assistants), platform invoke
+- platform invoke, run-time errors
+- platform invoke log
+- PInvokeLog MDA
+- managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1856fd25ca54b456176cf88a28968cf83696fa54
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# pInvokeLog MDA
-L'assistente al debug gestito `pInvokeLog` viene attivato per ogni firma univoca di P\/Invoke utilizzata durante l'esecuzione.  
+# <a name="pinvokelog-mda"></a>MDA pInvokeLog
+L'assistente al debug gestito `pInvokeLog` viene attivato per ogni firma platform invoke univoca usata durante l'esecuzione.  
   
-## Effetto sul runtime  
- Questo assistente al debug gestito non produce effetti su CLR.  
+## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
+ L'assistente al debug gestito non ha alcun effetto su CLR.  
   
-## Output  
- Un messaggio in cui viene indicata la firma di P\/Invoke utilizzata durante l'esecuzione.  
+## <a name="output"></a>Output  
+ Un messaggio che indica la firma platform invoke usata durante l'esecuzione.  
   
-## Configurazione  
- Ogni elemento corrispondente filtra i file dll con cui vengono effettuate le chiamate di P\/Invoke.  
+## <a name="configuration"></a>Configurazione  
+ Ogni elemento match corrispondente filtra i file DLL per cui vengono effettuate chiamate di platform invoke.  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <pInvokeLog>  
@@ -53,6 +58,7 @@ L'assistente al debug gestito `pInvokeLog` viene attivato per ogni firma univoca
 </mdaConfig>  
 ```  
   
-## Vedere anche  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Consuming Unmanaged DLL Functions](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Utilizzo di funzioni di DLL non gestite](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+

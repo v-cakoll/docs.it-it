@@ -1,32 +1,40 @@
 ---
-title: Comando dotnet-clean - Interfaccia della riga di comando di .NET Core
-description: Il comando dotnet-clean consente di pulire la directory corrente.
-keywords: dotnet-clean, interfaccia della riga di comando, comando dell'interfaccia della riga di comando, .NET Core
-author: blackdwarf
+title: Comando dotnet clean - Interfaccia della riga di comando di .NET Core
+description: Il comando dotnet clean consente di pulire la directory corrente.
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: eff65fa1-bab4-4421-8260-d0a284b690b2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 10222781d5bff596d1b7883bc73097758e878235
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 4836f07ec1a8b59c343b4d0181587e602f61d45e
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
-
 # <a name="dotnet-clean"></a>dotnet-clean
+
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Nome
 
-`dotnet-clean`: pulisce l'output di un progetto. 
+`dotnet clean`: pulisce l'output di un progetto.
 
 ## <a name="synopsis"></a>Riepilogo
 
-`dotnet clean [<PROJECT>] [-o|--output] [-f|--framework] [-c|--configuration] [-v|--verbosity] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+```
+dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-v|--verbosity]
+dotnet clean [-h|--help]
+```
+---
 
 ## <a name="description"></a>Descrizione
 
@@ -40,6 +48,16 @@ Progetto MSBuild da pulire. Se non viene specificato un file di progetto, MSBuil
 
 ## <a name="options"></a>Opzioni
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+`-c|--configuration {Debug|Release}`
+
+Definisce la configurazione di compilazione. Il valore predefinito è `Debug`. Se è stata specificata durante la fase di compilazione, questa opzione è necessaria soltanto al momento della pulizia.
+
+`-f|--framework <FRAMEWORK>`
+
+[Framework](../../standard/frameworks.md) specificato in fase di compilazione. Il framework deve essere definito nel [file di progetto](csproj.md). Se il framework è stato specificato in fase di compilazione, è necessario specificarlo al momento della pulizia.
+
 `-h|--help`
 
 Stampa una breve guida per il comando.
@@ -48,17 +66,37 @@ Stampa una breve guida per il comando.
 
 Directory in cui vengono inseriti gli output di compilazione. Se al momento della compilazione del progetto è stato specificato il framework, specificare l'opzione `-f|--framework <FRAMEWORK>` con l'opzione della directory di output.
 
-`-f|--framework <FRAMEWORK>`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
-[Framework](../../standard/frameworks.md) specificato in fase di compilazione. Il framework deve essere definito nel [file di progetto](csproj.md). Se il framework è stato specificato in fase di compilazione, è necessario specificarlo al momento della pulizia.
-
-`-c|--configuration <CONFIGURATION>`
-
-Definisce la configurazione. Se omessa, il valore predefinito è `Debug`. Se è stata specificata durante la fase di compilazione, questa proprietà è necessaria soltanto al momento della pulizia.
+Elimina la cartella di output del runtime specificato. Viene usato durante la creazione di una [distribuzione indipendente](../deploying/index.md#self-contained-deployments-scd).
 
 `-v|--verbosity <LEVEL>`
 
 Imposta il livello di dettaglio del comando. I livelli consentiti sono q[uiet], m[inimal], n[ormal], d[etailed] e diag[nostic].
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-c|--configuration {Debug|Release}`
+
+Definisce la configurazione di compilazione. Il valore predefinito è `Debug`. Se è stata specificata durante la fase di compilazione, questa opzione è necessaria soltanto al momento della pulizia.
+
+`-f|--framework <FRAMEWORK>`
+
+[Framework](../../standard/frameworks.md) specificato in fase di compilazione. Il framework deve essere definito nel [file di progetto](csproj.md). Se il framework è stato specificato in fase di compilazione, è necessario specificarlo al momento della pulizia.
+
+`-h|--help`
+
+Stampa una breve guida per il comando.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Directory in cui vengono inseriti gli output di compilazione. Se al momento della compilazione del progetto è stato specificato il framework, specificare l'opzione `-f|--framework <FRAMEWORK>` con l'opzione della directory di output.
+
+`-v|--verbosity <LEVEL>`
+
+Imposta il livello di dettaglio del comando. I livelli consentiti sono q[uiet], m[inimal], n[ormal], d[etailed] e diag[nostic].
+
+---
 
 ## <a name="examples"></a>Esempi
 

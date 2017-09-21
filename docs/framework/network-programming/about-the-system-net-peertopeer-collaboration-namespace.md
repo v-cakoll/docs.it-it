@@ -1,53 +1,59 @@
 ---
-title: "Informazioni sullo spazio dei nomi System.Net.PeerToPeer.Collaboration | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Informazioni sullo spazio dei nomi System.Net.PeerToPeer.Collaboration
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f446e20f37a83e9effd2a378ce576640bca99763
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Informazioni sullo spazio dei nomi System.Net.PeerToPeer.Collaboration
-Lo spazio dei nomi <xref:System.Net.PeerToPeer.Collaboration> fornisce classi e interfacce API utilizzati per distribuire le attività peer di collaborazione utilizzando l'infrastruttura peer\-to\-peer di collaborazione.  
+# <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>Informazioni sullo spazio dei nomi System.Net.PeerToPeer.Collaboration
+Lo spazio dei nomi <xref:System.Net.PeerToPeer.Collaboration> offre classi e API che consentono di implementare attività di collaborazione peer usando l'infrastruttura di collaborazione peer-to-peer.  
   
-## Classi  
- Le classi principali utilizzate nell'implementazione di un'attività peer\-to\-peer di collaborazione sono:  
+## <a name="classes"></a>Classi  
+ Le principali classi usate nell'implementazione di un'attività di collaborazione peer-to-peer sono:  
   
--   <xref:System.Net.PeerToPeer.Collaboration.ContactManager>, che possono essere utilizzati per archiviare i contatti peer.  
+-   <xref:System.Net.PeerToPeer.Collaboration.ContactManager>, che consente di archiviare i contatti peer.  
   
--   <xref:System.Net.PeerToPeer.Collaboration.PeerApplication> in cui collaborare, ad esempio un gioco, un client di chat, o una soluzione di comunicazione.  
+-   <xref:System.Net.PeerToPeer.Collaboration.PeerApplication>, in cui è possibile collaborare, ad esempio un gioco, un client di chat o una soluzione di gestione delle conferenze.  
   
--   I peer che collaboreranno a un'attività.  Questi membri possono essere rappresentati come <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe>, oppure oggetti <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint>.  
+-   I peer che collaboreranno in un'attività  e che possono essere rappresentati come <xref:System.Net.PeerToPeer.Collaboration.PeerContact>, <xref:System.Net.PeerToPeer.Collaboration.PeerNearMe> o oggetti <xref:System.Net.PeerToPeer.Collaboration.PeerEndPoint>.  
   
--   La classe statica stessa <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration>, che specifica quali applicazioni sono disponibili e i peer partecipano essi.  
+-   La stessa classe statica <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration>, che specifica le applicazioni disponibili e i peer partecipanti ad ognuna di esse.  
   
- I metodi <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A> vengono utilizzati per richiedere i peer in una sessione di collaborazione.  Un peer chiamante può sottoscrivere un altro peer per gli eventi che il segnale aggiornaapplicazione, all'oggetto, o alle informazioni di presenza affiliate con la sessione di collaborazione.  Le classi presenza di specificare se <xref:System.Net.PeerToPeer.Collaboration.Peer> è disponibile per la collaborazione e la classe <xref:System.Net.PeerToPeer.Collaboration.PeerScope> viene utilizzata per specificare quanta partecipazione è consentita per un peer: <xref:System.Net.PeerToPeer.Collaboration.PeerScope> \(globale\), <xref:System.Net.PeerToPeer.Collaboration.PeerScope>subnet, \(\) o <xref:System.Net.PeerToPeer.Collaboration.PeerScope>.  
+ Per invitare i peer a una sessione di collaborazione vengono usati i metodi <xref:System.Net.PeerToPeer.Collaboration.PeerContact.Invite%2A>.  Un peer chiamante può sottoscrivere un altro peer a eventi che segnalano aggiornamenti a un oggetto o a un'applicazione o forniscono informazioni di presenza associate alla sessione di collaborazione. Le classi di presenza specificano se un <xref:System.Net.PeerToPeer.Collaboration.Peer> è disponibile per la collaborazione, mentre la classe <xref:System.Net.PeerToPeer.Collaboration.PeerScope> consente di specificare il tipo partecipazione consentita per un peer: <xref:System.Net.PeerToPeer.Collaboration.PeerScope.Internet> (globale), <xref:System.Net.PeerToPeer.Collaboration.PeerScope.NearMe>, (subnet) o <xref:System.Net.PeerToPeer.Collaboration.PeerScope.None>.  
   
- Una sessione di collaborazione comprende quattro passaggi:  
+ Una sessione di collaborazione si articola in quattro passaggi:  
   
--   Individuazione.  Individuare o pubblicare applicazioni, i peer e le informazioni di presenza.  Ad esempio, individuare altri utenti sulla subnet locale che esegue gli stessi installare giochi.  
+-   Individuazione. Individuare o pubblicare le applicazioni, i peer e le informazioni di presenza.  Ad esempio, trovare altre persone nella subnet locale con lo stesso gioco installato.  
   
--   Invito.  Inviare e accettare gli richiedere sicuri per i peer remoti l'avvio o a far parte delle sessioni <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration>.  
+-   Invito. Inviare e accettare inviti protetti a peer remoti per avviare o partecipare a sessioni <xref:System.Net.PeerToPeer.Collaboration.PeerCollaboration>.  
   
--   Contattare la gestione.  Aggiungere ha individuato i peer come contatto a <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.  
+-   Gestione dei contatti. Aggiungere i peer individuati come contatti a <xref:System.Net.PeerToPeer.Collaboration.ContactManager>.  
   
--   Comunicazione.  Quando la comunicazione viene stabilita, utilizzare <xref:System.Net> API, <xref:System.Net.PeerToPeer> API, o il canale peer di Windows Communication Foundation le classi per le comunicazioni pluripartitiche.  
+-   Comunicazione. Quando viene stabilita la comunicazione, usare le API <xref:System.Net>, l'API <xref:System.Net.PeerToPeer> o le classi del canale peer di Windows Communication Foundation per le comunicazioni a più parti.  
   
- Ad esempio, il peer host avvia una sessione di collaborazione e utilizza il metodo <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> per aggiungere un peer remoti e i peer locali all'amministratore del contatto del peer host.  I tre utenti quindi prenderanno parte alla propria sessione privata di collaborazione.  
+ Il peer host, ad esempio, avvia una sessione di collaborazione e usa il metodo <xref:System.Net.PeerToPeer.Collaboration.ContactManager.CreateContact%2A> per aggiungere un peer remoto e uno relativi dei peer locali a Gestione contatti del peer host.  In questo caso, i tre utenti parteciperanno nella rispettiva sessione di collaborazione privata.  
   
- Le applicazioni P2P tipiche sono: teleconferenze per la NOTA\- rimozione o whiteboarding di collaborazione, le applicazioni chat serverless, gli annunci interattivi e le sessioni online di gioco.  
+ Le tipiche applicazioni P2P sono: conferenze telefoniche per la gestione collaborativa degli appunti, applicazioni chat senza server, annunci pubblicitari interattivi e sessioni di giochi online.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.PeerToPeer.Collaboration>
+

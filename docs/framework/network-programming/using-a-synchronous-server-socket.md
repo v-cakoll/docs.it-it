@@ -1,42 +1,47 @@
 ---
-title: "Uso di un socket server sincrono | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "protocolli applicativi, socket"
-  - "socket server sincroni"
-  - "invio di dati, socket"
-  - "richieste dati, socket"
-  - "richiesta di dati da Internet, socket"
-  - "socket server"
-  - "ricezione di dati, socket"
-  - "Socket (classe), socket server sincroni"
-  - "protocolli, socket"
-  - "socket, socket server sincroni"
-  - "Internet, socket"
+title: Uso di un socket server sincrono
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- synchronous server sockets
+- sending data, sockets
+- data requests, sockets
+- requesting data from Internet, sockets
+- server sockets
+- receiving data, sockets
+- Socket class, synchronous server sockets
+- protocols, sockets
+- sockets, synchronous server sockets
+- Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c4ecba2d6c5026a3b2f7d65540fcf40dd71ba3d7
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Uso di un socket server sincrono
-I socket del server sincroni sospende l'esecuzione dell'applicazione fino a ricevere una richiesta di connessione su socket.  I socket del server sincroni non sono adatti per le applicazioni che fanno massiccio di rete nell'operazione, ma possono essere adatte per le applicazioni semplici di rete.  
+# <a name="using-a-synchronous-server-socket"></a>Uso di un socket server sincrono
+I socket server sincroni sospendono l'esecuzione dell'applicazione fino a quando non viene ricevuta una richiesta di connessione sul socket. I socket server sincroni non sono adatti per le applicazioni che fanno un uso massiccio della rete per le loro operazioni, ma possono essere appropriati per applicazioni di rete semplici.  
   
- Dopo <xref:System.Net.Sockets.Socket> è impostato per rimanere in ascolto su un endpoint tramite i metodi <xref:System.Net.Sockets.Socket.Listen%2A> e <xref:System.Net.Sockets.Socket.Bind%2A>, è pronto per accettare le richieste di connessione in ingresso mediante il metodo <xref:System.Net.Sockets.Socket.Accept%2A>.  L'applicazione viene sospesa fino a ricevere una richiesta di connessione quando il metodo **Accept** viene chiamato.  
+ Dopo aver impostato un <xref:System.Net.Sockets.Socket> per l'ascolto su un endpoint tramite i metodi <xref:System.Net.Sockets.Socket.Bind%2A> e <xref:System.Net.Sockets.Socket.Listen%2A>, il socket è pronto per accettare le richieste di connessione in ingresso tramite il metodo <xref:System.Net.Sockets.Socket.Accept%2A>. L'applicazione viene sospesa fino a quando non viene ricevuta una richiesta di connessione quando viene chiamato il metodo **Accept**.  
   
- Quando una richiesta di connessione viene ricevuta, **Accept** restituisce una nuova istanza **Socket** associata al client connesso.  Nell'esempio vengono letti i dati dal client, visualizza nella console e è possibile visualizzare i dati nel client.  **Socket** non specifica alcun protocollo di messaggistica, pertanto i contrassegni di “\<EOF\>„ stringa la fine dei dati del messaggio.  Si presuppone che **Socket** denominato `listener`sia inizializzata e stato associato a un endpoint.  
+ Quando viene ricevuta una richiesta di connessione, **Accept** restituisce una nuova istanza di **Socket** associata al client che si connette. L'esempio seguente legge i dati dal client, li visualizza nella console e li restituisce al client. **Socket** non specifica alcun protocollo di messaggistica, pertanto la stringa "\<EOF >" contrassegna la fine dei dati del messaggio. Si presuppone che un **Socket** denominato `listener` sia stato inizializzato e associato a un endpoint.  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  
@@ -58,7 +63,6 @@ Dim msg As Byte() = Encoding.ASCII.GetBytes(data)
 handler.Send(msg)  
 handler.Shutdown(SocketShutdown.Both)  
 handler.Close()  
-  
 ```  
   
 ```csharp  
@@ -83,7 +87,8 @@ handler.Shutdown(SocketShutdown.Both);
 handler.Close();  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Uso di un socket server asincrono](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [Esempio di socket server sincrono](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
  [Attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)
+

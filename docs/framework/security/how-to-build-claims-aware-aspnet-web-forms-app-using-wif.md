@@ -1,73 +1,79 @@
 ---
-title: "Procedura: Compilare un&#39;applicazione Web Form ASP.NET in grado di riconoscere attestazioni con WIF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: Compilare un''applicazione Web Form ASP.NET in grado di riconoscere attestazioni con WIF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5b81e20ed1b39c7750329718729905484eb7fa1
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Procedura: Compilare un&#39;applicazione Web Form ASP.NET in grado di riconoscere attestazioni con WIF
-## Si applica a  
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Procedura: Compilare un'applicazione Web Form ASP.NET in grado di riconoscere attestazioni con WIF
+## <a name="applies-to"></a>Si applica a  
   
--   Foundation \(WIF\) di identità di Microsoft® Windows®  
+-   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Form  
+-   Web Form ASP.NET®  
   
-## Riepilogo  
- In questa procedura vengono fornite le procedure dettagliate per creare l'applicazione Web Form su consapevole ASP.NET semplice.  Fornisce inoltre le istruzioni su come verificare l'applicazione Web Form su consapevole ASP.NET semplice per la corretta implementazione di autenticazione organizzata in modo federativo.  In questa procedura non ha dettagliato le istruzioni per creare un servizio token di sicurezza \(STS\) e si presuppone sia già configurato un servizio token di sicurezza.  
+## <a name="summary"></a>Riepilogo  
+ Questo argomento include le procedure dettagliate per creare una semplice applicazione Web Form ASP.NET in grado di riconoscere attestazioni. Sono inoltre disponibili istruzioni su come testare la semplice applicazione Web Form ASP.NET in grado di riconoscere attestazioni per la corretta implementazione dell'autenticazione federata. La procedura decritta in questo argomento non include istruzioni dettagliate per la creazione di un servizio token di sicurezza e presuppone che il servizio sia già stato configurato.  
   
-## Contenuto  
+## <a name="contents"></a>Sommario  
   
 -   Obiettivi  
   
 -   Riepilogo dei passaggi  
   
--   Passaggio 1 \- creare un'applicazione Web Form ASP.NET semplice  
+-   Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
   
--   Passaggio 2 \- configurare l'applicazione Web Form ASP.NET per autenticazione Basata su richiesta  
+-   Passaggio 2: configurare l'applicazione Web Form ASP.NET per l'autenticazione basata su attestazioni  
   
--   Passaggio 3 \- eseguire il test della soluzione  
+-   Passaggio 3: eseguire i test sulla soluzione  
   
-## Obiettivi  
+## <a name="objectives"></a>Obiettivi  
   
--   Configurare l'applicazione Web Form ASP.NET per autenticazione basata su richiesta  
+-   Configurare l'applicazione Web Form ASP.NET per l'autenticazione basata su attestazioni  
   
--   Verificare la corrispondenza applicazione Web Form la ricezione di ASP.NET  
+-   Testare l'applicazione Web Form ASP.NET in grado di riconoscere attestazioni  
   
-## Riepilogo dei passaggi  
+## <a name="summary-of-steps"></a>Riepilogo dei passaggi  
   
--   Passaggio 1 \- creare l'applicazione Web Form ASP.NET semplice  
+-   Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
   
--   Passaggio 2 \- configurare l'applicazione Web Form ASP.NET per autenticazione organizzata in modo federativo  
+-   Passaggio 2: configurare l'applicazione Web Form ASP.NET per l'autenticazione federata  
   
--   Passaggio 3 \- eseguire il test della soluzione  
+-   Passaggio 3: eseguire i test sulla soluzione  
   
-## Passaggio 1 \- creare un'applicazione Web Form ASP.NET semplice  
- In questo passaggio, verrà creata una nuova applicazione Web Form ASP.NET.  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Passaggio 1: creare una semplice applicazione Web Form ASP.NET  
+ In questo passaggio si creerà una nuova applicazione Web Form ASP.NET.  
   
-#### Per creare una semplice applicazione ASP.NET  
+#### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice  
   
-1.  Avviare Visual Studio e clic **File**, **Nuova**quindi **Progetto**.  
+1.  Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.  
   
-2.  Nella finestra **Nuovo progetto**, fare clic **Applicazione Web Form ASP.NET**.  
+2.  Nella finestra **Nuovo progetto** fare clic su **Applicazione Web Form ASP.NET**.  
   
-3.  In **Nome**, immettere `TestApp` e premere **OK**.  
+3.  In **Nome** immettere `TestApp` e fare clic su **OK**.  
   
-## Passaggio 2 \- configurare l'applicazione Web Form ASP.NET per autenticazione Basata su richiesta  
- In questo passaggio si aggiungeranno voci di configurazione *nel file di configurazione Web.config* dell'applicazione Web Form ASP.NET rendono riconoscere attestazioni.  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>Passaggio 2: configurare l'applicazione Web Form ASP.NET per l'autenticazione basata su attestazioni  
+ In questo passaggio si aggiungeranno voci di configurazione al file di configurazione *Web.config* dell'applicazione Web Form ASP.NET per renderla in grado di riconoscere attestazioni.  
   
-#### Per configurare un'applicazione ASP.NET per autenticazione basata su richiesta  
+#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Per configurare l'applicazione ASP.NET per l'autenticazione basata su attestazioni  
   
-1.  Aggiungere le voci seguenti della sezione di configurazione *nel file di configurazione Web.config* immediatamente dopo **\<configuration\>** l'elemento di apertura:  
+1.  Aggiungere le seguenti voci di sezione di configurazione al file di configurazione *Web.config* subito dopo l'elemento di apertura **\<configuration>**:  
   
     ```xml  
     <configSections>  
@@ -76,7 +82,7 @@ caps.handback.revision: 7
     </configSections>  
     ```  
   
-2.  Aggiungere un elemento **\<location\>** che consente l'accesso ai metadati della federazione dell'applicazione:  
+2.  Aggiungere un **elemento \<location>** che consente l'accesso ai metadati di federazione dell'applicazione:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -88,7 +94,7 @@ caps.handback.revision: 7
     </location>  
     ```  
   
-3.  Aggiungere le voci seguenti di configurazione negli elementi **\<system.web\>** per negare gli utenti, disabilitare l'autenticazione nativa e consentono a WIF per gestire l'autenticazione.  
+3.  Aggiungere le seguenti voci di configurazione all'interno di elementi **\<system.web>** per negare le autorizzazioni agli utenti, disabilitare l'autenticazione nativa e abilitare WIF per gestire l'autenticazione.  
   
     ```xml  
     <authorization>  
@@ -97,9 +103,9 @@ caps.handback.revision: 7
     <authentication mode="None" />  
     ```  
   
-4.  Aggiungere un elemento **\<system.webServer\>** che definisce i moduli per l'autenticazione organizzata in modo federativo.  Si noti che l'attributo *di PublicKeyToken* deve essere uguale all'attributo *di PublicKeyToken* per le voci **\<configSections\>** abbia inserito in precedenza:  
+4.  Aggiungere un elemento **\<system.webServer>** che definisce i moduli per l'autenticazione federata. Si noti che l'attributo *PublicKeyToken* deve essere uguale all'attributo *PublicKeyToken* per le voci **\<configSections>** aggiunte in precedenza:  
   
-    ```  
+    ```xml  
     <system.webServer>  
       <modules>  
         <add name="WSFederationAuthenticationModule" type="System.IdentityModel.Services.WSFederationAuthenticationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="managedHandler" />  
@@ -108,7 +114,7 @@ caps.handback.revision: 7
     </system.webServer>  
     ```  
   
-5.  Aggiungere seguente le voci di configurazione correlate di identità Windows di base e verificare che l'url e il numero di porta dell'applicazione ASP.NET corrispondono ai valori nella voce **\<audienceUris\>**, nell'attributo **area autenticazione** di elemento **\<wsFederation\>** e nell'attributo **rispondi** di elemento **\<wsFederation\>**.  Assicurarsi inoltre che il valore **autorità** appropriata il servizio token di sicurezza \(STS\) URL.  
+5.  Aggiungere le voci di configurazione correlate a Windows Identity Foundation seguenti e assicurarsi che l'URL e il numero di porta dell'applicazione ASP.NET corrispondano ai valori nella voce **\<audienceUris>**, all'attributo **realm** dell'elemento **\<wsFederation>** e all'attributo **reply** dell'elemento **\<wsFederation>**. Assicurarsi anche che il valore **issuer** sia appropriato per l'URL del servizio token di sicurezza.  
   
     ```xml  
     <system.identityModel>  
@@ -132,16 +138,16 @@ caps.handback.revision: 7
     </system.identityModel.services>  
     ```  
   
-6.  Aggiungere il riferimento all'assembly [System.IdentityModel](assetId:///System.IdentityModel?qualifyHint=False&amp;autoUpgrade=True).  
+6.  Aggiungere un riferimento all'assembly <xref:System.IdentityModel>.  
   
-7.  Compilare la soluzione per assicurarsi che non vi siano errori.  
+7.  Compilare la soluzione e assicurarsi che non ci siano errori.  
   
-## Passaggio 3 \- eseguire il test della soluzione  
- In questo passaggio verrà l'applicazione Web Form ASP.NET configurata per l'autenticazione basata su richiesta.  Per eseguire un test di base, si aggiungerà il codice che visualizza le richieste del token generato dal servizio token di sicurezza \(STS\).  
+## <a name="step-3--test-your-solution"></a>Passaggio 3: eseguire i test sulla soluzione  
+ In questo passaggio si testerà l'applicazione Web Form ASP.NET configurata per l'autenticazione basata sulle attestazioni. Per eseguire un test di base, si aggiungerà codice che visualizza le attestazioni nel token rilasciato dal servizio token di sicurezza.  
   
-#### Per testare l'applicazione Web Form ASP.NET di autenticazione basata su richiesta  
+#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>Per testare l'applicazione Web Form ASP.NET per l'autenticazione basata su attestazioni  
   
-1.  Aprire il file **Default.aspx** sotto il progetto **TestApp** e sostituire il markup esistente con il seguente:  
+1.  Aprire il file **Default.aspx** nel progetto **TestApp** e sostituire il markup esistente con quello seguente:  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -163,12 +169,12 @@ caps.handback.revision: 7
     </html>  
     ```  
   
-2.  Salvare **Default.aspx**quindi aprire il relativo code\-behind **Default.aspx.cs**denominato file.  
+2.  Salvare **Default.aspx** e quindi aprire il file code-behind denominato **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** può essere nascosto in **Default.aspx** in Esplora soluzioni.  Se **Default.aspx.cs** non è visibile, espandere **Default.aspx** facendo clic sul triangolo accanto.  
+    >  Il file **Default.aspx.cs** potrebbe essere nascosto sotto **Default.aspx** in Esplora soluzioni. Se **Default.aspx.cs** non è visibile, espandere **Default.aspx** facendo clic sul triangolo accanto.  
   
-3.  Sostituire il codice esistente nel metodo **Page\_Load** **Default.aspx.cs** con il codice seguente:  
+3.  Sostituire il codice esistente nel metodo **Page_Load** in **Default.aspx.cs** con il codice seguente:  
   
     ```csharp  
     using System;  
@@ -207,8 +213,9 @@ caps.handback.revision: 7
     }  
     ```  
   
-4.  Salvare **Default.aspx.cs**e compilare la soluzione.  
+4.  Salvare **Default.aspx.cs** e compilare la soluzione.  
   
-5.  Eseguire la soluzione premendo il tasto **F5**.  
+5.  Eseguire la soluzione premendo **F5**.  
   
-6.  Dovrebbe essere visualizzata la pagina che visualizza le richieste del token che è stato rimosso dal servizio token di sicurezza.
+6.  Dovrebbe essere visualizzata la pagina che mostra le attestazioni nel token emesso dal servizio token di sicurezza.
+

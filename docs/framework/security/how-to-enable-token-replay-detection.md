@@ -1,31 +1,37 @@
 ---
-title: "Procedura: abilitare il rilevamento della riproduzione di token | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: Abilitare il rilevamento della riproduzione del token'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cde32407f072f3d29af4a8d1aae559e46057ae3a
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Procedura: abilitare il rilevamento della riproduzione di token
-## Si applica a  
+# <a name="how-to-enable-token-replay-detection"></a>Procedura: Abilitare il rilevamento della riproduzione del token
+## <a name="applies-to"></a>Si applica a  
   
--   Foundation \(WIF\) di identità di Microsoft® Windows®  
+-   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Form  
+-   Web Form ASP.NET®  
   
-## Riepilogo  
- In questa procedura vengono fornite le procedure dettagliate per abilitare il rilevamento riproduzione di token in un'applicazione ASP.NET che utilizza WIF.  Fornisce inoltre le istruzioni su come verificare l'applicazione per verificare che il rilevamento di riproduzione sia attivato.  In questa procedura non ha dettagliato le istruzioni per creare un servizio token di sicurezza \(STS\) e ne utilizza lo sviluppo servizio token di sicurezza fornite dallo strumento di Accesso e di identità.  Lo sviluppo servizio token di sicurezza non esegue l'autenticazione reale ed è destinata a scopo di test solo.  È necessario configurare l'identità e lo strumento di accesso per tale tipo.  Può essere scaricato dal seguente percorso: [Identità e strumento Access](http://go.microsoft.com/fwlink/?LinkID=245849)  
+## <a name="summary"></a>Riepilogo  
+ Questo argomento include le procedure dettagliate per abilitare il rilevamento riproduzione del token in un'applicazione ASP.NET che usa WIF. Sono inoltre disponibili istruzioni su come testare l'applicazione per verificare che il rilevamento riproduzione del token sia abilitato. In questa guida procedurale non sono incluse le istruzioni dettagliate per la creazione di un servizio token di sicurezza (STS, Security Token Service); viene invece utilizzato il servizio token di sicurezza di sviluppo che viene fornito con lo strumento Identity and Access. Il servizio token di sicurezza di sviluppo non esegue una reale autenticazione ed è finalizzato unicamente ai test. Per completare questa guida procedurale sarà necessario installare Identity and Access Tool. Questo strumento può essere scaricato dal seguente percorso: [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)  
   
-## Contenuto  
+## <a name="contents"></a>Contenuto  
   
 -   Obiettivi  
   
@@ -33,57 +39,58 @@ caps.handback.revision: 4
   
 -   Riepilogo dei passaggi  
   
--   Passaggio 1 \- creare un'applicazione Web Form ASP.NET semplice e abilitare il rilevamento riproduzione  
+-   Passaggio 1: creare una semplice applicazione Web Form ASP.NET e abilitare il rilevamento riproduzione  
   
--   Passaggio 2 \- eseguire il test della soluzione  
+-   Passaggio 2: eseguire i test sulla soluzione  
   
-## Obiettivi  
+## <a name="objectives"></a>Obiettivi  
   
--   Creare una semplice applicazione ASP.NET che utilizza WIF e lo sviluppo servizio token di sicurezza dall'identità e accedere allo strumento  
+-   Creare un'applicazione ASP.NET semplice che usa WIF e il servizio token di sicurezza per lo sviluppo locale dallo strumento Identity and Access  
   
--   Abilitare il rilevamento riproduzione di token e verificare che sia funzionante  
+-   Abilitare il rilevamento riproduzione del token e verificare che funzioni  
   
-## Panoramica  
- Un attacco di tipo replay si verifica quando un client tenta di autenticare un componente con un token di servizio token di sicurezza che il client ha già utilizzato.  Per impedire questo attacco, WIF contiene una cache di rilevamento riproduzione dei token utilizzati in precedenza di servizio token di sicurezza.  Una volta abilitata, il rilevamento riproduzione controlla il token della richiesta in arrivo e verifica se il token in precedenza è stato utilizzato.  Se il token è stato già utilizzato, la richiesta viene rifiutato e un'eccezione <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> viene generata un'eccezione.  
+## <a name="overview"></a>Panoramica  
+ Un attacco di tipo replay si verifica quando un client tenta di eseguire l'autenticazione per una relying party con un token del servizio token di sicurezza già usato dal client. Per prevenire questo tipo di attacco, WIF contiene una cache di rilevamento riproduzione dei token del servizio token di sicurezza usati in precedenza. Quando è abilitato, il rilevamento riproduzione controlla il token della richiesta in arrivo e verifica se il token è stato usato o meno in precedenza. Se il token è già stato usato, la richiesta viene rifiutata e viene generata un'eccezione <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException>.  
   
  I passaggi seguenti illustrano le modifiche di configurazione necessarie per abilitare il rilevamento riproduzione.  
   
-## Riepilogo dei passaggi  
+## <a name="summary-of-steps"></a>Riepilogo dei passaggi  
   
--   Passaggio 1 \- creare un'applicazione Web Form ASP.NET semplice e abilitare il rilevamento riproduzione  
+-   Passaggio 1: creare una semplice applicazione Web Form ASP.NET e abilitare il rilevamento riproduzione  
   
--   Passaggio 2 \- eseguire il test della soluzione  
+-   Passaggio 2: eseguire i test sulla soluzione  
   
-## Passaggio 1 \- creare un'applicazione Web Form ASP.NET semplice e abilitare il rilevamento riproduzione  
- In questo passaggio, verrà creata una nuova applicazione Web Form ASP.NET e si modifica *il file Web.config* per abilitare il rilevamento riproduzione.  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-replay-detection"></a>Passaggio 1: creare una semplice applicazione Web Form ASP.NET e abilitare il rilevamento riproduzione  
+ In questo passaggio verrà creata una nuova applicazione Web Form ASP.NET e si modificherà il file *Web.config* per abilitare il rilevamento riproduzione.  
   
-#### Per creare una semplice applicazione ASP.NET  
+#### <a name="to-create-a-simple-aspnet-application"></a>Per creare un'applicazione ASP.NET semplice  
   
-1.  Avviare Visual Studio e clic **File**, **Nuova**quindi **Progetto**.  
+1.  Avviare Visual Studio e fare clic su **File**, **Nuovo** e **Progetto**.  
   
-2.  Nella finestra **Nuovo progetto**, fare clic **Applicazione Web Form ASP.NET**.  
+2.  Nella finestra **Nuovo progetto** fare clic su **Applicazione Web Form ASP.NET**.  
   
-3.  In **Nome**, immettere `TestApp` e premere **OK**.  
+3.  In **Nome** immettere `TestApp` e fare clic su **OK**.  
   
-4.  Fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni**, quindi selezionare **Identità e accesso**.  
+4.  Fare clic con il pulsante destro del mouse sul progetto **TestApp** in **Esplora soluzioni** e quindi scegliere **Identity and Access**.  
   
-5.  La finestra **Identità e accesso** visualizzato.  In **Provider**, **Verifica applicazione con STS di sviluppo locale**selezionato, quindi scegliere **Applica**.  
+5.  Verrà visualizzata la finestra **Identity and Access**. In **Providers** (Provider) selezionare **Test your application with the Local Development STS** (Testare l'applicazione con il servizio token di sicurezza per lo sviluppo locale) e quindi fare clic su **Applica**.  
   
-6.  Aggiungere il seguente elemento **\<tokenReplayDetection\>** *al file di configurazione Web.config* subito dopo gli elementi **\<identityConfiguration\>** e **\<system.identityModel\>**, come indicato:  
+6.  Aggiungere l'elemento **\<tokenReplayDetection>** seguente al file di configurazione *Web.config* subito dopo gli elementi **\<system.identityModel>** e **\<identityConfiguration>**, come illustrato:  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration>  
-            <tokenReplayDetection enabled=”true”/>  
+            <tokenReplayDetection enabled="true"/>  
     ```  
   
-## Passaggio 2 \- eseguire il test della soluzione  
- In questo passaggio, è consigliabile testare l'applicazione WIF\- abilitata ASP.NET verificare che il rilevamento riproduzione sia stato abilitato.  
+## <a name="step-2--test-your-solution"></a>Passaggio 2: eseguire i test sulla soluzione  
+ In questo passaggio si testerà l'applicazione ASP.NET abilitata per WIF per verificare che il rilevamento riproduzione sia stato abilitato.  
   
-#### Per testare l'applicazione WIF\- abilitata ASP.NET di rilevamento riproduzione  
+#### <a name="to-test-your-wif-enabled-aspnet-application-for-replay-detection"></a>Per testare il corretto funzionamento del rilevamento riproduzione per l'applicazione ASP.NET abilitata per WIF  
   
-1.  Eseguire la soluzione premendo il tasto **F5**.  Dovrebbe essere visualizzata la home page ASP.NET predefinito e automaticamente essere autenticati con il nome utente *Terry*, che corrisponde all'utente predefinito restituito dallo sviluppo servizio token di sicurezza.  
+1.  Eseguire la soluzione premendo **F5**. Dovrebbe essere visualizzata la home page predefinita di ASP.NET e l'autenticazione dovrebbe avvenire automaticamente con il nome utente *Terry*, ovvero l'utente predefinito restituito dal servizio token di sicurezza per lo sviluppo.  
   
-2.  Premere il pulsante **Indietro** del browser.  Dovrebbe essere visualizzata una pagina **Errore del server nell'applicazione "\/"** con la descrizione seguente: *ID1062: Il tipo replay è stato rilevato per: token: "System.IdentityModel.Tokens.SamlSecurityToken"*, seguito da un *AssertionId* e da un autorità *Issuer*.  
+2.  Premere il pulsante **Indietro** del browser. Dovrebbe essere visualizzata un pagina **Errore del server nell'applicazione '/'** con la descrizione seguente: *ID1062: Rilevata riproduzione per: Token: 'System.IdentityModel.Tokens.SamlSecurityToken'*, seguita da *AssertionId* e *Autorità di certificazione*.  
   
-     Si sta visualizzando la pagina di errore perché un'eccezione di tipo <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> è stata generata quando il tipo replay di token è stato rilevato.  Questo errore si verifica perché si sta tentando di inviare la richiesta del primo utilizzo quando il token è stato verificato.  Il pulsante **Indietro** non genererà questo comportamento le richieste successive al server.
+     Questa pagina di errore viene visualizzata perché è stata generata un'eccezione di tipo <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> al rilevamento della riproduzione token. Questo errore si verifica perché si sta tentando di inviare nuovamente la richiesta POST iniziale della prima presentazione del token. Il pulsante **Indietro** non causerà questo comportamento nelle richieste successive al server.
+

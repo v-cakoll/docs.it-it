@@ -1,58 +1,62 @@
 ---
-title: "Richiesta di dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "invio di dati"
-  - "WebRequest (classe), invio e ricezione di dati"
-  - "richiesta di dati da Internet, informazioni sulla richiesta di dati"
-  - "WebClient (classe), invio e ricezione di dati"
-  - "rete, richiesta di dati"
-  - "ricezione di dati"
-  - "invio di dati, informazioni sull'invio di dati"
-  - "risposta a una richiesta Internet, informazioni sulla risposta a richieste Internet"
-  - "richieste di dati"
-  - "ricezione di dati, informazioni sulla ricezione di dati"
-  - "Internet, richiesta di dati"
+title: Richiesta di dati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sending data
+- WebRequest class, sending and receiving data
+- requesting data from Internet, about requesting data
+- WebClient class, sending and receiving data
+- network, requesting data
+- receiving data
+- sending data, about sending data
+- response to Internet request, about responding to Internet requests
+- data requests
+- receiving data, about receiving data
+- Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c492390eb4cb27973652cc6d62f8c1da2bd1121e
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Richiesta di dati
-Sviluppo di applicazioni in esecuzione nell'ambiente operativo distribuito su Internet rende richiede un metodo efficace e facile da utilizzare per recuperare dati dalle risorse dei tipi.  I protocolli innestabili consentono di compilare le applicazioni che utilizzano una singola interfaccia per recuperare i dati dai protocolli più Internet.  
+# <a name="requesting-data"></a>Richiesta di dati
+Lo sviluppo di applicazioni in esecuzione nell'ambiente operativo distribuito dell'attuale rete Internet richiede un metodo efficace e semplice da usare per il recupero dei dati da risorse di tutti i tipi. I protocolli di collegamento consentono di sviluppare applicazioni che usano una singola interfaccia per recuperare i dati da più protocolli Internet.  
   
-## Caricamento e download dei dati da un server Internet  
- Per le transazioni semplici di risposta e richiesta, la classe <xref:System.Net.WebClient> fornisce il metodo più semplice per caricare i dati o scaricare i dati da un server Internet.  **WebClient** fornisce metodi per caricare e scaricare file, inviare e i canali di raccolta e inviare un buffer di dati al server e la ricezione della risposta.  **WebClient** utilizza le classi <xref:System.Net.WebResponse> e <xref:System.Net.WebRequest> per rendere effettive le connessioni alle risorse Internet, in modo da qualsiasi protocollo innestabile registrato è disponibile per l'utilizzo.  
+## <a name="uploading-and-downloading-data-from-an-internet-server"></a>Caricamento e download dei dati da un server Internet  
+ Per semplici transazioni di richiesta e risposta, la classe <xref:System.Net.WebClient> offre il metodo più semplice per caricare e scaricare i dati da un server Internet. **WebClient** fornisce metodi per caricare e scaricare file, inviare e ricevere flussi, inviare un buffer di dati al server e ricevere una risposta. **WebClient** usa le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> per stabilire le connessioni alla risorsa Internet, così che qualunque protocollo di collegamento registrato sia disponibile per l'uso.  
   
- Applicazioni client che devono eseguire i dati della richiesta più complessi di transazioni dai server utilizzando la classe **WebRequest** e dei relativi discendenti.  **WebRequest** incapsula i dettagli della connessione al server, di inviare la richiesta e di ottenere una risposta.  **WebRequest** è una classe astratta che definisce un set di proprietà e metodi disponibili per tutte le applicazioni che utilizzano i protocolli innestabili.  I discendenti **WebRequest**, come <xref:System.Net.HttpWebRequest>, implementano le proprietà e i metodi definiti da **WebRequest** in modo coerente con il protocollo sottostante.  
+ Le applicazioni client che devono eseguire transazioni più complesse richiedono i dati dai server usando la classe **WebRequest** e i relativi discendenti. **WebRequest** incapsula i dettagli della connessione al server, inviando la richiesta e ricevendo la risposta. **WebRequest** è una classe astratta che definisce un set di proprietà e metodi disponibili per tutte le applicazioni che usano protocolli di collegamento. I discendenti di **WebRequest**, come <xref:System.Net.HttpWebRequest>, implementano le proprietà e i metodi definiti da **WebRequest** in modo coerente con il protocollo sottostante.  
   
- La classe **WebRequest** crea istanze specifiche del protocollo dei discendenti **WebRequest**, utilizzando il valore dell'URI passato al metodo <xref:System.Net.WebRequest.Create%2A> per determinare l'istanza specifica della classe derivata da creare.  Le applicazioni indicano i discendenti **WebRequest** deve essere utilizzato per gestire una richiesta registrando il costruttore discendente con il metodo <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>.  
+ La classe **WebRequest** crea istanze specifiche del protocollo dei discendenti di **WebRequest** usando il valore dell'URI passato al metodo <xref:System.Net.WebRequest.Create%2A> per determinare l'istanza di classe derivata specifica da creare. Le applicazioni indicano i discendenti di **WebRequest** da usare per gestire una richiesta registrando il costruttore del discendente con il metodo <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>.  
   
- Viene effettuata una richiesta alla risorsa Internet chiamando il metodo <xref:System.Net.WebRequest.GetResponse%2A> su **WebRequest**.  Il metodo **GetResponse** costruire la richiesta protocollo specifica le proprietà **WebRequest**, effettua la connessione socket di UDP o TCP al server e invia la richiesta.  Per le richieste che inviano dati al server, ad esempio le richieste HTTP **Post** o FTP **Put**, il metodo <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=fullName> fornisce un flusso di rete in cui inviare dati.  
+ Viene effettuata una richiesta alla risorsa Internet chiamando il metodo <xref:System.Net.WebRequest.GetResponse%2A> in **WebRequest**. Il metodo **GetResponse** costruisce la richiesta specifica del protocollo usando le proprietà di **WebRequest**, crea la connessione socket TCP o UDP al server e invia la richiesta. Per le richieste che inviano dati al server, ad esempio le richieste HTTP **Post** o FTP **Put**, il metodo <xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=fullName> fornisce un flusso di rete in cui inviare dati.  
   
- Il metodo **GetResponse** restituisce **WebResponse** protocollo specifico che corrisponde **WebRequest.**  
+ Il metodo **GetResponse** restituisce un oggetto **WebResponse** specifico del protocollo che corrisponde all'oggetto **WebRequest**.  
   
- La classe **WebResponse** è una classe astratta che definisce le proprietà e i metodi disponibili per tutte le applicazioni che utilizzano i protocolli innestabili.  I discendenti di**WebResponse** implementano tali metodi e proprietà per il protocollo sottostante.  La classe <xref:System.Net.HttpWebResponse>, ad esempio, implementa la classe **WebResponse** per HTTP.  
+ La classe **WebResponse** è anche una classe astratta che definisce le proprietà e i metodi disponibili per tutte le applicazioni che usano protocolli di collegamento. I discendenti di **WebResponse** implementano questi metodi e proprietà per il protocollo sottostante. La classe <xref:System.Net.HttpWebResponse>, ad esempio, implementa la classe **WebResponse** per HTTP.  
   
- I dati restituiti dal server vengono visualizzati all'applicazione nel flusso restituito dal metodo <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>.  È possibile utilizzare questo flusso come qualsiasi altro, come illustrato nell'esempio seguente.  
+ I dati restituiti dal server vengono presentati all'applicazione nel flusso restituito dal metodo <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>. È possibile usare questo flusso come qualsiasi altro, come illustrato nell'esempio seguente.  
   
 ```csharp  
 StreamReader sr =  
    new StreamReader(resp.GetResponseStream(), Encoding.ASCII);  
-  
 ```  
   
 ```vb  
@@ -60,7 +64,8 @@ Dim sr As StreamReader
 sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)   
  [Procedura: Richiedere una pagina Web e recuperare i risultati sotto forma di flusso](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)   
  [Procedura: Recuperare un oggetto WebResponse specifico del protocollo corrispondente a un oggetto WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+

@@ -1,55 +1,60 @@
 ---
-title: "Passing Structures | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "platform invoke, calling unmanaged functions"
+title: Passaggio di strutture
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e0cd4b8c76eca00ad7fbfcb03162a6705f72768
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Passing Structures
-Numerose funzioni non gestite prevedono il passaggio, come parametro per la funzione, di membri di strutture \(corrispondenti in Visual Basic a tipi definiti dall'utente\) o membri di classi definite nel codice gestito.  Quando si passano strutture o classi al codice non gestito mediante platform invoke, è necessario fornire informazioni aggiuntive per mantenere il layout e l'allineamento originali.  In questo argomento viene descritto l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>, utilizzato per definire i tipi formattati.  Per le classi e le strutture gestite, è possibile effettuare una selezione tra numerosi comportamenti di layout prevedibili forniti dall'enumerazione **LayoutKind**.  
+# <a name="passing-structures"></a>Passaggio di strutture
+Molte funzioni non gestite prevedono il passaggio, come parametro della funzione, di membri di strutture (tipi definiti dall'utente in Visual Basic) o membri di classi definiti nel codice gestito. Quando si passano strutture o classi al codice non gestito mediante platform invoke, è necessario fornire informazioni aggiuntive per mantenere il layout e l'allineamento originali. In questo argomento viene presentato l'attributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>, usato per definire i tipi formattati. Per le classi e le strutture gestite, è possibile selezionare tra diversi comportamenti di layout prevedibili forniti dall'enumerazione **LayoutKind**.  
   
- In relazione ai concetti illustrati nel presente argomento si rivela essenziale un'importante differenza tra tipi classe e tipi struttura.  Le strutture costituiscono tipi valore, mentre le classi rappresentano tipi di riferimento e forniscono sempre almeno un livello di riferimenti indiretti alla memoria, ovvero un puntatore a un valore.  Questa differenza si rivela importante poiché le funzioni non gestite spesso richiedono riferimenti indiretti, come indicato dalle firme riportate nella prima colonna della tabella fornita di seguito.  Le dichiarazioni di classi e strutture gestite riportate nelle restanti colonne illustrano la misura in cui può essere modificato il livello di riferimenti indiretti nella dichiarazione.  Le dichiarazioni sono disponibili per Visual Basic e Visual C\#.  
+ Un aspetto fondamentale per i concetti presentati in questo argomento è l'importante differenza esistente tra i tipi di strutture e classi. Le strutture sono tipi valore e le classi sono tipi riferimento. Le classi forniscono sempre almeno un livello di riferimento indiretto di memoria (un puntatore a un valore). Questa differenza è importante perché le funzioni non gestite spesso richiedono riferimenti indiretti, come illustrato dalle firme nella prima colonna della tabella seguente. La struttura gestita e le dichiarazioni di classe nelle colonne rimanenti mostrano il grado di cui è possibile modificare il livello di riferimento indiretto nella dichiarazione. Le dichiarazioni sono disponibili sia per Visual Basic che per Visual C#.  
   
-|Firma non gestita|Dichiarazione gestita:                <br /> nessun riferimento indiretto               <br />  `Structure MyType`  <br />  `struct MyType;`|Dichiarazione gestita:                <br /> un livello di riferimenti indiretti               <br />  `Class MyType`  <br />  `class MyType;`|  
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|  
-|`DoWork(MyType x);`<br /><br /> Non richiede alcun livello di riferimenti indiretti.|`DoWork(ByVal x As MyType)`  <br />  `DoWork(MyType x)`<br /><br /> Non aggiunge alcun livello di riferimenti indiretti.|Non supportata, poiché dispone già di un livello di riferimenti indiretti.|  
-|`DoWork(MyType* x);`<br /><br /> Richiede un livello di riferimenti indiretti.|`DoWork(ByRef x As MyType)`  <br />  `DoWork(ref MyType x)`<br /><br /> Aggiunge un livello di riferimenti indiretti.|`DoWork(ByVal x As MyType)`  <br />  `DoWork(MyType x)`<br /><br /> Non aggiunge alcun livello di riferimenti indiretti.|  
-|`DoWork(MyType** x);`<br /><br /> Richiede due livelli di riferimenti indiretti.|Non possibile in quanto non è possibile utilizzare **ByRef** **ByRef** o `ref` `ref`.|`DoWork(ByRef x As MyType)`  <br />  `DoWork(ref MyType x)`<br /><br /> Aggiunge un livello di riferimenti indiretti.|  
+|Firma non gestita|Dichiarazione gestita: <br />nessun riferimento indiretto<br />`Structure MyType`<br />`struct MyType;`|Dichiarazione gestita: <br />un livello di riferimento indiretto<br />`Class MyType`<br />`class MyType;`|  
+|-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
+|`DoWork(MyType x);`<br /><br /> Richiede zero livelli di riferimento indiretto.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Non aggiunge alcun livello di riferimento indiretto.|Non possibile perché esiste già un livello di riferimento indiretto.|  
+|`DoWork(MyType* x);`<br /><br /> Richiede un livello di riferimento indiretto.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Aggiunge un livello di riferimento indiretto.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> Non aggiunge alcun livello di riferimento indiretto.|  
+|`DoWork(MyType** x);`<br /><br /> Richiede due livelli di riferimento indiretto.|Impossibile perché non è possibile usare **ByRef** **ByRef** o `ref` `ref`.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Aggiunge un livello di riferimento indiretto.|  
   
- Nella tabella vengono descritte le indicazioni relative alle dichiarazioni di platform invoke riportate di seguito.  
+ La tabella descrive le linee guida seguenti per le dichiarazioni di platform invoke:  
   
--   Utilizzare una struttura passata per valore quando la funzione non gestita non richiede alcun riferimento indiretto.  
+-   Usare una struttura passata per valore quando la funzione non gestita non richiede alcun riferimento indiretto.  
   
--   Utilizzare una struttura passata per riferimento o una classe passata per valore quando la funzione non gestita richiede un livello di riferimenti indiretti.  
+-   Usare una struttura passata per riferimento o una classe passata per valore quando la funzione non gestita richiede un livello di riferimento indiretto.  
   
--   Utilizzare una classe passata per riferimento quando la funzione non gestita richiede due livelli di riferimenti indiretti.  
+-   Usare una classe passata per riferimento quando la funzione non gestita richiede due livelli di riferimento indiretto.  
   
-## Dichiarazione e passaggio di strutture  
- Nell'esempio riportato di seguito viene illustrato come definire le strutture `Point` e `Rect` nel codice gestito e passare i tipi come parametri alla funzione **PtInRect** del file User32.dll.  **PtInRect** dispone della seguente firma non gestita:  
+## <a name="declaring-and-passing-structures"></a>Dichiarazione e passaggio di strutture  
+ L'esempio seguente mostra come definire le strutture `Point` e `Rect` nel codice gestito e passare i tipi come parametro alla funzione **PtInRect** nel file User32.dll. **PtInRect** include la firma non gestita seguente:  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
- Si noti che è necessario passare la struttura Rect per riferimento, perché la funzione accetta un puntatore a un tipo RECT.  
+ Si noti che è necessario passare la struttura Rect per riferimento, perché la funzione si aspetta un puntatore a un tipo RECT.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -70,7 +75,6 @@ Class Win32API
     Declare Auto Function PtInRect Lib "user32.dll" _  
     (ByRef r As Rect, p As Point) As Boolean  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -96,14 +100,14 @@ class Win32API {
 }  
 ```  
   
-## Dichiarazione e passaggio di classi  
- È possibile passare i membri di una classe a una funzione di DLL non gestita, purché la classe abbia un layout dei membri fisso.  Nell'esempio che segue viene illustrato come passare i membri della classe `MySystemTime`, che sono definiti in ordine sequenziale, a **GetSystemTime**, contenuta nel file User32.dll.  **GetSystemTime** ha la seguente firma non gestita:  
+## <a name="declaring-and-passing-classes"></a>Dichiarazione e passaggio di classi  
+ È possibile passare i membri di una classe a una funzione DLL non gestita, a condizione che la classe abbia un layout di membri fisso. L'esempio seguente dimostra come passare membri alla classe `MySystemTime`, definiti in ordine sequenziale, a **GetSystemTime** nel file User32.dll. **GetSystemTime** include la firma non gestita seguente:  
   
 ```  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
- A differenza dei tipi valore, le classi dispongono sempre di almeno un livello di riferimenti indiretti.  
+ Diversamente dai tipi valore, le classi hanno sempre almeno un livello di riferimento indiretto.  
   
 ```vb  
 Imports System  
@@ -142,7 +146,6 @@ Public Class TestPlatformInvoke
         Win32.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -184,8 +187,9 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## Vedere anche  
- [Calling a DLL Function](../../../docs/framework/interop/calling-a-dll-function.md)   
- [Classe StructLayoutAttribute](frlrfSystemRuntimeInteropServicesStructLayoutAttributeClassTopic)   
- [Classe StructLayoutAttribute](frlrfSystemRuntimeInteropServicesStructLayoutAttributeClassTopic)   
- [Classe FieldOffsetAttribute](frlrfSystemRuntimeInteropServicesFieldOffsetAttributeClassTopic)
+## <a name="see-also"></a>Vedere anche  
+ [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)   
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
+ <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
+

@@ -1,28 +1,32 @@
 ---
-title: "Elemento &lt;Namespace&gt; (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;Namespace&gt; (.NET Native)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 caps.latest.revision: 20
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 20
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f92797e9c06762602c30d7c3ed8e6b0d6e579bbf
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Elemento &lt;Namespace&gt; (.NET Native)
+# <a name="ltnamespacegt-element-net-native"></a>Elemento &lt;Namespace&gt; (.NET Native)
 Applica i criteri di reflection di runtime a tutti i tipi in un determinato spazio dei nomi.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-  
 <Namespace Name="namespace_name"   
            Activate="policy_type"   
            Browse="policy_type" />  
@@ -34,7 +38,6 @@ Applica i criteri di reflection di runtime a tutti i tipi in un determinato spaz
            MarshalObject="policy_setting"  
            MarshalDelegate="policy_setting"  
            MarshalStructure="policy_setting" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -49,9 +52,9 @@ Applica i criteri di reflection di runtime a tutti i tipi in un determinato spaz
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.|  
 |`Dynamic`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.|  
 |`Serialize`|Serializzazione|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a costruttori, campi e proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie quali il serializzatore JSON di Newtonsoft.|  
-|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che utilizza il <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> (classe).|  
-|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che utilizza il <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName> (classe).|  
-|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che utilizza il <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> (classe).|  
+|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
+|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
+|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
 |`MarshalObject`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi di riferimento a Windows Runtime e COM.|  
 |`MarshalDelegate`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.|  
 |`MarshalStructure`|Interoperabilità|Attributo facoltativo. Controlla i criteri per il marshalling delle strutture al codice nativo.|  
@@ -60,37 +63,38 @@ Applica i criteri di reflection di runtime a tutti i tipi in un determinato spaz
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*namespace_name*|Nome dello spazio dei nomi. Se il <> \> è un elemento figlio di un [ <> \</> \> ](../../../docs/framework/net-native/application-element-net-native.md), [ <> \</> \> ](../../../docs/framework/net-native/library-element-net-native.md), o [ <> \> ](../../../docs/framework/net-native/assembly-element-net-native.md) elemento *namespace_name* deve essere un nome completo dello spazio dei nomi. Se il <> \> è un elemento figlio di un altro <> \> elemento *namespace_name* deve essere un nome relativo dello spazio dei nomi.|  
+|*namespace_name*|Nome dello spazio dei nomi. Se l'elemento \<Namespace> è figlio di un elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) o [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), *namespace_name* deve essere un nome completo dello spazio dei nomi. Se l'elemento \<Namespace> è figlio di un altro elemento \<Namespace>, *namespace_name* deve essere un nome relativo dello spazio dei nomi.|  
   
 ## <a name="all-other-attributes"></a>Tutti gli altri attributi  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*policy_setting*|L'impostazione da applicare a questo tipo di criteri per tutti i tipi nello spazio dei nomi. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per ulteriori informazioni, vedere [impostazioni dei criteri della direttiva di Runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|L'impostazione da applicare a questo tipo di criteri per tutti i tipi nello spazio dei nomi. I valori consentiti sono `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
 |`<Namespace>`|Applica i criteri di reflection di runtime a tutti i tipi in uno spazio dei nomi padre.|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo.|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Applica i criteri di reflection a un tipo.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Applica i criteri di reflection a un tipo generico costruito.|  
   
 ### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/application-element-net-native.md)|Viene usato come contenitore per i tipi e i membri dei tipi a livello di applicazione i cui metadati sono disponibili per la reflection al runtime. Il [ <> \> ](../../../docs/framework/net-native/application-element-net-native.md) elemento può avere zero, uno o più [ <> \> ](../../../docs/framework/net-native/assembly-element-net-native.md) elementi.|  
-|[<>\>](../../../docs/framework/net-native/assembly-element-net-native.md)|Applica i criteri di reflection di runtime a tutti i tipi in un determinato assembly.|  
-|[<>\>](../../../docs/framework/net-native/library-element-net-native.md)|Definisce l'assembly che contiene i tipi e i membri dei tipi i cui metadati sono disponibili per la reflection al runtime. Il [ <> \> ](../../../docs/framework/net-native/library-element-net-native.md) elemento può avere zero o uno [ <> \> ](../../../docs/framework/net-native/assembly-element-net-native.md) elemento.|  
+|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|Viene usato come contenitore per i tipi e i membri dei tipi a livello di applicazione i cui metadati sono disponibili per la reflection al runtime. L'elemento [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) può contenere nessuno, uno o più elementi [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|Applica i criteri di reflection di runtime a tutti i tipi in un determinato assembly.|  
+|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definisce l'assembly che contiene i tipi e i membri dei tipi i cui metadati sono disponibili per la reflection al runtime. L'elemento [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) può contenere nessuno o un elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).|  
 |`<Namespace>`|Applica i criteri di reflection a tutti i tipi in uno spazio dei nomi padre.|  
   
 ## <a name="remarks"></a>Note  
  Gli attributi `Activate`, `Browse`, `Dynamic` e `Serialize` sono tutti facoltativi. Se non ne è presente nessuno, l'elemento `<Namespace>` funge solo da contenitore per gli elementi figlio. Se sono presenti, l'elemento `<Namespace>` consente di applicare criteri di reflection di runtime a tutti i tipi dello spazio dei nomi specificato.  
   
- Quando è un figlio di [ <> \> ](../../../docs/framework/net-native/assembly-element-net-native.md) elemento, il `<Namespace>` elemento esegue l'override di criteri di reflection di runtime definiti dalla [ <> \> ](../../../docs/framework/net-native/assembly-element-net-native.md) elemento.  
+ Quando è figlio dell'elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), l'elemento `<Namespace>` prevale sui criteri di reflection di runtime definiti dall'elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
- [File di configurazione di runtime direttive (RD. XML)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  (Impostazioni dei criteri delle direttive di runtime)  
+ [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
  [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+

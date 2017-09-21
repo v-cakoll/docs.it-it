@@ -1,47 +1,53 @@
 ---
-title: "Interazione tra criteri di cache: durata massima e validit&#224; minima | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "criteri di cache basati sull'ora"
-  - "Revalidate (criterio)"
-  - "cache [.NET Framework], criteri basati sull'ora"
-  - "validità minima delle risorse memorizzate nella cache"
-  - "durata massima, criteri"
-  - "validità minima, criteri"
-  - "validità delle risorse memorizzate nella cache"
+title: "Interazione tra criteri di cache: durata massima e validità minima"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- time-based cache policies
+- Revalidate policy
+- cache [.NET Framework], time-based policies
+- freshness of cached resources
+- maximum age policy
+- minimum freshness policy
+- age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29bc33db40e396d28347d1fc491b94541eb75f33
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Interazione tra criteri di cache: durata massima e validit&#224; minima
-Per assicurarsi che il contenuto più nuovo viene restituito all'applicazione client, l'interazione di criteri della cache client e i requisiti della riconvalida del server restituisce sempre i criteri della cache più conservativi.  Tutti gli esempi di questo argomento vengono illustrati i criteri della cache per una risorsa memorizzata nella cache il 1° gennaio e scade il 4 gennaio.  
+# <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Interazione tra criteri di cache: durata massima e validità minima
+Per garantire che all'applicazione client venga restituito il contenuto più aggiornato, l'interazione tra criteri di cache del client e requisiti di riconvalida del server determina sempre la creazione dei criteri di cache più conservativi. In tutti gli esempi di questo argomento vengono illustrati i criteri di cache per una risorsa memorizzata nella cache il 1° gennaio con scadenza il 4 gennaio.  
   
- Negli esempi seguenti vengono illustrati i criteri della cache che risultati dell'interazione di validità massima \(`maxAge`\) e i valori minimi di dati \(`minFresh`\).  
+ Gli esempi seguenti illustrano i criteri di cache risultanti dall'interazione tra il valore di durata massima (`maxAge`) e il valore di validità minima (`minFresh`).  
   
--   Se i criteri della cache per `maxAge` \= 2 giorni e `minFresh` non viene specificato, il contenuto verranno riconvalidati il 3 gennaio.  
+-   Se i criteri di cache prevedono l'impostazione di `maxAge` su 2 giorni e `minFresh` non viene specificato, il contenuto viene riconvalidato il 3 gennaio.  
   
--   Se i criteri della cache per `maxAge` \= 2 giorni e `minFresh` \= il 1 giorni, come `maxAge`, il contenuto è fino al 3 gennaio nuovo.  Come `minFresh`, il contenuto è fino al 3 gennaio nuovo.  Di conseguenza, il contenuto deve essere verranno riconvalidati il 3 gennaio.  
+-   Se i criteri di cache prevedono l'impostazione di `maxAge` su 2 giorni e di `minFresh` su 1 giorno, in base sia al valore di `maxAge` sia al valore di `minFresh`, il contenuto rimane valido fino al 3 gennaio, data in cui deve essere riconvalidato.  
   
--   Se i criteri della cache per `maxAge`\= 2 giorni e `minFresh` \= 2 giorni, come `maxAge`, il contenuto è fino al 3 gennaio nuovo.  Come `minFresh` il contenuto è fino al 2 gennaio nuovo.  Di conseguenza, il contenuto deve essere verranno riconvalidati il 2 gennaio.  
+-   Se i criteri di cache prevedono l'impostazione di `maxAge` su 2 giorni e di `minFresh` su 2 giorni, in base al valore di `maxAge` il contenuto rimane valido fino al 3 gennaio, mentre in base al valore di `minFresh` è valido fino al 2 gennaio. Il contenuto deve essere quindi riconvalidato il 2 gennaio.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione della cache per le applicazioni di rete](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [Criteri di cache](../../../docs/framework/network-programming/cache-policy.md)   
  [Criteri di cache basati sulla posizione](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Criteri di cache basati sull'ora](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [Criteri di cache basati sul tempo](../../../docs/framework/network-programming/time-based-cache-policies.md)   
  [Configurazione della memorizzazione nella cache per applicazioni di rete](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
  [Interazione tra criteri di cache: durata massima e obsolescenza massima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)
+

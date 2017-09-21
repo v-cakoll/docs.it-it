@@ -1,74 +1,88 @@
 ---
-title: "Scenari di rete peer-to-peer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Scenari di rete peer-to-peer
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: edf493f0999dc78e6b1065176f1638b23667d9b3
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Scenari di rete peer-to-peer
-La rete peer\-to\-peer attiva o aggiorna i seguenti scenari:  
+# <a name="peer-to-peer-networking-scenarios"></a>Scenari di rete peer-to-peer
+Una rete peer-to-peer supporta o ottimizza gli scenari seguenti:  
   
-## Comunicazione in tempo reale \(RTC\)  
+## <a name="real-time-communications-rtc"></a>Comunicazioni in tempo reale  
   
--   Messaggistica immediata di Serverless  
+-   Messaggistica immediata senza server  
   
- Il RTC esiste oggi.  Gli utenti di un computer possono chiacchierare oggi e avere conversazioni il video o di voce con i peer.  Tuttavia, molti dei programmi esistenti e dai protocolli di comunicazione si basano sui server per l'utilizzo.  Se si partecipa a una rete senza fili ad hoc o è una parte di una rete isolata, non sarà possibile utilizzare queste funzionalità rtc viene.  La tecnologia peer\-to\-peer consente l'estensione di tecnologie rtc viene a questi ambienti di rete aggiuntivi.  
+ Le comunicazioni in tempo reale sono già una realtà. Gli utenti di computer possono comunicare via chat e intrattenere conversazioni vocali o video con altri utenti. Tuttavia, molti dei programmi esistenti e dei relativi protocolli di comunicazione si basano sui server per funzionare. Se si partecipa a una rete wireless ad hoc o si fa parte di una rete isolata, non è possibile usare queste funzionalità di comunicazione in tempo reale. La tecnologia peer-to-peer consente l'estensione delle tecnologie di comunicazione in tempo reale a questi ambienti di rete aggiuntivi.  
   
--   Schema e gameplay in tempo reale  
+-   Matchmaking e gioco in tempo reale  
   
- Simile a RTC, il gioco in tempo reale del gioco esiste oggi.  Esistono molti siti web del gioco che approvvigionano nella community di gioco tramite Internet.  Offrono la possibilità di cercare altri gamers con simili interesse e di giocare raccolta.  Il problema è che i siti del gioco esistono solo in Internet e sono innestati verso il gamer avido che desidera riprodurre con i migliori gamers il mondo.  Questi siti rilevamento e forniscono le statistiche per semplificare il processo.  Tuttavia, questi siti non consentono a un gamer installare un gioco ad hoc tra elementi friend in vari ambienti di rete.  La rete peer\-to\-peer può fornire questa funzionalità.  
+ Come le comunicazioni in tempo reale, oggi è già disponibile anche la possibilità di giocare con altri in tempo reale. Esistono molti siti di gioco basati sul Web che riuniscono la community dei giocatori tramite Internet e offrono la possibilità di trovare gli altri giocatori con interessi simili e giocare insieme. Il problema è che i siti di giochi sono disponibili solo in Internet e sono rivolti ai giocatori appassionati che amano mettersi alla prova con i migliori giocatori nel mondo. Questi siti tengono traccia di dati statistici e li mettono a disposizione per agevolare questo processo. Questi siti non consentono però a un giocatore di configurare un gioco ad hoc tra amici in svariati ambienti di rete. Una rete peer-to-peer può offrire questa funzionalità.  
   
-## Collaborazione  
+## <a name="collaboration"></a>Collaborazione  
   
--   Aree di lavoro di progetto che risolve un obiettivo  
+-   Aree di lavoro per singoli progetti con obiettivi specifici  
   
- Le applicazioni dell'area di lavoro condivisi consentono la creazione di gruppi di lavoro ad hoc e quindi che consentono ai proprietari di gruppo di lavoro popolare l'area di lavoro condivisa con gli strumenti e che soddisfino concederanno il gruppo per risolvere un problema.  Ciò potrebbe includere le aree messaggi, gli strumenti di produttività e file.  
+ Le applicazioni per aree di lavoro condivise consentono di creare gruppi di lavoro ad hoc e quindi consentono ai proprietari del gruppo di lavoro di popolare l'area di lavoro condivisa con gli strumenti e il contenuto che permetterà al gruppo di risolvere un problema. Può trattarsi di bacheche per messaggi, strumenti di produttività e file.  
   
--   Condividere i file con altri  
+-   Condivisione di file con altri utenti  
   
- Un sottoinsieme di condividere dell'area di lavoro di progetto è la possibilità di condividere i file.  Sebbene questa possibilità esista oggi con la versione corrente di Windows, può essere aggiornata dalla rete del peer \-\- peer per rendere disponibile il contenuto del file in modo semplice e intuitivo.  Consentire l'accesso alla ricchezza incredibile del contenuto al bordo Internet o negli ambienti di elaborazione ad hoc aumenta il valore di calcolare la rete.  
+ Una funzionalità secondaria della condivisione di un'area di lavoro per un progetto è la possibilità di condividere file. Sebbene questa possibilità esista già con la versione corrente di Windows, può essere migliorata tramite una rete peer-to-peer per rendere il contenuto di file disponibile in un modo semplice e accessibile. La possibilità di accedere facilmente all'incredibile quantità di contenuti disponibili ai margini di Internet o in ambienti informatici ad hoc aumenta il valore delle reti di computer.  
   
--   Condividere le esperienze  
+-   Condivisione di esperienze  
   
- Con la connessione wireless convertito in rete più diffuso e più peer\-to\-peer consente di essere online in un gruppo di peer e sia possibile condividere le informazioni quali un tramonto, un insieme rock, o una crociera di vacanza\) mentre sono in corso.  
+ Con la sempre maggiore diffusione della connettività wireless, le reti peer-to-peer consentono di essere online in un gruppo di peer e di condividere esperienze in tempo reale, ad esempio un tramonto, un concerto o una vacanza.  
   
-## Distribuzione contenuto  
+## <a name="content-distribution"></a>Distribuzione del contenuto  
   
 -   Messaggi di testo  
   
- La rete peer\-to\-peer può consentire la diffusione di informazioni basate su testo sotto forma di file o di messaggi a un ampio gruppo di utenti.  Un esempio è un elenco di notizie.  
+ Una rete peer-to-peer può consentire la diffusione di informazioni basate su testo sotto forma di file o messaggi a un ampio gruppo di utenti. Un esempio è un elenco di notizie.  
+  
+-  
   
 -   Audio e video  
   
- La rete peer\-to\-peer può inoltre consentire la diffusione di audio o le informazioni visualizzate in un ampio gruppo di utenti, ad esempio una grande riunione di società o di interagisce.  Per distribuire oggi il contenuto, è necessario configurare server di grandi dimensioni per raccogliere e distribuire il carico a centinaia o a migliaia di utenti.  Con rete peer\-to\-peer, una sola alcuni dei peer effettivamente otterrà il contenuto dai server centralizzati.  I peer sommergerebbero queste informazioni all'esterno a qualsiasi più persone che la invia alle altre, e così via.  Il caricamento di distribuire il contenuto viene distribuito ai peer in cloud.  Un peer che desiderano ricevere il contenuto cercherebbe il peer distribuente più vicino e ottiene il contenuto da esse.  
+ Le reti peer-to-peer possono anche supportare la distribuzione di informazioni audio o video a un ampio gruppo di utenti, ad esempio una riunione aziendale o un concerto. Per distribuire il contenuto, è necessario configurare server ad alta capacità per la raccolta e la distribuzione del carico a centinaia o migliaia di utenti. Con una rete peer-to-peer, solo un numero limitato di peer otterrebbe in effetti il contenuto dai server centralizzati. Questi peer distribuirebbero le informazioni ad altre persone che le invierebbero ad altri e così via. Il carico della distribuzione del contenuto viene distribuito ai peer nel cloud. Un peer che vuole ricevere il contenuto individua il peer di distribuzione più vicino e ottiene il contenuto da tale peer.  
   
--   Distribuzione degli aggiornamenti del prodotto  
+-  
   
- La rete peer\-to\-peer può inoltre fornire un meccanismo efficiente per distribuire il software come aggiornamenti del prodotto \(aggiornamenti per la sicurezza e service pack\).  Un peer che dispone di una connessione a un server di distribuzione software può ottenere l'aggiornamento del prodotto e propagarlo agli altri membri del gruppo.  
+-   Distribuzione degli aggiornamenti dei prodotti  
   
-## Elaborazione distribuita  
+ Una rete peer-to-peer può inoltre rappresentare un meccanismo efficiente per distribuire il software, ad esempio gli aggiornamenti dei prodotti (aggiornamenti della sicurezza e Service Pack). Un peer con una connessione a un server di distribuzione software può ottenere l'aggiornamento del prodotto e propagarlo agli altri membri del gruppo.  
   
--   Divisione e distribuzione di un'attività  
+-  
   
- Un'attività grande calcolante è innanzitutto possibile suddividere le attività più piccole calcolare separate particolarmente adatte alle risorse di elaborazione di un peer.  Un peer può eseguire la divisione dell'attività calcolante grande.  Quindi, la rete peer\-to\-peer può distribuire le singole attività ai membri separati nel gruppo.  Ogni peer esegue la relativa attività calcolante e segnalerà il relativo risultato a un punto di compilazione centralizzato.  
+## <a name="distributed-processing"></a>Elaborazione distribuita  
   
--   Aggregazione delle risorse del computer  
+-   Suddivisione e distribuzione di un'attività  
   
- È inoltre possibile utilizzare la rete peer\-to\-peer per l'elaborazione distribuita è l'esecuzione dei programmi in ogni peer da eseguire durante il tempo del processore inattivi e fa parte di attività più grande calcolante che viene modificata da un server centrale.  Aggregazione dei processori di più computer, la rete peer\-to\-peer può trasformare un gruppo di computer peer in un grande processore parallelo per le grandi calcolare.  
+ Un'attività di elaborazione estesa può essere suddivisa in attività più piccole distinte, adatte alle risorse di elaborazione di un peer. Un peer può occuparsi della suddivisione dell'attività di elaborazione estesa e quindi la rete peer-to-peer può distribuire le singole attività ai peer separati nel gruppo. Ogni peer esegue l'attività di elaborazione assegnata e restituisce il risultato a un punto di raccolta centralizzato.  
   
-## Vedere anche  
+-   Aggregazione di risorse dei computer  
+  
+ Un altro modo per utilizzare la rete peer-to-peer per l'elaborazione distribuita consiste nell'eseguire in ogni peer programmi eseguiti durante i periodi di inattività del processore e che fanno parte di un'attività di elaborazione più grande coordinata da un server centrale. Aggregando i processori di più computer, la rete peer-to-peer può trasformare un gruppo di computer peer in un grande processore parallelo per attività di elaborazione estese.  
+  
+-  
+  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.PeerToPeer.Collaboration>
+

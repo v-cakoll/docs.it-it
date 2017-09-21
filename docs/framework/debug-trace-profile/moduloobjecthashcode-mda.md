@@ -1,68 +1,73 @@
 ---
-title: "moduloObjectHashcode MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "managed debugging assistants (MDAs), hashcode modulus"
-  - "Modulo object hash code"
-  - "moduloObjectHashcode MDA"
-  - "hashcode modulus"
-  - "MDAs (managed debugging assistants), hashcode modulus"
-  - "GetHashCode method"
-  - "modulus of hashcodes"
+title: moduloObjectHashcode (MDA)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- managed debugging assistants (MDAs), hashcode modulus
+- Modulo object hash code
+- moduloObjectHashcode MDA
+- hashcode modulus
+- MDAs (managed debugging assistants), hashcode modulus
+- GetHashCode method
+- modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b9732af6c84a2f7af70512ea9ce73a8afc74bbbc
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# moduloObjectHashcode MDA
-L'assistente al debug gestito `moduloObjectHashcode` modifica il comportamento della classe <xref:System.Object> in modo che venga eseguita un'operazione modulo sul codice hash restituito dal metodo <xref:System.Object.GetHashCode%2A>.  Il modulo predefinito per questo assistente al debug gestito è 1, che fa sì che <xref:System.Object.GetHashCode%2A> restituisca 0 per tutti gli oggetti.  
+# <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode (MDA)
+L'assistente al debug gestito `moduloObjectHashcode` modifica il comportamento della classe <xref:System.Object> per eseguire un'operazione modulo sul codice hash restituito dal metodo <xref:System.Object.GetHashCode%2A>. Il modulo predefinito per questo assistente al debug gestito è 1, che fa sì che <xref:System.Object.GetHashCode%2A> restituisca 0 per tutti gli oggetti.  
   
-## Sintomi  
- Dopo il passaggio a una nuova versione di Common Language Runtime \(CLR\), un programma non viene più eseguito correttamente:  
+## <a name="symptoms"></a>Sintomi  
+ Dopo la migrazione a una nuova versione di Common Language Runtime (CLR), un programma non viene più eseguito correttamente:  
   
--   Il programma sta ottenendo l'oggetto errato da <xref:System.Collections.Hashtable>.  
+-   Il programma ottiene un oggetto non corretto da una <xref:System.Collections.Hashtable>.  
   
--   L'ordine di enumerazione da <xref:System.Collections.Hashtable> contiene una modifica che causa l'interruzione del programma.  
+-   L'ordine di enumerazione da una <xref:System.Collections.Hashtable> include una modifica che compromette il funzionamento del programma.  
   
--   Due oggetti precedentemente uguali non risultano più uguali.  
+-   Due oggetti che erano uguali non sono più uguali.  
   
--   Due oggetti precedentemente non uguali adesso risultano uguali.  
+-   Due oggetti che erano diversi sono ora uguali.  
   
-## Causa  
- È possibile che il programma stia ottenendo l'oggetto errato da <xref:System.Collections.Hashtable> poiché l'implementazione del metodo <xref:System.Object.Equals%2A> sulla classe per la chiave in <xref:System.Collections.Hashtable> verifica l'uguaglianza degli oggetti confrontando i risultati della chiamata al metodo <xref:System.Object.GetHashCode%2A>.  I codici hash non devono essere utilizzati per verificare l'uguaglianza degli oggetti poiché due oggetti potrebbero avere lo stesso codice hash anche se i rispettivi campi contengono valori differenti.  Questi conflitti tra codici hash, sebbene rari, possono comunque verificarsi.  In questo caso, da una ricerca in <xref:System.Collections.Hashtable> risulterebbe che due chiavi diverse siano invece uguali e verrebbe quindi restituito l'oggetto errato da <xref:System.Collections.Hashtable>.  Per motivi di prestazioni, l'implementazione di <xref:System.Object.GetHashCode%2A> può variare tra le diverse versioni di Common Language Runtime. Pertanto, un conflitto che non si verifica in una versione potrebbe verificarsi nelle versioni successive.  Abilitare questo assistente al debug gestito per verificare la presenza di bug nel codice in caso di conflitto tra i codici hash.  Quando questo assistente al debug gestito è abilitato, il metodo <xref:System.Object.GetHashCode%2A> restituisce 0, causando un conflitto tra tutti i codici hash.  L'unico effetto dell'abilitazione di questo assistente al debug gestito sul programma consiste in un rallentamento dell'esecuzione.  
+## <a name="cause"></a>Causa  
+ È possibile che il programma ottenga l'oggetto non corretto da una <xref:System.Collections.Hashtable> perché l'implementazione del metodo <xref:System.Object.Equals%2A> nella classe per la chiave in <xref:System.Collections.Hashtable> verifica l'uguaglianza degli oggetti confrontando i risultati della chiamata al metodo <xref:System.Object.GetHashCode%2A>. Non è consigliabile usare i codici hash per verificare l'uguaglianza di oggetti perché due oggetti possono avere lo stesso codice hash, anche se i rispettivi campi hanno valori diversi. Queste collisioni di codici hash, anche se nella pratica si tratta di eventi rari, possono verificarsi. L'effetto su una ricerca <xref:System.Collections.Hashtable> è che due chiavi diverse risultano apparentemente uguali e <xref:System.Collections.Hashtable> restituisce un oggetto non corretto. Per motivi di prestazioni, l'implementazione di <xref:System.Object.GetHashCode%2A> può cambiare tra versioni di runtime diverse, quindi potrebbero verificarsi collisioni in una versione e non nelle versioni successive. Abilitare questo assistente al debug gestito per verificare se il codice include bug in caso di collisioni di codici hash. Quando questo assistente al debug gestito viene abilitato, il metodo <xref:System.Object.GetHashCode%2A> restituisce 0, quindi tutti i codici hash risultano in collisione. L'unico effetto dell'abilitazione di questo assistente al debug gestito sul programma è un rallentamento dell'esecuzione.  
   
- L'ordine di enumerazione da <xref:System.Collections.Hashtable> può variare tra le diverse versioni di Common Language Runtime se viene modificato l'algoritmo utilizzato per calcolare i codici hash per la chiave.  Per verificare se il programma presenta una dipendenza dall'ordine di enumerazione delle chiavi o dei valori in una tabella hash, è possibile abilitare questo assistente al debug gestito.  
+ L'ordine di enumerazione da una <xref:System.Collections.Hashtable> può variare tra le diverse versioni di runtime se cambia l'algoritmo usato per calcolare i codici hash per la chiave. Per verificare se il programma ha una dipendenza dall'ordine di enumerazione delle chiavi o dei valori da una tabella hash, è possibile abilitare questo assistente al debug gestito.  
   
-## Risoluzione  
- Non utilizzare mai codici hash come sostituti dell'identità dell'oggetto.  Implementare l'override del metodo <xref:System.Object.Equals%2A?displayProperty=fullName> per non confrontare i codici hash.  
+## <a name="resolution"></a>Risoluzione  
+ Non usare mai codici hash in sostituzione all'identità dell'oggetto. Implementare l'override del metodo <xref:System.Object.Equals%2A?displayProperty=fullName> per non confrontare i codici hash.  
   
  Non creare dipendenze dall'ordine di enumerazione delle chiavi o dei valori nelle tabelle hash.  
   
-## Effetto sul runtime  
- Quando questo assistente al debug gestito è abilitato, l'esecuzione delle applicazioni risulta più lenta.  L'assistente recupera semplicemente il codice hash che sarebbe stato restituito e restituisce invece il resto della divisione modulo.  
+## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
+ Le applicazioni vengono eseguite più lentamente quando si abilita questo assistente al debug gestito. Questo assistente al debug gestito accetta semplicemente il codice hash che sarebbe stato restituito e restituisce invece il resto della divisione di un modulo.  
   
-## Output  
- Per questo assistente al debug gestito non esiste alcun output.  
+## <a name="output"></a>Output  
+ Non è previsto alcun output per questo assistente al debug gestito.  
   
-## Configurazione  
- L'attributo `modulus` specifica il modulo utilizzato sul codice hash.  Il valore predefinito è 1.  
+## <a name="configuration"></a>Configurazione  
+ L'attributo `modulus` specifica il modulo usato sul codice hash. Il valore predefinito è 1.  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <moduloObjectHashcode modulus="1" />  
@@ -70,7 +75,8 @@ L'assistente al debug gestito `moduloObjectHashcode` modifica il comportamento d
 </mdaConfig>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Object.GetHashCode%2A?displayProperty=fullName>   
  <xref:System.Object.Equals%2A?displayProperty=fullName>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

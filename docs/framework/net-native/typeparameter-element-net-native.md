@@ -1,28 +1,32 @@
 ---
-title: "Elemento &lt;TypeParameter&gt; (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;TypeParameter&gt; (.NET Native)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d170544c6b0bd5d1a7c70e707506bd36ac65ab39
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Elemento &lt;TypeParameter&gt; (.NET Native)
+# <a name="lttypeparametergt-element-net-native"></a>Elemento &lt;TypeParameter&gt; (.NET Native)
 Applica i criteri al tipo rappresentato da un argomento di tipo passato a un metodo.  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```xml  
-  
 <Parameter Name="parameter_name"  
            Activate="policy_type"  
            Browse="policy_type"  
@@ -34,7 +38,6 @@ Applica i criteri al tipo rappresentato da un argomento di tipo passato a un met
            MarshalObject="policy_type"  
            MarshalDelegate="policy_type"  
            MarshalStructure="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributi ed elementi  
@@ -49,9 +52,9 @@ Applica i criteri al tipo rappresentato da un argomento di tipo passato a un met
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.|  
 |`Dynamic`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.|  
 |`Serialize`|Serializzazione|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a costruttori, campi e proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie quali il serializzatore JSON di Newtonsoft.|  
-|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che utilizza il <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> (classe).|  
-|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che utilizza il <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName> (classe).|  
-|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che utilizza il <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> (classe).|  
+|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
+|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
+|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
 |`MarshalObject`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi di riferimento a Windows Runtime e COM.|  
 |`MarshalDelegate`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.|  
 |`MarshalStructure`|Interoperabilità|Attributo facoltativo. Controlla i criteri per il marshalling dei tipi di valore al codice nativo.|  
@@ -66,7 +69,7 @@ Applica i criteri al tipo rappresentato da un argomento di tipo passato a un met
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per ulteriori informazioni, vedere [impostazioni dei criteri della direttiva di Runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|L'impostazione da applicare a questo tipo di criteri. I valori consentiti sono `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Per altre informazioni, vedere [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime).|  
   
 ### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
@@ -75,15 +78,14 @@ Applica i criteri al tipo rappresentato da un argomento di tipo passato a un met
   
 |Elemento|Descrizione|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Applica i criteri di reflection di runtime a un costruttore o a un metodo.|  
   
 ## <a name="remarks"></a>Note  
- Il `<TypeParameter>` è simile all'elemento di [ <> \> ](../../../docs/framework/net-native/parameter-element-net-native.md) elemento, ad eccezione del fatto che può essere applicato solo ai parametri di tipo <xref:System.Type>. Applica i criteri a qualsiasi tipo rappresentato al runtime dall'argomento Type specificato dall'attributo `Name`.  
+ L'elemento `<TypeParameter>` è simile all'elemento [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md), ma può essere applicato solo a parametri di tipo <xref:System.Type>. Applica i criteri a qualsiasi tipo rappresentato al runtime dall'argomento Type specificato dall'attributo `Name`.  
   
  Ad esempio, il serializzatore JSON di NewtonSoft include un metodo statico `JsonConvert.DeserializeObject(String value, Type type)`. Le seguenti direttive di reflection:  
   
 ```xml  
-  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
    <Type Name="Newtonsoft.Json.JsonConvert" >  
       <Method Name="DeserializeObject">  
@@ -91,22 +93,20 @@ Applica i criteri al tipo rappresentato da un argomento di tipo passato a un met
       </Method>  
    </Type>  
 </Directives>  
-  
 ```  
   
- specificare che i metadati per il tipo di runtime rappresentato dal `type` argomento deve essere resi disponibile per la serializzazione. Se queste direttive di runtime vengono applicate a un progetto che include il seguente codice sorgente:  
+ specificano che i metadati per il tipo di runtime rappresentati dall'argomento `type` devono essere resi disponibili per la serializzazione. Se queste direttive di runtime vengono applicate a un progetto che include il seguente codice sorgente:  
   
 ```csharp  
-  
 Type t = typeof(StockQuote);  
 Object obj = JsonConvert.DeserializeObject(data, t);  
-  
 ```  
   
  le direttive di reflection rendono disponibili i metadati per il tipo `StockQuote` per il serializzatore JSON di NewtonSoft al runtime.  
   
 ## <a name="see-also"></a>Vedere anche  
- [<>\>Elemento](../../../docs/framework/net-native/method-element-net-native.md)   
- [File di configurazione di runtime direttive (RD. XML)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Impostazioni dei criteri della direttiva di runtime](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
+ [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)   
+ [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  (Impostazioni dei criteri delle direttive di runtime)  
  [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
+

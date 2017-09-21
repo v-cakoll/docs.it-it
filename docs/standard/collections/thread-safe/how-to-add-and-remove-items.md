@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 40291d424916c2f87a2070a9a8a6e49243ac083a
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Procedura: aggiungere e rimuovere elementi da un oggetto ConcurrentDictionary
@@ -36,7 +36,8 @@ In questo esempio viene illustrato come aggiungere, recuperare, aggiornare e rim
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono usate due istanze di <xref:System.Threading.Tasks.Task> per aggiungere contemporaneamente alcuni elementi a <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, quindi viene restituito tutto il contenuto per indicare che gli elementi sono stati aggiunti correttamente. Nell'esempio viene inoltre illustrato come utilizzare i metodi <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>, <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> per aggiungere, aggiornare e recuperare elementi dalla raccolta.  
   
- [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)] [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
+ [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)]
+ [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> è progettato per gli scenari multithreading. Non è necessario usare blocchi nel codice per aggiungere o rimuovere elementi dalla raccolta. Tuttavia, è sempre possibile per un thread recuperare un valore, e per un altro thread aggiornare immediatamente la raccolta assegnando un nuovo valore alla stessa chiave.  
   

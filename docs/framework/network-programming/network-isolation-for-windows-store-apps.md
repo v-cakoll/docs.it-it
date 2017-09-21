@@ -1,44 +1,50 @@
 ---
-title: "Isolamento rete per app di Windows Store | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Isolamento rete per app di Windows Store
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6a8a01e89977ea4fb9487520f2baa35028720e9d
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# Isolamento rete per app di Windows Store
-Le classi in <xref:System.Net>, in <xref:System.Net.Http>negli spazi dei nomi <xref:System.Net.Http.Headers> possono essere utilizzate per compilare applicazioni dell'archivio di Windows o applicazioni desktop.  Se utilizzate in un'applicazione di archivio di Windows, le classi negli spazi dei nomi sono interessate da isolamento rete, parte del modello di sicurezza dell'applicazione utilizzati da [!INCLUDE[win8](../../../includes/win8-md.md)].  Le funzionalità appropriate della rete devono essere abilitati nel manifesto dell'app per un'applicazione di archivio di Windows per il sistema consentono l'accesso alla rete.  
+# <a name="network-isolation-for-windows-store-apps"></a>Isolamento rete per app di Windows Store
+Le classi negli spazi dei nomi <xref:System.Net>, <xref:System.Net.Http> e <xref:System.Net.Http.Headers> possono essere usate per sviluppare app di Windows Store o app desktop. Quando vengono usate in un'app di Windows Store, le classi in questi spazi dei nomi sono interessate dall'isolamento rete, parte del modello di sicurezza delle applicazioni usato da [!INCLUDE[win8](../../../includes/win8-md.md)]. Le funzionalità di rete appropriate devono essere abilitate nel manifesto dell'app per un'app di Windows Store affinché il sistema consenta l'accesso alla rete.  
   
-## Elenco di controllo per l'isolamento rete  
- Utilizzare questo elenco di controllo per accertarsi che l'isolamento rete è configurato per l'applicazione dell'archivio di Windows.  
+## <a name="checklist-for-network-isolation"></a>Elenco di controllo per l'isolamento rete  
+ Usare questo elenco di controllo per assicurarsi che l'isolamento rete sia configurato per l'app di Windows Store.  
   
-1.  Determinare la direzione delle richieste di accesso alla rete necessarie dall'applicazione.  Ciò può essere o richieste client avviate in uscita o le richieste non sollecitate in ingresso o potrebbe essere una combinazione di entrambi i tipi di rete.  
+1.  Determinare la direzione delle richieste di accesso alla rete necessaria per l'app. Può trattarsi di richieste in uscita avviate dal client o di richieste in ingresso non sollecitate oppure di una combinazione di entrambi i tipi di richiesta di rete.  
   
-2.  Determinare il tipo di risorse di rete cui l'applicazione comunicherà con.  Un'applicazione può essere necessario comunicare con le soluzioni attendibili su Home o di eseguire la rete.  Un'applicazione potrebbe essere necessario comunicare con le risorse in Internet.  Un'applicazione potrebbe essere necessario accedere a entrambi i tipi di risorse di rete.  
+2.  Determinare il tipo di risorse di rete con cui comunicherà l'app. Un'app potrebbe avere l'esigenza di comunicare con risorse attendibili in una rete domestica o aziendale. Per un'app potrebbe essere necessario comunicare con risorse su Internet. Un'app potrebbe dover disporre dell'accesso a entrambi i tipi di risorse di rete.  
   
-3.  Configurare le funzionalità minimo\- necessari per l'isolamento della rete nel manifesto dell'app.  
+3.  Configurare le funzionalità di isolamento rete minime richieste nel manifesto dell'app.  
   
-4.  Implementare ed eseguire l'applicazione per verificare mediante gli strumenti di isolamento rete forniti per risolvere.  
+4.  Distribuire ed eseguire l'app per testarla usando gli strumenti di isolamento rete forniti per la risoluzione dei problemi.  
   
- Per informazioni dettagliate su come configurare gli strumenti di funzionalità e di isolamento di rete utilizzati per l'isolamento rete per la risoluzione dei problemi, vedere [Come configurare la funzionalità di isolamento rete](http://go.microsoft.com/fwlink/?LinkID=228265) la documentazione per sviluppatori [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+ Per informazioni più dettagliate su come configurare le funzionalità di rete e gli strumenti di isolamento usati per la risoluzione dei problemi dell'isolamento rete, vedere [Come impostare le funzionalità di rete](http://go.microsoft.com/fwlink/?LinkID=228265) nella documentazione per gli sviluppatori di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
-## Vedere anche  
- [Connessione a un servizio web](http://go.microsoft.com/fwlink/?LinkID=245696)   
- [Linee guida e un elenco di controllo per l'isolamento rete](http://go.microsoft.com/fwlink/?LinkID=228265)   
- [guida rapida: Connessione utilizzando HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)   
- [come utilizzare i gestori di HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)   
- [Come proteggere le connessioni di HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)   
- [esempio di HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)
+## <a name="see-also"></a>Vedere anche  
+ [Connessione a servizi Web](http://go.microsoft.com/fwlink/?LinkID=245696)   
+ [Linee guida ed elenco di controllo per l'isolamento rete](http://go.microsoft.com/fwlink/?LinkID=228265)   
+ [Come connettersi tramite System.Net.Http.HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)   
+ [Come usare i gestori System.Net.Http.HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)   
+ [Come proteggere le connessioni System.Net.Http.HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)   
+ [HttpClient Sample](http://go.microsoft.com/fwlink/?LinkId=242550) (Esempio con HttpClient)
+

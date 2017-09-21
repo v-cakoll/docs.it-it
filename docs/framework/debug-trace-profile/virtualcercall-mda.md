@@ -1,49 +1,54 @@
 ---
-title: "virtualCERCall MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), CER calls"
-  - "virtualCERCall MDA"
-  - "virtual CER calls"
-  - "constrained execution regions"
-  - "CER calls"
-  - "managed debugging assistants (MDAs), CER calls"
+title: virtualCERCall (MDA)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), CER calls
+- virtualCERCall MDA
+- virtual CER calls
+- constrained execution regions
+- CER calls
+- managed debugging assistants (MDAs), CER calls
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 334900cbcc04cb1883b93a6bac17309add9ec159
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# virtualCERCall MDA
-L'assistente al debug gestito `virtualCERCall` viene attivato come avviso indicante che un sito di chiamata all'interno di un grafico di chiamata di un'area a esecuzione vincolata \(CER, Constrained Execution Region\) fa riferimento a una destinazione virtuale, ovvero una chiamata virtuale a un metodo virtuale non final o una chiamata mediante un'interfaccia.  Poiché Common Language Runtime \(CLR\) non è in grado di prevedere il metodo di destinazione di queste chiamate semplicemente dal linguaggio MSIL \(Microsoft Intermediate Language\) e dall'analisi dei metadati,  la struttura ad albero delle chiamate non può essere preparata insieme al grafico CER e le interruzioni dei thread nel sottoalbero non possono essere bloccate automaticamente.  Questo assistente al debug gestito segnala i casi in cui potrebbe essere necessario estendere un'area CER mediante chiamate esplicite al metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> una volta che le informazioni aggiuntive necessarie per calcolare la destinazione della chiamata sono note in fase di esecuzione.  
+# <a name="virtualcercall-mda"></a>virtualCERCall (MDA)
+L'assistente al debug gestito `virtualCERCall` viene attivato come avviso che indica che un sito di chiamata all'interno di un grafico chiamate di un'area a esecuzione vincolata fa riferimento a una destinazione virtuale, ovvero una chiamata virtuale a un metodo virtuale non finale o a una chiamata che usa un'interfaccia. Common Language Runtime (CLR) non può prevedere il metodo di destinazione di queste chiamate solo dal linguaggio intermedio e dall'analisi dei metadati. Di conseguenza, non è possibile preparare l'albero delle chiamate come parte del grafico dell'area a esecuzione vincolata e le interruzioni dei thread in tale sottoalbero non possono essere bloccate automaticamente. Questo assistente al debug gestito segnala i casi in cui un'area a esecuzione vincolata potrebbe dover essere estesa usando chiamate esplicite al metodo <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> una volta che le informazioni aggiuntive necessarie per calcolare la destinazione della chiamata sono note in fase di esecuzione.  
   
-## Sintomi  
- CER che non vengono eseguite quando viene interrotto un thread o viene scaricato un dominio applicazione.  
+## <a name="symptoms"></a>Sintomi  
+ Le aree a esecuzione vincolata non vengono eseguite quando un thread viene interrotto o quando viene scaricato un dominio dell'applicazione.  
   
-## Causa  
- Una CER contiene una chiamata a un metodo virtuale che non può essere preparata automaticamente.  
+## <a name="cause"></a>Causa  
+ Un'area a esecuzione vincolata contiene una chiamata a un metodo virtuale che non è possibile preparare automaticamente.  
   
-## Risoluzione  
+## <a name="resolution"></a>Risoluzione  
  Chiamare <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> per il metodo virtuale.  
   
-## Effetto sul runtime  
- Questo assistente al debug gestito non produce effetti su CLR.  
+## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
+ L'assistente al debug gestito non ha alcun effetto su CLR.  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 Method 'MethodWithCer', while executing within a constrained execution region, makes a call  
@@ -56,9 +61,9 @@ declaringType name="VirtualCERCall+MyClass"
     callsite name="MethodWithCer" offset="0x0024"  
 ```  
   
-## Configurazione  
+## <a name="configuration"></a>Configurazione  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     < VirtualCERCall />  
@@ -66,7 +71,7 @@ declaringType name="VirtualCERCall+MyClass"
 </mdaConfig>  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 class MyClass  
@@ -106,7 +111,8 @@ void MethodWithCer(MyClass object)
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md)
+ [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
+

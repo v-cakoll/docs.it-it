@@ -1,33 +1,39 @@
 ---
-title: "PNRP nello sviluppo di applicazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: PNRP nello sviluppo di applicazioni
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
 caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f20dd62b5b872b932639a10df1e1636798ba963
+ms.contentlocale: it-it
+ms.lasthandoff: 08/21/2017
+
 ---
-# PNRP nello sviluppo di applicazioni
-In Windows Vista, le applicazioni di rete possono accedere alle funzioni di pubblicazione e di risoluzione del nome tramite l'api semplificate \(API\) di PNRP.  
+# <a name="pnrp-in-application-development"></a>PNRP nello sviluppo di applicazioni
+In Windows Vista, le applicazioni di rete possono accedere alle funzioni di risoluzione e pubblicazione dei nomi tramite un'API PNRP semplificata.  
   
-## Implementare il protocollo peer di risoluzione dei nomi  
- Con il PNRP semplificato API, i cloud non sono specificati in modo esplicito registrare il nome e l'indirizzo, il componente di PNRP determina automaticamente i cloud appropriati per aggiungere e indirizzi per la pubblicazione in di cloud.  
+## <a name="implementing-the-peer-name-resolution-protocol"></a>Implementazione del protocollo PNRP (Peer Name Resolution Protocol)  
+ Con l'API PNRP semplificata, non vengono specificati in modo esplicito i cloud per registrare il nome e gli indirizzi, ma è il componente PNRP a determinare automaticamente i cloud appropriati a cui connettersi e gli indirizzi da pubblicare all'interno dei cloud.  
   
- Per la risoluzione dei nomi molto semplificata di PNRP in Windows Vista, i nomi di PNRP sono integrati nella funzione di Windows Sockets di getaddrinfo \(\).  Per utilizzare PNRP per risolvere un nome a un indirizzo IPv6, le applicazioni possono utilizzare la funzione di getaddrinfo \(\) per risolvere il nome di dominio completo \(FQDN\) name.prnp.  rete, in cui nome è il nome che viene risolto.  Il pnrp.  il dominio netto è un dominio riservato in Windows Vista la risoluzione dei nomi di PNRP.  
+ Per semplificare notevolmente la risoluzione dei nomi PNRP in Windows Vista, ora i nomi PNRP possono essere integrati nella funzione getaddrinfo() di Windows Sockets. Per usare PNRP per la risoluzione di un nome in un indirizzo IPv6, le applicazioni possono servirsi della funzione getaddrinfo() per risolvere il nome di dominio completo (FQDN) name.prnp.net, in cui name rappresenta il nome di peer risolto. Il dominio pnrp.net in Windows Vista è un dominio riservato per la risoluzione dei nomi PNRP.  
   
- Il passaggio dei messaggi tra applicazioni peer\-to\-peer viene gestito dalle architetture sottostanti come il canale peer e WCF [grandi dati e flusso](http://go.microsoft.com/fwlink/?LinkID=179652).  
+ Il passaggio di messaggi tra le applicazioni PeerToPeer viene ancora gestito da architetture sottostanti, ad esempio PeerChannel e [Dati di grandi dimensioni e flussi](http://go.microsoft.com/fwlink/?LinkID=179652) WCF.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Net.PeerToPeer>
+
