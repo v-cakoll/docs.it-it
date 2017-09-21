@@ -1,24 +1,30 @@
 ---
-title: "Schema di configurazione di Windows Identity Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Schema di configurazione di Windows Identity Foundation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b2ac7e97627eba85013e1effdc4f856f3df79089
+ms.contentlocale: it-it
+ms.lasthandoff: 09/05/2017
+
 ---
-# Schema di configurazione di Windows Identity Foundation
-Negli argomenti di questa sezione forniscono informazioni sullo schema di configurazione di Windows identità Foundation \(WIF\).  È inoltre possibile configurare un'applicazione può utilizzare WIF tramite le classi esposte dal framework.  Queste classi sono indicate nelle sezioni che trattano gli elementi pertinenti nello schema.  I seguente codice XML di base dei tag struttura esposta dallo schema di configurazione WIF.  Gli attributi vengono omessi.  I commenti evidenziati indicano i componenti principali dello schema.  
+# <a name="windows-identity-foundation-configuration-schema"></a>Schema di configurazione di Windows Identity Foundation
+Gli argomenti in questa sezione contengono informazioni sullo schema di configurazione di WIF (Windows Identity Foundation). È anche possibile configurare un'applicazione per usare WIF tramite classi esposte dal framework. Queste classi sono segnalate nelle sezioni dedicate agli elementi pertinenti nello schema. Di seguito viene illustrata la struttura di tag XML di base esposta dallo schema di configurazione di WIF. Gli attributi sono omessi. I commenti evidenziati indicano i principali componenti dello schema.  
   
-```  
+```xml  
 <system.identityModel>  
     <!-- Service Configuration -->  
     <identityConfiguration>  
@@ -111,10 +117,11 @@ Negli argomenti di questa sezione forniscono informazioni sullo schema di config
 </system.identityModel.services>  
 ```  
   
-## In questa sezione  
- [\<system.identityModel\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)Fornisce la configurazione per l'attivazione delle opzioni WIF nelle applicazioni.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) Configurazione per abilitare le opzioni WIF nelle applicazioni.  
   
- [\<system.identityModel.services\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)Fornisce la configurazione per la federazione passiva utilizzando WIF.  Consente di configurare il modulo di autenticazione della sessione \(SAM\) e il modulo di autenticazione federata \(WSFAM\).  
+ [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Configurazione per la federazione passiva con WIF. Configura il modulo di autenticazione della sessione (SAM) e il modulo di autenticazione federata (WSFAM).  
   
-## Sezioni correlate  
- [Configuration, Administration, And Management](http://msdn.microsoft.com/it-it/1e03c389-de2c-4096-aaff-86b087e1bea0)Viene descritto come configurare e gestire servizi e applicazioni WIF.
+## <a name="related-sections"></a>Sezioni correlate  
+ [Configurazione, amministrazione e gestione](http://msdn.microsoft.com/en-us/1e03c389-de2c-4096-aaff-86b087e1bea0) Viene descritto come configurare e gestire servizi e applicazioni WIF.
+

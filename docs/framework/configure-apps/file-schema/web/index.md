@@ -1,52 +1,58 @@
 ---
-title: "Schema delle impostazioni Web | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "sistema di configurazione ASP.NET, Schema delle impostazioni Web"
-  - "file di configurazione [ASP.NET]"
-  - "schema di configurazione [.NET Framework], impostazioni Web"
-  - "Impostazioni Web (schema)"
-  - "impostazioni Web, schema [ASP.NET]"
-  - "file di configurazione Web.config [ASP.NET]"
+title: Schema delle impostazioni Web
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Web.config configuration file [ASP.NET]
+- ASP.NET configuration system, Web settings schema
+- schema Web settings
+- Web settings, schema [ASP.NET]
+- configuration files [ASP.NET]
+- configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
 caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fb6a19f5fb03c17f4ac5f3627f7c02ca354ddb1f
+ms.contentlocale: it-it
+ms.lasthandoff: 09/05/2017
+
 ---
-# Schema delle impostazioni Web
-Le impostazioni Web specificano le impostazioni ASP.NET a livello di esecuzione e relative alla CPU che si applicano al comportamento relativo all'intero processo gestito dal livello di hosting ASP.NET.  Queste impostazioni sono diverse dalle impostazioni relative al tipo di dominio di applicazione specificate nel file Web.config di un'applicazione ASP.NET.  
+# <a name="web-settings-schema"></a>Schema delle impostazioni Web
+Le impostazioni Web specificano le impostazioni di ASP.NET a livello di CPU e di esecuzione che si applicano al comportamento a livello di processo gestito dal livello di hosting ASP.NET. Queste impostazioni differiscono dalle impostazioni di tipo dominio dell'applicazione specificate nel file Web.config di un'applicazione ASP.NET.  
   
- Le impostazioni Web sono contenute in file Aspnet.config contenuti nelle cartelle di installazione specifiche per ogni versione di .NET Framework.  Ad esempio, il file Aspnet.config per [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] si trova nella cartella seguente:  
+ Le impostazioni Web sono contenute nei file Aspnet.config, disponibili nelle cartelle di installazione per le versioni di .NET Framework. Ad esempio, il file Aspnet.config per [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] si trova nella cartella seguente:  
   
  `C:\Windows\Microsoft.NET\Framework\v2.0.50727\`  
   
- Le impostazioni Web non sono utilizzate in altri file di configurazione quali il file machine.config, il file Web.config della radice o il file Web.config a livello di applicazione.  
+ Le impostazioni Web non vengono usate in altri file di configurazione, ad esempio il file machine.config, il file Web.config radice o i file Web.config a livello di applicazione.  
   
- [Elemento \<Configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [Elemento \<system.web\> \(impostazioni Web\)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)  
+ [Elemento \<system.web> (impostazioni Web)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)  
   
- [Elemento \<applicationPool\> \(impostazioni Web\)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)  
+ [Elemento \<applicationPool> (impostazioni Web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<system.web\>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Contiene informazioni utilizzate dal livello di hosting ASP.NET.|  
-|[\<applicationPool\>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Specifica le impostazioni ASP.NET a livello di esecuzione e relative alla CPU che si applicano al comportamento relativo all'intero processo gestito dal livello di hosting ASP.NET.|  
+|-------------|-----------------|  
+|[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Contiene informazioni usate dal livello di hosting ASP.NET.|  
+|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Specifica le impostazioni di ASP.NET a livello di CPU e di esecuzione che si applicano al comportamento a livello di processo gestito dal livello di hosting ASP.NET.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)
+
