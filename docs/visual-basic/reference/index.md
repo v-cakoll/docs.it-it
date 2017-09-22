@@ -52,10 +52,10 @@ Questo argomento include informazioni di riferimento su diversi aspetti della pr
  Fornisce collegamenti alla specifica completa del linguaggio [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], che contiene informazioni dettagliate su tutti gli aspetti del linguaggio stesso.  
   
 ## <a name="reference"></a>Riferimento  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
  Questo spazio dei nomi contiene le classi per i controlli Visual Basic Power Pack. I controlli Visual Basic Power Pack sono controlli Windows Form aggiuntivi.  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
  Questo spazio dei nomi fornisce un componente che consente di stampare un facsimile di un form così come visualizzato sullo schermo.  
   
 ## <a name="related-sections"></a>Sezioni correlate  

@@ -33,7 +33,7 @@ Due sequenze i cui elementi corrispondenti sono uguali e che hanno lo stesso num
   
 |Nome metodo|Descrizione|Sintassi di espressione della query C#|Altre informazioni|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|SequenceEqual|Determina se due sequenze sono uguali confrontando gli elementi con metodologia pair-wise.|Non applicabile.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName>|  
+|SequenceEqual|Determina se due sequenze sono uguali confrontando gli elementi con metodologia pair-wise.|Non applicabile.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Linq>   

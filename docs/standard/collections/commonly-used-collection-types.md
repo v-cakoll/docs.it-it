@@ -50,19 +50,19 @@ I tipi di raccolta sono le varianti comuni delle raccolte di dati, ad esempio ta
 |[Generics](../../../docs/standard/generics/index.md)|Viene descritta la funzionalità generics, compresi delegati, interfacce e raccolte generiche fornite da [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Vengono forniti collegamenti alla documentazione sulle funzionalità per i linguaggi C#, Visual Basic e Visual C++ e a tecnologie di supporto come reflection.|  
   
 ## <a name="reference"></a>Riferimenti  
- <xref:System.Collections?displayProperty=fullName>  
+ <xref:System.Collections?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic?displayProperty=fullName>  
+ <xref:System.Collections.Generic?displayProperty=nameWithType>  
   
- <xref:System.Collections.ICollection?displayProperty=fullName>  
+ <xref:System.Collections.ICollection?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>  
+ <xref:System.Collections.Generic.ICollection%601?displayProperty=nameWithType>  
   
- <xref:System.Collections.IList?displayProperty=fullName>  
+ <xref:System.Collections.IList?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.IList%601?displayProperty=fullName>  
+ <xref:System.Collections.Generic.IList%601?displayProperty=nameWithType>  
   
- <xref:System.Collections.IDictionary?displayProperty=fullName>  
+ <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 

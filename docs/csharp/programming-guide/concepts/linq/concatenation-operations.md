@@ -39,7 +39,7 @@ Il termine concatenazione descrive l'operazione che consiste nell'accodare una s
   
 |Nome metodo|Descrizione|Sintassi di espressione della query C#|Altre informazioni|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Concat|Concatena due sequenze formando un'unica sequenza.|Non applicabile.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=fullName>|  
+|Concat|Concatena due sequenze formando un'unica sequenza.|Non applicabile.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vedere anche  
  <xref:System.Linq>   
