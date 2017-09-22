@@ -62,5 +62,5 @@ Gli argomenti seguenti illustrano come usare C# e .NET Framework per eseguire va
   
  [Files, Folders and Drives](../../../csharp/programming-guide/file-system/index.md) (File, cartelle e unità)  
   
- <xref:System.IO?displayProperty=fullName>
+ <xref:System.IO?displayProperty=nameWithType>
 

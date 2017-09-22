@@ -76,10 +76,10 @@ La profilatura è un metodo di raccolta dei dati sulle prestazioni in qualsiasi 
   
 |Classe|Descrizione|  
 |-----------|-----------------|  
-|<xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName>|Rappresenta un componente del contatore delle prestazioni di Windows NT. Usare questa classe per leggere i contatori predefiniti o personalizzati esistenti e pubblicare i dati sulle prestazioni (scrittura) nei contatori personalizzati.|  
-|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=fullName>|Fornisce diversi metodi per interagire con i contatori e le categorie di contatori del computer.|  
-|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=fullName>|Specifica un programma di installazione per il componente `PerformanceCounter` .|  
-|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=fullName>|Specifica la formula per calcolare il metodo `NextValue` per `PerformanceCounter`.|  
+|<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Rappresenta un componente del contatore delle prestazioni di Windows NT. Usare questa classe per leggere i contatori predefiniti o personalizzati esistenti e pubblicare i dati sulle prestazioni (scrittura) nei contatori personalizzati.|  
+|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|Fornisce diversi metodi per interagire con i contatori e le categorie di contatori del computer.|  
+|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|Specifica un programma di installazione per il componente `PerformanceCounter` .|  
+|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Specifica la formula per calcolare il metodo `NextValue` per `PerformanceCounter`.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)

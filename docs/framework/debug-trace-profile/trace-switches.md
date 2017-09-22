@@ -45,13 +45,13 @@ Le opzioni di traccia consentono di abilitare, disabilitare e filtrare l'output 
 ## <a name="trace-levels"></a>Livelli di traccia  
  L'uso di **TraceSwitch**comporta considerazioni aggiuntive. Un oggetto **TraceSwitch** ha quattro proprietà che restituiscono valori **Boolean** che indicano se l'opzione è impostata su almeno un livello particolare:  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  I livelli permettono di limitare la quantità di informazioni di traccia ricevute unicamente alle informazioni necessarie per risolvere un problema. Si specifica il livello di dettaglio desiderato nell'output di traccia impostando e configurando le opzioni di traccia al livello di traccia appropriato. È possibile ricevere messaggi di errore, messaggi di avviso, messaggi informativi, messaggi di traccia dettagliati o nessun messaggio.  
   

@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
-ms.openlocfilehash: e31977c511f18737aef673c78a3e295d7c24782f
+ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
+ms.openlocfilehash: 243c924826a54907840b337a91cf1e5d19cff985
 ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 
@@ -41,7 +41,7 @@ Se si desidera utilizzare l'esempio scaricato con la distribuzione di file syste
 
 ## <a name="create-a-template-from-a-project"></a>Creare un modello da un progetto
 
-Utilizzare un progetto esistente per cui è stata confermata la compilazione e l’esecuzione, o creare un nuovo progetto di app console in una cartella sul disco rigido. In questa esercitazione si presuppone che il nome della cartella del progetto sia *GarciaSoftware.ConsoleTemplate.CSharp* archiviato in *Documents/Templates* nel profilo dell'utente. Il nome del modello di progetto dell'esercitazione è nel formato  *\<nome società>.\< Tipo di modello>. \<Linguaggio di programmazione>*, tuttavia è possibile attribuire al progetto e al modello il nome desiderato.
+Utilizzare un progetto esistente per cui è stata confermata la compilazione e l’esecuzione, o creare un nuovo progetto di app console in una cartella sul disco rigido. In questa esercitazione si presuppone che il nome della cartella del progetto sia *GarciaSoftware.ConsoleTemplate.CSharp* archiviato in *Documents/Templates* nel profilo dell'utente. Il nome del modello di progetto dell'esercitazione è nel formato * \<nome società>.\< Tipo di modello>. \<Linguaggio di programmazione>*, tuttavia è possibile attribuire al progetto e al modello il nome desiderato.
 
 1. Aggiungere una cartella radice del progetto denominato *.template.config*.
 1. All'interno della cartella *.template.config*, creare un file di configurazione del modello *template.json*. Per altre informazioni e la definizione del membro per il file *template.json*, vedere l’argomento [Modelli personalizzati per dotnet new](../tools/custom-templates.md#templatejson) e lo schema [ *template.json* nell'archivio di Schema JSON](http://json.schemastore.org/template).
@@ -72,15 +72,15 @@ Il modello è finito. A questo punto, sono disponibili due opzioni per la distri
    
    ![Struttura della directory contenente il layout del pacchetto NuGet](./media/create-custom-template/nugetdirectorylayout.png)
 
-1. All'interno di un elemento  **\<packageTypes>** nel file *nuspec*, includere un elemento  **\<packageType>** con un valore dell'attributo `name` di `Template`. La cartella *content* e il file *nuspec* devono trovarsi nella stessa directory. La tabella mostra gli elementi del file *nuspec* minimi necessari per produrre un modello come pacchetto NuGet.
+1. All'interno di un elemento ** \<packageTypes>** nel file *nuspec*, includere un elemento ** \<packageType>** con un valore dell'attributo `name` di `Template`. La cartella *content* e il file *nuspec* devono trovarsi nella stessa directory. La tabella mostra gli elementi del file *nuspec* minimi necessari per produrre un modello come pacchetto NuGet.
 
    | Elemento            | Tipo   | Descrizione |
    | ------------------ | ------ | ----------- |
-   | **\<authors>**     | string | Elenco con valori delimitati da virgola di autori di pacchetti, corrispondenti ai nomi di profilo in nuget.org. Gli autori, visualizzati nella raccolta NuGet in nuget.org, vengono usati per creare riferimenti incrociati ai pacchetti dello stesso autore. |
+   | **\<authors>**     | string | Elenco con valori delimitati da virgola di autori di pacchetti, corrispondenti ai nomi di profili in nuget.org. Gli autori, visualizzati nella raccolta NuGet in nuget.org, vengono usati per creare riferimenti incrociati ai pacchetti dello stesso autore. |
    | **\<description>** | string | Descrizione lunga del pacchetto per la visualizzazione dell'interfaccia utente. |
-   | **\<id>**          | string | L'identificatore del pacchetto senza distinzione tra maiuscole e minuscole, che deve essere univoco in nuget.org o qualsiasi raccolta in cui risiederà il pacchetto. L'ID non può contenere spazi o caratteri che non sono validi per un URL e in genere seguono le regole dello spazio dei nomi .NET. Vedere [Choosing a unique package identifier and setting the version number](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) (Scelta di un identificatore univoco del pacchetto e impostazione del numero di versione) per il materiale sussidiario. |
-   | **\<packageType>** | string | Inserire l'elemento all'interno di un elemento  **\<packageTypes >** tra elementi  **\<metadata >**. Impostare l'attributo `name` dell'elemento **\<packageType>** su `Template`. |
-   | **\<version>**     | string | La versione del pacchetto, che segue il criterio major.minor.patch. I numeri di versione possono includere un suffisso di versione non definitiva, come descritto in [Versioni non definitive](/nuget/create-packages/prerelease-packages#semantic-versioning). |
+   | **\<id>**          | string | L'identificatore del pacchetto senza distinzione tra maiuscole e minuscole che deve essere univoco in nuget.org o qualsiasi raccolta in cui risiederà il pacchetto. L'ID non può contenere spazi o caratteri non validi per un URL e in genere segue le regole dello spazio dei nomi .NET. Vedere [Choosing a unique package identifier and setting the version number](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) (Scelta di un identificatore univoco del pacchetto e impostazione del numero di versione) per il materiale sussidiario. |
+   | **\<packageType>** | string | Inserire l'elemento all'interno di un elemento ** \<packageTypes >** tra elementi ** \<metadata >**. Impostare l'attributo `name` dell'elemento **\<packageType>** su `Template`. |
+   | **\<version>**     | string | La versione del pacchetto secondo il criterio major.minor.patch. I numeri di versione possono includere un suffisso di versione non definitiva, come descritto in [Versioni non definitive](/nuget/create-packages/prerelease-packages#semantic-versioning). |
 
    Vedere il [riferimento a .nuspec](/nuget/schema/nuspec) per lo schema completo del file *nuspec*.
 
@@ -208,6 +208,10 @@ Se è stato creato il modello nel file system locale in *C:/Users/\<USER>/Docume
 ```console
 dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
 ```
+
+> [!NOTE]
+> Per disinstallare il modello dal file system locale, è necessario specificare il percorso completo. Ad esempio, *C:/Users/\<UTENTE>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* è corretto, ma *./GarciaSoftware.ConsoleTemplate.CSharp* dalla cartella contenitore non funzionerà.
+> Inoltre, non includere la barra finale di terminazione della directory nel percorso del modello.
 
 ## <a name="see-also"></a>Vedere anche
 
