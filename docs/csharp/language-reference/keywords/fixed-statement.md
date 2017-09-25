@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 4e1f810f6e6cfaef3a65c7391f074b414ef18b5a
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="fixed-statement-c-reference"></a>Istruzione fixed (Riferimenti per C#)
@@ -66,7 +66,7 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
  Nella modalità di tipo unsafe è possibile allocare la memoria nello stack, che non è necessario bloccare perché non viene sottoposto al Garbage Collection. Per altre informazioni, vedere [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md).  
   
 ## <a name="example"></a>Esempio  
- [!code-cs[csrefKeywordsFixedLock n. 4](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_4.cs)]  
+ [!code-cs[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_4.cs)]  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

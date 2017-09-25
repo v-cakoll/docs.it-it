@@ -27,10 +27,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 75353ad43d76ceecd60bb9edd207c56c759e52c2
 ms.contentlocale: it-it
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Come il runtime individua gli assembly
@@ -42,13 +42,13 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
 >  Per visualizzare le informazioni di associazione nel file di log, usare il [Visualizzatore log associazioni assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), incluso in [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
 ## <a name="initiating-the-bind"></a>Avvio dell'associazione  
- Il processo di individuazione e associazione di un assembly inizia quando il runtime tenta di risolvere un riferimento a un altro assembly. Questo riferimento può essere statico o dinamico. I compilatore registra i riferimenti statici nei metadati del manifesto dell'assembly in fase di compilazione. I riferimenti dinamici vengono costruiti al momento, in base ai risultati delle chiamate a diversi metodi, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
+ Il processo di individuazione e associazione di un assembly inizia quando il runtime tenta di risolvere un riferimento a un altro assembly. Questo riferimento può essere statico o dinamico. I compilatore registra i riferimenti statici nei metadati del manifesto dell'assembly in fase di compilazione. I riferimenti dinamici vengono costruiti nel momento in cui vengono chiamati i diversi metodi, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
   
  Il modo migliore per fare riferimento a un assembly consiste nell'usare un riferimento completo che includa il nome dell'assembly, la versione, le impostazioni cultura il e token di chiave pubblica (se presente). Il runtime usa queste informazioni per individuare l'assembly, seguendo i passaggi descritti più avanti in questa sezione. Il runtime usa lo stesso processo di risoluzione a prescindere che il riferimento riguardi un assembly statico o dinamico.  
   
- Un riferimento dinamico a un assembly può essere eseguito anche fornendo il metodo di chiamata solo con informazioni parziali sull'assembly, ad esempio specificando solo il nome dell'assembly. In questo caso, l'assembly viene cercato solo nella directory dell'applicazione e non vengono eseguiti altri controlli. È possibile creare un riferimento parziale usando uno dei diversi metodi per il caricamento degli assembly, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> o <xref:System.AppDomain.Load%2A?displayProperty=fullName>.  
+ Un riferimento dinamico a un assembly può essere eseguito anche fornendo il metodo di chiamata solo con informazioni parziali sull'assembly, ad esempio specificando solo il nome dell'assembly. In questo caso, l'assembly viene cercato solo nella directory dell'applicazione e non vengono eseguiti altri controlli. È possibile creare un riferimento parziale usando uno dei diversi metodi per il caricamento degli assembly, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>.  
   
- È infine possibile creare un riferimento dinamico usando un metodo come <xref:System.Reflection.Assembly.Load*?displayProperty=fullName> e specificare solo informazioni parziali. In seguito verranno specificate informazioni complete sul riferimento usando l'elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) nel file di configurazione dell'applicazione. Questo elemento consente di specificare le informazioni di riferimento complete (nome, versione, impostazioni cultura e, se applicabile, il token di chiave pubblica) nel file di configurazione dell'applicazione anziché nel codice. Questa tecnica si usa quando si vuole completare un riferimento a un assembly di fuori della directory dell'applicazione oppure se si vuole fare riferimento a un assembly nella Global Assembly Cache, ma si preferisce definirlo in modo completo nel file di configurazione anziché nel codice.  
+ È infine possibile creare un riferimento dinamico usando un metodo come <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> e specificare solo informazioni parziali. In seguito verranno specificate informazioni complete sul riferimento usando l'elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) nel file di configurazione dell'applicazione. Questo elemento consente di specificare le informazioni di riferimento complete (nome, versione, impostazioni cultura e, se applicabile, il token di chiave pubblica) nel file di configurazione dell'applicazione anziché nel codice. Questa tecnica si usa quando si vuole completare un riferimento a un assembly di fuori della directory dell'applicazione oppure se si vuole fare riferimento a un assembly nella Global Assembly Cache, ma si preferisce definirlo in modo completo nel file di configurazione anziché nel codice.  
   
 > [!NOTE]
 >  Questo tipo di riferimento parziale non deve essere usato con gli assembly condivisi tra diverse applicazioni. Poiché le impostazioni di configurazione vengono applicate per applicazione e non per assembly, per usare questo tipo di riferimento parziale in un assembly condiviso ogni applicazione che usa l'assembly condiviso dovrebbe disporre delle informazioni complete nel file di configurazione.  
@@ -66,7 +66,7 @@ Per distribuire correttamente l'applicazione .NET Framework, è necessario compr
   
 4.  [Individua tramite probe l'assembly](#step4) usando la procedura seguente:  
   
-    1.  Se i criteri dell'editore e della configurazione non hanno effetto sul riferimento originale e se la richiesta di associazione è stata creata usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> , il runtime cerca suggerimenti per la posizione.  
+    1.  Se i criteri dell'editore e della configurazione non hanno effetto sul riferimento originale e se la richiesta di associazione è stata creata usando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, il runtime cerca suggerimenti per la posizione.  
   
     2.  Se viene trovata una codebase nei file di configurazione, il runtime controlla solo questo percorso. Se la probe non riesce, il runtime determina che la richiesta di associazione non è riuscita e non vengono eseguite altre individuazioni tramite probe.  
   
@@ -258,7 +258,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ```  
   
 #### <a name="other-locations-probed"></a>Altri percorsi con individuazione tramite probe  
- Il percorso dell'assembly può essere determinato anche usando il contesto di associazione corrente. Questa situazione si verifica spesso quando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> viene usato in scenari di interoperabilità COM. Se un assembly usa il metodo <xref:System.Reflection.Assembly.LoadFrom%2A> per fare riferimento a un altro assembly, il percorso dell'assembly chiamante viene considerato come un suggerimento su dove trovare l'assembly di riferimento. Se viene trovata una corrispondenza, l'assembly viene caricato. Se non viene trovata alcuna corrispondenza, il runtime continua con la semantica di ricerca, quindi esegue una query in Windows Installer per richiedere l'assembly. Se non vengono forniti assembly corrispondenti alla richiesta di associazione, viene generata un'eccezione. Questa eccezione è <xref:System.TypeLoadException> nel codice gestito, se è stato fatto riferimento a un tipo, oppure <xref:System.IO.FileNotFoundException> se l'assembly in fase di caricamento non è stato trovato.  
+ Il percorso dell'assembly può essere determinato anche usando il contesto di associazione corrente. Questa situazione si verifica spesso quando il metodo <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> viene usato in scenari di interoperabilità COM. Se un assembly usa il metodo <xref:System.Reflection.Assembly.LoadFrom%2A> per fare riferimento a un altro assembly, il percorso dell'assembly chiamante viene considerato come un suggerimento su dove trovare l'assembly di riferimento. Se viene trovata una corrispondenza, l'assembly viene caricato. Se non viene trovata alcuna corrispondenza, il runtime continua con la semantica di ricerca, quindi esegue una query in Windows Installer per richiedere l'assembly. Se non vengono forniti assembly corrispondenti alla richiesta di associazione, viene generata un'eccezione. Questa eccezione è <xref:System.TypeLoadException> nel codice gestito, se è stato fatto riferimento a un tipo, oppure <xref:System.IO.FileNotFoundException> se l'assembly in fase di caricamento non è stato trovato.  
   
  Ad esempio, se Assembly1 fa riferimento ad Assembly2 e Assembly1 è stato scaricato da http://www.code.microsoft.com/utils, il percorso viene considerato come un suggerimento su dove trovare Assembly2.dll. Il runtime quindi esegue l'individuazione tramite probe per l'assembly in http://www.code.microsoft.com/utils/Assembly2.dll e http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Se Assembly2 non viene trovato nei percorsi indicati, il runtime esegue una query in Windows Installer.  
   

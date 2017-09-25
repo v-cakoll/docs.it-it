@@ -35,10 +35,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7ec6c96ac21ba2115d1e7eead5700b6dbfcc952
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 47e4c298c20e7adde0e427f0a547904db2f96d37
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Riferimenti per C#)
@@ -57,7 +57,7 @@ try
 }  
 ```  
   
- Anche se la clausola `catch` può essere usata senza argomenti per intercettare qualsiasi tipo di eccezione, questo utilizzo non è consigliato. In generale, è consigliabile intercettare solo le eccezioni di cui si sa come eseguire il ripristino. È quindi opportuno specificare sempre argomento di oggetto derivato da <xref:System.Exception?displayProperty=fullName>, ad esempio:  
+ Anche se la clausola `catch` può essere usata senza argomenti per intercettare qualsiasi tipo di eccezione, questo utilizzo non è consigliato. In generale, è consigliabile intercettare solo le eccezioni di cui si sa come eseguire il ripristino. È quindi opportuno specificare sempre argomento di oggetto derivato da <xref:System.Exception?displayProperty=nameWithType>, ad esempio:  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -150,7 +150,7 @@ static void Main()
   
  Per intercettare l'eccezione, attendere l'attività in un blocco `try` e intercettare l'eccezione nel blocco `catch` associato. Per un esempio, vedere la sezione "Esempio".  
   
- Un'attività può essere in uno stato di errore perché si sono verificate più eccezioni nel metodo asincrono atteso. Ad esempio, l'attività può essere il risultato di una chiamata a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. Quando si attende tale attività, solo una delle eccezioni viene intercettata, ma non è possibile prevedere quale. Per un esempio, vedere la sezione "Esempio".  
+ Un'attività può essere in uno stato di errore perché si sono verificate più eccezioni nel metodo asincrono atteso. Ad esempio, l'attività può essere il risultato di una chiamata a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Quando si attende tale attività, solo una delle eccezioni viene intercettata, ma non è possibile prevedere quale. Per un esempio, vedere la sezione "Esempio".  
   
 ## <a name="example"></a>Esempio  
  Nel seguente esempio, il blocco `try` contiene una chiamata al metodo `ProcessString` che potrebbe causare un'eccezione. La clausola `catch` contiene il gestore di eccezioni che visualizza solo un messaggio sullo schermo. Quando l'istruzione `throw` viene chiamata da `MyMethod`, il sistema cerca l'istruzione `catch` e visualizza il messaggio `Exception caught`.  
@@ -176,9 +176,9 @@ static void Main()
  [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>Esempio  
- Il seguente esempio illustra la gestione delle eccezioni dove più attività possono restituire più eccezioni. Il blocco `try` attende l'attività restituita da una chiamata a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. L'attività viene completata quando vengono completate le tre attività a cui si applica WhenAll.  
+ Il seguente esempio illustra la gestione delle eccezioni dove più attività possono restituire più eccezioni. Il blocco `try` attende l'attività restituita da una chiamata a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. L'attività viene completata quando vengono completate le tre attività a cui si applica WhenAll.  
   
- Ognuna delle tre attività genera un'eccezione. Il blocco `catch` scorre le eccezioni presenti nella proprietà `Exception.InnerExceptions` dell'attività restituita da <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>.  
+ Ognuna delle tre attività genera un'eccezione. Il blocco `catch` scorre le eccezioni presenti nella proprietà `Exception.InnerExceptions` dell'attività restituita da <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>.  
   
  [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
