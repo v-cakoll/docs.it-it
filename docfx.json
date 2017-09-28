@@ -29,7 +29,6 @@
           "framework/common-client-technologies/**",
           "framework/debug-trace-profile/**",
           "framework/interop/**",
-          "framework/mef/**",
           "framework/net-native/**",
           "framework/network-programming/**",
           "framework/performance/**",
