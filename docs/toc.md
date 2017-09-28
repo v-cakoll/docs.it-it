@@ -142,7 +142,7 @@
 ### [Analisi delle dipendenze di terze parti](core/porting/third-party-deps.md)
 ### [Portabilità nelle librerie](core/porting/libraries.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
-## [Compilare .NET Core dall'origine](core/build/index.md)
+## [Compilare .NET Core dall'origine](./core/build/index.md)
 ### [Pacchetti di distribuzione di .NET Core](core/build/distribution-packaging.md)
 ## [Documentazione di Visual Studio 2015/project.json](project-json.md)
 <!-- End .NET Core Content -->
