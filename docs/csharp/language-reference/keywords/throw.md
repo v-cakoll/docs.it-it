@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 955f6d87614e0b452ace162e79e34aec9decad54
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 77f44a43b80c4cf1f12baadaaf6861b3b53244d9
 ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="throw-c-reference"></a>throw (Riferimenti per C#)
@@ -49,7 +49,7 @@ La sintassi di `throw` è:
 ```csharp
 throw [e]
 ```
-dove `e` è un'istanza di una classe derivata da <xref:System.Exception?displayProperty=fullName>. Nell'esempio seguente l'istruzione `throw` viene usata per generare una @System.IndexOutOfRangeException, se l'argomento passato a un metodo denominato `GetNumber` non corrisponde a un indice valido di una matrice interna.
+dove `e` è un'istanza di una classe derivata da <xref:System.Exception?displayProperty=nameWithType>. Nell'esempio seguente l'istruzione `throw` viene usata per generare una @System.IndexOutOfRangeException, se l'argomento passato a un metodo denominato `GetNumber` non corrisponde a un indice valido di una matrice interna.
 
 [!code-cs[csrefKeyword#1](../../../../samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]  
 

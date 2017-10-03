@@ -1,76 +1,85 @@
 ---
-title: "&lt;codificaMessaggiBinaria&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;binaryMessageEncoding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
 caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8ddfe12fed87c2ad501364bc5d76df7b9480aa83
+ms.contentlocale: it-it
+ms.lasthandoff: 09/25/2017
+
 ---
-# &lt;codificaMessaggiBinaria&gt;
-Definisce un codificatore di messaggi binario che codifica messaggi di Windows Communication Foundation \(WCF\) in transito in formato binario.  
+# <a name="ltbinarymessageencodinggt"></a>&lt;binaryMessageEncoding&gt;
+Definisce un codificatore di messaggi binario che codifica messaggi di Windows Communication Foundation (WCF) in transito in formato binario.  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<associazioni >  
+\<customBinding >  
+\<associazione >  
+\<binaryMessageEncoding >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <binaryMessageEncoding   
       maxReadPoolSize="Integer"  
    maxSessionSize="Integer"   
-   maxWritePoolSize="Integer"  
-   messageVersion="Soap11Addressing10/Soap12Addressing10” />  
+   maxWritePoolSize="Integer"   messageVersion="Soap11Addressing10/Soap12Addressing10" />  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|maxReadPoolSize|Numero intero che definisce il numero di messaggi che possono essere letti contemporaneamente senza allocare nuovi lettori.  Dimensioni maggiori del pool rendono il sistema più tollerante ai picchi di attività al costo di un working set superiore.  Il valore predefinito è 64.|  
-|maxSessionSize|Numero intero positivo che imposta la dimensione, in byte, del buffer usato per la codifica.  Un buffer più grande aumenta la velocità di codifica a spese della dimensione del working set.  Il valore predefinito è 2048.|  
-|maxWritePoolSize|Numero intero che definisce il numero di messaggi che possono essere inviati contemporaneamente senza allocare nuovi writer.  Dimensioni maggiori del pool rendono il sistema più tollerante ai picchi di attività al costo di un working set superiore.  Il valore predefinito è 16.|  
-|messageVersion|Specifica le versioni del messaggio SOAP e WS\-Addressing usate o previste.|  
+|maxReadPoolSize|Numero intero che definisce il numero di messaggi che possono essere letti contemporaneamente senza allocare nuovi lettori. Dimensioni maggiori del pool rendono il sistema più tollerante ai picchi di attività al costo di un working set superiore. Il valore predefinito è 64.|  
+|maxSessionSize|Numero intero positivo che imposta la dimensione, in byte, del buffer usato per la codifica. Un buffer più grande aumenta la velocità di codifica a spese della dimensione del working set. Il valore predefinito è 2048.|  
+|maxWritePoolSize|Numero intero che definisce il numero di messaggi che possono essere inviati contemporaneamente senza allocare nuovi writer. Dimensioni maggiori del pool rendono il sistema più tollerante ai picchi di attività al costo di un working set superiore. Il valore predefinito è 16.|  
+|messageVersion|Specifica le versioni del messaggio SOAP e WS-Addressing usate o previste.|  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<quoteReader\>](../Topic/%3CreaderQuotas%3E.md)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione.  L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<associazione\>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|-------------|-----------------|  
+|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
-## Note  
- La codifica è il processo di trasformazione di un messaggio in una sequenza di byte.  La decodifica è il processo inverso.  Windows Communication Foundation \(WCF\) include tre tipi di codifica per i messaggi SOAP, ovvero testo, binaria e MTOM \(Message Transmission Optimization Mechanism\).  
+### <a name="parent-elements"></a>Elementi padre  
   
- L'elemento `binaryMessageEncoding` specifica il formato binario .NET per XML e dispone delle opzioni che consentono di specificare la codifica dei caratteri e le versioni SOAP e WS\-Addressing da usare.  Il codificatore di messaggi binario codifica messaggi di Windows Communication Foundation \(WCF\) in transito in formato binario.  Se da un lato questa codifica comporta una trasmissione molto veloce dei messaggi, dall'altro si perde l'interoperabilità basata sugli standard WS \- \*.  
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|[\<associazione >](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
   
-## Esempio  
+## <a name="remarks"></a>Note  
+ La codifica è il processo di trasformazione di un messaggio in una sequenza di byte. La decodifica è il processo inverso. Windows Communication Foundation (WCF) include tre tipi di codifica per i messaggi SOAP, ovvero testo, binaria e MTOM (Message Transmission Optimization Mechanism).  
   
-```  
+ L'elemento `binaryMessageEncoding` specifica il formato binario .NET per XML e dispone delle opzioni che consentono di specificare la codifica dei caratteri e le versioni SOAP e WS-Addressing da usare. Il codificatore di messaggi binario codifica messaggi di Windows Communication Foundation (WCF) in transito in formato binario. Se da un lato questa codifica comporta una trasmissione molto veloce dei messaggi, dall'altro si perde l'interoperabilità basata sugli standard WS - *.  
+  
+## <a name="example"></a>Esempio  
+  
+```xml  
 <binaryMessageEncoding maxReadPoolSize="211"  
    maxWritePoolSize="2132"  
    maxSessionSize="3141" />  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>   
  <xref:System.ServiceModel.Channels.CustomBinding>   
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>   
@@ -80,4 +89,5 @@ Definisce un codificatore di messaggi binario che codifica messaggi di Windows C
  [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
  [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
  [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+
