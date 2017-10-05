@@ -1,4 +1,5 @@
 {
+  "need_pr_comments": false,
   "docsets_to_publish": [
     {
       "docset_name": "core-docs",
@@ -82,7 +83,8 @@
       }
     }
   ],
- "branch_target_mapping": {
+  "branch_target_mapping": {
+
     "live": [
       "Publish",
       "Pdf"
