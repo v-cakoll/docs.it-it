@@ -1,0 +1,6 @@
+# [Guide introduttive](index.md)
+## [Hello world](hello-world.yml)
+## [Numeri in C#](numbers-in-csharp.yml)
+## [Rami e cicli](branches-and-loops.yml)
+## [Raccolte di elenchi](list-collection.yml)
+## [Introduzione alle classi](introduction-to-classes.md)
