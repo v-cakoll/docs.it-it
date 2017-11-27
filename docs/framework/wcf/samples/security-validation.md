@@ -1,29 +1,32 @@
 ---
-title: "Convalida della sicurezza | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Convalida della sicurezza
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-caps.latest.revision: 35
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 4e8e8ff9a99c362fb5e2a6f5ef1161f48df86ceb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Convalida della sicurezza
-In questo esempio viene illustrato come utilizzare un comportamento personalizzato per convalidare i servizi in un computer per garantire che soddisfino criteri specifici.Nell'esempio i servizi vengono convalidati dal comportamento personalizzato mediante l'analisi di ogni endpoint nel servizio e verificando se contengono elementi di associazione protetti.Questo esempio è basato sull'[Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+# <a name="security-validation"></a>Convalida della sicurezza
+In questo esempio viene illustrato come utilizzare un comportamento personalizzato per convalidare i servizi in un computer per garantire che soddisfino criteri specifici. Nell'esempio i servizi vengono convalidati dal comportamento personalizzato mediante l'analisi di ogni endpoint nel servizio e verificando se contengono elementi di associazione protetti. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine dell'argomento.  
+>  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
-## Comportamento personalizzato di convalida dell'endpoint  
- Aggiungendo il codice utente al metodo `Validate` contenuto nell'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior>, il comportamento personalizzato può essere assegnato a un servizio o a un endpoint per eseguire azioni definite dall'utente.Il codice seguente viene utilizzato per eseguire un ciclo in ogni endpoint contenuto in un servizio allo scopo di esaminare le raccolte di associazioni per individuare le associazioni protette.  
+## <a name="endpoint-validation-custom-behavior"></a>Comportamento personalizzato di convalida dell'endpoint  
+ Aggiungendo il codice utente al metodo `Validate` contenuto nell'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior>, il comportamento personalizzato può essere assegnato a un servizio o a un endpoint per eseguire azioni definite dall'utente. Il codice seguente viene utilizzato per eseguire un ciclo in ogni endpoint contenuto in un servizio allo scopo di esaminare le raccolte di associazioni per individuare le associazioni protette.  
   
 ```  
 public void Validate(ServiceDescription serviceDescription,   
@@ -56,7 +59,7 @@ public void Validate(ServiceDescription serviceDescription,
   
  L'aggiunta del codice seguente a file Web.config aggiunge l'estensione del comportamento `serviceValidate` affinché venga riconosciuta dal servizio.  
   
-```  
+```xml  
 <system.serviceModel>  
     <extensions>  
         <behaviorExtensions>  
@@ -68,7 +71,7 @@ public void Validate(ServiceDescription serviceDescription,
   
  Quando l'estensione del comportamento è stata aggiunta al servizio, è possibile aggiungere il comportamento `endpointValidate` all'elenco dei comportamenti nel file Web.config e, di conseguenza, al servizio.  
   
-```  
+```xml  
 <behaviors>  
     <serviceBehaviors>  
         <behavior name="CalcServiceSEB1">  
@@ -84,34 +87,34 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  Quando si aggiunge il comportamento a tutti i servizi, è consigliabile eseguire il backup del file Machine.config prima di apportare qualsiasi modifica.  
   
- Eseguire quindi il client fornito nella directory client\\bin di questo esempio.Si verifica un'eccezione con il messaggio seguente: "Impossibile attivare il servizio richiesto, 'http:\/\/localhost\/servicemodelsamples\/service.svc'." Si tratta di un problema previsto poiché un endpoint viene considerato non protetto dall'endpoint che convalida il comportamento e impedisce l'avvio del servizio.Il comportamento genera anche un'eccezione interna che descrive quale endpoint non è protetto e scrive un messaggio nel visualizzatore eventi di sistema nell'origine "System.ServiceModel 4.0.0.0", categoria "WebHost".È anche possibile attivare la traccia nel servizio in questo esempio.Questa operazione consente all'utente di visualizzare le eccezioni generate dall'endpoint che convalida il comportamento aprendo le tracce del servizio risultanti mediante Service Trace Viewer.  
+ Eseguire quindi il client fornito nella directory client\bin di questo esempio. Si verifica un'eccezione con il messaggio seguente: "Impossibile attivare il servizio richiesto, 'http://localhost/servicemodelsamples/service.svc'." Si tratta di un problema previsto poiché un endpoint viene considerato non protetto dall'endpoint che convalida il comportamento e impedisce l'avvio del servizio. Il comportamento genera anche un'eccezione interna che descrive quale endpoint non è protetto e scrive un messaggio nel visualizzatore eventi di sistema nell'origine "System.ServiceModel 4.0.0.0", categoria "WebHost". È anche possibile attivare la traccia nel servizio in questo esempio. Questa operazione consente all'utente di visualizzare le eccezioni generate dall'endpoint che convalida il comportamento aprendo le tracce del servizio risultanti mediante Service Trace Viewer.  
   
-#### Per visualizzare i messaggi di eccezione relativi alla convalida degli endpoint con errori nel visualizzatore eventi  
+#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Per visualizzare i messaggi di eccezione relativi alla convalida degli endpoint con errori nel visualizzatore eventi  
   
-1.  Fare clic sul menu **Start** e selezionare **Esegui…**.  
+1.  Fare clic su di **avviare** dal menu **Esegui...** .  
   
-2.  Digitare `eventvwr`, quindi fare clic su **OK**.  
+2.  Tipo `eventvwr` e fare clic su **OK**.  
   
-3.  Nella finestra del Visualizzatore eventi fare clic su **Applicazione**.  
+3.  Nel Visualizzatore eventi fare clic su **applicazione**.  
   
-4.  Fare doppio clic sull'evento "System.ServiceModel 4.0.0.0" recentemente aggiunto sotto la categoria "WebHost" nella finestra **Applicazione** per visualizzare i messaggi dell'endpoint non protetto.  
+4.  Fare doppio clic sull'evento aggiunto di recente "System. ServiceModel 4.0.0.0" nella categoria "WebHost" il **applicazione** finestra per visualizzare i messaggi a endpoint non protetto.  
   
-#### Per impostare, compilare ed eseguire l'esempio  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Verificare di avere eseguito [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## Vedere anche  
- [Monitoraggio](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Vedere anche  
+ [Esempi di monitoraggio di AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)

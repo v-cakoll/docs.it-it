@@ -1,65 +1,65 @@
 ---
-title: "Elemento &lt;mscorlib&gt; per le impostazioni di crittografia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<mscorlib> (elemento)"
-  - "mscorlib (elemento)"
+title: '&lt;mscorlib&gt; elemento per le impostazioni di crittografia'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib
+helpviewer_keywords:
+- mscorlib element
+- <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 992e62575dccae3f68df27fb7dd027dceab91ffc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;mscorlib&gt; per le impostazioni di crittografia
-Contiene l'[elemento \<cryptographySettings\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
+# <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt; elemento per le impostazioni di crittografia
+Contiene il [ \<cryptographySettings > elemento](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
   
-## Sintassi  
+ \<configuration>  
+\<mscorlib >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
-      <mscorlib>   
+```xml  
+      <mscorlib>   
 </mscorlib>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`cryptographySettings`|Contiene le impostazioni di crittografia.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'elemento **\<mscorlib\>** per fare riferimento a una classe di crittografia e configurare il runtime.  È quindi possibile passare la stringa "RSA" al metodo <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> e utilizzare il metodo <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un oggetto `MyCryptoRSAClass`.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il  **\<mscorlib >** elemento a cui fare riferimento a una classe di crittografia e configurare il runtime. È quindi possibile passare la stringa "RSA" per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e utilizzare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un `MyCryptoRSAClass` oggetto.  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -78,10 +78,10 @@ Contiene l'[elemento \<cryptographySettings\>](../../../../../docs/framework/con
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>   
- <xref:System.Security.Cryptography>   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Servizi di crittografia](../../../../../docs/standard/security/cryptographic-services.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>  
+ <xref:System.Security.Cryptography>  
+ [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Servizi di crittografia](../../../../../docs/standard/security/cryptographic-services.md)  
  [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

@@ -1,35 +1,39 @@
 ---
-title: "Procedura: specificare una bitmap nella casella degli strumenti per un controllo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "bitmap [Windows Form], controlli personalizzati"
-  - "controlli personalizzati [Windows Form], bitmap della casella degli strumenti"
-  - "casella degli strumenti [Windows Form], aggiunta di bitmap per i controlli personalizzati"
+title: 'Procedura: specificare una bitmap nella casella degli strumenti per un controllo'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Toolbox [Windows Forms], adding bitmaps for custom controls
+- custom controls [Windows Forms], Toolbox bitmaps
+- bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2d1ab49b6596c6feaa2ead5bbb92525f0ddb356d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: specificare una bitmap nella casella degli strumenti per un controllo
-Per visualizzare un'icona speciale per il controllo nella **Casella degli strumenti**, è possibile specificare una particolare immagine utilizzando <xref:System.Drawing.ToolboxBitmapAttribute>.  Questa classe è un *attributo*, ovvero un particolare tipo di classe che è possibile collegare ad altre classi.  Per ulteriori informazioni sugli attributi, vedere [NOT IN BUILD: Attributes Overview in Visual Basic](http://msdn.microsoft.com/it-it/0d0cff64-892d-4f57-83bd-bef388553d4f) per [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] e [Attributi](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md) per [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].  
+# <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Procedura: specificare una bitmap nella casella degli strumenti per un controllo
+Se si desidera disporre è visualizzata un'icona speciale per il controllo di **della casella degli strumenti**, è possibile specificare una particolare immagine utilizzando il <xref:System.Drawing.ToolboxBitmapAttribute>. Questa classe è un *attributo*, un tipo speciale di classe che è possibile allegare ad altre classi. Per altre informazioni sugli attributi, vedere [NOT IN BUILD: Panoramica sugli attributi in Visual Basic](http://msdn.microsoft.com/en-us/0d0cff64-892d-4f57-83bd-bef388553d4f) per [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] e [Attributi](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) per [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].  
   
- La classe <xref:System.Drawing.ToolboxBitmapAttribute> consente di specificare una stringa che indica il nome file e il percorso di una bitmap di 16 x 16 pixel.  La bitmap verrà quindi visualizzata accanto al controllo quando quest'ultimo viene aggiunto alla **Casella degli strumenti**.  È inoltre possibile specificare un parametro <xref:System.Type> in modo da caricare la bitmap associata al tipo specificato.  Se si specifica sia un parametro <xref:System.Type> che una stringa, il controllo ricercherà una risorsa immagine il cui nome è specificato dal parametro stringa nell'assembly contenente il tipo specificato dal parametro <xref:System.Type>.  
+ Utilizzo di <xref:System.Drawing.ToolboxBitmapAttribute>, è possibile specificare una stringa che indica il percorso e il nome di una bitmap di 16x16 pixel. Questa bitmap viene quindi visualizzata accanto al controllo quando è aggiunta alla **Casella degli strumenti**. È inoltre possibile specificare un <xref:System.Type>, nel qual caso la bitmap associata a tale tipo viene caricata. Se si specificano sia un <xref:System.Type> e una stringa, il controllo ricerca per una risorsa immagine con il nome specificato dal parametro di stringa dell'assembly contenente il tipo specificato per il <xref:System.Type> parametro.  
   
-### Per specificare una bitmap nella Casella degli strumenti per il controllo  
+### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a>Per specificare una bitmap della casella degli strumenti per il controllo  
   
-1.  Aggiungere <xref:System.Drawing.ToolboxBitmapAttribute> alla dichiarazione di classi del controllo prima della parola chiave `Class` per [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] e sopra la dichiarazione di classi per [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].  
+1.  Aggiungere il <xref:System.Drawing.ToolboxBitmapAttribute> alla dichiarazione di classe del controllo prima di `Class` parola chiave per [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]e sopra la dichiarazione di classe per [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].  
   
     ```vb  
     ' Specifies the bitmap associated with the Button type.  
@@ -67,11 +71,11 @@ Per visualizzare un'icona speciale per il controllo nella **Casella degli strume
 2.  Ricompilare il progetto.  
   
     > [!NOTE]
-    >  La bitmap non è visualizzata nella casella degli strumenti per controlli e componenti generati automaticamente.  Per vedere la bitmap, ricaricare il controllo utilizzando la finestra di dialogo **Scegli elementi della Casella degli strumenti**.  Per ulteriori informazioni, vedere [Procedura dettagliata: compilare automaticamente la casella degli strumenti con componenti personalizzati](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+    >  La bitmap non viene visualizzata nella casella degli strumenti per i controlli e i componenti generati automaticamente. Per visualizzare la bitmap, ricaricare il controllo usando la finestra di dialogo **Scegli elementi della casella degli strumenti**. Per altre informazioni, vedere [Procedura dettagliata: compilare automaticamente la casella degli strumenti con componenti personalizzati](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
-## Vedere anche  
- <xref:System.Drawing.ToolboxBitmapAttribute>   
- [Procedura dettagliata: compilare automaticamente la casella degli strumenti con componenti personalizzati](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)   
- [Sviluppo di controlli Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)   
- [Attributes](../Topic/Attributes%20\(Visual%20Basic\)1.md)   
- [Attributi](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.ToolboxBitmapAttribute>  
+ [Procedura dettagliata: Compilare automaticamente la casella degli strumenti con componenti personalizzati](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ [Sviluppo di controlli Windows Form in fase di progettazione](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [Attributi (Visual Basic)](~/docs/visual-basic/language-reference/attributes.md)  
+ [Attributi](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

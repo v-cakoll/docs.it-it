@@ -1,40 +1,42 @@
 ---
-title: "Autorizzazione dell&#39;accesso alle operazioni del servizio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autorizzazione, Esempio di Windows Communication Foundation"
-  - "Autorizzazione dell'accesso alle operazioni del servizio [Windows Communication Foundation]"
-  - "comportamenti dei servizi, esempio di autorizzazione dell'accesso"
+title: Autorizzazione dell'accesso alle operazioni del servizio
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service behaviors, authorizing access sample
+- Authorizing Access To Service Operations Sample [Windows Communication Foundation]
+- authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cfa1eefa9f7bd940baf3796d92ac7b49e0f9843e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Autorizzazione dell&#39;accesso alle operazioni del servizio
-In questo esempio viene illustrato come usare l'elemento [\<autorizzazioneServizio\>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) per abilitare l'uso dell'attributo <xref:System.Security.Permissions.PrincipalPermissionAttribute> per autorizzare l'accesso alle operazioni del servizio.  L'esempio è basato sull'esempio [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).  Il servizio e il client sono stati configurati usando [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  L'attributo `mode` di [\<sicurezza\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) è stato impostato su `Message` e `clientCredentialType` è stato impostato su `Windows`.  <xref:System.Security.Permissions.PrincipalPermissionAttribute> viene applicato a ogni metodo del servizio e usato per limitare l'accesso alle operazioni.  Il chiamante deve essere un amministratore Windows per accedere a tutte le operazioni.  
+# <a name="authorizing-access-to-service-operations"></a>Autorizzazione dell'accesso alle operazioni del servizio
+In questo esempio viene illustrato come utilizzare il [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) per abilitare l'uso del <xref:System.Security.Permissions.PrincipalPermissionAttribute> attributo per autorizzare l'accesso alle operazioni del servizio. Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) esempio. Il servizio e client vengono configurate mediante il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). Il `mode` attributo del [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) è stata impostata su `Message` e `clientCredentialType` è stata impostata su `Windows`. <xref:System.Security.Permissions.PrincipalPermissionAttribute> viene applicato a ogni metodo del servizio e usato per limitare l'accesso alle operazioni. Il chiamante deve essere un amministratore Windows per accedere a tutte le operazioni.  
   
- In questo esempio, il client è un'applicazione console \(.exe\) e il servizio è ospitato da Internet Information Services \(IIS\).  
+ In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- Il file di configurazione del servizio usa [\<autorizzazioneServizio\>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) per impostare l'attributo `principalPermissionMode` :  
+ Il file di configurazione del servizio utilizza il [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) per impostare il `principalPermissionMode` attributo:  
   
-```  
+```xml  
 <behaviors>  
   <serviceBehaviors>  
-    <behavior>  
-      ...  
+    <behavior>   
       <!-- The serviceAuthorization behavior sets the  
            principalPermissionMode to UseWindowsGroups.  
            This puts a WindowsPrincipal on the current thread when a   
@@ -59,16 +61,16 @@ public double Add(double n1, double n2)
 }  
 ```  
   
- Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.  Il client comunica correttamente con ogni operazione se viene eseguito con un account che appartiene al gruppo Administrators. In caso contrario, l'accesso viene negato.  Per sperimentare un errore di autorizzazione, eseguire il client con un account che non appartiene al gruppo Administrators.  Premere INVIO nella finestra della console per arrestare il client.  
+ Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client. Il client comunica correttamente con ogni operazione se viene eseguito con un account che appartiene al gruppo Administrators. In caso contrario, l'accesso viene negato. Per sperimentare un errore di autorizzazione, eseguire il client con un account che non appartiene al gruppo Administrators. Premere INVIO nella finestra della console per arrestare il client.  
   
- Un servizio può ricevere una notifica di errori di autorizzazione implementando un <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  Vedere [Estensione del controllo sulla gestione e sulla segnalazione degli errori](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md) per informazioni sull'implementazione di `IErrorHandler`.  
+ Un servizio può ricevere una notifica di errori di autorizzazione implementando un <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Vedere [estensione di controllo sulla gestione degli errori e creazione di report](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md) per informazioni sull'implementazione `IErrorHandler`.  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## Vedere anche
+## <a name="see-also"></a>Vedere anche

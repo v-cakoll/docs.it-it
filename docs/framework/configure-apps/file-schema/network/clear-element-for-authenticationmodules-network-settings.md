@@ -1,70 +1,71 @@
 ---
-title: "Elemento &lt;clear&gt; per authenticationModules (Impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<authenticationModules>, clear (elemento)"
-  - "<clear> (elemento), authenticationModules"
-  - "authenticationModules, clear (elemento)"
-  - "clear (elemento), authenticationModules"
+title: '&lt;deselezionare&gt; elemento per authenticationModules (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- clear element, authenticationModules
+- <authenticationModules>, clear element
+- <clear> element, authenticationModules
+- authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f056894148177e6b540fd45569140a996b6b888f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;clear&gt; per authenticationModules (Impostazioni di rete)
-Consente di cancellare tutti i moduli di autenticazione dall'applicazione.  
+# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;deselezionare&gt; elemento per authenticationModules (impostazioni di rete)
+Cancella tutti i moduli di autenticazione dall'applicazione.  
   
-## Sintassi  
+ \<configuration>  
+\<System.NET >  
+\<authenticationModules >  
+\<Deselezionare >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
+|-----------------|---------------------|  
 |[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Specifica i moduli utilizzati per autenticare le richieste di rete.|  
   
-## Note  
- L'elemento `clear` consente di rimuovere tutti i moduli di autenticazione precedentemente definiti nel file di configurazione o, ad un livello più alto, nella gerarchia di configurazione.  
+## <a name="remarks"></a>Note  
+ Il `clear` elemento rimuove tutti i moduli di autenticazione che sono stati definiti nel file di configurazione o a un livello superiore nella gerarchia di configurazione.  
   
-## File di configurazione  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione o nel file di configurazione del computer \(Machine.config\).  
+## <a name="configuration-files"></a>File di configurazione  
+ Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito vengono rimossi tutti i moduli di autenticazione configurati.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente rimuove tutti i moduli di autenticazione configurato.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
@@ -74,7 +75,7 @@ Consente di cancellare tutti i moduli di autenticazione dall'applicazione.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
  [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

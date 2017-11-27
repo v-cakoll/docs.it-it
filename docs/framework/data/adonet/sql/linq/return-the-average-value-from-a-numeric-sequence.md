@@ -1,28 +1,34 @@
 ---
-title: "Restituire il valore medio da una sequenza numerica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Restituire il valore medio da una sequenza numerica
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 87a23bce302ac7eed3081b5670cb8c532a550cde
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Restituire il valore medio da una sequenza numerica
+# <a name="return-the-average-value-from-a-numeric-sequence"></a>Restituire il valore medio da una sequenza numerica
 L'operatore <xref:System.Linq.Enumerable.Average%2A> calcola la media di una sequenza di valori numerici.  
   
 > [!NOTE]
 >  La conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di `Average` di valori integer viene calcolata come un valore integer, non come un valore double.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituita la media dei valori `Freight` nella tabella `Orders`.  
   
  Il risultato restituito dal database Northwind di esempio sarà `78.2442`.  
@@ -30,7 +36,7 @@ L'operatore <xref:System.Linq.Enumerable.Average%2A> calcola la media di una seq
  [!code-csharp[DLinqQueryExamples#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#1)]
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituito il prezzo unitario medio di tutti i valori `Products` nella tabella `Products`.  
   
  Il risultato restituito dal database Northwind di esempio sarà `28.8663`.  
@@ -38,10 +44,10 @@ L'operatore <xref:System.Linq.Enumerable.Average%2A> calcola la media di una seq
  [!code-csharp[DLinqQueryExamples#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#2)]
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
-## Esempio  
- Nell'esempio seguente viene usato l'operatore `Average` per trovare i valori `Products` il cui prezzo unitario è maggiore del prezzo unitario medio della categoria a cui appartengono tali prodotti.  Nell'esempio i risultati vengono visualizzati in gruppi.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene usato l'operatore `Average` per trovare i valori `Products` il cui prezzo unitario è maggiore del prezzo unitario medio della categoria a cui appartengono tali prodotti. Nell'esempio i risultati vengono visualizzati in gruppi.  
   
- Notare che in questo esempio è richiesto l'uso della parola chiave `var` in C\#, perché il tipo restituito è anonimo.  
+ Notare che in questo esempio è richiesto l'uso della parola chiave `var` in C#, perché il tipo restituito è anonimo.  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
@@ -118,5 +124,5 @@ L'operatore <xref:System.Linq.Enumerable.Average%2A> calcola la media di una seq
   
  `Gravad lax`  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Query di aggregazione](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

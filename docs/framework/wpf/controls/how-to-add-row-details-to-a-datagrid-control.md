@@ -1,73 +1,79 @@
 ---
-title: "Procedura: aggiungere dettagli di riga un controllo DataGrid | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DataGrid [WPF], dettagli riga"
-  - "DataTemplate [WPF], DataGrid"
-  - "dettagli riga [WPF], DataGrid"
+title: 'Procedura: aggiungere dettagli di riga un controllo DataGrid'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataTemplate [WPF], DataGrid
+- row details [WPF], DataGrid
+- DataGrid [WPF], row details
 ms.assetid: 0bdc6f50-9b4c-483f-9df6-a47a1fde998b
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 036e06d110df8900ab46f0d501f30b4a163c8eb9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: aggiungere dettagli di riga un controllo DataGrid
-Quando si utilizza il controllo <xref:System.Windows.Controls.DataGrid>, è possibile personalizzare la presentazione dei dati aggiungendo una sezione dei dettagli di riga.  L'aggiunta di una sezione dei dettagli di riga consente di raggruppare i dati in un modello che è possibile rendere visibile o compresso.  È ad esempio possibile aggiungere dettagli di riga a un oggetto <xref:System.Windows.Controls.DataGrid> che includa solo un riepilogo dei dati per ogni riga in <xref:System.Windows.Controls.DataGrid>, ma che presenti più campi dati quando l'utente seleziona una riga.  Il modello per i dettagli di riga viene definito nella proprietà <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>.  Nella figura seguente viene illustrato un esempio di una sezione dei dettagli di riga.  
+# <a name="how-to-add-row-details-to-a-datagrid-control"></a>Procedura: aggiungere dettagli di riga un controllo DataGrid
+Quando si utilizza il <xref:System.Windows.Controls.DataGrid> (controllo), è possibile personalizzare la presentazione dei dati tramite l'aggiunta di una sezione dei dettagli di riga. L'aggiunta di una sezione dei dettagli di riga consente di raggruppare i dati in un modello che è possibile rendere visibile o compressa. Ad esempio, è possibile aggiungere i dettagli di riga per un <xref:System.Windows.Controls.DataGrid> che includa solo un riepilogo dei dati per ogni riga di <xref:System.Windows.Controls.DataGrid>, ma presenta più campi di dati quando l'utente seleziona una riga. Definire il modello per la sezione dei dettagli della riga nel <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> proprietà. Nella figura seguente viene illustrato un esempio di una sezione dei dettagli di riga.  
   
- ![DataGrid con i dettagli della riga](../../../../docs/framework/wpf/controls/media/ndp-rowdetails.png "NDP\_RowDetails")  
+ ![DataGrid con i dettagli della riga](../../../../docs/framework/wpf/controls/media/ndp-rowdetails.png "NDP_RowDetails")  
   
- Il modello dei dettagli di riga può essere definito sia come codice XAML inline sia come risorsa.  Entrambi gli approcci vengono illustrati nelle procedure seguenti.  Un modello di dati aggiunto come risorsa può essere utilizzato in tutto il progetto senza che sia necessario ricreare il modello.  Un modello di dati aggiunto come codice XAML inline è invece accessibile solo dal controllo in cui viene definito.  
+ Il modello di informazioni di riga è definire come inline XAML o come una risorsa. Entrambi gli approcci vengono visualizzati nelle procedure seguenti. Un modello di dati che viene aggiunto come una risorsa può essere utilizzata in tutto il progetto senza creare nuovamente il modello. Un modello di dati che viene aggiunto come inline XAML è accessibile solo dal controllo in cui è definito.  
   
-### Per visualizzare dettagli della riga tramite codice XAML inline  
+### <a name="to-display-row-details-by-using-inline-xaml"></a>Per visualizzare i dettagli di riga utilizzando il codice XAML inline  
   
-1.  Creare un oggetto <xref:System.Windows.Controls.DataGrid> che determini la visualizzazione di dati da un'origine dati.  
+1.  Creare un <xref:System.Windows.Controls.DataGrid> che visualizza i dati da un'origine dati.  
   
 2.  Nell'elemento <xref:System.Windows.Controls.DataGrid> aggiungere un elemento <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>.  
   
-3.  Creare un oggetto <xref:System.Windows.DataTemplate> che definisca l'aspetto della sezione dei dettagli di riga.  
+3.  Creare un <xref:System.Windows.DataTemplate> che definisce l'aspetto della sezione dettagli della riga.  
   
-     Nel codice XAML seguente vengono illustrati <xref:System.Windows.Controls.DataGrid> e come definire l'oggetto <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> inline.  L'oggetto <xref:System.Windows.Controls.DataGrid> determina la visualizzazione di tre valori in ogni riga e di tre ulteriori valori quando la riga viene selezionata.  
+     Il codice XAML seguente viene illustrata la <xref:System.Windows.Controls.DataGrid> e come definire il <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> inline. Il <xref:System.Windows.Controls.DataGrid> Visualizza tre valori in ogni riga e tre ulteriori valori quando la riga è selezionata.  
   
-     [!code-xml[DataGrid_RowDetails#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml#1)]  
+     [!code-xaml[DataGrid_RowDetails#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml#1)]  
   
-     Nel codice seguente viene illustrata la query utilizzata per selezionare i dati visualizzati in <xref:System.Windows.Controls.DataGrid>.  In questo esempio la query seleziona dati da un'entità contenente informazioni sul cliente.  
+     Il codice seguente viene illustrata la query viene utilizzata per selezionare i dati che viene visualizzati nel <xref:System.Windows.Controls.DataGrid>. In questo esempio, la query Seleziona dati da un'entità che contiene informazioni sul cliente.  
   
      [!code-csharp[DataGrid_RowDetails#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml.cs#2)]
      [!code-vb[DataGrid_RowDetails#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_rowdetails/vb/mainwindow.xaml.vb#2)]  
   
-### Per visualizzare dettagli di riga tramite una risorsa  
+### <a name="to-display-row-details-by-using-a-resource"></a>Per visualizzare i dettagli di riga tramite una risorsa  
   
-1.  Creare un oggetto <xref:System.Windows.Controls.DataGrid> che determini la visualizzazione di dati da un'origine dati.  
+1.  Creare un <xref:System.Windows.Controls.DataGrid> che visualizza i dati da un'origine dati.  
   
-2.  Aggiungere un elemento <xref:System.Windows.FrameworkElement.Resources%2A> all'elemento radice, ad esempio un controllo <xref:System.Windows.Window> o un controllo <xref:System.Windows.Controls.Page> oppure aggiunge un elemento <xref:System.Windows.Application.Resources%2A> alla classe <xref:System.Windows.Application> nel file App.xaml \(o Application.xaml\).  
+2.  Aggiungere un <xref:System.Windows.FrameworkElement.Resources%2A> elemento all'elemento radice, ad esempio un <xref:System.Windows.Window> controllo o un <xref:System.Windows.Controls.Page> controllare o aggiungere un <xref:System.Windows.Application.Resources%2A> elemento per la <xref:System.Windows.Application> classe nel file app. XAML (o Application. XAML).  
   
-3.  Nell'elemento delle risorse creare un oggetto <xref:System.Windows.DataTemplate> che definisca l'aspetto della sezione dei dettagli di riga.  
+3.  Nell'elemento risorse, creare un <xref:System.Windows.DataTemplate> che definisce l'aspetto della sezione dettagli della riga.  
   
-     Nel codice XAML seguente viene illustrata la proprietà <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> definita nella classe <xref:System.Windows.Application>.  
+     Il codice XAML seguente viene illustrata la <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> definito nel <xref:System.Windows.Application> classe.  
   
-     [!code-xml[DataGrid_RowDetails#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/app.xaml#3)]  
+     [!code-xaml[DataGrid_RowDetails#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/app.xaml#3)]  
   
-4.  Sull'oggetto <xref:System.Windows.DataTemplate> impostare [Direttiva x:Key](../../../../docs/framework/xaml-services/x-key-directive.md) su un valore che identifichi in modo univoco il modello di dati.  
+4.  Nel <xref:System.Windows.DataTemplate>, impostare il [direttiva X:Key](../../../../docs/framework/xaml-services/x-key-directive.md) su un valore che identifica in modo univoco il modello di dati.  
   
-5.  Nell'elemento <xref:System.Windows.Controls.DataGrid> impostare la proprietà <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> sulla risorsa definita nei passaggi precedenti.  Assegnare la risorsa come risorsa statica.  
+5.  Nel <xref:System.Windows.Controls.DataGrid> elemento, impostare il <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> proprietà della risorsa definita nei passaggi precedenti. Assegnare la risorsa come una risorsa statica.  
   
-     Nel codice XAML seguente viene illustrata la proprietà <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> impostata sulla risorsa dell'esempio precedente.  
+     Il codice XAML seguente viene illustrata la <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> impostata per la risorsa dell'esempio precedente.  
   
-     [!code-xml[DataGrid_RowDetails#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/window2.xaml#4)]  
+     [!code-xaml[DataGrid_RowDetails#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/window2.xaml#4)]  
   
-### Per impostare la visibilità e impedire lo scorrimento orizzontale per i dettagli di riga  
+### <a name="to-set-visibility-and-prevent-horizontal-scrolling-for-row-details"></a>Per impostare la visibilità e impedire lo scorrimento orizzontale per i dettagli delle righe  
   
-1.  Se necessario, impostare la proprietà <xref:System.Windows.Controls.DataGrid.RowDetailsVisibilityMode%2A> su un valore di <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode>.  
+1.  Se necessario, impostare il <xref:System.Windows.Controls.DataGrid.RowDetailsVisibilityMode%2A> proprietà per un <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> valore.  
   
-     Per impostazione predefinita, il valore viene impostato su <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode>.  È possibile impostarlo su <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> per visualizzare i dettagli per tutte le righe oppure su <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> per nascondere i dettagli per tutte le righe.  
+     Per impostazione predefinita, il valore è impostato su <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.VisibleWhenSelected>. È possibile impostare <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Visible> per visualizzare i dettagli per tutte le righe o <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Collapsed> per nascondere i dettagli per tutte le righe.  
   
-2.  Se necessario, impostare la proprietà <xref:System.Windows.Controls.DataGrid.AreRowDetailsFrozen%2A> su `true` per impedire lo scorrimento orizzontale della sezione dei dettagli di riga.
+2.  Se necessario, impostare il <xref:System.Windows.Controls.DataGrid.AreRowDetailsFrozen%2A> proprietà `true` sezione lo scorrimento orizzontale per impedire la riga dei dettagli.

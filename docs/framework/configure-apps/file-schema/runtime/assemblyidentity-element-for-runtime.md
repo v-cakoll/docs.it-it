@@ -1,117 +1,120 @@
 ---
-title: "Elemento &lt;assemblyIdentity&gt; per &lt;runtime&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#assemblyIdentity"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<assemblyIdentity> (elemento)"
-  - "assemblyIdentity (elemento)"
-  - "tag contenitore, <assemblyIdentity> (elemento)"
+title: '&lt;assemblyIdentity&gt; elemento per &lt;runtime&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#assemblyIdentity
+helpviewer_keywords:
+- <assemblyIdentity> element
+- container tags, <assemblyIdentity> element
+- assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 740b08806dff65d3ce1b8de378138c2647944fd4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;assemblyIdentity&gt; per &lt;runtime&gt;
-Contiene le informazioni di identificazione relative all'assembly.  
+# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt; elemento per &lt;runtime&gt;
+Contiene le informazioni di identificazione dell'assembly.  
   
-## Sintassi  
+ \<configuration>  
+\<runtime >  
+\<assemblyBinding >  
+\<dependentAssembly >  
+\<assemblyIdentity >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
-   <assemblyIdentity    
+```xml  
+   <assemblyIdentity    
 name="assembly name"  
 publicKeyToken="public key token"  
 culture="assembly culture"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|`name`|Attributo obbligatorio.<br /><br /> Nome dell'assembly.|  
-|`culture`|Attributo facoltativo.<br /><br /> Stringa che specifica la lingua e il paese relativi all'assembly.|  
-|`publicKeyToken`|Attributo facoltativo.<br /><br /> Valore esadecimale che specifica il nome sicuro dell'assembly.|  
-|`processorArchitecture`|Attributo facoltativo.<br /><br /> Uno dei valori di "x86", "amd64", "msil" o "ia64" che specificano l'architettura del processore per un assembly contenente codice specifico del processore.  Per tali valori non viene rilevata la distinzione tra maiuscole e minuscole.  Se all'attributo viene assegnato qualsiasi altro valore, verrà ignorato l'intero elemento `<assemblyIdentity>`.  Vedere <xref:System.Reflection.ProcessorArchitecture>.|  
+|`name`|Attributo obbligatorio.<br /><br /> Il nome dell'assembly|  
+|`culture`|Attributo facoltativo.<br /><br /> Stringa che specifica la lingua e paese/area geografica dell'assembly.|  
+|`publicKeyToken`|Attributo facoltativo.<br /><br /> Un valore esadecimale che specifica il nome sicuro dell'assembly.|  
+|`processorArchitecture`|Attributo facoltativo.<br /><br /> Uno dei valori di "x86", "amd64", "msil" oppure "ia64", che specifica l'architettura del processore per un assembly che contiene codice specifico del processore. I valori non sono rilevanti. Se l'attributo viene assegnato a qualsiasi altro valore, l'intero `<assemblyIdentity>` elemento viene ignorato. Vedere <xref:System.Reflection.ProcessorArchitecture>.|  
   
-## Attributo ProcessorArchitecture  
+## <a name="processorarchitecture-attribute"></a>Attributo processorArchitecture  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|`amd64`|Solo processori AMD a 64 bit.|  
+|-----------|-----------------|  
+|`amd64`|Solo processore AMD a 64 bit.|  
 |`ia64`|Solo processore Intel a 64 bit.|  
-|`msil`|Neutro per quanto riguarda il processore e i bit per parola.|  
-|`x86`|Processore Intel a 32 bit, nativo o in ambiente WOW \(Windows on Windows\) su una piattaforma a 64 bit.|  
+|`msil`|Neutro rispetto al processore e bit per parola|  
+|`x86`|Un processore Intel a 32 bit, nativo o l'ambiente Windows on Windows (WOW) su una piattaforma a 64 bit.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`assemblyBinding`|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`dependentAssembly`|Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly.  Utilizzare un elemento `<dependentAssembly>` per ciascun assembly.|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|`dependentAssembly`|Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly. Utilizzare uno `<dependentAssembly>` elemento per ogni assembly.|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
-## Note  
- Ciascun elemento **\<dependentAssembly\>** deve disporre di un elemento figlio **\<assemblyIdentity\>**.  
+## <a name="remarks"></a>Note  
+ Ogni  **\<dependentAssembly >** l'elemento deve avere uno  **\<assemblyIdentity >** elemento figlio.  
   
- Se l'attributo `processorArchitecture` è presente, l'elemento `<assemblyIdentity>` si applica solo all'assembly con l'architettura di processore corrispondente.  Se invece l'attributo `processorArchitecture` non è presente, l'elemento `<assemblyIdentity>` si applica a un assembly con qualsiasi architettura di processore.  
+ Se il `processorArchitecture` attributo è presente, il `<assemblyIdentity>` elemento si applica solo agli assembly con l'architettura del processore corrispondente. Se il `processorArchitecture` attributo non è presente, il `<assemblyIdentity>` elemento può essere applicato a un assembly con qualsiasi architettura del processore.  
   
- Nell'esempio riportato di seguito viene illustrato un file di configurazione per due assembly con lo stesso nome che hanno come destinazione due architetture di processore diverse e le cui versioni non sono state mantenute sincronizzate.  Se l'applicazione viene eseguita sulla piattaforma x86, verrà applicato il primo elemento `<assemblyIdentity>` e verrà ignorato l'altro.  Se invece l'applicazione viene eseguita su una piattaforma diversa da x86 o ia64, verranno ignorati entrambi.  
+ Nell'esempio seguente viene illustrato un file di configurazione per due assembly con lo stesso nome che hanno come destinazione due differenti architetture del processore due e versioni di cui non sono state mantenute la sincronizzazione. Quando l'applicazione esegue su x86 piattaforma primo `<assemblyIdentity>` si applica l'elemento e l'altra viene ignorata. Se l'applicazione viene eseguita su una piattaforma diversa da x86 o ia64, entrambi vengono ignorati.  
   
-```  
+```xml  
 <configuration>  
-   <runtime>  
-      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <dependentAssembly>  
-            <assemblyIdentity name="MyAssembly"  
-                  publicKeyToken="14a739be0244c389"  
-                  culture="neutral"  
-                  processorArchitecture="x86" />  
-            <bindingRedirect oldVersion= "1.0.0.0"   
-                  newVersion="1.1.0.0" />  
-         </dependentAssembly>  
-         <dependentAssembly>  
-            <assemblyIdentity name="MyAssembly"  
-                  publicKeyToken="14a739be0244c389"  
-                  culture="neutral"   
-                  processorArchitecture="ia64" />  
-            <bindingRedirect oldVersion="1.0.0.0"   
-                  newVersion="2.0.0.0" />  
-         </dependentAssembly>  
-      </assemblyBinding>  
-   </runtime>  
+   <runtime>  
+      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
+         <dependentAssembly>  
+            <assemblyIdentity name="MyAssembly"  
+                  publicKeyToken="14a739be0244c389"  
+                  culture="neutral"  
+                  processorArchitecture="x86" />  
+            <bindingRedirect oldVersion= "1.0.0.0"   
+                  newVersion="1.1.0.0" />  
+         </dependentAssembly>  
+         <dependentAssembly>  
+            <assemblyIdentity name="MyAssembly"  
+                  publicKeyToken="14a739be0244c389"  
+                  culture="neutral"   
+                  processorArchitecture="ia64" />  
+            <bindingRedirect oldVersion="1.0.0.0"   
+                  newVersion="2.0.0.0" />  
+         </dependentAssembly>  
+      </assemblyBinding>  
+   </runtime>  
 </configuration>  
 ```  
   
- Se in un file di configurazione è contenuto l'elemento `<assemblyIdentity>` senza l'attributo `processorArchitecture` e non è contenuto un elemento che corrisponde alla piattaforma, verrà utilizzato l'elemento senza attributo `processorArchitecture`.  
+ Se un file di configurazione contiene un `<assemblyIdentity>` elemento senza `processorArchitecture` attributo e non contiene un elemento che corrisponde alla piattaforma, l'elemento senza il `processorArchitecture` viene utilizzato l'attributo.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come fornire le informazioni su un assembly.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come fornire informazioni relative a un assembly.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -126,7 +129,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -1,84 +1,87 @@
 ---
-title: "Elemento &lt;codeBase&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/codeBase"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<codeBase> (elemento)"
-  - "codeBase (elemento)"
-  - "tag contenitore, <codeBase> (elemento)"
+title: '&lt;codeBase&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/codeBase
+helpviewer_keywords:
+- <codeBase> element
+- container tags, <codeBase> element
+- codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: c5b30f1dc3ccade3028c31c57ffdab521802f086
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;codeBase&gt;
-Specifica la posizione in cui Common Language Runtime può individuare un assembly.  
+# <a name="ltcodebasegt-element"></a>&lt;codeBase&gt; elemento
+Specifica se common language runtime può individuare un assembly.  
   
-## Sintassi  
+ \<configuration>  
+\<runtime >  
+\<assemblyBinding >  
+\<dependentAssembly >  
+\<codeBase >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
-   <codeBase    
+```xml  
+   <codeBase    
 version="Assembly version"  
 href="URL of assembly"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|`href`|Attributo obbligatorio.<br /><br /> Specifica l'URL in cui la versione dell'assembly specificata può essere individuata dall'ambiente di esecuzione.|  
-|`version`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly a cui si applica l'elemento codeBase.  Il formato di un numero di versione di assembly è *principale.secondaria.build.revisione*.|  
+|`href`|Attributo obbligatorio.<br /><br /> Specifica l'URL in cui il runtime può individuare la versione specificata dell'assembly.|  
+|`version`|Attributo obbligatorio.<br /><br /> Specifica la versione dell'assembly che viene applicata la codebase. Il formato di un numero di versione di assembly è *revisione*.|  
   
-## Attributo version  
+## <a name="version-attribute"></a>Attributo di versione  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
+|-----------|-----------------|  
 |I valori validi per ogni parte del numero di versione sono compresi tra 0 e 65535.|Non applicabile.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`buildproviders`|Definisce una raccolta di provider di compilazione utilizzati per compilare file di risorse personalizzati.  Possono essere presenti più provider di compilazione.|  
-|`compilation`|Consente di configurare tutte le impostazioni di compilazione utilizzate in ASP.NET.|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`System.web`|Specifica l'elemento radice per la sezione di configurazione ASP.NET.|  
+|-------------|-----------------|  
+|`buildproviders`|Definisce una raccolta di provider di compilazione utilizzati per compilare file di risorse personalizzati. Possono essere presenti più provider di compilazione.|  
+|`compilation`|Consente di configurare tutte le impostazioni di compilazione che utilizza ASP.NET.|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|`System.web`|Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.|  
   
-## Note  
- Per fare in modo che dall'ambiente di esecuzione venga utilizzata l'impostazione **\<codeBase\>** in un file di configurazione del computer o nel file dei criteri dell'editore, il file deve eseguire anche il reindirizzamento della versione dell'assembly.  I file di configurazione dell'applicazione possono includere un'impostazione di codeBase senza eseguire il reindirizzamento della versione dell'assembly.  Dopo avere determinato la versione dell'assembly da utilizzare, nell'ambiente di esecuzione viene applicata l'impostazione di codeBase presente nel file che determina la versione.  Se non è indicato alcun elemento codeBase, nell'ambiente di esecuzione viene eseguita la ricerca dell'assembly seguendo la procedura standard.  
+## <a name="remarks"></a>Note  
+ Per il runtime di utilizzare il  **\<codeBase >** impostato in un file di configurazione di computer o un file dei criteri editore, il file deve reindirizzare la versione dell'assembly. File di configurazione dell'applicazione possono avere un'impostazione di codebase senza eseguire il reindirizzamento alla versione dell'assembly. Dopo aver determinato la versione di assembly da utilizzare, il runtime applica l'impostazione della codebase dal file che determina la versione. Se non è indicato alcun codebase, il runtime verifica per l'assembly nel modo consueto.  
   
- Se l'assembly dispone di un nome sicuro, l'elemento codeBase può trovarsi in un punto qualsiasi sulla rete Intranet locale o su Internet.  Se l'assembly è di tipo privato, l'impostazione di codeBase deve specificare un percorso relativo alla directory dell'applicazione.  
+ Se l'assembly dispone di un nome sicuro, l'impostazione della codebase può essere in un punto qualsiasi nella rete intranet locale o Internet. Se l'assembly è un assembly privato, l'impostazione di codebase deve essere un percorso relativo alla directory dell'applicazione.  
   
- Per gli assembly senza un nome sicuro, la versione viene ignorata e il caricatore utilizza la prima occorrenza di \<codebase\> in \<dependentAssembly\>.  Se nel file di configurazione dell'applicazione è presente una voce che reindirizza l'associazione verso un altro assembly, il reindirizzamento avrà la precedenza anche se la versione dell'assembly non corrisponde alla richiesta di associazione.  
+ Per gli assembly senza nome sicuro, la versione viene ignorata e il caricatore Usa la prima occorrenza di \<codebase > all'interno di \<dependentAssembly >. Se c'è una voce nel file di configurazione dell'applicazione che reindirizza l'associazione a un altro assembly, il reindirizzamento avrà la precedenza anche se la versione dell'assembly non corrisponde alla richiesta di associazione.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come specificare la posizione in cui un assembly può essere individuato dall'ambiente di esecuzione.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come specificare in cui il runtime può individuare un assembly.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -94,8 +97,8 @@ href="URL of assembly"/>
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Specifica della posizione di un assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Specifica della posizione di un assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
  [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

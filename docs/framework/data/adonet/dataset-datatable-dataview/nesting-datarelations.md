@@ -1,27 +1,33 @@
 ---
-title: "DataRelation annidati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Annidamento di oggetti DataRelation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: db7df753bf6066d3a89c46a82b66e47281076f95
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# DataRelation annidati
-In una rappresentazione relazionale dei dati, le singole tabelle contengono righe correlate tra loro tramite una colonna o un set di colonne.  Nel <xref:System.Data.DataSet> di ADO.NET la relazione tra le tabelle viene implementata mediante l'oggetto <xref:System.Data.DataRelation>.  Quando si crea un oggetto **DataRelation**, le relazioni padre\-figlio tra le colonne vengono gestite solo tramite tale relazione.  Le tabelle e le colonne sono entità separate.  Nella rappresentazione gerarchica dei dati fornita dall'XML, le relazioni padre\-figlio sono rappresentate da elementi padre contenenti elementi figlio annidati.  
+# <a name="nesting-datarelations"></a>Annidamento di oggetti DataRelation
+In una rappresentazione relazionale dei dati, le singole tabelle contengono righe correlate tra loro tramite una colonna o un set di colonne. Nel <xref:System.Data.DataSet> di ADO.NET la relazione tra le tabelle viene implementata mediante l'oggetto <xref:System.Data.DataRelation>. Quando si crea un **DataRelation**, le relazioni padre-figlio tra le colonne vengono gestite solo tramite la relazione. Le tabelle e le colonne sono entità separate. Nella rappresentazione gerarchica dei dati fornita dall'XML, le relazioni padre-figlio sono rappresentate da elementi padre contenenti elementi figlio annidati.  
   
- Per facilitare l'annidamento di oggetti figlio durante la sincronizzazione di un **DataSet** con un <xref:System.Xml.XmlDataDocument> o la scrittura sotto forma di dati XML mediante **WriteXml**, l'oggetto **DataRelation** espone una proprietà **Nested**.  L'impostazione della proprietà **Nested** di un oggetto **DataRelation** su **true** provoca l'annidamento delle righe figlio all'interno della colonna padre durante la scrittura sotto forma di dati XML o la sincronizzazione con un **XmlDataDocument**.  L'impostazione predefinita per la proprietà **Nested** di **DataRelation** è **false**.  
+ Per facilitare l'annidamento di oggetti figlio quando un **DataSet** è sincronizzato con un <xref:System.Xml.XmlDataDocument> o scritti come dati XML mediante **WriteXml**, **DataRelation** espone un **Nested** proprietà. Impostazione di **Nested** proprietà di un **DataRelation** a **true** fa sì che le righe della relazione vengono annidate all'interno della colonna padre durante scritti come dati XML l'elemento figlio o sincronizzazione con un **XmlDataDocument**. Il **Nested** proprietà del **DataRelation** è **false**, per impostazione predefinita.  
   
- Si consideri, ad esempio, il seguente **DataSet**.  
+ Ad esempio, tenere presente quanto segue **DataSet**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -63,11 +69,11 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- Dal momento che la proprietà **Nested** dell'oggetto **DataRelation** non è impostata su **true** per questo **DataSet**, gli oggetti figlio non verranno annidati all'interno degli elementi padre quando tale **DataSet** viene rappresentato sotto forma di dati XML.  La trasformazione della rappresentazione XML di un **Dataset** che contiene **Dataset** correlati con relazioni dati non annidate può causare un rallentamento delle prestazioni.  È consigliabile annidare le relazioni dati.  A tale scopo, impostare la proprietà **Nested** su **true**,  quindi scrivere codice nel foglio di stile XSLT che usa espressioni di query XPath gerarchiche basate su un approccio dall'alto verso il basso per individuare e trasformare i dati.  
+ Poiché il **Nested** proprietà del **DataRelation** oggetto non è impostato su **true** per questo **DataSet**, gli oggetti figlio non sono annidati all'interno degli elementi padre quando questo **set di dati** è rappresentato come dati XML. Trasformazione della rappresentazione XML di un **DataSet** contenente correlati **DataSet**con relazioni dati non annidate può causare un rallentamento delle prestazioni. È consigliabile annidare le relazioni dati. A tale scopo, impostare il **Nested** proprietà **true**. quindi scrivere codice nel foglio di stile XSLT che usa espressioni di query XPath gerarchiche basate su un approccio dall'alto verso il basso per individuare e trasformare i dati.  
   
- Nell'esempio di codice seguente viene illustrato il risultato della chiamata di **WriteXml** nel **DataSet**.  
+ Esempio di codice seguente viene illustrato il risultato della chiamata **WriteXml** sul **DataSet**.  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -95,7 +101,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- Notare che l'elemento **Customers** e gli elementi **Orders** vengono mostrati come elementi di pari livello.  Per visualizzare gli elementi **Orders** come elementi figlio dei rispettivi elementi padre, è necessario impostare la proprietà **Nested** dell'oggetto **DataRelation** su **true** e aggiungere il seguente codice:  
+ Si noti che il **clienti** elemento e **ordini** gli elementi vengono visualizzati come elementi di pari livello. Se si desidera utilizzare il **ordini** elementi vengano visualizzati come elementi figlio dei rispettivi elementi padre, il **Nested** proprietà del **DataRelation** dovrà essere impostata su **true** e aggiungere quanto segue:  
   
 ```vb  
 customerOrders.Nested = True  
@@ -105,9 +111,9 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- Nel codice seguente viene mostrato l'output risultante, con gli elementi **Orders** annidati all'interno dei rispettivi elementi padre.  
+ Il codice seguente viene mostrato l'output risultante, con la **ordini** elementi annidati all'interno dei rispettivi elementi padre.  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -135,8 +141,8 @@ customerOrders.Nested = true;
 </CustomerOrders>  
 ```  
   
-## Vedere anche  
- [Utilizzo di XML in un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [Aggiunta di DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)   
- [DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Aggiunta di oggetti DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
+ [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

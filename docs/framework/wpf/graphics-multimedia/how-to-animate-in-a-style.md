@@ -1,32 +1,35 @@
 ---
-title: "Procedura: aggiungere un&#39;animazione in uno stile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animazione, proprietà, all'interno degli stili"
-  - "stili, animazione delle proprietà"
+title: 'Procedura: aggiungere un''animazione in uno stile'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], properties [WPF], within styles
+- styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 10cd243c633e7a7e458d2026fc5e3d91d2996427
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: aggiungere un&#39;animazione in uno stile
-In questo esempio viene illustrato come aggiungere un'animazione alle proprietà all'interno di uno stile.  Quando si aggiunge un'animazione all'interno di uno stile, solo l'elemento framework per il quale viene definito lo stile può essere utilizzato direttamente come destinazione.  Per utilizzare come destinazione un oggetto Freezable è necessario partire da una proprietà dell'elemento con stile.  
+# <a name="how-to-animate-in-a-style"></a>Procedura: aggiungere un'animazione in uno stile
+In questo esempio viene illustrato come aggiungere un'animazione a una proprietà all'interno di uno stile. Quando l'animazione all'interno di uno stile, solo l'elemento del framework per cui viene definito lo stile è possibile assegnare direttamente. Per un oggetto freezable di destinazione, è necessario "punto verso il basso" da una proprietà dell'elemento con stile.  
   
- Nell'esempio seguente, vengono definite diverse animazioni all'interno di un stile e vengono applicate a un <xref:System.Windows.Controls.Button>.  Quando l'utente sposta il mouse sul pulsante, questo cambia da opaco a semitrasparente e nuovamente a opaco più volte, ripetutamente.  Quando l'utente sposta il mouse lontano dal pulsante, questo diventa completamente opaco.  Quando si fa clic sul pulsante, il colore di sfondo cambia da arancione a bianco e di nuovo ad arancione.  Poiché l'oggetto <xref:System.Windows.Media.SolidColorBrush> utilizzato per disegnare il pulsante non può essere utilizzato direttamente come destinazione, l'accesso a questo oggetto viene eseguito partendo dalla proprietà <xref:System.Windows.Controls.Control.Background%2A> del pulsante.  
+ Nell'esempio seguente, numerose animazioni vengono definite all'interno di uno stile e applicate a un <xref:System.Windows.Controls.Button>. Quando l'utente sposta il puntatore del mouse su di esso, di dissolvenza da opaco a semitrasparente e nuovamente, più volte. Quando l'utente sposta il mouse dal pulsante, questo diventa completamente opaco. Quando si fa clic sul pulsante, il colore di sfondo cambia da arancione bianco e nuovamente. Poiché il <xref:System.Windows.Media.SolidColorBrush> usato per disegnare il pulsante non può essere utilizzato direttamente come destinazione, è possibile accedervi partendo verso il basso del pulsante <xref:System.Windows.Controls.Control.Background%2A> proprietà.  
   
-## Esempio  
- [!code-xml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]  
+## <a name="example"></a>Esempio  
+ [!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]  
   
- Notare che quando si aggiunge un'animazione all'interno di uno stile, è possibile utilizzare come destinazione oggetti che non esistono.  Si supponga, ad esempio che lo stile utilizzi un oggetto <xref:System.Windows.Media.SolidColorBrush> per impostare la proprietà dello sfondo di un pulsante, ma che a un certo punto viene eseguito l'override dello stile e lo sfondo del pulsante viene impostato con un oggetto <xref:System.Windows.Media.LinearGradientBrush>.  Il tentativo di aggiungere un'animazione all'oggetto <xref:System.Windows.Media.SolidColorBrush> non genererà un'eccezione; l'animazione avrà semplicemente un esito negativo.  
+ Si noti che quando l'animazione all'interno di uno stile, è possibile per gli oggetti di destinazione che non sono presenti. Ad esempio, si supponga che lo stile utilizzi un <xref:System.Windows.Media.SolidColorBrush> per impostare proprietà di sfondo del pulsante, ma al momento lo stile è sottoposto a override e lo sfondo del pulsante viene impostato con un <xref:System.Windows.Media.LinearGradientBrush>.  Tentativo di aggiungere un'animazione di <xref:System.Windows.Media.SolidColorBrush> non genererà un'eccezione; l'animazione semplicemente un esito negativo.  
   
- Per ulteriori informazioni sulla sintassi di destinazione per storyboard, vedere [Cenni preliminari sugli storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  Per ulteriori informazioni sull'animazione, vedere [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  Per ulteriori informazioni sugli stili, vedere [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).
+ Per ulteriori informazioni sulla sintassi di destinazione per storyboard, vedere il [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md). Per ulteriori informazioni sull'animazione, vedere il [panoramica dell'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Per ulteriori informazioni sugli stili, vedere il [stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).

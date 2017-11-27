@@ -1,22 +1,25 @@
 ---
-title: "Riferimento alle classi WMI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Riferimento alle classi WMI
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ee03f0c567f2b154eaf2e7fdf608b093cfbe2d1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Riferimento alle classi WMI
+# <a name="wmi-class-reference"></a>Riferimento alle classi WMI
 Questa sezione elenca tutte le classi WMI esposte dal provider WMI [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
   
 ## <a name="accessing-wmi-instances"></a>Accesso alle istanze WMI  
@@ -37,7 +40,7 @@ Questa sezione elenca tutte le classi WMI esposte dal provider WMI [!INCLUDE[ind
   
  [Associazione](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
   
- [BindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
+ [Classe BindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/bindingelement.md)  
   
  [CallbackBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/callbackbehavior.md)  
   

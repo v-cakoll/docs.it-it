@@ -1,54 +1,55 @@
 ---
-title: "Integrazione della Guida dell&#39;utente in Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "form. Guida (mediante la finestra di progettazione)"
-  - "Guida, applicazioni Windows (finestra di progettazione)"
-  - "Guida, Windows Form (mediante la finestra di progettazione)"
-  - "HTML (Guida), Windows Form (mediante la finestra di progettazione)"
-  - "Windows (applicazioni), Guida (mediante la finestra di progettazione)"
-  - "Windows Form, Guida (mediante la finestra di progettazione)"
+title: Integrazione della Guida dell'utente in Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Help [Windows Forms], Windows Forms (using designer)
+- Windows Forms, Help (using designer)
+- HTML Help [Windows Forms], Windows Forms (using designer)
+- Help [Windows Forms], Windows applications (using designer)
+- forms. Help (using designer)
+- Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b7ec4d32c5f025cb3e48b1403387273268d83fb8
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Integrazione della Guida dell&#39;utente in Windows Form
-Un aspetto fondamentale, ma spesso sottovalutato, della compilazione di applicazioni basate su Windows è costituito dal sistema della Guida, che viene consultata dagli utenti in caso di problemi nell'utilizzo.  I Windows Form supportano due diversi tipi di Guida, ognuno dei quali è reso disponibile dal [Componente HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).  Il primo tipo fornisce la visualizzazione di un file della Guida in formato HTML o HTML Help versione 1.*x* o successiva.  Il secondo tipo fornisce la visualizzazione della Guida rapida per i singoli controlli. Ciò risulta particolarmente utile per le finestre di dialogo.  Entrambi i tipi di Guida possono essere utilizzati nello stesso form.  
+# <a name="integrating-user-help-in-windows-forms"></a>Integrazione della Guida dell'utente in Windows Form
+Un aspetto fondamentale, ma spesso trascurato, di compilazione di applicazioni basate su Windows è il sistema di Guida in linea, che viene in cui gli utenti per assistenza nell'utilizzo. Windows Form supportano due diversi tipi di Guida, fornito dal [HelpProvider (componente)](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md). Il primo prevede la visualizzazione di un file della Guida HTML o HTML Help 1. *x* o successiva. Il secondo può visualizzare breve "Che cos'è questa"-digitare Help sui singoli controlli; Ciò è particolarmente utile nelle finestre di dialogo. Entrambi i tipi di Guida utilizzabile nello stesso form.  
   
- È inoltre possibile utilizzare il [Componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md) per fornire una Guida specifica per i controlli nei Windows Form.  
+ Inoltre, il [componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md) può essere usato per fornire una Guida per i controlli in Windows Form.  
   
-## In questa sezione  
- [Procedura: visualizzare la Guida in un'applicazione Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)  
- Viene descritto come utilizzare il componente `HelpProvider` per associare i controlli ai file della Guida.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Procedura: Visualizzare la Guida in un'applicazione Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)  
+ Viene illustrato come utilizzare il `HelpProvider` componente per collegare i controlli per i file della Guida.  
   
- [Procedura: visualizzare la Guida rapida](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
- Viene descritto come utilizzare il componente `HelpProvider` per la visualizzazione della Guida rapida nei Windows Form.  
+ [Procedura: Visualizzare la Guida rapida](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
+ Viene illustrato come utilizzare il `HelpProvider` componente per visualizzare la Guida rapida in Windows Form.  
   
  [Visualizzazione della Guida relativa a un controllo tramite le descrizioni comandi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- Viene descritta la modalità di utilizzo del componente `ToolTip` per la visualizzazione della Guida relativa a un particolare controllo.  
+ Viene descritto l'utilizzo di `ToolTip` componente per visualizzare la Guida specifica del controllo.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [Componente HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
- Vengono illustrati i concetti fondamentali relativi al componente `HelpProvider`.  
+ Illustra le nozioni di base di `HelpProvider` componente.  
   
  [Componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
- Vengono illustrati i concetti fondamentali relativi al componente `ToolTip`.  
+ Illustra le nozioni di base di `ToolTip` componente.  
   
  [Panoramica sui Windows Form](../../../../docs/framework/winforms/windows-forms-overview.md)  
- Vengono illustrati i concetti fondamentali di Windows Form.  
+ Illustra le nozioni di base di Windows Form.  
   
  [Windows Form](../../../../docs/framework/winforms/index.md)  
- Viene fornita una panoramica su Windows Form.
+ Viene fornita una panoramica di Windows Form.

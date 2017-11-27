@@ -8,15 +8,14 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: b83f00f82de727812c5737915a6dc35ec98e4734
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-forms-configuration-section"></a>Sezione di configurazione di Windows Form
 Le impostazioni di configurazione di Windows Form consentono a un'app Windows Form di archiviare e recuperare informazioni sulle impostazioni dell'applicazione personalizzate, ad esempio il supporto di più monitor, il supporto di valori DPI alti e altre impostazioni di configurazione predefinite.
@@ -63,4 +62,3 @@ L'elemento `<System.Windows.Forms.ApplicationConfigurationSection>` può include
 
 [Schema dei file di configurazione](../index.md)   
 [Supporto di valori DPI alti in Windows Form](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
-

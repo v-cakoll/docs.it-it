@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - asynchronous thread aborts
 - AsynchronousThreadAbort MDA
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9a80b0cdd762a9dc26089aa450cf998b1832dbc1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6f7bfee4375a14a4456493333e65a953d406c732
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="asynchronousthreadabort-mda"></a>MDA asynchronousThreadAbort
 L'assistente al debug gestito `asynchronousThreadAbort` viene attivato quando un thread tenta di introdurre un'interruzione asincrona in un altro thread. `asynchronousThreadAbort` non viene invece attivato da interruzioni sincrone dei thread.
@@ -43,7 +36,7 @@ L'assistente al debug gestito `asynchronousThreadAbort` viene attivato quando un
  I sintomi possono variare ampiamente a causa della casualità implicita nel problema.
 
 ## <a name="cause"></a>Causa
- Il codice di un thread ha chiamato il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> su un thread di destinazione per introdurre un'interruzione di thread asincrona. L'interruzione è asincrona perché il codice che effettua la chiamata a <xref:System.Threading.Thread.Abort%2A> è in esecuzione su un thread diverso da quello di destinazione dell'operazione di interruzione. In genere, le interruzioni sincrone dei thread non causano problemi in quanto il thread che esegue il metodo <xref:System.Threading.Thread.Abort%2A> effettua questa operazione solo in un checkpoint sicuro in cui lo stato dell'applicazione è coerente.
+ Il codice di un thread ha chiamato il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> su un thread di destinazione per introdurre un'interruzione di thread asincrona. L'interruzione è asincrona perché il codice che effettua la chiamata a <xref:System.Threading.Thread.Abort%2A> è in esecuzione su un thread diverso da quello di destinazione dell'operazione di interruzione. In genere, le interruzioni sincrone dei thread non causano problemi in quanto il thread che esegue il metodo <xref:System.Threading.Thread.Abort%2A> effettua questa operazione solo in un checkpoint sicuro in cui lo stato dell'applicazione è coerente.
 
  Le interruzioni asincrone dei thread generano invece un problema poiché vengono elaborate in punti imprevisti nell'esecuzione del thread di destinazione. Per evitare questo problema, il codice scritto per essere eseguito su un thread che può essere interrotto in questo modo deve poter gestire un'eccezione <xref:System.Threading.ThreadAbortException> pressoché in corrispondenza di ogni riga di codice, prestando attenzione a ripristinare lo stato di coerenza dei dati dell'applicazione. Non è realistico, tuttavia, prevedere la scrittura di codice tenendo presente questo problema o la protezione da tutti possibili rischi.
 
@@ -87,4 +80,3 @@ void FireMda()
 
 ## <a name="see-also"></a>Vedere anche
  <xref:System.Threading.Thread> [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 092f6f4544e308dae45636f447f75100512a916a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ad367a14373487698cd13c710998f1a5e6ccb7cd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="wif-configuration-schema-conventions"></a>Convenzioni dello schema di configurazione di WIF
 Questo argomento illustra le convenzioni usate negli argomenti relativi alla configurazione di Windows Identity Foundation (WIF) e descrive alcuni attributi e funzionalità comuni usati nelle sezioni [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) e [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md).  
@@ -56,6 +54,5 @@ Questo argomento illustra le convenzioni usate negli argomenti relativi alla con
  I tipi personalizzati devono essere derivati dal tipo specificato e devono fornire un costruttore `public` predefinito (argomento 0).  
   
 ## <a name="see-also"></a>Vedere anche  
- [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)   
+ [\<System. IdentityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)  
  [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
-

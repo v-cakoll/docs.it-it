@@ -5,31 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - performance counters
 - performance counters,and in-process side-by-side applications
 - performance,.NET Framework applications
 - performance monitoring,counters
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 713aa3a870c42014de01d6782d7452ab60792cc4
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 16c43545b24f8c0290bfe993d91b7e4203ac11fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Contatori delle prestazioni e applicazioni affiancate in-process
 Con Performance Monitor (Perfmon.exe) è possibile distinguere i contatori delle prestazioni in base al runtime. Questo argomento descrive la modifica del Registro di sistema necessaria per abilitare questa funzionalità.  
@@ -59,7 +55,8 @@ Con Performance Monitor (Perfmon.exe) è possibile distinguere i contatori delle
   
  L'esempio seguente mostra come modificare il valore `ProcessNameFormat` a livello di codice.  
   
- [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)] [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
+ [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)]
+ [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
   
  Quando si apporta questa modifica al Registro di sistema, Perfmon.exe visualizza i nomi delle applicazioni destinate a [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] come *applicazione*_`p`*IDprocesso*\_`r`*IDruntime*, dove *applicazione* è il nome dell'applicazione, *IDprocesso* è l'identificatore del processo dell'applicazione e *IDruntime* è un identificatore di Common Language Runtime. Ad esempio, se un'applicazione denominata app.exe carica due istanze di Common Language Runtime, Perfmon.exe può identificare un'istanza come app_p1416_r10 e la seconda come app_p3160_r10. L'identificatore di runtime risolve solo eventuali ambiguità per i runtime all'interno di un processo e non fornisce informazioni sul runtime. (Ad esempio, l'ID di runtime non ha alcuna relazione con la versione o lo SKU del runtime.)  
   
@@ -69,4 +66,3 @@ Con Performance Monitor (Perfmon.exe) è possibile distinguere i contatori delle
 >  L'identificatore di processo elimina l'ambiguità per la risoluzione di due applicazioni con lo stesso nome che usano versioni precedenti del runtime. Un identificatore di runtime non è obbligatorio per le versioni precedenti, perché le versioni precedenti di Common Language Runtime non supportano gli scenari affiancati.  
   
  Se [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] non è presente o è stato disinstallato, l'impostazione della chiave del Registro di sistema non ha alcun effetto. Questo significa che due applicazioni con lo stesso nome continueranno a essere visualizzate in Perfmon.exe come *applicazione* e *applicazione#1* (ad esempio, come **app** e **app#1**).
-

@@ -1,43 +1,44 @@
 ---
-title: "Propriet&#224; nei controlli Windows Form che supportano le linee guida per l&#39;accesso facilitato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "accessibilità, Windows Form (proprietà controllo)"
-  - "Windows Form, proprietà di accessibilità dei controlli"
+title: "Proprietà nei controlli Windows Form che supportano le linee guida per l'accesso facilitato"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, accessibility properties of controls
+- accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ca18b35b90b028054e68a0a14fecc819a6c20b9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Propriet&#224; nei controlli Windows Form che supportano le linee guida per l&#39;accesso facilitato
-I controlli nella Casella degli strumenti standard per i Windows Form soddisfano molti dei requisiti di Accesso facilitato, tra cui l'esposizione dello stato attivo e l'esposizione degli elementi dello schermo.  
+# <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Proprietà nei controlli Windows Form che supportano le linee guida per l'accesso facilitato
+Controlli della casella degli strumenti standard di Windows Form supportano molte delle linee guida di accessibilità, inclusi l'esposizione dello stato attivo e l'esposizione di elementi dello schermo.  
   
-## Pianificazione dell'Accesso facilitato  
- È possibile utilizzare le proprietà dei controlli per soddisfare altri requisiti di Accesso facilitato, come illustrato nella tabella riportata di seguito.  È inoltre necessario utilizzare i menu per consentire l'accesso alle funzionalità del programma.  
+## <a name="planning-ahead-for-accessibility"></a>Pianificazione dell'accesso facilitato  
+ Proprietà dei controlli è utilizzabile per supportare altre linee guida di accessibilità, come illustrato nella tabella seguente. Inoltre, utilizzare i menu per fornire accesso alle funzionalità del programma.  
   
-|Proprietà dei controlli|Considerazioni sull'Accesso facilitato|  
-|-----------------------------|--------------------------------------------|  
-|AccessibleDescription|La descrizione fornita per gli strumenti per l'Accesso facilitato, quali la funzione di lettura Screen Reader \(non disponibile in italiano\).  Gli strumenti per l'Accesso facilitato sono periferiche e programmi specializzati che consentono agli utenti con particolari esigenze di utilizzare i computer in modo più efficiente.|  
-|AccessibleName|Il nome riportato negli strumenti per l'Accesso facilitato.|  
-|AccessibleRole|Descrive l'utilizzo dell'elemento nell'interfaccia utente.|  
-|TabIndex|Crea un percorso di navigazione del form sensibile.  È importante che i controlli senza etichette intrinseche, quali le caselle di testo, siano immediatamente preceduti dalle relative etichette associate nell'ordine di tabulazione.|  
-|Text|Utilizzare il carattere "&" per creare tasti di scelta.  I tasti di scelta rappresentano un metodo per consentire l'accesso da tastiera documentato alle funzionalità.|  
-|Font Size|Se non è possibile modificare la dimensione dei caratteri, è necessario impostarla su 10 punti o su un valore superiore.  Una volta impostata la dimensione dei caratteri del form, tutti i controlli successivamente aggiunti al form avranno la stessa dimensione.|  
-|Forecolor|Se questa proprietà viene impostata sul valore predefinito, nel form verranno utilizzate le preferenze dell'utente relative ai colori.|  
-|Backcolor|Se questa proprietà viene impostata sul valore predefinito, nel form verranno utilizzate le preferenze dell'utente relative ai colori.|  
-|BackgroundImage|Lasciare vuota questa proprietà per rendere il testo più leggibile.|  
+|Proprietà del controllo|Considerazioni per l'accessibilità|  
+|----------------------|--------------------------------------|  
+|AccessibleDescription|La descrizione viene segnalata agli strumenti di accessibilità, ad esempio gli screen reader. Gli strumenti per l'accessibilità sono dispositivi e programmi specializzati che consentono agli utenti con disabilità di usare i computer in modo più efficace.|  
+|AccessibleName|Il nome che verrà segnalato agli strumenti di accessibilità.|  
+|AccessibleRole|Viene descritto l'utilizzo dell'elemento nell'interfaccia utente.|  
+|TabIndex|Crea un percorso di navigazione sensibile nel form. È importante per i controlli senza etichette intrinseche, ad esempio caselle di testo che precede nell'ordine di tabulazione all'etichetta associata.|  
+|Testo|Usare il carattere "&" per creare le chiavi di accesso. Utilizzando i tasti di scelta fa parte di accesso da tastiera documentato alle funzionalità.|  
+|Dimensione carattere|Se le dimensioni del carattere non sono regolabile, quindi deve essere impostato su 10 punti o superiori. Dopo aver impostata la dimensione dello stesso tipo di carattere, tutti i controlli aggiunti in seguito al form avranno le stesse dimensioni.|  
+|Forecolor|Se questa proprietà è impostata sul valore predefinito, le preferenze dell'utente colore verranno usate nel form.|  
+|Backcolor|Se questa proprietà è impostata sul valore predefinito, le preferenze dell'utente colore verranno usate nel form.|  
+|BackgroundImage|Omettere questa proprietà per rendere più leggibile il testo.|  
   
-## Vedere anche  
- [Procedura dettagliata: creazione di un'applicazione Windows ad Accesso facilitato](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)
+## <a name="see-also"></a>Vedere anche  
+ [Procedura dettagliata: Creazione di un'applicazione Windows ad Accesso facilitato](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)

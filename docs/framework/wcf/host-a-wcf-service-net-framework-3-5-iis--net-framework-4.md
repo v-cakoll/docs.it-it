@@ -1,39 +1,42 @@
 ---
-title: "Procedura: ospitare un servizio WCF scritto con .NET Framework 3.5 in IIS in esecuzione in .NET Framework 4 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: ospitare un servizio WCF scritto con .NET Framework 3.5 in IIS in esecuzione in .NET Framework 4'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7e2c9dbf92ddaf1c23cb09184f046cb536717015
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: ospitare un servizio WCF scritto con .NET Framework 3.5 in IIS in esecuzione in .NET Framework 4
+# <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>Procedura: ospitare un servizio WCF scritto con .NET Framework 3.5 in IIS in esecuzione in .NET Framework 4
 Quando si ospita un servizio [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] scritto con [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] su un computer che esegue [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], è possibile ottenere un'eccezione <xref:System.ServiceModel.ProtocolException> con il testo indicato di seguito.  
   
 ```Output  
-Eccezione non gestita: System.ServiceModel.ProtocolException: Il tipo di contenuto text/html; charset=utf-8 del messaggio di risposta non corrisponde al tipo di contenuto del binding (application/soap+xml; charset=utf-8).Se si utilizza un codificatore standard, verificare che il metodo IsContentTypeSupported sia implementato correttamente.I primi 1024 byte della risposta erano: '<html>    <head>        <title>Il dominio di applicazione o il pool di applicazioni esegue attualmente .NET Framework 4 o versione successiva.Questa condizione può verificarsi se le impostazioni di IIS sono state configurate per la versione 4.0 o successive per l'applicazione Web in questione o se si utilizza il server di sviluppo Web ASP.NET 4.0 o versione successiva.L'elemento <compilation> nel file Web.config per l'applicazione Web non contiene l'attributo 'targetFrameworkMoniker' necessario per questa versione di .NET Framework (ad esempio, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">').Aggiornare il file Web.config con questo attributo o configurare l'applicazione Web per l'utilizzo di una versione diversa di .NET Framework.</title>...  
+Unhandled Exception: System.ServiceModel.ProtocolException: The content type text/html; charset=utf-8 of the response message does not match the content type of the binding (application/soap+xml; charset=utf-8). If using a custom encoder, be sure that the IsContentTypeSupported method is implemented properly. The first 1024 bytes of the response were: '<html>    <head>        <title>The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.</title>...  
 ```  
   
  Se in alternativa si tenta di passare al file con estensione svc del servizio, è possibile visualizzare una pagina di errore con il testo indicato di seguito.  
   
 ```Output  
-Il dominio dell'applicazione o il pool di applicazioni esegue attualmente .NET Framework 4.0 o versione successiva.Questa condizione può verificarsi se le impostazioni di IIS sono state configurate per la versione 4.0 o successive per l'applicazione Web in questione o se si utilizza il server di sviluppo Web ASP.NET 4.0 o versione successiva.L'elemento <compilation> nel file Web.config per l'applicazione Web non contiene l'attributo 'targetFrameworkMoniker' necessario per questa versione di .NET Framework (ad esempio, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">').Aggiornare il file Web.config con questo attributo o configurare l'applicazione Web per l'utilizzo di una versione diversa di .NET Framework.  
+The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.  
 ```  
   
- Questi errori si verificano poiché il dominio di applicazione all'interno del quale è in esecuzione IIS esegue [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] e il servizio WCF è in attesa di esecuzione in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].In questo argomento vengono illustrate le modifiche necessarie per eseguire il servizio.  
+ Questi errori si verificano poiché il dominio di applicazione all'interno del quale è in esecuzione IIS esegue [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] e il servizio WCF è in attesa di esecuzione in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. In questo argomento vengono illustrate le modifiche necessarie per eseguire il servizio.  
   
- Cercare quindi l'elemento \<`compilers`\> e modificare l'opzione di provider CompilerVersion per ottenere un valore 4.0.Per impostazione predefinita sono presenti due elementi \<`compiler`\> al di sotto dell'elemento \<`compilers`\>.È necessario aggiornare l'opzione di provider CompilerVersion per entrambi gli elementi, come indicato nell'esempio seguente.  
+ Successiva ricerca di <`compilers`> elemento e modificare l'opzione di provider CompilerVersion per avere un valore di 4.0. Per impostazione predefinita, sono disponibili due <`compiler`> elementi sotto il <`compilers`> elemento. È necessario aggiornare l'opzione di provider CompilerVersion per entrambi gli elementi, come indicato nell'esempio seguente.  
   
-```  
+```xml  
 <system.codedom>  
       <compilers>  
         <compiler language="c#;cs;csharp" extension=".cs" warningLevel="4"  
@@ -51,13 +54,13 @@ Il dominio dell'applicazione o il pool di applicazioni esegue attualmente .NET F
     </system.codedom>  
 ```  
   
-### Aggiungere l'attributo targetFramework obbligatorio  
+### <a name="add-the-required-targetframework-attribute"></a>Aggiungere l'attributo targetFramework obbligatorio  
   
-1.  Aprire il file Web.config del servizio e cercare l'elemento \<`compilation`\>.  
+1.  Aprire il file del servizio Web. config e cercare il <`compilation`> elemento.  
   
-2.  Aggiungere l'attributo `targetFramework` all'elemento \<`compilation`\>, come indicato nell'esempio seguente.  
+2.  Aggiungere il `targetFramework` attributo per il <`compilation`> come illustrato nell'esempio seguente.  
   
-    ```  
+    ```xml  
     <compilation debug="false"  
             targetFramework="4.0">  
   
@@ -71,9 +74,9 @@ Il dominio dell'applicazione o il pool di applicazioni esegue attualmente .NET F
           </compilation>  
     ```  
   
-3.  Cercare l'elemento \<`compilers`\> e modificare l'opzione di provider CompilerVersion per ottenere un valore 4.0.Per impostazione predefinita sono presenti due elementi \<`compiler`\> al di sotto dell'elemento \<`compilers`\>.È necessario aggiornare l'opzione di provider CompilerVersion per entrambi gli elementi, come indicato nell'esempio seguente.  
+3.  Individuare il <`compilers`> elemento e modificare l'opzione di provider CompilerVersion per avere un valore di 4.0. Per impostazione predefinita, sono disponibili due <`compiler`> elementi sotto il <`compilers`> elemento. È necessario aggiornare l'opzione di provider CompilerVersion per entrambi gli elementi, come indicato nell'esempio seguente.  
   
-    ```  
+    ```xml  
     <system.codedom>  
           <compilers>  
             <compiler language="c#;cs;csharp" extension=".cs" warningLevel="4"  

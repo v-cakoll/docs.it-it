@@ -1,61 +1,70 @@
 ---
-title: "&lt;windows&gt; dell&#39;elemento &lt;clientCredentials&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;windows&gt; dell''elemento &lt;clientCredentials&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bc98f45d197675f8cc9618f08447cc42acdd1872
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;windows&gt; dell&#39;elemento &lt;clientCredentials&gt;
+# <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>&lt;windows&gt; dell'elemento &lt;clientCredentials&gt;
 Specifica le impostazioni per una credenziale Windows da usare per rappresentare il client.  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<i comportamenti >  
+\<endpointBehaviors >  
+\<comportamento >  
+\<clientCredentials >  
+\<Windows >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <windows   
     allowedImpersonationLevel="Identification/Impersonation/Delegation/Anonymous/None"  
         allowNtlm="Boolean"  
 />  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|Imposta la preferenza di rappresentazione che il client comunica al server.  La modalità di rappresentazione selezionata dal client non viene imposta sul server.  Di seguito vengono elencati i valori validi:<br /><br /> -   Identification: il server può ottenere l'identità e i privilegi del client, ma non lo può rappresentare.<br />-   Impersonation: il server può rappresentare il contesto di sicurezza del client nel sistema locale.<br />-   Delegation: il server può rappresentare il contesto di sicurezza del client nei sistemi remoti.<br />-   Anonymous: il server non può rappresentare o identificare il client.<br />-   None: non è assegnato alcun livello di rappresentazione.<br /><br /> L'impostazione predefinita è Identification.  L'attributo è di tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|L'impostazione di questa proprietà su `true` consente di usare l'autenticazione NTLM se Kerberos non è disponibile.<br /><br /> Quando questa proprietà è impostata su `false`, [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] effettua tutti i tentativi possibili per generare un'eccezione se viene usata l'autenticazione NTLM.  Si noti che l'impostazione di questa proprietà su `false` potrebbe non impedire l'invio di credenziali NTLM nella rete.|  
+|`allowedImpersonationLevel`|Imposta la preferenza di rappresentazione che il client comunica al server. La modalità di rappresentazione selezionata dal client non viene imposta sul server. Di seguito vengono elencati i valori validi:<br /><br /> -Identificazione: Il server può ottenere l'identità e i privilegi del client, ma non può rappresentare il client.<br />-Rappresentazione: Il server può rappresentare il contesto di sicurezza del client nel sistema locale.<br />-Delegation: Il server può rappresentare il contesto di sicurezza del client nei sistemi remoti.<br />-Anonima: Il server non è possibile rappresentare o identificare il client.<br />-None: Un livello di rappresentazione non è assegnato.<br /><br /> L'impostazione predefinita è Identification. L'attributo è di tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`allowNtlm`|L'impostazione di questa proprietà su `true` consente di usare l'autenticazione NTLM se Kerberos non è disponibile.<br /><br /> Quando questa proprietà è impostata su `false`, [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] effettua tutti i tentativi possibili per generare un'eccezione se viene usata l'autenticazione NTLM. Si noti che l'impostazione di questa proprietà su `false` potrebbe non impedire l'invio di credenziali NTLM nella rete.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<credenzialiClient\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Specifica le credenziali usate per autenticare il client presso il servizio.|  
+|-------------|-----------------|  
+|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Specifica le credenziali usate per autenticare il client presso il servizio.|  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.WindowsClientElement>   
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>   
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Windows%2A>   
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>   
- <xref:System.ServiceModel.Security.WindowsClientCredential>   
- [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)   
- [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Configuration.WindowsClientElement>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement.Windows%2A>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>  
+ <xref:System.ServiceModel.Security.WindowsClientCredential>  
+ [Protezione di client](../../../../../docs/framework/wcf/securing-clients.md)  
+ [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

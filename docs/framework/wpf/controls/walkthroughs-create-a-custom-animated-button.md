@@ -1,48 +1,51 @@
 ---
-title: "Procedure dettagliate: creazione di un pulsante personalizzato a cui &#232; stata aggiunta un&#39;animazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animazione, pulsanti"
-  - "pulsanti"
-  - "pulsanti animati personalizzati"
+title: "Procedure dettagliate: creazione di un pulsante personalizzato a cui è stata aggiunta un'animazione"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom animated buttons [WPF]
+- buttons [WPF]
+- animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bce1140ed11332b5bf30d487b2acacc644687d26
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedure dettagliate: creazione di un pulsante personalizzato a cui &#232; stata aggiunta un&#39;animazione
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] è ideale per offrire ai clienti un'ampia gamma di esperienze di presentazione.  In queste procedure dettagliate viene illustrato come personalizzare l'aspetto e il comportamento di un pulsante \(animazioni incluse\).  Questa personalizzazione viene eseguita utilizzando uno stile e un modello, in modo che sia possibile applicare facilmente questo pulsante personalizzato a tutti i pulsanti dell'applicazione.  Nella figura seguente viene illustrato il pulsante personalizzato che sarà creato.  
+# <a name="walkthroughs-create-a-custom-animated-button"></a>Procedure dettagliate: creazione di un pulsante personalizzato a cui è stata aggiunta un'animazione
+Come suggerisce il nome, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] è ideale per offrire un'esperienza di presentazione avanzata per i clienti. Queste procedure viene illustrato come personalizzare l'aspetto e comportamento di un pulsante (animazioni incluse). Questa personalizzazione viene eseguita utilizzando uno stile e il modello in modo che è possibile applicare facilmente questo pulsante personalizzato a tutti i pulsanti nell'applicazione. Nella figura seguente mostra il pulsante personalizzato che verrà creato.  
   
- ![Pulsante personalizzato che verrà creato](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.png "custom\_button\_blend\_Intro")  
+ ![Pulsante personalizzato che verrà creato](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  
   
- La grafica vettoriale che definisce l'aspetto del pulsante viene creata tramite [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] è simile a HTML, ma è più potente ed estensibile.  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] può essere digitato manualmente tramite Microsoft Visual Studio o Blocco note Microsoft oppure è possibile utilizzare uno strumento di progettazione visiva come Microsoft Expression Blend.  Il funzionamento di Expression Blend si basa sulla creazione del codice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sottostante, pertanto entrambi i metodi creano la stessa grafica.  
+ La grafica vettoriale che costituiscono l'aspetto del pulsante viene creata utilizzando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]è simile a HTML, ma è più potente ed estendibile. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]possono essere digitati manualmente utilizzando Microsoft Visual Studio o blocco note oppure è possibile utilizzare uno strumento di progettazione visiva quale Microsoft Expression Blend. Expression Blend funziona creando sottostante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] codice, pertanto entrambi i metodi creano la grafica stesso.  
   
-## In questa sezione  
- [Creare un pulsante tramite Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- Viene illustrato come creare pulsanti dotati di un comportamento personalizzato utilizzando le funzionalità delle finestre di progettazione di Expression Blend.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Creare un pulsante usando Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
+ Viene illustrato come creare i pulsanti con un comportamento personalizzato utilizzando le funzionalità della finestra di progettazione di Expression Blend.  
   
- [Creare un pulsante tramite XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
- Viene illustrato come creare pulsanti dotati di un comportamento personalizzato utilizzando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+ [Creare un pulsante usando XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
+ Di seguito viene illustrato come creare pulsanti con un comportamento personalizzato utilizzando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- Viene illustrato come utilizzare gli stili e i modelli per determinare l'aspetto e il comportamento dei controlli.  
+ Viene descritto come stili e modelli possono essere utilizzati per determinare l'aspetto e il comportamento dei controlli.  
   
  [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- Viene illustrato come aggiungere un'animazione agli oggetti utilizzando l'animazione di [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e il sistema di temporizzazione.  
+ Viene descritto come gli oggetti possono essere animati utilizzando il [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sistema di animazione e temporizzazione.  
   
  [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- Viene illustrato come utilizzare gli oggetti pennello per disegnare con colori a tinta unita, sfumature lineari e radiali.  
+ Viene descritto come utilizzare gli oggetti pennello, disegnare con colori a tinta unita, gradienti lineari e radiali.  
   
- [Cenni preliminari sugli effetti bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
- Vengono illustrati gli effetti bitmap supportati da [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e ne viene descritta l'applicazione.
+ [Panoramica sugli effetti bitmap](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+ Vengono descritti gli effetti bitmap supportati da [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e viene spiegato come applicarli.

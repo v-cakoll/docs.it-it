@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: fb9c76193203255b943b1f1e5f8109b4bdd4bd40
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="boolean-data-types"></a>Tipi di dati Boolean
 Gli operatori booleani funzionano correttamente in Common Language Runtime (CLR), con l'eccezione del comportamento noto come short-circuit che non viene convertito. Ad esempio, l'operatore `AndAlso` Visual Basic si comporta come l'operatore `And`. L'operatore `&&` C# si comporta come l'operatore `&`.  
@@ -37,4 +35,3 @@ Gli operatori booleani funzionano correttamente in Common Language Runtime (CLR)
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e tipi di dati](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
-

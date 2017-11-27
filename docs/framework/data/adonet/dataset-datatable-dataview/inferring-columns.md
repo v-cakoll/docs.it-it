@@ -1,59 +1,62 @@
 ---
-title: "Inferenza di colonne | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Deduzione di colonne
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ba06bce55db53de1da1c07d2a6451d5664fa23bf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Inferenza di colonne
-Una volta che ADO.NET ha determinato quali elementi di un documento XML devono essere inferiti come tabelle per un tipo <xref:System.Data.DataSet>, vengono inferite le colonne di tali tabelle.  In ADO.NET 2.0 è stato introdotto un nuovo motore di inferenza dello schema che consente di inferire un tipo di dati tipizzato per ogni elemento **simpleType**.  Nelle versioni precedenti il tipo di dati di un elemento **simpleType** inferito era sempre **xsd:string**.  
+# <a name="inferring-columns"></a>Deduzione di colonne
+Una volta che ADO.NET ha determinato quali elementi di un documento XML devono essere inferiti come tabelle per un tipo <xref:System.Data.DataSet>, vengono inferite le colonne di tali tabelle. ADO.NET 2.0 è stato introdotto un nuovo motore di inferenza dello schema che consente di inferire un tipo di dati fortemente tipizzati per ogni **simpleType** elemento. Nelle versioni precedenti, il tipo di dati di un tipo derivato **simpleType** era sempre **xsd: String**.  
   
-## Migrazione e compatibilità con versioni precedenti  
- Il metodo **ReadXml** accetta un argomento di tipo **InferSchema**.  Tale argomento consente di specificare il comportamento di inferenza compatibile con versioni precedenti.  Nella tabella seguente sono indicati i valori disponibili per l'enumerazione **InferSchema**:  
+## <a name="migration-and-backward-compatibility"></a>Migrazione e compatibilità con versioni precedenti  
+ Il **ReadXml** metodo accetta un argomento di tipo **InferSchema**. Tale argomento consente di specificare il comportamento di inferenza compatibile con versioni precedenti. I valori disponibili per il **InferSchema** enumerazione vengono visualizzati nella tabella seguente.  
   
- <xref:System.Data.XmlReadMode>  
+ <xref:System.Data.XmlReadMode.InferSchema>  
  Fornisce compatibilità con le versioni precedenti inferendo sempre un tipo semplice come <xref:System.String>.  
   
- <xref:System.Data.XmlReadMode>  
- Inferisce un tipo di dati tipizzato in modo sicuro.  Viene generata un'eccezione se usato con un tipo <xref:System.Data.DataTable>.  
+ <xref:System.Data.XmlReadMode.InferTypedSchema>  
+ Inferisce un tipo di dati tipizzato in modo sicuro. Viene generata un'eccezione se usato con un tipo <xref:System.Data.DataTable>.  
   
- <xref:System.Data.XmlReadMode>  
+ <xref:System.Data.XmlReadMode.IgnoreSchema>  
  Ignora tutti gli schemi inline e legge i dati nello schema <xref:System.Data.DataSet> esistente.  
   
-## Attributi  
- Come definito nella sezione [Inferenza di tabelle](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md), un elemento con attributi verrà inferito come tabella.  Gli attributi di tale elemento verranno quindi inferiti come colonne della tabella.  La proprietà **ColumnMapping** delle colonne verrà impostata su **MappingType.Attribute**, per assicurare che i nomi delle colonne vengano scritti come attributi in caso di riconversione in XML dello schema.  I valori degli attributi vengono archiviati in una riga della tabella.  Ad esempio, si consideri il seguente codice XML:  
+## <a name="attributes"></a>Attributi  
+ Come definito in [inferenza di tabelle](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md), un elemento con attributi verrà inferito come tabella. Gli attributi di tale elemento verranno quindi inferiti come colonne della tabella. Il **ColumnMapping** delle colonne verrà impostata su **MappingType. Attribute**, per assicurare che i nomi delle colonne verrà scritto come attributi se lo schema viene scritto in XML. I valori degli attributi vengono archiviati in una riga della tabella. Ad esempio, si consideri il seguente codice XML:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1" attr2="value2"/>  
 </DocumentElement>  
 ```  
   
- Il processo di inferenza genererà una tabella denominata **Element1** con due colonne, ovvero **attr1** e **attr2**.  La proprietà **ColumnMapping** per entrambe le colonne verrà impostata su **MappingType.Attribute**.  
+ Il processo di inferenza genererà una tabella denominata **Element1** con due colonne, **attr1** e **attr2**. Il **ColumnMapping** entrambe le colonne verrà impostata su **MappingType. Attribute**.  
   
- **DataSet:** DocumentElement  
+ **Set di dati:** DocumentElement  
   
- **Table:** Element1  
+ **Tabella:** Element1  
   
 |attr1|attr2|  
 |-----------|-----------|  
 |value1|value2|  
   
-## Elementi privi di attributi o elementi figlio  
- Se un elemento non dispone di elementi figlio o attributi, tale elemento verrà inferito come colonna.  La proprietà **ColumnMapping** della colonna verrà impostata su **MappingType.Element**.  Il testo degli elementi figlio è archiviato in una riga della tabella.  Ad esempio, si consideri il seguente codice XML:  
+## <a name="elements-without-attributes-or-child-elements"></a>Elementi privi di attributi o elementi figlio  
+ Se un elemento non dispone di elementi figlio o attributi, tale elemento verrà inferito come colonna. Il **ColumnMapping** della colonna verrà impostata su **MappingType**. Il testo degli elementi figlio è archiviato in una riga della tabella. Ad esempio, si consideri il seguente codice XML:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>  
     <ChildElement1>Text1</ChildElement1>  
@@ -62,20 +65,20 @@ Una volta che ADO.NET ha determinato quali elementi di un documento XML devono e
 </DocumentElement>  
 ```  
   
- Il processo di inferenza genererà una tabella denominata **Element1** con due colonne, ovvero **ChildElement1** e **ChildElement2**.  La proprietà **ColumnMapping** per entrambe le colonne verrà impostata su **MappingType.Element**.  
+ Il processo di inferenza genererà una tabella denominata **Element1** con due colonne, **ChildElement1** e **ChildElement2**. Il **ColumnMapping** entrambe le colonne verrà impostata su **MappingType**.  
   
- **DataSet:** DocumentElement  
+ **Set di dati:** DocumentElement  
   
- **Table:** Element1  
+ **Tabella:** Element1  
   
 |ChildElement1|ChildElement2|  
 |-------------------|-------------------|  
 |Text1|Text2|  
   
-## Vedere anche  
- [Inferenza della struttura relazionale del DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [Caricamento di un DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [Caricamento delle informazioni relative allo schema di un DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [Utilizzo di XML in un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Inferenza della struttura relazionale di DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [Caricamento di un DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [Il caricamento delle informazioni dello Schema di DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,32 +1,35 @@
 ---
-title: "Recupero e modifica di dati in ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Recupero e modifica di dati in ADO.NET
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 35de20b1cb35fdcd87a653f1ac202c01d345c317
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Recupero e modifica di dati in ADO.NET
-La connessione a un'origine dati e il recupero dei dati in essa contenuti sono funzioni fondamentali nelle applicazioni di database.  I provider di dati .NET Framework di ADO.NET fungono da ponte tra un'applicazione e un'origine dati, consentendo di eseguire comandi e di recuperare dati tramite un **DataReader** o un **DataAdapter**.  Una funzione chiave di qualsiasi applicazione di database è la capacità di aggiornare i dati archiviati nel database.  In ADO.NET l'aggiornamento dei dati prevede l'uso di **DataAdapter** e degli oggetti <xref:System.Data.DataSet> e **Command**. Potrebbe inoltre essere necessario l'uso delle transazioni.  
+# <a name="retrieving-and-modifying-data-in-adonet"></a>Recupero e modifica di dati in ADO.NET
+La connessione a un'origine dati e il recupero dei dati in essa contenuti sono funzioni fondamentali nelle applicazioni di database. I provider di dati .NET Framework di ADO.NET fungono da ponte tra un'applicazione e un'origine dati, consentendo di eseguire comandi e di recuperare i dati utilizzando un **DataReader** o **DataAdapter** . Una funzione chiave di qualsiasi applicazione di database è la capacità di aggiornare i dati archiviati nel database. In ADO.NET l'aggiornamento dei dati prevede l'uso di **DataAdapter** e <xref:System.Data.DataSet>, e **comando** degli oggetti può anche comprendere l'utilizzo delle transazioni.  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  Viene descritto come stabilire una connessione a un'origine dati e come usare gli eventi di connessione.  
   
  [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)  
  Sono inclusi argomenti in cui vengono descritti diversi aspetti relativi all'utilizzo delle stringhe di connessione, quali le parole chiave, le informazioni di sicurezza e l'archiviazione e il recupero delle stringhe di connessione.  
   
- [Pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ [Il pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)  
  Vengono descritti i pool di connessioni per i provider di dati .NET Framework.  
   
  [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
@@ -38,25 +41,25 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
  [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  Sono inclusi argomenti in cui viene descritto come eseguire transazioni locali e transazioni distribuite e come usare concorrenza ottimistica.  
   
- [Recupero dei valori di identità o del contatore](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- Vengono forniti esempi di mapping dei valore generati per una colonna **Identity** in una tabella di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] o per un campo **Autonumber** in una tabella di Microsoft Access a una colonna di una riga inserita in una tabella.  Viene descritta l'unione di valori Identity in un oggetto `DataTable`.  
+ [Recupero di identità o valori numerati automaticamente](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
+ Fornisce un esempio di mapping i valori generati per un **identità** colonna in un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] tabella o per un **contatore** campo in una tabella di Microsoft Access, a una colonna di una riga inserita in una tabella. Viene descritta l'unione di valori Identity in un oggetto `DataTable`.  
   
  [Recupero di dati binari](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- Viene descritto come recuperare dati binari o strutture di dati di grandi dimensioni usando `CommandBehavior`.`SequentialAccess` per modificare il comportamento predefinito di un oggetto `DataReader`.  
+ Viene descritto come recuperare dati binari o strutture di dati di grandi dimensioni utilizzando `CommandBehavior`.`SequentialAccess` Per modificare il comportamento predefinito di un `DataReader`.  
   
- [Modifica di dati con le stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [Modifica dei dati con le Stored procedure](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  Viene descritto come usare i parametri di input e di output della stored procedure per inserire una riga in un database, restituendo un nuovo valore Identity.  
   
- [Recupero di informazioni sullo schema di database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Durante il recupero delle informazioni sullo Schema di Database](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  Viene descritto come ottenere da un'origine dati database o cataloghi disponibili, tabelle e visualizzazioni in un database, vincoli esistenti per tabelle e altre informazioni relative allo schema.  
   
- [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  Viene descritto il modello a livello di factory del provider e viene illustrato come usare le classi base nello spazio dei nomi `System.Data.Common`.  
   
- [Analisi dei dati in ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md)  
+ [Traccia dati in ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md)  
  Vengono descritte le funzionalità di analisi dei dati predefinite di ADO.NET.  
   
- [Contatori di prestazioni](../../../../docs/framework/data/adonet/performance-counters.md)  
+ [Contatori delle prestazioni](../../../../docs/framework/data/adonet/performance-counters.md)  
  Vengono descritti i contatori delle prestazioni disponibili per `SqlClient` e `OracleClient`.  
   
  [Programmazione asincrona](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
@@ -65,9 +68,9 @@ La connessione a un'origine dati e il recupero dei dati in essa contenuti sono f
  [Supporto del flusso SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  Viene illustrato come scrivere applicazioni che trasmettono i dati da [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] senza doverli caricare completamente in memoria.  
   
-## Vedere anche  
- [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)   
- [DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Protezione di applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Mapping dei tipi di dati in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [Oggetti DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

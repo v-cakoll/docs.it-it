@@ -1,23 +1,29 @@
 ---
-title: "Esecuzione di operazioni nel catalogo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esecuzione di operazioni di catalogo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f67f393dce518a76b80d91f7294ed19e9a0f411a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Esecuzione di operazioni nel catalogo
-Per eseguire un comando che modifica un database o un catalogo, ad esempio l'istruzione CREATE TABLE o CREATE PROCEDURE, creare un oggetto **Command** usando le istruzioni SQL appropriate e l'oggetto **Connection**.  Eseguire il comando con il metodo **ExecuteNonQuery** dell'oggetto **Command**.  
+# <a name="performing-catalog-operations"></a>Esecuzione di operazioni di catalogo
+Per eseguire un comando per modificare un database o catalogo, ad esempio l'istruzione CREATE TABLE o CREATE PROCEDURE, creare un **comando** utilizzando le istruzioni SQL appropriate e un **connessione** oggetto. Eseguire il comando con il **ExecuteNonQuery** metodo il **comando** oggetto.  
   
  Nell'esempio di codice seguente viene creata una stored procedure in un database Microsoft SQL Server.  
   
@@ -49,7 +55,7 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## Vedere anche  
- [Utilizzo di oggetti Command per la modifica dei dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)   
- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Utilizzo di comandi per modificare i dati](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,38 +1,41 @@
 ---
-title: "Mappare i vincoli key di XML Schema (XSD) ai vincoli del DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mapping tra vincoli di chiave XML Schema (XSD) e vincoli di dataset
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f5247d0ccfd2ceec641ff29d29b889a55c1a5e12
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Mappare i vincoli key di XML Schema (XSD) ai vincoli del DataSet
-In uno schema è possibile specificare un vincolo key per un elemento o un attributo mediante l'elemento **key**.  È necessario che nell'elemento o nell'attributo per cui viene specificato il vincolo siano presenti valori univoci in qualsiasi istanza dello schema e che non sia presente alcun valore null.  
+# <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli di chiave XML Schema (XSD) e vincoli di dataset
+In uno schema, è possibile specificare un vincolo di chiave su un elemento o attributo mediante la **chiave** elemento. È necessario che nell'elemento o nell'attributo per cui viene specificato il vincolo siano presenti valori univoci in qualsiasi istanza dello schema e che non sia presente alcun valore null.  
   
  Il vincolo key è simile al vincolo univoco, ma nella colonna per cui viene specificato un vincolo key non sono consentiti valori null.  
   
- Nella tabella seguente vengono brevemente descritti gli attributi **msdata** che è possibile specificare per l'elemento **key**.  
+ Nella tabella seguente vengono illustrati il **msdata** gli attributi che è possibile specificare nel **chiave** elemento.  
   
 |Nome attributo|Descrizione|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Se questo attributo viene specificato, il relativo valore viene usato come nome del vincolo.  In caso contrario, il valore per il nome del vincolo viene fornito dall'attributo **name**.|  
-|**msdata:PrimaryKey**|Se `PrimaryKey="true"` è presente, la proprietà del vincolo **IsPrimaryKey** viene impostata su **true**, trasformando la colonna in chiave primaria.  La proprietà di colonna **AllowDBNull** viene impostata su **false** poiché nelle chiavi primarie non sono consentiti valori null.|  
+|**msdata: ConstraintName**|Se questo attributo viene specificato, il relativo valore viene usato come nome del vincolo. In caso contrario, il **nome** attributo fornisce il valore del nome del vincolo.|  
+|**msdata: PrimaryKey**|Se `PrimaryKey="true"` è presente, il **IsPrimaryKey** vincolo è impostata su **true**, rendendo così una chiave primaria. Il **AllowDBNull** colonna è impostata su **false**, perché le chiavi primarie non sono consentiti valori null.|  
   
- Durante la conversione di uno schema in cui è specificato un vincolo key, un vincolo univoco viene creato dal processo di mapping per la tabella la cui proprietà di colonna **AllowDBNull** è impostata su **false** per ogni colonna del vincolo.  A meno che non si specifichi `msdata:PrimaryKey="true"` per l'elemento **key**, anche la proprietà **IsPrimaryKey** del vincolo univoco viene impostata su **false**.  Queste impostazioni sono identiche a quelle di un vincolo univoco nello schema in cui `PrimaryKey="true"`.  
+ Durante la conversione dello schema in cui è stato specificato un vincolo di chiave, il processo di mapping consente di creare un vincolo unique nella tabella con il **AllowDBNull** proprietà column impostata sulla **false** per ogni colonna di vincolo. Il **IsPrimaryKey** anche proprietà del vincolo unique è impostata su **false** a meno che non è stato specificato `msdata:PrimaryKey="true"` sul **chiave** elemento. Queste impostazioni sono identiche a quelle di un vincolo univoco nello schema in cui `PrimaryKey="true"`.  
   
- Nell'esempio di schema seguente il vincolo key viene specificato dall'elemento **key** per l'elemento **CustomerID**.  
+ Nell'esempio di schema seguente, il **chiave** elemento specifica il vincolo di chiave per la **CustomerID** elemento.  
   
-```  
+```xml  
 <xs:schema id="cod"  
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -61,16 +64,15 @@ In uno schema è possibile specificare un vincolo key per un elemento o un attri
 </xs:schema>   
 ```  
   
- L'elemento **key** consente di specificare che è necessario che i valori dell'elemento figlio **CustomerID** dell'elemento **Customers** siano univoci e che non sono consentiti valori null.  Durante la conversione dello schema XSD \(XML Schema Definition Language\), la seguente tabella viene creata dal processo di mapping:  
+ Il **chiave** elemento specifica che i valori del **CustomerID** elemento figlio dell'elemento di **clienti** elemento deve contenere valori univoci e non può contenere valori null. Durante la conversione dello schema XSD (XML Schema Definition Language), la seguente tabella viene creata dal processo di mapping:  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- Il mapping di XML Schema consente inoltre di creare un oggetto **UniqueConstraint** nella colonna **CustomerID**, come illustrato nell'oggetto <xref:System.Data.DataSet> seguente.  Per semplicità vengono mostrate solo le proprietà rilevanti.  
+ Il mapping di XML Schema crea anche un **UniqueConstraint** sul **CustomerID** colonna, come illustrato di seguito <xref:System.Data.DataSet>. Per semplicità vengono mostrate solo le proprietà rilevanti.  
   
 ```  
-  
       DataSetName: MyDataSet  
 TableName: customers  
   ColumnName: CustomerID  
@@ -82,11 +84,11 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- Nell'oggetto **DataSet** generato la proprietà **IsPrimaryKey** di **UniqueConstraint** viene impostata su **true**, poiché nello schema viene specificato `msdata:PrimaryKey="true"` nell'elemento **key**.  
+ Nel **DataSet** generato, il **IsPrimaryKey** proprietà del **UniqueConstraint** è impostato su **true** perché lo schema specifica `msdata:PrimaryKey="true"` nel **chiave** elemento.  
   
- Il valore della proprietà **ConstraintName** di **UniqueConstraint** nel **DataSet** corrisponde al valore dell'attributo **msdata:ConstraintName** specificato nell'elemento **key** dello schema.  
+ Il valore della **ConstraintName** proprietà del **UniqueConstraint** nel **set di dati** è il valore della **msdata: ConstraintName** attributo specificato nella **chiave** elemento nello schema.  
   
-## Vedere anche  
- [Mapping dei vincoli di XML Schema \(XSD\) ai vincoli del DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Generazione delle relazioni del DataSet da XML Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Vincoli di mapping XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [La generazione di relazioni tra DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

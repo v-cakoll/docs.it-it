@@ -1,31 +1,22 @@
 ---
 title: Panoramica degli attributi (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0464de06390a9899cbe312b16cbad41d0b6639eb
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: f1d5399da42b224908fa9c23893eec5d424dd685
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributes-overview-visual-basic"></a>Panoramica degli attributi (Visual Basic)
 Gli attributi offrono un metodo efficace per l'associazione di metadati o informazioni dichiarative con il codice (assembly, tipi, metodi, proprietà e così via). Dopo aver associato un attributo a un'entità di programma, in fase di esecuzione è possibile eseguire una query su tale attributo usando una tecnica denominata *reflection*. Per altre informazioni, vedere [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -161,7 +152,6 @@ Module: CLSCompliant(True)>
 -   [Informazioni sul chiamante (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
+ [Guida per programmatori Visual Basic](../../../../visual-basic/programming-guide/index.md)  
+ [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [Attributi](https://msdn.microsoft.com/library/5x6cd29c)
-

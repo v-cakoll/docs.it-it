@@ -1,77 +1,83 @@
 ---
-title: "Elemento &lt;filter&gt; per &lt;add&gt; per &lt;listeners&gt; per &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#filter"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add/filter"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<filter> elemento per <add> per <listeners> per <source>"
-  - "<filter> elemento per <add> per <listeners> per <source>"
-  - "attributo initializeData"
+title: '&lt;filtro&gt; elemento per &lt;aggiungere&gt; per &lt;listener&gt; per &lt;origine&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add/filter
+helpviewer_keywords:
+- initializeData attribute
+- <filter> element for <add> for <listeners> for <source>
+- filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 3b02f97caeef2a560682e5746c6c24986d5a3ad2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;filter&gt; per &lt;add&gt; per &lt;listeners&gt; per &lt;source&gt;
-Consente di aggiungere un filtro a un listener della raccolta `Listeners` per un'origine di traccia.  
+# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;filtro&gt; elemento per &lt;aggiungere&gt; per &lt;listener&gt; per &lt;origine&gt;
+Aggiunge un filtro a un listener nella raccolta `Listeners` per un'origine di traccia.  
   
-## Sintassi  
+ \<configuration>  
+\<System. Diagnostics >  
+\<origini >  
+\<origine >  
+\<listener >  
+\<add>  
+\<Filtro >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <filter   
   type="traceFilterClassName"   
   initializeData="data" />  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`type`|Attributo obbligatorio.<br /><br /> Specifica il tipo di filtro, che deve ereditare dalla classe <xref:System.Diagnostics.TraceFilter>.  È possibile utilizzare solo il nome completo dello spazio dei nomi del tipo, che corrisponde alla proprietà <xref:System.Type.FullName%2A> del tipo, oppure il nome completo del tipo incluse le informazioni sull'assembly, che corrisponde alla proprietà <xref:System.Type.AssemblyQualifiedName%2A>.  Per informazioni sui nomi completi dei tipi, vedere [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Attributo facoltativo.<br /><br /> Stringa passata al costruttore per la classe di filtro specificata.|  
+|`type`|Attributo obbligatorio.<br /><br /> Specifica il tipo di filtro, che deve ereditare la <xref:System.Diagnostics.TraceFilter> classe. È possibile utilizzare il nome completo dello spazio dei nomi del tipo, che corrisponde al tipo <xref:System.Type.FullName%2A> proprietà, oppure è possibile utilizzare il nome completo del tipo tra cui le informazioni sull'assembly, che corrisponde alla <xref:System.Type.AssemblyQualifiedName%2A> proprietà. Per informazioni sui nomi di tipo completo, vedere [specifica di nomi di tipo completi](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|Attributo facoltativo.<br /><br /> La stringa passata al costruttore per la classe di filtro specificato.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`system.diagnostics`|Consente di specificare listener di traccia per la raccolta, la memorizzazione e l'invio di messaggi, nonché il livello in cui viene impostata un'opzione di analisi.|  
-|`sources`|Contiene le origini di analisi che danno inizio ai messaggi di tracciatura.|  
-|`source`|Specifica un'origine di analisi che dà inizio ai messaggi di tracciatura.|  
-|`listeners`|Contiene listener per la raccolta, l'archiviazione e l'invio di messaggi.  I listener indirizzano l'output di tracciatura a una destinazione adatta.|  
-|`add`|Consente di aggiungere un listener alla raccolta `Listeners` per un'origine di traccia.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
+|`sources`|Contiene le origini di traccia che avviano i messaggi di traccia.|  
+|`source`|Specifica un'origine di traccia che avvia i messaggi di traccia.|  
+|`listeners`|Contiene i listener di raccolgano, archiviano e indirizzare i messaggi. I listener indirizzano l'output di traccia a una destinazione appropriata.|  
+|`add`|Aggiunge un listener alla raccolta `Listeners` per un'origine di traccia.|  
   
-## Note  
- L'elemento `<filter>` deve essere incluso in un elemento `<add>` per un listener dell'origine di traccia che specifica il tipo del listener e non solo il nome di un listener definito in un [\<sharedListeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).  Se il listener viene definito in un [\<sharedListeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), è necessario definire il filtro per il listener in tale elemento.  
+## <a name="remarks"></a>Note  
+ Il `<filter>` elemento deve essere contenuto in un `<add>` elemento per un listener di origine di traccia che specifica il tipo del listener, non solo il nome di un listener definito in un [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md). Se il listener è definito in un [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), il filtro per il listener deve essere definito in tale elemento.  
   
- È possibile utilizzare questo elemento nei file di configurazione del computer \(Machine.config\) e dell'applicazione.  
+ Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e file di configurazione dell'applicazione.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare l'elemento `<filter>` per aggiungere un filtro al listener `console` nella raccolta `Listeners` per l'origine di traccia `myTraceSource`, specificando `Error` come livello di evento per il filtro.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il `<filter>` elemento per aggiungere un filtro al listener `console` nel `Listeners` raccolta per l'origine di traccia `myTraceSource`, specificando il livello di evento di filtro come `Error`.  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -94,9 +100,9 @@ Consente di aggiungere un filtro a un listener della raccolta `Listeners` per un
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TraceListener>   
- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=fullName>   
- <xref:System.Diagnostics.TraceFilter>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.TraceFilter>  
  [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

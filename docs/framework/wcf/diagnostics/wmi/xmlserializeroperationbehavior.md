@@ -1,25 +1,28 @@
 ---
-title: "XmlSerializerOperationBehavior | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: XmlSerializerOperationBehavior
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8911aa1b-e34b-4161-a3ae-7468d89a6861
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 27b547004e10f5eb67a66127a520c857ec2e4cdc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# XmlSerializerOperationBehavior
+# <a name="xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior
 XmlSerializerOperationBehavior  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class XmlSerializerOperationBehavior : Behavior  
@@ -29,31 +32,31 @@ class XmlSerializerOperationBehavior : Behavior
 };  
 ```  
   
-## Metodi  
+## <a name="methods"></a>Metodi  
  La classe XmlSerializerOperationBehavior non definisce metodi.  
   
-## Proprietà  
+## <a name="properties"></a>Proprietà  
  La classe XmlSerializerOperationBehavior presenta le proprietà seguenti:  
   
-### Stile  
+### <a name="style"></a>Stile  
  Tipo di dati: stringa  
   
- Tipo di accesso: in sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Definisce lo stile del messaggio SOAP  
   
-### Utilizzo  
+### <a name="use"></a>Usare  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Specifica lo stile di codifica SOAP.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Spazio dei nomi|Definito in root\ServiceModel|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>

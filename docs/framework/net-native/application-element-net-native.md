@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 106e1ae03a39594aab907e130c139b84f579257d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f4e4eebce1779f1b32a74819fea19fb23204b80c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltapplicationgt-element-net-native"></a>Elemento &lt;Application&gt; (.NET Native)
 Funge da contenitore per i tipi a livello di applicazione e i membri del tipo i cui metadati sono disponibili per la reflection in fase di esecuzione e applica criteri di reflection di runtime a tutti gli elementi del programma in un'applicazione.  
@@ -53,9 +51,9 @@ Elemento \<Application> (rd.xml)
 |`Browse`|Reflection|Attributo facoltativo. Controlla le query per le informazioni o per l'enumerazione dei tipi, ma non abilita l'accesso dinamico al runtime.|  
 |`Dynamic`|Reflection|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.|  
 |`Serialize`|Serializzazione|Attributo facoltativo. Controlla l'accesso in fase di esecuzione a costruttori, campi e proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie quali il serializzatore JSON di Newtonsoft.|  
-|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.|  
-|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=fullName>.|  
-|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.|  
+|`DataContractSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
+|`DataContractJsonSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
+|`XmlSerializer`|Serializzazione|Attributo facoltativo. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi di riferimento a Windows Runtime e COM.|  
 |`MarshalDelegate`|Interoperabilità|Attributo facoltativo. Controlla i criteri per effettuare il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.|  
 |`MarshalStructure`|Interoperabilità|Attributo facoltativo. Controlla i criteri per il marshalling delle strutture al codice nativo.|  
@@ -96,8 +94,7 @@ Elemento \<Application> (rd.xml)
 -   Come elemento che imposta i criteri a livello di applicazione per la reflection, la serializzazione e l'interoperabilità. Gli attributi dell'elemento `<Application>` definiscono i criteri a livello di applicazione, che possono essere sottoposti a override da elementi figlio definiti dall'elemento `<Application>` o [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento \<Library>](../../../docs/framework/net-native/library-element-net-native.md)   
- [Elemento \<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)   
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [\<Libreria > elemento](../../../docs/framework/net-native/library-element-net-native.md)  
+ [\<Direttive > elemento](../../../docs/framework/net-native/directives-element-net-native.md)  
+ [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-

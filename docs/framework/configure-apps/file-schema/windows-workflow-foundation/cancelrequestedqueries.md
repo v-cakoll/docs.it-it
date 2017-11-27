@@ -1,61 +1,67 @@
 ---
-title: "&lt;cancelRequestedQueries&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;cancelRequestedQueries&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: eab5af7e-76fa-434d-9d36-873e995cee05
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2b3699985095fca59d5817a31c52b29fe7609a2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;cancelRequestedQueries&gt;
-Rappresenta una raccolta di query usate per rilevare richieste di annullamento di un'attività figlio da parte dell'attività padre.  La query è necessaria affinché un partecipante del rilevamento esegua la sottoscrizione per annullare oggetti record richiesti.  
+# <a name="ltcancelrequestedqueriesgt"></a>&lt;cancelRequestedQueries&gt;
+Rappresenta una raccolta di query usate per rilevare richieste di annullamento di un'attività figlio da parte dell'attività padre. La query è necessaria affinché un partecipante del rilevamento esegua la sottoscrizione per annullare oggetti record richiesti.  
   
- Per altre informazioni sulle query relative ai profili di rilevamento, vedere [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md).  
+ Per ulteriori informazioni sulla query del profilo di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-## Sintassi  
+\<System. ServiceModel >  
+\<rilevamento >  
+\<trackingProfile >  
+\<flusso di lavoro >  
+\<cancelRequestedQueries >  
   
-```vb  
+## <a name="syntax"></a>Sintassi  
   
-<tracking>  
-   <trackingProfile name="Name">  
-       <workflow>  
-          <cancelRequestQueries>  
-             <cancelRequestQuery activityName="String"  
-                 childActivityName="String"/>  
-          </cancelRequestQueries>  
-       </workflow>  
-   </trackingProfile>  
+```xml  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <cancelRequestQueries>
+        <cancelRequestQuery activityName="String" 
+                            childActivityName="String"/>
+      </cancelRequestQueries>
+    </workflow>
+  </trackingProfile>
 </tracking>  
-  
 ```  
   
-## Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<cancelRequestedQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|Query usata per rilevare richieste di annullamento di un'attività figlio da parte dell'attività padre.|  
+|-------------|-----------------|  
+|[\<cancelRequestedQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|Query usata per rilevare richieste di annullamento di un'attività figlio da parte dell'attività padre.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<workflow\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Elemento di configurazione contenente tutte le query per un flusso di lavoro specifico identificato dalla proprietà **activityDefinitionId**.|  
+|-------------|-----------------|  
+|[\<flusso di lavoro >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Un elemento di configurazione che contiene tutte le query per un flusso di lavoro specifico identificato dal **activityDefinitionId** proprietà.|  
   
-## Vedere anche  
- [System.ServiceModel.Activities.Tracking.Configuration.CancelRequestQueryElementCollection](assetId:///System.ServiceModel.Activities.Tracking.Configuration.CancelRequestQueryElementCollection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.CancelRequestQuery](assetId:///System.Activities.Tracking.CancelRequestQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [Rilevamento e traccia del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a>Vedere anche  
+ [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

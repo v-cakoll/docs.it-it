@@ -1,35 +1,38 @@
 ---
-title: "57396 - ThrowingException | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 57396 - ThrowingException
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4f865de5-62c1-443c-9dcd-1675ca127334
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 73af1cda67d5c9af2850368e2932b0a1a5ddecc7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# 57396 - ThrowingException
-## Proprietà  
+# <a name="57396---throwingexception"></a>57396 - ThrowingException
+## <a name="properties"></a>Proprietà  
   
 |||  
 |-|-|  
 |ID|57396|  
 |Parole chiave|Infrastruttura|  
 |Livello|Avviso|  
-|Canale|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Canale|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descrizione  
+## <a name="description"></a>Descrizione  
  Questo evento viene generato in occasione di un'eccezione.  
   
-## Messaggio  
- Generazione di un'eccezione.  Origine %1.  
+## <a name="message"></a>Messaggio  
+ Generazione di un'eccezione. Origine %1.  
   
-## Dettagli
+## <a name="details"></a>Dettagli

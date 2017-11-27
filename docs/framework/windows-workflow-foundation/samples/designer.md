@@ -1,28 +1,32 @@
 ---
-title: "Finestra di progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Finestra di progettazione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bf28aae3-ddfb-4a86-b55d-1957f08c4e10
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0beafcb1c67cfddc8dceac16a965e39e0b3adb76
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Finestra di progettazione
-In questa sezione sono inclusi esempi che illustrano come utilizzare [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].  
+# <a name="designer"></a>Finestra di progettazione
+Contenuto della sezione sono inclusi esempi che illustrano come usare [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].  
   
-## In questa sezione  
- [Rimozione dello stato di visualizzazione della finestra di progettazione per l'aggiunta a un file XAML](../../../../docs/framework/windows-workflow-foundation/samples/removing-the-view-state-the-designer-adds-to-an-xaml-file.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Rimuovere lo stato di visualizzazione nella finestra di progettazione aggiunge a un File XAML](../../../../docs/framework/windows-workflow-foundation/samples/removing-the-view-state-the-designer-adds-to-an-xaml-file.md)  
  Viene illustrato come creare una classe che deriva da <xref:System.Windows.Markup.XamlWriter> e rimuove lo stato di visualizzazione da un file XAML.  
   
- [Programmazione dell'albero degli elementi del modello](../../../../docs/framework/windows-workflow-foundation/samples/programming-model-item-tree.md)  
- Viene illustrato come passare alla struttura ad albero <xref:System.Activities.Presentation.Model.ModelItem> utilizzando l'associazione dati dichiarativa dalla visualizzazione struttura ad albero di [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)].  
+ [Struttura ad albero elemento di modello di programmazione](../../../../docs/framework/windows-workflow-foundation/samples/programming-model-item-tree.md)  
+ Viene illustrato come passare all'albero <xref:System.Activities.Presentation.Model.ModelItem> usando l'associazione dati dichiarativa dalla visualizzazione albero di [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)].  
   
  [Estensibilità della griglia delle proprietà](../../../../docs/framework/windows-workflow-foundation/samples/property-grid-extensibliity.md)  
  Viene illustrato come personalizzare la griglia delle proprietà visualizzata quando un'attività specificata viene selezionata all'interno della finestra di progettazione.  

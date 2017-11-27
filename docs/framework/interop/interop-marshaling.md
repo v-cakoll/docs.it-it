@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ebe7d3aa48fa77287f20781938a0b9863f60de5f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 381eccc42d5abb85cde618f4710f044f172295d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="interop-marshaling"></a>Marshalling di interoperabilità
 <a name="top"></a> Il marshalling di interoperabilità determina il passaggio di dati in argomenti di metodo e i valori restituiti tra memoria gestita e non gestita durante le chiamate. Il marshalling di interoperabilità è un'attività di run-time eseguita dal servizio di marshalling di Common Language Runtime.  
@@ -88,7 +81,7 @@ Processo di marshalling nello stesso apartment
  Se si intende esportare un server gestito, ricordare che il client COM determina l'apartment del server. Un server gestito chiamato da un client COM inizializzato in un MTA deve garantire la thread safety.  
   
 ### <a name="managed-clients-and-com-servers"></a>Client gestiti e server COM  
- Benché l'impostazione predefinita per gli apartment dei client gestiti sia MTA, è possibile che essa venga modificata dal tipo di applicazione del client .NET. L'impostazione di apartment per i client di [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], ad esempio, è STA. Per esaminare e modificare l'impostazione di apartment di un client gestito, è possibile usare l'oggetto <xref:System.STAThreadAttribute?displayProperty=fullName>, l'oggetto <xref:System.MTAThreadAttribute?displayProperty=fullName>, la proprietà <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> o la proprietà <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=fullName>.  
+ Benché l'impostazione predefinita per gli apartment dei client gestiti sia MTA, è possibile che essa venga modificata dal tipo di applicazione del client .NET. L'impostazione di apartment per i client di [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], ad esempio, è STA. Per esaminare e modificare l'impostazione di apartment di un client gestito, è possibile usare l'oggetto <xref:System.STAThreadAttribute?displayProperty=nameWithType>, l'oggetto <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, la proprietà <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> o la proprietà <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType>.  
   
  L'autore del componente imposta l'affinità di thread di un server COM. La tabella riportata di seguito mostra le combinazioni delle impostazioni di apartment per i client .NET e i server COM, nonché i requisiti di marshalling per le diverse combinazioni.  
   
@@ -174,7 +167,6 @@ Chiamate remote attraverso i firewall mediante SOAP o la classe TcpChannel
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Riferimento  
- <xref:System.Runtime.InteropServices?displayProperty=fullName>  
+ <xref:System.Runtime.InteropServices?displayProperty=nameWithType>  
   
  [Torna all'inizio](#top)
-

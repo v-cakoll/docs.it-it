@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1d1e1de5637dbb955dd72ed0291da1f4f537ce28
-ms.contentlocale: it-it
-ms.lasthandoff: 09/18/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-framework-performance"></a>Prestazioni di .NET Framework
 Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pianificate come qualsiasi altra funzionalità delle app. Gli strumenti messi a disposizione da Microsoft consentono di misurare le prestazioni delle app e, se necessario, migliorare l'uso della memoria, la velocità effettiva del codice e la velocità di risposta. Questo argomento contiene un elenco degli strumenti per l'analisi delle prestazioni forniti da Microsoft e collegamenti ad altri argomenti relativi alle prestazioni per aree specifiche dello sviluppo di applicazioni.  
@@ -71,4 +69,3 @@ Per garantire prestazioni ottimali, le prestazioni devono essere progettate e pi
 |[Inizializzazione differita](../../../docs/framework/performance/lazy-initialization.md)|Descrive come inizializzare gli oggetti quando necessario per migliorare le prestazioni, in particolare all'avvio dell'app.|  
 |[Affidabilità](../../../docs/framework/performance/reliability.md)|Contiene informazioni su come evitare eccezioni asincrone in un ambiente server.|  
 |[Writing Large, Responsive .NET Framework Apps](../../../docs/framework/performance/writing-large-responsive-apps.md) (Scrittura di app con velocità di risposta e dimensioni elevate in .NET Framework)|Offre suggerimenti sulle prestazioni che derivano dalla riscrittura di compilatori C# e Visual Basic nel codice gestito e include diversi esempi concreti tratti dal compilatore C#.|
-

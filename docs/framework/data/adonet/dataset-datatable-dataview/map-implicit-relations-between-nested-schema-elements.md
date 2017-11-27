@@ -1,37 +1,40 @@
 ---
-title: "Mappare relazioni implicite tra elementi annidati dello schema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mapping di relazioni implicite tra elementi di schemi annidati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b3e3243384bd1dd55661a87ee67cc3052b94e923
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Mappare relazioni implicite tra elementi annidati dello schema
-È possibile che in uno schema XSD \(XML Schema Definition Language\) siano presenti tipi complessi annidati uno all'interno dell'altro.  In questo caso, le impostazioni di mapping predefinite vengono applicate dal processo di mapping e nel tipo <xref:System.Data.DataSet> vengono creati i seguenti elementi:  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapping di relazioni implicite tra elementi di schemi annidati
+È possibile che in uno schema XSD (XML Schema Definition Language) siano presenti tipi complessi annidati uno all'interno dell'altro. In questo caso, le impostazioni di mapping predefinite vengono applicate dal processo di mapping e nel tipo <xref:System.Data.DataSet> vengono creati i seguenti elementi:  
   
--   Una tabella per ogni tipo complesso \(padre e figlio\).  
+-   Una tabella per ogni tipo complesso (padre e figlio).  
   
--   Se nell'elemento padre non è presente alcun vincolo univoco, in ogni definizione di tabella viene inclusa una colonna di chiave primaria aggiuntiva denominata *TableName*\_Id dove *TableName* rappresenta il nome della tabella padre.  
+-   Se è presente alcun vincolo univoco nell'elemento padre, una colonna primaria aggiuntiva chiave ogni definizione di tabella denominato *TableName*ID dove *TableName* è il nome della tabella padre.  
   
--   Un vincolo di chiave primaria nella tabella padre che consenta di identificare la colonna aggiuntiva come chiave primaria \(mediante l'impostazione della proprietà **IsPrimaryKey** su **True**\).  Il vincolo viene denominato Constraint*\#*, dove *\#* rappresenta 1, 2, 3 e così via.  Il nome predefinito del primo vincolo, ad esempio, è Constraint1.  
+-   Un vincolo di chiave primaria nella tabella padre che identifica la colonna aggiuntiva come chiave primaria (impostando il **IsPrimaryKey** proprietà **True**). Il vincolo viene denominato Constraint *#*  in  *#*  è 1, 2, 3 e così via. Il nome predefinito del primo vincolo, ad esempio, è Constraint1.  
   
--   Un vincolo di chiave esterna nella tabella figlio che consenta di identificare la colonna aggiuntiva come chiave esterna contenente riferimenti alla chiave primaria della tabella padre.  Il vincolo viene denominato *ParentTable\_ChildTable*, dove *ParentTable* rappresenta il nome della tabella padre e *ChildTable* il nome della tabella figlio.  
+-   Un vincolo di chiave esterna nella tabella figlio che consenta di identificare la colonna aggiuntiva come chiave esterna contenente riferimenti alla chiave primaria della tabella padre. Il vincolo viene denominato *ParentTable_ChildTable* in *ParentTable* è il nome della tabella padre e *ChildTable* è il nome della tabella figlio.  
   
 -   Una relazione di dati tra le tabelle padre e figlio.  
   
- Nell'esempio seguente viene riportato uno schema in cui **OrderDetail** è un elemento figlio di **Order**.  
+ Nell'esempio seguente viene illustrato uno schema in cui **OrderDetail** è un elemento figlio di **ordine**.  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -61,16 +64,16 @@ caps.handback.revision: 4
 </xs:schema>  
 ```  
   
- Il processo di mapping di XML Schema consente di creare nel **DataSet** i seguenti elementi:  
+ Il processo di mapping di XML Schema vengono creati i seguenti nel **DataSet**:  
   
--   Una tabella **Order** e una tabella **OrderDetail**.  
+-   Un **ordine** e **OrderDetail** tabella.  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   Un vincolo univoco nella tabella **Order**.  Notare che la proprietà **IsPrimaryKey** è impostata su **True**.  
+-   Un vincolo unique per la **ordine** tabella. Si noti che il **IsPrimaryKey** è impostata su **True**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -80,7 +83,7 @@ caps.handback.revision: 4
     IsPrimaryKey: True  
     ```  
   
--   Un vincolo di chiave esterna nella tabella **OrderDetail**.  
+-   Un vincolo di chiave esterna nella **OrderDetail** tabella.  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -91,7 +94,7 @@ caps.handback.revision: 4
     RelatedColumns: Order_Id   
     ```  
   
--   Una relazione tra le tabelle **Order** e **OrderDetail**.  La proprietà **Nested** per questa relazione viene impostata su **True**, poiché gli elementi **Order** e **OrderDetail** sono annidati nello schema.  
+-   Una relazione tra il **ordine** e **OrderDetail** tabelle. Il **Nested** per questa relazione è impostata su **True** perché il **ordine** e **OrderDetail** elementi sono annidati nello schema .  
   
     ```  
     ParentTable: Order  
@@ -104,7 +107,7 @@ caps.handback.revision: 4
     Nested: True  
     ```  
   
-## Vedere anche  
- [Generazione delle relazioni del DataSet da XML Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Mapping dei vincoli di XML Schema \(XSD\) ai vincoli del DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [La generazione di relazioni tra DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Vincoli di mapping XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 523ec4fd2c8d19dc9086e417fa99c89a619caa71
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c6d70fd560cb7b164460eb3882cac88ed733d788
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltmethodgt-element-net-native"></a>Elemento &lt;Method&gt; (.NET Native)
 Applica i criteri di reflection di runtime a un costruttore o a un metodo.  
@@ -87,7 +85,7 @@ Applica i criteri di reflection di runtime a un costruttore o a un metodo.
  Non è possibile definire i criteri di reflection di runtime per un costruttore con l'elemento `<Method>`. Usare invece l'attributo `Activate` dell'elemento [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md), [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
 ## <a name="example"></a>Esempio  
- Il metodo `Stringify` nell'esempio seguente è un metodo di formattazione generico che usa la reflection per convertire un oggetto nella relativa rappresentazione di stringa. Oltre a chiamare il metodo `ToString` predefinito dell'oggetto, il metodo può produrre una stringa di risultato formattata passando il metodo `ToString` di un oggetto a una stringa di formato, un'implementazione di <xref:System.IFormatProvider> o entrambi. Il metodo può anche chiamare uno degli overload <xref:System.Convert.ToString%2A?displayProperty=fullName> che converte un numero nella relativa rappresentazione binaria, ottale o esadecimale.  
+ Il metodo `Stringify` nell'esempio seguente è un metodo di formattazione generico che usa la reflection per convertire un oggetto nella relativa rappresentazione di stringa. Oltre a chiamare il metodo `ToString` predefinito dell'oggetto, il metodo può produrre una stringa di risultato formattata passando il metodo `ToString` di un oggetto a una stringa di formato, un'implementazione di <xref:System.IFormatProvider> o entrambi. Il metodo può anche chiamare uno degli overload <xref:System.Convert.ToString%2A?displayProperty=nameWithType> che converte un numero nella relativa rappresentazione binaria, ottale o esadecimale.  
   
  [!code-csharp[ProjectN_Reflection#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/method1.cs#7)]  
   
@@ -156,8 +154,7 @@ Applica i criteri di reflection di runtime a un costruttore o a un metodo.
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  (Impostazioni dei criteri delle direttive di runtime)  
+ [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Impostazioni dei criteri delle direttive di runtime)  
  [Elemento \<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
-

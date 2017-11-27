@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: tdykstra
 ms.author: tdykstra
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7886b3bfe8299b64277d6062ab481136caafbde0
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 69e6ea6a95ffdea8f7a21540106d4817119a7cb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="caching-in-net-framework-applications"></a>Memorizzazione nella cache in applicazioni .NET Framework
 La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido. Quando accedono nuovamente ai dati, le applicazioni possono recuperarli dalla cache anziché dall'origine. In questo modo si possono ottenere migliori prestazioni e scalabilità. Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.  
@@ -88,8 +86,7 @@ La memorizzazione nella cache consente di inserire i dati in memoria per l'acces
  Per altre informazioni, vedere l'articolo [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](http://go.microsoft.com/fwlink/?LinkId=185772) (Memorizzazione nella cache di output estendibile con ASP.NET 4 - VS 2010 e .NET 4.0) nel blog di Scott Guthrie.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.Caching.ObjectCache>   
- <xref:System.Runtime.Caching.MemoryCache>   
- [Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)   
+ <xref:System.Runtime.Caching.ObjectCache>  
+ <xref:System.Runtime.Caching.MemoryCache>  
+ [Procedura dettagliata: Memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)  
  [Procedura dettagliata: Memorizzazione nella cache dei dati applicazioni in ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)
-

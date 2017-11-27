@@ -1,29 +1,32 @@
 ---
-title: "Procedura: esportare informazioni WSDL personalizzate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: esportare informazioni WSDL personalizzate'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 95016b658a679a47b6b37d0c4130ef8e816165c2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: esportare informazioni WSDL personalizzate
-In questo argomento viene illustrato come esportare informazioni WSDL personalizzate.A tale scopo è necessario definire un nuovo attributo di codice denominato `WsdlDocumentationAttribute` che consente di aggiungere informazioni personalizzate nel codice WSDL generato dal servizio.  
+# <a name="how-to-export-custom-wsdl"></a>Procedura: esportare informazioni WSDL personalizzate
+In questo argomento viene illustrato come esportare informazioni WSDL personalizzate. A tale scopo è necessario definire un nuovo attributo di codice denominato `WsdlDocumentationAttribute` che consente di aggiungere informazioni personalizzate nel codice WSDL generato dal servizio.  
   
-### Per esportare informazioni WSDL personalizzate  
+### <a name="to-export-custom-wsdl-information"></a>Per esportare informazioni WSDL personalizzate  
   
-1.  Implementare l'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension>.Questa interfaccia può essere implementata in una classe che implementa una delle interfacce seguenti: <xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior> o <xref:System.ServiceModel.Description.IEndpointBehavior>.Può inoltre essere implementata in una classe derivata della classe <xref:System.ServiceModel.Channels.BindingElement>.In questo esempio l'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension> viene implementata in una classe di attributo che implementa l'interfaccia <xref:System.ServiceModel.Description.IContractBehavior>.  
+1.  Implementare l'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension>. Questa interfaccia può essere implementata in una classe che implementa una delle interfacce seguenti: <xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior> o <xref:System.ServiceModel.Description.IEndpointBehavior>. Può inoltre essere implementata in una classe derivata della classe <xref:System.ServiceModel.Channels.BindingElement>. In questo esempio l'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension> viene implementata in una classe di attributo che implementa l'interfaccia <xref:System.ServiceModel.Description.IContractBehavior>.  
   
-2.  L'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension> definisce due metodi: <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> e <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>.Questi metodi consentono di modificare e\/o aggiungere informazioni aggiuntive nel contesto <xref:System.ServiceModel.Description.WsdlContractConversionContext>.In questo esempio il metodo <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> viene utilizzato per recuperare una raccolta di oggetti <xref:System.ServiceModel.Description.OperationDescription>. All'interno di questa raccolta viene quindi eseguita una ricerca per verificare la presenza di un attributo `WsdlDocumentationAttribute`.Se la ricerca ha esito positivo, il sistema estrae il testo associato all'attributo trovato, genera un elemento riassuntivo e quindi aggiunge tale elemento all'elemento `DocumentationElement` dell'operazione.  
+2.  L'interfaccia <xref:System.ServiceModel.Description.IWsdlExportExtension> definisce due metodi: <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> e <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>. Questi metodi consentono di modificare e/o aggiungere informazioni aggiuntive nel contesto <xref:System.ServiceModel.Description.WsdlContractConversionContext>. In questo esempio il metodo <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> viene utilizzato per recuperare una raccolta di oggetti <xref:System.ServiceModel.Description.OperationDescription>. All'interno di questa raccolta viene quindi eseguita una ricerca per verificare la presenza di un attributo `WsdlDocumentationAttribute`. Se la ricerca ha esito positivo, il sistema estrae il testo associato all'attributo trovato, genera un elemento riassuntivo e quindi aggiunge tale elemento all'elemento `DocumentationElement` dell'operazione.  
   
     ```  
             public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -60,7 +63,7 @@ In questo argomento viene illustrato come esportare informazioni WSDL personaliz
                 }  
     ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio di codice seguente viene illustrata l'implementazione completa della classe `WsdlDocumentationAttribute`.  
   
 ```  
@@ -200,8 +203,7 @@ return lines;
       return returnsElement;  
     }  
   }  
-  
 ```  
   
-## Vedere anche  
- [Metadata](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>Vedere anche  
+ [Metadati](../../../../docs/framework/wcf/feature-details/metadata.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7219e982f755542a35a33dddf74ee24f4b67e8e6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-identity-model"></a>Modello di identità basata sulle attestazioni
 Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identità dell'utente è rappresentata come un set di attestazioni nell'applicazione. Un'attestazione può essere, ad esempio, il nome dell'utente o un indirizzo di posta elettronica. L'idea è che viene configurato un sistema di identità esterno per fornire all'applicazione tutti gli elementi necessari per ottenere informazioni sull'utente con ogni richiesta effettuata, con la garanzia crittografica che i dati di identità ricevuti provengono da un'origine attendibile.  
@@ -91,4 +89,3 @@ Quando si compilano applicazioni in grado di riconoscere attestazioni, l'identit
 3.  Il provider di identità emette di nuovo un token che viene restituito al browser.  
   
 4.  Il browser viene ora di nuovo reindirizzato alla pagina richiesta originariamente in cui WIF determina se il token soddisfa i requisiti di accesso alla pagina. In questo caso viene emesso un cookie per stabilire una sessione in modo che l'autenticazione deve essere eseguita una sola volta e il controllo viene passato all'applicazione.
-

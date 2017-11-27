@@ -1,66 +1,74 @@
 ---
-title: "&lt;knownType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;knownType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ccb7152197a021821936e178e0de77b9dfabce45
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;knownType&gt;
-Specifica un tipo da usare dal serializzatore <xref:System.Runtime.Serialization.DataContractSerializer> durante la deserializzazione.  L'elemento specifica un "tipo conosciuto" restituito da un campo o da una proprietà di un "tipo dichiarato". Per altre informazioni, vedere [Tipi conosciuti di contratto dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+# <a name="ltknowntypegt"></a>&lt;knownType&gt;
+Specifica un tipo da usare dal serializzatore <xref:System.Runtime.Serialization.DataContractSerializer> durante la deserializzazione. L'elemento specifica un "tipo conosciuto" restituito da un campo o da una proprietà di un "tipo dichiarato". Per ulteriori informazioni, vedere [tipi conosciuti di contratto dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
-## Sintassi  
+ \<Serialization >  
+\<dataContractSerializer >  
+\<declaredTypes > elemento  
+\<aggiungere > di \<declaredTypes >  
+\<knownType > elemento  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <knownType type="String">  
      <parameter index="Integer"  
                 type="String" />  
 </knownType>  
 ```  
   
-## Tipo  
+## <a name="type"></a>Tipo  
  `string`  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|tipo|Specifica il tipo \(compreso lo spazio dei nomi\), il nome dell'assembly, la versione, impostazioni cultura e token di chiave pubblica.|  
+|tipo|Specifica il tipo (compreso lo spazio dei nomi), il nome dell'assembly, la versione, impostazioni cultura e token di chiave pubblica.|  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<parametro\>](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Specifica un indice di parametro quando il tipo dichiarato è un tipo generico.|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<aggiunta\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|Aggiunge un tipo dichiarato alla raccolta dei tipi dichiarati.|  
+|-------------|-----------------|  
+|[\<parametro >](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Specifica un indice di parametro quando il tipo dichiarato è un tipo generico.|  
   
-## Note  
- Per altre informazioni sui tipi noti, vedere [Tipi conosciuti di contratto dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) e <xref:System.Runtime.Serialization.DataContractSerializer>.  
+### <a name="parent-elements"></a>Elementi padre  
   
- Per un esempio di utilizzo di questo elemento, vedere l'[\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md).  
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|Aggiunge un tipo dichiarato alla raccolta dei tipi dichiarati.|  
   
-## Esempio  
+## <a name="remarks"></a>Note  
+ Per ulteriori informazioni sui tipi noti, vedere [tipi conosciuti di contratto dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) e <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
-```  
+ Vedere il [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) per un esempio di utilizzo di questo elemento.  
+  
+## <a name="example"></a>Esempio  
+  
+```xml  
 <add type="MyCompany.Library.Shape,   
            MyAssembly, Version=2.0.0.0, Culture=neutral,  
            PublicKeyToken=XXXXXX, processorArchitecture=MSIL">  
@@ -71,8 +79,8 @@ Specifica un tipo da usare dal serializzatore <xref:System.Runtime.Serialization
 </add>  
 ```  
   
-## Vedere anche  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- [Tipi conosciuti di contratto dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)   
- [\<dataContractSerializer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)   
- [\<aggiunta\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ [Tipi conosciuti di contratto dati](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

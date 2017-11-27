@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CLR ETW events, logging
+helpviewer_keywords: CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aebeb1bb1257599cc3fb9b8be7bf2595ccca0f13
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f996cf730acc355f3bf13287b79581d23e4e6a5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="controlling-net-framework-logging"></a>Controllo della registrazione di .NET Framework
 È possibile utilizzare Traccia eventi per Windows (ETW) per registrare eventi CLR (Common Language Runtime). Tramite i seguenti strumenti si possono creare e visualizzare tracce:  
@@ -55,7 +52,7 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>Per acquisire eventi ETW CLR tramite Logman  
   
-1.  Al prompt dei comandi, digitare:  
+1.  Al prompt dei comandi digitare:  
   
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`  
   
@@ -79,7 +76,7 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-xperf"></a>Per acquisire eventi ETW CLR tramite Xperf  
   
-1.  Al prompt dei comandi, digitare:  
+1.  Al prompt dei comandi digitare:  
   
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
   
@@ -96,7 +93,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>Per visualizzare gli eventi ETW CLR tramite Tracerpt  
   
--   Al prompt dei comandi, digitare:  
+-   Al prompt dei comandi digitare:  
   
      `tracerpt clrevents.etl`  
   
@@ -104,7 +101,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-xperf"></a>Per visualizzare gli eventi ETW CLR tramite Xperf  
   
--   Al prompt dei comandi, digitare:  
+-   Al prompt dei comandi digitare:  
   
      `xperf clrevents.etl`  
   
@@ -112,13 +109,12 @@ Provider                                 GUID
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>Per convertire il file con estensione etl in un file con valori delimitati da virgole  
   
--   Al prompt dei comandi, digitare:  
+-   Al prompt dei comandi digitare:  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   
      Questo comando fa in modo che XPerf esegua il dump degli eventi come un file (CSV) con valori delimitati da virgole visualizzabile. Poiché eventi diversi dispongono di campi diversi, questo file con estensione CSV contiene più di una riga di intestazione prima dei dati. Il primo campo di ogni riga è il tipo di evento che indica quale intestazione deve essere utilizzata per determinare gli altri campi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Windows Performance Toolkit](http://go.microsoft.com/fwlink/?LinkID=161141)   
+ [Windows Performance Toolkit](http://go.microsoft.com/fwlink/?LinkID=161141)  
  [Eventi ETW in Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
-

@@ -1,6 +1,6 @@
 ---
 title: Riferimenti per simboli e operatori (F#)
-description: Riferimenti per simboli e operatori (F#)
+description: Informazioni sui simboli e operatori utilizzati nel linguaggio di programmazione c#.
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 514dc37dce3df3f40ae99ce55772b0c4e8deb95f
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="symbol-and-operator-reference"></a>Riferimenti per simboli e operatori
 
 > [!NOTE]
@@ -127,8 +126,8 @@ Nella tabella seguente viene illustrato l'ordine di precedenza degli operatori e
 |Operatore|Associazione|
 |--------|-------------|
 |`as`|A destra|
-|`when`|Destra|
-|<code>&#124;</code> (barra verticale)|Sinistra|
+|`when`|Destro|
+|<code>&#124;</code>(barra verticale)|Sinistro|
 |`;`|A destra|
 |`let`|Non associativo|
 |`function`, `fun`, `match`, `try`|Non associativo|
@@ -136,18 +135,18 @@ Nella tabella seguente viene illustrato l'ordine di precedenza degli operatori e
 |`->`|A destra|
 |`:=`|A destra|
 |`,`|Non associativo|
-|`or`, <code>&#124;&#124;</code>|Sinistra|
+|`or`, <code>&#124;&#124;</code>|Sinistro|
 |`&`, `&&`|Sinistro|
-|`:>`, `:?>`|Destra|
-|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(inclusi `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sinistra|
+|`:>`, `:?>`|Destro|
+|`!=`*Op*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&`  *Op*,`&`<br /><br />(inclusi `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Sinistro|
 |`^`*op*<br /><br />(incluso `^^^`)|Destra|
 |`::`|Destra|
 |`:?`|Non associativa|
 |`-`*op*, `+`*op*|Si applica agli usi infissi di questi simboli|
 |`*`*op*, `/`*op*, `%`*op*|Sinistra|
 |`**`*op*|Destra|
-|`f x` (applicazione di funzione)|Sinistra|
-|<code>&#124;</code> (corrispondenza con il modello)|Destra|
+|`f x` (applicazione di funzione)|Sinistro|
+|<code>&#124;</code>(criteri di ricerca)|Destro|
 |operatori di prefisso (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Sinistra|
 |`.`|A sinistra|
 |`f(x)`|Sinistra|
@@ -158,4 +157,3 @@ F# supporta l'overload degli operatori personalizzati. Ciò significa che è pos
 [Riferimenti per il linguaggio F#](../index.md)
 
 [Overload degli operatori](../operator-overloading.md)
-

@@ -1,69 +1,71 @@
 ---
-title: "Elemento &lt;add&gt; per &lt;switches&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> (elemento) per <switches>"
-  - "add (elemento) per <switches>"
+title: '&lt;aggiungere&gt; elemento per &lt;switch&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
+helpviewer_keywords:
+- <add> element for <switches>
+- add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: de1acb37f3236598e9d8a74a188033d18b65ac8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;add&gt; per &lt;switches&gt;
-Consente di specificare il livello in cui viene impostata un'opzione di traccia.  
+# <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;aggiungere&gt; elemento per &lt;switch&gt;
+Specifica il livello in cui viene impostata un'opzione di traccia.  
   
-## Sintassi  
+ \<configuration>  
+\<System. Diagnostics >  
+\<Opzioni >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <add name="switch name"  
      value="value"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|**name**|Attributo obbligatorio.<br /><br /> Specifica il nome dell'opzione.  Il valore di questo attributo corrisponde al parametro *displayName* passato al costruttore di opzioni.|  
-|**predefinito**|Attributo obbligatorio.<br /><br /> Specifica il livello dell'opzione.|  
+|**name**|Attributo obbligatorio.<br /><br /> Specifica il nome del commutatore. Il valore di questo attributo corrisponde alla *displayName* parametro passato al costruttore di opzioni.|  
+|**value**|Attributo obbligatorio.<br /><br /> Specifica il livello del commutatore.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`switches`|Contiene opzioni di traccia e il livello in cui vengono impostate.|  
-|`system.diagnostics`|Consente di specificare listener di traccia per la raccolta, la memorizzazione e l'invio di messaggi, nonché il livello in cui viene impostata un'opzione di analisi.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|`switches`|Contiene le opzioni di traccia e il livello in cui vengono impostate le opzioni di traccia.|  
+|`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
-## Note  
- È possibile modificare il livello di un'opzione di traccia inserendola in un file di configurazione.  Se si tratta di un'opzione <xref:System.Diagnostics.BooleanSwitch>, è possibile attivarla e disattivarla.  Se si tratta, invece, di un'opzione <xref:System.Diagnostics.TraceSwitch>, è possibile assegnarle livelli differenti per specificare i tipi di messaggi di traccia o di debug generati dall'applicazione.  
+## <a name="remarks"></a>Note  
+ È possibile modificare il livello di un'opzione di traccia mediante l'inserimento in un file di configurazione. Se l'opzione è un <xref:System.Diagnostics.BooleanSwitch>, è possibile attivare e disattivare. Se l'opzione è un <xref:System.Diagnostics.TraceSwitch>, è possibile assegnare diversi livelli per specificare i tipi di traccia messaggi o di debug generati dall'applicazione.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare l'elemento **\<add\>** per impostare l'opzione di traccia `General` sul livello [TraceLevel.Error](frlrfSystemDiagnosticsTraceLevelClassTopic) e come attivare l'opzione di traccia di tipo Boolean `Data`.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il  **\<aggiungere >** elemento da impostare il `General` opzione di traccia di <xref:System.Diagnostics.TraceLevel> livello e attivare il `Data` opzione di traccia Boolean.  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <switches>  
@@ -74,8 +76,8 @@ Consente di specificare il livello in cui viene impostata un'opzione di traccia.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Diagnostics.Switch>   
- <xref:System.Diagnostics.TraceSwitch>   
- <xref:System.Diagnostics.BooleanSwitch>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Diagnostics.Switch>  
+ <xref:System.Diagnostics.TraceSwitch>  
+ <xref:System.Diagnostics.BooleanSwitch>  
  [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

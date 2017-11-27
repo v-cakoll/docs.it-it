@@ -5,17 +5,10 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- EHMDA
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+f1_keywords: EHMDA
 helpviewer_keywords:
 - run-time error debugging
 - managed code, run-time debugging
@@ -42,16 +35,15 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8afc1ec3d5a1dab4412b16826bb32829f9b42263
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e23de3ea6e9693c05aa81da056ac7763bced8e9a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnostica degli errori tramite gli assistenti al debug gestito
 Gli assistenti al debug gestito sono strumenti per il debug da usare insieme a CLR (Common Language Runtime) per fornire informazioni sullo stato del runtime. Gli assistenti generano messaggi informativi su eventi di runtime che non possono essere intercettati in altro modo. È possibile usare gli assistenti al debug gestito per isolare bug di applicazione difficili da individuare, che si verificano durante la transizione tra codice gestito e non gestito. È possibile abilitare o disabilitare tutti gli assistenti al debug gestito aggiungendo una chiave al Registro di sistema di Windows oppure impostando una variabile di ambiente. Le impostazioni di configurazione dell'applicazione permettono di abilitare assistenti al debug gestito specifici. È possibile definire impostazioni di configurazione aggiuntive per alcuni singoli assistenti al debug gestito nel file di configurazione dell'applicazione. Poiché questi file di configurazione sono analizzati durante il caricamento del runtime, è necessario abilitare l'assistente al debug gestito prima dell'avvio dell'applicazione gestita. Non è possibile abilitarlo per applicazioni già avviate.  
@@ -198,4 +190,3 @@ Windows Registry Editor Version 5.00
   
 ## <a name="see-also"></a>Vedere anche  
  [Debug, traccia e profilatura](../../../docs/framework/debug-trace-profile/index.md)
-

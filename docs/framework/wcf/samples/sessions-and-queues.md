@@ -1,43 +1,46 @@
 ---
-title: "Sessioni e code | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Sessioni e code
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-caps.latest.revision: 27
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dffee557bea81c769038729a60b9d270f0f28c6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Sessioni e code
-In questo esempio viene illustrato come inviare e ricevere una serie di messaggi correlati in una comunicazione in coda sul trasporto di accodamento messaggi \(MSMQ\).In questo esempio viene utilizzata l'associazione `netMsmqBinding`.Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
+# <a name="sessions-and-queues"></a>Sessioni e code
+In questo esempio viene illustrato come inviare e ricevere una serie di messaggi correlati in una comunicazione in coda sul trasporto di accodamento messaggi (MSMQ). In questo esempio viene usata l'associazione `netMsmqBinding`. Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine dell'argomento.  
+>  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Session`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Session`  
   
- Nelle comunicazioni in coda il client comunica con il servizio mediante una coda.Più precisamente, il client invia messaggi a una coda.Il servizio riceve messaggi dalla coda.Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.  
+ Nella comunicazione in coda, il client comunica al servizio usando una coda. Più precisamente, il client invia messaggi a una coda. Il servizio riceve messaggi dalla coda. Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.  
   
- A volte, un client invia una serie di messaggi correlati tra loro in un gruppo.Quando i messaggi devono essere elaborati insieme o in un ordine specifico, è possibile utilizzare una coda per raggrupparli, in modo che vengano elaborati da una sola applicazione di destinazione.Questo aspetto è particolarmente importante quando sono presenti molte applicazioni di destinazione in un gruppo di server ed è necessario assicurare che un gruppo di messaggi sia elaborato dalla stessa applicazione di destinazione.Le sessioni in coda sono un meccanismo utilizzato per inviare e ricevere una serie correlata di messaggi che devono essere elaborati contemporaneamente.Le sessioni in coda richiedono l'esibizione di questo modello da parte di una transazione.  
+ A volte, un client invia una serie di messaggi correlati tra loro in un gruppo. Quando i messaggi devono essere elaborati insieme o in un ordine specifico, è possibile utilizzare una coda per raggrupparli, in modo che vengano elaborati da una sola applicazione di destinazione. Questo aspetto è particolarmente importante quando sono presenti molte applicazioni di destinazione in un gruppo di server ed è necessario assicurare che un gruppo di messaggi sia elaborato dalla stessa applicazione di destinazione. Le sessioni in coda sono un meccanismo utilizzato per inviare e ricevere una serie correlata di messaggi che devono essere elaborati contemporaneamente. Le sessioni in coda richiedono l'esibizione di questo modello da parte di una transazione.  
   
  In questo esempio, il client invia una serie di messaggi al servizio durante una sessione all'interno dell'ambito di una singola transazione.  
   
- Il contratto di servizio è `IOrderTaker`, che definisce un servizio unidirezionale adatto per l'utilizzo con le code.L'elemento <xref:System.ServiceModel.SessionMode> utilizzato nel contratto mostrato nel codice di esempio seguente indica che i messaggi fanno parte della sessione.  
+ Il contratto di servizio è `IOrderTaker`che definisce un servizio unidirezionale adatto per l'uso con le code. L'elemento <xref:System.ServiceModel.SessionMode> utilizzato nel contratto mostrato nel codice di esempio seguente indica che i messaggi fanno parte della sessione.  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
@@ -52,10 +55,9 @@ public interface IOrderTaker
     [OperationContract(IsOneWay = true)]  
     void EndPurchaseOrder();  
 }  
-  
 ```  
   
- Il servizio definisce le operazioni del servizio in modo tale che la prima operazione si integri in una transazione ma non la completi automaticamente.Le operazioni successive si integrano nella stessa transazione ma non la completano automaticamente.L'ultima operazione della sessione completa automaticamente la transazione.In questo modo, la stessa transazione viene utilizzata per molte chiamate a operazioni nel contratto di servizio.Se una delle operazioni genera un'eccezione, viene eseguito il rollback della transazione e la sessione viene reinserita nella coda.Al completamento dell'ultima operazione, viene eseguito il commit della transazione.Il servizio utilizza `PerSession` come <xref:System.ServiceModel.InstanceContextMode> per ricevere tutti i messaggi in una sessione sulla stessa istanza del servizio.  
+ Il servizio definisce le operazioni del servizio in modo tale che la prima operazione si integri in una transazione ma non la completi automaticamente. Le operazioni successive si integrano nella stessa transazione ma non la completano automaticamente. L'ultima operazione della sessione completa automaticamente la transazione. In questo modo, la stessa transazione viene utilizzata per molte chiamate a operazioni nel contratto di servizio. Se una delle operazioni genera un'eccezione, viene eseguito il rollback della transazione e la sessione viene reinserita nella coda. Al completamento dell'ultima operazione, viene eseguito il commit della transazione. Il servizio utilizza `PerSession` come <xref:System.ServiceModel.InstanceContextMode> per ricevere tutti i messaggi in una sessione sulla stessa istanza del servizio.  
   
 ```  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
@@ -91,7 +93,7 @@ public class OrderTakerService : IOrderTaker
 }  
 ```  
   
- Il servizio è indipendente.Quando si utilizza il trasporto MSMQ, la coda utilizzata deve essere creata in anticipo.Questa operazione può essere eseguita manualmente o mediante il codice.In questo esempio, il servizio contiene il codice <xref:System.Messaging> necessario per verificare l'esistenza della coda e crearla se necessario.Il nome della coda viene letto dal file di configurazione utilizzando la coda <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.  
+ Il servizio è indipendente. Quando si usa il trasporto MSMQ, la coda usata deve essere creata in anticipo. Questa operazione può essere eseguita manualmente o mediante il codice. In questo esempio, il servizio contiene il codice <xref:System.Messaging> necessario per verificare l'esistenza della coda e crearla se necessario. Il nome della coda viene letto dal file di configurazione utilizzando la coda <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.  
   
 ```  
 // Host the service within this EXE console application.  
@@ -122,9 +124,9 @@ public static void Main()
 }  
 ```  
   
- Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione.L'endpoint per il servizio è definito nella sezione system.serviceModel del file di configurazione e specifica l'associazione `netMsmqBinding`.  
+ Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione. L'endpoint per il servizio è definito nella sezione system.serviceModel del file di configurazione e specifica l'associazione `netMsmqBinding`.  
   
-```  
+```xml  
 <appSettings>  
   <!-- Use appSetting to configure MSMQ queue name. -->  
   <add key="queueName" value=".\private$\ServiceModelSamplesSession" />  
@@ -144,10 +146,9 @@ public static void Main()
   </services>  
   ...  
 <system.serviceModel>  
-  
 ```  
   
- Il client crea un ambito della transazione.Tutti i messaggi nella sessione vengono inviati alla coda nell'ambito della transazione, facendo in modo che venga trattata come un unità atomica nella quale tutti i messaggi riescono o meno.Il commit della transazione viene eseguito chiamando <xref:System.Transactions.TransactionScope.Complete%2A>.  
+ Il client crea un ambito di transazione. Tutti i messaggi nella sessione vengono inviati alla coda nell'ambito della transazione, facendo in modo che venga trattata come un unità atomica nella quale tutti i messaggi riescono o meno. Il commit della transazione viene eseguito chiamando <xref:System.Transactions.TransactionScope.Complete%2A>.  
   
 ```  
 //Create a transaction scope.  
@@ -176,13 +177,12 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     // Complete the transaction.  
     scope.Complete();  
 }  
-  
 ```  
   
 > [!NOTE]
->  È possibile utilizzare solo una transazione per tutti i messaggi della sessione e tutti i messaggi della sessione devono essere inviati prima di eseguire il commit della transazione.La chiusura del client chiude la sessione.Pertanto, il client deve essere chiuso prima che la transazione sia completata per inviare tutti i messaggi della sessione alla coda.  
+>  È possibile utilizzare solo una transazione per tutti i messaggi della sessione e tutti i messaggi della sessione devono essere inviati prima di eseguire il commit della transazione. La chiusura del client chiude la sessione. Pertanto, il client deve essere chiuso prima che la transazione sia completata per inviare tutti i messaggi della sessione alla coda.  
   
- Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client.È possibile osservare il servizio che riceve i messaggi dal client.Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.Notare che essendo utilizzato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente.È possibile eseguire il client, arrestarlo e quindi avviare il servizio; i messaggi verranno comunque ricevuti.  
+ Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client. È possibile osservare il servizio che riceve i messaggi dal client. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client. Notare che essendo usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente. È possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi.  
   
  Nel client.  
   
@@ -215,21 +215,21 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
         Order status: Pending  
 ```  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione C\#, C\+\+ o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Per compilare l'edizione in c#, C++ o Visual Basic .NET della soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio su una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- Per impostazione predefinita con l'associazione <xref:System.ServiceModel.NetMsmqBinding>, la sicurezza del trasporto è abilitata.Sono disponibili due proprietà appropriate per la sicurezza del trasporto MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`.Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ.Se si esegue questo esempio in un computer che non soddisfa questi criteri si riceve un errore.  
+ Per impostazione predefinita con l'associazione <xref:System.ServiceModel.NetMsmqBinding>, la sicurezza del trasporto è abilitata. Esistono due proprietà pertinenti per la sicurezza del trasporto MSMQ, ovvero <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ. Se si esegue questo esempio in un computer che non soddisfà questi criteri si riceve un errore.  
   
-### Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro o privo di integrazione con Active Directory  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro o privo di integrazione con Active Directory  
   
 1.  Se il computer non appartiene a un dominio o non è installato con l'integrazione di Active Directory, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su `None` come illustrato nella configurazione di esempio seguente.  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <services>  
         <service name="Microsoft.ServiceModel.Samples.OrderTakerService"  
@@ -274,9 +274,9 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
       </system.serviceModel>  
     ```  
   
-2.  Verificare di modificare la configurazione nel server e nel client prima di eseguire l'esempio.  
+2.  Assicurarsi di modificare la configurazione sul server e sul client prima di eseguire l'esempio.  
   
     > [!NOTE]
     >  L'impostazione della modalità di sicurezza su `None` è equivalente all'impostazione di <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> e della sicurezza di `Message` su `None`.  
   
-## Vedere anche
+## <a name="see-also"></a>Vedere anche

@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - performance, .NET Framework applications
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c67018df35816b38828e548a88d25efe16d6a15a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2e21b1f92c6694c6572d4651e94964e5d2d93c51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contatori di prestazioni in .NET Framework
 Questo argomento fornisce un elenco di contatori delle prestazioni disponibili in [Performance Monitor](http://technet.microsoft.com/library/cc749249.aspx).  
@@ -137,7 +130,7 @@ Questo argomento fornisce un elenco di contatori delle prestazioni disponibili i
 |**Raccolte di generazione 0**|Visualizza il numero di volte in cui gli oggetti di generazione 0 (ovvero quelli allocati più di recente) vengono sottoposti a Garbage Collection dall'avvio dell'applicazione.<br /><br /> Una Garbage Collection di generazione 0 si verifica quando la memoria disponibile nella generazione 0 non è sufficiente per soddisfare una richiesta di allocazione. Questo contatore viene incrementato alla fine di una Garbage Collection di generazione 0. Le Garbage Collection con generazioni superiori includono tutte quelle con generazioni inferiori. Questo contatore viene incrementato in modo esplicito quando si verifica una Garbage Collection di generazione superiore (1 o 2).<br /><br /> Questo contatore visualizza 'ultimo valore osservato. Il valore del contatore **_Global\_** non è preciso e deve essere ignorato.|  
 |**Raccolte di generazione 1**|Visualizza il numero di volte in cui che gli oggetti di generazione 1 vengono sottoposti a Garbage Collection dall'avvio dell'applicazione.<br /><br /> Il contatore viene incrementato alla fine di una Garbage Collection di generazione 1. Le Garbage Collection con generazioni superiori includono tutte quelle con generazioni inferiori. Questo contatore viene incrementato in modo esplicito quando si verifica una Garbage Collection di generazione superiore (2).<br /><br /> Questo contatore visualizza 'ultimo valore osservato. Il valore del contatore **_Global\_** non è preciso e deve essere ignorato.|  
 |**Raccolte di generazione 2**|Visualizza il numero di volte in cui gli oggetti di generazione 2 vengono sottoposti a Garbage Collection dall'avvio dell'applicazione. Il contatore viene incrementato alla fine di una Garbage Collection di generazione 2 (denominata anche Garbage Collection completa).<br /><br /> Questo contatore visualizza 'ultimo valore osservato. Il valore del contatore **_Global\_** non è preciso e deve essere ignorato.|  
-|**GC indotti**|Visualizza il numero massimo di volte in cui è stata eseguita una Garbage Collection a causa di una chiamata esplicita a <xref:System.GC.Collect%2A?displayProperty=fullName>. È buona norma consentire al Garbage Collector di regolare la frequenza delle proprie raccolte.|  
+|**GC indotti**|Visualizza il numero massimo di volte in cui è stata eseguita una Garbage Collection a causa di una chiamata esplicita a <xref:System.GC.Collect%2A?displayProperty=nameWithType>. È buona norma consentire al Garbage Collector di regolare la frequenza delle proprie raccolte.|  
 |**Oggetti bloccati**|Visualizza il numero di oggetti bloccati rilevati nell'ultima Garbage Collection. Un oggetto bloccato è un oggetto che non può essere spostato all'interno della memoria tramite il Garbage Collector. Tramite questo contatore si tiene traccia degli oggetti bloccati solo negli heap raccolti tramite il Garbage Collector. Ad esempio, una Garbage Collection di generazione 0 causa l'enumerazione degli oggetti bloccati solo nell'heap di generazione 0.|  
 |**Blocchi Sink in uso**|Viene visualizzato il numero corrente di blocchi di sincronizzazione in uso. I blocchi di sincronizzazione sono strutture di dati per oggetto allocate per memorizzare le informazioni di sincronizzazione. Sono contenuti riferimenti deboli a oggetti gestiti e devono essere analizzati dal Garbage Collector. I blocchi di sincronizzazione non si limitano all'archiviazione di informazioni sulla sincronizzazione, ma possono archiviare anche i metadati di interoperabilità COM. Questo contatore indica problemi di prestazioni dovuti a un uso intensivo di primitive di sincronizzazione.|  
 |**Totale byte di cui è stato eseguito il commit**|Visualizza la quantità di memoria virtuale, in byte, di cui il Garbage Collector ha attualmente eseguito il commit. La memoria con commit è la memoria fisica per cui è stato riservato spazio nel file di paging su disco.|  
@@ -267,6 +260,5 @@ for (int i = 0; i < Array.Length; i++)
 |**Totale controlli runtime**|Visualizza il numero totale di controlli di sicurezza per l'accesso di codice di runtime eseguiti dall'avvio dell'applicazione. I controlli di sicurezza per l'accesso di codice di runtime vengono eseguiti quando un chiamante richiede una particolare autorizzazione. Il controllo di runtime viene eseguito su tutte le chiamate del chiamante ed esamina lo stack del thread corrente del chiamante. Se usato con il contatore **Profondità stack**, questo contatore indica la riduzione delle prestazioni che si verifica per i controlli di sicurezza.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contatori delle prestazioni](../../../docs/framework/debug-trace-profile/performance-counters.md)   
+ [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  [Runtime Profiling](../../../docs/framework/debug-trace-profile/runtime-profiling.md) (Profilatura di runtime)
-

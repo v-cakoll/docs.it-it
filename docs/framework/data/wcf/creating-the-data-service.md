@@ -1,23 +1,29 @@
 ---
-title: "Creazione del servizio dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creazione del servizio dati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 37d32d938f49d0767594e0f141d5a463ad5fc95f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Creazione del servizio dati
-In questa attività verrà creato un servizio dati di esempio che usa [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] per esporre un feed di [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] basato sul database Northwind di esempio. L'attività è costituita dai passaggi principali seguenti:  
+# <a name="creating-the-data-service"></a>Creazione del servizio dati
+In questa attività si creerà un servizio dati di esempio che utilizza [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] per esporre un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed basato sul database di esempio Northwind. L'attività è costituita dai passaggi principali seguenti:  
   
 1.  Creazione di un'applicazione Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
@@ -28,68 +34,68 @@ In questa attività verrà creato un servizio dati di esempio che usa [!INCLUDE[
 4.  Abilitazione dell'accesso al servizio dati.  
   
 > [!NOTE]
->  L'applicazione Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] creata al completamento di questa attività viene eseguita sul server di sviluppo di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] disponibile in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  Il server di sviluppo di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] supporta solo l'accesso dal computer locale.  Per semplificare inoltre il test del servizio dati e la risoluzione dei problemi relativi durante lo sviluppo, eseguire l'applicazione che ospita il servizio dati tramite Internet Information Services \(IIS\).  Per altre informazioni, vedere [Procedura: sviluppare un servizio WCF in esecuzione in IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
+>  L'applicazione Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] creata al completamento di questa attività viene eseguita sul server di sviluppo di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] disponibile in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Il server di sviluppo di [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] supporta solo l'accesso dal computer locale. Per semplificare inoltre il test del servizio dati e la risoluzione dei problemi relativi durante lo sviluppo, eseguire l'applicazione che ospita il servizio dati tramite Internet Information Services (IIS). Per altre informazioni, vedere [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
   
-### Per creare l'applicazione Web ASP.NET  
+### <a name="to-create-the-aspnet-web-application"></a>Per creare l'applicazione Web ASP.NET  
   
-1.  In [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] scegliere **Nuovo** dal menu **File**, quindi selezionare **Progetto**.  
+1.  In [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]via il **File** dal menu **nuovo**, quindi selezionare **progetto**.  
   
-2.  Nella finestra di dialogo **Nuovo progetto**, in [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] selezionare il modello **Web**, quindi **Applicazione Web ASP.NET**.  
+2.  Nel **nuovo progetto** in presenza di una finestra di dialogo [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] selezionare il **Web** modello e quindi selezionare **applicazione Web ASP.NET**.  
   
     > [!NOTE]
     >  Se si usa [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Web Developer, sarà necessario creare un nuovo sito Web anziché una nuova applicazione Web.  
   
-3.  Digitare `NorthwindService` come nome del progetto.  
+3.  Tipo `NorthwindService` come il nome del progetto.  
   
 4.  Fare clic su **OK**.  
   
-5.  \(Opzione facoltativa\) Specificare un numero specifico di porta per l'applicazione Web.  Nota: nella parte restante della guida rapida viene usato il numero di porta `12345`.  
+5.  (Opzione facoltativa) Specificare un numero specifico di porta per l'applicazione Web. Nota: nella parte restante della guida rapida viene usato il numero di porta `12345`.  
   
-    1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] creato, quindi scegliere **Proprietà**.  
+    1.  In **Esplora soluzioni**, il nome del mouse il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] progetto appena creato e quindi fare clic su **proprietà**.  
   
-    2.  Selezionare la scheda **Web** e impostare il valore della casella di testo **Porta specifica** su `12345`.  
+    2.  Selezionare il **Web** scheda e impostare il valore della **porta specifica** casella di testo `12345`.  
   
-### Per definire il modello di dati  
+### <a name="to-define-the-data-model"></a>Per definire il modello di dati  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], quindi scegliere **Aggiungi nuovo elemento**.  
+1.  In **Esplora**, fare doppio clic sul nome del [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] del progetto e quindi fare clic su **Aggiungi nuovo elemento.**  
   
-2.  Nella finestra di dialogo **Aggiungi nuovo elemento** fare clic sul modello **Dati**, quindi selezionare **ADO.NET Entity Data Model**.  
+2.  Nel **Aggiungi nuovo elemento** la finestra di dialogo, fare clic su di **dati** modello e quindi selezionare **ADO.NET Entity Data Model**.  
   
-3.  Digitare `Northwind.edmx` come nome del modello di dati.  
+3.  Per il nome del modello di dati, digitare `Northwind.edmx`.  
   
-4.  Nella Procedura guidata [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] selezionare **Genera da database**, quindi fare clic su **Avanti**.  
+4.  Nel [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] guidata, selezionare **genera da Database**, quindi fare clic su **Avanti**.  
   
-5.  Connettere il modello di dati al database effettuando uno dei passaggi seguenti, quindi fare clic su **Avanti**:  
+5.  Connettere il modello di dati per il database eseguendo una delle operazioni seguenti e quindi fare clic su **Avanti**:  
   
-    -   Se non si dispone di una connessione al database già configurata, fare clic su **Nuova connessione** e creare una nuova connessione.  Per altre informazioni, vedere [Procedura: creare connessioni a database di SQL Server](http://go.microsoft.com/fwlink/?LinkId=123631).  A questa istanza di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] deve essere collegato il database Northwind di esempio.  
+    -   Se non si dispone di una connessione al database già configurata, fare clic su **nuova connessione** e creare una nuova connessione. Per ulteriori informazioni, vedere [procedura: creare connessioni ai database di SQL Server](http://go.microsoft.com/fwlink/?LinkId=123631). A questa istanza di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] deve essere collegato il database Northwind di esempio.  
   
-         \- oppure \-  
+         \- oppure -  
   
     -   Se si dispone di una connessione al database già configurata per connettersi al database Northwind, selezionarla dall'elenco delle connessioni.  
   
 6.  Nella pagina finale della procedura guidata, selezionare le caselle di controllo relative a tutte le tabelle nel database e deselezionare le caselle di controllo relative a visualizzazioni e stored procedure.  
   
-7.  Fare clic su **Fine** per chiudere la procedura guidata.  
+7.  Fare clic su **fine** per chiudere la procedura guidata.  
   
     > [!NOTE]
-    >  Questo modello di dati generato espone le proprietà della chiave esterna sui tipi di entità.  Poiché i modelli di dati creati usando [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 non includono tali proprietà,  è necessario aggiornare le classi del servizio dati client di qualsiasi applicazione client creata per accedere al servizio dati Northwind creato usando [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 prima di tentare di accedere alla versione corrente del servizio dati Northwind.  
+    >  Questo modello di dati generato espone le proprietà della chiave esterna sui tipi di entità. Poiché i modelli di dati creati usando [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 non includono tali proprietà, è necessario aggiornare le classi del servizio dati client di qualsiasi applicazione client creata per accedere al servizio dati Northwind creato usando [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 prima di tentare di accedere alla versione corrente del servizio dati Northwind.  
   
-### Per creare il servizio dati  
+### <a name="to-create-the-data-service"></a>Per creare il servizio dati  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], quindi scegliere **Aggiungi nuovo elemento**.  
+1.  In **Esplora**, fare doppio clic sul nome del [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] del progetto e quindi fare clic su **Aggiungi nuovo elemento**.  
   
-2.  Nella finestra di dialogo **Aggiungi nuovo elemento** selezionare **Servizio dati WCF**.  
+2.  Nel **Aggiungi nuovo elemento** nella finestra di dialogo **servizio dati WCF**.  
   
-3.  Digitare `Northwind` come nome del servizio.  
+3.  Per il nome del servizio, digitare `Northwind`.  
   
-     In [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]Visual Studio verranno creati i file del markup XML e del codice per il nuovo servizio.  Per impostazione predefinita, verrà visualizzata la finestra dell'editor del codice.  In **Esplora soluzioni** il servizio risulterà denominato Northwind con estensione svc.cs o svc.vb.  
+     In [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]Visual Studio verranno creati i file del markup XML e del codice per il nuovo servizio. Per impostazione predefinita, verrà visualizzata la finestra dell'editor del codice. In **Esplora**, il servizio risulterà denominato Northwind con estensione. svc.cs o. svc.  
   
-4.  Nel codice per il servizio dati sostituire il commento `/* TODO: put your data source class name here */` nella definizione della classe che definisce il servizio dati con il tipo del contenitore di entità del modello di dati, che in questo caso corrisponde a `NorthwindEntities`.  La definizione di classe dovrà essere analoga alla seguente:  
+4.  Nel codice per il servizio dati sostituire il commento `/* TODO: put your data source class name here */` nella definizione della classe che definisce il servizio dati con il tipo del contenitore di entità del modello di dati, che in questo caso corrisponde a `NorthwindEntities`. La definizione di classe dovrà essere analoga alla seguente:  
   
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]  
   
-### Per abilitare l'accesso alle risorse del servizio dati  
+### <a name="to-enable-access-to-data-service-resources"></a>Per abilitare l'accesso alle risorse del servizio dati  
   
 1.  Nel codice per il servizio dati sostituire il codice segnaposto nella funzione `InitializeService` con il codice seguente:  
   
@@ -99,12 +105,12 @@ In questa attività verrà creato un servizio dati di esempio che usa [!INCLUDE[
      In questo modo i client autorizzati saranno in grado di accedere in lettura e scrittura alle risorse per i set di entità specificati.  
   
     > [!NOTE]
-    >  I client che possono accedere all'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] saranno inoltre in grado di accedere alle risorse esposte dal servizio dati.  Per impedire l'accesso non autorizzato alle risorse in un servizio dati di produzione, è inoltre necessario proteggere l'applicazione stessa.  Per altre informazioni, vedere [Protezione di WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
+    >  I client che possono accedere all'applicazione [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] saranno inoltre in grado di accedere alle risorse esposte dal servizio dati. Per impedire l'accesso non autorizzato alle risorse in un servizio dati di produzione, è inoltre necessario proteggere l'applicazione stessa. Per altre informazioni, vedere [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
   
-## Passaggi successivi  
- La creazione di un nuovo servizio dati che espone un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] basato sul database Northwind di esempio è stata completata ed è stato abilitato l'accesso al feed per i client che dispongono delle autorizzazioni necessarie nell'applicazione Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  A questo punto si avvierà il servizio dati da [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] e si effettuerà l'accesso al feed di [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] inviando richieste GET HTTP attraverso un browser.  
+## <a name="next-steps"></a>Passaggi successivi  
+ Creato un nuovo servizio dati che espone un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed basato sul database di esempio Northwind ed è stato abilitato l'accesso al feed per i client che dispone delle autorizzazioni per il [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] applicazione Web. Successivamente, si avvia il servizio dati da [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] e si accederà il [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed inviando richieste GET HTTP attraverso un Web browser:  
   
- [Accesso al servizio da un Web browser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
+ [Accesso al servizio da un Web Browser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   
-## Vedere anche  
- [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/it-it/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a>Vedere anche  
+ [Strumenti di ADO.NET Entity Data Model](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

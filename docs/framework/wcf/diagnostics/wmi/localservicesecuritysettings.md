@@ -1,25 +1,28 @@
 ---
-title: "LocalServiceSecuritySettings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: LocalServiceSecuritySettings
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 74eff3a6193e6507c1049accf4c43c3ecc8d30a6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# LocalServiceSecuritySettings
+# <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings
 LocalServiceSecuritySettings  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class LocalServiceSecuritySettings  
@@ -41,115 +44,115 @@ class LocalServiceSecuritySettings
 };  
 ```  
   
-## Metodi  
+## <a name="methods"></a>Metodi  
  La classe LocalServiceSecuritySettings non definisce metodi.  
   
-## Proprietà  
+## <a name="properties"></a>Proprietà  
  La classe LocalServiceSecuritySettings dispone delle proprietà seguenti:  
   
-### DetectReplays  
+### <a name="detectreplays"></a>DetectReplays  
  Tipo di dati: booleano  
   
- Tipo di accesso: in sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Valore booleano che specifica se gli attacchi di tipo replay contro il canale vengono rilevati e gestiti automaticamente.  
   
-### InactivityTimeout  
+### <a name="inactivitytimeout"></a>InactivityTimeout  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Numero massimo di sessioni di sicurezza in sospeso supportate dal servizio.  
   
-### IssuedCookieLifetime  
+### <a name="issuedcookielifetime"></a>IssuedCookieLifetime  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  TimeSpan che specifica la durata per tutti i nuovi cookie di sicurezza.  
   
-### MaxCachedCookies  
+### <a name="maxcachedcookies"></a>MaxCachedCookies  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Numero massimo di cookie che possono essere memorizzati nella cache.  
   
-### MaxClockSkew  
+### <a name="maxclockskew"></a>MaxClockSkew  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  TimeSpan che specifica la differenza massima di tempo tra gli orologi di sistema delle due parti che stanno comunicando.  
   
-### MaxPendingSessions  
+### <a name="maxpendingsessions"></a>MaxPendingSessions  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Numero massimo di connessioni in sospeso nel servizio.  
   
-### MaxStatefulNegotiations  
+### <a name="maxstatefulnegotiations"></a>MaxStatefulNegotiations  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Numero di negoziazioni di sicurezza che possono essere attive contemporaneamente.  
   
-### NegotiationTimeout  
+### <a name="negotiationtimeout"></a>NegotiationTimeout  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  TimeSpan che specifica la durata massima della fase di negoziazione della protezione tra server e client.  
   
-### ReconnectTransportOnFailure  
+### <a name="reconnecttransportonfailure"></a>ReconnectTransportOnFailure  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
- Valore booleano che specifica se le connessioni che utilizzano WS\-Reliable Messaging tentano la riconnessione in caso di errori del trasporto.  
+ Valore booleano che specifica se le connessioni che utilizzano WS-Reliable Messaging tentano la riconnessione in caso di errori del trasporto.  
   
-### ReplayCacheSize  
+### <a name="replaycachesize"></a>ReplayCacheSize  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Numero di parametri nonce utilizzato per il rilevamento degli attacchi di tipo replay.  
   
-### ReplayWindow  
+### <a name="replaywindow"></a>ReplayWindow  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  TimeSpan che specifica la durata di validità dei singoli nonce dei messaggi.  
   
-### SessionKeyRenewalInterval  
+### <a name="sessionkeyrenewalinterval"></a>SessionKeyRenewalInterval  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Timespan che specifica l'intervallo di tempo dopo il quale l'iniziatore rinnova la chiave per la sessione di sicurezza.  
   
-### SessionKeyRolloverInterval  
+### <a name="sessionkeyrolloverinterval"></a>SessionKeyRolloverInterval  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  TimeSpan che specifica l'intervallo di tempo per il quale la chiave della sessione precedente è valida nei messaggi in arrivo durante un rinnovo della chiave.  
   
-### TimestampValidityDuration  
+### <a name="timestampvalidityduration"></a>TimestampValidityDuration  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  TimeSpan che specifica il periodo di validità di un timestamp.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Spazio dei nomi|Definito in root\ServiceModel|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

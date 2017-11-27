@@ -1,52 +1,55 @@
 ---
-title: "XAML Security Considerations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "security [XAML Services], .NET XAML services"
-  - "XAML security [XAML Services]"
+title: Considerazioni sulla sicurezza in XAML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [XAML Services], .NET XAML services
+- XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 59d0b835a0de3e84e2cb6e77ed368511bfe21b19
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# XAML Security Considerations
-In questo argomento vengono illustrate le procedure consigliate per la sicurezza nelle applicazioni in caso di utilizzo di XAML e dell'API dei servizi XAML di .NET Framework.  
+# <a name="xaml-security-considerations"></a>Considerazioni sulla sicurezza in XAML
+Questo argomento descrive le procedure consigliate per la protezione delle applicazioni quando si usa XAML e API dei servizi XAML di .NET Framework.  
   
-## XAML non attendibile nelle applicazioni  
- Nel senso più generale, il codice XAML non attendibile è qualsiasi origine XAML non inclusa o generata in modo specifico dall'applicazione.  
+## <a name="untrusted-xaml-in-applications"></a>XAML non attendibili nelle applicazioni  
+ In senso più generale, XAML non attendibili è qualsiasi origine XAML che l'applicazione non specificamente includono o generare.  
   
- Il codice XAML compilato o archiviato come risorsa di tipo `resx` all'interno di un assembly attendibile e firmato non è considerato non attendibile in modo implicito.  È possibile considerare attendibile il codice XAML allo stesso modo in cui si considera attendibile l'assembly nel suo complesso.  Nella maggior parte dei casi, l'unica preoccupazione sono gli aspetti relativi all'attendibilità del codice XAML separato, che è un'origine XAML caricata da un flusso o altro IO.  Lo XAML separato non è una componente o una funzionalità specifica di un modello dell'applicazione con un'infrastruttura di distribuzione e creazione di pacchetti.  Tuttavia, è possibile che un assembly implementi un comportamento che prevede il caricamento di XAML separato.  
+ Il codice XAML viene compilato o archiviato come un `resx`-tipo di risorsa all'interno di un assembly attendibile e firmato non è considerato non attendibile. È possibile considerare attendibile il codice XAML in quanto si ritiene attendibile l'assembly nel suo complesso. Nella maggior parte dei casi, si teme solo con gli aspetti di attendibilità di XAML separato, ovvero un'origine XAML che è stato caricato da un flusso o un altro IO. XAML separato non è un componente specifico o una funzionalità di un modello di applicazione con una distribuzione e l'infrastruttura di creazione del pacchetto. Tuttavia, un assembly può implementare un comportamento che prevede il caricamento di XAML separato.  
   
- A livello generale, è necessario gestire il codice XAML non attendibile come se si trattasse di codice non attendibile.  Utilizzare il sandboxing o altre metafore per impedire il possibile accesso di XAML non attendibile al codice attendibile.  
+ Per XAML non attendibili, devi considerarlo in genere lo stesso come se fosse codice non attendibile. Utilizzare il sandboxing o altre metafore per impedire l'accesso al codice attendibile XAML probabilmente non attendibile.  
   
- La natura delle funzionalità XAML concede al codice XAML il diritto di costruire oggetti e impostare le proprietà corrispondenti.  Queste funzionalità includono inoltre l'accesso a convertitori di tipi, il mapping e l'accesso ad assembly nel dominio dell'applicazione mediante estensioni di markup, blocchi `x:Code` e così via.  
+ La natura della funzionalità di XAML fornisce il codice XAML il diritto di creare oggetti e impostare le relative proprietà. Queste funzionalità includono inoltre l'accesso a convertitori di tipi, mapping e l'accesso agli assembly nel dominio dell'applicazione, utilizzando le estensioni di markup, `x:Code` blocchi e così via.  
   
- Oltre alle funzionalità a livello di linguaggio, XAML viene utilizzato per la definizione dell'interfaccia utente in molte tecnologie.  Il caricamento di codice XAML non attendibile può significare il caricamento di un'interfaccia utente di spoofing dannosa.  
+ Oltre alle relative funzionalità, a livello di linguaggio XAML viene utilizzato per la definizione dell'interfaccia utente in numerose tecnologie. Il caricamento di XAML non attendibili potrebbe comportare il caricamento di un'interfaccia utente di spoofing dannosa.  
   
-## Condivisione del contesto tra reader e writer  
- L'architettura dei servizi XAML di .NET Framework per reader XAML e writer XAML richiede spesso la condivisione di un reader XAML per un writer XAML oppure un contesto dello schema XAML condiviso.  La condivisione di oggetti o contesti potrebbe essere necessaria quando si scrive la logica del ciclo del nodo XAML o si fornisce un percorso di salvataggio personalizzato.  Non è necessario condividere le istanze del reader XAML, il contesto dello schema XAML non predefinito o le impostazioni per le classi di reader\/writer XAML tra codice attendibile e non attendibile.  
+## <a name="sharing-context-between-readers-and-writers"></a>Condivisione del contesto tra lettori e writer  
+ L'architettura di servizi XAML di .NET Framework per i reader XAML e writer XAML spesso richiede che la condivisione di un reader XAML in un writer XAML, o un contesto dello schema XAML condiviso. La condivisione di oggetti o contesti potrebbe essere necessaria se si scrive logica di ciclo di nodi XAML o fornendo un oggetto personalizzato di percorso di salvataggio. Non è necessario condividere le istanze del reader XAML, il contesto dello schema XAML non predefinito o impostazioni per le classi di lettura/scrittura XAML tra codice attendibile e.  
   
- La maggior parte degli scenari e delle operazioni che comportano la scrittura di oggetti XAML per il supporto di tipi basati su CLR può utilizzare il contesto dello schema XAML predefinito.  Il contesto dello schema XAML predefinito non include in modo esplicito impostazioni che potrebbero compromettere l'attendibilità totale.  È pertanto possibile condividere il contesto in modo sicuro tra componenti reader\/writer XAML non attendibili.  In questo caso, è tuttavia consigliabile mantenere tali reader e writer in ambiti <xref:System.AppDomain> separati, con uno di questi destinato in modo specifico a contesti di attendibilità parziale o creato mediante sandbox.  
+ La maggior parte degli scenari e le operazioni di relative oggetto XAML scrittura per un tipo basato su CLR di supporto sufficiente utilizzare il contesto dello schema XAML predefinito. In modo esplicito il contesto dello schema XAML predefinito non include impostazioni che potrebbero compromettere l'attendibilità totale. In questo modo è possibile condividere contesto tra i componenti di lettura/scrittura attendibili e XAML. Tuttavia, se si esegue questa operazione, è comunque consigliabile mantenere tali reader e writer in separata <xref:System.AppDomain> ambiti, con uno di essi in modo specifico destinato/in modalità sandbox di attendibilità parziale.  
   
-## Spazi dei nomi XAML e attendibilità degli assembly  
- La sintassi non qualificata di base e la definizione della modalità di interpretazione da parte di XAML di un mapping dello spazio dei nomi XAML personalizzato in un assembly non fanno distinzione tra un assembly attendibile e uno non attendibile caricato nel dominio dell'applicazione.  È pertanto tecnicamente possibile che un assembly non attendibile effettui lo spoofing di un mapping dello spazio dei nomi XAML di un assembly attendibile e acquisisca l'oggetto dichiarato e le informazioni sulle proprietà di un'origine XAML.  Se si dispone dei requisiti di sicurezza per evitare questa situazione, il mapping dello spazio dei nomi XAML desiderato potrà essere eseguito mediante una delle tecniche seguenti:  
+## <a name="xaml-namespaces-and-assembly-trust"></a>Spazi dei nomi XAML e attendibilità degli Assembly  
+ La sintassi non qualificata di base e la definizione per l'interpretazione di XAML in un mapping dello spazio dei nomi XAML personalizzato a un assembly non viene fatta distinzione tra un assembly attendibile e come caricato nel dominio applicazione. Pertanto, è tecnicamente possibile per un assembly non attendibile effettuare lo spoofing di mapping dello spazio dei nomi XAML previsto dell'assembly attendibili e acquisire l'oggetto dichiarato di un'origine XAML e informazioni sulle proprietà. Se si dispone di requisiti di sicurezza per evitare questa situazione, previsto mapping dello spazio dei nomi XAML deve essere reso utilizzando una delle tecniche seguenti:  
   
--   Utilizzare un nome di assembly completo con nome sicuro in qualsiasi mapping dello spazio dei nomi XAML eseguito dal codice XAML dell'applicazione.  
+-   Utilizzare un nome completo dell'assembly con nome sicuro il mapping dello spazio dei nomi XAML apportate da XAML dell'applicazione.  
   
--   Limitare il mapping di assembly a un set di assembly di riferimento fisso mediante la costruzione di un oggetto <xref:System.Xaml.XamlSchemaContext> specifico per reader XAML e writer di oggetti XAML.  Vedere <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
+-   Limitare il mapping a un set predefinito di assembly di riferimento, creando un oggetto specifico di assembly <xref:System.Xaml.XamlSchemaContext> per il codice XAML reader e XAML writer di oggetti. Vedere <xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>.  
   
-## Mapping di tipi XAML e accesso al sistemi di tipi  
- XAML supporta un sistema di tipi specifico che per molti versi è simile al modo in cui CLR implementa il sistema di tipi CLR.  Tuttavia, per determinati aspetti di compatibilità dei tipi in cui vengono prese decisioni sull'attendibilità di un tipo in base alle informazioni sui tipi corrispondenti, è necessario fare riferimento alle informazioni sui tipi disponibili nei tipi di supporto CLR.  Questo dipende dal fatto che alcune delle funzionalità di segnalazione specifiche del sistema di tipi XAML vengono lasciate aperte come metodi virtuali e non sono pertanto completamente sottoposte al controllo delle implementazioni dei servizi XAML di .NET Framework originali.  Questi punti di flessibilità esistono perché il sistema di tipi XAML è estensibile, consentendo di contrapporre l'estensibilità di XAML e delle possibili strategie di mapping dei tipi alternative corrispondenti all'implementazione supportata da CLR predefinita e al contesto dello schema XAML predefinito.  Per ulteriori informazioni, vedere le note specifiche relative alla diverse proprietà di <xref:System.Xaml.XamlType> e <xref:System.Xaml.XamlMember>.  
+## <a name="xaml-type-mapping-and-type-system-access"></a>Mapping di tipi XAML e tipo di accesso di sistema  
+ XAML supporta il proprio sistema di tipo, che in molti modi è un peer di come CLR implementa il sistema di tipi CLR. Tuttavia, per alcuni aspetti di compatibilità dei tipi in cui si sono decisioni sull'attendibilità un tipo in base alle informazioni relative al tipo, è necessario fare riferimento le informazioni sui tipi in CLR a tipi di supporto. In questo modo alcune delle funzionalità di creazione di report specifiche del sistema di tipi XAML vengono lasciate aperte come metodi virtuali e di conseguenza, non sono completamente sotto il controllo delle implementazioni di servizi XAML di .NET Framework originale. Questi punti di estendibilità esistono perché il sistema di tipi XAML è estensibile, in modo che corrisponda l'estensibilità di XAML e relativo strategie di mapping dei tipi alternative possibili e l'implementazione CLR di backup predefinita e il contesto dello schema XAML predefinito. Per ulteriori informazioni, vedere le note specifiche per diverse proprietà di <xref:System.Xaml.XamlType> e <xref:System.Xaml.XamlMember>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.Xaml.Permissions.XamlAccessLevel>

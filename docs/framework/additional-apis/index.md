@@ -1,12 +1,11 @@
 ---
-title: Librerie di classi e API aggiuntive | Microsoft Docs
+title: Librerie di classi e API aggiuntive
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: .net-framework-oob
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,23 +14,21 @@ helpviewer_keywords:
 - .NET Framework out-of-band releases
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b53b8acc2a6c56db6a9d8a9b7c685a2d400a53e1
-ms.openlocfilehash: 34815268b707aa70d174a1bbc04c32276db8412d
-ms.contentlocale: it-it
-ms.lasthandoff: 05/02/2017
-
+ms.openlocfilehash: e3bb7a7c53cbca8bbd4026b46ce59589cef22382
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="additional-class-libraries-and-apis"></a>Librerie di classi e API aggiuntive
 
 Poiché .NET Framework è in costante evoluzione, vengono rilasciate nuove funzionalità fuori programma (OOB) per migliorare lo sviluppo multipiattaforma o introdurre nuove funzionalità in anteprima per i clienti. Questo argomento elenca i progetti fuori banda (OOB) per i quali viene fornita la documentazione.  
   
-Inoltre, alcune librerie sono destinate a piattaforme o implementazioni specifiche di .NET Framework. Ad esempio, la classe <xref:System.Text.CodePagesEncodingProvider> rende disponibili le codifiche della tabella codici per le app UWP sviluppate con .NET Framework. Questo argomento include anche un elenco di queste librerie.  
+Inoltre, alcune librerie sono destinate a piattaforme o implementazioni specifiche di .NET Framework. Ad esempio, il <xref:System.Text.CodePagesEncodingProvider> rende codifiche delle tabelle codici di codice disponibili per App UWP sviluppata con .NET Framework. Questo argomento include anche un elenco di queste librerie.  
   
 ## <a name="oob-projects"></a>Progetti OOB
   
@@ -46,19 +43,26 @@ Inoltre, alcune librerie sono destinate a piattaforme o implementazioni specific
   
 | Progetto | Descrizione |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Estende la classe <xref:System.Text.EncodingProvider> per rendere disponibili le codifiche della tabella codice per le app che usano la piattaforma UWP (Universal Windows Platform). |  
+| <xref:System.Text.CodePagesEncodingProvider> | Estende la <xref:System.Text.EncodingProvider> classe per rendere disponibili per le applicazioni che usano la piattaforma Windows universale codifiche delle tabelle codici di codice. |  
   
 ## <a name="private-apis"></a>API private  
 
 Queste API supportano l'infrastruttura del prodotto e non sono progettate/supportate per l'uso direttamente dal codice.  
   
-| Nome dell'API |  
-| -------- |  
-| [Campo s_isDebuggerCheckDisabledForTestPurposes](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |  
-| [Classe DataMemberFieldEditor](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |  
-| [Classe DataMemberListEditor](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |  
+| Nome dell'API |
+| -------- |
+| [Classe System.Net.Connection](../../../docs/framework/additional-apis/connection.md) |
+| [System.Net.Connection.m\_WriteList campo](../../../docs/framework/additional-apis/m_writelist.md) |
+| [Classe System.Net.ConnectionGroup](../../../docs/framework/additional-apis/connectiongroup.md) |
+| [System.Net.ConnectionGroup.m\_ConnectionList campo](../../../docs/framework/additional-apis/m_connectionlist.md) |
+| [System.NET. HttpWebRequest. \_HttpResponse campo](../../../docs/framework/additional-apis/_httpresponse.md) |
+| [System.NET. HttpWebRequest. \_AutoRedirects campo](../../../docs/framework/additional-apis/_autoredirects.md) |
+| [System.Net.ServicePoint.m\_ConnectionGroupList campo](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
+| [System.Net.ServicePointManager.s\_ServicePointTable campo](../../../docs/framework/additional-apis/s_servicepointtable.md) |
+| [System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes campo](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |
+| [Classe System.Windows.Forms.Design.DataMemberFieldEditor](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |
+| [Classe System.Windows.Forms.Design.DataMemberListEditor](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |
   
 ## <a name="see-also"></a>Vedere anche
 
 [.NET Framework e rilascio fuori programma](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
-

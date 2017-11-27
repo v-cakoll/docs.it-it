@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Listener object types
 - listeners
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7dc94602a4bd66d74e7135b03a5d851a0a22754f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 56cbde16eff89d25960e510e7eec2424f15e51b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="trace-listeners"></a>Listener di traccia
 Quando si usa **Trace**, **Debug** e <xref:System.Diagnostics.TraceSource>, è necessario disporre di un meccanismo per la raccolta e la registrazione dei messaggi inviati. I messaggi di traccia vengono ricevuti dai *listener*. Il compito di un listener è raccogliere, archiviare e inviare messaggi di errore. I listener indirizzano l'output di tracciatura a una destinazione appropriata, ad esempio un file di log, una finestra o un file di testo.  
@@ -89,10 +85,9 @@ System.Diagnostics.Trace.Listeners.Add(
  È possibile definire listener personalizzati ereditando dalla classe di base **TraceListener** ed eseguendo l'override dei metodi della classe con metodi personalizzati. Per altre informazioni sulla creazione di listener definiti dallo sviluppatore, vedere <xref:System.Diagnostics.TraceListener> negli argomenti di riferimento su .NET Framework.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.TraceListener>   
- [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.TraceListener>  
+ [Traccia e strumentazione di applicazioni](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
  [Opzioni di traccia](../../../docs/framework/debug-trace-profile/trace-switches.md)
-

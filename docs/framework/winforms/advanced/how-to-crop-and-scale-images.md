@@ -1,46 +1,50 @@
 ---
-title: "Procedura: ritagliare e adattare immagini | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "immagini [Windows Form], ritaglio"
-  - "immagini [Windows Form], adattamento"
+title: 'Procedura: ritagliare e adattare immagini'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], cropping
+- images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8fb5d527cd1047197f370c4a9a9b1f8f33461653
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: ritagliare e adattare immagini
-Nella classe <xref:System.Drawing.Graphics> sono disponibili numerosi metodi <xref:System.Drawing.Graphics.DrawImage%2A>, alcuni dei quali dispongono di parametri dei rettangoli di origine e di destinazione utilizzabili per ritagliare e adattare le immagini.  
+# <a name="how-to-crop-and-scale-images"></a>Procedura: ritagliare e adattare immagini
+Il <xref:System.Drawing.Graphics> classe sono disponibili numerosi <xref:System.Drawing.Graphics.DrawImage%2A> metodi, alcuni dei quali dispongono di parametri dei rettangoli di origine e di destinazione che è possibile usare per ritagliare e adattare le immagini.  
   
-## Esempio  
- Nell'esempio che segue viene costruito un oggetto <xref:System.Drawing.Image> dal file su disco Apple.gif.  L'intera immagine della mela viene disegnata con le dimensioni originali.  Il codice chiama quindi il metodo <xref:System.Drawing.Graphics.DrawImage%2A> di un oggetto <xref:System.Drawing.Graphics> per disegnare parte dell'immagine della mela in un rettangolo di destinazione con dimensioni superiori a quelle dell'immagine originale.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene costruito un <xref:System.Drawing.Image> oggetto dal file di disco Apple. Il codice disegna l'immagine intera apple nelle dimensioni originali. Il codice chiama quindi il <xref:System.Drawing.Graphics.DrawImage%2A> metodo di un <xref:System.Drawing.Graphics> oggetto su cui disegnare una parte dell'immagine di apple in un rettangolo di destinazione che è maggiore dell'immagine originale.  
   
- Il metodo <xref:System.Drawing.Graphics.DrawImage%2A> consente di determinare quale parte della mela disegnare, tramite un esame del rettangolo di origine, specificato dal terzo, quarto, quinto e sesto argomento.  In questo caso la mela verrà ridotta al 75% della sua larghezza e altezza.  
+ Il <xref:System.Drawing.Graphics.DrawImage%2A> metodo determina la porzione di apple per disegnare esaminando il rettangolo di origine, specificato dal terzo, quarto, quinto e sesto argomento. In questo caso, la mela verrà ridotta al 75% della larghezza e il 75% dell'altezza.  
   
- Il metodo <xref:System.Drawing.Graphics.DrawImage%2A> consente di determinare dove e con quali dimensioni disegnare la mela ritagliata, tramite un esame del rettangolo di destinazione, specificato dal secondo argomento.  In questo caso il rettangolo di destinazione sarà più alto e più largo del 30% rispetto all'originale.  
+ Il <xref:System.Drawing.Graphics.DrawImage%2A> metodo consente di determinare la posizione in cui disegnare la mela e quali dimensioni ritagliata esaminando il rettangolo di destinazione, specificato dal secondo argomento. In questo caso, il rettangolo di destinazione è maggiore del 30% e il 30% più alto rispetto all'originale.  
   
- Nell'illustrazione che segue si visibili l'immagine originale e l'immagine adattata e ritagliata.  
+ Nella figura seguente viene illustrato l'originale e l'immagine adattata, ritagliata.  
   
  ![Ritaglio e adattamento](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")  
   
  [!code-csharp[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  Sostituire `Apple.gif` con il nome e il percorso di un file di immagine valido per il sistema.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>. Assicurarsi di sostituire `Apple.gif` con un nome di file di immagine e un percorso valido per il sistema.  
   
-## Vedere anche  
- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [Utilizzo di immagini, bitmap, icone e metafile](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

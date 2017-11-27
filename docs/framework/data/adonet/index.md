@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-ado
+ms.technology: dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 17872cf1052acd963933b2d444a638e790e2c946
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 93e631d8f8cc32943f7563495d9846a80822245f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET è un set di classi che espongono servizi di accesso ai dati per i programmatori .NET Framework. ADO.NET fornisce un set completo per la creazione di applicazioni distribuite e abilitate alla condivisione dei dati. ADO.NET è parte integrante di .NET Framework e consente l'accesso ai dati relazionali, ai dati XML e ai dati dell'applicazione. Supporta numerose esigenze di sviluppo, inclusa la creazione di client di database front-end e di oggetti business di livello intermedio, usati da applicazioni, strumenti, linguaggi o browser Internet.  
@@ -75,6 +73,5 @@ ADO.NET è un set di classi che espongono servizi di accesso ai dati per i progr
  Vengono forniti elenchi completi di tutti gli esempi e le Guide rapide relativi a .NET Framework.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)   
+ [Accesso ai dati in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
  [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
-

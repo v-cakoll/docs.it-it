@@ -1,30 +1,28 @@
 ---
-title: "&#39;Dir&#39; function must first be called with a &#39;PathName&#39; argument | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrDIR_IllegalCall"
-dev_langs: 
-  - "VB"
+title: '&#39; Dir &#39; funzione deve essere anzitutto chiamata con un &#39; Percorso &#39; argomento'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrDIR_IllegalCall
 ms.assetid: 7b5d149f-be91-4ac3-8262-86a360894e7d
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 843918fe9cb0b9dece076b5dc1373c3571588caa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &#39;Dir&#39; function must first be called with a &#39;PathName&#39; argument
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una chiamata iniziale alla funzione `Dir` non include l'argomento `PathName`.  La prima chiamata a `Dir` deve includere un `PathName`, ma le chiamate successive a `Dir` non hanno bisogno di includere parametri per recuperare l'elemento successivo.  
+# <a name="39dir39-function-must-first-be-called-with-a-39pathname39-argument"></a>&#39; Dir &#39; funzione deve essere anzitutto chiamata con un &#39; Percorso &#39; argomento
+Una chiamata iniziale per il `Dir` funzione non include il `PathName` argomento. La prima chiamata a `Dir` deve includere un `PathName`, ma le chiamate successive a `Dir` non è necessario includere parametri per recuperare l'elemento successivo.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Fornire un argomento `PathName` nella chiamata di funzione.  
+1.  Fornire un `PathName` argomento nella chiamata di funzione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.VisualBasic.FileSystem.Dir%2A>

@@ -1,55 +1,56 @@
 ---
-title: "Controllo StatusBar (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "barre di stato, creazione"
-  - "StatusBar (controllo) [Windows Form]"
+title: Controllo StatusBar (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- StatusBar control [Windows Forms]
+- status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 775d1a350075811dc02ae33efd1a6ae05328c4ff
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Controllo StatusBar (Windows Form)
+# <a name="statusbar-control-windows-forms"></a>Controllo StatusBar (Windows Form)
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.ToolStripStatusLabel> sostituisca il controllo <xref:System.Windows.Forms.StatusBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.StatusBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  
+>  Benché il controllo <xref:System.Windows.Forms.ToolStripStatusLabel> sostituisca il controllo <xref:System.Windows.Forms.StatusBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.StatusBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
   
- Il controllo <xref:System.Windows.Forms.StatusBar> di Windows Form viene utilizzato sui form come un'area, in genere visualizzata nella parte inferiore di una finestra, nella quale un'applicazione può visualizzare i vari tipi di informazioni sullo stato.  I controlli <xref:System.Windows.Forms.StatusBar> possono includere pannelli in cui sono visualizzate icone per indicare lo stato oppure una serie di icone animate per indicare l'esecuzione di un processo, ad esempio il salvataggio di un documento in Microsoft Word.  
+ Il controllo <xref:System.Windows.Forms.StatusBar> di Windows Form viene usato nei form come un'area solitamente rappresentata nella parte inferiore di una finestra, in cui possono essere visualizzati diversi tipi di informazioni sullo stato di un'applicazione. <xref:System.Windows.Forms.StatusBar>controlli possono disporre di pannelli della barra di stato in cui visualizzare le icone per indicare lo stato o una serie di icone per indicare che un processo è in corso; un'animazione ad esempio, Microsoft Word che indica che il documento viene salvato.  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sul controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  
- Vengono illustrati i concetti generali relativi al controllo <xref:System.Windows.Forms.StatusBar>, che consente agli utenti di visualizzare informazioni importanti per il controllo che ha lo stato attivo.  
+ Introduce i concetti generali relativi il <xref:System.Windows.Forms.StatusBar> controllo, che consente agli utenti di visualizzare informazioni importanti per il controllo ha lo stato attivo.  
   
- [Procedura: aggiungere pannelli a un controllo StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
- Viene spiegato come aggiungere pannelli programmabili al controllo <xref:System.Windows.Forms.StatusBar>.  
+ [Procedura: Aggiungere pannelli a un controllo StatusBar](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
+ Viene illustrato come aggiungere pannelli programmabili per il <xref:System.Windows.Forms.StatusBar> controllo.  
   
- [Procedura: individuare il pannello selezionato nel controllo StatusBar Windows Form](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- Viene illustrato come gestire eventi <xref:System.Windows.Forms.Control.Click> generati dal controllo <xref:System.Windows.Forms.StatusBar>.  
+ [Procedura: Individuare il pannello selezionato nel controllo StatusBar di Windows Form](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ Viene illustrato come gestire <xref:System.Windows.Forms.Control.Click> gli eventi generati dal <xref:System.Windows.Forms.StatusBar> controllo.  
   
- [Procedura: impostare la dimensione dei pannelli della barra di stato](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
- Vengono fornite informazioni dettagliate sulle proprietà che controllano la larghezza e il ridimensionamento dei pannelli della barra di stato in fase di esecuzione.  
+ [Procedura: Impostare la dimensione dei pannelli della barra di stato](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
+ Fornisce informazioni dettagliate sulle proprietà che controllano la larghezza e di ridimensionamento dei pannelli della barra di stato in fase di esecuzione.  
   
- [Procedura dettagliata: aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
- Viene illustrato come controllare a livello di codice i dati all'interno di pannelli della barra di stato.  
+ [Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
+ Viene illustrato come controllare a livello di programmazione i dati in altri pannelli della barra di stato.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.Windows.Forms.StatusBar>  
- Vengono fornite informazioni di riferimento sulla classe e relativi membri.  
+ Fornisce informazioni di riferimento sulla classe e sui relativi membri.  
   
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- Sostituisce il controllo <xref:System.Windows.Forms.StatusBar> aggiungendo funzionalità.  
+ Sostituisce e aggiunge la funzionalità per il <xref:System.Windows.Forms.StatusBar> controllo.  
   
-## Sezioni correlate  
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Viene fornito un elenco completo dei controlli Windows Form, con l'indicazione dei collegamenti alle informazioni sul relativo utilizzo.
+## <a name="related-sections"></a>Sezioni correlate  
+ [Controlli da usare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.

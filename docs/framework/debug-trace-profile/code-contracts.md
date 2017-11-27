@@ -5,28 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Code contracts
+- csharp
+- vb
+helpviewer_keywords: Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 78553d77ea9a669f7cebdd9187e2436d3b095a75
-ms.openlocfilehash: c0eca978f32c4f96ad976718584c0bf92bf638ec
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ce74cfb9c4e0eb759fb8160ab06fa6fbde60081b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="code-contracts"></a>Contratti di codice
 I contratti di codice consentono di specificare precondizioni, postcondizioni e invarianti dell'oggetto nel codice. Le precondizioni sono requisiti da soddisfare quando si accede a un metodo o a una proprietà. Le postcondizioni descrivono le aspettative al momento dell'uscita dal codice del metodo o della proprietà. Le invarianti dell'oggetto descrivono lo stato previsto per una classe in stato integro.  
@@ -50,7 +45,7 @@ I contratti di codice consentono di specificare precondizioni, postcondizioni e 
  Per gli strumenti e le istruzioni dettagliate per l'uso dei contratti di codice, vedere [Code Contracts](http://go.microsoft.com/fwlink/?LinkId=152461)(Contratti di codice) nel sito Web MSDN DevLabs.  
   
 ## <a name="preconditions"></a>Preconditions  
- È possibile esprimere delle precondizioni usando il metodo <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=fullName>. Le precondizioni specificano lo stato nel momento in cui viene richiamato un metodo. In genere, vengono usate per specificare valori di parametro validi. Tutti i membri menzionati nelle precondizioni devono essere accessibili almeno quanto il metodo stesso; in caso contrario, la precondizione potrebbe non essere compresa da tutti i chiamanti di un metodo. La condizione non deve avere effetti collaterali. Il comportamento in fase di esecuzione delle precondizioni con errori è determinato dall'analizzatore di runtime.  
+ È possibile esprimere delle precondizioni usando il metodo <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>. Le precondizioni specificano lo stato nel momento in cui viene richiamato un metodo. In genere, vengono usate per specificare valori di parametro validi. Tutti i membri menzionati nelle precondizioni devono essere accessibili almeno quanto il metodo stesso; in caso contrario, la precondizione potrebbe non essere compresa da tutti i chiamanti di un metodo. La condizione non deve avere effetti collaterali. Il comportamento in fase di esecuzione delle precondizioni con errori è determinato dall'analizzatore di runtime.  
   
  Ad esempio, la precondizione seguente indica che il parametro `x` non deve essere null.  
   
@@ -67,7 +62,7 @@ I contratti di codice consentono di specificare precondizioni, postcondizioni e 
   
 -   L'intero set di istruzioni è seguito da una chiamata al metodo <xref:System.Diagnostics.Contracts.Contract> esplicita, ad esempio una chiamata al metodo <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>, <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A> o <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A>.  
   
- Quando le istruzioni `if`-`then`-`throw` vengono visualizzate in questo formato, gli strumenti le riconoscono come istruzioni `requires` legacy. Se la sequenza `if`-`then`-`throw` non è seguita da altri contratti, terminare il codice con il metodo <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=fullName>.  
+ Quando le istruzioni `if`-`then`-`throw` vengono visualizzate in questo formato, gli strumenti le riconoscono come istruzioni `requires` legacy. Se la sequenza `if`-`then`-`throw` non è seguita da altri contratti, terminare il codice con il metodo <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType>.  
   
 ```  
 if ( x == null ) throw new ...  
@@ -87,7 +82,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
  `Contract.Ensures( this.F > 0 );`  
   
 ### <a name="exceptional-postconditions"></a>Postcondizioni eccezionali  
- Le postcondizioni eccezionali sono postcondizioni che devono essere `true` quando una particolare eccezione viene generata da un metodo. È possibile specificare queste postcondizioni tramite il metodo <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=fullName>, come mostrato nell'esempio seguente.  
+ Le postcondizioni eccezionali sono postcondizioni che devono essere `true` quando una particolare eccezione viene generata da un metodo. È possibile specificare queste postcondizioni tramite il metodo <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType>, come mostrato nell'esempio seguente.  
   
  `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
   
@@ -193,7 +188,7 @@ Contract.Invariant(this.x > this.y);
   
 -   Tutti i metodi il cui nome completo inizia con "System.Diagnostics.Contracts.Contract", "System.String", "System.IO.Path" o "System.Type".  
   
--   Tutti i delegati richiamati, purché al tipo del delegato venga attribuito <xref:System.Diagnostics.Contracts.PureAttribute>. I tipi del delegato <xref:System.Predicate%601?displayProperty=fullName> e <xref:System.Comparison%601?displayProperty=fullName> sono considerati puri.  
+-   Tutti i delegati richiamati, purché al tipo del delegato venga attribuito <xref:System.Diagnostics.Contracts.PureAttribute>. I tipi del delegato <xref:System.Predicate%601?displayProperty=nameWithType> e <xref:System.Comparison%601?displayProperty=nameWithType> sono considerati puri.  
   
 <a name="visibility"></a>   
 ### <a name="visibility"></a>Visibilità  
@@ -202,5 +197,5 @@ Contract.Invariant(this.x > this.y);
 ## <a name="example"></a>Esempio  
  L'esempio seguente mostra l'uso dei contratti di codice.  
   
- [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)] [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]
-
+ [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)]
+ [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]

@@ -1,34 +1,37 @@
 ---
-title: "Grammatica XamlName | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DottedXamlName (grammatica) [servizi XAML]"
-  - "grammatica [servizi XAML], DottedXamlName"
-  - "grammatica [servizi XAML], XamlName"
-  - "nomi in XAML [servizi XAML]"
-  - "XamlName (grammatica) [servizi XAML]"
+title: Grammatica XamlName
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DottedXamlName grammar [XAML Services]
+- grammar [XAML Services], DottedXamlName
+- grammar [XAML Services], XamlName
+- names in XAML [XAML Services]
+- XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-caps.latest.revision: 13
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 92327c8ff6232e64bf8b6b2a9d78e4a9eb30f3e1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Grammatica XamlName
-La grammatica XamlName è una grammatica specifica definita nella specifica di linguaggio XAML \[MS\-XAML\], riprodotta qui per convenienza.  
+# <a name="xamlname-grammar"></a>Grammatica XamlName
+Grammatica XamlName è una grammatica specifica è definita nella specifica del linguaggio XAML [MS-XAML], che viene riprodotto di seguito per praticità.  
   
-## Dalla specifica XAML  
- La specifica \[MS\-XAML\] definisce la grammatica XamlName per identificare l'insieme di identificatori simbolici validi utilizzati per tipi e proprietà.  
+## <a name="from-the-xaml-specification"></a>Dalla specifica di XAML  
+ La specifica [MS-XAML] definisce la grammatica XamlName per identificare il set di identificatori simbolici validi utilizzati per i tipi e le proprietà.  
   
- I valori stringa di tipo XamlName devono essere conformi alla grammatica seguente:  
+ I valori di tipo che XamlName deve essere conforme alla grammatica seguente stringa:  
   
 ```  
 XamlName ::= NameStartChar ( NameChar )*   
@@ -37,13 +40,11 @@ NameChar ::= NameStartChar | DecimalDigit | CombiningCharacter
 LetterCharacter ::= UnicodeLu | UnicodeLl | UnicodeLo | UnicodeLt | UnicodeNl   
 DecimalDigit ::= UnicodeNd   
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
-  
 ```  
   
- che presuppone i valori di categoria generale riportati di seguito, secondo quanto definito in Unicode Character Database  
+ Che si presuppone che i seguenti valori di categoria generale come definito nel Database dei caratteri Unicode  
   
 ```  
-  
 Lu  
 Letter, Uppercase  
 Ll  
@@ -64,13 +65,13 @@ Nl
 Number, Letter  
 ```  
   
- XAML definisce una seconda grammatica, DottedXamlName, utilizzata per i riferimenti completi a proprietà ed eventi, nonché per membri associati.  Per ulteriori informazioni, vedere <xref:System.Windows.DependencyProperty> e [Cenni preliminari su XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Il codice XAML definisce una seconda grammatica, DottedXamlName, che viene utilizzato per la proprietà ed evento riferimenti completi e anche per membri associati. Per ulteriori informazioni, vedere <xref:System.Windows.DependencyProperty> e [Panoramica di XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
   
- I valori stringa di tipo DottedXamlName devono essere conformi alla grammatica seguente:  
+ I valori di tipo che DottedXamlName deve essere conforme alla grammatica seguente stringa:  
   
 ```  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
-## Note  
- Per la specifica completa del linguaggio XAML, vedere[\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).
+## <a name="remarks"></a>Note  
+ Per la specifica completa, vedere [ \[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).

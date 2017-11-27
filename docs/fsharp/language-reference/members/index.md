@@ -1,6 +1,6 @@
 ---
 title: Membri (F#)
-description: Membri (F#)
+description: Informazioni sui membri di oggetto nel linguaggio di programmazione c#.
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: e472f50a-4939-4e62-abbc-471f8f265790
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: fe14657b25d122296a6826daba37ea99b6ee64b4
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: ca34c8d073594791ec268a85ad56f50cc6d9e435
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="members"></a>Membri
 
 Questa sezione illustra i membri dei tipi di oggetto F#.
@@ -44,4 +43,3 @@ I campi privati e le associazioni `do`, usati solo con le classi, non sono membr
 |[Overload degli operatori](../operator-overloading.md)|Descrive la definizione di operatori personalizzati per i tipi.|
 |[Eventi](events.md)|Descrive la definizione di eventi e il supporto di gestione degli eventi in F# .|
 |[Campi espliciti: parola chiave `val`](explicit-fields-the-val-keyword.md)|Descrive la definizione dei campi non inizializzati in un tipo.|
-

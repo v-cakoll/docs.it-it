@@ -1,31 +1,30 @@
 ---
-title: Sviluppo di applicazioni | Microsoft Docs
+title: Sviluppo di applicazioni
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-wpf
+ms.technology: dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- WPF, about application development
+- WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 09b1e6559b7edba2ee7dced1df4f6f6414f87aa9
-ms.contentlocale: it-it
-ms.lasthandoff: 05/22/2017
-
+ms.openlocfilehash: ff8f8ab85cda7bdbf66b000a89d8a862e765d561
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="application-development"></a>Sviluppo di applicazioni
-<a name="introduction"></a> [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] è un framework di presentazione che può essere usato per sviluppare i tipi seguenti di applicazioni:  
+<a name="introduction"></a>
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]è un framework di presentazione che può essere usato per sviluppare i seguenti tipi di applicazioni:  
   
 -   Applicazioni autonome, ovvero applicazioni [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] dallo stile tradizionale compilate come assembly eseguibili installati nel computer client, da cui vengono eseguite.  
   
@@ -141,4 +140,4 @@ ms.lasthandoff: 05/22/2017
 |[Hosting](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)|Viene fornita una panoramica su [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
 |[Compilazione e distribuzione di applicazioni WPF](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)|Descrive come compilare e distribuire un'applicazione WPF.|  
 |[Introduzione a WPF in Visual Studio 2015](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|Descrive le principali funzionalità di WPF.|  
-|[Procedura dettagliata: Applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Procedura dettagliata che mostra come creare un'applicazione WPF tramite navigazione tra le pagine, layout, controlli, immagini, stili e binding.|
+|[Procedura dettagliata: Prima applicazione desktop WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Procedura dettagliata che mostra come creare un'applicazione WPF tramite navigazione tra le pagine, layout, controlli, immagini, stili e binding.|

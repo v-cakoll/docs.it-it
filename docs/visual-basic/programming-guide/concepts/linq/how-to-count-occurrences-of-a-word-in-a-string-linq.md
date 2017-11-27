@@ -1,33 +1,25 @@
 ---
-title: 'Procedura: contare le occorrenze di una parola in una stringa (LINQ) (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: conteggiare le occorrenze di una parola in una stringa (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ec6bb31fa095786f7c507a66e831a90fd1c6e92
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 82b40e11a72d26858cc2b0b5c0c759517f5b5ee3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Procedura: contare le occorrenze di una parola in una stringa (LINQ) (Visual Basic)
-In questo esempio viene illustrato come utilizzare una query LINQ per contare le occorrenze di una parola in una stringa specificata. Si noti che per eseguire il conteggio, prima di <xref:System.String.Split%2A>viene chiamato per creare una matrice di parole.</xref:System.String.Split%2A> Una riduzione delle prestazioni per il <xref:System.String.Split%2A>(metodo).</xref:System.String.Split%2A> Se è l'unica operazione nella stringa di conteggio delle parole, è consigliabile utilizzare il <xref:System.Text.RegularExpressions.Regex.Matches%2A>o <xref:System.String.IndexOf%2A>metodi invece.</xref:System.String.IndexOf%2A> </xref:System.Text.RegularExpressions.Regex.Matches%2A> Tuttavia, se le prestazioni non sono un problema critico o la frase è già stata suddivisa per eseguire altri tipi di query su di esso, è consigliabile utilizzare LINQ per contare le parole o frasi anche.  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Procedura: conteggiare le occorrenze di una parola in una stringa (LINQ) (Visual Basic)
+Questo esempio illustra come usare una query LINQ per contare le occorrenze di una parola specifica all'interno di una stringa. Si noti che per eseguire il conteggio viene prima chiamato il metodo <xref:System.String.Split%2A> per creare una matrice di parole. Il metodo <xref:System.String.Split%2A> influisce negativamente sulle prestazioni. Se l'unica operazione da eseguire sulla stringa è il conteggio delle parole, è consigliabile usare il metodo <xref:System.Text.RegularExpressions.Regex.Matches%2A> o <xref:System.String.IndexOf%2A>. Se tuttavia le prestazioni non rappresentano un problema critico o se la frase è già stata suddivisa per sottoporla ad altri tipi di query, anche LINQ costituisce una scelta appropriata per contare le parole o le frasi.  
   
 ## <a name="example"></a>Esempio  
   
@@ -75,7 +67,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+ Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

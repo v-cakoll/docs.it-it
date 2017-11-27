@@ -1,32 +1,34 @@
 ---
-title: "&lt;messageLogging&gt;&lt;/messageLogging&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;registrazione messaggi&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e5b232e3faf1e0e8976b0c08264c8ba03988902a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;messageLogging&gt;&lt;/messageLogging&gt;
+# <a name="ltmessagelogginggt"></a>&lt;registrazione messaggi&gt;
 Questo elemento definisce le impostazioni per le funzionalità di registrazione dei messaggi di Windows Communication Foundation (WCF).  
   
- \<system.ServiceModel>  
-<>\>  
-<>\>  
+ \<System. ServiceModel >  
+\<diagnostica >  
+\<registrazione messaggi >  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```xml  
 <system.serviceModel>  
    <diagnostics>  
        <messageLogging logEntireMessage="Boolean"  
@@ -74,9 +76,9 @@ Questo elemento definisce le impostazioni per le funzionalità di registrazione 
   
  È possibile aggiungere filtri XPath per registrare messaggi specifici a livello di trasporto e di servizio. Se non viene definito nessun filtro, tutti i messaggi vengono registrati. I filtri vengono applicati solo alle intestazioni del messaggio. Il corpo viene ignorato. WCF ignora il corpo del messaggio per migliorare le prestazioni. Se si desidera applicare un filtro in base al contenuto del corpo del messaggio, è possibile creare un listener personalizzato con un filtro appropriato.  
   
- Per attivare la traccia dei messaggi è necessario creare un listener di traccia. Il listener stesso può essere qualsiasi listener che funziona con il <xref:System.Diagnostics> architettura di traccia. Nell'esempio seguente viene illustrato come creare un listener di questo tipo.  
+ Per attivare la traccia dei messaggi è necessario creare un listener di traccia. Il listener stesso può essere un qualsiasi listener che funziona con l'architettura di traccia di <xref:System.Diagnostics>. Nell'esempio seguente viene illustrato come creare un listener di questo tipo.  
   
-```  
+```xml  
 <system.diagnostics>  
     <sources>  
           <source name="System.ServiceModel" switchValue="Verbose">  
@@ -111,7 +113,7 @@ Questo elemento definisce le impostazioni per le funzionalità di registrazione 
   
 ## <a name="example"></a>Esempio  
   
-```  
+```xml  
 <messageLogging logEntireMessage="true"  
     logMalformedMessages="true"  
     logMessagesAtServiceLevel="true"  
@@ -125,8 +127,8 @@ Questo elemento definisce le impostazioni per le funzionalità di registrazione 
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>   
- <xref:System.ServiceModel.Diagnostics>   
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>   
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>   
+ <xref:System.ServiceModel.Configuration.DiagnosticSection>  
+ <xref:System.ServiceModel.Diagnostics>  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
+ <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
  [Configurazione di registrazione dei messaggi](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)

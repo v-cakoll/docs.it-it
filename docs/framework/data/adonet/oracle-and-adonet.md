@@ -1,28 +1,34 @@
 ---
-title: "Oracle e ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Oracle e ADO.NET
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c615c985f885734800b471ee31451cfb8a4c8500
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Oracle e ADO.NET
+# <a name="oracle-and-adonet"></a>Oracle e ADO.NET
 > [!NOTE]
->  I tipi in <xref:System.Data.OracleClient> sono deprecati.  I tipi restano supportati nella versione corrente di .NET Framework, ma saranno rimossi in una versione futura.  Microsoft consiglia di usare un provider Oracle di terze parti.  
+>  I tipi in <xref:System.Data.OracleClient> sono deprecati. I tipi restano supportati nella versione corrente di .NET Framework, ma saranno rimossi in una versione futura. Microsoft consiglia di usare un provider Oracle di terze parti.  
   
  Contenuto della sezione vengono descritte le caratteristiche e i comportamenti specifici del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle.  
   
- Il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle fornisce l'accesso a un database Oracle mediante l'interfaccia OCI \(Oracle Call Interface\) del software client Oracle.  La funzionalità del provider di dati è simile a quella presente nei provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], OLE DB e ODBC.  
+ Il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle fornisce l'accesso a un database Oracle mediante l'interfaccia OCI (Oracle Call Interface) del software client Oracle. La funzionalità del provider di dati è simile a quella presente nei provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], OLE DB e ODBC.  
   
  Per usare il provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle, è necessario che l'applicazione faccia riferimento allo spazio dei nomi <xref:System.Data.OracleClient> come indicato di seguito:  
   
@@ -34,20 +40,20 @@ Imports System.Data.OracleClient
 using System.Data.OracleClient;  
 ```  
   
- Quando si compila il codice, inoltre, è necessario includere un riferimento alla DLL.  Ad esempio, se si compila un programma C\#, la riga di comando deve includere:  
+ Quando si compila il codice, inoltre, è necessario includere un riferimento alla DLL. Ad esempio, se si compila un programma C#, la riga di comando deve includere:  
   
 ```  
 csc /r:System.Data.OracleClient.dll  
 ```  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Requisiti di sistema](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  Vengono descritti i requisiti e i problemi relativi all'utilizzo del provider di dati [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] per Oracle.  
   
- [BFILE Oracle](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
+ [Oggetti BFILE Oracle](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Viene descritta la classe <xref:System.Data.OracleClient.OracleBFile> usata per il tipo di dati BFILE Oracle.  
   
- [LOB Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
+ [Oggetti LOB Oracle](../../../../docs/framework/data/adonet/oracle-lobs.md)  
  Viene descritta la classe <xref:System.Data.OracleClient.OracleLob> usata per il tipo di dati LOB Oracle.  
   
  [REF CURSOR Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
@@ -56,7 +62,7 @@ csc /r:System.Data.OracleClient.dll
  [OracleTypes](../../../../docs/framework/data/adonet/oracletypes.md)  
  Vengono descritte le strutture utilizzabili con i tipi di dati Oracle, inclusi tipi <xref:System.Data.OracleClient.OracleNumber> e <xref:System.Data.OracleClient.OracleString>.  
   
- [Sequenze di Oracle](../../../../docs/framework/data/adonet/oracle-sequences.md)  
+ [Sequenze Oracle](../../../../docs/framework/data/adonet/oracle-sequences.md)  
  Viene descritto il supporto per il recupero dei valori chiave di sequenze di Oracle generati dal server.  
   
  [Mapping dei tipi di dati Oracle](../../../../docs/framework/data/adonet/oracle-data-type-mappings.md)  
@@ -65,11 +71,11 @@ csc /r:System.Data.OracleClient.dll
  [Transazioni distribuite Oracle](../../../../docs/framework/data/adonet/oracle-distributed-transactions.md)  
  Viene descritto come l'oggetto <xref:System.Data.OracleClient.OracleConnection>, in presenza di una transazione attiva, esegue l'inserimento automatico nella transazione distribuita.  
   
-## Sezioni correlate  
- [Protezione di applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Protezione delle applicazioni ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  Vengono descritte le tecniche che consentono di scrivere codice protetto quando si usa [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
- [DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Oggetti DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Viene descritto come creare e usare `DataSets`, `DataSets` tipizzati, `DataTables` e `DataViews`.  
   
  [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
@@ -78,9 +84,9 @@ csc /r:System.Data.OracleClient.dll
  [SQL Server e ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  Viene descritto come usare le funzionalità e le caratteristiche specifiche di [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   
- [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  Vengono descritte le classi generiche che consentono di scrivere codice indipendente dal provider in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
-## Vedere anche  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,84 +1,91 @@
 ---
-title: "&lt;federationConfiguration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;federationConfiguration&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
-caps.latest.revision: 9
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9abe07c065dbea67c5ebc4a4490d9f88258130c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;federationConfiguration&gt;
-Consente di configurare il <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\) e il <xref:System.IdentityModel.Services.SessionAuthenticationModule> \(SAM\) quando si utilizza l'autenticazione tramite il protocollo WS\-Federation una federazione.  Consente di configurare il <xref:System.Security.Claims.ClaimsAuthorizationManager> quando si utilizza il <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe per fornire il controllo di accesso basati sulle attestazioni.  
+# <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
+Configura il <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) quando si utilizza l'autenticazione tramite il protocollo WS-Federation di federazione. Configura il <xref:System.Security.Claims.ClaimsAuthorizationManager> quando si utilizza il <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe per fornire il controllo di accesso basato sulle attestazioni.  
   
-## Sintassi  
+ \<System >  
+\<federationConfiguration >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <system.identityModel.services>  
-  <federationConfiguration name=xs:string identityConfigurationName=xs:string>  
-  </federationConfiguration>  
+  <federationConfiguration name=xs:string identityConfigurationName=xs:string>  
+  </federationConfiguration>  
 </system.identityModel.services>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|name|Il nome di questo elemento di configurazione della federazione.  Questo attributo fornisce principalmente un punto di estendibilità per i protocolli futuri.  Parametro facoltativo.|  
-|identityConfigurationName|Il nome della sezione di configurazione di identità come specificato in un [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento da utilizzare.  Se questo attributo non è specificato, viene utilizzata la sezione di configurazione predefinita di identità.  Parametro facoltativo.|  
+|name|Il nome di questo elemento di configurazione della federazione. Questo attributo principalmente fornisce un punto di estensibilità per protocolli future. Facoltativo.|  
+|identityConfigurationName|Il nome della sezione di configurazione di identità come specificato in un [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento da utilizzare. Se questo attributo viene omesso, viene utilizzata la sezione di configurazione di identità predefinito. Facoltativo.|  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<cookieHandler\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Consente di configurare il gestore del cookie utilizzato da SAM.  Parametro facoltativo.|  
-|[\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Consente di configurare il certificato utilizzato per crittografare e decrittografare i token.  Parametro facoltativo.|  
-|[\<wsFederation\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Consente di configurare il modulo di autenticazione WS\-Federation \(WSFAM\).  Parametro facoltativo.|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<system.identityModel.services\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)|Sezione di configurazione per l'autenticazione utilizzando il protocollo WS\-Federation.|  
+|-------------|-----------------|  
+|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Consente di configurare il gestore di cookie utilizzato per il modulo SAM. Facoltativo.|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Consente di configurare il certificato utilizzato per crittografare e decrittografare i token. Facoltativo.|  
+|[\<wsFederation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Configura il modulo di autenticazione WS-Federation (WSFAM). Facoltativo.|  
   
-## Note  
- \<federationConfiguration\> elemento fornisce le impostazioni in due scenari diversi:  
+### <a name="parent-elements"></a>Elementi padre  
   
--   Quando si utilizza WS\-Federation in un'applicazione Web passiva, l'elemento contiene impostazioni che configurano il <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> \(WSFAM\) e il <xref:System.IdentityModel.Services.SessionAuthenticationModule> \(SAM\).  Inoltre, fa riferimento la configurazione di identità da utilizzare per configurare i gestori di token di protezione e i certificati e i componenti quali Gestione autorizzazioni richieste e la gestione dell'autenticazione di attestazioni.  
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|[\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)|Sezione di configurazione per l'autenticazione tramite il protocollo WS-Federation.|  
   
--   Quando si utilizza il <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> di classe per fornire il controllo di accesso basato sui crediti nel codice, l'elemento fa riferimento la configurazione di identità che consente di configurare i criteri utilizzati per prendere decisioni di autorizzazione e in Gestione autorizzazioni attestazioni.  Questo è vero, anche in scenari non sono scenari Web passivi; ad esempio, le applicazioni di Windows Communication Foundation \(WCF\) o un'applicazione che non è basato sul Web.  Se l'applicazione non è un'applicazione Web passiva, la [\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) l'elemento \(e relativi elementi del criterio figlio, se presente\) della configurazione dell'identità a cui fa riferimento la `<federationConfiguration>` elemento sono le uniche impostazioni applicate.  Tutti gli altri vengono ignorati.  
+## <a name="remarks"></a>Note  
+ Il \<federationConfiguration > elemento offre impostazioni in due scenari diversi:  
   
- Indipendentemente dallo scenario verrà caricata la configurazione predefinita di federazione.  Il comportamento è definito come segue:  
+-   Quando si utilizza WS-Federation in un'applicazione Web passiva, l'elemento contiene le impostazioni che configurano il <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) e <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Fa inoltre la configurazione di identità da utilizzare per configurare i gestori di token di sicurezza e i certificati e i componenti come la gestione di autorizzazione delle attestazioni e il gestore di autenticazione delle attestazioni.  
   
-1.  Se non vi è alcun `<federationConfiguration>` elemento presente, il runtime crea una configurazione della federazione e viene popolato con i valori predefiniti.  Questa configurazione di federazione predefinita fa riferimento la configurazione predefinita di identità.  
+-   Quando si utilizza il <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe per fornire un controllo di accesso basato sulle attestazioni nel codice, l'elemento fa riferimento la configurazione di identità che consente di configurare i criteri viene utilizzato per rendere l'autorizzazione e la gestione di autorizzazioni di attestazioni decisioni. Questo è true, anche negli scenari che non sono scenari Web passivi. ad esempio, applicazioni Windows Communication Foundation (WCF) o un'applicazione che non è basata sul Web. Se l'applicazione non è un'applicazione Web passiva, il [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elemento (e criteri elementi figlio, se presente) della configurazione dell'identità a cui fa riferimento il `<federationConfiguration>` elemento le uniche impostazioni vengono applicate. Tutti gli altri vengono ignorati.  
   
-2.  Se un singolo `<federationConfiguration>` l'elemento è presente, è la configurazione di federazione predefinita indipendentemente se è denominato o senza nome.  Se il `identityConfiguration` viene specificato, a cui fa riferimento la configurazione di identità denominato; in caso contrario, la configurazione predefinita di identità viene fatto riferimento.  
+ Indipendentemente dallo scenario, il runtime carica la configurazione predefinita della federazione. Il comportamento viene definito come segue:  
   
-3.  Se un senza nome `<federationConfiguration>` l'elemento è presente, è la configurazione predefinita di federazione.  Se il `identityConfiguration` viene specificato, a cui fa riferimento la configurazione di identità denominato; in caso contrario, la configurazione predefinita di identità viene fatto riferimento.  
+1.  Se è presente alcun `<federationConfiguration>` elemento presente, il runtime crea una configurazione di federazione e popolarla con i valori predefiniti. La configurazione di identità predefinita farà riferimento a questa configurazione di federazione predefinita.  
   
-4.  Se un nome più `<federationConfiguration>` gli elementi sono presenti e non senza nome `<federationConfiguration>` l'elemento è presente, viene generata un'eccezione.  
+2.  Se un singolo `<federationConfiguration>` elemento è presente, è la configurazione della federazione predefinito indipendentemente dal fatto è denominato o senza nome. Se il relativo `identityConfiguration` attributo viene specificato, la configurazione di identità denominati viene fatto riferimento; in caso contrario, cui fa riferimento la configurazione di identità predefinita.  
   
- In genere, una sola `<federationConfiguration>` sezione è definita.  In questa sezione è la configurazione predefinita di federazione.  È possibile specificare più, in modo univoco denominato `<federationConfiguration>` elementi; Tuttavia, in questo caso, se si desidera caricare una configurazione di federazione diverso da quello senza nome, è necessario fornire un gestore per il.  <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>eventi e set di <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=fullName> proprietà all'interno del gestore per un <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> oggetto inizializzato con i valori appropriati `<federationConfiguration>` elemento nel file di configurazione.  
+3.  Se un oggetto senza nome `<federationConfiguration>` elemento è presente, è la configurazione predefinita della federazione. Se il relativo `identityConfiguration` attributo viene specificato, la configurazione di identità denominati viene fatto riferimento; in caso contrario, cui fa riferimento la configurazione di identità predefinita.  
   
- Il `<federationConfiguration>` elemento è rappresentato dal <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> classe.  L'oggetto di configurazione è rappresentato dal <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> classe.  Un singolo <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> istanza è impostato sui <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName> proprietà e fornisce federati configurazione dell'applicazione.  
+4.  Se più denominato `<federationConfiguration>` elementi siano presenti e non denominati `<federationConfiguration>` elemento è presente, viene generata un'eccezione.  
   
-## Esempio  
- Nel XML seguente un `<federationConfiguration>` elemento che specifica le impostazioni per la WSFAM e specifica che il gestore di cookie predefinito \(un'istanza del <xref:System.IdentityModel.Services.ChunkedCookieHandler> classe\) utilizzabile da SAM.  
+ In genere, una sola `<federationConfiguration>` sezione è definita. In questa sezione è la configurazione predefinita della federazione. È possibile specificare più, in modo univoco denominato `<federationConfiguration>` elementi; tuttavia, in questo caso, se si desidera caricare una configurazione di federazione diverso da quello senza nome, è necessario fornire un gestore per il. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>eventi e impostare il <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> proprietà all'interno del gestore per un <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> oggetto inizializzata con i valori appropriati `<federationConfiguration>` elemento nel file di configurazione.  
+  
+ Il `<federationConfiguration>` elemento è rappresentato dalla <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> classe. L'oggetto di configurazione è rappresentato dalla <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> classe. Un singolo <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> istanza è impostata sul <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> proprietà e fornisce configurazione federato per l'applicazione.  
+  
+## <a name="example"></a>Esempio  
+ Il codice XML seguente viene illustrato un `<federationConfiguration>` elemento che specifica le impostazioni per il WSFAM e specifica che il gestore di cookie predefinito (un'istanza del <xref:System.IdentityModel.Services.ChunkedCookieHandler> classe) utilizzabile per il modulo SAM.  
   
 > [!WARNING]
->  In questo esempio, WSFAM né il gestore dei cookie sono necessari per utilizzare HTTPS.  Infatti, il `requireHttps` di attributo sul `<wsFederation>` elemento e il `requireSsl` attributo sul `<cookieHandlerElement>` sono `false`.  Queste impostazioni non sono consigliate per la maggior parte degli ambienti di produzione come essi possono presentare un rischio di protezione.  
+>  In questo esempio, il gestore di cookie né WSFAM deve utilizzare HTTPS. In questo modo il `requireHttps` attributo il `<wsFederation>` elemento e `requireSsl` attributo il `<cookieHandlerElement>` sono `false`. Queste impostazioni non sono consigliate per la maggior parte degli ambienti di produzione in cui potrebbe presentano un rischio per la sicurezza.  
   
-```  
+```xml  
 <system.identityModel.services>  
   <federationConfiguration>  
     <wsFederation passiveRedirectEnabled="true"   
@@ -93,8 +100,8 @@ Consente di configurare il <xref:System.IdentityModel.Services.WSFederationAuthe
 </system.identityModel.services>  
 ```  
   
-## Vedere anche  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>   
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>   
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=fullName>   
- [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
+ <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
+ <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>  
+ [\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)

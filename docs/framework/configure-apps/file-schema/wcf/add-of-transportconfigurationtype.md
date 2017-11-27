@@ -1,31 +1,35 @@
 ---
-title: "&lt;add&gt; di &lt;transportConfigurationType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;add&gt; di &lt;transportConfigurationType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cb00a5d5a2b4f64cdce6832faef4822b63f426d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt; di &lt;transportConfigurationType&gt;
-Questo elemento è una coppia chiave\/valore che identifica il tipo di un determinato trasporto.  
+# <a name="ltaddgt-of-lttransportconfigurationtypegt"></a>&lt;add&gt; di &lt;transportConfigurationType&gt;
+Questo elemento è una coppia chiave/valore che identifica il tipo di un determinato trasporto.  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<ServiceHostingEnvironment >  
+\<transportConfigurationTypes >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <serviceHostingEnvironment>   
    <transportConfigurationTypes>  
       <add name="String"  
@@ -34,28 +38,28 @@ Questo elemento è una coppia chiave\/valore che identifica il tipo di un determ
 </serviceHostingEnvironment>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |name|Attributo stringa obbligatorio.<br /><br /> Contiene una chiave definita dall'utente che identifica in modo univoco il tipo di trasporto.|  
 |transportConfigurationType|Stringa contenente il tipo che implementa il trasporto specifico.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  None  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<transportConfigurationTypes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Raccolta di tipi che implementano il trasporto specifico.|  
+|-------------|-----------------|  
+|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Raccolta di tipi che implementano il trasporto specifico.|  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```xml  
 <serviceHostingEnvironment>   
    <transportConfigurationTypes>  
       <add name="net.udp"  
@@ -64,8 +68,8 @@ Questo elemento è una coppia chiave\/valore che identifica il tipo di un determ
 </serviceHostingEnvironment>  
 ```  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>   
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>   
- <xref:System.ServiceModel.ServiceHostingEnvironment>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>  
+ <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
+ <xref:System.ServiceModel.ServiceHostingEnvironment>  
  [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)

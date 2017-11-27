@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - pinning, interop marshaling
 - copying, interop marshaling
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b6f5c54ba65f44e01cc95094f7fa4027c587e8a1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 8e25d9a7bffdf0a3e8f68639dc0442ccf62a4412
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="copying-and-pinning"></a>copia e blocco
 Durante il marshalling il gestore di marshalling di interoperabilità può copiare o bloccare i dati interessati. Tramite l'operazione di copia, una copia dei dati viene spostata da una posizione della memoria a un'altra. La figura seguente illustra le differenze esistenti tra la copia di un tipo valore e quella di un tipo passato per riferimento dalla memoria gestita a quella non gestita.  
@@ -88,13 +81,12 @@ Tipi riferimento passati per valore e per riferimento
 > [!CAUTION]
 >  Quando una stringa viene passata per valore, il riferimento passato dal gestore di marshalling non deve mai essere modificato dal chiamato, per evitare danni all'heap gestito.  
   
- Quando un oggetto <xref:System.String?displayProperty=fullName> viene passato per riferimento, il contenuto della stringa viene copiato dal gestore di marshalling in un buffer secondario prima di effettuare la chiamata. Il contenuto del buffer viene quindi copiato in una nuova stringa dopo la chiamata. Grazie a questa tecnica, si garantisce che la stringa gestita immutabile rimanga inalterata.  
+ Quando un oggetto <xref:System.String?displayProperty=nameWithType> viene passato per riferimento, il contenuto della stringa viene copiato dal gestore di marshalling in un buffer secondario prima di effettuare la chiamata. Il contenuto del buffer viene quindi copiato in una nuova stringa dopo la chiamata. Grazie a questa tecnica, si garantisce che la stringa gestita immutabile rimanga inalterata.  
   
- Quando un oggetto <xref:System.Text.StringBuilder?displayProperty=fullName> viene passato per valore, un riferimento al buffer interno di **StringBuilder** viene passato dal gestore di marshalling direttamente al chiamante. Il chiamante e il chiamato devono concordare sulla dimensione del buffer. Il chiamante è responsabile della creazione di uno **StringBuilder** di lunghezza adeguata. Il chiamato deve prendere le precauzioni necessarie per garantire che il buffer non risulti sovraccarico. **StringBuilder** è un'eccezione alla regola in base alla quale i tipi di riferimento passati per valore vengono passati come parametri In per impostazione predefinita, dato che viene sempre passato come parametro In/Out.  
+ Quando un oggetto <xref:System.Text.StringBuilder?displayProperty=nameWithType> viene passato per valore, un riferimento al buffer interno di **StringBuilder** viene passato dal gestore di marshalling direttamente al chiamante. Il chiamante e il chiamato devono concordare sulla dimensione del buffer. Il chiamante è responsabile della creazione di uno **StringBuilder** di lunghezza adeguata. Il chiamato deve prendere le precauzioni necessarie per garantire che il buffer non risulti sovraccarico. **StringBuilder** è un'eccezione alla regola in base alla quale i tipi di riferimento passati per valore vengono passati come parametri In per impostazione predefinita, dato che viene sempre passato come parametro In/Out.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Gestione della memoria con il marshalling di interoperabilità](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)   
- [Attributi direzionali](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Gestione della memoria con il marshalling di interoperabilità](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
+ [Attributi direzionali](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)
-

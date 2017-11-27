@@ -1,37 +1,40 @@
 ---
-title: "Connessione a un&#39;origine dati in ADO.NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Connessione a un'origine dati in ADO.NET
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0d21c571b659e9d7aef65893db18b034d614e2af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Connessione a un&#39;origine dati in ADO.NET
-In ADO.NET è possibile usare un oggetto **Connection** per connettersi a un'origine dati specifica inserendo le informazioni di autenticazione necessarie in una stringa di connessione.  L'oggetto **Connection** usato dipende dal tipo dell'origine dati.  
+# <a name="connecting-to-a-data-source-in-adonet"></a>Connessione a un'origine dati in ADO.NET
+In ADO.NET viene utilizzato un **connessione** oggetto per la connessione a un'origine dati specifica fornendo informazioni di autenticazione necessarie in una stringa di connessione. Il **connessione** utilizzato dipende dal tipo di origine dati.  
   
  Per ogni provider di dati .NET Framework incluso in .NET Framework è disponibile un oggetto <xref:System.Data.Common.DbConnection>: nel provider di dati .NET Framework per OLE DB è incluso un oggetto <xref:System.Data.OleDb.OleDbConnection>, in quello per SQL Server è incluso un oggetto <xref:System.Data.SqlClient.SqlConnection>, in quello per ODBC è incluso un oggetto <xref:System.Data.Odbc.OdbcConnection> e in quello per Oracle è incluso un oggetto <xref:System.Data.OracleClient.OracleConnection>.  
   
-## In questa sezione  
- [Esecuzione della connessione](../../../../docs/framework/data/adonet/establishing-the-connection.md)  
- Viene descritto come usare un oggetto **Connection** per stabilire una connessione a un'origine dati.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Per stabilire la connessione](../../../../docs/framework/data/adonet/establishing-the-connection.md)  
+ Viene descritto come utilizzare un **connessione** oggetto per stabilire una connessione a un'origine dati.  
   
  [Eventi di connessione](../../../../docs/framework/data/adonet/connection-events.md)  
- Viene descritta la procedura per usare un evento **InfoMessage** per recuperare i messaggi informativi da un'origine dati.  
+ Viene descritto come utilizzare un **InfoMessage** recuperare messaggi informativi da un'origine dati dell'evento.  
   
-## Vedere anche  
- [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)   
- [Pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)   
- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Stringhe di connessione](../../../../docs/framework/data/adonet/connection-strings.md)  
+ [Il pool di connessioni](../../../../docs/framework/data/adonet/connection-pooling.md)  
+ [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

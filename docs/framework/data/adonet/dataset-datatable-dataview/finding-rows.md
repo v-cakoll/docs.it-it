@@ -1,33 +1,39 @@
 ---
-title: "Ricerca di righe | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ricerca di righe
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 96a65761cb6ddf31c0bb4c14077aed37336183f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Ricerca di righe
-È possibile eseguire ricerche di righe in base ai relativi valori della chiave di ordinamento usando i metodi <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> del tipo <xref:System.Data.DataView>.  La distinzione tra maiuscole e minuscole nei valori di ricerca dei metodi **Find** e **FindRows** viene determinata dalla proprietà **CaseSensitive** del tipo <xref:System.Data.DataTable> sottostante.  Per restituire un risultato, è necessario che i valori di ricerca corrispondano interamente ai valori della chiave di ordinamento esistenti.  
+# <a name="finding-rows"></a>Ricerca di righe
+È possibile eseguire ricerche di righe in base ai relativi valori della chiave di ordinamento usando i metodi <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> del tipo <xref:System.Data.DataView>. La distinzione maiuscole/minuscole della ricerca i valori di **trovare** e **FindRows** metodi è determinato dal **CaseSensitive** proprietà dell'oggetto sottostante <xref:System.Data.DataTable>. Per restituire un risultato, è necessario che i valori di ricerca corrispondano interamente ai valori della chiave di ordinamento esistenti.  
   
- Il metodo **Find** restituisce un numero intero con l'indice del tipo <xref:System.Data.DataRowView> che corrisponde ai criteri di ricerca.  Se più righe corrispondono ai criteri di ricerca, verrà restituito solo l'indice del primo **DataRowView** corrispondente.  Se non viene trovata alcuna corrispondenza, il metodo **Find** restituirà \-1.  
+ Il **trovare** metodo restituisce un intero con indice di <xref:System.Data.DataRowView> che corrisponde ai criteri di ricerca. Se più di una riga corrisponde ai criteri di ricerca, solo l'indice della prima corrispondenza **DataRowView** viene restituito. Se non vengono trovate corrispondenze, **trovare** restituisce -1.  
   
- Per restituire risultati di ricerca corrispondenti a più righe, usare il metodo **FindRows**.  Il metodo **FindRows** esegue le stesse operazioni del metodo **Find**, ma restituisce una matrice **DataRowView** contenente riferimenti a tutte le righe corrispondenti nel **DataView**.  Se non viene rilevata alcuna corrispondenza, la matrice **DataRowView** risulterà vuota.  
+ Per restituire i risultati di ricerca che corrispondono a più righe, utilizzare il **FindRows** metodo. **FindRows** funziona come il **trovare** metodo, ad eccezione del fatto che restituisca un **DataRowView** matrice che fa riferimento a tutte le righe corrispondenti nel **DataView**. Se viene trovata alcuna corrispondenza, il **DataRowView** matrice sarà vuota.  
   
- Per usare i metodi **Find** o **FindRows**, è necessario specificare un ordinamento impostando **ApplyDefaultSort** su **true** o usando la proprietà **Sort**.  Se non viene specificato alcun ordinamento, verrà generata un'eccezione.  
+ Utilizzare il **trovare** o **FindRows** metodi è necessario specificare un ordinamento ordinare impostando **ApplyDefaultSort** a **true** o tramite il **Ordinamento** proprietà. Se non viene specificato alcun ordinamento, verrà generata un'eccezione.  
   
- I metodi **Find** e **FindRows** accettano come input una matrice di valori, la cui lunghezza corrisponde al numero di colonne dell'ordinamento.  In caso di ordinamento di una singola colonna, è possibile passare un unico valore.  In caso di ordinamenti contenenti più colonne, viene passata una matrice di oggetti.  Notare che nel caso di un ordinamento di più colonne è necessario che i valori della matrice di oggetti corrispondano all'ordinamento delle colonne specificato nella proprietà **Sort** di **DataView**.  
+ Il **trovare** e **FindRows** metodi accettano una matrice di valori come input, la cui lunghezza corrisponde al numero di colonne dell'ordinamento. In caso di ordinamento di una singola colonna, è possibile passare un unico valore. In caso di ordinamenti contenenti più colonne, viene passata una matrice di oggetti. Si noti che per l'ordinamento su più colonne, i valori della matrice di oggetti devono corrispondere all'ordine delle colonne specificate nel **ordinamento** proprietà del **DataView**.  
   
- Nell'esempio di codice seguente viene illustrata la chiamata del metodo **Find** per un **DataView** con un ordinamento di una singola colonna.  
+ Nell'esempio di codice riportato di seguito viene illustrato il **trovare** chiamata del metodo per un **DataView** con un ordinamento singola colonna.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -43,7 +49,6 @@ Else
     custView(rowIndex)("CustomerID").ToString(), _  
     custView(rowIndex)("CompanyName").ToString())  
 End If  
-  
 ```  
   
 ```csharp  
@@ -60,7 +65,7 @@ else
     custView[rowIndex]["CompanyName"].ToString());  
 ```  
   
- Se nella proprietà **Sort** sono specificate più colonne, è necessario passare una matrice di oggetti con i valori di ricerca per ogni colonna nell'ordine specificato dalla proprietà **Sort**, come illustrato nell'esempio di codice seguente.  
+ Se il **ordinamento** proprietà sono specificate più colonne, è necessario passare una matrice di oggetti con i valori di ricerca per ogni colonna nell'ordine specificato per il **ordinamento** proprietà, come nell'esempio di codice seguente.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -80,7 +85,6 @@ Else
       myDRV("CompanyName").ToString(), myDRV("ContactName").ToString())  
   Next  
 End If  
-  
 ```  
   
 ```csharp  
@@ -99,8 +103,8 @@ else
       myDRV["ContactName"].ToString());  
 ```  
   
-## Vedere anche  
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataView>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataView>  
+ [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,26 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-helpviewer_keywords:
-- wsHttpBinding Element
+helpviewer_keywords: wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4530878c342d1350c216e449e1d5444862d03c0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 1368b4a677e5cce7b666c94a6f3ddd919e72f7c9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
 Definisce un'associazione protetta, affidabile, interoperabile adatta per contratti di servizio non duplex. L'associazione implementa le specifiche seguenti: WS-ReliableMessaging per l'affidabilità e WS-Security per la sicurezza e l'autenticazione dei messaggi. Il trasporto è HTTP e la codifica dei messaggi è Text/XML.  
@@ -151,10 +145,9 @@ Definisce un'associazione protetta, affidabile, interoperabile adatta per contra
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.WSHttpBinding>   
- <xref:System.ServiceModel.Configuration.WSHttpBindingElement>   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.WSHttpBinding>  
+ <xref:System.ServiceModel.Configuration.WSHttpBindingElement>  
+ [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
+ [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associazione >](../../../../../docs/framework/misc/binding.md)
-

@@ -1,39 +1,41 @@
 ---
-title: "Metodo Load | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Metodo Load
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4617f2193b9d557094b7570f8ca8fd5ff7a9d25d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Metodo Load
-È possibile usare il metodo <xref:System.Data.DataTable.Load%2A> per caricare un tipo <xref:System.Data.DataTable> con righe provenienti da un'origine dati.  Si tratta di un metodo di overload che, nella forma più semplice, accetta un singolo parametro, **DataReader**.  In questa forma, viene semplicemente caricata la **DataTable** con le righe.  Facoltativamente, è possibile specificare il parametro **LoadOption** per controllare il modo in cui vengono aggiunti i dati alla **DataTable**.  
+# <a name="the-load-method"></a>Metodo Load
+È possibile usare il metodo <xref:System.Data.DataTable.Load%2A> per caricare un tipo <xref:System.Data.DataTable> con righe provenienti da un'origine dati. Si tratta di un metodo di overload che, nella sua forma più semplice, accetta un solo parametro, un **DataReader**. In questo modulo, viene semplicemente caricata la **DataTable** con righe. Facoltativamente, è possibile specificare il **LoadOption** parametro per controllare come aggiungere i dati per il **DataTable**.  
   
- Il parametro **LoadOption** è particolarmente utile nei casi in cui la **DataTable** contenga già righe di dati, in quanto descrive in che modo i dati in arrivo dall'origine dati verranno combinati con i dati già presenti nella tabella.  Ad esempio, **PreserveCurrentValues**, ovvero l'impostazione predefinita, specifica che nei casi in cui una riga è contrassegnata come **Added** nella **DataTable**, il valore **Original** di ciascuna colonna è impostato sul contenuto della riga corrispondente dell'origine dati.  Il valore **Current** conserverà i valori assegnati quando la riga è stata aggiunta mentre il valore della riga relativo a **RowState** verrà impostato su **Changed**.  
+ Il **LoadOption** parametro è particolarmente utile nei casi in cui il **DataTable** già contiene righe di dati, perché viene descritto come i dati provenienti dai file di dati vengono combinati con i dati già nella tabella. Ad esempio, **PreserveCurrentValues** (predefinito) specifica che nei casi in cui una riga è contrassegnata come **Added** nel **DataTable**, **originale** valore o ogni colonna è impostato per il contenuto della riga corrispondente dall'origine dati. Il **corrente** valore manterrà i valori assegnati quando la riga è stata aggiunta e **RowState** della riga verrà impostato su **Changed**.  
   
  Nella tabella seguente viene fornita una breve descrizione dei valori di enumerazione di <xref:System.Data.LoadOption>.  
   
 |Valore LoadOption|Descrizione|  
-|-----------------------|-----------------|  
-|**OverwriteRow**|Se le righe in arrivo presentano lo stesso valore **PrimaryKey** di una riga già presente nella **DataTable**, i valori **Original** e **Current** di ciascuna colonna vengono sostituiti dai valori della riga in arrivo e la proprietà **RowState** viene impostata su **Unchanged**.<br /><br /> Le righe provenienti da un'origine dati e non ancora presenti nella **DataTable** vengono aggiunte con il valore di **RowState** pari a **Unchanged**.<br /><br /> Se questa opzione è attiva, il contenuto della **DataTable** viene aggiornato in modo da corrispondere al contenuto dell'origine dati.|  
-|**PreserveCurrentValues \(impostazione predefinita\)**|Se le righe in arrivo presentano lo stesso valore **PrimaryKey** di una riga già presente nella **DataTable**, il valore **Original** viene impostato sul contenuto della riga in arrivo e il valore **Current** non viene modificato.<br /><br /> Se il valore relativo a **RowState** è **Added** o **Modified**, verrà impostato su **Modified**.<br /><br /> Se il valore relativo a **RowState** era **Deleted**, rimarrà **Deleted**.<br /><br /> Le righe provenienti da un'origine dati non ancora presenti nella **DataTable** vengono aggiunte e **RowState** viene impostato su **Unchanged**.|  
-|**UpdateCurrentValues**|Se le righe in arrivo presentano lo stesso valore **PrimaryKey** della riga già presente nella **DataTable**, il valore **Current** viene copiato nel valore **Original** e viene quindi impostato sul contenuto della riga in arrivo.<br /><br /> Se il valore relativo a **RowState** nella **DataTable** era **Added**, **RowState** rimarrà **Added**.  Per le righe contrassegnate come **Modified** o **Deleted**, il valore relativo a **RowState** sarà **Modified**.<br /><br /> Le righe provenienti da un'origine dati non ancora presenti nella **DataTable** vengono aggiunte e **RowState** viene impostato su **Added**.|  
+|----------------------|-----------------|  
+|**OverwriteRow**|Se le righe in arrivo presentano lo stesso **PrimaryKey** valore di una riga già presente nella **DataTable**, **originale** e **corrente** i valori di ogni colonna vengono sostituiti con i valori della riga in arrivo e **RowState** è impostata su **Unchanged**.<br /><br /> Le righe dall'origine dati che non esistono già nel **DataTable** vengono aggiunti con una **RowState** valore **Unchanged**.<br /><br /> Questa opzione attiva aggiorna il contenuto del **DataTable** in modo che corrisponda il contenuto dell'origine dati.|  
+|**PreserveCurrentValues (impostazione predefinita)**|Se le righe in arrivo presentano lo stesso **PrimaryKey** valore di una riga già presente nella **DataTable**, **originale** è impostato per il contenuto della riga in arrivo e il **Corrente** valore non viene modificato.<br /><br /> Se il **RowState** è **Added** o **Modified**, viene impostato su **Modified**.<br /><br /> Se il **RowState** stato **Deleted**, rimane **Deleted**.<br /><br /> Le righe dall'origine dati che non esistono già nel **DataTable** vengono aggiunti e **RowState** è impostato su **Unchanged**.|  
+|**UpdateCurrentValues**|Se le righe in arrivo presentano lo stesso **PrimaryKey** valore come la riga già presente nella **DataTable**, **corrente** valore viene copiato il **originale**valore e **corrente** valore viene quindi impostato per il contenuto della riga in arrivo.<br /><br /> Se il **RowState** nel **DataTable** è stata **Added**, **RowState** rimane **aggiunto**. Per le righe contrassegnate come **Modified** o **Deleted**, **RowState** è **Modified**.<br /><br /> Le righe dall'origine dati che non sono già presenti nel **DataTable** vengono aggiunti e **RowState** è impostato su **aggiunto**.|  
   
- Nell'esempio seguente viene usato il metodo **Load** per visualizzare un elenco delle date di nascita dei dipendenti nel database **Northwind**.  
+ L'esempio seguente usa il **carico** metodo per visualizzare un elenco delle date di nascita dei dipendenti nel **Northwind** database.  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
     ' Assumes that connectionString is a valid connection string  
     ' to the Northwind database on SQL Server.  
@@ -75,6 +77,6 @@ Private Sub LoadBirthdays(ByVal connectionString As String)
 End Sub  
 ```  
   
-## Vedere anche  
- [Modifica dei dati in una DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [La modifica dei dati in un oggetto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

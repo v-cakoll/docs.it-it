@@ -1,61 +1,62 @@
 ---
-title: "Costanti (riferimenti alle API non gestite) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "costanti per API non gestite [.NET Framework]"
-  - "riferimento ad API native [.NET Framework], costanti"
-  - "riferimento ad API non gestite [.NET Framework], costanti"
+title: Costanti (riferimenti alle API non gestite)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- constants for unmanaged API [.NET Framework]
+- native API reference [.NET Framework], constants
+- unmanaged API reference [.NET Framework], constants
 ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 45e4d41c16695010dc452d2f22850d43f885974a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Costanti (riferimenti alle API non gestite)
-In questo argomento viene descritto il tipo di linguaggio, fornitore di linguaggio e costanti del tipo di documento definite in CorSym. idl.  
+# <a name="constants-unmanaged-api-reference"></a>Costanti (riferimenti alle API non gestite)
+Questo argomento descrive il tipo di linguaggio, fornitore di linguaggio e costanti di tipo di documento che sono definite in CorSym.idl.  
   
-## Costanti del tipo di linguaggio  
- Nella tabella seguente viene illustrato come linguaggio le costanti dei tipi che rappresentano i GUID che identificano i linguaggi di programmazione.  
-  
-|Simbolo|Descrizione|  
-|-------------|-----------------|  
-|CorSym\_LanguageType\_C|Indica il linguaggio C.|  
-|CorSym\_LanguageType\_CPlusPlus|Indica il linguaggio C\+\+.|  
-|CorSym\_LanguageType\_CSharp|Indica il linguaggio c\#.|  
-|CorSym\_LanguageType\_Basic|Indica la lingua di base.|  
-|CorSym\_LanguageType\_Java|Indica il linguaggio Java.|  
-|CorSym\_LanguageType\_Cobol|Indica il linguaggio COBOL.|  
-|CorSym\_LanguageType\_Pascal|Indica il linguaggio Pascal.|  
-|CorSym\_LanguageType\_ILAssembly|Indica il codice di assembly Microsoft intermediate language \(MSIL\).|  
-|CorSym\_LanguageType\_JScript|Indica il linguaggio JScript.|  
-|CorSym\_LanguageType\_SMC|Indica il linguaggio SMC.|  
-|CorSym\_LanguageType\_MCPlusPlus|Indica il linguaggio C\+\+ abilitato per .NET Framework.|  
-  
-## Costanti di fornitore di linguaggio  
- Nella tabella seguente viene illustrato come linguaggio le costanti dei fornitori che rappresentano i GUID che identificano i fornitori dei linguaggi di programmazione.  
+## <a name="language-type-constants"></a>Costanti del tipo di linguaggio  
+ Nella tabella seguente viene illustrato come linguaggio di costanti di tipo, che rappresentano i GUID che identificano i linguaggi di programmazione.  
   
 |Simbolo|Descrizione|  
-|-------------|-----------------|  
-|CorSym\_LanguageVendor\_Microsoft|Indica che Microsoft.|  
+|------------|-----------------|  
+|CorSym_LanguageType_C|Indica il linguaggio C.|  
+|CorSym_LanguageType_CPlusPlus|Indica il linguaggio C++.|  
+|CorSym_LanguageType_CSharp|Indica il linguaggio c#.|  
+|CorSym_LanguageType_Basic|Indica la lingua di base.|  
+|CorSym_LanguageType_Java|Indica il linguaggio Java.|  
+|CorSym_LanguageType_Cobol|Indica la lingua COBOL.|  
+|CorSym_LanguageType_Pascal|Indica la lingua Pascal.|  
+|CorSym_LanguageType_ILAssembly|Indica il codice di assembly di Microsoft intermediate language (MSIL).|  
+|CorSym_LanguageType_JScript|Indica il linguaggio JScript.|  
+|CorSym_LanguageType_SMC|Indica il linguaggio SMC.|  
+|CorSym_LanguageType_MCPlusPlus|Indica il linguaggio C++ abilitato per .NET Framework.|  
   
-## Costanti del tipo di documento  
- Nella tabella seguente viene illustrato come documento le costanti dei tipi che rappresentano i GUID che identificano i tipi di documento.  
+## <a name="language-vendor-constants"></a>Costanti di fornitore di linguaggio  
+ Nella tabella seguente viene illustrato come linguaggio costanti fornitore, che rappresentano i GUID che identificano i fornitori dei linguaggi di programmazione.  
   
 |Simbolo|Descrizione|  
-|-------------|-----------------|  
-|CorSym\_DocumentType\_Text|Indica un documento di testo.|  
-|CorSym\_DocumentType\_MC|Indica un documento non di testo.|  
+|------------|-----------------|  
+|CorSym_LanguageVendor_Microsoft|Indica a Microsoft.|  
   
-## Vedere anche  
+## <a name="document-type-constants"></a>Costanti del tipo di documento  
+ Nella tabella seguente viene illustrato come documento costanti di tipo, che rappresentano i GUID che identificano i tipi di documento.  
+  
+|Simbolo|Descrizione|  
+|------------|-----------------|  
+|CorSym_DocumentType_Text|Indica un documento di testo.|  
+|CorSym_DocumentType_MC|Indica un documento non di testo.|  
+  
+## <a name="see-also"></a>Vedere anche  
  [Riferimenti alle API non gestite](../../../docs/framework/unmanaged-api/index.md)

@@ -1,25 +1,28 @@
 ---
-title: "Esempi di query basate su metodo (LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esempi di query basate sul metodo (LINQ to DataSet)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 995ac8b4fc91517573dbf9cc02dd1133074ade54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Esempi di query basate su metodo (LINQ to DataSet)
-Contenuto della sezione vengono forniti esempi di programmazione di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] nella sintassi delle query basate su metodo in cui vengono usati gli operatori di query standard.  L'oggetto <xref:System.Data.DataSet> usato in questi esempi viene popolato usando il metodo `FillDataSet`, specificato in [Caricamento di dati in un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  Per altre informazioni, vedere [Standard Query Operators Overview](../../../../ocs/visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+# <a name="method-based-query-examples-linq-to-dataset"></a>Esempi di query basate sul metodo (LINQ to DataSet)
+Contenuto della sezione vengono forniti esempi di programmazione di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] nella sintassi delle query basate su metodo in cui vengono usati gli operatori di query standard. Il <xref:System.Data.DataSet> usato in questi esempi viene popolato usando il `FillDataSet` metodo, che viene specificato in [durante il caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Per ulteriori informazioni, vedere [Cenni preliminari sugli operatori di Query Standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Proiezione](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
  Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Select%2A> e <xref:System.Linq.Enumerable.SelectMany%2A> per eseguire una query su <xref:System.Data.DataSet>.  
   
@@ -39,12 +42,12 @@ Contenuto della sezione vengono forniti esempi di programmazione di [!INCLUDE[li
  Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.First%2A> e <xref:System.Linq.Enumerable.ElementAt%2A> per ottenere elementi di <xref:System.Data.DataRow> da un oggetto <xref:System.Data.DataSet>.  
   
  [Operatori di aggregazione](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
- Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Sum%2A> per eseguire una query su <xref:System.Data.DataSet> e aggregare i dati.  
+ Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>  <xref:System.Linq.Enumerable.Sum%2A> per eseguire una query su <xref:System.Data.DataSet> e aggregare i dati.  
   
  [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
  Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.GroupJoin%2A> e <xref:System.Linq.Enumerable.Join%2A> per eseguire una query su <xref:System.Data.DataSet>.  
   
-## Vedere anche  
- [Esempi delle espressioni di query](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)   
- [Esempi di operatori specifici del DataSet](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)   
- [Esempi relativi a LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a>Vedere anche  
+ [Esempi di espressioni di query](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
+ [Esempi di operatori specifici di DataSet](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
+ [LINQ to DataSet esempi](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

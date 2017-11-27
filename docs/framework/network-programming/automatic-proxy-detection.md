@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - automatic proxy detections
 - Web Proxy Auto-Discovery
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f0c1a0d462768229c730f06a6514d040a3e5c1c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 8eec6ff84978cdbd31dd4be307d0eb9560edde19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="automatic-proxy-detection"></a>Rilevamento automatico proxy
 Il rilevamento automatico del proxy è un processo con cui un server proxy Web viene identificato dal sistema e usato per inviare richieste per conto del client. Questa funzionalità è nota anche come Rilevamento automatico proxy Web (WPAD). Quando il rilevamento automatico del proxy è abilitato, il sistema tenta di trovare uno script di configurazione del proxy responsabile della restituzione del set di proxy che possono essere usati per la richiesta. Se viene trovato, lo script di configurazione del proxy viene scaricato, compilato ed eseguito nel computer locale quando per una richiesta che usa un'istanza <xref:System.Net.WebProxy> vengono ottenute le informazioni del proxy, la risposta o il flusso di richieste.  
@@ -80,7 +77,6 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
  Le richieste in cui non è specificato un proxy usano il proxy predefinito del dominio dell'applicazione, disponibile nella proprietà <xref:System.Net.WebRequest.DefaultWebProxy%2A>.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.WebProxy>   
- <xref:System.Net.WebRequest>   
+ <xref:System.Net.WebProxy>  
+ <xref:System.Net.WebRequest>  
  [Elemento \<system.Net> (impostazioni di rete)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
-

@@ -1,35 +1,35 @@
 ---
-title: "Cenni preliminari sul controllo GroupBox (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GroupBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GroupBox (controllo) [Windows Form], informazioni sul controllo GroupBox"
-  - "raggruppamento di controlli, Windows Form"
+title: Cenni preliminari sul controllo GroupBox (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: GroupBox
+helpviewer_keywords:
+- GroupBox control [Windows Forms], about GroupBox control
+- grouping controls [Windows Forms], Windows Forms
 ms.assetid: 03bd8ff9-c905-4f01-9bc6-8438b11d0881
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ceb77b12fc8c946eea03d865509db20d72a1900a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Cenni preliminari sul controllo GroupBox (Windows Form)
-I controlli <xref:System.Windows.Forms.GroupBox> Windows Form vengono utilizzati per organizzare altri controlli in gruppi identificabili.  Le caselle di gruppo vengono in genere utilizzate per suddividere un form in base alle funzioni.  Si supponga ad esempio di disporre di un form per gli ordini in cui sono specificate le opzioni di spedizione, quale il corriere notturno da utilizzare.  Il raggruppamento delle opzioni in una casella di gruppo fornisce all'utente una visione d'insieme, oltre a permettere in fase di progettazione di spostare facilmente tutti i controlli, muovendo semplicemente il controllo <xref:System.Windows.Forms.GroupBox> che li contiene.  
+# <a name="groupbox-control-overview-windows-forms"></a>Cenni preliminari sul controllo GroupBox (Windows Form)
+Windows Form <xref:System.Windows.Forms.GroupBox> controlli vengono utilizzati per fornire un raggruppamento identificabile per altri controlli. In genere, utilizzare le caselle di gruppo per suddividere un form dalla funzione. Ad esempio, potrebbe essere un modulo d'ordine che specifica le opzioni di spedizione, ad esempio quali notturno vettore da usare. Raggruppamento di tutte le opzioni in una casella di gruppo fornisce all'utente un'indicazione visiva logica e in fase di progettazione di spostare facilmente, quando si sposta il singolo <xref:System.Windows.Forms.GroupBox> controllare tutti i controlli in esso contenuti, troppo spostano.  
   
- La didascalia della casella di gruppo viene definita dalla proprietà <xref:System.Windows.Forms.GroupBox.Text%2A>.  Per ulteriori informazioni, vedere [Procedura: impostare il testo visualizzato da un controllo di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+ Didascalia della casella di gruppo viene definita dal <xref:System.Windows.Forms.GroupBox.Text%2A> proprietà. Per ulteriori informazioni, vedere [procedura: impostare il testo visualizzato da un controllo Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
-## GroupBox e Panel  
- Il controllo <xref:System.Windows.Forms.GroupBox> ha caratteristiche simili a quelle del controllo <xref:System.Windows.Forms.Panel> ma solo il controllo <xref:System.Windows.Forms.GroupBox> visualizza una didascalia mentre solo il controllo <xref:System.Windows.Forms.Panel> è dotato di barre di scorrimento.  
+## <a name="groupbox-and-panel"></a>Pannello di controllo GroupBox  
+ Il <xref:System.Windows.Forms.GroupBox> è simile al controllo il <xref:System.Windows.Forms.Panel> controllo, tuttavia, solo il <xref:System.Windows.Forms.GroupBox> controllo Visualizza una didascalia e solo il <xref:System.Windows.Forms.Panel> controllo può contenere barre di scorrimento.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Controllo GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)

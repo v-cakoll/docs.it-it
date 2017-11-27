@@ -1,46 +1,37 @@
 ---
-title: 'Procedura: eseguire Query su un ArrayList con LINQ (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: eseguire Query di ArrayList con LINQ (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f48b06c23b1e28fccb953638954a8d9afefe574e
-ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6740d8a7c6d4a31ccd3730249695c24c6417785d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Procedura: eseguire Query su un ArrayList con LINQ (Visual Basic)
-Quando si utilizza LINQ per non query generica <xref:System.Collections.IEnumerable>raccolte, ad esempio <xref:System.Collections.ArrayList>, è necessario dichiarare in modo esplicito il tipo della variabile di intervallo in base al tipo specifico di oggetti nella raccolta.</xref:System.Collections.ArrayList> </xref:System.Collections.IEnumerable> Ad esempio, se si dispone di un <xref:System.Collections.ArrayList>di `Student` oggetti, il [dalla clausola](../../../../visual-basic/language-reference/queries/from-clause.md) dovrebbe essere simile al seguente:</xref:System.Collections.ArrayList>  
+# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Procedura: eseguire Query di ArrayList con LINQ (Visual Basic)
+Quando si usa LINQ per eseguire una query su raccolte <xref:System.Collections.IEnumerable> non generiche, ad esempio <xref:System.Collections.ArrayList>, è necessario dichiarare in modo esplicito il tipo della variabile di intervallo in base al tipo specifico di oggetti nella raccolta. Ad esempio, se dispone di un <xref:System.Collections.ArrayList> di `Student` oggetti, il [dalla clausola](../../../../visual-basic/language-reference/queries/from-clause.md) dovrebbe essere simile al seguente:  
   
 ```  
 Dim query = From student As Student In arrList   
 ...  
 ```  
   
- Specificando il tipo della variabile di intervallo, si esegue il cast di ogni elemento di <xref:System.Collections.ArrayList>per un `Student`.</xref:System.Collections.ArrayList>  
+ Specificando il tipo della variabile di intervallo, si esegue il cast di ogni elemento di <xref:System.Collections.ArrayList> in `Student`.  
   
- L'utilizzo di una variabile di intervallo tipizzata in modo esplicito in un'espressione di query è equivalente alla chiamata di <xref:System.Linq.Enumerable.Cast%2A>(metodo).</xref:System.Linq.Enumerable.Cast%2A> <xref:System.Linq.Enumerable.Cast%2A>genera un'eccezione se non è possibile eseguire il cast specificato.</xref:System.Linq.Enumerable.Cast%2A> <xref:System.Linq.Enumerable.Cast%2A>e <xref:System.Linq.Enumerable.OfType%2A>sono i due metodi di operatore di Query Standard che operano su non generica <xref:System.Collections.IEnumerable>tipi.</xref:System.Collections.IEnumerable> </xref:System.Linq.Enumerable.OfType%2A></xref:System.Linq.Enumerable.Cast%2A> In Visual Basic, è necessario chiamare esplicitamente il <xref:System.Linq.Enumerable.Cast%2A>metodo sull'origine dati per garantire un tipo di variabile di intervallo specifico.</xref:System.Linq.Enumerable.Cast%2A> Per ulteriori informazioni, vedere[relazioni tra i tipi nelle operazioni di Query (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
+ L'uso di una variabile di intervallo tipizzata in modo esplicito in un'espressione di query è equivalente alla chiamata del metodo <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> genera un'eccezione se non è possibile eseguire il cast specificato. <xref:System.Linq.Enumerable.Cast%2A> e <xref:System.Linq.Enumerable.OfType%2A> sono i due metodi dell'operatore query standard che operano sui tipi <xref:System.Collections.IEnumerable> non generici. In Visual Basic, è necessario chiamare esplicitamente il <xref:System.Linq.Enumerable.Cast%2A> metodo nell'origine dei dati per assicurare un tipo di variabile di intervallo specifico. Per ulteriori informazioni, vedere[relazioni tra i tipi nelle operazioni di Query (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrata una semplice query su un <xref:System.Collections.ArrayList>.</xref:System.Collections.ArrayList> Si noti che in questo esempio utilizza gli inizializzatori di oggetto quando il codice chiama il <xref:System.Collections.ArrayList.Add%2A>(metodo), ma questo non è un requisito.</xref:System.Collections.ArrayList.Add%2A>  
+ L'esempio seguente mostra una query semplice su un oggetto <xref:System.Collections.ArrayList>. Si noti che questo esempio usa gli inizializzatori di oggetto quando il codice chiama il metodo <xref:System.Collections.ArrayList.Add%2A>, anche se non si tratta di un requisito.  
   
 ```vb  
 Imports System.Collections  
@@ -96,4 +87,3 @@ End Module
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-

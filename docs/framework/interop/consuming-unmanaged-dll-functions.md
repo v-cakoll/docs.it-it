@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - unmanaged functions, calling
 - COM interop, DLL functions
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bc0e2e7af861fd6ee233cad5069fef862bb29717
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ec93728566d6aa16d4b9b15b171d79831cc0dbeb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Utilizzo di funzioni di DLL non gestite
 Platform invoke è un servizio che consente al codice gestito di chiamare funzioni non gestite implementate in librerie a collegamento dinamico (DLL), come quelle nell'API Win32. Individua e richiama una funzione esportata ed esegue il marshalling degli argomenti (Integer, stringhe, matrici, strutture e così via) nel limite dell'interazione, in base alle necessità. Per altre informazioni su questo servizio, vedere [Informazioni dettagliate su platform invoke](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243).  
@@ -67,7 +60,7 @@ Platform invoke è un servizio che consente al codice gestito di chiamare funzio
  Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>Informazioni dettagliate su platform invoke  
- Platform invoke si basa sui metadati per individuare le funzioni esportate ed eseguire il marshalling degli argomenti in fase di esecuzione. Nella figura seguente viene illustrato questo processo.  
+ Platform invoke si basa sui metadati per individuare le funzioni esportate ed eseguire il marshalling degli argomenti in fase di esecuzione. Nell'illustrazione seguente viene mostrato questo processo.  
   
  ![Platform invoke](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")  
 Chiamata di platform invoke a una funzione DLL non gestita  
@@ -88,8 +81,7 @@ Chiamata di platform invoke a una funzione DLL non gestita
  Platform invoke dà luogo a eccezioni generate dalla funzione non gestita per il chiamante gestito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md)   
- [Esempi di platform invoke](../../../docs/framework/interop/platform-invoke-examples.md)   
- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)   
+ [Interoperabilità con codice non gestito](../../../docs/framework/interop/index.md)  
+ [Esempi di platform invoke](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)  
  [Utilizzo di funzioni di DLL non gestite](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
-

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4006b18e91b79d5f31649a0a15a18b9f7f28c38e
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6b93335d0d5d1524c9a0b955d1ea279be8c0f243
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltlibrarygt-element-net-native"></a>Elemento &lt;Library&gt; (.NET Native)
 Definisce l'assembly che contiene i tipi e i membri dei tipi i cui metadati sono disponibili per la reflection al runtime.  
@@ -46,7 +44,7 @@ Elemento \<Library>
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|*assembly_name*|Il nome semplice dell'assembly, senza estensione di file. Questo attributo corrisponde alla proprietà <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=fullName>. Ad esempio, il nome di un assembly denominato Extensions.dll è "Extensions". Vedere la sezione Note per informazioni su un formato speciale di *assembly_name* che supporta l'inclusione condizionale di metadati dall'assembly.|  
+|*assembly_name*|Il nome semplice dell'assembly, senza estensione di file. Questo attributo corrisponde alla proprietà <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType>. Ad esempio, il nome di un assembly denominato Extensions.dll è "Extensions". Vedere la sezione Note per informazioni su un formato speciale di *assembly_name* che supporta l'inclusione condizionale di metadati dall'assembly.|  
   
 ### <a name="child-elements"></a>Elementi figlio  
   
@@ -79,8 +77,7 @@ Elemento \<Library>
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento \<Application>](../../../docs/framework/net-native/application-element-net-native.md)   
- [Elemento \<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)   
- [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [\<Applicazione > elemento](../../../docs/framework/net-native/application-element-net-native.md)  
+ [\<Direttive > elemento](../../../docs/framework/net-native/directives-element-net-native.md)  
+ [Informazioni di riferimento sul file di configurazione delle direttive di runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)
-

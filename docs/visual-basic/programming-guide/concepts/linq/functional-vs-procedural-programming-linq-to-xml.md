@@ -1,30 +1,22 @@
 ---
-title: Programmazione Programmazione procedurale (LINQ to XML) (Visual Basic) | Documenti di Microsoft
+title: Programmazione Programmazione procedurale (LINQ to XML) (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d5afe31c8c81f4b099853a5e6e274156a1baa7f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7e47ff583146ab4258e219537cdc01821009e965
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Programmazione Programmazione procedurale (LINQ to XML) (Visual Basic)
 Sono disponibili diversi tipi di applicazioni XML:  
@@ -53,9 +45,9 @@ Sono disponibili diversi tipi di applicazioni XML:
   
  È possibile usare LINQ to XML con uno di questi due approcci. Si usano le stesse classe e in alcuni casi gli stessi metodi. Tuttavia, la struttura e gli obiettivi dei due approcci sono molto diversi. In situazioni diverse, ad esempio, un approccio offre in genere prestazioni più elevate dell'altro e usa una quantità maggiore o minore di memoria. Inoltre, un approccio sarà più facile da scrivere dell'altro e produrrà codice più facilmente gestibile.  
   
- Per i due approcci analogie, vedere [Visual Studio modifica dell'albero XML In memoria. Costruzione funzionale (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md).  
+ Per un confronto tra i due approcci, vedere [Differenze tra la modifica dell'albero XML in memoria e Costruzione funzionale (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md).  
   
- Per un'esercitazione sulla scrittura di trasformazioni funzionali, vedere [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Per un'esercitazione sulla scrittura di trasformazioni funzionali, vedere [Pure funzionale trasformazioni del linguaggio XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ to Cenni preliminari sulla programmazione XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+ [LINQ to XML Panoramica della programmazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

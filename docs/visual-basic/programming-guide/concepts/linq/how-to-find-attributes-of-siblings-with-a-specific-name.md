@@ -1,27 +1,22 @@
 ---
-title: 'Procedura: trovare attributi di pari livello con un nome specifico (XPath-LINQ to XML) (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: trovare attributi di pari livello con un nome specifico (XPath-LINQ to XML) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 879aa75ed8e8c74b2840c54058cc034d1f6cccc6
-ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 751d9559ae3b0bfe62fc866baf52fbef7babb7e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>Procedura: trovare attributi di pari livello con un nome specifico (XPath-LINQ to XML) (Visual Basic)
 In questo argomento viene illustrato come trovare tutti gli attributi degli elementi di pari livello del nodo di contesto. Nella raccolta vengono restituiti solo gli attributi con un nome specifico.  
@@ -33,7 +28,7 @@ In questo argomento viene illustrato come trovare tutti gli attributi degli elem
 ## <a name="example"></a>Esempio  
  In questo esempio viene dapprima ricercato un elemento `Book`, quindi tutti gli elementi di pari livello denominati `Book` e infine tutti gli attributi denominati `id`. Il risultato è una raccolta di attributi.  
   
- In questo esempio viene utilizzato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ Nell'esempio viene usato il documento XML seguente: [File XML di esempio: libri (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
   
 ```vb  
 Dim books as XDocument = XDocument.Load("Books.xml")  
@@ -70,4 +65,3 @@ id="bk102"
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ to XML per gli utenti di XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b17fc74b2143f7307316a167330d06c87b9d4c3d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3928c6b3690bd03a4365d21d5fbf2f4bd2a4f457
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peer-to-peer-collaboration"></a>Collaborazione peer-to-peer
 Il termine rete peer-to-peer si riferisce all'utilizzo di computer relativamente potenti (PC) esistenti ai margini di Internet per attività di elaborazione più estese rispetto a quelle solamente basate su client. I PC moderni hanno processori molto veloci, tanta memoria e dischi rigidi di grandi dimensioni e nessuna di queste risorse viene utilizzata appieno per l'esecuzione di attività di elaborazione comuni, ad esempio posta elettronica ed esplorazione del Web. I PC moderni possono fungere facilmente sia da client che da server (peer) per molti tipi di applicazioni.  
@@ -56,6 +50,5 @@ Il termine rete peer-to-peer si riferisce all'utilizzo di computer relativamente
  In un dominio di Active Directory, i controller di dominio offrono i servizi di autenticazione tramite Kerberos. In un ambiente peer senza server, i peer devono implementare un sistema di autenticazione proprio. In una rete peer-to-peer qualsiasi nodo può fungere da Autorità di certificazione, eliminando la necessità di un certificato radice nell'archivio radice attendibile di ogni peer. L'autenticazione viene fornita mediante certificati autofirmati, formattati come certificati X.509. Questi sono i certificati creati da ogni peer, che genera la coppia di chiavi pubblica/privata e il certificato che viene firmato con la chiave privata. Il certificato autofirmato viene usato per l'autenticazione e per fornire informazioni sull'entità peer. Come per l'autenticazione X.509, l'autenticazione di una rete di peer si basa su una catena di certificati riconducibili a una chiave pubblica attendibile.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.PeerToPeer.Collaboration>   
+ <xref:System.Net.PeerToPeer.Collaboration>  
  [Informazioni sullo spazio dei nomi System.Net.PeerToPeer.Collaboration](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
-

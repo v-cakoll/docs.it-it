@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 76883fd9702e475bd6afd9629fb4702ca42395d4
-ms.openlocfilehash: 61eaf6ba83b94724555ca3fee53e3a4d538ee11a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 5fa93919bfc6f7f078fd2de4653e8b9e878a84fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Definisce un elemento di associazione usato per configurare endpoint per servizi Web [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] che rispondono a richieste HTTP anziché a messaggi SOAP.  
@@ -104,11 +102,10 @@ Definisce un elemento di associazione usato per configurare endpoint per servizi
  Il supporto della pubblicazione via RSS e dell'integrazione ASP.AJAX in [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] è integrato nel modello di programmazione Web. Per ulteriori informazioni sul modello, vedere [modello di programmazione HTTP Web WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.WebHttpBinding>   
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>   
- [Modello di programmazione HTTP Web WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.WebHttpBinding>  
+ <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
+ [Modello di programmazione HTTP Web WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
+ [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<associazione >](../../../../../docs/framework/misc/binding.md)
-

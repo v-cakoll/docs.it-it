@@ -1,59 +1,67 @@
 ---
-title: "&lt;scopes&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;ambiti&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6b35696cbecb0badf397d6d48e7c97aae3d0232e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;scopes&gt;
+# <a name="ltscopesgt"></a>&lt;ambiti&gt;
 Contiene una raccolta di elementi di configurazione che specificano URI di ambito personalizzati che è possibile usare per filtrare gli endpoint del servizio durante l'esecuzione di query.  
   
-## Sintassi  
+\<System. ServiceModel >  
+\<i comportamenti >  
+\<endpointBehaviors >  
+\<comportamento >  
+\<endpointDiscovery >  
+\<gli ambiti >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
-<behaviors>  
-  <endpointBehaviors>  
-    <behavior name="String">  
-      <endpointDiscovery enable="Boolean">  
-        <scopes>  
-          <add scope="URI"/>  
-        </scopes>  
-      </endpointDiscovery>  
-    </behavior>  
-  </endpointBehaviors>  
+```xml  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="String">
+      <endpointDiscovery enable="Boolean">
+        <scopes>
+          <add scope="URI" />
+        </scopes>
+      </endpointDiscovery>
+    </behavior>
+  </endpointBehaviors>
 </behaviors>  
-  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|[\<aggiunta\>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|Aggiunge le informazioni sull'ambito per l'endpoint che è possibile usare nei criteri di corrispondenza per la ricerca di servizi.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|Aggiunge le informazioni sull'ambito per l'endpoint che è possibile usare nei criteri di corrispondenza per la ricerca di servizi.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<endpointDiscovery\>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|Specifica le varie impostazioni di individuazione per un endpoint, quali l'individuazione, gli ambiti e le eventuali estensioni personalizzate ai relativi metadati.|  
+|-------------|-----------------|  
+|[\<endpointDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|Specifica le varie impostazioni di individuazione per un endpoint, quali l'individuazione, gli ambiti e le eventuali estensioni personalizzate ai relativi metadati.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

@@ -1,25 +1,28 @@
 ---
-title: "ReliableSessionBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ReliableSessionBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3f4aff60c96db5071d41a3f011019b05746f0c96
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# ReliableSessionBindingElement
+# <a name="reliablesessionbindingelement"></a>ReliableSessionBindingElement
 ReliableSessionBindingElement  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class ReliableSessionBindingElement : BindingElement  
@@ -35,73 +38,73 @@ class ReliableSessionBindingElement : BindingElement
 };  
 ```  
   
-## Metodi  
+## <a name="methods"></a>Metodi  
  La classe ReliableSessionBindingElement non definisce metodi.  
   
-## Proprietà  
+## <a name="properties"></a>Proprietà  
  La classe ReliableSessionBindingElement ha le proprietà seguenti:  
   
-### AcknowledgementInterval  
+### <a name="acknowledgementinterval"></a>AcknowledgementInterval  
  Tipo di dati: DateTime  
   
  Tipo di accesso: sola lettura  
   
  Intervallo di tempo che una destinazione attende prima di inviare un acknowledgment all'origine del messaggio sui canali affidabili creati dalla factory.  
   
-### FlowControlEnabled  
+### <a name="flowcontrolenabled"></a>FlowControlEnabled  
  Tipo di dati: booleano  
   
  Tipo di accesso: sola lettura  
   
  Valore booleano che specifica se è attivato il controllo di flusso.  
   
-### InactivityTimeout  
+### <a name="inactivitytimeout"></a>InactivityTimeout  
  Tipo di dati: DateTime  
   
  Tipo di accesso: sola lettura  
   
  Specifica il limite massimo di tempo per cui il canale consente all'altra parte della comunicazione di non inviare messaggi prima di generare un errore per il canale.  
   
-### MaxPendingChannels  
+### <a name="maxpendingchannels"></a>MaxPendingChannels  
  Tipo di dati: sint32  
   
  Tipo di accesso: sola lettura  
   
  Numero massimo di canali che possono attendere nel listener prima di essere accettati.  
   
-### MaxRetryCount  
+### <a name="maxretrycount"></a>MaxRetryCount  
  Tipo di dati: sint32  
   
  Tipo di accesso: sola lettura  
   
  Numero massimo di tentativi di ritrasmissione di un messaggio per cui un canale affidabile non ha ricevuto un acknowledgment, tramite una chiamata a `Send` sul canale sottostante.  
   
-### MaxTransferWindowSize  
+### <a name="maxtransferwindowsize"></a>MaxTransferWindowSize  
  Tipo di dati: sint32  
   
  Tipo di accesso: sola lettura  
   
  Dimensione massima della finestra di trasferimento per la sessione affidabile.  
   
-### Ordered  
+### <a name="ordered"></a>Ordered  
  Tipo di dati: booleano  
   
  Tipo di accesso: sola lettura  
   
  Valore booleano che specifica se è garantito l'arrivo dei messaggi nell'ordine in cui sono stati inviati.  
   
-### ReliableMessagingVersion  
+### <a name="reliablemessagingversion"></a>ReliableMessagingVersion  
  Tipo di dati: numero intero  
   
  Tipo di accesso: sola lettura  
   
- Numero intero che specifica la versione del protocollo WS\-ReliableMessaging usata nella sessione affidabile.  
+ Numero intero che specifica la versione del protocollo WS-ReliableMessaging usata nella sessione affidabile.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Spazio dei nomi|Definito in root\ServiceModel|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>

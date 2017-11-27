@@ -1,28 +1,34 @@
 ---
-title: "Procedura: utilizzare le funzioni con valori scalari definite dall&#39;utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: utilizzare funzioni definite dall''utente con valori scalari'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ef9e687522e200487e0fc2a661bbd545d4eb4bbf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: utilizzare le funzioni con valori scalari definite dall&#39;utente
-È possibile eseguire il mapping di un metodo client definito in una classe a una funzione definita dall'utente usando l'attributo <xref:System.Data.Linq.Mapping.FunctionAttribute>.  Notare che nel corpo del metodo viene costruita un'espressione che acquisisce lo scopo della chiamata al metodo e passa quell'espressione a <xref:System.Data.Linq.DataContext> per la conversione e l'esecuzione.  
+# <a name="how-to-use-scalar-valued-user-defined-functions"></a>Procedura: utilizzare funzioni definite dall'utente con valori scalari
+È possibile eseguire il mapping di un metodo client definito in una classe a una funzione definita dall'utente usando l'attributo <xref:System.Data.Linq.Mapping.FunctionAttribute>. Notare che nel corpo del metodo viene costruita un'espressione che acquisisce lo scopo della chiamata al metodo e passa quell'espressione a <xref:System.Data.Linq.DataContext> per la conversione e l'esecuzione.  
   
 > [!NOTE]
->  Si verifica l'esecuzione diretta solo se la funzione viene chiamata all'esterno di una query.  Per altre informazioni, vedere [Procedura: chiamare funzioni inline definite dall'utente](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md).  
+>  Si verifica l'esecuzione diretta solo se la funzione viene chiamata all'esterno di una query. Per ulteriori informazioni, vedere [come: Call User-Defined le funzioni Inline](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nel codice SQL seguente viene presentata una funzione con valori scalari definita dall'utente `ReverseCustName()`.  
   
 ```  
@@ -41,5 +47,5 @@ END
  [!code-csharp[DLinqUDFS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/northwind-tfunc.cs#3)]
  [!code-vb[DLinqUDFS#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#3)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni definite dall'utente](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

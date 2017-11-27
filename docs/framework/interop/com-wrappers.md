@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - wrapper classes
 - COM interop, COM wrappers
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0c83cae510d695dc05b2cc6a71fdef7b5244a2ea
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 733d7f3e56b8ed704003ca9d6c2aa858c713df93
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="com-wrappers"></a>Wrapper COM
 COM è diverso dal modello a oggetti .NET Framework per diversi aspetti importanti:  
@@ -50,9 +43,8 @@ Cenni preliminari sul wrapper COM
  Nella maggior parte dei casi, l'RCW o il CCW generato dal runtime effettua un marshalling adeguato per le chiamate che superano il limite tra COM e .NET Framework. Usando attributi personalizzati, è possibile, facoltativamente, impostare il modo in cui il runtime rappresenta il codice gestito e non gestito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interoperabilità COM avanzata](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
- [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)   
- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)   
- [Personalizzazione di wrapper standard](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)   
+ [Interoperabilità COM avanzata](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)  
+ [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)  
+ [Personalizzazione di wrapper Standard](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
  [Procedura: Personalizzare Runtime Callable Wrapper](http://msdn.microsoft.com/en-us/4a4bb3da-4d60-4517-99f2-78d46a681732)
-

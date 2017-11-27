@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
 - Neighbor Discovery
@@ -37,16 +32,15 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d810d9fdf6f0e464147e639d9a3acf2ebc148d9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: be73fe51e6b3a52ccb2717f0216ab82b90dd9841
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-addressing"></a>Indirizzamento IPv6
 La lunghezza degli indirizzi IPv6 (Internet Protocol version 6) è di 128 bit. Uno dei motivi di uno spazio indirizzi così grande è la possibilità di suddividere gli indirizzi disponibili in una gerarchia di domini di routing che riflettono la topologia di Internet. Un altro motivo è poter eseguire il mapping degli indirizzi delle schede (o interfacce) di rete che connettono i dispositivi alla rete. IPv6 è automaticamente in grado di risolvere gli indirizzi al livello inferiore, ovvero a livello di interfaccia di rete, e include anche funzionalità di configurazione automatica.  
@@ -88,6 +82,5 @@ La lunghezza degli indirizzi IPv6 (Internet Protocol version 6) è di 128 bit. U
  In generale, un nodo ha sempre un indirizzo locale rispetto al collegamento. Può avere anche un indirizzo locale rispetto al sito e uno o più indirizzi globali.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [Protocollo IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Socket](../../../docs/framework/network-programming/sockets.md)
-

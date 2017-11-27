@@ -1,26 +1,22 @@
 ---
-title: Introduzione alle trasformazioni funzionali Pure (Visual Basic) | Documenti di Microsoft
+title: Introduzione alle trasformazioni funzionali Pure (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 027cbde2db4fd8cbbad622781e5954f260ea4756
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 37dc4520d2ef4795ac906732b35444eeb917a814
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Introduzione alle trasformazioni funzionali Pure (Visual Basic)
 Contenuto della sezione vengono presentate le trasformazioni funzionali, inclusi i concetti sottostanti e i costrutti di linguaggio che le supportano. In particolare viene eseguito il confronto tra la programmazione orientata a oggetti e quella basata sulle trasformazioni funzionali e vengono forniti consigli utili su come effettuare la transizione a quest'ultima. Sebbene le trasformazioni funzionali possano essere usate in molti scenari di programmazione, come esempio concreto viene usata la trasformazione XML.  

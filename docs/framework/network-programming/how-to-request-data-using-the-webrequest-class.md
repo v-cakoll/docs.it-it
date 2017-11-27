@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - downloading Internet resources, steps
 - requesting data from Internet, steps
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a16860c9095c182de2e67013cae46fa05bc1da5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e831f3c305716afe11df6c0b1e21db1ed5a4f01e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Procedura: Richiedere dati con la classe WebRequest
 La procedura seguente descrive i passaggi necessari per richiedere una risorsa da un server, ad esempio, una pagina Web o un file. La risorsa deve essere identificata da un URI.  
@@ -79,7 +76,7 @@ La procedura seguente descrive i passaggi necessari per richiedere una risorsa d
     ```  
   
     > [!NOTE]
-    >  Dopo aver finito di usare un oggetto <xref:System.Net.WebResponse>, è necessario chiuderlo chiamando il metodo <xref:System.Net.WebResponse.Close%2A>. In alternativa, se è stato usato il flusso di risposta dall'oggetto risposta, è possibile chiudere il flusso tramite la chiamata del metodo <xref:System.IO.Stream.Close%2A?displayProperty=fullName>. Se non si chiude la risposta o il flusso, l'applicazione può esaurire le connessioni al server e non essere più in grado di elaborare ulteriori richieste.  
+    >  Dopo aver finito di usare un oggetto <xref:System.Net.WebResponse>, è necessario chiuderlo chiamando il metodo <xref:System.Net.WebResponse.Close%2A>. In alternativa, se è stato usato il flusso di risposta dall'oggetto risposta, è possibile chiudere il flusso tramite la chiamata del metodo <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Se non si chiude la risposta o il flusso, l'applicazione può esaurire le connessioni al server e non essere più in grado di elaborare ulteriori richieste.  
   
 4.  È possibile accedere alle proprietà di **WebResponse** oppure eseguire il cast di **WebResponse** su un'istanza specifica del protocollo per leggere le proprietà specifiche del protocollo. Ad esempio, per accedere alle proprietà specifiche di HTTP di <xref:System.Net.HttpWebResponse>, eseguire il cast di **WebResponse** su un riferimento **HttpWebResponse**. L'esempio di codice seguente mostra come visualizzare le informazioni sullo stato inviate con una risposta.  
   
@@ -185,9 +182,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di richieste Internet](../../../docs/framework/network-programming/creating-internet-requests.md)   
- [Uso di flussi nella rete](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [Accesso a Internet con un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [Richiesta di dati](../../../docs/framework/network-programming/requesting-data.md)   
+ [Creazione di richieste Internet](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [L'uso di flussi di rete](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Accesso a Internet con un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [Richiesta di dati](../../../docs/framework/network-programming/requesting-data.md)  
  [Procedura: Inviare dati con la classe WebRequest](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
-

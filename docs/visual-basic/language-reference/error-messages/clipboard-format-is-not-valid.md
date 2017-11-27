@@ -1,36 +1,34 @@
 ---
-title: "Clipboard format is not valid | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID460"
-dev_langs: 
-  - "VB"
+title: Formato degli Appunti non valido
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID460
 ms.assetid: 71a4a045-65bb-417d-b3bd-99a9fa3c53f6
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0e7adc417d962de35272319d7dc976b237c7e2b6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Clipboard format is not valid
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Il formato degli Appunti specificato non è compatibile con il metodo eseguito.  Di seguito sono riportate le cause possibili dell'errore.  
+# <a name="clipboard-format-is-not-valid"></a>Formato degli Appunti non valido
+Il formato degli Appunti specificato non è compatibile con il metodo in esecuzione. Le cause possibili di questo errore sono:  
   
--   Si è tentato di utilizzare il metodo `GetText` o `SetText` degli Appunti con un formato degli Appunti diverso da `vbCFText` o `vbCFLink`.  
+-   Utilizzando gli Appunti `GetText` o `SetText` metodo con un formato degli Appunti diverso da `vbCFText` o `vbCFLink`.  
   
--   Si è tentato di utilizzare il metodo `GetData` o `SetData` degli Appunti con un formato degli Appunti diverso da `vbCFBitmap`, `vbCFDIB` o `vbCFMetafile`.  
+-   Utilizzando gli Appunti `GetData` o `SetData` metodo con un formato degli Appunti diverso da `vbCFBitmap`, `vbCFDIB`, o `vbCFMetafile`.  
   
--   Si è tentato di utilizzare il metodo `GetData` o `SetData` di `DataObject` con un formato degli Appunti nell'intervallo riservato da Microsoft Windows ai formati registrati \(&HC000\-&HFFFF\), ma il formato degli Appunti non è stato registrato in Microsoft Windows.  
+-   Utilizzo di `DataObject``GetData` metodo o `SetData` metodo con un formato degli Appunti nell'intervallo riservato da Microsoft Windows ai formati registrati (& HC000 - & HFFFF), quando il formato degli Appunti non è stato registrato con Microsoft Windows.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
 -   Rimuovere il formato non valido e specificarne uno valido.  
   
-## Vedere anche  
- [Appunti: aggiunta di altri formati](../Topic/Clipboard:%20Adding%20Other%20Formats.md)
+## <a name="see-also"></a>Vedere anche  
+ [Appunti: aggiunta di altri formati](/cpp/mfc/clipboard-adding-other-formats)

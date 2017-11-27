@@ -1,76 +1,77 @@
 ---
-title: "Elemento &lt;assert&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/assert"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#assert"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<assert> (elemento)"
-  - "assert (elemento)"
+title: '&lt;asserzione&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/assert
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#assert
+helpviewer_keywords:
+- <assert> element
+- assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 520dfec180157c9a05c5fc3beb51b5fc17f9088b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;assert&gt;
-Consente di specificare se deve essere visualizzata una finestra di messaggio quando viene richiamato il metodo <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> e permette, inoltre, di specificare il nome del file in cui scrivere i messaggi.  
+# <a name="ltassertgt-element"></a>&lt;asserzione&gt; elemento
+Specifica se visualizzare una finestra di messaggio quando si chiama il metodo <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>. Specifica anche il nome del file in cui scrivere i messaggi.  
   
-## Sintassi  
+ \<configuration>  
+\<System. Diagnostics >  
+\<Assert >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <assert assertuienabled="true|false" logfilename="file name"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|`assertuienabled`|Attributo facoltativo.<br /><br /> Specifica se deve essere visualizzata una finestra di messaggio quando il metodo **Debug.Assert** restituisce **false**.|  
-|`logfilename`|Attributo facoltativo.<br /><br /> Specifica il nome del file in cui scrivere il messaggio se **Debug.Assert** restituisce **false**.|  
+|`assertuienabled`|Attributo facoltativo.<br /><br /> Specifica se visualizzare un finestra di messaggio quando il **debug. Assert** restituisce metodo **false**.|  
+|`logfilename`|Attributo facoltativo.<br /><br /> Specifica il nome del file in cui scrivere il messaggio se **debug. Assert** restituisce **false**.|  
   
-## Attributo assertuienabled  
+## <a name="assertuienabled-attribute"></a>Attributo AssertUiEnabled  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|`true`|La finestra di messaggio viene visualizzata.  Questa è l'impostazione predefinita.|  
-|`false`|La finestra di messaggio non viene visualizzata.|  
+|-----------|-----------------|  
+|`true`|Consente di visualizzare la finestra di messaggio. Questa è l'impostazione predefinita.|  
+|`false`|Non viene visualizzata la finestra di messaggio.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`system.diagnostics`|Consente di specificare listener di traccia per la raccolta, la memorizzazione e l'invio di messaggi, nonché il livello in cui viene impostata un'opzione di analisi.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
-## Note  
- Entrambi gli attributi dell'elemento **\<assert\>** sono facoltativi.  È possibile disabilitare le finestre di messaggio senza specificare un file in cui scrivere i messaggi oppure specificare tale file lasciando attivate le finestre di messaggio.  
+## <a name="remarks"></a>Note  
+ Entrambi gli attributi di  **\<assert >** elemento sono facoltativi. È possibile disabilitare le finestre di messaggio senza specificare un file per scrivere i messaggi oppure è possibile specificare un file per lasciando attivate le finestre di messaggio.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene mostrato come disabilitare la visualizzazione di finestre di messaggio quando viene richiamato il metodo **Debug.Assert** e vengono scritti i messaggi in `c:\log.txt`.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come disabilitare la visualizzazione di finestre di messaggio quando si chiama **debug. Assert** e scrivere i messaggi `c:\log.txt`.  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <assert assertuienabled="false" logfilename="c:\log.txt"/>  
@@ -78,6 +79,6 @@ Consente di specificare se deve essere visualizzata una finestra di messaggio qu
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Diagnostics.Debug>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Diagnostics.Debug>  
  [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

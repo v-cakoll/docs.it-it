@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deadlocks [.NET Framework]
 - LoaderLock MDA
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 632f46593f3e9ab5acba06d00f3a919cca31611f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 90fa57bae7bec1fb7f29ad566e92ae9143a39539
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="loaderlock-mda"></a>MDA loaderLock
 L'assistente al debug gestito `loaderLock` rileva i tentativi di esecuzione di codice gestito in un thread che contiene il blocco del caricatore del sistema operativo Microsoft Windows.  Qualsiasi esecuzione di questo tipo non è valida perché può comportare il verificarsi di deadlock e l'uso di DLL prima che siano state inizializzate dal caricatore del sistema operativo.  
@@ -45,7 +38,7 @@ L'assistente al debug gestito `loaderLock` rileva i tentativi di esecuzione di c
  Infine, vi sono casi in cui possono verificarsi chiamate nelle DLL prima che le DLL siano state inizializzate correttamente dal caricatore del sistema operativo.  Diversamente dagli errori di deadlock, che possono essere diagnosticati esaminando gli stack di tutti i thread inclusi nel deadlock, è molto difficile diagnosticare l'uso di DLL non inizializzate con questo assistente al debug gestito.  
   
 ## <a name="cause"></a>Causa  
- Assembly C++ gestiti/non gestiti misti creati per .NET Framework versione 1.0 o 1.1 tentano in genere di eseguire codice gestito all'interno del blocco del caricatore, se non è stata adottata particolare attenzione, ad esempio tramite il collegamento a **/NOENTRY**.  Per una descrizione dettagliata di questi problemi, vedere "Mixed DLL Loading Problem" (Problema di caricamento delle DLL miste) in MSDN Library.  
+ Assembly C++ gestiti/non gestiti misti creati per .NET Framework versione 1.0 o 1.1 tentano in genere di eseguire codice gestito all'interno del blocco del caricatore, se non è stata adottata particolare attenzione, ad esempio tramite il collegamento a **/NOENTRY**.
   
  Gli assembly C++ gestiti/non gestiti misti creati per .NET Framework versione 2.0 sono meno soggetti a questi problemi, in quanto sono associati allo stesso rischio minimo delle applicazioni che usano DLL non gestite che violano le regole del sistema operativo.  Ad esempio, se un punto di ingresso `DllMain` di una DLL non gestita chiama `CoCreateInstance` per ottenere un oggetto gestito che è stato esposto a COM, il risultato è un tentativo di eseguire codice gestito all'interno del blocco del caricatore. Per altre informazioni sui problemi relativi al blocco del caricatore in .NET Framework 2.0 e versioni successive, vedere [Initialization of Mixed Assemblies](/cpp/dotnet/initialization-of-mixed-assemblies) (Inizializzazione di assembly misti).  
   
@@ -72,4 +65,3 @@ L'assistente al debug gestito `loaderLock` rileva i tentativi di esecuzione di c
   
 ## <a name="see-also"></a>Vedere anche  
  [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

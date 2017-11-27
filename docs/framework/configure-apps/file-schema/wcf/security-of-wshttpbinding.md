@@ -1,28 +1,36 @@
 ---
-title: "&lt;security&gt; di &lt;wsHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;security&gt; di &lt;wsHttpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 7dfadcbb120f55232ea2375e880a5edb17caf045
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;security&gt; di &lt;wsHttpBinding&gt;
-Rappresenta le funzionalità di sicurezza di [\<wsHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+# <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;security&gt; di &lt;wsHttpBinding&gt;
+Rappresenta le funzionalità di sicurezza di [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<associazioni >  
+\<wsHttpBinding >  
+\<associazione >  
+\<sicurezza >  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <security mode="Message/None/Transport/TransportWithMessageCredential">  
    <transport  
          clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
@@ -39,47 +47,47 @@ Rappresenta le funzionalità di sicurezza di [\<wsHttpBinding\>](../../../../../
 </security>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|modalità|-   Parametro facoltativo.  Specifica il tipo di sicurezza applicata.  Il valore predefinito è `Message`.<br />-   L'attributo è di tipo <xref:System.ServiceModel.SecurityMode>.|  
+|modalità|-Facoltativo. Specifica il tipo di sicurezza applicata. Il valore predefinito è `Message`.<br />-L'attributo è di tipo <xref:System.ServiceModel.SecurityMode>.|  
   
-## Attributo mode  
+## <a name="mode-attribute"></a>Attributo mode  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
+|-----------|-----------------|  
 |None|La sicurezza è disabilitata.|  
-|Trasporto|La sicurezza è fornita mediante HTTPS.  Può essere necessario che il servizio sia configurato con certificati SSL.  Il messaggio è interamente protetto usando HTTPS e viene autenticato dal client usando il certificato SSL del servizio.  L'autenticazione client è controllata tramite l'attributo `ClientCredentials`.  dell'[\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).|  
-|Messaggio|La sicurezza è fornita mediante la sicurezza dei messaggi SOAP.  Per impostazione predefinita, il corpo SOAP viene crittografato e firmato.  Questa modalità offre varie funzionalità, ad esempio la disponibilità o meno delle credenziali del servizio per il client fuori banda, la suite di algoritmi da usare e il livello di protezione da applicare al corpo del messaggio tramite la proprietà Security.Message.  L'autenticazione client viene eseguita una volta per sessione e i risultati vengono memorizzati nella cache per la durata della sessione.|  
-|TransportWithMessageCredential|In questa modalità, HTTPS fornisce l'integrità, la riservatezza e l'autenticazione server e client, mentre la sicurezza dei messaggi SOAP fornisce l'autenticazione client.  Per impostazione predefinita, l'autenticazione client viene eseguita una volta per sessione e i risultati vengono memorizzati nella cache per la durata della sessione.|  
+|Trasporto|La sicurezza è fornita mediante HTTPS. Può essere necessario che il servizio sia configurato con certificati SSL. Il messaggio è interamente protetto usando HTTPS e viene autenticato dal client usando il certificato SSL del servizio. L'autenticazione client è controllata tramite l'attributo `ClientCredentials`. del [ \<trasporto >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).|  
+|Messaggio|La sicurezza è fornita mediante la sicurezza dei messaggi SOAP. Per impostazione predefinita, il corpo SOAP viene crittografato e firmato. Questa modalità offre varie funzionalità, ad esempio la disponibilità o meno delle credenziali del servizio per il client fuori banda, la suite di algoritmi da usare e il livello di protezione da applicare al corpo del messaggio tramite la proprietà Security.Message. L'autenticazione client viene eseguita una volta per sessione e i risultati vengono memorizzati nella cache per la durata della sessione.|  
+|TransportWithMessageCredential|In questa modalità, HTTPS fornisce l'integrità, la riservatezza e l'autenticazione server e client, mentre la sicurezza dei messaggi SOAP fornisce l'autenticazione client. Per impostazione predefinita, l'autenticazione client viene eseguita una volta per sessione e i risultati vengono memorizzati nella cache per la durata della sessione.|  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)|Definisce le impostazioni di sicurezza del trasporto.  Questo elemento corrisponde al tipo <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.|  
-|[\<messaggio\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)|Definisce le impostazioni di sicurezza per il messaggio.  Questo elemento corrisponde al tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement>.|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<wsHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Associazione protetta per applicazioni di trasporto HTTP.|  
+|-------------|-----------------|  
+|[\<trasporto >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)|Definisce le impostazioni di sicurezza del trasporto. Questo elemento corrisponde al tipo <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.|  
+|[\<messaggio >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)|Definisce le impostazioni di sicurezza per il messaggio. Questo elemento corrisponde al tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement>.|  
   
-## Note  
- La classe WSHttpBinding è progettata per essere interoperabile con i servizi che implementano le specifiche WS\-\*.  La sicurezza basata sul trasporto di questa associazione è SSL \(Secure Sockets Layer\) su HTTP, ovvero HTTPS.  
+### <a name="parent-elements"></a>Elementi padre  
   
-## Vedere anche  
- <xref:System.ServiceModel.WSHttpSecurity>   
- <xref:System.ServiceModel.WSHttpBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>   
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/it-it/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<associazione\>](../../../../../docs/framework/misc/binding.md)
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|[\<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Associazione protetta per applicazioni di trasporto HTTP.|  
+  
+## <a name="remarks"></a>Note  
+ La classe WSHttpBinding è progettata per essere interoperabile con i servizi che implementano le specifiche WS-*. La sicurezza basata sul trasporto di questa associazione è SSL (Secure Sockets Layer) su HTTP, ovvero HTTPS.  
+  
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.WSHttpSecurity>  
+ <xref:System.ServiceModel.WSHttpBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
+ [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
+ [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<associazione >](../../../../../docs/framework/misc/binding.md)

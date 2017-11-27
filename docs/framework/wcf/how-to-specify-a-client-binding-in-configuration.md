@@ -1,25 +1,28 @@
 ---
-title: "Procedura: specificare un&#39;associazione client nella configurazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: specificare un''associazione client nella configurazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4ff1278fd9a09916b676ec168936d9e3c7a4eceb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: specificare un&#39;associazione client nella configurazione
-In questo esempio, viene creata un'applicazione console client per utilizzare un servizio calcolatrice e nella configurazione viene spiegata in modo dichiarativo l'associazione per quel client. Il client accede il `CalculatorService`, che implementa il `ICalculator` interfaccia e il servizio e il client utilizzano il <xref:System.ServiceModel.BasicHttpBinding> (classe).  
+# <a name="how-to-specify-a-client-binding-in-configuration"></a>Procedura: specificare un'associazione client nella configurazione
+In questo esempio, viene creata un'applicazione console client per utilizzare un servizio calcolatrice e nella configurazione viene spiegata in modo dichiarativo l'associazione per quel client. Il client accede al servizio `CalculatorService` che implementa l'interfaccia `ICalculator`. Sia il servizio sia il client utilizzano la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   
- Nella procedura illustrata si presuppone che il servizio calcolatrice sia in esecuzione. Per informazioni su come compilare il servizio, vedere [procedura: specificare un'associazione al servizio nella configurazione](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Viene inoltre utilizzata la [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) che [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] fornisce per generare automaticamente i componenti client. Lo strumento genera il codice e la configurazione client per l'accesso al servizio.  
+ Nella procedura illustrata si presuppone che il servizio calcolatrice sia in esecuzione. Per informazioni su come compilare il servizio, vedere [procedura: specificare un'associazione al servizio nella configurazione](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Utilizza inoltre il [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) che [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] fornisce per generare automaticamente i componenti client. Lo strumento genera il codice e la configurazione client per l'accesso al servizio.  
   
  Il client viene compilato in due parti. Lo strumento Svcutil.exe genera la classe `ClientCalculator` che implementa l'interfaccia `ICalculator`. Questa applicazione client viene quindi costruita creando un'istanza di `ClientCalculator`.  
   
@@ -47,10 +50,10 @@ In questo esempio, viene creata un'applicazione console client per utilizzare un
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#2)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#2)]  
   
-4.  Svcutil.exe genera inoltre la configurazione per il client che utilizza il <xref:System.ServiceModel.BasicHttpBinding> (classe). Quando si utilizza [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] denominare questo file App.config. Si noti che le informazioni sull'indirizzo e sull'associazione non sono specificate nell'implementazione del servizio. Non è necessario, inoltre, scrivere codice per recuperarle dal file di configurazione.  
+4.  Svcutil.exe genera inoltre la configurazione per il client che utilizza la classe <xref:System.ServiceModel.BasicHttpBinding>. Quando si utilizza [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] denominare questo file App.config. Si noti che le informazioni sull'indirizzo e sull'associazione non sono specificate nell'implementazione del servizio. Non è necessario, inoltre, scrivere codice per recuperarle dal file di configurazione.  
   
-     <!-- TODO: review snippet reference [!code[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/common/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]  -->  
-  
+     [!code-xml[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]   
+            
 5.  Creare un'istanza di `ClientCalculator` in un'applicazione, quindi chiamare le operazioni del servizio.  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/client.cs#3)]  

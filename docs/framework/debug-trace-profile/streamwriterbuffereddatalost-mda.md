@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - StreamWriter class, data buffering problems
 - managed debugging assistants (MDAs), StreamWriter data buffering
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3903e2814cc15ac2678a0a5102046445d332ce75
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: fa6b64d37052c40dbef83a25b622e415f6946c1e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost (MDA)
 L'assistente al debug gestito `streamWriterBufferedDataLost` viene attivato quando viene scritto un <xref:System.IO.StreamWriter>, ma il metodo <xref:System.IO.StreamWriter.Flush%2A> o <xref:System.IO.StreamWriter.Close%2A> non viene chiamato in seguito prima dell'eliminazione definitiva dell'istanza di <xref:System.IO.StreamWriter>. Quando questo assistente al debug gestito è abilitato, il runtime determina se tutti i dati memorizzati nel buffer esistono ancora in <xref:System.IO.StreamWriter>. In caso affermativo, l'assistente al debug gestito viene attivato. La chiamata dei metodi <xref:System.GC.Collect%2A> e <xref:System.GC.WaitForPendingFinalizers%2A> può forzare l'esecuzione dei finalizzatori. In caso contrario, i finalizzatori vengono eseguiti in momenti apparentemente arbitrari e probabilmente non vengono eseguiti affatto all'uscita dal processo. L'esecuzione dei finalizzatori in modo esplicito con questo assistente al debug gestito sarà utile per riprodurre in modo più affidabile questo tipo di problema.  
@@ -120,6 +113,5 @@ static WriteToFile()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.IO.StreamWriter>   
+ <xref:System.IO.StreamWriter>  
  [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

@@ -1,0 +1,48 @@
+---
+title: Funzione VerifyClientKey (riferimenti alle API non gestite)
+description: La funzione di VerifyClientKey garantisce che la chiave di client ha la sicurezza corretta.
+ms.date: 11/06/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: reference
+api_name: VerifyClientKey
+api_location: WMINet_Utils.dll
+api_type: DLLExport
+f1_keywords: VerifyClientKey
+helpviewer_keywords: VerifyClientKey function [.NET WMI and performance counters]
+topic_type: Reference
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: cce10e3dd5536a85b4dee62cc7f6e9e8e73929cb
+ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/15/2017
+---
+# <a name="verifyclientkey-function"></a>VerifyClientKey (funzione)
+Assicura che la chiave client disponga di sicurezza corrette.  
+  
+[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+LONG VerifyClientKey(); 
+```  
+
+## <a name="return-value"></a>Valore restituito
+
+Se la funzione ha esito positivo, il valore restituito è `ERROR_SUCCESS` (0).
+
+Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero definito in *Winerror*.
+
+## <a name="requirements"></a>Requisiti  
+ **Piattaforme:** vedere [requisiti di sistema](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Intestazione:** WMINet_Utils.def  
+  
+ **Versioni di .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+  
+## <a name="see-also"></a>Vedere anche  
+[WMI e i contatori delle prestazioni (riferimenti alle API non gestite)](index.md)

@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - requesting data from Internet, streams
 - Networking
@@ -25,21 +23,20 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f9e011b304a7f6c7d0d07761677c0368efcfcf4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-streams-on-the-network"></a>Uso di flussi nella rete
 Le risorse di rete sono rappresentate in .NET Framework come flussi. Grazie alla possibilità di gestire i flussi in modo generico, .NET Framework offre le opportunità seguenti:  
   
--   Un modo comune per inviare e ricevere dati Web. Indipendentemente dal contenuto effettivo del file (HTML, XML o altro) l'applicazione userà <xref:System.IO.Stream.Write%2A?displayProperty=fullName> e <xref:System.IO.Stream.Read%2A?displayProperty=fullName> per inviare e ricevere dati.  
+-   Un modo comune per inviare e ricevere dati Web. Indipendentemente dal contenuto effettivo del file (HTML, XML o altro) l'applicazione userà <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> e <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> per inviare e ricevere dati.  
   
 -   Compatibilità con i flussi in .NET Framework. I flussi vengono usati in tutte le parti di .NET Framework, che offre un'infrastruttura avanzata per gestirli. Ad esempio, è possibile modificare un'applicazione che legge dati XML da un <xref:System.IO.FileStream> in modo che legga invece i dati da un <xref:System.Net.Sockets.NetworkStream> modificando solo le poche righe di codice che inizializzano il flusso. Le differenze principali tra la classe **NetworkStream** e gli altri flussi sono che **NetworkStream** non supporta la ricerca, la proprietà <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> restituisce sempre **false** e i metodi <xref:System.Net.Sockets.NetworkStream.Seek%2A> e <xref:System.Net.Sockets.NetworkStream.Position%2A> generano <xref:System.NotSupportedException>.  
   
@@ -115,6 +112,5 @@ sr.Close()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedura: Richiedere dati con la classe WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
+ [Procedura: Richiedere dati con la classe WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
  [Richiesta di dati](../../../docs/framework/network-programming/requesting-data.md)
-

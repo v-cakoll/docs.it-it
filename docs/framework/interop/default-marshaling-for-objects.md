@@ -5,32 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 67d05a21d537bfca92bc76473fb6f6048865ef8c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5bfafcad5f1f60e7e763b69f220188517d29f17
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-for-objects"></a>Marshalling predefinito per gli oggetti
-I parametri e i campi tipizzati come <xref:System.Object?displayProperty=fullName> possono essere esposti al codice non gestito come uno dei tipi seguenti:  
+I parametri e i campi tipizzati come <xref:System.Object?displayProperty=nameWithType> possono essere esposti al codice non gestito come uno dei tipi seguenti:  
   
 -   Una variante quando l'oggetto è un parametro.  
   
@@ -151,37 +147,37 @@ struct ObjectHolder {
   
 -   Se l'oggetto è un'istanza di un tipo elencato nella tabella seguente, il tipo di variante risultante viene determinato dalle regole incluse nel gestore di marshalling e visualizzate nella tabella.  
   
--   Gli altri oggetti che devono controllare in modo esplicito il comportamento di marshalling possono implementare l'interfaccia <xref:System.IConvertible>. In tal caso, il tipo di variante viene determinato dal codice del tipo restituito dal metodo <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName>. In caso contrario, viene effettuato il marshalling dell'oggetto come variante di tipo **VT_UNKNOWN**.  
+-   Gli altri oggetti che devono controllare in modo esplicito il comportamento di marshalling possono implementare l'interfaccia <xref:System.IConvertible>. In tal caso, il tipo di variante viene determinato dal codice del tipo restituito dal metodo <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>. In caso contrario, viene effettuato il marshalling dell'oggetto come variante di tipo **VT_UNKNOWN**.  
   
 ### <a name="marshaling-system-types-to-variant"></a>Marshalling di tipi di sistema alla variante  
- La tabella seguente illustra i tipi di oggetto gestito e i corrispondenti tipi di varianti COM. Questi tipi vengono convertiti solo quando la firma del metodo chiamato è di tipo <xref:System.Object?displayProperty=fullName>.  
+ La tabella seguente illustra i tipi di oggetto gestito e i corrispondenti tipi di varianti COM. Questi tipi vengono convertiti solo quando la firma del metodo chiamato è di tipo <xref:System.Object?displayProperty=nameWithType>.  
   
 |tipo Object|Tipo di variante COM|  
 |-----------------|----------------------|  
 |Riferimento all'oggetto null (**Nothing** in Visual Basic).|**VT_EMPTY**|  
-|<xref:System.DBNull?displayProperty=fullName>|**VT_NULL**|  
-|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=fullName>|**VT_ERROR**|  
-|<xref:System.Reflection.Missing?displayProperty=fullName>|**VT_ERROR** con **E_PARAMNOTFOUND**|  
-|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=fullName>|**VT_DISPATCH**|  
-|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=fullName>|**VT_UNKNOWN**|  
-|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=fullName>|**VT_CY**|  
-|<xref:System.Boolean?displayProperty=fullName>|**VT_BOOL**|  
-|<xref:System.SByte?displayProperty=fullName>|**VT_I1**|  
-|<xref:System.Byte?displayProperty=fullName>|**VT_UI1**|  
-|<xref:System.Int16?displayProperty=fullName>|**VT_I2**|  
-|<xref:System.UInt16?displayProperty=fullName>|**VT_UI2**|  
-|<xref:System.Int32?displayProperty=fullName>|**VT_I4**|  
-|<xref:System.UInt32?displayProperty=fullName>|**VT_UI4**|  
-|<xref:System.Int64?displayProperty=fullName>|**VT_I8**|  
-|<xref:System.UInt64?displayProperty=fullName>|**VT_UI8**|  
-|<xref:System.Single?displayProperty=fullName>|**VT_R4**|  
-|<xref:System.Double?displayProperty=fullName>|**VT_R8**|  
-|<xref:System.Decimal?displayProperty=fullName>|**VT_DECIMAL**|  
-|<xref:System.DateTime?displayProperty=fullName>|**VT_DATE**|  
-|<xref:System.String?displayProperty=fullName>|**VT_BSTR**|  
-|<xref:System.IntPtr?displayProperty=fullName>|**VT_INT**|  
-|<xref:System.UIntPtr?displayProperty=fullName>|**VT_UINT**|  
-|<xref:System.Array?displayProperty=fullName>|**VT_ARRAY**|  
+|<xref:System.DBNull?displayProperty=nameWithType>|**VT_NULL**|  
+|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=nameWithType>|**VT_ERROR**|  
+|<xref:System.Reflection.Missing?displayProperty=nameWithType>|**VT_ERROR** con **E_PARAMNOTFOUND**|  
+|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=nameWithType>|**VT_DISPATCH**|  
+|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=nameWithType>|**VT_UNKNOWN**|  
+|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>|**VT_CY**|  
+|<xref:System.Boolean?displayProperty=nameWithType>|**VT_BOOL**|  
+|<xref:System.SByte?displayProperty=nameWithType>|**VT_I1**|  
+|<xref:System.Byte?displayProperty=nameWithType>|**VT_UI1**|  
+|<xref:System.Int16?displayProperty=nameWithType>|**VT_I2**|  
+|<xref:System.UInt16?displayProperty=nameWithType>|**VT_UI2**|  
+|<xref:System.Int32?displayProperty=nameWithType>|**VT_I4**|  
+|<xref:System.UInt32?displayProperty=nameWithType>|**VT_UI4**|  
+|<xref:System.Int64?displayProperty=nameWithType>|**VT_I8**|  
+|<xref:System.UInt64?displayProperty=nameWithType>|**VT_UI8**|  
+|<xref:System.Single?displayProperty=nameWithType>|**VT_R4**|  
+|<xref:System.Double?displayProperty=nameWithType>|**VT_R8**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**VT_DECIMAL**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**VT_DATE**|  
+|<xref:System.String?displayProperty=nameWithType>|**VT_BSTR**|  
+|<xref:System.IntPtr?displayProperty=nameWithType>|**VT_INT**|  
+|<xref:System.UIntPtr?displayProperty=nameWithType>|**VT_UINT**|  
+|<xref:System.Array?displayProperty=nameWithType>|**VT_ARRAY**|  
   
  Usando l'interfaccia `MarshalObject` definita nell'esempio precedente, l'esempio di codice seguente illustra come passare diversi tipi di varianti a un server COM.  
   
@@ -234,7 +230,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
  Le classi wrapper vengono definite nello spazio dei nomi <xref:System.Runtime.InteropServices>.  
   
 ### <a name="marshaling-the-iconvertible-interface-to-variant"></a>Marshalling dell'interfaccia IConvertible alla variante  
- I tipi diversi da quelli elencati nella sezione precedente possono controllare come viene effettuato il marshalling implementando l'interfaccia <xref:System.IConvertible>. Se l'oggetto implementa l'interfaccia **IConvertible**, il tipo di variante COM viene determinato in fase di esecuzione dal valore dell'enumerazione <xref:System.TypeCode> restituita dal metodo <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName>.  
+ I tipi diversi da quelli elencati nella sezione precedente possono controllare come viene effettuato il marshalling implementando l'interfaccia <xref:System.IConvertible>. Se l'oggetto implementa l'interfaccia **IConvertible**, il tipo di variante COM viene determinato in fase di esecuzione dal valore dell'enumerazione <xref:System.TypeCode> restituita dal metodo <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>.  
   
  La tabella seguente illustra i possibili valori per l'enumerazione **TypeCode** e il tipo di variante COM corrispondente per ogni valore.  
   
@@ -258,12 +254,12 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**TypeCode.Decimal**|**VT_DECIMAL**|  
 |**TypeCode.DateTime**|**VT_DATE**|  
 |**TypeCode.String**|**VT_BSTR**|  
-|Non supportato.|**VT_INT**|  
-|Non supportato.|**VT_UINT**|  
-|Non supportato.|**VT_ARRAY**|  
-|Non supportato.|**VT_RECORD**|  
-|Non supportato.|**VT_CY**|  
-|Non supportato.|**VT_VARIANT**|  
+|Valore non supportato.|**VT_INT**|  
+|Valore non supportato.|**VT_UINT**|  
+|Valore non supportato.|**VT_ARRAY**|  
+|Valore non supportato.|**VT_RECORD**|  
+|Valore non supportato.|**VT_CY**|  
+|Valore non supportato.|**VT_VARIANT**|  
   
  Il valore della variante COM viene determinato chiamando l'interfaccia **IConvertible.To** *Type*, dove **To** *Type* è la routine di conversione che corrisponde al tipo restituito da **IConvertible.GetTypeCode**. Ad esempio, il marshalling di un oggetto che restituisce **TypeCode.Double** da **IConvertible.GetTypeCode** viene effettuato come variante COM di tipo **VT_R8**. Per ottenere il valore della variante (archiviata nel campo **dblVal** della variante COM), è possibile eseguire il cast all'interfaccia **IConvertible** e chiamare il metodo <xref:System.IConvertible.ToDouble%2A>.  
   
@@ -271,35 +267,35 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-variant-to-object"></a>Marshalling della variante all'oggetto  
  Quando si effettua il marshalling di una variante a un oggetto, il tipo e a volte il valore della variante di cui viene effettuato il marshalling determinano il tipo dell'oggetto prodotto. La tabella seguente identifica tale tipo di variante e il tipo di oggetto corrispondente creato dal gestore di marshalling quando una variante viene passata da COM a .NET Framework.  
   
-|Tipo di variante COM|Tipo di oggetto|  
+|Tipo di variante COM|tipo Object|  
 |----------------------|-----------------|  
 |**VT_EMPTY**|Riferimento all'oggetto null (**Nothing** in Visual Basic).|  
-|**VT_NULL**|<xref:System.DBNull?displayProperty=fullName>|  
+|**VT_NULL**|<xref:System.DBNull?displayProperty=nameWithType>|  
 |**VT_DISPATCH**|**System.__ComObject** o null se (pdispVal == null)|  
 |**VT_UNKNOWN**|**System.__ComObject** o null se (punkVal == null)|  
-|**VT_ERROR**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_BOOL**|<xref:System.Boolean?displayProperty=fullName>|  
-|**VT_I1**|<xref:System.SByte?displayProperty=fullName>|  
-|**VT_UI1**|<xref:System.Byte?displayProperty=fullName>|  
-|**VT_I2**|<xref:System.Int16?displayProperty=fullName>|  
-|**VT_UI2**|<xref:System.UInt16?displayProperty=fullName>|  
-|**VT_I4**|<xref:System.Int32?displayProperty=fullName>|  
-|**VT_UI4**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_I8**|<xref:System.Int64?displayProperty=fullName>|  
-|**VT_UI8**|<xref:System.UInt64?displayProperty=fullName>|  
-|**VT_R4**|<xref:System.Single?displayProperty=fullName>|  
-|**VT_R8**|<xref:System.Double?displayProperty=fullName>|  
-|**VT_DECIMAL**|<xref:System.Decimal?displayProperty=fullName>|  
-|**VT_DATE**|<xref:System.DateTime?displayProperty=fullName>|  
-|**VT_BSTR**|<xref:System.String?displayProperty=fullName>|  
-|**VT_INT**|<xref:System.Int32?displayProperty=fullName>|  
-|**VT_UINT**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_ARRAY** &#124; **VT_\***|<xref:System.Array?displayProperty=fullName>|  
-|**VT_CY**|<xref:System.Decimal?displayProperty=fullName>|  
+|**VT_ERROR**|<xref:System.UInt32?displayProperty=nameWithType>|  
+|**VT_BOOL**|<xref:System.Boolean?displayProperty=nameWithType>|  
+|**VT_I1**|<xref:System.SByte?displayProperty=nameWithType>|  
+|**VT_UI1**|<xref:System.Byte?displayProperty=nameWithType>|  
+|**VT_I2**|<xref:System.Int16?displayProperty=nameWithType>|  
+|**VT_UI2**|<xref:System.UInt16?displayProperty=nameWithType>|  
+|**VT_I4**|<xref:System.Int32?displayProperty=nameWithType>|  
+|**VT_UI4**|<xref:System.UInt32?displayProperty=nameWithType>|  
+|**VT_I8**|<xref:System.Int64?displayProperty=nameWithType>|  
+|**VT_UI8**|<xref:System.UInt64?displayProperty=nameWithType>|  
+|**VT_R4**|<xref:System.Single?displayProperty=nameWithType>|  
+|**VT_R8**|<xref:System.Double?displayProperty=nameWithType>|  
+|**VT_DECIMAL**|<xref:System.Decimal?displayProperty=nameWithType>|  
+|**VT_DATE**|<xref:System.DateTime?displayProperty=nameWithType>|  
+|**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|  
+|**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|  
+|**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|  
+|**VT_ARRAY** &#124; **VT_\***|<xref:System.Array?displayProperty=nameWithType>|  
+|**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|Tipo valore boxed corrispondente.|  
-|**VT_VARIANT**|Non supportato.|  
+|**VT_VARIANT**|Valore non supportato.|  
   
- I tipi di variante passati da COM al codice gestito e quindi di nuovo a COM potrebbero non conservare lo stesso tipo di variante per tutta la durata della chiamata. Si consideri che cosa accade quando una variante di tipo **VT_DISPATCH** viene passata da COM a .NET Framework. Durante il marshalling, la variante viene convertita in <xref:System.Object?displayProperty=fullName>. Se **Object** viene quindi passato nuovamente a COM, ne viene effettuato il marshalling a una variante di tipo **VT_UNKNOWN**. Non esiste garanzia che la variante prodotta quando viene effettuato il marshalling di un oggetto dal codice gestito a COM sarà dello stesso tipo della variante usata inizialmente per produrre l'oggetto.  
+ I tipi di variante passati da COM al codice gestito e quindi di nuovo a COM potrebbero non conservare lo stesso tipo di variante per tutta la durata della chiamata. Si consideri che cosa accade quando una variante di tipo **VT_DISPATCH** viene passata da COM a .NET Framework. Durante il marshalling, la variante viene convertita in <xref:System.Object?displayProperty=nameWithType>. Se **Object** viene quindi passato nuovamente a COM, ne viene effettuato il marshalling a una variante di tipo **VT_UNKNOWN**. Non esiste garanzia che la variante prodotta quando viene effettuato il marshalling di un oggetto dal codice gestito a COM sarà dello stesso tipo della variante usata inizialmente per produrre l'oggetto.  
   
 <a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
 ## <a name="marshaling-byref-variants"></a>Marshalling di varianti ByRef  
@@ -343,8 +339,7 @@ Varianti passate per valore e per riferimento
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Oggetto ref**  *o*|Solo se il tipo non è stato modificato.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Blittable and Non-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  (Tipi copiabili da BLT e non copiabili da BLT)  
- [Attributi direzionali](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Tipi copiabili e non copiabili](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Attributi direzionali](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Copia e blocco](../../../docs/framework/interop/copying-and-pinning.md)
-

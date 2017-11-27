@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 676a03678cbdf6fe08e628806df2a1853fb71718
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Procedura: Compilare un'applicazione ASP.NET in grado di riconoscere attestazioni con l'autenticazione di Windows
 ## <a name="applies-to"></a>Si applica a  
@@ -150,4 +148,3 @@ ms.lasthandoff: 08/21/2017
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Per testare le attestazioni con l'applicazione Web Form ASP.NET usando l'autenticazione di Windows  
   
 1.  Premere **F5** per compilare ed eseguire l'applicazione. Verrà visualizzato il file *Default.aspx* e il nome dell'account Windows personale (incluso il nome di dominio) dovrebbe già essere visualizzato come utente autenticato in alto a destra nella pagina. Il contenuto della pagina deve includere una tabella con le attestazioni recuperate dall'account di Windows.
-

@@ -1,63 +1,71 @@
 ---
-title: "&lt;workflowInstanceQueries&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;workflowInstanceQueries&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 4fe7ce85-cf9a-4dbf-a8f7-bc9b1fc2fe35
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 182a4082de6f1c67b7a0bc26662e2491623b2bba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;workflowInstanceQueries&gt;
+# <a name="ltworkflowinstancequeriesgt"></a>&lt;workflowInstanceQueries&gt;
 Rappresenta una raccolta di elementi di configurazione che rilevano modifiche del ciclo di vita dell'istanza del flusso di lavoro, come l'avvio o il completamento di un evento.  
   
- Per altre informazioni sulle query relative ai profili di rilevamento, vedere [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md).  
+ Per ulteriori informazioni sulla query del profilo di rilevamento, vedere [profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
-## Sintassi  
+\<System. ServiceModel >  
+\<rilevamento >  
+\<trackingProfile >  
+\<flusso di lavoro >  
+\<workflowInstanceQueries >  
   
-```vb  
+## <a name="syntax"></a>Sintassi  
   
-<tracking>  
-   <trackingProfile name="Name">  
-       <workflow>  
-          <workflowInstanceQueries>  
-             <workflowInstanceQuery>  
-                <states>  
-                   <state name="Name"/>  
-                </states>  
-            </workflowInstanceQuery>  
-         </workflowInstanceQueries>  
-       </workflow>  
-   </trackingProfile>  
+```xml  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <workflowInstanceQueries>
+        <workflowInstanceQuery>
+          <states>
+            <state name="Name"/>
+          </states>
+        </workflowInstanceQuery>
+      </workflowInstanceQueries>
+    </workflow>
+  </trackingProfile>
 </tracking>  
-  
 ```  
   
-## Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
+ Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<workflowInstanceQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Query usata per rilevare modifiche del ciclo di vita dell'istanza del flusso di lavoro.|  
+|-------------|-----------------|  
+|[\<workflowInstanceQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Query usata per rilevare modifiche del ciclo di vita dell'istanza del flusso di lavoro.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<workflow\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Elemento di configurazione contenente tutte le query per un flusso di lavoro specifico identificato dalla proprietà **activityDefinitionId**.|  
+|-------------|-----------------|  
+|[\<flusso di lavoro >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Un elemento di configurazione che contiene tutte le query per un flusso di lavoro specifico identificato dal **activityDefinitionId** proprietà.|  
   
-## Note  
+## <a name="remarks"></a>Note  
  L'oggetto <xref:System.Activities.Tracking.WorkflowInstanceQuery> viene usato per sottoscrivere gli oggetti <xref:System.Activities.Tracking.TrackingRecord> seguenti:  
   
 -   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
@@ -70,11 +78,10 @@ Rappresenta una raccolta di elementi di configurazione che rilevano modifiche de
   
 -   <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  La configurazione seguente sottoscrive i record di rilevamento a livello di istanza del flusso di lavoro per lo stato dell'istanza `Started` usando questa query.  
   
-```  
-  
+```xml  
 <workflowInstanceQueries>  
     <workflowInstanceQuery>  
       <states>  
@@ -82,11 +89,10 @@ Rappresenta una raccolta di elementi di configurazione che rilevano modifiche de
       </states>  
     </workflowInstanceQuery>  
 </workflowInstanceQueries>  
-  
 ```  
   
-## Vedere anche  
- [System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection](assetId:///System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.WorkflowInstanceQuery](assetId:///System.Activities.Tracking.WorkflowInstanceQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [Rilevamento e traccia del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>       
+ <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
+ [Rilevamento e analisi del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [Profili di rilevamento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

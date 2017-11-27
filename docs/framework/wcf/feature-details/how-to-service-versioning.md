@@ -1,50 +1,53 @@
 ---
-title: "Procedura: controllo delle versioni dei servizi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: controllo delle versioni dei servizi'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-caps.latest.revision: 6
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4c4bd28c1a59d422c4ec0c65e133d253cabf16c4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: controllo delle versioni dei servizi
-In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione del routing che indirizza messaggi a versioni diverse dello stesso servizio.In questo esempio i messaggi vengono indirizzati a due versioni diverse di un servizio di calcolo, `roundingCalc` \(v1\) e `regularCalc` \(v2\).Entrambe le implementazioni supportano le stesse operazioni; tuttavia il primo servizio, `roundingCalc`, arrotonda tutti i calcoli al valore intero più vicino prima della restituzione.Un'applicazione client deve essere in grado di indicare se utilizzare il secondo servizio, `regularCalc`.  
+# <a name="how-to-service-versioning"></a>Procedura: controllo delle versioni dei servizi
+In questo argomento vengono descritti i passaggi di base necessari per creare una configurazione del routing che indirizza messaggi a versioni diverse dello stesso servizio. In questo esempio i messaggi vengono indirizzati a due versioni diverse di un servizio di calcolo, `roundingCalc` (v1) e `regularCalc` (v2). Entrambe le implementazioni supportano le stesse operazioni; tuttavia il primo servizio, `roundingCalc`, arrotonda tutti i calcoli al valore intero più vicino prima della restituzione. Un'applicazione client deve essere in grado di indicare se utilizzare il secondo servizio, `regularCalc`.  
   
 > [!WARNING]
->  Per indirizzare un messaggio a una specifica versione del servizio, il servizio di routing deve essere in grado di determinare la destinazione del messaggio in base al relativo contenuto.Nel metodo illustrato di seguito il client specifica la versione inserendo informazioni in un'intestazione di messaggio.Esistono metodi di controllo delle versioni del servizio che non richiedono il passaggio di dati aggiuntivi da parte dei client.Un messaggio potrebbe essere ad esempio indirizzato alla versione più recente o più compatibile di un servizio oppure una parte del relativo elemento SOAP Envelope standard potrebbe essere utilizzato dal router.  
+>  Per indirizzare un messaggio a una specifica versione del servizio, il servizio di routing deve essere in grado di determinare la destinazione del messaggio in base al relativo contenuto. Nel metodo illustrato di seguito il client specifica la versione inserendo informazioni in un'intestazione di messaggio. Esistono metodi di controllo delle versioni del servizio che non richiedono il passaggio di dati aggiuntivi da parte dei client. Un messaggio potrebbe essere ad esempio indirizzato alla versione più recente o più compatibile di un servizio oppure una parte del relativo elemento SOAP Envelope standard potrebbe essere utilizzato dal router.  
   
  Le operazioni esposte da entrambi servizi sono:  
   
--   Addizione \(Add\)  
+-   Add  
   
--   Sottrazione \(Subtract\)  
+-   Subtract  
   
--   Moltiplicazione \(Multiply\)  
+-   Multiply  
   
--   Divisione \(Divide\)  
+-   Divide  
   
- Poiché entrambe le implementazioni del servizio gestiscono le stesse operazioni e sono essenzialmente identiche tranne che per i dati che restituiscono, i dati di base contenuti nei messaggi inviati dalle applicazioni client non sono sufficientemente univoci per consentire di determinare la modalità di routing della richiesta.Non è ad esempio possibile utilizzare i filtri Action, poiché le azioni predefinite per entrambi i servizi sono identiche.  
+ Poiché entrambe le implementazioni del servizio gestiscono le stesse operazioni e sono essenzialmente identiche tranne che per i dati che restituiscono, i dati di base contenuti nei messaggi inviati dalle applicazioni client non sono sufficientemente univoci per consentire di determinare la modalità di routing della richiesta. Non è ad esempio possibile utilizzare i filtri Action, poiché le azioni predefinite per entrambi i servizi sono identiche.  
   
- È possibile risolvere questo problema in diversi modi, ad esempio esponendo un endpoint specifico sul router per ogni versione del servizio o aggiungendo un elemento di intestazione personalizzato al messaggio per indicare la versione del servizio.Ognuno di questi approcci consente di indirizzare in modo univoco messaggi in ingresso a una versione specifica del servizio, ma l'utilizzo di contenuti univoci nei messaggi è il metodo preferibile per distinguere le richieste indirizzate a versioni diverse del servizio.  
+ È possibile risolvere questo problema in diversi modi, ad esempio esponendo un endpoint specifico sul router per ogni versione del servizio o aggiungendo un elemento di intestazione personalizzato al messaggio per indicare la versione del servizio.  Ognuno di questi approcci consente di indirizzare in modo univoco messaggi in ingresso a una versione specifica del servizio, ma l'utilizzo di contenuti univoci nei messaggi è il metodo preferibile per distinguere le richieste indirizzate a versioni diverse del servizio.  
   
- In questo esempio l'applicazione client aggiunge l'intestazione personalizzata 'CalcVer' al messaggio di richiesta.Questa intestazione contiene un valore che indica la versione del servizio a cui deve essere indirizzato il messaggio.Il valore '1' indica che il messaggio deve essere elaborato dal servizio roundingCalc, mentre il valore '2' indica il servizio regularCalc.In questo modo l'applicazione client può controllare direttamente quale versione del servizio elaborerà il messaggio.Poiché l'intestazione personalizzata è un valore contenuto all'interno del messaggio, è possibile utilizzare un endpoint per ricevere messaggi destinati a entrambe le versioni del servizio.Il codice seguente può essere utilizzato nell'applicazione client per aggiungere l'intestazione personalizzata al messaggio:  
+ In questo esempio l'applicazione client aggiunge l'intestazione personalizzata 'CalcVer' al messaggio di richiesta. Questa intestazione contiene un valore che indica la versione del servizio a cui deve essere indirizzato il messaggio. Il valore '1' indica che il messaggio deve essere elaborato dal servizio roundingCalc, mentre il valore '2' indica il servizio regularCalc. In questo modo l'applicazione client può controllare direttamente quale versione del servizio elaborerà il messaggio.  Poiché l'intestazione personalizzata è un valore contenuto all'interno del messaggio, è possibile utilizzare un endpoint per ricevere messaggi destinati a entrambe le versioni del servizio. Il codice seguente può essere utilizzato nell'applicazione client per aggiungere l'intestazione personalizzata al messaggio:  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
 ```  
   
-### Implementare il controllo delle versioni del servizio  
+### <a name="implement-service-versioning"></a>Implementare il controllo delle versioni del servizio  
   
-1.  Creare la configurazione del servizio di routing di base specificando l'endpoint servizio esposto dal servizio.Nell'esempio seguente viene definito un solo endpoint servizio che verrà utilizzato per ricevere messaggi.Vengono inoltre definiti gli endpoint client che verranno utilizzati per inviare messaggi ai servizi `roundingCalc` \(v1\) `regularCalc` \(v2\).  
+1.  Creare la configurazione del servizio di routing di base specificando l'endpoint servizio esposto dal servizio. Nell'esempio seguente viene definito un solo endpoint servizio che verrà utilizzato per ricevere messaggi. Vengono inoltre definiti gli endpoint client che verranno utilizzati per inviare messaggi ai servizi `roundingCalc` (v1) `regularCalc` (v2).  
   
     ```xml  
     <services>  
@@ -74,10 +77,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
                     binding="wsHttpBinding"  
                     contract="*" />  
         </client>  
-  
     ```  
   
-2.  Definire i filtri utilizzati per indirizzare messaggi agli endpoint di destinazione.Ai fini di questo esempio, viene utilizzato il filtro XPath per rilevare il valore dell'intestazione personalizzata "CalcVer" allo scopo di determinare la versione a cui indirizzare il messaggio.Viene inoltre utilizzato un filtro XPath per rilevare i messaggi che non contengono l'intestazione "CalcVer".Nell'esempio seguente vengono definiti la tabella dello spazio dei nomi e dei filtri necessari.  
+2.  Definire i filtri usati per indirizzare messaggi agli endpoint di destinazione.  In questo esempio viene utilizzato il filtro XPath per rilevare il valore dell'intestazione personalizzata "CalcVer" per determinare la versione deve essere indirizzato il messaggio a. Un filtro XPath viene utilizzato anche per rilevare i messaggi che non contengono l'intestazione "calcver". Nell'esempio seguente vengono definiti la tabella dello spazio dei nomi e dei filtri necessari.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -102,9 +104,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  Il prefisso s12 dello spazio dei nomi è definito per impostazione predefinita nella tabella dello spazio dei nomi e rappresenta lo spazio dei nomi "http:\/\/www.w3.org\/2003\/05\/soap\-envelope".  
+    >  Il prefisso s12 è definito per impostazione predefinita nella tabella dello spazio dei nomi e rappresenta lo spazio dei nomi "http://www.w3.org/2003/05/soap-envelope".  
   
-3.  Definire la tabella dei filtri, che associa ogni filtro a un endpoint client.Se il messaggio contiene l'intestazione "CalcVer" con il valore 1, verrà inviato al servizio regularCalc.Se l'intestazione contiene il valore 2, verrà inviato al servizio roundingCalc.Se non è presente alcuna intestazione, il messaggio verrà indirizzato a regularCalc.  
+3.  Definire la tabella dei filtri, che associa ogni filtro a un endpoint client. Se il messaggio contiene l'intestazione "calcver" con un valore pari a 1, verrà inviato al servizio regularCalc. Se l'intestazione contiene il valore 2, verrà inviato al servizio roundingCalc. Se non è presente alcuna intestazione, il messaggio verrà indirizzato a regularCalc.  
   
      Di seguito viene definita la tabella dei filtri e vengono aggiunti i filtri definiti in precedenza.  
   
@@ -125,7 +127,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing.Nell'esempio seguente viene illustrata l'associazione di "filterTable1" agli endpoint servizio:  
+4.  Per valutare i messaggi in ingresso rispetto ai filtri contenuti nella rispettiva tabella, è necessario associare la tabella dei filtri agli endpoint servizio tramite il comportamento di routing.  Nell'esempio seguente viene illustrata l'associazione di "filterTable1" agli endpoint servizio:  
   
     ```xml  
     <behaviors>  
@@ -136,10 +138,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Il codice seguente costituisce un elenco completo del file di configurazione.  
   
 ```xml  
@@ -220,14 +221,12 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </routing>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Il codice seguente costituisce un elenco completo dell'applicazione client.  
   
 ```csharp  
-  
 using System;  
 using System.ServiceModel;  
 using System.ServiceModel.Channels;  
@@ -333,8 +332,7 @@ namespace Microsoft.Samples.AdvancedFilters
         }  
     }  
 }  
-  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Servizi di routing](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -1,73 +1,76 @@
 ---
-title: "Installazione accodamento messaggi (MSMQ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Installazione accodamento messaggi (MSMQ)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 89d81a25da6494fc9cbf041ae68f2985b5c90a81
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Installazione accodamento messaggi (MSMQ)
+# <a name="installing-message-queuing-msmq"></a>Installazione accodamento messaggi (MSMQ)
 Le procedure seguenti mostrano come installare Accodamento messaggi 4.0 e Accodamento messaggi 3.0.  
   
 > [!NOTE]
 >  La versione 4.0 del sistema di accodamento dei messaggi non è disponibile in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
   
-#### Per installare la versione 4.0 del sistema di accodamento dei messaggi in Windows Server 2008 o in Windows Server 2008 R2  
+#### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a>Per installare la versione 4.0 del sistema di accodamento dei messaggi in Windows Server 2008 o in Windows Server 2008 R2  
   
-1.  In Server Manager, fare clic su **Funzionalità**.  
+1.  In Server Manager, fare clic su **funzionalità**.  
   
 2.  Nel riquadro destro, in **Riepilogo funzionalità**, fare clic su **Aggiungi funzionalità**.  
   
-3.  Nella finestra che viene visualizzata, espandere **Accodamento messaggi**.  
+3.  Nella finestra risulta, espandere **Accodamento**.  
   
-4.  Espandere **Servizi Accodamento messaggio**.  
+4.  Espandere **servizi di accodamento dei messaggi**.  
   
-5.  Fare clic su **Integrazione servizi directory** \(per i computer associati ad un dominio\), quindi fare clic su **Supporto HTTP**.  
+5.  Fare clic su **integrazione servizi Directory** (per i computer aggiunti a un dominio), quindi fare clic su **supporto HTTP**.  
   
-6.  Fare clic su **Avanti**,quindi su **Installa**.  
+6.  Fare clic su **Avanti**, quindi fare clic su **installare**.  
   
-#### Per installare la versione 4.0 del sistema di accodamento dei messaggi in Windows 7 o in windows Vista  
+#### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>Per installare la versione 4.0 del sistema di accodamento dei messaggi in Windows 7 o in windows Vista  
   
 1.  Aprire il **Pannello di controllo**.  
   
-2.  Fare clic su **Programmi** e quindi in **Programmi e funzionalità**, fare clic su **Attivazione e disattivazione delle funzionalità Windows**.  
+2.  Fare clic su **programmi** e quindi in **programmi e funzionalità**, fare clic su **funzionalità di Windows di attivare e disattivare**.  
   
-3.  Espandere il server di accodamento messaggi Microsoft \(MSMQ\), espandere il server di base di accodamento messaggi Microsoft \(MSMQ\) e quindi selezionare le caselle di controllo per l’installazione delle funzionalità di Accodamento messaggi seguenti:  
+3.  Espandere il server di accodamento messaggi Microsoft (MSMQ), espandere il server di base di accodamento messaggi Microsoft (MSMQ) e quindi selezionare le caselle di controllo per l’installazione delle funzionalità di Accodamento messaggi seguenti:  
   
-    -   Integrazione dei Servizi di dominio Active Directory MSMQ \(per computer aggiunti a un Dominio\).  
+    -   Integrazione dei Servizi di dominio Active Directory MSMQ (per computer aggiunti a un Dominio).  
   
     -   Supporto HTTP MSMQ.  
   
 4.  Fare clic su **OK**.  
   
-5.  Se viene richiesto di riavviare il computer, fare clic su **OK** per completare l'installazione.  
+5.  Se viene chiesto di riavviare il computer, fare clic su **OK** per completare l'installazione.  
   
-#### Per installare la versione 3.0 di Accodamento messaggi in Windows XP o Windows Server 2003  
+#### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>Per installare la versione 3.0 di Accodamento messaggi in Windows XP o Windows Server 2003  
   
 1.  Aprire il **Pannello di controllo**.  
   
-2.  Scegliere **Installazione applicazioni** e fare clic su **Installazione componenti di Windows**.  
+2.  Fare clic su **Installazione applicazioni** e quindi fare clic su **Installazione componenti di Windows**.  
   
-3.  Selezionare Accodamento messaggi e fare clic su **Dettagli**.  
+3.  Selezionare il servizio Accodamento messaggi e fare clic su **dettagli**.  
   
     > [!NOTE]
     >  Se è in esecuzione [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], selezionare Server applicazioni per accedere a Accodamento messaggi.  
   
 4.  Assicurarsi che l'opzione Supporto HTTP MSMQ sia selezionata nella pagina dei dettagli.  
   
-5.  Fare clic su **OK** per uscire dalla pagina dei dettagli, quindi fare clic su **Avanti**.Completare l’installazione.  
+5.  Fare clic su **OK** per uscire dalla pagina dei dettagli, quindi fare clic su **Avanti**. Completare l’installazione.  
   
-6.  Se viene richiesto di riavviare il computer, fare clic  su **OK** per completare l'installazione.  
+6.  Se viene chiesto di riavviare il computer, fare clic su **OK** per completare l'installazione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Istruzioni di configurazione](../../../../docs/framework/wcf/samples/set-up-instructions.md)

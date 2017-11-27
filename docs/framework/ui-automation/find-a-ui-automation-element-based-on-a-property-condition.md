@@ -1,40 +1,46 @@
 ---
-title: "Find a UI Automation Element Based on a Property Condition | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elements, finding by property conditions"
-  - "UI Automation, finding elements by property conditions"
+title: "Trovare un elemento di automazione interfaccia utente in base a una proprietà"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- elements, finding by property conditions
+- UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
-caps.latest.revision: 19
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: cafd84ce3acea80905d686f33f23338e3581a9c4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Find a UI Automation Element Based on a Property Condition
+# <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>Trovare un elemento di automazione interfaccia utente in base a una proprietà
 > [!NOTE]
->  La presente documentazione è destinata agli sviluppatori di .NET Framework che desiderano utilizzare le classi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gestite definite nello spazio dei nomi <xref:System.Windows.Automation>.  Per informazioni aggiornate sull'[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere [Windows Automation API: Automazione interfaccia utente](http://go.microsoft.com/fwlink/?LinkID=156746) \(la pagina potrebbe essere in inglese\).  
+>  Questa documentazione è destinata agli sviluppatori di .NET Framework che vogliono usare le classi gestite di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definite nello spazio dei nomi <xref:System.Windows.Automation>. Per informazioni aggiornate su [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vedere l'argomento sull' [API Automazione interfaccia utente di Windows](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- In questo argomento viene presentato codice di esempio che mostra come trovare un elemento all'interno della struttura ad albero di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in base a una o più proprietà specifiche.  
+ In questo argomento contiene codice di esempio che illustra come individuare un elemento all'interno di [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] struttura ad albero in base a una o più proprietà specifiche.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene specificato un insieme di condizioni di proprietà che identifica un determinato elemento \(o più elementi\) di interesse nella struttura ad albero di <xref:System.Windows.Automation.AutomationElement>.  Viene quindi eseguita una ricerca di tutti gli elementi corrispondenti con il metodo <xref:System.Windows.Automation.AutomationElement.FindAll%2A> che incorpora una serie di operazioni booleane <xref:System.Windows.Automation.AndCondition> per limitare il numero di elementi corrispondenti.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente, un set di condizioni di proprietà specificato che identifica un determinato elemento o gli elementi di interesse nel <xref:System.Windows.Automation.AutomationElement> struttura ad albero. Viene quindi eseguita una ricerca per tutti gli elementi corrispondenti con il <xref:System.Windows.Automation.AutomationElement.FindAll%2A> metodo che incorpora una serie di <xref:System.Windows.Automation.AndCondition> operazioni booleane per limitare il numero di elementi corrispondenti.  
   
 > [!NOTE]
->  Quando si eseguono ricerche dalla proprietà <xref:System.Windows.Automation.AutomationElement.RootElement%2A>, è necessario tentare di ottenere solo figli diretti.  Una ricerca dei discendenti potrebbe ripetersi in centinaia o addirittura migliaia di elementi, con la possibilità di un overflow dello stack.  Se si tenta di ottenere un elemento specifico a un livello inferiore, è necessario avviare la ricerca dalla finestra dell'applicazione o da un contenitore a un livello inferiore.  
+>  Durante la ricerca dal <xref:System.Windows.Automation.AutomationElement.RootElement%2A>, è consigliabile provare a ottenere solo elementi figlio diretti. Una ricerca dei discendenti può scorrere centinaia o migliaia di elementi, probabilmente un overflow dello stack. Per ottenere un elemento specifico a un livello inferiore, è consigliabile avviare la ricerca dalla finestra dell'applicazione o da un contenitore a un livello inferiore.  
   
  [!code-csharp[InvokePatternApp#1100](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1100)]
  [!code-vb[InvokePatternApp#1100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1100)]  
   
-## Vedere anche  
- [InvokePattern and ExpandCollapsePattern Menu Item Sample](http://msdn.microsoft.com/it-it/b7fa141c-e2d1-4da2-a27f-81a7d1172210)   
- [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)   
- [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)
+## <a name="see-also"></a>Vedere anche  
+ [Esempio di elemento di Menu ExpandCollapsePattern e InvokePattern](http://msdn.microsoft.com/en-us/b7fa141c-e2d1-4da2-a27f-81a7d1172210)  
+ [Ottenere gli elementi di automazione interfaccia utente](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
+ [Utilizzare la proprietà AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md)

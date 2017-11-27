@@ -1,27 +1,30 @@
 ---
-title: "Inferenza delle relazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Deduzione di relazioni
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 41c73ac31105cdae0a23c2367211747dee8d44f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Inferenza delle relazioni
-Se a un elemento inferito come tabella è associato un elemento figlio a sua volta inferito come tabella, tra le due tabelle verrà creato un tipo <xref:System.Data.DataRelation>.  Una nuova colonna denominata **ParentTableName\_Id** verrà aggiunta alla tabella creata per l'elemento padre e alla tabella creata per l'elemento figlio.  La proprietà **ColumnMapping** della colonna Identity verrà impostata su **MappingType.Hidden**.  La colonna sarà una chiave primaria con incremento automatico per la tabella padre e verrà usata per la **DataRelation** tra le due tabelle.  Il tipo di dati della colonna Identity aggiunta sarà **System.Int32**, a differenza del tipo di dati di tutte le altre colonne inferite, che è **System.String**.  Usando la nuova colonna nelle tabelle padre e figlio, verrà inoltre creato il tipo <xref:System.Data.ForeignKeyConstraint> con la proprietà **DeleteRule** impostata su **Cascade**.  
+# <a name="inferring-relationships"></a>Deduzione di relazioni
+Se a un elemento inferito come tabella è associato un elemento figlio a sua volta inferito come tabella, tra le due tabelle verrà creato un tipo <xref:System.Data.DataRelation>. Una nuova colonna con un nome di **ParentTableName_Id** verranno aggiunti alla tabella creata per l'elemento padre e la tabella creata per l'elemento figlio. Il **ColumnMapping** della colonna identity verrà impostata su **MappingType**. La colonna sarà una chiave primaria con incremento automatico per la tabella padre e verrà utilizzata per il **DataRelation** tra le due tabelle. Il tipo di dati della colonna identity aggiunta sarà **System. Int32**, a differenza del tipo di dati di tutte le altre colonne inferite, che è **System. String**. Oggetto <xref:System.Data.ForeignKeyConstraint> con **DeleteRule** = **Cascade** verrà creata anche usando la nuova colonna nelle tabelle padre e figlio.  
   
  Ad esempio, si consideri il seguente codice XML:  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>  
     <ChildElement1 attr1="value1" attr2="value2"/>  
@@ -30,43 +33,43 @@ Se a un elemento inferito come tabella è associato un elemento figlio a sua vol
 </DocumentElement>  
 ```  
   
- Dal processo di inferenza verranno prodotte due tabelle: **Element1** e **ChildElement1**.  
+ Il processo di inferenza verrà prodotte due tabelle: **Element1** e **ChildElement1**.  
   
- Nella tabella **Element1** saranno presenti due colonne: **Element1\_Id** e **ChildElement2**.  La proprietà **ColumnMapping** della colonna **Element1\_Id** verrà impostata su **MappingType.Hidden**.  La proprietà **ColumnMapping** della colonna **ChildElement2** verrà impostata su **MappingType.Element**.  La colonna **Element1\_Id** verrà impostata come chiave primaria della tabella **Element1**.  
+ Il **Element1** tabella sarà presenti due colonne: **Element1_Id** e **ChildElement2**. Il **ColumnMapping** proprietà del **Element1_Id** colonna verrà impostata su **MappingType**. Il **ColumnMapping** proprietà del **ChildElement2** colonna verrà impostata su **MappingType**. Il **Element1_Id** verrà impostata come chiave primaria della colonna di **Element1** tabella.  
   
- Nella tabella **ChildElement1** saranno presenti tre colonne: **attr1**, **attr2** e **Element1\_Id**.  La proprietà **ColumnMapping** per le colonne **attr1** e **attr2** verrà impostata su **MappingType.Attribute**.  La proprietà **ColumnMapping** della colonna **Element1\_Id** verrà impostata su **MappingType.Hidden**.  
+ Il **ChildElement1** tabella sarà presenti tre colonne: **attr1**, **attr2** e **Element1_Id**. Il **ColumnMapping** proprietà per il **attr1** e **attr2** colonne verranno impostate su **MappingType. Attribute**. Il **ColumnMapping** proprietà del **Element1_Id** colonna verrà impostata su **MappingType**.  
   
- Usando le colonne **Element1\_Id** di entrambe le tabelle verranno creati un oggetto **DataRelation** e un vincolo **ForeignKeyConstraint**.  
+ Oggetto **DataRelation** e **ForeignKeyConstraint** verrà creata utilizzando il **Element1_Id** le colonne di entrambe le tabelle.  
   
- **DataSet:** DocumentElement  
+ **Set di dati:** DocumentElement  
   
- **Table:** Element1  
+ **Tabella:** Element1  
   
-|Element1\_Id|ChildElement2|  
+|Element1_Id|ChildElement2|  
 |------------------|-------------------|  
 |0|Text2|  
   
- **Table:** ChildElement1  
+ **Tabella:** ChildElement1  
   
-|attr1|attr2|Element1\_Id|  
+|attr1|attr2|Element1_Id|  
 |-----------|-----------|------------------|  
 |value1|value2|0|  
   
- **DataRelation:** Element1\_ChildElement1  
+ **DataRelation:** Element1_ChildElement1  
   
  **ParentTable:** Element1  
   
- **ParentColumn:** Element1\_Id  
+ **ParentColumn:** Element1_Id  
   
  **ChildTable:** ChildElement1  
   
- **ChildColumn:** Element1\_Id  
+ **ChildColumn:** Element1_Id  
   
- **Nested:** True  
+ **Nidificate:** True  
   
- **ForeignKeyConstraint:** Element1\_ChildElement1  
+ **ForeignKeyConstraint:** Element1_ChildElement1  
   
- **Column:** Element1\_Id  
+ **Colonna:** Element1_Id  
   
  **ParentTable:** Element1  
   
@@ -74,13 +77,13 @@ Se a un elemento inferito come tabella è associato un elemento figlio a sua vol
   
  **DeleteRule:** Cascade  
   
- **AcceptRejectRule:** None  
+ **AcceptRejectRule:** nessuno  
   
-## Vedere anche  
- [Inferenza della struttura relazionale del DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [Caricamento di un DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [Caricamento delle informazioni relative allo schema di un DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [DataRelation annidati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)   
- [Utilizzo di XML in un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Inferenza della struttura relazionale di DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [Caricamento di un DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [Il caricamento delle informazioni dello Schema di DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [Annidamento di oggetti DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [Uso di XML in un set di dati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Oggetti DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

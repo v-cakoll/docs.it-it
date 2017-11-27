@@ -1,47 +1,52 @@
 ---
-title: "Procedura: definire un&#39;icona per un pulsante ToolBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pulsanti [Windows Form], icone"
-  - "esempi [Windows Form], barre degli strumenti"
-  - "icone [Windows Form], pulsanti della barra degli strumenti"
-  - "immagini [Windows Form], pulsanti della barra degli strumenti"
-  - "ToolBar (controllo) [Windows Form], aggiunta di icone a pulsanti"
-  - "barre degli strumenti [Windows Form], aggiunta di icone a pulsanti"
+title: 'Procedura: definire un''icona per un pulsante ToolBar'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- toolbars [Windows Forms], adding icons to buttons
+- buttons [Windows Forms], icons
+- examples [Windows Forms], toolbars
+- images [Windows Forms], toolbar buttons
+- icons [Windows Forms], toolbar buttons
+- ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1d9f1dc73e6a74d8d69fedf6650102b77bd4f96a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: definire un&#39;icona per un pulsante ToolBar
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Procedura: definire un'icona per un pulsante ToolBar
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.ToolStrip> sostituisca il controllo <xref:System.Windows.Forms.ToolBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ToolBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  
+>  Benché il controllo <xref:System.Windows.Forms.ToolStrip> sostituisca il controllo <xref:System.Windows.Forms.ToolBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ToolBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
   
- I pulsanti <xref:System.Windows.Forms.ToolBar> consentono di visualizzare icone al loro interno per semplificarne l'identificazione da parte degli utenti.  A tale scopo, vengono aggiunte immagini al componente [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md), quindi il componente <xref:System.Windows.Forms.ImageList> viene associato al controllo <xref:System.Windows.Forms.ToolBar>.  
+ <xref:System.Windows.Forms.ToolBar>i pulsanti sono in grado di visualizzare icone al loro interno per semplificarne l'identificazione da parte degli utenti. Questo risultato viene ottenuto tramite l'aggiunta di immagini per il [componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) componente e quindi associando il <xref:System.Windows.Forms.ImageList> componente con il <xref:System.Windows.Forms.ToolBar> controllo.  
   
-### Per impostare un'icona per un pulsante di una barra degli strumenti a livello di codice  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>Per impostare un'icona per un pulsante della barra degli strumenti a livello di codice  
   
-1.  In una routine, creare un'istanza di un componente <xref:System.Windows.Forms.ImageList> e di un controllo <xref:System.Windows.Forms.ToolBar>.  
+1.  In una routine, creare un'istanza di un <xref:System.Windows.Forms.ImageList> componente e un <xref:System.Windows.Forms.ToolBar> controllo.  
   
-2.  Nella stessa routine, assegnare un'immagine al componente <xref:System.Windows.Forms.ImageList>.  
+2.  Nella stessa stored procedure, assegnare un'immagine per il <xref:System.Windows.Forms.ImageList> componente.  
   
-3.  Nella stessa routine, assegnare infine il controllo <xref:System.Windows.Forms.ImageList> al controllo <xref:System.Windows.Forms.ToolBar> e assegnare la proprietà <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> dei singoli pulsanti della barra degli strumenti.  
+3.  Nella stessa stored procedure, assegnare il <xref:System.Windows.Forms.ImageList> controllo il <xref:System.Windows.Forms.ToolBar> controllare e assegnare il <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> proprietà dei pulsanti della barra degli strumenti singoli.  
   
-     Nell'esempio di codice riportato di seguito il percorso impostato per la posizione dell'immagine corrisponde alla cartella **Documenti**.  Questa scelta è dovuta al fatto che si suppone che questa directory sia presente sulla maggior parte dei computer con sistema operativo Windows.  La scelta di questa posizione consente inoltre di eseguire l'applicazione senza problemi agli utenti che dispongono di livelli di accesso minimo.  Nell'esempio riportato di seguito si presuppone che un controllo <xref:System.Windows.Forms.PictureBox> sia già stato aggiunto al form.  
+     Nell'esempio di codice riportato di seguito, il percorso impostato per la posizione dell'immagine è il **documenti** cartella. Ciò accade in quanto è possibile presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows includerà questa directory. Ciò consente inoltre agli utenti del sistema con livelli di accesso minimo di eseguire l'applicazione senza problemi. Nell'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.PictureBox> controllo già aggiunto.  
   
-     La procedura illustrata in precedenza consente di scrivere un codice simile a quello riportato di seguito.  
+     Seguendo i passaggi precedenti, consente di scrivere codice simile a quello riportato di seguito.  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -66,7 +71,6 @@ caps.handback.revision: 14
     ' Assign the ImageIndex property of the ToolBarButton.  
        ToolBarButton1.ImageIndex = 0  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -93,7 +97,6 @@ caps.handback.revision: 14
        // Assign ImageIndex property of the ToolBarButton.  
        toolBarButton1.ImageIndex = 0;  
     }  
-  
     ```  
   
     ```cpp  
@@ -122,8 +125,8 @@ caps.handback.revision: 14
        }  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ToolBar>   
- [Procedura: attivare eventi di menu per i pulsanti di una barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)   
- [Controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.ToolBar>  
+ [Procedura: Attivare eventi di menu per i pulsanti di una barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [Controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
  [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

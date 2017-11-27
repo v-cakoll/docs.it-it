@@ -1,72 +1,70 @@
 ---
-title: "Elemento &lt;Uri&gt; (impostazioni URI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: '&lt;URI&gt; elemento (impostazioni Uri)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 44ef28ca2188973ccd353f4e8615c7c95f5674a2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Elemento &lt;Uri&gt; (impostazioni URI)
-Contiene impostazioni che specificano come vengono gestiti in .NET Framework gli indirizzi Web espressi tramite URI \(Uniform Resource Identifier\).  
+# <a name="lturigt-element-uri-settings"></a>&lt;URI&gt; elemento (impostazioni Uri)
+Contiene le impostazioni che specificano come .NET Framework gestisce gli indirizzi web espressi tramite uniform resource identifier (URI).  
   
-## Gerarchia dello schema  
- [Elemento \<Configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a>Gerarchia dello schema  
+ [Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<uri\>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<URI >](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+```xml  
 <uri>  
 </uri>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[non](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|Specifica se l'analisi IDN \(Internationalized Domain Name\) viene applicata ai nomi di dominio.|  
-|[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Specifica se l'analisi IRI \(International Resource Identifier\) viene applicata a <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.|  
-|[schemeSettings](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Specifica come un oggetto <xref:System.Uri> verrà analizzato per schemi specifici.|  
+|-----------------|---------------------|  
+|[IDN](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|Specifica se l'analisi IDN (Internationalized Domain Name) viene applicata ai nomi di dominio.|  
+|[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Specifica se l'analisi di identificatore IRI (International Resource) viene applicato a <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.|  
+|[schemeSettings](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[configurazione](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene impostazioni per tutti gli spazi dei nomi.|  
+|-----------------|---------------------|  
+|[configurazione](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene le impostazioni per tutti gli spazi dei nomi.|  
   
-## Note  
- L'elemento `uri` contiene impostazioni per i membri della classe <xref:System.Uri> utilizzata dalle classi nello spazio dei nomi <xref:System.Net>.  Le impostazioni configurano il supporto per IRI e IDN.  
+## <a name="remarks"></a>Note  
+ Il `uri` elemento contiene le impostazioni per i membri del <xref:System.Uri> utilizzata dalle classi nella classe di <xref:System.Net> dello spazio dei nomi. Le impostazioni di configurano il supporto per IRI e IDN.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- Nell'esempio di codice seguente viene illustrata una configurazione utilizzata dalla classe <xref:System.Uri> per supportare l'analisi IRI e i nomi IDN.  Nell'esempio vengono inoltre cancellate tutte le impostazioni dello schema e quindi viene aggiunto il supporto per non eseguire l'operazione di escape dei delimitatori di percorso con codifica percentuale dello schema HTTP.  
+### <a name="description"></a>Descrizione  
+ Nell'esempio seguente viene mostrata una configurazione utilizzata per la <xref:System.Uri> classe per supportare l'analisi IRI e i nomi IDN. Nell'esempio viene inoltre Cancella tutte le impostazioni dello schema e quindi aggiunge il supporto per sequenza di escape non delimitatori di percorso con codifica percentuale per lo schema http.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <idn enabled="All" />  
@@ -79,5 +77,5 @@ Contiene impostazioni che specificano come vengono gestiti in .NET Framework gli
 </configuration>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
