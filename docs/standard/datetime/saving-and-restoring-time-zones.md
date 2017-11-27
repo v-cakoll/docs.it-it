@@ -1,73 +1,86 @@
 ---
-title: "Salvataggio e ripristino dei fusi orari | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "deserializzazione [.NET Framework], fusi orari"
-  - "ripristino di fusi orari"
-  - "salvataggio di fusi orari"
-  - "serializzazione [.NET Framework], fusi orari"
-  - "fusi orari (oggetti) [.NET Framework], deserializzazione"
-  - "fusi orari (oggetti) [.NET Framework], ripristino"
-  - "fusi orari (oggetti) [.NET Framework], salvataggio"
-  - "fusi orari (oggetti) [.NET Framework], serializzazione"
-  - "fusi orari [.NET Framework], ripristino"
-  - "fusi orari [.NET Framework], salvataggio"
+title: Salvataggio e ripristino di fusi orari
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- restoring time zones
+- deserialization [.NET Framework], time zones
+- serialization [.NET Framework], time zones
+- time zone objects [.NET Framework], restoring
+- saving time zones
+- time zone objects [.NET Framework], deserializing
+- time zones [.NET Framework], saving
+- time zones [.NET Framework], restoring
+- time zone objects [.NET Framework], serializing
+- time zone objects [.NET Framework], saving
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d4e04de61ed5636d0102af694220dce06c256751
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Salvataggio e ripristino dei fusi orari
-La classe <xref:System.TimeZoneInfo> si basa sul Registro di sistema per recuperare i dati predefiniti del fuso orario,  sebbene il Registro di sistema sia una struttura dinamica.  Inoltre, le informazioni del fuso orario contenute nel Registro di sistema vengono utilizzate dal sistema operativo principalmente per gestire le regolazioni e le conversioni di fusi orari per l'anno corrente.  Ciò comporta due principali implicazioni per le applicazioni che si basano su dati del fuso orario accurati:  
-  
--   È possibile che un fuso orario richiesto da un'applicazione non sia definito nel Registro di sistema o che sia stato rinominato o rimosso dal Registro di sistema.  
-  
--   È possibile che un fuso orario definito nel Registro di sistema non contenga le informazioni su determinate regole di regolazione necessarie per le conversioni di fusi orari storici.  
-  
- La classe <xref:System.TimeZoneInfo> risolve tali limitazioni grazie al supporto della serializzazione \(salvataggio\) e della deserializzazione \(ripristino\) dei dati del fuso orario.  
-  
-## Serializzazione e deserializzazione del fuso orario  
- Il salvataggio e il ripristino di un fuso orario serializzando e deserializzando i dati del fuso orario comportano solo due chiamate al metodo:  
-  
--   È possibile serializzare un oggetto <xref:System.TimeZoneInfo> chiamando il metodo <xref:System.TimeZoneInfo.ToSerializedString%2A> di tale oggetto.  Il metodo non accetta alcun parametro e restituisce una stringa che contiene le informazioni del fuso orario.  
-  
--   È possibile deserializzare un oggetto <xref:System.TimeZoneInfo> da una stringa serializzata passando tale stringa al metodo `static` \(`Shared` in Visual Basic\) <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=fullName>.  
-  
-## Scenari di serializzazione e deserializzazione  
- La possibilità di salvare \(o serializzare\) un oggetto <xref:System.TimeZoneInfo> in una stringa e di ripristinarlo \(o deserializzarlo\) per un uso successivo aumenta l'utilità e la flessibilità della classe <xref:System.TimeZoneInfo>.  In questa sezione vengono esaminate alcune situazioni in cui la serializzazione e la deserializzazione sono molto utili.  
-  
-### Serializzazione e deserializzazione dei dati del fuso orario in un'applicazione  
- Un fuso orario serializzato può essere ripristinato da una stringa quando necessario.  Tale operazione potrebbe risultare necessaria quando il fuso orario recuperato dal Registro di sistema non è in grado di convertire correttamente una data e ora all'interno di un determinato intervallo di date.  Ad esempio, i dati del fuso orario nel Registro di sistema di Windows XP supportano una sola regola di regolazione, mentre i fusi orari definiti nel Registro di sistema di Windows Vista forniscono generalmente informazioni su due regole di regolazione.  Ciò significa che le conversioni di fusi orari storici potrebbero essere imprecise.  La serializzazione e la deserializzazione dei dati del fuso orario possono gestire tale limitazione.  
-  
- Nell'esempio seguente, una classe personalizzata <xref:System.TimeZoneInfo> senza regole di regolazione viene definita per rappresentare il fuso orario standard degli Stati Uniti orientali dal 1883 al 1917, prima dell'introduzione dell'ora legale Stati Uniti.  Il fuso orario personalizzato viene serializzato in una variabile con ambito globale.  L'ora UTC viene passata al metodo di conversione del fuso orario, `ConvertUtcTime`, per essere convertita.  Se la data e l'ora rientrano nel 1917 o in un anno precedente, il fuso Ora solare orientale personalizzato viene ripristinato da una stringa serializzata e sostituisce il fuso orario recuperato dal Registro di sistema.  
-  
- [!code-csharp[System.TimeZone2.Serialization.1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/cs/Serialization.cs#1)]
- [!code-vb[System.TimeZone2.Serialization.1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/vb/Serialization.vb#1)]  
-  
-### Gestione delle eccezioni del fuso orario  
- Poiché il Registro di sistema è una struttura dinamica, il contenuto è soggetto a modifiche accidentali o intenzionali,  ovvero è possibile che un fuso orario, che dovrebbe essere definito nel Registro di sistema e necessario per la corretta esecuzione di un'applicazione, sia assente.  Senza il supporto della serializzazione e della deserializzazione del fuso orario non si ha altra scelta che terminare l'applicazione per gestire l'eccezione <xref:System.TimeZoneNotFoundException>.  Grazie alla serializzazione e alla deserializzazione del fuso orario è, tuttavia, possibile gestire un'eccezione <xref:System.TimeZoneNotFoundException> imprevista ripristinando il fuso orario necessario da una stringa serializzata in modo da poter continuare l'esecuzione dell'applicazione.  
-  
- Nell'esempio seguente viene creato e serializzato un fuso Ora solare fuso centrale personalizzato.  Viene poi effettuato un tentativo di recuperare il fuso Ora solare fuso centrale dal Registro di sistema.  Se l'operazione di recupero genera un'eccezione <xref:System.TimeZoneNotFoundException> o un'eccezione <xref:System.InvalidTimeZoneException>, il gestore di eccezioni deserializza il fuso orario.  
-  
- [!code-csharp[System.TimeZone2.Serialization.2#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/cs/Serialization2.cs#1)]
- [!code-vb[System.TimeZone2.Serialization.2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/vb/Serialization2.vb#1)]  
-  
-### Archiviazione e ripristino di una stringa serializzata quando necessario  
- Negli esempi precedenti le informazioni del fuso orario sono state archiviate in una variabile di stringa e ripristinate quando necessario.  La stringa che contiene le informazioni del fuso orario serializzato può a sua volta essere archiviata in un supporto di archiviazione, ad esempio un file esterno, un file di risorse incorporato nell'applicazione o il Registro di sistema. Notare che le informazioni sui fusi orari personalizzati devono essere archiviate separatamente dalle chiavi del fuso orario del Registro di sistema.  
-  
- Se si archivia la stringa del fuso orario serializzato in questo modo, si separa anche la routine di creazione del fuso orario dall'applicazione stessa.  Ad esempio, una routine di creazione del fuso orario può eseguire e creare un file di dati che contiene le informazioni sui fusi orari storici utilizzate da un'applicazione.  Il file di dati può quindi essere installato con l'applicazione ed essere aperto deserializzando uno o più fusi orari quando richiesto dall'applicazione.  
-  
- Per un esempio che utilizza una risorsa incorporata per archiviare i dati dei fusi orari serializzati, vedere [Procedura: salvare fusi orari in una risorsa incorporata](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) e [Procedura: ripristinare i fusi orari da una risorsa incorporata](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).  
-  
-## Vedere anche  
- [Date, ora e fusi orari](../../../docs/standard/datetime/index.md)
+# <a name="saving-and-restoring-time-zones"></a><span data-ttu-id="75844-102">Salvataggio e ripristino di fusi orari</span><span class="sxs-lookup"><span data-stu-id="75844-102">Saving and restoring time zones</span></span>
+
+<span data-ttu-id="75844-103">La <xref:System.TimeZoneInfo> classe si basa sul Registro di sistema per recuperare i dati del fuso orario predefiniti.</span><span class="sxs-lookup"><span data-stu-id="75844-103">The <xref:System.TimeZoneInfo> class relies on the registry to retrieve predefined time zone data.</span></span> <span data-ttu-id="75844-104">Tuttavia, il Registro di sistema è una struttura dinamica.</span><span class="sxs-lookup"><span data-stu-id="75844-104">However, the registry is a dynamic structure.</span></span> <span data-ttu-id="75844-105">Inoltre, le informazioni sul fuso orario che contiene il Registro di sistema viene utilizzati principalmente per gestire i tempi e le conversioni per l'anno corrente dal sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="75844-105">Additionally, the time zone information that the registry contains is used by the operating system primarily to handle time adjustments and conversions for the current year.</span></span> <span data-ttu-id="75844-106">Questo ha due implicazioni principali per le applicazioni che si basano sui dati del fuso orario accurati:</span><span class="sxs-lookup"><span data-stu-id="75844-106">This has two major implications for applications that rely on accurate time zone data:</span></span>
+
+* <span data-ttu-id="75844-107">Un fuso orario è richiesta da un'applicazione non può essere definito nel Registro di sistema o potrebbe essere stato rinominato o rimosso dal Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="75844-107">A time zone that is required by an application may not be defined in the registry, or it may have been renamed or removed from the registry.</span></span>
+
+* <span data-ttu-id="75844-108">Un fuso orario definito nel Registro di sistema potrebbero non essere disponibili informazioni sulle regole di rettifica specifica che sono necessarie per le conversioni di fusi orari storici.</span><span class="sxs-lookup"><span data-stu-id="75844-108">A time zone that is defined in the registry may lack information about the particular adjustment rules that are necessary for historical time zone conversions.</span></span>
+
+<span data-ttu-id="75844-109">La <xref:System.TimeZoneInfo> classe risolve tali limitazioni grazie al supporto della serializzazione (salvataggio) e la deserializzazione (ripristino) di dati del fuso orario.</span><span class="sxs-lookup"><span data-stu-id="75844-109">The <xref:System.TimeZoneInfo> class addresses these limitations through its support for serialization (saving) and deserialization (restoring) of time zone data.</span></span>
+
+## <a name="time-zone-serialization-and-deserialization"></a><span data-ttu-id="75844-110">Fuso orario serializzazione e deserializzazione</span><span class="sxs-lookup"><span data-stu-id="75844-110">Time zone serialization and deserialization</span></span>
+
+<span data-ttu-id="75844-111">Salvataggio e ripristino di un fuso orario da serializzare e deserializzare i dati del fuso orario include solo due chiamate al metodo:</span><span class="sxs-lookup"><span data-stu-id="75844-111">Saving and restoring a time zone by serializing and deserializing time zone data involves just two method calls:</span></span>
+
+* <span data-ttu-id="75844-112">È possibile serializzare un <xref:System.TimeZoneInfo> oggetto tramite una chiamata di tale oggetto <xref:System.TimeZoneInfo.ToSerializedString%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="75844-112">You can serialize a <xref:System.TimeZoneInfo> object by calling that object's <xref:System.TimeZoneInfo.ToSerializedString%2A> method.</span></span> <span data-ttu-id="75844-113">Il metodo non accetta parametri e restituisce una stringa che contiene informazioni sul fuso orario.</span><span class="sxs-lookup"><span data-stu-id="75844-113">The method takes no parameters and returns a string that contains time zone information.</span></span>
+
+* <span data-ttu-id="75844-114">È possibile deserializzare un <xref:System.TimeZoneInfo> oggetto da una stringa serializzata passando tale stringa per il `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=nameWithType> metodo.</span><span class="sxs-lookup"><span data-stu-id="75844-114">You can deserialize a <xref:System.TimeZoneInfo> object from a serialized string by passing that string to the `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=nameWithType> method.</span></span>
+
+## <a name="serialization-and-deserialization-scenarios"></a><span data-ttu-id="75844-115">Scenari di serializzazione e deserializzazione</span><span class="sxs-lookup"><span data-stu-id="75844-115">Serialization and deserialization scenarios</span></span>
+
+<span data-ttu-id="75844-116">La possibilità di salvare (o serializzare) un <xref:System.TimeZoneInfo> oggetto in una stringa e di ripristino (o deserializzare) per un uso successivo aumenta l'utilità e la flessibilità del <xref:System.TimeZoneInfo> classe.</span><span class="sxs-lookup"><span data-stu-id="75844-116">The ability to save (or serialize) a <xref:System.TimeZoneInfo> object to a string and to restore (or deserialize) it for later use increases both the utility and the flexibility of the <xref:System.TimeZoneInfo> class.</span></span> <span data-ttu-id="75844-117">In questa sezione vengono esaminate alcune situazioni in cui sono particolarmente utili la serializzazione e deserializzazione.</span><span class="sxs-lookup"><span data-stu-id="75844-117">This section examines some of the situations in which serialization and deserialization are most useful.</span></span>
+
+### <a name="serializing-and-deserializing-time-zone-data-in-an-application"></a><span data-ttu-id="75844-118">La serializzazione e deserializzazione di dati del fuso orario in un'applicazione</span><span class="sxs-lookup"><span data-stu-id="75844-118">Serializing and deserializing time zone data in an application</span></span>
+
+<span data-ttu-id="75844-119">Un fuso orario serializzato può essere ripristinato da una stringa quando è necessario.</span><span class="sxs-lookup"><span data-stu-id="75844-119">A serialized time zone can be restored from a string when it is needed.</span></span> <span data-ttu-id="75844-120">Un'applicazione può essere utile se il fuso orario recuperato dal Registro di sistema è in grado di convertire correttamente una data e ora all'interno di un intervallo di date specifico.</span><span class="sxs-lookup"><span data-stu-id="75844-120">An application might do this if the time zone retrieved from the registry is unable to correctly convert a date and time within a particular date range.</span></span> <span data-ttu-id="75844-121">Ad esempio, i dati del fuso orario nel Registro di sistema Windows XP supporta una sola regola di regolazione, mentre i fusi orari definiti nel Registro di sistema Windows Vista, in genere forniscono informazioni sulle due regole di regolazione.</span><span class="sxs-lookup"><span data-stu-id="75844-121">For example, time zone data in the Windows XP registry supports a single adjustment rule, while time zones defined in the Windows Vista registry typically provide information about two adjustment rules.</span></span> <span data-ttu-id="75844-122">Ciò significa che le conversioni di ora cronologici potrebbero non essere corrette.</span><span class="sxs-lookup"><span data-stu-id="75844-122">This means that historical time conversions may be inaccurate.</span></span> <span data-ttu-id="75844-123">Serializzazione e deserializzazione dei dati del fuso orario può gestire questa limitazione.</span><span class="sxs-lookup"><span data-stu-id="75844-123">Serialization and deserialization of time zone data can handle this limitation.</span></span>
+
+<span data-ttu-id="75844-124">Nell'esempio seguente, un oggetto personalizzato <xref:System.TimeZoneInfo> è definita classe senza regole di regolazione per rappresentare Fuso ora solare fuso orientale dal 1883 al 1917, prima dell'introduzione dell'ora legale negli Stati Uniti.</span><span class="sxs-lookup"><span data-stu-id="75844-124">In the following example, a custom <xref:System.TimeZoneInfo> class that has no adjustment rules is defined to represent the U.S. Eastern Standard Time zone from 1883 to 1917, before the introduction of daylight saving time in the United States.</span></span> <span data-ttu-id="75844-125">Il fuso orario personalizzato viene serializzato in una variabile con ambito globale.</span><span class="sxs-lookup"><span data-stu-id="75844-125">The custom time zone is serialized in a variable that has global scope.</span></span> <span data-ttu-id="75844-126">Il metodo di conversione del fuso orario, `ConvertUtcTime`, viene passato volte Coordinated Universal Time (UTC) da convertire.</span><span class="sxs-lookup"><span data-stu-id="75844-126">The time zone conversion method, `ConvertUtcTime`, is passed Coordinated Universal Time (UTC) times to convert.</span></span> <span data-ttu-id="75844-127">Se la data e ora si verifica in 1917 o versioni precedenti, il fuso orario solare fuso orientale personalizzato viene ripristinato da una stringa serializzata e sostituisce il fuso orario recuperato dal Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="75844-127">If the date and time occurs in 1917 or earlier, the custom Eastern Standard Time zone is restored from a serialized string and replaces the time zone retrieved from the registry.</span></span>
+
+[!code-csharp[System.TimeZone2.Serialization.1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/cs/Serialization.cs#1)]
+[!code-vb[System.TimeZone2.Serialization.1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/vb/Serialization.vb#1)]
+
+### <a name="handling-time-zone-exceptions"></a><span data-ttu-id="75844-128">Gestione delle eccezioni di fuso orario</span><span class="sxs-lookup"><span data-stu-id="75844-128">Handling time zone exceptions</span></span>
+
+<span data-ttu-id="75844-129">Poiché il Registro di sistema è una struttura dinamica, il relativo contenuto è soggetti a modifiche accidentali o intenzionali.</span><span class="sxs-lookup"><span data-stu-id="75844-129">Because the registry is a dynamic structure, its contents are subject to accidental or deliberate modification.</span></span> <span data-ttu-id="75844-130">Ciò significa che un fuso orario che deve essere definito nel Registro di sistema e che è necessario per un'applicazione per una corretta esecuzione potrebbe essere assente.</span><span class="sxs-lookup"><span data-stu-id="75844-130">This means that a time zone that should be defined in the registry and that is required for an application to execute successfully may be absent.</span></span> <span data-ttu-id="75844-131">Senza supporto per la serializzazione di fuso orario e la deserializzazione, è necessario altra scelta che per gestire l'eccezione <xref:System.TimeZoneNotFoundException> terminare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="75844-131">Without support for time zone serialization and deserialization, you have little choice but to handle the resulting <xref:System.TimeZoneNotFoundException> by ending the application.</span></span> <span data-ttu-id="75844-132">Tuttavia, con la serializzazione di fuso orario e la deserializzazione, è possibile gestire un'eccezione imprevista <xref:System.TimeZoneNotFoundException> ripristinando il fuso orario richiesto da una stringa serializzata e l'applicazione continua a essere eseguita.</span><span class="sxs-lookup"><span data-stu-id="75844-132">However, by using time zone serialization and deserialization, you can handle an unexpected <xref:System.TimeZoneNotFoundException> by restoring the required time zone from a serialized string, and the application will continue to run.</span></span>
+
+<span data-ttu-id="75844-133">Nell'esempio seguente viene creato e serializza un fuso orario centrale Standard personalizzato.</span><span class="sxs-lookup"><span data-stu-id="75844-133">The following example creates and serializes a custom Central Standard Time zone.</span></span> <span data-ttu-id="75844-134">Tenta quindi di recuperare il fuso orario centrale Standard dal Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="75844-134">It then tries to retrieve the Central Standard Time zone from the registry.</span></span> <span data-ttu-id="75844-135">Se l'operazione di recupero genera un'eccezione un <xref:System.TimeZoneNotFoundException> o <xref:System.InvalidTimeZoneException>, il gestore di eccezioni deserializza il fuso orario.</span><span class="sxs-lookup"><span data-stu-id="75844-135">If the retrieval operation throws either a <xref:System.TimeZoneNotFoundException> or an <xref:System.InvalidTimeZoneException>, the exception handler deserializes the time zone.</span></span>
+
+[!code-csharp[System.TimeZone2.Serialization.2#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/cs/Serialization2.cs#1)]
+[!code-vb[System.TimeZone2.Serialization.2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/vb/Serialization2.vb#1)]
+
+### <a name="storing-a-serialized-string-and-restoring-it-when-needed"></a><span data-ttu-id="75844-136">L'archiviazione di una stringa serializzata e il ripristino in caso di necessità</span><span class="sxs-lookup"><span data-stu-id="75844-136">Storing a serialized string and restoring it when needed</span></span>
+
+<span data-ttu-id="75844-137">Negli esempi precedenti sono archiviate informazioni sul fuso orario a una variabile di stringa e ripristinate quando necessario.</span><span class="sxs-lookup"><span data-stu-id="75844-137">The previous examples have stored time zone information to a string variable and restored it when needed.</span></span> <span data-ttu-id="75844-138">Tuttavia, la stringa che contiene ora serializzato automaticamente le informazioni sul fuso possono essere archiviati in un supporto di archiviazione, ad esempio un file esterno, un file di risorse incorporato nell'applicazione o il Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="75844-138">However, the string that contains serialized time zone information can itself be stored in some storage medium, such as an external file, a resource file embedded in the application, or the registry.</span></span> <span data-ttu-id="75844-139">Si noti che le informazioni sui fusi orari personalizzati devono essere archiviate separatamente le chiavi di fuso orario del sistema nel Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="75844-139">(Note that information about custom time zones should be stored apart from the system's time zone keys in the registry.)</span></span>
+
+<span data-ttu-id="75844-140">Archiviazione di una stringa di fuso orario serializzato in questo modo separa la routine di creazione del fuso orario dall'applicazione stessa.</span><span class="sxs-lookup"><span data-stu-id="75844-140">Storing a serialized time zone string in this manner also separates the time zone creation routine from the application itself.</span></span> <span data-ttu-id="75844-141">Ad esempio, una routine di creazione del fuso orario può eseguire e creare un file di dati che contiene informazioni cronologiche fuso orario che un'applicazione può utilizzare.</span><span class="sxs-lookup"><span data-stu-id="75844-141">For example, a time zone creation routine can execute and create a data file that contains historical time zone information that an application can use.</span></span> <span data-ttu-id="75844-142">Il file di dati può essere quindi essere installato con l'applicazione e può essere aperta e uno o più dei fusi orari può essere deserializzato quando l'applicazione lo richiede.</span><span class="sxs-lookup"><span data-stu-id="75844-142">The data file can be then be installed with the application, and it can be opened and one or more of its time zones can be deserialized when the application requires them.</span></span>
+
+<span data-ttu-id="75844-143">Per un esempio che utilizza una risorsa incorporata per archiviare i dati serializzati fuso orario, vedere [procedura: salvare fusi orari per una risorsa incorporata](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) e [procedura: ripristinare fusi orari da una risorsa incorporata](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).</span><span class="sxs-lookup"><span data-stu-id="75844-143">For an example that uses an embedded resource to store serialized time zone data, see [How to: Save time zones to an embedded resource](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) and [How to: Restore time zones from an embedded resource](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="75844-144">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="75844-144">See also</span></span>
+
+[<span data-ttu-id="75844-145">Date, ore e fusi orari</span><span class="sxs-lookup"><span data-stu-id="75844-145">Dates, times, and time zones</span></span>](../../../docs/standard/datetime/index.md)

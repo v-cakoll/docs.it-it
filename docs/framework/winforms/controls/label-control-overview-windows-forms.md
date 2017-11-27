@@ -1,38 +1,38 @@
 ---
-title: "Cenni preliminari sul controllo Label (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Label"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "immagini [Windows Form], visualizzazione in etichette"
-  - "Label (controllo) [Windows Form], informazioni sul controllo Label"
-  - "etichette"
+title: Cenni preliminari sul controllo Label (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Label
+helpviewer_keywords:
+- images [Windows Forms], displaying in labels
+- labels
+- Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f55cfb6afa8ad533aac84b391a7cd6fef83d72d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul controllo Label (Windows Form)
-I controlli <xref:System.Windows.Forms.Label> Windows Form vengono utilizzati per visualizzare testo o immagini non modificabili dall'utente.  La loro funzione consiste nell'identificare gli oggetti in un form per fornire una descrizione, ad esempio, dell'azione di un determinato controllo quando viene selezionato o per visualizzare informazioni in risposta a un evento o processo in fase di esecuzione dell'applicazione.  Si possono utilizzare etichette per aggiungere didascalie descrittive a caselle di testo, caselle di riepilogo, caselle combinate e così via.  È inoltre possibile scrivere il codice per modificare il testo visualizzato da un'etichetta in risposta a eventi in fase di esecuzione.  Se ad esempio l'applicazione in uso impiega alcuni minuti per elaborare una modifica, è possibile visualizzare un messaggio relativo all'elaborazione all'interno di un'etichetta.  
+# <a name="label-control-overview-windows-forms"></a><span data-ttu-id="2820f-102">Cenni preliminari sul controllo Label (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="2820f-102">Label Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="2820f-103">Windows Form <xref:System.Windows.Forms.Label> controlli vengono utilizzati per visualizzare un testo o immagini che non possono essere modificate dall'utente.</span><span class="sxs-lookup"><span data-stu-id="2820f-103">Windows Forms <xref:System.Windows.Forms.Label> controls are used to display text or images that cannot be edited by the user.</span></span> <span data-ttu-id="2820f-104">Vengono utilizzati per identificare gli oggetti in un form, per fornire una descrizione dell'azione di un determinato controllo eseguirà se si fa clic, ad esempio, o per visualizzare le informazioni in risposta a un evento di runtime o un processo dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="2820f-104">They are used to identify objects on a form — to provide a description of what a certain control will do if clicked, for example, or to display information in response to a run-time event or process in your application.</span></span> <span data-ttu-id="2820f-105">Ad esempio, è possibile utilizzare le etichette per aggiungere didascalie descrittive a caselle di testo, caselle di riepilogo, caselle combinate e così via.</span><span class="sxs-lookup"><span data-stu-id="2820f-105">For example, you can use labels to add descriptive captions to text boxes, list boxes, combo boxes, and so on.</span></span> <span data-ttu-id="2820f-106">È anche possibile scrivere codice che modifica il testo visualizzato da un'etichetta in risposta agli eventi in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="2820f-106">You can also write code that changes the text displayed by a label in response to events at run time.</span></span> <span data-ttu-id="2820f-107">Ad esempio, se l'applicazione richiede alcuni minuti per elaborare una modifica, è possibile visualizzare un messaggio di stato di elaborazione in un'etichetta.</span><span class="sxs-lookup"><span data-stu-id="2820f-107">For example, if your application takes a few minutes to process a change, you can display a processing-status message in a label.</span></span>  
   
-## Utilizzo del controllo Label  
- Poiché il controllo <xref:System.Windows.Forms.Label> non può ricevere lo stato attivo, è utilizzabile anche per la creazione di tasti di scelta per altri controlli.  Un tasto di scelta consente di scegliere l'altro controllo premendo contemporaneamente ALT e il tasto assegnato.  Per ulteriori informazioni, vedere [Creazione di tasti di scelta per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) e [Procedura: creare tasti di scelta con i controlli Label di Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md).  
+## <a name="working-with-the-label-control"></a><span data-ttu-id="2820f-108">Utilizzo del controllo etichetta</span><span class="sxs-lookup"><span data-stu-id="2820f-108">Working with the Label Control</span></span>  
+ <span data-ttu-id="2820f-109">Poiché il <xref:System.Windows.Forms.Label> controllo non può ricevere lo stato attivo, può essere utilizzato anche per creare le chiavi di accesso per altri controlli.</span><span class="sxs-lookup"><span data-stu-id="2820f-109">Because the <xref:System.Windows.Forms.Label> control cannot receive the focus, it can also be used to create access keys for other controls.</span></span> <span data-ttu-id="2820f-110">Una chiave di accesso consente di selezionare l'altro controllo premendo il tasto ALT con la chiave di accesso.</span><span class="sxs-lookup"><span data-stu-id="2820f-110">An access key allows a user to select the other control by pressing the ALT key with the access key.</span></span> <span data-ttu-id="2820f-111">Per ulteriori informazioni, vedere [creazione di chiavi per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) e [procedura: creare tasti di scelta con controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md).</span><span class="sxs-lookup"><span data-stu-id="2820f-111">For more information, see [Creating Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md) and [How to: Create Access Keys with Windows Forms Label Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md).</span></span>  
   
- La didascalia visualizzata nell'etichetta fa parte della proprietà <xref:System.Windows.Forms.Label.Text%2A>.  La proprietà <xref:System.Windows.Forms.Label.TextAlign%2A> consente di impostare l'allineamento del testo all'interno dell'etichetta.  Per ulteriori informazioni, vedere [Procedura: impostare il testo visualizzato da un controllo di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
+ <span data-ttu-id="2820f-112">La didascalia visualizzata nell'etichetta è contenuta nel <xref:System.Windows.Forms.Label.Text%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="2820f-112">The caption displayed in the label is contained in the <xref:System.Windows.Forms.Label.Text%2A> property.</span></span> <span data-ttu-id="2820f-113">Il <xref:System.Windows.Forms.Label.TextAlign%2A> proprietà consente di impostare l'allineamento del testo all'interno dell'etichetta.</span><span class="sxs-lookup"><span data-stu-id="2820f-113">The <xref:System.Windows.Forms.Label.TextAlign%2A> property allows you to set the alignment of the text within the label.</span></span> <span data-ttu-id="2820f-114">Per ulteriori informazioni, vedere [procedura: impostare il testo visualizzato da un controllo Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span><span class="sxs-lookup"><span data-stu-id="2820f-114">For more information, see [How to: Set the Text Displayed by a Windows Forms Control](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Label>   
- [Procedura: ridimensionare un controllo Label Windows Form in base al contenuto](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)   
- [Procedura: creare tasti di scelta con i controlli Label di Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)
+## <a name="see-also"></a><span data-ttu-id="2820f-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2820f-115">See Also</span></span>  
+ <xref:System.Windows.Forms.Label>  
+ [<span data-ttu-id="2820f-116">Procedura: Ridimensionare un controllo Label di Windows Form in base al contenuto</span><span class="sxs-lookup"><span data-stu-id="2820f-116">How to: Size a Windows Forms Label Control to Fit Its Contents</span></span>](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ [<span data-ttu-id="2820f-117">Procedura: Creare tasti di scelta con i controlli Label di Windows Form</span><span class="sxs-lookup"><span data-stu-id="2820f-117">How to: Create Access Keys with Windows Forms Label Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)

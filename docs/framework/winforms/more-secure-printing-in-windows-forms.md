@@ -1,42 +1,43 @@
 ---
-title: "More Secure Printing in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, printing"
-  - "PrintingPermission class, Windows Forms security"
-  - "printing [Windows Forms], security"
-  - "security [Windows Forms], printing"
+title: "Stampa più protetta in Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, printing
+- PrintingPermission class [Windows Forms], Windows Forms security
+- printing [Windows Forms], security
+- security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b89a94fd0223d817b0dee37f7a3ed84dcbacbbec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# More Secure Printing in Windows Forms
-Le applicazioni Windows Form includono spesso funzionalità di stampa.  In [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] viene utilizzata la classe <xref:System.Drawing.Printing.PrintingPermission> per controllare l'accesso alle funzionalità di stampa e il valore di enumerazione <xref:System.Drawing.Printing.PrintingPermissionLevel> associato per indicare il livello di accesso.  Per impostazione predefinita, la stampa è attivata nelle aree Intranet locale e Internet. Tuttavia, il livello di accesso è limitato in entrambe le aree.  Il fatto che l'applicazione possa o meno stampare oppure debba richiedere l'intervento dell'utente dipende dal valore di autorizzazione concesso all'applicazione.  Per impostazione predefinita, all'area Intranet locale viene concesso il diritto di accesso <xref:System.Drawing.Printing.PrintingPermissionLevel> e all'area Internet il diritto di accesso <xref:System.Drawing.Printing.PrintingPermissionLevel>.  
+# <a name="more-secure-printing-in-windows-forms"></a><span data-ttu-id="84bf1-102">Stampa più protetta in Windows Form</span><span class="sxs-lookup"><span data-stu-id="84bf1-102">More Secure Printing in Windows Forms</span></span>
+<span data-ttu-id="84bf1-103">Applicazioni Windows Forms includono spesso funzionalità di stampa.</span><span class="sxs-lookup"><span data-stu-id="84bf1-103">Windows Forms applications frequently include printing abilities.</span></span> <span data-ttu-id="84bf1-104">Il [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] utilizza il <xref:System.Drawing.Printing.PrintingPermission> classe per controllare l'accesso alle funzionalità di stampa e associato <xref:System.Drawing.Printing.PrintingPermissionLevel> il valore di enumerazione per indicare il livello di accesso.</span><span class="sxs-lookup"><span data-stu-id="84bf1-104">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uses the <xref:System.Drawing.Printing.PrintingPermission> class to control access to printing capabilities and the associated <xref:System.Drawing.Printing.PrintingPermissionLevel> enumeration value to indicate the level of access.</span></span> <span data-ttu-id="84bf1-105">Per impostazione predefinita, la stampa è abilitata per impostazione predefinita nelle aree Internet e Intranet locale; Tuttavia, il livello di accesso è limitato in entrambe le aree.</span><span class="sxs-lookup"><span data-stu-id="84bf1-105">By default, printing is enabled by default in the Local Intranet and Internet zones; however, the level of access is restricted in both zones.</span></span> <span data-ttu-id="84bf1-106">Se l'applicazione può essere stampato, è necessario l'intervento dell'utente, o non stampa dipende dal valore di autorizzazione concesso all'applicazione.</span><span class="sxs-lookup"><span data-stu-id="84bf1-106">Whether your application can print, requires user interaction, or cannot print depends upon the permission value granted to the application.</span></span> <span data-ttu-id="84bf1-107">Per impostazione predefinita, l'area Intranet locale riceve <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> accesso e l'area Intranet riceve <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> accesso.</span><span class="sxs-lookup"><span data-stu-id="84bf1-107">By default, the Local Intranet zone receives <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> access and the Intranet zone receives <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> access.</span></span>  
   
- Nella tabella seguente vengono illustrate le funzionalità disponibili a ciascun livello di autorizzazione di stampa.  
+ <span data-ttu-id="84bf1-108">La tabella seguente illustra le funzionalità disponibili per ogni livello di autorizzazione di stampa.</span><span class="sxs-lookup"><span data-stu-id="84bf1-108">The following table shows the functionality available at each printing permission level.</span></span>  
   
-|PrintingPermissionLevel|Descrizione|  
+|<span data-ttu-id="84bf1-109">PrintingPermissionLevel</span><span class="sxs-lookup"><span data-stu-id="84bf1-109">PrintingPermissionLevel</span></span>|<span data-ttu-id="84bf1-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="84bf1-110">Description</span></span>|  
 |-----------------------------|-----------------|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel>|Accesso completo a tutte le stampanti installate.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel>|Stampa a livello di codice dalla stampante predefinita e stampa protetta mediante una finestra di dialogo di stampa limitata.  <xref:System.Drawing.Printing.PrintingPermissionLevel> è un subset di <xref:System.Drawing.Printing.PrintingPermissionLevel>.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel>|Consente la stampa solo da una finestra di dialogo maggiormente ridotta.  <xref:System.Drawing.Printing.PrintingPermissionLevel> è un subset di <xref:System.Drawing.Printing.PrintingPermissionLevel>.|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel>|Impedisce l'accesso alle stampanti.  <xref:System.Drawing.Printing.PrintingPermissionLevel> è un subset di <xref:System.Drawing.Printing.PrintingPermissionLevel>.|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|<span data-ttu-id="84bf1-111">Fornisce accesso completo a tutte le stampanti installate.</span><span class="sxs-lookup"><span data-stu-id="84bf1-111">Provides full access to all installed printers.</span></span>|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|<span data-ttu-id="84bf1-112">Consente la stampa a livello di codice per la stampante predefinita e stampa protetta mediante una finestra di dialogo di stampa limitata.</span><span class="sxs-lookup"><span data-stu-id="84bf1-112">Enables programmatic printing to the default printer and safer printing through a restrictive printing dialog box.</span></span> <span data-ttu-id="84bf1-113"><xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> è un subset di <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.</span><span class="sxs-lookup"><span data-stu-id="84bf1-113"><xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> is a subset of <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>.</span></span>|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|<span data-ttu-id="84bf1-114">Consente la stampa solo da una finestra di dialogo più limitata.</span><span class="sxs-lookup"><span data-stu-id="84bf1-114">Provides printing only from a more-restricted dialog box.</span></span> <span data-ttu-id="84bf1-115"><xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> è un subset di <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.</span><span class="sxs-lookup"><span data-stu-id="84bf1-115"><xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> is a subset of <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>.</span></span>|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|<span data-ttu-id="84bf1-116">Impedisce l'accesso alle stampanti.</span><span class="sxs-lookup"><span data-stu-id="84bf1-116">Prevents access to printers.</span></span> <span data-ttu-id="84bf1-117"><xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> è un subset di <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.</span><span class="sxs-lookup"><span data-stu-id="84bf1-117"><xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> is a subset of <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.</span></span>|  
   
-## Vedere anche  
- [More Secure File and Data Access in Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)   
- [Additional Security Considerations in Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)   
- [Security in Windows Forms Overview](../../../docs/framework/winforms/security-in-windows-forms-overview.md)   
- [Windows Forms Security](../../../docs/framework/winforms/windows-forms-security.md)
+## <a name="see-also"></a><span data-ttu-id="84bf1-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="84bf1-118">See Also</span></span>  
+ [<span data-ttu-id="84bf1-119">Accesso più sicuro a file e dati in Windows Form</span><span class="sxs-lookup"><span data-stu-id="84bf1-119">More Secure File and Data Access in Windows Forms</span></span>](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
+ [<span data-ttu-id="84bf1-120">Considerazioni aggiuntive sulla sicurezza in Windows Form</span><span class="sxs-lookup"><span data-stu-id="84bf1-120">Additional Security Considerations in Windows Forms</span></span>](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ [<span data-ttu-id="84bf1-121">Panoramica della sicurezza in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="84bf1-121">Security in Windows Forms Overview</span></span>](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [<span data-ttu-id="84bf1-122">Sicurezza di Windows Form</span><span class="sxs-lookup"><span data-stu-id="84bf1-122">Windows Forms Security</span></span>](../../../docs/framework/winforms/windows-forms-security.md)

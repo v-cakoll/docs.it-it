@@ -1,67 +1,70 @@
 ---
-title: "x:FactoryMethod Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XAML. x:FactoryMethod directive [XAML Services]"
-  - "FactoryMethod directive in XAML [XAML Services]"
-  - "x:FactoryMethod directive [XAML Services]"
+title: Direttiva x:FactoryMethod
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML. x:FactoryMethod directive [XAML Services]
+- FactoryMethod directive in XAML [XAML Services]
+- x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-caps.latest.revision: 8
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 0d53db49961c2a75e4547f6b57240cefd2cc17c3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# x:FactoryMethod Directive
-Specifica un metodo diverso da un costruttore che un processore XAML deve utilizzare per inizializzare un oggetto dopo avere risolto il tipo di supporto.  
+# <a name="xfactorymethod-directive"></a><span data-ttu-id="91b34-102">Direttiva x:FactoryMethod</span><span class="sxs-lookup"><span data-stu-id="91b34-102">x:FactoryMethod Directive</span></span>
+<span data-ttu-id="91b34-103">Specifica un metodo diverso da un costruttore che un processore XAML deve utilizzare per inizializzare un oggetto dopo aver risolto il relativo tipo sottostante.</span><span class="sxs-lookup"><span data-stu-id="91b34-103">Specifies a method other than a constructor that a XAML processor should use to initialize an object after resolving its backing type.</span></span>  
   
-## Utilizzo dell'attributo XAML, nessun x:Arguments  
+## <a name="xaml-attribute-usage-no-xarguments"></a><span data-ttu-id="91b34-104">Utilizzo dell'attributo XAML, nessun X:Arguments</span><span class="sxs-lookup"><span data-stu-id="91b34-104">XAML Attribute Usage, no x:Arguments</span></span>  
   
 ```  
-<object x:FactoryMethod="methodname"...>  
+<object x:FactoryMethod="methodname"...>  
   ...  
 </object>  
 ```  
   
-## Utilizzo dell'attributo XAML, x:Arguments come elemento\(i\)  
+## <a name="xaml-attribute-usage-xarguments-as-elements"></a><span data-ttu-id="91b34-105">Utilizzo dell'attributo XAML, X:Arguments come uno o più elementi</span><span class="sxs-lookup"><span data-stu-id="91b34-105">XAML Attribute Usage, x:Arguments as Element(s)</span></span>  
   
 ```  
-<object x:FactoryMethod="methodname"...>  
+<object x:FactoryMethod="methodname"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
   </x:Arguments>  
 </object>  
 ```  
   
-## Valori XAML  
+## <a name="xaml-values"></a><span data-ttu-id="91b34-106">Valori XAML</span><span class="sxs-lookup"><span data-stu-id="91b34-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`methodname`|Il nome del metodo della stringa di un metodo che i processori XAML chiamano per inizializzare l'istanza specificato come `object`.  Vedere la sezione Osservazioni.|  
-|`oneOrMoreObjectElements`|Uno o più elementi oggetto per gli oggetti che specificano parametri del metodo di factory.  L'ordine è significativo, significa che l'ordine che argomenta deve essere passato al metodo factory.|  
+|`methodname`|<span data-ttu-id="91b34-107">Il nome del metodo di un metodo che chiamano processori XAML per inizializzare l'istanza specificata come stringa `object`.</span><span class="sxs-lookup"><span data-stu-id="91b34-107">The string method name of a method that XAML processors call to initialize the instance specified as `object`.</span></span> <span data-ttu-id="91b34-108">Vedere la sezione Osservazioni.</span><span class="sxs-lookup"><span data-stu-id="91b34-108">See Remarks.</span></span>|  
+|`oneOrMoreObjectElements`|<span data-ttu-id="91b34-109">Uno o più elementi oggetto per gli oggetti che specificano i parametri del metodo factory.</span><span class="sxs-lookup"><span data-stu-id="91b34-109">One or more object elements for objects that specify factory method parameters.</span></span> <span data-ttu-id="91b34-110">L'ordine è significativo; indica l'ordine in cui gli argomenti devono essere passati al metodo factory.</span><span class="sxs-lookup"><span data-stu-id="91b34-110">Order is significant; it signifies the order in which arguments should be passed to the factory method.</span></span>|  
   
-## Note  
- Se `methodname` è un metodo di istanza, non può essere qualificato.  
+## <a name="remarks"></a><span data-ttu-id="91b34-111">Note</span><span class="sxs-lookup"><span data-stu-id="91b34-111">Remarks</span></span>  
+ <span data-ttu-id="91b34-112">Se `methodname` è un metodo di istanza, non può essere qualificato.</span><span class="sxs-lookup"><span data-stu-id="91b34-112">If `methodname` is an instance method, it cannot be qualified.</span></span>  
   
- I metodi statici sono supportati come i metodi factory.  Se `methodname` è un metodo statico, `methodname` viene fornito come una combinazione di *typeName*.*methodName*, dove *typeName* assegna un nome alla classe che definisce il metodo factory statico.  *typeName* possono essere qualificati dal prefisso se riferendosi a un tipo in un xmlns mappato.  *typeName* può essere un tipo diverso che `typeof(``object``)`.  
+ <span data-ttu-id="91b34-113">I metodi come metodi factory statici sono supportati.</span><span class="sxs-lookup"><span data-stu-id="91b34-113">Static methods as factory methods are supported.</span></span> <span data-ttu-id="91b34-114">Se `methodname` è un metodo statico, `methodname` viene fornito come un *typeName*. *NomeMetodo* combinazione, in cui *typeName* denomina la classe che definisce il metodo factory statico.</span><span class="sxs-lookup"><span data-stu-id="91b34-114">If `methodname` is a static method, `methodname` is provided as a *typeName*.*methodName* combination, where *typeName* names the class that defines the static factory method.</span></span> <span data-ttu-id="91b34-115">*typeName* può essere qualificato come prefisso se si fa riferimento a un tipo in un xmlns mappato.</span><span class="sxs-lookup"><span data-stu-id="91b34-115">*typeName* can be prefix-qualified if referring to a type in a mapped xmlns.</span></span> <span data-ttu-id="91b34-116">*typeName* può essere un tipo diverso da quello `typeof(``object``)`.</span><span class="sxs-lookup"><span data-stu-id="91b34-116">*typeName* can be a different type than `typeof(``object``)`.</span></span>  
   
- Il metodo factory deve essere un metodo pubblico dichiarato del tipo che supporta l'elemento oggetto pertinente.  
+ <span data-ttu-id="91b34-117">Il metodo factory deve essere un metodo pubblico dichiarato del tipo che supporta l'elemento oggetto pertinente.</span><span class="sxs-lookup"><span data-stu-id="91b34-117">The factory method must be a declared public method of the type that backs the relevant object element.</span></span>  
   
- Il metodo factory deve restituire un'istanza che è assegnabile all'oggetto pertinente.  I metodi factory non devono mai restituire null.  
+ <span data-ttu-id="91b34-118">Il metodo factory deve restituire un'istanza può essere assegnato all'oggetto pertinente.</span><span class="sxs-lookup"><span data-stu-id="91b34-118">The factory method must return an instance that is assignable to the relevant object.</span></span> <span data-ttu-id="91b34-119">Metodi factory non devono mai restituire null.</span><span class="sxs-lookup"><span data-stu-id="91b34-119">Factory methods should never return null.</span></span>  
   
- `x:Arguments` funziona su un principio di migliore corrispondenza per le firme di metodi factory.  La corrispondenza prima valuta il conteggio del parametro.  Se c'è più di una possibile corrispondenza per un conteggio del parametro, il tipo di parametro viene valutato e la migliore corrispondenza viene determinata.  Se c'è ancora ambiguità dopo questa fase di valutazione, il comportamento di processore di XAML non è definito.  
+ <span data-ttu-id="91b34-120">`x:Arguments`opera su un principio di corrispondenza più appropriata per le firme dei metodi factory.</span><span class="sxs-lookup"><span data-stu-id="91b34-120">`x:Arguments` operates on a principle of best match for signatures of factory methods.</span></span> <span data-ttu-id="91b34-121">Corrispondenza prima valuta il numero dei parametri.</span><span class="sxs-lookup"><span data-stu-id="91b34-121">Matching evaluates the parameter count first.</span></span> <span data-ttu-id="91b34-122">Se è presente più di una corrispondenza possibile per un numero di parametri, tipo di parametro viene quindi valutata e la migliore corrispondenza viene determinata.</span><span class="sxs-lookup"><span data-stu-id="91b34-122">If there is more than one possible match for a parameter count, parameter type is then evaluated and best match is determined.</span></span> <span data-ttu-id="91b34-123">Se è ancora ambiguità dopo questa fase della valutazione, non è definito il comportamento del processore XAML.</span><span class="sxs-lookup"><span data-stu-id="91b34-123">If there is still ambiguity after this phase of evaluation, XAML processor behavior is undefined.</span></span>  
   
- L'utilizzo di un elemento `x:FactoryMethod` non è l'utilizzo di un elemento proprietà in senso tradizionale, perché il markup della direttiva non fa riferimento al tipo dell'elemento oggetto contenitore.  È previsto che l'utilizzo dell'elemento sia meno comune dell'utilizzo dell'attributo.  `x:Arguments` \(utilizzo dell'attributo o dell'elemento\) possono essere utilizzati insieme all'utilizzo dell'elemento `x:FactoryMethod`, ma questo non viene visualizzato in maniera specifica nelle sezioni relative agli utilizzi.  
+ <span data-ttu-id="91b34-124">Il `x:FactoryMethod` utilizzo dell'elemento non è utilizzo dell'elemento proprietà in senso tradizionale, perché il markup della direttiva non fa riferimento il tipo dell'elemento oggetto contenitore.</span><span class="sxs-lookup"><span data-stu-id="91b34-124">The `x:FactoryMethod` element usage is not property element usage in the typical sense, because the directive markup does not reference the containing object element's type.</span></span> <span data-ttu-id="91b34-125">È previsto che l'utilizzo elemento è meno comune dell'utilizzo dell'attributo.</span><span class="sxs-lookup"><span data-stu-id="91b34-125">It is expected that element usage is less common than attribute usage.</span></span> <span data-ttu-id="91b34-126">`x:Arguments`(attributo o elemento di utilizzo) può essere usato insieme a `x:FactoryMethod` utilizzo dell'elemento, ma questo non è specificamente illustrato nelle sezioni utilizzo.</span><span class="sxs-lookup"><span data-stu-id="91b34-126">`x:Arguments` (either attribute or element usage) can be used along with `x:FactoryMethod` element usage, but this is not specifically shown in the Usage sections.</span></span>  
   
- `x:FactoryMethod` come un elemento deve precedere qualsiasi altro elemento della proprietà e deve precedere qualsiasi `x:Arguments` fornito anche come elemento e deve precedere qualsiasi contenuto, testo interno o testo di inizializzazione.  
+ <span data-ttu-id="91b34-127">`x:FactoryMethod`come un elemento deve precedere tutti gli altri elementi di proprietà, devono precedere qualsiasi `x:Arguments` anche fornita come elementi e deve precedere qualsiasi testo di inizializzazione contenuto/interna.</span><span class="sxs-lookup"><span data-stu-id="91b34-127">`x:FactoryMethod` as an element must precede any other property elements, must precede any `x:Arguments` also provided as elements, and must precede any content/inner text/initialization text.</span></span>  
   
-## Vedere anche  
- [x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md)
+## <a name="see-also"></a><span data-ttu-id="91b34-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="91b34-128">See Also</span></span>  
+ [<span data-ttu-id="91b34-129">x:Arguments (direttiva)</span><span class="sxs-lookup"><span data-stu-id="91b34-129">x:Arguments Directive</span></span>](../../../docs/framework/xaml-services/x-arguments-directive.md)

@@ -1,37 +1,40 @@
 ---
-title: "Uso di NetHttpBinding | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Uso di NetHttpBinding
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 56528078895ea7c624afaf716e9a26eabe335d69
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Uso di NetHttpBinding
-<xref:System.ServiceModel.NetHttpBinding> è un'associazione progettata per usare i servizi HTTP o WebSocket e usa la codifica binaria per impostazione predefinita.  L'oggetto <xref:System.ServiceModel.NetHttpBinding> rileverà se viene usato con un contratto request\/reply o un contratto duplex e modificherà il comportamento di conseguenza. Utilizzerà HTTP per i contratti request\/reply e WebSockets per i contratti duplex.  È possibile eseguire l'override di questo comportamento usando l'impostazione <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A>:  
+# <a name="using-the-nethttpbinding"></a><span data-ttu-id="24f27-102">Uso di NetHttpBinding</span><span class="sxs-lookup"><span data-stu-id="24f27-102">Using the NetHttpBinding</span></span>
+<span data-ttu-id="24f27-103"><xref:System.ServiceModel.NetHttpBinding> è un'associazione progettata per usare i servizi HTTP o WebSocket e usa la codifica binaria per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="24f27-103"><xref:System.ServiceModel.NetHttpBinding> is a binding designed for consuming HTTP or WebSocket services and uses binary encoding by default.</span></span> <span data-ttu-id="24f27-104">L'oggetto <xref:System.ServiceModel.NetHttpBinding> rileverà se viene usato con un contratto request/reply o un contratto duplex e modificherà il comportamento di conseguenza. Utilizzerà HTTP per i contratti request/reply e WebSockets per i contratti duplex.</span><span class="sxs-lookup"><span data-stu-id="24f27-104"><xref:System.ServiceModel.NetHttpBinding> will detect whether it is used with a request-reply contract or duplex contract and change its behavior to match - it will use HTTP for request-reply contracts and WebSockets for duplex contracts.</span></span> <span data-ttu-id="24f27-105">Questo comportamento può essere sottoposto a override utilizzando il <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> --> `WebSocketTransportUsage` impostazione:</span><span class="sxs-lookup"><span data-stu-id="24f27-105">This behavior can be overridden using the <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> --> `WebSocketTransportUsage` setting:</span></span>  
   
-1.  Always: forza l'uso di WebSockets anche per i contratti request\/reply.  
+1.  <span data-ttu-id="24f27-106">Always: forza l'uso di WebSockets anche per i contratti request/reply.</span><span class="sxs-lookup"><span data-stu-id="24f27-106">Always - This forces WebSockets to be used even for request-reply contracts.</span></span>  
   
-2.  Never: impedisce l'uso di WebSockets.  Il tentativo di utilizzo di un contratto duplex con questa impostazione genererà un'eccezione.  
+2.  <span data-ttu-id="24f27-107">Never: impedisce l'uso di WebSockets.</span><span class="sxs-lookup"><span data-stu-id="24f27-107">Never - This prevents WebSockets from being used.</span></span> <span data-ttu-id="24f27-108">Il tentativo di utilizzo di un contratto duplex con questa impostazione genererà un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="24f27-108">Attempting to use a duplex contract with this setting will result in an exception.</span></span>  
   
-3.  WhenDuplex: si tratta del valore predefinito e si comporta come descritto in precedenza.  
+3.  <span data-ttu-id="24f27-109">WhenDuplex: si tratta del valore predefinito e si comporta come descritto in precedenza.</span><span class="sxs-lookup"><span data-stu-id="24f27-109">WhenDuplex - This is the default value and behaves as described above.</span></span>  
   
- <xref:System.ServiceModel.NetHttpBinding> supporta sessioni affidabili sia in modalità HTTP sia in modalità WebSocket.  Nella modalità WebSocket, le sessioni vengono fornite dal trasporto.  
+ <span data-ttu-id="24f27-110"><xref:System.ServiceModel.NetHttpBinding> supporta sessioni affidabili sia in modalità HTTP sia in modalità WebSocket.</span><span class="sxs-lookup"><span data-stu-id="24f27-110"><xref:System.ServiceModel.NetHttpBinding> supports reliable sessions in both HTTP mode and WebSocket mode.</span></span> <span data-ttu-id="24f27-111">Nella modalità WebSocket, le sessioni vengono fornite dal trasporto.</span><span class="sxs-lookup"><span data-stu-id="24f27-111">In WebSocket mode sessions are provided by the transport.</span></span>  
   
 > [!WARNING]
->  Quando si usa <xref:System.ServiceModel.NetHttpBinding> e l'elemento TransferMode dell'associazione è impostato su TransferMode.Streamed, i flussi di grandi dimensioni possono causare un deadlock e quindi il timeout della chiamata.  Per risolvere il problema inviare messaggi più piccoli o usare TransferMode.Buffered.  
+>  <span data-ttu-id="24f27-112">Quando si usa <xref:System.ServiceModel.NetHttpBinding> e l'elemento TransferMode dell'associazione è impostato su TransferMode.Streamed, i flussi di grandi dimensioni possono causare un deadlock e quindi il timeout della chiamata.</span><span class="sxs-lookup"><span data-stu-id="24f27-112">When using the <xref:System.ServiceModel.NetHttpBinding> and the binding’s TransferMode is set to TransferMode.Streamed, large streams may cause a deadlock and the call will timeout.</span></span> <span data-ttu-id="24f27-113">Per risolvere il problema inviare messaggi più piccoli o usare TransferMode.Buffered.</span><span class="sxs-lookup"><span data-stu-id="24f27-113">To work around this issue send smaller messages or use TransferMode.Buffered.</span></span>  
   
-## Configurazione dell'utilizzo di NetHttpBinding in un servizio  
- L'endpoint <xref:System.ServiceModel.NetHttpBinding> può essere configurato come qualsiasi altra associazione.  Nel frammento di configurazione seguente è illustrato come configurare un servizio WCF con <xref:System.ServiceModel.NetHttpBinding>.  
+## <a name="configuring-a-service-to-use-nethttpbinding"></a><span data-ttu-id="24f27-114">Configurazione dell'utilizzo di NetHttpBinding in un servizio</span><span class="sxs-lookup"><span data-stu-id="24f27-114">Configuring a Service to use NetHttpBinding</span></span>  
+ <span data-ttu-id="24f27-115">L'endpoint <xref:System.ServiceModel.NetHttpBinding> può essere configurato come qualsiasi altra associazione.</span><span class="sxs-lookup"><span data-stu-id="24f27-115">The <xref:System.ServiceModel.NetHttpBinding> can be configured the same as any other binding.</span></span> <span data-ttu-id="24f27-116">Nel frammento di configurazione seguente è illustrato come configurare un servizio WCF con <xref:System.ServiceModel.NetHttpBinding>.</span><span class="sxs-lookup"><span data-stu-id="24f27-116">The following configuration snippet illustrates how to configure a WCF service with <xref:System.ServiceModel.NetHttpBinding>.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -56,7 +59,7 @@ caps.handback.revision: 5
   </system.serviceModel>  
 ```  
   
- Nel frammento di codice seguente viene illustrato come aggiungere l'oggetto <xref:System.ServiceModel.NetHtttpBinding> nel codice.  
+ <span data-ttu-id="24f27-117">Nel frammento di codice seguente viene illustrato come aggiungere l'oggetto <xref:System.ServiceModel.NetHttpBinding> nel codice.</span><span class="sxs-lookup"><span data-stu-id="24f27-117">The following code snippet shows how to add the <xref:System.ServiceModel.NetHttpBinding> in code.</span></span>  
   
 ```csharp  
 ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);  
@@ -65,8 +68,8 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
         }  
 ```  
   
-## Vedere anche  
- [Configurazione di associazioni per servizi](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)   
- [Associazioni](../../../../docs/framework/wcf/feature-details/bindings.md)   
- [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md)   
- [Servizi duplex](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a><span data-ttu-id="24f27-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="24f27-118">See Also</span></span>  
+ [<span data-ttu-id="24f27-119">Configurazione delle associazioni per i servizi</span><span class="sxs-lookup"><span data-stu-id="24f27-119">Configuring Bindings for Services</span></span>](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
+ [<span data-ttu-id="24f27-120">Associazioni</span><span class="sxs-lookup"><span data-stu-id="24f27-120">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [<span data-ttu-id="24f27-121">Associazioni fornite dal sistema</span><span class="sxs-lookup"><span data-stu-id="24f27-121">System-Provided Bindings</span></span>](../../../../docs/framework/wcf/system-provided-bindings.md)  
+ [<span data-ttu-id="24f27-122">Servizi duplex</span><span class="sxs-lookup"><span data-stu-id="24f27-122">Duplex Services</span></span>](../../../../docs/framework/wcf/feature-details/duplex-services.md)

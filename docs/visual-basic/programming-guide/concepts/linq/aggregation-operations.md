@@ -1,90 +1,82 @@
 ---
-title: Operazioni di aggregazione (Visual Basic) | Documenti di Microsoft
+title: Operazioni di aggregazione (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 17d1f18f9acc2f3a62c106f7cff2cf68f8f58a07
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 9d4b07eeb1d09d7db0f75d96629c816f66dbb128
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="aggregation-operations-visual-basic"></a>Operazioni di aggregazione (Visual Basic)
-Un'operazione di aggregazione calcola un singolo valore da una raccolta di valori. Un esempio di operazione di aggregazione è rappresentato dal calcolo della temperatura media giornaliera dai valori della temperatura giornaliera di un mese.  
+# <a name="aggregation-operations-visual-basic"></a><span data-ttu-id="a2e8e-102">Operazioni di aggregazione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2e8e-102">Aggregation Operations (Visual Basic)</span></span>
+<span data-ttu-id="a2e8e-103">Un'operazione di aggregazione calcola un singolo valore da una raccolta di valori.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-103">An aggregation operation computes a single value from a collection of values.</span></span> <span data-ttu-id="a2e8e-104">Un esempio di operazione di aggregazione è rappresentato dal calcolo della temperatura media giornaliera dai valori della temperatura giornaliera di un mese.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-104">An example of an aggregation operation is calculating the average daily temperature from a month's worth of daily temperature values.</span></span>  
   
- Nella figura seguente mostra i risultati di due operazioni di aggregazione diversa in una sequenza di numeri. La prima operazione somma i numeri. La seconda operazione restituisce il valore massimo nella sequenza.  
+ <span data-ttu-id="a2e8e-105">La figura seguente illustra i risultati di due operazioni di aggregazione diverse in una sequenza di numeri.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-105">The following illustration shows the results of two different aggregation operations on a sequence of numbers.</span></span> <span data-ttu-id="a2e8e-106">La prima operazione somma i numeri.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-106">The first operation sums the numbers.</span></span> <span data-ttu-id="a2e8e-107">La seconda operazione restituisce il valore massimo nella sequenza.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-107">The second operation returns the maximum value in the sequence.</span></span>  
   
- ![Operazioni di aggregazione LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")  
+ <span data-ttu-id="a2e8e-108">![Operazioni di aggregazione LINQ ](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")</span><span class="sxs-lookup"><span data-stu-id="a2e8e-108">![LINQ Aggregation Operations](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")</span></span>  
   
- Nella sezione seguente sono elencati i metodi di operatore query standard che eseguono operazioni di aggregazione.  
+ <span data-ttu-id="a2e8e-109">La sezione seguente elenca i metodi degli operatori di query standard che eseguono operazioni di aggregazione.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-109">The standard query operator methods that perform aggregation operations are listed in the following section.</span></span>  
   
-## <a name="methods"></a>Metodi  
+## <a name="methods"></a><span data-ttu-id="a2e8e-110">Metodi</span><span class="sxs-lookup"><span data-stu-id="a2e8e-110">Methods</span></span>  
   
-|Nome metodo|Descrizione|Sintassi delle espressioni di Query Visual Basic|Altre informazioni|  
+|<span data-ttu-id="a2e8e-111">Nome metodo</span><span class="sxs-lookup"><span data-stu-id="a2e8e-111">Method Name</span></span>|<span data-ttu-id="a2e8e-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a2e8e-112">Description</span></span>|<span data-ttu-id="a2e8e-113">Sintassi delle espressioni di Query Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a2e8e-113">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="a2e8e-114">Altre informazioni</span><span class="sxs-lookup"><span data-stu-id="a2e8e-114">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Aggregate|Esegue un'operazione di aggregazione personalizzata sui valori di una raccolta.|Non applicabile.|<xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Aggregate%2A?displayProperty=fullName></xref:System.Linq.Queryable.Aggregate%2A?displayProperty=fullName>|  
-|Media|Calcola il valore medio di una raccolta di valori.|`Aggregate … In … Into Average()`|<xref:System.Linq.Enumerable.Average%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Average%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Average%2A?displayProperty=fullName></xref:System.Linq.Queryable.Average%2A?displayProperty=fullName>|  
-|Conteggio|Conta gli elementi in una raccolta, facoltativamente, solo gli elementi che soddisfano una funzione di predicato.|`Aggregate … In … Into Count()`|<xref:System.Linq.Enumerable.Count%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Count%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Count%2A?displayProperty=fullName></xref:System.Linq.Queryable.Count%2A?displayProperty=fullName>|  
-|LongCount|Conta gli elementi in una raccolta di grandi dimensioni, facoltativamente, solo gli elementi che soddisfano una funzione di predicato.|`Aggregate … In … Into LongCount()`|<xref:System.Linq.Enumerable.LongCount%2A?displayProperty=fullName></xref:System.Linq.Enumerable.LongCount%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.LongCount%2A?displayProperty=fullName></xref:System.Linq.Queryable.LongCount%2A?displayProperty=fullName>|  
-|Max|Determina il valore massimo in una raccolta.|`Aggregate … In … Into Max()`|<xref:System.Linq.Enumerable.Max%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Max%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Max%2A?displayProperty=fullName></xref:System.Linq.Queryable.Max%2A?displayProperty=fullName>|  
-|Min|Determina il valore minimo in una raccolta.|`Aggregate … In … Into Min()`|<xref:System.Linq.Enumerable.Min%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Min%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Min%2A?displayProperty=fullName></xref:System.Linq.Queryable.Min%2A?displayProperty=fullName>|  
-|Sum|Calcola la somma dei valori in una raccolta.|`Aggregate … In … Into Sum()`|<xref:System.Linq.Enumerable.Sum%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Sum%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Sum%2A?displayProperty=fullName></xref:System.Linq.Queryable.Sum%2A?displayProperty=fullName>|  
+|<span data-ttu-id="a2e8e-115">Aggregate</span><span class="sxs-lookup"><span data-stu-id="a2e8e-115">Aggregate</span></span>|<span data-ttu-id="a2e8e-116">Esegue un'operazione di aggregazione personalizzata sui valori di una raccolta.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-116">Performs a custom aggregation operation on the values of a collection.</span></span>|<span data-ttu-id="a2e8e-117">Non applicabile.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-117">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Aggregate%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="a2e8e-118">Media</span><span class="sxs-lookup"><span data-stu-id="a2e8e-118">Average</span></span>|<span data-ttu-id="a2e8e-119">Calcola il valore medio di una raccolta di valori.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-119">Calculates the average value of a collection of values.</span></span>|`Aggregate … In … Into Average()`|<xref:System.Linq.Enumerable.Average%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Average%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="a2e8e-120">Conteggio</span><span class="sxs-lookup"><span data-stu-id="a2e8e-120">Count</span></span>|<span data-ttu-id="a2e8e-121">Conta gli elementi in una raccolta e, facoltativamente, solo gli elementi che soddisfano una funzione di predicato.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-121">Counts the elements in a collection, optionally only those elements that satisfy a predicate function.</span></span>|`Aggregate … In … Into Count()`|<xref:System.Linq.Enumerable.Count%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Count%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="a2e8e-122">LongCount</span><span class="sxs-lookup"><span data-stu-id="a2e8e-122">LongCount</span></span>|<span data-ttu-id="a2e8e-123">Conta gli elementi in una raccolta di grandi dimensioni e, facoltativamente, solo gli elementi che soddisfano una funzione di predicato.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-123">Counts the elements in a large collection, optionally only those elements that satisfy a predicate function.</span></span>|`Aggregate … In … Into LongCount()`|<xref:System.Linq.Enumerable.LongCount%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LongCount%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="a2e8e-124">Max</span><span class="sxs-lookup"><span data-stu-id="a2e8e-124">Max</span></span>|<span data-ttu-id="a2e8e-125">Determina il valore massimo in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-125">Determines the maximum value in a collection.</span></span>|`Aggregate … In … Into Max()`|<xref:System.Linq.Enumerable.Max%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Max%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="a2e8e-126">Min</span><span class="sxs-lookup"><span data-stu-id="a2e8e-126">Min</span></span>|<span data-ttu-id="a2e8e-127">Determina il valore minimo in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-127">Determines the minimum value in a collection.</span></span>|`Aggregate … In … Into Min()`|<xref:System.Linq.Enumerable.Min%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Min%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="a2e8e-128">Sum</span><span class="sxs-lookup"><span data-stu-id="a2e8e-128">Sum</span></span>|<span data-ttu-id="a2e8e-129">Calcola la somma dei valori in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-129">Calculates the sum of the values in a collection.</span></span>|`Aggregate … In … Into Sum()`|<xref:System.Linq.Enumerable.Sum%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Sum%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-examples"></a>Esempi di sintassi delle espressioni di query  
+## <a name="query-expression-syntax-examples"></a><span data-ttu-id="a2e8e-130">Esempi di sintassi delle espressioni di query</span><span class="sxs-lookup"><span data-stu-id="a2e8e-130">Query Expression Syntax Examples</span></span>  
   
-### <a name="average"></a>Average  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Average` clausola [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] per calcolare la temperatura media in una matrice di numeri che rappresentano le temperature.  
+### <a name="average"></a><span data-ttu-id="a2e8e-131">Average</span><span class="sxs-lookup"><span data-stu-id="a2e8e-131">Average</span></span>  
+ <span data-ttu-id="a2e8e-132">Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Average` clausola [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] per il calcolo della temperatura media in una matrice di numeri che rappresentano le temperature.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-132">The following code example uses the `Aggregate Into Average` clause in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] to calculate the average temperature in an array of numbers that represent temperatures.</span></span>  
   
- [!code-vb[CsLINQAggregating n.&1;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
+ [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
   
-### <a name="count"></a>Conteggio  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Count` clausola [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] per contare il numero di valori in una matrice che sono maggiori o uguali a 80.  
+### <a name="count"></a><span data-ttu-id="a2e8e-133">Conteggio</span><span class="sxs-lookup"><span data-stu-id="a2e8e-133">Count</span></span>  
+ <span data-ttu-id="a2e8e-134">Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Count` clausola [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] per contare il numero di valori in una matrice che sono maggiori o uguali a 80.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-134">The following code example uses the `Aggregate Into Count` clause in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] to count the number of values in an array that are greater than or equal to 80.</span></span>  
   
- [!code-vb[CsLINQAggregating n.&2;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
+ [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
   
-### <a name="longcount"></a>LongCount  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into LongCount` clausola per contare il numero di valori in una matrice.  
+### <a name="longcount"></a><span data-ttu-id="a2e8e-135">LongCount</span><span class="sxs-lookup"><span data-stu-id="a2e8e-135">LongCount</span></span>  
+ <span data-ttu-id="a2e8e-136">Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into LongCount` clausola per contare il numero di valori in una matrice.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-136">The following code example uses the `Aggregate Into LongCount` clause to count the number of values in an array.</span></span>  
   
- [!code-vb[CsLINQAggregating n.&3;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_3.vb)]  
+ [!code-vb[CsLINQAggregating#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_3.vb)]  
   
-### <a name="max"></a>Max  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Max` clausola per calcolare la temperatura massima in una matrice di numeri che rappresentano le temperature.  
+### <a name="max"></a><span data-ttu-id="a2e8e-137">Max</span><span class="sxs-lookup"><span data-stu-id="a2e8e-137">Max</span></span>  
+ <span data-ttu-id="a2e8e-138">Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Max` clausola per calcolare la temperatura massima in una matrice di numeri che rappresentano le temperature.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-138">The following code example uses the `Aggregate Into Max` clause  to calculate the maximum temperature in an array of numbers that represent temperatures.</span></span>  
   
- [!code-vb[CsLINQAggregating n.&4;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_4.vb)]  
+ [!code-vb[CsLINQAggregating#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_4.vb)]  
   
-### <a name="min"></a>Min  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Min` clausola per calcolare la temperatura minima in una matrice di numeri che rappresentano le temperature.  
+### <a name="min"></a><span data-ttu-id="a2e8e-139">Min</span><span class="sxs-lookup"><span data-stu-id="a2e8e-139">Min</span></span>  
+ <span data-ttu-id="a2e8e-140">Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Min` clausola per calcolare la temperatura minima in una matrice di numeri che rappresentano le temperature.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-140">The following code example uses the `Aggregate Into Min` clause  to calculate the minimum temperature in an array of numbers that represent temperatures.</span></span>  
   
- [!code-vb[CsLINQAggregating n.&5;](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_5.vb)]  
+ [!code-vb[CsLINQAggregating#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_5.vb)]  
   
-### <a name="sum"></a>Sum  
- Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Sum` clausola per calcolare la quantità totale spesa da una matrice di valori che rappresentano le spese.  
+### <a name="sum"></a><span data-ttu-id="a2e8e-141">Sum</span><span class="sxs-lookup"><span data-stu-id="a2e8e-141">Sum</span></span>  
+ <span data-ttu-id="a2e8e-142">Nell'esempio di codice viene illustrato come utilizzare il `Aggregate Into Sum` clausola per calcolare la quantità totale di spesa da una matrice di valori che rappresentano le spese.</span><span class="sxs-lookup"><span data-stu-id="a2e8e-142">The following code example uses the `Aggregate Into Sum` clause  to calculate the total expense amount from an array of values that represent expenses.</span></span>  
   
- [!code-vb[6 CsLINQAggregating](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_6.vb)]  
+ [!code-vb[CsLINQAggregating#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_6.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq></xref:System.Linq>   
- [Cenni preliminari sugli operatori di Query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Clausola Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md)   
- [Procedura: calcolare i valori di colonna in un File di testo CSV (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)   
- [Procedura: conteggio, somma o Media di dati](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)   
- [Procedura: trovare il valore minimo o massimo in un risultato di Query](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)   
- [Procedura: eseguire una Query per il più grande o più file in una struttura di Directory (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)   
- [Procedura: eseguire una Query per il numero totale di byte in un Set di cartelle (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)
+## <a name="see-also"></a><span data-ttu-id="a2e8e-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a2e8e-143">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="a2e8e-144">Panoramica degli operatori query standard (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2e8e-144">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="a2e8e-145">Clausola Aggregate</span><span class="sxs-lookup"><span data-stu-id="a2e8e-145">Aggregate Clause</span></span>](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [<span data-ttu-id="a2e8e-146">Procedura: calcolare i valori di colonna in un File di testo CSV (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2e8e-146">How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)  
+ [<span data-ttu-id="a2e8e-147">Procedura: Conteggio, somma o media di dati</span><span class="sxs-lookup"><span data-stu-id="a2e8e-147">How to: Count, Sum, or Average Data</span></span>](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
+ [<span data-ttu-id="a2e8e-148">Procedura: Trovare il valore minimo o massimo in un risultato di query</span><span class="sxs-lookup"><span data-stu-id="a2e8e-148">How to: Find the Minimum or Maximum Value in a Query Result</span></span>](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ [<span data-ttu-id="a2e8e-149">Procedura: eseguire una Query per il più grande o i File in un albero di Directory (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2e8e-149">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
+ [<span data-ttu-id="a2e8e-150">Procedura: eseguire una Query per il numero totale di byte in un Set di cartelle (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2e8e-150">How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)

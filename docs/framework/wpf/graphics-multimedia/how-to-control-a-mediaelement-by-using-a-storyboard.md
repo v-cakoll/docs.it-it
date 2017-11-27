@@ -1,51 +1,57 @@
 ---
-title: "Procedura: controllare un MediaElement utilizzando uno storyboard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controllo della riproduzione di contenuti multimediali, con gli storyboard"
-  - "supporto, controllo della riproduzione con gli storyboard"
-  - "elementi multimediali, controllo della riproduzione di contenuti multimediali con gli storyboard"
-  - "riproduzione di contenuti multimediali, controllo con gli storyboard"
-  - "Storyboard, controllo della riproduzione di contenuti multimediali"
+title: 'Procedura: controllare un MediaElement utilizzando uno storyboard'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- multimedia [WPF], controlling playback of media with Storyboards
+- controlling playback of media [WPF], with Storyboards
+- Storyboards [WPF], controlling playback of media with
+- media [WPF], controlling playback with Storyboards
+- playback of media [WPF], controlling with Storyboards
 ms.assetid: 6128ca77-b826-4e36-b968-6f237157c543
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2341d2814e5bd42c652865c76d115defcc5b15b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: controllare un MediaElement utilizzando uno storyboard
-In questo esempio viene illustrato come controllare un oggetto <xref:System.Windows.Controls.MediaElement> utilizzando un oggetto <xref:System.Windows.Media.MediaTimeline> in un oggetto <xref:System.Windows.Media.Animation.Storyboard>.  
+# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a><span data-ttu-id="4d857-102">Procedura: controllare un MediaElement utilizzando uno storyboard</span><span class="sxs-lookup"><span data-stu-id="4d857-102">How to: Control a MediaElement by Using a Storyboard</span></span>
+<span data-ttu-id="4d857-103">In questo esempio viene illustrato come controllare un <xref:System.Windows.Controls.MediaElement> utilizzando un <xref:System.Windows.Media.MediaTimeline> in un <xref:System.Windows.Media.Animation.Storyboard>.</span><span class="sxs-lookup"><span data-stu-id="4d857-103">This example shows how to control a <xref:System.Windows.Controls.MediaElement> by using a <xref:System.Windows.Media.MediaTimeline> in a <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  
   
-## Esempio  
- Quando si utilizza un oggetto <xref:System.Windows.Media.MediaTimeline> in un oggetto <xref:System.Windows.Media.Animation.Storyboard> per controllare i tempi di un oggetto <xref:System.Windows.Controls.MediaElement>, la funzionalità è identica alla funzionalità di altri oggetti <xref:System.Windows.Media.Animation.Timeline>, ad esempio le animazioni.  Ad esempio, un oggetto <xref:System.Windows.Media.MediaTimeline> utilizza proprietà <xref:System.Windows.Media.Animation.Timeline> come la proprietà <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> per specificare quando avviare un oggetto <xref:System.Windows.Controls.MediaElement> \(avvio della riproduzione di contenuti multimediali\).  Viene inoltre utilizzata la proprietà <xref:System.Windows.Media.Animation.Timeline.Duration%2A> per specificare per quanto tempo rimane attivo l'oggetto <xref:System.Windows.Controls.MediaElement> \(durata della riproduzione di contenuti multimediali\).  Per ulteriori informazioni sull'utilizzo degli oggetti <xref:System.Windows.Media.Animation.Timeline> con un oggetto <xref:System.Windows.Media.Animation.Storyboard>, vedere [Cenni preliminari sugli storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+## <a name="example"></a><span data-ttu-id="4d857-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="4d857-104">Example</span></span>  
+ <span data-ttu-id="4d857-105">Quando si utilizza un <xref:System.Windows.Media.MediaTimeline> in un <xref:System.Windows.Media.Animation.Storyboard> per controllare l'intervallo di un <xref:System.Windows.Controls.MediaElement>, la funzionalità è identica alla funzionalità di altri <xref:System.Windows.Media.Animation.Timeline> oggetti, ad esempio animazioni.</span><span class="sxs-lookup"><span data-stu-id="4d857-105">When you use a <xref:System.Windows.Media.MediaTimeline> in a <xref:System.Windows.Media.Animation.Storyboard> to control the timing of a <xref:System.Windows.Controls.MediaElement>, the functionality is identical to the functionality of other <xref:System.Windows.Media.Animation.Timeline> objects, such as animations.</span></span> <span data-ttu-id="4d857-106">Ad esempio, un <xref:System.Windows.Media.MediaTimeline> Usa <xref:System.Windows.Media.Animation.Timeline> proprietà quali il <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> proprietà per specificare quando avviare un <xref:System.Windows.Controls.MediaElement> (avvio riproduzione).</span><span class="sxs-lookup"><span data-stu-id="4d857-106">For example, a <xref:System.Windows.Media.MediaTimeline> uses <xref:System.Windows.Media.Animation.Timeline> properties like the <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> property to specify when to start a <xref:System.Windows.Controls.MediaElement> (start media playback).</span></span> <span data-ttu-id="4d857-107">Utilizza inoltre il <xref:System.Windows.Media.Animation.Timeline.Duration%2A> proprietà per specificare il tempo <xref:System.Windows.Controls.MediaElement> è attivo (durata della riproduzione).</span><span class="sxs-lookup"><span data-stu-id="4d857-107">It also uses the <xref:System.Windows.Media.Animation.Timeline.Duration%2A> property to specify how long the <xref:System.Windows.Controls.MediaElement> is active (duration of media playback).</span></span> <span data-ttu-id="4d857-108">Per ulteriori informazioni sull'utilizzo <xref:System.Windows.Media.Animation.Timeline> gli oggetti con un <xref:System.Windows.Media.Animation.Storyboard>, vedere [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span><span class="sxs-lookup"><span data-stu-id="4d857-108">For more information about using <xref:System.Windows.Media.Animation.Timeline> objects with a <xref:System.Windows.Media.Animation.Storyboard>, see [Storyboards Overview](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).</span></span>  
   
- In questo esempio viene illustrato come creare un semplice lettore multimediale che utilizza un oggetto <xref:System.Windows.Media.MediaTimeline> per controllare la riproduzione.  Il lettore multimediale include i pulsanti per riprodurre, mettere in pausa, riprendere e arrestare l'esecuzione.  Il lettore dispone anche di un controllo <xref:System.Windows.Controls.Slider> che può essere utilizzato come indicatore di stato.  
+ <span data-ttu-id="4d857-109">In questo esempio viene illustrato come creare un lettore multimediale semplice che utilizza un <xref:System.Windows.Media.MediaTimeline> per controllare la riproduzione.</span><span class="sxs-lookup"><span data-stu-id="4d857-109">This example shows how to create a simple media player that uses a <xref:System.Windows.Media.MediaTimeline> to control playback.</span></span> <span data-ttu-id="4d857-110">Il lettore multimediale include play, sospendere, riprendere e arrestare i pulsanti.</span><span class="sxs-lookup"><span data-stu-id="4d857-110">The media player includes play, pause, resume, and stop buttons.</span></span> <span data-ttu-id="4d857-111">Il lettore ha anche un <xref:System.Windows.Controls.Slider> controllo che funge da una barra di stato.</span><span class="sxs-lookup"><span data-stu-id="4d857-111">The player also has a <xref:System.Windows.Controls.Slider> control that acts as a progress bar.</span></span>  
   
- Nell'esempio riportato di seguito viene creata l'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] per il lettore multimediale.  
+ <span data-ttu-id="4d857-112">Nell'esempio seguente viene creata la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] per il lettore multimediale.</span><span class="sxs-lookup"><span data-stu-id="4d857-112">The following example creates the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] for the media player.</span></span>  
   
- [!code-xml[MediaGallery_snip#MediaTimelineExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml#mediatimelineexamplewholepage)]  
+ [!code-xaml[MediaGallery_snip#MediaTimelineExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml#mediatimelineexamplewholepage)]  
   
- Nell'esempio riportato di seguito viene creata la funzionalità per l'indicatore di stato.  
+ <span data-ttu-id="4d857-113">Nell'esempio seguente viene creata la funzionalità per l'indicatore di stato.</span><span class="sxs-lookup"><span data-stu-id="4d857-113">The following example creates the functionality for the progress bar.</span></span>  
   
  [!code-csharp[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/MediaTimelineExample.xaml.cs#codebehindmediatimelineexamplewholepage)]
  [!code-vb[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml.vb#codebehindmediatimelineexamplewholepage)]  
   
-## Vedere anche  
- <xref:System.Windows.Controls.MediaElement>   
- <xref:System.Windows.Media.MediaTimeline>   
- <xref:System.Windows.Media.Animation.Storyboard>   
- [Controllare un oggetto MediaElement \(riproduzione, sospensione, interruzione, volume e velocità\)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)   
- [Cenni preliminari sugli storyboard](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)   
- [Cenni preliminari sulle animazioni con fotogrammi chiave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)   
- [Grafica e funzionalità multimediali](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="4d857-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4d857-114">See Also</span></span>  
+ <xref:System.Windows.Controls.MediaElement>  
+ <xref:System.Windows.Media.MediaTimeline>  
+ <xref:System.Windows.Media.Animation.Storyboard>  
+ [<span data-ttu-id="4d857-115">Controllare un oggetto MediaElement (riproduzione, sospensione, interruzione, volume e velocità)</span><span class="sxs-lookup"><span data-stu-id="4d857-115">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [<span data-ttu-id="4d857-116">Cenni preliminari sugli storyboard</span><span class="sxs-lookup"><span data-stu-id="4d857-116">Storyboards Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
+ [<span data-ttu-id="4d857-117">Cenni preliminari sulle animazioni con fotogrammi chiave</span><span class="sxs-lookup"><span data-stu-id="4d857-117">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="4d857-118">Cenni preliminari sull'animazione</span><span class="sxs-lookup"><span data-stu-id="4d857-118">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="4d857-119">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="4d857-119">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)  
+ [<span data-ttu-id="4d857-120">Grafica e funzionalità multimediali</span><span class="sxs-lookup"><span data-stu-id="4d857-120">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

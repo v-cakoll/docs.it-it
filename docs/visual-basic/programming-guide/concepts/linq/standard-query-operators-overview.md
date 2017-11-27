@@ -1,47 +1,39 @@
 ---
-title: Cenni preliminari sugli operatori di Query standard (Visual Basic) | Documenti di Microsoft
+title: Cenni preliminari sugli operatori di Query standard (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eb28988ef49e0583fb7e9197c4e13c84665074ac
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3f9ad39b4890455f7d03f0b9bbfc51264d98d56b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="standard-query-operators-overview-visual-basic"></a>Cenni preliminari sugli operatori di Query standard (Visual Basic)
-Il *operatori di query standard* i metodi che costituiscono il modello LINQ. La maggior parte di questi metodi agisce sulle sequenze, dove una sequenza è un oggetto il cui tipo implementa il <xref:System.Collections.Generic.IEnumerable%601>interfaccia o <xref:System.Linq.IQueryable%601>interfaccia.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601> Gli operatori di query standard forniscono funzionalità di query, incluso il filtro, proiezione, aggregazione, ordinamento e altro ancora.  
+# <a name="standard-query-operators-overview-visual-basic"></a><span data-ttu-id="01ff6-102">Cenni preliminari sugli operatori di Query standard (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-102">Standard Query Operators Overview (Visual Basic)</span></span>
+<span data-ttu-id="01ff6-103">Gli *operatori di query standard* sono metodi che costituiscono il modello LINQ.</span><span class="sxs-lookup"><span data-stu-id="01ff6-103">The *standard query operators* are the methods that form the LINQ pattern.</span></span> <span data-ttu-id="01ff6-104">La maggior parte di questi metodi agisce sulle sequenze. Una sequenza è un oggetto il cui tipo implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o l'interfaccia <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="01ff6-104">Most of these methods operate on sequences, where a sequence is an object whose type implements the <xref:System.Collections.Generic.IEnumerable%601> interface or the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="01ff6-105">Gli operatori di query standard forniscono le funzionalità di query che includono filtro, proiezione, aggregazione, ordinamento e altro ancora.</span><span class="sxs-lookup"><span data-stu-id="01ff6-105">The standard query operators provide query capabilities including filtering, projection, aggregation, sorting and more.</span></span>  
   
- Esistono due set di operatori di query standard LINQ, uno che agisce sugli oggetti di tipo <xref:System.Collections.Generic.IEnumerable%601>e l'altro che agisce sugli oggetti di tipo <xref:System.Linq.IQueryable%601>.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601> I metodi che costituiscono ogni insieme sono membri statici della <xref:System.Linq.Enumerable>e <xref:System.Linq.Queryable>classi, rispettivamente.</xref:System.Linq.Queryable> </xref:System.Linq.Enumerable> Vengono definiti come *metodi di estensione* del tipo cui operare. Ciò significa che possono essere chiamati utilizzando la sintassi del metodo statico o la sintassi del metodo di istanza.  
+ <span data-ttu-id="01ff6-106">Sono disponibili due set di operatori di query standard LINQ, uno che agisce sugli oggetti di tipo <xref:System.Collections.Generic.IEnumerable%601> e l'altro che agisce sugli oggetti di tipo <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="01ff6-106">There are two sets of LINQ standard query operators, one that operates on objects of type <xref:System.Collections.Generic.IEnumerable%601> and the other that operates on objects of type <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="01ff6-107">I metodi che costituiscono ogni set sono membri statici delle classi <xref:System.Linq.Enumerable> e <xref:System.Linq.Queryable>, rispettivamente.</span><span class="sxs-lookup"><span data-stu-id="01ff6-107">The methods that make up each set are static members of the <xref:System.Linq.Enumerable> and <xref:System.Linq.Queryable> classes, respectively.</span></span> <span data-ttu-id="01ff6-108">Vengono definiti come *metodi di estensione* del tipo su cui agiscono.</span><span class="sxs-lookup"><span data-stu-id="01ff6-108">They are defined as *extension methods* of the type that they operate on.</span></span> <span data-ttu-id="01ff6-109">Ciò significa che possono essere chiamati usando la sintassi del metodo statico o la sintassi del metodo di istanza.</span><span class="sxs-lookup"><span data-stu-id="01ff6-109">This means that they can be called by using either static method syntax or instance method syntax.</span></span>  
   
- Inoltre, molti metodi degli operatori di query standard agiscono su tipi diversi da quelli basati su <xref:System.Collections.Generic.IEnumerable%601>o <xref:System.Linq.IQueryable%601>.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601> Il <xref:System.Linq.Enumerable>tipo definisce due diversi metodi che agiscono entrambi su oggetti di tipo <xref:System.Collections.IEnumerable>.</xref:System.Collections.IEnumerable> </xref:System.Linq.Enumerable> Questi metodi, <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29>e <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, consentono abilitare una raccolta senza parametri o non generica, eseguire una query nel modello LINQ.</xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29> </xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> Ciò avviene mediante la creazione di una raccolta di oggetti fortemente tipizzati. La <xref:System.Linq.Queryable>classe definisce due metodi simili <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29>e <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, che operano su oggetti di tipo <xref:System.Linq.Queryable>.</xref:System.Linq.Queryable> </xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29> </xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> </xref:System.Linq.Queryable>  
+ <span data-ttu-id="01ff6-110">Inoltre, molti metodi degli operatori query standard agiscono su tipi diversi da quelli basati su <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="01ff6-110">In addition, several standard query operator methods operate on types other than those based on <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="01ff6-111">Il tipo <xref:System.Linq.Enumerable> definisce questi due diversi metodi che agiscono entrambi su oggetti di tipo <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="01ff6-111">The <xref:System.Linq.Enumerable> type defines two such methods that both operate on objects of type <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="01ff6-112">Questi metodi, <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> e <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, consentono l'esecuzione di query su una Collection senza parametri o non generica nel modello LINQ</span><span class="sxs-lookup"><span data-stu-id="01ff6-112">These methods, <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> and <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, let you enable a non-parameterized, or non-generic, collection to be queried in the LINQ pattern.</span></span> <span data-ttu-id="01ff6-113">grazie alla creazione di una Collection di oggetti fortemente tipizzato.</span><span class="sxs-lookup"><span data-stu-id="01ff6-113">They do this by creating a strongly-typed collection of objects.</span></span> <span data-ttu-id="01ff6-114">La classe <xref:System.Linq.Queryable> definisce due metodi simili, <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> e <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, che agiscono su oggetti di tipo <xref:System.Linq.Queryable>.</span><span class="sxs-lookup"><span data-stu-id="01ff6-114">The <xref:System.Linq.Queryable> class defines two similar methods, <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> and <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, that operate on objects of type <xref:System.Linq.Queryable>.</span></span>  
   
- Gli operatori di query standard sono diversi nei tempi di esecuzione, a seconda che restituiscono un valore singleton o una sequenza di valori. I metodi che restituiscono un valore singleton (ad esempio, <xref:System.Linq.Enumerable.Average%2A>e <xref:System.Linq.Enumerable.Sum%2A>) vengono eseguite immediatamente.</xref:System.Linq.Enumerable.Sum%2A> </xref:System.Linq.Enumerable.Average%2A> I metodi che restituiscono una sequenza di rinviare l'esecuzione della query e restituiscono un oggetto enumerabile.  
+ <span data-ttu-id="01ff6-115">Gli operatori di query standard presentano una durata di esecuzione diversa, a seconda che restituiscano un valore singleton o una sequenza di valori.</span><span class="sxs-lookup"><span data-stu-id="01ff6-115">The standard query operators differ in the timing of their execution, depending on whether they return a singleton value or a sequence of values.</span></span> <span data-ttu-id="01ff6-116">Questi metodi che restituiscono un valore singleton, ad esempio <xref:System.Linq.Enumerable.Average%2A> e <xref:System.Linq.Enumerable.Sum%2A>, vengono eseguiti immediatamente.</span><span class="sxs-lookup"><span data-stu-id="01ff6-116">Those methods that return a singleton value (for example, <xref:System.Linq.Enumerable.Average%2A> and <xref:System.Linq.Enumerable.Sum%2A>) execute immediately.</span></span> <span data-ttu-id="01ff6-117">I metodi che restituiscono una sequenza rinviano l'esecuzione della query e restituiscono un oggetto enumerabile.</span><span class="sxs-lookup"><span data-stu-id="01ff6-117">Methods that return a sequence defer the query execution and return an enumerable object.</span></span>  
   
- Nel caso i metodi che agiscono sulle raccolte in memoria, ovvero i metodi che estendono <xref:System.Collections.Generic.IEnumerable%601>, l'oggetto enumerabile restituito acquisisce gli argomenti passati al metodo.</xref:System.Collections.Generic.IEnumerable%601> Quando l'oggetto viene enumerata, viene impiegata la logica dell'operatore di query e vengono restituiti i risultati della query.  
+ <span data-ttu-id="01ff6-118">Nel caso dei metodi che agiscono sulle Collection in memoria, ovvero i metodi che estendono <xref:System.Collections.Generic.IEnumerable%601>, l'oggetto enumerabile restituito acquisisce gli argomenti passati al metodo.</span><span class="sxs-lookup"><span data-stu-id="01ff6-118">In the case of the methods that operate on in-memory collections, that is, those methods that extend <xref:System.Collections.Generic.IEnumerable%601>, the returned enumerable object captures the arguments that were passed to the method.</span></span> <span data-ttu-id="01ff6-119">Quando l'oggetto viene enumerato, viene utilizzata la logica dell'operatore query e vengono restituiti i risultati della query.</span><span class="sxs-lookup"><span data-stu-id="01ff6-119">When that object is enumerated, the logic of the query operator is employed and the query results are returned.</span></span>  
   
- Al contrario, i metodi che estendono <xref:System.Linq.IQueryable%601>non implementano il comportamento delle query, ma creare una struttura ad albero dell'espressione che rappresenta la query da eseguire.</xref:System.Linq.IQueryable%601> Elaborazione della query viene gestita dall'origine <xref:System.Linq.IQueryable%601>oggetto.</xref:System.Linq.IQueryable%601>  
+ <span data-ttu-id="01ff6-120">I metodi che estendono <xref:System.Linq.IQueryable%601> non implementano invece il comportamento delle query, ma compilano un albero delle espressioni che rappresenta la query da eseguire.</span><span class="sxs-lookup"><span data-stu-id="01ff6-120">In contrast, methods that extend <xref:System.Linq.IQueryable%601> do not implement any querying behavior, but build an expression tree that represents the query to be performed.</span></span> <span data-ttu-id="01ff6-121">L'elaborazione delle query viene gestita dall'oggetto <xref:System.Linq.IQueryable%601> di origine.</span><span class="sxs-lookup"><span data-stu-id="01ff6-121">The query processing is handled by the source <xref:System.Linq.IQueryable%601> object.</span></span>  
   
- Chiamate ai metodi di query possono essere concatenate in una query, che consente di eseguire query di diventare arbitrariamente complesse.  
+ <span data-ttu-id="01ff6-122">Le chiamate ai metodi della query possono essere concatenate in una query, consentendo alle query di diventare arbitrariamente complesse.</span><span class="sxs-lookup"><span data-stu-id="01ff6-122">Calls to query methods can be chained together in one query, which enables queries to become arbitrarily complex.</span></span>  
   
- Esempio di codice seguente viene illustrato come utilizzare gli operatori di query standard per ottenere informazioni su una sequenza.  
+ <span data-ttu-id="01ff6-123">Nell'esempio di codice seguente viene illustrato come usare gli operatori di query standard per ottenere informazioni su una sequenza.</span><span class="sxs-lookup"><span data-stu-id="01ff6-123">The following code example demonstrates how the standard query operators can be used to obtain information about a sequence.</span></span>  
   
 ```vb  
 Dim sentence = "the quick brown fox jumps over the lazy dog"  
@@ -80,47 +72,47 @@ MsgBox(output.ToString())
 ' JUMPS   
 ```  
   
-## <a name="query-expression-syntax"></a>Sintassi delle espressioni di query  
- Alcuni degli operatori di query standard utilizzate più di frequente dispongono dedicata c# e Visual Basic sintassi della parola chiave del linguaggio che consente loro di essere chiamato come parte di un *query* *espressione*. Per ulteriori informazioni sugli operatori di query standard che sono parole chiave dedicate e le relative sintassi, vedere [sintassi delle espressioni di Query per operatori di Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
+## <a name="query-expression-syntax"></a><span data-ttu-id="01ff6-124">Sintassi delle espressioni di query</span><span class="sxs-lookup"><span data-stu-id="01ff6-124">Query Expression Syntax</span></span>  
+ <span data-ttu-id="01ff6-125">Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave per i linguaggi C# e Visual Basic che consente di chiamare gli operatori come parte di un'*espressione* di *query*.</span><span class="sxs-lookup"><span data-stu-id="01ff6-125">Some of the more frequently used standard query operators have dedicated C# and Visual Basic language keyword syntax that enables them to be called as part of a *query* *expression*.</span></span> <span data-ttu-id="01ff6-126">Per ulteriori informazioni sugli operatori di query standard che dedicate parole chiave e le relative sintassi, vedere [sintassi delle espressioni di Query per gli operatori Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).</span><span class="sxs-lookup"><span data-stu-id="01ff6-126">For more information about standard query operators that have dedicated keywords and their corresponding syntaxes, see [Query Expression Syntax for Standard Query Operators (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).</span></span>  
   
-## <a name="extending-the-standard-query-operators"></a>Estensione degli operatori di Query Standard  
- È possibile integrare il set di operatori di query standard da Creazione metodi specifici del dominio appropriate per il dominio di destinazione o la tecnologia. È inoltre possibile sostituire gli operatori di query standard con implementazioni personalizzate che forniscono servizi aggiuntivi, ad esempio la valutazione remota, la conversione di query e ottimizzazione. Vedere <xref:System.Linq.Enumerable.AsEnumerable%2A>per un esempio.</xref:System.Linq.Enumerable.AsEnumerable%2A>  
+## <a name="extending-the-standard-query-operators"></a><span data-ttu-id="01ff6-127">Estensione degli operatori di query standard</span><span class="sxs-lookup"><span data-stu-id="01ff6-127">Extending the Standard Query Operators</span></span>  
+ <span data-ttu-id="01ff6-128">È possibile estendere il set di operatori di query standard creando metodi specifici del dominio appropriati per la tecnologia o il dominio di destinazione.</span><span class="sxs-lookup"><span data-stu-id="01ff6-128">You can augment the set of standard query operators by creating domain-specific methods that are appropriate for your target domain or technology.</span></span> <span data-ttu-id="01ff6-129">È possibile anche sostituire gli operatori di query standard con implementazioni personalizzate che forniscono servizi aggiuntivi, ad esempio la valutazione remota, la conversione delle query e l'ottimizzazione.</span><span class="sxs-lookup"><span data-stu-id="01ff6-129">You can also replace the standard query operators with your own implementations that provide additional services such as remote evaluation, query translation, and optimization.</span></span> <span data-ttu-id="01ff6-130">Per un esempio, vedere <xref:System.Linq.Enumerable.AsEnumerable%2A>.</span><span class="sxs-lookup"><span data-stu-id="01ff6-130">See <xref:System.Linq.Enumerable.AsEnumerable%2A> for an example.</span></span>  
   
-## <a name="related-sections"></a>Sezioni correlate  
- I collegamenti seguenti consentono di accedere ad argomenti che forniscono ulteriori informazioni sugli operatori di query standard diversi in base alle funzionalità.  
+## <a name="related-sections"></a><span data-ttu-id="01ff6-131">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="01ff6-131">Related Sections</span></span>  
+ <span data-ttu-id="01ff6-132">I collegamenti riportati di seguito consentono di passare ad argomenti che forniscono informazioni aggiuntive sui vari operatori di query standard in base alla funzionalità.</span><span class="sxs-lookup"><span data-stu-id="01ff6-132">The following links take you to topics that provide additional information about the various standard query operators based on functionality.</span></span>  
   
- [Ordinamento dei dati](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
+ [<span data-ttu-id="01ff6-133">Ordinamento dei dati</span><span class="sxs-lookup"><span data-stu-id="01ff6-133">Sorting Data</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
   
- [Operazioni sui set (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)  
+ [<span data-ttu-id="01ff6-134">Operazioni sui set (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-134">Set Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)  
   
- [Il filtraggio dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
+ [<span data-ttu-id="01ff6-135">Filtraggio dei dati (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-135">Filtering Data (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
   
- [Operazioni quantificatore (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
+ [<span data-ttu-id="01ff6-136">Operazioni quantificatore (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-136">Quantifier Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
   
- [Operazioni di proiezione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
+ [<span data-ttu-id="01ff6-137">Operazioni di proiezione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-137">Projection Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
   
- [Partizionamento dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
+ [<span data-ttu-id="01ff6-138">Il partizionamento dei dati (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-138">Partitioning Data (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
   
- [Creare un join Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
+ [<span data-ttu-id="01ff6-139">Operazioni (Visual Basic) di join</span><span class="sxs-lookup"><span data-stu-id="01ff6-139">Join Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
   
- [Raggruppamento di dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
+ [<span data-ttu-id="01ff6-140">Raggruppamento di dati (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-140">Grouping Data (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
   
- [Operazioni di generazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)  
+ [<span data-ttu-id="01ff6-141">Operazioni di generazione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-141">Generation Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)  
   
- [Operazioni di uguaglianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)  
+ [<span data-ttu-id="01ff6-142">Operazioni di uguaglianza (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-142">Equality Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)  
   
- [Operazioni sugli elementi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)  
+ [<span data-ttu-id="01ff6-143">Operazioni sugli elementi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-143">Element Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)  
   
- [La conversione dei tipi di dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
+ [<span data-ttu-id="01ff6-144">La conversione dei tipi di dati (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-144">Converting Data Types (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
   
- [Operazioni di concatenazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)  
+ [<span data-ttu-id="01ff6-145">Operazioni di concatenazione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-145">Concatenation Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)  
   
- [Operazioni di aggregazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
+ [<span data-ttu-id="01ff6-146">Operazioni di aggregazione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-146">Aggregation Operations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq.Enumerable></xref:System.Linq.Enumerable>   
- <xref:System.Linq.Queryable></xref:System.Linq.Queryable>   
- [Introduzione a LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)   
- [Sintassi delle espressioni di query per gli operatori Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)   
- [Classificazione degli operatori di Query Standard in base alla modalità di esecuzione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)   
- [Metodi di estensione](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a><span data-ttu-id="01ff6-147">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="01ff6-147">See Also</span></span>  
+ <xref:System.Linq.Enumerable>  
+ <xref:System.Linq.Queryable>  
+ [<span data-ttu-id="01ff6-148">Introduzione a LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-148">Introduction to LINQ (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="01ff6-149">Sintassi delle espressioni di query per gli operatori Query Standard (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-149">Query Expression Syntax for Standard Query Operators (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+ [<span data-ttu-id="01ff6-150">Classificazione degli operatori di Query Standard in base alla modalità di esecuzione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="01ff6-150">Classification of Standard Query Operators by Manner of Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
+ [<span data-ttu-id="01ff6-151">Metodi di estensione</span><span class="sxs-lookup"><span data-stu-id="01ff6-151">Extension Methods</span></span>](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

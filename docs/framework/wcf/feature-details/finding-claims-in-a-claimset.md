@@ -1,30 +1,36 @@
 ---
-title: "Ricerca di attestazioni in un ClaimSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "attestazioni [WCF]"
-  - "attestazioni [WCF], ricerca in un claimSet"
+title: Ricerca di attestazioni in un ClaimSet
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- claims [WCF], finding in a claimset
+- claims [WCF]
 ms.assetid: a76ce107-aeb3-47d0-bfa9-134c53664e20
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cc6a4d98529357aa58f55be2fc33d6b7a95a8999
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Ricerca di attestazioni in un ClaimSet
-L'esame del contenuto di una classe <xref:System.IdentityModel.Claims.ClaimSet> per particolari tipi di attestazioni è un'attività comune quando si utilizza l'autorizzazione basata sulle attestazioni.Per esaminare una classe <xref:System.IdentityModel.Claims.ClaimSet> al fine di verificare la presenza di attestazioni particolari, utilizzare il metodo <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%2A>.Questo metodo fornisce prestazioni migliori che non l'iterazione diretta su <xref:System.IdentityModel.Claims.ClaimSet>.Nell'esempio seguente viene illustrata questa sintassi.Si noti che i parametri `claimType` e `claimRight` possono essere `null`.In tal caso i parametri corrisponderanno a tutti i tipi e i diritti di attestazione.  
+# <a name="finding-claims-in-a-claimset"></a><span data-ttu-id="b3729-102">Ricerca di attestazioni in un ClaimSet</span><span class="sxs-lookup"><span data-stu-id="b3729-102">Finding Claims in a ClaimSet</span></span>
+<span data-ttu-id="b3729-103">L'esame del contenuto di una classe <xref:System.IdentityModel.Claims.ClaimSet> per particolari tipi di attestazioni è un'attività comune quando si utilizza l'autorizzazione basata sulle attestazioni.</span><span class="sxs-lookup"><span data-stu-id="b3729-103">Examining the content of a <xref:System.IdentityModel.Claims.ClaimSet> for particular types of claims is a common task when using claim-based authorization.</span></span> <span data-ttu-id="b3729-104">Per esaminare una classe <xref:System.IdentityModel.Claims.ClaimSet> al fine di verificare la presenza di attestazioni particolari, utilizzare il metodo <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%2A>.</span><span class="sxs-lookup"><span data-stu-id="b3729-104">To examine a <xref:System.IdentityModel.Claims.ClaimSet> for the presence of particular claims, use the <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%2A> method.</span></span> <span data-ttu-id="b3729-105">Questo metodo fornisce prestazioni migliori che non l'iterazione diretta su <xref:System.IdentityModel.Claims.ClaimSet>.</span><span class="sxs-lookup"><span data-stu-id="b3729-105">This method provides better performance than iterating directly over the <xref:System.IdentityModel.Claims.ClaimSet>.</span></span> <span data-ttu-id="b3729-106">Nell'esempio seguente viene illustrata questa sintassi.</span><span class="sxs-lookup"><span data-stu-id="b3729-106">The following example demonstrates this usage.</span></span> <span data-ttu-id="b3729-107">Si noti che i parametri `claimType` e `claimRight` possono essere `null`.</span><span class="sxs-lookup"><span data-stu-id="b3729-107">Note that the `claimType` and `claimRight` parameters can be `null`.</span></span> <span data-ttu-id="b3729-108">In tal caso i parametri corrisponderanno a tutti i tipi e i diritti di attestazione.</span><span class="sxs-lookup"><span data-stu-id="b3729-108">In that case, the parameters will match all claim types and claim rights.</span></span>  
   
-## Esempio  
+## <a name="example"></a><span data-ttu-id="b3729-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="b3729-109">Example</span></span>  
  [!code-csharp[c_FindClaimsPerf#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_findclaimsperf/cs/c_findclaimsperf.cs#2)]
  [!code-vb[c_FindClaimsPerf#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_findclaimsperf/vb/c_findclaimsperf.vb#2)]  
   
-## Vedere anche  
- [Gestione di attestazioni e autorizzazioni con il modello di identità](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a><span data-ttu-id="b3729-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b3729-110">See Also</span></span>  
+ [<span data-ttu-id="b3729-111">Gestione attestazioni e autorizzazioni con il modello di identità</span><span class="sxs-lookup"><span data-stu-id="b3729-111">Managing Claims and Authorization with the Identity Model</span></span>](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

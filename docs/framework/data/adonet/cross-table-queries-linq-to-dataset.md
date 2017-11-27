@@ -1,41 +1,47 @@
 ---
-title: "Query tra tabelle (LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Query su tabella incrociata (LINQ to DataSet)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d0b829840257dc2b3b4bbf0b8c3a294a77060e2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Query tra tabelle (LINQ to DataSet)
-Oltre alle query su singola tabella, è possibile eseguire query tra tabelle in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] utilizzando un *join*.  Per join si intende l'associazione degli oggetti di un'origine dati con oggetti di un'altra origine dati che condividono un attributo comune, ad esempio un ID prodotto o contatto.  Nella programmazione orientata a oggetti, lo spostamento nelle relazioni tra oggetti è relativamente semplice, perché ogni oggetto include un membro che fa riferimento a un altro oggetto. Nelle tabelle di database esterne, tuttavia, lo spostamento nelle relazioni non è un processo così semplice.  Le tabelle di database non contengono relazioni predefinite. In questi casi, l'operazione di join può essere usata per far corrispondere gli elementi di ogni origine.  Ad esempio, date due tabelle contenenti informazioni sui prodotti e sulle vendite, è possibile usare un'operazione join per creare una corrispondenza tra le informazioni sulle vendite e i prodotti relativi allo stesso ordine di vendita.  
+# <a name="cross-table-queries-linq-to-dataset"></a><span data-ttu-id="21c84-102">Query su tabella incrociata (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="21c84-102">Cross-Table Queries (LINQ to DataSet)</span></span>
+<span data-ttu-id="21c84-103">Oltre alle query su singola tabella, è possibile eseguire query tra tabelle in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]</span><span class="sxs-lookup"><span data-stu-id="21c84-103">In addition to querying a single table, you can also perform cross-table queries in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span></span> <span data-ttu-id="21c84-104">Questa operazione viene eseguita utilizzando un *join*.</span><span class="sxs-lookup"><span data-stu-id="21c84-104">This is done by using a *join*.</span></span> <span data-ttu-id="21c84-105">Per join si intende l'associazione degli oggetti di un'origine dati con oggetti di un'altra origine dati che condividono un attributo comune, ad esempio un ID prodotto o contatto.</span><span class="sxs-lookup"><span data-stu-id="21c84-105">A join is the association of objects in one data source with objects that share a common attribute in another data source, such as a product or contact ID.</span></span> <span data-ttu-id="21c84-106">Nella programmazione orientata a oggetti, lo spostamento nelle relazioni tra oggetti è relativamente semplice, perché ogni oggetto include un membro che fa riferimento a un altro oggetto.</span><span class="sxs-lookup"><span data-stu-id="21c84-106">In object-oriented programming, relationships between objects are relatively easy to navigate because each object has a member that references another object.</span></span> <span data-ttu-id="21c84-107">Nelle tabelle di database esterne, tuttavia, lo spostamento nelle relazioni non è un processo così semplice.</span><span class="sxs-lookup"><span data-stu-id="21c84-107">In external database tables, however, navigating relationships is not as straightforward.</span></span> <span data-ttu-id="21c84-108">Le tabelle di database non contengono relazioni predefinite.</span><span class="sxs-lookup"><span data-stu-id="21c84-108">Database tables do not contain built-in relationships.</span></span> <span data-ttu-id="21c84-109">In questi casi, l'operazione join può essere utilizzata per far corrispondere gli elementi di ogni origine.</span><span class="sxs-lookup"><span data-stu-id="21c84-109">In these cases, the join operation can be used to match elements from each source.</span></span> <span data-ttu-id="21c84-110">Ad esempio, date due tabelle contenenti informazioni sui prodotti e sulle vendite, è possibile usare un'operazione join per creare una corrispondenza tra le informazioni sulle vendite e i prodotti relativi allo stesso ordine di vendita.</span><span class="sxs-lookup"><span data-stu-id="21c84-110">For example, given two tables that contain product information and sales information, you could use a join operation to match sales information and products for the same sales order.</span></span>  
   
- Nel framework [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] sono disponibili due operatori di join, <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A>. Questi operatori eseguono *equijoin*, ossia join che creano una corrispondenza tra due origini dati solo quando le relative chiavi sono uguali.  Al contrario, in [!INCLUDE[tsql](../../../../includes/tsql-md.md)] sono supportati operatori di join diversi da `equals`, ad esempio l'operatore `less than`.  
+ <span data-ttu-id="21c84-111">Nel framework [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] sono disponibili due operatori join, <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A>.</span><span class="sxs-lookup"><span data-stu-id="21c84-111">The [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] framework provides two join operators, <xref:System.Linq.Enumerable.Join%2A> and <xref:System.Linq.Enumerable.GroupJoin%2A>.</span></span> <span data-ttu-id="21c84-112">Questi operatori eseguono *equijoin*:, ovvero join che corrispondono a dati di due origini solo quando le chiavi sono uguali.</span><span class="sxs-lookup"><span data-stu-id="21c84-112">These operators perform *equi-joins*: that is, joins that match two data sources only when their keys are equal.</span></span> <span data-ttu-id="21c84-113">Al contrario, in [!INCLUDE[tsql](../../../../includes/tsql-md.md)] sono supportati operatori di join diversi da `equals`, ad esempio l'operatore `less than`.</span><span class="sxs-lookup"><span data-stu-id="21c84-113">(By contrast, [!INCLUDE[tsql](../../../../includes/tsql-md.md)] supports join operators other than `equals`, such as the `less than` operator.)</span></span>  
   
- In termini di database relazionale, il metodo <xref:System.Linq.Enumerable.Join%2A> implementa un inner join.  Un inner join è un tipo di join in cui vengono restituiti solo gli oggetti che dispongono di una corrispondenza nel set di dati opposto.  
+ <span data-ttu-id="21c84-114">In termini di database relazionale, il metodo <xref:System.Linq.Enumerable.Join%2A> implementa un inner join.</span><span class="sxs-lookup"><span data-stu-id="21c84-114">In relational database terms, <xref:System.Linq.Enumerable.Join%2A> implements an inner join.</span></span> <span data-ttu-id="21c84-115">Un inner join è un tipo di join in cui vengono restituiti solo gli oggetti che dispongono di una corrispondenza nel set di dati opposto.</span><span class="sxs-lookup"><span data-stu-id="21c84-115">An inner join is a type of join in which only those objects that have a match in the opposite data set are returned.</span></span>  
   
- Gli operatori <xref:System.Linq.Enumerable.GroupJoin%2A> non dispongono di equivalenti diretti in termini di database relazionale; essi implementano un superset di inner join e left outer join. Un left outer join è un join che restituisce ogni elemento della prima raccolta \(a sinistra\), anche se non ha elementi correlati nella seconda raccolta.  
+ <span data-ttu-id="21c84-116">Il <xref:System.Linq.Enumerable.GroupJoin%2A> operatori hanno un equivalente diretto in termini di database relazionale, ma implementano un superset di inner join e left outer join.</span><span class="sxs-lookup"><span data-stu-id="21c84-116">The <xref:System.Linq.Enumerable.GroupJoin%2A> operators have no direct equivalent in relational database terms; they implement a superset of inner joins and left outer joins.</span></span> <span data-ttu-id="21c84-117">Un left outer join è un join che restituisce ogni elemento della prima raccolta (sinistra), anche se non ha elementi correlati nella seconda raccolta.</span><span class="sxs-lookup"><span data-stu-id="21c84-117">A left outer join is a join that returns each element of the first (left) collection, even if it has no correlated elements in the second collection.</span></span>  
   
- Per altre informazioni sui join, vedere [Join Operations](../../../../ocs/visual-basic/programming-guide/concepts/linq/join-operations.md).  
+ <span data-ttu-id="21c84-118">Per ulteriori informazioni sui join, vedere [operazioni Join](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107).</span><span class="sxs-lookup"><span data-stu-id="21c84-118">For more information about joins, see [Join Operations](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107).</span></span>  
   
-## Esempio  
- Nell'esempio seguente viene eseguito un join tradizionale delle tabelle `SalesOrderHeader` e `SalesOrderDetail` del database di esempio AdventureWorks per ottenere gli ordini effettuati online dal mese di agosto.  
+## <a name="example"></a><span data-ttu-id="21c84-119">Esempio</span><span class="sxs-lookup"><span data-stu-id="21c84-119">Example</span></span>  
+ <span data-ttu-id="21c84-120">Nell'esempio seguente viene eseguito un join tradizionale delle tabelle `SalesOrderHeader` e `SalesOrderDetail` del database di esempio AdventureWorks per ottenere gli ordini effettuati online dal mese di agosto.</span><span class="sxs-lookup"><span data-stu-id="21c84-120">The following example performs a traditional join of the `SalesOrderHeader` and `SalesOrderDetail` tables from the AdventureWorks sample database to obtain online orders from the month of August.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#join)]
  [!code-vb[DP LINQ to DataSet Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#join)]  
   
-## Vedere anche  
- [Esecuzione di query su DataSet](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)   
- [Query su una singola tabella](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)   
- [Esecuzione di query su DataSet tipizzati](../../../../docs/framework/data/adonet/querying-typed-datasets.md)   
- [Join Operations](../../../../ocs/visual-basic/programming-guide/concepts/linq/join-operations.md)   
- [Esempi relativi a LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a><span data-ttu-id="21c84-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="21c84-121">See Also</span></span>  
+ [<span data-ttu-id="21c84-122">Esecuzione di query su set di dati</span><span class="sxs-lookup"><span data-stu-id="21c84-122">Querying DataSets</span></span>](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [<span data-ttu-id="21c84-123">Query su singola tabella</span><span class="sxs-lookup"><span data-stu-id="21c84-123">Single-Table Queries</span></span>](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)  
+ [<span data-ttu-id="21c84-124">Esecuzione di query su dataset tipizzati</span><span class="sxs-lookup"><span data-stu-id="21c84-124">Querying Typed DataSets</span></span>](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [<span data-ttu-id="21c84-125">Operazioni di join</span><span class="sxs-lookup"><span data-stu-id="21c84-125">Join Operations</span></span>](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)  
+ [<span data-ttu-id="21c84-126">LINQ to DataSet esempi</span><span class="sxs-lookup"><span data-stu-id="21c84-126">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

@@ -1,46 +1,49 @@
 ---
-title: "Integrazione con applicazioni COM+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "COM+ [WCF]"
-  - "COM+ [WCF], Integrazione di Windows Communication Foundation"
-  - "WCF, Integrazione COM+"
-  - "WCF, riutilizzo di codice"
-  - "Windows Communication Foundation, Integrazione COM+"
-  - "Windows Communication Foundation, riutilizzo di codice"
+title: Integrazione con applicazioni COM+
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF, reusing code
+- Windows Communication Foundation, reusing code
+- Windows Communication Foundation, COM+ integration
+- COM+ [WCF], Windows Communication Foundation integration
+- COM+ [WCF]
+- WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8901530061837556bcb26f7b55539f5a2a791391
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Integrazione con applicazioni COM+
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce un ambiente completo per la creazione di applicazioni distribuite.Se in COM\+ si dispone di una grande quantità di logica di applicazione basata sul componente, è possibile utilizzare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per estendere la logica esistente anziché riscriverla.Negli argomenti di questa sezione viene descritto come utilizzare COM\+ con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+# <a name="integrating-with-com-applications"></a><span data-ttu-id="653ea-102">Integrazione con applicazioni COM+</span><span class="sxs-lookup"><span data-stu-id="653ea-102">Integrating with COM+ Applications</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="653ea-103"> fornisce un ambiente completo per la creazione di applicazioni distribuite.</span><span class="sxs-lookup"><span data-stu-id="653ea-103"> provides a rich environment for creating distributed applications.</span></span> <span data-ttu-id="653ea-104">Se in COM+ si dispone di una grande quantità di logica di applicazione basata sul componente, è possibile utilizzare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] per estendere la logica esistente anziché riscriverla.</span><span class="sxs-lookup"><span data-stu-id="653ea-104">If you have a substantial investment in component-based application logic hosted in COM+, you can use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to extend your existing logic rather than having to rewrite it.</span></span> <span data-ttu-id="653ea-105">Negli argomenti di questa sezione viene descritto come utilizzare COM+ con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="653ea-105">The topics within this section describe how to use COM+ with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>  
   
-## In questa sezione  
- [Panoramica sull'integrazione con applicazioni COM\+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
- Panoramica delle circostanze e delle modalità di integrazione di componenti COM\+.  
+## <a name="in-this-section"></a><span data-ttu-id="653ea-106">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="653ea-106">In This Section</span></span>  
+ [<span data-ttu-id="653ea-107">L'integrazione con panoramica delle applicazioni COM+</span><span class="sxs-lookup"><span data-stu-id="653ea-107">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ <span data-ttu-id="653ea-108">Panoramica delle circostanze e delle modalità di integrazione di componenti COM+.</span><span class="sxs-lookup"><span data-stu-id="653ea-108">Gives an overview of when and how to integrate COM+ components.</span></span>  
   
- [Procedura: utilizzare lo strumento di configurazione del modello di servizi di COM\+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
- Viene spiegato come utilizzare lo strumento da riga di comando per la configurazione del modello del servizio di COM\+ \(ComSvcConfig.exe\) per configurare le interfacce dell'applicazione che si desidera siano esposte come servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="653ea-109">Procedura: utilizzare lo strumento di configurazione del modello di servizio COM+</span><span class="sxs-lookup"><span data-stu-id="653ea-109">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
+ <span data-ttu-id="653ea-110">Viene spiegato come utilizzare lo strumento da riga di comando per la configurazione del modello del servizio di COM+ (ComSvcConfig.exe) per configurare le interfacce dell'applicazione che si desidera siano esposte come servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="653ea-110">Explains how to use the COM+ Service Model Configuration command-line tool (ComSvcConfig.exe) to configure the application interfaces that you want exposed as [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span>  
   
- [Procedura: configurare le impostazioni del servizio COM\+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
- Viene spiegato come configurare un oggetto COM\+ come servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ [<span data-ttu-id="653ea-111">Procedura: configurare le impostazioni di servizio COM+</span><span class="sxs-lookup"><span data-stu-id="653ea-111">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ <span data-ttu-id="653ea-112">Viene spiegato come configurare un oggetto COM+ come servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="653ea-112">Explains how to configure a COM+ object as a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- [Procedura: distribuire un'applicazione di integrazione COM\+](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
- Viene spiegato come spostare un'applicazione di integrazione COM\+.  
+ [<span data-ttu-id="653ea-113">Procedura: distribuire un'applicazione di integrazione COM+</span><span class="sxs-lookup"><span data-stu-id="653ea-113">How to: Deploy a COM+ Integration Application</span></span>](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
+ <span data-ttu-id="653ea-114">Viene spiegato come spostare un'applicazione di integrazione COM+.</span><span class="sxs-lookup"><span data-stu-id="653ea-114">Explains how to move a COM+ integration application.</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="653ea-115">Riferimento</span><span class="sxs-lookup"><span data-stu-id="653ea-115">Reference</span></span>  
  <xref:System.ServiceModel>  
   
-## Vedere anche  
- [Integrazione con applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+## <a name="see-also"></a><span data-ttu-id="653ea-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="653ea-116">See Also</span></span>  
+ [<span data-ttu-id="653ea-117">Integrazione con applicazioni COM</span><span class="sxs-lookup"><span data-stu-id="653ea-117">Integrating with COM Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

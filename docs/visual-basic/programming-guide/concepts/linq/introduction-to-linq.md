@@ -1,54 +1,46 @@
 ---
-title: Introduzione a LINQ (Visual Basic) | Documenti di Microsoft
+title: Introduzione a LINQ (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 41964e2fcbb079b7650c3132c9035fc2f754f3de
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3edb26616bf53be8a26522775effd079fafbac97
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="introduction-to-linq-visual-basic"></a>Introduzione a LINQ (Visual Basic)
-Language-Integrated Query (LINQ) è che una novità introdotta in .NET Framework versione 3.5 che colma il divario tra il mondo degli oggetti e il mondo dei dati.  
+# <a name="introduction-to-linq-visual-basic"></a><span data-ttu-id="c6743-102">Introduzione a LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c6743-102">Introduction to LINQ (Visual Basic)</span></span>
+<span data-ttu-id="c6743-103">LINQ (Language-Integrated Query) rappresenta una novità introdotta in .NET Framework versione 3.5 che colma il divario tra il mondo degli oggetti e il mondo dei dati.</span><span class="sxs-lookup"><span data-stu-id="c6743-103">Language-Integrated Query (LINQ) is an innovation introduced in the .NET Framework version 3.5 that bridges the gap between the world of objects and the world of data.</span></span>  
   
- In genere, le query sui dati sono espressi come stringhe semplici senza controllo dei tipi in fase di compilazione o il supporto IntelliSense. Inoltre, è necessario imparare un linguaggio di query diverso per ogni tipo di origine dati: SQL database, documenti XML, vari servizi Web e così via. LINQ consente una *query* un costrutto di costrutto di linguaggio in Visual Basic. Scrivere query su raccolte fortemente tipizzate di oggetti utilizzando parole chiave del linguaggio e gli operatori comuni.  
+ <span data-ttu-id="c6743-104">In genere, le query sui dati vengono espresse come stringhe semplici senza il controllo dei tipi in fase di compilazione o il supporto IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="c6743-104">Traditionally, queries against data are expressed as simple strings without type checking at compile time or IntelliSense support.</span></span> <span data-ttu-id="c6743-105">È inoltre necessario apprendere un linguaggio di query diverso per ogni tipo di origine dati: database SQL, documenti XML, svariati servizi Web e così via.</span><span class="sxs-lookup"><span data-stu-id="c6743-105">Furthermore, you have to learn a different query language for each type of data source: SQL databases, XML documents, various Web services, and so on.</span></span> <span data-ttu-id="c6743-106">LINQ consente un *query* un costrutto di costrutto di linguaggio in Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c6743-106">LINQ makes a *query* a first-class language construct in Visual Basic.</span></span> <span data-ttu-id="c6743-107">È possibile scrivere query su insiemi di oggetti fortemente tipizzati usando le parole chiave del linguaggio e gli operatori comuni.</span><span class="sxs-lookup"><span data-stu-id="c6743-107">You write queries against strongly typed collections of objects by using language keywords and familiar operators.</span></span>  
   
- È possibile scrivere query LINQ in Visual Basic per database SQL Server, documenti XML, DataSet ADO.NET e qualsiasi raccolta di oggetti che supporta <xref:System.Collections.IEnumerable>o generica <xref:System.Collections.Generic.IEnumerable%601>interfaccia.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.IEnumerable> Supporto per LINQ viene anche fornito da terze parti per molti servizi Web e altre implementazioni di database.  
+ <span data-ttu-id="c6743-108">È possibile scrivere query LINQ in Visual Basic per database SQL Server, documenti XML, set di dati ADO.NET e qualsiasi raccolta di oggetti che supporta <xref:System.Collections.IEnumerable> o il generico <xref:System.Collections.Generic.IEnumerable%601> interfaccia.</span><span class="sxs-lookup"><span data-stu-id="c6743-108">You can write LINQ queries in Visual Basic for SQL Server databases, XML documents, ADO.NET Datasets, and any collection of objects that supports <xref:System.Collections.IEnumerable> or the generic <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="c6743-109">Il supporto per LINQ viene anche offerto da terze parti per numerosi servizi Web e altre implementazioni di database.</span><span class="sxs-lookup"><span data-stu-id="c6743-109">LINQ support is also provided by third parties for many Web services and other database implementations.</span></span>  
   
- È possibile utilizzare le query LINQ nei nuovi progetti o insieme alle query LINQ non nei progetti esistenti. L'unico requisito è che il progetto è destinato a .NET Framework 3.5 o versione successiva.  
+ <span data-ttu-id="c6743-110">È possibile usare le query LINQ nei nuovi progetti o insieme alle query non LINQ nei progetti esistenti.</span><span class="sxs-lookup"><span data-stu-id="c6743-110">You can use LINQ queries in new projects, or alongside non-LINQ queries in existing projects.</span></span> <span data-ttu-id="c6743-111">L'unico requisito è che il progetto sia destinato a .NET Framework 3.5 o versione successiva.</span><span class="sxs-lookup"><span data-stu-id="c6743-111">The only requirement is that the project target .NET Framework 3.5 or later.</span></span>  
   
- Da Visual Studio nella figura seguente mostra una query LINQ parzialmente completata per un database di SQL Server in c# e Visual Basic con controllo completo del tipo e il supporto IntelliSense.  
+ <span data-ttu-id="c6743-112">Nella figura seguente presa da Visual Studio viene illustrata una query LINQ parzialmente completata per un database di SQL Server in C# e Visual Basic con controllo completo del tipo e supporto IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="c6743-112">The following illustration from Visual Studio shows a partially-completed LINQ query against a SQL Server database in both C# and Visual Basic with full type checking and IntelliSense support.</span></span>  
   
- ![Query LINQ con Intellisense](../../../../csharp/programming-guide/concepts/linq/media/query_intell.png "Query_Intell")  
+ <span data-ttu-id="c6743-113">![Query LINQ con Intellisense](../../../../csharp/programming-guide/concepts/linq/media/query_intell.png "Query_Intell")</span><span class="sxs-lookup"><span data-stu-id="c6743-113">![LINQ query with Intellisense](../../../../csharp/programming-guide/concepts/linq/media/query_intell.png "Query_Intell")</span></span>  
   
-## <a name="next-steps"></a>Passaggi successivi  
- Per ulteriori informazioni su LINQ, iniziare ad acquisire dimestichezza con alcuni concetti di base nella sezione Introduzione [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), e quindi leggere la documentazione per la tecnologia LINQ in cui si è interessati:  
+## <a name="next-steps"></a><span data-ttu-id="c6743-114">Passaggi successivi</span><span class="sxs-lookup"><span data-stu-id="c6743-114">Next Steps</span></span>  
+ <span data-ttu-id="c6743-115">Per ulteriori informazioni su LINQ, iniziare ad acquisire familiarità con alcuni concetti di base nella sezione Introduzione [Introduzione a LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), e quindi leggere la documentazione per la tecnologia LINQ in cui si è interessati:</span><span class="sxs-lookup"><span data-stu-id="c6743-115">To learn more details about LINQ, start by becoming familiar with some basic concepts in the Getting Started section [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), and then read the documentation for the LINQ technology in which you are interested:</span></span>  
   
--   Database di SQL Server: [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+-   <span data-ttu-id="c6743-116">Database SQL Server: [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)</span><span class="sxs-lookup"><span data-stu-id="c6743-116">SQL Server databases: [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)</span></span>  
   
--   Documenti XML: [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+-   <span data-ttu-id="c6743-117">Documenti XML: [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)</span><span class="sxs-lookup"><span data-stu-id="c6743-117">XML documents: [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)</span></span>  
   
--   Set di dati ADO.NET: [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)  
+-   <span data-ttu-id="c6743-118">Set di dati ADO.NET: [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)</span><span class="sxs-lookup"><span data-stu-id="c6743-118">ADO.NET Datasets: [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)</span></span>  
   
--   Insiemi .NET, file, stringhe e così via: [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+-   <span data-ttu-id="c6743-119">Raccolte di .NET, file, stringhe e così via: [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)</span><span class="sxs-lookup"><span data-stu-id="c6743-119">.NET collections, files, strings and so on: [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a><span data-ttu-id="c6743-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c6743-120">See Also</span></span>  
+ [<span data-ttu-id="c6743-121">LINQ (Language-Integrated Query) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c6743-121">Language-Integrated Query (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/index.md)

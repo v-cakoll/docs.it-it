@@ -1,51 +1,56 @@
 ---
-title: "How to: Distinguish Between Clicks and Double-Clicks | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "mouse, click"
-  - "mouse, double-click"
-  - "mouse clicks, single versus double"
+title: 'Procedura: distinguere tra clic e doppio clic'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- mouse [Windows Forms], click
+- mouse [Windows Forms], double-click
+- mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9b407f7c00454b0a14b4c90694d015b38ffd72ef
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# How to: Distinguish Between Clicks and Double-Clicks
-In genere, un singolo *clic* avvia un'azione dell'interfaccia utente e un *doppio clic* estende l'azione.  Ad esempio, un solo clic consente in genere di scegliere un elemento e un doppio clic consente di modificare l'elemento selezionato.  Gli eventi Click in Windows Form, tuttavia, non si adattano facilmente a uno scenario in cui un clic e un doppio clic eseguono azioni incompatibili, perché un'azione associata all'evento <xref:System.Windows.Forms.Control.Click> o <xref:System.Windows.Forms.Control.MouseClick> viene eseguito prima dell'azione collegata all'evento <xref:System.Windows.Forms.Control.DoubleClick> o <xref:System.Windows.Forms.Control.MouseDoubleClick>.  Questo argomento illustra due soluzioni a questo problema.  Una soluzione consiste nel gestire l'evento di doppio clic e ripristinare le azioni nella gestione dell'evento Click.  In rare situazioni potrebbe essere necessario simulare un comportamento di clic e doppio clic gestendo l'evento <xref:System.Windows.Forms.Control.MouseDown> e usando le proprietà <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> e <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> della classe <xref:System.Windows.Forms.SystemInformation>.  A questo punto, si misura l'intervallo trascorso tra un clic e l'altro e, se viene eseguito un secondo clic prima che venga raggiunto il valore di <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> all'interno di un rettangolo definito da <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, eseguire l'azione di doppio clic; in caso contrario, eseguire l'azione di clic.  
+# <a name="how-to-distinguish-between-clicks-and-double-clicks"></a><span data-ttu-id="3f767-102">Procedura: distinguere tra clic e doppio clic</span><span class="sxs-lookup"><span data-stu-id="3f767-102">How to: Distinguish Between Clicks and Double-Clicks</span></span>
+<span data-ttu-id="3f767-103">In genere, un singolo *clic* avvia un'azione dell'interfaccia utente e un *doppio clic* estende l'azione.</span><span class="sxs-lookup"><span data-stu-id="3f767-103">Typically, a single *click* initiates a user interface (UI) action and a *double-click* extends the action.</span></span> <span data-ttu-id="3f767-104">Ad esempio, un solo clic consente in genere di scegliere un elemento e un doppio clic consente di modificare l'elemento selezionato.</span><span class="sxs-lookup"><span data-stu-id="3f767-104">For example, one click usually selects an item, and a double-click edits the selected item.</span></span> <span data-ttu-id="3f767-105">Gli eventi Click in Windows Form, tuttavia, non si adattano facilmente a uno scenario in cui un clic e un doppio clic eseguono azioni incompatibili, perché un'azione associata all'evento <xref:System.Windows.Forms.Control.Click> o <xref:System.Windows.Forms.Control.MouseClick> viene eseguito prima dell'azione collegata all'evento <xref:System.Windows.Forms.Control.DoubleClick> o <xref:System.Windows.Forms.Control.MouseDoubleClick>.</span><span class="sxs-lookup"><span data-stu-id="3f767-105">However, the Windows Forms click events do not easily accommodate a scenario where a click and a double-click perform incompatible actions, because an action tied to the <xref:System.Windows.Forms.Control.Click> or <xref:System.Windows.Forms.Control.MouseClick> event is performed before the action tied to the <xref:System.Windows.Forms.Control.DoubleClick> or <xref:System.Windows.Forms.Control.MouseDoubleClick> event.</span></span> <span data-ttu-id="3f767-106">Questo argomento illustra due soluzioni a questo problema.</span><span class="sxs-lookup"><span data-stu-id="3f767-106">This topic demonstrates two solutions to this problem.</span></span> <span data-ttu-id="3f767-107">Una soluzione consiste nel gestire l'evento di doppio clic e ripristinare le azioni nella gestione dell'evento Click.</span><span class="sxs-lookup"><span data-stu-id="3f767-107">One solution is to handle the double-click event and roll back the actions in the handling of the click event.</span></span> <span data-ttu-id="3f767-108">In rare situazioni potrebbe essere necessario simulare un comportamento di clic e doppio clic gestendo l'evento <xref:System.Windows.Forms.Control.MouseDown> e usando le proprietà <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> e <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> della classe <xref:System.Windows.Forms.SystemInformation>.</span><span class="sxs-lookup"><span data-stu-id="3f767-108">In rare situations you may need to simulate click and double-click behavior by handling the <xref:System.Windows.Forms.Control.MouseDown> event and by using the <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> and <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> properties of the <xref:System.Windows.Forms.SystemInformation> class.</span></span> <span data-ttu-id="3f767-109">A questo punto, si misura l'intervallo trascorso tra un clic e l'altro e, se viene eseguito un secondo clic prima che venga raggiunto il valore di <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> all'interno di un rettangolo definito da <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, eseguire l'azione di doppio clic; in caso contrario, eseguire l'azione di clic.</span><span class="sxs-lookup"><span data-stu-id="3f767-109">You measure the time between clicks and if a second click occurs before the value of <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> is reached and the click is within a rectangle defined by <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, perform the double-click action; otherwise, perform the click action.</span></span>  
   
-### Per eseguire il rollback di un'azione di clic  
+### <a name="to-roll-back-a-click-action"></a><span data-ttu-id="3f767-110">Per eseguire il rollback di un'azione di clic</span><span class="sxs-lookup"><span data-stu-id="3f767-110">To roll back a click action</span></span>  
   
--   Assicurarsi che il controllo con cui si lavora disponga del comportamento standard di doppio clic.  In caso contrario, abilitare il controllo con il metodo <xref:System.Windows.Forms.Control.SetStyle%2A>.  Gestire l'evento di doppio clic ed eseguire il rollback dell'azione di clic, nonché dell'azione di doppio clic.  L'esempio di codice seguente illustra come creare un pulsante personalizzato con doppio clic abilitato, nonché come eseguire il rollback dell'azione di clic nel codice di gestione dell'evento di doppio clic.  
+-   <span data-ttu-id="3f767-111">Assicurarsi che il controllo con cui si lavora disponga del comportamento standard di doppio clic.</span><span class="sxs-lookup"><span data-stu-id="3f767-111">Ensure that the control you are working with has standard double-click behavior.</span></span> <span data-ttu-id="3f767-112">In caso contrario, abilitare il controllo con il metodo <xref:System.Windows.Forms.Control.SetStyle%2A>.</span><span class="sxs-lookup"><span data-stu-id="3f767-112">If not, enable the control with the <xref:System.Windows.Forms.Control.SetStyle%2A> method.</span></span> <span data-ttu-id="3f767-113">Gestire l'evento di doppio clic ed eseguire il rollback dell'azione di clic, nonché dell'azione di doppio clic.</span><span class="sxs-lookup"><span data-stu-id="3f767-113">Handle the double-click event and roll back the click action as well as the double-click action.</span></span> <span data-ttu-id="3f767-114">L'esempio di codice seguente illustra come creare un pulsante personalizzato con doppio clic abilitato, nonché come eseguire il rollback dell'azione di clic nel codice di gestione dell'evento di doppio clic.</span><span class="sxs-lookup"><span data-stu-id="3f767-114">The following code example demonstrates a how to create a custom button with double-click enabled, as well as how to roll back the click action in the double-click event handling code.</span></span>  
   
      [!code-csharp[System.Windows.Forms.ButtonDoubleClick#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ButtonDoubleClick/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ButtonDoubleClick#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ButtonDoubleClick/VB/Form1.vb#1)]  
   
-### Per distinguere tra clic nell'evento MouseDown  
+### <a name="to-distinguish-between-clicks-in-the-mousedown-event"></a><span data-ttu-id="3f767-115">Per distinguere tra clic nell'evento MouseDown</span><span class="sxs-lookup"><span data-stu-id="3f767-115">To distinguish between clicks in the MouseDown event</span></span>  
   
--   Gestire l'evento <xref:System.Windows.Forms.Control.MouseDown> e determinare la posizione e l'intervallo tra i clic usando le proprietà <xref:System.Windows.Forms.SystemInformation> appropriate e un componente <xref:System.Windows.Forms.Timer>.  Eseguire l'azione appropriata a seconda che venga eseguito un clic o un doppio clic.  Nell'esempio di codice seguente viene illustrato come procedere.  
+-   <span data-ttu-id="3f767-116">Gestire l'evento <xref:System.Windows.Forms.Control.MouseDown> e determinare la posizione e l'intervallo tra i clic usando le proprietà <xref:System.Windows.Forms.SystemInformation> appropriate e un componente <xref:System.Windows.Forms.Timer>.</span><span class="sxs-lookup"><span data-stu-id="3f767-116">Handle the <xref:System.Windows.Forms.Control.MouseDown> event and determine the location and time span between clicks using the appropriate <xref:System.Windows.Forms.SystemInformation> properties and a <xref:System.Windows.Forms.Timer> component.</span></span> <span data-ttu-id="3f767-117">Eseguire l'azione appropriata a seconda che venga eseguito un clic o un doppio clic.</span><span class="sxs-lookup"><span data-stu-id="3f767-117">Perform the appropriate action depending on whether a click or double-click takes place.</span></span> <span data-ttu-id="3f767-118">Nell'esempio di codice seguente viene illustrato come procedere.</span><span class="sxs-lookup"><span data-stu-id="3f767-118">The following code example demonstrates how this can be done.</span></span>  
   
      [!code-cpp[System.Windows.Forms.SingleVersusDoubleClick#0](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SingleVersusDoubleClick/cpp/form1.cpp#0)]
      [!code-csharp[System.Windows.Forms.SingleVersusDoubleClick#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SingleVersusDoubleClick/CS/form1.cs#0)]
      [!code-vb[System.Windows.Forms.SingleVersusDoubleClick#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SingleVersusDoubleClick/VB/form1.vb#0)]  
   
-## Compilazione del codice  
- Gli esempi presentano i requisiti seguenti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="3f767-119">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="3f767-119">Compiling the Code</span></span>  
+ <span data-ttu-id="3f767-120">Gli esempi presentano i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="3f767-120">These examples require:</span></span>  
   
--   Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.  
+-   <span data-ttu-id="3f767-121">Riferimenti agli assembly System, System.Drawing e System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="3f767-121">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- Per informazioni sulla compilazione di questi esempi dalla riga di comando per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], vedere [Compilazione dalla riga di comando](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) o [Compilazione dalla riga di comando con csc.exe](../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  È anche possibile compilare questi esempi in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] incollando il codice in nuovi progetti.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ <span data-ttu-id="3f767-122">Per informazioni sulla compilazione di questi esempi dalla riga di comando per [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], vedere [Compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Compilazione dalla riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="3f767-122">For information about building these examples from the command line for [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="3f767-123">È anche possibile compilare questi esempi in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] incollando il codice in nuovi progetti.</span><span class="sxs-lookup"><span data-stu-id="3f767-123">You can also build these examples in [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] by pasting the code into new projects.</span></span>  <span data-ttu-id="3f767-124">Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Forms completo con Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="3f767-124">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## Vedere anche  
- [Mouse Input in a Windows Forms Application](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a><span data-ttu-id="3f767-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3f767-125">See Also</span></span>  
+ [<span data-ttu-id="3f767-126">Input del mouse in un'applicazione Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3f767-126">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

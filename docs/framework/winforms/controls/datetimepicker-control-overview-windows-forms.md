@@ -1,38 +1,38 @@
 ---
-title: "Cenni preliminari sul controllo DateTimePicker (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DateTimePicker"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli selezione data e ora"
-  - "DateTimePicker (controllo) [Windows Form], informazioni"
+title: Cenni preliminari sul controllo DateTimePicker (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DateTimePicker
+helpviewer_keywords:
+- DateTimePicker control [Windows Forms], about
+- date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a97eecc43614c84867e9dbdd527dbebd7dfd426e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul controllo DateTimePicker (Windows Form)
-Il controllo <xref:System.Windows.Forms.DateTimePicker> Windows Form consente di selezionare un singolo elemento da un elenco di date o ore.  Quando viene utilizzato per rappresentare una data, viene visualizzato in due parti: un elenco a discesa con data in forma di testo e una griglia visualizzata quando si fa clic sulla freccia di selezione accanto all'elenco.  La griglia è simile a quella del controllo <xref:System.Windows.Forms.MonthCalendar>, che può essere utilizzato per la selezione di più date.  Per ulteriori informazioni sul controllo <xref:System.Windows.Forms.MonthCalendar>, vedere [Cenni preliminari sul controllo MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).  
+# <a name="datetimepicker-control-overview-windows-forms"></a><span data-ttu-id="be444-102">Cenni preliminari sul controllo DateTimePicker (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="be444-102">DateTimePicker Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="be444-103">Windows Form <xref:System.Windows.Forms.DateTimePicker> controllo consente all'utente di selezionare un singolo elemento da un elenco di date o ore.</span><span class="sxs-lookup"><span data-stu-id="be444-103">The Windows Forms <xref:System.Windows.Forms.DateTimePicker> control allows the user to select a single item from a list of dates or times.</span></span> <span data-ttu-id="be444-104">Quando utilizzato per rappresentare una data, viene visualizzato in due parti: un elenco a discesa con una data rappresentata in testo e una griglia in cui viene visualizzata quando si fa clic su freccia in giù accanto all'elenco.</span><span class="sxs-lookup"><span data-stu-id="be444-104">When used to represent a date, it appears in two parts: a drop-down list with a date represented in text, and a grid that appears when you click on the down-arrow next to the list.</span></span> <span data-ttu-id="be444-105">Aspetto della griglia di <xref:System.Windows.Forms.MonthCalendar> controllo, che può essere utilizzato per la selezione di più date.</span><span class="sxs-lookup"><span data-stu-id="be444-105">The grid looks like the <xref:System.Windows.Forms.MonthCalendar> control, which can be used for selecting multiple dates.</span></span> <span data-ttu-id="be444-106">Per ulteriori informazioni sul <xref:System.Windows.Forms.MonthCalendar> di controllo, vedere [Cenni preliminari sul controllo MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="be444-106">For more information on the <xref:System.Windows.Forms.MonthCalendar> control, see [MonthCalendar Control Overview](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md).</span></span>  
   
-## Proprietà principali  
- Se si desidera che il controllo <xref:System.Windows.Forms.DateTimePicker> venga visualizzato come un controllo per la selezione o la modifica di ore anziché di date, impostare la proprietà <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> su `true` e la proprietà <xref:System.Windows.Forms.DateTimePicker.Format%2A> su <xref:System.Windows.Forms.DateTimePickerFormat>.  Per ulteriori informazioni, vedere [Procedura: visualizzare l'ora con il controllo DateTimePicker](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).  
+## <a name="key-properties"></a><span data-ttu-id="be444-107">Proprietà chiave</span><span class="sxs-lookup"><span data-stu-id="be444-107">Key Properties</span></span>  
+ <span data-ttu-id="be444-108">Se si desidera il <xref:System.Windows.Forms.DateTimePicker> venga visualizzato come un controllo per la selezione o la modifica di ore anziché date, impostare il <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> proprietà `true` e <xref:System.Windows.Forms.DateTimePicker.Format%2A> proprietà <xref:System.Windows.Forms.DateTimePickerFormat.Time>.</span><span class="sxs-lookup"><span data-stu-id="be444-108">If you wish the <xref:System.Windows.Forms.DateTimePicker> to appear as a control for picking or editing times instead of dates, set the <xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A> property to `true` and the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property to <xref:System.Windows.Forms.DateTimePickerFormat.Time>.</span></span> <span data-ttu-id="be444-109">Per ulteriori informazioni vedere [come: tempo di visualizzazione con il controllo DateTimePicker](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).</span><span class="sxs-lookup"><span data-stu-id="be444-109">For more information see [How to: Display Time with the DateTimePicker Control](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).</span></span>  
   
- Quando la proprietà <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> è impostata su `true`, nel controllo viene visualizzata una casella di controllo accanto alla data selezionata.  Quando la casella di controllo viene selezionata, è possibile aggiornare il valore data\-ora selezionato.  Quando la casella di controllo è deselezionata, il valore risulta non disponibile.  
+ <span data-ttu-id="be444-110">Quando il <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> è impostata su `true`, viene visualizzata una casella di controllo accanto alla data selezionata nel controllo.</span><span class="sxs-lookup"><span data-stu-id="be444-110">When the <xref:System.Windows.Forms.DateTimePicker.ShowCheckBox%2A> property is set to `true`, a check box is displayed next to the selected date in the control.</span></span> <span data-ttu-id="be444-111">Se la casella di controllo è selezionata, il valore di data e ora selezionato può essere aggiornato.</span><span class="sxs-lookup"><span data-stu-id="be444-111">When the check box is checked, the selected date-time value can be updated.</span></span> <span data-ttu-id="be444-112">Quando la casella di controllo è vuota, viene visualizzato il valore non disponibile.</span><span class="sxs-lookup"><span data-stu-id="be444-112">When the check box is empty, the value appears unavailable.</span></span>  
   
- Le proprietà <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> e <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> del controllo determinano l'intervallo di date e ore.  La proprietà <xref:System.Windows.Forms.DateTimePicker.Value%2A> contiene la data e l'ora correnti di impostazione del controllo.  Per informazioni dettagliate, vedere [Procedura: impostare e restituire date con il controllo DateTimePicker Windows Form](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md).  I valori possono essere visualizzati in quattro formati, impostati dalla proprietà <xref:System.Windows.Forms.DateTimePicker.Format%2A>: <xref:System.Windows.Forms.DateTimePickerFormat>, <xref:System.Windows.Forms.DateTimePickerFormat>, <xref:System.Windows.Forms.DateTimePickerFormat> o <xref:System.Windows.Forms.DateTimePickerFormat>.  Se viene selezionato un formato personalizzato, è necessario impostare la proprietà <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> su una stringa appropriata.  Per informazioni dettagliate, vedere [Procedura: visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).  
+ <span data-ttu-id="be444-113">Il controllo <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> e <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> determinano l'intervallo di date e ore.</span><span class="sxs-lookup"><span data-stu-id="be444-113">The control's <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> and <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> properties determine the range of dates and times.</span></span> <span data-ttu-id="be444-114">Il <xref:System.Windows.Forms.DateTimePicker.Value%2A> proprietà contiene la data corrente e l'ora di impostare per il controllo.</span><span class="sxs-lookup"><span data-stu-id="be444-114">The <xref:System.Windows.Forms.DateTimePicker.Value%2A> property contains the current date and time the control is set to.</span></span> <span data-ttu-id="be444-115">Per informazioni dettagliate, vedere [procedura: impostare e restituire date con il controllo DateTimePicker di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md).</span><span class="sxs-lookup"><span data-stu-id="be444-115">For details, see [How to: Set and Return Dates with the Windows Forms DateTimePicker Control](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md).</span></span> <span data-ttu-id="be444-116">I valori possono essere visualizzati in quattro formati, che vengono impostati dal <xref:System.Windows.Forms.DateTimePicker.Format%2A> proprietà: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>, o <xref:System.Windows.Forms.DateTimePickerFormat.Custom>.</span><span class="sxs-lookup"><span data-stu-id="be444-116">The values can be displayed in four formats, which are set by the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>, or <xref:System.Windows.Forms.DateTimePickerFormat.Custom>.</span></span> <span data-ttu-id="be444-117">Se si seleziona un formato personalizzato, è necessario impostare il <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> proprietà su una stringa appropriata.</span><span class="sxs-lookup"><span data-stu-id="be444-117">If a custom format is selected, you must set the <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> property to an appropriate string.</span></span> <span data-ttu-id="be444-118">Per informazioni dettagliate, vedere [procedura: visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).</span><span class="sxs-lookup"><span data-stu-id="be444-118">For details, see [How to: Display a Date in a Custom Format with the Windows Forms DateTimePicker Control](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).</span></span>  
   
-## Vedere anche  
- [Procedura: visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)   
- [Procedura: impostare e restituire date con il controllo DateTimePicker Windows Form](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+## <a name="see-also"></a><span data-ttu-id="be444-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="be444-119">See Also</span></span>  
+ [<span data-ttu-id="be444-120">Procedura: Visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form</span><span class="sxs-lookup"><span data-stu-id="be444-120">How to: Display a Date in a Custom Format with the Windows Forms DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
+ [<span data-ttu-id="be444-121">Procedura: Impostare e restituire date con il controllo DateTimePicker di Windows Form</span><span class="sxs-lookup"><span data-stu-id="be444-121">How to: Set and Return Dates with the Windows Forms DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

@@ -1,74 +1,84 @@
 ---
-title: "&lt;issuerTokenResolver&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;issuerTokenResolver&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
-caps.latest.revision: 9
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 02e2beb285cb0c4d88f98c3155ab5a3ff5e31e0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;issuerTokenResolver&gt;
-Registra il resolver del token emittente utilizzato dai gestori dell'insieme di gestore del token.  Resolver del token emittente viene utilizzato per risolvere il token di firma di token in arrivo e messaggi.  
+# <a name="ltissuertokenresolvergt"></a><span data-ttu-id="af4f0-102">&lt;issuerTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="af4f0-102">&lt;issuerTokenResolver&gt;</span></span>
+<span data-ttu-id="af4f0-103">Registra il resolver del token dell'autorità di certificazione che viene utilizzato dai gestori nella raccolta di gestori di token.</span><span class="sxs-lookup"><span data-stu-id="af4f0-103">Registers the issuer token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="af4f0-104">Il resolver del token dell'autorità di certificazione viene utilizzato per risolvere il token di firma di token in arrivo e messaggi.</span><span class="sxs-lookup"><span data-stu-id="af4f0-104">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="af4f0-105">\<System. IdentityModel ></span><span class="sxs-lookup"><span data-stu-id="af4f0-105">\<system.identityModel></span></span>  
+<span data-ttu-id="af4f0-106">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="af4f0-106">\<identityConfiguration></span></span>  
+<span data-ttu-id="af4f0-107">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="af4f0-107">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="af4f0-108">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="af4f0-108">\<securityTokenHandlerConfiguration></span></span>  
+<span data-ttu-id="af4f0-109">\<issuerTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="af4f0-109">\<issuerTokenResolver></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="af4f0-110">Sintassi</span><span class="sxs-lookup"><span data-stu-id="af4f0-110">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration>  
-        <issuerTokenResolver type=xs:string>  
-        </issuerTokenResolver>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration>  
+        <issuerTokenResolver type=xs:string>  
+        </issuerTokenResolver>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="af4f0-111">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="af4f0-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="af4f0-112">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="af4f0-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="af4f0-113">Attributi</span><span class="sxs-lookup"><span data-stu-id="af4f0-113">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="af4f0-114">Attributo</span><span class="sxs-lookup"><span data-stu-id="af4f0-114">Attribute</span></span>|<span data-ttu-id="af4f0-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="af4f0-115">Description</span></span>|  
 |---------------|-----------------|  
-|type|Specifica il tipo di resolver del token dell'emittente.  Deve essere il <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe o un tipo che deriva dal <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe.  Per ulteriori informazioni su come specificare il `type` di attributo, vedere [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences).  Obbligatorio.|  
+|<span data-ttu-id="af4f0-116">tipo</span><span class="sxs-lookup"><span data-stu-id="af4f0-116">type</span></span>|<span data-ttu-id="af4f0-117">Specifica il tipo di resolver del token dell'autorità di certificazione.</span><span class="sxs-lookup"><span data-stu-id="af4f0-117">Specifies the type of the issuer token resolver.</span></span> <span data-ttu-id="af4f0-118">Deve essere il <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe o un tipo che deriva dalla <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe.</span><span class="sxs-lookup"><span data-stu-id="af4f0-118">Must be either the <xref:System.IdentityModel.Tokens.IssuerTokenResolver> class or a type that derives from the <xref:System.IdentityModel.Tokens.IssuerTokenResolver> class.</span></span> <span data-ttu-id="af4f0-119">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="af4f0-119">Required.</span></span>|  
   
-### Elementi figlio  
- Nessuno  
+### <a name="child-elements"></a><span data-ttu-id="af4f0-120">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="af4f0-120">Child Elements</span></span>  
+ <span data-ttu-id="af4f0-121">None</span><span class="sxs-lookup"><span data-stu-id="af4f0-121">None</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="af4f0-122">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="af4f0-122">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per un insieme di protezione gestori dei token.|  
+|<span data-ttu-id="af4f0-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="af4f0-123">Element</span></span>|<span data-ttu-id="af4f0-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="af4f0-124">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="af4f0-125">\<securityTokenHandlerConfiguration ></span><span class="sxs-lookup"><span data-stu-id="af4f0-125">\<securityTokenHandlerConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|<span data-ttu-id="af4f0-126">Fornisce la configurazione per una raccolta di sicurezza gestori di token.</span><span class="sxs-lookup"><span data-stu-id="af4f0-126">Provides configuration for a collection of security token handlers.</span></span>|  
   
-## Note  
- Resolver del token emittente viene utilizzato per risolvere il token di firma di token in arrivo e messaggi.  Esso viene utilizzato per recuperare il materiale di crittografia utilizzato per la verifica della firma.  È necessario specificare il `type` attributo.  Il tipo specificato può essere rappresentato da <xref:System.IdentityModel.Tokens.IssuerTokenResolver> o un tipo personalizzato che deriva dal <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe.  
+## <a name="remarks"></a><span data-ttu-id="af4f0-127">Note</span><span class="sxs-lookup"><span data-stu-id="af4f0-127">Remarks</span></span>  
+ <span data-ttu-id="af4f0-128">Il resolver del token dell'autorità di certificazione viene utilizzato per risolvere il token di firma di token in arrivo e messaggi.</span><span class="sxs-lookup"><span data-stu-id="af4f0-128">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span> <span data-ttu-id="af4f0-129">Consente di recuperare il materiale di crittografia che viene utilizzato per controllare la firma.</span><span class="sxs-lookup"><span data-stu-id="af4f0-129">It is used to retrieve the cryptographic material that is used for checking the signature.</span></span> <span data-ttu-id="af4f0-130">È necessario specificare il `type` attributo.</span><span class="sxs-lookup"><span data-stu-id="af4f0-130">You must specify the `type` attribute.</span></span> <span data-ttu-id="af4f0-131">Il tipo specificato può essere <xref:System.IdentityModel.Tokens.IssuerTokenResolver> o un tipo personalizzato da cui deriva il <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe.</span><span class="sxs-lookup"><span data-stu-id="af4f0-131">The type specified can be either <xref:System.IdentityModel.Tokens.IssuerTokenResolver> or a custom type that derives from the <xref:System.IdentityModel.Tokens.IssuerTokenResolver> class.</span></span>  
   
- Alcuni gestori token consentono di specificare le impostazioni del resolver del token emittente nella configurazione.  Le impostazioni sui singoli gestori token sostituiscono quelli specificati per l'insieme del gestore del token di protezione.  
+ <span data-ttu-id="af4f0-132">Alcuni gestori di token consentono di specificare le impostazioni di resolver del token dell'autorità di certificazione nella configurazione.</span><span class="sxs-lookup"><span data-stu-id="af4f0-132">Some token handlers allow you to specify issuer token resolver settings in configuration.</span></span> <span data-ttu-id="af4f0-133">Le impostazioni ai gestori di token singoli sostituiscono quelle specificate nella raccolta di gestore del token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="af4f0-133">Settings on individual token handlers override those specified on the security token handler collection.</span></span>  
   
 > [!NOTE]
->  Specifica il `<issuerTokenResolver>` come un elemento figlio dell'elemento di [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento è stato dichiarato obsoleto, ma è ancora supportata per compatibilità con le versioni precedenti.  Le impostazioni di `<securityTokenHandlerConfiguration>` elemento eseguire l'override di quelle sul `<identityConfiguration>` elemento.  
+>  <span data-ttu-id="af4f0-134">Specifica il `<issuerTokenResolver>` come un elemento figlio dell'elemento di [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento è stato deprecato, ma è ancora supportato per compatibilità con le versioni precedenti.</span><span class="sxs-lookup"><span data-stu-id="af4f0-134">Specifying the `<issuerTokenResolver>` element as a child element of the [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) element has been deprecated, but is still supported for backward compatibility.</span></span> <span data-ttu-id="af4f0-135">Impostazioni di `<securityTokenHandlerConfiguration>` elemento prevalgono su quelle nel `<identityConfiguration>` elemento.</span><span class="sxs-lookup"><span data-stu-id="af4f0-135">Settings on the `<securityTokenHandlerConfiguration>` element override those on the `<identityConfiguration>` element.</span></span>  
   
-## Esempio  
- Il file XML riportato di seguito mostra la configurazione per un resolver del token emittente che si basa su una classe personalizzata che deriva da <xref:System.IdentityModel.Tokens.IssuerTokenResolver>.  Resolver del token mantiene un dizionario delle coppie di chiavi pubblico inizializzata da un elemento di configurazione personalizzato \(`<AddAudienceKeyPair>`\) definite per la classe.  L'override della classe di <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> metodo per elaborare questo elemento.  L'override è illustrato nell'esempio riportato di seguito; Tuttavia, i metodi di chiamata non vengono visualizzati per ragioni di brevità.  Per un esempio completo, vedere la `CustomToken` campione.  
+## <a name="example"></a><span data-ttu-id="af4f0-136">Esempio</span><span class="sxs-lookup"><span data-stu-id="af4f0-136">Example</span></span>  
+ <span data-ttu-id="af4f0-137">Il codice XML seguente mostra la configurazione per un resolver del token dell'autorità di certificazione basata su una classe personalizzata che deriva da <xref:System.IdentityModel.Tokens.IssuerTokenResolver>.</span><span class="sxs-lookup"><span data-stu-id="af4f0-137">The following XML shows configuration for an issuer token resolver that is based on a custom class that derives from <xref:System.IdentityModel.Tokens.IssuerTokenResolver>.</span></span> <span data-ttu-id="af4f0-138">Il resolver del token gestisce un dizionario di coppie di chiavi di gruppo di destinatari che viene inizializzato da un elemento di configurazione personalizzato (`<AddAudienceKeyPair>`) definito per la classe.</span><span class="sxs-lookup"><span data-stu-id="af4f0-138">The token resolver maintains a dictionary of audience-key pairs that is initialized from a custom configuration element (`<AddAudienceKeyPair>`) defined for the class.</span></span> <span data-ttu-id="af4f0-139">La classe esegue l'override di <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> metodo per l'elaborazione di questo elemento.</span><span class="sxs-lookup"><span data-stu-id="af4f0-139">The class overrides the <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> method to process this element.</span></span> <span data-ttu-id="af4f0-140">La sostituzione è illustrata nell'esempio riportato di seguito; Tuttavia, i metodi che chiama non vengono visualizzati per motivi di brevità.</span><span class="sxs-lookup"><span data-stu-id="af4f0-140">The override is shown in the following example; however, the methods it calls are not shown for brevity.</span></span> <span data-ttu-id="af4f0-141">Per un esempio completo, vedere il `CustomToken` esempio.</span><span class="sxs-lookup"><span data-stu-id="af4f0-141">For the complete example, see the `CustomToken` sample.</span></span>  
   
-```  
+```xml  
 <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  
   <AddAudienceKeyPair  symmetricKey="wAVkldQiFypTQ+kdNdGWCYCHRcee8XmXxOvgmak8vSY=" audience="http://localhost:19851/" />  
 </issuerTokenResolver>  
 ```  
   
-## Esempio  
+## <a name="example"></a><span data-ttu-id="af4f0-142">Esempio</span><span class="sxs-lookup"><span data-stu-id="af4f0-142">Example</span></span>  
   
 ```  
 public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)  
@@ -86,5 +96,5 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a><span data-ttu-id="af4f0-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="af4f0-143">See Also</span></span>  
  <xref:System.IdentityModel.Tokens.IssuerTokenResolver>

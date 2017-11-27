@@ -1,51 +1,49 @@
 ---
-title: "Role-Based Security | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "role-based security, about role-based security"
-  - "user authentication, principals"
-  - "principals [.NET Framework]"
-  - "security [.NET Framework], role-based"
-  - "permissions [.NET Framework], principals"
-  - "authentication [.NET Framework], principals"
-  - "role-based security, principals"
+title: Sicurezza basata sui ruoli
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- role-based security, about role-based security
+- user authentication, principals
+- principals [.NET Framework]
+- security [.NET Framework], role-based
+- permissions [.NET Framework], principals
+- authentication [.NET Framework], principals
+- role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 83a3f58fc13eb1aaacb99a3f35c3149d78451c23
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Role-Based Security
-I ruoli vengono spesso usati nelle applicazioni finanziarie o aziendali per l'applicazione dei criteri di sicurezza.  Ad esempio, è possibile che un'applicazione imponga limiti alle dimensioni della transazione in corso di elaborazione in funzione del ruolo rivestito dall'utente che effettua la richiesta.  Gli impiegati potrebbero essere autorizzati a elaborare unicamente transazioni inferiori a una determinata soglia, mentre per i supervisori il limite potrebbe essere superiore e per i vicepresidenti ancora più alto \(o addirittura assente\).  La sicurezza basata sui ruoli può anche essere usata quando un'applicazione richiede più approvazioni per completare un'operazione.  È questo ad esempio il caso di un sistema di acquisto in cui qualsiasi dipendente può generare una richiesta di acquisto, ma solo un agente di acquisto può convertire la richiesta in un ordine di acquisto da inviare a un fornitore.  
+# <a name="role-based-security"></a><span data-ttu-id="fdb3a-102">Sicurezza basata sui ruoli</span><span class="sxs-lookup"><span data-stu-id="fdb3a-102">Role-Based Security</span></span>
+<span data-ttu-id="fdb3a-103">I ruoli vengono spesso usati nelle applicazioni finanziarie o aziendali per l'applicazione dei criteri di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-103">Roles are often used in financial or business applications to enforce policy.</span></span> <span data-ttu-id="fdb3a-104">Ad esempio, è possibile che un'applicazione imponga limiti alle dimensioni della transazione in corso di elaborazione in funzione del ruolo rivestito dall'utente che effettua la richiesta.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-104">For example, an application might impose limits on the size of the transaction being processed depending on whether the user making the request is a member of a specified role.</span></span> <span data-ttu-id="fdb3a-105">Gli impiegati potrebbero essere autorizzati a elaborare unicamente transazioni inferiori a una determinata soglia, mentre per i supervisori il limite potrebbe essere superiore e per i vicepresidenti ancora più alto (o addirittura assente).</span><span class="sxs-lookup"><span data-stu-id="fdb3a-105">Clerks might have authorization to process transactions that are less than a specified threshold, supervisors might have a higher limit, and vice-presidents might have a still higher limit (or no limit at all).</span></span> <span data-ttu-id="fdb3a-106">La sicurezza basata sui ruoli può anche essere usata quando un'applicazione richiede più approvazioni per completare un'operazione.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-106">Role-based security can also be used when an application requires multiple approvals to complete an action.</span></span> <span data-ttu-id="fdb3a-107">È questo ad esempio il caso di un sistema di acquisto in cui qualsiasi dipendente può generare una richiesta di acquisto, ma solo un agente di acquisto può convertire la richiesta in un ordine di acquisto da inviare a un fornitore.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-107">Such a case might be a purchasing system in which any employee can generate a purchase request, but only a purchasing agent can convert that request into a purchase order that can be sent to a supplier.</span></span>  
   
- La sicurezza basata sui ruoli di .NET Framework supporta l'autorizzazione rendendo disponibili al thread corrente informazioni sull'entità, costruita da un'identità associata.  L'identità \(e il principale che contribuisce a definire\) può essere basata su un account Windows o essere un'identità personalizzata non correlata ad alcun account Windows.  Le applicazioni .NET Framework possono decidere in merito all'autorizzazione sulla base dell'identità del principale, dell'appartenenza a un ruolo o di entrambi i fattori.  Un ruolo è un set denominato di principali che dispongono degli stessi privilegi relativamente alla sicurezza \(ad esempio un cassiere o un direttore\).  Un principale può essere membro di uno o più ruoli.  Le applicazioni possono pertanto usare l'appartenenza ai ruoli per determinare se un principale è autorizzato a eseguire un'operazione richiesta.  
+ <span data-ttu-id="fdb3a-108">La sicurezza basata sui ruoli di .NET Framework supporta l'autorizzazione rendendo disponibili al thread corrente informazioni sull'entità, costruita da un'identità associata.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-108">.NET Framework role-based security supports authorization by making information about the principal, which is constructed from an associated identity, available to the current thread.</span></span> <span data-ttu-id="fdb3a-109">L'identità (e il principale che contribuisce a definire) può essere basata su un account Windows o essere un'identità personalizzata non correlata ad alcun account Windows.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-109">The identity (and the principal it helps to define) can be either based on a Windows account or be a custom identity unrelated to a Windows account.</span></span> <span data-ttu-id="fdb3a-110">Le applicazioni .NET Framework possono decidere in merito all'autorizzazione sulla base dell'identità del principale, dell'appartenenza a un ruolo o di entrambi i fattori.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-110">.NET Framework applications can make authorization decisions based on the principal's identity or role membership, or both.</span></span> <span data-ttu-id="fdb3a-111">Un ruolo è un set denominato di principali che dispongono degli stessi privilegi relativamente alla sicurezza (ad esempio un cassiere o un direttore).</span><span class="sxs-lookup"><span data-stu-id="fdb3a-111">A role is a named set of principals that have the same privileges with respect to security (such as a teller or a manager).</span></span> <span data-ttu-id="fdb3a-112">Un principale può essere membro di uno o più ruoli.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-112">A principal can be a member of one or more roles.</span></span> <span data-ttu-id="fdb3a-113">Le applicazioni possono pertanto usare l'appartenenza ai ruoli per determinare se un principale è autorizzato a eseguire un'operazione richiesta.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-113">Therefore, applications can use role membership to determine whether a principal is authorized to perform a requested action.</span></span>  
   
- Per garantire facilità d'uso e coerenza con la sicurezza dall'accesso di codice, la sicurezza basata sui ruoli di .NET Framework fornisce oggetti <xref:System.Security.Permissions.PrincipalPermission?displayProperty=fullName> che consentono a Common Language Runtime di eseguire l'autorizzazione in modo analogo ai controlli di sicurezza dall'accesso di codice.  La classe <xref:System.Security.Permissions.PrincipalPermission> rappresenta l'identità o il ruolo a cui il principale deve corrispondere ed è compatibile sia con i controlli di sicurezza dichiarativi che con quelli imperativi.  È anche possibile accedere direttamente alle informazioni sull'identità di un principale ed eseguire controlli di ruolo e di identità nel codice quando necessario.  
+ <span data-ttu-id="fdb3a-114">Per garantire facilità d'uso e coerenza con la sicurezza dall'accesso di codice, la sicurezza basata sui ruoli di .NET Framework fornisce oggetti <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType> che consentono a Common Language Runtime di eseguire l'autorizzazione in modo analogo ai controlli di sicurezza dall'accesso di codice.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-114">To provide ease of use and consistency with code access security, .NET Framework role-based security provides <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType> objects that enable the common language runtime to perform authorization in a way that is similar to code access security checks.</span></span> <span data-ttu-id="fdb3a-115">La classe <xref:System.Security.Permissions.PrincipalPermission> rappresenta l'identità o il ruolo a cui il principale deve corrispondere ed è compatibile sia con i controlli di sicurezza dichiarativi che con quelli imperativi.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-115">The <xref:System.Security.Permissions.PrincipalPermission> class represents the identity or role that the principal must match and is compatible with both declarative and imperative security checks.</span></span> <span data-ttu-id="fdb3a-116">È anche possibile accedere direttamente alle informazioni sull'identità di un principale ed eseguire controlli di ruolo e di identità nel codice quando necessario.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-116">You can also access a principal's identity information directly and perform role and identity checks in your code when needed.</span></span>  
   
- .NET Framework fornisce un supporto della sicurezza basata sui ruoli sufficientemente flessibile ed estendibile da rispondere alle esigenze di un'ampia gamma di applicazioni.  Si può scegliere di interagire con infrastrutture di sicurezza esistenti, quali i servizi di COM\+ 1.0, oppure creare un sistema di autenticazione personalizzato.  La sicurezza basata sui ruoli è particolarmente adatta all'uso nelle applicazioni Web ASP.NET, che vengono elaborate principalmente sul server.  La sicurezza basata sui ruoli di .NET Framework può tuttavia essere usata sia su client che su server.  
+ <span data-ttu-id="fdb3a-117">.NET Framework fornisce un supporto della sicurezza basata sui ruoli sufficientemente flessibile ed estendibile da rispondere alle esigenze di un'ampia gamma di applicazioni.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-117">The .NET Framework provides role-based security support that is flexible and extensible enough to meet the needs of a wide spectrum of applications.</span></span> <span data-ttu-id="fdb3a-118">Si può scegliere di interagire con infrastrutture di sicurezza esistenti, quali i servizi di COM+ 1.0, oppure creare un sistema di autenticazione personalizzato.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-118">You can choose to interoperate with existing authentication infrastructures, such as COM+ 1.0 Services, or to create a custom authentication system.</span></span> <span data-ttu-id="fdb3a-119">La sicurezza basata sui ruoli è particolarmente adatta all'uso nelle applicazioni Web ASP.NET, che vengono elaborate principalmente sul server.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-119">Role-based security is particularly well-suited for use in ASP.NET Web applications, which are processed primarily on the server.</span></span> <span data-ttu-id="fdb3a-120">La sicurezza basata sui ruoli di .NET Framework può tuttavia essere usata sia su client che su server.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-120">However, .NET Framework role-based security can be used on either the client or the server.</span></span>  
   
- Prima di leggere questa sezione, è importante aver compreso le nozioni esposte in [Key Security Concepts](../../../docs/standard/security/key-security-concepts.md).  
+ <span data-ttu-id="fdb3a-121">Prima di leggere questa sezione, assicurarsi di aver compreso le nozioni esposte in [concetti principali sulla sicurezza](../../../docs/standard/security/key-security-concepts.md).</span><span class="sxs-lookup"><span data-stu-id="fdb3a-121">Before reading this section, make sure that you understand the material presented in [Key Security Concepts](../../../docs/standard/security/key-security-concepts.md).</span></span>  
   
-## Argomenti correlati  
+## <a name="related-topics"></a><span data-ttu-id="fdb3a-122">Argomenti correlati</span><span class="sxs-lookup"><span data-stu-id="fdb3a-122">Related Topics</span></span>  
   
-|Titolo|Descrizione|  
-|------------|-----------------|  
-|[Principal and Identity Objects](../../../docs/standard/security/principal-and-identity-objects.md)|Illustra come configurare e gestire identità e principali sia Windows che generici.|  
-|[Key Security Concepts](../../../docs/standard/security/key-security-concepts.md)|Introduce i concetti fondamentali che è necessario comprendere prima di affrontare il tema della sicurezza di NET Framework.|  
+|<span data-ttu-id="fdb3a-123">Titolo</span><span class="sxs-lookup"><span data-stu-id="fdb3a-123">Title</span></span>|<span data-ttu-id="fdb3a-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fdb3a-124">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="fdb3a-125">Oggetti Principal e Identity</span><span class="sxs-lookup"><span data-stu-id="fdb3a-125">Principal and Identity Objects</span></span>](../../../docs/standard/security/principal-and-identity-objects.md)|<span data-ttu-id="fdb3a-126">Illustra come configurare e gestire identità e principali sia Windows che generici.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-126">Explains how to set up and manage both Windows and generic identities and principals.</span></span>|  
+|[<span data-ttu-id="fdb3a-127">Concetti chiave sulla sicurezza</span><span class="sxs-lookup"><span data-stu-id="fdb3a-127">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)|<span data-ttu-id="fdb3a-128">Introduce i concetti fondamentali che è necessario comprendere prima di affrontare il tema della sicurezza di NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fdb3a-128">Introduces fundamental concepts you must understand before using .NET Framework security.</span></span>|  
   
-## Riferimento  
- <xref:System.Security.Permissions.PrincipalPermission?displayProperty=fullName>
+## <a name="reference"></a><span data-ttu-id="fdb3a-129">Riferimento</span><span class="sxs-lookup"><span data-stu-id="fdb3a-129">Reference</span></span>  
+ <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType>

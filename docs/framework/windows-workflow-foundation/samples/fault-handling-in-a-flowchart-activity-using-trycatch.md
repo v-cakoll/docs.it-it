@@ -1,56 +1,60 @@
 ---
-title: "Gestione errori in un&#39;attivit&#224; Flowchart utilizzando TryCatch | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Gestione errori in un'attività Flowchart utilizzando TryCatch"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 490647f8ea3662f046cadecf5a97761c43b357f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Gestione errori in un&#39;attivit&#224; Flowchart utilizzando TryCatch
-In questo esempio viene illustrato come è possibile utilizzare l'attività <xref:System.Activities.Statements.TryCatch> all'interno di un'attività del flusso di controllo complessa.  
+# <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a><span data-ttu-id="7dbfd-102">Gestione errori in un'attività Flowchart utilizzando TryCatch</span><span class="sxs-lookup"><span data-stu-id="7dbfd-102">Fault Handling in a Flowchart Activity Using TryCatch</span></span>
+<span data-ttu-id="7dbfd-103">In questo esempio viene illustrato come è possibile usare l'attività <xref:System.Activities.Statements.TryCatch> all'interno di un'attività del flusso di controllo complessa.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-103">This sample shows how the <xref:System.Activities.Statements.TryCatch> activity can be used within a complex control flow activity.</span></span>  
   
- In questo esempio vengono passati un codice promozione e un numero di elementi figlio come variabili a un'attività <xref:System.Activities.Statements.Flowchart> che calcola un sconto in base a formule che corrispondono al codice di promozione.Nell'esempio è incluso codice imperativo e versioni della finestra di progettazione del flusso di lavoro dell'esempio.  
+ <span data-ttu-id="7dbfd-104">In questo esempio vengono passati un codice promozione e un numero di elementi figlio come variabili a un'attività <xref:System.Activities.Statements.Flowchart> che calcola un sconto in base a formule che corrispondono al codice di promozione.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-104">In this sample, a promotion code and number of children are passed as variables to a <xref:System.Activities.Statements.Flowchart> activity that calculates a discount based on formulae that correspond to the promotion code.</span></span> <span data-ttu-id="7dbfd-105">Nell'esempio è incluso codice imperativo e versioni della finestra di progettazione del flusso di lavoro dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-105">The sample includes imperative code and workflow designer versions of the sample.</span></span>  
   
- Nella tabella seguente sono indicate in dettaglio le variabili dell'attività `CreateFlowchartWithFaults`.  
+ <span data-ttu-id="7dbfd-106">Nella tabella seguente sono indicate in dettaglio le variabili dell'attività `CreateFlowchartWithFaults`.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-106">The following table details the variables for the `CreateFlowchartWithFaults` activity.</span></span>  
   
-|Parametri|Descrizione|  
-|---------------|-----------------|  
-|promoCode|Codice promozione.Tipo: String<br /><br /> I valori possibili con descrizione tra parentesi:<br /><br /> -   System \(Celibe\/nubile\)<br />-   MNK \(Sposato\/a senza bambini.\)<br />-   MWK \(Sposato\/a con bambini.\)|  
-|numKids|Numero di bambini.Tipo: int|  
+|<span data-ttu-id="7dbfd-107">Parametri</span><span class="sxs-lookup"><span data-stu-id="7dbfd-107">Parameters</span></span>|<span data-ttu-id="7dbfd-108">Descrizione</span><span class="sxs-lookup"><span data-stu-id="7dbfd-108">Description</span></span>|  
+|----------------|-----------------|  
+|<span data-ttu-id="7dbfd-109">promoCode</span><span class="sxs-lookup"><span data-stu-id="7dbfd-109">promoCode</span></span>|<span data-ttu-id="7dbfd-110">Codice promozione.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-110">The promotion code.</span></span> <span data-ttu-id="7dbfd-111">Tipo: String</span><span class="sxs-lookup"><span data-stu-id="7dbfd-111">Type: String</span></span><br /><br /> <span data-ttu-id="7dbfd-112">I valori possibili con descrizione tra parentesi:</span><span class="sxs-lookup"><span data-stu-id="7dbfd-112">The possible values with description in parentheses:</span></span><br /><br /> <span data-ttu-id="7dbfd-113">-Singolo (Single)</span><span class="sxs-lookup"><span data-stu-id="7dbfd-113">-   Single (Single)</span></span><br /><span data-ttu-id="7dbfd-114">-MNK (sposato / a senza bambini.)</span><span class="sxs-lookup"><span data-stu-id="7dbfd-114">-   MNK (Married with no kids.)</span></span><br /><span data-ttu-id="7dbfd-115">-Mwk (sposato / con bambini.)</span><span class="sxs-lookup"><span data-stu-id="7dbfd-115">-   MWK (Married with kids.)</span></span>|  
+|<span data-ttu-id="7dbfd-116">numKids</span><span class="sxs-lookup"><span data-stu-id="7dbfd-116">numKids</span></span>|<span data-ttu-id="7dbfd-117">Numero di bambini.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-117">The number of children.</span></span> <span data-ttu-id="7dbfd-118">Tipo: int</span><span class="sxs-lookup"><span data-stu-id="7dbfd-118">Type: int</span></span>|  
   
- L'attività `CreateFlowchartWithFaults` utilizza un'attività <xref:System.Activities.Statements.FlowSwitch%601> che passa l'argomento `promoCode` e calcola lo sconto utilizzando la formula seguente.  
+ <span data-ttu-id="7dbfd-119">L'attività `CreateFlowchartWithFaults` usa un'attività <xref:System.Activities.Statements.FlowSwitch%601> che passa l'argomento `promoCode` e calcola lo sconto usando la formula seguente.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-119">The `CreateFlowchartWithFaults` activity uses a <xref:System.Activities.Statements.FlowSwitch%601> activity that switches on the `promoCode` argument and calculates the discount using the following formula.</span></span>  
   
-|Valore di `promoCode`|Sconto \(%\)|  
-|---------------------------|------------------|  
-|Single|10|  
-|MNK|15|  
-|MWK|15 \+ \(1 – 1\/`numberOfKids`\)\*10 **Note:**  Potenzialmente, questo calcolo può generare <xref:System.DivideByZeroException>.Viene quindi eseguito il wrapping del calcolo dello sconto in un'attività <xref:System.Activities.Statements.TryCatch> che rileva l'eccezione <xref:System.DivideByZeroException> e imposta lo sconto su zero.|  
+|<span data-ttu-id="7dbfd-120">Valore di `promoCode`</span><span class="sxs-lookup"><span data-stu-id="7dbfd-120">Value of `promoCode`</span></span>|<span data-ttu-id="7dbfd-121">Sconto (%)</span><span class="sxs-lookup"><span data-stu-id="7dbfd-121">Discount (%)</span></span>|  
+|--------------------------|--------------------|  
+|<span data-ttu-id="7dbfd-122">Single</span><span class="sxs-lookup"><span data-stu-id="7dbfd-122">Single</span></span>|<span data-ttu-id="7dbfd-123">10</span><span class="sxs-lookup"><span data-stu-id="7dbfd-123">10</span></span>|  
+|<span data-ttu-id="7dbfd-124">MNK</span><span class="sxs-lookup"><span data-stu-id="7dbfd-124">MNK</span></span>|<span data-ttu-id="7dbfd-125">15</span><span class="sxs-lookup"><span data-stu-id="7dbfd-125">15</span></span>|  
+|<span data-ttu-id="7dbfd-126">MWK</span><span class="sxs-lookup"><span data-stu-id="7dbfd-126">MWK</span></span>|<span data-ttu-id="7dbfd-127">15 + (1-1 /`numberOfKids`)\*10 **Nota:** potenzialmente, questo calcolo può generare un <xref:System.DivideByZeroException>.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-127">15 + (1 – 1/`numberOfKids`)\*10 **Note:**  Potentially, this calculation can throw a <xref:System.DivideByZeroException>.</span></span> <span data-ttu-id="7dbfd-128">Viene quindi eseguito il wrapping del calcolo dello sconto in un'attività <xref:System.Activities.Statements.TryCatch> che rileva l'eccezione <xref:System.DivideByZeroException> e imposta lo sconto su zero.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-128">So, the discount calculation is wrapped in a <xref:System.Activities.Statements.TryCatch> activity that catches the <xref:System.DivideByZeroException> exception and sets the discount to zero.</span></span>|  
   
-#### Per utilizzare questo esempio  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="7dbfd-129">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="7dbfd-129">To use this sample</span></span>  
   
-1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione FlowchartWithFaultHandling.sln.  
+1.  <span data-ttu-id="7dbfd-130">In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione FlowchartWithFaultHandling.sln.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-130">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the FlowchartWithFaultHandling.sln solution file.</span></span>  
   
-2.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B.  
+2.  <span data-ttu-id="7dbfd-131">Per compilare la soluzione, premere CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-131">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Per eseguire la soluzione, premere F5.  
+3.  <span data-ttu-id="7dbfd-132">Per eseguire la soluzione, premere F5.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-132">To run the solution, press F5.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="7dbfd-133">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-133">The samples may already be installed on your computer.</span></span> <span data-ttu-id="7dbfd-134">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-134">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="7dbfd-135">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="7dbfd-135">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7dbfd-136">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="7dbfd-136">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
-## Vedere anche  
- [Flussi di lavoro del diagramma di flusso](../../../../docs/framework/windows-workflow-foundation//flowchart-workflows.md)   
- [Eccezioni](../../../../docs/framework/windows-workflow-foundation//exceptions.md)
+## <a name="see-also"></a><span data-ttu-id="7dbfd-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7dbfd-137">See Also</span></span>  
+ [<span data-ttu-id="7dbfd-138">Flussi di lavoro del diagramma di flusso</span><span class="sxs-lookup"><span data-stu-id="7dbfd-138">Flowchart Workflows</span></span>](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)  
+ [<span data-ttu-id="7dbfd-139">Eccezioni</span><span class="sxs-lookup"><span data-stu-id="7dbfd-139">Exceptions</span></span>](../../../../docs/framework/windows-workflow-foundation/exceptions.md)

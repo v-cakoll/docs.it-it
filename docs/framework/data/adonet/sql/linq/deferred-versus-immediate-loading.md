@@ -1,41 +1,47 @@
 ---
-title: "Caricamento rinviato e immediato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Caricamento posticipato e immediato
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5daf7ac2769128943d98600be08a7ee705028ce2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Caricamento rinviato e immediato
-Quando si esegue una query per un oggetto, si recupera in effetti solo l'oggetto richiesto.  Gli oggetti *correlati* non vengono recuperati contemporaneamente in modo automatico.  Per altre informazioni, vedere [Esecuzione di query tra relazioni](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md). Non è possibile verificare che gli oggetti correlati non siano già stati caricati, perché un tentativo di accedervi produce una richiesta che ne comporta il recupero.  
+# <a name="deferred-versus-immediate-loading"></a><span data-ttu-id="66668-102">Caricamento posticipato e immediato</span><span class="sxs-lookup"><span data-stu-id="66668-102">Deferred versus Immediate Loading</span></span>
+<span data-ttu-id="66668-103">Quando si esegue una query per un oggetto, si recupera in effetti solo l'oggetto richiesto.</span><span class="sxs-lookup"><span data-stu-id="66668-103">When you query for an object, you actually retrieve only the object you requested.</span></span> <span data-ttu-id="66668-104">Il *correlati* oggetti non vengono recuperati contemporaneamente.</span><span class="sxs-lookup"><span data-stu-id="66668-104">The *related* objects are not automatically fetched at the same time.</span></span> <span data-ttu-id="66668-105">(Per ulteriori informazioni, vedere [l'esecuzione di query tra relazioni](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Non è possibile verificare che gli oggetti correlati non siano già stati caricati, perché un tentativo di accedervi produce una richiesta che ne comporta il recupero.</span><span class="sxs-lookup"><span data-stu-id="66668-105">(For more information, see [Querying Across Relationships](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) You cannot see the fact that the related objects are not already loaded, because an attempt to access them produces a request that retrieves them.</span></span>  
   
- Ad esempio, è possibile eseguire una query per un particolare set di ordini, quindi inviare saltuariamente un avviso tramite posta elettronica a clienti particolari.  Inizialmente potrebbe non essere necessario recuperare tutti i dati del cliente con ogni ordine.  In questo caso è possibile usare il caricamento posticipato per rinviare il recupero di informazioni aggiuntive finché non sarà assolutamente necessario.  Si consideri l'esempio seguente:  
+ <span data-ttu-id="66668-106">Ad esempio, è possibile eseguire una query per un particolare set di ordini, quindi inviare saltuariamente un avviso tramite posta elettronica a clienti particolari.</span><span class="sxs-lookup"><span data-stu-id="66668-106">For example, you might want to query for a particular set of orders and then only occasionally send an e-mail notification to particular customers.</span></span> <span data-ttu-id="66668-107">Inizialmente potrebbe non essere necessario recuperare tutti i dati del cliente con ogni ordine.</span><span class="sxs-lookup"><span data-stu-id="66668-107">You would not necessarily need initially to retrieve all customer data with every order.</span></span> <span data-ttu-id="66668-108">In questo caso è possibile usare il caricamento posticipato per rinviare il recupero di informazioni aggiuntive finché non sarà assolutamente necessario.</span><span class="sxs-lookup"><span data-stu-id="66668-108">You can use deferred loading to defer retrieval of extra information until you absolutely have to.</span></span> <span data-ttu-id="66668-109">Si consideri l'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="66668-109">Consider the following example:</span></span>  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  
   
- Potrebbe anche essere vero il contrario.  Si dispone di un'applicazione che richiede la visualizzazione contemporanea dei dati dei clienti e degli ordini.  È noto che sono necessari entrambi i set di dati  e che l'applicazione richiede informazioni sugli ordini per ogni cliente non appena vengono restituiti i risultati.  Non si desidera inviare singole query per gli ordini di ogni cliente,  bensì recuperare i dati degli ordini insieme ai clienti.  
+ <span data-ttu-id="66668-110">Potrebbe anche essere vero il contrario.</span><span class="sxs-lookup"><span data-stu-id="66668-110">The opposite might also be true.</span></span> <span data-ttu-id="66668-111">Si dispone di un'applicazione che richiede la visualizzazione contemporanea dei dati dei clienti e degli ordini.</span><span class="sxs-lookup"><span data-stu-id="66668-111">You might have an application that has to view customer and order data at the same time.</span></span> <span data-ttu-id="66668-112">È noto che sono necessari entrambi i set di dati</span><span class="sxs-lookup"><span data-stu-id="66668-112">You know you need both sets of data.</span></span> <span data-ttu-id="66668-113">e che l'applicazione richiede informazioni sugli ordini per ogni cliente non appena vengono restituiti i risultati.</span><span class="sxs-lookup"><span data-stu-id="66668-113">You know your application needs order information for each customer as soon as you get the results.</span></span> <span data-ttu-id="66668-114">Non si desidera inviare singole query per gli ordini di ogni cliente,</span><span class="sxs-lookup"><span data-stu-id="66668-114">You would not want to submit individual queries for orders for every customer.</span></span> <span data-ttu-id="66668-115">bensì recuperare i dati degli ordini insieme ai clienti.</span><span class="sxs-lookup"><span data-stu-id="66668-115">What you really want is to retrieve the order data together with the customers.</span></span>  
   
  [!code-csharp[DLinqQueryConcepts#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#2)]
  [!code-vb[DLinqQueryConcepts#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#2)]  
   
- È inoltre possibile creare un join tra clienti e ordini in una query definendo il prodotto incrociato e recuperando tutti i relativi bit di dati come un'unica grande proiezione.  Tali risultati non sono tuttavia entità.  Per altre informazioni, vedere [Il modello a oggetti LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  Le entità sono oggetti con un'identità che è possibile modificare, mentre i risultati in questione sono proiezioni che non possono essere modificate né salvate in modo permanente.  È inoltre possibile che vengano recuperati molti dati ridondanti, in quanto ogni cliente viene ripetuto per ogni ordine nell'output del join bidimensionale.  
+ <span data-ttu-id="66668-116">È inoltre possibile creare un join tra clienti e ordini in una query definendo il prodotto incrociato e recuperando tutti i relativi bit di dati come un'unica grande proiezione.</span><span class="sxs-lookup"><span data-stu-id="66668-116">You can also join customers and orders in a query by forming the cross-product and retrieving all the relative bits of data as one large projection.</span></span> <span data-ttu-id="66668-117">Tali risultati non sono tuttavia entità.</span><span class="sxs-lookup"><span data-stu-id="66668-117">But these results are not entities.</span></span> <span data-ttu-id="66668-118">(Per ulteriori informazioni, vedere [LINQ al modello a oggetti SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)).</span><span class="sxs-lookup"><span data-stu-id="66668-118">(For more information, see [The LINQ to SQL Object Model](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)).</span></span> <span data-ttu-id="66668-119">Le entità sono oggetti con un'identità che è possibile modificare, mentre i risultati in questione sono proiezioni che non possono essere modificate né salvate in modo permanente.</span><span class="sxs-lookup"><span data-stu-id="66668-119">Entities are objects that have identity and that you can modify, whereas these results would be projections that cannot be changed and persisted.</span></span> <span data-ttu-id="66668-120">È inoltre possibile che vengano recuperati molti dati ridondanti, in quanto ogni cliente viene ripetuto per ogni ordine nell'output del join bidimensionale.</span><span class="sxs-lookup"><span data-stu-id="66668-120">Even worse, you would be retrieving lots of redundant data as each customer repeats for each order in the flattened join output.</span></span>  
   
- È invece utile disporre di un modo per recuperare contemporaneamente un set di oggetti correlati.  Il set è una sezione delineata di un grafico che consente di recuperare sempre solo la quantità di dati necessaria per l'uso desiderato.  A questo scopo in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] è disponibile <xref:System.Data.Linq.DataLoadOptions> che consente il caricamento immediato di una parte del modello a oggetti.  I metodi comprendono:  
+ <span data-ttu-id="66668-121">È invece utile disporre di un modo per recuperare contemporaneamente un set di oggetti correlati.</span><span class="sxs-lookup"><span data-stu-id="66668-121">What you really need is a way to retrieve a set of related objects at the same time.</span></span> <span data-ttu-id="66668-122">Il set è una sezione delineata di un grafico che consente di recuperare sempre solo la quantità di dati necessaria per l'uso desiderato.</span><span class="sxs-lookup"><span data-stu-id="66668-122">The set is a delineated section of a graph so that you would never be retrieving more or less than was necessary for your intended use.</span></span> <span data-ttu-id="66668-123">A tale scopo, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fornisce <xref:System.Data.Linq.DataLoadOptions> per il caricamento immediato di un'area del modello a oggetti.</span><span class="sxs-lookup"><span data-stu-id="66668-123">For this purpose, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] provides <xref:System.Data.Linq.DataLoadOptions> for immediate loading of a region of your object model.</span></span> <span data-ttu-id="66668-124">I metodi comprendono:</span><span class="sxs-lookup"><span data-stu-id="66668-124">Methods include:</span></span>  
   
--   Il metodo <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> per caricare immediatamente dati relativi alla destinazione principale.  
+-   <span data-ttu-id="66668-125">Il metodo <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> per caricare immediatamente dati relativi alla destinazione principale.</span><span class="sxs-lookup"><span data-stu-id="66668-125">The  <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> method, to immediately load data related to the main target.</span></span>  
   
--   Il metodo <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> per filtrare gli oggetti recuperati per una determinata relazione.  
+-   <span data-ttu-id="66668-126">Il metodo <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> per filtrare gli oggetti recuperati per una determinata relazione.</span><span class="sxs-lookup"><span data-stu-id="66668-126">The <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> method, to filter objects retrieved for a particular relationship.</span></span>  
   
-## Vedere anche  
- [Concetti relativi alle query](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a><span data-ttu-id="66668-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="66668-127">See Also</span></span>  
+ [<span data-ttu-id="66668-128">Concetti relativi alle query</span><span class="sxs-lookup"><span data-stu-id="66668-128">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

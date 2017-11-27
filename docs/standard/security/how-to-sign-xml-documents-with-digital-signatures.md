@@ -1,107 +1,108 @@
 ---
-title: "How to: Sign XML Documents with Digital Signatures | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "signatures, XML signing"
-  - "System.Security.Cryptography.SignedXml class"
-  - "digital signatures, XML signing"
-  - "System.Security.Cryptography.RSACryptoServiceProvider class"
-  - "XML digital signatures"
-  - "XML signing"
-  - "signing XML"
+title: 'Procedura: firmare documenti XML con firme digitali'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- signatures, XML signing
+- System.Security.Cryptography.SignedXml class
+- digital signatures, XML signing
+- System.Security.Cryptography.RSACryptoServiceProvider class
+- XML digital signatures
+- XML signing
+- signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 68d5c4149dfacacfe366ac5b2f49a66f2c986873
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Sign XML Documents with Digital Signatures
-È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per firmare un documento XML o parte di esso con una firma digitale.  Le firme digitali XML \(XMLDSIG\) consentono di verificare che i dati non siano stati alterati dopo la firma.  Per altre informazioni sullo standard XMLDSIG, vedere la raccomandazione del World Wide Web Consortium \(W3C\) relativa all'[elaborazione e alla sintassi della firma XML](http://go.microsoft.com/fwlink/?LinkID=136777).  
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a><span data-ttu-id="1f077-102">Procedura: firmare documenti XML con firme digitali</span><span class="sxs-lookup"><span data-stu-id="1f077-102">How to: Sign XML Documents with Digital Signatures</span></span>
+<span data-ttu-id="1f077-103">È possibile usare le classi dello spazio dei nomi <xref:System.Security.Cryptography.Xml> per firmare un documento XML o parte di esso con una firma digitale.</span><span class="sxs-lookup"><span data-stu-id="1f077-103">You can use the classes in the <xref:System.Security.Cryptography.Xml> namespace to sign an XML document or part of an XML document with a digital signature.</span></span>  <span data-ttu-id="1f077-104">Le firme digitali XML (XMLDSIG) consentono di verificare che i dati non siano stati alterati dopo la firma.</span><span class="sxs-lookup"><span data-stu-id="1f077-104">XML digital signatures (XMLDSIG) allow you to verify that data was not altered after it was signed.</span></span>  <span data-ttu-id="1f077-105">Per ulteriori informazioni sullo standard XMLDSIG, vedere la raccomandazione del World Wide Web Consortium (W3C) [sintassi della firma XML e l'elaborazione](http://go.microsoft.com/fwlink/?LinkID=136777).</span><span class="sxs-lookup"><span data-stu-id="1f077-105">For more information about the XMLDSIG standard, see the World Wide Web Consortium (W3C) recommendation [XML Signature Syntax and Processing](http://go.microsoft.com/fwlink/?LinkID=136777).</span></span>  
   
- L'esempio di codice in questa procedura illustra come firmare digitalmente un intero documento XML e allegare la firma al documento in un elemento \<`Signature`\>.  L'esempio crea una chiave di firma RSA, aggiunge la chiave a un contenitore di chiavi sicuro e usa quindi la chiave per firmare digitalmente un documento XML.  La chiave può successivamente essere recuperata per verificare la firma digitale XML oppure può essere usata per firmare un altro documento XML.  
+ <span data-ttu-id="1f077-106">L'esempio di codice in questa procedura illustra come firmare digitalmente un intero documento XML e allegare la firma al documento in un elemento <`Signature`>.</span><span class="sxs-lookup"><span data-stu-id="1f077-106">The code example in this procedure demonstrates how to digitally sign an entire XML document and attach the signature to the document in a <`Signature`> element.</span></span>  <span data-ttu-id="1f077-107">L'esempio crea una chiave di firma RSA, aggiunge la chiave a un contenitore di chiavi sicuro e usa quindi la chiave per firmare digitalmente un documento XML.</span><span class="sxs-lookup"><span data-stu-id="1f077-107">The example creates an RSA signing key, adds the key to a secure key container, and then uses the key to digitally sign an XML document.</span></span>  <span data-ttu-id="1f077-108">La chiave può successivamente essere recuperata per verificare la firma digitale XML oppure può essere usata per firmare un altro documento XML.</span><span class="sxs-lookup"><span data-stu-id="1f077-108">The key can then be retrieved to verify the XML digital signature, or can be used to sign another XML document.</span></span>  
   
- Per informazioni su come verificare una firma digitale XML creata mediante questa procedura, vedere [How to: Verify the Digital Signatures of XML Documents](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
+ <span data-ttu-id="1f077-109">Per informazioni su come verificare una firma digitale XML creata mediante questa procedura, vedere [procedura: verificare le firme digitali dei documenti XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).</span><span class="sxs-lookup"><span data-stu-id="1f077-109">For information about how to verify an XML digital signature that was created using this procedure, see [How to: Verify the Digital Signatures of XML Documents](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).</span></span>  
   
-### Per firmare digitalmente un documento XML  
+### <a name="to-digitally-sign-an-xml-document"></a><span data-ttu-id="1f077-110">Per firmare digitalmente un documento XML</span><span class="sxs-lookup"><span data-stu-id="1f077-110">To digitally sign an XML document</span></span>  
   
-1.  Creare un oggetto <xref:System.Security.Cryptography.CspParameters> e specificare il nome del contenitore di chiavi.  
+1.  <span data-ttu-id="1f077-111">Creare un oggetto <xref:System.Security.Cryptography.CspParameters> e specificare il nome del contenitore di chiavi.</span><span class="sxs-lookup"><span data-stu-id="1f077-111">Create a <xref:System.Security.Cryptography.CspParameters> object and specify the name of the key container.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#2)]
      [!code-vb[HowToSignXMLDocumentRSA#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#2)]  
   
-2.  Generare una chiave asimmetrica usando la classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  La chiave viene salvata automaticamente nel contenitore di chiavi quando si passa l'oggetto <xref:System.Security.Cryptography.CspParameters> al costruttore della classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>.  Questa chiave verrà usata per firmare il documento XML.  
+2.  <span data-ttu-id="1f077-112">Generare una chiave asimmetrica usando la classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>.</span><span class="sxs-lookup"><span data-stu-id="1f077-112">Generate an asymmetric key using the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class.</span></span>  <span data-ttu-id="1f077-113">La chiave viene salvata automaticamente nel contenitore di chiavi quando si passa l'oggetto <xref:System.Security.Cryptography.CspParameters> al costruttore della classe <xref:System.Security.Cryptography.RSACryptoServiceProvider>.</span><span class="sxs-lookup"><span data-stu-id="1f077-113">The key is automatically saved to the key container when you pass the <xref:System.Security.Cryptography.CspParameters> object to the constructor of the <xref:System.Security.Cryptography.RSACryptoServiceProvider> class.</span></span>  <span data-ttu-id="1f077-114">Questa chiave verrà usata per firmare il documento XML.</span><span class="sxs-lookup"><span data-stu-id="1f077-114">This key will be used to sign the XML document.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#3)]
      [!code-vb[HowToSignXMLDocumentRSA#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#3)]  
   
-3.  Creare un oggetto <xref:System.Xml.XmlDocument> caricando un file XML dal disco.  L'oggetto <xref:System.Xml.XmlDocument> contiene l'elemento XML da crittografare.  
+3.  <span data-ttu-id="1f077-115">Creare un oggetto <xref:System.Xml.XmlDocument> caricando un file XML dal disco.</span><span class="sxs-lookup"><span data-stu-id="1f077-115">Create an <xref:System.Xml.XmlDocument> object by loading an XML file from disk.</span></span>  <span data-ttu-id="1f077-116">L'oggetto <xref:System.Xml.XmlDocument> contiene l'elemento XML da crittografare.</span><span class="sxs-lookup"><span data-stu-id="1f077-116">The <xref:System.Xml.XmlDocument> object contains the XML element to encrypt.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#4)]
      [!code-vb[HowToSignXMLDocumentRSA#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#4)]  
   
-4.  Creare un nuovo oggetto <xref:System.Security.Cryptography.Xml.SignedXml> e passare a esso l'oggetto <xref:System.Xml.XmlDocument>.  
+4.  <span data-ttu-id="1f077-117">Creare un nuovo oggetto <xref:System.Security.Cryptography.Xml.SignedXml> e passare a esso l'oggetto <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="1f077-117">Create a new <xref:System.Security.Cryptography.Xml.SignedXml> object and pass the <xref:System.Xml.XmlDocument> object to it.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#5)]
      [!code-vb[HowToSignXMLDocumentRSA#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#5)]  
   
-5.  Aggiungere la chiave di firma RSA all'oggetto <xref:System.Security.Cryptography.Xml.SignedXml>.  
+5.  <span data-ttu-id="1f077-118">Aggiungere la chiave di firma RSA all'oggetto <xref:System.Security.Cryptography.Xml.SignedXml>.</span><span class="sxs-lookup"><span data-stu-id="1f077-118">Add the signing RSA key to the <xref:System.Security.Cryptography.Xml.SignedXml> object.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#6)]
      [!code-vb[HowToSignXMLDocumentRSA#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#6)]  
   
-6.  Creare un oggetto <xref:System.Security.Cryptography.Xml.Reference> che descrive cosa firmare.  Per firmare l'intero documento, impostare la proprietà <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> su `""`.  
+6.  <span data-ttu-id="1f077-119">Creare un oggetto <xref:System.Security.Cryptography.Xml.Reference> che descrive cosa firmare.</span><span class="sxs-lookup"><span data-stu-id="1f077-119">Create a <xref:System.Security.Cryptography.Xml.Reference> object that describes what to sign.</span></span>  <span data-ttu-id="1f077-120">Per firmare l'intero documento, impostare la proprietà <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> su `""`.</span><span class="sxs-lookup"><span data-stu-id="1f077-120">To sign the entire document, set the <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> property to `""`.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#7)]
      [!code-vb[HowToSignXMLDocumentRSA#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#7)]  
   
-7.  Aggiungere un oggetto <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> all'oggetto <xref:System.Security.Cryptography.Xml.Reference>.  Una trasformazione consente allo strumento di verifica di rappresentare i dati XML nello stesso modo usato da chi ha applicato la firma.  I dati XML possono essere rappresentati in modi diversi, pertanto questo passaggio è fondamentale per la verifica.  
+7.  <span data-ttu-id="1f077-121">Aggiungere un oggetto <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> all'oggetto <xref:System.Security.Cryptography.Xml.Reference>.</span><span class="sxs-lookup"><span data-stu-id="1f077-121">Add an <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> object to the <xref:System.Security.Cryptography.Xml.Reference> object.</span></span>  <span data-ttu-id="1f077-122">Una trasformazione consente allo strumento di verifica di rappresentare i dati XML nello stesso modo usato da chi ha applicato la firma.</span><span class="sxs-lookup"><span data-stu-id="1f077-122">A transformation allows the verifier to represent the XML data in the identical manner that the signer used.</span></span>  <span data-ttu-id="1f077-123">I dati XML possono essere rappresentati in modi diversi, pertanto questo passaggio è fondamentale per la verifica.</span><span class="sxs-lookup"><span data-stu-id="1f077-123">XML data can be represented in different ways, so this step is vital to verification.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#8)]
      [!code-vb[HowToSignXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#8)]  
   
-8.  Aggiungere l'oggetto <xref:System.Security.Cryptography.Xml.Reference> all'oggetto <xref:System.Security.Cryptography.Xml.SignedXml>.  
+8.  <span data-ttu-id="1f077-124">Aggiungere l'oggetto <xref:System.Security.Cryptography.Xml.Reference> all'oggetto <xref:System.Security.Cryptography.Xml.SignedXml>.</span><span class="sxs-lookup"><span data-stu-id="1f077-124">Add the <xref:System.Security.Cryptography.Xml.Reference> object to the <xref:System.Security.Cryptography.Xml.SignedXml> object.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#9)]
      [!code-vb[HowToSignXMLDocumentRSA#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#9)]  
   
-9. Calcolare la firma chiamando il metodo <xref:System.Security.Cryptography.Xml.SignedXml.ComputeSignature%2A>.  
+9. <span data-ttu-id="1f077-125">Calcolare la firma chiamando il metodo <xref:System.Security.Cryptography.Xml.SignedXml.ComputeSignature%2A>.</span><span class="sxs-lookup"><span data-stu-id="1f077-125">Compute the signature by calling the <xref:System.Security.Cryptography.Xml.SignedXml.ComputeSignature%2A> method.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#10)]
      [!code-vb[HowToSignXMLDocumentRSA#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#10)]  
   
-10. Recuperare la rappresentazione XML della firma \(un elemento \<`Signature`\>\) e salvarla in un nuovo oggetto <xref:System.Xml.XmlElement>.  
+10. <span data-ttu-id="1f077-126">Recuperare la rappresentazione XML della firma (un elemento <`Signature`>) e salvarla in un nuovo oggetto <xref:System.Xml.XmlElement>.</span><span class="sxs-lookup"><span data-stu-id="1f077-126">Retrieve the XML representation of the signature (a <`Signature`> element) and save it to a new <xref:System.Xml.XmlElement> object.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#11)]
      [!code-vb[HowToSignXMLDocumentRSA#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#11)]  
   
-11. Aggiungere l'elemento all'oggetto <xref:System.Xml.XmlDocument>.  
+11. <span data-ttu-id="1f077-127">Aggiungere l'elemento all'oggetto <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="1f077-127">Append the element to the <xref:System.Xml.XmlDocument> object.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#12)]
      [!code-vb[HowToSignXMLDocumentRSA#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#12)]  
   
-12. Salvare il documento.  
+12. <span data-ttu-id="1f077-128">Salvare il documento.</span><span class="sxs-lookup"><span data-stu-id="1f077-128">Save the document.</span></span>  
   
      [!code-csharp[HowToSignXMLDocumentRSA#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#13)]
      [!code-vb[HowToSignXMLDocumentRSA#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#13)]  
   
-## Esempio  
- Questo esempio presuppone che sia presente un file denominato `test.xml` nella stessa directory del programma compilato.  È possibile inserire il codice XML seguente in un file denominato `test.xml` e usarlo con questo esempio.  
+## <a name="example"></a><span data-ttu-id="1f077-129">Esempio</span><span class="sxs-lookup"><span data-stu-id="1f077-129">Example</span></span>  
+ <span data-ttu-id="1f077-130">Questo esempio presuppone che sia presente un file denominato `test.xml` nella stessa directory del programma compilato</span><span class="sxs-lookup"><span data-stu-id="1f077-130">This example assumes that a file named `test.xml` exists in the same directory as the compiled program.</span></span>  <span data-ttu-id="1f077-131">È possibile inserire il codice XML seguente in un file denominato `test.xml` e usarlo con questo esempio.</span><span class="sxs-lookup"><span data-stu-id="1f077-131">You can place the following XML into a file called `test.xml` and use it with this example.</span></span>  
   
-```  
+```xml  
 <root>  
     <creditcard>  
         <number>19834209</number>  
@@ -113,17 +114,17 @@ caps.handback.revision: 13
  [!code-csharp[HowToSignXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToSignXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#1)]  
   
-## Compilazione del codice  
+## <a name="compiling-the-code"></a><span data-ttu-id="1f077-132">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="1f077-132">Compiling the Code</span></span>  
   
--   Per compilare questo esempio, è necessario includere un riferimento a `System.Security.dll`.  
+-   <span data-ttu-id="1f077-133">Per compilare questo esempio, è necessario includere un riferimento a `System.Security.dll`.</span><span class="sxs-lookup"><span data-stu-id="1f077-133">To compile this example, you need to include a reference to `System.Security.dll`.</span></span>  
   
--   Includere gli spazi dei nomi seguenti: <xref:System.Xml>, <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml>.  
+-   <span data-ttu-id="1f077-134">Includere gli spazi dei nomi seguenti: <xref:System.Xml>, <xref:System.Security.Cryptography> e <xref:System.Security.Cryptography.Xml>.</span><span class="sxs-lookup"><span data-stu-id="1f077-134">Include the following namespaces: <xref:System.Xml>, <xref:System.Security.Cryptography>, and <xref:System.Security.Cryptography.Xml>.</span></span>  
   
-## Sicurezza di .NET Framework  
- Non archiviare né trasferire mai in testo non crittografato la chiave privata di una coppia di chiavi asimmetriche.  Per altre informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [Generating Keys for Encryption and Decryption](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
+## <a name="net-framework-security"></a><span data-ttu-id="1f077-135">Sicurezza di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1f077-135">.NET Framework Security</span></span>  
+ <span data-ttu-id="1f077-136">Non archiviare né trasferire mai in testo non crittografato la chiave privata di una coppia di chiavi asimmetriche.</span><span class="sxs-lookup"><span data-stu-id="1f077-136">Never store or transfer the private key of an asymmetric key pair in plaintext.</span></span>  <span data-ttu-id="1f077-137">Per ulteriori informazioni sulle chiavi crittografiche simmetriche e asimmetriche, vedere [generazione di chiavi per crittografia e decrittografia](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).</span><span class="sxs-lookup"><span data-stu-id="1f077-137">For more information about symmetric and asymmetric cryptographic keys, see [Generating Keys for Encryption and Decryption](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).</span></span>  
   
- Non incorporare mai una chiave privata direttamente nel codice sorgente.  Le chiavi incorporate possono essere lette facilmente da un assembly mediante [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo quale Blocco note.  
+ <span data-ttu-id="1f077-138">Non incorporare mai una chiave privata direttamente nel codice sorgente.</span><span class="sxs-lookup"><span data-stu-id="1f077-138">Never embed a private key directly into your source code.</span></span>  <span data-ttu-id="1f077-139">Le chiavi incorporate possono essere lette facilmente da un assembly mediante il [Ildasm.exe (Disassembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oppure aprendo l'assembly in un editor di testo quale Blocco note.</span><span class="sxs-lookup"><span data-stu-id="1f077-139">Embedded keys can be easily read from an assembly using the [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) or by opening the assembly in a text editor such as Notepad.</span></span>  
   
-## Vedere anche  
- <xref:System.Security.Cryptography.Xml>   
- [How to: Verify the Digital Signatures of XML Documents](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+## <a name="see-also"></a><span data-ttu-id="1f077-140">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1f077-140">See Also</span></span>  
+ <xref:System.Security.Cryptography.Xml>  
+ [<span data-ttu-id="1f077-141">Procedura: Verificare le firme digitali dei documenti XML</span><span class="sxs-lookup"><span data-stu-id="1f077-141">How to: Verify the Digital Signatures of XML Documents</span></span>](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

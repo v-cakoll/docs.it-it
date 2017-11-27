@@ -1,61 +1,44 @@
 ---
-title: Convalida delle stringhe in Visual Basic | Documenti di Microsoft
+title: Convalida delle stringhe in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, strings
 - Visual Basic code, strings
 - strings [Visual Basic], validating
-- validation, strings
+- validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 845c81cec69b6095b05682917e07c5d578127e20
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0d83cca26540689c30fbcc60c8fd29e49c90e0dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="validating-strings-in-visual-basic"></a>Convalida delle stringhe in Visual Basic
-In questa sezione viene illustrato come convalidare le stringhe in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+# <a name="validating-strings-in-visual-basic"></a><span data-ttu-id="b557c-102">Convalida delle stringhe in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b557c-102">Validating Strings in Visual Basic</span></span>
+<span data-ttu-id="b557c-103">In questa sezione viene illustrato come convalidare le stringhe in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b557c-103">This section discusses how to validate strings in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Procedura: convalidare nomi e percorsi in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
- Come determinare se una stringa rappresenta un nome file o percorso.  
+## <a name="in-this-section"></a><span data-ttu-id="b557c-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="b557c-104">In This Section</span></span>  
+ [<span data-ttu-id="b557c-105">Procedura: convalidare nomi e percorsi in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b557c-105">How to: Validate File Names and Paths in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
+ <span data-ttu-id="b557c-106">Come determinare se una stringa rappresenta un nome file o un percorso.</span><span class="sxs-lookup"><span data-stu-id="b557c-106">How to determine whether a string represents a file name or path.</span></span>  
   
- [Procedura: Convalidare le stringhe che rappresentano date o ore](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
- Come determinare se una stringa rappresenta una data valida.  
+ [<span data-ttu-id="b557c-107">Procedura: Convalidare le stringhe che rappresentano date o ore</span><span class="sxs-lookup"><span data-stu-id="b557c-107">How to: Validate Strings That Represent Dates or Times</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
+ <span data-ttu-id="b557c-108">Come determinare se una stringa rappresenta una data valida.</span><span class="sxs-lookup"><span data-stu-id="b557c-108">How to determine whether a string represents a valid date.</span></span>  
   
- [Utilizzo di espressioni regolari con il controllo MaskedTextBox in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
- Viene illustrato come convertire espressioni regolari semplici da utilizzare con il <xref:System.Windows.Forms.MaskedTextBox>controllo.</xref:System.Windows.Forms.MaskedTextBox>  
+ [<span data-ttu-id="b557c-109">Utilizzo di espressioni regolari con il controllo MaskedTextBox in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b557c-109">Using Regular Expressions with the MaskedTextBox Control in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
+ <span data-ttu-id="b557c-110">Viene illustrato come convertire espressioni regolari semplice da utilizzare con il <xref:System.Windows.Forms.MaskedTextBox> controllo.</span><span class="sxs-lookup"><span data-stu-id="b557c-110">Demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span>  
   
- [Procedura dettagliata: Verifica della complessità delle password](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
- Come determinare se una stringa ha le caratteristiche di una password complessa.  
+ [<span data-ttu-id="b557c-111">Procedura dettagliata: Verifica della complessità delle password</span><span class="sxs-lookup"><span data-stu-id="b557c-111">Walkthrough: Validating That Passwords Are Complex</span></span>](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
+ <span data-ttu-id="b557c-112">Come determinare se una stringa ha le caratteristiche di una password complessa.</span><span class="sxs-lookup"><span data-stu-id="b557c-112">How to determine whether a string has the characteristics of a strong password.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Stringhe](../../../../visual-basic/programming-guide/language-features/strings/index.md)   
- [MaskedTextBox (controllo)](http://msdn.microsoft.com/library/235d6121-027d-481d-8d59-4f6794d15d0c)
+## <a name="see-also"></a><span data-ttu-id="b557c-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b557c-113">See Also</span></span>  
+ [<span data-ttu-id="b557c-114">Stringhe</span><span class="sxs-lookup"><span data-stu-id="b557c-114">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)  
+ [<span data-ttu-id="b557c-115">Controllo MaskedTextBox</span><span class="sxs-lookup"><span data-stu-id="b557c-115">MaskedTextBox Control</span></span>](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

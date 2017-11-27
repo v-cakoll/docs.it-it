@@ -1,60 +1,42 @@
 ---
-title: Riepilogo della conversione (Visual Basic) | Documenti di Microsoft
-ms.date: 2015-07-20
+title: Riepilogo della conversione (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- data type conversion, keywords
+- data type conversion [Visual Basic], keywords
 - reference, type conversions
-- conversions, Visual Basic
-- type conversion, keywords
+- conversions [Visual Basic], Visual Basic
+- type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 05ea9ba57cc2d6f5f3d05d6e623527958b9dc1eb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 76c5d56276dca62af8f0dacc66618b9b941bea35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="conversion-summary-visual-basic"></a>Riepilogo della conversione (Visual Basic)
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]parole chiave del linguaggio e i membri della libreria di runtime sono organizzati in base allo scopo e utilizzano.  
+# <a name="conversion-summary-visual-basic"></a><span data-ttu-id="a3c27-102">Riepilogo della conversione (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a3c27-102">Conversion Summary (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="a3c27-103">parole chiave del linguaggio e i membri della libreria di runtime sono organizzati in base allo scopo e utilizzano.</span><span class="sxs-lookup"><span data-stu-id="a3c27-103"> language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|Operazione|Elemento di linguaggio|  
+|<span data-ttu-id="a3c27-104">Operazione</span><span class="sxs-lookup"><span data-stu-id="a3c27-104">Action</span></span>|<span data-ttu-id="a3c27-105">Elemento di linguaggio</span><span class="sxs-lookup"><span data-stu-id="a3c27-105">Language element</span></span>|  
 |------------|----------------------|  
-|Converte il valore ANSI in stringa.|<xref:Microsoft.VisualBasic.Strings.Chr%2A>,<xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.Chr%2A>|  
-|Convertire una stringa in minuscolo o maiuscolo.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></xref:Microsoft.VisualBasic.Strings.UCase%2A></xref:Microsoft.VisualBasic.Strings.LCase%2A></xref:Microsoft.VisualBasic.Strings.Format%2A>|  
-|Convertire la data in numero di serie.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>,<xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>|  
-|Convertire un numero decimale in altre basi.|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>,<xref:Microsoft.VisualBasic.Conversion.Oct%2A></xref:Microsoft.VisualBasic.Conversion.Oct%2A></xref:Microsoft.VisualBasic.Conversion.Hex%2A>|  
-|Convertire un numero in stringa.|<xref:Microsoft.VisualBasic.Strings.Format%2A>,<xref:Microsoft.VisualBasic.Conversion.Str%2A></xref:Microsoft.VisualBasic.Conversion.Str%2A></xref:Microsoft.VisualBasic.Strings.Format%2A>|  
-|Convertire un tipo di dati a un altro.|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Fix%2A>|  
-|Convertire la data al giorno, mese, giorno della settimana o anno.|<xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></xref:Microsoft.VisualBasic.DateAndTime.Year%2A></xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A></xref:Microsoft.VisualBasic.DateAndTime.Month%2A></xref:Microsoft.VisualBasic.DateAndTime.Day%2A>|  
-|Convertire l'ora per ora, minuto o secondo.|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></xref:Microsoft.VisualBasic.DateAndTime.Second%2A></xref:Microsoft.VisualBasic.DateAndTime.Minute%2A></xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>|  
-|Convertire una stringa a valore ASCII.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>,<xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.Asc%2A>|  
-|Convertire una stringa in numero.|<xref:Microsoft.VisualBasic.Conversion.Val%2A></xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
-|Convertire l'ora per il numero di serie.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>,<xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>|  
+|<span data-ttu-id="a3c27-106">Converte il valore di ANSI in stringa.</span><span class="sxs-lookup"><span data-stu-id="a3c27-106">Convert ANSI value to string.</span></span>|<span data-ttu-id="a3c27-107"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span><span class="sxs-lookup"><span data-stu-id="a3c27-107"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span></span>|  
+|<span data-ttu-id="a3c27-108">Convertire una stringa in lettere minuscole o maiuscole.</span><span class="sxs-lookup"><span data-stu-id="a3c27-108">Convert string to lowercase or uppercase.</span></span>|<span data-ttu-id="a3c27-109"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></span><span class="sxs-lookup"><span data-stu-id="a3c27-109"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></span></span>|  
+|<span data-ttu-id="a3c27-110">Convertire la data per il numero di serie.</span><span class="sxs-lookup"><span data-stu-id="a3c27-110">Convert date to serial number.</span></span>|<span data-ttu-id="a3c27-111"><xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></span><span class="sxs-lookup"><span data-stu-id="a3c27-111"><xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></span></span>|  
+|<span data-ttu-id="a3c27-112">Convertire un numero decimale altre basi.</span><span class="sxs-lookup"><span data-stu-id="a3c27-112">Convert decimal number to other bases.</span></span>|<span data-ttu-id="a3c27-113"><xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A></span><span class="sxs-lookup"><span data-stu-id="a3c27-113"><xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A></span></span>|  
+|<span data-ttu-id="a3c27-114">Converti numero in stringa.</span><span class="sxs-lookup"><span data-stu-id="a3c27-114">Convert number to string.</span></span>|<span data-ttu-id="a3c27-115"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A></span><span class="sxs-lookup"><span data-stu-id="a3c27-115"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A></span></span>|  
+|<span data-ttu-id="a3c27-116">Convertire un tipo di dati a un altro.</span><span class="sxs-lookup"><span data-stu-id="a3c27-116">Convert one data type to another.</span></span>|<span data-ttu-id="a3c27-117">[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [ CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>,<xref:Microsoft.VisualBasic.Conversion.Int%2A></span><span class="sxs-lookup"><span data-stu-id="a3c27-117">[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
+|<span data-ttu-id="a3c27-118">Convertire la data al giorno, mese, giorno della settimana o anno.</span><span class="sxs-lookup"><span data-stu-id="a3c27-118">Convert date to day, month, weekday, or year.</span></span>|<span data-ttu-id="a3c27-119"><xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></span><span class="sxs-lookup"><span data-stu-id="a3c27-119"><xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></span></span>|  
+|<span data-ttu-id="a3c27-120">Converte l'ora per ora, minuto o secondo.</span><span class="sxs-lookup"><span data-stu-id="a3c27-120">Convert time to hour, minute, or second.</span></span>|<span data-ttu-id="a3c27-121"><xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></span><span class="sxs-lookup"><span data-stu-id="a3c27-121"><xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></span></span>|  
+|<span data-ttu-id="a3c27-122">Convertire la stringa a valore ASCII.</span><span class="sxs-lookup"><span data-stu-id="a3c27-122">Convert string to ASCII value.</span></span>|<span data-ttu-id="a3c27-123"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span><span class="sxs-lookup"><span data-stu-id="a3c27-123"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span></span>|  
+|<span data-ttu-id="a3c27-124">Convertire una stringa in numero.</span><span class="sxs-lookup"><span data-stu-id="a3c27-124">Convert string to number.</span></span>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
+|<span data-ttu-id="a3c27-125">Converte l'ora per il numero di serie.</span><span class="sxs-lookup"><span data-stu-id="a3c27-125">Convert time to serial number.</span></span>|<span data-ttu-id="a3c27-126"><xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></span><span class="sxs-lookup"><span data-stu-id="a3c27-126"><xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [Parole chiave](../../../visual-basic/language-reference/keywords/index.md)   
- [Membri della libreria di runtime di Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a><span data-ttu-id="a3c27-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a3c27-127">See Also</span></span>  
+ [<span data-ttu-id="a3c27-128">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="a3c27-128">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="a3c27-129">Membri della libreria di runtime di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a3c27-129">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

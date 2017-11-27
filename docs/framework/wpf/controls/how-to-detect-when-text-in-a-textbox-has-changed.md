@@ -1,52 +1,58 @@
 ---
-title: "Procedura: rilevare eventuali modifiche del testo in un oggetto TextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rilevamento delle modifiche del testo"
-  - "modifiche del testo, rilevamento"
-  - "TextBox (controllo), rilevamento delle modifiche del testo"
+title: 'Procedura: rilevare eventuali modifiche del testo in un oggetto TextBox'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TextBox control [WPF], detecting text change
+- text change [WPF], detecting
+- detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 92fc8995ab75cc25bac3bb21b1646052822c3721
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: rilevare eventuali modifiche del testo in un oggetto TextBox
-In questo esempio viene illustrata una modalità di utilizzo dell'evento <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> per eseguire un metodo ogni volta che viene modificato il testo in un controllo <xref:System.Windows.Controls.TextBox>.  
+# <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a><span data-ttu-id="13e03-102">Procedura: rilevare eventuali modifiche del testo in un oggetto TextBox</span><span class="sxs-lookup"><span data-stu-id="13e03-102">How to: Detect When Text in a TextBox Has Changed</span></span>
+<span data-ttu-id="13e03-103">In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> evento per eseguire un metodo ogni volta che il testo in un <xref:System.Windows.Controls.TextBox> controllo è stato modificato.</span><span class="sxs-lookup"><span data-stu-id="13e03-103">This example shows one way to use the <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> event to execute a method whenever the text in a <xref:System.Windows.Controls.TextBox> control has changed.</span></span>  
   
- Nella classe code\-behind per [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che contiene il controllo <xref:System.Windows.Controls.TextBox> di cui si intende monitorare le modifiche, inserire un metodo da chiamare ogni volta che viene generato l'evento <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>.  Questo metodo deve avere una firma corrispondente a quella prevista dal delegato <xref:System.Windows.Controls.TextChangedEventHandler>.  
+ <span data-ttu-id="13e03-104">Nella classe code-behind per il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che contiene il <xref:System.Windows.Controls.TextBox> controllo che si desidera monitorare per le modifiche, inserire un metodo da chiamare quando il <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> viene generato l'evento.</span><span class="sxs-lookup"><span data-stu-id="13e03-104">In the code-behind class for the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] that contains the <xref:System.Windows.Controls.TextBox> control that you want to monitor for changes, insert a method to call whenever the <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> event fires.</span></span>  <span data-ttu-id="13e03-105">Questo metodo deve avere una firma che corrisponde a quella prevista dal <xref:System.Windows.Controls.TextChangedEventHandler> delegato.</span><span class="sxs-lookup"><span data-stu-id="13e03-105">This method must have a signature that matches what is expected by the <xref:System.Windows.Controls.TextChangedEventHandler> delegate.</span></span>  
   
- Il gestore eventi viene chiamato ogni volta che il contenuto del controllo <xref:System.Windows.Controls.TextBox> viene modificato, da un utente o a livello di codice.  
+ <span data-ttu-id="13e03-106">Il gestore eventi viene chiamato ogni volta che il contenuto del <xref:System.Windows.Controls.TextBox> controllo vengono modificati, da un utente o a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="13e03-106">The event handler is called whenever the contents of the <xref:System.Windows.Controls.TextBox> control are changed, either by a user or programmatically.</span></span>  
   
- **Nota:** questo evento viene generato quando il controllo <xref:System.Windows.Controls.TextBox> viene creato e compilato inizialmente con un testo.  
+ <span data-ttu-id="13e03-107">**Nota:** questo evento viene generato quando il <xref:System.Windows.Controls.TextBox> controllo viene creato e compilato inizialmente con il testo.</span><span class="sxs-lookup"><span data-stu-id="13e03-107">**Note:** This event fires when the <xref:System.Windows.Controls.TextBox> control is created and initially populated with text.</span></span>  
   
-## Esempio  
- Nel codice [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] che definisce il controllo <xref:System.Windows.Controls.TextBox>, specificare l'attributo <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> con un valore corrispondente al nome del metodo del gestore eventi.  
+## <a name="example"></a><span data-ttu-id="13e03-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="13e03-108">Example</span></span>  
+ <span data-ttu-id="13e03-109">Nel [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] che definisce il <xref:System.Windows.Controls.TextBox> di controllo, specificare il <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> attributo con un valore che corrisponde al nome di metodo del gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="13e03-109">In the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] that defines your <xref:System.Windows.Controls.TextBox> control, specify the <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> attribute with a value that matches the event handler method name.</span></span>  
   
- [!code-xml[TextBox_MiscCode#_TextChangedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]  
+ [!code-xaml[TextBox_MiscCode#_TextChangedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]  
   
-## Esempio  
- Nella classe code\-behind per [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che contiene il controllo <xref:System.Windows.Controls.TextBox> di cui si intende monitorare le modifiche, inserire un metodo da chiamare ogni volta che viene generato l'evento <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>.  Questo metodo deve avere una firma corrispondente a quella prevista dal delegato <xref:System.Windows.Controls.TextChangedEventHandler>.  
+## <a name="example"></a><span data-ttu-id="13e03-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="13e03-110">Example</span></span>  
+ <span data-ttu-id="13e03-111">Nella classe code-behind per il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] che contiene il <xref:System.Windows.Controls.TextBox> controllo che si desidera monitorare per le modifiche, inserire un metodo da chiamare quando il <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> viene generato l'evento.</span><span class="sxs-lookup"><span data-stu-id="13e03-111">In the code-behind class for the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] that contains the <xref:System.Windows.Controls.TextBox> control that you want to monitor for changes, insert a method to call whenever the <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> event fires.</span></span>  <span data-ttu-id="13e03-112">Questo metodo deve avere una firma che corrisponde a quella prevista dal <xref:System.Windows.Controls.TextChangedEventHandler> delegato.</span><span class="sxs-lookup"><span data-stu-id="13e03-112">This method must have a signature that matches what is expected by the <xref:System.Windows.Controls.TextChangedEventHandler> delegate.</span></span>  
   
  [!code-csharp[TextBox_MiscCode#_TextChangedEventHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textchangedeventhandler)]
  [!code-vb[TextBox_MiscCode#_TextChangedEventHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textchangedeventhandler)]  
   
- Il gestore eventi viene chiamato ogni volta che il contenuto del controllo <xref:System.Windows.Controls.TextBox> viene modificato, da un utente o a livello di codice.  
+ <span data-ttu-id="13e03-113">Il gestore eventi viene chiamato ogni volta che il contenuto del <xref:System.Windows.Controls.TextBox> controllo vengono modificati, da un utente o a livello di codice.</span><span class="sxs-lookup"><span data-stu-id="13e03-113">The event handler is called whenever the contents of the <xref:System.Windows.Controls.TextBox> control are changed, either by a user or programmatically.</span></span>  
   
- **Nota:** questo evento viene generato quando il controllo <xref:System.Windows.Controls.TextBox> viene creato e compilato inizialmente con un testo.  
+ <span data-ttu-id="13e03-114">**Nota:** questo evento viene generato quando il <xref:System.Windows.Controls.TextBox> controllo viene creato e compilato inizialmente con il testo.</span><span class="sxs-lookup"><span data-stu-id="13e03-114">**Note:** This event fires when the <xref:System.Windows.Controls.TextBox> control is created and initially populated with text.</span></span>  
   
- Commenti  
+ <span data-ttu-id="13e03-115">Commenti</span><span class="sxs-lookup"><span data-stu-id="13e03-115">Comments</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Controls.TextChangedEventArgs>   
- [Cenni preliminari sulla classe TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)   
- [Cenni generali sul controllo RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="13e03-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="13e03-116">See Also</span></span>  
+ <xref:System.Windows.Controls.TextChangedEventArgs>  
+ [<span data-ttu-id="13e03-117">Cenni preliminari sulla classe TextBox</span><span class="sxs-lookup"><span data-stu-id="13e03-117">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [<span data-ttu-id="13e03-118">Cenni preliminari sul controllo RichTextBox</span><span class="sxs-lookup"><span data-stu-id="13e03-118">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

@@ -1,92 +1,95 @@
 ---
-title: "Esecuzione degli esempi di Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esecuzione degli esempi di Windows Communication Foundation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c3cc4417d1781975663b92b777ecff8789372848
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Esecuzione degli esempi di Windows Communication Foundation
-Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono essere eseguiti in un singolo computer o su una configurazione che prevede più computer.  Nel modo in cui sono forniti, essi sono pronti per essere eseguiti su un solo computer.  In una configurazione a più computer, è necessario modificare le impostazioni del file di configurazione di un esempio.  Le procedure descritte di seguito spiegano come eseguire un esempio nello stesso computer e configurazioni su più computer.  Notare che ci sono variazioni nei passaggi per servizi ospitati su Internet Information Services \(IIS\) e gli esempi indipendenti.  La maggior parte degli esempi sono ospitati su IIS; vedere le informazioni leggimi dell'esempio per determinare come viene ospitato l'esempio.  
+# <a name="running-the-windows-communication-foundation-samples"></a><span data-ttu-id="5be66-102">Esecuzione degli esempi di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="5be66-102">Running the Windows Communication Foundation Samples</span></span>
+<span data-ttu-id="5be66-103">Gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possono essere eseguiti in un singolo computer o su una configurazione che prevede più computer.</span><span class="sxs-lookup"><span data-stu-id="5be66-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples can be run in a single-machine or cross-machine configuration.</span></span> <span data-ttu-id="5be66-104">Nel modo in cui sono forniti, essi sono pronti per essere eseguiti su un solo computer.</span><span class="sxs-lookup"><span data-stu-id="5be66-104">As supplied, the samples are ready for running on a single machine.</span></span> <span data-ttu-id="5be66-105">In una configurazione a più computer, è necessario modificare le impostazioni del file di configurazione di un esempio.</span><span class="sxs-lookup"><span data-stu-id="5be66-105">In a cross-machine configuration, it is necessary to modify a sample's configuration file settings.</span></span> <span data-ttu-id="5be66-106">Le procedure descritte di seguito spiegano come eseguire un esempio nello stesso computer e configurazioni su più computer.</span><span class="sxs-lookup"><span data-stu-id="5be66-106">The following procedures explain how to run a sample in same-machine and cross-machine configurations.</span></span> <span data-ttu-id="5be66-107">Notare che ci sono variazioni nei passaggi per servizi ospitati su Internet Information Services (IIS) e gli esempi indipendenti.</span><span class="sxs-lookup"><span data-stu-id="5be66-107">Note that there are variations in the steps for services hosted in Internet Information Services (IIS) and the self-hosted samples.</span></span> <span data-ttu-id="5be66-108">La maggior parte degli esempi sono ospitati su IIS; vedere le informazioni leggimi dell'esempio per determinare come viene ospitato l'esempio.</span><span class="sxs-lookup"><span data-stu-id="5be66-108">Most samples are hosted in IIS; see the sample readme information to determine how it is hosted.</span></span>  
   
- In [!INCLUDE[wv](../../../../includes/wv-md.md)] gli esempi che non sono ospitati da IIS richiedono privilegi elevati per registrare un listener con Http.sys.  Usare Httpcfg.exe per registrare gli indirizzi di ascolto del servizio con l'account sotto cui il servizio è in esecuzione o avviare il servizio da un prompt dei comandi in esecuzione con privilegi di amministratore.  
+ <span data-ttu-id="5be66-109">In [!INCLUDE[wv](../../../../includes/wv-md.md)] gli esempi che non sono ospitati da IIS richiedono privilegi elevati per registrare un listener con Http.sys.</span><span class="sxs-lookup"><span data-stu-id="5be66-109">On [!INCLUDE[wv](../../../../includes/wv-md.md)], samples that are not hosted in IIS require elevated privileges to register a listener with Http.sys.</span></span> <span data-ttu-id="5be66-110">Usare Httpcfg.exe per registrare gli indirizzi di ascolto del servizio con l'account sotto cui il servizio è in esecuzione o avviare il servizio da un prompt dei comandi in esecuzione con privilegi di amministratore.</span><span class="sxs-lookup"><span data-stu-id="5be66-110">Use Httpcfg.exe to register the service's listening addresses with the account the service is running under, or launch the service from a command prompt running with administrator privileges.</span></span>  
   
 > [!NOTE]
->  Prima di compilare o eseguire qualsiasi esempio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], assicurarsi che sia stato eseguito [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+>  <span data-ttu-id="5be66-111">Prima di compilare o eseguire uno del [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] esempi, assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5be66-111">Before building or running any of the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] samples, be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-### Per eseguire l'esempio sullo stesso computer  
+### <a name="to-run-the-sample-on-the-same-machine"></a><span data-ttu-id="5be66-112">Per eseguire l'esempio sullo stesso computer</span><span class="sxs-lookup"><span data-stu-id="5be66-112">To run the sample on the same machine</span></span>  
   
-1.  Se il servizio è ospitato da IIS, verificare che sia possibile accedere al servizio usando un browser, immettendo l'indirizzo seguente: http:\/\/localhost\/servicemodelsamples\/service.svc.  In risposta, viene visualizzata un pagina di conferma.  Se la pagina di conferma non viene visualizzata, vedere [Troubleshooting Tips](http://msdn.microsoft.com/it-it/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  <span data-ttu-id="5be66-113">Se il servizio è ospitato da IIS, verificare che sia possibile accedere al servizio usando un browser, immettendo l'indirizzo seguente: http://localhost/servicemodelsamples/service.svc.</span><span class="sxs-lookup"><span data-stu-id="5be66-113">If the service is hosted by IIS, ensure that you can access the service using a browser by entering the following address: http://localhost/servicemodelsamples/service.svc.</span></span> <span data-ttu-id="5be66-114">In risposta, viene visualizzata un pagina di conferma.</span><span class="sxs-lookup"><span data-stu-id="5be66-114">A confirmation page should be displayed in response.</span></span> <span data-ttu-id="5be66-115">Se non viene visualizzata la pagina di conferma, vedere [suggerimenti per la risoluzione dei problemi](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="5be66-115">If the confirmation page is not displayed, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-2.  Se il servizio è indipendente, eseguire Service.exe da \\service\\bin, dalla cartella specifica del linguaggio.  L'attività del servizio viene visualizzata nella finestra della console del servizio.  
+2.  <span data-ttu-id="5be66-116">Se il servizio è indipendente, eseguire Service.exe da \service\bin, dalla cartella specifica del linguaggio.</span><span class="sxs-lookup"><span data-stu-id="5be66-116">If the service is self-hosted, run Service.exe from \service\bin, from under the language-specific folder.</span></span> <span data-ttu-id="5be66-117">L'attività del servizio viene visualizzata nella finestra della console del servizio.</span><span class="sxs-lookup"><span data-stu-id="5be66-117">Service activity is displayed on the service console window.</span></span>  
   
-3.  Eseguire Client.exe da \\client\\bin\\, nella cartella specifica della lingua.  L'attività del client viene visualizzata nella finestra della console client.  
+3.  <span data-ttu-id="5be66-118">Eseguire Client.exe da \Client\Bin.\\, nella cartella della specifica del linguaggio.</span><span class="sxs-lookup"><span data-stu-id="5be66-118">Run Client.exe from \client\bin\\, from under the language-specific folder.</span></span> <span data-ttu-id="5be66-119">L'attività del client viene visualizzata nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="5be66-119">Client activity is displayed on the client console window.</span></span>  
   
-4.  Se il client e il servizio non sono in grado di comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/it-it/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  <span data-ttu-id="5be66-120">Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="5be66-120">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-### Per eseguire l'esempio tra più computer  
+### <a name="to-run-the-sample-across-machines"></a><span data-ttu-id="5be66-121">Per eseguire l'esempio tra più computer</span><span class="sxs-lookup"><span data-stu-id="5be66-121">To run the sample across machines</span></span>  
   
-1.  Se il servizio è ospitato su IIS:  
+1.  <span data-ttu-id="5be66-122">Se il servizio è ospitato su IIS:</span><span class="sxs-lookup"><span data-stu-id="5be66-122">If the service is hosted in IIS:</span></span>  
   
-    1.  Sul computer del servizio, creare una directory virtuale denominata ServiceModelSamples.  Il file batch Setupvroot.bat incluso in [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) può essere usato per creare la directory del disco e quella virtuale.  
+    1.  <span data-ttu-id="5be66-123">Sul computer del servizio, creare una directory virtuale denominata ServiceModelSamples.</span><span class="sxs-lookup"><span data-stu-id="5be66-123">On the service machine, create a virtual directory named ServiceModelSamples.</span></span> <span data-ttu-id="5be66-124">Il file batch Setupvroot.bat incluso con [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) può essere utilizzato per creare la directory del disco e la directory virtuale.</span><span class="sxs-lookup"><span data-stu-id="5be66-124">The batch file Setupvroot.bat included with [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) can be used to create the disk directory and virtual directory.</span></span>  
   
-    2.  Copiare i file del programma del servizio da %SystemDrive%\\Inetpub\\wwwroot\\servicemodelsamples alla directory virtuale di ServiceModelSamples sul computer del servizio.  Assicurarsi di includere i file nella directory \\bin.  
+    2.  <span data-ttu-id="5be66-125">Copiare i file del programma del servizio da %SystemDrive%\Inetpub\wwwroot\servicemodelsamples alla directory virtuale di ServiceModelSamples sul computer del servizio.</span><span class="sxs-lookup"><span data-stu-id="5be66-125">Copy the service program files from %SystemDrive%\Inetpub\wwwroot\servicemodelsamples to the ServiceModelSamples virtual directory on the service machine.</span></span> <span data-ttu-id="5be66-126">Assicurarsi di includere i file nella directory \bin.</span><span class="sxs-lookup"><span data-stu-id="5be66-126">Ensure that you include the files in the \bin directory.</span></span>  
   
-    3.  Verificare che sia possibile accedere al servizio dal computer client usando un browser.  
+    3.  <span data-ttu-id="5be66-127">Verificare che sia possibile accedere al servizio dal computer client usando un browser.</span><span class="sxs-lookup"><span data-stu-id="5be66-127">Test that you can access the service from the client machine using a browser.</span></span>  
   
-     Se il servizio è indipendente:  
+     <span data-ttu-id="5be66-128">Se il servizio è indipendente:</span><span class="sxs-lookup"><span data-stu-id="5be66-128">If the service is self-hosted:</span></span>  
   
-    1.  Sul computer del servizio, creare una directory per archiviare i file del servizio.  
+    1.  <span data-ttu-id="5be66-129">Sul computer del servizio, creare una directory per archiviare i file del servizio.</span><span class="sxs-lookup"><span data-stu-id="5be66-129">On the service machine, create a directory to hold the service files.</span></span>  
   
-    2.  Copiare i file del programma servizio dalla cartella \\service\\bin\\, nella cartella specifica della lingua, al computer del servizio.  
+    2.  <span data-ttu-id="5be66-130">Copiare i file del programma servizio dalla cartella \service\bin\, nella cartella specifica della lingua, al computer del servizio.</span><span class="sxs-lookup"><span data-stu-id="5be66-130">Copy the service program files from the \service\bin\ folder, under the language-specific folder, to the service machine.</span></span>  
   
-    3.  Nel file di configurazione del servizio, modificare il valore dell'indirizzo della definizione dell'endpoint affinché corrisponda al nuovo indirizzo del servizio.  Nell'indirizzo sostituire qualsiasi riferimento a "localhost" con un nome di dominio completo.  
+    3.  <span data-ttu-id="5be66-131">Nel file di configurazione del servizio, modificare il valore dell'indirizzo della definizione dell'endpoint affinché corrisponda al nuovo indirizzo del servizio.</span><span class="sxs-lookup"><span data-stu-id="5be66-131">In the service configuration file, change the address value of the endpoint definition to match the new address of your service.</span></span> <span data-ttu-id="5be66-132">Nell'indirizzo sostituire qualsiasi riferimento a "localhost" con un nome di dominio completo.</span><span class="sxs-lookup"><span data-stu-id="5be66-132">Replace any references to "localhost" with a fully-qualified domain name in the address.</span></span>  
   
-    4.  Avviare Service.exe da un prompt dei comandi.  
+    4.  <span data-ttu-id="5be66-133">Avviare Service.exe da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="5be66-133">Launch Service.exe from a command prompt.</span></span>  
   
-2.  Copiare i file del programma client dalla cartella \\client\\bin\\, nella cartella specifica del linguaggio, al computer client.  
+2.  <span data-ttu-id="5be66-134">Copiare i file del programma client dalla cartella \client\bin\, nella cartella specifica del linguaggio, al computer client.</span><span class="sxs-lookup"><span data-stu-id="5be66-134">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client machine.</span></span>  
   
-3.  Impostare l'indirizzo dell'endpoint.  
+3.  <span data-ttu-id="5be66-135">Impostare l'indirizzo dell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="5be66-135">Set the endpoint address.</span></span>  
   
-    1.  Se il servizio è in esecuzione con un account di dominio, aprire il file di configurazione del client e modificare il valore dell'indirizzo della definizione dell'endpoint perché corrisponda al nuovo indirizzo del servizio.  Nell'indirizzo sostituire qualsiasi riferimento a "localhost" con un nome di dominio completo.  
+    1.  <span data-ttu-id="5be66-136">Se il servizio è in esecuzione con un account di dominio, aprire il file di configurazione del client e modificare il valore dell'indirizzo della definizione dell'endpoint perché corrisponda al nuovo indirizzo del servizio.</span><span class="sxs-lookup"><span data-stu-id="5be66-136">If the service is not running under a domain account, open the client configuration file and change the address value of the endpoint definition to match the new address of your service.</span></span> <span data-ttu-id="5be66-137">Nell'indirizzo sostituire qualsiasi riferimento a "localhost" con un nome di dominio completo.</span><span class="sxs-lookup"><span data-stu-id="5be66-137">Replace any references to "localhost" with a fully-qualified domain name in the address.</span></span>  
   
-    2.  Se il servizio è in esecuzione con un account di dominio, rigenerare la configurazione client eseguendo Svcutil.exe sul servizio.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ll'esecuzione di Svcutil.exe, vedere [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  Usare il file generato anziché il file di configurazione dell'esempio.  Il file di configurazione generato contiene informazioni di identità aggiuntive e tutte le impostazioni necessarie per connettersi all'endpoint del servizio, anche se si tratta di impostazioni predefinite.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]lle informazioni di identità, vedere [Identità del servizio e autenticazione](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) e [\<identità\>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2.  <span data-ttu-id="5be66-138">Se il servizio è in esecuzione con un account di dominio, rigenerare la configurazione client eseguendo Svcutil.exe sul servizio.</span><span class="sxs-lookup"><span data-stu-id="5be66-138">If the service is running under a domain account, regenerate the client configuration by running Svcutil.exe against the service.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5be66-139">esegue Svcutil.exe, vedere [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="5be66-139"> running Svcutil.exe, see [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span> <span data-ttu-id="5be66-140">Usare il file generato anziché il file di configurazione dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="5be66-140">Use the generated file instead of the configuration file in the sample.</span></span> <span data-ttu-id="5be66-141">Il file di configurazione generato contiene informazioni di identità aggiuntive e tutte le impostazioni necessarie per connettersi all'endpoint del servizio, anche se si tratta di impostazioni predefinite.</span><span class="sxs-lookup"><span data-stu-id="5be66-141">The generated configuration file has additional identity information, and contains all settings necessary to connect to the service endpoint even though they are the default settings.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="5be66-142">informazioni di identità, vedere [autenticazione e identità del servizio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), e [ \<identità >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).</span><span class="sxs-lookup"><span data-stu-id="5be66-142"> identity information, see [Service Identity and Authentication](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), and [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).</span></span>  
   
-4.  Sul computer client, avviare Client.exe da un prompt dei comandi.  
+4.  <span data-ttu-id="5be66-143">Sul computer client, avviare Client.exe da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="5be66-143">On the client machine, launch Client.exe from a command prompt.</span></span>  
   
-### Per eseguire il debug di un servizio  
+### <a name="to-debug-a-service"></a><span data-ttu-id="5be66-144">Per eseguire il debug di un servizio</span><span class="sxs-lookup"><span data-stu-id="5be66-144">To debug a service</span></span>  
   
-1.  Compilare la soluzione \(client e servizio\) usando il menu **Genera** o CTRL\+SHIFT\+B.  
+1.  <span data-ttu-id="5be66-145">Compilazione di soluzione (client e servizio) utilizzando il **compilare** menu o CTRL + MAIUSC + B.</span><span class="sxs-lookup"><span data-stu-id="5be66-145">Build the solution (both client and service) using the **Build** menu or CTRL+SHIFT+B.</span></span>  
   
-2.  Se il servizio è ospitato su IIS:  
+2.  <span data-ttu-id="5be66-146">Se il servizio è ospitato su IIS:</span><span class="sxs-lookup"><span data-stu-id="5be66-146">If the service is hosted in IIS:</span></span>  
   
-    1.  Attivare il servizio inserendo in un browser l'indirizzo http:\/\/localhost\/servicemodelsamples\/service.svc.  
+    1.  <span data-ttu-id="5be66-147">Attivare il servizio inserendo in un browser l'indirizzo http://localhost/servicemodelsamples/service.svc.</span><span class="sxs-lookup"><span data-stu-id="5be66-147">Activate the service using a browser by entering the address http://localhost/servicemodelsamples/service.svc.</span></span>  
   
-    2.  Nella soluzione, scegliere il menu **Debug** e la voce di menu **Connetti a processo**.  
+    2.  <span data-ttu-id="5be66-148">Nella soluzione, scegliere il **Debug** menu e **Connetti a processo** voce di menu.</span><span class="sxs-lookup"><span data-stu-id="5be66-148">In the solution, choose the **Debug** menu and the **Attach to Process** menu item.</span></span>  
   
-    3.  Selezionare la casella di controllo **Mostra processi di tutti gli utenti**.  
+    3.  <span data-ttu-id="5be66-149">Selezionare il **Mostra i processi di tutti gli utenti** casella di controllo.</span><span class="sxs-lookup"><span data-stu-id="5be66-149">Select the **Show processes from all users** check box.</span></span>  
   
-    4.  Selezionare il processo di lavoro dell' host W3wp.exe sul quale eseguire il debug \(selezionare ASPNet\_wp.exe su Windows XP\).  
+    4.  <span data-ttu-id="5be66-150">Selezionare il processo di lavoro dell' host W3wp.exe sul quale eseguire il debug (selezionare ASPNet_wp.exe su Windows XP).</span><span class="sxs-lookup"><span data-stu-id="5be66-150">Select the host worker process W3wp.exe to debug (select ASPNet_wp.exe on Windows XP).</span></span>  
   
-3.  È ora possibile impostare punti di interruzione nel codice del servizio e abilitare punti di interruzione sulle eccezioni.  
+3.  <span data-ttu-id="5be66-151">È ora possibile impostare punti di interruzione nel codice del servizio e abilitare punti di interruzione sulle eccezioni.</span><span class="sxs-lookup"><span data-stu-id="5be66-151">You can now set breakpoints in the service code and enable breakpoints on exceptions.</span></span>  
   
-4.  Fare clic con il pulsante destro del mouse sull'elemento del progetto client e scegliere **Debug**, **Avvia nuova istanza**.  
+4.  <span data-ttu-id="5be66-152">L'elemento del progetto client di mouse e scegliere **Debug**, **Avvia nuova istanza**.</span><span class="sxs-lookup"><span data-stu-id="5be66-152">Right-click the client project item and choose **Debug**, **Start new instance**.</span></span>  
   
-### Per eseguire la pulizia dopo l'esempio  
+### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="5be66-153">Per eseguire la pulizia dopo l'esempio</span><span class="sxs-lookup"><span data-stu-id="5be66-153">To clean up after the sample</span></span>  
   
--   Se il servizio è ospitato su IIS, per motivi di sicurezza, rimuovere la definizione della directory virtuale e le autorizzazioni concesse durante l'installazione quando si è finito di lavorare con gli esempi eseguendo il file batch denominato Cleanupvroot.bat.  
+-   <span data-ttu-id="5be66-154">Se il servizio è ospitato su IIS, per motivi di sicurezza, rimuovere la definizione della directory virtuale e le autorizzazioni concesse durante l'installazione quando si è finito di lavorare con gli esempi eseguendo il file batch denominato Cleanupvroot.bat.</span><span class="sxs-lookup"><span data-stu-id="5be66-154">If the service is hosted in IIS for security purposes, remove the virtual directory definition and permissions granted in the setup steps when you are finished with the samples.</span></span>  
   
-## Vedere anche  
- [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)   
- [Running the Samples in a Workgroup and Across Machines](http://msdn.microsoft.com/it-it/a451a525-e7ce-452d-9da9-620221260113)   
- [Troubleshooting Tips](http://msdn.microsoft.com/it-it/8787c877-5e96-42da-8214-fa737a38f10b)
+## <a name="see-also"></a><span data-ttu-id="5be66-155">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5be66-155">See Also</span></span>  
+ [<span data-ttu-id="5be66-156">Compilazione degli esempi di Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="5be66-156">Building the Windows Communication Foundation Samples</span></span>](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+ [<span data-ttu-id="5be66-157">Esecuzione degli esempi di un gruppo di lavoro e tra più computer</span><span class="sxs-lookup"><span data-stu-id="5be66-157">Running the Samples in a Workgroup and Across Machines</span></span>](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)  
+ [<span data-ttu-id="5be66-158">Suggerimenti di risoluzione dei problemi</span><span class="sxs-lookup"><span data-stu-id="5be66-158">Troubleshooting Tips</span></span>](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)

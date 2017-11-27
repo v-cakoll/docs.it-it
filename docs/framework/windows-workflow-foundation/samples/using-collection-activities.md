@@ -1,56 +1,59 @@
 ---
-title: "Utilizzo delle attivit&#224; di raccolta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Utilizzo delle attività di raccolta"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e1977cf8-1695-4071-b946-7046fe39601e
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: aa7b3b6815adfba9367585174b242aa7410d578e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Utilizzo delle attivit&#224; di raccolta
-In questo esempio viene illustrato come utilizzare le attività della raccolta \(<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601> e <xref:System.Activities.Statements.RemoveFromCollection%601>\) con una classe che implementa l'interfaccia <xref:System.Collections.ICollection> e come creare un'attività personalizzata che scorre una raccolta per stampare il contenuto di ogni elemento nella raccolta.L'attività personalizzata, denominata `PrintCollection`, stampa nella console i membri degli elementi di una raccolta denominata `Numbers`.  
+# <a name="using-collection-activities"></a><span data-ttu-id="ab179-102">Utilizzo delle attività di raccolta</span><span class="sxs-lookup"><span data-stu-id="ab179-102">Using Collection Activities</span></span>
+<span data-ttu-id="ab179-103">In questo esempio viene illustrato come usare le attività della raccolta (<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601> e <xref:System.Activities.Statements.RemoveFromCollection%601>) con una classe che implementa l'interfaccia <xref:System.Collections.ICollection> e come creare un'attività personalizzata che scorre una raccolta per stampare il contenuto di ogni elemento nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="ab179-103">This sample demonstrates how to use the collection activities (<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601>, and <xref:System.Activities.Statements.RemoveFromCollection%601>) with a class that implements the <xref:System.Collections.ICollection> interface and how to create a custom activity that iterates over a collection to print out the contents of each element in the collection.</span></span> <span data-ttu-id="ab179-104">L'attività personalizzata, denominata `PrintCollection`, stampa nella console i membri degli elementi di una raccolta denominata `Numbers`.</span><span class="sxs-lookup"><span data-stu-id="ab179-104">The custom activity, which is named `PrintCollection`, prints to the console the item members of a collection named `Numbers`.</span></span>  
   
- Nella tabella seguente vengono descritte le quattro attività che consentono di modificare la raccolta per i flussi di lavoro.  
+ <span data-ttu-id="ab179-105">Nella tabella seguente vengono descritte le quattro attività che consentono di modificare la raccolta per i flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="ab179-105">The following table describes the four activities that provide collection manipulation for workflows.</span></span>  
   
-|Nome attività|Descrizione|  
+|<span data-ttu-id="ab179-106">Nome attività</span><span class="sxs-lookup"><span data-stu-id="ab179-106">Activity name</span></span>|<span data-ttu-id="ab179-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ab179-107">Description</span></span>|  
 |-------------------|-----------------|  
-|<xref:System.Activities.Statements.AddToCollection%601>|Aggiunge un elemento a una raccolta.|  
-|<xref:System.Activities.Statements.ClearCollection%601>|Cancella tutti gli elementi in una raccolta|  
-|<xref:System.Activities.Statements.ExistsInCollection%601>|Restituisce `true` se l'elemento specificato è presente in una raccolta.|  
-|<xref:System.Activities.Statements.RemoveFromCollection%601>|Rimuove un elemento da una raccolta.|  
+|<xref:System.Activities.Statements.AddToCollection%601>|<span data-ttu-id="ab179-108">Aggiunge un elemento a una raccolta.</span><span class="sxs-lookup"><span data-stu-id="ab179-108">Adds an item to a collection.</span></span>|  
+|<xref:System.Activities.Statements.ClearCollection%601>|<span data-ttu-id="ab179-109">Cancella tutti gli elementi in una raccolta</span><span class="sxs-lookup"><span data-stu-id="ab179-109">Clears all items in a collection</span></span>|  
+|<xref:System.Activities.Statements.ExistsInCollection%601>|<span data-ttu-id="ab179-110">Restituisce `true` se l'elemento specificato è presente in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="ab179-110">Returns `true` if specified item exists in collection.</span></span>|  
+|<xref:System.Activities.Statements.RemoveFromCollection%601>|<span data-ttu-id="ab179-111">Rimuove un elemento da una raccolta.</span><span class="sxs-lookup"><span data-stu-id="ab179-111">Removes an item from a collection.</span></span>|  
   
- L'esempio è costituito da due soluzioni, una sotto la directory CodedWorkflow e l'altra sotto la directory DesignerWorkflow.Vengono illustrati due modi diversi di utilizzo delle attività per gli stessi scopi.  
+ <span data-ttu-id="ab179-112">L'esempio è costituito da due soluzioni, una sotto la directory CodedWorkflow e l'altra sotto la directory DesignerWorkflow.</span><span class="sxs-lookup"><span data-stu-id="ab179-112">The sample consists of two solutions, one under the CodedWorkflow directory and the other under the DesignerWorkflow directory.</span></span> <span data-ttu-id="ab179-113">Vengono illustrati due modi diversi di utilizzo delle attività per gli stessi scopi.</span><span class="sxs-lookup"><span data-stu-id="ab179-113">They demonstrate two different ways of using the activities for the same purposes.</span></span>  
   
-||||  
+|<span data-ttu-id="ab179-114">Soluzione</span><span class="sxs-lookup"><span data-stu-id="ab179-114">Solution</span></span>|<span data-ttu-id="ab179-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ab179-115">Description</span></span>|<span data-ttu-id="ab179-116">File principali</span><span class="sxs-lookup"><span data-stu-id="ab179-116">Main Files</span></span>|  
 |-|-|-|  
-|Soluzione|Descrizione|File principali|  
-|CodedWorkflow|Applicazione client di esempio in cui viene illustrato come richiamare a livello di codice le attività della raccolta.|**PrintCollection.cs**: attività di supporto per stampare tutti gli elementi di una raccolta nella console.<br /><br /> **Program.cs**: compila a livello di codice un'attività Sequence che contiene una serie di attività della raccolta e la esegue.|  
-|DesignerWorkflow|Applicazione client di esempio in cui viene illustrato come utilizzare le attività della raccolta in modo dichiarativo nella progettazione flussi di lavoro.|**CollectionWorkflow.xaml**: flusso di lavoro creato in modo dichiarativo con la finestra di progettazione che utilizza le attività della raccolta.<br /><br /> **PrintCollection.cs**: attività di supporto per stampare tutti gli elementi di una raccolta nella console.<br /><br /> **Program.cs**: richiama il flusso di lavoro descritto in CollectionWorkflow.xaml.|  
+|<span data-ttu-id="ab179-117">CodedWorkflow</span><span class="sxs-lookup"><span data-stu-id="ab179-117">CodedWorkflow</span></span>|<span data-ttu-id="ab179-118">Applicazione client di esempio in cui viene illustrato come richiamare a livello di codice le attività della raccolta.</span><span class="sxs-lookup"><span data-stu-id="ab179-118">Sample client application that demonstrates how to invoke the collection activities programmatically.</span></span>|<span data-ttu-id="ab179-119">**Printcollection**: attività di supporto per stampare la console di ogni elemento in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="ab179-119">**PrintCollection.cs**: helper activity to print out to the console every item in a collection.</span></span><br /><br /> <span data-ttu-id="ab179-120">**Program.cs**: Compila a livello di codice un'attività sequence che contiene una serie di attività della raccolta e la esegue.</span><span class="sxs-lookup"><span data-stu-id="ab179-120">**Program.cs**: programmatically builds a sequence activity that contains a series of collection activities, and executes it.</span></span>|  
+|<span data-ttu-id="ab179-121">DesignerWorkflow</span><span class="sxs-lookup"><span data-stu-id="ab179-121">DesignerWorkflow</span></span>|<span data-ttu-id="ab179-122">Applicazione client di esempio in cui viene illustrato come usare le attività della raccolta in modo dichiarativo nella progettazione flussi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="ab179-122">Sample client application that demonstrates how to use the collection activities declaratively in the workflow designer.</span></span>|<span data-ttu-id="ab179-123">**Collectionworkflow**: un flusso di lavoro creato in modo dichiarativo con la finestra di progettazione che usa le attività di raccolta.</span><span class="sxs-lookup"><span data-stu-id="ab179-123">**CollectionWorkflow.xaml**: a workflow created declaratively with the designer that uses the collection activities.</span></span><br /><br /> <span data-ttu-id="ab179-124">**Printcollection**: attività di supporto per stampare la console di ogni elemento in una raccolta.</span><span class="sxs-lookup"><span data-stu-id="ab179-124">**PrintCollection.cs**: helper activity to print out to the console every item in a collection.</span></span><br /><br /> <span data-ttu-id="ab179-125">**Program.cs**: richiama il flusso di lavoro descritto in Collectionworkflow.</span><span class="sxs-lookup"><span data-stu-id="ab179-125">**Program.cs**: invokes the workflow described in CollectionWorkflow.xaml.</span></span>|  
   
- Nella dimostrazione, i membri degli elementi della raccolta `Numbers` vengono stampati nella console utilizzando un'attività personalizzata denominata `PrintCollection`.  
+ <span data-ttu-id="ab179-126">Nella dimostrazione, i membri degli elementi della raccolta `Numbers` vengono stampati nella console usando un'attività personalizzata denominata `PrintCollection`.</span><span class="sxs-lookup"><span data-stu-id="ab179-126">In the demonstration, the item members of collection `Numbers` are printed on the console using a custom-defined activity called `PrintCollection`.</span></span>  
   
-#### Per utilizzare questo esempio  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="ab179-127">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="ab179-127">To use this sample</span></span>  
   
-1.  In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione Collection.sln.  
+1.  <span data-ttu-id="ab179-128">In [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] aprire il file della soluzione Collection.sln.</span><span class="sxs-lookup"><span data-stu-id="ab179-128">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the Collection.sln solution file.</span></span>  
   
-2.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B.  
+2.  <span data-ttu-id="ab179-129">Per compilare la soluzione, premere CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="ab179-129">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Per eseguire la soluzione, premere CTRL\+F5.  
+3.  <span data-ttu-id="ab179-130">Per eseguire la soluzione, premere CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="ab179-130">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="ab179-131">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="ab179-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ab179-132">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="ab179-132">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="ab179-133">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="ab179-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ab179-134">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="ab179-134">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="ab179-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ab179-135">See Also</span></span>

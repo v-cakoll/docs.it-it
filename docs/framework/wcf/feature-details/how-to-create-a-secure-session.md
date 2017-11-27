@@ -1,46 +1,51 @@
 ---
-title: "Procedura: creare una sessione protetta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sicurezza [WCF], creazione di una sessione"
+title: 'Procedura: creare una sessione protetta'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-caps.latest.revision: 10
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: f2393209352f18eb25b9837ca1ad8ca2746b91d6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: creare una sessione protetta
-Ad eccezione dell'associazione [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), le associazioni fornite dal sistema in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usano automaticamente sessioni protette quando è abilitata la protezione dei messaggi.  
+# <a name="how-to-create-a-secure-session"></a><span data-ttu-id="1a479-102">Procedura: creare una sessione protetta</span><span class="sxs-lookup"><span data-stu-id="1a479-102">How to: Create a Secure Session</span></span>
+<span data-ttu-id="1a479-103">Ad eccezione del [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) l'associazione, le associazioni fornite dal sistema in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Usa sessioni protette quando è abilitata la sicurezza dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="1a479-103">With the exception of the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) binding, the system-provided bindings in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] automatically use secure sessions when message security is enabled.</span></span>  
   
- Per impostazione predefinita, le sessioni protette non restano attive quando un server Web viene riciclato.  Quando si stabilisce una sessione protetta, il client e il servizio memorizzano nella cache la chiave associata alla sessione protetta.  Durante lo scambio dei messaggi, viene scambiato solo un identificatore della chiave memorizzata nella cache.  Se il server Web viene riciclato, anche la cache viene riciclata, pertanto il server Web non può recuperare la chiave memorizzata nella cache per l'identificatore.  In questo caso, al client viene restituita un'eccezione.  Le sessioni protette che usano un token del contesto di sicurezza \(SCT\) con stato possono restare attive quando un server Web viene riciclato.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ll'utilizzo di un token del contesto di sicurezza con stato in una sessione protetta, vedere [Procedura: creare un token di contesto di sicurezza per una sessione sicura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+ <span data-ttu-id="1a479-104">Per impostazione predefinita, le sessioni protette non restano attive quando un server Web viene riciclato.</span><span class="sxs-lookup"><span data-stu-id="1a479-104">By default, secure sessions do not survive a Web server that is recycled.</span></span> <span data-ttu-id="1a479-105">Quando si stabilisce una sessione protetta, il client e il servizio memorizzano nella cache la chiave associata alla sessione protetta.</span><span class="sxs-lookup"><span data-stu-id="1a479-105">When a secure session is established, the client and the service cache the key that is associated with the secure session.</span></span> <span data-ttu-id="1a479-106">Durante lo scambio dei messaggi, viene scambiato solo un identificatore della chiave memorizzata nella cache.</span><span class="sxs-lookup"><span data-stu-id="1a479-106">As the messages are exchanged, only an identifier to the cached key is exchanged.</span></span> <span data-ttu-id="1a479-107">Se il server Web viene riciclato, anche la cache viene riciclata, pertanto il server Web non può recuperare la chiave memorizzata nella cache per l'identificatore.</span><span class="sxs-lookup"><span data-stu-id="1a479-107">If the Web server is recycled, the cache is also recycled, such that the Web server cannot retrieve the cached key for the identifier.</span></span> <span data-ttu-id="1a479-108">In questo caso, al client viene restituita un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="1a479-108">If this happens, an exception is thrown back to the client.</span></span> <span data-ttu-id="1a479-109">Le sessioni protette che usano un token del contesto di sicurezza (SCT) con stato possono restare attive quando un server Web viene riciclato.</span><span class="sxs-lookup"><span data-stu-id="1a479-109">Secure sessions that use a stateful security context token (SCT) can survive a Web server being recycled.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="1a479-110">uso di un token SCT con stato in una sessione protetta, vedere [procedura: creare un Token di contesto di sicurezza per una sessione protetta](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span><span class="sxs-lookup"><span data-stu-id="1a479-110"> using a stateful SCT in a secure session, see [How to: Create a Security Context Token for a Secure Session](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).</span></span>  
   
-### Per specificare che un servizio usa sessioni protette mediante una delle associazioni fornite dal sistema  
+### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a><span data-ttu-id="1a479-111">Per specificare che un servizio usa sessioni protette mediante una delle associazioni fornite dal sistema</span><span class="sxs-lookup"><span data-stu-id="1a479-111">To specify that a service uses secure sessions by using one of the system-provided bindings</span></span>  
   
--   Configurare un servizio per l'uso di un'associazione fornita dal sistema che supporta la protezione dei messaggi.  
+-   <span data-ttu-id="1a479-112">Configurare un servizio per l'uso di un'associazione fornita dal sistema che supporta la protezione dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="1a479-112">Configure a service to use a system-provided binding that supports message security.</span></span>  
   
-     Ad eccezione dell'associazione [\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), se le associazioni fornite dal sistema sono configurate per l'uso della protezione dei messaggi, in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vengono usate automaticamente le sessioni protette.  Nella tabella seguente vengono elencate le associazioni fornite dal sistema che supportano la protezione dei messaggi e viene indicato se la protezione del messaggio è il meccanismo di sicurezza predefinito.  
+     <span data-ttu-id="1a479-113">Ad eccezione del [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) binding, quando le associazioni fornite dal sistema sono configurate per utilizzare la sicurezza dei messaggi, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automaticamente Usa sessioni protette.</span><span class="sxs-lookup"><span data-stu-id="1a479-113">With the exception of the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) binding, when the system-provided bindings are configured to use message security, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] automatically uses secure sessions.</span></span> <span data-ttu-id="1a479-114">Nella tabella seguente vengono elencate le associazioni fornite dal sistema che supportano la protezione dei messaggi e viene indicato se la protezione del messaggio è il meccanismo di sicurezza predefinito.</span><span class="sxs-lookup"><span data-stu-id="1a479-114">The following table lists the system-provided bindings that support message security and whether message security is the default security mechanism.</span></span>  
   
-    |Binding fornito dal sistema|Elemento Configuration|Sicurezza dei messaggi attivata per impostazione predefinita|  
-    |---------------------------------|----------------------------|------------------------------------------------------------------|  
-    |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|No|  
-    |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Sì|  
-    |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Sì|  
-    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Sì|  
-    |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|No|  
-    |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|No|  
+    |<span data-ttu-id="1a479-115">Binding fornito dal sistema</span><span class="sxs-lookup"><span data-stu-id="1a479-115">System-provided binding</span></span>|<span data-ttu-id="1a479-116">Elemento Configuration</span><span class="sxs-lookup"><span data-stu-id="1a479-116">Configuration element</span></span>|<span data-ttu-id="1a479-117">Sicurezza dei messaggi attivata per impostazione predefinita</span><span class="sxs-lookup"><span data-stu-id="1a479-117">Message security on by default</span></span>|  
+    |------------------------------|---------------------------|------------------------------------|  
+    |<xref:System.ServiceModel.BasicHttpBinding>|[<span data-ttu-id="1a479-118">\<basicHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="1a479-118">\<basicHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|<span data-ttu-id="1a479-119">No</span><span class="sxs-lookup"><span data-stu-id="1a479-119">No</span></span>|  
+    |<xref:System.ServiceModel.WSHttpBinding>|[<span data-ttu-id="1a479-120">\<wsHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="1a479-120">\<wsHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|<span data-ttu-id="1a479-121">Sì</span><span class="sxs-lookup"><span data-stu-id="1a479-121">Yes</span></span>|  
+    |<xref:System.ServiceModel.WSDualHttpBinding>|[<span data-ttu-id="1a479-122">\<wsDualHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="1a479-122">\<wsDualHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|<span data-ttu-id="1a479-123">Sì</span><span class="sxs-lookup"><span data-stu-id="1a479-123">Yes</span></span>|  
+    |<xref:System.ServiceModel.WSFederationHttpBinding>|[<span data-ttu-id="1a479-124">\<wsFederationHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="1a479-124">\<wsFederationHttpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|<span data-ttu-id="1a479-125">Sì</span><span class="sxs-lookup"><span data-stu-id="1a479-125">Yes</span></span>|  
+    |<xref:System.ServiceModel.NetTcpBinding>|[<span data-ttu-id="1a479-126">\<netTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="1a479-126">\<netTcpBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|<span data-ttu-id="1a479-127">No</span><span class="sxs-lookup"><span data-stu-id="1a479-127">No</span></span>|  
+    |<xref:System.ServiceModel.NetMsmqBinding>|[<span data-ttu-id="1a479-128">\<netMsmqBinding ></span><span class="sxs-lookup"><span data-stu-id="1a479-128">\<netMsmqBinding></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|<span data-ttu-id="1a479-129">No</span><span class="sxs-lookup"><span data-stu-id="1a479-129">No</span></span>|  
   
-     Nell'esempio di codice seguente viene usata la configurazione per specificare un'associazione denominata `wsHttpBinding_Calculator` che usa la sicurezza dei messaggi [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) e le sessioni protette.  
+     <span data-ttu-id="1a479-130">Esempio di codice seguente utilizza la configurazione per specificare un'associazione denominata `wsHttpBinding_Calculator` che utilizza il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), protezione dei messaggi e proteggere le sessioni.</span><span class="sxs-lookup"><span data-stu-id="1a479-130">The following code example uses configuration to specify a binding named `wsHttpBinding_Calculator` that uses the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), message security, and secure sessions.</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
       <WSHttpBinding>  
        <binding name = "wsHttpBinding_Calculator">  
@@ -52,23 +57,23 @@ Ad eccezione dell'associazione [\<basicHttpBinding\>](../../../../docs/framework
     </bindings>  
     ```  
   
-     Nell'esempio di codice seguente viene specificato che [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), la protezione dei messaggi e le sessioni protette vengono usati per proteggere il servizio `secureCalculator`.  
+     <span data-ttu-id="1a479-131">Esempio di codice seguente specifica che il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), protezione dei messaggi e proteggere le sessioni vengono utilizzate per proteggere il `secureCalculator` servizio.</span><span class="sxs-lookup"><span data-stu-id="1a479-131">The following code example specifies that the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), message security, and secure sessions are used to secure the `secureCalculator` service.</span></span>  
   
      [!code-csharp[c_CreateSecureSession#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#1)]
      [!code-vb[c_CreateSecureSession#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#1)]  
   
     > [!NOTE]
-    >  Le sessioni protette possono essere disattivate per [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) impostando l'attributo `establishSecurityContext` su `false`.  Per le altre associazioni fornite dal sistema, è possibile disattivare le sessioni protette solo creando un'associazione personalizzata.  
+    >  <span data-ttu-id="1a479-132">Possano disattivare le sessioni protette per la [ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) impostando il `establishSecurityContext` attributo `false`.</span><span class="sxs-lookup"><span data-stu-id="1a479-132">Secure sessions can be turned off for the [<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) by setting the `establishSecurityContext` attribute to `false`.</span></span> <span data-ttu-id="1a479-133">Per le altre associazioni fornite dal sistema, è possibile disattivare le sessioni protette solo creando un'associazione personalizzata.</span><span class="sxs-lookup"><span data-stu-id="1a479-133">For the other system-provided bindings, secure sessions can only be turned off by creating a custom binding.</span></span>  
   
-### Per specificare che un servizio usa sessioni protette mediante un'associazione personalizzata  
+### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a><span data-ttu-id="1a479-134">Per specificare che un servizio usa sessioni protette mediante un'associazione personalizzata</span><span class="sxs-lookup"><span data-stu-id="1a479-134">To specify that a service uses secure sessions by using a custom binding</span></span>  
   
--   Creare un'associazione personalizzata che specifica che i messaggi SOAP sono protetti mediante una sessione protetta.  
+-   <span data-ttu-id="1a479-135">Creare un'associazione personalizzata che specifica che i messaggi SOAP sono protetti mediante una sessione protetta.</span><span class="sxs-lookup"><span data-stu-id="1a479-135">Create a custom binding that specifies that SOAP messages are protected by a secure session.</span></span>  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sulla creazione di un'associazione personalizzata, vedere [Procedura: personalizzare un'associazione fornita dal sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="1a479-136">creazione di un'associazione personalizzata, vedere [procedura: personalizzare un'associazione fornite dal sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).</span><span class="sxs-lookup"><span data-stu-id="1a479-136"> creating a custom binding, see [How to: Customize a System-Provided Binding](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).</span></span>  
   
-     Nell'esempio di codice seguente viene usata la configurazione per specificare un'associazione personalizzata che protegge i messaggi mediante una sessione protetta.  
+     <span data-ttu-id="1a479-137">Nell'esempio di codice seguente viene usata la configurazione per specificare un'associazione personalizzata che protegge i messaggi mediante una sessione protetta.</span><span class="sxs-lookup"><span data-stu-id="1a479-137">The following code example uses configuration to specify a custom binding that messages using a secure session.</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
       <!-- configure a custom binding -->  
       <customBinding>  
@@ -82,10 +87,10 @@ Ad eccezione dell'associazione [\<basicHttpBinding\>](../../../../docs/framework
     </bindings>  
     ```  
   
-     Nell'esempio di codice seguente viene creata un'associazione personalizzata che usa la modalità di autenticazione <xref:System.ServiceModel.Configuration.AuthenticationMode> per l'avvio automatico di una sessione protetta.  
+     <span data-ttu-id="1a479-138">Nell'esempio di codice seguente viene creata un'associazione personalizzata che usa la modalità di autenticazione <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> per l'avvio automatico di una sessione protetta.</span><span class="sxs-lookup"><span data-stu-id="1a479-138">The following code example creates a custom binding that uses the <xref:System.ServiceModel.Configuration.AuthenticationMode.MutualCertificate> authentication mode to bootstrap a secure session.</span></span>  
   
      [!code-csharp[c_CreateSecureSession#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#2)]
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  
   
-## Vedere anche  
- [Panoramica delle associazioni WCF](../../../../docs/framework/wcf/bindings-overview.md)
+## <a name="see-also"></a><span data-ttu-id="1a479-139">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1a479-139">See Also</span></span>  
+ [<span data-ttu-id="1a479-140">Panoramica delle associazioni WCF</span><span class="sxs-lookup"><span data-stu-id="1a479-140">WCF Bindings Overview</span></span>](../../../../docs/framework/wcf/bindings-overview.md)

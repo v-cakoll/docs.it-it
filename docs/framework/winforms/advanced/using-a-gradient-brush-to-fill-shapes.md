@@ -1,49 +1,50 @@
 ---
-title: "Utilizzo di un pennello a sfumatura per il riempimento di forme | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pennelli, pennelli per sfumature"
-  - "esempi [Windows Form], pennelli per sfumature"
-  - "pennelli per sfumature"
+title: Utilizzo di un pennello a sfumatura per il riempimento di forme
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- brushes [Windows Forms], gradient brushes
+- gradient brushes
+- examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5a1c4ab7c2ee6f7164b6158dcb4ca4721be12650
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Utilizzo di un pennello a sfumatura per il riempimento di forme
-È possibile utilizzare un pennello a sfumatura per riempire una forma con un colore che si modifica gradualmente.  È possibile ad esempio utilizzare una sfumatura orizzontale per riempire una forma con colori che si modificano gradualmente passando dal margine sinistro della forma al margine destro.  Si pensi a un rettangolo che sia di colore nero al margine sinistro e di colore rosso al margine destro, ovvero avente componenti rosso, verde e blu pari a 0, 0, 0 in corrispondenza del margine sinistro e 255, 0, 0 in corrispondenza di quello destro.  Se il rettangolo è largo 256 il componente rosso di un dato pixel sarà maggiore del componente rosso del pixel a sinistra del primo.  Il pixel più a sinistra in una riga ha componenti cromatiche \(0, 0, 0\), il secondo \(1, 0, 0\), il terzo \(2, 0, 0\) e così via, fino al pixel più a destra, che ha componenti cromatiche \(255, 0, 0\).  Questi valori di colore interpolati formano la sfumatura di colore.  
+# <a name="using-a-gradient-brush-to-fill-shapes"></a><span data-ttu-id="e2056-102">Utilizzo di un pennello a sfumatura per il riempimento di forme</span><span class="sxs-lookup"><span data-stu-id="e2056-102">Using a Gradient Brush to Fill Shapes</span></span>
+<span data-ttu-id="e2056-103">È possibile utilizzare un pennello a sfumatura per riempire una forma con un colore gradualmente.</span><span class="sxs-lookup"><span data-stu-id="e2056-103">You can use a gradient brush to fill a shape with a gradually changing color.</span></span> <span data-ttu-id="e2056-104">Ad esempio, è possibile utilizzare una sfumatura orizzontale per riempire una forma con colore che cambia gradualmente man mano che si sposta dal bordo sinistro della forma al bordo destro.</span><span class="sxs-lookup"><span data-stu-id="e2056-104">For example, you can use a horizontal gradient to fill a shape with color that changes gradually as you move from the left edge of the shape to the right edge.</span></span> <span data-ttu-id="e2056-105">Si supponga di un rettangolo con un bordo sinistro di colore nero (rappresentato da componenti rosso, verde e blu 0, 0, 0) e un diritto margine (rappresentato da 255, 0, 0).</span><span class="sxs-lookup"><span data-stu-id="e2056-105">Imagine a rectangle with a left edge that is black (represented by red, green, and blue components 0, 0, 0) and a right edge that is red (represented by 255, 0, 0).</span></span> <span data-ttu-id="e2056-106">Se il rettangolo è 256 pixel in larghezza, il componente rosso di un determinato pixel sarà una maggiore il componente rosso di pixel alla sua sinistra.</span><span class="sxs-lookup"><span data-stu-id="e2056-106">If the rectangle is 256 pixels wide, the red component of a given pixel will be one greater than the red component of the pixel to its left.</span></span> <span data-ttu-id="e2056-107">Il pixel più a sinistra in una riga ha componenti di colore (0, 0, 0), il secondo pixel è (1, 0, 0), il terzo pixel (2, 0, 0) e così via, fino a ottenere il pixel più a destra, che include componenti di colore (255, 0, 0).</span><span class="sxs-lookup"><span data-stu-id="e2056-107">The leftmost pixel in a row has color components (0, 0, 0), the second pixel has (1, 0, 0), the third pixel has (2, 0, 0), and so on, until you get to the rightmost pixel, which has color components (255, 0, 0).</span></span> <span data-ttu-id="e2056-108">Questi valori di colore interpolata è costituiscono la sfumatura di colore.</span><span class="sxs-lookup"><span data-stu-id="e2056-108">These interpolated color values make up the color gradient.</span></span>  
   
- Il colore di una sfumatura lineare cambia spostandosi in orizzontale, in verticale o in parallelo lungo una linea inclinata specificata.  Il colore di una sfumatura percorso cambia spostandosi verso l'interno e i limiti di un percorso.  È possibile personalizzare le sfumature percorso per ottenere una notevole varietà di effetti.  
+ <span data-ttu-id="e2056-109">Sfumatura lineare cambia colore quando si sposta orizzontalmente, verticalmente o parallela a una determinata riga inclinata.</span><span class="sxs-lookup"><span data-stu-id="e2056-109">A linear gradient changes color as you move horizontally, vertically, or parallel to a specified slanted line.</span></span> <span data-ttu-id="e2056-110">Quando si sposta sulla parte interna e limiti di un percorso, una sfumatura percorso cambia colore.</span><span class="sxs-lookup"><span data-stu-id="e2056-110">A path gradient changes color as you move about the interior and boundary of a path.</span></span> <span data-ttu-id="e2056-111">È possibile personalizzare i gradienti del percorso per raggiungere una vasta gamma di effetti.</span><span class="sxs-lookup"><span data-stu-id="e2056-111">You can customize path gradients to achieve a wide variety of effects.</span></span>  
   
- Nell'illustrazione che segue si mostra un rettangolo riempito con un pennello a sfumatura lineare e un'ellisse riempita con un pennello a sfumatura a percorso.  
+ <span data-ttu-id="e2056-112">Nella figura seguente viene illustrato un rettangolo riempito con pennello sfumato lineare e un'ellisse riempita con un pennello a sfumatura.</span><span class="sxs-lookup"><span data-stu-id="e2056-112">The following illustration shows a rectangle filled with a linear gradient brush and an ellipse filled with a path gradient brush.</span></span>  
   
- ![Sfumatura](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")  
+ <span data-ttu-id="e2056-113">![Sfumatura](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")</span><span class="sxs-lookup"><span data-stu-id="e2056-113">![Gradient](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")</span></span>  
   
-## In questa sezione  
- [Procedura: creare una sfumatura lineare](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
- Mostra come creare una sfumatura lineare utilizzando la classe <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+## <a name="in-this-section"></a><span data-ttu-id="e2056-114">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="e2056-114">In This Section</span></span>  
+ [<span data-ttu-id="e2056-115">Procedura: Creare una sfumatura lineare</span><span class="sxs-lookup"><span data-stu-id="e2056-115">How to: Create a Linear Gradient</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
+ <span data-ttu-id="e2056-116">Viene illustrato come creare una sfumatura lineare utilizzando la <xref:System.Drawing.Drawing2D.LinearGradientBrush> classe.</span><span class="sxs-lookup"><span data-stu-id="e2056-116">Shows how to create a linear gradient using the <xref:System.Drawing.Drawing2D.LinearGradientBrush> class.</span></span>  
   
- [Procedura: creare una sfumatura percorso](../../../../docs/framework/winforms/advanced/how-to-create-a-path-gradient.md)  
- Descrive come creare una sfumatura a percorso utilizzando la classe <xref:System.Drawing.Drawing2D.PathGradientBrush>.  
+ [<span data-ttu-id="e2056-117">Procedura: Creare una sfumatura percorso</span><span class="sxs-lookup"><span data-stu-id="e2056-117">How to: Create a Path Gradient</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-path-gradient.md)  
+ <span data-ttu-id="e2056-118">Viene descritto come creare una sfumatura di percorso utilizzando il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe.</span><span class="sxs-lookup"><span data-stu-id="e2056-118">Describes how to create a path gradient using the <xref:System.Drawing.Drawing2D.PathGradientBrush> class.</span></span>  
   
- [Procedura: applicare la correzione gamma a una sfumatura](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
- Illustra come utilizzare la correzione di gamma con un pennello a sfumatura.  
+ [<span data-ttu-id="e2056-119">Procedura: Applicare la correzione gamma a una sfumatura</span><span class="sxs-lookup"><span data-stu-id="e2056-119">How to: Apply Gamma Correction to a Gradient</span></span>](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
+ <span data-ttu-id="e2056-120">Viene illustrato come utilizzare la correzione gamma con un pennello sfumato.</span><span class="sxs-lookup"><span data-stu-id="e2056-120">Explains how to use gamma correction with a gradient brush.</span></span>  
   
-## Riferimenti  
- <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=fullName>  
- Descrive la classe e contiene i collegamenti a tutti i relativi membri.  
+## <a name="reference"></a><span data-ttu-id="e2056-121">Riferimento</span><span class="sxs-lookup"><span data-stu-id="e2056-121">Reference</span></span>  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>  
+ <span data-ttu-id="e2056-122">Contiene una descrizione di questa classe e include collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="e2056-122">Contains a description of this class and has links to all of its members.</span></span>  
   
- <xref:System.Drawing.Drawing2D.PathGradientBrush?displayProperty=fullName>  
- Descrive la classe e contiene i collegamenti a tutti i relativi membri.
+ <xref:System.Drawing.Drawing2D.PathGradientBrush?displayProperty=nameWithType>  
+ <span data-ttu-id="e2056-123">Contiene una descrizione di questa classe e include collegamenti a tutti i relativi membri.</span><span class="sxs-lookup"><span data-stu-id="e2056-123">Contains a description of this class and has links to all of its members.</span></span>

@@ -1,33 +1,36 @@
 ---
-title: "Hosting di contenuto Win32 in WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "interoperabilità [WPF], esercitazioni"
-  - "interoperabilità [WPF], Win32"
-  - "codice Win32, interoperabilità WPF"
+title: Hosting di contenuto Win32 in WPF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interoperability [WPF], tutorials
+- Win32 code [WPF], WPF interoperation
+- interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e82d18cd765fc3ac4f4982a71d187a3741f4f03a
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Hosting di contenuto Win32 in WPF
-## Prerequisiti  
- Vedere [Interoperatività di WPF e Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+# <a name="hosting-win32-content-in-wpf"></a><span data-ttu-id="20c95-102">Hosting di contenuto Win32 in WPF</span><span class="sxs-lookup"><span data-stu-id="20c95-102">Hosting Win32 Content in WPF</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="20c95-103">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="20c95-103">Prerequisites</span></span>  
+ <span data-ttu-id="20c95-104">Vedere [interoperatività di WPF e Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).</span><span class="sxs-lookup"><span data-stu-id="20c95-104">See [WPF and Win32 Interoperation](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).</span></span>  
   
-## Procedura dettagliata di Win32 in Windows Presentation Framework \(HwndHost\)  
- Per riutilizzare il contenuto [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] in applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], utilizzare <xref:System.Windows.Interop.HwndHost>, un controllo che dà a HWND l'aspetto di contenuto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Analogamente a <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> è facile da utilizzare. È necessario derivare da <xref:System.Windows.Interop.HwndHost> e implementare i metodi `BuildWindowCore` e `DestroyWindowCore`, quindi creare un'istanza della classe <xref:System.Windows.Interop.HwndHost> derivata e inserirla nell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a><span data-ttu-id="20c95-105">Una procedura dettagliata di Win32 all'interno di Windows Presentation Framework (HwndHost)</span><span class="sxs-lookup"><span data-stu-id="20c95-105">A Walkthrough of Win32 Inside Windows Presentation Framework (HwndHost)</span></span>  
+ <span data-ttu-id="20c95-106">Per riutilizzare [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] contenuto all'interno di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le applicazioni utilizzano <xref:System.Windows.Interop.HwndHost>, che è un controllo che rende HWND simile [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenuto.</span><span class="sxs-lookup"><span data-stu-id="20c95-106">To reuse [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] content inside [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications, use <xref:System.Windows.Interop.HwndHost>, which is a control that makes HWNDs look like [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content.</span></span>  <span data-ttu-id="20c95-107">Come <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> è facile da utilizzare: derivano da <xref:System.Windows.Interop.HwndHost> e implementare `BuildWindowCore` e `DestroyWindowCore` metodi, quindi creare un'istanza del <xref:System.Windows.Interop.HwndHost> classe derivata e inserirlo all'interno del [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione.</span><span class="sxs-lookup"><span data-stu-id="20c95-107">Like <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> is straightforward to use: derive from <xref:System.Windows.Interop.HwndHost> and implement `BuildWindowCore` and `DestroyWindowCore` methods, then instantiate your <xref:System.Windows.Interop.HwndHost> derived class and place it inside your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span>  
   
- Se la logica [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] è già assemblata come controllo, l'implementazione di `BuildWindowCore` è poco più di una chiamata a `CreateWindow`.  Per creare un controllo LISTBOX di [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] in [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)], ad esempio:  
+ <span data-ttu-id="20c95-108">Se il [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] logica è già compresso come un controllo, è possibile che il `BuildWindowCore` implementazione è poco più di una chiamata a `CreateWindow`.</span><span class="sxs-lookup"><span data-stu-id="20c95-108">If your [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] logic is already packaged as a control, then your `BuildWindowCore` implementation is little more than a call to `CreateWindow`.</span></span>  <span data-ttu-id="20c95-109">Ad esempio, per creare un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] controllo LISTBOX di [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="20c95-109">For example, to create a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] LISTBOX control in [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]:</span></span>  
   
 ```  
 virtual HandleRef BuildWindowCore(HandleRef hwndParent) override {  
@@ -50,44 +53,44 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 }  
 ```  
   
- Si supponga, invece, che il codice [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] non sia completamente autonomo.  In questo caso, è possibile creare una finestra di dialogo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] e incorporarne il contenuto in un'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] più grande.  Nell'esempio questo scenario viene illustrato in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] e [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)], benché sia anche possibile utilizzare un altro linguaggio o la riga di comando.  
+ <span data-ttu-id="20c95-110">Si supponga, tuttavia il [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] codice non sia completamente autonomo?</span><span class="sxs-lookup"><span data-stu-id="20c95-110">But suppose the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] code is not quite so self-contained?</span></span> <span data-ttu-id="20c95-111">Se in tal caso, è possibile creare un [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] finestra di dialogo casella e incorporare il contenuto in un maggiore [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="20c95-111">If so, you can create a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] dialog box and embed its contents into a larger [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span>  <span data-ttu-id="20c95-112">Nell'esempio viene illustrato in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] e [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)], sebbene sia possibile effettuare questa operazione in una lingua diversa o dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="20c95-112">The sample shows this in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] and [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)], although it is also possible to do this in a different language or at the command line.</span></span>  
   
- Iniziare da una semplice finestra di dialogo, compilata in un progetto [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)].  
+ <span data-ttu-id="20c95-113">Iniziare con una semplice finestra di dialogo, viene compilato in un [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] progetto.</span><span class="sxs-lookup"><span data-stu-id="20c95-113">Start with a simple dialog, which is compiled into a [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] project.</span></span>  
   
- Successivamente, inserire la finestra di dialogo nell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] più grande:  
+ <span data-ttu-id="20c95-114">Successivamente, inserire la finestra di dialogo nel maggiore [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione:</span><span class="sxs-lookup"><span data-stu-id="20c95-114">Next, introduce the dialog into the larger [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application:</span></span>  
   
--   Compilare la [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] come gestita \(`/clr`\)  
+-   <span data-ttu-id="20c95-115">Compilare il [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] come gestita (`/clr`)</span><span class="sxs-lookup"><span data-stu-id="20c95-115">Compile the [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] as managed (`/clr`)</span></span>  
   
--   Convertire la finestra di dialogo in un controllo  
+-   <span data-ttu-id="20c95-116">Attivare la finestra di dialogo in un controllo</span><span class="sxs-lookup"><span data-stu-id="20c95-116">Turn the dialog into a control</span></span>  
   
--   Definire la classe derivata di <xref:System.Windows.Interop.HwndHost> con i metodi `BuildWindowCore` e `DestroyWindowCore`  
+-   <span data-ttu-id="20c95-117">Definire la classe derivata di <xref:System.Windows.Interop.HwndHost> con `BuildWindowCore` e `DestroyWindowCore` metodi</span><span class="sxs-lookup"><span data-stu-id="20c95-117">Define the derived class of <xref:System.Windows.Interop.HwndHost> with `BuildWindowCore` and `DestroyWindowCore` methods</span></span>  
   
--   Eseguire l'override del metodo `TranslateAccelerator` per gestire i tasti della finestra di dialogo  
+-   <span data-ttu-id="20c95-118">Eseguire l'override `TranslateAccelerator` metodo per gestire le chiavi di finestra di dialogo</span><span class="sxs-lookup"><span data-stu-id="20c95-118">Override `TranslateAccelerator` method to handle dialog keys</span></span>  
   
--   Eseguire l'override del metodo `TabInto` per supportare la tabulazione  
+-   <span data-ttu-id="20c95-119">Eseguire l'override `TabInto` per supportare la tabulazione (metodo)</span><span class="sxs-lookup"><span data-stu-id="20c95-119">Override `TabInto` method to support tabbing</span></span>  
   
--   Eseguire l'override del metodo `OnMnemonic` per supportare i tasti di scelta  
+-   <span data-ttu-id="20c95-120">Eseguire l'override `OnMnemonic` per supportare i tasti di scelta (metodo)</span><span class="sxs-lookup"><span data-stu-id="20c95-120">Override `OnMnemonic` method to support mnemonics</span></span>  
   
--   Creare un'istanza della sottoclasse <xref:System.Windows.Interop.HwndHost> e inserirla nell'elemento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] corretto  
+-   <span data-ttu-id="20c95-121">Creare un'istanza di <xref:System.Windows.Interop.HwndHost> sottoclasse e inserirlo in destra [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elemento</span><span class="sxs-lookup"><span data-stu-id="20c95-121">Instantiate the <xref:System.Windows.Interop.HwndHost> subclass and put it under the right [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element</span></span>  
   
-### Convertire la finestra di dialogo in un controllo  
- È possibile convertire una finestra di dialogo in HWND figlio utilizzando gli stili WS\_CHILD e DS\_CONTROL.  Accedere al file di risorse \(rc\) in cui è definita la finestra di dialogo e individuare l'inizio della definizione della finestra di dialogo:  
+### <a name="turn-the-dialog-into-a-control"></a><span data-ttu-id="20c95-122">Attivare la finestra di dialogo in un controllo</span><span class="sxs-lookup"><span data-stu-id="20c95-122">Turn the Dialog into a Control</span></span>  
+ <span data-ttu-id="20c95-123">È possibile attivare una finestra di dialogo in HWND usando gli stili WS_CHILD e DS_CONTROL figlio.</span><span class="sxs-lookup"><span data-stu-id="20c95-123">You can turn a dialog box into a child HWND using the WS_CHILD and DS_CONTROL styles.</span></span>  <span data-ttu-id="20c95-124">Andare nel file di risorsa (RC) in cui è definita la finestra di dialogo e trovare l'inizio della definizione della finestra di dialogo:</span><span class="sxs-lookup"><span data-stu-id="20c95-124">Go into the resource file (.rc) where the dialog is defined, and find the beginning of the definition of the dialog:</span></span>  
   
 ```  
 IDD_DIALOG1 DIALOGEX 0, 0, 303, 121  
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU  
 ```  
   
- Modificare la seconda riga come segue:  
+ <span data-ttu-id="20c95-125">Modificare la seconda riga a:</span><span class="sxs-lookup"><span data-stu-id="20c95-125">Change the second line to:</span></span>  
   
 ```  
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER | DS_CONTROL  
 ```  
   
- Con questa azione non viene creato un controllo completamente autonomo. È infatti ancora necessario chiamare `IsDialogMessage()` affinché determinati messaggi vengano elaborati in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], ma la modifica del controllo costituisce un modo semplice per inserire tali controlli in un altro oggetto HWND.  
+ <span data-ttu-id="20c95-126">Questa azione non completamente comprimerlo in un controllo autonomo. è necessario chiamare `IsDialogMessage()` in modo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] determinati messaggi vengano elaborati, ma la modifica del controllo fornisce un modo semplice per inserire i controlli in un altro oggetto HWND.</span><span class="sxs-lookup"><span data-stu-id="20c95-126">This action does not fully package it into a self-contained control; you still need to call `IsDialogMessage()` so [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] can process certain messages, but the control change does provide a straightforward way of putting those controls inside another HWND.</span></span>  
   
-## Sottoclasse HwndHost  
- Importare i seguenti spazi dei nomi:  
+## <a name="subclass-hwndhost"></a><span data-ttu-id="20c95-127">Sottoclasse HwndHost</span><span class="sxs-lookup"><span data-stu-id="20c95-127">Subclass HwndHost</span></span>  
+ <span data-ttu-id="20c95-128">Importare gli spazi dei nomi seguenti:</span><span class="sxs-lookup"><span data-stu-id="20c95-128">Import the following namespaces:</span></span>  
   
 ```  
 namespace ManagedCpp  
@@ -100,7 +103,7 @@ namespace ManagedCpp
     using namespace System::Runtime::InteropServices;  
 ```  
   
- Creare quindi una classe derivata di <xref:System.Windows.Interop.HwndHost> ed eseguire l'override dei metodi `BuildWindowCore` e `DestroyWindowCore`:  
+ <span data-ttu-id="20c95-129">Quindi creare una classe derivata di <xref:System.Windows.Interop.HwndHost> ed eseguire l'override di `BuildWindowCore` e `DestroyWindowCore` metodi:</span><span class="sxs-lookup"><span data-stu-id="20c95-129">Then create a derived class of <xref:System.Windows.Interop.HwndHost> and override the `BuildWindowCore` and `DestroyWindowCore` methods:</span></span>  
   
 ```  
 public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {  
@@ -122,7 +125,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }  
 ```  
   
- In questo caso, viene utilizzato `CreateDialog` per creare la finestra di dialogo che in realtà è un controllo.  Poiché si tratta di uno dei primi metodi chiamati nella [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], è inoltre necessario eseguire un'inizializzazione [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] standard chiamando una funzione che verrà definita in un secondo momento, denominata `InitializeGlobals()`:  
+ <span data-ttu-id="20c95-130">Questo caso si usa il `CreateDialog` per creare la finestra di dialogo che è realmente un controllo.</span><span class="sxs-lookup"><span data-stu-id="20c95-130">Here you use the `CreateDialog` to create the dialog box that is really a control.</span></span>  <span data-ttu-id="20c95-131">Poiché si tratta di uno dei primi metodi chiamati all'interno di [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], è inoltre necessario eseguire alcuni standard [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] inizializzazione richiamando una funzione che verrà definita in un secondo momento, chiamato `InitializeGlobals()`:</span><span class="sxs-lookup"><span data-stu-id="20c95-131">Since this is one of the first methods called inside the [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], you should also do some standard [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] initialization by calling a function you will define later, called `InitializeGlobals()`:</span></span>  
   
 ```  
 bool initialized = false;  
@@ -138,14 +141,12 @@ bool initialized = false;
         LoadString(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);  
         LoadString(hInstance, IDC_TYPICALWIN32DIALOG, szWindowClass, MAX_LOADSTRING);  
         MyRegisterClass(hInstance);  
-  
 ```  
   
-### Eseguire l'override del metodo TranslateAccelerator per gestire i tasti della finestra di dialogo  
- Se si eseguisse ora questo esempio, si otterrebbe un controllo finestra di dialogo che viene visualizzato, ma in cui viene ignorata l'elaborazione da tastiera necessaria per ottenere una finestra di dialogo funzionale.  È necessario eseguire l'override dell'implementazione di `TranslateAccelerator` \(proveniente da `IKeyboardInputSink`, un'interfaccia implementata da <xref:System.Windows.Interop.HwndHost>\).  Questo metodo viene chiamato quando l'applicazione riceve WM\_KEYDOWN e WM\_SYSKEYDOWN.  
+### <a name="override-translateaccelerator-method-to-handle-dialog-keys"></a><span data-ttu-id="20c95-132">Eseguire l'override del metodo TranslateAccelerator per gestire le chiavi di finestra di dialogo</span><span class="sxs-lookup"><span data-stu-id="20c95-132">Override TranslateAccelerator Method to Handle Dialog Keys</span></span>  
+ <span data-ttu-id="20c95-133">Se si esegue questo esempio a questo punto, si otterrebbe un controllo di finestra di dialogo che consente di visualizzare, ma in cui viene ignorata tutti della tastiera che consente l'elaborazione di una finestra di dialogo di una finestra di dialogo funzionale.</span><span class="sxs-lookup"><span data-stu-id="20c95-133">If you ran this sample now, you would get a dialog control that displays, but it would ignore all of the keyboard processing that makes a dialog box a functional dialog box.</span></span>  <span data-ttu-id="20c95-134">È necessario eseguire l'override di `TranslateAccelerator` implementazione (proveniente da `IKeyboardInputSink`, un'interfaccia che <xref:System.Windows.Interop.HwndHost> implementa).</span><span class="sxs-lookup"><span data-stu-id="20c95-134">You should now override the `TranslateAccelerator` implementation (which comes from `IKeyboardInputSink`, an interface that <xref:System.Windows.Interop.HwndHost> implements).</span></span>  <span data-ttu-id="20c95-135">Questo metodo viene chiamato quando l'applicazione riceve WM_KEYDOWN e WM_SYSKEYDOWN.</span><span class="sxs-lookup"><span data-stu-id="20c95-135">This method gets called when the application receives WM_KEYDOWN and WM_SYSKEYDOWN.</span></span>  
   
 ```  
-  
 #undef TranslateAccelerator  
         virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,   
             ModifierKeys modifiers) override   
@@ -196,25 +197,24 @@ bool initialized = false;
         }  
 ```  
   
- Trattandosi di un codice complesso, sono necessarie spiegazione più dettagliate.  Innanzitutto, nel codice vengono utilizzati [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] e macro [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)], è pertanto importante sapere che esiste già una macro denominata `TranslateAccelerator`, definita in winuser.h:  
+ <span data-ttu-id="20c95-136">Si tratta di una grande quantità di codice in un dato specifico, pertanto è possibile usare alcune informazioni dettagliate sulle.</span><span class="sxs-lookup"><span data-stu-id="20c95-136">This is a lot of code in one piece, so it could use some more detailed explanations.</span></span>  <span data-ttu-id="20c95-137">Prima di tutto, il codice utilizzando [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] e [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] ; le macro, è necessario tenere presente che è già presente una macro denominata `TranslateAccelerator`, definito in winuser. h:</span><span class="sxs-lookup"><span data-stu-id="20c95-137">First, the code using [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] and [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] macros; you need to be aware that there is already a macro named `TranslateAccelerator`, which is defined in winuser.h:</span></span>  
   
 ```  
 #define TranslateAccelerator  TranslateAcceleratorW  
 ```  
   
- Assicurarsi quindi di definire un metodo `TranslateAccelerator`, non un metodo `TranslateAcceleratorW`.  
+ <span data-ttu-id="20c95-138">Assicurarsi quindi di definire un `TranslateAccelerator` (metodo) e non un `TranslateAcceleratorW` metodo.</span><span class="sxs-lookup"><span data-stu-id="20c95-138">So make sure to define a `TranslateAccelerator` method and not a `TranslateAcceleratorW` method.</span></span>  
   
- Analogamente, sono presenti entrambe le strutture winuser.h MSG non gestita e `Microsoft::Win32::MSG` gestita.  Per evitare ambiguità tra le due utilizzare l'operatore [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] `::`.  
+ <span data-ttu-id="20c95-139">Analogamente, è presente il winuser. h MSG non gestito e gestito `Microsoft::Win32::MSG` struct.</span><span class="sxs-lookup"><span data-stu-id="20c95-139">Similarly, there is both the unmanaged winuser.h MSG and the managed `Microsoft::Win32::MSG` struct.</span></span>  <span data-ttu-id="20c95-140">Per evitare ambiguità tra i due oggetti utilizzando il [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] `::` operatore.</span><span class="sxs-lookup"><span data-stu-id="20c95-140">You can disambiguate between the two using the [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] `::` operator.</span></span>  
   
 ```  
-  
 virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,   
     ModifierKeys modifiers) override   
 {  
     ::MSG m = ConvertMessage(msg);  
 ```  
   
- Le due strutture MSG hanno gli stessi dati, ma talvolta è più facile utilizzare la definizione non gestita, pertanto in questo esempio è possibile definire la routine di conversione ovvia:  
+ <span data-ttu-id="20c95-141">Sia accodati hanno gli stessi dati, ma a volte risulta più facile lavorare con la definizione non gestita, pertanto in questo esempio è possibile definire la routine di conversione ovvia:</span><span class="sxs-lookup"><span data-stu-id="20c95-141">Both MSGs have the same data, but sometimes it is easier to work with the unmanaged definition, so in this sample you can define the obvious conversion routine:</span></span>  
   
 ```  
 ::MSG ConvertMessage(System::Windows::Interop::MSG% msg) {  
@@ -235,7 +235,7 @@ virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,
 }  
 ```  
   
- Per tornare a `TranslateAccelerator`,  il principio di base consiste nel chiamare la funzione [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] `IsDialogMessage` per eseguire il maggior numero di operazioni possibile, ma `IsDialogMessage` non ha accesso ad alcun elemento esterno alla finestra di dialogo. Quando un utente si sposta con il tasto TAB nella finestra di dialogo e la tabulazione supera l'ultimo controllo nella finestra di dialogo, è necessario impostare lo stato attivo sulla parte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] chiamando `IKeyboardInputSite::OnNoMoreStops`.  
+ <span data-ttu-id="20c95-142">Torna alla `TranslateAccelerator`.</span><span class="sxs-lookup"><span data-stu-id="20c95-142">Back to `TranslateAccelerator`.</span></span>  <span data-ttu-id="20c95-143">Il principio di base consiste nel chiamare il [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funzione `IsDialogMessage` per effettuare più operazioni possibili, ma `IsDialogMessage` non dispone dell'accesso a qualsiasi elemento esterno la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="20c95-143">The basic principle is to call the [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] function `IsDialogMessage` to do as much work as possible, but `IsDialogMessage` does not have access to anything outside the dialog.</span></span> <span data-ttu-id="20c95-144">Durante l'esecuzione di una scheda di utente nella finestra di dialogo, quando la tabulazione oltre l'ultimo controllo nella finestra di dialogo, è necessario impostare lo stato attivo di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] parte chiamando `IKeyboardInputSite::OnNoMoreStops`.</span><span class="sxs-lookup"><span data-stu-id="20c95-144">As a user tab around the dialog, when tabbing runs past the last control in our dialog, you need to set focus to the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] portion by calling `IKeyboardInputSite::OnNoMoreStops`.</span></span>  
   
 ```  
 // Win32's IsDialogMessage() will handle most of the tabbing, but doesn't know   
@@ -257,7 +257,7 @@ if (m.message == WM_KEYDOWN && m.wParam == VK_TAB) {
 }  
 ```  
   
- Infine, viene chiamato `IsDialogMessage`.  Una delle responsabilità di un metodo `TranslateAccelerator` è quella di comunicare a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se la sequenza di tasti è gestita o meno.  In caso contrario, è possibile che l'evento di input sia sottoposto a tunneling e che venga propagato al resto dell'applicazione.  In questo caso, si espone una particolarità della gestione dei messaggi della tastiera e della natura dell'architettura di input in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  Purtroppo, `IsDialogMessage` non fornisce informazioni relative al fatto che una determinata sequenza di tasti venga gestita o meno.  Ancor peggio, chiama `DispatchMessage()` su sequenze di tasti che non deve gestire.  È pertanto necessario decodificare `IsDialogMessage` e chiamarlo solo per i tasti che deve gestire:  
+ <span data-ttu-id="20c95-145">Infine, viene chiamato `IsDialogMessage`.</span><span class="sxs-lookup"><span data-stu-id="20c95-145">Finally, call `IsDialogMessage`.</span></span>  <span data-ttu-id="20c95-146">Ma una delle responsabilità di un `TranslateAccelerator` metodo impone [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se la sequenza di tasti è stata gestita o non.</span><span class="sxs-lookup"><span data-stu-id="20c95-146">But one of the responsibilities of a `TranslateAccelerator` method is telling [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] whether you handled the keystroke or not.</span></span> <span data-ttu-id="20c95-147">Se non viene gestita, l'evento di input può effettuare il tunneling e a bolle attraverso il resto dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="20c95-147">If you did not handle it, the input event can tunnel and bubble through the rest of the application.</span></span> <span data-ttu-id="20c95-148">In questo caso, si espone una particolarità della gestione dei messaggi della tastiera e la natura dell'architettura di input in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].</span><span class="sxs-lookup"><span data-stu-id="20c95-148">Here, you will expose a quirk of keyboard messange handling and the nature of the input architecture in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].</span></span> <span data-ttu-id="20c95-149">Purtroppo, `IsDialogMessage` non restituito in alcun modo se gestisce una particolare sequenza di tasti.</span><span class="sxs-lookup"><span data-stu-id="20c95-149">Unfortunately, `IsDialogMessage` does not return in any way whether it handles a particular keystroke.</span></span>  <span data-ttu-id="20c95-150">Peggio ancora, verrà chiamato `DispatchMessage()` su sequenze di tasti che non deve gestire!</span><span class="sxs-lookup"><span data-stu-id="20c95-150">Even worse, it will call `DispatchMessage()` on keystrokes it should not handle!</span></span>  <span data-ttu-id="20c95-151">Pertanto è necessario decodificare `IsDialogMessage`e lo chiama solo per gestiscono i tasti che:</span><span class="sxs-lookup"><span data-stu-id="20c95-151">So you will have to reverse-engineer `IsDialogMessage`, and only call it for the keys you know it will handle:</span></span>  
   
 ```  
 // Only call IsDialogMessage for keys it will do something with.  
@@ -280,11 +280,10 @@ if (msg.message == WM_SYSKEYDOWN || msg.message == WM_KEYDOWN) {
     }  
 ```  
   
-### Eseguire l'override del metodo TabInto per supportare la tabulazione  
- Dopo avere implementato `TranslateAccelerator`, un utente può spostarsi nella finestra di dialogo e passare all'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] più grande tramite il tasto TAB.  Non è tuttavia possibile utilizzare il tasto TAB per tornare nella finestra di dialogo.  Per risolvere questo problema, eseguire l'override di `TabInto`:  
+### <a name="override-tabinto-method-to-support-tabbing"></a><span data-ttu-id="20c95-152">Eseguire l'override del metodo TabInto per supportare la tabulazione</span><span class="sxs-lookup"><span data-stu-id="20c95-152">Override TabInto Method to Support Tabbing</span></span>  
+ <span data-ttu-id="20c95-153">Ora che è stato implementato `TranslateAccelerator`, un utente può spostarsi nella finestra di dialogo casella e uscirne tramite tab in maggiore [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="20c95-153">Now that you have implemented `TranslateAccelerator`, a user can tab around inside the dialog box and tab out of it into the greater [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span>  <span data-ttu-id="20c95-154">Ma un utente non è possibile scheda alla finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="20c95-154">But a user cannot tab back into the dialog box.</span></span>  <span data-ttu-id="20c95-155">Per risolvere questo problema, si esegue l'override `TabInto`:</span><span class="sxs-lookup"><span data-stu-id="20c95-155">To solve that, you override `TabInto`:</span></span>  
   
 ```  
-  
 public:   
     virtual bool TabInto(TraversalRequest^ request) override {  
         if (request->FocusNavigationDirection == FocusNavigationDirection::Last) {  
@@ -297,13 +296,12 @@ public:
         }  
         return true;  
     }  
-  
 ```  
   
- Il parametro `TraversalRequest` comunica se la tabulazione viene effettuata con TAB o con TAB e MAIUSC.  
+ <span data-ttu-id="20c95-156">Il `TraversalRequest` parametro indica se l'azione della scheda è una scheda o MAIUSC.</span><span class="sxs-lookup"><span data-stu-id="20c95-156">The `TraversalRequest` parameter tells you whether the tab action is a tab or shift tab.</span></span>  
   
-### Eseguire l'override del metodo OnMnemonic per supportare i tasti di scelta  
- La gestione della tastiera è quasi completa, tranne per quanto riguarda i tasti di scelta.  Se un utente preme ALT\+F, lo stato attivo non passa alla casella di modifica "First Name".  A tale scopo, eseguire l'override del metodo `OnMnemonic`.  
+### <a name="override-onmnemonic-method-to-support-mnemonics"></a><span data-ttu-id="20c95-157">Eseguire l'override del metodo OnMnemonic per supportare i tasti di scelta</span><span class="sxs-lookup"><span data-stu-id="20c95-157">Override OnMnemonic Method to Support Mnemonics</span></span>  
+ <span data-ttu-id="20c95-158">Gestione della tastiera è quasi completata, ma ne esiste uno cosa mancante: tasti di scelta non funzionano.</span><span class="sxs-lookup"><span data-stu-id="20c95-158">Keyboard handling is almost complete, but there is one thing missing – mnemonics do not work.</span></span>  <span data-ttu-id="20c95-159">Se un utente preme alt + F, attivo non passa per il "nome:" casella di modifica.</span><span class="sxs-lookup"><span data-stu-id="20c95-159">If a user presses alt-F, focus doe not jump to the "First name:" edit box.</span></span> <span data-ttu-id="20c95-160">In tal caso, si esegue l'override di `OnMnemonic` metodo:</span><span class="sxs-lookup"><span data-stu-id="20c95-160">So, you override the `OnMnemonic` method:</span></span>  
   
 ```  
 virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifiers) override {  
@@ -333,10 +331,10 @@ virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifie
 };  
 ```  
   
- In questo caso, non viene chiamato `IsDialogMessage`,  poiché si verifica lo stesso problema di prima, ovvero è necessario poter comunicare al codice [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se la sequenza di tasti viene gestita o meno e non è possibile raggiungere lo scopo con `IsDialogMessage`.  Si verifica inoltre un secondo problema poiché `IsDialogMessage` non elabora il tasto di scelta se l'oggetto HWND con lo stato attivo non è all'interno della finestra di dialogo.  
+ <span data-ttu-id="20c95-161">Non viene chiamato `IsDialogMessage` qui?</span><span class="sxs-lookup"><span data-stu-id="20c95-161">Why not call `IsDialogMessage` here?</span></span>  <span data-ttu-id="20c95-162">È necessario lo stesso problema come prima, ovvero è necessario essere in grado di informare [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] codice se il codice gestito la sequenza di tasti oppure No, e `IsDialogMessage` non.</span><span class="sxs-lookup"><span data-stu-id="20c95-162">You have the same issue as before--you need to be able to inform [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] code whether your code handled the keystroke or not, and `IsDialogMessage` cannot do that.</span></span>  <span data-ttu-id="20c95-163">È inoltre disponibile un secondo problema, perché `IsDialogMessage` rifiuta di elaborare il tasto di scelta rapida se HWND con lo stato attivo non è presente all'interno della casella della finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="20c95-163">There is also a second issue, because `IsDialogMessage` refuses to process the mnemonic if the focused HWND is not inside the dialog box.</span></span>  
   
-### Creare un'istanza della classe HwndHost derivata  
- Infine, dopo avere impostato il supporto per i tasti e le tabulazioni, è possibile inserire <xref:System.Windows.Interop.HwndHost> nell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] più grande.  Se l'applicazione principale è scritta in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], il modo più semplice per effettuare correttamente l'inserimento consiste nel lasciare un elemento <xref:System.Windows.Controls.Border> vuoto nel punto in cui si intende inserire <xref:System.Windows.Interop.HwndHost>.  Qui viene creato un oggetto <xref:System.Windows.Controls.Border> denominato `insertHwndHostHere`:  
+### <a name="instantiate-the-hwndhost-derived-class"></a><span data-ttu-id="20c95-164">Creare un'istanza della classe HwndHost derivata</span><span class="sxs-lookup"><span data-stu-id="20c95-164">Instantiate the HwndHost Derived Class</span></span>  
+ <span data-ttu-id="20c95-165">Infine, dopo che tutto il supporto di scheda e di chiave è presente, è possibile inserire il <xref:System.Windows.Interop.HwndHost> in più grande [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="20c95-165">Finally, now that all the key and tab support is in place, you can put your <xref:System.Windows.Interop.HwndHost> into the larger [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.</span></span>  <span data-ttu-id="20c95-166">Se l'applicazione principale viene scritto in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], è il modo più semplice per inserirlo nella posizione corretta per lasciare vuota <xref:System.Windows.Controls.Border> elemento in cui si desidera inserire il <xref:System.Windows.Interop.HwndHost>.</span><span class="sxs-lookup"><span data-stu-id="20c95-166">If the main application is written in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], the easiest way to put it in the right place is to leave an empty <xref:System.Windows.Controls.Border> element where you want to put the <xref:System.Windows.Interop.HwndHost>.</span></span>  <span data-ttu-id="20c95-167">Di seguito si crea un <xref:System.Windows.Controls.Border> denominato `insertHwndHostHere`:</span><span class="sxs-lookup"><span data-stu-id="20c95-167">Here you create a <xref:System.Windows.Controls.Border> named `insertHwndHostHere`:</span></span>  
   
 ```  
 <Window x:Class="WPFApplication1.Window1"  
@@ -353,7 +351,7 @@ virtual bool OnMnemonic(System::Windows::Interop::MSG% msg, ModifierKeys modifie
 </Window>  
 ```  
   
- A questo punto, non rimane che individuare il punto ideale nella sequenza di codice per creare un'istanza di <xref:System.Windows.Interop.HwndHost> e connetterla a <xref:System.Windows.Controls.Border>.  In questo esempio, l'istanza viene inserita nel costruttore per la classe <xref:System.Windows.Window> derivata:  
+ <span data-ttu-id="20c95-168">Quindi è comunque per trovare un buon punto nella sequenza di codice per creare un'istanza di <xref:System.Windows.Interop.HwndHost> e connetterla al <xref:System.Windows.Controls.Border>.</span><span class="sxs-lookup"><span data-stu-id="20c95-168">Then all that remains is to find a good place in code sequence to instantiate the <xref:System.Windows.Interop.HwndHost> and connect it to the <xref:System.Windows.Controls.Border>.</span></span>  <span data-ttu-id="20c95-169">In questo esempio, si verrà inserirlo all'interno del costruttore per la <xref:System.Windows.Window> classe derivata:</span><span class="sxs-lookup"><span data-stu-id="20c95-169">In this example, you will put it inside the constructor for the <xref:System.Windows.Window> derived class:</span></span>  
   
 ```  
 public partial class Window1 : Window {  
@@ -367,9 +365,9 @@ public partial class Window1 : Window {
 }  
 ```  
   
- Si ottiene:  
+ <span data-ttu-id="20c95-170">Che consente di:</span><span class="sxs-lookup"><span data-stu-id="20c95-170">Which gives you:</span></span>  
   
- ![Schermata dell'applicazione WPF](../../../../docs/framework/wpf/advanced/media/interoparch09.png "InteropArch09")  
+ <span data-ttu-id="20c95-171">![Schermata dell'applicazione WPF](../../../../docs/framework/wpf/advanced/media/interoparch09.PNG "InteropArch09")</span><span class="sxs-lookup"><span data-stu-id="20c95-171">![WPF application screen shot](../../../../docs/framework/wpf/advanced/media/interoparch09.PNG "InteropArch09")</span></span>  
   
-## Vedere anche  
- [Interoperatività di WPF e Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+## <a name="see-also"></a><span data-ttu-id="20c95-172">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="20c95-172">See Also</span></span>  
+ [<span data-ttu-id="20c95-173">Interoperatività di WPF e Win32</span><span class="sxs-lookup"><span data-stu-id="20c95-173">WPF and Win32 Interoperation</span></span>](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

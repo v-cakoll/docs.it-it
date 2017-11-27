@@ -1,39 +1,42 @@
 ---
-title: "Mappare i vincoli di XML Schema (XSD) keyref ai vincoli del DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mapping tra vincoli keyref XML Schema (XSD) e vincoli di dataset
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4ca72292bd2c43fec6f3833d521ddb83c01c32c9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Mappare i vincoli di XML Schema (XSD) keyref ai vincoli del DataSet
-L'elemento **keyref** consente di stabilire collegamenti tra gli elementi all'interno di un documento.  Questo elemento ha quindi una funzione simile a quella della relazione di chiave esterna in un database relazionale.  Se in uno schema viene specificato l'elemento **keyref**, durante il processo di mapping dello schema l'elemento viene convertito in un vincolo di chiave esterna corrispondente per le colonne delle tabelle del tipo <xref:System.Data.DataSet>.  Per impostazione predefinita, una relazione viene generata anche dall'elemento **keyref** e le proprietà **ParentTable**, **ChildTable**, **ParentColumn** e **ChildColumn** vengono specificate per tale relazione.  
+# <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="a250f-102">Mapping tra vincoli keyref XML Schema (XSD) e vincoli di dataset</span><span class="sxs-lookup"><span data-stu-id="a250f-102">Map keyref XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="a250f-103">Il **keyref** elemento consente di stabilire collegamenti tra elementi all'interno di un documento.</span><span class="sxs-lookup"><span data-stu-id="a250f-103">The **keyref** element allows you to establish links between elements within a document.</span></span> <span data-ttu-id="a250f-104">Questo elemento ha quindi una funzione simile a quella della relazione di chiave esterna in un database relazionale.</span><span class="sxs-lookup"><span data-stu-id="a250f-104">This is similar to a foreign key relationship in a relational database.</span></span> <span data-ttu-id="a250f-105">Se uno schema viene specificato il **keyref** elemento, l'elemento viene convertito durante il processo di mapping dello schema per un vincolo di chiave esterna corrispondente alle colonne nelle tabelle del <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="a250f-105">If a schema specifies the **keyref** element, the element is converted during the schema mapping process to a corresponding foreign key constraint on the columns in the tables of the <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="a250f-106">Per impostazione predefinita, il **keyref** elemento genera anche una relazione, con la **ParentTable**, **ChildTable**, **ParentColumn**e  **ChildColumn** proprietà specificate per la relazione.</span><span class="sxs-lookup"><span data-stu-id="a250f-106">By default, the **keyref** element also generates a relation, with the **ParentTable**, **ChildTable**, **ParentColumn**, and **ChildColumn** properties specified on the relation.</span></span>  
   
- Nella tabella seguente vengono brevemente descritti gli attributi **msdata** che è possibile specificare per l'elemento **keyref**.  
+ <span data-ttu-id="a250f-107">Nella tabella seguente vengono la **msdata** attributi in cui è possibile specificare il **keyref** elemento.</span><span class="sxs-lookup"><span data-stu-id="a250f-107">The following table outlines the **msdata** attributes you can specify in the **keyref** element.</span></span>  
   
-|Nome attributo|Descrizione|  
+|<span data-ttu-id="a250f-108">Nome attributo</span><span class="sxs-lookup"><span data-stu-id="a250f-108">Attribute name</span></span>|<span data-ttu-id="a250f-109">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a250f-109">Description</span></span>|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|Se **ConstraintOnly\="true"** è specificato nell'elemento **keyref** dello schema, verrà creato un vincolo ma non verrà creata alcuna relazione.  Se questo attributo non viene specificato \(o è impostato su **False**\), nel **DataSet** vengono creati sia il vincolo che la relazione.|  
-|**msdata:ConstraintName**|Se l'attributo **ConstraintName** è specificato, il relativo valore viene usato come nome del vincolo.  In caso contrario, il nome del vincolo nel **DataSet** viene fornito dall'attributo **name** dell'elemento **keyref** dello schema.|  
-|**msdata:UpdateRule**|Se l'attributo **UpdateRule** viene specificato nell'elemento **keyref** dello schema, il relativo valore viene assegnato alla proprietà di vincolo **UpdateRule** nel **DataSet**.  In caso contrario, la proprietà **UpdateRule** viene impostata su **Cascade**.|  
-|**msdata:DeleteRule**|Se l'attributo **DeleteRule** viene specificato nell'elemento **keyref** dello schema, il relativo valore viene assegnato alla proprietà di vincolo **DeleteRule** nel **DataSet**.  In caso contrario, la proprietà **DeleteRule** viene impostata su **Cascade**.|  
-|**msdata:AcceptRejectRule**|Se l'attributo **AcceptRejectRule** viene specificato nell'elemento **keyref** dello schema, il relativo valore viene assegnato alla proprietà di vincolo **AcceptRejectRule** nel **DataSet**.  In caso contrario, la proprietà **AcceptRejectRule** viene impostata su **None**.|  
+|<span data-ttu-id="a250f-110">**msdata: ConstraintOnly**</span><span class="sxs-lookup"><span data-stu-id="a250f-110">**msdata:ConstraintOnly**</span></span>|<span data-ttu-id="a250f-111">Se **ConstraintOnly = "true"** viene specificata per il **keyref** elemento nello schema, viene creato un vincolo, ma è stata creata alcuna relazione.</span><span class="sxs-lookup"><span data-stu-id="a250f-111">If **ConstraintOnly="true"** is specified on the **keyref** element in the schema, a constraint is created, but no relation is created.</span></span> <span data-ttu-id="a250f-112">Se questo attributo non è specificato (o è impostata su **False**), vengono creati sia il vincolo che la relazione nel **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="a250f-112">If this attribute is not specified (or is set to **False**), both the constraint and the relation are created in the **DataSet**.</span></span>|  
+|<span data-ttu-id="a250f-113">**msdata: ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="a250f-113">**msdata:ConstraintName**</span></span>|<span data-ttu-id="a250f-114">Se il **ConstraintName** attributo viene specificato, il relativo valore viene utilizzato come nome del vincolo.</span><span class="sxs-lookup"><span data-stu-id="a250f-114">If the **ConstraintName** attribute is specified, its value is used as the name of the constraint.</span></span> <span data-ttu-id="a250f-115">In caso contrario, il **nome** attributo del **keyref** elemento nello schema fornisce il nome del vincolo nel **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="a250f-115">Otherwise, the **name** attribute of the **keyref** element in the schema provides the constraint name in the **DataSet**.</span></span>|  
+|<span data-ttu-id="a250f-116">**msdata:UpdateRule**</span><span class="sxs-lookup"><span data-stu-id="a250f-116">**msdata:UpdateRule**</span></span>|<span data-ttu-id="a250f-117">Se il **UpdateRule** attributo viene specificato nella **keyref** elemento nello schema, il relativo valore è assegnato al **UpdateRule** proprietà vincolo nel  **Set di dati**.</span><span class="sxs-lookup"><span data-stu-id="a250f-117">If the **UpdateRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **UpdateRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="a250f-118">In caso contrario il **UpdateRule** è impostata su **Cascade**.</span><span class="sxs-lookup"><span data-stu-id="a250f-118">Otherwise the **UpdateRule** property is set to **Cascade**.</span></span>|  
+|<span data-ttu-id="a250f-119">**msdata:DeleteRule**</span><span class="sxs-lookup"><span data-stu-id="a250f-119">**msdata:DeleteRule**</span></span>|<span data-ttu-id="a250f-120">Se il **DeleteRule** attributo viene specificato nella **keyref** elemento nello schema, il relativo valore è assegnato al **DeleteRule** proprietà vincolo nel  **Set di dati**.</span><span class="sxs-lookup"><span data-stu-id="a250f-120">If the **DeleteRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **DeleteRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="a250f-121">In caso contrario il **DeleteRule** è impostata su **Cascade**.</span><span class="sxs-lookup"><span data-stu-id="a250f-121">Otherwise the **DeleteRule** property is set to **Cascade**.</span></span>|  
+|<span data-ttu-id="a250f-122">**msdata:AcceptRejectRule**</span><span class="sxs-lookup"><span data-stu-id="a250f-122">**msdata:AcceptRejectRule**</span></span>|<span data-ttu-id="a250f-123">Se il **AcceptRejectRule** attributo viene specificato nella **keyref** elemento nello schema, il relativo valore è assegnato al **AcceptRejectRule** proprietà vincolo nel  **Set di dati**.</span><span class="sxs-lookup"><span data-stu-id="a250f-123">If the **AcceptRejectRule** attribute is specified in the **keyref** element in the schema, its value is assigned to the **AcceptRejectRule** constraint property in the **DataSet**.</span></span> <span data-ttu-id="a250f-124">In caso contrario il **AcceptRejectRule** è impostata su **Nessuno**.</span><span class="sxs-lookup"><span data-stu-id="a250f-124">Otherwise the **AcceptRejectRule** property is set to **None**.</span></span>|  
   
- Nell'esempio seguente viene riportato uno schema in cui vengono specificate le relazioni **key** e **keyref** tra l'elemento figlio **OrderNumber** dell'elemento **Order** e l'elemento figlio **OrderNo** dell'elemento **OrderDetail**.  
+ <span data-ttu-id="a250f-125">Nell'esempio seguente contiene uno schema che specifica il **chiave** e **keyref** le relazioni tra il **OrderNumber** elemento figlio dell'elemento di **ordine**  elemento e **OrderNo** elemento figlio dell'elemento di **OrderDetail** elemento.</span><span class="sxs-lookup"><span data-stu-id="a250f-125">The following example contains a schema that specifies the **key** and **keyref** relationships between the **OrderNumber** child element of the **Order** element and the **OrderNo** child element of the **OrderDetail** element.</span></span>  
   
- Nell'esempio, l'elemento figlio **OrderNumber** dell'elemento **OrderDetail** fa riferimento all'elemento chiave figlio **OrderNo** dell'elemento **Order**.  
+ <span data-ttu-id="a250f-126">Nell'esempio il **OrderNumber** elemento figlio dell'elemento di **OrderDetail** elemento fa riferimento al **OrderNo** elemento chiave figlio dell'elemento il **ordine**elemento.</span><span class="sxs-lookup"><span data-stu-id="a250f-126">In the example, the **OrderNumber** child element of the **OrderDetail** element refers to the **OrderNo** key child element of the **Order** element.</span></span>  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -73,19 +76,18 @@ L'elemento **keyref** consente di stabilire collegamenti tra gli elementi all'in
 </xs:schema>  
 ```  
   
- Il processo di mapping dello schema XSD \(XML Schema Definition Language\) consente di generare il seguente **DataSet** con due tabelle:  
+ <span data-ttu-id="a250f-127">Il processo di mapping dello schema di XML Schema definition language (XSD) produce il seguente **DataSet** con due tabelle:</span><span class="sxs-lookup"><span data-stu-id="a250f-127">The XML Schema definition language (XSD) schema mapping process produces the following **DataSet** with two tables:</span></span>  
   
 ```  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- Nel **DataSet** vengono inoltre definiti i seguenti vincoli:  
+ <span data-ttu-id="a250f-128">Inoltre, il **DataSet** definisce i vincoli seguenti:</span><span class="sxs-lookup"><span data-stu-id="a250f-128">In addition, the **DataSet** defines the following constraints:</span></span>  
   
--   Un vincolo univoco nella tabella **Order**.  
+-   <span data-ttu-id="a250f-129">Un vincolo unique per la **ordine** tabella.</span><span class="sxs-lookup"><span data-stu-id="a250f-129">A unique constraint on the **Order** table.</span></span>  
   
     ```  
-  
               Table: Order  
     Columns: OrderNumber   
     ConstraintName: OrderNumberKey  
@@ -93,10 +95,9 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   Una relazione tra le tabelle **Order** e **OrderDetail**.  La proprietà **Nested** viene impostata su **False**, poiché i due elementi non sono annidate nello schema.  
+-   <span data-ttu-id="a250f-130">Una relazione tra il **ordine** e **OrderDetail** tabelle.</span><span class="sxs-lookup"><span data-stu-id="a250f-130">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="a250f-131">Il **Nested** è impostata su **False** perché i due elementi non annidati nello schema.</span><span class="sxs-lookup"><span data-stu-id="a250f-131">The **Nested** property is set to **False** because the two elements are not nested in the schema.</span></span>  
   
     ```  
-  
               ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  
@@ -107,10 +108,9 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   Un vincolo di chiave esterna nella tabella **OrderDetail**.  
+-   <span data-ttu-id="a250f-132">Un vincolo di chiave esterna nella **OrderDetail** tabella.</span><span class="sxs-lookup"><span data-stu-id="a250f-132">A foreign key constraint on the **OrderDetail** table.</span></span>  
   
     ```  
-  
               ConstraintName: OrderNoRef  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -119,7 +119,7 @@ Order(OrderNumber, EmpNumber)
     RelatedColumns: OrderNumber   
     ```  
   
-## Vedere anche  
- [Mapping dei vincoli di XML Schema \(XSD\) ai vincoli del DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Generazione delle relazioni del DataSet da XML Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="a250f-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a250f-133">See Also</span></span>  
+ [<span data-ttu-id="a250f-134">Vincoli di mapping XML Schema (XSD) e vincoli di DataSet</span><span class="sxs-lookup"><span data-stu-id="a250f-134">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="a250f-135">La generazione di relazioni tra DataSet da XML Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="a250f-135">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="a250f-136">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="a250f-136">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

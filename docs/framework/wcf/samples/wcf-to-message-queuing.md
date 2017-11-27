@@ -1,25 +1,28 @@
 ---
-title: "Da Windows Communication Foundation a Accodamento messaggi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Da Windows Communication Foundation a Accodamento messaggi
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-caps.latest.revision: 32
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 32
+caps.latest.revision: "32"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6800db4e5f8dc1a0d571be3eed556503b907e16e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Da Windows Communication Foundation a Accodamento messaggi
-Questo esempio illustra come un'applicazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può inviare un messaggio a un'applicazione di accodamento messaggi \(MSMQ\).Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.Non è necessario che il servizio e il client siano in esecuzione contemporaneamente.  
+# <a name="windows-communication-foundation-to-message-queuing"></a><span data-ttu-id="b0776-102">Da Windows Communication Foundation a Accodamento messaggi</span><span class="sxs-lookup"><span data-stu-id="b0776-102">Windows Communication Foundation to Message Queuing</span></span>
+<span data-ttu-id="b0776-103">Questo esempio illustra come un'applicazione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] può inviare un messaggio a un'applicazione di accodamento messaggi (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="b0776-103">This sample demonstrates how a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] application can send a message to a Message Queuing (MSMQ) application.</span></span> <span data-ttu-id="b0776-104">Il servizio è un'applicazione console indipendente che consente di osservare il servizio che riceve messaggi in coda.</span><span class="sxs-lookup"><span data-stu-id="b0776-104">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span> <span data-ttu-id="b0776-105">Non è necessario che il servizio e il client siano in esecuzione contemporaneamente.</span><span class="sxs-lookup"><span data-stu-id="b0776-105">The service and client do not have to be running at the same time.</span></span>  
   
- Il servizio riceve i messaggi dalla coda ed elabora gli ordini.Il servizio crea una coda transazionale e configura un gestore di messaggi basato sulla ricezione dei messaggi, come mostra il codice di esempio seguente.  
+ <span data-ttu-id="b0776-106">Il servizio riceve i messaggi dalla coda ed elabora gli ordini.</span><span class="sxs-lookup"><span data-stu-id="b0776-106">The service receives messages from the queue and processes orders.</span></span> <span data-ttu-id="b0776-107">Il servizio crea una coda transazionale e configura un gestore di messaggi basato sulla ricezione dei messaggi, come mostra il codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="b0776-107">The service creates a transactional queue and sets up a message received message handler, as shown in the following sample code.</span></span>  
   
 ```  
 static void Main(string[] args)  
@@ -37,10 +40,9 @@ static void Main(string[] args)
     Console.WriteLine("Order Service is running");  
     Console.ReadLine();  
 }  
-  
 ```  
   
- Quando un messaggio viene ricevuto nella coda, viene chiamato il gestore dei messaggi `ProcessOrder`.  
+ <span data-ttu-id="b0776-108">Quando un messaggio viene ricevuto nella coda, viene chiamato il gestore dei messaggi `ProcessOrder`.</span><span class="sxs-lookup"><span data-stu-id="b0776-108">When a message is received in the queue, the message handler `ProcessOrder` is invoked.</span></span>  
   
 ```  
 public static void ProcessOrder(Object source,  
@@ -67,24 +69,22 @@ public static void ProcessOrder(Object source,
     }  
   
 }  
-  
 ```  
   
- Il servizio estrae `ProcessOrder` dal corpo del messaggio di MSMQ ed elabora l'ordine.  
+ <span data-ttu-id="b0776-109">Il servizio estrae `ProcessOrder` dal corpo del messaggio di MSMQ ed elabora l'ordine.</span><span class="sxs-lookup"><span data-stu-id="b0776-109">The service extracts the `ProcessOrder` from the MSMQ message body, and processes the order.</span></span>  
   
- Il nome della coda MSMQ viene specificato in una sezione appSettings del file di configurazione, come mostra la configurazione di esempio seguente.  
+ <span data-ttu-id="b0776-110">Il nome della coda MSMQ viene specificato in una sezione appSettings del file di configurazione, come mostra la configurazione di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="b0776-110">The MSMQ queue name is specified in an appSettings section of the configuration file, as shown in the following sample configuration.</span></span>  
   
-```  
+```xml  
 <appSettings>  
     <add key="orderQueueName" value=".\private$\Orders" />  
 </appSettings>  
-  
 ```  
   
 > [!NOTE]
->  Nel nome della coda viene utilizzato un punto \(.\) per il computer locale e il separatore barra rovesciata nel percorso.  
+>  <span data-ttu-id="b0776-111">Nel nome della coda viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso.</span><span class="sxs-lookup"><span data-stu-id="b0776-111">The queue name uses a dot (.) for the local computer and backslash separators in its path.</span></span>  
   
- Il client crea un ordine di acquisto e invia l'ordine di acquisto all'interno dell'ambito di una transazione, come mostra il codice di esempio seguente.  
+ <span data-ttu-id="b0776-112">Il client crea un ordine di acquisto e invia l'ordine di acquisto all'interno dell'ambito di una transazione, come mostra il codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="b0776-112">The client creates a purchase order and submits the purchase order within the scope of a transaction, as shown in the following sample code.</span></span>  
   
 ```  
 // Create the purchase order  
@@ -104,15 +104,13 @@ Console.WriteLine("Order has been submitted:{0}", po);
   
 //Closing the client gracefully closes the connection and cleans up resources  
 client.Close();  
-  
 ```  
   
- Il client utilizza un ordine client "in" personalizzato per inviare il messaggio MSMQ alla coda.Poiché l'applicazione che riceve ed elabora il messaggio è un'applicazione MSMQ e non un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], non c'è contratto di servizio implicito tra le due applicazioni.Quindi, in questo scenario, non si può creare un proxy utilizzando lo strumento Svcutil.exe.  
+ <span data-ttu-id="b0776-113">Il client utilizza un ordine client "in" personalizzato per inviare il messaggio MSMQ alla coda.</span><span class="sxs-lookup"><span data-stu-id="b0776-113">The client uses a custom client in-order to send the MSMQ message to the queue.</span></span> <span data-ttu-id="b0776-114">Poiché l'applicazione che riceve ed elabora il messaggio è un'applicazione MSMQ e non un'applicazione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], non c'è contratto di servizio implicito tra le due applicazioni.</span><span class="sxs-lookup"><span data-stu-id="b0776-114">Because the application that receives and processes the message is an MSMQ application and not a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, there is no implicit service contract between the two applications.</span></span> <span data-ttu-id="b0776-115">Quindi, in questo scenario, non si può creare un proxy utilizzando lo strumento Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="b0776-115">So, we cannot create a proxy using the Svcutil.exe tool in this scenario.</span></span>  
   
- Il client personalizzato essenzialmente è lo stesso per tutte le applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che utilizzano l'associazione `MsmqIntegration` per inviare messaggi.A differenza di altri client, non include varie operazioni del servizio.È un'operazione di solo invio del messaggio.  
+ <span data-ttu-id="b0776-116">Il client personalizzato essenzialmente è lo stesso per tutte le applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che utilizzano l'associazione `MsmqIntegration` per inviare messaggi.</span><span class="sxs-lookup"><span data-stu-id="b0776-116">The custom client is essentially the same for all [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications that use the `MsmqIntegration` binding to send messages.</span></span> <span data-ttu-id="b0776-117">A differenza di altri client, non include varie operazioni del servizio.</span><span class="sxs-lookup"><span data-stu-id="b0776-117">Unlike other clients, it does not include a range of service operations.</span></span> <span data-ttu-id="b0776-118">È un'operazione di solo invio del messaggio.</span><span class="sxs-lookup"><span data-stu-id="b0776-118">It is a submit message operation only.</span></span>  
   
 ```  
-  
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
@@ -139,52 +137,52 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 }  
 ```  
   
- Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client.È possibile osservare il servizio che riceve i messaggi dal client.Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.Notare che essendo utilizzato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente.Ad esempio è possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi.  
+ <span data-ttu-id="b0776-119">Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client.</span><span class="sxs-lookup"><span data-stu-id="b0776-119">When you run the sample, the client and service activities are displayed in both the service and client console windows.</span></span> <span data-ttu-id="b0776-120">È possibile osservare il servizio che riceve i messaggi dal client.</span><span class="sxs-lookup"><span data-stu-id="b0776-120">You can see the service receive messages from the client.</span></span> <span data-ttu-id="b0776-121">Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.</span><span class="sxs-lookup"><span data-stu-id="b0776-121">Press ENTER in each console window to shut down the service and client.</span></span> <span data-ttu-id="b0776-122">Notare che essendo usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente.</span><span class="sxs-lookup"><span data-stu-id="b0776-122">Note that because queuing is in use, the client and service do not have to be up and running at the same time.</span></span> <span data-ttu-id="b0776-123">Ad esempio è possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi.</span><span class="sxs-lookup"><span data-stu-id="b0776-123">For example, you could run the client, shut it down, and then start up the service and it would still receive its messages.</span></span>  
   
 > [!NOTE]
->  Questo esempio richiede l'installazione di accodamento messaggi.Vedere le istruzioni di installazione in [Accodamento messaggi](http://go.microsoft.com/fwlink/?LinkId=94968).  
+>  <span data-ttu-id="b0776-124">Questo esempio richiede l'installazione di accodamento messaggi.</span><span class="sxs-lookup"><span data-stu-id="b0776-124">This sample requires the installation of Message Queuing.</span></span> <span data-ttu-id="b0776-125">Vedere le istruzioni di installazione in [Accodamento](http://go.microsoft.com/fwlink/?LinkId=94968).</span><span class="sxs-lookup"><span data-stu-id="b0776-125">See the installation instructions in [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94968).</span></span>  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-setup-build-and-run-the-sample"></a><span data-ttu-id="b0776-126">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="b0776-126">To setup, build, and run the sample</span></span>  
   
-1.  Assicurarsi di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="b0776-127">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b0776-127">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Se il servizio viene eseguito prima, verificherà la presenza della coda.Se la coda non è presente, il servizio ne creerà una.È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ.Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.  
+2.  <span data-ttu-id="b0776-128">Se il servizio viene eseguito prima, verificherà la presenza della coda.</span><span class="sxs-lookup"><span data-stu-id="b0776-128">If the service is run first, it will check to ensure that the queue is present.</span></span> <span data-ttu-id="b0776-129">Se la coda non è presente, il servizio ne creerà una.</span><span class="sxs-lookup"><span data-stu-id="b0776-129">If the queue is not present, the service will create one.</span></span> <span data-ttu-id="b0776-130">È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ.</span><span class="sxs-lookup"><span data-stu-id="b0776-130">You can run the service first to create the queue, or you can create one via the MSMQ Queue Manager.</span></span> <span data-ttu-id="b0776-131">Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.</span><span class="sxs-lookup"><span data-stu-id="b0776-131">Follow these steps to create a queue in Windows 2008.</span></span>  
   
-    1.  Aprire Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  <span data-ttu-id="b0776-132">Aprire Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b0776-132">Open Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-    2.  Espandere la scheda **Funzionalità**.  
+    2.  <span data-ttu-id="b0776-133">Espandere il **funzionalità** scheda.</span><span class="sxs-lookup"><span data-stu-id="b0776-133">Expand the **Features** tab.</span></span>  
   
-    3.  Fare clic con il pulsante destro del mouse su **Code private**, quindi scegliere **Nuova** **coda privata**.  
+    3.  <span data-ttu-id="b0776-134">Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.</span><span class="sxs-lookup"><span data-stu-id="b0776-134">Right-click **Private Message Queues**, and select **New**, **Private Queue**.</span></span>  
   
-    4.  Selezionare la casella **Di transazione**.  
+    4.  <span data-ttu-id="b0776-135">Controllare il **transazionale** casella.</span><span class="sxs-lookup"><span data-stu-id="b0776-135">Check the **Transactional** box.</span></span>  
   
-    5.  Immettere `ServiceModelSamplesTransacted` come nome della nuova coda.  
+    5.  <span data-ttu-id="b0776-136">Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.</span><span class="sxs-lookup"><span data-stu-id="b0776-136">Enter `ServiceModelSamplesTransacted` as the name of the new queue.</span></span>  
   
-3.  Per compilare l'edizione C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="b0776-137">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b0776-137">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Per eseguire l'esempio in un solo computer, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="b0776-138">Per eseguire l'esempio nella configurazione di un singolo computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="b0776-138">To run the sample in a single-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-### Per eseguire l'esempio tra più computer  
+### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="b0776-139">Per eseguire l'esempio tra più computer</span><span class="sxs-lookup"><span data-stu-id="b0776-139">To run the sample across computers</span></span>  
   
-1.  Copiare i file del programma servizio dalla cartella \\service\\bin\\, presente nella cartella specifica del linguaggio, nel computer del servizio.  
+1.  <span data-ttu-id="b0776-140">Copiare i file del programma servizio dalla cartella \service\bin\, presente nella cartella specifica del linguaggio, nel computer del servizio.</span><span class="sxs-lookup"><span data-stu-id="b0776-140">Copy the service program files from the \service\bin\ folder, under the language-specific folder, to the service computer.</span></span>  
   
-2.  Copiare i file del programma client dalla cartella \\client\\bin\\, presente nella cartella specifica del linguaggio, nel computer client.  
+2.  <span data-ttu-id="b0776-141">Copiare i file del programma client dalla cartella \client\bin\, presente nella cartella specifica del linguaggio, nel computer client.</span><span class="sxs-lookup"><span data-stu-id="b0776-141">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client computer.</span></span>  
   
-3.  Nel file Client.exe.config modificare l'indirizzo dell'endpoint del client e specificare il nome del computer del servizio anziché ".".  
+3.  <span data-ttu-id="b0776-142">Nel file Client.exe.config modificare l'indirizzo dell'endpoint del client e specificare il nome del computer del servizio anziché ".".</span><span class="sxs-lookup"><span data-stu-id="b0776-142">In the Client.exe.config file, change the client endpoint address to specify the service computer name instead of ".".</span></span>  
   
-4.  Sul computer del servizio eseguire Service.exe da un prompt dei comandi.  
+4.  <span data-ttu-id="b0776-143">Sul computer del servizio eseguire Service.exe da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="b0776-143">On the service computer, launch Service.exe from a command prompt.</span></span>  
   
-5.  Sul computer client avviare Client.exe da un prompt dei comandi.  
+5.  <span data-ttu-id="b0776-144">Sul computer client avviare Client.exe da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="b0776-144">On the client computer, launch Client.exe from a command prompt.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="b0776-145">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="b0776-145">The samples may already be installed on your computer.</span></span> <span data-ttu-id="b0776-146">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="b0776-146">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="b0776-147">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="b0776-147">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b0776-148">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="b0776-148">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   
-## Vedere anche  
- [Procedura: scambiare messaggi con endpoint WCF e con applicazioni del sistema di accodamento dei messaggi](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)   
- [Accodamento messaggi](http://go.microsoft.com/fwlink/?LinkId=94968)
+## <a name="see-also"></a><span data-ttu-id="b0776-149">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b0776-149">See Also</span></span>  
+ [<span data-ttu-id="b0776-150">Procedura: scambiare messaggi con endpoint WCF e applicazioni di accodamento dei messaggi</span><span class="sxs-lookup"><span data-stu-id="b0776-150">How to: Exchange Messages with WCF Endpoints and Message Queuing Applications</span></span>](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [<span data-ttu-id="b0776-151">Accodamento messaggi</span><span class="sxs-lookup"><span data-stu-id="b0776-151">Message Queuing</span></span>](http://go.microsoft.com/fwlink/?LinkId=94968)

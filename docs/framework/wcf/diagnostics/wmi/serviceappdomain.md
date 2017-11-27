@@ -1,25 +1,28 @@
 ---
-title: "ServiceAppDomain | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceAppDomain
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f28e5186-a66d-46c1-abe9-b50e07f8cb4f
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 36048f56c3b54447a112e6f0a457624062ce965a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceAppDomain
-Esegue il mapping di un servizio a un dominio applicazione.  
+# <a name="serviceappdomain"></a><span data-ttu-id="54d29-102">ServiceAppDomain</span><span class="sxs-lookup"><span data-stu-id="54d29-102">ServiceAppDomain</span></span>
+<span data-ttu-id="54d29-103">Esegue il mapping di un servizio a un dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="54d29-103">Maps a service to an application domain.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="54d29-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="54d29-104">Syntax</span></span>  
   
 ```  
 class ServiceAppDomain  
@@ -29,30 +32,30 @@ class ServiceAppDomain
 };  
 ```  
   
-## Metodi  
- La classe ServiceAppDomain non definisce metodi.  
+## <a name="methods"></a><span data-ttu-id="54d29-105">Metodi</span><span class="sxs-lookup"><span data-stu-id="54d29-105">Methods</span></span>  
+ <span data-ttu-id="54d29-106">La classe ServiceAppDomain non definisce metodi.</span><span class="sxs-lookup"><span data-stu-id="54d29-106">The ServiceAppDomain class does not define any methods.</span></span>  
   
-## Proprietà  
- La classe ServiceAppDomain presenta le proprietà seguenti:  
+## <a name="properties"></a><span data-ttu-id="54d29-107">Proprietà</span><span class="sxs-lookup"><span data-stu-id="54d29-107">Properties</span></span>  
+ <span data-ttu-id="54d29-108">La classe ServiceAppDomain presenta le proprietà seguenti:</span><span class="sxs-lookup"><span data-stu-id="54d29-108">The ServiceAppDomain class has the following properties:</span></span>  
   
-### ref  
- Tipo di dati: servizio               
- Qualificatori: chiave  
+### <a name="ref"></a><span data-ttu-id="54d29-109">ref</span><span class="sxs-lookup"><span data-stu-id="54d29-109">ref</span></span>  
+ <span data-ttu-id="54d29-110">Tipo di dati: servizio</span><span class="sxs-lookup"><span data-stu-id="54d29-110">Data type: Service</span></span>  
+<span data-ttu-id="54d29-111">Qualificatori: chiave</span><span class="sxs-lookup"><span data-stu-id="54d29-111">Qualifiers: Key</span></span>  
   
- Tipo di accesso: sola lettura  
+ <span data-ttu-id="54d29-112">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="54d29-112">Access type: Read-only</span></span>  
   
- Il servizio di questo dominio applicazione.  
+ <span data-ttu-id="54d29-113">Il servizio di questo dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="54d29-113">The service of this application domain.</span></span>  
   
-### ref  
- Tipo di dati: AppDomainInfo               
- Qualificatori: chiave  
+### <a name="ref"></a><span data-ttu-id="54d29-114">ref</span><span class="sxs-lookup"><span data-stu-id="54d29-114">ref</span></span>  
+ <span data-ttu-id="54d29-115">Tipo di dati: AppDomainInfo</span><span class="sxs-lookup"><span data-stu-id="54d29-115">Data type: AppDomainInfo</span></span>  
+<span data-ttu-id="54d29-116">Qualificatori: chiave</span><span class="sxs-lookup"><span data-stu-id="54d29-116">Qualifiers: Key</span></span>  
   
- Tipo di accesso: sola lettura  
+ <span data-ttu-id="54d29-117">Tipo di accesso: sola lettura</span><span class="sxs-lookup"><span data-stu-id="54d29-117">Access type: Read-only</span></span>  
   
- Contiene proprietà del dominio applicazione.  
+ <span data-ttu-id="54d29-118">Contiene proprietà del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="54d29-118">Contains properties of the application domain.</span></span>  
   
-## Requisiti  
+## <a name="requirements"></a><span data-ttu-id="54d29-119">Requisiti</span><span class="sxs-lookup"><span data-stu-id="54d29-119">Requirements</span></span>  
   
-|MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|
+|<span data-ttu-id="54d29-120">MOF</span><span class="sxs-lookup"><span data-stu-id="54d29-120">MOF</span></span>|<span data-ttu-id="54d29-121">Dichiarato in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="54d29-121">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="54d29-122">Spazio dei nomi</span><span class="sxs-lookup"><span data-stu-id="54d29-122">Namespace</span></span>|<span data-ttu-id="54d29-123">Definito in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="54d29-123">Defined in root\ServiceModel</span></span>|

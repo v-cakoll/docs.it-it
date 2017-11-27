@@ -1,66 +1,69 @@
 ---
-title: "Procedura: aggiungere controlli senza interfaccia a un Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NonVisualSelection"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli [Windows Form], non visivi"
-  - "controlli invisibili"
-  - "controlli non visivi"
-  - "controlli Windows Form, aggiunta a form"
-  - "controlli Windows Form, non visivi"
+title: 'Procedura: aggiungere controlli senza interfaccia a un Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: NonVisualSelection
+helpviewer_keywords:
+- invisible controls [Windows Forms]
+- Windows Forms controls, adding to form
+- controls [Windows Forms], nonvisual
+- Windows Forms controls, nonvisual
+- nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7deea3aca390ebfa4cc1fcbf16a0e898301ae434
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: aggiungere controlli senza interfaccia a un Windows Form
-Un controllo non visivo, detto anche componente, fornisce funzionalità all'applicazione.  A differenza di altri controlli, i componenti non forniscono un'interfaccia utente e non è quindi necessario visualizzarli nell'area di Progettazione Windows Form.  Quando un componente viene aggiunto a un form, Progettazione Windows Form visualizza un contenitore ridimensionabile nella parte inferiore del form dove vengono visualizzati tutti i componenti.  Una volta aggiunto un controllo al contenitore dei componenti, è possibile selezionare il componente e impostarne le proprietà come per qualsiasi altro controllo del form.  
+# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a><span data-ttu-id="4230e-102">Procedura: aggiungere controlli senza interfaccia a un Windows Form</span><span class="sxs-lookup"><span data-stu-id="4230e-102">How to: Add Controls Without a User Interface to Windows Forms</span></span>
+<span data-ttu-id="4230e-103">Un controllo non visivo (o un componente) fornisce funzionalità per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="4230e-103">A nonvisual control (or component) provides functionality to your application.</span></span> <span data-ttu-id="4230e-104">A differenza di altri controlli, componenti non forniscono un'interfaccia utente per l'utente e pertanto non dovrà essere visualizzato nell'area di progettazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="4230e-104">Unlike other controls, components do not provide a user interface to the user and thus do not need to be displayed on the Windows Forms Designer surface.</span></span> <span data-ttu-id="4230e-105">Quando un componente viene aggiunto a un form, Progettazione Windows Form visualizza un contenitore ridimensionabile nella parte inferiore del form vengono visualizzati tutti i componenti.</span><span class="sxs-lookup"><span data-stu-id="4230e-105">When a component is added to a form, the Windows Forms Designer displays a resizable tray at the bottom of the form where all components are displayed.</span></span> <span data-ttu-id="4230e-106">Dopo aver aggiunto un controllo barra dei componenti, è possibile selezionare il componente e impostarne le proprietà come qualsiasi altro controllo nel form.</span><span class="sxs-lookup"><span data-stu-id="4230e-106">Once a control has been added to the component tray, you can select the component and set its properties as you would any other control on the form.</span></span>  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="4230e-107">Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.</span><span class="sxs-lookup"><span data-stu-id="4230e-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="4230e-108">Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .</span><span class="sxs-lookup"><span data-stu-id="4230e-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="4230e-109">Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="4230e-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Per aggiungere un componente a un Windows Form  
+### <a name="to-add-a-component-to-a-windows-form"></a><span data-ttu-id="4230e-110">Per aggiungere un componente a un Windows Form</span><span class="sxs-lookup"><span data-stu-id="4230e-110">To add a component to a Windows Form</span></span>  
   
-1.  Aprire il form.  Per informazioni, vedere [How to: Display Windows Forms in the Designer](http://msdn.microsoft.com/it-it/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  <span data-ttu-id="4230e-111">Aprire il form.</span><span class="sxs-lookup"><span data-stu-id="4230e-111">Open the form.</span></span> <span data-ttu-id="4230e-112">Per informazioni dettagliate, vedere [procedura: visualizzare Windows Form nella finestra di progettazione](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).</span><span class="sxs-lookup"><span data-stu-id="4230e-112">For details, see [How to: Display Windows Forms in the Designer](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).</span></span>  
   
-2.  Nella **Casella degli strumenti** fare clic su un componente e trascinarlo nel form.  
+2.  <span data-ttu-id="4230e-113">Nel **della casella degli strumenti**, fare clic su un componente e trascinarla nel form.</span><span class="sxs-lookup"><span data-stu-id="4230e-113">In the **Toolbox**, click a component and drag it to your form.</span></span>  
   
-     Il componente verrà visualizzato nella barra dei componenti.  
+     <span data-ttu-id="4230e-114">Il componente verrà visualizzato nella barra dei componenti.</span><span class="sxs-lookup"><span data-stu-id="4230e-114">Your component appears in the component tray.</span></span>  
   
- È anche possibile aggiungere componenti a un form in fase di esecuzione.  Si tratta di una situazione che si presenta spesso soprattutto perché a differenza dei controlli, che dispongono di un'interfaccia utente, i componenti mancano di forma visiva.  Nell'esempio che segue viene aggiunto un componente <xref:System.Windows.Forms.Timer> in fase di esecuzione.  In [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] sono disponibili vari timer diversi; in questo caso, viene utilizzato un componente <xref:System.Windows.Forms.Timer> Windows Form.  Per ulteriori informazioni sui diversi timer in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], vedere [Introduction to Server\-Based Timers](http://msdn.microsoft.com/it-it/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+ <span data-ttu-id="4230e-115">Inoltre, i componenti possono essere aggiunti a un form in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="4230e-115">Furthermore, components can be added to a form at run time.</span></span> <span data-ttu-id="4230e-116">Si tratta di uno scenario comune, soprattutto perché i componenti non dispone di un'espressione visual, a differenza di controlli che hanno un'interfaccia utente.</span><span class="sxs-lookup"><span data-stu-id="4230e-116">This is a common scenario, especially because components do not have a visual expression, unlike controls that have a user interface.</span></span> <span data-ttu-id="4230e-117">Nell'esempio seguente, un <xref:System.Windows.Forms.Timer> componente viene aggiunto in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="4230e-117">In the example below, a <xref:System.Windows.Forms.Timer> component is added at run time.</span></span> <span data-ttu-id="4230e-118">(Si noti che [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] contiene un numero di timer diversi; in questo caso, utilizzare un Windows Form <xref:System.Windows.Forms.Timer> componente.</span><span class="sxs-lookup"><span data-stu-id="4230e-118">(Note that [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] contains a number of different timers; in this case, use a Windows Forms <xref:System.Windows.Forms.Timer> component.</span></span> <span data-ttu-id="4230e-119">Per ulteriori informazioni sui diversi timer in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], vedere [Introduzione ai timer basati su Server](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)</span><span class="sxs-lookup"><span data-stu-id="4230e-119">For more information about the different timers in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], see [Introduction to Server-Based Timers](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)</span></span>  
   
 > [!CAUTION]
->  I componenti spesso presentano proprietà specifiche dei controlli che è necessario impostare per il corretto funzionamento dei componenti.  Nel caso del componente <xref:System.Windows.Forms.Timer> dell'esempio viene impostata la proprietà `Interval`.  Quando si aggiungono componenti a un progetto, verificare che vengano impostate le proprietà necessarie per un determinato componente.  
+>  <span data-ttu-id="4230e-120">Componenti spesso presentano proprietà specifiche del controllo che deve essere impostata per il componente funzionare in modo efficace.</span><span class="sxs-lookup"><span data-stu-id="4230e-120">Components often have control-specific properties that must be set for the component to function effectively.</span></span> <span data-ttu-id="4230e-121">In caso del <xref:System.Windows.Forms.Timer> componente, impostare il `Interval` proprietà.</span><span class="sxs-lookup"><span data-stu-id="4230e-121">In the case of the <xref:System.Windows.Forms.Timer> component below, you set the `Interval` property.</span></span> <span data-ttu-id="4230e-122">Assicurarsi che, quando si aggiunge componenti al progetto, impostare le proprietà necessarie per il componente.</span><span class="sxs-lookup"><span data-stu-id="4230e-122">Be sure, when adding components to your project, that you set the properties necessary for that component.</span></span>  
   
-#### Per aggiungere un componente a un Windows Form a livello di programmazione  
+#### <a name="to-add-a-component-to-a-windows-form-programmatically"></a><span data-ttu-id="4230e-123">Per aggiungere un componente a un Windows Form a livello di codice</span><span class="sxs-lookup"><span data-stu-id="4230e-123">To add a component to a Windows Form programmatically</span></span>  
   
-1.  Creare un'istanza della classe <xref:System.Windows.Forms.Timer> nel codice.  
+1.  <span data-ttu-id="4230e-124">Creare un'istanza di <xref:System.Windows.Forms.Timer> classe nel codice.</span><span class="sxs-lookup"><span data-stu-id="4230e-124">Create an instance of the <xref:System.Windows.Forms.Timer> class in code.</span></span>  
   
-2.  Impostare la proprietà `Interval` per determinare il tempo tra gli scatti del timer.  
+2.  <span data-ttu-id="4230e-125">Impostare il `Interval` proprietà per determinare il tempo tra i tick del timer.</span><span class="sxs-lookup"><span data-stu-id="4230e-125">Set the `Interval` property to determine the time between ticks of the timer.</span></span>  
   
-3.  Configurare eventuali altre proprietà necessarie per il componente.  
+3.  <span data-ttu-id="4230e-126">Configurare le altre proprietà necessarie per il componente.</span><span class="sxs-lookup"><span data-stu-id="4230e-126">Configure any other necessary properties for your component.</span></span>  
   
-     Nel codice riportato di seguito viene illustrata la creazione di un oggetto <xref:System.Windows.Forms.Timer> con la relativa proprietà `Interval` impostata.  
+     <span data-ttu-id="4230e-127">Il codice seguente viene illustrata la creazione di un <xref:System.Windows.Forms.Timer> con il relativo `Interval` set di proprietà.</span><span class="sxs-lookup"><span data-stu-id="4230e-127">The following code shows the creation of a <xref:System.Windows.Forms.Timer> with its `Interval` property set.</span></span>  
   
     ```vb  
     Public Sub CreateTimer()  
        Dim timerKeepTrack As New System.Windows.Forms.Timer  
        timerKeepTrack.Interval = 1000  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -70,7 +73,6 @@ Un controllo non visivo, detto anche componente, fornisce funzionalità all'appl
            System.Windows.Forms.Timer();  
        timerKeepTrack.Interval = 1000;  
     }  
-  
     ```  
   
     ```cpp  
@@ -84,14 +86,14 @@ Un controllo non visivo, detto anche componente, fornisce funzionalità all'appl
     ```  
   
     > [!IMPORTANT]
-    >  Il riferimento a un controllo UserControl dannoso può esporre il computer locale a un rischio relativo alla sicurezza.  Questo problema diventa grave nel momento in cui si aggiunge inconsapevolmente al proprio progetto un controllo personalizzato dannoso appositamente sviluppato da un utente con pochi scrupoli.  
+    >  <span data-ttu-id="4230e-128">Facendo riferimento a un controllo UserControl dannoso può esporre il computer locale a un rischio per la sicurezza attraverso la rete.</span><span class="sxs-lookup"><span data-stu-id="4230e-128">You might expose your local computer to a security risk through the network by referencing a malicious UserControl.</span></span> <span data-ttu-id="4230e-129">Questo potrebbe essere solo un problema nel caso di un utente con un controllo personalizzato, seguito da si aggiunga al progetto.</span><span class="sxs-lookup"><span data-stu-id="4230e-129">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>  
   
-## Vedere anche  
- [Controlli per Windows Form](../../../../docs/framework/winforms/controls/index.md)   
- [Procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [Procedura: aggiungere i controlli ActiveX a Windows Form](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)   
- [Procedura: copiare i controlli tra Windows Form](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)   
- [Inserimento di controlli in Windows Form](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)   
- [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a><span data-ttu-id="4230e-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4230e-130">See Also</span></span>  
+ [<span data-ttu-id="4230e-131">Controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="4230e-131">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="4230e-132">Procedura: Aggiungere controlli a un Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4230e-132">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="4230e-133">Procedura: Aggiungere i controlli ActiveX a Windows Form</span><span class="sxs-lookup"><span data-stu-id="4230e-133">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [<span data-ttu-id="4230e-134">Procedura: Copiare i controlli tra Windows Form</span><span class="sxs-lookup"><span data-stu-id="4230e-134">How to: Copy Controls Between Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)  
+ [<span data-ttu-id="4230e-135">Inserimento di controlli in Windows Form</span><span class="sxs-lookup"><span data-stu-id="4230e-135">Putting Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ [<span data-ttu-id="4230e-136">Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida</span><span class="sxs-lookup"><span data-stu-id="4230e-136">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [<span data-ttu-id="4230e-137">Controlli da usare in Windows Form</span><span class="sxs-lookup"><span data-stu-id="4230e-137">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="4230e-138">Controlli Windows Form per funzione</span><span class="sxs-lookup"><span data-stu-id="4230e-138">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

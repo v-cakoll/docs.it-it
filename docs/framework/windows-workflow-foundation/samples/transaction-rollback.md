@@ -1,45 +1,49 @@
 ---
-title: "Rollback di transazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Rollback di transazioni
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f377147-7529-4689-a588-608cee87fdf8
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 654f0e46dc5ec5d40588f8571e8f31d04184bc4d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Rollback di transazioni
-In questo esempio viene illustrato come creare un oggetto <xref:System.Activities.NativeActivity> personalizzato che accede all'oggetto <xref:System.Activities.RuntimeTransactionHandle> di ambiente per ottenere la transazione di ambiente ed eseguirne il rollback in modo esplicito.  
+# <a name="transaction-rollback"></a><span data-ttu-id="8e868-102">Rollback di transazioni</span><span class="sxs-lookup"><span data-stu-id="8e868-102">Transaction Rollback</span></span>
+<span data-ttu-id="8e868-103">In questo esempio viene illustrato come creare un oggetto <xref:System.Activities.NativeActivity> personalizzato che accede all'oggetto <xref:System.Activities.RuntimeTransactionHandle> di ambiente per ottenere la transazione di ambiente ed eseguirne il rollback in modo esplicito.</span><span class="sxs-lookup"><span data-stu-id="8e868-103">This sample shows how to create a custom <xref:System.Activities.NativeActivity> that accesses the ambient <xref:System.Activities.RuntimeTransactionHandle> to get the ambient transaction and explicitly roll it back.</span></span>  
   
-## Dettagli dell'esempio  
- Nel flusso di lavoro una transazione viene completata automaticamente quando l'oggetto <xref:System.Activities.Statements.TransactionScope> o <xref:System.ServiceModel.Activities.TransactedReceiveScope> più esterno viene completato.Una transazione esegue in modo implicito il rollback quando un'eccezione non gestita viene propagata attraverso il limite di ambito.In alcuni casi può tuttavia risultare opportuno eseguire il rollback di una transazione in modo esplicito senza dover generare un'eccezione.In questo caso, è possibile utilizzare l'attività di rollback personalizzata come quella disponibile in questo esempio per interrompere in modo esplicito la transazione di ambiente e fornire un motivo facoltativo per l'eccezione.  
+## <a name="sample-details"></a><span data-ttu-id="8e868-104">Dettagli dell'esempio</span><span class="sxs-lookup"><span data-stu-id="8e868-104">Sample Details</span></span>  
+ <span data-ttu-id="8e868-105">Nel flusso di lavoro una transazione viene completata automaticamente quando l'oggetto <xref:System.Activities.Statements.TransactionScope> o <xref:System.ServiceModel.Activities.TransactedReceiveScope> più esterno viene completato.</span><span class="sxs-lookup"><span data-stu-id="8e868-105">In workflow, a transaction is automatically completed when the outermost <xref:System.Activities.Statements.TransactionScope> or <xref:System.ServiceModel.Activities.TransactedReceiveScope> completes.</span></span>  <span data-ttu-id="8e868-106">Una transazione esegue in modo implicito il rollback quando un'eccezione non gestita viene propagata attraverso il limite di ambito.</span><span class="sxs-lookup"><span data-stu-id="8e868-106">A transaction implicitly rolls back when an unhandled exception propagates across the scope boundary.</span></span> <span data-ttu-id="8e868-107">In alcuni casi può tuttavia risultare opportuno eseguire il rollback di una transazione in modo esplicito senza dover generare un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="8e868-107">However, there may be times when it makes sense to explicitly roll back a transaction without having to throw an exception.</span></span> <span data-ttu-id="8e868-108">In questo caso, è possibile usare l'attività di rollback personalizzata come quella disponibile in questo esempio per interrompere in modo esplicito la transazione di ambiente e fornire un motivo facoltativo per l'eccezione.</span><span class="sxs-lookup"><span data-stu-id="8e868-108">In this case, you can use the custom rollback activity like the one in this sample to explicitly abort the ambient transaction and provide an optional exception reason.</span></span>  
   
- `RollbackActivity` è un'attività <xref:System.Activities.NativeActivity> in quanto richiede l'accesso alle proprietà di esecuzione per ottenere l'oggetto <xref:System.Activities.RuntimeTransactionHandle> di ambiente.Nel metodo `Execute`, ottiene <xref:System.Activities.RuntimeTransactionHandle> e controlla se è `null` che indica che l'attività è stata utilizzata senza una transazione di runtime di ambiente.Ottiene quindi la transazione, controllando nuovamente se `null` è presente.È possibile che <xref:System.Activities.RuntimeTransactionHandle> sia di ambiente senza avere mai inizializzato una transazione di runtime.Infine la transazione viene interrotta chiamando <xref:System.Transactions.Transaction.Rollback%2A> e specificando un'eccezione fornita dall'utente o un'eccezione generica che dichiara che l'attività ha eseguito il rollback della transazione.  
+ <span data-ttu-id="8e868-109">`RollbackActivity` è un'attività <xref:System.Activities.NativeActivity> in quanto richiede l'accesso alle proprietà di esecuzione per ottenere l'oggetto <xref:System.Activities.RuntimeTransactionHandle> di ambiente.</span><span class="sxs-lookup"><span data-stu-id="8e868-109">The `RollbackActivity` is a <xref:System.Activities.NativeActivity> as it requires access to the execution properties to get the ambient <xref:System.Activities.RuntimeTransactionHandle>.</span></span> <span data-ttu-id="8e868-110">Nel metodo `Execute`, ottiene <xref:System.Activities.RuntimeTransactionHandle> e controlla se è `null` che indica che l'attività è stata usata senza una transazione di runtime di ambiente.</span><span class="sxs-lookup"><span data-stu-id="8e868-110">In the `Execute` method, it obtains the <xref:System.Activities.RuntimeTransactionHandle> and checks whether it is `null`, which indicates that the activity was used without an ambient run-time transaction.</span></span> <span data-ttu-id="8e868-111">Ottiene quindi la transazione, controllando nuovamente se `null` è presente.</span><span class="sxs-lookup"><span data-stu-id="8e868-111">It then obtains the transaction, again checking whether `null` is present.</span></span> <span data-ttu-id="8e868-112">È possibile che <xref:System.Activities.RuntimeTransactionHandle> sia di ambiente senza avere mai inizializzato una transazione di runtime.</span><span class="sxs-lookup"><span data-stu-id="8e868-112">It is possible to have an ambient <xref:System.Activities.RuntimeTransactionHandle> without ever initializing a run-time transaction.</span></span> <span data-ttu-id="8e868-113">Infine la transazione viene interrotta chiamando <xref:System.Transactions.Transaction.Rollback%2A> e specificando un'eccezione fornita dall'utente o un'eccezione generica che dichiara che l'attività ha eseguito il rollback della transazione.</span><span class="sxs-lookup"><span data-stu-id="8e868-113">Finally it aborts the transaction by calling <xref:System.Transactions.Transaction.Rollback%2A> and specifying either a user-provided exception or a generic exception that states that the activity rolled back the transaction.</span></span>  
   
- Il flusso di lavoro di esempio è costituito da un oggetto <xref:System.Activities.Statements.TransactionScope> il cui corpo stampa lo stato della transazione prima e dopo l'esecuzione di `RollbackActivity`.Notare che anche se il rollback della transazione è stato eseguito, <xref:System.Activities.Statements.TransactionScope> viene esegue fino al completamento e non interrompe il flusso di lavoro finché il corpo non viene completato.Il flusso di lavoro viene  interrotto perché la proprietà <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> viene impostata sul valore predefinito `true`.  
+ <span data-ttu-id="8e868-114">Il flusso di lavoro di esempio è costituito da un oggetto <xref:System.Activities.Statements.TransactionScope> il cui corpo stampa lo stato della transazione prima e dopo l'esecuzione di `RollbackActivity`.</span><span class="sxs-lookup"><span data-stu-id="8e868-114">The demonstration workflow consists of a <xref:System.Activities.Statements.TransactionScope> whose body prints the transaction status before and after the `RollbackActivity` executes.</span></span> <span data-ttu-id="8e868-115">Notare che anche se il rollback della transazione è stato eseguito, <xref:System.Activities.Statements.TransactionScope> viene esegue fino al completamento e non interrompe il flusso di lavoro finché il corpo non viene completato.</span><span class="sxs-lookup"><span data-stu-id="8e868-115">Note that even though the transaction has been rolled back, the <xref:System.Activities.Statements.TransactionScope> executes to completion and does not abort the workflow until the body completes.</span></span> <span data-ttu-id="8e868-116">Il flusso di lavoro viene interrotto perché la proprietà <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> viene impostata sul valore predefinito `true`.</span><span class="sxs-lookup"><span data-stu-id="8e868-116">The workflow is aborted because the <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> property defaults to `true`.</span></span>  
   
-#### Per utilizzare questo esempio  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="8e868-117">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="8e868-117">To use this sample</span></span>  
   
-1.  Caricare la soluzione TransactionRollback.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="8e868-118">Caricare la soluzione TransactionRollback.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8e868-118">Load the TransactionRollback.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B.  
+2.  <span data-ttu-id="8e868-119">Per compilare la soluzione, premere CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="8e868-119">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-3.  Premere CTRL\+F5 per eseguire l'applicazione.  
+3.  <span data-ttu-id="8e868-120">Premere CTRL+F5 per eseguire l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="8e868-120">Press CTRL+F5 to run the application.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="8e868-121">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="8e868-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="8e868-122">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="8e868-122">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="8e868-123">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="8e868-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="8e868-124">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="8e868-124">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactionRollback`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactionRollback`  
   
-## Vedere anche  
- [Transazioni](../../../../docs/framework/windows-workflow-foundation//workflow-transactions.md)
+## <a name="see-also"></a><span data-ttu-id="8e868-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8e868-125">See Also</span></span>  
+ [<span data-ttu-id="8e868-126">Transazioni</span><span class="sxs-lookup"><span data-stu-id="8e868-126">Transactions</span></span>](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)

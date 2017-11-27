@@ -1,30 +1,40 @@
 ---
-title: "Elemento &lt;peerAuthentication&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;peerAuthentication&gt;
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3cc625f5fdb20505f2e36c5a2d37fca0676bbb37
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;peerAuthentication&gt;
-Specifica le opzioni di autenticazione dei client peer\-to\-peer.  
+# <a name="ltpeerauthenticationgt-element"></a><span data-ttu-id="fa28e-102">Elemento &lt;peerAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="fa28e-102">&lt;peerAuthentication&gt; Element</span></span>
+<span data-ttu-id="fa28e-103">Specifica le opzioni di autenticazione dei client peer-to-peer.</span><span class="sxs-lookup"><span data-stu-id="fa28e-103">Specifies authentication options for peer-to-peer clients.</span></span>  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] sulla programmazione peer\-to\-peer, vedere [Rete peer\-to\-peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]<span data-ttu-id="fa28e-104">peer-to-peer programmazione, vedere [rete Peer-to-Peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span><span class="sxs-lookup"><span data-stu-id="fa28e-104"> peer-to-peer programming, see [Peer-to-Peer Networking](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="fa28e-105">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="fa28e-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="fa28e-106">\<i comportamenti ></span><span class="sxs-lookup"><span data-stu-id="fa28e-106">\<behaviors></span></span>  
+<span data-ttu-id="fa28e-107">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="fa28e-107">\<endpointBehaviors></span></span>  
+<span data-ttu-id="fa28e-108">\<comportamento ></span><span class="sxs-lookup"><span data-stu-id="fa28e-108">\<behavior></span></span>  
+<span data-ttu-id="fa28e-109">\<clientCredentials ></span><span class="sxs-lookup"><span data-stu-id="fa28e-109">\<clientCredentials></span></span>  
+<span data-ttu-id="fa28e-110">\<peer ></span><span class="sxs-lookup"><span data-stu-id="fa28e-110">\<peer></span></span>  
+<span data-ttu-id="fa28e-111">\<PeerAuthentication ></span><span class="sxs-lookup"><span data-stu-id="fa28e-111">\<PeerAuthentication></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="fa28e-112">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fa28e-112">Syntax</span></span>  
   
+```xml  
 <peerAuthentication  
 customCertificateValidatorType = "namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
 certificateValidationMode = "ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
@@ -33,58 +43,58 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 />  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fa28e-113">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="fa28e-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="fa28e-114">Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.</span><span class="sxs-lookup"><span data-stu-id="fa28e-114">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="fa28e-115">Attributi</span><span class="sxs-lookup"><span data-stu-id="fa28e-115">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="fa28e-116">Attributo</span><span class="sxs-lookup"><span data-stu-id="fa28e-116">Attribute</span></span>|<span data-ttu-id="fa28e-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fa28e-117">Description</span></span>|  
 |---------------|-----------------|  
-|`customCertificateValidatorType`|Stringa facoltativa.  Un tipo e un assembly usati per convalidare un tipo personalizzato.  Questo attributo deve essere impostato quando `certificateValidationMode` è impostato su `Custom`.|  
-|`certifcateValidationMode`|Enumerazione facoltativa.  Specifica una delle tre modalità usate per convalidare credenziali.  Se impostato su `Custom`, è necessario fornire anche un `customCertificateValidator`.  Il valore predefinito è `ChainTrust`.|  
-|`revocationMode`|Enumerazione facoltativa.  Una delle modalità usate per verificare un elenco dei certificati revocati.  Il valore predefinito è `Online`.|  
-|`trustedStoreLocation`|Enumerazione facoltativa.  Uno di due percorsi dell'archivio di sistema: `LocalMachine` o `CurrentUser`.  Questo valore viene usato quando viene negoziato un certificato del servizio con il client.  La convalida viene eseguita in base all'archivio **Persone attendibili** nel percorso dell'archivio specificato.  Il valore predefinito è `CurrentUser`.|  
+|`customCertificateValidatorType`|<span data-ttu-id="fa28e-118">Stringa facoltativa.</span><span class="sxs-lookup"><span data-stu-id="fa28e-118">Optional string.</span></span> <span data-ttu-id="fa28e-119">Un tipo e un assembly usati per convalidare un tipo personalizzato.</span><span class="sxs-lookup"><span data-stu-id="fa28e-119">A type and assembly used to validate a custom type.</span></span> <span data-ttu-id="fa28e-120">Questo attributo deve essere impostato quando `certificateValidationMode` è impostato su `Custom`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-120">This attribute must be set when `certificateValidationMode` is set to `Custom`.</span></span>|  
+|`certifcateValidationMode`|<span data-ttu-id="fa28e-121">Enumerazione facoltativa.</span><span class="sxs-lookup"><span data-stu-id="fa28e-121">Optional enumeration.</span></span> <span data-ttu-id="fa28e-122">Specifica una delle tre modalità usate per convalidare credenziali.</span><span class="sxs-lookup"><span data-stu-id="fa28e-122">Specifies one of three modes used to validate credentials.</span></span> <span data-ttu-id="fa28e-123">Se impostato su `Custom`, è necessario fornire anche un `customCertificateValidator`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-123">If set to `Custom`, then a `customCertificateValidator` must also be supplied.</span></span> <span data-ttu-id="fa28e-124">Il valore predefinito è `ChainTrust`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-124">The default is `ChainTrust`.</span></span>|  
+|`revocationMode`|<span data-ttu-id="fa28e-125">Enumerazione facoltativa.</span><span class="sxs-lookup"><span data-stu-id="fa28e-125">Optional enumeration.</span></span> <span data-ttu-id="fa28e-126">Una delle modalità usate per verificare un elenco dei certificati revocati.</span><span class="sxs-lookup"><span data-stu-id="fa28e-126">One of the modes used to check for a revoked certificate lists (CRL).</span></span> <span data-ttu-id="fa28e-127">Il valore predefinito è `Online`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-127">The default is `Online`.</span></span>|  
+|`trustedStoreLocation`|<span data-ttu-id="fa28e-128">Enumerazione facoltativa.</span><span class="sxs-lookup"><span data-stu-id="fa28e-128">Optional enumeration.</span></span> <span data-ttu-id="fa28e-129">Uno di due percorsi dell'archivio di sistema: `LocalMachine` o `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-129">One of the two system store locations: `LocalMachine` or `CurrentUser`.</span></span> <span data-ttu-id="fa28e-130">Questo valore viene usato quando viene negoziato un certificato del servizio con il client.</span><span class="sxs-lookup"><span data-stu-id="fa28e-130">This value is used when a service certificate is negotiated to the client.</span></span> <span data-ttu-id="fa28e-131">La convalida viene eseguita su di **persone attendibili** archiviare nel percorso dell'archivio specificato.</span><span class="sxs-lookup"><span data-stu-id="fa28e-131">Validation is performed against the **Trusted People** store in the specified store location.</span></span> <span data-ttu-id="fa28e-132">Il valore predefinito è `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-132">The default is `CurrentUser`.</span></span>|  
   
-## Attributo customCertificateValidatorType  
+## <a name="customcertificatevalidatortype-attribute"></a><span data-ttu-id="fa28e-133">Attributo customCertificateValidatorType</span><span class="sxs-lookup"><span data-stu-id="fa28e-133">customCertificateValidatorType Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|String|Specifica il nome e l'assembly del tipo e altri dati usati per trovare il tipo.  Come minimo, sono necessari uno spazio dei nomi e un nome del tipo.  Le informazioni facoltative comprendono il nome dell'assembly, il numero di versione, impostazioni cultura e token della chiave pubblica.|  
+|<span data-ttu-id="fa28e-134">Valore</span><span class="sxs-lookup"><span data-stu-id="fa28e-134">Value</span></span>|<span data-ttu-id="fa28e-135">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fa28e-135">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="fa28e-136">String</span><span class="sxs-lookup"><span data-stu-id="fa28e-136">String</span></span>|<span data-ttu-id="fa28e-137">Specifica il nome e l'assembly del tipo e altri dati usati per trovare il tipo.</span><span class="sxs-lookup"><span data-stu-id="fa28e-137">Specifies the type name and assembly and other data used to find the type.</span></span> <span data-ttu-id="fa28e-138">Come minimo, sono necessari uno spazio dei nomi e un nome del tipo.</span><span class="sxs-lookup"><span data-stu-id="fa28e-138">At minimum, a namespace and type name are required.</span></span> <span data-ttu-id="fa28e-139">Le informazioni facoltative comprendono il nome dell'assembly, il numero di versione, impostazioni cultura e token della chiave pubblica.</span><span class="sxs-lookup"><span data-stu-id="fa28e-139">Optional information includes: assembly name, version number, culture, and public key token.</span></span>|  
   
-## Attributo certificateValidationMode  
+## <a name="certificatevalidationmode-attribute"></a><span data-ttu-id="fa28e-140">Attributo certificateValidationMode</span><span class="sxs-lookup"><span data-stu-id="fa28e-140">certificateValidationMode Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|Enumerazione|Uno dei valori seguenti: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`.  Il valore predefinito è `ChainTrust`.<br /><br /> Per altre informazioni, vedere [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|<span data-ttu-id="fa28e-141">Valore</span><span class="sxs-lookup"><span data-stu-id="fa28e-141">Value</span></span>|<span data-ttu-id="fa28e-142">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fa28e-142">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="fa28e-143">Enumerazione</span><span class="sxs-lookup"><span data-stu-id="fa28e-143">Enumeration</span></span>|<span data-ttu-id="fa28e-144">Uno dei valori seguenti: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-144">One of the following values: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`.</span></span> <span data-ttu-id="fa28e-145">Il valore predefinito è `ChainTrust`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-145">The default is `ChainTrust`.</span></span><br /><br /> <span data-ttu-id="fa28e-146">Per ulteriori informazioni, vedere [utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="fa28e-146">For more information, see [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>|  
   
-## Attributo revocationMode  
+## <a name="revocationmode-attribute"></a><span data-ttu-id="fa28e-147">Attributo revocationMode</span><span class="sxs-lookup"><span data-stu-id="fa28e-147">revocationMode Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|Enumerazione|Uno dei valori seguenti: `NoCheck`, `Online`, `Offline`.  Il valore predefinito è `Online`.<br /><br /> Per altre informazioni, vedere [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|<span data-ttu-id="fa28e-148">Valore</span><span class="sxs-lookup"><span data-stu-id="fa28e-148">Value</span></span>|<span data-ttu-id="fa28e-149">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fa28e-149">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="fa28e-150">Enumerazione</span><span class="sxs-lookup"><span data-stu-id="fa28e-150">Enumeration</span></span>|<span data-ttu-id="fa28e-151">Uno dei valori seguenti: `NoCheck`, `Online`, `Offline`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-151">One of the following values: `NoCheck`, `Online`, `Offline`.</span></span> <span data-ttu-id="fa28e-152">Il valore predefinito è `Online`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-152">The default is `Online`.</span></span><br /><br /> <span data-ttu-id="fa28e-153">Per ulteriori informazioni, vedere [utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span><span class="sxs-lookup"><span data-stu-id="fa28e-153">For more information, see [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>|  
   
-## Attributo trustedStoreLocation  
+## <a name="trustedstorelocation-attribute"></a><span data-ttu-id="fa28e-154">Attributo trustedStoreLocation</span><span class="sxs-lookup"><span data-stu-id="fa28e-154">trustedStoreLocation Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|Enumerazione|Uno dei valori seguenti: `LocalMachine` o `CurrentUser`.  Il valore predefinito è `CurrentUser`.  Se l'applicazione client viene eseguita con un account di sistema, il certificato è generalmente situato in `LocalMachine`.  Se l'applicazione client viene eseguita con un account utente, il certificato è generalmente situato in `CurrentUser`.|  
+|<span data-ttu-id="fa28e-155">Valore</span><span class="sxs-lookup"><span data-stu-id="fa28e-155">Value</span></span>|<span data-ttu-id="fa28e-156">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fa28e-156">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="fa28e-157">Enumerazione</span><span class="sxs-lookup"><span data-stu-id="fa28e-157">Enumeration</span></span>|<span data-ttu-id="fa28e-158">Uno dei valori seguenti: `LocalMachine` o `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-158">One of the following values: `LocalMachine` or `CurrentUser`.</span></span> <span data-ttu-id="fa28e-159">Il valore predefinito è `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-159">The default is `CurrentUser`.</span></span> <span data-ttu-id="fa28e-160">Se l'applicazione client viene eseguita con un account di sistema, il certificato è generalmente situato in `LocalMachine`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-160">If the client application is running under a system account then the certificate is typically under `LocalMachine`.</span></span> <span data-ttu-id="fa28e-161">Se l'applicazione client viene eseguita con un account utente, il certificato è generalmente situato in `CurrentUser`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-161">If the client application is running under a user account then the certificate is typically in `CurrentUser`.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="fa28e-162">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="fa28e-162">Child Elements</span></span>  
+ <span data-ttu-id="fa28e-163">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="fa28e-163">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="fa28e-164">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="fa28e-164">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<peer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Specifica una credenziale usata per l'autenticazione del client con un servizio peer.|  
+|<span data-ttu-id="fa28e-165">Elemento</span><span class="sxs-lookup"><span data-stu-id="fa28e-165">Element</span></span>|<span data-ttu-id="fa28e-166">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fa28e-166">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="fa28e-167">\<peer ></span><span class="sxs-lookup"><span data-stu-id="fa28e-167">\<peer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|<span data-ttu-id="fa28e-168">Specifica una credenziale usata per l'autenticazione del client con un servizio peer.</span><span class="sxs-lookup"><span data-stu-id="fa28e-168">Specifies a credential used for authenticating the client to a peer service.</span></span>|  
   
-## Note  
- L'elemento `<authentication>` corrisponde alla classe <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>.  Questo elemento specifica una convalida, che viene richiamata durante l'autenticazione tra peer adiacenti nella rete.  Quando un nuovo peer tenta di stabilire una connessione con un peer adiacente, passa la propria credenziale al peer che risponde.  Viene richiamata la convalida del risponditore per verificare la credenziale della parte remota.  Ogni volta che viene stabilita una connessione peer nella rete, entrambi i peer vengono reciprocamente autenticati, indicando che vengono richiamati validator su entrambe le parti.  
+## <a name="remarks"></a><span data-ttu-id="fa28e-169">Note</span><span class="sxs-lookup"><span data-stu-id="fa28e-169">Remarks</span></span>  
+ <span data-ttu-id="fa28e-170">L'elemento `<authentication>` corrisponde alla classe <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>.</span><span class="sxs-lookup"><span data-stu-id="fa28e-170">The `<authentication>` element corresponds to the <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> class.</span></span> <span data-ttu-id="fa28e-171">Questo elemento specifica una convalida, che viene richiamata durante l'autenticazione tra peer adiacenti nella rete.</span><span class="sxs-lookup"><span data-stu-id="fa28e-171">This element specifies a validator, which is invoked during neighbor-to-neighbor authentication in the mesh.</span></span> <span data-ttu-id="fa28e-172">Quando un nuovo peer tenta di stabilire una connessione con un peer adiacente, passa la propria credenziale al peer che risponde.</span><span class="sxs-lookup"><span data-stu-id="fa28e-172">When a new peer tries to establish a neighbor connection, it passes its own credential to the responding peer.</span></span> <span data-ttu-id="fa28e-173">Viene richiamata la convalida del risponditore per verificare la credenziale della parte remota.</span><span class="sxs-lookup"><span data-stu-id="fa28e-173">The validator of the responder is invoked to verify the credential of the remote party.</span></span> <span data-ttu-id="fa28e-174">Ogni volta che viene stabilita una connessione peer nella rete, entrambi i peer vengono reciprocamente autenticati, indicando che vengono richiamati validator su entrambe le parti.</span><span class="sxs-lookup"><span data-stu-id="fa28e-174">Whenever a peer connection is established in the mesh, both peers are mutually authenticated, meaning validators on both ends are invoked.</span></span>  
   
-## Esempio  
- Il codice seguente imposta la modalità di convalida del certificato su `PeerOrChainTrust`.  
+## <a name="example"></a><span data-ttu-id="fa28e-175">Esempio</span><span class="sxs-lookup"><span data-stu-id="fa28e-175">Example</span></span>  
+ <span data-ttu-id="fa28e-176">Il codice seguente imposta la modalità di convalida del certificato su `PeerOrChainTrust`.</span><span class="sxs-lookup"><span data-stu-id="fa28e-176">The following code sets the certificate validation mode to `PeerOrChainTrust`.</span></span>  
   
-```  
+```xml  
 <behaviors>  
  <endpointBehaviors>  
   <behavior name="MyEndpointBehavior">  
@@ -102,14 +112,14 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 </endpointBehaviors>  
 ```  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>   
- <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>   
- <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>   
- <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>   
- <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>   
- [Utilizzo dei certificati](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Rete peer\-to\-peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)   
- [Peer Channel Message Authentication](http://msdn.microsoft.com/it-it/80e73386-514e-4c30-9e4a-b9ca8c173a95)   
- [Peer Channel Custom Authentication](http://msdn.microsoft.com/it-it/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)   
- [Protezione di applicazioni del canale peer](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+## <a name="see-also"></a><span data-ttu-id="fa28e-177">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fa28e-177">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
+ <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>  
+ <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>  
+ <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>  
+ <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
+ [<span data-ttu-id="fa28e-178">Utilizzo dei certificati</span><span class="sxs-lookup"><span data-stu-id="fa28e-178">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="fa28e-179">Rete peer-to-Peer</span><span class="sxs-lookup"><span data-stu-id="fa28e-179">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [<span data-ttu-id="fa28e-180">Autenticazione dei messaggi del canale peer</span><span class="sxs-lookup"><span data-stu-id="fa28e-180">Peer Channel Message Authentication</span></span>](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [<span data-ttu-id="fa28e-181">Autenticazione personalizzata canale peer</span><span class="sxs-lookup"><span data-stu-id="fa28e-181">Peer Channel Custom Authentication</span></span>](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [<span data-ttu-id="fa28e-182">Protezione delle applicazioni del canale Peer</span><span class="sxs-lookup"><span data-stu-id="fa28e-182">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

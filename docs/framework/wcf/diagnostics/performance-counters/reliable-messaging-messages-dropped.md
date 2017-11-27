@@ -1,23 +1,26 @@
 ---
-title: "Messaggi di messaggistica affidabile ignorati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Messaggi di messaggistica affidabile rilasciati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9933abaa-33ec-4245-b083-bf94415929b5
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e71c2a6df09247f7b2d9174df65c2799716ec7c0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Messaggi di messaggistica affidabile ignorati
-Nome contatore: sessioni di messaggistica affidabile ignorate.  
+# <a name="reliable-messaging-messages-dropped"></a><span data-ttu-id="b2df4-102">Messaggi di messaggistica affidabile rilasciati</span><span class="sxs-lookup"><span data-stu-id="b2df4-102">Reliable Messaging Messages Dropped</span></span>
+<span data-ttu-id="b2df4-103">Nome contatore: sessioni di messaggistica affidabile eliminate.</span><span class="sxs-lookup"><span data-stu-id="b2df4-103">Counter Name: Reliable Messaging Sessions Dropped.</span></span>  
   
-## Descrizione  
- Numero complessivo di messaggi di messaggistica affidabile ignorati in questo servizio.
+## <a name="description"></a><span data-ttu-id="b2df4-104">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b2df4-104">Description</span></span>  
+ <span data-ttu-id="b2df4-105">Numero complessivo di messaggi di messaggistica affidabile ignorati in questo servizio.</span><span class="sxs-lookup"><span data-stu-id="b2df4-105">Total number of reliable messaging messages that have been dropped in this service.</span></span>

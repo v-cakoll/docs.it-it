@@ -1,48 +1,48 @@
 ---
-title: "Procedura: inserire righe e colonne in un controllo TableLayoutPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "net.ComponentModel.StyleCollectionEditor.TLP.SpanRowsColumns"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "celle, unione"
-  - "colonne [Windows Form], span"
-  - "unione di celle"
-  - "righe [Windows Form], span"
-  - "TableLayoutPanel (controllo) [Windows Form], espansione di righe e colonne"
+title: 'Procedura: inserire righe e colonne in un controllo TableLayoutPanel'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: net.ComponentModel.StyleCollectionEditor.TLP.SpanRowsColumns
+helpviewer_keywords:
+- columns [Windows Forms], spanning
+- merging cells
+- TableLayoutPanel control [Windows Forms], spanning rows and columns
+- rows [Windows Forms], spanning
+- cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0380e63925dcbd27a7ee6262ddbfb2706455c2a9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: inserire righe e colonne in un controllo TableLayoutPanel
-In un controllo <xref:System.Windows.Forms.TableLayoutPanel>, è possibile inserire righe e colonne adiacenti tramite i controlli.  
+# <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a><span data-ttu-id="286c2-102">Procedura: inserire righe e colonne in un controllo TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="286c2-102">How to: Span Rows and Columns in a TableLayoutPanel Control</span></span>
+<span data-ttu-id="286c2-103">Controlli in un <xref:System.Windows.Forms.TableLayoutPanel> controllo può estendersi su righe e colonne adiacenti.</span><span class="sxs-lookup"><span data-stu-id="286c2-103">Controls in a <xref:System.Windows.Forms.TableLayoutPanel> control can span adjacent rows and columns.</span></span>  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="286c2-104">Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.</span><span class="sxs-lookup"><span data-stu-id="286c2-104">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="286c2-105">Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .</span><span class="sxs-lookup"><span data-stu-id="286c2-105">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="286c2-106">Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="286c2-106">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Per inserire colonne e righe  
+### <a name="to-span-columns-and-rows"></a><span data-ttu-id="286c2-107">Per inserire righe e colonne</span><span class="sxs-lookup"><span data-stu-id="286c2-107">To span columns and rows</span></span>  
   
-1.  Trascinare un controllo <xref:System.Windows.Forms.TableLayoutPanel> dalla **Casella degli strumenti** al form.  
+1.  <span data-ttu-id="286c2-108">Trascinare un <xref:System.Windows.Forms.TableLayoutPanel> controllo il **della casella degli strumenti** nel form.</span><span class="sxs-lookup"><span data-stu-id="286c2-108">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
   
-2.  Trascinare un controllo <xref:System.Windows.Forms.Button> dalla **Casella degli strumenti** nella cella superiore sinistra del controllo <xref:System.Windows.Forms.TableLayoutPanel>.  
+2.  <span data-ttu-id="286c2-109">Trascinare un <xref:System.Windows.Forms.Button> controllo il **della casella degli strumenti** nella cella superiore sinistra del <xref:System.Windows.Forms.TableLayoutPanel> controllo.</span><span class="sxs-lookup"><span data-stu-id="286c2-109">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the upper-left cell of the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
-3.  Impostare la proprietà **ColumnSpan** del controllo <xref:System.Windows.Forms.Button> su 2.  Il controllo <xref:System.Windows.Forms.Button> inserisce la prima e la seconda colonna.  
+3.  <span data-ttu-id="286c2-110">Impostare il <xref:System.Windows.Forms.Button> del controllo **ColumnSpan** proprietà **2**.</span><span class="sxs-lookup"><span data-stu-id="286c2-110">Set the <xref:System.Windows.Forms.Button> control's **ColumnSpan** property to **2**.</span></span> <span data-ttu-id="286c2-111">Si noti che il <xref:System.Windows.Forms.Button> controllo si estende la prima e la seconda colonna.</span><span class="sxs-lookup"><span data-stu-id="286c2-111">Note that the <xref:System.Windows.Forms.Button> control spans the first and second columns.</span></span>  
   
-4.  Impostare la proprietà **RowSpan** del controllo <xref:System.Windows.Forms.Button> su 2.  Il controllo <xref:System.Windows.Forms.Button> inserisce la prima e la seconda riga.  
+4.  <span data-ttu-id="286c2-112">Impostare il <xref:System.Windows.Forms.Button> del controllo **RowSpan** proprietà **2**.</span><span class="sxs-lookup"><span data-stu-id="286c2-112">Set the <xref:System.Windows.Forms.Button> control's **RowSpan** property to **2**.</span></span> <span data-ttu-id="286c2-113">Si noti che il <xref:System.Windows.Forms.Button> controllo si estende la prima e seconda riga.</span><span class="sxs-lookup"><span data-stu-id="286c2-113">Note that the <xref:System.Windows.Forms.Button> control spans the first and second rows.</span></span>  
   
-5.  Impostare la proprietà **ColumnSpan** del controllo <xref:System.Windows.Forms.Button> su 1.  Il controllo <xref:System.Windows.Forms.Button> si sposta nella prima colonna e inserisce la prima e la seconda riga.  
+5.  <span data-ttu-id="286c2-114">Impostare il <xref:System.Windows.Forms.Button> del controllo **ColumnSpan** proprietà **1**.</span><span class="sxs-lookup"><span data-stu-id="286c2-114">Set the <xref:System.Windows.Forms.Button> control's **ColumnSpan** property to **1**.</span></span> <span data-ttu-id="286c2-115">Si noti che il <xref:System.Windows.Forms.Button> controllo si sposta nella prima colonna e inserisce le righe del prima e seconda.</span><span class="sxs-lookup"><span data-stu-id="286c2-115">Note that the <xref:System.Windows.Forms.Button> control moves into the first column and spans the first and second rows.</span></span>  
   
-## Vedere anche  
- [Controllo TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="286c2-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="286c2-116">See Also</span></span>  
+ [<span data-ttu-id="286c2-117">Controllo TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="286c2-117">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

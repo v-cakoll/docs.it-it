@@ -1,75 +1,77 @@
 ---
-title: "Elemento &lt;GCCpuGroup&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<GCCpuGroup> (elemento)"
-  - "GCCpuGroup (elemento)"
+title: '&lt;GCCpuGroup&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GCCpuGroup element
+- <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: abcb6d1b5f9dbb7a866b55628aabfe996a0a747c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;GCCpuGroup&gt;
-Specifica se la Garbage Collection supporta più gruppi di CPU.  
+# <a name="ltgccpugroupgt-element"></a><span data-ttu-id="3b622-102">&lt;GCCpuGroup&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="3b622-102">&lt;GCCpuGroup&gt; Element</span></span>
+<span data-ttu-id="3b622-103">Specifica se Garbage Collection supporta più gruppi di CPU.</span><span class="sxs-lookup"><span data-stu-id="3b622-103">Specifies whether garbage collection supports multiple CPU groups.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="3b622-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="3b622-104">\<configuration></span></span>  
+<span data-ttu-id="3b622-105">\<runtime ></span><span class="sxs-lookup"><span data-stu-id="3b622-105">\<runtime></span></span>  
+<span data-ttu-id="3b622-106">\<GCCpuGroup ></span><span class="sxs-lookup"><span data-stu-id="3b622-106">\<GCCpuGroup></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="3b622-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="3b622-107">Syntax</span></span>  
+  
+```xml  
 <GCCpuGroup    
    enabled="true|false"/>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3b622-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="3b622-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="3b622-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="3b622-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="3b622-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="3b622-110">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="3b622-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="3b622-111">Attribute</span></span>|<span data-ttu-id="3b622-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3b622-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se la Garbage Collection supporta più gruppi di CPU.|  
+|`enabled`|<span data-ttu-id="3b622-113">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="3b622-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="3b622-114">Specifica se Garbage Collection supporta più gruppi di CPU.</span><span class="sxs-lookup"><span data-stu-id="3b622-114">Specifies whether garbage collection supports multiple CPU groups.</span></span>|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="3b622-115">Attributo enabled</span><span class="sxs-lookup"><span data-stu-id="3b622-115">enabled Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|`false`|La Garbage Collection non supporta più gruppi di CPU.  Questa è l'impostazione predefinita.|  
-|`true`|La Garbage Collection supporta più gruppi di CPU se il Server della garbage collection è abilitato.|  
+|<span data-ttu-id="3b622-116">Valore</span><span class="sxs-lookup"><span data-stu-id="3b622-116">Value</span></span>|<span data-ttu-id="3b622-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3b622-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="3b622-118">Operazione di Garbage collection non supporta più gruppi di CPU.</span><span class="sxs-lookup"><span data-stu-id="3b622-118">Garbage collection does not support multiple CPU groups.</span></span> <span data-ttu-id="3b622-119">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="3b622-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="3b622-120">Operazione di Garbage collection supporta più gruppi di CPU, se garbage collection per server è abilitata.</span><span class="sxs-lookup"><span data-stu-id="3b622-120">Garbage collection supports multiple CPU groups, if server garbage collection is enabled.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="3b622-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="3b622-121">Child Elements</span></span>  
+ <span data-ttu-id="3b622-122">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="3b622-122">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="3b622-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="3b622-123">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
+|<span data-ttu-id="3b622-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="3b622-124">Element</span></span>|<span data-ttu-id="3b622-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3b622-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="3b622-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3b622-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="3b622-127">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="3b622-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Note  
- Quando un computer ha più gruppi di CPU e il Server garbage collection è abilitato \(vedere l'elemento [\<gcServer\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)\), attivare questo elemento estende la Garbage Collection in tutti i gruppi di CPU e tiene in considerazione tutti i core durante la creazione e il bilanciamento degli heap.  
+## <a name="remarks"></a><span data-ttu-id="3b622-128">Note</span><span class="sxs-lookup"><span data-stu-id="3b622-128">Remarks</span></span>  
+ <span data-ttu-id="3b622-129">Quando un computer dispone di più gruppi di CPU e garbage collection per server è abilitata (vedere il [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento), abilitazione di questo elemento consente di estendere garbage collection in tutti i gruppi di CPU e vengono tutti i core in account durante la creazione e bilanciamento degli heap.</span><span class="sxs-lookup"><span data-stu-id="3b622-129">When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.</span></span>  
   
 > [!NOTE]
->  Questo elemento è valido solo per la thread di Garbage Collection.  Per consentire al runtime di distribuire le thread utente in tutti i gruppi della CPU, è inoltre necessario abilitare l'elemento [\<Thread\_UseAllCpuGroups\>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md).  
+>  <span data-ttu-id="3b622-130">Questo elemento si applica solo ai thread di garbage collection.</span><span class="sxs-lookup"><span data-stu-id="3b622-130">This element applies only to garbage collection threads.</span></span> <span data-ttu-id="3b622-131">Per consentire al runtime di distribuire i thread utente in tutti i gruppi di CPU, è necessario abilitare il [< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="3b622-131">To enable the runtime to distribute user threads across all CPU groups, you must also enable the [<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) element.</span></span>  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come attivare la Garbage Collection per più gruppi di CPU.  
+## <a name="example"></a><span data-ttu-id="3b622-132">Esempio</span><span class="sxs-lookup"><span data-stu-id="3b622-132">Example</span></span>  
+ <span data-ttu-id="3b622-133">Nell'esempio seguente viene illustrato come abilitare l'operazione di garbage collection per più gruppi di CPU.</span><span class="sxs-lookup"><span data-stu-id="3b622-133">The following example shows how to enable garbage collection for multiple CPU groups.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <GCCpuGroup enabled="true"/>  
@@ -78,8 +80,8 @@ Specifica se la Garbage Collection supporta più gruppi di CPU.
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [How to: Disable Concurrent Garbage Collection](http://msdn.microsoft.com/it-it/ba2c6c67-5778-497c-9fac-5f793b5500c7)   
- [Operazione di Garbage Collection per workstation e server](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+## <a name="see-also"></a><span data-ttu-id="3b622-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3b622-134">See Also</span></span>  
+ [<span data-ttu-id="3b622-135">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="3b622-135">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="3b622-136">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="3b622-136">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="3b622-137">Procedura: disabilitare Garbage Collection contemporanea</span><span class="sxs-lookup"><span data-stu-id="3b622-137">How to: Disable Concurrent Garbage Collection</span></span>](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [<span data-ttu-id="3b622-138">Operazione di garbage collection workstation e server</span><span class="sxs-lookup"><span data-stu-id="3b622-138">Workstation and server garbage collection</span></span>](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

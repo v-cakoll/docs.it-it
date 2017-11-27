@@ -1,51 +1,54 @@
 ---
-title: "Abilitazione dinamica della traccia analitica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Abilitazione dinamica della traccia analitica
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d86186d3f979d4ec02cb728befb7127edfd07aaf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Abilitazione dinamica della traccia analitica
-Utilizzando gli strumenti forniti con il sistema operativo Windows, è possibile abilitare o disabilitare la traccia in modo dinamico utilizzando Traccia eventi per Windows \(ETW\). Per tutti i servizi [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)][!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] la traccia analitica può essere abilitata e disabilitata in modo dinamico senza modificare il file Web.config dell'applicazione o riavviare il servizio. In questo modo l'applicazione che genera gli eventi di traccia non subisce variazioni.  
+# <a name="dynamically-enabling-analytic-tracing"></a><span data-ttu-id="663a2-102">Abilitazione dinamica della traccia analitica</span><span class="sxs-lookup"><span data-stu-id="663a2-102">Dynamically Enabling Analytic Tracing</span></span>
+<span data-ttu-id="663a2-103">Utilizzando gli strumenti forniti con il sistema operativo Windows, è possibile abilitare o disabilitare la traccia in modo dinamico utilizzando Traccia eventi per Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="663a2-103">Using tools that ship with the Windows operating system, you can enable or disable tracing dynamically using Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="663a2-104">Per tutti i servizi [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] la traccia analitica può essere abilitata e disabilitata in modo dinamico senza modificare il file Web.config dell'applicazione o riavviare il servizio.</span><span class="sxs-lookup"><span data-stu-id="663a2-104">For all [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services, analytic tracing can be enabled and disabled dynamically without modifying the application’s Web.config file or restarting the service.</span></span> <span data-ttu-id="663a2-105">In questo modo l'applicazione che genera gli eventi di traccia non subisce variazioni.</span><span class="sxs-lookup"><span data-stu-id="663a2-105">This allows the application that emits the trace events to remain undisturbed.</span></span>  
   
- È possibile configurare le opzioni di traccia di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in modo analogo. È ad esempio possibile impostare il livello di gravità da **Error** su **Information** senza interferire con l'applicazione. A tale scopo utilizzare gli strumenti seguenti:  
+ <span data-ttu-id="663a2-106">È possibile configurare le opzioni di traccia di[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in modo analogo.</span><span class="sxs-lookup"><span data-stu-id="663a2-106">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] tracing options can be configured in a similar way.</span></span> <span data-ttu-id="663a2-107">È ad esempio possibile impostare il livello di gravità da **Error** su **Information** senza interferire con l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="663a2-107">For example, you can change the severity level from **Error** to **Information** without disturbing the application.</span></span> <span data-ttu-id="663a2-108">A tale scopo utilizzare gli strumenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="663a2-108">This can be done using the following tools:</span></span>  
   
--   **Logman**: strumento da riga di comando per la configurazione, il controllo e l'esecuzione di query sui dati di traccia.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [logman create trace](http://go.microsoft.com/fwlink/?LinkId=165426) e [logman update trace](http://go.microsoft.com/fwlink/?LinkId=165427).  
+-   <span data-ttu-id="663a2-109">**Logman** : strumento da riga di comando per la configurazione, il controllo e l'esecuzione di query sui dati di traccia.</span><span class="sxs-lookup"><span data-stu-id="663a2-109">**Logman** – A command line tool for configuring, controlling, and querying tracing data.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="663a2-110">[Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) e [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).</span><span class="sxs-lookup"><span data-stu-id="663a2-110"> [Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) and [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).</span></span>  
   
--   **EventViewer**: strumento di gestione grafica Windows per visualizzare i risultati della traccia.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Servizi WCF e traccia eventi per Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) e [Visualizzatore eventi](http://go.microsoft.com/fwlink/?LinkId=165428).  
+-   <span data-ttu-id="663a2-111">**EventViewer** : strumento di gestione grafica Windows per visualizzare i risultati della traccia.</span><span class="sxs-lookup"><span data-stu-id="663a2-111">**EventViewer** - Windows graphical management tool for viewing the results of tracing.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="663a2-112">[Servizi WCF e Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) e [Visualizzatore eventi](http://go.microsoft.com/fwlink/?LinkId=165428).</span><span class="sxs-lookup"><span data-stu-id="663a2-112"> [WCF Services and Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) and [Event Viewer](http://go.microsoft.com/fwlink/?LinkId=165428).</span></span>  
   
--   **Perfmon**: strumento di gestione grafica Windows che utilizza contatori per monitorare i contatori di tracce e gli effetti della traccia sulle prestazioni.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Creare un insieme agenti di raccolta dati manualmente](http://go.microsoft.com/fwlink/?LinkId=165429).  
+-   <span data-ttu-id="663a2-113">**Perfmon** : strumento di gestione grafica Windows che utilizza contatori per monitorare i contatori di tracce e gli effetti della traccia sulle prestazioni.</span><span class="sxs-lookup"><span data-stu-id="663a2-113">**Perfmon** – Windows graphical management tool that uses counters to monitor tracing counters and the effects of tracing on performance.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="663a2-114">[Creare manualmente un insieme agenti di raccolta dati](http://go.microsoft.com/fwlink/?LinkId=165429).</span><span class="sxs-lookup"><span data-stu-id="663a2-114"> [Create a Data Collector Set Manually](http://go.microsoft.com/fwlink/?LinkId=165429).</span></span>  
   
-### Parole chiave  
- In caso di utilizzo della classe <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A>, i messaggi di traccia di .NET Framework vengono in genere filtrati in base al livello di gravità \(ad esempio, Error, Warning e Information\). ETW supporta il concetto del livello di gravità, ma introduce un nuovo meccanismo di filtro flessibile mediante parole chiave. Le parole chiave sono costituite da valori testuali arbitrari che consentono agli eventi di traccia di fornire contesto aggiuntivo sul significato dell'evento.  
+### <a name="keywords"></a><span data-ttu-id="663a2-115">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="663a2-115">Keywords</span></span>  
+ <span data-ttu-id="663a2-116">In caso di utilizzo della classe <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> , i messaggi di traccia di .NET Framework vengono in genere filtrati in base al livello di gravità (ad esempio, Error, Warning e Information).</span><span class="sxs-lookup"><span data-stu-id="663a2-116">When using the <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> class, .NET Framework trace messages are generally filtered by the severity level (for example, Error, Warning, and Information).</span></span> <span data-ttu-id="663a2-117">ETW supporta il concetto del livello di gravità, ma introduce un nuovo meccanismo di filtro flessibile mediante parole chiave.</span><span class="sxs-lookup"><span data-stu-id="663a2-117">ETW supports the severity level concept, but introduces a new, flexible filter mechanism using keywords.</span></span> <span data-ttu-id="663a2-118">Le parole chiave sono costituite da valori testuali arbitrari che consentono agli eventi di traccia di fornire contesto aggiuntivo sul significato dell'evento.</span><span class="sxs-lookup"><span data-stu-id="663a2-118">Keywords are arbitrary textual values that let tracing events provide additional context about what that event means.</span></span>  
   
- Per la traccia analitica di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], ogni evento di traccia dispone di due tipi di parole chiave. Ogni evento dispone in primo luogo di una o più parole chiave di scenari. Queste parole chiave indicano gli scenari che l'evento deve supportare. Sono presenti tre parole chiave di scenari, ognuna progettata per un fine specifico, come indicato nella tabella seguente. È possibile modificare i filtri in modo dinamico mediante parole chiave senza interferire con il servizio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Ciò significa che è possibile modificare in modo dinamico lo scenario di traccia corrente e la quantità di informazioni raccolte sulla traccia. È ad esempio possibile impostare `HealthMonitoring` su `Troubleshooting` e aumentare la granularità dell'evento di traccia.  
+ <span data-ttu-id="663a2-119">Per la traccia analitica di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] , ogni evento di traccia dispone di due tipi di parole chiave.</span><span class="sxs-lookup"><span data-stu-id="663a2-119">For [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] analytic tracing, each trace event has two types of keywords.</span></span> <span data-ttu-id="663a2-120">Ogni evento dispone in primo luogo di una o più parole chiave di scenari.</span><span class="sxs-lookup"><span data-stu-id="663a2-120">First, each event has one or more scenario keywords.</span></span> <span data-ttu-id="663a2-121">Queste parole chiave indicano gli scenari che l'evento deve supportare.</span><span class="sxs-lookup"><span data-stu-id="663a2-121">These keywords denote the scenarios that this event is intended to support.</span></span> <span data-ttu-id="663a2-122">Sono presenti tre parole chiave di scenari, ognuna progettata per un fine specifico, come indicato nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="663a2-122">There are three scenario keywords, each designed for a specific purpose as shown in the following table.</span></span> <span data-ttu-id="663a2-123">È possibile modificare i filtri in modo dinamico mediante parole chiave senza interferire con il servizio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="663a2-123">Filtering using keywords can be changed dynamically without disturbing the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="663a2-124">Ciò significa che è possibile modificare in modo dinamico lo scenario di traccia corrente e la quantità di informazioni raccolte sulla traccia.</span><span class="sxs-lookup"><span data-stu-id="663a2-124">That means that you can dynamically change your current tracing scenario and the amount of tracing information you gather.</span></span> <span data-ttu-id="663a2-125">È ad esempio possibile impostare `HealthMonitoring` su `Troubleshooting` e aumentare la granularità dell'evento di traccia.</span><span class="sxs-lookup"><span data-stu-id="663a2-125">For example, you can change `HealthMonitoring` to `Troubleshooting` and increase Tracing Event granularity.</span></span>  
   
-|Parola chiave|Descrizione|  
-|-------------------|-----------------|  
-|`HealthMonitoring`|Traccia molto leggera, minima che consente di monitorare l'attività del servizio.|  
-|`EndToEndMonitoring`|Eventi utilizzati per supportare la traccia del flusso di messaggi.|  
-|`Troubleshooting`|Eventi più granulari intorno ai punti di estensibilità di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].|  
+|<span data-ttu-id="663a2-126">Parola chiave</span><span class="sxs-lookup"><span data-stu-id="663a2-126">Keyword</span></span>|<span data-ttu-id="663a2-127">Descrizione</span><span class="sxs-lookup"><span data-stu-id="663a2-127">Description</span></span>|  
+|-------------|-----------------|  
+|`HealthMonitoring`|<span data-ttu-id="663a2-128">Traccia molto leggera, minima che consente di monitorare l'attività del servizio.</span><span class="sxs-lookup"><span data-stu-id="663a2-128">Very lightweight, minimal tracing that lets you monitor your service’s activity.</span></span>|  
+|`EndToEndMonitoring`|<span data-ttu-id="663a2-129">Eventi utilizzati per supportare la traccia del flusso di messaggi.</span><span class="sxs-lookup"><span data-stu-id="663a2-129">Events used to support message flow tracing.</span></span>|  
+|`Troubleshooting`|<span data-ttu-id="663a2-130">Eventi più granulari intorno ai punti di estensibilità di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="663a2-130">More granular events around the extensibility points of [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span></span>|  
   
- Il secondo gruppo di parole chiave definisce il componente di [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] che ha generato l'evento.  
+ <span data-ttu-id="663a2-131">Il secondo gruppo di parole chiave definisce il componente di [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] che ha generato l'evento.</span><span class="sxs-lookup"><span data-stu-id="663a2-131">The second group of keywords define which component of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] emitted the event.</span></span>  
   
-|Parola chiave|Descrizione|  
-|-------------------|-----------------|  
-|`UserEvents`|Eventi generati dal codice utente e non da [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
-|`ServiceModel`|Eventi generati dal runtime di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].|  
-|`ServiceHost`|Eventi generati dall'host del servizio.|  
-|`WCFMessageLogging`|Eventi di registrazione dei messaggi di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].|  
+|<span data-ttu-id="663a2-132">Parola chiave</span><span class="sxs-lookup"><span data-stu-id="663a2-132">Keyword</span></span>|<span data-ttu-id="663a2-133">Descrizione</span><span class="sxs-lookup"><span data-stu-id="663a2-133">Description</span></span>|  
+|-------------|-----------------|  
+|`UserEvents`|<span data-ttu-id="663a2-134">Eventi generati dal codice utente e non da [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="663a2-134">Events emitted by the user code and not the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].</span></span>|  
+|`ServiceModel`|<span data-ttu-id="663a2-135">Eventi generati dal runtime di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="663a2-135">Events emitted by the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] runtime.</span></span>|  
+|`ServiceHost`|<span data-ttu-id="663a2-136">Eventi generati dall'host del servizio.</span><span class="sxs-lookup"><span data-stu-id="663a2-136">Events emitted by the service host.</span></span>|  
+|`WCFMessageLogging`|<span data-ttu-id="663a2-137">Eventi di registrazione dei messaggi di[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="663a2-137">[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message logging events.</span></span>|  
   
-## Vedere anche  
- [Servizi WCF e traccia eventi per Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+## <a name="see-also"></a><span data-ttu-id="663a2-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="663a2-138">See Also</span></span>  
+ [<span data-ttu-id="663a2-139">WCF Services and Event Tracing for Windows</span><span class="sxs-lookup"><span data-stu-id="663a2-139">WCF Services and Event Tracing for Windows</span></span>](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

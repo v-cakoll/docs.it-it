@@ -1,35 +1,36 @@
 ---
-title: "Procedura: visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LinkLabel1_LinkClicked"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "esempi [Windows Form], LinkLabel (controllo)"
-  - "collegamento, a pagine Web da form"
-  - "LinkLabel (controllo) [Windows Form], esempi"
-  - "pagine Web, visualizzazione"
-  - "Windows Form, collegamento a pagine Web"
+title: 'Procedura: visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+f1_keywords: LinkLabel1_LinkClicked
+helpviewer_keywords:
+- examples [Windows Forms], LinkLabel control
+- Web pages [Windows Forms], displaying
+- linking [Windows Forms], to Web pages from forms
+- Windows Forms, linking to Web pages
+- LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38ef165dc655fedbf682a21220d6a76532b18f6a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic)
-Nell'esempio riportato di seguito viene visualizzata una pagina Web nel browser predefinito quando un utente fa clic su un controllo <xref:System.Windows.Forms.LinkLabel> di un Windows Form.  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a><span data-ttu-id="cc583-102">Procedura: visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc583-102">How to: Display a Web Page from a Windows Forms LinkLabel Control (Visual Basic)</span></span>
+<span data-ttu-id="cc583-103">In questo esempio viene visualizzata una pagina Web nel browser predefinito quando un utente fa clic su un Windows Form <xref:System.Windows.Forms.LinkLabel> controllo.</span><span class="sxs-lookup"><span data-stu-id="cc583-103">This example displays a Web page in the default browser when a user clicks a Windows Forms <xref:System.Windows.Forms.LinkLabel> control.</span></span>  
   
-## Esempio  
+## <a name="example"></a><span data-ttu-id="cc583-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="cc583-104">Example</span></span>  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -44,18 +45,18 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="cc583-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="cc583-105">Compiling the Code</span></span>  
+ <span data-ttu-id="cc583-106">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="cc583-106">This example requires:</span></span>  
   
--   Un Windows Form denominato `Form1`.  
+-   <span data-ttu-id="cc583-107">Un Windows Form denominato `Form1`.</span><span class="sxs-lookup"><span data-stu-id="cc583-107">A Windows Form named `Form1`.</span></span>  
   
--   Un controllo <xref:System.Windows.Forms.LinkLabel> denominato `LinkLabel1`.  
+-   <span data-ttu-id="cc583-108">Un controllo <xref:System.Windows.Forms.LinkLabel> denominato `LinkLabel1`.</span><span class="sxs-lookup"><span data-stu-id="cc583-108">A <xref:System.Windows.Forms.LinkLabel> control named `LinkLabel1`.</span></span>  
   
--   Una connessione Internet attiva.  
+-   <span data-ttu-id="cc583-109">Una connessione Internet attiva.</span><span class="sxs-lookup"><span data-stu-id="cc583-109">An active Internet connection.</span></span>  
   
-## Sicurezza di .NET Framework  
- Per eseguire la chiamata al metodo <xref:System.Diagnostics.Process.Start%2A> è necessaria un'attendibilità completa.  Per ulteriori informazioni, vedere <xref:System.Security.SecurityException>.  
+## <a name="net-framework-security"></a><span data-ttu-id="cc583-110">Sicurezza di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="cc583-110">.NET Framework Security</span></span>  
+ <span data-ttu-id="cc583-111">La chiamata al <xref:System.Diagnostics.Process.Start%2A> metodo richiede l'attendibilità totale.</span><span class="sxs-lookup"><span data-stu-id="cc583-111">The call to the <xref:System.Diagnostics.Process.Start%2A> method requires full trust.</span></span> <span data-ttu-id="cc583-112">Per altre informazioni, vedere <xref:System.Security.SecurityException>.</span><span class="sxs-lookup"><span data-stu-id="cc583-112">For more information, see <xref:System.Security.SecurityException>.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.LinkLabel>   
- [Controllo LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="cc583-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cc583-113">See Also</span></span>  
+ <xref:System.Windows.Forms.LinkLabel>  
+ [<span data-ttu-id="cc583-114">Controllo LinkLabel</span><span class="sxs-lookup"><span data-stu-id="cc583-114">LinkLabel Control</span></span>](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

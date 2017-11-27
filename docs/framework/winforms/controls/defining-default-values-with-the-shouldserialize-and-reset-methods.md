@@ -1,40 +1,43 @@
 ---
-title: "Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli personalizzati [Windows Form], metodi delle proprietà"
-  - "Reset (metodo)"
-  - "ShouldPersist (metodo)"
+title: Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Windows Forms], property methods
+- ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d082b0e3db1e1c115d28446cf515cf6acf60a7d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset
-`ShouldSerialize` e `Reset` sono metodi facoltativi che è possibile fornire per una proprietà, se tale proprietà non presenta un valore predefinito semplice.  Se la proprietà presenta un valore predefinito semplice, sarà necessario applicare <xref:System.ComponentModel.DefaultValueAttribute> e fornire invece il valore predefinito al costruttore della classe Attribute.  Entrambi questi meccanismi consentono di avvalersi, all'interno della finestra di progettazione, delle seguenti caratteristiche:  
+# <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a><span data-ttu-id="dcf94-102">Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset</span><span class="sxs-lookup"><span data-stu-id="dcf94-102">Defining Default Values with the ShouldSerialize and Reset Methods</span></span>
+<span data-ttu-id="dcf94-103">`ShouldSerialize`e `Reset` sono metodi facoltativi che è possibile fornire per una proprietà, se la proprietà non un valore predefinito semplice.</span><span class="sxs-lookup"><span data-stu-id="dcf94-103">`ShouldSerialize` and `Reset` are optional methods that you can provide for a property, if the property does not a have simple default value.</span></span> <span data-ttu-id="dcf94-104">Se la proprietà ha un valore predefinito semplice, è consigliabile applicare la <xref:System.ComponentModel.DefaultValueAttribute> e fornire invece il valore predefinito per il costruttore di classe di attributo.</span><span class="sxs-lookup"><span data-stu-id="dcf94-104">If the property has a simple default value, you should apply the <xref:System.ComponentModel.DefaultValueAttribute> and supply the default value to the attribute class constructor instead.</span></span> <span data-ttu-id="dcf94-105">Uno di questi meccanismi Abilita le funzionalità seguenti nella finestra di progettazione:</span><span class="sxs-lookup"><span data-stu-id="dcf94-105">Either of these mechanisms enables the following features in the designer:</span></span>  
   
--   La proprietà fornisce un'indicazione visiva nel visualizzatore proprietà se sono state apportate modifiche rispetto al valore predefinito.  
+-   <span data-ttu-id="dcf94-106">La proprietà fornisce un'indicazione visiva nel Visualizzatore proprietà se è stato modificato rispetto al valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="dcf94-106">The property provides visual indication in the property browser if it has been modified from its default value.</span></span>  
   
--   È possibile fare clic con il pulsante destro del mouse sulla proprietà e scegliere **Reimposta** per ripristinare il valore predefinito della proprietà.  
+-   <span data-ttu-id="dcf94-107">L'utente può fare clic su proprietà e scegliere **reimpostare** per ripristinare la proprietà sul valore predefinito.</span><span class="sxs-lookup"><span data-stu-id="dcf94-107">The user can right-click on the property and choose **Reset** to restore the property to its default value.</span></span>  
   
--   La finestra di progettazione genera codice più efficiente.  
+-   <span data-ttu-id="dcf94-108">La finestra di progettazione genera codice più efficiente.</span><span class="sxs-lookup"><span data-stu-id="dcf94-108">The designer generates more efficient code.</span></span>  
   
     > [!NOTE]
-    >  Applicare <xref:System.ComponentModel.DefaultValueAttribute> oppure fornire i metodi `Reset`*NomeProprietà* e `ShouldSerialize`*NomeProprietà*.  Non effettuare entrambe le operazioni.  
+    >  <span data-ttu-id="dcf94-109">Applicare il <xref:System.ComponentModel.DefaultValueAttribute> o fornire `Reset` *PropertyName* e `ShouldSerialize` *PropertyName* metodi.</span><span class="sxs-lookup"><span data-stu-id="dcf94-109">Either apply the <xref:System.ComponentModel.DefaultValueAttribute> or provide `Reset`*PropertyName* and `ShouldSerialize`*PropertyName* methods.</span></span> <span data-ttu-id="dcf94-110">Non utilizzare entrambi.</span><span class="sxs-lookup"><span data-stu-id="dcf94-110">Do not use both.</span></span>  
   
- Il metodo `Reset`*NomeProprietà* imposta una proprietà sul relativo valore predefinito, come illustrato nel frammento di codice riportato di seguito.  
+ <span data-ttu-id="dcf94-111">Il `Reset` *PropertyName* metodo imposta una proprietà sul valore predefinito, come illustrato nel frammento di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="dcf94-111">The `Reset`*PropertyName* method sets a property to its default value, as shown in the following code fragment.</span></span>  
   
 ```vb  
 Public Sub ResetMyFont()  
@@ -49,9 +52,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Se una proprietà non dispone di un metodo `Reset`, non è associata a un <xref:System.ComponentModel.DefaultValueAttribute> e non presenta un valore predefinito nella propria dichiarazione, l'opzione `Reset` per tale proprietà risulta disabilitata nel menu di scelta rapida della finestra **Proprietà** di Progettazione Windows Form in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+>  <span data-ttu-id="dcf94-112">Se una proprietà non ha un `Reset` , non è contrassegnato con un <xref:System.ComponentModel.DefaultValueAttribute>e non dispone di un valore predefinito specificato nella relativa dichiarazione, il `Reset` opzione per tale proprietà è disabilitata nel menu di scelta rapida del **proprietà** finestra di progettazione Windows Form in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dcf94-112">If a property does not have a `Reset` method, is not marked with a <xref:System.ComponentModel.DefaultValueAttribute>, and does not have a default value supplied in its declaration, the `Reset` option for that property is disabled in the shortcut menu of the **Properties** window of the Windows Forms Designer in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span>  
   
- Le finestre di progettazione quali [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] utilizzano il metodo `ShouldSerialize`*NomeProprietà* per verificare se una proprietà è stata modificata rispetto al valore predefinito e per scrivere codice nel form solo in caso di modifica, consentendo in tal modo una generazione del codice più efficiente.  Di seguito è riportato un esempio:  
+ <span data-ttu-id="dcf94-113">Finestre di progettazione, ad esempio [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] utilizzare il `ShouldSerialize` *PropertyName* per verificare se una proprietà è stata modificata rispetto al valore predefinito e per scrivere codice nel form solo in una proprietà viene modificato, consentendo un più efficiente generazione di codice.</span><span class="sxs-lookup"><span data-stu-id="dcf94-113">Designers such as [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] use the `ShouldSerialize`*PropertyName* method to check whether a property has changed from its default value and write code into the form only if a property is changed, thus allowing for more efficient code generation.</span></span> <span data-ttu-id="dcf94-114">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="dcf94-114">For example:</span></span>  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -69,7 +72,7 @@ public bool ShouldSerializeMyFont() {
 }  
 ```  
   
- Di seguito è riportato un esempio di codice completo.  
+ <span data-ttu-id="dcf94-115">Segue un esempio di codice completo.</span><span class="sxs-lookup"><span data-stu-id="dcf94-115">A complete code example follows.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -148,9 +151,9 @@ public class MyControl : Control {
 }  
 ```  
   
- In questo caso, anche se il valore della variabile privata a cui accede la proprietà `MyFont` è `null`, nel Visualizzatore proprietà non viene riportato il valore `null`, ma la proprietà <xref:System.Windows.Forms.Control.Font%2A> del padre, se non è `null`, o il valore <xref:System.Windows.Forms.Control.Font%2A> predefinito specificato in <xref:System.Windows.Forms.Control>.  Non è pertanto possibile impostare semplicemente il valore predefinito di `MyFont`  né applicare un <xref:System.ComponentModel.DefaultValueAttribute> a questa proprietà.  È invece necessario implementare i metodi `ShouldSerialize` e `Reset` per la proprietà `MyFont`.  
+ <span data-ttu-id="dcf94-116">In questo caso, anche quando il valore della variabile privata accede il `MyFont` proprietà `null`, non vengono visualizzati nel Visualizzatore proprietà `null`; al contrario, viene visualizzato il <xref:System.Windows.Forms.Control.Font%2A> proprietà dell'elemento padre, se non è `null`, il valore predefinito o <xref:System.Windows.Forms.Control.Font%2A> valore definito <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="dcf94-116">In this case, even when the value of the private variable accessed by the `MyFont` property is `null`, the property browser does not display `null`; instead, it displays the <xref:System.Windows.Forms.Control.Font%2A> property of the parent, if it is not `null`, or the default <xref:System.Windows.Forms.Control.Font%2A> value defined in <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="dcf94-117">In questo modo il valore predefinito per `MyFont` non è possibile impostare semplicemente e un <xref:System.ComponentModel.DefaultValueAttribute> non può essere applicato a questa proprietà.</span><span class="sxs-lookup"><span data-stu-id="dcf94-117">Thus the default value for `MyFont` cannot be simply set, and a <xref:System.ComponentModel.DefaultValueAttribute> cannot be applied to this property.</span></span> <span data-ttu-id="dcf94-118">Al contrario, il `ShouldSerialize` e `Reset` necessario implementare i metodi per la `MyFont` proprietà.</span><span class="sxs-lookup"><span data-stu-id="dcf94-118">Instead, the `ShouldSerialize` and `Reset` methods must be implemented for the `MyFont` property.</span></span>  
   
-## Vedere anche  
- [Proprietà dei controlli Windows Form](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [Definizione di una proprietà](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)   
- [Eventi per proprietà modificate](../../../../docs/framework/winforms/controls/property-changed-events.md)
+## <a name="see-also"></a><span data-ttu-id="dcf94-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dcf94-119">See Also</span></span>  
+ [<span data-ttu-id="dcf94-120">Proprietà dei controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="dcf94-120">Properties in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [<span data-ttu-id="dcf94-121">Definizione di una proprietà</span><span class="sxs-lookup"><span data-stu-id="dcf94-121">Defining a Property</span></span>](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
+ [<span data-ttu-id="dcf94-122">Eventi di modifica delle proprietà</span><span class="sxs-lookup"><span data-stu-id="dcf94-122">Property-Changed Events</span></span>](../../../../docs/framework/winforms/controls/property-changed-events.md)

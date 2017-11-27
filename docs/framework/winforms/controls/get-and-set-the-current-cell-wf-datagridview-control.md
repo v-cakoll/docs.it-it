@@ -1,60 +1,64 @@
 ---
-title: "Procedura: ottenere e impostare la cella corrente nel controllo DataGridView di Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "celle, recupero e impostazione della cella corrente"
-  - "DataGridView (controllo) [Windows Form], recupero della cella corrente"
-  - "DataGridView (controllo) [Windows Form], impostazione della cella corrente"
+title: 'Procedura: ottenere e impostare la cella corrente nel controllo DataGridView di Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataGridView control [Windows Forms], getting current cell
+- DataGridView control [Windows Forms], setting current cell
+- cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bb63c48831e19ce3cbb166e899aeee8b6a331839
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: ottenere e impostare la cella corrente nel controllo DataGridView di Windows Form
-L'interazione con il controllo <xref:System.Windows.Forms.DataGridView> spesso richiede il rilevamento a livello di codice della cella attiva.  Potrebbe inoltre essere necessario modificare la cella corrente.  La proprietà <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> consente di eseguire queste attività.  
+# <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="71404-102">Procedura: ottenere e impostare la cella corrente nel controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="71404-102">How to: Get and Set the Current Cell in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="71404-103">L'interazione con il <xref:System.Windows.Forms.DataGridView> richiede spesso a livello di codice individuare la cella è attualmente attiva.</span><span class="sxs-lookup"><span data-stu-id="71404-103">Interaction with the <xref:System.Windows.Forms.DataGridView> often requires that you programmatically discover which cell is currently active.</span></span> <span data-ttu-id="71404-104">È necessario anche modificare la cella corrente.</span><span class="sxs-lookup"><span data-stu-id="71404-104">You may also need to change the current cell.</span></span> <span data-ttu-id="71404-105">È possibile eseguire queste attività con il <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="71404-105">You can perform these tasks with the <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> property.</span></span>  
   
 > [!NOTE]
->  Non è possibile impostare la cella corrente in una riga o una colonna con la proprietà <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> impostata su `false`.  
+>  <span data-ttu-id="71404-106">Non è possibile impostare la cella corrente in una riga o colonna con il relativo <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> proprietà impostata su `false`.</span><span class="sxs-lookup"><span data-stu-id="71404-106">You cannot set the current cell in a row or column that has its <xref:System.Windows.Forms.DataGridViewBand.Visible%2A> property set to `false`.</span></span>  
   
- A seconda della modalità di selezione del controllo <xref:System.Windows.Forms.DataGridView>, la modifica della cella corrente può modificare la selezione.  Per ulteriori informazioni, vedere [Modalità di selezione nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md).  
+ <span data-ttu-id="71404-107">A seconda di <xref:System.Windows.Forms.DataGridView> modalità di selezione del controllo, la modifica della cella corrente è possibile modificare la selezione.</span><span class="sxs-lookup"><span data-stu-id="71404-107">Depending on the <xref:System.Windows.Forms.DataGridView> control's selection mode, changing the current cell can change the selection.</span></span> <span data-ttu-id="71404-108">Per ulteriori informazioni, vedere [modalità di selezione nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="71404-108">For more information, see [Selection Modes in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md).</span></span>  
   
-### Per ottenere la cella corrente a livello di codice  
+### <a name="to-get-the-current-cell-programmatically"></a><span data-ttu-id="71404-109">Per ottenere la cella corrente a livello di codice</span><span class="sxs-lookup"><span data-stu-id="71404-109">To get the current cell programmatically</span></span>  
   
--   Utilizzare la proprietà <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> del controllo <xref:System.Windows.Forms.DataGridView>.  
+-   <span data-ttu-id="71404-110">Utilizzare il <xref:System.Windows.Forms.DataGridView> del controllo <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="71404-110">Use the <xref:System.Windows.Forms.DataGridView> control's <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#080](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#080)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#080](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#080)]  
   
-### Per impostare la cella corrente a livello di codice  
+### <a name="to-set-the-current-cell-programmatically"></a><span data-ttu-id="71404-111">Per impostare la cella corrente a livello di codice</span><span class="sxs-lookup"><span data-stu-id="71404-111">To set the current cell programmatically</span></span>  
   
--   Impostare la proprietà <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> del controllo <xref:System.Windows.Forms.DataGridView>.  Nell'esempio di codice seguente la cella corrente è impostata sulla riga 0 e sulla colonna 1.  
+-   <span data-ttu-id="71404-112">Impostare il <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> proprietà del <xref:System.Windows.Forms.DataGridView> controllo.</span><span class="sxs-lookup"><span data-stu-id="71404-112">Set the <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> property of the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="71404-113">Nell'esempio di codice seguente, la cella corrente è impostata su 0, colonna 1 di riga.</span><span class="sxs-lookup"><span data-stu-id="71404-113">In the following code example, the current cell is set to row 0, column 1.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#085](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#085)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#085](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#085)]  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="71404-114">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="71404-114">Compiling the Code</span></span>  
+ <span data-ttu-id="71404-115">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="71404-115">This example requires:</span></span>  
   
--   Controlli <xref:System.Windows.Forms.Button> denominati `getCurrentCellButton` e `setCurrentCellButton`.  In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] è necessario aggiungere gli eventi <xref:System.Windows.Forms.Control.Click> per ciascun pulsante al gestore eventi associato nel codice di esempio.  
+-   <span data-ttu-id="71404-116"><xref:System.Windows.Forms.Button>controlli denominati `getCurrentCellButton` e `setCurrentCellButton`.</span><span class="sxs-lookup"><span data-stu-id="71404-116"><xref:System.Windows.Forms.Button> controls named `getCurrentCellButton` and `setCurrentCellButton`.</span></span> <span data-ttu-id="71404-117">In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], è necessario collegare il <xref:System.Windows.Forms.Control.Click> gli eventi per ogni pulsante per il gestore eventi associato nel codice di esempio.</span><span class="sxs-lookup"><span data-stu-id="71404-117">In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], you must attach the <xref:System.Windows.Forms.Control.Click> events for each button to the associated event handler in the example code.</span></span>  
   
--   Un controllo <xref:System.Windows.Forms.DataGridView> denominato`dataGridView1`.  
+-   <span data-ttu-id="71404-118">Un controllo <xref:System.Windows.Forms.DataGridView> denominato `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="71404-118">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   Riferimenti agli assembly <xref:System?displayProperty=fullName> e <xref:System.Windows.Forms?displayProperty=fullName>.  
+-   <span data-ttu-id="71404-119">Riferimenti agli assembly <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="71404-119">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=fullName>   
- [Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)   
- [Modalità di selezione nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="71404-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="71404-120">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="71404-121">Funzionalità di base per colonna, riga e cella nel controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="71404-121">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [<span data-ttu-id="71404-122">Modalità di selezione nel controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="71404-122">Selection Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)

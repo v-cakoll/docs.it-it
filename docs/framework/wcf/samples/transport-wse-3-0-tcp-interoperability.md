@@ -1,65 +1,68 @@
 ---
-title: "Trasporto: Interoperabilit&#224; WSE 3.0 TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Trasporto: Interoperabilità WSE 3.0 TCP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d758abf6dbf5d8a5992a7c033e2ea1526762766d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Trasporto: Interoperabilit&#224; WSE 3.0 TCP
-L'esempio Trasporto: Interoperabilità WSE 3.0 TCP illustra come implementare una  sessione duplex TCP come trasporto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] personalizzato.Illustra anche come utilizzare l'estendibilità del livello del canale per connettersi via cavo con sistemi distribuiti esistenti.Nei passaggi seguenti viene illustrato come compilare questo trasporto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] personalizzato:  
+# <a name="transport-wse-30-tcp-interoperability"></a><span data-ttu-id="4c56f-102">Trasporto: Interoperabilità WSE 3.0 TCP</span><span class="sxs-lookup"><span data-stu-id="4c56f-102">Transport: WSE 3.0 TCP Interoperability</span></span>
+<span data-ttu-id="4c56f-103">L'esempio Trasporto: Interoperabilità WSE 3.0 TCP illustra come implementare una  sessione duplex TCP come trasporto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] personalizzato.</span><span class="sxs-lookup"><span data-stu-id="4c56f-103">The WSE 3.0 TCP Interoperability Transport sample demonstrates how to implement a TCP duplex session as a custom [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transport.</span></span> <span data-ttu-id="4c56f-104">Illustra anche come utilizzare l'estendibilità del livello del canale per connettersi via cavo con sistemi distribuiti esistenti.</span><span class="sxs-lookup"><span data-stu-id="4c56f-104">It also demonstrates how you can use the extensibility of the channel layer to interface over the wire with existing deployed systems.</span></span> <span data-ttu-id="4c56f-105">Nei passaggi seguenti viene illustrato come compilare questo trasporto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] personalizzato:</span><span class="sxs-lookup"><span data-stu-id="4c56f-105">The following steps show how to build this custom [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transport:</span></span>  
   
-1.  A partire da un socket TCP, creare client e implementazioni server di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> che utilizzano framing DIME per delineare i limiti del messaggio.  
+1.  <span data-ttu-id="4c56f-106">A partire da un socket TCP, creare client e implementazioni server di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> che utilizzano framing DIME per delineare i limiti del messaggio.</span><span class="sxs-lookup"><span data-stu-id="4c56f-106">Starting with a TCP socket, create client and server implementations of <xref:System.ServiceModel.Channels.IDuplexSessionChannel> that use DIME Framing to delineate message boundaries.</span></span>  
   
-2.  Creare una channel factory che si connette a un servizio TCP WSE e invia messaggi con limiti nelle classi <xref:System.ServiceModel.Channels.IDuplexSessionChannel> del client.  
+2.  <span data-ttu-id="4c56f-107">Creare una channel factory che si connette a un servizio TCP WSE e invia messaggi con limiti nelle classi <xref:System.ServiceModel.Channels.IDuplexSessionChannel> del client.</span><span class="sxs-lookup"><span data-stu-id="4c56f-107">Create a channel factory that connects to a WSE TCP service and sends framed messages over the client <xref:System.ServiceModel.Channels.IDuplexSessionChannel>s.</span></span>  
   
-3.  Creare un listener del canale per accettare connessioni TCP in ingresso e produrre canali corrispondenti.  
+3.  <span data-ttu-id="4c56f-108">Creare un listener del canale per accettare connessioni TCP in ingresso e produrre canali corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="4c56f-108">Create a channel listener to accept incoming TCP connections and produce corresponding channels.</span></span>  
   
-4.  Assicurarsi che eventuali eccezioni specifiche della rete vengano normalizzate nella classe derivata appropriata di <xref:System.ServiceModel.CommunicationException>.  
+4.  <span data-ttu-id="4c56f-109">Assicurarsi che eventuali eccezioni specifiche della rete vengano normalizzate nella classe derivata appropriata di <xref:System.ServiceModel.CommunicationException>.</span><span class="sxs-lookup"><span data-stu-id="4c56f-109">Ensure that any network-specific exceptions are normalized to the appropriate derived class of <xref:System.ServiceModel.CommunicationException>.</span></span>  
   
-5.  Inserire un elemento di associazione che aggiunge il trasporto personalizzato a uno stack di canali.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Aggiunta di un elemento di associazione](#AddingABindingElement).  
+5.  <span data-ttu-id="4c56f-110">Inserire un elemento di associazione che aggiunge il trasporto personalizzato a uno stack di canali.</span><span class="sxs-lookup"><span data-stu-id="4c56f-110">Add a binding element that adds the custom transport to a channel stack.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="4c56f-111">[Aggiunta di un elemento di associazione].</span><span class="sxs-lookup"><span data-stu-id="4c56f-111"> [Adding a Binding Element].</span></span>  
   
-## Creazione di IDuplexSessionChannel  
- Il primo passaggio per scrivere il trasporto interoperabilità WSE 3.0 TCP consiste nel creare un'implementazione dell'oggetto <xref:System.ServiceModel.Channels.IDuplexSessionChannel> all'inizio di un oggetto <xref:System.Net.Sockets.Socket>.`WseTcpDuplexSessionChannel` deriva da <xref:System.ServiceModel.Channels.ChannelBase>.La logica dell'invio di un messaggio è costituita da due parti principali: \(1\) codifica del messaggio in byte e \(2\) framing dei byte e invio via cavo.  
+## <a name="creating-iduplexsessionchannel"></a><span data-ttu-id="4c56f-112">Creazione di IDuplexSessionChannel</span><span class="sxs-lookup"><span data-stu-id="4c56f-112">Creating IDuplexSessionChannel</span></span>  
+ <span data-ttu-id="4c56f-113">Il primo passaggio per scrivere il trasporto interoperabilità WSE 3.0 TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IDuplexSessionChannel> su <xref:System.Net.Sockets.Socket>.</span><span class="sxs-lookup"><span data-stu-id="4c56f-113">The first step in writing the WSE 3.0 TCP Interoperability Transport is to create an implementation of <xref:System.ServiceModel.Channels.IDuplexSessionChannel> on top of a <xref:System.Net.Sockets.Socket>.</span></span> <span data-ttu-id="4c56f-114">`WseTcpDuplexSessionChannel` deriva da <xref:System.ServiceModel.Channels.ChannelBase>.</span><span class="sxs-lookup"><span data-stu-id="4c56f-114">`WseTcpDuplexSessionChannel` derives from <xref:System.ServiceModel.Channels.ChannelBase>.</span></span> <span data-ttu-id="4c56f-115">La logica dell'invio di un messaggio è costituita da due parti principali: (1) codifica del messaggio in byte e (2) framing dei byte e invio via cavo.</span><span class="sxs-lookup"><span data-stu-id="4c56f-115">The logic of sending a message consists of two main pieces: (1) Encoding the message into bytes, and (2) framing those bytes and sending them on the wire.</span></span>  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
  `WriteData(encodedBytes);`  
   
- Inoltre, viene utilizzato un blocco in modo che le chiamate Send\(\) mantengano la garanzia di ordine di IDuplexSessionChannel e per fare sì che le chiamate al socket sottostante siano sincronizzate correttamente.  
+ <span data-ttu-id="4c56f-116">Inoltre, viene utilizzato un blocco in modo che le chiamate Send() mantengano la garanzia di ordine di IDuplexSessionChannel e per fare sì che le chiamate al socket sottostante siano sincronizzate correttamente.</span><span class="sxs-lookup"><span data-stu-id="4c56f-116">In addition, a lock is taken so that the Send() calls preserve the IDuplexSessionChannel in-order guarantee, and so that calls to the underlying socket are synchronized correctly.</span></span>  
   
- `WseTcpDuplexSessionChannel` utilizza una classe <xref:System.ServiceModel.Channels.MessageEncoder> per tradurre classi <xref:System.ServiceModel.Channels.Message> da e verso byte\[\].Poiché si tratta di un trasporto, `WseTcpDuplexSessionChannel` è inoltre responsabile dell'applicazione dell'indirizzo remoto con cui il canale è stato configurato.`EncodeMessage` contiene la logica per la conversione.  
+ <span data-ttu-id="4c56f-117">`WseTcpDuplexSessionChannel` utilizza una classe <xref:System.ServiceModel.Channels.MessageEncoder> per tradurre classi <xref:System.ServiceModel.Channels.Message> da e verso byte[].</span><span class="sxs-lookup"><span data-stu-id="4c56f-117">`WseTcpDuplexSessionChannel` uses a <xref:System.ServiceModel.Channels.MessageEncoder> for translating a <xref:System.ServiceModel.Channels.Message> to and from byte[].</span></span> <span data-ttu-id="4c56f-118">Poiché si tratta di un trasporto, `WseTcpDuplexSessionChannel` è inoltre responsabile dell'applicazione dell'indirizzo remoto con cui il canale è stato configurato.</span><span class="sxs-lookup"><span data-stu-id="4c56f-118">Because it is a transport, `WseTcpDuplexSessionChannel` is also responsible for applying the remote address that the channel was configured with.</span></span> <span data-ttu-id="4c56f-119">`EncodeMessage` contiene la logica per la conversione.</span><span class="sxs-lookup"><span data-stu-id="4c56f-119">`EncodeMessage` encapsulates the logic for this conversion.</span></span>  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Dopo essere stata codificata in byte, la classe <xref:System.ServiceModel.Channels.Message> deve essere trasmessa via cavo.Ciò richiede un sistema per la definizione dei limiti del messaggio.WSE 3.0 utilizza una versione di [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) come protocollo di framing.`WriteData` contiene la logica di framing per eseguire il wrapping di un byte\[\] in un set di record di DIME.  
+ <span data-ttu-id="4c56f-120">Dopo essere stata codificata in byte, la classe <xref:System.ServiceModel.Channels.Message> deve essere trasmessa via cavo.</span><span class="sxs-lookup"><span data-stu-id="4c56f-120">Once the <xref:System.ServiceModel.Channels.Message> is encoded into bytes, it must be transmitted on the wire.</span></span> <span data-ttu-id="4c56f-121">Ciò richiede un sistema per la definizione dei limiti del messaggio.</span><span class="sxs-lookup"><span data-stu-id="4c56f-121">This requires a system for defining message boundaries.</span></span> <span data-ttu-id="4c56f-122">WSE 3.0 utilizza una versione di [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) come protocollo di framing.</span><span class="sxs-lookup"><span data-stu-id="4c56f-122">WSE 3.0 uses a version of [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) as its framing protocol.</span></span> <span data-ttu-id="4c56f-123">`WriteData` contiene la logica di framing per eseguire il wrapping di un byte[] in un set di record DIME.</span><span class="sxs-lookup"><span data-stu-id="4c56f-123">`WriteData` encapsulates the framing logic to wrap a byte[] into a set of DIME records.</span></span>  
   
- La logica alla base della ricezione dei messaggi è molto simile.Il problema più complesso sta nel gestite il fatto che la lettura di un socket può restituire meno byte di quanto richiesto.Per ricevere un messaggio, `WseTcpDuplexSessionChannel` legge i byte via cavo, decodifica il framing DIME e utilizza <xref:System.ServiceModel.Channels.MessageEncoder> per tradurre i byte \[\] in una classe <xref:System.ServiceModel.Channels.Message>.  
+ <span data-ttu-id="4c56f-124">La logica alla base della ricezione dei messaggi è molto simile.</span><span class="sxs-lookup"><span data-stu-id="4c56f-124">The logic for receiving messages is very similar.</span></span> <span data-ttu-id="4c56f-125">Il problema più complesso sta nel gestite il fatto che la lettura di un socket può restituire meno byte di quanto richiesto.</span><span class="sxs-lookup"><span data-stu-id="4c56f-125">The main complexity is handling the fact that a socket read can return less bytes than were requested.</span></span> <span data-ttu-id="4c56f-126">Per ricevere un messaggio, `WseTcpDuplexSessionChannel` legge i byte via cavo, decodifica il framing DIME e utilizza <xref:System.ServiceModel.Channels.MessageEncoder> per tradurre i byte [] in una classe <xref:System.ServiceModel.Channels.Message>.</span><span class="sxs-lookup"><span data-stu-id="4c56f-126">To receive a message, `WseTcpDuplexSessionChannel` reads bytes off the wire, decodes the DIME framing, and then uses the <xref:System.ServiceModel.Channels.MessageEncoder> for turning the byte[] into a <xref:System.ServiceModel.Channels.Message>.</span></span>  
   
- `WseTcpDuplexSessionChannel` di base presuppone di ricevere un socket collegato.La classe di base gestisce l'arresto del socket.Ci sono tre posizioni che interfacciano con la chiusura del socket:  
+ <span data-ttu-id="4c56f-127">`WseTcpDuplexSessionChannel` di base presuppone di ricevere un socket collegato.</span><span class="sxs-lookup"><span data-stu-id="4c56f-127">The base `WseTcpDuplexSessionChannel` assumes that it receives a connected socket.</span></span> <span data-ttu-id="4c56f-128">La classe di base gestisce l'arresto del socket.</span><span class="sxs-lookup"><span data-stu-id="4c56f-128">The base class handles socket shutdown.</span></span> <span data-ttu-id="4c56f-129">Ci sono tre posizioni che interfacciano con la chiusura del socket:</span><span class="sxs-lookup"><span data-stu-id="4c56f-129">There are three places that interface with socket closure:</span></span>  
   
--   OnAbort \-\- chiude il socket in modo forzato \(chiusura forzata\).  
+-   <span data-ttu-id="4c56f-130">OnAbort -- chiude il socket in modo forzato (chiusura forzata).</span><span class="sxs-lookup"><span data-stu-id="4c56f-130">OnAbort -- close the socket ungracefully (hard close).</span></span>  
   
--   On\[Begin\]Close \-\- chiude il socket normalmente \(chiusura normale\).  
+-   <span data-ttu-id="4c56f-131">On[Begin]Close -- chiude il socket normalmente (chiusura normale).</span><span class="sxs-lookup"><span data-stu-id="4c56f-131">On[Begin]Close -- close the socket gracefully (soft close).</span></span>  
   
--   session.CloseOutputSession \-\- arresta il flusso di dati in uscita \(chiusura parziale\).  
+-   <span data-ttu-id="4c56f-132">session.CloseOutputSession -- arresta il flusso di dati in uscita (chiusura parziale).</span><span class="sxs-lookup"><span data-stu-id="4c56f-132">session.CloseOutputSession -- shutdown the outbound data stream (half close).</span></span>  
   
-## Channel Factory  
- Il passaggio successivo per scrivere un trasporto TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IChannelFactory> per i canali client.  
+## <a name="channel-factory"></a><span data-ttu-id="4c56f-133">Channel Factory</span><span class="sxs-lookup"><span data-stu-id="4c56f-133">Channel Factory</span></span>  
+ <span data-ttu-id="4c56f-134">Il passaggio successivo per scrivere un trasporto TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IChannelFactory> per i canali client.</span><span class="sxs-lookup"><span data-stu-id="4c56f-134">The next step in writing the TCP transport is to create an implementation of <xref:System.ServiceModel.Channels.IChannelFactory> for client channels.</span></span>  
   
--   `WseTcpChannelFactory` deriva da <xref:System.ServiceModel.Channels.ChannelFactoryBase>\<IDuplexSessionChannel\>.È una factory che esegue l'override di `OnCreateChannel` per produrre canali client.  
+-   <span data-ttu-id="4c56f-135">`WseTcpChannelFactory`deriva da <xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >.</span><span class="sxs-lookup"><span data-stu-id="4c56f-135">`WseTcpChannelFactory` derives from <xref:System.ServiceModel.Channels.ChannelFactoryBase>\<IDuplexSessionChannel>.</span></span> <span data-ttu-id="4c56f-136">È una factory che esegue l'override di `OnCreateChannel` per produrre canali client.</span><span class="sxs-lookup"><span data-stu-id="4c56f-136">It is a factory that overrides `OnCreateChannel` to produce client channels.</span></span>  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -69,11 +72,11 @@ L'esempio Trasporto: Interoperabilità WSE 3.0 TCP illustra come implementare un
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel` aggiunge la logica a `WseTcpDuplexSessionChannel`di base per connettersi a un server TCP in fase di `channel.Open`.Il nome host viene innanzitutto risolto in un indirizzo IP, come illustrato nel codice seguente.  
+-   <span data-ttu-id="4c56f-137">`ClientWseTcpDuplexSessionChannel`aggiungere la logica alla base `WseTcpDuplexSessionChannel` per connettersi a un server TCP `channel.Open` ora.</span><span class="sxs-lookup"><span data-stu-id="4c56f-137">`ClientWseTcpDuplexSessionChannel` adds logic to the base `WseTcpDuplexSessionChannel` to connect to a TCP server at `channel.Open` time.</span></span> <span data-ttu-id="4c56f-138">Il nome host viene innanzitutto risolto in un indirizzo IP, come illustrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="4c56f-138">First the hostname is resolved to an IP address, as shown in the following code.</span></span>  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
--   Il nome host viene quindi connesso al primo indirizzo IP disponibile in un ciclo, come illustrato nel codice seguente.  
+-   <span data-ttu-id="4c56f-139">Il nome host viene quindi connesso al primo indirizzo IP disponibile in un ciclo, come illustrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="4c56f-139">Then the hostname is connected to the first available IP address in a loop, as shown in the following code.</span></span>  
   
  `IPAddress address = hostEntry.AddressList[i];`  
   
@@ -81,12 +84,12 @@ L'esempio Trasporto: Interoperabilità WSE 3.0 TCP illustra come implementare un
   
  `socket.Connect(new IPEndPoint(address, port));`  
   
--   Come parte del contratto del canale, viene eseguito l'incapsulamento delle eccezioni specifiche del dominio, ad esempio `SocketException` in <xref:System.ServiceModel.CommunicationException>.  
+-   <span data-ttu-id="4c56f-140">Come parte del contratto del canale, viene eseguito l'incapsulamento delle eccezioni specifiche del dominio, ad esempio `SocketException` in <xref:System.ServiceModel.CommunicationException>.</span><span class="sxs-lookup"><span data-stu-id="4c56f-140">As part of the channel contract, any domain-specific exceptions are wrapped, such as `SocketException` in <xref:System.ServiceModel.CommunicationException>.</span></span>  
   
-## Channel Listener  
- Il passaggio successivo per scrivere un trasporto TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IChannelListener> per accettare canali server.  
+## <a name="channel-listener"></a><span data-ttu-id="4c56f-141">Channel Listener</span><span class="sxs-lookup"><span data-stu-id="4c56f-141">Channel Listener</span></span>  
+ <span data-ttu-id="4c56f-142">Il passaggio successivo per scrivere un trasporto TCP consiste nel creare un'implementazione di <xref:System.ServiceModel.Channels.IChannelListener> per accettare canali server.</span><span class="sxs-lookup"><span data-stu-id="4c56f-142">The next step in writing the TCP transport is to create an implementation of <xref:System.ServiceModel.Channels.IChannelListener> for accepting server channels.</span></span>  
   
--   `WseTcpChannelListener` deriva dalla classe <xref:System.ServiceModel.Channels.ChannelListenerBase>\<IDuplexSessionChannel\> ed esegue l'override su  On\[Begin\]Open e On\[Begin\]Close per controllare la durata del socket di ascolto.In OnOpen, un socket viene creato per ascoltare su IP\_ANY.Implementazioni più avanzate possono creare un secondo socket per ascoltare anche su IPv6.Possono consentire anche che l'indirizzo IP sia specificato nel nome host.  
+-   <span data-ttu-id="4c56f-143">`WseTcpChannelListener`deriva da <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > e sostituzioni [Begin] Open e On [Begin] Close per controllano la durata del socket di ascolto.</span><span class="sxs-lookup"><span data-stu-id="4c56f-143">`WseTcpChannelListener` derives from <xref:System.ServiceModel.Channels.ChannelListenerBase>\<IDuplexSessionChannel> and overrides On[Begin]Open and On[Begin]Close to control the lifetime of its listen socket.</span></span> <span data-ttu-id="4c56f-144">In OnOpen, un socket viene creato per ascoltare su IP_ANY.</span><span class="sxs-lookup"><span data-stu-id="4c56f-144">In OnOpen, a socket is created to listen on IP_ANY.</span></span> <span data-ttu-id="4c56f-145">Implementazioni più avanzate possono creare un secondo socket per ascoltare anche su IPv6.</span><span class="sxs-lookup"><span data-stu-id="4c56f-145">More advanced implementations can create a second socket to listen on IPv6 as well.</span></span> <span data-ttu-id="4c56f-146">Possono consentire anche che l'indirizzo IP sia specificato nel nome host.</span><span class="sxs-lookup"><span data-stu-id="4c56f-146">They can also allow the IP address to be specified in the hostname.</span></span>  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -96,12 +99,12 @@ L'esempio Trasporto: Interoperabilità WSE 3.0 TCP illustra come implementare un
   
  `this.listenSocket.Listen(10);`  
   
- Quando un nuovo socket viene accettato, viene inizializzato un canale server con esso.Tutti gli input e output sono già implementati nella classe di base, pertanto questo canale è responsabile dell'inizializzazione del socket.  
+ <span data-ttu-id="4c56f-147">Quando un nuovo socket viene accettato, viene inizializzato un canale server con esso.</span><span class="sxs-lookup"><span data-stu-id="4c56f-147">When a new socket is accepted, a server channel is initialized with this socket.</span></span> <span data-ttu-id="4c56f-148">Tutti gli input e output sono già implementati nella classe di base, pertanto questo canale è responsabile dell'inizializzazione del socket.</span><span class="sxs-lookup"><span data-stu-id="4c56f-148">All the input and output is already implemented in the base class, so this channel is responsible for initializing the socket.</span></span>  
   
-## Aggiunta di un elemento di associazione.  
- Ora che le factory e i canali sono compilati, devono essere esposti al runtime di ServiceModel tramite un'associazione.Un'associazione è una raccolta di elementi di associazione che rappresentano lo stack di comunicazione associato a un indirizzo del servizio.Ogni elemento dello stack  è rappresentato da un elemento di associazione.  
+## <a name="adding-a-binding-element"></a><span data-ttu-id="4c56f-149">Aggiunta di un elemento di associazione.</span><span class="sxs-lookup"><span data-stu-id="4c56f-149">Adding a Binding Element</span></span>  
+ <span data-ttu-id="4c56f-150">Ora che le factory e i canali sono compilati, devono essere esposti al runtime di ServiceModel tramite un'associazione.</span><span class="sxs-lookup"><span data-stu-id="4c56f-150">Now that the factories and channels are built, they must be exposed to the ServiceModel runtime through a binding.</span></span> <span data-ttu-id="4c56f-151">Un'associazione è una raccolta di elementi di associazione che rappresentano lo stack di comunicazione associato a un indirizzo del servizio.</span><span class="sxs-lookup"><span data-stu-id="4c56f-151">A binding is a collection of binding elements that represents the communication stack associated with a service address.</span></span> <span data-ttu-id="4c56f-152">Ogni elemento dello stack  è rappresentato da un elemento di associazione.</span><span class="sxs-lookup"><span data-stu-id="4c56f-152">Each element in the stack is represented by a binding element.</span></span>  
   
- Nell'esempio, l'elemento di associazione è `WseTcpTransportBindingElement`, che deriva dalla classe <xref:System.ServiceModel.Channels.TransportBindingElement>.Esso supporta la classe <xref:System.ServiceModel.Channels.IDuplexSessionChannel> ed esegue l'override dei metodi seguenti per compilare le factory associate all'associazione.  
+ <span data-ttu-id="4c56f-153">Nell'esempio, l'elemento di associazione è `WseTcpTransportBindingElement`, che deriva dalla classe <xref:System.ServiceModel.Channels.TransportBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="4c56f-153">In the sample, the binding element is `WseTcpTransportBindingElement`, which derives from <xref:System.ServiceModel.Channels.TransportBindingElement>.</span></span> <span data-ttu-id="4c56f-154">Esso supporta la classe <xref:System.ServiceModel.Channels.IDuplexSessionChannel> ed esegue l'override dei metodi seguenti per compilare le factory associate all'associazione.</span><span class="sxs-lookup"><span data-stu-id="4c56f-154">It supports <xref:System.ServiceModel.Channels.IDuplexSessionChannel> and overrides the following methods to build the factories associated with our binding.</span></span>  
   
  `public IChannelFactory<TChannel> BuildChannelFactory<TChannel>(BindingContext context)`  
   
@@ -119,12 +122,12 @@ L'esempio Trasporto: Interoperabilità WSE 3.0 TCP illustra come implementare un
   
  `}`  
   
- Contiene inoltre membri per duplicare `BindingElement` e restituire lo schema \(wse.tcp\).  
+ <span data-ttu-id="4c56f-155">Contiene inoltre membri per duplicare `BindingElement` e restituire lo schema (wse.tcp).</span><span class="sxs-lookup"><span data-stu-id="4c56f-155">It also contains members for cloning the `BindingElement` and returning our scheme (wse.tcp).</span></span>  
   
-## Console per eseguire il test di TCP WSE  
- Codice per testare l'utilizzo di questo esempio di trasporto è disponibile in TestCode.cs.Nelle istruzioni seguenti viene illustrato come configurare l'esempio `TcpSyncStockService` WSE.  
+## <a name="the-wse-tcp-test-console"></a><span data-ttu-id="4c56f-156">Console per eseguire il test di TCP WSE</span><span class="sxs-lookup"><span data-stu-id="4c56f-156">The WSE TCP Test Console</span></span>  
+ <span data-ttu-id="4c56f-157">Codice per testare l'utilizzo di questo esempio di trasporto è disponibile in TestCode.cs.</span><span class="sxs-lookup"><span data-stu-id="4c56f-157">Test code for using this sample transport is available in TestCode.cs.</span></span> <span data-ttu-id="4c56f-158">Nelle istruzioni seguenti viene illustrato come configurare l'esempio `TcpSyncStockService` WSE.</span><span class="sxs-lookup"><span data-stu-id="4c56f-158">The following instructions show how to set up the WSE `TcpSyncStockService` sample.</span></span>  
   
- Il codice di prova crea un'associazione personalizzata che utilizza MTOM come codifica e `WseTcpTransport` come trasporto.Configura inoltre la versione di indirizzamento in modo che sia conforme a WSE 3.0, come illustrato nel codice seguente.  
+ <span data-ttu-id="4c56f-159">Il codice di prova crea un'associazione personalizzata che utilizza MTOM come codifica e `WseTcpTransport` come trasporto.</span><span class="sxs-lookup"><span data-stu-id="4c56f-159">The test code creates a custom binding that uses MTOM as the encoding and `WseTcpTransport` as the transport.</span></span> <span data-ttu-id="4c56f-160">Configura inoltre la versione di indirizzamento in modo che sia conforme a WSE 3.0, come illustrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="4c56f-160">It also sets up the AddressingVersion to be conformant with WSE 3.0, as shown in the following code.</span></span>  
   
  `CustomBinding binding = new CustomBinding();`  
   
@@ -136,22 +139,22 @@ L'esempio Trasporto: Interoperabilità WSE 3.0 TCP illustra come implementare un
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- È costituito da due test. Il primo imposta un client tipizzato utilizzando codice generato da WSE 3.0 WSDL.Il secondo utilizza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] come client e server, inviando direttamente messaggi sul canale API.  
+ <span data-ttu-id="4c56f-161">È costituito da due test. Il primo imposta un client tipizzato utilizzando codice generato da WSE 3.0 WSDL.</span><span class="sxs-lookup"><span data-stu-id="4c56f-161">It consists of two tests—one test sets up a typed client using code generated from the WSE 3.0 WSDL.</span></span> <span data-ttu-id="4c56f-162">Il secondo utilizza [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] come client e server, inviando direttamente messaggi sul canale API.</span><span class="sxs-lookup"><span data-stu-id="4c56f-162">The second test uses [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] as both the client and the server by sending messages directly on top of the channel APIs.</span></span>  
   
- Quando si esegue l'esempio, viene visualizzato l'output seguente:  
+ <span data-ttu-id="4c56f-163">Quando si esegue l'esempio, viene visualizzato l'output seguente:</span><span class="sxs-lookup"><span data-stu-id="4c56f-163">When running the sample, the following output is expected.</span></span>  
   
- Client:  
+ <span data-ttu-id="4c56f-164">Client:</span><span class="sxs-lookup"><span data-stu-id="4c56f-164">Client:</span></span>  
   
 ```  
 Calling soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
   
 Symbol: FABRIKAM  
-        Name: Fabrikam, Inc.  
-        Last Price: 120  
+        Name: Fabrikam, Inc.  
+        Last Price: 120  
   
 Symbol: CONTOSO  
-        Name: Contoso Corp.  
-        Last Price: 50.07  
+        Name: Contoso Corp.  
+        Last Price: 50.07  
 Press enter.  
   
 Received Action: http://SayHello  
@@ -164,7 +167,7 @@ Received Body: to me.
 Press enter.  
 ```  
   
- Server:  
+ <span data-ttu-id="4c56f-165">Server:</span><span class="sxs-lookup"><span data-stu-id="4c56f-165">Server:</span></span>  
   
 ```  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
@@ -173,33 +176,33 @@ Press any key to exit when done...
   
 Request received.  
 Symbols:  
-        FABRIKAM  
-        CONTOSO  
+        FABRIKAM  
+        CONTOSO  
 ```  
   
-#### Per impostare, compilare ed eseguire l'esempio  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="4c56f-166">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="4c56f-166">To set up, build, and run the sample</span></span>  
   
-1.  Per eseguire l'esempio è necessario avere installato WSE 3.0 e l'esempio `TcpSyncStockService` WSE.È possibile scaricare WSE 3.0 [da MSDN](http://go.microsoft.com/fwlink/?LinkId=95000).  
+1.  <span data-ttu-id="4c56f-167">Per eseguire l'esempio è necessario avere installato WSE 3.0 e l'esempio `TcpSyncStockService` WSE.</span><span class="sxs-lookup"><span data-stu-id="4c56f-167">To run this sample, you must have WSE 3.0 and the WSE `TcpSyncStockService` sample installed.</span></span> <span data-ttu-id="4c56f-168">È possibile scaricare [WSE 3.0 da MSDN](http://go.microsoft.com/fwlink/?LinkId=95000).</span><span class="sxs-lookup"><span data-stu-id="4c56f-168">You can download [WSE 3.0 from MSDN](http://go.microsoft.com/fwlink/?LinkId=95000).</span></span>  
   
 > [!NOTE]
->  Poiché WSE 3.0 non è supportato su [!INCLUDE[lserver](../../../../includes/lserver-md.md)], non è possibile installare o eseguire l'esempio `TcpSyncStockService` in tale sistema operativo.  
+>  <span data-ttu-id="4c56f-169">Poiché WSE 3.0 non è supportato su [!INCLUDE[lserver](../../../../includes/lserver-md.md)], non è possibile installare o eseguire l'esempio `TcpSyncStockService` in tale sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="4c56f-169">Because WSE 3.0 is not supported on [!INCLUDE[lserver](../../../../includes/lserver-md.md)], you cannot install or run the `TcpSyncStockService` sample on that operating system.</span></span>  
   
-1.  Dopo aver installato l'esempio `TcpSyncStockService`, eseguire le operazioni seguenti:  
+1.  <span data-ttu-id="4c56f-170">Dopo aver installato l'esempio `TcpSyncStockService`, eseguire le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="4c56f-170">Once you install the `TcpSyncStockService` sample, do the following:</span></span>  
   
-    1.  Aprire `TcpSyncStockService` in Visual Studio \(si noti che l'esempio TcpSyncStockService viene installato con WSE 3.0e non fa parte di questo codice dell'esempio\).  
+    1.  <span data-ttu-id="4c56f-171">Aprire `TcpSyncStockService` in Visual Studio (si noti che l'esempio TcpSyncStockService viene installato con WSE 3.0</span><span class="sxs-lookup"><span data-stu-id="4c56f-171">Open the `TcpSyncStockService` in Visual Studio (Note that the TcpSyncStockService sample is installed with WSE 3.0.</span></span> <span data-ttu-id="4c56f-172">e non fa parte del codice di questo esempio).</span><span class="sxs-lookup"><span data-stu-id="4c56f-172">It is not part of this sample's code).</span></span>  
   
-    2.  Impostare StockService come progetto di avvio.  
+    2.  <span data-ttu-id="4c56f-173">Impostare StockService come progetto di avvio.</span><span class="sxs-lookup"><span data-stu-id="4c56f-173">Set the StockService project as the start up project.</span></span>  
   
-    3.  Aprire StockService.cs nel progetto StockService e impostare come commento l'attributo \[Policy\] sulla classe `StockService`.Ciò disabilita la sicurezza dell'esempio.Mentre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può interoperare con gli endpoint protetti WSE 3.0, la sicurezza è stata disabilitata in modo che l'esempio sia focalizzato sul trasporto TCP personalizzato.  
+    3.  <span data-ttu-id="4c56f-174">Aprire StockService.cs nel progetto StockService e impostare come commento l'attributo [Policy] sulla classe `StockService`.</span><span class="sxs-lookup"><span data-stu-id="4c56f-174">Open StockService.cs in the StockService project and comment out the [Policy] attribute on the `StockService` class.</span></span> <span data-ttu-id="4c56f-175">Ciò disabilita la sicurezza dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="4c56f-175">This disables security from the sample.</span></span> <span data-ttu-id="4c56f-176">Mentre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può interoperare con gli endpoint protetti WSE 3.0, la sicurezza è stata disabilitata in modo che l'esempio sia focalizzato sul trasporto TCP personalizzato.</span><span class="sxs-lookup"><span data-stu-id="4c56f-176">While [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] can interoperate with WSE 3.0 secure endpoints, security is disabled to keep this sample focused on the custom TCP transport.</span></span>  
   
-    4.  Premere F5 per avviare `TcpSyncStockService`.Il servizio si avvia in una nuova finestra della console.  
+    4.  <span data-ttu-id="4c56f-177">Premere F5 per avviare `TcpSyncStockService`.</span><span class="sxs-lookup"><span data-stu-id="4c56f-177">Press F5 to start the `TcpSyncStockService`.</span></span> <span data-ttu-id="4c56f-178">Il servizio si avvia in una nuova finestra della console.</span><span class="sxs-lookup"><span data-stu-id="4c56f-178">The service starts in a new console window.</span></span>  
   
-    5.  Aprire questo esempio di trasporto TCP in Visual Studio.  
+    5.  <span data-ttu-id="4c56f-179">Aprire questo esempio di trasporto TCP in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="4c56f-179">Open this TCP transport sample in Visual Studio.</span></span>  
   
-    6.  Aggiornare la variabile "nome host" in TestCode.cs e farla corrispondere al nome del computer che esegue `TcpSyncStockService`.  
+    6.  <span data-ttu-id="4c56f-180">Aggiornare la variabile "nome host" in TestCode.cs e farla corrispondere al nome del computer che esegue `TcpSyncStockService`.</span><span class="sxs-lookup"><span data-stu-id="4c56f-180">Update the "hostname" variable in TestCode.cs to match the machine name running the `TcpSyncStockService`.</span></span>  
   
-    7.  Premere F5 per avviare l'esempio Trasporto TCP.  
+    7.  <span data-ttu-id="4c56f-181">Premere F5 per avviare l'esempio Trasporto TCP.</span><span class="sxs-lookup"><span data-stu-id="4c56f-181">Press F5 to start the TCP transport sample.</span></span>  
   
-    8.  Il client di prova del trasporto TCP viene inizializzato in una nuova console.Il client richiede quotazioni al servizio e quindi visualizza i risultati nella finestra della console.  
+    8.  <span data-ttu-id="4c56f-182">Il client di prova del trasporto TCP viene inizializzato in una nuova console.</span><span class="sxs-lookup"><span data-stu-id="4c56f-182">The TCP transport test client starts in a new console.</span></span> <span data-ttu-id="4c56f-183">Il client richiede quotazioni al servizio e quindi visualizza i risultati nella finestra della console.</span><span class="sxs-lookup"><span data-stu-id="4c56f-183">The client requests stock quotes from the service and then displays the results in its console window.</span></span>  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="4c56f-184">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4c56f-184">See Also</span></span>

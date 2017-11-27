@@ -1,46 +1,47 @@
 ---
-title: "Procedura: modificare l&#39;ordine delle colonne nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "colonne [Windows Form], ordine"
-  - "dati [Windows Form], visualizzazione"
-  - "DataGridView (controllo) [Windows Form], ordine di colonne"
-  - "Windows Form, colonne"
+title: 'Procedura: modificare l''ordine delle colonne nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [Windows Forms], order of
+- DataGridView control [Windows Forms], column order
+- Windows Forms, columns
+- data [Windows Forms], displaying
 ms.assetid: 7fe52a98-75d6-448c-97a5-65ca2c568c1a
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dd0e0542e46a17cffef629bc9b916d7b5929e878
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: modificare l&#39;ordine delle colonne nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione
-Quando si associa un controllo <xref:System.Windows.Forms.DataGridView> di Windows Form a un'origine dati, l'ordine di visualizzazione delle colonne generate automaticamente viene stabilito dall'origine dati.  Se necessario, è possibile cambiare l'ordine delle colonne utilizzando la finestra di progettazione.  È possibile inoltre aggiungere colonne non associate al controllo e cambiarne l'ordine di visualizzazione.  Per informazioni sulle modalità di modifica dell'ordine delle colonne a livello di codice, vedere [Procedura: modificare l'ordine delle colonne nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).  
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a><span data-ttu-id="3a07a-102">Procedura: modificare l'ordine delle colonne nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="3a07a-102">How to: Change the Order of Columns in the Windows Forms DataGridView Control Using the Designer</span></span>
+<span data-ttu-id="3a07a-103">Quando si associa un controllo Windows Form <xref:System.Windows.Forms.DataGridView> controllo a un'origine dati, l'ordine di visualizzazione delle colonne generate automaticamente dipende dall'origine dati.</span><span class="sxs-lookup"><span data-stu-id="3a07a-103">When you bind a Windows Forms <xref:System.Windows.Forms.DataGridView> control to a data source, the display order of the automatically generated columns is dictated by the data source.</span></span> <span data-ttu-id="3a07a-104">Se non si preferisce, è possibile modificare l'ordine delle colonne utilizzando la finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="3a07a-104">If this order is not what you prefer, you can change the order of the columns using the designer.</span></span> <span data-ttu-id="3a07a-105">È anche possibile aggiungere colonne non associate al controllo e modificare l'ordine di visualizzazione.</span><span class="sxs-lookup"><span data-stu-id="3a07a-105">You may also want to add unbound columns to the control and change their display order.</span></span> <span data-ttu-id="3a07a-106">Per informazioni su come modificare l'ordine delle colonne a livello di codice, vedere [procedura: modificare l'ordine delle colonne nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="3a07a-106">For information about how to change the column order programmatically, see [How to: Change the Order of Columns in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).</span></span>  
   
- Nella seguente procedura è richiesto un progetto **Applicazione Windows** con un form contenente un controllo <xref:System.Windows.Forms.DataGridView>.  Per informazioni sull'impostazione di tali progetti, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa) e [Procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ <span data-ttu-id="3a07a-107">La procedura seguente richiede un **applicazione Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGridView> controllo.</span><span class="sxs-lookup"><span data-stu-id="3a07a-107">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="3a07a-108">Per informazioni sull'impostazione di un progetto, vedere [procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="3a07a-108">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+>  <span data-ttu-id="3a07a-109">Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.</span><span class="sxs-lookup"><span data-stu-id="3a07a-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="3a07a-110">Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .</span><span class="sxs-lookup"><span data-stu-id="3a07a-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="3a07a-111">Per ulteriori informazioni, vedere [personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="3a07a-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span></span>  
   
-### Per cambiare l'ordine delle colonne utilizzando la finestra di progettazione  
+### <a name="to-change-the-column-order-using-the-designer"></a><span data-ttu-id="3a07a-112">Per modificare l'ordine delle colonne utilizzando la finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="3a07a-112">To change the column order using the designer</span></span>  
   
-1.  Scegliere il glifo dello smart tag \(![Glifo Smart Tag](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) nell'angolo superiore destro del controllo <xref:System.Windows.Forms.DataGridView> e quindi selezionare **Modifica colonne**.  
+1.  <span data-ttu-id="3a07a-113">Fare clic sul glifo smart tag (![Smart Tag glifo](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) nell'angolo superiore destro del <xref:System.Windows.Forms.DataGridView> controllare e quindi selezionare **Modifica colonne**.</span><span class="sxs-lookup"><span data-stu-id="3a07a-113">Click the smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) on the upper-right corner of the <xref:System.Windows.Forms.DataGridView> control, and then select **Edit Columns**.</span></span>  
   
-2.  Selezionare una colonna dall'elenco **Colonne selezionate**.  
+2.  <span data-ttu-id="3a07a-114">Selezionare una colonna dal **colonne selezionate** elenco.</span><span class="sxs-lookup"><span data-stu-id="3a07a-114">Select a column from the **Selected Columns** list.</span></span>  
   
-3.  Fare clic sulla freccia verso l'alto o verso il basso presente a destra dell'elenco **Colonne selezionate** finché la colonna selezionata non si trova nella posizione desiderata.  
+3.  <span data-ttu-id="3a07a-115">Fare clic sulla freccia o freccia giù a destra del **colonne selezionate** elenco fino a quando la colonna selezionata è nella posizione desiderata.</span><span class="sxs-lookup"><span data-stu-id="3a07a-115">Click the up or down arrow to the right of the **Selected Columns** list until the selected column is in the position you want.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.DataGridView>   
- [Procedura: aggiungere e rimuovere colonne nel controllo DataGridView di Windows Form utilizzando Progettazione Windows Form](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa)   
- [Procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="3a07a-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3a07a-116">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ [<span data-ttu-id="3a07a-117">Procedura: Aggiungere e rimuovere colonne nel controllo DataGridView di Windows Form usando la finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="3a07a-117">How to: Add and Remove Columns in the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="3a07a-118">Procedura: creare un progetto di applicazione Windows</span><span class="sxs-lookup"><span data-stu-id="3a07a-118">How to: Create a Windows Application Project</span></span>](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [<span data-ttu-id="3a07a-119">Procedura: Aggiungere controlli a un Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3a07a-119">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

@@ -1,43 +1,42 @@
 ---
-title: "Latebound overload resolution cannot be applied to &#39;&lt;procedurename&gt;&#39; because the accessing instance is an interface type | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30933"
-  - "bc30933"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "overload resolution, with late-bound argument"
-  - "BC30933"
+title: "Impossibile applicare la risoluzione dell'overload con associazione tardiva a &#39; &lt;nomeroutine&gt;&#39; perché l'istanza di accesso è un tipo di interfaccia"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30933
+- bc30933
+helpviewer_keywords:
+- overload resolution [Visual Basic], with late-bound argument
+- BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: fb7f8a9f6eadfc9fd856ea57d362b43d25ff81a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Latebound overload resolution cannot be applied to &#39;&lt;procedurename&gt;&#39; because the accessing instance is an interface type
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Il compilatore sta tentando di risolvere un riferimento a una proprietà o una routine in overload, ma il riferimento non ha esito positivo perché un argomento è di tipo `Object` e l'oggetto che fa riferimento ha il tipo di dati di un'interfaccia.  L'argomento `Object` induce il compilatore a risolvere il riferimento come elemento ad associazione tardiva.  
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a><span data-ttu-id="8106a-102">Impossibile applicare la risoluzione dell'overload con associazione tardiva a &#39; &lt;nomeroutine&gt;&#39; perché l'istanza di accesso è un tipo di interfaccia</span><span class="sxs-lookup"><span data-stu-id="8106a-102">Latebound overload resolution cannot be applied to &#39;&lt;procedurename&gt;&#39; because the accessing instance is an interface type</span></span>
+<span data-ttu-id="8106a-103">Il compilatore sta provando a risolvere un riferimento a una proprietà di overload o una routine, ma il riferimento non riesce perché è un argomento di tipo `Object` e l'oggetto che fa riferimento il tipo di dati di un'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="8106a-103">The compiler is attempting to resolve a reference to an overloaded property or procedure, but the reference fails because an argument is of type `Object` and the referring object has the data type of an interface.</span></span> <span data-ttu-id="8106a-104">Il `Object` argomento induce il compilatore per risolvere il riferimento come ad associazione tardiva.</span><span class="sxs-lookup"><span data-stu-id="8106a-104">The `Object` argument forces the compiler to resolve the reference as late-bound.</span></span>  
   
- In queste condizioni, il compilatore risolve l'overload attraverso la classe di implementazione anziché attraverso l'interfaccia sottostante.  Se la classe rinomina una delle versioni in overload, il compilatore non considera quella versione come overload perché il suo nome è diverso.  Di conseguenza, il compilatore ignora la versione rinominata quando invece sarebbe stato opportuno elaborarla per risolvere il riferimento.  
+ <span data-ttu-id="8106a-105">In questi casi, il compilatore risolve l'overload tramite la classe di implementazione anziché tramite l'interfaccia sottostante.</span><span class="sxs-lookup"><span data-stu-id="8106a-105">In these circumstances, the compiler resolves the overload through the implementing class instead of through the underlying interface.</span></span> <span data-ttu-id="8106a-106">Se la classe rinomina una delle versioni di overload, il compilatore non considera tale versione di overload perché il nome è diverso.</span><span class="sxs-lookup"><span data-stu-id="8106a-106">If the class renames one of the overloaded versions, the compiler does not consider that version to be an overload because its name is different.</span></span> <span data-ttu-id="8106a-107">Questo causa a sua volta al compilatore di ignorare la versione rinominata quando sarebbe stato la scelta corretta per risolvere il riferimento.</span><span class="sxs-lookup"><span data-stu-id="8106a-107">This in turn causes the compiler to ignore the renamed version when it might have been the correct choice to resolve the reference.</span></span>  
   
- **ID errore:** BC30933  
+ <span data-ttu-id="8106a-108">**ID errore:** BC30933</span><span class="sxs-lookup"><span data-stu-id="8106a-108">**Error ID:** BC30933</span></span>  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8106a-109">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="8106a-109">To correct this error</span></span>  
   
--   Utilizzare `CType` per eseguire il cast dell'argomento da `Object` al tipo specificato dalla firma dell'overload da chiamare.  
+-   <span data-ttu-id="8106a-110">Utilizzare `CType` per eseguire il cast dell'argomento da `Object` al tipo specificato per la firma di overload da chiamare.</span><span class="sxs-lookup"><span data-stu-id="8106a-110">Use `CType` to cast the argument from `Object` to the type specified by the signature of the overload you want to call.</span></span>  
   
-     Si noti che non serve eseguire il cast dell'oggetto che fa riferimento sull'interfaccia sottostante.  È necessario eseguire il cast dell'argomento per evitare questo errore.  
+     <span data-ttu-id="8106a-111">Si noti che non consentono il cast dell'oggetto che fa riferimento all'interfaccia sottostante.</span><span class="sxs-lookup"><span data-stu-id="8106a-111">Note that it does not help to cast the referring object to the underlying interface.</span></span> <span data-ttu-id="8106a-112">È necessario eseguire il cast dell'argomento per evitare questo errore.</span><span class="sxs-lookup"><span data-stu-id="8106a-112">You must cast the argument to avoid this error.</span></span>  
   
-## Esempio  
- Nell'esempio seguente viene illustrata una chiamata a una routine `Sub` in overload che genera questo errore in fase di compilazione.  
+## <a name="example"></a><span data-ttu-id="8106a-113">Esempio</span><span class="sxs-lookup"><span data-stu-id="8106a-113">Example</span></span>  
+ <span data-ttu-id="8106a-114">Nell'esempio seguente viene illustrata una chiamata a un overload `Sub` procedure che genera questo errore in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="8106a-114">The following example shows a call to an overloaded `Sub` procedure that causes this error at compile time.</span></span>  
   
 ```  
 Module m1  
@@ -61,18 +60,18 @@ Module m1
 End Module  
 ```  
   
- Nell'esempio precedente, se il compilatore consentisse la chiamata a `s1` come è scritto, la risoluzione avverrebbe attraverso la classe `c1` anziché attraverso l'interfaccia `i1`.  Di conseguenza il compilatore non prenderebbe in considerazione `s2` in quanto ha un nome diverso in `c1`, anche se sarebbe la scelta corretta secondo quanto definito da `i1`.  
+ <span data-ttu-id="8106a-115">Nell'esempio precedente, se il compilatore ha consentito la chiamata a `s1` quanto scritto, la risoluzione verrà eseguita tramite la classe `c1` anziché l'interfaccia `i1`.</span><span class="sxs-lookup"><span data-stu-id="8106a-115">In the preceding example, if the compiler allowed the call to `s1` as written, the resolution would take place through the class `c1` instead of the interface `i1`.</span></span> <span data-ttu-id="8106a-116">Ciò significa che il compilatore non considerare `s2` perché il nome è diverso in `c1`, anche se è la scelta corretta, come definito da `i1`.</span><span class="sxs-lookup"><span data-stu-id="8106a-116">This would mean that the compiler would not consider `s2` because its name is different in `c1`, even though it is the correct choice as defined by `i1`.</span></span>  
   
- È possibile correggere l'errore modificando la chiamata a una delle seguenti righe di codice:  
+ <span data-ttu-id="8106a-117">È possibile correggere l'errore modificando la chiamata a una delle righe di codice seguente:</span><span class="sxs-lookup"><span data-stu-id="8106a-117">You can correct the error by changing the call to either of the following lines of code:</span></span>  
   
 ```  
 refer.s1(CType(o1, Integer))  
 refer.s1(CType(o1, Double))  
 ```  
   
- Ciascuna delle righe di codice precedenti esegue esplicitamente il cast della variabile `Object` `o1` su uno dei tipi di parametro definiti per gli overload.  
+ <span data-ttu-id="8106a-118">Ognuna delle righe di codice precedenti esegue il cast in modo esplicito il `Object` variabile `o1` a uno dei tipi di parametro definiti per gli overload.</span><span class="sxs-lookup"><span data-stu-id="8106a-118">Each of the preceding lines of code explicitly casts the `Object` variable `o1` to one of the parameter types defined for the overloads.</span></span>  
   
-## Vedere anche  
- [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Overload Resolution](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)   
- [Funzione CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a><span data-ttu-id="8106a-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8106a-119">See Also</span></span>  
+ [<span data-ttu-id="8106a-120">Overload della routine</span><span class="sxs-lookup"><span data-stu-id="8106a-120">Procedure Overloading</span></span>](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
+ [<span data-ttu-id="8106a-121">Risoluzione dell'overload</span><span class="sxs-lookup"><span data-stu-id="8106a-121">Overload Resolution</span></span>](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)  
+ [<span data-ttu-id="8106a-122">Funzione CType</span><span class="sxs-lookup"><span data-stu-id="8106a-122">CType Function</span></span>](../../../visual-basic/language-reference/functions/ctype-function.md)

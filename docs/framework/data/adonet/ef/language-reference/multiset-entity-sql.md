@@ -1,67 +1,65 @@
 ---
-title: "MULTISET (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: MULTISET (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb90a377-e47a-43a5-b308-e993b6d611e6
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e72605225d214ccd2283aaae3f0c2071ceb92d91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# MULTISET (Entity SQL)
-Crea un'istanza di un multiset da un elenco di valori. Tutti i valori nel costruttore MULTISET devono essere di un tipo `T` compatibile. Non sono consentiti costruttori multiset vuoti.  
+# <a name="multiset-entity-sql"></a><span data-ttu-id="b0e0c-102">MULTISET (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="b0e0c-102">MULTISET (Entity SQL)</span></span>
+<span data-ttu-id="b0e0c-103">Crea un'istanza di un multiset da un elenco di valori.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-103">Creates an instance of a multiset from a list of values.</span></span> <span data-ttu-id="b0e0c-104">Tutti i valori nel costruttore MULTISET devono essere di un tipo `T`compatibile.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-104">All the values in the MULTISET constructor must be of a compatible type `T`.</span></span> <span data-ttu-id="b0e0c-105">Non sono consentiti costruttori multiset vuoti.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-105">Empty multiset constructors are not allowed.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="b0e0c-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b0e0c-106">Syntax</span></span>  
   
 ```  
-  
-MULTISET (expression [{, expression }] )  
+MULTISET ( expression [{, expression }] )  
 or  
 { expression [{, expression }] }  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a><span data-ttu-id="b0e0c-107">Argomenti</span><span class="sxs-lookup"><span data-stu-id="b0e0c-107">Arguments</span></span>  
  `expression`  
- Qualsiasi elenco valido di valori.  
+ <span data-ttu-id="b0e0c-108">Qualsiasi elenco valido di valori.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-108">Any valid list of values.</span></span>  
   
-## Valore restituito  
- Raccolta di tipo MULTISET\<T\>  
+## <a name="return-value"></a><span data-ttu-id="b0e0c-109">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="b0e0c-109">Return Value</span></span>  
+ <span data-ttu-id="b0e0c-110">Una raccolta di tipo MULTISET\<T >.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-110">A collection of type MULTISET\<T>.</span></span>  
   
-## Note  
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili tre tipi di costruttori, ovvero costruttori di riga, costruttori di oggetti e costruttori di raccolte o multiset. Per altre informazioni, vedere [Costruzione di tipi](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+## <a name="remarks"></a><span data-ttu-id="b0e0c-111">Note</span><span class="sxs-lookup"><span data-stu-id="b0e0c-111">Remarks</span></span>  
+ <span data-ttu-id="b0e0c-112">In[!INCLUDE[esql](../../../../../../includes/esql-md.md)] sono disponibili tre tipi di costruttori, ovvero costruttori di riga, costruttori di oggetti e costruttori di raccolte o multiset.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-112">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] provides three kinds of constructors: row constructors, object constructors, and multiset (or collection) constructors.</span></span> <span data-ttu-id="b0e0c-113">Per ulteriori informazioni, vedere [la costruzione di tipi](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="b0e0c-113">For more information, see [Constructing Types](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).</span></span>  
   
- Il costruttore multiset crea un'istanza di un multiset da un elenco di valori. Tutti i valori nel costruttore devono essere di un tipo compatibile.  
+ <span data-ttu-id="b0e0c-114">Il costruttore multiset crea un'istanza di un multiset da un elenco di valori.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-114">The multiset constructor creates an instance of a multiset from a list of values.</span></span> <span data-ttu-id="b0e0c-115">Tutti i valori nel costruttore devono essere di un tipo compatibile.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-115">All the values in the constructor must be of a compatible type.</span></span>  
   
- L'espressione seguente consente ad esempio di creare un multiset di valori interi.  
+ <span data-ttu-id="b0e0c-116">L'espressione seguente consente ad esempio di creare un multiset di valori interi.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-116">For example, the following expression creates a multiset of integers.</span></span>  
   
  `MULTISET(1, 2, 3)`  
   
  `{1, 2, 3}`  
   
 > [!NOTE]
->  I valori letterali di multiset annidati sono supportati solo quando un multiset di wrapping contiene un solo elemento multiset, ad esempio `{{1, 2, 3}}`. Quando il multiset di wrapping contiene più elementi multiset, ad esempio `{{1, 2}, {3, 4}}`, non sono supportati valori letterali di multiset annidati.  
+>  <span data-ttu-id="b0e0c-117">I valori letterali di multiset annidati sono supportati solo quando un multiset di wrapping contiene un solo elemento multiset, ad esempio `{{1, 2, 3}}`.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-117">Nested multiset literals are only supported when a wrapping mutiset has a single multiset element; for example, `{{1, 2, 3}}`.</span></span> <span data-ttu-id="b0e0c-118">Quando il multiset di wrapping contiene più elementi multiset, ad esempio `{{1, 2}, {3, 4}}`, non sono supportati valori letterali di multiset annidati.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-118">When the wrapping multiset has multiple multiset elements (for example, `{{1, 2}, {3, 4}}`), nested multiset literals are not supported.</span></span>  
   
-## Esempio  
- Nella query Entity SQL seguente viene usato l'operatore MULTISET per creare un'istanza di un multiset da un elenco di valori. La query è basata sul modello Sales di AdventureWorks. Per compilare ed eseguire questa query, effettuare le operazioni seguenti:  
+## <a name="example"></a><span data-ttu-id="b0e0c-119">Esempio</span><span class="sxs-lookup"><span data-stu-id="b0e0c-119">Example</span></span>  
+ <span data-ttu-id="b0e0c-120">Nella query Entity SQL seguente viene usato l'operatore MULTISET per creare un'istanza di un multiset da un elenco di valori.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-120">The following Entity SQL query uses the MULTISET operator to create an instance of a multiset from a list of values.</span></span> <span data-ttu-id="b0e0c-121">La query è basata sul modello Sales di AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="b0e0c-121">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="b0e0c-122">Per compilare ed eseguire questa query, effettuare le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="b0e0c-122">To compile and run this query, follow these steps:</span></span>  
   
-1.  Seguire la procedura indicata in [Procedura: eseguire una query che restituisce risultati StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  <span data-ttu-id="b0e0c-123">Seguire la procedura indicata in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="b0e0c-123">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery`:  
+2.  <span data-ttu-id="b0e0c-124">Passare la query seguente come argomento al metodo `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="b0e0c-124">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#MULTISET](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiset)]  
   
-## Vedere anche  
- [Costruzione di tipi](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)   
- [Riferimenti a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="b0e0c-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b0e0c-125">See Also</span></span>  
+ [<span data-ttu-id="b0e0c-126">Costruzione di tipi</span><span class="sxs-lookup"><span data-stu-id="b0e0c-126">Constructing Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
+ [<span data-ttu-id="b0e0c-127">Riferimento a Entity SQL</span><span class="sxs-lookup"><span data-stu-id="b0e0c-127">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

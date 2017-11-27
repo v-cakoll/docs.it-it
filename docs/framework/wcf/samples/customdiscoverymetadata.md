@@ -1,45 +1,48 @@
 ---
-title: "CustomDiscoveryMetadata | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: CustomDiscoveryMetadata
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c42455fd-3652-4b7e-b698-ab3a2bb52e48
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5b3272b642a04821d8343cae776e48f90d266cfe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# CustomDiscoveryMetadata
-In questo esempio viene illustrato come inserire metadati XML personalizzati nei metadati di individuazione per un endpoint individuabile esposto da un servizio.  Nell'esempio viene quindi illustrato come un client può eseguire la ricerca del servizio ed estrarre questi dati personalizzati.  Questo esempio è costituito da due progetti, ovvero il servizio e il client.  
+# <a name="customdiscoverymetadata"></a><span data-ttu-id="934b1-102">CustomDiscoveryMetadata</span><span class="sxs-lookup"><span data-stu-id="934b1-102">CustomDiscoveryMetadata</span></span>
+<span data-ttu-id="934b1-103">In questo esempio viene illustrato come inserire metadati XML personalizzati nei metadati di individuazione per un endpoint individuabile esposto da un servizio.</span><span class="sxs-lookup"><span data-stu-id="934b1-103">This sample shows how to insert custom XML metadata into the discovery metadata for a discoverable endpoint exposed by a service.</span></span> <span data-ttu-id="934b1-104">Nell'esempio viene quindi illustrato come un client può eseguire la ricerca del servizio ed estrarre questi dati personalizzati.</span><span class="sxs-lookup"><span data-stu-id="934b1-104">The sample then shows how a client can search for the service and extract this custom data.</span></span> <span data-ttu-id="934b1-105">Questo esempio è costituito da due progetti, ovvero il servizio e il client.</span><span class="sxs-lookup"><span data-stu-id="934b1-105">This sample consists of two projects, service and client.</span></span>  
   
-## Servizio  
- Nel metodo `main` dell'esempio un oggetto di tipo <xref:System.Xml.Linq.XElement> viene popolato con i campi desiderati e aggiunto a <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>.  Questo <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> viene aggiunto a un particolare endpoint.  Nel momento in cui viene individuato quel particolare endpoint, i metadati di individuazione contengono i dati personalizzati aggiunti.  
+## <a name="service"></a><span data-ttu-id="934b1-106">Servizio</span><span class="sxs-lookup"><span data-stu-id="934b1-106">Service</span></span>  
+ <span data-ttu-id="934b1-107">Nel metodo `main` dell'esempio un oggetto di tipo <xref:System.Xml.Linq.XElement> viene popolato con i campi desiderati e aggiunto a <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>.</span><span class="sxs-lookup"><span data-stu-id="934b1-107">In the `main` method, the sample shows that an object of type <xref:System.Xml.Linq.XElement> is populated with the desired fields and is added to the <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>.</span></span> <span data-ttu-id="934b1-108">Questo <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> viene aggiunto a un particolare endpoint.</span><span class="sxs-lookup"><span data-stu-id="934b1-108">This <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> is added to a particular endpoint.</span></span> <span data-ttu-id="934b1-109">Nel momento in cui viene individuato quel particolare endpoint, i metadati di individuazione contengono i dati personalizzati aggiunti.</span><span class="sxs-lookup"><span data-stu-id="934b1-109">When that particular endpoint is discovered, the discovery metadata contains the custom data that was added here.</span></span>  
   
-## Client  
- Nell'esempio viene illustrato il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> chiamato su un oggetto <xref:System.ServiceModel.Discovery.DiscoveryClient>.  Sull'oggetto <xref:System.ServiceModel.Discovery.FindResponse> risultante viene eseguita una query per individuare gli elementi XML appropriati e previsti.  Questi elementi vengono quindi stampati sulla console.  
+## <a name="client"></a><span data-ttu-id="934b1-110">Client</span><span class="sxs-lookup"><span data-stu-id="934b1-110">Client</span></span>  
+ <span data-ttu-id="934b1-111">Nell'esempio viene illustrato il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> chiamato su un oggetto <xref:System.ServiceModel.Discovery.DiscoveryClient>.</span><span class="sxs-lookup"><span data-stu-id="934b1-111">The sample shows the <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> method being called on a <xref:System.ServiceModel.Discovery.DiscoveryClient>.</span></span> <span data-ttu-id="934b1-112">Sull'oggetto <xref:System.ServiceModel.Discovery.FindResponse> risultante viene eseguita una query per individuare gli elementi XML appropriati e previsti.</span><span class="sxs-lookup"><span data-stu-id="934b1-112">The resulting <xref:System.ServiceModel.Discovery.FindResponse> is then queried for the appropriate and expected XML elements.</span></span> <span data-ttu-id="934b1-113">Questi elementi vengono quindi stampati sulla console.</span><span class="sxs-lookup"><span data-stu-id="934b1-113">These elements are then printed to the console.</span></span>  
   
-#### Per usare questo esempio  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="934b1-114">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="934b1-114">To use this sample</span></span>  
   
-1.  Caricare la soluzione del progetto in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] e compilare il progetto.  
+1.  <span data-ttu-id="934b1-115">Caricare la soluzione del progetto in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] e compilare il progetto.</span><span class="sxs-lookup"><span data-stu-id="934b1-115">Load the project solution in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] and build the project.</span></span>  
   
-2.  Eseguire innanzitutto l'applicazione del servizio, generata in \[directory soluzione di base\]\\service\\bin\\debug, quindi eseguire l'applicazione client, generata in \[directory soluzione di base\]\\Client\\bin\\debug  
+2.  <span data-ttu-id="934b1-116">Eseguire innanzitutto l'applicazione del servizio, generata in [directory soluzione di base]\service\bin\debug, quindi eseguire l'applicazione client, generata in [directory soluzione di base]\Client\bin\debug</span><span class="sxs-lookup"><span data-stu-id="934b1-116">First run the Service application, generated in [solution base directory]\service\bin\debug, and then run the Client application, generated in [solution base directory]\Client\bin\debug</span></span>  
   
-3.  Si noti che il servizio viene portato online, il client individua il servizio e stampa i metadati pubblicati nell'endpoint.  
+3.  <span data-ttu-id="934b1-117">Si noti che il servizio viene portato online, il client individua il servizio e stampa i metadati pubblicati nell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="934b1-117">Note that the service comes online, the client locates the service and prints the metadata published in the endpoint.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.  Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="934b1-118">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="934b1-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="934b1-119">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="934b1-119">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="934b1-120">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="934b1-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="934b1-121">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="934b1-121">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Extensibility\DiscoveryExtensibility\CustomDiscoveryMetadata`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DiscoveryExtensibility\CustomDiscoveryMetadata`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="934b1-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="934b1-122">See Also</span></span>

@@ -1,52 +1,53 @@
 ---
-title: "Procedura: aggiungere i controlli ActiveX a Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli ActiveX [Windows Form], aggiunta"
-  - "form, aggiunta di controlli ActiveX"
-  - "controlli Windows Form, controlli ActiveX"
+title: 'Procedura: aggiungere i controlli ActiveX a Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms controls, ActiveX controls
+- forms [Windows Forms], adding ActiveX controls
+- ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: afee07f2f5009abb6cf8facc94b138f4ea2a11fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: aggiungere i controlli ActiveX a Windows Form
-Nonostante Progettazione Windows Form sia ottimizzata per contenere controlli per Windows Form, è possibile inserire in un Windows Form anche controlli ActiveX.  
+# <a name="how-to-add-activex-controls-to-windows-forms"></a><span data-ttu-id="14b2c-102">Procedura: aggiungere i controlli ActiveX a Windows Form</span><span class="sxs-lookup"><span data-stu-id="14b2c-102">How to: Add ActiveX Controls to Windows Forms</span></span>
+<span data-ttu-id="14b2c-103">Durante la progettazione Windows Form è ottimizzato per ospitare controlli Windows Form, è anche possibile inserire controlli ActiveX in Windows Form.</span><span class="sxs-lookup"><span data-stu-id="14b2c-103">While the Windows Forms Designer is optimized to host Windows Forms controls, you can also put ActiveX controls on Windows Forms.</span></span>  
   
 > [!CAUTION]
->  Esistono limitazioni relative alle prestazioni dei Windows Form nel caso in cui a essi vengano aggiunti controlli ActiveX.  
+>  <span data-ttu-id="14b2c-104">Quando i controlli ActiveX aggiunti, esistono limitazioni relative alle prestazioni per Windows Form.</span><span class="sxs-lookup"><span data-stu-id="14b2c-104">There are performance limitations for Windows Forms when ActiveX controls are added to them.</span></span>  
   
- Prima di aggiungere controlli ActiveX a un form, è necessario aggiungerli alla Casella degli strumenti.  Per ulteriori informazioni, vedere [Componenti COM, finestra di dialogo Personalizza Casella degli strumenti](http://msdn.microsoft.com/it-it/171333f3-f207-4e02-bbdc-17862556212c).  
+ <span data-ttu-id="14b2c-105">Prima di aggiungere al form controlli ActiveX, è necessario aggiungere alla casella degli strumenti.</span><span class="sxs-lookup"><span data-stu-id="14b2c-105">Before you add ActiveX controls to your form, you must add them to the Toolbox.</span></span> <span data-ttu-id="14b2c-106">Per ulteriori informazioni, vedere [componenti COM, finestra di dialogo Personalizza casella degli strumenti](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c).</span><span class="sxs-lookup"><span data-stu-id="14b2c-106">For more information, see [COM Components, Customize Toolbox Dialog Box](http://msdn.microsoft.com/en-us/171333f3-f207-4e02-bbdc-17862556212c).</span></span>  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/Esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="14b2c-107">Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.</span><span class="sxs-lookup"><span data-stu-id="14b2c-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="14b2c-108">Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .</span><span class="sxs-lookup"><span data-stu-id="14b2c-108">To change your settings, click **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="14b2c-109">Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="14b2c-109">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Per aggiungere un controllo ActiveX al Windows Form  
+### <a name="to-add-an-activex-control-to-your-windows-form"></a><span data-ttu-id="14b2c-110">Per aggiungere un controllo ActiveX a Windows Form</span><span class="sxs-lookup"><span data-stu-id="14b2c-110">To add an ActiveX control to your Windows Form</span></span>  
   
--   Fare doppio clic sul controllo nella Casella degli strumenti.  
+-   <span data-ttu-id="14b2c-111">Fare doppio clic sul controllo della casella degli strumenti.</span><span class="sxs-lookup"><span data-stu-id="14b2c-111">Double-click the control on the Toolbox.</span></span>  
   
-     In [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] tutti i riferimenti verranno aggiunti al controllo nel progetto.  Per ulteriori informazioni sugli elementi di cui tener conto durante l'utilizzo di controlli ActiveX in Windows Form, vedere [Considerazioni sull'inserimento di controlli ActiveX in Windows Form](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).  
+     [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]<span data-ttu-id="14b2c-112">Aggiunge tutti i riferimenti al controllo del progetto.</span><span class="sxs-lookup"><span data-stu-id="14b2c-112"> adds all references to the control in your project.</span></span> <span data-ttu-id="14b2c-113">Per ulteriori informazioni sugli aspetti da tenere presenti quando si utilizzano controlli ActiveX in Windows Form, vedere [considerazioni quando si ospita un controllo ActiveX in un Windows Form](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).</span><span class="sxs-lookup"><span data-stu-id="14b2c-113">For more information about things to keep in mind when using ActiveX controls on Windows Forms, see [Considerations When Hosting an ActiveX Control on a Windows Form](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).</span></span>  
   
     > [!NOTE]
-    >  L'Utilità di importazione di controlli ActiveX di Windows Form \(AxImp.exe\) crea argomenti di un tipo diverso da quanto previsto durante l'importazione di librerie a collegamento dinamico ActiveX.  Gli argomenti creati da AxImp.exe sono simili al seguente: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, al posto del previsto `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)`.  Questa anomalia, tuttavia, non pregiudica il corretto funzionamento del codice.  Per informazioni dettagliate, vedere [Utilità di importazione di controlli ActiveX di Windows Form \(Aximp.exe\)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
+    >  <span data-ttu-id="14b2c-114">Windows Forms ActiveX Control Importer (AxImp.exe) crea argomenti dell'evento di un tipo diverso da quanto previsto durante l'importazione di librerie a collegamento dinamico ActiveX.</span><span class="sxs-lookup"><span data-stu-id="14b2c-114">The Windows Forms ActiveX Control Importer (AxImp.exe) creates event arguments of a different type than expected upon importation of ActiveX dynamic link libraries.</span></span> <span data-ttu-id="14b2c-115">Gli argomenti creati da AxImp.exe sono simili al seguente: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, quando `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` è previsto.</span><span class="sxs-lookup"><span data-stu-id="14b2c-115">The arguments created by AxImp.exe are similar to the following: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, when `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` is expected.</span></span> <span data-ttu-id="14b2c-116">Tenere presente che questa anomalia impedisce al codice funziona correttamente.</span><span class="sxs-lookup"><span data-stu-id="14b2c-116">Be aware that this irregularity does not prevent code from functioning normally.</span></span> <span data-ttu-id="14b2c-117">Per informazioni dettagliate, vedere [utilità di importazione di controllo ActiveX di Windows Form (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span><span class="sxs-lookup"><span data-stu-id="14b2c-117">For details, see [Windows Forms ActiveX Control Importer (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).</span></span>  
   
-## Vedere anche  
- [Controlli per Windows Form](../../../../docs/framework/winforms/controls/index.md)   
- [Controls and Programmable Objects Compared in Various Languages and Libraries](http://msdn.microsoft.com/it-it/021f2a1b-8247-4348-a5ad-e1d9ab23004b)   
- [Procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)   
- [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [Controlli Windows Form per funzione](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a><span data-ttu-id="14b2c-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="14b2c-118">See Also</span></span>  
+ [<span data-ttu-id="14b2c-119">Controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="14b2c-119">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ [<span data-ttu-id="14b2c-120">Confronto tra controlli e oggetti programmabili in diversi linguaggi e librerie</span><span class="sxs-lookup"><span data-stu-id="14b2c-120">Controls and Programmable Objects Compared in Various Languages and Libraries</span></span>](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [<span data-ttu-id="14b2c-121">Procedura: Aggiungere controlli a un Windows Forms</span><span class="sxs-lookup"><span data-stu-id="14b2c-121">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [<span data-ttu-id="14b2c-122">Disposizione di controlli in Windows Form</span><span class="sxs-lookup"><span data-stu-id="14b2c-122">Arranging Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [<span data-ttu-id="14b2c-123">Impostazione delle etichette di singoli controlli Windows Form e creazione dei relativi tasti di scelta rapida</span><span class="sxs-lookup"><span data-stu-id="14b2c-123">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [<span data-ttu-id="14b2c-124">Controlli da usare in Windows Form</span><span class="sxs-lookup"><span data-stu-id="14b2c-124">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [<span data-ttu-id="14b2c-125">Controlli Windows Form per funzione</span><span class="sxs-lookup"><span data-stu-id="14b2c-125">Windows Forms Controls by Function</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

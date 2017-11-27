@@ -1,81 +1,78 @@
 ---
-title: "TypeOf Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "TypeOf"
-  - "vb.TypeOf"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "types [Visual Basic], compatible"
-  - "comparison operators"
-  - "TypeOf...Is expression"
-  - "data types [Visual Basic], compatible"
-  - "TypeOf operator [Visual Basic]"
-  - "compatible data types"
+title: Operatore TypeOf (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- TypeOf
+- vb.TypeOf
+helpviewer_keywords:
+- types [Visual Basic], compatible
+- comparison operators [Visual Basic]
+- TypeOf...Is expression
+- data types [Visual Basic], compatible
+- TypeOf operator [Visual Basic]
+- compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 51bd2af7af28aa229fa62770c5b92d31e461333b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# TypeOf Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Confronta una variabile di riferimento a un oggetto con un tipo di dati.  
+# <a name="typeof-operator-visual-basic"></a><span data-ttu-id="35f64-102">Operatore TypeOf (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="35f64-102">TypeOf Operator (Visual Basic)</span></span>
+<span data-ttu-id="35f64-103">Confronta una variabile di riferimento a un oggetto con un tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="35f64-103">Compares an object reference variable to a data type.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="35f64-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="35f64-104">Syntax</span></span>  
   
 ```  
-  
 result = TypeOf objectexpression Is typename  
 ```  
   
 ```  
-  
 result = TypeOf objectexpression IsNot typename  
 ```  
   
-## Parti  
+## <a name="parts"></a><span data-ttu-id="35f64-105">Parti</span><span class="sxs-lookup"><span data-stu-id="35f64-105">Parts</span></span>  
  `result`  
- Restituita.  Valore `Boolean`.  
+ <span data-ttu-id="35f64-106">Restituita.</span><span class="sxs-lookup"><span data-stu-id="35f64-106">Returned.</span></span> <span data-ttu-id="35f64-107">Valore `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="35f64-107">A `Boolean` value.</span></span>  
   
  `objectexpression`  
- Necessario.  Qualsiasi espressione che restituisce un tipo riferimento.  
+ <span data-ttu-id="35f64-108">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="35f64-108">Required.</span></span> <span data-ttu-id="35f64-109">Qualsiasi espressione che restituisce un tipo riferimento.</span><span class="sxs-lookup"><span data-stu-id="35f64-109">Any expression that evaluates to a reference type.</span></span>  
   
  `typename`  
- Necessario.  Qualsiasi nome di un tipo di dati.  
+ <span data-ttu-id="35f64-110">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="35f64-110">Required.</span></span> <span data-ttu-id="35f64-111">Qualsiasi nome di un tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="35f64-111">Any data type name.</span></span>  
   
-## Note  
- L'operatore `TypeOf` determina se il tipo di `objectexpression` in fase di esecuzione è compatibile con `typename`.  La compatibilità dipende dalla categoria del tipo di `typename`.  La tabella seguente illustra come viene determinata la compatibilità.  
+## <a name="remarks"></a><span data-ttu-id="35f64-112">Note</span><span class="sxs-lookup"><span data-stu-id="35f64-112">Remarks</span></span>  
+ <span data-ttu-id="35f64-113">L'operatore `TypeOf` determina se il tipo di `objectexpression` in fase di esecuzione è compatibile con `typename`.</span><span class="sxs-lookup"><span data-stu-id="35f64-113">The `TypeOf` operator determines whether the run-time type of `objectexpression` is compatible with `typename`.</span></span> <span data-ttu-id="35f64-114">La compatibilità dipende dalla categoria del tipo di `typename`.</span><span class="sxs-lookup"><span data-stu-id="35f64-114">The compatibility depends on the type category of `typename`.</span></span> <span data-ttu-id="35f64-115">La tabella seguente illustra come viene determinata la compatibilità.</span><span class="sxs-lookup"><span data-stu-id="35f64-115">The following table shows how compatibility is determined.</span></span>  
   
-|Categoria del tipo di `typename`|Criterio di compatibilità|  
-|--------------------------------------|-------------------------------|  
-|Classe|`objectexpression` è del tipo `typename` o eredita da `typename`|  
-|Struttura|`objectexpression` è del tipo `typename`|  
-|Interfaccia|`objectexpression` implementa `typename` o eredita da una classe che implementa `typename`|  
+|<span data-ttu-id="35f64-116">Categoria del tipo di `typename`</span><span class="sxs-lookup"><span data-stu-id="35f64-116">Type category of `typename`</span></span>|<span data-ttu-id="35f64-117">Criterio di compatibilità</span><span class="sxs-lookup"><span data-stu-id="35f64-117">Compatibility criterion</span></span>|  
+|---------------------------------|-----------------------------|  
+|<span data-ttu-id="35f64-118">Classe</span><span class="sxs-lookup"><span data-stu-id="35f64-118">Class</span></span>|<span data-ttu-id="35f64-119">`objectexpression` è del tipo `typename` o eredita da `typename`</span><span class="sxs-lookup"><span data-stu-id="35f64-119">`objectexpression` is of type `typename` or inherits from `typename`</span></span>|  
+|<span data-ttu-id="35f64-120">Struttura</span><span class="sxs-lookup"><span data-stu-id="35f64-120">Structure</span></span>|<span data-ttu-id="35f64-121">`objectexpression` è del tipo `typename`</span><span class="sxs-lookup"><span data-stu-id="35f64-121">`objectexpression` is of type `typename`</span></span>|  
+|<span data-ttu-id="35f64-122">Interfaccia</span><span class="sxs-lookup"><span data-stu-id="35f64-122">Interface</span></span>|<span data-ttu-id="35f64-123">`objectexpression` implementa `typename` o eredita da una classe che implementa `typename`</span><span class="sxs-lookup"><span data-stu-id="35f64-123">`objectexpression` implements `typename` or inherits from a class that implements `typename`</span></span>|  
   
- Se il tipo di `objectexpression` in fase di esecuzione soddisfa il criterio di compatibilità, `result` sarà `True`.  In caso contrario, `result` sarà `False`.  Se `objectexpression` è null, `TypeOf`...`Is` restituisce `False` e ...`IsNot` restituisce `True`.  
+ <span data-ttu-id="35f64-124">Se il tipo di `objectexpression` in fase di esecuzione soddisfa il criterio di compatibilità, `result` sarà `True`.</span><span class="sxs-lookup"><span data-stu-id="35f64-124">If the run-time type of `objectexpression` satisfies the compatibility criterion, `result` is `True`.</span></span> <span data-ttu-id="35f64-125">In caso contrario, `result` sarà `False`.</span><span class="sxs-lookup"><span data-stu-id="35f64-125">Otherwise, `result` is `False`.</span></span>  <span data-ttu-id="35f64-126">Se `objectexpression` è null, `TypeOf`...`Is` restituisce `False` e ...`IsNot` restituisce `True`.</span><span class="sxs-lookup"><span data-stu-id="35f64-126">If `objectexpression` is null, then `TypeOf`...`Is` returns `False`, and ...`IsNot` returns `True`.</span></span>  
   
- `TypeOf` viene sempre usato con la parola chiave `Is` per costruire un'espressione `TypeOf`...`Is` oppure con la parola chiave `IsNot` per costruire un'espressione `TypeOf`...`IsNot`.  
+ <span data-ttu-id="35f64-127">`TypeOf` viene sempre usato con la parola chiave `Is` per costruire un'espressione `TypeOf`...`Is` oppure con la parola chiave `IsNot` per costruire un'espressione `TypeOf`...`IsNot`.</span><span class="sxs-lookup"><span data-stu-id="35f64-127">`TypeOf` is always used with the `Is` keyword to construct a `TypeOf`...`Is` expression, or with the `IsNot` keyword to construct a `TypeOf`...`IsNot` expression.</span></span>  
   
-## Esempio  
- Nell'esempio seguente le espressioni `TypeOf`...`Is` vengono usate per verificare la compatibilità dei tipi di due variabili di riferimento a un oggetto con diversi tipi di dati..  
+## <a name="example"></a><span data-ttu-id="35f64-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="35f64-128">Example</span></span>  
+ <span data-ttu-id="35f64-129">Nell'esempio seguente le espressioni `TypeOf`...`Is` vengono usate per verificare la compatibilità dei tipi di due variabili di riferimento a un oggetto con diversi tipi di dati..</span><span class="sxs-lookup"><span data-stu-id="35f64-129">The following example uses `TypeOf`...`Is` expressions to test the type compatibility of two object reference variables with various data types.</span></span>  
   
  [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
   
- La variabile `refInteger` presenta un tipo in fase di esecuzione `Integer`.  È compatibile con `Integer`, ma non con `Double`.  La variabile `refForm` presenta un tipo in fase di esecuzione <xref:System.Windows.Forms.Form>.  È compatibile con <xref:System.Windows.Forms.Form> perché si tratta del relativo tipo, con <xref:System.Windows.Forms.Control> perché <xref:System.Windows.Forms.Form> eredita da <xref:System.Windows.Forms.Control> e con <xref:System.ComponentModel.IComponent> perché <xref:System.Windows.Forms.Form> eredita da <xref:System.ComponentModel.Component>, che implementa <xref:System.ComponentModel.IComponent>.  `refForm` non è invece compatibile con <xref:System.Windows.Forms.Label>.  
+ <span data-ttu-id="35f64-130">La variabile `refInteger` presenta un tipo in fase di esecuzione `Integer`.</span><span class="sxs-lookup"><span data-stu-id="35f64-130">The variable `refInteger` has a run-time type of `Integer`.</span></span> <span data-ttu-id="35f64-131">È compatibile con `Integer`, ma non con `Double`.</span><span class="sxs-lookup"><span data-stu-id="35f64-131">It is compatible with `Integer` but not with `Double`.</span></span> <span data-ttu-id="35f64-132">La variabile `refForm` presenta un tipo in fase di esecuzione <xref:System.Windows.Forms.Form>.</span><span class="sxs-lookup"><span data-stu-id="35f64-132">The variable `refForm` has a run-time type of <xref:System.Windows.Forms.Form>.</span></span> <span data-ttu-id="35f64-133">È compatibile con <xref:System.Windows.Forms.Form> perché si tratta del relativo tipo, con <xref:System.Windows.Forms.Control> perché <xref:System.Windows.Forms.Form> eredita da <xref:System.Windows.Forms.Control> e con <xref:System.ComponentModel.IComponent> perché <xref:System.Windows.Forms.Form> eredita da <xref:System.ComponentModel.Component>, che implementa <xref:System.ComponentModel.IComponent>.</span><span class="sxs-lookup"><span data-stu-id="35f64-133">It is compatible with <xref:System.Windows.Forms.Form> because that is its type, with <xref:System.Windows.Forms.Control> because <xref:System.Windows.Forms.Form> inherits from <xref:System.Windows.Forms.Control>, and with <xref:System.ComponentModel.IComponent> because <xref:System.Windows.Forms.Form> inherits from <xref:System.ComponentModel.Component>, which implements <xref:System.ComponentModel.IComponent>.</span></span> <span data-ttu-id="35f64-134">`refForm` non è invece compatibile con <xref:System.Windows.Forms.Label>.</span><span class="sxs-lookup"><span data-stu-id="35f64-134">However, `refForm` is not compatible with <xref:System.Windows.Forms.Label>.</span></span>  
   
-## Vedere anche  
- [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="35f64-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="35f64-135">See Also</span></span>  
+ [<span data-ttu-id="35f64-136">Operatore Is</span><span class="sxs-lookup"><span data-stu-id="35f64-136">Is Operator</span></span>](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [<span data-ttu-id="35f64-137">Operatore IsNot</span><span class="sxs-lookup"><span data-stu-id="35f64-137">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [<span data-ttu-id="35f64-138">Operatori di confronto in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="35f64-138">Comparison Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
+ [<span data-ttu-id="35f64-139">Precedenza tra gli operatori in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="35f64-139">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="35f64-140">Elenco degli operatori per funzionalità</span><span class="sxs-lookup"><span data-stu-id="35f64-140">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="35f64-141">Operatori ed espressioni</span><span class="sxs-lookup"><span data-stu-id="35f64-141">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

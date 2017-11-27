@@ -1,70 +1,73 @@
 ---
-title: "Elemento &lt;dependentAssembly&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#dependentAssembly"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<dependentAssembly> (elemento)"
-  - "tag contenitore, <dependentAssembly> (elemento)"
-  - "dependentAssembly (elemento)"
+title: '&lt;dependentAssembly&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#dependentAssembly
+helpviewer_keywords:
+- container tags, <dependentAssembly> element
+- dependentAssembly element
+- <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 60c7e53c11a23b242e71fdb3e0b7597ae9fbda18
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;dependentAssembly&gt;
-Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly.  Utilizzare un elemento `dependentAssembly` per ciascun assembly.  
+# <a name="ltdependentassemblygt-element"></a><span data-ttu-id="51805-102">&lt;dependentAssembly&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="51805-102">&lt;dependentAssembly&gt; Element</span></span>
+<span data-ttu-id="51805-103">Incapsula i criteri di associazione e il percorso dell'assembly per ciascun assembly.</span><span class="sxs-lookup"><span data-stu-id="51805-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="51805-104">Utilizzare uno `dependentAssembly` elemento per ogni assembly.</span><span class="sxs-lookup"><span data-stu-id="51805-104">Use one `dependentAssembly` element for each assembly.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="51805-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="51805-105">\<configuration></span></span>  
+<span data-ttu-id="51805-106">\<runtime ></span><span class="sxs-lookup"><span data-stu-id="51805-106">\<runtime></span></span>  
+<span data-ttu-id="51805-107">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="51805-107">\<assemblyBinding></span></span>  
+<span data-ttu-id="51805-108">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="51805-108">\<dependentAssembly></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="51805-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="51805-109">Syntax</span></span>  
+  
+```xml  
 <dependentAssembly>   
 </dependentAssembly>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="51805-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="51805-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="51805-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="51805-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
- Nessuno.  
+### <a name="attributes"></a><span data-ttu-id="51805-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="51805-112">Attributes</span></span>  
+ <span data-ttu-id="51805-113">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="51805-113">None.</span></span>  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="51805-114">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="51805-114">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`assemblyIdentity`|Contiene le informazioni di identificazione relative all'assembly.  È necessario includere questo elemento in ciascun elemento `dependentAssembly`.|  
-|`codeBase`|Specifica la posizione in cui un assembly condiviso può essere individuato dall'ambiente di esecuzione, se non è installato sul computer.|  
-|`bindingRedirect`|Reindirizza una versione dell'assembly in un'altra.|  
-|`publisherPolicy`|Specifica se nell'ambiente di esecuzione vengono applicati i criteri dell'editore per l'assembly.|  
+|<span data-ttu-id="51805-115">Elemento</span><span class="sxs-lookup"><span data-stu-id="51805-115">Element</span></span>|<span data-ttu-id="51805-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="51805-116">Description</span></span>|  
+|-------------|-----------------|  
+|`assemblyIdentity`|<span data-ttu-id="51805-117">Contiene le informazioni di identificazione dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="51805-117">Contains identifying information about the assembly.</span></span> <span data-ttu-id="51805-118">Questo elemento deve essere incluso in ogni `dependentAssembly` elemento.</span><span class="sxs-lookup"><span data-stu-id="51805-118">This element must be included in each `dependentAssembly` element.</span></span>|  
+|`codeBase`|<span data-ttu-id="51805-119">Specifica in cui il runtime trova un assembly condiviso se non è installato nel computer.</span><span class="sxs-lookup"><span data-stu-id="51805-119">Specifies where the runtime can find a shared assembly if it is not installed on the computer.</span></span>|  
+|`bindingRedirect`|<span data-ttu-id="51805-120">Reindirizza una versione dell'assembly in un'altra.</span><span class="sxs-lookup"><span data-stu-id="51805-120">Redirects one assembly version to another.</span></span>|  
+|`publisherPolicy`|<span data-ttu-id="51805-121">Specifica se il runtime applica i criteri dell'editore per questo assembly.</span><span class="sxs-lookup"><span data-stu-id="51805-121">Specifies whether the runtime applies publisher policy for this assembly.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="51805-122">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="51805-122">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`assemblyBinding`|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
+|<span data-ttu-id="51805-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="51805-123">Element</span></span>|<span data-ttu-id="51805-124">Descrizione</span><span class="sxs-lookup"><span data-stu-id="51805-124">Description</span></span>|  
+|-------------|-----------------|  
+|`assemblyBinding`|<span data-ttu-id="51805-125">Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.</span><span class="sxs-lookup"><span data-stu-id="51805-125">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|`configuration`|<span data-ttu-id="51805-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="51805-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="51805-127">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="51805-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come incapsulare le informazioni relative a due assembly.  
+## <a name="example"></a><span data-ttu-id="51805-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="51805-128">Example</span></span>  
+ <span data-ttu-id="51805-129">Nell'esempio seguente viene illustrato come incapsulare le informazioni per due assembly.</span><span class="sxs-lookup"><span data-stu-id="51805-129">The following example shows how to encapsulate assembly information for two assemblies.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -85,7 +88,7 @@ Incapsula i criteri di associazione e il percorso dell'assembly per ciascun asse
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="51805-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="51805-130">See Also</span></span>  
+ [<span data-ttu-id="51805-131">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="51805-131">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="51805-132">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="51805-132">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="51805-133">Reindirizzamento delle versioni di assembly</span><span class="sxs-lookup"><span data-stu-id="51805-133">Redirecting Assembly Versions</span></span>](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

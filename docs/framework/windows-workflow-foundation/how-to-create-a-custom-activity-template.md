@@ -1,68 +1,69 @@
 ---
-title: "Procedura: Creare un modello di attivit&#224; personalizzato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Procedura: Creare un modello di attività personalizzato"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 90c92295bbccc7cf7e50a9da5bd52110d9d26a3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: Creare un modello di attivit&#224; personalizzato
-I modelli di attività personalizzati vengono utilizzati per personalizzare la configurazione delle attività, incluse CompositeActivity personalizzate, in modo che gli utenti non debbano creare individualmente ciascuna attività e configurare manualmente le relative proprietà e altre impostazioni.Questi modelli personalizzati possono essere resi disponibili nella **Casella degli strumenti** in [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] o da una finestra di progettazione riallocata dalla quale gli utenti possono trascinarli nell'area di progettazione preconfigurata.In [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] sono disponibili validi esempi di questi modelli: [Finestra di progettazione del modello SendAndReceiveReply](../Topic/SendAndReceiveReply%20Template%20Designer.md) e [Finestra di progettazione del modello ReceiveAndSendReply](../Topic/ReceiveAndSendReply%20Template%20Designer.md) nella categoria [ActivityDesigner Messaggistica](../Topic/Messaging%20Activity%20Designers.md).  
+# <a name="how-to-create-a-custom-activity-template"></a><span data-ttu-id="07bcb-102">Procedura: Creare un modello di attività personalizzato</span><span class="sxs-lookup"><span data-stu-id="07bcb-102">How to: Create a Custom Activity Template</span></span>
+<span data-ttu-id="07bcb-103">I modelli di attività personalizzati vengono usati per personalizzare la configurazione delle attività, incluse CompositeActivity personalizzate, in modo che gli utenti non debbano creare individualmente ciascuna attività e configurare manualmente le relative proprietà e altre impostazioni.</span><span class="sxs-lookup"><span data-stu-id="07bcb-103">Custom activity templates are used to customize the configuration of activities, including custom composite activities, so that users do not have to create each activity individually and configure their properties and other settings manually.</span></span> <span data-ttu-id="07bcb-104">Questi modelli personalizzati possono essere resi disponibili nel **della casella degli strumenti** sul [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] o da una finestra di progettazione ospitata nuovamente, da cui gli utenti possono trascinarli nell'area di progettazione preconfigurata.</span><span class="sxs-lookup"><span data-stu-id="07bcb-104">These custom templates can be made available in the **Toolbox** on the [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] or from a rehosted designer, from which users can drag them onto the preconfigured design surface.</span></span> [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]<span data-ttu-id="07bcb-105">viene fornito con ottimi esempi di tali modelli: il [Progettazione modelli SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) e [progettazione del modello ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) nel [progettazioni delle attività di messaggistica](/visualstudio/workflow-designer/messaging-activity-designers) categoria.</span><span class="sxs-lookup"><span data-stu-id="07bcb-105"> ships with good examples of such templates: the [SendAndReceiveReply Template Designer](/visualstudio/workflow-designer/sendandreceivereply-template-designer) and the [ReceiveAndSendReply Template Designer](/visualstudio/workflow-designer/receiveandsendreply-template-designer) in the [Messaging Activity Designers](/visualstudio/workflow-designer/messaging-activity-designers) category.</span></span>  
   
- Nella prima procedura di questo argomento viene descritto come creare un modello di attività personalizzato per un'attività **Delay**, mentre nella seconda procedura viene descritto brevemente come renderlo disponibile in [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] per verificare che il modello personalizzato funzioni.  
+ <span data-ttu-id="07bcb-106">La prima procedura in questo argomento viene descritto come creare un modello di attività personalizzata per un **ritardo** attività mentre la seconda procedura viene descritto brevemente come renderlo disponibile in un [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] per verificare che il modello personalizzato funzioni.</span><span class="sxs-lookup"><span data-stu-id="07bcb-106">The first procedure in this topic describes how to create a custom activity template for a **Delay** activity and the second procedure describes briefly how to make it available in a [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] to verify that the custom template works.</span></span>  
   
- I modelli di attività personalizzati devono implementare l'oggetto <xref:System.Activities.Presentation.IActivityTemplateFactory>.L'interfaccia dispone di un singolo metodo <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> con il quale è possibile creare e configurare le istanze dell'attività utilizzate nel modello.  
+ <span data-ttu-id="07bcb-107">I modelli di attività personalizzati devono implementare l'oggetto <xref:System.Activities.Presentation.IActivityTemplateFactory>.</span><span class="sxs-lookup"><span data-stu-id="07bcb-107">Custom activity templates must implement the <xref:System.Activities.Presentation.IActivityTemplateFactory>.</span></span> <span data-ttu-id="07bcb-108">L'interfaccia dispone di un singolo metodo <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> con il quale è possibile creare e configurare le istanze dell'attività usate nel modello.</span><span class="sxs-lookup"><span data-stu-id="07bcb-108">The interface has a single <xref:System.Activities.Presentation.IActivityTemplateFactory.Create%2A> method with which you can create and configure the activity instances used in the template.</span></span>  
   
-### Per creare un modello per l'attività Delay  
+### <a name="to-create-a-template-for-the-delay-activity"></a><span data-ttu-id="07bcb-109">Per creare un modello per l'attività Delay</span><span class="sxs-lookup"><span data-stu-id="07bcb-109">To create a template for the Delay activity</span></span>  
   
-1.  Avviare [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="07bcb-110">Avviare [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="07bcb-110">Start [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Scegliere **Nuovo** dal menu **File** e quindi selezionare **Progetto**.  
+2.  <span data-ttu-id="07bcb-111">Nel **File** dal menu **New**, quindi selezionare **progetto**.</span><span class="sxs-lookup"><span data-stu-id="07bcb-111">On the **File** menu, point to **New**, and then select **Project**.</span></span>  
   
-     Verrà visualizzata la finestra di dialogo **Nuovo progetto**.  
+     <span data-ttu-id="07bcb-112">Verrà visualizzata la finestra di dialogo **Nuovo progetto** .</span><span class="sxs-lookup"><span data-stu-id="07bcb-112">The **New Project** dialog box opens.</span></span>  
   
-3.  Nel riquadro **Tipi progetto** selezionare **Flusso di lavoro** dal gruppo di progetti **Visual C\#** o **Visual Basic** a seconda del linguaggio preferito.  
+3.  <span data-ttu-id="07bcb-113">Nel **tipi di progetto** riquadro, selezionare **flusso di lavoro** da uno di **Visual c#** progetti o **Visual Basic** raggruppamenti in base il preferenze della lingua.</span><span class="sxs-lookup"><span data-stu-id="07bcb-113">In the **Project Types** pane, select **Workflow** from either the **Visual C#** projects or **Visual Basic** groupings depending on your language preference.</span></span>  
   
-4.  Nel riquadro **Modelli** selezionare **Libreria attività**.  
+4.  <span data-ttu-id="07bcb-114">Nel **modelli** riquadro, selezionare **libreria attività**.</span><span class="sxs-lookup"><span data-stu-id="07bcb-114">In the **Templates** pane, select **Activity Library**.</span></span>  
   
-5.  Nella casella **Nome** immettere `DelayActivityTemplate`.  
+5.  <span data-ttu-id="07bcb-115">Nel **nome** immettere `DelayActivityTemplate`.</span><span class="sxs-lookup"><span data-stu-id="07bcb-115">In the **Name** box, enter `DelayActivityTemplate`.</span></span>  
   
-6.  Accettare le impostazioni predefinite nelle caselle di testo **Percorso** e **Nome soluzione**, quindi fare clic su **OK**.  
+6.  <span data-ttu-id="07bcb-116">Accettare le impostazioni predefinite di **percorso** e **Nome soluzione** caselle di testo e quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="07bcb-116">Accept the defaults in the **Location** and **Solution name** text boxes, and then click **OK**.</span></span>  
   
-7.  Fare clic con il pulsante destro del mouse sulla directory Riferimenti del progetto DelayActivityTemplate in **Esplora soluzioni** e scegliere **Aggiungi riferimento** per aprire la finestra di dialogo corrispondente.  
+7.  <span data-ttu-id="07bcb-117">Fare clic sulla directory riferimenti del progetto DelayActivityTemplate in **Esplora** e scegliere **Aggiungi riferimento** per aprire la **Aggiungi riferimento** la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="07bcb-117">Right-click the References directory of the DelayActivityTemplate project in **Solution Explorer** and choose **Add Reference** to open the **Add Reference** dialog box.</span></span>  
   
-8.  Andare alla scheda **.NET** e selezionare **PresentationFramework** dalla colonna **Nome componente** a sinistra e fare clic su **OK** per aggiungere un riferimento al file PresentationFramework.dll.  
+8.  <span data-ttu-id="07bcb-118">Passare al **.NET** e selezionare **PresentationFramework** dal **nome componente** colonna a sinistra e fare clic su **OK** per aggiungere un riferimento al file PresentationFramework.dll.</span><span class="sxs-lookup"><span data-stu-id="07bcb-118">Go to the **.NET** tab and select **PresentationFramework** from the **Component Name** column on the left and click **OK** to add a reference to the PresentationFramework.dll file.</span></span>  
   
-9. Ripetere questa procedura per aggiungere riferimenti ai file System.Activities.Presentation.dll e WindowsBase.dll.  
+9. <span data-ttu-id="07bcb-119">Ripetere questa procedura per aggiungere riferimenti ai file System.Activities.Presentation.dll e WindowsBase.dll.</span><span class="sxs-lookup"><span data-stu-id="07bcb-119">Repeat this procedure to add references to the System.Activities.Presentation.dll and the WindowsBase.dll files.</span></span>  
   
-10. Fare clic con il pulsante destro del mouse sul progetto DelayActivityTemplate in **Esplora soluzioni**, scegliere **Aggiungi**, quindi fare clic su **Nuovo elemento** per aprire la finestra di dialogo **Aggiungi nuovo elemento**.  
+10. <span data-ttu-id="07bcb-120">Fare clic sul progetto DelayActivityTemplate in **Esplora** e scegliere **Aggiungi** e quindi **nuovo elemento** per aprire la **Aggiungi nuovo elemento**la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="07bcb-120">Right-click the DelayActivityTemplate project in **Solution Explorer** and choose **Add** and then **New Item** to open the **Add New Item** dialog box.</span></span>  
   
-11. Selezionare il modello **Class**, denominarlo MyDelayTemplate e quindi fare clic su **OK**.  
+11. <span data-ttu-id="07bcb-121">Selezionare il **classe** modello, denominarlo MyDelayTemplate e quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="07bcb-121">Select the **Class** template, name it MyDelayTemplate, and then click **OK**.</span></span>  
   
-12. Aprire il file MyDelayTemplate.cs e aggiungere le istruzioni seguenti.  
+12. <span data-ttu-id="07bcb-122">Aprire il file MyDelayTemplate.cs e aggiungere le istruzioni seguenti.</span><span class="sxs-lookup"><span data-stu-id="07bcb-122">Open the MyDelayTemplate.cs file and add the following statements.</span></span>  
   
     ```  
-  
     //Namespaces added  
     using System.Activities;  
     using System.Activities.Statements;  
     using System.Activities.Presentation;  
     using System.Windows;  
-  
     ```  
   
-13. Implementare <xref:System.Activities.Presentation.IActivityTemplateFactory> con la classe `MyDelayActivity` con il codice seguente.In questo modo viene configurata una durata del ritardo di 10 secondi.  
+13. <span data-ttu-id="07bcb-123">Implementare <xref:System.Activities.Presentation.IActivityTemplateFactory> con la classe `MyDelayActivity` con il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="07bcb-123">Implement the <xref:System.Activities.Presentation.IActivityTemplateFactory> with the `MyDelayActivity` class with the following code.</span></span> <span data-ttu-id="07bcb-124">In questo modo viene configurata una durata del ritardo di 10 secondi.</span><span class="sxs-lookup"><span data-stu-id="07bcb-124">This configures the delay to have a duration of 10 seconds.</span></span>  
   
     ```  
-  
     public sealed class MyDelayActivity : IActivityTemplateFactory  
     {  
         public Activity Create(System.Windows.DependencyObject target)  
@@ -75,36 +76,34 @@ I modelli di attività personalizzati vengono utilizzati per personalizzare la c
             };  
         }  
     }  
-  
     ```  
   
-14. Selezionare **Compila soluzione** dal menu **Compila** per generare il file DelayActivityTemplate.dll.  
+14. <span data-ttu-id="07bcb-125">Selezionare **Compila soluzione** dal **compilare** menu per generare il file DelayActivityTemplate.dll.</span><span class="sxs-lookup"><span data-stu-id="07bcb-125">Select **Build Solution** from the **Build** menu to generate the DelayActivityTemplate.dll file.</span></span>  
   
-### Per rendere disponibile il modello in Progettazione flussi di lavoro  
+### <a name="to-make-the-template-available-in-a-workflow-designer"></a><span data-ttu-id="07bcb-126">Per rendere disponibile il modello in Progettazione flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="07bcb-126">To make the template available in a Workflow Designer</span></span>  
   
-1.  Fare clic con il pulsante destro del mouse sulla soluzione DelayActivityTemplate in **Esplora soluzioni**, scegliere **Aggiungi**, quindi fare clic su **Nuovo progetto** per aprire la finestra di dialogo **Aggiungi nuovo progetto**.  
+1.  <span data-ttu-id="07bcb-127">Pulsante destro del mouse sulla soluzione DelayActivityTemplate in **Esplora** e scegliere **Aggiungi** e quindi **nuovo progetto** per aprire la **Aggiungi nuovo progetto** la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="07bcb-127">Right-click the DelayActivityTemplate solution in **Solution Explorer** and choose **Add** and then **New Project** to open the **Add New Project** dialog box.</span></span>  
   
-2.  Selezionare il modello **Applicazione console flusso di lavoro**, denominarlo `CustomActivityTemplateApp`, quindi fare clic su **OK**.  
+2.  <span data-ttu-id="07bcb-128">Selezionare il **applicazione Console flusso di lavoro** modello, il nome `CustomActivityTemplateApp`, quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="07bcb-128">Select the **Workflow Console Application** template, name it `CustomActivityTemplateApp`, and then click **OK**.</span></span>  
   
-3.  Fare clic con il pulsante destro del mouse sulla directory Riferimenti del progetto CustomActivityTemplateApp in **Esplora soluzioni** e scegliere **Aggiungi riferimento** per aprire la finestra di dialogo corrispondente.  
+3.  <span data-ttu-id="07bcb-129">Fare clic sulla directory riferimenti del progetto CustomActivityTemplateApp in **Esplora** e scegliere **Aggiungi riferimento** per aprire la **Aggiungi riferimento** finestra di dialogo casella.</span><span class="sxs-lookup"><span data-stu-id="07bcb-129">Right-click the References directory of the CustomActivityTemplateApp project in **Solution Explorer** and choose **Add Reference** to open the **Add Reference** dialog box.</span></span>  
   
-4.  Andare alla scheda **Progetti** e selezionare **DelayActivityTemplate** dalla colonna **Nome progetto** a sinistra e fare clic su **OK** per aggiungere un riferimento al file DelayActivityTemplate.dll creato nella prima procedura.  
+4.  <span data-ttu-id="07bcb-130">Passare al **progetti** e selezionare **DelayActivityTemplate** dal **nome progetto** colonna a sinistra e fare clic su **OK** per aggiungere un Fare riferimento al file DelayActivityTemplate.dll creato nella prima procedura.</span><span class="sxs-lookup"><span data-stu-id="07bcb-130">Go to the **Projects** tab and select **DelayActivityTemplate** from the **Project Name** column on the left and click **OK** to add a reference to the DelayActivityTemplate.dll file that you created in the first procedure.</span></span>  
   
-5.  Fare clic con il pulsante destro del mouse sul progetto CustomActivityTemplateApp in**Esplora soluzioni** e scegliere **Compila** per compilare l'applicazione.  
+5.  <span data-ttu-id="07bcb-131">Pulsante destro del mouse sul progetto CustomActivityTemplateApp in **Esplora** e scegliere **compilare** per compilare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="07bcb-131">Right-click the CustomActivityTemplateApp project in **Solution Explorer** and choose **Build** to compile the application.</span></span>  
   
-6.  Fare clic con il pulsante destro del mouse sul progetto CustomActivityTemplateApp in **Esplora soluzioni** e scegliere **Imposta come progetto di avvio**.  
+6.  <span data-ttu-id="07bcb-132">Pulsante destro del mouse sul progetto CustomActivityTemplateApp in **Esplora** e scegliere **imposta come progetto di avvio**.</span><span class="sxs-lookup"><span data-stu-id="07bcb-132">Right-click the CustomActivityTemplateApp project in **Solution Explorer** and choose **Set as Startup Project**.</span></span>  
   
-7.  Selezionare **Avvia senza eseguire debug** dal menu **Debug** e premere qualsiasi tasto per continuare quando richiesto nella finestra di cmd.exe.  
+7.  <span data-ttu-id="07bcb-133">Selezionare **Avvia senza eseguire debug** dal **Debug** menu e premere un tasto qualsiasi per continuare quando richiesto nella finestra di cmd.exe.</span><span class="sxs-lookup"><span data-stu-id="07bcb-133">Select **Start Without Debugging** from the **Debug** menu and press any key to continue when prompted from the cmd.exe window.</span></span>  
   
-8.  Aprire il file Workflow1.xaml e quindi **Casella degli strumenti**.  
+8.  <span data-ttu-id="07bcb-134">Aprire il file Workflow1 XAML e il **della casella degli strumenti**.</span><span class="sxs-lookup"><span data-stu-id="07bcb-134">Open the Workflow1.xaml file and open the **Toolbox**.</span></span>  
   
-9. Individuare il modello **MyDelayActivity** nella categoria **DelayActivityTemplate**.Trascinarlo nell'area di progettazione.Nella finestra **Proprietà** verificare che la proprietà `Duration` sia impostata su 10 secondi.  
+9. <span data-ttu-id="07bcb-135">Individuare il **MyDelayActivity** modello il **DelayActivityTemplate** categoria.</span><span class="sxs-lookup"><span data-stu-id="07bcb-135">Locate the **MyDelayActivity** template in the **DelayActivityTemplate** category.</span></span> <span data-ttu-id="07bcb-136">Trascinarlo nell'area di progettazione.</span><span class="sxs-lookup"><span data-stu-id="07bcb-136">Drag it onto the design surface.</span></span> <span data-ttu-id="07bcb-137">Confermare il **proprietà** finestra che la `Duration` proprietà è stata impostata su 10 secondi.</span><span class="sxs-lookup"><span data-stu-id="07bcb-137">Confirm in the **Properties** window that the `Duration` property has been set to 10 seconds.</span></span>  
   
-## Esempio  
- Il file MyDelayActivity.cs deve contenere il codice seguente.  
+## <a name="example"></a><span data-ttu-id="07bcb-138">Esempio</span><span class="sxs-lookup"><span data-stu-id="07bcb-138">Example</span></span>  
+ <span data-ttu-id="07bcb-139">Il file MyDelayActivity.cs deve contenere il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="07bcb-139">The MyDelayActivity.cs file should contain the following code.</span></span>  
   
 ```  
-  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -131,9 +130,8 @@ namespace DelayActivityTemplate
         }  
     }  
 }  
-  
 ```  
   
-## Vedere anche  
- <xref:System.Activities.Presentation.IActivityTemplateFactory>   
- [Personalizzazione della fase di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation//customizing-the-workflow-design-experience.md)
+## <a name="see-also"></a><span data-ttu-id="07bcb-140">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="07bcb-140">See Also</span></span>  
+ <xref:System.Activities.Presentation.IActivityTemplateFactory>  
+ [<span data-ttu-id="07bcb-141">Personalizzazione della fase di progettazione del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="07bcb-141">Customizing the Workflow Design Experience</span></span>](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

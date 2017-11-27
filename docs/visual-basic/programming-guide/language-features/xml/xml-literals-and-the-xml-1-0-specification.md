@@ -1,60 +1,42 @@
 ---
-title: Valori letterali XML e XML 1.0 Specification (Visual Basic) | Documenti di Microsoft
+title: Valori letterali XML e specifica XML 1.0 (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- XML literals [Visual Basic], XML 1.0 specification
+helpviewer_keywords: XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f6e52a99625d5e6f0ed7db439e1e633c3b0bb0a7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: c020d94e09eb255ac03df15b519b3dfa78e8e367
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Valori letterali XML e specifica XML 1.0 (Visual Basic)
-Sintassi del valore letterale XML in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] supporta la maggior parte della specifica Extensible Markup Language (XML) 1.0. Per informazioni dettagliate sulla specifica XML 1.0, vedere [Extensible Markup Language (XML) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) sul sito Web W3C.  
+# <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a><span data-ttu-id="6d8e3-102">Valori letterali XML e specifica XML 1.0 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6d8e3-102">XML Literals and the XML 1.0 Specification (Visual Basic)</span></span>
+<span data-ttu-id="6d8e3-103">Sintassi del valore letterale XML in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] supporta la maggior parte della specifica Extensible Markup Language (XML) 1.0.</span><span class="sxs-lookup"><span data-stu-id="6d8e3-103">The XML literal syntax in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] supports most of the Extensible Markup Language (XML) 1.0 specification.</span></span> <span data-ttu-id="6d8e3-104">Per informazioni dettagliate sulla specifica XML 1.0, vedere [Extensible Markup Language (XML) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) nel sito Web W3C.</span><span class="sxs-lookup"><span data-stu-id="6d8e3-104">For details about the XML 1.0 specification, see [Extensible Markup Language (XML) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) on the W3C Web site.</span></span>  
   
-## <a name="what-visual-basic-does-not-support"></a>Ciò che non supporta Visual Basic  
+## <a name="what-visual-basic-does-not-support"></a><span data-ttu-id="6d8e3-105">Ciò che non supporta Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6d8e3-105">What Visual Basic Does Not Support</span></span>  
   
--   Un valore letterale XML non può contenere una definizione di tipo di documento (DTD).  
+-   <span data-ttu-id="6d8e3-106">Un valore letterale XML non può contenere una definizione di tipo di documento (DTD).</span><span class="sxs-lookup"><span data-stu-id="6d8e3-106">An XML literal cannot contain a document type definition (DTD).</span></span>  
   
--   Un valore letterale documento XML deve iniziare con una dichiarazione del documento XML.  
+-   <span data-ttu-id="6d8e3-107">Un valore letterale documento XML deve iniziare con una dichiarazione di documento XML.</span><span class="sxs-lookup"><span data-stu-id="6d8e3-107">An XML document literal must start with an XML document declaration.</span></span>  
   
--   Un valore letterale XML non può contenere più di 65.535 caratteri in un'unica riga.  
+-   <span data-ttu-id="6d8e3-108">Un valore letterale XML non può contenere più di 65.535 caratteri su una riga.</span><span class="sxs-lookup"><span data-stu-id="6d8e3-108">An XML literal cannot contain more than 65,535 characters on one line.</span></span>  
   
--   Prefissi dello spazio dei nomi XML, i nomi degli elementi e i nomi di attributo non possono contenere più di 1.024 caratteri.  
+-   <span data-ttu-id="6d8e3-109">Prefissi di spazio dei nomi XML, i nomi degli elementi e i nomi di attributo non possono contenere più di 1.024 caratteri.</span><span class="sxs-lookup"><span data-stu-id="6d8e3-109">XML namespace prefixes, element names, and attribute names cannot contain more than 1,024 characters.</span></span>  
   
-## <a name="extra-features-that-visual-basic-supports"></a>Funzionalità aggiuntive supportate da Visual Basic  
+## <a name="extra-features-that-visual-basic-supports"></a><span data-ttu-id="6d8e3-110">Funzionalità aggiuntive che supporta Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6d8e3-110">Extra Features That Visual Basic Supports</span></span>  
   
--   La sintassi delle espressioni incorporate nei valori letterali documento ed elemento consentita non è un XML valido.  
+-   <span data-ttu-id="6d8e3-111">La sintassi di espressione incorporata è consentita nei valori letterali di documento e l'elemento non è un XML valido.</span><span class="sxs-lookup"><span data-stu-id="6d8e3-111">The embedded expression syntax allowed in document and element literals is not valid XML.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Creazione di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [Valore letterale documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)   
- [Valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+## <a name="see-also"></a><span data-ttu-id="6d8e3-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6d8e3-112">See Also</span></span>  
+ [<span data-ttu-id="6d8e3-113">Creazione di XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6d8e3-113">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [<span data-ttu-id="6d8e3-114">Valore letterale di documento XML</span><span class="sxs-lookup"><span data-stu-id="6d8e3-114">XML Document Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
+ [<span data-ttu-id="6d8e3-115">Valore letterale elemento XML</span><span class="sxs-lookup"><span data-stu-id="6d8e3-115">XML Element Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

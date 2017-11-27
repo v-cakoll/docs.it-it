@@ -1,65 +1,67 @@
 ---
-title: "Stili e modelli di RepeatButton | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], RepeatButton"
-  - "parti [WPF], RepeatButton"
-  - "RepeatButton [WPF], stili e modelli"
-  - "stati [WPF], RepeatButton"
-  - "stili [WPF], RepeatButton"
-  - "modelli [WPF], RepeatButton"
+title: Stili e modelli di RepeatButton
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RepeatButton [WPF], styles and templates
+- styles [WPF], RepeatButton
+- templates [WPF], RepeatButton
+- parts [WPF], RepeatButton
+- ControlTemplate [WPF], RepeatButton
+- states [WPF], RepeatButton
 ms.assetid: fd340743-f44f-4990-9077-085301469670
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4895757e909d5e15fd6540b19e1eeec414e1f4e7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Stili e modelli di RepeatButton
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.Primitives.RepeatButton>.  È possibile modificare l'oggetto <xref:System.Windows.Controls.ControlTemplate> predefinito per conferire al controllo un aspetto univoco.  Per ulteriori informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="repeatbutton-syles-and-templates"></a><span data-ttu-id="0aafb-102">Stili e modelli di RepeatButton</span><span class="sxs-lookup"><span data-stu-id="0aafb-102">RepeatButton Syles and Templates</span></span>
+<span data-ttu-id="0aafb-103">In questo argomento vengono descritti gli stili e modelli per il <xref:System.Windows.Controls.Primitives.RepeatButton> controllo.</span><span class="sxs-lookup"><span data-stu-id="0aafb-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.Primitives.RepeatButton> control.</span></span> <span data-ttu-id="0aafb-104">È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco.</span><span class="sxs-lookup"><span data-stu-id="0aafb-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="0aafb-105">Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="0aafb-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Parti del controllo RepeatButton  
- Il controllo <xref:System.Windows.Controls.Primitives.RepeatButton> non include parti denominate.  
+## <a name="repeatbutton-parts"></a><span data-ttu-id="0aafb-106">Parti di RepeatButton</span><span class="sxs-lookup"><span data-stu-id="0aafb-106">RepeatButton Parts</span></span>  
+ <span data-ttu-id="0aafb-107">Il <xref:System.Windows.Controls.Primitives.RepeatButton> controllo non dispone di parti denominate.</span><span class="sxs-lookup"><span data-stu-id="0aafb-107">The <xref:System.Windows.Controls.Primitives.RepeatButton> control does not have any named parts.</span></span>  
   
-## Stati del controllo RepeatButton  
- Nella tabella seguente sono elencati gli stati visivi per il controllo <xref:System.Windows.Controls.Primitives.RepeatButton>.  
+## <a name="repeatbutton-states"></a><span data-ttu-id="0aafb-108">Stati di RepeatButton</span><span class="sxs-lookup"><span data-stu-id="0aafb-108">RepeatButton States</span></span>  
+ <span data-ttu-id="0aafb-109">Nella tabella seguente sono elencati gli stati visivi per la <xref:System.Windows.Controls.Primitives.RepeatButton> controllo.</span><span class="sxs-lookup"><span data-stu-id="0aafb-109">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.RepeatButton> control.</span></span>  
   
-||||  
+|<span data-ttu-id="0aafb-110">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="0aafb-110">VisualState Name</span></span>|<span data-ttu-id="0aafb-111">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="0aafb-111">VisualStateGroup Name</span></span>|<span data-ttu-id="0aafb-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0aafb-112">Description</span></span>|  
 |-|-|-|  
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
-|MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
-|Pressed|CommonStates|Il controllo viene premuto.|  
-|Disabled|CommonStates|Il controllo è disabilitato.|  
-|Focused|FocusStates|Il controllo ha lo stato attivo.|  
-|Unfocused|FocusStates|Il controllo non ha lo stato attivo.|  
-|Valid|ValidationStates|Il controllo utilizza la classe <xref:System.Windows.Controls.Validation> e la proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `false`.|  
-|InvalidFocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo non ha lo stato attivo.|  
+|<span data-ttu-id="0aafb-113">Normale</span><span class="sxs-lookup"><span data-stu-id="0aafb-113">Normal</span></span>|<span data-ttu-id="0aafb-114">CommonStates</span><span class="sxs-lookup"><span data-stu-id="0aafb-114">CommonStates</span></span>|<span data-ttu-id="0aafb-115">Lo stato predefinito.</span><span class="sxs-lookup"><span data-stu-id="0aafb-115">The default state.</span></span>|  
+|<span data-ttu-id="0aafb-116">MouseOver</span><span class="sxs-lookup"><span data-stu-id="0aafb-116">MouseOver</span></span>|<span data-ttu-id="0aafb-117">CommonStates</span><span class="sxs-lookup"><span data-stu-id="0aafb-117">CommonStates</span></span>|<span data-ttu-id="0aafb-118">Il puntatore del mouse è posizionato sul controllo.</span><span class="sxs-lookup"><span data-stu-id="0aafb-118">The mouse pointer is positioned over the control.</span></span>|  
+|<span data-ttu-id="0aafb-119">Premuto</span><span class="sxs-lookup"><span data-stu-id="0aafb-119">Pressed</span></span>|<span data-ttu-id="0aafb-120">CommonStates</span><span class="sxs-lookup"><span data-stu-id="0aafb-120">CommonStates</span></span>|<span data-ttu-id="0aafb-121">Il controllo è premuto.</span><span class="sxs-lookup"><span data-stu-id="0aafb-121">The control is pressed.</span></span>|  
+|<span data-ttu-id="0aafb-122">Disabilitato</span><span class="sxs-lookup"><span data-stu-id="0aafb-122">Disabled</span></span>|<span data-ttu-id="0aafb-123">CommonStates</span><span class="sxs-lookup"><span data-stu-id="0aafb-123">CommonStates</span></span>|<span data-ttu-id="0aafb-124">Il controllo è disabilitato.</span><span class="sxs-lookup"><span data-stu-id="0aafb-124">The control is disabled.</span></span>|  
+|<span data-ttu-id="0aafb-125">Con stato attivo</span><span class="sxs-lookup"><span data-stu-id="0aafb-125">Focused</span></span>|<span data-ttu-id="0aafb-126">FocusStates</span><span class="sxs-lookup"><span data-stu-id="0aafb-126">FocusStates</span></span>|<span data-ttu-id="0aafb-127">Il controllo ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="0aafb-127">The control has focus.</span></span>|  
+|<span data-ttu-id="0aafb-128">Con stato non attivo</span><span class="sxs-lookup"><span data-stu-id="0aafb-128">Unfocused</span></span>|<span data-ttu-id="0aafb-129">FocusStates</span><span class="sxs-lookup"><span data-stu-id="0aafb-129">FocusStates</span></span>|<span data-ttu-id="0aafb-130">Il controllo non ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="0aafb-130">The control does not have focus.</span></span>|  
+|<span data-ttu-id="0aafb-131">Valido</span><span class="sxs-lookup"><span data-stu-id="0aafb-131">Valid</span></span>|<span data-ttu-id="0aafb-132">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="0aafb-132">ValidationStates</span></span>|<span data-ttu-id="0aafb-133">Il controllo Usa il <xref:System.Windows.Controls.Validation> classe e <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.</span><span class="sxs-lookup"><span data-stu-id="0aafb-133">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="0aafb-134">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="0aafb-134">InvalidFocused</span></span>|<span data-ttu-id="0aafb-135">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="0aafb-135">ValidationStates</span></span>|<span data-ttu-id="0aafb-136">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="0aafb-136">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="0aafb-137">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="0aafb-137">InvalidUnfocused</span></span>|<span data-ttu-id="0aafb-138">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="0aafb-138">ValidationStates</span></span>|<span data-ttu-id="0aafb-139">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.</span><span class="sxs-lookup"><span data-stu-id="0aafb-139">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Esempio di ControlTemplate del controllo RepeatButton  
- Nell'esempio seguente viene illustrato come definire un oggetto <xref:System.Windows.Controls.ControlTemplate> per il controllo <xref:System.Windows.Controls.Primitives.RepeatButton>.  
+## <a name="repeatbutton-controltemplate-example"></a><span data-ttu-id="0aafb-140">Esempio di ControlTemplate RepeatButton</span><span class="sxs-lookup"><span data-stu-id="0aafb-140">RepeatButton ControlTemplate Example</span></span>  
+ <span data-ttu-id="0aafb-141">Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.Primitives.RepeatButton> controllo.</span><span class="sxs-lookup"><span data-stu-id="0aafb-141">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.Primitives.RepeatButton> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#RepeatButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollbar.xaml#repeatbutton)]  
+ [!code-xaml[ControlTemplateExamples#RepeatButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollbar.xaml#repeatbutton)]  
   
- Nell'esempio precedente vengono utilizzate una o più delle risorse seguenti.  
+ <span data-ttu-id="0aafb-142">L'esempio precedente usa una o più delle seguenti risorse.</span><span class="sxs-lookup"><span data-stu-id="0aafb-142">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Per l'esempio completo, vedere          [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="0aafb-143">Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="0aafb-143">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="0aafb-144">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0aafb-144">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="0aafb-145">Stili e modelli di Control</span><span class="sxs-lookup"><span data-stu-id="0aafb-145">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="0aafb-146">Personalizzazione dei controlli</span><span class="sxs-lookup"><span data-stu-id="0aafb-146">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="0aafb-147">Applicazione di stili e modelli</span><span class="sxs-lookup"><span data-stu-id="0aafb-147">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="0aafb-148">Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="0aafb-148">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

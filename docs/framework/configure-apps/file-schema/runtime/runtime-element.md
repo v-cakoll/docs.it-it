@@ -1,143 +1,104 @@
 ---
-title: "Elemento &lt;runtime&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<runtime> (elemento)"
-  - "tag contenitore, <runtime> (elemento)"
-  - "runtime (elemento)"
+title: '&lt;runtime&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime
+helpviewer_keywords:
+- <runtime> element
+- runtime element
+- container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-caps.latest.revision: 70
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 62
+caps.latest.revision: "70"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: c4c64de42f82590e1e8dc24afa46f66c3efb35b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;runtime&gt;
-Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.  
+# <a name="ltruntimegt-element"></a><span data-ttu-id="5c847-102">&lt;runtime&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="5c847-102">&lt;runtime&gt; Element</span></span>
+<span data-ttu-id="5c847-103">Fornisce informazioni utilizzate da common language runtime per configurare le applicazioni.</span><span class="sxs-lookup"><span data-stu-id="5c847-103">Provides information used by the common language runtime to configure applications.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="5c847-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="5c847-104">\<configuration></span></span>  
+<span data-ttu-id="5c847-105">\<runtime ></span><span class="sxs-lookup"><span data-stu-id="5c847-105">\<runtime></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="5c847-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5c847-106">Syntax</span></span>  
+  
+```xml  
 <runtime>  
 </runtime>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5c847-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="5c847-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="5c847-108">Nelle sezioni seguenti vengono descritti gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="5c847-108">The following sections describe child elements and parent elements.</span></span>  
   
-### Attributi  
- Nessuno.  
+### <a name="attributes"></a><span data-ttu-id="5c847-109">Attributi</span><span class="sxs-lookup"><span data-stu-id="5c847-109">Attributes</span></span>  
+ <span data-ttu-id="5c847-110">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="5c847-110">None.</span></span>  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="5c847-111">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="5c847-111">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<alwaysFlowImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|Specifica che il flusso dell'identità Windows passa sempre attraverso punti asincroni, indipendentemente dal modo in cui è stata ottenuta la rappresentazione.|  
-|[\<appDomainManagerAssembly\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)|Specifica l'assembly che fornisce il gestore del dominio di applicazione predefinito nel processo.|  
-|[\<appDomainManagerType\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)|Specifica il tipo che funge da gestore del dominio di applicazione predefinito.|  
-|[\<appDomainResourceMonitoring\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|Indica al runtime di raccogliere statistiche su tutti i domini di applicazione nel processo per la durata del processo.|  
-|[\<assemblyBinding\>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
-|[\<bypassTrustedAppStrongNames\>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|Specifica se la verifica dei nomi sicuri per gli assembly attendibili deve essere ignorata.|  
-|[\<CompatSortNLSVersion\>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Specifica che nel runtime deve essere utilizzato il comportamento di ordinamento legacy quando si eseguono i confronti di stringhe.|  
-|[\<developmentMode\>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Specifica se nell'ambiente di esecuzione viene effettuata una ricerca degli assembly nelle directory definite dalla variabile di ambiente DEVPATH.|  
-|[\<disableCachingBindingFailures\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Specifica se è disabilitata la memorizzazione nella cache degli errori di associazione, che in .NET Framework versione 2.0 è attivata per impostazione predefinita.|  
-|[\<disableCommitThreadStack\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Specifica se viene eseguito il commit dello stack di thread completo all'avvio di un thread.|  
-|[\<disableFusionUpdatesFromADManager\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Specifica se il comportamento predefinito, ovvero consentire all'host di runtime di eseguire l'override delle impostazioni di configurazione di un dominio di applicazione, è disabilitato.|  
-|[\<enforceFIPSPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/enforcefipspolicy-element.md)|Specifica se imporre un requisito di configurazione del computer per cui gli algoritmi di crittografia devono essere conformi agli standard FIPS \(Federal Information Processing Standards\).|  
-|[\<etwEnable\>](../../../../../docs/framework/configure-apps/file-schema/runtime/etwenable-element.md)|Specifica se abilitare la traccia eventi per Windows \(ETW\) per gli eventi Common Language Runtime.|  
-|[\<forcePerformanceCounterUniqueSharedMemoryReads\>](../../../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)|Indica se PerfCounter.dll utilizza l'impostazione del registro di sistema di CategoryOptions nell'applicazione .NET Framework versione 1.1 per determinare se caricare dati del contatore delle prestazioni dalla memoria condivisa specifica della categoria o dalla memoria globale.|  
-|[\<gcAllowVeryLargeObjects\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)|Sulle piattaforme a 64 bit, consente alle matrici che hanno dimensione totale maggiore di 2 GB \(GB\).|  
-|[\<gcConcurrent\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|Specifica se in Common Language Runtime viene eseguita la procedura di Garbage Collection in modo concorrente.|  
-|[\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)|Specifica se la Garbage Collection supporta più gruppi di CPU.|  
-|[\<gcServer\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)|Specifica se in Common Language Runtime viene eseguita la Garbage Collection per server.|  
-|[\<generatePublisherEvidence\>](../../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)|Specifica se in fase di esecuzione vengono utilizzati criteri di sicurezza dall'accesso di codice dell'editore.|  
-|[\<legacyCorruptedStateExceptionsPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element.md)|Specifica se il runtime consente al codice gestito di intercettare violazioni di accesso e altre eccezioni di stato danneggiato.|  
-|[\<legacyImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)|Specifica che il flusso dell'identità Windows non passa attraverso punti asincroni, indipendentemente dalle impostazioni di flusso per il contesto di esecuzione nel thread corrente.|  
-|[\<loadFromRemoteSources\>](../../../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)|Specifica se gli assembly provenienti da origini remote vengono caricati come assembly con attendibilità totale.|  
-|[\<NetFx40\_LegacySecurityPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|Specifica se il runtime utilizza criteri legacy di sicurezza dall'accesso di codice \(CAS, Code Access Security\).|  
-|[\<NetFx40\_PInvokeStackResilience\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|Specifica se il runtime corregge automaticamente dichiarazioni platform invoke errate in fase di esecuzione, al costo di transizioni più lente tra codice gestito e non gestito.|  
-|[\<NetFx45\_CultureAwareComparerGetHashCode\_LongStrings\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Specifica se il runtime utilizza una quantità di memoria fissa per calcolare i codici hash per il metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName>.|  
-|[\<PreferComInsteadOfRemoting\>](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|Specifica che il runtime utilizzerà l'interoperabilità COM anziché i servizi remoti fra i limiti dei domini di applicazione.|  
-|[\<relativeBindForResources\>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|Ottimizza le ricerche per gli assembly satellite.|  
-|[\<shadowCopyVerifyByTimeStamp\>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|Specifica se la copia shadow utilizza il comportamento di avvio predefinito introdotto in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o ripristina il comportamento di avvio di versioni precedenti di .NET Framework.|  
-|[\<supportPortability\>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti allo scopo della portabilità dell'applicazione.|  
-|[\<system.runtime.caching\>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Fornisce informazioni di configurazione per la cache oggetti in memoria predefinita.|  
-|[\<Thread\_UseAllCpuGroups\>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|Specifica se il runtime distribuisce thread gestiti in tutti i gruppi della CPU.|  
-|[\<ThrowUnobservedTaskExceptions\>](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)|Specifica se le eccezioni non gestite di attività devono far terminare un processo in esecuzione.|  
-|[\<TimeSpan\_LegacyFormatMode\>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)|Specifica se il runtime utilizza la formattazione legacy per i valori <xref:System.TimeSpan>.|  
-|[\<UseRandomizedStringHashAlgorithm\>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)|Specifica se il runtime calcola i codici hash per le stringhe in base al dominio dell'applicazione.|  
-|[\<UseSmallInternalThreadStacks\>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|Richiede che il runtime utilizzi dimensioni di stack esplicite anziché la dimensione di stack predefinita quando crea determinati thread che utilizza internamente.|  
+|<span data-ttu-id="5c847-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="5c847-112">Element</span></span>|<span data-ttu-id="5c847-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5c847-113">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="5c847-114">\<alwaysFlowImpersonationPolicy></span><span class="sxs-lookup"><span data-stu-id="5c847-114">\<alwaysFlowImpersonationPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|<span data-ttu-id="5c847-115">Specifica che l'identità di Windows passa sempre attraverso punti asincroni, indipendentemente dalla modalità di rappresentazione.</span><span class="sxs-lookup"><span data-stu-id="5c847-115">Specifies that the Windows identity always flows across asynchronous points, regardless of how impersonation was performed.</span></span>|  
+|[<span data-ttu-id="5c847-116">\<AppContextSwitchOverrides></span><span class="sxs-lookup"><span data-stu-id="5c847-116">\<AppContextSwitchOverrides></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)|<span data-ttu-id="5c847-117">Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.</span><span class="sxs-lookup"><span data-stu-id="5c847-117">Defines one or more switches used by the <xref:System.AppContext> class to provide an opt-out mechanism for new functionality.</span></span>|  
+|[<span data-ttu-id="5c847-118">\<appDomainManagerAssembly></span><span class="sxs-lookup"><span data-stu-id="5c847-118">\<appDomainManagerAssembly></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)|<span data-ttu-id="5c847-119">Specifica l'assembly che fornisce il gestore di dominio dell'applicazione per il dominio applicazione predefinito nel processo.</span><span class="sxs-lookup"><span data-stu-id="5c847-119">Specifies the assembly that provides the application domain manager for the default application domain in the process.</span></span>|  
+|[<span data-ttu-id="5c847-120">\<appDomainManagerType></span><span class="sxs-lookup"><span data-stu-id="5c847-120">\<appDomainManagerType></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)|<span data-ttu-id="5c847-121">Specifica il tipo che funge da gestore di dominio dell'applicazione per il dominio applicazione predefinito.</span><span class="sxs-lookup"><span data-stu-id="5c847-121">Specifies the type that serves as the application domain manager for the default application domain.</span></span>|  
+|[<span data-ttu-id="5c847-122">\<appDomainResourceMonitoring></span><span class="sxs-lookup"><span data-stu-id="5c847-122">\<appDomainResourceMonitoring></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|<span data-ttu-id="5c847-123">Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel processo per la durata del processo.</span><span class="sxs-lookup"><span data-stu-id="5c847-123">Instructs the runtime to collect statistics on all application domains in the process for the life of the process.</span></span>|  
+|[<span data-ttu-id="5c847-124">\<assemblyBinding></span><span class="sxs-lookup"><span data-stu-id="5c847-124">\<assemblyBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|<span data-ttu-id="5c847-125">Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.</span><span class="sxs-lookup"><span data-stu-id="5c847-125">Contains information about assembly version redirection and the locations of assemblies.</span></span>|  
+|[<span data-ttu-id="5c847-126">\<bypassTrustedAppStrongNames></span><span class="sxs-lookup"><span data-stu-id="5c847-126">\<bypassTrustedAppStrongNames></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|<span data-ttu-id="5c847-127">Specifica se la verifica del nome sicuro per gli assembly attendibili deve essere ignorata.</span><span class="sxs-lookup"><span data-stu-id="5c847-127">Specifies whether strong name verification for trusted assemblies should be bypassed.</span></span>|  
+|[<span data-ttu-id="5c847-128">\<CompatSortNLSVersion></span><span class="sxs-lookup"><span data-stu-id="5c847-128">\<CompatSortNLSVersion></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|<span data-ttu-id="5c847-129">Specifica che il runtime deve usare il comportamento di ordinamento legacy quando si eseguono confronti di stringa.</span><span class="sxs-lookup"><span data-stu-id="5c847-129">Specifies that the runtime should use legacy sorting behavior when performing string comparisons.</span></span>|  
+|[<span data-ttu-id="5c847-130">\<developmentMode></span><span class="sxs-lookup"><span data-stu-id="5c847-130">\<developmentMode></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|<span data-ttu-id="5c847-131">Specifica se il runtime cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.</span><span class="sxs-lookup"><span data-stu-id="5c847-131">Specifies whether the runtime searches for assemblies in directories specified by the DEVPATH environment variable.</span></span>|  
+|[<span data-ttu-id="5c847-132">\<disableCachingBindingFailures></span><span class="sxs-lookup"><span data-stu-id="5c847-132">\<disableCachingBindingFailures></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|<span data-ttu-id="5c847-133">Specifica se la memorizzazione nella cache di errori di associazione, ovvero il comportamento predefinito in .NET Framework versione 2.0 è disabilitato.</span><span class="sxs-lookup"><span data-stu-id="5c847-133">Specifies whether the caching of binding failures, which is the default behavior in the .NET Framework version 2.0, is disabled.</span></span>|  
+|[<span data-ttu-id="5c847-134">\<disableCommitThreadStack></span><span class="sxs-lookup"><span data-stu-id="5c847-134">\<disableCommitThreadStack></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|<span data-ttu-id="5c847-135">Specifica se viene eseguito il commit dello stack di thread completo quando viene avviato un thread.</span><span class="sxs-lookup"><span data-stu-id="5c847-135">Specifies whether the full thread stack is committed when a thread is started.</span></span>|  
+|[<span data-ttu-id="5c847-136">\<disableFusionUpdatesFromADManager></span><span class="sxs-lookup"><span data-stu-id="5c847-136">\<disableFusionUpdatesFromADManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|<span data-ttu-id="5c847-137">Specifica se è disabilitato il comportamento predefinito, ovvero consentire all'host di runtime di eseguire l'override delle impostazioni di configurazione per un dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="5c847-137">Specifies whether the default behavior, which is to allow the runtime host to override configuration settings for an application domain, is disabled.</span></span>|  
+|[<span data-ttu-id="5c847-138">\<EnableAmPmParseAdjustment></span><span class="sxs-lookup"><span data-stu-id="5c847-138">\<EnableAmPmParseAdjustment></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|<span data-ttu-id="5c847-139">Determina se i metodi di analisi di data e ora usano un set di regole di rettifica per analizzare le stringhe di data che contengono solo un indicatore di giorno, mese, ora e AM/PM.</span><span class="sxs-lookup"><span data-stu-id="5c847-139">Determines whether date and time parsing methods use an adjusted set of rules to parse date strings that contain only a day, month, hour, and AM/PM designator.</span></span>|  
+|[<span data-ttu-id="5c847-140">\<enforceFIPSPolicy></span><span class="sxs-lookup"><span data-stu-id="5c847-140">\<enforceFIPSPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/enforcefipspolicy-element.md)|<span data-ttu-id="5c847-141">Specifica se applicare un requisito di configurazione del computer che specifica che gli algoritmi di crittografia devono essere conformi a FIPS (Federal Information Processing Standards).</span><span class="sxs-lookup"><span data-stu-id="5c847-141">Specifies whether to enforce a computer configuration requirement that cryptographic algorithms must comply with the Federal Information Processing Standards (FIPS).</span></span>|  
+|[<span data-ttu-id="5c847-142">\<etwEnable></span><span class="sxs-lookup"><span data-stu-id="5c847-142">\<etwEnable></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/etwenable-element.md)|<span data-ttu-id="5c847-143">Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common Language Runtime).</span><span class="sxs-lookup"><span data-stu-id="5c847-143">Specifies whether to enable event tracing for Windows (ETW) for common language runtime events.</span></span>|  
+|[<span data-ttu-id="5c847-144">\<forcePerformanceCounterUniqueSharedMemoryReads></span><span class="sxs-lookup"><span data-stu-id="5c847-144">\<forcePerformanceCounterUniqueSharedMemoryReads></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)|<span data-ttu-id="5c847-145">Specifica se PerfCounter.dll usa l'impostazione del Registro di sistema CategoryOptions in un'applicazione di .NET Framework versione 1.1 per determinare se caricare i dati del contatore delle prestazioni dalla memoria condivisa specifica della categoria o dalla memoria globale.</span><span class="sxs-lookup"><span data-stu-id="5c847-145">Specifies whether PerfCounter.dll uses the CategoryOptions registry setting in a .NET Framework version 1.1 application to determine whether to load performance counter data from category-specific shared memory or global memory.</span></span>|  
+|[<span data-ttu-id="5c847-146">\<gcAllowVeryLargeObjects></span><span class="sxs-lookup"><span data-stu-id="5c847-146">\<gcAllowVeryLargeObjects></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)|<span data-ttu-id="5c847-147">Nelle piattaforme a 64 bit, abilita le matrici con dimensione totale maggiore di 2 gigabyte (GB).</span><span class="sxs-lookup"><span data-stu-id="5c847-147">On 64-bit platforms, enables arrays that are greater than 2 gigabytes (GB) in total size.</span></span>|  
+|[<span data-ttu-id="5c847-148">\<gcConcurrent></span><span class="sxs-lookup"><span data-stu-id="5c847-148">\<gcConcurrent></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|<span data-ttu-id="5c847-149">Specifica se common language runtime esegue garbage collection simultaneamente.</span><span class="sxs-lookup"><span data-stu-id="5c847-149">Specifies whether the common language runtime runs garbage collection concurrently.</span></span>|  
+|[<span data-ttu-id="5c847-150">\<GCCpuGroup></span><span class="sxs-lookup"><span data-stu-id="5c847-150">\<GCCpuGroup></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)|<span data-ttu-id="5c847-151">Specifica se Garbage Collection supporta più gruppi di CPU.</span><span class="sxs-lookup"><span data-stu-id="5c847-151">Specifies whether garbage collection supports multiple CPU groups.</span></span>|  
+|[<span data-ttu-id="5c847-152">\<gcServer></span><span class="sxs-lookup"><span data-stu-id="5c847-152">\<gcServer></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)|<span data-ttu-id="5c847-153">Specifica se Common Language Runtime esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="5c847-153">Specifies whether the common language runtime runs server garbage collection.</span></span>|  
+|[<span data-ttu-id="5c847-154">\<generatePublisherEvidence></span><span class="sxs-lookup"><span data-stu-id="5c847-154">\<generatePublisherEvidence></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)|<span data-ttu-id="5c847-155">Specifica se il runtime usa i criteri dell'editore di sicurezza per l'accesso di codice.</span><span class="sxs-lookup"><span data-stu-id="5c847-155">Specifies whether the runtime uses code access security (CAS) publisher policy.</span></span>|  
+|[<span data-ttu-id="5c847-156">\<legacyCorruptedStateExceptionsPolicy></span><span class="sxs-lookup"><span data-stu-id="5c847-156">\<legacyCorruptedStateExceptionsPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element.md)|<span data-ttu-id="5c847-157">Specifica se il runtime consente al codice gestito di rilevare violazioni di accesso e altre eccezioni di stato danneggiato.</span><span class="sxs-lookup"><span data-stu-id="5c847-157">Specifies whether the runtime allows managed code to catch access violations and other corrupted state exceptions.</span></span>|  
+|[<span data-ttu-id="5c847-158">\<legacyImpersonationPolicy></span><span class="sxs-lookup"><span data-stu-id="5c847-158">\<legacyImpersonationPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)|<span data-ttu-id="5c847-159">Specifica che l'identità di Windows non passa attraverso punti asincroni, indipendentemente dalle impostazioni di flusso per il contesto di esecuzione nel thread corrente.</span><span class="sxs-lookup"><span data-stu-id="5c847-159">Specifies that the Windows identity does not flow across asynchronous points, regardless of the flow settings for the execution context on the current thread.</span></span>|  
+|[<span data-ttu-id="5c847-160">\<loadfromRemoteSources></span><span class="sxs-lookup"><span data-stu-id="5c847-160">\<loadfromRemoteSources></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)|<span data-ttu-id="5c847-161">Specifica se gli assembly da origini remote vengono caricati con attendibilità totale.</span><span class="sxs-lookup"><span data-stu-id="5c847-161">Specifies whether assemblies from remote sources are loaded as full trust.</span></span>|  
+|[<span data-ttu-id="5c847-162"><NetFx40_LegacySecurityPolicy></span><span class="sxs-lookup"><span data-stu-id="5c847-162"><NetFx40_LegacySecurityPolicy></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|<span data-ttu-id="5c847-163">Specifica se il runtime usa i criteri di sicurezza per l'accesso di codice legacy.</span><span class="sxs-lookup"><span data-stu-id="5c847-163">Specifies whether the runtime uses legacy code access security (CAS) policy.</span></span>|  
+|[<span data-ttu-id="5c847-164"><NetFx40_PInvokeStackResilience></span><span class="sxs-lookup"><span data-stu-id="5c847-164"><NetFx40_PInvokeStackResilience></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|<span data-ttu-id="5c847-165">Specifica se il runtime corregge automaticamente le dichiarazioni platform invoke non corrette in fase di esecuzione, al costo di transizioni più lente tra codice gestito e quello non gestito.</span><span class="sxs-lookup"><span data-stu-id="5c847-165">Specifies whether the runtime automatically fixes incorrect platform invoke declarations at run time, at the cost of slower transitions between managed and unmanaged code.</span></span>|  
+|[<span data-ttu-id="5c847-166"><NetFx45_CultureAwareComparerGetHashCode_LongStrings></span><span class="sxs-lookup"><span data-stu-id="5c847-166"><NetFx45_CultureAwareComparerGetHashCode_LongStrings></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|<span data-ttu-id="5c847-167">Specifica se il runtime utilizza una quantità di memoria fissa per calcolare i codici hash per il metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5c847-167">Specifies whether the runtime uses a fixed amount of memory to calculate hash codes for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method.</span></span>|  
+|[<span data-ttu-id="5c847-168">\<PreferComInsteadOfRemoting ></span><span class="sxs-lookup"><span data-stu-id="5c847-168">\<PreferComInsteadOfRemoting></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|<span data-ttu-id="5c847-169">Specifica che il runtime userà l'interoperabilità COM anziché la comunicazione remota tra i limiti del dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="5c847-169">Specifies that the runtime will use COM interop instead of remoting across application domain boundaries.</span></span>|  
+|[<span data-ttu-id="5c847-170">\<relativeBindForResources></span><span class="sxs-lookup"><span data-stu-id="5c847-170">\<relativeBindForResources></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|<span data-ttu-id="5c847-171">Ottimizza le ricerche degli assembly satellite.</span><span class="sxs-lookup"><span data-stu-id="5c847-171">Optimizes the probe for satellite assemblies.</span></span>|  
+|[<span data-ttu-id="5c847-172">\<shadowCopyVerifyByTimeStamp></span><span class="sxs-lookup"><span data-stu-id="5c847-172">\<shadowCopyVerifyByTimeStamp></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|<span data-ttu-id="5c847-173">Specifica se la copia shadow usa il comportamento di avvio predefinito introdotto in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o ripristina il comportamento di avvio delle versioni precedenti di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5c847-173">Specifies whether shadow copying uses the default startup behavior introduced in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], or reverts to the startup behavior of earlier versions of the .NET Framework.</span></span>|  
+|[<span data-ttu-id="5c847-174">\<supportPortability></span><span class="sxs-lookup"><span data-stu-id="5c847-174">\<supportPortability></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|<span data-ttu-id="5c847-175">Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti per scopi di portabilità dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="5c847-175">Specifies that an application can reference the same assembly in two different implementations of the .NET Framework, by disabling the default behavior that treats the assemblies as equivalent for application portability purposes.</span></span>|  
+|[<span data-ttu-id="5c847-176">\<system.runtime.caching></span><span class="sxs-lookup"><span data-stu-id="5c847-176">\<system.runtime.caching></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|<span data-ttu-id="5c847-177">Fornisce informazioni sulla configurazione per la cache degli oggetti in memoria predefinita.</span><span class="sxs-lookup"><span data-stu-id="5c847-177">Provides configuration information for the default in-memory object cache.</span></span>|  
+|[<span data-ttu-id="5c847-178"><Thread_UseAllCpuGroups></span><span class="sxs-lookup"><span data-stu-id="5c847-178"><Thread_UseAllCpuGroups></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|<span data-ttu-id="5c847-179">Specifica se il runtime distribuisce i thread gestiti tra tutti i gruppi di CPU.</span><span class="sxs-lookup"><span data-stu-id="5c847-179">Specifies whether the runtime distributes managed threads across all CPU groups.</span></span>|  
+|[<span data-ttu-id="5c847-180">\<ThrowUnobservedTaskExceptions></span><span class="sxs-lookup"><span data-stu-id="5c847-180">\<ThrowUnobservedTaskExceptions></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)|<span data-ttu-id="5c847-181">Specifica se le eccezioni di attività non gestite devono comportare l'arresto di un processo in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="5c847-181">Specifies whether unhandled task exceptions should terminate a running process.</span></span>|  
+|[<span data-ttu-id="5c847-182"><TimeSpan_LegacyFormatMode></span><span class="sxs-lookup"><span data-stu-id="5c847-182"><TimeSpan_LegacyFormatMode></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/timespan-legacyformatmode-element.md)|<span data-ttu-id="5c847-183">Specifica se il runtime usa la formattazione legacy per i valori di <xref:System.TimeSpan>.</span><span class="sxs-lookup"><span data-stu-id="5c847-183">Specifies whether the runtime uses legacy formatting for <xref:System.TimeSpan> values.</span></span>|  
+|[<span data-ttu-id="5c847-184">\<useLegacyJit></span><span class="sxs-lookup"><span data-stu-id="5c847-184">\<useLegacyJit></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)|<span data-ttu-id="5c847-185">Determina se Common Language Runtime usa il compilatore JIT a 64 bit legacy per la compilazione JIT.</span><span class="sxs-lookup"><span data-stu-id="5c847-185">Determines whether the common language runtime uses the legacy 64-bit JIT compiler for just-in-time compilation.</span></span>|  
+|[<span data-ttu-id="5c847-186">\<UseRandomizedStringHashAlgorithm></span><span class="sxs-lookup"><span data-stu-id="5c847-186">\<UseRandomizedStringHashAlgorithm></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)|<span data-ttu-id="5c847-187">Specifica se il runtime calcola i codici hash per le stringhe in base al dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="5c847-187">Specifies whether the runtime calculates hash codes for strings on a per application domain basis.</span></span>|  
+|[<span data-ttu-id="5c847-188">\<UseSmallInternalThreadStacks></span><span class="sxs-lookup"><span data-stu-id="5c847-188">\<UseSmallInternalThreadStacks></span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|<span data-ttu-id="5c847-189">Richiede al runtime di usare dimensioni dello stack esplicite quando crea determinati thread usati internamente, invece delle dimensioni dello stack predefinite.</span><span class="sxs-lookup"><span data-stu-id="5c847-189">Requests that the runtime use explicit stack sizes when it creates certain threads that it uses internally, instead of the default stack size.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="5c847-190">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="5c847-190">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|<span data-ttu-id="5c847-191">Elemento</span><span class="sxs-lookup"><span data-stu-id="5c847-191">Element</span></span>|<span data-ttu-id="5c847-192">Descrizione</span><span class="sxs-lookup"><span data-stu-id="5c847-192">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="5c847-193">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5c847-193">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## Note  
- In .NET Framework versione 2.0 le identità rappresentate attraversano i punti asincroni di un dominio applicazione.  In .NET Framework versione 2.0 è possibile attivare o disabilitare il flusso delle rappresentazioni attraverso i punti asincroni configurando correttamente l'elemento runtime nel file machine.config o nel file di configurazione dell'applicazione.  Per ASP.NET il flusso delle rappresentazioni può essere configurato nel file aspnet.config contenuto nella directory \<Windows Folder\>\\Microsoft.NET\\Framework\\vx.x.xxxx.  
+## <a name="remarks"></a><span data-ttu-id="5c847-194">Note</span><span class="sxs-lookup"><span data-stu-id="5c847-194">Remarks</span></span>  
+ <span data-ttu-id="5c847-195">Gli elementi figlio di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione di un file di configurazione vengono utilizzati da common language runtime per configurare la modalità di esecuzione di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="5c847-195">The child elements in the [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section of a configuration file are used by the common language runtime to configure how an application executes.</span></span> <span data-ttu-id="5c847-196">Ad esempio, il [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento determina se il garbage collector Usa garbage collection per workstation o garbage collection per server, il [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) elemento determina se common language runtime calcola il codice hash per una stringa in base all'applicazione o una base per dominio di applicazione e `AppContextSwitchOverrides` elemento consente agli utenti di libreria Per partecipare o rifiutare esplicitamente modificato funzionalità fornite da una libreria.</span><span class="sxs-lookup"><span data-stu-id="5c847-196">For example, the [\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) element determines whether the garbage collector uses workstation garbage collection or server garbage collection, the [\<UseRandomizedStringHashAlgorithm>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) element determines whether the common language runtime calculates hash codes for string on a per-application or a per-application domain basis, and the `AppContextSwitchOverrides` element allows library users to opt in or opt out of changed  functionality provided by a library.</span></span>  
   
- Per impostazione predefinita, in ASP.NET viene disabilitato il flusso delle rappresentazioni nel file aspnet.config utilizzando le seguenti impostazioni di configurazione:  
+ <span data-ttu-id="5c847-197">Gli elementi di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione vengono lette automaticamente dal common language runtime all'avvio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="5c847-197">The elements in the [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section are read automatically by the common language runtime at application startup.</span></span> <span data-ttu-id="5c847-198">È inoltre possibile definire il file di configurazione per un dominio applicazione non predefinito specificando il nome per il <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> proprietà; le relative impostazioni vengono lette automaticamente quando viene caricato il dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="5c847-198">You can also define the configuration file for a non-default application domain by supplying its name to the <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> property; its settings are read automatically when the application domain is loaded.</span></span> <span data-ttu-id="5c847-199">Raramente, se applicabile, è necessario leggere direttamente le impostazioni di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione nel file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="5c847-199">You should rarely, if ever, have a need to directly read the settings in the [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section in your application's configuration file.</span></span>  
   
-```  
-configuration>  
-   <runtime>  
-      <legacyImpersonationPolicy enabled="true"/>  
-      <alwaysFlowImpersonationPolicy enabled="false"/>  
-   </runtime>  
-</configuration>  
-```  
-  
- Se in ASP.NET si desidera attivare il flusso delle rappresentazioni, è necessario utilizzare in modo esplicito le seguenti impostazioni di configurazione:  
-  
-```  
-<configuration>  
-   <runtime>  
-      <legacyImpersonationPolicy enabled="false"/>  
-      <alwaysFlowImpersonationPolicy enabled="true"/>  
-   </runtime>  
-</configuration>  
-```  
-  
- Per ulteriori informazioni, vedere [Elemento \<legacyImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) e [Elemento \<alwaysFlowImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
-  
-## Esempio  
- Nell'esempio seguente viene illustrato come reindirizzare una versione dell'assembly in un'altra.  
-  
-```  
-<configuration>  
-   <runtime>  
-      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <dependentAssembly>  
-            <assemblyIdentity name="myAssembly"  
-                              publicKeyToken="32ab4ba45e0a69a1"  
-                              culture="neutral" />  
-             <bindingRedirect oldVersion="1.0.0.0"  
-                              newVersion="2.0.0.0"/>  
-         </dependentAssembly>  
-      </assemblyBinding>  
-   </runtime>  
-</configuration>  
-```  
-  
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)   
- [How to: Disable Concurrent Garbage Collection](http://msdn.microsoft.com/it-it/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+## <a name="see-also"></a><span data-ttu-id="5c847-200">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5c847-200">See Also</span></span>  
+ [<span data-ttu-id="5c847-201">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="5c847-201">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="5c847-202">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="5c847-202">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

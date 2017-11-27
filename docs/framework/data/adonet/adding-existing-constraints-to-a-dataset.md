@@ -1,32 +1,38 @@
 ---
-title: "Aggiunta di vincoli esistenti a un DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Aggiunta di vincoli esistenti a un dataset
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0e457113eff471c620ccdbf78337d2013d7a62bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Aggiunta di vincoli esistenti a un DataSet
-Il metodo **Fill** di **DataAdapter** consente di compilare un <xref:System.Data.DataSet> solo con colonne e righe di tabella di un'origine dati. Sebbene i vincoli vengano in genere impostati dall'origine dati, per impostazione predefinita il metodo **Fill** non aggiunge queste informazioni sullo schema al **DataSet**.  Per compilare un **DataSet** con le informazioni esistenti sui vincoli della chiave primaria da un'origine dati, è possibile chiamare il metodo **FillSchema** di **DataAdapter** oppure impostare la proprietà **MissingSchemaAction** di **DataAdapter** su **AddWithKey** prima di chiamare **Fill**.  Ciò garantisce che i vincoli della chiave primaria nel **DataSet** riflettano quelli nell'origine dati.  Le informazioni sul vincolo di chiave esterna non sono incluse e devono essere create in modo esplicito, come illustrato in [Vincoli di DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+# <a name="adding-existing-constraints-to-a-dataset"></a><span data-ttu-id="f1988-102">Aggiunta di vincoli esistenti a un dataset</span><span class="sxs-lookup"><span data-stu-id="f1988-102">Adding Existing Constraints to a DataSet</span></span>
+<span data-ttu-id="f1988-103">Il **riempimento** metodo il **DataAdapter** riempie una <xref:System.Data.DataSet> solo con le colonne della tabella e le righe da un'origine dati; tuttavia vincoli vengano in genere impostati dall'origine dati, il **riempimento** metodo non aggiunge queste informazioni sullo schema per il **DataSet** per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="f1988-103">The **Fill** method of the **DataAdapter** fills a <xref:System.Data.DataSet> only with table columns and rows from a data source; though constraints are commonly set by the data source, the **Fill** method does not add this schema information to the **DataSet** by default.</span></span> <span data-ttu-id="f1988-104">Per popolare un **DataSet** con informazioni di vincolo di chiave primaria esistente da un'origine dati, è possibile chiamare il **FillSchema** metodo il **DataAdapter**, o impostare il **MissingSchemaAction** proprietà del **DataAdapter** a **AddWithKey** prima di chiamare **riempimento**.</span><span class="sxs-lookup"><span data-stu-id="f1988-104">To populate a **DataSet** with existing primary key constraint information from a data source, you can either call the **FillSchema** method of the **DataAdapter**, or set the **MissingSchemaAction** property of the **DataAdapter** to **AddWithKey** before calling **Fill**.</span></span> <span data-ttu-id="f1988-105">In questo modo la chiave primaria vincoli di **DataSet** riflettano quelli nell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="f1988-105">This will ensure that primary key constraints in the **DataSet** reflect those at the data source.</span></span> <span data-ttu-id="f1988-106">Informazioni sul vincolo di chiave esterna non è incluse e deve essere create in modo esplicito, come illustrato nella [vincoli DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).</span><span class="sxs-lookup"><span data-stu-id="f1988-106">Foreign key constraint information is not included and must be created explicitly, as shown in [DataTable Constraints](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).</span></span>  
   
- L'aggiunta delle informazioni sullo schema in un **DataSet** prima di compilarlo con i dati assicura che i vincoli della chiave primaria siano inclusi negli oggetti <xref:System.Data.DataTable> e **DataSet**.  In questo modo, quando vengono effettuate altre chiamate per compilare il **DataSet**, le informazioni nella colonna della chiave primaria vengono usate per confrontare le nuove righe provenienti dall'origine dati con le righe correnti in ogni **DataTable** e i dati correnti nelle tabelle vengono sovrascritti con i dati provenienti dall'origine dati.  Senza le informazioni sullo schema, le nuove righe provenienti dall'origine dati verrebbero aggiunte al **DataSet** generando righe duplicate.  
+ <span data-ttu-id="f1988-107">Aggiunta di informazioni sullo schema da un **set di dati** prima di inserire i dati assicura che i vincoli di chiave primaria siano inclusi con il <xref:System.Data.DataTable> gli oggetti di **set di dati**.</span><span class="sxs-lookup"><span data-stu-id="f1988-107">Adding schema information to a **DataSet** before filling it with data ensures that primary key constraints are included with the <xref:System.Data.DataTable> objects in the **DataSet**.</span></span> <span data-ttu-id="f1988-108">Di conseguenza, quando ulteriori chiamate per compilare il **set di dati** vengono eseguite, il database primario informazioni della colonna chiave viene utilizzate per confrontare le nuove righe dall'origine dati con le righe correnti in ogni **DataTable**e i dati correnti in le tabelle viene sovrascritto con i dati dall'origine dati.</span><span class="sxs-lookup"><span data-stu-id="f1988-108">As a result, when additional calls to fill the **DataSet** are made, the primary key column information is used to match new rows from the data source with current rows in each **DataTable**, and current data in the tables is overwritten with data from the data source.</span></span> <span data-ttu-id="f1988-109">Senza le informazioni sullo schema, vengono aggiunte le nuove righe dall'origine dati per il **DataSet**, generando righe duplicate.</span><span class="sxs-lookup"><span data-stu-id="f1988-109">Without the schema information, the new rows from the data source are appended to the **DataSet**, resulting in duplicate rows.</span></span>  
   
 > [!NOTE]
->  Se una colonna in un'origine dati viene identificata come colonna con incremento automatico, il metodo **FillSchema**, o il metodo **Fill** con la proprietà **MissingSchemaAction** impostata su **AddWithKey**, crea un oggetto **DataColumn** con una proprietà **AutoIncrement** impostata su `true`.  È tuttavia necessario impostare direttamente i valori di **AutoIncrementStep** e **AutoIncrementSeed**.  Per altre informazioni sulle colonne con incremento automatico, vedere [Creazione di colonne AutoIncrement](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
+>  <span data-ttu-id="f1988-110">Se una colonna in un'origine dati viene identificata come con incremento automatico, il **FillSchema** metodo, o **riempimento** metodo con un **MissingSchemaAction** di  **AddWithKey**, crea un **DataColumn** con un **AutoIncrement** proprietà impostata su `true`.</span><span class="sxs-lookup"><span data-stu-id="f1988-110">If a column in a data source is identified as auto-incrementing, the **FillSchema** method, or the **Fill** method with a **MissingSchemaAction** of **AddWithKey**, creates a **DataColumn** with an **AutoIncrement** property set to `true`.</span></span> <span data-ttu-id="f1988-111">Tuttavia, è necessario impostare il **AutoIncrementStep** e **AutoIncrementSeed** valori manualmente.</span><span class="sxs-lookup"><span data-stu-id="f1988-111">However, you will need to set the **AutoIncrementStep** and **AutoIncrementSeed** values yourself.</span></span> <span data-ttu-id="f1988-112">Per ulteriori informazioni sulle colonne a incremento automatico, vedere [la creazione di colonne AutoIncrement](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).</span><span class="sxs-lookup"><span data-stu-id="f1988-112">For more information about auto-incrementing columns, see [Creating AutoIncrement Columns](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).</span></span>  
   
- Se si usa **FillSchema** o si imposta **MissingSchemaAction** su **AddWithKey**, è necessaria un'elaborazione aggiuntiva nell'origine dati per determinare le informazioni della colonna della chiave primaria.  Questa ulteriore elaborazione può ridurre le prestazioni.  Se le informazioni sulla chiave primaria sono note in fase di progettazione, è consigliabile specificare la colonna o le colonne della chiave primaria in modo esplicito per migliorare le prestazioni.  Per altre informazioni sull'impostazione esplicita delle informazioni sulla chiave primaria per una tabella, vedere [Definizione di chiavi primarie](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ <span data-ttu-id="f1988-113">Utilizzando **FillSchema** o impostazione di **MissingSchemaAction** a **AddWithKey** necessaria un'elaborazione aggiuntiva nell'origine dati per determinare le informazioni di colonna chiave primaria.</span><span class="sxs-lookup"><span data-stu-id="f1988-113">Using **FillSchema** or setting the **MissingSchemaAction** to **AddWithKey** requires extra processing at the data source to determine primary key column information.</span></span> <span data-ttu-id="f1988-114">Questa ulteriore elaborazione può ridurre le prestazioni.</span><span class="sxs-lookup"><span data-stu-id="f1988-114">This additional processing can hinder performance.</span></span> <span data-ttu-id="f1988-115">Se le informazioni sulla chiave primaria sono note in fase di progettazione, è consigliabile specificare la colonna o le colonne della chiave primaria in modo esplicito per migliorare le prestazioni.</span><span class="sxs-lookup"><span data-stu-id="f1988-115">If you know the primary key information at design time, we recommend that you explicitly specify the primary key column or columns in order to achieve optimal performance.</span></span> <span data-ttu-id="f1988-116">Per informazioni sull'impostazione delle informazioni sulla chiave primarie per una tabella in modo esplicito, vedere [la definizione di chiavi primarie](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).</span><span class="sxs-lookup"><span data-stu-id="f1988-116">For information about explicitly setting primary key information for a table, see [Defining Primary Keys](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).</span></span>  
   
- Nell'esempio di codice seguente viene descritto come aggiungere le informazioni sullo schema a un **DataSet** usando **FillSchema**.  
+ <span data-ttu-id="f1988-117">Esempio di codice seguente viene illustrato come aggiungere informazioni sullo schema da un **DataSet** utilizzando **FillSchema**.</span><span class="sxs-lookup"><span data-stu-id="f1988-117">The following code example shows how to add schema information to a **DataSet** using **FillSchema**.</span></span>  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -42,7 +48,7 @@ custAdapter.FillSchema(custDataSet, SchemaType.Source, "Customers");
 custAdapter.Fill(custDataSet, "Customers");  
 ```  
   
- Nell'esempio di codice seguente viene descritto come aggiungere le informazioni sullo schema a un **DataSet** usando la proprietà **MissingSchemaAction.AddWithKey** del metodo **Fill**.  
+ <span data-ttu-id="f1988-118">Esempio di codice seguente viene illustrato come aggiungere informazioni sullo schema da un **set di dati** utilizzando il **MissingSchemaAction. AddWithKey** proprietà del **riempimento** metodo.</span><span class="sxs-lookup"><span data-stu-id="f1988-118">The following code example shows how to add schema information to a **DataSet** using the **MissingSchemaAction.AddWithKey** property of the **Fill** method.</span></span>  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -58,14 +64,14 @@ custAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
 custAdapter.Fill(custDataSet, "Customers");  
 ```  
   
-## Gestione di più set di risultati  
- Se l'oggetto **DataAdapter** rileva più set di risultati restituiti da **SelectCommand**, verranno create più tabelle nel **DataSet**.  Alle tabelle viene assegnato un nome predefinito incrementale in base zero **Table** *N*, che inizia con **Table** anziché con "Table0".  Se il nome di una tabella viene passato come argomento al metodo **FillSchema**, alle tabelle verrà assegnato il nome incrementale in base zero **TableName** *N*, che inizia con **TableName** anziché con "TableName0".  
+## <a name="handling-multiple-result-sets"></a><span data-ttu-id="f1988-119">Gestione di più set di risultati</span><span class="sxs-lookup"><span data-stu-id="f1988-119">Handling Multiple Result Sets</span></span>  
+ <span data-ttu-id="f1988-120">Se il **DataAdapter** rileva più set di risultati restituito dal **SelectCommand**, verrà create più tabelle nel **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="f1988-120">If the **DataAdapter** encounters multiple result sets returned from the **SelectCommand**, it will create multiple tables in the **DataSet**.</span></span> <span data-ttu-id="f1988-121">Le tabelle viene assegnato un nome predefinito incrementale in base zero di **tabella** *N*, a partire da **tabella** anziché con "Table0".</span><span class="sxs-lookup"><span data-stu-id="f1988-121">The tables will be given a zero-based incremental default name of **Table** *N*, starting with **Table** instead of "Table0".</span></span> <span data-ttu-id="f1988-122">Se un nome di tabella viene passato come argomento per il **FillSchema** (metodo), le tabelle viene assegnato un nome incrementale in base zero di **TableName** *N*, a partire da **TableName** anziché con "TableName0".</span><span class="sxs-lookup"><span data-stu-id="f1988-122">If a table name is passed as an argument to the **FillSchema** method, the tables will be given a zero-based incremental name of **TableName** *N*, starting with **TableName** instead of "TableName0".</span></span>  
   
 > [!NOTE]
->  Se il metodo **FillSchema** dell'oggetto **OleDbDataAdapter** viene chiamato per un comando che restituisce più set di risultati, vengono restituite solo le informazioni sullo schema del primo set di risultati.  Quando vengono restituite informazioni sullo schema per più set di risultati usando **OleDbDataAdapter**, è consigliabile impostare **MissingSchemaAction** su **AddWithKey** e ottenere le informazioni sullo schema quando si chiama il metodo **Fill**.  
+>  <span data-ttu-id="f1988-123">Se il **FillSchema** metodo il **OleDbDataAdapter** viene chiamato per un comando che restituisce più set di risultati, viene restituite solo le informazioni sullo schema dal primo set di risultati.</span><span class="sxs-lookup"><span data-stu-id="f1988-123">If the **FillSchema** method of the **OleDbDataAdapter** object is called for a command that returns multiple result sets, only the schema information from the first result set is returned.</span></span> <span data-ttu-id="f1988-124">Quando la restituzione di informazioni sullo schema per il risultato di più set mediante il **OleDbDataAdapter**, si consiglia di specificare un **MissingSchemaAction** di **AddWithKey** e ottenere le informazioni sullo schema quando si chiama il **riempimento** metodo.</span><span class="sxs-lookup"><span data-stu-id="f1988-124">When returning schema information for multiple result sets using the **OleDbDataAdapter**, it is recommended that you specify a **MissingSchemaAction** of **AddWithKey** and obtain the schema information when calling the **Fill** method.</span></span>  
   
-## Vedere anche  
- [DataAdapter e DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Recupero e modifica di dati in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f1988-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f1988-125">See Also</span></span>  
+ [<span data-ttu-id="f1988-126">DataAdapter e DataReader</span><span class="sxs-lookup"><span data-stu-id="f1988-126">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [<span data-ttu-id="f1988-127">Oggetti DataSet, DataTable e DataView</span><span class="sxs-lookup"><span data-stu-id="f1988-127">DataSets, DataTables, and DataViews</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="f1988-128">Recupero e modifica di dati in ADO.NET</span><span class="sxs-lookup"><span data-stu-id="f1988-128">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="f1988-129">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="f1988-129">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

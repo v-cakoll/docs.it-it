@@ -1,57 +1,60 @@
 ---
-title: "Rilevamento di variabili e argomenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Rilevamento di variabili e argomenti
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 76a9d169b7b8b551685f67288667036ad7b4c87b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Rilevamento di variabili e argomenti
-Quando si rileva l'esecuzione di un flusso di lavoro, spesso è utile estrarre i dati.Tali dati offrono un contesto aggiuntivo quando si accede alla post\-esecuzione di un record di rilevamento.In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], utilizzando il rilevamento, è possibile estrarre qualsiasi variabile o argomento visibile all'interno dell'ambito di tutte le attività di un flusso di lavoro.I profili di rilevamento semplificano l'estrazione dei dati.  
+# <a name="variable-and-argument-tracking"></a><span data-ttu-id="29ac4-102">Rilevamento di variabili e argomenti</span><span class="sxs-lookup"><span data-stu-id="29ac4-102">Variable and Argument Tracking</span></span>
+<span data-ttu-id="29ac4-103">Quando si rileva l'esecuzione di un flusso di lavoro, spesso è utile estrarre i dati.</span><span class="sxs-lookup"><span data-stu-id="29ac4-103">When tracking the execution of a workflow, it is often useful to extract data.</span></span> <span data-ttu-id="29ac4-104">Tali dati offrono un contesto aggiuntivo quando si accede alla post-esecuzione di un record di rilevamento.</span><span class="sxs-lookup"><span data-stu-id="29ac4-104">This provides additional context when accessing a tracking record post execution.</span></span> <span data-ttu-id="29ac4-105">In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], usando il rilevamento, è possibile estrarre qualsiasi variabile o argomento visibile all'interno dell'ambito di tutte le attività di un flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="29ac4-105">In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], you can extract any visible variable or argument within the scope of any activity in a workflow using tracking.</span></span> <span data-ttu-id="29ac4-106">I profili di rilevamento semplificano l'estrazione dei dati.</span><span class="sxs-lookup"><span data-stu-id="29ac4-106">Tracking profiles make it easy to extract data.</span></span>  
   
-## Variabili e argomenti  
- Le variabili e gli argomenti vengono estratti quando un'attività crea un oggetto ActivityStateRecord.Una variabile può essere estratta solo se è inclusa nell'ambito dell'attività.Una variabile da estrarre in un'attività viene specificata nel modo seguente:  
+## <a name="variables-and-arguments"></a><span data-ttu-id="29ac4-107">Variabili e argomenti</span><span class="sxs-lookup"><span data-stu-id="29ac4-107">Variables and Arguments</span></span>  
+ <span data-ttu-id="29ac4-108">Le variabili e gli argomenti vengono estratti quando un'attività crea un oggetto ActivityStateRecord.</span><span class="sxs-lookup"><span data-stu-id="29ac4-108">Variables and arguments are extracted when an activity emits an ActivityStateRecord.</span></span>  <span data-ttu-id="29ac4-109">Una variabile può essere estratta solo se è inclusa nell'ambito dell'attività.</span><span class="sxs-lookup"><span data-stu-id="29ac4-109">A variable is available for extraction only if it is within the scope of the activity.</span></span> <span data-ttu-id="29ac4-110">Una variabile da estrarre in un'attività viene specificata nel modo seguente:</span><span class="sxs-lookup"><span data-stu-id="29ac4-110">A variable to be extracted within an activity is specified in the following manner:</span></span>  
   
--   Se una variabile viene specificata con il relativo nome, il rilevamento cerca la variabile all'interno dell'attività in fase di rilevamento e nelle attività padre.La variabile viene ricercata nell'ambito dell'attività corrente e nell'ambito padre.  
+-   <span data-ttu-id="29ac4-111">Se una variabile viene specificata con il relativo nome, il rilevamento cerca la variabile all'interno dell'attività in fase di rilevamento e nelle attività padre.</span><span class="sxs-lookup"><span data-stu-id="29ac4-111">If a variable is specified by the variable name, then tracking looks for the variable within the current activity being tracked and in parent activities.</span></span> <span data-ttu-id="29ac4-112">La variabile viene ricercata nell'ambito dell'attività corrente e nell'ambito padre.</span><span class="sxs-lookup"><span data-stu-id="29ac4-112">The variable is searched in current activity scope and in parent scope.</span></span>  
   
--   Se le variabili da estrarre vengono specificate utilizzando il nome \= "\*", vengono estratte tutte le variabili all'interno dell'attività corrente in fase di rilevamento.In questo caso, le variabili incluse nell'ambito ma definite nelle attività padre non vengono estratte.  
+-   <span data-ttu-id="29ac4-113">Se le variabili da estrarre vengono specificate con nome = "*", quindi vengono estratte tutte le variabili all'interno dell'attività corrente viene tenuta traccia.</span><span class="sxs-lookup"><span data-stu-id="29ac4-113">If variables to be extracted are specified by using name="*", then all variables within the current activity being tracked are extracted.</span></span> <span data-ttu-id="29ac4-114">In questo caso, le variabili incluse nell'ambito ma definite nelle attività padre non vengono estratte.</span><span class="sxs-lookup"><span data-stu-id="29ac4-114">In this case variables that are in scope but defined in parent activities are not extracted.</span></span>  
   
- Gli argomenti estratti dipendono dallo stato dell'attività.Quando lo stato di un'attività è Executing, possono essere estratti solo gli argomenti `InArguments`.Per qualsiasi altro stato dell'attività \(Closed, Faulted, Canceled\), entrambi gli argomenti InArguments e OutArguments sono disponibili per l'estrazione.  
+ <span data-ttu-id="29ac4-115">Gli argomenti estratti dipendono dallo stato dell'attività.</span><span class="sxs-lookup"><span data-stu-id="29ac4-115">When extracting arguments, the arguments extracted depend on the state of the activity.</span></span> <span data-ttu-id="29ac4-116">Quando lo stato di un'attività è Executing, possono essere estratti solo gli argomenti `InArguments`.</span><span class="sxs-lookup"><span data-stu-id="29ac4-116">When the state of an activity is Executing, then only the `InArguments` are available for extraction.</span></span> <span data-ttu-id="29ac4-117">Per qualsiasi altro stato dell'attività (Closed, Faulted, Canceled), entrambi gli argomenti InArguments e OutArguments sono disponibili per l'estrazione.</span><span class="sxs-lookup"><span data-stu-id="29ac4-117">For any other activity state (Closed, Faulted, Canceled), all arguments, both InArguments and OutArguments, are available for extraction.</span></span>  
   
- Nell'esempio seguente viene mostrata una query sullo stato dell'attività che estrae variabili e argomenti quando viene creato il record di rilevamento dello stato `Closed` dell'attività.Le variabili e gli argomenti possono essere estratti solo con un oggetto <xref:System.Activities.Tracking.ActivityStateRecord>, pertanto vengono sottoscritti all'interno di un profilo di rilevamento tramite l'oggetto <xref:System.Activities.Tracking.ActivityStateQuery>.  
+ <span data-ttu-id="29ac4-118">Nell'esempio seguente viene mostrata una query sullo stato dell'attività che estrae variabili e argomenti quando viene creato il record di rilevamento dello stato `Closed` dell'attività.</span><span class="sxs-lookup"><span data-stu-id="29ac4-118">The following example shows an activity state query that extracts variables and arguments when the activity’s `Closed` tracking record is emitted.</span></span> <span data-ttu-id="29ac4-119">Le variabili e gli argomenti possono essere estratti solo con un oggetto <xref:System.Activities.Tracking.ActivityStateRecord>, pertanto vengono sottoscritti all'interno di un profilo di rilevamento tramite l'oggetto <xref:System.Activities.Tracking.ActivityStateQuery>.</span><span class="sxs-lookup"><span data-stu-id="29ac4-119">Variables and arguments can be extracted only with an <xref:System.Activities.Tracking.ActivityStateRecord> and thus are subscribed to within a tracking profile using <xref:System.Activities.Tracking.ActivityStateQuery>.</span></span>  
   
-```  
+```xml  
 <activityStateQuery activityName="SendEmailActivity">  
-  <states>  
-    <state name="Closed"/>  
-  </states>  
-  <variables>  
-    <variable name="FromAddress"/>  
-  </variables>  
+  <states>  
+    <state name="Closed"/>  
+  </states>  
+  <variables>  
+    <variable name="FromAddress"/>  
+  </variables>  
   <arguments>  
     <argument name="Result"/>  
   </arguments>  
 </activityStateQuery>  
-  
 ```  
   
-## Protezione delle informazioni archiviate in variabili e argomenti  
- Una variabile o un argomento rilevato viene reso visibile per impostazione predefinita dal runtime di WF.Uno sviluppatore di flussi di lavoro può limitarne l'accesso eseguendo i passaggi seguenti.  
+## <a name="protecting-information-stored-within-variables-and-arguments"></a><span data-ttu-id="29ac4-120">Protezione delle informazioni archiviate in variabili e argomenti</span><span class="sxs-lookup"><span data-stu-id="29ac4-120">Protecting Information Stored Within Variables and Arguments</span></span>  
+ <span data-ttu-id="29ac4-121">Una variabile o un argomento rilevato viene reso visibile per impostazione predefinita dal runtime di WF.</span><span class="sxs-lookup"><span data-stu-id="29ac4-121">A tracked variable or argument is by default made visible by the WF runtime.</span></span> <span data-ttu-id="29ac4-122">Uno sviluppatore di flussi di lavoro può limitarne l'accesso eseguendo i passaggi seguenti.</span><span class="sxs-lookup"><span data-stu-id="29ac4-122">A workflow developer can protect it from being accessed by taking the following steps:</span></span>  
   
-1.  Crittografia del valore di una variabile.  
+1.  <span data-ttu-id="29ac4-123">Crittografia del valore di una variabile.</span><span class="sxs-lookup"><span data-stu-id="29ac4-123">Encrypt the value of a variable.</span></span>  
   
-2.  Controllo della creazione di un profilo di rilevamento per impedire l'estrazione di una variabile o di un argomento.  
+2.  <span data-ttu-id="29ac4-124">Controllo della creazione di un profilo di rilevamento per impedire l'estrazione di una variabile o di un argomento.</span><span class="sxs-lookup"><span data-stu-id="29ac4-124">Control the authoring of a tracking profile to prevent the extraction of a variable or argument.</span></span>  
   
-3.  Per i partecipanti del rilevamento personalizzato, assicurarsi che il codice di WF non diffonda informazioni riservate archiviate nelle variabili o negli argomenti.  
+3.  <span data-ttu-id="29ac4-125">Per i partecipanti del rilevamento personalizzato, assicurarsi che il codice di WF non diffonda informazioni riservate archiviate nelle variabili o negli argomenti.</span><span class="sxs-lookup"><span data-stu-id="29ac4-125">For custom tracking participants ensure that the WF code does not disclose sensitive information that is stored in variables or arguments.</span></span>  
   
-## Vedere anche  
- [Concetti di monitoraggio](http://go.microsoft.com/fwlink/?LinkId=201273)   
- [Monitoraggio delle applicazioni](http://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a><span data-ttu-id="29ac4-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="29ac4-126">See Also</span></span>  
+ [<span data-ttu-id="29ac4-127">Monitoraggio dell'infrastruttura di App di Windows Server</span><span class="sxs-lookup"><span data-stu-id="29ac4-127">Windows Server App Fabric Monitoring</span></span>](http://go.microsoft.com/fwlink/?LinkId=201273)  
+ [<span data-ttu-id="29ac4-128">Monitoraggio delle applicazioni con App Fabric</span><span class="sxs-lookup"><span data-stu-id="29ac4-128">Monitoring Applications with App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkId=201275)

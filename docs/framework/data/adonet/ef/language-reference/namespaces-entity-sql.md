@@ -1,38 +1,37 @@
 ---
-title: "Spazi dei nomi (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Spazi dei nomi (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83991c21-60db-4af9-aca3-b416f6cae98e
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0ea5292d20aebdb27da726b0076179fb64631e5c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Spazi dei nomi (Entity SQL)
-In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono introdotti gli spazi dei nomi per evitare conflitti di nome per gli identificatori globali, ad esempio nomi di tipi, set di entità, funzioni e così via.  Il supporto dello spazio dei nomi in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è analogo a quello in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].  
+# <a name="namespaces-entity-sql"></a><span data-ttu-id="852cf-102">Spazi dei nomi (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="852cf-102">Namespaces (Entity SQL)</span></span>
+<span data-ttu-id="852cf-103">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono introdotti gli spazi dei nomi per evitare conflitti di nome per gli identificatori globali, ad esempio nomi di tipi, set di entità, funzioni e così via.</span><span class="sxs-lookup"><span data-stu-id="852cf-103">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] introduces namespaces to avoid name conflicts for global identifiers such as type names, entity sets, functions, and so on.</span></span> <span data-ttu-id="852cf-104">Il supporto dello spazio dei nomi in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è simile per il supporto dello spazio dei nomi di [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="852cf-104">The namespace support in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is similar to the namespace support in the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].</span></span>  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce due tipi di clausola USING: spazi dei nomi qualificati \(dove viene fornito un alias più breve per lo spazio dei nomi\) e spazi dei nomi non qualificati, come illustrato nell'esempio seguente:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="852cf-105"> fornisce due tipi di clausola USING: spazi dei nomi qualificati (dove viene fornito un alias più breve per lo spazio dei nomi) e spazi dei nomi non qualificati, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="852cf-105"> provides two forms of the USING clause: qualified namespaces (where a shorter alias is provided for the namespace), and unqualified namespaces, as illustrated in the following example:</span></span>  
   
  `USING System.Data;`  
   
  `USING tsql = System.Data;`  
   
-## Regole per la risoluzione dei nomi  
- Se non è possibile risolvere un identificatore negli ambiti locali, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta di individuare il nome negli ambiti globali \(gli spazi dei nomi\).  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta innanzitutto di confrontare l'identificatore \(prefisso\) con uno degli spazi dei nomi qualificati.  Se è presente una corrispondenza, tramite [!INCLUDE[esql](../../../../../../includes/esql-md.md)] viene eseguito un tentativo di risolvere il resto dell'identificatore nello spazio dei nomi specificato.  Se non viene trovata alcuna corrispondenza, viene generata un'eccezione .  
+## <a name="name-resolution-rules"></a><span data-ttu-id="852cf-106">Regole per la risoluzione dei nomi</span><span class="sxs-lookup"><span data-stu-id="852cf-106">Name Resolution Rules</span></span>  
+ <span data-ttu-id="852cf-107">Se non è possibile risolvere un identificatore negli ambiti locali, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta di individuare il nome negli ambiti globali (gli spazi dei nomi).</span><span class="sxs-lookup"><span data-stu-id="852cf-107">If an identifier cannot be resolved in the local scopes, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tries to locate the name in the global scopes (the namespaces).</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="852cf-108"> tenta innanzitutto di confrontare l'identificatore (prefisso) con uno degli spazi dei nomi qualificati.</span><span class="sxs-lookup"><span data-stu-id="852cf-108"> first tries to match the identifier (prefix) with one of the qualified namespaces.</span></span> <span data-ttu-id="852cf-109">Se esiste una corrispondenza, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta di risolvere il resto dell'identificatore nello spazio dei nomi specificato.</span><span class="sxs-lookup"><span data-stu-id="852cf-109">If there is a match, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tries to resolve the rest of the identifier in the specified namespace.</span></span> <span data-ttu-id="852cf-110">Se non viene trovata alcuna corrispondenza, viene generata un'eccezione .</span><span class="sxs-lookup"><span data-stu-id="852cf-110">If no match is found, an exception is thrown.</span></span>  
   
- Tramite [!INCLUDE[esql](../../../../../../includes/esql-md.md)] viene quindi eseguito un tentativo di cercare l'identificatore in tutti gli spazi dei nomi non qualificati \(specificati nel prologo\).  Se l'identificatore può essere individuato esattamente in uno spazio dei nomi, viene restituito tale percorso.  Se la corrispondenza per l'identificatore è presente in più di uno spazio dei nomi, viene generata un'eccezione.  Se non è possibile identificare alcuno spazio dei nomi per l'identificatore, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] passa il nome all'ambito esterno successivo \(oggetto <xref:System.Data.Common.DbCommand> o <xref:System.Data.Common.DbConnection>\), come illustrato nell'esempio seguente:  
+ <span data-ttu-id="852cf-111">Successivamente, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tenta di cercare tutti non qualificati spazi dei nomi (specificati nel prologo) per l'identificatore.</span><span class="sxs-lookup"><span data-stu-id="852cf-111">Next, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tries to search all unqualified namespaces (specified in the prolog) for the identifier.</span></span> <span data-ttu-id="852cf-112">Se l'identificatore può essere individuato esattamente in uno spazio dei nomi, viene restituito tale percorso.</span><span class="sxs-lookup"><span data-stu-id="852cf-112">If the identifier can be located in exactly one namespace, that location is returned.</span></span> <span data-ttu-id="852cf-113">Se la corrispondenza per l'identificatore è presente in più di uno spazio dei nomi, viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="852cf-113">If more than one namespace has a match for that identifier, an exception is thrown.</span></span> <span data-ttu-id="852cf-114">Se nessuno spazio dei nomi può essere identificato per l'identificatore, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] passa il nome all'ambito esterno successivo (il <xref:System.Data.Common.DbCommand> o <xref:System.Data.Common.DbConnection> oggetto), come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="852cf-114">If no namespace can be identified for the identifier, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] passes the name onto the next outward scope (the <xref:System.Data.Common.DbCommand> or <xref:System.Data.Common.DbConnection> object), as illustrated in the following example:</span></span>  
   
 ```  
 SELECT TREAT(p AS NamespaceName.Employee)  
@@ -40,12 +39,12 @@ FROM ContainerName.Person AS p
 WHERE p IS OF (NamespaceName.Employee)  
 ```  
   
-## Differenze rispetto a .NET Framework  
- In [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] non è possibile usare spazi dei nomi parzialmente qualificati.  Ciò non è consentito in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+## <a name="differences-from-the-net-framework"></a><span data-ttu-id="852cf-115">Differenze rispetto a .NET Framework</span><span class="sxs-lookup"><span data-stu-id="852cf-115">Differences from the .NET Framework</span></span>  
+ <span data-ttu-id="852cf-116">In [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] non è possibile usare spazi dei nomi parzialmente qualificati.</span><span class="sxs-lookup"><span data-stu-id="852cf-116">In the [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)], you can use partially qualified namespaces.</span></span> <span data-ttu-id="852cf-117">Ciò non è consentito in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="852cf-117">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] does not allow this.</span></span>  
   
-## Uso di ADO.NET  
- Le query sono espresse attraverso oggetti <xref:System.Data.Common.DbCommand> ADO.NET.  Gli oggetti <xref:System.Data.Common.DbCommand> possono essere creati in base a oggetti <xref:System.Data.Common.DbConnection>.  Anche gli spazi dei nomi possono essere specificati come parte degli oggetti <xref:System.Data.Common.DbCommand> e <xref:System.Data.Common.DbConnection>.  Se [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è in grado di risolvere un identificatore all'interno della query stessa, viene eseguito un tentativo negli spazi dei nomi esterni \(in base a regole simili\).  
+## <a name="adonet-usage"></a><span data-ttu-id="852cf-118">Uso di ADO.NET</span><span class="sxs-lookup"><span data-stu-id="852cf-118">ADO.NET Usage</span></span>  
+ <span data-ttu-id="852cf-119">Le query sono espresse attraverso oggetti <xref:System.Data.Common.DbCommand> ADO.NET.</span><span class="sxs-lookup"><span data-stu-id="852cf-119">Queries are expressed through ADO.NET <xref:System.Data.Common.DbCommand> objects.</span></span> <span data-ttu-id="852cf-120">Gli oggetti <xref:System.Data.Common.DbCommand> possono essere creati in base a oggetti <xref:System.Data.Common.DbConnection>.</span><span class="sxs-lookup"><span data-stu-id="852cf-120"><xref:System.Data.Common.DbCommand> objects can be built over <xref:System.Data.Common.DbConnection> objects.</span></span> <span data-ttu-id="852cf-121">Anche gli spazi dei nomi possono essere specificati come parte degli oggetti <xref:System.Data.Common.DbCommand> e <xref:System.Data.Common.DbConnection>.</span><span class="sxs-lookup"><span data-stu-id="852cf-121">Namespaces can also be specified as part of the <xref:System.Data.Common.DbCommand> and <xref:System.Data.Common.DbConnection> objects.</span></span> <span data-ttu-id="852cf-122">Se [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è possibile risolvere un identificatore all'interno della query stessa, gli spazi dei nomi esterni subiscono (in base a regole simili).</span><span class="sxs-lookup"><span data-stu-id="852cf-122">If [!INCLUDE[esql](../../../../../../includes/esql-md.md)] cannot resolve an identifier within the query itself, the external namespaces are probed (based on similar rules).</span></span>  
   
-## Vedere anche  
- [Riferimenti a Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
- [Panoramica su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="852cf-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="852cf-123">See Also</span></span>  
+ [<span data-ttu-id="852cf-124">Riferimento a Entity SQL</span><span class="sxs-lookup"><span data-stu-id="852cf-124">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="852cf-125">Panoramica di Entity SQL</span><span class="sxs-lookup"><span data-stu-id="852cf-125">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

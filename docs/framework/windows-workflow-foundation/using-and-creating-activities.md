@@ -1,27 +1,30 @@
 ---
-title: "Utilizzo e creazione di attivit&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "programmazione [WF], attività"
+title: "Utilizzo e creazione di attività"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: programming [WF], activities
 ms.assetid: 2a69f32e-007f-47d0-ab96-535311641428
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cf633da7ee90816c534de090ebca79cc2a5f880d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Utilizzo e creazione di attivit&#224;
-Negli argomenti di questa sezione vengono descritte le attività fornite dal sistema disponibili in [!INCLUDE[wf](../../../includes/wf-md.md)].  
+# <a name="using-and-creating-activities"></a><span data-ttu-id="6e449-102">Utilizzo e creazione di attività</span><span class="sxs-lookup"><span data-stu-id="6e449-102">Using and Creating Activities</span></span>
+<span data-ttu-id="6e449-103">Negli argomenti di questa sezione vengono descritte le attività fornite dal sistema disponibili in [!INCLUDE[wf](../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6e449-103">The topics in this section describe the system-provided activities available in [!INCLUDE[wf](../../../includes/wf-md.md)].</span></span>  
   
-## In questa sezione  
- [Libreria attività incorporata](../../../docs/framework/windows-workflow-foundation//net-framework-4-5-built-in-activity-library.md)  
- Vengono descritte le attività fornite dal sistema disponibili in [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="6e449-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="6e449-104">In This Section</span></span>  
+ [<span data-ttu-id="6e449-105">Libreria di attività incorporata</span><span class="sxs-lookup"><span data-stu-id="6e449-105">Built-In Activity Library</span></span>](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)  
+ <span data-ttu-id="6e449-106">Vengono descritte le attività fornite dal sistema disponibili in [!INCLUDE[wf1](../../../includes/wf1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6e449-106">Describes the system-provided activities available in [!INCLUDE[wf1](../../../includes/wf1-md.md)].</span></span>  
   
- [Progettazione e implementazione di attività personalizzate](../../../docs/framework/windows-workflow-foundation//designing-and-implementing-custom-activities.md)  
- Viene illustrato come creare attività personalizzate con l'oggetto <xref:System.Activities.CodeActivity> o i metodi <xref:System.Activities.NativeActivity>.
+ [<span data-ttu-id="6e449-107">Progettazione e implementazione di attività personalizzate</span><span class="sxs-lookup"><span data-stu-id="6e449-107">Designing and Implementing Custom Activities</span></span>](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  
+ <span data-ttu-id="6e449-108">Viene illustrato come creare attività personalizzate con l'oggetto <xref:System.Activities.CodeActivity> o i metodi <xref:System.Activities.NativeActivity>.</span><span class="sxs-lookup"><span data-stu-id="6e449-108">Describes how to create custom activities with the <xref:System.Activities.CodeActivity> or the <xref:System.Activities.NativeActivity> methods.</span></span>

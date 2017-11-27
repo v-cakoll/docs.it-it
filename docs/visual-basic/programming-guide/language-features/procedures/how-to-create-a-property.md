@@ -1,81 +1,80 @@
 ---
-title: "How to: Create a Property (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "Visual Basic code, properties"
-  - "properties [Visual Basic]"
+title: "Procedura: creare una proprietà (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- Visual Basic code, properties
+- properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d140e6a10061f7fabe3d12c6cce5d0c201e103d6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create a Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una definizione di proprietà viene racchiusa tra un'istruzione `Property` e un'istruzione `End Property`.  All'interno della definizione è necessario definire una routine `Get`, una routine `Set` o entrambe.  Tra le due routine è incluso tutto il codice della proprietà.  
+# <a name="how-to-create-a-property-visual-basic"></a><span data-ttu-id="6fa2a-102">Procedura: creare una proprietà (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6fa2a-102">How to: Create a Property (Visual Basic)</span></span>
+<span data-ttu-id="6fa2a-103">Una proprietà definizione racchiusa tra una `Property` istruzione e un `End Property` istruzione.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-103">You enclose a property definition between a `Property` statement and an `End Property` statement.</span></span> <span data-ttu-id="6fa2a-104">In questa definizione è definire un `Get` procedure, un `Set` procedure o entrambi.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-104">Within this definition you define a `Get` procedure, a `Set` procedure, or both.</span></span> <span data-ttu-id="6fa2a-105">Il codice della proprietà si trova all'interno di queste procedure.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-105">All the property's code lies within these procedures.</span></span>  
   
- La routine `Get` recupera il valore della proprietà, mentre la routine `Set` memorizza un valore.  Per assegnare alla proprietà l'accesso in lettura e in scrittura, è necessario definire entrambe le routine.  Per una proprietà di sola lettura viene definita soltanto la routine `Get`, mentre per una proprietà di sola scrittura viene definita soltanto la routine `Set`.  
+ <span data-ttu-id="6fa2a-106">Il `Get` procedura recupera il valore della proprietà e `Set` routine memorizza un valore.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-106">The `Get` procedure retrieves the property's value, and the `Set` procedure stores a value.</span></span> <span data-ttu-id="6fa2a-107">Se si desidera che la proprietà di accesso in lettura/scrittura, è necessario definire entrambe le procedure.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-107">If you want the property to have read/write access, you must define both procedures.</span></span> <span data-ttu-id="6fa2a-108">Per una proprietà di sola lettura, si definisce solo `Get`, e per una proprietà di sola scrittura, definire solo `Set`.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-108">For a read-only property, you define only `Get`, and for a write-only property, you define only `Set`.</span></span>  
   
-### Per creare una proprietà  
+### <a name="to-create-a-property"></a><span data-ttu-id="6fa2a-109">Per creare una proprietà</span><span class="sxs-lookup"><span data-stu-id="6fa2a-109">To create a property</span></span>  
   
-1.  All'esterno di qualsiasi proprietà o routine utilizzare un'[Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), seguita da un'istruzione `End Property`.  
+1.  <span data-ttu-id="6fa2a-110">All'esterno di qualsiasi proprietà o routine, utilizzare un [istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md), seguito da un `End Property` istruzione.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-110">Outside any property or procedure, use a [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), followed by an `End Property` statement.</span></span>  
   
-2.  Se la proprietà accetta parametri, dopo la parola chiave `Property` inserire il nome della routine, quindi l'elenco dei parametri tra parentesi.  
+2.  <span data-ttu-id="6fa2a-111">Se la proprietà accetta parametri, seguire la `Property` (parola chiave) con il nome della routine, quindi l'elenco di parametri tra parentesi.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-111">If the property takes parameters, follow the `Property` keyword with the name of the procedure, then the parameter list in parentheses.</span></span>  
   
-3.  Dopo le parentesi inserire una clausola `As` per specificare il tipo di dati del valore della proprietà.  È necessario specificare il tipo di dati anche per una proprietà di sola scrittura.  
+3.  <span data-ttu-id="6fa2a-112">Dopo le parentesi un `As` clausola per specificare il tipo di dati del valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-112">Follow the parentheses with an `As` clause to specify the data type of the property's value.</span></span> <span data-ttu-id="6fa2a-113">È necessario specificare il tipo di dati anche per una proprietà di sola scrittura.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-113">You must specify the data type even for a write-only property.</span></span>  
   
-4.  Aggiungere le routine `Get` e `Set` nel modo appropriato.  Vedere le istruzioni riportate di seguito.  
+4.  <span data-ttu-id="6fa2a-114">Aggiungere `Get` e `Set` procedure, come appropriato.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-114">Add `Get` and `Set` procedures, as appropriate.</span></span> <span data-ttu-id="6fa2a-115">Vedere le indicazioni riportate di seguito.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-115">See the following directions.</span></span>  
   
-### Per creare una routine Get che recupera il valore di una proprietà  
+### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a><span data-ttu-id="6fa2a-116">Per creare una routine Get che recupera un valore della proprietà</span><span class="sxs-lookup"><span data-stu-id="6fa2a-116">To create a Get procedure that retrieves a property value</span></span>  
   
-1.  Tra le istruzioni `Property` ed `End Property` definire un'[Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md), seguita da un'istruzione `End Get`.  Per la routine `Get` non è necessario definire alcun parametro.  
+1.  <span data-ttu-id="6fa2a-117">Tra le `Property` e `End Property` istruzioni, scrivere un [l'istruzione Get](../../../../visual-basic/language-reference/statements/get-statement.md), seguito da un `End Get` istruzione.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-117">Between the `Property` and `End Property` statements, write a [Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md), followed by an `End Get` statement.</span></span> <span data-ttu-id="6fa2a-118">Non è necessario definire i parametri per il `Get` stored procedure.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-118">You do not need to define any parameters for the `Get` procedure.</span></span>  
   
-2.  Inserire le istruzioni del codice necessarie per il recupero del valore della proprietà tra le istruzioni `Get` ed `End Get`.  Oltre a generare e restituire il valore della proprietà, il codice può includere altri calcoli e modifiche di dati.  
+2.  <span data-ttu-id="6fa2a-119">Inserire le istruzioni di codice per recuperare il valore della proprietà tra il `Get` e `End Get` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-119">Place the code statements to retrieve the property's value between the `Get` and `End Get` statements.</span></span> <span data-ttu-id="6fa2a-120">Questo codice può includere altri calcoli e modifiche di dati oltre a generare e restituire il valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-120">This code can include other calculations and data manipulations in addition to generating and returning the property's value.</span></span>  
   
-3.  Utilizzare un'istruzione `Return` per restituire il valore della proprietà al codice chiamante.  
+3.  <span data-ttu-id="6fa2a-121">Utilizzare un `Return` istruzione per restituire il valore della proprietà per il codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-121">Use a `Return` statement to return the property's value to the calling code.</span></span>  
   
- È necessario definire una routine `Get` sia per una proprietà di lettura e scrittura che per una proprietà di sola lettura.  Non deve invece essere definita una routine `Get` per una proprietà di sola scrittura.  
+ <span data-ttu-id="6fa2a-122">È necessario scrivere un `Get` procedura per una proprietà di lettura / scrittura e per una proprietà di sola lettura.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-122">You must write a `Get` procedure for a read-write property and for a read-only property.</span></span> <span data-ttu-id="6fa2a-123">Non è necessario definire un `Get` routine per una proprietà di sola scrittura.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-123">You must not define a `Get` procedure for a write-only property.</span></span>  
   
-### Per creare una routine Set che definisce il valore di una proprietà  
+### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a><span data-ttu-id="6fa2a-124">Per creare un Set di procedure che scrive un valore della proprietà</span><span class="sxs-lookup"><span data-stu-id="6fa2a-124">To create a Set procedure that writes a property's value</span></span>  
   
-1.  Tra le istruzioni `Property` ed `End Property` definire un'[Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md), seguita da un'istruzione `End Set`.  
+1.  <span data-ttu-id="6fa2a-125">Tra le `Property` e `End Property` istruzioni, scrivere un [istruzione Set](../../../../visual-basic/language-reference/statements/set-statement.md), seguito da un `End Set` istruzione.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-125">Between the `Property` and `End Property` statements, write a [Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md), followed by an `End Set` statement.</span></span>  
   
-2.  All'interno dell'istruzione `Set` inserire un elenco di parametri tra parentesi dopo la parola chiave `Set`.  Tale elenco deve includere almeno un parametro specifico per il valore passato dal codice chiamante.  Il nome predefinito per questo parametro è `Value`, ma è possibile utilizzare un nome diverso in base alle esigenze.  Il tipo di dati del parametro valore deve corrispondere a quello della proprietà stessa.  
+2.  <span data-ttu-id="6fa2a-126">Nel `Set` istruzione, seguire la `Set` (parola chiave) con un elenco di parametri tra parentesi.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-126">In the `Set` statement, follow the `Set` keyword with a parameter list in parentheses.</span></span> <span data-ttu-id="6fa2a-127">Questo elenco deve includere almeno un parametro di valore per il valore passato al codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-127">This parameter list must include at least a value parameter for the value passed by the calling code.</span></span> <span data-ttu-id="6fa2a-128">Il nome predefinito per questo parametro è `Value`, ma è possibile utilizzare un nome diverso, se appropriato.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-128">The default name for this value parameter is `Value`, but you can use a different name if appropriate.</span></span> <span data-ttu-id="6fa2a-129">Il parametro value deve avere gli stessi dati di tipo della proprietà stessa.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-129">The value parameter must have the same data type as the property itself.</span></span>  
   
-3.  Inserire le istruzioni del codice necessarie per la memorizzazione di un valore nella proprietà tra le istruzioni `Set` ed `End Set`.  Oltre a convalidare e memorizzare il valore della proprietà, il codice può includere altri calcoli e modifiche di dati.  
+3.  <span data-ttu-id="6fa2a-130">Inserire le istruzioni di codice per archiviare un valore nella proprietà tra il `Set` e `End Set` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-130">Place the code statements to store a value in the property between the `Set` and `End Set` statements.</span></span> <span data-ttu-id="6fa2a-131">Questo codice può includere altri calcoli e modifiche di dati oltre a convalidare e memorizzare il valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-131">This code can include other calculations and data manipulations in addition to validating and storing the property's value.</span></span>  
   
-4.  Utilizzare il parametro valore per accettare il valore fornito dal codice chiamante.  Il valore può essere memorizzato direttamente in un'istruzione di assegnazione oppure utilizzato in un'espressione per il calcolo del valore interno da memorizzare.  
+4.  <span data-ttu-id="6fa2a-132">Utilizzare il parametro value per accettare il valore fornito dal codice chiamante.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-132">Use the value parameter to accept the value supplied by the calling code.</span></span> <span data-ttu-id="6fa2a-133">È possibile archiviare il valore direttamente in un'istruzione di assegnazione o utilizzarlo in un'espressione per calcolare il valore interno da archiviare.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-133">You can either store this value directly in an assignment statement, or use it in an expression to calculate the internal value to be stored.</span></span>  
   
- È necessario definire una routine `Set` sia per una proprietà di lettura e scrittura che per una proprietà di sola scrittura.  Non deve invece essere definita una routine `Set` per una proprietà di sola lettura.  
+ <span data-ttu-id="6fa2a-134">È necessario scrivere un `Set` procedura per una proprietà di lettura / scrittura e per una proprietà di sola scrittura.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-134">You must write a `Set` procedure for a read-write property and for a write-only property.</span></span> <span data-ttu-id="6fa2a-135">Non è necessario definire un `Set` routine per una proprietà di sola lettura.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-135">You must not define a `Set` procedure for a read-only property.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito viene creata una proprietà di lettura e scrittura che memorizza un nome completo costituito da due parti, ossia il nome e il cognome.  Quando il codice chiamante legge `fullName`, la routine `Get` combina le due parti costitutive e restituisce il nome completo.  Quando il codice chiamante assegna un nuovo nome completo, la routine `Set` tenta di scomporlo in due parti costitutive.  Se non viene rilevato alcuno spazio, viene memorizzato tutto come nome.  
+## <a name="example"></a><span data-ttu-id="6fa2a-136">Esempio</span><span class="sxs-lookup"><span data-stu-id="6fa2a-136">Example</span></span>  
+ <span data-ttu-id="6fa2a-137">Nell'esempio seguente viene creata una proprietà di lettura/scrittura che viene archiviato un nome completo come due parti costitutive, il nome e il cognome.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-137">The following example creates a read/write property that stores a full name as two constituent names, the first name and the last name.</span></span> <span data-ttu-id="6fa2a-138">Quando viene letto il codice chiamante `fullName`, `Get` procedure combina le due parti costitutive e restituisce il nome completo.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-138">When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name.</span></span> <span data-ttu-id="6fa2a-139">Quando il codice chiamante viene assegnato un nuovo nome completo, il `Set` routine tenta di suddividerla in due parti costitutive.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-139">When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names.</span></span> <span data-ttu-id="6fa2a-140">Se non viene trovato uno spazio, memorizzato tutto come il nome.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-140">If it does not find a space, it stores it all as the first name.</span></span>  
   
  [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
   
- Nell'esempio riportato di seguito vengono illustrate le chiamate tipiche alle routine delle proprietà di `fullName`.  La prima chiamata imposta il valore delle proprietà, mentre la seconda lo recupera.  
+ <span data-ttu-id="6fa2a-141">L'esempio seguente mostra le chiamate alle routine della proprietà di tipiche `fullName`.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-141">The following example shows typical calls to the property procedures of `fullName`.</span></span> <span data-ttu-id="6fa2a-142">La prima chiamata imposta il valore della proprietà e la seconda chiamata viene recuperato.</span><span class="sxs-lookup"><span data-stu-id="6fa2a-142">The first call sets the property value and the second call retrieves it.</span></span>  
   
  [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
   
-## Vedere anche  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Routine Property](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
- [How to: Declare a Property with Mixed Access Levels](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)   
- [How to: Call a Property Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-property-procedure.md)   
- [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)   
- [How to: Put a Value in a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-put-a-value-in-a-property.md)   
- [How to: Get a Value from a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a><span data-ttu-id="6fa2a-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6fa2a-143">See Also</span></span>  
+ [<span data-ttu-id="6fa2a-144">Routine</span><span class="sxs-lookup"><span data-stu-id="6fa2a-144">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="6fa2a-145">Routine Property</span><span class="sxs-lookup"><span data-stu-id="6fa2a-145">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="6fa2a-146">Parametri e argomenti delle routine</span><span class="sxs-lookup"><span data-stu-id="6fa2a-146">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="6fa2a-147">Differenze tra proprietà e variabili in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6fa2a-147">Differences Between Properties and Variables in Visual Basic</span></span>](./differences-between-properties-and-variables.md)  
+ [<span data-ttu-id="6fa2a-148">Procedura: Dichiarare una proprietà con livelli di accesso misti</span><span class="sxs-lookup"><span data-stu-id="6fa2a-148">How to: Declare a Property with Mixed Access Levels</span></span>](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [<span data-ttu-id="6fa2a-149">Procedura: Chiamare una routine di proprietà</span><span class="sxs-lookup"><span data-stu-id="6fa2a-149">How to: Call a Property Procedure</span></span>](./how-to-call-a-property-procedure.md)  
+ [<span data-ttu-id="6fa2a-150">Procedura: dichiarare e chiamare una proprietà predefinita in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6fa2a-150">How to: Declare and Call a Default Property in Visual Basic</span></span>](./how-to-declare-and-call-a-default-property.md)  
+ [<span data-ttu-id="6fa2a-151">Procedura: Inserire un valore in una proprietà</span><span class="sxs-lookup"><span data-stu-id="6fa2a-151">How to: Put a Value in a Property</span></span>](./how-to-put-a-value-in-a-property.md)  
+ [<span data-ttu-id="6fa2a-152">Procedura: Ottenere un valore da una proprietà</span><span class="sxs-lookup"><span data-stu-id="6fa2a-152">How to: Get a Value from a Property</span></span>](./how-to-get-a-value-from-a-property.md)

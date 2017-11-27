@@ -1,55 +1,58 @@
 ---
-title: "File Leggimi sull&#39;esempio relativo alla protezione estesa per l&#39;autenticazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: File Leggimi sull'esempio relativo alla protezione estesa per l'autenticazione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-caps.latest.revision: 3
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 3981a0d0c82b8bc35536a9afd702e753fcf07db5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# File Leggimi sull&#39;esempio relativo alla protezione estesa per l&#39;autenticazione
-La protezione estesa è un'iniziativa per la sicurezza che consente di impedire attacchi man\-in\-the\-middle \(MITM\) in cui l'autore di un attacco intercetta le credenziali del client e le utilizza per accedere a risorse protette nel server associato al client.  
+# <a name="readme-for-extended-protection-authentication-sample"></a><span data-ttu-id="644ce-102">File Leggimi sull'esempio relativo alla protezione estesa per l'autenticazione</span><span class="sxs-lookup"><span data-stu-id="644ce-102">ReadMe for Extended Protection Authentication Sample</span></span>
+<span data-ttu-id="644ce-103">La protezione estesa è un'iniziativa di sicurezza per impedire attacchi man-in-the-middle (MITM) in cui un utente malintenzionato (il "man-in-the-middle"), intercetta le credenziali del client e li utilizza per accedere alle risorse protette nel server di destinazione del client.</span><span class="sxs-lookup"><span data-stu-id="644ce-103">Extended Protection is a security initiative to protect against man-in-the-middle (MITM) attacks, in which an attacker (the "man-in-the-middle") intercepts a client’s credentials and uses them to access secure resources on the client’s intended server.</span></span>  
   
- Per ulteriori informazioni, vedere [Panoramica sulla protezione estesa per l'autenticazione](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).  
+ <span data-ttu-id="644ce-104">Per ulteriori informazioni, vedere [Extended Protection for Authentication Overview](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).</span><span class="sxs-lookup"><span data-stu-id="644ce-104">For more information, see [Extended Protection for Authentication Overview](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).</span></span>  
   
 > [!NOTE]
->  Questo esempio funziona solo quando è ospitato in IISe non funziona in Visual Studio Development Server perché non supporta HTTPS.  
+>  <span data-ttu-id="644ce-105">Questo esempio funziona solo quando è ospitato in IIS</span><span class="sxs-lookup"><span data-stu-id="644ce-105">This sample only works when hosted on IIS.</span></span> <span data-ttu-id="644ce-106">e non funziona in Visual Studio Development Server perché non supporta HTTPS.</span><span class="sxs-lookup"><span data-stu-id="644ce-106">It does not work on Visual Studio Development Server because that does not support HTTPS.</span></span>  
   
-## Per impostare, compilare ed eseguire l'esempio  
+## <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="644ce-107">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="644ce-107">To Set Up, Build, and Run the Sample</span></span>  
   
-1.  Installare IIS nel computer utilizzando Installazione applicazioni \-\> Funzionalità Windows.  
+1.  <span data-ttu-id="644ce-108">Installare IIS nel computer utilizzando Installazione applicazioni -> Funzionalità Windows.</span><span class="sxs-lookup"><span data-stu-id="644ce-108">Install IIS on the machine from Add/Remove Programs -> Windows Features.</span></span>  
   
-2.  Attivare l'autenticazione di Windows nelle funzionalità di Windows, ovvero Internet Information Services \-\> Servizi World Wide Web \-\> Sicurezza \-\> Autenticazione Windows.  
+2.  <span data-ttu-id="644ce-109">Attivare l'autenticazione di Windows nelle funzionalità di Windows, ovvero Internet Information Services -> Servizi World Wide Web -> Sicurezza -> Autenticazione Windows.</span><span class="sxs-lookup"><span data-stu-id="644ce-109">Turn on Windows Authentication in Windows features: Internet Information Services -> World Wide Web Services -> Security -> Windows Authentication.</span></span>  
   
-3.  Abilitare l'attivazione HTTP nelle funzionalità di Windows, ovvero Microsoft .NET Framework 3.5.1 \-\> Attivazione HTTP di Windows Communication Foundation.  
+3.  <span data-ttu-id="644ce-110">Abilitare l'attivazione HTTP nelle funzionalità di Windows, ovvero Microsoft .NET Framework 3.5.1 -> Attivazione HTTP di Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="644ce-110">Turn on HTTP Activation in Windows features: Microsoft .NET Framework 3.5.1 -> Windows Communication Foundation HTTP Activation.</span></span>  
   
-4.  In questo esempio il client deve stabilire un canale protetto con il server ed è di conseguenza necessario che sia presente un certificato del server che può essere installato da Gestione Internet Information Services.  
+4.  <span data-ttu-id="644ce-111">In questo esempio il client deve stabilire un canale protetto con il server ed è di conseguenza necessario che sia presente un certificato del server che può essere installato da Gestione Internet Information Services.</span><span class="sxs-lookup"><span data-stu-id="644ce-111">This sample requires the client to establish a secure channel with the server and so it requires the presence of a server certificate which can be installed from Internet Information Services (IIS) Manager.</span></span>  
   
-    1.  Aprire Gestione IIS \-\> Certificati server \(dalla scheda delle funzionalità\).  
+    1.  <span data-ttu-id="644ce-112">Aprire Gestione IIS -> Certificati server (dalla scheda delle funzionalità).</span><span class="sxs-lookup"><span data-stu-id="644ce-112">Open the IIS manager -> Server certificates (from the feature view tab).</span></span>  
   
-    2.  Ai fini dimostrativi di questo esempio, è possibile creare un certificato autofirmato.Se non si desidera che venga visualizzato un messaggio relativo alla sicurezza del certificato, è possibile installare un certificato presente nell'archivio Autorità di certificazione radice attendibili.  
+    2.  <span data-ttu-id="644ce-113">Ai fini dimostrativi di questo esempio, è possibile creare un certificato autofirmato.</span><span class="sxs-lookup"><span data-stu-id="644ce-113">For the purpose of testing this sample, you can create a self-signed certificate.</span></span> <span data-ttu-id="644ce-114">Se non si desidera che venga visualizzato un messaggio relativo alla sicurezza del certificato, è possibile installare un certificato presente nell'archivio Autorità di certificazione radice attendibili.</span><span class="sxs-lookup"><span data-stu-id="644ce-114">(If you don’t want Internet Explorer to prompt you about the certificate not being secure, you can install it in the Trusted Certificate Root authority store).</span></span>  
   
-5.  Spostarsi sul riquadro azioni per il sito Web predefinito.Fare clic su Modifica sito \-\> Binding.Aggiungere HTTPS come tipo, se non è già presente, con il numero di porta 443 e assegnare il certificato SSL creato nel passaggio precedente.  
+5.  <span data-ttu-id="644ce-115">Spostarsi sul riquadro azioni per il sito Web predefinito.</span><span class="sxs-lookup"><span data-stu-id="644ce-115">Go to the Actions pane for the Default Web site.</span></span> <span data-ttu-id="644ce-116">Fare clic su Modifica sito -> Binding.</span><span class="sxs-lookup"><span data-stu-id="644ce-116">Click Edit Site -> Bindings.</span></span> <span data-ttu-id="644ce-117">Aggiungere HTTPS come tipo, se non è già presente, con il numero di porta 443 e assegnare il certificato SSL creato nel passaggio precedente.</span><span class="sxs-lookup"><span data-stu-id="644ce-117">Add HTTPS as a type if it is not already present, with port number 443, and assign the SSL certificate created in the above step.</span></span>  
   
-6.  Compilare il servizio.In questo modo viene creata automaticamente una directory virtuale in IIS \(dall'azione di post\-compilazione specificata nelle proprietà di progetto\) e vengono copiati i file con estensione dll e svc e il file di configurazione per un servizio da ospitare nel Web.  
+6.  <span data-ttu-id="644ce-118">Compilare il servizio.</span><span class="sxs-lookup"><span data-stu-id="644ce-118">Build the service.</span></span> <span data-ttu-id="644ce-119">In questo modo viene creata automaticamente una directory virtuale in IIS (dall'azione di post-compilazione specificata nelle proprietà di progetto) e vengono copiati i file con estensione dll e svc e il file di configurazione per un servizio da ospitare nel Web.</span><span class="sxs-lookup"><span data-stu-id="644ce-119">This creates a virtual directory in IIS for you (from the post build action specified in the project properties) and copies the dll, .svc and config files as needed for a service to be Web hosted.</span></span>  
   
-7.  Aprire Gestione IIS.Fare clic con il pulsante destro del mouse sulla directory virtuale \(ExtendedProtection\) creata nel passaggio precedente, quindi scegliere Converti in applicazione.  
+7.  <span data-ttu-id="644ce-120">Aprire Gestione IIS.</span><span class="sxs-lookup"><span data-stu-id="644ce-120">Open the IIS Manager.</span></span> <span data-ttu-id="644ce-121">Fare clic con il pulsante destro del mouse sulla directory virtuale (ExtendedProtection) creata nel passaggio precedente, quindi scegliere Converti in applicazione.</span><span class="sxs-lookup"><span data-stu-id="644ce-121">Right-click the virtual directory (ExtendedProtection) that you created in the previous step and select Convert to Application.</span></span>  
   
-8.  Aprire il modulo di autenticazione in Gestione IIS relativo alla directory virtuale e abilitare l'autenticazione di Windows.  
+8.  <span data-ttu-id="644ce-122">Aprire il modulo di autenticazione in Gestione IIS relativo alla directory virtuale e abilitare l'autenticazione di Windows.</span><span class="sxs-lookup"><span data-stu-id="644ce-122">Open the Authentication module in IIS Manager for this virtual directory and enable Windows Authentication.</span></span>  
   
-9. Aprire le impostazioni avanzate per l'autenticazione di Windows relativa alla directory virtuale e specificare il valore in modo che sia richiesta poiché nell'esempio il valore ExtendedProtection corrispondente è impostata su Sempre.  
+9. <span data-ttu-id="644ce-123">Aprire le impostazioni avanzate per l'autenticazione di Windows relativa alla directory virtuale e specificare il valore in modo che sia richiesta poiché nell'esempio il valore ExtendedProtection corrispondente è impostata su Sempre.</span><span class="sxs-lookup"><span data-stu-id="644ce-123">Open the Advanced Settings for Windows Authentication for this virtual directory and set it to Required, since, in the sample, the corresponding ExtendedProtection setting is set to Always.</span></span>  
   
-10. Per testare il servizio, accedere all'URL da una finestra del browser.Se si desidera accedere a tale URL da più computer, verificare che il firewall sia aperto per tutte le connessioni HTTP e HTTPS in ingresso.  
+10. <span data-ttu-id="644ce-124">Per testare il servizio, accedere all'URL da una finestra del browser.</span><span class="sxs-lookup"><span data-stu-id="644ce-124">You can test the service by accessing the URL from a browser window.</span></span> <span data-ttu-id="644ce-125">Se si desidera accedere a tale URL da più computer, verificare che il firewall sia aperto per tutte le connessioni HTTP e HTTPS in ingresso.</span><span class="sxs-lookup"><span data-stu-id="644ce-125">If you want to access this URL from a cross machine, make sure that the firewall is opened for all incoming HTTP and HTTPS connections.</span></span>  
   
-11. Aprire il file di configurazione del client e fornire un nome di computer completo per l'attributo dell'indirizzo \<client\> \- \<endpoint\>, sostituendo \<\<full\_machine\_name\>\>.  
+11. <span data-ttu-id="644ce-126">Aprire il file di configurazione di client e fornire un nome completo del computer per il \<client >- \<endpoint >-attributo dell'indirizzo, sostituendo << full_machine_name >>.</span><span class="sxs-lookup"><span data-stu-id="644ce-126">Open the client config file and provide a full machine name for the \<client> - \<endpoint> - address attribute, replacing <<full_machine_name>>.</span></span>  
   
-12. Eseguire il client.Per comunicare con il servizio, il client stabilisce un canale protetto e utilizza la protezione estesa tra gli elementi.
+12. <span data-ttu-id="644ce-127">Eseguire il client.</span><span class="sxs-lookup"><span data-stu-id="644ce-127">Run the client.</span></span> <span data-ttu-id="644ce-128">Per comunicare con il servizio, il client stabilisce un canale protetto e utilizza la protezione estesa tra gli elementi.</span><span class="sxs-lookup"><span data-stu-id="644ce-128">The client communicates to the service by establishing a secure channel and using extended protection under the covers.</span></span>

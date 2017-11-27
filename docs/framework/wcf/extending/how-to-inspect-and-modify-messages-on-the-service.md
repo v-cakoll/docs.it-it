@@ -1,40 +1,46 @@
 ---
-title: "Procedura: ispezionare e modificare i messaggi sul servizio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: ispezionare e modificare i messaggi sul servizio'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c919083b165233614a01faf3d63dacd6712fbd01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: ispezionare e modificare i messaggi sul servizio
-È possibile ispezionare o modificare i messaggi in ingresso o in uscita su un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client implementando un <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName> e inserendola nel runtime del servizio. Per ulteriori informazioni, vedere [estensione dispatcher](../../../../docs/framework/wcf/extending/extending-dispatchers.md). La funzionalità equivalente nel servizio è il <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>.  
+# <a name="how-to-inspect-and-modify-messages-on-the-service"></a><span data-ttu-id="c3ea3-102">Procedura: ispezionare e modificare i messaggi sul servizio</span><span class="sxs-lookup"><span data-stu-id="c3ea3-102">How to: Inspect and Modify Messages on the Service</span></span>
+<span data-ttu-id="c3ea3-103">È possibile ispezionare o modificare i messaggi in arrivo o in uscita su un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementando un'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> e inserendola nella fase di esecuzione del servizio.</span><span class="sxs-lookup"><span data-stu-id="c3ea3-103">You can inspect or modify the incoming or outgoing messages across a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client by implementing a <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> and inserting it into the service runtime.</span></span> <span data-ttu-id="c3ea3-104">Per ulteriori informazioni, vedere [estensione dispatcher](../../../../docs/framework/wcf/extending/extending-dispatchers.md).</span><span class="sxs-lookup"><span data-stu-id="c3ea3-104">For more information, see [Extending Dispatchers](../../../../docs/framework/wcf/extending/extending-dispatchers.md).</span></span> <span data-ttu-id="c3ea3-105">La funzionalità equivalente nel servizio è <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c3ea3-105">The equivalent feature on the service is the <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.</span></span>  
   
-### <a name="to-inspect-or-modify-messages"></a>Per ispezionare o modificare i messaggi  
+### <a name="to-inspect-or-modify-messages"></a><span data-ttu-id="c3ea3-106">Per ispezionare o modificare i messaggi</span><span class="sxs-lookup"><span data-stu-id="c3ea3-106">To inspect or modify messages</span></span>  
   
-1.  Implementare il <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName> interfaccia.  
+1.  <span data-ttu-id="c3ea3-107">Implementare l'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c3ea3-107">Implement the <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> interface.</span></span>  
   
-2.  Implementare un <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=fullName>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName>, o <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName> interfaccia in base all'ambito in cui si desidera inserire facilmente il controllo dei messaggi del servizio.  
+2.  <span data-ttu-id="c3ea3-108">Implementare un'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>, a seconda dell'ambito in cui si desidera inserire facilmente il controllo dei messaggi del servizio.</span><span class="sxs-lookup"><span data-stu-id="c3ea3-108">Implement a <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>, or <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> interface depending upon the scope at which you want to easily insert your service message inspector.</span></span>  
   
-3.  Inserire il comportamento prima di chiamare il <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=fullName> metodo il <xref:System.ServiceModel.ServiceHost?displayProperty=fullName>. Per informazioni dettagliate, vedere [configurazione ed estensione del Runtime con comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+3.  <span data-ttu-id="c3ea3-109">Inserire il comportamento prima di chiamare il metodo <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c3ea3-109">Insert your behavior prior to calling the <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> method on the <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>.</span></span> <span data-ttu-id="c3ea3-110">Per informazioni dettagliate, vedere [la configurazione e l'estensione del Runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).</span><span class="sxs-lookup"><span data-stu-id="c3ea3-110">For details, see [Configuring and Extending the Runtime with Behaviors](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).</span></span>  
   
-## <a name="example"></a>Esempio  
- Negli esempi di codice seguenti vengono illustrati, nell'ordine:  
+## <a name="example"></a><span data-ttu-id="c3ea3-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="c3ea3-111">Example</span></span>  
+ <span data-ttu-id="c3ea3-112">Negli esempi di codice seguenti vengono illustrati, nell'ordine:</span><span class="sxs-lookup"><span data-stu-id="c3ea3-112">The following code examples show, in order:</span></span>  
   
--   Un'implementazione del controllo del servizio.  
+-   <span data-ttu-id="c3ea3-113">Un'implementazione del controllo del servizio.</span><span class="sxs-lookup"><span data-stu-id="c3ea3-113">A service inspector implementation.</span></span>  
   
--   Un comportamento del servizio che inserisce il controllo.  
+-   <span data-ttu-id="c3ea3-114">Un comportamento del servizio che inserisce il controllo.</span><span class="sxs-lookup"><span data-stu-id="c3ea3-114">A service behavior that inserts the inspector.</span></span>  
   
--   Un file di configurazione che carica ed esegue il comportamento in un'applicazione del servizio.  
+-   <span data-ttu-id="c3ea3-115">Un file di configurazione che carica ed esegue il comportamento in un'applicazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="c3ea3-115">A configuration file that loads and runs the behavior in a service application.</span></span>  
   
  [!code-csharp[Interceptors#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#7)]
  [!code-vb[Interceptors#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#7)]  
@@ -42,11 +48,9 @@ caps.handback.revision: 6
  [!code-csharp[Interceptors#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#8)]
  [!code-vb[Interceptors#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#8)]  
   
- <!-- TODO: review snippet reference [!code[Interceptors#9](../../../../samples/snippets/common/VS_Snippets_CFX/interceptors/common/hostapplication.exe.config#9)]  -->
- <!-- TODO: review snippet reference [!code-csharp[Interceptors#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/hostapplication.exe.config#9)]  -->
- <!-- TODO: review snippet reference [!code-vb[Interceptors#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/hostapplication.exe.config#9)]  -->  
+ [!code-xml[Interceptors#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/hostapplication.exe.config#9)]  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>   
- [Configurazione ed estensione del Runtime con comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a><span data-ttu-id="c3ea3-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c3ea3-116">See Also</span></span>  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>  
+ [<span data-ttu-id="c3ea3-117">La configurazione e l'estensione del Runtime dei comportamenti</span><span class="sxs-lookup"><span data-stu-id="c3ea3-117">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

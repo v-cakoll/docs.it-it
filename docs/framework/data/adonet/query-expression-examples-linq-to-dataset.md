@@ -1,47 +1,50 @@
 ---
-title: "Esempi delle espressioni di query (LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Esempi di espressione di query (LINQ to DataSet)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1967575aa7a287064d6da54d929ce095e89ee24f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Esempi delle espressioni di query (LINQ to DataSet)
-Contenuto della sezione vengono forniti esempi di programmazione di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] nella sintassi delle espressioni di query in cui vengono usati gli operatori di query standard.  L'oggetto <xref:System.Data.DataSet> usato in questi esempi viene popolato usando il metodo `FillDataSet`, specificato in [Caricamento di dati in un DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  Per altre informazioni, vedere [Standard Query Operators Overview](../../../../ocs/visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+# <a name="query-expression-examples-linq-to-dataset"></a><span data-ttu-id="34980-102">Esempi di espressione di query (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="34980-102">Query Expression Examples (LINQ to DataSet)</span></span>
+<span data-ttu-id="34980-103">Contenuto della sezione vengono forniti esempi di programmazione di [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] nella sintassi delle espressioni di query in cui vengono usati gli operatori di query standard.</span><span class="sxs-lookup"><span data-stu-id="34980-103">This section provides [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programming examples in query expression syntax that use the standard query operators.</span></span> <span data-ttu-id="34980-104">Il <xref:System.Data.DataSet> usato in questi esempi viene popolato usando il `FillDataSet` metodo, che viene specificato in [durante il caricamento dei dati in un set di dati](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="34980-104">The <xref:System.Data.DataSet> used in these examples is populated by using the `FillDataSet` method, which is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span> <span data-ttu-id="34980-105">Per ulteriori informazioni, vedere [Cenni preliminari sugli operatori di Query Standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span><span class="sxs-lookup"><span data-stu-id="34980-105">For more information, see [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
   
-## In questa sezione  
- [Proiezione](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
- Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Select%2A> e <xref:System.Linq.Enumerable.SelectMany%2A> per eseguire una query su <xref:System.Data.DataSet>.  
+## <a name="in-this-section"></a><span data-ttu-id="34980-106">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="34980-106">In This Section</span></span>  
+ [<span data-ttu-id="34980-107">Proiezione</span><span class="sxs-lookup"><span data-stu-id="34980-107">Projection</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
+ <span data-ttu-id="34980-108">Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Select%2A> e <xref:System.Linq.Enumerable.SelectMany%2A> per eseguire una query su <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="34980-108">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Select%2A> and <xref:System.Linq.Enumerable.SelectMany%2A> methods to query a <xref:System.Data.DataSet>.</span></span>  
   
- [Restrizione](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
- Negli esempi di questo argomento viene illustrato l'uso del metodo <xref:System.Linq.Enumerable.Where%2A> per eseguire una query su <xref:System.Data.DataSet>.  
+ [<span data-ttu-id="34980-109">Restrizione</span><span class="sxs-lookup"><span data-stu-id="34980-109">Restriction</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
+ <span data-ttu-id="34980-110">Negli esempi di questo argomento viene illustrato l'uso del metodo <xref:System.Linq.Enumerable.Where%2A> per eseguire una query su <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="34980-110">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Where%2A> method to query a <xref:System.Data.DataSet>.</span></span>  
   
- [Partizionamento](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
- Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A> per eseguire una query su <xref:System.Data.DataSet> e suddividere in partizioni i risultati.  
+ [<span data-ttu-id="34980-111">Partizionamento</span><span class="sxs-lookup"><span data-stu-id="34980-111">Partitioning</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
+ <span data-ttu-id="34980-112">Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A> per eseguire una query su <xref:System.Data.DataSet> e suddividere in partizioni i risultati.</span><span class="sxs-lookup"><span data-stu-id="34980-112">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods to query a <xref:System.Data.DataSet> and partition the results.</span></span>  
   
- [Ordinamento](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
- Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A> e <xref:System.Linq.Enumerable.ThenByDescending%2A> per eseguire una query su <xref:System.Data.DataSet> e ordinare i risultati.  
+ [<span data-ttu-id="34980-113">Ordinamento</span><span class="sxs-lookup"><span data-stu-id="34980-113">Ordering</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+ <span data-ttu-id="34980-114">Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A> e <xref:System.Linq.Enumerable.ThenByDescending%2A> per eseguire una query su <xref:System.Data.DataSet> e ordinare i risultati.</span><span class="sxs-lookup"><span data-stu-id="34980-114">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A>, and <xref:System.Linq.Enumerable.ThenByDescending%2A> methods to query a <xref:System.Data.DataSet> and order the results.</span></span>  
   
- [Operatori di elemento](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
- Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.First%2A> e <xref:System.Linq.Enumerable.ElementAt%2A> per ottenere elementi di <xref:System.Data.DataRow> da un oggetto <xref:System.Data.DataSet>.  
+ [<span data-ttu-id="34980-115">Operatori di elemento</span><span class="sxs-lookup"><span data-stu-id="34980-115">Element Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
+ <span data-ttu-id="34980-116">Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.First%2A> e <xref:System.Linq.Enumerable.ElementAt%2A> per ottenere elementi di <xref:System.Data.DataRow> da un oggetto <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="34980-116">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.First%2A> and <xref:System.Linq.Enumerable.ElementAt%2A> methods to get <xref:System.Data.DataRow> elements from a <xref:System.Data.DataSet>.</span></span>  
   
- [Operatori di aggregazione](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
- Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Sum%2A> per eseguire una query su <xref:System.Data.DataSet> e aggregare i dati.  
+ [<span data-ttu-id="34980-117">Operatori di aggregazione</span><span class="sxs-lookup"><span data-stu-id="34980-117">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+ <span data-ttu-id="34980-118">Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>  <xref:System.Linq.Enumerable.Sum%2A> per eseguire una query su <xref:System.Data.DataSet> e aggregare i dati.</span><span class="sxs-lookup"><span data-stu-id="34980-118">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, and <xref:System.Linq.Enumerable.Sum%2A> methods to query a <xref:System.Data.DataSet> and aggregate data.</span></span>  
   
- [Operatori di join](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
- Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.GroupJoin%2A> e <xref:System.Linq.Enumerable.Join%2A> per eseguire una query su <xref:System.Data.DataSet>.  
+ [<span data-ttu-id="34980-119">Operatori di join</span><span class="sxs-lookup"><span data-stu-id="34980-119">Join Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
+ <span data-ttu-id="34980-120">Negli esempi di questo argomento viene illustrato l'uso dei metodi <xref:System.Linq.Enumerable.GroupJoin%2A> e <xref:System.Linq.Enumerable.Join%2A> per eseguire una query su <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="34980-120">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.GroupJoin%2A> and <xref:System.Linq.Enumerable.Join%2A> methods to query a <xref:System.Data.DataSet>.</span></span>  
   
-## Vedere anche  
- [Esempi di query basate su metodo](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)   
- [Esempi di operatori specifici del DataSet](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)   
- [Esempi relativi a LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a><span data-ttu-id="34980-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="34980-121">See Also</span></span>  
+ [<span data-ttu-id="34980-122">Esempi di Query basate su metodo</span><span class="sxs-lookup"><span data-stu-id="34980-122">Method-Based Query Examples</span></span>](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ [<span data-ttu-id="34980-123">Esempi di operatori specifici di DataSet</span><span class="sxs-lookup"><span data-stu-id="34980-123">DataSet-Specific Operator Examples</span></span>](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
+ [<span data-ttu-id="34980-124">LINQ to DataSet esempi</span><span class="sxs-lookup"><span data-stu-id="34980-124">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

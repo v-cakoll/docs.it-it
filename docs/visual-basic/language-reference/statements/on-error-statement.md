@@ -1,139 +1,136 @@
 ---
-title: "On Error Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.OnError"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic code, control flow"
-  - "Resume Next statement"
-  - "errors [Visual Basic], trapping"
-  - "error handling, On Error statement"
-  - "Next statement, On Error"
-  - "control flow, branching"
-  - "Error keyword"
-  - "execution, conditional"
-  - "Resume statement, and On Error statement"
-  - "Error statement, and On Error statement"
-  - "GoTo statement, and On Error statement"
-  - "branching, on error"
-  - "conditional statements, On Error"
-  - "On Error statement, syntax"
-  - "On keyword"
-  - "run-time errors, handling"
-  - "On Error statement"
+title: Istruzione On Error (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.OnError
+helpviewer_keywords:
+- Visual Basic code, control flow
+- Resume Next statement [Visual Basic]
+- errors [Visual Basic], trapping
+- error handling, On Error statement
+- Next statement [Visual Basic], On Error
+- control flow [Visual Basic], branching
+- Error keyword [Visual Basic]
+- execution [Visual Basic], conditional
+- Resume statement [Visual Basic], and On Error statement
+- Error statement [Visual Basic], and On Error statement
+- GoTo statement [Visual Basic], and On Error statement
+- branching [Visual Basic], on error
+- conditional statements [Visual Basic], On Error
+- On Error statement [Visual Basic], syntax
+- On keyword [Visual Basic]
+- run-time errors [Visual Basic], handling
+- On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e1039359145902bffe3f91aa654a43790d16b887
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# On Error Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Consente di abilitare una routine di gestione degli errori e di specificarne la posizione all'interno di una routine più ampia. Consente inoltre di disabilitare una routine di gestione degli errori.  
+# <a name="on-error-statement-visual-basic"></a><span data-ttu-id="07bdc-102">Istruzione On Error (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07bdc-102">On Error Statement (Visual Basic)</span></span>
+<span data-ttu-id="07bdc-103">Abilita una routine di gestione degli errori e specifica il percorso della routine all'interno di una routine. consente inoltre di disabilitare una routine di gestione degli errori.</span><span class="sxs-lookup"><span data-stu-id="07bdc-103">Enables an error-handling routine and specifies the location of the routine within a procedure; can also be used to disable an error-handling routine.</span></span>  
   
- In assenza di un'istruzione `On Error`, qualsiasi errore di runtime può risultare irreversibile: viene visualizzato un messaggio di errore e l'esecuzione viene interrotta.  
+ <span data-ttu-id="07bdc-104">Senza un `On Error` istruzione, qualsiasi errore di run-time che si verifica è irreversibile: viene visualizzato un messaggio di errore e l'esecuzione viene arrestata.</span><span class="sxs-lookup"><span data-stu-id="07bdc-104">Without an `On Error` statement, any run-time error that occurs is fatal: an error message is displayed, and execution stops.</span></span>  
   
- Se possibile, si è gestione delle eccezioni strutturata di utilizzo nel codice, anziché utilizzare la gestione delle eccezioni non strutturata e `On Error` istruzione.  Per ulteriori informazioni, vedere [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ <span data-ttu-id="07bdc-105">Quando possibile, si consiglia di utilizzare nel codice, anziché utilizzare la gestione strutturata delle eccezioni strutturata e `On Error` istruzione.</span><span class="sxs-lookup"><span data-stu-id="07bdc-105">Whenever possible, we suggest you use structured exception handling in your code, rather than using unstructured exception handling and the `On Error` statement.</span></span> <span data-ttu-id="07bdc-106">Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span><span class="sxs-lookup"><span data-stu-id="07bdc-106">For more information, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
 > [!NOTE]
->  La parola chiave `Error` viene utilizzata anche nell'[Error Statement](../../../visual-basic/language-reference/statements/error-statement.md), supportata per garantire la compatibilità con le versioni precedenti.  
+>  <span data-ttu-id="07bdc-107">Il `Error` (parola chiave) viene usato anche nel [Error (istruzione)](../../../visual-basic/language-reference/statements/error-statement.md), che è supportato per compatibilità con le versioni precedenti.</span><span class="sxs-lookup"><span data-stu-id="07bdc-107">The `Error` keyword is also used in the [Error Statement](../../../visual-basic/language-reference/statements/error-statement.md), which is supported for backward compatibility.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="07bdc-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="07bdc-108">Syntax</span></span>  
   
 ```  
 On Error { GoTo [ line | 0 | -1 ] | Resume Next }  
 ```  
   
-## Parti  
+## <a name="parts"></a><span data-ttu-id="07bdc-109">Parti</span><span class="sxs-lookup"><span data-stu-id="07bdc-109">Parts</span></span>  
   
-|||  
-|-|-|  
-|Termine|Definizione|  
-|`GoTo` `line`|Consente di attivare la routine di gestione degli errori che inizia sulla riga specificata nell'argomento obbligatorio `line`.  L'argomento `line` può corrispondere a qualsiasi numero o etichetta di riga.  Se si verifica un errore di runtime, il controllo crea un ramo nella riga specificata, attivando il gestore errori.  La riga specificata deve trovarsi nella stessa routine dell'istruzione `On Error`. In caso contrario si verificherà un errore di compilazione.|  
-|`GoTo` 0|Consente di disabilitare il gestore errori attivato nella routine corrente e di reimpostarlo su `Nothing`.|  
-|`GoTo` \-1|Consente di disabilitare l'eccezione attivata nella routine corrente e di reimpostarla su `Nothing`.|  
-|`Resume Next`|Consente di specificare che, in caso di errore di runtime, il controllo passi all'istruzione immediatamente successiva a quella in cui si è verificato l'errore e l'esecuzione continui da tale punto.  Quando si accede agli oggetti, utilizzare questo form anziché `On Error GoTo`.|  
+|<span data-ttu-id="07bdc-110">Termine</span><span class="sxs-lookup"><span data-stu-id="07bdc-110">Term</span></span>|<span data-ttu-id="07bdc-111">Definizione</span><span class="sxs-lookup"><span data-stu-id="07bdc-111">Definition</span></span>|  
+|---|---|  
+|<span data-ttu-id="07bdc-112">`GoTo` `line`</span><span class="sxs-lookup"><span data-stu-id="07bdc-112">`GoTo` `line`</span></span>|<span data-ttu-id="07bdc-113">Consente la routine di gestione degli errori che inizia alla riga specificata in obbligatorio `line` argomento.</span><span class="sxs-lookup"><span data-stu-id="07bdc-113">Enables the error-handling routine that starts at the line specified in the required `line` argument.</span></span> <span data-ttu-id="07bdc-114">Il `line` argomento è un'etichetta di riga o un numero di riga.</span><span class="sxs-lookup"><span data-stu-id="07bdc-114">The `line` argument is any line label or line number.</span></span> <span data-ttu-id="07bdc-115">Se si verifica un errore di run-time, controllare i branch per la riga specificata, attivando il gestore di errori.</span><span class="sxs-lookup"><span data-stu-id="07bdc-115">If a run-time error occurs, control branches to the specified line, making the error handler active.</span></span> <span data-ttu-id="07bdc-116">La riga specificata deve trovarsi nella stessa routine come il `On Error` verrà eseguita l'istruzione o un errore in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="07bdc-116">The specified line must be in the same procedure as the `On Error` statement, or a compile-time error will occur.</span></span>|  
+|<span data-ttu-id="07bdc-117">`GoTo` 0</span><span class="sxs-lookup"><span data-stu-id="07bdc-117">`GoTo` 0</span></span>|<span data-ttu-id="07bdc-118">Disabilita gestore errori abilitato nella procedura corrente e viene reimpostato su `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="07bdc-118">Disables enabled error handler in the current procedure and resets it to `Nothing`.</span></span>|  
+|<span data-ttu-id="07bdc-119">`GoTo` -1</span><span class="sxs-lookup"><span data-stu-id="07bdc-119">`GoTo` -1</span></span>|<span data-ttu-id="07bdc-120">Disabilita l'eccezione abilitata nella procedura corrente e viene reimpostato su `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="07bdc-120">Disables enabled exception in the current procedure and resets it to `Nothing`.</span></span>|  
+|`Resume Next`|<span data-ttu-id="07bdc-121">Specifica che quando si verifica un errore di run-time, controllo passa all'istruzione immediatamente successiva all'istruzione in cui si è verificato l'errore e l'esecuzione continua da tale punto.</span><span class="sxs-lookup"><span data-stu-id="07bdc-121">Specifies that when a run-time error occurs, control goes to the statement immediately following the statement where the error occurred, and execution continues from that point.</span></span> <span data-ttu-id="07bdc-122">Utilizzare questo modulo anziché `On Error GoTo` quando l'accesso agli oggetti.</span><span class="sxs-lookup"><span data-stu-id="07bdc-122">Use this form rather than `On Error GoTo` when accessing objects.</span></span>|  
   
-## Note  
-  
-> [!NOTE]
->  Si consiglia di utilizzare la gestione delle eccezioni strutturata nel codice laddove possibile, anziché utilizzare la gestione delle eccezioni non strutturata e `On Error` istruzione.  Per ulteriori informazioni, vedere [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
-  
- Un gestore errori "abilitato" è quello che viene attivato da un'istruzione `On Error`.  Un gestore errori "attivo", invece, rappresenta un gestore abilitato in procinto di gestire un errore.  
-  
- Se si verifica un errore mentre un gestore errori è attivo \(tra l'occorrenza dell'errore e un'istruzione `Resume`, `Exit Sub`, `Exit Function` o `Exit Property`\), il gestore errori della routine corrente non sarà in grado di gestirlo.  Il controllo verrà restituito, quindi, alla routine chiamante.  
-  
- Se la routine chiamante dispone di un gestore errori abilitato, esso verrà attivato per provvedere alla gestione dell'errore.  Tuttavia, se è attivo anche il gestore errori della routine, il controllo verrà passato di nuovo alle precedenti routine chiamanti fino al rilevamento di un gestore errori abilitato ma inattivo.  Se il gestore errori non viene trovato, nel punto in cui si è effettivamente verificato l'errore risulta irreversibile.  
-  
- Ogni volta che il controllo viene passato nuovamente a una routine chiamante, questa diventerà la routine corrente.  Infine, quando l'errore viene gestito da un gestore errori di qualsiasi routine, l'esecuzione viene ripresa nella routine corrente, dal punto indicato dall'istruzione `Resume`.  
+## <a name="remarks"></a><span data-ttu-id="07bdc-123">Note</span><span class="sxs-lookup"><span data-stu-id="07bdc-123">Remarks</span></span>  
   
 > [!NOTE]
->  Una routine di gestione degli errori non corrisponde a una routine `Sub` o `Function`.  Si tratta di una sezione di codice contrassegnata da un'etichetta o da un numero di riga.  
+>  <span data-ttu-id="07bdc-124">È consigliabile utilizzare Gestione strutturata delle eccezioni nel codice ogni volta che è possibile, anziché utilizzare la gestione delle eccezioni non strutturata e `On Error` istruzione.</span><span class="sxs-lookup"><span data-stu-id="07bdc-124">We recommend that you use structured exception handling in your code whenever possible, rather than using unstructured exception handling and the `On Error` statement.</span></span> <span data-ttu-id="07bdc-125">Per altre informazioni, vedere [Istruzione Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span><span class="sxs-lookup"><span data-stu-id="07bdc-125">For more information, see [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span>  
   
-## Proprietà Number  
- Per determinare la causa di un errore, le routine di gestione degli errori si basano sul valore della proprietà `Number` dell'oggetto `Err`.  Con la routine, i valori rilevanti delle proprietà dell'oggetto `Err` verranno verificati e salvati prima che venga generato un altro errore o che venga richiamata una routine che possa causare un errore.  I valori delle proprietà dell'oggetto `Err` riflettono solo l'ultimo errore verificatosi.  Il messaggio di errore associato a `Err.Number` è disponibile in `Err.Description`.  
+ <span data-ttu-id="07bdc-126">Un gestore di errori "abilitato" è quello che viene attivato da un `On Error` istruzione.</span><span class="sxs-lookup"><span data-stu-id="07bdc-126">An "enabled" error handler is one that is turned on by an `On Error` statement.</span></span> <span data-ttu-id="07bdc-127">Un gestore degli errori "attivo" è un gestore abilitato che sta per la gestione di un errore.</span><span class="sxs-lookup"><span data-stu-id="07bdc-127">An "active" error handler is an enabled handler that is in the process of handling an error.</span></span>  
   
-## Istruzione Throw  
- Se un errore viene generato con il metodo `Err.Raise`, la proprietà `Exception` viene impostata su un'istanza appena creata della classe <xref:System.Exception>.  Per consentire la generazione di eccezioni di tipi derivati, nel linguaggio è supportata un'istruzione `Throw`.  Tale istruzione richiede un solo parametro, ovvero l'istanza di eccezione da generare.  Nell'esempio seguente viene illustrato come utilizzare queste funzionalità con il supporto esistente per la gestione delle eccezioni:  
+ <span data-ttu-id="07bdc-128">Se si verifica un errore mentre un gestore degli errori è attivo (tra l'occorrenza dell'errore e un `Resume`, `Exit Sub`, `Exit Function`, o `Exit Property` istruzione), il gestore di errori della routine corrente non è possibile gestire l'errore.</span><span class="sxs-lookup"><span data-stu-id="07bdc-128">If an error occurs while an error handler is active (between the occurrence of the error and a `Resume`, `Exit Sub`, `Exit Function`, or `Exit Property` statement), the current procedure's error handler cannot handle the error.</span></span> <span data-ttu-id="07bdc-129">Controllo viene restituito alla routine chiamante.</span><span class="sxs-lookup"><span data-stu-id="07bdc-129">Control returns to the calling procedure.</span></span>  
+  
+ <span data-ttu-id="07bdc-130">Se la routine chiamante dispone di un gestore errori abilitato, verrà attivato per gestire gli errori.</span><span class="sxs-lookup"><span data-stu-id="07bdc-130">If the calling procedure has an enabled error handler, it is activated to handle the error.</span></span> <span data-ttu-id="07bdc-131">Se il gestore di errori della routine chiamata anche è attivo, il controllo passa attraverso la routine chiamate precedente finché non viene trovato un gestore errori abilitato ma inattivo.</span><span class="sxs-lookup"><span data-stu-id="07bdc-131">If the calling procedure's error handler is also active, control passes back through previous calling procedures until an enabled, but inactive, error handler is found.</span></span> <span data-ttu-id="07bdc-132">Se il gestore errori non viene trovato, l'errore è irreversibile nel punto in cui si è effettivamente verificato.</span><span class="sxs-lookup"><span data-stu-id="07bdc-132">If no such error handler is found, the error is fatal at the point at which it actually occurred.</span></span>  
+  
+ <span data-ttu-id="07bdc-133">Ogni volta che il gestore degli errori passa il controllo torna a una routine chiamante, che diventa la routine corrente.</span><span class="sxs-lookup"><span data-stu-id="07bdc-133">Each time the error handler passes control back to a calling procedure, that procedure becomes the current procedure.</span></span> <span data-ttu-id="07bdc-134">Dopo l'errore viene gestito da un gestore di errori in tutte le procedure, nella routine corrente, dal punto indicato dall'esecuzione riprende il `Resume` istruzione.</span><span class="sxs-lookup"><span data-stu-id="07bdc-134">Once an error is handled by an error handler in any procedure, execution resumes in the current procedure at the point designated by the `Resume` statement.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="07bdc-135">Una routine di gestione degli errori non è un `Sub` stored procedure o un `Function` stored procedure.</span><span class="sxs-lookup"><span data-stu-id="07bdc-135">An error-handling routine is not a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="07bdc-136">È una sezione di codice contrassegnato da un'etichetta di riga o un numero di riga.</span><span class="sxs-lookup"><span data-stu-id="07bdc-136">It is a section of code marked by a line label or a line number.</span></span>  
+  
+## <a name="number-property"></a><span data-ttu-id="07bdc-137">Proprietà Number</span><span class="sxs-lookup"><span data-stu-id="07bdc-137">Number Property</span></span>  
+ <span data-ttu-id="07bdc-138">Routine di gestione degli errori si basano sul valore di `Number` proprietà del `Err` oggetto per determinare la causa dell'errore.</span><span class="sxs-lookup"><span data-stu-id="07bdc-138">Error-handling routines rely on the value in the `Number` property of the `Err` object to determine the cause of the error.</span></span> <span data-ttu-id="07bdc-139">La routine deve testare o salvare i valori di proprietà pertinenti di `Err` oggetto qualsiasi altro errore può verificarsi prima o una routine che potrebbe causare un errore viene richiamato.</span><span class="sxs-lookup"><span data-stu-id="07bdc-139">The routine should test or save relevant property values in the `Err` object before any other error can occur or before a procedure that might cause an error is called.</span></span> <span data-ttu-id="07bdc-140">I valori delle proprietà di `Err` oggetto riflettono solo l'errore più recente.</span><span class="sxs-lookup"><span data-stu-id="07bdc-140">The property values in the `Err` object reflect only the most recent error.</span></span> <span data-ttu-id="07bdc-141">Il messaggio di errore associata a `Err.Number` è contenuto in `Err.Description`.</span><span class="sxs-lookup"><span data-stu-id="07bdc-141">The error message associated with `Err.Number` is contained in `Err.Description`.</span></span>  
+  
+## <a name="throw-statement"></a><span data-ttu-id="07bdc-142">Istruzione Throw</span><span class="sxs-lookup"><span data-stu-id="07bdc-142">Throw Statement</span></span>  
+ <span data-ttu-id="07bdc-143">Un errore viene generato con il `Err.Raise` metodo imposta la `Exception` proprietà a un'istanza appena creata del <xref:System.Exception> classe.</span><span class="sxs-lookup"><span data-stu-id="07bdc-143">An error that is raised with the `Err.Raise` method sets the `Exception` property to a newly created instance of the <xref:System.Exception> class.</span></span> <span data-ttu-id="07bdc-144">Per supportare la generazione di eccezioni di tipi derivati, un `Throw` nel linguaggio è supportata l'istruzione.</span><span class="sxs-lookup"><span data-stu-id="07bdc-144">In order to support the raising of exceptions of derived exception types, a `Throw` statement is supported in the language.</span></span> <span data-ttu-id="07bdc-145">Questo ha un singolo parametro che rappresenta l'istanza di eccezione viene generata.</span><span class="sxs-lookup"><span data-stu-id="07bdc-145">This takes a single parameter that is the exception instance to be thrown.</span></span> <span data-ttu-id="07bdc-146">Nell'esempio seguente viene illustrato come utilizzare queste funzioni con il supporto di gestione delle eccezioni esistenti:</span><span class="sxs-lookup"><span data-stu-id="07bdc-146">The following example shows how these features can be used with the existing exception handling support:</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
   
- Si noti che nell'istruzione `On Error GoTo` vengono intercettati tutti gli errori, indipendentemente dalla classe dell'eccezione.  
+ <span data-ttu-id="07bdc-147">Si noti che il `On Error GoTo` istruzione vengono intercettati tutti gli errori, indipendentemente dalla classe di eccezione.</span><span class="sxs-lookup"><span data-stu-id="07bdc-147">Notice that the `On Error GoTo` statement traps all errors, regardless of the exception class.</span></span>  
   
-## On Error Resume Next  
- Se si utilizza `On Error Resume Next`, l'esecuzione prosegue con l'istruzione immediatamente successiva a quella che ha causato l'errore di runtime oppure immediatamente successiva all'ultima chiamata effettuata nella routine contenente l'istruzione `On Error Resume Next`.  Questa istruzione consente di continuare l'esecuzione in caso di errore di runtime.  È possibile inserire la routine di gestione nel punto in cui è possibile che si verifichi l'errore anziché trasferire il controllo in un'altra posizione all'interno della routine.  Un'istruzione `On Error Resume Next` diventa inattiva quando viene richiamata un'altra routine, pertanto, se si desidera una gestione degli errori inline, occorre eseguire un'istruzione `On Error Resume Next` in ciascuna routine chiamata.  
+## <a name="on-error-resume-next"></a><span data-ttu-id="07bdc-148">On Error Resume Next</span><span class="sxs-lookup"><span data-stu-id="07bdc-148">On Error Resume Next</span></span>  
+ <span data-ttu-id="07bdc-149">`On Error Resume Next`l'esecuzione continua con l'istruzione immediatamente successiva all'istruzione che ha causato l'errore in fase di esecuzione o l'istruzione immediatamente successiva all'ultima chiamata effettuata routine contenente il `On Error Resume Next` istruzione.</span><span class="sxs-lookup"><span data-stu-id="07bdc-149">`On Error Resume Next` causes execution to continue with the statement immediately following the statement that caused the run-time error, or with the statement immediately following the most recent call out of the procedure containing the `On Error Resume Next` statement.</span></span> <span data-ttu-id="07bdc-150">Questa istruzione consente di continuare nonostante sia stato un errore di run-time.</span><span class="sxs-lookup"><span data-stu-id="07bdc-150">This statement allows execution to continue despite a run-time error.</span></span> <span data-ttu-id="07bdc-151">È possibile inserire la routine di gestione degli errori in cui si verificherà l'errore, anziché trasferire il controllo in un'altra posizione all'interno della routine.</span><span class="sxs-lookup"><span data-stu-id="07bdc-151">You can place the error-handling routine where the error would occur rather than transferring control to another location within the procedure.</span></span> <span data-ttu-id="07bdc-152">Un `On Error Resume Next` istruzione diventa inattiva quando viene chiamata un'altra routine, pertanto è consigliabile eseguire un `On Error Resume Next` istruzione in ogni chiamata di routine se si desidera tale routine di gestione degli errori inline.</span><span class="sxs-lookup"><span data-stu-id="07bdc-152">An `On Error Resume Next` statement becomes inactive when another procedure is called, so you should execute an `On Error Resume Next` statement in each called routine if you want inline error handling within that routine.</span></span>  
   
 > [!NOTE]
->  Per la gestione degli errori generati in fase di accesso ad altri oggetti, è preferibile il costrutto `On Error Resume Next` rispetto a `On Error GoTo`.  Effettuando il controllo di `Err` dopo ciascuna interazione con un oggetto si elimina ogni possibile ambiguità relativa all'oggetto a cui il codice ha avuto accesso.  È possibile conoscere con certezza l'oggetto con cui è stato inserito il codice di errore in `Err.Number`, nonché l'oggetto con cui in origine è stato generato l'errore \(l'oggetto specificato in `Err.Source`\).  
+>  <span data-ttu-id="07bdc-153">Il `On Error Resume Next` costrutto può essere preferibile `On Error GoTo` la gestione degli errori generati durante l'accesso ad altri oggetti.</span><span class="sxs-lookup"><span data-stu-id="07bdc-153">The `On Error Resume Next` construct may be preferable to `On Error GoTo` when handling errors generated during access to other objects.</span></span> <span data-ttu-id="07bdc-154">Controllo `Err` dopo ogni interazione con un oggetto, Elimina l'ambiguità sulla quale oggetto ha effettuato l'accesso dal codice.</span><span class="sxs-lookup"><span data-stu-id="07bdc-154">Checking `Err` after each interaction with an object removes ambiguity about which object was accessed by the code.</span></span> <span data-ttu-id="07bdc-155">È possibile essere certi che l'oggetto inserito il codice di errore in `Err.Number`, nonché quale oggetto ha generato l'errore (l'oggetto specificato `Err.Source`).</span><span class="sxs-lookup"><span data-stu-id="07bdc-155">You can be sure which object placed the error code in `Err.Number`, as well as which object originally generated the error (the object specified in `Err.Source`).</span></span>  
   
-## On Error GoTo 0  
- `On Error GoTo 0` consente di disabilitare la gestione delle errori nella routine corrente.  La riga 0 non viene specificata come inizio del codice di gestione degli errori, anche se la routine contiene una riga numerata come 0.  Senza un'istruzione `On Error GoTo 0`, un gestore di errori viene disabilitato automaticamente al termine di una routine.  
+## <a name="on-error-goto-0"></a><span data-ttu-id="07bdc-156">On Error GoTo 0</span><span class="sxs-lookup"><span data-stu-id="07bdc-156">On Error GoTo 0</span></span>  
+ <span data-ttu-id="07bdc-157">`On Error GoTo 0`Disabilita la gestione degli errori in routine corrente.</span><span class="sxs-lookup"><span data-stu-id="07bdc-157">`On Error GoTo 0` disables error handling in the current procedure.</span></span> <span data-ttu-id="07bdc-158">Riga 0 non specifica come l'inizio del codice di gestione degli errori, anche se la routine contiene una riga numerata da 0.</span><span class="sxs-lookup"><span data-stu-id="07bdc-158">It doesn't specify line 0 as the start of the error-handling code, even if the procedure contains a line numbered 0.</span></span> <span data-ttu-id="07bdc-159">Senza un `On Error GoTo 0` istruzione, un gestore degli errori viene disattivato automaticamente quando si esce da una routine.</span><span class="sxs-lookup"><span data-stu-id="07bdc-159">Without an `On Error GoTo 0` statement, an error handler is automatically disabled when a procedure is exited.</span></span>  
   
-## On Error GoTo \-1  
- `On Error GoTo -1` consente di disabilitare l'eccezione nella routine corrente.  La riga \-1 non viene specificata come inizio del codice di gestione degli errori, anche se la routine contiene una riga numerata come \-1.  Senza un'istruzione `On Error GoTo -1`, un'eccezione viene disabilitata automaticamente al termine di una routine.  
+## <a name="on-error-goto--1"></a><span data-ttu-id="07bdc-160">On Error GoTo -1</span><span class="sxs-lookup"><span data-stu-id="07bdc-160">On Error GoTo -1</span></span>  
+ <span data-ttu-id="07bdc-161">`On Error GoTo -1`Disabilita l'eccezione nella routine corrente.</span><span class="sxs-lookup"><span data-stu-id="07bdc-161">`On Error GoTo -1` disables the exception in the current procedure.</span></span> <span data-ttu-id="07bdc-162">Non specifica riga -1 come punto di partenza del codice di gestione degli errori, anche se la routine contiene una riga numerata -1.</span><span class="sxs-lookup"><span data-stu-id="07bdc-162">It does not specify line -1 as the start of the error-handling code, even if the procedure contains a line numbered -1.</span></span> <span data-ttu-id="07bdc-163">Senza un `On Error GoTo -1` istruzione, un'eccezione viene disabilitata automaticamente quando si esce da una routine.</span><span class="sxs-lookup"><span data-stu-id="07bdc-163">Without an `On Error GoTo -1` statement, an exception is automatically disabled when a procedure is exited.</span></span>  
   
- Per impedire l'esecuzione del codice di gestione degli errori quando non si è verificato alcun errore, inserire un'istruzione `Exit Sub`, `Exit Function` o `Exit Property` immediatamente prima della routine di gestione degli errori, come illustrato nel seguente frammento di codice:  
+ <span data-ttu-id="07bdc-164">Per impedire che il codice di gestione degli errori in esecuzione quando non si è verificato alcun errore, inserire un `Exit Sub`, `Exit Function`, o `Exit Property` istruzione immediatamente prima della routine di gestione degli errori, come illustrato nel frammento seguente:</span><span class="sxs-lookup"><span data-stu-id="07bdc-164">To prevent error-handling code from running when no error has occurred, place an `Exit Sub`, `Exit Function`, or `Exit Property` statement immediately before the error-handling routine, as in the following fragment:</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
   
- In questo esempio il codice di gestione degli errori è racchiuso tra le istruzioni `Exit Sub` ed `End Sub`, che lo separano dal flusso della routine.  Il codice di gestione degli errori può essere inserito in un punto qualsiasi della routine.  
+ <span data-ttu-id="07bdc-165">In questo caso, il codice di gestione degli errori segue il `Exit Sub` istruzione e precede il `End Sub` che lo separano dal flusso della routine.</span><span class="sxs-lookup"><span data-stu-id="07bdc-165">Here, the error-handling code follows the `Exit Sub` statement and precedes the `End Sub` statement to separate it from the procedure flow.</span></span> <span data-ttu-id="07bdc-166">È possibile inserire il codice di gestione degli errori in un punto qualsiasi in una stored procedure.</span><span class="sxs-lookup"><span data-stu-id="07bdc-166">You can place error-handling code anywhere in a procedure.</span></span>  
   
-## Errori non intercettati  
- Gli errori non intercettati negli oggetti vengono restituiti all'applicazione attiva quando l'oggetto viene eseguito come file eseguibile.  All'interno dell'ambiente di sviluppo gli errori non intercettati vengono restituiti all'applicazione di controllo solo se sono state impostate le opzioni adatte.  Per una descrizione delle opzioni da impostare durante il debug e delle relative modalità di impostazione e per determinare se l'host è in grado di creare classi, consultare la documentazione fornita con l'applicazione host.  
+## <a name="untrapped-errors"></a><span data-ttu-id="07bdc-167">Errori non intercettati</span><span class="sxs-lookup"><span data-stu-id="07bdc-167">Untrapped Errors</span></span>  
+ <span data-ttu-id="07bdc-168">Errori non intercettati negli oggetti vengono restituiti all'applicazione di controllo quando l'oggetto è in esecuzione come file eseguibile.</span><span class="sxs-lookup"><span data-stu-id="07bdc-168">Untrapped errors in objects are returned to the controlling application when the object is running as an executable file.</span></span> <span data-ttu-id="07bdc-169">All'interno dell'ambiente di sviluppo, non intercettati gli errori vengono restituiti all'applicazione di controllo solo se sono impostate le opzioni appropriate.</span><span class="sxs-lookup"><span data-stu-id="07bdc-169">Within the development environment, untrapped errors are returned to the controlling application only if the proper options are set.</span></span> <span data-ttu-id="07bdc-170">Vedere la documentazione dell'applicazione host per una descrizione dei quali opzioni da impostare durante il debug, come impostarle e indica se l'host può creare classi.</span><span class="sxs-lookup"><span data-stu-id="07bdc-170">See your host application's documentation for a description of which options should be set during debugging, how to set them, and whether the host can create classes.</span></span>  
   
- Se si crea un oggetto a cui è consentito l’accesso ad altri oggetti, è opportuno tentare di gestire tutti gli eventuali errori non gestiti passati da tali oggetti.  Se ciò non è possibile, associare i codici di errore di `Err.Number` a uno degli errori, quindi passarli nuovamente all'elemento che ha chiamato l'oggetto.  Specificare l'errore aggiungendone il codice alla costante `VbObjectError`.  Se, ad esempio, il codice dell'errore è 1052, assegnarlo come riportato di seguito:  
+ <span data-ttu-id="07bdc-171">Se si crea un oggetto che accede a altri oggetti, è consigliabile gestire errori non gestiti vengono passati.</span><span class="sxs-lookup"><span data-stu-id="07bdc-171">If you create an object that accesses other objects, you should try to handle any unhandled errors they pass back.</span></span> <span data-ttu-id="07bdc-172">Se non è possibile, mappare i codici di errore `Err.Number` per uno degli errori, quindi passare nuovamente al chiamante dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="07bdc-172">If you cannot, map the error codes in `Err.Number` to one of your own errors and then pass them back to the caller of your object.</span></span> <span data-ttu-id="07bdc-173">È necessario specificare l'errore aggiungendo il codice di errore per il `VbObjectError` costante.</span><span class="sxs-lookup"><span data-stu-id="07bdc-173">You should specify your error by adding your error code to the `VbObjectError` constant.</span></span> <span data-ttu-id="07bdc-174">Ad esempio, se il codice di errore è 1052, assegnarlo come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="07bdc-174">For example, if your error code is 1052, assign it as follows:</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
   
 > [!CAUTION]
->  In caso di errori di sistema che si verificano durante le chiamate alle librerie a collegamento dinamico \(DDL, Dynamic\-Link Library\) di Windows, non vengono generate eccezioni. Gli errori, inoltre, non potranno essere rilevati mediante l'intercettazione degli errori di Visual Basic.  Quando si richiamano funzioni di DLL, è opportuno verificare l'esito di ciascun valore restituito \(secondo le specifiche API\) e, in caso di esito negativo, controllare il valore della proprietà `LastDLLError` dell'oggetto `Err`.  
+>  <span data-ttu-id="07bdc-175">Gli errori di sistema durante le chiamate alle librerie a collegamento dinamico (DLL) Windows non generano eccezioni e non possono essere intercettati con intercettazione degli errori di Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="07bdc-175">System errors during calls to Windows dynamic-link libraries (DLLs) do not raise exceptions and cannot be trapped with Visual Basic error trapping.</span></span> <span data-ttu-id="07bdc-176">Quando la chiamata di funzioni DLL, è necessario controllare ogni valore restituito per l'esito positivo o negativo (in base alle specifiche API) e in caso di errore, controllare il valore di `Err` dell'oggetto `LastDLLError` proprietà.</span><span class="sxs-lookup"><span data-stu-id="07bdc-176">When calling DLL functions, you should check each return value for success or failure (according to the API specifications), and in the event of a failure, check the value in the `Err` object's `LastDLLError` property.</span></span>  
   
-## Esempio  
- In questo esempio viene innanzitutto utilizzata l'istruzione `On Error GoTo` per specificare la posizione di una routine di gestione degli errori all'interno di una routine.  Nell'esempio, un tentativo di dividere per zero genera l'errore numero 6.  L'errore viene gestito nella routine di gestione degli errori e il controllo viene quindi restituito all'istruzione che ha causato l'errore.  L'istruzione `On Error GoTo 0` consente di disattivare l'intercettazione degli errori.  Viene quindi utilizzata l'istruzione `On Error Resume Next` per rinviare l'intercettazione degli errori affinché il contesto per l'errore generato dall'istruzione successiva possa essere riconosciuto in modo certo.  `Err.Clear` viene utilizzato per cancellare le proprietà dell'oggetto `Err` una volta gestito l'errore.  
+## <a name="example"></a><span data-ttu-id="07bdc-177">Esempio</span><span class="sxs-lookup"><span data-stu-id="07bdc-177">Example</span></span>  
+ <span data-ttu-id="07bdc-178">In questo esempio utilizza in primo luogo il `On Error GoTo` istruzione per specificare il percorso di una routine di gestione degli errori all'interno di una stored procedure.</span><span class="sxs-lookup"><span data-stu-id="07bdc-178">This example first uses the `On Error GoTo` statement to specify the location of an error-handling routine within a procedure.</span></span> <span data-ttu-id="07bdc-179">Nell'esempio, un tentativo di dividere per zero genera il numero di errore 6.</span><span class="sxs-lookup"><span data-stu-id="07bdc-179">In the example, an attempt to divide by zero generates error number 6.</span></span> <span data-ttu-id="07bdc-180">Nella routine di gestione degli errori viene gestito l'errore e il controllo viene quindi restituito all'istruzione che ha causato l'errore.</span><span class="sxs-lookup"><span data-stu-id="07bdc-180">The error is handled in the error-handling routine, and control is then returned to the statement that caused the error.</span></span> <span data-ttu-id="07bdc-181">Il `On Error GoTo 0` istruzione consente di disattivare la registrazione degli errori.</span><span class="sxs-lookup"><span data-stu-id="07bdc-181">The `On Error GoTo 0` statement turns off error trapping.</span></span> <span data-ttu-id="07bdc-182">Il `On Error Resume Next` istruzione utilizzata per rinviare la registrazione degli errori in modo che il contesto per l'errore generato dall'istruzione successiva può essere riconosciuto per determinati.</span><span class="sxs-lookup"><span data-stu-id="07bdc-182">Then the `On Error Resume Next` statement is used to defer error trapping so that the context for the error generated by the next statement can be known for certain.</span></span> <span data-ttu-id="07bdc-183">Si noti che `Err.Clear` viene utilizzato per cancellare il `Err` proprietà dell'oggetto dopo l'errore viene gestito.</span><span class="sxs-lookup"><span data-stu-id="07bdc-183">Note that `Err.Clear` is used to clear the `Err` object's properties after the error is handled.</span></span>  
   
  [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
   
-## Requisiti  
- **Spazio dei nomi:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a><span data-ttu-id="07bdc-184">Requisiti</span><span class="sxs-lookup"><span data-stu-id="07bdc-184">Requirements</span></span>  
+ <span data-ttu-id="07bdc-185">**Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="07bdc-185">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- **Assembly:** Visual Basic Runtime Library \(in Microsoft.VisualBasic.dll\)  
+ <span data-ttu-id="07bdc-186">**Assembly:** libreria di Runtime di Visual Basic (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="07bdc-186">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## Vedere anche  
- <xref:Microsoft.VisualBasic.Information.Err%2A>   
- <xref:Microsoft.VisualBasic.ErrObject.Number%2A>   
- <xref:Microsoft.VisualBasic.ErrObject.Description%2A>   
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>   
- [End Statement](../../../visual-basic/language-reference/statements/end-statement.md)   
- [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Resume Statement](../../../visual-basic/language-reference/statements/resume-statement.md)   
- [Error Messages](../../../visual-basic/language-reference/error-messages/index.md)   
- [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a><span data-ttu-id="07bdc-187">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="07bdc-187">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Information.Err%2A>  
+ <xref:Microsoft.VisualBasic.ErrObject.Number%2A>  
+ <xref:Microsoft.VisualBasic.ErrObject.Description%2A>  
+ <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
+ [<span data-ttu-id="07bdc-188">Istruzione End</span><span class="sxs-lookup"><span data-stu-id="07bdc-188">End Statement</span></span>](../../../visual-basic/language-reference/statements/end-statement.md)  
+ [<span data-ttu-id="07bdc-189">Istruzione Exit</span><span class="sxs-lookup"><span data-stu-id="07bdc-189">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [<span data-ttu-id="07bdc-190">Istruzione Resume</span><span class="sxs-lookup"><span data-stu-id="07bdc-190">Resume Statement</span></span>](../../../visual-basic/language-reference/statements/resume-statement.md)  
+ [<span data-ttu-id="07bdc-191">Messaggi di errore</span><span class="sxs-lookup"><span data-stu-id="07bdc-191">Error Messages</span></span>](../../../visual-basic/language-reference/error-messages/index.md)  
+ [<span data-ttu-id="07bdc-192">Istruzione Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="07bdc-192">Try...Catch...Finally Statement</span></span>](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

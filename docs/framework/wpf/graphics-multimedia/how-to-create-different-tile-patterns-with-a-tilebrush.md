@@ -1,42 +1,48 @@
 ---
-title: "Procedura: creare modelli di elementi affiancati differenti con un TileBrush | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "creazione, elementi affiancati con TileBrush"
-  - "elementi affiancati, creazione"
-  - "TileBrush, creazione di elementi affiancati"
+title: 'Procedura: creare modelli di elementi affiancati differenti con un TileBrush'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TileBrush [WPF], creating tile patterns
+- tile patterns [WPF], creating
+- creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6247f6a16cd8ab7be683d0d4d33aac021f3a2b32
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare modelli di elementi affiancati differenti con un TileBrush
-In questo esempio viene illustrato come utilizzare la proprietà <xref:System.Windows.Media.TileBrush.TileMode%2A> di un <xref:System.Windows.Media.TileBrush> per creare un modello.  
+# <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a><span data-ttu-id="86b12-102">Procedura: creare modelli di elementi affiancati differenti con un TileBrush</span><span class="sxs-lookup"><span data-stu-id="86b12-102">How to: Create Different Tile Patterns with a TileBrush</span></span>
+<span data-ttu-id="86b12-103">In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Media.TileBrush.TileMode%2A> proprietà di un <xref:System.Windows.Media.TileBrush> per creare un modello.</span><span class="sxs-lookup"><span data-stu-id="86b12-103">This example shows how to use the <xref:System.Windows.Media.TileBrush.TileMode%2A> property of a <xref:System.Windows.Media.TileBrush> to create a pattern.</span></span>  
   
- La proprietà <xref:System.Windows.Media.TileBrush.TileMode%2A> consente di specificare in che modo viene ripetuto il contenuto di un oggetto <xref:System.Windows.Media.TileBrush>, ovvero in che modo viene affiancato per riempire un'area di output.  Per creare un modello, impostare la proprietà <xref:System.Windows.Media.TileBrush.TileMode%2A> su <xref:System.Windows.Media.TileMode>, <xref:System.Windows.Media.TileMode>, <xref:System.Windows.Media.TileMode> o <xref:System.Windows.Media.TileMode>.  È necessario inoltre impostare la proprietà <xref:System.Windows.Media.TileBrush.Viewport%2A> dell'oggetto <xref:System.Windows.Media.TileBrush> in modo che risulti più piccolo dell'area che si sta disegnando. In caso contrario, verrà prodotto un solo elemento affiancato, indipendentemente dall'impostazione utilizzata per la proprietà <xref:System.Windows.Media.TileBrush.TileMode%2A>.  
+ <span data-ttu-id="86b12-104">Il <xref:System.Windows.Media.TileBrush.TileMode%2A> proprietà consente di specificare come il contenuto di un <xref:System.Windows.Media.TileBrush> è ripetuto, vale a dire, affiancato per riempire un'area di output.</span><span class="sxs-lookup"><span data-stu-id="86b12-104">The <xref:System.Windows.Media.TileBrush.TileMode%2A> property enables you to specify how the content of a <xref:System.Windows.Media.TileBrush> is repeated, that is, tiled to fill an output area.</span></span> <span data-ttu-id="86b12-105">Per creare un modello, impostare il <xref:System.Windows.Media.TileBrush.TileMode%2A> a <xref:System.Windows.Media.TileMode.Tile>, <xref:System.Windows.Media.TileMode.FlipX>, <xref:System.Windows.Media.TileMode.FlipY>, o <xref:System.Windows.Media.TileMode.FlipXY>.</span><span class="sxs-lookup"><span data-stu-id="86b12-105">To create a pattern, you set the <xref:System.Windows.Media.TileBrush.TileMode%2A> to <xref:System.Windows.Media.TileMode.Tile>, <xref:System.Windows.Media.TileMode.FlipX>, <xref:System.Windows.Media.TileMode.FlipY>, or <xref:System.Windows.Media.TileMode.FlipXY>.</span></span> <span data-ttu-id="86b12-106">È necessario impostare anche la <xref:System.Windows.Media.TileBrush.Viewport%2A> del <xref:System.Windows.Media.TileBrush> in modo che sia più piccola dell'area da disegnare; in caso contrario, solo un singolo riquadro verrà prodotto, indipendentemente dal quale <xref:System.Windows.Media.TileBrush.TileMode%2A> impostazione utilizzata.</span><span class="sxs-lookup"><span data-stu-id="86b12-106">You must also set the <xref:System.Windows.Media.TileBrush.Viewport%2A> of the <xref:System.Windows.Media.TileBrush> so that it is smaller than the area that you are painting; otherwise, only a single tile is produced, regardless which <xref:System.Windows.Media.TileBrush.TileMode%2A> setting you use.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito vengono creati cinque oggetti <xref:System.Windows.Media.DrawingBrush>, viene assegnata a ciascuno un'impostazione diversa della proprietà <xref:System.Windows.Media.TileBrush.TileMode%2A>, quindi gli oggetti vengono utilizzati per disegnare cinque rettangoli.  Anche se in questo esempio viene utilizzata la classe <xref:System.Windows.Media.DrawingBrush> per illustrare il comportamento della proprietà <xref:System.Windows.Media.TileBrush.TileMode%2A>, la proprietà <xref:System.Windows.Media.TileBrush.TileMode%2A> ha un funzionamento identico per tutti gli oggetti <xref:System.Windows.Media.TileBrush>, ovvero per <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.VisualBrush> e <xref:System.Windows.Media.DrawingBrush>.  
+## <a name="example"></a><span data-ttu-id="86b12-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="86b12-107">Example</span></span>  
+ <span data-ttu-id="86b12-108">L'esempio seguente crea cinque <xref:System.Windows.Media.DrawingBrush> gli oggetti, ciascuno di essi fornisce un altro <xref:System.Windows.Media.TileBrush.TileMode%2A> impostazione e li utilizza per disegnare cinque rettangoli.</span><span class="sxs-lookup"><span data-stu-id="86b12-108">The following example creates five <xref:System.Windows.Media.DrawingBrush> objects, gives them each a different <xref:System.Windows.Media.TileBrush.TileMode%2A> setting, and uses them to paint five rectangles.</span></span> <span data-ttu-id="86b12-109">Anche se in questo esempio viene utilizzato il <xref:System.Windows.Media.DrawingBrush> classe per illustrare <xref:System.Windows.Media.TileBrush.TileMode%2A> comportamento, il <xref:System.Windows.Media.TileBrush.TileMode%2A> proprietà funziona in modo identico per tutti i <xref:System.Windows.Media.TileBrush> oggetti, vale a dire per <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.VisualBrush>, e <xref:System.Windows.Media.DrawingBrush>.</span><span class="sxs-lookup"><span data-stu-id="86b12-109">Although this example uses the <xref:System.Windows.Media.DrawingBrush> class to demonstrate <xref:System.Windows.Media.TileBrush.TileMode%2A> behavior, the <xref:System.Windows.Media.TileBrush.TileMode%2A> property works identically for all the <xref:System.Windows.Media.TileBrush> objects, that is, for <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.VisualBrush>, and <xref:System.Windows.Media.DrawingBrush>.</span></span>  
   
- Nella figura riportata di seguito viene illustrato l'output che si ottiene dall'esempio.  
+ <span data-ttu-id="86b12-110">L'immagine seguente illustra l'output generato dall'esempio.</span><span class="sxs-lookup"><span data-stu-id="86b12-110">The following illustration shows the output that this example produces.</span></span>  
   
- ![Output dell'esempio di affiancamento di TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrushtilemodeexample.png "graphicsmm\_DrawingBrushTileModeExample")  
-Modelli di elementi affiancati creati con la proprietà TileMode  
+ <span data-ttu-id="86b12-111">![Output di esempio di affiancamento di TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrushtilemodeexample.png "graphicsmm_DrawingBrushTileModeExample")</span><span class="sxs-lookup"><span data-stu-id="86b12-111">![TileBrush tiling example output](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrushtilemodeexample.png "graphicsmm_DrawingBrushTileModeExample")</span></span>  
+<span data-ttu-id="86b12-112">Riquadro schemi creati con la proprietà TileMode</span><span class="sxs-lookup"><span data-stu-id="86b12-112">Tile patterns created with the TileMode property</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/TileModeExample.cs#graphicsmmdrawingbrushtilemodeexample)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/tilemodeexample.vb#graphicsmmdrawingbrushtilemodeexample)]
- [!code-xml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
   
-## Vedere anche  
- [Impostare la dimensione degli elementi affiancati di un TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)   
- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a><span data-ttu-id="86b12-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="86b12-113">See Also</span></span>  
+ [<span data-ttu-id="86b12-114">Impostare la dimensione degli elementi affiancati di un TileBrush</span><span class="sxs-lookup"><span data-stu-id="86b12-114">Set the Tile Size for a TileBrush</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [<span data-ttu-id="86b12-115">Disegnare con oggetti Image, Drawing e Visual</span><span class="sxs-lookup"><span data-stu-id="86b12-115">Painting with Images, Drawings, and Visuals</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

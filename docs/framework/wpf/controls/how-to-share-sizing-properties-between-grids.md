@@ -1,45 +1,51 @@
 ---
-title: "Procedura: condividere le propriet&#224; di ridimensionamento tra griglie | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Grid (controllo), condivisione del ridimensionamento dei dati di colonne"
-  - "Grid (controllo), condivisione del ridimensionamento dei dati di righe"
-  - "ridimensionamento di dati nei controlli Grid"
+title: "Procedura: condividere le proprietà di ridimensionamento tra griglie"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Grid control [WPF], sharing sizing data of columns
+- sizing data in Grid controls [WPF]
+- Grid control [WPF], sharing sizing data of rows
 ms.assetid: a0535a6f-ff04-4b25-9912-7dd856e11044
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f0e3be0a0b550f6fbbc9876709094d4a23abe1a6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: condividere le propriet&#224; di ridimensionamento tra griglie
-In questo esempio viene illustrato come condividere i dati di ridimensionamento di colonne e righe tra elementi <xref:System.Windows.Controls.Grid> per mantenere coerente il ridimensionamento.  
+# <a name="how-to-share-sizing-properties-between-grids"></a><span data-ttu-id="944c9-102">Procedura: condividere le proprietà di ridimensionamento tra griglie</span><span class="sxs-lookup"><span data-stu-id="944c9-102">How to: Share Sizing Properties Between Grids</span></span>
+<span data-ttu-id="944c9-103">In questo esempio viene illustrato come condividere i dati di ridimensionamento di colonne e righe tra <xref:System.Windows.Controls.Grid> elementi per mantenere coerente il ridimensionamento.</span><span class="sxs-lookup"><span data-stu-id="944c9-103">This example shows how to share the sizing data of columns and rows between <xref:System.Windows.Controls.Grid> elements in order to keep sizing consistent.</span></span>  
   
-## Esempio  
- Nell'esempio seguente vengono introdotti due elementi <xref:System.Windows.Controls.Grid> come elementi figlio di un oggetto <xref:System.Windows.Controls.DockPanel> padre.  La [proprietà connessa](GTMT) <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A> di <xref:System.Windows.Controls.Grid> è definita sull'oggetto <xref:System.Windows.Controls.DockPanel> padre.  
+## <a name="example"></a><span data-ttu-id="944c9-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="944c9-104">Example</span></span>  
+ <span data-ttu-id="944c9-105">Nell'esempio seguente vengono presentate due <xref:System.Windows.Controls.Grid> elementi come elementi figlio di un elemento padre <xref:System.Windows.Controls.DockPanel>.</span><span class="sxs-lookup"><span data-stu-id="944c9-105">The following example introduces two <xref:System.Windows.Controls.Grid> elements as child elements of a parent <xref:System.Windows.Controls.DockPanel>.</span></span> <span data-ttu-id="944c9-106">Il <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A> associata di <xref:System.Windows.Controls.Grid> è definito nell'elemento padre, <xref:System.Windows.Controls.DockPanel>.</span><span class="sxs-lookup"><span data-stu-id="944c9-106">The <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A> attached property of <xref:System.Windows.Controls.Grid> is defined on the parent <xref:System.Windows.Controls.DockPanel>.</span></span>  
   
- Il valore della proprietà viene modificato utilizzando due elementi <xref:System.Windows.Controls.Button>, ognuno dei quali rappresenta uno dei valori della proprietà booleana.  Quando il valore della proprietà <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A> è impostato su `true`, ogni membro colonna o riga di una proprietà <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A> condivide informazioni sul ridimensionamento, indipendentemente dal contenuto di una riga o colonna.  
+ <span data-ttu-id="944c9-107">L'esempio modifica il valore della proprietà usando due <xref:System.Windows.Controls.Button> elementi; ogni elemento rappresenta uno dei valori di proprietà booleana.</span><span class="sxs-lookup"><span data-stu-id="944c9-107">The example manipulates the property value by using two <xref:System.Windows.Controls.Button> elements; each element represents one of the Boolean property values.</span></span> <span data-ttu-id="944c9-108">Quando il <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A> il valore di proprietà è impostato su `true`, ogni membro di riga o colonna di un <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A> condivide informazioni sul ridimensionamento, indipendentemente dal contenuto di una riga o colonna.</span><span class="sxs-lookup"><span data-stu-id="944c9-108">When the <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A> property value is set to `true`, each column or row member of a <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A> shares sizing information, regardless of the content of a row or column.</span></span>  
   
- [!code-xml[gridIssharedsizescopeProp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#1)]  
+ [!code-xaml[gridIssharedsizescopeProp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#1)]  
   
- ...  
+ <span data-ttu-id="944c9-109">...</span><span class="sxs-lookup"><span data-stu-id="944c9-109">...</span></span>  
   
- [!code-xml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
+ [!code-xaml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
   
- Nell'esempio code\-behind seguente sono gestiti i metodi generati dagli eventi  <xref:System.Windows.Controls.Primitives.ButtonBase.Click> del pulsante.  I risultati delle chiamate ai metodi vengono scritti negli elementi <xref:System.Windows.Controls.TextBlock> che utilizzano metodi get correlati per restituire i nuovi valori di proprietà come stringhe.  
+ <span data-ttu-id="944c9-110">Nell'esempio di codice seguente gestisce i metodi che il pulsante <xref:System.Windows.Controls.Primitives.ButtonBase.Click> genera eventi.</span><span class="sxs-lookup"><span data-stu-id="944c9-110">The following code-behind example handles the methods that the button <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event raises.</span></span> <span data-ttu-id="944c9-111">L'esempio scrive i risultati delle chiamate al metodo <xref:System.Windows.Controls.TextBlock> gli elementi correlati utilizzare metodi get per restituire i nuovi valori di proprietà come stringhe.</span><span class="sxs-lookup"><span data-stu-id="944c9-111">The example writes the results of these method calls to <xref:System.Windows.Controls.TextBlock> elements that use related get methods to output the new property values as strings.</span></span>  
   
  [!code-csharp[gridIssharedsizescopeProp#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml.cs#3)]
  [!code-vb[gridIssharedsizescopeProp#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/gridIssharedsizescopeProp/VisualBasic/Window1.xaml.vb#3)]  
   
-## Vedere anche  
- <xref:System.Windows.Controls.Grid>   
- <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A>   
- [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a><span data-ttu-id="944c9-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="944c9-112">See Also</span></span>  
+ <xref:System.Windows.Controls.Grid>  
+ <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A>  
+ [<span data-ttu-id="944c9-113">Cenni preliminari sugli elementi Panel</span><span class="sxs-lookup"><span data-stu-id="944c9-113">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)

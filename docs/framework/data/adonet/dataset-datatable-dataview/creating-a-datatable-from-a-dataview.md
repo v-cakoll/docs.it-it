@@ -1,30 +1,36 @@
 ---
-title: "Creazione di una DataTable da una DataView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creazione di un oggetto DataTable da un oggetto DataView
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e51188f550b7d910cb278165776133d6f4c03eb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Creazione di una DataTable da una DataView
-Una volta recuperati i dati da un'origine dati e compilato un tipo <xref:System.Data.DataTable>, è possibile ordinare, filtrare o limitare i dati restituiti senza doverli recuperare nuovamente.  Questo è reso possibile dalla classe <xref:System.Data.DataView>.  Inoltre, per creare un nuovo oggetto <xref:System.Data.DataTable> ``  dall'oggetto <xref:System.Data.DataView>, è possibile usare il metodo <xref:System.Data.DataView.ToTable%2A> per copiare tutte le righe e tutte le colonne, o un subset dei dati, in un nuovo oggetto <xref:System.Data.DataTable>.  Il metodo <xref:System.Data.DataView.ToTable%2A> fornisce gli overload per:  
+# <a name="creating-a-datatable-from-a-dataview"></a><span data-ttu-id="8f8a6-102">Creazione di un oggetto DataTable da un oggetto DataView</span><span class="sxs-lookup"><span data-stu-id="8f8a6-102">Creating a DataTable from a DataView</span></span>
+<span data-ttu-id="8f8a6-103">Una volta recuperati i dati da un'origine dati e compilato un tipo <xref:System.Data.DataTable>, è possibile ordinare, filtrare o limitare i dati restituiti senza doverli recuperare nuovamente.</span><span class="sxs-lookup"><span data-stu-id="8f8a6-103">Once you have retrieved data from a data source, and have filled a <xref:System.Data.DataTable> with the data, you may want to sort, filter, or otherwise limit the returned data without retrieving it again.</span></span> <span data-ttu-id="8f8a6-104">Questo è reso possibile dalla classe <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="8f8a6-104">The <xref:System.Data.DataView> class makes this possible.</span></span> <span data-ttu-id="8f8a6-105">Inoltre, se è necessario creare un nuovo <xref:System.Data.DataTable> dal <xref:System.Data.DataView>, è possibile utilizzare il <xref:System.Data.DataView.ToTable%2A> metodo per copiare tutte le righe e colonne oppure un subset dei dati in un nuovo <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="8f8a6-105">In addition, if you need to create a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView>, you can use the <xref:System.Data.DataView.ToTable%2A> method to copy all the rows and columns, or a subset of the data into a new <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="8f8a6-106">Il metodo <xref:System.Data.DataView.ToTable%2A> fornisce gli overload per:</span><span class="sxs-lookup"><span data-stu-id="8f8a6-106">The <xref:System.Data.DataView.ToTable%2A> method provides overloads to:</span></span>  
   
--   Creare un tipo <xref:System.Data.DataTable> contenente colonne che rappresentano un subset delle colonne del tipo <xref:System.Data.DataView>.  
+-   <span data-ttu-id="8f8a6-107">Creare un tipo <xref:System.Data.DataTable> contenente colonne che rappresentano un subset delle colonne del tipo <xref:System.Data.DataView>.</span><span class="sxs-lookup"><span data-stu-id="8f8a6-107">Create a <xref:System.Data.DataTable> containing columns that are a subset of the columns in the <xref:System.Data.DataView>.</span></span>  
   
--   Creare un oggetto <xref:System.Data.DataTable> `` che include solo righe distinte provenienti dall'oggetto <xref:System.Data.DataView>, in modo analogo alla parola chiave DISTINCT in Transact\-SQL.  
+-   <span data-ttu-id="8f8a6-108">Creare un <xref:System.Data.DataTable> che include solo le righe distinte dal <xref:System.Data.DataView>, analogamente alla parola chiave DISTINCT in Transact-SQL.</span><span class="sxs-lookup"><span data-stu-id="8f8a6-108">Create a <xref:System.Data.DataTable> that includes only distinct rows from the <xref:System.Data.DataView>, analogously to the DISTINCT keyword in Transact-SQL.</span></span>  
   
-## Esempio  
- Nell'esempio di applicazione console seguente viene creato un oggetto <xref:System.Data.DataTable> `` contenente i dati della tabella **Person.Contact** nel database di esempio **AdventureWorks**.  Nell'esempio viene quindi crea un oggetto <xref:System.Data.DataView> `` ordinato e filtrato in base all'oggetto <xref:System.Data.DataTable>.  Dopo aver visualizzato il contenuto dell'oggetto <xref:System.Data.DataTable> `` e dell'oggetto <xref:System.Data.DataView>, nell'esempio viene creato un nuovo oggetto <xref:System.Data.DataTable> `` dall'oggetto <xref:System.Data.DataView> chiamando il metodo <xref:System.Data.DataView.ToTable%2A> e selezionando solo un subset delle colonne disponibili.  Infine, viene visualizzato il contenuto del nuovo tipo <xref:System.Data.DataTable>.  
+## <a name="example"></a><span data-ttu-id="8f8a6-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="8f8a6-109">Example</span></span>  
+ <span data-ttu-id="8f8a6-110">L'esempio di applicazione console seguente crea un <xref:System.Data.DataTable> che contiene i dati dal **Person. Contact** tabella il **AdventureWorks** database di esempio.</span><span class="sxs-lookup"><span data-stu-id="8f8a6-110">The following console application example creates a <xref:System.Data.DataTable> that contains data from the **Person.Contact** table in the **AdventureWorks** sample database.</span></span> <span data-ttu-id="8f8a6-111">Successivamente, nell'esempio viene creato un ordinati e filtrati <xref:System.Data.DataView> in base il <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="8f8a6-111">Next, the example creates a sorted and filtered <xref:System.Data.DataView> based on the <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="8f8a6-112">Dopo aver visualizzato il contenuto del <xref:System.Data.DataTable> e <xref:System.Data.DataView>, nell'esempio viene creato un nuovo <xref:System.Data.DataTable> dal <xref:System.Data.DataView> chiamando il <xref:System.Data.DataView.ToTable%2A> (metodo), selezionare solo un subset delle colonne disponibili.</span><span class="sxs-lookup"><span data-stu-id="8f8a6-112">After displaying the contents of the <xref:System.Data.DataTable> and the <xref:System.Data.DataView>, the example creates a new <xref:System.Data.DataTable> from the <xref:System.Data.DataView> by calling the <xref:System.Data.DataView.ToTable%2A> method, selecting only a subset of the available columns.</span></span> <span data-ttu-id="8f8a6-113">Infine, viene visualizzato il contenuto del nuovo tipo <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="8f8a6-113">Finally, the example displays the contents of the new <xref:System.Data.DataTable>.</span></span>  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -207,9 +213,9 @@ Console.WriteLine();
 }  
 ```  
   
- }  
+ <span data-ttu-id="8f8a6-114">}</span><span class="sxs-lookup"><span data-stu-id="8f8a6-114">}</span></span>  
   
-## Vedere anche  
- <xref:System.Data.DataView.ToTable%2A>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="8f8a6-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8f8a6-115">See Also</span></span>  
+ <xref:System.Data.DataView.ToTable%2A>  
+ [<span data-ttu-id="8f8a6-116">DataView</span><span class="sxs-lookup"><span data-stu-id="8f8a6-116">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="8f8a6-117">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="8f8a6-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

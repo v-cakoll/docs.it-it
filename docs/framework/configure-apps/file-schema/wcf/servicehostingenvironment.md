@@ -1,107 +1,107 @@
 ---
-title: "&lt;serviceHostingEnvironment&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;serviceHostingEnvironment&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5770cb8fd68eb68145f3f7fbcf197302883efe9f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;serviceHostingEnvironment&gt;
-Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'istanza per un determinato trasporto.  Se questo elemento è vuoto, viene usato il tipo predefinito.  Questo elemento può essere usato solo nei file di configurazione a livello di applicazione o computer.  
+# <a name="ltservicehostingenvironmentgt"></a><span data-ttu-id="016b1-102">&lt;serviceHostingEnvironment&gt;</span><span class="sxs-lookup"><span data-stu-id="016b1-102">&lt;serviceHostingEnvironment&gt;</span></span>
+<span data-ttu-id="016b1-103">Questo elemento definisce il tipo di cui l'ambiente host del servizio crea un'istanza per un determinato trasporto.</span><span class="sxs-lookup"><span data-stu-id="016b1-103">This element defines the type the service hosting environment instantiates for a particular transport.</span></span> <span data-ttu-id="016b1-104">Se questo elemento è vuoto, viene usato il tipo predefinito.</span><span class="sxs-lookup"><span data-stu-id="016b1-104">If this element is empty, the default type is used.</span></span> <span data-ttu-id="016b1-105">Questo elemento può essere usato solo nei file di configurazione a livello di applicazione o computer.</span><span class="sxs-lookup"><span data-stu-id="016b1-105">This element can only be used at the application or machine level configuration files.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="016b1-106">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="016b1-106">\<system.ServiceModel></span></span>  
+<span data-ttu-id="016b1-107">\<ServiceHostingEnvironment ></span><span class="sxs-lookup"><span data-stu-id="016b1-107">\<ServiceHostingEnvironment></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="016b1-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="016b1-108">Syntax</span></span>  
   
-<serviceHostingEnvironment  
-     aspNetCompatibilityEnabled="Boolean"  
-     minFreeMemoryPercentageToActivateService="Integer"  
-     multipleSiteBindingsEnabled="Boolean">  
-     <baseAddressPrefixFilters>  
-        <add prefix="string"/>  
-     </baseAddressPrefixFilters>  
-      <serviceActivations>  
-        <add factory="String" service="String"/>  
-      </serviceActivations>  
-     <transportConfigurationTypes>  
-        <add name="String"   
-             transportConfigurationType="String" />  
-     </transportConfigurationTypes>  
+```xml  
+<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean" 
+                           minFreeMemoryPercentageToActivateService="Integer" 
+                           multipleSiteBindingsEnabled="Boolean">
+  <baseAddressPrefixFilters>
+    <add prefix="string" />
+  </baseAddressPrefixFilters>
+  <serviceActivations>
+    <add factory="String" service="String" />
+  </serviceActivations>
+  <transportConfigurationTypes>
+    <add name="String" transportConfigurationType="String" />
+  </transportConfigurationTypes>
 </serviceHostingEnvironment>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="016b1-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="016b1-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="016b1-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="016b1-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="016b1-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="016b1-111">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="016b1-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="016b1-112">Attribute</span></span>|<span data-ttu-id="016b1-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="016b1-113">Description</span></span>|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Valore booleano che indica se la modalità di compatibilità con ASP.NET è stata attivata per l'applicazione corrente.  Il valore predefinito è `false`.<br /><br /> Quando questo attributo è impostato su `true`, le richieste ai servizi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] passano attraverso la pipeline HTTP ASP.NET. Viene inoltre impedita la comunicazione tra protocolli non HTTP.  Per altre informazioni, vedere [Servizi WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|Numero intero che specifica la quantità minima di memoria libera che deve essere disponibile per il sistema, prima che un servizio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] possa essere attivato. **Caution:**  La specifica di questo attributo con attendibilità parziale nel file web.config di un servizio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] determinerà la generazione di un'eccezione <xref:System.Security.SecurityException> al momento dell'esecuzione del servizio.|  
-|multipleSiteBindingsEnabled|Valore booleano che specifica se sono abilitate più associazioni IIS per sito.<br /><br /> IIS è costituito da siti Web contenitori di applicazioni virtuali che includono directory virtuali.  È possibile accedere all'applicazione in un sito tramite una o più associazioni IIS.  Un'associazione IIS fornisce due tipi di informazioni: un protocollo di associazione e delle informazioni di associazione.  Il protocollo di associazione definisce lo schema in base al quale ha luogo la comunicazione, mentre le informazioni di associazione sono usate per accedere al sito.  Un esempio di protocollo di associazione è HTTP. Le informazioni di associazione possono contenere un indirizzo IP, una porta, un'intestazione host, e così via.<br /><br /> In IIS è disponibile il supporto per specificare più associazioni per sito, questo comporta la presenza di più indirizzi di base per schema.  Tuttavia, un servizio [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] ospitato su un sito consente l'associazione di un solo indirizzo di base per schema.<br /><br /> Per abilitare più associazioni IIS per sito in un servizio [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], impostare questo attributo su `true`.  Si noti che l'associazione di più siti è supportata solo per il protocollo HTTP.  L'indirizzo degli endpoint nel file di configurazione deve essere un URI completo.|  
+|<span data-ttu-id="016b1-114">aspNetCompatibilityEnabled</span><span class="sxs-lookup"><span data-stu-id="016b1-114">aspNetCompatibilityEnabled</span></span>|<span data-ttu-id="016b1-115">Valore booleano che indica se la modalità di compatibilità con ASP.NET è stata attivata per l'applicazione corrente.</span><span class="sxs-lookup"><span data-stu-id="016b1-115">A Boolean value indicating whether the ASP.NET compatibility mode has been turned on for the current application.</span></span> <span data-ttu-id="016b1-116">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="016b1-116">The default is `false`.</span></span><br /><br /> <span data-ttu-id="016b1-117">Quando questo attributo è impostato su `true`, le richieste ai servizi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] passano attraverso la pipeline HTTP ASP.NET. Viene inoltre impedita la comunicazione tra protocolli non HTTP.</span><span class="sxs-lookup"><span data-stu-id="016b1-117">When this attribute is set to `true`, requests to [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services flow through the ASP.NET HTTP pipeline, and communication over non-HTTP protocols is prohibited.</span></span> <span data-ttu-id="016b1-118">Per ulteriori informazioni, vedere [servizi WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).</span><span class="sxs-lookup"><span data-stu-id="016b1-118">For more information, see [WCF Services and ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).</span></span>|  
+|<span data-ttu-id="016b1-119">minFreeMemoryPercentageToActivateService</span><span class="sxs-lookup"><span data-stu-id="016b1-119">minFreeMemoryPercentageToActivateService</span></span>|<span data-ttu-id="016b1-120">Numero intero che specifica la quantità minima di memoria libera che deve essere disponibile per il sistema, prima che un servizio [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] possa essere attivato.</span><span class="sxs-lookup"><span data-stu-id="016b1-120">An integer that specifies the minimum amount of free memory that should be available to the system, before a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service can be activated.</span></span> <span data-ttu-id="016b1-121">**Attenzione:** specificare questo attributo con attendibilità parziale nel file Web. config di un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] servizio comporterà un <xref:System.Security.SecurityException> quando si esegue il servizio.</span><span class="sxs-lookup"><span data-stu-id="016b1-121">**Caution:**  Specifying this attribute along with partial trust in the web.config file of a [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service will result in a <xref:System.Security.SecurityException> when the service is run.</span></span>|  
+|<span data-ttu-id="016b1-122">multipleSiteBindingsEnabled</span><span class="sxs-lookup"><span data-stu-id="016b1-122">multipleSiteBindingsEnabled</span></span>|<span data-ttu-id="016b1-123">Valore booleano che specifica se sono abilitate più associazioni IIS per sito.</span><span class="sxs-lookup"><span data-stu-id="016b1-123">A Boolean value that specifies whether multiple IIS bindings per site is enabled.</span></span><br /><br /> <span data-ttu-id="016b1-124">IIS è costituito da siti Web contenitori di applicazioni virtuali che includono directory virtuali.</span><span class="sxs-lookup"><span data-stu-id="016b1-124">IIS consists of web sites, which are containers for virtual applications containing virtual directories.</span></span> <span data-ttu-id="016b1-125">È possibile accedere all'applicazione in un sito tramite una o più associazioni IIS.</span><span class="sxs-lookup"><span data-stu-id="016b1-125">The application in a site can be accessed through one or more IIS binding.</span></span> <span data-ttu-id="016b1-126">Un'associazione IIS fornisce due tipi di informazioni: un protocollo di associazione e delle informazioni di associazione.</span><span class="sxs-lookup"><span data-stu-id="016b1-126">An IIS binding provides two pieces of information: a binding protocol and binding information.</span></span> <span data-ttu-id="016b1-127">Il protocollo di associazione definisce lo schema in base al quale ha luogo la comunicazione, mentre le informazioni di associazione sono usate per accedere al sito.</span><span class="sxs-lookup"><span data-stu-id="016b1-127">Binding protocol defines the scheme over which communication occurs, and binding information is the information used to access the site.</span></span> <span data-ttu-id="016b1-128">Un esempio di protocollo di associazione è HTTP. Le informazioni di associazione possono contenere un indirizzo IP, una porta, un'intestazione host, e così via.</span><span class="sxs-lookup"><span data-stu-id="016b1-128">An example of a binding protocol can be HTTP, whereas binding information can contain an IP address, Port, host header, etc.</span></span><br /><br /> <span data-ttu-id="016b1-129">In IIS è disponibile il supporto per specificare più associazioni per sito, questo comporta la presenza di più indirizzi di base per schema.</span><span class="sxs-lookup"><span data-stu-id="016b1-129">IIS supports specifying multiple IIS bindings per site, which results in multiple base addresses per scheme.</span></span> <span data-ttu-id="016b1-130">Tuttavia, un servizio [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] ospitato su un sito consente l'associazione di un solo indirizzo di base per schema.</span><span class="sxs-lookup"><span data-stu-id="016b1-130">However, a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service hosted under a site allows binding to only one baseAddress per scheme.</span></span><br /><br /> <span data-ttu-id="016b1-131">Per abilitare più associazioni IIS per sito in un servizio [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], impostare questo attributo su `true`.</span><span class="sxs-lookup"><span data-stu-id="016b1-131">To enable multiple IIS bindings per site for a [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] service, set this attribute to `true`.</span></span> <span data-ttu-id="016b1-132">Si noti che l'associazione di più siti è supportata solo per il protocollo HTTP.</span><span class="sxs-lookup"><span data-stu-id="016b1-132">Notice that multiple site binding is supported only for the HTTP protocol.</span></span> <span data-ttu-id="016b1-133">L'indirizzo degli endpoint nel file di configurazione deve essere un URI completo.</span><span class="sxs-lookup"><span data-stu-id="016b1-133">The address of endpoints in the configuration file needs to be a complete URI.</span></span>|  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="016b1-134">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="016b1-134">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<FiltriPrefissoIndirizzoBase\>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Raccolta di elementi di configurazione che specificano i filtri di prefisso degli indirizzi di base usati dall'host del servizio.|  
-|[\<serviceActivations\>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|Sezione di configurazione in cui vengono descritte le impostazioni di attivazione.|  
-|[\<transportConfigurationTypes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Raccolta di elementi di configurazione che identificano il tipo di un determinato trasporto.|  
+|<span data-ttu-id="016b1-135">Elemento</span><span class="sxs-lookup"><span data-stu-id="016b1-135">Element</span></span>|<span data-ttu-id="016b1-136">Descrizione</span><span class="sxs-lookup"><span data-stu-id="016b1-136">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="016b1-137">\<baseAddressPrefixFilters ></span><span class="sxs-lookup"><span data-stu-id="016b1-137">\<baseAddressPrefixFilters></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|<span data-ttu-id="016b1-138">Raccolta di elementi di configurazione che specificano i filtri di prefisso degli indirizzi di base usati dall'host del servizio.</span><span class="sxs-lookup"><span data-stu-id="016b1-138">A collection of configuration elements that specify prefix filters for the base addresses used by the service host.</span></span>|  
+|[<span data-ttu-id="016b1-139">\<serviceActivations ></span><span class="sxs-lookup"><span data-stu-id="016b1-139">\<serviceActivations></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|<span data-ttu-id="016b1-140">Sezione di configurazione in cui vengono descritte le impostazioni di attivazione.</span><span class="sxs-lookup"><span data-stu-id="016b1-140">A configuration section that describes activation settings.</span></span>|  
+|[<span data-ttu-id="016b1-141">\<transportConfigurationTypes ></span><span class="sxs-lookup"><span data-stu-id="016b1-141">\<transportConfigurationTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|<span data-ttu-id="016b1-142">Raccolta di elementi di configurazione che identificano il tipo di un determinato trasporto.</span><span class="sxs-lookup"><span data-stu-id="016b1-142">A collection of configuration elements that identify the type of a particular transport.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="016b1-143">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="016b1-143">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|serviceModel|L'elemento radice di tutti gli elementi di configurazione di Windows Communication Foundation \(WCF\).|  
+|<span data-ttu-id="016b1-144">Elemento</span><span class="sxs-lookup"><span data-stu-id="016b1-144">Element</span></span>|<span data-ttu-id="016b1-145">Descrizione</span><span class="sxs-lookup"><span data-stu-id="016b1-145">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="016b1-146">serviceModel</span><span class="sxs-lookup"><span data-stu-id="016b1-146">serviceModel</span></span>|<span data-ttu-id="016b1-147">L'elemento radice di tutti gli elementi di configurazione di Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="016b1-147">The root element of all Windows Communication Foundation (WCF) configuration elements.</span></span>|  
   
-## Note  
- Per impostazione predefinita, i servizi WCF vengono eseguiti side\-by\-side con ASP.NET nei domini applicazioni ospitati.  Benché WCF e ASP.NET possano coesistere nello stesso dominio applicazione, per impostazione predefinita le richieste WCF non vengono elaborate dalla pipeline HTTP ASP.NET.  Di conseguenza, diversi elementi della piattaforma delle applicazioni ASP.NET non sono disponibili per i servizi WCF.  Segue un elenco di tali elementi.  
+## <a name="remarks"></a><span data-ttu-id="016b1-148">Note</span><span class="sxs-lookup"><span data-stu-id="016b1-148">Remarks</span></span>  
+ <span data-ttu-id="016b1-149">Per impostazione predefinita, i servizi WCF vengono eseguiti side-by-side con ASP.NET nei domini applicazioni ospitati.</span><span class="sxs-lookup"><span data-stu-id="016b1-149">By default, WCF services run side-by-side with ASP.NET in hosted Application Domains (AppDomain).</span></span> <span data-ttu-id="016b1-150">Benché WCF e ASP.NET possano coesistere nello stesso dominio applicazione, per impostazione predefinita le richieste WCF non vengono elaborate dalla pipeline HTTP ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="016b1-150">Even though WCF and ASP.NET can coexist in the same AppDomain, WCF requests are not processed by the ASP.NET HTTP Pipeline by default.</span></span> <span data-ttu-id="016b1-151">Di conseguenza, diversi elementi della piattaforma delle applicazioni ASP.NET non sono disponibili per i servizi WCF.</span><span class="sxs-lookup"><span data-stu-id="016b1-151">As a result, several elements of the ASP.NET application platform are not available to WCF services.</span></span> <span data-ttu-id="016b1-152">Segue un elenco di tali elementi.</span><span class="sxs-lookup"><span data-stu-id="016b1-152">These include</span></span>  
   
--   Autorizzazione file\/URL di ASP.NET  
+-   <span data-ttu-id="016b1-153">Autorizzazione file/URL di ASP.NET</span><span class="sxs-lookup"><span data-stu-id="016b1-153">ASP.NET File/URL Authorization</span></span>  
   
--   Rappresentazione di ASP.NET  
+-   <span data-ttu-id="016b1-154">Rappresentazione di ASP.NET</span><span class="sxs-lookup"><span data-stu-id="016b1-154">ASP.NET Impersonation</span></span>  
   
--   Stato sessione basato su cookie  
+-   <span data-ttu-id="016b1-155">Stato sessione basato su cookie</span><span class="sxs-lookup"><span data-stu-id="016b1-155">Cookie-based Session State</span></span>  
   
--   HttpContext.Current  
+-   <span data-ttu-id="016b1-156">HttpContext.Current</span><span class="sxs-lookup"><span data-stu-id="016b1-156">HttpContext.Current</span></span>  
   
--   Estensibilità della pipeline tramite HttpModule personalizzato  
+-   <span data-ttu-id="016b1-157">Estensibilità della pipeline tramite HttpModule personalizzato</span><span class="sxs-lookup"><span data-stu-id="016b1-157">Pipeline Extensibility via custom HttpModule</span></span>  
   
- Se i servizi WCF devono funzionare nel contesto ASP.NET e comunicano solo su HTTP, è possibile usare la modalità di compatibilità con ASP.NET di WCF.  Questa modalità viene attivata quando l'attributo `aspNetCompatibilityEnabled` è impostato su `true` a livello di applicazione.  Le implementazioni dei servizi devono usare la classe <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> per dichiarare la propria capacità di essere in esecuzione in tale modalità di compatibilità.  Quando la modalità di compatibilità è attiva si verifica quanto segue:  
+ <span data-ttu-id="016b1-158">Se i servizi WCF devono funzionare nel contesto ASP.NET e comunicano solo su HTTP, è possibile usare la modalità di compatibilità con ASP.NET di WCF.</span><span class="sxs-lookup"><span data-stu-id="016b1-158">If your WCF services need to function in the ASP.NET context, and communicate only over HTTP, you can use WCF’s ASP.NET compatibility mode.</span></span> <span data-ttu-id="016b1-159">Questa modalità viene attivata quando l'attributo `aspNetCompatibilityEnabled` è impostato su `true` a livello di applicazione.</span><span class="sxs-lookup"><span data-stu-id="016b1-159">This mode is turned on when the `aspNetCompatibilityEnabled` attribute is set to `true` at the application level.</span></span> <span data-ttu-id="016b1-160">Le implementazioni dei servizi devono usare la classe <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> per dichiarare la propria capacità di essere in esecuzione in tale modalità di compatibilità.</span><span class="sxs-lookup"><span data-stu-id="016b1-160">Service implementations must declare their ability to run in compatibility mode using the <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> class.</span></span> <span data-ttu-id="016b1-161">Quando la modalità di compatibilità è attiva si verifica quanto segue:</span><span class="sxs-lookup"><span data-stu-id="016b1-161">When the compatibility mode is enabled,</span></span>  
   
--   L'autorizzazione file\/URL di ASP.NET viene applicata prima dell'autorizzazione WCF.  Le decisioni di autorizzazione si basano sull'identità a livello di trasporto della richiesta.  Le identità a livello di messaggio vengono ignorate.  
+-   <span data-ttu-id="016b1-162">L'autorizzazione file/URL di ASP.NET viene applicata prima dell'autorizzazione WCF.</span><span class="sxs-lookup"><span data-stu-id="016b1-162">ASP.NET File/URL Authorization is enforced prior to WCF authorization.</span></span> <span data-ttu-id="016b1-163">Le decisioni di autorizzazione si basano sull'identità a livello di trasporto della richiesta.</span><span class="sxs-lookup"><span data-stu-id="016b1-163">An authorization decision is based on the transport-level identity of the request.</span></span> <span data-ttu-id="016b1-164">Le identità a livello di messaggio vengono ignorate.</span><span class="sxs-lookup"><span data-stu-id="016b1-164">Identities at the message level are ignored.</span></span>  
   
--   L'esecuzione delle operazioni dei servizi WCF inizia nel contesto di rappresentazione di ASP.NET.  Se per un servizio specifico sono attivate sia la rappresentazione di ASP.NET sia la rappresentazione di WCF, il sistema applica il contesto di rappresentazione di WCF.  
+-   <span data-ttu-id="016b1-165">L'esecuzione delle operazioni dei servizi WCF inizia nel contesto di rappresentazione di ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="016b1-165">WCF service operations start to execute in the ASP.NET impersonation context.</span></span> <span data-ttu-id="016b1-166">Se per un servizio specifico sono attivate sia la rappresentazione di ASP.NET sia la rappresentazione di WCF, il sistema applica il contesto di rappresentazione di WCF.</span><span class="sxs-lookup"><span data-stu-id="016b1-166">If both ASP.NET impersonation and WCF impersonation are enabled for a specific service, the WCF impersonation context applies.</span></span>  
   
--   HttpContext.Current può essere usato dal codice dei servizi WCF. Inoltre, ai servizi viene impedito di esporre endpoint non HTTP.  
+-   <span data-ttu-id="016b1-167">HttpContext.Current può essere usato dal codice dei servizi WCF. Inoltre, ai servizi viene impedito di esporre endpoint non HTTP.</span><span class="sxs-lookup"><span data-stu-id="016b1-167">HttpContext.Current can be used from WCF service code, and services are prevented from exposing non-HTTP endpoints.</span></span>  
   
--   Le richieste WCF vengono elaborate dalla pipeline ASP.NET.  Le richieste WCF possono inoltre essere elaborate dagli elementi HttpModules configurati per agire sulle richieste in ingresso.  Questi elementi possono includere componenti della piattaforma di ASP.NET \(ad esempio <xref:System.Web.SessionState.SessionStateModule>\) nonché moduli personalizzati di terze parti.  
+-   <span data-ttu-id="016b1-168">Le richieste WCF vengono elaborate dalla pipeline ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="016b1-168">WCF requests are processed by the ASP.NET pipeline.</span></span> <span data-ttu-id="016b1-169">Le richieste WCF possono inoltre essere elaborate dagli elementi HttpModules configurati per agire sulle richieste in ingresso.</span><span class="sxs-lookup"><span data-stu-id="016b1-169">HttpModules that have been configured to act on incoming requests can also process WCF requests.</span></span> <span data-ttu-id="016b1-170">Questi elementi possono includere componenti della piattaforma di ASP.NET (ad esempio <xref:System.Web.SessionState.SessionStateModule>) nonché moduli personalizzati di terze parti.</span><span class="sxs-lookup"><span data-stu-id="016b1-170">These can include ASP.NET platform components (e.g., <xref:System.Web.SessionState.SessionStateModule>), as well as custom third party modules.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente viene mostrato come abilitare la modalità di compatibilità con ASP.  
+## <a name="example"></a><span data-ttu-id="016b1-171">Esempio</span><span class="sxs-lookup"><span data-stu-id="016b1-171">Example</span></span>  
+ <span data-ttu-id="016b1-172">Nell'esempio di codice seguente viene mostrato come abilitare la modalità di compatibilità con ASP.</span><span class="sxs-lookup"><span data-stu-id="016b1-172">The following code sample shows how to enable ASP Compatibility Mode.</span></span>  
   
-## Codice  
+## <a name="code"></a><span data-ttu-id="016b1-173">Codice</span><span class="sxs-lookup"><span data-stu-id="016b1-173">Code</span></span>  
   
-```  
+```xml  
 <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>  
 ```  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>   
- <xref:System.ServiceModel.ServiceHostingEnvironment>   
- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)   
- [Servizi WCF e ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+## <a name="see-also"></a><span data-ttu-id="016b1-174">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="016b1-174">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
+ <xref:System.ServiceModel.ServiceHostingEnvironment>  
+ [<span data-ttu-id="016b1-175">Hosting</span><span class="sxs-lookup"><span data-stu-id="016b1-175">Hosting</span></span>](../../../../../docs/framework/wcf/feature-details/hosting.md)  
+ [<span data-ttu-id="016b1-176">Servizi WCF e ASP.NET</span><span class="sxs-lookup"><span data-stu-id="016b1-176">WCF Services and ASP.NET</span></span>](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

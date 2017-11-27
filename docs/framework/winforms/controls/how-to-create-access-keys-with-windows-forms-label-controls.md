@@ -1,58 +1,62 @@
 ---
-title: "Procedura: creare tasti di scelta con i controlli Label di Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "tasti di scelta, creazione per i controlli"
-  - "tasti di scelta, Windows Form"
-  - "controlli [Windows Form], tasti di scelta"
-  - "controlli delle finestre di dialogo, tasti di scelta"
-  - "tasti di scelta rapida, creazione per i controlli"
-  - "Label (controllo) [Windows Form], creazione di tasti di scelta"
-  - "tasti di scelta"
-  - "tasti di scelta, aggiunta ai controlli delle finestre di dialogo"
-  - "UseMnemonic (proprietà), Label (controllo)"
-  - "controlli Windows Form, tasti di scelta"
+title: 'Procedura: creare tasti di scelta con i controlli Label di Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- controls [Windows Forms], access keys
+- dialog box controls [Windows Forms], mnemonics
+- access keys [Windows Forms], creating for controls
+- Label control [Windows Forms], creating access keys
+- mnemonics [Windows Forms], adding to dialog box controls
+- mnemonics
+- Windows Forms controls, access keys
+- UseMnemonic property [Windows Forms], Label control
+- keyboard shortcuts [Windows Forms], creating for controls
+- access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ad6cd99a6399adea2e69cbf844b9f134d2e592e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare tasti di scelta con i controlli Label di Windows Form
-I controlli <xref:System.Windows.Forms.Label> di Windows Form possono essere utilizzati per definire tasti di scelta per altri controlli.  Quando si definisce un tasto di scelta in un controllo Label, si consente all'utente di spostare lo stato attivo al controllo successivo nell'ordine di tabulazione tramite la pressione contemporanea del tasto ALT e del tasto specificato.  Le etichette non possono ricevere lo stato attivo, che passa quindi automaticamente al controllo successivo nell'ordine di tabulazione.  Questa procedura può essere utilizzata per assegnare tasti di scelta a caselle di testo, caselle combinate, caselle di riepilogo e griglie dei dati.  
+# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a><span data-ttu-id="6596d-102">Procedura: creare tasti di scelta con i controlli Label di Windows Form</span><span class="sxs-lookup"><span data-stu-id="6596d-102">How to: Create Access Keys with Windows Forms Label Controls</span></span>
+<span data-ttu-id="6596d-103">Windows Form <xref:System.Windows.Forms.Label> controlli possono essere utilizzati per definire le chiavi di accesso per altri controlli.</span><span class="sxs-lookup"><span data-stu-id="6596d-103">Windows Forms <xref:System.Windows.Forms.Label> controls can be used to define access keys for other controls.</span></span> <span data-ttu-id="6596d-104">Quando si definisce una chiave di accesso in un controllo etichetta, l'utente può premere il tasto ALT più il carattere di spostare lo stato attivo al controllo successivo nell'ordine di tabulazione.</span><span class="sxs-lookup"><span data-stu-id="6596d-104">When you define an access key in a label control, the user can press the ALT key plus the character you designate to move the focus to the control that follows it in the tab order.</span></span> <span data-ttu-id="6596d-105">Poiché le etichette non possono ricevere lo stato attivo, lo stato attivo si sposta automaticamente al controllo successivo nell'ordine di tabulazione.</span><span class="sxs-lookup"><span data-stu-id="6596d-105">Because labels cannot receive focus, focus automatically moves to the next control in the tab order.</span></span> <span data-ttu-id="6596d-106">Utilizzare questa tecnica per assegnare le chiavi di accesso per le caselle di testo, caselle combinate, caselle di riepilogo e griglie dei dati.</span><span class="sxs-lookup"><span data-stu-id="6596d-106">Use this technique to assign access keys to text boxes, combo boxes, list boxes, and data grids.</span></span>  
   
-### Per assegnare un tasto di scelta a un controllo con un'etichetta  
+### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a><span data-ttu-id="6596d-107">Per assegnare una chiave di accesso a un controllo con un'etichetta</span><span class="sxs-lookup"><span data-stu-id="6596d-107">To assign an access key to a control with a label</span></span>  
   
-1.  Creare prima l'etichetta, quindi l'altro controllo.  
+1.  <span data-ttu-id="6596d-108">Creare prima l'etichetta e quindi trascinare il controllo di altri.</span><span class="sxs-lookup"><span data-stu-id="6596d-108">Draw the label first, and then draw the other control.</span></span>  
   
-     In alternativa  
+     <span data-ttu-id="6596d-109">-oppure-</span><span class="sxs-lookup"><span data-stu-id="6596d-109">-or-</span></span>  
   
-     Creare i controlli in un ordine qualsiasi e impostare la proprietà <xref:System.Windows.Forms.Control.TabIndex%2A> dell'etichetta su un valore inferiore di uno rispetto a quello dell'altro controllo.  
+     <span data-ttu-id="6596d-110">Creare i controlli in qualsiasi ordine e impostare il <xref:System.Windows.Forms.Control.TabIndex%2A> proprietà dell'etichetta e l'altro controllo meno uno.</span><span class="sxs-lookup"><span data-stu-id="6596d-110">Draw the controls in any order and set the <xref:System.Windows.Forms.Control.TabIndex%2A> property of the label to one less than the other control.</span></span>  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.Label.UseMnemonic%2A> dell'etichetta su `true`.  
+2.  <span data-ttu-id="6596d-111">Impostare l'etichetta <xref:System.Windows.Forms.Label.UseMnemonic%2A> proprietà `true`.</span><span class="sxs-lookup"><span data-stu-id="6596d-111">Set the label's <xref:System.Windows.Forms.Label.UseMnemonic%2A> property to `true`.</span></span>  
   
-3.  Nella proprietà <xref:System.Windows.Forms.Label.Text%2A> dell'etichetta utilizzare una e commerciale \(&\) per assegnare il tasto di scelta per l'etichetta.  Per ulteriori informazioni, vedere [Creazione di tasti di scelta per i controlli di Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).  
+3.  <span data-ttu-id="6596d-112">Usare una e commerciale (&) dell'etichetta <xref:System.Windows.Forms.Label.Text%2A> proprietà a cui assegnare la chiave di accesso per l'etichetta.</span><span class="sxs-lookup"><span data-stu-id="6596d-112">Use an ampersand (&) in the label's <xref:System.Windows.Forms.Label.Text%2A> property to assign the access key for the label.</span></span> <span data-ttu-id="6596d-113">Per ulteriori informazioni, vedere [creazione di chiavi per i controlli Windows Form](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).</span><span class="sxs-lookup"><span data-stu-id="6596d-113">For more information, see [Creating Access Keys for Windows Forms Controls](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md).</span></span>  
   
     > [!NOTE]
-    >  È possibile visualizzare le e commerciali in un controllo Label anziché utilizzarle per la creazione di tasti di scelta.  Ciò si verifica se si associa un controllo Label a un campo di un recordset in cui i dati includono e commerciali.  Per visualizzare le e commerciali in un controllo Label, impostare la proprietà <xref:System.Windows.Forms.Label.UseMnemonic%2A> su `false`.  Se si desidera visualizzare le e commerciali e disporre anche di un tasto di scelta, impostare la proprietà <xref:System.Windows.Forms.Label.UseMnemonic%2A> su `true`. Indicare quindi il tasto di scelta con una e commerciale \(&\) e la e commerciale da visualizzare con due e commerciali \(&&\).  
+    >  <span data-ttu-id="6596d-114">Si desidera, visualizzare le e commerciali in un controllo etichetta, anziché utilizzarle per creare le chiavi di accesso.</span><span class="sxs-lookup"><span data-stu-id="6596d-114">You may want to display ampersands in a label control, rather than use them to create access keys.</span></span> <span data-ttu-id="6596d-115">Ciò può verificarsi se si associa un controllo etichetta a un campo in un recordset in cui i dati includono le e commerciali.</span><span class="sxs-lookup"><span data-stu-id="6596d-115">This may occur if you bind a label control to a field in a recordset where the data includes ampersands.</span></span> <span data-ttu-id="6596d-116">Per visualizzare le e commerciali in un controllo etichetta, impostare il <xref:System.Windows.Forms.Label.UseMnemonic%2A> proprietà `false`.</span><span class="sxs-lookup"><span data-stu-id="6596d-116">To display ampersands in a label control, set the <xref:System.Windows.Forms.Label.UseMnemonic%2A> property to `false`.</span></span> <span data-ttu-id="6596d-117">Se si desidera visualizzare le e commerciali e dispongano di una chiave di accesso, impostare il <xref:System.Windows.Forms.Label.UseMnemonic%2A> proprietà `true` e indicare la chiave di accesso con una e commerciale (&) due e.</span><span class="sxs-lookup"><span data-stu-id="6596d-117">If you wish to display ampersands and also have an access key, set the <xref:System.Windows.Forms.Label.UseMnemonic%2A> property to `true` and indicate the access key with one ampersand (&) and the ampersand to display with two ampersands.</span></span>  
   
     ```vb  
     Label1.UseMnemonic = True  
     Label1.Text = "&Print"  
     Label2.UseMnemonic = True  
     Label2.Text = "&Copy && Paste"  
-  
     ```  
   
     ```csharp  
@@ -60,7 +64,6 @@ I controlli <xref:System.Windows.Forms.Label> di Windows Form possono essere uti
     label1.Text = "&Print";  
     label2.UseMnemonic = true;  
     label2.Text = "&Copy && Paste";  
-  
     ```  
   
     ```cpp  
@@ -70,7 +73,7 @@ I controlli <xref:System.Windows.Forms.Label> di Windows Form possono essere uti
     label2->Text = "&Copy && Paste";  
     ```  
   
-## Vedere anche  
- [Procedura: ridimensionare un controllo Label Windows Form in base al contenuto](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)   
- [Cenni preliminari sul controllo Label](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)   
- [Controllo Label](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="6596d-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6596d-118">See Also</span></span>  
+ [<span data-ttu-id="6596d-119">Procedura: Ridimensionare un controllo Label di Windows Form in base al contenuto</span><span class="sxs-lookup"><span data-stu-id="6596d-119">How to: Size a Windows Forms Label Control to Fit Its Contents</span></span>](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ [<span data-ttu-id="6596d-120">Panoramica sul controllo Label</span><span class="sxs-lookup"><span data-stu-id="6596d-120">Label Control Overview</span></span>](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
+ [<span data-ttu-id="6596d-121">Controllo Label</span><span class="sxs-lookup"><span data-stu-id="6596d-121">Label Control</span></span>](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)

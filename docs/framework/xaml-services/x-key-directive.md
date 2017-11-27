@@ -1,123 +1,126 @@
 ---
-title: "x:Key Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xKey"
-  - "Key"
-  - "x:Key"
-helpviewer_keywords: 
-  - "x:Key attribute [XAML Services]"
-  - "Key attribute in XAML [XAML Services]"
-  - "XAML [XAML Services], x:Key attribute"
+title: Direttiva x:Key
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xKey
+- Key
+- x:Key
+helpviewer_keywords:
+- x:Key attribute [XAML Services]
+- Key attribute in XAML [XAML Services]
+- XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-caps.latest.revision: 25
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 5e2ad03fcb52db1ffdd01849381a392187082991
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# x:Key Directive
-Identifica in modo univoco gli elementi creati a cui viene fatto riferimento in un dizionario definito in XAML.  L'aggiunta di un valore `x:Key` a un elemento oggetto XAML è il metodo più comune per identificare una risorsa in un dizionario risorse, ad esempio in <xref:System.Windows.ResourceDictionary>WPF.  
+# <a name="xkey-directive"></a><span data-ttu-id="4192d-102">Direttiva x:Key</span><span class="sxs-lookup"><span data-stu-id="4192d-102">x:Key Directive</span></span>
+<span data-ttu-id="4192d-103">Identifica in modo univoco gli elementi che vengono creati e a cui fa riferimento in un dizionario definite da XAML.</span><span class="sxs-lookup"><span data-stu-id="4192d-103">Uniquely identifies elements that are created and referenced in a XAML-defined dictionary.</span></span> <span data-ttu-id="4192d-104">Aggiunta di un `x:Key` valore da un elemento oggetto XAML è il modo più comune per identificare una risorsa in un dizionario risorse, ad esempio in un controllo WPF <xref:System.Windows.ResourceDictionary>.</span><span class="sxs-lookup"><span data-stu-id="4192d-104">Adding an `x:Key` value to a XAML object element is the most common way to identify a resource in a resource dictionary, for example in a WPF <xref:System.Windows.ResourceDictionary>.</span></span>  
   
-## Utilizzo della sintassi XAML per gli attributi  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="4192d-105">Utilizzo della sintassi XAML per gli attributi</span><span class="sxs-lookup"><span data-stu-id="4192d-105">XAML Attribute Usage</span></span>  
   
 ```  
-<object x:Key="stringKeyValue".../>  
+<object x:Key="stringKeyValue".../>  
 -or-  
-<object x:Key="{markupExtensionUsage}".../>  
+<object x:Key="{markupExtensionUsage}".../>  
 ```  
   
-## Utilizzo degli attributi XAML \(specifico per WPF\)  
+## <a name="xaml-attribute-usage-wpf-specific"></a><span data-ttu-id="4192d-106">Utilizzo della sintassi XAML per gli attributi (specifico di WPF)</span><span class="sxs-lookup"><span data-stu-id="4192d-106">XAML Attribute Usage (WPF-specific)</span></span>  
   
 ```  
 <object.Resources>  
-  <object x:Key="stringKeyValue".../>  
+  <object x:Key="stringKeyValue".../>  
 </object.Resources>  
 -or-  
 <object.Resources>  
-  <object x:Key="{markupExtensionUsage}".../>  
+  <object x:Key="{markupExtensionUsage}".../>  
 </object.Resources>  
 ```  
   
-## Valori XAML  
+## <a name="xaml-values"></a><span data-ttu-id="4192d-107">Valori XAML</span><span class="sxs-lookup"><span data-stu-id="4192d-107">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`stringKeyValue`|Stringa da utilizzare come chiave.  La stringa del testo deve essere conforme a [Grammatica XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md).|  
-|`markupExtensionUsage`|All'interno dei delimitatori dell'estensione di markup {}, un utilizzo dell'estensione di markup che fornisce un oggetto da utilizzare come chiave.  Vedere la sezione Osservazioni.|  
+|`stringKeyValue`|<span data-ttu-id="4192d-108">Una stringa di testo da utilizzare come chiave.</span><span class="sxs-lookup"><span data-stu-id="4192d-108">A text string to use as a key.</span></span> <span data-ttu-id="4192d-109">La stringa di testo deve essere conforme al [grammatica XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md).</span><span class="sxs-lookup"><span data-stu-id="4192d-109">The text string must conform to the [XamlName Grammar](../../../docs/framework/xaml-services/xamlname-grammar.md).</span></span>|  
+|`markupExtensionUsage`|<span data-ttu-id="4192d-110">All'interno di {} delimitatori di estensione di markup, un utilizzo dell'estensione di markup che fornisce un oggetto da utilizzare come chiave.</span><span class="sxs-lookup"><span data-stu-id="4192d-110">Within the markup extension delimiters {}, a markup extension usage that provides an object to use as a key.</span></span> <span data-ttu-id="4192d-111">Vedere la sezione Osservazioni.</span><span class="sxs-lookup"><span data-stu-id="4192d-111">See Remarks.</span></span>|  
   
-## Note  
- `x:Key` supporta il concetto di dizionario risorse XAML.  XAML come linguaggio non definisce un'implementazione del dizionario risorse, ciò è lasciato a framework specifici dell'interfaccia utente.  Per ulteriori informazioni sull'implementazione dei dizionari delle risorse XAML in WPF, vedere [Risorse XAML](../../../ocs/framework/wpf/advanced/xaml-resources.md).  
+## <a name="remarks"></a><span data-ttu-id="4192d-112">Note</span><span class="sxs-lookup"><span data-stu-id="4192d-112">Remarks</span></span>  
+ <span data-ttu-id="4192d-113">`x:Key`supporta il concetto di dizionario risorse XAML.</span><span class="sxs-lookup"><span data-stu-id="4192d-113">`x:Key` supports the XAML resource dictionary concept.</span></span> <span data-ttu-id="4192d-114">XAML come linguaggio non definisce un'implementazione di dizionario risorse, che è a sinistra i framework dell'interfaccia utente specifici.</span><span class="sxs-lookup"><span data-stu-id="4192d-114">XAML as a language doesn't define a resource dictionary implementation, that is left to specific UI frameworks.</span></span> <span data-ttu-id="4192d-115">Per ulteriori informazioni sulla modalità di implementazione dei dizionari risorse XAML in WPF, vedere [risorse XAML](../../../docs/framework/wpf/advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="4192d-115">To learn more about how XAML resource dictionaries are implemented in WPF, see [XAML Resources](../../../docs/framework/wpf/advanced/xaml-resources.md).</span></span>  
   
- In XAML 2006 e WPF, è necessario fornire `x:Key` come attributo.  È possibile ancora utilizzare chiavi non di tipo stringa, ma questo richiede un utilizzo dell'estensione di markup per fornire il valore non di tipo stringa sotto forma d'attributo.  Se si utilizza XAML 2009, è possibile specificare `x:Key` come elemento, per supportare in modo esplicito dizionari adattati dai tipi di oggetti diversi dalle stringhe senza richiedere un'estensione di markup intermedio.  Vedere la sezione "XAML 2009" in questo argomento.  Il resto della sezione Osservazioni si applica in maniera specifica all'implementazione XAML 2006.  
+ <span data-ttu-id="4192d-116">In XAML 2006 e WPF, `x:Key` deve essere fornito come un attributo.</span><span class="sxs-lookup"><span data-stu-id="4192d-116">In XAML 2006 and WPF, `x:Key` must be provided as an attribute.</span></span> <span data-ttu-id="4192d-117">È comunque possibile usare le chiavi, ma questo richiede un utilizzo dell'estensione di markup per fornire il valore non stringa in forma di attributo.</span><span class="sxs-lookup"><span data-stu-id="4192d-117">You can still use nonstring keys, but this requires a markup extension usage in order to provide the nonstring value in attribute form.</span></span> <span data-ttu-id="4192d-118">Se si utilizza XAML 2009, `x:Key` può essere specificato come un elemento, per supportare in modo esplicito dizionari adattati dai tipi di oggetto diverso da stringhe senza richiedere un'estensione di markup intermedia.</span><span class="sxs-lookup"><span data-stu-id="4192d-118">If you are using XAML 2009, `x:Key` can be specified as an element, to explicitly support dictionaries keyed by object types other than strings without requiring a markup extension intermediate.</span></span> <span data-ttu-id="4192d-119">Vedere la sezione "XAML 2009" in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="4192d-119">See the "XAML 2009" section in this topic.</span></span> <span data-ttu-id="4192d-120">Il resto della sezione Osservazioni si applica in particolare per l'implementazione XAML 2006.</span><span class="sxs-lookup"><span data-stu-id="4192d-120">The remainder of the Remarks section applies specifically to the XAML 2006 implementation.</span></span>  
   
- Il valore di attributo di `x:Key` può essere qualsiasi stringa definita nella [Grammatica XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md) o un oggetto valutato tramite un'estensione di markup.  Per avere un esempio, vedere in WPF "Note di utilizzo WPF".  
+ <span data-ttu-id="4192d-121">Il valore dell'attributo `x:Key` può essere qualsiasi stringa definita nel [grammatica XamlName](../../../docs/framework/xaml-services/xamlname-grammar.md) o può essere un oggetto valutato tramite un'estensione di markup.</span><span class="sxs-lookup"><span data-stu-id="4192d-121">The attribute value of `x:Key` can be any string defined in the [XamlName Grammar](../../../docs/framework/xaml-services/xamlname-grammar.md) or can be an object evaluated through a markup extension.</span></span> <span data-ttu-id="4192d-122">Per un esempio di WPF, vedere "Note sull'utilizzo di WPF".</span><span class="sxs-lookup"><span data-stu-id="4192d-122">See "WPF Usage Notes" for an example from WPF.</span></span>  
   
- Gli elementi figlio di un elemento padre che è un'implementazione di <xref:System.Collections.IDictionary> devono in genere includere un attributo `x:Key` che specifica un valore di chiave univoco in tale dizionario.  I framework potrebbero implementare le proprietà della chiave con alias da sostituire per `x:Key` sui particolari tipi; tipi che definiscono ad esempio le proprietà che dovrebbero essere attribuite con <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>.  
+ <span data-ttu-id="4192d-123">Gli elementi figlio di un elemento padre che è un <xref:System.Collections.IDictionary> implementazione in genere deve includere un `x:Key` attributo che specifica un valore di chiave univoco all'interno di tale dizionario.</span><span class="sxs-lookup"><span data-stu-id="4192d-123">Child elements of a parent element that is an <xref:System.Collections.IDictionary> implementation must typically include an `x:Key` attribute that specifies a unique key value within that dictionary.</span></span> <span data-ttu-id="4192d-124">Framework potrebbero implementare le proprietà della chiave di alias da sostituire per `x:Key` su tipi particolari; i tipi che definiscono tali proprietà devono essere attribuiti con <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>.</span><span class="sxs-lookup"><span data-stu-id="4192d-124">Frameworks might implement aliased key properties to substitute for `x:Key` on particular types; types that define such properties should be attributed with <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>.</span></span>  
   
- L'equivalente della specifica di `x:Key` nel codice è la chiave, così come viene utilizzata con l'oggetto <xref:System.Collections.IDictionary> sottostante.  Ad esempio, `x:Key` applicato nel markup a una risorsa in WPF equivale al valore del parametro `key` di <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=fullName> quando si aggiunge la risorsa a un WPF <xref:System.Windows.ResourceDictionary> nel codice.  
+ <span data-ttu-id="4192d-125">L'equivalente della specifica codice `x:Key` è la chiave utilizzata per l'oggetto sottostante <xref:System.Collections.IDictionary>.</span><span class="sxs-lookup"><span data-stu-id="4192d-125">The code equivalent of specifying `x:Key` is the key that is used for the underlying <xref:System.Collections.IDictionary>.</span></span> <span data-ttu-id="4192d-126">Ad esempio, un `x:Key` applicato nel markup per una risorsa in WPF è equivalente al valore del `key` parametro di <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> quando si aggiunge la risorsa a un WPF <xref:System.Windows.ResourceDictionary> nel codice.</span><span class="sxs-lookup"><span data-stu-id="4192d-126">For example, an `x:Key` that is applied in markup for a resource in WPF is equivalent to the value of the `key` parameter of <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> when you add the resource to a WPF <xref:System.Windows.ResourceDictionary> in code.</span></span>  
   
-## Note sull'utilizzo di WPF  
- Gli oggetti figlio di un oggetto padre che è un'implementazione di <xref:System.Collections.IDictionary>, come ad esempio il <xref:System.Windows.ResourceDictionary> WPF, devono in genere includere un attributo `x:Key` e un valore di chiave univoco in tale dizionario.  Esistono due importanti eccezioni:  
+## <a name="wpf-usage-notes"></a><span data-ttu-id="4192d-127">Note sull'utilizzo WPF</span><span class="sxs-lookup"><span data-stu-id="4192d-127">WPF Usage Notes</span></span>  
+ <span data-ttu-id="4192d-128">Gli oggetti figlio di un elemento padre dell'oggetto che rappresenta un <xref:System.Collections.IDictionary> implementazione, ad esempio WPF <xref:System.Windows.ResourceDictionary>, in genere è necessario includere un `x:Key` attributo e il valore della chiave deve essere univoco all'interno di tale dizionario.</span><span class="sxs-lookup"><span data-stu-id="4192d-128">Child objects of a parent object that is an <xref:System.Collections.IDictionary> implementation, such as the WPF <xref:System.Windows.ResourceDictionary>, must typically include an `x:Key` attribute, and the key value must be unique within that dictionary.</span></span> <span data-ttu-id="4192d-129">Esistono due eccezioni rilevanti:</span><span class="sxs-lookup"><span data-stu-id="4192d-129">There are two notable exceptions:</span></span>  
   
--   Alcuni tipi WPF dichiarano una chiave implicita per l'utilizzo di dizionario.  Ad esempio, un <xref:System.Windows.Style> con un <xref:System.Windows.Style.TargetType%2A> o un <xref:System.Windows.DataTemplate> con un <xref:System.Windows.DataTemplate.DataType%2A>, può essere presente in un <xref:System.Windows.ResourceDictionary> ed utilizzare la chiave implicita.  
+-   <span data-ttu-id="4192d-130">Alcuni tipi WPF dichiarano una chiave per l'utilizzo del implicita.</span><span class="sxs-lookup"><span data-stu-id="4192d-130">Some WPF types declare an implicit key for dictionary usage.</span></span> <span data-ttu-id="4192d-131">Ad esempio, un <xref:System.Windows.Style> con un <xref:System.Windows.Style.TargetType%2A>, o un <xref:System.Windows.DataTemplate> con un <xref:System.Windows.DataTemplate.DataType%2A>, può essere un <xref:System.Windows.ResourceDictionary> e utilizzare la chiave implicita.</span><span class="sxs-lookup"><span data-stu-id="4192d-131">For example, a <xref:System.Windows.Style> with a <xref:System.Windows.Style.TargetType%2A>, or a <xref:System.Windows.DataTemplate> with a <xref:System.Windows.DataTemplate.DataType%2A>, can be  in a <xref:System.Windows.ResourceDictionary> and use the implicit key.</span></span>  
   
--   WPF supporta un concetto di dizionario delle risorse unito.  Le chiavi possono essere condivise tra i dizionari uniti e l'accesso al comportamento principale condiviso può essere eseguito utilizzando <xref:System.Windows.FrameworkContentElement.FindResource%2A>.  Per ulteriori informazioni, vedere [Dizionari risorse uniti](../../../ocs/framework/wpf/advanced/merged-resource-dictionaries.md).  
+-   <span data-ttu-id="4192d-132">WPF supporta un concetto di dizionario risorse sottoposti a merge.</span><span class="sxs-lookup"><span data-stu-id="4192d-132">WPF supports a merged resource dictionary concept.</span></span> <span data-ttu-id="4192d-133">Le chiavi possono essere condivisi tra i dizionari uniti e il comportamento del tasto condiviso è possibile accedere tramite <xref:System.Windows.FrameworkContentElement.FindResource%2A>.</span><span class="sxs-lookup"><span data-stu-id="4192d-133">Keys can be shared between the merged dictionaries, and the shared key behavior can be accessed using <xref:System.Windows.FrameworkContentElement.FindResource%2A>.</span></span> <span data-ttu-id="4192d-134">Per altre informazioni, vedere [Dizionari risorse uniti](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).</span><span class="sxs-lookup"><span data-stu-id="4192d-134">For more information, see [Merged Resource Dictionaries](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).</span></span>  
   
- Nell'implementazione XAML WPF complessiva e nel modello dell'applicazione, l'univocità delle chiavi non è controllata dal compilatore del markup XAML.  Invece, i valori `x:Key` mancanti e\/o non univoci generano errori del parser XAML in fase di caricamento.  Tuttavia, la gestione di [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] dei dizionari per WPF può spesso riscontrare tali errori in fase di progettazione.  
+ <span data-ttu-id="4192d-135">Nel XAML WPF implementazione e applicazione modello generale, l'univocità della chiave non è selezionata per il compilatore di markup XAML.</span><span class="sxs-lookup"><span data-stu-id="4192d-135">In the overall WPF XAML implementation and application model, key uniqueness is not checked by the XAML markup compiler.</span></span> <span data-ttu-id="4192d-136">In alternativa, mancanti o non univoco `x:Key` valori causano errori del parser XAML in fase di caricamento.</span><span class="sxs-lookup"><span data-stu-id="4192d-136">Instead, missing or nonunique `x:Key` values cause load-time XAML parser errors.</span></span> <span data-ttu-id="4192d-137">Tuttavia, [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] la gestione dei dizionari per WPF può spesso nota tali errori in fase di progettazione.</span><span class="sxs-lookup"><span data-stu-id="4192d-137">However, [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] handling of dictionaries for WPF can often note such errors in the design phase.</span></span>  
   
- Si noti che nella sintassi illustrata l'oggetto <xref:System.Windows.ResourceDictionary> è implicito nel modo in cui il processore XAML WPF produce una raccolta per popolare una raccolta <xref:System.Windows.FrameworkElement.Resources%2A>.  <xref:System.Windows.ResourceDictionary> non viene in genere fornito in modo esplicito come elemento nel markup, benché ciò sia possibile in alcuni casi se lo si ritiene opportuno per motivi di chiarezza \(si tratterebbe di un elemento dell'oggetto Collection tra l'elemento di proprietà <xref:System.Windows.FrameworkElement.Resources%2A> e le voci al suo interno che compilano il dizionario\).  Per informazioni sul motivo per cui un oggetto Collection sia quasi sempre un elemento implicito nel markup, vedere [Descrizione dettagliata della sintassi XAML](../../../ocs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ <span data-ttu-id="4192d-138">Si noti che nella sintassi, il <xref:System.Windows.ResourceDictionary> oggetto è implicita nel modo in cui il processore XAML di WPF produce una raccolta per popolare un <xref:System.Windows.FrameworkElement.Resources%2A> insieme.</span><span class="sxs-lookup"><span data-stu-id="4192d-138">Note that in the syntax shown, the <xref:System.Windows.ResourceDictionary> object is implicit in how the WPF XAML processor produces a collection to populate a <xref:System.Windows.FrameworkElement.Resources%2A> collection.</span></span> <span data-ttu-id="4192d-139">A <xref:System.Windows.ResourceDictionary> non viene in genere fornito in modo esplicito come un elemento nel markup, anche se può essere in alcuni casi, se si desidera per maggiore chiarezza (sarebbe un elemento dell'oggetto collection tra il <xref:System.Windows.FrameworkElement.Resources%2A> elemento proprietà e gli elementi all'interno di popolano il dizionario).</span><span class="sxs-lookup"><span data-stu-id="4192d-139">A <xref:System.Windows.ResourceDictionary> is not typically provided explicitly as an element in markup, although it can be in some cases if wanted for clarity (it would be a collection object element between the <xref:System.Windows.FrameworkElement.Resources%2A> property element and the items within that populate the dictionary).</span></span> <span data-ttu-id="4192d-140">Per informazioni sui motivi per cui un oggetto collection è quasi sempre un elemento implicito nel markup, vedere [sintassi di XAML In dettaglio](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).</span><span class="sxs-lookup"><span data-stu-id="4192d-140">For information about why a collection object is almost always an implicit element in markup, see [XAML Syntax In Detail](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).</span></span>  
   
- Nell'implementazione WPF XAML, la gestione delle chiavi di dizionario risorse è definita dalla classe astratta <xref:System.Windows.ResourceKey>.  Il processore XAML WPF, tuttavia, produce diversi tipi di estensione sottostanti per le chiavi in base al relativo utilizzo.  Ad esempio, la chiave per <xref:System.Windows.DataTemplate> o per qualsiasi classi derivata viene gestita separatamente e produce un oggetto <xref:System.Windows.DataTemplateKey> distinto.  
+ <span data-ttu-id="4192d-141">Nell'implementazione XAML di WPF, la gestione di chiavi del dizionario risorse è definita per la <xref:System.Windows.ResourceKey> classe astratta.</span><span class="sxs-lookup"><span data-stu-id="4192d-141">In the WPF XAML implementation, the handling for resource dictionary keys is defined by the <xref:System.Windows.ResourceKey> abstract class.</span></span> <span data-ttu-id="4192d-142">Il processore XAML di WPF produce tuttavia diversi tipi di estensione sottostanti per le chiavi in base al relativo utilizzo.</span><span class="sxs-lookup"><span data-stu-id="4192d-142">However the WPF XAML processor produces different underlying extension types for keys based on their usages.</span></span> <span data-ttu-id="4192d-143">Ad esempio, la chiave per un <xref:System.Windows.DataTemplate> o qualsiasi classe derivata viene gestita separatamente e produce un distinct <xref:System.Windows.DataTemplateKey> oggetto.</span><span class="sxs-lookup"><span data-stu-id="4192d-143">For example, the key for a <xref:System.Windows.DataTemplate> or any derived class is handled separately, and produces a distinct <xref:System.Windows.DataTemplateKey> object.</span></span>  
   
- Chiavi e nomi utilizzano direttive ed elementi di linguaggio \(`x:Key` contro `x:Name`\) diversi nella definizione XAML di base.  Chiavi e nomi sono utilizzati anche in situazioni diverse dalla definizione WPF e dall'applicazione di questi concetti.  Per informazioni dettagliate, vedere [NameScope XAML WPF](../../../ocs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
+ <span data-ttu-id="4192d-144">Chiavi e nomi utilizzano direttive diverse e gli elementi del linguaggio (`x:Key` e `x:Name`) nella definizione XAML di base.</span><span class="sxs-lookup"><span data-stu-id="4192d-144">Keys and names use different directives and language elements (`x:Key` versus `x:Name`) in the basic XAML definition.</span></span> <span data-ttu-id="4192d-145">Le chiavi e i nomi vengono utilizzati anche in situazioni diverse per la definizione di WPF e l'applicazione di questi concetti.</span><span class="sxs-lookup"><span data-stu-id="4192d-145">Keys and names are also used in different situations by the WPF definition and application of these concepts.</span></span> <span data-ttu-id="4192d-146">Per informazioni dettagliate, vedere [NameScope XAML WPF](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).</span><span class="sxs-lookup"><span data-stu-id="4192d-146">For details, see [WPF XAML Namescopes](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).</span></span>  
   
- Come dichiarato precedentemente, il valore di una chiave può essere fornito tramite un'estensione di markup e può essere diverso da un valore stringa.  Un scenario WPF di esempio è quello in cui il valore di `x:Key` può essere un [ComponentResourceKey](../../../ocs/framework/wpf/advanced/componentresourcekey-markup-extension.md).  Determinati controlli espongono una chiave di stile del tipo per creare una risorsa di stile personalizzata che influenza in parte l'aspetto e il comportamento di tale controllo senza sostituirne totalmente lo stile.  Un esempio di questo tipo di chiave è <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
+ <span data-ttu-id="4192d-147">Come indicato in precedenza, il valore di una chiave può essere fornito tramite un'estensione di markup e può essere diverso da un valore stringa.</span><span class="sxs-lookup"><span data-stu-id="4192d-147">As stated previously, the value of a key can be supplied through a markup extension and can be other than a string value.</span></span> <span data-ttu-id="4192d-148">Uno scenario di esempio WPF è che il valore di `x:Key` potrebbe essere un[ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md).</span><span class="sxs-lookup"><span data-stu-id="4192d-148">An example WPF scenario is that the value of `x:Key` may be a[ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md).</span></span> <span data-ttu-id="4192d-149">Alcuni controlli espongono una chiave di stile di tale tipo per una risorsa di stile personalizzato che influisce sulla parte dell'aspetto e il comportamento del controllo senza sostituirne lo stile.</span><span class="sxs-lookup"><span data-stu-id="4192d-149">Certain controls expose a style key of that type for a custom style resource that influences part of the appearance and behavior of that control without totally replacing the style.</span></span> <span data-ttu-id="4192d-150">Un esempio di questo tipo di chiave è <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.</span><span class="sxs-lookup"><span data-stu-id="4192d-150">An example of such a key is <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.</span></span>  
   
- Le funzionalità del dizionario unito WPF introducono considerazioni aggiuntive riguardo all'univocità delle chiavi e al comportamento della ricerca della chiave.  Per ulteriori informazioni, vedere [Dizionari risorse uniti](../../../ocs/framework/wpf/advanced/merged-resource-dictionaries.md).  
+ <span data-ttu-id="4192d-151">La funzionalità di dizionario unito WPF implica ulteriori considerazioni per l'univocità della chiave e il comportamento di ricerca della chiave.</span><span class="sxs-lookup"><span data-stu-id="4192d-151">The WPF merged dictionary feature introduces additional considerations for key uniqueness and key lookup behavior.</span></span> <span data-ttu-id="4192d-152">Per altre informazioni, vedere [Dizionari risorse uniti](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).</span><span class="sxs-lookup"><span data-stu-id="4192d-152">For more information, see [Merged Resource Dictionaries](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).</span></span>  
   
-## XAML 2009  
- XAML 2009 rilassa la restrizione che `x:Key` venga fornito sempre in formato attributo.  
+## <a name="xaml-2009"></a><span data-ttu-id="4192d-153">XAML 2009</span><span class="sxs-lookup"><span data-stu-id="4192d-153">XAML 2009</span></span>  
+ <span data-ttu-id="4192d-154">XAML 2009 vengono ridotti i la restrizione che `x:Key` sempre essere specificato in forma di attributo.</span><span class="sxs-lookup"><span data-stu-id="4192d-154">XAML 2009 relaxes the restriction that `x:Key` always be provided in attribute form.</span></span>  
   
- In WPF è possibile utilizzare le funzionalità di XAML 2009, ma solo per il codice XAML non compilato dal markup.  Il codice XAML compilato dal markup per WPF e il modulo BAML di XAML non supportano attualmente le parole chiave e le funzionalità di XAML 2009.  
+ <span data-ttu-id="4192d-155">In WPF, è possibile utilizzare le funzionalità di XAML 2009, ma solo per il codice XAML non compilato dal markup.</span><span class="sxs-lookup"><span data-stu-id="4192d-155">In WPF, you can use XAML 2009 features, but only for XAML that is not markup-compiled.</span></span> <span data-ttu-id="4192d-156">Il codice XAML compilato dal markup per WPF e il modulo BAML di XAML non supportano attualmente le parole chiave e le funzionalità di XAML 2009.</span><span class="sxs-lookup"><span data-stu-id="4192d-156">Markup-compiled XAML for WPF and the BAML form of XAML do not currently support the XAML 2009 keywords and features.</span></span>  
   
- In XAML 2009, è possibile specificare gli elementi `x:Key` tramite l'utilizzo seguente:  
+ <span data-ttu-id="4192d-157">In XAML 2009, è possibile specificare `x:Key` elementi tramite l'utilizzo seguente:</span><span class="sxs-lookup"><span data-stu-id="4192d-157">Under XAML 2009, you can specify `x:Key` elements through the following usage:</span></span>  
   
-### Utilizzo della sintassi XAML per gli elementi \(solo XAML 2009\)  
+### <a name="xaml-element-usage-xaml-2009-only"></a><span data-ttu-id="4192d-158">Utilizzo dell'elemento XAML (solo XAML 2009)</span><span class="sxs-lookup"><span data-stu-id="4192d-158">XAML Element Usage (XAML 2009 only)</span></span>  
   
 ```  
 <object>  
   <x:Key>  
-     keyObject  
+keyObject  
   </x:Key>  
 ...  
 </object>  
 ```  
   
-### Valori XAML  
+### <a name="xaml-values"></a><span data-ttu-id="4192d-159">Valori XAML</span><span class="sxs-lookup"><span data-stu-id="4192d-159">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`keyObject`|L'elemento oggetto per l'oggetto utilizzato come chiave per un `object` specificato in un dizionario specializzato.|  
+|`keyObject`|<span data-ttu-id="4192d-160">Elemento dell'oggetto per l'oggetto che viene utilizzato come chiave per un determinato `object` in un dizionario specializzato.</span><span class="sxs-lookup"><span data-stu-id="4192d-160">Object element for the object that is used as the key for a given `object` in a specialized dictionary.</span></span>|  
   
--   Il contenitore\/padre per questo tipo di utilizzo non viene visualizzato qui.  E' previsto che `object` sia figlio di un elemento oggetto che rappresenta un'implementazione di dizionario specializzato.  `keyObject` è previsto che sia un'istanza dell'oggetto \(o un valore di un tipo di valore\) che è appropriata come chiave per quella particolare implementazione del dizionario specializzato.  
+-   <span data-ttu-id="4192d-161">Il contenitore/padre per questo tipo di utilizzo non è stato illustrato qui.</span><span class="sxs-lookup"><span data-stu-id="4192d-161">The container/parent for this kind of use is not shown here.</span></span> <span data-ttu-id="4192d-162">`object`è previsto un elemento figlio di un elemento oggetto che rappresenta un'implementazione di dizionario specializzato.</span><span class="sxs-lookup"><span data-stu-id="4192d-162">`object` is expected to be a child of an object element that represents a specialized dictionary implementation.</span></span> <span data-ttu-id="4192d-163">`keyObject`è previsto che un'istanza dell'oggetto (o un valore di un tipo valore) appropriata come chiave per quel particolare specializzate implementazione del dizionario.</span><span class="sxs-lookup"><span data-stu-id="4192d-163">`keyObject` is expected to be an object instance (or a value of a value type) that is appropriate as the key for that particular specialized dictionary implementation.</span></span>  
   
--   WPF non implementa dizionari che richiedono questo utilizzo.  Gli oggetti utilizzati come chiavi sono una funzionalità generale del linguaggio XAML, utile per determinati scenari di dizionario personalizzato dove la creazione del dizionario in XAML è preferibile.  Per le funzionalità WPF quali stili impliciti che utilizzano chiavi non di tipo stringa per le risorse, altre tecniche per stabilire o  specificare che le chiavi esistono, in modo che l'utilizzo di una chiave dell'oggetto non è necessario.  
+-   <span data-ttu-id="4192d-164">WPF non implementa dizionari che richiedono questo utilizzo.</span><span class="sxs-lookup"><span data-stu-id="4192d-164">WPF does not implement dictionaries that require this usage.</span></span> <span data-ttu-id="4192d-165">Chiavi dell'oggetto è una funzionalità generale del linguaggio XAML, utile per determinati scenari di dizionario personalizzato in cui è consigliabile la creazione del dizionario in XAML.</span><span class="sxs-lookup"><span data-stu-id="4192d-165">Object keys is more a general feature of the XAML language, possibly useful for certain custom dictionary scenarios where creating the dictionary in XAML is desirable.</span></span> <span data-ttu-id="4192d-166">Per le funzionalità WPF, ad esempio stili impliciti che utilizzano le chiavi non di tipo stringa per le risorse, altre tecniche per stabilire o specificare che le chiavi esistono, pertanto l'utilizzo di una chiave dell'oggetto non è necessario.</span><span class="sxs-lookup"><span data-stu-id="4192d-166">For WPF features such as implicit styles that use non-string keys for resources, other techniques for establishing or specifying the keys exist, so using an object key is not necessary.</span></span>  
   
--   *keyObject* potrebbe essere anche un utilizzo dell'estensione di markup nel formato dell'elemento oggetto, piuttosto che un'istanza dell'oggetto diretta.  
+-   <span data-ttu-id="4192d-167">*keyObject* potrebbe anche essere un utilizzo dell'estensione di markup in forma di elemento oggetto, anziché un'istanza dell'oggetto diretta.</span><span class="sxs-lookup"><span data-stu-id="4192d-167">*keyObject* could also be a markup extension usage in object element form, rather than a direct object instance.</span></span>  
   
-## Note sull'utilizzo di Silverlight.  
- `x:Key` per Silverlight è documentato separatamente.  Per ulteriori informazioni, vedere la pagina relativa alle [funzionalità del linguaggio \(Silverlight\) dello spazio dei nomi XAML \(x:\)](http://go.microsoft.com/fwlink/?LinkId=199081).  
+## <a name="silverlight-usage-notes"></a><span data-ttu-id="4192d-168">Note sull'utilizzo di Silverlight</span><span class="sxs-lookup"><span data-stu-id="4192d-168">Silverlight Usage Notes</span></span>  
+ <span data-ttu-id="4192d-169">`x:Key`per Silverlight è documentato separatamente.</span><span class="sxs-lookup"><span data-stu-id="4192d-169">`x:Key` for Silverlight is documented separately.</span></span> <span data-ttu-id="4192d-170">Per ulteriori informazioni, vedere [Namespace XAML (x) Funzionalità del linguaggio (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).</span><span class="sxs-lookup"><span data-stu-id="4192d-170">For more information, see [XAML Namespace (x:) Language Features (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).</span></span>  
   
-## Vedere anche  
- [Risorse XAML](../../../ocs/framework/wpf/advanced/xaml-resources.md)   
- [Risorse e codice](../../../ocs/framework/wpf/advanced/resources-and-code.md)   
- [Estensione del markup StaticResource](../../../ocs/framework/wpf/advanced/staticresource-markup-extension.md)
+## <a name="see-also"></a><span data-ttu-id="4192d-171">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4192d-171">See Also</span></span>  
+ [<span data-ttu-id="4192d-172">Risorse XAML</span><span class="sxs-lookup"><span data-stu-id="4192d-172">XAML Resources</span></span>](../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [<span data-ttu-id="4192d-173">Risorse e codice</span><span class="sxs-lookup"><span data-stu-id="4192d-173">Resources and Code</span></span>](../../../docs/framework/wpf/advanced/resources-and-code.md)  
+ [<span data-ttu-id="4192d-174">Estensione di markup StaticResource</span><span class="sxs-lookup"><span data-stu-id="4192d-174">StaticResource Markup Extension</span></span>](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)

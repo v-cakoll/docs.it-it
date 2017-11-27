@@ -1,54 +1,58 @@
 ---
-title: "Procedura: creare un visualizzatore di documenti HTML in un&#39;applicazione Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "visualizzatori di documenti"
-  - "WebBrowser (controllo) [Windows Form], creazione di un visualizzatore di documenti HTML"
-  - "Windows Form, creazione di visualizzatori di documenti"
+title: 'Procedura: Creare un visualizzatore di documenti HTML in un''applicazione Windows Forms'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WebBrowser control [Windows Forms], creating an HTML document viewer
+- document viewers
+- Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e06fbfde68c0d02a94f8c7e4657e2907cd3fa7eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un visualizzatore di documenti HTML in un&#39;applicazione Windows Form
-È possibile utilizzare il controllo <xref:System.Windows.Forms.WebBrowser> per visualizzare e stampare documenti HTML senza disporre della funzionalità completa di un browser Internet.  Questa procedura è utile quando si desidera usufruire delle capacità di formattazione del linguaggio HTML, ma si vuole evitare che gli utenti carichino in modo arbitrario pagine Web che possano contenere controlli Web non affidabili o codice di script potenzialmente dannoso.  È possibile, ad esempio, limitare in questo modo la capacità del controllo <xref:System.Windows.Forms.WebBrowser>, per utilizzarlo come visualizzatore di posta elettronica in formato HTML o per includere una guida HTML nell'applicazione.  
+# <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a><span data-ttu-id="6f6a8-102">Procedura: Creare un visualizzatore di documenti HTML in un'applicazione Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6f6a8-102">How to: Create an HTML Document Viewer in a Windows Forms Application</span></span>
+<span data-ttu-id="6f6a8-103">È possibile utilizzare il <xref:System.Windows.Forms.WebBrowser> controllo per visualizzare e stampare documenti HTML senza fornire la funzionalità completa di un browser Internet.</span><span class="sxs-lookup"><span data-stu-id="6f6a8-103">You can use the <xref:System.Windows.Forms.WebBrowser> control to display and print HTML documents without providing the full functionality of an Internet Web browser.</span></span> <span data-ttu-id="6f6a8-104">Ciò è utile quando si desidera avvalersi delle funzionalità di formattazione HTML, ma non si desidera che gli utenti per caricare pagine Web arbitrarie che può contenere i controlli Web non attendibili o codice di script potenzialmente dannosi.</span><span class="sxs-lookup"><span data-stu-id="6f6a8-104">This is useful when you want to take advantage of the formatting capabilities of HTML but do not want your users to load arbitrary Web pages that may contain untrusted Web controls or potentially malicious script code.</span></span> <span data-ttu-id="6f6a8-105">È possibile limitare la capacità del <xref:System.Windows.Forms.WebBrowser> controllare in questo modo, ad esempio, per utilizzarlo come visualizzatore HTML tramite posta elettronica o per fornire la Guida in formato HTML nell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="6f6a8-105">You might want to restrict the capability of the <xref:System.Windows.Forms.WebBrowser> control in this manner, for example, to use it as an HTML e-mail viewer or to provide HTML-formatted help in your application.</span></span>  
   
-### Per creare un visualizzatore di documenti HTML  
+### <a name="to-create-an-html-document-viewer"></a><span data-ttu-id="6f6a8-106">Per creare un visualizzatore di documenti HTML</span><span class="sxs-lookup"><span data-stu-id="6f6a8-106">To create an HTML document viewer</span></span>  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> su `false` per impedire a <xref:System.Windows.Forms.WebBrowser> di aprire i file trascinati nel controllo.  
+1.  <span data-ttu-id="6f6a8-107">Impostare il <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> proprietà `false` per impedire il <xref:System.Windows.Forms.WebBrowser> aprire i file trascinati nel controllo.</span><span class="sxs-lookup"><span data-stu-id="6f6a8-107">Set the <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> property to `false` to prevent the <xref:System.Windows.Forms.WebBrowser> control from opening files dropped onto it.</span></span>  
   
      [!code-csharp[WebBrowserMisc#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#20)]
      [!code-vb[WebBrowserMisc#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#20)]  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.WebBrowser.Url%2A> sul percorso del file iniziale da visualizzare.  
+2.  <span data-ttu-id="6f6a8-108">Impostare il <xref:System.Windows.Forms.WebBrowser.Url%2A> proprietà al percorso del file iniziale da visualizzare.</span><span class="sxs-lookup"><span data-stu-id="6f6a8-108">Set the <xref:System.Windows.Forms.WebBrowser.Url%2A> property to the location of the initial file to display.</span></span>  
   
      [!code-csharp[WebBrowserMisc#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
      [!code-vb[WebBrowserMisc#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="6f6a8-109">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="6f6a8-109">Compiling the Code</span></span>  
+ <span data-ttu-id="6f6a8-110">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="6f6a8-110">This example requires:</span></span>  
   
--   Un controllo <xref:System.Windows.Forms.WebBrowser> denominato `webBrowser1`.  
+-   <span data-ttu-id="6f6a8-111">Un controllo <xref:System.Windows.Forms.WebBrowser> denominato `webBrowser1`.</span><span class="sxs-lookup"><span data-stu-id="6f6a8-111">A <xref:System.Windows.Forms.WebBrowser> control named `webBrowser1`.</span></span>  
   
--   Riferimenti agli assembly `System` e `System.Windows.Forms`.  
+-   <span data-ttu-id="6f6a8-112">Riferimenti agli assembly `System` e `System.Windows.Forms`.</span><span class="sxs-lookup"><span data-stu-id="6f6a8-112">References to the `System` and `System.Windows.Forms` assemblies.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.WebBrowser>   
- <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>   
- <xref:System.Windows.Forms.WebBrowser.Url%2A>   
- [Cenni preliminari sul controllo WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)   
- [Sicurezza dei controlli WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)   
- [Procedura: passare a un URL con il controllo WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)   
- [Procedura: stampare con un controllo WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
+## <a name="see-also"></a><span data-ttu-id="6f6a8-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6f6a8-113">See Also</span></span>  
+ <xref:System.Windows.Forms.WebBrowser>  
+ <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>  
+ <xref:System.Windows.Forms.WebBrowser.Url%2A>  
+ [<span data-ttu-id="6f6a8-114">Panoramica sul controllo WebBrowser</span><span class="sxs-lookup"><span data-stu-id="6f6a8-114">WebBrowser Control Overview</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
+ [<span data-ttu-id="6f6a8-115">Sicurezza dei controlli WebBrowser</span><span class="sxs-lookup"><span data-stu-id="6f6a8-115">WebBrowser Security</span></span>](../../../../docs/framework/winforms/controls/webbrowser-security.md)  
+ [<span data-ttu-id="6f6a8-116">Procedura: Passare a un URL con il controllo WebBrowser</span><span class="sxs-lookup"><span data-stu-id="6f6a8-116">How to: Navigate to a URL with the WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [<span data-ttu-id="6f6a8-117">Procedura: Stampare con un controllo WebBrowser</span><span class="sxs-lookup"><span data-stu-id="6f6a8-117">How to: Print with a WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)

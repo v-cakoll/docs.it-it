@@ -5,15 +5,10 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - MDAs (managed debugging assistants), garbage collection
 - managed debugging assistants (MDAs), callback on collected delegates
@@ -25,43 +20,42 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f7975aa386333f0d978ca3d6f6c29c32ec84ce9d
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2e9f2208f2e309b2433bc158a309284131ae8abd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate (MDA)
-L'Assistente al debug gestito (MDA) `callbackOnCollectedDelegate` viene attivato se viene eseguito il marshalling di un delegato da un codice gestito a un codice non gestito, ad esempio un puntatore a funzione, e se viene inserito un callback in tale puntatore dopo che il delegato è stato sottoposto a Garbage Collection.  
+# <a name="callbackoncollecteddelegate-mda"></a><span data-ttu-id="7f998-102">callbackOnCollectedDelegate (MDA)</span><span class="sxs-lookup"><span data-stu-id="7f998-102">callbackOnCollectedDelegate MDA</span></span>
+<span data-ttu-id="7f998-103">L'Assistente al debug gestito (MDA) `callbackOnCollectedDelegate` viene attivato se viene eseguito il marshalling di un delegato da un codice gestito a un codice non gestito, ad esempio un puntatore a funzione, e se viene inserito un callback in tale puntatore dopo che il delegato è stato sottoposto a Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="7f998-103">The `callbackOnCollectedDelegate` managed debugging assistant (MDA) is activated if a delegate is marshaled from managed to unmanaged code as a function pointer and a callback is placed on that function pointer after the delegate has been garbage collected.</span></span>  
   
-## <a name="symptoms"></a>Sintomi  
- Le violazioni di accesso si verificano durante il tentativo di chiamare codice gestito mediante puntatori a funzione ottenuti da delegati gestiti. Questi errori possono sembrare bug di Common Language Runtime (CLR), anche se non lo sono, perché la violazione di accesso si verifica nel codice CLR.  
+## <a name="symptoms"></a><span data-ttu-id="7f998-104">Sintomi</span><span class="sxs-lookup"><span data-stu-id="7f998-104">Symptoms</span></span>  
+ <span data-ttu-id="7f998-105">Le violazioni di accesso si verificano durante il tentativo di chiamare codice gestito mediante puntatori a funzione ottenuti da delegati gestiti.</span><span class="sxs-lookup"><span data-stu-id="7f998-105">Access violations occur when attempting to call into managed code through function pointers that were obtained from managed delegates.</span></span> <span data-ttu-id="7f998-106">Questi errori possono sembrare bug di Common Language Runtime (CLR), anche se non lo sono, perché la violazione di accesso si verifica nel codice CLR.</span><span class="sxs-lookup"><span data-stu-id="7f998-106">These failures, while not common language runtime (CLR) bugs, may appear to be so because the access violation occurs in the CLR code.</span></span>  
   
- L'errore non è coerente. L’esito della chiamata sul puntatore a funzione è a volte positivo e a volte negativo. L'errore può verificarsi solo in situazioni di carico eccessivo o in un numero casuale di tentativi.  
+ <span data-ttu-id="7f998-107">L'errore non è coerente. L’esito della chiamata sul puntatore a funzione è a volte positivo e a volte negativo.</span><span class="sxs-lookup"><span data-stu-id="7f998-107">The failure is not consistent; sometimes the call on the function pointer succeeds and sometimes it fails.</span></span> <span data-ttu-id="7f998-108">L'errore può verificarsi solo in situazioni di carico eccessivo o in un numero casuale di tentativi.</span><span class="sxs-lookup"><span data-stu-id="7f998-108">The failure might occur only under heavy load or on a random number of attempts.</span></span>  
   
-## <a name="cause"></a>Causa  
- Il delegato dal quale il puntatore a funzione è stato creato ed esposto al codice non gestito è stato sottoposto a Garbage Collection. Quando il componente non gestito tenta una chiamata sul puntatore a funzione, viene generata una violazione di accesso.  
+## <a name="cause"></a><span data-ttu-id="7f998-109">Causa</span><span class="sxs-lookup"><span data-stu-id="7f998-109">Cause</span></span>  
+ <span data-ttu-id="7f998-110">Il delegato dal quale il puntatore a funzione è stato creato ed esposto al codice non gestito è stato sottoposto a Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="7f998-110">The delegate from which the function pointer was created and exposed to unmanaged code was garbage collected.</span></span> <span data-ttu-id="7f998-111">Quando il componente non gestito tenta una chiamata sul puntatore a funzione, viene generata una violazione di accesso.</span><span class="sxs-lookup"><span data-stu-id="7f998-111">When the unmanaged component tries to call on the function pointer, it generates an access violation.</span></span>  
   
- L'errore viene visualizzato in modo casuale perché dipende da quando si verifica la Garbage Collection. Se un delegato è idoneo per la raccolta, la Garbage Collection può verificarsi dopo il callback e la chiamata ha esito positivo. In altri casi, le Garbage Collection vengono eseguite prima del callback, che genera una violazione di accesso e causa l’arresto del programma.  
+ <span data-ttu-id="7f998-112">L'errore viene visualizzato in modo casuale perché dipende da quando si verifica la Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="7f998-112">The failure appears random because it depends on when garbage collection occurs.</span></span> <span data-ttu-id="7f998-113">Se un delegato è idoneo per la raccolta, la Garbage Collection può verificarsi dopo il callback e la chiamata ha esito positivo.</span><span class="sxs-lookup"><span data-stu-id="7f998-113">If a delegate is eligible for collection, the garbage collection can occur after the callback and the call succeeds.</span></span> <span data-ttu-id="7f998-114">In altri casi, le Garbage Collection vengono eseguite prima del callback, che genera una violazione di accesso e causa l’arresto del programma.</span><span class="sxs-lookup"><span data-stu-id="7f998-114">At other times, the garbage collection occurs before the callback, the callback generates an access violation, and the program stops.</span></span>  
   
- La probabilità di errore dipende dal tempo compreso tra il marshalling del delegato e il callback sul puntatore a funzione, nonché dalla frequenza delle Garbage Collection. L'errore si verifica raramente se il tempo compreso tra il marshalling del delegato e il callback è breve. Spesso accade quando il metodo non gestito che riceve il puntatore a funzione non lo salva per un utilizzo futuro ma esegue subito il callback sul puntatore a funzione per completare l'operazione prima della restituzione. Analogamente, si verificano altre Garbage Collection quando un sistema è sottoposto a un carico eccessivo che rende più probabile che si verifichi una Garbage Collection prima del callback.  
+ <span data-ttu-id="7f998-115">La probabilità di errore dipende dal tempo compreso tra il marshalling del delegato e il callback sul puntatore a funzione, nonché dalla frequenza delle Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="7f998-115">The probability of the failure depends on the time between marshaling the delegate and the callback on the function pointer as well as the frequency of garbage collections.</span></span> <span data-ttu-id="7f998-116">L'errore si verifica raramente se il tempo compreso tra il marshalling del delegato e il callback è breve.</span><span class="sxs-lookup"><span data-stu-id="7f998-116">The failure is sporadic if the time between marshaling the delegate and the ensuing callback is short.</span></span> <span data-ttu-id="7f998-117">Spesso accade quando il metodo non gestito che riceve il puntatore a funzione non lo salva per un utilizzo futuro ma esegue subito il callback sul puntatore a funzione per completare l'operazione prima della restituzione.</span><span class="sxs-lookup"><span data-stu-id="7f998-117">This is usually the case if the unmanaged method receiving the function pointer does not save the function pointer for later use but instead calls back on the function pointer immediately to complete its operation before returning.</span></span> <span data-ttu-id="7f998-118">Analogamente, si verificano altre Garbage Collection quando un sistema è sottoposto a un carico eccessivo che rende più probabile che si verifichi una Garbage Collection prima del callback.</span><span class="sxs-lookup"><span data-stu-id="7f998-118">Similarly, more garbage collections occur when a system is under heavy load, which makes it more likely that a garbage collection will occur before the callback.</span></span>  
   
-## <a name="resolution"></a>Risoluzione  
- Dopo il marshalling di un delegato come puntatore a funzione non gestito, il Garbage Collector non può più registrarne la durata. È invece necessario che il codice mantenga un riferimento al delegato per la durata del puntatore a funzione non gestito. Tuttavia, è necessario prima identificare quale delegato sia stato raccolto. Quando l'MDA è attivato, fornisce il nome del tipo del delegato. Usare questo nome per cercare il codice per pInvoke o per le firme COM che passano il delegato al codice non gestito. Il delegato interessato viene passato attraverso uno di questi siti di chiamata. È anche possibile abilitare l'MDA `gcUnmanagedToManaged` per imporre una Garbage Collection prima di ogni callback nel runtime. Questa operazione rimuoverà le incertezze introdotte dalla Garbage Collection garantendone l'esecuzione sempre prima del callback. Quando si è certi che il delegato sia stato raccolto, modificare il codice per mantenere un riferimento al delegato sul lato gestito per la durata del puntatore a funzione non gestito sottoposto a marshalling.  
+## <a name="resolution"></a><span data-ttu-id="7f998-119">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="7f998-119">Resolution</span></span>  
+ <span data-ttu-id="7f998-120">Dopo il marshalling di un delegato come puntatore a funzione non gestito, il Garbage Collector non può più registrarne la durata.</span><span class="sxs-lookup"><span data-stu-id="7f998-120">Once a delegate has been marshaled out as an unmanaged function pointer, the garbage collector cannot track its lifetime.</span></span> <span data-ttu-id="7f998-121">È invece necessario che il codice mantenga un riferimento al delegato per la durata del puntatore a funzione non gestito.</span><span class="sxs-lookup"><span data-stu-id="7f998-121">Instead, your code must keep a reference to the delegate for the lifetime of the unmanaged function pointer.</span></span> <span data-ttu-id="7f998-122">Tuttavia, è necessario prima identificare quale delegato sia stato raccolto.</span><span class="sxs-lookup"><span data-stu-id="7f998-122">But before you can do that, you first must identify which delegate was collected.</span></span> <span data-ttu-id="7f998-123">Quando l'MDA è attivato, fornisce il nome del tipo del delegato.</span><span class="sxs-lookup"><span data-stu-id="7f998-123">When the MDA is activated, it provides the type name of the delegate.</span></span> <span data-ttu-id="7f998-124">Usare questo nome per cercare il codice per pInvoke o per le firme COM che passano il delegato al codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="7f998-124">Use this name to search your code for platform invoke or COM signatures that pass that delegate out to unmanaged code.</span></span> <span data-ttu-id="7f998-125">Il delegato interessato viene passato attraverso uno di questi siti di chiamata.</span><span class="sxs-lookup"><span data-stu-id="7f998-125">The offending delegate is passed out through one of these call sites.</span></span> <span data-ttu-id="7f998-126">È anche possibile abilitare l'MDA `gcUnmanagedToManaged` per imporre una Garbage Collection prima di ogni callback nel runtime.</span><span class="sxs-lookup"><span data-stu-id="7f998-126">You can also enable the `gcUnmanagedToManaged` MDA to force a garbage collection before every callback into the runtime.</span></span> <span data-ttu-id="7f998-127">Questa operazione rimuoverà le incertezze introdotte dalla Garbage Collection garantendone l'esecuzione sempre prima del callback.</span><span class="sxs-lookup"><span data-stu-id="7f998-127">This will remove the uncertainty introduced by the garbage collection by ensuring that a garbage collection always occurs before the callback.</span></span> <span data-ttu-id="7f998-128">Quando si è certi che il delegato sia stato raccolto, modificare il codice per mantenere un riferimento al delegato sul lato gestito per la durata del puntatore a funzione non gestito sottoposto a marshalling.</span><span class="sxs-lookup"><span data-stu-id="7f998-128">Once you know what delegate was collected, change your code to keep a reference to that delegate on the managed side for the lifetime of the marshaled unmanaged function pointer.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
- Quando viene eseguito il marshalling dei delegati come puntatori a funzione, il runtime alloca un thunk che effettua la transizione da non gestito a gestito. Questo thunk è l'oggetto effettivamente chiamato dal codice non gestito prima di richiamare il delegato gestito. Senza l'MDA `callbackOnCollectedDelegate` abilitato, il codice di marshalling non gestito viene eliminato quando il delegato viene raccolto. Con l'MDA `callbackOnCollectedDelegate` abilitato, il codice di marshalling non gestito non viene eliminato immediatamente dopo aver raccolto il delegato. Per impostazione predefinita le ultime 1.000 istanze vengono invece conservate e modificate per attivare l'MDA quando viene chiamato. Il thunk viene infine eliminato dopo che vengono raccolti altri 1.001 delegati sottoposti a marshalling.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="7f998-129">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="7f998-129">Effect on the Runtime</span></span>  
+ <span data-ttu-id="7f998-130">Quando viene eseguito il marshalling dei delegati come puntatori a funzione, il runtime alloca un thunk che effettua la transizione da non gestito a gestito.</span><span class="sxs-lookup"><span data-stu-id="7f998-130">When delegates are marshaled as function pointers, the runtime allocates a thunk that does the transition from unmanaged to managed.</span></span> <span data-ttu-id="7f998-131">Questo thunk è l'oggetto effettivamente chiamato dal codice non gestito prima di richiamare il delegato gestito.</span><span class="sxs-lookup"><span data-stu-id="7f998-131">This thunk is what the unmanaged code actually calls before the managed delegate is finally invoked.</span></span> <span data-ttu-id="7f998-132">Senza l'MDA `callbackOnCollectedDelegate` abilitato, il codice di marshalling non gestito viene eliminato quando il delegato viene raccolto.</span><span class="sxs-lookup"><span data-stu-id="7f998-132">Without the `callbackOnCollectedDelegate` MDA enabled, the unmanaged marshaling code is deleted when the delegate is collected.</span></span> <span data-ttu-id="7f998-133">Con l'MDA `callbackOnCollectedDelegate` abilitato, il codice di marshalling non gestito non viene eliminato immediatamente dopo aver raccolto il delegato.</span><span class="sxs-lookup"><span data-stu-id="7f998-133">With the `callbackOnCollectedDelegate` MDA enabled, the unmanaged marshaling code is not immediately deleted when the delegate is collected.</span></span> <span data-ttu-id="7f998-134">Per impostazione predefinita le ultime 1.000 istanze vengono invece conservate e modificate per attivare l'MDA quando viene chiamato.</span><span class="sxs-lookup"><span data-stu-id="7f998-134">Instead, the last 1,000 instances are kept alive by default and changed to activate the MDA when called.</span></span> <span data-ttu-id="7f998-135">Il thunk viene infine eliminato dopo che vengono raccolti altri 1.001 delegati sottoposti a marshalling.</span><span class="sxs-lookup"><span data-stu-id="7f998-135">The thunk is eventually deleted after 1,001 more marshaled delegates are collected.</span></span>  
   
-## <a name="output"></a>Output  
- L'MDA indica il nome del tipo del delegato raccolto prima di un tentativo di callback al relativo puntatore a funzione non gestito.  
+## <a name="output"></a><span data-ttu-id="7f998-136">Output</span><span class="sxs-lookup"><span data-stu-id="7f998-136">Output</span></span>  
+ <span data-ttu-id="7f998-137">L'MDA indica il nome del tipo del delegato raccolto prima di un tentativo di callback al relativo puntatore a funzione non gestito.</span><span class="sxs-lookup"><span data-stu-id="7f998-137">The MDA reports the type name of the delegate that was collected before a callback was attempted on its unmanaged function pointer.</span></span>  
   
-## <a name="configuration"></a>Configurazione  
- L'esempio seguente mostra le opzioni di configurazione dell’applicazione. Imposta il numero di thunk mantenuto attivo dall'MDA su 1.500. Il valore predefinito `listSize` è 1.000, il valore minimo è 50 e il valore massimo è 2.000.  
+## <a name="configuration"></a><span data-ttu-id="7f998-138">Configurazione</span><span class="sxs-lookup"><span data-stu-id="7f998-138">Configuration</span></span>  
+ <span data-ttu-id="7f998-139">L'esempio seguente mostra le opzioni di configurazione dell’applicazione.</span><span class="sxs-lookup"><span data-stu-id="7f998-139">The following example shows the application configuration options.</span></span> <span data-ttu-id="7f998-140">Imposta il numero di thunk mantenuto attivo dall'MDA su 1.500.</span><span class="sxs-lookup"><span data-stu-id="7f998-140">It sets the number of thunks the MDA keeps alive to 1,500.</span></span> <span data-ttu-id="7f998-141">Il valore predefinito `listSize` è 1.000, il valore minimo è 50 e il valore massimo è 2.000.</span><span class="sxs-lookup"><span data-stu-id="7f998-141">The default `listSize` value is 1,000, the minimum is 50, and the maximum is 2,000.</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -71,8 +65,8 @@ L'Assistente al debug gestito (MDA) `callbackOnCollectedDelegate` viene attivato
 </mdaConfig>  
 ```  
   
-## <a name="example"></a>Esempio  
- L'esempio seguente illustra una situazione in cui è possibile attivare questo MDA:  
+## <a name="example"></a><span data-ttu-id="7f998-142">Esempio</span><span class="sxs-lookup"><span data-stu-id="7f998-142">Example</span></span>  
+ <span data-ttu-id="7f998-143">L'esempio seguente illustra una situazione in cui è possibile attivare questo MDA:</span><span class="sxs-lookup"><span data-stu-id="7f998-143">The following example demonstrates a situation that can activate this MDA:</span></span>  
   
 ```  
 // Library.cpp : Defines the unmanaged entry point for the DLL application.  
@@ -122,9 +116,8 @@ public class Entry
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)   
- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)
-
+## <a name="see-also"></a><span data-ttu-id="7f998-144">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7f998-144">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [<span data-ttu-id="7f998-145">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="7f998-145">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="7f998-146">Marshalling di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="7f998-146">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)  
+ [<span data-ttu-id="7f998-147">gcUnmanagedToManaged</span><span class="sxs-lookup"><span data-stu-id="7f998-147">gcUnmanagedToManaged</span></span>](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)

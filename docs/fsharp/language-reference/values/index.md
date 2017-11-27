@@ -1,6 +1,6 @@
 ---
 title: Valori (F#)
-description: Valori (F#)
+description: "Informazioni su come valori in F # sono quantità di un tipo specifico."
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
@@ -10,51 +10,49 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5e1e73c3-5adb-4bba-9976-d57f1ff6cd8d
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 31d28a5ff1bb7d9a88949bcaee895a405a5e7014
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: a1e077552ba39a483be3129c89af48b547219733
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="values"></a><span data-ttu-id="a78d9-104">Valori</span><span class="sxs-lookup"><span data-stu-id="a78d9-104">Values</span></span>
 
-# <a name="values"></a>Valori
-
-I valori in F# sono quantità che hanno un tipo specifico. I valori possono essere numeri interi o numeri a virgola mobile, caratteri o testo, elenchi, sequenze, matrici, tuple, unioni discriminate, record, tipi di classe o valori di funzioni.
-
-
-## <a name="binding-a-value"></a>Associazione di un valore
-Il termine *associazione* indica il processo di associare, ovvero collegare, un nome a una definizione. La parola chiave `let` associa un valore, come illustrato negli esempi seguenti:
-
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
-
-Il tipo di valore viene dedotto dalla definizione. Per un tipo primitivo, ad esempio un numero intero o a virgola mobile, il tipo è determinato dal tipo di valore letterale. Nell'esempio precedente il compilatore deduce quindi il tipo di `b` come `unsigned int`, mentre il tipo di `a` come `int`. Il tipo di valore di una funzione è determinato dal valore restituito nel corpo della funzione. Per altre informazioni sui tipi di valori delle funzioni, vedere [Funzioni](../functions/index.md). Per altre informazioni sui tipi di valori letterali, vedere [Valori letterali](../literals.md).
+<span data-ttu-id="a78d9-105">I valori in F# sono quantità che hanno un tipo specifico. I valori possono essere numeri interi o numeri a virgola mobile, caratteri o testo, elenchi, sequenze, matrici, tuple, unioni discriminate, record, tipi di classe o valori di funzioni.</span><span class="sxs-lookup"><span data-stu-id="a78d9-105">Values in F# are quantities that have a specific type; values can be integral or floating point numbers, characters or text, lists, sequences, arrays, tuples, discriminated unions, records, class types, or function values.</span></span>
 
 
-## <a name="why-immutable"></a>Valori non modificabili
-I valori non modificabili sono valori che non possono essere modificati nel corso dell'esecuzione del programma. Se si ha familiarità con i linguaggi di programmazione, ad esempio, C++, Visual Basic o C#, potrebbe sembrare inconsueto che F# dia più importanza ai valori non modificabili piuttosto che alle variabili alle quali è possibile assegnare nuovi valori durante l'esecuzione di un programma. I dati non modificabili sono elementi importanti nella programmazione funzionale. In un ambiente a thread multipli, è molto difficile gestire le variabili condivise che possono essere modificate da thread diversi. Con le variabili modificabili può talvolta essere anche difficile sapere se una variabile può essere modificata quando viene passata a un'altra funzione.
+## <a name="binding-a-value"></a><span data-ttu-id="a78d9-106">Associazione di un valore</span><span class="sxs-lookup"><span data-stu-id="a78d9-106">Binding a Value</span></span>
+<span data-ttu-id="a78d9-107">Il termine *associazione* indica il processo di associare, ovvero collegare, un nome a una definizione.</span><span class="sxs-lookup"><span data-stu-id="a78d9-107">The term *binding* means associating a name with a definition.</span></span> <span data-ttu-id="a78d9-108">La parola chiave `let` associa un valore, come illustrato negli esempi seguenti:</span><span class="sxs-lookup"><span data-stu-id="a78d9-108">The `let` keyword binds a value, as in the following examples:</span></span>
 
-Nei linguaggi funzionali puri, non ci sono variabili e le funzioni si comportano esattamente come le funzioni matematiche. Se un codice di un linguaggio procedurale usa un'assegnazione di variabile per modificare un valore, l'equivalente codice in un linguaggio funzionale ha un valore non modificabile che è l'input, una funzione non modificabile e diversi valori non modificabili come output. Questa precisione matematica consente un ragionamento più rigido sul comportamento del programma. Questo ragionamento più specifico è ciò che consente ai compilatori di controllare il codice in modo più rigoroso e ottimizzarlo in modo più efficace, rendendo più semplice l'analisi e la scrittura di codice corretto per gli sviluppatori. È quindi probabilmente più semplice eseguire il debug di codice funzionale rispetto al debug di un codice procedurale ordinario.
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
-F# non è un linguaggio funzionale puro, ma supporta completamente la programmazione funzionale. L'uso di valori non modificabili è una buona pratica perché ciò consente al codice di trarre vantaggio da un importante aspetto delle programmazione funzionale.
+<span data-ttu-id="a78d9-109">Il tipo di valore viene dedotto dalla definizione.</span><span class="sxs-lookup"><span data-stu-id="a78d9-109">The type of a value is inferred from the definition.</span></span> <span data-ttu-id="a78d9-110">Per un tipo primitivo, ad esempio un numero intero o a virgola mobile, il tipo è determinato dal tipo di valore letterale.</span><span class="sxs-lookup"><span data-stu-id="a78d9-110">For a primitive type, such as an integral or floating point number, the type is determined from the type of the literal.</span></span> <span data-ttu-id="a78d9-111">Nell'esempio precedente il compilatore deduce quindi il tipo di `b` come `unsigned int`, mentre il tipo di `a` come `int`.</span><span class="sxs-lookup"><span data-stu-id="a78d9-111">Therefore, in the previous example, the compiler infers the type of `b` to be `unsigned int`, whereas the compiler infers the type of `a` to be `int`.</span></span> <span data-ttu-id="a78d9-112">Il tipo di valore di una funzione è determinato dal valore restituito nel corpo della funzione.</span><span class="sxs-lookup"><span data-stu-id="a78d9-112">The type of a function value is determined from the return value in the function body.</span></span> <span data-ttu-id="a78d9-113">Per altre informazioni sui tipi di valori delle funzioni, vedere [Funzioni](../functions/index.md).</span><span class="sxs-lookup"><span data-stu-id="a78d9-113">For more information about function value types, see [Functions](../functions/index.md).</span></span> <span data-ttu-id="a78d9-114">Per altre informazioni sui tipi di valori letterali, vedere [Valori letterali](../literals.md).</span><span class="sxs-lookup"><span data-stu-id="a78d9-114">For more information about literal types, see [Literals](../literals.md).</span></span>
 
 
-## <a name="mutable-variables"></a>Variabili modificabili
-È possibile usare la parola chiave `mutable` per specificare una variabile modificabile. Le variabili modificabili in F# dovrebbero in genere avere un ambito limitato, ad esempio un campo di un tipo o un valore locale. Le variabili modificabili con un ambito limitato sono più semplici da controllare e hanno meno probabilità di essere modificate in modo incorretto.
+## <a name="why-immutable"></a><span data-ttu-id="a78d9-115">Valori non modificabili</span><span class="sxs-lookup"><span data-stu-id="a78d9-115">Why Immutable?</span></span>
+<span data-ttu-id="a78d9-116">I valori non modificabili sono valori che non possono essere modificati nel corso dell'esecuzione del programma.</span><span class="sxs-lookup"><span data-stu-id="a78d9-116">Immutable values are values that cannot be changed throughout the course of a program's execution.</span></span> <span data-ttu-id="a78d9-117">Se si ha familiarità con i linguaggi di programmazione, ad esempio, C++, Visual Basic o C#, potrebbe sembrare inconsueto che F# dia più importanza ai valori non modificabili piuttosto che alle variabili alle quali è possibile assegnare nuovi valori durante l'esecuzione di un programma.</span><span class="sxs-lookup"><span data-stu-id="a78d9-117">If you are used to languages such as C++, Visual Basic, or C#, you might find it surprising that F# puts primacy over immutable values rather than variables that can be assigned new values during the execution of a program.</span></span> <span data-ttu-id="a78d9-118">I dati non modificabili sono elementi importanti nella programmazione funzionale.</span><span class="sxs-lookup"><span data-stu-id="a78d9-118">Immutable data is an important element of functional programming.</span></span> <span data-ttu-id="a78d9-119">In un ambiente a thread multipli, è molto difficile gestire le variabili condivise che possono essere modificate da thread diversi.</span><span class="sxs-lookup"><span data-stu-id="a78d9-119">In a multithreaded environment, shared mutable variables that can be changed by many different threads are difficult to manage.</span></span> <span data-ttu-id="a78d9-120">Con le variabili modificabili può talvolta essere anche difficile sapere se una variabile può essere modificata quando viene passata a un'altra funzione.</span><span class="sxs-lookup"><span data-stu-id="a78d9-120">Also, with mutable variables, it can sometimes be hard to tell if a variable might be changed when it is passed to another function.</span></span>
 
-È possibile assegnare un valore iniziale a una variabile modificabile tramite la parola chiave `let` nello stesso modo in cui si definisce un valore. La differenza tuttavia è che successivamente è possibile assegnare nuovi valori alle variabili modificabili tramite l'operatore `<-`, come illustrato nell'esempio seguente.
+<span data-ttu-id="a78d9-121">Nei linguaggi funzionali puri, non ci sono variabili e le funzioni si comportano esattamente come le funzioni matematiche.</span><span class="sxs-lookup"><span data-stu-id="a78d9-121">In pure functional languages, there are no variables, and functions behave strictly as mathematical functions.</span></span> <span data-ttu-id="a78d9-122">Se un codice di un linguaggio procedurale usa un'assegnazione di variabile per modificare un valore, l'equivalente codice in un linguaggio funzionale ha un valore non modificabile che è l'input, una funzione non modificabile e diversi valori non modificabili come output.</span><span class="sxs-lookup"><span data-stu-id="a78d9-122">Where code in a procedural language uses a variable assignment to alter a value, the equivalent code in a functional language has an immutable value that is the input, an immutable function, and different immutable values as the output.</span></span> <span data-ttu-id="a78d9-123">Questa precisione matematica consente un ragionamento più rigido sul comportamento del programma.</span><span class="sxs-lookup"><span data-stu-id="a78d9-123">This mathematical strictness allows for tighter reasoning about the behavior of the program.</span></span> <span data-ttu-id="a78d9-124">Questo ragionamento più specifico è ciò che consente ai compilatori di controllare il codice in modo più rigoroso e ottimizzarlo in modo più efficace, rendendo più semplice l'analisi e la scrittura di codice corretto per gli sviluppatori.</span><span class="sxs-lookup"><span data-stu-id="a78d9-124">This tighter reasoning is what enables compilers to check code more stringently and to optimize more effectively, and helps make it easier for developers to understand and write correct code.</span></span> <span data-ttu-id="a78d9-125">È quindi probabilmente più semplice eseguire il debug di codice funzionale rispetto al debug di un codice procedurale ordinario.</span><span class="sxs-lookup"><span data-stu-id="a78d9-125">Functional code is therefore likely to be easier to debug than ordinary procedural code.</span></span>
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+<span data-ttu-id="a78d9-126">F# non è un linguaggio funzionale puro, ma supporta completamente la programmazione funzionale.</span><span class="sxs-lookup"><span data-stu-id="a78d9-126">F# is not a pure functional language, yet it fully supports functional programming.</span></span> <span data-ttu-id="a78d9-127">L'uso di valori non modificabili è una buona pratica perché ciò consente al codice di trarre vantaggio da un importante aspetto delle programmazione funzionale.</span><span class="sxs-lookup"><span data-stu-id="a78d9-127">Using immutable values is a good practice because doing this allows your code to benefit from an important aspect of functional programming.</span></span>
+
+
+## <a name="mutable-variables"></a><span data-ttu-id="a78d9-128">Variabili modificabili</span><span class="sxs-lookup"><span data-stu-id="a78d9-128">Mutable Variables</span></span>
+<span data-ttu-id="a78d9-129">È possibile usare la parola chiave `mutable` per specificare una variabile modificabile.</span><span class="sxs-lookup"><span data-stu-id="a78d9-129">You can use the keyword `mutable` to specify a variable that can be changed.</span></span> <span data-ttu-id="a78d9-130">Le variabili modificabili in F# dovrebbero in genere avere un ambito limitato, ad esempio un campo di un tipo o un valore locale.</span><span class="sxs-lookup"><span data-stu-id="a78d9-130">Mutable variables in F# should generally have a limited scope, either as a field of a type or as a local value.</span></span> <span data-ttu-id="a78d9-131">Le variabili modificabili con un ambito limitato sono più semplici da controllare e hanno meno probabilità di essere modificate in modo incorretto.</span><span class="sxs-lookup"><span data-stu-id="a78d9-131">Mutable variables with a limited scope are easier to control and are less likely to be modified in incorrect ways.</span></span>
+
+<span data-ttu-id="a78d9-132">È possibile assegnare un valore iniziale a una variabile modificabile tramite la parola chiave `let` nello stesso modo in cui si definisce un valore.</span><span class="sxs-lookup"><span data-stu-id="a78d9-132">You can assign an initial value to a mutable variable by using the `let` keyword in the same way as you would define a value.</span></span> <span data-ttu-id="a78d9-133">La differenza tuttavia è che successivamente è possibile assegnare nuovi valori alle variabili modificabili tramite l'operatore `<-`, come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="a78d9-133">However, the difference is that you can subsequently assign new values to mutable variables by using the `<-` operator, as in the following example.</span></span>
+
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
     
-## <a name="related-topics"></a>Argomenti correlati
+## <a name="related-topics"></a><span data-ttu-id="a78d9-134">Argomenti correlati</span><span class="sxs-lookup"><span data-stu-id="a78d9-134">Related Topics</span></span>
 
 
-|Titolo|Descrizione|
+|<span data-ttu-id="a78d9-135">Titolo</span><span class="sxs-lookup"><span data-stu-id="a78d9-135">Title</span></span>|<span data-ttu-id="a78d9-136">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a78d9-136">Description</span></span>|
 |-----|-----------|
-|[Associazioni let](../functions/let-bindings.md)|Include informazioni sull'uso della parola chiave `let` per associare nomi a valori e funzioni.|
-|[Funzioni](../functions/index.md)|Include una panoramica delle funzioni in F#.|
+|[<span data-ttu-id="a78d9-137">Associazioni let</span><span class="sxs-lookup"><span data-stu-id="a78d9-137">let Bindings</span></span>](../functions/let-bindings.md)|<span data-ttu-id="a78d9-138">Fornisce informazioni sull'utilizzo di `let` (parola chiave) per associare i nomi di funzioni e valori.</span><span class="sxs-lookup"><span data-stu-id="a78d9-138">Provides information about using the `let` keyword to bind names to values and functions.</span></span>|
+|[<span data-ttu-id="a78d9-139">Funzioni</span><span class="sxs-lookup"><span data-stu-id="a78d9-139">Functions</span></span>](../functions/index.md)|<span data-ttu-id="a78d9-140">Include una panoramica delle funzioni in F#.</span><span class="sxs-lookup"><span data-stu-id="a78d9-140">Provides an overview of functions in F#.</span></span>|
 
-## <a name="see-also"></a>Vedere anche
-[Valori Null](null-Values.md)
+## <a name="see-also"></a><span data-ttu-id="a78d9-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a78d9-141">See Also</span></span>
+[<span data-ttu-id="a78d9-142">Valori Null</span><span class="sxs-lookup"><span data-stu-id="a78d9-142">Null Values</span></span>](null-Values.md)
 
-[Riferimenti per il linguaggio F#](../index.md)
-
+[<span data-ttu-id="a78d9-143">Riferimenti per il linguaggio F#</span><span class="sxs-lookup"><span data-stu-id="a78d9-143">F# Language Reference</span></span>](../index.md)

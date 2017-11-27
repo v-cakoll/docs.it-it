@@ -1,238 +1,244 @@
 ---
-title: "Sintassi di markup del percorso | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PathGeometry (classe)"
-  - "utilizzo degli attributi in XAML"
-  - "Utilizzo dell'attributo XAML"
-  - "classi, PathGeometry"
-  - "grafica, PathGeometry (classe)"
-  - "Utilizzo dell'elemento oggetto XAML"
+title: Sintassi di markup del percorso
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attribute usage in XAML [WPF]
+- XAML [WPF], attribute usage
+- graphics [WPF], PathGeometry class
+- XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8f2b04dfa51f578ba80e2b766f455719afbb86b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Sintassi di markup del percorso
-Vengono illustrati i percorsi in [forme e disegno di base di WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), tuttavia, questo argomento viene descritto in dettaglio il potente e complesso mini linguaggio consente di specificare in modo più compatto usando le geometrie percorso [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+# <a name="path-markup-syntax"></a><span data-ttu-id="b8141-102">Sintassi di markup del percorso</span><span class="sxs-lookup"><span data-stu-id="b8141-102">Path Markup Syntax</span></span>
+<span data-ttu-id="b8141-103">Vengono descritti i percorsi in [forme e disegno di base di WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) e [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), tuttavia, in questo argomento descrive in dettaglio il potente e complesso mini linguaggio consente di specificare percorso in modo più compatto usando le geometrie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b8141-103">Paths are discussed in [Shapes and Basic Drawing in WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) and the [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), however, this topic describes in detail the powerful and complex mini-language you can use to specify path geometries more compactly using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
   
- Di seguito sono elencate le diverse sezioni di questo argomento:  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Prerequisiti  
- Per comprendere questo argomento, è necessario conoscere le funzionalità di base <xref:System.Windows.Media.Geometry> oggetti. Per ulteriori informazioni, vedere il [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+## <a name="prerequisites"></a><span data-ttu-id="b8141-104">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="b8141-104">Prerequisites</span></span>  
+ <span data-ttu-id="b8141-105">Per comprendere questo argomento, è necessario conoscere le funzionalità di base di <xref:System.Windows.Media.Geometry> oggetti.</span><span class="sxs-lookup"><span data-stu-id="b8141-105">To understand this topic, you should be familiar with the basic features of <xref:System.Windows.Media.Geometry> objects.</span></span> <span data-ttu-id="b8141-106">Per ulteriori informazioni, vedere il [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).</span><span class="sxs-lookup"><span data-stu-id="b8141-106">For more information, see the [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).</span></span>  
   
 <a name="abouthisdocument"></a>   
-## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry e PathFigureCollection Mini-lingue  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]sono disponibili due classi che forniscono mini-lingue per descrivere percorsi geometrici: <xref:System.Windows.Media.StreamGeometry> e <xref:System.Windows.Media.PathFigureCollection>.  
+## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a><span data-ttu-id="b8141-107">Mini linguaggi StreamGeometry e PathFigureCollection</span><span class="sxs-lookup"><span data-stu-id="b8141-107">StreamGeometry and PathFigureCollection Mini-Languages</span></span>  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="b8141-108">sono disponibili due classi che forniscono mini lingue per la descrizione di percorsi geometrici: <xref:System.Windows.Media.StreamGeometry> e <xref:System.Windows.Media.PathFigureCollection>.</span><span class="sxs-lookup"><span data-stu-id="b8141-108"> provides two classes that provide mini-languages for describing geometric paths: <xref:System.Windows.Media.StreamGeometry> and <xref:System.Windows.Media.PathFigureCollection>.</span></span>  
   
--   Utilizzare il <xref:System.Windows.Media.StreamGeometry> mini linguaggio quando si imposta una proprietà di tipo <xref:System.Windows.Media.Geometry>, ad esempio il <xref:System.Windows.UIElement.Clip%2A> proprietà di un <xref:System.Windows.UIElement> o <xref:System.Windows.Shapes.Path.Data%2A> proprietà di un <xref:System.Windows.Shapes.Path> elemento. Nell'esempio seguente viene utilizzata la sintassi degli attributi per creare un <xref:System.Windows.Media.StreamGeometry>.  
+-   <span data-ttu-id="b8141-109">Utilizzare il <xref:System.Windows.Media.StreamGeometry> lingue ridotto durante l'impostazione di una proprietà di tipo <xref:System.Windows.Media.Geometry>, ad esempio il <xref:System.Windows.UIElement.Clip%2A> proprietà di un <xref:System.Windows.UIElement> o <xref:System.Windows.Shapes.Path.Data%2A> proprietà di un <xref:System.Windows.Shapes.Path> elemento.</span><span class="sxs-lookup"><span data-stu-id="b8141-109">You use the <xref:System.Windows.Media.StreamGeometry> mini-language when setting a property of type <xref:System.Windows.Media.Geometry>, such as the <xref:System.Windows.UIElement.Clip%2A> property of a <xref:System.Windows.UIElement> or the <xref:System.Windows.Shapes.Path.Data%2A> property of a <xref:System.Windows.Shapes.Path> element.</span></span> <span data-ttu-id="b8141-110">L'esempio seguente usa la sintassi degli attributi per creare un <xref:System.Windows.Media.StreamGeometry>.</span><span class="sxs-lookup"><span data-stu-id="b8141-110">The following example uses attribute syntax to create a <xref:System.Windows.Media.StreamGeometry>.</span></span>  
   
-     [!code-xml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
--   Utilizzare il <xref:System.Windows.Media.PathFigureCollection> mini linguaggio durante l'impostazione di <xref:System.Windows.Media.PathGeometry.Figures%2A> proprietà di un <xref:System.Windows.Media.PathGeometry>. Nell'esempio seguente utilizza una sintassi di attributo per creare un <xref:System.Windows.Media.PathFigureCollection> per un <xref:System.Windows.Media.PathGeometry>.  
+-   <span data-ttu-id="b8141-111">Utilizzare il <xref:System.Windows.Media.PathFigureCollection> lingue ridotto durante l'impostazione di <xref:System.Windows.Media.PathGeometry.Figures%2A> proprietà di un <xref:System.Windows.Media.PathGeometry>.</span><span class="sxs-lookup"><span data-stu-id="b8141-111">You use the <xref:System.Windows.Media.PathFigureCollection> mini-language when setting the <xref:System.Windows.Media.PathGeometry.Figures%2A> property of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="b8141-112">L'esempio seguente usa una sintassi di attributo per creare un <xref:System.Windows.Media.PathFigureCollection> per un <xref:System.Windows.Media.PathGeometry>.</span><span class="sxs-lookup"><span data-stu-id="b8141-112">The following example uses a attribute syntax to create a <xref:System.Windows.Media.PathFigureCollection> for a <xref:System.Windows.Media.PathGeometry>.</span></span>  
   
-     [!code-xml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   
- Come si può notare dagli esempi precedenti, i due linguaggi mini sono molto simili. È sempre possibile utilizzare un <xref:System.Windows.Media.PathGeometry> in qualsiasi situazione in cui è possibile utilizzare un <xref:System.Windows.Media.StreamGeometry>; in questo caso quello è necessario utilizzare? Utilizzare un <xref:System.Windows.Media.StreamGeometry> quando non è necessario modificare il percorso dopo averlo creato; utilizzare un <xref:System.Windows.Media.PathGeometry> se è necessario modificare il percorso.  
+ <span data-ttu-id="b8141-113">Come si può notare dagli esempi precedenti, i due mini-linguaggi sono molto simili.</span><span class="sxs-lookup"><span data-stu-id="b8141-113">As you can see from the preceding examples, the two mini-languages are very similar.</span></span> <span data-ttu-id="b8141-114">È sempre possibile usare un <xref:System.Windows.Media.PathGeometry> in qualsiasi situazione in cui è possibile utilizzare un <xref:System.Windows.Media.StreamGeometry>; pertanto quello che è necessario utilizzare?</span><span class="sxs-lookup"><span data-stu-id="b8141-114">It's always possible to use a <xref:System.Windows.Media.PathGeometry> in any situation where you could use a <xref:System.Windows.Media.StreamGeometry>; so which one should you use?</span></span> <span data-ttu-id="b8141-115">Utilizzare un <xref:System.Windows.Media.StreamGeometry> quando non è necessario modificare il percorso dopo averlo creato; utilizzare un <xref:System.Windows.Media.PathGeometry> se è necessario modificare il percorso.</span><span class="sxs-lookup"><span data-stu-id="b8141-115">Use a <xref:System.Windows.Media.StreamGeometry> when you don't need to modify the path after creating it; use a <xref:System.Windows.Media.PathGeometry> if you do need to modify the path.</span></span>  
   
- Per ulteriori informazioni sulle differenze tra <xref:System.Windows.Media.PathGeometry> e <xref:System.Windows.Media.StreamGeometry> degli oggetti, vedere il [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ <span data-ttu-id="b8141-116">Per ulteriori informazioni sulle differenze tra <xref:System.Windows.Media.PathGeometry> e <xref:System.Windows.Media.StreamGeometry> degli oggetti, vedere il [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).</span><span class="sxs-lookup"><span data-stu-id="b8141-116">For more information about the differences between <xref:System.Windows.Media.PathGeometry> and <xref:System.Windows.Media.StreamGeometry> objects, see the [Geometry Overview](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).</span></span>  
   
-### <a name="a-note-about-white-space"></a>Nota sugli spazi vuoti  
- Per brevità, uno spazio singolo viene illustrato nelle sezioni che seguono la sintassi, ma più spazi sono anche quando viene visualizzato uno spazio singolo.  
+### <a name="a-note-about-white-space"></a><span data-ttu-id="b8141-117">Nota sugli spazi vuoti</span><span class="sxs-lookup"><span data-stu-id="b8141-117">A Note about White Space</span></span>  
+ <span data-ttu-id="b8141-118">Per brevità nelle sezioni di sintassi seguenti viene illustrato uno spazio singolo, ma sono accettabili più spazi quando viene visualizzato uno spazio singolo.</span><span class="sxs-lookup"><span data-stu-id="b8141-118">For brevity, a single space is shown in the syntax sections that follow, but multiple spaces are also acceptable wherever a single space is shown.</span></span>  
   
- Due numeri non è necessario essere separati da virgole o spazi vuoti, ma ciò può essere eseguita solo quando la stringa risulta è ambigua. Ad esempio, `2..3` è composta da due numeri: "2". E ".&3;". Analogamente, `2-3` è "2" e "-3". Gli spazi non sono necessari prima o dopo i comandi di.  
+ <span data-ttu-id="b8141-119">Non è necessario che due numeri siano separati da virgole o spazi vuoti, ma ciò può essere fatto solo quando la stringa risultante è ambigua.</span><span class="sxs-lookup"><span data-stu-id="b8141-119">Two numbers don’t actually have to be separated by a comma or whitespace, but this can only be done when the resulting string is unambiguous.</span></span> <span data-ttu-id="b8141-120">Ad esempio, `2..3` è composta da due numeri: "2".</span><span class="sxs-lookup"><span data-stu-id="b8141-120">For instance, `2..3` is actually two numbers: "2."</span></span> <span data-ttu-id="b8141-121">e ".3".</span><span class="sxs-lookup"><span data-stu-id="b8141-121">And ".3".</span></span> <span data-ttu-id="b8141-122">Analogamente, `2-3` è "2" e "-3".</span><span class="sxs-lookup"><span data-stu-id="b8141-122">Similarly, `2-3` is "2" and "-3".</span></span> <span data-ttu-id="b8141-123">Gli spazi non sono necessari né prima né dopo i comandi.</span><span class="sxs-lookup"><span data-stu-id="b8141-123">Spaces are not required before or after commands, either.</span></span>  
   
-### <a name="syntax"></a>Sintassi  
- Il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attributo sintassi di utilizzo di un <xref:System.Windows.Media.StreamGeometry> è composto da un parametro facoltativo <xref:System.Windows.Media.FillRule> valore e uno o più descrizioni di figure.  
+### <a name="syntax"></a><span data-ttu-id="b8141-124">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-124">Syntax</span></span>  
+ <span data-ttu-id="b8141-125">Il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attributo sintassi di utilizzo di un <xref:System.Windows.Media.StreamGeometry> è costituito da un parametro facoltativo <xref:System.Windows.Media.FillRule> valore e uno o più descrizioni di figure.</span><span class="sxs-lookup"><span data-stu-id="b8141-125">The [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attribute usage syntax for a <xref:System.Windows.Media.StreamGeometry> is composed of an optional <xref:System.Windows.Media.FillRule> value and one or more figure descriptions.</span></span>  
   
-|Utilizzo dell'attributo XAML StreamGeometry|  
+|<span data-ttu-id="b8141-126">Utilizzo degli attributi XAML StreamGeometry</span><span class="sxs-lookup"><span data-stu-id="b8141-126">StreamGeometry XAML Attribute Usage</span></span>|  
 |-----------------------------------------|  
-|`<`*object* *property* `="`[                                         `fillRule`]                                          `figureDescription`[                                         `figureDescription`]*`" ... />`|  
+|<span data-ttu-id="b8141-127">`<`*oggetto* *proprietà* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] *`" ... />`</span><span class="sxs-lookup"><span data-stu-id="b8141-127">`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`</span></span>|  
   
- Il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attributo sintassi di utilizzo di un <xref:System.Windows.Media.PathFigureCollection> è composto da uno o più descrizioni di figure.  
+ <span data-ttu-id="b8141-128">Il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attributo sintassi di utilizzo di un <xref:System.Windows.Media.PathFigureCollection> è costituito da uno o più descrizioni di figure.</span><span class="sxs-lookup"><span data-stu-id="b8141-128">The [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attribute usage syntax for a <xref:System.Windows.Media.PathFigureCollection> is composed of one or more figure descriptions.</span></span>  
   
-|Utilizzo dell'attributo XAML PathFigureCollection|  
+|<span data-ttu-id="b8141-129">Utilizzo degli attributi XAML PathFigureCollection</span><span class="sxs-lookup"><span data-stu-id="b8141-129">PathFigureCollection XAML Attribute Usage</span></span>|  
 |-----------------------------------------------|  
-|`<`*object* *property* `="` `figureDescription`[                                         `figureDescription`]*`" ... />`|  
+|<span data-ttu-id="b8141-130">`<`*oggetto* *proprietà* `="` `figureDescription`[ `figureDescription`] *`" ... />`</span><span class="sxs-lookup"><span data-stu-id="b8141-130">`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`</span></span>|  
   
-|Termine|Descrizione|  
+|<span data-ttu-id="b8141-131">Termine</span><span class="sxs-lookup"><span data-stu-id="b8141-131">Term</span></span>|<span data-ttu-id="b8141-132">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8141-132">Description</span></span>|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=fullName><br /><br /> Specifica se il <xref:System.Windows.Media.StreamGeometry> utilizza il <xref:System.Windows.Media.FillRule> o <xref:System.Windows.Media.FillRule><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0`Specifica il <xref:System.Windows.Media.FillRule> regola di riempimento.<br />-   `F1`Specifica il <xref:System.Windows.Media.FillRule> regola di riempimento.<br /><br /> Se si omette questo comando, il percorso secondario utilizzerà il comportamento predefinito, ovvero <xref:System.Windows.Media.FillRule>. Se si specifica questo comando, è necessario inserire prima.|  
-|*figureDescription*|Figura costituita da un comando di spostamento, creare comandi e un comando di chiuso facoltativo.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
-|*moveCommand*|Un comando di spostamento che specifica il punto iniziale della figura. Vedere il [comando Sposta](#themovecommand) sezione.|  
-|*drawCommands*|Uno o più comandi di disegno che descrivono il contenuto della figura. Vedere il [comandi Draw](#drawcommands) sezione.|  
-|*closeCommand*|Comando close facoltativo che figura viene chiusa. Vedere il [comando Close](#closecommand) sezione.|  
+|<span data-ttu-id="b8141-133">*fillRule*</span><span class="sxs-lookup"><span data-stu-id="b8141-133">*fillRule*</span></span>|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-134">Specifica se il <xref:System.Windows.Media.StreamGeometry> utilizza il <xref:System.Windows.Media.FillRule.EvenOdd> o <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.</span><span class="sxs-lookup"><span data-stu-id="b8141-134">Specifies whether the <xref:System.Windows.Media.StreamGeometry> uses the <xref:System.Windows.Media.FillRule.EvenOdd> or <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.</span></span><br /><br /> <span data-ttu-id="b8141-135">-   `F0`Specifica il <xref:System.Windows.Media.FillRule.EvenOdd> regola di riempimento.</span><span class="sxs-lookup"><span data-stu-id="b8141-135">-   `F0` specifies the <xref:System.Windows.Media.FillRule.EvenOdd> fill rule.</span></span><br /><span data-ttu-id="b8141-136">-   `F1`Specifica il <xref:System.Windows.Media.FillRule.Nonzero> regola di riempimento.</span><span class="sxs-lookup"><span data-stu-id="b8141-136">-   `F1` specifies the <xref:System.Windows.Media.FillRule.Nonzero> fill rule.</span></span><br /><br /> <span data-ttu-id="b8141-137">Se si omette questo comando, il sottopercorso utilizza il comportamento predefinito, ovvero <xref:System.Windows.Media.FillRule.EvenOdd>.</span><span class="sxs-lookup"><span data-stu-id="b8141-137">If you omit this command, the subpath uses the default behavior, which is <xref:System.Windows.Media.FillRule.EvenOdd>.</span></span> <span data-ttu-id="b8141-138">Se si specifica questo comando, è necessario inserirlo per primo.</span><span class="sxs-lookup"><span data-stu-id="b8141-138">If you specify this command, you must place it first.</span></span>|  
+|<span data-ttu-id="b8141-139">*figureDescription*</span><span class="sxs-lookup"><span data-stu-id="b8141-139">*figureDescription*</span></span>|<span data-ttu-id="b8141-140">Figura costituita da un comando di spostamento, da alcuni comandi di disegno e da un comando di chiusura facoltativo.</span><span class="sxs-lookup"><span data-stu-id="b8141-140">A figure composed of a move command, draw commands, and an optional close command.</span></span><br /><br /> <span data-ttu-id="b8141-141">`moveCommand` `drawCommands`  `[` `closeCommand` `]`</span><span class="sxs-lookup"><span data-stu-id="b8141-141">`moveCommand` `drawCommands`  `[` `closeCommand` `]`</span></span>|  
+|<span data-ttu-id="b8141-142">*moveCommand*</span><span class="sxs-lookup"><span data-stu-id="b8141-142">*moveCommand*</span></span>|<span data-ttu-id="b8141-143">Comando di spostamento che specifica il punto iniziale della figura.</span><span class="sxs-lookup"><span data-stu-id="b8141-143">A move command that specifies the start point of the figure.</span></span> <span data-ttu-id="b8141-144">Vedere il [comando Sposta](#themovecommand) sezione.</span><span class="sxs-lookup"><span data-stu-id="b8141-144">See the [Move Command](#themovecommand) section.</span></span>|  
+|<span data-ttu-id="b8141-145">*drawCommands*</span><span class="sxs-lookup"><span data-stu-id="b8141-145">*drawCommands*</span></span>|<span data-ttu-id="b8141-146">Uno o più comandi di disegno che descrivono il contenuto della figura.</span><span class="sxs-lookup"><span data-stu-id="b8141-146">One or more drawing commands that describe the figure's contents.</span></span> <span data-ttu-id="b8141-147">Vedere il [comandi Draw](#drawcommands) sezione.</span><span class="sxs-lookup"><span data-stu-id="b8141-147">See the [Draw Commands](#drawcommands) section.</span></span>|  
+|<span data-ttu-id="b8141-148">*closeCommand*</span><span class="sxs-lookup"><span data-stu-id="b8141-148">*closeCommand*</span></span>|<span data-ttu-id="b8141-149">Comando facoltativo di chiusura che consente di chiudere la figura.</span><span class="sxs-lookup"><span data-stu-id="b8141-149">An optional close command that closes figure.</span></span> <span data-ttu-id="b8141-150">Vedere il [comando Chiudi](#closecommand) sezione.</span><span class="sxs-lookup"><span data-stu-id="b8141-150">See the [Close Command](#closecommand) section.</span></span>|  
   
 <a name="themovecommand"></a>   
-## <a name="move-command"></a>Comando di spostamento  
- Specifica il punto di inizio di una nuova figura.  
+## <a name="move-command"></a><span data-ttu-id="b8141-151">Comando Move</span><span class="sxs-lookup"><span data-stu-id="b8141-151">Move Command</span></span>  
+ <span data-ttu-id="b8141-152">Specifica il punto iniziale di una nuova figura.</span><span class="sxs-lookup"><span data-stu-id="b8141-152">Specifies the start point of a new figure.</span></span>  
   
-|Sintassi|  
+|<span data-ttu-id="b8141-153">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-153">Syntax</span></span>|  
 |------------|  
-|`M`*startPoint*<br /><br /> -oppure-<br /><br /> `m`*startPoint*|  
+|<span data-ttu-id="b8141-154">`M` *startPoint*</span><span class="sxs-lookup"><span data-stu-id="b8141-154">`M` *startPoint*</span></span><br /><br /> <span data-ttu-id="b8141-155">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b8141-155">- or -</span></span><br /><br /> <span data-ttu-id="b8141-156">`m` *startPoint*</span><span class="sxs-lookup"><span data-stu-id="b8141-156">`m` *startPoint*</span></span>|  
   
-|Termine|Descrizione|  
+|<span data-ttu-id="b8141-157">Termine</span><span class="sxs-lookup"><span data-stu-id="b8141-157">Term</span></span>|<span data-ttu-id="b8141-158">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8141-158">Description</span></span>|  
 |----------|-----------------|  
-|*punto iniziale*|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Il punto di inizio di una nuova figura.|  
+|<span data-ttu-id="b8141-159">*startPoint*</span><span class="sxs-lookup"><span data-stu-id="b8141-159">*startPoint*</span></span>|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-160">Punto iniziale di una nuova figura.</span><span class="sxs-lookup"><span data-stu-id="b8141-160">The start point of a new figure.</span></span>|  
   
- Un carattere maiuscolo `M` indica che `startPoint` è un valore assoluto; una minuscola `m` indica che `startPoint` è un offset al punto precedente, oppure (0,0) se non ne esiste nessuno. Se si elencano più punti dopo il comando di spostamento, una linea viene tracciata in quei punti anche se è specificata la riga di comando.  
+ <span data-ttu-id="b8141-161">Maiuscoli `M` indica che `startPoint` è un valore assoluto; una minuscola `m` indica che `startPoint` è un offset al punto precedente, oppure (0,0) se non esiste.</span><span class="sxs-lookup"><span data-stu-id="b8141-161">An uppercase `M` indicates that `startPoint` is an absolute value; a lowercase `m` indicates that `startPoint` is an offset to the previous point, or (0,0) if none exists.</span></span> <span data-ttu-id="b8141-162">Se dopo il comando di spostamento vengono elencati più punti, verrà tracciata una linea in direzione di quei punti, anche se il comando della linea è stato specificato.</span><span class="sxs-lookup"><span data-stu-id="b8141-162">If you list multiple points after the move command, a line is drawn to those points though you specified the line command.</span></span>  
   
 <a name="drawcommands"></a>   
-## <a name="draw-commands"></a>Comandi di disegno  
- Un comando di disegno può essere costituito da diversi comandi di forma. Sono disponibili i seguenti comandi di forma: riga, linea orizzontale, verticale, curva di Bezier cubica, curva di Bezier quadratica, curva di Bezier cubica smooth, curva di Bezier quadratica e arco ellittico.  
+## <a name="draw-commands"></a><span data-ttu-id="b8141-163">Comandi Draw</span><span class="sxs-lookup"><span data-stu-id="b8141-163">Draw Commands</span></span>  
+ <span data-ttu-id="b8141-164">Un comando di disegno può essere costituito da diversi comandi di forma.</span><span class="sxs-lookup"><span data-stu-id="b8141-164">A draw command can consist of several shape commands.</span></span> <span data-ttu-id="b8141-165">Sono disponibili i comandi di forma seguenti: linea, linea orizzontale, linea verticale, curva di Bézier cubica, curva di Bézier quadratica, curva di Bézier cubica continua, curva di Bézier quadratica continua e arco ellittico.</span><span class="sxs-lookup"><span data-stu-id="b8141-165">The following shape commands are available: line, horizontal line, vertical line, cubic Bezier curve, quadratic Bezier curve, smooth cubic Bezier curve, smooth quadratic Bezier curve, and elliptical arc.</span></span>  
   
- Ogni comando immesso utilizzando maiuscola o minuscola: lettere maiuscole indicano valori assoluti e relativi valori indicano le lettere minuscole: i punti di controllo per il segmento sono rispetto al punto di fine dell'esempio precedente. Quando si immette in sequenza più comandi dello stesso tipo, è possibile omettere l'immissione del comando duplicati; ad esempio, `L 100,200 300,400` equivale a `L 100,200 L 300,400`. Nella tabella seguente vengono descritti il **spostare** e **disegnare** comandi.  
+ <span data-ttu-id="b8141-166">Per inserire ciascun comando, usare una lettera maiuscola o una lettera minuscola: le lettere maiuscole indicano valori assoluti, quelle minuscole valori relativi. I punti di controllo del segmento specificato si riferiscono al punto finale dell'esempio precedente.</span><span class="sxs-lookup"><span data-stu-id="b8141-166">You enter each command by using either an uppercase or a lowercase letter: uppercase letters denote absolute values and lowercase letters denote relative values: the control points for that segment are relative to the end point of the preceding example.</span></span> <span data-ttu-id="b8141-167">Quando si immette in sequenza più comandi dello stesso tipo, è possibile omettere la voce di comando duplicato. ad esempio, `L 100,200 300,400` equivale a `L 100,200 L 300,400`.</span><span class="sxs-lookup"><span data-stu-id="b8141-167">When sequentially entering more than one command of the same type, you can omit the duplicate command entry; for example, `L 100,200 300,400` is equivalent to `L 100,200 L 300,400`.</span></span> <span data-ttu-id="b8141-168">Nella tabella seguente vengono descritti il **spostare** e **disegnare** comandi.</span><span class="sxs-lookup"><span data-stu-id="b8141-168">The following table describes the **move** and **draw** commands.</span></span>  
   
-### <a name="line-command"></a>Riga di comando  
- Crea una linea retta tra il punto corrente e il punto finale specificato.                           `l 20 30`e `L 20,30` sono esempi di valido **riga** comandi.  
+### <a name="line-command"></a><span data-ttu-id="b8141-169">Comando Line</span><span class="sxs-lookup"><span data-stu-id="b8141-169">Line Command</span></span>  
+ <span data-ttu-id="b8141-170">Crea una linea retta tra il punto corrente e il punto finale specificato.</span><span class="sxs-lookup"><span data-stu-id="b8141-170">Creates a straight line between the current point and the specified end point.</span></span> <span data-ttu-id="b8141-171">`l 20 30`e `L 20,30` sono esempi di valido **riga** comandi.</span><span class="sxs-lookup"><span data-stu-id="b8141-171">`l 20 30` and `L 20,30` are examples of valid **line** commands.</span></span>  
   
-|Sintassi|  
+|<span data-ttu-id="b8141-172">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-172">Syntax</span></span>|  
 |------------|  
-|`L`*endPoint*<br /><br /> -oppure-<br /><br /> `l`*endPoint*|  
+|<span data-ttu-id="b8141-173">`L` *endPoint*</span><span class="sxs-lookup"><span data-stu-id="b8141-173">`L` *endPoint*</span></span><br /><br /> <span data-ttu-id="b8141-174">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b8141-174">- or -</span></span><br /><br /> <span data-ttu-id="b8141-175">`l` *endPoint*</span><span class="sxs-lookup"><span data-stu-id="b8141-175">`l` *endPoint*</span></span>|  
   
-|Termine|Descrizione|  
+|<span data-ttu-id="b8141-176">Termine</span><span class="sxs-lookup"><span data-stu-id="b8141-176">Term</span></span>|<span data-ttu-id="b8141-177">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8141-177">Description</span></span>|  
 |----------|-----------------|  
-|*endPoint*|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Punto finale della linea.|  
+|<span data-ttu-id="b8141-178">*endPoint*</span><span class="sxs-lookup"><span data-stu-id="b8141-178">*endPoint*</span></span>|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-179">Punto finale della linea.</span><span class="sxs-lookup"><span data-stu-id="b8141-179">The end point of the line.</span></span>|  
+
+<span data-ttu-id="b8141-180">Maiuscoli `L` indica che `endPoint` è un valore assoluto; una minuscola `l` indica che `endPoint` è un offset al punto precedente, oppure (0,0) se non esiste.</span><span class="sxs-lookup"><span data-stu-id="b8141-180">An uppercase `L` indicates that `endPoint` is an absolute value; a lowercase `l` indicates that `endPoint` is an offset to the previous point, or (0,0) if none exists.</span></span>
+
+### <a name="horizontal-line-command"></a><span data-ttu-id="b8141-181">Comando Horizontal Line</span><span class="sxs-lookup"><span data-stu-id="b8141-181">Horizontal Line Command</span></span>  
+ <span data-ttu-id="b8141-182">Crea una linea orizzontale tra il punto corrente e la coordinata x specificata.</span><span class="sxs-lookup"><span data-stu-id="b8141-182">Creates a horizontal line between the current point and the specified x-coordinate.</span></span> <span data-ttu-id="b8141-183">`H 90` è un esempio di comando di linea orizzontale valido.</span><span class="sxs-lookup"><span data-stu-id="b8141-183">`H 90` is an example of a valid horizontal line command.</span></span>
+
   
-### <a name="horizontal-line-command"></a>Orizzontale della riga di comando  
- Crea una riga orizzontale tra il punto corrente e la coordinata x specificata.                          `H 90`è un esempio di un comando di linea orizzontale valido.  
-  
-|Sintassi|  
+|<span data-ttu-id="b8141-184">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-184">Syntax</span></span>|  
 |------------|  
-|`H`  *x*<br /><br /> -oppure-<br /><br /> `h`  *x*|  
+|<span data-ttu-id="b8141-185">`H`  *x*</span><span class="sxs-lookup"><span data-stu-id="b8141-185">`H`  *x*</span></span><br /><br /> <span data-ttu-id="b8141-186">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b8141-186">- or -</span></span><br /><br /> <span data-ttu-id="b8141-187">`h`  *x*</span><span class="sxs-lookup"><span data-stu-id="b8141-187">`h`  *x*</span></span>|  
   
-|Termine|Descrizione|  
+|<span data-ttu-id="b8141-188">Termine</span><span class="sxs-lookup"><span data-stu-id="b8141-188">Term</span></span>|<span data-ttu-id="b8141-189">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8141-189">Description</span></span>|  
 |----------|-----------------|  
-|*x*|<xref:System.Double?displayProperty=fullName><br /><br /> Coordinata x del punto finale della linea.|  
+|<span data-ttu-id="b8141-190">*x*</span><span class="sxs-lookup"><span data-stu-id="b8141-190">*x*</span></span>|<xref:System.Double?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-191">Coordinata x del punto finale della linea.</span><span class="sxs-lookup"><span data-stu-id="b8141-191">The x-coordinate of the end point of the line.</span></span>|  
   
-### <a name="vertical-line-command"></a>Verticale della riga di comando  
- Crea una linea verticale tra il punto corrente e la coordinata y specificata.                          `v 90`è un esempio di comando di linea verticale valido.  
+<span data-ttu-id="b8141-192">Maiuscoli `H` indica che `x` è un valore assoluto; una minuscola `h` indica che `x` è un offset al punto precedente, oppure (0,0) se non esiste.</span><span class="sxs-lookup"><span data-stu-id="b8141-192">An uppercase `H` indicates that `x` is an absolute value; a lowercase `h` indicates that `x` is an offset to the previous point, or (0,0) if none exists.</span></span>
   
-|Sintassi|  
+### <a name="vertical-line-command"></a><span data-ttu-id="b8141-193">Comando Vertical Line</span><span class="sxs-lookup"><span data-stu-id="b8141-193">Vertical Line Command</span></span>  
+ <span data-ttu-id="b8141-194">Crea una linea verticale tra il punto corrente e la coordinata y specificata.</span><span class="sxs-lookup"><span data-stu-id="b8141-194">Creates a vertical line between the current point and the specified y-coordinate.</span></span> <span data-ttu-id="b8141-195">`v 90` è un esempio di comando di linea verticale valido.</span><span class="sxs-lookup"><span data-stu-id="b8141-195">`v 90` is an example of a valid vertical line command.</span></span>
+
+  
+|<span data-ttu-id="b8141-196">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-196">Syntax</span></span>|  
 |------------|  
-|`V`  *y*<br /><br /> -oppure-<br /><br /> `v`  *y*|  
+|<span data-ttu-id="b8141-197">`V`  *y*</span><span class="sxs-lookup"><span data-stu-id="b8141-197">`V`  *y*</span></span><br /><br /> <span data-ttu-id="b8141-198">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b8141-198">- or -</span></span><br /><br /> <span data-ttu-id="b8141-199">`v`  *y*</span><span class="sxs-lookup"><span data-stu-id="b8141-199">`v`  *y*</span></span>|  
   
-|Termine|Descrizione|  
+|<span data-ttu-id="b8141-200">Termine</span><span class="sxs-lookup"><span data-stu-id="b8141-200">Term</span></span>|<span data-ttu-id="b8141-201">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8141-201">Description</span></span>|  
 |----------|-----------------|  
-|*y*|<xref:System.Double?displayProperty=fullName><br /><br /> Coordinata y del punto finale della linea.|  
+|<span data-ttu-id="b8141-202">*y*</span><span class="sxs-lookup"><span data-stu-id="b8141-202">*y*</span></span>|<xref:System.Double?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-203">Coordinata y del punto finale della linea.</span><span class="sxs-lookup"><span data-stu-id="b8141-203">The y-coordinate of the end point of the line.</span></span>|  
+
+<span data-ttu-id="b8141-204">Maiuscoli `V` indica che `y` è un valore assoluto; una minuscola `v` indica che `y` è un offset al punto precedente, oppure (0,0) se non esiste.</span><span class="sxs-lookup"><span data-stu-id="b8141-204">An uppercase `V` indicates that `y` is an absolute value; a lowercase `v` indicates that `y` is an offset to the previous point, or (0,0) if none exists.</span></span>  
+    
+### <a name="cubic-bezier-curve-command"></a><span data-ttu-id="b8141-205">Comando Cubic Bezier Curve</span><span class="sxs-lookup"><span data-stu-id="b8141-205">Cubic Bezier Curve Command</span></span>  
+ <span data-ttu-id="b8141-206">Crea una curva di Bézier cubica tra il punto corrente e il punto finale specificato utilizzando i due punti di controllo (`controlPoint`1 e `controlPoint`2).</span><span class="sxs-lookup"><span data-stu-id="b8141-206">Creates a cubic Bezier curve between the current point and the specified end point by using the two specified control points (`controlPoint`1 and `controlPoint`2).</span></span> <span data-ttu-id="b8141-207">`C 100,200 200,400 300,200` è un esempio di comando di curva valido.</span><span class="sxs-lookup"><span data-stu-id="b8141-207">`C 100,200 200,400 300,200` is an example of a valid curve command.</span></span>  
   
-### <a name="cubic-bezier-curve-command"></a>Comando curva di Bezier cubica  
- Crea una curva di Bezier cubica tra il punto corrente e il punto finale specificato utilizzando i due punti di controllo ( `controlPoint`1 e `controlPoint`2).                          `C 100,200 200,400 300,200`è un esempio di comando di curva valido.  
-  
-|Sintassi|  
+|<span data-ttu-id="b8141-208">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-208">Syntax</span></span>|  
 |------------|  
-|`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> -oppure-<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
+|<span data-ttu-id="b8141-209">`C` `controlPoint`1`controlPoint`2`endPoint`</span><span class="sxs-lookup"><span data-stu-id="b8141-209">`C` `controlPoint`1`controlPoint`2`endPoint`</span></span><br /><br /> <span data-ttu-id="b8141-210">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b8141-210">- or -</span></span><br /><br /> <span data-ttu-id="b8141-211">`c` `controlPoint`1`controlPoint`2`endPoint`</span><span class="sxs-lookup"><span data-stu-id="b8141-211">`c` `controlPoint`1`controlPoint`2`endPoint`</span></span>|  
   
-|Termine|Descrizione|  
+|<span data-ttu-id="b8141-212">Termine</span><span class="sxs-lookup"><span data-stu-id="b8141-212">Term</span></span>|<span data-ttu-id="b8141-213">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8141-213">Description</span></span>|  
 |----------|-----------------|  
-|`controlPoint`1|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Il primo punto di controllo della curva, che determina la tangente iniziale della curva.|  
-|`controlPoint`2|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Secondo punto di controllo della curva, che determina la tangente finale della curva.|  
-|`endPoint`|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Punto verso il quale viene disegnata la curva.|  
+|<span data-ttu-id="b8141-214">`controlPoint`1</span><span class="sxs-lookup"><span data-stu-id="b8141-214">`controlPoint`1</span></span>|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-215">Primo punto di controllo della curva, che determina la tangente iniziale della curva.</span><span class="sxs-lookup"><span data-stu-id="b8141-215">The first control point of the curve, which determines the starting tangent of the curve.</span></span>|  
+|<span data-ttu-id="b8141-216">`controlPoint`2</span><span class="sxs-lookup"><span data-stu-id="b8141-216">`controlPoint`2</span></span>|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-217">Secondo punto di controllo della curva, che determina la tangente finale della curva.</span><span class="sxs-lookup"><span data-stu-id="b8141-217">The second control point of the curve, which determines the ending tangent of the curve.</span></span>|  
+|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-218">Punto verso il quale viene disegnata la curva.</span><span class="sxs-lookup"><span data-stu-id="b8141-218">The point to which the curve is drawn.</span></span>|  
   
-### <a name="quadratic-bezier-curve-command"></a>Comando curva di Bezier quadratica  
- Crea una curva di Bezier quadratica tra il punto corrente e il punto finale specificato utilizzando il punto di controllo ( `controlPoint`).                          `q 100,200 300,200`è un esempio di comando di curva di Bezier quadratica valido.  
+### <a name="quadratic-bezier-curve-command"></a><span data-ttu-id="b8141-219">Comando Quadratic Bezier Curve</span><span class="sxs-lookup"><span data-stu-id="b8141-219">Quadratic Bezier Curve Command</span></span>  
+ <span data-ttu-id="b8141-220">Crea una curva di Bézier quadratica tra il punto corrente e il punto finale specificato utilizzando il punto di controllo (`controlPoint`).</span><span class="sxs-lookup"><span data-stu-id="b8141-220">Creates a quadratic Bezier curve between the current point and the specified end point by using the specified control point (`controlPoint`).</span></span> <span data-ttu-id="b8141-221">`q 100,200 300,200` è un esempio di comando di curva di Bézier quadratica valido.</span><span class="sxs-lookup"><span data-stu-id="b8141-221">`q 100,200 300,200` is an example of a valid quadratic Bezier curve command.</span></span>  
   
-|Sintassi|  
+|<span data-ttu-id="b8141-222">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-222">Syntax</span></span>|  
 |------------|  
-|`Q` `controlPoint` `endPoint`<br /><br /> -oppure-<br /><br /> `q` `controlPoint` `endPoint`|  
+|<span data-ttu-id="b8141-223">`Q` `controlPoint` `endPoint`</span><span class="sxs-lookup"><span data-stu-id="b8141-223">`Q` `controlPoint` `endPoint`</span></span><br /><br /> <span data-ttu-id="b8141-224">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b8141-224">- or -</span></span><br /><br /> <span data-ttu-id="b8141-225">`q` `controlPoint` `endPoint`</span><span class="sxs-lookup"><span data-stu-id="b8141-225">`q` `controlPoint` `endPoint`</span></span>|  
   
-|Termine|Descrizione|  
+|<span data-ttu-id="b8141-226">Termine</span><span class="sxs-lookup"><span data-stu-id="b8141-226">Term</span></span>|<span data-ttu-id="b8141-227">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8141-227">Description</span></span>|  
 |----------|-----------------|  
-|`controlPoint`|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Il punto di controllo della curva, che determina l'inizio e fine tangenti della curva.|  
-|`endPoint`|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Punto verso il quale viene disegnata la curva.|  
+|`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-228">Punto di controllo della curva, che determina le tangenti iniziale e finale della curva.</span><span class="sxs-lookup"><span data-stu-id="b8141-228">The control point of the curve, which determines the starting and ending tangents of the curve.</span></span>|  
+|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-229">Punto verso il quale viene disegnata la curva.</span><span class="sxs-lookup"><span data-stu-id="b8141-229">The point to which the curve is drawn.</span></span>|  
   
-### <a name="smooth-cubic-bezier-curve-command"></a>Curva di Bezier cubica Smooth comando  
- Crea una curva di Bezier cubica tra il punto corrente e il punto finale specificato. Il primo punto di controllo verrà considerato reflection del secondo punto di controllo del comando precedente rispetto al punto corrente. Se non esiste alcun comando precedente o se il comando precedente non è un comando di curva di Bezier cubica o un comando curva di Bezier cubica, si supponga che il primo punto di controllo è coinciderà con il punto corrente. Il secondo punto di controllo, il punto di controllo per l'entità finale della curva, specificato da `controlPoint`2. Ad esempio, `S 100,200 200,300` è un comando di curva di Bezier cubico continua valido.  
+### <a name="smooth-cubic-bezier-curve-command"></a><span data-ttu-id="b8141-230">Comando Smooth cubic Bezier curve</span><span class="sxs-lookup"><span data-stu-id="b8141-230">Smooth cubic Bezier curve Command</span></span>  
+ <span data-ttu-id="b8141-231">Crea una curva di Bézier cubica tra il punto corrente e il punto finale specificato.</span><span class="sxs-lookup"><span data-stu-id="b8141-231">Creates a cubic Bezier curve between the current point and the specified end point.</span></span> <span data-ttu-id="b8141-232">Il primo punto di controllo viene considerato come reflection del secondo punto di controllo del comando precedente relativo al punto corrente.</span><span class="sxs-lookup"><span data-stu-id="b8141-232">The first control point is assumed to be the reflection of the second control point of the previous command relative to the current point.</span></span> <span data-ttu-id="b8141-233">Se in precedenza non è stato usato alcun comando o se il comando precedente non era un comando di curva di Bézier cubica o un comando di curva di Bézier cubica continua, il punto di controllo coinciderà con il punto corrente.</span><span class="sxs-lookup"><span data-stu-id="b8141-233">If there is no previous command or if the previous command was not a cubic Bezier curve command or a smooth cubic Bezier curve command, assume the first control point is coincident with the current point.</span></span> <span data-ttu-id="b8141-234">Il secondo punto di controllo, il punto di controllo per la fine della curva, specificato da `controlPoint`2.</span><span class="sxs-lookup"><span data-stu-id="b8141-234">The second control point, the control point for the end of the curve, is specified by `controlPoint`2.</span></span> <span data-ttu-id="b8141-235">Ad esempio, `S 100,200 200,300` è un comando di curva di Bézier cubico continua valido.</span><span class="sxs-lookup"><span data-stu-id="b8141-235">For example, `S 100,200 200,300` is a valid smooth cubic Bezier curve command.</span></span>  
   
-|Sintassi|  
+|<span data-ttu-id="b8141-236">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-236">Syntax</span></span>|  
 |------------|  
-|`S` `controlPoint`2`endPoint`<br /><br /> -oppure-<br /><br /> `s` `controlPoint`2`endPoint`|  
+|<span data-ttu-id="b8141-237">`S` `controlPoint`2`endPoint`</span><span class="sxs-lookup"><span data-stu-id="b8141-237">`S` `controlPoint`2`endPoint`</span></span><br /><br /> <span data-ttu-id="b8141-238">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b8141-238">- or -</span></span><br /><br /> <span data-ttu-id="b8141-239">`s` `controlPoint`2`endPoint`</span><span class="sxs-lookup"><span data-stu-id="b8141-239">`s` `controlPoint`2`endPoint`</span></span>|  
   
-|Termine|Descrizione|  
+|<span data-ttu-id="b8141-240">Termine</span><span class="sxs-lookup"><span data-stu-id="b8141-240">Term</span></span>|<span data-ttu-id="b8141-241">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8141-241">Description</span></span>|  
 |----------|-----------------|  
-|`controlPoint`2|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Il punto di controllo della curva, che determina la tangente finale della curva.|  
-|`endPoint`|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Punto verso il quale viene disegnata la curva.|  
+|<span data-ttu-id="b8141-242">`controlPoint`2</span><span class="sxs-lookup"><span data-stu-id="b8141-242">`controlPoint`2</span></span>|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-243">Punto di controllo della curva, che determina la tangente finale della curva.</span><span class="sxs-lookup"><span data-stu-id="b8141-243">The control point of the curve, which determines the ending tangent of the curve.</span></span>|  
+|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-244">Punto verso il quale viene disegnata la curva.</span><span class="sxs-lookup"><span data-stu-id="b8141-244">The point to which the curve is drawn.</span></span>|  
   
-### <a name="smooth-quadratic-bezier-curve-command"></a>Curva di Bezier quadratica Smooth comando  
- Crea una curva di Bezier quadratica tra il punto corrente e il punto finale specificato. Il punto di controllo è considerato la reflection del punto di controllo del comando precedente rispetto al punto corrente. Se non esiste alcun comando precedente o se il comando precedente non è un comando di curva di Bezier quadratica o un comando di curva di Bezier quadratica continua, il punto di controllo coinciderà con il punto corrente.  
+### <a name="smooth-quadratic-bezier-curve-command"></a><span data-ttu-id="b8141-245">Comando Smooth Quadratic Bezier Curve</span><span class="sxs-lookup"><span data-stu-id="b8141-245">Smooth quadratic Bezier curve Command</span></span>  
+ <span data-ttu-id="b8141-246">Crea una curva di Bézier quadratica tra il punto corrente e il punto finale specificato.</span><span class="sxs-lookup"><span data-stu-id="b8141-246">Creates a quadratic Bezier curve between the current point and the specified end point.</span></span> <span data-ttu-id="b8141-247">Il punto di controllo viene considerato come reflection del punto di controllo del comando precedente relativo al punto corrente.</span><span class="sxs-lookup"><span data-stu-id="b8141-247">The control point is assumed to be the reflection of the control point of the previous command relative to the current point.</span></span> <span data-ttu-id="b8141-248">Se in precedenza non è stato usato alcun comando o se il comando precedente non era un comando di curva di Bézier quadratica o un comando di curva di Bézier quadratica continua, il punto di controllo coinciderà con il punto corrente.</span><span class="sxs-lookup"><span data-stu-id="b8141-248">If there is no previous command or if the previous command was not a quadratic Bezier curve command or a smooth quadratic Bezier curve command, the control point is coincident with the current point.</span></span>  
   
-|Sintassi|  
+|<span data-ttu-id="b8141-249">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-249">Syntax</span></span>|  
 |------------|  
-|`T` `controlPoint` `endPoint`<br /><br /> -oppure-<br /><br /> `t` `controlPoint` `endPoint`|  
+|<span data-ttu-id="b8141-250">`T` `controlPoint` `endPoint`</span><span class="sxs-lookup"><span data-stu-id="b8141-250">`T` `controlPoint` `endPoint`</span></span><br /><br /> <span data-ttu-id="b8141-251">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b8141-251">- or -</span></span><br /><br /> <span data-ttu-id="b8141-252">`t` `controlPoint` `endPoint`</span><span class="sxs-lookup"><span data-stu-id="b8141-252">`t` `controlPoint` `endPoint`</span></span>|  
   
-|Termine|Descrizione|  
+|<span data-ttu-id="b8141-253">Termine</span><span class="sxs-lookup"><span data-stu-id="b8141-253">Term</span></span>|<span data-ttu-id="b8141-254">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8141-254">Description</span></span>|  
 |----------|-----------------|  
-|`controlPoint`|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Il punto di controllo della curva, che determina l'inizio e di tangente della curva.|  
-|`endPoint`|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Punto verso il quale viene disegnata la curva.|  
+|`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-255">Punto di controllo della curva, che determina l'inizio e la tangente della curva.</span><span class="sxs-lookup"><span data-stu-id="b8141-255">The control point of the curve, which determines the starting and tangent of the curve.</span></span>|  
+|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-256">Punto verso il quale viene disegnata la curva.</span><span class="sxs-lookup"><span data-stu-id="b8141-256">The point to which the curve is drawn.</span></span>|  
   
-### <a name="elliptical-arc-command"></a>Comando arco ellittico  
- Crea un arco ellittico tra il punto corrente e il punto finale specificato.  
+### <a name="elliptical-arc-command"></a><span data-ttu-id="b8141-257">Comando Elliptical Arc</span><span class="sxs-lookup"><span data-stu-id="b8141-257">Elliptical Arc Command</span></span>  
+ <span data-ttu-id="b8141-258">Crea un arco ellittico tra il punto corrente e il punto finale specificato.</span><span class="sxs-lookup"><span data-stu-id="b8141-258">Creates an elliptical arc between the current point and the specified end point.</span></span>  
   
-|Sintassi|  
+|<span data-ttu-id="b8141-259">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-259">Syntax</span></span>|  
 |------------|  
-|`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> -oppure-<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
+|<span data-ttu-id="b8141-260">`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`</span><span class="sxs-lookup"><span data-stu-id="b8141-260">`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`</span></span><br /><br /> <span data-ttu-id="b8141-261">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b8141-261">- or -</span></span><br /><br /> <span data-ttu-id="b8141-262">`a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`</span><span class="sxs-lookup"><span data-stu-id="b8141-262">`a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`</span></span>|  
   
-|Termine|Descrizione|  
+|<span data-ttu-id="b8141-263">Termine</span><span class="sxs-lookup"><span data-stu-id="b8141-263">Term</span></span>|<span data-ttu-id="b8141-264">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8141-264">Description</span></span>|  
 |----------|-----------------|  
-|`size`|<xref:System.Windows.Size?displayProperty=fullName><br /><br /> Raggio x e raggio y dell'arco.|  
-|`rotationAngle`|<xref:System.Double?displayProperty=fullName><br /><br /> La rotazione dell'ellisse, in gradi.|  
-|`isLargeArcFlag`|Impostare su 1 se l'angolo dell'arco deve essere di 180 gradi o superiore; in caso contrario, impostare su 0.|  
-|`sweepDirectionFlag`|Impostare su 1 se l'arco viene disegnato in una direzione angolo positivo; in caso contrario, impostare su 0.|  
-|`endPoint`|<xref:System.Windows.Point?displayProperty=fullName><br /><br /> Punto verso cui viene disegnata l'arco.|  
+|`size`|<xref:System.Windows.Size?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-265">Raggio x e raggio y dell'arco.</span><span class="sxs-lookup"><span data-stu-id="b8141-265">The x- and y-radius of the arc.</span></span>|  
+|`rotationAngle`|<xref:System.Double?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-266">Rotazione dell'ellisse in gradi.</span><span class="sxs-lookup"><span data-stu-id="b8141-266">The rotation of the ellipse, in degrees.</span></span>|  
+|`isLargeArcFlag`|<span data-ttu-id="b8141-267">Impostato su 1 se la misura dell'angolo dell'arco deve essere di 180 gradi o superiore. In caso contrario, impostato su 0.</span><span class="sxs-lookup"><span data-stu-id="b8141-267">Set to 1 if the angle of the arc should be 180 degrees or greater; otherwise, set to 0.</span></span>|  
+|`sweepDirectionFlag`|<span data-ttu-id="b8141-268">Impostato su 1 se l'arco viene tracciato nella direzione di un angolo positivo. In caso contrario, impostato su 0.</span><span class="sxs-lookup"><span data-stu-id="b8141-268">Set to 1 if the arc is drawn in a positive-angle direction; otherwise, set to 0.</span></span>|  
+|`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-269">Punto verso cui viene disegnata l'arco.</span><span class="sxs-lookup"><span data-stu-id="b8141-269">The point to which the arc is drawn.</span></span>|  
   
 <a name="closecommand"></a>   
-## <a name="the-close-command"></a>Il comando Close  
- Termina la figura corrente e viene creata una riga che connette il punto corrente e il punto iniziale della figura. Questo comando crea un join riga (angolo) tra l'ultimo segmento e il primo segmento della figura.  
+## <a name="the-close-command"></a><span data-ttu-id="b8141-270">Comando Close</span><span class="sxs-lookup"><span data-stu-id="b8141-270">The Close Command</span></span>  
+ <span data-ttu-id="b8141-271">Termina la figura corrente e crea una linea che collega il punto corrente e il punto iniziale della figura.</span><span class="sxs-lookup"><span data-stu-id="b8141-271">Ends the current figure and creates a line that connects the current point to the starting point of the figure.</span></span> <span data-ttu-id="b8141-272">Questo comando crea una giunzione di linee (angolo) tra l'ultimo segmento e il primo segmento della figura.</span><span class="sxs-lookup"><span data-stu-id="b8141-272">This command creates a line-join (corner) between the last segment and the first segment of the figure.</span></span>  
   
-|Sintassi|  
+|<span data-ttu-id="b8141-273">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-273">Syntax</span></span>|  
 |------------|  
-|`Z`<br /><br /> -oppure-<br /><br /> `z`|  
-  
+|`Z`<br /><br /> <span data-ttu-id="b8141-274">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b8141-274">- or -</span></span><br /><br /> `z`|  
+
 <a name="pointsyntax"></a>   
-## <a name="point-syntax"></a>Sintassi del punto  
- Descrive le coordinate x e y di un punto.  
+## <a name="point-syntax"></a><span data-ttu-id="b8141-275">Sintassi del punto</span><span class="sxs-lookup"><span data-stu-id="b8141-275">Point Syntax</span></span>  
+ <span data-ttu-id="b8141-276">Descrive le coordinate x e y di un punto in cui (0,0) è l'angolo superiore sinistro.</span><span class="sxs-lookup"><span data-stu-id="b8141-276">Describes the x- and y-coordinates of a point where (0,0) is the top left corner.</span></span>
   
-|Sintassi|  
+|<span data-ttu-id="b8141-277">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b8141-277">Syntax</span></span>|  
 |------------|  
-|`x` `,` `y`<br /><br /> -oppure-<br /><br /> `x` `y`|  
+|<span data-ttu-id="b8141-278">`x` `,` `y`</span><span class="sxs-lookup"><span data-stu-id="b8141-278">`x` `,` `y`</span></span><br /><br /> <span data-ttu-id="b8141-279">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b8141-279">- or -</span></span><br /><br /> <span data-ttu-id="b8141-280">`x` `y`</span><span class="sxs-lookup"><span data-stu-id="b8141-280">`x` `y`</span></span>|  
   
-|Termine|Descrizione|  
+|<span data-ttu-id="b8141-281">Termine</span><span class="sxs-lookup"><span data-stu-id="b8141-281">Term</span></span>|<span data-ttu-id="b8141-282">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b8141-282">Description</span></span>|  
 |----------|-----------------|  
-|`x`|<xref:System.Double?displayProperty=fullName><br /><br /> Coordinata x del punto.|  
-|`y`|<xref:System.Double?displayProperty=fullName><br /><br /> Coordinata y del punto.|  
+|`x`|<xref:System.Double?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-283">Coordinata x del punto.</span><span class="sxs-lookup"><span data-stu-id="b8141-283">The x-coordinate of the point.</span></span>|  
+|`y`|<xref:System.Double?displayProperty=nameWithType><br /><br /> <span data-ttu-id="b8141-284">Coordinata y del punto.</span><span class="sxs-lookup"><span data-stu-id="b8141-284">The y-coordinate of the point.</span></span>|  
   
 <a name="specialvalues"></a>   
-## <a name="special-values"></a>Valori speciali  
- Anziché un valore numerico standard, è inoltre possibile utilizzare i seguenti valori speciali. Questi valori tra maiuscole e minuscole.  
+## <a name="special-values"></a><span data-ttu-id="b8141-285">Valori speciali</span><span class="sxs-lookup"><span data-stu-id="b8141-285">Special Values</span></span>  
+ <span data-ttu-id="b8141-286">Anziché un valore numerico standard, è anche possibile usare i valori speciali seguenti.</span><span class="sxs-lookup"><span data-stu-id="b8141-286">Instead of a standard numerical value, you can also use the following special values.</span></span> <span data-ttu-id="b8141-287">Per questi valori viene effettuata la distinzione tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="b8141-287">These values are case-sensitive.</span></span>  
   
- Infinito  
- Rappresenta <xref:System.Double.PositiveInfinity?displayProperty=fullName>.  
+ <span data-ttu-id="b8141-288">Infinito</span><span class="sxs-lookup"><span data-stu-id="b8141-288">Infinity</span></span>  
+ <span data-ttu-id="b8141-289">Rappresenta <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b8141-289">Represents <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>.</span></span>  
   
- -Infinito  
- Rappresenta <xref:System.Double.NegativeInfinity?displayProperty=fullName>.  
+ <span data-ttu-id="b8141-290">-Infinito</span><span class="sxs-lookup"><span data-stu-id="b8141-290">-Infinity</span></span>  
+ <span data-ttu-id="b8141-291">Rappresenta <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b8141-291">Represents <xref:System.Double.NegativeInfinity?displayProperty=nameWithType>.</span></span>  
   
- NaN  
- Rappresenta <xref:System.Double.NaN?displayProperty=fullName>.  
+ <span data-ttu-id="b8141-292">NaN</span><span class="sxs-lookup"><span data-stu-id="b8141-292">NaN</span></span>  
+ <span data-ttu-id="b8141-293">Rappresenta <xref:System.Double.NaN?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b8141-293">Represents <xref:System.Double.NaN?displayProperty=nameWithType>.</span></span>  
   
- È inoltre possibile utilizzare la notazione scientifica. Ad esempio, `+1.e17` è un valore valido.  
+ <span data-ttu-id="b8141-294">È anche possibile usare una notazione scientifica.</span><span class="sxs-lookup"><span data-stu-id="b8141-294">You may also use scientific notation.</span></span> <span data-ttu-id="b8141-295">Ad esempio, `+1.e17` è un valore valido.</span><span class="sxs-lookup"><span data-stu-id="b8141-295">For example, `+1.e17` is a valid value.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Windows.Shapes.Path>   
- <xref:System.Windows.Media.StreamGeometry>   
- <xref:System.Windows.Media.PathGeometry>   
- <xref:System.Windows.Media.PathFigureCollection>   
- [Disegno di base di WPF Overview e forme](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)   
- [Panoramica di geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [Procedure](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="b8141-296">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b8141-296">See Also</span></span>  
+ <xref:System.Windows.Shapes.Path>  
+ <xref:System.Windows.Media.StreamGeometry>  
+ <xref:System.Windows.Media.PathGeometry>  
+ <xref:System.Windows.Media.PathFigureCollection>  
+ [<span data-ttu-id="b8141-297">Cenni preliminari sugli oggetti Shape e sulle funzionalità di disegno di base di WPF</span><span class="sxs-lookup"><span data-stu-id="b8141-297">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [<span data-ttu-id="b8141-298">Cenni preliminari sulle classi Geometry</span><span class="sxs-lookup"><span data-stu-id="b8141-298">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="b8141-299">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="b8141-299">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

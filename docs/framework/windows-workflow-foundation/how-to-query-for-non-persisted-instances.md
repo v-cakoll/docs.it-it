@@ -1,69 +1,67 @@
 ---
-title: "Procedura: Eseguire query per istanze non persistenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: Eseguire query per istanze non persistenti'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7c83e9364fa599d4356b69fe93ae3eaaa618c2f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: Eseguire query per istanze non persistenti
-Quando viene creata una nuova istanza di un servizio e per tale servizio è definito il comportamento dell'archivio di istanze del flusso di lavoro SQL, l'host del servizio crea una voce iniziale per tale istanza del servizio nell'archivio di istanze.Successivamente, quando l'istanza del servizio viene salvata in modo permanente per la prima volta, il comportamento dell'archivio di istanze del flusso di lavoro SQL archivia lo stato dell'istanza corrente insieme ai dati aggiuntivi richiesti per le operazioni di attivazione, recupero e controllo.  
+# <a name="how-to-query-for-non-persisted-instances"></a><span data-ttu-id="70035-102">Procedura: Eseguire query per istanze non persistenti</span><span class="sxs-lookup"><span data-stu-id="70035-102">How to: Query for Non-persisted Instances</span></span>
+<span data-ttu-id="70035-103">Quando viene creata una nuova istanza di un servizio e per tale servizio è definito il comportamento dell'archivio di istanze del flusso di lavoro SQL, l'host del servizio crea una voce iniziale per tale istanza del servizio nell'archivio di istanze.</span><span class="sxs-lookup"><span data-stu-id="70035-103">When a new instance of a service is created and the service has the SQL Workflow Instance Store behavior defined, the service host creates a initial entry for that service instance in the instance store.</span></span> <span data-ttu-id="70035-104">Successivamente, quando l'istanza del servizio viene salvata in modo permanente per la prima volta, il comportamento dell'archivio di istanze del flusso di lavoro SQL archivia lo stato dell'istanza corrente insieme ai dati aggiuntivi richiesti per le operazioni di attivazione, recupero e controllo.</span><span class="sxs-lookup"><span data-stu-id="70035-104">Subsequently when the service instance persists for the first time, the SQL Workflow Instance Store behavior stores the current instance state together with additional data that is required for activation, recovery, and control.</span></span>  
   
- Se un'istanza non viene salvata in modo permanente dopo la creazione della voce iniziale per tale istanza, si dice che l'istanza del servizio è nello stato non persistente.In tutte le istanze persistenti del servizio è possibile eseguire query e controlli,che non possono invece essere eseguiti in tutte le istanze non persistenti.Se un'istanza non persistente è sospesa a causa di un'eccezione non gestita, su di essa è possibile eseguire query, ma non controlli.  
+ <span data-ttu-id="70035-105">Se un'istanza non viene salvata in modo permanente dopo la creazione della voce iniziale per tale istanza, si dice che l'istanza del servizio è nello stato non persistente.</span><span class="sxs-lookup"><span data-stu-id="70035-105">If an instance is not persisted after the initial entry for the instance is created, the service instance is said to be in the non-persisted state.</span></span> <span data-ttu-id="70035-106">In tutte le istanze persistenti del servizio è possibile eseguire query e controlli,</span><span class="sxs-lookup"><span data-stu-id="70035-106">All the persisted service instances can be queried and controlled.</span></span> <span data-ttu-id="70035-107">che non possono invece essere eseguiti in tutte le istanze non persistenti.</span><span class="sxs-lookup"><span data-stu-id="70035-107">Non-persisted service instances can neither be queried nor controlled.</span></span> <span data-ttu-id="70035-108">Se un'istanza non persistente è sospesa a causa di un'eccezione non gestita, su di essa è possibile eseguire query, ma non controlli.</span><span class="sxs-lookup"><span data-stu-id="70035-108">If a non-persisted instance is suspended due to an unhandled exception it can be queried but not controlled.</span></span>  
   
- Le istanze del servizio durevoli che non sono ancora salvate in modo permanente rimangono in uno stato non persistente negli scenari seguenti:  
+ <span data-ttu-id="70035-109">Le istanze del servizio durevoli che non sono ancora salvate in modo permanente rimangono in uno stato non persistente negli scenari seguenti:</span><span class="sxs-lookup"><span data-stu-id="70035-109">Durable service instances that are not yet persisted remain in a non-persisted state in the following scenarios:</span></span>  
   
--   L'host del servizio si arresta in modo anomalo prima che l'istanza venga salvata in modo permanente per la prima volta.La voce iniziale per l'istanza rimane nell'archivio di istanze.L'istanza non è recuperabile.In caso di arrivo di un messaggio correlato, l'istanza diventa nuovamente attiva.  
+-   <span data-ttu-id="70035-110">L'host del servizio si arresta in modo anomalo prima che l'istanza venga salvata in modo permanente per la prima volta.</span><span class="sxs-lookup"><span data-stu-id="70035-110">The service host crashes before the instance persisted for the first time.</span></span> <span data-ttu-id="70035-111">La voce iniziale per l'istanza rimane nell'archivio di istanze.</span><span class="sxs-lookup"><span data-stu-id="70035-111">The initial entry for the instance remains in the instance store.</span></span> <span data-ttu-id="70035-112">L'istanza non è recuperabile.</span><span class="sxs-lookup"><span data-stu-id="70035-112">The instance is not recoverable.</span></span> <span data-ttu-id="70035-113">In caso di arrivo di un messaggio correlato, l'istanza diventa nuovamente attiva.</span><span class="sxs-lookup"><span data-stu-id="70035-113">If a correlated message arrives, the instance becomes active again.</span></span>  
   
--   Si verifica un'eccezione non gestita dell'istanza prima che questa venga salvata in modo permanente per la prima volta.Si presentano gli scenari seguenti  
+-   <span data-ttu-id="70035-114">Si verifica un'eccezione non gestita dell'istanza prima che questa venga salvata in modo permanente per la prima volta.</span><span class="sxs-lookup"><span data-stu-id="70035-114">The instance experiences an unhandled exception before it persisted for the first time.</span></span> <span data-ttu-id="70035-115">Si presentano gli scenari seguenti</span><span class="sxs-lookup"><span data-stu-id="70035-115">The following scenarios arise</span></span>  
   
-    -   Se il valore della proprietà **UnhandledExceptionAction** viene impostato su **Abandon**, le informazioni sulla distribuzione del servizio vengono scritte nell'archivio di istanze e l'istanza viene scaricata dalla memoria.L'istanza rimane nello stato non persistente nel database di persistenza.  
+    -   <span data-ttu-id="70035-116">Se il valore di **UnhandledExceptionAction** è impostata su **abbandonare**, le informazioni sulla distribuzione di servizio vengono scritte nell'archivio di istanze e l'istanza viene scaricata dalla memoria.</span><span class="sxs-lookup"><span data-stu-id="70035-116">If the value of the **UnhandledExceptionAction** property is set to **Abandon**, the service deployment information is written to the instance store and the instance is unloaded from memory.</span></span> <span data-ttu-id="70035-117">L'istanza rimane nello stato non persistente nel database di persistenza.</span><span class="sxs-lookup"><span data-stu-id="70035-117">The instance remains in non-persisted state in the persistence database.</span></span>  
   
-    -   Se il valore della proprietà **UnhandledExceptionAction** è impostato su **AbandonAndSuspsend**, le informazioni sulla distribuzione del servizio vengono scritte nel database di persistenza e lo stato dell'istanza viene impostato su **Suspended**.L'istanza non può essere ripresa, annullata o terminata.L'host del servizio non può caricare l'istanza perché non è ancora stata salvata in modo permanente e, pertanto, la voce del database per l'istanza non è completa.  
+    -   <span data-ttu-id="70035-118">Se il valore di **UnhandledExceptionAction** è impostata su **AbandonAndSuspsend**, le informazioni sulla distribuzione di servizio vengono scritte nel database di persistenza e lo stato dell'istanza è impostato su  **Sospeso**.</span><span class="sxs-lookup"><span data-stu-id="70035-118">If the value of the **UnhandledExceptionAction** property is set to **AbandonAndSuspsend**, the service deployment information is written to the persistence database and the instance state is set to **Suspended**.</span></span> <span data-ttu-id="70035-119">L'istanza non può essere ripresa, annullata o terminata.</span><span class="sxs-lookup"><span data-stu-id="70035-119">The instance cannot be resumed, canceled, or terminated.</span></span> <span data-ttu-id="70035-120">L'host del servizio non può caricare l'istanza perché non è ancora stata salvata in modo permanente e, pertanto, la voce del database per l'istanza non è completa.</span><span class="sxs-lookup"><span data-stu-id="70035-120">The service host cannot load the instance because the instance hasn't persisted yet and, hence the database entry for the instance is not complete.</span></span>  
   
-    -   Se il valore della proprietà **UnhandledExceptionAction** è impostato su **Cancel** o **Terminate**, le informazioni sulla distribuzione del servizio vengono scritte nell'archivio di istanze e lo stato dell'istanza viene impostato su **Completed**.  
+    -   <span data-ttu-id="70035-121">Se il valore della **UnhandledExceptionAction** è impostata su **Annulla** o **Terminate**, le informazioni di distribuzione del servizio vengono scritte nell'archivio di istanze e stato dell'istanza è impostato su **completato**.</span><span class="sxs-lookup"><span data-stu-id="70035-121">If the value of the **UnhandledExceptionAction** property is set to **Cancel** or **Terminate**, the service deployment information is written to the instance store and the instance state is set to **Completed**.</span></span>  
   
- Nelle sezioni seguenti vengono fornite query di esempio per trovare istanze non persistenti nel database di persistenza SQL ed eliminare tali istanze dal database.  
+ <span data-ttu-id="70035-122">Nelle sezioni seguenti vengono fornite query di esempio per trovare istanze non persistenti nel database di persistenza SQL ed eliminare tali istanze dal database.</span><span class="sxs-lookup"><span data-stu-id="70035-122">The following sections provide sample queries to find non-persisted instances in the SQL persistence database and to delete these instances from the database.</span></span>  
   
-## Per trovare tutte le istanze non ancora salvate in modo permanente  
- La query SQL seguente restituisce l'ID e l'ora di creazione per tutte le istanze che non sono ancora state salvate in modo permanente nel database di persistenza.  
+## <a name="to-find-all-instances-not-persisted-yet"></a><span data-ttu-id="70035-123">Per trovare tutte le istanze non ancora salvate in modo permanente</span><span class="sxs-lookup"><span data-stu-id="70035-123">To find all instances not persisted yet</span></span>  
+ <span data-ttu-id="70035-124">La query SQL seguente restituisce l'ID e l'ora di creazione per tutte le istanze che non sono ancora state salvate in modo permanente nel database di persistenza.</span><span class="sxs-lookup"><span data-stu-id="70035-124">The following SQL query returns the ID and creation time for all instances that are not persisted in to the persistence database yet.</span></span>  
   
 ```  
-  
 select InstanceId, CreationTime from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0;  
-  
 ```  
   
-## Per trovare tutte le istanze non ancora salvate in modo permanente e non caricate  
- La query SQL seguente restituisce l'ID e l'ora di creazione per tutte le istanze che non sono state salvate in modo permanente e che non sono state caricate.  
+## <a name="to-find-all-instances-not-persisted-yet-and-also-not-loaded"></a><span data-ttu-id="70035-125">Per trovare tutte le istanze non ancora salvate in modo permanente e non caricate</span><span class="sxs-lookup"><span data-stu-id="70035-125">To find all instances not persisted yet and also not loaded</span></span>  
+ <span data-ttu-id="70035-126">La query SQL seguente restituisce l'ID e l'ora di creazione per tutte le istanze che non sono state salvate in modo permanente e che non sono state caricate.</span><span class="sxs-lookup"><span data-stu-id="70035-126">The following SQL query returns ID and creation time for all instances that are not persisted and also are not loaded.</span></span>  
   
 ```  
-  
 select InstanceId, CreationTime from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0 and CurrentMachine is NULL;  
-  
 ```  
   
-## Per trovare tutte le istanze sospese non ancora salvate in modo permanente  
- La query SQL seguente restituisce ID, ora di creazione, motivo della sospensione e nome di eccezione della sospensione per tutte le istanze non salvate in modo permanente e in stato sospeso.  
+## <a name="to-find-all-suspended-instances-not-persisted-yet"></a><span data-ttu-id="70035-127">Per trovare tutte le istanze sospese non ancora salvate in modo permanente</span><span class="sxs-lookup"><span data-stu-id="70035-127">To find all suspended instances not persisted yet</span></span>  
+ <span data-ttu-id="70035-128">La query SQL seguente restituisce ID, ora di creazione, motivo della sospensione e nome di eccezione della sospensione per tutte le istanze non salvate in modo permanente e in stato sospeso.</span><span class="sxs-lookup"><span data-stu-id="70035-128">The following SQL query returns ID, creation time, suspension reason, and suspension exception name for all instances that are not persisted and also in a suspended state.</span></span>  
   
 ```  
-  
 select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName from [System.Activities.DurableInstancing].[Instances] where IsInitialized = 0 and IsSuspended = 1;  
-  
 ```  
   
-## Per eliminare istanze non persistenti dal database di persistenza  
- È necessario cercare periodicamente le istanze non persistenti nell'archivio di istanze e rimuoverle se si ha la certezza che non riceveranno messaggi correlati.Ad esempio, se l'istanza è presente nel database da diversi mesi e si è a conoscenza che il flusso di lavoro ha in genere una durata di alcuni giorni, è possibile presupporre con sicurezza che si tratta di un'istanza non inizializzata che si era arrestata in modo anomalo.  
+## <a name="to-delete-non-persisted-instances-from-the-persistence-database"></a><span data-ttu-id="70035-129">Per eliminare istanze non persistenti dal database di persistenza</span><span class="sxs-lookup"><span data-stu-id="70035-129">To delete non-persisted instances from the persistence database</span></span>  
+ <span data-ttu-id="70035-130">È necessario cercare periodicamente le istanze non persistenti nell'archivio di istanze e rimuoverle se si ha la certezza che non riceveranno messaggi correlati.</span><span class="sxs-lookup"><span data-stu-id="70035-130">You should periodically check the instance store for non-persisted instances and remove instances from the instance store if you are sure that the instance will not receive a correlated message.</span></span> <span data-ttu-id="70035-131">Ad esempio, se l'istanza è presente nel database da diversi mesi e si è a conoscenza che il flusso di lavoro ha in genere una durata di alcuni giorni, è possibile presupporre con sicurezza che si tratta di un'istanza non inizializzata che si era arrestata in modo anomalo.</span><span class="sxs-lookup"><span data-stu-id="70035-131">For example, if the instance has been in the database for several months and you know that the workflow typically has a lifetime of a few days, it would be safe to assume that this is an uninitialized instance that had crashed.</span></span>  
   
- In generale, è possibile eliminare istanze non persistenti che non sono sospese né caricate.Non è necessario eliminare **tutte** le istanze non persistenti perché alcune istanze presenti in questo set di istanze sono appena state create ma non ancora salvate in modo permanente.È necessario eliminare solo istanze non persistenti rimaste nell'archivio perché l'host del servizio flusso di lavoro che ha attivato il caricamento dell'istanza ha causato un'eccezione o l'istanza stessa ha causato un'eccezione.  
+ <span data-ttu-id="70035-132">In generale, è possibile eliminare istanze non persistenti che non sono sospese né caricate.</span><span class="sxs-lookup"><span data-stu-id="70035-132">In general, it is safe to delete non-persisted instances that are not suspended or not loaded.</span></span> <span data-ttu-id="70035-133">Non è necessario eliminare **tutti** istanze non persistenti perché alcune istanze questo set di istanze sono appena state create ma non sono ancora persistenti.</span><span class="sxs-lookup"><span data-stu-id="70035-133">You should not delete **all** the non-persisted instances because this instance set includes instances that are just created but are not persisted yet.</span></span> <span data-ttu-id="70035-134">È necessario eliminare solo istanze non persistenti rimaste nell'archivio perché l'host del servizio flusso di lavoro che ha attivato il caricamento dell'istanza ha causato un'eccezione o l'istanza stessa ha causato un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="70035-134">You should only delete non-persisted instances that are left over because the workflow service host that had the instance loaded caused an exception or the instance itself caused an exception.</span></span>  
   
 > [!WARNING]
->  L'eliminazione di istanze non persistenti dall'archivio di istanze riduce le dimensioni dell'archivio e può migliorare le prestazioni delle operazioni di archiviazione.
+>  <span data-ttu-id="70035-135">L'eliminazione di istanze non persistenti dall'archivio di istanze riduce le dimensioni dell'archivio e può migliorare le prestazioni delle operazioni di archiviazione.</span><span class="sxs-lookup"><span data-stu-id="70035-135">Deleting non-persisted instances from the instance store decreases the size of the store and may improve the performance of store operations.</span></span>
