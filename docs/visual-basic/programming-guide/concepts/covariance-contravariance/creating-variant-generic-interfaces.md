@@ -1,46 +1,38 @@
 ---
-title: Creazione di interfacce generiche Variant (Visual Basic) | Documenti di Microsoft
+title: Creazione di interfacce generiche Variant (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 324e2a906e84950aa9019bbf68a524458492646e
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 380af3b29172b1fa13d42d33e574201607cb804b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Creazione di interfacce generiche Variant (Visual Basic)
-È possibile dichiarare parametri di tipo generico nelle interfacce come covariante o controvariante. *La covarianza* consente ai metodi di interfaccia di tipi restituiti sono più derivati da quello definito dai parametri di tipo generico. *La controvarianza* consente metodi di interfaccia di disporre di tipi di argomenti che sono meno derivati rispetto a quello specificato dai parametri generici. Un'interfaccia generica che è covariante o controvariante parametri di tipo generico viene chiamato *variante*.  
+È possibile dichiarare parametri di tipo generico nelle interfacce come covarianti o controvarianti. La *covarianza* consente ai metodi di interfaccia di avere tipi restituiti più derivati rispetto a quelli definiti dai parametri di tipo generico. La *controvarianza* consente ai metodi di interfaccia di avere tipi di argomenti meno derivati rispetto a quelli specificati dai parametri generici. Un'interfaccia generica che ha parametri di tipo generico varianti e covarianti è definita *variante*.  
   
 > [!NOTE]
->  .NET framework 4 è stato introdotto il supporto della varianza per diverse interfacce generiche esistenti. Per l'elenco delle interfacce variante in .NET Framework, vedere [varianza nelle interfacce generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+>  In .NET framework 4 è stato introdotto il supporto della varianza per diverse interfacce generiche esistenti. Per l'elenco delle interfacce variant in .NET Framework, vedere [varianza nelle interfacce generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
-## <a name="declaring-variant-generic-interfaces"></a>Dichiarazione di interfacce generiche Variant  
- È possibile dichiarare interfacce generiche variant utilizzando il `in` e `out` le parole chiave per i parametri di tipo generico.  
+## <a name="declaring-variant-generic-interfaces"></a>Dichiarazione delle interfacce generiche varianti  
+ È possibile dichiarare le interfacce generiche varianti usando le parole chiave `in` e `out` per i parametri di tipo generico.  
   
 > [!IMPORTANT]
->  `ByRef`in Visual Basic non possono essere variant. Tipi di valore non supportano inoltre la varianza.  
+>  `ByRef`in Visual Basic non possono essere variant. Anche i tipi di valore non supportano la varianza.  
   
- È possibile dichiarare un parametro di tipo generico covariante mediante il `out` (parola chiave). Il tipo covariante deve soddisfare le condizioni seguenti:  
+ È possibile dichiarare un parametro di tipo generico covariante usando la parola chiave `out`. Il tipo covariante deve soddisfare le condizioni seguenti:  
   
--   Il tipo viene utilizzato solo come tipo restituito dei metodi di interfaccia e non come tipo di argomenti del metodo. Come illustrato nell'esempio seguente, in cui il tipo `R` viene dichiarato covariante.  
+-   Il tipo viene usato solo come tipo restituito dei metodi di interfaccia e non come tipo di argomenti del metodo. Come illustrato nell'esempio seguente, il tipo `R` viene dichiarato covariante.  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -50,7 +42,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
-     Esiste un'eccezione a questa regola. Se si dispone di un delegato generico controvariante come parametro di metodo, è possibile utilizzare il tipo come parametro di tipo generico per il delegato. Questo comportamento è illustrato il tipo `R` nell'esempio seguente. Per ulteriori informazioni, vedere [varianza nei delegati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) e [utilizzando la varianza per i delegati generici azione (Visual Basic) e Func](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+     Esiste un'eccezione a questa regola. Se si usa un delegato generico controvariante come parametro di metodo, è possibile usare il tipo come parametro di tipo generico per il delegato. Questo aspetto è illustrato nell'esempio seguente dal tipo `R`. Per ulteriori informazioni, vedere [varianza nei delegati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) e [varianza utilizzando Func e azione delegati generici (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -58,7 +50,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
--   Il tipo non viene utilizzato come vincolo generico per i metodi di interfaccia. Come illustrato nel codice seguente.  
+-   Il tipo non viene usato come vincolo generico per i metodi di interfaccia. Questa situazione è illustrata nel codice seguente.  
   
     ```vb  
     Interface ICovariant(Of Out R)  
@@ -69,7 +61,7 @@ ms.lasthandoff: 03/13/2017
     End Interface  
     ```  
   
- È possibile dichiarare una controvariante del parametro di tipo generico utilizzando il `in` (parola chiave). Il tipo controvariante può essere utilizzato solo come un tipo di argomenti del metodo e non come un tipo restituito dei metodi di interfaccia. Il tipo di controvariante può essere utilizzato anche per i vincoli generici. Il codice seguente viene illustrato come dichiarare un'interfaccia controvariante e utilizzare un vincolo generico per uno dei relativi metodi.  
+ È possibile dichiarare un parametro di tipo generico controvariante usando la parola chiave `in`. Il tipo controvariante può essere usato solo come tipo di argomenti del metodo e non come tipo restituito dei metodi di interfaccia. Il tipo controvariante può essere usato anche per i vincoli generici. Il codice seguente illustra come dichiarare un'interfaccia controvariante e usare un vincolo generico per uno dei relativi metodi.  
   
 ```vb  
 Interface IContravariant(Of In A)  
@@ -80,7 +72,7 @@ Interface IContravariant(Of In A)
 End Interface  
 ```  
   
- È anche possibile supportare sia la covarianza e controvarianza nella stessa interfaccia, ma per i parametri di tipo diverso, come illustrato nell'esempio di codice seguente.  
+ È anche possibile supportare sia la covarianza che la controvarianza nella stessa interfaccia, ma per parametri di tipo diverso, come illustrato nell'esempio di codice seguente.  
   
 ```vb  
 Interface IVariant(Of Out R, In A)  
@@ -90,7 +82,7 @@ Interface IVariant(Of Out R, In A)
 End Interface  
 ```  
   
- In Visual Basic, è possibile dichiarare gli eventi nelle interfacce variante senza specificare il tipo delegato. Inoltre, un'interfaccia variante non può disporre di strutture, enumerazioni o classi annidate, ma è possibile disporre di interfacce annidate. Come illustrato nel codice seguente.  
+ In Visual Basic, è possibile dichiarare gli eventi nelle interfacce variant senza specificare il tipo delegato. Inoltre, un'interfaccia variant non può avere, enumerazioni, strutture o classi annidate, ma è possibile disporre di interfacce annidate. Questa situazione è illustrata nel codice seguente.  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -113,8 +105,8 @@ Interface ICovariant(Of Out R)
 End Interface  
 ```  
   
-## <a name="implementing-variant-generic-interfaces"></a>Implementazione di interfacce generiche Variant  
- Implementare le interfacce generiche variant nelle classi utilizzando la stessa sintassi utilizzata per le interfacce invarianti. Esempio di codice seguente viene illustrato come implementare un'interfaccia covariante in una classe generica.  
+## <a name="implementing-variant-generic-interfaces"></a>Implementazione di interfacce generiche varianti  
+ Implementare le interfacce generiche varianti nelle classi usando la stessa sintassi usata per le interfacce invariabili. L'esempio di codice seguente illustra come implementare un'interfaccia covariante in una classe generica.  
   
 ```vb  
 Interface ICovariant(Of Out R)  
@@ -130,7 +122,7 @@ Class SampleImplementation(Of R)
 End Class  
 ```  
   
- Le classi che implementano interfacce variant sono invariabili. Si consideri il codice di esempio seguente.  
+ Le classi che implementano le interfacce varianti sono invariabili. Si consideri il codice di esempio seguente.  
   
 ```vb  
  The interface is covariant.  
@@ -146,8 +138,8 @@ Dim button As SampleImplementation(Of Button) =
 ' Dim obj As SampleImplementation(Of Object) = button  
 ```  
   
-## <a name="extending-variant-generic-interfaces"></a>Estensione di interfacce generiche Variant  
- Quando si estende un'interfaccia generica variant, è necessario utilizzare il `in` e `out` le parole chiave per specificare in modo esplicito se l'interfaccia derivata supporta la varianza. Il compilatore non deduce la varianza dall'interfaccia che viene esteso. Si consideri ad esempio le interfacce seguenti.  
+## <a name="extending-variant-generic-interfaces"></a>Estensione di interfacce generiche varianti  
+ Quando si estende un'interfaccia generica variante è necessario usare le parole chiave `in` e `out` per specificare in modo esplicito se l'interfaccia derivata supporta la varianza. Il compilatore non deduce la varianza dall'interfaccia che viene estesa. Si considerino ad esempio le interfacce seguenti.  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -162,9 +154,9 @@ Interface IExtCovariant(Of Out T)
 End Interface  
 ```  
   
- Nel `Invariant(Of T)` interfaccia, il parametro di tipo generico `T` è invariante, mentre in `IExtCovariant (Of Out T)`il parametro di tipo è covariante, anche se entrambe le interfacce estendono la stessa interfaccia. La stessa regola viene applicata ai parametri di tipo generico controvariante.  
+ Nel `Invariant(Of T)` interfaccia, il parametro di tipo generico `T` è invariante, mentre in `IExtCovariant (Of Out T)`il parametro di tipo è covariante, anche se entrambe le interfacce estendono la stessa interfaccia. La stessa regola viene applicata ai parametri di tipo generico controvarianti.  
   
- È possibile creare un'interfaccia che estende l'interfaccia del parametro di tipo generico in cui `T` è covariante e l'interfaccia in cui è controvariante in estende il parametro di tipo generico dell'interfaccia `T` è invariante. Come illustrato nell'esempio di codice seguente.  
+ È possibile creare un'interfaccia che estende sia l'interfaccia in cui il parametro di tipo generico `T` è covariante, sia l'interfaccia in cui è controvariante se nell'interfaccia che viene estesa il parametro di tipo generico `T` è invariabile, come illustra l'esempio di codice riportato di seguito.  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -178,7 +170,7 @@ Interface IInvariant(Of T)
 End Interface  
 ```  
   
- Tuttavia, se un parametro di tipo generico `T` è dichiarato covariante in un'unica interfaccia, non è possibile dichiararlo controvariante nell'interfaccia di estensione, o viceversa. Come illustrato nell'esempio di codice seguente.  
+ Tuttavia, se un parametro di tipo generico `T` è dichiarato covariante in una sola interfaccia, non è possibile dichiararlo controvariante nell'interfaccia da estendere o viceversa, come illustra l'esempio di codice riportato di seguito.  
   
 ```vb  
 Interface ICovariant(Of Out T)  
@@ -190,10 +182,10 @@ End Interface
 ' End Interface  
 ```  
   
-### <a name="avoiding-ambiguity"></a>Evitare l'ambiguità  
- Quando si implementano le interfacce generiche variant, varianza può talvolta causare ambiguità. Questa evenienza deve essere evitata.  
+### <a name="avoiding-ambiguity"></a>Evitare le ambiguità  
+ Quando si implementano le interfacce generiche varianti, la varianza può talvolta causare ambiguità. Questa evenienza deve essere evitata.  
   
- Ad esempio, se si implementa in modo esplicito la stessa interfaccia generica variante con parametri di tipo generico diversi in una classe, è possibile creare ambiguità. Il compilatore non genera un errore in questo caso, ma non viene specificato quale implementazione dell'interfaccia verrà scelto in fase di esecuzione. Questo potrebbe causare bug nel codice. Si consideri l'esempio di codice seguente.  
+ Ad esempio, se si implementa in modo esplicito la stessa interfaccia generica variante con parametri di tipo generico diversi in una sola classe, è possibile creare ambiguità. Il compilatore non genera un errore in questo caso, ma non viene specificato quale implementazione dell'interfaccia verrà scelta in fase di esecuzione. Questo potrebbe causare bug nel codice. Si prenda in considerazione il seguente esempio di codice.  
   
 > [!NOTE]
 >  Con `Option Strict Off`, Visual Basic genera un avviso del compilatore quando vi è un'implementazione dell'interfaccia ambigua. Con `Option Strict On`, Visual Basic genera un errore del compilatore.  
@@ -240,8 +232,8 @@ Sub Main()
 End Sub  
 ```  
   
- In questo esempio, non viene specificato come il `pets.GetEnumerator` metodo sceglie tra `Cat` e `Dog`. Ciò potrebbe causare problemi nel codice.  
+ In questo esempio non viene specificato in che modo il metodo `pets.GetEnumerator` sceglie tra `Cat` e `Dog`. Ciò potrebbe causare problemi nel codice.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Varianza nelle interfacce generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
- [Utilizzo della varianza per i delegati generici azione (Visual Basic) e Func](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+ [Varianza nelle interfacce generiche (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [Utilizzo della varianza per i delegati generici Func e Action (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

@@ -1,71 +1,80 @@
 ---
-title: "&lt;securityTokenHandlerConfiguration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;securityTokenHandlerConfiguration&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: be98c93452c9c7a37ecad5b03f5160ea08f2c82e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;securityTokenHandlerConfiguration&gt;
-Fornisce la configurazione per l'insieme di gestori di token.  
+# <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;securityTokenHandlerConfiguration&gt;
+Fornisce la configurazione per la raccolta di gestori di token.  
   
-## Sintassi  
+ \<System. IdentityModel >  
+\<identityConfiguration >  
+\<securityTokenHandlers >  
+\<securityTokenHandlerConfiguration >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration saveBootstrapContext=xs:boolean  
-          maximumClockSkew=TimeSpan>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration saveBootstrapContext=xs:boolean  
+          maximumClockSkew=TimeSpan>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|saveBootstrapContext|Specifica se il token di bootstrap deve essere incluso nel token di sessione.  Il valore può essere anche impostato su un insieme di gestore del token impostando il `saveBootstrapContext` di attributo sul [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento.  Un valore impostato per l'insieme di token gestore sostituisce il valore impostato per il servizio.|  
-|maximumClockSkew|A <xref:System.TimeSpan> che specifica l'inclinazione di clock massima.  Controlla l'inclinazione di clock massima quando si eseguono operazioni sensibili al tempo, quali la convalida della data di scadenza di una sessione di accesso.  Il valore predefinito è 5 minuti, "00: 00".  Per ulteriori informazioni su come specificare <xref:System.TimeSpan> valori, vedere [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues).  L'inclinazione massima orologio può inoltre impostare a livello di servizio impostando il `maximumClockSkew` di attributo sul [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento.  Un valore impostato per l'insieme di token gestore sostituisce il valore impostato per il servizio.|  
+|saveBootstrapContext|Specifica se i token di bootstrap devono essere inclusi nel token di sessione. Il valore può inoltre essere impostato su una raccolta di gestore del token impostando il `saveBootstrapContext` attributo la [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento. Il valore impostato per la raccolta del gestore dei token sostituisce il valore impostato nel servizio.|  
+|maximumClockSkew|Oggetto <xref:System.TimeSpan> che specifica l'inclinazione di clock massima. Controlla lo sfasamento dei segnali di clock massima per le operazioni di scadenza, ad esempio convalida l'ora di scadenza di una sessione di accesso. Il valore predefinito è 5 minuti, "00: 05:00". Per ulteriori informazioni su come specificare <xref:System.TimeSpan> valori, vedere [valori Timespan](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Lo sfasamento dei segnali di clock massima può essere impostato anche a livello di servizio mediante l'impostazione di `maximumClockSkew` attributo la [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento. Il valore impostato per la raccolta del gestore dei token sostituisce il valore impostato nel servizio.|  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<audienceUris\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Specifica l'insieme di URI sono accettabili identificatori di questo componente.  Parametro facoltativo.|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra le cache utilizzate per i token di sessione e token di tipo replay.  È possibile specificare a livello di servizio o un insieme di gestore del token di protezione.  Parametro facoltativo.|  
-|[\<certificateValidation\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controlla le impostazioni che i gestori di token utilizzano per la convalida dei certificati.  È possibile specificare a livello di servizio o un insieme di gestore del token di protezione.  Queste impostazioni vengono ignorate se un gestore specifico è configurato con un proprio validator.  Parametro facoltativo.|  
-|[\<issuerNameRegistry\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Consente di configurare il Registro di sistema del nome dell'emittente che viene utilizzato dai gestori dell'insieme di gestore del token.  Parametro facoltativo.|  
-|[\<issuerTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Registra il resolver del token emittente utilizzato dai gestori dell'insieme di gestore del token.  Resolver del token emittente viene utilizzato per risolvere il token di firma di token in arrivo e messaggi.  Parametro facoltativo.|  
-|[\<serviceTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|Registra il resolver del token servizio utilizzato dai gestori dell'insieme di gestore del token.  Resolver del token di servizio viene utilizzato per risolvere il token di crittografia in token in arrivo e messaggi.  Parametro facoltativo.|  
-|[\<tokenReplayDetection\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Consente il rilevamento riproduzione token e specifica l'ora di scadenza per i token.  È possibile specificare a livello di servizio o un insieme di gestore del token di protezione.  Parametro facoltativo.|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<securityTokenHandlers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Specifica un insieme di gestori di token di protezione che sono registrati con l'endpoint.|  
+|-------------|-----------------|  
+|[\<audienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|Specifica il set di URI accettabili identificatori delle relying party. Parametro facoltativo.|  
+|[\<memorizza nella cache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra le cache usate per i token di sessione e il rilevamento riproduzione token. È possibile specificare a livello di servizio o in una raccolta di gestore del token di sicurezza. Parametro facoltativo.|  
+|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Controlla le impostazioni che utilizzano gestori di token per convalidare i certificati. È possibile specificare a livello di servizio o in una raccolta di gestore del token di sicurezza. Queste impostazioni vengono ignorate se un gestore specifico è configurato con il proprio servizio di convalida. Parametro facoltativo.|  
+|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Consente di configurare il Registro di sistema nome dell'autorità di certificazione che viene utilizzata dai gestori nella raccolta di gestori di token. Parametro facoltativo.|  
+|[\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|Registra il resolver del token dell'autorità di certificazione che viene utilizzato dai gestori nella raccolta di gestori di token. Il resolver del token dell'autorità di certificazione viene utilizzato per risolvere il token di firma di token in arrivo e messaggi. Parametro facoltativo.|  
+|[\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|Registra il resolver dei token di servizio che viene utilizzata dai gestori nella raccolta di gestori di token. Il resolver dei token di servizio viene utilizzato per risolvere il token di crittografia di token in arrivo e messaggi. Parametro facoltativo.|  
+|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Abilita rilevamento riproduzione token e specifica l'ora di scadenza per i token. È possibile specificare a livello di servizio o in una raccolta di gestore del token di sicurezza. Parametro facoltativo.|  
   
-## Note  
- In questa sezione fornisce i valori delle proprietà per un <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> oggetto.  Le impostazioni configurate in questa sezione la precedenza su quelle configurate nel servizio.  Alcune di queste impostazioni può, a sua volta, eseguire l'override delle impostazioni specificate quando viene aggiunto un gestore per l'insieme del gestore del token di protezione.  
+### <a name="parent-elements"></a>Elementi padre  
   
-## Esempio  
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Specifica una raccolta di gestori di token di sicurezza che sono registrati con l'endpoint.|  
   
-```  
+## <a name="remarks"></a>Note  
+ In questa sezione fornisce i valori delle proprietà per un <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> oggetto. Le impostazioni configurate in questa sezione sostituiscono quelli configurati nel servizio. Alcune di queste impostazioni possono, a sua volta, eseguire l'override delle impostazioni specificate quando si aggiunge un gestore per la raccolta di gestore del token di sicurezza.  
+  
+## <a name="example"></a>Esempio  
+  
+```xml  
 <system.identityModel>  
   <identityConfiguration>  
     <securityTokenHandlers>   

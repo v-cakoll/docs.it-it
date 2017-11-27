@@ -1,53 +1,56 @@
 ---
-title: "FilterInputMessage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FilterInputMessage (metodo)"
-  - "input non elaborato [WPF]"
+title: FilterInputMessage
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- raw input [WPF]
+- FilterInputMessage method [WPF]
 ms.assetid: 4d74c6cf-7d1d-49ff-96c1-231340ce54f5
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6b3a0e58c7485d46f004db7ea52215be60340b68
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# FilterInputMessage
-Chiamato da PresentationHost.exe ogni volta che viene ricevuto un messaggio, a meno che non venga restituito E\_NOTIMPL.  
+# <a name="filterinputmessage"></a>FilterInputMessage
+Chiamato da PresentationHost.exe ogni volta che viene ricevuto un messaggio, a meno che non venga restituito E_NOTIMPL.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 HRESULT FilterInputMessage( [in] MSG* pMsg ) ;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pMsg`  
   
- \[in\] Messaggio WM\_INPUT inviato alla finestra che sta ricevendo l'input non elaborato.  
+ [in] Messaggio WM_INPUT inviato alla finestra che sta ricevendo l'input non elaborato.  
   
-## Valore proprietà\/Valore restituito  
+## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  HRESULT:  
   
- S\_OK: il filtro non ha elaborato il messaggio e l'elaborazione può proseguire.  
+ S_OK: il filtro non ha elaborato il messaggio e l'elaborazione può proseguire.  
   
- S\_FALSE: il filtro ha elaborato questo messaggio e non viene eseguita alcuna ulteriore elaborazione.  
+ S_FALSE: il filtro ha elaborato questo messaggio e non viene eseguita alcuna ulteriore elaborazione.  
   
- E\_NOTIMPL: se viene restituito questo valore, non viene nuovamente chiamato [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md).  È possibile che venga restituito da un'applicazione host interessata solo a fornire interfacce utente personalizzate di stato ed errore a PresentationHost.exe e non a ricevere messaggi di input non elaborato da PresentationHost.exe.  
+ E_NOTIMPL: se questo valore viene restituito, [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md) non viene più chiamato. È possibile che venga restituito da un'applicazione host interessata solo a fornire interfacce utente personalizzate di stato ed errore a PresentationHost.exe e non a ricevere messaggi di input non elaborato da PresentationHost.exe.  
   
-## Note  
- PresentationHost.exe è la destinazione di vari dispositivi di input non elaborato, tra cui tastiere, mouse e telecomandi.  In alcuni casi, il comportamento nell'applicazione host dipende dall'input che, in caso contrario, verrebbe usato da PresentationHost.exe.  Ad esempio, la visualizzazione di specifici elementi dell'interfaccia utente da parte di un'applicazione host può dipendere dalla ricezione di determinati messaggi di input.  
+## <a name="remarks"></a>Note  
+ PresentationHost.exe è la destinazione di vari dispositivi di input non elaborato, tra cui tastiere, mouse e telecomandi. In alcuni casi, il comportamento nell'applicazione host dipende dall'input che, in caso contrario, verrebbe usato da PresentationHost.exe. Ad esempio, la visualizzazione di specifici elementi dell'interfaccia utente da parte di un'applicazione host può dipendere dalla ricezione di determinati messaggi di input.  
   
- Per consentire all'applicazione host di ricevere i messaggi di input necessari per questi comportamenti, mediante PresentationHost.exe vengono inviati messaggi di input non elaborato adatti all'applicazione ospitata chiamando [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md).  
+ Per consentire all'applicazione host di ricevere i messaggi di input necessari per questi comportamenti, PresentationHost.exe inoltra i messaggi di input non elaborati adatti per l'applicazione ospitata chiamando [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md).  
   
- L'applicazione ospitata riceve i messaggi di input non elaborato tramite la registrazione con l'insieme di dispositivi di input non elaborato \(Human Interface Device, HID\) restituito da [GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md).  
+ L'applicazione ospitata riceve i messaggi di input non elaborati tramite la registrazione con il set di dispositivi inpui non elaborati (Human Interface Device) restituito da [GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md).  
   
-## Vedere anche  
- [Notifica WM\_INPUT](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputmessages/wm_input.asp)
+## <a name="see-also"></a>Vedere anche  
+ [Notifica WM_INPUT](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputmessages/wm_input.asp)

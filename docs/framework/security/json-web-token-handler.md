@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9968f12e-e05d-4e6a-9b65-6896c0e31ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 6772d484fa4d0ed3948ecee26adb2cf886340f11
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="json-web-token-handler"></a>Gestore del token Web JSON
 Con l'estensione del gestore dei token Web JSON per Windows Identity Foundation vengono creati e convalidati i token Web JSON (JWT) nelle applicazioni. Il gestore dei token JWT può essere configurato in modo da essere eseguito nella pipeline di WIF come altri gestori di token di sicurezza incorporati, ma può anche essere utilizzato indipendentemente per eseguire la convalida dei token nelle applicazioni leggere. Questo gestore è particolarmente utile quando si utilizza uno schema di token portante OAuth 2.0, ad esempio l'autenticazione di Active Directory di Microsoft Azure.  
@@ -39,4 +37,3 @@ Con l'estensione del gestore dei token Web JSON per Windows Identity Foundation 
 -   **Convalida di un token JWT**: i token JWT possono essere convalidati facilmente dalla logica di convalida del gestore dei token, come parte della pipeline Windows Identity Foudation dell'applicazione o come chiamata indipendentemente da Windows Identity Foudation  
   
 -   **Creazione di un token JWT**: il gestore dei token JWT può essere usato per creare token JWT per l'autorizzazione in servizi downstream
-

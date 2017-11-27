@@ -5,15 +5,9 @@ ms.date: 05/01/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework application configuration, configuration schema
 - machine configuration files
@@ -34,18 +28,16 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c4c681f4798b36ce0d92b2101ab2d36988a0d19e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 7f2dec0d71c1a0822bf39ae420d4e56bdaf99e0d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="configuration-file-schema-for-the-net-framework"></a>Schema dei file di configurazione per .NET Framework
 
 I file di configurazione sono file XML standard che è possibile usare per modificare le impostazioni e impostare criteri per le app. Lo schema di configurazione di .NET Framework è costituito da elementi che è possibile usare nei file di configurazione per controllare il comportamento delle app. Il sommario di questa sezione rispecchia la gerarchia dello schema per l'avvio, il runtime, la rete e altri tipi di impostazioni di configurazione.
@@ -100,4 +92,3 @@ Per informazioni sui tipi, il formato e il percorso dei file di configurazione, 
 [Schema delle impostazioni dei servizi Web ](http://msdn.microsoft.com/en-us/f84d6d55-1add-4eb7-ae46-33df5833ea2e) Vengono descritti gli elementi che controllano il comportamento dei servizi Web ASP.NET e dei relativi client.
 
 [Configurazione di app .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) Viene descritto come configurare la sicurezza, l'associazione degli assembly e i servizi remoti in .NET Framework.
-

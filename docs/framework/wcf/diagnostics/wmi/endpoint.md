@@ -1,25 +1,28 @@
 ---
-title: "Endpoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Endpoint
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ef4e27f6e7a45fe705aa09827702a64c960b6a16
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Endpoint
+# <a name="endpoint"></a>Endpoint
 Endpoint  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class Endpoint  
@@ -39,102 +42,102 @@ class Endpoint
 };  
 ```  
   
-## Metodi  
+## <a name="methods"></a>Metodi  
  La classe Endpoint definisce il metodo seguente.  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
 |[GetOperationCounterInstanceName](../../../../../docs/framework/wcf/diagnostics/wmi/getoperationcounterinstancename.md)|Recupera il nome dell'istanza del contatore delle prestazioni dell'operazione.|  
   
-## Proprietà  
+## <a name="properties"></a>Proprietà  
  La classe Endpoint ha le proprietà seguenti:  
   
-### Address  
+### <a name="address"></a>Address  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  URI che contiene l'indirizzo dell'endpoint.  
   
-### AddressHeaders  
+### <a name="addressheaders"></a>AddressHeaders  
  Tipo di dati: matrice di stringhe  
   
  Tipo di accesso: sola lettura  
   
  Raccolta di intestazioni di indirizzo associato a questo endpoint.  
   
-### AddressIdentity  
+### <a name="addressidentity"></a>AddressIdentity  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Identità dell'endpoint.  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  Tipo di dati: sint32  
   
  Tipo di accesso: sola lettura  
   
  ID del dominio applicazione che ospita l'endpoint.  
   
-### Comportamenti  
+### <a name="behaviors"></a>Comportamenti  
  Tipo di dati: matrice di Behavior  
   
  Tipo di accesso: sola lettura  
   
  Raccolta dei comportamenti implementati da questo endpoint.  
   
-### Binding  
+### <a name="binding"></a>Binding  
  Tipo di dati: associazione  
   
  Tipo di accesso: sola lettura  
   
  Associazione usata da questo endpoint.  
   
-### ContractName  
+### <a name="contractname"></a>ContractName  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Stringa che specifica il contratto che viene esposto da questo endpoint.  
   
-### CounterInstanceName  
+### <a name="counterinstancename"></a>CounterInstanceName  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Nome dell'istanza del contatore delle prestazioni dell'endpoint.  
   
-### ListenUri  
+### <a name="listenuri"></a>ListenUri  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  URI sul quale resta in attesa l'endpoint.  
   
-### Nome  
+### <a name="name"></a>Nome  
  Tipo di dati: stringa  
   
  Tipo di accesso: sola lettura  
   
  Nome univoco di questo endpoint.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  Tipo di dati: sint32  
   
  Tipo di accesso: sola lettura  
   
  ID del processo che ospita l'endpoint.  
   
-### ref  
+### <a name="ref"></a>ref  
  Tipo di dati: contratto  
   
  Tipo di accesso: sola lettura  
   
  Contratto esposto dall'endpoint.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|
+|---------|-----------------------------------|  
+|Spazio dei nomi|Definito in root\ServiceModel|

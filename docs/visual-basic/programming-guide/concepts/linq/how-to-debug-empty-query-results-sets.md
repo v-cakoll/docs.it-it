@@ -1,28 +1,24 @@
 ---
-title: 'Procedura: eseguire il Debug di set di risultati di Query vuoti (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: eseguire il Debug di set di risultati vuoto Query (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c5564e88d1a861f2ce3760e9450d68aee5b57a64
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 1c483153f8ff41c08cfaa0141fed056de7f5f680
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Procedura: eseguire il Debug di set di risultati di Query vuoti (Visual Basic)
+# <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Procedura: eseguire il Debug di set di risultati vuoto Query (Visual Basic)
 Uno dei problemi più comuni che viene riscontrato durante l'esecuzione di query su alberi XML è che, se l'albero XML include uno spazio dei nomi predefinito, lo sviluppatore scrive talvolta la query come se il codice XML non fosse incluso in uno spazio dei nomi.  
   
  Nel primo set di esempi riportati in questo argomento viene illustrato il tipico caricamento del codice XML in uno spazio dei nomi predefinito e l'esecuzione errata di query su tale codice.  
@@ -103,4 +99,4 @@ End of result set
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+ [Le query di base (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

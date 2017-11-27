@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 06920c0ebce33d7e55bc56ddb29843bba43de7a2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e6257721f8b85296d4da28cc036c946f6357c11b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
 Consente alle codifiche di messaggi XML di testo normale e JSON (JavaScript Object Notation) e al contenuto binario "non elaborato" di essere letti e scritti quando vengono usati in un'associazione [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -88,14 +86,13 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>   
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>   
- [Codifica dei messaggi](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)   
- [Scelta di un codificatore di messaggi](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
+ <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+ <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
+ [Codifica dei messaggi](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
+ [Scelta di un codificatore di messaggi](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ [Associazioni](../../../../../docs/framework/wcf/bindings.md)  
+ [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-

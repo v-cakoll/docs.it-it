@@ -1,41 +1,45 @@
 ---
-title: "Attivit&#224; 1: creare una nuova applicazione Windows Presentation Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Attività 1: creare una nuova applicazione Windows Presentation Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bfebf11d66ded668d7c0892d11adde76e0a42c01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Attivit&#224; 1: creare una nuova applicazione Windows Presentation Foundation
+# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Attività 1: creare una nuova applicazione Windows Presentation Foundation
 In questa attività verrà creata un'applicazione [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] vuota tramite il modello di Visual Studio dell'applicazione WPF e verranno aggiunti riferimenti agli assembly del flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] appropriati.  
   
-### Per creare il progetto applicazione WPF  
+### <a name="to-create-the-wpf-application-project"></a>Per creare il progetto applicazione WPF  
   
-1.  Aprire [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] e scegliere **Nuovo** dal menu **File**, quindi **Progetto**.  
+1.  Aprire [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] e scegliere il **File** dal menu **New**e quindi fare clic su **progetto**.  
   
-2.  Nella finestra di dialogo **Nuovo progetto** selezionare **Visual C\#** o **Visual Basic** nel riquadro **Modelli installati** sul lato sinistro della casella.Se il linguaggio scelto non viene visualizzato, cercarlo in **Altri linguaggi**.  
+2.  Nel **nuovo progetto** finestra di dialogo Seleziona **Visual c#** o **Visual Basic** dal **modelli installati** riquadro sul lato sinistro di la casella. Se la lingua di preferenza non viene visualizzato, cercarlo in **altri linguaggi**.  
   
-3.  Selezionare **Windows** nel riquadro **Modelli installati**.  
+3.  Selezionare **Windows** nel **modelli installati** riquadro.  
   
-4.  Nel riquadro superiore verificare che sia stato selezionato **.NET Framework 4** \(impostazione predefinita\) nell'elenco a discesa, quindi scegliere **Applicazione WPF**.  
+4.  Nel riquadro superiore, verificare che (il valore predefinito) **.NET Framework 4** è stata selezionata nella casella di riepilogo a discesa, quindi fare clic **applicazione WPF**.  
   
-5.  Impostare il nome del progetto su **HostingApplication** nella parte inferiore della finestra.  
+5.  Impostare il nome del progetto **HostingApplication** nella parte inferiore della finestra.  
   
-6.  Impostare il nome della soluzione su **RehostingTheDesigner**.  
+6.  Impostare il nome della soluzione **RehostingTheDesigner**.  
   
-7.  Fare clic su **OK** per creare il progetto di applicazione.[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] consente di creare un'interfaccia utente WPF di base per l'applicazione e dispone di file XAML e code\-behind appropriati.  
+7.  Fare clic su **OK** per creare il progetto di applicazione. [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] consente di creare un'interfaccia utente WPF di base per l'applicazione e dispone di file XAML e code-behind appropriati.  
   
-8.  Aggiungere riferimenti agli assembly **WorkflowModel**.A tale scopo, in **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto **HostingApplication** e scegliere **Aggiungi riferimento**.  
+8.  Aggiungere riferimenti a **WorkflowModel** assembly. A tale scopo, in **Esplora**, fare doppio clic su di **HostingApplication** del progetto e selezionare **Aggiungi riferimento**.  
   
-9. Nella finestra di dialogo **Aggiungi riferimento** fare clic sulla scheda **.NET**, tenendo premuto CTRL selezionare gli assembly seguenti, quindi scegliere **OK**:  
+9. Nel **Aggiungi riferimento** la finestra di dialogo, fare clic su di **.NET** scheda, tenere premuto il tasto CTRL, selezionare gli assembly seguenti e quindi fare clic su **OK**:  
   
     -   System.Activities  
   
@@ -43,10 +47,10 @@ In questa attività verrà creata un'applicazione [!INCLUDE[avalon1](../../../in
   
     -   System.Activities.Core.Presentation  
   
-10. Scegliere **OK**.  
+10. Fare clic su **OK**.  
   
-11. Per informazioni su come ospitare l'area di disegno dell'utilità di progettazione del flusso di lavoro, vedere [Attività 2: ospitare l'utilità di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation//task-2-host-the-workflow-designer.md).  
+11. Vedere [attività 2: ospitare la finestra di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) per imparare a ospitare il disegno della finestra di progettazione del flusso di lavoro.  
   
-## Vedere anche  
- [Riallocazione dell'utilità di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation//rehosting-the-workflow-designer.md)   
- [Attività 2: ospitare l'utilità di progettazione del flusso di lavoro](../../../docs/framework/windows-workflow-foundation//task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riallocazione di Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Attività 2: Ospitare Progettazione flussi di lavoro](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

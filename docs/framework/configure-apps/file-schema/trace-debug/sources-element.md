@@ -1,70 +1,72 @@
 ---
-title: "Elemento &lt;sources&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#sources"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<sources> (elemento)"
-  - "sources (elemento)"
-  - "origini di traccia"
+title: '&lt;origini&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#sources
+helpviewer_keywords:
+- sources element
+- trace sources
+- <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 58e9ff8787916132406a7e63aff511c9fb221b73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;sources&gt;
-Specifica le origini di traccia che danno inizio ai messaggi di tracciatura.  
+# <a name="ltsourcesgt-element"></a>&lt;origini&gt; elemento
+Specifica le origini di traccia che avviano i messaggi di traccia.  
   
-## Sintassi  
+ \<configuration>  
+\<System. Diagnostics >  
+\<origini >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <sources>  
    <source>...</source>  
 </sources>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Elemento obbligatorio.<br /><br /> Specifica un'origine di analisi che dà inizio ai messaggi di tracciatura.|  
+|-------------|-----------------|  
+|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Elemento obbligatorio.<br /><br /> Specifica un'origine di traccia che avvia i messaggi di traccia.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`system.diagnostics`|Consente di specificare listener di traccia per la raccolta, la memorizzazione e l'invio di messaggi, nonché il livello in cui viene impostata un'opzione di analisi.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|`system.diagnostics`|Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.|  
   
-## Note  
- È possibile utilizzare questo elemento nei file di configurazione del computer \(Machine.config\) e dell'applicazione.  
+## <a name="remarks"></a>Note  
+ Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e file di configurazione dell'applicazione.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato l'utilizzo dell'elemento `<sources>` per aggiungere l'origine di traccia `mySource` e impostare il livello per l'opzione di origine denominata `sourceSwitch`.  Viene aggiunto un listener di analisi di console che consente di scrivere le informazioni di traccia sulla console.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come utilizzare il `<sources>` elemento a cui aggiungere l'origine di traccia `mySource` e impostare il livello per l'opzione di origine denominata `sourceSwitch`. Viene aggiunto un listener di traccia di console che scrive le informazioni di traccia nella console.  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <sources>  
@@ -87,12 +89,12 @@ Specifica le origini di traccia che danno inizio ai messaggi di tracciatura.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Diagnostics.TraceListener>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.XmlWriterTraceListener>   
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.XmlWriterTraceListener>  
+ [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

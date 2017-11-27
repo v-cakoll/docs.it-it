@@ -1,78 +1,80 @@
 ---
-title: "Elemento &lt;remove&gt; per schemeSettings (impostazioni URI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: '&lt;rimuovere&gt; elemento per schemeSettings (impostazioni Uri)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 6d587dced4660774b67a8e884bf6c25df3b6e400
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;remove&gt; per schemeSettings (impostazioni URI)
-Aggiunge un'impostazione dello schema per un nome di schema.  
+# <a name="ltremovegt-element-for-schemesettings-uri-settings"></a>&lt;rimuovere&gt; elemento per schemeSettings (impostazioni Uri)
+Rimuove un'impostazione dello schema per il nome di schema.  
   
-## Sintassi  
+ \<configuration>  
+\<URI >  
+\<schemeSettings >  
+\<rimuovere >  
   
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
+<remove
+  name="http|https"
+/>
 ```  
   
-      <remove   
-   <name = "http|https"/>  
-/>  
-```  
-  
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
-|Attribute|Descrizione|  
+|Attributo|Descrizione|  
 |---------------|-----------------|  
-|name|Il nome dello schema per il quale si applica questa impostazione.  Gli unici valori supportati sono name\="http" e name\="https".|  
+|name|Il nome dello schema a cui si applica questa impostazione. Il solo valori supportati sono name = "http" e nome = "https".|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[Elemento \<schemeSettings\> \(impostazioni URI\)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Specifica come un oggetto <xref:System.Uri> verrà analizzato per schemi specifici.|  
+|-------------|-----------------|  
+|[Elemento \<schemeSettings> (impostazioni URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.|  
   
-## Note  
- Per impostazione predefinita, la classe <xref:System.Uri?displayProperty=fullName> priva dei caratteri escape i delimitatori del percorso con codifica percentuale prima di eseguire la compressione del percorso.  È stato implementato come meccanismo di sicurezza rispetto ad attacchi simili ai seguenti:  
+## <a name="remarks"></a>Note  
+ Per impostazione predefinita, il <xref:System.Uri?displayProperty=nameWithType> delimitatori di percorso con codifica percentuale non consente l'escape di classe prima di eseguire la compressione del percorso. È stato implementato come un meccanismo di protezione contro gli attacchi simile al seguente:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Se questo URI viene passato lungo i moduli che non gestiscono correttamente i caratteri codificati in percentuale, potrebbe verificarsi che il comando seguente venga eseguito dal server:  
+ Se questo URI viene passato a moduli non gestiscono percentuale correttamente codificati in caratteri, potrebbe verificarsi il seguente comando viene eseguito dal server:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Per questo motivo, la classe <xref:System.Uri?displayProperty=fullName> come prima cosa priva dei caratteri escape i delimitatori del percorso, quindi applica compressione del percorso.  Il risultato di passare l'URL dannoso al costruttore di classe <xref:System.Uri?displayProperty=fullName> è il seguente URI:  
+ Per questo motivo, <xref:System.Uri?displayProperty=nameWithType> prima i delimitatori di percorso non consente l'escape di classe e quindi applica la compressione del percorso. Il risultato di passare l'URL dannoso per <xref:System.Uri?displayProperty=nameWithType> costruttore di classe nell'URI seguente:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- È possibile modificare questo comportamento predefinito per non consentire l'escape dei delimitatori del percorso con codifica percentuale utilizzando l'opzione di configurazione schemeSettings per uno specifico schema.  
+ Per non delimitatori di percorso con codifica percentuale di caratteri di escape annullare utilizzando l'opzione di configurazione schemeSettings per uno schema specifico, è possibile modificare questo comportamento predefinito.  
   
-## File di configurazione  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione o nel file di configurazione del computer \(Machine.config\).  
+## <a name="configuration-files"></a>File di configurazione  
+ Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).  
   
-## Esempio  
- Nell'esempio di codice seguente viene mostrata una configurazione utilizzata dalla classe <xref:System.Uri> che rimuove qualsiasi impostazione dello schema per lo schema del http.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene mostrata una configurazione utilizzata per la <xref:System.Uri> classe che rimuove tutte le impostazioni dello schema per lo schema http.  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <schemeSettings>  
@@ -82,11 +84,11 @@ Aggiunge un'impostazione dello schema per un nome di schema.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=fullName>   
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=fullName>   
- <xref:System.GenericUriParserOptions?displayProperty=fullName>   
- <xref:System.Uri?displayProperty=fullName>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+ <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+ <xref:System.Uri?displayProperty=nameWithType>  
  [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,47 +1,39 @@
 ---
-title: Cenni preliminari sugli operatori di Query standard (Visual Basic) | Documenti di Microsoft
+title: Cenni preliminari sugli operatori di Query standard (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eb28988ef49e0583fb7e9197c4e13c84665074ac
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3f9ad39b4890455f7d03f0b9bbfc51264d98d56b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>Cenni preliminari sugli operatori di Query standard (Visual Basic)
-Il *operatori di query standard* i metodi che costituiscono il modello LINQ. La maggior parte di questi metodi agisce sulle sequenze, dove una sequenza è un oggetto il cui tipo implementa il <xref:System.Collections.Generic.IEnumerable%601>interfaccia o <xref:System.Linq.IQueryable%601>interfaccia.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601> Gli operatori di query standard forniscono funzionalità di query, incluso il filtro, proiezione, aggregazione, ordinamento e altro ancora.  
+Gli *operatori di query standard* sono metodi che costituiscono il modello LINQ. La maggior parte di questi metodi agisce sulle sequenze. Una sequenza è un oggetto il cui tipo implementa l'interfaccia <xref:System.Collections.Generic.IEnumerable%601> o l'interfaccia <xref:System.Linq.IQueryable%601>. Gli operatori di query standard forniscono le funzionalità di query che includono filtro, proiezione, aggregazione, ordinamento e altro ancora.  
   
- Esistono due set di operatori di query standard LINQ, uno che agisce sugli oggetti di tipo <xref:System.Collections.Generic.IEnumerable%601>e l'altro che agisce sugli oggetti di tipo <xref:System.Linq.IQueryable%601>.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601> I metodi che costituiscono ogni insieme sono membri statici della <xref:System.Linq.Enumerable>e <xref:System.Linq.Queryable>classi, rispettivamente.</xref:System.Linq.Queryable> </xref:System.Linq.Enumerable> Vengono definiti come *metodi di estensione* del tipo cui operare. Ciò significa che possono essere chiamati utilizzando la sintassi del metodo statico o la sintassi del metodo di istanza.  
+ Sono disponibili due set di operatori di query standard LINQ, uno che agisce sugli oggetti di tipo <xref:System.Collections.Generic.IEnumerable%601> e l'altro che agisce sugli oggetti di tipo <xref:System.Linq.IQueryable%601>. I metodi che costituiscono ogni set sono membri statici delle classi <xref:System.Linq.Enumerable> e <xref:System.Linq.Queryable>, rispettivamente. Vengono definiti come *metodi di estensione* del tipo su cui agiscono. Ciò significa che possono essere chiamati usando la sintassi del metodo statico o la sintassi del metodo di istanza.  
   
- Inoltre, molti metodi degli operatori di query standard agiscono su tipi diversi da quelli basati su <xref:System.Collections.Generic.IEnumerable%601>o <xref:System.Linq.IQueryable%601>.</xref:System.Linq.IQueryable%601> </xref:System.Collections.Generic.IEnumerable%601> Il <xref:System.Linq.Enumerable>tipo definisce due diversi metodi che agiscono entrambi su oggetti di tipo <xref:System.Collections.IEnumerable>.</xref:System.Collections.IEnumerable> </xref:System.Linq.Enumerable> Questi metodi, <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29>e <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, consentono abilitare una raccolta senza parametri o non generica, eseguire una query nel modello LINQ.</xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29> </xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> Ciò avviene mediante la creazione di una raccolta di oggetti fortemente tipizzati. La <xref:System.Linq.Queryable>classe definisce due metodi simili <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29>e <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, che operano su oggetti di tipo <xref:System.Linq.Queryable>.</xref:System.Linq.Queryable> </xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29> </xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> </xref:System.Linq.Queryable>  
+ Inoltre, molti metodi degli operatori query standard agiscono su tipi diversi da quelli basati su <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601>. Il tipo <xref:System.Linq.Enumerable> definisce questi due diversi metodi che agiscono entrambi su oggetti di tipo <xref:System.Collections.IEnumerable>. Questi metodi, <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> e <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29>, consentono l'esecuzione di query su una Collection senza parametri o non generica nel modello LINQ grazie alla creazione di una Collection di oggetti fortemente tipizzato. La classe <xref:System.Linq.Queryable> definisce due metodi simili, <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> e <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29>, che agiscono su oggetti di tipo <xref:System.Linq.Queryable>.  
   
- Gli operatori di query standard sono diversi nei tempi di esecuzione, a seconda che restituiscono un valore singleton o una sequenza di valori. I metodi che restituiscono un valore singleton (ad esempio, <xref:System.Linq.Enumerable.Average%2A>e <xref:System.Linq.Enumerable.Sum%2A>) vengono eseguite immediatamente.</xref:System.Linq.Enumerable.Sum%2A> </xref:System.Linq.Enumerable.Average%2A> I metodi che restituiscono una sequenza di rinviare l'esecuzione della query e restituiscono un oggetto enumerabile.  
+ Gli operatori di query standard presentano una durata di esecuzione diversa, a seconda che restituiscano un valore singleton o una sequenza di valori. Questi metodi che restituiscono un valore singleton, ad esempio <xref:System.Linq.Enumerable.Average%2A> e <xref:System.Linq.Enumerable.Sum%2A>, vengono eseguiti immediatamente. I metodi che restituiscono una sequenza rinviano l'esecuzione della query e restituiscono un oggetto enumerabile.  
   
- Nel caso i metodi che agiscono sulle raccolte in memoria, ovvero i metodi che estendono <xref:System.Collections.Generic.IEnumerable%601>, l'oggetto enumerabile restituito acquisisce gli argomenti passati al metodo.</xref:System.Collections.Generic.IEnumerable%601> Quando l'oggetto viene enumerata, viene impiegata la logica dell'operatore di query e vengono restituiti i risultati della query.  
+ Nel caso dei metodi che agiscono sulle Collection in memoria, ovvero i metodi che estendono <xref:System.Collections.Generic.IEnumerable%601>, l'oggetto enumerabile restituito acquisisce gli argomenti passati al metodo. Quando l'oggetto viene enumerato, viene utilizzata la logica dell'operatore query e vengono restituiti i risultati della query.  
   
- Al contrario, i metodi che estendono <xref:System.Linq.IQueryable%601>non implementano il comportamento delle query, ma creare una struttura ad albero dell'espressione che rappresenta la query da eseguire.</xref:System.Linq.IQueryable%601> Elaborazione della query viene gestita dall'origine <xref:System.Linq.IQueryable%601>oggetto.</xref:System.Linq.IQueryable%601>  
+ I metodi che estendono <xref:System.Linq.IQueryable%601> non implementano invece il comportamento delle query, ma compilano un albero delle espressioni che rappresenta la query da eseguire. L'elaborazione delle query viene gestita dall'oggetto <xref:System.Linq.IQueryable%601> di origine.  
   
- Chiamate ai metodi di query possono essere concatenate in una query, che consente di eseguire query di diventare arbitrariamente complesse.  
+ Le chiamate ai metodi della query possono essere concatenate in una query, consentendo alle query di diventare arbitrariamente complesse.  
   
- Esempio di codice seguente viene illustrato come utilizzare gli operatori di query standard per ottenere informazioni su una sequenza.  
+ Nell'esempio di codice seguente viene illustrato come usare gli operatori di query standard per ottenere informazioni su una sequenza.  
   
 ```vb  
 Dim sentence = "the quick brown fox jumps over the lazy dog"  
@@ -81,27 +73,27 @@ MsgBox(output.ToString())
 ```  
   
 ## <a name="query-expression-syntax"></a>Sintassi delle espressioni di query  
- Alcuni degli operatori di query standard utilizzate più di frequente dispongono dedicata c# e Visual Basic sintassi della parola chiave del linguaggio che consente loro di essere chiamato come parte di un *query* *espressione*. Per ulteriori informazioni sugli operatori di query standard che sono parole chiave dedicate e le relative sintassi, vedere [sintassi delle espressioni di Query per operatori di Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
+ Alcuni degli operatori di query standard usati più di frequente dispongono di sintassi dedicata delle parole chiave per i linguaggi C# e Visual Basic che consente di chiamare gli operatori come parte di un'*espressione* di *query*. Per ulteriori informazioni sugli operatori di query standard che dedicate parole chiave e le relative sintassi, vedere [sintassi delle espressioni di Query per gli operatori Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
   
-## <a name="extending-the-standard-query-operators"></a>Estensione degli operatori di Query Standard  
- È possibile integrare il set di operatori di query standard da Creazione metodi specifici del dominio appropriate per il dominio di destinazione o la tecnologia. È inoltre possibile sostituire gli operatori di query standard con implementazioni personalizzate che forniscono servizi aggiuntivi, ad esempio la valutazione remota, la conversione di query e ottimizzazione. Vedere <xref:System.Linq.Enumerable.AsEnumerable%2A>per un esempio.</xref:System.Linq.Enumerable.AsEnumerable%2A>  
+## <a name="extending-the-standard-query-operators"></a>Estensione degli operatori di query standard  
+ È possibile estendere il set di operatori di query standard creando metodi specifici del dominio appropriati per la tecnologia o il dominio di destinazione. È possibile anche sostituire gli operatori di query standard con implementazioni personalizzate che forniscono servizi aggiuntivi, ad esempio la valutazione remota, la conversione delle query e l'ottimizzazione. Per un esempio, vedere <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- I collegamenti seguenti consentono di accedere ad argomenti che forniscono ulteriori informazioni sugli operatori di query standard diversi in base alle funzionalità.  
+ I collegamenti riportati di seguito consentono di passare ad argomenti che forniscono informazioni aggiuntive sui vari operatori di query standard in base alla funzionalità.  
   
  [Ordinamento dei dati](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)  
   
  [Operazioni sui set (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)  
   
- [Il filtraggio dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
+ [Filtraggio dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
   
  [Operazioni quantificatore (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
   
  [Operazioni di proiezione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
   
- [Partizionamento dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
+ [Il partizionamento dei dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
   
- [Creare un join Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
+ [Operazioni (Visual Basic) di join](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
   
  [Raggruppamento di dati (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
   
@@ -118,9 +110,9 @@ MsgBox(output.ToString())
  [Operazioni di aggregazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq.Enumerable></xref:System.Linq.Enumerable>   
- <xref:System.Linq.Queryable></xref:System.Linq.Queryable>   
- [Introduzione a LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)   
- [Sintassi delle espressioni di query per gli operatori Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)   
- [Classificazione degli operatori di Query Standard in base alla modalità di esecuzione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)   
+ <xref:System.Linq.Enumerable>  
+ <xref:System.Linq.Queryable>  
+ [Introduzione a LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
+ [Sintassi delle espressioni di query per gli operatori Query Standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+ [Classificazione degli operatori di Query Standard in base alla modalità di esecuzione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
  [Metodi di estensione](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

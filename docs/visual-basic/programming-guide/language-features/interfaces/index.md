@@ -1,41 +1,23 @@
 ---
 title: Interfacce (Visual Basic)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, interfaces
-- interfaces, Visual Basic
+- interfaces [Visual Basic], Visual Basic
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
-ms.openlocfilehash: 0b3f13cd69564a61da1a961e35c5319e4c2d79aa
-ms.contentlocale: it-it
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: c26bb7322064d0b8cdf733e74f8b37e81b1e620c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="interfaces-visual-basic"></a>Interfacce (Visual Basic)
 Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi possono implementare. Le interfacce consentono di definire funzionalità come piccoli gruppi di proprietà, metodi ed eventi strettamente correlati fra loro. In questo modo si riducono i problemi di compatibilità, grazie alla possibilità di sviluppare implementazioni migliorate per le interfacce senza compromettere il codice esistente. È possibile aggiungere nuove funzionalità in qualsiasi momento, sviluppando interfacce e implementazioni aggiuntive.  
@@ -108,4 +90,3 @@ Le *interfacce* definiscono le proprietà, i metodi e gli eventi che le classi p
 |-----------|-----------------|  
 |[Procedura dettagliata: Creazione e implementazione di interfacce](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Fornisce una procedura dettagliata che illustra il processo di definizione e implementazione di interfacce personalizzate.|  
 |[Varianza nelle interfacce generiche](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Illustra la covarianza e la controvarianza nelle interfacce generiche e fornisce un elenco di interfacce generiche variant in .NET Framework.|
-

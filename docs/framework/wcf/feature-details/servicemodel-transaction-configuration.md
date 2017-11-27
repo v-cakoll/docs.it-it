@@ -1,37 +1,39 @@
 ---
-title: "Configurazione delle transazioni ServiceModel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "transazioni [WCF], Configurazione di ServiceModel"
+title: Configurazione delle transazioni ServiceModel
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 54b07eff0b54816fe2d359a27f75b07ecb9f355a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Configurazione delle transazioni ServiceModel
+# <a name="servicemodel-transaction-configuration"></a>Configurazione delle transazioni ServiceModel
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fornisce tre attributi per configurare le transazioni di un servizio: `transactionFlow`, `transactionProtocol`e `transactionTimeout`.  
   
-## Configurazione di transactionFlow  
- La maggior parte delle associazioni predefinite fornite in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contiene gli attributi `transactionFlow` e `transactionProtocol`. Ciò consente di configurare un'associazione in modo che accetti transazioni in ingresso presso un endpoint specifico tramite un determinato protocollo di flusso delle transazioni.È inoltre possibile utilizzare l'elemento `transactionFlow` e il relativo attributo `transactionProtocol` per compilare un'associazione personalizzata.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] impostazione degli elementi di configurazione, vedere [\<associazione\>](../../../../docs/framework/misc/binding.md) e [Schema di configurazione di WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+## <a name="configuring-transactionflow"></a>Configurazione di transactionFlow  
+ La maggior parte delle associazioni predefinite fornite in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contiene gli attributi `transactionFlow` e `transactionProtocol`. Ciò consente di configurare un'associazione in modo che accetti transazioni in ingresso presso un endpoint specifico tramite un determinato protocollo di flusso delle transazioni. È inoltre possibile utilizzare l'elemento `transactionFlow` e il relativo attributo `transactionProtocol` per compilare un'associazione personalizzata. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Imposta gli elementi di configurazione, vedere [ \<associazione >](../../../../docs/framework/misc/binding.md) e [Schema di configurazione WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
   
  L'attributo `transactionFlow` specifica se il flusso delle transazioni è attivo presso gli endpoint di servizio che utilizzano l'associazione.  
   
-## Configurazione di transactionProtocol  
+## <a name="configuring-transactionprotocol"></a>Configurazione di transactionProtocol  
  L'attributo `transactionProtocol` specifica il protocollo di transazione da utilizzare presso gli endpoint di servizio che utilizzano l'associazione.  
   
- Gli elementi seguenti rappresentano un esempio di sezione di configurazione in cui l'associazione specificata viene impostata in modo da supportare il flusso delle transazioni. Tali elementi sono inoltre un esempio di utilizzo del protocollo WS\-AtomicTransaction.  
+ Gli elementi seguenti rappresentano un esempio di sezione di configurazione in cui l'associazione specificata viene impostata in modo da supportare il flusso delle transazioni. Tali elementi sono inoltre un esempio di utilizzo del protocollo WS-AtomicTransaction.  
   
-```  
+```xml  
 <netNamedPipeBinding>  
    <binding name="test"  
       closeTimeout="00:00:10"  
@@ -48,10 +50,10 @@ caps.handback.revision: 8
 </netNamedPipeBinding>  
 ```  
   
-## Configurazione di transactionTimeout  
- Per configurare l'attributo `transactionTimeout` del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è possibile impostare l'elemento `behavior` del file di configurazione.Nell'esempio di codice seguente viene illustrato come eseguire questa operazione.  
+## <a name="configuring-transactiontimeout"></a>Configurazione di transactionTimeout  
+ Per configurare l'attributo `transactionTimeout` del servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è possibile impostare l'elemento `behavior` del file di configurazione. Nell'esempio di codice seguente viene illustrato come eseguire questa operazione.  
   
-```  
+```xml  
 <configuration>  
    <system.serviceModel>  
       <behaviors>  
@@ -61,7 +63,7 @@ caps.handback.revision: 8
 </configuration>  
 ```  
   
- L'attributo `transactionTimeout` specifica il timeout di completamento di una nuova transazione creata nel servizio.Questo attributo viene utilizzato come timeout dell'ambito <xref:System.Transactions.TransactionScope> delle operazioni che creano una nuova transazione. Inoltre, se viene applicato l'attributo <xref:System.ServiceModel.OperationBehaviorAttribute>, la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> viene impostata su `true`.  
+ L'attributo `transactionTimeout` specifica il timeout di completamento di una nuova transazione creata nel servizio. Questo attributo viene utilizzato come timeout dell'ambito <xref:System.Transactions.TransactionScope> delle operazioni che creano una nuova transazione. Inoltre, se viene applicato l'attributo <xref:System.ServiceModel.OperationBehaviorAttribute>, la proprietà <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> viene impostata su `true`.  
   
  Il timeout corrisponde al periodo di tempo che va dalla creazione della transazione al completamento della fase 1 del protocollo di commit a due fasi.  
   
@@ -69,6 +71,6 @@ caps.handback.revision: 8
   
  Si noti che il valore di timeout effettivo è il minore fra l'impostazione di configurazione `transactionTimeout` e le proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>.  
   
-## Vedere anche  
- [\<associazione\>](../../../../docs/framework/misc/binding.md)   
+## <a name="see-also"></a>Vedere anche  
+ [\<associazione >](../../../../docs/framework/misc/binding.md)  
  [Schema di configurazione di WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

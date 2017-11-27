@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3f8bffcd94f3fb9c516e2201bd932480ab51c1a5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 263d8a82bf70ac86e776f28d660ef08c58a33384
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Uso di un socket client asincrono
 Un socket client asincrono non sospende l'applicazione durante l'attesa del completamento delle operazioni di rete. Usa invece il modello di programmazione asincrona standard di .NET Framework per elaborare la connessione di rete su un singolo thread mentre l'esecuzione dell'applicazione continua sul thread originale. I socket asincroni sono appropriati per le applicazioni che fanno un uso massiccio della rete o che non possano attendere il completamento delle operazioni di rete prima di continuare.  
@@ -43,9 +40,9 @@ Un socket client asincrono non sospende l'applicazione durante l'attesa del comp
   
  Le operazioni asincrone richiedono un metodo di callback per restituire il risultato dell'operazione. Se non è necessario che l'applicazione conosca il risultato, non sarà necessario alcun metodo di callback. L'esempio di codice in questa sezione illustra l'uso di un metodo per avviare la connessione a un dispositivo di rete e un metodo di callback per completare la connessione, un metodo per avviare l'invio dei dati e un metodo di callback per completare l'invio, un metodo per avviare la ricezione di dati e un metodo di callback per terminare la ricezione di dati.  
   
- I socket asincroni usano più thread dal pool di thread di sistema per elaborare le connessioni di rete. Un thread è responsabile dell'avvio dell'invio o della ricezione dei dati. Gli altri thread completano la connessione al dispositivo di rete e inviano o ricevono i dati. Negli esempi seguenti, le istanze della classe <xref:System.Threading.ManualResetEvent?displayProperty=fullName> vengono usate per sospendere l'esecuzione del thread principale e segnalare quando l'esecuzione può continuare.  
+ I socket asincroni usano più thread dal pool di thread di sistema per elaborare le connessioni di rete. Un thread è responsabile dell'avvio dell'invio o della ricezione dei dati. Gli altri thread completano la connessione al dispositivo di rete e inviano o ricevono i dati. Negli esempi seguenti, le istanze della classe <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> vengono usate per sospendere l'esecuzione del thread principale e segnalare quando l'esecuzione può continuare.  
   
- Nell'esempio seguente, per connettere un socket asincrono a un dispositivo di rete, il metodo `Connect` inizializza un **Socket** e quindi chiama il metodo <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName>, passando un endpoint remoto che rappresenta il dispositivo di rete, il metodo di callback per la connessione e un oggetto di stato (il **Socket** client), che viene usato per passare le informazioni sullo stato tra chiamate asincrone. L'esempio implementa il metodo `Connect` per connettere il **Socket** specificato all'endpoint specificato. Si presuppone l'esistenza di un **ManualResetEvent** globale denominato `connectDone`.  
+ Nell'esempio seguente, per connettere un socket asincrono a un dispositivo di rete, il metodo `Connect` inizializza un **Socket** e quindi chiama il metodo <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType>, passando un endpoint remoto che rappresenta il dispositivo di rete, il metodo di callback per la connessione e un oggetto di stato (il **Socket** client), che viene usato per passare le informazioni sullo stato tra chiamate asincrone. L'esempio implementa il metodo `Connect` per connettere il **Socket** specificato all'endpoint specificato. Si presuppone l'esistenza di un **ManualResetEvent** globale denominato `connectDone`.  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -298,7 +295,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Uso di un socket client sincrono](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [Attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)   
+ [Uso di un Socket Client sincrono](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [Attesa con socket](../../../docs/framework/network-programming/listening-with-sockets.md)  
  [Esempio di socket client asincrono](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-

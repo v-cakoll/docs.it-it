@@ -1,28 +1,38 @@
 ---
-title: "&lt;add&gt; di &lt;commonParameters&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;add&gt; di &lt;commonParameters&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dbdc3b87b0b501ffdbe2d6b16d59e86659b27585
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;add&gt; di &lt;commonParameters&gt;
-Specifica una coppia nome\/valore di parametri che vengono usati globalmente tra più servizi.  Questo parametro in genere contiene una stringa di connessione al database che potrebbe essere condivisa dai servizi durevoli.  
+# <a name="ltaddgt-of-ltcommonparametersgt"></a>&lt;add&gt; di &lt;commonParameters&gt;
+Specifica una coppia nome/valore di parametri che vengono usati globalmente tra più servizi. Questo parametro in genere contiene una stringa di connessione al database che potrebbe essere condivisa dai servizi durevoli.  
   
-## Sintassi  
+ \<System. ServiceModel >  
+\<i comportamenti >  
+\<serviceBehaviors >  
+\<comportamento >  
+\<workflowRuntime >  
+\<Parametricomuni >  
+\<add>  
   
-```  
+## <a name="syntax"></a>Sintassi  
   
+```xml  
 <workflowRuntime>  
    <commonParameters>  
       <add name="String" value="String" />  
@@ -30,31 +40,31 @@ Specifica una coppia nome\/valore di parametri che vengono usati globalmente tra
 </workflowRuntime>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
 |name|Nome del parametro specificato per un servizio.|  
 |predefinito|Valore del parametro specificato per un servizio.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<commonParameters\>](http://msdn.microsoft.com/it-it/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Raccolta di parametri comuni usati dai servizi.  Questa raccolta in genere contiene la stringa di connessione del database che potrebbe essere condivisa dai servizi durevoli.|  
+|-------------|-----------------|  
+|[\<Parametricomuni >](http://msdn.microsoft.com/en-us/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Raccolta di parametri comuni usati dai servizi. Questa raccolta in genere contiene la stringa di connessione del database che potrebbe essere condivisa dai servizi durevoli.|  
   
-## Note  
+## <a name="remarks"></a>Note  
  L'elemento `<commonParameters>` definisce qualsiasi parametro usato globalmente tra più servizi, ad esempio `ConnectionString` quando si usa <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
   
  È possibile consentire a servizi che eseguono il commit di batch di lavoro su archivi di persistenza, ad esempio <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> e <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, di ritentare la transazione usando il parametro `EnableRetries`, come illustrato nell'esempio seguente:  
   
-```  
+```xml  
 <WorkflowRuntime Name="SampleApplication" UnloadOnIdle="false">  
     <commonParameters>  
         <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />  
@@ -66,24 +76,24 @@ Specifica una coppia nome\/valore di parametri che vengono usati globalmente tra
 </WorkflowRuntime>  
 ```  
   
- Si noti che il parametro `EnableRetries` può essere impostato su un livello globale \(come illustrato nella sezione *CommonParameters* \) o per servizi individuali che supportano `EnableRetries` \(come illustrato nella sezione *Servizi*\).  
+ Si noti che il `EnableRetries` parametro può essere impostato su un livello globale (come illustrato nel *Parametricomuni* sezione) o per servizi individuali che supportano `EnableRetries` (come illustrato nel *servizi*sezione).  
   
- Per altre informazioni sull'utilizzo di un file di configurazione per il controllo del comportamento di un oggetto <xref:System.Workflow.Runtime.WorkflowRuntime> di un'applicazione host di Windows Workflow Foundation, vedere [Workflow Configuration Files](http://msdn.microsoft.com/it-it/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+ Per ulteriori informazioni sull'utilizzo di un file di configurazione per controllare il comportamento di un <xref:System.Workflow.Runtime.WorkflowRuntime> oggetto di un'applicazione host di Windows Workflow Foundation, vedere [i file di configurazione del flusso di lavoro](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```xml  
 <commonParameters>  
    <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;"/>  
    <add name="EnableRetries" value="true"/>  
 </commonParameters>  
 ```  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>   
- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>   
- <xref:System.Workflow.Runtime.WorkflowRuntime>   
- <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>   
- <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>   
- [Workflow Configuration Files](http://msdn.microsoft.com/it-it/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)   
- [\<commonParameters\>](http://msdn.microsoft.com/it-it/d0e1e6fc-985a-4713-b7da-194e30dfab4c)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
+ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
+ <xref:System.Workflow.Runtime.WorkflowRuntime>  
+ <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
+ <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
+ [File di configurazione del flusso di lavoro](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
+ [\<Parametricomuni >](http://msdn.microsoft.com/en-us/d0e1e6fc-985a-4713-b7da-194e30dfab4c)

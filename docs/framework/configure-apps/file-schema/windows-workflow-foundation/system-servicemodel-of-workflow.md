@@ -1,31 +1,34 @@
 ---
-title: "&lt;system.serviceModel&gt; del flusso di lavoro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;System. ServiceModel&gt; del flusso di lavoro'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 97247abe629d12b6c60d8157786b9b82e9e14f4b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;system.serviceModel&gt; del flusso di lavoro
+# <a name="ltsystemservicemodelgt-of-workflow"></a>&lt;System. ServiceModel&gt; del flusso di lavoro
 Contenuto della sezione di configurazione sono contenuti tutti gli elementi di configurazione del flusso di lavoro.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
-  
+```xml  
 <system.ServiceModel>  
   <behaviors>  
     <serviceBehaviors>  
     <behavior name="String">  
-      <bufferReceive maxPendingMessagesPerChannel=”Integer” />  
+      <bufferReceive maxPendingMessagesPerChannel="Integer" />  
       <etwTracking profileName="String" />  
      <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
         <channelSettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
@@ -44,14 +47,14 @@ Contenuto della sezione di configurazione sono contenuti tutti gli elementi di c
     </behavior>  
     </serviceBehaviors>  
   </behaviors>  
-  <tracking>    
+  <tracking>    
      <participants>   
       <add name="String"   
            profileName="String"  
            type="String" />   
      </participants>   
-    <trackingProfile name="String">  
-      <workflow activityDefinitionId="String">  
+    <trackingProfile name="String">  
+      <workflow activityDefinitionId="String">  
           <activityScheduledQueries>  
              <activityScheduledQuery activityName="String"  
                  childActivityName="String"/>  
@@ -83,34 +86,34 @@ Contenuto della sezione di configurazione sono contenuti tutti gli elementi di c
                  faultHandlerActivityName="String"/>  
           </faultPropagationQueries>  
          <workflowInstanceQueries>  
-            <workflowInstanceQuery>  
-              <states>  
-                 <state name="String"/>  
-              </states>  
-          </workflowInstanceQuery>  
+            <workflowInstanceQuery>  
+              <states>  
+                 <state name="String"/>  
+              </states>  
+          </workflowInstanceQuery>  
         </workflowInstanceQueries>  
-      </workflow>  
-    </trackingProfile>          
-   </profiles>  
+      </workflow>  
+    </trackingProfile>          
+   </profiles>  
   </tracking>  
 </system.ServiceModel>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
- None  
+### <a name="attributes"></a>Attributi  
+ Nessuna  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<behaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|Contenuto della sezione viene definita la raccolta **serviceBehaviors**.  Ogni elemento della raccolta definisce elementi di comportamento utilizzati dai servizi.  Ogni elemento di comportamento è identificato dal relativo attributo **name** univoco.|  
-|[\<tracking\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Rappresenta una sezione di configurazione per la definizione delle impostazioni di rilevamento di un servizio flusso di lavoro.<br /><br /> Per altre informazioni sul rilevamento del flusso di lavoro e sulla relativa configurazione, vedere [Rilevamento e traccia del flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md) e [Configurazione del rilevamento per un flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation//configuring-tracking-for-a-workflow.md).|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|\<configuration\>|Elemento radice di tutti gli elementi di configurazione contenuti in un file di configurazione .NET.|
+|-------------|-----------------|  
+|[\<i comportamenti >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|Questa sezione definisce il **serviceBehaviors** insieme.  Ogni elemento della raccolta definisce elementi di comportamento utilizzati dai servizi. Ogni elemento di comportamento è identificato dal relativo univoco **nome** attributo.|  
+|[\<rilevamento >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Rappresenta una sezione di configurazione per la definizione delle impostazioni di rilevamento di un servizio flusso di lavoro.<br /><br /> Per altre informazioni, vedere rilevamento del flusso di lavoro e la relativa configurazione, vedere [flusso di lavoro rilevamento e traccia](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) e [configurazione del rilevamento per un flusso di lavoro](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
+  
+### <a name="parent-elements"></a>Elementi padre  
+  
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|\<configuration>|Elemento radice di tutti gli elementi di configurazione contenuti in un file di configurazione .NET.|

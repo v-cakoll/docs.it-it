@@ -1,26 +1,22 @@
 ---
-title: Ricerca di testo nei documenti di Word (Visual Basic) | Documenti di Microsoft
+title: Ricerca di testo nei documenti di Word (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b4a71f961d39d0cf34922ee3bf498e89a1288995
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 4907aacfae333544448da399f0fd7169a36fc505
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Ricerca di testo nei documenti di Word (Visual Basic)
 In questo argomento le query precedenti vengono estese in modo da individuare tutte le occorrenze di una stringa nel documento.  
@@ -28,9 +24,9 @@ In questo argomento le query precedenti vengono estese in modo da individuare tu
 ## <a name="example"></a>Esempio  
  In questo esempio viene elaborato un documento WordprocessingML per individuare tutte le occorrenze di una stringa di testo specifica. A tale scopo, viene usata una query per ricercare la stringa "Hello". Questo esempio si basa su esempi precedenti di questa esercitazione. La nuova query è indicata nei commenti del codice riportato di seguito.  
   
- Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [la creazione di origine documento Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Per istruzioni sulla creazione del documento di origine per questo esempio, vedere [l'origine documento Office Open XML (Visual Basic) di creazione](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- In questo esempio vengono usate classi dell'assembly WindowsBase Utilizza i tipi di <xref:System.IO.Packaging?displayProperty=fullName>dello spazio dei nomi.</xref:System.IO.Packaging?displayProperty=fullName>  
+ In questo esempio vengono usate classi dell'assembly WindowsBase e i tipi dello spazio dei nomi <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -318,9 +314,9 @@ StyleName:Code ><
 ## <a name="next-steps"></a>Passaggi successivi  
  Nella sezione successiva vengono fornite ulteriori informazioni sui documenti WordprocessingML:  
   
--   [Dettagli di Office Open XML sui documenti WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
+-   [Dettagli di Office aprire documenti WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [Refactoring tramite una funzione pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)   
- [Esecuzione posticipata e valutazione differita in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+ [Esercitazione: Manipolazione di contenuto in un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [Refactoring con una funzione pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+ [L'esecuzione posticipata e valutazione differita in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

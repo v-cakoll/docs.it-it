@@ -1,63 +1,67 @@
 ---
-title: "Disegno, posizionamento e duplicazione delle immagini in GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "disegno, immagini"
-  - "disegno, immagini raster"
-  - "GDI+, duplicazione delle immagini"
-  - "GDI+, disegno di immagini"
-  - "GDI+, posizionamento delle immagini"
-  - "immagini [Windows Form], duplicazione"
-  - "immagini [Windows Form], disegno"
-  - "immagini [Windows Form], posizionamento"
-  - "immagini raster"
+title: Disegno, posizionamento e clonazione delle immagini in GDI+
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- raster images [Windows Forms]
+- images [Windows Forms], positioning
+- drawing [Windows Forms], images
+- drawing [Windows Forms], raster images
+- images [Windows Forms], cloning
+- images [Windows Forms], drawing
+- GDI+, drawing images
+- GDI+, cloning images
+- GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a3ba716a36280d2ac08dae907abbdbe05e563dfc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Disegno, posizionamento e duplicazione delle immagini in GDI+
-È possibile utilizzare la classe <xref:System.Drawing.Bitmap> per caricare e visualizzare immagini raster e utilizzare la classe <xref:System.Drawing.Imaging.Metafile> per caricare e visualizzare immagini vettoriali.  Le classi <xref:System.Drawing.Bitmap> e <xref:System.Drawing.Imaging.Metafile> ereditano dalla classe <xref:System.Drawing.Image>.  Per visualizzare un'immagine vettoriale, sono necessari un'istanza della classe <xref:System.Drawing.Graphics> e <xref:System.Drawing.Imaging.Metafile>.  Per visualizzare un'immagine raster, sono necessari un'istanza della classe <xref:System.Drawing.Graphics> e <xref:System.Drawing.Bitmap>.  L'istanza della classe <xref:System.Drawing.Graphics> fornisce il metodo <xref:System.Drawing.Graphics.DrawImage%2A> che riceve <xref:System.Drawing.Imaging.Metafile> o <xref:System.Drawing.Bitmap> come argomento.  
+# <a name="drawing-positioning-and-cloning-images-in-gdi"></a>Disegno, posizionamento e clonazione delle immagini in GDI+
+È possibile utilizzare il <xref:System.Drawing.Bitmap> classe per caricare e visualizzare le immagini raster e si può utilizzare il <xref:System.Drawing.Imaging.Metafile> classe per caricare e visualizzare immagini vettoriali. Il <xref:System.Drawing.Bitmap> e <xref:System.Drawing.Imaging.Metafile> le classi ereditano dalla <xref:System.Drawing.Image> classe. Per visualizzare un'immagine vettoriale, sono necessari un'istanza di <xref:System.Drawing.Graphics> classe e un <xref:System.Drawing.Imaging.Metafile>. Per visualizzare un'immagine raster, sono necessari un'istanza di <xref:System.Drawing.Graphics> classe e un <xref:System.Drawing.Bitmap>. L'istanza del <xref:System.Drawing.Graphics> classe fornisce il <xref:System.Drawing.Graphics.DrawImage%2A> metodo che riceve il <xref:System.Drawing.Imaging.Metafile> o <xref:System.Drawing.Bitmap> come argomento.  
   
-## Tipi di file e duplicazione  
- Nell'esempio di codice che segue viene illustrato come costruire un oggetto <xref:System.Drawing.Bitmap> dal file Climber.jpg e visualizzare la bitmap.  Il punto di destinazione per l'angolo superiore sinistro dell'immagine, \(10, 10\), è specificato nel secondo e nel terzo parametro.  
+## <a name="file-types-and-cloning"></a>Tipi di file e la clonazione  
+ Esempio di codice seguente viene illustrato come costruire un <xref:System.Drawing.Bitmap> dal file Climber. jpg e visualizzare la bitmap. Il punto di destinazione per l'angolo superiore sinistro dell'immagine, (10, 10), specificato nel secondo e il terzo parametro.  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#11)]  
   
- Di seguito viene mostrata l'immagine.  
+ Nella figura seguente mostra l'immagine.  
   
- ![Esempio Image](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art04.png "AboutGdip03\_Art04")  
+ ![Immagine di esempio](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art04.gif "AboutGdip03_Art04")  
   
- È possibile costruire oggetti <xref:System.Drawing.Bitmap> utilizzando una vasta gamma di formati di file grafici: BMP, GIF, JPEG, EXIF, PNG, TIFF e ICON.  
+ È possibile costruire <xref:System.Drawing.Bitmap> formati di file di oggetti da una varietà di grafica: BMP, GIF, JPEG, EXIF, PNG, TIFF e ICONA.  
   
- Nell'esempio di codice che segue viene illustrato come costruire oggetti <xref:System.Drawing.Bitmap> utilizzando svariati tipi di file e visualizzare le bitmap.  
+ Esempio di codice seguente viene illustrato come costruire <xref:System.Drawing.Bitmap> degli oggetti da una varietà di tipi di file e quindi visualizzare le bitmap.  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#12)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#12)]  
   
- Nella classe <xref:System.Drawing.Bitmap> è disponibile il metodo <xref:System.Drawing.Bitmap.Clone%2A>, che consente la creazione di una copia di un oggetto <xref:System.Drawing.Bitmap> esistente.  Nel metodo <xref:System.Drawing.Bitmap.Clone%2A> è presente un parametro relativo al rettangolo di origine, che consente di specificare la porzione della bitmap originale che si desidera copiare.  Nell'esempio di codice che segue viene illustrato come creare un oggetto <xref:System.Drawing.Bitmap> tramite la duplicazione della metà superiore di un oggetto <xref:System.Drawing.Bitmap> esistente.  Vengono quindi tracciate entrambe le immagini.  
+ Il <xref:System.Drawing.Bitmap> classe fornisce un <xref:System.Drawing.Bitmap.Clone%2A> metodo che è possibile utilizzare per creare una copia di un oggetto esistente <xref:System.Drawing.Bitmap>. Il <xref:System.Drawing.Bitmap.Clone%2A> metodo ha un parametro rettangolo di origine che è possibile utilizzare per specificare la parte della bitmap originale che si desidera copiare. Esempio di codice seguente viene illustrato come creare un <xref:System.Drawing.Bitmap> clonando la metà superiore di un oggetto esistente <xref:System.Drawing.Bitmap>. Quindi vengono disegnate entrambe le immagini.  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#13)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#13)]  
   
- Di seguito vengono mostrate le due immagini.  
+ Nella figura seguente mostra le due immagini.  
   
- ![Ritaglio](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art05.png "AboutGdip03\_Art05")  
+ ![Ritaglio](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
-## Vedere anche  
- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Procedura: creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [Procedura: Creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
  [Utilizzo di immagini, bitmap, icone e metafile](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

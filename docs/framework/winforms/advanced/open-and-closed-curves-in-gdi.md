@@ -1,63 +1,67 @@
 ---
-title: "Curve aperte e chiuse in GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "curve"
-  - "curve, disegno"
-  - "curve, riempimento"
-  - "GDI+, curve"
+title: Curve aperte e chiuse in GDI+
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- curves [Windows Forms], filling
+- GDI+, curves
+- curves [Windows Forms], drawing
+- curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 14da32848978299a0d0651596bbfbfe17c2e0d53
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Curve aperte e chiuse in GDI+
-Nell'immagine seguente vengono mostrate due curve, una aperta e una chiusa.  
+# <a name="open-and-closed-curves-in-gdi"></a>Curve aperte e chiuse in GDI+
+La figura seguente mostra due curve: una aperta e una chiusa.  
   
- ![Curve aperte e chiuse](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art24.png "Aboutgdip02\_art24")  
+ ![Curve aperte e chiuse](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
   
-## Interfaccia gestita per le curve  
- Le curve chiuse dispongono di una zona interna ed è quindi possibile riempirle con un pennello.  La classe <xref:System.Drawing.Graphics> in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce i seguenti metodi per il riempimento di forme e curve chiuse: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A> e <xref:System.Drawing.Graphics.FillRegion%2A>.  Ogni volta che si chiama uno di questi metodi, è necessario passare il tipo di pennello specifico \(<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush> o <xref:System.Drawing.Drawing2D.PathGradientBrush>\) come argomento.  
+## <a name="managed-interface-for-curves"></a>Interfaccia gestita per curve  
+ Curve chiuse sono una parte interna e possono pertanto essere riempite con un pennello. Il <xref:System.Drawing.Graphics> classe [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fornisce i metodi seguenti per il riempimento di forme e curve chiuse: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, e <xref:System.Drawing.Graphics.FillRegion%2A>. Quando si chiama uno di questi metodi, è necessario passare uno dei tipi di pennello specifico (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, o <xref:System.Drawing.Drawing2D.PathGradientBrush>) come argomento.  
   
- Il metodo <xref:System.Drawing.Graphics.FillPie%2A> è correlato al metodo <xref:System.Drawing.Graphics.DrawArc%2A>.  Analogamente al metodo <xref:System.Drawing.Graphics.DrawArc%2A>, che consente di tracciare una porzione del contorno di un'ellisse, il metodo <xref:System.Drawing.Graphics.FillPie%2A> riempie una porzione dell'interno di un'ellisse.  L'esempio seguente consente di tracciare un arco e di riempire la porzione corrispondente dell'interno di un'ellisse.  
+ Il <xref:System.Drawing.Graphics.FillPie%2A> metodo è correlato al <xref:System.Drawing.Graphics.DrawArc%2A> metodo. Come il <xref:System.Drawing.Graphics.DrawArc%2A> metodo disegna una parte della struttura di un'ellisse, il <xref:System.Drawing.Graphics.FillPie%2A> metodo compila una parte all'interno di un'ellisse. Nell'esempio seguente disegna un arco e riempie la parte corrispondente all'interno dell'ellisse:  
   
  [!code-csharp[LinesCurvesAndShapes#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#21)]
  [!code-vb[LinesCurvesAndShapes#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#21)]  
   
- Nell'immagine seguente vengono mostrati l'arco e l'ellisse riempita.  
+ Nella figura seguente mostra l'arco e torta piena.  
   
- ![Curve aperte e chiuse](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art25.png "Aboutgdip02\_art25")  
+ ![Curve aperte e chiuse](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art25.gif "Aboutgdip02_art25")  
   
- Il metodo <xref:System.Drawing.Graphics.FillClosedCurve%2A> è correlato al metodo <xref:System.Drawing.Graphics.DrawClosedCurve%2A>.  Entrambi i metodi consentono di chiudere automaticamente la curva collegandone il punto finale e il punto iniziale.  L'esempio seguente consente di tracciare una curva che attraversa \(0, 0\), \(60, 20\) e \(40, 50\).  La curva viene quindi chiusa automaticamente collegando \(40, 50\) al punto iniziale \(0, 0\) e l'interno viene riempito con un colore a tinta unita.  
+ Il <xref:System.Drawing.Graphics.FillClosedCurve%2A> metodo è correlato al <xref:System.Drawing.Graphics.DrawClosedCurve%2A> metodo. Entrambi i metodi di chiudono automaticamente la curva tramite la connessione al punto finale al punto di partenza. Nell'esempio seguente viene tracciata una curva passante (0, 0), (60, 20) e (40, 50). Quindi, la curva viene chiuso automaticamente tramite la connessione (40, 50) al punto di partenza (0, 0), e l'interno viene riempito con un colore a tinta unita.  
   
  [!code-csharp[LinesCurvesAndShapes#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#22)]
  [!code-vb[LinesCurvesAndShapes#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#22)]  
   
- Il metodo <xref:System.Drawing.Graphics.FillPath%2A> consente di riempire l'interno di pezzi separati di un percorso.  Se un pezzo di percorso non costituisce una curva o una forma chiusa, il metodo <xref:System.Drawing.Graphics.FillPath%2A> chiude automaticamente tale pezzo del percorso prima di riempirlo.  L'esempio seguente consente di tracciare e riempire un percorso costituito da un arco, una spline di tipo Cardinal, una stringa e una torta:  
+ Il <xref:System.Drawing.Graphics.FillPath%2A> metodo riempie l'area interna di pezzi di percorso separati. Se una parte di un percorso non costituisce una curva chiusa o una forma, il <xref:System.Drawing.Graphics.FillPath%2A> metodo chiude automaticamente tale parte del percorso prima dell'inserimento. Nell'esempio seguente disegna e riempie un percorso costituito da un arco, una spline di tipo cardinal, una stringa e un grafico a torta:  
   
  [!code-csharp[LinesCurvesAndShapes#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#23)]
  [!code-vb[LinesCurvesAndShapes#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#23)]  
   
- Nell'immagine seguente viene mostrato i percorso con e senza il riempimento a tinta unita.  Si noti che tramite il metodo <xref:System.Drawing.Graphics.DrawPath%2A> sono stati tracciati i contorni del testo della stringa senza riempimento.  Per riempire l'interno dei caratteri della stringa, è necessario utilizzare il metodo <xref:System.Drawing.Graphics.FillPath%2A>.  
+ Nella figura seguente mostra il percorso con e senza riempimento a tinta unita. Nota che il testo nella stringa di è descritta, ma non è compilato, per il <xref:System.Drawing.Graphics.DrawPath%2A> metodo. È il <xref:System.Drawing.Graphics.FillPath%2A> metodo riempire i caratteri nella stringa.  
   
- ![Stringa in un percorso](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art26.png "Aboutgdip02\_art26")  
+ ![Stringa in un percorso](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art26.gif "Aboutgdip02_art26")  
   
-## Vedere anche  
- <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=fullName>   
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- <xref:System.Drawing.Point?displayProperty=fullName>   
- [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Procedura: creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ <xref:System.Drawing.Point?displayProperty=nameWithType>  
+ [Linee, curve e forme](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Procedura: Creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
  [Costruzione e creazione di percorsi](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)

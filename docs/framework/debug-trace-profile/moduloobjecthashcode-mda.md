@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - managed debugging assistants (MDAs), hashcode modulus
 - Modulo object hash code
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - GetHashCode method
 - modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b9732af6c84a2f7af70512ea9ce73a8afc74bbbc
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1a3062365f41247c579f5420497946128b183a88
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode (MDA)
 L'assistente al debug gestito `moduloObjectHashcode` modifica il comportamento della classe <xref:System.Object> per eseguire un'operazione modulo sul codice hash restituito dal metodo <xref:System.Object.GetHashCode%2A>. Il modulo predefinito per questo assistente al debug gestito è 1, che fa sì che <xref:System.Object.GetHashCode%2A> restituisca 0 per tutti gli oggetti.  
@@ -54,7 +47,7 @@ L'assistente al debug gestito `moduloObjectHashcode` modifica il comportamento d
  L'ordine di enumerazione da una <xref:System.Collections.Hashtable> può variare tra le diverse versioni di runtime se cambia l'algoritmo usato per calcolare i codici hash per la chiave. Per verificare se il programma ha una dipendenza dall'ordine di enumerazione delle chiavi o dei valori da una tabella hash, è possibile abilitare questo assistente al debug gestito.  
   
 ## <a name="resolution"></a>Risoluzione  
- Non usare mai codici hash in sostituzione all'identità dell'oggetto. Implementare l'override del metodo <xref:System.Object.Equals%2A?displayProperty=fullName> per non confrontare i codici hash.  
+ Non usare mai codici hash in sostituzione all'identità dell'oggetto. Implementare l'override del metodo <xref:System.Object.Equals%2A?displayProperty=nameWithType> per non confrontare i codici hash.  
   
  Non creare dipendenze dall'ordine di enumerazione delle chiavi o dei valori nelle tabelle hash.  
   
@@ -76,7 +69,6 @@ L'assistente al debug gestito `moduloObjectHashcode` modifica il comportamento d
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Object.GetHashCode%2A?displayProperty=fullName>   
- <xref:System.Object.Equals%2A?displayProperty=fullName>   
+ <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>  
+ <xref:System.Object.Equals%2A?displayProperty=nameWithType>  
  [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

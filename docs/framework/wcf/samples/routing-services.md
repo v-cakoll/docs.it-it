@@ -1,26 +1,29 @@
 ---
-title: "Servizi di routing | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Servizi di routing
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a430b4c-46eb-4d15-afbc-8834f0e985ab
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 25a3aab2e9470b9d9e96e882b90ed154c4e89558
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Servizi di routing
-In questa sezione sono inclusi esempi che illustrano l'utilizzo del router di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+# <a name="routing-services"></a>Servizi di routing
+Contenuto della sezione sono inclusi esempi che illustrano l'utilizzo del router di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## In questa sezione  
- [Hello World con il servizio di routing](../../../../docs/framework/wcf/samples/hello-world-with-the-routing-service.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Hello World con il servizio di Routing](../../../../docs/framework/wcf/samples/hello-world-with-the-routing-service.md)  
  Viene illustrato come utilizzare il router di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Bridging e gestione degli errori](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md)  

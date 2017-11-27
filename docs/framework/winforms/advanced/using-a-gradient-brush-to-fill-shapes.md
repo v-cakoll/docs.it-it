@@ -1,49 +1,50 @@
 ---
-title: "Utilizzo di un pennello a sfumatura per il riempimento di forme | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pennelli, pennelli per sfumature"
-  - "esempi [Windows Form], pennelli per sfumature"
-  - "pennelli per sfumature"
+title: Utilizzo di un pennello a sfumatura per il riempimento di forme
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- brushes [Windows Forms], gradient brushes
+- gradient brushes
+- examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5a1c4ab7c2ee6f7164b6158dcb4ca4721be12650
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Utilizzo di un pennello a sfumatura per il riempimento di forme
-È possibile utilizzare un pennello a sfumatura per riempire una forma con un colore che si modifica gradualmente.  È possibile ad esempio utilizzare una sfumatura orizzontale per riempire una forma con colori che si modificano gradualmente passando dal margine sinistro della forma al margine destro.  Si pensi a un rettangolo che sia di colore nero al margine sinistro e di colore rosso al margine destro, ovvero avente componenti rosso, verde e blu pari a 0, 0, 0 in corrispondenza del margine sinistro e 255, 0, 0 in corrispondenza di quello destro.  Se il rettangolo è largo 256 il componente rosso di un dato pixel sarà maggiore del componente rosso del pixel a sinistra del primo.  Il pixel più a sinistra in una riga ha componenti cromatiche \(0, 0, 0\), il secondo \(1, 0, 0\), il terzo \(2, 0, 0\) e così via, fino al pixel più a destra, che ha componenti cromatiche \(255, 0, 0\).  Questi valori di colore interpolati formano la sfumatura di colore.  
+# <a name="using-a-gradient-brush-to-fill-shapes"></a>Utilizzo di un pennello a sfumatura per il riempimento di forme
+È possibile utilizzare un pennello a sfumatura per riempire una forma con un colore gradualmente. Ad esempio, è possibile utilizzare una sfumatura orizzontale per riempire una forma con colore che cambia gradualmente man mano che si sposta dal bordo sinistro della forma al bordo destro. Si supponga di un rettangolo con un bordo sinistro di colore nero (rappresentato da componenti rosso, verde e blu 0, 0, 0) e un diritto margine (rappresentato da 255, 0, 0). Se il rettangolo è 256 pixel in larghezza, il componente rosso di un determinato pixel sarà una maggiore il componente rosso di pixel alla sua sinistra. Il pixel più a sinistra in una riga ha componenti di colore (0, 0, 0), il secondo pixel è (1, 0, 0), il terzo pixel (2, 0, 0) e così via, fino a ottenere il pixel più a destra, che include componenti di colore (255, 0, 0). Questi valori di colore interpolata è costituiscono la sfumatura di colore.  
   
- Il colore di una sfumatura lineare cambia spostandosi in orizzontale, in verticale o in parallelo lungo una linea inclinata specificata.  Il colore di una sfumatura percorso cambia spostandosi verso l'interno e i limiti di un percorso.  È possibile personalizzare le sfumature percorso per ottenere una notevole varietà di effetti.  
+ Sfumatura lineare cambia colore quando si sposta orizzontalmente, verticalmente o parallela a una determinata riga inclinata. Quando si sposta sulla parte interna e limiti di un percorso, una sfumatura percorso cambia colore. È possibile personalizzare i gradienti del percorso per raggiungere una vasta gamma di effetti.  
   
- Nell'illustrazione che segue si mostra un rettangolo riempito con un pennello a sfumatura lineare e un'ellisse riempita con un pennello a sfumatura a percorso.  
+ Nella figura seguente viene illustrato un rettangolo riempito con pennello sfumato lineare e un'ellisse riempita con un pennello a sfumatura.  
   
  ![Sfumatura](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")  
   
-## In questa sezione  
- [Procedura: creare una sfumatura lineare](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
- Mostra come creare una sfumatura lineare utilizzando la classe <xref:System.Drawing.Drawing2D.LinearGradientBrush>.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Procedura: Creare una sfumatura lineare](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
+ Viene illustrato come creare una sfumatura lineare utilizzando la <xref:System.Drawing.Drawing2D.LinearGradientBrush> classe.  
   
- [Procedura: creare una sfumatura percorso](../../../../docs/framework/winforms/advanced/how-to-create-a-path-gradient.md)  
- Descrive come creare una sfumatura a percorso utilizzando la classe <xref:System.Drawing.Drawing2D.PathGradientBrush>.  
+ [Procedura: Creare una sfumatura percorso](../../../../docs/framework/winforms/advanced/how-to-create-a-path-gradient.md)  
+ Viene descritto come creare una sfumatura di percorso utilizzando il <xref:System.Drawing.Drawing2D.PathGradientBrush> classe.  
   
- [Procedura: applicare la correzione gamma a una sfumatura](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
- Illustra come utilizzare la correzione di gamma con un pennello a sfumatura.  
+ [Procedura: Applicare la correzione gamma a una sfumatura](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
+ Viene illustrato come utilizzare la correzione gamma con un pennello sfumato.  
   
-## Riferimenti  
- <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=fullName>  
- Descrive la classe e contiene i collegamenti a tutti i relativi membri.  
+## <a name="reference"></a>Riferimento  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>  
+ Contiene una descrizione di questa classe e include collegamenti a tutti i relativi membri.  
   
- <xref:System.Drawing.Drawing2D.PathGradientBrush?displayProperty=fullName>  
- Descrive la classe e contiene i collegamenti a tutti i relativi membri.
+ <xref:System.Drawing.Drawing2D.PathGradientBrush?displayProperty=nameWithType>  
+ Contiene una descrizione di questa classe e include collegamenti a tutti i relativi membri.

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - suspending threads
 - DangerousThreadingAPI MDA
@@ -23,19 +17,18 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd0d8b8a4a96e1e92aa8cf58ee49adf7b51857ab
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a84fd957800f0cedcd92b36929721b4d0d51b7fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dangerousthreadingapi-mda"></a>MDA dangerousThreadingAPI
-L'assistente al debug gestito `dangerousThreadingAPI` viene attivato quando il metodo <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName> viene chiamato per un thread diverso da quello attuale.  
+L'assistente al debug gestito `dangerousThreadingAPI` viene attivato quando il metodo <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> viene chiamato per un thread diverso da quello attuale.  
   
 ## <a name="symptoms"></a>Sintomi  
  Un'applicazione non risponde o si blocca per un tempo imprecisato. È possibile che i dati del sistema e dell'applicazione rimangano in uno stato non prevedibile temporaneamente o anche dopo la chiusura di un'applicazione. Alcune operazioni non vengono completate come previsto.  
@@ -83,7 +76,6 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.Thread>   
- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ <xref:System.Threading.Thread>  
+ [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [Istruzione lock](~/docs/csharp/language-reference/keywords/lock-statement.md)
-

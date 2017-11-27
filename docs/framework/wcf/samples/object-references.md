@@ -1,31 +1,34 @@
 ---
-title: "Riferimenti a oggetti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Riferimenti a oggetti
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 643cdf80900a02f269887aa6c95832429060fc8d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Riferimenti a oggetti
-In questo esempio viene illustrato come passare oggetti mediante riferimenti tra server e client.L'esempio utilizza *social network* fittizie.Una social network è costituita da una classe `Person` che contiene un elenco di amici in cui ogni amico è un'istanza della classe `Person`, con il proprio elenco di amici.Viene creato un grafico degli oggetti.Il servizio espone le operazioni in tali social network.  
+# <a name="object-references"></a>Riferimenti a oggetti
+In questo esempio viene illustrato come passare oggetti mediante riferimenti tra server e client. L'esempio utilizza simulato *social network*. Una social network è costituita da una classe `Person` che contiene un elenco di amici in cui ogni amico è un'istanza della classe `Person`, con il proprio elenco di amici. Viene creato un grafico degli oggetti. Il servizio espone le operazioni in tali social network.  
   
- In questo esempio, il servizio è ospitato da Internet Information Services \(IIS\) e il client è un'applicazione console \(.exe\).  
+ In questo esempio, il servizio è ospitato da Internet Information Services (IIS) e il client è un'applicazione console (.exe).  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine dell'argomento.  
+>  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
-## Servizio  
- Alla classe `Person` è applicato l'attributo <xref:System.Runtime.Serialization.DataContractAttribute>, con il campo <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> impostato su `true` per dichiararlo come tipo di riferimento.A tutte le proprietà è applicato l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute>.  
+## <a name="service"></a>Servizio  
+ Alla classe `Person` è applicato l'attributo <xref:System.Runtime.Serialization.DataContractAttribute>, con il campo <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> impostato su `true` per dichiararlo come tipo di riferimento. A tutte le proprietà è applicato l'attributo <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
 ```  
 [DataContract(IsReference=true)]  
@@ -85,7 +88,7 @@ public List<Person> GetMutualFriends(Person p)
 }  
 ```  
   
- L'operazione `GetCommonFriends` accetta un elenco di tipo `Person`.È previsto che l'elenco contenga due oggetti `Person`.L'operazione restituisce un elenco di oggetti `Person` inclusi negli elenchi `friends` di entrambi gli oggetti `Person` nell'elenco di input.  
+ L'operazione `GetCommonFriends` accetta un elenco di tipo `Person`. È previsto che l'elenco contenga due oggetti `Person`. L'operazione restituisce un elenco di oggetti `Person` inclusi negli elenchi `friends` di entrambi gli oggetti `Person` nell'elenco di input.  
   
 ```  
 public List<Person> GetCommonFriends(List<Person> people)  
@@ -98,28 +101,28 @@ public List<Person> GetCommonFriends(List<Person> people)
 }  
 ```  
   
-## Client  
- Il proxy del client viene creato utilizzando la funzionalità **Aggiungi riferimento al servizio** di [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+## <a name="client"></a>Client  
+ Il proxy client viene creato utilizzando il **Aggiungi riferimento al servizio** funzionalità di [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
   
- Viene creata una social network costituita da cinque oggetti `Person`.Il client chiama ognuno dei tre metodi nel servizio.  
+ Viene creata una social network costituita da cinque oggetti `Person`. Il client chiama ognuno dei tre metodi nel servizio.  
   
-#### Per impostare, compilare ed eseguire l'esempio  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Verificare di avere eseguito [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
-## Vedere anche  
- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
  [Riferimenti a oggetti interoperativi](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

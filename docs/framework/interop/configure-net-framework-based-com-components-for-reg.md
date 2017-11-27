@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - components [.NET Framework], manifest
 - application manifests [.NET Framework]
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cb323bfdff40aafa65c050d4d42f66047d63f650
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d373d6abc82e482a3b1df873295573f0e34eeda2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Procedura: configurare i componenti COM basati su .NET Framework per l'attivazione senza registrazione
 L'attivazione senza registrazione per i componenti basati su .NET Framework risulta solo leggermente più complessa rispetto a quella per i componenti COM. La configurazione richiede due manifesti:  
@@ -52,7 +45,7 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     Per informazioni sugli elementi del manifesto e sui relativi attributi, cercare "riferimento manifesto applicazione" in MSDN Library.  
+     Per informazioni sugli elementi del manifesto e i relativi attributi, vedere [manifesti dell'applicazione](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx).  
   
 3.  Identificare il proprietario del manifesto. Nell'esempio seguente il proprietario del file manifesto è `myComApp` versione 1.  
   
@@ -92,7 +85,7 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
   
 5.  Salvare il file manifesto assegnando un nome a questo. Il nome di un manifesto dell'applicazione è costituito dal nome dell'eseguibile dell'assembly seguito dall'estensione manifest. Il nome file del manifesto dell'applicazione per myComApp.exe, ad esempio, è myComApp.exe.manifest.  
   
- Un manifesto dell'applicazione può essere installato nella stessa directory dell'applicazione COM. In alternativa, può essere aggiunto come risorsa al file EXE dell'applicazione. Per altre informazioni, cercare "assembly side-by-side" in MSDN Library.  
+ Un manifesto dell'applicazione può essere installato nella stessa directory dell'applicazione COM. In alternativa, può essere aggiunto come risorsa al file EXE dell'applicazione. Per ulteriori informazioni, per ulteriori informazioni, vedere [sugli assembly Side-by-Side](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).  
   
 #### <a name="to-create-a-component-manifest"></a>Per creare un manifesto del componente  
   
@@ -188,8 +181,7 @@ L'attivazione senza registrazione per i componenti basati su .NET Framework risu
      Anche in questo caso, `myresource.res` rappresenta il nome del file di risorse contenente la risorsa incorporata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Interoperabilità COM senza registrazione](../../../docs/framework/interop/registration-free-com-interop.md)   
- [Requisiti per l'interoperabilità COM senza registrazione](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)   
- [Configurazione di componenti COM per l'attivazione senza registrazione](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)   
+ [Interoperabilità COM senza registrazione](../../../docs/framework/interop/registration-free-com-interop.md)  
+ [Requisiti per l'interoperabilità COM senza registrazione](http://msdn.microsoft.com/en-us/0c43bc57-eecf-4e6c-8114-490141cce4da)  
+ [Configurazione di componenti COM per l'attivazione senza registrazione](http://msdn.microsoft.com/en-us/bfe9b02f-d964-4784-960e-a1f94692fbfe)  
  [Registration-Free Activation of .NET-Based Components: A Walkthrough](http://go.microsoft.com/fwlink/?LinkId=158812) (Procedura dettagliata per l'attivazione senza registrazione di componenti basati su .NET)
-

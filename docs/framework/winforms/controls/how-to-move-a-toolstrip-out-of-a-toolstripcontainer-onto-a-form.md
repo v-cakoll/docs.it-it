@@ -1,45 +1,46 @@
 ---
-title: "Procedura: spostare ToolStrip da ToolStripContainer a un form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ToolStrip (controllo) [Windows Form], relazione padre-figlio con i form"
-  - "Windows Form, relazione padre-figlio tra ToolStrip (controlli)"
+title: 'Procedura: spostare ToolStrip da ToolStripContainer a un form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], parenting to forms
+- Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02d1e4b105329f3d346168123debbbf73e17b9eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: spostare ToolStrip da ToolStripContainer a un form
-Utilizzare la seguente procedura per spostare un <xref:System.Windows.Forms.ToolStrip> da <xref:System.Windows.Forms.ToolStripContainer> in un form.  
+# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Procedura: spostare ToolStrip da ToolStripContainer a un form
+Utilizzare la procedura seguente per spostare un <xref:System.Windows.Forms.ToolStrip> da un <xref:System.Windows.Forms.ToolStripContainer> in un form.  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Per spostare ToolStrip da ToolStripContainer a un form  
+### <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Per spostare ToolStrip da ToolStripContainer a un form  
   
 1.  Selezionare <xref:System.Windows.Forms.ToolStrip>.  
   
-2.  Tagliare <xref:System.Windows.Forms.ToolStrip> premendo CTRL \+ X o facendo clic con il tasto destro del mouse su <xref:System.Windows.Forms.ToolStrip> e scegliendo **Taglia** dal menu di scelta rapida.  
+2.  Taglia il <xref:System.Windows.Forms.ToolStrip> premendo CTRL + X o destro di <xref:System.Windows.Forms.ToolStrip> e scegliere **Taglia** dal menu di scelta rapida.  
   
 3.  Selezionare il form.  
   
-4.  Incollare <xref:System.Windows.Forms.ToolStrip> premendo CTRL \+ V oppure scegliendo **Incolla** dal menu **Modifica**.  
+4.  Incolla il <xref:System.Windows.Forms.ToolStrip> premendo CTRL + V oppure scegliere **Incolla** dal **modifica** menu.  
   
-5.  Impostare la proprietà <xref:System.Windows.Forms.ToolStrip.Dock%2A> del controllo <xref:System.Windows.Forms.ToolStrip> su **Superiore**.  
+5.  Impostare il <xref:System.Windows.Forms.ToolStrip.Dock%2A> proprietà del <xref:System.Windows.Forms.ToolStrip> a **Top**.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStripContainer>   
- [Cenni preliminari sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStripContainer>  
+ [Panoramica sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

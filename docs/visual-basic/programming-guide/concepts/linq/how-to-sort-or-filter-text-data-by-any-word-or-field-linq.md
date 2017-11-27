@@ -1,35 +1,27 @@
 ---
-title: 'Procedura: ordinare o filtrare i dati di testo da qualsiasi parola o campo (LINQ) (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 541da47893217e2915a6b001d1141eaadfa9e9e8
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 19224bf51c95acdccbeb019631fdc884231610b4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Procedura: ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (Visual Basic)
-Nell'esempio seguente viene illustrato come ordinare le righe di testo strutturati, ad esempio valori delimitati da virgole, da qualsiasi campo nella riga. Il campo può essere specificato in modo dinamico in fase di esecuzione. Si supponga che i campi in scores rappresentano il numero di ID dello studente, seguito da una serie di quattro punteggi del test.  
+L'esempio seguente illustra come ordinare righe di testo strutturato, ad esempio valori delimitati da virgole, in base a un qualsiasi campo. Il campo può essere specificato in modo dinamico in runtime. Si supponga che i campi in scores.csv rappresentino il numero ID di uno studente, seguito da una serie di quattro punteggi di test.  
   
-### <a name="to-create-a-file-that-contains-data"></a>Per creare un file che contiene i dati  
+### <a name="to-create-a-file-that-contains-data"></a>Per creare un file che contenga i dati  
   
 1.  Copiare i dati di scores dall'argomento [procedura: unire contenuto da diversi file (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) e salvarlo nella cartella della soluzione.  
   
@@ -86,10 +78,10 @@ End Class
 ' 115, 35, 72, 91, 70  
 ```  
   
- In questo esempio viene inoltre illustrato come restituire una variabile di query da una funzione.  
+ Questo esempio viene illustrato come restituire una variabile di query da una funzione.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+ Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

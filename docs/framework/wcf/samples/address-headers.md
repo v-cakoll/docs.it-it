@@ -1,35 +1,38 @@
 ---
-title: "Intestazioni di indirizzo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Intestazioni di indirizzo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 19a7291ce13221e85b49c6ef97c6b375b8b71014
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Intestazioni di indirizzo
+# <a name="address-headers"></a>Intestazioni di indirizzo
 Nell'esempio delle intestazioni di indirizzo viene illustrato come i client possano passare parametri di riferimento a un servizio utilizzando [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- La specifica WS\-Addressing definisce la nozione di un riferimento dell'endpoint come un modo di indirizzare un particolare endpoint servizio Web.In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i riferimenti all'endpoint vengono modellati utilizzando la classe `EndpointAddress`: `EndpointAddress` è il tipo del campo Indirizzo della classe `ServiceEndpoint`.  
+ La specifica WS-Addressing definisce la nozione di un riferimento dell'endpoint come un modo di indirizzare un particolare endpoint servizio Web. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], i riferimenti all'endpoint vengono modellati utilizzando la classe `EndpointAddress`: `EndpointAddress` è il tipo del campo Indirizzo della classe `ServiceEndpoint`.  
   
- Parte del modello di riferimento all'endpoint è che ogni riferimento può portare alcuni parametri di riferimento che aggiungono informazioni di identificazione aggiuntive.In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], questi parametri di riferimento vengono modellati come istanze della classe `AddressHeader`.  
+ Parte del modello di riferimento all'endpoint è che ogni riferimento può portare alcuni parametri di riferimento che aggiungono informazioni di identificazione aggiuntive. In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], questi parametri di riferimento vengono modellati come istanze della classe `AddressHeader`.  
   
- In questo esempio, il client aggiunge un parametro di riferimento a `EndpointAddress` dell'endpoint client.Il servizio cerca questo parametro di riferimento e ne utilizza il valore nella logica dell'operazione del servizio "Hello".  
+ In questo esempio, il client aggiunge un parametro di riferimento a `EndpointAddress` dell'endpoint client. Il servizio cerca questo parametro di riferimento e ne utilizza il valore nella logica dell'operazione del servizio "Hello".  
   
-## Client  
- Il client deve aggiungere un `AddressHeader` al `EndpointAddress` del `ServiceEndpoint` per inviare un parametro di riferimento.Poiché la classe `EndpointAddress` è immutabile, è necessario modificare l'indirizzo endpoint utilizzando la classe `EndpointAddressBuilder`.Nel codice seguente il client viene inizializzato per inviare un parametro di riferimento come parte del messaggio.  
+## <a name="client"></a>Client  
+ Il client deve aggiungere un `AddressHeader` al `EndpointAddress` del `ServiceEndpoint` per inviare un parametro di riferimento. Poiché la classe `EndpointAddress` è immutabile, è necessario modificare l'indirizzo endpoint utilizzando la classe `EndpointAddressBuilder`. Nel codice seguente il client viene inizializzato per inviare un parametro di riferimento come parte del messaggio.  
   
 ```  
 HelloClient client = new HelloClient();  
@@ -41,13 +44,13 @@ builder.Headers.Add(header);
 client.Endpoint.Address = builder.ToEndpointAddress();  
 ```  
   
- Il codice crea un `EndpointAddressBuilder` utilizzando il `EndpointAddress` originale come valore iniziale.Viene quindi aggiunta una nuova intestazione di indirizzo. La chiamata a `CreateAddressHeadercreates` crea un'intestazione con un nome, uno spazio dei nomi e un valore particolari.In questo esempio il valore è "John."Una volta aggiunta l'intestazione al generatore, il metodo `ToEndpointAddress()` converte nuovamente il generatore \(mutevole\) in un indirizzo endpoint \(immutabile\), il quale viene assegnato di nuovo al campo Indirizzo dell'endpoint client.  
+ Il codice crea un `EndpointAddressBuilder` utilizzando il `EndpointAddress` originale come valore iniziale. Viene quindi aggiunta una nuova intestazione di indirizzo. La chiamata a `CreateAddressHeadercreates` crea un'intestazione con un nome, uno spazio dei nomi e un valore specifici. In questo esempio il valore è "John." Una volta aggiunta l'intestazione al generatore, il metodo `ToEndpointAddress()` converte nuovamente il generatore (mutevole) in un indirizzo endpoint (immutabile), il quale viene assegnato di nuovo al campo Indirizzo dell'endpoint client.  
   
  Quando il client chiama `Console.WriteLine(client.Hello());`, il servizio è in grado di ottenere il valore di questo parametro di indirizzo, come si può vedere nell'output risultante del client.  
   
  `Hello, John`  
   
-## Server  
+## <a name="server"></a>Server  
  L'implementazione dell'operazione del servizio `Hello()` utilizza il `OperationContext` corrente per controllare i valori delle intestazioni nel messaggio in arrivo.  
   
 ```  
@@ -73,23 +76,23 @@ OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);
 return "Hello, " + id;  
 ```  
   
- Il codice scorre tutte le intestazioni nel messaggio in arrivo, cercando intestazioni che sono parametri di riferimento dotati del nome particolare.Una volta individuato il parametro, il codice legge il valore del parametro e lo archivia nella variabile "id".  
+ Il codice scorre tutte le intestazioni nel messaggio in arrivo, cercando intestazioni che sono parametri di riferimento dotati del nome particolare. Una volta individuato il parametro, il codice legge il valore del parametro e lo archivia nella variabile "id".  
   
-#### Per impostare, compilare ed eseguire l'esempio  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Client\AddressHeaders`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\AddressHeaders`  
   
-## Vedere anche
+## <a name="see-also"></a>Vedere anche

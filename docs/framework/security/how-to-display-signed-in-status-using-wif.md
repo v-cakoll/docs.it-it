@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 494e67b39187a2a38f29f994e17051430d90f708
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Procedura: Visualizzare lo stato di accesso effettuato con WIF
 ## <a name="applies-to"></a>Si applica a  
@@ -165,4 +163,3 @@ ms.lasthandoff: 08/21/2017
 1.  In Visual Studio premere **F5** per avviare il debug dell'applicazione. Se non vengono rilevati errori, verrà aperta una nuova finestra del browser.  
   
 2.  Si può notare che il browser reindirizza automaticamente la richiesta al servizio token di sicurezza e quindi apre la pagina Default.aspx. Se WIF è configurato correttamente, nel sito dovrebbe essere visualizzato il messaggio seguente: **"You are signed in"** (Accesso eseguito).
-

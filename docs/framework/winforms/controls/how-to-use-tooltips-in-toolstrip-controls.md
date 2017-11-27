@@ -1,52 +1,53 @@
 ---
-title: "Procedura: utilizzare descrizioni comandi nei controlli ToolStrip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "barre degli strumenti [Windows Form], aggiunta di descrizioni comandi"
-  - "ToolStrip (controllo) [Windows Form], aggiunta di descrizioni comandi"
-  - "descrizioni comandi [Windows Form], aggiunta"
+title: 'Procedura: utilizzare descrizioni comandi nei controlli ToolStrip'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], adding tooltips
+- toolbars [Windows Forms], adding tooltips
+- tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bc52dd1b629829564532fd93650737f51e5d7f24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: utilizzare descrizioni comandi nei controlli ToolStrip
-È possibile visualizzare una classe <xref:System.Windows.Forms.ToolTip> per il controllo <xref:System.Windows.Forms.ToolStrip> desiderato impostando la proprietà <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> del controllo su `true`.  
+# <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Procedura: utilizzare descrizioni comandi nei controlli ToolStrip
+È possibile visualizzare un <xref:System.Windows.Forms.ToolTip> per il <xref:System.Windows.Forms.ToolStrip> controllo impostando il controllo di cui si desidera <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> proprietà `true`.  
   
-### Per visualizzare una descrizione comando  
+### <a name="to-display-a-tooltip"></a>Per visualizzare una descrizione  
   
--   Impostare la proprietà <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> del controllo su `true`.  
+-   Impostare il <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> proprietà del controllo da `true`.  
   
-     Il valore predefinito di <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=fullName> è `true` e il valore predefinito di <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=fullName> e <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=fullName> è `false`.  
+     Il valore predefinito di <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=nameWithType> è `true`e il valore predefinito di <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=nameWithType> è `false`.  
   
-### Per utilizzare la proprietà ToolTipText per il testo della descrizione comando di un ToolStripButton  
+### <a name="to-use-the-tooltiptext-property-for-the-tooltip-text-of-a-toolstripbutton"></a>Utilizzare la proprietà ToolTipText per il testo della descrizione di un oggetto di ToolStripButton  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> del pulsante su `true`.  
+1.  Impostare il <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> proprietà del pulsante su `true`.  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=fullName> del pulsante su `false`.  
+2.  Impostare il <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType> proprietà del pulsante su `false`.  
   
-     Per impostazione predefinita la proprietà `AutoToolTip` è `true` per <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton> e <xref:System.Windows.Forms.ToolStripSplitButton>.  
+     Il `AutoToolTip` proprietà `true` per impostazione predefinita per <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton>, e <xref:System.Windows.Forms.ToolStripSplitButton>.  
   
-     Una classe <xref:System.Windows.Forms.ToolStripButton> utilizza la proprietà `Text` per il testo della classe <xref:System.Windows.Forms.ToolTip> per impostazione predefinita.  Utilizzare questa procedura per visualizzare testo personalizzato in una classe <xref:System.Windows.Forms.ToolTip> di una classe <xref:System.Windows.Forms.ToolStripButton>.  
+     Oggetto <xref:System.Windows.Forms.ToolStripButton> utilizza relativo `Text` proprietà per il <xref:System.Windows.Forms.ToolTip> testo per impostazione predefinita. Utilizzare questa procedura per visualizzare il testo personalizzato in un <xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolTip>.  
   
 > [!NOTE]
->  Se si imposta <xref:System.Windows.Forms.ToolStripItemDisplayStyle> su <xref:System.Windows.Forms.ToolStripItemDisplayStyle> o su <xref:System.Windows.Forms.ToolStripItemDisplayStyle>, sul pulsante non verrà visualizzato alcun testo ma la descrizione comando verrà visualizzata ugualmente.  
+>  Se si imposta <xref:System.Windows.Forms.ToolStripItemDisplayStyle> a <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> o <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>, sul pulsante verrà visualizzato alcun testo, ma verrà comunque visualizzata la descrizione comando.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>   
- <xref:System.Windows.Forms.ToolStripButton>   
- <xref:System.Windows.Forms.ToolStripDropDownButton>   
- <xref:System.Windows.Forms.ToolStripSplitButton>   
- [Cenni preliminari sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>  
+ <xref:System.Windows.Forms.ToolStripButton>  
+ <xref:System.Windows.Forms.ToolStripDropDownButton>  
+ <xref:System.Windows.Forms.ToolStripSplitButton>  
+ [Panoramica sul controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

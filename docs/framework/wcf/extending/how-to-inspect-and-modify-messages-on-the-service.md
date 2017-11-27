@@ -1,31 +1,37 @@
 ---
-title: "Procedura: ispezionare e modificare i messaggi sul servizio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: ispezionare e modificare i messaggi sul servizio'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c919083b165233614a01faf3d63dacd6712fbd01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: ispezionare e modificare i messaggi sul servizio
-È possibile ispezionare o modificare i messaggi in ingresso o in uscita su un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client implementando un <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName> e inserendola nel runtime del servizio. Per ulteriori informazioni, vedere [estensione dispatcher](../../../../docs/framework/wcf/extending/extending-dispatchers.md). La funzionalità equivalente nel servizio è il <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>.  
+# <a name="how-to-inspect-and-modify-messages-on-the-service"></a>Procedura: ispezionare e modificare i messaggi sul servizio
+È possibile ispezionare o modificare i messaggi in arrivo o in uscita su un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementando un'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> e inserendola nella fase di esecuzione del servizio. Per ulteriori informazioni, vedere [estensione dispatcher](../../../../docs/framework/wcf/extending/extending-dispatchers.md). La funzionalità equivalente nel servizio è <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
   
 ### <a name="to-inspect-or-modify-messages"></a>Per ispezionare o modificare i messaggi  
   
-1.  Implementare il <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName> interfaccia.  
+1.  Implementare l'interfaccia <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>.  
   
-2.  Implementare un <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=fullName>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=fullName>, o <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=fullName> interfaccia in base all'ambito in cui si desidera inserire facilmente il controllo dei messaggi del servizio.  
+2.  Implementare un'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>, a seconda dell'ambito in cui si desidera inserire facilmente il controllo dei messaggi del servizio.  
   
-3.  Inserire il comportamento prima di chiamare il <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=fullName> metodo il <xref:System.ServiceModel.ServiceHost?displayProperty=fullName>. Per informazioni dettagliate, vedere [configurazione ed estensione del Runtime con comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+3.  Inserire il comportamento prima di chiamare il metodo <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> su <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>. Per informazioni dettagliate, vedere [la configurazione e l'estensione del Runtime con i comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Esempio  
  Negli esempi di codice seguenti vengono illustrati, nell'ordine:  
@@ -42,11 +48,9 @@ caps.handback.revision: 6
  [!code-csharp[Interceptors#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/insertingbehaviors.cs#8)]
  [!code-vb[Interceptors#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/insertingbehaviors.vb#8)]  
   
- <!-- TODO: review snippet reference [!code[Interceptors#9](../../../../samples/snippets/common/VS_Snippets_CFX/interceptors/common/hostapplication.exe.config#9)]  -->
- <!-- TODO: review snippet reference [!code-csharp[Interceptors#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/hostapplication.exe.config#9)]  -->
- <!-- TODO: review snippet reference [!code-vb[Interceptors#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/hostapplication.exe.config#9)]  -->  
+ [!code-xml[Interceptors#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/hostapplication.exe.config#9)]  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=fullName>   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=fullName>   
- [Configurazione ed estensione del Runtime con comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>  
+ [La configurazione e l'estensione del Runtime dei comportamenti](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

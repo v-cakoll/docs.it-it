@@ -1,62 +1,72 @@
 ---
-title: "&lt;userNameSecurityTokenHandlerRequirement&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;userNameSecurityTokenHandlerRequirement&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 4ffe9764eb730be4859fb66ae2f0cc845c9404e8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;userNameSecurityTokenHandlerRequirement&gt;
-Fornisce la configurazione della classe o le classi derivate <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>.  
+# <a name="ltusernamesecuritytokenhandlerrequirementgt"></a>&lt;userNameSecurityTokenHandlerRequirement&gt;
+Fornisce la configurazione per il <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> classe o classi derivate.  
   
-## Sintassi  
+ \<System. IdentityModel >  
+\<identityConfiguration >  
+\<securityTokenHandlers >  
+\<add>  
+\<userNameSecurityTokenHandlerRequirement >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add type="System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler, System.IdentityModel.Services">  
-        <userNameSecurityTokenHandlerRequirement membershipProviderName=xs:string >  
-        </userNameSecurityTokenHandlerRequirement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add type="System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler, System.IdentityModel.Services">  
+        <userNameSecurityTokenHandlerRequirement membershipProviderName=xs:string >  
+        </userNameSecurityTokenHandlerRequirement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|membershipProviderName|Specifica <xref:System.Web.Security.MembershipProvider> che deve essere utilizzato dal gestore del token di sicurezza.|  
+|membershipProviderName|Specifica il <xref:System.Web.Security.MembershipProvider> che deve essere utilizzata dal gestore di token di sicurezza.|  
   
-### Elementi figlio  
- Nessuno  
+### <a name="child-elements"></a>Elementi figlio  
+ None  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Aggiunge il gestore specificato del token di sicurezza alla raccolta dei token del gestore.|  
+|-------------|-----------------|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Aggiunge il gestore di token di sicurezza specificato alla raccolta di gestori di token.|  
   
-## Note  
- Gli insiemi di elementi `<userNameSecurityTokenHandlerRequirement>` la proprietà <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> quando un oggetto <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> viene inizializzato dalla configurazione.  
+## <a name="remarks"></a>Note  
+ Il `<userNameSecurityTokenHandlerRequirement>` set di elementi di <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> proprietà quando un <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> oggetto viene inizializzato dalla configurazione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```xml  
 <add type="System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler, System.IdentityModel.Services">  
     <userNameSecurityTokenHandlerRequirement membershipProviderName="AspNetSqlProvider/>  
 </add>  

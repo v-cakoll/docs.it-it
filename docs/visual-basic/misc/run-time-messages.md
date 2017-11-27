@@ -1,42 +1,26 @@
 ---
-title: Messaggi di runtime di Visual Basic | Documenti di Microsoft
-ms.date: 2015-07-20
+title: Messaggi di run-time di Visual Basic
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - errors [Visual Basic], run-time
-- run-time errors, Visual Basic
+- run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5837e133909d2723bbcb8071cc9feb4c2544b95c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bceda3e102ec79bda6607d77c3b778f9a2014a33
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-run-time-messages"></a>Messaggi di run-time di Visual Basic
-In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] i messaggi di errore che si verificano in fase di esecuzione.  
+Questa sezione contiene i messaggi di errore [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] che si verificano in fase di esecuzione.  
   
- [\<indirizzo > non è un indirizzo valido file remoto](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
+ [\<indirizzo > non è un indirizzo di file remoto valido](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   
  [Un delimitatore non può essere Nothing o una stringa vuota](../../visual-basic/misc/a-delimiter-cannot-be-nothing-or-an-empty-string.md)  
   
@@ -66,11 +50,11 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Argomento '\<NomeArgomento >' non può essere una matrice multidimensionale](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
   
- [Argomento \<NomeArgomento > non può essere una stringa vuota o nulla](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
+ [Argomento \<NomeArgomento > non può essere una stringa vuota o Nothing](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
   
  [Argomento '\<NomeArgomento >' non può essere convertito in un valore numerico](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
   
- [Argomento '\<NomeArgomento >' non può essere convertito nel tipo '\<typename >'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
+ [Argomento '\<NomeArgomento >' non può essere convertito nel tipo '\<nomeTipo >'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
   
  [Argomento '\<NomeArgomento >' non può essere convertito nel tipo 'Date'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-date.md)  
   
@@ -94,13 +78,13 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Argomento '\<NomeArgomento >' deve essere maggiore di zero](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
   
- [Argomento '\<NomeArgomento >' deve essere compreso nell'intervallo tra -32768 e 65535](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
+ [Argomento '\<NomeArgomento >' deve essere compreso nell'intervallo compreso tra -32768 e 65535](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
   
- [Argomento '\<NomeArgomento >' deve essere compresa tra 0 e 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
+ [Argomento '\<NomeArgomento >' deve essere compreso tra 0 e 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
   
- [Argomento '\<NomeArgomento >' deve essere compreso nell'intervallo compreso tra 1 e 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
+ [Argomento '\<NomeArgomento >' deve essere compreso nell'intervallo da 1 a 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
   
- [Argomento '\<argumentname1 >' deve essere minore o uguale lunghezza dell'argomento '\<argumentname2 >'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
+ [Argomento '\<nomeargomento1 >' deve essere minore o uguale alla lunghezza dell'argomento '\<nomeargomento2 >'](../../visual-basic/misc/argument-argumentname1-must-be-less-than-or-equal-the-length-of-argumentname2.md)  
   
  [L'argomento 'Access' non è valido. I valori validi per la modalità Append sono 'OpenAccess.Write' e 'OpenAccess.Default'](../../visual-basic/misc/argument-access-is-not-valid-append-mode.md)  
   
@@ -130,7 +114,7 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [L'argomento 'Period' deve essere minore o uguale all'argomento 'Life'](../../visual-basic/misc/argument-period-must-be-less-than-or-equal-to-argument-life.md)  
   
- [Valore dell'argomento '\<pathname >' contiene caratteri non validi in un nome di percorso](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
+ [Valore dell'argomento '\<nomepercorso >' contiene caratteri non vengono in un nome di percorso](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
   
  [Argomenti non validi](../../visual-basic/misc/arguments-are-not-valid.md)  
   
@@ -164,9 +148,9 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Impossibile convertire l'argomento '\<NomeArgomento >' di tipo '\<type1 >' nel tipo '\<type2 >'](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
   
- [Impossibile convertire il valore iniziale di tipo '\<type1 >' e il valore di tipo incremento '\<type2 >' in un tipo comune](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
+ [Impossibile convertire il valore iniziale di tipo '\<type1 >' e valore di incremento di tipo '\<type2 >' in un tipo comune](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
   
- [Impossibile convertire il valore iniziale di tipo '\<type1 >', il valore limite di '\<type2 >' e il valore di incremento '\<type3 >' in un tipo comune](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
+ [Impossibile convertire il valore iniziale di tipo '\<type1 >', il valore limite di '\<type2 >' e valore di incremento di '\<Tipo3 >' in un tipo comune](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
   
  [Impossibile creare il componente ActiveX](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
   
@@ -182,11 +166,11 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Impossibile eseguire l'operazione richiesta (Visual Basic)](../../visual-basic/misc/cant-perform-requested-operation.md)  
   
- [Cast da stringa "\<stringa >" al tipo '\<typename >' non è valido](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
+ [Eseguire il cast da stringa "\<stringa >" al tipo '\<nomeTipo >' non è valido](../../visual-basic/misc/cast-from-string-string-to-type-typename-is-not-valid.md)  
   
- [Eseguire il cast dal tipo '\<NomeTipo1 >' nel tipo '\<in NomeTipo2 >' non è valido](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
+ [Eseguire il cast dal tipo '\<NomeTipo1 >' nel tipo '\<NomeTipo2 >' non è valido](../../visual-basic/misc/cast-from-type-typename1-to-type-typename2-is-not-valid.md)  
   
- [Classe\<classname >' non implementa l'interfaccia System.Collections.ICollection](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
+ [Classe\<NomeClasse >' non implementa l'interfaccia ICollection](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
   
  [La classe non supporta l'automazione o l'interfaccia prevista](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
   
@@ -224,27 +208,27 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Divisione per zero (errore di run-time di Visual Basic)](../../visual-basic/misc/division-by-zero-run-time-error.md)  
   
- [Unità '\<drivename >' non trovato](../../visual-basic/misc/drive-drivename-not-found.md)  
+ [Unità '\<NomeUnità >' non trovato](../../visual-basic/misc/drive-drivename-not-found.md)  
   
  [La codifica non può essere impostata su Nothing](../../visual-basic/misc/encoding-cannot-be-set-to-nothing.md)  
   
- [Errore di caricamento della DLL (Visual Basic)](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
+ [Errore durante il caricamento di DLL (Visual Basic)](../../visual-basic/language-reference/error-messages/error-in-loading-dll.md)  
   
  [Il numero di errore deve essere compreso tra 0 e 65535](../../visual-basic/misc/error-number-must-be-within-the-range-0-and-65535.md)  
   
- [Espressione '\<nome >' non è una procedura, ma si verifica come destinazione di una chiamata di procedura](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
+ [Espressione '\<nome >' non è una procedura, ma si presenta come destinazione di una chiamata di routine](../../visual-basic/misc/expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call.md)  
   
  [Espressione troppo complessa](../../visual-basic/language-reference/error-messages/expression-too-complex.md)  
   
  [Funzionalità non ancora implementata](../../visual-basic/misc/feature-not-yet-implemented.md)  
   
- [Campo '\<fieldname >' di tipo '\<typename >' è 'ReadOnly'](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
+ [Campo '\<nomecampo >' di tipo '\<nomeTipo >' è 'ReadOnly'](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
   
- [File '\<filename >' non può essere eliminato perché è aperto](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
+ [File '\<nomefile >' non può essere eliminato perché è aperto](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
   
- [File '\<filename >' è protetto da scrittura](../../visual-basic/misc/file-filename-is-write-protected.md)  
+ [File '\<nomefile >' è protetto da scrittura](../../visual-basic/misc/file-filename-is-write-protected.md)  
   
- [File '\<filename >' non trovato](../../visual-basic/misc/file-filename-not-found.md)  
+ [File '\<nomefile >' non trovato](../../visual-basic/misc/file-filename-not-found.md)  
   
  [Il file esiste già](../../visual-basic/misc/file-already-exists.md)  
   
@@ -252,9 +236,9 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Formato di file non valido](../../visual-basic/misc/file-format-not-valid.md)  
   
- [File i/o di una struttura con il campo '\<fieldname >' di tipo '\<typename >' non è valido](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
+ [File i/o di una struttura con campo '\<nomecampo >' di tipo '\<nomeTipo >' non è valido](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
   
- [I/o file con tipo '\<typename >' non è valido](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
+ [I/o file con tipo '\<nomeTipo >' non è valido](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
   
  [Impossibile ottenere informazioni su un file inesistente](../../visual-basic/misc/file-information-cannot-be-queried-if-the-file-does-not-exist.md)  
   
@@ -262,7 +246,7 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Il file è troppo grande per essere letto in una matrice byte](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
   
- [Nome del file o nome di classe non trovato durante un'operazione di automazione (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
+ [Nome file o nome di classe non trovato durante un'operazione di automazione (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
   
  [Impossibile trovare il file (errore di run-time Visual Basic)](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
   
@@ -298,11 +282,11 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Impossibile eliminare la chiave perché contiene sottochiavi](../../visual-basic/misc/key-cannot-be-deleted-because-it-has-subkeys.md)  
   
- [Assegnazione ad associazione tardiva a un campo di tipo di valore '\<typename >' non è valido quando '\<nome >' è il risultato di un'espressione di associazione tardiva](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
+ [Assegnazione ad associazione tardiva a un campo di tipo di valore '\<nomeTipo >' non è valida quando '\<nome >' è il risultato di un'espressione ad associazione tardiva](../../visual-basic/misc/late-bound-assignment-to-a-field-of-value-type-typename-is-not-valid.md)  
   
  [La lunghezza dell'argomento '\<NomeArgomento >' deve essere maggiore di zero](../../visual-basic/misc/length-of-argument-argumentname-must-be-greater-than-zero.md)  
   
- [Riga \<numero > non può essere analizzato utilizzando i delimitatori correnti](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
+ [Riga \<numero > non può essere analizzato utilizzando Delimiters corrente](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-delimiters.md)  
   
  [Riga \<numero > non può essere analizzato utilizzando FieldWidths corrente](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
   
@@ -310,13 +294,13 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [ID delle impostazioni locali '\<nome >' non è supportata nel sistema](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
   
- [Variabile di controllo del ciclo di tipo '\<typename >' non implementa l'interfaccia 'IComparable'](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
+ [Variabile di controllo del ciclo di tipo '\<nomeTipo >' non implementa l'interfaccia 'IComparable'](../../visual-basic/misc/loop-control-variable-of-type-typename-does-not-implement-system-icomparable.md)  
   
  [Le classi gestite derivate da una classe COM non possono essere chiamate ad associazione tardiva.](../../visual-basic/misc/managed-classes-derived-from-a-com-class-cannot-be-called-late-bound.md)  
   
- [Metodo '\<methodname >' non può essere chiamato con \<numero > argomenti](../../visual-basic/misc/method-methodname-cannot-be-called-with-number-arguments.md)  
+ [Metodo '\<NomeMetodo >' non può essere chiamato con \<numero > argomenti](../../visual-basic/misc/method-methodname-cannot-be-called-with-number-arguments.md)  
   
- [Metodo '\<methodname >' non ha un parametro denominato '\<parametername >'](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
+ [Metodo '\<NomeMetodo >' non ha un parametro denominato '\<nomeparametro >'](../../visual-basic/misc/method-methodname-has-no-parameter-named-parametername.md)  
   
  [Impossibile trovare il metodo o il membro dati](../../visual-basic/misc/method-or-data-member-not-found.md)  
   
@@ -330,19 +314,19 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Necessario indice della matrice di proprietà](../../visual-basic/language-reference/error-messages/need-property-array-index.md)  
   
- [Di overload non accessibile '\<methodname >' può essere chiamato con questi argomenti senza una conversione di restrizione](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
+ [Di overload non accessibile '\<NomeMetodo >' può essere chiamato con questi argomenti senza una conversione di narrowing](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
   
- [Di overload non accessibile '\<methodname >' può essere chiamato con questi argomenti senza una conversione di narrowing: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
+ [Di overload non accessibile '\<NomeMetodo >' può essere chiamato con questi argomenti senza una conversione di narrowing: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
   
- [Di overload non accessibile '\<methodname >' può essere chiamato con questi argomenti senza una conversione di ampliamento: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
+ [Di overload non accessibile '\<NomeMetodo >' può essere chiamato con questi argomenti senza una conversione widening: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
- [Di overload non accessibile '\<methodname >' può essere chiamato con questi argomenti: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
+ [Di overload non accessibile '\<NomeMetodo >' può essere chiamato con questi argomenti: \<elenco >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
   
- [Nessun membro predefinito trovato per il tipo '\<typename >'](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
+ [Nessun membro predefinito trovato per il tipo '\<nomeTipo >'](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
   
- [Nessun file trovato corrispondenza '\<filename >'](../../visual-basic/misc/no-files-found-matching-filename.md)  
+ [Nessun file corrispondente a '\<nomefile >'](../../visual-basic/misc/no-files-found-matching-filename.md)  
   
- [Nessun metodo '\<methodname >' può accettare un argomento di tipo '\<typename >' per il parametro '\<parametername >'](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
+ [Nessun metodo '\<NomeMetodo >' può accettare un argomento di tipo '\<nomeTipo >' per il parametro '\<nomeparametro >'](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
   
  [Mouse non presente](../../visual-basic/misc/no-mouse-is-present.md)  
   
@@ -370,7 +354,7 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Operatore non è valido per '\<nome1 >' e '\<nome2 >'](../../visual-basic/misc/operator-is-not-valid-for-name1-and-name2.md)  
   
- [Operatore non è valido per il tipo '\<typename >'](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
+ [Operatore non è valido per il tipo '\<nomeTipo >'](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
   
  [Ordinale non valido](../../visual-basic/language-reference/error-messages/ordinal-is-not-valid.md)  
   
@@ -378,11 +362,11 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [(Visual Basic) di spazio dello stack](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
   
- [Della stringa insufficiente (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
+ [Spazio di stringa (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
   
  [Overflow (errore di run-time Visual Basic)](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
   
- [Percorso '\<pathname >' non trovato](../../visual-basic/misc/path-pathname-not-found.md)  
+ [Percorso '\<nomepercorso >' non trovato](../../visual-basic/misc/path-pathname-not-found.md)  
   
  [Impossibile trovare il percorso](../../visual-basic/language-reference/error-messages/path-not-found.md)  
   
@@ -396,9 +380,9 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Chiamata di routine o argomento non è valido (Visual Basic)](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
   
- [Processo\<processname >' non trovato](../../visual-basic/misc/process-processname-was-not-found.md)  
+ [Processo\<NomeProcesso >' non è stato trovato](../../visual-basic/misc/process-processname-was-not-found.md)  
   
- [Proprietà \<propertyname > non può essere impostata su una stringa vuota o nulla](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
+ [Proprietà \<propertyname > non può essere impostata su una stringa vuota o Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
   
  [Proprietà \<propertyname > non può essere impostata su Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
   
@@ -412,7 +396,7 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Valore di proprietà non valido](../../visual-basic/misc/property-value-is-not-valid.md)  
   
- [Membro pubblico '\<membername >' nel tipo '\<typename >' non trovato](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
+ [Membro pubblico '\<nomeMembro >' nel tipo '\<nomeTipo >' non trovato](../../visual-basic/misc/public-member-membername-on-type-typename-not-found.md)  
   
  ['ReDim' può modificare solo la prima dimensione a destra](../../visual-basic/misc/redim-can-only-change-the-right-most-dimension.md)  
   
@@ -420,9 +404,9 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [L'operando Preserve 'ReDim' non può essere Nothing](../../visual-basic/misc/redim-preserve-operand-cannot-be-nothing.md)  
   
- [Chiave del Registro di sistema '\<keyname >' non è possibile creare](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
+ [Chiave del Registro di sistema '\<NomeChiave >' non è stato possibile creare.](../../visual-basic/misc/registry-key-keyname-could-not-be-created.md)  
   
- [Chiave del Registro di sistema '\<keyname >' non trovato](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
+ [Chiave del Registro di sistema '\<NomeChiave >' non è stato trovato](../../visual-basic/misc/registry-key-keyname-could-not-be-found.md)  
   
  [Sostituzioni troppo lunghe](../../visual-basic/misc/replacements-too-long.md)  
   
@@ -532,7 +516,7 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
   
  [Mancata corrispondenza tra tipi (Visual Basic)](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
   
- [Tipo di argomento '\<NomeArgomento >' è '\<typename >', non è numerico](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
+ [Tipo di argomento '\<NomeArgomento >' è '\<nomeTipo >', che non è numerico](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
   
  [Impossibile ottenere i nomi delle porte seriali a causa di un errore di sistema interno](../../visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)  
   
@@ -575,5 +559,5 @@ In questa sezione contiene le [!INCLUDE[vbprvb](../../csharp/programming-guide/c
  [È necessario specificare un percorso che si trova nella cartella corrente o in una delle relative sottocartelle](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [NOTINBUILD procedura: ottenere informazioni sugli errori di Run-Time Visual Basic](http://msdn.microsoft.com/en-us/22a7d0a6-b7d7-4c5d-971c-52ff0583c656)   
+ [NOTINBUILD procedura: ottenere informazioni sugli errori di Run-Time Visual Basic](http://msdn.microsoft.com/en-us/22a7d0a6-b7d7-4c5d-971c-52ff0583c656)  
  [Messaggi di errore](../../visual-basic/language-reference/error-messages/index.md)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - platform invoke, identifying functions
 - COM interop, DLL functions
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b96ef668a8a11794b87d3cbe7c2ba864f8a75e2f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1b5aa725d30e280d672724c7b7f4fd11a848a3ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="identifying-functions-in-dlls"></a>Identificazione delle funzioni nelle DLL
 L'identità di una funzione di una DLL è costituita dagli elementi seguenti:  
@@ -61,9 +54,8 @@ L'identità di una funzione di una DLL è costituita dagli elementi seguenti:
  Per la documentazione completa dell'API Win32, vedere l'SDK della piattaforma. Per alcuni esempi che mostrano come costruire dichiarazioni basate su .NET da usare con platform invoke, vedere , vedere [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di funzioni di DLL non gestite](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)   
- [Specifica di un punto di ingresso](../../../docs/framework/interop/specifying-an-entry-point.md)   
- [Creating a Class to Hold DLL Functions](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  (Creazione di una classe contenente funzioni di DLL)  
- [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
+ [Utilizzo di funzioni di DLL non gestite](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ [Specifica di un punto di ingresso](../../../docs/framework/interop/specifying-an-entry-point.md)  
+ [Creazione di una classe che contenga le funzioni DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
+ [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
  [Chiamata a una funzione di DLL](../../../docs/framework/interop/calling-a-dll-function.md)
-

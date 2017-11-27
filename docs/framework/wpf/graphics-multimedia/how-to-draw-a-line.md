@@ -1,39 +1,42 @@
 ---
-title: "Procedura: disegnare una linea | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "disegno, linee"
-  - "grafica [WPF], linee"
-  - "linee, disegno"
+title: 'Procedura: disegnare una linea'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drawing [WPF], lines
+- graphics [WPF], lines
+- lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4911aea91416fb84e9a18d54c145b494737ef9dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: disegnare una linea
-In questo esempio viene illustrato come disegnare righe utilizzando l'elemento <xref:System.Windows.Shapes.Line>.  
+# <a name="how-to-draw-a-line"></a>Procedura: disegnare una linea
+In questo esempio viene illustrato come disegnare righe utilizzando il <xref:System.Windows.Shapes.Line> elemento.  
   
- Per disegnare una riga, creare un elemento <xref:System.Windows.Shapes.Line>.  Utilizzare le proprietà <xref:System.Windows.Shapes.Line.X1%2A> e <xref:System.Windows.Shapes.Line.Y1%2A> per impostare il punto di inizio e utilizzare le proprietà <xref:System.Windows.Shapes.Line.X2%2A> e <xref:System.Windows.Shapes.Line.Y2%2A> per impostare il punto di fine.  Impostare infine <xref:System.Windows.Shapes.Shape.Stroke%2A> e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> per rendere invisibile una riga senza tratto.  
+ Per disegnare una linea, creare un <xref:System.Windows.Shapes.Line> elemento. Utilizzare il relativo <xref:System.Windows.Shapes.Line.X1%2A> e <xref:System.Windows.Shapes.Line.Y1%2A> proprietà per impostare il punto di inizio; e relativo <xref:System.Windows.Shapes.Line.X2%2A> e <xref:System.Windows.Shapes.Line.Y2%2A> proprietà per impostare il punto finale. Infine, impostare il relativo <xref:System.Windows.Shapes.Shape.Stroke%2A> e <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> perché una riga senza tratto è invisibile.  
   
- L'impostazione dell'elemento <xref:System.Windows.Shapes.Shape.Fill%2A> per una riga non ha effetto, perché una riga non ha interno.  
+ L'impostazione di <xref:System.Windows.Shapes.Shape.Fill%2A> elemento per una riga non ha alcun effetto perché una riga non ha interno.  
   
- Nell'esempio riportato di seguito vengono tracciate tre righe all'interno di un elemento <xref:System.Windows.Controls.Canvas>.  
+ Nell'esempio seguente disegna tre righe all'interno di un <xref:System.Windows.Controls.Canvas> elemento.  
   
-## Esempio  
- [!code-xml[drawingwithshapeelements#LineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
+## <a name="example"></a>Esempio  
+ [!code-xaml[drawingwithshapeelements#LineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- Questo esempio è stato estratto da un esempio più ampio; per la versione completa, vedere [Esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037) \(la pagina potrebbe essere in inglese\).  
+ In questo esempio fa parte di un esempio più ampio; per l'esempio completo, vedere [esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## Vedere anche  
- <xref:System.Windows.Shapes.Line>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Shapes.Line>  
  [Esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037)

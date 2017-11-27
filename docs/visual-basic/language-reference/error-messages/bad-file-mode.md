@@ -1,47 +1,45 @@
 ---
-title: "Bad file mode | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID54"
-dev_langs: 
-  - "VB"
+title: "Modalità file non valida"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a540135727eb97f4df5027e2ded7271e21bb4648
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Bad file mode
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-È necessario che le istruzioni utilizzate nella modifica dei contenuti del file siano appropriate alla modalità in cui il file è stato aperto.  Fra le cause possibili vi sono le seguenti:  
+# <a name="bad-file-mode"></a>Modalità file non valida
+Le istruzioni utilizzate nella modifica dei contenuti del file devono essere appropriate per la modalità in cui è stato aperto il file. Fra le cause possibili vi sono le seguenti:  
   
--   Un'istruzione `FilePutObject` o `FileGetObject` specifica un file sequenziale.  
+-   Oggetto `FilePutObject` o `FileGetObject` istruzione specifica un file sequenziale.  
   
--   Un'istruzione `Print` specifica un file aperto per una modalità di accesso diversa da `Output` o `Append`.  
+-   Oggetto `Print` istruzione specifica un file aperto in modalità di accesso diverso da `Output` o `Append`.  
   
--   Un'istruzione `Input` specifica un file aperto per una modalità di accesso diversa da `Input`  
+-   Un `Input` istruzione specifica un file aperto in modalità di accesso diverso da`Input`  
   
--   Si è tentato di scrivere in un file in sola lettura.  
+-   Tentativo di scrivere in un file di sola lettura.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Assicurarsi che `FilePutObject` e `FileGetObject` facciano riferimento solo a file aperti per l'accesso `Random` o `Binary`.  
+-   Assicurarsi che `FilePutObject` e `FileGetObject` facciano riferimento solo a file aperti per `Random` o `Binary` accesso.  
   
--   Assicurarsi che `Print` specifichi un file aperto per la modalità di accesso `Output` o `Append`.  In caso contrario, utilizzare un'istruzione diversa per inserire dati nel file o riaprire il file in una modalità appropriata.  
+-   Assicurarsi che `Print` specifica un file aperto per la `Output` o `Append` modalità di accesso. In caso contrario, utilizzare un'istruzione diversa per inserire dati nel file o riaprire il file in una modalità appropriata.  
   
--   Assicurarsi che `Input` specifichi un file aperto per `Input`.  In caso contrario, utilizzare un'istruzione diversa per inserire dati nel file o riaprire il file in una modalità appropriata.  
+-   Assicurarsi che `Input` specifica un file aperto per `Input`. In caso contrario, utilizzare un'istruzione diversa per inserire dati nel file o riaprire il file in una modalità appropriata.  
   
--   Se si sta scrivendo in un file di sola lettura, modificare lo stato di lettura\/scrittura del file o non tentare di scrivere in esso.  
+-   Se si scrive in un file di sola lettura, modificare lo stato di lettura/scrittura del file o non tentare di scrivervi.  
   
--   Utilizzare la funzionalità disponibile nell'oggetto `My.Computer.FileSystem`.  
+-   Usare la funzionalità disponibile nell'oggetto `My.Computer.FileSystem` .  
   
-## Vedere anche  
- <xref:Microsoft.VisualBasic.FileSystem>   
- [Troubleshooting: Reading from and Writing to Text Files](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:Microsoft.VisualBasic.FileSystem>  
+ [Risoluzione dei problemi: lettura e scrittura nei file di testo](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

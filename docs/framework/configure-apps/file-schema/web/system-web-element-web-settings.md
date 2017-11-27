@@ -1,67 +1,68 @@
 ---
-title: "Elemento &lt;system.web&gt; (impostazioni Web) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<system.Web> (elemento)"
-  - "sistema di configurazione ASP.NET"
-  - "file di configurazione [ASP.NET]"
-  - "system.Web (elemento)"
-  - "file di configurazione Web.config [ASP.NET]"
+title: '&lt;System. Web&gt; elemento (impostazioni Web)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Web.config configuration file [ASP.NET]
+- system.Web element
+- <system.Web> element
+- ASP.NET configuration system
+- configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 44a978eae9ae85e1ba12f117288a3c9ce4db75b4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Elemento &lt;system.web&gt; (impostazioni Web)
-Contiene informazioni su come il livello di hosting ASP.NET gestisce il comportamento relativo all'intero processo.  
+# <a name="ltsystemwebgt-element-web-settings"></a>&lt;System. Web&gt; elemento (impostazioni Web)
+Contiene informazioni su come il livello di hosting ASP.NET gestisce il comportamento a livello di processo.  
   
-## Sintassi  
+ \<configuration>  
+\<System. Web > elemento (impostazioni Web)  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <system.web>  
 </system.web>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<applicationPool\>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Specifica le impostazioni di configurazione per i pool di applicazioni IIS in un file aspnet.config.|  
+|-------------|-----------------|  
+|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Specifica le impostazioni di configurazione per il pool di applicazioni IIS in un file Aspnet. config.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Specifica l'elemento radice in ogni file di configurazione utilizzato in Common Language Runtime e nelle applicazioni [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
+|-------------|-----------------|  
+|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Specifica l'elemento radice in ogni file di configurazione usato dal Common Language Runtime e dalle applicazioni [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] .|  
   
-## Note  
- L'elemento `system.web` e il relativo elemento figlio `applicationPool` sono stati aggiunti a [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] come in [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].  Quando si esegue [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versioni successive in modalità integrata, questa combinazione di elementi consente di configurare il modo in cui ASP.NET gestisce i thread e mette in coda le richieste quando ASP.NET è ospitato in un pool di applicazioni IIS.  Se si esegue [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versioni successive in modalità classica o ISAPI, queste impostazioni vengono ignorate.  
+## <a name="remarks"></a>Note  
+ Il `system.web` elemento e del relativo figlio `applicationPool` elemento sono stati aggiunti per il [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] da [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. Quando si esegue [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versioni successive in modalità integrata, questa combinazione di elementi consente di configurare la modalità ASP.NET gestisce i thread e mette in coda le richieste quando ASP.NET è ospitato in un pool di applicazioni IIS. Se si esegue [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versioni successive in modalità classica o ISAPI, queste impostazioni vengono ignorate.  
   
-## Esempio  
- Nell'esempio seguente viene mostrato come configurare il comportamento relativo all'intero processo di ASP.NET nel file aspnet.config quando ASP.NET è ospitato in un pool di applicazioni IIS.  L'esempio presuppone che IIS sia in esecuzione in modalità integrata e che l'applicazione stia utilizzando [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] o una versione successiva.  Questo comportamento non si verifica nelle versioni di [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] precedenti a [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)].  I valori nell'esempio sono i valori predefiniti.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come configurare il comportamento a livello di processo ASP.NET nel file Aspnet. config quando ASP.NET è ospitato in un pool di applicazioni IIS. Nell'esempio si presuppone che IIS sia in esecuzione in modalità integrata modalità e l'applicazione usa il [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] o versione successiva. Questo comportamento non avviene nelle versioni del [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] antecedente la [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. I valori nell'esempio sono i valori predefiniti.  
   
-```  
+```xml  
 <configuration>  
   <system.web>  
     <applicationPool   
@@ -72,7 +73,7 @@ Contiene informazioni su come il livello di hosting ASP.NET gestisce il comporta
 </configuration>  
 ```  
   
-## Informazioni sull'elemento  
+## <a name="element-information"></a>Informazioni sull'elemento  
   
 |||  
 |-|-|  
@@ -81,5 +82,5 @@ Contiene informazioni su come il livello di hosting ASP.NET gestisce il comporta
 |File di convalida||  
 |Può essere vuoto||  
   
-## Vedere anche  
- [Elemento \<applicationPool\> \(impostazioni Web\)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+## <a name="see-also"></a>Vedere anche  
+ [Elemento \<applicationPool> (impostazioni Web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

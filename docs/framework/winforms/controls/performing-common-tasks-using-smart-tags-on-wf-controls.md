@@ -1,82 +1,83 @@
 ---
-title: "Procedura dettagliata: esecuzione di attivit&#224; comuni utilizzando gli smart tag nei controlli Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "azioni di progettazione"
-  - "DesignerAction (modello a oggetto)"
-  - "smart tag"
+title: "Procedura dettagliata: esecuzione di attività comuni utilizzando gli smart tag nei controlli Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DesignerAction object model
+- smart tags
+- designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2e6b815be85576f037e0f24668c44756b95abd6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: esecuzione di attivit&#224; comuni utilizzando gli smart tag nei controlli Windows Form
-Quando si creano form e controlli per le applicazioni Windows Form, molte attività vengono eseguite ripetutamente.  Di seguito sono riportate alcune delle attività comuni:  
+# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Procedura dettagliata: esecuzione di attività comuni utilizzando gli smart tag nei controlli Windows Form
+Come si creano i form e controlli per l'applicazione Windows Form, sono disponibili numerose attività che verranno eseguite più volte. Queste sono alcune delle attività comunemente svolte che si verificheranno:  
   
 -   Aggiunta o rimozione di una scheda in un <xref:System.Windows.Forms.TabControl>.  
   
--   Ancoraggio di un controllo al controllo padre.  
+-   Ancoraggio di un controllo al relativo elemento padre.  
   
--   Modifica dell'orientamento di un controllo <xref:System.Windows.Forms.SplitContainer>.  
+-   Modifica dell'orientamento di un <xref:System.Windows.Forms.SplitContainer> controllo.  
   
- Per rendere lo sviluppo più rapido, molti controlli offrono gli smart tag, ossia menu sensibili al contesto che consentono di eseguire le attività comuni con un singolo gesto in fase di progettazione.  Tali attività sono chiamate *verbi di smart tag*.  
+ Per velocizzare lo sviluppo, molti controlli offrono gli smart tag sono menu sensibile al contesto che consentono di eseguire attività comuni come in un singolo movimento in fase di progettazione. Queste attività vengono chiamate *verbi di smart tag*.  
   
- Gli smart tag restano allegati all'istanza di un controllo per la sua durata nella finestra di progettazione e sono sempre disponibili.  
+ Gli smart tag rimanere connessi a un'istanza di controllo per la relativa durata nella finestra di progettazione e sono sempre disponibili.  
   
- Di seguito vengono elencate le attività illustrate nella procedura dettagliata:  
+ Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
 -   Creazione di un progetto Windows Form  
   
--   Utilizzo degli smart tag  
+-   Utilizzando gli smart tag  
   
--   Attivazione e disattivazione degli smart tag  
+-   Abilitazione e disabilitazione Smart tag  
   
- Al termine, si saranno acquisite le informazioni circa il ruolo delle importanti funzionalità di layout.  
+ Al termine, si avrà una migliore comprensione del ruolo svolto da queste importanti funzionalità di layout.  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Creazione del progetto  
- Il primo passaggio indica come creare il progetto e impostare il form.  
+## <a name="creating-the-project"></a>Creazione del progetto  
+ Il primo passaggio consiste nella creazione del progetto e nella configurazione del form.  
   
-#### Per creare il progetto  
+#### <a name="to-create-the-project"></a>Per creare il progetto  
   
-1.  Creare un progetto di applicazione basata su Windows chiamato "SmartTagsExample".  Per informazioni dettagliate, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Creare un progetto di applicazione basata su Windows denominato "SmartTagsExample". Per informazioni dettagliate, vedere [Procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
-2.  Selezionare il form in **Progettazione Windows Form**.  
+2.  Selezionare il form nel **Progettazione Windows Form**.  
   
-## Utilizzo degli smart tag  
- Gli smart tag sono sempre disponibili in fase di progettazione per i controlli che li prevedono.  
+## <a name="using-smart-tags"></a>Utilizzando gli Smart tag  
+ Gli smart tag sono sempre disponibili in fase di progettazione per controlli quali sono disponibili.  
   
-#### Per utilizzare gli smart tag  
+#### <a name="to-use-smart-tags"></a>Utilizzo di smart tag  
   
-1.  Trascinare un controllo <xref:System.Windows.Forms.TabControl> dalla **Casella degli strumenti** nel form.  Si noti l'icona dello smart tag \(![Glifo Smart Tag](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) che viene visualizzata sul lato del controllo <xref:System.Windows.Forms.TabControl>.  
+1.  Trascinare un <xref:System.Windows.Forms.TabControl> dal **della casella degli strumenti** nel form. Si noti il glifo smart tag (![Smart Tag glifo](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) che viene visualizzato sul lato del <xref:System.Windows.Forms.TabControl>.  
   
-2.  Fare clic sull'icona dello smart tag.  Nel menu di scelta rapida visualizzato accanto all'icona, selezionare la voce **Aggiungi scheda**.  Si osservi che una nuova scheda viene aggiunta al controllo <xref:System.Windows.Forms.TabControl>.  
+2.  Fare clic sull'icona di smart tag. Nel menu di scelta rapida che viene visualizzato accanto all'icona, selezionare il **Aggiungi scheda** elemento. Si osservi che una nuova pagina della scheda viene aggiunta per il <xref:System.Windows.Forms.TabControl>.  
   
-3.  Trascinare un controllo <xref:System.Windows.Forms.TableLayoutPanel> dalla **Casella degli strumenti** al form.  
+3.  Trascinare un <xref:System.Windows.Forms.TableLayoutPanel> controllo il **della casella degli strumenti** nel form.  
   
-4.  Fare clic sull'icona dello smart tag.  Nel menu di scelta rapida visualizzato accanto all'icona, selezionare la voce **Aggiungi colonna**.  Si osservi che una nuova colonna viene aggiunta al controllo <xref:System.Windows.Forms.TableLayoutPanel>.  
+4.  Fare clic sull'icona di smart tag. Nel menu di scelta rapida che viene visualizzato accanto all'icona, selezionare il **Aggiungi colonna** elemento. Osservare che viene aggiunta una nuova colonna per il <xref:System.Windows.Forms.TableLayoutPanel> controllo.  
   
-5.  Trascinare un controllo <xref:System.Windows.Forms.SplitContainer> dalla **Casella degli strumenti** al form.  
+5.  Trascinare un <xref:System.Windows.Forms.SplitContainer> controllo il **della casella degli strumenti** nel form.  
   
-6.  Fare clic sull'icona dello smart tag.  Nel menu di scelta rapida visualizzato accanto all'icona, selezionare la voce **Orientamento separatore orizzontale**.  La barra di divisione del controllo <xref:System.Windows.Forms.SplitContainer> viene orientata orizzontalmente.  
+6.  Fare clic sull'icona di smart tag. Nel menu di scelta rapida che viene visualizzato accanto all'icona, selezionare il **orientamento separatore orizzontale** elemento. Osservare che il <xref:System.Windows.Forms.SplitContainer> barra di divisione del controllo è orientato in orizzontale.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.TextBox>   
- <xref:System.Windows.Forms.TabControl>   
- <xref:System.Windows.Forms.SplitContainer>   
- <xref:System.ComponentModel.Design.DesignerActionList>   
- [Walkthrough: Adding Smart Tags to a Windows Forms Component](../Topic/Walkthrough:%20Adding%20Smart%20Tags%20to%20a%20Windows%20Forms%20Component.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.TextBox>  
+ <xref:System.Windows.Forms.TabControl>  
+ <xref:System.Windows.Forms.SplitContainer>  
+ <xref:System.ComponentModel.Design.DesignerActionList>  
+ [Procedura dettagliata: Aggiunta di Smart tag in un componente di Windows Form](http://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)

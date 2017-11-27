@@ -1,36 +1,28 @@
 ---
-title: 'Procedura: eseguire una Query per il numero totale di byte in un Set di cartelle (LINQ) (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: eseguire una Query per il numero totale di byte in un Set di cartelle (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 668a8a4d89f7b81c3aef9b4e1a46ad749c4a8341
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b200581f4876400727c63e86e3ccf4a44c67914b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Procedura: eseguire una Query per il numero totale di byte in un Set di cartelle (LINQ) (Visual Basic)
-In questo esempio viene illustrato come recuperare il numero totale di byte utilizzati da tutti i file in una cartella specificata e tutte le relative sottocartelle.  
+Questo esempio illustra come recuperare il numero totale di byte usati da tutti i file in una cartella specificata e in tutte le relative sottocartelle.  
   
 ## <a name="example"></a>Esempio  
- Il <xref:System.Linq.Enumerable.Sum%2A>metodo aggiunge i valori di tutti gli elementi selezionati nel `select` clausola.</xref:System.Linq.Enumerable.Sum%2A> È possibile modificare facilmente questa query per recuperare il file più grande o più piccolo nella struttura della directory specificata chiamando il <xref:System.Linq.Enumerable.Min%2A> <xref:System.Linq.Enumerable.Max%2A>metodo anziché <xref:System.Linq.Enumerable.Sum%2A>.</xref:System.Linq.Enumerable.Sum%2A> </xref:System.Linq.Enumerable.Max%2A> o</xref:System.Linq.Enumerable.Min%2A>  
+ Il metodo <xref:System.Linq.Enumerable.Sum%2A> aggiunge i valori di tutti gli elementi selezionati nella clausola `select`. È possibile modificare facilmente questa query per recuperare il file più grande o più piccolo nell'albero di directory specificato chiamando il metodo <xref:System.Linq.Enumerable.Min%2A> o <xref:System.Linq.Enumerable.Max%2A> invece di <xref:System.Linq.Enumerable.Sum%2A>.  
   
 ```vb  
 Module QueryTotalBytes  
@@ -84,13 +76,13 @@ Module QueryTotalBytes
 End Module  
 ```  
   
- Se è sufficiente contare il numero di byte in una struttura ad albero di directory specificata, è possibile farlo in modo più efficiente senza creare una query LINQ, che genera l'overhead della creazione della raccolta di elenco come origine dati. L'utilità dell'approccio LINQ aumenta se la query diventa più complessa, o quando è necessario eseguire più query sulla stessa origine dati.  
+ Se è necessario contare solo il numero di byte in un albero di directory specificato, è possibile eseguire questa operazione in modo più efficiente senza creare una query LINQ che comporta un sovraccarico dovuto alla creazione della raccolta di elenchi come origine dati. I vantaggi dell'uso di LINQ aumentano per le query più complesse oppure quando è necessario eseguire più query nella stessa origine dati.  
   
- La query effettua una chiamata a un metodo separato per ottenere la lunghezza del file. In tal modo di utilizzare la possibile eccezione generata se il file è stato eliminato in un altro thread dopo la <xref:System.IO.FileInfo>è stato creato l'oggetto nella chiamata a `GetFiles`.</xref:System.IO.FileInfo> Anche se il <xref:System.IO.FileInfo>oggetto è già stato creato, l'eccezione può verificarsi perché un <xref:System.IO.FileInfo>oggetto tenta di aggiornare il relativo <xref:System.IO.FileInfo.Length%2A>proprietà con la lunghezza più recente la prima volta che si accede alla proprietà.</xref:System.IO.FileInfo.Length%2A> </xref:System.IO.FileInfo> </xref:System.IO.FileInfo> Inserendo questa operazione in un blocco try-catch all'esterno della query, il codice segue la regola di evitare operazioni di query che possono causare effetti collaterali. In generale, è necessario prestare particolare attenzione quando si usano le eccezioni per assicurarsi che un'applicazione non viene lasciata in uno stato sconosciuto.  
+ La query effettua una chiamata a un metodo separato per ottenere la lunghezza del file. Questa operazione viene eseguita per gestire la possibile eccezione che viene generata nel caso in cui il file sia stato eliminato in un altro thread dopo la creazione dell'oggetto <xref:System.IO.FileInfo> nella chiamata a `GetFiles`. Anche se l'oggetto <xref:System.IO.FileInfo> è già stato creato, è possibile che si verifichi un'eccezione perché un oggetto <xref:System.IO.FileInfo> tenterà di aggiornare la relativa proprietà <xref:System.IO.FileInfo.Length%2A> usando la lunghezza più recente quando viene eseguito per la prima volta l'accesso alla proprietà. Inserendo questa operazione in un blocco try/catch all'esterno della query, si evita di eseguire operazioni nelle query che possono causare effetti collaterali. In generale, è necessario prestare particolare attenzione durante la gestione delle eccezioni per assicurarsi che un'applicazione non venga lasciata in uno stato sconosciuto.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+ Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione dello spazio dei nomi System. Linq.  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

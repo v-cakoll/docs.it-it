@@ -1,36 +1,40 @@
 ---
-title: "Applicazioni Windows che utilizzano callback | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Applicazioni Windows tramite callback
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 83286fa5909dde8cde081ef34864be8f27b57122
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Applicazioni Windows che utilizzano callback
-Nella maggior parte degli scenari di elaborazione asincrona si desidera avviare un'operazione di database e continuare a eseguire altri processi senza dover attendere il completamento dell'operazione di database.  Tuttavia, in molti casi è necessario eseguire ulteriori operazioni dopo che l'operazione di database è stata terminata.  In un'applicazione Windows, ad esempio, la delega dell'operazione a esecuzione prolungata a un thread in background consente al thread dell'interfaccia utente di rimanere attivo mentre l'operazione è in esecuzione.  Tuttavia, una volta completata l'operazione di database, è possibile che si desideri usare i risultati per compilare il form.  La soluzione migliore per implementare questo tipo di scenario è l'uso di un callback.  
+# <a name="windows-applications-using-callbacks"></a>Applicazioni Windows tramite callback
+Nella maggior parte degli scenari di elaborazione asincrona si desidera avviare un'operazione di database e continuare a eseguire altri processi senza dover attendere il completamento dell'operazione di database. Tuttavia, in molti casi è necessario eseguire ulteriori operazioni dopo che l'operazione di database è stata terminata. In un'applicazione Windows, ad esempio, la delega dell'operazione a esecuzione prolungata a un thread in background consente al thread dell'interfaccia utente di rimanere attivo mentre l'operazione è in esecuzione. Tuttavia, una volta completata l'operazione di database, è possibile che si desideri usare i risultati per compilare il form. La soluzione migliore per implementare questo tipo di scenario è l'uso di un callback.  
   
- Un callback viene definito specificando un delegato <xref:System.AsyncCallback> nel metodo <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> o <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>.  Il delegato viene chiamato quando l'operazione è stata completata.  È possibile passare al delegato un riferimento al tipo <xref:System.Data.SqlClient.SqlCommand> stesso, facilitando l'accesso all'oggetto <xref:System.Data.SqlClient.SqlCommand> e la chiamata al metodo `End` appropriato senza dover usare una variabile globale.  
+ Un callback viene definito specificando un delegato <xref:System.AsyncCallback> nel metodo <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> o <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Il delegato viene chiamato quando l'operazione è stata completata. È possibile passare al delegato un riferimento al tipo <xref:System.Data.SqlClient.SqlCommand> stesso, facilitando l'accesso all'oggetto <xref:System.Data.SqlClient.SqlCommand> e la chiamata al metodo `End` appropriato senza dover usare una variabile globale.  
   
-## Esempio  
- Nella seguente applicazione Windows viene illustrato l'uso del metodo <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, eseguendo un'istruzione Transact\-SQL che include un ritardo di qualche secondo, ovvero emulando un comando a esecuzione prolungata.  
+## <a name="example"></a>Esempio  
+ Nella seguente applicazione Windows viene illustrato l'uso del metodo <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, eseguendo un'istruzione Transact-SQL che include un ritardo di qualche secondo, ovvero emulando un comando a esecuzione prolungata.  
   
- In questo esempio vengono illustrate diverse tecniche importanti, tra cui la chiamata di un metodo che interagisce con il form da un thread separato.  Inoltre, viene illustrato come sia necessario impedire che gli utenti eseguano simultaneamente e più volte un comando, nonché assicurare che il form non venga chiuso prima che venga chiamata la procedura di callback.  
+ In questo esempio vengono illustrate diverse tecniche importanti, tra cui la chiamata di un metodo che interagisce con il form da un thread separato. Inoltre, viene illustrato come sia necessario impedire che gli utenti eseguano simultaneamente e più volte un comando, nonché assicurare che il form non venga chiuso prima che venga chiamata la procedura di callback.  
   
- Per impostare questo esempio, creare una nuova applicazione Windows.  Posizionare un controllo <xref:System.Windows.Forms.Button> e due controlli <xref:System.Windows.Forms.Label> nel form \(accettando il nome predefinito di ciascuno\).  Aggiungere il codice indicato di seguito alla classe del form, modificando la stringa di connessione in base alle esigenze del proprio ambiente.  
+ Per impostare questo esempio, creare una nuova applicazione Windows. Posizionare un controllo <xref:System.Windows.Forms.Button> e due controlli <xref:System.Windows.Forms.Label> nel form (accettando il nome predefinito di ciascuno). Aggiungere il codice indicato di seguito alla classe del form, modificando la stringa di connessione in base alle esigenze del proprio ambiente.  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 ' Add these to the top of the class:  
 Imports System  
 Imports System.Data  
@@ -384,6 +388,6 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## Vedere anche  
- [Operazioni asincrone](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Operazioni asincrone](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

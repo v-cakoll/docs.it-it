@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aea6051a5cfd436b879bc3c8c6ce9b5f656c0ecb
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 18f2d06d3a6974b913af663a38a6155b38422232
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Esempio: gestione delle eccezioni durante il data binding
 > [!NOTE]
@@ -49,7 +47,7 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ```  
   
 ## <a name="what-was-the-app-doing"></a>Che cosa stava eseguendo l'app?  
- Alla base dello stack, i frame dello spazio dei nomi [Windows.UI.Xaml](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) indicano che il motore di rendering XAML era in esecuzione.   L'uso del metodo <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=fullName> indica una ricerca basata su reflection del valore di una proprietà sul tipo di cui sono stati rimossi i metadati.  
+ Alla base dello stack, i frame dello spazio dei nomi [Windows.UI.Xaml](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.aspx) indicano che il motore di rendering XAML era in esecuzione.   L'uso del metodo <xref:System.Reflection.PropertyInfo.GetValue%2A?displayProperty=nameWithType> indica una ricerca basata su reflection del valore di una proprietà sul tipo di cui sono stati rimossi i metadati.  
   
  Il primo passaggio per la fornitura di una direttiva di metadati consiste nell'aggiunta di metadati `serialize` per il tipo che ne rende accessibili le proprietà:  
   
@@ -70,6 +68,5 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
  Tuttavia, sono disponibili dei metodi per specificare `ViewModel` nella pagina XAML in modo che la catena di strumenti possa associare le associazioni di proprietà al tipo corretto durante la compilazione e mantenere i metadati senza usare una direttiva di runtime.  È ad esempio possibile applicare l'attributo [Windows.UI.Xaml.Data.BindableAttribute](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindableattribute.aspx) alle proprietà. In questo modo il compilatore XAML genera le informazioni di ricerca necessarie ed evita la richiesta di una direttiva di runtime nel file Default.rd.xml.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione](../../../docs/framework/net-native/getting-started-with-net-native.md)   
+ [Introduzione](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [Esempio: Risoluzione dei problemi di programmazione dinamica](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
-

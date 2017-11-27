@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - invalid CER calls
 - InvalidCERCall MDA
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8fda91296ffb27a7661f8e9c5ea4bc664e570ce8
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0c051e1513f8e8ad1735085cb93f106b4fb9b0d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="invalidcercall-mda"></a>MDA invalidCERCall
 L'assistente al debug gestito `invalidCERCall` viene attivato quando all'interno del grafico delle aree a esecuzione vincolata è presente una chiamata a un metodo che non include alcun contratto di affidabilità o che include un contratto eccessivamente debole. Un contratto debole è un contratto che dichiara che il peggior stato di danneggiamento ha un ambito più vasto rispetto all'istanza passata alla chiamata, ovvero lo stato di <xref:System.AppDomain> o del processo può risultare danneggiato o il risultato non è sempre calcolabile in modo deterministico quando la chiamata avviene all'interno di un'area a esecuzione vincolata.  
@@ -70,7 +63,6 @@ L'assistente al debug gestito `invalidCERCall` viene attivato quando all'interno
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
- <xref:System.Runtime.ConstrainedExecution>   
+ <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
+ <xref:System.Runtime.ConstrainedExecution>  
  [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

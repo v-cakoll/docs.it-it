@@ -1,6 +1,6 @@
 ---
 title: Valori (F#)
-description: Valori (F#)
+description: "Informazioni su come valori in F # sono quantità di un tipo specifico."
 keywords: visual f#, f#, programmazione funzionale
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5e1e73c3-5adb-4bba-9976-d57f1ff6cd8d
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 31d28a5ff1bb7d9a88949bcaee895a405a5e7014
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: a1e077552ba39a483be3129c89af48b547219733
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="values"></a>Valori
 
 I valori in F# sono quantità che hanno un tipo specifico. I valori possono essere numeri interi o numeri a virgola mobile, caratteri o testo, elenchi, sequenze, matrici, tuple, unioni discriminate, record, tipi di classe o valori di funzioni.
@@ -25,7 +24,7 @@ I valori in F# sono quantità che hanno un tipo specifico. I valori possono esse
 ## <a name="binding-a-value"></a>Associazione di un valore
 Il termine *associazione* indica il processo di associare, ovvero collegare, un nome a una definizione. La parola chiave `let` associa un valore, come illustrato negli esempi seguenti:
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
 Il tipo di valore viene dedotto dalla definizione. Per un tipo primitivo, ad esempio un numero intero o a virgola mobile, il tipo è determinato dal tipo di valore letterale. Nell'esempio precedente il compilatore deduce quindi il tipo di `b` come `unsigned int`, mentre il tipo di `a` come `int`. Il tipo di valore di una funzione è determinato dal valore restituito nel corpo della funzione. Per altre informazioni sui tipi di valori delle funzioni, vedere [Funzioni](../functions/index.md). Per altre informazioni sui tipi di valori letterali, vedere [Valori letterali](../literals.md).
 
@@ -43,18 +42,17 @@ F# non è un linguaggio funzionale puro, ma supporta completamente la programmaz
 
 È possibile assegnare un valore iniziale a una variabile modificabile tramite la parola chiave `let` nello stesso modo in cui si definisce un valore. La differenza tuttavia è che successivamente è possibile assegnare nuovi valori alle variabili modificabili tramite l'operatore `<-`, come illustrato nell'esempio seguente.
 
-[!code-fsharp[Principale](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
     
 ## <a name="related-topics"></a>Argomenti correlati
 
 
 |Titolo|Descrizione|
 |-----|-----------|
-|[Associazioni let](../functions/let-bindings.md)|Include informazioni sull'uso della parola chiave `let` per associare nomi a valori e funzioni.|
+|[Associazioni let](../functions/let-bindings.md)|Fornisce informazioni sull'utilizzo di `let` (parola chiave) per associare i nomi di funzioni e valori.|
 |[Funzioni](../functions/index.md)|Include una panoramica delle funzioni in F#.|
 
 ## <a name="see-also"></a>Vedere anche
 [Valori Null](null-Values.md)
 
 [Riferimenti per il linguaggio F#](../index.md)
-

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - binding failure
 - binding, failures
@@ -22,22 +16,21 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4e78cdcc5bcf69902675fceacc9dac245bfec336
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 89c1ce4b39379aeae80240750cdbcd2e61b6ec11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="bindingfailure-mda"></a>MDA bindingFailure
 L'assistente al debug gestito `bindingFailure` viene attivato quando si verifica un errore nel caricamento di un assembly.  
   
 ## <a name="symptoms"></a>Sintomi  
- Il codice ha tentato di caricare un assembly usando un riferimento statico o uno dei metodi loader, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> o <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>. L'assembly non viene caricato e viene generata un'eccezione <xref:System.IO.FileNotFoundException> o <xref:System.IO.FileLoadException>.  
+ Il codice ha tentato di caricare un assembly usando un riferimento statico o uno dei metodi loader, ad esempio <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>. L'assembly non viene caricato e viene generata un'eccezione <xref:System.IO.FileNotFoundException> o <xref:System.IO.FileLoadException>.  
   
 ## <a name="cause"></a>Causa  
  Quando il runtime non è in grado di caricare un assembly, si verifica un errore di binding, che può essere il risultato di una delle situazioni descritte di seguito.  
@@ -115,4 +108,3 @@ namespace ConsoleApplication1
   
 ## <a name="see-also"></a>Vedere anche  
  [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

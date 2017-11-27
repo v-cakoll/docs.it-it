@@ -5,26 +5,26 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- lazy initialization in .NET, how to perform
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ab1ae0eae8d78d4b7f14444e78ff5a741fe02d95
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b616aa284b6f7fff01b3b1fbfb15f2ceb54c9663
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Procedura: eseguire l'inizializzazione lenta di oggetti
-La classe <xref:System.Lazy%601?displayProperty=fullName> semplifica le operazioni di inizializzazione differita e creazione di istanze di oggetti. L'inizializzazione di oggetti in modalità differita consente di evitare di doverli creare se non sono mai necessari oppure di posticiparne l'inizializzazione fino al primo accesso. Per altre informazioni, vedere [Inizializzazione differita](../../../docs/framework/performance/lazy-initialization.md).  
+La classe <xref:System.Lazy%601?displayProperty=nameWithType> semplifica le operazioni di inizializzazione differita e creazione di istanze di oggetti. L'inizializzazione di oggetti in modalità differita consente di evitare di doverli creare se non sono mai necessari oppure di posticiparne l'inizializzazione fino al primo accesso. Per altre informazioni, vedere [Inizializzazione differita](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente mostra come inizializzare un valore con <xref:System.Lazy%601>. Partire dal presupposto che la variabile differita potrebbe non essere necessaria, a seconda che esista altro codice che imposta la variabile `someCondition` su true o false.  
@@ -78,11 +78,11 @@ End Sub
 ```  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente mostra come usare la classe <xref:System.Threading.ThreadLocal%601?displayProperty=fullName> per inizializzare un tipo visibile solo per l'istanza dell'oggetto corrente nel thread corrente.  
+ L'esempio seguente mostra come usare la classe <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> per inizializzare un tipo visibile solo per l'istanza dell'oggetto corrente nel thread corrente.  
   
- [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)] [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
+ [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
+ [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.LazyInitializer?displayProperty=fullName>   
+ <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>  
  [Inizializzazione differita](../../../docs/framework/performance/lazy-initialization.md)
-

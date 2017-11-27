@@ -1,31 +1,22 @@
 ---
-title: 'Procedura: Combinare query LINQ con espressioni regolari (Visual Basic) | Microsoft Docs'
+title: 'Procedura: Combinare query LINQ con espressioni regolari (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6cf6ee296f142ce50a9448d80ab961dafe86ab4f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: MT
-ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
-ms.openlocfilehash: d9d63a729a31394b96a78479bc115125a1a7baeb
-ms.contentlocale: it-it
-ms.lasthandoff: 07/26/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Procedura: Combinare query LINQ con espressioni regolari (Visual Basic)
 In questo esempio viene illustrato come usare la classe <xref:System.Text.RegularExpressions.Regex> per creare un'espressione regolare per una corrispondenza più complessa nelle stringhe di testo. La query LINQ consente di filtrare esattamente i file che si vuole cercare tramite l'espressione regolare e di dare forma ai risultati.  
@@ -103,6 +94,5 @@ End Class
  Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  (LINQ e le stringhe (Visual Basic))  
+ [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))
-

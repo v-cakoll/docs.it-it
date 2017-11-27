@@ -1,81 +1,80 @@
 ---
-title: "How to: Create a Property (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "Visual Basic code, properties"
-  - "properties [Visual Basic]"
+title: "Procedura: creare una proprietà (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- Visual Basic code, properties
+- properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d140e6a10061f7fabe3d12c6cce5d0c201e103d6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create a Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una definizione di proprietà viene racchiusa tra un'istruzione `Property` e un'istruzione `End Property`.  All'interno della definizione è necessario definire una routine `Get`, una routine `Set` o entrambe.  Tra le due routine è incluso tutto il codice della proprietà.  
+# <a name="how-to-create-a-property-visual-basic"></a>Procedura: creare una proprietà (Visual Basic)
+Una proprietà definizione racchiusa tra una `Property` istruzione e un `End Property` istruzione. In questa definizione è definire un `Get` procedure, un `Set` procedure o entrambi. Il codice della proprietà si trova all'interno di queste procedure.  
   
- La routine `Get` recupera il valore della proprietà, mentre la routine `Set` memorizza un valore.  Per assegnare alla proprietà l'accesso in lettura e in scrittura, è necessario definire entrambe le routine.  Per una proprietà di sola lettura viene definita soltanto la routine `Get`, mentre per una proprietà di sola scrittura viene definita soltanto la routine `Set`.  
+ Il `Get` procedura recupera il valore della proprietà e `Set` routine memorizza un valore. Se si desidera che la proprietà di accesso in lettura/scrittura, è necessario definire entrambe le procedure. Per una proprietà di sola lettura, si definisce solo `Get`, e per una proprietà di sola scrittura, definire solo `Set`.  
   
-### Per creare una proprietà  
+### <a name="to-create-a-property"></a>Per creare una proprietà  
   
-1.  All'esterno di qualsiasi proprietà o routine utilizzare un'[Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), seguita da un'istruzione `End Property`.  
+1.  All'esterno di qualsiasi proprietà o routine, utilizzare un [istruzione Property](../../../../visual-basic/language-reference/statements/property-statement.md), seguito da un `End Property` istruzione.  
   
-2.  Se la proprietà accetta parametri, dopo la parola chiave `Property` inserire il nome della routine, quindi l'elenco dei parametri tra parentesi.  
+2.  Se la proprietà accetta parametri, seguire la `Property` (parola chiave) con il nome della routine, quindi l'elenco di parametri tra parentesi.  
   
-3.  Dopo le parentesi inserire una clausola `As` per specificare il tipo di dati del valore della proprietà.  È necessario specificare il tipo di dati anche per una proprietà di sola scrittura.  
+3.  Dopo le parentesi un `As` clausola per specificare il tipo di dati del valore della proprietà. È necessario specificare il tipo di dati anche per una proprietà di sola scrittura.  
   
-4.  Aggiungere le routine `Get` e `Set` nel modo appropriato.  Vedere le istruzioni riportate di seguito.  
+4.  Aggiungere `Get` e `Set` procedure, come appropriato. Vedere le indicazioni riportate di seguito.  
   
-### Per creare una routine Get che recupera il valore di una proprietà  
+### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>Per creare una routine Get che recupera un valore della proprietà  
   
-1.  Tra le istruzioni `Property` ed `End Property` definire un'[Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md), seguita da un'istruzione `End Get`.  Per la routine `Get` non è necessario definire alcun parametro.  
+1.  Tra le `Property` e `End Property` istruzioni, scrivere un [l'istruzione Get](../../../../visual-basic/language-reference/statements/get-statement.md), seguito da un `End Get` istruzione. Non è necessario definire i parametri per il `Get` stored procedure.  
   
-2.  Inserire le istruzioni del codice necessarie per il recupero del valore della proprietà tra le istruzioni `Get` ed `End Get`.  Oltre a generare e restituire il valore della proprietà, il codice può includere altri calcoli e modifiche di dati.  
+2.  Inserire le istruzioni di codice per recuperare il valore della proprietà tra il `Get` e `End Get` istruzioni. Questo codice può includere altri calcoli e modifiche di dati oltre a generare e restituire il valore della proprietà.  
   
-3.  Utilizzare un'istruzione `Return` per restituire il valore della proprietà al codice chiamante.  
+3.  Utilizzare un `Return` istruzione per restituire il valore della proprietà per il codice chiamante.  
   
- È necessario definire una routine `Get` sia per una proprietà di lettura e scrittura che per una proprietà di sola lettura.  Non deve invece essere definita una routine `Get` per una proprietà di sola scrittura.  
+ È necessario scrivere un `Get` procedura per una proprietà di lettura / scrittura e per una proprietà di sola lettura. Non è necessario definire un `Get` routine per una proprietà di sola scrittura.  
   
-### Per creare una routine Set che definisce il valore di una proprietà  
+### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>Per creare un Set di procedure che scrive un valore della proprietà  
   
-1.  Tra le istruzioni `Property` ed `End Property` definire un'[Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md), seguita da un'istruzione `End Set`.  
+1.  Tra le `Property` e `End Property` istruzioni, scrivere un [istruzione Set](../../../../visual-basic/language-reference/statements/set-statement.md), seguito da un `End Set` istruzione.  
   
-2.  All'interno dell'istruzione `Set` inserire un elenco di parametri tra parentesi dopo la parola chiave `Set`.  Tale elenco deve includere almeno un parametro specifico per il valore passato dal codice chiamante.  Il nome predefinito per questo parametro è `Value`, ma è possibile utilizzare un nome diverso in base alle esigenze.  Il tipo di dati del parametro valore deve corrispondere a quello della proprietà stessa.  
+2.  Nel `Set` istruzione, seguire la `Set` (parola chiave) con un elenco di parametri tra parentesi. Questo elenco deve includere almeno un parametro di valore per il valore passato al codice chiamante. Il nome predefinito per questo parametro è `Value`, ma è possibile utilizzare un nome diverso, se appropriato. Il parametro value deve avere gli stessi dati di tipo della proprietà stessa.  
   
-3.  Inserire le istruzioni del codice necessarie per la memorizzazione di un valore nella proprietà tra le istruzioni `Set` ed `End Set`.  Oltre a convalidare e memorizzare il valore della proprietà, il codice può includere altri calcoli e modifiche di dati.  
+3.  Inserire le istruzioni di codice per archiviare un valore nella proprietà tra il `Set` e `End Set` istruzioni. Questo codice può includere altri calcoli e modifiche di dati oltre a convalidare e memorizzare il valore della proprietà.  
   
-4.  Utilizzare il parametro valore per accettare il valore fornito dal codice chiamante.  Il valore può essere memorizzato direttamente in un'istruzione di assegnazione oppure utilizzato in un'espressione per il calcolo del valore interno da memorizzare.  
+4.  Utilizzare il parametro value per accettare il valore fornito dal codice chiamante. È possibile archiviare il valore direttamente in un'istruzione di assegnazione o utilizzarlo in un'espressione per calcolare il valore interno da archiviare.  
   
- È necessario definire una routine `Set` sia per una proprietà di lettura e scrittura che per una proprietà di sola scrittura.  Non deve invece essere definita una routine `Set` per una proprietà di sola lettura.  
+ È necessario scrivere un `Set` procedura per una proprietà di lettura / scrittura e per una proprietà di sola scrittura. Non è necessario definire un `Set` routine per una proprietà di sola lettura.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene creata una proprietà di lettura e scrittura che memorizza un nome completo costituito da due parti, ossia il nome e il cognome.  Quando il codice chiamante legge `fullName`, la routine `Get` combina le due parti costitutive e restituisce il nome completo.  Quando il codice chiamante assegna un nuovo nome completo, la routine `Set` tenta di scomporlo in due parti costitutive.  Se non viene rilevato alcuno spazio, viene memorizzato tutto come nome.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene creata una proprietà di lettura/scrittura che viene archiviato un nome completo come due parti costitutive, il nome e il cognome. Quando viene letto il codice chiamante `fullName`, `Get` procedure combina le due parti costitutive e restituisce il nome completo. Quando il codice chiamante viene assegnato un nuovo nome completo, il `Set` routine tenta di suddividerla in due parti costitutive. Se non viene trovato uno spazio, memorizzato tutto come il nome.  
   
  [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
   
- Nell'esempio riportato di seguito vengono illustrate le chiamate tipiche alle routine delle proprietà di `fullName`.  La prima chiamata imposta il valore delle proprietà, mentre la seconda lo recupera.  
+ L'esempio seguente mostra le chiamate alle routine della proprietà di tipiche `fullName`. La prima chiamata imposta il valore della proprietà e la seconda chiamata viene recuperato.  
   
  [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
   
-## Vedere anche  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Routine Property](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
- [How to: Declare a Property with Mixed Access Levels](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)   
- [How to: Call a Property Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-property-procedure.md)   
- [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)   
- [How to: Put a Value in a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-put-a-value-in-a-property.md)   
- [How to: Get a Value from a Property](../../../../visual-basic/programming-guide/language-features/procedures/how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>Vedere anche  
+ [Routine](./index.md)  
+ [Routine Property](./property-procedures.md)  
+ [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)  
+ [Differenze tra proprietà e variabili in Visual Basic](./differences-between-properties-and-variables.md)  
+ [Procedura: Dichiarare una proprietà con livelli di accesso misti](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [Procedura: Chiamare una routine di proprietà](./how-to-call-a-property-procedure.md)  
+ [Procedura: dichiarare e chiamare una proprietà predefinita in Visual Basic](./how-to-declare-and-call-a-default-property.md)  
+ [Procedura: Inserire un valore in una proprietà](./how-to-put-a-value-in-a-property.md)  
+ [Procedura: Ottenere un valore da una proprietà](./how-to-get-a-value-from-a-property.md)

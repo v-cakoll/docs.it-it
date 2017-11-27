@@ -1,143 +1,104 @@
 ---
-title: "Elemento &lt;runtime&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<runtime> (elemento)"
-  - "tag contenitore, <runtime> (elemento)"
-  - "runtime (elemento)"
+title: '&lt;runtime&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime
+helpviewer_keywords:
+- <runtime> element
+- runtime element
+- container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-caps.latest.revision: 70
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 62
+caps.latest.revision: "70"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: c4c64de42f82590e1e8dc24afa46f66c3efb35b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;runtime&gt;
-Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.  
+# <a name="ltruntimegt-element"></a>&lt;runtime&gt; elemento
+Fornisce informazioni utilizzate da common language runtime per configurare le applicazioni.  
   
-## Sintassi  
+ \<configuration>  
+\<runtime >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <runtime>  
 </runtime>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
+ Nelle sezioni seguenti vengono descritti gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
  Nessuno.  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<alwaysFlowImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|Specifica che il flusso dell'identità Windows passa sempre attraverso punti asincroni, indipendentemente dal modo in cui è stata ottenuta la rappresentazione.|  
-|[\<appDomainManagerAssembly\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)|Specifica l'assembly che fornisce il gestore del dominio di applicazione predefinito nel processo.|  
-|[\<appDomainManagerType\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)|Specifica il tipo che funge da gestore del dominio di applicazione predefinito.|  
-|[\<appDomainResourceMonitoring\>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|Indica al runtime di raccogliere statistiche su tutti i domini di applicazione nel processo per la durata del processo.|  
-|[\<assemblyBinding\>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
-|[\<bypassTrustedAppStrongNames\>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|Specifica se la verifica dei nomi sicuri per gli assembly attendibili deve essere ignorata.|  
-|[\<CompatSortNLSVersion\>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Specifica che nel runtime deve essere utilizzato il comportamento di ordinamento legacy quando si eseguono i confronti di stringhe.|  
-|[\<developmentMode\>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Specifica se nell'ambiente di esecuzione viene effettuata una ricerca degli assembly nelle directory definite dalla variabile di ambiente DEVPATH.|  
-|[\<disableCachingBindingFailures\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Specifica se è disabilitata la memorizzazione nella cache degli errori di associazione, che in .NET Framework versione 2.0 è attivata per impostazione predefinita.|  
-|[\<disableCommitThreadStack\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Specifica se viene eseguito il commit dello stack di thread completo all'avvio di un thread.|  
-|[\<disableFusionUpdatesFromADManager\>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Specifica se il comportamento predefinito, ovvero consentire all'host di runtime di eseguire l'override delle impostazioni di configurazione di un dominio di applicazione, è disabilitato.|  
-|[\<enforceFIPSPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/enforcefipspolicy-element.md)|Specifica se imporre un requisito di configurazione del computer per cui gli algoritmi di crittografia devono essere conformi agli standard FIPS \(Federal Information Processing Standards\).|  
-|[\<etwEnable\>](../../../../../docs/framework/configure-apps/file-schema/runtime/etwenable-element.md)|Specifica se abilitare la traccia eventi per Windows \(ETW\) per gli eventi Common Language Runtime.|  
-|[\<forcePerformanceCounterUniqueSharedMemoryReads\>](../../../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)|Indica se PerfCounter.dll utilizza l'impostazione del registro di sistema di CategoryOptions nell'applicazione .NET Framework versione 1.1 per determinare se caricare dati del contatore delle prestazioni dalla memoria condivisa specifica della categoria o dalla memoria globale.|  
-|[\<gcAllowVeryLargeObjects\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)|Sulle piattaforme a 64 bit, consente alle matrici che hanno dimensione totale maggiore di 2 GB \(GB\).|  
-|[\<gcConcurrent\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|Specifica se in Common Language Runtime viene eseguita la procedura di Garbage Collection in modo concorrente.|  
-|[\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)|Specifica se la Garbage Collection supporta più gruppi di CPU.|  
-|[\<gcServer\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)|Specifica se in Common Language Runtime viene eseguita la Garbage Collection per server.|  
-|[\<generatePublisherEvidence\>](../../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)|Specifica se in fase di esecuzione vengono utilizzati criteri di sicurezza dall'accesso di codice dell'editore.|  
-|[\<legacyCorruptedStateExceptionsPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element.md)|Specifica se il runtime consente al codice gestito di intercettare violazioni di accesso e altre eccezioni di stato danneggiato.|  
-|[\<legacyImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)|Specifica che il flusso dell'identità Windows non passa attraverso punti asincroni, indipendentemente dalle impostazioni di flusso per il contesto di esecuzione nel thread corrente.|  
-|[\<loadFromRemoteSources\>](../../../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)|Specifica se gli assembly provenienti da origini remote vengono caricati come assembly con attendibilità totale.|  
-|[\<NetFx40\_LegacySecurityPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|Specifica se il runtime utilizza criteri legacy di sicurezza dall'accesso di codice \(CAS, Code Access Security\).|  
-|[\<NetFx40\_PInvokeStackResilience\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|Specifica se il runtime corregge automaticamente dichiarazioni platform invoke errate in fase di esecuzione, al costo di transizioni più lente tra codice gestito e non gestito.|  
-|[\<NetFx45\_CultureAwareComparerGetHashCode\_LongStrings\>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Specifica se il runtime utilizza una quantità di memoria fissa per calcolare i codici hash per il metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName>.|  
-|[\<PreferComInsteadOfRemoting\>](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|Specifica che il runtime utilizzerà l'interoperabilità COM anziché i servizi remoti fra i limiti dei domini di applicazione.|  
-|[\<relativeBindForResources\>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|Ottimizza le ricerche per gli assembly satellite.|  
-|[\<shadowCopyVerifyByTimeStamp\>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|Specifica se la copia shadow utilizza il comportamento di avvio predefinito introdotto in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o ripristina il comportamento di avvio di versioni precedenti di .NET Framework.|  
-|[\<supportPortability\>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti allo scopo della portabilità dell'applicazione.|  
-|[\<system.runtime.caching\>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Fornisce informazioni di configurazione per la cache oggetti in memoria predefinita.|  
-|[\<Thread\_UseAllCpuGroups\>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|Specifica se il runtime distribuisce thread gestiti in tutti i gruppi della CPU.|  
-|[\<ThrowUnobservedTaskExceptions\>](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)|Specifica se le eccezioni non gestite di attività devono far terminare un processo in esecuzione.|  
-|[\<TimeSpan\_LegacyFormatMode\>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)|Specifica se il runtime utilizza la formattazione legacy per i valori <xref:System.TimeSpan>.|  
-|[\<UseRandomizedStringHashAlgorithm\>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)|Specifica se il runtime calcola i codici hash per le stringhe in base al dominio dell'applicazione.|  
-|[\<UseSmallInternalThreadStacks\>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|Richiede che il runtime utilizzi dimensioni di stack esplicite anziché la dimensione di stack predefinita quando crea determinati thread che utilizza internamente.|  
+|-------------|-----------------|  
+|[\<alwaysFlowImpersonationPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|Specifica che l'identità di Windows passa sempre attraverso punti asincroni, indipendentemente dalla modalità di rappresentazione.|  
+|[\<AppContextSwitchOverrides>](../../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)|Definisce una o più opzioni di compatibilità usate dalla classe <xref:System.AppContext> per fornire un meccanismo di rifiuto esplicito per la nuova funzionalità.|  
+|[\<appDomainManagerAssembly>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)|Specifica l'assembly che fornisce il gestore di dominio dell'applicazione per il dominio applicazione predefinito nel processo.|  
+|[\<appDomainManagerType>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)|Specifica il tipo che funge da gestore di dominio dell'applicazione per il dominio applicazione predefinito.|  
+|[\<appDomainResourceMonitoring>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|Indica al runtime di raccogliere statistiche su tutti i domini applicazione nel processo per la durata del processo.|  
+|[\<assemblyBinding>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|Contiene le informazioni sul reindirizzamento della versione degli assembly e i relativi percorsi.|  
+|[\<bypassTrustedAppStrongNames>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|Specifica se la verifica del nome sicuro per gli assembly attendibili deve essere ignorata.|  
+|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Specifica che il runtime deve usare il comportamento di ordinamento legacy quando si eseguono confronti di stringa.|  
+|[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Specifica se il runtime cerca gli assembly nelle directory specificate dalla variabile di ambiente DEVPATH.|  
+|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Specifica se la memorizzazione nella cache di errori di associazione, ovvero il comportamento predefinito in .NET Framework versione 2.0 è disabilitato.|  
+|[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Specifica se viene eseguito il commit dello stack di thread completo quando viene avviato un thread.|  
+|[\<disableFusionUpdatesFromADManager>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Specifica se è disabilitato il comportamento predefinito, ovvero consentire all'host di runtime di eseguire l'override delle impostazioni di configurazione per un dominio applicazione.|  
+|[\<EnableAmPmParseAdjustment>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|Determina se i metodi di analisi di data e ora usano un set di regole di rettifica per analizzare le stringhe di data che contengono solo un indicatore di giorno, mese, ora e AM/PM.|  
+|[\<enforceFIPSPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/enforcefipspolicy-element.md)|Specifica se applicare un requisito di configurazione del computer che specifica che gli algoritmi di crittografia devono essere conformi a FIPS (Federal Information Processing Standards).|  
+|[\<etwEnable>](../../../../../docs/framework/configure-apps/file-schema/runtime/etwenable-element.md)|Specifica se abilitare Event Tracing for Windows (ETW) e gli eventi CLR (Common Language Runtime).|  
+|[\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)|Specifica se PerfCounter.dll usa l'impostazione del Registro di sistema CategoryOptions in un'applicazione di .NET Framework versione 1.1 per determinare se caricare i dati del contatore delle prestazioni dalla memoria condivisa specifica della categoria o dalla memoria globale.|  
+|[\<gcAllowVeryLargeObjects>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)|Nelle piattaforme a 64 bit, abilita le matrici con dimensione totale maggiore di 2 gigabyte (GB).|  
+|[\<gcConcurrent>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|Specifica se common language runtime esegue garbage collection simultaneamente.|  
+|[\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)|Specifica se Garbage Collection supporta più gruppi di CPU.|  
+|[\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)|Specifica se Common Language Runtime esegue Garbage Collection per server.|  
+|[\<generatePublisherEvidence>](../../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)|Specifica se il runtime usa i criteri dell'editore di sicurezza per l'accesso di codice.|  
+|[\<legacyCorruptedStateExceptionsPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacycorruptedstateexceptionspolicy-element.md)|Specifica se il runtime consente al codice gestito di rilevare violazioni di accesso e altre eccezioni di stato danneggiato.|  
+|[\<legacyImpersonationPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)|Specifica che l'identità di Windows non passa attraverso punti asincroni, indipendentemente dalle impostazioni di flusso per il contesto di esecuzione nel thread corrente.|  
+|[\<loadfromRemoteSources>](../../../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)|Specifica se gli assembly da origini remote vengono caricati con attendibilità totale.|  
+|[<NetFx40_LegacySecurityPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|Specifica se il runtime usa i criteri di sicurezza per l'accesso di codice legacy.|  
+|[<NetFx40_PInvokeStackResilience>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|Specifica se il runtime corregge automaticamente le dichiarazioni platform invoke non corrette in fase di esecuzione, al costo di transizioni più lente tra codice gestito e quello non gestito.|  
+|[<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Specifica se il runtime utilizza una quantità di memoria fissa per calcolare i codici hash per il metodo <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>.|  
+|[\<PreferComInsteadOfRemoting >](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|Specifica che il runtime userà l'interoperabilità COM anziché la comunicazione remota tra i limiti del dominio applicazione.|  
+|[\<relativeBindForResources>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|Ottimizza le ricerche degli assembly satellite.|  
+|[\<shadowCopyVerifyByTimeStamp>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|Specifica se la copia shadow usa il comportamento di avvio predefinito introdotto in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o ripristina il comportamento di avvio delle versioni precedenti di .NET Framework.|  
+|[\<supportPortability>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|Specifica che un'applicazione può fare riferimento allo stesso assembly in due implementazioni diverse di .NET Framework, disabilitando il comportamento predefinito che tratta gli assembly come equivalenti per scopi di portabilità dell'applicazione.|  
+|[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|Fornisce informazioni sulla configurazione per la cache degli oggetti in memoria predefinita.|  
+|[<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|Specifica se il runtime distribuisce i thread gestiti tra tutti i gruppi di CPU.|  
+|[\<ThrowUnobservedTaskExceptions>](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)|Specifica se le eccezioni di attività non gestite devono comportare l'arresto di un processo in esecuzione.|  
+|[<TimeSpan_LegacyFormatMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/timespan-legacyformatmode-element.md)|Specifica se il runtime usa la formattazione legacy per i valori di <xref:System.TimeSpan>.|  
+|[\<useLegacyJit>](../../../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)|Determina se Common Language Runtime usa il compilatore JIT a 64 bit legacy per la compilazione JIT.|  
+|[\<UseRandomizedStringHashAlgorithm>](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)|Specifica se il runtime calcola i codici hash per le stringhe in base al dominio applicazione.|  
+|[\<UseSmallInternalThreadStacks>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|Richiede al runtime di usare dimensioni dello stack esplicite quando crea determinati thread usati internamente, invece delle dimensioni dello stack predefinite.|  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
   
-## Note  
- In .NET Framework versione 2.0 le identità rappresentate attraversano i punti asincroni di un dominio applicazione.  In .NET Framework versione 2.0 è possibile attivare o disabilitare il flusso delle rappresentazioni attraverso i punti asincroni configurando correttamente l'elemento runtime nel file machine.config o nel file di configurazione dell'applicazione.  Per ASP.NET il flusso delle rappresentazioni può essere configurato nel file aspnet.config contenuto nella directory \<Windows Folder\>\\Microsoft.NET\\Framework\\vx.x.xxxx.  
+## <a name="remarks"></a>Note  
+ Gli elementi figlio di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione di un file di configurazione vengono utilizzati da common language runtime per configurare la modalità di esecuzione di un'applicazione. Ad esempio, il [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) elemento determina se il garbage collector Usa garbage collection per workstation o garbage collection per server, il [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) elemento determina se common language runtime calcola il codice hash per una stringa in base all'applicazione o una base per dominio di applicazione e `AppContextSwitchOverrides` elemento consente agli utenti di libreria Per partecipare o rifiutare esplicitamente modificato funzionalità fornite da una libreria.  
   
- Per impostazione predefinita, in ASP.NET viene disabilitato il flusso delle rappresentazioni nel file aspnet.config utilizzando le seguenti impostazioni di configurazione:  
+ Gli elementi di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione vengono lette automaticamente dal common language runtime all'avvio dell'applicazione. È inoltre possibile definire il file di configurazione per un dominio applicazione non predefinito specificando il nome per il <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> proprietà; le relative impostazioni vengono lette automaticamente quando viene caricato il dominio dell'applicazione. Raramente, se applicabile, è necessario leggere direttamente le impostazioni di [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sezione nel file di configurazione dell'applicazione.  
   
-```  
-configuration>  
-   <runtime>  
-      <legacyImpersonationPolicy enabled="true"/>  
-      <alwaysFlowImpersonationPolicy enabled="false"/>  
-   </runtime>  
-</configuration>  
-```  
-  
- Se in ASP.NET si desidera attivare il flusso delle rappresentazioni, è necessario utilizzare in modo esplicito le seguenti impostazioni di configurazione:  
-  
-```  
-<configuration>  
-   <runtime>  
-      <legacyImpersonationPolicy enabled="false"/>  
-      <alwaysFlowImpersonationPolicy enabled="true"/>  
-   </runtime>  
-</configuration>  
-```  
-  
- Per ulteriori informazioni, vedere [Elemento \<legacyImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md) e [Elemento \<alwaysFlowImpersonationPolicy\>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
-  
-## Esempio  
- Nell'esempio seguente viene illustrato come reindirizzare una versione dell'assembly in un'altra.  
-  
-```  
-<configuration>  
-   <runtime>  
-      <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <dependentAssembly>  
-            <assemblyIdentity name="myAssembly"  
-                              publicKeyToken="32ab4ba45e0a69a1"  
-                              culture="neutral" />  
-             <bindingRedirect oldVersion="1.0.0.0"  
-                              newVersion="2.0.0.0"/>  
-         </dependentAssembly>  
-      </assemblyBinding>  
-   </runtime>  
-</configuration>  
-```  
-  
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Reindirizzamento delle versioni di assembly](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)   
- [How to: Disable Concurrent Garbage Collection](http://msdn.microsoft.com/it-it/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -1,85 +1,92 @@
 ---
-title: "Procedura: individuare se &#232; possibile eseguire o meno un processo di stampa all&#39;orario indicato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "processi di stampa, temporizzazione"
-  - "code di stampa, temporizzazione"
-  - "stampanti, disponibilità"
+title: "Procedura: individuare se è possibile eseguire o meno un processo di stampa all'orario indicato"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- print queues [WPF], timing
+- printers [WPF], availability
+- print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ac89b8dce67c95c78a5dd46e591d84730a68346
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: individuare se &#232; possibile eseguire o meno un processo di stampa all&#39;orario indicato
-Le code di stampa non sempre sono disponibili 24 ore al giorno.  È possibile impostare le proprietà relative all'ora di inizio e di fine per renderle non disponibili in determinati orari del giorno.  Questa funzione può essere utilizzata, ad esempio, per riservare l'uso esclusivo di una stampante per un determinato reparto dopo le 17.00.  In tal modo, il reparto avrebbe una coda di stampa diversa rispetto a quella degli altri reparti.  La coda per gli altri reparti sarebbe impostata come non disponibile dopo le 17.00 mentre quella per il reparto selezionato sarebbe impostata come disponibile per tutto il tempo.  
+# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procedura: individuare se è possibile eseguire o meno un processo di stampa all'orario indicato
+Code di stampa non sono sempre disponibili per 24 ore al giorno. Hanno proprietà ora di inizio e fine che è possibile impostare per renderli disponibili in determinati orari del giorno. Questa funzionalità è utilizzabile, ad esempio, per riservare una stampante per l'utilizzo esclusivo di un determinato reparto dopo le 17.00. Tale reparto avrebbe una coda diversa per la manutenzione della stampante di altri reparti utilizzare. La coda per gli altri reparti verrebbe impostata per essere disponibile dopo le 17.00, mentre coda quella per il reparto può essere impostata per essere sempre disponibile.  
   
- Inoltre, gli stessi processi di stampa possono essere impostati come stampabili solo entro un intervallo di tempo specificato.  
+ Inoltre, è possono impostare i processi di stampa se stessi come printable solo all'interno di un intervallo di tempo specificato.  
   
- Le classi <xref:System.Printing.PrintQueue> e <xref:System.Printing.PrintSystemJobInfo> esposte nelle [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] consentono di controllare in remoto se un determinato processo di stampa può essere eseguito su una determinata coda all'ora corrente.  
+ Il <xref:System.Printing.PrintQueue> e <xref:System.Printing.PrintSystemJobInfo> classi esposti nel [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] di [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] consentono di controllare in remoto se un determinato processo di stampa è possibile stampare su una determinata coda al momento corrente.  
   
-## Esempio  
- L'esempio riportato di seguito consente di diagnosticare i problemi di un processo di stampa.  
+## <a name="example"></a>Esempio  
+ Nell'esempio riportato di seguito è riportato un esempio che è possibile diagnosticare i problemi di un processo di stampa.  
   
- Di seguito vengono riportati i due passaggi principali di questo tipo di funzione.  
+ Esistono due passaggi principali per questo tipo di funzione come indicato di seguito.  
   
-1.  Leggere le proprietà <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> e <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> di <xref:System.Printing.PrintQueue> per determinare se comprendono l'ora corrente.  
+1.  Lettura di <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> e <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> le proprietà del <xref:System.Printing.PrintQueue> per determinare se l'ora corrente è tra di essi.  
   
-2.  Leggere le proprietà <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> e <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> di <xref:System.Printing.PrintSystemJobInfo> per determinare se comprendono l'ora corrente.  
+2.  Lettura di <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> e <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> le proprietà del <xref:System.Printing.PrintSystemJobInfo> per determinare se l'ora corrente è tra di essi.  
   
- Tuttavia, i problemi scaturiscono dal fatto che queste proprietà non sono oggetti <xref:System.DateTime> ma oggetti <xref:System.Int32> che esprimono l'orario come numero di minuti a partire dalla mezzanotte.  Inoltre, non si tratta della mezzanotte del fuso orario corrente ma della mezzanotte ora UTC \(Coordinated Universal Time\).  
+ Tuttavia verificano complicazioni dal fatto che queste proprietà non sono <xref:System.DateTime> oggetti. Sono invece <xref:System.Int32> oggetti che esprimono l'ora del giorno come il numero di minuti trascorsi dalla mezzanotte. Inoltre, non si tratta mezzanotte nel fuso orario corrente, ma la mezzanotte ora UTC (Coordinated Universal Time).  
   
- Il primo esempio di codice presenta il metodo statico **ReportQueueAndJobAvailability** a cui viene passato <xref:System.Printing.PrintSystemJobInfo> e che chiama i metodi di supporto per stabilire se il processo può essere stampato all'ora corrente o, in caso contrario, quando può essere stampato.  Si noti che <xref:System.Printing.PrintQueue> non viene passato al metodo  perché <xref:System.Printing.PrintSystemJobInfo> include un riferimento alla coda nella relativa proprietà <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A>.  
+ Il primo esempio di codice presenta il metodo statico **ReportQueueAndJobAvailability**, che viene passato un <xref:System.Printing.PrintSystemJobInfo> e chiama i metodi helper per determinare se il processo può essere stampato all'ora corrente e, se non, quando è possibile stampare. Si noti che un <xref:System.Printing.PrintQueue> non viene passato al metodo. In questo modo il <xref:System.Printing.PrintSystemJobInfo> include un riferimento alla coda nel relativo <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A> proprietà.  
   
- I metodi subordinati includono il metodo di overload **ReportAvailabilityAtThisTime** che può utilizzare <xref:System.Printing.PrintQueue> o <xref:System.Printing.PrintSystemJobInfo> come parametro.  È disponibile anche **TimeConverter.ConvertToLocalHumanReadableTime**.  Tutti questi metodi vengono esaminati di seguito.  
+ I metodi subordinati includono il metodo di overload **ReportAvailabilityAtThisTime** metodo che può accettare un <xref:System.Printing.PrintQueue> o <xref:System.Printing.PrintSystemJobInfo> come parametro. È inoltre disponibile un **TimeConverter**. Tutti questi metodi sono descritti di seguito.  
   
- Il metodo **ReportQueueAndJobAvailability** verifica innanzitutto se la coda o il processo di stampa sono disponibili in quel preciso momento.  Se uno dei due non è disponibile, viene verificata la disponibilità della coda.  Se la coda non è disponibile, il metodo segnala questa situazione insieme all'ora in cui sarà nuovamente disponibile la coda.  Quindi, il metodo verifica il processo di stampa e, nel caso in cui non fosse disponibile, segnala il successivo intervallo di tempo in cui può essere stampato.  Infine, segnala il primo orario disponibile in cui il processo può essere stampato.  Si tratta della seconda condizione riportata di seguito.  
+ Il **ReportQueueAndJobAvailability** metodo inizia con un controllo per verificare se la coda o il processo di stampa non è disponibile in questo momento. Se nessuno dei due non è disponibile, viene quindi verificato se la coda non disponibile. Se non è disponibile, il metodo segnala tale situazione e il tempo quando la coda sarà nuovamente disponibile. Verifica quindi il processo e se non è disponibile, viene segnalato al successivo quando span quando è possibile stampare. Infine, il metodo segnala l'ora meno recente quando il processo è possibile stampare. Si tratta della seconda dei seguenti due volte.  
   
--   Il primo orario in cui è disponibile la coda di stampa.  
+-   Ora quando la coda di stampa è successivamente disponibile.  
   
--   Il primo orario in cui è disponibile il processo di stampa.  
+-   Ora quando il processo di stampa è disponibile.  
   
- Per il report degli orari, viene chiamato anche il metodo <xref:System.DateTime.ToShortTimeString%2A> che elimina gli anni, i mesi e i giorni dall'output.  Non è possibile limitare la disponibilità di una coda o di un processo di stampa ad anni, mesi o giorni specifici.  
+ Quando si segnalano ore del giorno, il <xref:System.DateTime.ToShortTimeString%2A> metodo viene chiamato anche il metodo che elimina l'anni, mesi e giorni dall'output. In particolari anni, mesi o giorni, è possibile limitare la disponibilità di una coda di stampa o un processo di stampa.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
  [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
  [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
   
- I due overload del metodo **ReportAvailabilityAtThisTime** sono identici ad eccezione del tipo ricevuto. Di seguito, viene quindi presentata solo la versione <xref:System.Printing.PrintQueue>.  
+ I due overload del **ReportAvailabilityAtThisTime** metodo sono identiche ad eccezione del tipo passato a essi in modo che solo il <xref:System.Printing.PrintQueue> versione viene presentata di seguito.  
   
 > [!NOTE]
->  Il fatto che i metodi siano identici ad eccezione del tipo, pone la questione del perché l'esempio non crea un metodo **ReportAvailabilityAtThisTime\<T\>** generico.  Il motivo è che questo metodo dovrebbe essere limitato a una classe con le proprietà **StartTimeOfDay** e **UntilTimeOfDay** chiamate dal metodo, ma un metodo generico può essere limitato a una sola classe e l'unica classe comune a <xref:System.Printing.PrintQueue> e a <xref:System.Printing.PrintSystemJobInfo> nella struttura ad albero di ereditarietà è <xref:System.Printing.PrintSystemObject> che non dispone di tali proprietà.  
+>  Il fatto che i metodi sono identici ad eccezione di tipo genera alla domanda perché il codice di esempio non crea un metodo generico **ReportAvailabilityAtThisTime\<T >**. Il motivo è che tale metodo deve essere limitato a una classe che ha il **StartTimeOfDay** e **UntilTimeOfDay** proprietà che chiama il metodo, ma un metodo generico può essere limitato a un singola classe e l'unica classe comune a entrambi <xref:System.Printing.PrintQueue> e <xref:System.Printing.PrintSystemJobInfo> nell'ereditarietà a struttura ad albero è <xref:System.Printing.PrintSystemObject> che non dispone di tali proprietà.  
   
- Il metodo **ReportAvailabilityAtThisTime**, illustrato nell'esempio di codice di seguito, avvia l'inizializzazione di una variabile sentinel <xref:System.Boolean> su `true`.  Se la coda non è disponibile, verrà reimpostata su `false`.  
+ Il **ReportAvailabilityAtThisTime** metodo, come illustrato nell'esempio di codice riportato di seguito, avvia l'inizializzazione di un <xref:System.Boolean> variabile sentinel per `true`. Verranno ripristinata `false`, se la coda non è disponibile.  
   
- Quindi, il metodo verifica se l'ora di inizio e l'ora di fine coincidono.  In tal caso, la coda è sempre disponibile e il metodo restituisce `true`.  
+ Successivamente, il metodo controlla se l'inizio e "fino a quando non" volte identico. In tal caso, la coda è sempre disponibile, il metodo restituisce `true`.  
   
- Se la coda non è disponibile per tutto il tempo, il metodo utilizza la proprietà statica <xref:System.DateTime.UtcNow%2A> per ottenere l'ora corrente come oggetto <xref:System.DateTime>.  L'ora locale non è necessaria perché le proprietà <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> e <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> sono in formato UTC.  
+ Se la coda non è disponibile tutto il tempo, il metodo utilizza il metodo statico <xref:System.DateTime.UtcNow%2A> proprietà da ottenere l'ora corrente come un <xref:System.DateTime> oggetto. (Ora locale non è necessaria perché il <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> e <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> sono in formato ora UTC.)  
   
- Tuttavia, queste due proprietà non sono oggetti <xref:System.DateTime> ma oggetti <xref:System.Int32> che esprimono l'orario come numero di minuti dopo la mezzanotte ora UTC.  È quindi necessario convertire l'oggetto <xref:System.DateTime> in minuti dopo la mezzanotte.  Quindi, il metodo verifica se "now" si trova tra l'ora di inizio e l'ora di fine della coda, imposta sentinel su false se "now" non è compreso tra i due orari e quindi restituisce sentinel.  
+ Tuttavia, queste due proprietà non sono <xref:System.DateTime> oggetti. Sono <xref:System.Int32>s esprime l'ora come numero di minuti dopo la mezzanotte ora UTC. Pertanto è necessario convertire il nostro <xref:System.DateTime> oggetto minuti trascorsi dalla mezzanotte. Una volta effettuata questa operazione, il metodo controlla semplicemente per verificare se "ora" sia tra l'inizio della coda e "volte, imposta sentinel su false se"ora"non è compreso tra due volte e restituisce sentinel fino a".  
   
  [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- Il metodo **TimeConverter.ConvertToLocalHumanReadableTime**, illustrato nell'esempio di codice di seguito, non utilizza alcun metodo introdotto con [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)].  Il metodo deve eseguire una doppia attività di conversione: deve convertire un numero intero che esprime i minuti dopo la mezzanotte in un orario leggibile e quindi convertire quest'ultimo nell'ora locale.  A tale scopo, viene creato prima un oggetto <xref:System.DateTime>, impostato sulla mezzanotte ora UTC, quindi viene utilizzato il metodo <xref:System.DateTime.AddMinutes%2A> per aggiungere i minuti passati al metodo.  Viene restituito un nuovo oggetto <xref:System.DateTime> che esprime l'ora originale passata al metodo.  Quindi, il metodo <xref:System.DateTime.ToLocalTime%2A> la converte nell'ora locale.  
+ Il **TimeConverter** metodo, come illustrato nell'esempio di codice riportato di seguito, non utilizzare alcun metodo introdotto con [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], pertanto la discussione è breve. Il metodo ha un'attività di conversione doppie: deve accettare un numero intero che esprime minuti dopo la mezzanotte e convertirlo in un momento leggibile e questo deve convertire l'ora locale. Esegue questa operazione creando innanzitutto un <xref:System.DateTime> oggetto che viene impostato sulla mezzanotte ora UTC, quindi viene utilizzato il <xref:System.DateTime.AddMinutes%2A> metodo per aggiungere i minuti che sono stati passati al metodo. Restituisce un nuovo <xref:System.DateTime> esprime l'ora originale è stato passato al metodo. Il <xref:System.DateTime.ToLocalTime%2A> metodo converte quindi l'ora locale.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]
  [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
-## Vedere anche  
- <xref:System.DateTime>   
- <xref:System.Printing.PrintSystemJobInfo>   
- <xref:System.Printing.PrintQueue>   
- [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [Cenni preliminari sulla stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.DateTime>  
+ <xref:System.Printing.PrintSystemJobInfo>  
+ <xref:System.Printing.PrintQueue>  
+ [Documenti in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Panoramica della stampa](../../../../docs/framework/wpf/advanced/printing-overview.md)

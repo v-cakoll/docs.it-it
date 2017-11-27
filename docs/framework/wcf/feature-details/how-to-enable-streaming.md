@@ -1,22 +1,28 @@
 ---
-title: "Procedura: attivare il flusso | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: attivare il flusso'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8436ceefea936ddbf708aa3f79c5f7bd8153ac66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: attivare il flusso
+# <a name="how-to-enable-streaming"></a>Procedura: attivare il flusso
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è in grado di inviare messaggi utilizzando trasferimenti con flusso o memorizzati nel buffer. Nella modalità predefinita, ovvero trasferimento con memorizzazione nel buffer, un messaggio deve essere recapitato completamente prima che un destinatario possa leggerlo. Nella modalità di trasferimento con flusso, il destinatario può iniziare a elaborare il messaggio prima che esso venga recapitato completamente. La modalità di trasmissione con flusso è utile quando le informazioni passate sono lunghe e possono essere elaborate in serie. La modalità di trasmissione con flusso è utile anche quando il messaggio è troppo grande da memorizzare completamente nel buffer.  
   
  Per attivare il flusso, definire correttamente `OperationContract` e attivare il flusso a livello di trasporto.  
@@ -27,7 +33,7 @@ caps.handback.revision: 13
   
     1.  Il parametro che contiene i dati da inviare in un flusso deve essere il solo parametro del metodo. Ad esempio, se il messaggio di input è quello da trasmettere, l'operazione deve avere esattamente un parametro di input. Allo stesso modo, se deve essere trasmesso il messaggio di output, l'operazione deve avere esattamente un solo parametro di output o un solo valore restituito.  
   
-    2.  Almeno uno dei tipi di parametro e restituzione di valori deve essere <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, o <xref:System.Xml.Serialization.IXmlSerializable>.  
+    2.  Almeno uno dei tipi di parametro e di valori restituiti deve essere <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message> o <xref:System.Xml.Serialization.IXmlSerializable>.  
   
      Di seguito è riportato un esempio di contratto per dati trasferiti con flusso.  
   
@@ -52,7 +58,7 @@ caps.handback.revision: 13
   
     1.  Nel frammento seguente di configurazione, preso dall'esempio, viene illustrata l'impostazione della proprietà `TransferMode` su trasmissione in `basicHttpBinding` e un'associazione HTTP personalizzata:  
   
-         <!-- TODO: review snippet reference [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  -->  
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
   
     2.  Nel frammento di codice seguente viene illustrata l'impostazione della proprietà `TransferMode` su trasmissione in `basicHttpBinding` e un'associazione HTTP personalizzata.  
   
@@ -71,7 +77,7 @@ caps.handback.revision: 13
   
 ### <a name="writing-a-custom-stream"></a>Scrittura di un flusso personalizzato  
   
-1.  Per eseguire un'elaborazione speciale su ogni blocco di un flusso di dati quando viene inviato o ricevuto, derivare una classe di flusso personalizzato da <xref:System.IO.Stream>. Come esempio di flusso personalizzato, il codice riportato di seguito contiene un metodo `GetReversedStream` e una classe `ReverseStream`.  
+1.  Per eseguire un'elaborazione speciale su ogni blocco di flusso di dati quando viene inviato o ricevuto, derivare una classe del flusso personalizzato da <xref:System.IO.Stream>. Come esempio di flusso personalizzato, il codice riportato di seguito contiene un metodo `GetReversedStream` e una classe `ReverseStream`.  
   
      `GetReversedStream` crea e restituisce una nuova istanza di `ReverseStream`. L'elaborazione effettiva si verifica quando il sistema legge dall'oggetto `ReverseStream`. Il metodo `ReverseStream.Read` legge un blocco di byte dal file sottostante, li inverte, quindi restituisce i byte invertiti. Questo metodo non inverte l'intero contenuto del file, ma un blocco di byte alla volta. In questo esempio viene illustrato come eseguire l'elaborazione del flusso mentre il contenuto viene letto o scritto da e verso il flusso.  
   
@@ -79,5 +85,5 @@ caps.handback.revision: 13
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dati di grandi dimensioni e Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)   
- [Flusso](../../../../docs/framework/wcf/samples/stream.md)
+ [Dati di grandi dimensioni e il flusso](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [Stream](../../../../docs/framework/wcf/samples/stream.md)

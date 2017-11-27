@@ -1,48 +1,56 @@
 ---
-title: "&lt;claimTypeRequired&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;claimTypeRequired&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
-caps.latest.revision: 5
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 89d42cba78eb9758d8b3491fd1bd3b25ef168f9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;claimTypeRequired&gt;
-Specifica il set di attestazioni necessarie per i token di protezione in ingresso.  
+# <a name="ltclaimtyperequiredgt"></a>&lt;claimTypeRequired&gt;
+Specifica il set di attestazioni necessarie per i token di sicurezza in ingresso.  
   
-## Sintassi  
+ \<System. IdentityModel >  
+\<identityConfiguration >  
+\<claimTypeRequired >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <claimTypeRequired>  
-    </claimTypeRequired>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <claimTypeRequired>  
+    </claimTypeRequired>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
- Nessuno  
+### <a name="attributes"></a>Attributi  
+ Nessuna  
   
-### Elementi figlio  
-  
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<claimType\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|Specifica un singolo credito facoltativo o obbligatorio per i token di protezione in ingresso.|  
-  
-### Elementi padre  
+### <a name="child-elements"></a>Elementi figlio  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|
+|-------------|-----------------|  
+|[\<claimType >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|Specifica una singola attestazione obbligatorio o facoltativa per i token di sicurezza in ingresso.|  
+  
+### <a name="parent-elements"></a>Elementi padre  
+  
+|Elemento|Descrizione|  
+|-------------|-----------------|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Specifica le impostazioni di identità a livello di servizio.|

@@ -1,46 +1,38 @@
 ---
-title: (Visual Basic) di pooling dei thread | Documenti di Microsoft
+title: (Visual Basic) di Pooling dei thread
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 4903fb7a-eaad-435a-9add-1d1b32de3b83
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6037d7ea17e260d44bae571aa25d413996f5a123
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 33b89d261aa2d038926f8c7e1832436b0cd34019
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="thread-pooling-visual-basic"></a>(Visual Basic) di pooling dei thread
-Oggetto *pool di thread* è una raccolta di thread che può essere utilizzato per eseguire diverse attività in background. (Vedere [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) per le informazioni.) In questo modo il thread principale può eseguire altre attività in modo asincrono.  
+# <a name="thread-pooling-visual-basic"></a>(Visual Basic) di Pooling dei thread
+Un *pool di thread* è una Collection di thread che è possibile usare per eseguire diverse attività in background. (Vedere [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) per informazioni generali.) In questo modo il thread primario è libero di eseguire altre attività in modo asincrono.  
   
- Pool di thread vengono spesso utilizzati nelle applicazioni server. Ogni richiesta in ingresso viene assegnato a un thread dal pool di thread, in modo che la richiesta può essere elaborata in modo asincrono, senza bloccare il thread principale o ritardare l'elaborazione delle richieste successive.  
+ I pool di thread vengono spesso usati nelle applicazioni server. Ad ogni richiesta in arrivo viene assegnato un thread del pool. In questo modo la richiesta può essere elaborata in modo asincrono, senza bloccare il thread primario o ritardare l'elaborazione delle richieste successive.  
   
- Una volta un thread nel pool di completamento dell'attività, viene restituito a una coda di thread in attesa, in cui può essere riutilizzato. In questo modo le applicazioni evitare il costo di creazione di un nuovo thread per ogni attività.  
+ Una volta completata l'attività, il thread del pool torna in una coda di thread in attesa, dove potrà essere riusato evitando in questo modo la necessità di creare un nuovo thread per ogni attività.  
   
- Pool di thread sono in genere un numero massimo di thread. Se tutti i thread sono occupati, attività aggiuntive vengono inserite nella coda finché non può essere gestite come diventano disponibili thread.  
+ Esiste in genere un numero massimo di thread che è possibile inserire in un pool. Se tutti i thread sono occupati, le altre attività vengono inserite in coda finché non potranno essere eseguite dai thread che si renderanno disponibili.  
   
- È possibile implementare un pool di thread, ma è più semplice utilizzare il pool di thread fornito da .NET Framework tramite la <xref:System.Threading.ThreadPool>classe.</xref:System.Threading.ThreadPool>  
+ È possibile implementare un pool di thread personalizzato, ma risulta più agevole usare quello fornito con .NET Framework tramite la classe <xref:System.Threading.ThreadPool>.  
   
- Pool di thread, si chiama il <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName>metodo con un delegato per la procedura da eseguire e Visual Basic viene creato il thread ed eseguita la procedura.</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName>  
+ Pool di thread, si chiama il <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> metodo con un delegato per la procedura da eseguire e Visual Basic viene creato il thread e viene eseguita la stored procedure.  
   
-## <a name="thread-pooling-example"></a>Esempio di pooling dei thread  
- Nell'esempio seguente viene illustrato come utilizzare pooling dei thread per avviare diverse attività.  
+## <a name="thread-pooling-example"></a>Esempio di limitazione delle richieste di thread  
+ Nell'esempio seguente viene illustrato come usare la limitazione delle richieste di thread per avviare svariate attività.  
   
 ```vb  
 Public Sub DoWork()  
@@ -59,22 +51,22 @@ Private Sub AnotherLongTask(ByVal state As Object)
 End Sub  
 ```  
   
- Un vantaggio del pool di thread consiste nel fatto che è possibile passare argomenti in un oggetto di stato per la routine dell'attività. Se la procedura che si sta chiamando richiede più di un argomento, è possibile impostare una struttura o un'istanza di una classe in un `Object` tipo di dati.  
+ Uno dei vantaggi offerti dalla limitazione di richieste di thread consiste nella possibilità di passare argomenti in un oggetto di stato alla routine di attività. Se per la routine chiamata è necessario più di un argomento, è possibile eseguire il cast di una struttura o un'istanza di una classe in un tipo di dati `Object`.  
   
-## <a name="thread-pool-parameters-and-return-values"></a>Parametri del Pool di thread e i valori restituiti  
- Restituzione di valori da un thread di pool di thread non è semplice. Il metodo standard per la restituzione di valori da una chiamata di funzione non è consentito perché `Sub` procedure sono l'unico tipo di routine che può essere accodate al pool di thread. Un modo per fornire parametri e restituire valori è incapsulando i parametri, i valori restituiti, e i metodi in un classe wrapper come descritto in [parametri e valori restituiti per routine multithreading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).  
+## <a name="thread-pool-parameters-and-return-values"></a>Parametri e valori restituiti del pool di thread  
+ La restituzione di valori da un thread del pool di thread non risulta semplicissima. Non è possibile avvalersi della soluzione standard per la restituzione di valori da una chiamata di funzione, poiché in un pool di thread possono essere accodate solo le routine `Sub`. Un modo per specificare i parametri e restituire valori è incapsulando i parametri, valori restituiti, e i metodi in un classe wrapper come descritto in [parametri e valori restituiti per routine multithreading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).  
   
- Un modo di soluzione per fornire parametri e valori restituiti è tramite facoltativo `ByVal` variabile oggetto di stato del <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>(metodo).</xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> Se si utilizza questa variabile per passare un riferimento a un'istanza di una classe, i membri dell'istanza possono essere modificati dal thread del pool di thread e utilizzati come valori restituiti.  
+ La variabile facoltativa dell'oggetto di stato `ByVal` del metodo <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> offre un metodo più semplice per fornire i parametri e restituire valori. Se si usa tale variabile per passare un riferimento a un'istanza di una classe, i membri dell'istanza potranno essere modificati dal thread del pool di thread e usati come valori restituiti.  
   
- Inizialmente potrebbe non essere evidente che è possibile modificare un oggetto a cui fa riferimento una variabile che viene passata per valore. È possibile farlo perché solo il riferimento all'oggetto viene passato per valore. Quando si apportano modifiche ai membri dell'oggetto a cui fa riferimento il riferimento all'oggetto, le modifiche applicate all'istanza di classe effettiva.  
+ Inizialmente potrebbe non essere evidente che è possibile modificare un oggetto a cui fa riferimento una variabile che viene passata per valore. Questa operazione può essere eseguita perché solo il riferimento oggetto viene inviato dal valore. Quando si apportano modifiche ai membri dell'oggetto indicato dal riferimento all'oggetto, le modifiche vengono applicate all'istanza di classe effettiva.  
   
- Le strutture non possono essere utilizzate per restituire i valori all'interno di oggetti di stato. Poiché le strutture sono tipi di valore, le modifiche apportate dal processo asincrono non modificano i membri della struttura originale. Utilizzare le strutture per fornire parametri quando non sono necessari i valori restituiti.  
+ Non è possibile usare le strutture per restituire valori all'interno di oggetti di stato. Poiché le strutture sono tipi valore, le modifiche apportate dal processo asincrono non comportano la modifica dei membri della struttura originale. Utilizzare le strutture per fornire parametri nei casi in cui non sono necessari i valori restituiti.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A></xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading></xref:System.Threading>   
- <xref:System.Threading.ThreadPool></xref:System.Threading.ThreadPool>   
- [Procedura: utilizzare un Pool di Thread (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)   
- [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [Applicazioni multithreading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)   
- [Sincronizzazione dei thread (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading>  
+ <xref:System.Threading.ThreadPool>  
+ [Procedura: Usare un pool di thread (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)  
+ [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [Applicazioni multithreading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [Sincronizzazione di thread (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)

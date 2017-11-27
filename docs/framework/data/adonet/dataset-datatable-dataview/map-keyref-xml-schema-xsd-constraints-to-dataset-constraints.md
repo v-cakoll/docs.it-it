@@ -1,39 +1,42 @@
 ---
-title: "Mappare i vincoli di XML Schema (XSD) keyref ai vincoli del DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mapping tra vincoli keyref XML Schema (XSD) e vincoli di dataset
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4ca72292bd2c43fec6f3833d521ddb83c01c32c9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Mappare i vincoli di XML Schema (XSD) keyref ai vincoli del DataSet
-L'elemento **keyref** consente di stabilire collegamenti tra gli elementi all'interno di un documento.  Questo elemento ha quindi una funzione simile a quella della relazione di chiave esterna in un database relazionale.  Se in uno schema viene specificato l'elemento **keyref**, durante il processo di mapping dello schema l'elemento viene convertito in un vincolo di chiave esterna corrispondente per le colonne delle tabelle del tipo <xref:System.Data.DataSet>.  Per impostazione predefinita, una relazione viene generata anche dall'elemento **keyref** e le proprietà **ParentTable**, **ChildTable**, **ParentColumn** e **ChildColumn** vengono specificate per tale relazione.  
+# <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapping tra vincoli keyref XML Schema (XSD) e vincoli di dataset
+Il **keyref** elemento consente di stabilire collegamenti tra elementi all'interno di un documento. Questo elemento ha quindi una funzione simile a quella della relazione di chiave esterna in un database relazionale. Se uno schema viene specificato il **keyref** elemento, l'elemento viene convertito durante il processo di mapping dello schema per un vincolo di chiave esterna corrispondente alle colonne nelle tabelle del <xref:System.Data.DataSet>. Per impostazione predefinita, il **keyref** elemento genera anche una relazione, con la **ParentTable**, **ChildTable**, **ParentColumn**e  **ChildColumn** proprietà specificate per la relazione.  
   
- Nella tabella seguente vengono brevemente descritti gli attributi **msdata** che è possibile specificare per l'elemento **keyref**.  
+ Nella tabella seguente vengono la **msdata** attributi in cui è possibile specificare il **keyref** elemento.  
   
 |Nome attributo|Descrizione|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|Se **ConstraintOnly\="true"** è specificato nell'elemento **keyref** dello schema, verrà creato un vincolo ma non verrà creata alcuna relazione.  Se questo attributo non viene specificato \(o è impostato su **False**\), nel **DataSet** vengono creati sia il vincolo che la relazione.|  
-|**msdata:ConstraintName**|Se l'attributo **ConstraintName** è specificato, il relativo valore viene usato come nome del vincolo.  In caso contrario, il nome del vincolo nel **DataSet** viene fornito dall'attributo **name** dell'elemento **keyref** dello schema.|  
-|**msdata:UpdateRule**|Se l'attributo **UpdateRule** viene specificato nell'elemento **keyref** dello schema, il relativo valore viene assegnato alla proprietà di vincolo **UpdateRule** nel **DataSet**.  In caso contrario, la proprietà **UpdateRule** viene impostata su **Cascade**.|  
-|**msdata:DeleteRule**|Se l'attributo **DeleteRule** viene specificato nell'elemento **keyref** dello schema, il relativo valore viene assegnato alla proprietà di vincolo **DeleteRule** nel **DataSet**.  In caso contrario, la proprietà **DeleteRule** viene impostata su **Cascade**.|  
-|**msdata:AcceptRejectRule**|Se l'attributo **AcceptRejectRule** viene specificato nell'elemento **keyref** dello schema, il relativo valore viene assegnato alla proprietà di vincolo **AcceptRejectRule** nel **DataSet**.  In caso contrario, la proprietà **AcceptRejectRule** viene impostata su **None**.|  
+|**msdata: ConstraintOnly**|Se **ConstraintOnly = "true"** viene specificata per il **keyref** elemento nello schema, viene creato un vincolo, ma è stata creata alcuna relazione. Se questo attributo non è specificato (o è impostata su **False**), vengono creati sia il vincolo che la relazione nel **DataSet**.|  
+|**msdata: ConstraintName**|Se il **ConstraintName** attributo viene specificato, il relativo valore viene utilizzato come nome del vincolo. In caso contrario, il **nome** attributo del **keyref** elemento nello schema fornisce il nome del vincolo nel **DataSet**.|  
+|**msdata:UpdateRule**|Se il **UpdateRule** attributo viene specificato nella **keyref** elemento nello schema, il relativo valore è assegnato al **UpdateRule** proprietà vincolo nel  **Set di dati**. In caso contrario il **UpdateRule** è impostata su **Cascade**.|  
+|**msdata:DeleteRule**|Se il **DeleteRule** attributo viene specificato nella **keyref** elemento nello schema, il relativo valore è assegnato al **DeleteRule** proprietà vincolo nel  **Set di dati**. In caso contrario il **DeleteRule** è impostata su **Cascade**.|  
+|**msdata:AcceptRejectRule**|Se il **AcceptRejectRule** attributo viene specificato nella **keyref** elemento nello schema, il relativo valore è assegnato al **AcceptRejectRule** proprietà vincolo nel  **Set di dati**. In caso contrario il **AcceptRejectRule** è impostata su **Nessuno**.|  
   
- Nell'esempio seguente viene riportato uno schema in cui vengono specificate le relazioni **key** e **keyref** tra l'elemento figlio **OrderNumber** dell'elemento **Order** e l'elemento figlio **OrderNo** dell'elemento **OrderDetail**.  
+ Nell'esempio seguente contiene uno schema che specifica il **chiave** e **keyref** le relazioni tra il **OrderNumber** elemento figlio dell'elemento di **ordine**  elemento e **OrderNo** elemento figlio dell'elemento di **OrderDetail** elemento.  
   
- Nell'esempio, l'elemento figlio **OrderNumber** dell'elemento **OrderDetail** fa riferimento all'elemento chiave figlio **OrderNo** dell'elemento **Order**.  
+ Nell'esempio il **OrderNumber** elemento figlio dell'elemento di **OrderDetail** elemento fa riferimento al **OrderNo** elemento chiave figlio dell'elemento il **ordine**elemento.  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -73,19 +76,18 @@ L'elemento **keyref** consente di stabilire collegamenti tra gli elementi all'in
 </xs:schema>  
 ```  
   
- Il processo di mapping dello schema XSD \(XML Schema Definition Language\) consente di generare il seguente **DataSet** con due tabelle:  
+ Il processo di mapping dello schema di XML Schema definition language (XSD) produce il seguente **DataSet** con due tabelle:  
   
 ```  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- Nel **DataSet** vengono inoltre definiti i seguenti vincoli:  
+ Inoltre, il **DataSet** definisce i vincoli seguenti:  
   
--   Un vincolo univoco nella tabella **Order**.  
+-   Un vincolo unique per la **ordine** tabella.  
   
     ```  
-  
               Table: Order  
     Columns: OrderNumber   
     ConstraintName: OrderNumberKey  
@@ -93,10 +95,9 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   Una relazione tra le tabelle **Order** e **OrderDetail**.  La proprietà **Nested** viene impostata su **False**, poiché i due elementi non sono annidate nello schema.  
+-   Una relazione tra il **ordine** e **OrderDetail** tabelle. Il **Nested** è impostata su **False** perché i due elementi non annidati nello schema.  
   
     ```  
-  
               ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  
@@ -107,10 +108,9 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   Un vincolo di chiave esterna nella tabella **OrderDetail**.  
+-   Un vincolo di chiave esterna nella **OrderDetail** tabella.  
   
     ```  
-  
               ConstraintName: OrderNoRef  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -119,7 +119,7 @@ Order(OrderNumber, EmpNumber)
     RelatedColumns: OrderNumber   
     ```  
   
-## Vedere anche  
- [Mapping dei vincoli di XML Schema \(XSD\) ai vincoli del DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Generazione delle relazioni del DataSet da XML Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ [Vincoli di mapping XML Schema (XSD) e vincoli di DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [La generazione di relazioni tra DataSet da XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

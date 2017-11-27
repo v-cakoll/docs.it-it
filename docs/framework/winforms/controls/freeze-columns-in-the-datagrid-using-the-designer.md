@@ -1,54 +1,55 @@
 ---
-title: "Procedura: bloccare le colonne nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "colonne [Windows Form], blocco"
-  - "dati [Windows Form], visualizzazione"
-  - "DataGridView (controllo) [Windows Form], blocco di colonna"
-  - "Windows Form, colonne"
+title: 'Procedura: bloccare le colonne nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, columns
+- columns [Windows Forms], freezing
+- DataGridView control [Windows Forms], column freezing
+- data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a97899d544dcc0d9f9ad59cbb34a01da76ef5fe5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: bloccare le colonne nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione
-Talvolta potrebbe risultare necessario fare di frequente riferimento a una singola colonna o a un gruppo di colonne visualizzate in un controllo <xref:System.Windows.Forms.DataGridView> di Windows Form.  Ad esempio, quando si visualizza una tabella delle informazioni utente contenente molte colonne, è utile rendere sempre visibile il nome utente e attivare lo scorrimento delle altre colonne fuori dall'area visibile.  
+# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedura: bloccare le colonne nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione
+Quando gli utenti visualizzano i dati contenuti in un controllo <xref:System.Windows.Forms.DataGridView> Windows Form, a volte devono fare spesso riferimento a una sola colonna o a un set di colonne. Ad esempio, quando si visualizza una tabella di informazioni sui clienti che contiene molte colonne, è utile per poter visualizzare il nome del cliente in qualsiasi momento mentre le altre colonne scorrono all'esterno dell'area visibile.  
   
- A tale scopo, è possibile bloccare le colonne nel controllo.  Quando si blocca una colonna, vengono bloccate anche tutte le colonne presenti a sinistra o, per gli script delle lingue da destra a sinistra, a destra.  Le colonne bloccate restano ferme mentre è possibile scorrere tutte le altre colonne.  Se il riordinamento delle colonne è attivato, le colonne bloccate vengono considerate come un gruppo separato dalle colonne non bloccate.  Gli utenti possono riposizionare le colonne in entrambi i gruppi, ma non possono spostare una colonna da un gruppo all'altro.  
+ A tale scopo, è possibile bloccare le colonne nel controllo. Quando si blocca una colonna, vengono bloccate anche tutte le colonne alla sua sinistra (o alla sua destra, nelle lingue scritte da destra a sinistra). Le colonne bloccate rimangono ferme mentre tutte le altre colonne possono scorrere. Se viene abilitato il riordinamento delle colonne, le colonne bloccate vengono considerate come un gruppo distinto dalle colonne non bloccate. Gli utenti possono riposizionare le colonne in entrambi i gruppi, ma non possono spostare una colonna da un gruppo all'altro.  
   
- Nella seguente procedura è richiesto un progetto **Applicazione Windows** con un form contenente un controllo <xref:System.Windows.Forms.DataGridView>.  Per informazioni sull'impostazione di tali progetti, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa) e [Procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ La procedura seguente richiede un **applicazione Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGridView> controllo. Per informazioni sull'impostazione di un progetto, vedere [procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Per bloccare una colonna utilizzando la finestra di progettazione  
+### <a name="to-freeze-a-column-using-the-designer"></a>Per bloccare una colonna utilizzando la finestra di progettazione  
   
-1.  Scegliere il glifo dello smart tag \(![Glifo Smart Tag](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) nell'angolo superiore destro del controllo <xref:System.Windows.Forms.DataGridView> e quindi selezionare **Modifica colonne**.  
+1.  Fare clic sul glifo smart tag (![Smart Tag glifo](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) nell'angolo superiore destro del <xref:System.Windows.Forms.DataGridView> controllare e quindi selezionare **Modifica colonne**.  
   
-2.  Selezionare una colonna dall'elenco **Colonne selezionate**.  
+2.  Selezionare una colonna dal **colonne selezionate** elenco.  
   
-3.  Nella griglia **Proprietà colonne** impostare la proprietà <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> su `true`.  
+3.  Nel **proprietà colonna** griglia, impostare il <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> proprietà `true`.  
   
     > [!NOTE]
-    >  È inoltre possibile bloccare una colonna quando viene aggiunta selezionando la casella **Bloccato** nella finestra di dialogo **Aggiungi colonna**.  
+    >  È inoltre possibile bloccare una colonna quando viene aggiunta selezionando il **Frozen** casella il **Aggiungi colonna** la finestra di dialogo.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=fullName>   
- [Procedura: aggiungere e rimuovere colonne nel controllo DataGridView di Windows Form utilizzando Progettazione Windows Form](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)   
- [Procedura: abilitare il riordinamento delle colonne nel controllo DataGridView di Windows Form utilizzando la finestra di progettazione](../../../../docs/framework/winforms/controls/enable-column-reordering-in-the-datagrid-using-the-designer.md)   
- [How to: Display Right\-to\-Left Text in Windows Forms for Globalization](http://msdn.microsoft.com/it-it/f0663385-2354-4c65-8676-706422283b14)   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa)   
- [Procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>  
+ [Procedura: Aggiungere e rimuovere colonne nel controllo DataGridView di Windows Form usando la finestra di progettazione](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
+ [Procedura: Abilitare il riordinamento delle colonne nel controllo DataGridView di Windows Form usando la finestra di progettazione](../../../../docs/framework/winforms/controls/enable-column-reordering-in-the-datagrid-using-the-designer.md)  
+ [Procedura: visualizzare il testo da destra a sinistra in Windows Form per la globalizzazione](http://msdn.microsoft.com/en-us/f0663385-2354-4c65-8676-706422283b14)  
+ [Procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [Procedura: Aggiungere controlli a un Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

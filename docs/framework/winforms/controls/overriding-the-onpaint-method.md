@@ -1,38 +1,42 @@
 ---
-title: "Override del metodo OnPaint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "OnPaint (metodo), override in controlli Windows Form personalizzati"
-  - "Paint (evento), gestione in controlli Windows Form personalizzati"
+title: Override del metodo OnPaint
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Paint event [Windows Forms], handling in Windows Forms custom control
+- OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 41205f7f0ec21e27b97d0b12415fca89ae526552
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Override del metodo OnPaint
-I passaggi di base per eseguire l'override di qualsiasi evento definito in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sono identici e vengono esposti di seguito.  
+# <a name="overriding-the-onpaint-method"></a>Override del metodo OnPaint
+I passaggi di base per eseguire l'override di qualsiasi evento definito nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sono identici e vengono riepilogate nell'elenco seguente.  
   
-#### Per eseguire l'override di un evento ereditato  
+#### <a name="to-override-an-inherited-event"></a>Per eseguire l'override di un evento ereditato  
   
-1.  Eseguire l'override del metodo `On`*NomeEvento* protetto.  
+1.  Eseguire l'override protetto `On` *EventName* metodo.  
   
-2.  Chiamare il metodo `On`*NomeEvento* della classe di base dal metodo `On`*NomeEvento* di cui è stato eseguito l'override, in modo che l'evento venga ricevuto dai delegati registrati.  
+2.  Chiamare il `On` *EventName* metodo della classe di base da sottoposto a override `On` *EventName* (metodo), in modo che i delegati registrati ricevano l'evento.  
   
- L'evento <xref:System.Windows.Forms.Control.Paint> è illustrato nei dettagli in questa sede perché è necessario che tutti i controlli di Windows Form eseguano l'override dell'evento <xref:System.Windows.Forms.Control.Paint> ereditato dalla classe <xref:System.Windows.Forms.Control>.  La classe base <xref:System.Windows.Forms.Control> non contiene le informazioni necessarie per il disegno dei controlli derivati e il relativo metodo <xref:System.Windows.Forms.Control.OnPaint%2A> non fornisce alcuna logica di disegno.  Il metodo <xref:System.Windows.Forms.Control.OnPaint%2A> della classe <xref:System.Windows.Forms.Control> non fa che inviare l'evento <xref:System.Windows.Forms.Control.Paint> ai riceventi di eventi registrati.  
+ Il <xref:System.Windows.Forms.Control.Paint> evento è illustrato in dettaglio di seguito perché è necessario eseguire l'override di tutti i controlli Windows Form di <xref:System.Windows.Forms.Control.Paint> evento che eredita da <xref:System.Windows.Forms.Control>. La base <xref:System.Windows.Forms.Control> non sa come deve essere disegnato un controllo derivato di classe e non fornisce alcuna logica di disegno di <xref:System.Windows.Forms.Control.OnPaint%2A> metodo. Il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo <xref:System.Windows.Forms.Control> invia semplicemente il <xref:System.Windows.Forms.Control.Paint> ricevitori di eventi registrati dell'evento.  
   
- Se si è esaminato l'esempio esposto in [Procedura: sviluppare un controllo di Windows Form semplice](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), si è avuto modo di vedere un esempio di override del metodo <xref:System.Windows.Forms.Control.OnPaint%2A>.  Il codice che segue è tratto da tale esempio.  
+ Se tramite l'esempio in cui si è lavorato [procedura: sviluppare un controllo Windows Form semplice](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), è stato illustrato un esempio di override di <xref:System.Windows.Forms.Control.OnPaint%2A> (metodo). Frammento di codice seguente è tratto dall'esempio.  
   
 ```vb  
 Public Class FirstControl  
@@ -62,7 +66,7 @@ public class FirstControl : Control{
 }   
 ```  
   
- La classe <xref:System.Windows.Forms.PaintEventArgs> contiene i dati dell'evento <xref:System.Windows.Forms.Control.Paint>.  Presenta due proprietà, come illustrato nel seguente codice.  
+ Il <xref:System.Windows.Forms.PaintEventArgs> classe contiene i dati per il <xref:System.Windows.Forms.Control.Paint> evento. Include due proprietà, come illustrato nel codice seguente.  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -88,11 +92,11 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- La proprietà <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> è il rettangolo da disegnare, mentre la proprietà <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> fa riferimento a un oggetto <xref:System.Drawing.Graphics>.  Le classi dello spazio dei nomi <xref:System.Drawing?displayProperty=fullName> sono classi gestite che consentono l'accesso alle funzionalità di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], la nuova libreria grafica di Windows.  L'oggetto <xref:System.Drawing.Graphics> presenta metodi per il disegno di punti, linee, archi, ellissi e numerose altre forme.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>il rettangolo da disegnare e <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> proprietà fa riferimento a un <xref:System.Drawing.Graphics> oggetto. Le classi di <xref:System.Drawing?displayProperty=nameWithType> dello spazio dei nomi gestiti classi che forniscono accesso alle funzionalità di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], nella nuova libreria di immagini di Windows. Il <xref:System.Drawing.Graphics> oggetto dispone di metodi per disegnare punti, stringhe, linee, archi, puntini di sospensione e molte altre forme.  
   
- Un controllo richiama il proprio metodo <xref:System.Windows.Forms.Control.OnPaint%2A> ogni volta che è necessario modificare l'aspetto del controllo stesso.  Questo metodo genera a sua volta l'evento <xref:System.Windows.Forms.Control.Paint>.  
+ Richiama un controllo relativo <xref:System.Windows.Forms.Control.OnPaint%2A> metodo ogni volta che è necessario modificare l'aspetto. Questo metodo genera a sua volta il <xref:System.Windows.Forms.Control.Paint> evento.  
   
-## Vedere anche  
- [Eventi](../../../../docs/standard/events/index.md)   
- [Rendering di un controllo Windows Form](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Eventi](../../../../docs/standard/events/index.md)  
+ [Rendering di un controllo di Windows Form](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
  [Definizione di un evento](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)

@@ -1,26 +1,29 @@
 ---
-title: "Utilizzo di un&#39;associazione personalizzata con il canale client di individuazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Uso di un'associazione personalizzata con il canale client di individuazione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 716dc09d38c778c49a1e2e5fa094ef1bf004eb46
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Utilizzo di un&#39;associazione personalizzata con il canale client di individuazione
+# <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>Uso di un'associazione personalizzata con il canale client di individuazione
 In caso di utilizzo di un'associazione personalizzata con <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, è necessario definire un elemento <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> che crea istanze <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>.  
   
-## Creazione di un elemento DiscoveryEndpointProvider  
- L'elemento <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> è responsabile della creazione di [T:System:ServiceModel.Discovery.DiscoveryEndpoints](assetId:///T:System:ServiceModel.Discovery.DiscoveryEndpoints?qualifyHint=False&amp;autoUpgrade=True) su richiesta.Per definire un provider di endpoint di individuazione, derivare una classe da <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> ed eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A>, quindi restituire un nuovo endpoint di individuazione.Nell'esempio seguente viene mostrato come creare un provider di endpoint di individuazione.  
+## <a name="creating-a-discoveryendpointprovider"></a>Creazione di un elemento DiscoveryEndpointProvider  
+ Il <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> è responsabile della creazione <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> istanze su richiesta. Per definire un provider di endpoint di individuazione, derivare una classe da <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> ed eseguire l'override del metodo <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A>, quindi restituire un nuovo endpoint di individuazione. Nell'esempio seguente viene mostrato come creare un provider di endpoint di individuazione.  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -50,9 +53,9 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] come utilizzare il canale client di individuazione, vedere [Utilizzo del canale client di individuazione](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md).Per un esempio di codice completo, vedere [Esempio di elemento di associazione di individuazione](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilizzo del canale client di individuazione, vedere [usando il canale Client di individuazione](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md). Per un esempio di codice completo, vedere [esempio di elemento di associazione di individuazione](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
   
-## Vedere anche  
- [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [Utilizzo del canale client di individuazione](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Utilizzo del canale Client di individuazione](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [Esempio di elemento di associazione di individuazione](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)

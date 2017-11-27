@@ -1,61 +1,64 @@
 ---
-title: "Batch transazionale. | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Batch transazionale.
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: 23
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: dbd11f3dad60463a5650d7aa6e53f9e8f3f5021e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Batch transazionale.
-Questo esempio dimostra come raggruppare letture transazionali usando Accodamento messaggi \(MSMQ\).  Il batch transazionale è una funzionalità di ottimizzazione delle prestazioni per le letture transazionali nella comunicazione in coda.  
+# <a name="transacted-batching"></a>Batch transazionale.
+Questo esempio dimostra come raggruppare letture transazionali usando Accodamento messaggi (MSMQ). Il batch transazionale è una funzionalità di ottimizzazione delle prestazioni per le letture transazionali nella comunicazione in coda.  
   
 > [!NOTE]
 >  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
   
- Nella comunicazione in coda, il client comunica al servizio usando una coda.  Più precisamente, il client invia messaggi a una coda.  Il servizio riceve messaggi dalla coda.  Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.  
+ Nella comunicazione in coda, il client comunica al servizio usando una coda. Più precisamente, il client invia messaggi a una coda. Il servizio riceve messaggi dalla coda. Di conseguenza, per comunicare mediante una coda il servizio e il client non devono essere in esecuzione contemporaneamente.  
   
- Nell'esempio viene dimostrato il batch transazionale.  Il batch transazionale è un comportamento che consente di usare una singola transazione per la lettura di molti messaggi nella coda e la relativa elaborazione.  
+ Nell'esempio viene dimostrato il batch transazionale. Il batch transazionale è un comportamento che consente di usare una singola transazione per la lettura di molti messaggi nella coda e la relativa elaborazione.  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a>Per impostare, compilare ed eseguire l'esempio  
   
-1.  Assicurarsi di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Se il servizio viene eseguito prima, verificherà la presenza della coda.  Se la coda non è presente, il servizio ne creerà una.  È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ.  Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.  
+2.  Se il servizio viene eseguito prima, verificherà la presenza della coda. Se la coda non è presente, il servizio ne creerà una. È possibile eseguire il servizio prima per creare la coda oppure è possibile crearne una tramite il gestore code MSMQ. Per creare una coda in Windows 2008, eseguire i passaggi riportati di seguito.  
   
     1.  Aprire Server Manager in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Espandere la scheda **Funzionalità**.  
+    2.  Espandere il **funzionalità** scheda.  
   
-    3.  Fare clic con il pulsante destro del mouse su **Code private**, quindi scegliere **Nuova** **coda privata**.  
+    3.  Fare doppio clic su **code Private**e selezionare **New**, **coda privata**.  
   
-    4.  Selezionare la casella **Di transazione**.  
+    4.  Controllare il **transazionale** casella.  
   
-    5.  Immettere `ServiceModelSamplesTransacted` come nome della nuova coda.  
+    5.  Immettere `ServiceModelSamplesTransacted` come il nome della nuova coda.  
   
     > [!NOTE]
-    >  In questo esempio il client invia centinaia di messaggi come parte del batch.  È pertanto normale che l'applicazione di servizio impieghi del tempo per elaborarli.  
+    >  In questo esempio il client invia centinaia di messaggi come parte del batch. È pertanto normale che l'applicazione di servizio impieghi del tempo per elaborarli.  
   
-3.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Per eseguire l'esempio in un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-### Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro o privo di integrazione con Active Directory  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro o privo di integrazione con Active Directory  
   
-1.  Per impostazione predefinita con l'associazione <xref:System.ServiceModel.NetMsmqBinding>, la sicurezza del trasporto è abilitata.  Sono disponibili due proprietà di rilievo per la sicurezza del trasporto MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`.  Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ.  Se si esegue questo esempio in un computer che non soddisfà questi criteri si riceve un errore.  
+1.  Per impostazione predefinita con l'associazione <xref:System.ServiceModel.NetMsmqBinding>, la sicurezza del trasporto è abilitata. Sono disponibili due proprietà pertinenti per la sicurezza del trasporto MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`. Affinché MSMQ fornisca la funzionalità di autenticazione e firma, è necessario che faccia parte di un dominio e che sia installata l'opzione di integrazione di Active Directory per MSMQ. Se si esegue questo esempio in un computer che non soddisfà questi criteri si riceve un errore.  
   
 2.  Se il computer non appartiene a un dominio o non è installato con l'integrazione di Active Directory, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su `None` come illustrato nella configurazione di esempio seguente:  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <behaviors>  
         <serviceBehaviors>  
@@ -101,30 +104,29 @@ Questo esempio dimostra come raggruppare letture transazionali usando Accodament
       </bindings>  
   
     </system.serviceModel>  
-  
     ```  
   
 3.  Assicurarsi di modificare la configurazione sul server e sul client prima di eseguire l'esempio.  
   
     > [!NOTE]
-    >  L'impostazione di `security` `mode` su `None` è equivalente all'impostazione della sicurezza di <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> e `Message` su `None`.  
+    >  L'impostazione di `security``mode` su `None` è equivalente all'impostazione di <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> e della sicurezza `Message` su `None`.  
   
 4.  Per eseguire il database in un computer remoto, modificare la stringa di connessione per puntare al computer sul quale risiede il database.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Per eseguire questo esempio, è necessario che MSMQ sia installato ed è necessario SQL o SQL ExpressSQL.  
   
-## Dimostrazione  
- Questo esempio dimostra il comportamento batch transazionale.  Il batch transazionale è una funzionalità di ottimizzazione delle prestazione fornita con il trasporto in coda MSMQ.  
+## <a name="demonstrates"></a>Dimostrazione  
+ Questo esempio dimostra il comportamento batch transazionale. Il batch transazionale è una funzionalità di ottimizzazione delle prestazione fornita con il trasporto in coda MSMQ.  
   
- Quando vengono usate transazioni per inviare e ricevere messaggi, di fatto vi sono 2 transazioni distinte.  Quando il client invia messaggi all'interno dell'ambito di una transazione, questa è locale per il client e il gestore delle code client.  Quando il servizio riceve messaggi all'interno dell'ambito di una transazione, questa è locale per il servizio e il gestore delle code di destinazione.  È molto importante ricordare che il client e il servizio non partecipano alla stessa transazione; essi usano invece transazioni diverse per le operazioni con la coda, quali l'invio e la ricezione.  
+ Quando vengono usate transazioni per inviare e ricevere messaggi, di fatto vi sono 2 transazioni distinte. Quando il client invia messaggi all'interno dell'ambito di una transazione, questa è locale per il client e il gestore delle code client. Quando il servizio riceve messaggi all'interno dell'ambito di una transazione, questa è locale per il servizio e il gestore delle code di destinazione. È molto importante ricordare che il client e il servizio non partecipano alla stessa transazione; essi usano invece transazioni diverse per le operazioni con la coda, quali l'invio e la ricezione.  
   
- Nell'esempio viene usata una sola transazione per l'esecuzione di più operazioni del servizio.  Questa viene usata solo come funzionalità di ottimizzazione delle prestazioni e non influisce sulla semantica dell'applicazione.  L'esempio è basato sull'[Associazioni MSMQ transazionali](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ Nell'esempio viene usata una sola transazione per l'esecuzione di più operazioni del servizio. Questa viene usata solo come funzionalità di ottimizzazione delle prestazioni e non influisce sulla semantica dell'applicazione. L'esempio è basato sul [transazionale associazione MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
-## Commenti  
- In questo esempio, il client invia un batch di messaggi al servizio dall'interno dell'ambito di una transazione.  Per mostrare l'ottimizzazione delle prestazioni viene inviato un numero elevato di messaggi; in questo caso, fino a 2500 messaggi.  
+## <a name="comments"></a>Commenti  
+ In questo esempio, il client invia un batch di messaggi al servizio dall'interno dell'ambito di una transazione. Per mostrare l'ottimizzazione delle prestazioni viene inviato un numero elevato di messaggi; in questo caso, fino a 2500 messaggi.  
   
- I messaggi inviati alla coda vengono quindi ricevuti dal servizio fra l'ambito della transazione definito dal servizio.  Senza il raggruppamento, ciò si traduce in 2500 transazioni per ogni chiamata dell'operazione del servizio.  Questo influisce sulle prestazioni del sistema.  Poiché sono coinvolti due gestori due gestori di risorse, la coda MSMQ e il database `Orders`, ciascuna di queste transazioni è una transazione DTC.  Ciò viene ottimizzato usando un numero molto inferiore di transazioni per garantire che a un batch di messaggi e chiamate delle operazioni del servizio abbia luogo in un'unica transazione.  
+ I messaggi inviati alla coda vengono quindi ricevuti dal servizio fra l'ambito della transazione definito dal servizio. Senza il raggruppamento, ciò si traduce in 2500 transazioni per ogni chiamata dell'operazione del servizio. Questo influisce sulle prestazioni del sistema. Poiché sono coinvolti due gestori due gestori di risorse, la coda MSMQ e il database `Orders`, ciascuna di queste transazioni è una transazione DTC. Ciò viene ottimizzato usando un numero molto inferiore di transazioni per garantire che a un batch di messaggi e chiamate delle operazioni del servizio abbia luogo in un'unica transazione.  
   
  La funzionalità batch viene usata nel modo seguente:  
   
@@ -136,9 +138,9 @@ Questo esempio dimostra come raggruppare letture transazionali usando Accodament
   
  In questo esempio, vengono dimostrati i guadagni di prestazioni tramite la riduzione del numero di transazioni assicurando che vengano chiamate 100 operazioni del servizio in una sola transazione prima di eseguire il commit della transazione.  
   
- Il comportamento del servizio definisce un comportamento dell'operazione con `TransactionScopeRequired` impostato su `true`.  Questo assicura che lo stesso ambito della transazione che viene usato per recuperare il messaggio dalla coda sia usato da tutti i gestori di risorse ai quali accede il metodo.  In questo esempio, viene usato un database di base per archiviare le informazioni sull'ordine di acquisto contenute nel messaggio.  L'ambito della transazione garantisce anche che se il metodo genera un'eccezione, il messaggio viene restituito alla coda.  Senza impostare questo comportamento dell'operazione, un canale in coda crea una transazione per leggere il messaggio dalla coda e ne esegue automaticamente il commit prima che venga inviato in modo che se l'operazione non riesce, il messaggio va perduto.  Lo scenario più comune per le operazioni del servizio è di inserirsi nella transazione che viene usata per leggere il messaggio dalla coda come dimostrato nel codice seguente.  
+ Il comportamento del servizio definisce un comportamento dell'operazione con `TransactionScopeRequired` impostato su `true`. Questo assicura che lo stesso ambito della transazione che viene usato per recuperare il messaggio dalla coda sia usato da tutti i gestori di risorse ai quali accede il metodo. In questo esempio, viene usato un database di base per archiviare le informazioni sull'ordine di acquisto contenute nel messaggio. L'ambito della transazione garantisce anche che se il metodo genera un'eccezione, il messaggio viene restituito alla coda. Senza impostare questo comportamento dell'operazione, un canale in coda crea una transazione per leggere il messaggio dalla coda e ne esegue automaticamente il commit prima che venga inviato in modo che se l'operazione non riesce, il messaggio va perduto. Lo scenario più comune per le operazioni del servizio è di inserirsi nella transazione che viene usata per leggere il messaggio dalla coda come dimostrato nel codice seguente.  
   
- Notare che `ReleaseServiceInstanceOnTransactionComplete` è impostato su `false`.  Si tratta di un requisito importante per il raggruppamento.  La proprietà `ReleaseServiceInstanceOnTransactionComplete` in `ServiceBehaviorAttribute` indica che cosa fare con l'istanza del servizio dopo che la transazione è stata completata.  Per impostazione predefinita, l'istanza del servizio viene rilasciata al completa della transazione.  L'aspetto centrale del raggruppamento è l'uso di una singola transazione per la lettura e l'invio di molti messaggi nella coda.  Di conseguenza, il rilascio dell'istanza del servizio comporta il completamento della transazione vanificando in modo prematuro l'effettivo uso del raggruppamento.  Se questa proprietà è impostata su `true` e all'endpoint viene aggiunto il comportamento del batch transazionale, il comportamento di convalida batch genera un'eccezione.  
+ Notare che `ReleaseServiceInstanceOnTransactionComplete` è impostato su `false`. Si tratta di un requisito importante per il raggruppamento. La proprietà `ReleaseServiceInstanceOnTransactionComplete` in `ServiceBehaviorAttribute` indica che cosa fare con l'istanza del servizio dopo che la transazione è stata completata. Per impostazione predefinita, l'istanza del servizio viene rilasciata al completa della transazione. L'aspetto centrale del raggruppamento è l'uso di una singola transazione per la lettura e l'invio di molti messaggi nella coda. Di conseguenza, il rilascio dell'istanza del servizio comporta il completamento della transazione vanificando in modo prematuro l'effettivo uso del raggruppamento. Se questa proprietà è impostata su `true` e all'endpoint viene aggiunto il comportamento del batch transazionale, il comportamento di convalida batch genera un'eccezione.  
   
 ```  
 // Service class that implements the service contract.  
@@ -157,10 +159,9 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-  
 ```  
   
- La classe `Orders` incapsula l'elaborazione dell'ordine.  Nell'esempio, aggiorna il database con le informazioni dell'ordine di acquisto.  
+ La classe `Orders` incapsula l'elaborazione dell'ordine. Nell'esempio, aggiorna il database con le informazioni dell'ordine di acquisto.  
   
 ```  
 // Order Processing Logic  
@@ -236,7 +237,7 @@ public class Orders
   
  Il comportamento batch e la relativa configurazione sono specificati nella configurazione dell'applicazione del servizio.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <appSettings>  
@@ -281,15 +282,15 @@ public class Orders
 ```  
   
 > [!NOTE]
->  La dimensione di batch è un suggerimento al sistema.  Ad esempio, se viene specificata una dimensione di batch di 20, verrebbero letti e inviati 20 messaggi usando una singola transazione e quindi verrebbe eseguito il commit della transazione.  Vi sono però casi in cui la transazione può eseguire il commit del batch prima che venga raggiunta la dimensione di batch.  
+>  La dimensione di batch è un suggerimento al sistema. Ad esempio, se viene specificata una dimensione di batch di 20, verrebbero letti e inviati 20 messaggi usando una singola transazione e quindi verrebbe eseguito il commit della transazione. Vi sono però casi in cui la transazione può eseguire il commit del batch prima che venga raggiunta la dimensione di batch.  
 >   
->  A ogni transazione è associato un timeout che inizia il ciclo quando viene creata la transazione.  Quando il timeout scade la transazione viene interrotta.  È possibile che il timeout scada anche prima che venga raggiunta la dimensione di batch.  Per evitare la rielaborazione del batch a causa dell'interruzione `TransactedBatchingBehavior` verifica il tempo residuo nella transazione.  Se è stato usato l'80% del timeout della transazione, viene eseguito il commit della transazione.  
+>  A ogni transazione è associato un timeout che inizia il ciclo quando viene creata la transazione. Quando il timeout scade la transazione viene interrotta. È possibile che il timeout scada anche prima che venga raggiunta la dimensione di batch. Per evitare la rielaborazione del batch a causa dell'interruzione `TransactedBatchingBehavior` verifica il tempo residuo nella transazione. Se è stato usato l'80% del timeout della transazione, viene eseguito il commit della transazione.  
 >   
 >  Se nella coda non sono più presenti messaggi, invece di attendere il raggiungimento della dimensione di batch <xref:System.ServiceModel.Description.TransactedBatchingBehavior> esegue il commit della transazione.  
 >   
->  La scelta della dimensione di batch dipende dall'applicazione.  Se la dimensione di batch è troppo piccola, è possibile che non si ottengano le prestazioni desiderate.  Se invece la dimensione di batch è troppo grande, le prestazioni potrebbero risentirne in modo negativo.  Ad esempio, la transazione potrebbe persistere più a lungo e attivare dei blocchi sul database oppure potrebbe passare in una situazione di deadlock, determinando la restituzione del batch e la relativa rielaborazione.  
+>  La scelta della dimensione di batch dipende dall'applicazione. Se la dimensione di batch è troppo piccola, è possibile che non si ottengano le prestazioni desiderate. Se invece la dimensione di batch è troppo grande, le prestazioni potrebbero risentirne in modo negativo. Ad esempio, la transazione potrebbe persistere più a lungo e attivare dei blocchi sul database oppure potrebbe passare in una situazione di deadlock, determinando la restituzione del batch e la relativa rielaborazione.  
   
- Il client crea un ambito di transazione.  La comunicazione con la coda avviene all'interno dell'ambito della transazione, facendo in modo che venga trattata come unità atomica nella quale alla coda vengono inviati tutti i messaggi o nessuno.  Il commit della transazione viene eseguito chiamando <xref:System.Transactions.TransactionScope.Complete%2A> nell'ambito della transazione.  
+ Il client crea un ambito di transazione. La comunicazione con la coda avviene all'interno dell'ambito della transazione, facendo in modo che venga trattata come unità atomica nella quale alla coda vengono inviati tutti i messaggi o nessuno. Il commit della transazione viene eseguito chiamando <xref:System.Transactions.TransactionScope.Complete%2A> nell'ambito della transazione.  
   
 ```  
 //Client implementation code.  
@@ -340,7 +341,7 @@ class Client
 }  
 ```  
   
- Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client.  È possibile osservare il servizio che riceve i messaggi dal client.  Premere INVIO in tutte le finestre della console per arrestare il servizio e il client.  Notare che essendo usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente.  È possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi.  È possibile osservare un output mobile mentre i messaggi vengono letti in un batch ed elaborati.  
+ Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del servizio e del client. È possibile osservare il servizio che riceve i messaggi dal client. Premere INVIO in tutte le finestre della console per arrestare il servizio e il client. Notare che essendo usato l'accodamento, non è necessario che client e servizio siano in esecuzione contemporaneamente. È possibile eseguire il client, arrestarlo e quindi avviare il servizio e riceve comunque i messaggi. È possibile osservare un output mobile mentre i messaggi vengono letti in un batch ed elaborati.  
   
 ```  
 The service is ready.  
@@ -375,12 +376,12 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 ```  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.  Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  È possibile che gli esempi siano già installati nel computer. Verificare la directory seguente (impostazione predefinita) prima di continuare.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Questo esempio si trova nella directory seguente.  
+>  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Questo esempio si trova nella directory seguente.  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   
-## Vedere anche
+## <a name="see-also"></a>Vedere anche

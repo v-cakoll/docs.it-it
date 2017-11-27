@@ -1,104 +1,109 @@
 ---
-title: "Cenni generali sul controllo RichTextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controlli, RichTextBox"
-  - "RichTextBox (controllo) [WPF], informazioni sul controllo RichTextBox"
+title: Cenni generali sul controllo RichTextBox
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], RichTextBox
+- RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 41b423235fc2ed9c0e0612c90017d41ab0e83d0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni generali sul controllo RichTextBox
-Il controllo <xref:System.Windows.Controls.RichTextBox> consente di visualizzare o modificare il contenuto del flusso, compresi i paragrafi, le immagini, le tabelle e così via.  In questo argomento viene presentata la classe <xref:System.Windows.Controls.TextBox> e vengono forniti esempi del relativo utilizzo sia in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] che in [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
+# <a name="richtextbox-overview"></a>Cenni generali sul controllo RichTextBox
+Il <xref:System.Windows.Controls.RichTextBox> controllo consente di visualizzare o modificare il contenuto di flusso inclusi paragrafi, immagini, tabelle e altro ancora. Questo argomento vengono presentate le <xref:System.Windows.Controls.TextBox> classe e fornisce esempi di come utilizzarla in entrambi [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
   
-   
   
 <a name="textbox_or_richtextbox"></a>   
-## TextBox o RichTextBox?  
- <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox> consentono agli utenti di modificare il testo; tuttavia, i due controlli vengono utilizzati in scenari differenti.  <xref:System.Windows.Controls.RichTextBox> rappresenta la scelta migliore quando l'utente deve modificare testo formattato, immagini, tabelle o altro contenuto complesso.  Ad esempio, per eseguire la modifica di un documento, di un articolo o di un blog che richiede una formattazione, delle immagini e così via è più opportuno utilizzare un controllo <xref:System.Windows.Controls.RichTextBox>.  Un controllo <xref:System.Windows.Controls.TextBox> richiede una quantità inferiore di risorse di sistema rispetto a <xref:System.Windows.Controls.RichTextBox> ed è la scelta ideale quando è necessario modificare solo del testo normale \(ad esempio  nei form\).  Per ulteriori informazioni su <xref:System.Windows.Controls.TextBox>, vedere [Cenni preliminari sulla classe TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md).  Nella tabella seguente sono riepilogate le funzionalità principali di <xref:System.Windows.Controls.TextBox> e di <xref:System.Windows.Controls.RichTextBox>.  
+## <a name="textbox-or-richtextbox"></a>Differenza tra un controllo TextBox e un controllo RichTextBox  
+ Entrambi <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.TextBox> consentire agli utenti di modificare il testo, tuttavia, i due controlli vengono utilizzati in scenari diversi. Oggetto <xref:System.Windows.Controls.RichTextBox> è una scelta migliore quando è necessario che all'utente di modificare il testo formattato, immagini, tabelle o altro contenuto complesso. Ad esempio, la modifica di un documento, un articolo o blog che richiede una formattazione, immagini, e così via è più opportuno utilizzare un <xref:System.Windows.Controls.RichTextBox>. Oggetto <xref:System.Windows.Controls.TextBox> richiede meno risorse di sistema un <xref:System.Windows.Controls.RichTextBox> ed è la scelta ideale solo testo normale deve essere modificato (ad esempio di utilizzo in form). Vedere [Cenni preliminari sul controllo TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md) per ulteriori informazioni su <xref:System.Windows.Controls.TextBox>. Nella tabella seguente sono riepilogate le principali funzionalità di <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.RichTextBox>.  
   
-|Controllo|Controllo ortografico in tempo reale|Menu di scelta rapida|Comandi di formattazione quale <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> \(Ctr\+B\)|Contenuto <xref:System.Windows.Documents.FlowDocument>, ad esempio immagini, paragrafi, tabelle e così via|  
-|---------------|------------------------------------------|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|Controllo|Controllo ortografico in tempo reale|Menu di scelta rapida|Comandi di formattazione quale <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument>contenuto, ad esempio immagini, paragrafi, tabelle e così via.|  
+|-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Sì|Sì|No|No.|  
 |<xref:System.Windows.Controls.RichTextBox>|Sì|Sì|Sì|Sì|  
   
- **Nota:** anche se <xref:System.Windows.Controls.TextBox> non supporta la formattazione di comandi correlati quale <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> \(Ctr\+B\), molti comandi di base sono supportati da entrambi controlli, ad esempio <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>.  
+ **Nota:** Sebbene <xref:System.Windows.Controls.TextBox> non supporta la formattazione di comandi correlati come <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B), molti comandi di base sono supportati da entrambi i controlli, ad esempio <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>.  
   
- Le funzionalità riportate nella tabella precedente saranno illustrate in modo più dettagliato in seguito.  
+ Le funzionalità della tabella precedente vengono illustrate in dettaglio più avanti.  
   
 <a name="creating_a_richtextbox"></a>   
-## Creazione di un controllo RichTextBox  
- Nel codice riportato di seguito viene illustrata la procedura di creazione di un controllo <xref:System.Windows.Controls.RichTextBox> che può essere utilizzato da un utente per la modifica di contenuto complesso.  
+## <a name="creating-a-richtextbox"></a>Creazione di un oggetto RichTextBox  
+ Il codice riportato di seguito viene illustrato come creare un <xref:System.Windows.Controls.RichTextBox> che un utente può modificare contenuto complesso.  
   
- [!code-xml[RichTextBoxMiscSnippets_snip#BasicRichTextBoxExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/BasicRichTextBoxExample.xaml#basicrichtextboxexamplewholepage)]  
+ [!code-xaml[RichTextBoxMiscSnippets_snip#BasicRichTextBoxExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/BasicRichTextBoxExample.xaml#basicrichtextboxexamplewholepage)]  
   
- In particolare, il contenuto modificato in un controllo <xref:System.Windows.Controls.RichTextBox> è un contenuto di flusso.  Tale contenuto può includere molti tipi di elementi, compresi testo formattato, immagini, elenchi e tabelle.  Per informazioni più approfondite sui documenti dinamici, vedere [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  Per includere il contenuto di flusso, un controllo <xref:System.Windows.Controls.RichTextBox> ospita un oggetto <xref:System.Windows.Documents.FlowDocument> che contiene a sua volta il contenuto modificabile.  Per offrire una dimostrazione del contenuto di flusso in un oggetto <xref:System.Windows.Controls.RichTextBox>, nel codice seguente viene illustrata la creazione di un oggetto <xref:System.Windows.Controls.RichTextBox> con un paragrafo e del testo in grassetto.  
+ In particolare, il contenuto modificato in un <xref:System.Windows.Controls.RichTextBox> è il contenuto di flusso. Tale contenuto può includere molti tipi di elementi, ad esempio testo formattato, immagini, elenchi e tabelle. Per informazioni approfondite sui documenti dinamici, vedere [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md). Per includere il contenuto di flusso, un <xref:System.Windows.Controls.RichTextBox> host un <xref:System.Windows.Documents.FlowDocument> oggetto che a sua volta contiene contenuto modificabile. Per illustrare il contenuto di flusso in un <xref:System.Windows.Controls.RichTextBox>, il codice seguente viene illustrato come creare un <xref:System.Windows.Controls.RichTextBox> con un paragrafo e il testo in grassetto.  
   
- [!code-xml[RichTextBoxMiscSnippets_snip#RichTextBoxWithContentExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/RichTextBoxWithContentExample.xaml#richtextboxwithcontentexamplewholepage)]  
+ [!code-xaml[RichTextBoxMiscSnippets_snip#RichTextBoxWithContentExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/RichTextBoxWithContentExample.xaml#richtextboxwithcontentexamplewholepage)]  
   
  [!code-csharp[RichTextBoxMiscSnippets_procedural_snip#BasicRichTextBoxWithContentCodeOnlyExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_procedural_snip/CSharp/BasicRichTextBoxWithContentExample.cs#basicrichtextboxwithcontentcodeonlyexample)]
  [!code-vb[RichTextBoxMiscSnippets_procedural_snip#BasicRichTextBoxWithContentCodeOnlyExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_procedural_snip/visualbasic/basicrichtextboxwithcontentexample.vb#basicrichtextboxwithcontentcodeonlyexample)]  
   
- Nell'immagine seguente viene mostrato il rendering di questo esempio.  
+ La figura seguente illustra come viene eseguito il rendering dell'esempio.  
   
- ![RichTextBox con contenuto](../../../../docs/framework/wpf/controls/media/editing-richtextbox-with-content.png "Editing\_RichTextBox\_with\_Content")  
+ ![RichTextBox con contenuto](../../../../docs/framework/wpf/controls/media/editing-richtextbox-with-content.png "Editing_RichTextBox_with_Content")  
   
- Elementi quali <xref:System.Windows.Documents.Paragraph> e <xref:System.Windows.Documents.Bold> determinano il modo in cui viene visualizzato il contenuto in un oggetto <xref:System.Windows.Controls.RichTextBox>.  Quando un utente modifica il contenuto di <xref:System.Windows.Controls.RichTextBox>, viene cambiato questo contenuto di flusso.  Per ulteriori informazioni sulle funzionalità del contenuto di flusso e sul relativo utilizzo, vedere [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+ Elementi quali <xref:System.Windows.Documents.Paragraph> e <xref:System.Windows.Documents.Bold> determinare come il contenuto all'interno di un <xref:System.Windows.Controls.RichTextBox> viene visualizzato. Quando un utente modifica <xref:System.Windows.Controls.RichTextBox> contenuto cambia il contenuto di questo flusso. Per altre informazioni sulle funzionalità del contenuto di flusso e sul relativo uso, vedere [Cenni preliminari sui documenti dinamici](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
- **Nota:** il comportamento del contenuto del flusso all'interno di <xref:System.Windows.Controls.RichTextBox> è leggermente diverso rispetto al comportamento del contenuto del flusso incluso in altri controlli.  Ad esempio, in un oggetto <xref:System.Windows.Controls.RichTextBox> non sono presenti colonne, pertanto non è previsto un comportamento di ridimensionamento automatico.  Inoltre, funzionalità incorporate quali la ricerca, la modalità di visualizzazione, la navigazione sulle pagine e lo zoom non sono disponibili in un oggetto <xref:System.Windows.Controls.RichTextBox>.  
+ **Nota:** contenuto all'interno del flusso un <xref:System.Windows.Controls.RichTextBox> si comporta esattamente come contenuto di flusso in altri controlli. Ad esempio, non sono disponibili colonne in un <xref:System.Windows.Controls.RichTextBox> e pertanto comportamento di ridimensionamento non automatico. Inoltre, funzionalità incorporate quali ricerca, la modalità di visualizzazione, la navigazione e lo zoom non sono disponibili all'interno di un <xref:System.Windows.Controls.RichTextBox>.  
   
 <a name="realtime_spellechecking"></a>   
-## Controllo ortografico in tempo reale  
- È possibile abilitare il controllo ortografico in tempo reale in un oggetto <xref:System.Windows.Controls.TextBox> o <xref:System.Windows.Controls.RichTextBox>.  Quando il controllo ortografico è attivo, viene visualizzata una linea rossa sotto le parole che presentano errori ortografici \(vedere l'immagine riportata di seguito\).  
+## <a name="real-time-spell-checking"></a>Controllo ortografico in tempo reale  
+ È possibile abilitare ortografico in tempo reale un <xref:System.Windows.Controls.TextBox> o <xref:System.Windows.Controls.RichTextBox>. Quando il controllo ortografico è attivato, viene visualizzata una riga rossa sotto le parole errate (vedere la figura seguente).  
   
- ![TextBox con controllo ortografico](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing\_TextBox\_with\_Spellchecking")  
+ ![TextBox con controllo ortografico](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")  
   
- Per apprendere la modalità di abilitazione del controllo ortografico, vedere [Attivare il controllo ortografico in un controllo di modifica del testo](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md).  
+ Per informazioni su come abilitare il controllo ortografico, vedere [Procedura: attivare il controllo ortografico in un controllo di modifica del testo](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md).  
   
 <a name="context_menu"></a>   
-## Menu di scelta rapida  
- Per impostazione predefinita, gli oggetti <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.RichTextBox> dispongono di un menu di scelta rapida che viene visualizzato quando un utente fa clic con il pulsante destro del mouse nel controllo.  Il menu di scelta rapida consente all'utente di eseguire operazioni di Taglia, Copia o Incolla \(vedere l'immagine di seguito\).  
+## <a name="context-menu"></a>Menu di scelta rapida  
+ Per impostazione predefinita, entrambi <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.RichTextBox> dispone di un menu di scelta rapida che viene visualizzata quando l'utente fa clic all'interno del controllo. Il menu di scelta rapida consente all'utente di eseguire operazioni di Taglia, Copia o Incolla (vedere la figura seguente).  
   
- ![TextBox con menu di scelta rapida](../../../../docs/framework/wpf/controls/media/editing-textbox-with-context-menu.png "Editing\_TextBox\_with\_Context\_Menu")  
+ ![TextBox con menu di scelta rapida](../../../../docs/framework/wpf/controls/media/editing-textbox-with-context-menu.png "Editing_TextBox_with_Context_Menu")  
   
- È possibile creare un menu di scelta rapida personalizzato ed eseguire l'override di quello predefinito.  Per ulteriori informazioni, vedere [Posizionare un menu di scelta rapida personalizzato in un controllo RichTextBox](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md).  
+ È possibile creare un menu di scelta rapida personalizzato per ignorare quello predefinito. Per altre informazioni, vedere [ Procedura: Posizionare un menu di scelta rapida personalizzato in un controllo RichTextBox](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md).  
   
 <a name="detect_when_content_changes"></a>   
-## Comandi di modifica  
- I comandi di modifica consentono agli utenti di formattare il contenuto modificabile all'interno di un controllo <xref:System.Windows.Controls.RichTextBox>.  Oltre ai comandi di modifica di base, <xref:System.Windows.Controls.RichTextBox> include comandi di formattazione, non supportati da <xref:System.Windows.Controls.TextBox>.  Ad esempio, se si eseguono modifiche in <xref:System.Windows.Controls.RichTextBox>, è possibile premere Ctr\+B per attivare e disattivare la formattazione del testo in grassetto.  Per un elenco completo dei comandi disponibili, vedere <xref:System.Windows.Documents.EditingCommands>.  Oltre a utilizzare i tasti di scelta rapida, è possibile associare i comandi ad altri controlli, quali i pulsanti.  Nell'esempio seguente viene illustrata la procedura per la creazione di una barra degli strumenti semplice, che l'utente potrà utilizzare per modificare la formattazione del testo.  
+## <a name="editing-commands"></a>Comandi di modifica  
+ I comandi di modifica consentono agli utenti di formattare il contenuto modificabile all'interno di un <xref:System.Windows.Controls.RichTextBox>. Oltre a basic tali comandi, <xref:System.Windows.Controls.RichTextBox> include comandi di formattazione che <xref:System.Windows.Controls.TextBox> non è supportata. Ad esempio, quando si modifica un <xref:System.Windows.Controls.RichTextBox>, un utente è possibile premere CTRL + B per attivare o disattivare la formattazione del testo in grassetto. Vedere <xref:System.Windows.Documents.EditingCommands> per un elenco completo di comandi disponibili. Oltre a usare i tasti di scelta rapida, è possibile associare i comandi ad altri controlli, quali i pulsanti. L'esempio seguente illustra la procedura per creare una barra degli strumenti semplice, che l'utente potrà usare per modificare la formattazione del testo.  
   
- [!code-xml[RichTextBox_InputPanel_snip#RichTextBoxWithToolBarExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_InputPanel_snip/CS/Window1.xaml#richtextboxwithtoolbarexamplewholepage)]  
+ [!code-xaml[RichTextBox_InputPanel_snip#RichTextBoxWithToolBarExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_InputPanel_snip/CS/Window1.xaml#richtextboxwithtoolbarexamplewholepage)]  
   
- Nell'immagine seguente viene mostrata la visualizzazione di questo esempio.  
+ La figura seguente illustra la visualizzazione dell'esempio.  
   
- ![RichTextBox con ToolBar](../../../../docs/framework/wpf/controls/media/editing-richtextbox-with-toobar.png "Editing\_RichTextBox\_with\_TooBar")  
+ ![RichTextBox con barra degli strumenti](../../../../docs/framework/wpf/controls/media/editing-richtextbox-with-toobar.gif "Editing_RichTextBox_with_TooBar")  
   
 <a name="editing_commands"></a>   
-## Rilevare le modifiche del contenuto  
- Generalmente, per rilevare tutte le modifiche apportate al testo di un oggetto <xref:System.Windows.Controls.TextBox> o di un oggetto <xref:System.Windows.Controls.RichTextBox> dovrebbe essere utilizzato l'evento <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> anziché <xref:System.Windows.UIElement.KeyDown> come si potrebbe pensare.  Per un esempio, vedere [Rilevare eventuali modifiche del testo in un oggetto TextBox](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md).  
+## <a name="detect-when-content-changes"></a>Rilevare le modifiche di contenuto  
+ In genere il <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> evento deve essere utilizzato per rilevare ogni volta che il testo in un <xref:System.Windows.Controls.TextBox> o <xref:System.Windows.Controls.RichTextBox> viene modificato anziché <xref:System.Windows.UIElement.KeyDown> come previsto. Per un esempio, vedere [Procedura: rilevare eventuali modifiche del testo in un oggetto TextBox](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md).  
   
 <a name="save_load_and_print_richtextbox_content"></a>   
-## Salvare, caricare e stampare il contenuto di un controllo RichTextBox  
- Nell'esempio riportato di seguito viene illustrata la procedura per salvare il contenuto di un oggetto <xref:System.Windows.Controls.RichTextBox> in un file, caricare nuovamente il contenuto nell'oggetto <xref:System.Windows.Controls.RichTextBox> e stamparlo.  Di seguito viene riportato il markup dell'esempio.  
+## <a name="save-load-and-print-richtextbox-content"></a>Salvare, caricare e stampare il contenuto di RichTextBox  
+ Nell'esempio seguente viene illustrato come salvare il contenuto di un <xref:System.Windows.Controls.RichTextBox> in un file, caricare contenuto nuovamente nel <xref:System.Windows.Controls.RichTextBox>e stampare il contenuto. Di seguito è indicato il markup per l'esempio.  
   
- [!code-xml[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml#saveloadprintrtbexamplewholepage)]  
+ [!code-xaml[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml#saveloadprintrtbexamplewholepage)]  
   
- Di seguito viene riportato il code\-behind dell'esempio.  
+ Di seguito è indicato il code-behind per l'esempio.  
   
  [!code-csharp[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/CSharp/SaveLoadPrintRTB.xaml.cs#saveloadprintrtbcodeexamplewholepage)]
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
-## Vedere anche  
- [Procedure relative](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Procedure relative](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
  [Cenni preliminari sulla classe TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)

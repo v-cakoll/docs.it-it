@@ -1,66 +1,64 @@
 ---
-title: "Convenzioni di lettere maiuscole/minuscole | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "nomi maiuscole-minuscole camel [.NET Framework]"
-  - "classe libreria linee guida di progettazione [.NET Framework], lettere maiuscole/minuscole"
-  - "Nomi di tipo Pascal [.NET Framework]"
-  - "distinzione maiuscole/minuscole, convenzioni di lettere maiuscole/minuscole"
-  - "nomi [.NET Framework], lettere maiuscole/minuscole"
+title: Convenzioni per l'utilizzo di maiuscole e minuscole
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- camel-case names [.NET Framework]
+- class library design guidelines [.NET Framework], capitalization
+- Pascal-case names [.NET Framework]
+- case sensitivity, capitalization conventions
+- names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e1bddb7bb3559e6f39b7884b92f64bee8fbb3510
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Convenzioni di lettere maiuscole/minuscole
-Le linee guida in questo capitolo disporre un metodo semplice per l'utilizzo di case, quando applicate in modo coerente, verificare gli identificatori di tipi, membri e parametri di facile lettura.  
+# <a name="capitalization-conventions"></a>Convenzioni per l'utilizzo di maiuscole e minuscole
+Le linee guida fornite in questo capitolo disporre un metodo semplice per l'utilizzo di case che, quando applicato in modo coerente, verificare gli identificatori per i tipi, membri e parametri di facile lettura.  
   
-## Regole per gli identificatori  
- Per differenziare le parole in un identificatore, converte in maiuscolo la prima lettera di ogni parola nell'identificatore. Non utilizzare caratteri di sottolineatura per differenziare le parole o parimenti, in un punto qualsiasi all'interno degli identificatori. Esistono due metodi appropriati per sfruttare al meglio gli identificatori, a seconda dell'utilizzo dell'identificatore:  
+## <a name="capitalization-rules-for-identifiers"></a>Regole per gli identificatori  
+ Per differenziare le parole in un identificatore, converte in maiuscolo la prima lettera di ogni parola nell'identificatore. Non utilizzare caratteri di sottolineatura per differenziare le parole o a tale scopo, in qualsiasi punto negli identificatori. Esistono due modi appropriati in maiuscolo gli identificatori, a seconda dell'utilizzo dell'identificatore:  
   
 -   Sistema Pascal  
   
 -   Camel  
   
- La convenzione il sistema Pascal, utilizzata per tutti gli identificatori, ad eccezione di nomi di parametro, converte in maiuscolo il primo carattere di ogni parola \(inclusi gli acronimi su due lettere\), come illustrato negli esempi seguenti:  
+ La convenzione il sistema Pascal, utilizzata per tutti gli identificatori, ad eccezione di nomi di parametro, converte in maiuscolo il primo carattere di ogni parola (inclusi gli acronimi su due lettere), come illustrato negli esempi seguenti:  
   
- `PropertyDescriptor`   
+ `PropertyDescriptor`  
  `HtmlTag`  
   
- Un caso speciale viene effettuato per acronimi di due lettere in cui sia le lettere sono scritti in maiuscolo, come illustrato nella seguente identificatore:  
+ Un caso speciale viene effettuato per due lettere acronimi in cui sia le lettere sono in maiuscolo, come illustrato nella seguente identificatore:  
   
  `IOStream`  
   
- La convenzione camel, utilizzata solo per i nomi dei parametri, converte in maiuscolo il primo carattere di ogni parola tranne la prima, come illustrato negli esempi seguenti. Come nell'esempio viene inoltre, gli acronimi di due lettere che iniziano un identificatore di maiuscole\/minuscole camel sono entrambi lettere minuscole.  
+ La convenzione camel, utilizzata solo per i nomi di parametro, converte in maiuscolo il primo carattere di ogni parola eccetto la prima parola, come illustrato negli esempi seguenti. Come nell'esempio viene inoltre, gli acronimi di due lettere che iniziano un identificatore di maiuscole/minuscole camel sono entrambi lettere minuscole.  
   
- `propertyDescriptor`   
- `ioStream`   
+ `propertyDescriptor`  
+ `ioStream`  
  `htmlTag`  
   
- **✓ si** utilizzare il sistema Pascal per tutti pubblici nomi membro, il tipo e spazio dei nomi costituiti da più parole.  
+ **✓ SI** utilizzare il sistema Pascal per tutti i membri, tipo e spazio dei nomi nomi pubblici composta da più parole.  
   
- **✓ si** utilizzare camel per i nomi di parametro.  
+ **✓ SI** utilizzare camel per i nomi di parametro.  
   
- Nella tabella seguente vengono descritte le regole di utilizzo delle maiuscole per i diversi tipi di identificatori.  
+ Nella tabella seguente descrive le regole di utilizzo delle maiuscole per diversi tipi di identificatori.  
   
 |Identificatore|Maiuscole e minuscole|Esempio|  
-|--------------------|---------------------------|-------------|  
-|Spazio dei nomi|Convenzione Pascal|`namespace System.Security { ... }`|  
+|----------------|------------|-------------|  
+|Spazio dei nomi|Convenzione Pascal|`namespace System.Security { ... }`|  
 |Tipo|Convenzione Pascal|`public class StreamReader { ... }`|  
 |Interfaccia|Convenzione Pascal|`public interface IEnumerable { ... }`|  
 |Metodo|Convenzione Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
@@ -70,15 +68,15 @@ Le linee guida in questo capitolo disporre un metodo semplice per l'utilizzo di 
 |Valore enum|Convenzione Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |Parametro|Convenzione camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
-## Sfruttando le parole composte e termini comuni  
- La maggior parte dei termini composti vengono considerate come singole parole ai fini di lettere maiuscole\/minuscole.  
+## <a name="capitalizing-compound-words-and-common-terms"></a>Le parole composte con iniziale maiuscole e termini comuni  
+ La maggior parte dei termini composti vengono considerati come singole parole per scopi di lettere maiuscole/minuscole.  
   
- **X non** tutte iniziali maiuscole in cosiddette parole composte forma chiusa.  
+ **X non** tutte iniziali maiuscole nella cosiddette parole composte di forma chiusa.  
   
- Queste sono le parole composte scritte come una singola parola, ad esempio endpoint. Ai fini di linee guida di maiuscole e minuscole, considerare una chiusura parola composta come una singola parola. Utilizzare un dizionario corrente per determinare se una parola composta è scritto in formato chiuso.  
+ Queste sono le parole composte scritte come una parola singola, ad esempio endpoint. Allo scopo di linee guida di maiuscole e minuscole, considerare una chiuso parola composta come una singola parola. Utilizzare un dizionario corrente per determinare se una parola composta è scritto in forma chiusa.  
   
-|Convenzione Pascal|Convenzione camel|Non|  
-|------------------------|-----------------------|---------|  
+|Convenzione Pascal|Convenzione camel|non|  
+|------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
 |`Canceled`|`canceled`|`Cancelled`|  
@@ -105,15 +103,15 @@ Le linee guida in questo capitolo disporre un metodo semplice per l'utilizzo di 
 |`WhiteSpace`|`whiteSpace`|`Whitespace`|  
 |`Writable`|`writable`|`Writeable`|  
   
-## Distinzione fra maiuscole e minuscole  
- Linguaggi eseguiti su CLR non è richiesta per supportare la distinzione maiuscole\/minuscole, anche se alcuni. Anche se è la lingua supportata, altri linguaggi che potrebbero accedere il framework non. Le API che sono accessibili dall'esterno, pertanto, possono basarsi sui case singolarmente per distinguere i due nomi nello stesso contesto.  
+## <a name="case-sensitivity"></a>Distinzione fra maiuscole e minuscole  
+ Linguaggi che è possono eseguire in Common Language Runtime non è richiesta per supportare distinzione maiuscole/minuscole, anche se alcuni. Anche se supporta la lingua, altri linguaggi che potrebbero accedere il framework non. Le API che sono accessibili dall'esterno, pertanto, possono basarsi su case da solo per distinguere tra i due nomi nello stesso contesto.  
   
- **X non** si presume che tutti i linguaggi di programmazione tra maiuscole e minuscole. Non sono. I nomi non può essere diversa di maiuscole\/minuscole solo.  
+ **X non** si presume che tutti i linguaggi di programmazione tra maiuscole e minuscole. Ma non lo sono. I nomi non possono differire dalle maiuscole o minuscole da solo.  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*  
+ *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*  
   
- *Ristampato con l'autorizzazione di Pearson formazione, Inc. da [Framework Design Guidelines: convenzioni idiomi e modelli per librerie .NET riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicati il 22 ottobre 2008 da Addison\-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ *State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
   
-## Vedere anche  
- [Linee guida](../../../docs/standard/design-guidelines/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Linee guida per la progettazione di Framework](../../../docs/standard/design-guidelines/index.md)  
  [Convenzioni di denominazione](../../../docs/standard/design-guidelines/naming-guidelines.md)

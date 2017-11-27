@@ -1,74 +1,84 @@
 ---
-title: "&lt;issuerTokenResolver&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;issuerTokenResolver&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
-caps.latest.revision: 9
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 02e2beb285cb0c4d88f98c3155ab5a3ff5e31e0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;issuerTokenResolver&gt;
-Registra il resolver del token emittente utilizzato dai gestori dell'insieme di gestore del token.  Resolver del token emittente viene utilizzato per risolvere il token di firma di token in arrivo e messaggi.  
+# <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
+Registra il resolver del token dell'autorità di certificazione che viene utilizzato dai gestori nella raccolta di gestori di token. Il resolver del token dell'autorità di certificazione viene utilizzato per risolvere il token di firma di token in arrivo e messaggi.  
   
-## Sintassi  
+ \<System. IdentityModel >  
+\<identityConfiguration >  
+\<securityTokenHandlers >  
+\<securityTokenHandlerConfiguration >  
+\<issuerTokenResolver >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <securityTokenHandlerConfiguration>  
-        <issuerTokenResolver type=xs:string>  
-        </issuerTokenResolver>  
-      </securityTokenHandlerConfiguration>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <securityTokenHandlerConfiguration>  
+        <issuerTokenResolver type=xs:string>  
+        </issuerTokenResolver>  
+      </securityTokenHandlerConfiguration>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|type|Specifica il tipo di resolver del token dell'emittente.  Deve essere il <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe o un tipo che deriva dal <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe.  Per ulteriori informazioni su come specificare il `type` di attributo, vedere [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences).  Obbligatorio.|  
+|tipo|Specifica il tipo di resolver del token dell'autorità di certificazione. Deve essere il <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe o un tipo che deriva dalla <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe. Obbligatorio.|  
   
-### Elementi figlio  
- Nessuno  
+### <a name="child-elements"></a>Elementi figlio  
+ None  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per un insieme di protezione gestori dei token.|  
+|-------------|-----------------|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Fornisce la configurazione per una raccolta di sicurezza gestori di token.|  
   
-## Note  
- Resolver del token emittente viene utilizzato per risolvere il token di firma di token in arrivo e messaggi.  Esso viene utilizzato per recuperare il materiale di crittografia utilizzato per la verifica della firma.  È necessario specificare il `type` attributo.  Il tipo specificato può essere rappresentato da <xref:System.IdentityModel.Tokens.IssuerTokenResolver> o un tipo personalizzato che deriva dal <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe.  
+## <a name="remarks"></a>Note  
+ Il resolver del token dell'autorità di certificazione viene utilizzato per risolvere il token di firma di token in arrivo e messaggi. Consente di recuperare il materiale di crittografia che viene utilizzato per controllare la firma. È necessario specificare il `type` attributo. Il tipo specificato può essere <xref:System.IdentityModel.Tokens.IssuerTokenResolver> o un tipo personalizzato da cui deriva il <xref:System.IdentityModel.Tokens.IssuerTokenResolver> classe.  
   
- Alcuni gestori token consentono di specificare le impostazioni del resolver del token emittente nella configurazione.  Le impostazioni sui singoli gestori token sostituiscono quelli specificati per l'insieme del gestore del token di protezione.  
+ Alcuni gestori di token consentono di specificare le impostazioni di resolver del token dell'autorità di certificazione nella configurazione. Le impostazioni ai gestori di token singoli sostituiscono quelle specificate nella raccolta di gestore del token di sicurezza.  
   
 > [!NOTE]
->  Specifica il `<issuerTokenResolver>` come un elemento figlio dell'elemento di [\<identityConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento è stato dichiarato obsoleto, ma è ancora supportata per compatibilità con le versioni precedenti.  Le impostazioni di `<securityTokenHandlerConfiguration>` elemento eseguire l'override di quelle sul `<identityConfiguration>` elemento.  
+>  Specifica il `<issuerTokenResolver>` come un elemento figlio dell'elemento di [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento è stato deprecato, ma è ancora supportato per compatibilità con le versioni precedenti. Impostazioni di `<securityTokenHandlerConfiguration>` elemento prevalgono su quelle nel `<identityConfiguration>` elemento.  
   
-## Esempio  
- Il file XML riportato di seguito mostra la configurazione per un resolver del token emittente che si basa su una classe personalizzata che deriva da <xref:System.IdentityModel.Tokens.IssuerTokenResolver>.  Resolver del token mantiene un dizionario delle coppie di chiavi pubblico inizializzata da un elemento di configurazione personalizzato \(`<AddAudienceKeyPair>`\) definite per la classe.  L'override della classe di <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> metodo per elaborare questo elemento.  L'override è illustrato nell'esempio riportato di seguito; Tuttavia, i metodi di chiamata non vengono visualizzati per ragioni di brevità.  Per un esempio completo, vedere la `CustomToken` campione.  
+## <a name="example"></a>Esempio  
+ Il codice XML seguente mostra la configurazione per un resolver del token dell'autorità di certificazione basata su una classe personalizzata che deriva da <xref:System.IdentityModel.Tokens.IssuerTokenResolver>. Il resolver del token gestisce un dizionario di coppie di chiavi di gruppo di destinatari che viene inizializzato da un elemento di configurazione personalizzato (`<AddAudienceKeyPair>`) definito per la classe. La classe esegue l'override di <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> metodo per l'elaborazione di questo elemento. La sostituzione è illustrata nell'esempio riportato di seguito; Tuttavia, i metodi che chiama non vengono visualizzati per motivi di brevità. Per un esempio completo, vedere il `CustomToken` esempio.  
   
-```  
+```xml  
 <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  
   <AddAudienceKeyPair  symmetricKey="wAVkldQiFypTQ+kdNdGWCYCHRcee8XmXxOvgmak8vSY=" audience="http://localhost:19851/" />  
 </issuerTokenResolver>  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)  
@@ -86,5 +96,5 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  <xref:System.IdentityModel.Tokens.IssuerTokenResolver>

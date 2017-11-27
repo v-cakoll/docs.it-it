@@ -1,14 +1,11 @@
 ---
-title: /Link (Visual Basic) | Documenti di Microsoft
-ms.date: 2015-07-20
+title: /link (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - l compiler option [Visual Basic]
 - EmbedInteropTypes
@@ -19,31 +16,17 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e98c855f0a0185e9d1b6682df9fc734e9f1f07bc
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: effaeae48bdeb1dfd0f8cda31fedf2436e7deaca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="link-visual-basic"></a>/link (Visual Basic)
-Indica al compilatore di rendere disponibile per il progetto in corso di compilazione informazioni sui tipi COM nei file specificati.  
+Indica al compilatore di rendere disponibili al progetto in fase di compilazione le informazioni sui tipi COM presenti negli assembly specificati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,63 +40,63 @@ Indica al compilatore di rendere disponibile per il progetto in corso di compila
   
 |Termine|Definizione|  
 |---|---|  
-|`fileList`|Obbligatorio. Elenco delimitato da virgole di nomi di file di assembly. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette.|  
+|`fileList`|Obbligatorio. Elenco di nomi di file di assembly delimitato da virgole. Se il nome del file contiene uno spazio, racchiudere il nome tra virgolette.|  
   
 ## <a name="remarks"></a>Note  
- Il `/link` consente di distribuire un'applicazione che incorpora informazioni sul tipo. L'applicazione può quindi utilizzare tipi che implementano le informazioni sul tipo incorporato senza richiedere un riferimento all'assembly di runtime in un assembly di runtime. Se vengono pubblicate diverse versioni dell'assembly di runtime, l'applicazione che contiene le informazioni sul tipo incorporato può funzionare con le diverse versioni senza dover ricompilare. Per un esempio, vedere [procedura dettagliata: incorporamento di tipi da assembly gestiti](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+ L'opzione `/link`consente di distribuire un'applicazione in cui sono incorporate informazioni sul tipo. L'applicazione può quindi usare i tipi in un assembly di runtime che implementano le informazioni sul tipo incorporate senza dovere far riferimento all'assembly di runtime. Se vengono pubblicate diverse versioni dell'assembly di runtime, l'applicazione che contiene le informazioni sul tipo incorporate può funzionare con le diverse versioni senza che sia necessaria la ricompilazione. Per un esempio, vedere [Procedura dettagliata: incorporamento dei tipi da assembly gestiti](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
   
- Utilizzo di `/link` opzione è particolarmente utile quando si lavora con interoperabilità COM. È possibile incorporare tipi COM in modo che l'applicazione non richiede un assembly di interoperabilità primario (PIA) nel computer di destinazione. Il `/link` opzione indica al compilatore di incorporare le informazioni sul tipo COM dall'assembly di interoperabilità cui viene fatto riferimento nel codice compilato risulta. Il tipo COM è identificato dal valore CLSID (GUID). Di conseguenza, l'applicazione può eseguire in un computer di destinazione che ha installato gli stessi tipi COM con gli stessi valori CLSID. Le applicazioni che consentono di automatizzare Microsoft Office sono un buon esempio. Poiché le applicazioni come Office mantengono in genere lo stesso valore CLSID tra le diverse versioni, l'applicazione può utilizzare i tipi COM di cui viene fatto riferimenti come long come .NET Framework 4 o versione successiva è installato nel computer di destinazione e l'applicazione utilizza metodi, proprietà o eventi che rientrano nei tipi di riferimento COM.  
+ L'opzione `/link` è particolarmente utile quando si usa l'interoperabilità COM. È possibile incorporare tipi COM in modo che per l'applicazione non sia più necessario un assembly di interoperabilità primario nel computer di destinazione. L'opzione `/link` indica al compilatore di incorporare le informazioni sul tipo COM dall'assembly di interoperabilità a cui si fa riferimento nel codice compilato risultante. Il tipo COM viene identificato dal valore CLSID (GUID). Di conseguenza, l'applicazione può essere eseguita in un computer di destinazione in cui sono stati installati gli stessi tipi COM con gli stessi valori CLSID. Le applicazioni che consentono di automatizzare Microsoft Office costituiscono un valido esempio. Poiché applicazioni come Office mantengono in genere lo stesso valore CLSID in versioni diverse, l'applicazione può usare i tipi COM a cui si fa riferimento purché .NET Framework 4 o versioni successive sia installato nel computer di destinazione e l'applicazione usi metodi, proprietà o eventi inclusi nei tipi COM a cui si fa riferimento.  
   
- Il `/link` opzione incorpora solo interfacce, strutture e delegati. Incorporamento di classi COM non è supportata.  
+ L'opzione `/link` incorpora solo interfacce, strutture e delegati. L'incorporamento di classi COM non è supportato.  
   
 > [!NOTE]
->  Quando si crea un'istanza di un tipo COM incorporato nel codice, è necessario creare l'istanza utilizzando l'interfaccia appropriata. Il tentativo di creare un'istanza di un tipo COM incorporato utilizzando la coclasse provoca un errore.  
+>  Quando si crea un'istanza di un tipo COM incorporato nel codice, è necessario creare l'istanza usando l'interfaccia appropriata. Il tentativo di creare un'istanza di un tipo COM incorporato usando la coclasse genera un errore.  
   
- Per impostare il `/link` opzione [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)], aggiungere un riferimento all'assembly e impostare il `Embed Interop Types` proprietà **true**. Il valore predefinito per il `Embed Interop Types` è **false**.  
+ Per impostare l'opzione `/link` in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], aggiungere un riferimento all'assembly e impostare la proprietà `Embed Interop Types` su **true**. Il valore predefinito della proprietà `Embed Interop Types` è **false**.  
   
- Se si collega a un assembly COM (Assembly a) che a sua volta fa riferimento a un altro assembly COM (Assembly B), è necessario anche collegare all'Assembly B se viene soddisfatta una delle operazioni seguenti:  
+ Se si collega a un assembly COM (assembly A) che fa riferimento a un altro assembly COM (assembly B), è necessario eseguire il collegamento anche all'assembly B se si verifica una delle condizioni seguenti:  
   
--   Un tipo da Assembly A eredita da un tipo o implementa un'interfaccia dell'Assembly B.  
+-   Un tipo dell'assembly A eredita da un tipo o implementa un'interfaccia dall'assembly B.  
   
--   Un campo, proprietà, evento o metodo che presenta un tipo di parametro o tipo restituito dall'Assembly B viene richiamato.  
+-   Viene richiamato un campo, una proprietà, un evento o un metodo che presenta un tipo restituito o un tipo di parametro proveniente dall'assembly B.  
   
- Utilizzare [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) per specificare la directory in cui si trova una o più riferimenti agli assembly.  
+ Utilizzare [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) per specificare la directory in cui si trova uno o più riferimenti agli assembly.  
   
- Come il [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md) l'opzione del compilatore, il `/link` l'opzione del compilatore utilizza il file di risposta Vbc. rsp, i riferimenti utilizzati [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] assembly. Utilizzare il [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) l'opzione del compilatore se non si desidera al compilatore di utilizzare tale file.  
+ Come il [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md) opzione del compilatore di `/link` l'opzione del compilatore utilizza il file di risposta Vbc.rsp riferimenti utilizzati di frequente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assembly. Utilizzare il [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) l'opzione del compilatore se non si desidera al compilatore di utilizzare il file Vbc.rsp.  
   
- La versione abbreviata di `/link` è `/l`.  
+ La forma breve di `/link` è `/l`.  
   
 ## <a name="generics-and-embedded-types"></a>Generics e tipi incorporati  
- Nelle sezioni seguenti vengono descrivono le limitazioni all'utilizzo di tipi generici nelle applicazioni che incorporano tipi di interoperabilità.  
+ Nelle sezioni seguenti vengono descritte le limitazioni all'uso di tipi generici in applicazioni che incorporano tipi di interoperabilità.  
   
 ### <a name="generic-interfaces"></a>Interfacce generiche  
- Impossibile utilizzare le interfacce generiche che sono incorporate da un assembly di interoperabilità. come illustrato nell'esempio riportato di seguito.  
+ Le interfacce generiche incorporate da un assembly di interoperabilità non possono essere usate, come illustrato nell'esempio riportato di seguito.  
   
- [!code-vb[VbLinkCompiler n.&1;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_1.vb)]  
+ [!code-vb[VbLinkCompiler#1](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_1.vb)]  
   
-### <a name="types-that-have-generic-parameters"></a>Tipi che dispongono di parametri generici  
- Tipi che dispongono di un parametro generico il cui tipo è incorporato a un assembly di interoperabilità non possono essere utilizzati se tale tipo proviene da un assembly esterno. Questa restrizione non si applica alle interfacce. Si consideri ad esempio il <xref:Microsoft.Office.Interop.Excel.Range>interfaccia definita nel <xref:Microsoft.Office.Interop.Excel>assembly.</xref:Microsoft.Office.Interop.Excel> </xref:Microsoft.Office.Interop.Excel.Range> Se una libreria incorpora tipi di interoperabilità dal <xref:Microsoft.Office.Interop.Excel>assembly ed espone un metodo che restituisce un tipo generico con un parametro il cui tipo è il <xref:Microsoft.Office.Interop.Excel.Range>interfaccia, che metodo deve restituire un'interfaccia generica, come illustrato nell'esempio di codice seguente.</xref:Microsoft.Office.Interop.Excel.Range> </xref:Microsoft.Office.Interop.Excel>  
+### <a name="types-that-have-generic-parameters"></a>Tipi con parametri generici  
+ I tipi che hanno un parametro generico il cui tipo è incorporato da un assembly di interoperabilità non possono essere usati se tale tipo proviene da un assembly esterno. Tale restrizione non si applica tuttavia alle interfacce. Si consideri ad esempio l'interfaccia <xref:Microsoft.Office.Interop.Excel.Range> definita nell'assembly <xref:Microsoft.Office.Interop.Excel>. Se una libreria incorpora tipi di interoperabilità dall'assembly <xref:Microsoft.Office.Interop.Excel> ed espone un metodo che restituisce un tipo generico che ha un parametro il cui tipo è l'interfaccia <xref:Microsoft.Office.Interop.Excel.Range>, il metodo deve restituire un'interfaccia generica, come illustrato nell'esempio di codice seguente.  
   
- [!code-vb[VbLinkCompiler n.&2;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_2.vb)]  
-[!code-vb[VbLinkCompiler n.&3;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_3.vb)]  
-[!code-vb[VbLinkCompiler n.&4;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_4.vb)]  
+ [!code-vb[VbLinkCompiler#2](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_2.vb)]  
+[!code-vb[VbLinkCompiler#3](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_3.vb)]  
+[!code-vb[VbLinkCompiler#4](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_4.vb)]  
   
- Nell'esempio seguente, il codice client può chiamare il metodo che restituisce il <xref:System.Collections.IList>interfaccia generica senza errori.</xref:System.Collections.IList>  
+ Nell'esempio seguente, il codice client può chiamare il metodo che restituisce l'interfaccia generica <xref:System.Collections.IList> senza errori.  
   
- [!code-vb[VbLinkCompiler n.&5;](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
+ [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
 ## <a name="example"></a>Esempio  
- Il codice seguente consente di compilare file di origine `OfficeApp.vb` e fare riferimento agli assembly da `COMData1.dll` e `COMData2.dll` per produrre `OfficeApp.exe`.  
+ Nel codice riportato di seguito viene compilato il file di origine `OfficeApp.vb` e viene fatto riferimento agli assembly di `COMData1.dll` e `COMData2.dll` per generare `OfficeApp.exe`.  
   
 ```vb  
 vbc /link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)   
- [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
- [/LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md)   
- [Esempi di righe di comando compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
+ [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [Procedura dettagliata: Incorporamento dei tipi da assembly gestiti](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
+ [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+ [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)  
+ [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Introduzione all'interoperabilità COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)

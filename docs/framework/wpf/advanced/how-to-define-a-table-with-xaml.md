@@ -1,31 +1,34 @@
 ---
-title: "Procedura: definire un oggetto Table tramite XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "documenti, definizione di tabelle con XAML"
-  - "tabelle, definizione con XAML"
-  - "XAML, definizione di tabelle"
+title: 'Procedura: Definire un oggetto Table tramite XAML'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML [WPF], defining tables
+- documents [WPF], defining tables with XAML
+- tables [WPF], defining with XAML
 ms.assetid: 83f2dc58-437e-4cdc-b5dd-0019810c7a85
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 350dff0b6ea9d92e919e45e4f46cf888f44f6212
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: definire un oggetto Table tramite XAML
-Nell'esempio riportato di seguito viene illustrato come definire un oggetto <xref:System.Windows.Documents.Table> utilizzando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  La tabella dell'esempio ha quattro colonne, rappresentate da elementi <xref:System.Windows.Documents.TableColumn>, e numerose righe, rappresentate da elementi <xref:System.Windows.Documents.TableRow>, che contengono dati e informazioni relative a titolo, intestazione e piè di pagina.  Le righe devono essere contenute in un elemento <xref:System.Windows.Documents.TableRowGroup>.  Ogni riga della tabella è costituita da una o più celle, rappresentate da elementi <xref:System.Windows.Documents.TableCell>.  Il contenuto di una cella della tabella deve essere trovarsi in elemento <xref:System.Windows.Documents.Block>; in questo caso vengono utilizzati gli elementi <xref:System.Windows.Documents.Paragraph>.  Nella riga a piè di pagina, la tabella ospita anche un collegamento ipertestuale, rappresentato dall'elemento <xref:System.Windows.Documents.Hyperlink>.  
+# <a name="how-to-define-a-table-with-xaml"></a>Procedura: Definire un oggetto Table tramite XAML
+Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Documents.Table> utilizzando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  La tabella di esempio contiene quattro colonne (rappresentato da <xref:System.Windows.Documents.TableColumn> elementi) e più righe (rappresentati da <xref:System.Windows.Documents.TableRow> elementi) che contengono dati anche come titolo, intestazione e piè di pagina informazioni.  Le righe devono essere contenute un <xref:System.Windows.Documents.TableRowGroup> elemento.  Ogni riga della tabella è costituita da una o più celle (rappresentato da <xref:System.Windows.Documents.TableCell> elementi).  Contenuto in una cella della tabella deve essere contenuto in un <xref:System.Windows.Documents.Block> elemento, in questo caso <xref:System.Windows.Documents.Paragraph> vengono utilizzati gli elementi.  La tabella ospita anche un collegamento ipertestuale (rappresentato dal <xref:System.Windows.Documents.Hyperlink> elemento) nella riga di piè di pagina.  
   
-## Esempio  
- [!code-xml[TableSnippetsXAML#_TableXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippetsXAML/CS/Window1.xaml#_tablexaml)]  
+## <a name="example"></a>Esempio  
+ [!code-xaml[TableSnippetsXAML#_TableXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippetsXAML/CS/Window1.xaml#_tablexaml)]  
   
- Nella figura riportata di seguito viene illustrato il rendering della tabella definita in questo esempio.  
+ Nella figura seguente viene illustrato il rendering della tabella definita in questo esempio.  
   
- ![Tabella sottoposta a rendering](../../../../docs/framework/wpf/advanced/media/tableeg.png "TableEG")
+ ![Tabella sottoposta a rendering.](../../../../docs/framework/wpf/advanced/media/tableeg.png "TableEG")

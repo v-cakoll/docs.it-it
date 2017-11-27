@@ -1,96 +1,98 @@
 ---
-title: "Procedura: aggiungere elementi per il perfezionamento di ToolStripMenuItems | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "segni di spunta, aggiunta a menu"
-  - "comandi [Windows Form], raggruppamento nei menu"
-  - "immagini [Windows Form], aggiunta a menu"
-  - "tasti di scelta rapida, visualizzazione nei menu"
-  - "voci di menu, aggiunta di segni di spunta"
-  - "voci di menu, aggiunta di immagini"
-  - "voci di menu, visualizzazione di tasti di scelta"
-  - "voci di menu, visualizzazione di tasti di scelta rapida"
-  - "voci di menu, visualizzazione di separatori"
-  - "menu, raggruppamento di comandi"
-  - "separatori, visualizzazione nei menu"
-  - "ToolStripMenuItems"
-  - "ToolStripMenuItems, aggiunta di segni di spunta"
-  - "ToolStripMenuItems, aggiunta di immagini"
-  - "ToolStripMenuItems, visualizzazione di tasti di scelta"
-  - "ToolStripMenuItems, visualizzazione di tasti di scelta rapida"
-  - "ToolStripMenuItems, visualizzazione di barre di separazione"
-  - "ToolStripSeparators, visualizzazione in MenuStrips"
+title: 'Procedura: aggiungere elementi per il perfezionamento di ToolStripMenuItems'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- commands [Windows Forms], grouping on menus
+- check marks [Windows Forms], adding to menus
+- ToolStripMenuItems [Windows Forms], displaying access keys
+- menus [Windows Forms], grouping commands
+- menu items [Windows Forms], displaying shortcut keys
+- ToolStripMenuItems
+- separators [Windows Forms], displaying on menus
+- menu items [Windows Forms], showing separators
+- menu items [Windows Forms], adding check marks
+- ToolStripMenuItems [Windows Forms], adding check marks
+- menu items [Windows Forms], adding images
+- ToolStripSeparators [Windows Forms], displaying on MenuStrips
+- menu items [Windows Forms], displaying access keys
+- ToolStripMenuItems [Windows Forms], displaying shortcut keys
+- ToolStripMenuItems [Windows Forms], adding images
+- keyboard shortcuts [Windows Forms], displaying on menus
+- images [Windows Forms], adding to menus
+- ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2701094ffcbcf7eeb14444163b995816398876fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: aggiungere elementi per il perfezionamento di ToolStripMenuItems
-È possibile migliorare l'utilizzabilità dei controlli <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.ContextMenuStrip> nei modi seguenti.  
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Procedura: aggiungere elementi per il perfezionamento di ToolStripMenuItems
+È possibile migliorare l'utilizzabilità di <xref:System.Windows.Forms.MenuStrip> e <xref:System.Windows.Forms.ContextMenuStrip> controlli nei modi seguenti:  
   
--   Aggiungere segni di spunta per specificare se una funzionalità è attivata o meno, ad esempio se un righello è visualizzato lungo il margine di un'applicazione di elaborazione testi, o per indicare quali file sono visualizzati all'interno di un elenco, ad esempio in un menu **Finestra**.  
+-   Aggiungere segni di spunta per specificare se una funzionalità è attivata o disattivata, ad esempio se un righello viene visualizzato lungo il margine di un'applicazione di elaborazione testi, o per indicare quali file in un elenco di file sono visualizzate, ad esempio come in un **finestra** dal menu.  
   
--   Aggiungere immagini che rappresentano visivamente i comandi di menu.  
+-   Aggiungere le immagini per rappresentare visivamente i comandi di menu.  
   
--   Visualizzare i tasti di scelta rapida per fornire un'alternativa all'esecuzione dei comandi tramite il mouse.  Ad esempio, la combinazione di tasti CTRL\+C consente di eseguire il comando **Copy**.  
+-   Visualizzare i tasti di scelta rapida per fornire un'alternativa al mouse per l'esecuzione di comandi. Ad esempio, premere CTRL + C esegue il **copia** comando.  
   
--   Visualizzare i tasti di scelta per fornire un'alternativa alla navigazione dei menu tramite il mouse.  Ad esempio, la combinazione di tasti ALT\+F consente di selezionare il menu **File**.  
+-   Visualizzare i tasti per fornire un'alternativa al mouse per lo spostamento di menu. Ad esempio, premere ALT + F sceglie il **File** menu.  
   
--   Mostrare le barre di separazione per raggruppare i comandi correlati e facilitare l'utilizzo dei menu.  
+-   Visualizzare le barre di separazione per raggruppare i comandi correlati e rendere più leggibili menu.  
   
-### Per visualizzare un segno di spunta accanto a un comando di menu  
+### <a name="to-display-a-check-mark-on-a-menu-command"></a>Per visualizzare un segno di spunta in un comando di menu  
   
--   Impostarne la proprietà <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> su `true`.  
+-   Impostare il relativo <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> proprietà `true`.  
   
-     In questo modo si imposta anche la proprietà <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> su `true`.  Seguire questa procedura solo se si desidera che il comando di menu sia selezionato per impostazione predefinita.  
+     Consente inoltre di impostare il <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> proprietà `true`. Utilizzare questa procedura solo se si desidera che il comando di menu da visualizzare per impostazione predefinita, indipendentemente dal fatto se è selezionata.  
   
-### Per visualizzare un segno di spunta che modifichi lo stato con ogni clic  
+### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a>Per visualizzare un segno di spunta che modifica lo stato con ogni clic  
   
--   Impostare la proprietà <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> del comando di menu su `true`.  
+-   Impostare il comando di menu <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> proprietà `true`.  
   
-### Per aggiungere un'immagine a un comando di menu  
+### <a name="to-add-an-image-to-a-menu-command"></a>Per aggiungere un'immagine a un comando di menu  
   
--   Impostare la proprietà <xref:System.Windows.Forms.ToolStripItem.Image%2A> del comando di menu sul nome dell'immagine.  Se la proprietà <xref:System.Windows.Forms.ToolStripItemDisplayStyle> di questo comando di menu è impostata su <xref:System.Windows.Forms.ToolStripItemDisplayStyle> o <xref:System.Windows.Forms.ToolStripItemDisplayStyle>, non è possibile visualizzare l'immagine.  
-  
-> [!NOTE]
->  È inoltre possibile visualizzare un segno di spunta sul margine dell'immagine.  È altresì possibile impostare la proprietà <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> dell'immagine su `true`. L'immagine verrà visualizzata con un bordo tratteggiato in fase di esecuzione.  
-  
-### Per visualizzare i tasti di scelta rapida per un comando di menu  
-  
--   Impostare la proprietà <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> del comando di menu sulla combinazione di tasti desiderata, ad esempio CTRL\+O per il comando di menu **Open**, e la proprietà <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> su `true`.  
-  
-### Per visualizzare i tasti di scelta personalizzati per un comando di menu  
-  
--   Impostare la proprietà <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> del comando di menu sulla combinazione di tasti desiderata, ad esempio CTRL\+MAIUSC\+O invece di MAIUSC\+CTRL\+O, e la proprietà <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> su `true`.  
-  
-### Per visualizzare un tasto di scelta per un comando di menu  
-  
--   Quando si imposta la proprietà <xref:System.Windows.Forms.ToolStripItem.Text%2A> per il comando di menu, immettere una e commerciale \(&\) prima della lettera che costituirà il tasto di scelta.  Ad esempio, se si digita  `&Open` come proprietà <xref:System.Windows.Forms.ToolStripItem.Text%2A> di un comando di menu, il comando di menu visualizzato sarà **O**pen.  
-  
-     Per passare a questo comando di menu, premere ALT per attivare la classe <xref:System.Windows.Forms.MenuStrip>, quindi premere il tasto di scelta corrispondente al nome del menu.  Verrà visualizzato il menu con le voci di menu e i relativi tasti di scelta. A questo punto è sufficiente premere il tasto di scelta appropriato per scegliere il comando di menu desiderato.  
+-   Impostare il comando di menu <xref:System.Windows.Forms.ToolStripItem.Image%2A> proprietà sul nome dell'immagine. Se il <xref:System.Windows.Forms.ToolStripItemDisplayStyle> di questo comando di menu è impostata su <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> o <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, l'immagine non può essere visualizzata.  
   
 > [!NOTE]
->  Evitare di definire tasti di scelta doppi, ad esempio definire ALT\+F due volte nello stesso menu di sistema.  L'ordine di selezione dei tasti di scelta doppi non può essere garantito.  
+>  Margine dell'immagine può inoltre visualizzare un segno di spunta se si preferisce. Inoltre, è possibile impostare il <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> proprietà dell'immagine da `true`, e l'immagine verrà visualizzata con un bordo tratteggiato in fase di esecuzione.  
   
-### Per visualizzare una barra di separazione tra i comandi di menu  
+### <a name="to-display-a-shortcut-key-for-a-menu-command"></a>Per visualizzare un tasto di scelta rapida per un comando di menu  
   
--   Dopo avere definito la classe <xref:System.Windows.Forms.MenuStrip> e i relativi elementi, utilizzare il metodo <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> o <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> per aggiungere i comandi di menu e i controlli <xref:System.Windows.Forms.ToolStripSeparator> alla classe <xref:System.Windows.Forms.MenuStrip> nell'ordine desiderato.  
+-   Impostare il comando di menu <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> proprietà per la combinazione di tasti desiderata, ad esempio CTRL + O per il **aprire** comando di menu e impostare il <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> proprietà `true`.  
   
-     \[Visual Basic\]  
+### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a>Per visualizzare i tasti di scelta rapida personalizzati per un comando di menu  
   
-    ```  
+-   Impostare il comando di menu <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> proprietà per la combinazione di tasti desiderata, ad esempio CTRL + MAIUSC + O anziché MAIUSC + CTRL + O e set di <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> proprietà `true`.  
+  
+### <a name="to-display-an-access-key-for-a-menu-command"></a>Per visualizzare una chiave di accesso per un comando di menu  
+  
+-   Quando si imposta la <xref:System.Windows.Forms.ToolStripItem.Text%2A> proprietà per il comando di menu, immettere una e commerciale (&) prima della lettera che si desidera costituirà la chiave di accesso. Ad esempio, se si digita `&Open` come il <xref:System.Windows.Forms.ToolStripItem.Text%2A> proprietà di una voce di menu comporterà un comando di menu che viene visualizzato come **O**penna.  
+  
+     Per passare a questo comando di menu, premere ALT per attivare il <xref:System.Windows.Forms.MenuStrip>, premere il tasto di scelta del nome del menu. Quando il menu viene aperto e visualizza gli elementi con chiavi di accesso, è sufficiente premere il tasto di scelta per selezionare il comando di menu.  
+  
+> [!NOTE]
+>  Evitare di definire i tasti di scelta duplicati, ad esempio la definizione ALT + F due volte nello stesso sistema di menu. Non è possibile garantire l'ordine di selezione dei tasti di scelta duplicati.  
+  
+### <a name="to-display-a-separator-bar-between-menu-commands"></a>Per visualizzare una barra di separazione tra i comandi di menu  
+  
+-   Dopo aver definito il <xref:System.Windows.Forms.MenuStrip> e gli elementi che dovrà contenere, utilizzare il <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> o <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> metodo per aggiungere i comandi di menu e <xref:System.Windows.Forms.ToolStripSeparator> controlli per il <xref:System.Windows.Forms.MenuStrip> nell'ordine desiderato.  
+  
+    ```vb  
     ' This code adds a top-level File menu to the MenuStrip.  
     Me.menuStrip1.Items.Add(New ToolStripMenuItem() _  
     {Me.fileToolStripMenuItem})  
@@ -102,12 +104,9 @@ caps.handback.revision: 10
     ToolStripMenuItem() {Me.newToolStripMenuItem, _  
     Me.openToolStripMenuItem, Me.toolStripSeparator1, _  
     Me.saveToolStripMenuItem, Me.exitToolStripMenuItem})  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     // This code adds a top-level File menu to the MenuStrip.  
     this.menuStrip1.Items.Add(new ToolStripItem[]_  
     {this.fileToolStripMenuItem});  
@@ -124,7 +123,7 @@ caps.handback.revision: 10
     this.exitToolStripMenuItem});  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- [Cenni preliminari sul controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ [Panoramica sul controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

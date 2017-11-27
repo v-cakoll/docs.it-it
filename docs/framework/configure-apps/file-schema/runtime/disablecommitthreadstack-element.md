@@ -1,81 +1,79 @@
 ---
-title: "&lt;disableCommitThreadStack&gt; (elemento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCommitThreadStack"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCommitThreadStack"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<disableCommitThreadStack> (elemento)"
-  - "disableCommitThreadStack (elemento)"
+title: '&lt;disableCommitThreadStack&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCommitThreadStack
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCommitThreadStack
+helpviewer_keywords:
+- <disableCommitThreadStack> element
+- disableCommitThreadStack element
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 8d74566b71501cf21081ac894048bb1c29e0ad94
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;disableCommitThreadStack&gt; (elemento)
+# <a name="ltdisablecommitthreadstackgt-element"></a>&lt;disableCommitThreadStack&gt; elemento
 Specifica se viene eseguito il commit dello stack di thread completo quando viene avviato un thread.  
   
- \<configuration\>  
-\<runtime\>  
-\<disableCommitThreadStack\>  
+ \<configuration>  
+\<runtime >  
+\<disableCommitThreadStack >  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+```xml  
 <disableCommitThreadStack enabled="0|1"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|enabled|Attributo obbligatorio.<br /><br /> Specifica se il commit dello stack di thread completo all'avvio del thread \(comportamento predefinito\) è disabilitato.|  
+|enabled|Attributo obbligatorio.<br /><br /> Specifica se il commit dello stack di thread completo all'avvio del thread (comportamento predefinito) è disabilitato.|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
+|-----------|-----------------|  
 |0|Non disabilitare il comportamento predefinito del Common Language Runtime, ovvero eseguire il commit dello stack di thread completo quando viene avviato un thread.|  
 |1|Disattivare il comportamento predefinito del Common Language Runtime, ovvero eseguire il commit dello stack di thread completo quando viene avviato un thread.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] .|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
-## Note  
+## <a name="remarks"></a>Note  
  Il comportamento predefinito del Common Language Runtime è eseguire il commit dello stack di thread completo quando viene avviato un thread. Se un numero elevato di thread deve essere creato in un server con memoria limitata e la maggior parte dei thread utilizzerà pochissimo spazio dello stack, il server potrebbe avere prestazioni migliori se il Common Language Runtime non esegue il commit dello stack di thread completo immediatamente quando viene avviato un thread.  
   
 > [!NOTE]
->  Gli host non gestiti possono usare il flag di avvio `STARTUP_DISABLE_COMMITTHREADSTACK` nell'enumerazione [STARTUP\_FLAGS](../../../../../ocs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) per ottenere lo stesso risultato.  
+>  Gli host non gestiti possono usare il flag di avvio `STARTUP_DISABLE_COMMITTHREADSTACK` nell'enumerazione [STARTUP_FLAGS](../../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) per ottenere lo stesso risultato.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  L'esempio seguente mostra come disattivare il comportamento predefinito del Common Language Runtime, ovvero eseguire il commit dello stack di thread completo all'avvio del thread.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <disableCommitThreadStack enabled="1" />  
@@ -83,6 +81,6 @@ Specifica se viene eseguito il commit dello stack di thread completo quando vien
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)

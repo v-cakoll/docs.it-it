@@ -1,33 +1,38 @@
 ---
-title: "Procedura: utilizzare un oggetto BitmapImage | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "bitmap (immagini)"
-  - "BitmapImage (classe)"
-  - "XAML, utilizzo di oggetto BitmapImage"
+title: 'Procedura: utilizzare un oggetto BitmapImage'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- bitmap images [WPF]
+- XAML [WPF], using a BitmapImage in
 ms.assetid: 5a5733aa-396d-4d72-b0c3-77f8c25d9a42
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 02de0c3ce1d24b44a9ab3780af9832ca4a6aff68
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: utilizzare un oggetto BitmapImage
-In questo esempio viene illustrato come utilizzare <xref:System.Windows.Media.Imaging.BitmapImage> come origine di un controllo <xref:System.Windows.Controls.Image> in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+# <a name="how-to-use-a-bitmapimage"></a>Procedura: utilizzare un oggetto BitmapImage
+In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.Imaging.BitmapImage> come origine di un <xref:System.Windows.Controls.Image> controllo [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
-## Esempio  
- [!code-xml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
+## <a name="example"></a>Esempio  
+ [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla creazione dell'immagine](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

@@ -1,33 +1,25 @@
 ---
-title: 'Procedura: eseguire una Query per i file con un attributo specificato o un nome (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: eseguire una Query per i file con un attributo specificato o un nome (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: db0e3f415df80e8e4c551bd8493814cb3f4fe5ee
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2b46750876e683e8ca5801d5c37267bf3d681cfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Procedura: eseguire una Query per i file con un attributo specificato o un nome (Visual Basic)
-In questo esempio viene illustrato come trovare tutti i file con estensione nome file specificato (ad esempio "txt") in una struttura di directory specificato. Viene inoltre illustrato come restituire il file più recenti o meno recenti nella struttura in base all'ora di creazione.  
+In questo esempio viene illustrato come trovare tutti i file con un'estensione del nome specificata, come ad esempio "txt", in un albero di directory specificato. Viene anche illustrato come restituire il file più recente o meno recente nell'albero in base all'ora di creazione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -78,8 +70,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+ Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione dello spazio dei nomi System. Linq.  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

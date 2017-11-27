@@ -1,36 +1,39 @@
 ---
-title: "System.ServiceModel.Channels.MsmqMessageRejected | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.MsmqMessageRejected
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b7c10a7-2af6-44a2-8b1a-90bba0c7cf26
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ecbbd8bc0e798388f994432ea2d3f25396f7de97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.MsmqMessageRejected
+# <a name="systemservicemodelchannelsmsmqmessagerejected"></a>System.ServiceModel.Channels.MsmqMessageRejected
 MSMQ ha rifiutato il messaggio.  
   
-## Descrizione  
+## <a name="description"></a>Descrizione  
  Questa traccia indica che è stato rifiutato un messaggio MSMQ.  
   
- I messaggi MSMQ possono essere rifiutati quando [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] \(utilizzato con NetMsmqBinding o MsmqIntegrationBinding\) non è in grado di elaborarli.Tali messaggi vengono definiti messaggi non elaborabili.Un messaggio non elaborabile viene rifiutato quando la proprietà `ReceiveErrorHandling` su NetMsmqBinding o MsmqIntegrationBinding è impostata su `Reject`.Un messaggio rifiutato viene recapitato nuovamente alla [coda di messaggi non recapitabili](http://go.microsoft.com/fwlink/?LinkID=99544) del mittente.  
+ I messaggi MSMQ possono essere rifiutati quando [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (utilizzato con NetMsmqBinding o MsmqIntegrationBinding) non è in grado di elaborarli. Tali messaggi vengono definiti messaggi non elaborabili. Un messaggio non elaborabile viene rifiutato quando la proprietà `ReceiveErrorHandling` su NetMsmqBinding o MsmqIntegrationBinding è impostata su `Reject`. Un messaggio respinto viene recapitato al mittente [recapitabili](http://go.microsoft.com/fwlink/?LinkID=99544).  
   
- Per ulteriori dettagli su quando i messaggi diventano non elaborabili e su come configurare il servizio per gestire tali messaggi in modo appropriato, vedere [Gestione dei messaggi non elaborabili](http://go.microsoft.com/fwlink/?LinkID=99546).  
+ Vedere [dei messaggi non elaborabili](http://go.microsoft.com/fwlink/?LinkID=99546) per ulteriori informazioni su quando i messaggi diventano non elaborabili e su come configurare il servizio per gestirli nel modo appropriato.  
   
- Per ulteriori dettagli su cosa significa un messaggio rifiutato in MSMQ, vedere la pagina [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkID=99548) \(la pagina potrebbe essere in inglese\).  
+ Vedere [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkID=99548) per ulteriori informazioni sul significato di un messaggio respinto in MSMQ.  
   
-## Vedere anche  
- [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Utilizzo delle tracce per risolvere i problemi di un'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)   
- [Gestione dei messaggi non elaborabili](http://go.microsoft.com/fwlink/?LinkID=99546)   
+## <a name="see-also"></a>Vedere anche  
+ [Traccia](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Utilizzo delle tracce per risolvere i problemi dell'applicazione](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Amministrazione e diagnostica](../../../../../docs/framework/wcf/diagnostics/index.md)  
+ [Messaggi non elaborabili](http://go.microsoft.com/fwlink/?LinkID=99546)  
  [MQMarkMessageRejected](http://go.microsoft.com/fwlink/?LinkID=99548)

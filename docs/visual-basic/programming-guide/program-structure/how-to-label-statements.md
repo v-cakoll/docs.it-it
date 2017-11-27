@@ -1,49 +1,48 @@
 ---
-title: "How to: Label Statements (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "colons (:)"
-  - "statements [Visual Basic], labels"
-  - ": separator character"
-  - "Visual Basic code, labeling statements"
+title: 'Procedura: etichettare le istruzioni (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- colons (:)
+- statements [Visual Basic], labels
+- ': separator character'
+- Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 190ec9fc2392e6e4adae9b2b612edd69d73cedfd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Label Statements (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-I blocchi di istruzioni sono costituiti da righe di codice delimitate dai due punti.  Le righe di codice precedute da una stringa o da un integer di identificazione sono denominate *con etichetta*.  Le etichette delle istruzioni vengono utilizzate per contrassegnare una riga di codice da identificare per l'utilizzo con istruzioni, ad esempio `On Error Goto`.  
+# <a name="how-to-label-statements-visual-basic"></a>Procedura: etichettare le istruzioni (Visual Basic)
+Blocchi di istruzioni sono costituiti da righe di codice delimitati da virgola. Righe di codice preceduto da una stringa di identificazione o intero rientrano *etichetta*. Le etichette di istruzione vengono utilizzate per contrassegnare una riga di codice per facilitarne l'identificazione per l'utilizzo con le istruzioni, ad esempio `On Error Goto`.  
   
- Le etichette possono essere qualsiasi Visual Basic valido validi per identificare gli elementi di programmazione elemento\-o i valori letterali Integer.  L'etichetta deve essere inserita all'inizio di una riga del codice sorgente e deve essere seguita da i due punti, indipendentemente dall'eventuale presenza di un'istruzione dopo l'etichetta sulla stessa riga.  
+ Le etichette possono essere identificatori validi di Visual Basic, ad esempio quelle che identificano gli elementi di programmazione, o valori letterali integer. Un'etichetta deve trovarsi all'inizio di una riga di codice sorgente e deve essere seguita da due punti, indipendentemente dal fatto che è seguito da un'istruzione sulla stessa riga.  
   
- Il compilatore identifica le etichette verificando se l'inizio di una riga corrisponde a un identificatore già definito.  In caso contrario, il compilatore presuppone che sia un'etichetta.  
+ Il compilatore identifica le etichette verificando se l'inizio della riga corrisponde a qualsiasi identificatore già definito. In caso contrario, il compilatore presuppone che sia un'etichetta.  
   
- Le etichette dispongono di un proprio spazio di dichiarazione e non interferiscono con altri identificatori.  L'ambito di un'etichetta è il corpo del metodo.  In caso di ambiguità, la dichiarazione di etichetta è sempre prioritaria.  
+ Le etichette sono proprio spazio di dichiarazione e non interferiscono con altri identificatori. Ambito di un'etichetta è il corpo del metodo. Dichiarazione di etichetta ha la precedenza in caso di ambiguità.  
   
 > [!NOTE]
->  È possibile utilizzare le etichette solo su istruzioni eseguibili all'interno di metodi.  
+>  Le etichette possono essere utilizzate solo in istruzioni eseguibili all'interno di metodi.  
   
-### Per assegnare un'etichetta a una riga di codice  
+### <a name="to-label-a-line-of-code"></a>Per assegnare un'etichetta di una riga di codice  
   
--   Inserire un identificatore, seguito dai due punti, all'inizio della riga del codice sorgente.  
+-   Inserire un identificatore, seguito da due punti, all'inizio della riga di codice sorgente.  
   
-     Le due righe di codice riportate di seguito, ad esempio, sono contrassegnate rispettivamente dalle etichette `Jump` e `120`.  
+     Ad esempio, le righe di codice seguente vengono etichettate con `Jump` e `120`, rispettivamente:  
   
      [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/how-to-label-statements_1.vb)]  
   
-## Vedere anche  
- [Statements](../../../visual-basic/programming-guide/language-features/statements.md)   
- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Istruzioni](../../../visual-basic/programming-guide/language-features/statements.md)  
+ [Nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  [Struttura del programma e convenzioni di scrittura del codice](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

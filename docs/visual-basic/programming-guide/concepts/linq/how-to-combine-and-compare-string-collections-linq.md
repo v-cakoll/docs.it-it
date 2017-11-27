@@ -1,37 +1,29 @@
 ---
-title: 'Procedura: combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b037b1aca378dc8a765fdc54746ace27703cee9f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7240f9a8923060634e8824f2516c220b376e2e90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Procedura: combinare e confrontare raccolte di stringhe (LINQ) (Visual Basic)
-In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare, viene illustrato come eseguire una concatenazione semplice, un'unione e intersezione su due set di righe di testo.  
+In questo esempio viene illustrato come unire i file che contengono righe di testo e quindi ordinare i risultati. In particolare viene illustrato come eseguire una concatenazione semplice, un'unione e un'intersezione su due set di righe di testo.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Per impostare il progetto e i file di testo  
   
-1.  Copiare questi nomi in un file di testo denominato names1. txt e salvarlo nella cartella del progetto:  
+1.  Copiare i nomi seguenti in un file di testo denominato names1.txt e salvarlo nella cartella del progetto:  
   
     ```  
     Bankov, Peter  
@@ -46,7 +38,7 @@ In questo esempio viene illustrato come unire i file che contengono righe di tes
     Garcia, Debra  
     ```  
   
-2.  Copiare questi nomi in un file di testo denominato names2. txt e salvarlo nella cartella del progetto. Si noti che i due file hanno in comune alcuni nomi.  
+2.  Copiare i nomi seguenti in un file di testo denominato names2.txt e salvarlo nella cartella del progetto. Si noti che i due file hanno alcuni nomi in comune.  
   
     ```  
     Liu, Jinghao  
@@ -180,8 +172,8 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+ Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

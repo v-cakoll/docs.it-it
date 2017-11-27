@@ -1,72 +1,73 @@
 ---
-title: "Procedura: agganciare i controlli in Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Anchor (proprietà), abilitazione di form ridimensionabili"
-  - "controlli [Windows Form], ancoraggio"
-  - "controlli [Windows Form], posizionamento"
-  - "form, ridimensionamento"
-  - "ridimensionamento di form"
-  - "risoluzione dello schermo e visualizzazione controlli"
-  - "controlli Windows Form, risoluzioni dello schermo"
-  - "controlli Windows Form, dimensione"
-  - "Windows Form, ridimensionamento"
+title: 'Procedura: agganciare i controlli in Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Anchor property [Windows Forms], enabling resizable forms
+- Windows Forms controls, screen resolutions
+- resizing forms [Windows Forms]
+- Windows Forms controls, size
+- screen resolution and control display
+- controls [Windows Forms], anchoring
+- forms [Windows Forms], resizing
+- Windows Forms, resizing
+- controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c6f7cc527c7409ffecab2ac67386d0f819cce3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: agganciare i controlli in Windows Form
-Se si sta progettando un form ridimensionabile dall'utente in fase di esecuzione, è necessario che i controlli nel form vengano ridimensionati e riposizionati correttamente.  Per ridimensionare i controlli dinamicamente con il form, è possibile utilizzare la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> dei controlli per Windows Form.  La proprietà <xref:System.Windows.Forms.Control.Anchor%2A> definisce una posizione di aggancio per il controllo.  Quando un controllo viene agganciato a un form e il form viene ridimensionato, il controllo mantiene la distanza tra il controllo e le posizioni di aggancio.  Se, ad esempio, un controllo <xref:System.Windows.Forms.TextBox> è agganciato al bordo sinistro, al bordo destro e al bordo inferiore del form, quando quest'ultimo viene ridimensionato, il controllo <xref:System.Windows.Forms.TextBox> viene a sua volta ridimensionato orizzontalmente, in modo che si trovi alla stessa distanza dai lati destro e sinistro del form.  Il controllo si colloca inoltre verticalmente, per mantenere la propria posizione alla medesima distanza dal bordo inferiore del form.  Se un controllo non è agganciato e il form viene ridimensionato, la posizione del controllo rispetto ai bordi del form risulterà modificata.  
+# <a name="how-to-anchor-controls-on-windows-forms"></a>Procedura: agganciare i controlli in Windows Form
+Se si progetta un form che l'utente può ridimensionare in fase di esecuzione, i controlli sul form devono ridimensionare e riposizionare correttamente. Per ridimensionare i controlli in modo dinamico con il modulo, è possibile utilizzare il <xref:System.Windows.Forms.Control.Anchor%2A> proprietà dei controlli Windows Form. Il <xref:System.Windows.Forms.Control.Anchor%2A> proprietà definisce una posizione di ancoraggio per il controllo. Quando un controllo viene ancorato a un modulo e il form viene ridimensionato, il controllo mantiene la distanza tra il controllo e la posizione di ancoraggio. Ad esempio, se dispone di un <xref:System.Windows.Forms.TextBox> controllo è ancorato il sinistro, destro e inferiore del form, come il form viene ridimensionato, il <xref:System.Windows.Forms.TextBox> controllo viene ridimensionato orizzontalmente in modo che mantiene la stessa distanza i lati destro e sinistro del form. Inoltre, il controllo si posizionerà verticalmente in modo che il percorso è sempre la stessa distanza dal bordo inferiore del form. Se un controllo non è ancorato e viene ridimensionato il form, la posizione del controllo in relazione i bordi del form viene modificata.  
   
- La proprietà <xref:System.Windows.Forms.Control.Anchor%2A> interagisce con la proprietà <xref:System.Windows.Forms.Control.AutoSize%2A>.  Per ulteriori informazioni, vedere [Cenni preliminari sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
+ Il <xref:System.Windows.Forms.Control.Anchor%2A> proprietà interagisce con il <xref:System.Windows.Forms.Control.AutoSize%2A> proprietà. Per ulteriori informazioni, vedere [Cenni preliminari sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md).  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Per agganciare un controllo in un form  
+### <a name="to-anchor-a-control-on-a-form"></a>Per ancorare un controllo in un form  
   
-1.  Selezionare il controllo che si desidera agganciare.  
+1.  Selezionare il controllo che si desidera ancorare.  
   
     > [!NOTE]
-    >  Per agganciare più controlli contemporaneamente, tenere premuto il tasto CTRL e selezionare i controlli desiderati, quindi seguire la procedura descritta.  
+    >  È possibile ancorare più controlli contemporaneamente tenendo premuto CTRL, fare clic su ogni controllo per selezionarlo e quindi seguendo il resto di questa procedura.  
   
-2.  Nella finestra **Proprietà** fare clic sulla freccia a destra della proprietà <xref:System.Windows.Forms.Control.Anchor%2A>.  
+2.  Nel **proprietà** finestra, fare clic sulla freccia a destra della <xref:System.Windows.Forms.Control.Anchor%2A> proprietà.  
   
      Viene visualizzato un editor con una croce.  
   
-3.  Per impostare un aggancio fare clic nella sezione superiore, sinistra, destra o inferiore della croce.  
+3.  Per impostare un punto di ancoraggio, fare clic su sezione inferiore della croce, alto, a sinistra o destra.  
   
-     In base all'impostazione predefinita, i controlli vengono agganciati nella parte superiore e a sinistra.  
+     I controlli ancorati nella parte superiore e sinistra per impostazione predefinita.  
   
-4.  Per deselezionare un lato del controllo che è stato agganciato, fare clic sulla parte corrispondente della croce.  
+4.  Per cancellare un lato del controllo che è stato ancorato, fare clic su tale parte della croce.  
   
-5.  Fare nuovamente clic sul nome della proprietà <xref:System.Windows.Forms.Control.Anchor%2A> per chiudere il relativo editor.  
+5.  Per chiudere il <xref:System.Windows.Forms.Control.Anchor%2A> editor proprietà scegliere il <xref:System.Windows.Forms.Control.Anchor%2A> nuovo nome della proprietà.  
   
- Quando il form viene visualizzato in fase di esecuzione, il controllo viene ridimensionato per rimanere posizionato alla stessa distanza dal bordo del form.  La distanza dal bordo agganciato resta sempre uguale alla distanza definita quando il controllo viene posizionato in Progettazione Windows Form.  
+ Quando il form viene visualizzato in fase di esecuzione, il controllo viene ridimensionato per rimanere posizionato alla stessa distanza dal bordo del form. La distanza dal bordo agganciato resta sempre la stessa alla distanza definita quando il controllo viene posizionato in Progettazione Windows Form.  
   
 > [!NOTE]
->  Alcuni controlli, ad esempio <xref:System.Windows.Forms.ComboBox>, presentano un'altezza limitata.  L'aggancio del controllo nella parte inferiore del form o del contenitore non ha alcun effetto sul limite dell'altezza del controllo, che non può essere superato.  
+>  Alcuni controlli, ad esempio il <xref:System.Windows.Forms.ComboBox> , presentano un limite di altezza. Il controllo nella parte inferiore del form o contenitore di ancoraggio non è possibile forzare il controllo di superare il limite di altezza.  
   
- I controlli ereditati, per poter essere agganciati, devono essere `Protected`.  Per modificare il livello di accesso di un controllo, impostare la proprietà `Modifiers` nella finestra **Proprietà**.  
+ I controlli ereditati devono essere `Protected` per poter essere ancorato. Per modificare il livello di accesso di un controllo, impostare il relativo `Modifiers` proprietà il **proprietà** finestra.  
   
-## Vedere anche  
- [Controlli per Windows Form](../../../../docs/framework/winforms/controls/index.md)   
- [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [Cenni preliminari sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
- [Procedura: ancorare i controlli in Windows Form](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)   
- [Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)   
- [Procedura dettagliata: disposizione dei controlli in Windows Form utilizzando TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [Procedura dettagliata: disposizione di controlli Windows Form utilizzando spaziatura, margini e la proprietà AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a>Vedere anche  
+ [Controlli Windows Form](../../../../docs/framework/winforms/controls/index.md)  
+ [Disposizione di controlli in Windows Form](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Panoramica sulla proprietà AutoSize](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [Procedura: Ancorare i controlli in Windows Form](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [Procedura dettagliata: disposizione dei controlli in Windows Form usando FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+ [Procedura dettagliata: disposizione di controlli in Windows Form usando TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [Procedura dettagliata: disposizione di controlli Windows Form usando spaziatura, margini e la proprietà AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

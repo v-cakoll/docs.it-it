@@ -5,29 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 72b9cf51936df7b3b2055823ff33f7561640608f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ab9a72607f5201164f31d9e4cfdf058e9af804ae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-for-arrays"></a>Marshalling predefinito per le matrici
 In un'applicazione costituita interamente da codice gestito Common Language Runtime passa i tipi di matrice come parametri In/Out. Il gestore di marshalling di interoperabilità invece passa una matrice come parametro In per impostazione predefinita.  
@@ -46,7 +42,7 @@ In un'applicazione costituita interamente da codice gestito Common Language Runt
   
 <a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>Matrici gestite  
- I tipi di matrici gestite possono variare, ma la classe <xref:System.Array?displayProperty=fullName> è la classe base di tutti i tipi di matrici. La classe **System.Array** ha proprietà per determinare priorità, lunghezza e limiti inferiori e superiori di una matrice, oltre a metodi per accedere, ordinare, cercare, copiare e creare matrici.  
+ I tipi di matrici gestite possono variare, ma la classe <xref:System.Array?displayProperty=nameWithType> è la classe base di tutti i tipi di matrici. La classe **System.Array** ha proprietà per determinare priorità, lunghezza e limiti inferiori e superiori di una matrice, oltre a metodi per accedere, ordinare, cercare, copiare e creare matrici.  
   
  Questi tipi di matrici sono dinamici e non devono avere un tipo statico corrispondente definito nella libreria di classi base. È utile considerare ogni combinazione di tipo di elemento e priorità come un tipo distinto di matrice. Una matrice unidimensionale di integer è quindi di un tipo diverso da una matrice unidimensionale di tipi double. Analogamente una matrice bidimensionale di integer è diversa da una matrice unidimensionale di integer. I limiti della matrice non vengono considerati quando si confrontano i tipi.  
   
@@ -103,7 +99,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- È possibile effettuare il marshalling delle matrici protette multidimensionali, o con limiti diversi da zero, nel codice gestito se la firma del metodo prodotta da Tlbimp.exe viene modificata per indicare un tipo di elemento **ELEMENT_TYPE_ARRAY** invece di **ELEMENT_TYPE_SZARRAY**. In alternativa, è possibile usare l'opzione **/sysarray** con Tlbimp.exe per importare tutte le matrici come oggetti <xref:System.Array?displayProperty=fullName>. Nei casi in cui la matrice passata è multidimensionale, è possibile modificare il codice Microsoft Intermediate Language (MSIL) prodotto da Tlbimp.exe e quindi ricompilarla. Per informazioni dettagliate su come modificare il codice MSIL, vedere [Personalizzazione dei Runtime Callable Wrapper](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).  
+ È possibile effettuare il marshalling delle matrici protette multidimensionali, o con limiti diversi da zero, nel codice gestito se la firma del metodo prodotta da Tlbimp.exe viene modificata per indicare un tipo di elemento **ELEMENT_TYPE_ARRAY** invece di **ELEMENT_TYPE_SZARRAY**. In alternativa, è possibile usare l'opzione **/sysarray** con Tlbimp.exe per importare tutte le matrici come oggetti <xref:System.Array?displayProperty=nameWithType>. Nei casi in cui la matrice passata è multidimensionale, è possibile modificare il codice Microsoft Intermediate Language (MSIL) prodotto da Tlbimp.exe e quindi ricompilarla. Per informazioni dettagliate su come modificare il codice MSIL, vedere [Personalizzazione dei Runtime Callable Wrapper](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).  
   
 ### <a name="c-style-arrays"></a>Matrici di tipo C  
  Quando una matrice di tipo C viene importata da una libreria dei tipi in un assembly .NET, la matrice viene convertita in **ELEMENT_TYPE_SZARRAY**.  
@@ -210,7 +206,7 @@ void New3(ref String ar);
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Il tipo viene specificato nella firma. La priorità è sempre 1, il limite inferiore è sempre 0. La dimensione è sempre nota in fase di esecuzione.|  
 |**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>**[**\<** *bounds* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Tipo, priorità e limiti vengono specificati nella firma. La dimensione è sempre nota in fase di esecuzione.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=fullName>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Tipo, priorità, limite e dimensione sono sempre noti in fase di esecuzione.|  
+|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Tipo, priorità, limite e dimensione sono sempre noti in fase di esecuzione.|  
   
  Nell'automazione OLE esiste una limitazione relativa alle matrici di strutture contenenti LPSTR o LPWSTR.  È quindi necessario effettuare il marshalling dei campi **String** come **UnmanagedType.BSTR**. In caso contrario, verrà generata un'eccezione.  
   
@@ -336,7 +332,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- Quando un metodo contenente un parametro <xref:System.Array?displayProperty=fullName> viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un'interfaccia **_Array**. I contenuti della matrice gestita sono accessibili solo tramite i metodi e le proprietà dell'interfaccia **_Array**. È anche possibile effettuare il marshalling di **System.Array** come **SAFEARRAY** usando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Se sottoposti a marshalling come matrice protetta, gli elementi della matrice vengono sottoposti a marshalling come varianti. Ad esempio:  
+ Quando un metodo contenente un parametro <xref:System.Array?displayProperty=nameWithType> viene esportato da un assembly .NET a una libreria dei tipi, il parametro matrice viene convertito in un'interfaccia **_Array**. I contenuti della matrice gestita sono accessibili solo tramite i metodi e le proprietà dell'interfaccia **_Array**. È anche possibile effettuare il marshalling di **System.Array** come **SAFEARRAY** usando l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Se sottoposti a marshalling come matrice protetta, gli elementi della matrice vengono sottoposti a marshalling come varianti. Ad esempio:  
   
 #### <a name="managed-signature"></a>Firma gestita  
   
@@ -385,8 +381,7 @@ public struct MyStruct {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Blittable and Non-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  (Tipi copiabili da BLT e non copiabili da BLT)  
- [Attributi direzionali](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Tipi copiabili e non copiabili](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Attributi direzionali](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Copia e blocco](../../../docs/framework/interop/copying-and-pinning.md)
-

@@ -1,72 +1,73 @@
 ---
-title: "Utilizzo di classi grafiche gestite | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, classi gestite"
-  - "grafica, classi gestite"
-  - "grafica, utilizzo in Windows Form"
+title: Utilizzo di classi grafiche gestite
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GDI+, managed classes
+- graphics [Windows Forms], using in Windows Forms
+- graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a53d5d4961e191ae3f3b821641e3f4b161cddf1
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Utilizzo di classi grafiche gestite
-Negli argomenti seguenti viene descritto come utilizzare API [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] nel framework di classi gestite.  
+# <a name="using-managed-graphics-classes"></a>Utilizzo di classi grafiche gestite
+Gli argomenti seguenti descrivono come utilizzare il [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API nel framework di classi gestite.  
   
-## In questa sezione  
- [Guida introduttiva alla programmazione grafica](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- Viene descritto come svolgere le attività di base con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Introduzione alla programmazione grafica](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ Viene descritto come eseguire attività di base con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Utilizzo di un oggetto Pen per creare linee e forme](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- Viene illustrato come costruire un oggetto Pen e utilizzarlo per disegnare una varietà di linee e forme.  
+ [Uso di un oggetto Pen per creare linee e forme](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ Viene illustrato come costruire un oggetto pen e utilizzarlo per disegnare una varietà di linee e forme.  
   
- [Utilizzo di un oggetto Brush per il riempimento di forme](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)  
- Viene illustrato come costruire un oggetto Brush e riempire forme con una varietà di effetti.  
+ [Uso di un oggetto Brush per il riempimento di forme](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)  
+ Viene illustrato come costruire un pennello e riempire forme con un'ampia gamma di effetti.  
   
- [Utilizzo di un pennello a sfumatura per il riempimento di forme](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- Viene illustrato come creare e utilizzare tipi diversi di pennelli sfumati.  
+ [Uso di un pennello a sfumatura per il riempimento di forme](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
+ Di seguito viene illustrato come creare e utilizzare tipi diversi di pennelli per sfumature.  
   
  [Utilizzo di immagini, bitmap, icone e metafile](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
  Viene illustrato come creare e modificare immagini.  
   
  [Linee e riempimenti con fusione alfa](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- Viene illustrato come ottenere la trasparenza per forme e linee.  
+ Viene illustrato come ottenere la trasparenza per le linee e forme.  
   
- [Utilizzo di tipi di carattere e testo](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- Viene illustrato come disegnare testo e utilizzare tipi e gruppi di caratteri.  
+ [Uso di tipi di carattere e testo](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ Viene illustrato come disegnare testo e utilizzare i tipi di carattere e famiglie di caratteri.  
   
  [Costruzione e creazione di curve](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
- Viene illustrato come disegnare spline Cardinal e Bezier.  
+ Viene illustrato come disegnare spline di tipo Cardinal e Bezier.  
   
  [Costruzione e creazione di percorsi](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
  Viene illustrato come creare figure utilizzando percorsi.  
   
- [Utilizzo di trasformazioni nel codice gestito GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
- Vengono descritte le trasformazioni di matrici.  
+ [Uso di trasformazioni nel codice gestito GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
+ Illustra le trasformazioni di matrice.  
   
- [Utilizzo dei contenitori di grafica](../../../../docs/framework/winforms/advanced/using-graphics-containers.md)  
- Viene illustrato come gestire lo stato degli oggetti grafici e i contenitori annidati di grafica.  
+ [Uso dei contenitori di grafica](../../../../docs/framework/winforms/advanced/using-graphics-containers.md)  
+ Viene illustrato come gestire oggetti grafici contenitori nidificati e dello stato di grafica.  
   
- [Utilizzo delle regioni](../../../../docs/framework/winforms/advanced/using-regions.md)  
- Vengono illustrate la verifica passaggio e le aree di visualizzazione.  
+ [Uso delle regioni](../../../../docs/framework/winforms/advanced/using-regions.md)  
+ Viene illustrato l'hit test e le aree di visualizzazione.  
   
  [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
- Vengono illustrati i vari aspetti della modifica di colori.  
+ Illustra i vari aspetti della modifica di colori.  
   
- [Utilizzo di codificatori e decodificatori di immagini nel codice gestito GDI\+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
- Viene illustrato come utilizzare i codificatori e i decodificatori di immagini per modificare queste ultime.  
+ [Uso di codificatori e decodificatori di immagini nel codice gestito GDI+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
+ Viene illustrato l'utilizzo di codificatori e decodificatori di manipolare le immagini.  
   
  [Grafica a doppio buffer](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
  Viene illustrato come ridurre lo sfarfallio con il doppio buffer.

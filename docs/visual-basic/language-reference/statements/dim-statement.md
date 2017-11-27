@@ -1,65 +1,47 @@
 ---
-title: Istruzione Dim (Visual Basic) | Documenti di Microsoft
-ms.date: 2015-07-20
+title: Istruzione Dim (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
 - Dim
-dev_langs:
-- VB
 helpviewer_keywords:
-- Public keyword, in Dim statement
-- Dim statement
-- fixed-length strings, declaring
+- Public keyword [Visual Basic], in Dim statement
+- Dim statement [Visual Basic]
+- fixed-length strings [Visual Basic], declaring
 - variables [Visual Basic], declaring
-- WithEvents keyword, Dim statement
-- dynamic arrays, Dim statement
+- WithEvents keyword [Visual Basic], Dim statement
+- dynamic arrays [Visual Basic], Dim statement
 - variables [Visual Basic], initializing
 - '{} braces'
-- fields, as member variables
-- declarations, dynamic arrays
-- member variables
-- default values
+- fields [Visual Basic], as member variables
+- declarations [Visual Basic], dynamic arrays
+- member variables [Visual Basic]
+- default values [Visual Basic]
 - data types [Visual Basic], assigning
 - braces {}
-- As keyword, in Dim statement
+- As keyword [Visual Basic], in Dim statement
 - arrays [Visual Basic], declaring
-- New keyword, Dim statement
-- To keyword, in Dim statement
-- storage, allocating
-- local variables
-- declaration statements
-- Dim statement, syntax
+- New keyword [Visual Basic], Dim statement
+- To keyword [Visual Basic], in Dim statement
+- storage [Visual Basic], allocating
+- local variables [Visual Basic]
+- declaration statements [Visual Basic]
+- Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 00d5d0e83a88a0c7ac3ade92d09c584fce64fcd8
-ms.contentlocale: it-it
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dim-statement-visual-basic"></a>Istruzione Dim (Visual Basic)
 Dichiara e alloca spazio di archiviazione per una o più variabili.  
@@ -75,11 +57,11 @@ Dim [ WithEvents ] variablelist
   
 -   `attributelist`  
   
-     Facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     Parametro facoltativo. Vedere [elenco attributi](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `accessmodifier`  
   
-     Facoltativo. Può essere uno dei seguenti:  
+     Parametro facoltativo. Può essere uno dei seguenti:  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -91,27 +73,27 @@ Dim [ WithEvents ] variablelist
   
     -   `Protected Friend`  
   
-     Vedere [livelli in Visual Basic di accesso](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `Shared`  
   
-     Facoltativo. Vedere [condivisi](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Parametro facoltativo. Vedere [condiviso](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Facoltativo. Vedere [ombreggiature](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Parametro facoltativo. Vedere [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `Static`  
   
-     Facoltativo. Vedere [statico](../../../visual-basic/language-reference/modifiers/static.md).  
+     Parametro facoltativo. Vedere [statico](../../../visual-basic/language-reference/modifiers/static.md).  
   
 -   `ReadOnly`  
   
-     Facoltativo. Vedere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+     Parametro facoltativo. Vedere [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
 -   `WithEvents`  
   
-     Facoltativo. Specifica che si tratta di variabili oggetto che fa riferimento a istanze di una classe che può generare eventi. Vedere [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).  
+     Parametro facoltativo. Specifica che si tratta di variabili oggetto che fanno riferimento a istanze di una classe che può generare eventi. Vedere [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).  
   
 -   `variablelist`  
   
@@ -125,17 +107,17 @@ Dim [ WithEvents ] variablelist
   
     |Parte|Descrizione|  
     |---|---|  
-    |`variablename`|Obbligatorio. Nome della variabile. Vedere [dichiarati i nomi degli elementi](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-    |`boundslist`|Facoltativo. Elenco dei limiti di ogni dimensione di una variabile di matrice.|  
-    |`New`|Facoltativo. Crea una nuova istanza della classe quando il `Dim` istruzione viene eseguita.|  
-    |`datatype`|Facoltativo. Tipo di dati della variabile.|  
-    |`With`|Facoltativo. Introduce l'elenco di inizializzatori di oggetto.|  
-    |`propertyname`|Facoltativo. Il nome di una proprietà nella classe crei un'istanza di.|  
-    |`propinitializer`|Necessari dopo `propertyname` =. L'espressione viene valutata e assegnata al nome della proprietà.|  
+    |`variablename`|Obbligatorio. Nome della variabile. Vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+    |`boundslist`|Parametro facoltativo. Elenco dei limiti di ciascuna dimensione della variabile di matrice.|  
+    |`New`|Parametro facoltativo. Crea una nuova istanza della classe quando il `Dim` istruzione viene eseguita.|  
+    |`datatype`|Parametro facoltativo. Tipo di dati della variabile.|  
+    |`With`|Parametro facoltativo. Introduce l'elenco di inizializzatori di oggetto.|  
+    |`propertyname`|Parametro facoltativo. Il nome di una proprietà nella classe crei un'istanza di.|  
+    |`propinitializer`|Necessario dopo avere `propertyname` =. L'espressione viene valutata e assegnata al nome della proprietà.|  
     |`initializer`|Facoltativo se `New` non è specificato. Espressione che viene valutata e assegnata alla variabile quando viene creato.|  
   
 ## <a name="remarks"></a>Note  
- Il compilatore Visual Basic utilizza il `Dim` istruzione per determinare il tipo di dati della variabile e altre informazioni, ad esempio il codice può accedere alla variabile. Nell'esempio seguente viene dichiarata una variabile che contiene un `Integer` valore.  
+ Il compilatore Visual Basic utilizza il `Dim` istruzione per determinare il tipo di dati della variabile e altre informazioni, ad esempio il codice che può accedere alla variabile. Nell'esempio seguente viene dichiarata una variabile per contenere un `Integer` valore.  
   
 ```vb  
 Dim numberOfStudents As Integer  
@@ -148,17 +130,17 @@ Dim finished As Boolean
 Dim monitorBox As System.Windows.Forms.Form  
 ```  
   
- Per un tipo di riferimento, utilizzare il `New` (parola chiave) per creare una nuova istanza della classe o una struttura che viene specificato dal tipo di dati. Se si utilizza `New`, non si utilizza un'espressione di inizializzazione. Invece fornire gli argomenti, se sono necessarie, al costruttore della classe da cui si sta creando la variabile.  
+ Per un tipo riferimento, utilizzare il `New` (parola chiave) per creare una nuova istanza della classe o una struttura che viene specificato dal tipo di dati. Se si utilizza `New`, non si utilizza un'espressione dell'inizializzatore. Al contrario, specificare argomenti, se sono necessarie, per il costruttore della classe da cui si sta creando la variabile.  
   
 ```vb  
 Dim bottomLabel As New System.Windows.Forms.Label  
 ```  
   
- È possibile dichiarare una variabile in una routine, blocco, classe, struttura o un modulo. È possibile dichiarare una variabile in un file di origine, lo spazio dei nomi o interfaccia. Per ulteriori informazioni, vedere [contesti delle dichiarazioni e livelli di accesso predefinito](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ È possibile dichiarare una variabile in una stored procedure, blocco, classe, struttura o modulo. È possibile dichiarare una variabile in un file di origine, lo spazio dei nomi o interfaccia. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Una variabile viene dichiarata a livello di modulo, all'esterno di qualsiasi routine, è un *variabile membro* o *campo*. Variabili membro rientrano nell'ambito in tutta la classe, struttura o un modulo. Una variabile dichiarata a livello di routine è una *variabile locale*. Le variabili locali sono nell'ambito solo all'interno della routine o blocco.  
+ È una variabile dichiarata a livello di modulo, all'esterno di qualsiasi routine, un *variabile membro* o *campo*. Le variabili membro sono nell'ambito in tutta la classe, struttura o modulo. Una variabile dichiarata a livello di routine è un *variabile locale*. Le variabili locali sono nell'ambito solo all'interno della routine o un blocco.  
   
- I seguenti modificatori di accesso vengono utilizzati per dichiarare le variabili all'esterno di una routine: `Public`, `Protected`, `Friend`, `Protected Friend`, e `Private`. Per ulteriori informazioni, vedere [livelli di accesso in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ I seguenti modificatori di accesso vengono utilizzati per dichiarare le variabili all'esterno di una stored procedure: `Public`, `Protected`, `Friend`, `Protected Friend`, e `Private`. Per ulteriori informazioni, vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Il `Dim` parola chiave è facoltativa e in genere omesso se si specifica uno dei seguenti modificatori: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`, o `WithEvents`.  
   
@@ -169,17 +151,17 @@ Private salary As Decimal
 Static runningTotal As Integer  
 ```  
   
- Se `Option Explicit` è abilitato (impostazione predefinita), il compilatore richiede una dichiarazione per tutte le variabili utilizzate. Per ulteriori informazioni, vedere [istruzione Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md).  
+ Se `Option Explicit` è (impostazione predefinita), il compilatore richiede una dichiarazione per ciascuna variabile utilizzata. Per ulteriori informazioni, vedere [istruzione Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md).  
   
 ## <a name="specifying-an-initial-value"></a>Specificare un valore iniziale  
- È possibile assegnare un valore a una variabile quando viene creato. Per un tipo di valore, utilizzare un *inizializzatore* per fornire un'espressione da assegnare alla variabile. L'espressione deve restituire una costante che può essere calcolato in fase di compilazione.  
+ Quando viene creato, è possibile assegnare un valore a una variabile. Per un tipo valore, utilizzare un *inizializzatore* per fornire un'espressione da assegnare alla variabile. L'espressione deve restituire una costante che può essere calcolata in fase di compilazione.  
   
 ```vb  
 Dim quantity As Integer = 10  
 Dim message As String = "Just started"  
 ```  
   
- Se viene specificato un inizializzatore e non viene specificato un tipo di dati un `As` clausola *inferenza del tipo* viene utilizzato per dedurre il tipo di dati dall'inizializzatore. Nell'esempio seguente, entrambi `num1` e `num2` sono fortemente tipizzati come integer. Nella seconda dichiarazione, l'inferenza del tipo deduce il tipo dal valore 3.  
+ Se viene specificato un inizializzatore e non viene specificato un tipo di dati un `As` clausola *l'inferenza del tipo* viene utilizzato per dedurre il tipo di dati dall'inizializzatore. Nell'esempio seguente, entrambi `num1` e `num2` sono fortemente tipizzati come integer. Nella seconda dichiarazione, l'inferenza del tipo deduce il tipo dal valore 3.  
   
 ```vb  
 ' Use explicit typing.  
@@ -189,29 +171,29 @@ Dim num1 As Integer = 3
 Dim num2 = 3  
 ```  
   
- L'inferenza del tipo si applica a livello di routine. Non è applicabile all'esterno di una routine in una classe, struttura, modulo o interfaccia. Per ulteriori informazioni sull'inferenza del tipo, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [l'inferenza del tipo locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+ L'inferenza del tipo si applica a livello di routine. Non è applicabile all'esterno di una routine in una classe, struttura, modulo o interfaccia. Per ulteriori informazioni sull'inferenza del tipo, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [locale l'inferenza del tipo](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
- Per informazioni su ciò che accade quando un tipo di dati o un inizializzatore non è specificato, vedere [tipi di dati predefiniti e i valori](../../../visual-basic/language-reference/statements/dim-statement.md#default) più avanti in questo argomento.  
+ Per informazioni su ciò che accade quando un tipo di dati o l'inizializzatore non è specificato, vedere [valori e tipi di dati predefiniti](../../../visual-basic/language-reference/statements/dim-statement.md#default) più avanti in questo argomento.  
   
- È possibile utilizzare un *inizializzatore dell'oggetto* per dichiarare le istanze di tipi denominati e anonimi. Il codice seguente crea un'istanza di un `Student` classe e utilizza un inizializzatore di oggetto per inizializzare le proprietà.  
+ È possibile utilizzare un *inizializzatore di oggetto* per dichiarare le istanze di tipi denominati e anonimi. Il codice seguente crea un'istanza di un `Student` classe e utilizza un inizializzatore di oggetto per inizializzare le proprietà.  
   
 ```vb  
 Dim student1 As New Student With {.First = "Michael",   
                                   .Last = "Tucker"}  
 ```  
   
- Per ulteriori informazioni sugli inizializzatori di oggetto, vedere [procedura: dichiarare un oggetto utilizzando un inizializzatore di oggetto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md), [gli inizializzatori di oggetto: tipi denominati e anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md), e [tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+ Per ulteriori informazioni sugli inizializzatori di oggetti, vedere [procedura: dichiarare un oggetto utilizzando un inizializzatore di oggetto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md), [gli inizializzatori di oggetto: tipi denominati e anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md), e [tipi anonimi ](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
-## <a name="declaring-multiple-variables"></a>Dichiarare più variabili  
- È possibile dichiarare più variabili in un'istruzione di dichiarazione, specificando il nome della variabile per ognuno di essi e dopo ogni nome di matrice con le parentesi. Nel caso di più variabili, è possibile separarle mediante virgole.  
+## <a name="declaring-multiple-variables"></a>Dichiarazione di variabili di più  
+ È possibile dichiarare più variabili in un'istruzione di dichiarazione, specificando il nome della variabile per ognuno di essi e dopo ogni nome di matrice con parentesi. Nel caso di più variabili, è possibile separarle mediante virgole.  
   
 ```vb  
 Dim lastTime, nextTime, allTimes() As Date  
 ```  
   
- Se si dichiarano più variabili con uno `As` clausola, non è possibile specificare un inizializzatore per il gruppo di variabili.  
+ Se si dichiarano più variabili con uno `As` clausola, non è possibile specificare un inizializzatore per tale gruppo di variabili.  
   
- È possibile specificare tipi di dati diversi per diverse variabili utilizzando un oggetto separato `As` clausola per ogni variabile è dichiarata. Ogni variabile accetta il tipo di dati specificato nel primo `As` clausola verificato dopo la `variablename` parte.  
+ È possibile specificare i tipi di dati diversi per variabili differenti utilizzando un oggetto separato `As` clausola per ogni variabile è dichiarata. Ogni variabile accetta il tipo di dati specificato nel primo `As` clausola rilevata dopo il relativo `variablename` parte.  
   
 ```vb  
 Dim a, b, c As Single, x, y As Double, i As Integer  
@@ -219,18 +201,18 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 ```  
   
 ## <a name="arrays"></a>Matrici  
- È possibile dichiarare una variabile per contenere un *matrice*, che può contenere più valori. Per specificare che una variabile contiene una matrice, seguire la `variablename` immediatamente con le parentesi. Per ulteriori informazioni sulle matrici, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ È possibile dichiarare una variabile per contenere un *matrice*, che può contenere più valori. Per specificare che una variabile contiene una matrice, seguire la `variablename` immediatamente con parentesi. Per ulteriori informazioni sulle matrici, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
- È possibile specificare il limite inferiore e superiore di ogni dimensione della matrice. A tale scopo, includere un `boundslist` all'interno delle parentesi. Per ogni dimensione, il `boundslist` specifica il limite superiore e facoltativamente il limite inferiore. Il limite inferiore è sempre zero, se si specifichi o meno. Ogni indice può variare da zero al valore limite superiore.  
+ È possibile specificare il limite inferiore e superiore di ciascuna dimensione della matrice. A tale scopo, includere un `boundslist` all'interno delle parentesi. Per ogni dimensione, il `boundslist` specifica il limite superiore e facoltativamente il limite inferiore. Il limite inferiore è sempre uguale a zero, se specifichi o meno. Ogni indice possono variare da zero tramite il relativo valore limite superiore.  
   
- Le due istruzioni seguenti sono equivalenti. Ogni istruzione dichiara una matrice di 21 `Integer` elementi. Quando si accede a matrice, l'indice può variare da 0 a 20.  
+ Le due istruzioni seguenti sono equivalenti. Ogni istruzione dichiara una matrice di 21 `Integer` elementi. Quando si accede di matrice, l'indice può variare da 0 a 20.  
   
 ```vb  
 Dim totals(20) As Integer  
 Dim totals(0 To 20) As Integer  
 ```  
   
- L'istruzione seguente dichiara una matrice bidimensionale di tipo `Double`. La matrice è 4 righe (3 + 1) di 6 colonne (5 + 1) ogni. Si noti che il limite superiore rappresenta il valore massimo possibile per l'indice, non la lunghezza della dimensione. La lunghezza della dimensione è il limite superiore più uno.  
+ L'istruzione seguente dichiara una matrice bidimensionale di tipo `Double`. La matrice è 4 righe (3 + 1) di 6 colonne (5 + 1) ogni. Si noti che il limite superiore rappresenta il valore più alto possibile per l'indice, non la lunghezza della dimensione. La lunghezza della dimensione è il limite superiore più uno.  
   
 ```vb  
 Dim matrix2(3, 5) As Double  
@@ -238,7 +220,7 @@ Dim matrix2(3, 5) As Double
   
  Una matrice può avere da 1 a 32 dimensioni.  
   
- È possibile lasciare vuoto in una dichiarazione di matrice tutti i limiti. In questo caso, la matrice disponga del numero di dimensioni specificato, ma è non inizializzato. Ha un valore di `Nothing` fino a quando non si inizializza almeno alcuni dei suoi elementi. Il `Dim` istruzione deve specificare limiti per tutte le dimensioni o senza quote.  
+ È possibile lasciare vuoto in una dichiarazione di matrice tutti i limiti. In questo caso, la matrice disponga del numero di dimensioni specificato, ma non viene inizializzata. Ha un valore `Nothing` fino a quando non si inizializzano alcuni dei relativi elementi. Il `Dim` istruzione deve specificare limiti per tutte le dimensioni o Nessuna dimensione.  
   
 ```vb  
 ' Declare an array with blank array bounds.  
@@ -253,7 +235,7 @@ ReDim messages(4)
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte  
 ```  
   
- È possibile dichiarare un *matrice di lunghezza zero* dichiarando una delle dimensioni della matrice come -1. Il valore di una variabile che contiene una matrice a lunghezza zero è `Nothing`. Matrici di lunghezza zero sono necessari per alcune funzioni di common language runtime. Se si tenta di accedere a una matrice di questo tipo, si verifica un'eccezione di runtime. Per ulteriori informazioni, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ È possibile dichiarare un *matrice di lunghezza zero* dichiarando una delle dimensioni della matrice-1. Il valore di una variabile che contiene una matrice di lunghezza zero è `Nothing`. Matrici di lunghezza zero sono richiesti da alcune funzioni di common language runtime. Se si tenta di accedere a una matrice di questo tipo, si verifica un'eccezione di runtime. Per ulteriori informazioni, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
  È possibile inizializzare i valori di una matrice con un valore letterale della matrice. A tale scopo, racchiudere i valori di inizializzazione con parentesi graffe (`{}`).  
   
@@ -261,93 +243,92 @@ Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte
 Dim longArray() As Long = {0, 1, 2, 3}  
 ```  
   
- Per le matrici multidimensionali, l'inizializzazione di ciascuna dimensione separata è racchiusa tra parentesi graffe nella dimensione esterna. Gli elementi vengono specificati in ordine crescente di riga.  
+ Per le matrici multidimensionali, l'inizializzazione di ciascuna dimensione separata è racchiuso tra parentesi graffe all'interno della dimensione esterna. Gli elementi vengono specificati in ordine crescente di riga.  
   
 ```vb  
 Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}  
 ```  
   
- Per ulteriori informazioni sui valori letterali di matrici, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Per ulteriori informazioni sui valori letterali di matrice, vedere [matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ##  <a name="default"></a>Tipi di dati predefiniti e valori  
  Nella tabella seguente vengono descritti i risultati di varie combinazioni della specifica del tipo di dati e dell'inizializzatore in un'istruzione `Dim`.  
   
 |Tipo di dati specificato?|Inizializzatore specificato?|Esempio|Risultato|  
 |---|---|---|---|  
-|No|No|`Dim qty`|Se [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) è disabilitato (impostazione predefinita), la variabile è impostata su `Nothing`.<br /><br /> Se `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
-|No|Sì|`Dim qty = 5`|Se [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) è abilitato (impostazione predefinita), tipo di variabile viene assegnato il tipo di dati dell'inizializzatore. Vedere [inferenza del tipo locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
+|No|No|`Dim qty`|Se [Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) è off (impostazione predefinita), la variabile è impostata su `Nothing`.<br /><br /> Se `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
+|No|Sì|`Dim qty = 5`|Se [Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) è (impostazione predefinita), digitare la variabile accetta i dati dell'inizializzatore. Vedere [inferenza](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se le istruzioni `Option Infer` e `Option Strict` sono disabilitate, il tipo di dati accettato dalla variabile è `Object`.<br /><br /> Se `Option Infer` è disabilitato e `Option Strict` è abilitato, si verifica un errore in fase di compilazione.|  
 |Sì|No|`Dim qty As Integer`|La variabile viene inizializzata sul valore predefinito per il tipo di dati. Vedere la tabella più avanti in questa sezione.|  
 |Sì|Sì|`Dim qty  As Integer = 5`|Se il tipo di dati dell'inizializzatore non è convertibile nel tipo di dati specificato, si verifica un errore in fase di compilazione.|  
   
- Se si specifica un tipo di dati ma non si specifica un inizializzatore, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Inizializza la variabile sul valore predefinito per il tipo di dati. Nella tabella seguente viene illustrata l'impostazione predefinita i valori di inizializzazione.  
+ Se si specifica un tipo di dati ma non si specifica un inizializzatore, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] la variabile viene inizializzata sul valore predefinito per il tipo di dati. Nella tabella seguente mostra il valore predefinito di valori di inizializzazione.  
   
 |Tipo di dati|Valore predefinito|  
 |---|---|  
 |Tutti i tipi numerici (inclusi `Byte` e `SByte`)|0|  
-|`Char`|0 binario|  
+|`Char`|Binario 0|  
 |I tipi di riferimento (inclusi `Object`, `String`e tutte le matrici)|`Nothing`|  
 |`Boolean`|`False`|  
-|`Date`|12:00 AM del 1 ° gennaio dell'anno 1 (01/01/0001 12:00:00 AM)|  
+|`Date`|Mezzanotte del 1 ° gennaio dell'anno 1 (01/01/0001 12:00:00 AM)|  
   
  Ogni elemento di una struttura viene inizializzato come se fosse una variabile separata. Se si dichiara la lunghezza di una matrice, ma non si inizializza gli elementi, ogni elemento viene inizializzato come se fosse una variabile separata.  
   
 ## <a name="static-local-variable-lifetime"></a>Durata della variabile locale statica  
- Oggetto `Static` variabile locale ha una durata maggiore rispetto a quella della routine in cui è dichiarata. La durata della variabile dipende in cui viene dichiarata la routine e se è `Shared`.  
+ Oggetto `Static` variabile locale ha una durata maggiore rispetto a quello della routine in cui viene dichiarato. I limiti di durata della variabile dipendono in cui la routine viene dichiarata e se è `Shared`.  
   
-|Dichiarazione di routine|Variabile di inizializzazione|Variabile arresta esistente|  
+|Dichiarazione di routine|Variabile inizializzata|Variabile arresta esistente|  
 |---|---|---|  
-|In un modulo|La prima volta che viene chiamata la routine|Arresto dell'esecuzione del programma|  
-|In una classe o struttura, è procedura`Shared`|La prima volta la procedura viene chiamata su un'istanza specifica o nella classe o struttura stessa|Arresto dell'esecuzione del programma|  
-|In una classe o struttura, non è più routine`Shared`|La prima volta che viene chiamata la routine in un'istanza specifica|Quando l'istanza viene rilasciata per la garbage collection (GC)|  
+|In un modulo|La prima volta che viene chiamata la procedura|Arresto dell'esecuzione del programma|  
+|In una classe o struttura, procedura è`Shared`|La prima volta la procedura viene chiamata su un'istanza specifica o nella classe o struttura stessa|Arresto dell'esecuzione del programma|  
+|Non è in una classe o struttura, procedure`Shared`|La prima volta che la routine viene chiamata su una specifica istanza|Quando l'istanza viene rilasciata per l'operazione di garbage collection (GC)|  
   
 ## <a name="attributes-and-modifiers"></a>Gli attributi e modificatori  
- È possibile applicare attributi solo alle variabili membro e non alle variabili locali. Un attributo fornisce informazioni per i metadati dell'assembly, che non è significativo per l'archiviazione temporanea, ad esempio le variabili locali.  
+ È possibile applicare gli attributi solo per le variabili membro, non per le variabili locali. Un attributo fornisce informazioni per i metadati dell'assembly, che non è significativo per l'archiviazione temporanea, ad esempio le variabili locali.  
   
- A livello di modulo, è possibile utilizzare il `Static` modificatore per dichiarare le variabili membro. A livello di routine, non è possibile utilizzare `Shared`, `Shadows`, `ReadOnly`, `WithEvents`, o qualsiasi modificatori di accesso per dichiarare le variabili locali.  
+ A livello di modulo, è possibile utilizzare il `Static` modificatore per dichiarare le variabili membro. A livello di routine, non è possibile utilizzare `Shared`, `Shadows`, `ReadOnly`, `WithEvents`, o i modificatori di accesso per dichiarare le variabili locali.  
   
- È possibile specificare il codice può accedere a una variabile fornendo un `accessmodifier`. Classe e il modulo predefinito di variabili (all'esterno di qualsiasi routine) membro per l'accesso privato e predefinito di variabili membro di struttura per l'accesso pubblico. È possibile regolare i livelli di accesso con i modificatori di accesso. È possibile utilizzare i modificatori di accesso con le variabili locali (all'interno di una procedura).  
+ È possibile specificare il codice può accedere a una variabile fornendo un `accessmodifier`. Classe e modulo predefinito di variabili (all'esterno di qualsiasi routine) membro accesso privato e predefinito di variabili membro di struttura per l'accesso pubblico. È possibile regolare i livelli di accesso con i modificatori di accesso. È possibile utilizzare i modificatori di accesso con le variabili locali (all'interno di una routine).  
   
- È possibile specificare `WithEvents` solo le variabili membro e non le variabili locali all'interno di una routine. Se si specifica `WithEvents`, il tipo di dati della variabile deve essere un tipo di classe specifico, non `Object`. Non è possibile dichiarare una matrice con `WithEvents`. Per ulteriori informazioni sugli eventi, vedere [eventi](../../../visual-basic/programming-guide/language-features/events/index.md).  
+ È possibile specificare `WithEvents` solo a variabili membro, non le variabili locali all'interno di una stored procedure. Se si specifica `WithEvents`, il tipo di dati della variabile deve essere un tipo di classe specifico non `Object`. Non è possibile dichiarare una matrice con `WithEvents`. Per ulteriori informazioni sugli eventi, vedere [eventi](../../../visual-basic/programming-guide/language-features/events/index.md).  
   
 > [!NOTE]
->  Codice esterno di una classe, struttura o un modulo necessario qualificare il nome di una variabile membro con il nome di tale classe, struttura o un modulo. All'esterno di che una routine o un blocco non può fare riferimento a variabili locali all'interno di tale routine o blocco di codice.  
+>  Codice esterno di una classe, struttura o un modulo necessario qualificare il nome di una variabile membro con il nome di tale classe, struttura o modulo. All'esterno di che una stored procedure o un blocco non può fare riferimento a variabili locali all'interno della routine o un blocco di codice.  
   
 ## <a name="releasing-managed-resources"></a>Rilasciare le risorse gestite  
  Il garbage collector di .NET Framework elimina le risorse gestite senza alcuna codifica aggiuntiva da parte dell'utente. Tuttavia, è possibile forzare l'eliminazione di una risorsa gestita anziché attendere che il garbage collector.  
   
- Se una classe mantiene una risorsa particolarmente preziosa e rara (ad esempio un handle di connessione o file di database), è possibile evitare di attendere la successiva operazione di garbage collection per pulire un'istanza della classe che non è più in uso. Una classe può implementare il <xref:System.IDisposable>interfaccia per fornire un modo per rilasciare le risorse prima di una garbage collection.</xref:System.IDisposable> Una classe che implementa l'interfaccia espone un `Dispose` metodo che può essere chiamato per forzare il rilascio immediato delle risorse preziose.  
+ Se una classe contiene una risorsa particolarmente preziosa e rara (ad esempio, un handle di connessione o file di database), è possibile evitare di attendere la successiva operazione di garbage collection per pulire un'istanza di classe che non è più in uso. Una classe può implementare il <xref:System.IDisposable> interfaccia per fornire un modo per rilasciare le risorse prima di un'operazione di garbage collection. Una classe che implementa l'interfaccia espone un `Dispose` metodo che può essere chiamato per forzare il rilascio immediato delle risorse importanti.  
   
- Il `Using` istruzione automatizza il processo di acquisizione di una risorsa, l'esecuzione di un set di istruzioni e quindi l'eliminazione della risorsa. Tuttavia, è necessario che la risorsa di <xref:System.IDisposable>interfaccia.</xref:System.IDisposable> Per ulteriori informazioni, vedere [istruzione Using](../../../visual-basic/language-reference/statements/using-statement.md).  
-  
-## <a name="example"></a>Esempio  
- Nell'esempio seguente dichiara variabili utilizzando il `Dim` istruzione con varie opzioni.  
-  
- [!code-vb[VbVbalrStatements&#141;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_1.vb)]  
+ Il `Using` istruzione automatizza il processo di acquisizione di una risorsa, l'esecuzione di un set di istruzioni e quindi l'eliminazione della risorsa. Tuttavia, è necessario implementare la risorsa di <xref:System.IDisposable> interfaccia. Per altre informazioni, vedere [Istruzione using](../../../visual-basic/language-reference/statements/using-statement.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente vengono elencati i numeri primi compreso tra 1 e 30. Viene descritto l'ambito delle variabili locali in commenti del codice.  
+ Nell'esempio seguente dichiara variabili utilizzando la `Dim` istruzione con varie opzioni.  
   
- [!code-vb[VbVbalrStatements&#142;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#141](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_1.vb)]  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente, il `speedValue` variabile viene dichiarata a livello di classe. Il `Private` parola chiave viene utilizzata per dichiarare la variabile. La variabile è accessibile da qualsiasi routine di `Car` (classe).  
+ Nell'esempio seguente vengono elencati i numeri primi compreso tra 1 e 30. L'ambito delle variabili locali è descritto nei commenti di codice.  
   
- [!code-vb[VbVbalrStatements&#144;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#142](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_2.vb)]  
   
- [!code-vb[&#145; VbVbalrStatements](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente, il `speedValue` variabile viene dichiarata a livello di classe. Il `Private` parola chiave viene utilizzata per dichiarare la variabile. La variabile è accessibile da qualsiasi routine di `Car` classe.  
+  
+ [!code-vb[VbVbalrStatements#144](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_3.vb)]  
+  
+ [!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Const (istruzione)](../../../visual-basic/language-reference/statements/const-statement.md)   
- [ReDim (istruzione)](../../../visual-basic/language-reference/statements/redim-statement.md)   
- [Istruzione Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
- [Istruzione Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)   
- [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Compilazione (pagina), Creazione progetti (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)   
- [Dichiarazione di variabile](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Matrici](../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Inizializzatori di oggetto: Tipi denominati e anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Inizializzatori di oggetto: Tipi denominati e anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Procedura: dichiarare un oggetto utilizzando un inizializzatore di oggetto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)   
+ [Istruzione Const](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Istruzione ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)  
+ [Istruzione Option Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Istruzione Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [Istruzione Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Pagina Compilazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
+ [Dichiarazione di variabile](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [Array](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Inizializzatori di oggetto: tipi denominati e tipi anonimi](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Procedura: Dichiarare un oggetto usando un inizializzatore di oggetto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)  
  [Inferenza del tipo di variabile locale](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-

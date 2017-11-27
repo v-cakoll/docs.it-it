@@ -1,34 +1,39 @@
 ---
-title: "Procedura: selezionare un intervallo di date nel controllo MonthCalendar Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "calendari, selezione dell'intervallo di date"
-  - "date, selezione di intervalli nei controlli di tipo calendario"
-  - "esempi [Windows Form], calendario (controlli)"
-  - "MonthCalendar (controllo) [Windows Form], selezione dell'intervallo di date"
+title: 'Procedura: selezionare un intervallo di date nel controllo MonthCalendar Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- dates [Windows Forms], selecting range in calendar controls
+- examples [Windows Forms], calendar controls
+- calendars [Windows Forms], selecting date range
+- MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d6a8d156e6e9a8c5331bd3db1c8e584be5ac154
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: selezionare un intervallo di date nel controllo MonthCalendar Windows Form
-Un'importante funzionalità del controllo <xref:System.Windows.Forms.MonthCalendar> Windows Form consiste nella possibilità di selezionare un intervallo di date.  Questo rappresenta un miglioramento rispetto alla funzionalità di selezione della data del controllo <xref:System.Windows.Forms.DateTimePicker>, che consentiva all'utente di selezionare soltanto un singolo valore data\/ora.  È possibile utilizzare le proprietà del controllo <xref:System.Windows.Forms.MonthCalendar> per impostare un intervallo di date o per ottenere un intervallo di selezione impostato dall'utente.  Nell'esempio di codice riportato di seguito viene illustrato come impostare un intervallo di selezione.  
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Procedura: selezionare un intervallo di date nel controllo MonthCalendar Windows Form
+Un'importante funzionalità di Windows Form <xref:System.Windows.Forms.MonthCalendar> controllo è che l'utente può selezionare un intervallo di date. Questa funzionalità è un miglioramento rispetto alla funzionalità di selezione della data del <xref:System.Windows.Forms.DateTimePicker> controllo, che consente solo all'utente di selezionare un valore data/ora singolo. È possibile impostare un intervallo di date o ottenere impostato dall'utente utilizzando le proprietà di un intervallo di selezione di <xref:System.Windows.Forms.MonthCalendar> controllo. Esempio di codice seguente viene illustrato come impostare un intervallo di selezione.  
   
-### Per selezionare un intervallo di date  
+### <a name="to-select-a-range-of-dates"></a>Per selezionare un intervallo di date  
   
-1.  Creare gli oggetti <xref:System.DateTime> che rappresentano la prima e l'ultima data dell'intervallo.  
+1.  Creare <xref:System.DateTime> gli oggetti che rappresentano le date e il cognome in un intervallo.  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -60,7 +65,7 @@ Un'importante funzionalità del controllo <xref:System.Windows.Forms.MonthCalend
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     Oppure  
+     - oppure -  
   
      Impostare le proprietà <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>.  
   
@@ -79,8 +84,8 @@ Un'importante funzionalità del controllo <xref:System.Windows.Forms.MonthCalend
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## Vedere anche  
- [Controllo MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)   
- [Procedura: modificare l'aspetto del controllo MonthCalendar Windows Form](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)   
- [Procedura: visualizzare giorni specifici in grassetto con il controllo MonthCalendar Windows Form](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)   
- [Procedura: visualizzare più mesi nel controllo MonthCalendar Windows Form](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+## <a name="see-also"></a>Vedere anche  
+ [Controllo MonthCalendar](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ [Procedura: Modificare l'aspetto del controllo MonthCalendar di Windows Form](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
+ [Procedura: Visualizzare giorni specifici in grassetto con il controllo MonthCalendar di Windows Form](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
+ [Procedura: Visualizzare più mesi nel controllo MonthCalendar di Windows Form](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

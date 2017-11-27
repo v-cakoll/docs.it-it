@@ -1,35 +1,36 @@
 ---
-title: "Procedura: visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LinkLabel1_LinkClicked"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "esempi [Windows Form], LinkLabel (controllo)"
-  - "collegamento, a pagine Web da form"
-  - "LinkLabel (controllo) [Windows Form], esempi"
-  - "pagine Web, visualizzazione"
-  - "Windows Form, collegamento a pagine Web"
+title: 'Procedura: visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+f1_keywords: LinkLabel1_LinkClicked
+helpviewer_keywords:
+- examples [Windows Forms], LinkLabel control
+- Web pages [Windows Forms], displaying
+- linking [Windows Forms], to Web pages from forms
+- Windows Forms, linking to Web pages
+- LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38ef165dc655fedbf682a21220d6a76532b18f6a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic)
-Nell'esempio riportato di seguito viene visualizzata una pagina Web nel browser predefinito quando un utente fa clic su un controllo <xref:System.Windows.Forms.LinkLabel> di un Windows Form.  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Procedura: visualizzare una pagina Web da un controllo LinkLabel di Windows Form (Visual Basic)
+In questo esempio viene visualizzata una pagina Web nel browser predefinito quando un utente fa clic su un Windows Form <xref:System.Windows.Forms.LinkLabel> controllo.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -44,8 +45,8 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## Compilazione del codice  
- L'esempio presenta i seguenti requisiti:  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ L'esempio presenta i requisiti seguenti:  
   
 -   Un Windows Form denominato `Form1`.  
   
@@ -53,9 +54,9 @@ End Sub
   
 -   Una connessione Internet attiva.  
   
-## Sicurezza di .NET Framework  
- Per eseguire la chiamata al metodo <xref:System.Diagnostics.Process.Start%2A> è necessaria un'attendibilità completa.  Per ulteriori informazioni, vedere <xref:System.Security.SecurityException>.  
+## <a name="net-framework-security"></a>Sicurezza di .NET Framework  
+ La chiamata al <xref:System.Diagnostics.Process.Start%2A> metodo richiede l'attendibilità totale. Per altre informazioni, vedere <xref:System.Security.SecurityException>.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.LinkLabel>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.LinkLabel>  
  [Controllo LinkLabel](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)

@@ -1,41 +1,43 @@
 ---
-title: "How to: Connect Multiple Events to a Single Event Handler in Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "events [Windows Forms], connecting multiple to single event handler"
-  - "event handlers [Windows Forms], connecting events to"
-  - "menus, event-handling methods for multiple menu items"
-  - "Windows Forms controls, events"
-  - "menu items, multicasting event-handling methods"
+title: "Procedura: connettere più eventi a un unico gestore eventi in Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
+helpviewer_keywords:
+- events [Windows Forms], connecting multiple to single event handler
+- event handlers [Windows Forms], connecting events to
+- menus [Windows Forms], event-handling methods for multiple menu items
+- Windows Forms controls, events
+- menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4aa22b011b895a20cefdcc5a7c9e6c1cd0531923
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Connect Multiple Events to a Single Event Handler in Windows Forms
-Nella progettazione dell'applicazione può essere necessario disporre di un singolo gestore per più eventi o di più eventi che eseguano la stessa procedura.  Un comando di menu che attiva lo stesso evento generato da un pulsante nel form, ad esempio, costituisce un notevole risparmio di tempo se entrambi espongono la stessa funzionalità.  Per ottenere questo risultato in C\# utilizzare la visualizzazione Eventi della finestra Proprietà mentre in Visual Basic utilizzare la parola chiave `Handles` e le caselle di riepilogo **Nome classe** e **Nome metodo del gestore del codice**.  
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Procedura: connettere più eventi a un unico gestore eventi in Windows Form
+Nella progettazione delle applicazioni, potrebbe essere necessario utilizzare un singolo gestore eventi per più eventi o di più eventi di eseguire la stessa procedura. Ad esempio, è spesso un notevole risparmio di tempo per generare l'evento stesso come un pulsante sul form non espongono la stessa funzionalità di un comando di menu. È possibile farlo usando la visualizzazione di eventi della finestra proprietà in c# o il `Handles` (parola chiave) e **nome classe** e **nome del metodo** caselle di riepilogo a discesa nell'Editor di codice Visual Basic.  
   
-### Per connettere più eventi a un unico gestore eventi in Visual Basic  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Per connettere più eventi a un unico gestore eventi in Visual Basic  
   
-1.  Fare clic con il pulsante destro del mouse sul form, quindi scegliere **Visualizza codice**.  
+1.  Il modulo di mouse e scegliere **Visualizza codice**.  
   
-2.  Dalla casella di riepilogo **Nome classe** selezionare uno dei controlli che si desidera gestire con il gestore eventi.  
+2.  Dal **nome classe** casella di riepilogo a discesa, selezionare uno dei controlli che si desidera gestire con il gestore dell'evento.  
   
-3.  Dalla casella di riepilogo **Nome metodo** selezionare uno degli eventi che si desidera gestire con il gestore eventi.  
+3.  Dal **nome del metodo** casella a discesa, selezionare uno degli eventi che si desidera gestire il gestore eventi.  
   
-4.  Verrà inserito il gestore eventi appropriato e il punto di inserimento verrà posto all'interno del metodo.  Nell'esempio qui di seguito si illustra questa procedura per l'evento <xref:System.Windows.Forms.Control.Click> relativo al controllo <xref:System.Windows.Forms.Button>.  
+4.  L'Editor di codice inserito il gestore eventi appropriato e posiziona il punto di inserimento all'interno del metodo. Nell'esempio seguente, è il <xref:System.Windows.Forms.Control.Click> evento per il <xref:System.Windows.Forms.Button> controllo.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -43,7 +45,7 @@ Nella progettazione dell'applicazione può essere necessario disporre di un sing
     End Sub  
     ```  
   
-5.  Aggiungere alla clausola `Handles` gli altri eventi che si desidera siano gestiti dal gestore.  
+5.  Aggiungere gli altri eventi si desidera gestiti per il `Handles` clausola.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button2.Click  
@@ -51,22 +53,22 @@ Nella progettazione dell'applicazione può essere necessario disporre di un sing
     End Sub  
     ```  
   
-6.  Aggiungere il codice appropriato nel gestore eventi.  
+6.  Aggiungere il codice appropriato per il gestore dell'evento.  
   
-### Per connettere più eventi a un singolo gestore eventi in C\#  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Per connettere più eventi a un singolo gestore eventi in c#  
   
-1.  Selezionare il controllo a cui si desidera connettere un gestore eventi.  
+1.  Selezionare il controllo a cui si desidera connettersi a un gestore eventi.  
   
-2.  Nella finestra Proprietà fare clic sul pulsante **Eventi** \(![Pulsante Eventi](../../../docs/framework/winforms/media/vxeventsbutton-propertieswindow.png "vxEventsButton\_PropertiesWindow")\).  
+2.  Nella finestra Proprietà fare clic su di **eventi** pulsante (![pulsante eventi](../../../docs/framework/winforms/media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).  
   
 3.  Fare clic sul nome dell'evento che si desidera gestire.  
   
-4.  Nella sezione relativa al valore accanto al nome dell'evento fare clic sul pulsante a discesa, per visualizzare un elenco di gestori eventi esistenti che corrispondono alla firma del metodo dell'evento che si desidera gestire.  
+4.  Nella sezione valore accanto al nome di evento, fare clic sul pulsante di menu a discesa per visualizzare un elenco di gestori di eventi esistente che corrisponde alla firma del metodo dell'evento che si desidera gestire.  
   
-5.  Selezionare il gestore eventi adatto dall'elenco.  
+5.  Selezionare il gestore eventi appropriato dall'elenco.  
   
-     Il codice verrà aggiunto al form per associare l'evento al gestore eventi esistente.  
+     Verrà aggiunto codice al form per associare l'evento al gestore dell'evento esistente.  
   
-## Vedere anche  
- [Creating Event Handlers in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)   
- [Event Handlers Overview](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+## <a name="see-also"></a>Vedere anche  
+ [Creazione di gestori eventi in Windows Form](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Informazioni generali sui gestori eventi](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)

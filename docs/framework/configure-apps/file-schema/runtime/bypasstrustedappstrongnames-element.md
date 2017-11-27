@@ -1,87 +1,89 @@
 ---
-title: "Elemento &lt;bypassTrustedAppStrongNames&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypassTrustedAppStrongNames> (elemento)"
-  - "bypassTrustedAppStrongNames (elemento)"
-  - "funzionalità che consente di ignorare la verifica del nome sicuro"
-  - "assembly con nome sicuro, caricamento in domini dell'applicazione trusted"
+title: '&lt;bypassTrustedAppStrongNames&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strong-name bypass feature
+- bypassTrustedAppStrongNames element
+- strong-named assemblies, loading into trusted application domains
+- <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2b3e1cb839e9e7fd81a5452c0e034c3552b230cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;bypassTrustedAppStrongNames&gt;
-Specifica se ignorare la convalida di nomi sicuri per gli assembly con attendibilità totale caricati in un oggetto <xref:System.AppDomain> con attendibilità totale.  
+# <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt; elemento
+Specifica se ignorare la convalida di nomi sicuri per gli assembly con attendibilità che vengono caricati in un oggetto attendibilità <xref:System.AppDomain>.  
   
-## Sintassi  
+ \<configuration>  
+\<runtime >  
+\<bypassTrustedAppStrongNames >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <bypassTrustedAppStrongNames    
    enabled="true|false"/>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se è attivata la funzionalità che consente di ignorare la convalida di nomi sicuri per gli assembly con attendibilità totale.  Se questa funzionalità è attivata, i nomi sicuri non vengono convalidati per verificare che siano corretti quando l'assembly viene caricato.  Il valore predefinito è `true`.|  
+|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se è abilitata la funzionalità che consente di evitare la convalida di nomi sicuri agli assembly totalmente attendibili. Quando questa funzionalità è abilitata, i nomi sicuri non vengono convalidati correttezza quando l'assembly viene caricato. Il valore predefinito è `true`.|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a>Attributo enabled  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|`true`|Le firme con nome sicuro per gli assembly con attendibilità totale non vengono convalidate quando gli assembly vengono caricati in un oggetto <xref:System.AppDomain> con attendibilità totale.  Questa è l'impostazione predefinita.|  
-|`false`|Le firme con nome sicuro per gli assembly con attendibilità totale vengono convalidate quando gli assembly vengono caricati in un oggetto <xref:System.AppDomain> con attendibilità totale.  La firma con nome sicuro viene controllata solo per verificare se è corretta; non viene confrontata con un altro nome sicuro per trovare una corrispondenza.|  
+|-----------|-----------------|  
+|`true`|Le firme con nome sicuro su assembly con attendibilità non vengono convalidate quando gli assembly vengono caricati in un oggetto attendibilità <xref:System.AppDomain>. Questa è l'impostazione predefinita.|  
+|`false`|Le firme con nome sicuro su assembly con attendibilità vengono convalidate quando gli assembly vengono caricati in un oggetto attendibilità <xref:System.AppDomain>. La firma nome sicuro viene verificata solo la correttezza di firma; non verrà confrontato con un altro nome sicuro per trovare una corrispondenza.|  
   
-### Elementi figlio  
+### <a name="child-elements"></a>Elementi figlio  
  Nessuno.  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|-------------|-----------------|  
+|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
 |`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
   
-## Note  
- La funzionalità che consente di ignorare il nome sicuro evita il sovraccarico associato alla verifica delle firme con nome sicuro degli assembly con attendibilità totale.  
+## <a name="remarks"></a>Note  
+ Questa funzionalità con nome sicuro evita l'overhead della verifica della firma con nome sicuro di assembly completamente attendibili.  
   
- Questa funzionalità si applica a tutti gli assembly firmati con nome sicuro che abbiano le caratteristiche seguenti:  
+ Questa funzionalità si applica a qualsiasi assembly firmato con un nome sicuro e che ha le caratteristiche seguenti:  
   
--   Sono completamente attendibili senza l'evidenza <xref:System.Security.Policy.StrongName> \(ad esempio, dispongono dell'evidenza della zona `MyComputer`\).  
+-   Completamente attendibile senza il <xref:System.Security.Policy.StrongName> evidenza (ad esempio, ha `MyComputer` prova della zona).  
   
--   Vengono caricati in un oggetto <xref:System.AppDomain> completamente attendibile.  
+-   Viene caricato in un dominio <xref:System.AppDomain> completamente attendibile.  
   
--   Vengono caricati da un percorso nella proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> di tale oggetto <xref:System.AppDomain>.  
+-   Viene caricato da una località nell'ambito della proprietà <xref:System.AppDomainSetup.ApplicationBase%2A> di <xref:System.AppDomain>.  
   
--   Non hanno firma ritardata.  
+-   Non ha firma ritardata.  
   
 > [!NOTE]
->  Se la funzionalità che consente di ignorare il nome sicuro viene disattivata per tutte le applicazioni del computer tramite una chiave del Registro di sistema, questa impostazione del file di configurazione non ha alcun effetto.  Per ulteriori informazioni, vedere [Procedura: disabilitare la funzionalità che consente di ignorare il nome sicuro](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
+>  Se questa funzionalità è stata disattivata per tutte le applicazioni del computer tramite una chiave del Registro di sistema, questa impostazione del file di configurazione non ha alcun effetto. Per ulteriori informazioni, vedere [procedura: disabilitare la funzionalità di Bypass del nome sicuro](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come specificare il comportamento che convalida la firma con nome sicuro per gli assembly con attendibilità totale.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come specificare il comportamento che convalida la firma nome sicuro su assembly totalmente attendibili.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <bypassTrustedAppStrongNames enabled="false"/>  
@@ -89,7 +91,7 @@ Specifica se ignorare la convalida di nomi sicuri per gli assembly con attendibi
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Procedura: disabilitare la funzionalità che consente di ignorare il nome sicuro](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+## <a name="see-also"></a>Vedere anche  
+ [Schema delle impostazioni di runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Procedura: Disabilitare la funzionalità che consente di ignorare il nome sicuro](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)

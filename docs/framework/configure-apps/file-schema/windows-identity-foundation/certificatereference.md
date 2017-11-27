@@ -1,62 +1,71 @@
 ---
-title: "&lt;certificateReference&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;certificateReference&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: c8acf4b6d6e6e8a0fcf7d73139a1d2c5ea03f063
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;certificateReference&gt;
-Specifica le impostazioni che consentono di individuare e convalidare un certificato x. 509 in un archivio certificati.  
+# <a name="ltcertificatereferencegt"></a>&lt;certificateReference&gt;
+Specifica le impostazioni che consentono di trovare e convalidare un certificato x. 509 nell'archivio certificati.  
   
-## Sintassi  
+ \<System >  
+\<federationConfiguration >  
+\<serviceCertificate >  
+\<certificateReference >  
   
-```  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
 <system.identityModel.services>  
-  <federationConfiguration>  
-    <serviceCertificate>  
-      <certificateReference   
-        storeName=”AddressBook||AuthRoot||CertificateAuthority||Disallowed||My||Root||TrustedPeople||TrustedPublisher”  
-        storeLocation=”CurrentUser||LocalMachine”  
-        x509FindType="FindByThumbprint||FindBySubjectName||FindBySubjectDistinguishedName||FindByIssuerName||FindByIssuerDistinguishedName||FindBySerialNumber||FindByTimeValid||FindByTimeNotYetValid||FindByTimeExpired||FindByTemplateName||FindByApplicationPolicy||FindByCertificatePolicy||FindByExtension||FindByKeyUsage||FindBySubjectKeyIdentifier"  
-        findValue=xs:String  
-        isChainIncluded=xs:Boolean >  
-      </certificateReference>  
-    </serviceCertificate>  
-  </federationConfiguration>  
+  <federationConfiguration>  
+    <serviceCertificate>  
+      <certificateReference   
+        storeName="AddressBook||AuthRoot||CertificateAuthority||Disallowed||My||Root||TrustedPeople||TrustedPublisher"  
+        storeLocation="CurrentUser||LocalMachine"  
+        x509FindType="FindByThumbprint||FindBySubjectName||FindBySubjectDistinguishedName||FindByIssuerName||FindByIssuerDistinguishedName||FindBySerialNumber||FindByTimeValid||FindByTimeNotYetValid||FindByTimeExpired||FindByTemplateName||FindByApplicationPolicy||FindByCertificatePolicy||FindByExtension||FindByKeyUsage||FindBySubjectKeyIdentifier"  
+        findValue=xs:String  
+        isChainIncluded=xs:Boolean >  
+      </certificateReference>  
+    </serviceCertificate>  
+  </federationConfiguration>  
 </system.identityModel.services>  
 ```  
   
-## Attributi ed elementi  
+## <a name="attributes-and-elements"></a>Attributi ed elementi  
  Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
   
-### Attributi  
+### <a name="attributes"></a>Attributi  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|storeName|Il nome dell'archivio certificati x. 509.  Il valore predefinito è "My".  Parametro facoltativo.|  
-|storeLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valore che specifica la posizione dell'archivio certificati x. 509.  Il valore predefinito è "LocalMachine".  Parametro facoltativo.|  
-|x509FindType|Un <xref:System.Security.Cryptography.X509Certificates.X509FindType> valore che specifica il tipo di ricerca da eseguire.  Il valore predefinito è "FindBySubjectDistinguishedName".  Parametro facoltativo.|  
-|findValue|Valore da cercare nell'archivio certificati X.509.  Parametro facoltativo.|  
-|isChainIncluded|Specifica se deve essere eseguita la convalida utilizzando la catena di certificati.  Il valore predefinito è "true"; viene eseguita la convalida utilizzando la catena di certificati.  Parametro facoltativo.|  
+|storeName|Il nome dell'archivio certificati x. 509. Il valore predefinito è "My". Parametro facoltativo.|  
+|storeLocation|Oggetto <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valore che specifica il percorso dell'archivio certificati x. 509. Il valore predefinito è "LocalMachine". Parametro facoltativo.|  
+|x509FindType|Un <xref:System.Security.Cryptography.X509Certificates.X509FindType> valore che specifica il tipo di ricerca che deve essere eseguito. Il valore predefinito è "FindBySubjectDistinguishedName". Parametro facoltativo.|  
+|findValue|Valore da cercare nell'archivio certificati X.509. Parametro facoltativo.|  
+|isChainIncluded|Specifica se la convalida deve essere eseguita usando la catena di certificati. Il valore predefinito è "true". la convalida viene eseguita usando la catena di certificati. Parametro facoltativo.|  
   
-### Elementi figlio  
- Nessuno  
+### <a name="child-elements"></a>Elementi figlio  
+ None  
   
-### Elementi padre  
+### <a name="parent-elements"></a>Elementi padre  
   
 |Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Consente di configurare il certificato utilizzato per crittografare e decrittografare i token.|  
+|-------------|-----------------|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Consente di configurare il certificato utilizzato per crittografare e decrittografare i token.|  
   
-## Note  
- Il `<certificateReference>` elemento consente di specificare le impostazioni utilizzate per individuare e convalidare un certificato x. 509 in un archivio certificati.  Quando viene specificato come elemento figlio del `<serviceCertficate>` elemento, specifica la posizione e verifica le impostazioni del certificato x. 509 utilizzato per crittografare e decrittografare i token.  Il `<certificateReference>` elemento è rappresentato dal <xref:System.ServiceModel.Configuration.CertificateReferenceElement> classe.
+## <a name="remarks"></a>Note  
+ Il `<certificateReference>` elemento specifica impostazioni che consentono di trovare e convalidare un certificato x. 509 nell'archivio certificati. Quando viene specificato come elemento figlio del `<serviceCertficate>` elemento, specifica la posizione e verifica le impostazioni del certificato x. 509 utilizzato per crittografare e decrittografare i token. Il `<certificateReference>` elemento è rappresentato dalla <xref:System.ServiceModel.Configuration.CertificateReferenceElement> classe.

@@ -1,71 +1,75 @@
 ---
-title: "Propriet&#224; di dipendenza di tipo raccolta | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "proprietà del tipo di raccolta"
-  - "proprietà di dipendenza"
-  - "proprietà, tipo di raccolta"
-  - "proprietà, dipendenza"
+title: "Proprietà di dipendenza di tipo raccolta"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [WPF], dependency
+- properties [WPF], collection-type
+- dependency properties [WPF]
+- collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 11927efee2b8375550767d119e6b4a95b3ef7bd8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Propriet&#224; di dipendenza di tipo raccolta
-In questo argomento vengono fornite linee guida e suggeriti modelli per l'implementazione di una [proprietà di dipendenza](GTMT) in cui la proprietà è di tipo raccolta.  
+# <a name="collection-type-dependency-properties"></a>Proprietà di dipendenza di tipo raccolta
+Questo argomento include linee guida e modelli consigliati per l'implementazione di una proprietà di dipendenza in cui la proprietà è di tipo raccolta.  
   
-   
+ 
   
 <a name="implementing"></a>   
-## Implementazione di una proprietà di dipendenza di tipo raccolta  
- Per una proprietà di dipendenza generica, il modello di implementazione seguito consiste nel definire un wrapper della proprietà [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], nel quale quella proprietà è supportata da un identificatore <xref:System.Windows.DependencyProperty>, anziché da un campo o da un altro costrutto.  Questo stesso modello viene seguito quando si implementa una proprietà di tipo raccolta.  Tuttavia, una proprietà di tipo raccolta aggiunge alcuni aspetti più complessi al modello, se il tipo contenuto all'interno della raccolta è esso stesso un oggetto <xref:System.Windows.DependencyObject> o una classe derivata <xref:System.Windows.Freezable>.  
+## <a name="implementing-a-collection-type-dependency-property"></a>Implementazione di una proprietà di dipendenza di tipo raccolta  
+ Per una proprietà di dipendenza in generale, il modello di implementazione che seguono è definito un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] wrapper della proprietà, in cui tale proprietà è supportata da un <xref:System.Windows.DependencyProperty> identificatore anziché un campo o altro costrutto. Questo stesso modello viene seguito quando si implementa una proprietà di tipo raccolta. Tuttavia, una proprietà di tipo di raccolta introduce un livello di complessità al modello ogni volta che il tipo di contenuto all'interno della raccolta è a sua volta un <xref:System.Windows.DependencyObject> o <xref:System.Windows.Freezable> classe derivata.  
   
 <a name="initializing"></a>   
-## Inizializzazione della raccolta oltre il valore predefinito  
- Quando si crea una proprietà di dipendenza, non si specifica il valore predefinito della proprietà come valore iniziale del campo.  Al contrario, viene specificato il valore predefinito tramite i metadati della proprietà di dipendenza.  Se la proprietà è un tipo di riferimento, il valore predefinito specificato nei metadati della proprietà di dipendenza non è un valore predefinito per istanza, bensì un valore predefinito che viene applicato a tutte le istanze del tipo.  Pertanto, è necessario prestare attenzione a non utilizzare la singola raccolta statica definita dai metadati della proprietà della raccolta come valore di lavoro predefinito per le istanze del tipo appena create.  È necessario assicurarsi invece di impostare deliberatamente il valore della raccolta su un'unica raccolta \(istanza\), come parte della logica del costruttore di classi.  In caso contrario, sarà stata creata una classe Singleton non intenzionale.  
+## <a name="initializing-the-collection-beyond-the-default-value"></a>Inizializzazione della raccolta oltre il valore predefinito  
+ Quando si crea una proprietà di dipendenza, non si specifica il valore predefinito della proprietà come valore iniziale del campo. Al contrario, viene specificato il valore predefinito tramite i metadati della proprietà di dipendenza. Se la proprietà è un tipo di riferimento, il valore predefinito specificato nei metadati della proprietà di dipendenza non è un valore predefinito per istanza, ma un valore predefinito che viene applicato a tutte le istanze del tipo. Pertanto, è necessario prestare attenzione a non usare la singola raccolta statica definita dai metadati della proprietà della raccolta come valore di lavoro predefinito per le istanze del tipo appena create. È invece necessario assicurarsi di impostare deliberatamente il valore della raccolta su un'unica raccolta (istanza), come parte della logica del costruttore di classi. In caso contrario, verrà creata una classe Singleton non intenzionale.  
   
- Prendere in considerazione l'esempio riportato di seguito.  Nella sezione seguente dell'esempio viene descritta la definizione di una classe `Aquarium`.  La classe definisce la proprietà di dipendenza di tipo raccolta `AquariumObjects` che utilizza il tipo <xref:System.Collections.Generic.List%601> generico con un vincolo di tipo <xref:System.Windows.FrameworkElement>.  Nella chiamata <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> per la proprietà di dipendenza, i metadati stabiliscono che il valore predefinito sia un nuovo oggetto <xref:System.Collections.Generic.List%601> generico.  
+ Si osservi l'esempio riportato di seguito. La sezione seguente dell'esempio descrive la definizione di una classe `Aquarium`. La classe definisce le proprietà di dipendenza di tipo raccolta `AquariumObjects`, che utilizza il tipo generico <xref:System.Collections.Generic.List%601> tipo con un <xref:System.Windows.FrameworkElement> vincolo di tipo. Nel <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> chiamata per la proprietà di dipendenza, i metadati stabilisce il valore predefinito per un nuovo oggetto generico <xref:System.Collections.Generic.List%601>.  
   
- <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
- [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
-[!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
-[!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  
+ [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
+ [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
- Tuttavia, se si lascia inalterato il codice, quel singolo valore predefinito dell'elenco viene condiviso per tutte le istanze di `Aquarium`.  Se si esegue il codice di test riportato di seguito, destinato a mostrare la modalità di creazione di due istanze di `Aquarium` separate e si aggiunge un singolo oggetto `Fish` diverso a ciascuna di esse, il risultato è sorprendente.  
+ Tuttavia, se si lascia inalterato il codice, quel singolo valore predefinito dell'elenco viene condiviso per tutte le istanze di `Aquarium`. Se si esegue il codice di test riportato di seguito, destinato a mostrare la modalità di creazione di due istanze di `Aquarium` separate e si aggiunge un singolo oggetto `Fish` diverso a ciascuna di esse, il risultato è sorprendente:  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
- Invece di contenere un solo elemento, ogni raccolta ne contiene due.  Questa situazione si verifica in quanto ciascun oggetto `Aquarium` ha aggiunto il proprio oggetto `Fish` alla raccolta dei valori predefiniti, generata da una singola chiamata al costruttore nei metadati e pertanto condivisa tra tutte le istanze.  Si tratta di una situazione non auspicata.  
+ Invece di contenere un solo elemento, ogni raccolta ne contiene due. Questa situazione si verifica in quanto ciascun oggetto `Aquarium` ha aggiunto il proprio oggetto `Fish` alla raccolta dei valori predefiniti, generata da una singola chiamata al costruttore nei metadati e pertanto condivisa tra tutte le istanze. Si tratta di una situazione quasi mai auspicabile.  
   
- Per risolvere questo problema, è necessario reimpostare il valore della proprietà di dipendenza della raccolta su un'unica istanza, come parte della chiamata al costruttore di classi.  Dal momento che la proprietà è una proprietà di dipendenza di sola lettura, per impostarla viene utilizzato il metodo <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29>, mediante l'oggetto <xref:System.Windows.DependencyPropertyKey>, al quale è possibile accedere solo all'interno della classe.  
+ Per risolvere questo problema, è necessario reimpostare il valore della proprietà di dipendenza della raccolta su un'unica istanza, come parte della chiamata al costruttore di classe. Poiché la proprietà è una proprietà di dipendenza di sola lettura, usare il <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> metodo per impostare, usando il <xref:System.Windows.DependencyPropertyKey> che è accessibile solo all'interno della classe.  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
  A questo punto, se si esegue nuovamente questo stesso codice di test, è possibile ottenere i risultati previsti, in cui ciascun oggetto `Aquarium` supporta la propria raccolta univoca.  
   
- Se si sceglie una proprietà della raccolta con possibilità di accesso in lettura\/scrittura, questo modello presenta una piccola variazione.  In tal caso, è possibile chiamare la funzione di accesso set pubblica del costruttore per eseguire l'inizializzazione, che esegue la chiamata della firma non chiave di <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> all'interno del wrapper impostato, utilizzando un identificatore <xref:System.Windows.DependencyProperty> pubblico.  
+ Se si sceglie una proprietà della raccolta con possibilità di accesso in lettura/scrittura, questo modello presenta una piccola variazione. In tal caso, è possibile chiamare la funzione di accesso set pubblico del costruttore per eseguire l'inizializzazione, che comunque chiama la firma non chiave di <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> all'interno del wrapper set, utilizzando un pubblico <xref:System.Windows.DependencyProperty> identificatore.  
   
-## Creazione di report relativi alle modifiche dei valori di associazione nelle proprietà della raccolta  
- Una proprietà della raccolta che costituisce essa stessa una proprietà di dipendenza non crea automaticamente dei report delle modifiche per le relative sottoproprietà.  La creazione di associazioni all'interno di una raccolta può impedire all'associazione di creare report delle modifiche, invalidando in tal modo alcuni scenari di associazione dati.  Tuttavia, se si utilizza <xref:System.Windows.FreezableCollection%601> come tipo di raccolta, i report delle modifiche della sottoproprietà apportate agli elementi contenuti nella raccolta vengono creati correttamente e l'associazione funziona nel modo previsto.  
+## <a name="reporting-binding-value-changes-from-collection-properties"></a>Segnalazione di modifiche dei valori di binding nelle proprietà della raccolta  
+ Una proprietà della raccolta che costituisce essa stessa una proprietà di dipendenza non segnala automaticamente le modifiche per le relative sottoproprietà. La creazione di binding all'interno di una raccolta può impedire al binding di segnalare le modifiche, invalidando in tal modo alcuni scenari di data binding. Tuttavia, se si utilizza il tipo di raccolta <xref:System.Windows.FreezableCollection%601> come tipo di raccolta, quindi le modifiche di sottoproprietà di elementi contenuti nella raccolta correttamente segnalate e associazione funziona come previsto.  
   
- Per abilitare l'associazione di sottoproprietà in una raccolta di oggetti di dipendenza, creare la proprietà della raccolta come tipo <xref:System.Windows.FreezableCollection%601>, con un vincolo di tipo per quella raccolta per qualsiasi classe derivata <xref:System.Windows.DependencyObject>.  
+ Per abilitare l'associazione di sottoproprietà in una raccolta di oggetti dipendenza, creare la proprietà della raccolta come tipo <xref:System.Windows.FreezableCollection%601>, con un vincolo di tipo per la raccolta a qualsiasi <xref:System.Windows.DependencyObject> classe derivata.  
   
-## Vedere anche  
- <xref:System.Windows.FreezableCollection%601>   
- [Classi XAML e personalizzate per WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Cenni preliminari sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Proprietà Dependency personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [Metadati della proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.FreezableCollection%601>  
+ [Classi XAML e personalizzate per WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Panoramica sulle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Proprietà di dipendenza personalizzate](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Metadati delle proprietà di dipendenza](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)

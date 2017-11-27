@@ -1,35 +1,38 @@
 ---
-title: "Funzionalit&#224; di sicurezza di Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "sicurezza [WCF]"
-  - "Windows Communication Foundation, programmazione"
-  - "Windows Communication Foundation, protezione"
+title: "Funzionalità di sicurezza di Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation, programming
+- security [WCF]
+- Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-caps.latest.revision: 21
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 38f62a6ccc0c9291f3963173475f99d5800feb39
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Funzionalit&#224; di sicurezza di Windows Communication Foundation
+# <a name="windows-communication-foundation-security"></a>Funzionalità di sicurezza di Windows Communication Foundation
 Gli argomenti in questa sezione descrivono le funzionalità di sicurezza di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e il modo in cui utilizzarle per proteggere i messaggi.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Windows Server AppFabric e sicurezza, vedere [Sicurezza e protezione](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric e sicurezza, vedere [modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
-## In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  Vengono descritte le funzionalità di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Concetti sulla protezione](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [Concetti sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  Vengono descritti i concetti e la terminologia di base utilizzati nelle funzionalità di sicurezza di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
@@ -56,19 +59,19 @@ Gli argomenti in questa sezione descrivono le funzionalità di sicurezza di [!IN
  [Attendibilità parziale](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
  Vengono descritte le procedure da utilizzare negli scenari di esecuzione parzialmente attendibile nonché le limitazioni di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] negli scenari di questo tipo.  
   
- [Controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
+ [Il controllo](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Viene descritto come controllare gli eventi di sicurezza.  
   
- [Indicazioni di sicurezza e procedure consigliate](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Guida alla protezione e le procedure consigliate](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  Vengono fornite linee guida per creare applicazioni [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] protette.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
-## Sezioni correlate  
- [Dettagli delle funzioni di WCF](../../../../docs/framework/wcf/feature-details/index.md)  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Dettagli delle funzionalità di WCF](../../../../docs/framework/wcf/feature-details/index.md)  
   
  [Programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
@@ -76,5 +79,5 @@ Gli argomenti in questa sezione descrivono le funzionalità di sicurezza di [!IN
   
  [Panoramica dei concetti](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Configurazione dell'applicazione](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
