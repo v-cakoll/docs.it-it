@@ -1,54 +1,60 @@
 ---
-title: "Conversione dell&#39;operatore di query standard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Conversione dell'operatore query standard
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1156608e9e1aa63a2404d5394c0c4211eea60693
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Conversione dell&#39;operatore di query standard
-Gli operatori di query standard vengono convertiti in comandi SQL in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  Il sistema di elaborazione delle query del database determina la semantica di esecuzione della conversione SQL.  
+# <a name="standard-query-operator-translation"></a><span data-ttu-id="b284b-102">Conversione dell'operatore query standard</span><span class="sxs-lookup"><span data-stu-id="b284b-102">Standard Query Operator Translation</span></span>
+<span data-ttu-id="b284b-103">Gli operatori di query standard vengono convertiti in comandi SQL in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b284b-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates Standard Query Operators to SQL commands.</span></span> <span data-ttu-id="b284b-104">Il processore di query del database determina la semantica di esecuzione della conversione SQL.</span><span class="sxs-lookup"><span data-stu-id="b284b-104">The query processor of the database determines the execution semantics of SQL translation.</span></span>  
   
- Gli operatori di query standard vengono definiti in relazione alle *sequenze*.  Una sequenza viene *ordinata* e si basa sull'identità del riferimento di ogni elemento della sequenza.  Per altre informazioni, vedere [Standard Query Operators Overview](../../../../../../ocs/visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ <span data-ttu-id="b284b-105">Gli operatori Query standard definiti in *sequenze*.</span><span class="sxs-lookup"><span data-stu-id="b284b-105">Standard Query Operators are defined against *sequences*.</span></span> <span data-ttu-id="b284b-106">È una sequenza *ordinati* e si basa sull'identità del riferimento per ogni elemento della sequenza.</span><span class="sxs-lookup"><span data-stu-id="b284b-106">A sequence is *ordered* and relies on reference identity for each element of the sequence.</span></span> <span data-ttu-id="b284b-107">Per ulteriori informazioni, vedere [Cenni preliminari sugli operatori di Query Standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span><span class="sxs-lookup"><span data-stu-id="b284b-107">For more information, see [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
   
- In SQL vengono principalmente gestiti *set non ordinati di valori*.  L'ordinamento è in genere un'operazione di post\-elaborazione specificata in modo esplicito, che viene applicata al risultato finale di una query piuttosto che ai risultati intermedi.  L'identità viene definita dai valori.  Per questo motivo si presuppone che nelle query SQL vengano gestiti multiset, ovvero *contenitori*, anziché *set*.  
+ <span data-ttu-id="b284b-108">SQL vengono principalmente gestiti *insiemi di valori non ordinati*.</span><span class="sxs-lookup"><span data-stu-id="b284b-108">SQL deals primarily with *unordered sets of values*.</span></span> <span data-ttu-id="b284b-109">L'ordinamento è in genere un'operazione di post-elaborazione specificata in modo esplicito, che viene applicata al risultato finale di una query piuttosto che ai risultati intermedi.</span><span class="sxs-lookup"><span data-stu-id="b284b-109">Ordering is typically an explicitly stated, post-processing operation that is applied to the final result of a query rather than to intermediate results.</span></span> <span data-ttu-id="b284b-110">L'identità viene definita dai valori.</span><span class="sxs-lookup"><span data-stu-id="b284b-110">Identity is defined by values.</span></span> <span data-ttu-id="b284b-111">Per questo motivo, le query SQL vengono riconosciute come multiset (*sacchetti*) anziché *imposta*.</span><span class="sxs-lookup"><span data-stu-id="b284b-111">For this reason, SQL queries are understood to deal with multisets (*bags*) instead of *sets*.</span></span>  
   
- Nei paragrafi seguenti vengono descritte le differenze tra gli operatori di query standard e la relativa conversione SQL per il provider SQL Server per [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ <span data-ttu-id="b284b-112">Nei paragrafi seguenti vengono descritte le differenze tra gli operatori di query standard e la relativa conversione SQL per il provider SQL Server per [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b284b-112">The following paragraphs describe the differences between the Standard Query Operators and their SQL translation for the SQL Server provider for [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
-## Supporto degli operatori  
+## <a name="operator-support"></a><span data-ttu-id="b284b-113">Supporto degli operatori</span><span class="sxs-lookup"><span data-stu-id="b284b-113">Operator Support</span></span>  
   
-### Concat  
- Il metodo <xref:System.Linq.Enumerable.Concat%2A> viene definito per multiset ordinati in cui l'ordine del ricevente e l'ordine dell'argomento sono uguali.  Il funzionamento di <xref:System.Linq.Enumerable.Concat%2A> sui multiset seguiti dall'ordine comune è analogo a quello di `UNION ALL`.  
+### <a name="concat"></a><span data-ttu-id="b284b-114">Concat</span><span class="sxs-lookup"><span data-stu-id="b284b-114">Concat</span></span>  
+ <span data-ttu-id="b284b-115">Il metodo <xref:System.Linq.Enumerable.Concat%2A> viene definito per multiset ordinati in cui l'ordine del ricevente e l'ordine dell'argomento sono uguali.</span><span class="sxs-lookup"><span data-stu-id="b284b-115">The <xref:System.Linq.Enumerable.Concat%2A> method is defined for ordered multisets where the order of the receiver and the order of the argument are the same.</span></span> <span data-ttu-id="b284b-116">Il funzionamento di <xref:System.Linq.Enumerable.Concat%2A> sui multiset seguiti dall'ordine comune è analogo a quello di `UNION ALL`.</span><span class="sxs-lookup"><span data-stu-id="b284b-116"><xref:System.Linq.Enumerable.Concat%2A> works as `UNION ALL` over the multisets followed by the common order.</span></span>  
   
- Il passaggio finale in SQL consiste nell'ordinamento prima che vengano generati i risultati.  <xref:System.Linq.Enumerable.Concat%2A> non mantiene l'ordine degli argomenti.  Per assicurare che l'ordine sia appropriato, è necessario ordinare i risultati di <xref:System.Linq.Enumerable.Concat%2A> in modo esplicito.  
+ <span data-ttu-id="b284b-117">Il passaggio finale in SQL consiste nell'ordinamento prima che vengano generati i risultati.</span><span class="sxs-lookup"><span data-stu-id="b284b-117">The final step is ordering in SQL before results are produced.</span></span> <span data-ttu-id="b284b-118"><xref:System.Linq.Enumerable.Concat%2A> non mantiene l'ordine degli argomenti.</span><span class="sxs-lookup"><span data-stu-id="b284b-118"><xref:System.Linq.Enumerable.Concat%2A> does not preserve the order of its arguments.</span></span> <span data-ttu-id="b284b-119">Per assicurare che l'ordine sia appropriato, è necessario ordinare i risultati di <xref:System.Linq.Enumerable.Concat%2A> in modo esplicito.</span><span class="sxs-lookup"><span data-stu-id="b284b-119">To ensure appropriate ordering, you must explicitly order the results of <xref:System.Linq.Enumerable.Concat%2A>.</span></span>  
   
-### Metodi Intersect, Except, Union  
- I metodi <xref:System.Linq.Enumerable.Intersect%2A> e <xref:System.Linq.Enumerable.Except%2A> sono definiti correttamente solo sui set,  mentre la semantica per i tipi multiset non è definita.  
+### <a name="intersect-except-union"></a><span data-ttu-id="b284b-120">Metodi Intersect, Except, Union</span><span class="sxs-lookup"><span data-stu-id="b284b-120">Intersect, Except, Union</span></span>  
+ <span data-ttu-id="b284b-121">I metodi <xref:System.Linq.Enumerable.Intersect%2A> e <xref:System.Linq.Enumerable.Except%2A> sono definiti correttamente solo sui set,</span><span class="sxs-lookup"><span data-stu-id="b284b-121">The <xref:System.Linq.Enumerable.Intersect%2A> and <xref:System.Linq.Enumerable.Except%2A> methods are well defined only on sets.</span></span> <span data-ttu-id="b284b-122">mentre la semantica per i tipi multiset non è definita.</span><span class="sxs-lookup"><span data-stu-id="b284b-122">The semantics for multisets is undefined.</span></span>  
   
- Il metodo <xref:System.Linq.Enumerable.Union%2A> viene definito per i tipi multiset come concatenazione non ordinata di multiset, che corrisponde in effetti al risultato della clausola UNION ALL in SQL.  
+ <span data-ttu-id="b284b-123">Il metodo <xref:System.Linq.Enumerable.Union%2A> viene definito per i tipi multiset come concatenazione non ordinata di multiset, che corrisponde in effetti al risultato della clausola UNION ALL in SQL.</span><span class="sxs-lookup"><span data-stu-id="b284b-123">The <xref:System.Linq.Enumerable.Union%2A> method is defined for multisets as the unordered concatenation of the multisets (effectively the result of the UNION ALL clause in SQL).</span></span>  
   
-### Metodi Take, Skip  
- I metodi <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> sono definiti correttamente solo sugli *set ordinati*,  mentre la semantica per i set non ordinati o i tipi multiset non è definita.  
+### <a name="take-skip"></a><span data-ttu-id="b284b-124">Metodi Take, Skip</span><span class="sxs-lookup"><span data-stu-id="b284b-124">Take, Skip</span></span>  
+ <span data-ttu-id="b284b-125"><xref:System.Linq.Enumerable.Take%2A>e <xref:System.Linq.Enumerable.Skip%2A> metodi sono definiti correttamente solo sugli *set ordinati*.</span><span class="sxs-lookup"><span data-stu-id="b284b-125"><xref:System.Linq.Enumerable.Take%2A> and <xref:System.Linq.Enumerable.Skip%2A> methods are well defined only against *ordered sets*.</span></span> <span data-ttu-id="b284b-126">mentre la semantica per i set non ordinati o i tipi multiset non è definita.</span><span class="sxs-lookup"><span data-stu-id="b284b-126">The semantics for unordered sets or multisets are undefined.</span></span>  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano alcune limitazioni quando vengono usati nelle query su SQL Server 2000.  Per altre informazioni, vedere la voce relativa alle eccezioni di Skip e Take in SQL Server 2000 in [Risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <span data-ttu-id="b284b-127"><xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano alcune limitazioni quando vengono usati nelle query su SQL Server 2000.</span><span class="sxs-lookup"><span data-stu-id="b284b-127"><xref:System.Linq.Enumerable.Take%2A> and <xref:System.Linq.Enumerable.Skip%2A> have certain limitations when they are used in queries against SQL Server 2000.</span></span> <span data-ttu-id="b284b-128">Per ulteriori informazioni, vedere la voce "Skip e Take eccezioni in SQL Server 2000" in [risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).</span><span class="sxs-lookup"><span data-stu-id="b284b-128">For more information, see the "Skip and Take Exceptions in SQL Server 2000" entry in [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).</span></span>  
   
- A causa delle limitazioni relative all'ordinamento in SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta di spostare l'ordinamento dell'argomento di tali metodi nel risultato del metodo.  Si consideri ad esempio la seguente query [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
+ <span data-ttu-id="b284b-129">A causa delle limitazioni relative all'ordinamento in SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta di spostare l'ordinamento dell'argomento di questi metodi per il risultato del metodo.</span><span class="sxs-lookup"><span data-stu-id="b284b-129">Because of limitations on ordering in SQL, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tries to move the ordering of the argument of these methods to the result of the method.</span></span> <span data-ttu-id="b284b-130">Si consideri ad esempio la seguente query [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="b284b-130">For example, consider the following [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query:</span></span>  
   
  [!code-csharp[DLinqSQOTranslation#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#1)]
  [!code-vb[DLinqSQOTranslation#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#1)]  
   
- L'SQL generato per questo codice sposta l'ordinamento alla fine, come segue:  
+ <span data-ttu-id="b284b-131">L'SQL generato per questo codice sposta l'ordinamento alla fine, come segue:</span><span class="sxs-lookup"><span data-stu-id="b284b-131">The generated SQL for this code moves the ordering to the end, as follows:</span></span>  
   
 ```  
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
@@ -66,45 +72,45 @@ WHERE (NOT (EXISTS(
 ORDER BY [t0].[CustomerID]  
 ```  
   
- È quindi evidente che quando <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> vengono concatenati, tutto l'ordinamento specificato deve essere coerente.  In caso contrario i risultati non saranno definiti.  
+ <span data-ttu-id="b284b-132">È quindi evidente che quando <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> vengono concatenati, tutto l'ordinamento specificato deve essere coerente.</span><span class="sxs-lookup"><span data-stu-id="b284b-132">It becomes obvious that all the specified ordering must be consistent when <xref:System.Linq.Enumerable.Take%2A> and <xref:System.Linq.Enumerable.Skip%2A> are chained together.</span></span> <span data-ttu-id="b284b-133">In caso contrario i risultati non saranno definiti.</span><span class="sxs-lookup"><span data-stu-id="b284b-133">Otherwise, the results are undefined.</span></span>  
   
- Sia <xref:System.Linq.Enumerable.Take%2A> che <xref:System.Linq.Enumerable.Skip%2A> sono definiti correttamente per gli argomenti di tipo integrale costante non negativi basati sulla specifica dell'operatore di query standard.  
+ <span data-ttu-id="b284b-134">Sia <xref:System.Linq.Enumerable.Take%2A> che <xref:System.Linq.Enumerable.Skip%2A> sono definiti correttamente per gli argomenti di tipo integrale costante non negativi basati sulla specifica dell'operatore di query standard.</span><span class="sxs-lookup"><span data-stu-id="b284b-134">Both <xref:System.Linq.Enumerable.Take%2A> and <xref:System.Linq.Enumerable.Skip%2A> are well-defined for non-negative, constant integral arguments based on the Standard Query Operator specification.</span></span>  
   
-### Operatori senza conversione  
- I metodi seguenti non vengono convertiti da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  Il motivo più comune è la differenza tra i multiset non ordinati e le sequenze.  
+### <a name="operators-with-no-translation"></a><span data-ttu-id="b284b-135">Operatori senza conversione</span><span class="sxs-lookup"><span data-stu-id="b284b-135">Operators with No Translation</span></span>  
+ <span data-ttu-id="b284b-136">I metodi seguenti non vengono convertiti da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b284b-136">The following methods are not translated by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span> <span data-ttu-id="b284b-137">Il motivo più comune è la differenza tra i multiset non ordinati e le sequenze.</span><span class="sxs-lookup"><span data-stu-id="b284b-137">The most common reason is the difference between unordered multisets and sequences.</span></span>  
   
-|Operatori|Spiegazione logica:|  
-|---------------|-------------------------|  
-|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|Le query SQL vengono eseguite su multiset, non su sequenze.  `ORDER BY` deve essere l'ultima clausola applicata ai risultati.  Per questo motivo non esiste una conversione di tipo generico per questi due metodi.|  
-|<xref:System.Linq.Enumerable.Reverse%2A>|La conversione di questo metodo è possibile per un set ordinato, ma attualmente non viene eseguita da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
-|<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|La conversione di questi metodi è possibile per un set ordinato, ma attualmente non viene eseguita da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
-|<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|Le query SQL vengono eseguite su multiset, non sulle sequenze indicizzabili.|  
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> \(overload con argomento predefinito\)|In generale non è possibile specificare un valore predefinito per una tupla arbitraria.  In alcuni casi i valori null per le tuple sono consentiti tramite outer join.|  
+|<span data-ttu-id="b284b-138">Operatori</span><span class="sxs-lookup"><span data-stu-id="b284b-138">Operators</span></span>|<span data-ttu-id="b284b-139">Spiegazione logica:</span><span class="sxs-lookup"><span data-stu-id="b284b-139">Rationale</span></span>|  
+|---------------|---------------|  
+|<span data-ttu-id="b284b-140"><xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A></span><span class="sxs-lookup"><span data-stu-id="b284b-140"><xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A></span></span>|<span data-ttu-id="b284b-141">Le query SQL vengono eseguite su multiset, non su sequenze.</span><span class="sxs-lookup"><span data-stu-id="b284b-141">SQL queries operate on multisets, not on sequences.</span></span> <span data-ttu-id="b284b-142">`ORDER BY` deve essere l'ultima clausola applicata ai risultati.</span><span class="sxs-lookup"><span data-stu-id="b284b-142">`ORDER BY` must be the last clause applied to the results.</span></span> <span data-ttu-id="b284b-143">Per questo motivo non esiste una conversione di tipo generico per questi due metodi.</span><span class="sxs-lookup"><span data-stu-id="b284b-143">For this reason, there is no general-purpose translation for these two methods.</span></span>|  
+|<xref:System.Linq.Enumerable.Reverse%2A>|<span data-ttu-id="b284b-144">La conversione di questo metodo è possibile per un set ordinato, ma attualmente non viene eseguita da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b284b-144">Translation of this method is possible for an ordered set but is not currently translated by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>|  
+|<span data-ttu-id="b284b-145"><xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A></span><span class="sxs-lookup"><span data-stu-id="b284b-145"><xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A></span></span>|<span data-ttu-id="b284b-146">La conversione di questi metodi è possibile per un set ordinato, ma attualmente non viene eseguita da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b284b-146">Translation of these methods is possible for an ordered set but is not currently translated by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>|  
+|<span data-ttu-id="b284b-147"><xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A></span><span class="sxs-lookup"><span data-stu-id="b284b-147"><xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A></span></span>|<span data-ttu-id="b284b-148">Le query SQL vengono eseguite su multiset, non sulle sequenze indicizzabili.</span><span class="sxs-lookup"><span data-stu-id="b284b-148">SQL queries operate on multisets, not on indexable sequences.</span></span>|  
+|<span data-ttu-id="b284b-149"><xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (overload con argomento predefinito)</span><span class="sxs-lookup"><span data-stu-id="b284b-149"><xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (overload with default arg)</span></span>|<span data-ttu-id="b284b-150">In generale non è possibile specificare un valore predefinito per una tupla arbitraria.</span><span class="sxs-lookup"><span data-stu-id="b284b-150">In general, a default value cannot be specified for an arbitrary tuple.</span></span> <span data-ttu-id="b284b-151">In alcuni casi i valori null per le tuple sono consentiti tramite outer join.</span><span class="sxs-lookup"><span data-stu-id="b284b-151">Null values for tuples are possible in some cases through outer joins.</span></span>|  
   
-## Conversione di espressione  
+## <a name="expression-translation"></a><span data-ttu-id="b284b-152">Conversione di espressione</span><span class="sxs-lookup"><span data-stu-id="b284b-152">Expression Translation</span></span>  
   
-### Semantica null  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non impone la semantica di confronto in SQL.  Gli operatori di confronto vengono sintatticamente convertiti negli equivalenti SQL.  Per questo motivo la semantica riflette la semantica SQL definita nelle impostazioni di connessione o del server.  Ad esempio, due valori null sono considerati non uguali nelle impostazioni predefinite di SQL Server, ma è possibile modificare tali impostazioni per modificare la semantica.  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non vengono considerate le impostazioni del server durante la conversione delle query.  
+### <a name="null-semantics"></a><span data-ttu-id="b284b-153">Semantica null</span><span class="sxs-lookup"><span data-stu-id="b284b-153">Null semantics</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b284b-154"> non impone la semantica di confronto in SQL.</span><span class="sxs-lookup"><span data-stu-id="b284b-154"> does not impose null comparison semantics on SQL.</span></span> <span data-ttu-id="b284b-155">Gli operatori di confronto vengono sintatticamente convertiti negli equivalenti SQL.</span><span class="sxs-lookup"><span data-stu-id="b284b-155">Comparison operators are syntactically translated to their SQL equivalents.</span></span> <span data-ttu-id="b284b-156">Per questo motivo la semantica riflette la semantica SQL definita nelle impostazioni di connessione o del server.</span><span class="sxs-lookup"><span data-stu-id="b284b-156">For this reason, the semantics reflect SQL semantics that are defined by server or connection settings.</span></span> <span data-ttu-id="b284b-157">Ad esempio, due valori null sono considerati non uguali nelle impostazioni predefinite di SQL Server, ma è possibile modificare le impostazioni per modificare la semantica.</span><span class="sxs-lookup"><span data-stu-id="b284b-157">For example, two null values are considered unequal under default SQL Server settings, but you can change the settings to change the semantics.</span></span> <span data-ttu-id="b284b-158">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non vengono considerate le impostazioni del server durante la conversione delle query.</span><span class="sxs-lookup"><span data-stu-id="b284b-158">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not consider server settings when it translates queries.</span></span>  
   
- Un confronto con il valore letterale null viene convertito nella versione SQL appropriata \(`is null` o `is not null`\).  
+ <span data-ttu-id="b284b-159">Un confronto con il valore letterale null viene convertito nella versione SQL appropriata (`is null` o `is not null`).</span><span class="sxs-lookup"><span data-stu-id="b284b-159">A comparison with the literal null is translated to the appropriate SQL version (`is null` or `is not null`).</span></span>  
   
- Il valore `null` nelle regole di confronto viene definito da SQL Server.  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non modifica le regole di confronto.  
+ <span data-ttu-id="b284b-160">Il valore `null` nelle regole di confronto viene definito da SQL Server.</span><span class="sxs-lookup"><span data-stu-id="b284b-160">The value of `null` in collation is defined by SQL Server.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b284b-161"> non modifica le regole di confronto.</span><span class="sxs-lookup"><span data-stu-id="b284b-161"> does not change the collation.</span></span>  
   
-### Aggregati  
- Il metodo di aggregazione dell'operatore di query standard <xref:System.Linq.Enumerable.Sum%2A> restituisce valori zero per tutte le sequenze vuote o che contengono solo valori null.  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] la semantica di SQL rimane invariata e <xref:System.Linq.Enumerable.Sum%2A> restituisce `null` anziché zero per le sequenze vuote o che contengono solo valori null.  
+### <a name="aggregates"></a><span data-ttu-id="b284b-162">Aggregati</span><span class="sxs-lookup"><span data-stu-id="b284b-162">Aggregates</span></span>  
+ <span data-ttu-id="b284b-163">Il metodo di aggregazione dell'operatore di query standard <xref:System.Linq.Enumerable.Sum%2A> restituisce valori zero per tutte le sequenze vuote o che contengono solo valori null.</span><span class="sxs-lookup"><span data-stu-id="b284b-163">The Standard Query Operator aggregate method <xref:System.Linq.Enumerable.Sum%2A> evaluates to zero for an empty sequence or for a sequence that contains only nulls.</span></span> <span data-ttu-id="b284b-164">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la semantica di SQL rimane invariata, e <xref:System.Linq.Enumerable.Sum%2A> restituisce `null` anziché zero per una sequenza vuota o una sequenza che contiene solo valori null.</span><span class="sxs-lookup"><span data-stu-id="b284b-164">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], the semantics of SQL are left unchanged, and <xref:System.Linq.Enumerable.Sum%2A> evaluates to `null` instead of zero for an empty sequence or for a sequence that contains only nulls.</span></span>  
   
- Le limitazioni di SQL sui risultati intermedi vengono applicate agli aggregati in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  La somma, <xref:System.Linq.Enumerable.Sum%2A>, delle quantità di Integer a 32 bit non viene calcolata usando risultati a 64 bit ed è possibile che si verifichi un overflow per una conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di <xref:System.Linq.Enumerable.Sum%2A>, anche se l'implementazione dell'operatore di query standard non provoca un overflow per la corrispondente sequenza in memoria.  
+ <span data-ttu-id="b284b-165">Le limitazioni di SQL sui risultati intermedi vengono applicate agli aggregati in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b284b-165">SQL limitations on intermediate results apply to aggregates in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span> <span data-ttu-id="b284b-166">La somma, <xref:System.Linq.Enumerable.Sum%2A>, delle quantità di valori integer a 32 bit non viene calcolata utilizzando risultati a 64 bit</span><span class="sxs-lookup"><span data-stu-id="b284b-166">The <xref:System.Linq.Enumerable.Sum%2A> of 32-bit integer quantities is not computed by using 64-bit results.</span></span> <span data-ttu-id="b284b-167">ed è possibile che si verifichi un overflow per una conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di <xref:System.Linq.Enumerable.Sum%2A>, anche se l'implementazione dell'operatore di query standard non provoca un overflow per la corrispondente sequenza in memoria.</span><span class="sxs-lookup"><span data-stu-id="b284b-167">Overflow might occur for a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translation of <xref:System.Linq.Enumerable.Sum%2A>, even if the Standard Query Operator implementation does not cause an overflow for the corresponding in-memory sequence.</span></span>  
   
- In modo analogo la conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di <xref:System.Linq.Enumerable.Average%2A> di valori integer viene calcolata come un valore `integer`, non come un valore `double`.  
+ <span data-ttu-id="b284b-168">In modo analogo la conversione [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] di <xref:System.Linq.Enumerable.Average%2A> di valori integer viene calcolata come un valore `integer`, non come un valore `double`.</span><span class="sxs-lookup"><span data-stu-id="b284b-168">Likewise, the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translation of <xref:System.Linq.Enumerable.Average%2A> of integer values is computed as an `integer`, not as a `double`.</span></span>  
   
-### Argomenti di entità  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] consente l'uso di tipi di entità nei metodi <xref:System.Linq.Enumerable.GroupBy%2A> e <xref:System.Linq.Enumerable.OrderBy%2A>.  Nella conversione di tali operatori l'uso di un argomento di un tipo viene considerato equivalente della specifica di tutti i membri di quel tipo.  Ad esempio, il codice seguente è equivalente.  
+### <a name="entity-arguments"></a><span data-ttu-id="b284b-169">Argomenti di entità</span><span class="sxs-lookup"><span data-stu-id="b284b-169">Entity Arguments</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b284b-170">consente ai tipi di entità da utilizzare per il <xref:System.Linq.Enumerable.GroupBy%2A> e <xref:System.Linq.Enumerable.OrderBy%2A> metodi.</span><span class="sxs-lookup"><span data-stu-id="b284b-170"> enables entity types to be used in the <xref:System.Linq.Enumerable.GroupBy%2A> and <xref:System.Linq.Enumerable.OrderBy%2A> methods.</span></span> <span data-ttu-id="b284b-171">Nella conversione di tali operatori l'uso di un argomento di un tipo viene considerato equivalente della specifica di tutti i membri di quel tipo.</span><span class="sxs-lookup"><span data-stu-id="b284b-171">In the translation of these operators, the use of an argument of a type is considered to be the equivalent to specifying all members of that type.</span></span> <span data-ttu-id="b284b-172">Ad esempio, il codice seguente è equivalente.</span><span class="sxs-lookup"><span data-stu-id="b284b-172">For example, the following code is equivalent:</span></span>  
   
  [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
  [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]  
   
-### Argomenti di uguaglianza\/confronto  
- Nell'implementazione dei metodi elencati di seguito è richiesta l'uguaglianza di argomenti:  
+### <a name="equatable--comparable-arguments"></a><span data-ttu-id="b284b-173">Argomenti di uguaglianza/confronto</span><span class="sxs-lookup"><span data-stu-id="b284b-173">Equatable / Comparable Arguments</span></span>  
+ <span data-ttu-id="b284b-174">Nell'implementazione dei metodi elencati di seguito è richiesta l'uguaglianza di argomenti:</span><span class="sxs-lookup"><span data-stu-id="b284b-174">Equality of arguments is required in the implementation of the following methods:</span></span>  
   
  <xref:System.Linq.Enumerable.Contains%2A>  
   
@@ -116,20 +122,20 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] supporta uguaglianza e confronto per gli argomenti *non strutturati*, ma non per gli argomenti corrispondenti a sequenze o che le contengono.  Un argomento non strutturato è un tipo di cui è possibile eseguire il mapping a una riga SQL.  Una proiezione di uno o più tipi di entità, per cui è possibile determinare staticamente che non è presente una sequenza, viene considerata un argomento non strutturato.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b284b-175">supporta uguaglianza e confronto per *flat* argomenti, ma non per gli argomenti sono o che contengono le sequenze.</span><span class="sxs-lookup"><span data-stu-id="b284b-175"> supports equality and comparison for *flat* arguments, but not for arguments that are or contain sequences.</span></span> <span data-ttu-id="b284b-176">Un argomento non strutturato è un tipo di cui è possibile eseguire il mapping a una riga SQL.</span><span class="sxs-lookup"><span data-stu-id="b284b-176">A flat argument is a type that can be mapped to a SQL row.</span></span> <span data-ttu-id="b284b-177">Una proiezione di uno o più tipi di entità, per cui è possibile determinare staticamente che non è presente una sequenza, viene considerata un argomento non strutturato.</span><span class="sxs-lookup"><span data-stu-id="b284b-177">A projection of one or more entity types that can be statically determined not to contain a sequence is considered a flat argument.</span></span>  
   
- Di seguito sono riportati esempi di argomenti non strutturati:  
+ <span data-ttu-id="b284b-178">Di seguito sono riportati esempi di argomenti non strutturati:</span><span class="sxs-lookup"><span data-stu-id="b284b-178">Following are examples of flat arguments:</span></span>  
   
  [!code-csharp[DLinqSQOTranslation#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
  [!code-vb[DLinqSQOTranslation#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]  
   
- Gli esempi seguenti si riferiscono ad argomenti strutturati \(gerarchici\).  
+ <span data-ttu-id="b284b-179">Gli esempi seguenti si riferiscono ad argomenti strutturati (gerarchici).</span><span class="sxs-lookup"><span data-stu-id="b284b-179">The following are examples of non-flat (hierarchical) arguments.</span></span>  
   
  [!code-csharp[DLinqSQOTranslation#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
  [!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]  
   
-### Conversione di funzioni Visual Basic  
- Le seguenti funzioni di supporto usate dal compilatore Visual Basic vengono convertite nei corrispondenti operatori e funzioni SQL:  
+### <a name="visual-basic-function-translation"></a><span data-ttu-id="b284b-180">Conversione di funzioni Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b284b-180">Visual Basic Function Translation</span></span>  
+ <span data-ttu-id="b284b-181">Le seguenti funzioni di supporto usate dal compilatore Visual Basic vengono convertite nei corrispondenti operatori e funzioni SQL:</span><span class="sxs-lookup"><span data-stu-id="b284b-181">The following helper functions that are used by the Visual Basic compiler are translated to corresponding SQL operators and functions:</span></span>  
   
  `CompareString`  
   
@@ -139,30 +145,30 @@ ORDER BY [t0].[CustomerID]
   
  `IIf (in Microsoft.VisualBasic.Interaction)`  
   
- Metodi di conversione:  
+ <span data-ttu-id="b284b-182">Metodi di conversione:</span><span class="sxs-lookup"><span data-stu-id="b284b-182">Conversion methods:</span></span>  
   
 |||||  
 |-|-|-|-|  
-|ToBoolean|ToSByte|ToByte|ToChar|  
-|ToCharArrayRankOne|ToDate|ToDecimal|ToDouble|  
-|ToInteger|ToUInteger|ToLong|ToULong|  
-|ToShort|ToUShort|ToSingle|ToString|  
+|<span data-ttu-id="b284b-183">ToBoolean</span><span class="sxs-lookup"><span data-stu-id="b284b-183">ToBoolean</span></span>|<span data-ttu-id="b284b-184">ToSByte</span><span class="sxs-lookup"><span data-stu-id="b284b-184">ToSByte</span></span>|<span data-ttu-id="b284b-185">ToByte</span><span class="sxs-lookup"><span data-stu-id="b284b-185">ToByte</span></span>|<span data-ttu-id="b284b-186">ToChar</span><span class="sxs-lookup"><span data-stu-id="b284b-186">ToChar</span></span>|  
+|<span data-ttu-id="b284b-187">ToCharArrayRankOne</span><span class="sxs-lookup"><span data-stu-id="b284b-187">ToCharArrayRankOne</span></span>|<span data-ttu-id="b284b-188">ToDate</span><span class="sxs-lookup"><span data-stu-id="b284b-188">ToDate</span></span>|<span data-ttu-id="b284b-189">ToDecimal</span><span class="sxs-lookup"><span data-stu-id="b284b-189">ToDecimal</span></span>|<span data-ttu-id="b284b-190">ToDouble</span><span class="sxs-lookup"><span data-stu-id="b284b-190">ToDouble</span></span>|  
+|<span data-ttu-id="b284b-191">ToInteger</span><span class="sxs-lookup"><span data-stu-id="b284b-191">ToInteger</span></span>|<span data-ttu-id="b284b-192">ToUInteger</span><span class="sxs-lookup"><span data-stu-id="b284b-192">ToUInteger</span></span>|<span data-ttu-id="b284b-193">ToLong</span><span class="sxs-lookup"><span data-stu-id="b284b-193">ToLong</span></span>|<span data-ttu-id="b284b-194">ToULong</span><span class="sxs-lookup"><span data-stu-id="b284b-194">ToULong</span></span>|  
+|<span data-ttu-id="b284b-195">ToShort</span><span class="sxs-lookup"><span data-stu-id="b284b-195">ToShort</span></span>|<span data-ttu-id="b284b-196">ToUShort</span><span class="sxs-lookup"><span data-stu-id="b284b-196">ToUShort</span></span>|<span data-ttu-id="b284b-197">ToSingle</span><span class="sxs-lookup"><span data-stu-id="b284b-197">ToSingle</span></span>|<span data-ttu-id="b284b-198">ToString</span><span class="sxs-lookup"><span data-stu-id="b284b-198">ToString</span></span>|  
   
-## Supporto dell'ereditarietà  
+## <a name="inheritance-support"></a><span data-ttu-id="b284b-199">Supporto dell'ereditarietà</span><span class="sxs-lookup"><span data-stu-id="b284b-199">Inheritance Support</span></span>  
   
-### Limitazioni relative al mapping di ereditarietà  
- Per altre informazioni, vedere [Procedura: eseguire il mapping di gerarchie di ereditarietà](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
+### <a name="inheritance-mapping-restrictions"></a><span data-ttu-id="b284b-200">Limitazioni relative al mapping di ereditarietà</span><span class="sxs-lookup"><span data-stu-id="b284b-200">Inheritance Mapping Restrictions</span></span>  
+ <span data-ttu-id="b284b-201">Per ulteriori informazioni, vedere [come: mappa di gerarchie di ereditarietà](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).</span><span class="sxs-lookup"><span data-stu-id="b284b-201">For more information, see [How to: Map Inheritance Hierarchies](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).</span></span>  
   
-### Ereditarietà nelle query  
- I cast C\# sono supportati solo nella proiezione.  I cast usati in altri contesti non vengono convertiti e sono ignorati.  A parte i nomi delle funzioni SQL, in SQL viene in effetti eseguito solo l'equivalente dell'operazione <xref:System.Convert> di Common Language Runtime \(CLR\).  In altre parole SQL è in grado di modificare il valore di un tipo in un altro.  Non è disponibile un cast CLR equivalente, in quanto non esiste un concetto che consenta di reinterpretare gli stessi bit di un altro tipo.  Per questo motivo un cast C\# funziona solo localmente  e non viene usato in modalità remota.  
+### <a name="inheritance-in-queries"></a><span data-ttu-id="b284b-202">Ereditarietà nelle query</span><span class="sxs-lookup"><span data-stu-id="b284b-202">Inheritance in Queries</span></span>  
+ <span data-ttu-id="b284b-203">I cast C# sono supportati solo nella proiezione.</span><span class="sxs-lookup"><span data-stu-id="b284b-203">C# casts are supported only in projection.</span></span> <span data-ttu-id="b284b-204">I cast usati in altri contesti non vengono convertiti e sono ignorati.</span><span class="sxs-lookup"><span data-stu-id="b284b-204">Casts that are used elsewhere are not translated and are ignored.</span></span> <span data-ttu-id="b284b-205">A parte i nomi delle funzioni SQL, in SQL viene in effetti eseguito solo l'equivalente dell'operazione <xref:System.Convert> di Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="b284b-205">Aside from SQL function names, SQL really only performs the equivalent of the common language runtime (CLR) <xref:System.Convert>.</span></span> <span data-ttu-id="b284b-206">In altre parole SQL è in grado di modificare il valore di un tipo in un altro.</span><span class="sxs-lookup"><span data-stu-id="b284b-206">That is, SQL can change the value of one type to another.</span></span> <span data-ttu-id="b284b-207">Non è disponibile un cast CLR equivalente, in quanto non esiste un concetto che consenta di reinterpretare gli stessi bit di un altro tipo.</span><span class="sxs-lookup"><span data-stu-id="b284b-207">There is no equivalent of CLR cast because there is no concept of reinterpreting the same bits as those of another type.</span></span> <span data-ttu-id="b284b-208">Per questo motivo un cast C# funziona solo localmente</span><span class="sxs-lookup"><span data-stu-id="b284b-208">That is why a C# cast works only locally.</span></span> <span data-ttu-id="b284b-209">e non viene usato in modalità remota.</span><span class="sxs-lookup"><span data-stu-id="b284b-209">It is not remoted.</span></span>  
   
- Gli operatori `is` e `as` e il metodo `GetType` non sono limitati all'operatore `Select`,  pertanto possono essere usati anche in altri operatori di query.  
+ <span data-ttu-id="b284b-210">Gli operatori `is` e `as` e il metodo `GetType` non sono limitati all'operatore `Select`,</span><span class="sxs-lookup"><span data-stu-id="b284b-210">The operators, `is` and `as`, and the `GetType` method are not restricted to the `Select` operator.</span></span> <span data-ttu-id="b284b-211">pertanto possono essere usati anche in altri operatori di query.</span><span class="sxs-lookup"><span data-stu-id="b284b-211">They can be used in other query operators also.</span></span>  
   
-## Supporto di SQL Server 2008  
- A partire da .NET Framework versione 3.5 SP1, LINQ to SQL supporta il mapping ai nuovi tipi di data e ora introdotti con SQL Server 2008.  Vi sono tuttavia alcune limitazioni relative agli operatori di query LINQ to SQL che è possibile usare quando si lavora con valori mappati a questi nuovi tipi.  
+## <a name="sql-server-2008-support"></a><span data-ttu-id="b284b-212">Supporto di SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="b284b-212">SQL Server 2008 Support</span></span>  
+ <span data-ttu-id="b284b-213">A partire da .NET Framework versione 3.5 SP1, LINQ to SQL supporta il mapping ai nuovi tipi di data e ora introdotti con SQL Server 2008.</span><span class="sxs-lookup"><span data-stu-id="b284b-213">Starting with the .NET Framework 3.5 SP1, LINQ to SQL supports mapping to new date and time types introduced with SQL Server 2008.</span></span> <span data-ttu-id="b284b-214">Vi sono tuttavia alcune limitazioni relative agli operatori di query LINQ to SQL che è possibile usare quando si lavora con valori mappati a questi nuovi tipi.</span><span class="sxs-lookup"><span data-stu-id="b284b-214">But, there are some limitations to the LINQ to SQL query operators that you can use when operating against values mapped to these new types.</span></span>  
   
-### Operatori di query non supportati  
- Gli operatori di query seguenti non sono supportati per i valori mappati ai nuovi tipi di data e ora SQL Server: `DATETIME2`, `DATE`, `TIME` e `DATETIMEOFFSET`.  
+### <a name="unsupported-query-operators"></a><span data-ttu-id="b284b-215">Operatori di query non supportati</span><span class="sxs-lookup"><span data-stu-id="b284b-215">Unsupported Query Operators</span></span>  
+ <span data-ttu-id="b284b-216">Gli operatori di query seguenti non sono supportati per i valori mappati ai nuovi tipi di data e ora SQL Server: `DATETIME2`, `DATE`, `TIME` e `DATETIMEOFFSET`.</span><span class="sxs-lookup"><span data-stu-id="b284b-216">The following query operators are not supported on values mapped to the new SQL Server date and time types: `DATETIME2`, `DATE`, `TIME`, and `DATETIMEOFFSET`.</span></span>  
   
 -   `Aggregate`  
   
@@ -174,54 +180,54 @@ ORDER BY [t0].[CustomerID]
   
 -   `Sum`  
   
- Per altre informazioni sul mapping a questi tipi di data e ora SQL Server, vedere [Mapping di tipi SQL\-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ <span data-ttu-id="b284b-217">Per ulteriori informazioni sul mapping di questi tipi di data e ora di SQL Server, vedere [Mapping dei tipi CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="b284b-217">For more information about mapping to these SQL Server date and time types, see [SQL-CLR Type Mapping](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).</span></span>  
   
-## Supporto di SQL Server 2005  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta le seguenti funzionalità di SQL Server 2005:  
+## <a name="sql-server-2005-support"></a><span data-ttu-id="b284b-218">Supporto di SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="b284b-218">SQL Server 2005 Support</span></span>  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b284b-219"> non supporta le seguenti funzionalità di SQL Server 2005:</span><span class="sxs-lookup"><span data-stu-id="b284b-219"> does not support the following SQL Server 2005 features:</span></span>  
   
--   Stored procedure scritte per CLR SQL.  
+-   <span data-ttu-id="b284b-220">Stored procedure scritte per CLR SQL.</span><span class="sxs-lookup"><span data-stu-id="b284b-220">Stored procedures written for SQL CLR.</span></span>  
   
--   Tipo definito dall'utente.  
+-   <span data-ttu-id="b284b-221">Tipo definito dall'utente.</span><span class="sxs-lookup"><span data-stu-id="b284b-221">User-defined type.</span></span>  
   
--   Funzionalità di query XML.  
+-   <span data-ttu-id="b284b-222">Funzionalità di query XML.</span><span class="sxs-lookup"><span data-stu-id="b284b-222">XML query features.</span></span>  
   
-## Supporto di SQL Server 2000  
- Le seguenti limitazioni di [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)], rispetto a [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)], influiscono sul supporto di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+## <a name="sql-server-2000-support"></a><span data-ttu-id="b284b-223">Supporto di SQL Server 2000</span><span class="sxs-lookup"><span data-stu-id="b284b-223">SQL Server 2000 Support</span></span>  
+ <span data-ttu-id="b284b-224">Le seguenti limitazioni di [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)], rispetto a [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)], influiscono sul supporto di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b284b-224">The following [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] limitations (compared to [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]) affect [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] support.</span></span>  
   
-### Operatori Cross Apply e Outer Apply  
- Questi operatori non sono disponibili in [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)].  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tenta una serie di operazioni di riscrittura per sostituirli con join appropriati.  
+### <a name="cross-apply-and-outer-apply-operators"></a><span data-ttu-id="b284b-225">Operatori Cross Apply e Outer Apply</span><span class="sxs-lookup"><span data-stu-id="b284b-225">Cross Apply and Outer Apply Operators</span></span>  
+ <span data-ttu-id="b284b-226">Questi operatori non sono disponibili in [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b284b-226">These operators are not available in [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)].</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b284b-227"> tenta una serie di operazioni di riscrittura per sostituirli con join appropriati.</span><span class="sxs-lookup"><span data-stu-id="b284b-227"> tries a series of rewrites to replace them with appropriate joins.</span></span>  
   
- `Cross Apply` e `Outer Apply` vengono generati per la navigazione tra relazioni.  Il set di query per cui tali riscritture sono possibili non è esattamente definito.  Per questo motivo il set minimo di query supportato per [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] è quello che non comporta la navigazione tra relazioni.  
+ <span data-ttu-id="b284b-228">`Cross Apply` e `Outer Apply` vengono generati per la navigazione tra relazioni.</span><span class="sxs-lookup"><span data-stu-id="b284b-228">`Cross Apply` and `Outer Apply` are generated for relationship navigations.</span></span> <span data-ttu-id="b284b-229">Il set di query per cui tali riscritture sono possibili non è esattamente definito.</span><span class="sxs-lookup"><span data-stu-id="b284b-229">The set of queries for which such rewrites are possible is not well defined.</span></span> <span data-ttu-id="b284b-230">Per questo motivo il set minimo di query supportato per [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] è quello che non comporta la navigazione tra relazioni.</span><span class="sxs-lookup"><span data-stu-id="b284b-230">For this reason, the minimal set of queries that is supported for [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] is the set that does not involve relationship navigation.</span></span>  
   
-### text\/ntext  
- I tipi di dati `text`\/`ntext` non possono essere usati in determinate operazioni di query su `varchar(max)`\/`nvarchar(max)`, che sono supportate da [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].  
+### <a name="text--ntext"></a><span data-ttu-id="b284b-231">text/ntext</span><span class="sxs-lookup"><span data-stu-id="b284b-231">text / ntext</span></span>  
+ <span data-ttu-id="b284b-232">Tipi di dati `text`  /  `ntext` non può essere utilizzato in determinate operazioni di query su `varchar(max)`  /  `nvarchar(max)`, che sono supportate da [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b284b-232">Data types `text` / `ntext` cannot be used in certain query operations against `varchar(max)` / `nvarchar(max)`, which are supported by [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].</span></span>  
   
- Non sono disponibili risoluzioni per questa limitazione.  In particolare, non è possibile usare `Distinct()` su qualsiasi risultato contenente membri di cui è stato eseguito il mapping a colonne `text` o `ntext`.  
+ <span data-ttu-id="b284b-233">Non sono disponibili risoluzioni per questa limitazione.</span><span class="sxs-lookup"><span data-stu-id="b284b-233">No resolution is available for this limitation.</span></span> <span data-ttu-id="b284b-234">In particolare, non è possibile usare `Distinct()` su qualsiasi risultato contenente membri di cui è stato eseguito il mapping a colonne `text` o `ntext`.</span><span class="sxs-lookup"><span data-stu-id="b284b-234">Specifically, you cannot use `Distinct()` on any result that contains members that are mapped to `text` or `ntext` columns.</span></span>  
   
-### Comportamento attivato dalle query annidate  
- Il gestore di associazione di [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)], fino alla versione SP4, presenta alcune peculiarità attivate dalle query annidate.  Il set di query SQL che attiva queste peculiarità non è esattamente definito.  Per questo motivo non è possibile definire il set di query [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] che potrebbero provocare eccezioni di SQL Server.  
+### <a name="behavior-triggered-by-nested-queries"></a><span data-ttu-id="b284b-235">Comportamento attivato dalle query annidate</span><span class="sxs-lookup"><span data-stu-id="b284b-235">Behavior Triggered by Nested Queries</span></span>  
+ [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]<span data-ttu-id="b284b-236">(tramite SP4) dello strumento di associazione presenta alcune peculiarità attivate dalle query annidate.</span><span class="sxs-lookup"><span data-stu-id="b284b-236"> (through SP4) binder has some idiosyncrasies that are triggered by nested queries.</span></span> <span data-ttu-id="b284b-237">Il set di query SQL che attiva queste peculiarità non è esattamente definito.</span><span class="sxs-lookup"><span data-stu-id="b284b-237">The set of SQL queries that triggers these idiosyncrasies is not well defined.</span></span> <span data-ttu-id="b284b-238">Per questo motivo, è possibile definire il set di [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] query che potrebbero provocare eccezioni di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="b284b-238">For this reason, you cannot define the set of [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] queries that might cause SQL Server exceptions.</span></span>  
   
-### Operatori Skip e Take  
- <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano determinate limitazioni quando vengono usati nelle query su [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)].  Per altre informazioni, vedere la voce relativa alle eccezioni di Skip e Take in SQL Server 2000 in [Risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+### <a name="skip-and-take-operators"></a><span data-ttu-id="b284b-239">Operatori Skip e Take</span><span class="sxs-lookup"><span data-stu-id="b284b-239">Skip and Take Operators</span></span>  
+ <span data-ttu-id="b284b-240"><xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> presentano determinate limitazioni quando vengono usati nelle query su [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b284b-240"><xref:System.Linq.Enumerable.Take%2A> and <xref:System.Linq.Enumerable.Skip%2A> have certain limitations when they are used in queries against [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)].</span></span> <span data-ttu-id="b284b-241">Per ulteriori informazioni, vedere la voce "Skip e Take eccezioni in SQL Server 2000" in [risoluzione dei problemi](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).</span><span class="sxs-lookup"><span data-stu-id="b284b-241">For more information, see the "Skip and Take Exceptions in SQL Server 2000" entry in [Troubleshooting](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).</span></span>  
   
-## Materializzazione di oggetti  
- La materializzazione crea oggetti CLR da righe restituite da una o più query SQL.  
+## <a name="object-materialization"></a><span data-ttu-id="b284b-242">Materializzazione di oggetti</span><span class="sxs-lookup"><span data-stu-id="b284b-242">Object Materialization</span></span>  
+ <span data-ttu-id="b284b-243">La materializzazione crea oggetti CLR da righe restituite da una o più query SQL.</span><span class="sxs-lookup"><span data-stu-id="b284b-243">Materialization creates CLR objects from rows that are returned by one or more SQL queries.</span></span>  
   
--   Le chiamate seguenti vengono *eseguite localmente* nell'ambito dell'operazione di materializzazione:  
+-   <span data-ttu-id="b284b-244">Le chiamate seguenti vengono *eseguite localmente* come parte dell'operazione di materializzazione:</span><span class="sxs-lookup"><span data-stu-id="b284b-244">The following calls are *executed locally* as a part of materialization:</span></span>  
   
-    -   Costruttori  
+    -   <span data-ttu-id="b284b-245">Costruttori</span><span class="sxs-lookup"><span data-stu-id="b284b-245">Constructors</span></span>  
   
-    -   Metodi `ToString` nelle proiezioni  
+    -   <span data-ttu-id="b284b-246">Metodi `ToString` nelle proiezioni</span><span class="sxs-lookup"><span data-stu-id="b284b-246">`ToString` methods in projections</span></span>  
   
-    -   Cast dei tipi nelle proiezioni  
+    -   <span data-ttu-id="b284b-247">Cast dei tipi nelle proiezioni</span><span class="sxs-lookup"><span data-stu-id="b284b-247">Type casts in projections</span></span>  
   
--   I metodi che seguono il metodo <xref:System.Linq.Enumerable.AsEnumerable%2A> vengono *eseguiti localmente*.  Questo metodo non provoca l'esecuzione immediata.  
+-   <span data-ttu-id="b284b-248">I metodi che seguono il <xref:System.Linq.Enumerable.AsEnumerable%2A> metodo *eseguite localmente*.</span><span class="sxs-lookup"><span data-stu-id="b284b-248">Methods that follow the <xref:System.Linq.Enumerable.AsEnumerable%2A> method are *executed locally*.</span></span> <span data-ttu-id="b284b-249">Questo metodo non provoca l'esecuzione immediata.</span><span class="sxs-lookup"><span data-stu-id="b284b-249">This method does not cause immediate execution.</span></span>  
   
--   È possibile usare `struct` come tipo restituito del risultato di una query o come un membro del tipo di risultato.  Le entità devono essere classi.  I tipi anonimi vengono materializzati come istanze della classe, tuttavia gli struct denominati, non le entità, possono essere usati nella proiezione.  
+-   <span data-ttu-id="b284b-250">È possibile usare `struct` come tipo restituito del risultato di una query o come un membro del tipo di risultato.</span><span class="sxs-lookup"><span data-stu-id="b284b-250">You can use a `struct` as the return type of a query result or as a member of the result type.</span></span> <span data-ttu-id="b284b-251">Le entità devono essere classi.</span><span class="sxs-lookup"><span data-stu-id="b284b-251">Entities are required to be classes.</span></span> <span data-ttu-id="b284b-252">I tipi anonimi vengono materializzati come istanze della classe, tuttavia gli struct denominati, non le entità, possono essere usati nella proiezione.</span><span class="sxs-lookup"><span data-stu-id="b284b-252">Anonymous types are materialized as class instances, but named structs (non-entities) can be used in projection.</span></span>  
   
--   Un membro del tipo restituito del risultato di una query può essere di tipo <xref:System.Linq.IQueryable%601> e viene materializzato come una raccolta locale.  
+-   <span data-ttu-id="b284b-253">Un membro del tipo restituito del risultato di una query può essere di tipo <xref:System.Linq.IQueryable%601></span><span class="sxs-lookup"><span data-stu-id="b284b-253">A member of the return type of a query result can be of type <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="b284b-254">e viene materializzato come una raccolta locale.</span><span class="sxs-lookup"><span data-stu-id="b284b-254">It is materialized as a local collection.</span></span>  
   
--   I metodi seguenti provocano la *materializzazione immediata* della sequenza a cui vengono applicati:  
+-   <span data-ttu-id="b284b-255">I metodi seguenti provocano la *materializzazione immediata* della sequenza che i metodi vengono applicati a:</span><span class="sxs-lookup"><span data-stu-id="b284b-255">The following methods cause the *immediate materialization* of the sequence that the methods are applied to:</span></span>  
   
     -   <xref:System.Linq.Enumerable.ToList%2A>  
   
@@ -229,10 +235,10 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## Vedere anche  
- [Riferimenti](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)   
- [Restituire o ignorare gli elementi in una sequenza](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)   
- [Concatenare due sequenze](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)   
- [Restituire la differenza di set tra due sequenze](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)   
- [Restituire l'intersezione di set tra due sequenze](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)   
- [Restituire l'unione di set di due sequenze](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+## <a name="see-also"></a><span data-ttu-id="b284b-256">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b284b-256">See Also</span></span>  
+ [<span data-ttu-id="b284b-257">Riferimento</span><span class="sxs-lookup"><span data-stu-id="b284b-257">Reference</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [<span data-ttu-id="b284b-258">Restituire o ignorare elementi in una sequenza</span><span class="sxs-lookup"><span data-stu-id="b284b-258">Return Or Skip Elements in a Sequence</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
+ [<span data-ttu-id="b284b-259">Concatenare due sequenze</span><span class="sxs-lookup"><span data-stu-id="b284b-259">Concatenate Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
+ [<span data-ttu-id="b284b-260">Restituire la differenza dei Set tra due sequenze</span><span class="sxs-lookup"><span data-stu-id="b284b-260">Return the Set Difference Between Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
+ [<span data-ttu-id="b284b-261">Restituisce l'intersezione insiemistica delle due sequenze</span><span class="sxs-lookup"><span data-stu-id="b284b-261">Return the Set Intersection of Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
+ [<span data-ttu-id="b284b-262">Restituire l'unione insiemistica delle due sequenze</span><span class="sxs-lookup"><span data-stu-id="b284b-262">Return the Set Union of Two Sequences</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

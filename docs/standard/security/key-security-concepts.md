@@ -1,122 +1,75 @@
 ---
-title: "Key Security Concepts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "unauthorized access"
-  - "permissions [.NET Framework]"
-  - "security [.NET Framework], about security"
+title: Concetti principali sulla sicurezza
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- unauthorized access
+- permissions [.NET Framework]
+- security [.NET Framework], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-caps.latest.revision: 22
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "22"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 5e29b3c12fe89861574741506cb7cd018eb81b1d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Key Security Concepts
-Microsoft .NET Framework offre la trasparenza della sicurezza, la sicurezza per l'accesso di codice e la sicurezza basata sui ruoli per risolvere i problemi di sicurezza relativi al codice mobile e fornire un supporto che consenta di abilitare i componenti per determinare le operazioni per cui gli utenti dispongono di autorizzazioni.  Questi meccanismi di sicurezza usano un modello semplice e coerente in modo che gli sviluppatori esperti in sicurezza per l'accesso di codice possano usare facilmente la sicurezza basata sui ruoli e viceversa.  La sicurezza per l'accesso di codice e la sicurezza basata sui ruoli vengono implementate usando un'infrastruttura comune fornita da Common Language Runtime.  
+# <a name="key-security-concepts"></a><span data-ttu-id="f1b9b-102">Concetti principali sulla sicurezza</span><span class="sxs-lookup"><span data-stu-id="f1b9b-102">Key Security Concepts</span></span>
+<span data-ttu-id="f1b9b-103">Microsoft .NET Framework offre la sicurezza basata sui ruoli per risolvere i problemi di sicurezza relativi al codice mobile e per fornire un supporto che consenta di abilitare i componenti per determinare le operazioni per cui gli utenti dispongono di autorizzazioni.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-103">The Microsoft .NET Framework offers role-based security to help address security concerns about mobile code and to provide support that enables components to determine what users are authorized to do.</span></span>  
+  
+## <a name="type-safety-and-security"></a><span data-ttu-id="f1b9b-104">Indipendenza dai tipi e sicurezza</span><span class="sxs-lookup"><span data-stu-id="f1b9b-104">Type safety and security</span></span>  
+ <span data-ttu-id="f1b9b-105">Il codice indipendente dai tipi accede solo alle posizioni di memoria per le quali dispone di autorizzazioni.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-105">Type-safe code accesses only the memory locations it is authorized to access.</span></span> <span data-ttu-id="f1b9b-106">In questo contesto, per indipendenza dai tipi si intende l'indipendenza dai tipi di memoria, che non deve essere confusa con il concetto più generico di indipendenza dai tipi. Ad esempio, un codice indipendente dai tipi non può leggere i valori dei campi privati di un altro oggetto.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-106">(For this discussion, type safety specifically refers to memory type safety and should not be confused with type safety in a broader respect.) For example, type-safe code cannot read values from another object's private fields.</span></span> <span data-ttu-id="f1b9b-107">Accede ai tipi solo in modalità ben definite e consentite.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-107">It accesses types only in well-defined, allowable ways.</span></span>  
+  
+ <span data-ttu-id="f1b9b-108">Durante la compilazione Just-In-Time (JIT), un processo di verifica facoltativo esamina i metadati e MSIL (Microsoft Intermediate Language) di un metodo su cui eseguire la compilazione JIT in codice macchina nativo per verificare che siano indipendenti dai tipi.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-108">During just-in-time (JIT) compilation, an optional verification process examines the metadata and Microsoft intermediate language (MSIL) of a method to be JIT-compiled into native machine code to verify that they are type safe.</span></span> <span data-ttu-id="f1b9b-109">Questo processo viene ignorato se il codice dispone dell'autorizzazione per ignorare la verifica.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-109">This process is skipped if the code has permission to bypass verification.</span></span> <span data-ttu-id="f1b9b-110">Per altre informazioni sulla verifica, vedere [Processo di esecuzione gestita](../../../docs/standard/managed-execution-process.md).</span><span class="sxs-lookup"><span data-stu-id="f1b9b-110">For more information about verification, see [Managed Execution Process](../../../docs/standard/managed-execution-process.md).</span></span>  
+  
+ <span data-ttu-id="f1b9b-111">Sebbene la verifica dell'indipendenza dai tipi non sia obbligatoria per l'esecuzione di codice gestito, l'indipendenza dai tipi ha un ruolo fondamentale nell'imposizione della sicurezza e nell'isolamento dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-111">Although verification of type safety is not mandatory to run managed code, type safety plays a crucial role in assembly isolation and security enforcement.</span></span> <span data-ttu-id="f1b9b-112">Quando il codice è indipendente dai tipi, Common Language Runtime può isolare completamente i singoli assembly.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-112">When code is type safe, the common language runtime can completely isolate assemblies from each other.</span></span> <span data-ttu-id="f1b9b-113">Questo isolamento contribuisce a garantire che gli assembly non interferiscano tra loro, aumentando l'affidabilità dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-113">This isolation helps ensure that assemblies cannot adversely affect each other and it increases application reliability.</span></span> <span data-ttu-id="f1b9b-114">I componenti indipendenti dai tipi possono essere eseguiti in modo sicuro nello stesso processo anche se sono attendibili a livelli diversi.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-114">Type-safe components can execute safely in the same process even if they are trusted at different levels.</span></span> <span data-ttu-id="f1b9b-115">Quando il codice non è indipendente dai tipi possono verificarsi effetti collaterali indesiderati.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-115">When code is not type safe, unwanted side effects can occur.</span></span> <span data-ttu-id="f1b9b-116">Il runtime, ad esempio, non è in grado di impedire al codice gestito di effettuare chiamate a codice nativo (non gestito) e di eseguire operazioni dannose.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-116">For example, the runtime cannot prevent managed code from calling into native (unmanaged) code and performing malicious operations.</span></span> <span data-ttu-id="f1b9b-117">Quando il codice è indipendente dai tipi, il meccanismo di imposizione della sicurezza del runtime ne impedisce l'accesso al codice nativo a meno che non disponga delle autorizzazioni.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-117">When code is type safe, the runtime's security enforcement mechanism ensures that it does not access native code unless it has permission to do so.</span></span> <span data-ttu-id="f1b9b-118">Per essere eseguito, tutto il codice non indipendente dai tipi deve aver ottenuto <xref:System.Security.Permissions.SecurityPermission> con il membro di enumerazione passato <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A>.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-118">All code that is not type safe must have been granted <xref:System.Security.Permissions.SecurityPermission> with the passed enum member <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> to run.</span></span>  
+  
+ <span data-ttu-id="f1b9b-119">Per altre informazioni, vedere [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md) (Nozioni di base sulla sicurezza dell'accesso di codice).</span><span class="sxs-lookup"><span data-stu-id="f1b9b-119">For more information, see [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md).</span></span>  
+  
+## <a name="principal"></a><span data-ttu-id="f1b9b-120">Principal</span><span class="sxs-lookup"><span data-stu-id="f1b9b-120">Principal</span></span>  
+ <span data-ttu-id="f1b9b-121">Un'entità rappresenta l'identità e il ruolo di un utente e agisce per conto dell'utente.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-121">A principal represents the identity and role of a user and acts on the user's behalf.</span></span> <span data-ttu-id="f1b9b-122">La sicurezza basata sui ruoli in .NET Framework supporta tre tipi di entità:</span><span class="sxs-lookup"><span data-stu-id="f1b9b-122">Role-based security in the .NET Framework supports three kinds of principals:</span></span>  
+  
+-   <span data-ttu-id="f1b9b-123">Le entità generiche rappresentano utenti e ruoli che esistono indipendentemente dai ruoli e dagli utenti di Windows.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-123">Generic principals represent users and roles that exist independent of Windows users and roles.</span></span>  
+  
+-   <span data-ttu-id="f1b9b-124">Le entità di Windows rappresentano gli utenti di Windows e i relativi ruoli (o i gruppi di Windows).</span><span class="sxs-lookup"><span data-stu-id="f1b9b-124">Windows principals represent Windows users and their roles (or their Windows groups).</span></span> <span data-ttu-id="f1b9b-125">Un'entità di Windows può rappresentare un altro utente, il che significa che l'entità può accedere a una risorsa per conto dell'utente presentando l'identità appartenente a tale utente.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-125">A Windows principal can impersonate another user, which means that the principal can access a resource on a user's behalf while presenting the identity that belongs to that user.</span></span>  
+  
+-   <span data-ttu-id="f1b9b-126">Le entità personalizzate possono essere definite da un'applicazione secondo le modalità richieste dalla specifica applicazione.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-126">Custom principals can be defined by an application in any way that is needed for that particular application.</span></span> <span data-ttu-id="f1b9b-127">Possono estendere la nozione di base di identità e di ruoli dell'entità.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-127">They can extend the basic notion of the principal's identity and roles.</span></span>  
+  
+ <span data-ttu-id="f1b9b-128">Per altre informazioni, vedere [Oggetti Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md).</span><span class="sxs-lookup"><span data-stu-id="f1b9b-128">For more information, see [Principal and Identity Objects](../../../docs/standard/security/principal-and-identity-objects.md).</span></span>  
+  
+## <a name="authentication"></a><span data-ttu-id="f1b9b-129">Autenticazione</span><span class="sxs-lookup"><span data-stu-id="f1b9b-129">Authentication</span></span>  
+ <span data-ttu-id="f1b9b-130">L'autenticazione è il processo di individuazione e verifica dell'identità di un'entità eseguito esaminando e convalidando le credenziali dell'utente rispetto a un'autorità specificata.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-130">Authentication is the process of discovering and verifying the identity of a principal by examining the user's credentials and validating those credentials against some authority.</span></span> <span data-ttu-id="f1b9b-131">Le informazioni ottenute durante l'autenticazione possono essere usate direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-131">The information obtained during authentication is directly usable by your code.</span></span> <span data-ttu-id="f1b9b-132">È anche possibile usare la sicurezza basata sui ruoli di .NET Framework per autenticare l'utente corrente e per determinare se consentire a tale entità di accedere al codice.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-132">You can also use .NET Framework role-based security to authenticate the current user and to determine whether to allow that principal to access your code.</span></span> <span data-ttu-id="f1b9b-133">Vedere gli overload del metodo <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> per esempi su come autenticare l'entità per ruoli specifici.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-133">See the overloads of the <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> method for examples of how to authenticate the principal for specific roles.</span></span> <span data-ttu-id="f1b9b-134">Ad esempio, è possibile usare l'overload <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> per determinare se l'utente corrente è un membro del gruppo Administrators.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-134">For example, you can use the <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> overload to determine if the current user is a member of the Administrators group.</span></span>  
+  
+ <span data-ttu-id="f1b9b-135">Un'ampia gamma di meccanismi di autenticazione usati oggi, molti dei quali possono essere usati con la sicurezza basata sui ruoli di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-135">A variety of authentication mechanisms are used today, many of which can be used with .NET Framework role-based security.</span></span> <span data-ttu-id="f1b9b-136">Alcuni dei meccanismi più diffusi sono il meccanismo di base, il digest, il Passport, il sistema operativo (ad esempio NTLM o Kerberos) o i meccanismi definiti dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-136">Some of the most commonly used mechanisms are basic, digest, Passport, operating system (such as NTLM or Kerberos), or application-defined mechanisms.</span></span>  
+  
+### <a name="example"></a><span data-ttu-id="f1b9b-137">Esempio</span><span class="sxs-lookup"><span data-stu-id="f1b9b-137">Example</span></span>  
+ <span data-ttu-id="f1b9b-138">L'esempio seguente richiede che l'entità attiva sia un amministratore.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-138">The following example requires that the active principal be an administrator.</span></span> <span data-ttu-id="f1b9b-139">Il parametro `name` è `null`, che consente a qualsiasi utente con ruolo di amministratore di passare la richiesta.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-139">The `name` parameter is `null`, which allows any user who is an administrator to pass the demand.</span></span>  
   
 > [!NOTE]
->  A partire da [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], la trasparenza della sicurezza è il meccanismo di imposizione predefinito.  La trasparenza della sicurezza separa il codice che viene eseguito come parte dell'applicazione dal codice eseguito come parte dell'infrastruttura.  Per altre informazioni, vedere [Security\-Transparent Code](../../../docs/framework/misc/security-transparent-code.md).  
-  
- Poiché usano lo stesso modello e infrastruttura, la sicurezza per l'accesso di codice e la sicurezza basata sui ruoli condividono vari concetti di base, descritti in questa sezione.  Assicurarsi di avere sufficiente dimestichezza con questi concetti prima di leggere la documentazione per la sicurezza basata sui ruoli e la sicurezza per l'accesso di codice di .NET Framework.  
-  
-## Autorizzazioni di sicurezza  
- Common Language Runtime consente al codice di eseguire solo le operazioni che è autorizzato a eseguire.  Il runtime usa oggetti chiamati autorizzazioni per applicare restrizioni sul codice gestito.  Il runtime fornisce le classi di autorizzazione predefinite in diversi spazi dei nomi e supporta anche la progettazione e l'implementazione di classi di autorizzazione personalizzate.  
-  
- Esistono due tipi di autorizzazione, ciascuno con uno scopo specifico:  
-  
--   Le autorizzazioni di accesso al codice consentono l'accesso a una risorsa protetta o la possibilità di eseguire un'operazione protetta.  
-  
--   Le autorizzazioni di sicurezza basate sui ruoli offrono un meccanismo per individuare se un utente \(o l'agente che opera per conto dell'utente\) dispone di una specifica identità o è membro di un ruolo specificato.  <xref:System.Security.Permissions.PrincipalPermission> è l'unica autorizzazione di sicurezza basata sui ruoli.  
-  
- Le autorizzazioni di sicurezza possono essere fornite come classi di autorizzazioni \(sicurezza imperativa\) o come attributi che rappresentano una classe di autorizzazioni \(sicurezza dichiarativa\).  La classe base per le autorizzazioni di sicurezza è <xref:System.Security.CodeAccessPermission?displayProperty=fullName>; la classe base per gli attributi di autorizzazioni di sicurezza è <xref:System.Security.Permissions.CodeAccessSecurityAttribute?displayProperty=fullName>.  
-  
- A un'applicazione, sotto forma di assembly, viene concesso un set di autorizzazioni durante la fase di caricamento in un dominio applicazione.  Le concessioni in genere vengono effettuate usando i set di autorizzazioni predefiniti determinati dal metodo <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=fullName>.  Il set di concessioni determina le autorizzazioni disponibili per il codice.  Il runtime concede le autorizzazioni in base alla posizione di origine del codice \(ad esempio, il computer locale, intranet locale o Internet\).  Al codice è anche possibile concedere autorizzazioni speciali se viene caricato in una sandbox.  Per altre informazioni sull'esecuzione di codice in una sandbox, vedere [How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
-  
- Gli impieghi principali delle autorizzazioni sono i seguenti:  
-  
--   Il codice di libreria può richiedere che i chiamanti dispongano di autorizzazioni specifiche.  Se si inserisce <xref:System.Security.CodeAccessPermission.Demand%2A> per un'autorizzazione nel proprio codice, tutto il codice che usa il codice personale deve disporre di tale autorizzazione per l'esecuzione.  Le richieste possono essere usate per determinare se i chiamanti dispongono dell'accesso a risorse specifiche o per individuare l'identità del chiamante.  
-  
--   Il codice può usare le autorizzazioni per negare l'accesso alle risorse da proteggere.  È possibile usare <xref:System.Security.Permissions.SecurityAction?displayProperty=fullName> per specificare un set di autorizzazioni limitato, negando implicitamente tutte le altre autorizzazioni.  Tuttavia, non è consigliabile usare <xref:System.Security.Permissions.SecurityAction> per impedire l'accesso al fine di proteggere la risorsa da un uso improprio intenzionale.  Gli assembly chiamati, che hanno implicitamente negato le autorizzazioni nel set di concessioni, possono eseguire l'override delle autorizzazioni negate eseguendo <xref:System.Security.Permissions.SecurityAction?displayProperty=fullName> per qualsiasi autorizzazione desiderata.  Ad esempio, se è consentito solo <xref:System.Security.Permissions.UIPermission> e viene chiamato un assembly che contiene implicitamente <xref:System.Security.Permissions.FileIOPermission>, l'assembly può solo eseguire solo <xref:System.Security.Permissions.SecurityAction> per <xref:System.Security.Permissions.FileIOPermission> ed eseguire operazioni di file.  L'unico modo per proteggere in modo sicuro le risorse da codice non attendibile negli assembly di riferimento consiste nell'eseguire tale codice con un set di concessioni che non include tali autorizzazioni.  
-  
-### Autorizzazioni di accesso al codice  
- Le autorizzazioni di accesso al codice sono oggetti di autorizzazione che consentono di proteggere le risorse e le operazioni da un uso non autorizzato.  Sono una parte fondamentale del meccanismo di Common Language Runtime per applicare restrizioni di sicurezza al codice gestito.  
-  
- Ogni autorizzazione di accesso al codice rappresenta uno dei seguenti diritti:  
-  
--   Il diritto di accesso a una risorsa protetta, ad esempio file o variabili di ambiente.  
-  
--   Il diritto di esecuzione di un'operazione protetta, ad esempio l'accesso al codice non gestito.  
-  
- Il codice può richiedere tutte le autorizzazioni di accesso al codice, mentre il runtime decide quali autorizzazioni concedere, se disponibili.  
-  
- Ogni autorizzazione di accesso al codice deriva dalla classe <xref:System.Security.CodeAccessPermission>, quindi tutte le autorizzazioni di accesso al codice dispongono di metodi in comune, ad esempio **Demand**, **Assert**, **Deny**, **PermitOnly**, **IsSubsetOf**, **Intersect** e **Union**.  
-  
-> [!IMPORTANT]
->  In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], il supporto runtime è stato rimosso per applicare le richieste di autorizzazione <xref:System.Security.Permissions.SecurityAction>, <xref:System.Security.Permissions.SecurityAction>, <xref:System.Security.Permissions.SecurityAction> e <xref:System.Security.Permissions.SecurityAction>.  Queste richieste non devono essere usate nel codice basato su [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] o versione successiva.  Per altre informazioni su questa e altre modifiche, vedere [Modifiche della sicurezza](../../../docs/framework/security/security-changes.md).  
-  
-### Autorizzazioni di sicurezza basata sui ruoli  
- <xref:System.Security.Permissions.PrincipalPermission> è un'autorizzazione di sicurezza basata sui ruoli che può essere usata per determinare se un utente dispone di un'identità specificata o è un membro di un ruolo specificato.  **PrincipalPermission** è l'unica autorizzazione di sicurezza basata sui ruoli fornita dalla libreria di classi .NET Framework.  
-  
-## Indipendenza dai tipi e sicurezza  
- Il codice indipendente dai tipi accede solo alle posizioni di memoria per le quali dispone di autorizzazioni.  In questo contesto, per indipendenza dai tipi si intende l'indipendenza dai tipi di memoria, che non deve essere confusa con il concetto più generico di indipendenza dai tipi. Ad esempio, un codice indipendente dai tipi non può leggere i valori dei campi privati di un altro oggetto.  Accede ai tipi solo in modalità ben definite e consentite.  
-  
- Durante la compilazione Just\-In\-Time \(JIT\), un processo di verifica facoltativo esamina i metadati e MSIL \(Microsoft Intermediate Language\) di un metodo su cui eseguire la compilazione JIT in codice macchina nativo per verificare che siano indipendenti dai tipi.  Questo processo viene ignorato se il codice dispone dell'autorizzazione per ignorare la verifica.  Per altre informazioni sulla verifica, vedere [Processo di esecuzione gestita](../../../docs/standard/managed-execution-process.md).  
-  
- Sebbene la verifica dell'indipendenza dai tipi non sia obbligatoria per l'esecuzione di codice gestito, l'indipendenza dai tipi ha un ruolo fondamentale nell'imposizione della sicurezza e nell'isolamento dell'assembly.  Quando il codice è indipendente dai tipi, Common Language Runtime può isolare completamente i singoli assembly.  Questo isolamento contribuisce a garantire che gli assembly non interferiscano tra loro, aumentando l'affidabilità dell'applicazione.  I componenti indipendenti dai tipi possono essere eseguiti in modo sicuro nello stesso processo anche se sono attendibili a livelli diversi.  Quando il codice non è indipendente dai tipi possono verificarsi effetti collaterali indesiderati.  Il runtime, ad esempio, non è in grado di impedire al codice gestito di effettuare chiamate a codice nativo \(non gestito\) e di eseguire operazioni dannose.  Quando il codice è indipendente dai tipi, il meccanismo di imposizione della sicurezza del runtime ne impedisce l'accesso al codice nativo a meno che non disponga delle autorizzazioni.  Per essere eseguito, tutto il codice non indipendente dai tipi deve aver ottenuto <xref:System.Security.Permissions.SecurityPermission> con il membro di enumerazione passato <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A>.  
-  
- Per altre informazioni, vedere [NIB: Writing Verifiably Type\-Safe Code](http://msdn.microsoft.com/it-it/d18f10ef-3b48-4f47-8726-96714021547b).  
-  
-## Principal  
- Un'entità rappresenta l'identità e il ruolo di un utente e agisce per conto dell'utente.  La sicurezza basata sui ruoli in .NET Framework supporta tre tipi di entità:  
-  
--   Le entità generiche rappresentano utenti e ruoli che esistono indipendentemente dai ruoli e dagli utenti di Windows.  
-  
--   Le entità di Windows rappresentano gli utenti di Windows e i relativi ruoli \(o i gruppi di Windows\).  Un'entità di Windows può rappresentare un altro utente, il che significa che l'entità può accedere a una risorsa per conto dell'utente presentando l'identità appartenente a tale utente.  
-  
--   Le entità personalizzate possono essere definite da un'applicazione secondo le modalità richieste dalla specifica applicazione.  Possono estendere la nozione di base di identità e di ruoli dell'entità.  
-  
- Per altre informazioni, vedere [Principal and Identity Objects](../../../docs/standard/security/principal-and-identity-objects.md).  
-  
-## Autenticazione  
- L'autenticazione è il processo di individuazione e verifica dell'identità di un'entità eseguito esaminando e convalidando le credenziali dell'utente rispetto a un'autorità specificata.  Le informazioni ottenute durante l'autenticazione possono essere usate direttamente dal codice.  È anche possibile usare la sicurezza basata sui ruoli di .NET Framework per autenticare l'utente corrente e per determinare se consentire a tale entità di accedere al codice.  Vedere gli overload del metodo <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=fullName> per esempi su come autenticare l'entità per ruoli specifici.  Ad esempio, è possibile usare l'overload <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=fullName> per determinare se l'utente corrente è un membro del gruppo Administrators.  
-  
- Un'ampia gamma di meccanismi di autenticazione usati oggi, molti dei quali possono essere usati con la sicurezza basata sui ruoli di .NET Framework.  Alcuni dei meccanismi più diffusi sono il meccanismo di base, il digest, il Passport, il sistema operativo \(ad esempio NTLM o Kerberos\) o i meccanismi definiti dall'applicazione.  
-  
-### Esempio  
- L'esempio seguente richiede che l'entità attiva sia un amministratore.  Il parametro `name` è `null`, che consente a qualsiasi utente con ruolo di amministratore di passare la richiesta.  
-  
-> [!NOTE]
->  In Windows Vista, 	la funzionalità Controllo dell'account utente determina i privilegi di un utente.  Ai membri del gruppo Administrators predefinito vengono assegnati due token di accesso in fase di esecuzione, ovvero un token di accesso utente standard e un token di accesso amministratore.  Per impostazione predefinita, viene assegnato il ruolo dell'utente standard.  Per eseguire il codice che richiede un ruolo da amministratore è necessario elevare i privilegi da utente standard ad amministratore.  È possibile farlo quando si avvia un'applicazione facendo clic con il pulsante destro del mouse sull'icona dell'applicazione e indicando l'opzione di esecuzione come amministratore.  
+>  <span data-ttu-id="f1b9b-140">In Windows Vista, 	la funzionalità Controllo dell'account utente determina i privilegi di un utente.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-140">In Windows Vista, User Account Control (UAC) determines the privileges of a user.</span></span> <span data-ttu-id="f1b9b-141">Ai membri del gruppo Administrators predefinito vengono assegnati due token di accesso in fase di esecuzione, ovvero un token di accesso utente standard e un token di accesso amministratore.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-141">If you are a member of the Built-in Administrators group, you are assigned two run-time access tokens: a standard user access token and an administrator access token.</span></span> <span data-ttu-id="f1b9b-142">Per impostazione predefinita, viene assegnato il ruolo dell'utente standard.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-142">By default, you are in the standard user role.</span></span> <span data-ttu-id="f1b9b-143">Per eseguire il codice che richiede un ruolo da amministratore è necessario elevare i privilegi da utente standard ad amministratore.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-143">To execute the code that requires you to be an administrator, you must first elevate your privileges from standard user to administrator.</span></span> <span data-ttu-id="f1b9b-144">È possibile farlo quando si avvia un'applicazione facendo clic con il pulsante destro del mouse sull'icona dell'applicazione e indicando l'opzione di esecuzione come amministratore.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-144">You can do this when you start an application by right-clicking the application icon and indicating that you want to run as an administrator.</span></span>  
   
  [!code-cpp[Classic PrincipalPermission Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CPP/source.cpp#1)]
  [!code-csharp[Classic PrincipalPermission Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CS/source.cs#1)]
  [!code-vb[Classic PrincipalPermission Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/VB/source.vb#1)]  
   
- L'esempio seguente mostra come determinare l'identità dell'entità e i ruoli disponibili per l'entità.  Un'applicazione di questo esempio potrebbe essere la conferma che l'utente corrente ha un ruolo autorizzato all'uso dell'applicazione.  
+ <span data-ttu-id="f1b9b-145">L'esempio seguente mostra come determinare l'identità dell'entità e i ruoli disponibili per l'entità.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-145">The following example demonstrates how to determine the identity of the principal and the roles available to the principal.</span></span> <span data-ttu-id="f1b9b-146">Un'applicazione di questo esempio potrebbe essere la conferma che l'utente corrente ha un ruolo autorizzato all'uso dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-146">An application of this example might be to confirm that the current user is in a role you allow for using your application.</span></span>  
   
  [!code-cpp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CPP/source.cpp#1)]
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## Autorizzazione  
- L'autorizzazione è il processo che consente di determinare se un'entità è autorizzata a eseguire un'azione richiesta.  L'autorizzazione si verifica dopo l'autenticazione e usa le informazioni di identità e i ruoli dell'entità per determinare a quali risorse può accedere.  È possibile usare la sicurezza basata sui ruoli di .NET Framework per implementare l'autorizzazione.  
-  
-## Problemi di sicurezza per le parole chiave virtuali interne  
- Evitare di basare la sicurezza dell'applicazione su un membro contrassegnato con il modificatore [internal](../Topic/internal%20\(C%23%20Reference\).md) [virtual](../Topic/virtual%20\(C%23%20Reference\).md) in C\# \(modificatore [Overload](../Topic/Overloads%20\(Visual%20Basic\).md) [Overridable](../Topic/Overridable%20\(Visual%20Basic\).md) [Friend](../Topic/Friend%20\(Visual%20Basic\).md) in Visual Basic\).  Sebbene i membri contrassegnati con questi modificatori possano essere modificati solo da altri membri all'interno dell'assembly corrente, questa regola viene applicata solo dai linguaggi C\# e Visual Basic.  Il runtime non applica questa regola.  È quindi possibile eseguire l'override dei membri contrassegnati come **internal virtual**in C\# e **Overloads Overridable Friend** in Visual Basic usando Microsoft Intermediate Language o qualsiasi altro linguaggio che non applichi questa regola.  
-  
-## Vedere anche  
- [Key Security Concepts](../../../docs/standard/security/key-security-concepts.md)
+## <a name="authorization"></a><span data-ttu-id="f1b9b-147">Autorizzazione</span><span class="sxs-lookup"><span data-stu-id="f1b9b-147">Authorization</span></span>  
+ <span data-ttu-id="f1b9b-148">L'autorizzazione è il processo che consente di determinare se un'entità è autorizzata a eseguire un'azione richiesta.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-148">Authorization is the process of determining whether a principal is allowed to perform a requested action.</span></span> <span data-ttu-id="f1b9b-149">L'autorizzazione si verifica dopo l'autenticazione e usa le informazioni di identità e i ruoli dell'entità per determinare a quali risorse può accedere.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-149">Authorization occurs after authentication and uses information about the principal's identity and roles to determine what resources the principal can access.</span></span> <span data-ttu-id="f1b9b-150">È possibile usare la sicurezza basata sui ruoli di .NET Framework per implementare l'autorizzazione.</span><span class="sxs-lookup"><span data-stu-id="f1b9b-150">You can use .NET Framework role-based security to implement authorization.</span></span>

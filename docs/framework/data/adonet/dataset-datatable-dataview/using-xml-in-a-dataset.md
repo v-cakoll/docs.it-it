@@ -1,58 +1,61 @@
 ---
-title: "Utilizzo di XML in un DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilizzo di XML in un dataset
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 28c1668dcb9678b65db62c0040adcd116221b92e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Utilizzo di XML in un DataSet
-ADO.NET consente di compilare un tipo <xref:System.Data.DataSet> con i dati contenuti in un flusso o documento XML.  È possibile usare il flusso o il documento XML per fornire al tipo <xref:System.Data.DataSet> dati o informazioni relative allo schema oppure entrambi.  Le informazioni fornite dal flusso o documento XML possono essere combinate con i dati o le informazioni relative allo schema già presenti nel tipo <xref:System.Data.DataSet>.  
+# <a name="using-xml-in-a-dataset"></a><span data-ttu-id="50f80-102">Utilizzo di XML in un dataset</span><span class="sxs-lookup"><span data-stu-id="50f80-102">Using XML in a DataSet</span></span>
+<span data-ttu-id="50f80-103">ADO.NET consente di compilare un tipo <xref:System.Data.DataSet> con i dati contenuti in un flusso o documento XML.</span><span class="sxs-lookup"><span data-stu-id="50f80-103">With ADO.NET you can fill a <xref:System.Data.DataSet> from an XML stream or document.</span></span> <span data-ttu-id="50f80-104">È possibile usare il flusso o il documento XML per fornire al tipo <xref:System.Data.DataSet> dati o informazioni relative allo schema oppure entrambi.</span><span class="sxs-lookup"><span data-stu-id="50f80-104">You can use the XML stream or document to supply to the <xref:System.Data.DataSet> either data, schema information, or both.</span></span> <span data-ttu-id="50f80-105">Le informazioni fornite dal flusso o documento XML possono essere combinate con i dati o le informazioni relative allo schema già presenti nel tipo <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="50f80-105">The information supplied from the XML stream or document can be combined with existing data or schema information already present in the <xref:System.Data.DataSet>.</span></span>  
   
- ADO.NET consente inoltre di creare una rappresentazione XML di un tipo <xref:System.Data.DataSet>, con o senza il relativo schema, in modo da trasportare il <xref:System.Data.DataSet> tramite HTTP e renderlo disponibile per l'uso da parte di un'altra applicazione o piattaforma abilitata per XML.  In una rappresentazione XML di un tipo <xref:System.Data.DataSet> i dati vengono scritti in XML e lo schema, se incluso inline nella rappresentazione, viene scritto usando il linguaggio XSD \(XML Schema Definition Language\).  Il formato ottenuto tramite XML e XSD risulta ottimale per il trasferimento del contenuto di un tipo <xref:System.Data.DataSet> da e verso client remoti.  
+ <span data-ttu-id="50f80-106">ADO.NET consente inoltre di creare una rappresentazione XML di un tipo <xref:System.Data.DataSet>, con o senza il relativo schema, in modo da trasportare il <xref:System.Data.DataSet> tramite HTTP e renderlo disponibile per l'uso da parte di un'altra applicazione o piattaforma abilitata per XML.</span><span class="sxs-lookup"><span data-stu-id="50f80-106">ADO.NET also allows you to create an XML representation of a <xref:System.Data.DataSet>, with or without its schema, in order to transport the <xref:System.Data.DataSet> across HTTP for use by another application or XML-enabled platform.</span></span> <span data-ttu-id="50f80-107">In una rappresentazione XML di un tipo <xref:System.Data.DataSet> i dati vengono scritti in XML e lo schema, se incluso inline nella rappresentazione, viene scritto usando il linguaggio XSD (XML Schema Definition Language).</span><span class="sxs-lookup"><span data-stu-id="50f80-107">In an XML representation of a <xref:System.Data.DataSet>, the data is written in XML and the schema, if it is included inline in the representation, is written using the XML Schema definition language (XSD).</span></span> <span data-ttu-id="50f80-108">Il formato ottenuto tramite XML e XSD risulta ottimale per il trasferimento del contenuto di un tipo <xref:System.Data.DataSet> da e verso client remoti.</span><span class="sxs-lookup"><span data-stu-id="50f80-108">XML and XML Schema provide a convenient format for transferring the contents of a <xref:System.Data.DataSet> to and from remote clients.</span></span>  
   
-## In questa sezione  
- [DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
- Vengono fornite informazioni dettagliate su DiffGram, un formato XML usato per la lettura e la scrittura del contenuto di un tipo <xref:System.Data.DataSet>.  
+## <a name="in-this-section"></a><span data-ttu-id="50f80-109">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="50f80-109">In This Section</span></span>  
+ [<span data-ttu-id="50f80-110">DiffGram</span><span class="sxs-lookup"><span data-stu-id="50f80-110">DiffGrams</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
+ <span data-ttu-id="50f80-111">Vengono fornite informazioni dettagliate su DiffGram, un formato XML usato per la lettura e la scrittura del contenuto di un tipo <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="50f80-111">Provides details on the DiffGram, an XML format used to read and write the contents of a <xref:System.Data.DataSet>.</span></span>  
   
- [Caricamento di un DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- Vengono illustrate le diverse opzioni disponibili per il caricamento del contenuto di un tipo <xref:System.Data.DataSet> da un documento XML.  
+ [<span data-ttu-id="50f80-112">Caricamento di un DataSet da XML</span><span class="sxs-lookup"><span data-stu-id="50f80-112">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ <span data-ttu-id="50f80-113">Vengono illustrate le diverse opzioni disponibili per il caricamento del contenuto di un tipo <xref:System.Data.DataSet> da un documento XML.</span><span class="sxs-lookup"><span data-stu-id="50f80-113">Discusses different options to consider when loading the contents of a <xref:System.Data.DataSet> from an XML document.</span></span>  
   
- [Scrittura del contenuto di DataSet come dati XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- Viene illustrata la generazione del contenuto di un tipo <xref:System.Data.DataSet> sotto forma di dati XML e vengono descritte le diverse opzioni disponibili relative al formato XML.  
+ [<span data-ttu-id="50f80-114">Scrittura di contenuto di un DataSet come dati XML</span><span class="sxs-lookup"><span data-stu-id="50f80-114">Writing DataSet Contents as XML Data</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
+ <span data-ttu-id="50f80-115">Viene illustrata la generazione del contenuto di un tipo <xref:System.Data.DataSet> sotto forma di dati XML e vengono descritte le diverse opzioni disponibili relative al formato XML.</span><span class="sxs-lookup"><span data-stu-id="50f80-115">Discusses how to generate the contents of a <xref:System.Data.DataSet> as XML data, and the different XML format options you can use.</span></span>  
   
- [Caricamento delle informazioni relative allo schema di un DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- Vengono illustrati i metodi del tipo <xref:System.Data.DataSet> usati per caricare lo schema di un <xref:System.Data.DataSet> da XML.  
+ [<span data-ttu-id="50f80-116">Il caricamento delle informazioni dello Schema di DataSet da XML</span><span class="sxs-lookup"><span data-stu-id="50f80-116">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ <span data-ttu-id="50f80-117">Vengono illustrati i metodi del tipo <xref:System.Data.DataSet> usati per caricare lo schema di un <xref:System.Data.DataSet> da XML.</span><span class="sxs-lookup"><span data-stu-id="50f80-117">Discusses the <xref:System.Data.DataSet> methods used to load the schema of a <xref:System.Data.DataSet> from XML.</span></span>  
   
- [Scrittura delle informazioni relative allo schema di un DataSet come XSD](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)  
- Vengono illustrate le modalità di utilizzo di un XML Schema e il modo in cui generarne uno da un oggetto <xref:System.Data.DataSet>.  
+ [<span data-ttu-id="50f80-118">La scrittura di informazioni dello Schema di DataSet come XSD</span><span class="sxs-lookup"><span data-stu-id="50f80-118">Writing DataSet Schema Information as XSD</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)  
+ <span data-ttu-id="50f80-119">Vengono illustrate le modalità di utilizzo di un XML Schema e il modo in cui generarne uno da un oggetto <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="50f80-119">Discusses the uses for an XML Schema and how to generate one from a <xref:System.Data.DataSet>.</span></span>  
   
- [Sincronizzazione di DataSet e XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- Vengono illustrate le funzionalità disponibili in .NET Framework per l'accesso sincrono alle visualizzazioni relazionale e gerarchica di un singolo set di dati e viene descritto come creare una relazione sincrona tra un tipo <xref:System.Data.DataSet> e un tipo <xref:System.Xml.XmlDataDocument>.  
+ [<span data-ttu-id="50f80-120">Sincronizzazione di DataSet e XmlDataDocument</span><span class="sxs-lookup"><span data-stu-id="50f80-120">DataSet and XmlDataDocument Synchronization</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ <span data-ttu-id="50f80-121">Vengono illustrate le funzionalità disponibili in .NET Framework per l'accesso sincrono alle visualizzazioni relazionale e gerarchica di un singolo set di dati e viene descritto come creare una relazione sincrona tra un tipo <xref:System.Data.DataSet> e un tipo <xref:System.Xml.XmlDataDocument>.</span><span class="sxs-lookup"><span data-stu-id="50f80-121">Discusses the capability available in the .NET Framework of synchronous access to both relational and hierarchical views of a single set of data, and shows how to create a synchronous relationship between a <xref:System.Data.DataSet> and an <xref:System.Xml.XmlDataDocument>.</span></span>  
   
- [DataRelation annidati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
- Viene illustrata l'importanza degli oggetti <xref:System.Data.DataRelation> annidati per la rappresentazione del contenuto di un tipo <xref:System.Data.DataSet> sotto forma di dati XML e ne viene descritta la creazione.  
+ [<span data-ttu-id="50f80-122">Annidamento di oggetti DataRelation</span><span class="sxs-lookup"><span data-stu-id="50f80-122">Nesting DataRelations</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ <span data-ttu-id="50f80-123">Viene illustrata l'importanza degli oggetti <xref:System.Data.DataRelation> annidati per la rappresentazione del contenuto di un tipo <xref:System.Data.DataSet> sotto forma di dati XML e ne viene descritta la creazione.</span><span class="sxs-lookup"><span data-stu-id="50f80-123">Discusses the importance of nested <xref:System.Data.DataRelation> objects when representing the contents of a <xref:System.Data.DataSet> as XML data, and describes how to create them.</span></span>  
   
- [Derivazione della struttura relazionale di un DataSet da XML Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- Viene descritta la struttura relazionale, o schema, di un oggetto <xref:System.Data.DataSet> creato da un XML Schema.  
+ [<span data-ttu-id="50f80-124">La derivazione di struttura relazionale di DataSet da XML Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="50f80-124">Deriving DataSet Relational Structure from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ <span data-ttu-id="50f80-125">Viene descritta la struttura relazionale, o schema, di un oggetto <xref:System.Data.DataSet> creato da un XML Schema.</span><span class="sxs-lookup"><span data-stu-id="50f80-125">Describes the relational structure, or schema, of a <xref:System.Data.DataSet> that is created from XML Schema.</span></span>  
   
- [Inferenza della struttura relazionale del DataSet da XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- Viene descritta la struttura relazionale risultante, o schema, di un tipo <xref:System.Data.DataSet> creato tramite inferenza da elementi XML.  
+ [<span data-ttu-id="50f80-126">Inferenza della struttura relazionale di DataSet da XML</span><span class="sxs-lookup"><span data-stu-id="50f80-126">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ <span data-ttu-id="50f80-127">Viene descritta la struttura relazionale risultante, o schema, di un tipo <xref:System.Data.DataSet> creato tramite inferenza da elementi XML.</span><span class="sxs-lookup"><span data-stu-id="50f80-127">Describes the resulting relational structure, or schema, of a <xref:System.Data.DataSet> that is created when inferred from XML elements.</span></span>  
   
-## Sezioni correlate  
- [Cenni preliminari su ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
- Vengono descritti l'architettura e i componenti di ADO.NET e come usare ADO.NET per l'accesso alle origini dati esistenti e per la gestione dei dati dell'applicazione.  
+## <a name="related-sections"></a><span data-ttu-id="50f80-128">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="50f80-128">Related Sections</span></span>  
+ [<span data-ttu-id="50f80-129">Panoramica di ADO.NET</span><span class="sxs-lookup"><span data-stu-id="50f80-129">ADO.NET Overview</span></span>](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ <span data-ttu-id="50f80-130">Vengono descritti l'architettura e i componenti di ADO.NET e come usare ADO.NET per l'accesso alle origini dati esistenti e per la gestione dei dati dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="50f80-130">Describes the ADO.NET architecture and components, and how to use them to access existing data sources as well as to manage application data.</span></span>  
   
-## Vedere anche  
- [DataSet, DataTable e DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="50f80-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="50f80-131">See Also</span></span>  
+ [<span data-ttu-id="50f80-132">Oggetti DataSet, DataTable e DataView</span><span class="sxs-lookup"><span data-stu-id="50f80-132">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="50f80-133">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="50f80-133">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

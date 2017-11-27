@@ -1,35 +1,38 @@
 ---
-title: "4016 - MessageQueueDuplicatedSocketError | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4016 - MessageQueueDuplicatedSocketError
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c35cf2c-e6fc-48e2-bc40-3af01cb5d31e
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ba56352c6a7ee37ad31f03e9a4d92aca29704998
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# 4016 - MessageQueueDuplicatedSocketError
-## Proprietà  
+# <a name="4016---messagequeueduplicatedsocketerror"></a><span data-ttu-id="3c246-102">4016 - MessageQueueDuplicatedSocketError</span><span class="sxs-lookup"><span data-stu-id="3c246-102">4016 - MessageQueueDuplicatedSocketError</span></span>
+## <a name="properties"></a><span data-ttu-id="3c246-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="3c246-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|4016|  
-|Parole chiave|ActivationServices|  
-|Livello|Errore|  
-|Canale|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="3c246-104">ID</span><span class="sxs-lookup"><span data-stu-id="3c246-104">ID</span></span>|<span data-ttu-id="3c246-105">4016</span><span class="sxs-lookup"><span data-stu-id="3c246-105">4016</span></span>|  
+|<span data-ttu-id="3c246-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="3c246-106">Keywords</span></span>|<span data-ttu-id="3c246-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="3c246-107">ActivationServices</span></span>|  
+|<span data-ttu-id="3c246-108">Livello</span><span class="sxs-lookup"><span data-stu-id="3c246-108">Level</span></span>|<span data-ttu-id="3c246-109">Errore</span><span class="sxs-lookup"><span data-stu-id="3c246-109">Error</span></span>|  
+|<span data-ttu-id="3c246-110">Canale</span><span class="sxs-lookup"><span data-stu-id="3c246-110">Channel</span></span>|<span data-ttu-id="3c246-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="3c246-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Descrizione  
- Questo evento viene generato quando la coda di messaggi non riesce a duplicare il socket.  
+## <a name="description"></a><span data-ttu-id="3c246-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3c246-112">Description</span></span>  
+ <span data-ttu-id="3c246-113">Questo evento viene generato quando la coda di messaggi non riesce a duplicare il socket.</span><span class="sxs-lookup"><span data-stu-id="3c246-113">This event is emitted when the message queue failed duplicating socket.</span></span>  
   
-## Messaggio  
- Duplicazione socket da parte della coda di messaggi non riuscita.  
+## <a name="message"></a><span data-ttu-id="3c246-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="3c246-114">Message</span></span>  
+ <span data-ttu-id="3c246-115">Duplicazione socket da parte della coda di messaggi non riuscita.</span><span class="sxs-lookup"><span data-stu-id="3c246-115">Message queue failed duplicating socket.</span></span>  
   
-## Dettagli
+## <a name="details"></a><span data-ttu-id="3c246-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="3c246-116">Details</span></span>

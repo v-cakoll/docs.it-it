@@ -1,28 +1,33 @@
 ---
-title: "&lt;net.pipe&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;NET. pipe&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5d68c2113b08065f7ec74ae68d7f0b5918cab0aa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;net.pipe&gt;
-Specifica impostazioni di configurazione per Named Pipe Activation Service, che gestisce la durata della connessione named pipe, nonché le richieste di attivazione che arrivano sulle named pipe.  
+# <a name="ltnetpipegt"></a><span data-ttu-id="b5790-102">&lt;NET. pipe&gt;</span><span class="sxs-lookup"><span data-stu-id="b5790-102">&lt;net.pipe&gt;</span></span>
+<span data-ttu-id="b5790-103">Specifica impostazioni di configurazione per Named Pipe Activation Service, che gestisce la durata della connessione named pipe, nonché le richieste di attivazione che arrivano sulle named pipe.</span><span class="sxs-lookup"><span data-stu-id="b5790-103">Specifies configuration settings for the Named Pipe Activation Service, which manages the lifetime of the named pipe connection, and handles activation requests that arrive over named pipes.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="b5790-104">\<system.serviceModel.activation ></span><span class="sxs-lookup"><span data-stu-id="b5790-104">\<system.serviceModel.activation></span></span>  
+<span data-ttu-id="b5790-105">\<NET. pipe ></span><span class="sxs-lookup"><span data-stu-id="b5790-105">\<net.pipe></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="b5790-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b5790-106">Syntax</span></span>  
   
+```xml  
 <configuration>  
    <system.serviceModel.activation>  
        <net.pipe maxPendingAccepts="Integer"  
@@ -45,31 +50,31 @@ Specifica impostazioni di configurazione per Named Pipe Activation Service, che 
 </configuration>  
 ```  
   
-## Tipo  
+## <a name="type"></a><span data-ttu-id="b5790-107">Tipo</span><span class="sxs-lookup"><span data-stu-id="b5790-107">Type</span></span>  
  `Type`  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b5790-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="b5790-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="b5790-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="b5790-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="b5790-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="b5790-110">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="b5790-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="b5790-111">Attribute</span></span>|<span data-ttu-id="b5790-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b5790-112">Description</span></span>|  
 |---------------|-----------------|  
-|`maxPendingAccepts`|Numero intero che specifica il massimo di thread di accettazione contemporaneamente in attesa sull'endpoint di ascolto per il servizio di condivisione.  Il valore predefinito è 2.|  
-|`maxPendingConnections`|Numero intero che specifica il numero massimo di connessioni che possono rimanere in attesa di invio.  Il valore predefinito è 100.|  
-|`receiveTimeout`|<xref:System.Timespan> che specifica il timeout per la lettura dei dati sui frame e per l'esecuzione dell'invio della connessione dalle connessioni sottostanti.  L'impostazione predefinita è "00:00:10".|  
+|`maxPendingAccepts`|<span data-ttu-id="b5790-113">Numero intero che specifica il massimo di thread di accettazione contemporaneamente in attesa sull'endpoint di ascolto per il servizio di condivisione.</span><span class="sxs-lookup"><span data-stu-id="b5790-113">An integer that specifies the maximum outstanding concurrent accepting threads on the listening endpoint for the sharing service.</span></span> <span data-ttu-id="b5790-114">Il valore predefinito è 2.</span><span class="sxs-lookup"><span data-stu-id="b5790-114">The default is 2.</span></span>|  
+|`maxPendingConnections`|<span data-ttu-id="b5790-115">Numero intero che specifica il numero massimo di connessioni che possono rimanere in attesa di invio.</span><span class="sxs-lookup"><span data-stu-id="b5790-115">An integer that specifies the maximum number of connections that can wait for dispatch.</span></span> <span data-ttu-id="b5790-116">Il valore predefinito è 100.</span><span class="sxs-lookup"><span data-stu-id="b5790-116">The default is 100.</span></span>|  
+|`receiveTimeout`|<span data-ttu-id="b5790-117">`TimeSpan` che specifica il timeout per la lettura dei dati sui frame e per l'esecuzione dell'invio della connessione dalle connessioni sottostanti.</span><span class="sxs-lookup"><span data-stu-id="b5790-117">A `TimeSpan` that specifies the timeout for reading the framing data and performing connection dispatching from the underlining connections.</span></span> <span data-ttu-id="b5790-118">L'impostazione predefinita è "00:00:10".</span><span class="sxs-lookup"><span data-stu-id="b5790-118">The default is "00:00:10"</span></span>|  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="b5790-119">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="b5790-119">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<consentiAccount\>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Raccolta di elementi di configurazione che contiene un attributo `securityIdentifier` per specificare account utente per processi che ospitano servizi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] e ai quali è concesso l'accesso al servizio di condivisione.|  
+|<span data-ttu-id="b5790-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="b5790-120">Element</span></span>|<span data-ttu-id="b5790-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b5790-121">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="b5790-122">\<allowAccounts ></span><span class="sxs-lookup"><span data-stu-id="b5790-122">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="b5790-123">Raccolta di elementi di configurazione che contiene un attributo `securityIdentifier` per specificare account utente per processi che ospitano servizi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] e ai quali è concesso l'accesso al servizio di condivisione.</span><span class="sxs-lookup"><span data-stu-id="b5790-123">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services, and are granted connection access to the sharing service.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="b5790-124">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="b5790-124">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<system.serviceModel.activation\>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contiene impostazioni di configurazione per il processo del listener SMSvcHost.exe.|  
+|<span data-ttu-id="b5790-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="b5790-125">Element</span></span>|<span data-ttu-id="b5790-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b5790-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="b5790-127">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="b5790-127">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|<span data-ttu-id="b5790-128">Contiene impostazioni di configurazione per il processo del listener SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="b5790-128">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
   
-## Vedere anche  
+## <a name="see-also"></a><span data-ttu-id="b5790-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b5790-129">See Also</span></span>  
  <xref:System.ServiceModel.Activation.Configuration.NetPipeSection>

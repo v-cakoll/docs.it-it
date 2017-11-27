@@ -1,95 +1,96 @@
 ---
-title: "Riconfigurazione dinamica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Riconfigurazione dinamica
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 32339bbf40513f06c7a719c632f1c606c195b6bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Riconfigurazione dinamica
-Nell'esempio viene descritto il servizio di routing [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Il servizio di routing è un componente di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che semplifica l'aggiunta nell'applicazione di un router basato sul contenuto.In questo esempio viene adattato l'esempio relativo alla calcolatrice [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard per comunicare tramite il servizio di routing.In questo esempio viene illustrato come è possibile riconfigurare il servizio di routing dinamicamente durante il runtime.  
+# <a name="dynamic-reconfiguration"></a><span data-ttu-id="332c7-102">Riconfigurazione dinamica</span><span class="sxs-lookup"><span data-stu-id="332c7-102">Dynamic Reconfiguration</span></span>
+<span data-ttu-id="332c7-103">Nell'esempio viene descritto il servizio di routing [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="332c7-103">This sample demonstrates the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] routing service.</span></span> <span data-ttu-id="332c7-104">Il servizio di routing è un componente di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che semplifica l'aggiunta nell'applicazione di un router basato sul contenuto.</span><span class="sxs-lookup"><span data-stu-id="332c7-104">The routing service is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="332c7-105">In questo esempio viene adattato l'esempio relativo alla calcolatrice [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard per comunicare tramite il servizio di routing.</span><span class="sxs-lookup"><span data-stu-id="332c7-105">This sample adapts the standard [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator Sample to communicate using the routing service.</span></span> <span data-ttu-id="332c7-106">In questo esempio viene illustrato come è possibile riconfigurare il servizio di routing dinamicamente durante il runtime.</span><span class="sxs-lookup"><span data-stu-id="332c7-106">This sample shows how the routing service can be dynamically reconfigured during runtime.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="332c7-107">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="332c7-107">The samples may already be installed on your computer.</span></span> <span data-ttu-id="332c7-108">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="332c7-108">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="332c7-109">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="332c7-109">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="332c7-110">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="332c7-110">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\RoutingServices\DynamicReconfiguration`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\DynamicReconfiguration`  
   
-## Dettagli dell'esempio  
- Per riconfigurare dinamicamente il servizio di routing durante il runtime, questo esempio genera un timer ogni cinque secondi che determina la creazione e l'applicazione di un nuovo oggetto <xref:System.ServiceModel.Routing.RoutingConfiguration>.Questa configurazione fa riferimento al normale endpoint del servizio di calcolo o all'endpoint del servizio di calcolo che esegue l'arrotondamento.L'applicazione client calcolatrice riceve i messaggi da uno dei due servizi, a seconda del servizio di routing configurato per l'indirizzamento in quel momento specifico.  
+## <a name="sample-details"></a><span data-ttu-id="332c7-111">Dettagli dell'esempio</span><span class="sxs-lookup"><span data-stu-id="332c7-111">Sample Details</span></span>  
+ <span data-ttu-id="332c7-112">Per riconfigurare dinamicamente il servizio di routing durante il runtime, questo esempio genera un timer ogni cinque secondi che determina la creazione e l'applicazione di un nuovo oggetto <xref:System.ServiceModel.Routing.RoutingConfiguration>.</span><span class="sxs-lookup"><span data-stu-id="332c7-112">To dynamically reconfigure the routing service during runtime, this sample fires a timer every five seconds that creates a new <xref:System.ServiceModel.Routing.RoutingConfiguration> object and applies it.</span></span> <span data-ttu-id="332c7-113">Questa configurazione fa riferimento al normale endpoint del servizio di calcolo o all'endpoint del servizio di calcolo che esegue l'arrotondamento.</span><span class="sxs-lookup"><span data-stu-id="332c7-113">This configuration references either the regular Calculator endpoint or the Rounding Calculator endpoint.</span></span> <span data-ttu-id="332c7-114">L'applicazione client calcolatrice riceve i messaggi da uno dei due servizi, a seconda del servizio di routing configurato per l'indirizzamento in quel momento specifico.</span><span class="sxs-lookup"><span data-stu-id="332c7-114">The Calculator Client application has its messages returned from one service or the other, depending on which one the routing service is configured to route to at that time.</span></span>  
   
- Vengono utilizzate le funzionalità del servizio di routing per la riconfigurazione dinamica tramite un comportamento personalizzato.In base a tale comportamento personalizzato viene allegata un'estensione del servizio contenente un semplice thread che genera il timer ogni cinque secondi, comportando un callback al metodo `UpdateRules`.Questo callback crea e applica la nuova configurazione del routing.In una distribuzione effettiva questo callback verrebbe probabilmente eseguito in risposta ad altri tipi di evento, ad esempio una notifica di evento SQL o un annuncio di individuazione WS.  
+ <span data-ttu-id="332c7-115">Vengono utilizzate le funzionalità del servizio di routing per la riconfigurazione dinamica tramite un comportamento personalizzato.</span><span class="sxs-lookup"><span data-stu-id="332c7-115">The routing service’s capabilitiy for dynamic reconfiguration through a custom behavior is used.</span></span> <span data-ttu-id="332c7-116">In base a tale comportamento personalizzato viene allegata un'estensione del servizio contenente un semplice thread che genera il timer ogni cinque secondi, comportando un callback al metodo `UpdateRules`.</span><span class="sxs-lookup"><span data-stu-id="332c7-116">This custom behavior attaches a service extension, which contains a simple thread timer that fires every five seconds, which results in a callback to the `UpdateRules` method.</span></span> <span data-ttu-id="332c7-117">Questo callback crea e applica la nuova configurazione del routing.</span><span class="sxs-lookup"><span data-stu-id="332c7-117">This callback creates and applies the new routing configuration.</span></span> <span data-ttu-id="332c7-118">In una distribuzione effettiva questo callback verrebbe probabilmente eseguito in risposta ad altri tipi di evento, ad esempio una notifica di evento SQL o un annuncio di individuazione WS.</span><span class="sxs-lookup"><span data-stu-id="332c7-118">In an actual deployment, this callback would likely be accomplished as a result of some other type of event, such as a SQL-Event notification, or a WS-Discovery announcement.</span></span>  
   
-#### Per utilizzare questo esempio  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="332c7-119">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="332c7-119">To use this sample</span></span>  
   
-1.  Aprire DynamicReconfiguration.sln utilizzando [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  <span data-ttu-id="332c7-120">Aprire DynamicReconfiguration.sln utilizzando [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="332c7-120">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open DynamicReconfiguration.sln.</span></span>  
   
-2.  Per aprire **Esplora soluzioni**, scegliere **Esplora soluzioni** dal menu **Visualizza**.  
+2.  <span data-ttu-id="332c7-121">Per aprire **Esplora**selezionare **Esplora** dal **visualizzazione** menu.</span><span class="sxs-lookup"><span data-stu-id="332c7-121">To open **Solution Explorer**, select **Solution Explorer** from the **View** menu.</span></span>  
   
-3.  Premere **F5** o **CTRL\+MAIUSC\+B** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+3.  <span data-ttu-id="332c7-122">Premere **F5** o **CTRL + MAIUSC + B** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="332c7-122">Press **F5** or **CTRL+SHIFT+B** in [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].</span></span>  
   
-    1.  Se si desidera che i progetti necessari vengano avviati automaticamente quando si preme **F5**, fare clic con il pulsante destro del mouse sulla soluzione e scegliere **Proprietà**.Selezionare il nodo **Progetto di avvio** in **Proprietà comuni** nel riquadro sinistro.Selezionare il pulsante di opzione **Progetti di avvio multipli** e impostare tutti i progetti in modo che dispongano dell'azione **Avvia**.  
+    1.  <span data-ttu-id="332c7-123">Se si desidera avviare automaticamente i progetti necessari quando si preme **F5**, la soluzione e scegliere **proprietà**.</span><span class="sxs-lookup"><span data-stu-id="332c7-123">If you would like to auto-launch the necessary projects when you press **F5**, right-click the solution and select **Properties**.</span></span> <span data-ttu-id="332c7-124">Selezionare il **progetto di avvio** nodo **proprietà comuni** nel riquadro a sinistra.</span><span class="sxs-lookup"><span data-stu-id="332c7-124">Select the **Startup Project** node under **Common Properties** in the left pane.</span></span> <span data-ttu-id="332c7-125">Selezionare il **più progetti di avvio** pulsante di opzione e impostare tutti i progetti per il **avviare** azione.</span><span class="sxs-lookup"><span data-stu-id="332c7-125">Select the **Multiple Startup Projects**  radio button and set all of the projects to have the **Start** action.</span></span>  
   
-    2.  Se si compila il progetto con **CTRL\+MAIUSC\+B**, sarà necessario avviare le applicazioni seguenti:  
+    2.  <span data-ttu-id="332c7-126">Se si compila il progetto con **CTRL + MAIUSC + B**, è necessario avviare le applicazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="332c7-126">If you build the project with **CTRL+SHIFT+B**, you must start the following applications:</span></span>  
   
-        1.  Client calcolatrice \(.\/CalculatorClient\/bin\/client.exe\)  
+        1.  <span data-ttu-id="332c7-127">Client calcolatrice (./CalculatorClient/bin/client.exe)</span><span class="sxs-lookup"><span data-stu-id="332c7-127">Calculator Client (./CalculatorClient/bin/client.exe)</span></span>  
   
-        2.  Servizio di calcolatrice \(.\/CalculatorService\/bin\/service.exe\)  
+        2.  <span data-ttu-id="332c7-128">Servizio di calcolatrice (./CalculatorService/bin/service.exe)</span><span class="sxs-lookup"><span data-stu-id="332c7-128">Calculator Service (./CalculatorService/bin/service.exe)</span></span>  
   
-        3.  Servizio di routing relativo alla calcolatrice \(.\/RoundingCalcService\/bin\/service.exe\)  
+        3.  <span data-ttu-id="332c7-129">Servizio di routing relativo alla calcolatrice (./RoundingCalcService/bin/service.exe)</span><span class="sxs-lookup"><span data-stu-id="332c7-129">Routing Calculator Service (./RoundingCalcService/bin/service.exe)</span></span>  
   
-        4.  RoutingService \(.\/RoutingService\/bin\/RoutingService.exe\)  
+        4.  <span data-ttu-id="332c7-130">RoutingService (./RoutingService/bin/RoutingService.exe)</span><span class="sxs-lookup"><span data-stu-id="332c7-130">RoutingService (./RoutingService/bin/RoutingService.exe)</span></span>  
   
-4.  Nella finestra della console del client calcolatrice premere INVIO per avviare il client e per chiamare le operazioni del servizio di calcolatrice.  
+4.  <span data-ttu-id="332c7-131">Nella finestra della console del client calcolatrice premere INVIO per avviare il client e per chiamare le operazioni del servizio di calcolatrice.</span><span class="sxs-lookup"><span data-stu-id="332c7-131">In the console window of the Calculator Client, press ENTER to start the client and to call the Calculator service operations.</span></span>  
   
-     Il servizio di routing indirizza i messaggi in modo alternativo e dinamico al servizio di calcolo che esegue l'arrotondamento e al normale servizio di calcolatrice a mano a mano che la configurazione del routing viene modificata dinamicamente ogni cinque secondi.A seconda dell'endpoint configurato per l'invio dei messaggi da parte del servizio routing, nella finestra della console client verranno visualizzati risultati diversi.  
+     <span data-ttu-id="332c7-132">Il servizio di routing indirizza i messaggi in modo alternativo e dinamico al servizio di calcolo che esegue l'arrotondamento e al normale servizio di calcolatrice a mano a mano che la configurazione del routing viene modificata dinamicamente ogni cinque secondi.</span><span class="sxs-lookup"><span data-stu-id="332c7-132">The routing service routes messages to the Rounding Calculator and to the regular Calculator alternately as the routing configuration changes dynamically every five seconds.</span></span> <span data-ttu-id="332c7-133">A seconda dell'endpoint configurato per l'invio dei messaggi da parte del servizio routing, nella finestra della console client verranno visualizzati risultati diversi.</span><span class="sxs-lookup"><span data-stu-id="332c7-133">Depending on which endpoint the routing service is configured to send messages to there are different outputs in the client console window.</span></span>  
   
-5.  Continuare a premere INVIO ripetutamente per più di cinque secondi e osservare le modifiche nei risultati generati dal servizio.  
+5.  <span data-ttu-id="332c7-134">Continuare a premere INVIO ripetutamente per più di cinque secondi e osservare le modifiche nei risultati generati dal servizio.</span><span class="sxs-lookup"><span data-stu-id="332c7-134">Continue pressing ENTER repeatedly over more than five seconds and observe the change in the results from the service.</span></span>  
   
-    1.  Di seguito è riportato l'output restituito quando il servizio router è configurato per indirizzare messaggi al servizio di calcolo che esegue l'arrotondamento.  
+    1.  <span data-ttu-id="332c7-135">Di seguito è riportato l'output restituito quando il servizio router è configurato per indirizzare messaggi al servizio di calcolo che esegue l'arrotondamento.</span><span class="sxs-lookup"><span data-stu-id="332c7-135">The following is the output returned if the Router Service is configured to route messages to the Rounding Calculator service.</span></span>  
   
         ```Output  
         Add(100,15.99) = 116  
         Subtract(145,76.54) = 68.5  
         Multiply(9,81.25) = 731.2  
         Divide(22,7) = 3.1  
-  
         ```  
   
-    2.  Di seguito è riportato l'output restituito quando il servizio di routing è configurato per indirizzare messaggi al normale servizio di calcolatrice.  
+    2.  <span data-ttu-id="332c7-136">Di seguito è riportato l'output restituito quando il servizio di routing è configurato per indirizzare messaggi al normale servizio di calcolatrice.</span><span class="sxs-lookup"><span data-stu-id="332c7-136">The following is the output returned if the routing service is configured to route messages to the regular Calculator service.</span></span>  
   
         ```Output  
         Add(100,15.99) = 115.99  
         Subtract(145,76.54) = 68.46  
         Multiply(9,81.25) = 731.25  
         Divide(22,7) = 3.14285714285714  
-  
         ```  
   
-6.  Il servizio di calcolatrice e il servizio di calcolo che esegue l'arrotondamento stamperanno inoltre un log delle operazioni richiamate nelle rispettive finestre della console.  
+6.  <span data-ttu-id="332c7-137">Il servizio di calcolatrice e il servizio di calcolo che esegue l'arrotondamento stamperanno inoltre un log delle operazioni richiamate nelle rispettive finestre della console.</span><span class="sxs-lookup"><span data-stu-id="332c7-137">The Calculator Service and the Rounding Calculator Service also print out a log of the operations invoked to their respective console windows.</span></span>  
   
-7.  Nella finestra della console client digitare "quit" e premere INVIO per uscire.  
+7.  <span data-ttu-id="332c7-138">Nella finestra della console client, digitare "quit" e premere INVIO per uscire.</span><span class="sxs-lookup"><span data-stu-id="332c7-138">In the client console window, type "quit" and press ENTER to exit.</span></span>  
   
-8.  Premere INVIO nelle finestre della console dei servizi per terminare i servizi.  
+8.  <span data-ttu-id="332c7-139">Premere INVIO nelle finestre della console dei servizi per terminare i servizi.</span><span class="sxs-lookup"><span data-stu-id="332c7-139">Press ENTER in the services console windows to terminate the services.</span></span>  
   
-## Scenario  
- In questo esempio il router agisce come router basato sul contenuto consentendo a più tipi o implementazioni di servizi di essere esposti mediante un endpoint.  
+## <a name="scenario"></a><span data-ttu-id="332c7-140">Scenario</span><span class="sxs-lookup"><span data-stu-id="332c7-140">Scenario</span></span>  
+ <span data-ttu-id="332c7-141">In questo esempio il router agisce come router basato sul contenuto consentendo a più tipi o implementazioni di servizi di essere esposti mediante un endpoint.</span><span class="sxs-lookup"><span data-stu-id="332c7-141">This sample demonstrates the router acting as a content-based router allowing multiple types or implementation of services to be exposed through one endpoint.</span></span>  
   
-### Scenario reale  
- Contoso desidera virtualizzare i propri servizi per esporre pubblicamente solo un endpoint tramite il quale viene offerto l'accesso a più tipi diversi di servizi.In questo caso, le funzionalità di routing basate sul contenuto del servizio di routing vengono utilizzate per determinare dove devono essere inviate le richieste in entrata.  
+### <a name="real-world-scenario"></a><span data-ttu-id="332c7-142">Scenario reale</span><span class="sxs-lookup"><span data-stu-id="332c7-142">Real World Scenario</span></span>  
+ <span data-ttu-id="332c7-143">Contoso desidera virtualizzare i propri servizi per esporre pubblicamente solo un endpoint tramite il quale viene offerto l'accesso a più tipi diversi di servizi.</span><span class="sxs-lookup"><span data-stu-id="332c7-143">Contoso wants to virtualize all of their services to expose only one endpoint publicly through which they offer access to multiple different types of services.</span></span> <span data-ttu-id="332c7-144">In questo caso, le funzionalità di routing basate sul contenuto del servizio di routing vengono utilizzate per determinare dove devono essere inviate le richieste in entrata.</span><span class="sxs-lookup"><span data-stu-id="332c7-144">In this case they utilize the routing service’s content-based routing capabilities to determine where the incoming requests should be sent.</span></span>  
   
-## Vedere anche  
- [Hosting e salvataggio permanente](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="332c7-145">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="332c7-145">See Also</span></span>  
+ [<span data-ttu-id="332c7-146">Hosting di AppFabric ed esempi di persistenza</span><span class="sxs-lookup"><span data-stu-id="332c7-146">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

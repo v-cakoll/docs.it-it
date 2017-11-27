@@ -1,51 +1,55 @@
 ---
-title: "106 - CancelRequestRecord | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 106 - CancelRequestRecord
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f72a59aa-8093-4a8e-94df-40acaffb1ffb
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 36de6eabb247cb59e8759032e5cd6d6996b52d45
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# 106 - CancelRequestRecord
-## Proprietà  
+# <a name="106---cancelrequestrecord"></a><span data-ttu-id="06090-102">106 - CancelRequestRecord</span><span class="sxs-lookup"><span data-stu-id="06090-102">106 - CancelRequestRecord</span></span>
+## <a name="properties"></a><span data-ttu-id="06090-103">Proprietà</span><span class="sxs-lookup"><span data-stu-id="06090-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|106|  
-|Parole chiave|EndToEndMonitoring, Risoluzione dei problemi, HealthMonitoring, WFTracking|  
-|Livello|Info|  
-|Canale|Microsoft\-Windows\-Server applicazioni\-Applicazioni\/Analitico|  
+|<span data-ttu-id="06090-104">Id</span><span class="sxs-lookup"><span data-stu-id="06090-104">Id</span></span>|<span data-ttu-id="06090-105">106</span><span class="sxs-lookup"><span data-stu-id="06090-105">106</span></span>|  
+|<span data-ttu-id="06090-106">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="06090-106">Keywords</span></span>|<span data-ttu-id="06090-107">EndToEndMonitoring, Risoluzione dei problemi, HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="06090-107">EndToEndMonitoring, Troubleshooting, HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="06090-108">Livello</span><span class="sxs-lookup"><span data-stu-id="06090-108">Level</span></span>|<span data-ttu-id="06090-109">Informazioni</span><span class="sxs-lookup"><span data-stu-id="06090-109">Information</span></span>|  
+|<span data-ttu-id="06090-110">Canale</span><span class="sxs-lookup"><span data-stu-id="06090-110">Channel</span></span>|<span data-ttu-id="06090-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="06090-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Descrizione  
- Questo evento viene creato dal partecipante del rilevamento ETW quando un'attività all'interno di un'istanza del flusso di lavoro crea cancelrequestedrecord.  
+## <a name="description"></a><span data-ttu-id="06090-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="06090-112">Description</span></span>  
+ <span data-ttu-id="06090-113">Questo evento viene creato dal partecipante del rilevamento ETW quando un'attività all'interno di un'istanza del flusso di lavoro crea cancelrequestedrecord.</span><span class="sxs-lookup"><span data-stu-id="06090-113">This event is emitted by the ETW tracking participant when a activity within a workflow instance emits cancelrequestedrecord.</span></span>  
   
-## Messaggio  
- TrackRecord \= CancelRequestedRecord, InstanceID\=%1, RecordNumber\=%2, EventTime\=%3, Name\=%4, ActivityId\=%5, ActivityInstanceId\=%6, ActivityTypeName \= %7, ChildActivityName \= %8, ChildActivityId \= %9, ChildActivityInstanceId \= %10, ChildActivityTypeName \=%11, Annotations\=%12, ProfileName \= %13  
+## <a name="message"></a><span data-ttu-id="06090-114">Messaggio</span><span class="sxs-lookup"><span data-stu-id="06090-114">Message</span></span>  
+ <span data-ttu-id="06090-115">TrackRecord = CancelRequestedRecord, InstanceID=%1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityId=%5, ActivityInstanceId=%6, ActivityTypeName = %7, ChildActivityName = %8, ChildActivityId = %9, ChildActivityInstanceId = %10, ChildActivityTypeName =%11, Annotations=%12, ProfileName = %13</span><span class="sxs-lookup"><span data-stu-id="06090-115">TrackRecord = CancelRequestedRecord, InstanceID=%1, RecordNumber=%2, EventTime=%3, Name=%4, ActivityId=%5, ActivityInstanceId=%6, ActivityTypeName = %7, ChildActivityName = %8, ChildActivityId = %9, ChildActivityInstanceId = %10, ChildActivityTypeName =%11, Annotations=%12, ProfileName = %13</span></span>  
   
-## Dettagli  
+## <a name="details"></a><span data-ttu-id="06090-116">Dettagli</span><span class="sxs-lookup"><span data-stu-id="06090-116">Details</span></span>  
   
-|Nome elemento dati|Tipo elemento dati|Descrizione|  
-|------------------------|------------------------|-----------------|  
-|InstanceId|xs:GUID|ID istanza del flusso di lavoro.|  
-|RecordNumber|xs:long|Numero di sequenza del record creato.|  
-|EventTime|xs:dateTime|Ora di creazione dell'evento in UTC.|  
-|Name|xs:string|Nome dell'attività che ha richiesto l'operazione di annullamento.|  
-|ActivityId|xs:string|ID dell'attività che ha richiesto l'operazione di annullamento.|  
-|ActivityInstanceId|xs:string|ID istanza dell'attività che ha richiesto l'operazione di annullamento.|  
-|ActivityTypeName|xs:string|Tipo di attività che ha richiesto l'operazione di annullamento.|  
-|ChildActivityName|xs:string|Nome dell'attività annullata.|  
-|ChildActivityId|xs:string|ID dell'attività annullata.|  
-|ChildActivityInstanceId|xs:string|ID istanza dell'attività annullata.|  
-|ChildActivityTypeName|xs:string|Tipo di attività annullata.|  
-|Annotations|xs:string|Annotazioni aggiunte a questo evento.I valori sono archiviati in un elemento xml nel formato \<items\>\< nome elemento \= "annotationName" tipo\="System.String"\>annotationValue\<\/item\>\<\/items\>.Se non è specificata alcuna annotazione, la stringa contiene \<items\/\>.La dimensione dell'evento ETW è limitata da quella del buffer ETW o dal payload massimo per un evento ETW.Se la dimensione dell'evento supera i limiti ETW, l'evento viene troncato eliminando le annotazioni e sostituendo il valore di annotazione con \<items\>...\<\/items.\>|  
-|ProfileName|xs:string|Nome o profilo di rilevamento che ha determinato la creazione di questo evento.|  
-|HostReference|xs:string|Per i servizi ospitati su Web, questo campo identifica in modo univoco il servizio nella gerarchia Web.Il relativo formato è definito come 'Nome sito Web&#124;Percorso virtuale applicazione&#124;Percorso virtuale servizio&#124;NomeServizio' Esempio: 'Sito Web predefinito\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'|  
-|AppDomain|xs:string|Stringa restituita da AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="06090-117">Nome elemento dati</span><span class="sxs-lookup"><span data-stu-id="06090-117">Data Item Name</span></span>|<span data-ttu-id="06090-118">Tipo elemento dati</span><span class="sxs-lookup"><span data-stu-id="06090-118">Data Item Type</span></span>|<span data-ttu-id="06090-119">Descrizione</span><span class="sxs-lookup"><span data-stu-id="06090-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="06090-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="06090-120">InstanceId</span></span>|<span data-ttu-id="06090-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="06090-121">xs:GUID</span></span>|<span data-ttu-id="06090-122">ID istanza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="06090-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="06090-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="06090-123">RecordNumber</span></span>|<span data-ttu-id="06090-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="06090-124">xs:long</span></span>|<span data-ttu-id="06090-125">Numero di sequenza del record creato.</span><span class="sxs-lookup"><span data-stu-id="06090-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="06090-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="06090-126">EventTime</span></span>|<span data-ttu-id="06090-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="06090-127">xs:dateTime</span></span>|<span data-ttu-id="06090-128">Ora di creazione dell'evento in UTC.</span><span class="sxs-lookup"><span data-stu-id="06090-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="06090-129">Nome</span><span class="sxs-lookup"><span data-stu-id="06090-129">Name</span></span>|<span data-ttu-id="06090-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-130">xs:string</span></span>|<span data-ttu-id="06090-131">Nome dell'attività che ha richiesto l'operazione di annullamento.</span><span class="sxs-lookup"><span data-stu-id="06090-131">The name of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="06090-132">ActivityId</span><span class="sxs-lookup"><span data-stu-id="06090-132">ActivityId</span></span>|<span data-ttu-id="06090-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-133">xs:string</span></span>|<span data-ttu-id="06090-134">ID dell'attività che ha richiesto l'operazione di annullamento.</span><span class="sxs-lookup"><span data-stu-id="06090-134">The id of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="06090-135">ActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="06090-135">ActivityInstanceId</span></span>|<span data-ttu-id="06090-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-136">xs:string</span></span>|<span data-ttu-id="06090-137">ID istanza dell'attività che ha richiesto l'operazione di annullamento.</span><span class="sxs-lookup"><span data-stu-id="06090-137">The instance id of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="06090-138">ActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="06090-138">ActivityTypeName</span></span>|<span data-ttu-id="06090-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-139">xs:string</span></span>|<span data-ttu-id="06090-140">Tipo di attività che ha richiesto l'operazione di annullamento.</span><span class="sxs-lookup"><span data-stu-id="06090-140">The type of the activity that requested the cancel operation</span></span>|  
+|<span data-ttu-id="06090-141">ChildActivityName</span><span class="sxs-lookup"><span data-stu-id="06090-141">ChildActivityName</span></span>|<span data-ttu-id="06090-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-142">xs:string</span></span>|<span data-ttu-id="06090-143">Nome dell'attività annullata.</span><span class="sxs-lookup"><span data-stu-id="06090-143">The name of the activity being canceled</span></span>|  
+|<span data-ttu-id="06090-144">ChildActivityId</span><span class="sxs-lookup"><span data-stu-id="06090-144">ChildActivityId</span></span>|<span data-ttu-id="06090-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-145">xs:string</span></span>|<span data-ttu-id="06090-146">ID dell'attività annullata.</span><span class="sxs-lookup"><span data-stu-id="06090-146">The id of the activity being canceled</span></span>|  
+|<span data-ttu-id="06090-147">ChildActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="06090-147">ChildActivityInstanceId</span></span>|<span data-ttu-id="06090-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-148">xs:string</span></span>|<span data-ttu-id="06090-149">ID istanza dell'attività annullata.</span><span class="sxs-lookup"><span data-stu-id="06090-149">The instance id of the activity being canceled</span></span>|  
+|<span data-ttu-id="06090-150">ChildActivityTypeName</span><span class="sxs-lookup"><span data-stu-id="06090-150">ChildActivityTypeName</span></span>|<span data-ttu-id="06090-151">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-151">xs:string</span></span>|<span data-ttu-id="06090-152">Tipo di attività annullata.</span><span class="sxs-lookup"><span data-stu-id="06090-152">The type of the activity being canceled</span></span>|  
+|<span data-ttu-id="06090-153">Annotazioni</span><span class="sxs-lookup"><span data-stu-id="06090-153">Annotations</span></span>|<span data-ttu-id="06090-154">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-154">xs:string</span></span>|<span data-ttu-id="06090-155">Annotazioni aggiunte a questo evento.</span><span class="sxs-lookup"><span data-stu-id="06090-155">The annotations that were added to this event.</span></span>  <span data-ttu-id="06090-156">I valori vengono archiviati in un elemento xml nel formato \<elementi >\< nome elemento = "Nomeannotazione" Type = "> Valoreannotazione\</item > \< /items >.</span><span class="sxs-lookup"><span data-stu-id="06090-156">The values are stored in an xml element in the format \<items>\< item  name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span>  <span data-ttu-id="06090-157">Se viene specificata alcuna annotazione, la stringa contiene \<elementi / >.</span><span class="sxs-lookup"><span data-stu-id="06090-157">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="06090-158">La dimensione dell'evento ETW è limitata da quella del buffer ETW o dal payload massimo per un evento ETW.</span><span class="sxs-lookup"><span data-stu-id="06090-158">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="06090-159">Se la dimensione dell'evento supera i limiti ETW, l'evento viene troncato eliminando le annotazioni e sostituendo il valore di annotazione con \<elementi >...  \< /items >.</span><span class="sxs-lookup"><span data-stu-id="06090-159">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="06090-160">ProfileName</span><span class="sxs-lookup"><span data-stu-id="06090-160">ProfileName</span></span>|<span data-ttu-id="06090-161">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-161">xs:string</span></span>|<span data-ttu-id="06090-162">Nome o profilo di rilevamento che ha determinato la creazione di questo evento.</span><span class="sxs-lookup"><span data-stu-id="06090-162">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="06090-163">HostReference</span><span class="sxs-lookup"><span data-stu-id="06090-163">HostReference</span></span>|<span data-ttu-id="06090-164">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-164">xs:string</span></span>|<span data-ttu-id="06090-165">Per i servizi ospitati su Web questo campo identifica in modo univoco il servizio nella gerarchia Web.</span><span class="sxs-lookup"><span data-stu-id="06090-165">For web hosted services, this field uniquely identifies the service in the web hierarchy.</span></span>  <span data-ttu-id="06090-166">Il formato viene definito come ' nome sito Web dell'applicazione virtuale percorso &#124; Percorso virtuale servizio &#124; Nomeservizio ' esempio: ' Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService'</span><span class="sxs-lookup"><span data-stu-id="06090-166">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'</span></span>|  
+|<span data-ttu-id="06090-167">AppDomain</span><span class="sxs-lookup"><span data-stu-id="06090-167">AppDomain</span></span>|<span data-ttu-id="06090-168">xs:string</span><span class="sxs-lookup"><span data-stu-id="06090-168">xs:string</span></span>|<span data-ttu-id="06090-169">Stringa restituita da AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="06090-169">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

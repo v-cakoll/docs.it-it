@@ -1,94 +1,92 @@
 ---
-title: "Semantica di confronto (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Semantica di confronto (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f1fd1c21fc4f156bfe7a5abf9f76bd341e2d0f10
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Semantica di confronto (Entity SQL)
-L'esecuzione di uno degli operatori [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguenti comporta un confronto tra istanze di tipi:  
+# <a name="comparison-semantics-entity-sql"></a><span data-ttu-id="0e66a-102">Semantica di confronto (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="0e66a-102">Comparison Semantics (Entity SQL)</span></span>
+<span data-ttu-id="0e66a-103">L'esecuzione di uno degli operatori [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguenti comporta un confronto tra istanze di tipi:</span><span class="sxs-lookup"><span data-stu-id="0e66a-103">Performing any of the following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators involves comparison of type instances:</span></span>  
   
-## Confronto esplicito  
- Operazioni di uguaglianza:  
+## <a name="explicit-comparison"></a><span data-ttu-id="0e66a-104">Confronto esplicito</span><span class="sxs-lookup"><span data-stu-id="0e66a-104">Explicit comparison</span></span>  
+ <span data-ttu-id="0e66a-105">Operazioni di uguaglianza:</span><span class="sxs-lookup"><span data-stu-id="0e66a-105">Equality operations:</span></span>  
   
--   \=  
+-   =  
   
--   \!\=  
+-   <span data-ttu-id="0e66a-106">!=</span><span class="sxs-lookup"><span data-stu-id="0e66a-106">!=</span></span>  
   
- Operazioni di ordinamento:  
+ <span data-ttu-id="0e66a-107">Operazioni di ordinamento:</span><span class="sxs-lookup"><span data-stu-id="0e66a-107">Ordering operations:</span></span>  
   
--   \<  
+-   <  
   
--   \<\=  
+-   \<=  
   
--   \>  
+-   >  
   
--   \>\=  
+-   \>=  
   
- Operazioni di impostazione del supporto dei valori Null:  
+ <span data-ttu-id="0e66a-108">Operazioni di impostazione del supporto dei valori Null:</span><span class="sxs-lookup"><span data-stu-id="0e66a-108">Nullability operations:</span></span>  
   
--   IS NULL  
+-   <span data-ttu-id="0e66a-109">IS NULL</span><span class="sxs-lookup"><span data-stu-id="0e66a-109">IS NULL</span></span>  
   
--   IS NOT NULL  
+-   <span data-ttu-id="0e66a-110">IS NOT NULL</span><span class="sxs-lookup"><span data-stu-id="0e66a-110">IS NOT NULL</span></span>  
   
-## Distinzione esplicita  
- Distinzione di uguaglianza:  
+## <a name="explicit-distinction"></a><span data-ttu-id="0e66a-111">Distinzione esplicita</span><span class="sxs-lookup"><span data-stu-id="0e66a-111">Explicit distinction</span></span>  
+ <span data-ttu-id="0e66a-112">Distinzione di uguaglianza:</span><span class="sxs-lookup"><span data-stu-id="0e66a-112">Equality distinction:</span></span>  
   
--   DISTINCT  
+-   <span data-ttu-id="0e66a-113">DISTINCT</span><span class="sxs-lookup"><span data-stu-id="0e66a-113">DISTINCT</span></span>  
   
--   GROUP BY  
+-   <span data-ttu-id="0e66a-114">GROUP BY</span><span class="sxs-lookup"><span data-stu-id="0e66a-114">GROUP BY</span></span>  
   
- Distinzione di ordinamento:  
+ <span data-ttu-id="0e66a-115">Distinzione di ordinamento:</span><span class="sxs-lookup"><span data-stu-id="0e66a-115">Ordering distinction:</span></span>  
   
--   ORDER BY  
+-   <span data-ttu-id="0e66a-116">ORDER BY</span><span class="sxs-lookup"><span data-stu-id="0e66a-116">ORDER BY</span></span>  
   
-## Distinzione implicita  
- Predicati e operazioni sui set \(uguaglianza\):  
+## <a name="implicit-distinction"></a><span data-ttu-id="0e66a-117">Distinzione implicita</span><span class="sxs-lookup"><span data-stu-id="0e66a-117">Implicit distinction</span></span>  
+ <span data-ttu-id="0e66a-118">Predicati e operazioni sui set (uguaglianza):</span><span class="sxs-lookup"><span data-stu-id="0e66a-118">Set operations and predicates (equality):</span></span>  
   
--   UNION  
+-   <span data-ttu-id="0e66a-119">UNION</span><span class="sxs-lookup"><span data-stu-id="0e66a-119">UNION</span></span>  
   
--   INTERSECT  
+-   <span data-ttu-id="0e66a-120">INTERSECT</span><span class="sxs-lookup"><span data-stu-id="0e66a-120">INTERSECT</span></span>  
   
--   EXCEPT  
+-   <span data-ttu-id="0e66a-121">EXCEPT</span><span class="sxs-lookup"><span data-stu-id="0e66a-121">EXCEPT</span></span>  
   
--   SET  
+-   <span data-ttu-id="0e66a-122">SET</span><span class="sxs-lookup"><span data-stu-id="0e66a-122">SET</span></span>  
   
--   OVERLAPS  
+-   <span data-ttu-id="0e66a-123">OVERLAPS</span><span class="sxs-lookup"><span data-stu-id="0e66a-123">OVERLAPS</span></span>  
   
- Predicati degli elementi \(uguaglianza\):  
+ <span data-ttu-id="0e66a-124">Predicati degli elementi (uguaglianza):</span><span class="sxs-lookup"><span data-stu-id="0e66a-124">Item predicates (equality):</span></span>  
   
--   IN  
+-   <span data-ttu-id="0e66a-125">IN</span><span class="sxs-lookup"><span data-stu-id="0e66a-125">IN</span></span>  
   
-## Combinazioni supportate  
- Nella tabella seguente sono illustrate tutte le combinazioni supportate di operatori di confronto per ognuno dei tipi:  
+## <a name="supported-combinations"></a><span data-ttu-id="0e66a-126">Combinazioni supportate</span><span class="sxs-lookup"><span data-stu-id="0e66a-126">Supported Combinations</span></span>  
+ <span data-ttu-id="0e66a-127">Nella tabella seguente sono illustrate tutte le combinazioni supportate di operatori di confronto per ognuno dei tipi:</span><span class="sxs-lookup"><span data-stu-id="0e66a-127">The following table shows all the supported combinations of comparison operators for each kind of type:</span></span>  
   
-|||||||||  
+|<span data-ttu-id="0e66a-128">**Type**</span><span class="sxs-lookup"><span data-stu-id="0e66a-128">**Type**</span></span>|**=**<br /><br /> <span data-ttu-id="0e66a-129">**!=**</span><span class="sxs-lookup"><span data-stu-id="0e66a-129">**!=**</span></span>|<span data-ttu-id="0e66a-130">**RAGGRUPPA PER**</span><span class="sxs-lookup"><span data-stu-id="0e66a-130">**GROUP BY**</span></span><br /><br /> <span data-ttu-id="0e66a-131">**DISTINCT**</span><span class="sxs-lookup"><span data-stu-id="0e66a-131">**DISTINCT**</span></span>|<span data-ttu-id="0e66a-132">**UNION**</span><span class="sxs-lookup"><span data-stu-id="0e66a-132">**UNION**</span></span><br /><br /> <span data-ttu-id="0e66a-133">**SI INTERSECANO**</span><span class="sxs-lookup"><span data-stu-id="0e66a-133">**INTERSECT**</span></span><br /><br /> <span data-ttu-id="0e66a-134">**LA DIFFERENZA**</span><span class="sxs-lookup"><span data-stu-id="0e66a-134">**EXCEPT**</span></span><br /><br /> <span data-ttu-id="0e66a-135">**SET**</span><span class="sxs-lookup"><span data-stu-id="0e66a-135">**SET**</span></span><br /><br /> <span data-ttu-id="0e66a-136">**SI SOVRAPPONE**</span><span class="sxs-lookup"><span data-stu-id="0e66a-136">**OVERLAPS**</span></span>|<span data-ttu-id="0e66a-137">**IN**</span><span class="sxs-lookup"><span data-stu-id="0e66a-137">**IN**</span></span>|<span data-ttu-id="0e66a-138">**<   <=**</span><span class="sxs-lookup"><span data-stu-id="0e66a-138">**<   <=**</span></span><br /><br /> <span data-ttu-id="0e66a-139">**>   >=**</span><span class="sxs-lookup"><span data-stu-id="0e66a-139">**>   >=**</span></span>|<span data-ttu-id="0e66a-140">**ORDER BY**</span><span class="sxs-lookup"><span data-stu-id="0e66a-140">**ORDER BY**</span></span>|<span data-ttu-id="0e66a-141">**È NULL**</span><span class="sxs-lookup"><span data-stu-id="0e66a-141">**IS NULL**</span></span><br /><br /> <span data-ttu-id="0e66a-142">**NON È NULL**</span><span class="sxs-lookup"><span data-stu-id="0e66a-142">**IS NOT NULL**</span></span>|  
 |-|-|-|-|-|-|-|-|  
-|**Tipo**|**\=**<br /><br /> **\!\=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**\<   \<\=**<br /><br /> **\>   \>\=**|**ORDER BY**|**IS NULL**<br /><br /> **IS NOT NULL**|  
-|Tipo di entità|Rif<sup>1</sup>|Tutte le proprietà<sup>2</sup>|Tutte le proprietà<sup>2</sup>|Tutte le proprietà<sup>2</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Rif<sup>1</sup>|  
-|Tipo complesso|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|  
-|Riga|Tutte le proprietà<sup>4</sup>|Tutte le proprietà<sup>4</sup>|Tutte le proprietà<sup>4</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Tutte le proprietà<sup>4</sup>|Eccezione generata<sup>3</sup>|  
-|Tipo primitivo|Specifico del provider|Specifico del provider|Specifico del provider|Specifico del provider|Specifico del provider|Specifico del provider|Specifico del provider|  
-|Multiset|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|  
-|Rif|Sì <sup>5</sup>|Sì <sup>5</sup>|Sì <sup>5</sup>|Sì <sup>5</sup>|Throw|Throw|Sì <sup>5</sup>|  
-|Associazione<br /><br /> tipo|Eccezione generata<sup>3</sup>|Throw|Throw|Throw|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|Eccezione generata<sup>3</sup>|  
+|<span data-ttu-id="0e66a-143">Tipo di entità</span><span class="sxs-lookup"><span data-stu-id="0e66a-143">Entity type</span></span>|<span data-ttu-id="0e66a-144">Ref<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-144">Ref<sup>1</sup></span></span>|<span data-ttu-id="0e66a-145">Tutte le proprietà<sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-145">All properties<sup>2</sup></span></span>|<span data-ttu-id="0e66a-146">Tutte le proprietà<sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-146">All properties<sup>2</sup></span></span>|<span data-ttu-id="0e66a-147">Tutte le proprietà<sup>2</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-147">All properties<sup>2</sup></span></span>|<span data-ttu-id="0e66a-148">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-148">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-149">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-149">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-150">Ref<sup>1</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-150">Ref<sup>1</sup></span></span>|  
+|<span data-ttu-id="0e66a-151">Tipo complesso</span><span class="sxs-lookup"><span data-stu-id="0e66a-151">Complex type</span></span>|<span data-ttu-id="0e66a-152">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-152">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-153">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-153">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-154">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-154">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-155">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-155">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-156">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-156">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-157">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-157">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-158">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-158">Throw<sup>3</sup></span></span>|  
+|<span data-ttu-id="0e66a-159">Riga</span><span class="sxs-lookup"><span data-stu-id="0e66a-159">Row</span></span>|<span data-ttu-id="0e66a-160">Tutte le proprietà<sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-160">All properties<sup>4</sup></span></span>|<span data-ttu-id="0e66a-161">Tutte le proprietà<sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-161">All properties<sup>4</sup></span></span>|<span data-ttu-id="0e66a-162">Tutte le proprietà<sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-162">All properties<sup>4</sup></span></span>|<span data-ttu-id="0e66a-163">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-163">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-164">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-164">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-165">Tutte le proprietà<sup>4</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-165">All properties<sup>4</sup></span></span>|<span data-ttu-id="0e66a-166">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-166">Throw<sup>3</sup></span></span>|  
+|<span data-ttu-id="0e66a-167">Tipo primitivo</span><span class="sxs-lookup"><span data-stu-id="0e66a-167">Primitive type</span></span>|<span data-ttu-id="0e66a-168">Specifico del provider</span><span class="sxs-lookup"><span data-stu-id="0e66a-168">Provider-specific</span></span>|<span data-ttu-id="0e66a-169">Specifico del provider</span><span class="sxs-lookup"><span data-stu-id="0e66a-169">Provider-specific</span></span>|<span data-ttu-id="0e66a-170">Specifico del provider</span><span class="sxs-lookup"><span data-stu-id="0e66a-170">Provider-specific</span></span>|<span data-ttu-id="0e66a-171">Specifico del provider</span><span class="sxs-lookup"><span data-stu-id="0e66a-171">Provider-specific</span></span>|<span data-ttu-id="0e66a-172">Specifico del provider</span><span class="sxs-lookup"><span data-stu-id="0e66a-172">Provider-specific</span></span>|<span data-ttu-id="0e66a-173">Specifico del provider</span><span class="sxs-lookup"><span data-stu-id="0e66a-173">Provider-specific</span></span>|<span data-ttu-id="0e66a-174">Specifico del provider</span><span class="sxs-lookup"><span data-stu-id="0e66a-174">Provider-specific</span></span>|  
+|<span data-ttu-id="0e66a-175">Multiset</span><span class="sxs-lookup"><span data-stu-id="0e66a-175">Multiset</span></span>|<span data-ttu-id="0e66a-176">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-176">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-177">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-177">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-178">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-178">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-179">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-179">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-180">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-180">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-181">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-181">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-182">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-182">Throw<sup>3</sup></span></span>|  
+|<span data-ttu-id="0e66a-183">Rif</span><span class="sxs-lookup"><span data-stu-id="0e66a-183">Ref</span></span>|<span data-ttu-id="0e66a-184">Sì<sup>5</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-184">Yes<sup>5</sup></span></span>|<span data-ttu-id="0e66a-185">Sì<sup>5</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-185">Yes<sup>5</sup></span></span>|<span data-ttu-id="0e66a-186">Sì<sup>5</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-186">Yes<sup>5</sup></span></span>|<span data-ttu-id="0e66a-187">Sì<sup>5</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-187">Yes<sup>5</sup></span></span>|<span data-ttu-id="0e66a-188">Throw</span><span class="sxs-lookup"><span data-stu-id="0e66a-188">Throw</span></span>|<span data-ttu-id="0e66a-189">Throw</span><span class="sxs-lookup"><span data-stu-id="0e66a-189">Throw</span></span>|<span data-ttu-id="0e66a-190">Sì<sup>5</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-190">Yes<sup>5</sup></span></span>|  
+|<span data-ttu-id="0e66a-191">Associazione</span><span class="sxs-lookup"><span data-stu-id="0e66a-191">Association</span></span><br /><br /> <span data-ttu-id="0e66a-192">type</span><span class="sxs-lookup"><span data-stu-id="0e66a-192">type</span></span>|<span data-ttu-id="0e66a-193">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-193">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-194">Throw</span><span class="sxs-lookup"><span data-stu-id="0e66a-194">Throw</span></span>|<span data-ttu-id="0e66a-195">Throw</span><span class="sxs-lookup"><span data-stu-id="0e66a-195">Throw</span></span>|<span data-ttu-id="0e66a-196">Throw</span><span class="sxs-lookup"><span data-stu-id="0e66a-196">Throw</span></span>|<span data-ttu-id="0e66a-197">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-197">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-198">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-198">Throw<sup>3</sup></span></span>|<span data-ttu-id="0e66a-199">Generare<sup>3</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-199">Throw<sup>3</sup></span></span>|  
   
- <sup>1</sup>I riferimenti delle istanze del tipo di entità specificato vengono confrontati in modo implicito, come illustrato nell'esempio seguente:  
+ <span data-ttu-id="0e66a-200"><sup>1</sup>vengono confrontati in modo implicito i riferimenti delle istanze di tipo di entità specificato, come illustrato nell'esempio seguente:</span><span class="sxs-lookup"><span data-stu-id="0e66a-200"><sup>1</sup>The references of the given entity type instances are implicitly compared, as shown in the following example:</span></span>  
   
 ```  
 SELECT p1, p2   
@@ -97,7 +95,7 @@ FROM AdventureWorksEntities.Product AS p1
 WHERE p1 != p2 OR p1 IS NULL  
 ```  
   
- Un'istanza di entità non può essere confrontata con un riferimento esplicito.  Se viene eseguito un tentativo di questo tipo, viene generata un'eccezione.  La query seguente comporta, ad esempio, la generazione di un'eccezione:  
+ <span data-ttu-id="0e66a-201">Un'istanza di entità non può essere confrontata con un riferimento esplicito.</span><span class="sxs-lookup"><span data-stu-id="0e66a-201">An entity instance cannot be compared to an explicit reference.</span></span> <span data-ttu-id="0e66a-202">Se viene eseguito un tentativo di questo tipo, viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="0e66a-202">If this is attempted, an exception is thrown.</span></span> <span data-ttu-id="0e66a-203">La query seguente comporta, ad esempio, la generazione di un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="0e66a-203">For example, the following query will throw an exception:</span></span>  
   
 ```  
 SELECT p1, p2   
@@ -106,13 +104,13 @@ FROM AdventureWorksEntities.Product AS p1
 WHERE p1 != REF(p2)  
 ```  
   
- <sup>2</sup>Le proprietà dei tipi complessi sono impostate come bidimensionali prima di essere inviate all'archivio, pertanto è possibile eseguirne il confronto \(a condizione che tutte le relative proprietà possano essere confrontate\).  Vedere anche <sup>4.</sup>  
+ <span data-ttu-id="0e66a-204"><sup>2</sup>le proprietà dei tipi complessi sono impostate come bidimensionali prima dell'invio all'archivio, in modo che diventino confrontabili (fino a quando tutte le relative proprietà sono confrontabili).</span><span class="sxs-lookup"><span data-stu-id="0e66a-204"><sup>2</sup>Properties of complex types are flattened out before being sent to the store, so they become comparable (as long as all their properties are comparable).</span></span> <span data-ttu-id="0e66a-205">Vedere anche <sup>4.</sup></span><span class="sxs-lookup"><span data-stu-id="0e66a-205">Also see <sup>4.</sup></span></span>  
   
- <sup>3</sup>Il runtime di Entity Framework rileva il caso non supportato e genera un'eccezione significativa senza ricorrere al provider o all'archivio.  
+ <span data-ttu-id="0e66a-206"><sup>3</sup>runtime di Entity Framework rileva il caso non supportato e genera un'eccezione significativa senza ricorrere al provider o all'archivio.</span><span class="sxs-lookup"><span data-stu-id="0e66a-206"><sup>3</sup>The Entity Framework runtime detects the unsupported case and throws a meaningful exception without engaging the provider/store.</span></span>  
   
- <sup>4</sup>Viene eseguito un tentativo di confrontare tutte le proprietà.  Se è presente una proprietà che non è possibile confrontare, ad esempio un tipo text, ntext o image, viene generata un'eccezione nel server.  
+ <span data-ttu-id="0e66a-207"><sup>4</sup>viene effettuato un tentativo di confrontare tutte le proprietà.</span><span class="sxs-lookup"><span data-stu-id="0e66a-207"><sup>4</sup>An attempt is made to compare all properties.</span></span> <span data-ttu-id="0e66a-208">Se è presente una proprietà che non è possibile confrontare, ad esempio un tipo text, ntext o image, viene generata un'eccezione nel server.</span><span class="sxs-lookup"><span data-stu-id="0e66a-208">If there is a property that is of a non-comparable type, such as text, ntext, or image, a server exception might be thrown.</span></span>  
   
- <sup>5</sup>Vengono confrontati tutti i singoli elementi dei riferimenti \(inclusi il nome del set di entità e tutte le proprietà chiave del tipo di entità\).  
+ <span data-ttu-id="0e66a-209"><sup>5</sup>vengono confrontati tutti i singoli elementi dei riferimenti (che include il nome del set di entità e tutte le proprietà chiave del tipo di entità).</span><span class="sxs-lookup"><span data-stu-id="0e66a-209"><sup>5</sup>All individual elements of the references are compared (this includes the entity set name and all the key properties of the entity type).</span></span>  
   
-## Vedere anche  
- [Panoramica su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="0e66a-210">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0e66a-210">See Also</span></span>  
+ [<span data-ttu-id="0e66a-211">Panoramica di Entity SQL</span><span class="sxs-lookup"><span data-stu-id="0e66a-211">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

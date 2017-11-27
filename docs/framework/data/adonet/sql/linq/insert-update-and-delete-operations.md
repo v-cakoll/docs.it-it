@@ -1,41 +1,47 @@
 ---
-title: "Operazioni Insert, Update e Delete | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Operazioni di inserimento, aggiornamento ed eliminazione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 26a43a4f-83c9-4732-806d-bb23aad0ff6b
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: adbe7faa50b06c330b942b451d5a4a0bd832cde3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Operazioni Insert, Update e Delete
-In `Insert` le operazioni `Update`, `Delete`e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vengono eseguite aggiungendo, modificando e rimuovendo oggetti nel modello a oggetti.  Per impostazione predefinita, le azioni vengono convertite da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in SQL e le modifiche vengono inviate al database.  
+# <a name="insert-update-and-delete-operations"></a><span data-ttu-id="b10e2-102">Operazioni di inserimento, aggiornamento ed eliminazione</span><span class="sxs-lookup"><span data-stu-id="b10e2-102">Insert, Update, and Delete Operations</span></span>
+<span data-ttu-id="b10e2-103">In `Insert` le operazioni `Update`, `Delete`e [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vengono eseguite aggiungendo, modificando e rimuovendo oggetti nel modello a oggetti.</span><span class="sxs-lookup"><span data-stu-id="b10e2-103">You perform `Insert`, `Update`, and `Delete` operations in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] by adding, changing, and removing objects in your object model.</span></span> <span data-ttu-id="b10e2-104">Per impostazione predefinita, le azioni vengono convertite da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in SQL e le modifiche vengono inviate al database.</span><span class="sxs-lookup"><span data-stu-id="b10e2-104">By default, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translates your actions to SQL and submits the changes to the database.</span></span>  
   
- In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene offerta la massima flessibilità per quanto riguarda la modifica e il salvataggio in modo permanente delle modifiche apportate agli oggetti.  Non appena gli oggetti entità sono disponibili, recuperandoli tramite una query o costruendoli di nuovo, è possibile modificarli nell'applicazione come oggetti normali.  In altre parole, è possibile modificarne i valori e aggiungerli o rimuoverli dalle raccolte.  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene tenuta traccia delle modifiche, che verranno trasmesse di nuovo al database quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b10e2-105">offre la massima flessibilità per la modifica e salvare le modifiche apportate agli oggetti in modo permanente.</span><span class="sxs-lookup"><span data-stu-id="b10e2-105"> offers maximum flexibility in manipulating and persisting changes that you made to your objects.</span></span> <span data-ttu-id="b10e2-106">Non appena gli oggetti entità sono disponibili (in recuperandoli tramite una query o costruendoli), è possibile modificarle in un'applicazione come oggetti normali.</span><span class="sxs-lookup"><span data-stu-id="b10e2-106">As soon as entity objects are available (either by retrieving them through a query or by constructing them anew), you can change them as typical objects in your application.</span></span> <span data-ttu-id="b10e2-107">Vale a dire, è possibile modificare i relativi valori, è possibile aggiungerli alle raccolte e rimuoverli dalle raccolte.</span><span class="sxs-lookup"><span data-stu-id="b10e2-107">That is, you can change their values, you can add them to your collections, and you can remove them from your collections.</span></span> <span data-ttu-id="b10e2-108">In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] viene tenuta traccia delle modifiche, che verranno trasmesse di nuovo al database quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span><span class="sxs-lookup"><span data-stu-id="b10e2-108">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tracks your changes and is ready to transmit them back to the database when you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] non supporta o non riconosce operazioni di eliminazione a catena.  Se si desidera eliminare una riga di una tabella contenente vincoli, è necessario impostare la regola `ON DELETE CASCADE` nel vincolo di chiave esterna del database o usare il proprio codice per eliminare innanzitutto gli oggetti figlio che impediscono l'eliminazione dell'oggetto padre. In caso contrario, viene generata un'eccezione.  Per altre informazioni, vedere [Procedura: eliminare righe dal database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="b10e2-109"> non supporta o non riconosce operazioni di eliminazione a catena.</span><span class="sxs-lookup"><span data-stu-id="b10e2-109"> does not support or recognize cascade-delete operations.</span></span> <span data-ttu-id="b10e2-110">Se si desidera eliminare una riga in una tabella contenente vincoli, è necessario impostare il `ON DELETE CASCADE` regola nel vincolo di chiave esterna nel database o utilizzare il proprio codice per eliminare prima gli oggetti figlio che impediscono l'eliminazione oggetto padre.</span><span class="sxs-lookup"><span data-stu-id="b10e2-110">If you want to delete a row in a table that has constraints against it, you must either set the `ON DELETE CASCADE` rule in the foreign-key constraint in the database, or use your own code to first delete the child objects that prevent the parent object from being deleted.</span></span> <span data-ttu-id="b10e2-111">In caso contrario, viene generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="b10e2-111">Otherwise, an exception is thrown.</span></span> <span data-ttu-id="b10e2-112">Per ulteriori informazioni, vedere [procedura: eliminare righe dal Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).</span><span class="sxs-lookup"><span data-stu-id="b10e2-112">For more information, see [How to: Delete Rows From the Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).</span></span>  
   
- Nei frammenti di codice riportati di seguito vengono usate le classi `Customer`e `Order` del database di esempio Northwind.  Le definizioni di classe non sono illustrate per brevità.  
+ <span data-ttu-id="b10e2-113">Nei frammenti di codice riportati di seguito vengono usate le classi `Customer`e `Order` del database di esempio Northwind.</span><span class="sxs-lookup"><span data-stu-id="b10e2-113">The following excerpts use the `Customer` and `Order` classes from the Northwind sample database.</span></span> <span data-ttu-id="b10e2-114">Le definizioni di classe non sono illustrate per brevità.</span><span class="sxs-lookup"><span data-stu-id="b10e2-114">Class definitions are not shown for brevity.</span></span>  
   
  [!code-csharp[DLinqCRUDOps#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCRUDOps/cs/Program.cs#1)]
  [!code-vb[DLinqCRUDOps#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCRUDOps/vb/Module1.vb#1)]  
   
- Quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera automaticamente ed esegue i comandi SQL necessari per trasmettere di nuovo le modifiche al database.  
+ <span data-ttu-id="b10e2-115">Quando si chiama <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera automaticamente ed esegue i comandi SQL necessari per trasmettere di nuovo le modifiche al database.</span><span class="sxs-lookup"><span data-stu-id="b10e2-115">When you call <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatically generates and executes the SQL commands that it must have to transmit your changes back to the database.</span></span>  
   
 > [!NOTE]
->  È possibile eseguire l'override di questo comportamento usando una logica personalizzata, in genere mediante una stored procedure.  Per altre informazioni, vedere [Responsabilità dello sviluppatore nell'eseguire l'override del comportamento predefinito](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
+>  <span data-ttu-id="b10e2-116">È possibile eseguire l'override di questo comportamento usando una logica personalizzata, in genere mediante una stored procedure.</span><span class="sxs-lookup"><span data-stu-id="b10e2-116">You can override this behavior by using your own custom logic, typically by way of a stored procedure.</span></span> <span data-ttu-id="b10e2-117">Per ulteriori informazioni, vedere [responsabilità dello sviluppatore nell'override del comportamento predefinito](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).</span><span class="sxs-lookup"><span data-stu-id="b10e2-117">For more information, see [Responsibilities of the Developer In Overriding Default Behavior](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).</span></span>  
 >   
->  Gli sviluppatori che usano [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] possono adoperare [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per sviluppare stored procedure a questo scopo.  
+>  <span data-ttu-id="b10e2-118">Gli sviluppatori che usano [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] possono adoperare [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per sviluppare stored procedure a questo scopo.</span><span class="sxs-lookup"><span data-stu-id="b10e2-118">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to develop stored procedures for this purpose.</span></span>  
   
-## Vedere anche  
- [Download dei database di esempio](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)   
- [Personalizzazione delle operazioni Insert, Update e Delete](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+## <a name="see-also"></a><span data-ttu-id="b10e2-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b10e2-119">See Also</span></span>  
+ [<span data-ttu-id="b10e2-120">Download di database di esempio</span><span class="sxs-lookup"><span data-stu-id="b10e2-120">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
+ [<span data-ttu-id="b10e2-121">Personalizzazione di inserimento, aggiornamento ed eliminazione di operazioni</span><span class="sxs-lookup"><span data-stu-id="b10e2-121">Customizing Insert, Update, and Delete Operations</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

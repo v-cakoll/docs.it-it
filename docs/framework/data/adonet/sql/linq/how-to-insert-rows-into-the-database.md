@@ -1,47 +1,53 @@
 ---
-title: "Procedura: inserire righe nel database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: inserire righe nel database'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a96a0ab800076db16022f5b02c84d7a53ca99147
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: inserire righe nel database
-Per inserire righe in un database, aggiungere oggetti alla raccolta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> associata, quindi inviare le modifiche al database. Le modifiche vengono convertite da [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nei comandi SQL `INSERT` corretti.  
+# <a name="how-to-insert-rows-into-the-database"></a><span data-ttu-id="ee9fd-102">Procedura: inserire righe nel database</span><span class="sxs-lookup"><span data-stu-id="ee9fd-102">How to: Insert Rows Into the Database</span></span>
+<span data-ttu-id="ee9fd-103">Per inserire righe in un database tramite l'aggiunta di oggetti associati [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> raccolta, quindi inviando le modifiche al database.</span><span class="sxs-lookup"><span data-stu-id="ee9fd-103">You insert rows into a database by adding objects to the associated [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> collection and then submitting the changes to the database.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="ee9fd-104">Converte le modifiche nei SQL appropriate `INSERT` comandi.</span><span class="sxs-lookup"><span data-stu-id="ee9fd-104"> translates your changes into the appropriate SQL `INSERT` commands.</span></span>  
   
 > [!NOTE]
->  È possibile eseguire l'override dei metodi predefiniti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per le operazioni di database `Insert`, `Update`e `Delete`.  Per altre informazioni, vedere [Personalizzazione delle operazioni Insert, Update e Delete](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+>  <span data-ttu-id="ee9fd-105">È possibile eseguire l'override dei metodi predefiniti [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] per le operazioni di database `Insert`, `Update`e `Delete`.</span><span class="sxs-lookup"><span data-stu-id="ee9fd-105">You can override [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] default methods for `Insert`, `Update`, and `Delete` database operations.</span></span> <span data-ttu-id="ee9fd-106">Per ulteriori informazioni, vedere [personalizzazione di operazioni di inserimento, aggiornamento ed eliminare](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span><span class="sxs-lookup"><span data-stu-id="ee9fd-106">For more information, see [Customizing Insert, Update, and Delete Operations](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).</span></span>  
 >   
->  Gli sviluppatori che usano [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] possono adoperare [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per sviluppare stored procedure allo stesso scopo.  
+>  <span data-ttu-id="ee9fd-107">Gli sviluppatori che usano [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] possono adoperare [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] per sviluppare stored procedure allo stesso scopo.</span><span class="sxs-lookup"><span data-stu-id="ee9fd-107">Developers using [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to develop stored procedures for the same purpose.</span></span>  
   
- Per l'esecuzione dei passaggi seguenti si presuppone l'uso di un oggetto <xref:System.Data.Linq.DataContext> valido per la connessione al database Northwind.  Per altre informazioni, vedere [Procedura: connettersi a un database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md).  
+ <span data-ttu-id="ee9fd-108">Per l'esecuzione dei passaggi seguenti si presuppone l'uso di un oggetto <xref:System.Data.Linq.DataContext> valido per la connessione al database Northwind.</span><span class="sxs-lookup"><span data-stu-id="ee9fd-108">The following steps assume that a valid <xref:System.Data.Linq.DataContext> connects you to the Northwind database.</span></span> <span data-ttu-id="ee9fd-109">Per ulteriori informazioni, vedere [procedura: connettersi a un Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md).</span><span class="sxs-lookup"><span data-stu-id="ee9fd-109">For more information, see [How to: Connect to a Database](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md).</span></span>  
   
-### Per inserire una riga nel database  
+### <a name="to-insert-a-row-into-the-database"></a><span data-ttu-id="ee9fd-110">Per inserire una riga nel database</span><span class="sxs-lookup"><span data-stu-id="ee9fd-110">To insert a row into the database</span></span>  
   
-1.  Creare un nuovo oggetto contenente i dati della colonna da inviare.  
+1.  <span data-ttu-id="ee9fd-111">Creare un nuovo oggetto contenente i dati della colonna da inviare.</span><span class="sxs-lookup"><span data-stu-id="ee9fd-111">Create a new object that includes the column data to be submitted.</span></span>  
   
-2.  Aggiungere il nuovo oggetto alla raccolta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` associata alla tabella di destinazione nel database.  
+2.  <span data-ttu-id="ee9fd-112">Aggiungere il nuovo oggetto per il [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` raccolta associata alla tabella di destinazione nel database.</span><span class="sxs-lookup"><span data-stu-id="ee9fd-112">Add the new object to the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` collection associated with the target table in the database.</span></span>  
   
-3.  Inviare le modifiche al database.  
+3.  <span data-ttu-id="ee9fd-113">Inviare le modifiche al database.</span><span class="sxs-lookup"><span data-stu-id="ee9fd-113">Submit the change to the database.</span></span>  
   
-## Esempio  
- L'esempio di codice seguente consente di creare un nuovo oggetto di tipo `Order` e di popolarlo con i valori corretti.  Il nuovo oggetto viene quindi aggiunto alla raccolta `Order`.  Infine viene inviata la modifica al database come una nuova riga nella tabella `Orders`.  
+## <a name="example"></a><span data-ttu-id="ee9fd-114">Esempio</span><span class="sxs-lookup"><span data-stu-id="ee9fd-114">Example</span></span>  
+ <span data-ttu-id="ee9fd-115">L'esempio di codice seguente consente di creare un nuovo oggetto di tipo `Order` e di popolarlo con i valori corretti.</span><span class="sxs-lookup"><span data-stu-id="ee9fd-115">The following code example creates a new object of type `Order` and populates it with appropriate values.</span></span> <span data-ttu-id="ee9fd-116">Il nuovo oggetto viene quindi aggiunto alla raccolta `Order`.</span><span class="sxs-lookup"><span data-stu-id="ee9fd-116">It then adds the new object to the `Order` collection.</span></span> <span data-ttu-id="ee9fd-117">Infine viene inviata la modifica al database come una nuova riga nella tabella `Orders`.</span><span class="sxs-lookup"><span data-stu-id="ee9fd-117">Finally, it submits the change to the database as a new row in the `Orders` table.</span></span>  
   
  [!code-csharp[System.Data.Linq.Table#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.table/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.Table#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.table/vb/module1.vb#1)]  
   
-## Vedere anche  
- [Procedura: gestire i conflitti di modifiche](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)   
- [Metodi DataContext \(Progettazione relazionale oggetti\)](../Topic/DataContext%20Methods%20\(O-R%20Designer\).md)   
- [Procedura: assegnare stored procedure per l'esecuzione dei comandi di aggiornamento, inserimento ed eliminazione \(Progettazione relazionale oggetti\)](../Topic/How%20to:%20Assign%20stored%20procedures%20to%20perform%20updates,%20inserts,%20and%20deletes%20\(O-R%20Designer\).md)   
- [Scrittura e invio di modifiche di dati](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+## <a name="see-also"></a><span data-ttu-id="ee9fd-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ee9fd-118">See Also</span></span>  
+ [<span data-ttu-id="ee9fd-119">Procedura: gestire i conflitti di modifiche</span><span class="sxs-lookup"><span data-stu-id="ee9fd-119">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)  
+ [<span data-ttu-id="ee9fd-120">Metodi DataContext (O/R Designer)</span><span class="sxs-lookup"><span data-stu-id="ee9fd-120">DataContext Methods (O/R Designer)</span></span>](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
+ [<span data-ttu-id="ee9fd-121">Procedura: assegnare stored procedure per eseguire aggiornamenti, inserimenti ed eliminazioni (O/R Designer)</span><span class="sxs-lookup"><span data-stu-id="ee9fd-121">How to: Assign stored procedures to perform updates, inserts, and deletes (O/R Designer)</span></span>](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
+ [<span data-ttu-id="ee9fd-122">Creazione e invio di modifiche ai dati</span><span class="sxs-lookup"><span data-stu-id="ee9fd-122">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

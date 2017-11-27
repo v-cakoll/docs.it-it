@@ -1,49 +1,52 @@
 ---
-title: "Generazione della libreria client del servizio dati (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Aggiungi riferimento al servizio, finestra di dialogo"
-  - "applicazioni client, WCF Data Services"
-  - "WCF Data Services, libreria client"
+title: Generazione della libreria dati del servizio dati (WCF Data Services)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- client applications, WCF Data Services
+- WCF Data Services, client library
+- Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5fbf45a3447a1dc5fb449628bdd7f741fb3e8324
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Generazione della libreria client del servizio dati (WCF Data Services)
-Un servizio dati che implementa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] può restituire un documento dei metadati del servizio che descrive il modello di dati esposto dal feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  Per altre informazioni, vedere [OData: documento dei metadati del servizio](http://go.microsoft.com/fwlink/?LinkId=186070). È possibile usare la finestra di dialogo **Aggiungi riferimento al servizio** in Visual Studio per aggiungere un riferimento a un servizio basato su [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  Quando si usa questo strumento per aggiungere un riferimento ai metadati restituiti da un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in un progetto client, vengono eseguite automaticamente le azioni seguenti:  
+# <a name="generating-the-data-service-client-library-wcf-data-services"></a><span data-ttu-id="c952b-102">Generazione della libreria dati del servizio dati (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="c952b-102">Generating the Data Service Client Library (WCF Data Services)</span></span>
+<span data-ttu-id="c952b-103">Un servizio dati che implementa il [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] può restituire un documento di metadati di servizio che descrive il modello di dati esposto dal [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span><span class="sxs-lookup"><span data-stu-id="c952b-103">A data service that implements the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] can return a service metadata document that describes the data model exposed by the [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed.</span></span> <span data-ttu-id="c952b-104">Per ulteriori informazioni, vedere [OData: documento dei metadati del servizio](http://go.microsoft.com/fwlink/?LinkId=186070).</span><span class="sxs-lookup"><span data-stu-id="c952b-104">For more information, see [OData: Service Metadata Document](http://go.microsoft.com/fwlink/?LinkId=186070).</span></span> <span data-ttu-id="c952b-105">È possibile utilizzare il **Aggiungi riferimento al servizio** finestra di dialogo in Visual Studio per aggiungere un riferimento a un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-servizio basato su.</span><span class="sxs-lookup"><span data-stu-id="c952b-105">You can use the **Add Service Reference** dialog in Visual Studio to add a reference to an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-based service.</span></span> <span data-ttu-id="c952b-106">Quando si utilizza questo strumento per aggiungere un riferimento a metadati restituiti da un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in un progetto client, esegue le azioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="c952b-106">When you use this tool to add a reference to the metadata returned by an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in a client project, it performs the following actions:</span></span>  
   
--   Richiesta del documento dei metadati del servizio al servizio dati e interpretazione dei metadati restituiti.  
+-   <span data-ttu-id="c952b-107">Richiesta del documento dei metadati del servizio al servizio dati e interpretazione dei metadati restituiti.</span><span class="sxs-lookup"><span data-stu-id="c952b-107">Requests the service metadata document from the data service and interprets the returned metadata.</span></span>  
   
     > [!NOTE]
-    >  I metadati restituiti vengono archiviati nel progetto client come file con estensione edmx.  Non è possibile aprire questo file con estensione edmx usando Entity Data Model Designer perché non presenta lo stesso formato di un file con estensione edmx usato da Entity Framework.  È possibile visualizzare questo file di metadati usando l'editor XML o qualsiasi editor di testo.  Per altre informazioni, vedere la specifica di [Entity Data Model per il formato dei pacchetti di servizi dati \[MC\-EDMX\]](http://go.microsoft.com/fwlink/?LinkID=178833).  
+    >  <span data-ttu-id="c952b-108">I metadati restituiti vengono archiviati nel progetto client come file con estensione edmx.</span><span class="sxs-lookup"><span data-stu-id="c952b-108">The returned metadata is stored in the client project as an .edmx file.</span></span> <span data-ttu-id="c952b-109">Non è possibile aprire questo file con estensione edmx usando Entity Data Model Designer perché non presenta lo stesso formato di un file con estensione edmx usato da Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="c952b-109">This .edmx file cannot be opened by using the Entity Data Model designer because it does not have the same format an .edmx file used by the Entity Framework.</span></span> <span data-ttu-id="c952b-110">È possibile visualizzare questo file di metadati usando l'editor XML o qualsiasi editor di testo.</span><span class="sxs-lookup"><span data-stu-id="c952b-110">You can view this metadata file by using the XML editor or any text editor.</span></span> <span data-ttu-id="c952b-111">Per ulteriori informazioni, vedere il [ \[MC-EDMX\]: Entity Data Model per il formato dei pacchetti di servizi dati](http://go.microsoft.com/fwlink/?LinkID=178833) specifica</span><span class="sxs-lookup"><span data-stu-id="c952b-111">For more information, see the [\[MC-EDMX\]: Entity Data Model for Data Services Packaging Format](http://go.microsoft.com/fwlink/?LinkID=178833) specification</span></span>  
   
--   Generazione di una rappresentazione del servizio come classe contenitore di entità che eredita da <xref:System.Data.Services.Client.DataServiceContext>.  Il comportamento di questa classe contenitore di entità generata è simile a quello del contenitore di entità generato dagli strumenti di Entity Data Model.  Per altre informazioni, vedere [Object Services Overview \(Entity Framework\)](http://msdn.microsoft.com/it-it/43014cf9-c9cb-4538-bfbb-197820b60038).  
+-   <span data-ttu-id="c952b-112">Generazione di una rappresentazione del servizio come classe contenitore di entità che eredita da <xref:System.Data.Services.Client.DataServiceContext>.</span><span class="sxs-lookup"><span data-stu-id="c952b-112">Generates a representation of the service as an entity container class that inherits from <xref:System.Data.Services.Client.DataServiceContext>.</span></span> <span data-ttu-id="c952b-113">Il comportamento di questa classe contenitore di entità generata è simile a quello del contenitore di entità generato dagli strumenti di Entity Data Model.</span><span class="sxs-lookup"><span data-stu-id="c952b-113">This generated entity container class resembles the entity container that the Entity Data Model tools generate.</span></span> <span data-ttu-id="c952b-114">Per ulteriori informazioni, vedere [Object Services Overview (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).</span><span class="sxs-lookup"><span data-stu-id="c952b-114">For more information, see [Object Services Overview (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).</span></span>  
   
--   Generazione di classi di dati per i tipi di modello di dati individuati nei metadati del servizio.  
+-   <span data-ttu-id="c952b-115">Generazione di classi di dati per i tipi di modello di dati individuati nei metadati del servizio.</span><span class="sxs-lookup"><span data-stu-id="c952b-115">Generates data classes for the data model types that it discovers in the service metadata.</span></span>  
   
--   Aggiunta di un riferimento all'assembly `System.Data.Services.Client` per il progetto.  
+-   <span data-ttu-id="c952b-116">Aggiunta di un riferimento all'assembly `System.Data.Services.Client` per il progetto.</span><span class="sxs-lookup"><span data-stu-id="c952b-116">Adds a reference to the `System.Data.Services.Client` assembly to the project.</span></span>  
   
- Per altre informazioni, vedere [Procedura: aggiungere un riferimento al servizio dati](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).  
+ <span data-ttu-id="c952b-117">Per ulteriori informazioni, vedere [procedura: aggiungere un riferimento al servizio dati](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="c952b-117">For more information, see [How to: Add a Data Service Reference](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).</span></span>  
   
- Le classi del servizio dati client possono inoltre essere generate tramite lo strumento [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) al prompt dei comandi.  Per altre informazioni, vedere [Procedura: generare in modo manuale classi del servizio dati client](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+ <span data-ttu-id="c952b-118">Le classi del servizio dati client possono essere generate anche tramite il [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) strumento al prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="c952b-118">The client data service classes can also be generated by using the [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) tool at the command prompt.</span></span> <span data-ttu-id="c952b-119">Per ulteriori informazioni, vedere [come: manualmente generare classi servizio dati Client](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="c952b-119">For more information, see [How to: Manually Generate Client Data Service Classes](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).</span></span>  
   
-## Mapping dei tipi di dati client  
- Quando si usa la finestra di dialogo **Aggiungi riferimento al servizio** in Visual Studio o lo strumento `DataSvcUtil.exe` per generare classi di dati client basate su un feed [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], viene eseguito il mapping dei tipi di dati di .NET Framework ai tipi primitivi del modello di dati nel modo seguente:  
+## <a name="client-data-type-mapping"></a><span data-ttu-id="c952b-120">Mapping dei tipi di dati client</span><span class="sxs-lookup"><span data-stu-id="c952b-120">Client Data Type Mapping</span></span>  
+ <span data-ttu-id="c952b-121">Quando si utilizza il **Aggiungi riferimento al servizio** finestra di dialogo in Visual Studio o `DataSvcUtil.exe` strumento per generare classi di dati client basate su un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed, i tipi di dati .NET Framework vengono eseguito il mapping ai tipi primitivi dal modello di dati come segue:</span><span class="sxs-lookup"><span data-stu-id="c952b-121">When you use the **Add Service Reference** dialog in Visual Studio or the `DataSvcUtil.exe` tool to generate client data classes that are based on an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed, the .NET Framework data types are mapped to the primitive types from the data model as follows:</span></span>  
   
-|Tipo del modello di dati|Tipi di dati di .NET Framework|  
-|------------------------------|------------------------------------|  
-|`Edm.Binary`|<xref:System.Byte> `[]`|  
+|<span data-ttu-id="c952b-122">Tipo del modello di dati</span><span class="sxs-lookup"><span data-stu-id="c952b-122">Data model type</span></span>|<span data-ttu-id="c952b-123">Tipi di dati di .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c952b-123">.NET Framework data type</span></span>|  
+|---------------------|------------------------------|  
+|`Edm.Binary`|<span data-ttu-id="c952b-124"><xref:System.Byte> `[]`</span><span class="sxs-lookup"><span data-stu-id="c952b-124"><xref:System.Byte> `[]`</span></span>|  
 |`Edm.Boolean`|<xref:System.Boolean>|  
 |`Edm.Byte`|<xref:System.Byte>|  
 |`Edm.DateTime`|<xref:System.DateTime>|  
@@ -57,8 +60,8 @@ Un servizio dati che implementa [!INCLUDE[ssODataFull](../../../../includes/ssod
 |`Edm.Single`|<xref:System.Single>|  
 |`Edm.String`|<xref:System.String>|  
   
- Per altre informazioni, vedere [OData: tipi di dati primitivi](http://go.microsoft.com/fwlink/?LinkId=186072).  
+ <span data-ttu-id="c952b-125">Per ulteriori informazioni, vedere [OData: tipi di dati primitivi](http://go.microsoft.com/fwlink/?LinkId=186072).</span><span class="sxs-lookup"><span data-stu-id="c952b-125">For more information, see [OData: Primitive Data Types](http://go.microsoft.com/fwlink/?LinkId=186072).</span></span>  
   
-## Vedere anche  
- [Libreria client WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)   
- [Guida rapida](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="c952b-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c952b-126">See Also</span></span>  
+ [<span data-ttu-id="c952b-127">Libreria client WCF Data Services</span><span class="sxs-lookup"><span data-stu-id="c952b-127">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+ [<span data-ttu-id="c952b-128">Guida rapida</span><span class="sxs-lookup"><span data-stu-id="c952b-128">Quickstart</span></span>](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

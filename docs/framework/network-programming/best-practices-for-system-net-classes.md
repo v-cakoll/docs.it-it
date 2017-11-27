@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - sending data, best practices
 - requesting data from Internet, best practices
@@ -21,30 +16,28 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4fb997efc1ba23620cad4a63bd7fa683020a9056
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e50df22f66d4d55298aad5f3cc501dfb39ffcd9a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="best-practices-for-systemnet-classes"></a>Procedure consigliate per le classi System.Net
-I suggerimenti seguenti consentono di usare al meglio le classi contenute in <xref:System.Net>:  
+# <a name="best-practices-for-systemnet-classes"></a><span data-ttu-id="4f2d1-102">Procedure consigliate per le classi System.Net</span><span class="sxs-lookup"><span data-stu-id="4f2d1-102">Best Practices for System.Net Classes</span></span>
+<span data-ttu-id="4f2d1-103">I suggerimenti seguenti consentono di usare al meglio le classi contenute in <xref:System.Net>:</span><span class="sxs-lookup"><span data-stu-id="4f2d1-103">The following recommendations will help you use the classes contained in <xref:System.Net> to their best advantage:</span></span>  
   
--   Se possibile, usare le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> anziché eseguire cast di tipo nelle classi derivate. Le applicazioni che usano **WebRequest** e **WebResponse** possono usufruire dei nuovi protocolli Internet senza dover apportare modifiche significative al codice.  
+-   <span data-ttu-id="4f2d1-104">Se possibile, usare le classi <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> anziché eseguire cast di tipo nelle classi derivate.</span><span class="sxs-lookup"><span data-stu-id="4f2d1-104">Use <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> whenever possible instead of type casting to descendant classes.</span></span> <span data-ttu-id="4f2d1-105">Le applicazioni che usano **WebRequest** e **WebResponse** possono usufruire dei nuovi protocolli Internet senza dover apportare modifiche significative al codice.</span><span class="sxs-lookup"><span data-stu-id="4f2d1-105">Applications that use **WebRequest** and **WebResponse** can take advantage of new Internet protocols without needing extensive code changes.</span></span>  
   
--   Quando si scrivono applicazioni ASP.NET da eseguire su un server mediante le classi **System.Net**, è spesso preferibile, in termini di prestazioni, usare i metodi asincroni per <xref:System.Net.WebRequest.GetResponse%2A> e <xref:System.Net.WebResponse.GetResponseStream%2A>.  
+-   <span data-ttu-id="4f2d1-106">Quando si scrivono applicazioni ASP.NET da eseguire su un server mediante le classi **System.Net**, è spesso preferibile, in termini di prestazioni, usare i metodi asincroni per <xref:System.Net.WebRequest.GetResponse%2A> e <xref:System.Net.WebResponse.GetResponseStream%2A>.</span><span class="sxs-lookup"><span data-stu-id="4f2d1-106">When writing ASP.NET applications that run on a server using the **System.Net** classes, it is often better, from a performance standpoint, to use the asynchronous methods for <xref:System.Net.WebRequest.GetResponse%2A> and <xref:System.Net.WebResponse.GetResponseStream%2A>.</span></span>  
   
--   Il numero di connessioni aperte a una risorsa Internet può influire in modo significativo sulle prestazioni di rete e sulla velocità effettiva. Per impostazione predefinita, **System.Net** usa due connessioni per ogni applicazione e per ogni host. Impostando la proprietà <xref:System.Net.ServicePoint.ConnectionLimit%2A> nella classe <xref:System.Net.ServicePoint> relativa all'applicazione, è possibile aumentare questo numero per un determinato host. L'impostazione della proprietà <xref:System.Net.ServicePointManager.DefaultPersistentConnectionLimit?displayProperty=fullName> consente invece di aumentare il numero predefinito per tutti gli host.  
+-   <span data-ttu-id="4f2d1-107">Il numero di connessioni aperte a una risorsa Internet può influire in modo significativo sulle prestazioni di rete e sulla velocità effettiva.</span><span class="sxs-lookup"><span data-stu-id="4f2d1-107">The number of connections opened to an Internet resource can have a significant impact on network performance and throughput.</span></span> <span data-ttu-id="4f2d1-108">Per impostazione predefinita, **System.Net** usa due connessioni per ogni applicazione e per ogni host.</span><span class="sxs-lookup"><span data-stu-id="4f2d1-108">**System.Net** uses two connections per application per host by default.</span></span> <span data-ttu-id="4f2d1-109">Impostando la proprietà <xref:System.Net.ServicePoint.ConnectionLimit%2A> nella classe <xref:System.Net.ServicePoint> relativa all'applicazione, è possibile aumentare questo numero per un determinato host.</span><span class="sxs-lookup"><span data-stu-id="4f2d1-109">Setting the <xref:System.Net.ServicePoint.ConnectionLimit%2A> property in the <xref:System.Net.ServicePoint> for your application can increase this number for a particular host.</span></span> <span data-ttu-id="4f2d1-110">L'impostazione della proprietà <xref:System.Net.ServicePointManager.DefaultPersistentConnectionLimit?displayProperty=nameWithType> consente invece di aumentare il numero predefinito per tutti gli host.</span><span class="sxs-lookup"><span data-stu-id="4f2d1-110">Setting the <xref:System.Net.ServicePointManager.DefaultPersistentConnectionLimit?displayProperty=nameWithType> property can increase this default for all hosts.</span></span>  
   
--   Quando si scrivono protocolli di livello socket, è preferibile usare <xref:System.Net.Sockets.TcpClient> o <xref:System.Net.Sockets.UdpClient> anziché scrivere direttamente su un <xref:System.Net.Sockets.Socket>. Queste due classi client, infatti, incapsulano la creazione di socket TCP e UDP, evitando di dover gestire i dettagli della connessione.  
+-   <span data-ttu-id="4f2d1-111">Quando si scrivono protocolli di livello socket, è preferibile usare <xref:System.Net.Sockets.TcpClient> o <xref:System.Net.Sockets.UdpClient> anziché scrivere direttamente su un <xref:System.Net.Sockets.Socket>.</span><span class="sxs-lookup"><span data-stu-id="4f2d1-111">When writing socket-level protocols, try to use <xref:System.Net.Sockets.TcpClient> or <xref:System.Net.Sockets.UdpClient> whenever possible instead of writing directly to a <xref:System.Net.Sockets.Socket>.</span></span> <span data-ttu-id="4f2d1-112">Queste due classi client, infatti, incapsulano la creazione di socket TCP e UDP, evitando di dover gestire i dettagli della connessione.</span><span class="sxs-lookup"><span data-stu-id="4f2d1-112">These two client classes encapsulate the creation of TCP and UDP sockets without requiring you to handle the details of the connection.</span></span>  
   
--   Quando si accede a siti che richiedono credenziali, usare la classe <xref:System.Net.CredentialCache> per creare una cache di credenziali anziché fornirle con ogni richiesta. La classe **CredentialCache** cerca nella cache la credenziale appropriata da presentare con una richiesta, sollevando l'utente dalla responsabilità di creare e presentare credenziali in base all'URL.  
+-   <span data-ttu-id="4f2d1-113">Quando si accede a siti che richiedono credenziali, usare la classe <xref:System.Net.CredentialCache> per creare una cache di credenziali anziché fornirle con ogni richiesta.</span><span class="sxs-lookup"><span data-stu-id="4f2d1-113">When accessing sites that require credentials, use the <xref:System.Net.CredentialCache> class to create a cache of credentials rather than supplying them with every request.</span></span> <span data-ttu-id="4f2d1-114">La classe **CredentialCache** cerca nella cache la credenziale appropriata da presentare con una richiesta, sollevando l'utente dalla responsabilità di creare e presentare credenziali in base all'URL.</span><span class="sxs-lookup"><span data-stu-id="4f2d1-114">The **CredentialCache** class searches the cache to find the appropriate credential to present with a request, relieving you of the responsibility of creating and presenting credentials based on the URL.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Programmazione di rete in .NET Framework](../../../docs/framework/network-programming/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="4f2d1-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4f2d1-115">See Also</span></span>  
+ [<span data-ttu-id="4f2d1-116">Programmazione di rete in .NET Framework</span><span class="sxs-lookup"><span data-stu-id="4f2d1-116">Network Programming in the .NET Framework</span></span>](../../../docs/framework/network-programming/index.md)

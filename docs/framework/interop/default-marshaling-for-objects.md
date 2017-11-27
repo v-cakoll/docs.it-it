@@ -5,63 +5,59 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 67d05a21d537bfca92bc76473fb6f6048865ef8c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5bfafcad5f1f60e7e763b69f220188517d29f17
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="default-marshaling-for-objects"></a>Marshalling predefinito per gli oggetti
-I parametri e i campi tipizzati come <xref:System.Object?displayProperty=fullName> possono essere esposti al codice non gestito come uno dei tipi seguenti:  
+# <a name="default-marshaling-for-objects"></a><span data-ttu-id="4af69-102">Marshalling predefinito per gli oggetti</span><span class="sxs-lookup"><span data-stu-id="4af69-102">Default Marshaling for Objects</span></span>
+<span data-ttu-id="4af69-103">I parametri e i campi tipizzati come <xref:System.Object?displayProperty=nameWithType> possono essere esposti al codice non gestito come uno dei tipi seguenti:</span><span class="sxs-lookup"><span data-stu-id="4af69-103">Parameters and fields typed as <xref:System.Object?displayProperty=nameWithType> can be exposed to unmanaged code as one of the following types:</span></span>  
   
--   Una variante quando l'oggetto è un parametro.  
+-   <span data-ttu-id="4af69-104">Una variante quando l'oggetto è un parametro.</span><span class="sxs-lookup"><span data-stu-id="4af69-104">A variant when the object is a parameter.</span></span>  
   
--   Un'interfaccia quando l'oggetto è un campo della struttura.  
+-   <span data-ttu-id="4af69-105">Un'interfaccia quando l'oggetto è un campo della struttura.</span><span class="sxs-lookup"><span data-stu-id="4af69-105">An interface when the object is a structure field.</span></span>  
   
- Solo l'interoperabilità COM supporta il marshalling per i tipi di oggetto. Il comportamento predefinito è il marshalling degli oggetti alle varianti COM. Queste regole si applicano solo al tipo **Object** e non agli oggetti fortemente tipizzati derivanti dalla classe **Object**.  
+ <span data-ttu-id="4af69-106">Solo l'interoperabilità COM supporta il marshalling per i tipi di oggetto.</span><span class="sxs-lookup"><span data-stu-id="4af69-106">Only COM interop supports marshaling for object types.</span></span> <span data-ttu-id="4af69-107">Il comportamento predefinito è il marshalling degli oggetti alle varianti COM.</span><span class="sxs-lookup"><span data-stu-id="4af69-107">The default behavior is to marshal objects to COM variants.</span></span> <span data-ttu-id="4af69-108">Queste regole si applicano solo al tipo **Object** e non agli oggetti fortemente tipizzati derivanti dalla classe **Object**.</span><span class="sxs-lookup"><span data-stu-id="4af69-108">These rules apply only to the type **Object** and do not apply to strongly typed objects that derive from the **Object** class.</span></span>  
   
- Questo argomento offre le informazioni aggiuntive seguenti sul marshalling dei tipi di oggetto:  
+ <span data-ttu-id="4af69-109">Questo argomento offre le informazioni aggiuntive seguenti sul marshalling dei tipi di oggetto:</span><span class="sxs-lookup"><span data-stu-id="4af69-109">This topic provides the following additional information about marshaling object types:</span></span>  
   
--   [Opzioni di marshalling](#cpcondefaultmarshalingforobjectsanchor7)  
+-   [<span data-ttu-id="4af69-110">Opzioni di marshalling</span><span class="sxs-lookup"><span data-stu-id="4af69-110">Marshaling Options</span></span>](#cpcondefaultmarshalingforobjectsanchor7)  
   
--   [Marshalling dell'oggetto all'interfaccia](#cpcondefaultmarshalingforobjectsanchor2)  
+-   [<span data-ttu-id="4af69-111">Marshalling dell'oggetto all'interfaccia</span><span class="sxs-lookup"><span data-stu-id="4af69-111">Marshaling Object to Interface</span></span>](#cpcondefaultmarshalingforobjectsanchor2)  
   
--   [Marshalling dell'oggetto alla variante](#cpcondefaultmarshalingforobjectsanchor3)  
+-   [<span data-ttu-id="4af69-112">Marshalling dell'oggetto alla variante</span><span class="sxs-lookup"><span data-stu-id="4af69-112">Marshaling Object to Variant</span></span>](#cpcondefaultmarshalingforobjectsanchor3)  
   
--   [Marshalling della variante all'oggetto](#cpcondefaultmarshalingforobjectsanchor4)  
+-   [<span data-ttu-id="4af69-113">Marshalling della variante all'oggetto</span><span class="sxs-lookup"><span data-stu-id="4af69-113">Marshaling Variant to Object</span></span>](#cpcondefaultmarshalingforobjectsanchor4)  
   
--   [Marshalling di varianti ByRef](#cpcondefaultmarshalingforobjectsanchor6)  
+-   [<span data-ttu-id="4af69-114">Marshalling di varianti ByRef</span><span class="sxs-lookup"><span data-stu-id="4af69-114">Marshaling ByRef Variants</span></span>](#cpcondefaultmarshalingforobjectsanchor6)  
   
 <a name="cpcondefaultmarshalingforobjectsanchor7"></a>   
-## <a name="marshaling-options"></a>Opzioni di marshalling  
- La tabella seguente illustra le opzioni di marshalling per il tipo di dati **Object**. L'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornisce alcuni valori di enumerazione <xref:System.Runtime.InteropServices.UnmanagedType> per effettuare il marshalling di oggetti.  
+## <a name="marshaling-options"></a><span data-ttu-id="4af69-115">Opzioni di marshalling</span><span class="sxs-lookup"><span data-stu-id="4af69-115">Marshaling Options</span></span>  
+ <span data-ttu-id="4af69-116">La tabella seguente illustra le opzioni di marshalling per il tipo di dati **Object**.</span><span class="sxs-lookup"><span data-stu-id="4af69-116">The following table shows the marshaling options for the **Object** data type.</span></span> <span data-ttu-id="4af69-117">L'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> fornisce alcuni valori di enumerazione <xref:System.Runtime.InteropServices.UnmanagedType> per effettuare il marshalling di oggetti.</span><span class="sxs-lookup"><span data-stu-id="4af69-117">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal objects.</span></span>  
   
-|Tipo di enumerazione|Descrizione del formato non gestito|  
+|<span data-ttu-id="4af69-118">Tipo di enumerazione</span><span class="sxs-lookup"><span data-stu-id="4af69-118">Enumeration type</span></span>|<span data-ttu-id="4af69-119">Descrizione del formato non gestito</span><span class="sxs-lookup"><span data-stu-id="4af69-119">Description of unmanaged format</span></span>|  
 |----------------------|-------------------------------------|  
-|**UnmanagedType.Struct**<br /><br /> (predefinita per i parametri)|Una variante di tipo COM.|  
-|**UnmanagedType.Interface**|Un'interfaccia **IDispatch**, se possibile; in caso contrario, un'interfaccia **IUnknown**.|  
-|**UnmanagedType.IUnknown**<br /><br /> (predefinita per i campi)|Un' interfaccia **IUnknown**.|  
-|**UnmanagedType.IDispatch**|Un'interfaccia **IDispatch**.|  
+|<span data-ttu-id="4af69-120">**UnmanagedType.Struct**</span><span class="sxs-lookup"><span data-stu-id="4af69-120">**UnmanagedType.Struct**</span></span><br /><br /> <span data-ttu-id="4af69-121">(predefinita per i parametri)</span><span class="sxs-lookup"><span data-stu-id="4af69-121">(default for parameters)</span></span>|<span data-ttu-id="4af69-122">Una variante di tipo COM.</span><span class="sxs-lookup"><span data-stu-id="4af69-122">A COM-style variant.</span></span>|  
+|<span data-ttu-id="4af69-123">**UnmanagedType.Interface**</span><span class="sxs-lookup"><span data-stu-id="4af69-123">**UnmanagedType.Interface**</span></span>|<span data-ttu-id="4af69-124">Un'interfaccia **IDispatch**, se possibile; in caso contrario, un'interfaccia **IUnknown**.</span><span class="sxs-lookup"><span data-stu-id="4af69-124">An **IDispatch** interface, if possible; otherwise, an **IUnknown** interface.</span></span>|  
+|<span data-ttu-id="4af69-125">**UnmanagedType.IUnknown**</span><span class="sxs-lookup"><span data-stu-id="4af69-125">**UnmanagedType.IUnknown**</span></span><br /><br /> <span data-ttu-id="4af69-126">(predefinita per i campi)</span><span class="sxs-lookup"><span data-stu-id="4af69-126">(default for fields)</span></span>|<span data-ttu-id="4af69-127">Un' interfaccia **IUnknown**.</span><span class="sxs-lookup"><span data-stu-id="4af69-127">An **IUnknown** interface.</span></span>|  
+|<span data-ttu-id="4af69-128">**UnmanagedType.IDispatch**</span><span class="sxs-lookup"><span data-stu-id="4af69-128">**UnmanagedType.IDispatch**</span></span>|<span data-ttu-id="4af69-129">Un'interfaccia **IDispatch**.</span><span class="sxs-lookup"><span data-stu-id="4af69-129">An **IDispatch** interface.</span></span>|  
   
- L'esempio seguente illustra la definizione dell'interfaccia gestita per `MarshalObject`.  
+ <span data-ttu-id="4af69-130">L'esempio seguente illustra la definizione dell'interfaccia gestita per `MarshalObject`.</span><span class="sxs-lookup"><span data-stu-id="4af69-130">The following example shows the managed interface definition for `MarshalObject`.</span></span>  
   
 ```vb  
 Interface MarshalObject  
@@ -95,7 +91,7 @@ interface MarshalObject {
 }  
 ```  
   
- Il codice seguente esporta l'interfaccia `MarshalObject` in una libreria dei tipi.  
+ <span data-ttu-id="4af69-131">Il codice seguente esporta l'interfaccia `MarshalObject` in una libreria dei tipi.</span><span class="sxs-lookup"><span data-stu-id="4af69-131">The following code exports the `MarshalObject` interface to a type library.</span></span>  
   
 ```  
 interface MarshalObject {  
@@ -112,9 +108,9 @@ interface MarshalObject {
 ```  
   
 > [!NOTE]
->  Il gestore di marshalling di interoperabilità libera automaticamente gli oggetti allocati nella variante dopo la chiamata.  
+>  <span data-ttu-id="4af69-132">Il gestore di marshalling di interoperabilità libera automaticamente gli oggetti allocati nella variante dopo la chiamata.</span><span class="sxs-lookup"><span data-stu-id="4af69-132">The interop marshaler automatically frees any allocated object inside the variant after the call.</span></span>  
   
- L'esempio seguente illustra un tipo valore formattato.  
+ <span data-ttu-id="4af69-133">L'esempio seguente illustra un tipo valore formattato.</span><span class="sxs-lookup"><span data-stu-id="4af69-133">The following example shows a formatted value type.</span></span>  
   
 ```vb  
 Public Structure ObjectHolder  
@@ -130,7 +126,7 @@ public struct ObjectHolder {
 }  
 ```  
   
- Il codice seguente esporta il tipo formattato in una libreria dei tipi.  
+ <span data-ttu-id="4af69-134">Il codice seguente esporta il tipo formattato in una libreria dei tipi.</span><span class="sxs-lookup"><span data-stu-id="4af69-134">The following code exports the formatted type to a type library.</span></span>  
   
 ```  
 struct ObjectHolder {  
@@ -140,50 +136,50 @@ struct ObjectHolder {
 ```  
   
 <a name="cpcondefaultmarshalingforobjectsanchor2"></a>   
-## <a name="marshaling-object-to-interface"></a>Marshalling dell'oggetto all'interfaccia  
- Quando un oggetto viene esposto a COM come interfaccia, tale interfaccia è l'interfaccia di classe del tipo gestito <xref:System.Object> (interfaccia **_Object**). Questa interfaccia viene tipizzata come **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) o **IUnknown** (**UnmanagedType.IUnknown**) nella libreria dei tipi risultante. I client COM possono richiamare in modo dinamico i membri della classe gestita o eventuali membri implementati dalle classi derivate tramite l'interfaccia **_Object**. Il client può anche chiamare **QueryInterface** per ottenere le altre interfacce implementate in modo esplicito dal tipo gestito.  
+## <a name="marshaling-object-to-interface"></a><span data-ttu-id="4af69-135">Marshalling dell'oggetto all'interfaccia</span><span class="sxs-lookup"><span data-stu-id="4af69-135">Marshaling Object to Interface</span></span>  
+ <span data-ttu-id="4af69-136">Quando un oggetto viene esposto a COM come interfaccia, tale interfaccia è l'interfaccia di classe del tipo gestito <xref:System.Object> (interfaccia **_Object**).</span><span class="sxs-lookup"><span data-stu-id="4af69-136">When an object is exposed to COM as an interface, that interface is the class interface for the managed type <xref:System.Object> (the **_Object** interface).</span></span> <span data-ttu-id="4af69-137">Questa interfaccia viene tipizzata come **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) o **IUnknown** (**UnmanagedType.IUnknown**) nella libreria dei tipi risultante.</span><span class="sxs-lookup"><span data-stu-id="4af69-137">This interface is typed as an **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) or an **IUnknown** (**UnmanagedType.IUnknown**) in the resulting type library.</span></span> <span data-ttu-id="4af69-138">I client COM possono richiamare in modo dinamico i membri della classe gestita o eventuali membri implementati dalle classi derivate tramite l'interfaccia **_Object**.</span><span class="sxs-lookup"><span data-stu-id="4af69-138">COM clients can dynamically invoke the members of the managed class or any members implemented by its derived classes through the **_Object** interface.</span></span> <span data-ttu-id="4af69-139">Il client può anche chiamare **QueryInterface** per ottenere le altre interfacce implementate in modo esplicito dal tipo gestito.</span><span class="sxs-lookup"><span data-stu-id="4af69-139">The client can also call **QueryInterface** to obtain any other interface explicitly implemented by the managed type.</span></span>  
   
 <a name="cpcondefaultmarshalingforobjectsanchor3"></a>   
-## <a name="marshaling-object-to-variant"></a>Marshalling dell'oggetto alla variante  
- Quando viene effettuato il marshalling di un oggetto a una variante, il tipo di variante interno viene determinato in fase di esecuzione, in base alle regole seguenti:  
+## <a name="marshaling-object-to-variant"></a><span data-ttu-id="4af69-140">Marshalling dell'oggetto alla variante</span><span class="sxs-lookup"><span data-stu-id="4af69-140">Marshaling Object to Variant</span></span>  
+ <span data-ttu-id="4af69-141">Quando viene effettuato il marshalling di un oggetto a una variante, il tipo di variante interno viene determinato in fase di esecuzione, in base alle regole seguenti:</span><span class="sxs-lookup"><span data-stu-id="4af69-141">When an object is marshaled to a variant, the internal variant type is determined at run time, based on the following rules:</span></span>  
   
--   Se il riferimento all'oggetto è null (**Nothing** in Visual Basic), viene effettuato il marshalling dell'oggetto a una variante di tipo **VT_EMPTY**.  
+-   <span data-ttu-id="4af69-142">Se il riferimento all'oggetto è null (**Nothing** in Visual Basic), viene effettuato il marshalling dell'oggetto a una variante di tipo **VT_EMPTY**.</span><span class="sxs-lookup"><span data-stu-id="4af69-142">If the object reference is null (**Nothing** in Visual Basic), the object is marshaled to a variant of type **VT_EMPTY**.</span></span>  
   
--   Se l'oggetto è un'istanza di un tipo elencato nella tabella seguente, il tipo di variante risultante viene determinato dalle regole incluse nel gestore di marshalling e visualizzate nella tabella.  
+-   <span data-ttu-id="4af69-143">Se l'oggetto è un'istanza di un tipo elencato nella tabella seguente, il tipo di variante risultante viene determinato dalle regole incluse nel gestore di marshalling e visualizzate nella tabella.</span><span class="sxs-lookup"><span data-stu-id="4af69-143">If the object is an instance of any type listed in the following table, the resulting variant type is determined by the rules built into the marshaler and shown in the table.</span></span>  
   
--   Gli altri oggetti che devono controllare in modo esplicito il comportamento di marshalling possono implementare l'interfaccia <xref:System.IConvertible>. In tal caso, il tipo di variante viene determinato dal codice del tipo restituito dal metodo <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName>. In caso contrario, viene effettuato il marshalling dell'oggetto come variante di tipo **VT_UNKNOWN**.  
+-   <span data-ttu-id="4af69-144">Gli altri oggetti che devono controllare in modo esplicito il comportamento di marshalling possono implementare l'interfaccia <xref:System.IConvertible>.</span><span class="sxs-lookup"><span data-stu-id="4af69-144">Other objects that need to explicitly control the marshaling behavior can implement the <xref:System.IConvertible> interface.</span></span> <span data-ttu-id="4af69-145">In tal caso, il tipo di variante viene determinato dal codice del tipo restituito dal metodo <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4af69-145">In that case, the variant type is determined by the type code returned from the <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="4af69-146">In caso contrario, viene effettuato il marshalling dell'oggetto come variante di tipo **VT_UNKNOWN**.</span><span class="sxs-lookup"><span data-stu-id="4af69-146">Otherwise, the object is marshaled as a variant of type **VT_UNKNOWN**.</span></span>  
   
-### <a name="marshaling-system-types-to-variant"></a>Marshalling di tipi di sistema alla variante  
- La tabella seguente illustra i tipi di oggetto gestito e i corrispondenti tipi di varianti COM. Questi tipi vengono convertiti solo quando la firma del metodo chiamato è di tipo <xref:System.Object?displayProperty=fullName>.  
+### <a name="marshaling-system-types-to-variant"></a><span data-ttu-id="4af69-147">Marshalling di tipi di sistema alla variante</span><span class="sxs-lookup"><span data-stu-id="4af69-147">Marshaling System Types to Variant</span></span>  
+ <span data-ttu-id="4af69-148">La tabella seguente illustra i tipi di oggetto gestito e i corrispondenti tipi di varianti COM.</span><span class="sxs-lookup"><span data-stu-id="4af69-148">The following table shows managed object types and their corresponding COM variant types.</span></span> <span data-ttu-id="4af69-149">Questi tipi vengono convertiti solo quando la firma del metodo chiamato è di tipo <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4af69-149">These types are converted only when the signature of the method being called is of type <xref:System.Object?displayProperty=nameWithType>.</span></span>  
   
-|tipo Object|Tipo di variante COM|  
+|<span data-ttu-id="4af69-150">tipo Object</span><span class="sxs-lookup"><span data-stu-id="4af69-150">Object type</span></span>|<span data-ttu-id="4af69-151">Tipo di variante COM</span><span class="sxs-lookup"><span data-stu-id="4af69-151">COM variant type</span></span>|  
 |-----------------|----------------------|  
-|Riferimento all'oggetto null (**Nothing** in Visual Basic).|**VT_EMPTY**|  
-|<xref:System.DBNull?displayProperty=fullName>|**VT_NULL**|  
-|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=fullName>|**VT_ERROR**|  
-|<xref:System.Reflection.Missing?displayProperty=fullName>|**VT_ERROR** con **E_PARAMNOTFOUND**|  
-|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=fullName>|**VT_DISPATCH**|  
-|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=fullName>|**VT_UNKNOWN**|  
-|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=fullName>|**VT_CY**|  
-|<xref:System.Boolean?displayProperty=fullName>|**VT_BOOL**|  
-|<xref:System.SByte?displayProperty=fullName>|**VT_I1**|  
-|<xref:System.Byte?displayProperty=fullName>|**VT_UI1**|  
-|<xref:System.Int16?displayProperty=fullName>|**VT_I2**|  
-|<xref:System.UInt16?displayProperty=fullName>|**VT_UI2**|  
-|<xref:System.Int32?displayProperty=fullName>|**VT_I4**|  
-|<xref:System.UInt32?displayProperty=fullName>|**VT_UI4**|  
-|<xref:System.Int64?displayProperty=fullName>|**VT_I8**|  
-|<xref:System.UInt64?displayProperty=fullName>|**VT_UI8**|  
-|<xref:System.Single?displayProperty=fullName>|**VT_R4**|  
-|<xref:System.Double?displayProperty=fullName>|**VT_R8**|  
-|<xref:System.Decimal?displayProperty=fullName>|**VT_DECIMAL**|  
-|<xref:System.DateTime?displayProperty=fullName>|**VT_DATE**|  
-|<xref:System.String?displayProperty=fullName>|**VT_BSTR**|  
-|<xref:System.IntPtr?displayProperty=fullName>|**VT_INT**|  
-|<xref:System.UIntPtr?displayProperty=fullName>|**VT_UINT**|  
-|<xref:System.Array?displayProperty=fullName>|**VT_ARRAY**|  
+|<span data-ttu-id="4af69-152">Riferimento all'oggetto null (**Nothing** in Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="4af69-152">Null object reference (**Nothing** in Visual Basic).</span></span>|<span data-ttu-id="4af69-153">**VT_EMPTY**</span><span class="sxs-lookup"><span data-stu-id="4af69-153">**VT_EMPTY**</span></span>|  
+|<xref:System.DBNull?displayProperty=nameWithType>|<span data-ttu-id="4af69-154">**VT_NULL**</span><span class="sxs-lookup"><span data-stu-id="4af69-154">**VT_NULL**</span></span>|  
+|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=nameWithType>|<span data-ttu-id="4af69-155">**VT_ERROR**</span><span class="sxs-lookup"><span data-stu-id="4af69-155">**VT_ERROR**</span></span>|  
+|<xref:System.Reflection.Missing?displayProperty=nameWithType>|<span data-ttu-id="4af69-156">**VT_ERROR** con **E_PARAMNOTFOUND**</span><span class="sxs-lookup"><span data-stu-id="4af69-156">**VT_ERROR** with **E_PARAMNOTFOUND**</span></span>|  
+|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=nameWithType>|<span data-ttu-id="4af69-157">**VT_DISPATCH**</span><span class="sxs-lookup"><span data-stu-id="4af69-157">**VT_DISPATCH**</span></span>|  
+|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=nameWithType>|<span data-ttu-id="4af69-158">**VT_UNKNOWN**</span><span class="sxs-lookup"><span data-stu-id="4af69-158">**VT_UNKNOWN**</span></span>|  
+|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>|<span data-ttu-id="4af69-159">**VT_CY**</span><span class="sxs-lookup"><span data-stu-id="4af69-159">**VT_CY**</span></span>|  
+|<xref:System.Boolean?displayProperty=nameWithType>|<span data-ttu-id="4af69-160">**VT_BOOL**</span><span class="sxs-lookup"><span data-stu-id="4af69-160">**VT_BOOL**</span></span>|  
+|<xref:System.SByte?displayProperty=nameWithType>|<span data-ttu-id="4af69-161">**VT_I1**</span><span class="sxs-lookup"><span data-stu-id="4af69-161">**VT_I1**</span></span>|  
+|<xref:System.Byte?displayProperty=nameWithType>|<span data-ttu-id="4af69-162">**VT_UI1**</span><span class="sxs-lookup"><span data-stu-id="4af69-162">**VT_UI1**</span></span>|  
+|<xref:System.Int16?displayProperty=nameWithType>|<span data-ttu-id="4af69-163">**VT_I2**</span><span class="sxs-lookup"><span data-stu-id="4af69-163">**VT_I2**</span></span>|  
+|<xref:System.UInt16?displayProperty=nameWithType>|<span data-ttu-id="4af69-164">**VT_UI2**</span><span class="sxs-lookup"><span data-stu-id="4af69-164">**VT_UI2**</span></span>|  
+|<xref:System.Int32?displayProperty=nameWithType>|<span data-ttu-id="4af69-165">**VT_I4**</span><span class="sxs-lookup"><span data-stu-id="4af69-165">**VT_I4**</span></span>|  
+|<xref:System.UInt32?displayProperty=nameWithType>|<span data-ttu-id="4af69-166">**VT_UI4**</span><span class="sxs-lookup"><span data-stu-id="4af69-166">**VT_UI4**</span></span>|  
+|<xref:System.Int64?displayProperty=nameWithType>|<span data-ttu-id="4af69-167">**VT_I8**</span><span class="sxs-lookup"><span data-stu-id="4af69-167">**VT_I8**</span></span>|  
+|<xref:System.UInt64?displayProperty=nameWithType>|<span data-ttu-id="4af69-168">**VT_UI8**</span><span class="sxs-lookup"><span data-stu-id="4af69-168">**VT_UI8**</span></span>|  
+|<xref:System.Single?displayProperty=nameWithType>|<span data-ttu-id="4af69-169">**VT_R4**</span><span class="sxs-lookup"><span data-stu-id="4af69-169">**VT_R4**</span></span>|  
+|<xref:System.Double?displayProperty=nameWithType>|<span data-ttu-id="4af69-170">**VT_R8**</span><span class="sxs-lookup"><span data-stu-id="4af69-170">**VT_R8**</span></span>|  
+|<xref:System.Decimal?displayProperty=nameWithType>|<span data-ttu-id="4af69-171">**VT_DECIMAL**</span><span class="sxs-lookup"><span data-stu-id="4af69-171">**VT_DECIMAL**</span></span>|  
+|<xref:System.DateTime?displayProperty=nameWithType>|<span data-ttu-id="4af69-172">**VT_DATE**</span><span class="sxs-lookup"><span data-stu-id="4af69-172">**VT_DATE**</span></span>|  
+|<xref:System.String?displayProperty=nameWithType>|<span data-ttu-id="4af69-173">**VT_BSTR**</span><span class="sxs-lookup"><span data-stu-id="4af69-173">**VT_BSTR**</span></span>|  
+|<xref:System.IntPtr?displayProperty=nameWithType>|<span data-ttu-id="4af69-174">**VT_INT**</span><span class="sxs-lookup"><span data-stu-id="4af69-174">**VT_INT**</span></span>|  
+|<xref:System.UIntPtr?displayProperty=nameWithType>|<span data-ttu-id="4af69-175">**VT_UINT**</span><span class="sxs-lookup"><span data-stu-id="4af69-175">**VT_UINT**</span></span>|  
+|<xref:System.Array?displayProperty=nameWithType>|<span data-ttu-id="4af69-176">**VT_ARRAY**</span><span class="sxs-lookup"><span data-stu-id="4af69-176">**VT_ARRAY**</span></span>|  
   
- Usando l'interfaccia `MarshalObject` definita nell'esempio precedente, l'esempio di codice seguente illustra come passare diversi tipi di varianti a un server COM.  
+ <span data-ttu-id="4af69-177">Usando l'interfaccia `MarshalObject` definita nell'esempio precedente, l'esempio di codice seguente illustra come passare diversi tipi di varianti a un server COM.</span><span class="sxs-lookup"><span data-stu-id="4af69-177">Using the `MarshalObject` interface defined in the previous example, the following code example demonstrates how to pass various types of variants to a COM server.</span></span>  
   
 ```vb  
 Dim mo As New MarshalObject()  
@@ -205,7 +201,7 @@ mo.SetVariant((single)27.0);   // Marshal as variant of type VT_R4.
 mo.SetVariant((double)27.0);   // Marshal as variant of type VT_R8.  
 ```  
   
- È possibile effettuare il marshalling dei tipi COM privi di tipi gestiti corrispondenti usando classi wrapper, ad esempio <xref:System.Runtime.InteropServices.ErrorWrapper>, <xref:System.Runtime.InteropServices.DispatchWrapper>, <xref:System.Runtime.InteropServices.UnknownWrapper> e <xref:System.Runtime.InteropServices.CurrencyWrapper>. L'esempio di codice seguente illustra come usare questi wrapper per passare diversi tipi di varianti a un server COM.  
+ <span data-ttu-id="4af69-178">È possibile effettuare il marshalling dei tipi COM privi di tipi gestiti corrispondenti usando classi wrapper, ad esempio <xref:System.Runtime.InteropServices.ErrorWrapper>, <xref:System.Runtime.InteropServices.DispatchWrapper>, <xref:System.Runtime.InteropServices.UnknownWrapper> e <xref:System.Runtime.InteropServices.CurrencyWrapper>.</span><span class="sxs-lookup"><span data-stu-id="4af69-178">COM types that do not have corresponding managed types can be marshaled using wrapper classes such as <xref:System.Runtime.InteropServices.ErrorWrapper>, <xref:System.Runtime.InteropServices.DispatchWrapper>, <xref:System.Runtime.InteropServices.UnknownWrapper>, and <xref:System.Runtime.InteropServices.CurrencyWrapper>.</span></span> <span data-ttu-id="4af69-179">L'esempio di codice seguente illustra come usare questi wrapper per passare diversi tipi di varianti a un server COM.</span><span class="sxs-lookup"><span data-stu-id="4af69-179">The following code example demonstrates how to use these wrappers to pass various types of variants to a COM server.</span></span>  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -231,120 +227,119 @@ mo.SetVariant(new ErrorWrapper(0x80054002));
 mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));  
 ```  
   
- Le classi wrapper vengono definite nello spazio dei nomi <xref:System.Runtime.InteropServices>.  
+ <span data-ttu-id="4af69-180">Le classi wrapper vengono definite nello spazio dei nomi <xref:System.Runtime.InteropServices>.</span><span class="sxs-lookup"><span data-stu-id="4af69-180">The wrapper classes are defined in the <xref:System.Runtime.InteropServices> namespace.</span></span>  
   
-### <a name="marshaling-the-iconvertible-interface-to-variant"></a>Marshalling dell'interfaccia IConvertible alla variante  
- I tipi diversi da quelli elencati nella sezione precedente possono controllare come viene effettuato il marshalling implementando l'interfaccia <xref:System.IConvertible>. Se l'oggetto implementa l'interfaccia **IConvertible**, il tipo di variante COM viene determinato in fase di esecuzione dal valore dell'enumerazione <xref:System.TypeCode> restituita dal metodo <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName>.  
+### <a name="marshaling-the-iconvertible-interface-to-variant"></a><span data-ttu-id="4af69-181">Marshalling dell'interfaccia IConvertible alla variante</span><span class="sxs-lookup"><span data-stu-id="4af69-181">Marshaling the IConvertible Interface to Variant</span></span>  
+ <span data-ttu-id="4af69-182">I tipi diversi da quelli elencati nella sezione precedente possono controllare come viene effettuato il marshalling implementando l'interfaccia <xref:System.IConvertible>.</span><span class="sxs-lookup"><span data-stu-id="4af69-182">Types other than those listed in the previous section can control how they are marshaled by implementing the <xref:System.IConvertible> interface.</span></span> <span data-ttu-id="4af69-183">Se l'oggetto implementa l'interfaccia **IConvertible**, il tipo di variante COM viene determinato in fase di esecuzione dal valore dell'enumerazione <xref:System.TypeCode> restituita dal metodo <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4af69-183">If the object implements the **IConvertible** interface, the COM variant type is determined at run time by the value of the <xref:System.TypeCode> enumeration returned from the <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> method.</span></span>  
   
- La tabella seguente illustra i possibili valori per l'enumerazione **TypeCode** e il tipo di variante COM corrispondente per ogni valore.  
+ <span data-ttu-id="4af69-184">La tabella seguente illustra i possibili valori per l'enumerazione **TypeCode** e il tipo di variante COM corrispondente per ogni valore.</span><span class="sxs-lookup"><span data-stu-id="4af69-184">The following table shows the possible values for the **TypeCode** enumeration and the corresponding COM variant type for each value.</span></span>  
   
-|TypeCode|Tipo di variante COM|  
+|<span data-ttu-id="4af69-185">TypeCode</span><span class="sxs-lookup"><span data-stu-id="4af69-185">TypeCode</span></span>|<span data-ttu-id="4af69-186">Tipo di variante COM</span><span class="sxs-lookup"><span data-stu-id="4af69-186">COM variant type</span></span>|  
 |--------------|----------------------|  
-|**TypeCode.Empty**|**VT_EMPTY**|  
-|**TypeCode.Object**|**VT_UNKNOWN**|  
-|**TypeCode.DBNull**|**VT_NULL**|  
-|**TypeCode.Boolean**|**VT_BOOL**|  
-|**TypeCode.Char**|**VT_UI2**|  
-|**TypeCode.Sbyte**|**VT_I1**|  
-|**TypeCode.Byte**|**VT_UI1**|  
-|**TypeCode.Int16**|**VT_I2**|  
-|**TypeCode.UInt16**|**VT_UI2**|  
-|**TypeCode.Int32**|**VT_I4**|  
-|**TypeCode.UInt32**|**VT_UI4**|  
-|**TypeCode.Int64**|**VT_I8**|  
-|**TypeCode.UInt64**|**VT_UI8**|  
-|**TypeCode.Single**|**VT_R4**|  
-|**TypeCode.Double**|**VT_R8**|  
-|**TypeCode.Decimal**|**VT_DECIMAL**|  
-|**TypeCode.DateTime**|**VT_DATE**|  
-|**TypeCode.String**|**VT_BSTR**|  
-|Non supportato.|**VT_INT**|  
-|Non supportato.|**VT_UINT**|  
-|Non supportato.|**VT_ARRAY**|  
-|Non supportato.|**VT_RECORD**|  
-|Non supportato.|**VT_CY**|  
-|Non supportato.|**VT_VARIANT**|  
+|<span data-ttu-id="4af69-187">**TypeCode.Empty**</span><span class="sxs-lookup"><span data-stu-id="4af69-187">**TypeCode.Empty**</span></span>|<span data-ttu-id="4af69-188">**VT_EMPTY**</span><span class="sxs-lookup"><span data-stu-id="4af69-188">**VT_EMPTY**</span></span>|  
+|<span data-ttu-id="4af69-189">**TypeCode.Object**</span><span class="sxs-lookup"><span data-stu-id="4af69-189">**TypeCode.Object**</span></span>|<span data-ttu-id="4af69-190">**VT_UNKNOWN**</span><span class="sxs-lookup"><span data-stu-id="4af69-190">**VT_UNKNOWN**</span></span>|  
+|<span data-ttu-id="4af69-191">**TypeCode.DBNull**</span><span class="sxs-lookup"><span data-stu-id="4af69-191">**TypeCode.DBNull**</span></span>|<span data-ttu-id="4af69-192">**VT_NULL**</span><span class="sxs-lookup"><span data-stu-id="4af69-192">**VT_NULL**</span></span>|  
+|<span data-ttu-id="4af69-193">**TypeCode.Boolean**</span><span class="sxs-lookup"><span data-stu-id="4af69-193">**TypeCode.Boolean**</span></span>|<span data-ttu-id="4af69-194">**VT_BOOL**</span><span class="sxs-lookup"><span data-stu-id="4af69-194">**VT_BOOL**</span></span>|  
+|<span data-ttu-id="4af69-195">**TypeCode.Char**</span><span class="sxs-lookup"><span data-stu-id="4af69-195">**TypeCode.Char**</span></span>|<span data-ttu-id="4af69-196">**VT_UI2**</span><span class="sxs-lookup"><span data-stu-id="4af69-196">**VT_UI2**</span></span>|  
+|<span data-ttu-id="4af69-197">**TypeCode.Sbyte**</span><span class="sxs-lookup"><span data-stu-id="4af69-197">**TypeCode.Sbyte**</span></span>|<span data-ttu-id="4af69-198">**VT_I1**</span><span class="sxs-lookup"><span data-stu-id="4af69-198">**VT_I1**</span></span>|  
+|<span data-ttu-id="4af69-199">**TypeCode.Byte**</span><span class="sxs-lookup"><span data-stu-id="4af69-199">**TypeCode.Byte**</span></span>|<span data-ttu-id="4af69-200">**VT_UI1**</span><span class="sxs-lookup"><span data-stu-id="4af69-200">**VT_UI1**</span></span>|  
+|<span data-ttu-id="4af69-201">**TypeCode.Int16**</span><span class="sxs-lookup"><span data-stu-id="4af69-201">**TypeCode.Int16**</span></span>|<span data-ttu-id="4af69-202">**VT_I2**</span><span class="sxs-lookup"><span data-stu-id="4af69-202">**VT_I2**</span></span>|  
+|<span data-ttu-id="4af69-203">**TypeCode.UInt16**</span><span class="sxs-lookup"><span data-stu-id="4af69-203">**TypeCode.UInt16**</span></span>|<span data-ttu-id="4af69-204">**VT_UI2**</span><span class="sxs-lookup"><span data-stu-id="4af69-204">**VT_UI2**</span></span>|  
+|<span data-ttu-id="4af69-205">**TypeCode.Int32**</span><span class="sxs-lookup"><span data-stu-id="4af69-205">**TypeCode.Int32**</span></span>|<span data-ttu-id="4af69-206">**VT_I4**</span><span class="sxs-lookup"><span data-stu-id="4af69-206">**VT_I4**</span></span>|  
+|<span data-ttu-id="4af69-207">**TypeCode.UInt32**</span><span class="sxs-lookup"><span data-stu-id="4af69-207">**TypeCode.UInt32**</span></span>|<span data-ttu-id="4af69-208">**VT_UI4**</span><span class="sxs-lookup"><span data-stu-id="4af69-208">**VT_UI4**</span></span>|  
+|<span data-ttu-id="4af69-209">**TypeCode.Int64**</span><span class="sxs-lookup"><span data-stu-id="4af69-209">**TypeCode.Int64**</span></span>|<span data-ttu-id="4af69-210">**VT_I8**</span><span class="sxs-lookup"><span data-stu-id="4af69-210">**VT_I8**</span></span>|  
+|<span data-ttu-id="4af69-211">**TypeCode.UInt64**</span><span class="sxs-lookup"><span data-stu-id="4af69-211">**TypeCode.UInt64**</span></span>|<span data-ttu-id="4af69-212">**VT_UI8**</span><span class="sxs-lookup"><span data-stu-id="4af69-212">**VT_UI8**</span></span>|  
+|<span data-ttu-id="4af69-213">**TypeCode.Single**</span><span class="sxs-lookup"><span data-stu-id="4af69-213">**TypeCode.Single**</span></span>|<span data-ttu-id="4af69-214">**VT_R4**</span><span class="sxs-lookup"><span data-stu-id="4af69-214">**VT_R4**</span></span>|  
+|<span data-ttu-id="4af69-215">**TypeCode.Double**</span><span class="sxs-lookup"><span data-stu-id="4af69-215">**TypeCode.Double**</span></span>|<span data-ttu-id="4af69-216">**VT_R8**</span><span class="sxs-lookup"><span data-stu-id="4af69-216">**VT_R8**</span></span>|  
+|<span data-ttu-id="4af69-217">**TypeCode.Decimal**</span><span class="sxs-lookup"><span data-stu-id="4af69-217">**TypeCode.Decimal**</span></span>|<span data-ttu-id="4af69-218">**VT_DECIMAL**</span><span class="sxs-lookup"><span data-stu-id="4af69-218">**VT_DECIMAL**</span></span>|  
+|<span data-ttu-id="4af69-219">**TypeCode.DateTime**</span><span class="sxs-lookup"><span data-stu-id="4af69-219">**TypeCode.DateTime**</span></span>|<span data-ttu-id="4af69-220">**VT_DATE**</span><span class="sxs-lookup"><span data-stu-id="4af69-220">**VT_DATE**</span></span>|  
+|<span data-ttu-id="4af69-221">**TypeCode.String**</span><span class="sxs-lookup"><span data-stu-id="4af69-221">**TypeCode.String**</span></span>|<span data-ttu-id="4af69-222">**VT_BSTR**</span><span class="sxs-lookup"><span data-stu-id="4af69-222">**VT_BSTR**</span></span>|  
+|<span data-ttu-id="4af69-223">Valore non supportato.</span><span class="sxs-lookup"><span data-stu-id="4af69-223">Not supported.</span></span>|<span data-ttu-id="4af69-224">**VT_INT**</span><span class="sxs-lookup"><span data-stu-id="4af69-224">**VT_INT**</span></span>|  
+|<span data-ttu-id="4af69-225">Valore non supportato.</span><span class="sxs-lookup"><span data-stu-id="4af69-225">Not supported.</span></span>|<span data-ttu-id="4af69-226">**VT_UINT**</span><span class="sxs-lookup"><span data-stu-id="4af69-226">**VT_UINT**</span></span>|  
+|<span data-ttu-id="4af69-227">Valore non supportato.</span><span class="sxs-lookup"><span data-stu-id="4af69-227">Not supported.</span></span>|<span data-ttu-id="4af69-228">**VT_ARRAY**</span><span class="sxs-lookup"><span data-stu-id="4af69-228">**VT_ARRAY**</span></span>|  
+|<span data-ttu-id="4af69-229">Valore non supportato.</span><span class="sxs-lookup"><span data-stu-id="4af69-229">Not supported.</span></span>|<span data-ttu-id="4af69-230">**VT_RECORD**</span><span class="sxs-lookup"><span data-stu-id="4af69-230">**VT_RECORD**</span></span>|  
+|<span data-ttu-id="4af69-231">Valore non supportato.</span><span class="sxs-lookup"><span data-stu-id="4af69-231">Not supported.</span></span>|<span data-ttu-id="4af69-232">**VT_CY**</span><span class="sxs-lookup"><span data-stu-id="4af69-232">**VT_CY**</span></span>|  
+|<span data-ttu-id="4af69-233">Valore non supportato.</span><span class="sxs-lookup"><span data-stu-id="4af69-233">Not supported.</span></span>|<span data-ttu-id="4af69-234">**VT_VARIANT**</span><span class="sxs-lookup"><span data-stu-id="4af69-234">**VT_VARIANT**</span></span>|  
   
- Il valore della variante COM viene determinato chiamando l'interfaccia **IConvertible.To** *Type*, dove **To** *Type* è la routine di conversione che corrisponde al tipo restituito da **IConvertible.GetTypeCode**. Ad esempio, il marshalling di un oggetto che restituisce **TypeCode.Double** da **IConvertible.GetTypeCode** viene effettuato come variante COM di tipo **VT_R8**. Per ottenere il valore della variante (archiviata nel campo **dblVal** della variante COM), è possibile eseguire il cast all'interfaccia **IConvertible** e chiamare il metodo <xref:System.IConvertible.ToDouble%2A>.  
+ <span data-ttu-id="4af69-235">Il valore della variante COM viene determinato chiamando l'interfaccia **IConvertible.To** *Type*, dove **To** *Type* è la routine di conversione che corrisponde al tipo restituito da **IConvertible.GetTypeCode**.</span><span class="sxs-lookup"><span data-stu-id="4af69-235">The value of the COM variant is determined by calling the **IConvertible.To** *Type* interface, where **To** *Type* is the conversion routine that corresponds to the type that was returned from **IConvertible.GetTypeCode**.</span></span> <span data-ttu-id="4af69-236">Ad esempio, il marshalling di un oggetto che restituisce **TypeCode.Double** da **IConvertible.GetTypeCode** viene effettuato come variante COM di tipo **VT_R8**.</span><span class="sxs-lookup"><span data-stu-id="4af69-236">For example, an object that returns **TypeCode.Double** from **IConvertible.GetTypeCode** is marshaled as a COM variant of type **VT_R8**.</span></span> <span data-ttu-id="4af69-237">Per ottenere il valore della variante (archiviata nel campo **dblVal** della variante COM), è possibile eseguire il cast all'interfaccia **IConvertible** e chiamare il metodo <xref:System.IConvertible.ToDouble%2A>.</span><span class="sxs-lookup"><span data-stu-id="4af69-237">You can obtain the value of the variant (stored in the **dblVal** field of the COM variant) by casting to the **IConvertible** interface and calling the <xref:System.IConvertible.ToDouble%2A> method.</span></span>  
   
 <a name="cpcondefaultmarshalingforobjectsanchor4"></a>   
-## <a name="marshaling-variant-to-object"></a>Marshalling della variante all'oggetto  
- Quando si effettua il marshalling di una variante a un oggetto, il tipo e a volte il valore della variante di cui viene effettuato il marshalling determinano il tipo dell'oggetto prodotto. La tabella seguente identifica tale tipo di variante e il tipo di oggetto corrispondente creato dal gestore di marshalling quando una variante viene passata da COM a .NET Framework.  
+## <a name="marshaling-variant-to-object"></a><span data-ttu-id="4af69-238">Marshalling della variante all'oggetto</span><span class="sxs-lookup"><span data-stu-id="4af69-238">Marshaling Variant to Object</span></span>  
+ <span data-ttu-id="4af69-239">Quando si effettua il marshalling di una variante a un oggetto, il tipo e a volte il valore della variante di cui viene effettuato il marshalling determinano il tipo dell'oggetto prodotto.</span><span class="sxs-lookup"><span data-stu-id="4af69-239">When marshaling a variant to an object, the type, and sometimes the value, of the marshaled variant determines the type of object produced.</span></span> <span data-ttu-id="4af69-240">La tabella seguente identifica tale tipo di variante e il tipo di oggetto corrispondente creato dal gestore di marshalling quando una variante viene passata da COM a .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4af69-240">The following table identifies each variant type and the corresponding object type that the marshaler creates when a variant is passed from COM to the .NET Framework.</span></span>  
   
-|Tipo di variante COM|Tipo di oggetto|  
+|<span data-ttu-id="4af69-241">Tipo di variante COM</span><span class="sxs-lookup"><span data-stu-id="4af69-241">COM variant type</span></span>|<span data-ttu-id="4af69-242">tipo Object</span><span class="sxs-lookup"><span data-stu-id="4af69-242">Object type</span></span>|  
 |----------------------|-----------------|  
-|**VT_EMPTY**|Riferimento all'oggetto null (**Nothing** in Visual Basic).|  
-|**VT_NULL**|<xref:System.DBNull?displayProperty=fullName>|  
-|**VT_DISPATCH**|**System.__ComObject** o null se (pdispVal == null)|  
-|**VT_UNKNOWN**|**System.__ComObject** o null se (punkVal == null)|  
-|**VT_ERROR**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_BOOL**|<xref:System.Boolean?displayProperty=fullName>|  
-|**VT_I1**|<xref:System.SByte?displayProperty=fullName>|  
-|**VT_UI1**|<xref:System.Byte?displayProperty=fullName>|  
-|**VT_I2**|<xref:System.Int16?displayProperty=fullName>|  
-|**VT_UI2**|<xref:System.UInt16?displayProperty=fullName>|  
-|**VT_I4**|<xref:System.Int32?displayProperty=fullName>|  
-|**VT_UI4**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_I8**|<xref:System.Int64?displayProperty=fullName>|  
-|**VT_UI8**|<xref:System.UInt64?displayProperty=fullName>|  
-|**VT_R4**|<xref:System.Single?displayProperty=fullName>|  
-|**VT_R8**|<xref:System.Double?displayProperty=fullName>|  
-|**VT_DECIMAL**|<xref:System.Decimal?displayProperty=fullName>|  
-|**VT_DATE**|<xref:System.DateTime?displayProperty=fullName>|  
-|**VT_BSTR**|<xref:System.String?displayProperty=fullName>|  
-|**VT_INT**|<xref:System.Int32?displayProperty=fullName>|  
-|**VT_UINT**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_ARRAY** &#124; **VT_\***|<xref:System.Array?displayProperty=fullName>|  
-|**VT_CY**|<xref:System.Decimal?displayProperty=fullName>|  
-|**VT_RECORD**|Tipo valore boxed corrispondente.|  
-|**VT_VARIANT**|Non supportato.|  
+|<span data-ttu-id="4af69-243">**VT_EMPTY**</span><span class="sxs-lookup"><span data-stu-id="4af69-243">**VT_EMPTY**</span></span>|<span data-ttu-id="4af69-244">Riferimento all'oggetto null (**Nothing** in Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="4af69-244">Null object reference (**Nothing** in Visual Basic).</span></span>|  
+|<span data-ttu-id="4af69-245">**VT_NULL**</span><span class="sxs-lookup"><span data-stu-id="4af69-245">**VT_NULL**</span></span>|<xref:System.DBNull?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-246">**VT_DISPATCH**</span><span class="sxs-lookup"><span data-stu-id="4af69-246">**VT_DISPATCH**</span></span>|<span data-ttu-id="4af69-247">**System.__ComObject** o null se (pdispVal == null)</span><span class="sxs-lookup"><span data-stu-id="4af69-247">**System.__ComObject** or null if (pdispVal == null)</span></span>|  
+|<span data-ttu-id="4af69-248">**VT_UNKNOWN**</span><span class="sxs-lookup"><span data-stu-id="4af69-248">**VT_UNKNOWN**</span></span>|<span data-ttu-id="4af69-249">**System.__ComObject** o null se (punkVal == null)</span><span class="sxs-lookup"><span data-stu-id="4af69-249">**System.__ComObject** or null if (punkVal == null)</span></span>|  
+|<span data-ttu-id="4af69-250">**VT_ERROR**</span><span class="sxs-lookup"><span data-stu-id="4af69-250">**VT_ERROR**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-251">**VT_BOOL**</span><span class="sxs-lookup"><span data-stu-id="4af69-251">**VT_BOOL**</span></span>|<xref:System.Boolean?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-252">**VT_I1**</span><span class="sxs-lookup"><span data-stu-id="4af69-252">**VT_I1**</span></span>|<xref:System.SByte?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-253">**VT_UI1**</span><span class="sxs-lookup"><span data-stu-id="4af69-253">**VT_UI1**</span></span>|<xref:System.Byte?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-254">**VT_I2**</span><span class="sxs-lookup"><span data-stu-id="4af69-254">**VT_I2**</span></span>|<xref:System.Int16?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-255">**VT_UI2**</span><span class="sxs-lookup"><span data-stu-id="4af69-255">**VT_UI2**</span></span>|<xref:System.UInt16?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-256">**VT_I4**</span><span class="sxs-lookup"><span data-stu-id="4af69-256">**VT_I4**</span></span>|<xref:System.Int32?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-257">**VT_UI4**</span><span class="sxs-lookup"><span data-stu-id="4af69-257">**VT_UI4**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-258">**VT_I8**</span><span class="sxs-lookup"><span data-stu-id="4af69-258">**VT_I8**</span></span>|<xref:System.Int64?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-259">**VT_UI8**</span><span class="sxs-lookup"><span data-stu-id="4af69-259">**VT_UI8**</span></span>|<xref:System.UInt64?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-260">**VT_R4**</span><span class="sxs-lookup"><span data-stu-id="4af69-260">**VT_R4**</span></span>|<xref:System.Single?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-261">**VT_R8**</span><span class="sxs-lookup"><span data-stu-id="4af69-261">**VT_R8**</span></span>|<xref:System.Double?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-262">**VT_DECIMAL**</span><span class="sxs-lookup"><span data-stu-id="4af69-262">**VT_DECIMAL**</span></span>|<xref:System.Decimal?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-263">**VT_DATE**</span><span class="sxs-lookup"><span data-stu-id="4af69-263">**VT_DATE**</span></span>|<xref:System.DateTime?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-264">**VT_BSTR**</span><span class="sxs-lookup"><span data-stu-id="4af69-264">**VT_BSTR**</span></span>|<xref:System.String?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-265">**VT_INT**</span><span class="sxs-lookup"><span data-stu-id="4af69-265">**VT_INT**</span></span>|<xref:System.Int32?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-266">**VT_UINT**</span><span class="sxs-lookup"><span data-stu-id="4af69-266">**VT_UINT**</span></span>|<xref:System.UInt32?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-267">**VT_ARRAY** &#124; **VT_\***</span><span class="sxs-lookup"><span data-stu-id="4af69-267">**VT_ARRAY** &#124; **VT_\***</span></span>|<xref:System.Array?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-268">**VT_CY**</span><span class="sxs-lookup"><span data-stu-id="4af69-268">**VT_CY**</span></span>|<xref:System.Decimal?displayProperty=nameWithType>|  
+|<span data-ttu-id="4af69-269">**VT_RECORD**</span><span class="sxs-lookup"><span data-stu-id="4af69-269">**VT_RECORD**</span></span>|<span data-ttu-id="4af69-270">Tipo valore boxed corrispondente.</span><span class="sxs-lookup"><span data-stu-id="4af69-270">Corresponding boxed value type.</span></span>|  
+|<span data-ttu-id="4af69-271">**VT_VARIANT**</span><span class="sxs-lookup"><span data-stu-id="4af69-271">**VT_VARIANT**</span></span>|<span data-ttu-id="4af69-272">Valore non supportato.</span><span class="sxs-lookup"><span data-stu-id="4af69-272">Not supported.</span></span>|  
   
- I tipi di variante passati da COM al codice gestito e quindi di nuovo a COM potrebbero non conservare lo stesso tipo di variante per tutta la durata della chiamata. Si consideri che cosa accade quando una variante di tipo **VT_DISPATCH** viene passata da COM a .NET Framework. Durante il marshalling, la variante viene convertita in <xref:System.Object?displayProperty=fullName>. Se **Object** viene quindi passato nuovamente a COM, ne viene effettuato il marshalling a una variante di tipo **VT_UNKNOWN**. Non esiste garanzia che la variante prodotta quando viene effettuato il marshalling di un oggetto dal codice gestito a COM sarà dello stesso tipo della variante usata inizialmente per produrre l'oggetto.  
+ <span data-ttu-id="4af69-273">I tipi di variante passati da COM al codice gestito e quindi di nuovo a COM potrebbero non conservare lo stesso tipo di variante per tutta la durata della chiamata.</span><span class="sxs-lookup"><span data-stu-id="4af69-273">Variant types passed from COM to managed code and then back to COM might not retain the same variant type for the duration of the call.</span></span> <span data-ttu-id="4af69-274">Si consideri che cosa accade quando una variante di tipo **VT_DISPATCH** viene passata da COM a .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="4af69-274">Consider what happens when a variant of type **VT_DISPATCH** is passed from COM to the .NET Framework.</span></span> <span data-ttu-id="4af69-275">Durante il marshalling, la variante viene convertita in <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4af69-275">During marshaling, the variant is converted to a <xref:System.Object?displayProperty=nameWithType>.</span></span> <span data-ttu-id="4af69-276">Se **Object** viene quindi passato nuovamente a COM, ne viene effettuato il marshalling a una variante di tipo **VT_UNKNOWN**.</span><span class="sxs-lookup"><span data-stu-id="4af69-276">If the **Object** is then passed back to COM, it is marshaled back to a variant of type **VT_UNKNOWN**.</span></span> <span data-ttu-id="4af69-277">Non esiste garanzia che la variante prodotta quando viene effettuato il marshalling di un oggetto dal codice gestito a COM sarà dello stesso tipo della variante usata inizialmente per produrre l'oggetto.</span><span class="sxs-lookup"><span data-stu-id="4af69-277">There is no guarantee that the variant produced when an object is marshaled from managed code to COM will be the same type as the variant initially used to produce the object.</span></span>  
   
 <a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
-## <a name="marshaling-byref-variants"></a>Marshalling di varianti ByRef  
- Anche se le varianti in sé possono essere passate in base al valore o al riferimento, è anche possibile usare il flag **VT_BYREF** con qualsiasi variante per indicare che i contenuti della variante verranno passati in base al riferimento invece che al valore. La differenza tra il marshalling delle varianti in base al riferimento e il marshalling di una variante con il flag **VT_BYREF** impostato può risultare poco chiara. La figura seguente illustra le differenze.  
+## <a name="marshaling-byref-variants"></a><span data-ttu-id="4af69-278">Marshalling di varianti ByRef</span><span class="sxs-lookup"><span data-stu-id="4af69-278">Marshaling ByRef Variants</span></span>  
+ <span data-ttu-id="4af69-279">Anche se le varianti in sé possono essere passate in base al valore o al riferimento, è anche possibile usare il flag **VT_BYREF** con qualsiasi variante per indicare che i contenuti della variante verranno passati in base al riferimento invece che al valore.</span><span class="sxs-lookup"><span data-stu-id="4af69-279">Although variants themselves can be passed by value or by reference, the **VT_BYREF** flag can also be used with any variant type to indicate that the contents of the variant are being passed by reference instead of by value.</span></span> <span data-ttu-id="4af69-280">La differenza tra il marshalling delle varianti in base al riferimento e il marshalling di una variante con il flag **VT_BYREF** impostato può risultare poco chiara.</span><span class="sxs-lookup"><span data-stu-id="4af69-280">The difference between marshaling variants by reference and marshaling a variant with the **VT_BYREF** flag set can be confusing.</span></span> <span data-ttu-id="4af69-281">La figura seguente illustra le differenze.</span><span class="sxs-lookup"><span data-stu-id="4af69-281">The following illustration clarifies the differences.</span></span>  
   
- ![Variante passata allo stack](../../../docs/framework/interop/media/interopvariant.gif "Variante di interoperabilità")  
-Varianti passate per valore e per riferimento  
+ <span data-ttu-id="4af69-282">![Variante passata allo stack](../../../docs/framework/interop/media/interopvariant.gif "Variante di interoperabilità")</span><span class="sxs-lookup"><span data-stu-id="4af69-282">![Variant passed on the stack](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")</span></span>  
+<span data-ttu-id="4af69-283">Varianti passate per valore e per riferimento</span><span class="sxs-lookup"><span data-stu-id="4af69-283">Variants passed by value and by reference</span></span>  
   
- **Comportamento predefinito per il marshalling di oggetti e varianti per valore**  
+ <span data-ttu-id="4af69-284">**Comportamento predefinito per il marshalling di oggetti e varianti per valore**</span><span class="sxs-lookup"><span data-stu-id="4af69-284">**Default behavior for marshaling objects and variants by value**</span></span>  
   
--   Quando si passano gli oggetti dal codice gestito a COM, i contenuti dell'oggetto vengono copiati in una nuova variante creata dal gestore di marshalling, usando le regole definite in [Marshalling dell'oggetto alla variante](#cpcondefaultmarshalingforobjectsanchor3). Le modifiche apportate alla variante sul lato non gestito non vengono propagate all'oggetto originale al ritorno dalla chiamata.  
+-   <span data-ttu-id="4af69-285">Quando si passano gli oggetti dal codice gestito a COM, i contenuti dell'oggetto vengono copiati in una nuova variante creata dal gestore di marshalling, usando le regole definite in [Marshalling dell'oggetto alla variante](#cpcondefaultmarshalingforobjectsanchor3).</span><span class="sxs-lookup"><span data-stu-id="4af69-285">When passing objects from managed code to COM, the contents of the object are copied into a new variant created by the marshaler, using the rules defined in [Marshaling Object to Variant](#cpcondefaultmarshalingforobjectsanchor3).</span></span> <span data-ttu-id="4af69-286">Le modifiche apportate alla variante sul lato non gestito non vengono propagate all'oggetto originale al ritorno dalla chiamata.</span><span class="sxs-lookup"><span data-stu-id="4af69-286">Changes made to the variant on the unmanaged side are not propagated back to the original object on return from the call.</span></span>  
   
--   Quando si passano le varianti da COM al codice gestito, i contenuti della variante vengono copiati in un nuovo oggetto creato, usando le regole definite in [Marshalling della variante all'oggetto](#cpcondefaultmarshalingforobjectsanchor4). Le modifiche apportate all'oggetto sul lato gestito non vengono propagate alla variante originale al ritorno dalla chiamata.  
+-   <span data-ttu-id="4af69-287">Quando si passano le varianti da COM al codice gestito, i contenuti della variante vengono copiati in un nuovo oggetto creato, usando le regole definite in [Marshalling della variante all'oggetto](#cpcondefaultmarshalingforobjectsanchor4).</span><span class="sxs-lookup"><span data-stu-id="4af69-287">When passing variants from COM to managed code, the contents of the variant are copied to a newly created object, using the rules defined in [Marshaling Variant to Object](#cpcondefaultmarshalingforobjectsanchor4).</span></span> <span data-ttu-id="4af69-288">Le modifiche apportate all'oggetto sul lato gestito non vengono propagate alla variante originale al ritorno dalla chiamata.</span><span class="sxs-lookup"><span data-stu-id="4af69-288">Changes made to the object on the managed side are not propagated back to the original variant on return from the call.</span></span>  
   
- **Comportamento predefinito per il marshalling di oggetti e varianti per riferimento**  
+ <span data-ttu-id="4af69-289">**Comportamento predefinito per il marshalling di oggetti e varianti per riferimento**</span><span class="sxs-lookup"><span data-stu-id="4af69-289">**Default behavior for marshaling objects and variants by reference**</span></span>  
   
- Per propagare le modifiche al chiamante, i parametri devono essere passati per riferimento. È ad esempio possibile usare la parola chiave **ref** in C# (o **ByRef** nel codice gestito di Visual Basic) per passare i parametri per riferimento. In COM i parametri per riferimento vengono passati usando un puntatore, ad esempio una **variante \***.  
+ <span data-ttu-id="4af69-290">Per propagare le modifiche al chiamante, i parametri devono essere passati per riferimento.</span><span class="sxs-lookup"><span data-stu-id="4af69-290">To propagate changes back to the caller, the parameters must be passed by reference.</span></span> <span data-ttu-id="4af69-291">È ad esempio possibile usare la parola chiave **ref** in C# (o **ByRef** nel codice gestito di Visual Basic) per passare i parametri per riferimento.</span><span class="sxs-lookup"><span data-stu-id="4af69-291">For example, you can use the **ref** keyword in C# (or **ByRef** in Visual Basic managed code) to pass parameters by reference.</span></span> <span data-ttu-id="4af69-292">In COM i parametri per riferimento vengono passati usando un puntatore, ad esempio una **variante \***.</span><span class="sxs-lookup"><span data-stu-id="4af69-292">In COM, reference parameters are passed using a pointer such as a **variant \***.</span></span>  
   
--   Quando si passa un oggetto a COM per riferimento, il gestore di marshalling crea una nuova variante e copia i contenuti del riferimento all'oggetto nella variante prima che venga effettuata la chiamata. La variante viene passata alla funzione non gestita in cui l'utente può modificare i contenuti della variante. Al ritorno dalla chiamata, le modifiche apportate alla variante sul lato non gestito vengono propagate all'oggetto originale. Se il tipo della variante è diverso dal tipo della variante passata alla chiamata, le modifiche vengono propagate a un oggetto di tipo diverso, ovvero il tipo dell'oggetto passato nella chiamata può essere diverso dal tipo dell'oggetto restituito dalla chiamata.  
+-   <span data-ttu-id="4af69-293">Quando si passa un oggetto a COM per riferimento, il gestore di marshalling crea una nuova variante e copia i contenuti del riferimento all'oggetto nella variante prima che venga effettuata la chiamata.</span><span class="sxs-lookup"><span data-stu-id="4af69-293">When passing an object to COM by reference, the marshaler creates a new variant and copies the contents of the object reference into the variant before the call is made.</span></span> <span data-ttu-id="4af69-294">La variante viene passata alla funzione non gestita in cui l'utente può modificare i contenuti della variante.</span><span class="sxs-lookup"><span data-stu-id="4af69-294">The variant is passed to the unmanaged function where the user is free to change the contents of the variant.</span></span> <span data-ttu-id="4af69-295">Al ritorno dalla chiamata, le modifiche apportate alla variante sul lato non gestito vengono propagate all'oggetto originale.</span><span class="sxs-lookup"><span data-stu-id="4af69-295">On return from the call, any changes made to the variant on the unmanaged side are propagated back to the original object.</span></span> <span data-ttu-id="4af69-296">Se il tipo della variante è diverso dal tipo della variante passata alla chiamata, le modifiche vengono propagate a un oggetto di tipo diverso,</span><span class="sxs-lookup"><span data-stu-id="4af69-296">If the type of the variant differs from the type of the variant passed to the call, then the changes are propagated back to an object of a different type.</span></span> <span data-ttu-id="4af69-297">ovvero il tipo dell'oggetto passato nella chiamata può essere diverso dal tipo dell'oggetto restituito dalla chiamata.</span><span class="sxs-lookup"><span data-stu-id="4af69-297">That is, the type of the object passed into the call can differ from the type of the object returned from the call.</span></span>  
   
--   Quando si passa una variante al codice gestito per riferimento, il gestore di marshalling crea un nuovo oggetto e copia i contenuti della variante nell'oggetto prima di effettuare la chiamata. Un riferimento all'oggetto viene passato alla funzione non gestita, in cui l'utente può modificare l'oggetto. Al ritorno dalla chiamata, le modifiche apportate all'oggetto di riferimento vengono propagate alla variante originale. Se il tipo dell'oggetto è diverso dal tipo dell'oggetto passato alla chiamata, il tipo della variante originale viene modificato e il valore viene propagato nella variante. Anche in questo caso il tipo della variante passata nella chiamata può essere diverso dal tipo della variante restituita dalla chiamata.  
+-   <span data-ttu-id="4af69-298">Quando si passa una variante al codice gestito per riferimento, il gestore di marshalling crea un nuovo oggetto e copia i contenuti della variante nell'oggetto prima di effettuare la chiamata.</span><span class="sxs-lookup"><span data-stu-id="4af69-298">When passing a variant to managed code by reference, the marshaler creates a new object and copies the contents of the variant into the object before making the call.</span></span> <span data-ttu-id="4af69-299">Un riferimento all'oggetto viene passato alla funzione non gestita, in cui l'utente può modificare l'oggetto.</span><span class="sxs-lookup"><span data-stu-id="4af69-299">A reference to the object is passed to the managed function, where the user is free to change the object.</span></span> <span data-ttu-id="4af69-300">Al ritorno dalla chiamata, le modifiche apportate all'oggetto di riferimento vengono propagate alla variante originale.</span><span class="sxs-lookup"><span data-stu-id="4af69-300">On return from the call, any changes made to the referenced object are propagated back to the original variant.</span></span> <span data-ttu-id="4af69-301">Se il tipo dell'oggetto è diverso dal tipo dell'oggetto passato alla chiamata, il tipo della variante originale viene modificato e il valore viene propagato nella variante.</span><span class="sxs-lookup"><span data-stu-id="4af69-301">If the type of the object differs from the type of the object passed in to the call, the type of the original variant is changed and the value is propagated back into the variant.</span></span> <span data-ttu-id="4af69-302">Anche in questo caso il tipo della variante passata nella chiamata può essere diverso dal tipo della variante restituita dalla chiamata.</span><span class="sxs-lookup"><span data-stu-id="4af69-302">Again, the type of the variant passed into the call can differ from the type of the variant returned from the call.</span></span>  
   
- **Comportamento predefinito per il marshalling di una variante con il flag VT_BYREF impostato**  
+ <span data-ttu-id="4af69-303">**Comportamento predefinito per il marshalling di una variante con il flag VT_BYREF impostato**</span><span class="sxs-lookup"><span data-stu-id="4af69-303">**Default behavior for marshaling a variant with the VT_BYREF flag set**</span></span>  
   
--   Una variante che viene passata al codice gestito per valore può avere il flag **VT_BYREF** impostato per indicare che la variante contiene un riferimento invece che un valore. In questo caso, viene ancora effettuato il marshalling della variante a un oggetto perché la variante verrà passata per valore. Il gestore di marshalling dereferenzia automaticamente i contenuti della variante e la copia in un nuovo oggetto creato prima di eseguire la chiamata. L'oggetto viene quindi passato nella funzione gestita, tuttavia, al ritorno dalla chiamata, l'oggetto non viene propagato nella variante originale. Le modifiche apportate all'oggetto gestito vengono perse.  
+-   <span data-ttu-id="4af69-304">Una variante che viene passata al codice gestito per valore può avere il flag **VT_BYREF** impostato per indicare che la variante contiene un riferimento invece che un valore.</span><span class="sxs-lookup"><span data-stu-id="4af69-304">A variant being passed to managed code by value can have the **VT_BYREF** flag set to indicate that the variant contains a reference instead of a value.</span></span> <span data-ttu-id="4af69-305">In questo caso, viene ancora effettuato il marshalling della variante a un oggetto perché la variante verrà passata per valore.</span><span class="sxs-lookup"><span data-stu-id="4af69-305">In this case, the variant is still marshaled to an object because the variant is being passed by value.</span></span> <span data-ttu-id="4af69-306">Il gestore di marshalling dereferenzia automaticamente i contenuti della variante e la copia in un nuovo oggetto creato prima di eseguire la chiamata.</span><span class="sxs-lookup"><span data-stu-id="4af69-306">The marshaler automatically dereferences the contents of the variant and copies it into a newly created object before making the call.</span></span> <span data-ttu-id="4af69-307">L'oggetto viene quindi passato nella funzione gestita, tuttavia, al ritorno dalla chiamata, l'oggetto non viene propagato nella variante originale.</span><span class="sxs-lookup"><span data-stu-id="4af69-307">The object is then passed into the managed function; however, on return from the call, the object is not propagated back into the original variant.</span></span> <span data-ttu-id="4af69-308">Le modifiche apportate all'oggetto gestito vengono perse.</span><span class="sxs-lookup"><span data-stu-id="4af69-308">Changes made to the managed object are lost.</span></span>  
   
     > [!CAUTION]
-    >  Non è possibile modificare il valore di una variante passata per valore, anche se la variante ha il flag **VT_BYREF** impostato.  
+    >  <span data-ttu-id="4af69-309">Non è possibile modificare il valore di una variante passata per valore, anche se la variante ha il flag **VT_BYREF** impostato.</span><span class="sxs-lookup"><span data-stu-id="4af69-309">There is no way to change the value of a variant passed by value, even if the variant has the **VT_BYREF** flag set.</span></span>  
   
--   Una variante che viene passata al codice gestito per riferimento può anche avere il flag **VT_BYREF** impostato per indicare che la variante contiene un altro riferimento. In questo caso, viene effettuato il marshalling della variante a un oggetto **ref** perché la variante verrà passata per riferimento. Il gestore di marshalling dereferenzia automaticamente i contenuti della variante e la copia in un nuovo oggetto creato prima di eseguire la chiamata. Al ritorno dalla chiamata, il valore dell'oggetto viene propagato al riferimento nella variante originale solo se l'oggetto è dello stesso tipo dell'oggetto passato, ovvero la propagazione non modifica il tipo di una variante con il flag **VT_BYREF** impostato. Se il tipo dell'oggetto viene modificato durante la chiamata, al ritorno dalla chiamata viene generata un'eccezione <xref:System.InvalidCastException>.  
+-   <span data-ttu-id="4af69-310">Una variante che viene passata al codice gestito per riferimento può anche avere il flag **VT_BYREF** impostato per indicare che la variante contiene un altro riferimento.</span><span class="sxs-lookup"><span data-stu-id="4af69-310">A variant being passed to managed code by reference can also have the **VT_BYREF** flag set to indicate that the variant contains another reference.</span></span> <span data-ttu-id="4af69-311">In questo caso, viene effettuato il marshalling della variante a un oggetto **ref** perché la variante verrà passata per riferimento.</span><span class="sxs-lookup"><span data-stu-id="4af69-311">If it does, the variant is marshaled to a **ref** object because the variant is being passed by reference.</span></span> <span data-ttu-id="4af69-312">Il gestore di marshalling dereferenzia automaticamente i contenuti della variante e la copia in un nuovo oggetto creato prima di eseguire la chiamata.</span><span class="sxs-lookup"><span data-stu-id="4af69-312">The marshaler automatically dereferences the contents of the variant and copies it into a newly created object before making the call.</span></span> <span data-ttu-id="4af69-313">Al ritorno dalla chiamata, il valore dell'oggetto viene propagato al riferimento nella variante originale solo se l'oggetto è dello stesso tipo dell'oggetto passato,</span><span class="sxs-lookup"><span data-stu-id="4af69-313">On return from the call, the value of the object is propagated back to the reference within the original variant only if the object is the same type as the object passed in.</span></span> <span data-ttu-id="4af69-314">ovvero la propagazione non modifica il tipo di una variante con il flag **VT_BYREF** impostato.</span><span class="sxs-lookup"><span data-stu-id="4af69-314">That is, propagation does not change the type of a variant with the **VT_BYREF** flag set.</span></span> <span data-ttu-id="4af69-315">Se il tipo dell'oggetto viene modificato durante la chiamata, al ritorno dalla chiamata viene generata un'eccezione <xref:System.InvalidCastException>.</span><span class="sxs-lookup"><span data-stu-id="4af69-315">If the type of the object is changed during the call, an <xref:System.InvalidCastException> occurs on return from the call.</span></span>  
   
- La tabella seguente riepiloga le regole di propagazione per varianti e oggetti.  
+ <span data-ttu-id="4af69-316">La tabella seguente riepiloga le regole di propagazione per varianti e oggetti.</span><span class="sxs-lookup"><span data-stu-id="4af69-316">The following table summarizes the propagation rules for variants and objects.</span></span>  
   
-|Da|Per|Modifiche propagate|  
+|<span data-ttu-id="4af69-317">Da</span><span class="sxs-lookup"><span data-stu-id="4af69-317">From</span></span>|<span data-ttu-id="4af69-318">Per</span><span class="sxs-lookup"><span data-stu-id="4af69-318">To</span></span>|<span data-ttu-id="4af69-319">Modifiche propagate</span><span class="sxs-lookup"><span data-stu-id="4af69-319">Changes propagated back</span></span>|  
 |----------|--------|-----------------------------|  
-|**Variante**  *v*|**Oggetto**  *o*|Mai|  
-|**Oggetto**  *o*|**Variante**  *v*|Mai|  
-|**Variante**   ***\****  *pv*|**Oggetto ref**  *o*|Sempre|  
-|**Oggetto ref**  *o*|**Variante**   ***\****  *pv*|Sempre|  
-|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Oggetto**  *o*|Mai|  
-|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Oggetto ref**  *o*|Solo se il tipo non è stato modificato.|  
+|<span data-ttu-id="4af69-320">**Variante**  *v*</span><span class="sxs-lookup"><span data-stu-id="4af69-320">**Variant**  *v*</span></span>|<span data-ttu-id="4af69-321">**Oggetto**  *o*</span><span class="sxs-lookup"><span data-stu-id="4af69-321">**Object**  *o*</span></span>|<span data-ttu-id="4af69-322">Mai</span><span class="sxs-lookup"><span data-stu-id="4af69-322">Never</span></span>|  
+|<span data-ttu-id="4af69-323">**Oggetto**  *o*</span><span class="sxs-lookup"><span data-stu-id="4af69-323">**Object**  *o*</span></span>|<span data-ttu-id="4af69-324">**Variante**  *v*</span><span class="sxs-lookup"><span data-stu-id="4af69-324">**Variant**  *v*</span></span>|<span data-ttu-id="4af69-325">Mai</span><span class="sxs-lookup"><span data-stu-id="4af69-325">Never</span></span>|  
+|<span data-ttu-id="4af69-326">**Variante**   ***\****  *pv*</span><span class="sxs-lookup"><span data-stu-id="4af69-326">**Variant**   ***\****  *pv*</span></span>|<span data-ttu-id="4af69-327">**Oggetto ref**  *o*</span><span class="sxs-lookup"><span data-stu-id="4af69-327">**Ref Object**  *o*</span></span>|<span data-ttu-id="4af69-328">Sempre</span><span class="sxs-lookup"><span data-stu-id="4af69-328">Always</span></span>|  
+|<span data-ttu-id="4af69-329">**Oggetto ref**  *o*</span><span class="sxs-lookup"><span data-stu-id="4af69-329">**Ref object**  *o*</span></span>|<span data-ttu-id="4af69-330">**Variante**   ***\****  *pv*</span><span class="sxs-lookup"><span data-stu-id="4af69-330">**Variant**   ***\****  *pv*</span></span>|<span data-ttu-id="4af69-331">Sempre</span><span class="sxs-lookup"><span data-stu-id="4af69-331">Always</span></span>|  
+|<span data-ttu-id="4af69-332">**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**</span><span class="sxs-lookup"><span data-stu-id="4af69-332">**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**</span></span>|<span data-ttu-id="4af69-333">**Oggetto**  *o*</span><span class="sxs-lookup"><span data-stu-id="4af69-333">**Object**  *o*</span></span>|<span data-ttu-id="4af69-334">Mai</span><span class="sxs-lookup"><span data-stu-id="4af69-334">Never</span></span>|  
+|<span data-ttu-id="4af69-335">**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**</span><span class="sxs-lookup"><span data-stu-id="4af69-335">**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**</span></span>|<span data-ttu-id="4af69-336">**Oggetto ref**  *o*</span><span class="sxs-lookup"><span data-stu-id="4af69-336">**Ref Object**  *o*</span></span>|<span data-ttu-id="4af69-337">Solo se il tipo non è stato modificato.</span><span class="sxs-lookup"><span data-stu-id="4af69-337">Only if the type has not changed.</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [Comportamento di marshalling predefinito](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Blittable and Non-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  (Tipi copiabili da BLT e non copiabili da BLT)  
- [Attributi direzionali](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [Copia e blocco](../../../docs/framework/interop/copying-and-pinning.md)
-
+## <a name="see-also"></a><span data-ttu-id="4af69-338">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4af69-338">See Also</span></span>  
+ [<span data-ttu-id="4af69-339">Comportamento di marshalling predefinito</span><span class="sxs-lookup"><span data-stu-id="4af69-339">Default Marshaling Behavior</span></span>](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [<span data-ttu-id="4af69-340">Tipi copiabili e non copiabili</span><span class="sxs-lookup"><span data-stu-id="4af69-340">Blittable and Non-Blittable Types</span></span>](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [<span data-ttu-id="4af69-341">Attributi direzionali</span><span class="sxs-lookup"><span data-stu-id="4af69-341">Directional Attributes</span></span>](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [<span data-ttu-id="4af69-342">Copia e blocco</span><span class="sxs-lookup"><span data-stu-id="4af69-342">Copying and Pinning</span></span>](../../../docs/framework/interop/copying-and-pinning.md)

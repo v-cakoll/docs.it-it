@@ -1,73 +1,84 @@
 ---
-title: "&lt;sendMessageChannelCache&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;sendMessageChannelCache&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1543142a8ff5fb77db48d0e479433c533e7eff83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;sendMessageChannelCache&gt;
-Comportamento del servizio che consente la personalizzazione dei livelli di condivisione della cache, delle impostazioni della cache della channel factory e delle impostazioni della cache del canale per flussi di lavoro che inviano messaggi a endpoint di servizio usando attività della messaggistica di invio.  
+# <a name="ltsendmessagechannelcachegt"></a><span data-ttu-id="b074e-102">&lt;sendMessageChannelCache&gt;</span><span class="sxs-lookup"><span data-stu-id="b074e-102">&lt;sendMessageChannelCache&gt;</span></span>
+<span data-ttu-id="b074e-103">Un comportamento del servizio che consente la personalizzazione della condivisione a livelli, le impostazioni della cache della channel factory e le impostazioni della cache del canale per i flussi di lavoro che inviano messaggi agli endpoint del servizio tramite l'attività di messaggistica di trasmissione della cache.</span><span class="sxs-lookup"><span data-stu-id="b074e-103">A service behavior that enables the customization of the cache sharing levels, the settings of the channel factory cache, and the settings of the channel cache for workflows that send messages to service endpoints using Send messaging activities.</span></span>  
   
-## Sintassi  
+<span data-ttu-id="b074e-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="b074e-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="b074e-105">\<i comportamenti ></span><span class="sxs-lookup"><span data-stu-id="b074e-105">\<behaviors></span></span>  
+<span data-ttu-id="b074e-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="b074e-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="b074e-107">\<comportamento ></span><span class="sxs-lookup"><span data-stu-id="b074e-107">\<behavior></span></span>  
+<span data-ttu-id="b074e-108">\<sendMessageChannelCache ></span><span class="sxs-lookup"><span data-stu-id="b074e-108">\<sendMessageChannelCache></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="b074e-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b074e-109">Syntax</span></span>  
   
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name=String">  
-       <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
-           <channelSettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
-           <factorySettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
-       </sendMessageChannelCache>  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="String">
+      <sendMessageChannelCache allowUnsafeCaching="Boolean">
+        <channelSettings idleTimeout="TimeSpan"
+                         leaseTimeout="TimeSpan" 
+                         maxItemsInCache="Integer" />
+        <factorySettings idleTimeout="TimeSpan" 
+                         leaseTimeout="TimeSpan" 
+                         maxItemsInCache="Integer" />
+      </sendMessageChannelCache>
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
-  
 ```  
   
-## Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b074e-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="b074e-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="b074e-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="b074e-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="b074e-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="b074e-112">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="b074e-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="b074e-113">Attribute</span></span>|<span data-ttu-id="b074e-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b074e-114">Description</span></span>|  
 |---------------|-----------------|  
-|allowUnsafeCaching|Valore booleano che indica se attivare la memorizzazione nella cache.  Se il servizio flusso di lavoro dispone di associazioni o comportamenti personalizzati, la memorizzazione nella cache potrebbe non essere sicura e pertanto essere disabilitata per impostazione predefinita.  Se tuttavia si desidera attivare la memorizzazione nella cache, impostare questa proprietà su **true**.|  
+|<span data-ttu-id="b074e-115">allowUnsafeCaching</span><span class="sxs-lookup"><span data-stu-id="b074e-115">allowUnsafeCaching</span></span>|<span data-ttu-id="b074e-116">Valore booleano che indica se attivare la memorizzazione nella cache.</span><span class="sxs-lookup"><span data-stu-id="b074e-116">A Boolean value that indicates whether to turn caching on.</span></span> <span data-ttu-id="b074e-117">Se il servizio flusso di lavoro dispone di associazioni o comportamenti personalizzati, la memorizzazione nella cache potrebbe non essere sicura e pertanto essere disabilitata per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="b074e-117">If your workflow service has custom bindings or custom behaviors, caching could be unsecure and therefore is disabled by default.</span></span> <span data-ttu-id="b074e-118">Tuttavia, se si desidera attivare la memorizzazione nella cache in impostare questa proprietà su **true**.</span><span class="sxs-lookup"><span data-stu-id="b074e-118">However, if you want to turn caching on set this property to **true**.</span></span>|  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="b074e-119">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="b074e-119">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<channelSettings\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/channelsettings.md)|Specifica le impostazioni della cache del canale.|  
-|[\<factorySettings\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/factorysettings.md)|Specifica le impostazioni della cache della channel factory.|  
+|<span data-ttu-id="b074e-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="b074e-120">Element</span></span>|<span data-ttu-id="b074e-121">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b074e-121">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="b074e-122">\<channelSettings ></span><span class="sxs-lookup"><span data-stu-id="b074e-122">\<channelSettings></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/channelsettings.md)|<span data-ttu-id="b074e-123">Specifica le impostazioni della cache del canale.</span><span class="sxs-lookup"><span data-stu-id="b074e-123">Specifies the settings of the channel cache.</span></span>|  
+|[<span data-ttu-id="b074e-124">\<factorySettings ></span><span class="sxs-lookup"><span data-stu-id="b074e-124">\<factorySettings></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/factorysettings.md)|<span data-ttu-id="b074e-125">Specifica le impostazioni della cache della channel factory.</span><span class="sxs-lookup"><span data-stu-id="b074e-125">Specifies the settings of the channel factory cache.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="b074e-126">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="b074e-126">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<behavior\> di \<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Specifica un elemento di comportamento.|  
+|<span data-ttu-id="b074e-127">Elemento</span><span class="sxs-lookup"><span data-stu-id="b074e-127">Element</span></span>|<span data-ttu-id="b074e-128">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b074e-128">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="b074e-129">\<comportamento > di \<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="b074e-129">\<behavior> of \<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="b074e-130">Specifica un elemento di comportamento.</span><span class="sxs-lookup"><span data-stu-id="b074e-130">Specifies a behavior element.</span></span>|  
   
-## Note  
- Questo comportamento del servizio è designato per flussi di lavoro che inviano messaggi a endpoint di servizio.  Questi sono in genere flussi di lavoro del client ma potrebbero essere anche servizi del flusso di lavoro ospitati in un oggetto <xref:System.ServiceModel.WorkflowServiceHost>.  
+## <a name="remarks"></a><span data-ttu-id="b074e-131">Note</span><span class="sxs-lookup"><span data-stu-id="b074e-131">Remarks</span></span>  
+ <span data-ttu-id="b074e-132">Questo comportamento del servizio è designato per flussi di lavoro che inviano messaggi a endpoint di servizio.</span><span class="sxs-lookup"><span data-stu-id="b074e-132">This service behavior is intended for workflows that send messages to service endpoints.</span></span> <span data-ttu-id="b074e-133">Questi sono in genere flussi di lavoro del client ma potrebbero essere anche servizi del flusso di lavoro ospitati in un oggetto <xref:System.ServiceModel.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="b074e-133">These workflows are typically client workflows but could also be workflow services that are hosted in a <xref:System.ServiceModel.WorkflowServiceHost>.</span></span>  
   
- Per impostazione predefinita, in un flusso di lavoro ospitato da un oggetto <xref:System.ServiceModel.WorkflowServiceHost>, la cache usata da attività di messaggistica <xref:System.ServiceModel.Activities.Send> è condivisa attraverso tutte le istanze del flusso di lavoro in <xref:System.ServiceModel.WorkflowServiceHost> \(memorizzazione nella cache a livello di host\).  Per un flusso di lavoro del client che non è ospitato da un oggetto <xref:System.ServiceModel.WorkflowServiceHost>, la cache è disponibile solo all'istanza del flusso di lavoro \(memorizzazione nella cache a livello di istanza\).  Per impostazione predefinita, la memorizzazione nella cache è disabilitata per qualsiasi attività di invio nel flusso di lavoro che dispone di endpoint definiti nella configurazione.  
+ <span data-ttu-id="b074e-134">Per impostazione predefinita, in un flusso di lavoro ospitato da un oggetto <xref:System.ServiceModel.WorkflowServiceHost>, la cache usata da attività di messaggistica <xref:System.ServiceModel.Activities.Send> è condivisa attraverso tutte le istanze del flusso di lavoro in <xref:System.ServiceModel.WorkflowServiceHost> (memorizzazione nella cache a livello di host).</span><span class="sxs-lookup"><span data-stu-id="b074e-134">By default, in a workflow hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache used by <xref:System.ServiceModel.Activities.Send> messaging activities is shared across all workflow instances in the <xref:System.ServiceModel.WorkflowServiceHost> (host-level caching).</span></span> <span data-ttu-id="b074e-135">Per un flusso di lavoro del client che non è ospitato da un oggetto <xref:System.ServiceModel.WorkflowServiceHost>, la cache è disponibile solo all'istanza del flusso di lavoro (memorizzazione nella cache a livello di istanza).</span><span class="sxs-lookup"><span data-stu-id="b074e-135">For a client workflow that is not hosted by a <xref:System.ServiceModel.WorkflowServiceHost>, the cache is available only to the workflow instance (instance-level caching).</span></span> <span data-ttu-id="b074e-136">Per impostazione predefinita, la memorizzazione nella cache è disabilitata per qualsiasi attività di invio nel flusso di lavoro che dispone di endpoint definiti nella configurazione.</span><span class="sxs-lookup"><span data-stu-id="b074e-136">Caching is disabled by default for any send activity in your workflow that has endpoints defined in configuration.</span></span>  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] come modificare i livelli predefiniti di condivisione della cache, le impostazioni della cache per la channel factory e la cache del canale, vedere [Modifica dei livelli di condivisione della cache per le attività Send](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]<span data-ttu-id="b074e-137">come modificare la cache predefinita livelli di condivisione e le impostazioni per la channel factory e cache del canale della cache, vedere [modifica dei livelli di condivisione della Cache per le attività di trasmissione](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).</span><span class="sxs-lookup"><span data-stu-id="b074e-137"> how to change the default cache sharing levels and cache settings for the channel factory and channel cache, see [Changing the Cache Sharing Levels for Send Activities](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).</span></span>  
   
-## Esempio  
- In un servizio flusso di lavoro ospitato è possibile specificare le impostazioni della cache della factory e della cache del canale nel file di configurazione dell'applicazione.  A tale scopo, aggiungere un comportamento del servizio contenente le impostazioni della cache della factory e del canale e aggiungere tale comportamento al servizio.  L'esempio seguente mostra il contenuto di un file di configurazione che contiene il comportamento del servizio **MyChannelCacheBehavior**  con le impostazioni personalizzate per la cache della factory e la cache del canale.  Tale comportamento viene aggiunto al servizio tramite l'attributo **behaviorConfiguarion** .  
+## <a name="example"></a><span data-ttu-id="b074e-138">Esempio</span><span class="sxs-lookup"><span data-stu-id="b074e-138">Example</span></span>  
+ <span data-ttu-id="b074e-139">In un servizio flusso di lavoro ospitato è possibile specificare le impostazioni della cache della factory e della cache del canale nel file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="b074e-139">In a hosted workflow service, you can specify the factory cache and channel cache settings in the application configuration file.</span></span> <span data-ttu-id="b074e-140">A tale scopo, aggiungere un comportamento del servizio contenente le impostazioni della cache della factory e del canale e aggiungere tale comportamento al servizio.</span><span class="sxs-lookup"><span data-stu-id="b074e-140">To do so, add a service behavior that contains the cache settings for the factory and channel cache and add this service behavior to your service.</span></span> <span data-ttu-id="b074e-141">Nell'esempio seguente viene illustrato il contenuto di un file di configurazione che contiene il **MyChannelCacheBehavior** comportamento del servizio con le impostazioni della cache factory personalizzata cache e canale.</span><span class="sxs-lookup"><span data-stu-id="b074e-141">The following example shows the contents of a configuration file that contains the **MyChannelCacheBehavior**  service behavior with the custom factory cache and channel cache settings.</span></span> <span data-ttu-id="b074e-142">Questo comportamento del servizio viene aggiunto al servizio tramite il **behaviorConfiguarion** attributo.</span><span class="sxs-lookup"><span data-stu-id="b074e-142">This service behavior is added to the service through the **behaviorConfiguarion** attribute.</span></span>  
   
-```  
-  
+```xml  
 <configuration>    
   <system.serviceModel>  
     <!-- List of other config sections here -->   
@@ -87,11 +98,10 @@ Comportamento del servizio che consente la personalizzazione dei livelli di cond
     </services>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Vedere anche  
- <xref:System.ServiceModel.Activities.SendMessageChannelCache>   
- <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>   
- <xref:System.ServiceModel.Activities.Send>   
- [Modifica dei livelli di condivisione della cache per le attività Send](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)
+## <a name="see-also"></a><span data-ttu-id="b074e-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b074e-143">See Also</span></span>  
+ <xref:System.ServiceModel.Activities.SendMessageChannelCache>  
+ <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>  
+ <xref:System.ServiceModel.Activities.Send>  
+ [<span data-ttu-id="b074e-144">I livelli di modificare la condivisione della Cache per le attività Send</span><span class="sxs-lookup"><span data-stu-id="b074e-144">Changing the Cache Sharing Levels for Send Activities</span></span>](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)

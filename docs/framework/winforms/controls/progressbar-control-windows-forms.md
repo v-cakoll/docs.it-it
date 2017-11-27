@@ -1,43 +1,44 @@
 ---
-title: "Controllo ProgressBar (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "stato (controlli)"
-  - "ProgressBar (controllo) [Windows Form]"
+title: Controllo ProgressBar (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- progress controls
+- ProgressBar control [Windows Forms]
 ms.assetid: 5be6b642-e8a6-4565-8ebd-ae73c7b10dc9
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d46c27e57a7d71992a0b1378e0987a2c48a66ab6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Controllo ProgressBar (Windows Form)
+# <a name="progressbar-control-windows-forms"></a><span data-ttu-id="bf4f2-102">Controllo ProgressBar (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="bf4f2-102">ProgressBar Control (Windows Forms)</span></span>
 > [!IMPORTANT]
->  Benché il controllo <xref:System.Windows.Forms.ToolStripProgressBar> sostituisca il controllo <xref:System.Windows.Forms.ProgressBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ProgressBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  
+>  <span data-ttu-id="bf4f2-103">Benché il controllo <xref:System.Windows.Forms.ToolStripProgressBar> sostituisca il controllo <xref:System.Windows.Forms.ProgressBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ProgressBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.</span><span class="sxs-lookup"><span data-stu-id="bf4f2-103">The <xref:System.Windows.Forms.ToolStripProgressBar> control replaces and adds functionality to the <xref:System.Windows.Forms.ProgressBar> control; however, the <xref:System.Windows.Forms.ProgressBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- Il controllo <xref:System.Windows.Forms.ProgressBar> Windows Form indica lo stato di avanzamento di un'operazione visualizzando un numero appropriato di rettangoli su una barra orizzontale.  Quando l'operazione è stata completata, la barra appare piena.  I controlli ProgressBar vengono in genere utilizzati per fornire all'utente un'indicazione del tempo necessario per il completamento di un'operazione prolungata, ad esempio durante il caricamento di un file di grandi dimensioni.  
+ <span data-ttu-id="bf4f2-104">Windows Form <xref:System.Windows.Forms.ProgressBar> controllo indica lo stato di avanzamento di un'azione visualizzando un numero appropriato di rettangoli in una barra orizzontale.</span><span class="sxs-lookup"><span data-stu-id="bf4f2-104">The Windows Forms <xref:System.Windows.Forms.ProgressBar> control indicates the progress of an action by displaying an appropriate number of rectangles arranged in a horizontal bar.</span></span> <span data-ttu-id="bf4f2-105">Una volta completata l'azione, la barra è piena.</span><span class="sxs-lookup"><span data-stu-id="bf4f2-105">When the action is complete, the bar is filled.</span></span> <span data-ttu-id="bf4f2-106">Indicatori di stato vengono comunemente utilizzati per consentire all'utente un'indicazione del tempo necessario per completare un'azione prolungata, ad esempio, durante il caricamento di un file di grandi dimensioni.</span><span class="sxs-lookup"><span data-stu-id="bf4f2-106">Progress bars are commonly used to give the user an indication of how long to wait for a protracted action to complete—for instance, when a large file is being loaded.</span></span>  
   
-## In questa sezione  
- [Cenni preliminari sul controllo ProgressBar](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
- Vengono presentati i concetti generali relativi al controllo <xref:System.Windows.Forms.ProgressBar>, che consente di visualizzare graficamente lo stato di avanzamento di un'operazione.  
+## <a name="in-this-section"></a><span data-ttu-id="bf4f2-107">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="bf4f2-107">In This Section</span></span>  
+ [<span data-ttu-id="bf4f2-108">Panoramica sul controllo ProgressBar</span><span class="sxs-lookup"><span data-stu-id="bf4f2-108">ProgressBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
+ <span data-ttu-id="bf4f2-109">Introduce i concetti generali relativi il <xref:System.Windows.Forms.ProgressBar> controllo, che consente di visualizzare graficamente lo stato di avanzamento di un'operazione.</span><span class="sxs-lookup"><span data-stu-id="bf4f2-109">Introduces the general concepts of the <xref:System.Windows.Forms.ProgressBar> control, which enables you to graphically display the progress of an operation.</span></span>  
   
- [Procedura: impostare il valore visualizzato da un controllo ProgressBar Windows Form](../../../../docs/framework/winforms/controls/how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
- Vengono descritti vari metodi differenti per aumentare il valore visualizzato dal controllo <xref:System.Windows.Forms.ProgressBar>.  
+ [<span data-ttu-id="bf4f2-110">Procedura: Impostare il valore visualizzato da un controllo ProgressBar di Windows Form</span><span class="sxs-lookup"><span data-stu-id="bf4f2-110">How to: Set the Value Displayed by the Windows Forms ProgressBar Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
+ <span data-ttu-id="bf4f2-111">Vengono descritti vari modi diversi per aumentare il valore visualizzato per il <xref:System.Windows.Forms.ProgressBar> controllo.</span><span class="sxs-lookup"><span data-stu-id="bf4f2-111">Discusses a number of different ways to increase the value displayed by the <xref:System.Windows.Forms.ProgressBar> control.</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="bf4f2-112">Riferimento</span><span class="sxs-lookup"><span data-stu-id="bf4f2-112">Reference</span></span>  
  <xref:System.Windows.Forms.ProgressBar>  
- Vengono fornite informazioni di riferimento sulla classe e relativi membri.  
+ <span data-ttu-id="bf4f2-113">Fornisce informazioni di riferimento sulla classe e sui relativi membri.</span><span class="sxs-lookup"><span data-stu-id="bf4f2-113">Provides reference information on the class and its members.</span></span>  
   
-## Sezioni correlate  
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Viene fornito un elenco completo dei controlli Windows Form, con l'indicazione dei collegamenti alle informazioni sul relativo utilizzo.
+## <a name="related-sections"></a><span data-ttu-id="bf4f2-114">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="bf4f2-114">Related Sections</span></span>  
+ [<span data-ttu-id="bf4f2-115">Controlli da usare in Windows Form</span><span class="sxs-lookup"><span data-stu-id="bf4f2-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="bf4f2-116">Fornisce un elenco completo dei controlli Windows Form, con collegamenti alle informazioni sul relativo uso.</span><span class="sxs-lookup"><span data-stu-id="bf4f2-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>

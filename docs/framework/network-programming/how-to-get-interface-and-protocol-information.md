@@ -7,29 +7,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Network
+helpviewer_keywords: Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 41d7e88de47067da4c96723ca3465f16595f4291
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 968727dbdc8897ebe3f88af2f7b7c28c481d8783
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: Ottenere informazioni su interfacce e protocolli
-Questo esempio mostra come leggere le statistiche TCP di un'interfaccia di rete.  
+# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="fc175-102">Procedura: Ottenere informazioni su interfacce e protocolli</span><span class="sxs-lookup"><span data-stu-id="fc175-102">How to: Get Interface and Protocol Information</span></span>
+<span data-ttu-id="fc175-103">Questo esempio mostra come leggere le statistiche TCP di un'interfaccia di rete.</span><span class="sxs-lookup"><span data-stu-id="fc175-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
   
-## Esempio  
+## <a name="example"></a><span data-ttu-id="fc175-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="fc175-104">Example</span></span>  
   
 ```  
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
@@ -84,8 +77,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## Compilazione del codice  
- L'esempio presenta i requisiti seguenti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="fc175-105">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="fc175-105">Compiling the Code</span></span>  
+ <span data-ttu-id="fc175-106">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="fc175-106">This example requires:</span></span>  
   
--   Riferimenti allo spazio dei nomi **System.Net**.
-
+-   <span data-ttu-id="fc175-107">Riferimenti allo spazio dei nomi **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="fc175-107">References to the **System.Net** namespace.</span></span>

@@ -1,79 +1,81 @@
 ---
-title: "Elemento &lt;disableFusionUpdatesFromADManager&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<disableFusionUpdatesFromADManager> (elemento)"
-  - "disableFusionUpdatesFromADManager (elemento)"
+title: '&lt;disableFusionUpdatesFromADManager&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- disableFusionUpdatesFromADManager element
+- <disableFusionUpdatesFromADManager> element
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d4aa3343e7f3f60bbf6a57340d858c1ef12197bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;disableFusionUpdatesFromADManager&gt;
-Specifica se il comportamento predefinito, ovvero consentire all'host di runtime di eseguire l'override delle impostazioni di configurazione di un dominio di applicazione, è disabilitato.  
+# <a name="ltdisablefusionupdatesfromadmanagergt-element"></a><span data-ttu-id="1022a-102">&lt;disableFusionUpdatesFromADManager&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="1022a-102">&lt;disableFusionUpdatesFromADManager&gt; Element</span></span>
+<span data-ttu-id="1022a-103">Specifica se è disabilitato il comportamento predefinito, ovvero consentire all'host di runtime di eseguire l'override delle impostazioni di configurazione per un dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="1022a-103">Specifies whether the default behavior, which is to allow the runtime host to override configuration settings for an application domain, is disabled.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="1022a-104">\<configurazione > elemento</span><span class="sxs-lookup"><span data-stu-id="1022a-104">\<configuration> Element</span></span>  
+<span data-ttu-id="1022a-105">\<runtime > elemento</span><span class="sxs-lookup"><span data-stu-id="1022a-105">\<runtime> Element</span></span>  
+<span data-ttu-id="1022a-106">\<disableFusionUpdatesFromADManager ></span><span class="sxs-lookup"><span data-stu-id="1022a-106">\<disableFusionUpdatesFromADManager></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="1022a-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="1022a-107">Syntax</span></span>  
+  
+```xml  
 <disableFusionUpdatesFromADManager enabled="0|1"/>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1022a-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="1022a-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="1022a-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="1022a-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="1022a-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="1022a-110">Attributes</span></span>  
   
-|Attribute|Descrizione|  
+|<span data-ttu-id="1022a-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="1022a-111">Attribute</span></span>|<span data-ttu-id="1022a-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1022a-112">Description</span></span>|  
 |---------------|-----------------|  
-|enabled|Attributo obbligatorio.<br /><br /> Specifica se l'opzione predefinita di eseguire l'override delle impostazioni Fusion è disabilitata.|  
+|<span data-ttu-id="1022a-113">enabled</span><span class="sxs-lookup"><span data-stu-id="1022a-113">enabled</span></span>|<span data-ttu-id="1022a-114">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="1022a-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="1022a-115">Specifica se l'opzione predefinita di eseguire l'override delle impostazioni Fusion è disabilitato.</span><span class="sxs-lookup"><span data-stu-id="1022a-115">Specifies whether the default ability to override Fusion settings is disabled.</span></span>|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="1022a-116">Attributo enabled</span><span class="sxs-lookup"><span data-stu-id="1022a-116">enabled Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|0|L'opzione di eseguire l'override delle impostazioni Fusion non è disabilitata.  Si tratta del comportamento predefinito, a partire da [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
-|1|L'opzione di eseguire l'override delle impostazioni Fusion è disabilitata.  In questo modo è possibile ripristinare il comportamento delle versioni precedenti di .NET Framework.|  
+|<span data-ttu-id="1022a-117">Valore</span><span class="sxs-lookup"><span data-stu-id="1022a-117">Value</span></span>|<span data-ttu-id="1022a-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1022a-118">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="1022a-119">0</span><span class="sxs-lookup"><span data-stu-id="1022a-119">0</span></span>|<span data-ttu-id="1022a-120">Non disabilitare la possibilità di eseguire l'override delle impostazioni Fusion.</span><span class="sxs-lookup"><span data-stu-id="1022a-120">Do not disable the ability to override Fusion settings.</span></span> <span data-ttu-id="1022a-121">Si tratta del comportamento predefinito, a partire dal [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1022a-121">This is the default behavior, starting with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>|  
+|<span data-ttu-id="1022a-122">1</span><span class="sxs-lookup"><span data-stu-id="1022a-122">1</span></span>|<span data-ttu-id="1022a-123">Disabilitare la possibilità di eseguire l'override delle impostazioni Fusion.</span><span class="sxs-lookup"><span data-stu-id="1022a-123">Disable the ability to override Fusion settings.</span></span> <span data-ttu-id="1022a-124">Viene ripristinato il comportamento delle versioni precedenti di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1022a-124">This reverts to the behavior of earlier versions of the .NET Framework.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="1022a-125">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="1022a-125">Child Elements</span></span>  
+ <span data-ttu-id="1022a-126">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="1022a-126">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="1022a-127">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="1022a-127">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
+|<span data-ttu-id="1022a-128">Elemento</span><span class="sxs-lookup"><span data-stu-id="1022a-128">Element</span></span>|<span data-ttu-id="1022a-129">Descrizione</span><span class="sxs-lookup"><span data-stu-id="1022a-129">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="1022a-130">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1022a-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="1022a-131">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="1022a-131">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Note  
- A partire da [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], il comportamento predefinito è consentire all'oggetto <xref:System.AppDomainManager> di eseguire l'override delle impostazioni di configurazione tramite la proprietà <xref:System.AppDomainSetup.ConfigurationFile%2A> o il metodo <xref:System.AppDomainSetup.SetConfigurationBytes%2A> dell'oggetto <xref:System.AppDomainSetup> passato all'implementazione del metodo <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=fullName> nella sottoclasse di <xref:System.AppDomainManager>.  Per il dominio di applicazione predefinito, le impostazioni modificate eseguono l'override delle impostazioni specificate dal file di configurazione dell'applicazione.  Per gli altri domini di applicazione, tali impostazioni eseguono l'override delle impostazioni di configurazione passate al metodo <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=fullName> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=fullName>.  
+## <a name="remarks"></a><span data-ttu-id="1022a-132">Note</span><span class="sxs-lookup"><span data-stu-id="1022a-132">Remarks</span></span>  
+ <span data-ttu-id="1022a-133">A partire dal [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], il comportamento predefinito consiste nel consentire la <xref:System.AppDomainManager> oggetto per eseguire l'override delle impostazioni di configurazione utilizzando il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà o <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metodo il <xref:System.AppDomainSetup> oggetto che viene passato all'implementazione del <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> (metodo), in una sottoclasse di <xref:System.AppDomainManager>.</span><span class="sxs-lookup"><span data-stu-id="1022a-133">Starting with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], the default behavior is to allow the <xref:System.AppDomainManager> object to override configuration settings by using the <xref:System.AppDomainSetup.ConfigurationFile%2A> property or the <xref:System.AppDomainSetup.SetConfigurationBytes%2A> method of the <xref:System.AppDomainSetup> object that is passed to your implementation of the <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> method, in your subclass of <xref:System.AppDomainManager>.</span></span> <span data-ttu-id="1022a-134">Per il dominio applicazione predefinito, le impostazioni modificate si sostituiscono le impostazioni specificate dal file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="1022a-134">For the default application domain, the settings you change override the settings that were specified by the application configuration file.</span></span> <span data-ttu-id="1022a-135">Per altri domini applicazione, sostituiscono le impostazioni di configurazione che sono state passate al <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> metodo.</span><span class="sxs-lookup"><span data-stu-id="1022a-135">For other application domains, they override the configuration settings that were passed to the <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> or <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> method.</span></span>  
   
- È possibile passare nuove informazioni di configurazione o passare null \(`Nothing` in Visual Basic\) per eliminare le informazioni di configurazione passate.  
+ <span data-ttu-id="1022a-136">È possibile passare nuove informazioni di configurazione o passare null (`Nothing` in Visual Basic) per eliminare le informazioni di configurazione che è state passate.</span><span class="sxs-lookup"><span data-stu-id="1022a-136">You can either pass new configuration information, or pass null (`Nothing` in Visual Basic) to eliminate configuration information that was passed in.</span></span>  
   
- Non passare informazioni di configurazione sia alla proprietà <xref:System.AppDomainSetup.ConfigurationFile%2A> sia al metodo <xref:System.AppDomainSetup.SetConfigurationBytes%2A>.  Se si passano informazioni di configurazione a entrambi, le informazioni passate alla proprietà <xref:System.AppDomainSetup.ConfigurationFile%2A> vengono ignorate, poiché il metodo <xref:System.AppDomainSetup.SetConfigurationBytes%2A> esegue l'override delle informazioni di configurazione contenute nel file di configurazione dell'applicazione.  Se si utilizza la proprietà <xref:System.AppDomainSetup.ConfigurationFile%2A>, è possibile passare null \(`Nothing` in Visual Basic\) al metodo <xref:System.AppDomainSetup.SetConfigurationBytes%2A> per eliminare qualsiasi byte di configurazione specificato nella chiamata al metodo <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=fullName> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=fullName>.  
+ <span data-ttu-id="1022a-137">Non passare le informazioni di configurazione sia il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà e <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="1022a-137">Do not pass configuration information to both the <xref:System.AppDomainSetup.ConfigurationFile%2A> property and the <xref:System.AppDomainSetup.SetConfigurationBytes%2A> method.</span></span> <span data-ttu-id="1022a-138">Se si passano le informazioni di configurazione per entrambi, le informazioni passate per il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà viene ignorata, poiché il <xref:System.AppDomainSetup.SetConfigurationBytes%2A> metodo esegue l'override delle informazioni di configurazione dal file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="1022a-138">If you pass configuration information to both, the information you pass to the <xref:System.AppDomainSetup.ConfigurationFile%2A> property is ignored, because the <xref:System.AppDomainSetup.SetConfigurationBytes%2A> method overrides configuration information from the application configuration file.</span></span> <span data-ttu-id="1022a-139">Se si utilizza il <xref:System.AppDomainSetup.ConfigurationFile%2A> proprietà, è possibile passare null (`Nothing` in Visual Basic) per il <xref:System.AppDomainSetup.SetConfigurationBytes%2A> eliminare qualsiasi byte di configurazione che sono state specificate nella chiamata al metodo di <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> (metodo).</span><span class="sxs-lookup"><span data-stu-id="1022a-139">If you use the <xref:System.AppDomainSetup.ConfigurationFile%2A> property, you can pass null (`Nothing` in Visual Basic) to the <xref:System.AppDomainSetup.SetConfigurationBytes%2A> method to eliminate any configuration bytes that were specified in the call to the <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> or <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> method.</span></span>  
   
- Oltre alle informazioni di configurazione, è possibile modificare le impostazioni seguenti dell'oggetto <xref:System.AppDomainSetup> passato all'implementazione del metodo <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=fullName>: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A>, <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> e <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.  
+ <span data-ttu-id="1022a-140">Oltre alle informazioni di configurazione, è possibile modificare le impostazioni seguenti nella <xref:System.AppDomainSetup> oggetto che viene passato all'implementazione del <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> metodo: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, e <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.</span><span class="sxs-lookup"><span data-stu-id="1022a-140">In addition to configuration information, you can change the following settings on the <xref:System.AppDomainSetup> object that is passed to your implementation of the <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> method: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A>, <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, and <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.</span></span>  
   
- Come alternativa all'utilizzo dell'elemento `<disableFusionUpdatesFromADManager>` è possibile disabilitare il comportamento predefinito creando un'impostazione del Registro di sistema o impostando una variabile di ambiente.  Nel Registro di sistema, creare un valore DWORD denominato `COMPLUS_disableFusionUpdatesFromADManager` in `HKCU\Software\Microsoft\.NETFramework` o `HKLM\Software\Microsoft\.NETFramework` e impostarlo su 1.  Nella riga di comando, impostare la variabile di ambiente `COMPLUS_disableFusionUpdatesFromADManager` su 1.  
+ <span data-ttu-id="1022a-141">Come alternativa all'utilizzo di `<disableFusionUpdatesFromADManager>` elemento, è possibile disabilitare il comportamento predefinito creando un'impostazione del Registro di sistema o impostando una variabile di ambiente.</span><span class="sxs-lookup"><span data-stu-id="1022a-141">As an alternative to using the `<disableFusionUpdatesFromADManager>` element, you can disable the default behavior by creating a registry setting or by setting an environment variable.</span></span> <span data-ttu-id="1022a-142">Nel Registro di sistema, creare un valore DWORD denominato `COMPLUS_disableFusionUpdatesFromADManager` in `HKCU\Software\Microsoft\.NETFramework` o `HKLM\Software\Microsoft\.NETFramework`e impostare il valore su 1.</span><span class="sxs-lookup"><span data-stu-id="1022a-142">In the registry, create a DWORD value named `COMPLUS_disableFusionUpdatesFromADManager` under `HKCU\Software\Microsoft\.NETFramework` or `HKLM\Software\Microsoft\.NETFramework`, and set the value to 1.</span></span> <span data-ttu-id="1022a-143">Nella riga di comando, impostare la variabile di ambiente `COMPLUS_disableFusionUpdatesFromADManager` su 1.</span><span class="sxs-lookup"><span data-stu-id="1022a-143">At the command line, set the environment variable `COMPLUS_disableFusionUpdatesFromADManager` to 1.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente viene illustrato come disabilitare l'opzione di eseguire l'override delle impostazioni Fusion tramite l'elemento `<disableFusionUpdatesFromADManager>`.  
+## <a name="example"></a><span data-ttu-id="1022a-144">Esempio</span><span class="sxs-lookup"><span data-stu-id="1022a-144">Example</span></span>  
+ <span data-ttu-id="1022a-145">Nell'esempio seguente viene illustrato come disabilitare la possibilità di eseguire l'override delle impostazioni Fusion utilizzando il `<disableFusionUpdatesFromADManager>` elemento.</span><span class="sxs-lookup"><span data-stu-id="1022a-145">The following example shows how to disable the ability to override Fusion settings by using the `<disableFusionUpdatesFromADManager>` element.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <disableFusionUpdatesFromADManager enabled="1" />  
@@ -81,7 +83,7 @@ Specifica se il comportamento predefinito, ovvero consentire all'host di runtime
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Come il runtime individua gli assembly](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="1022a-146">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1022a-146">See Also</span></span>  
+ [<span data-ttu-id="1022a-147">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="1022a-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="1022a-148">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="1022a-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="1022a-149">Come il runtime individua gli assembly</span><span class="sxs-lookup"><span data-stu-id="1022a-149">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

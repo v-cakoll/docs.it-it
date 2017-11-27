@@ -1,48 +1,52 @@
 ---
-title: "Utilizzo di TransactedReceiveScope | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilizzo di TransactedReceiveScope
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d455f1dc-bfc5-43d6-8ae9-bc3b3a3ea08a
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b01352910c52d117d7ab0adcd94320ff9cf6931d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Utilizzo di TransactedReceiveScope
-In questo esempio viene illustrato come propagare una transazione da un client a un server utilizzando <xref:System.Activities.Statements.TransactionScope> per creare una nuova transazione nel client e un oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope> per ricevere un messaggio con una transazione propagata, esaminando la durata della transazione nel server.L'esempio è costituito da due progetti che coprono i ruoli di client e server.  
+# <a name="use-of-transactedreceivescope"></a><span data-ttu-id="611b1-102">Utilizzo di TransactedReceiveScope</span><span class="sxs-lookup"><span data-stu-id="611b1-102">Use of TransactedReceiveScope</span></span>
+<span data-ttu-id="611b1-103">In questo esempio viene illustrato come propagare una transazione da un client a un server usando <xref:System.Activities.Statements.TransactionScope> per creare una nuova transazione nel client e un oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope> per ricevere un messaggio con una transazione propagata, esaminando la durata della transazione nel server.</span><span class="sxs-lookup"><span data-stu-id="611b1-103">This sample shows how to flow a transaction from a client to a server using <xref:System.Activities.Statements.TransactionScope> to create a new transaction on the client and a <xref:System.ServiceModel.Activities.TransactedReceiveScope> to receive a message with a flowed transaction and scope the lifetime of the transaction on the server.</span></span> <span data-ttu-id="611b1-104">L'esempio è costituito da due progetti che coprono i ruoli di client e server.</span><span class="sxs-lookup"><span data-stu-id="611b1-104">The sample consists of two projects that fill the roles of client and server.</span></span>  
   
-## Applicazione client  
- L'applicazione client esegue un flusso di lavoro che stampa l'ID della transazione distribuita, invia un messaggio al server, propaga la transazione, riceve la risposta, stampa nuovamente l'ID della transazione distribuita e viene completato.Quando l'ID della transazione distribuita viene stampato inizialmente, è un GUID vuoto poiché la transazione è ancora solo locale.  
+## <a name="client-application"></a><span data-ttu-id="611b1-105">Applicazione client</span><span class="sxs-lookup"><span data-stu-id="611b1-105">Client Application</span></span>  
+ <span data-ttu-id="611b1-106">L'applicazione client esegue un flusso di lavoro che stampa l'ID della transazione distribuita, invia un messaggio al server, propaga la transazione, riceve la risposta, stampa nuovamente l'ID della transazione distribuita e viene completato.</span><span class="sxs-lookup"><span data-stu-id="611b1-106">The client application runs a workflow that prints the distributed transaction ID, sends a message to the server, flows the transaction, receives the reply, prints the distributed transaction ID again and completes.</span></span> <span data-ttu-id="611b1-107">Quando l'ID della transazione distribuita viene stampato inizialmente, è un GUID vuoto poiché la transazione è ancora solo locale.</span><span class="sxs-lookup"><span data-stu-id="611b1-107">When the distributed transaction ID is initially prints, it is an empty GUID as the transaction is still only local.</span></span>  
   
-## Applicazione server  
- Il progetto server è simile, tuttavia, il flusso di lavoro viene ospitato in <xref:System.ServiceModel.Activities.WorkflowServiceHost> perché deve essere in attesa di un endpoint del messaggio dal client.Il flusso di lavoro si basa sull'oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope> che riceve la transazione propagata dal client, stampa il messaggio che è stato inviato e l'ID della transazione distribuita e infine invia la risposta al client.L'ID della transazione distribuita è ora un GUID non vuoto e se un'attività in grado di riconoscere la transazione è stata aggiunta al corpo dell'oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope>, viene eseguita nella transazione propagata.  
+## <a name="server-application"></a><span data-ttu-id="611b1-108">Applicazione server</span><span class="sxs-lookup"><span data-stu-id="611b1-108">Server Application</span></span>  
+ <span data-ttu-id="611b1-109">Il progetto server è simile, tuttavia, il flusso di lavoro viene ospitato in <xref:System.ServiceModel.Activities.WorkflowServiceHost> perché deve essere in attesa di un endpoint del messaggio dal client.</span><span class="sxs-lookup"><span data-stu-id="611b1-109">The server project is similar, however, the workflow is hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost> because it must listen on an endpoint for the message from the client.</span></span> <span data-ttu-id="611b1-110">Il flusso di lavoro si basa sull'oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope> che riceve la transazione propagata dal client, stampa il messaggio che è stato inviato e l'ID della transazione distribuita e infine invia la risposta al client.</span><span class="sxs-lookup"><span data-stu-id="611b1-110">The workflow is centered on the <xref:System.ServiceModel.Activities.TransactedReceiveScope>, which receives the flowed transaction from the client, prints the message that was sent, prints the distributed transaction ID and sends the reply to the client.</span></span> <span data-ttu-id="611b1-111">L'ID della transazione distribuita è ora un GUID non vuoto e se un'attività in grado di riconoscere la transazione è stata aggiunta al corpo dell'oggetto <xref:System.ServiceModel.Activities.TransactedReceiveScope>, viene eseguita nella transazione propagata.</span><span class="sxs-lookup"><span data-stu-id="611b1-111">The distributed transaction ID is now a non-empty GUID and if a transaction-aware activity was added to the body of the <xref:System.ServiceModel.Activities.TransactedReceiveScope>, it would execute under the flowed transaction.</span></span>  
   
-#### Per eseguire l'esempio  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="611b1-112">Per eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="611b1-112">To run the sample</span></span>  
   
-1.  Aprire la soluzione TransactedReceiveScope.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="611b1-113">Aprire la soluzione TransactedReceiveScope.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="611b1-113">Open the TransactedReceiveScope.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B o scegliere **Compila soluzione** dal menu **Compila**.  
+2.  <span data-ttu-id="611b1-114">Per compilare la soluzione, premere CTRL + MAIUSC + B o scegliere **Compila soluzione** dal **compilare** menu.</span><span class="sxs-lookup"><span data-stu-id="611b1-114">To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.</span></span>  
   
-3.  Una volta completata la compilazione, fare clic con il pulsante destro del mouse sulla soluzione e scegliere **Imposta progetti di avvio**.Nella finestra di dialogo selezionare **Progetti di avvio multipli** e assicurarsi che l'azione per entrambi i progetti sia **Avvia**.  
+3.  <span data-ttu-id="611b1-115">Una volta completata la compilazione, la soluzione e scegliere **Imposta progetti di avvio**.</span><span class="sxs-lookup"><span data-stu-id="611b1-115">Once the build has succeeded, right-click the solution and select **Set Startup Projects**.</span></span> <span data-ttu-id="611b1-116">Finestra di dialogo, selezionare **più progetti di avvio** e assicurarsi che l'azione per entrambi i progetti sia **avviare**.</span><span class="sxs-lookup"><span data-stu-id="611b1-116">From the dialog, select **Multiple Startup Projects** and ensure the action for both projects is **Start**.</span></span>  
   
-4.  Premere F5 o scegliere **Avvia debug** dal menu **Debug**.In alternativa, è possibile premere CTRL\+F5 o scegliere **Avvia senza eseguire debug** dal menu **Debug** per l'esecuzione senza debug.  
+4.  <span data-ttu-id="611b1-117">Premere F5 o scegliere **Avvia debug** dal **Debug** menu.</span><span class="sxs-lookup"><span data-stu-id="611b1-117">Press F5 or select **Start Debugging** from the **Debug** menu.</span></span> <span data-ttu-id="611b1-118">In alternativa, è possibile premere CTRL + F5 o selezionare **Avvia senza eseguire debug** dal **Debug** menu per l'esecuzione senza debug.</span><span class="sxs-lookup"><span data-stu-id="611b1-118">Alternatively, you can press CTRL+F5 or select **Start Without Debugging** from the **Debug** menu to run without debugging.</span></span>  
   
     > [!NOTE]
-    >  Il server deve essere in esecuzione prima dell'avvio del client.L'output dalla finestra della console che ospita il servizio indica quando è stato avviato.  
+    >  <span data-ttu-id="611b1-119">Il server deve essere in esecuzione prima dell'avvio del client.</span><span class="sxs-lookup"><span data-stu-id="611b1-119">The server must be running prior to starting the client.</span></span> <span data-ttu-id="611b1-120">L'output dalla finestra della console che ospita il servizio indica quando è stato avviato.</span><span class="sxs-lookup"><span data-stu-id="611b1-120">The output from the console window hosting the service indicates when it has started.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="611b1-121">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="611b1-121">The samples may already be installed on your machine.</span></span> <span data-ttu-id="611b1-122">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="611b1-122">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="611b1-123">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="611b1-123">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="611b1-124">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="611b1-124">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Basic\Transactions\TransactedReceiveScope`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TransactedReceiveScope`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="611b1-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="611b1-125">See Also</span></span>

@@ -1,29 +1,32 @@
 ---
-title: "Convalida della sicurezza | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Convalida della sicurezza
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-caps.latest.revision: 35
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 4e8e8ff9a99c362fb5e2a6f5ef1161f48df86ceb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Convalida della sicurezza
-In questo esempio viene illustrato come utilizzare un comportamento personalizzato per convalidare i servizi in un computer per garantire che soddisfino criteri specifici.Nell'esempio i servizi vengono convalidati dal comportamento personalizzato mediante l'analisi di ogni endpoint nel servizio e verificando se contengono elementi di associazione protetti.Questo esempio è basato sull'[Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+# <a name="security-validation"></a><span data-ttu-id="42d5d-102">Convalida della sicurezza</span><span class="sxs-lookup"><span data-stu-id="42d5d-102">Security Validation</span></span>
+<span data-ttu-id="42d5d-103">In questo esempio viene illustrato come utilizzare un comportamento personalizzato per convalidare i servizi in un computer per garantire che soddisfino criteri specifici.</span><span class="sxs-lookup"><span data-stu-id="42d5d-103">This sample demonstrates how to use a custom behavior to validate services on a computer to ensure they meet specific criteria.</span></span> <span data-ttu-id="42d5d-104">Nell'esempio i servizi vengono convalidati dal comportamento personalizzato mediante l'analisi di ogni endpoint nel servizio e verificando se contengono elementi di associazione protetti.</span><span class="sxs-lookup"><span data-stu-id="42d5d-104">In this sample, services are validated by the custom behavior by scanning through each endpoint on the service and checking to see whether they contain secure binding elements.</span></span> <span data-ttu-id="42d5d-105">Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="42d5d-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine dell'argomento.  
+>  <span data-ttu-id="42d5d-106">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="42d5d-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
-## Comportamento personalizzato di convalida dell'endpoint  
- Aggiungendo il codice utente al metodo `Validate` contenuto nell'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior>, il comportamento personalizzato può essere assegnato a un servizio o a un endpoint per eseguire azioni definite dall'utente.Il codice seguente viene utilizzato per eseguire un ciclo in ogni endpoint contenuto in un servizio allo scopo di esaminare le raccolte di associazioni per individuare le associazioni protette.  
+## <a name="endpoint-validation-custom-behavior"></a><span data-ttu-id="42d5d-107">Comportamento personalizzato di convalida dell'endpoint</span><span class="sxs-lookup"><span data-stu-id="42d5d-107">Endpoint Validation Custom Behavior</span></span>  
+ <span data-ttu-id="42d5d-108">Aggiungendo il codice utente al metodo `Validate` contenuto nell'interfaccia <xref:System.ServiceModel.Description.IServiceBehavior>, il comportamento personalizzato può essere assegnato a un servizio o a un endpoint per eseguire azioni definite dall'utente.</span><span class="sxs-lookup"><span data-stu-id="42d5d-108">By adding user code to the `Validate` method contained in the <xref:System.ServiceModel.Description.IServiceBehavior> interface, custom behavior can be given to a service or endpoint to perform user-defined actions.</span></span> <span data-ttu-id="42d5d-109">Il codice seguente viene utilizzato per eseguire un ciclo in ogni endpoint contenuto in un servizio allo scopo di esaminare le raccolte di associazioni per individuare le associazioni protette.</span><span class="sxs-lookup"><span data-stu-id="42d5d-109">The following code is used to loop through each endpoint contained in a service, which searches through their binding collections for secure bindings.</span></span>  
   
 ```  
 public void Validate(ServiceDescription serviceDescription,   
@@ -54,9 +57,9 @@ public void Validate(ServiceDescription serviceDescription,
 }  
 ```  
   
- L'aggiunta del codice seguente a file Web.config aggiunge l'estensione del comportamento `serviceValidate` affinché venga riconosciuta dal servizio.  
+ <span data-ttu-id="42d5d-110">L'aggiunta del codice seguente a file Web.config aggiunge l'estensione del comportamento `serviceValidate` affinché venga riconosciuta dal servizio.</span><span class="sxs-lookup"><span data-stu-id="42d5d-110">Adding the following code to Web.config file adds the `serviceValidate` behavior extension for the service to recognize.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <extensions>  
         <behaviorExtensions>  
@@ -66,9 +69,9 @@ public void Validate(ServiceDescription serviceDescription,
 ...  
 ```  
   
- Quando l'estensione del comportamento è stata aggiunta al servizio, è possibile aggiungere il comportamento `endpointValidate` all'elenco dei comportamenti nel file Web.config e, di conseguenza, al servizio.  
+ <span data-ttu-id="42d5d-111">Quando l'estensione del comportamento è stata aggiunta al servizio, è possibile aggiungere il comportamento `endpointValidate` all'elenco dei comportamenti nel file Web.config e, di conseguenza, al servizio.</span><span class="sxs-lookup"><span data-stu-id="42d5d-111">Once the behavior extension is added to the service, it is now possible to add the `endpointValidate` behavior to the list of behaviors in the Web.config file and thus, to the service.</span></span>  
   
-```  
+```xml  
 <behaviors>  
     <serviceBehaviors>  
         <behavior name="CalcServiceSEB1">  
@@ -79,39 +82,39 @@ public void Validate(ServiceDescription serviceDescription,
 </behaviors>  
 ```  
   
- I comportamenti e le estensioni aggiunti al file Web.config applicano il comportamento ai singoli servizi, mentre se sono aggiunti al file Machine.config applicano il comportamento a ogni servizio attivo nel computer.  
+ <span data-ttu-id="42d5d-112">I comportamenti e le estensioni aggiunti al file Web.config applicano il comportamento ai singoli servizi, mentre se sono aggiunti al file Machine.config applicano il comportamento a ogni servizio attivo nel computer.</span><span class="sxs-lookup"><span data-stu-id="42d5d-112">Behaviors and their extensions that are added to the Web.config file apply behavior to individual services, while when added to the Machine.config file apply behavior to every service active on the computer.</span></span>  
   
 > [!NOTE]
->  Quando si aggiunge il comportamento a tutti i servizi, è consigliabile eseguire il backup del file Machine.config prima di apportare qualsiasi modifica.  
+>  <span data-ttu-id="42d5d-113">Quando si aggiunge il comportamento a tutti i servizi, è consigliabile eseguire il backup del file Machine.config prima di apportare qualsiasi modifica.</span><span class="sxs-lookup"><span data-stu-id="42d5d-113">When adding behavior to all services, it is suggested to backup the Machine.config file before making any change.</span></span>  
   
- Eseguire quindi il client fornito nella directory client\\bin di questo esempio.Si verifica un'eccezione con il messaggio seguente: "Impossibile attivare il servizio richiesto, 'http:\/\/localhost\/servicemodelsamples\/service.svc'." Si tratta di un problema previsto poiché un endpoint viene considerato non protetto dall'endpoint che convalida il comportamento e impedisce l'avvio del servizio.Il comportamento genera anche un'eccezione interna che descrive quale endpoint non è protetto e scrive un messaggio nel visualizzatore eventi di sistema nell'origine "System.ServiceModel 4.0.0.0", categoria "WebHost".È anche possibile attivare la traccia nel servizio in questo esempio.Questa operazione consente all'utente di visualizzare le eccezioni generate dall'endpoint che convalida il comportamento aprendo le tracce del servizio risultanti mediante Service Trace Viewer.  
+ <span data-ttu-id="42d5d-114">Eseguire quindi il client fornito nella directory client\bin di questo esempio.</span><span class="sxs-lookup"><span data-stu-id="42d5d-114">Now run the client provided in the client\bin directory of this sample.</span></span> <span data-ttu-id="42d5d-115">Si verifica un'eccezione con il messaggio seguente: "Impossibile attivare il servizio richiesto, 'http://localhost/servicemodelsamples/service.svc'."</span><span class="sxs-lookup"><span data-stu-id="42d5d-115">An exception has occurs with the following message: "The requested service, 'http://localhost/servicemodelsamples/service.svc' could not be activated."</span></span> <span data-ttu-id="42d5d-116">Si tratta di un problema previsto poiché un endpoint viene considerato non protetto dall'endpoint che convalida il comportamento e impedisce l'avvio del servizio.</span><span class="sxs-lookup"><span data-stu-id="42d5d-116">This is expected because an endpoint is considered insecure by the endpoint validating behavior and prevents the service from being started.</span></span> <span data-ttu-id="42d5d-117">Il comportamento genera anche un'eccezione interna che descrive quale endpoint non è protetto e scrive un messaggio nel visualizzatore eventi di sistema nell'origine "System.ServiceModel 4.0.0.0", categoria "WebHost".</span><span class="sxs-lookup"><span data-stu-id="42d5d-117">The behavior also throws an internal exception that describes which endpoint is insecure and writes a message to the system Event Viewer under the "System.ServiceModel 4.0.0.0" source and the "WebHost" category.</span></span> <span data-ttu-id="42d5d-118">È anche possibile attivare la traccia nel servizio in questo esempio.</span><span class="sxs-lookup"><span data-stu-id="42d5d-118">It is also possible to turn on tracing on the service in this sample.</span></span> <span data-ttu-id="42d5d-119">Questa operazione consente all'utente di visualizzare le eccezioni generate dall'endpoint che convalida il comportamento aprendo le tracce del servizio risultanti mediante Service Trace Viewer.</span><span class="sxs-lookup"><span data-stu-id="42d5d-119">This allows the user to view the exceptions thrown by endpoint validating behavior by opening the resulting service traces using the Service Trace Viewer tool.</span></span>  
   
-#### Per visualizzare i messaggi di eccezione relativi alla convalida degli endpoint con errori nel visualizzatore eventi  
+#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a><span data-ttu-id="42d5d-120">Per visualizzare i messaggi di eccezione relativi alla convalida degli endpoint con errori nel visualizzatore eventi</span><span class="sxs-lookup"><span data-stu-id="42d5d-120">To view failed endpoint validation exception messages in the Event Viewer</span></span>  
   
-1.  Fare clic sul menu **Start** e selezionare **Esegui…**.  
+1.  <span data-ttu-id="42d5d-121">Fare clic su di **avviare** dal menu **Esegui...** .</span><span class="sxs-lookup"><span data-stu-id="42d5d-121">Click the **Start** menu and select **Run…**.</span></span>  
   
-2.  Digitare `eventvwr`, quindi fare clic su **OK**.  
+2.  <span data-ttu-id="42d5d-122">Tipo `eventvwr` e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="42d5d-122">Type `eventvwr` and click **OK**.</span></span>  
   
-3.  Nella finestra del Visualizzatore eventi fare clic su **Applicazione**.  
+3.  <span data-ttu-id="42d5d-123">Nel Visualizzatore eventi fare clic su **applicazione**.</span><span class="sxs-lookup"><span data-stu-id="42d5d-123">In the Event Viewer window, click **Application**.</span></span>  
   
-4.  Fare doppio clic sull'evento "System.ServiceModel 4.0.0.0" recentemente aggiunto sotto la categoria "WebHost" nella finestra **Applicazione** per visualizzare i messaggi dell'endpoint non protetto.  
+4.  <span data-ttu-id="42d5d-124">Fare doppio clic sull'evento aggiunto di recente "System. ServiceModel 4.0.0.0" nella categoria "WebHost" il **applicazione** finestra per visualizzare i messaggi a endpoint non protetto.</span><span class="sxs-lookup"><span data-stu-id="42d5d-124">Double-click the recently added "System.ServiceModel 4.0.0.0" event under the "WebHost" category in the **Application** window to view insecure endpoint messages.</span></span>  
   
-#### Per impostare, compilare ed eseguire l'esempio  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="42d5d-125">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="42d5d-125">To set up, build, and run the sample</span></span>  
   
-1.  Verificare di avere eseguito [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="42d5d-126">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="42d5d-126">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="42d5d-127">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="42d5d-127">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="42d5d-128">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="42d5d-128">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="42d5d-129">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="42d5d-129">The samples may already be installed on your computer.</span></span> <span data-ttu-id="42d5d-130">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="42d5d-130">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="42d5d-131">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="42d5d-131">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="42d5d-132">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="42d5d-132">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## Vedere anche  
- [Monitoraggio](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="42d5d-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="42d5d-133">See Also</span></span>  
+ [<span data-ttu-id="42d5d-134">Esempi di monitoraggio di AppFabric</span><span class="sxs-lookup"><span data-stu-id="42d5d-134">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

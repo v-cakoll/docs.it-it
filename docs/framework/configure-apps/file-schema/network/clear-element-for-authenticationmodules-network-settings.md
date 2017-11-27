@@ -1,70 +1,71 @@
 ---
-title: "Elemento &lt;clear&gt; per authenticationModules (Impostazioni di rete) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<authenticationModules>, clear (elemento)"
-  - "<clear> (elemento), authenticationModules"
-  - "authenticationModules, clear (elemento)"
-  - "clear (elemento), authenticationModules"
+title: '&lt;deselezionare&gt; elemento per authenticationModules (impostazioni di rete)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- clear element, authenticationModules
+- <authenticationModules>, clear element
+- <clear> element, authenticationModules
+- authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: f056894148177e6b540fd45569140a996b6b888f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;clear&gt; per authenticationModules (Impostazioni di rete)
-Consente di cancellare tutti i moduli di autenticazione dall'applicazione.  
+# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="7911e-102">&lt;deselezionare&gt; elemento per authenticationModules (impostazioni di rete)</span><span class="sxs-lookup"><span data-stu-id="7911e-102">&lt;clear&gt; Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="7911e-103">Cancella tutti i moduli di autenticazione dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="7911e-103">Clears all authentication modules from the application.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="7911e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7911e-104">\<configuration></span></span>  
+<span data-ttu-id="7911e-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="7911e-105">\<system.net></span></span>  
+<span data-ttu-id="7911e-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="7911e-106">\<authenticationModules></span></span>  
+<span data-ttu-id="7911e-107">\<Deselezionare ></span><span class="sxs-lookup"><span data-stu-id="7911e-107">\<clear></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="7911e-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="7911e-108">Syntax</span></span>  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7911e-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="7911e-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="7911e-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="7911e-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
- Nessuno.  
+### <a name="attributes"></a><span data-ttu-id="7911e-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="7911e-111">Attributes</span></span>  
+ <span data-ttu-id="7911e-112">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="7911e-112">None.</span></span>  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="7911e-113">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="7911e-113">Child Elements</span></span>  
+ <span data-ttu-id="7911e-114">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="7911e-114">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="7911e-115">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="7911e-115">Parent Elements</span></span>  
   
-|**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Specifica i moduli utilizzati per autenticare le richieste di rete.|  
+|<span data-ttu-id="7911e-116">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="7911e-116">**Element**</span></span>|<span data-ttu-id="7911e-117">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="7911e-117">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="7911e-118">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="7911e-118">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="7911e-119">Specifica i moduli utilizzati per autenticare le richieste di rete.</span><span class="sxs-lookup"><span data-stu-id="7911e-119">Specifies modules used to authenticate network requests.</span></span>|  
   
-## Note  
- L'elemento `clear` consente di rimuovere tutti i moduli di autenticazione precedentemente definiti nel file di configurazione o, ad un livello più alto, nella gerarchia di configurazione.  
+## <a name="remarks"></a><span data-ttu-id="7911e-120">Note</span><span class="sxs-lookup"><span data-stu-id="7911e-120">Remarks</span></span>  
+ <span data-ttu-id="7911e-121">Il `clear` elemento rimuove tutti i moduli di autenticazione che sono stati definiti nel file di configurazione o a un livello superiore nella gerarchia di configurazione.</span><span class="sxs-lookup"><span data-stu-id="7911e-121">The `clear` element removes all authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
-## File di configurazione  
- L'elemento può essere utilizzato nel file di configurazione dell'applicazione o nel file di configurazione del computer \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="7911e-122">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="7911e-122">Configuration Files</span></span>  
+ <span data-ttu-id="7911e-123">Questo elemento può essere usato nel file di configurazione dell'applicazione o nel file di configurazione del computer (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="7911e-123">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito vengono rimossi tutti i moduli di autenticazione configurati.  
+## <a name="example"></a><span data-ttu-id="7911e-124">Esempio</span><span class="sxs-lookup"><span data-stu-id="7911e-124">Example</span></span>  
+ <span data-ttu-id="7911e-125">Nell'esempio seguente rimuove tutti i moduli di autenticazione configurato.</span><span class="sxs-lookup"><span data-stu-id="7911e-125">The following example removes all configured authentication modules.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
@@ -74,7 +75,7 @@ Consente di cancellare tutti i moduli di autenticazione dall'applicazione.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="7911e-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7911e-126">See Also</span></span>  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
+ [<span data-ttu-id="7911e-127">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="7911e-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

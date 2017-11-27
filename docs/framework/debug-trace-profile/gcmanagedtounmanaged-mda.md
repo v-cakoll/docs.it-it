@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MDAs (managed debugging assistants), garbage collection
 - GcManagedToUnmanaged MDA
@@ -25,36 +19,35 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - garbage collection, run-time errors
 ms.assetid: 7417f837-805e-4fed-a430-ca919c8421dc
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 03dbbee0c45e5c256c40157c8cebebc2507f7e01
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1aa528eb2acc872b1956edef3af3724bb3b54d67
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="gcmanagedtounmanaged-mda"></a>MDA gcManagedToUnmanaged
-L'assistente al debug gestito `gcManagedToUnmanaged` determina un'operazione di Garbage Collection ogni volta che un thread passa dal codice gestito al codice non gestito.  
+# <a name="gcmanagedtounmanaged-mda"></a><span data-ttu-id="10adb-102">MDA gcManagedToUnmanaged</span><span class="sxs-lookup"><span data-stu-id="10adb-102">gcManagedToUnmanaged MDA</span></span>
+<span data-ttu-id="10adb-103">L'assistente al debug gestito `gcManagedToUnmanaged` determina un'operazione di Garbage Collection ogni volta che un thread passa dal codice gestito al codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="10adb-103">The `gcManagedToUnmanaged` managed debugging assistant (MDA) causes a garbage collection whenever a thread transitions from managed to unmanaged code.</span></span>  
   
-## <a name="symptoms"></a>Sintomi  
- Un componente utente non gestito genera una violazione di accesso quando si cerca di usare un oggetto gestito esposto a COM. L'oggetto COM appare come rilasciato e la violazione di accesso è non deterministica.  
+## <a name="symptoms"></a><span data-ttu-id="10adb-104">Sintomi</span><span class="sxs-lookup"><span data-stu-id="10adb-104">Symptoms</span></span>  
+ <span data-ttu-id="10adb-105">Un componente utente non gestito genera una violazione di accesso quando si cerca di usare un oggetto gestito esposto a COM.</span><span class="sxs-lookup"><span data-stu-id="10adb-105">An unmanaged user component throws an access violation when trying to use a managed object that had been exposed to COM.</span></span> <span data-ttu-id="10adb-106">L'oggetto COM appare come rilasciato</span><span class="sxs-lookup"><span data-stu-id="10adb-106">The COM object appears to have been released.</span></span> <span data-ttu-id="10adb-107">e la violazione di accesso è non deterministica.</span><span class="sxs-lookup"><span data-stu-id="10adb-107">The access violation is nondeterministic.</span></span>  
   
-## <a name="cause"></a>Causa  
- Se un componente non gestito non esegue correttamente il conteggio dei riferimenti a un oggetto COM gestito, il runtime potrebbe eseguire una Garbage Collection di un oggetto gestito esposto a COM mentre il componente gestito contiene ancora un riferimento all'oggetto. Il runtime chiama il metodo <xref:System.Runtime.InteropServices.Marshal.Release%2A> durante le Garbage Collection. In questo modo, se il componente utente usa l'oggetto prima che si verifichi la Garbage Collection, non sarà ancora stato sottoposto all'operazione. Da ciò deriva il non determinismo.  
+## <a name="cause"></a><span data-ttu-id="10adb-108">Causa</span><span class="sxs-lookup"><span data-stu-id="10adb-108">Cause</span></span>  
+ <span data-ttu-id="10adb-109">Se un componente non gestito non esegue correttamente il conteggio dei riferimenti a un oggetto COM gestito, il runtime potrebbe eseguire una Garbage Collection di un oggetto gestito esposto a COM mentre il componente gestito contiene ancora un riferimento all'oggetto.</span><span class="sxs-lookup"><span data-stu-id="10adb-109">If an unmanaged component is not reference counting a managed COM object correctly, then the runtime could collect a managed object exposed to COM when the unmanaged component still holds a reference to the object.</span></span> <span data-ttu-id="10adb-110">Il runtime chiama il metodo <xref:System.Runtime.InteropServices.Marshal.Release%2A> durante le Garbage Collection. In questo modo, se il componente utente usa l'oggetto prima che si verifichi la Garbage Collection, non sarà ancora stato sottoposto all'operazione.</span><span class="sxs-lookup"><span data-stu-id="10adb-110">The runtime calls <xref:System.Runtime.InteropServices.Marshal.Release%2A> during garbage collections, so if the user component uses the object before the garbage collection occurs, then it will not yet have been collected.</span></span> <span data-ttu-id="10adb-111">Da ciò deriva il non determinismo.</span><span class="sxs-lookup"><span data-stu-id="10adb-111">This is the source of the nondeterminism.</span></span>  
   
-## <a name="resolution"></a>Risoluzione  
- L'attivazione di questo assistente consente di ridurre il periodo compreso tra il momento in cui l'oggetto è disponibile per la Garbage Collection e la chiamata di <xref:System.Runtime.InteropServices.Marshal.Release%2A> rendendo possibile tenere traccia del componente non gestito che tenta per primo di accedere all'oggetto sottoposto a Garbage Collection.  
+## <a name="resolution"></a><span data-ttu-id="10adb-112">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="10adb-112">Resolution</span></span>  
+ <span data-ttu-id="10adb-113">L'attivazione di questo assistente consente di ridurre il periodo compreso tra il momento in cui l'oggetto è disponibile per la Garbage Collection e la chiamata di <xref:System.Runtime.InteropServices.Marshal.Release%2A> rendendo possibile tenere traccia del componente non gestito che tenta per primo di accedere all'oggetto sottoposto a Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="10adb-113">Enabling this assistant reduces the time between when the object is eligible for collection and <xref:System.Runtime.InteropServices.Marshal.Release%2A> is called, helping to track down which unmanaged component first tries to access the collected object.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione  
- Viene causata una Garbage Collection ogni volta che un thread passa dal codice gestito al codice non gestito.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="10adb-114">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="10adb-114">Effect on the Runtime</span></span>  
+ <span data-ttu-id="10adb-115">Viene causata una Garbage Collection ogni volta che un thread passa dal codice gestito al codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="10adb-115">Causes a garbage collection whenever a thread transitions from managed to unmanaged code.</span></span>  
   
-## <a name="output"></a>Output  
- Questo assistente al debug gestito non produce output.  
+## <a name="output"></a><span data-ttu-id="10adb-116">Output</span><span class="sxs-lookup"><span data-stu-id="10adb-116">Output</span></span>  
+ <span data-ttu-id="10adb-117">Questo assistente al debug gestito non produce output.</span><span class="sxs-lookup"><span data-stu-id="10adb-117">This MDA produces no output.</span></span>  
   
-## <a name="configuration"></a>Configurazione  
+## <a name="configuration"></a><span data-ttu-id="10adb-118">Configurazione</span><span class="sxs-lookup"><span data-stu-id="10adb-118">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -64,9 +57,8 @@ L'assistente al debug gestito `gcManagedToUnmanaged` determina un'operazione di 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Marshalling di interoperabilità](../../../docs/framework/interop/interop-marshaling.md)   
- [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)
-
+## <a name="see-also"></a><span data-ttu-id="10adb-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="10adb-119">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [<span data-ttu-id="10adb-120">Diagnostica degli errori tramite gli assistenti al debug gestito</span><span class="sxs-lookup"><span data-stu-id="10adb-120">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="10adb-121">Marshalling di interoperabilità</span><span class="sxs-lookup"><span data-stu-id="10adb-121">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)  
+ [<span data-ttu-id="10adb-122">gcUnmanagedToManaged</span><span class="sxs-lookup"><span data-stu-id="10adb-122">gcUnmanagedToManaged</span></span>](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)

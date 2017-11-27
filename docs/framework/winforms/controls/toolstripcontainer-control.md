@@ -1,54 +1,55 @@
 ---
-title: "Controllo ToolStripContainer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "barre degli strumenti [Windows Form], raggruppamento verticale/orizzontale incorporato"
-  - "ToolStrip (controllo) [Windows Form], ToolStripContainer"
-  - "ToolStripContainer (controllo) [Windows Form]"
+title: Controllo ToolStripContainer
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Windows Forms], built-in rafting
+- ToolStripContainer control [Windows Forms]
+- ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 763ce6d47b0fe40eb2d27b2e062d46cfd9e1b8a2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Controllo ToolStripContainer
-<xref:System.Windows.Forms.ToolStrip> controlla il raggruppamento verticale\/orizzontale incorporato di funzionalità \(condivisione di spazio orizzontale o verticale nell'area strumenti, se ancorata\) usando <xref:System.Windows.Forms.ToolStripContainer>.  
+# <a name="toolstripcontainer-control"></a><span data-ttu-id="23771-102">Controllo ToolStripContainer</span><span class="sxs-lookup"><span data-stu-id="23771-102">ToolStripContainer Control</span></span>
+<span data-ttu-id="23771-103"><xref:System.Windows.Forms.ToolStrip> controlla il raggruppamento verticale/orizzontale incorporato di funzionalità (condivisione di spazio orizzontale o verticale nell'area strumenti, se ancorata) usando <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="23771-103"><xref:System.Windows.Forms.ToolStrip> controls feature built-in rafting (sharing of horizontal or vertical space within the tool area when docked) by using the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>  
   
- Gli argomenti di questa sezione descrivono i concetti e le tecniche che è possibile usare per compilare funzionalità <xref:System.Windows.Forms.ToolStripContainer> nelle applicazioni.  
+ <span data-ttu-id="23771-104">Gli argomenti di questa sezione descrivono i concetti e le tecniche che è possibile usare per compilare funzionalità <xref:System.Windows.Forms.ToolStripContainer> nelle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="23771-104">The topics in this section describe the concepts and techniques that you can use to build <xref:System.Windows.Forms.ToolStripContainer> features into your applications.</span></span>  
   
-## In questa sezione  
- [Cenni preliminari sul controllo ToolStripContainer](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
- Fornisce argomenti che descrivono lo scopo e i concetti principali del controllo <xref:System.Windows.Forms.ToolStripContainer> Windows Form.  
+## <a name="in-this-section"></a><span data-ttu-id="23771-105">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="23771-105">In This Section</span></span>  
+ [<span data-ttu-id="23771-106">Panoramica sul controllo ToolStripContainer</span><span class="sxs-lookup"><span data-stu-id="23771-106">ToolStripContainer Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
+ <span data-ttu-id="23771-107">Fornisce argomenti che descrivono lo scopo e i concetti principali del controllo <xref:System.Windows.Forms.ToolStripContainer> Windows Form.</span><span class="sxs-lookup"><span data-stu-id="23771-107">Provides topics that describe the purpose and main concepts of the Windows Forms <xref:System.Windows.Forms.ToolStripContainer> control.</span></span>  
   
- [Procedura: aggiungere un oggetto ToolStripContainer a un form](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
- Illustra come aggiungere <xref:System.Windows.Forms.ToolStripContainer> a un'applicazione e l'aggiunta di un controllo a un pannello specifico di <xref:System.Windows.Forms.ToolStripContainer>.  
+ [<span data-ttu-id="23771-108">Procedura: Aggiungere un oggetto ToolStripContainer a un form</span><span class="sxs-lookup"><span data-stu-id="23771-108">How to: Add a ToolStripContainer to a Form</span></span>](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
+ <span data-ttu-id="23771-109">Illustra come aggiungere <xref:System.Windows.Forms.ToolStripContainer> a un'applicazione e l'aggiunta di un controllo a un pannello specifico di <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="23771-109">Demonstrates adding a <xref:System.Windows.Forms.ToolStripContainer> to an application and adding a control to a specific panel of the <xref:System.Windows.Forms.ToolStripContainer>.</span></span>  
   
- [Procedura: aggiungere un controllo a un controllo ToolStripContentPanel](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
- Illustra come aggiungere un controllo a <xref:System.Windows.Forms.ToolStripContentPanel>.  
+ [<span data-ttu-id="23771-110">Procedura: Aggiungere un controllo a un controllo ToolStripContentPanel</span><span class="sxs-lookup"><span data-stu-id="23771-110">How to: Add a Control to a ToolStripContentPanel</span></span>](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ <span data-ttu-id="23771-111">Illustra come aggiungere un controllo a <xref:System.Windows.Forms.ToolStripContentPanel>.</span><span class="sxs-lookup"><span data-stu-id="23771-111">Demonstrates adding a control to the <xref:System.Windows.Forms.ToolStripContentPanel>.</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="23771-112">Riferimento</span><span class="sxs-lookup"><span data-stu-id="23771-112">Reference</span></span>  
  <xref:System.Windows.Forms.ToolStripContainer>  
- Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripContainer>.  
+ <span data-ttu-id="23771-113">Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="23771-113">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripContainer> control.</span></span>  
   
  <xref:System.Windows.Forms.ToolStripContentPanel>  
- Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripContentPanel> di un controllo <xref:System.Windows.Forms.ToolStripContainer>.  
+ <span data-ttu-id="23771-114">Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripContentPanel> di un controllo <xref:System.Windows.Forms.ToolStripContainer>.</span><span class="sxs-lookup"><span data-stu-id="23771-114">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripContentPanel> of a <xref:System.Windows.Forms.ToolStripContainer> control.</span></span>  
   
- Vedere anche [Finestra di dialogo Attività di ToolStripContainer](http://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
+ <span data-ttu-id="23771-115">Vedere anche [la finestra di dialogo attività di ToolStripContainer](http://msdn.microsoft.com/library/ms233647\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="23771-115">Also see [ToolStripContainer Tasks Dialog Box](http://msdn.microsoft.com/library/ms233647\(v=vs.110\)).</span></span>  
   
-## Sezioni correlate  
+## <a name="related-sections"></a><span data-ttu-id="23771-116">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="23771-116">Related Sections</span></span>  
  <xref:System.Windows.Forms.ToolStripPanel>  
- Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripPanel>.  
+ <span data-ttu-id="23771-117">Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.ToolStripPanel>.</span><span class="sxs-lookup"><span data-stu-id="23771-117">Provides reference documentation for the <xref:System.Windows.Forms.ToolStripPanel> control.</span></span>  
   
-## Vedere anche  
- [Controlli da utilizzare in Windows Form](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="23771-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="23771-118">See Also</span></span>  
+ [<span data-ttu-id="23771-119">Controlli da usare in Windows Form</span><span class="sxs-lookup"><span data-stu-id="23771-119">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

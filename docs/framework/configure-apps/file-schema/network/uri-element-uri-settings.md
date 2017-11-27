@@ -1,72 +1,70 @@
 ---
-title: "Elemento &lt;Uri&gt; (impostazioni URI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: '&lt;URI&gt; elemento (impostazioni Uri)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 44ef28ca2188973ccd353f4e8615c7c95f5674a2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Elemento &lt;Uri&gt; (impostazioni URI)
-Contiene impostazioni che specificano come vengono gestiti in .NET Framework gli indirizzi Web espressi tramite URI \(Uniform Resource Identifier\).  
+# <a name="lturigt-element-uri-settings"></a><span data-ttu-id="e8f12-102">&lt;URI&gt; elemento (impostazioni Uri)</span><span class="sxs-lookup"><span data-stu-id="e8f12-102">&lt;Uri&gt; Element (Uri Settings)</span></span>
+<span data-ttu-id="e8f12-103">Contiene le impostazioni che specificano come .NET Framework gestisce gli indirizzi web espressi tramite uniform resource identifier (URI).</span><span class="sxs-lookup"><span data-stu-id="e8f12-103">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>  
   
-## Gerarchia dello schema  
- [Elemento \<Configuration\>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+## <a name="schema-hierarchy"></a><span data-ttu-id="e8f12-104">Gerarchia dello schema</span><span class="sxs-lookup"><span data-stu-id="e8f12-104">Schema Hierarchy</span></span>  
+ [<span data-ttu-id="e8f12-105">Elemento \<configuration></span><span class="sxs-lookup"><span data-stu-id="e8f12-105">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<uri\>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [<span data-ttu-id="e8f12-106">\<URI ></span><span class="sxs-lookup"><span data-stu-id="e8f12-106">\<uri></span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="e8f12-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e8f12-107">Syntax</span></span>  
   
-```  
+```xml  
 <uri>  
 </uri>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e8f12-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="e8f12-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="e8f12-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="e8f12-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
- Nessuno.  
+### <a name="attributes"></a><span data-ttu-id="e8f12-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="e8f12-110">Attributes</span></span>  
+ <span data-ttu-id="e8f12-111">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="e8f12-111">None.</span></span>  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="e8f12-112">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="e8f12-112">Child Elements</span></span>  
   
-|**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[non](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|Specifica se l'analisi IDN \(Internationalized Domain Name\) viene applicata ai nomi di dominio.|  
-|[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Specifica se l'analisi IRI \(International Resource Identifier\) viene applicata a <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.|  
-|[schemeSettings](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Specifica come un oggetto <xref:System.Uri> verrà analizzato per schemi specifici.|  
+|<span data-ttu-id="e8f12-113">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="e8f12-113">**Element**</span></span>|<span data-ttu-id="e8f12-114">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="e8f12-114">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="e8f12-115">IDN</span><span class="sxs-lookup"><span data-stu-id="e8f12-115">idn</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|<span data-ttu-id="e8f12-116">Specifica se l'analisi IDN (Internationalized Domain Name) viene applicata ai nomi di dominio.</span><span class="sxs-lookup"><span data-stu-id="e8f12-116">Specifies if Internationalized Domain Name (IDN) parsing is applied to domain names.</span></span>|  
+|[<span data-ttu-id="e8f12-117">iriParsing</span><span class="sxs-lookup"><span data-stu-id="e8f12-117">iriParsing</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|<span data-ttu-id="e8f12-118">Specifica se l'analisi di identificatore IRI (International Resource) viene applicato a <xref:System.Uri> e se devono essere applicate le regole di analisi IRI.</span><span class="sxs-lookup"><span data-stu-id="e8f12-118">Specifies if International Resource Identifier (IRI) parsing is applied to <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>|  
+|[<span data-ttu-id="e8f12-119">schemeSettings</span><span class="sxs-lookup"><span data-stu-id="e8f12-119">schemeSettings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|<span data-ttu-id="e8f12-120">Specifica come verrà analizzato un <xref:System.Uri> per schemi specifici.</span><span class="sxs-lookup"><span data-stu-id="e8f12-120">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="e8f12-121">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="e8f12-121">Parent Elements</span></span>  
   
-|**Elemento**|**Descrizione**|  
-|------------------|---------------------|  
-|[configurazione](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene impostazioni per tutti gli spazi dei nomi.|  
+|<span data-ttu-id="e8f12-122">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="e8f12-122">**Element**</span></span>|<span data-ttu-id="e8f12-123">**Descrizione**</span><span class="sxs-lookup"><span data-stu-id="e8f12-123">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="e8f12-124">configurazione</span><span class="sxs-lookup"><span data-stu-id="e8f12-124">configuration</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="e8f12-125">Contiene le impostazioni per tutti gli spazi dei nomi.</span><span class="sxs-lookup"><span data-stu-id="e8f12-125">Contains settings for all namespaces.</span></span>|  
   
-## Note  
- L'elemento `uri` contiene impostazioni per i membri della classe <xref:System.Uri> utilizzata dalle classi nello spazio dei nomi <xref:System.Net>.  Le impostazioni configurano il supporto per IRI e IDN.  
+## <a name="remarks"></a><span data-ttu-id="e8f12-126">Note</span><span class="sxs-lookup"><span data-stu-id="e8f12-126">Remarks</span></span>  
+ <span data-ttu-id="e8f12-127">Il `uri` elemento contiene le impostazioni per i membri del <xref:System.Uri> utilizzata dalle classi nella classe di <xref:System.Net> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="e8f12-127">The `uri` element contains settings for members of the <xref:System.Uri> class used by classes in the <xref:System.Net> namespace.</span></span> <span data-ttu-id="e8f12-128">Le impostazioni di configurano il supporto per IRI e IDN.</span><span class="sxs-lookup"><span data-stu-id="e8f12-128">The settings configure support for IRI and IDN.</span></span>  
   
-## Esempio  
+## <a name="example"></a><span data-ttu-id="e8f12-129">Esempio</span><span class="sxs-lookup"><span data-stu-id="e8f12-129">Example</span></span>  
   
-### Descrizione  
- Nell'esempio di codice seguente viene illustrata una configurazione utilizzata dalla classe <xref:System.Uri> per supportare l'analisi IRI e i nomi IDN.  Nell'esempio vengono inoltre cancellate tutte le impostazioni dello schema e quindi viene aggiunto il supporto per non eseguire l'operazione di escape dei delimitatori di percorso con codifica percentuale dello schema HTTP.  
+### <a name="description"></a><span data-ttu-id="e8f12-130">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e8f12-130">Description</span></span>  
+ <span data-ttu-id="e8f12-131">Nell'esempio seguente viene mostrata una configurazione utilizzata per la <xref:System.Uri> classe per supportare l'analisi IRI e i nomi IDN.</span><span class="sxs-lookup"><span data-stu-id="e8f12-131">The following example shows a configuration used by the <xref:System.Uri> class to support IRI parsing and IDN names.</span></span> <span data-ttu-id="e8f12-132">Nell'esempio viene inoltre Cancella tutte le impostazioni dello schema e quindi aggiunge il supporto per sequenza di escape non delimitatori di percorso con codifica percentuale per lo schema http.</span><span class="sxs-lookup"><span data-stu-id="e8f12-132">The example also clears all scheme settings and then adds support for not escaping percent-encoded path delimiters for the http scheme.</span></span>  
   
-### Codice  
+### <a name="code"></a><span data-ttu-id="e8f12-133">Codice</span><span class="sxs-lookup"><span data-stu-id="e8f12-133">Code</span></span>  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <idn enabled="All" />  
@@ -79,5 +77,5 @@ Contiene impostazioni che specificano come vengono gestiti in .NET Framework gli
 </configuration>  
 ```  
   
-## Vedere anche  
- [Schema delle impostazioni di rete](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="e8f12-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e8f12-134">See Also</span></span>  
+ [<span data-ttu-id="e8f12-135">Schema delle impostazioni di rete</span><span class="sxs-lookup"><span data-stu-id="e8f12-135">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

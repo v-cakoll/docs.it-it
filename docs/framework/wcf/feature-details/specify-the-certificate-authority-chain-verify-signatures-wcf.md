@@ -1,44 +1,47 @@
 ---
-title: "Procedura: specificare la catena di certificati di autorit&#224; di certificazione utilizzata per verificare le firme (WCF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "certificati [WCF], indicazione della catena di certificati di autorità di certificazione"
-  - "certificati [WCF], verifica di firme"
+title: "Procedura: specificare la catena di certificati di autorità di certificazione usata per verificare le firme (WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- certificates [WCF], specifying the certificate authority certificate chain
+- certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ce846d5637c6d49b4a3b1c6f28ae533e4900f696
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: specificare la catena di certificati di autorit&#224; di certificazione utilizzata per verificare le firme (WCF)
-Per impostazione predefinita, quando riceve un messaggio SOAP firmato mediante un certificato X.509, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verifica che quest'ultimo sia stato emesso da un autorità di certificazione attendibile.A tale scopo viene eseguita una ricerca in un archivio certificati per determinare se il certificato di tale autorità di certificazione è stato riconosciuto come attendibile.Affinché [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sia in grado di svolgere questa ricerca, è necessario che la catena di certificati dell'autorità di certificazione sia installata nell'archivio certificati corretto.  
+# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a><span data-ttu-id="bdd7f-102">Procedura: specificare la catena di certificati di autorità di certificazione usata per verificare le firme (WCF)</span><span class="sxs-lookup"><span data-stu-id="bdd7f-102">How to: Specify the Certificate Authority Certificate Chain Used to Verify Signatures (WCF)</span></span>
+<span data-ttu-id="bdd7f-103">Per impostazione predefinita, quando riceve un messaggio SOAP firmato mediante un certificato X.509, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] verifica che quest'ultimo venga emesso da un'autorità di certificazione attendibile.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-103">When [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] receives a SOAP message signed using an X.509 certificate, by default it verifies that the X.509 certificate was issued by a trusted certification authority.</span></span> <span data-ttu-id="bdd7f-104">A tale scopo viene eseguita una ricerca in un archivio certificati per determinare se il certificato di tale autorità di certificazione è stato riconosciuto come attendibile.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-104">This is done by looking in a certificate store and determining if the certificate for that certification authority has been designated as trusted.</span></span> <span data-ttu-id="bdd7f-105">Affinché [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sia in grado di svolgere questa ricerca è necessario che la catena di certificati dell'autorità di certificazione sia installata nell'archivio certificati corretto.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-105">In order for [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to make this determination, the certification authority certificate chain must be installed in the correct certificate store.</span></span>  
   
-### Per installare una catena di certificati dell'autorità di certificazione  
+### <a name="to-install-a-certification-authority-certificate-chain"></a><span data-ttu-id="bdd7f-106">Per installare una catena di certificati dell'autorità di certificazione</span><span class="sxs-lookup"><span data-stu-id="bdd7f-106">To install a certification authority certificate chain</span></span>  
   
--   Per ogni autorità di certificazione che rilascia certificati X.509 che un destinatario di messaggi SOAP intende ritenere attendibile, installare la catena di certificati dell'autorità di certificazione nell'archivio certificati configurato in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] come origine dei certificati X.509.  
+-   <span data-ttu-id="bdd7f-107">Per ogni autorità di certificazione i cui certificati X.509 vengono ritenuti attendibili da destinatario di messaggi SOAP, installare la relativa catena di certificati nell'archivio certificati configurato in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] come origine dei certificati X.509.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-107">For each certification authority that a SOAP message recipient intends to trust X.509 certificates issued from, install the certification authority certificate chain into the certificate store that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is configured to retrieve X.509 certificates from.</span></span>  
   
-     Ad esempio, se un destinatario di messaggi SOAP intende ritenere attendibili i certificati X.509 rilasciati da Microsoft, è necessario installare la catena di certificati dell'autorità di certificazione di Microsoft nell'archivio certificati in cui [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ricerca i certificati X.509.L'archivio certificati nel quale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] esegue la ricerca dei certificati X.509 può essere specificato in codice o in configurazione.La specifica in codice può ad esempio essere eseguita tramite il metodo <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>. Esistono inoltre vari modi per eseguire la specifica in configurazione, fra cui mediante l'utilizzo dell'[\<certificatoServizio\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md).  
+     <span data-ttu-id="bdd7f-108">Ad esempio, se un destinatario di messaggi SOAP intende ritenere attendibili i certificati X.509 rilasciati da Microsoft, è necessario installare la catena di certificati dell'autorità di certificazione di Microsoft nell'archivio certificati in cui [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ricerca i certificati X.509.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-108">For instance, if a SOAP message recipient intends to trust X.509 certificates issued by Microsoft, the certification authority certificate chain for Microsoft must be installed in the certificate store that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is set up to look for X.509 certificates from.</span></span> <span data-ttu-id="bdd7f-109">L'archivio certificati nel quale [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] esegue la ricerca dei certificati X.509 può essere specificato in codice o in configurazione.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-109">The certificate store in which [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] looks for X.509 certificates can be specified in code or configuration.</span></span> <span data-ttu-id="bdd7f-110">Ad esempio, questo valore può essere specificato nel codice utilizzando il <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metodo o nella configurazione alcuni modi, ad esempio il [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .</span><span class="sxs-lookup"><span data-stu-id="bdd7f-110">For example, this can be specified in code using the <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> method or in configuration a few ways, including the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .</span></span>  
   
-     Poiché Windows offre un set incorporato di catene di certificati predefinite di autorità di certificazione attendibili, è possibile che non sia necessario installare la catena di certificati per tutte le autorità di certificazione.  
+     <span data-ttu-id="bdd7f-111">Poiché Windows offre un set incorporato di catene di certificati predefinite di autorità di certificazione attendibili, è possibile che non sia necessario installare la catena di certificati per tutte le autorità di certificazione.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-111">Because Windows ships with a set of default certificate chains for trusted certificate authorities, it may not be necessary to install the certificate chain for all certificate authorities.</span></span>  
   
-    1.  Esportare la catena di certificati dell'autorità di certificazione.  
+    1.  <span data-ttu-id="bdd7f-112">Esportare la catena di certificati dell'autorità di certificazione.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-112">Export the certification authority certificate chain.</span></span>  
   
-         La modalità utilizzata per eseguire questa operazione varia a seconda dell'autorità di certificazione.Se l'autorità di certificazione esegue Servizi certificati Microsoft, selezionare **Scarica un certificato CA, la catena di certificati o l'elenco di revoche di certificati**, quindi **Esegui download certificato CA**.  
+         <span data-ttu-id="bdd7f-113">La modalità utilizzata per eseguire questa operazione varia a seconda dell'autorità di certificazione.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-113">Exactly how this is done depends on the certification authority.</span></span> <span data-ttu-id="bdd7f-114">Se l'autorità di certificazione esegue Servizi certificati Microsoft, selezionare **scarica un certificato CA, una catena di certificati o CRL**, quindi scegliere **Esegui Download certificato CA**.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-114">If the certification authority is running Microsoft Certificate Services, select **Download a CA certificate, certificate chain, or CRL**, and then choose **Download CA certificate**.</span></span>  
   
-    2.  Importare la catena di certificati dell'autorità di certificazione.  
+    2.  <span data-ttu-id="bdd7f-115">Importare la catena di certificati dell'autorità di certificazione.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-115">Import the certification authority certificate chain.</span></span>  
   
-         In Microsoft Management Console \(MMC\), aprire lo snap\-in Certificati.Per l'archivio certificati da cui [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recupera i certificati X.509, selezionare la cartella **Autorità di certificazione** **radice attendibili**.Nella cartella **Autorità di certificazione radice attendibili**, fare clic con il pulsante destro del mouse sulla cartella **Certificati**, scegliere **Tutte le attività** e quindi fare clic su **Importa**.Indicare il file esportato nel primo passaggio.  
+         <span data-ttu-id="bdd7f-116">In Microsoft Management Console (MMC), aprire lo snap-in Certificati.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-116">In the Microsoft Management Console (MMC), open the Certificates snap-in.</span></span> <span data-ttu-id="bdd7f-117">Per il certificato archiviare [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è configurato per recuperare i certificati x. 509, selezionare il **radice attendibili** **autorità di certificazione**cartella.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-117">For the certificate store that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is configured to retrieve X.509 certificates from, select the **Trusted Root** **Certification Authorities**folder.</span></span> <span data-ttu-id="bdd7f-118">Sotto il **autorità di certificazione radice attendibili** cartella, fare doppio clic su di **certificati**cartella, scegliere **tutte le attività**e quindi fare clic su **importazione** .</span><span class="sxs-lookup"><span data-stu-id="bdd7f-118">Under the **Trusted Root Certification Authorities** folder, right-click the **Certificates**folder, point to **All Tasks**, and then click **Import**.</span></span> <span data-ttu-id="bdd7f-119">Indicare il file esportato nel primo passaggio.</span><span class="sxs-lookup"><span data-stu-id="bdd7f-119">Provide the file exported in step a.</span></span>  
   
-         [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sull'utilizzo dello snap\-in Certificati di MMC, vedere [Procedura: visualizzare certificati con lo snap\-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+         [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="bdd7f-120">con lo snap-in MMC, vedere [procedura: visualizzare certificati con lo Snap-in MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).</span><span class="sxs-lookup"><span data-stu-id="bdd7f-120"> using the Certificates snap-in with MMC, see [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).</span></span>  
   
-## Vedere anche  
- [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a><span data-ttu-id="bdd7f-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="bdd7f-121">See Also</span></span>  
+ [<span data-ttu-id="bdd7f-122">Utilizzo dei certificati</span><span class="sxs-lookup"><span data-stu-id="bdd7f-122">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

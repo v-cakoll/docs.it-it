@@ -1,65 +1,65 @@
 ---
-title: "Elemento &lt;mscorlib&gt; per le impostazioni di crittografia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<mscorlib> (elemento)"
-  - "mscorlib (elemento)"
+title: '&lt;mscorlib&gt; elemento per le impostazioni di crittografia'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib
+helpviewer_keywords:
+- mscorlib element
+- <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 992e62575dccae3f68df27fb7dd027dceab91ffc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;mscorlib&gt; per le impostazioni di crittografia
-Contiene l'[elemento \<cryptographySettings\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
+# <a name="ltmscorlibgt-element-for-cryptography-settings"></a><span data-ttu-id="ebe88-102">&lt;mscorlib&gt; elemento per le impostazioni di crittografia</span><span class="sxs-lookup"><span data-stu-id="ebe88-102">&lt;mscorlib&gt; Element for Cryptography Settings</span></span>
+<span data-ttu-id="ebe88-103">Contiene il [ \<cryptographySettings > elemento](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span><span class="sxs-lookup"><span data-stu-id="ebe88-103">Contains the [\<cryptographySettings> element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="ebe88-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ebe88-104">\<configuration></span></span>  
+<span data-ttu-id="ebe88-105">\<mscorlib ></span><span class="sxs-lookup"><span data-stu-id="ebe88-105">\<mscorlib></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ebe88-106">Sintassi</span><span class="sxs-lookup"><span data-stu-id="ebe88-106">Syntax</span></span>  
   
-      <mscorlib>   
+```xml  
+      <mscorlib>   
 </mscorlib>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ebe88-107">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="ebe88-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="ebe88-108">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="ebe88-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
- Nessuno.  
+### <a name="attributes"></a><span data-ttu-id="ebe88-109">Attributi</span><span class="sxs-lookup"><span data-stu-id="ebe88-109">Attributes</span></span>  
+ <span data-ttu-id="ebe88-110">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="ebe88-110">None.</span></span>  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="ebe88-111">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="ebe88-111">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`cryptographySettings`|Contiene le impostazioni di crittografia.|  
+|<span data-ttu-id="ebe88-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="ebe88-112">Element</span></span>|<span data-ttu-id="ebe88-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ebe88-113">Description</span></span>|  
+|-------------|-----------------|  
+|`cryptographySettings`|<span data-ttu-id="ebe88-114">Contiene le impostazioni di crittografia.</span><span class="sxs-lookup"><span data-stu-id="ebe88-114">Contains cryptography settings.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="ebe88-115">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="ebe88-115">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
+|<span data-ttu-id="ebe88-116">Elemento</span><span class="sxs-lookup"><span data-stu-id="ebe88-116">Element</span></span>|<span data-ttu-id="ebe88-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="ebe88-117">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="ebe88-118">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="ebe88-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come utilizzare l'elemento **\<mscorlib\>** per fare riferimento a una classe di crittografia e configurare il runtime.  È quindi possibile passare la stringa "RSA" al metodo <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> e utilizzare il metodo <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un oggetto `MyCryptoRSAClass`.  
+## <a name="example"></a><span data-ttu-id="ebe88-119">Esempio</span><span class="sxs-lookup"><span data-stu-id="ebe88-119">Example</span></span>  
+ <span data-ttu-id="ebe88-120">Nell'esempio seguente viene illustrato come utilizzare il  **\<mscorlib >** elemento a cui fare riferimento a una classe di crittografia e configurare il runtime.</span><span class="sxs-lookup"><span data-stu-id="ebe88-120">The following example shows how to use the **\<mscorlib>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="ebe88-121">È quindi possibile passare la stringa "RSA" per il <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metodo e utilizzare il <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> per restituire un `MyCryptoRSAClass` oggetto.</span><span class="sxs-lookup"><span data-stu-id="ebe88-121">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -78,10 +78,10 @@ Contiene l'[elemento \<cryptographySettings\>](../../../../../docs/framework/con
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>   
- <xref:System.Security.Cryptography>   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Schema delle impostazioni di crittografia](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Servizi di crittografia](../../../../../docs/standard/security/cryptographic-services.md)   
- [Configurazione di classi di crittografia](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a><span data-ttu-id="ebe88-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ebe88-122">See Also</span></span>  
+ <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>  
+ <xref:System.Security.Cryptography>  
+ [<span data-ttu-id="ebe88-123">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="ebe88-123">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="ebe88-124">Schema delle impostazioni di crittografia</span><span class="sxs-lookup"><span data-stu-id="ebe88-124">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [<span data-ttu-id="ebe88-125">Servizi di crittografia</span><span class="sxs-lookup"><span data-stu-id="ebe88-125">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)  
+ [<span data-ttu-id="ebe88-126">Configurazione di classi di crittografia</span><span class="sxs-lookup"><span data-stu-id="ebe88-126">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

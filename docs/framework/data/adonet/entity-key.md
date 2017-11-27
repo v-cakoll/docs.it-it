@@ -1,51 +1,54 @@
 ---
-title: "chiave di entit&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "chiave di entità"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: d0d7df7ff1a0e8e732688e10befb4bffa86599d0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# chiave di entit&#224;
-Una *chiave di entità* è una [proprietà](../../../../docs/framework/data/adonet/property.md) o un set di proprietà di un [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) usate per determinare l'identità.  Le proprietà che costituiscono una chiave di entità vengono scelte in fase di progettazione.  I valori delle proprietà della chiave di entità devono identificare in modo univoco in fase di esecuzione un'istanza del tipo di entità all'interno di un [set di entità](../../../../docs/framework/data/adonet/entity-set.md).  Le proprietà che costituiscono una chiave di entità devono essere scelte per garantire univocità delle istanze in un set di entità.  
+# <a name="entity-key"></a><span data-ttu-id="43b83-102">chiave di entità</span><span class="sxs-lookup"><span data-stu-id="43b83-102">entity key</span></span>
+<span data-ttu-id="43b83-103">Un *chiave di entità* è un [proprietà](../../../../docs/framework/data/adonet/property.md) o un set di proprietà di un [tipo di entità](../../../../docs/framework/data/adonet/entity-type.md) utilizzati per determinare l'identità.</span><span class="sxs-lookup"><span data-stu-id="43b83-103">An *entity key* is a [property](../../../../docs/framework/data/adonet/property.md) or a set of properties of an [entity type](../../../../docs/framework/data/adonet/entity-type.md) that are used to determine identity.</span></span> <span data-ttu-id="43b83-104">Le proprietà che costituiscono una chiave di entità vengono scelte in fase di progettazione.</span><span class="sxs-lookup"><span data-stu-id="43b83-104">The properties that make up an entity key are chosen at design time.</span></span> <span data-ttu-id="43b83-105">I valori delle proprietà chiave di entità devono identificare in modo univoco un'istanza del tipo di entità all'interno di un [set di entità](../../../../docs/framework/data/adonet/entity-set.md) in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="43b83-105">The values of entity key properties must uniquely identify an entity type instance within an [entity set](../../../../docs/framework/data/adonet/entity-set.md) at run time.</span></span> <span data-ttu-id="43b83-106">Le proprietà che costituiscono una chiave di entità devono essere scelte per garantire univocità delle istanze in un set di entità.</span><span class="sxs-lookup"><span data-stu-id="43b83-106">The properties that make up an entity key should be chosen to guarantee uniqueness of instances in an entity set.</span></span>  
   
- Di seguito sono elencati i requisiti che consentono a un set di proprietà di essere una chiave di entità:  
+ <span data-ttu-id="43b83-107">Di seguito sono elencati i requisiti che consentono a un set di proprietà di essere una chiave di entità:</span><span class="sxs-lookup"><span data-stu-id="43b83-107">The following are the requirements for a set of properties to be an entity key:</span></span>  
   
--   Non possono esistere due chiavi di entità identiche all'interno di un set di entità,  vale a dire che, per due entità qualsiasi all'interno di un set di entità, i valori per tutte le proprietà che costituiscono una chiave non possono essere gli stessi.  Tuttavia, alcuni valori \(ma non tutti\) che costituiscono una chiave di entità possono essere gli stessi.  
+-   <span data-ttu-id="43b83-108">Non possono esistere due chiavi di entità identiche all'interno di un set di entità,</span><span class="sxs-lookup"><span data-stu-id="43b83-108">No two entity keys within an entity set can be identical.</span></span> <span data-ttu-id="43b83-109">vale a dire che, per due entità qualsiasi all'interno di un set di entità, i valori per tutte le proprietà che costituiscono una chiave non possono essere gli stessi.</span><span class="sxs-lookup"><span data-stu-id="43b83-109">That is, for any two entities within an entity set, the values for all of the properties that constitute a key cannot be the same.</span></span> <span data-ttu-id="43b83-110">Tuttavia, alcuni valori (ma non tutti) che costituiscono una chiave di entità possono essere gli stessi.</span><span class="sxs-lookup"><span data-stu-id="43b83-110">However, some (but not all) of the values that make up an entity key can be the same.</span></span>  
   
--   Una chiave di entità deve essere costituita da un set di [proprietà di tipo primitivo](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md) non nullable e immutabili.  
+-   <span data-ttu-id="43b83-111">Una chiave di entità deve essere costituito da un set di non nullable e immutabili [proprietà di tipo primitivo](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).</span><span class="sxs-lookup"><span data-stu-id="43b83-111">An entity key must consist of a set of non-nullable, immutable, [primitive type properties](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).</span></span>  
   
--   Le proprietà che costituiscono una chiave di entità per un determinato tipo di entità non possono essere modificate.  Non è possibile consentire più di una possibile chiave di entità per un determinato tipo di entità. Le chiavi surrogate non sono supportate.  
+-   <span data-ttu-id="43b83-112">Le proprietà che costituiscono una chiave di entità per un determinato tipo di entità non possono essere modificate.</span><span class="sxs-lookup"><span data-stu-id="43b83-112">The properties that make up an entity key for a given entity type cannot change.</span></span> <span data-ttu-id="43b83-113">Non è possibile consentire più di una possibile chiave di entità per un determinato tipo di entità. Le chiavi surrogate non sono supportate.</span><span class="sxs-lookup"><span data-stu-id="43b83-113">You cannot allow more than one possible entity key for a given entity type; surrogate keys are not supported.</span></span>  
   
--   Quando un'entità è coinvolta in una gerarchia di ereditarietà, l'entità radice deve contenere tutte le proprietà che costituiscono la chiave di entità e la chiave di entità deve essere definita sul tipo di entità radice.  Per altre informazioni, vedere [Entity Data Model: ereditarietà](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).  
+-   <span data-ttu-id="43b83-114">Quando un'entità è coinvolta in una gerarchia di ereditarietà, l'entità radice deve contenere tutte le proprietà che costituiscono la chiave di entità e la chiave di entità deve essere definita sul tipo di entità radice.</span><span class="sxs-lookup"><span data-stu-id="43b83-114">When an entity is involved in an inheritance hierarchy, the root entity must contain all the properties that make up the entity key, and the entity key must be defined on the root entity type.</span></span> <span data-ttu-id="43b83-115">Per ulteriori informazioni, vedere [Entity Data Model: ereditarietà](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).</span><span class="sxs-lookup"><span data-stu-id="43b83-115">For more information, see [Entity Data Model: Inheritance](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).</span></span>  
   
-## Esempio  
- Nel diagramma seguente viene illustrato un modello concettuale con tre tipi di entità: `Book`, `Publisher` e `Author`.  Le proprietà di ogni tipo di entità che costituiscono la chiave di entità vengono indicate con "\(Key\)".  Si noti che il tipo di entità `Author` dispone di una chiave di entità costituita da due proprietà, `Name` e `Address`.  
+## <a name="example"></a><span data-ttu-id="43b83-116">Esempio</span><span class="sxs-lookup"><span data-stu-id="43b83-116">Example</span></span>  
+ <span data-ttu-id="43b83-117">Nel diagramma seguente viene illustrato un modello concettuale con tre tipi di entità: `Book`, `Publisher` e `Author`.</span><span class="sxs-lookup"><span data-stu-id="43b83-117">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span> <span data-ttu-id="43b83-118">Le proprietà di ogni tipo di entità che costituiscono la chiave di entità vengono indicate con "(Key)".</span><span class="sxs-lookup"><span data-stu-id="43b83-118">The properties of each entity type that make up its entity key are denoted with "(Key)".</span></span> <span data-ttu-id="43b83-119">Si noti che il tipo di entità `Author` dispone di una chiave di entità costituita da due proprietà, `Name` e `Address`.</span><span class="sxs-lookup"><span data-stu-id="43b83-119">Note that the `Author` entity type has an entity key that consists of two properties, `Name` and `Address`.</span></span>  
   
- ![Modello di esempio](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ <span data-ttu-id="43b83-120">![Modello di esempio](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span><span class="sxs-lookup"><span data-stu-id="43b83-120">![Example Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span></span>  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un linguaggio specifico di dominio detto [CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) \(Conceptual Schema Definition Language\) per definire i modelli concettuali.  Il linguaggio CSDL seguente definisce il tipo di entità `Book` illustrato nel diagramma precedente.  Si noti che la chiave di entità viene definita facendo riferimento alla proprietà `ISBN` del tipo di entità.  
+ <span data-ttu-id="43b83-121">Il [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) Usa un linguaggio specifico di dominio (DSL), chiamato linguaggio conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) per definire i modelli concettuali.</span><span class="sxs-lookup"><span data-stu-id="43b83-121">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="43b83-122">Il linguaggio CSDL seguente definisce il tipo di entità `Book` illustrato nel diagramma precedente.</span><span class="sxs-lookup"><span data-stu-id="43b83-122">The CSDL below defines the `Book` entity type shown in the diagram above.</span></span> <span data-ttu-id="43b83-123">Si noti che la chiave di entità viene definita facendo riferimento alla proprietà `ISBN` del tipo di entità.</span><span class="sxs-lookup"><span data-stu-id="43b83-123">Note that the entity key is defined by referencing the `ISBN` property of the entity type.</span></span>  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
- La proprietà `ISBN` è una valida scelta per la chiave di entità perché un codice ISBN \(International Standard Book Number\) identifica in modo univoco un libro.  
+ <span data-ttu-id="43b83-124">La proprietà `ISBN` è una valida scelta per la chiave di entità perché un codice ISBN (International Standard Book Number) identifica in modo univoco un libro.</span><span class="sxs-lookup"><span data-stu-id="43b83-124">The `ISBN` property is a good choice for the entity key because an International Standard Book Number (ISBN) uniquely identifies a book.</span></span>  
   
- Il linguaggio CSDL seguente definisce il tipo di entità `Author` illustrato nel diagramma precedente.  Si noti che la chiave di entità è costituita da due proprietà, `Name` e `Address`.  
+ <span data-ttu-id="43b83-125">Il linguaggio CSDL seguente definisce il tipo di entità `Author` illustrato nel diagramma precedente.</span><span class="sxs-lookup"><span data-stu-id="43b83-125">The CSDL below defines the `Author` entity type shown in the diagram above.</span></span> <span data-ttu-id="43b83-126">Si noti che la chiave di entità è costituita da due proprietà, `Name` e `Address`.</span><span class="sxs-lookup"><span data-stu-id="43b83-126">Note that the entity key consists of two properties, `Name` and `Address`.</span></span>  
   
  [!code-xml[EDM_Example_Model#CompositeKeyExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#compositekeyexample)]  
   
- L'utilizzo di `Name` e `Address` per la chiave di entità è una scelta ragionevole, perché è improbabile che due autori con lo stesso nome vivano allo stesso indirizzo.  Questa scelta per una chiave di entità non garantisce tuttavia in modo assoluto chiavi di entità univoche in un set di entità.  In questo caso, è consigliabile aggiungere una proprietà, ad esempio `AuthorId`, che consente di identificare in modo univoco un autore.  
+ <span data-ttu-id="43b83-127">L'utilizzo di `Name` e `Address` per la chiave di entità è una scelta ragionevole, perché è improbabile che due autori con lo stesso nome vivano allo stesso indirizzo.</span><span class="sxs-lookup"><span data-stu-id="43b83-127">Using `Name` and `Address` for the entity key is a reasonable choice, because two authors of the same name are unlikely to live at the same address.</span></span> <span data-ttu-id="43b83-128">Questa scelta per una chiave di entità non garantisce tuttavia in modo assoluto chiavi di entità univoche in un set di entità.</span><span class="sxs-lookup"><span data-stu-id="43b83-128">However, this choice for an entity key does not absolutely guarantee unique entity keys in an entity set.</span></span> <span data-ttu-id="43b83-129">In questo caso, è consigliabile aggiungere una proprietà, ad esempio `AuthorId`, che consente di identificare in modo univoco un autore.</span><span class="sxs-lookup"><span data-stu-id="43b83-129">Adding a property, such as `AuthorId`, that could be used to uniquely identify an author would be recommended in this case.</span></span>  
   
-## Vedere anche  
- [Concetti chiave di Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="43b83-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="43b83-130">See Also</span></span>  
+ [<span data-ttu-id="43b83-131">Concetti chiave di Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="43b83-131">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="43b83-132">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="43b83-132">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

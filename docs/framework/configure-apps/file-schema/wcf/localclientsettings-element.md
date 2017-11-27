@@ -1,28 +1,36 @@
 ---
-title: "Elemento &lt;localClientSettings&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;localClientSettings&gt;
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d56c7c199ed437fdfc1277ecb6c99f7b8c6cbe38
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;localClientSettings&gt;
-Specifica le impostazioni di sicurezza di un client locale per questa associazione.  
+# <a name="ltlocalclientsettingsgt-element"></a><span data-ttu-id="60059-102">Elemento &lt;localClientSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="60059-102">&lt;localClientSettings&gt; element</span></span>
+<span data-ttu-id="60059-103">Specifica le impostazioni di sicurezza di un client locale per questa associazione.</span><span class="sxs-lookup"><span data-stu-id="60059-103">Specifies the security settings of a local client for this binding.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="60059-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="60059-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="60059-105">\<associazioni ></span><span class="sxs-lookup"><span data-stu-id="60059-105">\<bindings></span></span>  
+<span data-ttu-id="60059-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="60059-106">\<customBinding></span></span>  
+<span data-ttu-id="60059-107">\<associazione ></span><span class="sxs-lookup"><span data-stu-id="60059-107">\<binding></span></span>  
+<span data-ttu-id="60059-108">\<sicurezza ></span><span class="sxs-lookup"><span data-stu-id="60059-108">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="60059-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="60059-109">Syntax</span></span>  
   
+```xml  
 <security>  
    <localClientSettings cacheCookies="Boolean"  
       cookieRenewalThresholdPercentage="Integer"  
@@ -38,47 +46,47 @@ Specifica le impostazioni di sicurezza di un client locale per questa associazio
 </security>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="60059-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="60059-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="60059-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="60059-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="60059-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="60059-112">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="60059-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="60059-113">Attribute</span></span>|<span data-ttu-id="60059-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="60059-114">Description</span></span>|  
 |---------------|-----------------|  
-|`cacheCookies`|Valore booleano che specifica se è attivata la memorizzazione dei cookie nella cache.  Il valore predefinito è `false`.|  
-|`cookieRenewalThresholdPercentage`|Un numero intero che specifica la percentuale massima di cookie che possono essere rinnovati.  Questo valore deve essere compreso tra 0 e 100 inclusi.  Il valore predefinito è 90.|  
-|`detectReplays`|Valore booleano che specifica se gli attacchi di tipo replay contro il canale vengono rilevati e gestiti automaticamente.  Il valore predefinito è `false`.|  
-|`maxClockSkew`|<xref:System.TimeSpan> specifica la differenza massima di tempo tra gli orologi di sistema delle due parti che stanno comunicando.  Il valore predefinito è "00:05:00".<br /><br /> Quando l'impostazione di questo valore è quella predefinita, il destinatario accetta i messaggi con timestamp relativi all'ora di invio precedenti o successivi all'ora in cui il messaggio è stato ricevuto.  I messaggi che non passano i test dell'ora di invio vengono rifiutati.  Questa impostazione viene usata in combinazione con l'attributo `replayWindow`.|  
-|`maxCookieCachingTime`|<xref:System.TimeSpan> specifica la durata massima dei cookie.  Il valore predefinito è "10675199.02:48:05.4775807".|  
-|`reconnectTransportOnFailure`|Valore booleano che specifica se le connessioni che usano WS\-Reliable Messaging tenteranno la riconnessione in caso di errori del trasporto.  L'impostazione predefinita è `true`, la quale significa un numero infinito di tentativi di riconnessione.  Il ciclo viene interrotto dal timeout di inattività che fa sì che il canale generi un'eccezione quando la riconnessione non è possibile.|  
-|`replayCacheSize`|Un numero intero positivo che specifica il numero di parametri nonce da usare per il rilevamento di attacchi di tipo replay.  Se questo limite viene superato, il nonce meno recente viene rimosso e viene creato un nuovo nonce per il messaggio nuovo.  Il valore predefinito è 500000.|  
-|`replayWindow`|<xref:System.TimeSpan> specifica la durata di validità dei singoli nonce dei messaggi.<br /><br /> Dopo questa durata, un messaggio inviato con lo stesso nonce di quello inviato precedentemente non verrà accettato.  Questo attributo viene usato in combinazione con l'attributo `maxClockSkew` per impedire attacchi di tipo replay.  L'autore di un attacco può replicare un messaggio dopo che la finestra di replay è scaduta.  Questo messaggio, tuttavia, non supererebbe il test `maxClockSkew` che rifiuta i messaggi con timestamp relativi all'ora di invio che differiscono di un tempo specificato in più o in meno rispetto all'ora in cui il messaggio è stato ricevuto.|  
-|`sessionKeyRenewalInterval`|<xref:System.TimeSpan> specifica l'intervallo di tempo dopo il quale l'iniziatore rinnoverà la chiave per la sessione di sicurezza.  L'impostazione predefinita è "10:00:00".|  
-|`sessionKeyRolloverInterval`|<xref:System.TimeSpan> specifica l'intervallo di tempo per il quale la chiave della sessione precedente è valida nei messaggi in arrivo durante un rinnovo della chiave.  L'impostazione predefinita è "00:05:00".<br /><br /> Durante il rinnovo della chiave, client e server devono inviare i messaggi usando sempre la chiave disponibile più recente.  Entrambe le parti accetteranno i messaggi in arrivo protetti con la chiave della sessione precedente fino alla scadenza del tempo di sostituzione.|  
-|`timestampValidityDuration`|<xref:System.TimeSpan> positivo che specifica il periodo di validità di un timestamp.  L'impostazione predefinita è "00:15:00".|  
+|`cacheCookies`|<span data-ttu-id="60059-115">Valore booleano che specifica se è attivata la memorizzazione dei cookie nella cache.</span><span class="sxs-lookup"><span data-stu-id="60059-115">A Boolean value that specifies whether cookie caching is enabled.</span></span> <span data-ttu-id="60059-116">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="60059-116">The default is `false`.</span></span>|  
+|`cookieRenewalThresholdPercentage`|<span data-ttu-id="60059-117">Un numero intero che specifica la percentuale massima di cookie che possono essere rinnovati.</span><span class="sxs-lookup"><span data-stu-id="60059-117">An integer that specifies the maximum percentage of cookies that can be renewed.</span></span> <span data-ttu-id="60059-118">Questo valore deve essere compreso tra 0 e 100 inclusi.</span><span class="sxs-lookup"><span data-stu-id="60059-118">This value should be between 0 and 100 inclusively.</span></span> <span data-ttu-id="60059-119">Il valore predefinito è 90.</span><span class="sxs-lookup"><span data-stu-id="60059-119">The default is 90.</span></span>|  
+|`detectReplays`|<span data-ttu-id="60059-120">Valore booleano che specifica se gli attacchi di tipo replay contro il canale vengono rilevati e gestiti automaticamente.</span><span class="sxs-lookup"><span data-stu-id="60059-120">A Boolean value that specifies whether replay attacks against the channel are detected and dealt with automatically.</span></span> <span data-ttu-id="60059-121">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="60059-121">The default is `false`.</span></span>|  
+|`maxClockSkew`|<span data-ttu-id="60059-122"><xref:System.TimeSpan> specifica la differenza massima di tempo tra gli orologi di sistema delle due parti che stanno comunicando.</span><span class="sxs-lookup"><span data-stu-id="60059-122">A <xref:System.TimeSpan> that specifies the maximum time difference between the system clocks of the two communicating parties.</span></span> <span data-ttu-id="60059-123">Il valore predefinito è "00:05:00".</span><span class="sxs-lookup"><span data-stu-id="60059-123">The default value is "00:05:00".</span></span><br /><br /> <span data-ttu-id="60059-124">Quando l'impostazione di questo valore è quella predefinita, il destinatario accetta i messaggi con timestamp relativi all'ora di invio precedenti o successivi all'ora in cui il messaggio è stato ricevuto.</span><span class="sxs-lookup"><span data-stu-id="60059-124">When this value is set to the default, the receiver accepts messages with send-time time stamps up to 5 minutes later or earlier than the time the message was received.</span></span> <span data-ttu-id="60059-125">I messaggi che non passano i test dell'ora di invio vengono rifiutati.</span><span class="sxs-lookup"><span data-stu-id="60059-125">Messages that do not pass the send-time test are rejected.</span></span> <span data-ttu-id="60059-126">Questa impostazione viene usata in combinazione con l'attributo `replayWindow`.</span><span class="sxs-lookup"><span data-stu-id="60059-126">This setting is used in conjunction with the `replayWindow` attribute.</span></span>|  
+|`maxCookieCachingTime`|<span data-ttu-id="60059-127"><xref:System.TimeSpan> specifica la durata massima dei cookie.</span><span class="sxs-lookup"><span data-stu-id="60059-127">A <xref:System.TimeSpan> that specifies the maximum lifetime of cookies.</span></span> <span data-ttu-id="60059-128">Il valore predefinito è "10675199.02:48:05.4775807".</span><span class="sxs-lookup"><span data-stu-id="60059-128">The default value is "10675199.02:48:05.4775807".</span></span>|  
+|`reconnectTransportOnFailure`|<span data-ttu-id="60059-129">Valore booleano che specifica se le connessioni che usano WS-Reliable Messaging tenteranno la riconnessione in caso di errori del trasporto.</span><span class="sxs-lookup"><span data-stu-id="60059-129">A Boolean value that specifies whether connections using WS-Reliable messaging will attempt to reconnect after transport failures.</span></span> <span data-ttu-id="60059-130">L'impostazione predefinita è `true`, la quale significa un numero infinito di tentativi di riconnessione.</span><span class="sxs-lookup"><span data-stu-id="60059-130">The default is `true`, which means that infinite attempts to reconnect are attempted.</span></span> <span data-ttu-id="60059-131">Il ciclo viene interrotto dal timeout di inattività che fa sì che il canale generi un'eccezione quando la riconnessione non è possibile.</span><span class="sxs-lookup"><span data-stu-id="60059-131">The cycle is broken by the inactivity time-out, which causes the channel to throw an exception when it cannot be reconnected.</span></span>|  
+|`replayCacheSize`|<span data-ttu-id="60059-132">Un numero intero positivo che specifica il numero di parametri nonce da usare per il rilevamento di attacchi di tipo replay.</span><span class="sxs-lookup"><span data-stu-id="60059-132">A positive integer that specifies the number of cached nonces used for replay detection.</span></span> <span data-ttu-id="60059-133">Se questo limite viene superato, il nonce meno recente viene rimosso e viene creato un nuovo nonce per il messaggio nuovo.</span><span class="sxs-lookup"><span data-stu-id="60059-133">If this limit is exceeded, the oldest nonce is removed and a new nonce is created for the new message.</span></span> <span data-ttu-id="60059-134">Il valore predefinito è 500000.</span><span class="sxs-lookup"><span data-stu-id="60059-134">The default value is 500000.</span></span>|  
+|`replayWindow`|<span data-ttu-id="60059-135"><xref:System.TimeSpan> specifica la durata di validità dei singoli nonce dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="60059-135">A <xref:System.TimeSpan> that specifies the duration in which individual message nonces are valid.</span></span><br /><br /> <span data-ttu-id="60059-136">Dopo questa durata, un messaggio inviato con lo stesso nonce di quello inviato precedentemente non verrà accettato.</span><span class="sxs-lookup"><span data-stu-id="60059-136">After this duration, a message sent with the same nonce as the one sent before will not be accepted.</span></span> <span data-ttu-id="60059-137">Questo attributo viene usato in combinazione con l'attributo `maxClockSkew` per impedire attacchi di tipo replay.</span><span class="sxs-lookup"><span data-stu-id="60059-137">This attribute is used in conjunction with the `maxClockSkew` attribute to prevent replay attacks.</span></span> <span data-ttu-id="60059-138">L'autore di un attacco può replicare un messaggio dopo che la finestra di replay è scaduta.</span><span class="sxs-lookup"><span data-stu-id="60059-138">An attacker could replay a message after its replay window has expired.</span></span> <span data-ttu-id="60059-139">Questo messaggio, tuttavia, non supererebbe il test `maxClockSkew` che rifiuta i messaggi con timestamp relativi all'ora di invio che differiscono di un tempo specificato in più o in meno rispetto all'ora in cui il messaggio è stato ricevuto.</span><span class="sxs-lookup"><span data-stu-id="60059-139">This message, however, would fail the `maxClockSkew` test which rejects messages with send-time timestamps up to a specified time later or earlier than the time the message was received.</span></span>|  
+|`sessionKeyRenewalInterval`|<span data-ttu-id="60059-140"><xref:System.TimeSpan> specifica l'intervallo di tempo dopo il quale l'iniziatore rinnoverà la chiave per la sessione di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="60059-140">A <xref:System.TimeSpan> that specifies the duration after which the initiator will renew the key for the security session.</span></span> <span data-ttu-id="60059-141">L'impostazione predefinita è "10:00:00".</span><span class="sxs-lookup"><span data-stu-id="60059-141">The default is "10:00:00".</span></span>|  
+|`sessionKeyRolloverInterval`|<span data-ttu-id="60059-142"><xref:System.TimeSpan> specifica l'intervallo di tempo per il quale la chiave della sessione precedente è valida nei messaggi in arrivo durante un rinnovo della chiave.</span><span class="sxs-lookup"><span data-stu-id="60059-142">A <xref:System.TimeSpan> that specifies the time interval a previous session key is valid on incoming messages during a key renewal.</span></span> <span data-ttu-id="60059-143">L'impostazione predefinita è "00:05:00".</span><span class="sxs-lookup"><span data-stu-id="60059-143">The default is "00:05:00".</span></span><br /><br /> <span data-ttu-id="60059-144">Durante il rinnovo della chiave, client e server devono inviare i messaggi usando sempre la chiave disponibile più recente.</span><span class="sxs-lookup"><span data-stu-id="60059-144">During key renewal, the client and server must always send messages using the most current available key.</span></span> <span data-ttu-id="60059-145">Entrambe le parti accetteranno i messaggi in arrivo protetti con la chiave della sessione precedente fino alla scadenza del tempo di sostituzione.</span><span class="sxs-lookup"><span data-stu-id="60059-145">Both parties will accept incoming messages secured with the previous session key until the rollover time expires.</span></span>|  
+|`timestampValidityDuration`|<span data-ttu-id="60059-146"><xref:System.TimeSpan> positivo che specifica il periodo di validità di un timestamp.</span><span class="sxs-lookup"><span data-stu-id="60059-146">A positive <xref:System.TimeSpan> that specifies the duration in which a time stamp is valid.</span></span> <span data-ttu-id="60059-147">L'impostazione predefinita è "00:15:00".</span><span class="sxs-lookup"><span data-stu-id="60059-147">The default is "00:15:00".</span></span>|  
   
-### Elementi figlio  
- None  
+### <a name="child-elements"></a><span data-ttu-id="60059-148">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="60059-148">Child Elements</span></span>  
+ <span data-ttu-id="60059-149">None</span><span class="sxs-lookup"><span data-stu-id="60059-149">None</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="60059-150">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="60059-150">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<sicurezza\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Specifica le opzioni di sicurezza di un'associazione personalizzata.|  
-|[\<bootstrapConversazioneProtetta\>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Specifica i valori predefiniti usati per iniziare un servizio di conversazione protetta.|  
+|<span data-ttu-id="60059-151">Elemento</span><span class="sxs-lookup"><span data-stu-id="60059-151">Element</span></span>|<span data-ttu-id="60059-152">Descrizione</span><span class="sxs-lookup"><span data-stu-id="60059-152">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="60059-153">\<sicurezza ></span><span class="sxs-lookup"><span data-stu-id="60059-153">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|<span data-ttu-id="60059-154">Specifica le opzioni di sicurezza di un'associazione personalizzata.</span><span class="sxs-lookup"><span data-stu-id="60059-154">Specifies the security options for a custom binding.</span></span>|  
+|[<span data-ttu-id="60059-155">\<secureConversationBootstrap ></span><span class="sxs-lookup"><span data-stu-id="60059-155">\<secureConversationBootstrap></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|<span data-ttu-id="60059-156">Specifica i valori predefiniti usati per iniziare un servizio di conversazione protetta.</span><span class="sxs-lookup"><span data-stu-id="60059-156">Specifies the default values used for initiating a secure conversation service.</span></span>|  
   
-## Note  
- Le impostazioni sono locali nel senso che non sono derivate dai criteri di sicurezza del servizio.  
+## <a name="remarks"></a><span data-ttu-id="60059-157">Note</span><span class="sxs-lookup"><span data-stu-id="60059-157">Remarks</span></span>  
+ <span data-ttu-id="60059-158">Le impostazioni sono locali nel senso che non sono derivate dai criteri di sicurezza del servizio.</span><span class="sxs-lookup"><span data-stu-id="60059-158">The settings are local in the sense that they are not settings derived from the security policy of the service.</span></span>  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>   
- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>   
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>   
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)   
- [Procedura: creare un'associazione personalizzata utilizzando SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)   
- [Sicurezza delle associazioni personalizzate](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a><span data-ttu-id="60059-159">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="60059-159">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>  
+ <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>  
+ <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="60059-160">Associazioni</span><span class="sxs-lookup"><span data-stu-id="60059-160">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="60059-161">Estensione delle associazioni</span><span class="sxs-lookup"><span data-stu-id="60059-161">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="60059-162">Associazioni personalizzate</span><span class="sxs-lookup"><span data-stu-id="60059-162">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="60059-163">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="60059-163">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="60059-164">Procedura: creare un'associazione personalizzata usando SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="60059-164">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [<span data-ttu-id="60059-165">Sicurezza delle associazioni personalizzate</span><span class="sxs-lookup"><span data-stu-id="60059-165">Custom Binding Security</span></span>](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

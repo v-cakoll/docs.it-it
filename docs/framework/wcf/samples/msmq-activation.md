@@ -1,43 +1,46 @@
 ---
-title: "Attivazione MSMQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Attivazione MSMQ
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 29
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 99fa5a5b76b90a6c16fa2bbd8ee11e91d77d47a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Attivazione MSMQ
-In questo esempio viene illustrato come ospitare le applicazioni del servizio di attivazione dei processi di Windows \(WAS\) lette da una coda di messaggi.  Questo esempio usa l'associazione `netMsmqBinding` ed è basato sull'esempio [Comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md).  Il servizio in questo caso è un'applicazione ospitata su Web. Il client è indipendente e genera output sulla console per osservare lo stato degli ordini di acquisto inviati.  
+# <a name="msmq-activation"></a><span data-ttu-id="16f89-102">Attivazione MSMQ</span><span class="sxs-lookup"><span data-stu-id="16f89-102">MSMQ Activation</span></span>
+<span data-ttu-id="16f89-103">In questo esempio viene illustrato come ospitare le applicazioni del servizio di attivazione dei processi di Windows (WAS) lette da una coda di messaggi.</span><span class="sxs-lookup"><span data-stu-id="16f89-103">This sample demonstrates how to host applications in Windows Process Activation Service (WAS) that are read from a message queue.</span></span> <span data-ttu-id="16f89-104">Questo esempio viene utilizzata la `netMsmqBinding` e si basa sul [comunicazione bidirezionale](../../../../docs/framework/wcf/samples/two-way-communication.md) esempio.</span><span class="sxs-lookup"><span data-stu-id="16f89-104">This sample uses the `netMsmqBinding` and is based on the [Two-Way Communication](../../../../docs/framework/wcf/samples/two-way-communication.md) sample.</span></span> <span data-ttu-id="16f89-105">Il servizio in questo caso è un'applicazione ospitata su Web. Il client è indipendente e genera output sulla console per osservare lo stato degli ordini di acquisto inviati.</span><span class="sxs-lookup"><span data-stu-id="16f89-105">The service in this case is a Web-hosted application and the client is self-hosted and outputs to the console to observe the status of purchase orders submitted.</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
+>  <span data-ttu-id="16f89-106">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="16f89-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!NOTE]
->  È possibile che gli esempi siano già installati nel computer.  Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="16f89-107">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="16f89-107">The samples may already be installed on your computer.</span></span> <span data-ttu-id="16f89-108">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="16f89-108">Check for the following (default) directory before continuing.</span></span>  
 >   
->  \<UnitàInstallazione\>:\\WF\_WCF\_Samples  
+>  <span data-ttu-id="16f89-109">\<Unitàinstallazione >: \WF_WCF_Samples</span><span class="sxs-lookup"><span data-stu-id="16f89-109">\<InstallDrive>:\WF_WCF_Samples</span></span>  
 >   
->  Se questa directory non esiste, vedere Esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf](../../../../includes/wf-md.md)] per [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] per scaricare tutti gli esempi di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="16f89-110">Se questa directory non esiste, passare a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t blank"e [!INCLUDE[wf](../../../../includes/wf-md.md)] esempi per [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] per scaricare tutti [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] esempi.</span><span class="sxs-lookup"><span data-stu-id="16f89-110">If this directory does not exist, go to [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank"  and [!INCLUDE[wf](../../../../includes/wf-md.md)] Samples for [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] to download all [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="16f89-111">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="16f89-111">This sample is located in the following directory.</span></span>  
 >   
->  \<UnitàInstallazione\>:\\Samples\\WCFWFCardSpace\\WCF\\Basic\\Services\\Hosting\\WASHost\\MsmqActivation.  
+>  <span data-ttu-id="16f89-112">\<Unitàinstallazione >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.</span><span class="sxs-lookup"><span data-stu-id="16f89-112">\<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.</span></span>  
   
- Il servizio Attivazione processo Windows \(WAS\), il nuovo meccanismo di attivazione del processo di [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornisce funzionalità simili a IIS che in precedenza erano disponibili solo per applicazioni basate su HTTP e applicazioni che usano protocolli non HTTP.  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa l'interfaccia dell'adattatore listener per comunicare le richieste di attivazione ricevute su protocolli non HTTP supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio TCP, Named Pipe e MSMQ.  La funzionalità per ricevere richieste su protocolli non HTTP viene ospitata dai servizi Windows gestiti in esecuzione su SMSvcHost.exe.  
+ <span data-ttu-id="16f89-113">Il servizio Attivazione processo Windows (WAS), il nuovo meccanismo di attivazione del processo di [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornisce funzionalità simili a IIS che in precedenza erano disponibili solo per applicazioni basate su HTTP e applicazioni che usano protocolli non HTTP.</span><span class="sxs-lookup"><span data-stu-id="16f89-113">Windows Process Activation Service (WAS), the new process activation mechanism for [!INCLUDE[lserver](../../../../includes/lserver-md.md)], provides IIS-like features that were previously only available to HTTP-based applications to applications that use non-HTTP protocols.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="16f89-114"> usa l'interfaccia dell'adattatore listener per comunicare le richieste di attivazione ricevute su protocolli non HTTP supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio TCP, Named Pipe e MSMQ.</span><span class="sxs-lookup"><span data-stu-id="16f89-114"> uses the Listener Adapter interface to communicate activation requests that are received over the non-HTTP protocols supported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], such as TCP, Named Pipes, and MSMQ.</span></span> <span data-ttu-id="16f89-115">La funzionalità per ricevere richieste su protocolli non HTTP viene ospitata dai servizi Windows gestiti in esecuzione su SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="16f89-115">The functionality for receiving requests over non-HTTP protocols is hosted by managed Windows services running in SMSvcHost.exe.</span></span>  
   
- Il servizio di adattatore listener Net.Msmq \(NetMsmqActivator\) attiva le applicazioni in coda in base ai messaggi nella coda.  
+ <span data-ttu-id="16f89-116">Il servizio di adattatore listener Net.Msmq (NetMsmqActivator) attiva le applicazioni in coda in base ai messaggi nella coda.</span><span class="sxs-lookup"><span data-stu-id="16f89-116">The Net.Msmq Listener Adapter service (NetMsmqActivator) activates queued applications based on messages in the queue.</span></span>  
   
- Il client invia ordini di acquisto al servizio dall'ambito di una transazione.  Il servizio riceve gli ordini in una transazione e li elabora.  Il servizio richiama il client con lo stato dell'ordine.  Per facilitare la comunicazione bidirezionale il client e il servizio usano entrambi code per accodare gli ordini di acquisto e lo stato degli ordini.  
+ <span data-ttu-id="16f89-117">Il client invia ordini di acquisto al servizio dall'ambito di una transazione.</span><span class="sxs-lookup"><span data-stu-id="16f89-117">The client sends purchase orders to the service from within the scope of a transaction.</span></span> <span data-ttu-id="16f89-118">Il servizio riceve gli ordini in una transazione e li elabora.</span><span class="sxs-lookup"><span data-stu-id="16f89-118">The service receives the orders in a transaction and processes them.</span></span> <span data-ttu-id="16f89-119">Il servizio richiama il client con lo stato dell'ordine.</span><span class="sxs-lookup"><span data-stu-id="16f89-119">The service then calls back the client with the status of the order.</span></span> <span data-ttu-id="16f89-120">Per facilitare la comunicazione bidirezionale il client e il servizio usano entrambi code per accodare gli ordini di acquisto e lo stato degli ordini.</span><span class="sxs-lookup"><span data-stu-id="16f89-120">To facilitate two-way communication the client and service both use queues to enqueue purchase orders and order status.</span></span>  
   
- Il contratto di servizio `IOrderProcessor` definisce operazioni del servizio unidirezionale che usano l'accodamento.  L'operazione del servizio usa l'endpoint di risposta per inviare gli stati degli ordini al client.  L'indirizzo dell'endpoint di risposta è l'URI della coda usato per restituire lo stato dell'ordine al client.  L'applicazione di elaborazione degli ordini implementa questo contratto.  
+ <span data-ttu-id="16f89-121">Il contratto di servizio `IOrderProcessor` definisce operazioni del servizio unidirezionale che usano l'accodamento.</span><span class="sxs-lookup"><span data-stu-id="16f89-121">The service contract `IOrderProcessor` defines the one-way service operations that work with queuing.</span></span> <span data-ttu-id="16f89-122">L'operazione del servizio usa l'endpoint di risposta per inviare gli stati degli ordini al client.</span><span class="sxs-lookup"><span data-stu-id="16f89-122">The service operation uses the reply endpoint to send order statuses to the client.</span></span> <span data-ttu-id="16f89-123">L'indirizzo dell'endpoint di risposta è l'URI della coda usato per restituire lo stato dell'ordine al client.</span><span class="sxs-lookup"><span data-stu-id="16f89-123">The reply endpoint's address is the URI of the queue used to send the order status back to the client.</span></span> <span data-ttu-id="16f89-124">L'applicazione di elaborazione degli ordini implementa questo contratto.</span><span class="sxs-lookup"><span data-stu-id="16f89-124">The order processing application implements this contract.</span></span>  
   
 ```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -47,10 +50,9 @@ public interface IOrderProcessor
     void SubmitPurchaseOrder(PurchaseOrder po,   
                                            string reportOrderStatusTo);  
 }  
-  
 ```  
   
- Il contratto di risposta a cui inviare lo stato dell'ordine è specificato dal client.  Il client implementa il contratto dello stato dell'ordine.  Il servizio usa il client generato di questo contratto per restituire lo stato dell'ordine al client.  
+ <span data-ttu-id="16f89-125">Il contratto di risposta a cui inviare lo stato dell'ordine è specificato dal client.</span><span class="sxs-lookup"><span data-stu-id="16f89-125">The reply contract to send order status to is specified by the client.</span></span> <span data-ttu-id="16f89-126">Il client implementa il contratto dello stato dell'ordine.</span><span class="sxs-lookup"><span data-stu-id="16f89-126">The client implements the order status contract.</span></span> <span data-ttu-id="16f89-127">Il servizio usa il client generato di questo contratto per restituire lo stato dell'ordine al client.</span><span class="sxs-lookup"><span data-stu-id="16f89-127">The service uses the generated client of this contract to send order status back to the client.</span></span>  
   
 ```csharp  
 [ServiceContract]  
@@ -59,12 +61,11 @@ public interface IOrderStatus
     [OperationContract(IsOneWay = true)]  
     void OrderStatus(string poNumber, string status);  
 }  
-  
 ```  
   
- L'operazione del servizio elabora l'ordine di acquisto inviato.  <xref:System.ServiceModel.OperationBehaviorAttribute> viene applicato all'operazione del servizio per specificare l'inserimento automatico nell'elenco nella transazione usata per ricevere il messaggio dalla coda e il completamento automatico della transazione al completamento dell'operazione del servizio.  La classe `Orders` incapsula la funzionalità di elaborazione degli ordini.  In questo caso, aggiunge l'ordine di acquisto a un dizionario.  La transazione che l'operazione del servizio ha inserito nell'elenco è disponibile per le operazioni nella classe `Orders`.  
+ <span data-ttu-id="16f89-128">L'operazione del servizio elabora l'ordine di acquisto inviato.</span><span class="sxs-lookup"><span data-stu-id="16f89-128">The service operation processes the submitted purchase order.</span></span> <span data-ttu-id="16f89-129"><xref:System.ServiceModel.OperationBehaviorAttribute> viene applicato all'operazione del servizio per specificare l'inserimento automatico nell'elenco nella transazione usata per ricevere il messaggio dalla coda e il completamento automatico della transazione al completamento dell'operazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="16f89-129">The <xref:System.ServiceModel.OperationBehaviorAttribute> is applied to the service operation to specify automatic enlistment in the transaction that is used to receive the message from the queue and automatic completion of the transaction on completion of the service operation.</span></span> <span data-ttu-id="16f89-130">La classe `Orders` incapsula la funzionalità di elaborazione degli ordini.</span><span class="sxs-lookup"><span data-stu-id="16f89-130">The `Orders` class encapsulates order processing functionality.</span></span> <span data-ttu-id="16f89-131">In questo caso, aggiunge l'ordine di acquisto a un dizionario.</span><span class="sxs-lookup"><span data-stu-id="16f89-131">In this case, it adds the purchase order to a dictionary.</span></span> <span data-ttu-id="16f89-132">La transazione che l'operazione del servizio ha inserito nell'elenco è disponibile per le operazioni nella classe `Orders`.</span><span class="sxs-lookup"><span data-stu-id="16f89-132">The transaction that the service operation enlisted in is available to the operations in the `Orders` class.</span></span>  
   
- L'operazione del servizio, oltre a elaborare l'ordine di acquisto inviato, risponde al client in merito allo stato dell'ordine.  
+ <span data-ttu-id="16f89-133">L'operazione del servizio, oltre a elaborare l'ordine di acquisto inviato, risponde al client in merito allo stato dell'ordine.</span><span class="sxs-lookup"><span data-stu-id="16f89-133">The service operation, in addition to processing the submitted purchase order, replies back to the client about the status of the order.</span></span>  
   
 ```csharp  
 public class OrderProcessorService : IOrderProcessor  
@@ -86,32 +87,30 @@ public class OrderProcessorService : IOrderProcessor
             scope.Complete();  
         }  
     }  
-  
 ```  
   
- L'associazione client da usare viene specificata mediante un file di configurazione.  
+ <span data-ttu-id="16f89-134">L'associazione client da usare viene specificata mediante un file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="16f89-134">The client binding to use is specified using a configuration file.</span></span>  
   
- Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione.  L'endpoint per il servizio è definito nella sezione System.serviceModel del file di configurazione.  
+ <span data-ttu-id="16f89-135">Il nome della coda MSMQ è specificato in una sezione appSettings del file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="16f89-135">The MSMQ queue name is specified in an appSettings section of the configuration file.</span></span> <span data-ttu-id="16f89-136">L'endpoint per il servizio è definito nella sezione System.serviceModel del file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="16f89-136">The endpoint for the service is defined in the System.serviceModel section of the configuration file.</span></span>  
   
 > [!NOTE]
->  Il nome della coda MSMQ e l'indirizzo endpoint usano convenzioni di indirizzamento leggermente diverse.  Nel nome della coda MSMQ viene usato un punto \(.\) per il computer locale e il separatore barra rovesciata nel percorso.  Nell'indirizzo dell'endpoint di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene specificato uno schema net.msmq: e vengono usati "localhost" per il computer locale e le barre nel percorso.  Per leggere da una coda ospitata sul computer remoto, sostituire "." e "localhost" con il nome computer remoto.  
+>  <span data-ttu-id="16f89-137">Il nome della coda MSMQ e l'indirizzo endpoint usano convenzioni di indirizzamento leggermente diverse.</span><span class="sxs-lookup"><span data-stu-id="16f89-137">The MSMQ queue name and endpoint address use slightly different addressing conventions.</span></span> <span data-ttu-id="16f89-138">Nel nome della coda MSMQ viene usato un punto (.) per il computer locale e il separatore barra rovesciata nel percorso.</span><span class="sxs-lookup"><span data-stu-id="16f89-138">The MSMQ queue name uses a dot (.) for the local computer and backslash separators in its path.</span></span> <span data-ttu-id="16f89-139">Nell'indirizzo dell'endpoint di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene specificato uno schema net.msmq: e vengono usati "localhost" per il computer locale e le barre nel percorso.</span><span class="sxs-lookup"><span data-stu-id="16f89-139">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] endpoint address specifies a net.msmq: scheme, uses "localhost" for the local computer, and uses forward slashes in its path.</span></span> <span data-ttu-id="16f89-140">Per leggere da una coda ospitata sul computer remoto, sostituire "." e "localhost" con il nome computer remoto.</span><span class="sxs-lookup"><span data-stu-id="16f89-140">To read from a queue that is hosted on the remote computer, replace the "." and "localhost" to the remote computer name.</span></span>  
   
- Viene usato un file con estensione svc con il nome della classe per ospitare il codice del servizio in WAS.  
+ <span data-ttu-id="16f89-141">Viene usato un file con estensione svc con il nome della classe per ospitare il codice del servizio in WAS.</span><span class="sxs-lookup"><span data-stu-id="16f89-141">A .svc file with the name of the class is used to host the service code in WAS.</span></span>  
   
- Il file Service.svc stesso contiene una direttiva per creare `OrderProcessorService`.  
+ <span data-ttu-id="16f89-142">Il file Service.svc stesso contiene una direttiva per creare `OrderProcessorService`.</span><span class="sxs-lookup"><span data-stu-id="16f89-142">The Service.svc file itself contains a directive to create the `OrderProcessorService`.</span></span>  
   
 ```xml  
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>  
-  
 ```  
   
- Il file Service.svc contiene inoltre una direttiva assembly per garantire che System.Transactions.dll venga caricato.  
+ <span data-ttu-id="16f89-143">Il file Service.svc contiene inoltre una direttiva assembly per garantire che System.Transactions.dll venga caricato.</span><span class="sxs-lookup"><span data-stu-id="16f89-143">The Service.svc file also contains an assembly directive to ensure that System.Transactions.dll is loaded.</span></span>  
   
 ```xml  
 <%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>  
 ```  
   
- Il client crea un ambito di transazione.  La comunicazione con il servizio avviene all'interno dell'ambito della transazione, la quale viene trattata come unità atomica nella quale tutti i messaggi hanno esito positivo o negativo.  Il commit della transazione viene eseguito chiamando `Complete` nell'ambito della transazione.  
+ <span data-ttu-id="16f89-144">Il client crea un ambito di transazione.</span><span class="sxs-lookup"><span data-stu-id="16f89-144">The client creates a transaction scope.</span></span> <span data-ttu-id="16f89-145">La comunicazione con il servizio avviene all'interno dell'ambito della transazione, la quale viene trattata come unità atomica nella quale tutti i messaggi hanno esito positivo o negativo.</span><span class="sxs-lookup"><span data-stu-id="16f89-145">Communication with the service takes place within the scope of the transaction, causing it to be treated as an atomic unit where all messages succeed or fail.</span></span> <span data-ttu-id="16f89-146">Il commit della transazione viene eseguito chiamando `Complete` nell'ambito della transazione.</span><span class="sxs-lookup"><span data-stu-id="16f89-146">The transaction is committed by calling `Complete` on the transaction scope.</span></span>  
   
 ```csharp  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
@@ -164,10 +163,9 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHostBase to shutdown the service.  
     serviceHost.Close();  
     }  
-  
 ```  
   
- Il codice client implementa il contratto `IOrderStatus` per ricevere lo stato dell'ordine dal servizio.  In questo caso, stampa lo stato dell'ordine.  
+ <span data-ttu-id="16f89-147">Il codice client implementa il contratto `IOrderStatus` per ricevere lo stato dell'ordine dal servizio.</span><span class="sxs-lookup"><span data-stu-id="16f89-147">The client code implements the `IOrderStatus` contract to receive order status from the service.</span></span> <span data-ttu-id="16f89-148">In questo caso, stampa lo stato dell'ordine.</span><span class="sxs-lookup"><span data-stu-id="16f89-148">In this case, it prints out the order status.</span></span>  
   
 ```csharp  
 [ServiceBehavior]  
@@ -183,7 +181,7 @@ public class OrderStatusService : IOrderStatus
 }  
 ```  
   
- La coda dello stato degli ordini viene creata nel metodo `Main`.  La configurazione del client comprende la configurazione del servizio di stato degli ordini per ospitare il servizio di stato degli ordini, come illustrato nella configurazione di esempio seguente.  
+ <span data-ttu-id="16f89-149">La coda dello stato degli ordini viene creata nel metodo `Main`.</span><span class="sxs-lookup"><span data-stu-id="16f89-149">The order status queue is created in the `Main` method.</span></span> <span data-ttu-id="16f89-150">La configurazione del client comprende la configurazione del servizio di stato degli ordini per ospitare il servizio di stato degli ordini, come illustrato nella configurazione di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="16f89-150">The client configuration includes the order status service configuration to host the order status service, as shown in the following sample configuration.</span></span>  
   
 ```csharp  
 <appSettings>  
@@ -213,119 +211,114 @@ public class OrderStatusService : IOrderStatus
     </client>  
   
   </system.serviceModel>  
-  
 ```  
   
- Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del server e del client.  È possibile osservare che il server riceve i messaggi dal client.  Premere INVIO in tutte le finestre della console per arrestare il server e il client.  
+ <span data-ttu-id="16f89-151">Quando si esegue l'esempio, le attività del client e del servizio vengono visualizzate nelle finestre della console del server e del client.</span><span class="sxs-lookup"><span data-stu-id="16f89-151">When you run the sample, the client and service activities are displayed in both the server and client console windows.</span></span> <span data-ttu-id="16f89-152">È possibile osservare che il server riceve i messaggi dal client.</span><span class="sxs-lookup"><span data-stu-id="16f89-152">You can see the server receive messages from the client.</span></span> <span data-ttu-id="16f89-153">Premere INVIO in tutte le finestre della console per arrestare il server e il client.</span><span class="sxs-lookup"><span data-stu-id="16f89-153">Press ENTER in each console window to shut down the server and client.</span></span>  
   
- Il client visualizza le informazioni sullo stato dell'ordine inviate dal server.  
+ <span data-ttu-id="16f89-154">Il client visualizza le informazioni sullo stato dell'ordine inviate dal server.</span><span class="sxs-lookup"><span data-stu-id="16f89-154">The client displays the order status information sent by the server:</span></span>  
   
 ```Output  
-  
-Premere <INVIO> per terminare il client.  Stato dell'ordine 70cf9d63-3dfa-4e69-81c2-23aa4478ebed: In sospeso    
+Press <ENTER> to terminate client.  
+Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending  
 ```  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="16f89-155">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="16f89-155">To set up, build, and run the sample</span></span>  
   
-1.  Verificare che [!INCLUDE[iisver](../../../../includes/iisver-md.md)] sia installato in quanto è necessario per l'attivazione tramite il servizio di attivazione dei processi di Windows \(WAS\).  
+1.  <span data-ttu-id="16f89-156">Verificare che [!INCLUDE[iisver](../../../../includes/iisver-md.md)] sia installato in quanto è necessario per l'attivazione tramite il servizio di attivazione dei processi di Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="16f89-156">Ensure that [!INCLUDE[iisver](../../../../includes/iisver-md.md)] is installed, as it is required for WAS activation.</span></span>  
   
-2.  Assicurarsi di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  È inoltre necessario installare i componenti di attivazione non HTTP di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+2.  <span data-ttu-id="16f89-157">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="16f89-157">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span> <span data-ttu-id="16f89-158">È inoltre necessario installare i componenti di attivazione non HTTP di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="16f89-158">In addition, you must install the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non-HTTP activation components:</span></span>  
   
-    1.  Fare clic sul pulsante **Start** e scegliere **Pannello di controllo**.  
+    1.  <span data-ttu-id="16f89-159">Dal **avviare** menu, scegliere **Pannello di controllo**.</span><span class="sxs-lookup"><span data-stu-id="16f89-159">From the **Start** menu, choose **Control Panel**.</span></span>  
   
-    2.  Selezionare **Programmi e funzionalità**.  
+    2.  <span data-ttu-id="16f89-160">Selezionare **programmi e funzionalità**.</span><span class="sxs-lookup"><span data-stu-id="16f89-160">Select **Programs and Features**.</span></span>  
   
-    3.  Fare clic su **Attiva o disattiva le funzionalità Windows**.  
+    3.  <span data-ttu-id="16f89-161">Fare clic su **funzionalità di Windows di attivare o disattivare**.</span><span class="sxs-lookup"><span data-stu-id="16f89-161">Click **Turn Windows Features on or off**.</span></span>  
   
-    4.  Sotto **Riepilogo funzionalità**, fare clic su **Aggiungi funzionalità**.  
+    4.  <span data-ttu-id="16f89-162">In **Riepilogo funzionalità**, fare clic su **Aggiungi funzionalità**.</span><span class="sxs-lookup"><span data-stu-id="16f89-162">Under **Features Summary**, click **Add Features**.</span></span>  
   
-    5.  Espandere il nodo **Microsoft .NET Framework 3.0** e selezionare la funzionalità **Attivazione non HTTP di Windows Communication Foundation**.  
+    5.  <span data-ttu-id="16f89-163">Espandere il **Microsoft .NET Framework 3.0** nodo e selezionare il **attivazione Non HTTP di Windows Communication Foundation** funzionalità.</span><span class="sxs-lookup"><span data-stu-id="16f89-163">Expand the **Microsoft .NET Framework 3.0** node and check the **Windows Communication Foundation Non-HTTP Activation** feature.</span></span>  
   
-3.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="16f89-164">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="16f89-164">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Eseguire il client lanciando client.exe da una finestra di comando.  In questo modo verrà creata la coda e gli verrà inviato un messaggio.  Lasciare il client in esecuzione per vedere cosa succede quando il servizio legge il messaggio  
+4.  <span data-ttu-id="16f89-165">Eseguire il client lanciando client.exe da una finestra di comando.</span><span class="sxs-lookup"><span data-stu-id="16f89-165">Run the client by executing client.exe from a command window.</span></span> <span data-ttu-id="16f89-166">In questo modo verrà creata la coda e gli verrà inviato un messaggio.</span><span class="sxs-lookup"><span data-stu-id="16f89-166">This creates the queue and sends a message to it.</span></span> <span data-ttu-id="16f89-167">Lasciare il client in esecuzione per vedere cosa succede quando il servizio legge il messaggio</span><span class="sxs-lookup"><span data-stu-id="16f89-167">Leave the client running to see the result of the service reading the message</span></span>  
   
-5.  Il servizio di attivazione MSMQ viene eseguito come impostazione predefinita come Servizio di rete.  Pertanto, la coda usata per attivare l'applicazione deve disporre delle autorizzazioni di ricezione e di lettura per il Servizio di rete.  Queste autorizzazioni possono essere aggiunte usando il sistema di accodamento messaggi MMC:  
+5.  <span data-ttu-id="16f89-168">Il servizio di attivazione MSMQ viene eseguito come impostazione predefinita come Servizio di rete.</span><span class="sxs-lookup"><span data-stu-id="16f89-168">The MSMQ activation service runs as Network Service by default.</span></span> <span data-ttu-id="16f89-169">Pertanto, la coda usata per attivare l'applicazione deve disporre delle autorizzazioni di ricezione e di lettura per il Servizio di rete.</span><span class="sxs-lookup"><span data-stu-id="16f89-169">Therefore, the queue that is used to activate the application must have receive and peek permissions for Network Service.</span></span> <span data-ttu-id="16f89-170">Queste autorizzazioni possono essere aggiunte usando il sistema di accodamento messaggi MMC:</span><span class="sxs-lookup"><span data-stu-id="16f89-170">This can be added by using the Message Queuing MMC:</span></span>  
   
-    1.  Dal menu **Start** scegliere **Esegui**, quindi digitare `Compmgmt.msc` e premere INVIO.  
+    1.  <span data-ttu-id="16f89-171">Dal **avviare** menu, fare clic su **eseguire**, quindi digitare `Compmgmt.msc` e premere INVIO.</span><span class="sxs-lookup"><span data-stu-id="16f89-171">From the **Start** menu, click **Run**, then type `Compmgmt.msc` and press ENTER.</span></span>  
   
-    2.  In **Servizi e applicazioni**, espandere **Accodamento messaggi**.  
+    2.  <span data-ttu-id="16f89-172">In **servizi e applicazioni**, espandere **Accodamento**.</span><span class="sxs-lookup"><span data-stu-id="16f89-172">Under **Services and Applications**, expand **Message Queuing**.</span></span>  
   
-    3.  Fare clic su **Code private**.  
+    3.  <span data-ttu-id="16f89-173">Fare clic su **code Private**.</span><span class="sxs-lookup"><span data-stu-id="16f89-173">Click **Private Queues**.</span></span>  
   
-    4.  Fare clic con il pulsante destro del mouse sulla coda \(servicemodelsamples\/Service.svc\) e scegliere **Proprietà**.  
+    4.  <span data-ttu-id="16f89-174">Fare doppio clic su coda (servicemodelsamples/Service.svc) e scegliere **proprietà**.</span><span class="sxs-lookup"><span data-stu-id="16f89-174">Right-click the queue (servicemodelsamples/Service.svc) and choose **Properties**.</span></span>  
   
-    5.  Nella scheda **Sicurezza** fare clic su **Aggiungi** e attivare le autorizzazioni di ricezione e lettura Servizio di rete.  
+    5.  <span data-ttu-id="16f89-175">Nel **sicurezza** scheda, fare clic su **Aggiungi** e assegnare peek e ricevono le autorizzazioni al servizio di rete.</span><span class="sxs-lookup"><span data-stu-id="16f89-175">On the **Security** tab, click **Add** and give peek and receive permissions to Network Service.</span></span>  
   
-6.  Configurare il servizio di attivazione dei processi di Windows \(WAS\) per supportare l'attivazione MSMQ.  
+6.  <span data-ttu-id="16f89-176">Configurare il servizio di attivazione dei processi di Windows (WAS) per supportare l'attivazione MSMQ.</span><span class="sxs-lookup"><span data-stu-id="16f89-176">Configure the Windows Process Activation Service (WAS) to support MSMQ activation.</span></span>  
   
-     Per maggiore praticità, i passaggi seguenti vengono implementati in un file batch denominato AddMsmqSiteBinding.cmd posto nella directory degli esempi.  
+     <span data-ttu-id="16f89-177">Per maggiore praticità, i passaggi seguenti vengono implementati in un file batch denominato AddMsmqSiteBinding.cmd posto nella directory degli esempi.</span><span class="sxs-lookup"><span data-stu-id="16f89-177">As a convenience, the following steps are implemented in a batch file called AddMsmqSiteBinding.cmd located in the sample directory.</span></span>  
   
-    1.  Per supportare l'attivazione net.msmq, è innanzitutto necessario associare il sito Web predefinito al protocollo net.msmq.  A tale scopo, usare appcmd.exe, installato con il set di strumenti di gestione di [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  Da un prompt dei comandi con privilegi elevati \(amministratore\), eseguire il comando seguente:  
+    1.  <span data-ttu-id="16f89-178">Per supportare l'attivazione net.msmq, è innanzitutto necessario associare il sito Web predefinito al protocollo net.msmq.</span><span class="sxs-lookup"><span data-stu-id="16f89-178">To support net.msmq activation, the default Web site must first be bound to the net.msmq protocol.</span></span> <span data-ttu-id="16f89-179">A tale scopo, usare appcmd.exe, installato con il set di strumenti di gestione di [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="16f89-179">This can be done using appcmd.exe, which is installed with the [!INCLUDE[iisver](../../../../includes/iisver-md.md)] management toolset.</span></span> <span data-ttu-id="16f89-180">Da un prompt dei comandi con privilegi elevati (amministratore), eseguire il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="16f89-180">From an elevated (administrator) command prompt, run the following command.</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
         -+bindings.[protocol='net.msmq',bindingInformation='localhost']  
-  
         ```  
   
         > [!NOTE]
-        >  Questo comando è una singola riga di testo.  
+        >  <span data-ttu-id="16f89-181">Questo comando è una singola riga di testo.</span><span class="sxs-lookup"><span data-stu-id="16f89-181">This command is a single line of text.</span></span>  
   
-         Questo comando aggiunge un'associazione di sito net.msmq al sito Web predefinito.  
+         <span data-ttu-id="16f89-182">Questo comando aggiunge un'associazione di sito net.msmq al sito Web predefinito.</span><span class="sxs-lookup"><span data-stu-id="16f89-182">This command adds a net.msmq site binding to the default Web site.</span></span>  
   
-    2.  Anche se tutte le applicazioni all'interno di un sito condividono un'associazione net.msmq comune, ognuna di esse può abilitare individualmente il supporto net.msmq.  Per abilitare net.msmq per l'applicazione \/servicemodelsamples, eseguire il comando seguente da un prompt dei comandi con privilegi elevati.  
+    2.  <span data-ttu-id="16f89-183">Anche se tutte le applicazioni all'interno di un sito condividono un'associazione net.msmq comune, ognuna di esse può abilitare individualmente il supporto net.msmq.</span><span class="sxs-lookup"><span data-stu-id="16f89-183">Although all applications within a site share a common net.msmq binding, each application can enable net.msmq support individually.</span></span> <span data-ttu-id="16f89-184">Per abilitare net.msmq per l'applicazione /servicemodelsamples, eseguire il comando seguente da un prompt dei comandi con privilegi elevati.</span><span class="sxs-lookup"><span data-stu-id="16f89-184">To enable net.msmq for the /servicemodelsamples application, run the following command from an elevated command prompt.</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.msmq  
-  
         ```  
   
         > [!NOTE]
-        >  Questo comando è una singola riga di testo.  
+        >  <span data-ttu-id="16f89-185">Questo comando è una singola riga di testo.</span><span class="sxs-lookup"><span data-stu-id="16f89-185">This command is a single line of text.</span></span>  
   
-         Questo comando abilita l'accesso all'applicazione \/servicemodelsamples mediante http:\/\/localhost\/servicemodelsamples e net.msmq:\/\/localhost\/servicemodelsamples.  
+         <span data-ttu-id="16f89-186">Questo comando abilita l'accesso all'applicazione /servicemodelsamples mediante http://localhost/servicemodelsamples e net.msmq://localhost/servicemodelsamples.</span><span class="sxs-lookup"><span data-stu-id="16f89-186">This command enables the /servicemodelsamples application to be accessed using http://localhost/servicemodelsamples and net.msmq://localhost/servicemodelsamples.</span></span>  
   
-7.  Se in precedenza non è stato fatto, assicurarsi che il servizio di attivazione MSMQ sia abilitato.  Dal menu **Start**, selezionare**Esegui**, quindi digitare `Services.msc`.  Cercare **Adattatore listener Net.Msmq** nell'elenco di servizi.  Fare clic con il pulsante destro del mouse e selezionare **Proprietà**.  Impostare il **Tipo di avvio** su **Automatico**, fare clic su **Applica** e fare clic sul pulsante **Start**.  È necessario eseguire questo passaggio solo la prima volta che si usa il servizio di adattatore listener Net.Msmq.  
+7.  <span data-ttu-id="16f89-187">Se in precedenza non è stato fatto, assicurarsi che il servizio di attivazione MSMQ sia abilitato.</span><span class="sxs-lookup"><span data-stu-id="16f89-187">If you have not done so previously, ensure that the MSMQ activation service is enabled.</span></span> <span data-ttu-id="16f89-188">Dal **avviare** menu, fare clic su **eseguire**e il tipo `Services.msc`.</span><span class="sxs-lookup"><span data-stu-id="16f89-188">From the **Start** menu, click **Run**, and type `Services.msc`.</span></span> <span data-ttu-id="16f89-189">Eseguire ricerche nell'elenco dei servizi per il **adattatore Listener NET. MSMQ**.</span><span class="sxs-lookup"><span data-stu-id="16f89-189">Search the list of services for the **Net.Msmq Listener Adapter**.</span></span> <span data-ttu-id="16f89-190">Mouse e scegliere **proprietà**.</span><span class="sxs-lookup"><span data-stu-id="16f89-190">Right-click and select **Properties**.</span></span> <span data-ttu-id="16f89-191">Impostare il **tipo di avvio** a **automatica**, fare clic su **applica** e fare clic su di **avviare** pulsante.</span><span class="sxs-lookup"><span data-stu-id="16f89-191">Set the **Startup Type** to **Automatic**, click **Apply** and click the **Start** button.</span></span> <span data-ttu-id="16f89-192">È necessario eseguire questo passaggio solo la prima volta che si usa il servizio di adattatore listener Net.Msmq.</span><span class="sxs-lookup"><span data-stu-id="16f89-192">This step must only be done once prior to the first usage of the Net.Msmq Listener Adapter service.</span></span>  
   
-8.  Per eseguire l'esempio in un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  Modificare inoltre il codice nel client che invia l'ordine di acquisto in modo che corrisponda al nome del computer nell'URI della coda durante l'invio di ordini di acquisto.  Usare il codice riportato di seguito.  
+8.  <span data-ttu-id="16f89-193">Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="16f89-193">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span> <span data-ttu-id="16f89-194">Modificare inoltre il codice nel client che invia l'ordine di acquisto in modo che corrisponda al nome del computer nell'URI della coda durante l'invio di ordini di acquisto.</span><span class="sxs-lookup"><span data-stu-id="16f89-194">Additionally, change the code on the client that submits the purchase order to reflect the computer name in the URI of the queue when submitting the purchase order.</span></span> <span data-ttu-id="16f89-195">Usare il codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="16f89-195">Use the following code:</span></span>  
   
     ```  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
     ```  
   
-9. Rimuovere l'associazione di sito net.msmq aggiunta per questo esempio.  
+9. <span data-ttu-id="16f89-196">Rimuovere l'associazione di sito net.msmq aggiunta per questo esempio.</span><span class="sxs-lookup"><span data-stu-id="16f89-196">Remove the net.msmq site binding you added for this sample.</span></span>  
   
-     Per praticità, i passaggi seguenti vengono implementati in un file batch denominato RemoveMsmqSiteBinding.cmd posto nella directory degli esempi:  
+     <span data-ttu-id="16f89-197">Per praticità, i passaggi seguenti vengono implementati in un file batch denominato RemoveMsmqSiteBinding.cmd posto nella directory degli esempi:</span><span class="sxs-lookup"><span data-stu-id="16f89-197">As a convenience, the following steps are implemented in a batch file called RemoveMsmqSiteBinding.cmd located in the sample directory:</span></span>  
   
-    1.  Rimuovere net.msmq dall'elenco dei protocolli abilitati eseguendo il comando seguente da una finestra del prompt dei comandi con privilegi elevati.  
+    1.  <span data-ttu-id="16f89-198">Rimuovere net.msmq dall'elenco dei protocolli abilitati eseguendo il comando seguente da una finestra del prompt dei comandi con privilegi elevati.</span><span class="sxs-lookup"><span data-stu-id="16f89-198">Remove net.msmq from the list of enabled protocols by running the following command from an elevated command prompt.</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
-  
         ```  
   
         > [!NOTE]
-        >  Questo comando è una singola riga di testo.  
+        >  <span data-ttu-id="16f89-199">Questo comando è una singola riga di testo.</span><span class="sxs-lookup"><span data-stu-id="16f89-199">This command is a single line of text.</span></span>  
   
-    2.  Rimuovere l'associazione di sito net.msmq eseguendo il comando seguente da un prompt dei comandi con privilegi elevati.  
+    2.  <span data-ttu-id="16f89-200">Rimuovere l'associazione di sito net.msmq eseguendo il comando seguente da un prompt dei comandi con privilegi elevati.</span><span class="sxs-lookup"><span data-stu-id="16f89-200">Remove the net.msmq site binding by running the following command from an elevated command prompt.</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.msmq',bindingInformation='localhost']  
-  
         ```  
   
         > [!NOTE]
-        >  Questo comando è una singola riga di testo.  
+        >  <span data-ttu-id="16f89-201">Questo comando è una singola riga di testo.</span><span class="sxs-lookup"><span data-stu-id="16f89-201">This command is a single line of text.</span></span>  
   
     > [!WARNING]
-    >  L'esecuzione del file batch determinerà la reimpostazione di DefaultAppPool per l'esecuzione con .NET Framework versione 2.0.  
+    >  <span data-ttu-id="16f89-202">L'esecuzione del file batch determinerà la reimpostazione di DefaultAppPool per l'esecuzione con .NET Framework versione 2.0.</span><span class="sxs-lookup"><span data-stu-id="16f89-202">Running the batch file will reset the DefaultAppPool to run using .NET Framework version 2.0.</span></span>  
   
- Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding` è abilitata la sicurezza.  Il tipo di sicurezza del trasporto è determinato da due proprietà, `MsmqAuthenticationMode` e `MsmqProtectionLevel`.  Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`.  Affinché MSMQ fornisca la funzionalità di autenticazione e firma, deve appartenere a un dominio.  Se si esegue questo esempio in un computer che non appartiene a un dominio, si riceverà l'errore seguente: "Il certificato interno del servizio di accodamento messaggi non esiste".  
+ <span data-ttu-id="16f89-203">Per impostazione predefinita con il trasporto dell'associazione `netMsmqBinding` è abilitata la sicurezza.</span><span class="sxs-lookup"><span data-stu-id="16f89-203">By default with the `netMsmqBinding` binding transport, security is enabled.</span></span> <span data-ttu-id="16f89-204">Il tipo di sicurezza del trasporto è determinato da due proprietà, `MsmqAuthenticationMode` e `MsmqProtectionLevel`.</span><span class="sxs-lookup"><span data-stu-id="16f89-204">Two properties, `MsmqAuthenticationMode` and `MsmqProtectionLevel`, together determine the type of transport security.</span></span> <span data-ttu-id="16f89-205">Per impostazione predefinita, la modalità di autenticazione è impostata su `Windows` e il livello di protezione è impostato su `Sign`.</span><span class="sxs-lookup"><span data-stu-id="16f89-205">By default the authentication mode is set to `Windows` and the protection level is set to `Sign`.</span></span> <span data-ttu-id="16f89-206">Affinché MSMQ fornisca la funzionalità di autenticazione e firma, deve appartenere a un dominio.</span><span class="sxs-lookup"><span data-stu-id="16f89-206">For MSMQ to provide the authentication and signing feature, it must be part of a domain.</span></span> <span data-ttu-id="16f89-207">Se si esegue questo esempio in un computer che non appartiene a un dominio, si riceverà l'errore seguente: "Il certificato interno del servizio di accodamento messaggi non esiste".</span><span class="sxs-lookup"><span data-stu-id="16f89-207">If you run this sample on a computer that is not part of a domain, the following error is received: "User's internal message queuing certificate does not exist".</span></span>  
   
-### Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a><span data-ttu-id="16f89-208">Per eseguire l'esempio in un computer appartenente a un gruppo di lavoro</span><span class="sxs-lookup"><span data-stu-id="16f89-208">To run the sample on a computer joined to a workgroup</span></span>  
   
-1.  Se il computer non appartiene a un dominio, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su None, come illustrato nell'esempio di configurazione seguente.  
+1.  <span data-ttu-id="16f89-209">Se il computer non appartiene a un dominio, disattivare la sicurezza del trasporto impostando la modalità di autenticazione e il livello di protezione su None, come illustrato nell'esempio di configurazione seguente.</span><span class="sxs-lookup"><span data-stu-id="16f89-209">If your computer is not part of a domain, turn off transport security by setting the authentication mode and protection level to none as shown in the following sample configuration.</span></span>  
   
     ```xml  
     <bindings>  
@@ -335,37 +328,36 @@ Premere <INVIO> per terminare il client.  Stato dell'ordine 70cf9d63-3dfa-4e69-8
             </binding>  
         </netMsmqBinding>  
     </bindings>  
-  
     ```  
   
-2.  Modificare la configurazione sul server e sul client prima di eseguire l'esempio.  
+2.  <span data-ttu-id="16f89-210">Modificare la configurazione sul server e sul client prima di eseguire l'esempio.</span><span class="sxs-lookup"><span data-stu-id="16f89-210">Change the configuration on both the server and the client before you run the sample.</span></span>  
   
     > [!NOTE]
-    >  L'impostazione di `security mode` su `None` è equivalente all'impostazione di `MsmqAuthenticationMode`, `MsmqProtectionLevel` e della sicurezza `Message` su `None`.  
+    >  <span data-ttu-id="16f89-211">L'impostazione di `security mode` su `None` è equivalente all'impostazione di `MsmqAuthenticationMode`, `MsmqProtectionLevel` e della sicurezza `Message` su `None`.</span><span class="sxs-lookup"><span data-stu-id="16f89-211">Setting `security mode` to `None` is equivalent to setting `MsmqAuthenticationMode`, `MsmqProtectionLevel` and `Message` security to `None`.</span></span>  
   
-3.  Per abilitare l'attivazione su un computer che fa parte di un gruppo di lavoro, il servizio di attivazione e il processo di lavoro devono essere eseguiti con un account utente specifico \(deve essere lo stesso per entrambi\) e la coda deve essere dotata di ACL per l'account utente specifico.  
+3.  <span data-ttu-id="16f89-212">Per abilitare l'attivazione su un computer che fa parte di un gruppo di lavoro, il servizio di attivazione e il processo di lavoro devono essere eseguiti con un account utente specifico (deve essere lo stesso per entrambi) e la coda deve essere dotata di ACL per l'account utente specifico.</span><span class="sxs-lookup"><span data-stu-id="16f89-212">To enable activation in a computer joined to a workgroup, both the activation service and the worker process must be run with a specific user account (must be same for both) and the queue must have ACLs for the specific user account.</span></span>  
   
-     Per modificare l'identità con la quale viene eseguito il processo di lavoro:  
+     <span data-ttu-id="16f89-213">Per modificare l'identità con la quale viene eseguito il processo di lavoro:</span><span class="sxs-lookup"><span data-stu-id="16f89-213">To change the identity that the worker process runs under:</span></span>  
   
-    1.  Eseguire Inetmgr.exe.  
+    1.  <span data-ttu-id="16f89-214">Eseguire Inetmgr.exe.</span><span class="sxs-lookup"><span data-stu-id="16f89-214">Run Inetmgr.exe.</span></span>  
   
-    2.  In **Pool di applicazioni**, fare clic con il pulsante destro del mouse su**AppPool** \(in genere **DefaultAppPool**\) e scegliere **Impostazioni predefinite pool di applicazioni**.  
+    2.  <span data-ttu-id="16f89-215">In **pool di applicazioni**, fare doppio clic su di **AppPool** (in genere **DefaultAppPool**) e scegliere **impostazioni predefinite Pool di applicazioni...** .</span><span class="sxs-lookup"><span data-stu-id="16f89-215">Under **Application Pools**, right-click the **AppPool** (typically **DefaultAppPool**) and choose **Set Application Pool Defaults…**.</span></span>  
   
-    3.  Modificare le proprietà dell'identità per usare l'account utente specifico.  
+    3.  <span data-ttu-id="16f89-216">Modificare le proprietà dell'identità per usare l'account utente specifico.</span><span class="sxs-lookup"><span data-stu-id="16f89-216">Change the Identity properties to use the specific user account.</span></span>  
   
-     Per modificare l'identità con la quale viene eseguito il servizio di attivazione:  
+     <span data-ttu-id="16f89-217">Per modificare l'identità con la quale viene eseguito il servizio di attivazione:</span><span class="sxs-lookup"><span data-stu-id="16f89-217">To change the identity that the Activation Service runs under:</span></span>  
   
-    1.  Eseguire Services.msc.  
+    1.  <span data-ttu-id="16f89-218">Eseguire Services.msc.</span><span class="sxs-lookup"><span data-stu-id="16f89-218">Run Services.msc.</span></span>  
   
-    2.  Fare clic con il pulsante destro del mouse su **Adattatore listener Net.Msmq** e scegliere **Proprietà**.  
+    2.  <span data-ttu-id="16f89-219">Fare doppio clic su di **adattatore**e scegliere **proprietà**.</span><span class="sxs-lookup"><span data-stu-id="16f89-219">Right-click the **Net.MsmqListener Adapter**, and choose **Properties**.</span></span>  
   
-4.  Modificare l'account nella scheda **Accesso**.  
+4.  <span data-ttu-id="16f89-220">Modificare l'account nel **accesso** scheda.</span><span class="sxs-lookup"><span data-stu-id="16f89-220">Change the account in the **LogOn** tab.</span></span>  
   
-5.  In un gruppo di lavoro è inoltre necessario che il servizio venga eseguito usando un token di accesso senza restrizioni.  A tale scopo, eseguire il comando seguente:  
+5.  <span data-ttu-id="16f89-221">In un gruppo di lavoro è inoltre necessario che il servizio venga eseguito usando un token di accesso senza restrizioni.</span><span class="sxs-lookup"><span data-stu-id="16f89-221">In workgroup, the service must also run using an unrestricted token.</span></span> <span data-ttu-id="16f89-222">A tale scopo, eseguire il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="16f89-222">To do this, run the following in a command window:</span></span>  
   
     ```  
     sc sidtype netmsmqactivator unrestricted  
     ```  
   
-## Vedere anche  
- [Esempi di hosting e salvataggio permanente di AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="16f89-223">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="16f89-223">See Also</span></span>  
+ [<span data-ttu-id="16f89-224">Hosting di AppFabric ed esempi di persistenza</span><span class="sxs-lookup"><span data-stu-id="16f89-224">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

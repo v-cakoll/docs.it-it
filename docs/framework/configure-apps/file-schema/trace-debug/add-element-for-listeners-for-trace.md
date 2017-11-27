@@ -1,97 +1,100 @@
 ---
-title: "Elemento &lt;add&gt; per &lt;listeners&gt; per &lt;trace&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> (elemento) per <listeners>"
-  - "add (elemento) per <listeners>"
-  - "attributo initializeData"
+title: '&lt;aggiungere&gt; elemento per &lt;listener&gt; per &lt;traccia&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
+helpviewer_keywords:
+- initializeData attribute
+- <add> element for <listeners>
+- add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-caps.latest.revision: 24
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 22
+caps.latest.revision: "24"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: bbb74d9a542833a96c61bcc09f6e4e5f0807843d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;add&gt; per &lt;listeners&gt; per &lt;trace&gt;
-Consente di aggiungere un listener alla raccolta **Listeners**.  
+# <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="dd9e1-102">&lt;aggiungere&gt; elemento per &lt;listener&gt; per &lt;traccia&gt;</span><span class="sxs-lookup"><span data-stu-id="dd9e1-102">&lt;add&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
+<span data-ttu-id="dd9e1-103">Aggiunge un listener per il **listener** insieme.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-103">Adds a listener to the **Listeners** collection.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="dd9e1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="dd9e1-104">\<configuration></span></span>  
+<span data-ttu-id="dd9e1-105">\<System. Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="dd9e1-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="dd9e1-106">\<traccia ></span><span class="sxs-lookup"><span data-stu-id="dd9e1-106">\<trace></span></span>  
+<span data-ttu-id="dd9e1-107">\<listener ></span><span class="sxs-lookup"><span data-stu-id="dd9e1-107">\<listeners></span></span>  
+<span data-ttu-id="dd9e1-108">\<add></span><span class="sxs-lookup"><span data-stu-id="dd9e1-108">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="dd9e1-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="dd9e1-109">Syntax</span></span>  
+  
+```xml  
 <add name="name"   
      type="trace listener class name, Version, Culture, PublicKeyToken"  
      initializeData="data"/>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dd9e1-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="dd9e1-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="dd9e1-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="dd9e1-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="dd9e1-112">Attributes</span></span>  
   
-|Attribute|Descrizione|  
+|<span data-ttu-id="dd9e1-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="dd9e1-113">Attribute</span></span>|<span data-ttu-id="dd9e1-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="dd9e1-114">Description</span></span>|  
 |---------------|-----------------|  
-|**type**|Attributo obbligatorio.<br /><br /> Specifica il tipo del listener.  È necessario utilizzare una stringa che soddisfi i requisiti indicati in [Specifica di nomi di tipi completi](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|**initializeData**|Attributo facoltativo.<br /><br /> Stringa passata al costruttore per la classe specificata.|  
-|**name**|Attributo facoltativo.<br /><br /> Specifica il nome del listener.|  
+|<span data-ttu-id="dd9e1-115">**type**</span><span class="sxs-lookup"><span data-stu-id="dd9e1-115">**type**</span></span>|<span data-ttu-id="dd9e1-116">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="dd9e1-117">Specifica il tipo del listener.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-117">Specifies the type of the listener.</span></span> <span data-ttu-id="dd9e1-118">È necessario utilizzare una stringa che soddisfi i requisiti indicati in [specifica di nomi di tipo completi](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="dd9e1-118">You must use a string that meets the requirements specified in [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|<span data-ttu-id="dd9e1-119">**attributo initializeData**</span><span class="sxs-lookup"><span data-stu-id="dd9e1-119">**initializeData**</span></span>|<span data-ttu-id="dd9e1-120">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="dd9e1-121">La stringa passata al costruttore per la classe specificata.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-121">The string passed to the constructor for the specified class.</span></span>|  
+|<span data-ttu-id="dd9e1-122">**name**</span><span class="sxs-lookup"><span data-stu-id="dd9e1-122">**name**</span></span>|<span data-ttu-id="dd9e1-123">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-123">Optional attribute.</span></span><br /><br /> <span data-ttu-id="dd9e1-124">Specifica il nome del listener.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-124">Specifies the name of the listener.</span></span>|  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="dd9e1-125">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="dd9e1-125">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<filter\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|Consente di aggiungere un filtro a un listener della raccolta `Listeners` per una traccia.|  
+|<span data-ttu-id="dd9e1-126">Elemento</span><span class="sxs-lookup"><span data-stu-id="dd9e1-126">Element</span></span>|<span data-ttu-id="dd9e1-127">Descrizione</span><span class="sxs-lookup"><span data-stu-id="dd9e1-127">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="dd9e1-128">\<filter></span><span class="sxs-lookup"><span data-stu-id="dd9e1-128">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|<span data-ttu-id="dd9e1-129">Aggiunge un filtro a un listener di `Listeners` insieme per una traccia.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-129">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="dd9e1-130">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="dd9e1-130">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`listeners`|Consente di specificare un listener per la raccolta, la memorizzazione e l'invio di messaggi.  I listener indirizzano l'output di tracciatura a una destinazione adatta.|  
-|`system.diagnostics`|Specifica l'elemento radice per la sezione di configurazione ASP.NET.|  
-|`trace`|Contiene listener per la raccolta, la memorizzazione e l'invio di messaggi di tracciatura.|  
+|<span data-ttu-id="dd9e1-131">Elemento</span><span class="sxs-lookup"><span data-stu-id="dd9e1-131">Element</span></span>|<span data-ttu-id="dd9e1-132">Descrizione</span><span class="sxs-lookup"><span data-stu-id="dd9e1-132">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="dd9e1-133">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`listeners`|<span data-ttu-id="dd9e1-134">Specifica un listener per la raccolta, la memorizzazione e indirizza i messaggi.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-134">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="dd9e1-135">I listener indirizzano l'output di traccia a una destinazione appropriata.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-135">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="dd9e1-136">Consente di specificare l'elemento radice per la sezione di configurazione ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-136">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`trace`|<span data-ttu-id="dd9e1-137">Contiene i listener che raccolgono, archiviano e indirizzano i messaggi di traccia.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-137">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-## Note  
- Le classi <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> condividono la stessa raccolta **Listeners**.  Se si aggiunge un oggetto listener alla raccolta di una delle due classi, lo stesso listener verrà utilizzato anche dall'altra classe.  Le classi di listener derivano dalla [classe TraceListener](frlrfSystemDiagnosticsTraceListenerClassTopic).  
+## <a name="remarks"></a><span data-ttu-id="dd9e1-138">Note</span><span class="sxs-lookup"><span data-stu-id="dd9e1-138">Remarks</span></span>  
+ <span data-ttu-id="dd9e1-139">Il <xref:System.Diagnostics.Debug> e <xref:System.Diagnostics.Trace> condividono lo stesso **listener** insieme.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-139">The <xref:System.Diagnostics.Debug> and <xref:System.Diagnostics.Trace> classes share the same **Listeners** collection.</span></span> <span data-ttu-id="dd9e1-140">Se si aggiunge un oggetto listener alla raccolta in una di queste classi, l'altra classe utilizza lo stesso listener.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-140">If you add a listener object to the collection in one of these classes, the other class uses the same listener.</span></span> <span data-ttu-id="dd9e1-141">Derivano le classi di listener di <xref:System.Diagnostics.TraceListener>.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-141">The listener classes derive from the <xref:System.Diagnostics.TraceListener>.</span></span>  
   
- Se non viene specificato l'attributo `nam`e del listener di traccia, l'impostazione predefinita della proprietà <xref:System.Diagnostics.TraceListener.Name%2A> del listener di traccia sarà una stringa vuota \(""\).  Se l'applicazione dispone di un solo listener, è possibile aggiungerlo senza specificarne il nome e rimuoverlo specificando per il nome una stringa vuota.  Se invece l'applicazione dispone di più listener, è necessario specificare nomi univoci per ciascun listener di traccia, al fine di identificare e gestire singolarmente i listener di traccia nelle raccolte <xref:System.Diagnostics.Debug.Listeners%2A> e <xref:System.Diagnostics.Trace.Listeners%2A>.  
-  
-> [!NOTE]
->  L'aggiunta di più listener di traccia dello stesso tipo e con lo stesso nome implica l'aggiunta di un solo listener di traccia di tale tipo e con tale nome alla raccolta `Listeners`.  È tuttavia possibile aggiungere a livello di codice più listener identici alla raccolta `Listeners`.  
-  
- Il valore dell'attributo **initializeData** dipende dal tipo di listener creato.  Non per tutti i listener di traccia è necessario specificare l'attributo **initializeData**.  
+ <span data-ttu-id="dd9e1-142">Se non si specifica il `name` attributo del listener di traccia, il <xref:System.Diagnostics.TraceListener.Name%2A> delle impostazioni predefinite del listener di traccia in una stringa vuota ("").</span><span class="sxs-lookup"><span data-stu-id="dd9e1-142">If you do not specify the `name` attribute of the trace listener, the <xref:System.Diagnostics.TraceListener.Name%2A> of the trace listener defaults to an empty string ("").</span></span> <span data-ttu-id="dd9e1-143">Se l'applicazione presenta un solo listener, è possibile aggiungerlo senza specificare un nome e rimuoverlo specificando una stringa vuota per il nome.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-143">If your application has only one listener, you can add it without specifying a name, and remove it by specifying an empty string for the name.</span></span> <span data-ttu-id="dd9e1-144">Tuttavia, se l'applicazione presenta più di un listener, è necessario specificare nomi univoci per ogni listener di traccia, che consente di identificare e gestire singoli listener di traccia all'interno di <xref:System.Diagnostics.Debug.Listeners%2A> e <xref:System.Diagnostics.Trace.Listeners%2A> raccolte.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-144">However, if your application has more than one listener, you should specify unique names for each trace listener, which allows you to identify and manage individual trace listeners within the <xref:System.Diagnostics.Debug.Listeners%2A> and <xref:System.Diagnostics.Trace.Listeners%2A> collections.</span></span>  
   
 > [!NOTE]
->  Quando si utilizza l'attributo `initializeData`, è possibile ottenere l'avviso del compilatore "Attributo 'initializeData' non dichiarato". Questo avviso viene generato perché le impostazioni di configurazione vengono convalidate in base alla classe di base astratta <xref:System.Diagnostics.TraceListener> che non riconosce l'attributo `initializeData`.  In genere, è possibile ignorare questo avviso per implementazioni del listener di traccia che presentano un costruttore che accetta un parametro.  
+>  <span data-ttu-id="dd9e1-145">Aggiunta di più di un listener di traccia, dello stesso tipo e con lo stesso nome risultati in un solo listener di traccia di quel tipo e nome viene aggiunto al `Listeners` insieme.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-145">Adding more than one trace listener of the same type and with the same name results in only one trace listener of that type and name being added to the `Listeners` collection.</span></span> <span data-ttu-id="dd9e1-146">Tuttavia, è possibile aggiungere a livello di codice più listener identici per il `Listeners` insieme.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-146">However, you can programmatically add multiple identical listeners to the `Listeners` collection.</span></span>  
   
- Nella tabella riportata di seguito vengono elencati i listener di traccia inclusi in .NET Framework e viene fornita una descrizione del valore dei relativi attributi **initializeData**.  
+ <span data-ttu-id="dd9e1-147">Il valore per il **initializeData** attributo dipende dal tipo di listener creato.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-147">The value for the **initializeData** attribute depends on the type of listener you create.</span></span> <span data-ttu-id="dd9e1-148">Non tutti i listener di traccia è necessario specificare **initializeData**.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-148">Not all trace listeners require that you specify **initializeData**.</span></span>  
   
-|Classe di listener di traccia|Valore dell'attributo initializeData|  
-|-----------------------------------|------------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName>|Valore `useErrorStream` del costruttore <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>.  Impostare l'attributo `initializeData` su "`true`" per scrivere l'output di traccia e debug in <xref:System.Console.Error%2A?displayProperty=fullName>, oppure su "`false`" per scrivere l'output in <xref:System.Console.Out%2A?displayProperty=fullName>.|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName>|Nome del file in cui scrive <xref:System.Diagnostics.DelimitedListTraceListener>.|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>|Nome di un'origine del log eventi esistente.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=fullName>|Nome del file in cui <xref:System.Diagnostics.EventSchemaTraceListener> esegue operazioni di scrittura.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=fullName>|Nome del file in cui <xref:System.Diagnostics.TextWriterTraceListener> esegue operazioni di scrittura.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>|Nome del file in cui <xref:System.Diagnostics.XmlWriterTraceListener> esegue operazioni di scrittura.|  
+> [!NOTE]
+>  <span data-ttu-id="dd9e1-149">Quando si utilizza il `initializeData` attributo, è possibile che venga visualizzato l'avviso "l'attributo 'initializeData' non dichiarato." del compilatore</span><span class="sxs-lookup"><span data-stu-id="dd9e1-149">When you use the `initializeData` attribute, you may get the compiler warning "The 'initializeData' attribute is not declared."</span></span> <span data-ttu-id="dd9e1-150">Questo avviso viene generato perché le impostazioni di configurazione vengono convalidate in base alla classe base astratta <xref:System.Diagnostics.TraceListener>, che non riconosce il `initializeData` attributo.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-150">This warning occurs because the configuration settings are validated against the abstract base class <xref:System.Diagnostics.TraceListener>, which does not recognize the `initializeData` attribute.</span></span> <span data-ttu-id="dd9e1-151">In genere, è possibile ignorare questo avviso per le implementazioni di listener di traccia che dispone di un costruttore che accetta un parametro.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-151">Typically, you can ignore this warning for trace listener implementations that have a constructor that takes a parameter.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare gli elementi **\<add\>** per aggiungere i listener `MyListener` e `MyEventListener` alla raccolta **Listeners**.  `MyListener` crea un file denominato `MyListener.log` e scrive l'output al suo interno.  `MyEventListener` crea una voce nel log eventi.  
+ <span data-ttu-id="dd9e1-152">Nella tabella seguente mostra i listener di traccia inclusi in .NET Framework e descrive il valore della loro **initializeData** attributi.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-152">The following table shows the trace listeners that are included with the .NET Framework and describes the value of their **initializeData** attributes.</span></span>  
   
-```  
+|<span data-ttu-id="dd9e1-153">Classe di listener di traccia</span><span class="sxs-lookup"><span data-stu-id="dd9e1-153">Trace listener class</span></span>|<span data-ttu-id="dd9e1-154">valore dell'attributo initializeData</span><span class="sxs-lookup"><span data-stu-id="dd9e1-154">initializeData attribute value</span></span>|  
+|--------------------------|------------------------------------|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|<span data-ttu-id="dd9e1-155">Il `useErrorStream` valore per il <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> costruttore.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-155">The `useErrorStream` value for the <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> constructor.</span></span>  <span data-ttu-id="dd9e1-156">Impostare il `initializeData` attributo "`true`" per scrivere una traccia e debug di output per <xref:System.Console.Error%2A?displayProperty=nameWithType>; "`false`" per scrivere <xref:System.Console.Out%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-156">Set the `initializeData` attribute to "`true`" to write trace and debug output to <xref:System.Console.Error%2A?displayProperty=nameWithType>; "`false`" to write to <xref:System.Console.Out%2A?displayProperty=nameWithType>.</span></span>|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|<span data-ttu-id="dd9e1-157">Il nome del file di <xref:System.Diagnostics.DelimitedListTraceListener> scrive.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-157">The name of the file the <xref:System.Diagnostics.DelimitedListTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|<span data-ttu-id="dd9e1-158">Il nome del nome di un'origine di log eventi esistenti.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-158">The name of the name of an existing event log source.</span></span>|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|<span data-ttu-id="dd9e1-159">Il nome del file che il <xref:System.Diagnostics.EventSchemaTraceListener> scrive.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-159">The name of the file that the <xref:System.Diagnostics.EventSchemaTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|<span data-ttu-id="dd9e1-160">Il nome del file che il <xref:System.Diagnostics.TextWriterTraceListener> scrive.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-160">The name of the file that the <xref:System.Diagnostics.TextWriterTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|<span data-ttu-id="dd9e1-161">Il nome del file che il <xref:System.Diagnostics.XmlWriterTraceListener> scrive.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-161">The name of the file that the <xref:System.Diagnostics.XmlWriterTraceListener> writes to.</span></span>|  
+  
+## <a name="example"></a><span data-ttu-id="dd9e1-162">Esempio</span><span class="sxs-lookup"><span data-stu-id="dd9e1-162">Example</span></span>  
+ <span data-ttu-id="dd9e1-163">Nell'esempio seguente viene illustrato come utilizzare  **\<aggiungere >** elementi per aggiungere i listener `MyListener` e `MyEventListener` per il **listener** insieme.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-163">The following example shows how to use **\<add>** elements to add the listeners `MyListener` and `MyEventListener` to the **Listeners** collection.</span></span> <span data-ttu-id="dd9e1-164">`MyListener`Crea un file denominato `MyListener.log` e scrive l'output del file.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-164">`MyListener` creates a file called `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="dd9e1-165">`MyEventListener`Crea una voce nel registro eventi.</span><span class="sxs-lookup"><span data-stu-id="dd9e1-165">`MyEventListener` creates an entry in the event log.</span></span>  
+  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <trace autoflush="true" indentsize="0">  
@@ -107,11 +110,11 @@ Consente di aggiungere un listener alla raccolta **Listeners**.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.Debug>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a><span data-ttu-id="dd9e1-166">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dd9e1-166">See Also</span></span>  
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.Debug>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ [<span data-ttu-id="dd9e1-167">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="dd9e1-167">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="dd9e1-168">Listener di traccia</span><span class="sxs-lookup"><span data-stu-id="dd9e1-168">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

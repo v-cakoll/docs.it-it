@@ -1,28 +1,36 @@
 ---
-title: "&lt;security&gt; di &lt;wsHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;security&gt; di &lt;wsHttpBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 7dfadcbb120f55232ea2375e880a5edb17caf045
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;security&gt; di &lt;wsHttpBinding&gt;
-Rappresenta le funzionalità di sicurezza di [\<wsHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+# <a name="ltsecuritygt-of-ltwshttpbindinggt"></a><span data-ttu-id="0831b-102">&lt;security&gt; di &lt;wsHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="0831b-102">&lt;security&gt; of &lt;wsHttpBinding&gt;</span></span>
+<span data-ttu-id="0831b-103">Rappresenta le funzionalità di sicurezza di [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="0831b-103">Represents the security capabilities of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="0831b-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0831b-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="0831b-105">\<associazioni ></span><span class="sxs-lookup"><span data-stu-id="0831b-105">\<bindings></span></span>  
+<span data-ttu-id="0831b-106">\<wsHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="0831b-106">\<wsHttpBinding></span></span>  
+<span data-ttu-id="0831b-107">\<associazione ></span><span class="sxs-lookup"><span data-stu-id="0831b-107">\<binding></span></span>  
+<span data-ttu-id="0831b-108">\<sicurezza ></span><span class="sxs-lookup"><span data-stu-id="0831b-108">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="0831b-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0831b-109">Syntax</span></span>  
   
+```xml  
 <security mode="Message/None/Transport/TransportWithMessageCredential">  
    <transport  
          clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
@@ -39,47 +47,47 @@ Rappresenta le funzionalità di sicurezza di [\<wsHttpBinding\>](../../../../../
 </security>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0831b-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="0831b-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="0831b-111">Nelle sezioni seguenti vengono descritti attributi, elementi figlio ed elementi padre.</span><span class="sxs-lookup"><span data-stu-id="0831b-111">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="0831b-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="0831b-112">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="0831b-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="0831b-113">Attribute</span></span>|<span data-ttu-id="0831b-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0831b-114">Description</span></span>|  
 |---------------|-----------------|  
-|modalità|-   Parametro facoltativo.  Specifica il tipo di sicurezza applicata.  Il valore predefinito è `Message`.<br />-   L'attributo è di tipo <xref:System.ServiceModel.SecurityMode>.|  
+|<span data-ttu-id="0831b-115">modalità</span><span class="sxs-lookup"><span data-stu-id="0831b-115">mode</span></span>|<span data-ttu-id="0831b-116">-Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="0831b-116">-   Optional.</span></span> <span data-ttu-id="0831b-117">Specifica il tipo di sicurezza applicata.</span><span class="sxs-lookup"><span data-stu-id="0831b-117">Specifies the type of security that is applied.</span></span> <span data-ttu-id="0831b-118">Il valore predefinito è `Message`.</span><span class="sxs-lookup"><span data-stu-id="0831b-118">The default is `Message`.</span></span><br /><span data-ttu-id="0831b-119">-L'attributo è di tipo <xref:System.ServiceModel.SecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="0831b-119">-   This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
   
-## Attributo mode  
+## <a name="mode-attribute"></a><span data-ttu-id="0831b-120">Attributo mode</span><span class="sxs-lookup"><span data-stu-id="0831b-120">Mode Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|None|La sicurezza è disabilitata.|  
-|Trasporto|La sicurezza è fornita mediante HTTPS.  Può essere necessario che il servizio sia configurato con certificati SSL.  Il messaggio è interamente protetto usando HTTPS e viene autenticato dal client usando il certificato SSL del servizio.  L'autenticazione client è controllata tramite l'attributo `ClientCredentials`.  dell'[\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).|  
-|Messaggio|La sicurezza è fornita mediante la sicurezza dei messaggi SOAP.  Per impostazione predefinita, il corpo SOAP viene crittografato e firmato.  Questa modalità offre varie funzionalità, ad esempio la disponibilità o meno delle credenziali del servizio per il client fuori banda, la suite di algoritmi da usare e il livello di protezione da applicare al corpo del messaggio tramite la proprietà Security.Message.  L'autenticazione client viene eseguita una volta per sessione e i risultati vengono memorizzati nella cache per la durata della sessione.|  
-|TransportWithMessageCredential|In questa modalità, HTTPS fornisce l'integrità, la riservatezza e l'autenticazione server e client, mentre la sicurezza dei messaggi SOAP fornisce l'autenticazione client.  Per impostazione predefinita, l'autenticazione client viene eseguita una volta per sessione e i risultati vengono memorizzati nella cache per la durata della sessione.|  
+|<span data-ttu-id="0831b-121">Valore</span><span class="sxs-lookup"><span data-stu-id="0831b-121">Value</span></span>|<span data-ttu-id="0831b-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0831b-122">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="0831b-123">None</span><span class="sxs-lookup"><span data-stu-id="0831b-123">None</span></span>|<span data-ttu-id="0831b-124">La sicurezza è disabilitata.</span><span class="sxs-lookup"><span data-stu-id="0831b-124">Security is disabled.</span></span>|  
+|<span data-ttu-id="0831b-125">Trasporto</span><span class="sxs-lookup"><span data-stu-id="0831b-125">Transport</span></span>|<span data-ttu-id="0831b-126">La sicurezza è fornita mediante HTTPS.</span><span class="sxs-lookup"><span data-stu-id="0831b-126">Security is provided using HTTPS.</span></span> <span data-ttu-id="0831b-127">Può essere necessario che il servizio sia configurato con certificati SSL.</span><span class="sxs-lookup"><span data-stu-id="0831b-127">The service needs to be configured with SSL certificates.</span></span> <span data-ttu-id="0831b-128">Il messaggio è interamente protetto usando HTTPS e viene autenticato dal client usando il certificato SSL del servizio.</span><span class="sxs-lookup"><span data-stu-id="0831b-128">The message is entirely secured using HTTPS and is authenticated by the client using the service’s SSL certificate.</span></span> <span data-ttu-id="0831b-129">L'autenticazione client è controllata tramite l'attributo `ClientCredentials`.</span><span class="sxs-lookup"><span data-stu-id="0831b-129">The client authentication is controlled through the `ClientCredentials` attribute.</span></span> <span data-ttu-id="0831b-130">del [ \<trasporto >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="0831b-130">of the [\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md).</span></span>|  
+|<span data-ttu-id="0831b-131">Messaggio</span><span class="sxs-lookup"><span data-stu-id="0831b-131">Message</span></span>|<span data-ttu-id="0831b-132">La sicurezza è fornita mediante la sicurezza dei messaggi SOAP.</span><span class="sxs-lookup"><span data-stu-id="0831b-132">Security is provided using SOAP message security.</span></span> <span data-ttu-id="0831b-133">Per impostazione predefinita, il corpo SOAP viene crittografato e firmato.</span><span class="sxs-lookup"><span data-stu-id="0831b-133">By default, the SOAP body is Encrypted and Signed.</span></span> <span data-ttu-id="0831b-134">Questa modalità offre varie funzionalità, ad esempio la disponibilità o meno delle credenziali del servizio per il client fuori banda, la suite di algoritmi da usare e il livello di protezione da applicare al corpo del messaggio tramite la proprietà Security.Message.</span><span class="sxs-lookup"><span data-stu-id="0831b-134">This mode offers a variety of features, such as whether the service credentials are available at the client out of band, the algorithm suite to use, and what level of protection to apply to the message body through the Security.Message property.</span></span> <span data-ttu-id="0831b-135">L'autenticazione client viene eseguita una volta per sessione e i risultati vengono memorizzati nella cache per la durata della sessione.</span><span class="sxs-lookup"><span data-stu-id="0831b-135">Client authentication is performed once per session and the results of authentication are cached for the duration of the session.</span></span>|  
+|<span data-ttu-id="0831b-136">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="0831b-136">TransportWithMessageCredential</span></span>|<span data-ttu-id="0831b-137">In questa modalità, HTTPS fornisce l'integrità, la riservatezza e l'autenticazione server e client, mentre la sicurezza dei messaggi SOAP fornisce l'autenticazione client.</span><span class="sxs-lookup"><span data-stu-id="0831b-137">In this mode, HTTPS provides integrity, confidentiality, and server authentication, and SOAP message security provides client authentication.</span></span> <span data-ttu-id="0831b-138">Per impostazione predefinita, l'autenticazione client viene eseguita una volta per sessione e i risultati vengono memorizzati nella cache per la durata della sessione.</span><span class="sxs-lookup"><span data-stu-id="0831b-138">By default, client authentication is performed once per session and the results of authentication are cached for the duration of the session.</span></span>|  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="0831b-139">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="0831b-139">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)|Definisce le impostazioni di sicurezza del trasporto.  Questo elemento corrisponde al tipo <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.|  
-|[\<messaggio\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)|Definisce le impostazioni di sicurezza per il messaggio.  Questo elemento corrisponde al tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement>.|  
+|<span data-ttu-id="0831b-140">Elemento</span><span class="sxs-lookup"><span data-stu-id="0831b-140">Element</span></span>|<span data-ttu-id="0831b-141">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0831b-141">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="0831b-142">\<trasporto ></span><span class="sxs-lookup"><span data-stu-id="0831b-142">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)|<span data-ttu-id="0831b-143">Definisce le impostazioni di sicurezza del trasporto.</span><span class="sxs-lookup"><span data-stu-id="0831b-143">Defines the transport security settings.</span></span> <span data-ttu-id="0831b-144">Questo elemento corrisponde al tipo <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="0831b-144">This element corresponds to the <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> type.</span></span>|  
+|[<span data-ttu-id="0831b-145">\<messaggio ></span><span class="sxs-lookup"><span data-stu-id="0831b-145">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)|<span data-ttu-id="0831b-146">Definisce le impostazioni di sicurezza per il messaggio.</span><span class="sxs-lookup"><span data-stu-id="0831b-146">Defines the security settings for the message.</span></span> <span data-ttu-id="0831b-147">Questo elemento corrisponde al tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement>.</span><span class="sxs-lookup"><span data-stu-id="0831b-147">This element corresponds to the <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement> type.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="0831b-148">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="0831b-148">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<wsHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Associazione protetta per applicazioni di trasporto HTTP.|  
+|<span data-ttu-id="0831b-149">Elemento</span><span class="sxs-lookup"><span data-stu-id="0831b-149">Element</span></span>|<span data-ttu-id="0831b-150">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0831b-150">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="0831b-151">\<wsHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="0831b-151">\<wsHttpBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|<span data-ttu-id="0831b-152">Associazione protetta per applicazioni di trasporto HTTP.</span><span class="sxs-lookup"><span data-stu-id="0831b-152">A secure binding for HTTP transport applications.</span></span>|  
   
-## Note  
- La classe WSHttpBinding è progettata per essere interoperabile con i servizi che implementano le specifiche WS\-\*.  La sicurezza basata sul trasporto di questa associazione è SSL \(Secure Sockets Layer\) su HTTP, ovvero HTTPS.  
+## <a name="remarks"></a><span data-ttu-id="0831b-153">Note</span><span class="sxs-lookup"><span data-stu-id="0831b-153">Remarks</span></span>  
+ <span data-ttu-id="0831b-154">La classe WSHttpBinding è progettata per essere interoperabile con i servizi che implementano le specifiche WS-*.</span><span class="sxs-lookup"><span data-stu-id="0831b-154">The WSHttpBinding class is designed for interoperation with services that implement WS-* specifications.</span></span> <span data-ttu-id="0831b-155">La sicurezza basata sul trasporto di questa associazione è SSL (Secure Sockets Layer) su HTTP, ovvero HTTPS.</span><span class="sxs-lookup"><span data-stu-id="0831b-155">The transport security for this binding is Secure Sockets Layer (SSL) over HTTP, or HTTPS.</span></span>  
   
-## Vedere anche  
- <xref:System.ServiceModel.WSHttpSecurity>   
- <xref:System.ServiceModel.WSHttpBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>   
- [Protezione di servizi e client](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/it-it/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<associazione\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="0831b-156">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0831b-156">See Also</span></span>  
+ <xref:System.ServiceModel.WSHttpSecurity>  
+ <xref:System.ServiceModel.WSHttpBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
+ [<span data-ttu-id="0831b-157">Protezione di servizi e client</span><span class="sxs-lookup"><span data-stu-id="0831b-157">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="0831b-158">Associazioni</span><span class="sxs-lookup"><span data-stu-id="0831b-158">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="0831b-159">Configurazione di associazioni fornite dal sistema</span><span class="sxs-lookup"><span data-stu-id="0831b-159">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="0831b-160">Uso di associazioni per configurare i client e servizi Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="0831b-160">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="0831b-161">\<associazione ></span><span class="sxs-lookup"><span data-stu-id="0831b-161">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

@@ -1,25 +1,28 @@
 ---
-title: "Messaggi non incapsulati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Messaggi non incapsulati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 99aa1d00c2992842a7019d4f4fc4aa98c25f644a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Messaggi non incapsulati
-In questo esempio vengono illustrati i messaggi non incapsulati.Per impostazione predefinita, il corpo del messaggio è formattato in modo tale che i parametri di un'operazione del servizio sono incapsulati.Nell'esempio seguente viene illustrato un messaggio di richiesta `Add` al servizio `ICalculator` in modalità incapsulata.  
+# <a name="unwrapped-messages"></a><span data-ttu-id="f37b4-102">Messaggi non incapsulati</span><span class="sxs-lookup"><span data-stu-id="f37b4-102">Unwrapped Messages</span></span>
+<span data-ttu-id="f37b4-103">In questo esempio vengono illustrati i messaggi non incapsulati.</span><span class="sxs-lookup"><span data-stu-id="f37b4-103">This sample demonstrates unwrapped messages.</span></span> <span data-ttu-id="f37b4-104">Per impostazione predefinita, il corpo del messaggio è formattato in modo tale che i parametri di un'operazione del servizio sono incapsulati.</span><span class="sxs-lookup"><span data-stu-id="f37b4-104">By default, the message body is formatted such that the parameters to a service operation are wrapped.</span></span> <span data-ttu-id="f37b4-105">Nell'esempio seguente viene illustrato un messaggio di richiesta `Add` al servizio `ICalculator` in modalità incapsulata.</span><span class="sxs-lookup"><span data-stu-id="f37b4-105">The following sample shows an `Add` request message to the `ICalculator` service in wrapped mode.</span></span>  
   
-```  
+```xml  
 <s:Envelope   
     xmlns:s=http://www.w3.org/2003/05/soap-envelope  
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
@@ -33,12 +36,11 @@ In questo esempio vengono illustrati i messaggi non incapsulati.Per impostazione
       </Add>  
     </s:Body>  
 </s:Envelope>  
-  
 ```  
   
- L'elemento `<Add>` nel corpo del messaggio incapsula i parametri `n1` e `n2`.Diversamente, nell'esempio seguente viene illustrato il messaggio equivalente nella modalità non incapsulata.  
+ <span data-ttu-id="f37b4-106">L'elemento `<Add>` nel corpo del messaggio incapsula i parametri `n1` e `n2`.</span><span class="sxs-lookup"><span data-stu-id="f37b4-106">The `<Add>` element in the message body wraps the `n1` and `n2` parameters.</span></span> <span data-ttu-id="f37b4-107">Diversamente, nell'esempio seguente viene illustrato il messaggio equivalente nella modalità non incapsulata.</span><span class="sxs-lookup"><span data-stu-id="f37b4-107">In contrast, the following sample shows the equivalent message in the unwrapped mode.</span></span>  
   
-```  
+```xml  
 <s:Envelope   
     xmlns:s="http://www.w3.org/2003/05/soap-envelope"   
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
@@ -51,15 +53,14 @@ In questo esempio vengono illustrati i messaggi non incapsulati.Per impostazione
     </s:Body>  
   </s:Envelope>  
 </MessageLogTraceRecord>  
-  
 ```  
   
- Nel messaggio non incapsulato i parametri `n1` e `n2` non sono incapsulati in un elemento contenitore, bensì sono elementi figlio diretti dell'elemento del corpo SOAP.  
+ <span data-ttu-id="f37b4-108">Nel messaggio non incapsulato i parametri `n1` e `n2` non sono incapsulati in un elemento contenitore, bensì sono elementi figlio diretti dell'elemento del corpo SOAP.</span><span class="sxs-lookup"><span data-stu-id="f37b4-108">The unwrapped message does not wrap the `n1` and `n2` parameters in a containing element, they are direct children of the soap body element.</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine dell'argomento.  
+>  <span data-ttu-id="f37b4-109">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="f37b4-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- In questo esempio viene creato un messaggio non incapsulato applicando la classe <xref:System.ServiceModel.MessageContractAttribute> al tipo di parametro dell'operazione del servizio e al tipo di valore restituito, come illustrato nel codice di esempio seguente.  
+ <span data-ttu-id="f37b4-110">In questo esempio viene creato un messaggio non incapsulato applicando la classe <xref:System.ServiceModel.MessageContractAttribute> al tipo di parametro dell'operazione del servizio e al tipo di valore restituito, come illustrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="f37b4-110">In this sample, an unwrapped message is created by applying the <xref:System.ServiceModel.MessageContractAttribute> to the service operation parameter type and return value type as shown in the following sample code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -98,27 +99,27 @@ public class ResponseMessage
 }  
 ```  
   
- Per poter visualizzare i messaggi inviati e ricevuti, in questo esempio viene utilizzata la traccia.Inoltre, <xref:System.ServiceModel.WSHttpBinding> è stato configurato senza la sicurezza, per ridurre il numero di messaggi registrati.  
+ <span data-ttu-id="f37b4-111">Per poter visualizzare i messaggi inviati e ricevuti, in questo esempio viene utilizzata la traccia.</span><span class="sxs-lookup"><span data-stu-id="f37b4-111">To allow you to see the messages being sent and received, this sample uses tracing.</span></span> <span data-ttu-id="f37b4-112">Inoltre, <xref:System.ServiceModel.WSHttpBinding> è stato configurato senza la sicurezza, per ridurre il numero di messaggi registrati.</span><span class="sxs-lookup"><span data-stu-id="f37b4-112">In addition, the <xref:System.ServiceModel.WSHttpBinding> has been configured without security, to reduce the number of messages it logs.</span></span>  
   
- Il registro di traccia risultante \(c:\\logs\\Message.log\) può essere visualizzato utilizzando [Strumento Visualizzatore di tracce dei servizi \(SvcTraceViewer.exe\)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).Per visualizzare il contenuto del messaggio, selezionare **Messaggi** nei riquadri di sinistra e di destra del visualizzatore di tracce dei servizi.I registri di traccia in questo esempio sono configurati in modo da essere generati nella cartella C:\\LOGS.Creare questa cartella prima di eseguire l'esempio e assegnare all'account Servizio di rete le autorizzazioni di scrittura per questa directory.  
+ <span data-ttu-id="f37b4-113">Il log di traccia risultante (c:\logs\Message.log) può essere visualizzato utilizzando il [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span><span class="sxs-lookup"><span data-stu-id="f37b4-113">The resulting trace log (c:\logs\Message.log) can be viewed by using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="f37b4-114">Per visualizzare il contenuto di messaggio, selezionare **messaggi** sinistra sia i riquadri a destra dello strumento Service Trace Viewer.</span><span class="sxs-lookup"><span data-stu-id="f37b4-114">To view message contents, select **Messages** in both the left and the right panes of the Service Trace Viewer tool.</span></span> <span data-ttu-id="f37b4-115">I registri di traccia in questo esempio sono configurati in modo da essere generati nella cartella C:\LOGS.</span><span class="sxs-lookup"><span data-stu-id="f37b4-115">Trace logs in this sample are configured to be generated into the C:\LOGS folder.</span></span> <span data-ttu-id="f37b4-116">Creare questa cartella prima di eseguire l'esempio e assegnare all'account Servizio di rete le autorizzazioni di scrittura per questa directory.</span><span class="sxs-lookup"><span data-stu-id="f37b4-116">Create this folder before running the sample and give the user Network Service write permissions for this directory.</span></span>  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="f37b4-117">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="f37b4-117">To set up, build, and run the sample</span></span>  
   
-1.  Assicurarsi di avere eseguito [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="f37b4-118">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f37b4-118">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Creare una directory C:\\LOGS per la registrazione dei messaggi.Assegnare all'account Servizio di rete le autorizzazioni di scrittura per questa directory.  
+2.  <span data-ttu-id="f37b4-119">Creare una directory C:\LOGS per la registrazione dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="f37b4-119">Create a C:\LOGS directory for logging messages.</span></span> <span data-ttu-id="f37b4-120">Assegnare all'account Servizio di rete le autorizzazioni di scrittura per questa directory.</span><span class="sxs-lookup"><span data-stu-id="f37b4-120">Give the user Network Service write permissions for this directory.</span></span>  
   
-3.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="f37b4-121">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f37b4-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Per eseguire l'esempio in una configurazione con un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="f37b4-122">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f37b4-122">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="f37b4-123">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="f37b4-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="f37b4-124">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="f37b4-124">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="f37b4-125">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f37b4-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f37b4-126">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="f37b4-126">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="f37b4-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f37b4-127">See Also</span></span>

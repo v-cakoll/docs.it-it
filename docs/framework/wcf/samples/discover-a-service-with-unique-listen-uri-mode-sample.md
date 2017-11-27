@@ -1,49 +1,52 @@
 ---
-title: "Esempio Individuare un servizio con modalit&#224; Uri di ascolto univoco | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Esempio Individuare un servizio con modalità Uri di ascolto univoco"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a6d35b2-0469-43c8-a0c9-63623e3d2733
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 48b49def3f8f009eeb4ffa0204e9c616b5acfec7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Esempio Individuare un servizio con modalit&#224; Uri di ascolto univoco
-In questo esempio viene illustrato come individuare un servizio che dispone della proprietà <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> impostata su <xref:System.ServiceModel.Description.ListenUriMode>.L'impostazione della proprietà <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> su <xref:System.ServiceModel.Description.ListenUriMode> garantisce l'univocità di ListenUri attraverso l'impostazione della porta che deve essere univoca o del percorso che deve essere univoco mediante l'aggiunta di un GUID.  
+# <a name="discover-a-service-with-unique-listen-uri-mode-sample"></a><span data-ttu-id="7b177-102">Esempio Individuare un servizio con modalità Uri di ascolto univoco</span><span class="sxs-lookup"><span data-stu-id="7b177-102">Discover a Service with Unique Listen Uri Mode Sample</span></span>
+<span data-ttu-id="7b177-103">In questo esempio viene illustrato come individuare un servizio che dispone della proprietà <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> impostata su <xref:System.ServiceModel.Description.ListenUriMode.Unique>.</span><span class="sxs-lookup"><span data-stu-id="7b177-103">This sample demonstrates how to discover a service that has the <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> property set to <xref:System.ServiceModel.Description.ListenUriMode.Unique>.</span></span> <span data-ttu-id="7b177-104">L'impostazione della proprietà <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> su <xref:System.ServiceModel.Description.ListenUriMode.Unique> garantisce l'univocità di ListenUri attraverso l'impostazione della porta che deve essere univoca o del percorso che deve essere univoco mediante l'aggiunta di un GUID.</span><span class="sxs-lookup"><span data-stu-id="7b177-104">When the <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> property is set to <xref:System.ServiceModel.Description.ListenUriMode.Unique>, the ListenUri is ensured to be unique by either setting the port to be unique or for the path to be unique by appending a GUID.</span></span>  
   
-### Funzionalità nel servizio  
- La proprietà <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> viene impostata su <xref:System.ServiceModel.Description.ListenUriMode> per l'endpoint TCP.Il servizio viene quindi reso individuabile su un endpoint <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+### <a name="features-on-the-service"></a><span data-ttu-id="7b177-105">Funzionalità nel servizio</span><span class="sxs-lookup"><span data-stu-id="7b177-105">Features on the Service</span></span>  
+ <span data-ttu-id="7b177-106">La proprietà <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> viene impostata su <xref:System.ServiceModel.Description.ListenUriMode.Unique> per l'endpoint TCP.</span><span class="sxs-lookup"><span data-stu-id="7b177-106">The <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> property is set to <xref:System.ServiceModel.Description.ListenUriMode.Unique> for the TCP endpoint.</span></span> <span data-ttu-id="7b177-107">Il servizio viene quindi reso individuabile su un endpoint <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="7b177-107">The service is then made discoverable over a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> endpoint.</span></span>  
   
-### Funzionalità nel client  
- Questo client si connette al servizio utilizzando il `Via.Uri` corretto tramite il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>.Sull'oggetto <xref:System.ServiceModel.Discovery.FindResponse> restituito dal metodo viene quindi eseguita una query per determinare se contiene una proprietà <xref:System.ServiceModel.Endpoint.ListenUri%2A> valida e se è diverso da `Address.Uri`.Le informazioni appropriate vengono quindi passate al metodo `InvokeCalculatorService`.Nel metodo `InvokeCalculatorService` la proprietà <xref:System.ServiceModel.Endpoint.ListenUri%2A> viene passata dal chiamante, quindi un oggetto `ClientViaBehavior` con il `Via.Uri` corretto viene aggiunto all'endpoint del client.  
+### <a name="features-on-the-client"></a><span data-ttu-id="7b177-108">Funzionalità nel client</span><span class="sxs-lookup"><span data-stu-id="7b177-108">Features on the Client</span></span>  
+ <span data-ttu-id="7b177-109">Questo client si connette al servizio utilizzando il `Via.Uri` corretto tramite il metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>.</span><span class="sxs-lookup"><span data-stu-id="7b177-109">This client connects to the service using the correct `Via.Uri` by using the <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> method.</span></span> <span data-ttu-id="7b177-110">Sull'oggetto <xref:System.ServiceModel.Discovery.FindResponse> restituito dal metodo viene quindi eseguita una query per determinare se contiene una proprietà <xref:System.ServiceModel.Endpoint.ListenUri%2A> valida e se è diverso da `Address.Uri`.</span><span class="sxs-lookup"><span data-stu-id="7b177-110">The <xref:System.ServiceModel.Discovery.FindResponse> that is returned from the method is then queried for whether it contains a valid <xref:System.ServiceModel.Endpoint.ListenUri%2A> and whether it is different than `Address.Uri`.</span></span> <span data-ttu-id="7b177-111">Le informazioni appropriate vengono quindi passate al metodo `InvokeCalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="7b177-111">The appropriate information is then passed to the `InvokeCalculatorService` method.</span></span> <span data-ttu-id="7b177-112">Nel metodo `InvokeCalculatorService` la proprietà <xref:System.ServiceModel.Endpoint.ListenUri%2A> viene passata dal chiamante, quindi un oggetto `ClientViaBehavior` con il `Via.Uri` corretto viene aggiunto all'endpoint del client.</span><span class="sxs-lookup"><span data-stu-id="7b177-112">In the `InvokeCalculatorService` method, the <xref:System.ServiceModel.Endpoint.ListenUri%2A> was passed in by the caller, then a `ClientViaBehavior` with the correct `Via.Uri` is added to the client’s endpoint.</span></span>  
   
-##### Per utilizzare questo esempio  
+##### <a name="to-use-this-sample"></a><span data-ttu-id="7b177-113">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="7b177-113">To use this sample</span></span>  
   
-1.  Aprire UniqueListenUriMode.sln utilizzando [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  <span data-ttu-id="7b177-114">Aprire UniqueListenUriMode.sln utilizzando [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7b177-114">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open UniqueListenUriMode.sln.</span></span>  
   
-2.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B.  
+2.  <span data-ttu-id="7b177-115">Per compilare la soluzione, premere CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="7b177-115">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Eseguire l'applicazione del servizio, generata nella cartella \[directory soluzione di base\]\\service\\bin\\debug.  
+3.  <span data-ttu-id="7b177-116">Eseguire l'applicazione del servizio, generata nella cartella [directory soluzione di base]\service\bin\debug.</span><span class="sxs-lookup"><span data-stu-id="7b177-116">Run the service application, which is generated in the [solution base directory]\service\bin\debug folder.</span></span>  
   
-4.  Eseguire l'applicazione client, generata nella cartella \[directory soluzione di base\]\\Client\\bin\\debug.  
+4.  <span data-ttu-id="7b177-117">Eseguire l'applicazione client, generata nella cartella [directory soluzione di base]\Client\bin\debug.</span><span class="sxs-lookup"><span data-stu-id="7b177-117">Run the client application, which is generated in the [solution base directory]\Client\bin\debug folder.</span></span>  
   
-     Il client individua il servizio in esecuzione e scrive nella console i metadati pubblicati dall'endpoint del servizio.  
+     <span data-ttu-id="7b177-118">Il client individua il servizio in esecuzione e scrive nella console i metadati pubblicati dall'endpoint del servizio.</span><span class="sxs-lookup"><span data-stu-id="7b177-118">The client locates the running service and writes to the console the metadata published by the service’s endpoint.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="7b177-119">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="7b177-119">The samples may already be installed on your machine.</span></span> <span data-ttu-id="7b177-120">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="7b177-120">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="7b177-121">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="7b177-121">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="7b177-122">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="7b177-122">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Discovery\UniqueListenUriMode`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\UniqueListenUriMode`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="7b177-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7b177-123">See Also</span></span>

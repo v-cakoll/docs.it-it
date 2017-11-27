@@ -1,59 +1,59 @@
 ---
-title: "Panoramica della traccia analitica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "traccia analitica [WCF], panoramica"
+title: Panoramica della traccia analitica
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cd064228f374cf99540e2a5467bbab6d25dd00f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Panoramica della traccia analitica
-La traccia analitica in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] è una funzionalità di traccia a prestazioni elevate e verbosità ridotta impostata in base a Traccia eventi per Windows \(ETW\). ETW è in esecuzione al livello del kernel per ridurre notevolmente il sovraccarico delle operazioni di traccia. Memorizza nel buffer gli eventi in modalità kernel e utente in modo efficace e consente l'abilitazione dinamica della registrazione senza richiedere riavvii del servizio. I dati della traccia sono disponibili nei log eventi in seguito alla generazione e alla ricezione.  
+# <a name="analytic-tracing-overview"></a><span data-ttu-id="480a0-102">Panoramica della traccia analitica</span><span class="sxs-lookup"><span data-stu-id="480a0-102">Analytic Tracing Overview</span></span>
+<span data-ttu-id="480a0-103">La traccia analitica in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] è una funzionalità di traccia a prestazioni elevate e verbosità ridotta impostata in base a Traccia eventi per Windows (ETW).</span><span class="sxs-lookup"><span data-stu-id="480a0-103">Analytic tracing in [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] is a high performance and low verbosity tracing feature set on top of Event Tracing for Windows (ETW).</span></span> <span data-ttu-id="480a0-104">ETW è in esecuzione al livello del kernel per ridurre notevolmente il sovraccarico delle operazioni di traccia.</span><span class="sxs-lookup"><span data-stu-id="480a0-104">ETW runs at the kernel-level to greatly reduce the overhead of tracing operations.</span></span> <span data-ttu-id="480a0-105">Memorizza nel buffer gli eventi in modalità kernel e utente in modo efficace e consente l'abilitazione dinamica della registrazione senza richiedere riavvii del servizio.</span><span class="sxs-lookup"><span data-stu-id="480a0-105">It efficiently buffers user- and kernel-mode events, and allows dynamic enabling of logging without requiring service restarts.</span></span> <span data-ttu-id="480a0-106">I dati della traccia sono disponibili nei log eventi in seguito alla generazione e alla ricezione.</span><span class="sxs-lookup"><span data-stu-id="480a0-106">The tracing data is available in the event logs after it has been emitted and received.</span></span>  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] ETW, vedere [Migliorare il debug e l'ottimizzazione delle prestazioni con ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]<span data-ttu-id="480a0-107"> ETW, vedere [Migliorare il debug e l'ottimizzazione delle prestazioni con ETW](http://go.microsoft.com/fwlink/?LinkId=164781).</span><span class="sxs-lookup"><span data-stu-id="480a0-107"> ETW, see [Improve Debugging and Performance Tuning with ETW](http://go.microsoft.com/fwlink/?LinkId=164781).</span></span>  
   
- Oltre a utilizzare i registri eventi relativi al sistema Windows, alla sicurezza e alle applicazioni per analizzare l'applicazione, [!INCLUDE[wv](../../../../../includes/wv-md.md)] e [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] hanno introdotto altri log nel nodo di livello superiore Registri applicazioni e servizi. Lo scopo di questi nuovi log consiste nell'archiviare eventi per una particolare applicazione o un componente specifico anziché eventi globali con un impatto a livello di sistema \(ad esempio il tipo di eventi che potrebbero essere registrati dal registro eventi relativo alla sicurezza\).[!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica e correla la registrazione di eventi di traccia [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], log dei messaggi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] e record di rilevamento [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] a Registri applicazioni e servizi.  
+ <span data-ttu-id="480a0-108">Oltre a utilizzare i registri eventi relativi al sistema Windows, alla sicurezza e alle applicazioni per analizzare l'applicazione, [!INCLUDE[wv](../../../../../includes/wv-md.md)] e [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] hanno introdotto altri log nel nodo di livello superiore Registri applicazioni e servizi.</span><span class="sxs-lookup"><span data-stu-id="480a0-108">In addition to using the Windows System, Security, and Application event logs to analyze application, [!INCLUDE[wv](../../../../../includes/wv-md.md)] and [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] introduced additional logs under the Applications and Services Logs top-level node.</span></span> <span data-ttu-id="480a0-109">Lo scopo di questi nuovi log consiste nell'archiviare eventi per una particolare applicazione o un componente specifico anziché eventi globali con un impatto a livello di sistema (ad esempio il tipo di eventi che potrebbero essere registrati dal registro eventi relativo alla sicurezza).</span><span class="sxs-lookup"><span data-stu-id="480a0-109">The purpose of these new logs is to store events for a particular application or specific component instead of global events that have a system-wide impact (such as the type of events that the Security event log might record).</span></span> [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]<span data-ttu-id="480a0-110"> unifica e correla la registrazione di eventi di traccia [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], log dei messaggi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] e record di rilevamento [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] a Registri applicazioni e servizi.</span><span class="sxs-lookup"><span data-stu-id="480a0-110"> unifies and correlates the logging of [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Trace Events, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Message Logs, and [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] Tracking records to the Applications and Services Logs.</span></span>  
   
-## Concetti e funzionalità  
- I concetti e le funzionalità seguenti si applicano alla traccia analitica di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+## <a name="concepts-and-capabilities"></a><span data-ttu-id="480a0-111">Concetti e funzionalità</span><span class="sxs-lookup"><span data-stu-id="480a0-111">Concepts and Capabilities</span></span>  
+ <span data-ttu-id="480a0-112">I concetti e le funzionalità seguenti si applicano alla traccia analitica di [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="480a0-112">The following concepts and capabilities apply to [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Analytic Tracing.</span></span>  
   
-### Abilitazione di impostazioni di diagnostica WCF  
- La diagnostica WCF è abilitata all'interno della sezione di configurazione \<system.serviceModel\>\<diagnostics\>.  
+### <a name="enabling-wcf-diagnostics-settings"></a><span data-ttu-id="480a0-113">Abilitazione di impostazioni di diagnostica WCF</span><span class="sxs-lookup"><span data-stu-id="480a0-113">Enabling WCF Diagnostics Settings</span></span>  
+ <span data-ttu-id="480a0-114">Diagnostica WCF è abilitata all'interno di \<System. ServiceModel >\<diagnostica > sezione di configurazione.</span><span class="sxs-lookup"><span data-stu-id="480a0-114">WCF diagnostics are enabled within the \<system.serviceModel>\<diagnostics> configuration section.</span></span>  
   
-```  
-  
+```xml  
 <system.serviceModel>  
-  <diagnostics>  
-  
+  <diagnostics>  
 ```  
   
- Le impostazioni di diagnostica WCF per un'applicazione virtuale IIS ospitata su Web sono abilitate nel relativo file Web.config. Un'altra opzione consiste nella creazione di un file Web.config in una sottodirectory all'interno dell'applicazione.  Con questa scelta, le impostazioni vengono applicate a tutti i servizi all'interno di una sottodirectory.  Per verificare che le impostazioni di diagnostica siano inizializzate in modo coerente per tutti i servizi all'interno dell'applicazione, le impostazioni devono trovarsi all'interno del file Web.config nella directory dell'applicazione e non in una delle singole sottodirectory all'interno dell'applicazione.  
+ <span data-ttu-id="480a0-115">Le impostazioni di diagnostica WCF per un'applicazione virtuale IIS ospitata su Web sono abilitate nel relativo file Web.config.</span><span class="sxs-lookup"><span data-stu-id="480a0-115">WCF diagnostic settings for a Web-hosted IIS virtual application are enabled in its’ Web.config file.</span></span> <span data-ttu-id="480a0-116">Un'altra opzione consiste nella creazione di un file Web.config in una sottodirectory all'interno dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="480a0-116">Another option is to create a Web.config in a sub-directory within the application.</span></span>  <span data-ttu-id="480a0-117">Con questa scelta, le impostazioni vengono applicate a tutti i servizi all'interno di una sottodirectory.</span><span class="sxs-lookup"><span data-stu-id="480a0-117">This choice applies the settings to all of the services within a sub-directory.</span></span>  <span data-ttu-id="480a0-118">Per verificare che le impostazioni di diagnostica siano inizializzate in modo coerente per tutti i servizi all'interno dell'applicazione, le impostazioni devono trovarsi all'interno del file Web.config nella directory dell'applicazione e non in una delle singole sottodirectory all'interno dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="480a0-118">To ensure that the diagnostics settings are initialized consistently for all services within the application, the settings should be within the Web.config in the application directory and not in one of the individual sub-directories within the application.</span></span>  
   
-### Canali  
- ETW consente ai componenti software di dirigere eventi della traccia a un particolare gruppo di destinatari in base all'utilizzo di canali. È ad esempio possibile inviare eventi per gli amministratori di sistema a un canale ed eventi di particolare interesse per gli sviluppatori di applicazioni a un altro canale. I canali vengono denominati e registrati con Windows. In questo modo gli utenti possono visualizzare gli eventi di un canale utilizzando il Visualizzatore eventi.  
+### <a name="channels"></a><span data-ttu-id="480a0-119">Canali</span><span class="sxs-lookup"><span data-stu-id="480a0-119">Channels</span></span>  
+ <span data-ttu-id="480a0-120">ETW consente ai componenti software di dirigere eventi della traccia a un particolare gruppo di destinatari in base all'utilizzo di canali.</span><span class="sxs-lookup"><span data-stu-id="480a0-120">ETW allows software components to direct tracing events to a particular audience by use of channels.</span></span> <span data-ttu-id="480a0-121">È ad esempio possibile inviare eventi per gli amministratori di sistema a un canale ed eventi di particolare interesse per gli sviluppatori di applicazioni a un altro canale.</span><span class="sxs-lookup"><span data-stu-id="480a0-121">For example, you can send events for system administrators to one channel, and events that application developers care about to another channel.</span></span> <span data-ttu-id="480a0-122">I canali vengono denominati e registrati con Windows. In questo modo gli utenti possono visualizzare gli eventi di un canale utilizzando il Visualizzatore eventi.</span><span class="sxs-lookup"><span data-stu-id="480a0-122">Channels are named and registered with Windows so that consumers can view a channel’s events using the Event Viewer.</span></span>  
   
- La funzionalità della traccia analitica per [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] scrive nel canale Microsoft\-Windows\-Application\-Server\-Applications. Questo canale è stato progettato in maniera specifica per gli utenti che desiderano monitorare l'integrità dei servizi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in produzione. Definisce un set di eventi di dimensioni ridotte che può essere utilizzato in diversi scenari di monitoraggio dell'integrità e risoluzione di problemi.  
+ <span data-ttu-id="480a0-123">La funzionalità della traccia analitica per [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] scrive nel canale Microsoft-Windows-Application-Server-Applications.</span><span class="sxs-lookup"><span data-stu-id="480a0-123">The analytic tracing feature for [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] writes to the Microsoft-Windows-Application-Server-Applications channel.</span></span> <span data-ttu-id="480a0-124">Questo canale è stato progettato in maniera specifica per gli utenti che desiderano monitorare l'integrità dei servizi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] in produzione.</span><span class="sxs-lookup"><span data-stu-id="480a0-124">This channel is specifically designed for users who want to monitor the health of [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services in production.</span></span> <span data-ttu-id="480a0-125">Definisce un set di eventi di dimensioni ridotte che può essere utilizzato in diversi scenari di monitoraggio dell'integrità e risoluzione di problemi.</span><span class="sxs-lookup"><span data-stu-id="480a0-125">It defines a small, set of events that can be used in many health monitoring and troubleshooting scenarios.</span></span>  
   
- Per abilitare il manifest di Traccia eventi per Windows in modo che i messaggi vengano decodificati correttamente nel registro eventi, utilizzare lo strumento ServiceModelReg nella riga di comando come segue:  
+ <span data-ttu-id="480a0-126">Per abilitare il manifest di Traccia eventi per Windows in modo che i messaggi vengano decodificati correttamente nel registro eventi, utilizzare lo strumento ServiceModelReg nella riga di comando come segue:</span><span class="sxs-lookup"><span data-stu-id="480a0-126">To enable the Event Tracing for Windows manifest so that messages are decoded properly in the event log, use the ServiceModelReg tool on the command line as follows:</span></span>  
   
  `ServiceModelReg.exe -i -c:etw`  
   
-### Configurazione dinamica  
- L'infrastruttura ETW consente l'abilitazione e la configurazione dinamica della traccia mediante strumenti standard di Windows.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Abilitazione dinamica della traccia analitica](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
+### <a name="dynamic-configuration"></a><span data-ttu-id="480a0-127">Configurazione dinamica</span><span class="sxs-lookup"><span data-stu-id="480a0-127">Dynamic Configuration</span></span>  
+ <span data-ttu-id="480a0-128">L'infrastruttura ETW consente l'abilitazione e la configurazione dinamica della traccia mediante strumenti standard di Windows.</span><span class="sxs-lookup"><span data-stu-id="480a0-128">The ETW infrastructure allows tracing to be enabled and configured dynamically using standard Windows tools.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="480a0-129"> [Dynamically Enabling Analytic Tracing](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).</span><span class="sxs-lookup"><span data-stu-id="480a0-129"> [Dynamically Enabling Analytic Tracing](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).</span></span>  
   
-### Traccia del flusso di messaggi  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] come abilitare la traccia del flusso di messaggi, vedere [Configurazione della traccia del flusso di messaggi](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
+### <a name="message-flow-tracing"></a><span data-ttu-id="480a0-130">Traccia del flusso di messaggi</span><span class="sxs-lookup"><span data-stu-id="480a0-130">Message Flow Tracing</span></span>  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]<span data-ttu-id="480a0-131"> come abilitare la traccia del flusso di messaggi, vedere [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).</span><span class="sxs-lookup"><span data-stu-id="480a0-131"> how to enable message flow tracing, see [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).</span></span>  
   
-### Parole chiave  
- Le parole chiave vengono utilizzate per filtrare messaggi di traccia e definire il componente di [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] che ha generato l'evento.[!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Abilitazione dinamica della traccia analitica](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).
+### <a name="keywords"></a><span data-ttu-id="480a0-132">Parole chiave</span><span class="sxs-lookup"><span data-stu-id="480a0-132">Keywords</span></span>  
+ <span data-ttu-id="480a0-133">Le parole chiave vengono utilizzate per filtrare messaggi di traccia e definire il componente di [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] che ha generato l'evento.</span><span class="sxs-lookup"><span data-stu-id="480a0-133">Keywords are used to filter trace messages and define which component of the [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] emitted the event.</span></span> [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)]<span data-ttu-id="480a0-134"> [Dynamically Enabling Analytic Tracing](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).</span><span class="sxs-lookup"><span data-stu-id="480a0-134"> [Dynamically Enabling Analytic Tracing](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).</span></span>

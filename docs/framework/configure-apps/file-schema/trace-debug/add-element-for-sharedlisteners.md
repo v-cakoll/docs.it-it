@@ -1,92 +1,94 @@
 ---
-title: "Elemento &lt;add&gt; per &lt;sharedListeners&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> (elemento) per <sharedListeners>"
-  - "add (elemento) per <sharedListeners>"
-  - "attributo initializeData"
+title: '&lt;aggiungere&gt; elemento per &lt;sharedListeners&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
+helpviewer_keywords:
+- initializeData attribute
+- <add> element for <sharedListeners>
+- add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: fd8e7d18ca72cbeb558876eefcde17ebdc6c095f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;add&gt; per &lt;sharedListeners&gt;
-Consente di aggiungere un listener alla raccolta `sharedListeners`.  `sharedListeners` è una raccolta di listener cui può fare riferimento qualsiasi elemento [\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) o [\<trace\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md).  Per impostazione predefinita, i listener della raccolta `sharedListeners` non vengono inseriti in una raccolta `Listeners`,  ma devono essere aggiunti per nome all'[\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) o all'[\<trace\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md).  Non è possibile ottenere i listener nella raccolta `sharedListeners` nel codice in fase di esecuzione.  
+# <a name="ltaddgt-element-for-ltsharedlistenersgt"></a><span data-ttu-id="fcd5b-102">&lt;aggiungere&gt; elemento per &lt;sharedListeners&gt;</span><span class="sxs-lookup"><span data-stu-id="fcd5b-102">&lt;add&gt; Element for &lt;sharedListeners&gt;</span></span>
+<span data-ttu-id="fcd5b-103">Aggiunge un listener alla raccolta `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-103">Adds a listener to the `sharedListeners` collection.</span></span> <span data-ttu-id="fcd5b-104">`sharedListeners`è una raccolta di listener che qualsiasi [ \<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) o [ \<traccia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) possono fare riferimento.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-104">`sharedListeners` is a collection of listeners that any [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) or [\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) can reference.</span></span>  <span data-ttu-id="fcd5b-105">Per impostazione predefinita, nei listener di `sharedListeners` insieme non vengono inseriti in un `Listeners` insieme.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-105">By default, listeners in the `sharedListeners` collection are not placed in a `Listeners` collection.</span></span> <span data-ttu-id="fcd5b-106">Devono essere aggiunti in base al nome per il [ \<origine >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) o [ \<traccia >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md).</span><span class="sxs-lookup"><span data-stu-id="fcd5b-106">They must be added by name to the [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) or [\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md).</span></span> <span data-ttu-id="fcd5b-107">Non è possibile ottenere i listener `sharedListeners` insieme nel codice in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-107">It is not possible to get the listeners in the `sharedListeners` collection in code at run time.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="fcd5b-108">\<configuration></span><span class="sxs-lookup"><span data-stu-id="fcd5b-108">\<configuration></span></span>  
+<span data-ttu-id="fcd5b-109">\<System. Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="fcd5b-109">\<system.diagnostics></span></span>  
+<span data-ttu-id="fcd5b-110">\<sharedListeners > elemento</span><span class="sxs-lookup"><span data-stu-id="fcd5b-110">\<sharedListeners> Element</span></span>  
+<span data-ttu-id="fcd5b-111">\<add></span><span class="sxs-lookup"><span data-stu-id="fcd5b-111">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="fcd5b-112">Sintassi</span><span class="sxs-lookup"><span data-stu-id="fcd5b-112">Syntax</span></span>  
+  
+```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
   initializeData="data"/>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fcd5b-113">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="fcd5b-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="fcd5b-114">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="fcd5b-115">Attributi</span><span class="sxs-lookup"><span data-stu-id="fcd5b-115">Attributes</span></span>  
   
-|Attribute|Descrizione|  
+|<span data-ttu-id="fcd5b-116">Attributo</span><span class="sxs-lookup"><span data-stu-id="fcd5b-116">Attribute</span></span>|<span data-ttu-id="fcd5b-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fcd5b-117">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|Attributo obbligatorio.<br /><br /> Specifica il nome del listener utilizzato per aggiungere il listener condiviso a una raccolta `Listeners`.|  
-|`type`|Attributo obbligatorio.<br /><br /> Specifica il tipo del listener.  È necessario utilizzare una stringa che soddisfi i requisiti indicati in [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Attributo facoltativo.<br /><br /> Stringa passata al costruttore per la classe specificata.|  
+|`name`|<span data-ttu-id="fcd5b-118">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-118">Required attribute.</span></span><br /><br /> <span data-ttu-id="fcd5b-119">Specifica il nome del listener che consente di aggiungere il listener condiviso a un `Listeners` insieme.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-119">Specifies the name of the listener that is used to add the shared listener to a `Listeners` collection.</span></span>|  
+|`type`|<span data-ttu-id="fcd5b-120">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-120">Required attribute.</span></span><br /><br /> <span data-ttu-id="fcd5b-121">Specifica il tipo del listener.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-121">Specifies the type of the listener.</span></span> <span data-ttu-id="fcd5b-122">È necessario utilizzare una stringa che soddisfi i requisiti indicati in [specifica di nomi di tipo completi](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="fcd5b-122">You must use a string that meets the requirements specified in [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|`initializeData`|<span data-ttu-id="fcd5b-123">Attributo facoltativo.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-123">Optional attribute.</span></span><br /><br /> <span data-ttu-id="fcd5b-124">La stringa passata al costruttore per la classe specificata.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-124">The string passed to the constructor for the specified class.</span></span>|  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="fcd5b-125">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="fcd5b-125">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<filter\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|Consente di aggiungere un filtro a un listener della raccolta `sharedListeners`.|  
+|<span data-ttu-id="fcd5b-126">Elemento</span><span class="sxs-lookup"><span data-stu-id="fcd5b-126">Element</span></span>|<span data-ttu-id="fcd5b-127">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fcd5b-127">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="fcd5b-128">\<filter></span><span class="sxs-lookup"><span data-stu-id="fcd5b-128">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|<span data-ttu-id="fcd5b-129">Aggiunge un filtro a un listener nella raccolta `sharedListeners`.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-129">Adds a filter to a listener in the `sharedListeners` collection.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="fcd5b-130">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="fcd5b-130">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`system.diagnostics`|Consente di specificare listener di traccia per la raccolta, la memorizzazione e l'invio di messaggi, nonché il livello in cui viene impostata un'opzione di analisi.|  
-|`sharedListeners`|Raccolta di listener cui può fare riferimento qualsiasi elemento di origine o di traccia.|  
+|<span data-ttu-id="fcd5b-131">Elemento</span><span class="sxs-lookup"><span data-stu-id="fcd5b-131">Element</span></span>|<span data-ttu-id="fcd5b-132">Descrizione</span><span class="sxs-lookup"><span data-stu-id="fcd5b-132">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="fcd5b-133">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="fcd5b-134">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-134">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sharedListeners`|<span data-ttu-id="fcd5b-135">Una raccolta di listener che qualsiasi origine o un elemento di traccia può fare riferimento.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-135">A collection of listeners that any source or trace element can reference.</span></span>|  
   
-## Note  
- Le classi di listener fornite con .NET Framework derivano dalla classe <xref:System.Diagnostics.TraceListener>.  Il valore dell'attributo `name` viene utilizzato per aggiungere il listener condiviso a una raccolta `Listeners` per una traccia o un'origine di traccia.  Il valore dell'attributo `initializeData` dipende dal tipo di listener creato.  Non per tutti i listener di traccia è necessario specificare l'attributo `initializeData`.  
+## <a name="remarks"></a><span data-ttu-id="fcd5b-136">Note</span><span class="sxs-lookup"><span data-stu-id="fcd5b-136">Remarks</span></span>  
+ <span data-ttu-id="fcd5b-137">Le classi di listener fornite con .NET Framework derivano dalla <xref:System.Diagnostics.TraceListener> classe.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-137">The listener classes shipped with the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span> <span data-ttu-id="fcd5b-138">Il valore per il `name` attributo viene utilizzato per aggiungere il listener condiviso a un `Listeners` insieme per una traccia o da un'origine di traccia.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-138">The value for the `name` attribute is used to add the shared listener to a `Listeners` collection for either a trace or a trace source.</span></span> <span data-ttu-id="fcd5b-139">Il valore per il `initializeData` attributo dipende dal tipo di listener creato.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-139">The value for the `initializeData` attribute depends on the type of listener you create.</span></span> <span data-ttu-id="fcd5b-140">Non tutti i listener di traccia è necessario specificare `initializeData`.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-140">Not all trace listeners require that you specify `initializeData`.</span></span>  
   
 > [!NOTE]
->  Quando si utilizza l'attributo `initializeData`, è possibile ottenere l'avviso del compilatore "Attributo 'initializeData' non dichiarato". Questo avviso viene generato perché le impostazioni di configurazione vengono convalidate in base alla classe di base astratta <xref:System.Diagnostics.TraceListener> che non riconosce l'attributo `initializeData`.  In genere, è possibile ignorare questo avviso per implementazioni del listener di traccia che presentano un costruttore che accetta un parametro.  
+>  <span data-ttu-id="fcd5b-141">Quando si utilizza il `initializeData` attributo, è possibile che venga visualizzato l'avviso "l'attributo 'initializeData' non dichiarato." del compilatore</span><span class="sxs-lookup"><span data-stu-id="fcd5b-141">When you use the `initializeData` attribute, you may get the compiler warning "The 'initializeData' attribute is not declared."</span></span> <span data-ttu-id="fcd5b-142">Questo avviso viene generato perché le impostazioni di configurazione vengono convalidate in base alla classe base astratta <xref:System.Diagnostics.TraceListener>, che non riconosce il `initializeData` attributo.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-142">This warning occurs because the configuration settings are validated against the abstract base class <xref:System.Diagnostics.TraceListener>, which does not recognize the `initializeData` attribute.</span></span> <span data-ttu-id="fcd5b-143">In genere, è possibile ignorare questo avviso per le implementazioni di listener di traccia che dispone di un costruttore che accetta un parametro.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-143">Typically, you can ignore this warning for trace listener implementations that have a constructor that takes a parameter.</span></span>  
   
- Nella tabella riportata di seguito vengono elencati i listener di traccia inclusi in .NET Framework e viene fornita una descrizione del valore dei relativi attributi `initializeData`.  
+ <span data-ttu-id="fcd5b-144">Nella tabella seguente mostra i listener di traccia inclusi in .NET Framework e descrive il valore della loro `initializeData` attributi.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-144">The following table shows the trace listeners that are included with the .NET Framework and describes the value of their `initializeData` attributes.</span></span>  
   
-|Classe di listener di traccia|Valore dell'attributo initializeData|  
-|-----------------------------------|------------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener>|Valore `useErrorStream` del costruttore <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>.  Impostare l'attributo `initializeData` su `true` per scrivere l'output di traccia e di debug nel flusso di errori standard. Impostarlo invece su `false` per scrivere nel flusso di output standard.|  
-|<xref:System.Diagnostics.DelimitedListTraceListener>|Nome del file in cui scrive <xref:System.Diagnostics.DelimitedListTraceListener>.|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>|Nome di un'origine del log eventi esistente.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=fullName>|Nome del file in cui <xref:System.Diagnostics.EventSchemaTraceListener> esegue operazioni di scrittura.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=fullName>|Nome del file in cui <xref:System.Diagnostics.TextWriterTraceListener> esegue operazioni di scrittura.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener>|Nome del file in cui <xref:System.Diagnostics.XmlWriterTraceListener> esegue operazioni di scrittura.|  
+|<span data-ttu-id="fcd5b-145">Classe di listener di traccia</span><span class="sxs-lookup"><span data-stu-id="fcd5b-145">Trace listener class</span></span>|<span data-ttu-id="fcd5b-146">valore dell'attributo initializeData</span><span class="sxs-lookup"><span data-stu-id="fcd5b-146">initializeData attribute value</span></span>|  
+|--------------------------|------------------------------------|  
+|<xref:System.Diagnostics.ConsoleTraceListener>|<span data-ttu-id="fcd5b-147">Il `useErrorStream` valore per il <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> costruttore.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-147">The `useErrorStream` value for the <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> constructor.</span></span>  <span data-ttu-id="fcd5b-148">Impostare il `initializeData` attributo "`true`"per scrivere output di traccia e debug nel flusso di errore standard; impostarla su"`false`" per scrivere nel flusso di output standard.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-148">Set the `initializeData` attribute to "`true`" to write trace and debug output to the standard error stream; set it to "`false`" to write to the standard output stream.</span></span>|  
+|<xref:System.Diagnostics.DelimitedListTraceListener>|<span data-ttu-id="fcd5b-149">Il nome del file di <xref:System.Diagnostics.DelimitedListTraceListener> scrive.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-149">The name of the file the <xref:System.Diagnostics.DelimitedListTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|<span data-ttu-id="fcd5b-150">Il nome di un'origine di log eventi esistente.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-150">The name of an existing event log source.</span></span>|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|<span data-ttu-id="fcd5b-151">Il nome del file che il <xref:System.Diagnostics.EventSchemaTraceListener> scrive.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-151">The name of the file that the <xref:System.Diagnostics.EventSchemaTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|<span data-ttu-id="fcd5b-152">Il nome del file che il <xref:System.Diagnostics.TextWriterTraceListener> scrive.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-152">The name of the file that the <xref:System.Diagnostics.TextWriterTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.XmlWriterTraceListener>|<span data-ttu-id="fcd5b-153">Il nome del file che il <xref:System.Diagnostics.XmlWriterTraceListener> scrive.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-153">The name of the file that the <xref:System.Diagnostics.XmlWriterTraceListener> writes to.</span></span>|  
   
-## File di configurazione  
- È possibile utilizzare questo elemento nei file di configurazione del computer \(Machine.config\) e dell'applicazione.  
+## <a name="configuration-file"></a><span data-ttu-id="fcd5b-154">File di configurazione</span><span class="sxs-lookup"><span data-stu-id="fcd5b-154">Configuration File</span></span>  
+ <span data-ttu-id="fcd5b-155">Questo elemento può essere usato nel file di configurazione del computer (Machine. config) e file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-155">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come utilizzare gli elementi di `<add>` per aggiungere <xref:System.Diagnostics.TextWriterTraceListener> `textListener` alla raccolta di `sharedListeners`.   `textListener` viene aggiunto per nome alla raccolta di `Listeners` per l'origine di traccia `TraceSourceApp`.  Il listener `textListener` scrive l'output di traccia nel file myListener.log.  
+## <a name="example"></a><span data-ttu-id="fcd5b-156">Esempio</span><span class="sxs-lookup"><span data-stu-id="fcd5b-156">Example</span></span>  
+ <span data-ttu-id="fcd5b-157">Nell'esempio seguente viene illustrato come utilizzare `<add>` elementi da aggiungere il <xref:System.Diagnostics.TextWriterTraceListener> `textListener` per il `sharedListeners` insieme.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-157">The following example shows how to use `<add>` elements to add the <xref:System.Diagnostics.TextWriterTraceListener>`textListener` to the `sharedListeners` collection.</span></span>   <span data-ttu-id="fcd5b-158">`textListener`viene aggiunto per nome per il `Listeners` raccolta per l'origine di traccia `TraceSourceApp`.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-158">`textListener` is added by name to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span> <span data-ttu-id="fcd5b-159">Il `textListener` listener scrive output di traccia nel file myListener.</span><span class="sxs-lookup"><span data-stu-id="fcd5b-159">The `textListener` listener writes trace output to the file myListener.log.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -112,8 +114,8 @@ Consente di aggiungere un listener alla raccolta `sharedListeners`.  `sharedList
 </configuration>   
 ```  
   
-## Vedere anche  
- <xref:System.Diagnostics.TraceSource>   
- <xref:System.Diagnostics.TraceListener>   
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a><span data-ttu-id="fcd5b-160">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="fcd5b-160">See Also</span></span>  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.TraceListener>  
+ [<span data-ttu-id="fcd5b-161">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="fcd5b-161">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="fcd5b-162">Listener di traccia</span><span class="sxs-lookup"><span data-stu-id="fcd5b-162">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

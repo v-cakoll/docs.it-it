@@ -1,0 +1,67 @@
+---
+title: 'Gestione di risorse: parola chiave use (F#)'
+description: 'Scopri di F # parola chiave ''use'' e la funzione ''utilizzando'', che consentono di controllare l''inizializzazione e il rilascio delle risorse.'
+keywords: visual f#, f#, programmazione funzionale
+author: cartermp
+ms.author: phcart
+ms.date: 05/16/2016
+ms.topic: language-reference
+ms.prod: .net
+ms.technology: devlang-fsharp
+ms.devlang: fsharp
+ms.assetid: 00c3040e-859f-4dad-a7b5-7b8d44dc232c
+ms.openlocfilehash: d4e8626f07f1c77e52e8fabd5ccc07dbf1fa8ddd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
+---
+# <a name="resource-management-the-use-keyword"></a><span data-ttu-id="09835-104">Gestione di risorse: parola chiave use</span><span class="sxs-lookup"><span data-stu-id="09835-104">Resource Management: The use Keyword</span></span>
+
+<span data-ttu-id="09835-105">In questo argomento descrive la parola chiave `use` e `using` (funzione), che consentono di controllare l'inizializzazione e il rilascio delle risorse.</span><span class="sxs-lookup"><span data-stu-id="09835-105">This topic describes the keyword `use` and the `using` function, which can control the initialization and release of resources.</span></span>
+
+## <a name="resources"></a><span data-ttu-id="09835-106">Risorse</span><span class="sxs-lookup"><span data-stu-id="09835-106">Resources</span></span>
+<span data-ttu-id="09835-107">Il termine *risorse* viene utilizzato in più modi.</span><span class="sxs-lookup"><span data-stu-id="09835-107">The term *resource* is used in more than one way.</span></span> <span data-ttu-id="09835-108">Sì, le risorse possono essere dati utilizzati da un'applicazione, ad esempio stringhe, immagini e così via, ma in questo contesto, *risorse* fa riferimento alle risorse del sistema operativo o del software, ad esempio contesti di dispositivo di grafica, gli handle di file di rete e database connessioni, gli oggetti di concorrenza, ad esempio gli handle di attesa e così via.</span><span class="sxs-lookup"><span data-stu-id="09835-108">Yes, resources can be data that an application uses, such as strings, graphics, and the like, but in this context, *resources* refers to software or operating system resources, such as graphics device contexts, file handles, network and database connections, concurrency objects such as wait handles, and so on.</span></span> <span data-ttu-id="09835-109">L'utilizzo di queste risorse dalle applicazioni comporta l'acquisizione della risorsa dal sistema operativo o di altri provider di risorse, seguito da nella versione più recente della risorsa per il pool in modo che possa essere fornita a un'altra applicazione.</span><span class="sxs-lookup"><span data-stu-id="09835-109">The use of these resources by applications involves the acquisition of the resource from the operating system or other resource provider, followed by the later release of the resource to the pool so that it can be provided to another application.</span></span> <span data-ttu-id="09835-110">Problemi si verificano quando le applicazioni non rilasciare le risorse al pool più comuni.</span><span class="sxs-lookup"><span data-stu-id="09835-110">Problems occur when applications do not release resources back to the common pool.</span></span>
+
+## <a name="managing-resources"></a><span data-ttu-id="09835-111">Gestione di risorse</span><span class="sxs-lookup"><span data-stu-id="09835-111">Managing Resources</span></span>
+<span data-ttu-id="09835-112">Per la gestione di risorse in un'applicazione in modo efficiente e all'individuazione, è necessario rilasciare le risorse in modo rapido e prevedibile.</span><span class="sxs-lookup"><span data-stu-id="09835-112">To efficiently and responsibly manage resources in an application, you must release resources promptly and in a predictable manner.</span></span> <span data-ttu-id="09835-113">.NET Framework consente di effettuare questa operazione fornendo il `System.IDisposable` interfaccia.</span><span class="sxs-lookup"><span data-stu-id="09835-113">The .NET Framework helps you do this by providing the `System.IDisposable` interface.</span></span> <span data-ttu-id="09835-114">Un tipo che implementa `System.IDisposable` ha il `System.IDisposable.Dispose` metodo, che libera correttamente le risorse.</span><span class="sxs-lookup"><span data-stu-id="09835-114">A type that implements `System.IDisposable` has the `System.IDisposable.Dispose` method, which correctly frees resources.</span></span> <span data-ttu-id="09835-115">Le applicazioni scritte ben garantiscono che `System.IDisposable.Dispose` viene chiamato immediatamente quando qualsiasi oggetto che contiene una risorsa limitata non è più necessario.</span><span class="sxs-lookup"><span data-stu-id="09835-115">Well-written applications guarantee that `System.IDisposable.Dispose` is called promptly when any object that holds a limited resource is no longer needed.</span></span> <span data-ttu-id="09835-116">Fortunatamente, la maggior parte dei linguaggi .NET forniscono supporto per semplificare questa operazione e, F # non costituisce un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="09835-116">Fortunately, most .NET languages provide support to make this easier, and F# is no exception.</span></span> <span data-ttu-id="09835-117">Esistono due utili costrutti di linguaggio che supportano il modello dispose: il `use` associazione e `using` (funzione).</span><span class="sxs-lookup"><span data-stu-id="09835-117">There are two useful language constructs that support the dispose pattern: the `use` binding and the `using` function.</span></span>
+
+## <a name="use-binding"></a><span data-ttu-id="09835-118">Utilizzare l'associazione</span><span class="sxs-lookup"><span data-stu-id="09835-118">use Binding</span></span>
+<span data-ttu-id="09835-119">Il `use` parola chiave ha un formato simile a quella del `let` associazione:</span><span class="sxs-lookup"><span data-stu-id="09835-119">The `use` keyword has a form that resembles that of the `let` binding:</span></span>
+
+<span data-ttu-id="09835-120">Utilizzare *valore* = *espressione*</span><span class="sxs-lookup"><span data-stu-id="09835-120">use *value* = *expression*</span></span>
+
+<span data-ttu-id="09835-121">Fornisce la stessa funzionalità di un `let` associazione ma aggiunge una chiamata a `Dispose` sul valore quando il valore esce dall'ambito.</span><span class="sxs-lookup"><span data-stu-id="09835-121">It provides the same functionality as a `let` binding but adds a call to `Dispose` on the value when the value goes out of scope.</span></span> <span data-ttu-id="09835-122">Si noti che il compilatore inserisce un controllo null sul valore, in modo che se il valore è `null`, la chiamata a `Dispose` non viene eseguito un tentativo.</span><span class="sxs-lookup"><span data-stu-id="09835-122">Note that the compiler inserts a null check on the value, so that if the value is `null`, the call to `Dispose` is not attempted.</span></span>
+
+<span data-ttu-id="09835-123">Nell'esempio seguente viene illustrato come chiudere automaticamente un file utilizzando il `use` (parola chiave).</span><span class="sxs-lookup"><span data-stu-id="09835-123">The following example shows how to close a file automatically by using the `use` keyword.</span></span>
+
+[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
+
+>[!NOTE]
+<span data-ttu-id="09835-124">È possibile utilizzare `use` nelle espressioni di calcolo, nel qual caso una versione personalizzata del `use` viene utilizzata l'espressione.</span><span class="sxs-lookup"><span data-stu-id="09835-124">You can use `use` in computation expressions, in which case a customized version of the `use` expression is used.</span></span> <span data-ttu-id="09835-125">Per ulteriori informazioni, vedere [sequenze](sequences.md), [flussi di lavoro asincroni](asynchronous-workflows.md), e [espressioni di calcolo](computation-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="09835-125">For more information, see [Sequences](sequences.md), [Asynchronous Workflows](asynchronous-workflows.md), and [Computation Expressions](computation-expressions.md).</span></span>
+
+
+## <a name="using-function"></a><span data-ttu-id="09835-126">funzione</span><span class="sxs-lookup"><span data-stu-id="09835-126">using Function</span></span>
+<span data-ttu-id="09835-127">Il `using` funzione ha il formato seguente:</span><span class="sxs-lookup"><span data-stu-id="09835-127">The `using` function has the following form:</span></span>
+
+<span data-ttu-id="09835-128">`using`(*expression1*) *funzione o espressione lambda*</span><span class="sxs-lookup"><span data-stu-id="09835-128">`using` (*expression1*) *function-or-lambda*</span></span>
+
+<span data-ttu-id="09835-129">In un `using` espressione *expression1* crea l'oggetto che deve essere eliminato.</span><span class="sxs-lookup"><span data-stu-id="09835-129">In a `using` expression, *expression1* creates the object that must be disposed.</span></span> <span data-ttu-id="09835-130">Il risultato di *expression1* (l'oggetto che deve essere eliminato) diventa un argomento, *valore*a *funzione o lambda*, che è una funzione che prevede un singolo rimanente argomento di tipo che corrisponde al valore prodotto da *expression1*, o un'espressione lambda che prevede un argomento di quel tipo.</span><span class="sxs-lookup"><span data-stu-id="09835-130">The result of *expression1* (the object that must be disposed) becomes an argument, *value*, to *function-or-lambda*, which is either a function that expects a single remaining argument of a type that matches the value produced by *expression1*, or a lambda expression that expects an argument of that type.</span></span> <span data-ttu-id="09835-131">Al termine dell'esecuzione della funzione, il runtime chiama `Dispose` e libera le risorse (a meno che il valore è `null`, nel qual caso non viene effettuata la chiamata a Dispose).</span><span class="sxs-lookup"><span data-stu-id="09835-131">At the end of the execution of the function, the runtime calls `Dispose` and frees the resources (unless the value is `null`, in which case the call to Dispose is not attempted).</span></span>
+
+<span data-ttu-id="09835-132">Nell'esempio seguente viene illustrato il `using` espressione con un'espressione lambda.</span><span class="sxs-lookup"><span data-stu-id="09835-132">The following example demonstrates the `using` expression with a lambda expression.</span></span>
+
+[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6302.fs)]
+
+<span data-ttu-id="09835-133">L'esempio seguente mostra il `using` espressione con una funzione.</span><span class="sxs-lookup"><span data-stu-id="09835-133">The next example shows the `using` expression with a function.</span></span>
+
+[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
+
+<span data-ttu-id="09835-134">Si noti che la funzione potrebbe essere una funzione che presenta alcuni argomenti già applicati.</span><span class="sxs-lookup"><span data-stu-id="09835-134">Note that the function could be a function that has some arguments applied already.</span></span> <span data-ttu-id="09835-135">Esempio di codice seguente viene illustrato questo.</span><span class="sxs-lookup"><span data-stu-id="09835-135">The following code example demonstrates this.</span></span> <span data-ttu-id="09835-136">Viene creato un file che contiene la stringa `XYZ`.</span><span class="sxs-lookup"><span data-stu-id="09835-136">It creates a file that contains the string `XYZ`.</span></span>
+
+[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
+
+<span data-ttu-id="09835-137">Il `using` funzione e `use` associazione sono quasi equivalenti modi per ottenere lo stesso risultato.</span><span class="sxs-lookup"><span data-stu-id="09835-137">The `using` function and the `use` binding are nearly equivalent ways to accomplish the same thing.</span></span> <span data-ttu-id="09835-138">Il `using` parola chiave consente un maggiore controllo sul momento `Dispose` viene chiamato.</span><span class="sxs-lookup"><span data-stu-id="09835-138">The `using` keyword provides more control over when `Dispose` is called.</span></span> <span data-ttu-id="09835-139">Quando si utilizza `using`, `Dispose` viene chiamato alla fine dell'espressione lambda o di funzione; quando si utilizza il `use` (parola chiave), `Dispose` viene chiamato alla fine del blocco di codice che lo contiene.</span><span class="sxs-lookup"><span data-stu-id="09835-139">When you use `using`, `Dispose` is called at the end of the function or lambda expression; when you use the `use` keyword, `Dispose` is called at the end of the containing code block.</span></span> <span data-ttu-id="09835-140">In generale, è preferibile utilizzare `use` anziché il `using` (funzione).</span><span class="sxs-lookup"><span data-stu-id="09835-140">In general, you should prefer to use `use` instead of the `using` function.</span></span>
+
+
+## <a name="see-also"></a><span data-ttu-id="09835-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="09835-141">See Also</span></span>
+[<span data-ttu-id="09835-142">Riferimenti per il linguaggio F#</span><span class="sxs-lookup"><span data-stu-id="09835-142">F# Language Reference</span></span>](index.md)

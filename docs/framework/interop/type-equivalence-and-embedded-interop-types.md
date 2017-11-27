@@ -5,68 +5,60 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - type equivalence
 - embedded interop types
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e9a7b39047edcd8e2c770e17a33dd73e75ee5083
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 4b29ed1c3659b1705640888ded5fe21432dc6ada
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="type-equivalence-and-embedded-interop-types"></a>Equivalenza del tipo e tipi di interoperabilità incorporati
-A partire dal [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Common Language Runtime supporta l'incorporamento di informazioni sui tipi COM direttamente negli assembly gestiti, anziché richiedere agli assembly gestiti di ottenere informazioni sui tipi COM dagli assembly di interoperabilità. Dato che le informazioni sui tipi incorporate includono solo i tipi e membri che vengono effettivamente usati da un assembly gestito, due assembly gestiti potrebbero avere viste diverse dello stesso tipo COM. Ogni assembly gestito a un oggetto <xref:System.Type> diverso per rappresentare la vista specifica del tipo COM. Common Language Runtime supporta l'equivalenza del tipo tra queste viste diverse per interfacce, strutture, enumerazioni e delegati.  
+# <a name="type-equivalence-and-embedded-interop-types"></a><span data-ttu-id="d2a1b-102">Equivalenza del tipo e tipi di interoperabilità incorporati</span><span class="sxs-lookup"><span data-stu-id="d2a1b-102">Type Equivalence and Embedded Interop Types</span></span>
+<span data-ttu-id="d2a1b-103">A partire dal [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Common Language Runtime supporta l'incorporamento di informazioni sui tipi COM direttamente negli assembly gestiti, anziché richiedere agli assembly gestiti di ottenere informazioni sui tipi COM dagli assembly di interoperabilità.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-103">Beginning with the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the common language runtime supports embedding type information for COM types directly into managed assemblies, instead of requiring the managed assemblies to obtain type information for COM types from interop assemblies.</span></span> <span data-ttu-id="d2a1b-104">Dato che le informazioni sui tipi incorporate includono solo i tipi e membri che vengono effettivamente usati da un assembly gestito, due assembly gestiti potrebbero avere viste diverse dello stesso tipo COM.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-104">Because the embedded type information includes only the types and members that are actually used by a managed assembly, two managed assemblies might have very different views of the same COM type.</span></span> <span data-ttu-id="d2a1b-105">Ogni assembly gestito a un oggetto <xref:System.Type> diverso per rappresentare la vista specifica del tipo COM.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-105">Each managed assembly has a different <xref:System.Type> object to represent its view of the COM type.</span></span> <span data-ttu-id="d2a1b-106">Common Language Runtime supporta l'equivalenza del tipo tra queste viste diverse per interfacce, strutture, enumerazioni e delegati.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-106">The common language runtime supports type equivalence between these different views for interfaces, structures, enumerations, and delegates.</span></span>  
   
- Equivalenza del tipo significa che è possibile eseguire il cast di un oggetto COM passato da un assembly gestito a un altro sul tipo gestito appropriato nell'assembly ricevente.  
+ <span data-ttu-id="d2a1b-107">Equivalenza del tipo significa che è possibile eseguire il cast di un oggetto COM passato da un assembly gestito a un altro sul tipo gestito appropriato nell'assembly ricevente.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-107">Type equivalence means that a COM object that is passed from one managed assembly to another can be cast to the appropriate managed type in the receiving assembly.</span></span>  
   
 > [!NOTE]
->  L'equivalenza del tipo e i tipi di interoperabilità incorporati semplificano la distribuzione delle applicazioni e dei componenti aggiuntivi che usano componenti COM, perché non è necessario distribuire gli assembly di interoperabilità con le applicazioni. Gli sviluppatori di componenti COM condivisi devono ancora creare gli assembly di interoperabilità primari, se vogliono che i componenti possano essere usati da versioni precedenti di .NET Framework.  
+>  <span data-ttu-id="d2a1b-108">L'equivalenza del tipo e i tipi di interoperabilità incorporati semplificano la distribuzione delle applicazioni e dei componenti aggiuntivi che usano componenti COM, perché non è necessario distribuire gli assembly di interoperabilità con le applicazioni.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-108">Type equivalence and embedded interop types simplify the deployment of applications and add-ins that use COM components, because it is not necessary to deploy interop assemblies with the applications.</span></span> <span data-ttu-id="d2a1b-109">Gli sviluppatori di componenti COM condivisi devono ancora creare gli assembly di interoperabilità primari, se vogliono che i componenti possano essere usati da versioni precedenti di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-109">Developers of shared COM components still have to create primary interop assemblies (PIAs) if they want their components to be used by earlier versions of the .NET Framework.</span></span>  
   
-## <a name="type-equivalence"></a>Equivalenza del tipo  
- L'equivalenza dei tipi COM è supportata per interfacce, strutture, enumerazioni e delegati. I tipi COM sono considerati equivalenti se vengono soddisfatte tutte le condizioni seguenti:  
+## <a name="type-equivalence"></a><span data-ttu-id="d2a1b-110">Equivalenza del tipo</span><span class="sxs-lookup"><span data-stu-id="d2a1b-110">Type Equivalence</span></span>  
+ <span data-ttu-id="d2a1b-111">L'equivalenza dei tipi COM è supportata per interfacce, strutture, enumerazioni e delegati.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-111">Equivalence of COM types is supported for interfaces, structures, enumerations, and delegates.</span></span> <span data-ttu-id="d2a1b-112">I tipi COM sono considerati equivalenti se vengono soddisfatte tutte le condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="d2a1b-112">COM types qualify as equivalent if all of the following are true:</span></span>  
   
--   I tipi sono entrambi interfacce o entrambi strutture o entrambi enumerazioni o entrambi delegati.  
+-   <span data-ttu-id="d2a1b-113">I tipi sono entrambi interfacce o entrambi strutture o entrambi enumerazioni o entrambi delegati.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-113">The types are both interfaces, or both structures, or both enumerations, or both delegates.</span></span>  
   
--   I tipi hanno la stessa identità, come descritto nella sezione successiva.  
+-   <span data-ttu-id="d2a1b-114">I tipi hanno la stessa identità, come descritto nella sezione successiva.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-114">The types have the same identity, as described in the next section.</span></span>  
   
--   Entrambi i tipi sono idonei per l'equivalenza del tipo, come descritto nella sezione [Contrassegno dei tipi COM per l'equivalenza del tipo](#type_equiv).  
+-   <span data-ttu-id="d2a1b-115">Entrambi i tipi sono idonei per l'equivalenza del tipo, come descritto nella sezione [Contrassegno dei tipi COM per l'equivalenza del tipo](#type_equiv).</span><span class="sxs-lookup"><span data-stu-id="d2a1b-115">Both types are eligible for type equivalence, as described in the [Marking COM Types for Type Equivalence](#type_equiv) section.</span></span>  
   
-### <a name="type-identity"></a>Identità dei tipi  
- Due tipi vengono considerati aventi la stessa identità quando i relativi ambiti e identità corrispondono, in altre parole, se ognuno ha l'attributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> e i due attributi hanno proprietà <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> e <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> corrispondenti. Il confronto per <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> non applica la distinzione tra maiuscole e minuscole.  
+### <a name="type-identity"></a><span data-ttu-id="d2a1b-116">Identità dei tipi</span><span class="sxs-lookup"><span data-stu-id="d2a1b-116">Type Identity</span></span>  
+ <span data-ttu-id="d2a1b-117">Due tipi vengono considerati aventi la stessa identità quando i relativi ambiti e identità corrispondono, in altre parole, se ognuno ha l'attributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> e i due attributi hanno proprietà <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> e <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> corrispondenti.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-117">Two types are determined to have the same identity when their scopes and identities match, in other words, if they each have the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> attribute, and the two attributes have matching <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> and <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> properties.</span></span> <span data-ttu-id="d2a1b-118">Il confronto per <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> non applica la distinzione tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-118">The comparison for <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> is case-insensitive.</span></span>  
   
- Se un tipo non ha l'attributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> oppure ha un attributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> che non specifica l'ambito e l'identificatore, il tipo può ancora essere considerato per l'equivalenza, come indicato di seguito:  
+ <span data-ttu-id="d2a1b-119">Se un tipo non ha l'attributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> oppure ha un attributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> che non specifica l'ambito e l'identificatore, il tipo può ancora essere considerato per l'equivalenza, come indicato di seguito:</span><span class="sxs-lookup"><span data-stu-id="d2a1b-119">If a type does not have the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> attribute, or if it has a <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> attribute that does not specify scope and identifier, the type can still be considered for equivalence as follows:</span></span>  
   
--   Per le interfacce viene usato il valore di <xref:System.Runtime.InteropServices.GuidAttribute> invece della proprietà <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=fullName> e viene usata la proprietà <xref:System.Type.FullName%2A?displayProperty=fullName> (vale a dire il nome di tipo, incluso lo spazio dei nomi) invece della proprietà <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=fullName>.  
+-   <span data-ttu-id="d2a1b-120">Per le interfacce viene usato il valore di <xref:System.Runtime.InteropServices.GuidAttribute> invece della proprietà <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=nameWithType> e viene usata la proprietà <xref:System.Type.FullName%2A?displayProperty=nameWithType> (vale a dire il nome di tipo, incluso lo spazio dei nomi) invece della proprietà <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-120">For interfaces, the value of the <xref:System.Runtime.InteropServices.GuidAttribute> is used instead of the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A?displayProperty=nameWithType> property, and the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property (that is, the type name, including the namespace) is used instead of the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A?displayProperty=nameWithType> property.</span></span>  
   
--   Per le strutture, le enumerazioni e i delegati, viene usato l'attributo <xref:System.Runtime.InteropServices.GuidAttribute> dell'assembly contenitore invece della proprietà <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> e viene usata la proprietà <xref:System.Type.FullName%2A?displayProperty=fullName> al posto della proprietà <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A>.  
+-   <span data-ttu-id="d2a1b-121">Per le strutture, le enumerazioni e i delegati, viene usato l'attributo <xref:System.Runtime.InteropServices.GuidAttribute> dell'assembly contenitore invece della proprietà <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> e viene usata la proprietà <xref:System.Type.FullName%2A?displayProperty=nameWithType> al posto della proprietà <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A>.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-121">For structures, enumerations, and delegates, the <xref:System.Runtime.InteropServices.GuidAttribute> of the containing assembly is used instead of the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> property, and the <xref:System.Type.FullName%2A?displayProperty=nameWithType> property is used instead of the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> property.</span></span>  
   
 <a name="type_equiv"></a>   
-### <a name="marking-com-types-for-type-equivalence"></a>Contrassegno dei tipi COM per l'equivalenza del tipo  
- È possibile contrassegnare un tipo come idoneo per l'equivalenza del tipo in due modi:  
+### <a name="marking-com-types-for-type-equivalence"></a><span data-ttu-id="d2a1b-122">Contrassegno dei tipi COM per l'equivalenza del tipo</span><span class="sxs-lookup"><span data-stu-id="d2a1b-122">Marking COM Types for Type Equivalence</span></span>  
+ <span data-ttu-id="d2a1b-123">È possibile contrassegnare un tipo come idoneo per l'equivalenza del tipo in due modi:</span><span class="sxs-lookup"><span data-stu-id="d2a1b-123">You can mark a type as eligible for type equivalence in two ways:</span></span>  
   
--   Applicare l'attributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> al tipo.  
+-   <span data-ttu-id="d2a1b-124">Applicare l'attributo <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> al tipo.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-124">Apply the <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> attribute to the type.</span></span>  
   
--   Impostare il tipo come tipo di importazione COM. Un'interfaccia è un tipo di importazione COM se ha l'attributo <xref:System.Runtime.InteropServices.ComImportAttribute>. Un'interfaccia, una struttura, un'enumerazione o un delegato è un tipo di importazione COM se l'assembly in cui è definito ha l'attributo <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute>.  
+-   <span data-ttu-id="d2a1b-125">Impostare il tipo come tipo di importazione COM.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-125">Make the type a COM import type.</span></span> <span data-ttu-id="d2a1b-126">Un'interfaccia è un tipo di importazione COM se ha l'attributo <xref:System.Runtime.InteropServices.ComImportAttribute>.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-126">An interface is a COM import type if it has the <xref:System.Runtime.InteropServices.ComImportAttribute> attribute.</span></span> <span data-ttu-id="d2a1b-127">Un'interfaccia, una struttura, un'enumerazione o un delegato è un tipo di importazione COM se l'assembly in cui è definito ha l'attributo <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute>.</span><span class="sxs-lookup"><span data-stu-id="d2a1b-127">An interface, structure, enumeration, or delegate is a COM import type if the assembly in which it is defined has the <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute> attribute.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Type.IsEquivalentTo%2A>   
- [Uso dei tipi COM nel codice gestito](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
- [Importazione di una libreria dei tipi come assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
-
+## <a name="see-also"></a><span data-ttu-id="d2a1b-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d2a1b-128">See Also</span></span>  
+ <xref:System.Type.IsEquivalentTo%2A>  
+ [<span data-ttu-id="d2a1b-129">Utilizzo di tipi COM nel codice gestito</span><span class="sxs-lookup"><span data-stu-id="d2a1b-129">Using COM Types in Managed Code</span></span>](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [<span data-ttu-id="d2a1b-130">Importazione di una libreria dei tipi come assembly</span><span class="sxs-lookup"><span data-stu-id="d2a1b-130">Importing a Type Library as an Assembly</span></span>](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)

@@ -1,59 +1,64 @@
 ---
-title: "Procedura: creare un servizio che usa un validator del certificato personalizzato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF, autenticazione"
+title: 'Procedura: creare un servizio che usa un validator del certificato personalizzato'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3533b17a1e7f3d244bc3c1d97eb82459a5316af1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: creare un servizio che usa un validator del certificato personalizzato
-In questo argomento viene illustrato come implementare un validator del certificato personalizzato e come configurare le credenziali del client o del servizio per sostituire la logica di convalida del certificato predefinita con il validator del certificato personalizzato.  
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a><span data-ttu-id="3c501-102">Procedura: creare un servizio che usa un validator del certificato personalizzato</span><span class="sxs-lookup"><span data-stu-id="3c501-102">How to: Create a Service that Employs a Custom Certificate Validator</span></span>
+<span data-ttu-id="3c501-103">In questo argomento viene illustrato come implementare un validator del certificato personalizzato e come configurare le credenziali del client o del servizio per sostituire la logica di convalida del certificato predefinita con il validator del certificato personalizzato.</span><span class="sxs-lookup"><span data-stu-id="3c501-103">This topic shows how to implement a custom certificate validator and how to configure client or service credentials to replace the default certificate validation logic with the custom certificate validator.</span></span>  
   
- Se il certificato X.509 viene usato per autenticare un client o un servizio, per impostazione predefinita [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa l'archivio certificati di Windows e l'API di crittografia per convalidare il certificato e verificare che sia attendibile.  A volte la funzionalità di convalida del certificato predefinita non è sufficiente e deve essere modificata.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fornisce un modo semplice per modificare la logica di convalida consentendo agli utenti di aggiungere un validator del certificato personalizzato.  Se si specifica un validator del certificato personalizzato, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non usa la logica di convalida del certificato incorporata, bensì si basa sul validator personalizzato.  
+ <span data-ttu-id="3c501-104">Se il certificato X.509 viene usato per autenticare un client o un servizio, per impostazione predefinita [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa l'archivio certificati di Windows e l'API di crittografia per convalidare il certificato e verificare che sia attendibile.</span><span class="sxs-lookup"><span data-stu-id="3c501-104">If the X.509 certificate is used to authenticate a client or service, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] by default uses the Windows certificate store and Crypto API to validate the certificate and to ensure that it is trusted.</span></span> <span data-ttu-id="3c501-105">A volte la funzionalità di convalida del certificato predefinita non è sufficiente e deve essere modificata.</span><span class="sxs-lookup"><span data-stu-id="3c501-105">Sometimes the built-in certificate validation functionality is not enough and must be changed.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="3c501-106"> fornisce un modo semplice per modificare la logica di convalida consentendo agli utenti di aggiungere un validator del certificato personalizzato.</span><span class="sxs-lookup"><span data-stu-id="3c501-106"> provides an easy way to change the validation logic by allowing users to add a custom certificate validator.</span></span> <span data-ttu-id="3c501-107">Se si specifica un validator del certificato personalizzato, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non usa la logica di convalida del certificato incorporata, bensì si basa sul validator personalizzato.</span><span class="sxs-lookup"><span data-stu-id="3c501-107">If a custom certificate validator is specified, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not use the built-in certificate validation logic but relies on the custom validator instead.</span></span>  
   
-## Procedure  
+## <a name="procedures"></a><span data-ttu-id="3c501-108">Procedure</span><span class="sxs-lookup"><span data-stu-id="3c501-108">Procedures</span></span>  
   
-#### Per creare un validator del certificato personalizzato  
+#### <a name="to-create-a-custom-certificate-validator"></a><span data-ttu-id="3c501-109">Per creare un validator del certificato personalizzato</span><span class="sxs-lookup"><span data-stu-id="3c501-109">To create a custom certificate validator</span></span>  
   
-1.  Definire una nuova classe derivata da <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  
+1.  <span data-ttu-id="3c501-110">Definire una nuova classe derivata da <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span><span class="sxs-lookup"><span data-stu-id="3c501-110">Define a new class derived from <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span></span>  
   
-2.  Implementare il metodo astratto <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>.  Il certificato che deve essere convalidato viene passato come argomento al metodo.  Se il certificato passato non è valido in base alla logica di convalida, questo metodo genera un'eccezione <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>.  Se il certificato è valido, il metodo viene restituito al chiamante.  
+2.  <span data-ttu-id="3c501-111">Implementare il metodo astratto <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>.</span><span class="sxs-lookup"><span data-stu-id="3c501-111">Implement the abstract <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> method.</span></span> <span data-ttu-id="3c501-112">Il certificato che deve essere convalidato viene passato come argomento al metodo.</span><span class="sxs-lookup"><span data-stu-id="3c501-112">The certificate that must be validated is passed as an argument to the method.</span></span> <span data-ttu-id="3c501-113">Se il certificato passato non è valido in base alla logica di convalida, questo metodo genera un'eccezione <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>.</span><span class="sxs-lookup"><span data-stu-id="3c501-113">If the passed certificate is not valid according to the validation logic, this method throws a <xref:System.IdentityModel.Tokens.SecurityTokenValidationException>.</span></span> <span data-ttu-id="3c501-114">Se il certificato è valido, il metodo viene restituito al chiamante.</span><span class="sxs-lookup"><span data-stu-id="3c501-114">If the certificate is valid, the method returns to the caller.</span></span>  
   
     > [!NOTE]
-    >  Affinché gli errori di autenticazione vengano restituiti al client, generare una classe <xref:System.ServiceModel.FaultException> nel metodo <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A>.  
+    >  <span data-ttu-id="3c501-115">Affinché gli errori di autenticazione vengano restituiti al client, generare una classe <xref:System.ServiceModel.FaultException> nel metodo <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A>.</span><span class="sxs-lookup"><span data-stu-id="3c501-115">To return authentication errors back to the client, throw a <xref:System.ServiceModel.FaultException> in the <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> method.</span></span>  
   
  [!code-csharp[c_CustomCertificateValidator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#2)]
  [!code-vb[c_CustomCertificateValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#2)]  
   
-#### Per specificare un validator del certificato personalizzato nella configurazione del servizio  
+#### <a name="to-specify-a-custom-certificate-validator-in-service-configuration"></a><span data-ttu-id="3c501-116">Per specificare un validator del certificato personalizzato nella configurazione del servizio</span><span class="sxs-lookup"><span data-stu-id="3c501-116">To specify a custom certificate validator in service configuration</span></span>  
   
-1.  Aggiungere un elemento [\<comportamenti\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)[\<comportamentiServizio\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)[\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md).  
+1.  <span data-ttu-id="3c501-117">Aggiungere un [ \<comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento e un [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) per il [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="3c501-117">Add a [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) element and a [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) to the [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element.</span></span>  
   
-2.  Aggiungere un [\<comportamento\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) e impostare l'attributo `name` su un valore appropriato.  
+2.  <span data-ttu-id="3c501-118">Aggiungere un [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) e impostare il `name` attributo su un valore appropriato.</span><span class="sxs-lookup"><span data-stu-id="3c501-118">Add a [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) and set the `name` attribute to an appropriate value.</span></span>  
   
-3.  Aggiungere un [\<credenzialiServizio\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)`<behavior>` all'elemento .  
+3.  <span data-ttu-id="3c501-119">Aggiungere un [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) per il `<behavior>` elemento.</span><span class="sxs-lookup"><span data-stu-id="3c501-119">Add a [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) to the `<behavior>` element.</span></span>  
   
-4.  Aggiungere un elemento `<clientCertificate>` all'elemento `<serviceCredentials>`.  
+4.  <span data-ttu-id="3c501-120">Aggiungere un elemento `<clientCertificate>` all'elemento `<serviceCredentials>`.</span><span class="sxs-lookup"><span data-stu-id="3c501-120">Add a `<clientCertificate>` element to the `<serviceCredentials>` element.</span></span>  
   
-5.  Aggiungere un [\<authentication\>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)`<clientCertificate>` all'elemento .  
+5.  <span data-ttu-id="3c501-121">Aggiungere un [ \<autenticazione >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) per il `<clientCertificate>` elemento.</span><span class="sxs-lookup"><span data-stu-id="3c501-121">Add an [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) to the `<clientCertificate>` element.</span></span>  
   
-6.  Impostare l'attributo `customCertificateValidatorType` sul tipo di validator.  Nell'esempio seguente viene impostato l'attributo sullo spazio dei nomi e sul nome del tipo.  
+6.  <span data-ttu-id="3c501-122">Impostare l'attributo `customCertificateValidatorType` sul tipo di validator.</span><span class="sxs-lookup"><span data-stu-id="3c501-122">Set the `customCertificateValidatorType` attribute to the validator type.</span></span> <span data-ttu-id="3c501-123">Nell'esempio seguente viene impostato l'attributo sullo spazio dei nomi e sul nome del tipo.</span><span class="sxs-lookup"><span data-stu-id="3c501-123">The following example sets the attribute to the namespace and name of the type.</span></span>  
   
-7.  Impostare l'attributo `certificateValidationMode` su `Custom`.  
+7.  <span data-ttu-id="3c501-124">Impostare l'attributo `certificateValidationMode` su `Custom`.</span><span class="sxs-lookup"><span data-stu-id="3c501-124">Set the `certificateValidationMode` attribute to `Custom`.</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
      <system.serviceModel>  
       <behaviors>  
@@ -71,25 +76,25 @@ In questo argomento viene illustrato come implementare un validator del certific
     </configuration>  
     ```  
   
-#### Per specificare un validator del certificato personalizzato mediante configurazione sul client  
+#### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a><span data-ttu-id="3c501-125">Per specificare un validator del certificato personalizzato mediante configurazione sul client</span><span class="sxs-lookup"><span data-stu-id="3c501-125">To specify a custom certificate validator using configuration on the client</span></span>  
   
-1.  Aggiungere un elemento [\<comportamenti\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)[\<comportamentiServizio\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)[\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md).  
+1.  <span data-ttu-id="3c501-126">Aggiungere un [ \<comportamenti >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elemento e un [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) per il [ \<System. ServiceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="3c501-126">Add a [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) element and a [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) to the [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element.</span></span>  
   
-2.  Aggiungere un elemento [\<comportamentiEndpoint\>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).  
+2.  <span data-ttu-id="3c501-127">Aggiungere un [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="3c501-127">Add an [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) element.</span></span>  
   
-3.  Aggiungere un elemento `<behavior>``name e impostare l'attributo`  su un valore appropriato.  
+3.  <span data-ttu-id="3c501-128">Aggiungere un elemento `<behavior>` e impostare l'attributo `name` su un valore appropriato.</span><span class="sxs-lookup"><span data-stu-id="3c501-128">Add a `<behavior>` element and set the `name` attribute to an appropriate value.</span></span>  
   
-4.  Aggiungere un elemento [\<credenzialiClient\>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+4.  <span data-ttu-id="3c501-129">Aggiungere un [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="3c501-129">Add a [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) element.</span></span>  
   
-5.  Aggiungere un [\<certificatoServizio\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md).  
+5.  <span data-ttu-id="3c501-130">Aggiungere un [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md).</span><span class="sxs-lookup"><span data-stu-id="3c501-130">Add a [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md).</span></span>  
   
-6.  Aggiungere un [\<autenticazione\>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) come illustrato nell'esempio seguente.  
+6.  <span data-ttu-id="3c501-131">Aggiungere un [ \<autenticazione >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) come illustrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="3c501-131">Add an [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) as shown on the following example.</span></span>  
   
-7.  Impostare l'attributo `customCertificateValidatorType` sul tipo di validator.  
+7.  <span data-ttu-id="3c501-132">Impostare l'attributo `customCertificateValidatorType` sul tipo di validator.</span><span class="sxs-lookup"><span data-stu-id="3c501-132">Set the `customCertificateValidatorType` attribute to the validator type.</span></span>  
   
-8.  Impostare l'attributo `certificateValidationMode` su `Custom`.  Nell'esempio seguente viene impostato l'attributo sullo spazio dei nomi e sul nome del tipo.  
+8.  <span data-ttu-id="3c501-133">Impostare l'attributo `certificateValidationMode` su `Custom`.</span><span class="sxs-lookup"><span data-stu-id="3c501-133">Set the `certificateValidationMode` attribute to `Custom`.</span></span> <span data-ttu-id="3c501-134">Nell'esempio seguente viene impostato l'attributo sullo spazio dei nomi e sul nome del tipo.</span><span class="sxs-lookup"><span data-stu-id="3c501-134">The following example sets the attribute to the namespace and name of the type.</span></span>  
   
-    ```  
+    ```xml  
     <configuration>  
      <system.serviceModel>  
       <behaviors>  
@@ -109,29 +114,29 @@ In questo argomento viene illustrato come implementare un validator del certific
     </configuration>  
     ```  
   
-#### Per specificare un validator del certificato personalizzato mediante il codice sul servizio  
+#### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-service"></a><span data-ttu-id="3c501-135">Per specificare un validator del certificato personalizzato mediante il codice sul servizio</span><span class="sxs-lookup"><span data-stu-id="3c501-135">To specify a custom certificate validator using code on the service</span></span>  
   
-1.  Specificare il validator del certificato personalizzato sulla proprietà <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>.  È possibile accedere alle credenziali del servizio mediante la proprietà <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>.  
+1.  <span data-ttu-id="3c501-136">Specificare il validator del certificato personalizzato sulla proprietà <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>.</span><span class="sxs-lookup"><span data-stu-id="3c501-136">Specify the custom certificate validator on the <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A> property.</span></span> <span data-ttu-id="3c501-137">È possibile accedere alle credenziali del servizio mediante la proprietà <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>.</span><span class="sxs-lookup"><span data-stu-id="3c501-137">You can access the service credentials using the <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> property.</span></span>  
   
-2.  Impostare la proprietà <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> su <xref:System.ServiceModel.Security.X509CertificateValidationMode>.  
+2.  <span data-ttu-id="3c501-138">Impostare la proprietà <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> su <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.</span><span class="sxs-lookup"><span data-stu-id="3c501-138">Set the <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> property to <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.</span></span>  
   
  [!code-csharp[c_CustomCertificateValidator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#1)]
  [!code-vb[c_CustomCertificateValidator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#1)]  
   
-#### Per specificare un validator del certificato personalizzato mediante il codice sul client  
+#### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a><span data-ttu-id="3c501-139">Per specificare un validator del certificato personalizzato mediante il codice sul client</span><span class="sxs-lookup"><span data-stu-id="3c501-139">To specify a custom certificate validator using code on the client</span></span>  
   
-1.  Specificare il validator del certificato personalizzato mediante la proprietà <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>.  È possibile accedere alle credenziali del client mediante la proprietà <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>.  \(La classe client generata da [Strumento ServiceModel Metadata Utility Tool \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) deriva sempre dalla classe <xref:System.ServiceModel.ClientBase%601>.\)  
+1.  <span data-ttu-id="3c501-140">Specificare il validator del certificato personalizzato mediante la proprietà <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>.</span><span class="sxs-lookup"><span data-stu-id="3c501-140">Specify the custom certificate validator using the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> property.</span></span> <span data-ttu-id="3c501-141">È possibile accedere alle credenziali del client mediante la proprietà <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>.</span><span class="sxs-lookup"><span data-stu-id="3c501-141">You can access the client credentials using the <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> property.</span></span> <span data-ttu-id="3c501-142">(La classe client generata da [strumento ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sempre deriva il <xref:System.ServiceModel.ClientBase%601> classe.)</span><span class="sxs-lookup"><span data-stu-id="3c501-142">(The client class generated by [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) always derives from the <xref:System.ServiceModel.ClientBase%601> class.)</span></span>  
   
-2.  Impostare la proprietà <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> su <xref:System.ServiceModel.Security.X509CertificateValidationMode>.  
+2.  <span data-ttu-id="3c501-143">Impostare la proprietà <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> su <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.</span><span class="sxs-lookup"><span data-stu-id="3c501-143">Set the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> property to <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.</span></span>  
   
-## Esempio  
+## <a name="example"></a><span data-ttu-id="3c501-144">Esempio</span><span class="sxs-lookup"><span data-stu-id="3c501-144">Example</span></span>  
   
-### Descrizione  
- Nell'esempio seguente viene illustrata un'implementazione di un validator del certificato personalizzato e l'uso sul servizio.  
+### <a name="description"></a><span data-ttu-id="3c501-145">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3c501-145">Description</span></span>  
+ <span data-ttu-id="3c501-146">Nell'esempio seguente viene illustrata un'implementazione di un validator del certificato personalizzato e l'uso sul servizio.</span><span class="sxs-lookup"><span data-stu-id="3c501-146">The following sample shows an implementation of a custom certificate validator and its usage on the service.</span></span>  
   
-### Codice  
+### <a name="code"></a><span data-ttu-id="3c501-147">Codice</span><span class="sxs-lookup"><span data-stu-id="3c501-147">Code</span></span>  
  [!code-csharp[c_CustomCertificateValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#3)]
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
-## Vedere anche  
+## <a name="see-also"></a><span data-ttu-id="3c501-148">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3c501-148">See Also</span></span>  
  <xref:System.IdentityModel.Selectors.X509CertificateValidator>

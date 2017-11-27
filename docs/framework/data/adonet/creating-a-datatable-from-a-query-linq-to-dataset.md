@@ -1,84 +1,90 @@
 ---
-title: "Creazione di una DataTable da una query (LINQ to DataSet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creazione di un oggetto DataTable da una query (LINQ to DataSet)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5be353d76f921edd730d46907096abe8a2a1188f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Creazione di una DataTable da una query (LINQ to DataSet)
-L'associazione dati è un utilizzo comune dell'oggetto <xref:System.Data.DataTable>.  Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> copia i dati dei risultati di una query in un oggetto <xref:System.Data.DataTable> che può essere quindi usato per l'associazione dati.  Dopo l'esecuzione delle operazioni sui dati, il nuovo oggetto <xref:System.Data.DataTable> viene nuovamente unito nell'oggetto <xref:System.Data.DataTable> di origine.  
+# <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a><span data-ttu-id="c079d-102">Creazione di un oggetto DataTable da una query (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="c079d-102">Creating a DataTable From a Query (LINQ to DataSet)</span></span>
+<span data-ttu-id="c079d-103">L'associazione dati è un utilizzo comune dell'oggetto <xref:System.Data.DataTable>.</span><span class="sxs-lookup"><span data-stu-id="c079d-103">Data binding is a common use of <xref:System.Data.DataTable> object.</span></span> <span data-ttu-id="c079d-104">Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> copia i dati dei risultati di una query in un oggetto <xref:System.Data.DataTable> che può essere quindi usato per l'associazione dati.</span><span class="sxs-lookup"><span data-stu-id="c079d-104">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method takes the results of a query and copies the data into a <xref:System.Data.DataTable>, which can then be used for data binding.</span></span> <span data-ttu-id="c079d-105">Dopo l'esecuzione delle operazioni sui dati, il nuovo oggetto <xref:System.Data.DataTable> viene nuovamente unito nell'oggetto <xref:System.Data.DataTable> di origine.</span><span class="sxs-lookup"><span data-stu-id="c079d-105">When the data operations have been performed, the new <xref:System.Data.DataTable> is merged back into the source <xref:System.Data.DataTable>.</span></span>  
   
- Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> usa il processo seguente per creare <xref:System.Data.DataTable> da una query.  
+ <span data-ttu-id="c079d-106">Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> usa il processo seguente per creare <xref:System.Data.DataTable> da una query.</span><span class="sxs-lookup"><span data-stu-id="c079d-106">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method uses the following process to create a <xref:System.Data.DataTable> from a query:</span></span>  
   
-1.  Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> duplica un oggetto <xref:System.Data.DataTable> della tabella di origine, ovvero un oggetto <xref:System.Data.DataTable> che implementa l'interfaccia <xref:System.Linq.IQueryable%601>.  L'oggetto <xref:System.Collections.IEnumerable> di origine viene solitamente generato da una query di espressione o metodo [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
+1.  <span data-ttu-id="c079d-107">Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> duplica un oggetto <xref:System.Data.DataTable> della tabella di origine, ovvero un oggetto <xref:System.Data.DataTable> che implementa l'interfaccia <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="c079d-107">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method clones a <xref:System.Data.DataTable> from the source table (a <xref:System.Data.DataTable> object that implements the <xref:System.Linq.IQueryable%601> interface).</span></span> <span data-ttu-id="c079d-108">L'oggetto <xref:System.Collections.IEnumerable> di origine viene solitamente generato da una query di espressione o metodo [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c079d-108">The <xref:System.Collections.IEnumerable> source has generally originated from a [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] expression or method query.</span></span>  
   
-2.  Lo schema dell'oggetto <xref:System.Data.DataTable> duplicato viene compilato dalle colonne del primo oggetto <xref:System.Data.DataRow> enumerato nella tabella di origine, mentre il nome della tabella duplicata corrisponde al nome della tabella di origine con l'aggiunta del termine "query" alla fine.  
+2.  <span data-ttu-id="c079d-109">Lo schema dell'oggetto <xref:System.Data.DataTable> duplicato viene compilato dalle colonne del primo oggetto <xref:System.Data.DataRow> enumerato nella tabella di origine, mentre il nome della tabella duplicata corrisponde al nome della tabella di origine con l'aggiunta del termine "query" alla fine.</span><span class="sxs-lookup"><span data-stu-id="c079d-109">The schema of the cloned <xref:System.Data.DataTable> is built from the columns of the first enumerated <xref:System.Data.DataRow> object in the source table and the name of the cloned table is the name of the source table with the word "query" appended to it.</span></span>  
   
-3.  Il contenuto di ogni riga della tabella di origine viene copiato in un nuovo oggetto <xref:System.Data.DataRow>, che viene quindi inserito nella tabella duplicata.  Le proprietà <xref:System.Data.DataRow.RowState%2A> e <xref:System.Data.DataRow.RowError%2A> vengono mantenuta durante l'operazione di copia.  Se gli oggetti <xref:System.Data.DataRow> nell'origine provengono da tabelle diverse, viene generata un'eccezione <xref:System.ArgumentException>.  
+3.  <span data-ttu-id="c079d-110">Il contenuto di ogni riga della tabella di origine viene copiato in un nuovo oggetto <xref:System.Data.DataRow>, che viene quindi inserito nella tabella duplicata.</span><span class="sxs-lookup"><span data-stu-id="c079d-110">For each row in the source table, the content of the row is copied into a new <xref:System.Data.DataRow> object, which is then inserted into the cloned table.</span></span> <span data-ttu-id="c079d-111">Le proprietà <xref:System.Data.DataRow.RowState%2A> e <xref:System.Data.DataRow.RowError%2A> vengono mantenuta durante l'operazione di copia.</span><span class="sxs-lookup"><span data-stu-id="c079d-111">The <xref:System.Data.DataRow.RowState%2A> and <xref:System.Data.DataRow.RowError%2A> properties are preserved across the copy operation.</span></span> <span data-ttu-id="c079d-112">Se gli oggetti <xref:System.ArgumentException> nell'origine provengono da tabelle diverse, viene generata un'eccezione <xref:System.Data.DataRow>.</span><span class="sxs-lookup"><span data-stu-id="c079d-112">An <xref:System.ArgumentException> is thrown if the <xref:System.Data.DataRow> objects in the source are from different tables.</span></span>  
   
-4.  L'oggetto <xref:System.Data.DataTable> duplicato viene restituito dopo che sono stati copiati tutti gli oggetti <xref:System.Data.DataRow> presenti nella tabella di input sottoposta a query.  Se la sequenza di origine non contiene oggetti <xref:System.Data.DataRow>, il metodo restituisce un oggetto <xref:System.Data.DataTable> vuoto.  
+4.  <span data-ttu-id="c079d-113">L'oggetto <xref:System.Data.DataTable> duplicato viene restituito dopo che sono stati copiati tutti gli oggetti <xref:System.Data.DataRow> presenti nella tabella di input sottoposta a query.</span><span class="sxs-lookup"><span data-stu-id="c079d-113">The cloned <xref:System.Data.DataTable> is returned after all <xref:System.Data.DataRow> objects in the input queryable table have been copied.</span></span> <span data-ttu-id="c079d-114">Se la sequenza di origine non contiene oggetti <xref:System.Data.DataRow>, il metodo restituisce un oggetto <xref:System.Data.DataTable> vuoto.</span><span class="sxs-lookup"><span data-stu-id="c079d-114">If the source sequence does not contain any <xref:System.Data.DataRow> objects, the method returns an empty <xref:System.Data.DataTable>.</span></span>  
   
- Si noti che la chiamata al metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> genererà l'esecuzione della query associata alla tabella di origine.  
+ <span data-ttu-id="c079d-115">Si noti che la chiamata al metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> genererà l'esecuzione della query associata alla tabella di origine.</span><span class="sxs-lookup"><span data-stu-id="c079d-115">Note that calling the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method will cause the query bound to the source table to execute.</span></span>  
   
- Quando il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> rileva un riferimento Null o un tipo di valore nullable in una riga della tabella di origine, sostituisce il valore con <xref:System.DBNull.Value>.  I valori Null vengono gestiti correttamente nell'oggetto <xref:System.Data.DataTable> restituito.  
+ <span data-ttu-id="c079d-116">Quando il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> rileva un riferimento Null o un tipo di valore nullable in una riga della tabella di origine, sostituisce il valore con <xref:System.DBNull.Value>.</span><span class="sxs-lookup"><span data-stu-id="c079d-116">When the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method encounters either a null reference or nullable value type in a row in the source table, it replaces the value with <xref:System.DBNull.Value>.</span></span> <span data-ttu-id="c079d-117">I valori Null vengono gestiti correttamente nell'oggetto <xref:System.Data.DataTable> restituito.</span><span class="sxs-lookup"><span data-stu-id="c079d-117">This way, null values are handled correctly in the returned <xref:System.Data.DataTable>.</span></span>  
   
- Nota: il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> accetta come input una query che può restituire righe da più oggetti <xref:System.Data.DataTable> o <xref:System.Data.DataSet>.  Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> consente di copiare i dati ma non le proprietà dagli oggetti <xref:System.Data.DataTable> o <xref:System.Data.DataSet> di origine nell'oggetto <xref:System.Data.DataTable> restituito.  È necessario impostare in modo esplicito le proprietà nell'oggetto <xref:System.Data.DataTable> restituito, ad esempio <xref:System.Data.DataTable.Locale%2A> e <xref:System.Data.DataTable.TableName%2A>.  
+ <span data-ttu-id="c079d-118">Nota: il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> accetta come input una query che può restituire righe da più oggetti <xref:System.Data.DataTable> o <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="c079d-118">Note: The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method accepts as input a query that can return rows from multiple <xref:System.Data.DataTable> or <xref:System.Data.DataSet> objects.</span></span> <span data-ttu-id="c079d-119">Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> consente di copiare i dati ma non le proprietà dagli oggetti <xref:System.Data.DataTable> o <xref:System.Data.DataSet> di origine nell'oggetto <xref:System.Data.DataTable> restituito.</span><span class="sxs-lookup"><span data-stu-id="c079d-119">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method will copy the data but not the properties from the source <xref:System.Data.DataTable> or <xref:System.Data.DataSet> objects to the returned <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="c079d-120">È necessario impostare in modo esplicito le proprietà nell'oggetto <xref:System.Data.DataTable> restituito, ad esempio <xref:System.Data.DataTable.Locale%2A> e <xref:System.Data.DataTable.TableName%2A>.</span><span class="sxs-lookup"><span data-stu-id="c079d-120">You will need to explicitly set the properties on the returned <xref:System.Data.DataTable>, such as <xref:System.Data.DataTable.Locale%2A> and <xref:System.Data.DataTable.TableName%2A>.</span></span>  
   
- Nell'esempio seguente viene eseguita una query sulla tabella SalesOrderHeader per individuare gli ordini effettuati dopo l'8 agosto 2001 e viene usato il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> per creare un oggetto <xref:System.Data.DataTable> dalla query.  <xref:System.Data.DataTable> viene quindi associato a <xref:System.Windows.Forms.BindingSource>, che funge da proxy per <xref:System.Windows.Forms.DataGridView>.  
+ <span data-ttu-id="c079d-121">Nell'esempio seguente viene eseguita una query sulla tabella SalesOrderHeader per individuare gli ordini effettuati dopo l'8 agosto 2001 e viene usato il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> per creare un oggetto <xref:System.Data.DataTable> dalla query.</span><span class="sxs-lookup"><span data-stu-id="c079d-121">The following example queries the SalesOrderHeader table for orders after August 8, 2001 and uses the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method to create a <xref:System.Data.DataTable> from that query.</span></span> <span data-ttu-id="c079d-122"><xref:System.Data.DataTable> viene quindi associato a <xref:System.Windows.Forms.BindingSource>, che funge da proxy per <xref:System.Windows.Forms.DataGridView>.</span><span class="sxs-lookup"><span data-stu-id="c079d-122">The <xref:System.Data.DataTable> is then bound to a <xref:System.Windows.Forms.BindingSource>, which acts as proxy for a <xref:System.Windows.Forms.DataGridView>.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#copytodatatable1)]
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
-## Creazione di un metodo CopyToDataTable\<T\> personalizzato  
- I metodi <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> esistenti funzionano solo su un'origine <xref:System.Collections.Generic.IEnumerable%601> in cui il parametro generico `T` è di tipo <xref:System.Data.DataRow>.  Sebbene sia utile, questa funzionalità non consente di creare tabelle da una sequenza di tipi scalari, da query che restituiscono tipi anonimi o da query che eseguono join di tabelle.  Per un esempio su come implementare due metodi `CopyToDataTable` personalizzati che caricano una tabella da una sequenza di tipi scalari o anonimi, vedere [Implementazione di CopyToDataTable\<T\> quando il tipo generico T non è un DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s.  
+## <a name="creating-a-custom-copytodatatablet-method"></a><span data-ttu-id="c079d-123">Creazione di un CopyToDataTable personalizzato\<T > (metodo)</span><span class="sxs-lookup"><span data-stu-id="c079d-123">Creating a Custom CopyToDataTable\<T> Method</span></span>  
+ <span data-ttu-id="c079d-124">I metodi <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> esistenti funzionano solo su un'origine <xref:System.Collections.Generic.IEnumerable%601> in cui il parametro generico `T` è di tipo <xref:System.Data.DataRow>.</span><span class="sxs-lookup"><span data-stu-id="c079d-124">The existing <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> methods only operate on an <xref:System.Collections.Generic.IEnumerable%601> source where the generic parameter `T` is of type <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="c079d-125">Sebbene sia utile, questa funzionalità non consente di creare tabelle da una sequenza di tipi scalari, da query che restituiscono tipi anonimi o da query che eseguono join di tabelle.</span><span class="sxs-lookup"><span data-stu-id="c079d-125">Although this is useful, it does not allow tables to be created from a sequence of scalar types, from queries that return anonymous types, or from queries that perform table joins.</span></span> <span data-ttu-id="c079d-126">Per un esempio di come implementare due personalizzato `CopyToDataTable` metodi che caricano una tabella da una sequenza di tipi scalari o anonime, vedere [procedura: implementare CopyToDataTable\<T > in cui il generico tipo T non DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s.</span><span class="sxs-lookup"><span data-stu-id="c079d-126">For an example of how to implement two custom `CopyToDataTable` methods that load a table from a sequence of scalar or anonymous types, see [How to: Implement CopyToDataTable\<T> Where the Generic Type T Is Not a DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s.</span></span>  
   
- Per gli esempi di questa sezione vengono usati i tipi personalizzati seguenti:  
+ <span data-ttu-id="c079d-127">Per gli esempi di questa sezione vengono usati i tipi personalizzati seguenti:</span><span class="sxs-lookup"><span data-stu-id="c079d-127">The examples in this section use the following custom types:</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#itemclass)]
  [!code-vb[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#itemclass)]  
   
-### Esempio  
- In questo esempio viene eseguito un join sulle tabelle `SalesOrderHeader` e `SalesOrderDetail` per ottenere gli ordini effettuati online dal mese di agosto e viene creata una tabella dalla query.  
+### <a name="example"></a><span data-ttu-id="c079d-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="c079d-128">Example</span></span>  
+ <span data-ttu-id="c079d-129">In questo esempio viene eseguito un join sulle tabelle `SalesOrderHeader` e `SalesOrderDetail` per ottenere gli ordini effettuati online dal mese di agosto e viene creata una tabella dalla query.</span><span class="sxs-lookup"><span data-stu-id="c079d-129">This example performs a join over the `SalesOrderHeader` and `SalesOrderDetail` tables to get online orders from the month of August and creates a table from the query.</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#join)]
  [!code-vb[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#join)]  
   
-### Esempio  
- Nell'esempio seguente viene eseguita una query su una raccolta per ottenere gli articoli con prezzo maggiore di 9,99 $ e viene creata una tabella dai risultati della query.  
+### <a name="example"></a><span data-ttu-id="c079d-130">Esempio</span><span class="sxs-lookup"><span data-stu-id="c079d-130">Example</span></span>  
+ <span data-ttu-id="c079d-131">Nell'esempio seguente viene eseguita una query su una raccolta per ottenere gli articoli con prezzo maggiore di 9,99 $ e viene creata una tabella dai risultati della query.</span><span class="sxs-lookup"><span data-stu-id="c079d-131">The following example queries a collection for items of price greater than $9.99 and creates a table from the query results.</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintotable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintotable)]  
   
-### Esempio  
- Nell'esempio seguente viene eseguita una query su una raccolta per ottenere gli articoli con prezzo maggiore di 9,99 $ e vengono proiettati i risultati.  La sequenza di tipi anonimi restituiti viene caricata in una tabella esistente.  
+### <a name="example"></a><span data-ttu-id="c079d-132">Esempio</span><span class="sxs-lookup"><span data-stu-id="c079d-132">Example</span></span>  
+ <span data-ttu-id="c079d-133">Nell'esempio seguente viene eseguita una query su una raccolta per ottenere gli articoli con prezzo maggiore di 9,99 $ e vengono proiettati i risultati.</span><span class="sxs-lookup"><span data-stu-id="c079d-133">The following example queries a collection for items of price greater than 9.99 and projects the results.</span></span> <span data-ttu-id="c079d-134">La sequenza di tipi anonimi restituiti viene caricata in una tabella esistente.</span><span class="sxs-lookup"><span data-stu-id="c079d-134">The returned sequence of anonymous types is loaded into an existing table.</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintoexistingtable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintoexistingtable)]  
   
-### Esempio  
- Nell'esempio seguente viene eseguita una query su una raccolta per ottenere gli articoli con prezzo maggiore di 9,99 $ e vengono proiettati i risultati.  La sequenza di tipi anonimi restituiti viene caricata in una tabella esistente.  Lo schema della tabella viene automaticamente espanso perché i tipi `Book` e `Movies` sono derivati dal tipo `Item`.  
+### <a name="example"></a><span data-ttu-id="c079d-135">Esempio</span><span class="sxs-lookup"><span data-stu-id="c079d-135">Example</span></span>  
+ <span data-ttu-id="c079d-136">Nell'esempio seguente viene eseguita una query su una raccolta per ottenere gli articoli con prezzo maggiore di 9,99 $ e vengono proiettati i risultati.</span><span class="sxs-lookup"><span data-stu-id="c079d-136">The following example queries a collection for items of price greater than $9.99 and projects the results.</span></span> <span data-ttu-id="c079d-137">La sequenza di tipi anonimi restituiti viene caricata in una tabella esistente.</span><span class="sxs-lookup"><span data-stu-id="c079d-137">The returned sequence of anonymous types is loaded into an existing table.</span></span> <span data-ttu-id="c079d-138">Lo schema della tabella viene automaticamente espanso perché i tipi `Book` e `Movies` sono derivati dal tipo `Item`.</span><span class="sxs-lookup"><span data-stu-id="c079d-138">The table schema is automatically expanded because the `Book` and `Movies` types are derived from the `Item` type.</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsexpandschema)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsexpandschema)]  
   
-### Esempio  
- Nell'esempio seguente viene eseguita una query su una raccolta per ottenere gli articoli con prezzo maggiore di 9,99 $ e viene restituita una sequenza di oggetti <xref:System.Double>, che viene caricata in una nuova tabella.  
+### <a name="example"></a><span data-ttu-id="c079d-139">Esempio</span><span class="sxs-lookup"><span data-stu-id="c079d-139">Example</span></span>  
+ <span data-ttu-id="c079d-140">Nell'esempio seguente viene eseguita una query su una raccolta per ottenere gli articoli con prezzo maggiore di 9,99 $ e viene restituita una sequenza di oggetti <xref:System.Double>, che viene caricata in una nuova tabella.</span><span class="sxs-lookup"><span data-stu-id="c079d-140">The following example queries a collection for items of price greater than $9.99 and returns a sequence of <xref:System.Double>, which is loaded into a new table.</span></span>  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
-## Vedere anche  
- [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)   
- [Metodi generici Field e SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)   
- [Esempi relativi a LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a><span data-ttu-id="c079d-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c079d-141">See Also</span></span>  
+ [<span data-ttu-id="c079d-142">Guida per programmatori</span><span class="sxs-lookup"><span data-stu-id="c079d-142">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
+ [<span data-ttu-id="c079d-143">Metodi generici Field e SetField</span><span class="sxs-lookup"><span data-stu-id="c079d-143">Generic Field and SetField Methods</span></span>](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
+ [<span data-ttu-id="c079d-144">LINQ to DataSet esempi</span><span class="sxs-lookup"><span data-stu-id="c079d-144">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

@@ -1,78 +1,104 @@
 ---
-title: "&lt;trasportoTcp&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;tcpTransport&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c3c9bb9619cf076f6d6053e1936f989b169ebec4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;trasportoTcp&gt;
-Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei trasferimenti per un'associazione personalizzata.  
+# <a name="lttcptransportgt"></a><span data-ttu-id="0473e-102">&lt;tcpTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="0473e-102">&lt;tcpTransport&gt;</span></span>
+<span data-ttu-id="0473e-103">Definisce un trasporto TCP che può essere usato da un canale ai messaggi dei trasferimenti per un'associazione personalizzata.</span><span class="sxs-lookup"><span data-stu-id="0473e-103">Defines a TCP transport that can be used by a channel to transfers messages for a custom binding.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="0473e-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0473e-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="0473e-105">\<associazioni ></span><span class="sxs-lookup"><span data-stu-id="0473e-105">\<bindings></span></span>  
+<span data-ttu-id="0473e-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="0473e-106">\<customBinding></span></span>  
+<span data-ttu-id="0473e-107">\<associazione ></span><span class="sxs-lookup"><span data-stu-id="0473e-107">\<binding></span></span>  
+<span data-ttu-id="0473e-108">\<tcpTransport ></span><span class="sxs-lookup"><span data-stu-id="0473e-108">\<tcpTransport></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="0473e-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="0473e-109">Syntax</span></span>  
   
+```xml  
 <tcpTransport   
-    listenBacklog="Integer"  
-        portSharingEnabled="Boolean"  
-    teredoEnabled="Boolean"  
-    transferMode=”Buffered/Streamed”  
-        <connectionPoolSettings  
-          groupName=”String”  
-        idleTimeout"TimeSpan"  
-        leaseTimeout="TimeSpan"  
-        maxOutboundConnectionsPerEndpopint=”Integer” />  
-/>  
+      channelInitializationTimeout="TimeSpan"   
+      connectionBufferSize="Integer"   
+      hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"  
+      listenBacklog="Integer"  
+      manualAddressing="Boolean"   
+      maxBufferPoolSize="Integer"  
+      maxBufferSize="Integer"  
+      maxOutputDelay="TimeSpan"  
+      maxPendingAccepts="Integer"   
+      maxPendingConnections="Integer"  
+      maxReceivedMessageSize="Integer"   
+      portSharingEnabled="Boolean"  
+      teredoEnabled="Boolean"  
+      transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse" >  
+      <connectionPoolSettings  
+            groupName="String"  
+            idleTimeout"TimeSpan"  
+            leaseTimeout="TimeSpan"  
+            maxOutboundConnectionsPerEndpopint="Integer" />  
+</tcpTransport>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0473e-110">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="0473e-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="0473e-111">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="0473e-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="0473e-112">Attributi</span><span class="sxs-lookup"><span data-stu-id="0473e-112">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="0473e-113">Attributo</span><span class="sxs-lookup"><span data-stu-id="0473e-113">Attribute</span></span>|<span data-ttu-id="0473e-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0473e-114">Description</span></span>|  
 |---------------|-----------------|  
-|channelInitializationTimeout|Periodo massimo di tempo entro il quale un canale può trovarsi nello stato di inizializzazione prima della disconnessione, espresso in secondi.  La quota include il tempo necessario per l'autenticazione di una connessione TCP usando il protocollo .Net Message Framing.  Un client deve inviare alcuni dati iniziali prima che il server disponga di informazioni sufficienti per effettuare l'autenticazione.  Il valore predefinito è 30 secondi.|  
-|listenBacklog|Numero massimo di richieste di connessione in coda che possono essere in sospeso per un servizio Web.  L'attributo `connectionLeaseTimeout` limita il tempo di attesa della connessione da parte del client prima che venga generata un'eccezione.  Si tratta di una proprietà a livello di socket che controlla il numero massimo di richieste di connessione in coda che possono essere in attesa di un servizio Web.  Quando il valore di ListenBacklog è troppo basso, WCF arresta l'accettazione di richieste e pertanto ignora le nuove connessioni finché il server non riconosce alcune delle connessioni esistenti in coda. Per impostazione predefinita il valore è 16 \* numero di processori.|  
-|portSharingEnabled|Valore booleano che specifica se è attivata la condivisione delle porte TCP per la connessione.  Se è `false`, ciascuna associazione userà la propria porta esclusiva.  Il valore predefinito è `false`.<br /><br /> Questa impostazione è pertinente solo per i servizi.  I client non ne sono interessati.<br /><br /> L'uso di questa impostazione richiede l'attivazione del servizio di condivisione porte TCP di Windows Communication Foundation \(WCF\) modificando il relativo Tipo di avvio su Manuale o Automatico.|  
-|teredoEnabled|Valore booleano che specifica se Teredo \(una tecnologia per l'indirizzamento dei client dietro a firewall\) è attivata.  Il valore predefinito è `false`.<br /><br /> Questa proprietà abilita Teredo per il socket TCP sottostante.  Per altre informazioni, vedere la pagina relativa alla [panoramica di Teredo](http://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Questa proprietà è applicabile solo su [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)].  [!INCLUDE[wv](../../../../../includes/wv-md.md)] ha un'opzione di configurazione a livello di computer per Teredo, pertanto quando viene eseguito Vista, questa proprietà viene ignorata.  L'uso di Teredo richiede che lo stack IPv6 di Microsoft sia installato sia nei computer client che in quelli di servizio e che tutti siano configurati correttamente.  Per altre informazioni sulla configurazione di Teredo, vedere la pagina relativa alla [panoramica di Teredo](http://go.microsoft.com/fwlink/?LinkId=95339).  Per altre informazioni, vedere la pagina relativa ai [centri tecnologici di Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=49888).|  
+|<span data-ttu-id="0473e-115">channelInitializationTimeout</span><span class="sxs-lookup"><span data-stu-id="0473e-115">channelInitializationTimeout</span></span>|<span data-ttu-id="0473e-116">Ottiene o imposta il limite di tempo per l'inizializzazione di un canale da accettare.</span><span class="sxs-lookup"><span data-stu-id="0473e-116">Gets or sets the time limit for initializing a channel to be accepted.</span></span>  <span data-ttu-id="0473e-117">Periodo massimo di tempo entro il quale un canale può trovarsi nello stato di inizializzazione prima della disconnessione, espresso in secondi.</span><span class="sxs-lookup"><span data-stu-id="0473e-117">The maximum time a channel can be in the initialization state before being disconnected in seconds.</span></span> <span data-ttu-id="0473e-118">La quota include il tempo necessario per l'autenticazione di una connessione TCP usando il protocollo .Net Message Framing.</span><span class="sxs-lookup"><span data-stu-id="0473e-118">This quota includes the time a TCP connection can take to authenticate itself using the .Net Message Framing protocol.</span></span> <span data-ttu-id="0473e-119">Un client deve inviare alcuni dati iniziali prima che il server disponga di informazioni sufficienti per effettuare l'autenticazione.</span><span class="sxs-lookup"><span data-stu-id="0473e-119">A client needs to send some initial data before the server has enough information to perform authentication.</span></span> <span data-ttu-id="0473e-120">Il valore predefinito è 30 secondi.</span><span class="sxs-lookup"><span data-stu-id="0473e-120">The default is 30 seconds.</span></span>|  
+|<span data-ttu-id="0473e-121">connectionBufferSize</span><span class="sxs-lookup"><span data-stu-id="0473e-121">connectionBufferSize</span></span>|<span data-ttu-id="0473e-122">Ottiene o imposta la dimensione del buffer utilizzato per trasmettere un blocco del messaggio serializzato in transito dal client o servizio.</span><span class="sxs-lookup"><span data-stu-id="0473e-122">Gets or sets the size of the buffer used to transmit a chunk of the serialized message on the wire from the client or service.</span></span>|  
+|<span data-ttu-id="0473e-123">hostNameComparisonMode</span><span class="sxs-lookup"><span data-stu-id="0473e-123">hostNameComparisonMode</span></span>|<span data-ttu-id="0473e-124">Ottiene o imposta un valore che indica se viene utilizzato il nome host per raggiungere il servizio in caso di corrispondenza dell'URI.</span><span class="sxs-lookup"><span data-stu-id="0473e-124">Gets or sets a value that indicates whether the hostname is used to reach the service when matching on the URI.</span></span>|  
+|<span data-ttu-id="0473e-125">listenBacklog</span><span class="sxs-lookup"><span data-stu-id="0473e-125">listenBacklog</span></span>|<span data-ttu-id="0473e-126">Numero massimo di richieste di connessione in coda che possono essere in sospeso per un servizio Web.</span><span class="sxs-lookup"><span data-stu-id="0473e-126">The maximum number of queued connection requests that can be pending for a Web service.</span></span> <span data-ttu-id="0473e-127">L'attributo `connectionLeaseTimeout` limita il tempo di attesa della connessione da parte del client prima che venga generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="0473e-127">The `connectionLeaseTimeout` attribute limits the duration the client will wait to be connected before throwing a connection exception.</span></span> <span data-ttu-id="0473e-128">Si tratta di una proprietà a livello di socket che controlla il numero massimo di richieste di connessione in coda che possono essere in attesa di un servizio Web.</span><span class="sxs-lookup"><span data-stu-id="0473e-128">This is a socket level property which controls the maximum number of queued connection requests that can be pending for a Web service.</span></span> <span data-ttu-id="0473e-129">Quando il valore di ListenBacklog è troppo basso, WCF arresta l'accettazione di richieste e pertanto ignora le nuove connessioni finché il server non riconosce alcune delle connessioni esistenti in coda. Per impostazione predefinita il valore è 16 * numero di processori.</span><span class="sxs-lookup"><span data-stu-id="0473e-129">When ListenBacklog is too low, WCF will stop accepting requests and therefore drop new connections until the server acknowledges some of the existing queued connections .The default is 16 * number of processors.</span></span>|  
+|<span data-ttu-id="0473e-130">manualAddressing</span><span class="sxs-lookup"><span data-stu-id="0473e-130">manualAddressing</span></span>|<span data-ttu-id="0473e-131">Ottiene o imposta un valore che indica se è richiesto l'indirizzamento manuale del messaggio.</span><span class="sxs-lookup"><span data-stu-id="0473e-131">Gets or sets a value that indicates whether manual addressing of the message is required.</span></span>|  
+|<span data-ttu-id="0473e-132">maxBufferPoolSize</span><span class="sxs-lookup"><span data-stu-id="0473e-132">maxBufferPoolSize</span></span>|<span data-ttu-id="0473e-133">Ottiene o imposta la dimensione massima di qualsiasi pool di buffer utilizzato dal trasporto.</span><span class="sxs-lookup"><span data-stu-id="0473e-133">Gets or sets the maximum size of any buffer pools used by the transport.</span></span>|  
+|<span data-ttu-id="0473e-134">maxBufferSize</span><span class="sxs-lookup"><span data-stu-id="0473e-134">maxBufferSize</span></span>|<span data-ttu-id="0473e-135">Ottiene o imposta la dimensione massima del buffer da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="0473e-135">Gets or sets the maximum size of the buffer to use.</span></span> <span data-ttu-id="0473e-136">Per i messaggi trasmessi come flusso, questo valore deve essere uguale o superiore alla dimensione massima possibile delle intestazioni di messaggio, che vengono lette in modalità di memorizzazione nel buffer.</span><span class="sxs-lookup"><span data-stu-id="0473e-136">For streamed messages, this value should be at least the maximum possible size of the message headers, which are read in buffered mode.</span></span>|  
+|<span data-ttu-id="0473e-137">maxOutputDelay</span><span class="sxs-lookup"><span data-stu-id="0473e-137">maxOutputDelay</span></span>|<span data-ttu-id="0473e-138">Ottiene o imposta l'intervallo di tempo massimo per cui un blocco di un messaggio o un messaggio intero può rimanere memorizzato nel buffer prima dell'invio.</span><span class="sxs-lookup"><span data-stu-id="0473e-138">Gets or sets the maximum interval of time that a chunk of a message or a full message can remain buffered in memory before being sent out.</span></span>|  
+|<span data-ttu-id="0473e-139">maxPendingAccepts</span><span class="sxs-lookup"><span data-stu-id="0473e-139">maxPendingAccepts</span></span>|<span data-ttu-id="0473e-140">Ottiene o imposta il numero massimo di operazioni asincrone in sospeso disponibili per l'elaborazione delle connessioni in ingresso nel servizio.</span><span class="sxs-lookup"><span data-stu-id="0473e-140">Gets or sets the maximum number of pending asynchronous accept operations that are available for processing incoming connections to the service.</span></span>|  
+|<span data-ttu-id="0473e-141">maxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="0473e-141">maxPendingConnections</span></span>|<span data-ttu-id="0473e-142">Ottiene o imposta il numero massimo di connessioni in attesa dell'invio nel servizio.</span><span class="sxs-lookup"><span data-stu-id="0473e-142">Gets or sets the maximum number of connections awaiting dispatch on the service.</span></span>|  
+|<span data-ttu-id="0473e-143">maxReceivedMessageSize</span><span class="sxs-lookup"><span data-stu-id="0473e-143">maxReceivedMessageSize</span></span>|<span data-ttu-id="0473e-144">Ottiene e imposta la dimensione massima consentita del messaggio che può essere ricevuto.</span><span class="sxs-lookup"><span data-stu-id="0473e-144">Gets and sets the maximum allowable message size that can be received.</span></span>|  
+|<span data-ttu-id="0473e-145">portSharingEnabled</span><span class="sxs-lookup"><span data-stu-id="0473e-145">portSharingEnabled</span></span>|<span data-ttu-id="0473e-146">Valore booleano che specifica se è attivata la condivisione delle porte TCP per la connessione.</span><span class="sxs-lookup"><span data-stu-id="0473e-146">A Boolean value that specifies if TCP port sharing is enabled for this connection.</span></span> <span data-ttu-id="0473e-147">Se è `false`, ciascuna associazione userà la propria porta esclusiva.</span><span class="sxs-lookup"><span data-stu-id="0473e-147">If this is `false`, each binding will use its own exclusive port.</span></span> <span data-ttu-id="0473e-148">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="0473e-148">The default is `false`.</span></span><br /><br /> <span data-ttu-id="0473e-149">Questa impostazione è pertinente solo per i servizi.</span><span class="sxs-lookup"><span data-stu-id="0473e-149">This setting is relevant only to services.</span></span> <span data-ttu-id="0473e-150">I client non ne sono interessati.</span><span class="sxs-lookup"><span data-stu-id="0473e-150">Clients are not affected.</span></span><br /><br /> <span data-ttu-id="0473e-151">L'uso di questa impostazione richiede l'attivazione del servizio di condivisione porte TCP di Windows Communication Foundation (WCF) modificando il relativo Tipo di avvio su Manuale o Automatico.</span><span class="sxs-lookup"><span data-stu-id="0473e-151">Using this setting requires enabling the Windows Communication Foundation (WCF) TCP Port Sharing Service by changing its Startup Type to Manual or Automatic</span></span>|  
+|<span data-ttu-id="0473e-152">teredoEnabled</span><span class="sxs-lookup"><span data-stu-id="0473e-152">teredoEnabled</span></span>|<span data-ttu-id="0473e-153">Valore booleano che specifica se Teredo (una tecnologia per l'indirizzamento dei client dietro a firewall) è attivata.</span><span class="sxs-lookup"><span data-stu-id="0473e-153">A Boolean value that specifies whether Teredo (a technology for addressing clients that are behind firewalls) is enabled.</span></span> <span data-ttu-id="0473e-154">Il valore predefinito è `false`.</span><span class="sxs-lookup"><span data-stu-id="0473e-154">The default is `false`.</span></span><br /><br /> <span data-ttu-id="0473e-155">Questa proprietà abilita Teredo per il socket TCP sottostante.</span><span class="sxs-lookup"><span data-stu-id="0473e-155">This property enables Teredo for the underlying TCP socket.</span></span> <span data-ttu-id="0473e-156">Per ulteriori informazioni, vedere [Panoramica di Teredo](http://go.microsoft.com/fwlink/?LinkId=95339).</span><span class="sxs-lookup"><span data-stu-id="0473e-156">For more information, see [Teredo Overview](http://go.microsoft.com/fwlink/?LinkId=95339).</span></span><br /><br /> <span data-ttu-id="0473e-157">Questa proprietà è applicabile solo su [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0473e-157">This property is applicable only on [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] and [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)].</span></span> [!INCLUDE[wv](../../../../../includes/wv-md.md)]<span data-ttu-id="0473e-158"> ha un'opzione di configurazione a livello di computer per Teredo, pertanto quando viene eseguito Vista, questa proprietà viene ignorata.</span><span class="sxs-lookup"><span data-stu-id="0473e-158"> has a machine-wide configuration option for Teredo, so when running Vista, this property is ignored.</span></span> <span data-ttu-id="0473e-159">L'uso di Teredo richiede che lo stack IPv6 di Microsoft sia installato sia nei computer client che in quelli di servizio e che tutti siano configurati correttamente.</span><span class="sxs-lookup"><span data-stu-id="0473e-159">Teredo requires that the client and service machines both have the Microsoft IPv6 stack installed and correctly configured for Teredo usage.</span></span> <span data-ttu-id="0473e-160">Per ulteriori informazioni sulla configurazione di Teredo, vedere [Panoramica di Teredo](http://go.microsoft.com/fwlink/?LinkId=95339).</span><span class="sxs-lookup"><span data-stu-id="0473e-160">For more information about configuring Teredo, see [Teredo Overview](http://go.microsoft.com/fwlink/?LinkId=95339).</span></span> <span data-ttu-id="0473e-161">Per ulteriori informazioni, vedere [Technology Center di Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=49888).</span><span class="sxs-lookup"><span data-stu-id="0473e-161">For more information, see [Windows Server 2003 Technology Centers](http://go.microsoft.com/fwlink/?LinkId=49888).</span></span>|  
+|<span data-ttu-id="0473e-162">transferMode</span><span class="sxs-lookup"><span data-stu-id="0473e-162">transferMode</span></span>|<span data-ttu-id="0473e-163">Ottiene o imposta un valore che indica se i messaggi vengono memorizzati nel buffer o trasmessi con il trasporto orientato alla connessione.</span><span class="sxs-lookup"><span data-stu-id="0473e-163">Gets or sets a value that indicates whether the messages are buffered or streamed with the connection-oriented transport.</span></span>|  
+|<span data-ttu-id="0473e-164">impostazioniPoolConnessioni</span><span class="sxs-lookup"><span data-stu-id="0473e-164">connectionPoolSettings</span></span>|<span data-ttu-id="0473e-165">Specifica impostazioni aggiuntive del pool di connessioni per un'associazione con named pipe.</span><span class="sxs-lookup"><span data-stu-id="0473e-165">Specifies additional connection pool settings for a Named Pipe binding.</span></span>|  
   
-### Elementi figlio  
- None  
+### <a name="child-elements"></a><span data-ttu-id="0473e-166">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="0473e-166">Child Elements</span></span>  
+ <span data-ttu-id="0473e-167">None</span><span class="sxs-lookup"><span data-stu-id="0473e-167">None</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="0473e-168">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="0473e-168">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<associazione\>](../../../../../docs/framework/misc/binding.md)|Definisce tutte le funzionalità di associazione dell'associazione personalizzata.|  
+|<span data-ttu-id="0473e-169">Elemento</span><span class="sxs-lookup"><span data-stu-id="0473e-169">Element</span></span>|<span data-ttu-id="0473e-170">Descrizione</span><span class="sxs-lookup"><span data-stu-id="0473e-170">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="0473e-171">\<associazione ></span><span class="sxs-lookup"><span data-stu-id="0473e-171">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="0473e-172">Definisce tutte le funzionalità di associazione dell'associazione personalizzata.</span><span class="sxs-lookup"><span data-stu-id="0473e-172">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## Note  
- Questo trasporto usa URI nel formato "net.tcp:\/\/nomehost:porta\/percorso".  Gli altri componenti URI sono facoltativi.  
+## <a name="remarks"></a><span data-ttu-id="0473e-173">Note</span><span class="sxs-lookup"><span data-stu-id="0473e-173">Remarks</span></span>  
+ <span data-ttu-id="0473e-174">Questo trasporto usa URI nel formato "net.tcp://nomehost:porta/percorso".</span><span class="sxs-lookup"><span data-stu-id="0473e-174">This transport uses URIs of the form "net.tcp://hostname:port/path".</span></span> <span data-ttu-id="0473e-175">Gli altri componenti URI sono facoltativi.</span><span class="sxs-lookup"><span data-stu-id="0473e-175">Other URI components are optional.</span></span>  
   
- L'elemento `tcpTransport` rappresenta il punto iniziale per la creazione di un'associazione personalizzata che implementa il protocollo di trasporto TCP.  Il trasporto è ottimizzato per le comunicazioni da WCF a WCF.  
+ <span data-ttu-id="0473e-176">L'elemento `tcpTransport` rappresenta il punto iniziale per la creazione di un'associazione personalizzata che implementa il protocollo di trasporto TCP.</span><span class="sxs-lookup"><span data-stu-id="0473e-176">The `tcpTransport` element is the starting point for creating a custom binding that implements the TCP transport protocol.</span></span> <span data-ttu-id="0473e-177">Il trasporto è ottimizzato per le comunicazioni da WCF a WCF.</span><span class="sxs-lookup"><span data-stu-id="0473e-177">This transport is optimized for WCF-to-WCF communication.</span></span>  
   
-## Vedere anche  
- <xref:System.ServiceModel.Configuration.TcpTransportElement>   
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>   
- <xref:System.ServiceModel.Channels.TransportBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Trasporti](../../../../../docs/framework/wcf/feature-details/transports.md)   
- [Scelta di un trasporto](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Estensione delle associazioni](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Associazioni personalizzate](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a><span data-ttu-id="0473e-178">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0473e-178">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.TcpTransportElement>  
+ <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.TransportBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="0473e-179">Trasporti</span><span class="sxs-lookup"><span data-stu-id="0473e-179">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [<span data-ttu-id="0473e-180">Scelta di un trasporto</span><span class="sxs-lookup"><span data-stu-id="0473e-180">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [<span data-ttu-id="0473e-181">Associazioni</span><span class="sxs-lookup"><span data-stu-id="0473e-181">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="0473e-182">Estensione delle associazioni</span><span class="sxs-lookup"><span data-stu-id="0473e-182">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="0473e-183">Associazioni personalizzate</span><span class="sxs-lookup"><span data-stu-id="0473e-183">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="0473e-184">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="0473e-184">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -1,34 +1,37 @@
 ---
-title: "Generazione delle relazioni del DataSet da XML Schema (XSD) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Generazione di relazioni tra dataset da XML Schema (XSD)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bda9ff0052c6dc2462f007e3febb3cbf9ca7d5ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Generazione delle relazioni del DataSet da XML Schema (XSD)
-In un tipo <xref:System.Data.DataSet> è possibile stabilire un'associazione tra due o più colonne creando una relazione padre\-figlio.  Una relazione **DataSet** può essere rappresentata all'interno di uno schema XSD \(XML Schema Definition Language\) in tre modi diversi:  
+# <a name="generating-dataset-relations-from-xml-schema-xsd"></a><span data-ttu-id="04610-102">Generazione di relazioni tra dataset da XML Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="04610-102">Generating DataSet Relations from XML Schema (XSD)</span></span>
+<span data-ttu-id="04610-103">In un tipo <xref:System.Data.DataSet> è possibile stabilire un'associazione tra due o più colonne creando una relazione padre-figlio.</span><span class="sxs-lookup"><span data-stu-id="04610-103">In a <xref:System.Data.DataSet>, you form an association between two or more columns by creating a parent-child relation.</span></span> <span data-ttu-id="04610-104">Esistono tre modi per rappresentare un **DataSet** relazione all'interno di uno schema di XML Schema definition language (XSD):</span><span class="sxs-lookup"><span data-stu-id="04610-104">There are three ways to represent a **DataSet** relation within an XML Schema definition language (XSD) schema:</span></span>  
   
--   Specificare tipi complessi annidati.  
+-   <span data-ttu-id="04610-105">Specificare tipi complessi annidati.</span><span class="sxs-lookup"><span data-stu-id="04610-105">Specify nested complex types.</span></span>  
   
--   Usare l'annotazione **msdata:Relationship**.  
+-   <span data-ttu-id="04610-106">Utilizzare il **msdata: Relationship** annotazione.</span><span class="sxs-lookup"><span data-stu-id="04610-106">Use the **msdata:Relationship** annotation.</span></span>  
   
--   Specificare un **xs:keyref** senza l'annotazione **msdata:ConstraintOnly**.  
+-   <span data-ttu-id="04610-107">Specificare un **xs:** senza il **msdata: ConstraintOnly** annotazione.</span><span class="sxs-lookup"><span data-stu-id="04610-107">Specify an **xs:keyref** without the **msdata:ConstraintOnly** annotation.</span></span>  
   
-## Tipi complessi annidati  
- Le definizioni di tipi complessi annidati in uno schema indicano le relazioni padre\-figlio degli elementi.  Nel seguente frammento di XML Schema viene mostrato che **OrderDetail** è un elemento figlio dell'elemento **Order**.  
+## <a name="nested-complex-types"></a><span data-ttu-id="04610-108">Tipi complessi annidati</span><span class="sxs-lookup"><span data-stu-id="04610-108">Nested Complex Types</span></span>  
+ <span data-ttu-id="04610-109">Le definizioni di tipi complessi annidati in uno schema indicano le relazioni padre-figlio degli elementi.</span><span class="sxs-lookup"><span data-stu-id="04610-109">Nested complex type definitions in a schema indicate the parent-child relationships of the elements.</span></span> <span data-ttu-id="04610-110">Il frammento di XML Schema seguente mostra che **OrderDetail** è un elemento figlio del **ordine** elemento.</span><span class="sxs-lookup"><span data-stu-id="04610-110">The following XML Schema fragment shows that **OrderDetail** is a child element of the **Order** element.</span></span>  
   
-```  
+```xml  
 <xs:element name="Order">  
   <xs:complexType>  
      <xs:sequence>          
@@ -40,25 +43,24 @@ In un tipo <xref:System.Data.DataSet> è possibile stabilire un'associazione tra
 </xs:element>  
 ```  
   
- Il processo di mapping di XML Schema consente di creare nel **DataSet** tabelle corrispondenti ai tipi complessi annidati dello schema  e di creare colonne aggiuntive, usate come colonne padre**\-**figlio per le tabelle generate.  Notare che tali colonne padre**\-**figlio consentono di specificare relazioni, il che non equivale a specificare vincoli di chiave primaria\/chiave esterna.  
+ <span data-ttu-id="04610-111">Il processo di mapping di XML Schema consente di creare tabelle di **DataSet** che corrispondono ai tipi complessi annidati nello schema.</span><span class="sxs-lookup"><span data-stu-id="04610-111">The XML Schema mapping process creates tables in the **DataSet** that correspond to the nested complex types in the schema.</span></span> <span data-ttu-id="04610-112">Crea inoltre colonne aggiuntive che vengono utilizzate come padre**-**colonne figlio per le tabelle generate.</span><span class="sxs-lookup"><span data-stu-id="04610-112">It also creates additional columns that are used as parent**-**child columns for the generated tables.</span></span> <span data-ttu-id="04610-113">Si noti che questi padre**-**colonne figlio di specificare relazioni, che non equivale a specificare vincoli di chiave esterna o chiave primaria.</span><span class="sxs-lookup"><span data-stu-id="04610-113">Note that these parent**-**child columns specify relationships, which is not the same as specifying primary key/foreign key constraints.</span></span>  
   
-## Annotazione msdata:Relationship  
- L'annotazione **msdata:Relationship** consente di specificare esplicitamente relazioni padre\-figlio tra gli elementi non annidati di uno schema.  Nell'esempio seguente viene mostrata la struttura dell'elemento **Relationship**.  
+## <a name="msdatarelationship-annotation"></a><span data-ttu-id="04610-114">Annotazione msdata:Relationship</span><span class="sxs-lookup"><span data-stu-id="04610-114">msdata:Relationship Annotation</span></span>  
+ <span data-ttu-id="04610-115">Il **msdata: Relationship** annotazione consente di specificare esplicitamente relazioni padre-figlio tra gli elementi dello schema che non sono annidati.</span><span class="sxs-lookup"><span data-stu-id="04610-115">The **msdata:Relationship** annotation allows you to explicitly specify parent-child relationships between elements in the schema that are not nested.</span></span> <span data-ttu-id="04610-116">L'esempio seguente mostra la struttura del **relazione** elemento.</span><span class="sxs-lookup"><span data-stu-id="04610-116">The following example shows the structure of the **Relationship** element.</span></span>  
   
-```  
-  
-  <msdata:Relationship name="CustOrderRelationship"    
-msdata:parent=""    
-msdata:child=""    
-msdata:parentkey=""    
+```xml  
+<msdata:Relationship name="CustOrderRelationship"    
+msdata:parent=""    
+msdata:child=""    
+msdata:parentkey=""    
 msdata:childkey="" />  
 ```  
   
- Gli attributi dell'annotazione **msdata:Relationship** consentono di identificare gli elementi coinvolti in una relazione padre\-figlio, oltre agli elementi **parentkey** e **childkey** e gli attributi coinvolti nella relazione.  Queste informazioni vengono usate dal processo di mapping per generare tabelle nel **DataSet** e creare relazioni di chiave primaria\/chiave esterna tra tali tabelle.  
+ <span data-ttu-id="04610-117">Gli attributi del **msdata: Relationship** consentono di identificare gli elementi coinvolti nella relazione padre-figlio, nonché come il **parentkey** e **childkey** elementi e attributi coinvolti nella relazione.</span><span class="sxs-lookup"><span data-stu-id="04610-117">The attributes of the **msdata:Relationship** annotation identify the elements involved in the parent-child relationship, as well as the **parentkey** and **childkey** elements and attributes involved in the relationship.</span></span> <span data-ttu-id="04610-118">Il processo di mapping utilizza queste informazioni per generare le tabelle di **DataSet** e creare la relazione chiave primaria/esterna chiave tra le tabelle.</span><span class="sxs-lookup"><span data-stu-id="04610-118">The mapping process uses this information to generate tables in the **DataSet** and to create the primary key/foreign key relationship between these tables.</span></span>  
   
- Ad esempio, il seguente frammento di schema specifica gli elementi **Order** e **OrderDetail** allo stesso livello \(non annidati\).  Lo schema specifica un'annotazione **msdata:Relationship**, che a sua volta specifica la relazione padre\-figlio tra i due elementi.  In questo caso è necessario specificare una relazione esplicita mediante l'annotazione **msdata:Relationship**.  
+ <span data-ttu-id="04610-119">Ad esempio, il seguente frammento di schema specifica **ordine** e **OrderDetail** elementi allo stesso livello (non annidati).</span><span class="sxs-lookup"><span data-stu-id="04610-119">For example, the following schema fragment specifies **Order** and **OrderDetail** elements at the same level (not nested).</span></span> <span data-ttu-id="04610-120">Lo schema specifica un **msdata: Relationship** annotazione, che specifica la relazione padre-figlio tra questi due elementi.</span><span class="sxs-lookup"><span data-stu-id="04610-120">The schema specifies an **msdata:Relationship** annotation, which specifies the parent-child relationship between these two elements.</span></span> <span data-ttu-id="04610-121">In questo caso, deve essere specificata una relazione esplicita mediante il **msdata: Relationship** annotazione.</span><span class="sxs-lookup"><span data-stu-id="04610-121">In this case, an explicit relationship must be specified using the **msdata:Relationship** annotation.</span></span>  
   
-```  
+```xml  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
   <xs:complexType>  
     <xs:choice maxOccurs="unbounded">  
@@ -84,27 +86,26 @@ msdata:childkey="" />
           msdata:childkey="OrderNo"/>  
      </xs:appinfo>  
   </xs:annotation>  
-  
 ```  
   
- L'elemento **Relationship** viene usato dal processo di mapping per creare una relazione padre\-figlio tra la colonna **OrderNumber** della tabella **Order** e la colonna **OrderNo** della tabella **OrderDetail** nel **DataSet**.  Il processo di mapping consente solo di specificare la relazione. Non specifica automaticamente alcun vincolo sui valori di tali colonne, a differenza di quanto avviene mediante i vincoli di chiave primaria\/chiave esterna nei database relazionali.  
+ <span data-ttu-id="04610-122">Il processo di mapping viene utilizzato il **relazione** elemento per creare una relazione padre-figlio tra il **OrderNumber** colonna il **ordine** tabella e il **OrderNo** colonna il **OrderDetail** tabella il **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="04610-122">The mapping process uses the **Relationship** element to create a parent-child relationship between the **OrderNumber** column in the **Order** table and the **OrderNo** column in the **OrderDetail** table in the **DataSet**.</span></span> <span data-ttu-id="04610-123">Il processo di mapping consente solo di specificare la relazione. Non specifica automaticamente alcun vincolo sui valori di tali colonne, a differenza di quanto avviene mediante i vincoli di chiave primaria/chiave esterna nei database relazionali.</span><span class="sxs-lookup"><span data-stu-id="04610-123">The mapping process only specifies the relationship; it does not automatically specify any constraints on the values in these columns, as do the primary key/foreign key constraints in relational databases.</span></span>  
   
-### Contenuto della sezione  
- [Mappare relazioni implicite tra elementi annidati dello schema](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
- Vengono descritti i vincoli e le relazioni creati implicitamente in un **DataSet** quando in XML Schema sono presenti elementi annidati.  
+### <a name="in-this-section"></a><span data-ttu-id="04610-124">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="04610-124">In This Section</span></span>  
+ [<span data-ttu-id="04610-125">Eseguire il mapping di relazioni implicite tra elementi di schemi annidati</span><span class="sxs-lookup"><span data-stu-id="04610-125">Map Implicit Relations Between Nested Schema Elements</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
+ <span data-ttu-id="04610-126">Descrive i vincoli e le relazioni creati implicitamente in un **DataSet** quando sono presenti elementi annidati nello Schema XML.</span><span class="sxs-lookup"><span data-stu-id="04610-126">Describes the constraints and relations that are implicitly created in a **DataSet** when nested elements are encountered in XML Schema.</span></span>  
   
- [Mappare le relazioni specificate per gli elementi annidati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
- Viene descritto come impostare esplicitamente le relazioni in un **DataSet** per gli elementi annidati di XML Schema.  
+ [<span data-ttu-id="04610-127">Mappare le relazioni specificate per gli elementi nidificati</span><span class="sxs-lookup"><span data-stu-id="04610-127">Map Relations Specified for Nested Elements</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
+ <span data-ttu-id="04610-128">Viene descritto come impostare esplicitamente le relazioni un **DataSet** per gli elementi annidati nello Schema XML.</span><span class="sxs-lookup"><span data-stu-id="04610-128">Describes how to explicitly set relations in a **DataSet** for nested elements in XML Schema.</span></span>  
   
- [Definire relazioni tra elementi non annidati](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
- Viene descritta la creazione di relazioni in un **DataSet** tra elementi non annidati di XML Schema.  
+ [<span data-ttu-id="04610-129">Specificare le relazioni tra elementi senza alcun annidamento</span><span class="sxs-lookup"><span data-stu-id="04610-129">Specify Relations Between Elements with No Nesting</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ <span data-ttu-id="04610-130">Viene descritto come creare relazioni in un **DataSet** tra elementi di XML Schema che non sono annidati.</span><span class="sxs-lookup"><span data-stu-id="04610-130">Describes how to create relations in a **DataSet** between XML Schema elements that are not nested.</span></span>  
   
-### Sezioni correlate  
- [Derivazione della struttura relazionale di un DataSet da XML Schema \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- Viene descritta la struttura relazionale, o schema, di un **DataSet** creata da uno schema XSD \(XML Schema Definition Language\).  
+### <a name="related-sections"></a><span data-ttu-id="04610-131">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="04610-131">Related Sections</span></span>  
+ [<span data-ttu-id="04610-132">La derivazione di struttura relazionale di DataSet da XML Schema (XSD)</span><span class="sxs-lookup"><span data-stu-id="04610-132">Deriving DataSet Relational Structure from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ <span data-ttu-id="04610-133">Viene descritta la struttura relazionale, o schema, di un **DataSet** creato da uno schema XML Schema definition language (XSD).</span><span class="sxs-lookup"><span data-stu-id="04610-133">Describes the relational structure, or schema, of a **DataSet** that is created from XML Schema definition language (XSD) schema.</span></span>  
   
- [Mapping dei vincoli di XML Schema \(XSD\) ai vincoli del DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Vengono descritti gli elementi di XML Schema usati per creare vincoli univoci e per chiavi esterne in un **DataSet**.  
+ [<span data-ttu-id="04610-134">Vincoli di mapping XML Schema (XSD) e vincoli di DataSet</span><span class="sxs-lookup"><span data-stu-id="04610-134">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="04610-135">Vengono descritti gli elementi di XML Schema utilizzati per creare vincoli di chiave esterni e univoci in un **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="04610-135">Describes the XML Schema elements used to create unique and foreign key constraints in a **DataSet**.</span></span>  
   
-## Vedere anche  
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="04610-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="04610-136">See Also</span></span>  
+ [<span data-ttu-id="04610-137">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="04610-137">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

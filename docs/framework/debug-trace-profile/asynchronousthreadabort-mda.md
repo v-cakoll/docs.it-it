@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - asynchronous thread aborts
 - AsynchronousThreadAbort MDA
@@ -21,46 +15,45 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9a80b0cdd762a9dc26089aa450cf998b1832dbc1
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6f7bfee4375a14a4456493333e65a953d406c732
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="asynchronousthreadabort-mda"></a>MDA asynchronousThreadAbort
-L'assistente al debug gestito `asynchronousThreadAbort` viene attivato quando un thread tenta di introdurre un'interruzione asincrona in un altro thread. `asynchronousThreadAbort` non viene invece attivato da interruzioni sincrone dei thread.
+# <a name="asynchronousthreadabort-mda"></a><span data-ttu-id="90be1-102">MDA asynchronousThreadAbort</span><span class="sxs-lookup"><span data-stu-id="90be1-102">asynchronousThreadAbort MDA</span></span>
+<span data-ttu-id="90be1-103">L'assistente al debug gestito `asynchronousThreadAbort` viene attivato quando un thread tenta di introdurre un'interruzione asincrona in un altro thread.</span><span class="sxs-lookup"><span data-stu-id="90be1-103">The `asynchronousThreadAbort` managed debugging assistant (MDA) is activated when a thread attempts to introduce an asynchronous abort into another thread.</span></span> <span data-ttu-id="90be1-104">`asynchronousThreadAbort` non viene invece attivato da interruzioni sincrone dei thread.</span><span class="sxs-lookup"><span data-stu-id="90be1-104">Synchronous thread aborts do not activate the `asynchronousThreadAbort` MDA.</span></span>
 
-## <a name="symptoms"></a>Sintomi
- Quando il thread principale di un'applicazione viene interrotto, l'applicazione si arresta in modo anomalo e viene generata un'eccezione <xref:System.Threading.ThreadAbortException> non gestita. Se l'esecuzione dell'applicazione dovesse continuare, le conseguenze potrebbero essere peggiori di un arresto anomalo. Si potrebbe infatti verificare un ulteriore danneggiamento dei dati.
+## <a name="symptoms"></a><span data-ttu-id="90be1-105">Sintomi</span><span class="sxs-lookup"><span data-stu-id="90be1-105">Symptoms</span></span>
+ <span data-ttu-id="90be1-106">Quando il thread principale di un'applicazione viene interrotto, l'applicazione si arresta in modo anomalo e viene generata un'eccezione <xref:System.Threading.ThreadAbortException> non gestita.</span><span class="sxs-lookup"><span data-stu-id="90be1-106">An application crashes with an unhandled <xref:System.Threading.ThreadAbortException> when the main application thread is aborted.</span></span> <span data-ttu-id="90be1-107">Se l'esecuzione dell'applicazione dovesse continuare, le conseguenze potrebbero essere peggiori di un arresto anomalo. Si potrebbe infatti verificare un ulteriore danneggiamento dei dati.</span><span class="sxs-lookup"><span data-stu-id="90be1-107">If the application were to continue to execute, the consequences might be worse than the application crashing, possibly resulting in further data corruption.</span></span>
 
- Con molta probabilità operazioni che dovevano essere atomiche sono state interrotte dopo il completamento parziale, lasciando i dati dell'applicazione in uno stato imprevedibile. È possibile che venga generata un'eccezione <xref:System.Threading.ThreadAbortException> da punti apparentemente casuali nell'esecuzione del codice, spesso in posizioni in cui non è prevista la generazione di un'eccezione. Il codice può non essere in grado di gestire questo tipo di eccezioni, generando così uno stato danneggiato.
+ <span data-ttu-id="90be1-108">Con molta probabilità operazioni che dovevano essere atomiche sono state interrotte dopo il completamento parziale, lasciando i dati dell'applicazione in uno stato imprevedibile.</span><span class="sxs-lookup"><span data-stu-id="90be1-108">Operations meant to be atomic have likely been interrupted after partial completion, leaving application data in an unpredictable state.</span></span> <span data-ttu-id="90be1-109">È possibile che venga generata un'eccezione <xref:System.Threading.ThreadAbortException> da punti apparentemente casuali nell'esecuzione del codice, spesso in posizioni in cui non è prevista la generazione di un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="90be1-109">A <xref:System.Threading.ThreadAbortException> can be generated from seemingly random points in the execution of code, often in places from which an exception is not expected to arise.</span></span> <span data-ttu-id="90be1-110">Il codice può non essere in grado di gestire questo tipo di eccezioni, generando così uno stato danneggiato.</span><span class="sxs-lookup"><span data-stu-id="90be1-110">The code might not be capable of handling such an exception, resulting in a corrupt state.</span></span>
 
- I sintomi possono variare ampiamente a causa della casualità implicita nel problema.
+ <span data-ttu-id="90be1-111">I sintomi possono variare ampiamente a causa della casualità implicita nel problema.</span><span class="sxs-lookup"><span data-stu-id="90be1-111">Symptoms can vary widely due to the randomness inherent to the problem.</span></span>
 
-## <a name="cause"></a>Causa
- Il codice di un thread ha chiamato il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> su un thread di destinazione per introdurre un'interruzione di thread asincrona. L'interruzione è asincrona perché il codice che effettua la chiamata a <xref:System.Threading.Thread.Abort%2A> è in esecuzione su un thread diverso da quello di destinazione dell'operazione di interruzione. In genere, le interruzioni sincrone dei thread non causano problemi in quanto il thread che esegue il metodo <xref:System.Threading.Thread.Abort%2A> effettua questa operazione solo in un checkpoint sicuro in cui lo stato dell'applicazione è coerente.
+## <a name="cause"></a><span data-ttu-id="90be1-112">Causa</span><span class="sxs-lookup"><span data-stu-id="90be1-112">Cause</span></span>
+ <span data-ttu-id="90be1-113">Il codice di un thread ha chiamato il metodo <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> su un thread di destinazione per introdurre un'interruzione di thread asincrona.</span><span class="sxs-lookup"><span data-stu-id="90be1-113">Code in one thread called the <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> method on a target thread to introduce an asynchronous thread abort.</span></span> <span data-ttu-id="90be1-114">L'interruzione è asincrona perché il codice che effettua la chiamata a <xref:System.Threading.Thread.Abort%2A> è in esecuzione su un thread diverso da quello di destinazione dell'operazione di interruzione.</span><span class="sxs-lookup"><span data-stu-id="90be1-114">The thread abort is asynchronous because the code that makes the call to <xref:System.Threading.Thread.Abort%2A> is running on a different thread than the target of the abort operation.</span></span> <span data-ttu-id="90be1-115">In genere, le interruzioni sincrone dei thread non causano problemi in quanto il thread che esegue il metodo <xref:System.Threading.Thread.Abort%2A> effettua questa operazione solo in un checkpoint sicuro in cui lo stato dell'applicazione è coerente.</span><span class="sxs-lookup"><span data-stu-id="90be1-115">Synchronous thread aborts should not cause a problem because the thread performing the <xref:System.Threading.Thread.Abort%2A> should have done so only at a safe checkpoint where application state is consistent.</span></span>
 
- Le interruzioni asincrone dei thread generano invece un problema poiché vengono elaborate in punti imprevisti nell'esecuzione del thread di destinazione. Per evitare questo problema, il codice scritto per essere eseguito su un thread che può essere interrotto in questo modo deve poter gestire un'eccezione <xref:System.Threading.ThreadAbortException> pressoché in corrispondenza di ogni riga di codice, prestando attenzione a ripristinare lo stato di coerenza dei dati dell'applicazione. Non è realistico, tuttavia, prevedere la scrittura di codice tenendo presente questo problema o la protezione da tutti possibili rischi.
+ <span data-ttu-id="90be1-116">Le interruzioni asincrone dei thread generano invece un problema poiché vengono elaborate in punti imprevisti nell'esecuzione del thread di destinazione.</span><span class="sxs-lookup"><span data-stu-id="90be1-116">Asynchronous thread aborts present a problem because they are processed at unpredictable points in the target thread's execution.</span></span> <span data-ttu-id="90be1-117">Per evitare questo problema, il codice scritto per essere eseguito su un thread che può essere interrotto in questo modo deve poter gestire un'eccezione <xref:System.Threading.ThreadAbortException> pressoché in corrispondenza di ogni riga di codice, prestando attenzione a ripristinare lo stato di coerenza dei dati dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="90be1-117">To avoid this, code written to run on a thread that might be aborted in this manner would need to handle a <xref:System.Threading.ThreadAbortException> at almost every line of code, taking care to put application data back into a consistent state.</span></span> <span data-ttu-id="90be1-118">Non è realistico, tuttavia, prevedere la scrittura di codice tenendo presente questo problema o la protezione da tutti possibili rischi.</span><span class="sxs-lookup"><span data-stu-id="90be1-118">It is not realistic to expect code to be written with this problem in mind or to write code that protects against all possible circumstances.</span></span>
 
- Le chiamate a codice non gestito e a blocchi `finally` non vengono interrotte in modo asincrono, ma all'uscita da una di queste categorie.
+ <span data-ttu-id="90be1-119">Le chiamate a codice non gestito e a blocchi `finally` non vengono interrotte in modo asincrono, ma all'uscita da una di queste categorie.</span><span class="sxs-lookup"><span data-stu-id="90be1-119">Calls into unmanaged code and `finally` blocks will not be aborted asynchronously but immediately upon exit from one of these categories.</span></span>
 
- È possibile che la causa sia difficile da determinare a causa della casualità implicita nel problema.
+ <span data-ttu-id="90be1-120">È possibile che la causa sia difficile da determinare a causa della casualità implicita nel problema.</span><span class="sxs-lookup"><span data-stu-id="90be1-120">The cause might be difficult to determine due to the randomness inherent to the problem.</span></span>
 
-## <a name="resolution"></a>Risoluzione
- Evitare la progettazione di codice che richieda l'utilizzo di interruzioni asincrone dei thread. Per l'interruzione di un thread di destinazione esistono vari approcci più appropriati che non richiedono una chiamata al metodo <xref:System.Threading.Thread.Abort%2A>. L'approccio più sicuro prevede l'introduzione di un meccanismo, ad esempio una proprietà comune, che segnali al thread di destinazione di richiedere un'interruzione. Il thread di destinazione verifica il segnale in determinati checkpoint sicuri e, se rileva una richiesta di interruzione, viene chiuso correttamente.
+## <a name="resolution"></a><span data-ttu-id="90be1-121">Risoluzione</span><span class="sxs-lookup"><span data-stu-id="90be1-121">Resolution</span></span>
+ <span data-ttu-id="90be1-122">Evitare la progettazione di codice che richieda l'utilizzo di interruzioni asincrone dei thread.</span><span class="sxs-lookup"><span data-stu-id="90be1-122">Avoid code design that requires the use of asynchronous thread aborts.</span></span> <span data-ttu-id="90be1-123">Per l'interruzione di un thread di destinazione esistono vari approcci più appropriati che non richiedono una chiamata al metodo <xref:System.Threading.Thread.Abort%2A>.</span><span class="sxs-lookup"><span data-stu-id="90be1-123">There are several approaches more appropriate for interruption of a target thread that do not require a call to <xref:System.Threading.Thread.Abort%2A>.</span></span> <span data-ttu-id="90be1-124">L'approccio più sicuro prevede l'introduzione di un meccanismo, ad esempio una proprietà comune, che segnali al thread di destinazione di richiedere un'interruzione.</span><span class="sxs-lookup"><span data-stu-id="90be1-124">The safest is to introduce a mechanism, such as a common property, that signals the target thread to request an interrupt.</span></span> <span data-ttu-id="90be1-125">Il thread di destinazione verifica il segnale in determinati checkpoint sicuri e,</span><span class="sxs-lookup"><span data-stu-id="90be1-125">The target thread checks the signal at certain safe checkpoints.</span></span> <span data-ttu-id="90be1-126">se rileva una richiesta di interruzione, viene chiuso correttamente.</span><span class="sxs-lookup"><span data-stu-id="90be1-126">If it notices that an interrupt has been requested, it can shut down gracefully.</span></span>
 
-## <a name="effect-on-the-runtime"></a>Effetto sull'ambiente di esecuzione
- L'assistente al debug gestito non ha alcun effetto su CLR. Si limita a generare un report dei dati relativi alle interruzioni asincrone dei thread.
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="90be1-127">Effetto sull'ambiente di esecuzione</span><span class="sxs-lookup"><span data-stu-id="90be1-127">Effect on the Runtime</span></span>
+ <span data-ttu-id="90be1-128">L'assistente al debug gestito non ha alcun effetto su CLR.</span><span class="sxs-lookup"><span data-stu-id="90be1-128">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="90be1-129">Si limita a generare un report dei dati relativi alle interruzioni asincrone dei thread.</span><span class="sxs-lookup"><span data-stu-id="90be1-129">It only reports data about asynchronous thread aborts.</span></span>
 
-## <a name="output"></a>Output
- L'assistente al debug gestito segnala l'ID del thread che esegue l'interruzione e l'ID del thread di destinazione dell'interruzione. I due ID non coincideranno mai perché questo tipo di output viene generato solo per le interruzioni asincrone.
+## <a name="output"></a><span data-ttu-id="90be1-130">Output</span><span class="sxs-lookup"><span data-stu-id="90be1-130">Output</span></span>
+ <span data-ttu-id="90be1-131">L'assistente al debug gestito segnala l'ID del thread che esegue l'interruzione e l'ID del thread di destinazione dell'interruzione.</span><span class="sxs-lookup"><span data-stu-id="90be1-131">The MDA reports the ID of the thread performing the abort and the ID of the thread that is the target of the abort.</span></span> <span data-ttu-id="90be1-132">I due ID non coincideranno mai perché questo tipo di output viene generato solo per le interruzioni asincrone.</span><span class="sxs-lookup"><span data-stu-id="90be1-132">These will never be the same because this is limited to asynchronous aborts.</span></span>
 
-## <a name="configuration"></a>Configurazione
+## <a name="configuration"></a><span data-ttu-id="90be1-133">Configurazione</span><span class="sxs-lookup"><span data-stu-id="90be1-133">Configuration</span></span>
 
 ```xml
 <mdaConfig>
@@ -70,8 +63,8 @@ L'assistente al debug gestito `asynchronousThreadAbort` viene attivato quando un
 </mdaConfig>
 ```
 
-## <a name="example"></a>Esempio
- L'attivazione dell'assistente al debug gestito `asynchronousThreadAbort` richiede solo una chiamata al metodo <xref:System.Threading.Thread.Abort%2A> su un altro thread in esecuzione. Considerare le conseguenze nel caso in cui il contenuto della funzione di avvio del thread corrispondesse a un insieme di operazioni più complesse che potrebbero essere interrotte in modo anomalo in un qualsiasi punto arbitrario.
+## <a name="example"></a><span data-ttu-id="90be1-134">Esempio</span><span class="sxs-lookup"><span data-stu-id="90be1-134">Example</span></span>
+ <span data-ttu-id="90be1-135">L'attivazione dell'assistente al debug gestito `asynchronousThreadAbort` richiede solo una chiamata al metodo <xref:System.Threading.Thread.Abort%2A> su un altro thread in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="90be1-135">Activating the `asynchronousThreadAbort` MDA requires only a call to <xref:System.Threading.Thread.Abort%2A> on a separate running thread.</span></span> <span data-ttu-id="90be1-136">Considerare le conseguenze nel caso in cui il contenuto della funzione di avvio del thread corrispondesse a un insieme di operazioni più complesse che potrebbero essere interrotte in modo anomalo in un qualsiasi punto arbitrario.</span><span class="sxs-lookup"><span data-stu-id="90be1-136">Consider the consequences if the contents of the thread start function were a set of more complex operations which might be interrupted at any arbitrary point by the abort.</span></span>
 
 ```csharp
 using System.Threading;
@@ -85,6 +78,5 @@ void FireMda()
 }
 ```
 
-## <a name="see-also"></a>Vedere anche
- <xref:System.Threading.Thread> [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
+## <a name="see-also"></a><span data-ttu-id="90be1-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="90be1-137">See Also</span></span>
+ <span data-ttu-id="90be1-138"><xref:System.Threading.Thread> [Diagnostica degli errori tramite gli assistenti al debug gestito](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)</span><span class="sxs-lookup"><span data-stu-id="90be1-138"><xref:System.Threading.Thread> [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)</span></span>

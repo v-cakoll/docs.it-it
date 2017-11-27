@@ -1,39 +1,41 @@
 ---
-title: "Metodo Load | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Metodo Load
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4617f2193b9d557094b7570f8ca8fd5ff7a9d25d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Metodo Load
-È possibile usare il metodo <xref:System.Data.DataTable.Load%2A> per caricare un tipo <xref:System.Data.DataTable> con righe provenienti da un'origine dati.  Si tratta di un metodo di overload che, nella forma più semplice, accetta un singolo parametro, **DataReader**.  In questa forma, viene semplicemente caricata la **DataTable** con le righe.  Facoltativamente, è possibile specificare il parametro **LoadOption** per controllare il modo in cui vengono aggiunti i dati alla **DataTable**.  
+# <a name="the-load-method"></a><span data-ttu-id="f33ed-102">Metodo Load</span><span class="sxs-lookup"><span data-stu-id="f33ed-102">The Load Method</span></span>
+<span data-ttu-id="f33ed-103">È possibile usare il metodo <xref:System.Data.DataTable.Load%2A> per caricare un tipo <xref:System.Data.DataTable> con righe provenienti da un'origine dati.</span><span class="sxs-lookup"><span data-stu-id="f33ed-103">You can use the <xref:System.Data.DataTable.Load%2A> method to load a <xref:System.Data.DataTable> with rows from a data source.</span></span> <span data-ttu-id="f33ed-104">Si tratta di un metodo di overload che, nella sua forma più semplice, accetta un solo parametro, un **DataReader**.</span><span class="sxs-lookup"><span data-stu-id="f33ed-104">This is an overloaded method which, in its simplest form, accepts a single parameter, a **DataReader**.</span></span> <span data-ttu-id="f33ed-105">In questo modulo, viene semplicemente caricata la **DataTable** con righe.</span><span class="sxs-lookup"><span data-stu-id="f33ed-105">In this form, it simply loads the **DataTable** with rows.</span></span> <span data-ttu-id="f33ed-106">Facoltativamente, è possibile specificare il **LoadOption** parametro per controllare come aggiungere i dati per il **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="f33ed-106">Optionally, you can specify the **LoadOption** parameter to control how data is added to the **DataTable**.</span></span>  
   
- Il parametro **LoadOption** è particolarmente utile nei casi in cui la **DataTable** contenga già righe di dati, in quanto descrive in che modo i dati in arrivo dall'origine dati verranno combinati con i dati già presenti nella tabella.  Ad esempio, **PreserveCurrentValues**, ovvero l'impostazione predefinita, specifica che nei casi in cui una riga è contrassegnata come **Added** nella **DataTable**, il valore **Original** di ciascuna colonna è impostato sul contenuto della riga corrispondente dell'origine dati.  Il valore **Current** conserverà i valori assegnati quando la riga è stata aggiunta mentre il valore della riga relativo a **RowState** verrà impostato su **Changed**.  
+ <span data-ttu-id="f33ed-107">Il **LoadOption** parametro è particolarmente utile nei casi in cui il **DataTable** già contiene righe di dati, perché viene descritto come i dati provenienti dai file di dati vengono combinati con i dati già nella tabella.</span><span class="sxs-lookup"><span data-stu-id="f33ed-107">The **LoadOption** parameter is particularly useful in cases where the **DataTable** already contains rows of data, because it describes how incoming data from the data source will be combined with the data already in the table.</span></span> <span data-ttu-id="f33ed-108">Ad esempio, **PreserveCurrentValues** (predefinito) specifica che nei casi in cui una riga è contrassegnata come **Added** nel **DataTable**, **originale** valore o ogni colonna è impostato per il contenuto della riga corrispondente dall'origine dati.</span><span class="sxs-lookup"><span data-stu-id="f33ed-108">For example, **PreserveCurrentValues** (the default) specifies that in cases where a row is marked as **Added** in the **DataTable**, the **Original** value or each column is set to the contents of the matching row from the data source.</span></span> <span data-ttu-id="f33ed-109">Il **corrente** valore manterrà i valori assegnati quando la riga è stata aggiunta e **RowState** della riga verrà impostato su **Changed**.</span><span class="sxs-lookup"><span data-stu-id="f33ed-109">The **Current** value will retain the values assigned when the row was added, and the **RowState** of the row will be set to **Changed**.</span></span>  
   
- Nella tabella seguente viene fornita una breve descrizione dei valori di enumerazione di <xref:System.Data.LoadOption>.  
+ <span data-ttu-id="f33ed-110">Nella tabella seguente viene fornita una breve descrizione dei valori di enumerazione di <xref:System.Data.LoadOption>.</span><span class="sxs-lookup"><span data-stu-id="f33ed-110">The following table gives a short description of the <xref:System.Data.LoadOption> enumeration values.</span></span>  
   
-|Valore LoadOption|Descrizione|  
-|-----------------------|-----------------|  
-|**OverwriteRow**|Se le righe in arrivo presentano lo stesso valore **PrimaryKey** di una riga già presente nella **DataTable**, i valori **Original** e **Current** di ciascuna colonna vengono sostituiti dai valori della riga in arrivo e la proprietà **RowState** viene impostata su **Unchanged**.<br /><br /> Le righe provenienti da un'origine dati e non ancora presenti nella **DataTable** vengono aggiunte con il valore di **RowState** pari a **Unchanged**.<br /><br /> Se questa opzione è attiva, il contenuto della **DataTable** viene aggiornato in modo da corrispondere al contenuto dell'origine dati.|  
-|**PreserveCurrentValues \(impostazione predefinita\)**|Se le righe in arrivo presentano lo stesso valore **PrimaryKey** di una riga già presente nella **DataTable**, il valore **Original** viene impostato sul contenuto della riga in arrivo e il valore **Current** non viene modificato.<br /><br /> Se il valore relativo a **RowState** è **Added** o **Modified**, verrà impostato su **Modified**.<br /><br /> Se il valore relativo a **RowState** era **Deleted**, rimarrà **Deleted**.<br /><br /> Le righe provenienti da un'origine dati non ancora presenti nella **DataTable** vengono aggiunte e **RowState** viene impostato su **Unchanged**.|  
-|**UpdateCurrentValues**|Se le righe in arrivo presentano lo stesso valore **PrimaryKey** della riga già presente nella **DataTable**, il valore **Current** viene copiato nel valore **Original** e viene quindi impostato sul contenuto della riga in arrivo.<br /><br /> Se il valore relativo a **RowState** nella **DataTable** era **Added**, **RowState** rimarrà **Added**.  Per le righe contrassegnate come **Modified** o **Deleted**, il valore relativo a **RowState** sarà **Modified**.<br /><br /> Le righe provenienti da un'origine dati non ancora presenti nella **DataTable** vengono aggiunte e **RowState** viene impostato su **Added**.|  
+|<span data-ttu-id="f33ed-111">Valore LoadOption</span><span class="sxs-lookup"><span data-stu-id="f33ed-111">LoadOption value</span></span>|<span data-ttu-id="f33ed-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f33ed-112">Description</span></span>|  
+|----------------------|-----------------|  
+|<span data-ttu-id="f33ed-113">**OverwriteRow**</span><span class="sxs-lookup"><span data-stu-id="f33ed-113">**OverwriteRow**</span></span>|<span data-ttu-id="f33ed-114">Se le righe in arrivo presentano lo stesso **PrimaryKey** valore di una riga già presente nella **DataTable**, **originale** e **corrente** i valori di ogni colonna vengono sostituiti con i valori della riga in arrivo e **RowState** è impostata su **Unchanged**.</span><span class="sxs-lookup"><span data-stu-id="f33ed-114">If incoming rows have the same **PrimaryKey** value as a row already in the **DataTable**, the **Original** and **Current** values of each column are replaced with the values in the incoming row, and the **RowState** property is set to **Unchanged**.</span></span><br /><br /> <span data-ttu-id="f33ed-115">Le righe dall'origine dati che non esistono già nel **DataTable** vengono aggiunti con una **RowState** valore **Unchanged**.</span><span class="sxs-lookup"><span data-stu-id="f33ed-115">Rows from the data source that do not already exist in the **DataTable** are added with a **RowState** value of **Unchanged**.</span></span><br /><br /> <span data-ttu-id="f33ed-116">Questa opzione attiva aggiorna il contenuto del **DataTable** in modo che corrisponda il contenuto dell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="f33ed-116">This option in effect refreshes the contents of the **DataTable** so that it matches the contents of the data source.</span></span>|  
+|<span data-ttu-id="f33ed-117">**PreserveCurrentValues (impostazione predefinita)**</span><span class="sxs-lookup"><span data-stu-id="f33ed-117">**PreserveCurrentValues (default)**</span></span>|<span data-ttu-id="f33ed-118">Se le righe in arrivo presentano lo stesso **PrimaryKey** valore di una riga già presente nella **DataTable**, **originale** è impostato per il contenuto della riga in arrivo e il **Corrente** valore non viene modificato.</span><span class="sxs-lookup"><span data-stu-id="f33ed-118">If incoming rows have the same **PrimaryKey** value as a row already in the **DataTable**, the **Original** value is set to the contents of the incoming row, and the **Current** value is not changed.</span></span><br /><br /> <span data-ttu-id="f33ed-119">Se il **RowState** è **Added** o **Modified**, viene impostato su **Modified**.</span><span class="sxs-lookup"><span data-stu-id="f33ed-119">If the **RowState** is **Added** or **Modified**, it is set to **Modified**.</span></span><br /><br /> <span data-ttu-id="f33ed-120">Se il **RowState** stato **Deleted**, rimane **Deleted**.</span><span class="sxs-lookup"><span data-stu-id="f33ed-120">If the **RowState** was **Deleted**, it remains **Deleted**.</span></span><br /><br /> <span data-ttu-id="f33ed-121">Le righe dall'origine dati che non esistono già nel **DataTable** vengono aggiunti e **RowState** è impostato su **Unchanged**.</span><span class="sxs-lookup"><span data-stu-id="f33ed-121">Rows from the data source that do not already exist in the **DataTable** are added, and the **RowState** is set to **Unchanged**.</span></span>|  
+|<span data-ttu-id="f33ed-122">**UpdateCurrentValues**</span><span class="sxs-lookup"><span data-stu-id="f33ed-122">**UpdateCurrentValues**</span></span>|<span data-ttu-id="f33ed-123">Se le righe in arrivo presentano lo stesso **PrimaryKey** valore come la riga già presente nella **DataTable**, **corrente** valore viene copiato il **originale**valore e **corrente** valore viene quindi impostato per il contenuto della riga in arrivo.</span><span class="sxs-lookup"><span data-stu-id="f33ed-123">If incoming rows have the same **PrimaryKey** value as the row already in the **DataTable**, the **Current** value is copied to the **Original** value, and the **Current** value is then set to the contents of the incoming row.</span></span><br /><br /> <span data-ttu-id="f33ed-124">Se il **RowState** nel **DataTable** è stata **Added**, **RowState** rimane **aggiunto**.</span><span class="sxs-lookup"><span data-stu-id="f33ed-124">If the **RowState** in the **DataTable** was **Added**, the **RowState** remains **Added**.</span></span> <span data-ttu-id="f33ed-125">Per le righe contrassegnate come **Modified** o **Deleted**, **RowState** è **Modified**.</span><span class="sxs-lookup"><span data-stu-id="f33ed-125">For rows marked as **Modified** or **Deleted**, the **RowState** is **Modified**.</span></span><br /><br /> <span data-ttu-id="f33ed-126">Le righe dall'origine dati che non sono già presenti nel **DataTable** vengono aggiunti e **RowState** è impostato su **aggiunto**.</span><span class="sxs-lookup"><span data-stu-id="f33ed-126">Rows from the data source that do not already exist in the **DataTable** are added, and the **RowState** is set to **Added**.</span></span>|  
   
- Nell'esempio seguente viene usato il metodo **Load** per visualizzare un elenco delle date di nascita dei dipendenti nel database **Northwind**.  
+ <span data-ttu-id="f33ed-127">L'esempio seguente usa il **carico** metodo per visualizzare un elenco delle date di nascita dei dipendenti nel **Northwind** database.</span><span class="sxs-lookup"><span data-stu-id="f33ed-127">The following sample uses the **Load** method to display a list of birthdays for the employees in the **Northwind** database.</span></span>  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
     ' Assumes that connectionString is a valid connection string  
     ' to the Northwind database on SQL Server.  
@@ -75,6 +77,6 @@ Private Sub LoadBirthdays(ByVal connectionString As String)
 End Sub  
 ```  
   
-## Vedere anche  
- [Modifica dei dati in una DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f33ed-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f33ed-128">See Also</span></span>  
+ [<span data-ttu-id="f33ed-129">La modifica dei dati in un oggetto DataTable</span><span class="sxs-lookup"><span data-stu-id="f33ed-129">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="f33ed-130">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="f33ed-130">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

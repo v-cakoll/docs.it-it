@@ -1,73 +1,79 @@
 ---
-title: "Procedura: aggiungere dettagli di riga un controllo DataGrid | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DataGrid [WPF], dettagli riga"
-  - "DataTemplate [WPF], DataGrid"
-  - "dettagli riga [WPF], DataGrid"
+title: 'Procedura: aggiungere dettagli di riga un controllo DataGrid'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataTemplate [WPF], DataGrid
+- row details [WPF], DataGrid
+- DataGrid [WPF], row details
 ms.assetid: 0bdc6f50-9b4c-483f-9df6-a47a1fde998b
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 036e06d110df8900ab46f0d501f30b4a163c8eb9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: aggiungere dettagli di riga un controllo DataGrid
-Quando si utilizza il controllo <xref:System.Windows.Controls.DataGrid>, è possibile personalizzare la presentazione dei dati aggiungendo una sezione dei dettagli di riga.  L'aggiunta di una sezione dei dettagli di riga consente di raggruppare i dati in un modello che è possibile rendere visibile o compresso.  È ad esempio possibile aggiungere dettagli di riga a un oggetto <xref:System.Windows.Controls.DataGrid> che includa solo un riepilogo dei dati per ogni riga in <xref:System.Windows.Controls.DataGrid>, ma che presenti più campi dati quando l'utente seleziona una riga.  Il modello per i dettagli di riga viene definito nella proprietà <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>.  Nella figura seguente viene illustrato un esempio di una sezione dei dettagli di riga.  
+# <a name="how-to-add-row-details-to-a-datagrid-control"></a><span data-ttu-id="60943-102">Procedura: aggiungere dettagli di riga un controllo DataGrid</span><span class="sxs-lookup"><span data-stu-id="60943-102">How to: Add Row Details to a DataGrid Control</span></span>
+<span data-ttu-id="60943-103">Quando si utilizza il <xref:System.Windows.Controls.DataGrid> (controllo), è possibile personalizzare la presentazione dei dati tramite l'aggiunta di una sezione dei dettagli di riga.</span><span class="sxs-lookup"><span data-stu-id="60943-103">When using the <xref:System.Windows.Controls.DataGrid> control, you can customize the data presentation by adding a row details section.</span></span> <span data-ttu-id="60943-104">L'aggiunta di una sezione dei dettagli di riga consente di raggruppare i dati in un modello che è possibile rendere visibile o compressa.</span><span class="sxs-lookup"><span data-stu-id="60943-104">Adding a row details section enables you to group some data in a template that is optionally visible or collapsed.</span></span> <span data-ttu-id="60943-105">Ad esempio, è possibile aggiungere i dettagli di riga per un <xref:System.Windows.Controls.DataGrid> che includa solo un riepilogo dei dati per ogni riga di <xref:System.Windows.Controls.DataGrid>, ma presenta più campi di dati quando l'utente seleziona una riga.</span><span class="sxs-lookup"><span data-stu-id="60943-105">For example, you can add row details to a <xref:System.Windows.Controls.DataGrid> that presents only a summary of the data for each row in the <xref:System.Windows.Controls.DataGrid>, but presents more data fields when the user selects a row.</span></span> <span data-ttu-id="60943-106">Definire il modello per la sezione dei dettagli della riga nel <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="60943-106">You define the template for the row details section in the <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> property.</span></span> <span data-ttu-id="60943-107">Nella figura seguente viene illustrato un esempio di una sezione dei dettagli di riga.</span><span class="sxs-lookup"><span data-stu-id="60943-107">The following illustration shows an example of a row details section.</span></span>  
   
- ![DataGrid con i dettagli della riga](../../../../docs/framework/wpf/controls/media/ndp-rowdetails.png "NDP\_RowDetails")  
+ <span data-ttu-id="60943-108">![DataGrid con i dettagli della riga](../../../../docs/framework/wpf/controls/media/ndp-rowdetails.png "NDP_RowDetails")</span><span class="sxs-lookup"><span data-stu-id="60943-108">![DataGrid shown with row details](../../../../docs/framework/wpf/controls/media/ndp-rowdetails.png "NDP_RowDetails")</span></span>  
   
- Il modello dei dettagli di riga può essere definito sia come codice XAML inline sia come risorsa.  Entrambi gli approcci vengono illustrati nelle procedure seguenti.  Un modello di dati aggiunto come risorsa può essere utilizzato in tutto il progetto senza che sia necessario ricreare il modello.  Un modello di dati aggiunto come codice XAML inline è invece accessibile solo dal controllo in cui viene definito.  
+ <span data-ttu-id="60943-109">Il modello di informazioni di riga è definire come inline XAML o come una risorsa.</span><span class="sxs-lookup"><span data-stu-id="60943-109">You define the row details template as either inline XAML or as a resource.</span></span> <span data-ttu-id="60943-110">Entrambi gli approcci vengono visualizzati nelle procedure seguenti.</span><span class="sxs-lookup"><span data-stu-id="60943-110">Both approaches are shown in the following procedures.</span></span> <span data-ttu-id="60943-111">Un modello di dati che viene aggiunto come una risorsa può essere utilizzata in tutto il progetto senza creare nuovamente il modello.</span><span class="sxs-lookup"><span data-stu-id="60943-111">A data template that is added as a resource can be used throughout the project without re-creating the template.</span></span> <span data-ttu-id="60943-112">Un modello di dati che viene aggiunto come inline XAML è accessibile solo dal controllo in cui è definito.</span><span class="sxs-lookup"><span data-stu-id="60943-112">A data template that is added as inline XAML is only accessible from the control where it is defined.</span></span>  
   
-### Per visualizzare dettagli della riga tramite codice XAML inline  
+### <a name="to-display-row-details-by-using-inline-xaml"></a><span data-ttu-id="60943-113">Per visualizzare i dettagli di riga utilizzando il codice XAML inline</span><span class="sxs-lookup"><span data-stu-id="60943-113">To display row details by using inline XAML</span></span>  
   
-1.  Creare un oggetto <xref:System.Windows.Controls.DataGrid> che determini la visualizzazione di dati da un'origine dati.  
+1.  <span data-ttu-id="60943-114">Creare un <xref:System.Windows.Controls.DataGrid> che visualizza i dati da un'origine dati.</span><span class="sxs-lookup"><span data-stu-id="60943-114">Create a <xref:System.Windows.Controls.DataGrid> that displays data from a data source.</span></span>  
   
-2.  Nell'elemento <xref:System.Windows.Controls.DataGrid> aggiungere un elemento <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>.  
+2.  <span data-ttu-id="60943-115">Nell'elemento <xref:System.Windows.Controls.DataGrid> aggiungere un elemento <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>.</span><span class="sxs-lookup"><span data-stu-id="60943-115">In the <xref:System.Windows.Controls.DataGrid> element, add a <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> element.</span></span>  
   
-3.  Creare un oggetto <xref:System.Windows.DataTemplate> che definisca l'aspetto della sezione dei dettagli di riga.  
+3.  <span data-ttu-id="60943-116">Creare un <xref:System.Windows.DataTemplate> che definisce l'aspetto della sezione dettagli della riga.</span><span class="sxs-lookup"><span data-stu-id="60943-116">Create a <xref:System.Windows.DataTemplate> that defines the appearance of the row details section.</span></span>  
   
-     Nel codice XAML seguente vengono illustrati <xref:System.Windows.Controls.DataGrid> e come definire l'oggetto <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> inline.  L'oggetto <xref:System.Windows.Controls.DataGrid> determina la visualizzazione di tre valori in ogni riga e di tre ulteriori valori quando la riga viene selezionata.  
+     <span data-ttu-id="60943-117">Il codice XAML seguente viene illustrata la <xref:System.Windows.Controls.DataGrid> e come definire il <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> inline.</span><span class="sxs-lookup"><span data-stu-id="60943-117">The following XAML shows the <xref:System.Windows.Controls.DataGrid> and how to define the <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> inline.</span></span> <span data-ttu-id="60943-118">Il <xref:System.Windows.Controls.DataGrid> Visualizza tre valori in ogni riga e tre ulteriori valori quando la riga è selezionata.</span><span class="sxs-lookup"><span data-stu-id="60943-118">The <xref:System.Windows.Controls.DataGrid> displays three values in each row and three more values when the row is selected.</span></span>  
   
-     [!code-xml[DataGrid_RowDetails#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml#1)]  
+     [!code-xaml[DataGrid_RowDetails#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml#1)]  
   
-     Nel codice seguente viene illustrata la query utilizzata per selezionare i dati visualizzati in <xref:System.Windows.Controls.DataGrid>.  In questo esempio la query seleziona dati da un'entità contenente informazioni sul cliente.  
+     <span data-ttu-id="60943-119">Il codice seguente viene illustrata la query viene utilizzata per selezionare i dati che viene visualizzati nel <xref:System.Windows.Controls.DataGrid>.</span><span class="sxs-lookup"><span data-stu-id="60943-119">The following code shows the query that is used to select the data that is displayed in the <xref:System.Windows.Controls.DataGrid>.</span></span> <span data-ttu-id="60943-120">In questo esempio, la query Seleziona dati da un'entità che contiene informazioni sul cliente.</span><span class="sxs-lookup"><span data-stu-id="60943-120">In this example, the query selects data from an entity that contains customer information.</span></span>  
   
      [!code-csharp[DataGrid_RowDetails#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml.cs#2)]
      [!code-vb[DataGrid_RowDetails#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_rowdetails/vb/mainwindow.xaml.vb#2)]  
   
-### Per visualizzare dettagli di riga tramite una risorsa  
+### <a name="to-display-row-details-by-using-a-resource"></a><span data-ttu-id="60943-121">Per visualizzare i dettagli di riga tramite una risorsa</span><span class="sxs-lookup"><span data-stu-id="60943-121">To display row details by using a resource</span></span>  
   
-1.  Creare un oggetto <xref:System.Windows.Controls.DataGrid> che determini la visualizzazione di dati da un'origine dati.  
+1.  <span data-ttu-id="60943-122">Creare un <xref:System.Windows.Controls.DataGrid> che visualizza i dati da un'origine dati.</span><span class="sxs-lookup"><span data-stu-id="60943-122">Create a <xref:System.Windows.Controls.DataGrid> that displays data from a data source.</span></span>  
   
-2.  Aggiungere un elemento <xref:System.Windows.FrameworkElement.Resources%2A> all'elemento radice, ad esempio un controllo <xref:System.Windows.Window> o un controllo <xref:System.Windows.Controls.Page> oppure aggiunge un elemento <xref:System.Windows.Application.Resources%2A> alla classe <xref:System.Windows.Application> nel file App.xaml \(o Application.xaml\).  
+2.  <span data-ttu-id="60943-123">Aggiungere un <xref:System.Windows.FrameworkElement.Resources%2A> elemento all'elemento radice, ad esempio un <xref:System.Windows.Window> controllo o un <xref:System.Windows.Controls.Page> controllare o aggiungere un <xref:System.Windows.Application.Resources%2A> elemento per la <xref:System.Windows.Application> classe nel file app. XAML (o Application. XAML).</span><span class="sxs-lookup"><span data-stu-id="60943-123">Add a <xref:System.Windows.FrameworkElement.Resources%2A> element to the root element, such as a <xref:System.Windows.Window> control or a <xref:System.Windows.Controls.Page> control, or add a <xref:System.Windows.Application.Resources%2A> element to the <xref:System.Windows.Application> class in the App.xaml (or Application.xaml) file.</span></span>  
   
-3.  Nell'elemento delle risorse creare un oggetto <xref:System.Windows.DataTemplate> che definisca l'aspetto della sezione dei dettagli di riga.  
+3.  <span data-ttu-id="60943-124">Nell'elemento risorse, creare un <xref:System.Windows.DataTemplate> che definisce l'aspetto della sezione dettagli della riga.</span><span class="sxs-lookup"><span data-stu-id="60943-124">In the resources element, create a <xref:System.Windows.DataTemplate> that defines the appearance of the row details section.</span></span>  
   
-     Nel codice XAML seguente viene illustrata la proprietà <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> definita nella classe <xref:System.Windows.Application>.  
+     <span data-ttu-id="60943-125">Il codice XAML seguente viene illustrata la <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> definito nel <xref:System.Windows.Application> classe.</span><span class="sxs-lookup"><span data-stu-id="60943-125">The following XAML shows the <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> defined in the <xref:System.Windows.Application> class.</span></span>  
   
-     [!code-xml[DataGrid_RowDetails#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/app.xaml#3)]  
+     [!code-xaml[DataGrid_RowDetails#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/app.xaml#3)]  
   
-4.  Sull'oggetto <xref:System.Windows.DataTemplate> impostare [Direttiva x:Key](../../../../docs/framework/xaml-services/x-key-directive.md) su un valore che identifichi in modo univoco il modello di dati.  
+4.  <span data-ttu-id="60943-126">Nel <xref:System.Windows.DataTemplate>, impostare il [direttiva X:Key](../../../../docs/framework/xaml-services/x-key-directive.md) su un valore che identifica in modo univoco il modello di dati.</span><span class="sxs-lookup"><span data-stu-id="60943-126">On the <xref:System.Windows.DataTemplate>, set the [x:Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md) to a value that uniquely identifies the data template.</span></span>  
   
-5.  Nell'elemento <xref:System.Windows.Controls.DataGrid> impostare la proprietà <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> sulla risorsa definita nei passaggi precedenti.  Assegnare la risorsa come risorsa statica.  
+5.  <span data-ttu-id="60943-127">Nel <xref:System.Windows.Controls.DataGrid> elemento, impostare il <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> proprietà della risorsa definita nei passaggi precedenti.</span><span class="sxs-lookup"><span data-stu-id="60943-127">In the <xref:System.Windows.Controls.DataGrid> element, set the <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> property to the resource defined in the previous steps.</span></span> <span data-ttu-id="60943-128">Assegnare la risorsa come una risorsa statica.</span><span class="sxs-lookup"><span data-stu-id="60943-128">Assign the resource as a static resource.</span></span>  
   
-     Nel codice XAML seguente viene illustrata la proprietà <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> impostata sulla risorsa dell'esempio precedente.  
+     <span data-ttu-id="60943-129">Il codice XAML seguente viene illustrata la <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> impostata per la risorsa dell'esempio precedente.</span><span class="sxs-lookup"><span data-stu-id="60943-129">The following XAML shows the <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> property set to the resource from the previous example.</span></span>  
   
-     [!code-xml[DataGrid_RowDetails#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/window2.xaml#4)]  
+     [!code-xaml[DataGrid_RowDetails#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/window2.xaml#4)]  
   
-### Per impostare la visibilità e impedire lo scorrimento orizzontale per i dettagli di riga  
+### <a name="to-set-visibility-and-prevent-horizontal-scrolling-for-row-details"></a><span data-ttu-id="60943-130">Per impostare la visibilità e impedire lo scorrimento orizzontale per i dettagli delle righe</span><span class="sxs-lookup"><span data-stu-id="60943-130">To set visibility and prevent horizontal scrolling for row details</span></span>  
   
-1.  Se necessario, impostare la proprietà <xref:System.Windows.Controls.DataGrid.RowDetailsVisibilityMode%2A> su un valore di <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode>.  
+1.  <span data-ttu-id="60943-131">Se necessario, impostare il <xref:System.Windows.Controls.DataGrid.RowDetailsVisibilityMode%2A> proprietà per un <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> valore.</span><span class="sxs-lookup"><span data-stu-id="60943-131">If needed, set the <xref:System.Windows.Controls.DataGrid.RowDetailsVisibilityMode%2A> property to a <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> value.</span></span>  
   
-     Per impostazione predefinita, il valore viene impostato su <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode>.  È possibile impostarlo su <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> per visualizzare i dettagli per tutte le righe oppure su <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> per nascondere i dettagli per tutte le righe.  
+     <span data-ttu-id="60943-132">Per impostazione predefinita, il valore è impostato su <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.VisibleWhenSelected>.</span><span class="sxs-lookup"><span data-stu-id="60943-132">By default, the value is set to <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.VisibleWhenSelected>.</span></span> <span data-ttu-id="60943-133">È possibile impostare <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Visible> per visualizzare i dettagli per tutte le righe o <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Collapsed> per nascondere i dettagli per tutte le righe.</span><span class="sxs-lookup"><span data-stu-id="60943-133">You can set it to <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Visible> to show the details for all of the rows or <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Collapsed> to hide the details for all rows.</span></span>  
   
-2.  Se necessario, impostare la proprietà <xref:System.Windows.Controls.DataGrid.AreRowDetailsFrozen%2A> su `true` per impedire lo scorrimento orizzontale della sezione dei dettagli di riga.
+2.  <span data-ttu-id="60943-134">Se necessario, impostare il <xref:System.Windows.Controls.DataGrid.AreRowDetailsFrozen%2A> proprietà `true` sezione lo scorrimento orizzontale per impedire la riga dei dettagli.</span><span class="sxs-lookup"><span data-stu-id="60943-134">If needed, set the <xref:System.Windows.Controls.DataGrid.AreRowDetailsFrozen%2A> property to `true` to prevent the row details section from scrolling horizontally.</span></span>

@@ -1,72 +1,75 @@
 ---
-title: "Procedura: eseguire la migrazione di servizi Web ASP.NET compatibili AJAX a WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: eseguire la migrazione di servizi Web ASP.NET compatibili AJAX a WCF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 91b611af6c8de5c2bc0119838eb12950d3207177
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: eseguire la migrazione di servizi Web ASP.NET compatibili AJAX a WCF
-In questo argomento vengono illustrate le procedure per eseguire la migrazione di un servizio ASP.NET AJAX di base a un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] compatibile AJAX equivalente.  Verrà descritto come creare una versione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funzionalmente equivalente a un servizio ASP.NET.AJAX.  I due servizi possono quindi essere utilizzati in modo affiancato, oppure il servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può essere utilizzato al posto del servizio ASP.NET.AJAX.  
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a><span data-ttu-id="65c9a-102">Procedura: eseguire la migrazione di servizi Web ASP.NET compatibili AJAX a WCF</span><span class="sxs-lookup"><span data-stu-id="65c9a-102">How to: Migrate AJAX-Enabled ASP.NET Web Services to WCF</span></span>
+<span data-ttu-id="65c9a-103">In questo argomento vengono illustrate le procedure per eseguire la migrazione di un servizio ASP.NET AJAX di base a un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] compatibile AJAX equivalente.</span><span class="sxs-lookup"><span data-stu-id="65c9a-103">This topic outlines procedures to migrate a basic ASP.NET AJAX service to an equivalent AJAX-enabled [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service.</span></span> <span data-ttu-id="65c9a-104">Verrà descritto come creare una versione [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funzionalmente equivalente a un servizio ASP.NET.AJAX.</span><span class="sxs-lookup"><span data-stu-id="65c9a-104">It shows how to create a functionally equivalent [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] version of an ASP.NET AJAX service.</span></span> <span data-ttu-id="65c9a-105">I due servizi possono quindi essere utilizzati in modo affiancato, oppure il servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] può essere utilizzato al posto del servizio ASP.NET.AJAX.</span><span class="sxs-lookup"><span data-stu-id="65c9a-105">The two services can then be used side by side, or the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service can be used to replace the ASP.NET AJAX service.</span></span>  
   
- La migrazione di un servizio ASP.NET.AJAX esistente in un servizio AJAX [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre i vantaggi seguenti:  
+ <span data-ttu-id="65c9a-106">La migrazione di un servizio ASP.NET.AJAX esistente in un servizio AJAX [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre i vantaggi seguenti:</span><span class="sxs-lookup"><span data-stu-id="65c9a-106">Migrating an existing ASP.NET AJAX service to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX service gives you the following benefits:</span></span>  
   
--   È possibile esporre il servizio AJAX come servizio SOAP tramite una minima configurazione aggiuntiva.  
+-   <span data-ttu-id="65c9a-107">È possibile esporre il servizio AJAX come servizio SOAP tramite una minima configurazione aggiuntiva.</span><span class="sxs-lookup"><span data-stu-id="65c9a-107">You can expose your AJAX service as a SOAP service with minimal extra configuration.</span></span>  
   
--   Sarà possibile usufruire delle funzionalità di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] quali la traccia e così via.  
+-   <span data-ttu-id="65c9a-108">Sarà possibile usufruire delle funzionalità di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] quali la traccia e così via.</span><span class="sxs-lookup"><span data-stu-id="65c9a-108">You can benefit from [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] features such as tracing, and so on.</span></span>  
   
- Ai fini delle procedure seguenti si presuppone che venga utilizzato [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+ <span data-ttu-id="65c9a-109">Ai fini delle procedure seguenti si presuppone che venga utilizzato [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="65c9a-109">The following procedures assume that you are using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
- Il codice generato dalle procedure descritte in questo argomento viene fornito nell'esempio riportato dopo le procedure stesse.  
+ <span data-ttu-id="65c9a-110">Il codice generato dalle procedure descritte in questo argomento viene fornito nell'esempio riportato dopo le procedure stesse.</span><span class="sxs-lookup"><span data-stu-id="65c9a-110">The code that results from the procedures outlined in this topic is provided in the example following the procedures.</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ll'esposizione di un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tramite un endpoint compatibile con AJAX, vedere l'argomento [Procedura: aggiungere un endpoint ASP.NET AJAX con l'utilizzo della configurazione](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="65c9a-111">esposizione di un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] del servizio tramite un endpoint compatibile AJAX, vedere il [come: utilizzare la configurazione per aggiungere un Endpoint ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) argomento.</span><span class="sxs-lookup"><span data-stu-id="65c9a-111"> exposing a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service through an AJAX-enabled endpoint, see the [How to: Use Configuration to Add an ASP.NET AJAX Endpoint](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) topic.</span></span>  
   
-### Per creare e testare l'applicazione del servizio Web ASP.NET  
+### <a name="to-create-and-test-the-aspnet-web-service-application"></a><span data-ttu-id="65c9a-112">Per creare e testare l'applicazione del servizio Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="65c9a-112">To create and test the ASP.NET Web service application</span></span>  
   
-1.  Aprire [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  <span data-ttu-id="65c9a-113">Aprire [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="65c9a-113">Open [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-2.  Scegliere **Nuovo** dal menu **File**, quindi **Progetto**, **Web** e infine **Applicazione servizio Web ASP.NET**.  
+2.  <span data-ttu-id="65c9a-114">Dal **File** dal menu **New**, quindi **progetto**, quindi **Web**, quindi selezionare **applicazione servizio Web ASP.NET** .</span><span class="sxs-lookup"><span data-stu-id="65c9a-114">From the **File** menu, select **New**, then **Project**, then **Web**, and then select **ASP.NET Web Service Application**.</span></span>  
   
-3.  Assegnare al progetto il nome `ASPHello`, quindi fare clic su **OK**.  
+3.  <span data-ttu-id="65c9a-115">Denominare il progetto `ASPHello` e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="65c9a-115">Name the project `ASPHello` and click **OK**.</span></span>  
   
-4.  Rimuovere il commento dalla riga nel file Service1.asmx.cs che contiene `System.Web.Script.Services.ScriptService]` per abilitare AJAX per questo servizio.  
+4.  <span data-ttu-id="65c9a-116">Rimuovere il commento dalla riga nel file Service1.asmx.cs che contiene `System.Web.Script.Services.ScriptService]` per abilitare AJAX per questo servizio.</span><span class="sxs-lookup"><span data-stu-id="65c9a-116">Uncomment the line in the Service1.asmx.cs file that contains `System.Web.Script.Services.ScriptService]` to enable AJAX for this service.</span></span>  
   
-5.  Scegliere **Compila soluzione** dal menu **Compila**.  
+5.  <span data-ttu-id="65c9a-117">Dal **compilare** dal menu **Compila soluzione**.</span><span class="sxs-lookup"><span data-stu-id="65c9a-117">From the **Build** menu, select **Build Solution**.</span></span>  
   
-6.  Scegliere **Avvia senza eseguire debug** dal menu **Debug**.  
+6.  <span data-ttu-id="65c9a-118">Dal **Debug** dal menu **Avvia senza eseguire debug**.</span><span class="sxs-lookup"><span data-stu-id="65c9a-118">From the **Debug** menu, select **Start Without Debugging**.</span></span>  
   
-7.  Nella pagina Web generata, selezionare l'operazione `HelloWorld`.  
+7.  <span data-ttu-id="65c9a-119">Nella pagina Web generata, selezionare l'operazione `HelloWorld`.</span><span class="sxs-lookup"><span data-stu-id="65c9a-119">On the Web page generated, select the `HelloWorld` operation.</span></span>  
   
-8.  Fare clic sul pulsante **Richiama** nella pagina di prova di `HelloWorld`.  Si dovrebbe ricevere la risposta XML seguente:  
+8.  <span data-ttu-id="65c9a-120">Fare clic su di **Invoke** pulsante il `HelloWorld` pagina di prova.</span><span class="sxs-lookup"><span data-stu-id="65c9a-120">Click the **Invoke** button on the `HelloWorld` test page.</span></span> <span data-ttu-id="65c9a-121">Si dovrebbe ricevere la risposta XML seguente:</span><span class="sxs-lookup"><span data-stu-id="65c9a-121">You should receive the following XML response.</span></span>  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <string xmlns="http://tempuri.org/">Hello World</string>  
     ```  
   
-9. Questa risposta conferma che si dispone di un servizio ASP.NET.AJAX funzionante e, in particolare, che il servizio ha esposto un endpoint su Service1.asmx\/HelloWorld che risponde alle richieste HTTP POST e restituisce XML.  
+9. <span data-ttu-id="65c9a-122">Questa risposta conferma che si dispone di un servizio ASP.NET.AJAX funzionante e, in particolare, che il servizio ha esposto un endpoint su Service1.asmx/HelloWorld che risponde alle richieste HTTP POST e restituisce XML.</span><span class="sxs-lookup"><span data-stu-id="65c9a-122">This response confirms that you now have a functioning ASP.NET AJAX service and, in particular, that the service has now exposed an endpoint at Service1.asmx/HelloWorld that responds to HTTP POST requests and returns XML.</span></span>  
   
-     È ora possibile convertire il servizio per utilizzare un servizio AJAX [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     <span data-ttu-id="65c9a-123">È ora possibile convertire il servizio per utilizzare un servizio AJAX [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="65c9a-123">Now you are ready to convert this service to use a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX service.</span></span>  
   
-### Per creare un'applicazione di servizio AJAX WCF equivalente  
+### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a><span data-ttu-id="65c9a-124">Per creare un'applicazione di servizio AJAX WCF equivalente</span><span class="sxs-lookup"><span data-stu-id="65c9a-124">To create an equivalent WCF AJAX service application</span></span>  
   
-1.  Fare clic con il pulsante destro del mouse sul progetto **ASPHello** e scegliere **Aggiungi**, quindi **Nuovo elemento** e infine **Sevizio WCF compatibile AJAX**.  
+1.  <span data-ttu-id="65c9a-125">Fare doppio clic su di **ASPHello** del progetto e selezionare **Aggiungi**, quindi **nuovo elemento**e quindi **sevizio WCF compatibile AJAX**.</span><span class="sxs-lookup"><span data-stu-id="65c9a-125">Right-click the **ASPHello** project and select **Add**, then **New Item**, and then **AJAX-enabled WCF Service**.</span></span>  
   
-2.  Assegnare al servizio il nome `WCFHello`, quindi fare clic su **Aggiungi**.  
+2.  <span data-ttu-id="65c9a-126">Nome del servizio `WCFHello` e fare clic su **Aggiungi**.</span><span class="sxs-lookup"><span data-stu-id="65c9a-126">Name the service `WCFHello` and click **Add**.</span></span>  
   
-3.  Aprire il file WCFHello.svc.cs.  
+3.  <span data-ttu-id="65c9a-127">Aprire il file WCFHello.svc.cs.</span><span class="sxs-lookup"><span data-stu-id="65c9a-127">Open the WCFHello.svc.cs file.</span></span>  
   
-4.  Da Service1.asmx.cs, copiare l'implementazione seguente dell'operazione `HelloWorld`.  
+4.  <span data-ttu-id="65c9a-128">Da Service1.asmx.cs, copiare l'implementazione seguente del `HelloWorld` operazione.</span><span class="sxs-lookup"><span data-stu-id="65c9a-128">From Service1.asmx.cs, copy the following implementation of the `HelloWorld` operation.</span></span>  
   
     ```  
     public string HelloWorld()  
@@ -75,7 +78,7 @@ In questo argomento vengono illustrate le procedure per eseguire la migrazione d
     }  
     ```  
   
-5.  Incollare l'implementazione copiata dell'operazione `HelloWorld` nel file WCFHello.svc.cs al posto del codice seguente.  
+5.  <span data-ttu-id="65c9a-129">Incolla implementazione copiata del `HelloWorld` operazione nel file WCFHello.svc.cs al posto di codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="65c9a-129">Paste to copied implementation of the `HelloWorld` operation into the WCFHello.svc.cs file in place of the following code.</span></span>  
   
     ```  
     public void DoWork()  
@@ -85,7 +88,7 @@ In questo argomento vengono illustrate le procedure per eseguire la migrazione d
     }  
     ```  
   
-6.  Specificare l'attributo `Namespace` per <xref:System.ServiceModel.ServiceContractAttribute> come `WCFHello`.  
+6.  <span data-ttu-id="65c9a-130">Specificare il `Namespace` attributo per <xref:System.ServiceModel.ServiceContractAttribute> come `WCFHello`.</span><span class="sxs-lookup"><span data-stu-id="65c9a-130">Specify the `Namespace` attribute for <xref:System.ServiceModel.ServiceContractAttribute> as `WCFHello`.</span></span>  
   
     ```  
     [ServiceContract(Namespace="WCFHello")]  
@@ -94,7 +97,7 @@ In questo argomento vengono illustrate le procedure per eseguire la migrazione d
     { … }  
     ```  
   
-7.  Aggiungere <xref:System.ServiceModel.Web.WebInvokeAttribute> all'operazione `HelloWorld` e impostare la proprietà <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> affinché restituisca <xref:System.ServiceModel.Web.WebMessageFormat>.  Se non impostato, il tipo restituito predefinito è <xref:System.ServiceModel.Web.WebMessageFormat>.  
+7.  <span data-ttu-id="65c9a-131">Aggiungere il <xref:System.ServiceModel.Web.WebInvokeAttribute> per il `HelloWorld` operazione e set di <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> proprietà da restituire <xref:System.ServiceModel.Web.WebMessageFormat.Xml>.</span><span class="sxs-lookup"><span data-stu-id="65c9a-131">Add the <xref:System.ServiceModel.Web.WebInvokeAttribute> to the `HelloWorld` operation and set the <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> property to return <xref:System.ServiceModel.Web.WebMessageFormat.Xml>.</span></span> <span data-ttu-id="65c9a-132">Se non impostato, il tipo restituito predefinito è <xref:System.ServiceModel.Web.WebMessageFormat.Json>.</span><span class="sxs-lookup"><span data-stu-id="65c9a-132">Note that, if not set, the default return type is <xref:System.ServiceModel.Web.WebMessageFormat.Json>.</span></span>  
   
     ```  
     [OperationContract]  
@@ -105,20 +108,20 @@ In questo argomento vengono illustrate le procedure per eseguire la migrazione d
     }  
     ```  
   
-8.  Scegliere **Compila soluzione** dal menu **Compila**.  
+8.  <span data-ttu-id="65c9a-133">Dal **compilare** dal menu **Compila soluzione**.</span><span class="sxs-lookup"><span data-stu-id="65c9a-133">From the **Build** menu, select **Build Solution**.</span></span>  
   
-9. Aprire il file WCFHello.svc e selezionare **Avvia senza eseguire debug** dal menu **Debug**.  
+9. <span data-ttu-id="65c9a-134">Aprire il file WCFHello.svc e dal **Debug** dal menu **Avvia senza eseguire debug**.</span><span class="sxs-lookup"><span data-stu-id="65c9a-134">Open the WCFHello.svc file and from the **Debug** menu, select **Start Without Debugging**.</span></span>  
   
-10. Il servizio esporrà un endpoint su `WCFHello.svc/HelloWorld`, che risponde alle richieste HTTP POST.  Le richieste HTTP POST non possono essere sottoposte a test dal browser, ma l'endpoint restituisce l'XML seguente.  
+10. <span data-ttu-id="65c9a-135">Il servizio ora espone un endpoint `WCFHello.svc/HelloWorld`, che risponde alle richieste HTTP POST.</span><span class="sxs-lookup"><span data-stu-id="65c9a-135">The service now exposes an endpoint at `WCFHello.svc/HelloWorld`, which responds to HTTP POST requests.</span></span> <span data-ttu-id="65c9a-136">Le richieste HTTP POST non possono essere sottoposte a test dal browser, ma l'endpoint restituisce l'XML seguente.</span><span class="sxs-lookup"><span data-stu-id="65c9a-136">HTTP POST requests cannot be tested from the browser, but the endpoint returns XML following XML.</span></span>  
   
-    ```  
+    ```xml  
     <string xmlns="http://schemas.microsoft.com/2003/10/Serialization/">Hello World</string>  
     ```  
   
-11. `WCFHello.svc/HelloWorld` e gli endpoint `Service1.aspx/HelloWorld` sono ora funzionalmente equivalenti.  
+11. <span data-ttu-id="65c9a-137">Il `WCFHello.svc/HelloWorld` e `Service1.aspx/HelloWorld` gli endpoint sono ora funzionalmente equivalenti.</span><span class="sxs-lookup"><span data-stu-id="65c9a-137">The `WCFHello.svc/HelloWorld` and the `Service1.aspx/HelloWorld` endpoints are now functionally equivalent.</span></span>  
   
-## Esempio  
- Il codice che scaturisce dalle procedure descritte in questo argomento viene fornito nell'esempio seguente.  
+## <a name="example"></a><span data-ttu-id="65c9a-138">Esempio</span><span class="sxs-lookup"><span data-stu-id="65c9a-138">Example</span></span>  
+ <span data-ttu-id="65c9a-139">Il codice che scaturisce dalle procedure descritte in questo argomento viene fornito nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="65c9a-139">The code that results from the procedures outlined in this topic is provided in the following example.</span></span>  
   
 ```  
 //This is the ASP.NET code in the Service1.asmx.cs file.  
@@ -182,42 +185,42 @@ namespace ASPHello
 }  
 ```  
   
- Il tipo <xref:System.Xml.XmlDocument> non è supportato da <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> perché non è serializzabile mediante <xref:System.Xml.Serialization.XmlSerializer>.  È possibile utilizzare un tipo <xref:System.Xml.Linq.XDocument> oppure serializzare <xref:System.Xml.XmlDocument.DocumentElement%2A>.  
+ <span data-ttu-id="65c9a-140">Il tipo <xref:System.Xml.XmlDocument> non è supportato da <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> perché non è serializzabile mediante <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="65c9a-140">The <xref:System.Xml.XmlDocument> type is not supported by the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> because it is not serializable by the <xref:System.Xml.Serialization.XmlSerializer>.</span></span> <span data-ttu-id="65c9a-141">È possibile utilizzare un tipo <xref:System.Xml.Linq.XDocument> oppure serializzare <xref:System.Xml.XmlDocument.DocumentElement%2A>.</span><span class="sxs-lookup"><span data-stu-id="65c9a-141">You can use either an <xref:System.Xml.Linq.XDocument> type, or serialize the <xref:System.Xml.XmlDocument.DocumentElement%2A> instead.</span></span>  
   
- Se l'aggiornamento\/migrazione dei servizi Web ASMX vengono eseguiti side\-by\-side ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], evitare di eseguire il mapping di due tipi allo stesso nome sul client.  Se viene utilizzato lo stesso tipo sia in un <xref:System.Web.Services.WebMethodAttribute> che in un <xref:System.ServiceModel.ServiceContractAttribute>, nei serializzatori verrà generata un'eccezione:  
+ <span data-ttu-id="65c9a-142">Se l'aggiornamento/migrazione dei servizi Web ASMX vengono eseguiti side-by-side ai servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], evitare di eseguire il mapping di due tipi allo stesso nome sul client.</span><span class="sxs-lookup"><span data-stu-id="65c9a-142">If ASMX Web services are being upgraded and migrated side-by-side to [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services, avoid mapping two types to the same name on the client.</span></span> <span data-ttu-id="65c9a-143">Se viene utilizzato lo stesso tipo sia in un <xref:System.Web.Services.WebMethodAttribute> che in un <xref:System.ServiceModel.ServiceContractAttribute>, nei serializzatori verrà generata un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="65c9a-143">This causes an exception in serializers if the same type is used in a <xref:System.Web.Services.WebMethodAttribute> and a <xref:System.ServiceModel.ServiceContractAttribute>:</span></span>  
   
--   Se viene aggiunto per primo un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], la chiamata del metodo sul servizio Web ASMX provoca un'eccezione in <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> perché la definizione di stile di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dell'ordine nel proxy ha la precedenza.  
+-   <span data-ttu-id="65c9a-144">Se viene aggiunto per primo un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], la chiamata del metodo sul servizio Web ASMX provoca un'eccezione in <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> perché la definizione di stile di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dell'ordine nel proxy ha la precedenza.</span><span class="sxs-lookup"><span data-stu-id="65c9a-144">If [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service is added first, invoking the method on ASMX Web Service causes exception in <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> because the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] style definition of the order in the proxy takes precedence.</span></span>  
   
--   Se viene aggiunto per primo un servizio Web ASMX, la chiamata del metodo sul servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provoca un'eccezione in <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> perché la definizione di stile del servizio Web dell'ordine nel proxy ha la precedenza.  
+-   <span data-ttu-id="65c9a-145">Se viene aggiunto per primo un servizio Web ASMX, la chiamata del metodo sul servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provoca un'eccezione in <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> perché la definizione di stile del servizio Web dell'ordine nel proxy ha la precedenza.</span><span class="sxs-lookup"><span data-stu-id="65c9a-145">If ASMX Web Service is added first, invoking method on [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service causes exception in <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> because the Web Service style definition of the order in the proxy takes precedence.</span></span>  
   
- Esistono differenze significative di comportamento tra <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e <xref:System.Web.Script.Serialization.JavascriptSerializer> ASP.NET AJAX.  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ad esempio, rappresenta un dizionario come una matrice di coppie chiave\/valore, mentre ASP.NET AJAX <xref:System.Web.Script.Serialization.JavascriptSerializer> rappresenta un dizionario come oggetti JSON effettivi.  Pertanto quello seguente è il dizionario rappresentato in ASP.NET AJAX.  
+ <span data-ttu-id="65c9a-146">Esistono differenze significative di comportamento tra <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> e <xref:System.Web.Script.Serialization.JavaScriptSerializer> ASP.NET AJAX.</span><span class="sxs-lookup"><span data-stu-id="65c9a-146">There are significant differences in behavior between the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> and the ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>.</span></span> <span data-ttu-id="65c9a-147"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ad esempio, rappresenta un dizionario come una matrice di coppie chiave/valore, mentre ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> rappresenta un dizionario come oggetti JSON effettivi.</span><span class="sxs-lookup"><span data-stu-id="65c9a-147">For example, the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> represents a dictionary as an array of key/value pairs, whereas the ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> represents a dictionary as actual JSON objects.</span></span> <span data-ttu-id="65c9a-148">Pertanto quello seguente è il dizionario rappresentato in ASP.NET AJAX.</span><span class="sxs-lookup"><span data-stu-id="65c9a-148">So the following is the dictionary represented in ASP.NET AJAX.</span></span>  
   
 ```  
 Dictionary<string, int> d = new Dictionary<string, int>();  
-d.Add(“one”, 1);  
-d.Add(“two”, 2);  
+d.Add("one", 1);  
+d.Add("two", 2);  
 ```  
   
- Tale dizionario è rappresentato negli oggetti JSON come mostrato nell'elenco seguente:  
+ <span data-ttu-id="65c9a-149">Tale dizionario è rappresentato negli oggetti JSON come mostrato nell'elenco seguente:</span><span class="sxs-lookup"><span data-stu-id="65c9a-149">This dictionary is represented in JSON objects as shown in the following list:</span></span>  
   
--   \[{"Key":"one","Value":1},{"Key":"two","Value":2}\] da <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
+-   <span data-ttu-id="65c9a-150">[{"Key":"one","Value":1},{"Key":"two","Value":2}] da <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer></span><span class="sxs-lookup"><span data-stu-id="65c9a-150">[{"Key":"one","Value":1},{"Key":"two","Value":2}] by the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer></span></span>  
   
--   {“one”:1,”two”:2} da <xref:System.Web.Script.Serialization.JavascriptSerializer> ASP.NET AJAX.  
+-   <span data-ttu-id="65c9a-151">{"one": 1, "two": 2} da ASP.NET AJAX<xref:System.Web.Script.Serialization.JavaScriptSerializer></span><span class="sxs-lookup"><span data-stu-id="65c9a-151">{"one":1,"two":2} by the ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer></span></span>  
   
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> è più potente perché può gestire dizionari in cui il tipo di chiave non è una stringa, mentre <xref:System.Web.Script.Serialization.JavascriptSerializer> non è in grado di farlo.  Quest'ultimo, tuttavia, è più favorevole a JSON.  
+ <span data-ttu-id="65c9a-152"><xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> è più potente perché può gestire dizionari in cui il tipo di chiave non è una stringa, mentre <xref:System.Web.Script.Serialization.JavaScriptSerializer> non è in grado di farlo.</span><span class="sxs-lookup"><span data-stu-id="65c9a-152">The <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> is more powerful in the sense that it can handle dictionaries where the key type is not string, while the <xref:System.Web.Script.Serialization.JavaScriptSerializer> cannot.</span></span> <span data-ttu-id="65c9a-153">Quest'ultimo, tuttavia, è più favorevole a JSON.</span><span class="sxs-lookup"><span data-stu-id="65c9a-153">But the latter is more JSON-friendly.</span></span>  
   
- Le differenze significative tra questi serializzatori sono riepilogate nella tabella seguente.  
+ <span data-ttu-id="65c9a-154">Le differenze significative tra questi serializzatori sono riepilogate nella tabella seguente.</span><span class="sxs-lookup"><span data-stu-id="65c9a-154">The significant differences between these serializers are summarized in the following table.</span></span>  
   
-|Categoria delle differenze|DataContractJsonSerializer|JavaScriptSerializer per ASP.NET AJAX|  
-|--------------------------------|--------------------------------|-------------------------------------------|  
-|Deserializzazione del buffer vuoto \(new byte\[0\]\) in <xref:System.Object> \(o <xref:System.Uri> o alcune altre classi\).|SerializationException|Null|  
-|Serializzazione di <xref:System.DBNull.Value>|{} \(o {"\_\_type":"\#System"}\)|Null|  
-|Serializzazione dei membri privati di tipi \[Serializable\].|serializzato|non serializzato|  
-|Serializzazione delle proprietà pubbliche di tipi <xref:System.Runtime.Serialization.ISerializable>.|non serializzato|serializzato|  
-|"Estensioni" di JSON|È conforme alla specifica JSON, che richiede le virgolette per i nomi dei membri di un oggetto \({"a":"hello"}\).|Supporta i nomi dei membri di un oggetto senza virgolette \({a:"hello"}\).|  
-|Ora UTC \(Coordinated Universal Time\) <xref:System.DateTime>|Non supporta il formato "\\\/Date\(123456789U\)\\\/" o "\\\/Date\\\(\\d\+\(U&#124;\(\\\+\\\-\[\\d{4}\]\)\)?  \\\)\\\\\/\)".|Supporta i formati "\\\/Date\(123456789U\)\\\/" e "\\\/Date\\\(\\d\+\(U&#124;\(\\\+\\\-\[\\d{4}\]\)\)?  \\\)\\\\\/\)" come valori DateTime.|  
-|Rappresentazione di dizionari|Una matrice di KeyValuePair\<K, V\>, gestisce tipi di chiave che non sono stringhe.|Come gli oggetti JSON effettivi, ma gestisce solo i tipi di chiave che sono stringhe.|  
-|Caratteri di escape|Sempre con un carattere di escape barra \(\/\); non consente mai caratteri JSON non validi senza carattere di escape, ad esempio "\\n".|Con un carattere di escape barra \(\/\) per i valori DateTime.|  
+|<span data-ttu-id="65c9a-155">Categoria delle differenze</span><span class="sxs-lookup"><span data-stu-id="65c9a-155">Category of Differences</span></span>|<span data-ttu-id="65c9a-156">DataContractJsonSerializer</span><span class="sxs-lookup"><span data-stu-id="65c9a-156">DataContractJsonSerializer</span></span>|<span data-ttu-id="65c9a-157">JavaScriptSerializer per ASP.NET AJAX</span><span class="sxs-lookup"><span data-stu-id="65c9a-157">ASP.NET AJAX JavaScriptSerializer</span></span>|  
+|-----------------------------|--------------------------------|---------------------------------------|  
+|<span data-ttu-id="65c9a-158">Deserializzazione del buffer vuoto (new byte[0]) in <xref:System.Object> (o <xref:System.Uri> o alcune altre classi).</span><span class="sxs-lookup"><span data-stu-id="65c9a-158">Deserializing the empty buffer (new byte[0]) into <xref:System.Object> (or <xref:System.Uri>, or some other classes).</span></span>|<span data-ttu-id="65c9a-159">SerializationException</span><span class="sxs-lookup"><span data-stu-id="65c9a-159">SerializationException</span></span>|<span data-ttu-id="65c9a-160">Null</span><span class="sxs-lookup"><span data-stu-id="65c9a-160">null</span></span>|  
+|<span data-ttu-id="65c9a-161">Serializzazione di <xref:System.DBNull.Value></span><span class="sxs-lookup"><span data-stu-id="65c9a-161">Serialization of <xref:System.DBNull.Value></span></span>|<span data-ttu-id="65c9a-162">{} (o {"__type":"#System"})</span><span class="sxs-lookup"><span data-stu-id="65c9a-162">{} (or {"__type":"#System"})</span></span>|<span data-ttu-id="65c9a-163">Null</span><span class="sxs-lookup"><span data-stu-id="65c9a-163">Null</span></span>|  
+|<span data-ttu-id="65c9a-164">Serializzazione dei membri privati di tipi [Serializable].</span><span class="sxs-lookup"><span data-stu-id="65c9a-164">Serialization of the private members of [Serializable] types.</span></span>|<span data-ttu-id="65c9a-165">serializzato</span><span class="sxs-lookup"><span data-stu-id="65c9a-165">serialized</span></span>|<span data-ttu-id="65c9a-166">non serializzato</span><span class="sxs-lookup"><span data-stu-id="65c9a-166">not serialized</span></span>|  
+|<span data-ttu-id="65c9a-167">Serializzazione delle proprietà pubbliche di tipi <xref:System.Runtime.Serialization.ISerializable>.</span><span class="sxs-lookup"><span data-stu-id="65c9a-167">Serialization of the public properties of <xref:System.Runtime.Serialization.ISerializable> types.</span></span>|<span data-ttu-id="65c9a-168">non serializzato</span><span class="sxs-lookup"><span data-stu-id="65c9a-168">not serialized</span></span>|<span data-ttu-id="65c9a-169">serializzato</span><span class="sxs-lookup"><span data-stu-id="65c9a-169">serialized</span></span>|  
+|<span data-ttu-id="65c9a-170">"Estensioni" di JSON</span><span class="sxs-lookup"><span data-stu-id="65c9a-170">"Extensions" of JSON</span></span>|<span data-ttu-id="65c9a-171">È conforme alla specifica JSON, che richiede le virgolette per i nomi dei membri di un oggetto ({"a":"hello"}).</span><span class="sxs-lookup"><span data-stu-id="65c9a-171">Adheres to the JSON specification, which requires quotes on object member names ({"a":"hello"}).</span></span>|<span data-ttu-id="65c9a-172">Supporta i nomi dei membri di un oggetto senza virgolette ({a:"hello"}).</span><span class="sxs-lookup"><span data-stu-id="65c9a-172">Supports the names of object members without quotes ({a:"hello"}).</span></span>|  
+|<span data-ttu-id="65c9a-173">Ora UTC (Coordinated Universal Time) <xref:System.DateTime></span><span class="sxs-lookup"><span data-stu-id="65c9a-173"><xref:System.DateTime> Coordinated Universal Time (UTC)</span></span>|<span data-ttu-id="65c9a-174">Non supporta formato "\\/Date(123456789U)\\/" o "\\/Date\\(\d+ (U &#124; (\\+\\-[\d\{4\]}))?\\) \\\\/)".</span><span class="sxs-lookup"><span data-stu-id="65c9a-174">Does not support format "\\/Date(123456789U)\\/" or "\\/Date\\(\d+(U&#124;(\\+\\-[\d{4}]))?\\)\\\\/)".</span></span>|<span data-ttu-id="65c9a-175">Supporta i formati "\\/Date(123456789U)\\/" e "\\/Date\\(\d+ (U &#124; (\\+\\-[\d\{4\]}))?\\) \\ \\/) "come valori DateTime.</span><span class="sxs-lookup"><span data-stu-id="65c9a-175">Supports format "\\/Date(123456789U)\\/" and "\\/Date\\(\d+(U&#124;(\\+\\-[\d{4}]))?\\)\\\\/)" as DateTime values.</span></span>|  
+|<span data-ttu-id="65c9a-176">Rappresentazione di dizionari</span><span class="sxs-lookup"><span data-stu-id="65c9a-176">Representation of dictionaries</span></span>|<span data-ttu-id="65c9a-177">Una matrice di KeyValuePair\<K, V >, gestisce tipi di chiave che non sono stringhe.</span><span class="sxs-lookup"><span data-stu-id="65c9a-177">An array of KeyValuePair\<K,V>, handles key types that are not strings.</span></span>|<span data-ttu-id="65c9a-178">Come gli oggetti JSON effettivi, ma gestisce solo i tipi di chiave che sono stringhe.</span><span class="sxs-lookup"><span data-stu-id="65c9a-178">As actual JSON objects - but only handles key types that are strings.</span></span>|  
+|<span data-ttu-id="65c9a-179">Caratteri di escape</span><span class="sxs-lookup"><span data-stu-id="65c9a-179">Escaped characters</span></span>|<span data-ttu-id="65c9a-180">Sempre con un carattere di escape barra (/); non consente mai caratteri JSON non validi senza carattere di escape, ad esempio "\n".</span><span class="sxs-lookup"><span data-stu-id="65c9a-180">Always with an escape forward slash (/); never allows un-escaped invalid JSON characters, such as "\n".</span></span>|<span data-ttu-id="65c9a-181">Con un carattere di escape barra (/) per i valori DateTime.</span><span class="sxs-lookup"><span data-stu-id="65c9a-181">With an escape forward slash (/) for DateTime values.</span></span>|  
   
-## Vedere anche  
- [Procedura: aggiungere un endpoint ASP.NET AJAX con l'utilizzo della configurazione](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+## <a name="see-also"></a><span data-ttu-id="65c9a-182">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="65c9a-182">See Also</span></span>  
+ [<span data-ttu-id="65c9a-183">Procedura: utilizzare la configurazione per aggiungere un Endpoint ASP.NET AJAX</span><span class="sxs-lookup"><span data-stu-id="65c9a-183">How to: Use Configuration to Add an ASP.NET AJAX Endpoint</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

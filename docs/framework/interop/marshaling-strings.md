@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - marshaling, samples
 - platform invoke, marshaling data
@@ -24,39 +18,37 @@ helpviewer_keywords:
 - marshaling, platform invoke
 - sample applications [.NET Framework], marshaling strings
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d8455d4f1b4dbb463176c06d680b2bd0b1ff9d9
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 750f4e6852cd5aa52d03f884edcbfbf80ed5fab5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="marshaling-strings"></a>Marshalling di stringhe
-Platform invoke copia parametri stringa, convertendoli dal formato .NET Framework (Unicode) al formato non gestito (ANSI) all'occorrenza. Dato che le stringhe gestite non sono modificabili, platform invoke non le copia di nuovo dalla memoria non gestita alla memoria gestita quando la funzione restituisce il controllo.  
+# <a name="marshaling-strings"></a><span data-ttu-id="f2623-102">Marshalling di stringhe</span><span class="sxs-lookup"><span data-stu-id="f2623-102">Marshaling Strings</span></span>
+<span data-ttu-id="f2623-103">Platform invoke copia parametri stringa, convertendoli dal formato .NET Framework (Unicode) al formato non gestito (ANSI) all'occorrenza.</span><span class="sxs-lookup"><span data-stu-id="f2623-103">Platform invoke copies string parameters, converting them from the .NET Framework format (Unicode) to the unmanaged format (ANSI), if needed.</span></span> <span data-ttu-id="f2623-104">Dato che le stringhe gestite non sono modificabili, platform invoke non le copia di nuovo dalla memoria non gestita alla memoria gestita quando la funzione restituisce il controllo.</span><span class="sxs-lookup"><span data-stu-id="f2623-104">Because managed strings are immutable, platform invoke does not copy them back from unmanaged memory to managed memory when the function returns.</span></span>  
   
- La tabella seguente elenca le opzioni di marshalling per le stringhe con la descrizione dell'utilizzo e un collegamento all'esempio .NET Framework corrispondente.  
+ <span data-ttu-id="f2623-105">La tabella seguente elenca le opzioni di marshalling per le stringhe con la descrizione dell'utilizzo e un collegamento all'esempio .NET Framework corrispondente.</span><span class="sxs-lookup"><span data-stu-id="f2623-105">The following table lists marshaling options for strings, describes their usage, and provides a link to the corresponding .NET Framework sample.</span></span>  
   
-|String|Descrizione|Esempio|  
+|<span data-ttu-id="f2623-106">String</span><span class="sxs-lookup"><span data-stu-id="f2623-106">String</span></span>|<span data-ttu-id="f2623-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="f2623-107">Description</span></span>|<span data-ttu-id="f2623-108">Esempio</span><span class="sxs-lookup"><span data-stu-id="f2623-108">Sample</span></span>|  
 |------------|-----------------|------------|  
-|Per valore.|Passa le stringhe come parametri in.|[MsgBox](../../../docs/framework/interop/msgbox-sample.md)|  
-|Come risultato.|Restituisce le stringhe da codice non gestito.|[Stringhe](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)|  
-|Per riferimento.|Passa le strutture come parametri in/out tramite <xref:System.Text.StringBuilder>.|[Buffer](http://msdn.microsoft.com/en-us/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5)|  
-|In una struttura per valore.|Passa le stringhe in una struttura che è un parametro in.|[Struct](http://msdn.microsoft.com/en-us/96a62265-dcf9-4608-bc0a-1f762ab9f48e)|  
-|In una struttura per riferimento **(char\*)**.|Passa le stringhe in una struttura che è un parametro in/out. La funzione non gestita prevede un puntatore a un buffer di caratteri e le dimensioni del buffer sono un membro della struttura.|[Stringhe](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)|  
-|In una struttura per riferimento **(char[])**.|Passa le stringhe in una struttura che è un parametro in/out. La funzione non gestita prevede un buffer di caratteri incorporati.|[OSInfo](http://msdn.microsoft.com/en-us/69d89067-507b-41fe-859d-30bf3ff29455)|  
-|In una classe per valore **(char\*)**.|Passa le stringhe in una classe (una classe è un parametro in/out). La funzione non gestita prevede un puntatore a un buffer di caratteri.|[OpenFileDlg](http://msdn.microsoft.com/en-us/b7dea792-cb92-4baf-ac7b-6a24803e6c75)|  
-|In una classe per valore **(char[])**.|Passa le stringhe in una classe (una classe è un parametro in/out). La funzione non gestita prevede un buffer di caratteri incorporati.|[OSInfo](http://msdn.microsoft.com/en-us/69d89067-507b-41fe-859d-30bf3ff29455)|  
-|Come matrice di stringhe per valore.|Crea una matrice di stringhe passata per valore.|[Array](../../../docs/framework/interop/marshaling-different-types-of-arrays.md)|  
-|Come matrice di strutture che contengono le stringhe per valore.|Crea una matrice di strutture che contengono le stringhe e la matrice viene passata per valore.|[Array](../../../docs/framework/interop/marshaling-different-types-of-arrays.md)|  
+|<span data-ttu-id="f2623-109">Per valore.</span><span class="sxs-lookup"><span data-stu-id="f2623-109">By value.</span></span>|<span data-ttu-id="f2623-110">Passa le stringhe come parametri in.</span><span class="sxs-lookup"><span data-stu-id="f2623-110">Passes strings as In parameters.</span></span>|[<span data-ttu-id="f2623-111">MsgBox</span><span class="sxs-lookup"><span data-stu-id="f2623-111">MsgBox</span></span>](../../../docs/framework/interop/msgbox-sample.md)|  
+|<span data-ttu-id="f2623-112">Come risultato.</span><span class="sxs-lookup"><span data-stu-id="f2623-112">As result.</span></span>|<span data-ttu-id="f2623-113">Restituisce le stringhe da codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="f2623-113">Returns strings from unmanaged code.</span></span>|[<span data-ttu-id="f2623-114">Stringhe</span><span class="sxs-lookup"><span data-stu-id="f2623-114">Strings</span></span>](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)|  
+|<span data-ttu-id="f2623-115">Per riferimento.</span><span class="sxs-lookup"><span data-stu-id="f2623-115">By reference.</span></span>|<span data-ttu-id="f2623-116">Passa le strutture come parametri in/out tramite <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="f2623-116">Passes strings as In/Out parameters using <xref:System.Text.StringBuilder>.</span></span>|[<span data-ttu-id="f2623-117">Buffer</span><span class="sxs-lookup"><span data-stu-id="f2623-117">Buffers</span></span>](http://msdn.microsoft.com/en-us/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5)|  
+|<span data-ttu-id="f2623-118">In una struttura per valore.</span><span class="sxs-lookup"><span data-stu-id="f2623-118">In a structure by value.</span></span>|<span data-ttu-id="f2623-119">Passa le stringhe in una struttura che è un parametro in.</span><span class="sxs-lookup"><span data-stu-id="f2623-119">Passes strings in a structure that is an In parameter.</span></span>|[<span data-ttu-id="f2623-120">Struct</span><span class="sxs-lookup"><span data-stu-id="f2623-120">Structs</span></span>](http://msdn.microsoft.com/en-us/96a62265-dcf9-4608-bc0a-1f762ab9f48e)|  
+|<span data-ttu-id="f2623-121">In una struttura per riferimento **(char\*)**.</span><span class="sxs-lookup"><span data-stu-id="f2623-121">In a structure by reference **(char\*)**.</span></span>|<span data-ttu-id="f2623-122">Passa le stringhe in una struttura che è un parametro in/out.</span><span class="sxs-lookup"><span data-stu-id="f2623-122">Passes strings in a structure that is an In/Out parameter.</span></span> <span data-ttu-id="f2623-123">La funzione non gestita prevede un puntatore a un buffer di caratteri e le dimensioni del buffer sono un membro della struttura.</span><span class="sxs-lookup"><span data-stu-id="f2623-123">The unmanaged function expects a pointer to a character buffer and the buffer size is a member of the structure.</span></span>|[<span data-ttu-id="f2623-124">Stringhe</span><span class="sxs-lookup"><span data-stu-id="f2623-124">Strings</span></span>](http://msdn.microsoft.com/en-us/be9e82a3-dc95-4aaa-9396-61b66e467e02)|  
+|<span data-ttu-id="f2623-125">In una struttura per riferimento **(char[])**.</span><span class="sxs-lookup"><span data-stu-id="f2623-125">In a structure by reference **(char[])**.</span></span>|<span data-ttu-id="f2623-126">Passa le stringhe in una struttura che è un parametro in/out.</span><span class="sxs-lookup"><span data-stu-id="f2623-126">Passes strings in a structure that is an In/Out parameter.</span></span> <span data-ttu-id="f2623-127">La funzione non gestita prevede un buffer di caratteri incorporati.</span><span class="sxs-lookup"><span data-stu-id="f2623-127">The unmanaged function expects an embedded character buffer.</span></span>|[<span data-ttu-id="f2623-128">OSInfo</span><span class="sxs-lookup"><span data-stu-id="f2623-128">OSInfo</span></span>](http://msdn.microsoft.com/en-us/69d89067-507b-41fe-859d-30bf3ff29455)|  
+|<span data-ttu-id="f2623-129">In una classe per valore **(char\*)**.</span><span class="sxs-lookup"><span data-stu-id="f2623-129">In a class by value **(char\*)**.</span></span>|<span data-ttu-id="f2623-130">Passa le stringhe in una classe (una classe è un parametro in/out).</span><span class="sxs-lookup"><span data-stu-id="f2623-130">Passes strings in a class (a class is an In/Out parameter).</span></span> <span data-ttu-id="f2623-131">La funzione non gestita prevede un puntatore a un buffer di caratteri.</span><span class="sxs-lookup"><span data-stu-id="f2623-131">The unmanaged function expects a pointer to a character buffer.</span></span>|[<span data-ttu-id="f2623-132">OpenFileDlg</span><span class="sxs-lookup"><span data-stu-id="f2623-132">OpenFileDlg</span></span>](http://msdn.microsoft.com/en-us/b7dea792-cb92-4baf-ac7b-6a24803e6c75)|  
+|<span data-ttu-id="f2623-133">In una classe per valore **(char[])**.</span><span class="sxs-lookup"><span data-stu-id="f2623-133">In a class by value **(char[])**.</span></span>|<span data-ttu-id="f2623-134">Passa le stringhe in una classe (una classe è un parametro in/out).</span><span class="sxs-lookup"><span data-stu-id="f2623-134">Passes strings in a class (a class is an In/Out parameter).</span></span> <span data-ttu-id="f2623-135">La funzione non gestita prevede un buffer di caratteri incorporati.</span><span class="sxs-lookup"><span data-stu-id="f2623-135">The unmanaged function expects an embedded character buffer.</span></span>|[<span data-ttu-id="f2623-136">OSInfo</span><span class="sxs-lookup"><span data-stu-id="f2623-136">OSInfo</span></span>](http://msdn.microsoft.com/en-us/69d89067-507b-41fe-859d-30bf3ff29455)|  
+|<span data-ttu-id="f2623-137">Come matrice di stringhe per valore.</span><span class="sxs-lookup"><span data-stu-id="f2623-137">As an array of strings by value.</span></span>|<span data-ttu-id="f2623-138">Crea una matrice di stringhe passata per valore.</span><span class="sxs-lookup"><span data-stu-id="f2623-138">Creates an array of strings that is passed by value.</span></span>|[<span data-ttu-id="f2623-139">Array</span><span class="sxs-lookup"><span data-stu-id="f2623-139">Arrays</span></span>](../../../docs/framework/interop/marshaling-different-types-of-arrays.md)|  
+|<span data-ttu-id="f2623-140">Come matrice di strutture che contengono le stringhe per valore.</span><span class="sxs-lookup"><span data-stu-id="f2623-140">As an array of structures that contain strings by value.</span></span>|<span data-ttu-id="f2623-141">Crea una matrice di strutture che contengono le stringhe e la matrice viene passata per valore.</span><span class="sxs-lookup"><span data-stu-id="f2623-141">Creates an array of structures that contain strings and the array is passed by value.</span></span>|[<span data-ttu-id="f2623-142">Array</span><span class="sxs-lookup"><span data-stu-id="f2623-142">Arrays</span></span>](../../../docs/framework/interop/marshaling-different-types-of-arrays.md)|  
   
-## <a name="see-also"></a>Vedere anche  
- [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)   
- [Tipi di dati platform invoke](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)   
- [Marshalling di classi, strutture e unioni](../../../docs/framework/interop/marshaling-classes-structures-and-unions.md)   
- [Marshalling di matrici di tipi](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)   
- [Esempi vari di marshalling](http://msdn.microsoft.com/en-us/a915c948-54e9-4d0f-a525-95a77fd8ed70)
-
+## <a name="see-also"></a><span data-ttu-id="f2623-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f2623-143">See Also</span></span>  
+ [<span data-ttu-id="f2623-144">Marshalling dei dati con platform invoke</span><span class="sxs-lookup"><span data-stu-id="f2623-144">Marshaling Data with Platform Invoke</span></span>](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
+ [<span data-ttu-id="f2623-145">Tipi di dati di Platform Invoke</span><span class="sxs-lookup"><span data-stu-id="f2623-145">Platform Invoke Data Types</span></span>](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [<span data-ttu-id="f2623-146">Marshalling di classi, strutture e unioni</span><span class="sxs-lookup"><span data-stu-id="f2623-146">Marshaling Classes, Structures, and Unions</span></span>](../../../docs/framework/interop/marshaling-classes-structures-and-unions.md)  
+ [<span data-ttu-id="f2623-147">Marshalling di matrici di tipi</span><span class="sxs-lookup"><span data-stu-id="f2623-147">Marshaling Arrays of Types</span></span>](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)  
+ [<span data-ttu-id="f2623-148">Esempi vari di marshalling</span><span class="sxs-lookup"><span data-stu-id="f2623-148">Miscellaneous Marshaling Samples</span></span>](http://msdn.microsoft.com/en-us/a915c948-54e9-4d0f-a525-95a77fd8ed70)

@@ -1,45 +1,48 @@
 ---
-title: "Autenticatore token | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Autenticatore token
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 559ce043c50582f40e2d7828ad74f6d16e2b81f8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Autenticatore token
-In questo esempio viene illustrato come implementare un autenticatore di token personalizzato.Gli autenticatori di token sono utilizzati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per la convalida del token utilizzato con il messaggio, la verifica della sua coerenza, e l'autenticazione dell'identità associata al token.  
+# <a name="token-authenticator"></a><span data-ttu-id="a488a-102">Autenticatore token</span><span class="sxs-lookup"><span data-stu-id="a488a-102">Token Authenticator</span></span>
+<span data-ttu-id="a488a-103">In questo esempio viene illustrato come implementare un autenticatore di token personalizzato.</span><span class="sxs-lookup"><span data-stu-id="a488a-103">This sample demonstrates how to implement a custom token authenticator.</span></span> <span data-ttu-id="a488a-104">Gli autenticatori di token sono utilizzati in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] per la convalida del token utilizzato con il messaggio, la verifica della sua coerenza, e l'autenticazione dell'identità associata al token.</span><span class="sxs-lookup"><span data-stu-id="a488a-104">A token authenticator in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] is used for validating the token used with the message, verifying that it is self-consistent, and authenticating the identity associated with the token.</span></span>  
   
- Gli autenticatori di token personalizzati sono utili in molti casi, ad esempio:  
+ <span data-ttu-id="a488a-105">Gli autenticatori di token personalizzati sono utili in molti casi, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="a488a-105">Custom token authenticators are useful in a variety of cases, such as:</span></span>  
   
--   Quando si vuole eseguire l'override del meccanismo di autenticazione predefinito associato a un token.  
+-   <span data-ttu-id="a488a-106">Quando si vuole eseguire l'override del meccanismo di autenticazione predefinito associato a un token.</span><span class="sxs-lookup"><span data-stu-id="a488a-106">When you want to override the default authentication mechanism associated with a token.</span></span>  
   
--   Quando si sta compilando un token personalizzato.  
+-   <span data-ttu-id="a488a-107">Quando si sta compilando un token personalizzato.</span><span class="sxs-lookup"><span data-stu-id="a488a-107">When you are building a custom token.</span></span>  
   
- Questo esempio illustra i seguenti elementi:  
+ <span data-ttu-id="a488a-108">Questo esempio illustra i seguenti elementi:</span><span class="sxs-lookup"><span data-stu-id="a488a-108">This sample demonstrates the following:</span></span>  
   
--   Come un client può eseguire l'autenticazione utilizzando un nome utente e una password.  
+-   <span data-ttu-id="a488a-109">Come un client può eseguire l'autenticazione utilizzando un nome utente e una password.</span><span class="sxs-lookup"><span data-stu-id="a488a-109">How a client can authenticate using a username/password pair.</span></span>  
   
--   Come il server può convalidare le credenziali client utilizzando un autenticatore di token personalizzato.  
+-   <span data-ttu-id="a488a-110">Come il server può convalidare le credenziali client utilizzando un autenticatore di token personalizzato.</span><span class="sxs-lookup"><span data-stu-id="a488a-110">How the server can validate the client credentials using a custom token authenticator.</span></span>  
   
--   Come il codice del servizio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si collega all'autenticatore del token personalizzato.  
+-   <span data-ttu-id="a488a-111">Come il codice del servizio di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si collega all'autenticatore del token personalizzato.</span><span class="sxs-lookup"><span data-stu-id="a488a-111">How the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service code ties in with the custom token authenticator.</span></span>  
   
--   Come può essere autenticato il servizio dal client mediante il certificato X.509 del server.  
+-   <span data-ttu-id="a488a-112">Come può essere autenticato il servizio dal client mediante il certificato X.509 del server.</span><span class="sxs-lookup"><span data-stu-id="a488a-112">How the server can be authenticated using the server's X.509 certificate.</span></span>  
   
- Questo esempio mostra anche come l'identità del chiamante sia accessibile da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dopo il processo di autenticazione del token personalizzato.  
+ <span data-ttu-id="a488a-113">Questo esempio mostra anche come l'identità del chiamante sia accessibile da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dopo il processo di autenticazione del token personalizzato.</span><span class="sxs-lookup"><span data-stu-id="a488a-113">This sample also shows how the caller's identity is accessible from [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] after the custom token authentication process.</span></span>  
   
- Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante il file di configurazione App.config.L'endpoint è costituito da un indirizzo, un'associazione e un contratto.L'associazione viene configurata con una classe standard `wsHttpBinding`, con la modalità di sicurezza impostata sul messaggio, modalità predefinita di `wsHttpBinding`.In questo esempio viene impostata la classe `wsHttpBinding` standard per utilizzare l'autenticazione del nome utente del client.Il servizio configura anche il certificato del servizio utilizzando il comportamento `serviceCredentials`.Il comportamento `securityCredentials` consente di specificare un certificato del servizio.Un certificato di servizio viene utilizzato da un client per autenticare il servizio e fornire protezione al messaggio.La configurazione seguente fa riferimento al certificato localhost installato durante l'installazione dell'esempio come descritto nelle istruzioni seguenti.  
+ <span data-ttu-id="a488a-114">Il servizio espone un solo endpoint per comunicare con il servizio che viene definito mediante il file di configurazione App.config.</span><span class="sxs-lookup"><span data-stu-id="a488a-114">The service exposes a single endpoint for communicating with the service, defined using the App.config configuration file.</span></span> <span data-ttu-id="a488a-115">L'endpoint è costituito da un indirizzo, un'associazione e un contratto.</span><span class="sxs-lookup"><span data-stu-id="a488a-115">The endpoint consists of an address, a binding, and a contract.</span></span> <span data-ttu-id="a488a-116">L'associazione viene configurata con una classe standard `wsHttpBinding`, con la modalità di sicurezza impostata sul messaggio, modalità predefinita di `wsHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="a488a-116">The binding is configured with a standard `wsHttpBinding`, with the security mode set to message - the default mode of the `wsHttpBinding`.</span></span> <span data-ttu-id="a488a-117">In questo esempio viene impostata la classe `wsHttpBinding` standard per usare l'autenticazione del nome utente del client.</span><span class="sxs-lookup"><span data-stu-id="a488a-117">This sample sets the standard `wsHttpBinding` to use client username authentication.</span></span> <span data-ttu-id="a488a-118">Il servizio configura anche il certificato del servizio usando il comportamento `serviceCredentials`.</span><span class="sxs-lookup"><span data-stu-id="a488a-118">The service also configures the service certificate using `serviceCredentials` behavior.</span></span> <span data-ttu-id="a488a-119">Il comportamento `securityCredentials` consente di specificare un certificato del servizio.</span><span class="sxs-lookup"><span data-stu-id="a488a-119">The `securityCredentials` behavior allows you to specify a service certificate.</span></span> <span data-ttu-id="a488a-120">Un certificato del servizio viene usato da un client per autenticare il servizio e fornire protezione del messaggio.</span><span class="sxs-lookup"><span data-stu-id="a488a-120">A service certificate is used by a client to authenticate the service and provide message protection.</span></span> <span data-ttu-id="a488a-121">La configurazione seguente fa riferimento al certificato localhost installato durante l'installazione dell'esempio come descritto nelle istruzioni seguenti.</span><span class="sxs-lookup"><span data-stu-id="a488a-121">The following configuration references the localhost certificate installed during the sample setup as described in the following setup instructions.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <services>  
       <service   
@@ -86,12 +89,11 @@ In questo esempio viene illustrato come implementare un autenticatore di token p
     </behaviors>  
   
   </system.serviceModel>  
-  
 ```  
   
- La configurazione dell'endpoint client è costituita da un nome di configurazione, un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto.L'associazione client viene configurata con la `Mode` e la `clientCredentialType` appropriate.  
+ <span data-ttu-id="a488a-122">La configurazione dell'endpoint client è costituita da un nome di configurazione, un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto.</span><span class="sxs-lookup"><span data-stu-id="a488a-122">The client endpoint configuration consists of a configuration name, an absolute address for the service endpoint, the binding, and the contract.</span></span> <span data-ttu-id="a488a-123">L'associazione client viene configurata con la `Mode` e la `clientCredentialType` appropriate.</span><span class="sxs-lookup"><span data-stu-id="a488a-123">The client binding is configured with the appropriate `Mode` and `clientCredentialType`.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <client>  
       <endpoint name=""  
@@ -114,7 +116,7 @@ In questo esempio viene illustrato come implementare un autenticatore di token p
   </system.serviceModel>  
 ```  
   
- L'implementazione del client imposta il nome utente e la password da utilizzare.  
+ <span data-ttu-id="a488a-124">L'implementazione del client imposta il nome utente e la password da usare.</span><span class="sxs-lookup"><span data-stu-id="a488a-124">The client implementation sets the user name and password to use.</span></span>  
   
 ```  
 static void Main()  
@@ -126,12 +128,12 @@ static void Main()
 }  
 ```  
   
-## Autenticatore di token personalizzato  
- Utilizzare i passaggi seguenti per creare un autenticatore di token personalizzato:  
+## <a name="custom-token-authenticator"></a><span data-ttu-id="a488a-125">Autenticatore di token personalizzato</span><span class="sxs-lookup"><span data-stu-id="a488a-125">Custom Token Authenticator</span></span>  
+ <span data-ttu-id="a488a-126">Utilizzare i passaggi seguenti per creare un autenticatore di token personalizzato:</span><span class="sxs-lookup"><span data-stu-id="a488a-126">Use the following steps to create a custom token authenticator:</span></span>  
   
-1.  Creare un autenticatore di token personalizzato  
+1.  <span data-ttu-id="a488a-127">Creare un autenticatore di token personalizzato</span><span class="sxs-lookup"><span data-stu-id="a488a-127">Write a custom token authenticator.</span></span>  
   
-     L'esempio implementa un autenticatore di token personalizzato che verifica che il nome utente abbia un formato di posta elettronica valido.Deriva la classe <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>.Il metodo più importante di questa classe è <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>.In questo metodo, l'autenticatore convalida il formato del nome utente e verifica anche che il nome host non provenga da un dominio sospetto.Se entrambe le condizioni sono soddisfatte, restituisce una raccolta di sola lettura delle istanze della classe <xref:System.IdentityModel.Policy.IAuthorizationPolicy> che viene quindi utilizzata per fornire attestazioni che rappresentano le informazioni archiviate nel token del nome utente.  
+     <span data-ttu-id="a488a-128">L'esempio implementa un autenticatore di token personalizzato che verifica che il nome utente abbia un formato di posta elettronica valido.</span><span class="sxs-lookup"><span data-stu-id="a488a-128">The sample implements a custom token authenticator that validates that the username has a valid email format.</span></span> <span data-ttu-id="a488a-129">Deriva la classe <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>.</span><span class="sxs-lookup"><span data-stu-id="a488a-129">It derives the <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>.</span></span> <span data-ttu-id="a488a-130">Il metodo più importante di questa classe è <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>.</span><span class="sxs-lookup"><span data-stu-id="a488a-130">The most important method in this class is <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>.</span></span> <span data-ttu-id="a488a-131">In questo metodo, l'autenticatore convalida il formato del nome utente e verifica anche che il nome host non provenga da un dominio sospetto.</span><span class="sxs-lookup"><span data-stu-id="a488a-131">In this method, the authenticator validates the format of the username and also that the host name is not from a rogue domain.</span></span> <span data-ttu-id="a488a-132">Se entrambe le condizioni sono soddisfatte, restituisce una raccolta di sola lettura delle istanze della classe <xref:System.IdentityModel.Policy.IAuthorizationPolicy> che viene quindi utilizzata per fornire attestazioni che rappresentano le informazioni archiviate nel token del nome utente.</span><span class="sxs-lookup"><span data-stu-id="a488a-132">If both conditions are met, then it returns a read-only collection of <xref:System.IdentityModel.Policy.IAuthorizationPolicy> instances that is then used to provide claims that represent the information stored inside the username token.</span></span>  
   
     ```  
     protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)  
@@ -148,9 +150,9 @@ static void Main()
     }  
     ```  
   
-2.  Fornisce i criteri di autorizzazione restituiti dall'autenticatore di token personalizzato.  
+2.  <span data-ttu-id="a488a-133">Fornisce i criteri di autorizzazione restituiti dall'autenticatore di token personalizzato.</span><span class="sxs-lookup"><span data-stu-id="a488a-133">Provide an authorization policy that is returned by custom token authenticator.</span></span>  
   
-     Questo esempio fornisce un'implementazione di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> chiamata `UnconditionalPolicy` che restituisce set di attestazioni e identità passati a esso nel costruttore.  
+     <span data-ttu-id="a488a-134">Questo esempio fornisce un'implementazione di <xref:System.IdentityModel.Policy.IAuthorizationPolicy> chiamata `UnconditionalPolicy` che restituisce set di attestazioni e identità passati a esso nel costruttore.</span><span class="sxs-lookup"><span data-stu-id="a488a-134">This sample provides its own implementation of <xref:System.IdentityModel.Policy.IAuthorizationPolicy> called `UnconditionalPolicy` that returns set of claims and identities that were passed to it in its constructor.</span></span>  
   
     ```  
     class UnconditionalPolicy : IAuthorizationPolicy  
@@ -218,12 +220,11 @@ static void Main()
     }  
     ```  
   
-3.  Scrivere un gestore di token di sicurezza personalizzato.  
+3.  <span data-ttu-id="a488a-135">Scrivere un gestore di token di sicurezza personalizzato.</span><span class="sxs-lookup"><span data-stu-id="a488a-135">Write a custom security token manager.</span></span>  
   
-     La classe <xref:System.IdentityModel.Selectors.SecurityTokenManager> viene utilizzata per creare una classe <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> per oggetti specifici della classe <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> che vengono passati nel metodo `CreateSecurityTokenAuthenticator`.Viene inoltre utilizzato il gestore del token di sicurezza per creare provider di token e serializzatori di token, che però non sono trattati in questo esempio.In questo esempio, il gestore del token di sicurezza personalizzato eredita dalla classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> ed esegue l'override del metodo `CreateSecurityTokenAuthenticator` per restituire un autenticatore di token nome utente personalizzato quando i requisiti del token passati indicano che l'autenticatore nome utente è necessario.  
+     <span data-ttu-id="a488a-136">La classe <xref:System.IdentityModel.Selectors.SecurityTokenManager> viene utilizzata per creare una classe <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> per oggetti specifici della classe <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> che vengono passati nel metodo `CreateSecurityTokenAuthenticator`.</span><span class="sxs-lookup"><span data-stu-id="a488a-136">The <xref:System.IdentityModel.Selectors.SecurityTokenManager> is used to create a <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> for specific <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> objects that are passed to it in the `CreateSecurityTokenAuthenticator` method.</span></span> <span data-ttu-id="a488a-137">Viene inoltre utilizzato il gestore del token di sicurezza per creare provider di token e serializzatori di token, che però non sono trattati in questo esempio.</span><span class="sxs-lookup"><span data-stu-id="a488a-137">The security token manager is also used to create token providers and token serializers, but those are not covered by this sample.</span></span> <span data-ttu-id="a488a-138">In questo esempio, il gestore del token di sicurezza personalizzato eredita dalla classe <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> ed esegue l'override del metodo `CreateSecurityTokenAuthenticator` per restituire un autenticatore di token nome utente personalizzato quando i requisiti del token passati indicano che l'autenticatore nome utente è necessario.</span><span class="sxs-lookup"><span data-stu-id="a488a-138">In this sample, the custom security token manager inherits from <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> class and overrides the `CreateSecurityTokenAuthenticator` method to return custom username token authenticator when the passed token requirements indicate that username authenticator is requested.</span></span>  
   
     ```  
-  
     public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager  
     {  
         MyUserNameCredential myUserNameCredential;  
@@ -249,9 +250,9 @@ static void Main()
     }  
     ```  
   
-4.  Scrivere una credenziale del servizio personalizzata  
+4.  <span data-ttu-id="a488a-139">Scrivere una credenziale del servizio personalizzata</span><span class="sxs-lookup"><span data-stu-id="a488a-139">Write a custom service credential.</span></span>  
   
-     La classe delle credenziali del servizio viene utilizzata per rappresentare le credenziali configurate per il servizio e crea un gestore del token di sicurezza utilizzato per ottenere gli autenticatori del token, i provider di token e i serializzatori di token.  
+     <span data-ttu-id="a488a-140">La classe delle credenziali del servizio viene utilizzata per rappresentare le credenziali configurate per il servizio e crea un gestore del token di sicurezza utilizzato per ottenere gli autenticatori del token, i provider di token e i serializzatori di token.</span><span class="sxs-lookup"><span data-stu-id="a488a-140">The service credentials class is used to represent the credentials that are configured for the service and creates a security token manager that is used to obtain token authenticators, token providers and token serializers.</span></span>  
   
     ```  
     public class MyUserNameCredential : ServiceCredentials  
@@ -275,9 +276,9 @@ static void Main()
     }  
     ```  
   
-5.  Configurare il servizio per l'utilizzo della credenziale del servizio personalizzata.  
+5.  <span data-ttu-id="a488a-141">Configurare il servizio per l'utilizzo della credenziale del servizio personalizzata.</span><span class="sxs-lookup"><span data-stu-id="a488a-141">Configure the service to use the custom service credential.</span></span>  
   
-     Affinché il servizio utilizzi la credenziale del servizio personalizzata, si elimina la classe della credenziale di servizio predefinita dopo avere acquisito il certificato del servizio già preconfigurato nella credenziale del servizio predefinita, si configura la nuova istanza della credenziale del servizio per utilizzare i certificati del servizio preconfigurati e si aggiunge questa nuova istanza della credenziale del servizio nuova ai comportamenti del servizio.  
+     <span data-ttu-id="a488a-142">Affinché il servizio utilizzi la credenziale del servizio personalizzata, si elimina la classe della credenziale di servizio predefinita dopo avere acquisito il certificato del servizio già preconfigurato nella credenziale del servizio predefinita, si configura la nuova istanza della credenziale del servizio per utilizzare i certificati del servizio preconfigurati e si aggiunge questa nuova istanza della credenziale del servizio nuova ai comportamenti del servizio.</span><span class="sxs-lookup"><span data-stu-id="a488a-142">In order for the service to use the custom service credential, we delete the default service credential class after capturing the service certificate that is already preconfigured in the default service credential, and configure the new service credential instance to use the preconfigured service certificates and add this new service credential instance to service behaviors.</span></span>  
   
     ```  
     ServiceCredentials sc = serviceHost.Credentials;  
@@ -288,7 +289,7 @@ static void Main()
     serviceHost.Description.Behaviors.Add(serviceCredential);  
     ```  
   
- Per visualizzare le informazioni sul chiamante è possibile utilizzare <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> come mostra il codice seguente.La classe <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contiene informazioni sulle attestazioni circa il chiamante corrente.  
+ <span data-ttu-id="a488a-143">Per visualizzare le informazioni sul chiamante è possibile utilizzare <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> come mostra il codice seguente.</span><span class="sxs-lookup"><span data-stu-id="a488a-143">To display the caller's information, you can use the <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> as shown in the following code.</span></span> <span data-ttu-id="a488a-144">La classe <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contiene informazioni sulle attestazioni circa il chiamante corrente.</span><span class="sxs-lookup"><span data-stu-id="a488a-144">The <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contains claims information about the current caller.</span></span>  
   
 ```  
 static void DisplayIdentityInformation()  
@@ -297,19 +298,18 @@ static void DisplayIdentityInformation()
             ServiceSecurityContext.Current.PrimaryIdentity.Name);  
      return;  
 }  
-  
 ```  
   
- Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.Premere INVIO nella finestra del client per arrestare il client.  
+ <span data-ttu-id="a488a-145">Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="a488a-145">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="a488a-146">Premere INVIO nella finestra del client per arrestare il client.</span><span class="sxs-lookup"><span data-stu-id="a488a-146">Press ENTER in the client window to shut down the client.</span></span>  
   
-## File batch di installazione  
- Il file batch Setup.bat incluso con questo esempio consente di configurare il server con i certificati attinenti per eseguire un'applicazione indipendente che richiede la sicurezza server basata su certificato.Questo file batch deve essere modificato per funzionare tra computer diversi o nel caso in cui non sia ospitato.  
+## <a name="setup-batch-file"></a><span data-ttu-id="a488a-147">File batch di installazione</span><span class="sxs-lookup"><span data-stu-id="a488a-147">Setup Batch File</span></span>  
+ <span data-ttu-id="a488a-148">Il file batch Setup.bat incluso con questo esempio consente di configurare il server con i certificati attinenti per eseguire un'applicazione indipendente che richiede la sicurezza server basata su certificato.</span><span class="sxs-lookup"><span data-stu-id="a488a-148">The Setup.bat batch file included with this sample allows you to configure the server with relevant certificates to run a self-hosted application that requires server certificate based security.</span></span> <span data-ttu-id="a488a-149">Questo file batch deve essere modificato per funzionare tra computer diversi o nel caso in cui non sia ospitato.</span><span class="sxs-lookup"><span data-stu-id="a488a-149">This batch file must be modified to work across computers or to work in a non-hosted case.</span></span>  
   
- Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.  
+ <span data-ttu-id="a488a-150">Di seguito viene fornita una breve panoramica delle varie sezioni dei file batch in modo che possano essere modificate per l'esecuzione nella configurazione appropriata.</span><span class="sxs-lookup"><span data-stu-id="a488a-150">The following provides a brief overview of the different sections of the batch files so that they can be modified to run in appropriate configuration.</span></span>  
   
--   Creazione del certificato server.  
+-   <span data-ttu-id="a488a-151">Creazione del certificato server.</span><span class="sxs-lookup"><span data-stu-id="a488a-151">Creating the server certificate.</span></span>  
   
-     Le righe seguenti del file batch Setup.bat creano il certificato server da utilizzare.La variabile `%SERVER_NAME%` specifica il nome del server.Modificare questa variabile per specificare il nome del server.Il valore predefinito in questo file batch è localhost.  
+     <span data-ttu-id="a488a-152">Le righe seguenti del file batch Setup.bat creano il certificato server da usare.</span><span class="sxs-lookup"><span data-stu-id="a488a-152">The following lines from the Setup.bat batch file create the server certificate to be used.</span></span> <span data-ttu-id="a488a-153">La variabile `%SERVER_NAME%` specifica il nome del server.</span><span class="sxs-lookup"><span data-stu-id="a488a-153">The `%SERVER_NAME%` variable specifies the server name.</span></span> <span data-ttu-id="a488a-154">Modificare questa variabile per specificare nome del server.</span><span class="sxs-lookup"><span data-stu-id="a488a-154">Change this variable to specify your own server name.</span></span> <span data-ttu-id="a488a-155">Il valore predefinito in questo file batch è localhost.</span><span class="sxs-lookup"><span data-stu-id="a488a-155">The default in this batch file is localhost.</span></span>  
   
     ```  
     echo ************  
@@ -319,63 +319,62 @@ static void DisplayIdentityInformation()
     echo making server cert  
     echo ************  
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-  
     ```  
   
--   Installazione del certificato server nell'archivio certificati attendibili del client  
+-   <span data-ttu-id="a488a-156">Installazione del certificato server nell'archivio certificati attendibili del client</span><span class="sxs-lookup"><span data-stu-id="a488a-156">Installing the server certificate into client's trusted certificate store.</span></span>  
   
-     Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio delle persone attendibile del client.Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client.Se è già disponibile un certificato impostato come radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio della popolazione dell'archivio certificati client con il certificato server non è necessario.  
+     <span data-ttu-id="a488a-157">Le righe seguenti nel file batch Setup.bat copiano il certificato server nell'archivio di persone attendibile del client.</span><span class="sxs-lookup"><span data-stu-id="a488a-157">The following lines in the Setup.bat batch file copy the server certificate into the client trusted people store.</span></span> <span data-ttu-id="a488a-158">Questo passaggio è necessario perché certificati generati da Makecert.exe non sono considerati implicitamente attendibili dal sistema client.</span><span class="sxs-lookup"><span data-stu-id="a488a-158">This step is required because certificates generated by Makecert.exe are not implicitly trusted by the client system.</span></span> <span data-ttu-id="a488a-159">Se è già disponibile un certificato con radice in un certificato radice client attendibile, ad esempio un certificato rilasciato da Microsoft, il passaggio del popolamento dell'archivio certificati client con il certificato server non è necessario.</span><span class="sxs-lookup"><span data-stu-id="a488a-159">If you already have a certificate that is rooted in a client trusted root certificate—for example, a Microsoft issued certificate—this step of populating the client certificate store with the server certificate is not required.</span></span>  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
     > [!NOTE]
-    >  Il file batch di configurazione è progettato per essere eseguito da un prompt dei comandi di Windows SDKe richiede che la variabile di ambiente MSSDK punti alla directory in cui è installato SDK.Questa variabile di ambiente viene impostata automaticamente in un prompt dei comandi di SDK di Windows.  
+    >  <span data-ttu-id="a488a-160">Il file batch di configurazione è progettato per essere eseguito da un prompt dei comandi di Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="a488a-160">The setup batch file is designed to be run from a Windows SDK Command Prompt.</span></span> <span data-ttu-id="a488a-161">e richiede che la variabile di ambiente MSSDK punti alla directory in cui è installato SDK.</span><span class="sxs-lookup"><span data-stu-id="a488a-161">It requires that the MSSDK environment variable point to the directory where the SDK is installed.</span></span> <span data-ttu-id="a488a-162">Questa variabile di ambiente viene impostata automaticamente all'interno di un prompt dei comandi di SDK di Windows.</span><span class="sxs-lookup"><span data-stu-id="a488a-162">This environment variable is automatically set within a Windows SDK Command Prompt.</span></span>  
   
-#### Per impostare e compilare l'esempio  
+#### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="a488a-163">Per impostare e compilare l'esempio</span><span class="sxs-lookup"><span data-stu-id="a488a-163">To set up and build the sample</span></span>  
   
-1.  Assicurarsi di aver eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="a488a-164">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a488a-164">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Per compilare la soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="a488a-165">Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a488a-165">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-#### Per eseguire l'esempio nello stesso computer  
+#### <a name="to-run-the-sample-on-the-same-computer"></a><span data-ttu-id="a488a-166">Per eseguire l'esempio nello stesso computer</span><span class="sxs-lookup"><span data-stu-id="a488a-166">To run the sample on the same computer</span></span>  
   
-1.  Aprire un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegi di amministratore ed eseguire Setup.bat dalla cartella di installazione dell'esempio.In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.  
+1.  <span data-ttu-id="a488a-167">Aprire un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] con privilegi di amministratore ed eseguire Setup.bat dalla cartella di installazione dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="a488a-167">Run Setup.bat from the sample installation folder inside a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] command prompt opened with administrator privileges.</span></span> <span data-ttu-id="a488a-168">In questo modo vengono installati tutti i certificati necessari per l'esecuzione dell'esempio.</span><span class="sxs-lookup"><span data-stu-id="a488a-168">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  Il file batch Setup.bat è progettato per essere eseguito da un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].La variabile di ambiente PATH impostata nel prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] punta alla directory che contiene file eseguibili richiesti dallo script Setup.bat.  
+    >  <span data-ttu-id="a488a-169">Il file batch Setup.bat è progettato per essere eseguito da un prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a488a-169">The Setup.bat batch file is designed to be run from a [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt.</span></span> <span data-ttu-id="a488a-170">La variabile di ambiente PATH impostata nel prompt dei comandi di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] punta alla directory che contiene file eseguibili richiesti dallo script Setup.bat.</span><span class="sxs-lookup"><span data-stu-id="a488a-170">The PATH environment variable set within the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Command Prompt points to the directory that contains executables required by the Setup.bat script.</span></span>  
   
-2.  Avviare service.exe da service\\bin.  
+2.  <span data-ttu-id="a488a-171">Avviare service.exe da service\bin.</span><span class="sxs-lookup"><span data-stu-id="a488a-171">Launch service.exe from service\bin.</span></span>  
   
-3.  Avviare client.exe da \\client\\bin.L'attività del client viene visualizzata nella finestra dell'applicazione console.  
+3.  <span data-ttu-id="a488a-172">Avviare client.exe da \client\bin.</span><span class="sxs-lookup"><span data-stu-id="a488a-172">Launch client.exe from \client\bin.</span></span> <span data-ttu-id="a488a-173">L'attività del client viene visualizzata nella finestra dell'applicazione console.</span><span class="sxs-lookup"><span data-stu-id="a488a-173">Client activity is displayed on the client console application.</span></span>  
   
-4.  Se il client e il servizio non sono in grado di comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/it-it/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  <span data-ttu-id="a488a-174">Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="a488a-174">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Per eseguire l'esempio tra più computer  
+#### <a name="to-run-the-sample-across-computers"></a><span data-ttu-id="a488a-175">Per eseguire l'esempio tra più computer</span><span class="sxs-lookup"><span data-stu-id="a488a-175">To run the sample across computers</span></span>  
   
-1.  Creare una directory sul computer del servizio per i file binari del servizio.  
+1.  <span data-ttu-id="a488a-176">Creare una directory sul computer del servizio per i file binari del servizio.</span><span class="sxs-lookup"><span data-stu-id="a488a-176">Create a directory on the service computer for the service binaries.</span></span>  
   
-2.  Copiare i file di programma del servizio nella directory del servizio sul computer relativo.Copiare i file Setup.bat e Cleanup.bat nel computer del servizio.  
+2.  <span data-ttu-id="a488a-177">Copiare i file di programma del servizio nella directory del servizio sul computer relativo.</span><span class="sxs-lookup"><span data-stu-id="a488a-177">Copy the service program files to the service directory on the service computer.</span></span> <span data-ttu-id="a488a-178">Copiare i file Setup.bat e Cleanup.bat nel computer del servizio.</span><span class="sxs-lookup"><span data-stu-id="a488a-178">Also copy the Setup.bat and Cleanup.bat files to the service computer.</span></span>  
   
-3.  È necessario disporre di un certificato server con il nome del soggetto che contiene il nome di dominio completo del computer.Il file service.App.config deve essere aggiornato per riflettere il nome del nuovo certificato.È possibile crearne uno utilizzando Setup.bat se si imposta la variabile `%SERVER_NAME%` sul nome host completo del computer sul quale il servizio sarà eseguito.Si noti che è necessario eseguire il file setup.bat in un prompt dei comandi di Visual Studio aperto con privilegi di amministratore.  
+3.  <span data-ttu-id="a488a-179">È necessario disporre di un certificato server con il nome del soggetto che contiene il nome di dominio completo del computer.</span><span class="sxs-lookup"><span data-stu-id="a488a-179">You must have a server certificate with the subject name that contains the fully-qualified domain name of the computer.</span></span> <span data-ttu-id="a488a-180">Il file service.App.config deve essere aggiornato per riflettere il nome del nuovo certificato.</span><span class="sxs-lookup"><span data-stu-id="a488a-180">The service App.config file must be updated to reflect this new certificate name.</span></span> <span data-ttu-id="a488a-181">È possibile crearne uno utilizzando Setup.bat se si imposta la variabile `%SERVER_NAME%` sul nome host completo del computer sul quale il servizio sarà eseguito.</span><span class="sxs-lookup"><span data-stu-id="a488a-181">You can create one by using the Setup.bat if you set the `%SERVER_NAME%` variable to fully-qualified host name of the computer on which the service will run.</span></span> <span data-ttu-id="a488a-182">Si noti che è necessario eseguire il file setup.bat in un prompt dei comandi di Visual Studio aperto con privilegi di amministratore.</span><span class="sxs-lookup"><span data-stu-id="a488a-182">Note that the setup.bat file must be run from a Visual Studio command prompt opened with administrator privileges.</span></span>  
   
-4.  Copiare il certificato server nell'archivio CurrentUser\-TrustedPeople del client.Questo passaggio è necessario solo quando il certificato server è emesso da un'autorità emittente client attendibile.  
+4.  <span data-ttu-id="a488a-183">Copiare il certificato server nell'archivio CurrentUser-TrustedPeople del client.</span><span class="sxs-lookup"><span data-stu-id="a488a-183">Copy the server certificate into the CurrentUser-TrustedPeople store of the client.</span></span> <span data-ttu-id="a488a-184">Questo passaggio è necessario solo quando il certificato server è emesso da un'autorità emittente client attendibile.</span><span class="sxs-lookup"><span data-stu-id="a488a-184">You do not need to do this except when the server certificate is issued by a client trusted issuer.</span></span>  
   
-5.  Nel file App.exe.config sul computer del servizio modificare il valore dell'indirizzo di base per specificare un nome del computer completo anziché localhost.  
+5.  <span data-ttu-id="a488a-185">Nel file App.exe.config sul computer del servizio modificare il valore dell'indirizzo di base per specificare un nome del computer completo anziché localhost.</span><span class="sxs-lookup"><span data-stu-id="a488a-185">In the App.config file on the service computer, change the value of the base address to specify a fully-qualified computer name instead of localhost.</span></span>  
   
-6.  Sul computer del servizio eseguire service.exe da un prompt dei comandi.  
+6.  <span data-ttu-id="a488a-186">Sul computer del servizio eseguire service.exe da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="a488a-186">On the service computer, run service.exe from a command prompt.</span></span>  
   
-7.  Copiare i file del programma client dalla cartella \\client\\bin\\, presente nella cartella specifica del linguaggio, nel computer client.  
+7.  <span data-ttu-id="a488a-187">Copiare i file del programma client dalla cartella \client\bin\, presente nella cartella specifica del linguaggio, nel computer client.</span><span class="sxs-lookup"><span data-stu-id="a488a-187">Copy the client program files from the \client\bin\ folder, under the language-specific folder, to the client computer.</span></span>  
   
-8.  Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio.  
+8.  <span data-ttu-id="a488a-188">Nel file Client.exe.config presente nel computer client modificare il valore dell'indirizzo della definizione dell'endpoint in base al nuovo indirizzo del servizio.</span><span class="sxs-lookup"><span data-stu-id="a488a-188">In the Client.exe.config file on the client computer, change the address value of the endpoint to match the new address of your service.</span></span>  
   
-9. Sul computer client avviare Client.exe da un prompt dei comandi.  
+9. <span data-ttu-id="a488a-189">Sul computer client avviare Client.exe da un prompt dei comandi.</span><span class="sxs-lookup"><span data-stu-id="a488a-189">On the client computer, launch Client.exe from a command prompt.</span></span>  
   
-10. Se il client e il servizio non sono in grado di comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/it-it/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. <span data-ttu-id="a488a-190">Se il client e il servizio non possono comunicare, vedere [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="a488a-190">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
   
-#### Per eseguire la pulizia dopo l'esempio  
+#### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="a488a-191">Per eseguire la pulizia dopo l'esempio</span><span class="sxs-lookup"><span data-stu-id="a488a-191">To clean up after the sample</span></span>  
   
-1.  Eseguire Cleanup.bat nella cartella degli esempi dopo che è terminata l'esecuzione dell'esempio.  
+1.  <span data-ttu-id="a488a-192">Eseguire Cleanup.bat nella cartella degli esempi una volta completato l'esempio.</span><span class="sxs-lookup"><span data-stu-id="a488a-192">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="a488a-193">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a488a-193">See Also</span></span>

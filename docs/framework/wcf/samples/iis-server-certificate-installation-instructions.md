@@ -1,87 +1,90 @@
 ---
-title: "Istruzioni di installazione certificato server IIS (Internet Information Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Istruzioni di installazione certificato server IIS (Internet Information Services)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4b9496d471ca262e640c927619ccea8e4b4f4145
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Istruzioni di installazione certificato server IIS (Internet Information Services)
-Per eseguire gli esempi che comunicano in modo sicuro con IIS \(Internet Information Services\) è necessario creare e installare un certificato server.  
+# <a name="internet-information-services-iis-server-certificate-installation-instructions"></a><span data-ttu-id="7775b-102">Istruzioni di installazione certificato server IIS (Internet Information Services)</span><span class="sxs-lookup"><span data-stu-id="7775b-102">Internet Information Services (IIS) Server Certificate Installation Instructions</span></span>
+<span data-ttu-id="7775b-103">Per eseguire gli esempi che comunicano in modo sicuro con IIS (Internet Information Services) è necessario creare e installare un certificato server.</span><span class="sxs-lookup"><span data-stu-id="7775b-103">To run the samples that securely communicate with Internet Information Services (IIS), you must create and install a server certificate.</span></span>  
   
-## Passaggio 1.Creazione di certificati  
- Per creare un certificato per il computer, aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire Setup.bat incluso in ciascuno degli esempi che utilizza comunicazione sicure con IIS.Assicurarsi che il percorso includa la cartella contenente Makecert.exe prima di eseguire questo file batch.Il comando seguente viene utilizzato per creare il certificato nel file Setup.bat.  
+## <a name="step-1-creating-certificates"></a><span data-ttu-id="7775b-104">Passaggio 1.</span><span class="sxs-lookup"><span data-stu-id="7775b-104">Step 1.</span></span> <span data-ttu-id="7775b-105">Creazione di certificati</span><span class="sxs-lookup"><span data-stu-id="7775b-105">Creating Certificates</span></span>  
+ <span data-ttu-id="7775b-106">Per creare un certificato per il computer, aprire un prompt dei comandi di Visual Studio con privilegi di amministratore ed eseguire Setup.bat incluso in ciascuno degli esempi che utilizza comunicazione sicure con IIS.</span><span class="sxs-lookup"><span data-stu-id="7775b-106">To create a certificate for your computer, open a Visual Studio command prompt with administrator privileges and run the Setup.bat that is included in each of the samples that use secure communication with IIS.</span></span> <span data-ttu-id="7775b-107">Assicurarsi che il percorso includa la cartella contenente Makecert.exe prima di eseguire questo file batch.</span><span class="sxs-lookup"><span data-stu-id="7775b-107">Ensure that the path includes the folder that contains Makecert.exe before you run this batch file.</span></span> <span data-ttu-id="7775b-108">Il comando seguente viene utilizzato per creare il certificato nel file Setup.bat.</span><span class="sxs-lookup"><span data-stu-id="7775b-108">The following command is used to create the certificate in Setup.bat.</span></span>  
   
 ```  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
 ```  
   
-## Passaggio 2.Installazione dei certificati  
- I passaggi necessari per installare i certificati appena creati dipendono dalla versione di IIS che si sta utilizzando.  
+## <a name="step-2-installing-certificates"></a><span data-ttu-id="7775b-109">Passaggio 2.</span><span class="sxs-lookup"><span data-stu-id="7775b-109">Step 2.</span></span> <span data-ttu-id="7775b-110">Installazione dei certificati</span><span class="sxs-lookup"><span data-stu-id="7775b-110">Installing Certificates</span></span>  
+ <span data-ttu-id="7775b-111">I passaggi necessari per installare i certificati appena creati dipendono dalla versione di IIS che si sta utilizzando.</span><span class="sxs-lookup"><span data-stu-id="7775b-111">The steps required to install the certificates you just created depend on which version of IIS you are using.</span></span>  
   
-#### Installazione di IIS su IIS 5.1 \(Windows XP\) e IIS 6.0 \(Windows Server 2003\)  
+#### <a name="to-install-iis-on-iis-51-windows-xp-and-iis-60-windows-server-2003"></a><span data-ttu-id="7775b-112">Installazione di IIS su IIS 5.1 (Windows XP) e IIS 6.0 (Windows Server 2003)</span><span class="sxs-lookup"><span data-stu-id="7775b-112">To install IIS on IIS 5.1 (Windows XP) and IIS 6.0 (Windows Server 2003)</span></span>  
   
-1.  Aprire lo snap\-in MMC della Gestione Internet Information Services \(IIS\).  
+1.  <span data-ttu-id="7775b-113">Aprire lo snap-in MMC della Gestione Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="7775b-113">Open the Internet Information Services Manager MMC Snap-In.</span></span>  
   
-2.  Fare clic con il pulsante destro del mouse sul Sito Web predefinito e selezionare **Proprietà**.  
+2.  <span data-ttu-id="7775b-114">Il sito Web predefinito e scegliere **proprietà**.</span><span class="sxs-lookup"><span data-stu-id="7775b-114">Right-click the default Web site and select **Properties**.</span></span>  
   
-3.  Selezionare la scheda **Sicurezza directory**.  
+3.  <span data-ttu-id="7775b-115">Selezionare il **protezione Directory** scheda.</span><span class="sxs-lookup"><span data-stu-id="7775b-115">Select the **Directory Security** tab.</span></span>  
   
-4.  Fare clic sul pulsante **Certificato server**.Verrà avviata la Procedura guidata certificati server Web.  
+4.  <span data-ttu-id="7775b-116">Fare clic su di **certificato Server** pulsante.</span><span class="sxs-lookup"><span data-stu-id="7775b-116">Click the **Server Certificate** button.</span></span> <span data-ttu-id="7775b-117">Verrà avviata la Procedura guidata certificati server Web.</span><span class="sxs-lookup"><span data-stu-id="7775b-117">The Web Server Certificate Wizard starts.</span></span>  
   
-5.  Completare la procedura guidata.Selezionare l'opzione per assegnare un certificato.Selezionare il certificato server HTTPS ServiceModelSamples nell'elenco di certificati visualizzati.  
+5.  <span data-ttu-id="7775b-118">Completare la procedura guidata.</span><span class="sxs-lookup"><span data-stu-id="7775b-118">Complete the wizard.</span></span> <span data-ttu-id="7775b-119">Selezionare l'opzione per assegnare un certificato.</span><span class="sxs-lookup"><span data-stu-id="7775b-119">Select the option to assign a certificate.</span></span> <span data-ttu-id="7775b-120">Selezionare il certificato server HTTPS ServiceModelSamples nell'elenco di certificati visualizzati.</span><span class="sxs-lookup"><span data-stu-id="7775b-120">Select the ServiceModelSamples-HTTPS-Server certificate from the list of certificates that are displayed.</span></span>  
   
-     ![Gestione guidata certificati IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate\_Wizard")  
+     <span data-ttu-id="7775b-121">![IIS Gestione guidata certificati](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")</span><span class="sxs-lookup"><span data-stu-id="7775b-121">![IIS Certificate Wizard](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")</span></span>  
   
-6.  Testare l’accesso al servizio in un browser utilizzando l'indirizzo HTTPS https:\/\/localhost\/servicemodelsamples\/service.svc.  
+6.  <span data-ttu-id="7775b-122">Testare l’accesso al servizio in un browser utilizzando l'indirizzo HTTPS https://localhost/servicemodelsamples/service.svc.</span><span class="sxs-lookup"><span data-stu-id="7775b-122">Test access to the service in a browser by using the HTTPS address https://localhost/servicemodelsamples/service.svc.</span></span>  
   
-#### Se SSL è stato precedentemente configurato utilizzando Httpcfg.exe  
+#### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a><span data-ttu-id="7775b-123">Se SSL è stato precedentemente configurato utilizzando Httpcfg.exe</span><span class="sxs-lookup"><span data-stu-id="7775b-123">If SSL was previously configured by using Httpcfg.exe</span></span>  
   
-1.  Utilizzare Makecert.exe \(o eseguire Setup.bat\) per creare il certificato server.  
+1.  <span data-ttu-id="7775b-124">Utilizzare Makecert.exe (o eseguire Setup.bat) per creare il certificato server.</span><span class="sxs-lookup"><span data-stu-id="7775b-124">Use Makecert.exe (or run Setup.bat) to create the server certificate.</span></span>  
   
-2.  Eseguire la gestione IIS e installare il certificato secondo i passaggi precedenti.  
+2.  <span data-ttu-id="7775b-125">Eseguire la gestione IIS e installare il certificato secondo i passaggi precedenti.</span><span class="sxs-lookup"><span data-stu-id="7775b-125">Run the IIS manager and install the certificate according to the previous steps.</span></span>  
   
-3.  Aggiungere le righe di codice seguenti al programma client.  
+3.  <span data-ttu-id="7775b-126">Aggiungere le righe di codice seguenti al programma client.</span><span class="sxs-lookup"><span data-stu-id="7775b-126">Add the following line of code to the client program.</span></span>  
   
 > [!IMPORTANT]
->  Questo codice è necessario solo per certificati di prova come ad esempio quelli creati da Makecert.exe.Non è una pratica consigliabile per il codice di produzione.  
+>  <span data-ttu-id="7775b-127">Questo codice è necessario solo per certificati di prova come ad esempio quelli creati da Makecert.exe.</span><span class="sxs-lookup"><span data-stu-id="7775b-127">This code is only required for test certificates such as those created by Makecert.exe.</span></span> <span data-ttu-id="7775b-128">Non è una pratica consigliabile per il codice di produzione.</span><span class="sxs-lookup"><span data-stu-id="7775b-128">It is not recommended for production code.</span></span>  
   
 ```  
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```  
   
-#### Per installare IIS su IIS 7.0 \(Windows Vista e Windows Server 2008\)  
+#### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a><span data-ttu-id="7775b-129">Per installare IIS su IIS 7.0 (Windows Vista e Windows Server 2008)</span><span class="sxs-lookup"><span data-stu-id="7775b-129">To install IIS on IIS 7.0 (Windows Vista and Windows Server 2008)</span></span>  
   
-1.  Dal menu **Start** fare clic su **Esegui**, quindi digitare **inetmgr** per aprire lo snap\-in MMC di Internet Information Services \(IIS\).  
+1.  <span data-ttu-id="7775b-130">Dal **avviare** menu, fare clic su **eseguire**, quindi digitare **inetmgr** per aprire lo snap-in MMC di Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="7775b-130">From the **Start** menu, click **Run**, then type **inetmgr** to open the Internet Information Services (IIS) MMC snap-in.</span></span>  
   
-2.  Fare clic con il pulsante destro del mouse su **Sito Web Predefinito** e selezionare **Modifica Associazioni…**  
+2.  <span data-ttu-id="7775b-131">Fare doppio clic su di **sito Web predefinito** e selezionare **Modifica binding...**</span><span class="sxs-lookup"><span data-stu-id="7775b-131">Right-click the **Default Web Site** and select **Edit Bindings…**</span></span>  
   
-3.  Fare clic sul pulsante **Aggiungi** della finestra di dialogo **Binding sito**.  
+3.  <span data-ttu-id="7775b-132">Fare clic sul **Aggiungi** pulsante il **binding sito** la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="7775b-132">Click the **Add** button of the **Site Bindings** dialog box.</span></span>  
   
-4.  Selezionare **HTTPS** dall’elenco a discesa **Tipo**.  
+4.  <span data-ttu-id="7775b-133">Selezionare **HTTPS** dal **tipo** elenco a discesa.</span><span class="sxs-lookup"><span data-stu-id="7775b-133">Select **HTTPS** from the **Type** drop-down list.</span></span>  
   
-5.  Selezionare **ServiceModelSamples\-HTTPS\-Server** dall’elenco a discesa del **Certificato SSL** e fare clic su **OK**.  
+5.  <span data-ttu-id="7775b-134">Selezionare il **ServiceModelSamples-HTTPS-Server** dal **certificato SSL** elenco a discesa e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="7775b-134">Select the **ServiceModelSamples-HTTPS-Server** from the **SSL certificate** drop-down list and click **OK**.</span></span>  
   
-6.  Testare l’accesso al servizio in un browser utilizzando l'indirizzo HTTPS https:\/\/localhost\/servicemodelsamples\/service.svc.  
+6.  <span data-ttu-id="7775b-135">Testare l’accesso al servizio in un browser utilizzando l'indirizzo HTTPS https://localhost/servicemodelsamples/service.svc.</span><span class="sxs-lookup"><span data-stu-id="7775b-135">Test access to the service in a browser by using the HTTPS address https://localhost/servicemodelsamples/service.svc.</span></span>  
   
 > [!NOTE]
->  Dato che il certificato di prova appena installato non è un certificato attendibile, possono essere visualizzati avvisi di sicurezza di Internet Explorer aggiuntivi quando si visitano indirizzi Web locali protetti da questo certificato.  
+>  <span data-ttu-id="7775b-136">Dato che il certificato di prova appena installato non è un certificato attendibile, possono essere visualizzati avvisi di sicurezza di Internet Explorer aggiuntivi quando si visitano indirizzi Web locali protetti da questo certificato.</span><span class="sxs-lookup"><span data-stu-id="7775b-136">Because the test certificate you have just installed is not a trusted certificate, you may encounter additional Internet Explorer security warnings when browsing to local Web addresses secured with this certificate.</span></span>  
   
-## Rimozione dei certificati  
+## <a name="removing-certificates"></a><span data-ttu-id="7775b-137">Rimozione dei certificati</span><span class="sxs-lookup"><span data-stu-id="7775b-137">Removing Certificates</span></span>  
   
--   Utilizzare Gestione Internet Information Services come illustrato in precedenza, ma rimuovere il certificato o l'associazione anziché aggiungerlo.  
+-   <span data-ttu-id="7775b-138">Utilizzare Gestione Internet Information Services come illustrato in precedenza, ma rimuovere il certificato o l'associazione anziché aggiungerlo.</span><span class="sxs-lookup"><span data-stu-id="7775b-138">Use the Internet Information Services Manager as previously directed, but remove the certificate or binding instead of adding it.</span></span>  
   
--   Rimuovere il certificato del computer utilizzando il comando seguente.  
+-   <span data-ttu-id="7775b-139">Rimuovere il certificato del computer utilizzando il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="7775b-139">Remove the computer certificate by using the following command.</span></span>  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:443  

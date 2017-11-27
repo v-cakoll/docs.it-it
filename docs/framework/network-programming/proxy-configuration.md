@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Networking
 - adaptive proxies
@@ -22,48 +17,47 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2576050310c9b1926ee413e4fb1bbcf0c4bf4be
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b543097d0fc85c502bd36f22225958f9239ccd71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="proxy-configuration"></a>Configurazione proxy
-Un server proxy gestisce le richieste di risorse del client. Un proxy può restituire una risorsa richiesta dalla cache o inoltrare la richiesta al server in cui risiede la risorsa. I proxy possono migliorare le prestazioni della rete riducendo il numero di richieste inviate ai server remoti. I proxy possono essere usati anche per limitare l'accesso alle risorse.  
+# <a name="proxy-configuration"></a><span data-ttu-id="af454-102">Configurazione proxy</span><span class="sxs-lookup"><span data-stu-id="af454-102">Proxy Configuration</span></span>
+<span data-ttu-id="af454-103">Un server proxy gestisce le richieste di risorse del client.</span><span class="sxs-lookup"><span data-stu-id="af454-103">A proxy server handles client requests for resources.</span></span> <span data-ttu-id="af454-104">Un proxy può restituire una risorsa richiesta dalla cache o inoltrare la richiesta al server in cui risiede la risorsa.</span><span class="sxs-lookup"><span data-stu-id="af454-104">A proxy can return a requested resource from its cache or forward the request to the server where the resource resides.</span></span> <span data-ttu-id="af454-105">I proxy possono migliorare le prestazioni della rete riducendo il numero di richieste inviate ai server remoti.</span><span class="sxs-lookup"><span data-stu-id="af454-105">Proxies can improve network performance by reducing the number of requests sent to remote servers.</span></span> <span data-ttu-id="af454-106">I proxy possono essere usati anche per limitare l'accesso alle risorse.</span><span class="sxs-lookup"><span data-stu-id="af454-106">Proxies can also be used to restrict access to resources.</span></span>  
   
-## <a name="adaptive-proxies"></a>Proxy adattivi  
- In .NET Framework i proxy possono essere di due tipi: adattivi e statici. I proxy adattivi regolano le impostazioni quando viene modificata la configurazione di rete. Ad esempio, se un utente avvia una connessione di rete remota sul laptop, un proxy adattivo riconosce questa modifica, individua ed esegue il nuovo script di configurazione e regola le impostazioni in modo appropriato.  
+## <a name="adaptive-proxies"></a><span data-ttu-id="af454-107">Proxy adattivi</span><span class="sxs-lookup"><span data-stu-id="af454-107">Adaptive Proxies</span></span>  
+ <span data-ttu-id="af454-108">In .NET Framework i proxy possono essere di due tipi: adattivi e statici.</span><span class="sxs-lookup"><span data-stu-id="af454-108">In the .NET Framework, proxies come in two varieties: adaptive and static.</span></span> <span data-ttu-id="af454-109">I proxy adattivi regolano le impostazioni quando viene modificata la configurazione di rete.</span><span class="sxs-lookup"><span data-stu-id="af454-109">Adaptive proxies adjust their settings when the network configuration changes.</span></span> <span data-ttu-id="af454-110">Ad esempio, se un utente avvia una connessione di rete remota sul laptop, un proxy adattivo riconosce questa modifica, individua ed esegue il nuovo script di configurazione e regola le impostazioni in modo appropriato.</span><span class="sxs-lookup"><span data-stu-id="af454-110">For example, if a laptop user starts a dialup network connection, an adaptive proxy would recognize this change, discover and run its new configuration script, and adjust its settings appropriately.</span></span>  
   
- I proxy adattivi vengono configurati con uno script di configurazione (vedere [Rilevamento automatico proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)). Lo script genera un set di protocolli di applicazioni e un proxy per ogni protocollo.  
+ <span data-ttu-id="af454-111">I proxy adattivi vengono configurati con uno script di configurazione (vedere [Rilevamento automatico proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)).</span><span class="sxs-lookup"><span data-stu-id="af454-111">Adaptive proxies are configured by a configuration script (see [Automatic Proxy Detection](../../../docs/framework/network-programming/automatic-proxy-detection.md)).</span></span> <span data-ttu-id="af454-112">Lo script genera un set di protocolli di applicazioni e un proxy per ogni protocollo.</span><span class="sxs-lookup"><span data-stu-id="af454-112">The script generates a set of application protocols and a proxy for each protocol.</span></span>  
   
- Diverse opzioni controllano come viene eseguito lo script di configurazione. È possibile specificare:  
+ <span data-ttu-id="af454-113">Diverse opzioni controllano come viene eseguito lo script di configurazione.</span><span class="sxs-lookup"><span data-stu-id="af454-113">Several options control how the configuration script is run.</span></span> <span data-ttu-id="af454-114">È possibile specificare:</span><span class="sxs-lookup"><span data-stu-id="af454-114">You can specify the following:</span></span>  
   
--   Frequenza di download e di esecuzione dello script di configurazione.  
+-   <span data-ttu-id="af454-115">Frequenza di download e di esecuzione dello script di configurazione.</span><span class="sxs-lookup"><span data-stu-id="af454-115">How often the configuration script is downloaded and run.</span></span>  
   
--   Tempo di attesa del download dello script.  
+-   <span data-ttu-id="af454-116">Tempo di attesa del download dello script.</span><span class="sxs-lookup"><span data-stu-id="af454-116">How long to wait for the script to download.</span></span>  
   
--   Credenziali usate dal sistema per accedere al proxy.  
+-   <span data-ttu-id="af454-117">Credenziali usate dal sistema per accedere al proxy.</span><span class="sxs-lookup"><span data-stu-id="af454-117">Which credentials your system should use to access the proxy.</span></span>  
   
--   Credenziali usate dal sistema per il download dello script di configurazione.  
+-   <span data-ttu-id="af454-118">Credenziali usate dal sistema per il download dello script di configurazione.</span><span class="sxs-lookup"><span data-stu-id="af454-118">Which credentials your system should use to download the configuration script.</span></span>  
   
- Le modifiche nell'ambiente di rete possono richiedere che il sistema usi un nuovo set di proxy. Se una connessione di rete non funziona o viene inizializzata una nuova connessione di rete, il sistema deve individuare l'origine appropriata dello script di configurazione nel nuovo ambiente ed eseguire il nuovo script.  
+ <span data-ttu-id="af454-119">Le modifiche nell'ambiente di rete possono richiedere che il sistema usi un nuovo set di proxy.</span><span class="sxs-lookup"><span data-stu-id="af454-119">Changes in the network environment may require that the system use a new set of proxies.</span></span> <span data-ttu-id="af454-120">Se una connessione di rete non funziona o viene inizializzata una nuova connessione di rete, il sistema deve individuare l'origine appropriata dello script di configurazione nel nuovo ambiente ed eseguire il nuovo script.</span><span class="sxs-lookup"><span data-stu-id="af454-120">If a network connection goes down or a new network connection is initialized, the system must discover the appropriate source of the configuration script in the new environment and run the new script.</span></span>  
   
- La tabella seguente mostra le opzioni di configurazione per un proxy adattivo.  
+ <span data-ttu-id="af454-121">La tabella seguente mostra le opzioni di configurazione per un proxy adattivo.</span><span class="sxs-lookup"><span data-stu-id="af454-121">The following table shows configuration options for an adaptive proxy.</span></span>  
   
-|Impostazione di attributo, proprietà o file di configurazione|Descrizione|  
+|<span data-ttu-id="af454-122">Impostazione di attributo, proprietà o file di configurazione</span><span class="sxs-lookup"><span data-stu-id="af454-122">Attribute, property, or configuration file setting</span></span>|<span data-ttu-id="af454-123">Descrizione</span><span class="sxs-lookup"><span data-stu-id="af454-123">Description</span></span>|  
 |--------------------------------------------------------|-----------------|  
-|`scriptDownloadInterval`|Tempo trascorso in secondi tra i download dello script.|  
-|`scriptDownloadTimeout`|Tempo di attesa (in secondi) per il download dello script.|  
-|`useDefaultCredentials` o <xref:System.Net.WebProxy.UseDefaultCredentials>|Controlla se il sistema usa le credenziali di rete predefinite per l'accesso a un proxy.|  
-|`useDefaultCredentialForScriptDownload`|Controlla se il sistema usa le credenziali di rete predefinite per il download dello script di configurazione.|  
-|`usesystemdefaults`|Controlla se le impostazioni del proxy statico (indirizzo proxy, elenco di esclusione e opzione che specifica se ignorare il proxy per indirizzi locali) devono essere lette dalle impostazioni del proxy di Internet Explorer per l'utente. Se questo valore è impostato su "true", verranno usate le impostazioni del proxy statico di Internet Explorer.<br /><br /> Se questo valore è "false" o non impostato, le impostazioni del proxy statico possono essere specificate nella configurazione e sostituiranno le impostazioni del proxy di Internet Explorer. Questo valore deve essere impostato su "false" o non deve essere impostato anche per abilitare i proxy adattivi.|  
+|`scriptDownloadInterval`|<span data-ttu-id="af454-124">Tempo trascorso in secondi tra i download dello script.</span><span class="sxs-lookup"><span data-stu-id="af454-124">Elapsed time in seconds between script downloads.</span></span>|  
+|`scriptDownloadTimeout`|<span data-ttu-id="af454-125">Tempo di attesa (in secondi) per il download dello script.</span><span class="sxs-lookup"><span data-stu-id="af454-125">Time to wait (in seconds) for the script to download.</span></span>|  
+|<span data-ttu-id="af454-126">`useDefaultCredentials` o <xref:System.Net.WebProxy.UseDefaultCredentials></span><span class="sxs-lookup"><span data-stu-id="af454-126">`useDefaultCredentials` or <xref:System.Net.WebProxy.UseDefaultCredentials></span></span>|<span data-ttu-id="af454-127">Controlla se il sistema usa le credenziali di rete predefinite per l'accesso a un proxy.</span><span class="sxs-lookup"><span data-stu-id="af454-127">Controls whether the system uses the default network credentials to access a proxy.</span></span>|  
+|`useDefaultCredentialForScriptDownload`|<span data-ttu-id="af454-128">Controlla se il sistema usa le credenziali di rete predefinite per il download dello script di configurazione.</span><span class="sxs-lookup"><span data-stu-id="af454-128">Controls whether the system uses the default network credentials to download the configuration script.</span></span>|  
+|`usesystemdefaults`|<span data-ttu-id="af454-129">Controlla se le impostazioni del proxy statico (indirizzo proxy, elenco di esclusione e opzione che specifica se ignorare il proxy per indirizzi locali) devono essere lette dalle impostazioni del proxy di Internet Explorer per l'utente.</span><span class="sxs-lookup"><span data-stu-id="af454-129">Controls whether the static proxy settings (proxy address, bypass list, and bypass on local) should be read from the Internet Explorer proxy settings for the user.</span></span> <span data-ttu-id="af454-130">Se questo valore è impostato su "true", verranno usate le impostazioni del proxy statico di Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="af454-130">If this value is set to "true", then the static proxy settings from Internet Explorer will be used.</span></span><br /><br /> <span data-ttu-id="af454-131">Se questo valore è "false" o non impostato, le impostazioni del proxy statico possono essere specificate nella configurazione e sostituiranno le impostazioni del proxy di Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="af454-131">If this value is "false" or not set, then the static proxy settings can be specified in the configuration and will override the Internet Explorer proxy settings.</span></span> <span data-ttu-id="af454-132">Questo valore deve essere impostato su "false" o non deve essere impostato anche per abilitare i proxy adattivi.</span><span class="sxs-lookup"><span data-stu-id="af454-132">This value must also be set to "false" or not set for adaptive proxies to be enabled.</span></span>|  
   
- L'esempio seguente mostra una configurazione tipica di un proxy adattivo.  
+ <span data-ttu-id="af454-133">L'esempio seguente mostra una configurazione tipica di un proxy adattivo.</span><span class="sxs-lookup"><span data-stu-id="af454-133">The following example shows a typical adaptive proxy configuration.</span></span>  
   
 ```xml  
 <system.net>  
@@ -77,27 +71,27 @@ Un server proxy gestisce le richieste di risorse del client. Un proxy può resti
 </system.net>  
 ```  
   
-## <a name="static-proxies"></a>Proxy statici  
- I proxy statici in genere vengono configurati in modo esplicito da un'applicazione o quando un file di configurazione viene richiamato da un'applicazione o dal sistema. I proxy statici sono utili nelle reti in cui la topologia cambia raramente, ad esempio un computer desktop connesso a una rete aziendale.  
+## <a name="static-proxies"></a><span data-ttu-id="af454-134">Proxy statici</span><span class="sxs-lookup"><span data-stu-id="af454-134">Static Proxies</span></span>  
+ <span data-ttu-id="af454-135">I proxy statici in genere vengono configurati in modo esplicito da un'applicazione o quando un file di configurazione viene richiamato da un'applicazione o dal sistema.</span><span class="sxs-lookup"><span data-stu-id="af454-135">Static proxies are usually configured explicitly by an application, or when a configuration file is invoked by an application or the system.</span></span> <span data-ttu-id="af454-136">I proxy statici sono utili nelle reti in cui la topologia cambia raramente, ad esempio un computer desktop connesso a una rete aziendale.</span><span class="sxs-lookup"><span data-stu-id="af454-136">Static proxies are useful in networks in which the topology changes infrequently, such as a desktop computer connected to a corporate network.</span></span>  
   
- Diverse opzioni controllano il funzionamento di un proxy statico. È possibile specificare:  
+ <span data-ttu-id="af454-137">Diverse opzioni controllano il funzionamento di un proxy statico.</span><span class="sxs-lookup"><span data-stu-id="af454-137">Several options control how a static proxy operates.</span></span> <span data-ttu-id="af454-138">È possibile specificare:</span><span class="sxs-lookup"><span data-stu-id="af454-138">You can specify the following:</span></span>  
   
--   Indirizzo del proxy.  
+-   <span data-ttu-id="af454-139">Indirizzo del proxy.</span><span class="sxs-lookup"><span data-stu-id="af454-139">The address of the proxy.</span></span>  
   
--   Valore che controlla se il proxy deve essere ignorato per gli indirizzi locali.  
+-   <span data-ttu-id="af454-140">Valore che controlla se il proxy deve essere ignorato per gli indirizzi locali.</span><span class="sxs-lookup"><span data-stu-id="af454-140">Whether the proxy should be bypassed for local addresses.</span></span>  
   
--   Valore che controlla se il proxy deve essere ignorato per un set di indirizzi.  
+-   <span data-ttu-id="af454-141">Valore che controlla se il proxy deve essere ignorato per un set di indirizzi.</span><span class="sxs-lookup"><span data-stu-id="af454-141">Whether the proxy should be bypassed for a set of addresses.</span></span>  
   
- La tabella seguente mostra le opzioni di configurazione di un proxy statico.  
+ <span data-ttu-id="af454-142">La tabella seguente mostra le opzioni di configurazione di un proxy statico.</span><span class="sxs-lookup"><span data-stu-id="af454-142">The following table shows the configuration options for a static proxy.</span></span>  
   
-|Impostazione di attributo, proprietà o file di configurazione|Descrizione|  
+|<span data-ttu-id="af454-143">Impostazione di attributo, proprietà o file di configurazione</span><span class="sxs-lookup"><span data-stu-id="af454-143">Attribute, property, or configuration file setting</span></span>|<span data-ttu-id="af454-144">Descrizione</span><span class="sxs-lookup"><span data-stu-id="af454-144">Description</span></span>|  
 |--------------------------------------------------------|-----------------|  
-|`proxyaddress` o <xref:System.Net.WebProxy.Address>|Indirizzo del proxy da usare.|  
-|`bypassonlocal` o <xref:System.Net.WebProxy.BypassProxyOnLocal>|Valore che controlla se il proxy viene ignorato per gli indirizzi locali.|  
-|`bypasslist` o <xref:System.Net.WebProxy.BypassArrayList>|Descrive con espressioni regolari un set di indirizzi che ignorano il proxy.|  
-|`usesystemdefaults`|Controlla se le impostazioni del proxy statico (indirizzo proxy, elenco di esclusione e opzione che specifica se ignorare il proxy per indirizzi locali) devono essere lette dalle impostazioni del proxy di Internet Explorer per l'utente. Se questo valore è impostato su "true", verranno usate le impostazioni del proxy statico di Internet Explorer. In .NET Framework 2.0 quando questo valore è impostato su "true", le impostazioni del proxy di Internet Explorer non vengono sostituite dalle altre impostazioni del proxy specificate nel file di configurazione. In .NET Framework 1.1 le impostazioni del proxy di Internet Explorer possono essere sostituite dalle altre impostazioni del proxy specificate nel file di configurazione.<br /><br /> Se questo valore è "false" o non impostato, le impostazioni del proxy statico possono essere specificate nella configurazione e sostituiranno le impostazioni del proxy di Internet Explorer. Questo valore deve essere impostato su "false" o non deve essere impostato anche per abilitare i proxy adattivi.|  
+|<span data-ttu-id="af454-145">`proxyaddress` o <xref:System.Net.WebProxy.Address></span><span class="sxs-lookup"><span data-stu-id="af454-145">`proxyaddress` or <xref:System.Net.WebProxy.Address></span></span>|<span data-ttu-id="af454-146">Indirizzo del proxy da usare.</span><span class="sxs-lookup"><span data-stu-id="af454-146">The address of the proxy to use.</span></span>|  
+|<span data-ttu-id="af454-147">`bypassonlocal` o <xref:System.Net.WebProxy.BypassProxyOnLocal></span><span class="sxs-lookup"><span data-stu-id="af454-147">`bypassonlocal` or <xref:System.Net.WebProxy.BypassProxyOnLocal></span></span>|<span data-ttu-id="af454-148">Valore che controlla se il proxy viene ignorato per gli indirizzi locali.</span><span class="sxs-lookup"><span data-stu-id="af454-148">Controls whether the proxy is bypassed for local addresses.</span></span>|  
+|<span data-ttu-id="af454-149">`bypasslist` o <xref:System.Net.WebProxy.BypassArrayList></span><span class="sxs-lookup"><span data-stu-id="af454-149">`bypasslist` or <xref:System.Net.WebProxy.BypassArrayList></span></span>|<span data-ttu-id="af454-150">Descrive con espressioni regolari un set di indirizzi che ignorano il proxy.</span><span class="sxs-lookup"><span data-stu-id="af454-150">Describes, with regular expressions, a set of addresses that bypass the proxy.</span></span>|  
+|`usesystemdefaults`|<span data-ttu-id="af454-151">Controlla se le impostazioni del proxy statico (indirizzo proxy, elenco di esclusione e opzione che specifica se ignorare il proxy per indirizzi locali) devono essere lette dalle impostazioni del proxy di Internet Explorer per l'utente.</span><span class="sxs-lookup"><span data-stu-id="af454-151">Controls whether the static proxy settings (proxy address, bypass list, and bypass on local) should be read from the Internet Explorer proxy settings for the user.</span></span> <span data-ttu-id="af454-152">Se questo valore è impostato su "true", verranno usate le impostazioni del proxy statico di Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="af454-152">If this value is set to "true", then the static proxy settings from Internet Explorer will be used.</span></span> <span data-ttu-id="af454-153">In .NET Framework 2.0 quando questo valore è impostato su "true", le impostazioni del proxy di Internet Explorer non vengono sostituite dalle altre impostazioni del proxy specificate nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="af454-153">On .NET Framework 2.0 when this value is set to "true", the Internet Explorer proxy settings are not overridden by other proxy settings in the configuration file.</span></span> <span data-ttu-id="af454-154">In .NET Framework 1.1 le impostazioni del proxy di Internet Explorer possono essere sostituite dalle altre impostazioni del proxy specificate nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="af454-154">On .NET Framework 1.1, the Internet Explorer proxy settings can be overridden by other proxy settings in the configuration file.</span></span><br /><br /> <span data-ttu-id="af454-155">Se questo valore è "false" o non impostato, le impostazioni del proxy statico possono essere specificate nella configurazione e sostituiranno le impostazioni del proxy di Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="af454-155">If this value is "false" or not set, then the static proxy settings can be specified in the configuration and will override the Internet Explorer proxy settings.</span></span> <span data-ttu-id="af454-156">Questo valore deve essere impostato su "false" o non deve essere impostato anche per abilitare i proxy adattivi.</span><span class="sxs-lookup"><span data-stu-id="af454-156">This value must also be set to "false" or not set for adaptive proxies to be enabled.</span></span>|  
   
- L'esempio seguente illustra una configurazione tipica di un proxy statico.  
+ <span data-ttu-id="af454-157">L'esempio seguente illustra una configurazione tipica di un proxy statico.</span><span class="sxs-lookup"><span data-stu-id="af454-157">The following example shows a typical static proxy configuration.</span></span>  
   
 ```xml  
 <system.net>  
@@ -112,8 +106,7 @@ Un server proxy gestisce le richieste di risorse del client. Un proxy può resti
 </system.net>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Net.WebProxy>   
- <xref:System.Net.GlobalProxySelection>   
- [Rilevamento automatico proxy](../../../docs/framework/network-programming/automatic-proxy-detection.md)
-
+## <a name="see-also"></a><span data-ttu-id="af454-158">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="af454-158">See Also</span></span>  
+ <xref:System.Net.WebProxy>  
+ <xref:System.Net.GlobalProxySelection>  
+ [<span data-ttu-id="af454-159">Rilevamento automatico proxy</span><span class="sxs-lookup"><span data-stu-id="af454-159">Automatic Proxy Detection</span></span>](../../../docs/framework/network-programming/automatic-proxy-detection.md)

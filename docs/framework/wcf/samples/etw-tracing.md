@@ -1,33 +1,35 @@
 ---
-title: "Traccia ETW | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Traccia ETW
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-caps.latest.revision: 42
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 42
+caps.latest.revision: "42"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d45852a8e03ac63ea6412e6f5b176f06fe83eb03
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Traccia ETW
-In questo esempio viene illustrato come implementare la traccia End\-to\-End \(E2E\) utilizzando il sistema Event Tracing for Windows \(ETW\) e il `ETWTraceListener` fornito in questo esempio.L'esempio si basa su [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md) e comprende la traccia ETW.  
+# <a name="etw-tracing"></a><span data-ttu-id="f1cb7-102">Traccia ETW</span><span class="sxs-lookup"><span data-stu-id="f1cb7-102">ETW Tracing</span></span>
+<span data-ttu-id="f1cb7-103">In questo esempio viene illustrato come implementare la traccia End-to-End (E2E) utilizzando il sistema Event Tracing for Windows (ETW) e il `ETWTraceListener` fornito in questo esempio.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-103">This sample demonstrates how to implement End-to-End (E2E) tracing using Event Tracing for Windows (ETW) and the `ETWTraceListener` that is provided with this sample.</span></span> <span data-ttu-id="f1cb7-104">L'esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md) e include funzionalità di traccia ETW.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and includes ETW tracing.</span></span>  
   
 > [!NOTE]
->  La procedura di configurazione e le istruzioni di compilazione per questo esempio si trovano alla fine dell'argomento.  
+>  <span data-ttu-id="f1cb7-105">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-105">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- In questo esempio si presuppone l'utente abbia familiarità con [Traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
+ <span data-ttu-id="f1cb7-106">Questo esempio si presuppone che si ha familiarità con [traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).</span><span class="sxs-lookup"><span data-stu-id="f1cb7-106">This sample assumes that you are familiar with [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).</span></span>  
   
- Ogni origine di traccia nel modello di traccia <xref:System.Diagnostics> può essere dotata di più listener di traccia che determinano dove e come tracciare i dati.Il tipo di listener definisce il formato della registrazione dei dati di traccia.Nell'esempio di codice seguente viene illustrato come aggiungere il listener alla configurazione.  
+ <span data-ttu-id="f1cb7-107">Ogni origine di traccia nel modello di traccia <xref:System.Diagnostics> può essere dotata di più listener di traccia che determinano dove e come tracciare i dati.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-107">Each trace source in the <xref:System.Diagnostics> tracing model can have multiple trace listeners that determine where and how the data is traced.</span></span> <span data-ttu-id="f1cb7-108">Il tipo di listener definisce il formato della registrazione dei dati di traccia.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-108">The type of listener defines the format in which trace data is logged.</span></span> <span data-ttu-id="f1cb7-109">Nell'esempio di codice seguente viene illustrato come aggiungere il listener alla configurazione.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-109">The following code sample shows how to add the listener to configuration.</span></span>  
   
-```  
-  
+```xml  
 <system.diagnostics>  
     <sources>  
         <source name="System.ServiceModel"   
@@ -53,68 +55,66 @@ In questo esempio viene illustrato come implementare la traccia End\-to\-End \(E
        </add>  
     </sharedListeners>  
 </system.diagnostics>  
-  
 ```  
   
- Prima di utilizzare questo listener, è necessario avviare una sessione di traccia ETW.Questa sessione può essere avviata utilizzando Logman.exe o Tracelog.exe.Questo esempio comprende un file SetupETW.bat che può essere utilizzato per configurare la sessione di traccia ETW e un file CleanupETW.bat che può essere utilizzato per chiudere la sessione e completare il file di log.  
+ <span data-ttu-id="f1cb7-110">Prima di utilizzare questo listener, è necessario avviare una sessione di traccia ETW.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-110">Before using this listener, an ETW Trace Session must be started.</span></span> <span data-ttu-id="f1cb7-111">Questa sessione può essere avviata utilizzando Logman.exe o Tracelog.exe.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-111">This session can be started by using Logman.exe or Tracelog.exe.</span></span> <span data-ttu-id="f1cb7-112">Questo esempio comprende un file SetupETW.bat che può essere utilizzato per configurare la sessione di traccia ETW e un file CleanupETW.bat che può essere utilizzato per chiudere la sessione e completare il file di log.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-112">A SetupETW.bat file is included with this sample so that you can set up the ETW Trace Session along with a CleanupETW.bat file for closing the session and completing the log file.</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.Per ulteriori informazioni su questi strumenti, vedere [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=56580](http://go.microsoft.com/fwlink/?LinkId=56580)  
+>  <span data-ttu-id="f1cb7-113">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-113">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span> <span data-ttu-id="f1cb7-114">Per ulteriori informazioni su questi strumenti, vedere [http://go.microsoft.com/fwlink/?LinkId=56580](http://go.microsoft.com/fwlink/?LinkId=56580)</span><span class="sxs-lookup"><span data-stu-id="f1cb7-114">For more information about these tools, see [http://go.microsoft.com/fwlink/?LinkId=56580](http://go.microsoft.com/fwlink/?LinkId=56580)</span></span>  
   
- Quando si utilizza ETWTraceListener, le tracce vengono registrate in file .etl binari.Se la traccia ServiceModel è attivata, tutte le tracce generate vengono visualizzate nello stesso file.Utilizzare [Strumento Visualizzatore di tracce dei servizi \(SvcTraceViewer.exe\)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) per visualizzare i file di log .etl e .svclog.Il visualizzatore crea una visualizzazione end\-to\-end del sistema che rende possibile tracciare un messaggio dall'origine alla destinazione e al punto di utilizzo.  
+ <span data-ttu-id="f1cb7-115">Quando si utilizza ETWTraceListener, le tracce vengono registrate in file .etl binari.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-115">When using the ETWTraceListener, traces are logged in binary .etl files.</span></span> <span data-ttu-id="f1cb7-116">Se la traccia ServiceModel è attivata, tutte le tracce generate vengono visualizzate nello stesso file.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-116">With ServiceModel tracing turned on, all generated traces appear in the same file.</span></span> <span data-ttu-id="f1cb7-117">Utilizzare [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) per la visualizzazione dei file di registro ETL e. svclog.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-117">Use [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) for viewing .etl and .svclog log files.</span></span> <span data-ttu-id="f1cb7-118">Il visualizzatore crea una visualizzazione end-to-end del sistema che rende possibile tracciare un messaggio dall'origine alla destinazione e al punto di utilizzo.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-118">The viewer creates an end-to-end view of the system that makes it possible to trace a message from its source to its destination and point of consumption.</span></span>  
   
- Il listener di traccia ETW supporta i log circolari.Per attivare questa funzionalità, selezionare **Start**, **Esegui** e immettere `cmd` per avviare una console dei comandi.Nel comando seguente, sostituire il parametro `<logfilename>` con il nome del file di log.  
+ <span data-ttu-id="f1cb7-119">Il listener di traccia ETW supporta i log circolari.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-119">The ETW Trace Listener supports circular logging.</span></span> <span data-ttu-id="f1cb7-120">Per abilitare questa funzionalità, passare a **avviare**, **eseguire** e tipo `cmd` per avviare una console dei comandi.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-120">To enable this feature, go to **Start**, **Run** and type `cmd` to start a command console.</span></span> <span data-ttu-id="f1cb7-121">Nel comando seguente, sostituire il parametro `<logfilename>` con il nome del file di log.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-121">In the following command, replace the `<logfilename>` parameter with the name of your log file.</span></span>  
   
 ```  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
 ```  
   
- Le opzioni `-f` e `-max` sono facoltative.Specificano rispettivamente il formato circolare binario e la dimensione massima del log di 1000 MB.L'opzione `-p` viene utilizzata per specificare il provider di traccia.Nell'esempio `"{411a0819-c24b-428c-83e2-26b41091702e}"` è il GUID per un l'esempio di provider ETW XML.  
+ <span data-ttu-id="f1cb7-122">Le opzioni `-f` e `-max` sono facoltative.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-122">The `-f` and `-max` switches are optional.</span></span> <span data-ttu-id="f1cb7-123">Specificano rispettivamente il formato circolare binario e la dimensione massima del log di 1000 MB.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-123">They specify the binary circular format and max log size of 1000MB respectively.</span></span> <span data-ttu-id="f1cb7-124">L'opzione `-p` viene utilizzata per specificare il provider di traccia.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-124">The `-p` switch is used to specify the trace provider.</span></span> <span data-ttu-id="f1cb7-125">Nell'esempio `"{411a0819-c24b-428c-83e2-26b41091702e}"` è il GUID per un l'esempio di provider ETW XML.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-125">In our example, `"{411a0819-c24b-428c-83e2-26b41091702e}"` is the GUID for "XML ETW Sample Provider".</span></span>  
   
- Per avviare la sessione, digitare il comando seguente:  
+ <span data-ttu-id="f1cb7-126">Per avviare la sessione, digitare il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="f1cb7-126">To start the session, type in the following command.</span></span>  
   
 ```  
 Logman start Wcf  
-  
 ```  
   
- Dopo l'accesso, sarà possibile interrompere la sessione con il comando seguente:  
+ <span data-ttu-id="f1cb7-127">Una volta completato il log, è possibile interrompere la sessione con il comando seguente.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-127">After you have finished logging, you can stop the session with the following command.</span></span>  
   
 ```  
 Logman stop Wcf  
 ```  
   
- Questo processo genera log circolari binari da elaborare con uno strumento a scelta, tra cui [Strumento Visualizzatore di tracce dei servizi \(SvcTraceViewer.exe\)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) o Tracerpt.  
+ <span data-ttu-id="f1cb7-128">Questo processo genera log circolare binario che è possibile elaborare con lo strumento di scelta, tra cui [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) o Tracerpt.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-128">This process generates binary circular logs that you can process with your tool of choice, including [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) or Tracerpt.</span></span>  
   
- È inoltre possibile analizzare l'esempio [Analisi circolare](../../../../docs/framework/wcf/samples/circular-tracing.md) per ulteriori informazioni su un listener alternativo da utilizzare per creare un log circolare.  
+ <span data-ttu-id="f1cb7-129">È inoltre possibile rivedere il [traccia circolare](../../../../docs/framework/wcf/samples/circular-tracing.md) sample per ulteriori informazioni su un listener del alternativi per eseguire la registrazione circolare.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-129">You can also review the [Circular Tracing](../../../../docs/framework/wcf/samples/circular-tracing.md) sample for more information on an alternative listener to perform circular logging.</span></span>  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="f1cb7-130">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="f1cb7-130">To set up, build, and run the sample</span></span>  
   
-1.  Verificare di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="f1cb7-131">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f1cb7-131">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Per compilare la soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="f1cb7-132">Per compilare la soluzione, seguire le istruzioni in [compilazione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f1cb7-132">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
     > [!NOTE]
-    >  Per utilizzare i comandi RegisterProvider.bat, SetupETW.bat e CleanupETW.bat comandi, è necessario aver eseguito l'accesso con un account Administrator locale.Se si utilizza [!INCLUDE[wv](../../../../includes/wv-md.md)] o versione successiva, sarà inoltre necessario eseguire il prompt dei comandi con privilegi elevati.A tale scopo, fare clic con il pulsante destro del mouse sull'icona del prompt dei comandi, quindi scegliere **Esegui come amministratore**.  
+    >  <span data-ttu-id="f1cb7-133">Per utilizzare i comandi RegisterProvider.bat, SetupETW.bat e CleanupETW.bat comandi, è necessario aver eseguito l'accesso con un account Administrator locale.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-133">To use the RegisterProvider.bat, SetupETW.bat and CleanupETW.bat commands, you must run under a local administrator account.</span></span> <span data-ttu-id="f1cb7-134">Se si utilizza [!INCLUDE[wv](../../../../includes/wv-md.md)] o versione successiva, sarà inoltre necessario eseguire il prompt dei comandi con privilegi elevati.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-134">If you are using [!INCLUDE[wv](../../../../includes/wv-md.md)] or later, you must also run the command prompt with elevated privileges.</span></span> <span data-ttu-id="f1cb7-135">A tale scopo, fare doppio clic sull'icona del prompt, quindi fare clic su **Esegui come amministratore**.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-135">To do so, right-click the command prompt icon, then click **Run as administrator**.</span></span>  
   
-3.  Prima di eseguire l'esempio, eseguire RegisterProvider.bat nel client e nel server.In questo modo viene configurato il file ETWTracingSampleLog.etl risultante per generare tracce che possono essere lette da Service Trace Viewer.Questo file si trova nella cartella C:\\log.Se questa cartella non esiste, deve essere creata o non verranno generate tracce.Eseguire quindi SetupETW.bat sui computer client e server per avviare la sessione di traccia ETW.Il file SetupETW.bat si trova nella cartella CS\\Client.  
+3.  <span data-ttu-id="f1cb7-136">Prima di eseguire l'esempio, eseguire RegisterProvider.bat nel client e nel server.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-136">Before running the sample, run RegisterProvider.bat on the client and server.</span></span> <span data-ttu-id="f1cb7-137">In questo modo viene configurato il file ETWTracingSampleLog.etl risultante per generare tracce che possono essere lette da Service Trace Viewer.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-137">This sets up the resulting ETWTracingSampleLog.etl file to generate traces that can be read by the Service Trace Viewer.</span></span> <span data-ttu-id="f1cb7-138">Questo file si trova nella cartella C:\log.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-138">This file can be found in the C:\logs folder.</span></span> <span data-ttu-id="f1cb7-139">Se questa cartella non esiste, deve essere creata o non verranno generate tracce.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-139">If this folder does not exist, it must be created or no traces are generated.</span></span> <span data-ttu-id="f1cb7-140">Eseguire quindi SetupETW.bat sui computer client e server per avviare la sessione di traccia ETW.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-140">Then, run SetupETW.bat on the client and server computers to begin the ETW Trace Session.</span></span> <span data-ttu-id="f1cb7-141">Il file SetupETW.bat si trova nella cartella CS\Client.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-141">The SetupETW.bat file can be found under the CS\Client folder.</span></span>  
   
-4.  Per eseguire l'esempio in un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="f1cb7-142">Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="f1cb7-142">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-5.  Una volta completato l'esempio, eseguire CleanupETW.bat per completare la creazione del file ETWTracingSampleLog.etl.  
+5.  <span data-ttu-id="f1cb7-143">Una volta completato l'esempio, eseguire CleanupETW.bat per completare la creazione del file ETWTracingSampleLog.etl.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-143">When the sample is completed, run CleanupETW.bat to complete the creation of the ETWTracingSampleLog.etl file.</span></span>  
   
-6.  Aprire il file ETWTracingSampleLog.etl da Service Trace Viewer.Verrà richiesto di salvare il file binario formattato come un file .svclog.  
+6.  <span data-ttu-id="f1cb7-144">Aprire il file ETWTracingSampleLog.etl da Service Trace Viewer.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-144">Open the ETWTracingSampleLog.etl file from within the Service Trace Viewer.</span></span> <span data-ttu-id="f1cb7-145">Verrà richiesto di salvare il file binario formattato come un file .svclog.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-145">You will be prompted to save the binary formatted file as a .svclog file.</span></span>  
   
-7.  In Service Trace Viewer aprire il file .svclog creato per visualizzare le tracce ETW e ServiceModel.  
+7.  <span data-ttu-id="f1cb7-146">In Service Trace Viewer aprire il file .svclog creato per visualizzare le tracce ETW e ServiceModel.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-146">Open the newly created .svclog file from within the Service Trace Viewer to view the ETW and ServiceModel traces.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="f1cb7-147">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-147">The samples may already be installed on your computer.</span></span> <span data-ttu-id="f1cb7-148">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-148">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="f1cb7-149">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="f1cb7-149">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="f1cb7-150">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="f1cb7-150">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
-## Vedere anche  
- [Monitoraggio](http://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a><span data-ttu-id="f1cb7-151">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f1cb7-151">See Also</span></span>  
+ [<span data-ttu-id="f1cb7-152">Esempi di monitoraggio di AppFabric</span><span class="sxs-lookup"><span data-stu-id="f1cb7-152">AppFabric Monitoring Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193959)

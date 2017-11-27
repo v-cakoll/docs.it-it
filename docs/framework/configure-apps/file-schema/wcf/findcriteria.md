@@ -1,76 +1,79 @@
 ---
-title: "&lt;findCriteria&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;findCriteria&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b428d1a95ec6f1f493c831f66223f52e4723990c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;findCriteria&gt;
-Elemento di configurazione che fornisce un set di criteri usati da un'applicazione client per la ricerca di un servizio di individuazione.  I criteri possono essere raggruppati nei criteri di ricerca \(specificando i servizi da cercare\) e nei criteri di terminazione della ricerca \(durata della ricerca\).  
+# <a name="ltfindcriteriagt"></a><span data-ttu-id="a5092-102">&lt;findCriteria&gt;</span><span class="sxs-lookup"><span data-stu-id="a5092-102">&lt;findCriteria&gt;</span></span>
+<span data-ttu-id="a5092-103">Elemento di configurazione che fornisce un set di criteri usati da un'applicazione client per la ricerca di un servizio di individuazione.</span><span class="sxs-lookup"><span data-stu-id="a5092-103">A configuration element that supplies a set of criteria used by a client application to search for a discovery service.</span></span> <span data-ttu-id="a5092-104">I criteri possono essere raggruppati nei criteri di ricerca (specificando i servizi da cercare) e i criteri di terminazione (quanto tempo deve durare la ricerca).</span><span class="sxs-lookup"><span data-stu-id="a5092-104">Criteria can be grouped into search criteria (specifying what services you’re looking for) and find termination criteria (how long the search should last).</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="a5092-105">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="a5092-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="a5092-106">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="a5092-106">\<standardEndpoints></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="a5092-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a5092-107">Syntax</span></span>  
   
+```xml  
 <system.serviceModel>  
-    <standardEndpoints>  
-       <dynamicEndpoint>   
-          <standardEndpoint>  
-             <discoveryClientSettings discoveryEndpoint=”String” >  
-               <findCriteria duration=”TimeSpan”  
-                  maxResults=”Integer”   
-                  scopeMatchBy=”Uri” >  
-                  <contractTypeNames>  
-                     <add name="String" namespace="String" />  
-                  <contractTypeNames>  
-                  <extensions />  
-                  <scopes>  
-                    <add scope="URI"/>  
-                  </scopes>  
-               </findCriteria>  
-             </discoveryClientSettings>  
-          <standardEndpoint>  
-       </dynamicEndpoint>          
-    </standardEndpoints>  
+  <standardEndpoints>
+    <dynamicEndpoint>
+      <standardEndpoint>
+        <discoveryClientSettings discoveryEndpoint="String">
+          <findCriteria duration="TimeSpan" maxResults="Integer" scopeMatchBy="Uri">
+            <contractTypeNames>
+              <add name="String" namespace="String" />
+            <contractTypeNames>
+            <extensions />
+            <scopes>
+              <add scope="URI" />
+            </scopes>
+          </findCriteria>
+        </discoveryClientSettings>
+      </standardEndpoint>
+    </dynamicEndpoint>
+  </standardEndpoints>  
 </system.serviceModel>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a5092-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="a5092-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="a5092-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="a5092-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="a5092-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="a5092-110">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="a5092-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="a5092-111">Attribute</span></span>|<span data-ttu-id="a5092-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a5092-112">Description</span></span>|  
 |---------------|-----------------|  
-|duration|Valore Timespan che specifica il tempo massimo di attesa per le risposte dai servizi in una rete.  La durata predefinita è 20 secondi.|  
-|maxResults|Integer che specifica il numero massimo di risposte da attendere dai servizi in una rete o su Internet.  Se il numero massimo di risposte viene ricevuto prima della scadenza del valore specificato nell'attributo `duration`, l'operazione di ricerca termina.|  
-|scopeMatchBy|URI che specifica l'algoritmo di corrispondenza da usare per trovare la corrispondenza tra l'ambito nel messaggio del Probe e quello dell'endpoint.<br /><br /> Sono supportate cinque regole di corrispondenza degli ambiti.  Se non si specifica una regola di corrispondenza degli ambiti, verrà usato `ScopeMatchByPrefix`.  Per altre informazioni in merito, vedere <xref:System.ServiceModel.Discovery.FindCriteria>.|  
+|<span data-ttu-id="a5092-113">duration</span><span class="sxs-lookup"><span data-stu-id="a5092-113">duration</span></span>|<span data-ttu-id="a5092-114">Valore Timespan che specifica il tempo massimo di attesa per le risposte dai servizi in una rete.</span><span class="sxs-lookup"><span data-stu-id="a5092-114">A Timespan value that specifies the maximum time to wait for replies from services on the network.</span></span> <span data-ttu-id="a5092-115">La durata predefinita è 20 secondi.</span><span class="sxs-lookup"><span data-stu-id="a5092-115">The default duration is 20 seconds..</span></span>|  
+|<span data-ttu-id="a5092-116">maxResults</span><span class="sxs-lookup"><span data-stu-id="a5092-116">maxResults</span></span>|<span data-ttu-id="a5092-117">Integer che specifica il numero massimo di risposte da attendere dai servizi in una rete o su Internet.</span><span class="sxs-lookup"><span data-stu-id="a5092-117">An integer that specifies the maximum number of replies to wait for, from services on a network or the Internet.</span></span> <span data-ttu-id="a5092-118">Se il numero massimo di risposte viene ricevuto prima della scadenza del valore specificato nell'attributo `duration`, l'operazione di ricerca termina.</span><span class="sxs-lookup"><span data-stu-id="a5092-118">If maximum replies are received before the value specified in the `duration` attribute has elapsed, the find operation ends.</span></span>|  
+|<span data-ttu-id="a5092-119">scopeMatchBy</span><span class="sxs-lookup"><span data-stu-id="a5092-119">scopeMatchBy</span></span>|<span data-ttu-id="a5092-120">URI che specifica l'algoritmo di corrispondenza da usare per trovare la corrispondenza tra l'ambito nel messaggio del Probe e quello dell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="a5092-120">A URI that specify the matching algorithm to use while matching the scopes in the Probe message with that of the endpoint.</span></span><br /><br /> <span data-ttu-id="a5092-121">Sono supportate cinque regole di corrispondenza degli ambiti.</span><span class="sxs-lookup"><span data-stu-id="a5092-121">There are five supported scope-matching rules.</span></span> <span data-ttu-id="a5092-122">Se non si specifica una regola di corrispondenza degli ambiti, verrà usato `ScopeMatchByPrefix`.</span><span class="sxs-lookup"><span data-stu-id="a5092-122">If you do not specify a scope-matching rule, `ScopeMatchByPrefix` is used.</span></span> <span data-ttu-id="a5092-123">Per altre informazioni in merito, vedere <xref:System.ServiceModel.Discovery.FindCriteria>.</span><span class="sxs-lookup"><span data-stu-id="a5092-123">For more information on this, see <xref:System.ServiceModel.Discovery.FindCriteria>.</span></span>|  
   
-### Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="a5092-124">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="a5092-124">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<contractTypeNames\>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Raccolta di elementi di configurazione contenenti i nomi dei tipi di contratto del servizio flusso di lavoro.|  
-|\<extensions\> di \<findCriteria\>|Raccolta di oggetti di elementi XML che forniscono estensioni.|  
-|[\<scopes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Raccolta di oggetti contenenti URI assoluti usati durante un'operazione di ricerca per l'individuazione di uno o più servizi specifici.<br /><br /> Se il servizio specifico viene trovato, significa che è stata trovata una corrispondenza esatta tra l'URI del servizio e l'URI dell'ambito, talvolta con il supporto di regole di ambito che gestiscono i problemi di corrispondenza.|  
+|<span data-ttu-id="a5092-125">Elemento</span><span class="sxs-lookup"><span data-stu-id="a5092-125">Element</span></span>|<span data-ttu-id="a5092-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a5092-126">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a5092-127">\<contractTypeNames ></span><span class="sxs-lookup"><span data-stu-id="a5092-127">\<contractTypeNames></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|<span data-ttu-id="a5092-128">Raccolta di elementi di configurazione contenenti i nomi dei tipi di contratto del servizio flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="a5092-128">A collection of configuration elements that contain the names of workflow service contract types..</span></span>|  
+|<span data-ttu-id="a5092-129">\<estensioni > di \<findCriteria ></span><span class="sxs-lookup"><span data-stu-id="a5092-129">\<extensions> of \<findCriteria></span></span>|<span data-ttu-id="a5092-130">Raccolta di oggetti di elementi XML che forniscono estensioni.</span><span class="sxs-lookup"><span data-stu-id="a5092-130">A collection of XML element objects that provide extensions.</span></span>|  
+|[<span data-ttu-id="a5092-131">\<gli ambiti ></span><span class="sxs-lookup"><span data-stu-id="a5092-131">\<scopes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|<span data-ttu-id="a5092-132">Raccolta di oggetti contenenti URI assoluti usati durante un'operazione di ricerca per l'individuazione di uno o più servizi specifici.</span><span class="sxs-lookup"><span data-stu-id="a5092-132">A collection of objects that contain absolute URIs that are used during a find operation to locate a specific service or services.</span></span><br /><br /> <span data-ttu-id="a5092-133">Se il servizio specifico viene trovato, significa che è stata trovata una corrispondenza esatta tra l'URI del servizio e l'URI dell'ambito, talvolta con il supporto di regole di ambito che gestiscono i problemi di corrispondenza.</span><span class="sxs-lookup"><span data-stu-id="a5092-133">If the specific service is found, a successful match has been made between the service URI and the Scope URI, sometimes with the help of scope rules that handle complications of matching.</span></span>|  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="a5092-134">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="a5092-134">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<standardEndpoints\>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Contiene le impostazioni necessarie a un'applicazione per partecipare al processo di individuazione del servizio come client.|  
+|<span data-ttu-id="a5092-135">Elemento</span><span class="sxs-lookup"><span data-stu-id="a5092-135">Element</span></span>|<span data-ttu-id="a5092-136">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a5092-136">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a5092-137">\<standardEndpoints ></span><span class="sxs-lookup"><span data-stu-id="a5092-137">\<standardEndpoints></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|<span data-ttu-id="a5092-138">Contiene le impostazioni necessarie a un'applicazione per partecipare al processo di individuazione del servizio come client.</span><span class="sxs-lookup"><span data-stu-id="a5092-138">Contains the settings needed by an application to participate in the service discovery process as a client.</span></span>|  
   
-## Vedere anche  
- <xref:System.ServiceModel.Discovery.FindCriteria>   
+## <a name="see-also"></a><span data-ttu-id="a5092-139">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a5092-139">See Also</span></span>  
+ <xref:System.ServiceModel.Discovery.FindCriteria>  
  <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>

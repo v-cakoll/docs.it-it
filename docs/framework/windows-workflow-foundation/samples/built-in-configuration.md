@@ -1,115 +1,119 @@
 ---
-title: "Configurazione predefinita | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurazione predefinita
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7dc11c19025393ffb1ce8e10cbfa637f38a867fd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Configurazione predefinita
-In questo esempio vengono illustrati l'utilizzo e la configurazione dell'archivio di istanze del flusso di lavoro SQL.L'archivio di istanze del flusso di lavoro SQL è un'implementazione basata su SQL di un archivio di istanze.Consente a un'istanza di salvare e caricare il proprio stato da e verso un database SQL Server o SQL Server Express.  
+# <a name="built-in-configuration"></a><span data-ttu-id="590e8-102">Configurazione predefinita</span><span class="sxs-lookup"><span data-stu-id="590e8-102">Built-in Configuration</span></span>
+<span data-ttu-id="590e8-103">In questo esempio vengono illustrati l'uso e la configurazione dell'archivio di istanze del flusso di lavoro SQL.</span><span class="sxs-lookup"><span data-stu-id="590e8-103">This sample demonstrates the use and configuration of the SQL workflow instance store.</span></span> <span data-ttu-id="590e8-104">L'archivio di istanze del flusso di lavoro SQL è un'implementazione basata su SQL di un archivio di istanze.</span><span class="sxs-lookup"><span data-stu-id="590e8-104">The SQL workflow instance store is a SQL-based implementation of an instance store.</span></span> <span data-ttu-id="590e8-105">Consente a un'istanza di salvare e caricare il proprio stato da e verso un database SQL Server o SQL Server Express.</span><span class="sxs-lookup"><span data-stu-id="590e8-105">It allows an instance to save and load its state to and from a SQL Server or SQL Server Express database.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="590e8-106">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="590e8-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="590e8-107">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="590e8-107">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, visitare la pagina di download per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="590e8-108">Se questa directory non esiste, visitare la pagina di download per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="590e8-108">If this directory does not exist, go to (download page) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="590e8-109">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="590e8-109">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
-## Dettagli dell'esempio  
- Questo esempio è costituito da un flusso di lavoro che implementa un servizio di conteggio.Una volta richiamato il metodo di avvio del servizio, il servizio conta da 0 a 59.Il contatore viene incrementato una volta ogni 2 secondi.Dopo ogni conteggio, il flusso di lavoro viene salvato in modo permanente.  
+## <a name="sample-details"></a><span data-ttu-id="590e8-110">Dettagli dell'esempio</span><span class="sxs-lookup"><span data-stu-id="590e8-110">Sample Details</span></span>  
+ <span data-ttu-id="590e8-111">Questo esempio è costituito da un flusso di lavoro che implementa un servizio di conteggio.</span><span class="sxs-lookup"><span data-stu-id="590e8-111">This sample consists of a workflow that implements a counting service.</span></span> <span data-ttu-id="590e8-112">Una volta richiamato il metodo di avvio del servizio, il servizio conta da 0 a 59.</span><span class="sxs-lookup"><span data-stu-id="590e8-112">Once the service's start method is invoked, the service counts from 0 to 59.</span></span> <span data-ttu-id="590e8-113">Il contatore viene incrementato una volta ogni 2 secondi.</span><span class="sxs-lookup"><span data-stu-id="590e8-113">The counter is incremented once every 2 seconds.</span></span> <span data-ttu-id="590e8-114">Dopo ogni conteggio, il flusso di lavoro viene salvato in modo permanente.</span><span class="sxs-lookup"><span data-stu-id="590e8-114">After each count, the workflow persists.</span></span>  
   
- Il flusso di lavoro del conteggio è indipendente in un host del servizio flusso di lavoro.Il metodo `Main` del programma crea un'istanza dell'host del servizio flusso di lavoro che ospita il flusso di lavoro del conteggioe definisce gli endpoint in cui quest'ultimo può essere raggiunto.Definisce quindi un comportamento dell'archivio di istanze del flusso di lavoro SQL utilizzato per configurare l'archivio di istanze del flusso di lavoro SQL.Successivamente il programma crea un client che chiama il metodo di avvio del flusso di lavoro del conteggio.  
+ <span data-ttu-id="590e8-115">Il flusso di lavoro del conteggio è indipendente in un host del servizio flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="590e8-115">The counting workflow is self-hosted by a workflow service host.</span></span> <span data-ttu-id="590e8-116">Il metodo `Main` del programma crea un'istanza dell'host del servizio flusso di lavoro che ospita il flusso di lavoro del conteggio</span><span class="sxs-lookup"><span data-stu-id="590e8-116">The program's `Main` method creates an instance of the workflow service host that hosts the counting workflow.</span></span> <span data-ttu-id="590e8-117">e definisce gli endpoint in cui quest'ultimo può essere raggiunto.</span><span class="sxs-lookup"><span data-stu-id="590e8-117">It defines the endpoints under which the counting workflow can be reached.</span></span> <span data-ttu-id="590e8-118">Definisce quindi un comportamento dell'archivio di istanze del flusso di lavoro SQL usato per configurare l'archivio di istanze del flusso di lavoro SQL.</span><span class="sxs-lookup"><span data-stu-id="590e8-118">After that, it defines a SQL workflow instance store behavior, which is used to configure the SQL workflow instance store.</span></span> <span data-ttu-id="590e8-119">Successivamente il programma crea un client che chiama il metodo di avvio del flusso di lavoro del conteggio.</span><span class="sxs-lookup"><span data-stu-id="590e8-119">Next, the program creates a client that calls the start method of the counting workflow.</span></span>  
   
- Dopo l'avvio del programma, il contatore avvia automaticamente il conteggio.Notare che potrebbero essere necessari alcuni secondi per caricare l'istanza e configurare l'archivio di istanze del flusso di lavoro SQL.[!INCLUDE[crabout](../../../../includes/crabout-md.md)]ll'archivio di istanze del flusso di lavoro, vedere [Archivio di istanze del flusso di lavoro SQL](../../../../docs/framework/windows-workflow-foundation//sql-workflow-instance-store.md).  
+ <span data-ttu-id="590e8-120">Dopo l'avvio del programma, il contatore avvia automaticamente il conteggio.</span><span class="sxs-lookup"><span data-stu-id="590e8-120">Once the program is started, the counter automatically starts counting.</span></span> <span data-ttu-id="590e8-121">Notare che potrebbero essere necessari alcuni secondi per caricare l'istanza e configurare l'archivio di istanze del flusso di lavoro SQL.</span><span class="sxs-lookup"><span data-stu-id="590e8-121">Note that it might take a few seconds to load the instance and configure the SQL workflow instance store.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="590e8-122">l'archivio di istanze del flusso di lavoro, vedere [archivio di istanze del flusso di lavoro SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span><span class="sxs-lookup"><span data-stu-id="590e8-122"> the workflow instance store, see [SQL Workflow Instance Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).</span></span>  
   
- L'esempio è costituito da due parti:  
+ <span data-ttu-id="590e8-123">L'esempio è costituito da due parti:</span><span class="sxs-lookup"><span data-stu-id="590e8-123">The sample consists of two parts:</span></span>  
   
-1.  InstanceStore1 illustra come viene configurato <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> utilizzando codice C\# \(vedere Program.cs\).  
+1.  <span data-ttu-id="590e8-124">InstanceStore1 illustra come viene configurato <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> usando codice C# (vedere Program.cs).</span><span class="sxs-lookup"><span data-stu-id="590e8-124">InstanceStore1 shows how <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> is configured using C# code (see Program.cs).</span></span>  
   
-2.  InstanceStore2 illustra come viene configurato <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> utilizzando codice XML \(vedere App.config\).  
+2.  <span data-ttu-id="590e8-125">InstanceStore2 illustra come viene configurato <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> usando codice XML (vedere App.config).</span><span class="sxs-lookup"><span data-stu-id="590e8-125">InstanceStore2 shows how <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> is configured using XML (see App.config).</span></span>  
   
- Per configurare il comportamento dell'archivio di istanze del flusso di lavoro SQL, sono disponibili le impostazioni seguenti:  
+ <span data-ttu-id="590e8-126">Per configurare il comportamento dell'archivio di istanze del flusso di lavoro SQL, sono disponibili le impostazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="590e8-126">The following settings are available to configure the SQL Workflow Instance Store behavior:</span></span>  
   
--   Impostare `HostLockRenewalPeriod`.Questo periodo definisce l'intervallo con il quale l'host rinnova il blocco di proprietà delle istanze che esegue.Le informazioni sul blocco vengono archiviate nell'archivio di istanze.Se la proprietà non viene rinnovata per due degli intervalli definiti in `HostLockRenewalPeriod`, l'istanza viene considerata abbandonata.Se un altro oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost> sta eseguendo lo stesso flusso di lavoro ed è connesso allo stesso archivio di istanze \(sullo stesso computer o uno diverso\), tale istanza viene ripristinata.\(Il ripristino dell'istanza non rientra nell'ambito per questo esempio\).  
+-   <span data-ttu-id="590e8-127">Impostare `HostLockRenewalPeriod`.</span><span class="sxs-lookup"><span data-stu-id="590e8-127">Set the `HostLockRenewalPeriod`.</span></span> <span data-ttu-id="590e8-128">Questo periodo definisce l'intervallo con il quale l'host rinnova il blocco di proprietà delle istanze che esegue.</span><span class="sxs-lookup"><span data-stu-id="590e8-128">This time defines the interval with which the host renews the ownership lock of the instances it runs.</span></span> <span data-ttu-id="590e8-129">Le informazioni sul blocco vengono archiviate nell'archivio di istanze.</span><span class="sxs-lookup"><span data-stu-id="590e8-129">The lock information is stored in the Instance Store.</span></span> <span data-ttu-id="590e8-130">Se la proprietà non viene rinnovata per due degli intervalli definiti in `HostLockRenewalPeriod`, l'istanza viene considerata abbandonata.</span><span class="sxs-lookup"><span data-stu-id="590e8-130">If the ownership is not renewed for two of the intervals defined in `HostLockRenewalPeriod`, the instance is considered abandoned.</span></span> <span data-ttu-id="590e8-131">Se un altro oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost> sta eseguendo lo stesso flusso di lavoro ed è connesso allo stesso archivio di istanze (sullo stesso computer o uno diverso), tale istanza viene recuperata.</span><span class="sxs-lookup"><span data-stu-id="590e8-131">If another <xref:System.ServiceModel.Activities.WorkflowServiceHost> is running the same workflow and connected to the same instance store (either on the same computer or a different computer), it recovers that instance.</span></span> <span data-ttu-id="590e8-132">(Il ripristino dell'istanza non rientra nell'ambito per questo esempio).</span><span class="sxs-lookup"><span data-stu-id="590e8-132">(Instance Recovery is out of scope for this sample.)</span></span>  
   
--   Impostare `RunnableInstancesDetectionPeriod`.Questo periodo definisce l'intervallo nel quale l'host esegue il polling per cercare le istanze diventate eseguibili.Le istanze potrebbero diventare eseguibili se si verifica uno qualsiasi degli eventi seguenti:  
+-   <span data-ttu-id="590e8-133">Impostare `RunnableInstancesDetectionPeriod`.</span><span class="sxs-lookup"><span data-stu-id="590e8-133">Set the `RunnableInstancesDetectionPeriod`.</span></span> <span data-ttu-id="590e8-134">Questo periodo definisce l'intervallo nel quale l'host esegue il polling per cercare le istanze diventate eseguibili.</span><span class="sxs-lookup"><span data-stu-id="590e8-134">This period defines the interval in which the host polls for instances that have become runnable.</span></span> <span data-ttu-id="590e8-135">Le istanze potrebbero diventare eseguibili se si verifica uno qualsiasi degli eventi seguenti:</span><span class="sxs-lookup"><span data-stu-id="590e8-135">Instances may become runnable if any of the following events occur:</span></span>  
   
-    -   Un timer durevole \(<xref:System.Activities.Statements.Delay>\) scade.  
+    -   <span data-ttu-id="590e8-136">Un timer durevole (<xref:System.Activities.Statements.Delay>) scade.</span><span class="sxs-lookup"><span data-stu-id="590e8-136">A Durable Timer (<xref:System.Activities.Statements.Delay>) expires.</span></span>  
   
-    -   Un altro host non riceve il proprio heartbeat `HostLockRenewal` \(ad esempio, a causa di un arresto anomalo del sistema\) e l'istanza viene ripristinata.  
+    -   <span data-ttu-id="590e8-137">Un altro host non riceve il proprio heartbeat `HostLockRenewal` (ad esempio, a causa di un arresto anomalo del computer) e l'istanza viene recuperata.</span><span class="sxs-lookup"><span data-stu-id="590e8-137">Another host misses its `HostLockRenewal` heartbeat (for example, due to a computer crash) and the instance is recovered.</span></span>  
   
--   Impostare `InstanceCompletionAction`.Questa proprietà, se impostata su `DeleteNothing`, mantiene le istanze completate nell'archivio di istanze. Se impostata su `DeleteAll`, le istanze vengono eliminate dall'archivio al completamento.Notare che  
+-   <span data-ttu-id="590e8-138">Impostare `InstanceCompletionAction`.</span><span class="sxs-lookup"><span data-stu-id="590e8-138">Set the `InstanceCompletionAction`.</span></span> <span data-ttu-id="590e8-139">Questa proprietà, se impostata su `DeleteNothing`, mantiene le istanze completate nell'archivio di istanze. Se impostata su `DeleteAll`, le istanze vengono eliminate dall'archivio al completamento.</span><span class="sxs-lookup"><span data-stu-id="590e8-139">This property, if set to `DeleteNothing`, keeps completed instances in the Instance Store; if set to `DeleteAll`, instances are deleted from the store upon completion.</span></span> <span data-ttu-id="590e8-140">Notare che</span><span class="sxs-lookup"><span data-stu-id="590e8-140">Note that</span></span>  
   
     > [!NOTE]
-    >  Se l'host viene terminato premendo INVIO prima che il conteggio sia stato completato, l'istanza del flusso di lavoro non viene completata.  
+    >  <span data-ttu-id="590e8-141">Se l'host viene terminato premendo INVIO prima che il conteggio sia stato completato, l'istanza del flusso di lavoro non viene completata.</span><span class="sxs-lookup"><span data-stu-id="590e8-141">Terminating the host by pressing ENTER before the counting has completed does not complete the workflow instance.</span></span>  
   
--   Impostare `InstanceLockedExceptionAction`.Questa impostazione definisce le operazioni che l'host deve eseguire per caricare un'istanza bloccata da un altro host.Sono disponibili le opzioni seguenti:  
+-   <span data-ttu-id="590e8-142">Impostare `InstanceLockedExceptionAction`.</span><span class="sxs-lookup"><span data-stu-id="590e8-142">Set the `InstanceLockedExceptionAction`.</span></span> <span data-ttu-id="590e8-143">Questa impostazione definisce le operazioni che l'host deve eseguire per caricare un'istanza bloccata da un altro host.</span><span class="sxs-lookup"><span data-stu-id="590e8-143">This setting defines what a host should do if it wants to load an instance that is locked by another host.</span></span> <span data-ttu-id="590e8-144">Sono disponibili le opzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="590e8-144">The following options exist:</span></span>  
   
-    -   Se impostata su `NoRetry`: il caricamento non viene ritentato e viene restituito all'host un oggetto `InstanceLockedException`.  
+    -   <span data-ttu-id="590e8-145">Se impostata su `NoRetry`: il caricamento non viene ritentato e viene restituito all'host un oggetto `InstanceLockedException`.</span><span class="sxs-lookup"><span data-stu-id="590e8-145">If set to `NoRetry`: Do not retry the load and return an `InstanceLockedException` to the host.</span></span>  
   
-    -   Se impostata su `BasicRetry`: i tentativi di caricamento dell'istanza vengono continuati.I tentativi sono pianificati in base a un algoritmo lineare semplice \(ad esempio, ritentare ogni 5 secondi\).  
+    -   <span data-ttu-id="590e8-146">Se impostata su `BasicRetry`: i tentativi di caricamento dell'istanza vengono continuati.</span><span class="sxs-lookup"><span data-stu-id="590e8-146">If set to `BasicRetry`: Keep retrying to load the instance.</span></span> <span data-ttu-id="590e8-147">I tentativi sono pianificati in base a un algoritmo lineare semplice (ad esempio, ritentare ogni 5 secondi).</span><span class="sxs-lookup"><span data-stu-id="590e8-147">The retries are scheduled according to a simple linear algorithm (for example, retry every 5 seconds).</span></span>  
   
-    -   Se impostata su `AggressiveRetry`: i tentativi di caricamento dell'istanza vengono continuati.I tentativi sono pianificati in base a un algoritmo di interruzione temporanea esponenziale aggressivo.  
+    -   <span data-ttu-id="590e8-148">Se impostata su `AggressiveRetry`: i tentativi di caricamento dell'istanza vengono continuati.</span><span class="sxs-lookup"><span data-stu-id="590e8-148">If set to `AggressiveRetry`: Keep retrying to load the instance.</span></span> <span data-ttu-id="590e8-149">I tentativi sono pianificati in base a un algoritmo di interruzione temporanea esponenziale aggressivo.</span><span class="sxs-lookup"><span data-stu-id="590e8-149">The retries are scheduled according to an aggressive exponential back-off algorithm.</span></span>  
   
--   Impostare l'opzione di codifica.Questa impostazione definisce come viene archiviato lo stato dell'istanza nell'archivio di istanze del flusso di lavoro SQL.Sono disponibili le opzioni seguenti:  
+-   <span data-ttu-id="590e8-150">Impostare l'opzione di codifica.</span><span class="sxs-lookup"><span data-stu-id="590e8-150">Set the Encoding option.</span></span> <span data-ttu-id="590e8-151">Questa impostazione definisce come viene archiviato lo stato dell'istanza nell'archivio di istanze del flusso di lavoro SQL.</span><span class="sxs-lookup"><span data-stu-id="590e8-151">This setting defines how the instance state is stored in the SQL Workflow Instance Store.</span></span> <span data-ttu-id="590e8-152">Sono disponibili le opzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="590e8-152">The following options exist:</span></span>  
   
-    -   Lo stato dell'istanza viene compresso utilizzando l'algoritmo di compressione GZip.  
+    -   <span data-ttu-id="590e8-153">Lo stato dell'istanza viene compresso usando l'algoritmo di compressione GZip.</span><span class="sxs-lookup"><span data-stu-id="590e8-153">The instance state is compressed using the GZip compression algorithm.</span></span>  
   
-    -   Lo stato dell'istanza non viene compresso.  
+    -   <span data-ttu-id="590e8-154">Lo stato dell'istanza non viene compresso.</span><span class="sxs-lookup"><span data-stu-id="590e8-154">The instance state is not compressed.</span></span>  
   
-#### Per utilizzare questo esempio  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="590e8-155">Per usare questo esempio</span><span class="sxs-lookup"><span data-stu-id="590e8-155">To use this sample</span></span>  
   
-1.  Aprire il prompt dei comandi di [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] come amministratore, se sono disponibili autorizzazioni.  
+1.  <span data-ttu-id="590e8-156">Aprire il prompt dei comandi di [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] come amministratore, se sono disponibili autorizzazioni.</span><span class="sxs-lookup"><span data-stu-id="590e8-156">Open a [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] command prompt as an Administrator if permissions are available.</span></span>  
   
-2.  Passare alla directory di esempio \(\\WF\\Basic\\Persistence\\BuiltInConfiguration\\CS\) ed eseguire CreateInstanceStore.cmd.  
+2.  <span data-ttu-id="590e8-157">Passare alla directory di esempio (\WF\Basic\Persistence\BuiltInConfiguration\CS) ed eseguire CreateInstanceStore.cmd.</span><span class="sxs-lookup"><span data-stu-id="590e8-157">Navigate to the sample directory (\WF\Basic\Persistence\BuiltInConfiguration\CS) and run CreateInstanceStore.cmd.</span></span>  
   
-3.  Se i privilegi di amministratore non sono disponibili, creare un account di accesso di SQL Server.Andare a `Security`, **Account di accesso**.Fare clic con il pulsante destro del mouse su **Account di accesso** e creare un nuovo accesso.  
+3.  <span data-ttu-id="590e8-158">Se i privilegi di amministratore non sono disponibili, creare un account di accesso di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="590e8-158">If Administrator privileges are not available, Create SQL Server login.</span></span> <span data-ttu-id="590e8-159">Passare a `Security`, **gli account di accesso**.</span><span class="sxs-lookup"><span data-stu-id="590e8-159">Go to `Security`, **Logins**.</span></span> <span data-ttu-id="590e8-160">Fare doppio clic su **gli account di accesso** e creare un nuovo account di accesso.</span><span class="sxs-lookup"><span data-stu-id="590e8-160">Right-click **Logins** and create a new login.</span></span>  
   
-4.  Aggiungere l'utente ACL al ruolo SQL.Aprire **Database**, **InstanceStore**, **Sicurezza**.Fare clic con il pulsante destro del mouse su **Utenti** e scegliere **Nuovi utenti**.Impostare **Nome account di accesso** sull'utente creato nel passaggio precedente.Aggiungere l'utente all'appartenenza ai ruoli del database **System.Activities.DurableInstancing.InstanceStoreUsers** \(e altri\).Notare che l'utente potrebbe essere già presente \(ad esempio, utente dbo\).  
+4.  <span data-ttu-id="590e8-161">Aggiungere l'utente ACL al ruolo SQL.</span><span class="sxs-lookup"><span data-stu-id="590e8-161">Add your ACL user to SQL role.</span></span> <span data-ttu-id="590e8-162">Aprire **database**, **InstanceStore**, **sicurezza**.</span><span class="sxs-lookup"><span data-stu-id="590e8-162">Open **Databases**, **InstanceStore**, **Security**.</span></span> <span data-ttu-id="590e8-163">Fare doppio clic su **utenti** e selezionare **nuovi utenti**.</span><span class="sxs-lookup"><span data-stu-id="590e8-163">Right-click **Users** and select **New users**.</span></span> <span data-ttu-id="590e8-164">Impostare il **nome account di accesso** sull'utente creato nel passaggio precedente.</span><span class="sxs-lookup"><span data-stu-id="590e8-164">Set the **Login name** to the user created in the previous step.</span></span> <span data-ttu-id="590e8-165">Aggiungere l'utente all'appartenenza al ruolo del Database **System.Activities.DurableInstancing.InstanceStoreUsers** (e altri).</span><span class="sxs-lookup"><span data-stu-id="590e8-165">Add the user to the Database role membership **System.Activities.DurableInstancing.InstanceStoreUsers** (and others).</span></span> <span data-ttu-id="590e8-166">Notare che l'utente potrebbe essere già presente (ad esempio, utente dbo).</span><span class="sxs-lookup"><span data-stu-id="590e8-166">Note that the user might exist already (for example, user dbo).</span></span>  
   
-5.  Aprire il file InstanceStore.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e compilare la soluzione premendo CTRL\+MAIUSC\+B.  
+5.  <span data-ttu-id="590e8-167">Aprire il file InstanceStore.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] e compilare la soluzione premendo CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="590e8-167">Open the InstanceStore.sln file in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] and build the solution by pressing CTRL+SHIFT+B.</span></span>  
   
-6.  In [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] passare alla directory dell'esempio appropriata bin\\debug \(\\WF\\Basic\\Persistence\\BuiltInConfiguration\\cs\\InstanceStore \(1 o 2\) \\bin\\debug\), fare clic con il pulsante destro del mouse su InstanceStore.exe e scegliere **Esegui come amministratore**.È necessario eseguire questo esempio con i privilegi di amministratore perché viene aperto un listener del canale.  
+6.  <span data-ttu-id="590e8-168">In [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], passare alla directory dell'esempio appropriata bin\debug (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug), fare clic con il pulsante destro InstanceStore.exe e selezionare **Esegui come amministratore**.</span><span class="sxs-lookup"><span data-stu-id="590e8-168">In [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], navigate to the sample’s appropriate bin\debug directory (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug), right click InstanceStore.exe and select **Run as administrator**.</span></span> <span data-ttu-id="590e8-169">È necessario eseguire questo esempio con i privilegi di amministratore perché viene aperto un listener del canale.</span><span class="sxs-lookup"><span data-stu-id="590e8-169">This sample must be run with administrative privileges because it opens a channel listener.</span></span>  
   
-7.  Se è stato creato l'archivio di istanze in un database diverso da un'installazione locale di SQL Server Express, è necessario aggiornare la stringa di connessione al database \(`const string ConnectionString` in Program.cs del progetto InstanceStore1 e l'attributo `connectionString` in App.config del progetto InstanceStore2\) nell'esempio e ricompilarlo.  
+7.  <span data-ttu-id="590e8-170">Se è stato creato l'archivio di istanze in un database diverso da un'installazione locale di SQL Server Express, è necessario aggiornare la stringa di connessione al database (`const string ConnectionString` in Program.cs del progetto InstanceStore1 e l'attributo `connectionString` in App.config del progetto InstanceStore2) nell'esempio e ricompilarlo.</span><span class="sxs-lookup"><span data-stu-id="590e8-170">If you created the instance store in a database other than a local installation of SQL Server Express you must update the database connection string (`const string ConnectionString` in Program.cs of the InstanceStore1 project, and the `connectionString` attribute in App.config of the InstanceStore2 project) in the sample and recompile the sample.</span></span>  
   
-#### Per verificare che l'esempio venga eseguito correttamente  
+#### <a name="to-verify-the-sample-is-running-correctly"></a><span data-ttu-id="590e8-171">Per verificare che l'esempio venga eseguito correttamente</span><span class="sxs-lookup"><span data-stu-id="590e8-171">To verify the sample is running correctly</span></span>  
   
-1.  Mentre l'esempio è in esecuzione, avviare SQL Server Management Studio.  
+1.  <span data-ttu-id="590e8-172">Mentre l'esempio è in esecuzione, avviare SQL Server Management Studio.</span><span class="sxs-lookup"><span data-stu-id="590e8-172">While the sample is running, start SQL Server Management Studio.</span></span>  
   
-2.  In **Esplora oggetti** selezionare **Database**, **InstanceStore**, **Tabelle** e quindi **System.Activities.DurableInstancing.InstanceTable**.  
+2.  <span data-ttu-id="590e8-173">Nel **Esplora oggetti**selezionare **database**, **InstanceStore**, **tabelle**e quindi  **Instancetable**.</span><span class="sxs-lookup"><span data-stu-id="590e8-173">In the **Object Explorer**, select **Databases**, **InstanceStore**, **Tables**, and then **System.Activities.DurableInstancing.InstanceTable**.</span></span>  
   
-3.  Fare clic con il pulsante destro del mouse su **InstanceTable** e scegliere **Seleziona le prime 1000 righe**.  
+3.  <span data-ttu-id="590e8-174">Fare clic destro **InstanceTable** e selezionare **seleziona le prime 1000 righe**.</span><span class="sxs-lookup"><span data-stu-id="590e8-174">Right click **InstanceTable** and select **Select Top 1000 Rows**.</span></span>  
   
-4.  Osservare che è presente una nuova voce e che il valore di **Lock Expiration** viene modificato ogni 5 secondi \(fare clic sul pulsante **Esegui** sulla barra delle applicazioni per aggiornare la query\).Si tratta di una conseguenza dell'impostazione di **Host Lock Renewal Period** su 5.  
+4.  <span data-ttu-id="590e8-175">Osservare che è presente una nuova voce e che il **la scadenza del blocco** viene modificato ogni 5 secondi (fare clic su della barra delle applicazioni **Execute** pulsante per aggiornare la query).</span><span class="sxs-lookup"><span data-stu-id="590e8-175">Observe that there is a new entry and that the **Lock Expiration** changes every 5 seconds, (click the taskbar’s **Execute** button to refresh the query).</span></span> <span data-ttu-id="590e8-176">Si tratta di una conseguenza dell'impostazione di **Host Lock Renewal Period** a 5.</span><span class="sxs-lookup"><span data-stu-id="590e8-176">This is a consequence of setting the **Host Lock Renewal Period** to 5.</span></span>  
   
-5.  Osservare che dopo il completamento del conteggio, la voce nella tabella dell'istanza viene rimossa.Si tratta di una conseguenza dell'impostazione di **Instance Completion Action** su **DeleteAll**.  
+5.  <span data-ttu-id="590e8-177">Osservare che dopo il completamento del conteggio, la voce nella tabella dell'istanza viene rimossa.</span><span class="sxs-lookup"><span data-stu-id="590e8-177">Observe after the counting completes, that the entry in the instance table is removed.</span></span> <span data-ttu-id="590e8-178">Si tratta di una conseguenza dell'impostazione **Instance Completion Action** a **DeleteAll**.</span><span class="sxs-lookup"><span data-stu-id="590e8-178">This is a consequence of setting **Instance Completion Action** to **DeleteAll**.</span></span>  
   
-6.  Premere INVIO per terminare l'applicazione host del flusso di lavoro e osservare che la voce **LockOwnersTable** viene eliminata.  
+6.  <span data-ttu-id="590e8-179">Premere INVIO per terminare l'applicazione host del flusso di lavoro e osservare che il **LockOwnersTable** viene eliminato.</span><span class="sxs-lookup"><span data-stu-id="590e8-179">Press ENTER to terminate the workflow host application and observe that the **LockOwnersTable** is deleted.</span></span>  
   
-#### Per disinstallare l'esempio  
+#### <a name="to-uninstall-the-sample"></a><span data-ttu-id="590e8-180">Per disinstallare l'esempio</span><span class="sxs-lookup"><span data-stu-id="590e8-180">To uninstall the sample</span></span>  
   
-1.  Eseguire RemoveInstanceStore.cmd nella directory di esempio \(\\WF\\Basic\\Persistence\\BuiltInConfiguration\).  
+1.  <span data-ttu-id="590e8-181">Eseguire RemoveInstanceStore.cmd nella directory di esempio (\WF\Basic\Persistence\BuiltInConfiguration).</span><span class="sxs-lookup"><span data-stu-id="590e8-181">Run RemoveInstanceStore.cmd in the sample directory (\WF\Basic\Persistence\BuiltInConfiguration).</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="590e8-182">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="590e8-182">The samples may already be installed on your computer.</span></span> <span data-ttu-id="590e8-183">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="590e8-183">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="590e8-184">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="590e8-184">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="590e8-185">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="590e8-185">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
-## Vedere anche  
- [Hosting e salvataggio permanente](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="590e8-186">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="590e8-186">See Also</span></span>  
+ [<span data-ttu-id="590e8-187">Hosting di AppFabric ed esempi di persistenza</span><span class="sxs-lookup"><span data-stu-id="590e8-187">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

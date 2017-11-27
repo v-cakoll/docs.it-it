@@ -1,64 +1,65 @@
 ---
-title: "Propriet&#224; dei controlli Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli [Windows Form], proprietà"
-  - "controlli personalizzati [Windows Form], cenni preliminari delle proprietà (mediante il codice)"
-  - "proprietà [Windows Form]"
+title: "Proprietà dei controlli Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom controls [Windows Forms], properties overview (using code)
+- controls [Windows Forms], properties
+- properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d5de09635fb92b46a2c0f89427ad03449de6bd53
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Propriet&#224; dei controlli Windows Form
-Un controllo Windows Form eredita molte proprietà dalla classe base <xref:System.Windows.Forms.Control?displayProperty=fullName>.  Sono incluse proprietà come <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A> e molte altre.  Per ulteriori informazioni sulle proprietà ereditate, vedere <xref:System.Windows.Forms.Control?displayProperty=fullName>.  
+# <a name="properties-in-windows-forms-controls"></a><span data-ttu-id="f338d-102">Proprietà dei controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="f338d-102">Properties in Windows Forms Controls</span></span>
+<span data-ttu-id="f338d-103">Un controllo Windows Form eredita molte proprietà della classe base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f338d-103">A Windows Forms control inherits many properties form the base class <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span> <span data-ttu-id="f338d-104">Queste sono incluse proprietà, ad esempio <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>e molti altri.</span><span class="sxs-lookup"><span data-stu-id="f338d-104">These include properties such as <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>, and many others.</span></span> <span data-ttu-id="f338d-105">Per informazioni dettagliate sulle proprietà ereditate, vedere <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f338d-105">For details about inherited properties, see <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.</span></span>  
   
- È possibile eseguire l'override delle proprietà ereditate dal controllo nonché definirne di nuove.  
+ <span data-ttu-id="f338d-106">È possibile eseguire l'override delle proprietà ereditate dal controllo nonché definirne di nuove.</span><span class="sxs-lookup"><span data-stu-id="f338d-106">You can override inherited properties in your control as well as define new properties.</span></span>  
   
-## In questa sezione  
- [Definizione di una proprietà](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- Viene illustrato come implementare una proprietà per un controllo o un componente personalizzato e come integrare la proprietà nell'ambiente di progettazione.  
+## <a name="in-this-section"></a><span data-ttu-id="f338d-107">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="f338d-107">In This Section</span></span>  
+ [<span data-ttu-id="f338d-108">Definizione di una proprietà</span><span class="sxs-lookup"><span data-stu-id="f338d-108">Defining a Property</span></span>](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
+ <span data-ttu-id="f338d-109">Viene illustrato come implementare una proprietà per un controllo o un componente personalizzato e come integrare la proprietà nell'ambiente di progettazione.</span><span class="sxs-lookup"><span data-stu-id="f338d-109">Shows how to implement a property for a custom control or component and shows how to integrate the property into the design environment.</span></span>  
   
- [Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
- Viene illustrato come definire valori di proprietà predefiniti per un controllo o un componente personalizzato.  
+ [<span data-ttu-id="f338d-110">Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset</span><span class="sxs-lookup"><span data-stu-id="f338d-110">Defining Default Values with the ShouldSerialize and Reset Methods</span></span>](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ <span data-ttu-id="f338d-111">Viene illustrato come definire valori di proprietà predefiniti per un controllo o un componente personalizzato.</span><span class="sxs-lookup"><span data-stu-id="f338d-111">Shows how to define default property values for a custom control or component.</span></span>  
   
- [Eventi per proprietà modificate](../../../../docs/framework/winforms/controls/property-changed-events.md)  
- Viene descritto come attivare le notifiche di modifiche alle proprietà quando un valore di una proprietà viene modificato.  
+ [<span data-ttu-id="f338d-112">Eventi di modifica delle proprietà</span><span class="sxs-lookup"><span data-stu-id="f338d-112">Property-Changed Events</span></span>](../../../../docs/framework/winforms/controls/property-changed-events.md)  
+ <span data-ttu-id="f338d-113">Viene descritto come attivare le notifiche di modifiche alle proprietà quando un valore di una proprietà viene modificato.</span><span class="sxs-lookup"><span data-stu-id="f338d-113">Describes how to enable property-change notifications when a property value changes.</span></span>  
   
- [Procedura: esporre le proprietà dei controlli costitutivi](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
- Viene illustrato come esporre le proprietà dei controlli che fanno parte di un controllo composito personalizzato.  
+ [<span data-ttu-id="f338d-114">Procedura: esporre le proprietà dei controlli costitutivi</span><span class="sxs-lookup"><span data-stu-id="f338d-114">How to: Expose Properties of Constituent Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
+ <span data-ttu-id="f338d-115">Viene illustrato come esporre le proprietà dei controlli che fanno parte di un controllo composito personalizzato.</span><span class="sxs-lookup"><span data-stu-id="f338d-115">Shows how to expose properties of constituent controls in a custom composite control.</span></span>  
   
- [Implementazione dei metodi nei controlli personalizzati](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
- Viene descritto come implementare metodi nei controlli e nei componenti personalizzati.  
+ [<span data-ttu-id="f338d-116">Implementazione dei metodi nei controlli personalizzati</span><span class="sxs-lookup"><span data-stu-id="f338d-116">Method Implementation in Custom Controls</span></span>](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
+ <span data-ttu-id="f338d-117">Viene descritto come implementare metodi nei controlli e nei componenti personalizzati.</span><span class="sxs-lookup"><span data-stu-id="f338d-117">Describes how to implement methods in custom controls and components.</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="f338d-118">Riferimento</span><span class="sxs-lookup"><span data-stu-id="f338d-118">Reference</span></span>  
  <xref:System.Windows.Forms.UserControl>  
- Viene descritta la classe base per l'implementazione dei controlli compositi.  
+ <span data-ttu-id="f338d-119">Viene descritta la classe base per l'implementazione dei controlli compositi.</span><span class="sxs-lookup"><span data-stu-id="f338d-119">Documents the base class for implementing composite controls.</span></span>  
   
  <xref:System.ComponentModel.TypeConverterAttribute>  
- Viene descritto l'attributo che specifica la classe <xref:System.ComponentModel.TypeConverter> da utilizzare per un tipo di proprietà personalizzato.  
+ <span data-ttu-id="f338d-120">Viene descritto l'attributo che specifica il <xref:System.ComponentModel.TypeConverter> da usare per un tipo di proprietà personalizzata.</span><span class="sxs-lookup"><span data-stu-id="f338d-120">Documents the attribute that specifies the <xref:System.ComponentModel.TypeConverter> to use for a custom property type.</span></span>  
   
  <xref:System.ComponentModel.EditorAttribute>  
- Viene descritto l'attributo che specifica la classe <xref:System.Drawing.Design.UITypeEditor> da utilizzare per una proprietà personalizzata.  
+ <span data-ttu-id="f338d-121">Viene descritto l'attributo che specifica il <xref:System.Drawing.Design.UITypeEditor> da utilizzare per una proprietà personalizzata.</span><span class="sxs-lookup"><span data-stu-id="f338d-121">Documents the attribute that specifies the <xref:System.Drawing.Design.UITypeEditor> to use for a custom property.</span></span>  
   
-## Sezioni correlate  
- [Attributi nei controlli Windows Form](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- Vengono descritti gli attributi applicabili alle proprietà o ad altri membri dei controlli e dei componenti personalizzati.  
+## <a name="related-sections"></a><span data-ttu-id="f338d-122">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="f338d-122">Related Sections</span></span>  
+ [<span data-ttu-id="f338d-123">Attributi nei controlli Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f338d-123">Attributes in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ <span data-ttu-id="f338d-124">Descrive gli attributi che è possibile applicare alle proprietà o ad altri membri e componenti dei controlli personalizzati.</span><span class="sxs-lookup"><span data-stu-id="f338d-124">Describes the attributes you can apply to properties or other members of your custom controls and components.</span></span>  
   
- [Design\-Time Attributes for Components](../Topic/Design-Time%20Attributes%20for%20Components.md)  
- Vengono elencati attributi di metadati da applicare a componenti e controlli in modo che vengano visualizzati correttamente in fase di progettazione nelle finestre di progettazione visive.  
+ [<span data-ttu-id="f338d-125">Attributi per componenti in fase di progettazione</span><span class="sxs-lookup"><span data-stu-id="f338d-125">Design-Time Attributes for Components</span></span>](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ <span data-ttu-id="f338d-126">Elenca gli attributi dei metadati da applicare ai componenti e ai controlli in modo che vengano visualizzati correttamente in fase di progettazione nelle finestre di progettazione visiva.</span><span class="sxs-lookup"><span data-stu-id="f338d-126">Lists metadata attributes to apply to components and controls so that they are displayed correctly at design time in visual designers.</span></span>  
   
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)  
- Viene descritto come implementare classi, quali editor e finestre di progettazione, che forniscono supporto in fase di progettazione.
+ [<span data-ttu-id="f338d-127">Estensione del supporto in fase di progettazione</span><span class="sxs-lookup"><span data-stu-id="f338d-127">Extending Design-Time Support</span></span>](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ <span data-ttu-id="f338d-128">Descrive come implementare classi, quali editor e finestre di progettazione, che forniscono supporto in fase di progettazione.</span><span class="sxs-lookup"><span data-stu-id="f338d-128">Describes how to implement classes such as editors and designers that provide design-time support.</span></span>

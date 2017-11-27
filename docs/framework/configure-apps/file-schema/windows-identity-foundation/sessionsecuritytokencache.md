@@ -1,58 +1,67 @@
 ---
-title: "&lt;sessionSecurityTokenCache&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;sessionSecurityTokenCache&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: a1d1af398073e15ce7f73b3359366df9e5629ac6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;sessionSecurityTokenCache&gt;
-Registra una cache per i token di sessione con un servizio o un insieme di gestore del token di protezione.  
+# <a name="ltsessionsecuritytokencachegt"></a><span data-ttu-id="080cd-102">&lt;sessionSecurityTokenCache&gt;</span><span class="sxs-lookup"><span data-stu-id="080cd-102">&lt;sessionSecurityTokenCache&gt;</span></span>
+<span data-ttu-id="080cd-103">Registra una cache per i token di sessione con un servizio o una raccolta di gestore del token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="080cd-103">Registers a cache for session tokens with a service or a security token handler collection.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="080cd-104">\<System. IdentityModel ></span><span class="sxs-lookup"><span data-stu-id="080cd-104">\<system.identityModel></span></span>  
+<span data-ttu-id="080cd-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="080cd-105">\<identityConfiguration></span></span>  
+<span data-ttu-id="080cd-106">\<memorizza nella cache ></span><span class="sxs-lookup"><span data-stu-id="080cd-106">\<caches></span></span>  
+<span data-ttu-id="080cd-107">\<sessionSecurityTokenCache ></span><span class="sxs-lookup"><span data-stu-id="080cd-107">\<sessionSecurityTokenCache></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="080cd-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="080cd-108">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <caches>  
-      <sessionSecurityTokenCache type=xs:string>  
-      </sessionSecurityTokenCache>  
-    </caches>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <caches>  
+      <sessionSecurityTokenCache type=xs:string>  
+      </sessionSecurityTokenCache>  
+    </caches>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="080cd-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="080cd-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="080cd-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="080cd-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="080cd-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="080cd-111">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="080cd-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="080cd-112">Attribute</span></span>|<span data-ttu-id="080cd-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="080cd-113">Description</span></span>|  
 |---------------|-----------------|  
-|type|Un tipo che deriva dal <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> classe.  Per ulteriori informazioni su come specificare un personalizzato `type`, vedere [Custom Type References](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_CustomTypeReferences).|  
+|<span data-ttu-id="080cd-114">type</span><span class="sxs-lookup"><span data-stu-id="080cd-114">type</span></span>|<span data-ttu-id="080cd-115">Un tipo da cui deriva il <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> classe.</span><span class="sxs-lookup"><span data-stu-id="080cd-115">A type that derives from the <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> class.</span></span>|  
   
-### Elementi figlio  
- Nessuno  
+### <a name="child-elements"></a><span data-ttu-id="080cd-116">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="080cd-116">Child Elements</span></span>  
+ <span data-ttu-id="080cd-117">None</span><span class="sxs-lookup"><span data-stu-id="080cd-117">None</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="080cd-118">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="080cd-118">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registra le cache utilizzate da un servizio o un insieme di gestore del token di protezione.|  
+|<span data-ttu-id="080cd-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="080cd-119">Element</span></span>|<span data-ttu-id="080cd-120">Descrizione</span><span class="sxs-lookup"><span data-stu-id="080cd-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="080cd-121">\<memorizza nella cache ></span><span class="sxs-lookup"><span data-stu-id="080cd-121">\<caches></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|<span data-ttu-id="080cd-122">Registra la cache utilizzate da un servizio o una raccolta di gestore del token di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="080cd-122">Registers the caches used by a service or a security token handler collection.</span></span>|  
   
-## Esempio  
- Il codice XML riportato di seguito viene illustrata la configurazione di una cache personalizzata per contenere i token di protezione di sessione \(<xref:System.IdentityModel.Tokens.SessionSecurityToken>\).  Da cui proviene la configurazione di `ClaimsAwareWebFarm` campione.  Per ulteriori informazioni su questo esempio, vedere [Indice degli esempi di codice di WIF](../../../../../docs/framework/security/wif-code-sample-index.md).  
+## <a name="example"></a><span data-ttu-id="080cd-123">Esempio</span><span class="sxs-lookup"><span data-stu-id="080cd-123">Example</span></span>  
+ <span data-ttu-id="080cd-124">Il codice XML seguente viene illustrata la configurazione di una cache personalizzata per la sessione come token di sicurezza (<xref:System.IdentityModel.Tokens.SessionSecurityToken>).</span><span class="sxs-lookup"><span data-stu-id="080cd-124">The following XML shows the configuration of a custom cache for holding session security tokens (<xref:System.IdentityModel.Tokens.SessionSecurityToken>).</span></span> <span data-ttu-id="080cd-125">Da cui proviene la configurazione di `ClaimsAwareWebFarm` esempio.</span><span class="sxs-lookup"><span data-stu-id="080cd-125">The configuration is taken from the `ClaimsAwareWebFarm` sample.</span></span> <span data-ttu-id="080cd-126">Per ulteriori informazioni su questo esempio, vedere [indice degli esempi di codice WIF](../../../../../docs/framework/security/wif-code-sample-index.md).</span><span class="sxs-lookup"><span data-stu-id="080cd-126">For more information about this sample, see [WIF Code Sample Index](../../../../../docs/framework/security/wif-code-sample-index.md).</span></span>  
   
-```  
+```xml  
 <caches>  
   <sessionSecurityTokenCache type="CacheLibrary.SharedSessionSecurityTokenCache, CacheLibrary">  
     <!--cacheServiceAddress points to the centralized session security token cache service running in the web farm.-->  
@@ -61,5 +70,5 @@ Registra una cache per i token di sessione con un servizio o un insieme di gesto
 </caches>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a><span data-ttu-id="080cd-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="080cd-127">See Also</span></span>  
  <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

@@ -1,69 +1,71 @@
 ---
-title: "Elemento &lt;add&gt; per &lt;switches&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> (elemento) per <switches>"
-  - "add (elemento) per <switches>"
+title: '&lt;aggiungere&gt; elemento per &lt;switch&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
+helpviewer_keywords:
+- <add> element for <switches>
+- add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: de1acb37f3236598e9d8a74a188033d18b65ac8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;add&gt; per &lt;switches&gt;
-Consente di specificare il livello in cui viene impostata un'opzione di traccia.  
+# <a name="ltaddgt-element-for-ltswitchesgt"></a><span data-ttu-id="961c9-102">&lt;aggiungere&gt; elemento per &lt;switch&gt;</span><span class="sxs-lookup"><span data-stu-id="961c9-102">&lt;add&gt; Element for &lt;switches&gt;</span></span>
+<span data-ttu-id="961c9-103">Specifica il livello in cui viene impostata un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="961c9-103">Specifies the level where a trace switch is set.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="961c9-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="961c9-104">\<configuration></span></span>  
+<span data-ttu-id="961c9-105">\<System. Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="961c9-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="961c9-106">\<Opzioni ></span><span class="sxs-lookup"><span data-stu-id="961c9-106">\<switches></span></span>  
+<span data-ttu-id="961c9-107">\<add></span><span class="sxs-lookup"><span data-stu-id="961c9-107">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="961c9-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="961c9-108">Syntax</span></span>  
+  
+```xml  
 <add name="switch name"  
      value="value"/>  
 ```  
   
-## Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="961c9-109">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="961c9-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="961c9-110">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="961c9-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="961c9-111">Attributi</span><span class="sxs-lookup"><span data-stu-id="961c9-111">Attributes</span></span>  
   
-|Attribute|Descrizione|  
+|<span data-ttu-id="961c9-112">Attributo</span><span class="sxs-lookup"><span data-stu-id="961c9-112">Attribute</span></span>|<span data-ttu-id="961c9-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="961c9-113">Description</span></span>|  
 |---------------|-----------------|  
-|**name**|Attributo obbligatorio.<br /><br /> Specifica il nome dell'opzione.  Il valore di questo attributo corrisponde al parametro *displayName* passato al costruttore di opzioni.|  
-|**predefinito**|Attributo obbligatorio.<br /><br /> Specifica il livello dell'opzione.|  
+|<span data-ttu-id="961c9-114">**name**</span><span class="sxs-lookup"><span data-stu-id="961c9-114">**name**</span></span>|<span data-ttu-id="961c9-115">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="961c9-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="961c9-116">Specifica il nome del commutatore.</span><span class="sxs-lookup"><span data-stu-id="961c9-116">Specifies the name of the switch.</span></span> <span data-ttu-id="961c9-117">Il valore di questo attributo corrisponde alla *displayName* parametro passato al costruttore di opzioni.</span><span class="sxs-lookup"><span data-stu-id="961c9-117">The value of this attribute corresponds to the *displayName* parameter that is passed to switch constructor.</span></span>|  
+|<span data-ttu-id="961c9-118">**value**</span><span class="sxs-lookup"><span data-stu-id="961c9-118">**value**</span></span>|<span data-ttu-id="961c9-119">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="961c9-119">Required attribute.</span></span><br /><br /> <span data-ttu-id="961c9-120">Specifica il livello del commutatore.</span><span class="sxs-lookup"><span data-stu-id="961c9-120">Specifies the level of the switch.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="961c9-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="961c9-121">Child Elements</span></span>  
+ <span data-ttu-id="961c9-122">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="961c9-122">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="961c9-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="961c9-123">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione utilizzato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`switches`|Contiene opzioni di traccia e il livello in cui vengono impostate.|  
-|`system.diagnostics`|Consente di specificare listener di traccia per la raccolta, la memorizzazione e l'invio di messaggi, nonché il livello in cui viene impostata un'opzione di analisi.|  
+|<span data-ttu-id="961c9-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="961c9-124">Element</span></span>|<span data-ttu-id="961c9-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="961c9-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="961c9-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="961c9-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`switches`|<span data-ttu-id="961c9-127">Contiene le opzioni di traccia e il livello in cui vengono impostate le opzioni di traccia.</span><span class="sxs-lookup"><span data-stu-id="961c9-127">Contains trace switches and the level where the trace switches are set.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="961c9-128">Specifica i listener di traccia per raccogliere, archiviare e indirizzare i messaggi, oltre al livello di impostazione di un'opzione di traccia.</span><span class="sxs-lookup"><span data-stu-id="961c9-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## Note  
- È possibile modificare il livello di un'opzione di traccia inserendola in un file di configurazione.  Se si tratta di un'opzione <xref:System.Diagnostics.BooleanSwitch>, è possibile attivarla e disattivarla.  Se si tratta, invece, di un'opzione <xref:System.Diagnostics.TraceSwitch>, è possibile assegnarle livelli differenti per specificare i tipi di messaggi di traccia o di debug generati dall'applicazione.  
+## <a name="remarks"></a><span data-ttu-id="961c9-129">Note</span><span class="sxs-lookup"><span data-stu-id="961c9-129">Remarks</span></span>  
+ <span data-ttu-id="961c9-130">È possibile modificare il livello di un'opzione di traccia mediante l'inserimento in un file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="961c9-130">You can change the level of a trace switch by putting it in a configuration file.</span></span> <span data-ttu-id="961c9-131">Se l'opzione è un <xref:System.Diagnostics.BooleanSwitch>, è possibile attivare e disattivare.</span><span class="sxs-lookup"><span data-stu-id="961c9-131">If the switch is a <xref:System.Diagnostics.BooleanSwitch>, you can turn it on and off.</span></span> <span data-ttu-id="961c9-132">Se l'opzione è un <xref:System.Diagnostics.TraceSwitch>, è possibile assegnare diversi livelli per specificare i tipi di traccia messaggi o di debug generati dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="961c9-132">If the switch is a <xref:System.Diagnostics.TraceSwitch>, you can assign different levels to it to specify the types of trace or debug messages the application outputs.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare l'elemento **\<add\>** per impostare l'opzione di traccia `General` sul livello [TraceLevel.Error](frlrfSystemDiagnosticsTraceLevelClassTopic) e come attivare l'opzione di traccia di tipo Boolean `Data`.  
+## <a name="example"></a><span data-ttu-id="961c9-133">Esempio</span><span class="sxs-lookup"><span data-stu-id="961c9-133">Example</span></span>  
+ <span data-ttu-id="961c9-134">Nell'esempio seguente viene illustrato come utilizzare il  **\<aggiungere >** elemento da impostare il `General` opzione di traccia di <xref:System.Diagnostics.TraceLevel> livello e attivare il `Data` opzione di traccia Boolean.</span><span class="sxs-lookup"><span data-stu-id="961c9-134">The following example shows how to use the **\<add>** element to set the `General` trace switch to the <xref:System.Diagnostics.TraceLevel> level, and enable the `Data` Boolean trace switch.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <switches>  
@@ -74,8 +76,8 @@ Consente di specificare il livello in cui viene impostata un'opzione di traccia.
 </configuration>  
 ```  
   
-## Vedere anche  
- <xref:System.Diagnostics.Switch>   
- <xref:System.Diagnostics.TraceSwitch>   
- <xref:System.Diagnostics.BooleanSwitch>   
- [Schema delle impostazioni di traccia e debug](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a><span data-ttu-id="961c9-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="961c9-135">See Also</span></span>  
+ <xref:System.Diagnostics.Switch>  
+ <xref:System.Diagnostics.TraceSwitch>  
+ <xref:System.Diagnostics.BooleanSwitch>  
+ [<span data-ttu-id="961c9-136">Schema delle impostazioni di traccia e debug</span><span class="sxs-lookup"><span data-stu-id="961c9-136">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

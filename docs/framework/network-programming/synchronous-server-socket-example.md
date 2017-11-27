@@ -8,28 +8,25 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - synchronous server sockets
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6918042ac04a24f646ce8fd10a86d64c2aa4fd39
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 4304a8928b2fe768f20b2ff0bde94921565155ac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="synchronous-server-socket-example"></a>Esempio di socket server sincrono
-Il programma di esempio seguente crea un server che riceve le richieste di connessione dai client. Il server viene compilato con un socket sincrono, quindi l'esecuzione dell'applicazione server viene sospesa durante l'attesa di una connessione da un client. L'applicazione riceve una stringa dal client, visualizza la stringa nella console e quindi la restituisce al client. La stringa del client deve contenere la stringa "\<EOF>" per segnalare la fine del messaggio.  
+# <a name="synchronous-server-socket-example"></a><span data-ttu-id="5bc2a-102">Esempio di socket server sincrono</span><span class="sxs-lookup"><span data-stu-id="5bc2a-102">Synchronous Server Socket Example</span></span>
+<span data-ttu-id="5bc2a-103">Il programma di esempio seguente crea un server che riceve le richieste di connessione dai client.</span><span class="sxs-lookup"><span data-stu-id="5bc2a-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="5bc2a-104">Il server viene compilato con un socket sincrono, quindi l'esecuzione dell'applicazione server viene sospesa durante l'attesa di una connessione da un client.</span><span class="sxs-lookup"><span data-stu-id="5bc2a-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="5bc2a-105">L'applicazione riceve una stringa dal client, visualizza la stringa nella console e quindi la restituisce al client.</span><span class="sxs-lookup"><span data-stu-id="5bc2a-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="5bc2a-106">La stringa del client deve contenere la stringa "\<EOF>" per segnalare la fine del messaggio.</span><span class="sxs-lookup"><span data-stu-id="5bc2a-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -50,12 +47,12 @@ Public Class SynchronousSocketListener
         ' Establish the local endpoint for the socket.  
         ' Dns.GetHostName returns the name of the   
         ' host running the application.  
-        Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
+        Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
         Dim localEndPoint As New IPEndPoint(ipAddress, 11000)  
   
         ' Create a TCP/IP socket.  
-        Dim listener As New Socket(AddressFamily.InterNetwork, _  
+        Dim listener As New Socket(ipAddress.AddressFamily, _  
             SocketType.Stream, ProtocolType.Tcp)  
   
         ' Bind the socket to the local endpoint and   
@@ -111,12 +108,12 @@ public class SynchronousSocketListener {
         // Establish the local endpoint for the socket.  
         // Dns.GetHostName returns the name of the   
         // host running the application.  
-        IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
+        IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());  
         IPAddress ipAddress = ipHostInfo.AddressList[0];  
         IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);  
   
         // Create a TCP/IP socket.  
-        Socket listener = new Socket(AddressFamily.InterNetwork,  
+        Socket listener = new Socket(ipAddress.AddressFamily,  
             SocketType.Stream, ProtocolType.Tcp );  
   
         // Bind the socket to the local endpoint and   
@@ -169,8 +166,7 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Esempio di socket client sincrono](../../../docs/framework/network-programming/synchronous-client-socket-example.md)   
- [Uso di un socket server sincrono](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
- [Esempi di codice socket](../../../docs/framework/network-programming/socket-code-examples.md)
-
+## <a name="see-also"></a><span data-ttu-id="5bc2a-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5bc2a-107">See Also</span></span>  
+ [<span data-ttu-id="5bc2a-108">Esempio di socket client sincrono</span><span class="sxs-lookup"><span data-stu-id="5bc2a-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
+ [<span data-ttu-id="5bc2a-109">Uso di un Socket Server sincroni</span><span class="sxs-lookup"><span data-stu-id="5bc2a-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [<span data-ttu-id="5bc2a-110">Esempi di codice socket</span><span class="sxs-lookup"><span data-stu-id="5bc2a-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

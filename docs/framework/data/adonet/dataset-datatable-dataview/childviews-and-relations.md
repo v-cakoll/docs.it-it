@@ -1,23 +1,29 @@
 ---
-title: "ChildViews e relazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Oggetti ChildView e relazioni
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 22c25a2633695b4b688a7185b6c612d918f12e2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# ChildViews e relazioni
-Se esiste una relazione tra le tabelle di un tipo <xref:System.Data.DataSet>, è possibile creare un tipo <xref:System.Data.DataView> contenente le righe della tabella figlio correlata usando il metodo <xref:System.Data.DataRowView.CreateChildView%2A> di <xref:System.Data.DataRowView> per le righe della tabella padre.  Il codice seguente, ad esempio, visualizza le tabelle **Categories** e le relative tabelle **Products** in ordine alfabetico per **CategoryName** e **ProductName**.  
+# <a name="childviews-and-relations"></a><span data-ttu-id="7544b-102">Oggetti ChildView e relazioni</span><span class="sxs-lookup"><span data-stu-id="7544b-102">ChildViews and Relations</span></span>
+<span data-ttu-id="7544b-103">Se esiste una relazione tra le tabelle di un tipo <xref:System.Data.DataSet>, è possibile creare un tipo <xref:System.Data.DataView> contenente le righe della tabella figlio correlata usando il metodo <xref:System.Data.DataRowView.CreateChildView%2A> di <xref:System.Data.DataRowView> per le righe della tabella padre.</span><span class="sxs-lookup"><span data-stu-id="7544b-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="7544b-104">Ad esempio, il codice seguente consente di visualizzare **categorie** e le relative **prodotti** in ordine alfabetico per **CategoryName** e **ProductName** .</span><span class="sxs-lookup"><span data-stu-id="7544b-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -47,7 +53,6 @@ For Each catDRV In catView
     Console.WriteLine(vbTab & prodDRV("ProductName"))  
   Next  
 Next  
-  
 ```  
   
 ```csharp  
@@ -78,9 +83,9 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## Vedere anche  
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataView>   
- <xref:System.Data.DataRowView>   
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="7544b-105">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7544b-105">See Also</span></span>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataView>  
+ <xref:System.Data.DataRowView>  
+ [<span data-ttu-id="7544b-106">DataView</span><span class="sxs-lookup"><span data-stu-id="7544b-106">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="7544b-107">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="7544b-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

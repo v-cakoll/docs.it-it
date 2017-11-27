@@ -1,170 +1,171 @@
 ---
-title: "Creazione di un servizio flusso di lavoro a esecuzione prolungata | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Creazione di un servizio flusso di lavoro a esecuzione prolungata
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f4204de8c113c2ff553afec934b68f0beeb89580
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Creazione di un servizio flusso di lavoro a esecuzione prolungata
-In questo argomento viene descritto come creare un servizio di flusso di lavoro a esecuzione prolungata.  L'esecuzione di tali servizi può durare molto tempo.  A un certo punto, è possibile che il flusso di lavoro diventi inattivo a causa dell'attesa di informazioni aggiuntive.  In tal caso, il flusso di lavoro viene salvato in modo permanente in un database SQL e rimosso dalla memoria.  Quando le informazioni aggiuntive diventano disponibili, l'istanza del flusso di lavoro viene caricata di nuovo in memoria e ne viene continuata l'esecuzione.  In questo scenario viene implementato un sistema di ordini molto semplificato.  Per avviare la procedura di ordine, dal client viene inviato un messaggio iniziale al servizio di flusso di lavoro che, a sua volta,  consente la restituzione di un ID ordine al client.  A questo punto, a causa dell'attesa di un altro messaggio inviato dal client, il servizio di flusso di lavoro diventa inattivo e viene salvato in modo permanente in un database SQL Server.  Quando dal client viene inviato il messaggio successivo per ordinare un elemento, il servizio di flusso di lavoro viene caricato di nuovo in memoria consentendo il completamento dell'elaborazione dell'ordine.  Nell'esempio di codice viene restituita una stringa in cui viene indicato che l'elemento è stato aggiunto all'ordine.  L'esempio di codice non è stato ideato per corrispondere a un'applicazione reale della tecnologia, ma piuttosto per fornire un esempio semplice in cui vengono illustrati i servizi di flusso di lavoro a esecuzione prolungata. In questo argomento si presuppone che l'utente sia in grado di creare progetti e soluzioni di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+# <a name="creating-a-long-running-workflow-service"></a><span data-ttu-id="d57e2-102">Creazione di un servizio flusso di lavoro a esecuzione prolungata</span><span class="sxs-lookup"><span data-stu-id="d57e2-102">Creating a Long-running Workflow Service</span></span>
+<span data-ttu-id="d57e2-103">In questo argomento viene descritto come creare un servizio di flusso di lavoro a esecuzione prolungata.</span><span class="sxs-lookup"><span data-stu-id="d57e2-103">This topic describes how to create a long-running workflow service.</span></span> <span data-ttu-id="d57e2-104">L'esecuzione di tali servizi può durare molto tempo.</span><span class="sxs-lookup"><span data-stu-id="d57e2-104">Long running workflow services may run for long periods of time.</span></span> <span data-ttu-id="d57e2-105">A un certo punto, è possibile che il flusso di lavoro diventi inattivo a causa dell'attesa di informazioni aggiuntive.</span><span class="sxs-lookup"><span data-stu-id="d57e2-105">At some point the workflow may go idle waiting for some additional information.</span></span> <span data-ttu-id="d57e2-106">In tal caso, il flusso di lavoro viene salvato in modo permanente in un database SQL e rimosso dalla memoria.</span><span class="sxs-lookup"><span data-stu-id="d57e2-106">When this occurs the workflow is persisted to a SQL database and is removed from memory.</span></span> <span data-ttu-id="d57e2-107">Quando le informazioni aggiuntive diventano disponibili, l'istanza del flusso di lavoro viene caricata di nuovo in memoria e ne viene continuata l'esecuzione.</span><span class="sxs-lookup"><span data-stu-id="d57e2-107">When the additional information becomes available the workflow instance is loaded back into memory and continues executing.</span></span>  <span data-ttu-id="d57e2-108">In questo scenario viene implementato un sistema di ordini molto semplificato.</span><span class="sxs-lookup"><span data-stu-id="d57e2-108">In this scenario you are implementing a very simplified ordering system.</span></span>  <span data-ttu-id="d57e2-109">Per avviare la procedura di ordine, dal client viene inviato un messaggio iniziale al servizio di flusso di lavoro che, a sua volta,</span><span class="sxs-lookup"><span data-stu-id="d57e2-109">The client sends an initial message to the workflow service to start the order.</span></span> <span data-ttu-id="d57e2-110">consente la restituzione di un ID ordine al client.</span><span class="sxs-lookup"><span data-stu-id="d57e2-110">It returns an order ID to the client.</span></span> <span data-ttu-id="d57e2-111">A questo punto, a causa dell'attesa di un altro messaggio inviato dal client, il servizio di flusso di lavoro diventa inattivo e viene salvato in modo permanente in un database SQL Server.</span><span class="sxs-lookup"><span data-stu-id="d57e2-111">At this point the workflow service is waiting for another message from the client and goes into the idle state and is persisted to a SQL Server database.</span></span>  <span data-ttu-id="d57e2-112">Quando dal client viene inviato il messaggio successivo per ordinare un elemento, il servizio di flusso di lavoro viene caricato di nuovo in memoria consentendo il completamento dell'elaborazione dell'ordine.</span><span class="sxs-lookup"><span data-stu-id="d57e2-112">When the client sends the next message to order an item, the workflow service is loaded back into memory and finishes processing the order.</span></span> <span data-ttu-id="d57e2-113">Nell'esempio di codice viene restituita una stringa in cui viene indicato che l'elemento è stato aggiunto all'ordine.</span><span class="sxs-lookup"><span data-stu-id="d57e2-113">In the code sample it returns a string stating the item has been added to the order.</span></span> <span data-ttu-id="d57e2-114">L'esempio di codice non è stato ideato per corrispondere a un'applicazione reale della tecnologia, ma piuttosto per fornire un esempio semplice in cui vengono illustrati i servizi di flusso di lavoro a esecuzione prolungata.</span><span class="sxs-lookup"><span data-stu-id="d57e2-114">The code sample is not meant to be a real world application of the technology, but rather a simple sample that illustrates long running workflow services.</span></span> <span data-ttu-id="d57e2-115">In questo argomento si presuppone che l'utente sia in grado di creare progetti e soluzioni di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d57e2-115">This topic assumes you know how to create [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] projects and solutions.</span></span>  
   
-## Prerequisiti  
- Per utilizzare questa procedura dettagliata è necessario aver installato i software seguenti:  
+## <a name="prerequisites"></a><span data-ttu-id="d57e2-116">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="d57e2-116">Prerequisites</span></span>  
+ <span data-ttu-id="d57e2-117">Per utilizzare questa procedura dettagliata è necessario aver installato i software seguenti:</span><span class="sxs-lookup"><span data-stu-id="d57e2-117">You must have the following software installed to use this walkthrough:</span></span>  
   
-1.  Microsoft SQL Server 2008  
+1.  <span data-ttu-id="d57e2-118">Microsoft SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="d57e2-118">Microsoft SQL Server 2008</span></span>  
   
 2.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]  
   
-3.  Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]  
+3.  <span data-ttu-id="d57e2-119">Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d57e2-119">Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]</span></span>  
   
-4.  È necessario conoscere WCF e [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], nonché essere in grado di creare progetti e soluzioni.  
+4.  <span data-ttu-id="d57e2-120">È necessario conoscere WCF e [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], nonché essere in grado di creare progetti e soluzioni.</span><span class="sxs-lookup"><span data-stu-id="d57e2-120">You are familiar with WCF and [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] and know how to create projects/solutions.</span></span>  
   
-### Per impostare il database SQL  
+### <a name="to-setup-the-sql-database"></a><span data-ttu-id="d57e2-121">Per impostare il database SQL</span><span class="sxs-lookup"><span data-stu-id="d57e2-121">To Setup the SQL Database</span></span>  
   
-1.  Per salvare in modo permanente le istanze del servizio di flusso di lavoro è necessario disporre di Microsoft SQL Server e configurare un database per archiviare le istanze del flusso di lavoro salvate in modo permanente.  Eseguire Microsoft SQL Server Management Studio facendo clic sul pulsante **Start**, selezionando **Tutti i programmi**, **Microsoft SQL Server 2008**, quindi **Microsoft SQL Server Management Studio**.  
+1.  <span data-ttu-id="d57e2-122">Per salvare in modo permanente le istanze del servizio di flusso di lavoro è necessario disporre di Microsoft SQL Server e configurare un database per archiviare le istanze del flusso di lavoro salvate in modo permanente.</span><span class="sxs-lookup"><span data-stu-id="d57e2-122">In order for workflow service instances to be persisted you must have Microsoft SQL Server installed and you must configure a database to store the persisted workflow instances.</span></span> <span data-ttu-id="d57e2-123">Eseguire Microsoft SQL Management Studio facendo clic di **avviare** pulsante, la selezione di **tutti i programmi**, **Microsoft SQL Server 2008**, e **Microsoft SQL Management Studio**.</span><span class="sxs-lookup"><span data-stu-id="d57e2-123">Run Microsoft SQL Management Studio by clicking the **Start** button, selecting **All Programs**, **Microsoft SQL Server 2008**, and **Microsoft SQL Management Studio**.</span></span>  
   
-2.  Fare clic sul pulsante **Connetti** per accedere all'istanza di SQL Server  
+2.  <span data-ttu-id="d57e2-124">Fare clic su di **Connetti** pulsante per accedere all'istanza di SQL Server</span><span class="sxs-lookup"><span data-stu-id="d57e2-124">Click the **Connect** button to log on to the SQL Server instance</span></span>  
   
-3.  Fare clic con il pulsante destro del mouse su **Database** nella visualizzazione albero e selezionare **Nuovo database** per creare un nuovo database denominato `SQLPersistenceStore`.  
+3.  <span data-ttu-id="d57e2-125">Fare clic destro **database** nella visualizzazione struttura ad albero e selezionare **Nuovo Database...**</span><span class="sxs-lookup"><span data-stu-id="d57e2-125">Right click **Databases** in the tree view and select **New Database..**</span></span> <span data-ttu-id="d57e2-126">Per creare un nuovo database denominato `SQLPersistenceStore`.</span><span class="sxs-lookup"><span data-stu-id="d57e2-126">to create a new database called `SQLPersistenceStore`.</span></span>  
   
-4.  Eseguire il file di script SqlWorkflowInstanceStoreSchema.sql presente nella directory C:\\Windows\\Microsoft.NET\\Framework\\v4.0\\SQL\\en del database SQLPersistenceStore per configurare gli schemi del database necessari.  
+4.  <span data-ttu-id="d57e2-127">Eseguire il file di script SqlWorkflowInstanceStoreSchema.sql presente nella directory C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en del database SQLPersistenceStore per configurare gli schemi del database necessari.</span><span class="sxs-lookup"><span data-stu-id="d57e2-127">Run the SqlWorkflowInstanceStoreSchema.sql script file located in the C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en directory on the SQLPersistenceStore database to set up the needed database schemas.</span></span>  
   
-5.  Eseguire il file di script SqlWorkflowInstanceStoreLogic.sql presente nella directory C:\\Windows\\Microsoft.NET\\Framework\\v4.0\\SQL\\en del database SQLPersistenceStore per configurare la logica del database necessaria.  
+5.  <span data-ttu-id="d57e2-128">Eseguire il file di script SqlWorkflowInstanceStoreLogic.sql presente nella directory C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en del database SQLPersistenceStore per configurare la logica del database necessaria.</span><span class="sxs-lookup"><span data-stu-id="d57e2-128">Run the SqlWorkflowInstanceStoreLogic.sql script file located in the C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en directory on the SQLPersistenceStore database to set up the needed database logic.</span></span>  
   
-### Per creare il servizio di flusso di lavoro ospitato dal Web  
+### <a name="to-create-the-web-hosted-workflow-service"></a><span data-ttu-id="d57e2-129">Per creare il servizio di flusso di lavoro ospitato dal Web</span><span class="sxs-lookup"><span data-stu-id="d57e2-129">To Create the Web Hosted Workflow Service</span></span>  
   
-1.  Creare una soluzione di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] vuota e denominarla `OrderProcessing`.  
+1.  <span data-ttu-id="d57e2-130">Creare una soluzione di [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] vuota e denominarla `OrderProcessing`.</span><span class="sxs-lookup"><span data-stu-id="d57e2-130">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution, name it `OrderProcessing`.</span></span>  
   
-2.  Aggiungere un nuovo progetto Applicazione di servizi flusso di lavoro [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] denominato `OrderService` alla soluzione.  
+2.  <span data-ttu-id="d57e2-131">Aggiungere un nuovo progetto Applicazione di servizi flusso di lavoro [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] denominato `OrderService` alla soluzione.</span><span class="sxs-lookup"><span data-stu-id="d57e2-131">Add a new [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Workflow Service Application project called `OrderService` to the solution.</span></span>  
   
-3.  Nella finestra di dialogo delle proprietà del progetto selezionare la scheda **Web**.  
+3.  <span data-ttu-id="d57e2-132">Nella finestra di dialogo proprietà del progetto, selezionare il **Web** scheda.</span><span class="sxs-lookup"><span data-stu-id="d57e2-132">In the project properties dialog, select the **Web** tab.</span></span>  
   
-    1.  In **Azione di avvio** selezionare **Pagina specifica**, quindi specificare `Service1.xamlx`.  
+    1.  <span data-ttu-id="d57e2-133">In **azione di avvio** selezionare **pagina specifica** e specificare `Service1.xamlx`.</span><span class="sxs-lookup"><span data-stu-id="d57e2-133">Under **Start Action** select **Specific Page** and specify `Service1.xamlx`.</span></span>  
   
-         ![Proprietà Web del progetto servizio flusso di lavoro](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")  
+         <span data-ttu-id="d57e2-134">![Proprietà Web del progetto servizio flusso di lavoro](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")</span><span class="sxs-lookup"><span data-stu-id="d57e2-134">![Workflow Service Project Web Properties](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")</span></span>  
   
-    2.  In **Server** selezionare **Usa server Web IIS locale**.  
+    2.  <span data-ttu-id="d57e2-135">In **server** selezionare **server Web IIS locale usare**.</span><span class="sxs-lookup"><span data-stu-id="d57e2-135">Under **Servers** select **Use Local IIS Web server**.</span></span>  
   
-         ![Impostazioni del server Web locale](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")  
+         <span data-ttu-id="d57e2-136">![Impostazioni del Server Web locale](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")</span><span class="sxs-lookup"><span data-stu-id="d57e2-136">![Local Web Server Settings](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")</span></span>  
   
         > [!WARNING]
-        >  Per effettuare tale impostazione, è necessario eseguire [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] in modalità amministratore.  
+        >  <span data-ttu-id="d57e2-137">Per effettuare tale impostazione, è necessario eseguire [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] in modalità amministratore.</span><span class="sxs-lookup"><span data-stu-id="d57e2-137">You must run [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] in administrator mode to make this setting.</span></span>  
   
-         Questi due passaggi consentono di configurare il progetto del servizio di flusso di lavoro che deve essere ospitato da IIS.  
+         <span data-ttu-id="d57e2-138">Questi due passaggi consentono di configurare il progetto del servizio di flusso di lavoro che deve essere ospitato da IIS.</span><span class="sxs-lookup"><span data-stu-id="d57e2-138">These two steps configure the workflow service project to be hosted by IIS.</span></span>  
   
-4.  Se non è già aperto, aprire `Service1.xamlx` ed eliminare le attività **ReceiveRequest** e **SendResponse** esistenti.  
+4.  <span data-ttu-id="d57e2-139">Aprire `Service1.xamlx` se è già aperto non ed eliminare quello esistente **ReceiveRequest** e **SendResponse** attività.</span><span class="sxs-lookup"><span data-stu-id="d57e2-139">Open `Service1.xamlx` if it is not open already and delete the existing **ReceiveRequest** and **SendResponse** activities.</span></span>  
   
-5.  Selezionare l'attività **Sequential Service**, fare clic sul collegamento **Variabili** e aggiungere le variabili mostrate nell'immagine seguente.  In questo modo verranno aggiunte alcune variabili che saranno utilizzate successivamente nel servizio di flusso di lavoro.  
+5.  <span data-ttu-id="d57e2-140">Selezionare il **servizio sequenziale** attività e fare clic su di **variabili** collegare e aggiungere le variabili mostrate nell'illustrazione seguente.</span><span class="sxs-lookup"><span data-stu-id="d57e2-140">Select the **Sequential Service** activity and click the **Variables** link and add the variables shown in the following illustration.</span></span> <span data-ttu-id="d57e2-141">In questo modo verranno aggiunte alcune variabili che saranno utilizzate successivamente nel servizio di flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="d57e2-141">Doing this adds some variables that will be used later on in the workflow service.</span></span>  
   
     > [!NOTE]
-    >  Se CorrelationHandle non è presente nell'elenco a discesa Tipo di variabile, selezionare **Cerca tipi** nell'elenco a discesa.  Digitare CorrelationHandle nella casella **Nome tipo**, selezionare CorrelationHandle nella casella di riepilogo e fare clic su **OK**.  
+    >  <span data-ttu-id="d57e2-142">Se CorrelationHandle non è presente nell'elenco a discesa tipo di variabile, selezionare **Cerca tipi** dall'elenco a discesa.</span><span class="sxs-lookup"><span data-stu-id="d57e2-142">If CorrelationHandle is not in the Variable Type drop-down, select **Browse for types** from the drop-down.</span></span> <span data-ttu-id="d57e2-143">Digitare CorrelationHandle nella **nome del tipo** , selezionare CorrelationHandle nella casella di riepilogo e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="d57e2-143">Type CorrelationHandle in the **Type name** box, select CorrelationHandle from the listbox and click **OK**.</span></span>  
   
-     ![Aggiungere variabili](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")  
+     <span data-ttu-id="d57e2-144">![Aggiungere variabili](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")</span><span class="sxs-lookup"><span data-stu-id="d57e2-144">![Add Variables](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")</span></span>  
   
-6.  Trascinare un modello di attività **ReceiveAndSendReply** nell'attività **Sequential Service**.  Un messaggio inviato da un client verrà ricevuto da questo set di attività tramite cui, a sua volta, verrà restituita una risposta.  
+6.  <span data-ttu-id="d57e2-145">Trascinare e rilasciare un **ReceiveAndSendReply** il modello di attività nel **servizio sequenziale** attività.</span><span class="sxs-lookup"><span data-stu-id="d57e2-145">Drag and drop a **ReceiveAndSendReply** activity template into the **Sequential Service** activity.</span></span> <span data-ttu-id="d57e2-146">Un messaggio inviato da un client verrà ricevuto da questo set di attività tramite cui, a sua volta, verrà restituita una risposta.</span><span class="sxs-lookup"><span data-stu-id="d57e2-146">This set of activities will receive a message from a client and send a reply back.</span></span>  
   
-    1.  Selezionare l'attività **Receive** e impostare le proprietà evidenziate nell'immagine seguente.  
+    1.  <span data-ttu-id="d57e2-147">Selezionare il **ricezione** attività e impostare le proprietà evidenziate nella figura seguente.</span><span class="sxs-lookup"><span data-stu-id="d57e2-147">Select the **Receive** activity and set the properties highlighted in the following illustration.</span></span>  
   
-         ![Impostare le proprietà dell'attività Receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
+         <span data-ttu-id="d57e2-148">![Impostare le proprietà di attività Receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")</span><span class="sxs-lookup"><span data-stu-id="d57e2-148">![Set Receive Activity Properties](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")</span></span>  
   
-         La proprietà DisplayName consente di impostare il nome visualizzato per l'attività Receive nella finestra di progettazione.  Le proprietà ServiceContractName e OperationName specificano il nome del contratto di servizio e della relativa operazione implementati dall'attività Receive.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]lla modalità di utilizzo dei contratti nei servizi di flusso di lavoro, vedere [Utilizzo di contratti nel flusso di lavoro](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
+         <span data-ttu-id="d57e2-149">La proprietà DisplayName consente di impostare il nome visualizzato per l'attività Receive nella finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="d57e2-149">The DisplayName property sets the name displayed for the Receive activity in the designer.</span></span> <span data-ttu-id="d57e2-150">Le proprietà ServiceContractName e OperationName specificano il nome del contratto di servizio e della relativa operazione implementati dall'attività Receive.</span><span class="sxs-lookup"><span data-stu-id="d57e2-150">The ServiceContractName and OperationName properties specify the name of the service contract and operation that are implemented by the Receive activity.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="d57e2-151">la modalità di utilizzo dei contratti nel flusso di lavoro servizi vedere [uso di contratti nel flusso di lavoro](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="d57e2-151"> how contracts are used in Workflow services see [Using Contracts in Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).</span></span>  
   
-    2.  Fare clic sul collegamento **Definisci** nell'attività **ReceiveStartOrder** e impostare le proprietà mostrate nell'immagine seguente.  Si noti che il pulsante di opzione **Parametri** è selezionato, mentre un parametro denominato `p_customerName` è associato alla variabile `customerName`.  In questo modo, l'attività **Receive** viene configurata per ricevere dati e associare questi ultimi alle variabili locali.  
+    2.  <span data-ttu-id="d57e2-152">Fare clic su di **definire...**  collegare il **ReceiveStartOrder** attività e impostare le proprietà mostrate nell'illustrazione seguente.</span><span class="sxs-lookup"><span data-stu-id="d57e2-152">Click the **Define...** link in the **ReceiveStartOrder** activity and set the properties shown in the following illustration.</span></span>  <span data-ttu-id="d57e2-153">Si noti che il **parametri** pulsante di opzione è selezionata, un parametro denominato `p_customerName` è associato il `customerName` variabile.</span><span class="sxs-lookup"><span data-stu-id="d57e2-153">Notice that the **Parameters** radio button is selected, a parameter named `p_customerName` is bound to the `customerName` variable.</span></span> <span data-ttu-id="d57e2-154">In questo modo il **ricezione** attività per la ricezione di alcuni dati e associarli a variabili locali.</span><span class="sxs-lookup"><span data-stu-id="d57e2-154">This configures the **Receive** activity to receive some data and bind that data to local variables.</span></span>  
   
-         ![Impostazione dei dati ricevuti dall'attività Receive](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")  
+         <span data-ttu-id="d57e2-155">![Impostazione dei dati ricevuti dall'attività Receive](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")</span><span class="sxs-lookup"><span data-stu-id="d57e2-155">![Setting the data received by the Receive activity](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")</span></span>  
   
-    3.  Selezionare l'attività **SendReplyToReceive** e impostare la proprietà evidenziata mostrata nell'immagine seguente.  
+    3.  <span data-ttu-id="d57e2-156">Selezionare il **SendReplyToReceive** attività e impostare la proprietà evidenziata mostrata nella figura seguente.</span><span class="sxs-lookup"><span data-stu-id="d57e2-156">Select The **SendReplyToReceive** activity and set the highlighted property shown in the following illustration.</span></span>  
   
-         ![Impostazione delle proprietà dell'attività SendReply](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")  
+         <span data-ttu-id="d57e2-157">![Impostazione delle proprietà dell'attività SendReply](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")</span><span class="sxs-lookup"><span data-stu-id="d57e2-157">![Setting the properties of the SendReply activity](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")</span></span>  
   
-    4.  Fare clic sul collegamento **Definisci** nell'attività **SendReplyToStartOrder** e impostare le proprietà mostrate nell'immagine seguente.  Si noti che il pulsante di opzione **Parametri** è selezionato, mentre un parametro denominato `p_orderId` è associato alla variabile `orderId`.  Questa impostazione consente di specificare che tramite l'attività SendReplyToStartOrder verrà restituito un valore di tipo stringa al chiamante.  
+    4.  <span data-ttu-id="d57e2-158">Fare clic su di **definire...**  collegare il **SendReplyToStartOrder** attività e impostare le proprietà mostrate nell'illustrazione seguente.</span><span class="sxs-lookup"><span data-stu-id="d57e2-158">Click the **Define...** link in the **SendReplyToStartOrder** activity and set the properties shown in the following illustration.</span></span> <span data-ttu-id="d57e2-159">Si noti che il **parametri** pulsante di opzione è selezionata, mentre un parametro denominato `p_orderId` è associato il `orderId` variabile.</span><span class="sxs-lookup"><span data-stu-id="d57e2-159">Notice that the **Parameters** radio button is selected; a parameter named `p_orderId` is bound to the `orderId` variable.</span></span> <span data-ttu-id="d57e2-160">Questa impostazione consente di specificare che tramite l'attività SendReplyToStartOrder verrà restituito un valore di tipo stringa al chiamante.</span><span class="sxs-lookup"><span data-stu-id="d57e2-160">This setting specifies that the SendReplyToStartOrder activity will return a value of type string to the caller.</span></span>  
   
-         ![Configurazione dei dati di contenuto dell'attività SendReply](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")  
+         <span data-ttu-id="d57e2-161">![Configurazione dei dati di contenuto dell'attività SendReply](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")</span><span class="sxs-lookup"><span data-stu-id="d57e2-161">![Configuring the SendReply activity content data](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")</span></span>  
   
-        > [!NOTE]
-    5.  Trascinare un'attività Assign tra le attività **Receive** e **SendReply** e impostare le proprietà come mostrato nell'immagine seguente:  
+    5.  <span data-ttu-id="d57e2-162">Trascinare e rilasciare un'attività Assign tra le **ricezione** e **SendReply** le attività e impostare le proprietà, come illustrato nella figura seguente:</span><span class="sxs-lookup"><span data-stu-id="d57e2-162">Drag and drop an Assign activity in between the **Receive** and **SendReply** activities and set the properties as shown in the following illustration:</span></span>  
   
-         ![Aggiunta di un'attività Assign](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")  
+         <span data-ttu-id="d57e2-163">![Aggiunta di un'attività assign](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")</span><span class="sxs-lookup"><span data-stu-id="d57e2-163">![Adding an assign activity](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")</span></span>  
   
-         In questo modo viene creato un nuovo ID ordine e il valore viene inserito nella variabile orderId.  
+         <span data-ttu-id="d57e2-164">In questo modo viene creato un nuovo ID ordine e il valore viene inserito nella variabile orderId.</span><span class="sxs-lookup"><span data-stu-id="d57e2-164">This creates a new order ID and places the value in the orderId variable.</span></span>  
   
-    6.  Selezionare l'attività **ReplyToStartOrder**.  Nella finestra delle proprietà fare clic sul pulsante con i puntini di sospensione per **CorrelationInitializers**.  Selezionare il collegamento **Aggiungi inizializzatore**, immettere `orderIdHandle` nella casella di testo dell'inizializzatore, selezionare l'inizializzatore correlazione query per il tipo di correlazione, quindi scegliere p\_orderId nella casella a discesa Query XPATH.  Queste impostazioni sono mostrate nell'immagine seguente.  Fare clic su **OK**.  Tale operazione consente di inizializzare una correlazione tra il client e questa istanza del servizio di flusso di lavoro.  Quando viene ricevuto un messaggio contenente questo ID ordine, viene indirizzato a questa istanza del servizio di flusso di lavoro.  
+    6.  <span data-ttu-id="d57e2-165">Selezionare il **ReplyToStartOrder** attività.</span><span class="sxs-lookup"><span data-stu-id="d57e2-165">Select the **ReplyToStartOrder** activity.</span></span> <span data-ttu-id="d57e2-166">Nella finestra Proprietà fare clic sul pulsante con puntini di sospensione per **CorrelationInitializers**.</span><span class="sxs-lookup"><span data-stu-id="d57e2-166">In the properties window click the ellipsis button for **CorrelationInitializers**.</span></span> <span data-ttu-id="d57e2-167">Selezionare il **aggiungere inizializzatore** collegare, immettere `orderIdHandle` nella casella di testo dell'inizializzatore, selezionare l'inizializzatore correlazione Query per il tipo di correlazione, quindi scegliere p_orderId nella casella a discesa query XPATH.</span><span class="sxs-lookup"><span data-stu-id="d57e2-167">Select the **Add initializer** link, enter `orderIdHandle` in the Initializer text box, select Query correlation initializer for the Correlation type, and select p_orderId under the XPATH Queries dropdown box.</span></span> <span data-ttu-id="d57e2-168">Queste impostazioni sono mostrate nell'immagine seguente.</span><span class="sxs-lookup"><span data-stu-id="d57e2-168">These settings are shown in the following illustration.</span></span> <span data-ttu-id="d57e2-169">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="d57e2-169">Click **OK**.</span></span>  <span data-ttu-id="d57e2-170">Tale operazione consente di inizializzare una correlazione tra il client e questa istanza del servizio di flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="d57e2-170">This initializes a correlation between the client and this instance of the workflow service.</span></span> <span data-ttu-id="d57e2-171">Quando viene ricevuto un messaggio contenente questo ID ordine, viene indirizzato a questa istanza del servizio di flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="d57e2-171">When a message containing this order ID is received it is routed to this instance of the workflow service.</span></span>  
   
-         ![Aggiunta di un inizializzatore di correlazione](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")  
+         <span data-ttu-id="d57e2-172">![Aggiunta di un inizializzatore di correlazione](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")</span><span class="sxs-lookup"><span data-stu-id="d57e2-172">![Adding a correlation initializer](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")</span></span>  
   
-7.  Trascinare un'altra attività **ReceiveAndSendReply** alla fine del flusso di lavoro \(all'esterno della **Sequenza** contenente le prime attività **Receive** e **SendReply**\).  Un secondo messaggio inviato dal client verrà ricevuto dal flusso di lavoro tramite cui, a sua volta, verrà fornita una risposta.  
+7.  <span data-ttu-id="d57e2-173">Trascinare e rilasciare un altro **ReceiveAndSendReply** attività alla fine del flusso di lavoro (all'esterno di **sequenza** contenente le prime **ricezione** e  **SendReply** attività).</span><span class="sxs-lookup"><span data-stu-id="d57e2-173">Drag and drop another **ReceiveAndSendReply** activity to the end of the workflow (outside the **Sequence** containing the first **Receive** and **SendReply** activities).</span></span> <span data-ttu-id="d57e2-174">Un secondo messaggio inviato dal client verrà ricevuto dal flusso di lavoro tramite cui, a sua volta, verrà fornita una risposta.</span><span class="sxs-lookup"><span data-stu-id="d57e2-174">This will receive the second message sent by the client and respond to it.</span></span>  
   
-    1.  Selezionare la **Sequenza** contenente le attività **Receive** e **SendReply** appena aggiunte e fare clic sul pulsante **Variabili**.  Aggiungere la variabile evidenziata nell'immagine seguente:  
+    1.  <span data-ttu-id="d57e2-175">Selezionare il **sequenza** contenente appena aggiunta **ricezione** e **SendReply** le attività e fare clic su di **variabili** pulsante.</span><span class="sxs-lookup"><span data-stu-id="d57e2-175">Select the **Sequence** that contains the newly added **Receive** and **SendReply** activities and click the **Variables** button.</span></span> <span data-ttu-id="d57e2-176">Aggiungere la variabile evidenziata nell'immagine seguente:</span><span class="sxs-lookup"><span data-stu-id="d57e2-176">Add the variable highlighted in the following illustration:</span></span>  
   
-         ![Aggiunta di nuove variabili](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")  
+         <span data-ttu-id="d57e2-177">![Aggiunta di nuove variabili](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")</span><span class="sxs-lookup"><span data-stu-id="d57e2-177">![Adding new variables](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")</span></span>  
   
-    2.  Selezionare l'attività **Receive** e impostare le proprietà mostrate nell'immagine seguente:  
+    2.  <span data-ttu-id="d57e2-178">Selezionare il **ricezione** attività e impostare le proprietà mostrate nell'illustrazione seguente:</span><span class="sxs-lookup"><span data-stu-id="d57e2-178">Select the **Receive** activity and set the properties shown in the following illustration:</span></span>  
   
-         ![Impostare le proprietà dell'attività Receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")  
+         <span data-ttu-id="d57e2-179">![Impostare la proprietà dell'attività Receive](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")</span><span class="sxs-lookup"><span data-stu-id="d57e2-179">![Set the Receive acitivity properties](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")</span></span>  
   
-    3.  Fare clic sul collegamento **Definisci** nell'attività **ReceiveAddItem** e aggiungere i parametri mostrati nell'immagine seguente. In questo modo l'attività Receive viene configurata per accettare due parametri, l'ID ordine e l'ID dell'elemento ordinato.  
+    3.  <span data-ttu-id="d57e2-180">Fare clic su di **definire...**  collegare il **ReceiveAddItem** attività e aggiungere i parametri riportati nella figura seguente: questa impostazione configura l'attività di ricezione per accettare due parametri, l'ID dell'ordine e l'ID dell'elemento da ordinare.</span><span class="sxs-lookup"><span data-stu-id="d57e2-180">Click the **Define...** link in the **ReceiveAddItem** activity and add the parameters shown in the following illustration:This configures the receive activity to accept two parameters, the order ID and the ID of the item being ordered.</span></span>  
   
-         ![Specificazione di parametri per la seconda ricezione](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
+         <span data-ttu-id="d57e2-181">![Specificare i parametri per la seconda ricevano](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")</span><span class="sxs-lookup"><span data-stu-id="d57e2-181">![Specifying parameters for the second receive](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")</span></span>  
   
-    4.  Fare clic sul pulsante con i puntini di sospensione **CorrelateOn** e immettere `orderIdHandle`.  In **Query XPath** fare clic sulla freccia a discesa e selezionare `p_orderId`.  In questo modo la correlazione viene configurata sulla seconda attività Receive.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]lla correlazione, vedere [Correlazione](../../../../docs/framework/wcf/feature-details/correlation.md).  
+    4.  <span data-ttu-id="d57e2-182">Fare clic su di **CorrelateOn** i puntini di sospensione pulsante e immettere `orderIdHandle`.</span><span class="sxs-lookup"><span data-stu-id="d57e2-182">Click the **CorrelateOn** ellipsis button and enter `orderIdHandle`.</span></span> <span data-ttu-id="d57e2-183">In **query XPath**fare clic sulla freccia a discesa e selezionare `p_orderId`.</span><span class="sxs-lookup"><span data-stu-id="d57e2-183">Under **XPath Queries**, click the drop down arrow and select `p_orderId`.</span></span> <span data-ttu-id="d57e2-184">In questo modo la correlazione viene configurata sulla seconda attività Receive.</span><span class="sxs-lookup"><span data-stu-id="d57e2-184">This configures the correlation on the second receive activity.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="d57e2-185">sulla correlazione, vedere [correlazione](../../../../docs/framework/wcf/feature-details/correlation.md).</span><span class="sxs-lookup"><span data-stu-id="d57e2-185"> correlation see [Correlation](../../../../docs/framework/wcf/feature-details/correlation.md).</span></span>  
   
-         ![Impostazione della proprietà CorrelatesOn](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
+         <span data-ttu-id="d57e2-186">![Impostazione della proprietà CorrelatesOn](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")</span><span class="sxs-lookup"><span data-stu-id="d57e2-186">![Setting the CorrelatesOn property](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")</span></span>  
   
-    5.  Trascinare un'attività **If** immediatamente dopo l'attività **ReceiveAddItem**.  Il comportamento di questa attività è uguale a quello di un'istruzione IF.  
+    5.  <span data-ttu-id="d57e2-187">Trascinare e rilasciare un **se** attività immediatamente dopo il **ReceiveAddItem** attività.</span><span class="sxs-lookup"><span data-stu-id="d57e2-187">Drag and drop an **If** activity immediately after the **ReceiveAddItem** activity.</span></span> <span data-ttu-id="d57e2-188">Il comportamento di questa attività è uguale a quello di un'istruzione IF.</span><span class="sxs-lookup"><span data-stu-id="d57e2-188">This activity acts just like an if statement.</span></span>  
   
-        1.  Impostare la proprietà **Condition** su `itemId==”Zune HD” (itemId=”Zune HD” for Visual Basic)`  
+        1.  <span data-ttu-id="d57e2-189">Impostare il **condizione** proprietà`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`</span><span class="sxs-lookup"><span data-stu-id="d57e2-189">Set the **Condition** property to `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`</span></span>  
   
-        2.  Trascinare un'attività **Assign** nella sezione **Then** e un'altra nella sezione **Else**, quindi impostare le proprietà delle attività **Assign** come mostrato nell'immagine seguente.  
+        2.  <span data-ttu-id="d57e2-190">Trascinare e rilasciare un **assegnare** attività per il **quindi** sezione e un'altra nella **Else** sezione impostata le proprietà del **assegnare** attività, come illustrato nella figura seguente.</span><span class="sxs-lookup"><span data-stu-id="d57e2-190">Drag and drop an **Assign** activity in to the **Then** section and another into the **Else** section set the properties of the **Assign** activities as shown in the following illustration.</span></span>  
   
-             ![Assegnazione del risultato alla chiamata di servizio](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")  
+             <span data-ttu-id="d57e2-191">![L'assegnazione del risultato della chiamata al servizio](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")</span><span class="sxs-lookup"><span data-stu-id="d57e2-191">![Assigning the result of the service call](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")</span></span>  
   
-             Se la condizione è `true`, verrà eseguita la sezione **Then**.  Se la condizione è `false`, verrà eseguita la sezione **Else**.  
+             <span data-ttu-id="d57e2-192">Se la condizione è `true` il **quindi** sezione verrà eseguita.</span><span class="sxs-lookup"><span data-stu-id="d57e2-192">If the condition is `true` the **Then** section will be executed.</span></span> <span data-ttu-id="d57e2-193">Se la condizione è `false` il **Else** sezione viene eseguita.</span><span class="sxs-lookup"><span data-stu-id="d57e2-193">If the condition is `false` the **Else** section is executed.</span></span>  
   
-        3.  Selezionare l'attività **SendReplyToReceive** e impostare la proprietà **DisplayName** mostrata nell'immagine seguente.  
+        3.  <span data-ttu-id="d57e2-194">Selezionare il **SendReplyToReceive** attività e impostare il **DisplayName** proprietà illustrata nella figura seguente.</span><span class="sxs-lookup"><span data-stu-id="d57e2-194">Select the **SendReplyToReceive** activity and set the **DisplayName** property shown in the following illustration.</span></span>  
   
-             ![Impostazione delle proprietà dell'attività SendReply](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")  
+             <span data-ttu-id="d57e2-195">![Impostazione delle proprietà dell'attività SendReply](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")</span><span class="sxs-lookup"><span data-stu-id="d57e2-195">![Setting the SendReply activity properties](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")</span></span>  
   
-        4.  Fare clic sul collegamento **Definisci** nell'attività **SetReplyToAddItem** e configurarlo come mostrato nell'immagine seguente.  In questo modo l'attività **SendReplyToAddItem** viene configurata per restituire il valore nella variabile `orderResult`.  
+        4.  <span data-ttu-id="d57e2-196">Fare clic su di **definire...**  collegare il **SetReplyToAddItem** attività e configurarlo come mostrato nella figura seguente.</span><span class="sxs-lookup"><span data-stu-id="d57e2-196">Click the **Define ...** link in the **SetReplyToAddItem** activity and configure it as shown in the following illustration.</span></span> <span data-ttu-id="d57e2-197">In questo modo il **SendReplyToAddItem** attività per restituire il valore di `orderResult` variabile.</span><span class="sxs-lookup"><span data-stu-id="d57e2-197">This configures the **SendReplyToAddItem** activity to return the value in the `orderResult` variable.</span></span>  
   
-             ![Impostazione del data binding per l'attività SendReply](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")  
+             <span data-ttu-id="d57e2-198">![Impostazione del data binding per l'attività SendReply](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")</span><span class="sxs-lookup"><span data-stu-id="d57e2-198">![Setting the data binding for the SendReply activit](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")</span></span>  
   
-8.  Aprire il file web.config e aggiungere gli elementi seguenti nella sezione \<behavior\> per abilitare il salvataggio permanente del flusso di lavoro.  
+8.  <span data-ttu-id="d57e2-199">Aprire il file Web. config e aggiungere gli elementi seguenti nel \<comportamento > sezione per abilitare la persistenza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="d57e2-199">Open the web.config file and add the following elements in the \<behavior> section to enable workflow persistence.</span></span>  
   
     ```xml  
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />  
               <workflowIdle timeToUnload="0"/>  
-  
     ```  
   
     > [!WARNING]
-    >  Assicurarsi di sostituire l'host e il nome dell'istanza di SQL Server nel frammento di codice precedente.  
+    >  <span data-ttu-id="d57e2-200">Assicurarsi di sostituire l'host e il nome dell'istanza di SQL Server nel frammento di codice precedente.</span><span class="sxs-lookup"><span data-stu-id="d57e2-200">Make sure to replace your host and SQL server instance name in the previous code snippet.</span></span>  
   
-9. Compilare la soluzione.  
+9. <span data-ttu-id="d57e2-201">Compilare la soluzione.</span><span class="sxs-lookup"><span data-stu-id="d57e2-201">Build the solution.</span></span>  
   
-### Per creare un'applicazione client e chiamare il servizio di flusso di lavoro  
+### <a name="to-create-a-client-application-to-call-the-workflow-service"></a><span data-ttu-id="d57e2-202">Per creare un'applicazione client e chiamare il servizio di flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="d57e2-202">To Create a Client Application to Call the Workflow Service</span></span>  
   
-1.  Aggiungere un nuovo progetto di applicazione console denominato `OrderClient` alla soluzione.  
+1.  <span data-ttu-id="d57e2-203">Aggiungere un nuovo progetto di applicazione console denominato `OrderClient` alla soluzione.</span><span class="sxs-lookup"><span data-stu-id="d57e2-203">Add a new Console application project called `OrderClient` to the solution.</span></span>  
   
-2.  Aggiungere riferimenti agli assembly seguenti al progetto `OrderClient`  
+2.  <span data-ttu-id="d57e2-204">Aggiungere riferimenti agli assembly seguenti al progetto `OrderClient`</span><span class="sxs-lookup"><span data-stu-id="d57e2-204">Add references to the following assemblies to the `OrderClient` project</span></span>  
   
-    1.  System.ServiceModel.dll  
+    1.  <span data-ttu-id="d57e2-205">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="d57e2-205">System.ServiceModel.dll</span></span>  
   
-    2.  System.ServiceModel.Activities.dll  
+    2.  <span data-ttu-id="d57e2-206">System.ServiceModel.Activities.dll</span><span class="sxs-lookup"><span data-stu-id="d57e2-206">System.ServiceModel.Activities.dll</span></span>  
   
-3.  Aggiungere un riferimento al servizio di flusso di lavoro e specificare `OrderService` come spazio dei nomi.  
+3.  <span data-ttu-id="d57e2-207">Aggiungere un riferimento al servizio di flusso di lavoro e specificare `OrderService` come spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="d57e2-207">Add a service reference to the workflow service and specify `OrderService` as the namespace.</span></span>  
   
-4.  Nel metodo `Main()` del progetto client aggiungere il codice seguente:  
+4.  <span data-ttu-id="d57e2-208">Nel metodo `Main()` del progetto client aggiungere il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="d57e2-208">In the `Main()` method of the client project add the following code:</span></span>  
   
     ```  
     static void Main(string[] args)  
@@ -189,29 +190,23 @@ In questo argomento viene descritto come creare un servizio di flusso di lavoro 
        string orderResult = addProxy.AddItem(item);  
        Console.WriteLine("Service returned: " + orderResult);  
     }  
-  
     ```  
   
-5.  Compilare la soluzione ed eseguire l'applicazione `OrderClient`.  Nel client verrà visualizzato il testo seguente:  
+5.  <span data-ttu-id="d57e2-209">Compilare la soluzione ed eseguire l'applicazione `OrderClient`.</span><span class="sxs-lookup"><span data-stu-id="d57e2-209">Build the solution and run the `OrderClient` application.</span></span> <span data-ttu-id="d57e2-210">Nel client verrà visualizzato il testo seguente:</span><span class="sxs-lookup"><span data-stu-id="d57e2-210">The client will display the following text:</span></span>  
   
     ```Output  
-  
-                  Sending start message  
-    Workflow service is idle...  Press [ENTER] to send an add item message to reactivate the workflow service...    
+    Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...  
     ```  
   
-6.  Per verificare che il servizio di flusso di lavoro sia stato salvato in modo permanente, avviare SQL Server Management Studio facendo clic sul menu **Start**, selezionando **Tutti i programmi**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**.  
+6.  <span data-ttu-id="d57e2-211">Per verificare che il servizio del flusso di lavoro è stata resa persistente, avviare SQL Server Management Studio visitando il **avviare** dal menu selezionando **tutti i programmi**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**.</span><span class="sxs-lookup"><span data-stu-id="d57e2-211">To verify that the workflow service has been persisted, start the SQL Server Management Studio by going to the **Start** menu, Selecting **All Programs**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**.</span></span>  
   
-    1.  Nel riquadro di sinistra espandere **Database**, **SQLPersistenceStore**, **Visualizzazioni**, fare clic con il pulsante destro del mouse su **System.Activities.DurableInstancing.Instances**, quindi selezionare **Seleziona le prime 1000 righe**.  Nel riquadro **Risultati** verificare che sia elencata almeno un'istanza.  Se durante l'esecuzione si è verificata un'eccezione potrebbero essere presenti altre istanze di esecuzioni precedenti.  È possibile eliminare le righe esistenti facendo clic con il pulsante destro del mouse su **System.Activities.DurableInstancing.Instances**, selezionando **Modifica le prime 200 righe**, premendo il pulsante **Esegui**, selezionando tutte le righe nel riquadro dei risultati e scegliendo **Elimina**.  Per verificare che l'istanza visualizzata nel database sia l'istanza creata dall'applicazione, controllare che la visualizzazione delle istanze sia vuota prima di eseguire il client.  Quando il client è in esecuzione, eseguire di nuovo la query \(Seleziona le prime 1000 righe\) e verificare che sia stata aggiunta una nuova istanza.  
+    1.  <span data-ttu-id="d57e2-212">Nel riquadro di sinistra espandere **database**, **SQLPersistenceStore**, **viste** e fare clic destro **System.Activities.DurableInstancing.Instances**  e selezionare **seleziona le prime 1000 righe**.</span><span class="sxs-lookup"><span data-stu-id="d57e2-212">In the left hand pane expand, **Databases**, **SQLPersistenceStore**, **Views** and right click **System.Activities.DurableInstancing.Instances** and select **Select Top 1000 Rows**.</span></span> <span data-ttu-id="d57e2-213">Nel **risultati** riquadro verificare venga visualizzato almeno un'istanza elencata.</span><span class="sxs-lookup"><span data-stu-id="d57e2-213">In the **Results** pane verify you see at least one instance listed.</span></span> <span data-ttu-id="d57e2-214">Se durante l'esecuzione si è verificata un'eccezione potrebbero essere presenti altre istanze di esecuzioni precedenti.</span><span class="sxs-lookup"><span data-stu-id="d57e2-214">There may be other instances from prior runs if an exception occurred while running.</span></span> <span data-ttu-id="d57e2-215">È possibile eliminare righe esistenti facendo clic **System.Activities.DurableInstancing.Instances** e selezionando **modifica le prime 200 righe**, premendo il **Execute** pulsante Selezionare tutte le righe nel riquadro dei risultati e **eliminare**.</span><span class="sxs-lookup"><span data-stu-id="d57e2-215">You can delete existing rows by right clicking **System.Activities.DurableInstancing.Instances** and selecting **Edit Top 200 rows**, pressing the **Execute** button, selecting all rows in the results pane and selecting **delete**.</span></span>  <span data-ttu-id="d57e2-216">Per verificare che l'istanza visualizzata nel database sia l'istanza creata dall'applicazione, controllare che la visualizzazione delle istanze sia vuota prima di eseguire il client.</span><span class="sxs-lookup"><span data-stu-id="d57e2-216">To verify the instance displayed in the database is the instance your application created, verify the instances view is empty prior to running the client.</span></span> <span data-ttu-id="d57e2-217">Quando il client è in esecuzione, eseguire di nuovo la query (Seleziona le prime 1000 righe) e verificare che sia stata aggiunta una nuova istanza.</span><span class="sxs-lookup"><span data-stu-id="d57e2-217">Once the client is running re-run the query (Select Top 1000 Rows) and verify a new instance has been added.</span></span>  
   
-7.  Premere INVIO per inviare il messaggio relativo all'aggiunta di elementi al servizio di flusso di lavoro.  Nel client verrà visualizzato il testo seguente:  
+7.  <span data-ttu-id="d57e2-218">Premere INVIO per inviare il messaggio relativo all'aggiunta di elementi al servizio di flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="d57e2-218">Press enter to send the add item message to the workflow service.</span></span> <span data-ttu-id="d57e2-219">Nel client verrà visualizzato il testo seguente:</span><span class="sxs-lookup"><span data-stu-id="d57e2-219">The client will display the following text:</span></span>  
   
     ```Output  
-  
-                  Sending add item message  
-    Service returned: Item added to order  
-    Premere un tasto qualsiasi per continuare.  .  .    
+    Sending add item messageService returned: Item added to orderPress any key to continue . . .  
     ```  
   
-## Vedere anche  
- [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+## <a name="see-also"></a><span data-ttu-id="d57e2-220">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d57e2-220">See Also</span></span>  
+ [<span data-ttu-id="d57e2-221">Servizi flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="d57e2-221">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)

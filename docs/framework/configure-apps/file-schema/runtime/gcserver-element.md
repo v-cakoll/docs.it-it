@@ -1,93 +1,93 @@
 ---
-title: "Elemento &lt;gcServer&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#gcServer"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<gcServer> (elemento)"
-  - "gcServer (elemento)"
+title: '&lt;gcServer&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#gcServer
+helpviewer_keywords:
+- gcServer element
+- <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 54142a75d178eb1c12e4b182df1dab9bff957ec6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;gcServer&gt;
-Specifica se Common Language Runtime esegue Garbage Collection per server.  
+# <a name="ltgcservergt-element"></a><span data-ttu-id="b7843-102">&lt;gcServer&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="b7843-102">&lt;gcServer&gt; Element</span></span>
+<span data-ttu-id="b7843-103">Specifica se Common Language Runtime esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="b7843-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
   
-## Sintassi  
+ <span data-ttu-id="b7843-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b7843-104">\<configuration></span></span>  
+<span data-ttu-id="b7843-105">\<runtime ></span><span class="sxs-lookup"><span data-stu-id="b7843-105">\<runtime></span></span>  
+<span data-ttu-id="b7843-106">\<gcServer ></span><span class="sxs-lookup"><span data-stu-id="b7843-106">\<gcServer></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="b7843-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b7843-107">Syntax</span></span>  
+  
+```xml  
 <gcServer    
    enabled="true|false"/>  
 ```  
   
-## Attributi ed elementi  
- Le sezioni seguenti descrivono gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b7843-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="b7843-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="b7843-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="b7843-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Attributi  
+### <a name="attributes"></a><span data-ttu-id="b7843-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="b7843-110">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="b7843-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="b7843-111">Attribute</span></span>|<span data-ttu-id="b7843-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b7843-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|Attributo obbligatorio.<br /><br /> Specifica se il runtime esegue Garbage Collection per server.|  
+|`enabled`|<span data-ttu-id="b7843-113">Attributo obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="b7843-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="b7843-114">Specifica se il runtime esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="b7843-114">Specifies whether the runtime runs server garbage collection.</span></span>|  
   
-## Attributo enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="b7843-115">Attributo enabled</span><span class="sxs-lookup"><span data-stu-id="b7843-115">enabled Attribute</span></span>  
   
-|Valore|Descrizione|  
-|------------|-----------------|  
-|`false`|Non esegue Garbage Collection per server.  Questa è l'impostazione predefinita.|  
-|`true`|Esegue Garbage Collection per server.|  
+|<span data-ttu-id="b7843-116">Valore</span><span class="sxs-lookup"><span data-stu-id="b7843-116">Value</span></span>|<span data-ttu-id="b7843-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b7843-117">Description</span></span>|  
+|-----------|-----------------|  
+|`false`|<span data-ttu-id="b7843-118">Non esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="b7843-118">Does not run server garbage collection.</span></span> <span data-ttu-id="b7843-119">Questa è l'impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="b7843-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="b7843-120">Esegue Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="b7843-120">Runs server garbage collection.</span></span>|  
   
-### Elementi figlio  
- Nessuno.  
+### <a name="child-elements"></a><span data-ttu-id="b7843-121">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="b7843-121">Child Elements</span></span>  
+ <span data-ttu-id="b7843-122">Nessuno.</span><span class="sxs-lookup"><span data-stu-id="b7843-122">None.</span></span>  
   
-### Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="b7843-123">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="b7843-123">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
-|--------------|-----------------|  
-|`configuration`|Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.|  
-|`runtime`|Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.|  
+|<span data-ttu-id="b7843-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="b7843-124">Element</span></span>|<span data-ttu-id="b7843-125">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b7843-125">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="b7843-126">Elemento radice in ciascun file di configurazione usato in Common Language Runtime e nelle applicazioni .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b7843-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="b7843-127">Contiene informazioni sull'associazione degli assembly e sull'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="b7843-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Note  
- Common Language Runtime \(CLR\) supporta due tipi di Garbage Collection: Garbage Collection per workstation, disponibile in tutti i sistemi, e Garbage Collection per server, disponibile nei sistemi con più processori.  Si usa l'elemento `<gcServer>` per controllare il tipo di Garbage Collection eseguito da CLR.  Usare la proprietà <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=fullName> per determinare se l'operazione Garbage Collection per server è abilitata.  
+## <a name="remarks"></a><span data-ttu-id="b7843-128">Note</span><span class="sxs-lookup"><span data-stu-id="b7843-128">Remarks</span></span>  
+ <span data-ttu-id="b7843-129">Common Language Runtime (CLR) supporta due tipi di Garbage Collection: Garbage Collection per workstation, disponibile in tutti i sistemi, e Garbage Collection per server, disponibile nei sistemi con più processori.</span><span class="sxs-lookup"><span data-stu-id="b7843-129">The common language runtime (CLR) supports two types of garbage collection: workstation garbage collection, which is available on all systems, and server garbage collection, which is available on multiprocessor systems.</span></span> <span data-ttu-id="b7843-130">Si usa l'elemento `<gcServer>` per controllare il tipo di Garbage Collection eseguito da CLR.</span><span class="sxs-lookup"><span data-stu-id="b7843-130">You use the `<gcServer>` element to control the type of garbage collection the CLR performs.</span></span> <span data-ttu-id="b7843-131">Usare la proprietà <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> per determinare se l'operazione Garbage Collection per server è abilitata.</span><span class="sxs-lookup"><span data-stu-id="b7843-131">Use the <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> property to determine if server garbage collection is enabled.</span></span>  
   
- Per i computer con un solo processore, l'operazione di Garbage Collection per workstation predefinita dovrebbe essere l'opzione più rapida.  Per i computer con due processori, si può usare quella per workstation o quella per server.  L'operazione di Garbage Collection per server dovrebbe essere l'opzione più rapida per più di due processori.  
+ <span data-ttu-id="b7843-132">Per i computer con un solo processore, l'operazione di Garbage Collection per workstation predefinita dovrebbe essere l'opzione più rapida.</span><span class="sxs-lookup"><span data-stu-id="b7843-132">For single-processor computers, the default workstation garbage collection should be the fastest option.</span></span> <span data-ttu-id="b7843-133">Per i computer con due processori, si può usare quella per workstation o quella per server.</span><span class="sxs-lookup"><span data-stu-id="b7843-133">Either workstation or server can be used for two-processor computers.</span></span> <span data-ttu-id="b7843-134">L'operazione di Garbage Collection per server dovrebbe essere l'opzione più rapida per più di due processori.</span><span class="sxs-lookup"><span data-stu-id="b7843-134">Server garbage collection should be the fastest option for more than two processors.</span></span>  
   
- Questo elemento può essere usato solo nel file di configurazione dell'applicazione. Se è nel file di configurazione del computer, viene ignorato.  
+ <span data-ttu-id="b7843-135">Questo elemento può essere usato solo nel file di configurazione dell'applicazione. Se è nel file di configurazione del computer, viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="b7843-135">This element can be used only in the application configuration file; it is ignored if it is in the machine configuration file.</span></span>  
   
 > [!NOTE]
->  In .NET Framework 4 e versioni precedenti, la modalità di Garbage Collection simultanea non è disponibile quando l'operazione di Garbage Collection per server è abilitata.  A partire da [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], l'operazione di Garbage Collection per server è simultanea.  Per usare l'operazione di Garbage Collection per server non simultanea, impostare l'elemento `<gcServer>` su `true` e l'elemento [\<gcConcurrent\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) su `false`.  
+>  <span data-ttu-id="b7843-136">In .NET Framework 4 e versioni precedenti, la modalità di Garbage Collection simultanea non è disponibile quando l'operazione di Garbage Collection per server è abilitata.</span><span class="sxs-lookup"><span data-stu-id="b7843-136">In the .NET Framework 4 and earlier versions, concurrent garbage collection is not available when server garbage collection is enabled.</span></span> <span data-ttu-id="b7843-137">A partire da [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], l'operazione di Garbage Collection per server è simultanea.</span><span class="sxs-lookup"><span data-stu-id="b7843-137">Starting with the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], server garbage collection is concurrent.</span></span> <span data-ttu-id="b7843-138">Per usare garbage collection per server non simultanea, impostare il `<gcServer>` elemento `true` e [ \<gcConcurrent > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) a `false`.</span><span class="sxs-lookup"><span data-stu-id="b7843-138">To use non-concurrent server garbage collection, set the `<gcServer>` element to `true` and the [\<gcConcurrent> element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) to `false`.</span></span>  
   
-## Esempio  
- L'esempio seguente abilita l'operazione di Garbage Collection per server.  
+## <a name="example"></a><span data-ttu-id="b7843-139">Esempio</span><span class="sxs-lookup"><span data-stu-id="b7843-139">Example</span></span>  
+ <span data-ttu-id="b7843-140">L'esempio seguente abilita l'operazione di Garbage Collection per server.</span><span class="sxs-lookup"><span data-stu-id="b7843-140">The following example enables server garbage collection.</span></span>  
   
-```  
-  
+```xml  
 <configuration>  
    <runtime>  
       <gcServer enabled="true"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
-## Vedere anche  
- <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=fullName>   
- [Schema delle impostazioni dell'ambiente di esecuzione](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Schema dei file di configurazione](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [How to: Disable Concurrent Garbage Collection](http://msdn.microsoft.com/it-it/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+## <a name="see-also"></a><span data-ttu-id="b7843-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b7843-141">See Also</span></span>  
+ <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="b7843-142">Schema delle impostazioni di runtime</span><span class="sxs-lookup"><span data-stu-id="b7843-142">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="b7843-143">Schema dei file di configurazione</span><span class="sxs-lookup"><span data-stu-id="b7843-143">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="b7843-144">Procedura: disabilitare Garbage Collection contemporanea</span><span class="sxs-lookup"><span data-stu-id="b7843-144">How to: Disable Concurrent Garbage Collection</span></span>](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)

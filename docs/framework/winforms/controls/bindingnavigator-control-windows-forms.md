@@ -1,50 +1,51 @@
 ---
-title: "Controllo BindingNavigator (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingNavigator (controllo) [Windows Form]"
-  - "dati [Windows Form], esplorazione"
-  - "navigazione di dati"
+title: Controllo BindingNavigator (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BindingNavigator control [Windows Forms]
+- data [Windows Forms], navigating
+- data navigation
 ms.assetid: 18c1e2a5-9834-40d3-9b2e-2b545e4e769e
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dafd27209d6cc4de3f66c5529fbda363354c6922
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Controllo BindingNavigator (Windows Form)
-The `BindingNavigator` control is the navigation and manipulation user interface \(UI\) for controls that are bound to data.  The `BindingNavigator` control enables users to navigate through and manipulate data on a Windows Form.  
+# <a name="bindingnavigator-control-windows-forms"></a><span data-ttu-id="0e2e4-102">Controllo BindingNavigator (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="0e2e4-102">BindingNavigator Control (Windows Forms)</span></span>
+<span data-ttu-id="0e2e4-103">Il controllo `BindingNavigator` rappresenta l'interfaccia utente di spostamento e modifica per i controlli associati a dati.</span><span class="sxs-lookup"><span data-stu-id="0e2e4-103">The `BindingNavigator` control is the navigation and manipulation user interface (UI) for controls that are bound to data.</span></span> <span data-ttu-id="0e2e4-104">Il controllo `BindingNavigator` consente agli utenti di esplorare e modificare i dati in Windows Form.</span><span class="sxs-lookup"><span data-stu-id="0e2e4-104">The `BindingNavigator` control enables users to navigate through and manipulate data on a Windows Form.</span></span>  
   
- Gli argomenti di questa sezione forniscono una panoramica del controllo `BindingNavigator` e offrono istruzioni dettagliate su come usare il controllo per esplorare i dati e un <xref:System.Data.DataSet>.  
+ <span data-ttu-id="0e2e4-105">Gli argomenti di questa sezione forniscono una panoramica del controllo `BindingNavigator` e offrono istruzioni dettagliate su come usare il controllo per esplorare i dati e un <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="0e2e4-105">The topics in this section provide an overview of the `BindingNavigator` control and offer step-by-step instructions how to use the control navigate data and move through a <xref:System.Data.DataSet>.</span></span>  
   
-## In questa sezione  
- [Cenni preliminari sul controllo BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-overview-windows-forms.md)  
- Introduce i concetti generali sul controllo `BindingNavigator`, che consente agli utenti di esplorare gli elementi di un'origine dati.  
+## <a name="in-this-section"></a><span data-ttu-id="0e2e4-106">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="0e2e4-106">In This Section</span></span>  
+ [<span data-ttu-id="0e2e4-107">Cenni preliminari sul controllo BindingNavigator</span><span class="sxs-lookup"><span data-stu-id="0e2e4-107">BindingNavigator Control Overview</span></span>](../../../../docs/framework/winforms/controls/bindingnavigator-control-overview-windows-forms.md)  
+ <span data-ttu-id="0e2e4-108">Introduce i concetti generali sul controllo `BindingNavigator`, che consente agli utenti di esplorare gli elementi di un'origine dati.</span><span class="sxs-lookup"><span data-stu-id="0e2e4-108">Introduces the general concepts of the `BindingNavigator` control, which enables users to move through the items of a data source.</span></span>  
   
- [Procedura: esplorare i dati con il controllo BindingNavigator Windows Form](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
- Illustra i passaggi per associare un controllo `BindingNavigator` a un'origine dati.  
+ [<span data-ttu-id="0e2e4-109">Procedura: esplorare i dati con il controllo BindingNavigator di Windows Form</span><span class="sxs-lookup"><span data-stu-id="0e2e4-109">How to: Navigate Data with the Windows Forms BindingNavigator Control</span></span>](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
+ <span data-ttu-id="0e2e4-110">Illustra i passaggi per associare un controllo `BindingNavigator` a un'origine dati.</span><span class="sxs-lookup"><span data-stu-id="0e2e4-110">Provides steps to bind a `BindingNavigator` control to a data source.</span></span>  
   
- [Procedura: esplorare un dataset con il controllo BindingNavigator Windows Form](../../../../docs/framework/winforms/controls/move-through-a-dataset-with-wf-bindingnavigator-control.md)  
- Illustra l'uso di un `BindingNavigator` controllo per esplorare i record in un <xref:System.Data.DataSet>.  
+ [<span data-ttu-id="0e2e4-111">Procedura: esplorare un dataset con il controllo BindingNavigator di Windows Form</span><span class="sxs-lookup"><span data-stu-id="0e2e4-111">How to: Move Through a DataSet with the Windows Forms BindingNavigator Control</span></span>](../../../../docs/framework/winforms/controls/move-through-a-dataset-with-wf-bindingnavigator-control.md)  
+ <span data-ttu-id="0e2e4-112">Illustra l'uso di un `BindingNavigator` controllo per esplorare i record in un <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="0e2e4-112">Demonstrates using a `BindingNavigator` control to move through records in a <xref:System.Data.DataSet>.</span></span>  
   
- Vedere anche [Procedura: aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator di Windows Form](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md).  
+ <span data-ttu-id="0e2e4-113">Vedere anche [Procedura: Aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator Windows Forms](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md).</span><span class="sxs-lookup"><span data-stu-id="0e2e4-113">Also see [How to: Add Load, Save, and Cancel Buttons to the Windows Forms BindingNavigator Control](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md).</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="0e2e4-114">Riferimento</span><span class="sxs-lookup"><span data-stu-id="0e2e4-114">Reference</span></span>  
  <xref:System.Windows.Forms.BindingNavigator>  
- Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.BindingNavigator>.  
+ <span data-ttu-id="0e2e4-115">Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.BindingNavigator>.</span><span class="sxs-lookup"><span data-stu-id="0e2e4-115">Provides reference documentation for the <xref:System.Windows.Forms.BindingNavigator> control.</span></span>  
   
  <xref:System.Windows.Forms.BindingSource>  
- Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.BindingSource>.  
+ <span data-ttu-id="0e2e4-116">Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="0e2e4-116">Provides reference documentation for the <xref:System.Windows.Forms.BindingSource> control.</span></span>  
   
-## Sezioni correlate  
- [Associazione di controlli ai dati in Visual Studio](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md)
+## <a name="related-sections"></a><span data-ttu-id="0e2e4-117">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="0e2e4-117">Related Sections</span></span>  
+ [<span data-ttu-id="0e2e4-118">Associare controlli ai dati in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="0e2e4-118">Bind controls to data in Visual Studio</span></span>](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

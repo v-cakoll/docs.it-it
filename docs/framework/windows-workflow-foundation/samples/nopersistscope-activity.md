@@ -1,51 +1,55 @@
 ---
-title: "Attivit&#224; NoPersistScope | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Attività NoPersistScope"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8813739f9e2f22cb94ed353f73a64562d3aeaa84
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Attivit&#224; NoPersistScope
-In questo esempio viene illustrato come modificare uno stato Non\-serializable e Disposable all'interno di un flusso di lavoro.È importante che i flussi di lavoro non tentino di rendere persistente lo stato Non\-serializable e che venga eseguita la pulizia degli oggetti eliminabili dopo essere stati utilizzati nel flusso di lavoro.  
+# <a name="nopersistscope-activity"></a><span data-ttu-id="0ce4f-102">Attività NoPersistScope</span><span class="sxs-lookup"><span data-stu-id="0ce4f-102">NoPersistScope Activity</span></span>
+<span data-ttu-id="0ce4f-103">In questo esempio viene illustrato come modificare uno stato Non-serializable e Disposable all'interno di un flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-103">This sample shows how to manipulate a non-serializable and disposable state within a workflow.</span></span> <span data-ttu-id="0ce4f-104">È importante che i flussi di lavoro non tentino di rendere persistente lo stato Non-serializable e che venga eseguita la pulizia degli oggetti eliminabili dopo essere stati usati nel flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-104">It is important that workflows do not attempt to persist non-serializable state and it is also important for disposable objects to be cleaned up after they are used in workflow.</span></span>  
   
-## Dimostrazione  
- Attività personalizzata `NoPersistScope` e finestra di progettazione.  
+## <a name="demonstrates"></a><span data-ttu-id="0ce4f-105">Dimostrazione</span><span class="sxs-lookup"><span data-stu-id="0ce4f-105">Demonstrates</span></span>  
+ <span data-ttu-id="0ce4f-106">Attività personalizzata `NoPersistScope` e finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-106">`NoPersistScope` custom activity and designer.</span></span>  
   
-## Utilizzo dell'attività NoPersistZone  
- Quando viene eseguito il flusso di lavoro di esempio, un'attività personalizzata denominata `CreateTextWriter` crea un oggetto di tipo <xref:System.IO.TextWriter> e lo salva in un variabile del flusso di lavoro.<xref:System.IO.TextWriter> è un oggetto <xref:System.IDisposable>.Questo oggetto <xref:System.IO.TextWriter>, configurato per scrivere in un file denominato 'out.txt' nella directory in cui viene eseguito l'esempio, viene utilizzato da un'attività <xref:System.Activities.Statements.WriteLine> poiché restituisce qualsiasi testo digitato nella console.  
+## <a name="using-the-nopersistzone-activity"></a><span data-ttu-id="0ce4f-107">Utilizzo dell'attività NoPersistZone</span><span class="sxs-lookup"><span data-stu-id="0ce4f-107">Using the NoPersistZone activity</span></span>  
+ <span data-ttu-id="0ce4f-108">Quando viene eseguito il flusso di lavoro di esempio, un'attività personalizzata denominata `CreateTextWriter` crea un oggetto di tipo <xref:System.IO.TextWriter> e lo salva in una variabile del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-108">When the sample workflow runs, a custom activity called `CreateTextWriter` creates an object of type <xref:System.IO.TextWriter> and saves it into a workflow variable.</span></span> <span data-ttu-id="0ce4f-109"><xref:System.IO.TextWriter> è un oggetto <xref:System.IDisposable>.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-109"><xref:System.IO.TextWriter> is an <xref:System.IDisposable> object.</span></span> <span data-ttu-id="0ce4f-110">Questo oggetto <xref:System.IO.TextWriter>, configurato per scrivere in un file denominato 'out.txt' nella directory in cui viene eseguito l'esempio, viene usato da un'attività <xref:System.Activities.Statements.WriteLine> poiché restituisce qualsiasi testo digitato nella console.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-110">This <xref:System.IO.TextWriter>, which is configured to write to a file named ‘out.txt’ in the directory in which the sample runs, is used by a <xref:System.Activities.Statements.WriteLine> activity as it echoes any text you type in at the console.</span></span>  
   
- La logica echo viene eseguita all'interno di un'attività `NoPersistScope` \(il cui codice fa anche parte di questo esempio\) che evita la persistenza del flusso di lavoro.Se si digita `unload` nella console, l'host tenta di rendere persistente l'istanza del flusso di lavoro, tuttavia questa operazione scade poiché il flusso di lavoro rimane all'interno di un oggetto `NoPersistScope`.Il flusso di lavoro utilizza anche un'attività personalizzata denominata `Dispose` per eliminare l'oggetto <xref:System.IO.TextWriter> quando il flusso di lavoro viene completato utilizzandolo.L'attività `Dispose` viene posizionata all'interno del blocco <xref:System.Activities.Statements.TryCatch.Finally%2A> dell'attività <xref:System.Activities.Statements.TryCatch> in cui viene dichiarata la variabile <xref:System.IO.TextWriter>, per assicurarsi che venga eseguita anche se si dovesse verificare un'eccezione durante l'esecuzione del blocco Try.  
+ <span data-ttu-id="0ce4f-111">La logica echo viene eseguita all'interno di un'attività `NoPersistScope` (il cui codice fa anche parte di questo esempio) che evita la persistenza del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-111">The echo logic runs within a `NoPersistScope` activity (the code for which is also part of this sample), which prevents the workflow from being persisted.</span></span> <span data-ttu-id="0ce4f-112">Se si digita `unload` nella console, l'host tenta di rendere persistente l'istanza del flusso di lavoro, ma questa operazione scade poiché il flusso di lavoro rimane all'interno di un `NoPersistScope`.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-112">If you type in `unload` at the console, the host attempts to persist the workflow instance but this operation times out because the workflow remains within a `NoPersistScope`.</span></span> <span data-ttu-id="0ce4f-113">Il flusso di lavoro usa anche un'attività personalizzata denominata `Dispose` per eliminare l'oggetto <xref:System.IO.TextWriter> quando il flusso di lavoro viene completato utilizzandolo.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-113">The workflow also utilizes a custom activity called `Dispose` to dispose the <xref:System.IO.TextWriter> object when the workflow is finished using it.</span></span> <span data-ttu-id="0ce4f-114">L'attività `Dispose` viene posizionata all'interno del blocco <xref:System.Activities.Statements.TryCatch.Finally%2A> dell'attività <xref:System.Activities.Statements.TryCatch> in cui viene dichiarata la variabile <xref:System.IO.TextWriter>, per assicurarsi che venga eseguita anche se si dovesse verificare un'eccezione durante l'esecuzione del blocco Try.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-114">The `Dispose` activity is placed within the <xref:System.Activities.Statements.TryCatch.Finally%2A> block of the <xref:System.Activities.Statements.TryCatch> activity in which the <xref:System.IO.TextWriter> variable is declared, to ensure that it runs even if an exception should occur during execution of the Try block.</span></span>  
   
- È possibile digitare `exit` per completare l'istanza del flusso di lavoro e uscire dal programma.  
+ <span data-ttu-id="0ce4f-115">È possibile digitare `exit` per completare l'istanza del flusso di lavoro e uscire dal programma.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-115">You can type in `exit` to complete the workflow instance and exit the program.</span></span>  
   
-#### Per eseguire l'esempio  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="0ce4f-116">Per eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="0ce4f-116">To run the sample</span></span>  
   
-1.  Aprire la soluzione NoPersistZone.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  <span data-ttu-id="0ce4f-117">Aprire la soluzione NoPersistZone.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0ce4f-117">Open the NoPersistZone.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B o scegliere **Compila soluzione** dal menu **Compila**.  
+2.  <span data-ttu-id="0ce4f-118">Per compilare la soluzione, premere CTRL + MAIUSC + B o scegliere **Compila soluzione** dal **compilare** menu.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-118">To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.</span></span>  
   
-3.  Una volta eseguita correttamente la compilazione, premere F5 o selezionare **Avvia debug** dal menu **Debug** oppure, in alternativa, premere CTRL\+F5 o selezionare **Avvia senza eseguire debug** dal menu **Debug** per consentire l'esecuzione senza debug.  
+3.  <span data-ttu-id="0ce4f-119">Una volta completata la compilazione, premere F5 o scegliere **Avvia debug** dal **Debug** menu in alternativa, è possibile premere CTRL + F5 o selezionare **Avvia senza eseguire debug** dal **Debug** menu per l'esecuzione senza debug.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-119">Once the build has succeeded, press F5 or select **Start Debugging** from the **Debug** menu alternatively, you can press CTRL+F5 or select **Start Without Debugging** from the **Debug** menu to run without debugging.</span></span>  
   
-#### Per eseguire la pulizia \(facoltativo\)  
+#### <a name="to-cleanup-optional"></a><span data-ttu-id="0ce4f-120">Per eseguire la pulizia (facoltativo)</span><span class="sxs-lookup"><span data-stu-id="0ce4f-120">To cleanup (optional)</span></span>  
   
-1.  Per rimuovere l'archivio di istanze SQL, eseguire Cleanup.cmd.  
+1.  <span data-ttu-id="0ce4f-121">Per rimuovere l'archivio di istanze SQL, eseguire Cleanup.cmd.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-121">To remove the SQL Instance Store, run Cleanup.cmd.</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="0ce4f-122">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-122">The samples may already be installed on your machine.</span></span> <span data-ttu-id="0ce4f-123">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-123">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="0ce4f-124">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="0ce4f-124">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0ce4f-125">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="0ce4f-125">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NoPersistScope`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NoPersistScope`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="0ce4f-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0ce4f-126">See Also</span></span>

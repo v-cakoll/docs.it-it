@@ -1,76 +1,82 @@
 ---
-title: "Implementazione di CopyToDataTable&lt;T&gt; quando il tipo generico T non &#232; un DataRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Procedura: implementare CopyToDataTable&lt;T&gt; in cui il tipo generico T non è un DataRow"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 44e54ef54173636246da1847d177cf4fd99ea818
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Implementazione di CopyToDataTable&lt;T&gt; quando il tipo generico T non &#232; un DataRow
-L'oggetto <xref:System.Data.DataTable> viene spesso usato per l'associazione dati.  Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> copia i dati dei risultati di una query in un oggetto <xref:System.Data.DataTable> che può essere quindi usato per l'associazione dati.  I metodi <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>, tuttavia, funzionano solo su un'origine <xref:System.Collections.Generic.IEnumerable%601> in cui il parametro generico `T` è di tipo <xref:System.Data.DataRow>.  Sebbene sia utile, questa funzionalità non consente di creare tabelle da una sequenza di tipi scalari, da query che proiettano tipo anonimi o da query che eseguono join di tabelle.  
+# <a name="how-to-implement-copytodatatablelttgt-where-the-generic-type-t-is-not-a-datarow"></a><span data-ttu-id="af2cc-102">Procedura: implementare CopyToDataTable&lt;T&gt; in cui il tipo generico T non è un DataRow</span><span class="sxs-lookup"><span data-stu-id="af2cc-102">How to: Implement CopyToDataTable&lt;T&gt; Where the Generic Type T Is Not a DataRow</span></span>
+<span data-ttu-id="af2cc-103">L'oggetto <xref:System.Data.DataTable> viene spesso usato per l'associazione dati.</span><span class="sxs-lookup"><span data-stu-id="af2cc-103">The <xref:System.Data.DataTable> object is often used for data binding.</span></span> <span data-ttu-id="af2cc-104">Il metodo <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> copia i dati dei risultati di una query in un oggetto <xref:System.Data.DataTable> che può essere quindi usato per l'associazione dati.</span><span class="sxs-lookup"><span data-stu-id="af2cc-104">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method takes the results of a query and copies the data into a <xref:System.Data.DataTable>, which can then be used for data binding.</span></span> <span data-ttu-id="af2cc-105">I metodi <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>, tuttavia, funzionano solo su un'origine <xref:System.Collections.Generic.IEnumerable%601> in cui il parametro generico `T` è di tipo <xref:System.Data.DataRow>.</span><span class="sxs-lookup"><span data-stu-id="af2cc-105">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> methods, however, only operate on an <xref:System.Collections.Generic.IEnumerable%601> source where the generic parameter `T` is of type <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="af2cc-106">Sebbene sia utile, questa funzionalità non consente di creare tabelle da una sequenza di tipi scalari, da query che proiettano tipo anonimi o da query che eseguono join di tabelle.</span><span class="sxs-lookup"><span data-stu-id="af2cc-106">Although this is useful, it does not allow tables to be created from a sequence of scalar types, from queries that project anonymous types, or from queries that perform table joins.</span></span>  
   
- In questo argomento viene descritto come implementare due metodi di estensione `CopyToDataTable<T>` personalizzati che accettano un parametro generico `T` di un tipo diverso da <xref:System.Data.DataRow>.  La logica per creare un oggetto <xref:System.Data.DataTable> da un'origine <xref:System.Collections.Generic.IEnumerable%601> è contenuto nella classe `ObjectShredder<T>`, di cui viene eseguito il wrapping in due metodi di estensione `CopyToDataTable<T>` di overload.  Il metodo `Shred` della classe `ObjectShredder<T>` restituisce l'oggetto <xref:System.Data.DataTable> compilato e accetta tre parametri di input: un'origine <xref:System.Collections.Generic.IEnumerable%601>, un oggetto <xref:System.Data.DataTable> e un'enumerazione <xref:System.Data.LoadOption>.  Lo schema iniziale dell'oggetto <xref:System.Data.DataTable> restituito è basato sullo schema del tipo `T`.  Se viene fornita una tabella esistente come input, lo schema deve essere coerente con lo schema del tipo `T`.  Tutte le proprietà e i campi pubblici del tipo `T` vengono convertiti in <xref:System.Data.DataColumn> nella tabella restituita.  Se la sequenza di origine contiene un tipo derivato da `T`, lo schema della tabella restituita viene espanso per includere eventuali proprietà o campi pubblici aggiuntivi.  
+ <span data-ttu-id="af2cc-107">In questo argomento viene descritto come implementare due metodi di estensione `CopyToDataTable<T>` personalizzati che accettano un parametro generico `T` di un tipo diverso da <xref:System.Data.DataRow>.</span><span class="sxs-lookup"><span data-stu-id="af2cc-107">This topic describes how to implement two custom `CopyToDataTable<T>` extension methods that accept a generic parameter `T` of a type other than <xref:System.Data.DataRow>.</span></span> <span data-ttu-id="af2cc-108">La logica per creare un oggetto <xref:System.Data.DataTable> da un'origine <xref:System.Collections.Generic.IEnumerable%601> è contenuto nella classe `ObjectShredder<T>`, di cui viene eseguito il wrapping in due metodi di estensione `CopyToDataTable<T>` di overload.</span><span class="sxs-lookup"><span data-stu-id="af2cc-108">The logic to create a <xref:System.Data.DataTable> from an <xref:System.Collections.Generic.IEnumerable%601> source is contained in the `ObjectShredder<T>` class, which is then wrapped in two overloaded `CopyToDataTable<T>` extension methods.</span></span> <span data-ttu-id="af2cc-109">Il metodo `Shred` della classe `ObjectShredder<T>` restituisce l'oggetto <xref:System.Data.DataTable> compilato e accetta tre parametri di input: un'origine <xref:System.Collections.Generic.IEnumerable%601>, un oggetto <xref:System.Data.DataTable> e un'enumerazione <xref:System.Data.LoadOption>.</span><span class="sxs-lookup"><span data-stu-id="af2cc-109">The `Shred` method of the `ObjectShredder<T>` class returns the filled <xref:System.Data.DataTable> and accepts three input parameters: an <xref:System.Collections.Generic.IEnumerable%601> source, a <xref:System.Data.DataTable>, and a <xref:System.Data.LoadOption> enumeration.</span></span> <span data-ttu-id="af2cc-110">Lo schema iniziale dell'oggetto <xref:System.Data.DataTable> restituito è basato sullo schema del tipo `T`.</span><span class="sxs-lookup"><span data-stu-id="af2cc-110">The initial schema of the returned <xref:System.Data.DataTable> is based on the schema of the type `T`.</span></span> <span data-ttu-id="af2cc-111">Se viene fornita una tabella esistente come input, lo schema deve essere coerente con lo schema del tipo `T`.</span><span class="sxs-lookup"><span data-stu-id="af2cc-111">If an existing table is provided as input, the schema must be consistent with the schema of the type `T`.</span></span> <span data-ttu-id="af2cc-112">Tutte le proprietà e i campi pubblici del tipo `T` vengono convertiti in <xref:System.Data.DataColumn> nella tabella restituita.</span><span class="sxs-lookup"><span data-stu-id="af2cc-112">Each public property and field of the type `T` is converted to a <xref:System.Data.DataColumn> in the returned table.</span></span> <span data-ttu-id="af2cc-113">Se la sequenza di origine contiene un tipo derivato da `T`, lo schema della tabella restituita viene espanso per includere eventuali proprietà o campi pubblici aggiuntivi.</span><span class="sxs-lookup"><span data-stu-id="af2cc-113">If the source sequence contains a type derived from `T`, the returned table schema is expanded for any additional public properties or fields.</span></span>  
   
- Per alcuni esempi sull'utilizzo dei metodi `CopyToDataTable<T>` personalizzati, vedere [Creazione di una DataTable da una query](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md).  
+ <span data-ttu-id="af2cc-114">Per esempi di utilizzo personalizzato `CopyToDataTable<T>` metodi, vedere [la creazione di un oggetto DataTable da una Query](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="af2cc-114">For examples of using the custom `CopyToDataTable<T>` methods, see [Creating a DataTable From a Query](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md).</span></span>  
   
-### Per implementare i metodi CopyToDataTable\<T\> personalizzati nell'applicazione  
+### <a name="to-implement-the-custom-copytodatatablet-methods-in-your-application"></a><span data-ttu-id="af2cc-115">Implementazione di CopyToDataTable personalizzato\<T > metodi nell'applicazione</span><span class="sxs-lookup"><span data-stu-id="af2cc-115">To implement the custom CopyToDataTable\<T> methods in your application</span></span>  
   
-1.  Implementare la classe `ObjectShredder<T>` per creare un oggetto <xref:System.Data.DataTable> da un'origine <xref:System.Collections.Generic.IEnumerable%601>:  
+1.  <span data-ttu-id="af2cc-116">Implementare la classe `ObjectShredder<T>` per creare un oggetto <xref:System.Data.DataTable> da un'origine <xref:System.Collections.Generic.IEnumerable%601>:</span><span class="sxs-lookup"><span data-stu-id="af2cc-116">Implement the `ObjectShredder<T>` class to create a <xref:System.Data.DataTable> from an <xref:System.Collections.Generic.IEnumerable%601> source:</span></span>  
   
      [!code-csharp[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#objectshredderclass)]
      [!code-vb[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#objectshredderclass)]  
   
-2.  Implementare i metodi di estensione `CopyToDataTable<T>` personalizzati in una classe:  
+2.  <span data-ttu-id="af2cc-117">Implementare i metodi di estensione `CopyToDataTable<T>` personalizzati in una classe:</span><span class="sxs-lookup"><span data-stu-id="af2cc-117">Implement the custom `CopyToDataTable<T>` extension methods in a class:</span></span>  
   
      [!code-csharp[DP Custom CopyToDataTable Examples#CustomCopyToDataTableMethods](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#customcopytodatatablemethods)]
      [!code-vb[DP Custom CopyToDataTable Examples#CustomCopyToDataTableMethods](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#customcopytodatatablemethods)]  
   
-3.  Aggiungere la classe `ObjectShredder<T>` e i metodi di estensione `CopyToDataTable<T>` all'applicazione.  
+3.  <span data-ttu-id="af2cc-118">Aggiungere la classe `ObjectShredder<T>` e i metodi di estensione `CopyToDataTable<T>` all'applicazione.</span><span class="sxs-lookup"><span data-stu-id="af2cc-118">Add the `ObjectShredder<T>` class and `CopyToDataTable<T>` extension methods to your application.</span></span>  
   
-    ```vb  
-    Module Module1  
-        Sub Main()  
+```vb  
+Module Module1  
+    Sub Main()  
         ' Your application code using CopyToDataTable<T>.  
-        End Sub  
-    End Module  
+    End Sub  
+End Module  
   
-    Public Module CustomLINQtoDataSetMethods  
-    …  
-    End Module  
+Public Module CustomLINQtoDataSetMethods  
+…  
+End Module  
   
-    Public Class ObjectShredder(Of T)  
-    …  
-    End Class  
-    ```  
+Public Class ObjectShredder(Of T)  
+…  
+End Class
+```
   
-4.  ```c#  
-    class Program  
+```csharp
+class Program  
+{  
+    static void Main(string[] args)  
     {  
-            static void Main(string[] args)  
-            {  
-               // Your application code using CopyToDataTable<T>.  
-            }  
+        // Your application code using CopyToDataTable<T>.  
     }  
-    public static class CustomLINQtoDataSetMethods  
-    {  
-    …  
-    }  
-    public class ObjectShredder<T>  
-    {  
-    …  
-    }  
-    ```  
+}  
+public static class CustomLINQtoDataSetMethods  
+{  
+…  
+}  
+public class ObjectShredder<T>  
+{  
+…  
+}  
+```
   
-## Vedere anche  
- [Creazione di una DataTable da una query](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)   
- [Guida per programmatori](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="af2cc-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="af2cc-119">See Also</span></span>  
+ [<span data-ttu-id="af2cc-120">Creazione di un oggetto DataTable da una Query</span><span class="sxs-lookup"><span data-stu-id="af2cc-120">Creating a DataTable From a Query</span></span>](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
+ [<span data-ttu-id="af2cc-121">Guida per programmatori</span><span class="sxs-lookup"><span data-stu-id="af2cc-121">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

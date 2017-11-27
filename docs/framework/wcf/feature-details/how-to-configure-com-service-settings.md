@@ -1,31 +1,33 @@
 ---
-title: "Procedura: configurare le impostazioni del servizio COM+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "COM+ [WCF], configurazione delle impostazioni del servizio."
+title: 'Procedura: configurare le impostazioni del servizio COM+'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7cbe038b55358ec8607d54b67861ef1743c2e301
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Procedura: configurare le impostazioni del servizio COM+
-Quando l'interfaccia di un'applicazione viene aggiunta o rimossa usando lo strumento di configurazione del servizio COM\+, la configurazione del servizio Web viene aggiornata nel file di configurazione dell'applicazione.  Nella modalità hosting del servizio COM\+ il file Application.config si trova nella directory radice dell'applicazione \(l'impostazione predefinita è %PROGRAMFILES%\\ComPlus Applications\\{appid}\).  In entrambe le modalità di hosting Web il file Web.config è posizionato nella directory vroot specificata.  
+# <a name="how-to-configure-com-service-settings"></a><span data-ttu-id="1bb49-102">Procedura: configurare le impostazioni del servizio COM+</span><span class="sxs-lookup"><span data-stu-id="1bb49-102">How to: Configure COM+ Service Settings</span></span>
+<span data-ttu-id="1bb49-103">Quando l'interfaccia di un'applicazione viene aggiunta o rimossa usando lo strumento di configurazione del servizio COM+, la configurazione del servizio Web viene aggiornata nel file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="1bb49-103">When an application interface is added or removed by using the COM+ Service Configuration tool, the Web service configuration is updated within the application's configuration file.</span></span> <span data-ttu-id="1bb49-104">Nella modalità di COM+, il file config si trova nella Directory radice dell'applicazione (%PROGRAMFILES%\ComPlus Applications\\{appid} è l'impostazione predefinita).</span><span class="sxs-lookup"><span data-stu-id="1bb49-104">In the COM+ hosted mode, the Application.config file is placed in the Application Root Directory (%PROGRAMFILES%\ComPlus Applications\\{appid} is the default).</span></span> <span data-ttu-id="1bb49-105">In entrambe le modalità di hosting Web il file Web.config è posizionato nella directory vroot specificata.</span><span class="sxs-lookup"><span data-stu-id="1bb49-105">In either of the Web-hosted modes, the Web.config file is placed in the specified vroot directory.</span></span>  
   
 > [!NOTE]
->  Per evitare la manomissione dei messaggi tra un client e un server è necessario firmare i messaggi.  Inoltre, per evitare la diffusione di informazioni dai messaggi scambiati tra un client e un server è necessario usare la crittografia a livello di messaggio o di trasporto.  Come per i servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], è necessario usare la limitazione delle richieste per limitare il numero di chiamate, connessioni, istanze e operazioni in sospeso simultanee.  Ciò consente di evitare un utilizzo eccessivo di risorse.  Il comportamento della limitazione delle richieste viene specificato tramite impostazioni del file di configurazione del servizio.  
+>  <span data-ttu-id="1bb49-106">Per evitare la manomissione dei messaggi tra un client e un server è necessario firmare i messaggi.</span><span class="sxs-lookup"><span data-stu-id="1bb49-106">Message signing should be used to protect against tampering of messages between a client and a server.</span></span> <span data-ttu-id="1bb49-107">Inoltre, per evitare la diffusione di informazioni dai messaggi scambiati tra un client e un server è necessario usare la crittografia a livello di messaggio o di trasporto.</span><span class="sxs-lookup"><span data-stu-id="1bb49-107">Also, message or transport layer encryption should be used to protect against information disclosure from messages between a client and a server.</span></span> <span data-ttu-id="1bb49-108">Come per i servizi [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], è necessario usare la limitazione delle richieste per limitare il numero di chiamate, connessioni, istanze e operazioni in sospeso simultanee.</span><span class="sxs-lookup"><span data-stu-id="1bb49-108">As with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services, you should use throttling to limit the number of concurrent calls, connections, instances, and pending operations.</span></span> <span data-ttu-id="1bb49-109">Ciò consente di evitare un utilizzo eccessivo di risorse.</span><span class="sxs-lookup"><span data-stu-id="1bb49-109">This helps prevent over-consumption of resources.</span></span> <span data-ttu-id="1bb49-110">Il comportamento della limitazione delle richieste viene specificato tramite impostazioni del file di configurazione del servizio.</span><span class="sxs-lookup"><span data-stu-id="1bb49-110">Throttling behavior is specified through service configuration file settings.</span></span>  
   
-## Esempio  
- Si consideri un componente che implementa l'interfaccia seguente:  
+## <a name="example"></a><span data-ttu-id="1bb49-111">Esempio</span><span class="sxs-lookup"><span data-stu-id="1bb49-111">Example</span></span>  
+ <span data-ttu-id="1bb49-112">Si consideri un componente che implementa l'interfaccia seguente:</span><span class="sxs-lookup"><span data-stu-id="1bb49-112">Consider a component that implements the following interface:</span></span>  
   
 ```  
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
@@ -34,10 +36,9 @@ public interface IFinances
     string Debit(string accountNo, double amount);  
     string Credit(string accountNo, double amount);  
 }  
-  
 ```  
   
- Se il componente viene esposto come un servizio Web, il contratto di servizio corrispondente che viene esposto, e al quale si devono conformare i client, è il seguente:  
+ <span data-ttu-id="1bb49-113">Se il componente viene esposto come un servizio Web, il contratto di servizio corrispondente che viene esposto, e al quale si devono conformare i client, è il seguente:</span><span class="sxs-lookup"><span data-stu-id="1bb49-113">If the component is exposed as a Web service, the corresponding service contract that is exposed, and that clients would need to conform to, is as follows:</span></span>  
   
 ```  
 [ServiceContract(Session = true,  
@@ -50,27 +51,26 @@ public interface IFinancesContract : IDisposable
     [OperationContract]  
     string Credit(string accountNo, double amount);  
 }  
-  
 ```  
   
 > [!NOTE]
->  L'IID fa parte dello spazio dei nomi iniziale per il contratto.  
+>  <span data-ttu-id="1bb49-114">L'IID fa parte dello spazio dei nomi iniziale per il contratto.</span><span class="sxs-lookup"><span data-stu-id="1bb49-114">IID forms part of the initial namespace for the contract.</span></span>  
   
- Le applicazioni client che usano questo servizio dovrebbero essere conformi a questo contratto, nonché usare un'associazione che sia compatibile con quella specificata nella configurazione dell'applicazione.  
+ <span data-ttu-id="1bb49-115">Le applicazioni client che usano questo servizio dovrebbero essere conformi a questo contratto, nonché usare un'associazione che sia compatibile con quella specificata nella configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="1bb49-115">Client applications that use this service would need to conform to this contract, along with using a binding that is compatible with the one specified in the application configuration.</span></span>  
   
- Nell'esempio di codice seguente viene illustrato un file di configurazione predefinito.  Essendo un servizio Web [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], è conforme allo schema di configurazione del modello di servizio standard e può essere modificato come altri file di configurazione dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ <span data-ttu-id="1bb49-116">Nell'esempio di codice seguente viene illustrato un file di configurazione predefinito.</span><span class="sxs-lookup"><span data-stu-id="1bb49-116">The following code example shows a default configuration file.</span></span> <span data-ttu-id="1bb49-117">Essendo un servizio Web [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], è conforme allo schema di configurazione del modello di servizio standard e può essere modificato come altri file di configurazione dei servizi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1bb49-117">Being a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web service, this conforms to the standard service model configuration schema and can be edited in the same way as other [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services configuration files.</span></span>  
   
- Modifiche tipiche includono:  
+ <span data-ttu-id="1bb49-118">Modifiche tipiche includono:</span><span class="sxs-lookup"><span data-stu-id="1bb49-118">Typical modifications would include:</span></span>  
   
--   Modifica dell'indirizzo endpoint dal modulo ApplicationName\/ComponentName\/InterfaceName predefinito in un modulo maggiormente utilizzabile.  
+-   <span data-ttu-id="1bb49-119">Modifica dell'indirizzo endpoint dal modulo ApplicationName/ComponentName/InterfaceName predefinito in un modulo maggiormente utilizzabile.</span><span class="sxs-lookup"><span data-stu-id="1bb49-119">Changing the endpoint address from the default ApplicationName/ComponentName/InterfaceName form to a more usable form.</span></span>  
   
--   Modifica dello spazio dei nomi del servizio dal modulo "http:\/\/tempuri.org\/InterfaceID" predefinito in un modulo più attinente.  
+-   <span data-ttu-id="1bb49-120">Modifica dello spazio dei nomi del servizio dal modulo "http://tempuri.org/InterfaceID" predefinito in un modulo più attinente.</span><span class="sxs-lookup"><span data-stu-id="1bb49-120">Modifying the namespace of the service from the default "http://tempuri.org/InterfaceID" form to a more relevant form.</span></span>  
   
--   Modifica dell'endpoint per l'uso di un'associazione del trasporto differente.  
+-   <span data-ttu-id="1bb49-121">Modifica dell'endpoint per l'uso di un'associazione del trasporto differente.</span><span class="sxs-lookup"><span data-stu-id="1bb49-121">Changing the endpoint to use a different transport binding.</span></span>  
   
-     Nel caso di un servizio COM\+ ospitato, per impostazione predefinita viene usato il trasporto tramite named pipe. È comunque possibile usare un trasporto esterno al computer come TCP.  
+     <span data-ttu-id="1bb49-122">Nel caso di un servizio COM+ ospitato, per impostazione predefinita viene usato il trasporto tramite named pipe. È comunque possibile usare un trasporto esterno al computer come TCP.</span><span class="sxs-lookup"><span data-stu-id="1bb49-122">In the COM+-hosted case, the named pipes transport is used by default, but an off-machine transport like TCP can be used instead.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
     <system.serviceModel>  
@@ -103,8 +103,7 @@ public interface IFinancesContract : IDisposable
         </services>  
     </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Vedere anche  
- [Integrazione con applicazioni COM\+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+## <a name="see-also"></a><span data-ttu-id="1bb49-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1bb49-123">See Also</span></span>  
+ [<span data-ttu-id="1bb49-124">L'integrazione con applicazioni COM+</span><span class="sxs-lookup"><span data-stu-id="1bb49-124">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

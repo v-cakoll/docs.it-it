@@ -1,12 +1,11 @@
 ---
-title: Librerie di classi e API aggiuntive | Microsoft Docs
+title: Librerie di classi e API aggiuntive
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: .net-framework-oob
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,50 +14,55 @@ helpviewer_keywords:
 - .NET Framework out-of-band releases
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b53b8acc2a6c56db6a9d8a9b7c685a2d400a53e1
-ms.openlocfilehash: 34815268b707aa70d174a1bbc04c32276db8412d
-ms.contentlocale: it-it
-ms.lasthandoff: 05/02/2017
-
+ms.openlocfilehash: e3bb7a7c53cbca8bbd4026b46ce59589cef22382
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="additional-class-libraries-and-apis"></a><span data-ttu-id="8ddce-102">Librerie di classi e API aggiuntive</span><span class="sxs-lookup"><span data-stu-id="8ddce-102">Additional class libraries and APIs</span></span>
 
-# <a name="additional-class-libraries-and-apis"></a>Librerie di classi e API aggiuntive
-
-Poiché .NET Framework è in costante evoluzione, vengono rilasciate nuove funzionalità fuori programma (OOB) per migliorare lo sviluppo multipiattaforma o introdurre nuove funzionalità in anteprima per i clienti. Questo argomento elenca i progetti fuori banda (OOB) per i quali viene fornita la documentazione.  
+<span data-ttu-id="8ddce-103">Poiché .NET Framework è in costante evoluzione, vengono rilasciate nuove funzionalità fuori programma (OOB) per migliorare lo sviluppo multipiattaforma o introdurre nuove funzionalità in anteprima per i clienti.</span><span class="sxs-lookup"><span data-stu-id="8ddce-103">The .NET Framework is constantly evolving and in order to improve cross-platform development or to introduce new functionality early to our customers, we release new features out of band (OOB).</span></span> <span data-ttu-id="8ddce-104">Questo argomento elenca i progetti fuori banda (OOB) per i quali viene fornita la documentazione.</span><span class="sxs-lookup"><span data-stu-id="8ddce-104">This topic lists the OOB projects that we provide documentation for.</span></span>  
   
-Inoltre, alcune librerie sono destinate a piattaforme o implementazioni specifiche di .NET Framework. Ad esempio, la classe <xref:System.Text.CodePagesEncodingProvider> rende disponibili le codifiche della tabella codici per le app UWP sviluppate con .NET Framework. Questo argomento include anche un elenco di queste librerie.  
+<span data-ttu-id="8ddce-105">Inoltre, alcune librerie sono destinate a piattaforme o implementazioni specifiche di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8ddce-105">In addition, some libraries target specific platforms or implementations of the .NET Framework.</span></span> <span data-ttu-id="8ddce-106">Ad esempio, il <xref:System.Text.CodePagesEncodingProvider> rende codifiche delle tabelle codici di codice disponibili per App UWP sviluppata con .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8ddce-106">For example, the <xref:System.Text.CodePagesEncodingProvider> class makes code page encodings available to UWP apps developed using the .NET Framework.</span></span> <span data-ttu-id="8ddce-107">Questo argomento include anche un elenco di queste librerie.</span><span class="sxs-lookup"><span data-stu-id="8ddce-107">This topic lists these libraries as well.</span></span>  
   
-## <a name="oob-projects"></a>Progetti OOB
+## <a name="oob-projects"></a><span data-ttu-id="8ddce-108">Progetti OOB</span><span class="sxs-lookup"><span data-stu-id="8ddce-108">OOB projects</span></span>
   
-| Progetto | Descrizione |  
+| <span data-ttu-id="8ddce-109">Progetto</span><span class="sxs-lookup"><span data-stu-id="8ddce-109">Project</span></span> | <span data-ttu-id="8ddce-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8ddce-110">Description</span></span> |  
 | ------- | ----------- |  
-| <xref:System.Collections.Immutable> | Fornisce raccolte thread-safe e che non modificano mai il contenuto. |
-| <xref:System.Net.Http.WinHttpHandler> | Fornisce un gestore di messaggi per <xref:System.Net.Http.HttpClient> basato sull'interfaccia WinHTTP di Windows. |
-| [System.Numerics.Vectors](https://msdn.microsoft.com/library/mt452176.aspx) | Fornisce una libreria di tipi di vettori in grado di sfruttare l'accelerazione basata su hardware SIMD.| 
-| <xref:System.Threading.Tasks.Dataflow> | La libreria del flusso di dati TPL fornisce i componenti del flusso di dati per aumentare l'affidabilità delle applicazioni abilitate per la concorrenza. |  
+| <xref:System.Collections.Immutable> | <span data-ttu-id="8ddce-111">Fornisce raccolte thread-safe e che non modificano mai il contenuto.</span><span class="sxs-lookup"><span data-stu-id="8ddce-111">Provides collections that are thread safe and guaranteed to never change their contents.</span></span> |
+| <xref:System.Net.Http.WinHttpHandler> | <span data-ttu-id="8ddce-112">Fornisce un gestore di messaggi per <xref:System.Net.Http.HttpClient> basato sull'interfaccia WinHTTP di Windows.</span><span class="sxs-lookup"><span data-stu-id="8ddce-112">Provides a message handler for <xref:System.Net.Http.HttpClient> based on the WinHTTP interface of Windows.</span></span> |
+| [<span data-ttu-id="8ddce-113">System.Numerics.Vectors</span><span class="sxs-lookup"><span data-stu-id="8ddce-113">System.Numerics.Vectors</span></span>](https://msdn.microsoft.com/library/mt452176.aspx) | <span data-ttu-id="8ddce-114">Fornisce una libreria di tipi di vettori in grado di sfruttare l'accelerazione basata su hardware SIMD.</span><span class="sxs-lookup"><span data-stu-id="8ddce-114">Provides a library of vector types that can take advantage of SIMD hardware-based acceleration.</span></span>| 
+| <xref:System.Threading.Tasks.Dataflow> | <span data-ttu-id="8ddce-115">La libreria del flusso di dati TPL fornisce i componenti del flusso di dati per aumentare l'affidabilità delle applicazioni abilitate per la concorrenza.</span><span class="sxs-lookup"><span data-stu-id="8ddce-115">The TPL Dataflow Library provides dataflow components to help increase the robustness of concurrency-enabled applications.</span></span> |  
 
-## <a name="platform-specific-libraries"></a>Librerie specifiche della piattaforma
+## <a name="platform-specific-libraries"></a><span data-ttu-id="8ddce-116">Librerie specifiche della piattaforma</span><span class="sxs-lookup"><span data-stu-id="8ddce-116">Platform-specific libraries</span></span>
   
-| Progetto | Descrizione |  
+| <span data-ttu-id="8ddce-117">Progetto</span><span class="sxs-lookup"><span data-stu-id="8ddce-117">Project</span></span> | <span data-ttu-id="8ddce-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="8ddce-118">Description</span></span> |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Estende la classe <xref:System.Text.EncodingProvider> per rendere disponibili le codifiche della tabella codice per le app che usano la piattaforma UWP (Universal Windows Platform). |  
+| <xref:System.Text.CodePagesEncodingProvider> | <span data-ttu-id="8ddce-119">Estende la <xref:System.Text.EncodingProvider> classe per rendere disponibili per le applicazioni che usano la piattaforma Windows universale codifiche delle tabelle codici di codice.</span><span class="sxs-lookup"><span data-stu-id="8ddce-119">Extends the <xref:System.Text.EncodingProvider> class to make code page encodings available to apps that target the Universal Windows Platform.</span></span> |  
   
-## <a name="private-apis"></a>API private  
+## <a name="private-apis"></a><span data-ttu-id="8ddce-120">API private</span><span class="sxs-lookup"><span data-stu-id="8ddce-120">Private APIs</span></span>  
 
-Queste API supportano l'infrastruttura del prodotto e non sono progettate/supportate per l'uso direttamente dal codice.  
+<span data-ttu-id="8ddce-121">Queste API supportano l'infrastruttura del prodotto e non sono progettate/supportate per l'uso direttamente dal codice.</span><span class="sxs-lookup"><span data-stu-id="8ddce-121">These APIs support the product infrastructure and are not intended/supported to be used directly from your code.</span></span>  
   
-| Nome dell'API |  
-| -------- |  
-| [Campo s_isDebuggerCheckDisabledForTestPurposes](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |  
-| [Classe DataMemberFieldEditor](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |  
-| [Classe DataMemberListEditor](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |  
+| <span data-ttu-id="8ddce-122">Nome dell'API</span><span class="sxs-lookup"><span data-stu-id="8ddce-122">API Name</span></span> |
+| -------- |
+| [<span data-ttu-id="8ddce-123">Classe System.Net.Connection</span><span class="sxs-lookup"><span data-stu-id="8ddce-123">System.Net.Connection Class</span></span>](../../../docs/framework/additional-apis/connection.md) |
+| [<span data-ttu-id="8ddce-124">System.Net.Connection.m\_WriteList campo</span><span class="sxs-lookup"><span data-stu-id="8ddce-124">System.Net.Connection.m\_WriteList Field</span></span>](../../../docs/framework/additional-apis/m_writelist.md) |
+| [<span data-ttu-id="8ddce-125">Classe System.Net.ConnectionGroup</span><span class="sxs-lookup"><span data-stu-id="8ddce-125">System.Net.ConnectionGroup Class</span></span>](../../../docs/framework/additional-apis/connectiongroup.md) |
+| [<span data-ttu-id="8ddce-126">System.Net.ConnectionGroup.m\_ConnectionList campo</span><span class="sxs-lookup"><span data-stu-id="8ddce-126">System.Net.ConnectionGroup.m\_ConnectionList Field</span></span>](../../../docs/framework/additional-apis/m_connectionlist.md) |
+| [<span data-ttu-id="8ddce-127">System.NET. HttpWebRequest. \_HttpResponse campo</span><span class="sxs-lookup"><span data-stu-id="8ddce-127">System.Net.HttpWebRequest.\_HttpResponse Field</span></span>](../../../docs/framework/additional-apis/_httpresponse.md) |
+| [<span data-ttu-id="8ddce-128">System.NET. HttpWebRequest. \_AutoRedirects campo</span><span class="sxs-lookup"><span data-stu-id="8ddce-128">System.Net.HttpWebRequest.\_AutoRedirects Field</span></span>](../../../docs/framework/additional-apis/_autoredirects.md) |
+| [<span data-ttu-id="8ddce-129">System.Net.ServicePoint.m\_ConnectionGroupList campo</span><span class="sxs-lookup"><span data-stu-id="8ddce-129">System.Net.ServicePoint.m\_ConnectionGroupList Field</span></span>](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |
+| [<span data-ttu-id="8ddce-130">System.Net.ServicePointManager.s\_ServicePointTable campo</span><span class="sxs-lookup"><span data-stu-id="8ddce-130">System.Net.ServicePointManager.s\_ServicePointTable Field</span></span>](../../../docs/framework/additional-apis/s_servicepointtable.md) |
+| [<span data-ttu-id="8ddce-131">System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes campo</span><span class="sxs-lookup"><span data-stu-id="8ddce-131">System.Windows.Diagnostics.VisualDiagnostics.s\_isDebuggerCheckDisabledForTestPurposes Field</span></span>](../../../docs/framework/additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md) |
+| [<span data-ttu-id="8ddce-132">Classe System.Windows.Forms.Design.DataMemberFieldEditor</span><span class="sxs-lookup"><span data-stu-id="8ddce-132">System.Windows.Forms.Design.DataMemberFieldEditor Class</span></span>](../../../docs/framework/additional-apis/datamemberfieldeditor-class.md) |
+| [<span data-ttu-id="8ddce-133">Classe System.Windows.Forms.Design.DataMemberListEditor</span><span class="sxs-lookup"><span data-stu-id="8ddce-133">System.Windows.Forms.Design.DataMemberListEditor Class</span></span>](../../../docs/framework/additional-apis/datamemberlisteditor-class.md) |
   
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a><span data-ttu-id="8ddce-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="8ddce-134">See also</span></span>
 
-[.NET Framework e rilascio fuori programma](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
-
+[<span data-ttu-id="8ddce-135">.NET Framework e rilascio fuori programma</span><span class="sxs-lookup"><span data-stu-id="8ddce-135">The .NET Framework and Out-of-Band Releases</span></span>](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)

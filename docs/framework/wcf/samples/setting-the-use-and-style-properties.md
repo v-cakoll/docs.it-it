@@ -1,67 +1,70 @@
 ---
-title: "Impostazione delle propriet&#224; Use e Style | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Impostazione delle proprietà Use e Style"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 21409597b8fe27992c08bbe76f56e78013156c46
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Impostazione delle propriet&#224; Use e Style
-In questo esempio viene illustrato l'uso delle proprietà Use e Style in <xref:System.ServiceModel.XmlSerializerFormatAttribute> e <xref:System.ServiceModel.DataContractFormatAttribute>.  Queste proprietà influiscono sulla formattazione dei messaggi.  Per impostazione predefinita, la formattazione del corpo del messaggio prevede che lo stile sia impostato su <xref:System.ServiceModel.OperationFormatStyle>.  Queste impostazioni possono essere specificate a livello del contratto di servizio o a livello del contratto dell'operazione.  
+# <a name="setting-the-use-and-style-properties"></a><span data-ttu-id="ae46a-102">Impostazione delle proprietà Use e Style</span><span class="sxs-lookup"><span data-stu-id="ae46a-102">Setting the Use and Style Properties</span></span>
+<span data-ttu-id="ae46a-103">In questo esempio viene illustrato l'uso delle proprietà Use e Style in <xref:System.ServiceModel.XmlSerializerFormatAttribute> e <xref:System.ServiceModel.DataContractFormatAttribute>.</span><span class="sxs-lookup"><span data-stu-id="ae46a-103">This sample demonstrates how to use the Use and Style properties on the <xref:System.ServiceModel.XmlSerializerFormatAttribute> and the <xref:System.ServiceModel.DataContractFormatAttribute>.</span></span> <span data-ttu-id="ae46a-104">Queste proprietà influiscono sulla formattazione dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="ae46a-104">These properties affect how messages are formatted.</span></span> <span data-ttu-id="ae46a-105">Per impostazione predefinita, la formattazione del corpo del messaggio prevede che lo stile sia impostato su <xref:System.ServiceModel.OperationFormatStyle.Document>.</span><span class="sxs-lookup"><span data-stu-id="ae46a-105">By default, the message body is formatted with the style set to <xref:System.ServiceModel.OperationFormatStyle.Document>.</span></span> <span data-ttu-id="ae46a-106">Queste impostazioni possono essere specificate a livello del contratto di servizio o a livello del contratto dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="ae46a-106">These settings can be specified at either the service contract level or the operation contract level.</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
+>  <span data-ttu-id="ae46a-107">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="ae46a-107">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- La proprietà di stile <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> determina come vengono formattati i metadati WSDL per il servizio.  I valori possibili sono <xref:System.ServiceModel.OperationFormatStyle> e <xref:System.ServiceModel.OperationFormatStyle>.  RPC indica che la rappresentazione WSDL dei messaggi scambiati in un'operazione contiene parametri analoghi a quelli di una chiamata a procedura remota.  Di seguito è riportato un esempio.  
+ <span data-ttu-id="ae46a-108">La proprietà di stile <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> determina come vengono formattati i metadati WSDL per il servizio.</span><span class="sxs-lookup"><span data-stu-id="ae46a-108">The <xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> style property determines how the WSDL metadata for the service is formatted.</span></span> <span data-ttu-id="ae46a-109">I valori possibili sono <xref:System.ServiceModel.OperationFormatStyle.Document> e <xref:System.ServiceModel.OperationFormatStyle.Rpc>.</span><span class="sxs-lookup"><span data-stu-id="ae46a-109">Possible values are <xref:System.ServiceModel.OperationFormatStyle.Document>, and <xref:System.ServiceModel.OperationFormatStyle.Rpc>.</span></span> <span data-ttu-id="ae46a-110">RPC indica che la rappresentazione WSDL dei messaggi scambiati in un'operazione contiene parametri analoghi a quelli di una chiamata a procedura remota.</span><span class="sxs-lookup"><span data-stu-id="ae46a-110">RPC means that the WSDL representation of messages exchanged for an operation contains parameters as if it were a remote procedure call.</span></span> <span data-ttu-id="ae46a-111">Di seguito è riportato un esempio.</span><span class="sxs-lookup"><span data-stu-id="ae46a-111">The following is an example.</span></span>  
   
-```  
+```xml  
 <wsdl:message name="IUseAndStyleCalculator_Add_InputMessage">  
-    <wsdl:part name="n1" type="xsd:double"/>  
-    <wsdl:part name="n2" type="xsd:double"/>  
+  <wsdl:part name="n1" type="xsd:double"/>  
+  <wsdl:part name="n2" type="xsd:double"/>  
 </wsdl:message>  
 ```  
   
- Se si imposta lo stile su <xref:System.ServiceModel.OperationFormatStyle> la rappresentazione WSDL contiene un solo elemento che rappresenta il documento scambiato in un'operazione, come mostrato nell'esempio seguente.  
+ <span data-ttu-id="ae46a-112">Se si imposta lo stile su <xref:System.ServiceModel.OperationFormatStyle.Document> la rappresentazione WSDL contiene un solo elemento che rappresenta il documento scambiato in un'operazione, come mostrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="ae46a-112">Setting the style to <xref:System.ServiceModel.OperationFormatStyle.Document> means that the WSDL representation contains a single element that represents the document that is exchanged for an operation as shown in the following example.</span></span>  
   
-```  
+```xml  
 <wsdl:message name="IUseAndStyleCalculator_Add_InputMessage">  
-    <wsdl:part name="parameters" element="tns:Add"/>  
+  <wsdl:part name="parameters" element="tns:Add"/>  
 </wsdl:message>  
 ```  
   
- La proprietà <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> determina il formato del messaggio.  I valori possibili sono <xref:System.ServiceModel.OperationFormatUse> e <xref:System.ServiceModel.OperationFormatUse>. Il valore predefinito è <xref:System.ServiceModel.OperationFormatUse>.  Literal significa che il messaggio è un'istanza letterale dello schema nel linguaggio WSDL, come illustrato nell'esempio documento\/letterale seguente.  
+ <span data-ttu-id="ae46a-113">La proprietà <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> determina il formato del messaggio.</span><span class="sxs-lookup"><span data-stu-id="ae46a-113">The <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> property determines the format of the message.</span></span> <span data-ttu-id="ae46a-114">I valori possibili sono <xref:System.ServiceModel.OperationFormatUse.Literal> e <xref:System.ServiceModel.OperationFormatUse.Encoded>. Il valore predefinito è <xref:System.ServiceModel.OperationFormatUse.Literal>.</span><span class="sxs-lookup"><span data-stu-id="ae46a-114">Possible values are <xref:System.ServiceModel.OperationFormatUse.Literal> and <xref:System.ServiceModel.OperationFormatUse.Encoded>; the default value is <xref:System.ServiceModel.OperationFormatUse.Literal>.</span></span> <span data-ttu-id="ae46a-115">Literal significa che il messaggio è un'istanza letterale dello schema nel linguaggio WSDL, come illustrato nell'esempio documento/letterale seguente.</span><span class="sxs-lookup"><span data-stu-id="ae46a-115">Literal means that the message is a literal instance of the schema in the WSDL as shown in the following Document/ Literal example.</span></span>  
   
-```  
+```xml  
 <Add xmlns="http://Microsoft.ServiceModel.Samples">  
-    <n1>100</n1>  
-    <n2>15.99</n2>  
+  <n1>100</n1>  
+  <n2>15.99</n2>  
 </Add>  
 ```  
   
- Encoded indica che gli schemi nel linguaggio WSDL sono specifiche astratte codificate secondo le regole incluse nella sezione 5 della specifica di SOAP 1.1.  Di seguito viene riportato un esempio RPC\/codificato.  
+ <span data-ttu-id="ae46a-116">Encoded indica che gli schemi nel linguaggio WSDL sono specifiche astratte codificate secondo le regole incluse nella sezione 5 della specifica di SOAP 1.1.</span><span class="sxs-lookup"><span data-stu-id="ae46a-116">Encoded means that the schemas in the WSDL are abstract specifications that are encoded according to the rules found in SOAP 1.1 section 5.</span></span> <span data-ttu-id="ae46a-117">Di seguito viene riportato un esempio RPC/codificato.</span><span class="sxs-lookup"><span data-stu-id="ae46a-117">The following is an RPC/Encoded example.</span></span>  
   
-```  
+```xml  
 <q1:Add xmlns:q1="http://Microsoft.ServiceModel.Samples">  
-    <n1 xsi:type="xsd:double" xmlns="">100</n1>  
-    <n2 xsi:type="xsd:double" xmlns="">15.99</n2>  
+  <n1 xsi:type="xsd:double" xmlns="">100</n1>  
+  <n2 xsi:type="xsd:double" xmlns="">15.99</n2>  
 </q1:Add>  
 ```  
   
- L'uso di <xref:System.ServiceModel.OperationFormatUse> è proibito in WS\-I Basic Profile 1.0 e deve essere usato solo quando richiesto dai servizi legacy.  Il formato di messaggio `Encoded` è disponibile solo quando si usa XmlSerializer.  
+ <span data-ttu-id="ae46a-118">L'uso di <xref:System.ServiceModel.OperationFormatUse.Encoded> è proibito in WS-I Basic Profile 1.0 e deve essere usato solo quando richiesto dai servizi legacy.</span><span class="sxs-lookup"><span data-stu-id="ae46a-118">The WS-I Basic Profile 1.0 prohibits the use of <xref:System.ServiceModel.OperationFormatUse.Encoded> and you should only use it when required by legacy services.</span></span> <span data-ttu-id="ae46a-119">Il formato di messaggio `Encoded` è disponibile solo quando si usa XmlSerializer.</span><span class="sxs-lookup"><span data-stu-id="ae46a-119">The `Encoded` message format is only available when using the XmlSerializer.</span></span>  
   
- Per poter visualizzare i messaggi inviati e ricevuti, questo esempio si basa su [Traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  La configurazione del servizio e il codice sorgente sono stati modificati per abilitare e usare la traccia e la registrazione dei messaggi.  <xref:System.ServiceModel.WsHttpBinding> è stato inoltre configurato senza la sicurezza, pertanto i messaggi registrati possono essere visualizzati in un formato non crittografato.  I log di traccia risultanti \(System.ServiceModel.e2e e Message.log\) devono essere visualizzati usando lo [Strumento Visualizzatore di tracce dei servizi \(SvcTraceViewer.exe\)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  Le tracci vengono configurate per essere create nella cartella C:\\LOGS.  Creare la cartella prima di eseguire l'esempio.  Per visualizzare il contenuto del messaggio nello strumento visualizzatore delle tracce, selezionare **Messaggi** nei riquadri di sinistra e di destra dello strumento.  
+ <span data-ttu-id="ae46a-120">Per consentire di visualizzare i messaggi inviati e ricevuti, in questo esempio è basato sul [traccia e registrazione dei messaggi](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).</span><span class="sxs-lookup"><span data-stu-id="ae46a-120">To allow you to see the messages being sent and received, this sample is based on the [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).</span></span> <span data-ttu-id="ae46a-121">La configurazione del servizio e il codice sorgente sono stati modificati per abilitare e usare la traccia e la registrazione dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="ae46a-121">The service configuration and source code have been modified to enable and utilize tracing and message logging.</span></span> <span data-ttu-id="ae46a-122">Inoltre, il <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> è stato configurato senza la sicurezza, pertanto i messaggi registrati possono essere visualizzati in formato non crittografato.</span><span class="sxs-lookup"><span data-stu-id="ae46a-122">In addition, the <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> has been configured without security, so the logged messages can be viewed in an unencrypted format.</span></span> <span data-ttu-id="ae46a-123">I registri di traccia risultante (System.ServiceModel.e2e e Message.log) devono essere visualizzati utilizzando il [strumento Visualizzatore di tracce dei servizi (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span><span class="sxs-lookup"><span data-stu-id="ae46a-123">The resulting trace logs (System.ServiceModel.e2e and Message.log) should be viewed by using the [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).</span></span> <span data-ttu-id="ae46a-124">Le tracci vengono configurate per essere create nella cartella C:\LOGS.</span><span class="sxs-lookup"><span data-stu-id="ae46a-124">The traces are configured to be created in the C:\LOGS folder.</span></span> <span data-ttu-id="ae46a-125">Creare la cartella prima di eseguire l'esempio.</span><span class="sxs-lookup"><span data-stu-id="ae46a-125">Create the folder before running the sample.</span></span> <span data-ttu-id="ae46a-126">Per visualizzare contenuto del messaggio nello strumento Visualizzatore di tracce, selezionare **messaggi** sinistra sia i riquadri a destra dello strumento.</span><span class="sxs-lookup"><span data-stu-id="ae46a-126">To view message contents in the Trace Viewer tool, select **Messages** in both the left and the right panes of the tool.</span></span>  
   
- Nel codice seguente viene descritto il contratto di servizio con la proprietà <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> impostata su <xref:System.ServiceModel.OperationFormatUse> e il formato del corpo del messaggio modificato dal valore predefinito <xref:System.ServiceModel.OperationFormatStyle> a <xref:System.ServiceModel.OperationFormatStyle>.  
+ <span data-ttu-id="ae46a-127">Nel codice seguente viene descritto il contratto di servizio con la proprietà <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> impostata su <xref:System.ServiceModel.OperationFormatUse> e il formato del corpo del messaggio modificato dal valore predefinito <xref:System.ServiceModel.OperationFormatStyle> a <xref:System.ServiceModel.OperationFormatStyle.Document>.</span><span class="sxs-lookup"><span data-stu-id="ae46a-127">The following code shows the service contract with the <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> property set to <xref:System.ServiceModel.OperationFormatUse> and the format of the message body changed from the default <xref:System.ServiceModel.OperationFormatStyle> to <xref:System.ServiceModel.OperationFormatStyle.Document>.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
@@ -80,25 +83,25 @@ public interface IUseAndStyleCalculator
 }  
 ```  
   
- Per visualizzare la differenza tra le impostazioni <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> e <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A>, modificarle nel servizio, rigenerare il client, eseguire l'esempio ed esaminare il file c:\\logs\\message.logs con lo strumento Visualizzatore di tracce dei servizi.  Osservare inoltre l'impatto sui metadati visualizzando http:\/\/localhost\/ServiceModelSamples\/service.svc?wsdl.  I metadati per i servizi in genere vengono suddivisi su più pagine.  La pagina wsdl principale contiene le associazioni WSDL, ma è necessario visualizzare http:\/\/localhost\/ServiceModelSamples\/service.svc?wsdl\=wsdl0 per osservare le definizioni del messaggio.  
+ <span data-ttu-id="ae46a-128">Per visualizzare la differenza tra le impostazioni <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> e <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A>, modificarle nel servizio, rigenerare il client, eseguire l'esempio ed esaminare il file c:\logs\message.logs con lo strumento Visualizzatore di tracce dei servizi.</span><span class="sxs-lookup"><span data-stu-id="ae46a-128">To see the difference between the different <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> and <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> settings, modify them in the service, regenerate the client, run the sample, and examine the c:\logs\message.logs file with the Service Trace Viewer tool.</span></span> <span data-ttu-id="ae46a-129">Osservare inoltre l'impatto sui metadati visualizzando http://localhost/ServiceModelSamples/service.svc?wsdl.</span><span class="sxs-lookup"><span data-stu-id="ae46a-129">Also observe the impact on the metadata by viewing http://localhost/ServiceModelSamples/service.svc?wsdl.</span></span> <span data-ttu-id="ae46a-130">I metadati per i servizi in genere vengono suddivisi su più pagine.</span><span class="sxs-lookup"><span data-stu-id="ae46a-130">The metadata for services is typically broken up into multiple pages.</span></span> <span data-ttu-id="ae46a-131">La pagina wsdl principale contiene le associazioni WSDL, ma è necessario visualizzare http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 per osservare le definizioni del messaggio.</span><span class="sxs-lookup"><span data-stu-id="ae46a-131">The main wsdl page contains the WSDL bindings, but view http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 to observe the message definitions.</span></span>  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ae46a-132">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="ae46a-132">To set up, build, and run the sample</span></span>  
   
-1.  Assicurarsi di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="ae46a-133">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ae46a-133">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Creare una directory C:\\LOGS per la registrazione dei messaggi.  Assegnare all'account Servizio di rete le autorizzazioni di scrittura per questa directory.  
+2.  <span data-ttu-id="ae46a-134">Creare una directory C:\LOGS per la registrazione dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="ae46a-134">Create a C:\LOGS directory for logging messages.</span></span> <span data-ttu-id="ae46a-135">Assegnare all'account Servizio di rete le autorizzazioni di scrittura per questa directory.</span><span class="sxs-lookup"><span data-stu-id="ae46a-135">Give the user Network Service write permissions for this directory.</span></span>  
   
-3.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  <span data-ttu-id="ae46a-136">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ae46a-136">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-4.  Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  <span data-ttu-id="ae46a-137">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ae46a-137">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.  Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="ae46a-138">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="ae46a-138">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ae46a-139">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="ae46a-139">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="ae46a-140">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="ae46a-140">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ae46a-141">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="ae46a-141">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="ae46a-142">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ae46a-142">See Also</span></span>

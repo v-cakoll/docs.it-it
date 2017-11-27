@@ -1,47 +1,50 @@
 ---
-title: "Definizione dello schema di DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Definizione dello schema di DataTable
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: be5969bf8653512da27785479ac7feae1f6c09a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Definizione dello schema di DataTable
-Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli.  Lo schema di un tipo <xref:System.Data.DataTable> viene definito usando gli oggetti <xref:System.Data.DataColumn> oltre agli oggetti <xref:System.Data.ForeignKeyConstraint> e <xref:System.Data.UniqueConstraint>.  Le colonne di una tabella possono essere associate a colonne di un'origine dati, contenere valori calcolati da espressioni, incrementare automaticamente i propri valori o contenere valori di chiavi primarie.  
+# <a name="datatable-schema-definition"></a><span data-ttu-id="3b00a-102">Definizione dello schema di DataTable</span><span class="sxs-lookup"><span data-stu-id="3b00a-102">DataTable Schema Definition</span></span>
+<span data-ttu-id="3b00a-103">Lo schema, o struttura, di una tabella viene rappresentato da colonne e vincoli.</span><span class="sxs-lookup"><span data-stu-id="3b00a-103">The schema, or structure, of a table is represented by columns and constraints.</span></span> <span data-ttu-id="3b00a-104">Lo schema di un tipo <xref:System.Data.DataTable> viene definito usando gli oggetti <xref:System.Data.DataColumn> oltre agli oggetti <xref:System.Data.ForeignKeyConstraint> e <xref:System.Data.UniqueConstraint>.</span><span class="sxs-lookup"><span data-stu-id="3b00a-104">You define the schema of a <xref:System.Data.DataTable> using <xref:System.Data.DataColumn> objects as well as <xref:System.Data.ForeignKeyConstraint> and <xref:System.Data.UniqueConstraint> objects.</span></span> <span data-ttu-id="3b00a-105">Le colonne di una tabella possono essere associate a colonne di un'origine dati, contenere valori calcolati da espressioni, incrementare automaticamente i propri valori o contenere valori di chiavi primarie.</span><span class="sxs-lookup"><span data-stu-id="3b00a-105">The columns in a table can map to columns in a data source, contain calculated values from expressions, automatically increment their values, or contain primary key values.</span></span>  
   
- I riferimenti basati sui nomi a colonne, relazioni e vincoli di una tabella distinguono tra maiuscole e minuscole.  Pertanto, in una tabella possono coesistere due o più colonne, relazioni o vincoli con lo stesso nome ma che presentano una combinazione diversa di maiuscole e minuscole.  È possibile, ad esempio, che siano presenti sia **Col1** che **col1**.  In tal caso, è necessario che in un riferimento a una delle colonne basato sul nome venga usato il nome con la stessa combinazione di maiuscole e minuscole adottata nella colonna. Se il nome non corrisponde, verrà generata un'eccezione.  Se ad esempio nella tabella **myTable** sono contenute le colonne **Col1** e **col1**, il riferimento basato sul nome a **Col1** sarà **myTable.Columns\["Col1"\]** e il riferimento a **col1** sarà **myTable.Columns\["col1"\]**.  Se si tenta di fare riferimento a una delle due colonne come **myTable.Columns\["COL1"\]**, verrà generata un'eccezione.  
+ <span data-ttu-id="3b00a-106">I riferimenti basati sui nomi a colonne, relazioni e vincoli di una tabella distinguono tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="3b00a-106">References by name to columns, relations, and constraints in a table are case-sensitive.</span></span> <span data-ttu-id="3b00a-107">Pertanto, in una tabella possono coesistere due o più colonne, relazioni o vincoli con lo stesso nome ma che presentano una combinazione diversa di maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="3b00a-107">Two or more columns, relations, or constraints can therefore exist in a table that have the same name, but that differ in case.</span></span> <span data-ttu-id="3b00a-108">Ad esempio, è possibile avere **Col1** e **col1**.</span><span class="sxs-lookup"><span data-stu-id="3b00a-108">For example, you can have **Col1** and **col1**.</span></span> <span data-ttu-id="3b00a-109">In tal caso, è necessario che in un riferimento a una delle colonne basato sul nome venga usato il nome con la stessa combinazione di maiuscole e minuscole adottata nella colonna. Se il nome non corrisponde, verrà generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="3b00a-109">In such as case, a reference to one of the columns by name must match the case of the column name exactly; otherwise an exception is thrown.</span></span> <span data-ttu-id="3b00a-110">Ad esempio, se la tabella **myTable** contiene le colonne **Col1** e **col1**, si fa riferimento a **Col1** in base al nome come  **Col1 "]**, e **col1** come **Col1"]**.</span><span class="sxs-lookup"><span data-stu-id="3b00a-110">For example, if the table **myTable** contains the columns **Col1** and **col1**, you would reference **Col1** by name as **myTable.Columns["Col1"]**, and **col1** as **myTable.Columns["col1"]**.</span></span> <span data-ttu-id="3b00a-111">Il tentativo di fare riferimento a colonne di **Col1 "]** verrà generata un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="3b00a-111">Attempting to reference either of the columns as **myTable.Columns["COL1"]** would generate an exception.</span></span>  
   
- La distinzione tra maiuscole e minuscole non è rilevante se nella tabella è presente solo una colonna, una relazione o un vincolo con un determinato nome.  Ovvero, se nella tabella non sono presenti altre relazioni o oggetti Constraint il cui nome corrisponda al nome della particolare colonna o relazione o oggetto Constraint, è possibile fare riferimento all'oggetto mediante il nome, usando sia lettere maiuscole che minuscole, senza che venga generata alcuna eccezione.  Se ad esempio nella tabella è presente solo **Col1**, è possibile fare riferimento a tale colonna usando **my.Columns\["COL1"\]**.  
+ <span data-ttu-id="3b00a-112">La distinzione tra maiuscole e minuscole non è rilevante se nella tabella è presente solo una colonna, una relazione o un vincolo con un determinato nome.</span><span class="sxs-lookup"><span data-stu-id="3b00a-112">The case-sensitivity rule does not apply if only one column, relation, or constraint  with a particular name exists.</span></span> <span data-ttu-id="3b00a-113">Ovvero, se nella tabella non sono presenti altre relazioni o oggetti Constraint il cui nome corrisponda al nome della particolare colonna o relazione o oggetto Constraint, è possibile fare riferimento all'oggetto mediante il nome, usando sia lettere maiuscole che minuscole, senza che venga generata alcuna eccezione.</span><span class="sxs-lookup"><span data-stu-id="3b00a-113">That is, if no other column, relation, or constraint object in the table matches the name of that particular column, relation, or constraint object, you may reference the object by name using any case, and no exception is thrown.</span></span> <span data-ttu-id="3b00a-114">Ad esempio, se la tabella include solo **Col1**, è possibile farvi riferimento tramite **personale. Colonne ["COL1"]**.</span><span class="sxs-lookup"><span data-stu-id="3b00a-114">For example, if the table has only **Col1**, you can reference it using **my.Columns["COL1"]**.</span></span>  
   
 > [!NOTE]
->  La proprietà <xref:System.Data.DataTable.CaseSensitive%2A> di **DataTable** non influisce su tale comportamento.  Tale proprietà viene infatti applicata ai dati della tabella e influisce sull'ordinamento, la ricerca, l'applicazione di filtri, di vincoli e così via, ma non sui riferimenti a colonne, relazioni e vincoli.  
+>  <span data-ttu-id="3b00a-115">Il <xref:System.Data.DataTable.CaseSensitive%2A> proprietà del **DataTable** non influisce su tale comportamento.</span><span class="sxs-lookup"><span data-stu-id="3b00a-115">The <xref:System.Data.DataTable.CaseSensitive%2A> property of the **DataTable** does not affect this behavior.</span></span> <span data-ttu-id="3b00a-116">Il **CaseSensitive** proprietà si applica ai dati in una tabella e influisce sull'ordinamento, ricerca, filtro, vincoli e così via, ma non per i riferimenti a colonne, relazioni e vincoli.</span><span class="sxs-lookup"><span data-stu-id="3b00a-116">The **CaseSensitive** property applies to the data in a table and affects sorting, searching, filtering, enforcing constraints, and so on, but not to references to the columns, relations, and constraints.</span></span>  
   
-## In questa sezione  
- [Aggiunta di colonne a un DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
- Viene descritta la definizione delle colonne di una tabella tramite gli oggetti **DataColumn**.  
+## <a name="in-this-section"></a><span data-ttu-id="3b00a-117">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="3b00a-117">In This Section</span></span>  
+ [<span data-ttu-id="3b00a-118">Aggiunta di colonne a un oggetto DataTable</span><span class="sxs-lookup"><span data-stu-id="3b00a-118">Adding Columns to a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ <span data-ttu-id="3b00a-119">Viene descritto come definire le colonne di una tabella tramite **DataColumn** oggetti.</span><span class="sxs-lookup"><span data-stu-id="3b00a-119">Describes how to define the columns of a table using **DataColumn** objects.</span></span>  
   
- [Creazione di colonne di espressioni](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
- Viene spiegato come usare la proprietà **Expression** di una colonna per calcolare valori basati sui valori di altre colonne della riga.  
+ [<span data-ttu-id="3b00a-120">Creazione di colonne espressioni</span><span class="sxs-lookup"><span data-stu-id="3b00a-120">Creating Expression Columns</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
+ <span data-ttu-id="3b00a-121">Viene illustrato come la **espressione** proprietà di una colonna può essere utilizzata per calcolare i valori in base ai valori di altre colonne nella riga.</span><span class="sxs-lookup"><span data-stu-id="3b00a-121">Explains how the **Expression** property of a column can be used to calculate values based on the values from other columns in the row.</span></span>  
   
- [Creazione di colonne AutoIncrement](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
- Viene descritto come impostare una colonna in modo che incrementi automaticamente i valori numerici, per garantire un valore di colonna univoco per ogni riga.  
+ [<span data-ttu-id="3b00a-122">Creazione di colonne AutoIncrement</span><span class="sxs-lookup"><span data-stu-id="3b00a-122">Creating AutoIncrement Columns</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
+ <span data-ttu-id="3b00a-123">Viene descritto come impostare una colonna in modo che incrementi automaticamente i valori numerici, per garantire un valore di colonna univoco per ogni riga.</span><span class="sxs-lookup"><span data-stu-id="3b00a-123">Describes how a column can be set to automatically increment numerical values to ensure a unique column value per row.</span></span>  
   
- [Definizione di chiavi primarie](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
- Viene descritto come specificare la chiave primaria di una tabella da uno o più oggetti **DataColumn**.  
+ [<span data-ttu-id="3b00a-124">Definizione di chiavi primarie</span><span class="sxs-lookup"><span data-stu-id="3b00a-124">Defining Primary Keys</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
+ <span data-ttu-id="3b00a-125">Viene descritto come specificare la chiave primaria di una tabella da uno o più **DataColumn** oggetti.</span><span class="sxs-lookup"><span data-stu-id="3b00a-125">Describes how to specify the primary key of a table from one or more **DataColumn** objects.</span></span>  
   
- [Vincoli di DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
- Viene descritto come definire vincoli di chiave esterna e univoci per le colonne di una tabella.  
+ [<span data-ttu-id="3b00a-126">Vincoli DataTable</span><span class="sxs-lookup"><span data-stu-id="3b00a-126">DataTable Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
+ <span data-ttu-id="3b00a-127">Viene descritto come definire vincoli di chiave esterna e univoci per le colonne di una tabella.</span><span class="sxs-lookup"><span data-stu-id="3b00a-127">Describes how to define foreign key and unique constraints for columns in a table.</span></span>  
   
-## Vedere anche  
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="3b00a-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3b00a-128">See Also</span></span>  
+ [<span data-ttu-id="3b00a-129">DataTable</span><span class="sxs-lookup"><span data-stu-id="3b00a-129">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [<span data-ttu-id="3b00a-130">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="3b00a-130">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

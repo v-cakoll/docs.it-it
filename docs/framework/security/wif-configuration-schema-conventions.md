@@ -5,57 +5,54 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 092f6f4544e308dae45636f447f75100512a916a
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ad367a14373487698cd13c710998f1a5e6ccb7cd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="wif-configuration-schema-conventions"></a>Convenzioni dello schema di configurazione di WIF
-Questo argomento illustra le convenzioni usate negli argomenti relativi alla configurazione di Windows Identity Foundation (WIF) e descrive alcuni attributi e funzionalità comuni usati nelle sezioni [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) e [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md).  
+# <a name="wif-configuration-schema-conventions"></a><span data-ttu-id="6dcf9-102">Convenzioni dello schema di configurazione di WIF</span><span class="sxs-lookup"><span data-stu-id="6dcf9-102">WIF Configuration Schema Conventions</span></span>
+<span data-ttu-id="6dcf9-103">Questo argomento illustra le convenzioni usate negli argomenti relativi alla configurazione di Windows Identity Foundation (WIF) e descrive alcuni attributi e funzionalità comuni usati nelle sezioni [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) e [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md).</span><span class="sxs-lookup"><span data-stu-id="6dcf9-103">This topic discusses conventions used throughout the Windows Identity Foundation (WIF) configuration topics and describes some common features and attributes used in the [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) and the [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) sections.</span></span>  
   
 <a name="BKMK_Modes"></a>   
-## <a name="modes"></a>Modalità  
- Molti elementi di configurazione WIF hanno un attributo `mode`. Questo attributo controlla in genere la classe usata per eseguire una determinata parte dell'elaborazione e gli elementi di configurazione consentiti come elementi figlio dell'elemento corrente. Viene generato un errore di configurazione se gli elementi inclusi nel file di configurazione vengono ignorati a causa delle impostazioni della modalità.  
+## <a name="modes"></a><span data-ttu-id="6dcf9-104">Modalità</span><span class="sxs-lookup"><span data-stu-id="6dcf9-104">Modes</span></span>  
+ <span data-ttu-id="6dcf9-105">Molti elementi di configurazione WIF hanno un attributo `mode`.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-105">Many of the WIF configuration elements have a `mode` attribute.</span></span> <span data-ttu-id="6dcf9-106">Questo attributo controlla in genere la classe usata per eseguire una determinata parte dell'elaborazione e gli elementi di configurazione consentiti come elementi figlio dell'elemento corrente.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-106">This attribute typically controls which class is used to do a particular part of the processing and which configuration elements are allowed as child elements of the current element.</span></span> <span data-ttu-id="6dcf9-107">Viene generato un errore di configurazione se gli elementi inclusi nel file di configurazione vengono ignorati a causa delle impostazioni della modalità.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-107">A configuration error will be raised if elements that are included in the configuration file are ignored because of the mode settings.</span></span>  
   
 <a name="BKMK_TimespanValues"></a>   
-## <a name="timespan-values"></a>Valori TimeSpan  
- Quando <xref:System.TimeSpan> viene usato come tipo di attributo, vedere il metodo <xref:System.TimeSpan.Parse%28System.String%29> per conoscere il formato consentito. Il formato è conforme alle specifiche seguenti.  
+## <a name="timespan-values"></a><span data-ttu-id="6dcf9-108">Valori TimeSpan</span><span class="sxs-lookup"><span data-stu-id="6dcf9-108">Timespan Values</span></span>  
+ <span data-ttu-id="6dcf9-109">Quando <xref:System.TimeSpan> viene usato come tipo di attributo, vedere il metodo <xref:System.TimeSpan.Parse%28System.String%29> per conoscere il formato consentito.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-109">Where <xref:System.TimeSpan> is used as the type of an attribute, see the <xref:System.TimeSpan.Parse%28System.String%29> method to see the allowed format.</span></span> <span data-ttu-id="6dcf9-110">Il formato è conforme alle specifiche seguenti.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-110">This format conforms to the following specification.</span></span>  
   
 ```  
 [ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]  
 ```  
   
- Ad esempio, "30", "30.00:00", "30.00:00:00" indicano tutti 30 giorni e "00:05", "00:05:00", "0.00:05:00.00" indicano tutti 5 minuti.  
+ <span data-ttu-id="6dcf9-111">Ad esempio, "30", "30.00:00", "30.00:00:00" indicano tutti 30 giorni e "00:05", "00:05:00", "0.00:05:00.00" indicano tutti 5 minuti.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-111">For example, "30", "30.00:00", "30.00:00:00" all mean 30 days; and "00:05", "00:05:00", "0.00:05:00.00" all mean 5 minutes.</span></span>  
   
 <a name="BKMK_CertificateReferences"></a>   
-## <a name="certificate-references"></a>Riferimenti ai certificati  
- Diversi elementi accettano riferimenti ai certificati tramite l'elemento `<certificateReference>`. Quando si fa riferimento a un certificato, sono disponibili gli attributi seguenti.  
+## <a name="certificate-references"></a><span data-ttu-id="6dcf9-112">Riferimenti ai certificati</span><span class="sxs-lookup"><span data-stu-id="6dcf9-112">Certificate References</span></span>  
+ <span data-ttu-id="6dcf9-113">Diversi elementi accettano riferimenti ai certificati tramite l'elemento `<certificateReference>`.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-113">Several elements take references to certificates using the `<certificateReference>` element.</span></span> <span data-ttu-id="6dcf9-114">Quando si fa riferimento a un certificato, sono disponibili gli attributi seguenti.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-114">When referencing a certificate, the following attributes are available.</span></span>  
   
 |||  
 |-|-|  
-|`storeLocation`|Un valore dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.StoreLocation>: `CurrentUser` o `CurrentMachine`.|  
-|`storeName`|Un valore dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.StoreName>. I valori più utili in questo contesto sono `My` e `TrustedPeople`.|  
-|`x509FindType`|Un valore dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.X509FindType>. I valori più utili in questo contesto sono `FindBySubjectName` e `FindByThumbprint`. Per eliminare le probabilità di errore, è consigliabile usare il tipo `FindByThumbprint` in ambienti di produzione.|  
-|`findValue`|Il valore usato per trovare il certificato, basato sull'attributo `x509FindType`. Per eliminare le probabilità di errore, è consigliabile usare il tipo `FindByThumbprint` in ambienti di produzione. Quando si specifica `FindByThumbPrint`, questo attributo accetta un valore che è la forma di stringa esadecimale dell'identificazione personale del certificato, ad esempio "97249e1a5fa6bee5e515b82111ef524a4c91583f".|  
+|`storeLocation`|<span data-ttu-id="6dcf9-115">Un valore dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.StoreLocation>: `CurrentUser` o `CurrentMachine`.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-115">A value of the <xref:System.Security.Cryptography.X509Certificates.StoreLocation> enumeration: `CurrentUser` or `CurrentMachine`.</span></span>|  
+|`storeName`|<span data-ttu-id="6dcf9-116">Un valore dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.StoreName>. I valori più utili in questo contesto sono `My` e `TrustedPeople`.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-116">A value of the <xref:System.Security.Cryptography.X509Certificates.StoreName> enumeration; the most useful for this context are `My` and `TrustedPeople`.</span></span>|  
+|`x509FindType`|<span data-ttu-id="6dcf9-117">Un valore dell'enumerazione <xref:System.Security.Cryptography.X509Certificates.X509FindType>. I valori più utili in questo contesto sono `FindBySubjectName` e `FindByThumbprint`.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-117">A value of the <xref:System.Security.Cryptography.X509Certificates.X509FindType> enumeration; the most useful for this context are `FindBySubjectName` and `FindByThumbprint`.</span></span> <span data-ttu-id="6dcf9-118">Per eliminare le probabilità di errore, è consigliabile usare il tipo `FindByThumbprint` in ambienti di produzione.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-118">To eliminate the chance of error, it is recommended that the `FindByThumbprint` type be used in production environments.</span></span>|  
+|`findValue`|<span data-ttu-id="6dcf9-119">Il valore usato per trovare il certificato, basato sull'attributo `x509FindType`.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-119">The value used to find the certificate, based on the `x509FindType` attribute.</span></span> <span data-ttu-id="6dcf9-120">Per eliminare le probabilità di errore, è consigliabile usare il tipo `FindByThumbprint` in ambienti di produzione.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-120">To eliminate the chance of error, it is recommended that the `FindByThumbprint` type be used in production environments.</span></span> <span data-ttu-id="6dcf9-121">Quando si specifica `FindByThumbPrint`, questo attributo accetta un valore che è la forma di stringa esadecimale dell'identificazione personale del certificato, ad esempio "97249e1a5fa6bee5e515b82111ef524a4c91583f".</span><span class="sxs-lookup"><span data-stu-id="6dcf9-121">When `FindByThumbPrint` is specified, this attribute takes a value that is the hexadecimal-string form of the certificate thumbprint; for example, "97249e1a5fa6bee5e515b82111ef524a4c91583f".</span></span>|  
   
 <a name="BKMK_CustomTypeReferences"></a>   
-## <a name="custom-type-references"></a>Riferimenti ai tipi personalizzati  
- Diversi elementi fanno riferimento ai tipi personalizzati usando l'attributo `type`. Questo attributo deve specificare il nome del tipo personalizzato. Per fare riferimento a un tipo dalla Global Assembly Cache (GAC), è necessario usare un nome sicuro. Per fare riferimento a un tipo da un assembly nella directory Bin/, è possibile usare un semplice riferimento qualificato dall'assembly. È possibile fare riferimento anche ai tipi definiti nella directory App_Code/ specificando semplicemente il nome del tipo senza qualifica tramite assembly.  
+## <a name="custom-type-references"></a><span data-ttu-id="6dcf9-122">Riferimenti ai tipi personalizzati</span><span class="sxs-lookup"><span data-stu-id="6dcf9-122">Custom Type References</span></span>  
+ <span data-ttu-id="6dcf9-123">Diversi elementi fanno riferimento ai tipi personalizzati usando l'attributo `type`.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-123">Several elements reference custom types using the `type` attribute.</span></span> <span data-ttu-id="6dcf9-124">Questo attributo deve specificare il nome del tipo personalizzato.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-124">This attribute should specify the name of the custom type.</span></span> <span data-ttu-id="6dcf9-125">Per fare riferimento a un tipo dalla Global Assembly Cache (GAC), è necessario usare un nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-125">To reference a type from the Global Assembly Cache (GAC), a strong name should be used.</span></span> <span data-ttu-id="6dcf9-126">Per fare riferimento a un tipo da un assembly nella directory Bin/, è possibile usare un semplice riferimento qualificato dall'assembly.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-126">To reference a type from an assembly in the Bin/ directory, a simple assembly-qualified reference may be used.</span></span> <span data-ttu-id="6dcf9-127">È possibile fare riferimento anche ai tipi definiti nella directory App_Code/ specificando semplicemente il nome del tipo senza qualifica tramite assembly.</span><span class="sxs-lookup"><span data-stu-id="6dcf9-127">Types defined in the App_Code/ directory may also be referenced by simply specifying the type name with no qualifying assembly.</span></span>  
   
- I tipi personalizzati devono essere derivati dal tipo specificato e devono fornire un costruttore `public` predefinito (argomento 0).  
+ <span data-ttu-id="6dcf9-128">I tipi personalizzati devono essere derivati dal tipo specificato e devono fornire un costruttore `public` predefinito (argomento 0).</span><span class="sxs-lookup"><span data-stu-id="6dcf9-128">Custom types must be derived from the type specified and they must provide a `public` default (0 argument) constructor.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)   
- [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
-
+## <a name="see-also"></a><span data-ttu-id="6dcf9-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6dcf9-129">See Also</span></span>  
+ [<span data-ttu-id="6dcf9-130">\<System. IdentityModel ></span><span class="sxs-lookup"><span data-stu-id="6dcf9-130">\<system.identityModel></span></span>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)  
+ [<span data-ttu-id="6dcf9-131">\<system.identityModel.services></span><span class="sxs-lookup"><span data-stu-id="6dcf9-131">\<system.identityModel.services></span></span>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)

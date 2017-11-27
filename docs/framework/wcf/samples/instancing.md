@@ -1,44 +1,44 @@
 ---
-title: "Istanze | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Esempio di istanze [Windows Communication Foundation]"
-  - "comportamenti dei servizi, esempio di istanze"
+title: Istanze
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- service behaviors, instancing sample
+- Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-caps.latest.revision: 40
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 40
+caps.latest.revision: "40"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5b38d70a4f4c3938d6cc6116c94a009ec0f34dc0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Istanze
-Nell'esempio relativo alle istanze viene descritta l'impostazione del comportamento delle istanze che controlla come vengono create le istanze di una classe del servizio in risposta alle richieste del client.  L'esempio si basa su [Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa il contratto di servizio `ICalculator`.  Questo esempio definisce un contratto nuovo, `ICalculatorInstance`, che eredita da `ICalculator`.  Il contratto specificato da `ICalculatorInstance` fornisce tre operazioni aggiuntive per il controllo dello stato dell'istanza del servizio.  Modificando l'impostazione delle istanze, è possibile osservare come viene modificato il comportamento quando si esegue il client.  
+# <a name="instancing"></a><span data-ttu-id="ffd06-102">Istanze</span><span class="sxs-lookup"><span data-stu-id="ffd06-102">Instancing</span></span>
+<span data-ttu-id="ffd06-103">Nell'esempio relativo alle istanze viene descritta l'impostazione del comportamento delle istanze che controlla come vengono create le istanze di una classe del servizio in risposta alle richieste del client.</span><span class="sxs-lookup"><span data-stu-id="ffd06-103">The Instancing sample demonstrates the instancing behavior setting, which controls how instances of a service class are created in response to client requests.</span></span> <span data-ttu-id="ffd06-104">L'esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md), che implementa il `ICalculator` contratto di servizio.</span><span class="sxs-lookup"><span data-stu-id="ffd06-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements the `ICalculator` service contract.</span></span> <span data-ttu-id="ffd06-105">Questo esempio definisce un contratto nuovo, `ICalculatorInstance`, che eredita da `ICalculator`.</span><span class="sxs-lookup"><span data-stu-id="ffd06-105">This sample defines a new contract, `ICalculatorInstance`, which inherits from `ICalculator`.</span></span> <span data-ttu-id="ffd06-106">Il contratto specificato da `ICalculatorInstance` fornisce tre operazioni aggiuntive per il controllo dello stato dell'istanza del servizio.</span><span class="sxs-lookup"><span data-stu-id="ffd06-106">The contract specified by `ICalculatorInstance` provides three additional operations for inspecting the state of the service instance.</span></span> <span data-ttu-id="ffd06-107">Modificando l'impostazione delle istanze, è possibile osservare come viene modificato il comportamento quando si esegue il client.</span><span class="sxs-lookup"><span data-stu-id="ffd06-107">By altering the instancing setting, you can observe the change in behavior by running the client.</span></span>  
   
- In questo esempio, il client è un'applicazione console \(.exe\) e il servizio è ospitato da Internet Information Services \(IIS\).  
+ <span data-ttu-id="ffd06-108">In questo esempio, il client è un'applicazione console (.exe) e il servizio è ospitato da Internet Information Services (IIS).</span><span class="sxs-lookup"><span data-stu-id="ffd06-108">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
+>  <span data-ttu-id="ffd06-109">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="ffd06-109">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- Sono disponibili le modalità di istanza seguenti:  
+ <span data-ttu-id="ffd06-110">Sono disponibili le modalità di istanza seguenti:</span><span class="sxs-lookup"><span data-stu-id="ffd06-110">The following instancing modes are available:</span></span>  
   
--   <xref:System.ServiceModel.InstanceContextMode>: viene creata una nuova istanza del servizio per ogni richiesta del client.  
+-   <span data-ttu-id="ffd06-111"><xref:System.ServiceModel.InstanceContextMode.PerCall>: viene creata una nuova istanza del servizio per ogni richiesta del client.</span><span class="sxs-lookup"><span data-stu-id="ffd06-111"><xref:System.ServiceModel.InstanceContextMode.PerCall>: A new service instance is created for each client request.</span></span>  
   
--   <xref:System.ServiceModel.InstanceContextMode>: viene creata una nuova istanza per ogni sessione del client e questa istanza viene mantenuta per tutta la durata della sessione \(richiede un'associazione che supporta la sessione\).  
+-   <span data-ttu-id="ffd06-112"><xref:System.ServiceModel.InstanceContextMode.PerSession>: viene creata una nuova istanza per ogni sessione del client e questa istanza viene mantenuta per tutta la durata della sessione (richiede un'associazione che supporta la sessione).</span><span class="sxs-lookup"><span data-stu-id="ffd06-112"><xref:System.ServiceModel.InstanceContextMode.PerSession>: A new instance is created for each new client session, and maintained for the lifetime of that session (requires a binding that supports session).</span></span>  
   
--   <xref:System.ServiceModel.InstanceContextMode>: una singola istanza della classe del servizio gestisce tutte le richieste del client per la durata dell'applicazione.  
+-   <span data-ttu-id="ffd06-113"><xref:System.ServiceModel.InstanceContextMode.Single>: una singola istanza della classe del servizio gestisce tutte le richieste del client per la durata dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="ffd06-113"><xref:System.ServiceModel.InstanceContextMode.Single>: A single instance of the service class handles all client requests for the lifetime of the application.</span></span>  
   
- La classe del servizio specifica il comportamento di istanza con l'attributo `[ServiceBehavior(InstanceContextMode=<setting>)]`, come illustrato nell'esempio di codice seguente.  Modificando quali righe vengono impostate come commento, è possibile osservare il comportamento di ognuna delle modalità dell'istanza.  Ricordarsi di ricompilare il servizio dopo avere modificato la modalità dell'istanza.  Non è necessario specificare impostazioni correlate all'istanza sul client.  
+ <span data-ttu-id="ffd06-114">La classe del servizio specifica il comportamento di istanza con l'attributo `[ServiceBehavior(InstanceContextMode=<setting>)]`, come illustrato nell'esempio di codice seguente.</span><span class="sxs-lookup"><span data-stu-id="ffd06-114">The service class specifies instancing behavior with the `[ServiceBehavior(InstanceContextMode=<setting>)]` attribute as shown in the code sample that follows.</span></span> <span data-ttu-id="ffd06-115">Modificando quali righe vengono impostate come commento, è possibile osservare il comportamento di ognuna delle modalità dell'istanza.</span><span class="sxs-lookup"><span data-stu-id="ffd06-115">By changing which lines are commented out, you can observe the behavior of each of the instance modes.</span></span> <span data-ttu-id="ffd06-116">Ricordarsi di ricompilare il servizio dopo avere modificato la modalità dell'istanza.</span><span class="sxs-lookup"><span data-stu-id="ffd06-116">Remember to rebuild the service after changing the instancing mode.</span></span> <span data-ttu-id="ffd06-117">Non è necessario specificare impostazioni correlate all'istanza sul client.</span><span class="sxs-lookup"><span data-stu-id="ffd06-117">There are no instancing-related settings to specify on the client.</span></span>  
   
 ```  
 // Enable one of the following instance modes to compare instancing behaviors.  
@@ -130,23 +130,23 @@ static void Main()
 }  
 ```  
   
- Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.  Viene visualizzata la modalità dell'istanza nel quale viene eseguito il servizio.  Dopo ogni operazione, l'ID dell'istanza e il conteggio dell'operazione vengono visualizzati per riflettere il comportamento della modalità dell'istanza.  Premere INVIO nella finestra del client per arrestare il client.  
+ <span data-ttu-id="ffd06-118">Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="ffd06-118">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="ffd06-119">Viene visualizzata la modalità dell'istanza nel quale viene eseguito il servizio.</span><span class="sxs-lookup"><span data-stu-id="ffd06-119">The instance mode the service is running under is displayed.</span></span> <span data-ttu-id="ffd06-120">Dopo ogni operazione, l'ID dell'istanza e il conteggio dell'operazione vengono visualizzati per riflettere il comportamento della modalità dell'istanza.</span><span class="sxs-lookup"><span data-stu-id="ffd06-120">After each operation, the instance ID and operation count are displayed to reflect the behavior of the instancing mode.</span></span> <span data-ttu-id="ffd06-121">Premere INVIO nella finestra del client per arrestare il client.</span><span class="sxs-lookup"><span data-stu-id="ffd06-121">Press ENTER in the client window to shut down the client.</span></span>  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ffd06-122">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="ffd06-122">To set up, build, and run the sample</span></span>  
   
-1.  Assicurarsi di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="ffd06-123">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ffd06-123">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="ffd06-124">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ffd06-124">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Per eseguire l'esempio su un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="ffd06-125">Per eseguire l'esempio in una configurazione singola o tra computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ffd06-125">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  È possibile che gli esempi siano già installati nel computer.  Verificare la directory seguente \(impostazione predefinita\) prima di continuare.  
+>  <span data-ttu-id="ffd06-126">È possibile che gli esempi siano già installati nel computer.</span><span class="sxs-lookup"><span data-stu-id="ffd06-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ffd06-127">Verificare la directory seguente (impostazione predefinita) prima di continuare.</span><span class="sxs-lookup"><span data-stu-id="ffd06-127">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation \(WCF\) e Windows Workflow Foundation \(WF\) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Questo esempio si trova nella directory seguente.  
+>  <span data-ttu-id="ffd06-128">Se questa directory non esiste, andare alla sezione relativa agli [esempi di Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) per .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) per scaricare tutti gli esempi di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="ffd06-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ffd06-129">Questo esempio si trova nella directory seguente.</span><span class="sxs-lookup"><span data-stu-id="ffd06-129">This sample is located in the following directory.</span></span>  
 >   
->  `<UnitàInstallazione>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="ffd06-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ffd06-130">See Also</span></span>

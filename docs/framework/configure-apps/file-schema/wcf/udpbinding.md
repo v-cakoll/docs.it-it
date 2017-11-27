@@ -5,30 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 20e488b57b0d17e9c6705c32dc4c4b6b8387fabf
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8eb4d28885308c400c445ae71019373ec92ed27a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
-Elemento di configurazione usato per configurare <xref:System.ServiceModel.UdpBinding>.  
+# <a name="ltudpbindinggt"></a><span data-ttu-id="d5f9a-102">&lt;udpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="d5f9a-102">&lt;udpBinding&gt;</span></span>
+<span data-ttu-id="d5f9a-103">Elemento di configurazione usato per configurare <xref:System.ServiceModel.UdpBinding>.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-103">A configuration element used to configure the <xref:System.ServiceModel.UdpBinding> binding.</span></span>  
   
- \<System. ServiceModel >  
-\<associazioni >  
-\<udpBinding >  
+ <span data-ttu-id="d5f9a-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="d5f9a-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="d5f9a-105">\<associazioni ></span><span class="sxs-lookup"><span data-stu-id="d5f9a-105">\<bindings></span></span>  
+<span data-ttu-id="d5f9a-106">\<udpBinding ></span><span class="sxs-lookup"><span data-stu-id="d5f9a-106">\<udpBinding></span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="d5f9a-107">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d5f9a-107">Syntax</span></span>  
   
 ```xml  
 <udpBinding>  
@@ -53,45 +51,45 @@ Elemento di configurazione usato per configurare <xref:System.ServiceModel.UdpBi
 </basicHttpBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a>Attributi ed elementi  
- Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d5f9a-108">Attributi ed elementi</span><span class="sxs-lookup"><span data-stu-id="d5f9a-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="d5f9a-109">Nelle sezioni seguenti vengono descritti gli attributi, gli elementi figlio e gli elementi padre.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a>Attributi  
+### <a name="attributes"></a><span data-ttu-id="d5f9a-110">Attributi</span><span class="sxs-lookup"><span data-stu-id="d5f9a-110">Attributes</span></span>  
   
-|Attributo|Descrizione|  
+|<span data-ttu-id="d5f9a-111">Attributo</span><span class="sxs-lookup"><span data-stu-id="d5f9a-111">Attribute</span></span>|<span data-ttu-id="d5f9a-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d5f9a-112">Description</span></span>|  
 |---------------|-----------------|  
-|`closeTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di chiusura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
-|`duplicateMessageHistoryLength`|Valore integer che specifica la lunghezza della cronologia dei messaggi duplicati.|  
-|`maxBufferPoolSize`|Valore intero che specifica la quantità massima di memoria allocata al gestore dei buffer dei messaggi che riceve i messaggi dal canale. Il valore predefinito è 524.288 (0x80000) byte.|  
-|`maxBufferSize`|Un valore intero che specifica la dimensione massima, in byte, di un buffer che memorizza i messaggi mentre vengono elaborati per un endpoint configurato con questa associazione. L'impostazione predefinita è 65.536 byte.|  
-|`maxPendingMessagesTotalSize`|Valore integer che specifica il numero massimo di messaggi ricevuti ma non ancora rimossi dalla coda di input per una singola istanza di canale.|  
-|`maxReceivedMessageSize`|Numero intero positivo che definisce la dimensione massima del messaggio, incluse le intestazioni, che può essere ricevuto in canale configurato con questa associazione. Il mittente riceve un errore SOAP se il messaggio è troppo grande per il destinatario. Il destinatario elimina il messaggio e crea una voce dell'evento nel registro di traccia. L'impostazione predefinita è 65.536 byte.|  
-|`maxRetransmitCount`|Valore integer che specifica il numero massimo di messaggi da ritrasmettere.|  
-|`multicastInterfaceId`|Valore integer che specifica l'ID multicast dell'interfaccia.|  
-|`name`|Stringa che contiene il nome della configurazione dell'associazione. Questo valore deve essere univoco perché viene usato per identificare l'associazione. Ciascuna associazione è provvista di un attributo `name` e `namespace` che insieme la identificano in modo univoco nei metadati del servizio. In aggiunta, il nome è univoco fra associazioni dello stesso tipo. A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome. Per ulteriori informazioni sulla configurazione predefinita e senza nome associazioni e comportamenti, vedere [configurazione semplificata](../../../../../docs/framework/wcf/simplified-configuration.md) e [configurazione semplificata per i servizi WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|`openTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di apertura. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
-|`receiveTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di ricezione. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:10:00.|  
-|`sendTimeout`|Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di invio. Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>. L'impostazione predefinita è 00:01:00.|  
-|`textEncoding`|Imposta la codifica del set di caratteri da usare per l'emissione dei messaggi nell'associazione. Di seguito vengono elencati i valori validi:<br /><br /> -BigEndianUnicode: Codifica Unicode BigEndian.<br />-Unicode: codifica a 16 bit.<br />-UTF8: codifica a 8 bit<br /><br /> L'impostazione predefinita è UTF8. L'attributo è di tipo <xref:System.Text.Encoding>.|  
-|`timeToLive`|Valore timespan che specifica durata (TTL, Time To Live) dell'associazione.|  
+|`closeTimeout`|<span data-ttu-id="d5f9a-113">Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di chiusura.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-113">A <xref:System.TimeSpan> value that specifies the interval of time provided for a close operation to complete.</span></span> <span data-ttu-id="d5f9a-114">Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-114">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="d5f9a-115">L'impostazione predefinita è 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-115">The default is 00:01:00.</span></span>|  
+|`duplicateMessageHistoryLength`|<span data-ttu-id="d5f9a-116">Valore integer che specifica la lunghezza della cronologia dei messaggi duplicati.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-116">An integer value that specifies the duplicate message history length.</span></span>|  
+|`maxBufferPoolSize`|<span data-ttu-id="d5f9a-117">Valore intero che specifica la quantità massima di memoria allocata al gestore dei buffer dei messaggi che riceve i messaggi dal canale.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-117">An integer value that specifies the maximum amount of memory that is allocated for use by the manager of the message buffers that receive messages from the channel.</span></span> <span data-ttu-id="d5f9a-118">Il valore predefinito è 524.288 (0x80000) byte.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-118">The default value is 524288 (0x80000) bytes.</span></span>|  
+|`maxBufferSize`|<span data-ttu-id="d5f9a-119">Un valore intero che specifica la dimensione massima, in byte, di un buffer che memorizza i messaggi mentre vengono elaborati per un endpoint configurato con questa associazione.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-119">An integer value that specifies the maximum size, in bytes, of a buffer that stores messages while they are processed for an endpoint configured with this binding.</span></span> <span data-ttu-id="d5f9a-120">L'impostazione predefinita è 65.536 byte.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-120">The default value is 65,536 bytes.</span></span>|  
+|`maxPendingMessagesTotalSize`|<span data-ttu-id="d5f9a-121">Valore integer che specifica il numero massimo di messaggi ricevuti ma non ancora rimossi dalla coda di input per una singola istanza di canale.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-121">An integer value that specifies the maximum number of messages that are received but not yet removed from the input queue for an individual channel instance.</span></span>|  
+|`maxReceivedMessageSize`|<span data-ttu-id="d5f9a-122">Numero intero positivo che definisce la dimensione massima del messaggio, incluse le intestazioni, che può essere ricevuto in canale configurato con questa associazione.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-122">A positive integer that defines the maximum message size, in bytes, including headers, for a message that can be received on a channel configured with this binding.</span></span> <span data-ttu-id="d5f9a-123">Il mittente riceve un errore SOAP se il messaggio è troppo grande per il destinatario.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-123">The sender receives a SOAP fault if the message is too large for the receiver.</span></span> <span data-ttu-id="d5f9a-124">Il destinatario elimina il messaggio e crea una voce dell'evento nel registro di traccia.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-124">The receiver drops the message and creates an entry of the event in the trace log.</span></span> <span data-ttu-id="d5f9a-125">L'impostazione predefinita è 65.536 byte.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-125">The default is 65,536 bytes.</span></span>|  
+|`maxRetransmitCount`|<span data-ttu-id="d5f9a-126">Valore integer che specifica il numero massimo di messaggi da ritrasmettere.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-126">An integer value that specifies the maximum number of retransmit messages.</span></span>|  
+|`multicastInterfaceId`|<span data-ttu-id="d5f9a-127">Valore integer che specifica l'ID multicast dell'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-127">An integer value that specifies the multicast interface ID.</span></span>|  
+|`name`|<span data-ttu-id="d5f9a-128">Stringa che contiene il nome della configurazione dell'associazione.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-128">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="d5f9a-129">Questo valore deve essere univoco perché viene usato per identificare l'associazione.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-129">This value should be unique because it is used as an identification for the binding.</span></span> <span data-ttu-id="d5f9a-130">Ciascuna associazione è provvista di un attributo `name` e `namespace` che insieme la identificano in modo univoco nei metadati del servizio.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-130">Each binding has a `name` and `namespace` attribute that together uniquely identify it in the metadata of the service.</span></span> <span data-ttu-id="d5f9a-131">In aggiunta, il nome è univoco fra associazioni dello stesso tipo.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-131">In addition, this name is unique among bindings of the same type.</span></span> <span data-ttu-id="d5f9a-132">A partire da [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], non è necessario che le associazioni e i comportamenti dispongano di un nome.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-132">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="d5f9a-133">Per ulteriori informazioni sulla configurazione predefinita e senza nome associazioni e comportamenti, vedere [configurazione semplificata](../../../../../docs/framework/wcf/simplified-configuration.md) e [configurazione semplificata per i servizi WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="d5f9a-133">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
+|`openTimeout`|<span data-ttu-id="d5f9a-134">Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di apertura.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-134">A <xref:System.TimeSpan> value that specifies the interval of time provided for an open operation to complete.</span></span> <span data-ttu-id="d5f9a-135">Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-135">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="d5f9a-136">L'impostazione predefinita è 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-136">The default is 00:01:00.</span></span>|  
+|`receiveTimeout`|<span data-ttu-id="d5f9a-137">Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di ricezione.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-137">A <xref:System.TimeSpan> value that specifies the interval of time provided for a receive operation to complete.</span></span> <span data-ttu-id="d5f9a-138">Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-138">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="d5f9a-139">L'impostazione predefinita è 00:10:00.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-139">The default is 00:10:00.</span></span>|  
+|`sendTimeout`|<span data-ttu-id="d5f9a-140">Valore <xref:System.TimeSpan> che specifica l'intervallo di tempo fornito per il completamento di un'operazione di invio.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-140">A <xref:System.TimeSpan> value that specifies the interval of time provided for a send operation to complete.</span></span> <span data-ttu-id="d5f9a-141">Questo valore deve essere maggiore o uguale a <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-141">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="d5f9a-142">L'impostazione predefinita è 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-142">The default is 00:01:00.</span></span>|  
+|`textEncoding`|<span data-ttu-id="d5f9a-143">Imposta la codifica del set di caratteri da usare per l'emissione dei messaggi nell'associazione.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-143">Sets the character set encoding to be used for emitting messages on the binding.</span></span> <span data-ttu-id="d5f9a-144">Di seguito vengono elencati i valori validi:</span><span class="sxs-lookup"><span data-stu-id="d5f9a-144">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="d5f9a-145">-BigEndianUnicode: Codifica Unicode BigEndian.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-145">-   BigEndianUnicode: Unicode BigEndian encoding.</span></span><br /><span data-ttu-id="d5f9a-146">-Unicode: codifica a 16 bit.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-146">-   Unicode: 16-bit encoding.</span></span><br /><span data-ttu-id="d5f9a-147">-UTF8: codifica a 8 bit</span><span class="sxs-lookup"><span data-stu-id="d5f9a-147">-   UTF8: 8-bit encoding</span></span><br /><br /> <span data-ttu-id="d5f9a-148">L'impostazione predefinita è UTF8.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-148">The default is UTF8.</span></span> <span data-ttu-id="d5f9a-149">L'attributo è di tipo <xref:System.Text.Encoding>.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-149">This attribute is of type <xref:System.Text.Encoding>.</span></span>|  
+|`timeToLive`|<span data-ttu-id="d5f9a-150">Valore timespan che specifica durata (TTL, Time To Live) dell'associazione.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-150">A timespan value that specifies the time to live for the binding.</span></span>|  
   
-### <a name="child-elements"></a>Elementi figlio  
+### <a name="child-elements"></a><span data-ttu-id="d5f9a-151">Elementi figlio</span><span class="sxs-lookup"><span data-stu-id="d5f9a-151">Child Elements</span></span>  
   
-|Elemento|Descrizione|  
+|<span data-ttu-id="d5f9a-152">Elemento</span><span class="sxs-lookup"><span data-stu-id="d5f9a-152">Element</span></span>|<span data-ttu-id="d5f9a-153">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d5f9a-153">Description</span></span>|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione. L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[<span data-ttu-id="d5f9a-154">\<readerQuotas ></span><span class="sxs-lookup"><span data-stu-id="d5f9a-154">\<readerQuotas></span></span>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|<span data-ttu-id="d5f9a-155">Definisce i vincoli sulla complessità dei messaggi SOAP che possono essere elaborati dagli endpoint configurati con questa associazione.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-155">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="d5f9a-156">L'elemento è di tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-156">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
   
-### <a name="parent-elements"></a>Elementi padre  
+### <a name="parent-elements"></a><span data-ttu-id="d5f9a-157">Elementi padre</span><span class="sxs-lookup"><span data-stu-id="d5f9a-157">Parent Elements</span></span>  
   
-|Elemento|Descrizione|  
+|<span data-ttu-id="d5f9a-158">Elemento</span><span class="sxs-lookup"><span data-stu-id="d5f9a-158">Element</span></span>|<span data-ttu-id="d5f9a-159">Descrizione</span><span class="sxs-lookup"><span data-stu-id="d5f9a-159">Description</span></span>|  
 |-------------|-----------------|  
-|[\<associazioni >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Questo elemento contiene una raccolta di associazioni standard e personalizzate.|  
+|[<span data-ttu-id="d5f9a-160">\<associazioni ></span><span class="sxs-lookup"><span data-stu-id="d5f9a-160">\<bindings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|<span data-ttu-id="d5f9a-161">Questo elemento contiene una raccolta di associazioni standard e personalizzate.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-161">This element holds a collection of standard and custom bindings.</span></span>|  
   
-## <a name="remarks"></a>Note  
- UdpBinding consente ai servizi WCF di comunicare tramite trasporto UDP. Consente infatti di scambi di messaggi "fire and forget" in cui un client invia un messaggio a un servizio e non prevede alcuna risposta.  
+## <a name="remarks"></a><span data-ttu-id="d5f9a-162">Note</span><span class="sxs-lookup"><span data-stu-id="d5f9a-162">Remarks</span></span>  
+ <span data-ttu-id="d5f9a-163">UdpBinding consente ai servizi WCF di comunicare tramite trasporto UDP.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-163">The UdpBinding allows WCF services to communicate over the UDP transport.</span></span> <span data-ttu-id="d5f9a-164">Consente infatti di scambi di messaggi "fire and forget" in cui un client invia un messaggio a un servizio e non prevede alcuna risposta.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-164">It allows for "fire and forget" message exchanges where a client sends a message to a service and expects no response back.</span></span>  
   
-## <a name="example"></a>Esempio  
- L'esempio seguente illustra come configurare <xref:System.ServiceModel.UdpBinding> usando l'elemento <`udpBinding`>.  
+## <a name="example"></a><span data-ttu-id="d5f9a-165">Esempio</span><span class="sxs-lookup"><span data-stu-id="d5f9a-165">Example</span></span>  
+ <span data-ttu-id="d5f9a-166">L'esempio seguente illustra come configurare <xref:System.ServiceModel.UdpBinding> usando l'elemento <`udpBinding`>.</span><span class="sxs-lookup"><span data-stu-id="d5f9a-166">The following example shows how to configure the <xref:System.ServiceModel.UdpBinding> using the <`udpBinding`> element.</span></span>  
   
 ```xml  
 <udpBinding>  
@@ -113,13 +111,12 @@ Elemento di configurazione usato per configurare <xref:System.ServiceModel.UdpBi
       </udpBinding>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
- [Associazioni](../../../../../docs/framework/wcf/bindings.md)   
- [Configurazione di associazioni fornite dal sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Uso di associazioni per configurare i client e servizi Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<associazione >](../../../../../docs/framework/misc/binding.md)
-
+## <a name="see-also"></a><span data-ttu-id="d5f9a-167">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d5f9a-167">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
+ [<span data-ttu-id="d5f9a-168">Associazioni</span><span class="sxs-lookup"><span data-stu-id="d5f9a-168">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="d5f9a-169">Configurazione di associazioni fornite dal sistema</span><span class="sxs-lookup"><span data-stu-id="d5f9a-169">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="d5f9a-170">Uso di associazioni per configurare i client e servizi Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="d5f9a-170">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="d5f9a-171">\<associazione ></span><span class="sxs-lookup"><span data-stu-id="d5f9a-171">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

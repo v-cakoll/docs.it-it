@@ -1,135 +1,141 @@
 ---
-title: "Funzioni di interpolazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "applicazione di formule matematiche ad animazioni [WPF]"
-  - "applicazione di funzioni di interpolazione ad animazioni [WPF]"
-  - "applicazione ad animazioni formule matematiche [WPF]"
-  - "animazioni [WPF], movimento realistico"
-  - "funzioni di interpolazione [WPF]"
-  - "personalizzazione delle funzioni di interpolazione [WPF]"
-  - "funzioni di interpolazione [WPF], definizione"
-  - "funzioni di interpolazione [WPF], personalizzazione"
-  - "applicare animazioni [WPF]"
+title: Funzioni di interpolazione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- applying mathematical formulas to animations [WPF]
+- applying easing functions to animations [WPF]
+- mathematical formulas [WPF], applying to animations
+- animations [WPF], realistic movement
+- easing functions [WPF]
+- customizing easing functions [WPF]
+- easing functions [WPF], definition
+- easing functions [WPF], customizing
+- animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 198ec8b8cb0b27e009f01f8e60a47e8086a7dbc7
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Funzioni di interpolazione
-Funzioni di interpolazione consentono di applicare formule matematiche personalizzate alle animazioni. Ad esempio, è un oggetto realisticamente rimbalzo o si comportano come se fosse su una molla. È possibile utilizzare fotogrammi chiave o anche animazioni From/To/By per simulare gli effetti, ma richiederebbe una quantità significativa di lavoro e l'animazione potrebbe essere meno accurata rispetto all'utilizzo di una formula matematica.  
+# <a name="easing-functions"></a><span data-ttu-id="77ccc-102">Funzioni di interpolazione</span><span class="sxs-lookup"><span data-stu-id="77ccc-102">Easing Functions</span></span>
+<span data-ttu-id="77ccc-103">Le funzioni di interpolazione consentono di applicare formule matematiche personalizzate alle animazioni.</span><span class="sxs-lookup"><span data-stu-id="77ccc-103">Easing functions allow you to apply custom mathematical formulas to your animations.</span></span> <span data-ttu-id="77ccc-104">Si può ad esempio fare in modo che un oggetto rimbalzi in modo realistico o si comporti come se fosse su una molla.</span><span class="sxs-lookup"><span data-stu-id="77ccc-104">For example, you may want an object to realistically bounce or behave as though it were on a spring.</span></span> <span data-ttu-id="77ccc-105">È possibile usare animazioni con fotogrammi chiave o anche animazioni From/To/By per simulare questi effetti, ma l'operazione richiederebbe una quantità significativa di lavoro e l'animazione risulterebbe meno accurata rispetto all'uso di una formula matematica.</span><span class="sxs-lookup"><span data-stu-id="77ccc-105">You could use Key-Frame or even From/To/By animations to approximate these effects but it would take a significant amount of work and the animation would be less accurate than using a mathematical formula.</span></span>  
   
- Oltre a creare una funzione di interpolazione personalizzata ereditando da <xref:System.Windows.Media.Animation.EasingFunctionBase>, è possibile utilizzare una delle diverse funzioni di interpolazione fornite dal runtime per creare effetti comuni.  
+ <span data-ttu-id="77ccc-106">Oltre a creare la propria funzione di interpolazione personalizzata tramite l'eredità da <xref:System.Windows.Media.Animation.EasingFunctionBase>, è possibile utilizzare una delle numerose funzioni di interpolazione fornite dal runtime per creare effetti comuni.</span><span class="sxs-lookup"><span data-stu-id="77ccc-106">Besides creating your own custom easing function by inheriting from <xref:System.Windows.Media.Animation.EasingFunctionBase>, you can use one of several easing functions provided by the runtime to create common effects.</span></span>  
   
--   <xref:System.Windows.Media.Animation.BackEase>: ritrae leggermente il movimento di un'animazione prima di iniziare a eseguire un'animazione nel percorso indicato.  
+-   <span data-ttu-id="77ccc-107"><xref:System.Windows.Media.Animation.BackEase>: Ritira il movimento di un'animazione leggermente prima di iniziare a animare nel percorso indicato.</span><span class="sxs-lookup"><span data-stu-id="77ccc-107"><xref:System.Windows.Media.Animation.BackEase>: Retracts the motion of an animation slightly before it begins to animate in the path indicated.</span></span>  
   
--   <xref:System.Windows.Media.Animation.BounceEase>: crea un effetto di rimbalzo.  
+-   <span data-ttu-id="77ccc-108"><xref:System.Windows.Media.Animation.BounceEase>: Crea un effetto di rimbalzo.</span><span class="sxs-lookup"><span data-stu-id="77ccc-108"><xref:System.Windows.Media.Animation.BounceEase>: Creates a bouncing effect.</span></span>  
   
--   <xref:System.Windows.Media.Animation.CircleEase>: crea un'animazione che accelera e/o rallenta utilizzando una funzione circolare.  
+-   <span data-ttu-id="77ccc-109"><xref:System.Windows.Media.Animation.CircleEase>: Crea un'animazione che accelera e/o decelera, usando una funzione circolare.</span><span class="sxs-lookup"><span data-stu-id="77ccc-109"><xref:System.Windows.Media.Animation.CircleEase>: Creates an animation that accelerates and/or decelerates using a circular function.</span></span>  
   
--   <xref:System.Windows.Media.Animation.CubicEase>: crea un'animazione che accelera e/o rallenta utilizzando la formula *f*( *t*) = *t*<sup>3</sup>.  
+-   <span data-ttu-id="77ccc-110"><xref:System.Windows.Media.Animation.CubicEase>: Crea un'animazione che accelera e/o decelera, usando la formula *f*(*t*) = *t*<sup>3</sup>.</span><span class="sxs-lookup"><span data-stu-id="77ccc-110"><xref:System.Windows.Media.Animation.CubicEase>: Creates an animation that accelerates and/or decelerates using the formula *f*(*t*) = *t*<sup>3</sup>.</span></span>  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>: consente di creare un'animazione simile a una molla che oscilla avanti e indietro fino ad arrestarsi.  
+-   <span data-ttu-id="77ccc-111"><xref:System.Windows.Media.Animation.ElasticEase>: Crea un'animazione che è simile a una molla oscilla avanti e indietro fino ad arrestarsi.</span><span class="sxs-lookup"><span data-stu-id="77ccc-111"><xref:System.Windows.Media.Animation.ElasticEase>: Creates an animation that resembles a spring oscillating back and forth until it comes to rest.</span></span>  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>: crea un'animazione che accelera e/o rallenta utilizzando una formula esponenziale.  
+-   <span data-ttu-id="77ccc-112"><xref:System.Windows.Media.Animation.ExponentialEase>: Crea un'animazione che accelera e/o decelera utilizzando una formula esponenziale.</span><span class="sxs-lookup"><span data-stu-id="77ccc-112"><xref:System.Windows.Media.Animation.ExponentialEase>: Creates an animation that accelerates and/or decelerates using an exponential formula.</span></span>  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: crea un'animazione che accelera e/o rallenta utilizzando la formula *f*( *t*) = *t*<sup>p</sup> dove p è uguale al <xref:System.Windows.Media.Animation.PowerEase.Power%2A> proprietà.  
+-   <span data-ttu-id="77ccc-113"><xref:System.Windows.Media.Animation.PowerEase>: Crea un'animazione che accelera e/o decelera, usando la formula *f*(*t*) = *t*<sup>p</sup> dove p è uguale al <xref:System.Windows.Media.Animation.PowerEase.Power%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="77ccc-113"><xref:System.Windows.Media.Animation.PowerEase>: Creates an animation that accelerates and/or decelerates using the formula *f*(*t*) = *t*<sup>p</sup> where p is equal to the <xref:System.Windows.Media.Animation.PowerEase.Power%2A> property.</span></span>  
   
--   <xref:System.Windows.Media.Animation.QuadraticEase>: crea un'animazione che accelera e/o rallenta utilizzando la formula *f*( *t*) = *t*<sup>2</sup>.  
+-   <span data-ttu-id="77ccc-114"><xref:System.Windows.Media.Animation.QuadraticEase>: Crea un'animazione che accelera e/o decelera, usando la formula *f*(*t*) = *t*<sup>2</sup>.</span><span class="sxs-lookup"><span data-stu-id="77ccc-114"><xref:System.Windows.Media.Animation.QuadraticEase>: Creates an animation that accelerates and/or decelerates using the formula *f*(*t*) = *t*<sup>2</sup>.</span></span>  
   
--   <xref:System.Windows.Media.Animation.QuarticEase>: crea un'animazione che accelera e/o rallenta utilizzando la formula *f*( *t*) = *t*<sup>4</sup>.  
+-   <span data-ttu-id="77ccc-115"><xref:System.Windows.Media.Animation.QuarticEase>: Crea un'animazione che accelera e/o decelera, usando la formula *f*(*t*) = *t*<sup>4</sup>.</span><span class="sxs-lookup"><span data-stu-id="77ccc-115"><xref:System.Windows.Media.Animation.QuarticEase>: Creates an animation that accelerates and/or decelerates using the formula *f*(*t*) = *t*<sup>4</sup>.</span></span>  
   
--   <xref:System.Windows.Media.Animation.QuinticEase>: creare un'animazione che accelera e/o rallenta utilizzando la formula *f*( *t*) = *t*<sup>5</sup>.  
+-   <span data-ttu-id="77ccc-116"><xref:System.Windows.Media.Animation.QuinticEase>: Creare un'animazione che accelera e/o decelera, usando la formula *f*(*t*) = *t*<sup>5</sup>.</span><span class="sxs-lookup"><span data-stu-id="77ccc-116"><xref:System.Windows.Media.Animation.QuinticEase>: Create an animation that accelerates and/or decelerates using the formula *f*(*t*) = *t*<sup>5</sup>.</span></span>  
   
--   <xref:System.Windows.Media.Animation.SineEase>: crea un'animazione che accelera e/o rallenta utilizzando una formula sinusoidale.  
+-   <span data-ttu-id="77ccc-117"><xref:System.Windows.Media.Animation.SineEase>: Crea un'animazione che accelera e/o decelera utilizzando una formula seno.</span><span class="sxs-lookup"><span data-stu-id="77ccc-117"><xref:System.Windows.Media.Animation.SineEase>: Creates an animation that accelerates and/or decelerates using a sine formula.</span></span>  
   
- È possibile esplorare il comportamento di queste funzioni di interpolazione con l'esempio seguente.  
+ <span data-ttu-id="77ccc-118">È possibile esplorare il comportamento di queste funzioni di interpolazione con l'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="77ccc-118">You can explore the behavior of these easing functions with the following sample.</span></span>  
   
- [Eseguire questo esempio](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
+ [<span data-ttu-id="77ccc-119">Eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="77ccc-119">Run this sample</span></span>](http://go.microsoft.com/fwlink/?LinkId=139798&sref=easing_functions_gallery)  
   
- Per applicare una funzione di interpolazione per un'animazione, utilizzare il `EasingFunction` proprietà dell'animazione specificare la funzione di interpolazione da applicare all'animazione. Nell'esempio seguente viene applicato un <xref:System.Windows.Media.Animation.BounceEase> funzione di interpolazione un <xref:System.Windows.Media.Animation.DoubleAnimation> per creare un effetto di rimbalzo.  
+ <span data-ttu-id="77ccc-120">Per applicare una funzione di interpolazione a un'animazione, utilizzare il `EasingFunction` proprietà dell'animazione specificare la funzione di interpolazione per applicare l'animazione.</span><span class="sxs-lookup"><span data-stu-id="77ccc-120">To apply an easing function to an animation, use the `EasingFunction` property of the animation specify the easing function to apply to the animation.</span></span> <span data-ttu-id="77ccc-121">Nell'esempio seguente viene applicato un <xref:System.Windows.Media.Animation.BounceEase> interpolazione funzione da un <xref:System.Windows.Media.Animation.DoubleAnimation> per creare un effetto di rimbalzo.</span><span class="sxs-lookup"><span data-stu-id="77ccc-121">The following example applies a <xref:System.Windows.Media.Animation.BounceEase> easing function to a <xref:System.Windows.Media.Animation.DoubleAnimation> to create a bouncing effect.</span></span>  
   
- [Eseguire questo esempio](http://go.microsoft.com/fwlink/?LinkId=139798&sref=BounceEase)  
+ [<span data-ttu-id="77ccc-122">Eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="77ccc-122">Run this sample</span></span>](http://go.microsoft.com/fwlink/?LinkId=139798&sref=BounceEase)  
   
- [!code-xml[BounceEase_snippet#BounceEase](../../../../samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]  
+ [!code-xaml[BounceEase_snippet#BounceEase](../../../../samples/snippets/csharp/VS_Snippets_Wpf/bounceease_snippet/CS/window1.xaml#bounceease)]  
   
- Nell'esempio precedente, è stata applicata la funzione di interpolazione per From/To/By animazione. È inoltre possibile applicare queste funzioni di interpolazione ad animazioni di fotogrammi chiave. Nell'esempio seguente viene illustrato come utilizzare fotogrammi chiave sono associate funzioni di interpolazione per creare un'animazione di un rettangolo che contratti verso l'alto, basso, quindi si espande verso il basso (come se fallback) e fatto rimbalzare fino ad arrestarsi.  
+ <span data-ttu-id="77ccc-123">Nell'esempio precedente la funzione di interpolazione è applicata a un'animazione From/To/By.</span><span class="sxs-lookup"><span data-stu-id="77ccc-123">In the previous example, the easing function was applied to a From/To/By animation.</span></span> <span data-ttu-id="77ccc-124">Queste funzioni di interpolazione possono essere applicate anche ad animazioni con fotogrammi chiave.</span><span class="sxs-lookup"><span data-stu-id="77ccc-124">You can also apply these easing functions to Key-Frame animations.</span></span> <span data-ttu-id="77ccc-125">L'esempio seguente illustra come usare i fotogrammi chiave con funzioni di interpolazione a essi associate per creare l'animazione di un rettangolo che si contrae verso l'alto, rallenta, poi si espande verso il basso (come se cadesse) e rimbalza fino ad arrestarsi.</span><span class="sxs-lookup"><span data-stu-id="77ccc-125">The following example shows how to use key frames with easing functions associated with them to create an animation of a rectangle that contracts upward, slows down, then expands downward (as though falling) and then bounces to a stop.</span></span>  
   
- [Eseguire questo esempio](http://go.microsoft.com/fwlink/?LinkId=139798&sref=EasingFunctionDoubleKeyFrame)  
+ [<span data-ttu-id="77ccc-126">Eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="77ccc-126">Run this sample</span></span>](http://go.microsoft.com/fwlink/?LinkId=139798&sref=EasingFunctionDoubleKeyFrame)  
   
- [!code-xml[EasingFunctionDoubleKeyFrame_snippet#EasingFunctionDoubleKeyFrame](../../../../samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)]  
+ [!code-xaml[EasingFunctionDoubleKeyFrame_snippet#EasingFunctionDoubleKeyFrame](../../../../samples/snippets/csharp/VS_Snippets_Wpf/easingfunctiondoublekeyframe_snippet/CS/window1.xaml#easingfunctiondoublekeyframe)]  
   
- È possibile utilizzare il <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> di modifica delle proprietà per modificare la funzione di interpolazione comportamento, vale a dire la modalità di interpolazione di animazione. Esistono tre possibili valori, è possibile fornire per <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
+ <span data-ttu-id="77ccc-127">È possibile utilizzare il <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> proprietà per modificare la funzione di interpolazione comportamento, vale a dire, modificare la modalità di interpolazione l'animazione.</span><span class="sxs-lookup"><span data-stu-id="77ccc-127">You can use the <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> property to alter how the easing function behaves, that is, change how the animation interpolates.</span></span> <span data-ttu-id="77ccc-128">Esistono tre possibili valori è possibile fornire per <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:</span><span class="sxs-lookup"><span data-stu-id="77ccc-128">There are three possible values you can give for <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:</span></span>  
   
--   <xref:System.Windows.Media.Animation.EasingMode>: l'interpolazione segue la formula matematica associata alla funzione di interpolazione.  
+-   <span data-ttu-id="77ccc-129"><xref:System.Windows.Media.Animation.EasingMode.EaseIn>: L'interpolazione segue la formula matematica associata alla funzione di interpolazione.</span><span class="sxs-lookup"><span data-stu-id="77ccc-129"><xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Interpolation follows the mathematical formula associated with the easing function.</span></span>  
   
--   <xref:System.Windows.Media.Animation.EasingMode>: l'interpolazione segue interpolazione al 100% meno l'output della formula associata alla funzione di interpolazione.  
+-   <span data-ttu-id="77ccc-130"><xref:System.Windows.Media.Animation.EasingMode.EaseOut>: L'interpolazione segue interpolazione al 100% meno l'output della formula associata alla funzione di interpolazione.</span><span class="sxs-lookup"><span data-stu-id="77ccc-130"><xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Interpolation follows 100% interpolation minus the output of the formula associated with the easing function.</span></span>  
   
--   <xref:System.Windows.Media.Animation.EasingMode>: interpolazione utilizza <xref:System.Windows.Media.Animation.EasingMode> per la prima metà dell'animazione e <xref:System.Windows.Media.Animation.EasingMode> nella seconda metà.  
+-   <span data-ttu-id="77ccc-131"><xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Usa l'interpolazione <xref:System.Windows.Media.Animation.EasingMode.EaseIn> per la prima metà dell'animazione e <xref:System.Windows.Media.Animation.EasingMode.EaseOut> per la seconda metà.</span><span class="sxs-lookup"><span data-stu-id="77ccc-131"><xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Interpolation uses <xref:System.Windows.Media.Animation.EasingMode.EaseIn> for the first half of the animation and <xref:System.Windows.Media.Animation.EasingMode.EaseOut> for the second half.</span></span>  
   
- Le immagini seguenti vengono illustrati i diversi valori di <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> in *f*( *x*) rappresenta l'avanzamento dell'animazione e *t* rappresenta l'ora.  
+ <span data-ttu-id="77ccc-132">Le immagini seguenti vengono illustrati i diversi valori di <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> in *f*(*x*) rappresenta l'avanzamento dell'animazione e *t* rappresenta il tempo.</span><span class="sxs-lookup"><span data-stu-id="77ccc-132">The graphs below demonstrate the different values of <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> where *f*(*x*) represents the animation progress and *t* represents time.</span></span>  
   
  <xref:System.Windows.Media.Animation.BackEase>  
   
- ![Grafici di BackEase EasingMode. ] (../Image/BackEase_Graph.png "BackEase_Graph")  
+ <span data-ttu-id="77ccc-133">![Grafici di BackEase EasingMode.](../../../../docs/framework/wpf/graphics-multimedia/media/backease-graph.png "BackEase_Graph")</span><span class="sxs-lookup"><span data-stu-id="77ccc-133">![BackEase EasingMode graphs.](../../../../docs/framework/wpf/graphics-multimedia/media/backease-graph.png "BackEase_Graph")</span></span>  
   
  <xref:System.Windows.Media.Animation.BounceEase>  
   
- ![Grafici di BounceEase EasingMode. ] (../Image/BounceEase_Graph.png "BounceEase_Graph")  
+ <span data-ttu-id="77ccc-134">![Grafici di BounceEase EasingMode.](../../../../docs/framework/wpf/graphics-multimedia/media/bounceease-graph.png "BounceEase_Graph")</span><span class="sxs-lookup"><span data-stu-id="77ccc-134">![BounceEase EasingMode graphs.](../../../../docs/framework/wpf/graphics-multimedia/media/bounceease-graph.png "BounceEase_Graph")</span></span>  
   
  <xref:System.Windows.Media.Animation.CircleEase>  
   
- ![Grafici di CircleEase EasingMode. ] (../Image/CircleEase_Graph.png "CircleEase_Graph")  
+ <span data-ttu-id="77ccc-135">![Grafici di CircleEase EasingMode.](../../../../docs/framework/wpf/graphics-multimedia/media/circleease-graph.png "CircleEase_Graph")</span><span class="sxs-lookup"><span data-stu-id="77ccc-135">![CircleEase EasingMode graphs.](../../../../docs/framework/wpf/graphics-multimedia/media/circleease-graph.png "CircleEase_Graph")</span></span>  
   
  <xref:System.Windows.Media.Animation.CubicEase>  
   
- ![Grafici di CubicEase EasingMode. ] (../Image/CubicEase_Graph.png "CubicEase_Graph")  
+ <span data-ttu-id="77ccc-136">![Grafici di CubicEase EasingMode.](../../../../docs/framework/wpf/graphics-multimedia/media/cubicease-graph.png "CubicEase_Graph")</span><span class="sxs-lookup"><span data-stu-id="77ccc-136">![CubicEase EasingMode graphs.](../../../../docs/framework/wpf/graphics-multimedia/media/cubicease-graph.png "CubicEase_Graph")</span></span>  
   
  <xref:System.Windows.Media.Animation.ElasticEase>  
   
- ![ElasticEase con grafici di EasingMode diversi. ] (../Image/ElasticEase_Graph.png "ElasticEase_Graph")  
+ <span data-ttu-id="77ccc-137">![ElasticEase con grafici di EasingMode diversi.](../../../../docs/framework/wpf/graphics-multimedia/media/elasticease-graph.png "ElasticEase_Graph")</span><span class="sxs-lookup"><span data-stu-id="77ccc-137">![ElasticEase with graphs of different easingmodes.](../../../../docs/framework/wpf/graphics-multimedia/media/elasticease-graph.png "ElasticEase_Graph")</span></span>  
   
  <xref:System.Windows.Media.Animation.ExponentialEase>  
   
- ![Grafici di ExponentialEase con EasingMode diversi. ] (../Image/ExponentialEase_Graph.png "ExponentialEase_Graph")  
+ <span data-ttu-id="77ccc-138">![Grafici ExponentialEase di EasingMode diversi.](../../../../docs/framework/wpf/graphics-multimedia/media/exponentialease-graph.png "ExponentialEase_Graph")</span><span class="sxs-lookup"><span data-stu-id="77ccc-138">![ExponentialEase graphs of different easingmodes.](../../../../docs/framework/wpf/graphics-multimedia/media/exponentialease-graph.png "ExponentialEase_Graph")</span></span>  
   
  <xref:System.Windows.Media.Animation.PowerEase>  
   
- ![QuarticEase con grafici di EasingMode diversi. ] (../Image/QuarticEase_Graph.png "QuarticEase_Graph")  
+ <span data-ttu-id="77ccc-139">![QuarticEase con grafici di EasingMode diversi.](../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")</span><span class="sxs-lookup"><span data-stu-id="77ccc-139">![QuarticEase with graphs of different easingmodes.](../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")</span></span>  
   
  <xref:System.Windows.Media.Animation.QuadraticEase>  
   
- ![QuadraticEase con grafici di EasingMode diversi](../../../../docs/framework/wpf/graphics-multimedia/media/quadraticease-graph.png "QuadraticEase_Graph")  
+ <span data-ttu-id="77ccc-140">![QuadraticEase con grafici di EasingMode diversi](../../../../docs/framework/wpf/graphics-multimedia/media/quadraticease-graph.png "QuadraticEase_Graph")</span><span class="sxs-lookup"><span data-stu-id="77ccc-140">![QuadraticEase with graphs of different easingmodes](../../../../docs/framework/wpf/graphics-multimedia/media/quadraticease-graph.png "QuadraticEase_Graph")</span></span>  
   
  <xref:System.Windows.Media.Animation.QuarticEase>  
   
- ![QuarticEase con grafici di EasingMode diversi. ] (../Image/QuarticEase_Graph.png "QuarticEase_Graph")  
+ <span data-ttu-id="77ccc-141">![QuarticEase con grafici di EasingMode diversi.](../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")</span><span class="sxs-lookup"><span data-stu-id="77ccc-141">![QuarticEase with graphs of different easingmodes.](../../../../docs/framework/wpf/graphics-multimedia/media/quarticease-graph.png "QuarticEase_Graph")</span></span>  
   
  <xref:System.Windows.Media.Animation.QuinticEase>  
   
- ![QuinticEase con grafici di EasingMode diversi. ] (../Image/QuinticEase_Graph.png "QuinticEase_Graph")  
+ <span data-ttu-id="77ccc-142">![QuinticEase con grafici di EasingMode diversi.](../../../../docs/framework/wpf/graphics-multimedia/media/quinticease-graph.png "QuinticEase_Graph")</span><span class="sxs-lookup"><span data-stu-id="77ccc-142">![QuinticEase with graphs of different easingmodes.](../../../../docs/framework/wpf/graphics-multimedia/media/quinticease-graph.png "QuinticEase_Graph")</span></span>  
   
  <xref:System.Windows.Media.Animation.SineEase>  
   
- ![SineEase per valori EasingMode diversi](../../../../docs/framework/wpf/graphics-multimedia/media/sineease-graph.png "SineEase_Graph")  
+ <span data-ttu-id="77ccc-143">![SineEase per valori di EasingMode diversi](../../../../docs/framework/wpf/graphics-multimedia/media/sineease-graph.png "SineEase_Graph")</span><span class="sxs-lookup"><span data-stu-id="77ccc-143">![SineEase for different EasingMode values](../../../../docs/framework/wpf/graphics-multimedia/media/sineease-graph.png "SineEase_Graph")</span></span>  
   
 > [!NOTE]
->  È possibile utilizzare <xref:System.Windows.Media.Animation.PowerEase> per creare lo stesso comportamento di <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>, e <xref:System.Windows.Media.Animation.QuinticEase> utilizzando il <xref:System.Windows.Media.Animation.PowerEase.Power%2A> proprietà. Ad esempio, se si desidera utilizzare <xref:System.Windows.Media.Animation.PowerEase> in sostituzione di <xref:System.Windows.Media.Animation.CubicEase>, specificare un <xref:System.Windows.Media.Animation.PowerEase.Power%2A> valore 3.  
+>  <span data-ttu-id="77ccc-144">È possibile utilizzare <xref:System.Windows.Media.Animation.PowerEase> per creare lo stesso comportamento di <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>, e <xref:System.Windows.Media.Animation.QuinticEase> utilizzando il <xref:System.Windows.Media.Animation.PowerEase.Power%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="77ccc-144">You can use <xref:System.Windows.Media.Animation.PowerEase> to create the same behavior as <xref:System.Windows.Media.Animation.CubicEase>, <xref:System.Windows.Media.Animation.QuadraticEase>, <xref:System.Windows.Media.Animation.QuarticEase>, and <xref:System.Windows.Media.Animation.QuinticEase> by using the <xref:System.Windows.Media.Animation.PowerEase.Power%2A> property.</span></span> <span data-ttu-id="77ccc-145">Ad esempio, se si desidera utilizzare <xref:System.Windows.Media.Animation.PowerEase> da sostituire per <xref:System.Windows.Media.Animation.CubicEase>, specificare un <xref:System.Windows.Media.Animation.PowerEase.Power%2A> valore 3.</span><span class="sxs-lookup"><span data-stu-id="77ccc-145">For example, if you want to use <xref:System.Windows.Media.Animation.PowerEase> to substitute for <xref:System.Windows.Media.Animation.CubicEase>, specify a <xref:System.Windows.Media.Animation.PowerEase.Power%2A> value of 3.</span></span>  
   
- Oltre a utilizzare le funzioni di interpolazione incluse in fase di esecuzione, è possibile creare funzioni di interpolazione personalizzate ereditando da <xref:System.Windows.Media.Animation.EasingFunctionBase>. Nell'esempio seguente viene illustrato come creare una semplice funzione di interpolazione personalizzata. È possibile aggiungere la propria logica matematica per determinare la funzione di interpolazione comportamento eseguendo l'override di <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> metodo.  
+ <span data-ttu-id="77ccc-146">Oltre a utilizzare le funzioni di interpolazione incluse in fase di esecuzione, è possibile creare funzioni di interpolazione personalizzate ereditando dalla <xref:System.Windows.Media.Animation.EasingFunctionBase>.</span><span class="sxs-lookup"><span data-stu-id="77ccc-146">In addition to using the easing functions included in the run-time, you can create your own custom easing functions by inheriting from <xref:System.Windows.Media.Animation.EasingFunctionBase>.</span></span> <span data-ttu-id="77ccc-147">L'esempio seguente illustra come creare una semplice funzione di interpolazione personalizzata.</span><span class="sxs-lookup"><span data-stu-id="77ccc-147">The following example demonstrates how to create a simple custom easing function.</span></span> <span data-ttu-id="77ccc-148">È possibile aggiungere la propria logica matematica per determinare la funzione di interpolazione comportamento eseguendo l'override di <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="77ccc-148">You can add your own mathematical logic for how the easing function behaves by overriding the <xref:System.Windows.Media.Animation.EasingFunctionBase.EaseInCore%2A> method.</span></span>  
   
- [Eseguire questo esempio](http://go.microsoft.com/fwlink/?LinkId=139798&sref=CustomEasingFunction)  
+ [<span data-ttu-id="77ccc-149">Eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="77ccc-149">Run this sample</span></span>](http://go.microsoft.com/fwlink/?LinkId=139798&sref=CustomEasingFunction)  
   
  [!code-csharp[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/customlog10easingfunction.cs#customeasingfunction)]
  [!code-vb[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/customeasingfunction/visualbasic/customlog10easingfunction.vb#customeasingfunction)]
- [!code-xml[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/window1.xaml#customeasingfunction)]
+ [!code-xaml[CustomEasingFunction#CustomEasingFunction](../../../../samples/snippets/csharp/VS_Snippets_Wpf/customeasingfunction/csharp/window1.xaml#customeasingfunction)]

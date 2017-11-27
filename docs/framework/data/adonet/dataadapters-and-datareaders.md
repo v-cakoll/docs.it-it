@@ -1,59 +1,62 @@
 ---
-title: "DataAdapter e DataReader | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: DataAdapter e DataReader
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3e7a0af0b5fabdfacfcc825258242868b0fbb513
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# DataAdapter e DataReader
-È possibile usare il **DataReader** di ADO.NET per recuperare un flusso di dati di sola lettura forward\-only da un database.  I risultati vengono restituiti all'esecuzione della query e vengono archiviati nel buffer di rete del client finché non vengono richiesti usando il metodo **Read** del **DataReader**.  L'utilizzo del **DataReader** consente di migliorare le prestazioni dell'applicazione recuperando i dati non appena sono disponibili e, per impostazione predefinita, archiviando solo una riga alla volta per evitare di sovraccaricare il sistema.  
+# <a name="dataadapters-and-datareaders"></a><span data-ttu-id="b2f7c-102">DataAdapter e DataReader</span><span class="sxs-lookup"><span data-stu-id="b2f7c-102">DataAdapters and DataReaders</span></span>
+<span data-ttu-id="b2f7c-103">È possibile utilizzare ADO.NET **DataReader** per recuperare un flusso forward-only in sola lettura di dati da un database.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-103">You can use the ADO.NET **DataReader** to retrieve a read-only, forward-only stream of data from a database.</span></span> <span data-ttu-id="b2f7c-104">Vengono restituiti all'esecuzione della query e vengono archiviati nel buffer di rete nel client fino a quando non ne fanno richiesta utilizzando il **lettura** metodo il **DataReader**.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-104">Results are returned as the query executes, and are stored in the network buffer on the client until you request them using the **Read** method of the **DataReader**.</span></span> <span data-ttu-id="b2f7c-105">Utilizzo di **DataReader** può aumentare le prestazioni dell'applicazione per il recupero dei dati non appena è disponibile e (per impostazione predefinita) archiviando solo una riga alla volta in memoria, riducendo l'overhead di sistema.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-105">Using the **DataReader** can increase application performance both by retrieving data as soon as it is available, and (by default) storing only one row at a time in memory, reducing system overhead.</span></span>  
   
- Un oggetto <xref:System.Data.Common.DataAdapter> viene usato per recuperare i dati da un'origine dati e compilare le tabelle all'interno di un oggetto <xref:System.Data.DataSet>.  Il `DataAdapter` risolve inoltre le modifiche apportate al `DataSet` nell'origine dati.  Il `DataAdapter` usa l'oggetto `Connection` del provider di dati .NET Framework per effettuare la connessione a un'origine dati e gli oggetti `Command` per recuperare i dati e risolvere le modifiche apportate all'origine dati.  
+ <span data-ttu-id="b2f7c-106">Un oggetto <xref:System.Data.Common.DataAdapter> viene usato per recuperare i dati da un'origine dati e compilare le tabelle all'interno di un oggetto <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-106">A <xref:System.Data.Common.DataAdapter> is used to retrieve data from a data source and populate tables within a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="b2f7c-107">Il `DataAdapter` risolve inoltre le modifiche apportate al `DataSet` nell'origine dati.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-107">The `DataAdapter` also resolves changes made to the `DataSet` back to the data source.</span></span> <span data-ttu-id="b2f7c-108">Il `DataAdapter` usa l'oggetto `Connection` del provider di dati .NET Framework per effettuare la connessione a un'origine dati e gli oggetti `Command` per recuperare i dati e risolvere le modifiche apportate all'origine dati.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-108">The `DataAdapter` uses the `Connection` object of the .NET Framework data provider to connect to a data source, and it uses `Command` objects to retrieve data from and resolve changes to the data source.</span></span>  
   
- Per ogni provider di dati .NET Framework incluso in .NET Framework sono disponibili un oggetto <xref:System.Data.Common.DbDataReader> e un oggetto <xref:System.Data.Common.DbDataAdapter>: nel provider di dati .NET Framework per OLE DB sono inclusi <xref:System.Data.OleDb.OleDbDataReader> e <xref:System.Data.OleDb.OleDbDataAdapter>, in quello per SQL Server sono inclusi <xref:System.Data.SqlClient.SqlDataReader> e <xref:System.Data.SqlClient.SqlDataAdapter>, in quello per ODBC sono inclusi <xref:System.Data.Odbc.OdbcDataReader> e <xref:System.Data.Odbc.OdbcDataAdapter> e in quello per Oracle sono inclusi <xref:System.Data.OracleClient.OracleDataReader> e <xref:System.Data.OracleClient.OracleDataAdapter>.  
+ <span data-ttu-id="b2f7c-109">Per ogni provider di dati .NET Framework incluso in .NET Framework sono disponibili un oggetto <xref:System.Data.Common.DbDataReader> e un oggetto <xref:System.Data.Common.DbDataAdapter>: nel provider di dati .NET Framework per OLE DB sono inclusi <xref:System.Data.OleDb.OleDbDataReader> e <xref:System.Data.OleDb.OleDbDataAdapter>, in quello per SQL Server sono inclusi <xref:System.Data.SqlClient.SqlDataReader> e <xref:System.Data.SqlClient.SqlDataAdapter>, in quello per ODBC sono inclusi <xref:System.Data.Odbc.OdbcDataReader> e <xref:System.Data.Odbc.OdbcDataAdapter> e in quello per Oracle sono inclusi <xref:System.Data.OracleClient.OracleDataReader> e <xref:System.Data.OracleClient.OracleDataAdapter>.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-109">Each .NET Framework data provider included with the .NET Framework has a <xref:System.Data.Common.DbDataReader> and a <xref:System.Data.Common.DbDataAdapter> object: the .NET Framework Data Provider for OLE DB includes an <xref:System.Data.OleDb.OleDbDataReader> and an <xref:System.Data.OleDb.OleDbDataAdapter> object, the .NET Framework Data Provider for SQL Server includes a <xref:System.Data.SqlClient.SqlDataReader> and a <xref:System.Data.SqlClient.SqlDataAdapter> object, the .NET Framework Data Provider for ODBC includes an <xref:System.Data.Odbc.OdbcDataReader> and an <xref:System.Data.Odbc.OdbcDataAdapter> object, and the .NET Framework Data Provider for Oracle includes an <xref:System.Data.OracleClient.OracleDataReader> and an <xref:System.Data.OracleClient.OracleDataAdapter> object.</span></span>  
   
-## In questa sezione  
- [Recupero di dati mediante un DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
- Viene descritto l'oggetto **DataReader** di ADO.NET e viene illustrato come usarlo per restituire un flusso di risultati da un'origine dati.  
+## <a name="in-this-section"></a><span data-ttu-id="b2f7c-110">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="b2f7c-110">In This Section</span></span>  
+ [<span data-ttu-id="b2f7c-111">Recupero di dati tramite un oggetto DataReader</span><span class="sxs-lookup"><span data-stu-id="b2f7c-111">Retrieving Data Using a DataReader</span></span>](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
+ <span data-ttu-id="b2f7c-112">Viene descritto ADO.NET **DataReader** oggetto e come usarlo per restituire un flusso di risultati da un'origine dati.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-112">Describes the ADO.NET **DataReader** object and how to use it to return a stream of results from a data source.</span></span>  
   
- [Popolamento di un dataset da un oggetto DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
- Viene descritto come compilare un `DataSet` con tabelle, colonne e righe usando un `DataAdapter`.  
+ [<span data-ttu-id="b2f7c-113">Popolamento di un set di dati da un oggetto DataAdapter</span><span class="sxs-lookup"><span data-stu-id="b2f7c-113">Populating a DataSet from a DataAdapter</span></span>](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ <span data-ttu-id="b2f7c-114">Viene descritto come compilare un `DataSet` con tabelle, colonne e righe usando un `DataAdapter`.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-114">Describes how to fill a `DataSet` with tables, columns, and rows by using a `DataAdapter`.</span></span>  
   
- [Parametri di DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- Viene descritto come usare i parametri con le proprietà dei comandi di un `DataAdapter` e vengono fornite informazioni su come eseguire il mapping del contenuto di una colonna in un `DataSet` sul parametro di un comando.  
+ [<span data-ttu-id="b2f7c-115">Parametri DataAdapter</span><span class="sxs-lookup"><span data-stu-id="b2f7c-115">DataAdapter Parameters</span></span>](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ <span data-ttu-id="b2f7c-116">Viene descritto come usare i parametri con le proprietà dei comandi di un `DataAdapter` e vengono fornite informazioni su come eseguire il mapping del contenuto di una colonna in un `DataSet` sul parametro di un comando.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-116">Describes how to use parameters with the command properties of a `DataAdapter` including how to map the contents of a column in a `DataSet` to a command parameter.</span></span>  
   
- [Aggiunta di vincoli esistenti a un DataSet](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
- Viene descritto come aggiungere i vincoli esistenti a un `DataSet`.  
+ [<span data-ttu-id="b2f7c-117">Aggiunta di vincoli esistenti a un set di dati</span><span class="sxs-lookup"><span data-stu-id="b2f7c-117">Adding Existing Constraints to a DataSet</span></span>](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
+ <span data-ttu-id="b2f7c-118">Viene descritto come aggiungere i vincoli esistenti a un `DataSet`.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-118">Describes how to add existing constraints to a `DataSet`.</span></span>  
   
- [Mapping di DataAdapter DataTable e DataColumn](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
- Viene descritto come impostare `DataTableMappings` e `ColumnMappings` per un `DataAdapter`.  
+ [<span data-ttu-id="b2f7c-119">DataAdapter, DataTable e DataColumn mapping</span><span class="sxs-lookup"><span data-stu-id="b2f7c-119">DataAdapter DataTable and DataColumn Mappings</span></span>](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
+ <span data-ttu-id="b2f7c-120">Viene descritto come impostare `DataTableMappings` e `ColumnMappings` per un `DataAdapter`.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-120">Describes how to set up `DataTableMappings` and `ColumnMappings` for a `DataAdapter`.</span></span>  
   
- [Paging del risultato di una query](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
- Viene fornito un esempio di visualizzazione dei risultati di una query sotto forma di pagine di dati.  
+ [<span data-ttu-id="b2f7c-121">Paging del risultato di una Query</span><span class="sxs-lookup"><span data-stu-id="b2f7c-121">Paging Through a Query Result</span></span>](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
+ <span data-ttu-id="b2f7c-122">Viene fornito un esempio di visualizzazione dei risultati di una query sotto forma di pagine di dati.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-122">Provides an example of viewing the results of a query as pages of data.</span></span>  
   
- [Aggiornamenti di origini dati tramite DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- Viene descritto come usare un `DataAdapter` per applicare le modifiche apportate a un `DataSet` fino a risalire al database.  
+ [<span data-ttu-id="b2f7c-123">Aggiornamento di origini dati con DataAdapter</span><span class="sxs-lookup"><span data-stu-id="b2f7c-123">Updating Data Sources with DataAdapters</span></span>](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ <span data-ttu-id="b2f7c-124">Viene descritto come usare un `DataAdapter` per applicare le modifiche apportate a un `DataSet` fino a risalire al database.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-124">Describes how to use a `DataAdapter` to resolve changes in a `DataSet` back to the database.</span></span>  
   
- [Gestione degli eventi di DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- Vengono descritti gli eventi del `DataAdapter` e il relativo uso.  
+ [<span data-ttu-id="b2f7c-125">Gestione di eventi DataAdapter</span><span class="sxs-lookup"><span data-stu-id="b2f7c-125">Handling DataAdapter Events</span></span>](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
+ <span data-ttu-id="b2f7c-126">Vengono descritti gli eventi del `DataAdapter` e il relativo uso.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-126">Describes `DataAdapter` events and how to use them.</span></span>  
   
- [Esecuzione di operazioni batch utilizzando DataAdapters](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
- Viene descritto il miglioramento delle prestazioni delle applicazioni mediante la riduzione del numero dei round trip a SQL Server quando si applicano gli aggiornamenti dal `DataSet`.  
+ [<span data-ttu-id="b2f7c-127">Esecuzione di operazioni Batch tramite oggetti DataAdapter</span><span class="sxs-lookup"><span data-stu-id="b2f7c-127">Performing Batch Operations Using DataAdapters</span></span>](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
+ <span data-ttu-id="b2f7c-128">Viene descritto il miglioramento delle prestazioni delle applicazioni mediante la riduzione del numero dei round trip a SQL Server quando si applicano gli aggiornamenti dal `DataSet`.</span><span class="sxs-lookup"><span data-stu-id="b2f7c-128">Describes enhancing application performance by reducing the number of round trips to SQL Server when applying updates from the `DataSet`.</span></span>  
   
-## Vedere anche  
- [Connessione a un'origine dati](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)   
- [Comandi e parametri](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [Transazioni e concorrenza](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)   
- [DataSet, DataTable e DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="b2f7c-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b2f7c-129">See Also</span></span>  
+ [<span data-ttu-id="b2f7c-130">Connessione a un'origine dati</span><span class="sxs-lookup"><span data-stu-id="b2f7c-130">Connecting to a Data Source</span></span>](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
+ [<span data-ttu-id="b2f7c-131">Comandi e parametri</span><span class="sxs-lookup"><span data-stu-id="b2f7c-131">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [<span data-ttu-id="b2f7c-132">Transazioni e concorrenza</span><span class="sxs-lookup"><span data-stu-id="b2f7c-132">Transactions and Concurrency</span></span>](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [<span data-ttu-id="b2f7c-133">Oggetti DataSet, DataTable e DataView</span><span class="sxs-lookup"><span data-stu-id="b2f7c-133">DataSets, DataTables, and DataViews</span></span>](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="b2f7c-134">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="b2f7c-134">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

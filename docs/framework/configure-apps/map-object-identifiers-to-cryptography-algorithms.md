@@ -1,36 +1,34 @@
 ---
-title: "Mapping di identificatori di oggetti ad algoritmi di crittografia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "algoritmi di crittografia"
-  - "crittografia, mapping di identificatori di oggetti"
-  - "firme digitali"
-  - "identificatori, mapping di identificatori di oggetti"
-  - "mapping di identificatori di oggetti"
+title: Mapping di identificatori di oggetti ad algoritmi di crittografia
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- digital signatures
+- identifiers, mapping object identifiers
+- cryptographic algorithms
+- mapping object identifiers
+- cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: dbfe394193925e38dad774d39d79ac813abef22a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Mapping di identificatori di oggetti ad algoritmi di crittografia
-Le firme digitali assicurano l'integrità dei dati durante il trasferimento da un programma a un altro.  In genere la firma digitale viene calcolata applicando una funzione matematica al valore hash dei dati da firmare.  Durante la formattazione di un valore hash da firmare, alcuni algoritmi di firma digitale aggiungono l'identificatore di oggetto \(OID, Object Identifier\) ASN.1 in coda al valore.  L'OID identifica l'algoritmo utilizzato per calcolare il valore hash.  È possibile mappare algoritmi agli identificatori di oggetto per estendere il meccanismo di crittografia in modo che utilizzi algoritmi personalizzati.  Nell'esempio riportato di seguito viene illustrato come mappare un identificatore di oggetto a un nuovo algoritmo hash.  
+# <a name="mapping-object-identifiers-to-cryptography-algorithms"></a><span data-ttu-id="5daad-102">Mapping di identificatori di oggetti ad algoritmi di crittografia</span><span class="sxs-lookup"><span data-stu-id="5daad-102">Mapping Object Identifiers to Cryptography Algorithms</span></span>
+<span data-ttu-id="5daad-103">Verificare che le firme digitali che dati non vengono alterati quando viene inviato da un programma a un altro.</span><span class="sxs-lookup"><span data-stu-id="5daad-103">Digital signatures ensure that data is not tampered with when it is sent from one program to another.</span></span> <span data-ttu-id="5daad-104">In genere la firma digitale viene calcolata applicando una funzione matematica per l'hash dei dati da firmare.</span><span class="sxs-lookup"><span data-stu-id="5daad-104">Typically the digital signature is computed by applying a mathematical function to the hash of the data to be signed.</span></span> <span data-ttu-id="5daad-105">Quando si formatta un valore hash deve essere firmata, alcuni algoritmi di firma digitale accodare un identificatore di oggetto ASN. 1 (OID) come parte dell'operazione di formattazione.</span><span class="sxs-lookup"><span data-stu-id="5daad-105">When formatting a hash value to be signed, some digital signature algorithms append an ASN.1 Object Identifier (OID) as part of the formatting operation.</span></span> <span data-ttu-id="5daad-106">L'OID identifica l'algoritmo utilizzato per calcolare il valore hash.</span><span class="sxs-lookup"><span data-stu-id="5daad-106">The OID identifies the algorithm that was used to compute the hash.</span></span> <span data-ttu-id="5daad-107">È possibile eseguire il mapping di algoritmi agli identificatori di oggetto per estendere il meccanismo di crittografia per l'utilizzo di algoritmi personalizzati.</span><span class="sxs-lookup"><span data-stu-id="5daad-107">You can map algorithms to object identifiers to extend the cryptography mechanism to use custom algorithms.</span></span> <span data-ttu-id="5daad-108">Nell'esempio seguente viene illustrato come eseguire il mapping di un identificatore di oggetto a un nuovo algoritmo di hash.</span><span class="sxs-lookup"><span data-stu-id="5daad-108">The following example shows how to map an object identifier to a new hash algorithm.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -50,8 +48,8 @@ Le firme digitali assicurano l'integrità dei dati durante il trasferimento da u
 </configuration>  
 ```  
   
- L'[elemento \<oidEntry\>](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contiene due attributi.  L'attributo **OID** è il numero dell'identificatore di oggetto.  L'attributo **name** è il valore dell'attributo **name** dall'[elemento \<nameEntry\>](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  Prima di mappare un identificatore di oggetto a un nome semplice, è necessario che il nome di un algoritmo sia mappato a una classe.  
+ <span data-ttu-id="5daad-109">Il [ \<oidEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contiene due attributi.</span><span class="sxs-lookup"><span data-stu-id="5daad-109">The [\<oidEntry> element](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) contains two attributes.</span></span> <span data-ttu-id="5daad-110">Il **OID** attributo è il numero dell'identificatore di oggetto.</span><span class="sxs-lookup"><span data-stu-id="5daad-110">The **OID** attribute is the object identifier number.</span></span> <span data-ttu-id="5daad-111">Il **nome** attributo è il valore della **nome** dall'attributo di [ \<nameEntry > elemento](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span><span class="sxs-lookup"><span data-stu-id="5daad-111">The **name** attribute is the value of the **name** attribute from the [\<nameEntry> element](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).</span></span> <span data-ttu-id="5daad-112">Deve essere presente un mapping da un nome di algoritmo a una classe prima di un identificatore di oggetto può essere mappato a un nome semplice.</span><span class="sxs-lookup"><span data-stu-id="5daad-112">There must be a mapping from an algorithm name to a class before an object identifier can be mapped to a simple name.</span></span>  
   
-## Vedere anche  
- [Configurazione di classi di crittografia](../../../docs/framework/configure-apps/configure-cryptography-classes.md)   
- [Servizi di crittografia](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a><span data-ttu-id="5daad-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5daad-113">See Also</span></span>  
+ [<span data-ttu-id="5daad-114">Configurazione di classi di crittografia</span><span class="sxs-lookup"><span data-stu-id="5daad-114">Configuring Cryptography Classes</span></span>](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [<span data-ttu-id="5daad-115">Cryptographic Services</span><span class="sxs-lookup"><span data-stu-id="5daad-115">Cryptographic Services</span></span>](../../../docs/standard/security/cryptographic-services.md)

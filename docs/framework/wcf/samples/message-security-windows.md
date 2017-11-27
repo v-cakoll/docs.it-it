@@ -1,35 +1,34 @@
 ---
-title: "Sicurezza dei messaggi di Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WS-Security"
+title: Sicurezza dei messaggi di Windows
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-caps.latest.revision: 34
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: cc6a6caca730e61e1de9f6d6e3ab141743442f9b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Sicurezza dei messaggi di Windows
-In questo esempio viene illustrato come configurare un'associazione <xref:System.ServiceModel.WSHttpBinding> per usare la sicurezza a livello di messaggio con autenticazione Windows.  Questo esempio è basato sull'[Guida introduttiva](../../../../docs/framework/wcf/samples/getting-started-sample.md).  In questo esempio, il servizio è ospitato da Internet Information Services \(IIS\) e il client è un'applicazione console \(.exe\).  
+# <a name="message-security-windows"></a><span data-ttu-id="73f12-102">Sicurezza dei messaggi di Windows</span><span class="sxs-lookup"><span data-stu-id="73f12-102">Message Security Windows</span></span>
+<span data-ttu-id="73f12-103">In questo esempio viene illustrato come configurare un'associazione <xref:System.ServiceModel.WSHttpBinding> per usare la sicurezza a livello di messaggio con autenticazione Windows.</span><span class="sxs-lookup"><span data-stu-id="73f12-103">This sample demonstrates how to configure a <xref:System.ServiceModel.WSHttpBinding> binding to use message-level security with Windows authentication.</span></span> <span data-ttu-id="73f12-104">Questo esempio è basato sul [Introduzione](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="73f12-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span> <span data-ttu-id="73f12-105">In questo esempio, il servizio è ospitato da Internet Information Services (IIS) e il client è un'applicazione console (.exe).</span><span class="sxs-lookup"><span data-stu-id="73f12-105">In this sample, the service is hosted in Internet Information Services (IIS) and the client is a console application (.exe).</span></span>  
   
 > [!NOTE]
->  La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.  
+>  <span data-ttu-id="73f12-106">La procedura di installazione e le istruzioni di compilazione per questo esempio si trovano alla fine di questo argomento.</span><span class="sxs-lookup"><span data-stu-id="73f12-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- La sicurezza predefinita per l'[\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) è la sicurezza del messaggio che usa l'autenticazione Windows.  I file di configurazione in questo esempio impostano in modo esplicito l'attributo `mode` dell'elemento [\<sicurezza\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) su `Message` e l'attributo `clientCredentialType` su `Windows`.  Questi valori sono i valori predefiniti per questa associazione, ma sono stati configurati in modo esplicito, come illustrato nell'esempio di configurazione seguente per descriverne l'uso.  
+ <span data-ttu-id="73f12-107">La sicurezza predefinita per il [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) sicurezza dei messaggi utilizzando l'autenticazione di Windows.</span><span class="sxs-lookup"><span data-stu-id="73f12-107">The default security for the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) is message security using Windows authentication.</span></span> <span data-ttu-id="73f12-108">I file di configurazione in questo esempio viene impostato in modo esplicito il `mode` attributo del [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) a `Message` e `clientCredentialType` attributo `Windows`.</span><span class="sxs-lookup"><span data-stu-id="73f12-108">The configuration files in this sample explicitly set the `mode` attribute of the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) to `Message` and the `clientCredentialType` attribute to `Windows`.</span></span> <span data-ttu-id="73f12-109">Questi valori sono i valori predefiniti per questa associazione, ma sono stati configurati in modo esplicito, come illustrato nell'esempio di configurazione seguente per descriverne l'uso.</span><span class="sxs-lookup"><span data-stu-id="73f12-109">These values are the default values for this binding, but they have been explicitly configured, as shown in the following sample configuration to demonstrate their use.</span></span>  
   
-```  
+```xml  
 <bindings>  
     <wsHttpBinding>  
         <binding>  
@@ -41,10 +40,9 @@ In questo esempio viene illustrato come configurare un'associazione <xref:System
 </bindings>  
 ```  
   
- La configurazione dell'endpoint client è costituita da un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto.  L'associazione client viene configurata con la `securityMode` e la `authenticationMode` appropriate.  
+ <span data-ttu-id="73f12-110">La configurazione dell'endpoint client è costituita da un indirizzo assoluto per l'endpoint del servizio, l'associazione e il contratto.</span><span class="sxs-lookup"><span data-stu-id="73f12-110">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract.</span></span> <span data-ttu-id="73f12-111">L'associazione client viene configurata con la `securityMode` e la `authenticationMode` appropriate.</span><span class="sxs-lookup"><span data-stu-id="73f12-111">The client binding is configured with the appropriate `securityMode` and `authenticationMode`.</span></span>  
   
-```  
-  
+```xml  
 <system.serviceModel>  
   <client>  
     <endpoint address=  
@@ -70,10 +68,9 @@ In questo esempio viene illustrato come configurare un'associazione <xref:System
     </wsHttpBinding>  
   </bindings>  
 </system.serviceModel>  
-  
 ```  
   
- Il codice sorgente del servizio è stato modificato per illustrare come <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> può essere usato per accedere all'identità del chiamante.  
+ <span data-ttu-id="73f12-112">Il codice sorgente del servizio è stato modificato per illustrare come <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> può essere usato per accedere all'identità del chiamante.</span><span class="sxs-lookup"><span data-stu-id="73f12-112">The service source code has been modified to demonstrate how the <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> can be used to access the identity of the caller.</span></span>  
   
 ```  
 public string GetCallerIdentity()  
@@ -81,17 +78,16 @@ public string GetCallerIdentity()
     // The Windows identity of the caller can be accessed on the ServiceSecurityContext.WindowsIdentity.  
     return OperationContext.Current.ServiceSecurityContext.WindowsIdentity.Name;  
 }  
-  
 ```  
   
- Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.  Il primo metodo chiamato, `GetCallerIdentity`, restituisce il nome dell'identità del chiamante al client.  Premere INVIO nella finestra della console per arrestare il client.  
+ <span data-ttu-id="73f12-113">Quando si esegue l'esempio, le richieste e le risposte dell'operazione vengono visualizzate nella finestra della console client.</span><span class="sxs-lookup"><span data-stu-id="73f12-113">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="73f12-114">Il primo metodo chiamato, `GetCallerIdentity`, restituisce il nome dell'identità del chiamante al client.</span><span class="sxs-lookup"><span data-stu-id="73f12-114">The first method called - `GetCallerIdentity` - returns the name of the caller identity back to the client.</span></span> <span data-ttu-id="73f12-115">Premere INVIO nella finestra della console per arrestare il client.</span><span class="sxs-lookup"><span data-stu-id="73f12-115">Press ENTER in the console window to shut down the client.</span></span>  
   
-### Per impostare, compilare ed eseguire l'esempio  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="73f12-116">Per impostare, compilare ed eseguire l'esempio</span><span class="sxs-lookup"><span data-stu-id="73f12-116">To set up, build, and run the sample</span></span>  
   
-1.  Assicurarsi di avere eseguito la [Procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="73f12-117">Assicurarsi di avere eseguito la [procedura di installazione singola per gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="73f12-117">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Per compilare l'edizione in C\# o Visual Basic .NET della soluzione, seguire le istruzioni in [Generazione degli esempi Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="73f12-118">Per compilare l'edizione in C# o Visual Basic .NET della soluzione, seguire le istruzioni in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="73f12-118">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Per eseguire l'esempio in un solo computer o tra computer diversi, seguire le istruzioni in [Esecuzione degli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="73f12-119">Per eseguire l'esempio in una configurazione a una o più computer, seguire le istruzioni in [esegue gli esempi di Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="73f12-119">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## Vedere anche
+## <a name="see-also"></a><span data-ttu-id="73f12-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="73f12-120">See Also</span></span>

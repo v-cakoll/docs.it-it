@@ -1,52 +1,51 @@
 ---
-title: "Differenze tra Entity SQL e Transact-SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: Differenze tra Entity SQL e Transact-SQL
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5d99b433cb499316872cfb09d9fca7f7da753bb5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Differenze tra Entity SQL e Transact-SQL
-In questo argomento vengono descritte le differenze tra [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
+# <a name="how-entity-sql-differs-from-transact-sql"></a><span data-ttu-id="3d5cf-102">Differenze tra Entity SQL e Transact-SQL</span><span class="sxs-lookup"><span data-stu-id="3d5cf-102">How Entity SQL Differs from Transact-SQL</span></span>
+<span data-ttu-id="3d5cf-103">In questo argomento vengono descritte le differenze tra [!INCLUDE[esql](../../../../../../includes/esql-md.md)] e [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3d5cf-103">This topic describes the differences between [!INCLUDE[esql](../../../../../../includes/esql-md.md)] and [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span></span>  
   
-## Supporto di ereditarietà e relazioni  
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono usati direttamente gli schemi di entità concettuali e sono supportate funzionalità del modello concettuale, quali l'ereditarietà e le relazioni.  
+## <a name="inheritance-and-relationships-support"></a><span data-ttu-id="3d5cf-104">Supporto di ereditarietà e relazioni</span><span class="sxs-lookup"><span data-stu-id="3d5cf-104">Inheritance and Relationships Support</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-105">interagisce direttamente con gli schemi di entità concettuali e supporta la funzionalità del modello concettuale, ad esempio l'ereditarietà e le relazioni.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-105"> works directly with conceptual entity schemas and supports conceptual model features such as inheritance and relationships.</span></span>  
   
- Quando si usa l'ereditarietà, è spesso utile selezionare le istanze di un sottotipo da una raccolta di istanze di supertipi.  Questa capacità è fornita dall'operatore [oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] \(simile a `oftype` nelle sequenze in C\#\).  
+ <span data-ttu-id="3d5cf-106">Quando si usa l'ereditarietà, è spesso utile selezionare le istanze di un sottotipo da una raccolta di istanze di supertipi.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-106">When working with inheritance, it is often useful to select instances of a subtype from a collection of supertype instances.</span></span> <span data-ttu-id="3d5cf-107">Il [oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) operatore in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (simile a `oftype` nelle sequenze in c#) fornisce questa funzionalità.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-107">The [oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) operator in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (similar to `oftype` in C# Sequences) provides this capability.</span></span>  
   
-## Supporto per le raccolte  
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le raccolte vengono trattate come entità di prima classe.  Ad esempio:  
+## <a name="support-for-collections"></a><span data-ttu-id="3d5cf-108">Supporto per le raccolte</span><span class="sxs-lookup"><span data-stu-id="3d5cf-108">Support for Collections</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-109">le raccolte vengono trattate come entità di prima classe.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-109"> treats collections as first-class entities.</span></span> <span data-ttu-id="3d5cf-110">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-110">For example:</span></span>  
   
--   Le espressioni sulle raccolte sono valide in una clausola `from`.  
+-   <span data-ttu-id="3d5cf-111">Le espressioni sulle raccolte sono valide in una clausola `from`.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-111">Collection expressions are valid in a `from` clause.</span></span>  
   
--   Le sottoquery `in` e `exists` sono state generalizzate per consentire qualsiasi raccolta.  
+-   <span data-ttu-id="3d5cf-112">Le sottoquery `in` e `exists` sono state generalizzate per consentire qualsiasi raccolta.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-112">`in` and `exists` subqueries have been generalized to allow any collections.</span></span>  
   
-     Una sottoquery è un tipo di raccolta.  `e1 in e2` e `exists(e)` sono i construct [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usati per eseguire queste operazioni.  
+     <span data-ttu-id="3d5cf-113">Una sottoquery è un tipo di raccolta.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-113">A subquery is one kind of collection.</span></span> <span data-ttu-id="3d5cf-114">`e1 in e2` e `exists(e)` sono i construct [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usati per eseguire queste operazioni.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-114">`e1 in e2` and `exists(e)` are the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] constructs to perform these operations.</span></span>  
   
--   Le operazioni Set, ad esempio `union`, `intersect` ed `except`, possono ora essere usate sulle raccolte.  
+-   <span data-ttu-id="3d5cf-115">Le operazioni Set, ad esempio `union`, `intersect` ed `except`, possono ora essere usate sulle raccolte.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-115">Set operations, such as `union`, `intersect`, and `except`, now operate on collections.</span></span>  
   
--   I join funzionano sulle raccolte.  
+-   <span data-ttu-id="3d5cf-116">I join funzionano sulle raccolte.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-116">Joins operate on collections.</span></span>  
   
-## Supporto per le espressioni  
- In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] sono presenti sottoquery \(tabelle\) ed espressioni \(righe e colonne\).  
+## <a name="support-for-expressions"></a><span data-ttu-id="3d5cf-117">Supporto per le espressioni</span><span class="sxs-lookup"><span data-stu-id="3d5cf-117">Support for Expressions</span></span>  
+ [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]<span data-ttu-id="3d5cf-118">sottoquery (tabelle) e le espressioni (righe e colonne).</span><span class="sxs-lookup"><span data-stu-id="3d5cf-118"> has subqueries (tables) and expressions (rows and columns).</span></span>  
   
- Per supportare le raccolte e le raccolte annidate, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] trasforma tutti gli elementi in espressione.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è più componibile rispetto a [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]: ogni espressione può essere usata in qualunque posizione.  Le espressioni di query restituiscono sempre raccolte dei tipi previsti e possono essere usate in qualunque posizione in cui è consentita un'espressione sulle raccolte.  Per informazioni sulle espressioni [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] non supportate in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], vedere [Espressioni non supportate](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md).  
+ <span data-ttu-id="3d5cf-119">Per supportare le raccolte e le raccolte annidate, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Trasforma tutti gli elementi di un'espressione.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-119">To support collections and nested collections, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] makes everything an expression.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-120"> è più componibile rispetto a [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]: ogni espressione può essere usata in qualunque posizione.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-120"> is more composable than [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]—every expression can be used anywhere.</span></span> <span data-ttu-id="3d5cf-121">Le espressioni di query restituiscono sempre raccolte dei tipi previsti e possono essere usate in qualunque posizione in cui è consentita un'espressione sulle raccolte.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-121">Query expressions always result in collections of the projected types and can be used anywhere a collection expression is allowed.</span></span> <span data-ttu-id="3d5cf-122">Per informazioni su [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] espressioni che non sono supportate in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], vedere [espressioni non supportate](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="3d5cf-122">For information about [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] expressions that are not supported in [!INCLUDE[esql](../../../../../../includes/esql-md.md)], see [Unsupported Expressions](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md).</span></span>  
   
- Le query seguenti sono tutte query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] valide:  
+ <span data-ttu-id="3d5cf-123">Le query seguenti sono tutte query [!INCLUDE[esql](../../../../../../includes/esql-md.md)] valide:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-123">The following are all valid [!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries:</span></span>  
   
 ```  
 1+2 *3  
@@ -57,79 +56,79 @@ e1 union all e2
 set(e1)  
 ```  
   
-## Modalità di gestione uniforme delle sottoquery  
- Vista l'enfasi posta sulle tabelle, in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] viene eseguita l'interpretazione contestuale delle sottoquery.  Una sottoquery nella clausola `from` viene ad esempio considerata come un multiset \(tabella\).  La stessa sottoquery usata nella clausola `select` viene invece considerata come una sottoquery scalare.  Analogamente, una sottoquery usata sul lato sinistro di un operatore `in` viene considerata come una sottoquery scalare, mentre sul lato destro è prevista una sottoquery multiset.  
+## <a name="uniform-treatment-of-subqueries"></a><span data-ttu-id="3d5cf-124">Modalità di gestione uniforme delle sottoquery</span><span class="sxs-lookup"><span data-stu-id="3d5cf-124">Uniform Treatment of Subqueries</span></span>  
+ <span data-ttu-id="3d5cf-125">Vista l'enfasi posta sulle tabelle, [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] esegue interpretazione contestuale delle sottoquery.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-125">Given its emphasis on tables, [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] performs contextual interpretation of subqueries.</span></span> <span data-ttu-id="3d5cf-126">Ad esempio, in una sottoquery di `from` clausola viene considerata come un multiset (tabella).</span><span class="sxs-lookup"><span data-stu-id="3d5cf-126">For example, a subquery in the `from` clause is considered to be a multiset (table).</span></span> <span data-ttu-id="3d5cf-127">La stessa sottoquery usata nella clausola `select` viene invece considerata come una sottoquery scalare.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-127">But the same subquery used in the `select` clause is considered to be a scalar subquery.</span></span> <span data-ttu-id="3d5cf-128">Analogamente, una sottoquery usata sul lato sinistro di un `in` operatore viene considerato come una sottoquery scalare, mentre il lato destro deve essere una sottoquery multiset.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-128">Similarly, a subquery used on the left side of an `in` operator is considered to be a scalar subquery, while the right side is expected to be a multiset subquery.</span></span>  
   
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono eliminate queste differenze.  Un'espressione dispone di un'interpretazione uniforme che non dipende dal contesto in cui viene usata.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] considera tutte le sottoquery come sottoquery multiset.  Se dalla sottoquery si desidera ottenere un valore scalare, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce l'operatore `anyelement` che opera su una raccolta, in questo caso, la sottoquery, ed estrae un valore singleton dalla raccolta.  
+ <span data-ttu-id="3d5cf-129">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono eliminate queste differenze.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-129">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] eliminates these differences.</span></span> <span data-ttu-id="3d5cf-130">Un'espressione dispone di un'interpretazione uniforme che non dipende dal contesto in cui viene usata.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-130">An expression has a uniform interpretation that does not depend on the context in which it is used.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-131">considera tutte le sottoquery come sottoquery multiset.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-131"> considers all subqueries to be multiset subqueries.</span></span> <span data-ttu-id="3d5cf-132">Se dalla sottoquery, si desidera ottenere un valore scalare [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce il `anyelement` operatore che opera su una raccolta (in questo caso, la sottoquery) ed estrae un valore singleton dalla raccolta.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-132">If a scalar value is desired from the subquery, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] provides the `anyelement` operator that operates on a collection (in this case, the subquery), and extracts a singleton value from the collection.</span></span>  
   
-### Eliminazione della presenza di coercizioni implicite per le sottoquery  
- Un effetto collaterale della modalità di gestione uniforme delle sottoquery è la conversione implicita delle sottoquery in valori scalari.  In particolare, in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] un multiset di righe \(con un singolo campo\) viene convertito in modo implicito in un valore scalare il cui tipo di dati è quello del campo.  
+### <a name="avoiding-implicit-coercions-for-subqueries"></a><span data-ttu-id="3d5cf-133">Eliminazione della presenza di coercizioni implicite per le sottoquery</span><span class="sxs-lookup"><span data-stu-id="3d5cf-133">Avoiding Implicit Coercions for Subqueries</span></span>  
+ <span data-ttu-id="3d5cf-134">Un effetto collaterale della modalità di gestione uniforme delle sottoquery è la conversione implicita delle sottoquery in valori scalari.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-134">A related side effect of uniform treatment of subqueries is implicit conversion of subqueries to scalar values.</span></span> <span data-ttu-id="3d5cf-135">In particolare, in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] un multiset di righe (con un singolo campo) viene convertito in modo implicito in un valore scalare il cui tipo di dati è quello del campo.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-135">Specifically, in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], a multiset of rows (with a single field) is implicitly converted into a scalar value whose data type is that of the field.</span></span>  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non supporta questa coercizione implicita.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce un operatore ANYELEMENT per estrarre un valore Singleton da una raccolta e una clausola `select value` per evitare di creare un wrapper di riga durante un'espressione di query.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-136"> non supporta questa coercizione implicita.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-136"> does not support this implicit coercion.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-137"> fornisce un operatore ANYELEMENT per estrarre un valore Singleton da una raccolta e una clausola `select value` per evitare di creare un wrapper di riga durante un'espressione di query.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-137"> provides the ANYELEMENT operator to extract a singleton value from a collection, and a `select value` clause to avoid creating a row-wrapper during a query expression.</span></span>  
   
-## SELECT VALUE: eliminazione della presenza del wrapper di riga implicito  
- Tramite la clausola SELECT in una sottoquery [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] viene creato in modo implicito un wrapper di riga intorno agli elementi della clausola.  Questo implica che non si possono creare raccolte di scalari o oggetti.  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] consente una coercizione implicita tra un rowtype con un campo e un valore Singleton dello stesso tipo di dati.  
+## <a name="select-value-avoiding-the-implicit-row-wrapper"></a><span data-ttu-id="3d5cf-138">SELECT VALUE: eliminazione della presenza del wrapper di riga implicito</span><span class="sxs-lookup"><span data-stu-id="3d5cf-138">Select Value: Avoiding the Implicit Row Wrapper</span></span>  
+ <span data-ttu-id="3d5cf-139">La clausola select in un [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] sottoquery crea in modo implicito un wrapper di riga intorno agli elementi nella clausola.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-139">The select clause in a [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] subquery implicitly creates a row wrapper around the items in the clause.</span></span> <span data-ttu-id="3d5cf-140">Questo implica che non si possono creare raccolte di scalari o oggetti.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-140">This implies that we cannot create collections of scalars or objects.</span></span> [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]<span data-ttu-id="3d5cf-141">consente una coercizione implicita tra un rowtype con un campo e un valore singleton dello stesso tipo di dati.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-141"> allows an implicit coercion between a rowtype with one field, and a singleton value of the same data type.</span></span>  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce la clausola `select value` per ignorare la costruzione di riga implicita.  Nella clausola `select value` è possibile specificare un solo elemento.  Quando viene usata questa clausola, non viene costruito alcun wrapper di riga intorno agli elementi nella clausola `select` e può essere prodotta una raccolta della forma desiderata, ad esempio `select value a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-142"> fornisce la clausola `select value` per ignorare la costruzione di riga implicita.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-142"> provides the `select value` clause to skip the implicit row construction.</span></span> <span data-ttu-id="3d5cf-143">Nella clausola `select value` è possibile specificare un solo elemento.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-143">Only one item may be specified in a `select value` clause.</span></span> <span data-ttu-id="3d5cf-144">Quando viene usata questa clausola, non viene costruito alcun wrapper di riga intorno agli elementi nella clausola `select` e può essere prodotta una raccolta della forma desiderata, ad esempio `select value a`.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-144">When such a clause is used, no row wrapper is constructed around the items in the `select` clause, and a collection of the desired shape may be produced, for example: `select value a`.</span></span>  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornisce inoltre il costruttore ROW per la costruzione di righe arbitrarie.  `select` prende uno o più elementi nella proiezione e crea un record di dati con campi, come mostrato di seguito:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-145"> fornisce inoltre il costruttore ROW per la costruzione di righe arbitrarie.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-145"> also provides the row constructor to construct arbitrary rows.</span></span> <span data-ttu-id="3d5cf-146">`select` prende uno o più elementi nella proiezione e crea un record di dati con campi, come mostrato di seguito:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-146">`select` takes one or more elements in the projection and results in a data record with fields, as follows:</span></span>  
   
  `select a, b, c`  
   
-## Correlazione sinistra e utilizzo di alias  
- In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] le espressioni in un determinato ambito \(una singola clausola come `select` o `from`\) non possono fare riferimento alle espressioni definite in precedenza nello stesso ambito.  Alcuni dialetti di SQL \(incluso [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]\) supportano forme limitate di questi comportamenti nella clausola `from`.  
+## <a name="left-correlation-and-aliasing"></a><span data-ttu-id="3d5cf-147">Correlazione sinistra e utilizzo di alias</span><span class="sxs-lookup"><span data-stu-id="3d5cf-147">Left Correlation and Aliasing</span></span>  
+ <span data-ttu-id="3d5cf-148">In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] le espressioni in un determinato ambito (una singola clausola come `select` o `from`) non possono fare riferimento alle espressioni definite in precedenza nello stesso ambito.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-148">In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], expressions in a given scope (a single clause like `select` or `from`) cannot reference expressions defined earlier in the same scope.</span></span> <span data-ttu-id="3d5cf-149">Alcuni dialetti di SQL (incluso [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]) supportano forme limitate di questi comportamenti nella clausola `from`.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-149">Some dialects of SQL (including [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]) do support limited forms of these in the `from` clause.</span></span>  
   
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le correlazioni sinistre nella clausola `from` vengono generalizzate e trattate in modo uniforme.  Le espressioni nella clausola `from` possono fare riferimento a definizioni precedenti \(definizioni a sinistra\) nella stessa clausola senza che sia necessaria sintassi aggiuntiva.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-150">Consente di generalizzare le correlazioni nel `from` clausola e li gestisce in modo uniforme.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-150"> generalizes left correlations in the `from` clause, and treats them uniformly.</span></span> <span data-ttu-id="3d5cf-151">Le espressioni nella clausola `from` possono fare riferimento a definizioni precedenti (definizioni a sinistra) nella stessa clausola senza che sia necessaria sintassi aggiuntiva.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-151">Expressions in the `from` clause can reference earlier definitions (definitions to the left) in the same clause without the need for additional syntax.</span></span>  
   
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono inoltre imposte restrizioni aggiuntive sulle query che implicano l'uso di clausole `group by`.  Le espressioni nella clausola `select` e nella clausola `having` di tali query possono fare riferimento alle chiavi `group by` solo tramite i relativi alias.  Il costrutto seguente è valido in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ma non in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
+ <span data-ttu-id="3d5cf-152">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] vengono inoltre imposte restrizioni aggiuntive sulle query che implicano l'uso di clausole `group by`.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-152">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] also imposes additional restrictions on queries involving `group by` clauses.</span></span> <span data-ttu-id="3d5cf-153">Espressioni di `select` clausola e `having` clausola di tali query può fare riferimento solo al `group by` chiavi tramite i relativi alias.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-153">Expressions in the `select` clause and `having` clause of such queries may only refer to the `group by` keys via their aliases.</span></span> <span data-ttu-id="3d5cf-154">Il costrutto seguente è valido in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ma non in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-154">The following construct is valid in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] but are not in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:</span></span>  
   
 ```  
 select t.x + t.y from T as t group by t.x + t.y  
 ```  
   
- Per eseguire questa operazione in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
+ <span data-ttu-id="3d5cf-155">Per eseguire questa operazione in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-155">To do this in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:</span></span>  
   
 ```  
 select k from T as t group by (t.x + t.y) as k  
 ```  
   
-## Riferimento a colonne \(proprietà\) di tabelle \(raccolte\)  
- Tutti i riferimenti alle colonne in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] devono essere qualificati con l'alias di tabella.  Il costrutto seguente \(presupponendo che `a` sia una colonna valida della tabella `T`\) è valido in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ma non in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+## <a name="referencing-columns-properties-of-tables-collections"></a><span data-ttu-id="3d5cf-156">Riferimento a colonne (proprietà) di tabelle (raccolte)</span><span class="sxs-lookup"><span data-stu-id="3d5cf-156">Referencing Columns (Properties) of Tables (Collections)</span></span>  
+ <span data-ttu-id="3d5cf-157">Tutti i riferimenti alle colonne in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] devono essere qualificati con l'alias di tabella.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-157">All column references in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] must be qualified with the table alias.</span></span> <span data-ttu-id="3d5cf-158">Il costrutto seguente (supponendo che `a` è una colonna valida della tabella `T`) è valido in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ma non in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3d5cf-158">The following construct (assuming that `a` is a valid column of table `T`) is valid in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] but not in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span>  
   
 ```  
 select a from T  
 ```  
   
- Il formato in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è:  
+ <span data-ttu-id="3d5cf-159">Il formato in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-159">The [!INCLUDE[esql](../../../../../../includes/esql-md.md)] form is</span></span>  
   
 ```  
 select t.a as A from T as t  
 ```  
   
- Gli alias di tabella sono facoltativi nella clausola `from`.  Il nome della tabella viene usato come l'alias implicito.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consente anche l'uso del formato seguente:  
+ <span data-ttu-id="3d5cf-160">Gli alias di tabella sono facoltativi nella clausola `from`.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-160">The table aliases are optional in the `from` clause.</span></span> <span data-ttu-id="3d5cf-161">Il nome della tabella viene usato come l'alias implicito.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-161">The name of the table is used as the implicit alias.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-162"> consente anche l'uso del formato seguente:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-162"> allows the following form as well:</span></span>  
   
 ```  
 select Tab.a from Tab  
 ```  
   
-## Navigazione negli oggetti  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] usa la notazione "." per fare riferimento a colonne di \(una riga di\) una tabella.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] estende questa notazione \(preso in prestito dai linguaggi di programmazione\) per supportare la navigazione tra le proprietà di un oggetto.  
+## <a name="navigation-through-objects"></a><span data-ttu-id="3d5cf-163">Navigazione negli oggetti</span><span class="sxs-lookup"><span data-stu-id="3d5cf-163">Navigation Through Objects</span></span>  
+ [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]<span data-ttu-id="3d5cf-164"> usa la notazione "." per fare riferimento a colonne di (una riga di) una tabella.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-164"> uses the "." notation for referencing columns of (a row of) a table.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-165"> estende questa notazione (preso in prestito dai linguaggi di programmazione) per supportare la navigazione tra le proprietà di un oggetto.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-165"> extends this notation (borrowed from programming languages) to support navigation through properties of an object.</span></span>  
   
- Se, ad esempio, `p` è un'espressione del tipo Person, di seguito è riportata la sintassi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] che consente di fare riferimento alla città dell'indirizzo di tale persona.  
+ <span data-ttu-id="3d5cf-166">Se, ad esempio, `p` è un'espressione del tipo Person, di seguito è riportata la sintassi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] che consente di fare riferimento alla città dell'indirizzo di tale persona.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-166">For example, if `p` is an expression of type Person, the following is the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] syntax for referencing the city of the address of this person.</span></span>  
   
 ```  
 p.Address.City   
 ```  
   
-## Mancanza di supporto per \*  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] supporta la sintassi \* non qualificata come alias per l'intera riga e la sintassi \* qualificata \(t. \*\) come collegamento per i campi della tabella.  In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] è inoltre consentita un'aggregazione count\(\*\) speciale che include i valori null.  
+## <a name="no-support-for-"></a><span data-ttu-id="3d5cf-167">Mancanza di supporto per *</span><span class="sxs-lookup"><span data-stu-id="3d5cf-167">No Support for *</span></span>  
+ [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]<span data-ttu-id="3d5cf-168">supporta il non qualificato * come alias per l'intera riga e la sintassi di \* sintassi (t.\*) come un collegamento per i campi della tabella.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-168"> supports the unqualified * syntax as an alias for the entire row, and the qualified \* syntax (t.\*) as a shortcut for the fields of that table.</span></span> <span data-ttu-id="3d5cf-169">Inoltre, [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] consente un conteggio speciale (\*) aggregazione, che include i valori null.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-169">In addition, [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] allows for a special count(\*) aggregate, which includes nulls.</span></span>  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non supporta il construct \*.  Le query [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] del form `select * from T` e `select T1.* from T1, T2...` possono essere espresse in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] rispettivamente  come `select value t from T as t` e `select value t1 from T1 as t1, T2 as t2...`.  Questi costrutti consentono inoltre di gestire l'ereditarietà \(sostituibilità del valore\), mentre le varianti `select *` sono limitate alle proprietà di primo livello del tipo dichiarato.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-170"> non supporta il construct *.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-170"> does not support the * construct.</span></span> <span data-ttu-id="3d5cf-171">Le query [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] del form `select * from T` e `select T1.* from T1, T2...` possono essere espresse in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] rispettivamente  come `select value t from T as t` e `select value t1 from T1 as t1, T2 as t2...`.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-171">[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] queries of the form `select * from T` and `select T1.* from T1, T2...` can be expressed in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] as `select value t from T as t` and `select value t1 from T1 as t1, T2 as t2...`, respectively.</span></span> <span data-ttu-id="3d5cf-172">Questi costrutti consentono inoltre di gestire l'ereditarietà (sostituibilità del valore), mentre le varianti `select *` sono limitate alle proprietà di primo livello del tipo dichiarato.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-172">Additionally, these constructs handle inheritance (value substitutability), while the `select *` variants are restricted to top-level properties of the declared type.</span></span>  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non supporta l'aggregato `count(*)`.  In alternativa, usare `count(0)`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-173"> non supporta l'aggregato `count(*)`.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-173"> does not support the `count(*)` aggregate.</span></span> <span data-ttu-id="3d5cf-174">In alternativa, usare `count(0)`.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-174">Use `count(0)` instead.</span></span>  
   
-## Modifiche a Group By  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta l'uso di alias delle chiavi `group by`.  Le espressioni nella clausola `select` e nella clausola `having` devono fare riferimento alle chiavi `group by` attraverso questi alias. Ad esempio, la sintassi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguente:  
+## <a name="changes-to-group-by"></a><span data-ttu-id="3d5cf-175">Modifiche a Group By</span><span class="sxs-lookup"><span data-stu-id="3d5cf-175">Changes to Group By</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-176"> supporta l'uso di alias delle chiavi `group by`.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-176"> supports aliasing of `group by` keys.</span></span> <span data-ttu-id="3d5cf-177">Le espressioni nella clausola `select` e nella clausola `having` devono fare riferimento alle chiavi `group by` attraverso questi alias.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-177">Expressions in the `select` clause and `having` clause must refer to the `group by` keys via these aliases.</span></span> <span data-ttu-id="3d5cf-178">La sintassi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] seguente:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-178">For example, this [!INCLUDE[esql](../../../../../../includes/esql-md.md)] syntax:</span></span>  
   
 ```  
 select k1, count(t.a), sum(t.a)  
@@ -137,7 +136,7 @@ from T as t
 group by t.b + t.c as k1  
 ```  
   
- ...è equivalente alla sintassi [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] seguente:  
+ <span data-ttu-id="3d5cf-179">...è equivalente alla sintassi [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] seguente:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-179">...is equivalent to the following [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]:</span></span>  
   
 ```  
 select b + c, count(*), sum(a)   
@@ -145,23 +144,23 @@ from T
 group by b + c  
 ```  
   
-## Aggregazioni basate sulle raccolte  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta due tipi di aggregazioni.  
+## <a name="collection-based-aggregates"></a><span data-ttu-id="3d5cf-180">Aggregazioni basate sulle raccolte</span><span class="sxs-lookup"><span data-stu-id="3d5cf-180">Collection-Based Aggregates</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-181"> supporta due tipi di aggregazioni.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-181"> supports two kinds of aggregates.</span></span>  
   
- Le aggregazioni basate sulle raccolte operano sulle raccolte e producono il risultato aggregato.  Possono essere presenti in un punto qualsiasi nella query e non richiedono una clausola `group by`.  Ad esempio:  
+ <span data-ttu-id="3d5cf-182">Le aggregazioni basate sulle raccolte operano sulle raccolte e producono il risultato aggregato.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-182">Collection-based aggregates operate on collections and produce the aggregated result.</span></span> <span data-ttu-id="3d5cf-183">Possono essere presenti in un punto qualsiasi nella query e non richiedono una clausola `group by`.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-183">These can appear anywhere in the query, and do not require a `group by` clause.</span></span> <span data-ttu-id="3d5cf-184">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-184">For example:</span></span>  
   
 ```  
 select t.a as a, count({1,2,3}) as b from T as t     
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta inoltre le aggregazioni di tipo SQL.  Ad esempio:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-185"> supporta inoltre le aggregazioni di tipo SQL.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-185"> also supports SQL-style aggregates.</span></span> <span data-ttu-id="3d5cf-186">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-186">For example:</span></span>  
   
 ```  
 select a, sum(t.b) from T as t group by t.a as a  
 ```  
   
-## Utilizzo della clausola ORDER BY  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] consente di specificare le clausole ORDER BY solo nel blocco SELECT .. FROM ..  WHERE di livello superiore.  In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è possibile usare un'espressione ORDER BY annidata e posizionarla in un punto qualsiasi nella query, ma l'ordinamento in una query annidata non viene mantenuto.  
+## <a name="order-by-clause-usage"></a><span data-ttu-id="3d5cf-187">Utilizzo della clausola ORDER BY</span><span class="sxs-lookup"><span data-stu-id="3d5cf-187">ORDER BY Clause Usage</span></span>  
+ [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]<span data-ttu-id="3d5cf-188"> consente di specificare le clausole ORDER BY solo nel blocco SELECT ...</span><span class="sxs-lookup"><span data-stu-id="3d5cf-188"> allows ORDER BY clauses to be specified only in the topmost SELECT ..</span></span> <span data-ttu-id="3d5cf-189">FROM ..</span><span class="sxs-lookup"><span data-stu-id="3d5cf-189">FROM ..</span></span> <span data-ttu-id="3d5cf-190">WHERE di livello superiore.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-190">WHERE block.</span></span> <span data-ttu-id="3d5cf-191">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] è possibile usare un'espressione ORDER BY annidata e posizionarla in un punto qualsiasi nella query, ma l'ordinamento in una query annidata non viene mantenuto.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-191">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] you can use a nested ORDER BY expression and it can be placed anywhere in the query, but ordering in a nested query is not preserved.</span></span>  
   
 ```  
 -- The following query will order the results by the last name  
@@ -178,50 +177,50 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## Identificatori  
- In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] il confronto tra identificatori si basa sulle regole di confronto del database corrente.  Negli identificatori di [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non viene mai operata la distinzione tra maiuscole e minuscole, mentre viene operata la distinzione tra caratteri accentati e non accentati, ovvero in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 'e' non è uguale a 'è'. In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le versioni delle lettere che appaiono uguali ma presentano una tabella codici diversa vengono considerati come caratteri differenti.  Per altre informazioni, vedere [Set di caratteri di input](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
+## <a name="identifiers"></a><span data-ttu-id="3d5cf-192">Identificatori</span><span class="sxs-lookup"><span data-stu-id="3d5cf-192">Identifiers</span></span>  
+ <span data-ttu-id="3d5cf-193">In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] il confronto tra identificatori si basa sulle regole di confronto del database corrente.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-193">In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], identifier comparison is based on the collation of the current database.</span></span> <span data-ttu-id="3d5cf-194">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], gli identificatori non applicano mai la distinzione tra maiuscole e minuscole, mentre applicano la distinzione tra caratteri accentati e non accentati. In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] viene infatti applicata la distinzione tra caratteri accentati e non accentati, ad esempio 'a' è diverso da 'à'.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-194">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], identifiers are always case insensitive and accent sensitive (that is, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] distinguishes between accented and unaccented characters; for example, 'a' is not equal to 'ấ').</span></span> <span data-ttu-id="3d5cf-195">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] le versioni delle lettere che hanno lo stesso aspetto ma che provengono da tabelle codici diverse vengono gestite come caratteri differenti.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-195">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] treats versions of letters that appear the same but are from different code pages as different characters.</span></span> <span data-ttu-id="3d5cf-196">Per ulteriori informazioni, vedere [Set di caratteri di Input](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="3d5cf-196">For more information, see [Input Character Set](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).</span></span>  
   
-## Funzionalità Transact\-SQL non disponibili in Entity SQL  
- Le funzionalità [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] seguenti non sono disponibili in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+## <a name="transact-sql-functionality-not-available-in-entity-sql"></a><span data-ttu-id="3d5cf-197">Funzionalità Transact-SQL non disponibili in Entity SQL</span><span class="sxs-lookup"><span data-stu-id="3d5cf-197">Transact-SQL Functionality Not Available in Entity SQL</span></span>  
+ <span data-ttu-id="3d5cf-198">Le funzionalità [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] seguenti non sono disponibili in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3d5cf-198">The following [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] functionality is not available in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span>  
   
- DML  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non fornisce attualmente supporto per le istruzioni DML \(INSERT, UPDATE, DELETE\).  
+ <span data-ttu-id="3d5cf-199">DML</span><span class="sxs-lookup"><span data-stu-id="3d5cf-199">DML</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-200">attualmente non fornisce supporto per le istruzioni DML (insert, aggiornare ed eliminare).</span><span class="sxs-lookup"><span data-stu-id="3d5cf-200"> currently provides no support for DML statements (insert, update, delete).</span></span>  
   
- DDL  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non fornisce supporto per DDL nella versione corrente.  
+ <span data-ttu-id="3d5cf-201">DDL</span><span class="sxs-lookup"><span data-stu-id="3d5cf-201">DDL</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-202"> non fornisce supporto per DDL nella versione corrente.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-202"> provides no support for DDL in the current version.</span></span>  
   
- programmazione imperativa  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non fornisce supporto per la programmazione imperativa, a differenza di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  Usare invece un linguaggio di programmazione.  
+ <span data-ttu-id="3d5cf-203">programmazione imperativa</span><span class="sxs-lookup"><span data-stu-id="3d5cf-203">Imperative Programming</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-204"> non fornisce supporto per la programmazione imperativa, a differenza di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3d5cf-204"> provides no support for imperative programming, unlike [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span></span> <span data-ttu-id="3d5cf-205">Usare invece un linguaggio di programmazione.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-205">Use a programming language instead.</span></span>  
   
- Funzioni di raggruppamento  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non fornisce ancora supporto per le funzioni di raggruppamento \(ad esempio CUBE, ROLLUP e GROUPING\_SET\).  
+ <span data-ttu-id="3d5cf-206">Funzioni di raggruppamento</span><span class="sxs-lookup"><span data-stu-id="3d5cf-206">Grouping Functions</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-207"> non fornisce ancora supporto per le funzioni di raggruppamento (ad esempio CUBE, ROLLUP e GROUPING_SET).</span><span class="sxs-lookup"><span data-stu-id="3d5cf-207"> does not yet provide support for grouping functions (for example, CUBE, ROLLUP, and GROUPING_SET).</span></span>  
   
- Funzioni analitiche  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non fornisce \(ancora\) supporto per le funzioni analitiche.  
+ <span data-ttu-id="3d5cf-208">Funzioni analitiche</span><span class="sxs-lookup"><span data-stu-id="3d5cf-208">Analytic Functions</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-209"> non fornisce (ancora) supporto per le funzioni analitiche.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-209"> does not (yet) provide support for analytic functions.</span></span>  
   
- Funzioni e operatori predefiniti  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta un subset di funzioni e operatori [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] predefiniti.  Questi operatori e funzioni saranno supportati probabilmente dai provider dell'archivio principali.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usa le funzioni specifiche dell'archivio dichiarate in un manifesto del provider.  Inoltre, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] consente di dichiarare funzioni dell'archivio esistenti predefinite e definite dall'utente da usare in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+ <span data-ttu-id="3d5cf-210">Funzioni e operatori predefiniti</span><span class="sxs-lookup"><span data-stu-id="3d5cf-210">Built-in Functions, Operators</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-211">supporta un subset di [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]incorporato in funzioni e operatori.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-211"> supports a subset of [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]'s built in functions and operators.</span></span> <span data-ttu-id="3d5cf-212">Questi operatori e funzioni saranno supportati probabilmente dai provider dell'archivio principali.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-212">These operators and functions are likely to be supported by the major store providers.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-213">utilizza le funzioni specifiche dell'archivio dichiarate in un manifesto del provider.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-213"> uses the store-specific functions declared in a provider manifest.</span></span> <span data-ttu-id="3d5cf-214">Inoltre, il [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] consente di dichiarare predefinite e funzioni definite dall'utente esistente dell'archivio per [!INCLUDE[esql](../../../../../../includes/esql-md.md)] da utilizzare.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-214">Additionally, the [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] allows you to declare built-in and user-defined existing store functions, for [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to use.</span></span>  
   
- Hint  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non fornisce meccanismi per gli hint per le query.  
+ <span data-ttu-id="3d5cf-215">Hint</span><span class="sxs-lookup"><span data-stu-id="3d5cf-215">Hints</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-216"> non fornisce meccanismi per gli hint per le query.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-216"> does not provide mechanisms for query hints.</span></span>  
   
- Invio in batch dei risultati di query  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non supporta l'invio in batch dei risultati di query.  Ad esempio, l'operazione [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] seguente \(invio in batch\) è valida:  
+ <span data-ttu-id="3d5cf-217">Invio in batch dei risultati di query</span><span class="sxs-lookup"><span data-stu-id="3d5cf-217">Batching Query Results</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-218"> non supporta l'invio in batch dei risultati di query.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-218"> does not support batching query results.</span></span> <span data-ttu-id="3d5cf-219">Ad esempio, il seguente codice è valido [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] (invio in batch):</span><span class="sxs-lookup"><span data-stu-id="3d5cf-219">For example, the following is valid [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] (sending as a batch):</span></span>  
   
 ```  
 select * from products;  
 select * from catagories;  
 ```  
   
- Tuttavia, l'espressione equivalente [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è supportata:  
+ <span data-ttu-id="3d5cf-220">Tuttavia, l'espressione equivalente [!INCLUDE[esql](../../../../../../includes/esql-md.md)] non è supportata:</span><span class="sxs-lookup"><span data-stu-id="3d5cf-220">However, the equivalent [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not supported:</span></span>  
   
 ```  
 Select value p from Products as p;  
 Select value c from Categories as c;  
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supporta solo un'istruzione di query che restituisce un risultato per comando.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3d5cf-221"> supporta solo un'istruzione di query che restituisce un risultato per comando.</span><span class="sxs-lookup"><span data-stu-id="3d5cf-221"> only supports one result-producing query statement per command.</span></span>  
   
-## Vedere anche  
- [Panoramica su Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)   
- [Espressioni non supportate](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="3d5cf-222">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3d5cf-222">See Also</span></span>  
+ [<span data-ttu-id="3d5cf-223">Panoramica di Entity SQL</span><span class="sxs-lookup"><span data-stu-id="3d5cf-223">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
+ [<span data-ttu-id="3d5cf-224">Espressioni non supportate</span><span class="sxs-lookup"><span data-stu-id="3d5cf-224">Unsupported Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)

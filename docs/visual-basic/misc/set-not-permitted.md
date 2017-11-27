@@ -1,24 +1,26 @@
 ---
-title: "Set non consentito | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID387"
+title: Set non consentito
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID387
 ms.assetid: 809f6768-7dd7-4632-b4dd-83856edfdb48
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 854384a84ccc6f31aef6c350049cc18c8a72a6fd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Set non consentito
-Si è provato a modificare una proprietà le cui impostazioni non possono essere configurate in fase di esecuzione oppure possono essere configurate solo in determinate condizioni. Ad esempio, si è tentato di modificare le impostazioni della proprietà `Appearance`, `ControlBox`,`MinButton` o `MaxButton` per il form in fase di esecuzione oppure di impostare la proprietà `Visible` su `False` per l'ultimo sottomenu visibile di un menu padre.  
+# <a name="set-not-permitted"></a><span data-ttu-id="f30f6-102">Set non consentito</span><span class="sxs-lookup"><span data-stu-id="f30f6-102">Set not permitted</span></span>
+<span data-ttu-id="f30f6-103">Si è provato a modificare una proprietà le cui impostazioni non possono essere configurate in fase di esecuzione oppure possono essere configurate solo in determinate condizioni.</span><span class="sxs-lookup"><span data-stu-id="f30f6-103">You attempted to change a property whose settings either cannot be set at run time or else can only be set under certain conditions.</span></span> <span data-ttu-id="f30f6-104">Ad esempio, si è tentato di modificare le impostazioni della proprietà `Appearance`, `ControlBox`,`MinButton`o `MaxButton` per il form in fase di esecuzione oppure di impostare la proprietà `Visible` su `False` per l'ultimo sottomenu visibile di un menu padre.</span><span class="sxs-lookup"><span data-stu-id="f30f6-104">For example, you may have tried to change the `Appearance`, `ControlBox`,`MinButton`, or `MaxButton` property settings for the form at run time, or you may have tried to set the `Visible` property to `False` for the last remaining visible submenu on a parent menu.</span></span>  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f30f6-105">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="f30f6-105">To correct this error</span></span>  
   
-1.  Controllare la proprietà e determinare in quali condizioni è possibile impostarla.  
+1.  <span data-ttu-id="f30f6-106">Controllare la proprietà e determinare in quali condizioni è possibile impostarla.</span><span class="sxs-lookup"><span data-stu-id="f30f6-106">Check the property and determine under what conditions it can be set.</span></span>  
   
-## Vedere anche  
- [NIB Procedura: Modificare le proprietà e le impostazioni di configurazione dei progetti](http://msdn.microsoft.com/it-it/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a><span data-ttu-id="f30f6-107">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="f30f6-107">See Also</span></span>  
+ [<span data-ttu-id="f30f6-108">Gestione delle proprietà di progetti e soluzioni</span><span class="sxs-lookup"><span data-stu-id="f30f6-108">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
