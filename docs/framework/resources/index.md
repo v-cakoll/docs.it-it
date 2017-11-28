@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 24b23d3fd4d3c318fd2fad36bbbbe0cb065db453
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 95ca72a6da8def7c98a978650c60a27722141527
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="resources-in-desktop-apps"></a>Risorse nelle applicazioni desktop
 L'utilizzo di risorse è richiesto in quasi tutte le applicazioni destinate a un impiego professionale. Una risorsa è costituita da dati non eseguibili che vengono distribuiti in modo logico con un'applicazione. Una risorsa può essere visualizzata in un'applicazione sotto forma di messaggi di errore o come parte dell'interfaccia utente. Le risorse possono contenere dati in diversi formati, tra cui stringhe, immagini e oggetti persistenti. Per scrivere oggetti persistenti in un file di risorse, è necessario che gli oggetti siano serializzabili. L'archiviazione dei dati in un file di risorse consente di modificare i dati senza ricompilare l'intera applicazione. Inoltre permette di archiviare i dati in un'unica posizione e non è più necessario basarsi sui dati specificati a livello di codice archiviati in più posizioni.  
@@ -51,17 +49,17 @@ L'utilizzo di risorse è richiesto in quasi tutte le applicazioni destinate a un
  Per ulteriori informazioni, leggere l'articolo [Creazione del package e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 ## <a name="retrieving-resources"></a>Recupero di risorse  
- In fase di esecuzione, tramite un'applicazione vengono caricate le risorse localizzate appropriate per ciascun thread, in base alle impostazioni cultura specificate dalla proprietà <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>. Questo valore della proprietà viene derivato come segue:  
+ In fase di esecuzione, tramite un'applicazione vengono caricate le risorse localizzate appropriate per ciascun thread, in base alle impostazioni cultura specificate dalla proprietà <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Questo valore della proprietà viene derivato come segue:  
   
--   Assegnando direttamente un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura localizzate alla proprietà <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>.  
+-   Assegnando direttamente un oggetto <xref:System.Globalization.CultureInfo> che rappresenta le impostazioni cultura localizzate alla proprietà <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
--   Se le impostazioni cultura non vengono assegnate in modo esplicito, recuperando le impostazioni cultura dell'interfaccia utente del thread predefinito dalla proprietà <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>.  
+-   Se le impostazioni cultura non vengono assegnate in modo esplicito, recuperando le impostazioni cultura dell'interfaccia utente del thread predefinito dalla proprietà <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.  
   
 -   Se le impostazioni cultura dell'interfaccia utente di un thread predefinito non vengono assegnate in modo esplicito, recuperando le impostazioni cultura per l'utente corrente del computer locale chiamando la funzione `GetUserDefaultUILanguage` di Windows.  
   
- Per ulteriori informazioni su come vengono impostate le impostazioni cultura correnti dell'interfaccia utente, vedere le pagine di riferimento <xref:System.Globalization.CultureInfo> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
+ Per ulteriori informazioni su come vengono impostate le impostazioni cultura correnti dell'interfaccia utente, vedere le pagine di riferimento <xref:System.Globalization.CultureInfo> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
- È quindi possibile recuperare le risorse per le impostazioni cultura correnti dell'interfaccia utente o per impostazioni cultura specifiche utilizzando la classe <xref:System.Resources.ResourceManager?displayProperty=fullName>. Sebbene la classe <xref:System.Resources.ResourceManager> sia maggiormente utilizzata per recuperare le risorse nelle applicazioni desktop, nello spazio dei nomi <xref:System.Resources?displayProperty=fullName> sono contenuti tipi aggiuntivi utilizzabili per recuperare le risorse. tra cui:  
+ È quindi possibile recuperare le risorse per le impostazioni cultura correnti dell'interfaccia utente o per impostazioni cultura specifiche utilizzando la classe <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Sebbene la classe <xref:System.Resources.ResourceManager> sia maggiormente utilizzata per recuperare le risorse nelle applicazioni desktop, nello spazio dei nomi <xref:System.Resources?displayProperty=nameWithType> sono contenuti tipi aggiuntivi utilizzabili per recuperare le risorse. tra cui:  
   
 -   La classe <xref:System.Resources.ResourceReader>, che consente di enumerare le risorse incorporate in un assembly o archiviate in un file binario autonomo con estensione resources. È utile quando non si conoscono i nomi esatti delle risorse disponibili in fase di esecuzione.  
   
@@ -72,11 +70,10 @@ L'utilizzo di risorse è richiesto in quasi tutte le applicazioni destinate a un
 -   La classe <xref:System.Resources.ResXResourceSet> che consente di recuperare tutti gli elementi in un file di risorse XML in memoria.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Globalization.CultureInfo>   
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>   
- [Concetti di base sulle applicazioni](../../../docs/standard/application-essentials.md)   
- [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
- [Creazione del package e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
+ <xref:System.Globalization.CultureInfo>  
+ <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>  
+ [Concetti di base sulle applicazioni](../../../docs/standard/application-essentials.md)  
+ [Creazione dei file di risorsa](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
  [Recupero di risorse](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
-

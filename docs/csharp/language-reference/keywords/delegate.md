@@ -1,43 +1,25 @@
 ---
 title: delegate (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - delegate_CSharpKeyword
 - delegate
 - CS0123
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 179e89cea0e683b72e57536d4e4d86b019493aed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 402eedd0c59b5c95e1a9b44faca66ccb4d4e04e7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="delegate-c-reference"></a>delegate (Riferimenti per C#)
 La dichiarazione di un tipo delegato è simile alla firma di un metodo. Ha un valore restituito e una serie di parametri di qualsiasi tipo:  
@@ -54,21 +36,20 @@ public delegate int TestDelegate(MyType m, long num);
   
  È possibile creare un'istanza di un delegato associandolo a un metodo denominato o anonimo. Per altre informazioni, vedere [Metodi denominati](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) e [Metodi anonimi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
   
- È necessario creare un'istanza del delegato con un metodo o un'espressione lambda con tipo restituito compatibile e parametri di input. Per altre informazioni sul grado di varianza consentito nella firma del metodo, vedere [Varianza nei delegati](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca). Per l'uso con i metodi anonimi, è necessario dichiarare insieme il delegato e il codice da associare ad esso. In questa sezione sono descritti entrambi i metodi per la creazione di istanze di delegati.  
+ È necessario creare un'istanza del delegato con un metodo o un'espressione lambda con tipo restituito compatibile e parametri di input. Per altre informazioni sul grado di varianza consentito nella firma del metodo, vedere [Varianza nei delegati](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md). Per l'uso con i metodi anonimi, è necessario dichiarare insieme il delegato e il codice da associare ad esso. In questa sezione sono descritti entrambi i metodi per la creazione di istanze di delegati.  
   
 ## <a name="example"></a>Esempio  
- [!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/delegate_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/delegate_1.cs)]  
   
 ## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [Tipi di riferimento](../../../csharp/language-reference/keywords/reference-types.md)   
- [Delegati](../../../csharp/programming-guide/delegates/index.md)   
- [Eventi](../../../csharp/programming-guide/events/index.md)   
- [Delegati con metodi denominati e anonimi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)   
+ [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+ [Tipi riferimento](../../../csharp/language-reference/keywords/reference-types.md)  
+ [Delegati](../../../csharp/programming-guide/delegates/index.md)  
+ [Eventi](../../../csharp/programming-guide/events/index.md)  
+ [Delegati con metodi denominati o metodi anonimi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
  [Metodi anonimi](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
-

@@ -9,12 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
+ms.openlocfilehash: 1d8fb092b578602b5d4f791a3fd14f47dfae1ba6
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valori restituiti e variabili locali ref
 
@@ -86,15 +85,14 @@ Se `p` non è definito come una variabile locale ref usando la parola chiave `re
 
 L'esempio seguente definisce una classe `NumberStore` che archivia una matrice di valori integer. Il metodo `FindNumber` restituisce per riferimento il primo numero maggiore o uguale al numero passato come argomento. Se nessun numero è maggiore o uguale all'argomento, il metodo restituisce il numero nell'indice 0. 
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
 
 L'esempio seguente chiama il metodo `NumberStore.FindNumber` per recuperare il primo valore maggiore o uguale a 16. Il chiamante raddoppia quindi il valore restituito dal metodo. Come illustrato nell'output dell'esempio, questa modifica viene riflessa nel valore degli elementi della matrice dell'istanza di `NumberStore`.
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
 
 Senza il supporto per i valori restituiti di riferimento, tale operazione viene in genere eseguita restituendo l'indice dell'elemento di matrice insieme al relativo valore. Il chiamante può quindi usare questo indice per modificare il valore in una chiamata al metodo distinta. Il chiamante può tuttavia anche modificare l'indice per accedere ed eventualmente modificare altri valori della matrice.  
  
 ## <a name="see-also"></a>Vedere anche
 
 [ref (parola chiave)](../../language-reference/keywords/ref.md)
-

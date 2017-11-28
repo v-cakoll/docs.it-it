@@ -17,16 +17,15 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 6090f198815f1149e212c7a57b40187ded9264f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 087c1cc56abf2a00544e22023ce72fae670df369
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="numerics-in-the-net-framework"></a>Dati numerici in .NET Framework
 .NET Framework supporta le primitive numeriche integrali e a virgola mobile standard oltre a <xref:System.Numerics.BigInteger>, un tipo integrale senza limite teorico superiore o inferiore, <xref:System.Numerics.Complex>, un tipo che rappresenta numeri complessi, e un set di tipi di vettore abilitati per SIMD nello spazio dei nomi <xref:System.Numerics>.  
@@ -38,14 +37,14 @@ ms.lasthandoff: 08/21/2017
   
 |Tipo|Con segno/Senza segno|Dimensioni (byte)|Valore minimo|Valore massimo|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
-|<xref:System.Byte?displayProperty=fullName>|Senza segno|1|0|255|  
-|<xref:System.Int16?displayProperty=fullName>|Firmato|2|-32,768|32,767|  
-|<xref:System.Int32?displayProperty=fullName>|Firmato|4|-2,147,483,648|2,147,483,647|  
-|<xref:System.Int64?displayProperty=fullName>|Firmato|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
-|<xref:System.SByte?displayProperty=fullName>|Firmato|1|-128|127|  
-|<xref:System.UInt16?displayProperty=fullName>|Senza segno|2|0|65,535|  
-|<xref:System.UInt32?displayProperty=fullName>|Senza segno|4|0|4,294,967,295|  
-|<xref:System.UInt64?displayProperty=fullName>|Senza segno|8|0|18,446,744,073,709,551,615|  
+|<xref:System.Byte?displayProperty=nameWithType>|Senza segno|1|0|255|  
+|<xref:System.Int16?displayProperty=nameWithType>|Firmato|2|-32,768|32,767|  
+|<xref:System.Int32?displayProperty=nameWithType>|Firmato|4|-2,147,483,648|2,147,483,647|  
+|<xref:System.Int64?displayProperty=nameWithType>|Firmato|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
+|<xref:System.SByte?displayProperty=nameWithType>|Firmato|1|-128|127|  
+|<xref:System.UInt16?displayProperty=nameWithType>|Senza segno|2|0|65,535|  
+|<xref:System.UInt32?displayProperty=nameWithType>|Senza segno|4|0|4,294,967,295|  
+|<xref:System.UInt64?displayProperty=nameWithType>|Senza segno|8|0|18,446,744,073,709,551,615|  
   
  Ogni tipo integrale supporta un set standard di operatori aritmetici, di confronto, uguaglianza, conversione esplicita e conversione implicita. Ogni Integer include anche metodi per eseguire confronti di uguaglianza e confronti relativi, per convertire la rappresentazione di stringa di un numero in tale Integer e per convertire un Integer nella relativa rappresentazione di stringa. Altre operazioni matematiche oltre a quelle gestite dagli operatori standard, ad esempio arrotondamento e identificazione del valore più grande o più piccolo tra due Integer, sono disponibili nella classe <xref:System.Math>. È anche possibile operare sui singoli bit di un valore Integer usando la <xref:System.BitConverter> classe.  
   
@@ -56,16 +55,16 @@ ms.lasthandoff: 08/21/2017
   
 |Tipo|Dimensioni (in byte)|Minimo|Massimo|  
 |----------|-----------------------|-------------|-------------|  
-|<xref:System.Double?displayProperty=fullName>|8|-1.79769313486232e308|1.79769313486232e308|  
-|<xref:System.Single?displayProperty=fullName>|4|-3.402823e38|3.402823e38|  
-|<xref:System.Decimal?displayProperty=fullName>|16|-79,228,162,514,264,337,593,543,950,335|79,228,162,514,264,337,593,543,950,335|  
+|<xref:System.Double?displayProperty=nameWithType>|8|-1.79769313486232e308|1.79769313486232e308|  
+|<xref:System.Single?displayProperty=nameWithType>|4|-3.402823e38|3.402823e38|  
+|<xref:System.Decimal?displayProperty=nameWithType>|16|-79,228,162,514,264,337,593,543,950,335|79,228,162,514,264,337,593,543,950,335|  
   
- Ogni tipo a virgola mobile supporta un set standard di operatori aritmetici, di confronto, uguaglianza, conversione esplicita e conversione implicita. Include inoltre metodi per eseguire confronti di uguaglianza e confronti relativi, per convertire la rappresentazione di stringa di un numero a virgola mobile e per convertire un numero a virgola mobile nella relativa rappresentazione di stringa. Altre operazioni matematiche, algebriche e trigonometriche sono disponibili nella classe <xref:System.Math>. È anche possibile operare sui singoli bit dei valori <xref:System.Double> e <xref:System.Single> usando la classe <xref:System.BitConverter>. La struttura <xref:System.Decimal?displayProperty=fullName> dispone di metodi specifici, <xref:System.Decimal.GetBits%2A?displayProperty=fullName> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=fullName>, che consentono di operare sui singoli bit di un valore decimale, nonché di un set di metodi specifici per l'esecuzione di altre operazioni matematiche.  
+ Ogni tipo a virgola mobile supporta un set standard di operatori aritmetici, di confronto, uguaglianza, conversione esplicita e conversione implicita. Include inoltre metodi per eseguire confronti di uguaglianza e confronti relativi, per convertire la rappresentazione di stringa di un numero a virgola mobile e per convertire un numero a virgola mobile nella relativa rappresentazione di stringa. Altre operazioni matematiche, algebriche e trigonometriche sono disponibili nella classe <xref:System.Math>. È anche possibile operare sui singoli bit dei valori <xref:System.Double> e <xref:System.Single> usando la classe <xref:System.BitConverter>. La struttura <xref:System.Decimal?displayProperty=nameWithType> dispone di metodi specifici, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, che consentono di operare sui singoli bit di un valore decimale, nonché di un set di metodi specifici per l'esecuzione di altre operazioni matematiche.  
   
- I tipi <xref:System.Double> e <xref:System.Single> sono destinati all'uso con valori imprecisi per natura (ad esempio la distanza tra due stelle nel sistema solare) e per applicazioni che non richiedono un livello elevato di precisione e un errore di arrotondamento di entità ridotta. Per i casi in cui è necessaria una maggiore precisione e gli errori di arrotondamento non sono desiderabili, è consigliabile usare il tipo <xref:System.Decimal?displayProperty=fullName>.  
+ I tipi <xref:System.Double> e <xref:System.Single> sono destinati all'uso con valori imprecisi per natura (ad esempio la distanza tra due stelle nel sistema solare) e per applicazioni che non richiedono un livello elevato di precisione e un errore di arrotondamento di entità ridotta. Per i casi in cui è necessaria una maggiore precisione e gli errori di arrotondamento non sono desiderabili, è consigliabile usare il tipo <xref:System.Decimal?displayProperty=nameWithType>.  
   
 ## <a name="biginteger"></a>BigInteger  
- <xref:System.Numerics.BigInteger?displayProperty=fullName> è un tipo immutabile che rappresenta un Integer arbitrariamente grande il cui valore in teoria non dispone di limiti inferiori o superiori. I metodi del tipo <xref:System.Numerics.BigInteger> sono strettamente paralleli a quelli di altri tipi integrali.  
+ <xref:System.Numerics.BigInteger?displayProperty=nameWithType> è un tipo immutabile che rappresenta un Integer arbitrariamente grande il cui valore in teoria non dispone di limiti inferiori o superiori. I metodi del tipo <xref:System.Numerics.BigInteger> sono strettamente paralleli a quelli di altri tipi integrali.  
   
 ## <a name="complex"></a>Complex  
  Il tipo <xref:System.Numerics.Complex> rappresenta un numero complesso, ovvero composto da una parte numerica reale e da una parte numerica immaginaria. Supporta un set standard di operatori aritmetici, di confronto, uguaglianza, conversione esplicita e conversione implicita, oltre che metodi matematici, algebrici e trigonometrici.  
@@ -87,4 +86,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti di base sulle applicazioni](../../docs/standard/application-essentials.md)
-

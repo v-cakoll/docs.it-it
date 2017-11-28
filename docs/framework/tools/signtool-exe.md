@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 06a8b2e41841dfa43609468cce60a3776137b720
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 78814d27e8416d37a018fa3bc1ab643d99970ec9
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (strumento per la firma)
 Lo strumento Firma è uno strumento da riga di comando per la firma digitale dei file, la verifica delle firme e l'aggiunta di timestamp nei file.  
@@ -91,7 +84,7 @@ signtool [command] [options] [file_name | ...]
 |`/csp`  *NomeCSP*|Specifica il provider del servizio di crittografia (CSP) che contiene il contenitore di chiavi private.|  
 |`/d`  *Descrizione*|Specifica una descrizione del contenuto firmato.|  
 |`/du`  *URL*|Specifica un URL (Uniform Resource Locator) per la descrizione espansa del contenuto firmato.|  
-|`/f`  *FileCertificatoFirma*|Specifica il certificato di firma in un file. Se il file è nel formato PFX (Personal Information Exchange) ed è protetto da una password, usare l'opzione `/p` per specificare la password. Se il file non contiene chiavi private, usare le opzioni `/csp` e `/k` per specificare il CSP e il nome del contenitore delle chiavi private.|  
+|`/f`  *FileCertificatoFirma*|Specifica il certificato di firma in un file. Se il file è nel formato PFX (Personal Information Exchange) ed è protetto da una password, usare l'opzione `/p` per specificare la password. Se il file non contiene chiavi private, usare le opzioni `/csp` e `/kc` per specificare il CSP e il nome del contenitore delle chiavi private.|  
 |`/fd`|Specifica l'algoritmo digest file da usare per creare le firme del file. Il valore predefinito è SHA1.|  
 |`/i`  *NomeAutoritàEmittente*|Specifica il nome dell'emittente del certificato di firma. Questo valore può essere una sottostringa dell'intero nome dell'emittente.|  
 |`/kc`  *NomeContenitoreChiavePrivata*|Specifica il nome del contenitore delle chiavi private.|  
@@ -225,6 +218,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)   
+ [Strumenti](../../../docs/framework/tools/index.md)  
  [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

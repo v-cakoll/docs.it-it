@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: f5aa4b8fa5422ae126a6027c5fe3358925873782
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 583c448bd939cd4d1d16bff372afff4172dcf985
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-assemblies"></a>Creazione degli assembly
 È possibile creare assembly su uno o più file tramite un ambiente IDE, ad esempio [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], o tramite i compilatori e gli strumenti forniti da [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. L'assembly più semplice è costituito da un unico file con un nome semplice, caricato in un unico dominio dell'applicazione. Altri assembly all'esterno della directory dell'applicazione non possono fare riferimento a questo assembly, che non può neanche essere sottoposto al controllo della versione. Per disinstallare l'applicazione costituita dall'assembly, è sufficiente eliminare la directory in cui si trova. Per molti sviluppatori un assembly con queste funzionalità è tutto ciò che serve per distribuire un'applicazione.  
@@ -56,10 +54,9 @@ ms.lasthandoff: 07/28/2017
  Sono necessarie considerazioni speciali quando si rendono disponibili assembly Common Language Runtime ad applicazioni COM non gestite. Per altre informazioni sull'uso di codice non gestito, vedere [Esposizione di componenti .NET Framework a COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [Controllo delle versioni degli assembly](../../../docs/framework/app-domains/assembly-versioning.md)   
- [Procedura: Compilare un assembly su singolo file](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)   
- [Procedura: Compilare un assembly su più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
- [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [Programmazione con gli assembly](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [Controllo delle versioni degli assembly](../../../docs/framework/app-domains/assembly-versioning.md)  
+ [Procedura: Compilare un assembly su singolo file](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
+ [Procedura: Compilare un assembly su più file](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ [Come il runtime individua gli assembly](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Assembly su più file](../../../docs/framework/app-domains/multifile-assemblies.md)
-

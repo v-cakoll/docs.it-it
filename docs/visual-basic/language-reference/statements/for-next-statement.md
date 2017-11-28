@@ -1,157 +1,156 @@
 ---
-title: "Istruzione For...Next (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Step"
-  - "vb.Next"
-  - "vb.To"
-  - "vb.for"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "cicli infiniti"
-  - "Next (parola chiave), istruzioni For...Next"
-  - "For (parola chiave) [Visual Basic], istruzioni For...Next"
-  - "Step (parola chiave), istruzioni For...Next"
-  - "overload degli operatori, istruzione For...Next"
-  - "To (parola chiave), istruzioni For...Next"
-  - "cicli senza termine"
-  - "cicli, senza termine"
-  - "istruzioni, ripetizione"
-  - "Next (istruzione), For...Next"
-  - "For...Next (istruzioni)"
-  - "cicli (strutture), For...Next"
-  - "cicli, infiniti"
-  - "Exit (istruzione), istruzioni For...Next"
-  - "For (istruzione)"
+title: Istruzione For...Next (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Step
+- vb.Next
+- vb.To
+- vb.for
+helpviewer_keywords:
+- infinite loops
+- Next keyword [Visual Basic], For...Next statements
+- For keyword [Visual Basic], For...Next statements
+- Step keyword [Visual Basic], For...Next statements
+- operator overloading, For...Next statement
+- To keyword [Visual Basic], For...Next statements
+- endless loops
+- loops, endless
+- instructions, repeating
+- Next statement [Visual Basic], For...Next
+- For...Next statements
+- loop structures [Visual Basic], For...Next
+- loops, infinite
+- Exit statement [Visual Basic], For...Next statements
+- For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-caps.latest.revision: 64
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 64
+caps.latest.revision: "64"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 009c5a383cc3296f7f92888a344fa265547f1077
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Istruzione For...Next (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Consentono di ripetere un gruppo di istruzioni per il numero di volte specificato.  
+# <a name="fornext-statement-visual-basic"></a>Istruzione For...Next (Visual Basic)
+Ripete un gruppo di istruzioni di un numero di volte specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-For counter [ As datatype ] = start To end [ Step step ]  
-    [ statements ]  
+For counter [ As datatype ] = start To end [ Step step ]  
+    [ statements ]  
     [ Continue For ]  
     [ statements ]  
-    [ Exit For ]  
-    [ statements ]  
-Next [ counter ]  
+    [ Exit For ]  
+    [ statements ]  
+Next [ counter ]  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
   
 |Parte|Descrizione|  
-|-----------|-----------------|  
-|`counter`|Obbligatorio nell'istruzione `For`.  Variabile numerica.  Variabile di controllo disponibile per il ciclo.  Per ulteriori informazioni, vedere [Argomento Counter](#BKMK_Counter) più avanti in questo argomento.|  
-|`datatype`|Opzionale.  Tipo di dati di `counter`.  Per ulteriori informazioni, vedere [Argomento Counter](#BKMK_Counter) più avanti in questo argomento.|  
-|`start`|Necessario.  Espressione numerica.  Valore iniziale di `counter`.|  
-|`end`|Necessario.  Espressione numerica.  Valore finale di `counter`.|  
-|`step`|Opzionale.  Espressione numerica.  Valore dell'incremento di `counter` a ogni iterazione del ciclo.|  
-|`statements`|Opzionale.  Una o più istruzioni inserite tra `For` e `Next` ed eseguite per il numero di volte specificato.|  
-|`Continue For`|Opzionale.  Consente di trasferire il controllo all'iterazione del ciclo successiva.|  
-|`Exit For`|Opzionale.  Trasferisce il controllo all'esterno del ciclo `For`.|  
-|`Next`|Necessario.  Termina la definizione del ciclo `For`.|  
+|----------|-----------------|  
+|`counter`|Obbligatorio nel `For` istruzione. Variabile numerica. La variabile di controllo per il ciclo. Per ulteriori informazioni, vedere [argomento contatore](#BKMK_Counter) più avanti in questo argomento.|  
+|`datatype`|Parametro facoltativo. Tipo di dati di `counter`. Per ulteriori informazioni, vedere [argomento contatore](#BKMK_Counter) più avanti in questo argomento.|  
+|`start`|Obbligatorio. Espressione numerica. Il valore iniziale di `counter`.|  
+|`end`|Obbligatorio. Espressione numerica. Il valore finale di `counter`.|  
+|`step`|Parametro facoltativo. Espressione numerica. Quantità in base alla quale `counter` viene incrementato ogni volta che il ciclo.|  
+|`statements`|Parametro facoltativo. Uno o più istruzioni tra `For` e `Next` che eseguono il numero di volte specificato.|  
+|`Continue For`|Parametro facoltativo. Trasferisce il controllo per l'iterazione del ciclo successivo.|  
+|`Exit For`|Parametro facoltativo. Trasferisce il controllo fuori il `For` ciclo.|  
+|`Next`|Obbligatorio. Termina la definizione di `For` ciclo.|  
   
 > [!NOTE]
->  La parola chiave di `To` viene utilizzata in questa istruzione per specificare l'intervallo per il contatore.  È inoltre possibile utilizzare la parola chiave in [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) e nelle dichiarazioni di matrice.  Per ulteriori informazioni sulle dichiarazioni di matrice, vedere [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).  
+>  Il `To` parola chiave viene utilizzata in questa istruzione per specificare l'intervallo per il contatore. È inoltre possibile utilizzare questa parola chiave nel [Seleziona... Istruzione case](../../../visual-basic/language-reference/statements/select-case-statement.md) e nelle dichiarazioni di matrice. Per ulteriori informazioni sulle dichiarazioni di matrice, vedere [Dim (istruzione)](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
-## Esempi semplici  
- Utilizzare una struttura di `For`…`Next` quando si desidera riprodurre un insieme di istruzioni per il numero di volte specificato.  
+## <a name="simple-examples"></a>Esempi semplici  
+ Si utilizza un `For`... `Next` struttura quando si desidera ripetere un set di istruzioni di un numero di volte.  
   
- Nell'esempio seguente, la variabile di `index` inizia con un valore di 1 e viene incrementata a ogni iterazione del ciclo, terminando dopo che il valore di intervalli di 5. `index`.  
+ Nell'esempio seguente, il `index` variabile inizia con un valore pari a 1 e viene incrementata a ogni iterazione del ciclo, che termina dopo il valore di `index` raggiunge 5.  
   
  [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
   
- Nell'esempio seguente, la variabile di `number` inizia a 2 e viene ridotta di 0,25 per ogni iterazione del ciclo, terminando dopo che il valore di 0 intervalli di `number`.  L'argomento di `Step` di `-.25` ridurre il valore di 0,25 per ogni iterazione del ciclo.  
+ Nell'esempio seguente, il `number` variabile inizia in corrispondenza di 2 e viene ridotto da 0,25 a ogni iterazione del ciclo, che termina dopo il valore di `number` raggiunge il valore 0. Il `Step` argomento di `-.25` riduce il valore da 0,25 a ogni iterazione del ciclo.  
   
  [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
   
 > [!TIP]
->  Funzionamento di [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md) o di [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) scaturiscono quando non si conosce in anticipo quante volte per eseguire le istruzioni del ciclo.  Se invece si prevede di eseguire il ciclo per un numero specifico di volte, si consiglia di utilizzare `For`...`Next`.  Il numero di iterazioni viene definito la prima volta che si entra nel ciclo.  
+>  Oggetto [mentre... End While (istruzione)](../../../visual-basic/language-reference/statements/while-end-while-statement.md) o [si... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md) funziona bene quando non si conosce in anticipo il numero di tentativi di eseguire le istruzioni nel ciclo. Tuttavia, quando si prevede di eseguire il ciclo di un numero specifico di volte, una `For`... `Next` ciclo è una scelta migliore. Determinare il numero di iterazioni quando si inizia il ciclo.  
   
-## Cicli annidati  
- È possibile annidare cicli `For` inserendo un ciclo all'interno dell'altro.  Nell'esempio seguente vengono illustrate le strutture `For`...`Next` annidate con diversi valori di incremento.  Il ciclo esterno consente di creare una stringa per ogni iterazione del ciclo.  Nel ciclo interno, per ogni iterazione del ciclo viene ridotta una variabile del contatore di cicli.  
+## <a name="nesting-loops"></a>Nidificazione di cicli  
+ È possibile annidare `For` cicli inserendo un ciclo all'interno di un altro. Nell'esempio seguente viene nidificata `For`... `Next` strutture con diversi valori step. Il ciclo esterno crea una stringa per ogni iterazione del ciclo. Nel ciclo interno decrementa una variabile contatore del ciclo per ogni iterazione del ciclo.  
   
  [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
   
- Quando i cicli di annidamento, ogni ciclo deve essere una variabile univoca di `counter`.  
+ Durante la nidificazione dei cicli, ogni ciclo deve avere un univoco `counter` variabile.  
   
- È inoltre possibile annidare strutture di controllo di tipo diverso inserendole una all'interno dell'altra.  Per ulteriori informazioni, vedere [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ È inoltre possibile annidare i diversi tipi di strutture di controllo all'interno di altro. Per ulteriori informazioni, vedere [strutture di controllo nidificate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
-## L'uscita per e continua per  
- L'istruzione di `Exit For` immediatamente chiude il ciclo di `For`…`Next` e il trasferisce il controllo all'istruzione che segue l'istruzione di `Next`.  
+## <a name="exit-for-and-continue-for"></a>Per quindi continuare per  
+ Il `Exit For` istruzione termina immediatamente il `For`...`Next` ciclo e trasferisce il controllo all'istruzione che segue il `Next` istruzione.  
   
- Tramite l'istruzione `Continue For` il controllo viene trasferito immediatamente alla successiva iterazione del ciclo.  Per ulteriori informazioni, vedere [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).  
+ Il `Continue For` istruzione trasferisce immediatamente il controllo all'iterazione successiva del ciclo. Per ulteriori informazioni, vedere [istruzione Continue](../../../visual-basic/language-reference/statements/continue-statement.md).  
   
- Nell'esempio riportato di seguito viene illustrato l'utilizzo delle istruzioni `Continue For` e `Exit For`.  
+ Nell'esempio seguente viene illustrato l'utilizzo del `Continue For` e `Exit For` istruzioni.  
   
  [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
   
- È possibile inserire un numero illimitato di istruzioni `Exit For` in un ciclo `For`…`Next`.  Se utilizzata all'interno di cicli `For`…`Next` annidati, l'istruzione `Exit For` consente l'uscita dal ciclo più interno e il trasferimento del controllo al livello di annidamento successivo superiore.  
+ È possibile inserire un numero qualsiasi di `Exit For` le istruzioni in un `For`...`Next` Ciclo. Se utilizzato all'interno di cicli `For`...`Next` cicli, `Exit For` esce dal ciclo più interno e trasferisce il controllo del successivo livello superiore di annidamento.  
   
- `Exit For` viene spesso utilizzato dopo la valutazione di una determinata condizione, ad esempio in una struttura di `If`…`Then`…`Else` \).  Si potrebbe decidere di utilizzare il controllo `Exit For` per le seguenti condizioni:  
+ `Exit For`viene spesso utilizzato dopo aver valutato alcune condizioni (ad esempio, in un `If`... `Then`... `Else` struttura). Si potrebbe voler usare `Exit For` per le condizioni seguenti:  
   
--   La continuazione dell'iterazione non è necessaria oppure è impossibile.  Un valore errato o una richiesta di chiusura potrebbe creare tale condizione.  
+-   Continuare a eseguire l'iterazione è necessaria oppure è impossibile. Un valore errato o una richiesta di terminazione è possibile creare questa condizione.  
   
--   Un'istruzione di `Try`…`Catch`…`Finally` intercetta un'eccezione.  È possibile utilizzare `Exit For` alla fine del blocco `Finally`.  
+-   Oggetto `Try`... `Catch`... `Finally` istruzione rileva un'eccezione. È possibile utilizzare `Exit For` alla fine del `Finally` blocco.  
   
--   È un ciclo infinito, un ciclo che esegua un grande o addirittura numero di volte infinito.  Se si rileva una simile condizione, è possibile utilizzare `Exit For` per interrompere l'esecuzione del ciclo.  Per ulteriori informazioni, vedere [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+-   È necessario un ciclo infinito, ovvero un ciclo che è stato possibile eseguire un numero elevato o persino infinito di volte. Se si rileva una condizione, è possibile utilizzare `Exit For` per interrompere il ciclo. Per ulteriori informazioni, vedere [si... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
-## Implementazione tecnica  
- Quando viene avviato un ciclo `For`...`Next`, in Visual Basic vengono restituiti `start`, `end` e `step`.  Visual Basic valuta questi valori solo attualmente e quindi assegnato `start` a `counter`.  Prima che il blocco di istruzioni funzioni, Visual Basic e `counter` a `end`.  Se `counter` è ancora maggiore del valore di `end` o più piccolo se `step` è negativo\), il ciclo di `For` termina e il controllo passa all'istruzione che segue l'istruzione di `Next`.  In caso contrario, il blocco di istruzioni viene eseguito.  
+## <a name="technical-implementation"></a>Implementazione tecnica  
+ Quando un `For`... `Next` ciclo viene avviato, in Visual Basic `start`, `end`, e `step`. Visual Basic restituisce questi valori solo in questa fase e quindi assegna `start` a `counter`. Prima dell'istruzione di blocco viene eseguito, Visual Basic Confronta `counter` a `end`. Se `counter` è già maggiore di `end` valore (o più piccolo se `step` è negativo), il `For` ciclo termina e il controllo passa all'istruzione che segue il `Next` istruzione. In caso contrario, viene eseguito il blocco di istruzioni.  
   
- Ogni volta che Visual Basic incontra l'istruzione `Next`, incrementa il valore di `counter` di `step` e torna all'istruzione `For`.  La variabile `counter` viene nuovamente confrontata con il valore `end` e in base al risultato viene eseguito di nuovo il blocco oppure viene effettuata l'uscita dal ciclo.  Il processo continua finché `counter` non passa `end` oppure non si raggiunge un'istruzione `Exit For`.  
+ Ogni volta che rileva Visual Basic il `Next` istruzione, viene automaticamente incrementato `counter` da `step` e restituisce il `For` istruzione. Viene nuovamente confrontato `counter` a `end`, e viene eseguito il blocco oppure uscire dal ciclo, a seconda del risultato. Questo processo continua fino a `counter` passa `end` o `Exit For` viene rilevata un'istruzione.  
   
- Il ciclo non si interrompe finché `counter` non ha passato `end`.  Se `counter` è uguale a `end`, il ciclo continua.  Il confronto che determina se eseguire il blocco è `counter` \<\=`end` se `step` è positivo e `counter` \>\= `end` se `step` è negativo.  
+ Fino a quando non si arresta il ciclo `counter` ha superato `end`. Se `counter` è uguale a `end`, il ciclo continua. Il confronto che determina se eseguire il blocco è `counter`  <=  `end` se `step` è positivo e `counter`  >=  `end` se `step` è negativo.  
   
- Se si modifica il valore di `counter` mentre in un ciclo, il codice può essere più difficile da leggere e debug.  Modificando il valore di `start`, `end`, o `step` non influisce sui valori di iterazione che siano stati determinati quando il ciclo viene immesso.  
+ Se si modifica il valore di `counter` durante un ciclo, potrebbe essere più difficile da leggere ed eseguire il debug del codice. Modifica del valore di `start`, `end`, o `step` non influenza i valori di iterazione che sono stati durante il ciclo prima di tutto è stato immesso.  
   
- Se annidate i cicli, il compilatore segnala un errore se rileva l'istruzione di `Next` di un livello di annidamento esterno prima dell'istruzione di `Next` di un livello interno.  Tuttavia, il compilatore può rilevare questo errore di sovrapposizione solo se si specifica `counter` in ogni istruzione `Next`.  
+ Se si annida cicli, il compilatore segnalerà un errore se viene individuata la `Next` istruzione di un livello di nidificazione esterno prima di `Next` istruzione di un livello interno. Tuttavia, il compilatore può rilevare questa sovrapposizione errore solo se si specifica `counter` in ogni `Next` istruzione.  
   
-### Argomento step  
- Dal valore di `step`, che può essere positivo o negativo,  Questo parametro consente l'elaborazione del ciclo nella seguente tabella:  
+### <a name="step-argument"></a>Argomento di passaggio  
+ Il valore di `step` può essere positivo o negativo. Questo parametro determina l'elaborazione di ciclo in base alla tabella seguente:  
   
-|**Valore di Step**|**Il ciclo verrà eseguito se**|  
-|------------------------|------------------------------------|  
-|Positivo o zero|`counter` \<\= `end`|  
-|Negativo|`counter` \>\= `end`|  
+|**Valore di incremento**|**Il ciclo viene eseguito se**|  
+|--------------------|--------------------------|  
+|Positivo o zero|`counter` <= `end`|  
+|Negativo|`counter` >= `end`|  
   
  Il valore predefinito di `step` è 1.  
   
-###  <a name="BKMK_Counter"></a> Argomento Counter  
- La tabella riportata di seguito indica se `counter` definisce una nuova variabile locale limitata all'intero ciclo di `For…Next`.  Questa scelta dipende da `datatype` è presente e se `counter` è già definito.  
+###  <a name="BKMK_Counter"></a>Argomento contatore  
+ Nella tabella seguente indica se `counter` definisce una nuova variabile locale con ambito limitato all'intero `For…Next` ciclo. Questo aspetto dipende dal fatto che `datatype` è presente e se `counter` è già definito.  
   
-|È `datatype` presente?|`counter` è già definito?|Risultato \(se `counter` definisce una nuova variabile locale limitata all'intero ciclo di `For...Next` \)|  
-|----------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------------|  
-|No|Sì|No, perché `counter` è già definito.  Se l'ambito di `counter` non è locale alla routine, un avviso in fase di compilazione si verifica.|  
-|No|No|Sì.  Il tipo di dati viene dedotto da `start`, da `end`e da espressioni di `step`.  Per informazioni sull'inferenza del tipo, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
-|Sì|Sì|Sì, ma solo se la variabile esistente di `counter` è definita all'esterno della routine.  La variabile rimane separata.  Se l'ambito di una variabile esistente di `counter` è locale alla routine, un errore in fase di compilazione si verifica.|  
+|È `datatype` presente?|È `counter` già definito?|Risultato (se `counter` definisce una nuova variabile locale con ambito limitato all'intero `For...Next` ciclo)|  
+|----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
+|No|Sì|No, in quanto `counter` è già definito. Se l'ambito di `counter` non è locale per la procedura, viene generato un avviso in fase di compilazione.|  
+|No|No|Sì. Il tipo di dati viene dedotto dal `start`, `end`, e `step` espressioni. Per informazioni sull'inferenza del tipo, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [locale l'inferenza del tipo](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
+|Sì|Sì|Sì, ma solo se l'oggetto esistente `counter` variabile viene definita all'esterno della routine. Tale variabile rimane separata. Se l'ambito dell'oggetto esistente `counter` variabile è locale per la procedura, si verifica un errore in fase di compilazione.|  
 |Sì|No|Sì.|  
   
- Il tipo di dati di `counter` determina il tipo dell'iterazione, che deve essere uno dei seguenti tipi:  
+ Il tipo di dati `counter` determina il tipo dell'iterazione, che deve essere uno dei seguenti tipi:  
   
--   Oggetto `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single` o `Double`.  
+-   Oggetto `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, o `Double`.  
   
--   Enumerazione che viene dichiarata tramite un'[Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).  
+-   Un'enumerazione che viene dichiarato tramite un [istruzione Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
 -   Oggetto `Object`.  
   
--   Tipo `T` che dispone dei seguenti operatori, dove `B` è un tipo che può essere utilizzato in un'espressione `Boolean`.  
+-   Un tipo `T` con gli operatori seguenti, in cui `B` è un tipo che può essere usato in un `Boolean` espressione.  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   
@@ -161,30 +160,30 @@ Next [ counter ]
   
      `Public Shared Operator + (op1 As T, op2 As T) As T`  
   
- È possibile specificare la variabile di `counter` nell'istruzione di `Next`.  Questa sintassi consente di migliorare la leggibilità del programma, specialmente se sono presenti cicli annidati di di `For`.  È necessario specificare la variabile visualizzato nell'istruzione corrispondente di `For`.  
+ È possibile specificare facoltativamente il `counter` variabile il `Next` istruzione. Questa sintassi migliora la leggibilità del programma, soprattutto se hanno annidati `For` cicli. È necessario specificare la variabile che viene visualizzato nel corrispondente `For` istruzione.  
   
- Tramite le espressioni `start`, `end` e `step` è possibile restituire qualsiasi tipo di dati ampliabile al tipo di `counter`.  Se si utilizza un tipo definito per `counter`, potrebbe essere necessario definire l'operatore di conversione di `CType` per convertire i tipi di `start`, di `end`, o di `step` al tipo di `counter`.  
+ Il `start`, `end`, e `step` espressioni possono restituire qualsiasi tipo di dati che viene ampliato al tipo di `counter`. Se si utilizza un tipo definito dall'utente per `counter`, potrebbe essere necessario definire il `CType` operatore di conversione per convertire i tipi di `start`, `end`, o `step` al tipo di `counter`.  
   
-## Esempio  
- Nell'esempio seguente vengono rimossi tutti gli elementi da un elenco generico.  Anziché [Istruzione For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md), nell'esempio viene illustrata un'istruzione di `For`…`Next` che scorre in ordine decrescente.  L'esempio utilizza questa tecnica perché il metodo di `removeAt` determina gli elementi dopo l'elemento rimosso a un valore di indice più basso.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente rimuove tutti gli elementi da un elenco generico. Invece di un [For Each... Istruzione successiva](../../../visual-basic/language-reference/statements/for-each-next-statement.md), nell'esempio viene illustrato un `For`... `Next` istruzione che esegue l'iterazione in ordine decrescente. Nell'esempio viene utilizzata questa tecnica, in quanto il `removeAt` (metodo), gli elementi dopo l'elemento rimosso abbiano un valore di indice più basso.  
   
  [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
   
-## Esempio  
- L'esempio seguente consente di scorrere un'enumerazione che viene dichiarata utilizzando [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene eseguito lo scorrimento di un'enumerazione che viene dichiarata utilizzando un [istruzione Enum](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
  [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
   
-## Esempio  
- Nell'esempio seguente, la classe dei parametri dell'istruzione dispone di overload degli operatori per gli operatori `+`, `-`, `>=` e `<=`.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente, i parametri dell'istruzione utilizzano una classe che ha gli overload degli operatori per la `+`, `-`, `>=`, e `<=` operatori.  
   
  [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
   
-## Vedere anche  
- <xref:System.Collections.Generic.List%601>   
- [Loop Structures](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
- [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Raccolte](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Collections.Generic.List%601>  
+ [Strutture di ciclo](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [Istruzione While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [Istruzione Do...Loop](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [Strutture di controllo annidate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [Istruzione Exit](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [Raccolte](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)

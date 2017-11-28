@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 9c2cc090dfd5405def0cd6ab9ec1771be4a332a5
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="common-type-system--common-language-specification"></a>Common Type System e Common Language Specification
 
 Siamo di fronte ancora una volta a due termini molto usati nel mondo di .NET e che sono effettivamente fondamentali per capire in che modo un'implementazione di .NET consente lo sviluppo multi-linguaggio e per comprenderne il funzionamento.
@@ -61,4 +59,3 @@ CLS è un subset di CTS. Ciò significa che tutte le regole in CTS si applicano 
 
 *   [Common Type System](https://msdn.microsoft.com/library/zcx1eb1e.aspx)
 *   [Common Language Specification](https://msdn.microsoft.com/library/12a7a7h3.aspx)
-

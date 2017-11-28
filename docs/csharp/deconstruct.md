@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
+ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 863940512f33568ee10569da4712e7e646bc3ba7
-ms.openlocfilehash: ad0ed6568da073683545727ef47f6a223942c8d6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Decostruzione di tuple e altri tipi #
 
@@ -99,11 +98,10 @@ L'esempio seguente esegue la decostruzione di un oggetto `Person` in quattro str
 
 Anche un utente che non ha creato una classe, uno struct o un'interfaccia può eseguire la decostruzione di oggetti di questo tipo implementando uno o più `Deconstruct` [metodi di estensione](programming-guide/classes-and-structs/extension-methods.md) per restituire i valori che risultano di interesse. 
 
-L'esempio riportato di seguito illustra due metodi di estensione `Deconstruct` per la classe <xref:System.Reflection.PropertyInfo?displayProperty=fullName>. Il primo metodo restituisce un set di valori che indicano le caratteristiche della proprietà: il tipo, se è statica o di istanza, se è di sola lettura e se è indicizzata. Il secondo indica l'accessibilità della proprietà. Dato che l'accessibilità delle funzioni di accesso get e set può essere diversa, i valori booleani indicano se la proprietà ha funzioni di accesso get e set separate e in questo caso se tali funzioni presentano la stessa accessibilità. Se è presente solo una funzione di accesso o se le funzioni di accesso get e set hanno la stessa accessibilità, la variabile `access` indica l'accessibilità della proprietà nel suo complesso. In caso contrario l'accessibilità delle funzioni di accesso get e set è indicata dalle variabili `getAccess` e `setAccess`.
+L'esempio riportato di seguito illustra due metodi di estensione `Deconstruct` per la classe <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType>. Il primo metodo restituisce un set di valori che indicano le caratteristiche della proprietà: il tipo, se è statica o di istanza, se è di sola lettura e se è indicizzata. Il secondo indica l'accessibilità della proprietà. Dato che l'accessibilità delle funzioni di accesso get e set può essere diversa, i valori booleani indicano se la proprietà ha funzioni di accesso get e set separate e in questo caso se tali funzioni presentano la stessa accessibilità. Se è presente solo una funzione di accesso o se le funzioni di accesso get e set hanno la stessa accessibilità, la variabile `access` indica l'accessibilità della proprietà nel suo complesso. In caso contrario l'accessibilità delle funzioni di accesso get e set è indicata dalle variabili `getAccess` e `setAccess`.
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
  
 ## <a name="see-also"></a>Vedere anche
 [Variabili discard](discards.md)   
 [Tuple](tuples.md)  
-

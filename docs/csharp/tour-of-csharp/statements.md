@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 99ec2489daf89926da9b8c4e148965412826a8a6
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="statements"></a>Istruzioni
 
 Le azioni di un programma vengono espresse mediante *istruzioni*. C# supporta numerosi tipi di istruzioni, alcune delle quali sono definite in termini di istruzioni nidificate.
@@ -119,4 +117,3 @@ Di seguito vengono elencati i tipi di istruzione che è possibile usare e viene 
 >[!div class="step-by-step"]
 [Precedente](expressions.md)
 [Successivo](classes-and-objects.md)
-

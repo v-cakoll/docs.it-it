@@ -9,14 +9,12 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.contentlocale: it-it
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="running-console-applications-in-windows-containers"></a>Esecuzione di applicazioni console in contenitori Windows
 
 Le applicazioni console vengono usate per scopi diversi, dalla semplice esecuzione di query sullo stato ad attività di elaborazione di immagini documento a esecuzione prolungata. In ogni caso, la possibilità di avviare e ridimensionare tali applicazioni dipende da limitazioni relative all'acquisizione di hardware, ai tempi di avvio e all'esecuzione di più istanze.
@@ -145,4 +143,3 @@ Per l'esecuzione, aprire PowerShell e usare il comando seguente:
 
 ## <a name="summary"></a>Riepilogo
 È sufficiente aggiungere un documento Dockerfile e pubblicare l'applicazione per eseguire le applicazioni console .NET Framework in un contenitore e poter sfruttare tutti i vantaggi dell'esecuzione di più istanze, avvio e arresto corretti e altre funzionalità di Windows Server 2016 senza apportare modifiche al codice dell'applicazione.
-

@@ -8,27 +8,25 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, overview
+helpviewer_keywords: thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b5394cd2e9c9fa2b0cacb93ddf2cf05b33fabc71
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 19ecc67b38e2eab52994fb278211c6d9ff67ae7e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-safe-collections"></a>Raccolte thread-safe
-[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduce lo spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=fullName>, che include diverse classi di raccolta sia thread-safe che scalabili. Più thread possono aggiungere o rimuovere elementi da queste raccolte in modo sicuro ed efficiente, senza richiedere una sincronizzazione aggiuntiva nel codice utente. Quando si scrive nuovo codice, usare le classi di raccolta simultanee ogni volta che la raccolta verrà scritta contemporaneamente su più thread. Se si prevede di leggere solo da una raccolta condivisa, è possibile usare le classi dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=fullName>. È consigliabile evitare di usare le classi di raccolta 1.0 a meno che non sia necessario definire come destinazione il runtime di .NET Framework versione 1.1 o precedente.  
+[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduce lo spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType>, che include diverse classi di raccolta sia thread-safe che scalabili. Più thread possono aggiungere o rimuovere elementi da queste raccolte in modo sicuro ed efficiente, senza richiedere una sincronizzazione aggiuntiva nel codice utente. Quando si scrive nuovo codice, usare le classi di raccolta simultanee ogni volta che la raccolta verrà scritta contemporaneamente su più thread. Se si prevede di leggere solo da una raccolta condivisa, è possibile usare le classi dello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. È consigliabile evitare di usare le classi di raccolta 1.0 a meno che non sia necessario definire come destinazione il runtime di .NET Framework versione 1.1 o precedente.  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>Sincronizzazione dei thread nelle raccolte di .NET Framework 1.0 e 2.0  
- Le raccolte introdotte in .NET Framework 1.0 sono reperibili nello spazio dei nomi <xref:System.Collections?displayProperty=fullName>. Queste raccolte, incluse le raccolte <xref:System.Collections.ArrayList> e <xref:System.Collections.Hashtable> usate normalmente, supportano la thread safety con la proprietà `Synchronized`, che restituisce un wrapper thread-safe per la raccolta. Il wrapper funziona bloccando l'intera raccolta in ogni operazione di aggiunta o rimozione. Pertanto, ogni thread che tenta di accedere alla raccolta deve attendere il proprio turno per acquisire l'unico blocco. Questa caratteristica non è scalabile e può causare un peggioramento delle prestazioni per le raccolte di grandi dimensioni. Inoltre, la progettazione non è completamente protetta da race condition. Per altre informazioni, vedere la pagina relativa alla [sincronizzazione nelle raccolte generiche](http://go.microsoft.com/fwlink/?LinkID=161130) nel sito Web MSDN.  
+ Le raccolte introdotte in .NET Framework 1.0 sono reperibili nello spazio dei nomi <xref:System.Collections?displayProperty=nameWithType>. Queste raccolte, incluse le raccolte <xref:System.Collections.ArrayList> e <xref:System.Collections.Hashtable> usate normalmente, supportano la thread safety con la proprietà `Synchronized`, che restituisce un wrapper thread-safe per la raccolta. Il wrapper funziona bloccando l'intera raccolta in ogni operazione di aggiunta o rimozione. Pertanto, ogni thread che tenta di accedere alla raccolta deve attendere il proprio turno per acquisire l'unico blocco. Questa caratteristica non è scalabile e può causare un peggioramento delle prestazioni per le raccolte di grandi dimensioni. Inoltre, la progettazione non è completamente protetta da race condition. Per altre informazioni, vedere la pagina relativa alla [sincronizzazione nelle raccolte generiche](http://go.microsoft.com/fwlink/?LinkID=161130) nel sito Web MSDN.  
   
- Le classi di raccolta introdotte in .NET Framework 2.0 sono reperibili nello spazio dei nomi <xref:System.Collections.Generic?displayProperty=fullName>. Sono incluse <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> e così via. che forniscono maggiore indipendenza dai tipi e migliori prestazioni rispetto alle classi di .NET Framework 1.0. Tuttavia, le classi di raccolta di .NET Framework 2.0 non forniscono la sincronizzazione dei thread. Quando gli elementi vengono aggiunti o rimossi contemporaneamente su più thread, la sincronizzazione deve essere gestita dal codice utente.  
+ Le classi di raccolta introdotte in .NET Framework 2.0 sono reperibili nello spazio dei nomi <xref:System.Collections.Generic?displayProperty=nameWithType>. Sono incluse <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> e così via. che forniscono maggiore indipendenza dai tipi e migliori prestazioni rispetto alle classi di .NET Framework 1.0. Tuttavia, le classi di raccolta di .NET Framework 2.0 non forniscono la sincronizzazione dei thread. Quando gli elementi vengono aggiunti o rimossi contemporaneamente su più thread, la sincronizzazione deve essere gestita dal codice utente.  
   
  È quindi consigliabile usare le classi della raccolta simultanee in [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] perché forniscono non solo l'indipendenza dai tipi delle classi di raccolta di .NET Framework 2.0, ma anche una thread safety più efficiente e completa rispetto alle raccolte [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)].  
   
@@ -40,7 +38,7 @@ ms.lasthandoff: 09/06/2017
 > [!NOTE]
 >  Poiché supportano <xref:System.Collections.ICollection>, le classi di raccolta simultanee offrono implementazioni per le proprietà <xref:System.Collections.ICollection.IsSynchronized%2A> e <xref:System.Collections.ICollection.SyncRoot%2A>, anche se queste sono irrilevanti. `IsSynchronized` restituisce sempre `false` e `SyncRoot` è sempre `null` (`Nothing` in Visual Basic).  
   
- Nella tabella seguente sono elencati i tipi di raccolta dello spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=fullName>.  
+ Nella tabella seguente sono elencati i tipi di raccolta dello spazio dei nomi <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
 |Tipo|Descrizione|  
 |----------|-----------------|  
@@ -64,5 +62,4 @@ ms.lasthandoff: 09/06/2017
 |[Procedura: Creare un pool di oggetti con un oggetto ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Illustra come usare un contenitore simultaneo per migliorare le prestazioni negli scenari in cui è possibile riutilizzare gli oggetti anziché crearne continuamente di nuovi.|  
   
 ## <a name="reference"></a>Riferimento  
- <xref:System.Collections.Concurrent?displayProperty=fullName>
-
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>

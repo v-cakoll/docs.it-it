@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
 ms.openlocfilehash: c68e382450a763fd0521b7defdd79d8433e1acde
-ms.contentlocale: it-it
-ms.lasthandoff: 08/12/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="custom-templates-for-dotnet-new"></a>Modelli personalizzati per dotnet new
 
 [.NET Core SDK](https://www.microsoft.com/net/download/core) viene fornito con molti modelli pre-installati da usare con il comando [ `dotnet new`](dotnet-new.md). A partire da .NET Core 2.0, è possibile creare modelli personalizzati per qualsiasi tipo di progetto, ad esempio un'app, un servizio, uno strumento o una libreria di classi. È possibile anche creare un modello che restituisce uno o più file indipendenti, ad esempio un file di configurazione.
@@ -164,4 +162,3 @@ dotnet new <TEMPLATE>
 [Repository GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
 [Come creare modelli personalizzati per dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
 Lo schema [*template.JSON* nell'archivio di schemi JSON](http://json.schemastore.org/template)  
-

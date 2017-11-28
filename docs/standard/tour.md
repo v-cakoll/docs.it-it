@@ -1,5 +1,5 @@
 ---
-title: Panoramica di .NET | Microsoft Docs
+title: Panoramica di .NET
 description: "Panoramica guidata di alcune delle principali funzionalità di .NET."
 keywords: .NET, .NET Core, panoramica, linguaggi di programmazione, unsafe, gestione della memoria, indipendenza dai tipi, asincrono
 author: cartermp
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
+ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: c64a3113cf4e9e9ff203ed2cf449359f67ee9d10
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="tour-of-net"></a>Panoramica di .NET
 
 .NET è una piattaforma di sviluppo con finalità generali che offre varie funzionalità chiave, ad esempio il supporto per più linguaggi di programmazione, modelli di programmazione asincroni e simultanei e l'interoperabilità nativa, che consente l'esecuzione di un'ampia gamma di scenari su più piattaforme.
@@ -149,4 +147,3 @@ Per una panoramica delle funzionalità di F#, vedere l'articolo [Tour of F#](../
 Per un'introduzione alla scrittura di codice personalizzato, vedere [Introduzione](get-started.md).
 
 Per informazioni sui componenti principali di .NET, vedere [Componenti dell'architettura .NET](components.md).
-

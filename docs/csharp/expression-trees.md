@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3935906d9fca81a094999eefdd49ae4ed56990bf
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="expression-trees"></a>Expression Trees
 
 Se si è usato LINQ, si ha esperienza con una ricca libreria in cui i tipi `Func` fanno parte del set di API. (Se non si ha familiarità con LINQ, è consigliabile prima leggere l'[esercitazione LINQ](linq/index.md) e l'esercitazione sulle [espressioni lambda](lambda-expressions.md).) Gli *alberi delle espressioni* offrono maggiore interazione con gli argomenti che sono funzioni.
@@ -60,4 +58,3 @@ Le sezioni rimanenti di questa esercitazione illustreranno che cosa sono gli alb
 
     Esaminare le informazioni sugli alberi delle espressioni.
     
-

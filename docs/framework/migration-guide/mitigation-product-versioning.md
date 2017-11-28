@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1b507769ba6868a4cd841ca463900b126cfb5b90
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0c69eaefde812d8910ebfc329765d0571701da25
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-product-versioning"></a>Mitigazione: Controllo delle versioni del prodotto
 In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e versioni successive, il controllo delle versioni del prodotto è cambiato rispetto alle versioni precedenti di .NET Framework (.NET Framework 4, 4.5, 4.5.1 e 4.5.2).  
@@ -33,7 +31,7 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e versioni successive, i
   
 -   Gli attributi <xref:System.Reflection.AssemblyFileVersionAttribute> e <xref:System.Reflection.AssemblyInformationalVersionAttribute> per gli assembly gestiti hanno valori <xref:System.Version> nel formato `4.6.X.0` per .NET Framework 4.6 e versioni intermedie e `4.7.X.0` per .NET Framework 4.7.  
   
--   In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 e 4.7 la proprietà <xref:System.Environment.Version%2A?displayProperty=fullName> restituisce la stringa di versione fissa `4.0.30319.42000`. In .NET Framework 4, 4.5, 4.5.1 e 4.5.2, restituisce le stringhe di versione nel formato `4.0.30319.xxxxx` (ad esempio, "4.0.30319.18010"). Si noti che è sconsigliabile che il codice di applicazione acquisisca nuove dipendenze dalla proprietà <xref:System.Environment.Version%2A?displayProperty=fullName>.  
+-   In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 e 4.7 la proprietà <xref:System.Environment.Version%2A?displayProperty=nameWithType> restituisce la stringa di versione fissa `4.0.30319.42000`. In .NET Framework 4, 4.5, 4.5.1 e 4.5.2, restituisce le stringhe di versione nel formato `4.0.30319.xxxxx` (ad esempio, "4.0.30319.18010"). Si noti che è sconsigliabile che il codice di applicazione acquisisca nuove dipendenze dalla proprietà <xref:System.Environment.Version%2A?displayProperty=nameWithType>.  
   
 ### <a name="handling-the-product-versioning-changes"></a>Gestione delle modifiche apportate al controllo delle versioni del prodotto  
  In generale, le applicazioni dovrebbero dipendere dalle tecniche consigliate per il rilevamento di elementi come la versione di runtime di .NET Framework e la directory di installazione:  
@@ -45,11 +43,10 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e versioni successive, i
     > [!IMPORTANT]
     >  Il nome della sottochiave è `NET Framework Setup`, non `.NET Framework Setup`.  
   
--   Per determinare il percorso di directory a Common Language Runtime di .NET Framework, chiamare il metodo <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=fullName>.  
+-   Per determinare il percorso di directory a Common Language Runtime di .NET Framework, chiamare il metodo <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=nameWithType>.  
   
--   Per ottenere la versione CLR, chiamare il metodo <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=fullName>.   Per .NET Framework 4 e le versioni intermedie (.NET Framework 4.5, 4.5.1, 4.5.2 e [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 e 4.7), restituisce la stringa `v4.0.30319`.  
+-   Per ottenere la versione CLR, chiamare il metodo <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType>.   Per .NET Framework 4 e le versioni intermedie (.NET Framework 4.5, 4.5.1, 4.5.2 e [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2 e 4.7), restituisce la stringa `v4.0.30319`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifiche al runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
  
-

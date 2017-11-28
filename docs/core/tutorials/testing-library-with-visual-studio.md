@@ -10,14 +10,15 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 7c884985873679b25831c15ef5c8b6370ecd6460
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 30e46ae97563add2bdf34948349cf2d6214d0de8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Test di una libreria di classi con .NET Core in Visual Studio 2017
 
 In [Compilazione di una libreria di classi con C# e .NET Core in Visual Studio 2017](library-with-visual-studio.md) o [Compilazione di una libreria di classi con Visual Basic e .NET Core in Visual Studio 2017](vb-library-with-visual-studio.md) è stata creata una libreria di classi semplice che aggiunge un metodo di estensione alla classe <xref:System.String>. Ora verrà creato uno unit test per verificare che tale libreria funzioni nel modo previsto. Il progetto unit test verrà aggiunto alla soluzione creata nell'argomento precedente.
@@ -103,7 +104,7 @@ Metodi Assert | Funzione
 
 Durante il test del metodo `StringLibrary.StartsWithUpper`, è possibile specificare alcune stringhe che iniziano con un carattere maiuscolo. In tal caso si prevede che il metodo restituisca `true`, quindi è possibile chiamare il metodo [Assert.IsTrue(Boolean, String)](https://msdn.microsoft.com/library/ms243754.aspx). Analogamente, è possibile specificare alcune stringhe che iniziano con un valore diverso da un carattere maiuscolo. In tal caso si prevede che il metodo restituisca `false`, quindi è possibile chiamare il metodo [Assert.IsFalse(Boolean, String)](https://msdn.microsoft.com/library/ms243805.aspx).
 
-Poiché il metodo della libreria gestisce le stringhe, è anche possibile verificare che gestisca in modo corretto una [stringa vuota (`String.Empty`) ](xref:System.String.Empty), ovvero una stringa valida senza caratteri e con proprietà @System.String.Length uguale a 0, e una stringa `null` che non è stata inizializzata. Se `StartsWithUpper` è chiamato come metodo di estensione su un'istanza di @System.String, non può essere passato a una stringa `null`. È tuttavia possibile chiamarlo direttamente come metodo statico e passarlo a un singolo argomento @System.String.
+Poiché il metodo della libreria gestisce le stringhe, è anche possibile verificare che gestisca in modo corretto una [stringa vuota (`String.Empty`) ](xref:System.String.Empty), ovvero una stringa valida senza caratteri e con proprietà <xref:System.String.Length> uguale a 0, e una stringa `null` che non è stata inizializzata. Se `StartsWithUpper` è chiamato come metodo di estensione su un'istanza di <xref:System.String>, non può essere passato a una stringa `null`. È tuttavia possibile chiamarlo direttamente come metodo statico e passarlo a un singolo argomento <xref:System.String>.
 
 Verranno definiti tre metodi, ognuno dei quali chiama più volte il relativo metodo [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) per ogni elemento di una matrice di stringhe. Poiché il metodo di test ha esito negativo quando incontra il primo errore, verrà chiamato un overload del metodo che consente di passare una stringa in cui è indicato il valore stringa usato nella chiamata al metodo.
 
@@ -185,4 +186,3 @@ Per testare la versione di rilascio, seguire questa procedura:
 1. Eseguire gli unit test selezionando **Test** > **Esegui** > **Tutti i test** dalla barra dei menu. I test avranno esito positivo.
 
 Dopo aver completato le operazioni di test della libreria, il passaggio successivo consiste nel rendere quest'ultima disponibile ai chiamanti. È possibile aggregarla a una o più applicazioni oppure è possibile distribuirla come pacchetto NuGet. Per altre informazioni, vedere [Consuming a .NET Standard Class Library](./consuming-library-with-visual-studio.md) (Utilizzo di una libreria di classi .NET Standard).
-

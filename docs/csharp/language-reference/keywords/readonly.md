@@ -1,41 +1,22 @@
 ---
 title: readonly (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- readonly keyword [C#]
+helpviewer_keywords: readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b499f9fc5121afe6c2e92bcf8c5d2ac593b4c06c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2660aa56721815cbbeb668328863956473cce8f1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="readonly-c-reference"></a>readonly (Riferimenti per C#)
 La parola chiave `readonly` è un modificatore utilizzabile nei campi. Quando una dichiarazione di campo include un modificatore `readonly`, le assegnazioni ai campi introdotte dalla dichiarazione possono verificarsi solo come parte della dichiarazione o in un costruttore della stessa classe.  
@@ -43,7 +24,7 @@ La parola chiave `readonly` è un modificatore utilizzabile nei campi. Quando un
 ## <a name="example"></a>Esempio  
  In questo esempio, il valore del campo `year` non può essere modificato nel metodo `ChangeYear`, anche se gli viene assegnato un valore nel costruttore della classe:  
   
- [!code-cs[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_1.cs)]  
   
  È possibile assegnare un valore a un campo `readonly` solo nei contesti seguenti:  
   
@@ -63,7 +44,7 @@ public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
 ```  
   
 ## <a name="example"></a>Esempio  
- [!code-cs[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_2.cs)]  
   
  Nell'esempio precedente, se si usa un'istruzione simile alla seguente:  
   
@@ -79,10 +60,9 @@ public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)   
- [const](../../../csharp/language-reference/keywords/const.md)   
+ [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
+ [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)  
+ [const](../../../csharp/language-reference/keywords/const.md)  
  [Campi](../../../csharp/programming-guide/classes-and-structs/fields.md)
-

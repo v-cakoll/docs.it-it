@@ -8,6 +8,10 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - generic methods, type inference
 - generics [.NET Framework], collections
@@ -28,16 +32,15 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 510d7f30853496409caccab69e68f55a6638319e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ef0b251add573c7aaed75b866523b5fdcd3d8e5a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="generics-in-the-net-framework"></a>Generics in .NET Framework
 <a name="top"></a> I generics consentono di personalizzare un metodo, una classe o una struttura in base ai dati precisi su cui interviene. Ad esempio, invece di usare la classe <xref:System.Collections.Hashtable> , che consente di avere chiavi e valori di ogni tipo, è possibile usare la classe generica <xref:System.Collections.Generic.Dictionary%602> e specificare il tipo concesso per la chiave e quello concesso per il valore. Tra i vantaggi dei generics ci sono una maggiore riutilizzabilità del codice e l'indipendenza dai tipi.  
@@ -60,19 +63,23 @@ ms.lasthandoff: 09/05/2017
 ## <a name="defining-and-using-generics"></a>Definizione e utilizzo dei generics  
  I generics sono classi, strutture, interfacce e metodi dotati di segnaposto (parametri di tipo) per uno o più dei tipi archiviati o usati. Una classe di raccolte generiche può usare un parametro di tipo come segnaposto per il tipo di oggetti in essa contenuti. I parametri di tipo vengono visualizzati come i tipi dei relativi campi e i tipi di parametri dei relativi metodi. Un metodo generico potrebbe usare il parametro di tipo come il tipo di valore restituito o come il tipo di uno dei parametri formali. Nel codice seguente viene illustrata una definizione di classe generica semplice.  
   
- [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)] [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)] [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
+ [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
+ [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)]
+ [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
   
  Quando si crea un'istanza di una classe generica, è possibile specificare i tipi effettivi da sostituire per i parametri di tipo. Ciò consente di stabilire una nuova classe generica, definita come una classe generica costruita, con tipi prescelti sostituiti a ogni occorrenza dei parametri di tipo. Il risultato è una classe indipendente dai tipi personalizzata in base alla scelta di tipi, come illustrato nel codice seguente.  
   
- [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)] [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)] [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
+ [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)]
+ [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)]
+ [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>Terminologia dei generics  
  I termini seguenti vengono usati per discutere dei generics in .NET Framework:  
   
--   Una *definizione di tipo generico* è una classe, una struttura o una dichiarazione di interfaccia che funge da modello, con segnaposto per i tipi che può contenere o usare. Ad esempio, la classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> può contenere due tipi: chiavi e valori. Poiché una definizione di tipo generico è solo un modello, non è possibile creare istanze di una classe, una struttura o un'interfaccia che sia una definizione di tipo generico.  
+-   Una *definizione di tipo generico* è una classe, una struttura o una dichiarazione di interfaccia che funge da modello, con segnaposto per i tipi che può contenere o usare. Ad esempio, la classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> può contenere due tipi: chiavi e valori. Poiché una definizione di tipo generico è solo un modello, non è possibile creare istanze di una classe, una struttura o un'interfaccia che sia una definizione di tipo generico.  
   
--   I*parametri di tipo generico*, o *parametri di tipo*, sono i segnaposto in una definizione di tipo o metodo generico. Il tipo generico <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> ha due parametri di tipo, `TKey` e `TValue`, che rappresentano i tipi delle chiavi e dei valori relativi.  
+-   I*parametri di tipo generico*, o *parametri di tipo*, sono i segnaposto in una definizione di tipo o metodo generico. Il tipo generico <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ha due parametri di tipo, `TKey` e `TValue`, che rappresentano i tipi delle chiavi e dei valori relativi.  
   
 -   Un *tipo generico costruito*, o *tipo costruito*, è il risultato della specifica di tipi per i parametri di tipo generico di una definizione di tipo generico.  
   
@@ -82,15 +89,19 @@ ms.lasthandoff: 09/05/2017
   
 -   La*covarianza* e la *controvarianza* of generic type parameters enable you to use constructed generic types whose type arguments are more derived (covariance) or less derived (controvarianza) than a target constructed type. La covarianza e la controvarianza sono definite collettivamente *varianza*. Per altre informazioni, vedere [Covarianza e controvarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
--   I*vincoli* sono limiti imposti su parametri di tipo generico. Ad esempio, è possibile limitare un parametro di tipo a tipi che implementano l'interfaccia generica <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> , per garantire la possibilità di ordinare le istanze del tipo. È anche possibile vincolare i parametri di tipo a tipi che dispongono di una determinata classe di base, con un costruttore predefinito, o che siano tipi riferimento o tipi di valore. Gli utenti di tipo generico non possono sostituire gli argomenti di tipo che non soddisfano i vincoli.  
+-   I*vincoli* sono limiti imposti su parametri di tipo generico. Ad esempio, è possibile limitare un parametro di tipo a tipi che implementano l'interfaccia generica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>, per garantire la possibilità di ordinare le istanze del tipo. È anche possibile vincolare i parametri di tipo a tipi che dispongono di una determinata classe di base, con un costruttore predefinito, o che siano tipi riferimento o tipi di valore. Gli utenti di tipo generico non possono sostituire gli argomenti di tipo che non soddisfano i vincoli.  
   
 -   Una *definizione di metodo generico* è un metodo con due elenchi di parametri: un elenco di parametri di tipo generico e un elenco di parametri formali. I parametri di tipo possono apparire come tipo restituito o come tipi dei parametri formali, come illustrato nel codice seguente.  
   
- [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)] [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)] [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
+ [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
+ [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
+ [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
   
  I metodi generici possono apparire su tipi generici o non generici. È importante tenere presente che un metodo si definisce non generico solo perché appartiene a un tipo generico o perché ha parametri formali i cui tipi sono i parametri generici del tipo contenitore. Un metodo è generico solo se ha un proprio elenco di parametri di tipo. Nel codice seguente, solo il metodo `G` è generico.  
   
- [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)] [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)] [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
+ [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)]
+ [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)]
+ [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
  [Torna all'inizio](#top)  
   
@@ -102,7 +113,9 @@ ms.lasthandoff: 09/05/2017
   
 -   Meno codice e il codice è più facilmente riutilizzato. Non è necessario ereditare da un tipo di base ed eseguire l'override di membri. Ad esempio, <xref:System.Collections.Generic.LinkedList%601> è pronto per l'uso immediato. Ad esempio, è possibile creare un elenco collegato di stringhe con la seguente dichiarazione di variabile:  
   
-     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]  [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]  [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
+     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
+     [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
+     [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
 -   Prestazioni migliori. I tipi di raccolte generiche offrono in genere prestazioni migliori per l'archiviazione e la modifica dei tipi di valore, perché non è necessario eseguirne il boxing.  
   
@@ -173,7 +186,6 @@ ms.lasthandoff: 09/05/2017
   
  <xref:System.Collections.ObjectModel>  
   
- <xref:System.Reflection.Emit.OpCodes?displayProperty=fullName>  
+ <xref:System.Reflection.Emit.OpCodes?displayProperty=nameWithType>  
   
  [Torna all'inizio](#top)
-

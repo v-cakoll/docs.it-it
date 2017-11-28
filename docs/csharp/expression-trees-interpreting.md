@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e7c5f7404546c6f3812fc5cc3d0320c77816634d
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="interpreting-expressions"></a>Interpretazione di espressioni
 
 [Precedente -- Esecuzione di espressioni](expression-trees-execution.md)
@@ -529,4 +527,3 @@ Infine, la libreria usata in questo articolo è stata creata per la formazione e
 Anche con queste limitazioni, sarà possibile iniziare a scrivere algoritmi e leggere e comprendere gli alberi delle espressioni.
 
 [Successivo -- Creazione di espressioni](expression-trees-building.md)
-

@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - CIM types
 - Management Strongly Typed Class Generator
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 0f3e01e54cb60c7da1a57940246c5402ba635778
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f83136265c4002f3ea4872b370b856bfacf4db3d
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Lo strumento Generatore di classi di gestione fortemente tipizzate consente di generare velocemente una classe gestita ad associazione precoce per una specifica classe WMI (Windows Management Instrumentation, Strumentazione gestita Windows). L'utilizzo della classe generata semplifica la scrittura del codice per l'accesso a un'istanza della classe WMI.  
@@ -58,7 +54,7 @@ WMIClass [options]
 |**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
   
 ## <a name="remarks"></a>Note  
- Mgmtclassgen.exe utilizza il metodo <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=fullName>. È possibile pertanto utilizzare un provider di codice personalizzato per generare codice in linguaggi gestiti diversi da C#, Visual Basic e JScript.  
+ Mgmtclassgen.exe utilizza il metodo <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>. È possibile pertanto utilizzare un provider di codice personalizzato per generare codice in linguaggi gestiti diversi da C#, Visual Basic e JScript.  
   
  Le classi generate sono associate allo schema per il quale sono state generate. Quando lo schema sottostante una classe viene modificato è necessario generare nuovamente la classe se si desidera che essa rispecchi le modifiche dello schema.  
   
@@ -163,9 +159,8 @@ public class App
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Management>   
- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=fullName>   
- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>   
- [Strumenti](../../../docs/framework/tools/index.md)   
+ <xref:System.Management>  
+ <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>  
+ <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>  
+ [Strumenti](../../../docs/framework/tools/index.md)  
  [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

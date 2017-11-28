@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
 ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generic-types-generics-overview"></a>Panoramica di tipi generici (generics)
 
 I generics vengono usati sempre in C#, implicitamente o esplicitamente. Durante l'uso di LINQ in C#, si è mai notato che si stava usando IEnumerable<T>? Oppure, visualizzando un esempio online di un "repository generico" che comunica con database tramite Entity Framework, si è notato che la maggior parte dei metodi restituisce IQueryable<T>? Molti utenti e sviluppatori si chiedono che cosa rappresenta la **T** in questi esempi e perché è presente?
@@ -75,4 +73,3 @@ Se il runtime riconosce il tipo generico, offre una migliore esperienza di debug
 
 *   [Introduzione ai generics per C#](https://msdn.microsoft.com/library/ms379564.aspx)
 *   [Generics (Guida per programmatori C#)](https://msdn.microsoft.com/library/512aeb7t.aspx)
-

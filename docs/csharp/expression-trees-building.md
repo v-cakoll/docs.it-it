@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-expression-trees"></a>Compilazione di alberi delle espressioni
 
 [Precedente -- Interpretazione di espressioni](expression-trees-interpreting.md)
@@ -180,4 +178,3 @@ Le API dell'albero delle espressioni sono tra le più difficili da esplorare .NE
 Inoltre, attualmente sono disponibili espressioni in C# che non possono essere compilate direttamente usando metodi della classe `Expression`. In generale, questi saranno gli operati e le espressioni più recenti aggiunte in C# 5 e C# 6. Ad esempio, non è possibile compilare espressioni `async` e non è possibile creare direttamente il nuovo operatore `?.`.
 
 [Successivo -- Conversione di espressioni](expression-trees-translating.md)
-

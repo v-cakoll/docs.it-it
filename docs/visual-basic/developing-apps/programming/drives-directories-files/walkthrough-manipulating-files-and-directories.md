@@ -1,52 +1,34 @@
 ---
 title: Modifica di file e directory in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- files, reading text
-- reading files, text
+- files [Visual Basic], reading text
+- reading files [Visual Basic], text
 - I/O [Visual Basic], walkthroughs
 - text, writing to files
 - text, reading from files
-- reading text from files, walkthroughs
+- reading text from files [Visual Basic], walkthroughs
 - Visual Basic code, file access
-- files, writing text
+- files [Visual Basic], writing text
 - I/O [Visual Basic], writing text to files
 - file access, walkthroughs
-- writing to files, walkthroughs
+- writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e66d062df07fc23dfbd5d509e08ccd08813db15
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procedura dettagliata: modifica di file e directory in Visual Basic
 Questa procedura dettagliata offre un'introduzione ai principi di base degli elementi I/O di file in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Descrive come creare una piccola applicazione in cui vengono elencati ed esaminati i file di testo di una directory. Per ogni file di testo selezionato, l'applicazione specifica gli attributi di file e la prima riga del contenuto. È disponibile un'opzione per la scrittura di informazioni in un file di log.  
@@ -186,8 +168,7 @@ Questa procedura dettagliata offre un'introduzione ai principi di base degli ele
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.IO>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>   
+ <xref:System.IO>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>  
  [Procedura dettagliata: Modifica di file mediante i metodi .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
-

@@ -5,26 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - resource files, .resources files
 - .resources files
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 10f714f5793fff4d6081c9fc910159a02e34e53b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2afcde97f5056c23f8d6bc294e955b75b5f166fd
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Creazione di file di risorse per applicazioni desktop
 È possibile includere risorse, ad esempio stringhe, immagini o dati di oggetti, all'interno di file di risorse per renderli facilmente disponibili per l'applicazione. In .NET Framework è possibile creare file di risorse in cinque modi diversi:  
@@ -65,7 +66,7 @@ name2=value2
   
  Il formato dei file di risorse con estensione txt e restext è identico. L'estensione restext serve semplicemente a rendere immediatamente identificabili i file di testo come file di risorse basati su testo.  
   
- Le risorse stringa sono visualizzate come coppie *name/value*, dove *name* è una stringa che identifica la risorsa e *value* è la stringa di risorsa che viene restituita quando si passa *name* a un metodo di recupero quale <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>. *name* e *value* devono essere separati da un segno di uguale (=). Ad esempio:  
+ Le risorse stringa sono visualizzate come coppie *name/value*, dove *name* è una stringa che identifica la risorsa e *value* è la stringa di risorsa che viene restituita quando si passa *name* a un metodo di recupero quale <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *name* e *value* devono essere separati da un segno di uguale (=). Ad esempio:  
   
 ```  
 FileMenuName=File  
@@ -77,7 +78,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  Non usare file di risorse per archiviare password, informazioni sensibili per la sicurezza o dati personali.  
   
- Stringhe vuote, ovvero risorse il cui valore è <xref:System.String.Empty?displayProperty=fullName>, sono consentite nei file di testo. Ad esempio:  
+ Stringhe vuote, ovvero risorse il cui valore è <xref:System.String.Empty?displayProperty=nameWithType>, sono consentite nei file di testo. Ad esempio:  
   
 ```  
 EmptyString=  
@@ -123,7 +124,8 @@ greeting=Hello, {0}!
   
  Nell'esempio seguente viene illustrato il codice sorgente per un'applicazione console che usa il file con estensione resources per visualizzare messaggi per l'utente.  
   
- [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)] [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
+ [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)]
+ [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
   
  Se si usa Visual Basic e il file di codice sorgente è denominato Greeting.vb, il comando seguente crea un file eseguibile che include il file con estensione resources incorporato:  
   
@@ -174,20 +176,21 @@ greeting=Hello, {0}!
   
 <a name="ResourcesFiles"></a>   
 ## <a name="resources-in-resources-files"></a>Risorse in file con estensione resources  
- È possibile usare la classe <xref:System.Resources.ResourceWriter?displayProperty=fullName> per creare a livello di codice un file di risorse binario con estensione resources direttamente dal codice. È anche possibile usare il [generatore di file di risorse (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per creare un file con estensione resources da un file di testo o da un file con estensione resx. Oltre a dati di tipo stringa, il file con estensione resources può contenere dati binari (matrici di byte) e dati di oggetto. Per creare un file con estensione resources a livello di codice è necessaria la procedura seguente:  
+ È possibile usare la classe <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> per creare a livello di codice un file di risorse binario con estensione resources direttamente dal codice. È anche possibile usare il [generatore di file di risorse (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) per creare un file con estensione resources da un file di testo o da un file con estensione resx. Oltre a dati di tipo stringa, il file con estensione resources può contenere dati binari (matrici di byte) e dati di oggetto. Per creare un file con estensione resources a livello di codice è necessaria la procedura seguente:  
   
 1.  Creare un oggetto <xref:System.Resources.ResourceWriter> con un nome file univoco. A tale scopo, specificare un nome file o un flusso di file per un costruttore della classe <xref:System.Resources.ResourceWriter>.  
   
-2.  Chiamare uno degli overload del metodo <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=fullName> per ogni risorsa denominata da aggiungere al file. La risorsa può essere una stringa, un oggetto o una raccolta di dati binari (una matrice di byte).  
+2.  Chiamare uno degli overload del metodo <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=nameWithType> per ogni risorsa denominata da aggiungere al file. La risorsa può essere una stringa, un oggetto o una raccolta di dati binari (una matrice di byte).  
   
-3.  Chiamare il metodo <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=fullName> per scrivere le risorse nel file e chiudere l'oggetto <xref:System.Resources.ResourceWriter>.  
+3.  Chiamare il metodo <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=nameWithType> per scrivere le risorse nel file e chiudere l'oggetto <xref:System.Resources.ResourceWriter>.  
   
 > [!NOTE]
 >  Non usare file di risorse per archiviare password, informazioni sensibili per la sicurezza o dati personali.  
   
  Nell'esempio seguente viene creato a livello di codice un file con estensione resources denominato CarResources.resources contenente sei stringhe, un'icona e due oggetti definiti dall'applicazione, ovvero due oggetti `Automobile`. Si noti che la classe `Automobile` definita e di cui è stata creata un'istanza nell'esempio viene contrassegnata con l'attributo <xref:System.SerializableAttribute>, che consente di renderla persistente al formattatore della serializzazione binaria.  
   
- [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)] [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
+ [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
+ [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
   
  Dopo aver creato il file con estensione resources, è possibile incorporarlo in un eseguibile di runtime o in una libreria, includendo l'opzione `/resource` del compilatore del linguaggio, oppure in un assembly satellite tramite [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
@@ -200,7 +203,6 @@ greeting=Hello, {0}!
  In fase di compilazione, Visual Studio prima converte i file con estensione resx di un progetto in file di risorse binari con estensione resources e li archivia in una sottodirectory della directory obj del progetto. Visual Studio incorpora ogni file di risorse che non contiene risorse localizzate nell'assembly principale generato dal progetto. Se tutti i file di risorse contengono risorse localizzate, Visual Studio li incorpora in assembly satellite separati per ognuna delle impostazioni cultura localizzate e archivia quindi ogni assembly satellite in una directory il cui nome corrisponde alle impostazioni cultura localizzate. Ad esempio, le risorse localizzate per l'inglese (Stati Uniti) vengono archiviate in un assembly satellite nella sottodirectory en-US.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Resources>   
- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)   
+ <xref:System.Resources>  
+ [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)  
  [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-

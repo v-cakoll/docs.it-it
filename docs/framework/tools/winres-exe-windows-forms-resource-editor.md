@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 8009f832434d6bbad2ad7bee9cbfd62c81d623c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: e2a2121d97cd1f7de211a72ed95e2fdf24bfac60
-ms.contentlocale: it-it
-ms.lasthandoff: 08/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (editor di risorse di Windows Form)
 Winres.exe, l'editor di risorse di Windows Form, è uno strumento di layout visivo appositamente studiato per facilitare la localizzazione delle risorse dell'interfaccia utente di Windows Form usate dai form. I file .resx o .resources usati come input per Winres.exe possono essere creati mediante un ambiente di progettazione visiva quale Microsoft Visual Studio. Per informazioni sulla distribuzione delle risorse in applicazioni .NET Framework, vedere [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md).  
@@ -149,12 +142,11 @@ winres /?
 5.  Selezionare le impostazioni cultura e la modalità file appropriate, quindi scegliere **OK**. Il file verrà salvato secondo le convenzioni di denominazione previste per i file di risorse localizzati. Se si localizza, ad esempio, il file `TestApp.resources` per la lingua tedesca in Germania, il file verrà salvato come `TestApp.de-DE.resources`. Se si localizza `TestApp.resx` per la lingua tedesca in Germania, il file verrà salvato come `TestApp.de-DE.resx`. Per altre informazioni sulle convenzioni di denominazione dei file di risorse, vedere [Creazione del pacchetto e distribuzione delle risorse](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Per un elenco dei nomi di impostazioni cultura predefiniti usati dal runtime, vedere la classe <xref:System.Globalization.CultureInfo>.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.ComponentModel.LocalizableAttribute>   
- <xref:System.Globalization.CultureInfo>   
- <xref:System.Resources.ResourceManager>   
- <xref:System.Resources.ResourceReader>   
- <xref:System.Resources.ResourceWriter>   
- [Strumenti](../../../docs/framework/tools/index.md)   
- [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)   
+ <xref:System.ComponentModel.LocalizableAttribute>  
+ <xref:System.Globalization.CultureInfo>  
+ <xref:System.Resources.ResourceManager>  
+ <xref:System.Resources.ResourceReader>  
+ <xref:System.Resources.ResourceWriter>  
+ [Strumenti](../../../docs/framework/tools/index.md)  
+ [Risorse nelle applicazioni desktop](../../../docs/framework/resources/index.md)  
  [Globalizzazione e localizzazione](../../../docs/standard/globalization-localization/index.md)
-

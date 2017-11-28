@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - reflection, reflection-only loader context
 - assemblies [.NET Framework], loading for reflection
@@ -16,16 +19,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: b1366107b7dca9b1a2128a91d4c9a66f72069e9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9af4fa8068f25fd22eafe3ac27fbd7a4c7697c30
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Procedura: caricare assembly nel contesto Reflection-Only
 Il contesto di caricamento di sola reflection consente di esaminare gli assembly compilati per altre piattaforme o altre versioni di .NET Framework. Il codice caricato in questo contesto può essere solo esaminato e non eseguito. Di conseguenza, poiché i costruttori non possono essere eseguiti, non è possibile creare oggetti. Non essendo possibile eseguire il codice, le dipendenze non vengono caricate automaticamente. Per esaminarle, è necessario caricarle manualmente.  
@@ -41,7 +43,7 @@ Il contesto di caricamento di sola reflection consente di esaminare gli assembly
   
 3.  Determinare se un assembly viene caricato nel contesto di sola reflection usando la proprietà <xref:System.Reflection.Assembly.ReflectionOnly%2A> dell'assembly.  
   
-4.  Se all'assembly o ai tipi in esso contenuti sono applicati attributi, esaminare gli attributi usando la classe <xref:System.Reflection.CustomAttributeData> per assicurarsi che non venga effettuato alcun tentativo di eseguire il codice nel contesto di sola reflection. Usare l'overload appropriato del metodo <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=fullName> per ottenere gli oggetti <xref:System.Reflection.CustomAttributeData> che rappresentano gli attributi applicati a un assembly, membro, modulo o parametro.  
+4.  Se all'assembly o ai tipi in esso contenuti sono applicati attributi, esaminare gli attributi usando la classe <xref:System.Reflection.CustomAttributeData> per assicurarsi che non venga effettuato alcun tentativo di eseguire il codice nel contesto di sola reflection. Usare l'overload appropriato del metodo <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> per ottenere gli oggetti <xref:System.Reflection.CustomAttributeData> che rappresentano gli attributi applicati a un assembly, membro, modulo o parametro.  
   
     > [!NOTE]
     >  Gli attributi applicati all'assembly o al relativo contenuto possono essere definiti nell'assembly o in un altro assembly caricato nel contesto di sola reflection. Non è possibile stabilire in anticipo dove sono definiti gli attributi.  
@@ -54,10 +56,11 @@ Il contesto di caricamento di sola reflection consente di esaminare gli assembly
 > [!NOTE]
 >  Per semplificare l'esempio di codice, l'assembly carica ed esamina se stesso. In genere, non è probabile che lo stesso assembly venga caricato sia nel contesto di esecuzione che nel contesto di sola reflection.  
   
- [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)] [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)] [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+ [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>   
- <xref:System.Reflection.Assembly.ReflectionOnly%2A>   
+ <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
+ <xref:System.Reflection.Assembly.ReflectionOnly%2A>  
  <xref:System.Reflection.CustomAttributeData>
-

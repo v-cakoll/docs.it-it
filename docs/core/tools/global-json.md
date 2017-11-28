@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 96102f96-d403-4385-8ef6-5d80e406eb0c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: ffa97164736fc7f3edc450682d23bdf499b6eb34
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="globaljson-reference"></a>Informazioni di riferimento di global.json
 
 Il file *global.json* consente di selezionare la versione degli strumenti di .NET Core usata nella proprietà `sdk`.
@@ -43,4 +41,3 @@ Ad esempio:
   }
 }
 ```
-

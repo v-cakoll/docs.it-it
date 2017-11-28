@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 703b7b13a2175fb9c40ff707f333a1bf1530df8c
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="standard-net-event-patterns"></a>Schemi di eventi .NET standard
 
 [Precedente](events-overview.md)
@@ -262,4 +260,3 @@ Conoscendo questi schemi e convenzioni è possibile scrivere velocemente codice 
 Ora si vedranno alcune modifiche di questi schemi nella versione più recente di .NET.
 
 [Successivo](modern-events.md)
-

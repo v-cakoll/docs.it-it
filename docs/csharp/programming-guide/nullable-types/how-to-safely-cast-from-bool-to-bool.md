@@ -1,39 +1,21 @@
 ---
 title: 'Procedura: eseguire il cast sicuro da bool? a bool (Guida per programmatori C#)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - casting [C#], nullable types
 - nullable types [C#], casting bool? to bool
 ms.assetid: e06e4274-a443-422d-8ef1-9dbf9df55237
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1a6fa65c15bb5f1da9960dbc17bd25b4087ab862
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c8a3dc3280b7dca802b327d9454c7f0ba9ed44be
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>Procedura: eseguire il cast sicuro da bool? a bool (Guida per programmatori C#)
 Il tipo nullable `bool?` può contenere tre valori diversi: `true`, `false` e `null`. Pertanto il tipo `bool?` non può essere usato in istruzioni condizionali, ad esempio con `if`, `for` o `while`. Il codice seguente, ad esempio, causa un errore di compilazione.  
@@ -66,8 +48,7 @@ if((bool)test) //now this cast is safe
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave letterali](../../../csharp/language-reference/keywords/literal-keywords.md)   
- [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md)   
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Parole chiave letterali](../../../csharp/language-reference/keywords/literal-keywords.md)  
+ [Tipi nullable](../../../csharp/programming-guide/nullable-types/index.md)  
  [?? (operatore)](../../../csharp/language-reference/operators/null-conditional-operator.md)
-

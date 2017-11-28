@@ -1,42 +1,23 @@
 ---
 title: -moduleassemblyname (opzione del compilatore C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /moduleassemblyname
-dev_langs:
-- CSharp
+f1_keywords: /moduleassemblyname
 helpviewer_keywords:
 - moduleassemblyname compiler option [C#]
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c8ebd6f7498adead4586c9e90ec58ca8efe81aaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2522609aa41ad944b37a8882c1cc56cd5967b330
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="moduleassemblyname-c-compiler-option"></a>/moduleassemblyname (opzione del compilatore C#)
 Specifica l'assembly i cui tipi non pubblici sono accessibili da un file con estensione NETMODULE.  
@@ -62,7 +43,7 @@ Specifica l'assembly i cui tipi non pubblici sono accessibili da un file con est
   
  Per altre informazioni sulla compilazione di un file con estensione netmodule, vedere [/target:module (opzione del compilatore C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
- Per altre informazioni sugli assembly Friend, vedere [Assembly Friend ](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+ Per altre informazioni sugli assembly Friend, vedere [Assembly Friend ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
  L'opzione non è disponibile all'interno dell'ambiente di sviluppo, ma soltanto durante la compilazione dalla riga di comando.  
   
@@ -116,8 +97,7 @@ class A {
 }  
 ```  
   
- **An_Internal_Class.Test called**   
+ **An_Internal_Class.Test called**  
 ## <a name="see-also"></a>Vedere anche  
- [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
+ [Opzioni del compilatore C#](../../../csharp/language-reference/compiler-options/index.md)  
  [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)
-

@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework, reducing system restarts
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 0019931c0ebe2bfef7ce8db72b768f31ad67f938
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d3f54e3794d1595ed120685a452478791e0ad37c
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Riduzione dei riavvii del sistema durante le installazioni di .NET Framework 4.5
 Il programma di installazione di [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa [Gestione riavvio](http://go.microsoft.com/fwlink/?LinkId=231425) per evitare, quando possibile, i riavvii del sistema durante l'installazione. Se il programma di installazione dell'app installa .NET Framework, può interagire con la Gestione riavvio per sfruttare i vantaggi di questa funzionalità. Per altre informazioni, vedere [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)  
@@ -50,7 +43,6 @@ Richiesta di chiusura delle app .NET Framework in uso
  Se si usa un programma di installazione concatenata, ma non si vuole visualizzare una finestra di messaggio personalizzata per la chiusura delle app, è possibile usare le opzioni `/showrmui` e `/passive` della riga di comando quando si concatena il processo di installazione di .NET Framework. Quando si usano queste opzioni insieme, il programma di installazione visualizza la finestra di messaggio per la chiusura delle app, che è possibile chiudere per evitare un riavvio del sistema. Questa finestra di messaggio ha lo stesso comportamento in modo passivo della finestra di messaggio visualizzata nell'interfaccia utente completa. Per il set completo delle opzioni della riga di comando per .NET Framework ridistribuibile, vedere [Guida alla distribuzione per sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Distribuzione](../../../docs/framework/deployment/index.md)   
- [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [Distribuzione](../../../docs/framework/deployment/index.md)  
+ [Guida alla distribuzione per gli sviluppatori](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [Procedura: Ottenere lo stato di avanzamento dal programma d'installazione di .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
-

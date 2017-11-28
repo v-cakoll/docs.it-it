@@ -1,38 +1,30 @@
 ---
-title: 'Procedura: popolare una struttura ad albero XML con un XmlWriter (LINQ to XML) (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: popolare un albero XML con un XmlWriter (LINQ to XML) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5792a0eb-94ee-440d-b601-58cca8c0ee0b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dfd10ec04e7293d90929d6f629201868028819ad
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 548e931a120a319bbd45885e6d1b60685d983c01
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Procedura: popolare una struttura ad albero XML con un XmlWriter (LINQ to XML) (Visual Basic)
-Per popolare una struttura ad albero XML è possibile utilizzare <xref:System.Xml.Linq.XContainer.CreateWriter%2A>per creare un <xref:System.Xml.XmlWriter>e quindi scrivere in <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XContainer.CreateWriter%2A> La struttura ad albero XML viene popolato con tutti i nodi scritti in <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter>  
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Procedura: popolare un albero XML con un XmlWriter (LINQ to XML) (Visual Basic)
+Per popolare un albero XML, è possibile usare <xref:System.Xml.Linq.XContainer.CreateWriter%2A> per creare <xref:System.Xml.XmlWriter>e quindi scrivere in <xref:System.Xml.XmlWriter>. L'albero XML viene popolato con tutti i nodi scritti in <xref:System.Xml.XmlWriter>.  
   
- In genere si utilizza questo metodo quando si utilizza [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] con un'altra classe che prevede di scrivere in un <xref:System.Xml.XmlWriter>, ad esempio <xref:System.Xml.Xsl.XslCompiledTransform>.</xref:System.Xml.Xsl.XslCompiledTransform> </xref:System.Xml.XmlWriter>  
+ Questo metodo viene in genere impiegato quando si usa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con un'altra classe che prevede di scrivere in un oggetto <xref:System.Xml.XmlWriter>, ad esempio <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ## <a name="example"></a>Esempio  
- Un possibile utilizzo di <xref:System.Xml.Linq.XContainer.CreateWriter%2A>è il richiamo di una trasformazione XSLT.</xref:System.Xml.Linq.XContainer.CreateWriter%2A> In questo esempio viene creato un albero XML, un <xref:System.Xml.XmlReader>dall'albero XML, crea un nuovo documento e quindi crea un <xref:System.Xml.XmlWriter>da scrivere nel documento nuovo.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> Viene quindi richiamata la trasformazione XSLT, passando <xref:System.Xml.XmlReader>e <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> Dopo il completamento della trasformazione, il nuovo albero XML viene popolato con i relativi risultati.  
+ Un possibile utilizzo di <xref:System.Xml.Linq.XContainer.CreateWriter%2A> è il richiamo di una trasformazione XSLT. In questo esempio viene creato un albero XML da cui viene creato un oggetto <xref:System.Xml.XmlReader>. Viene quindi creato un nuovo documento e infine viene creato un oggetto <xref:System.Xml.XmlWriter> per scrivere nel nuovo documento. Viene quindi richiamata la trasformazione XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter>. Dopo il completamento della trasformazione, il nuovo albero XML viene popolato con i relativi risultati.  
   
 ```vb  
 Dim xslMarkup As XDocument = _  
@@ -80,7 +72,7 @@ Console.WriteLine(newTree)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A></xref:System.Xml.Linq.XContainer.CreateWriter%2A>   
- <xref:System.Xml.XmlWriter></xref:System.Xml.XmlWriter>   
- <xref:System.Xml.Xsl.XslCompiledTransform></xref:System.Xml.Xsl.XslCompiledTransform>   
- [Creazione di strutture ad albero XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A>  
+ <xref:System.Xml.XmlWriter>  
+ <xref:System.Xml.Xsl.XslCompiledTransform>  
+ [Creazione di alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

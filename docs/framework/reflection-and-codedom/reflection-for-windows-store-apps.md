@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - reflection, Windows Store apps
 - .NET for Windows Store apps, TypeInfo class
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 80429810a46438cdbf7cf2993e5f3b0779d300c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd9f8dc3b17dee946155986fe9c66a4f4c4e1353
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflection in .NET Framework per applicazioni Windows Store
 A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], in .NET Framework è incluso un set di tipi e membri di reflection che possono essere utilizzati nelle applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Questi tipi e membri sono disponibili nella versione completa di .NET Framework, nonché in [.NET per app di Windows Store](http://go.microsoft.com/fwlink/?LinkID=225700). In questo documento vengono illustrate le differenze principali tra questi e le relative controparti in .NET Framework 4 e versioni precedenti.  
@@ -45,9 +46,9 @@ A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], in .NET Frame
 ## <a name="example"></a>Esempio  
  In questo esempio vengono utilizzati i tipi e i membri di reflection in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] per recuperare i metodi e le proprietà del tipo <xref:System.Globalization.Calendar>, inclusi i metodi e le proprietà ereditati. Per eseguire questo codice, incollarlo nel file di codice di una pagina di [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] in cui è contenuto un controllo [Windows.UI.Xaml.Controls.Textblock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) denominato `textblock1` in un progetto denominato Reflection. Se si incolla il codice nel progetto con un nome diverso, assicurarsi di modificare il nome dello spazio dei nomi affinché corrisponda al progetto.  
   
- [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)] [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
+ [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
+ [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)   
+ [Reflection](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [.NET per app di Windows Store – API supportate](http://go.microsoft.com/fwlink/?LinkID=225700)
-

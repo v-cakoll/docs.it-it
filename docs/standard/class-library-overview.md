@@ -41,16 +41,15 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b88c85eaeabc7fa87b483c7302bd5e135e3fd276
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-class-library-overview"></a>Cenni preliminari sulla libreria di classi .NET Framework
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] include classi, interfacce e tipi di valore che consentono di ottimizzare il processo di sviluppo rendendolo più rapido e che forniscono accesso alle funzionalità di sistema. Per facilitare l'interoperabilità tra i linguaggi, la maggior parte dei tipi .NET Framework è compatibile con la specifica CLS (Common Language Specification) e può pertanto essere utilizzata da qualsiasi linguaggio di programmazione dotato di compilatore conforme a tale specifica.  
@@ -114,7 +113,6 @@ Oggetti ass|<xref:System.Object>|Il primo livello della gerarchia di oggetti.|**
  Per altre informazioni sugli spazi dei nomi, esplorare la [libreria di classi .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195). Nella documentazione di riferimento viene fornita una breve panoramica di ciascuno spazio dei nomi nonché una descrizione formale di ogni tipo e dei relativi membri.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Common Type System](../../docs/standard/base-types/common-type-system.md)   
- [Libreria di classi .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)   
+ [Common Type System](../../docs/standard/base-types/common-type-system.md)  
+ [Libreria di classi .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
  [Panoramica](../../docs/framework/get-started/overview.md)
-

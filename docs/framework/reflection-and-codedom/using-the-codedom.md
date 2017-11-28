@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - code compilers
 - Code Document Object Model
@@ -24,16 +27,15 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 939a64919e9982232f6e8bd99070fe96e242b9bd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cd594e9087a158ab8d5372ad72019cf3e04c38af
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="using-the-codedom"></a>Utilizzo di CodeDOM
 Con CodeDOM vengono offerti tipi che rappresentano molti tipi comuni di elementi di codice sorgente. È possibile progettare un programma che compili un modello di codice sorgente usando elementi CodeDOM per assemblare un grafico di oggetti. Da tale grafico è possibile produrre codice sorgente in uno dei linguaggi di programmazione supportati tramite un generatore di codice CodeDOM. CodeDOM può anche essere usato per compilare codice sorgente in un assembly binario.  
@@ -51,7 +53,7 @@ Con CodeDOM vengono offerti tipi che rappresentano molti tipi comuni di elementi
  La struttura di un grafico CodeDOM può essere paragonata a una struttura ad albero di contenitori. Il contenitore di primo livello, o radice, di ogni grafico CodeDOM compilabile è un <xref:System.CodeDom.CodeCompileUnit>. Ogni elemento del modello di codice sorgente deve essere collegato al grafico tramite una proprietà di un <xref:System.CodeDom.CodeObject> nel grafico.  
   
 ### <a name="building-a-source-code-model-for-a-sample-hello-world-program"></a>Compilazione di un modello di codice sorgente per un programma di esempio Hello World  
- Di seguito viene illustrato come compilare un grafico di oggetti CodeDOM che rappresenta il codice di una semplice applicazione di esempio Hello World. Per il codice sorgente completo di questo esempio di codice, vedere l'argomento <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>.  
+ Di seguito viene illustrato come compilare un grafico di oggetti CodeDOM che rappresenta il codice di una semplice applicazione di esempio Hello World. Per il codice sorgente completo di questo esempio di codice, vedere l'argomento <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>.  
   
 #### <a name="creating-a-compile-unit"></a>Creazione di un'unità di compilazione  
  CodeDOM definisce un oggetto denominato <xref:System.CodeDom.CodeCompileUnit>, in grado di fare riferimento a un grafico di oggetti CodeDOM che modella il codice sorgente da compilare. Una **CodeCompileUnit** possiede proprietà per l'archiviazione di riferimenti ad attributi, spazi dei nomi e assembly.  
@@ -62,39 +64,51 @@ Con CodeDOM vengono offerti tipi che rappresentano molti tipi comuni di elementi
   
  Per creare una nuova unità di compilazione, è possibile usare la sintassi illustrata nel seguente esempio:  
   
- [!code-cpp[CodeDomExample#12](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#12)] [!code-csharp[CodeDomExample#12](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#12)] [!code-vb[CodeDomExample#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#12)]  
+ [!code-cpp[CodeDomExample#12](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#12)]
+ [!code-csharp[CodeDomExample#12](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#12)]
+ [!code-vb[CodeDomExample#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#12)]  
   
  Una <xref:System.CodeDom.CodeSnippetCompileUnit> può contenere una sezione di codice sorgente che è già nella forma del linguaggio di destinazione, ma non può essere compilata in un altro linguaggio.  
   
 #### <a name="defining-a-namespace"></a>Definizione di uno spazio dei nomi  
  Per definire uno spazio dei nomi, creare un <xref:System.CodeDom.CodeNamespace> e assegnarvi un nome usando il costruttore appropriato o impostandone la proprietà **Name**.  
   
- [!code-cpp[CodeDomExample#13](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#13)] [!code-csharp[CodeDomExample#13](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#13)] [!code-vb[CodeDomExample#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#13)]  
+ [!code-cpp[CodeDomExample#13](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#13)]
+ [!code-csharp[CodeDomExample#13](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#13)]
+ [!code-vb[CodeDomExample#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#13)]  
   
 #### <a name="importing-a-namespace"></a>Importazione di uno spazio dei nomi  
  Per aggiungere allo spazio dei nomi una direttiva per l'importazione di uno spazio dei nomi, aggiungere una <xref:System.CodeDom.CodeNamespaceImport> che indica lo spazio dei nomi da importare nella raccolta **CodeNamespace.Imports**.  
   
  Nel codice riportato di seguito viene aggiunta un'importazione dello spazio dei nomi **System** alla raccolta **Imports** di un **CodeNamespace** denominata `samples`:  
   
- [!code-cpp[CodeDomExample#14](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#14)] [!code-csharp[CodeDomExample#14](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#14)] [!code-vb[CodeDomExample#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#14)]  
+ [!code-cpp[CodeDomExample#14](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#14)]
+ [!code-csharp[CodeDomExample#14](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#14)]
+ [!code-vb[CodeDomExample#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#14)]  
   
 #### <a name="linking-code-elements-into-the-object-graph"></a>Collegamento di elementi di codice nel grafico di oggetti  
  Tutti gli elementi di codice che compongono un grafico CodeDOM devono essere collegati alla <xref:System.CodeDom.CodeCompileUnit> che costituisce l'elemento radice della struttura ad albero da una serie di riferimenti tra elementi a cui si fa direttamente riferimento dalle proprietà dell'oggetto radice del grafico. Per stabilire un riferimento da un oggetto contenitore, impostare un oggetto su una proprietà dell'oggetto contenitore.  
   
  L'istruzione seguente aggiunge il `samples` **CodeNamespace** alla proprietà di raccolta **Namespaces** dell'oggetto **CodeCompileUnit** radice.  
   
- [!code-cpp[CodeDomExample#15](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#15)] [!code-csharp[CodeDomExample#15](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#15)] [!code-vb[CodeDomExample#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#15)]  
+ [!code-cpp[CodeDomExample#15](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#15)]
+ [!code-csharp[CodeDomExample#15](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#15)]
+ [!code-vb[CodeDomExample#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#15)]  
   
 #### <a name="defining-a-type"></a>Definizione di un tipo  
  Per dichiarare una classe, struttura, interfaccia o enumerazione con CodeDOM, creare un nuovo <xref:System.CodeDom.CodeTypeDeclaration> e assegnarvi un nome. Nell'esempio seguente viene illustrata questa operazione tramite l'overload di un costruttore per impostare la proprietà **Name**:  
   
- [!code-cpp[CodeDomExample#16](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#16)] [!code-csharp[CodeDomExample#16](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#16)] [!code-vb[CodeDomExample#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#16)]  
+ [!code-cpp[CodeDomExample#16](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#16)]
+ [!code-csharp[CodeDomExample#16](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#16)]
+ [!code-vb[CodeDomExample#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#16)]  
   
  Per aggiungere un tipo a uno spazio dei nomi, aggiungere una <xref:System.CodeDom.CodeTypeDeclaration> che rappresenta il tipo da aggiungere allo spazio dei nomi per la raccolta **Types** di un **CodeNamespace**.  
   
  Nell'esempio seguente viene illustrato come aggiungere una classe di nome `class1` a un **CodeNamespace** denominato `samples`:  
   
- [!code-cpp[CodeDomExample#17](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#17)] [!code-csharp[CodeDomExample#17](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#17)] [!code-vb[CodeDomExample#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#17)]  
+ [!code-cpp[CodeDomExample#17](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#17)]
+ [!code-csharp[CodeDomExample#17](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#17)]
+ [!code-vb[CodeDomExample#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#17)]  
   
 #### <a name="adding-class-members-to-a-class"></a>Aggiunta di membri a una classe  
  Con lo spazio dei nomi <xref:System.CodeDom> vengono offerti diversi elementi che possono essere usati per rappresentare membri di classi. Ogni membro di classe può essere aggiunto alla raccolta **Members** di una <xref:System.CodeDom.CodeTypeDeclaration>.  
@@ -104,11 +118,15 @@ Con CodeDOM vengono offerti tipi che rappresentano molti tipi comuni di elementi
   
  Nell'esempio seguente viene illustrato come definire un punto di ingresso che contenga una <xref:System.CodeDom.CodeMethodInvokeExpression> che chiama **System.Console.WriteLine** per scrivere "Hello World!":  
   
- [!code-cpp[CodeDomExample#18](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#18)] [!code-csharp[CodeDomExample#18](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#18)] [!code-vb[CodeDomExample#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#18)]  
+ [!code-cpp[CodeDomExample#18](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#18)]
+ [!code-csharp[CodeDomExample#18](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#18)]
+ [!code-vb[CodeDomExample#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#18)]  
   
  L'istruzione seguente aggiunge il metodo del punto di ingresso denominato `Start` alla raccolta **Members** di `class1`:  
   
- [!code-cpp[CodeDomExample#19](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#19)] [!code-csharp[CodeDomExample#19](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#19)] [!code-vb[CodeDomExample#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#19)]  
+ [!code-cpp[CodeDomExample#19](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source2.cpp#19)]
+ [!code-csharp[CodeDomExample#19](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#19)]
+ [!code-vb[CodeDomExample#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#19)]  
   
  A questo punto l'oggetto <xref:System.CodeDom.CodeCompileUnit> denominato `compileUnit` contiene il grafico CodeDOM di un semplice programma Hello World. Per informazioni sulla generazione e compilazione di codice da un grafico CodeDOM, vedere [Generazione di codice sorgente e compilazione di un programma a partire da un grafico CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md).  
   
@@ -118,4 +136,3 @@ Con CodeDOM vengono offerti tipi che rappresentano molti tipi comuni di elementi
  Per la documentazione dei diversi tipi CodeDOM, vedere la documentazione di riferimento relativa allo spazio dei nomi <xref:System.CodeDom>.  
   
  Per una tavola di consultazione rapida che consenta di individuare l'elemento CodeDOM che rappresenta uno specifico tipo di elemento di codice, vedere [Riferimento rapido per CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524).
-

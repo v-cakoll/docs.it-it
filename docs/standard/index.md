@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7819424510fe33c775cefb195f78697aef8b512d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-guide"></a>Guida di .NET
 
 La Guida di .NET include numerose informazioni su .NET.  A seconda del livello di familiarità di .NET, è consigliabile consultare sezioni diverse di questa Guida e altre sezioni della documentazione di .NET.
@@ -68,4 +66,3 @@ Per informazioni sui tre principali linguaggi .NET, è anche possibile consultar
 ## <a name="api-reference"></a>Riferimento API
 
 Per informazioni sulla portata delle API disponibili, consultare il [riferimento per le API .NET](../../api/index.md).
-

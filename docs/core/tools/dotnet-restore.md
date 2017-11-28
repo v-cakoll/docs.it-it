@@ -8,18 +8,17 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 82a78dcb0cc85e2ba087b6df5ee029cbfb687358
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
-ms.openlocfilehash: 86de979257d4e1be3a29d8876494b7f4966e5b1c
-ms.contentlocale: it-it
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `dotnet restore`: ripristina le dipendenze e gli strumenti di un progetto.
 
@@ -44,6 +43,8 @@ dotnet restore [-h|--help]
 ## <a name="description"></a>Descrizione
 
 Il comando `dotnet restore` usa NuGet per ripristinare le dipendenze e gli strumenti specifici del progetto definiti nel file di progetto. Per impostazione predefinita, il ripristino delle dipendenze e degli strumenti viene eseguito in parallelo.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 Per ripristinare le dipendenze, NuGet necessita dei feed in cui si trovano i pacchetti. I feed vengono forniti in genere tramite il file di configurazione *NuGet.config*. Durante l'installazione degli strumenti dell'interfaccia della riga di comando, viene fornito un file di configurazione predefinito. È possibile specificare più feed creando un file *NuGet.config* nella directory del progetto. È inoltre possibile specificare feed aggiuntivi per ogni chiamata a un prompt dei comandi.
 
@@ -170,4 +171,3 @@ Ripristinare le dipendenze e gli strumenti per il progetto nella directory corre
 Ripristinare le dipendenze e gli strumenti per il progetto nella directory corrente e mostrare solo un output minimo:
 
 `dotnet restore --verbosity minimal`
-

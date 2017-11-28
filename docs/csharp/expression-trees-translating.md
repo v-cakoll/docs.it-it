@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 602a17591d27ebfd098516453b9028bca37ad5e3
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="translating-expression-trees"></a>Traduzione degli alberi delle espressioni
 
 [Precedente -- Creazione di espressioni](expression-trees-building.md)
@@ -205,4 +203,3 @@ Mi auguro che abbiamo percepito la vera potenza degli alberi delle espressioni.
 È possibile esaminare un set di codice, apportare modifiche a tale codice ed eseguire la versione modificata. Dal momento che gli alberi delle espressioni sono immutabili, è possibile creare nuovi alberi usando i componenti degli alberi esistenti. Questa operazione riduce la quantità di memoria necessaria per creare alberi delle espressioni modificati.
 
 [Successivo -- Conclusioni](expression-trees-summary.md)
-

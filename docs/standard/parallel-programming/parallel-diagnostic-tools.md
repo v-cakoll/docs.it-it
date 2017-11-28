@@ -1,37 +1,39 @@
 ---
-title: "Parallel Diagnostic Tools | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "parallel programming, debugging and profiling tools"
+title: Strumenti di diagnostica in parallelo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ad6875d4937ab0ee68dcb9c6d6f51d079851cdc5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Parallel Diagnostic Tools
-In [!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] viene fornito un ampio supporto per il debug e la profilatura delle applicazioni multithreading.  
+# <a name="parallel-diagnostic-tools"></a>Strumenti di diagnostica in parallelo
+[!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] fornisce supporto completo per il debug e la profilatura di applicazioni multithread.  
   
-## Debug  
- Il debugger di Visual Studio aggiunge nuove finestre per il debug di applicazioni parallele.  Per ulteriori informazioni, vedere i seguenti argomenti:  
+## <a name="debugging"></a>Debug  
+ Il debugger di Visual Studio aggiunge nuove finestre le applicazioni parallele di debug. Per altre informazioni, vedere i seguenti argomenti:  
   
--   [Utilizzo della finestra Stack in parallelo](../Topic/Using%20the%20Parallel%20Stacks%20Window.md)  
+-   [Uso della finestra Stack in parallelo](/visualstudio/debugger/using-the-parallel-stacks-window)  
   
--   [Utilizzo della finestra Attività](../Topic/Using%20the%20Tasks%20Window.md)  
+-   [Uso della finestra Attività](/visualstudio/debugger/using-the-tasks-window)  
   
--   [Procedura dettagliata: debug di un'applicazione parallela](../Topic/Walkthrough:%20Debugging%20a%20Parallel%20Application.md).  
+-   [Procedura dettagliata: debug di un'applicazione parallela](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).  
   
-## Profilatura  
- Le visualizzazioni di rapporti del visualizzatore di concorrenze consentono di visualizzare come i thread in un programma parallelo interagiscono tra loro e con i thread di altri processi nel sistema.  Per ulteriori informazioni, vedere [Visualizzatore di concorrenze](../Topic/Concurrency%20Visualizer.md).  
+## <a name="profiling"></a>Profilatura  
+ Le visualizzazioni del report del Visualizzatore di concorrenza consentono di visualizzare come i thread in un programma parallelo interagiscono tra loro e con i thread di altri processi nel sistema. Per altre informazioni, vedere [Visualizzatore di concorrenza](/visualstudio/profiling/concurrency-visualizer).  
   
-## Vedere anche  
- [Parallel Programming](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [Programmazione parallela](../../../docs/standard/parallel-programming/index.md)

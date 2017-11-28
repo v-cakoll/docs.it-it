@@ -1,30 +1,21 @@
 ---
 title: Limitazione delle richieste di thread (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 98ae68c1-ace8-44b9-9317-8920ac9ef2b6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 09dd597e8ac7a6b336f71891ccc89984ea659614
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-pooling-c"></a>Limitazione delle richieste di thread (C#)
 Un *pool di thread* è una Collection di thread che è possibile usare per eseguire diverse attività in background. Per informazioni generali, vedere [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md). In questo modo il thread primario è libero di eseguire altre attività in modo asincrono.  
@@ -37,7 +28,7 @@ Un *pool di thread* è una Collection di thread che è possibile usare per esegu
   
  È possibile implementare un pool di thread personalizzato, ma risulta più agevole usare quello fornito con .NET Framework tramite la classe <xref:System.Threading.ThreadPool>.  
   
- Per creare un pool di thread, si chiama il metodo <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> con un delegato per la routine da eseguire e tramite C# si crea il thread e si esegue la routine.  
+ Per creare un pool di thread, si chiama il metodo <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> con un delegato per la routine da eseguire e tramite C# si crea il thread e si esegue la routine.  
   
 ## <a name="thread-pooling-example"></a>Esempio di limitazione delle richieste di thread  
  Nell'esempio seguente viene illustrato come usare la limitazione delle richieste di thread per avviare svariate attività.  
@@ -76,11 +67,10 @@ private void AnotherLongTask(Object state)
  Non è possibile usare le strutture per restituire valori all'interno di oggetti di stato. Poiché le strutture sono tipi valore, le modifiche apportate dal processo asincrono non comportano la modifica dei membri della struttura originale. Utilizzare le strutture per fornire parametri nei casi in cui non sono necessari i valori restituiti.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading>   
- <xref:System.Threading.ThreadPool>   
- [Procedura: Usare un pool di thread (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)   
- [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
- [Applicazioni multithreading (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading>  
+ <xref:System.Threading.ThreadPool>  
+ [Procedura: Usare un pool di thread (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)  
+ [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
+ [Applicazioni multithreading (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [Sincronizzazione di thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 46b25b9eb518d2dadb3ec069c5d4d61a929262f2
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="application-domains"></a>Domini applicazione
 I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di isolamento tra le applicazioni. Windows, ad esempio, usa i processi per isolare le applicazioni. L'isolamento è necessario per garantire che il codice in esecuzione in un'applicazione non interferisca con altre applicazioni non correlate.  
@@ -65,7 +63,7 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
     > [!NOTE]
     >  Non è possibile scaricare singoli assembly o tipi. È possibile scaricare solo un dominio completo.  
   
--   Il codice in esecuzione in un'applicazione non può accedere direttamente al codice o alle risorse di un'altra applicazione. Common Language Runtime assicura tale isolamento impedendo le chiamate dirette tra gli oggetti appartenenti a domini applicazione diversi. Il passaggio di un oggetto da un dominio all'altro avviene tramite copia o usando un proxy. Se l'oggetto viene copiato, la chiamata all'oggetto è locale. In altre parole, sia l'oggetto a cui viene fatto riferimento che il chiamante si trovano nello stesso dominio applicazione. Se si accede all'oggetto tramite un proxy, la chiamata all'oggetto è remota. In questo caso, l'oggetto a cui viene fatto riferimento e il chiamante si trovano in domini applicazione diversi. Le chiamate tra domini usano la stessa infrastruttura di chiamata remota delle chiamate tra due processi o tra due computer. I metadati relativi all'oggetto a cui viene fatto riferimento devono essere pertanto disponibili per entrambi i domini applicazione, affinché il compilatore JIT possa compilare la chiamata in modo corretto. Se il dominio chiamante non ha accesso ai metadati per l'oggetto chiamato, la compilazione può avere esito negativo, con un'eccezione di tipo **System.IO.FileNotFound**. Per altri dettagli, vedere [Oggetti remoti](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58). Il meccanismo che stabilisce in che modo è possibile accedere a un oggetto da un dominio diverso è determinato dall'oggetto. Per altre informazioni, vedere <xref:System.MarshalByRefObject?displayProperty=fullName>.  
+-   Il codice in esecuzione in un'applicazione non può accedere direttamente al codice o alle risorse di un'altra applicazione. Common Language Runtime assicura tale isolamento impedendo le chiamate dirette tra gli oggetti appartenenti a domini applicazione diversi. Il passaggio di un oggetto da un dominio all'altro avviene tramite copia o usando un proxy. Se l'oggetto viene copiato, la chiamata all'oggetto è locale. In altre parole, sia l'oggetto a cui viene fatto riferimento che il chiamante si trovano nello stesso dominio applicazione. Se si accede all'oggetto tramite un proxy, la chiamata all'oggetto è remota. In questo caso, l'oggetto a cui viene fatto riferimento e il chiamante si trovano in domini applicazione diversi. Le chiamate tra domini usano la stessa infrastruttura di chiamata remota delle chiamate tra due processi o tra due computer. I metadati relativi all'oggetto a cui viene fatto riferimento devono essere pertanto disponibili per entrambi i domini applicazione, affinché il compilatore JIT possa compilare la chiamata in modo corretto. Se il dominio chiamante non ha accesso ai metadati per l'oggetto chiamato, la compilazione può avere esito negativo, con un'eccezione di tipo **System.IO.FileNotFound**. Per altri dettagli, vedere [Oggetti remoti](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58). Il meccanismo che stabilisce in che modo è possibile accedere a un oggetto da un dominio diverso è determinato dall'oggetto. Per altre informazioni, vedere <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 -   L'ambito del comportamento del codice viene stabilito dall'applicazione in cui questo è in esecuzione. In altri termini, il dominio applicazione fornisce impostazioni di configurazione quali i criteri di controllo delle versioni dell'applicazione, la posizione degli assembly remoti a cui questa accede e le informazioni sul percorso degli assembly che vengono caricati nel dominio.  
   
@@ -110,12 +108,12 @@ I sistemi operativi e gli ambienti runtime forniscono solitamente una forma di i
   
  Non esiste una relazione uno a uno tra domini applicazione e thread. È possibile eseguire diversi thread nello stesso dominio applicazione contemporaneamente e un particolare thread non è confinato a un singolo dominio applicazione. I thread possono quindi estendersi oltre i limiti dei domini applicazione. Non viene creato un nuovo thread per ogni dominio applicazione.  
   
- In qualsiasi momento, ogni thread viene eseguito in un dominio applicazione. In qualsiasi dominio applicazione potrebbero essere in esecuzione zero, uno o più thread. Il runtime tiene traccia dei thread in esecuzione nei diversi domini applicazione. In qualsiasi momento è possibile individuare il dominio in cui un thread viene eseguito chiamando il metodo <xref:System.Threading.Thread.GetDomain%2A?displayProperty=fullName>.  
+ In qualsiasi momento, ogni thread viene eseguito in un dominio applicazione. In qualsiasi dominio applicazione potrebbero essere in esecuzione zero, uno o più thread. Il runtime tiene traccia dei thread in esecuzione nei diversi domini applicazione. In qualsiasi momento è possibile individuare il dominio in cui un thread viene eseguito chiamando il metodo <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.  
   
 ### <a name="application-domains-and-cultures"></a>Domini applicazione e impostazioni cultura  
- Le impostazioni cultura, rappresentate da un oggetto <xref:System.Globalization.CultureInfo>, sono associate ai thread. È possibile ottenere le impostazioni cultura associate al thread attualmente in esecuzione tramite la proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e ottenere o impostare le impostazioni cultura associate al thread attualmente in esecuzione tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName>. Se le impostazioni cultura associate a un thread sono state impostate in modo esplicito tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName>, continueranno a essere associate al thread in questione quando da quest'ultimo vengono superati i limiti del dominio applicazione. In caso contrario, le impostazioni cultura associate al thread in un determinato momento sono determinate dal valore della proprietà <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=fullName> nel dominio applicazione in cui il thread è in esecuzione:  
+ Le impostazioni cultura, rappresentate da un oggetto <xref:System.Globalization.CultureInfo>, sono associate ai thread. È possibile ottenere le impostazioni cultura associate al thread attualmente in esecuzione tramite la proprietà <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> e ottenere o impostare le impostazioni cultura associate al thread attualmente in esecuzione tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Se le impostazioni cultura associate a un thread sono state impostate in modo esplicito tramite la proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, continueranno a essere associate al thread in questione quando da quest'ultimo vengono superati i limiti del dominio applicazione. In caso contrario, le impostazioni cultura associate al thread in un determinato momento sono determinate dal valore della proprietà <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> nel dominio applicazione in cui il thread è in esecuzione:  
   
--   Se il valore della proprietà non è `null`, le impostazioni cultura che vengono restituite dalla proprietà sono associate al thread e pertanto restituite dalle proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>.  
+-   Se il valore della proprietà non è `null`, le impostazioni cultura che vengono restituite dalla proprietà sono associate al thread e pertanto restituite dalle proprietà <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> e <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>.  
   
 -   Se il valore della proprietà è `null`, le impostazioni cultura correnti del sistema vengono associate al thread.  
   
@@ -171,5 +169,4 @@ Value (to append) = COMPLUS_LoaderOptimization=1
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Riferimento  
- <xref:System.MarshalByRefObject?displayProperty=fullName>
-
+ <xref:System.MarshalByRefObject?displayProperty=nameWithType>

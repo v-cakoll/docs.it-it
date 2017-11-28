@@ -1,42 +1,23 @@
 ---
 title: async (Riferimenti per C#)
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- async_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: async_CSharpKeyword
 helpviewer_keywords:
 - async keyword [C#]
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1dc7ba08d1a79d17d625755a6d60565aee6945e3
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="async-c-reference"></a>async (Riferimenti per C#)
 Usare il modificatore `async` per specificare che un metodo, un'[espressione lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) o un [metodo anonimo](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) sia asincrono. Se si usa questo modificatore in un metodo o in un'espressione, viene indicato come *metodo asincrono*. L'esempio seguente definisce un metodo asincrono denominato `ExampleMethodAsync`: 
@@ -48,7 +29,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
  
-Se non si ha esperienza di programmazione asincrona o non si sa in che modo un metodo asincrono usa la parola chiave `await` per eseguire attività potenzialmente prolungate senza bloccare il thread del chiamante, leggere l'introduzione in [Programmazione asincrona con async e await](../../../csharp/programming-guide/concepts/async/index.md). Il codice seguente si trova all'interno di un metodo asincrono e chiama il metodo <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=fullName>: 
+Se non si ha esperienza di programmazione asincrona o non si sa in che modo un metodo asincrono usa la parola chiave `await` per eseguire attività potenzialmente prolungate senza bloccare il thread del chiamante, leggere l'introduzione in [Programmazione asincrona con async e await](../../../csharp/programming-guide/concepts/async/index.md). Il codice seguente si trova all'interno di un metodo asincrono e chiama il metodo <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType>: 
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -82,7 +63,7 @@ Per eseguire il codice come app di Windows Store:
 - Incollare questo codice nella classe `MainPage` in MainPage.xaml.cs.  
 - Aggiungere direttive using per System.Net.Http e System.Threading.Tasks.  
   
-[!code-cs[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
+[!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
 >  Per altre informazioni sulle attività e sul codice eseguito in attesa di un'attività, vedere [Programmazione asincrona con async e await](../../../csharp/programming-guide/concepts/async/index.md). Per un esempio di WPF completo che usa elementi simili, vedere [Procedura dettagliata: accesso al Web tramite async e await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
@@ -106,8 +87,7 @@ A partire da C# 7, si restituisce a un altro tipo, in genere un tipo valore, che
 Per altre informazioni ed esempi, vedere [Tipi restituiti asincroni](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
- [await](../../../csharp/language-reference/keywords/await.md)   
- [Procedura dettagliata: accesso al Web con async e await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+ <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+ [await](../../../csharp/language-reference/keywords/await.md)  
+ [Procedura dettagliata: Accesso al Web tramite Async e Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [Programmazione asincrona con async e await](../../../csharp/programming-guide/concepts/async/index.md)
-

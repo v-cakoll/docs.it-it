@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: e93a1d116ac0480c80e259ddbadbc65fd9539389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0287c3f250a57f7a685191702be3ad5cc28fbec6
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Prompt dei comandi per gli sviluppatori per Visual Studio
 Il prompt dei comandi per gli sviluppatori per Visual Studio imposta automaticamente le variabili di ambiente che consentono di usare facilmente gli strumenti di .NET Framework. Il prompt dei comandi per gli sviluppatori viene installato con le versioni complete o della Community di Visual Studio. Non viene installato con le versioni Express di Visual Studio.  
@@ -102,6 +95,5 @@ Il prompt dei comandi per gli sviluppatori per Visual Studio imposta automaticam
  Successivamente, viene aggiunta la nuova voce di menu ed è possibile accedere al prompt dei comandi dal menu **Strumenti**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)   
+ [Strumenti](../../../docs/framework/tools/index.md)  
  [Gestione di strumenti esterni](/visualstudio/ide/managing-external-tools)
-

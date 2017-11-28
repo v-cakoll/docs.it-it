@@ -1,12 +1,9 @@
 ---
 title: "Ereditarietà (Guida per programmatori C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01092b94c83f50b16604428780b2786496017732
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="inheritance-c-programming-guide"></a>Ereditarietà (Guida per programmatori C#)
 
@@ -50,14 +32,14 @@ L'ereditarietà, insieme all'incapsulamento e al polimorfismo, rappresenta una d
   
  Quando si definisce una classe derivandola da un'altra classe, la classe derivata acquista implicitamente tutti i membri della classe di base, con l'eccezione dei costruttori e dei finalizzatori. Di conseguenza, la classe derivata può riusare il codice definito nella classe di base senza doverlo implementare nuovamente. Nella classe derivata è possibile aggiungere altri membri. In questo modo, la classe derivata estende la funzionalità della classe di base.  
   
- La figura riportata di seguito illustra una classe `WorkItem` che rappresenta un elemento di lavoro in un qualche processo aziendale. Come per tutte le classi, è derivata da <xref:System.Object?displayProperty=fullName> ed eredita tutti i metodi di tale classe. `WorkItem` aggiunge cinque propri membri, tra i quali un costruttore, perché i costruttori non vengono ereditati. La classe `ChangeRequest` eredita da `WorkItem` e rappresenta un particolare tipo di elemento di lavoro. `ChangeRequest` aggiunge altri due membri ai membri che eredita da `WorkItem` e da <xref:System.Object>. Deve aggiungere il proprio costruttore e aggiunge anche `originalItemID`. La proprietà `originalItemID` consente l'associazione dell'istanza di `ChangeRequest` all'oggetto `WorkItem` originale a cui si applica la richiesta di modifica.  
+ La figura riportata di seguito illustra una classe `WorkItem` che rappresenta un elemento di lavoro in un qualche processo aziendale. Come per tutte le classi, è derivata da <xref:System.Object?displayProperty=nameWithType> ed eredita tutti i metodi di tale classe. `WorkItem` aggiunge cinque propri membri, tra i quali un costruttore, perché i costruttori non vengono ereditati. La classe `ChangeRequest` eredita da `WorkItem` e rappresenta un particolare tipo di elemento di lavoro. `ChangeRequest` aggiunge altri due membri ai membri che eredita da `WorkItem` e da <xref:System.Object>. Deve aggiungere il proprio costruttore e aggiunge anche `originalItemID`. La proprietà `originalItemID` consente l'associazione dell'istanza di `ChangeRequest` all'oggetto `WorkItem` originale a cui si applica la richiesta di modifica.  
   
  ![Ereditarietà delle classi](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
 Ereditarietà delle classi  
   
- Nell'esempio seguente viene illustrato come le relazioni tra le classi mostrate nella precedente illustrazione vengono espresse in C#. Nell'esempio viene descritto anche come `WorkItem` esegue l'override del metodo virtuale <xref:System.Object.ToString%2A?displayProperty=fullName> e come la classe `ChangeRequest` eredita l'implementazione del metodo propria della classe `WorkItem`.  
+ Nell'esempio seguente viene illustrato come le relazioni tra le classi mostrate nella precedente illustrazione vengono espresse in C#. Nell'esempio viene descritto anche come `WorkItem` esegue l'override del metodo virtuale <xref:System.Object.ToString%2A?displayProperty=nameWithType> e come la classe `ChangeRequest` eredita l'implementazione del metodo propria della classe `WorkItem`.  
   
- [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
 ## <a name="abstract-and-virtual-methods"></a>Metodi virtuali e astratti  
  Quando una classe di base dichiara un metodo come [virtual](../../../csharp/language-reference/keywords/virtual.md) (virtuale), una classe derivata può [eseguire l'override](../../../csharp/language-reference/keywords/override.md) del metodo definendo una propria implementazione. Se una classe di base dichiara un membro come [abstract](../../../csharp/language-reference/keywords/abstract.md) (astratto), è necessario effettuare l'override di tale metodo in ogni classe non astratta che eredita direttamente da tale classe. Quando una classe derivata è essa stessa astratta, eredita i membri astratti senza implementarli. I membri astratti e virtuali costituiscono la base del polimorfismo, che rappresenta la seconda principale caratteristica della programmazione orientata a oggetti. Per altre informazioni, vedere [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
@@ -68,7 +50,7 @@ Ereditarietà delle classi
 ## <a name="interfaces"></a>Interfacce  
  Un'*interfaccia* rappresenta un tipo di riferimento ed è per vari aspetti simile a una classe di base astratta costituita solo da membri astratti. Quando una classe implementa un'interfaccia, deve fornire un'implementazione per tutti i membri definiti nell'interfaccia. Una classe può implementare più interfacce, anche se può essere derivata solo da una singola classe di base diretta.  
   
- Le interfacce sono usate per definire specifiche funzionalità per le classi che non sono necessariamente caratterizzate da una relazione di tipo "è un". Ad esempio, l'interfaccia <xref:System.IEquatable%601?displayProperty=fullName> può essere implementata da qualunque classe o struct che debba abilitare il codice client per determinare se due oggetti di un dato tipo sono equivalenti, indipendentemente da come il tipo definisca l'equivalenza. <xref:System.IEquatable%601> non implica lo stesso tipo di relazione "è" esistente tra una classe di base e una classe derivata. Ad esempio, un `Mammal` è un `Animal`. Per altre informazioni, vedere [Interfacce](../../../csharp/programming-guide/interfaces/index.md).  
+ Le interfacce sono usate per definire specifiche funzionalità per le classi che non sono necessariamente caratterizzate da una relazione di tipo "è un". Ad esempio, l'interfaccia <xref:System.IEquatable%601?displayProperty=nameWithType> può essere implementata da qualunque classe o struct che debba abilitare il codice client per determinare se due oggetti di un dato tipo sono equivalenti, indipendentemente da come il tipo definisca l'equivalenza. <xref:System.IEquatable%601> non implica lo stesso tipo di relazione "è" esistente tra una classe di base e una classe derivata. Ad esempio, un `Mammal` è un `Animal`. Per altre informazioni, vedere [Interfacce](../../../csharp/programming-guide/interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Prevenzione di un'ulteriore derivazione  
  È possibile evitare che altre classi ereditino da una data classe o da uno qualsiasi dei suoi membri, dichiarando tale classe o tale membro come [sealed](../../../csharp/language-reference/keywords/sealed.md). Per altre informazioni, vedere [Classi e membri delle classi astratte e sealed](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
@@ -77,8 +59,7 @@ Ereditarietà delle classi
  Una classe derivata può nascondere i membri di una classe di base dichiarando dei membri con lo stesso nome e la stessa firma. Il modificatore [new](../../../csharp/language-reference/keywords/new.md) può essere usato per indicare in modo esplicito che un membro non costituisce un override del membro della classe di base. L'uso del modificatore [new](../../../csharp/language-reference/keywords/new.md) non è necessario. Tuttavia, se il modificatore [new](../../../csharp/language-reference/keywords/new.md) non viene usato, il compilatore genererà un avviso. Per altre informazioni, vedere [Controllo delle versioni con le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) e [Sapere quando usare le parole chiave Override e New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Classi e struct](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  [struct](../../../csharp/language-reference/keywords/struct.md)
-

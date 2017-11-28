@@ -2,8 +2,7 @@
 title: Problemi di migrazione di .NET Framework 4
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
@@ -12,14 +11,12 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: mariaw
 manager: wpickett
+ms.openlocfilehash: a959e49fe4b400efc93de382837741083085de9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
-ms.openlocfilehash: c3803a6bd9f64c89197f8514c624e1bd54d36886
-ms.contentlocale: it-it
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-framework-4-migration-issues"></a>Problemi di migrazione di .NET Framework 4
 
 Questo argomento descrive i problemi di migrazione tra .NET Framework 3.5 Service Pack 1 e .NET Framework 4 e include correzioni, modifiche per la conformità agli standard e la protezione e modifiche basate sul feedback degli utenti. La maggior parte di queste modifiche non richiede alcuna modifica a livello di codice delle applicazioni. Per quelle che possono comportare la modifica del codice, vedere la colonna Modifiche consigliate della tabella.
@@ -263,7 +260,7 @@ Spazi dei nomi: <xref:System.Windows>, <xref:System.Windows.Controls>, <xref:Sys
 | **Binding di istanze di comandi** | Per offrire un meccanismo per il binding di istanze di comandi basate su View-Model a movimenti di input basati su View, la classe <xref:System.Windows.Input.InputBinding> ora eredita da <xref:System.Windows.Freezable> anziché da <xref:System.Windows.DependencyObject>. Le proprietà seguenti sono ora proprietà di dipendenza:<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>I risultati cambiano nel modo seguente:<br><br>* Un oggetto <xref:System.Windows.Input.InputBinding> ora è bloccato durante la registrazione anziché rimanere modificabile.<br>* Non è possibile accedere a oggetti <xref:System.Windows.Input.InputBinding> di livello istanza da più thread a causa di restrizioni della classe <xref:System.Windows.DependencyObject>.<br>* Non è possibile modificare i binding di input a livello di classe dopo la registrazione a causa di restrizioni della classe <xref:System.Windows.Freezable>.<br>* Non è possibile specificare binding di input nelle istanze di comando che vengono create in un ambiente View-Model. | Se i binding devono essere modificabili, creare istanze distinte di una classe <xref:System.Windows.Input.InputBinding> su thread separati oppure bloccarle in un altro modo. Non modificare un <xref:System.Windows.Input.InputBinding> statico di livello classe dopo che è stato registrato. |
 | **Applicazioni browser** | Le applicazioni browser WPF (con estensione xbap) ora elaborano gli eventi chiave come le applicazioni WPF standalone, per cui gli oggetti ricevono eventi chiave indirizzati nell'ordine corretto. | Nessuno. |
 | **Combinazioni di tasti a cui non è associata alcuna funzione** | WPF disattiva i tasti a cui non è associata alcuna funzione che non producono caratteri visibili, ma indica che il tasto va combinato con il tasto lettera contiguo per produrre un carattere. Gli eventi di input dei tasti, ad esempio l'evento <xref:System.Windows.Input.Keyboard.KeyDownEvent>, segnalano quando un tasto non è associato ad alcuna funzione impostando la proprietà <xref:System.Windows.Input.KeyEventArgs.Key> sul valore <xref:System.Windows.Input.Key>. Questo comportamento è in genere previsto perché le applicazioni non rispondono a input da tastiera che creano un carattere combinato. | Le applicazioni che prevedono la lettura di tasti che fanno parte di un carattere combinato possono ottenere il tasto disattivato usando la proprietà <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey>. |
-| **Gestione dello stato attivo** | Quando il metodo <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=fullName> riceve un elemento la cui proprietà associata [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) è impostata su `true` restituisce un elemento corrispondente all'ultimo elemento attivato da tastiera nell'ambito di attivazione corrente solo se l'elemento restituito appartiene allo stesso oggetto <xref:System.Windows.PresentationSource> al quale appartiene l'elemento passato al metodo. | Nessuno. |
+| **Gestione dello stato attivo** | Quando il metodo <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=nameWithType> riceve un elemento la cui proprietà associata [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) è impostata su `true` restituisce un elemento corrispondente all'ultimo elemento attivato da tastiera nell'ambito di attivazione corrente solo se l'elemento restituito appartiene allo stesso oggetto <xref:System.Windows.PresentationSource> al quale appartiene l'elemento passato al metodo. | Nessuno. |
 
 ### <a name="ui-automation"></a>Automazione interfaccia utente
 
@@ -340,4 +337,3 @@ Spazi dei nomi: <xref:System.Xml.Linq>, <xref:System.Xml.Schema>, <xref:System.X
 
 [Elementi obsoleti in .NET Framework](https://msdn.microsoft.com/library/ee461502(v=vs.110).aspx)   
 [Problemi di migrazione di applicazioni per .NET Framework 4: dalla versione Beta 2 alla versione RTM](http://go.microsoft.com/fwlink/?LinkId=191505)
-

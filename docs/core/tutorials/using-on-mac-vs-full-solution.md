@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 60179fb0435803c3235b75ba012e588c6f1b35d3
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creazione di una soluzione .NET Core completa in macOS con Visual Studio per Mac
 
 Visual Studio per Mac offre un ambiente di sviluppo integrato completo per lo sviluppo di applicazioni .NET Core. Questo argomento descrive il processo di creazione di una soluzione .NET Core contenente una libreria riutilizzabile e unit test.
@@ -48,7 +46,7 @@ Per altre informazioni sui prerequisiti, vedere [Prerequisiti per .NET Core in M
 
 1. Nella barra laterale **Soluzione** espandere il nodo `TextUtils` per visualizzare il file di classe fornito dal modello: *Class1.cs*. Fare clic con il pulsante destro del mouse sul file, scegliere **Rinomina** dal menu di scelta rapida e rinominare il file in *WordCount.cs*. Aprire il file e sostituire il contenuto con il codice seguente:
 
-   [!code-csharp[Principale](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
+   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
 
 1. Salvare il file adottando uno di questi tre metodi: usare la scelta rapida da tastiera <kbd>&#8984;</kbd>+<kbd>s</kbd>, scegliere **File** > **Salva** dal menu o fare clic con il pulsante destro del mouse sulla scheda del file e scegliere **Salva** dal menu di scelta rapida. Nell'immagine seguente viene visualizzata la finestra dell'IDE:
 
@@ -168,7 +166,7 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 
 1. Aprire il file *Program.cs*. Sostituire il codice con quello seguente:
 
-   [!code-csharp[Principale](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
+   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
 1. Per eseguire l'app in una finestra della console anziché nell'IDE, fare clic con il pulsante destro del mouse sul progetto `WordCounterApp`, scegliere **Opzioni** e aprire il nodo **Predefinito** in **Configurazioni**. Selezionare la casella di controllo **Esegui in console esterna**. Lasciare selezionata l'opzione **Sospendi output della console**. Con questa impostazione l'app viene generata in una finestra della console in cui è possibile digitare l'input per le istruzioni `Console.ReadLine`. Se invece si lascia che l'app venga eseguita nell'ambiente IDE, è possibile vedere solo l'output delle istruzioni `Console.WriteLine`. Le istruzioni `Console.ReadLine` non funzionano nel pannello **Output applicazione** dell'ambiente IDE.
 
@@ -199,4 +197,3 @@ Gli unit test forniscono test software automatici durante le fasi di sviluppo e 
 ## <a name="see-also"></a>Vedere anche
 
 [Note sulla versione di Visual Studio 2017 per Mac](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)
-

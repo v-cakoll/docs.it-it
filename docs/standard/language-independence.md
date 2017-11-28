@@ -6,18 +6,19 @@ author: dotnet-bot
 ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
+ms.openlocfilehash: ed48191ee397bb5f892a7afba6dfbfa2d06e1045
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: 3da0bc3c9abf28aeb588ec9277c4e0b503df4d8b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="language-independence-and-language-independent-components"></a>Indipendenza del linguaggio e componenti indipendenti dal linguaggio
 
 .NET è indipendente dal linguaggio. Questo significa che gli sviluppatori possono lavorare in uno dei diversi linguaggi che hanno come destinazione le implementazioni di .NET, ad esempio C#, F# e Visual Basic. È possibile accedere a tipi e membri di librerie di classi sviluppate per le implementazioni di .NET senza dover conoscere il linguaggio in cui sono stati originariamente scritti e senza dover seguire nessuna delle convenzioni del linguaggio originale. Se si è uno sviluppatore di componenti, è possibile accedere al componente da qualsiasi applicazione .NET, indipendentemente dal linguaggio.
@@ -2952,5 +2953,4 @@ Per eseguire la compilazione con C#, modificare il nome del compilatore da vbc a
 ```
 csc example.cs /r:UtilityLib.dll
 ```
-
 

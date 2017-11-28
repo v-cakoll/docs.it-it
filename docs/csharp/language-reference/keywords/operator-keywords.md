@@ -1,39 +1,21 @@
 ---
 title: Parole chiave per operatori (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1d30e85dd76f37c797ec212b9e0700ab93a21a67
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f1109fb343ebed3dc66e14664ed5ba470750f59
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="operator-keywords-c-reference"></a>Parole chiave per operatori (Riferimenti per C#)
 Consentono di eseguire diversi tipi di operazioni, come creare oggetti, controllare il tipo di runtime di un oggetto, ottenere la dimensione di un tipo e altre azioni. In questa sezione vengono presentate le parole chiave seguenti:  
@@ -79,8 +61,7 @@ Consentono di eseguire diversi tipi di operazioni, come creare oggetti, controll
 -   [unchecked](../../../csharp/language-reference/keywords/unchecked.md) Specifica il contesto non verificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
+ [Riferimenti per C#](../../../csharp/language-reference/index.md)  
+ [Guida per programmatori C#](../../../csharp/programming-guide/index.md)  
+ [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)  
  [Operatori C#](../../../csharp/language-reference/operators/index.md)
-

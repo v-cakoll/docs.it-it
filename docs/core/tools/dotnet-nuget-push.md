@@ -7,18 +7,17 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 6721615e4df820ab50ea4f79fbba30daeffe8165
-ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a>Nome
 
 `dotnet nuget push`: effettua il push di un pacchetto nel server e lo pubblica.
 
@@ -107,4 +106,3 @@ Effettua il push di tutti i file con estensione *nupkg* presenti nella directory
 Effettua il push di tutti i file con estensione *nupkg* presenti nella directory corrente all'origine push predefinita con il massimo livello di dettaglio:
 
 `dotnet nuget push *.nupkg --verbosity detailed`
-

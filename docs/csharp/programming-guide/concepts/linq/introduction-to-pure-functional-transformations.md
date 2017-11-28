@@ -1,25 +1,21 @@
 ---
 title: Introduzione alle trasformazioni funzionali pure (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 535d022b68fd4d08f04648fb98f5a7a7c53ed6e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 34c4b94577291f300dd2a14ffc33a5ec04b31782
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Introduzione alle trasformazioni funzionali pure (C#)
 Contenuto della sezione vengono presentate le trasformazioni funzionali, inclusi i concetti sottostanti e i costrutti di linguaggio che le supportano. In particolare viene eseguito il confronto tra la programmazione orientata a oggetti e quella basata sulle trasformazioni funzionali e vengono forniti consigli utili su come effettuare la transizione a quest'ultima. Sebbene le trasformazioni funzionali possano essere usate in molti scenari di programmazione, come esempio concreto viene usata la trasformazione XML.  
@@ -36,4 +32,3 @@ Contenuto della sezione vengono presentate le trasformazioni funzionali, inclusi
   
 ## <a name="see-also"></a>Vedere anche  
  [Trasformazioni funzionali pure di XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
-

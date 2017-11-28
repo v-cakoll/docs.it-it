@@ -1,41 +1,22 @@
 ---
 title: dynamic (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- dynamic_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: dynamic_CSharpKeyword
 helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e3bf51ab62e195f7a5d1f0641f62380977c731ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b68a6ef4dc3dda01638b9bb84db58ba77214f490
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dynamic-c-reference"></a>dynamic (Riferimenti per C#)
 `dynamic` abilita le operazioni in cui il tipo appare per ignorare il controllo del tipo in fase di compilazione. Queste operazioni vengono risolte in fase di esecuzione. Il tipo `dynamic` semplifica l'accesso alle API COM, ad esempio le API di automazione di Office, e anche ad API dinamiche come le librerie di IronPython e al modello DOM (Document Object Model) HTML.  
@@ -44,7 +25,7 @@ ms.lasthandoff: 07/28/2017
   
  Nell'esempio seguente vengono messe a confronto una variabile di tipo `dynamic` e una variabile di tipo `object`. Per verificare il tipo di ogni variabile in fase di compilazione, posizionare il puntatore del mouse su `dyn` o `obj` nelle istruzioni `WriteLine`. IntelliSense visualizza **dynamic** per `dyn` e **object** per `obj`.  
   
- [!code-cs[csrefKeywordsTypes#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_1.cs)]  
   
  Le istruzioni `WriteLine` visualizzano i tipi in fase di esecuzione di `dyn` e `obj`. A questo punto, entrambe hanno lo stesso tipo, un numero intero. Viene generato l'output seguente:  
   
@@ -66,31 +47,30 @@ obj = obj + 3;
   
 -   Nelle dichiarazioni, come tipo di proprietà, campo, indicizzatore, parametro, valore restituito, variabile locale o vincolo di tipo. La definizione di classe seguente usa `dynamic` in molte dichiarazioni diverse.  
   
-     [!code-cs[csrefKeywordsTypes#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_2.cs)]  
+     [!code-csharp[csrefKeywordsTypes#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_2.cs)]  
   
 -   Nelle conversioni di tipo esplicito, ad esempio il tipo di destinazione di una conversione.  
   
-     [!code-cs[csrefKeywordsTypes#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_3.cs)]  
+     [!code-csharp[csrefKeywordsTypes#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_3.cs)]  
   
 -   In qualsiasi contesto in cui i tipi vengono usati come valori, ad esempio sul lato destro di un operatore `is` o un operatore `as`, o come argomento di `typeof` come parte di un tipo costruito. Ad esempio, `dynamic` può essere usato nelle espressioni seguenti.  
   
-     [!code-cs[csrefKeywordsTypes#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_4.cs)]  
+     [!code-csharp[csrefKeywordsTypes#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_4.cs)]  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene usato `dynamic` in diverse dichiarazioni. Il metodo `Main` confronta anche il controllo dei tipi in fase di compilazione con il controllo dei tipi in fase di esecuzione.  
   
- [!code-cs[csrefKeywordsTypes#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_5.cs)]  
+ [!code-csharp[csrefKeywordsTypes#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_5.cs)]  
   
  Per altre informazioni ed esempi, vedere [Uso del tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Dynamic.ExpandoObject?displayProperty=fullName>   
- <xref:System.Dynamic.DynamicObject?displayProperty=fullName>   
- [Uso del tipo dinamico](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [object](../../../csharp/language-reference/keywords/object.md)   
- [is](../../../csharp/language-reference/keywords/is.md)   
- [as](../../../csharp/language-reference/keywords/as.md)   
- [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [Procedura: Eseguire il cast sicuro usando gli operatori as e is](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)   
+ <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>  
+ <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
+ [Uso del tipo dinamico](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [object](../../../csharp/language-reference/keywords/object.md)  
+ [is](../../../csharp/language-reference/keywords/is.md)  
+ [as](../../../csharp/language-reference/keywords/as.md)  
+ [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+ [Procedura: Eseguire il cast sicuro usando gli operatori as e is](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
  [Procedura dettagliata: Creazione e utilizzo di oggetti dinamici](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
-

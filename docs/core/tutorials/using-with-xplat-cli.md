@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
+ms.openlocfilehash: 19622cca1dd28d4d2248d69f1b4081c352a0c4f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 53894b7548b7bedfe3a980efd53a076c0e4efc7f
-ms.contentlocale: it-it
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introduzione all'uso di .NET Core su Windows/Linux/macOS dalla riga di comando
 
 Questo argomento illustra come iniziare a sviluppare app multipiattaforma nel computer usando gli strumenti dell'interfaccia della riga di comando di .NET Core.
@@ -63,6 +61,8 @@ Ecco una descrizione rapida dei comandi digitati:
    Il programma inizia con `using System`, che significa "porta tutti gli elementi presenti nello spazio dei nomi `System` nell'ambito relativo a questo file". Lo spazio dei nomi `System` include costrutti di base come `string` o tipi numerici.
 
    Viene quindi definito uno spazio dei nomi denominato `Hello`. È comunque possibile modificare il nome secondo le proprie esigenze. All'interno dello spazio dei nomi viene definita una classe denominata `Program` con un metodo `Main` che accetta come argomento una matrice di stringhe. Tale matrice contiene l'elenco degli argomenti passati nel momento in cui viene chiamato il programma compilato. Così com'è, questa matrice non viene usata: il programma, infatti, si limita a scrivere "Hello World!" nella console. Successivamente saranno apportate modifiche al codice che userà tale argomento.
+
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 2. `$ dotnet restore`
 
@@ -133,7 +133,7 @@ I file singoli vanno bene per semplici programmi One-Off, ma se si crea un'app p
 
 2. Modificare il metodo `Main` del file *Program.cs* per creare un'istanza della nuova classe e chiamare il metodo come illustrato nell'esempio seguente :
 
-   [!code-csharp[Nuovo Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. Eseguire [`dotnet build`](../tools/dotnet-build.md) per compilare le modifiche.
 
@@ -164,4 +164,3 @@ Si noti che i comandi e i passaggi illustrati in questa esercitazione per esegui
 ## <a name="see-also"></a>Vedere anche
 
 [Organizing and testing projects with the .NET Core CLI tools](testing-with-cli.md) (Organizzazione e test di progetti con gli strumenti dell'interfaccia della riga di comando di .NET Core)
-

@@ -16,19 +16,18 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: aa2392775f0bd2d68c0aeb28aa0654b690b11808
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipi di Collection Hashtable e Dictionary
-La classe <xref:System.Collections.Hashtable?displayProperty=fullName> e le classi generiche <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> implementano l'interfaccia <xref:System.Collections.IDictionary?displayProperty=fullName>. La classe generica <xref:System.Collections.Generic.Dictionary%602> implementa inoltre l'interfaccia generica <xref:System.Collections.Generic.IDictionary%602>. Ogni elemento di queste raccolte è pertanto una coppia chiave-valore.  
+La classe <xref:System.Collections.Hashtable?displayProperty=nameWithType> e le classi generiche <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementano l'interfaccia <xref:System.Collections.IDictionary?displayProperty=nameWithType>. La classe generica <xref:System.Collections.Generic.Dictionary%602> implementa inoltre l'interfaccia generica <xref:System.Collections.Generic.IDictionary%602>. Ogni elemento di queste raccolte è pertanto una coppia chiave-valore.  
   
  Un oggetto <xref:System.Collections.Hashtable> è costituito da bucket che contengono gli elementi della raccolta. Un bucket è un sottogruppo virtuale di elementi all'interno di <xref:System.Collections.Hashtable>, che rende più semplici e veloci le operazioni di ricerca e recupero rispetto alla maggior parte delle raccolte. Ogni bucket è associato a un codice hash, generato usando una funzione hash ed basato sulla chiave dell'elemento.  
   
@@ -45,11 +44,10 @@ La classe <xref:System.Collections.Hashtable?displayProperty=fullName> e le clas
  Le classi <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602> hanno la stessa funzionalità della classe <xref:System.Collections.Hashtable>. Un oggetto <xref:System.Collections.Generic.Dictionary%602> di un tipo specifico (diverso da <xref:System.Object>) offre prestazioni migliori rispetto a un oggetto <xref:System.Collections.Hashtable> per i tipi di valore, in quanto gli elementi di <xref:System.Collections.Hashtable> sono di tipo <xref:System.Object>. Le conversioni boxing e unboxing vengono in genere eseguite quando si archivia o si recupera un tipo di valore. La classe <xref:System.Collections.Concurrent.ConcurrentDictionary%602> deve essere usata quando più thread potrebbero accedere contemporaneamente alla raccolta.  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Collections.Hashtable>   
- <xref:System.Collections.IDictionary>   
- <xref:System.Collections.IHashCodeProvider>   
- <xref:System.Collections.Generic.Dictionary%602>   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>   
+ <xref:System.Collections.Hashtable>  
+ <xref:System.Collections.IDictionary>  
+ <xref:System.Collections.IHashCodeProvider>  
+ <xref:System.Collections.Generic.Dictionary%602>  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
  [Tipi di raccolte comunemente utilizzate](../../../docs/standard/collections/commonly-used-collection-types.md)
-

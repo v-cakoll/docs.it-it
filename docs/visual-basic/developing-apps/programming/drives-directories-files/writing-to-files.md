@@ -1,45 +1,27 @@
 ---
 title: Scrittura su file in Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
-- files, writing to
+- files [Visual Basic], writing to
 - examples [Visual Basic], writing to files
-- writing to files
+- writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0fe0432ab37ee22869924e7885aefc0fcfa29312
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c2bee678ced4cfbcae186f298b228e691d1e6cd3
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Scrittura su file in Visual Basic
 Questa sezione spiega come eseguire attività che riguardano la scrittura su file.  
@@ -58,7 +40,7 @@ Questa sezione spiega come eseguire attività che riguardano la scrittura su fil
  Illustra come creare e scrivere su in un file di testo nuovo nella directory **Documenti**.  
   
  [Procedura: scrivere testo in file con un oggetto StreamWriter](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
- Illustra come scrivere in un file con un oggetto <xref:System.IO.StreamWriter?displayProperty=fullName>.  
+ Illustra come scrivere in un file con un oggetto <xref:System.IO.StreamWriter?displayProperty=nameWithType>.  
   
 ## <a name="reference"></a>Riferimento  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
@@ -85,4 +67,3 @@ Questa sezione spiega come eseguire attività che riguardano la scrittura su fil
   
  [Codifiche dei file](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Offre una panoramica della codifiche di file.
-

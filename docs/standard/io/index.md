@@ -16,16 +16,15 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="file-and-stream-io"></a>I/O di file e di flussi
 I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati da o verso un supporto di archiviazione. In .NET Framework gli spazi dei nomi [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) contengono i tipi che consentono la lettura e la scrittura, sia in modo sincrono che in modo asincrono, su flussi di dati e file. Questi spazi dei nomi contengono anche i tipi che eseguono la compressione e la decompressione dei file e i tipi che consentono la comunicazione tra le pipe e le porte seriali.  
@@ -33,7 +32,7 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
  Un file è una raccolta ordinata e denominata di byte con archivio permanente. Quando si lavora con i file, si usano i percorsi di directory, l'archiviazione su disco e i nomi di file e directory. Al contrario, un flusso è una sequenza di byte che è possibile usare per leggere e scrivere in un archivio di backup, che può essere uno fra vari supporti di archiviazione (ad esempio, dischi o memoria). Così come esistono vari archivi di backup che non siano dischi, sono disponibili diversi tipi di flussi che non siano flussi di file, ad esempio la rete, la memoria e i flussi delle pipe.  
   
 ## <a name="files-and-directories"></a>File e directory  
- È possibile usare i tipi nello spazio dei nomi <xref:System.IO?displayProperty=fullName> per interagire con i file e le directory. Ad esempio, è possibile ottenere e impostare le proprietà dei file e delle directory e recuperare le raccolte di file e directory in base ai criteri di ricerca.  
+ È possibile usare i tipi nello spazio dei nomi <xref:System.IO?displayProperty=nameWithType> per interagire con i file e le directory. Ad esempio, è possibile ottenere e impostare le proprietà dei file e delle directory e recuperare le raccolte di file e directory in base ai criteri di ricerca.  
   
  Di seguito sono riportate alcune classi di file e directory comunemente usate:  
   
@@ -47,7 +46,7 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
   
 -   <xref:System.IO.Path>: fornisce metodi e proprietà che consentono di elaborare le stringhe di directory indipendentemente dalla piattaforma.  
   
- Oltre a usare queste classi, gli utenti di Visual Basic possono usare i metodi e le proprietà forniti dalla classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName> per l'I/O di file.  
+ Oltre a usare queste classi, gli utenti di Visual Basic possono usare i metodi e le proprietà forniti dalla classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> per l'I/O di file.  
   
  Vedere [Procedura: copiare le directory](../../../docs/standard/io/how-to-copy-directories.md), [Procedura: creare una visualizzazione directory](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Procedura: enumerare directory e file](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
@@ -83,7 +82,7 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
  Per un esempio relativo all'uso dei flussi in modo asincrono, vedere [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
 ## <a name="readers-and-writers"></a>Reader e writer  
- Lo spazio dei nomi <xref:System.IO?displayProperty=fullName> fornisce anche i tipi per leggere caratteri codificati dai flussi e per scriverli nei flussi. In genere i flussi sono progettati per l'input e l'output di byte. I tipi reader e writer gestiscono la conversione dei caratteri codificati in byte e viceversa, in modo che il flusso possa completare l'operazione. Ogni classe reader e writer è associata a un flusso, che può essere recuperato tramite la proprietà `BaseStream` della classe.  
+ Lo spazio dei nomi <xref:System.IO?displayProperty=nameWithType> fornisce anche i tipi per leggere caratteri codificati dai flussi e per scriverli nei flussi. In genere i flussi sono progettati per l'input e l'output di byte. I tipi reader e writer gestiscono la conversione dei caratteri codificati in byte e viceversa, in modo che il flusso possa completare l'operazione. Ogni classe reader e writer è associata a un flusso, che può essere recuperato tramite la proprietà `BaseStream` della classe.  
   
  Di seguito sono riportate alcune classi comunemente usate di reader e writer:  
   
@@ -105,7 +104,7 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
  Per altre informazioni, vedere [I/O di file asincrono](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
 ## <a name="compression"></a>Compressione  
- Per compressione si intende il processo di riduzione della dimensione di un file per l'archiviazione. La decompressione è il processo di estrazione del contenuto di un file compresso in modo che sia in un formato utilizzabile. Lo spazio dei nomi <xref:System.IO.Compression?displayProperty=fullName> contiene i tipi per la compressione e la decompressione di file e flussi.  
+ Per compressione si intende il processo di riduzione della dimensione di un file per l'archiviazione. La decompressione è il processo di estrazione del contenuto di un file compresso in modo che sia in un formato utilizzabile. Lo spazio dei nomi <xref:System.IO.Compression?displayProperty=nameWithType> contiene i tipi per la compressione e la decompressione di file e flussi.  
   
  Le classi seguenti vengono spesso usate quando si comprimono e si decomprimono i file e i flussi:  
   
@@ -156,7 +155,7 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
  Per altre informazioni sulle operazioni di I/O in un'applicazione [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], vedere [Guida rapida: Lettura e scrittura di un file](http://go.microsoft.com/fwlink/p/?LinkId=243072) nel Windows Dev Center.  
   
 ## <a name="io-and-security"></a>I/O e sicurezza  
- Quando si usano le classi nello spazio dei nomi <xref:System.IO?displayProperty=fullName>, è necessario soddisfare i requisiti di sicurezza del sistema operativo, ad esempio gli elenchi di controllo dell'accesso (ACL), che controllano l'accesso ai file e alle directory. Vanno anche soddisfatti i requisiti imposti da <xref:System.Security.Permissions.FileIOPermission>. Gli elenchi di controllo dell'accesso (ACL) possono essere gestiti a livello di codice. Per altre informazioni, vedere [Procedura: aggiungere o rimuovere voci dell'elenco di controllo di accesso (ACL)](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+ Quando si usano le classi nello spazio dei nomi <xref:System.IO?displayProperty=nameWithType>, è necessario soddisfare i requisiti di sicurezza del sistema operativo, ad esempio gli elenchi di controllo dell'accesso (ACL), che controllano l'accesso ai file e alle directory. Vanno anche soddisfatti i requisiti imposti da <xref:System.Security.Permissions.FileIOPermission>. Gli elenchi di controllo dell'accesso (ACL) possono essere gestiti a livello di codice. Per altre informazioni, vedere [Procedura: aggiungere o rimuovere voci dell'elenco di controllo di accesso (ACL)](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
  I criteri di sicurezza predefiniti impediscono alle applicazioni Internet o Intranet di accedere ai file nel computer dell'utente. Pertanto, nello scrivere codice che verrà scaricato da Internet o Intranet, non usare classi I/O che richiedono un percorso a un file fisico. In alternativa, usare lo [spazio di memorizzazione isolato](../../../docs/standard/io/isolated-storage.md) per le applicazioni .NET Framework tradizionali o [dati dell'applicazione](http://go.microsoft.com/fwlink/?LinkId=229175) per le applicazioni [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
@@ -183,4 +182,3 @@ I/O (input/output) di file e di flussi fa riferimento al trasferimento di dati d
 -   [File mappati alla memoria](../../../docs/standard/io/memory-mapped-files.md)  
   
  Vengono descritti i file mappati alla memoria, che includono il contenuto dei file su disco nella memoria virtuale. È possibile usare file mappati alla memoria per modificare file molto grandi e per creare memoria condivisa per la comunicazione interprocesso.
-

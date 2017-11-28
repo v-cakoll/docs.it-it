@@ -1,45 +1,26 @@
 ---
 title: 'Procedura dettagliata: scrittura di query in C# (LINQ)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
 - LINQ [C#], writing queries
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: c0885c3cc989260cf67608bec0ff512c9f4835f6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aef03dca681f0b3d24f2ab55eef4ae29ee515132
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Procedura dettagliata: scrittura di query in C# (LINQ)
 Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizzate per scrivere espressioni di query LINQ.  
@@ -47,7 +28,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
 ## <a name="create-a-c-project"></a>Creare un progetto C#  
   
 > [!NOTE]
->  Le istruzioni seguenti riguardano Visual Studio. Se si usa un ambiente di sviluppo diverso, creare un progetto console con un riferimento a System.Core.dll e una direttiva `using` per lo spazio dei nomi <xref:System.Linq?displayProperty=fullName>.  
+>  Le istruzioni seguenti riguardano Visual Studio. Se si usa un ambiente di sviluppo diverso, creare un progetto console con un riferimento a System.Core.dll e una direttiva `using` per lo spazio dei nomi <xref:System.Linq?displayProperty=nameWithType>.  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Per creare un progetto in Visual Studio  
   
@@ -63,7 +44,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
      Il nuovo progetto verrà visualizzato in **Esplora soluzioni**.  
   
-5.  Si noti che il progetto contiene un riferimento a System.Core.dll e una direttiva `using` per lo spazio dei nomi <xref:System.Linq?displayProperty=fullName>.  
+5.  Si noti che il progetto contiene un riferimento a System.Core.dll e una direttiva `using` per lo spazio dei nomi <xref:System.Linq?displayProperty=nameWithType>.  
   
 ## <a name="create-an-in-memory-data-source"></a>Creare un'origine dati in memoria  
  L'origine dati per le query è un semplice elenco di oggetti `Student`. Ogni record `Student` ha un nome, un cognome e una matrice di interi che rappresenta i punteggi dei test nella classe. Copiare questo codice nel progetto. Tenere presente le seguenti caratteristiche:  
@@ -80,7 +61,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 -   Aggiungere la classe `Student` e l'elenco di studenti inizializzato alla classe `Program` nel progetto.  
   
-     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
+     [!code-csharp[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Per aggiungere un nuovo studente all'elenco degli studenti  
   
@@ -94,7 +75,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
      Si noti anche che la variabile di intervallo della query, `student`, funge da riferimento a ogni `Student` nell'origine, fornendo l'accesso di membro per ogni oggetto.  
   
- [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
   
 ## <a name="execute-the-query"></a>Eseguire la query  
   
@@ -108,7 +89,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 2.  Dopo aver aggiunto questo codice, compilare ed eseguire l'applicazione per vedere i risultati nella finestra **Console**.  
   
- [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
   
 #### <a name="to-add-another-filter-condition"></a>Per aggiungere un'altra condizione di filtro  
   
@@ -148,11 +129,11 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 1.  Il raggruppamento è una potente funzionalità delle espressioni di query. Una query con una clausola group genera una sequenza di gruppi e ogni gruppo contiene un `Key` e una sequenza costituita da tutti i membri di quel gruppo. La nuova query riportata di seguito raggruppa gli studenti usando la prima lettera del cognome come chiave.  
   
-     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
+     [!code-csharp[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
   
 2.  Si noti che il tipo della query è stato modificato. Ora genera una sequenza di gruppi che hanno il tipo `char` come chiave e una sequenza di oggetti `Student`. Siccome il tipo della query è cambiato, il codice seguente cambia anche il ciclo di esecuzione `foreach`:  
   
-     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
+     [!code-csharp[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
   
 3.  Eseguire l'applicazione e visualizzare i risultati nella finestra **Console**.  
   
@@ -162,7 +143,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 1.  Codificare in modo esplicito `IEnumerables` di `IGroupings` può risultare noioso. È possibile scrivere la stessa query e ciclo `foreach` in modo molto più semplice usando `var`. La parola chiave `var` non cambia il tipo degli oggetti ma si limita a istruire il compilatore a dedurre i tipi. Cambiare il tipo di `studentQuery` e la variabile di iterazione `group` in `var` ed eseguire di nuovo la query. Si noti che nel ciclo `foreach` interno, la variabile di iterazione è ancora tipizzata come `Student` e la query funziona esattamente come prima. Cambiare la variabile di iterazione `s` in `var` ed eseguire di nuovo la query. Si noti che si ottengono esattamente gli stessi risultati.  
   
-     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
+     [!code-csharp[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
   
      Per altre informazioni su [var](../../../../csharp/language-reference/keywords/var.md), vedere [Variabili locali tipizzate in modo implicito](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
@@ -170,7 +151,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 1.  Quando si esegue la query precedente, si nota che i gruppi non sono in ordine alfabetico. Per modificare questa impostazione è necessario fornire una clausola `orderby` dopo la clausola `group`. Ma per usare una clausola `orderby`, è necessario un identificatore che funge da riferimento ai gruppi creati per la clausola `group`. L'identificatore viene fornito usando la parola chiave `into`, come segue:  
   
-     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
+     [!code-csharp[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
   
      Quando si esegue questa query si può notare che i gruppi vengono disposti in ordine alfabetico.  
   
@@ -178,7 +159,7 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 1.  È possibile usare la parola chiave `let` per introdurre un identificatore per qualsiasi risultato di espressione nell'espressione di query. Questo identificatore può essere comodo, come nell'esempio seguente, oppure può migliorare le prestazioni archiviando i risultati di un'espressione in modo che non debba essere calcolata più volte.  
   
-     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
+     [!code-csharp[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
   
      Per altre informazioni, vedere [Clausola let](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -186,17 +167,17 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
   
 1.  Come descritto in [Sintassi di query e sintassi di metodi in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), alcune operazioni di query possono essere espresse solo usando la sintassi dei metodi. Il codice seguente calcola il punteggio totale per ogni `Student` nella sequenza di origine e quindi chiama il metodo `Average()` sui risultati della query per calcolare il punteggio medio della classe. Si noti la posizione delle parentesi intorno all'espressione di query.  
   
-     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
+     [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   
 #### <a name="to-transform-or-project-in-the-select-clause"></a>Per eseguire trasformazioni o proiezioni nella clausola select  
   
 1.  Un compito molto comune per una query è generare una sequenza i cui elementi differiscono da quelli delle sequenze di origine. Eliminare o impostare come commento il ciclo di query ed esecuzione precedente e sostituirlo con il codice seguente. Si noti che la query restituisce una sequenza di stringhe (non `Students`) e questo si riflette nel ciclo `foreach`.  
   
-     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
+     [!code-csharp[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
   
 2.  Il codice precedente di questa procedura dettagliata indica che il punteggio medio della classe è pari a circa 334. Per produrre una sequenza di `Students` il cui punteggio totale sia maggiore della media della classe, insieme al loro `Student ID`, è possibile usare un tipo anonimo nell'istruzione `select`:  
   
-     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
+     [!code-csharp[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
   
 ## <a name="next-steps"></a>Passaggi successivi  
  Dopo aver acquisito familiarità con i fondamenti dell'uso delle query in C#, è possibile leggere la documentazione e vedere gli esempi per il tipo specifico di provider LINQ a cui si è interessati:  
@@ -210,7 +191,6 @@ Questa procedura dettagliata illustra le funzionalità del linguaggio C# utilizz
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
- [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
+ [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Nozioni di base su LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [Espressioni di query LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-

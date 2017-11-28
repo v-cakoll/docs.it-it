@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 83214800fb997e9274cacfd1bae85ab07c4515a2
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="common-patterns-for-delegates"></a>Modelli comuni per i delegati
 
 [Precedente](delegates-strongly-typed.md)
@@ -245,4 +243,3 @@ Sono state descritte le prime fasi di un componente di log che può essere espan
 La classe Logger può apportare qualsiasi numero di miglioramenti o modifiche senza causare modifiche sostanziali. Come qualsiasi altra classe, non è possibile modificare l'API pubblica senza il rischio di modifiche di rilievo. Tuttavia, poiché l'accoppiamento tra il logger e i moduli di output avviene solo tramite il delegato, non vengono usati altri tipi, ad esempio interfacce o classi base. L'accoppiamento è ridotto al minimo.
 
 [Successivo](events-overview.md)
-

@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="samples-and-tutorials"></a>Esempi ed esercitazioni
 
 La documentazione di .NET contiene una serie di esempi ed esercitazioni che illustrano il funzionamento di .NET. Questo argomento descrive come trovare, visualizzare e scaricare esercitazioni ed esempi per .NET Core, ASP.NET Core e C#. È possibile trovare risorse per apprendere il linguaggio di programmazione F# nel [sito di F# Foundation](http://fsharp.org/learn.html). Se si vuole approfondire la conoscenza di C# usando un editor del codice online, provare queste [esercitazioni interattive](http://go.microsoft.com/fwlink/p/?LinkId=817234). Per istruzioni su come visualizzare e scaricare il codice di esempio, vedere la sezione [Visualizzazione e download degli esempi](#viewing-and-downloading-samples).
@@ -117,4 +115,3 @@ Molti argomenti mostrano codice sorgente ed esempi disponibili per la visualizza
    * Usare [Visual Studio](https://www.visualstudio.com/) o [Visual Studio per Mac](https://www.visualstudio.com/vs/visual-studio-mac/): aprire l'esempio selezionando **File > Apri > Progetto/Soluzione** nella barra dei menu, passare alla cartella del progetto dell'esempio e selezionare il file di progetto (*.csproj* o *.fsproj*).
    * Usare [Visual Studio Code](https://code.visualstudio.com/): aprire l'esempio selezionando **File > Apri cartella** nella barra dei menu e selezionare la cartella del progetto dell'esempio.
    * Usare un ambiente IDE diverso che supporta .NET Core.
-

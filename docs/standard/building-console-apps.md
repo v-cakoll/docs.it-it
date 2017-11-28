@@ -13,21 +13,20 @@ helpviewer_keywords:
 - application development [.NET Framework], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4e0bc3f14a3d21776506f0a269a1a8c9f970cac0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bba3cde0d4e1c15ea764322b8ab0ef1501e53739
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Compilazione di applicazioni console in .NET Framework
-La classe <xref:System.Console?displayProperty=fullName> può essere utilizzata dalle applicazioni in .NET Framework per la lettura e scrittura di caratteri nella console. I dati provenienti dalla console vengono letti dal flusso di input standard, mentre i dati inviati alla console vengono scritti nel flusso di output standard e i dati di errori inviati alla console vengono scritti nel flusso di output standard degli errori. I flussi vengono associati automaticamente alla console in fase di avvio dell'applicazione e vengono presentati rispettivamente come proprietà <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> ed <xref:System.Console.Error%2A>.  
+La classe <xref:System.Console?displayProperty=nameWithType> può essere utilizzata dalle applicazioni in .NET Framework per la lettura e scrittura di caratteri nella console. I dati provenienti dalla console vengono letti dal flusso di input standard, mentre i dati inviati alla console vengono scritti nel flusso di output standard e i dati di errori inviati alla console vengono scritti nel flusso di output standard degli errori. I flussi vengono associati automaticamente alla console in fase di avvio dell'applicazione e vengono presentati rispettivamente come proprietà <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> ed <xref:System.Console.Error%2A>.  
   
- Il valore della proprietà <xref:System.Console.In%2A?displayProperty=fullName> è un oggetto <xref:System.IO.TextReader?displayProperty=fullName>, mentre i valori delle proprietà <xref:System.Console.Out%2A?displayProperty=fullName> e <xref:System.Console.Error%2A?displayProperty=fullName> sono oggetti <xref:System.IO.TextWriter?displayProperty=fullName>. È possibile associare queste proprietà ai flussi che non rappresentano la console, rendendo possibile l'indirizzamento del flusso a una posizione diversa per l'input e l'output. È possibile ad esempio reindirizzare l'output in un file impostando la proprietà <xref:System.Console.Out%2A?displayProperty=fullName> su <xref:System.IO.StreamWriter?displayProperty=fullName>, che incapsula un <xref:System.IO.FileStream?displayProperty=fullName> tramite il metodo <xref:System.Console.SetOut%2A?displayProperty=fullName>. Le proprietà <xref:System.Console.In%2A?displayProperty=fullName> e <xref:System.Console.Out%2A?displayProperty=fullName> non devono fare necessariamente riferimento allo stesso flusso.  
+ Il valore della proprietà <xref:System.Console.In%2A?displayProperty=nameWithType> è un oggetto <xref:System.IO.TextReader?displayProperty=nameWithType>, mentre i valori delle proprietà <xref:System.Console.Out%2A?displayProperty=nameWithType> e <xref:System.Console.Error%2A?displayProperty=nameWithType> sono oggetti <xref:System.IO.TextWriter?displayProperty=nameWithType>. È possibile associare queste proprietà ai flussi che non rappresentano la console, rendendo possibile l'indirizzamento del flusso a una posizione diversa per l'input e l'output. È possibile ad esempio reindirizzare l'output in un file impostando la proprietà <xref:System.Console.Out%2A?displayProperty=nameWithType> su <xref:System.IO.StreamWriter?displayProperty=nameWithType>, che incapsula un <xref:System.IO.FileStream?displayProperty=nameWithType> tramite il metodo <xref:System.Console.SetOut%2A?displayProperty=nameWithType>. Le proprietà <xref:System.Console.In%2A?displayProperty=nameWithType> e <xref:System.Console.Out%2A?displayProperty=nameWithType> non devono fare necessariamente riferimento allo stesso flusso.  
   
 > [!NOTE]
 >  Per altre informazioni sulla creazione di applicazioni console, inclusi esempi in C#, Visual Basic e C++, vedere la documentazione per la classe <xref:System.Console>.  
@@ -41,6 +40,5 @@ La classe <xref:System.Console?displayProperty=fullName> può essere utilizzata 
  La classe **System.Console** include metodi che consentono di leggere singoli caratteri o intere righe dalla console. Altri metodi consentono di convertire dati e formattare stringhe, quindi di scrivere le stringhe formattate nella console. Per altre informazioni sulla formattazione delle stringhe, vedere [Formatting Types](../../docs/standard/base-types/formatting-types.md) (Formattazione dei tipi).  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Console?displayProperty=fullName>   
+ <xref:System.Console?displayProperty=nameWithType>  
  [Formattazione di tipi](../../docs/standard/base-types/formatting-types.md)
-

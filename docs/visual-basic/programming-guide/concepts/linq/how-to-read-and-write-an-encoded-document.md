@@ -1,39 +1,31 @@
 ---
-title: 'Procedura: leggere e scrivere un documento codificato (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: leggere e scrivere un documento codificato (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3247af177066e9b50d5028766f99e7bf6589050f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7dd871b4ab58103897bd5884581bf2e1353a3c60
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Procedura: leggere e scrivere un documento codificato (Visual Basic)
-Per creare un documento XML codificato, aggiungere un <xref:System.Xml.Linq.XDeclaration>all'albero XML, impostando la codifica per il nome della tabella codici desiderata.</xref:System.Xml.Linq.XDeclaration>  
+Per creare un documento XML codificato, aggiungere un oggetto <xref:System.Xml.Linq.XDeclaration> all'albero XML, impostando la codifica sul nome della tabella codici desiderata.  
   
- Qualsiasi valore restituito da <xref:System.Text.Encoding.WebName%2A>è un valore valido.</xref:System.Text.Encoding.WebName%2A>  
+ Qualsiasi valore restituito da <xref:System.Text.Encoding.WebName%2A> è un valore valido.  
   
- Se si legge un documento codificato, la <xref:System.Xml.Linq.XDeclaration.Encoding%2A>verrà impostata per il nome della tabella codici.</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ Se si legge un documento codificato, la proprietà <xref:System.Xml.Linq.XDeclaration.Encoding%2A> verrà impostata sul nome della tabella codici.  
   
- Se si imposta <xref:System.Xml.Linq.XDeclaration.Encoding%2A>a un nome di tabella codici valido, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] serializzerà con la codifica specificata.</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ Se si imposta <xref:System.Xml.Linq.XDeclaration.Encoding%2A> su un nome di tabella codici valido, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eseguirà la serializzazione con la codifica specificata.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente vengono creati due documenti, uno con codifica utf-8 e uno con codifica utf-16. Vengono quindi caricati i documenti e viene stampata la codifica nella console.  
@@ -94,5 +86,5 @@ Encoding of loaded document is:utf-16
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName></xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
- [LINQ to XML (Visual Basic) di programmazione avanzata](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
+ [Avanzate di LINQ to XML programmazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

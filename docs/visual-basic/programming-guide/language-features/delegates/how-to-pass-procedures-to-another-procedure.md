@@ -1,46 +1,29 @@
 ---
-title: 'Procedura: passare una routine a un&quot;altra routine in Visual Basic | Documenti di Microsoft'
+title: 'Procedura: passare una routine a un''altra routine in Visual Basic'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- AddressOf operator
+- AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9865e2d7d3786d289add3fa63b3db777317facdf
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4e8e205f5238aab39aa92574bc5c680e68cc8a81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Procedura: passare una routine a un'altra routine in Visual Basic
 In questo esempio viene illustrato come utilizzare i delegati per passare una routine a un'altra routine.  
   
- Un delegato è un tipo che è possibile utilizzare come qualsiasi altro tipo in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Il `AddressOf` operatore restituisce un oggetto delegato quando viene applicato a un nome di procedura.  
+ Un delegato è un tipo che è possibile utilizzare come qualsiasi altro tipo in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Il `AddressOf` operatore restituisce un oggetto delegato quando applicato a un nome della stored procedure.  
   
  L'esempio include una procedura con un parametro del delegato che può accettare un riferimento a un'altra routine, ottenuto con la `AddressOf` operatore.  
   
@@ -48,30 +31,30 @@ In questo esempio viene illustrato come utilizzare i delegati per passare una ro
   
 1.  Crea un delegato denominato `MathOperator`.  
   
-     [!code-vb[VbVbalrDelegates n.&1;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_1.vb)]  
+     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_1.vb)]  
   
-2.  Creare una routine denominata `AddNumbers` con parametri e valore restituito che corrispondono a quelle di `MathOperator`, in modo che le firme corrispondono.  
+2.  Creare una routine denominata `AddNumbers` con parametri e il valore restituito che corrispondono a quelle di `MathOperator`, in modo che le firme corrispondono.  
   
-     [!code-vb[VbVbalrDelegates n.&2;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_2.vb)]  
+     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_2.vb)]  
   
 3.  Creare una routine denominata `SubtractNumbers` con una firma corrispondente `MathOperator`.  
   
-     [!code-vb[VbVbalrDelegates n.&3;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_3.vb)]  
+     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_3.vb)]  
   
 4.  Creare una routine denominata `DelegateTest` che accetta un delegato come parametro.  
   
-     Questa routine può accettare un riferimento a `AddNumbers` o `SubtractNumbers`, in quanto le relative firme corrispondono il `MathOperator` firma.  
+     Questa procedura può accettare un riferimento a `AddNumbers` o `SubtractNumbers`, in quanto le relative firme corrispondono il `MathOperator` firma.  
   
-     [!code-vb[VbVbalrDelegates n.&4;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_4.vb)]  
+     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_4.vb)]  
   
 5.  Creare una routine denominata `Test` che chiama `DelegateTest` una volta con il delegato per `AddNumbers` come parametro e di nuovo con il delegato per `SubtractNumbers` come parametro.  
   
-     [!code-vb[VbVbalrDelegates n.&5;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_5.vb)]  
+     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_5.vb)]  
   
      Quando `Test` viene chiamato, viene innanzitutto visualizzato il risultato di `AddNumbers` applicata a `5` e `3`, ovvero 8. Quindi il risultato di `SubtractNumbers` su `9` e `3` viene visualizzato, ovvero 6.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Delegati](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
- [AddressOf (operatore)](../../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Delegate (istruzione)](../../../../visual-basic/language-reference/statements/delegate-statement.md)   
+ [Delegati](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [Operatore AddressOf](../../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [Istruzione Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
  [Procedura: Richiamare un metodo delegato](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

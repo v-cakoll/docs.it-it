@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
+ms.openlocfilehash: 6fbebf69b2772b4159841d13068e7b95a39bea92
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 19744773d18f6ea43e4b4a7518405b60e6b53acf
-ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Debug dell'applicazione Hello World con Visual Studio 2017
 
 Finora sono stati seguiti i passaggi nell'argomento [Compilare un'applicazione Hello World usando C# con .NET Core in Visual Studio 2017](.\with-visual-studio.md) o [Compilare un'applicazione Hello World in Visual Basic con .NET Core in Visual Studio 2017](vb-with-visual-studio.md), per creare un'applicazione console semplice. Dopo aver scritto e compilato l'applicazione, è possibile iniziare a testarla. Visual Studio include un set completo di strumenti di debug che è possibile usare durante il test e la risoluzione dei problemi dell'applicazione.
@@ -65,13 +63,13 @@ Eseguire il programma in modalità Debug e provare alcune funzionalità di debug
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Immettere `date = new DateTime(2016,11,01,11,59,00)` nella **Finestra di controllo immediato** e premere INVIO.
 
-   Si noti che nella **Finestra di controllo immediato** vengono visualizzati il valore della variabile string e le proprietà del valore @System.DateTime. Inoltre, il valore delle variabili viene aggiornato nelle finestre **Auto** e **Variabili locali**.
+   Si noti che nella **Finestra di controllo immediato** vengono visualizzati il valore della variabile string e le proprietà del valore <xref:System.DateTime>. Inoltre, il valore delle variabili viene aggiornato nelle finestre **Auto** e **Variabili locali**.
 
    ![Finestra Auto e Finestra controllo immediato](./media/debugging-with-visual-studio/autosimmediate.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 1. Immettere `currentDate = new DateTime(2016,11,01,11,59,00)` nella **Finestra di controllo immediato** e premere INVIO.
 
-<!-- The **Immediate Window** displays the value of the string variable and the properties of the @System.DateTime value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
+<!-- The **Immediate Window** displays the value of the string variable and the properties of the <xref:System.DateTime> value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
 
    ![Autos window and Immediate Window](./media/debugging-with-visual-studio/vb-autosimmediate.png)
 -->
@@ -119,9 +117,9 @@ Per impostare un punto di interruzione condizionale e verificare cosa succede qu
 
 1. Nella finestra della console premere INVIO quando viene chiesto di immettere il proprio nome.
 
-1. Poiché la condizione specificata è stata soddisfatta, per cui `name` è `null` o <xref:System.String.Empty?displayProperty=fullName>, l'esecuzione del programma si interrompe quando raggiunge il punto di interruzione e prima che venga eseguito il metodo `Console.WriteLine`.
+1. Poiché la condizione specificata è stata soddisfatta, per cui `name` è `null` o <xref:System.String.Empty?displayProperty=nameWithType>, l'esecuzione del programma si interrompe quando raggiunge il punto di interruzione e prima che venga eseguito il metodo `Console.WriteLine`.
 
-1. Scegliere la finestra **Variabili locali**, dove vengono visualizzati i valori delle variabili che sono locali rispetto al metodo attualmente in esecuzione, in questo caso il metodo `Main`. Si noti che il valore della variabile `name` è `""` o <xref:System.String.Empty?displayProperty=fullName>.
+1. Scegliere la finestra **Variabili locali**, dove vengono visualizzati i valori delle variabili che sono locali rispetto al metodo attualmente in esecuzione, in questo caso il metodo `Main`. Si noti che il valore della variabile `name` è `""` o <xref:System.String.Empty?displayProperty=nameWithType>.
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Confermare che il valore è una stringa vuota immettendo l'istruzione seguente nella **Finestra di controllo immediato**. Il risultato è `true`.
@@ -175,13 +173,13 @@ Visual Studio consente anche di esaminare il programma una riga alla volta e di 
 
 1. Scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio evidenzia l'istruzione che include l'assegnazione della variabile `name`. Nella finestra **Auto** viene mostrato che `name` è `null` (in C#) o `Nothing` (in Visual Basic), mentre nella finestra della console viene visualizzata la stringa "What is your name?".
 
-1. Rispondere al prompt immettendo una stringa nella finestra della console e premendo INVIO. La console non risponde e la stringa immessa non viene visualizzata nella finestra della console. Il metodo <xref:System.Console.ReadLine%2A?displayProperty=fullName>, tuttavia, acquisirà l'input.
+1. Rispondere al prompt immettendo una stringa nella finestra della console e premendo INVIO. La console non risponde e la stringa immessa non viene visualizzata nella finestra della console. Il metodo <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>, tuttavia, acquisirà l'input.
 
-1. Scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio evidenzia l'istruzione che include l'assegnazione della variabile `date` (in C#) o `currentDate` (in Visual Basic). Nella finestra **Auto** vengono visualizzati il valore della proprietà <xref:System.DateTime.Now?displayProperty=fullName>e il valore restituito dalla chiamata al metodo <xref:System.Console.ReadLine%2A?displayProperty=fullName>. Nella finestra della console viene visualizzata anche la stringa immessa quando la console ha richiesto un input.
+1. Scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio evidenzia l'istruzione che include l'assegnazione della variabile `date` (in C#) o `currentDate` (in Visual Basic). Nella finestra **Auto** vengono visualizzati il valore della proprietà <xref:System.DateTime.Now?displayProperty=nameWithType>e il valore restituito dalla chiamata al metodo <xref:System.Console.ReadLine%2A?displayProperty=nameWithType>. Nella finestra della console viene visualizzata anche la stringa immessa quando la console ha richiesto un input.
 
-1. Scegliere **Debug** > **Esegui istruzione** oppure premere F11. Nella finestra **Auto** viene visualizzato il valore della variabile `date` dopo l'assegnazione da parte della proprietà <xref:System.DateTime.Now?displayProperty=fullName>. La finestra della console rimane invariata.
+1. Scegliere **Debug** > **Esegui istruzione** oppure premere F11. Nella finestra **Auto** viene visualizzato il valore della variabile `date` dopo l'assegnazione da parte della proprietà <xref:System.DateTime.Now?displayProperty=nameWithType>. La finestra della console rimane invariata.
 
-1. Scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio chiama il metodo <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=fullName>. I valori delle variabili `date` (o `currentDate`) and `name` vengono visualizzati nella finestra **Auto**, mentre nella finestra della console viene visualizzata la stringa formattata.
+1. Scegliere **Debug** > **Esegui istruzione** oppure premere F11. Visual Studio chiama il metodo <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType>. I valori delle variabili `date` (o `currentDate`) and `name` vengono visualizzati nella finestra **Auto**, mentre nella finestra della console viene visualizzata la stringa formattata.
 
 1. Selezionare **Debug** > **Esci da istruzione/routine** oppure premere MAIUSC+F11. Questa operazione arresta l'esecuzione passo passo. La finestra della console visualizza un messaggio e attende che venga premuto un tasto.
 
@@ -198,4 +196,3 @@ Per compilare e testare la versione di rilascio dell'applicazione console, modif
 Quando si preme F5 o si sceglie **Compila soluzione** dal menu **Compila**, Visual Studio compila la versione di rilascio dell'applicazione console. A questo punto è possibile eseguirla e testarla come è stato fatto per la versione di debug.
 
 Dopo aver terminato il debug dell'applicazione, il passaggio successivo consiste nel pubblicare una versione distribuibile dell'applicazione. Per informazioni su come eseguire questa operazione, vedere [Pubblicazione dell'applicazione Hello World con Visual Studio 2017](./publishing-with-visual-studio.md).
-

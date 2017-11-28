@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Portabilità in .NET Core - Analisi delle dipendenze di terze parti
 
 Il primo passaggio nel processo di trasferimento consiste nel comprendere le dipendenze di terze parti.  È necessario capire se alcune di esse non vengono ancora eseguite su .NET Core e sviluppare un piano di emergenza adeguato.
@@ -97,4 +95,3 @@ Per il team di .NET è molto importante sapere quali librerie risultano più imp
 ## <a name="next-steps"></a>Passaggi successivi
 
 Se si esegue il trasferimento di una libreria, consultare [Porting your Libraries](libraries.md) (Portabilità delle librerie).
-

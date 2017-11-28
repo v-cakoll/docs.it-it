@@ -15,16 +15,15 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 091b83cc0d7829c8ff078e6397aa480895b7a115
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b67c622531321e5cd1efa7db657d62d94c0f73e4
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigazione: Nuovo compilatore JIT a 64 bit
 A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 64 bit per la compilazione JIT. Questa modifica non riguarda il compilatore JIT a 32 bit.  
@@ -43,7 +42,7 @@ A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 6
   
 -   In determinate condizioni, il confronto dei valori di <xref:System.UInt16> con il set di bit elevato non è corretto se l'ottimizzazione è abilitata.  
   
--   In determinate condizioni, in particolare durante l'inizializzazione dei valori della matrice, è possibile che l'inizializzazione della memoria con l'istruzione IL <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> venga eseguita con un valore non corretto. Ciò può generare un'eccezione non gestita o un output non corretto.  
+-   In determinate condizioni, in particolare durante l'inizializzazione dei valori della matrice, è possibile che l'inizializzazione della memoria con l'istruzione IL <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> venga eseguita con un valore non corretto. Ciò può generare un'eccezione non gestita o un output non corretto.  
   
 -   In alcuni casi rari, un test condizionale dei bit può restituire il valore <xref:System.Boolean> non corretto o generare un'eccezione se sono abilitate le ottimizzazioni del compilatore.  
   
@@ -81,6 +80,5 @@ A partire da .NET Framework 4.6, il runtime include un nuovo compilatore JIT a 6
  È possibile inoltre inviare i dettagli sul problema segnalando un bug in [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Modifiche al runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
+ [Modifiche al runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)  
  [\<useLegacyJit> Element](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) (Elemento useLegacyJit>)
-

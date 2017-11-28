@@ -1,33 +1,25 @@
 ---
-title: Operazioni di proiezione (Visual Basic) | Documenti di Microsoft
+title: Operazioni di proiezione (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8876e65e752e0b18404ec32aecdcad7805533840
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4927a27795881c34b689a2054ee8697575b53026
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="projection-operations-visual-basic"></a>Operazioni di proiezione (Visual Basic)
-Proiezione si riferisce all'operazione di trasformazione di un oggetto in un nuovo form che spesso costituita solo le proprietà che verranno utilizzate successivamente. Utilizzando la proiezione, è possibile costruire un nuovo tipo compilato in base a ogni oggetto. È possibile proiettare una proprietà ed eseguire una funzione matematica su di esso. È inoltre possibile proiettare l'oggetto originale senza modificarlo.  
+La proiezione si riferisce all'operazione di trasformazione di un oggetto in un nuovo form costituito spesso solo dalle proprietà che verranno usate successivamente. Utilizzando la proiezione, è possibile costruire un nuovo tipo compilato in base a ogni oggetto. È possibile proiettare una proprietà ed eseguirvi una funzione matematica. È anche possibile proiettare l'oggetto originale senza modificarlo.  
   
  Nella sezione seguente sono elencati i metodi dell'operatore query standard che eseguono la proiezione.  
   
@@ -35,13 +27,13 @@ Proiezione si riferisce all'operazione di trasformazione di un oggetto in un nuo
   
 |Nome metodo|Descrizione|Sintassi delle espressioni di Query Visual Basic|Altre informazioni|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Seleziona|Valori di progetti basati su una funzione di trasformazione.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Select%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=fullName></xref:System.Linq.Queryable.Select%2A?displayProperty=fullName>|  
-|SelectMany|Proietta le sequenze di valori che si basano su una funzione di trasformazione e quindi li converte in un'unica sequenza.|Utilizzare più `From` clausole|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=fullName></xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=fullName></xref:System.Linq.Queryable.SelectMany%2A?displayProperty=fullName>|  
+|Seleziona|Proietta i valori che si basano su una funzione di trasformazione.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|SelectMany|Proietta le sequenze di valori che si basano su una funzione di trasformazione semplificandoli in un'unica sequenza.|Usare più clausole `From`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Esempi di sintassi delle espressioni di query  
   
 ### <a name="select"></a>Seleziona  
- Nell'esempio seguente viene utilizzata la `Select` clausola per la prima lettera di ogni stringa in un elenco di stringhe del progetto.  
+ L'esempio seguente usa la clausola `Select` per proiettare la prima lettera di ogni stringa di un elenco di stringhe.  
   
 ```vb  
 Dim words = New List(Of String) From {"an", "apple", "a", "day"}  
@@ -95,21 +87,21 @@ MsgBox(sb.ToString())
 ' fox  
 ```  
   
-## <a name="select-versus-selectmany"></a>Selezionare e SelectMany  
- La funzione di `Select()` e `SelectMany()` consiste nel produrre un valore di risultato (o valori) dai valori di origine. `Select()`produce un valore per ogni valore di origine. Il risultato complessivo è pertanto una raccolta con lo stesso numero di elementi della raccolta di origine. Al contrario, `SelectMany()` produce un unico risultato complessivo che contiene sottoraccolte concatenate di ogni valore di origine. La funzione di trasformazione che viene passata come argomento `SelectMany()` deve restituire una sequenza enumerabile di valori per ogni valore di origine. Queste sequenze enumerabili vengono quindi concatenate da `SelectMany()` per creare una sequenza di grandi dimensioni.  
+## <a name="select-versus-selectmany"></a>Confronto tra Select e SelectMany  
+ La funzione di `Select()` e `SelectMany()` è produrre uno o più valori risultato dai valori di origine. `Select()` produce un valore risultato per ogni valore di origine. Il risultato complessivo è pertanto una raccolta contenente lo stesso numero di elementi della raccolta di origine. Al contrario, `SelectMany()` produce un singolo risultato complessivo che contiene sottoraccolte concatenate di ogni valore di origine. La funzione di trasformazione passata come argomento a `SelectMany()` deve restituire una sequenza enumerabile di valori per ogni valore di origine. Queste sequenze enumerabili vengono quindi concatenate da `SelectMany()` per creare un'unica grande sequenza.  
   
- Nelle due figure seguenti mostrano la differenza tra le azioni di questi due metodi. In ogni caso, si supponga che la funzione del selettore (transform) consente di selezionare la matrice di fiori da ogni valore di origine.  
+ Le due figure seguenti illustrano la differenza concettuale tra le azioni di questi due metodi. In ogni caso, si supponga che la funzione del selettore (trasformazione) selezioni la matrice di fiori di ogni valore di origine.  
   
- Questa figura viene illustrato come `Select()` restituisce una raccolta con lo stesso numero di elementi della raccolta di origine.  
+ La figura mostra che `Select()` restituisce una raccolta contenente lo stesso numero di elementi della raccolta di origine.  
   
- ![Illustrazione concettuale dell'azione di Select ()](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
+ ![Figura concettuale dell'azione di Select&#40;&#41;](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
   
- Questa figura viene illustrato come `SelectMany()` concatena la sequenza intermedia di matrici in un unico valore finale che contiene ogni valore di ogni matrice intermedia.  
+ La figura mostra che `SelectMany()` concatena la sequenza intermedia di matrici in un unico valore risultato finale contenente tutti i valori di ogni matrice intermedia.  
   
- ![Rappresentazione grafica dell'azione di SelectMany (). ] (../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
+ ![Figura che mostra l'azione di SelectMany&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
   
 ### <a name="code-example"></a>Esempio di codice  
- Nell'esempio seguente viene confrontato il comportamento di `Select()` e `SelectMany()`. Il codice crea un "bouquet" di fiori prendendo i primi due elementi di ogni elenco di nomi di fiori nella raccolta di origine. In questo esempio, "singolo valore" che la funzione di trasformazione <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>è essa stessa una raccolta di valori.</xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> Questa operazione richiede aggiuntivo `For Each` ciclo per enumerare tutte le stringhe ogni sottosequenza.  
+ L'esempio seguente confronta il comportamento di `Select()` e `SelectMany()`. Il codice crea un "bouquet" di fiori prendendo i primi due elementi di ogni elenco di nomi di fiori nella raccolta di origine. In questo esempio, il "valore singolo" usato dalla funzione di trasformazione <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> è anch'esso una raccolta di valori. Questo richiede il ciclo `For Each` aggiuntivo in modo da enumerare tutte le stringhe di ogni sottosequenza.  
   
 ```vb  
 Class Bouquet  
@@ -188,10 +180,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq></xref:System.Linq>   
- [Cenni preliminari sugli operatori di Query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Clausola SELECT](../../../../visual-basic/language-reference/queries/select-clause.md)   
- [Procedura: combinare dati utilizzando join](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)   
- [Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)   
- [Procedura: restituire un risultato di Query LINQ come tipo specifico](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)   
+ <xref:System.Linq>  
+ [Panoramica degli operatori query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [Clausola Select](../../../../visual-basic/language-reference/queries/select-clause.md)  
+ [Procedura: Combinare dati utilizzando join](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)  
+ [Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
+ [Procedura: Restituire un risultato di query LINQ come tipo specifico](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
  [Procedura: suddividere un File in molti file utilizzando i gruppi (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

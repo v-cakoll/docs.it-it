@@ -10,14 +10,12 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="versioning-in-c"></a>Controllo delle versioni in C# #
 
 In questa esercitazione si apprenderà il significato del controllo delle versioni in .NET. Si apprenderanno anche i fattori da considerare durante il controllo delle versioni della libreria, nonché durante l'aggiornamento a una nuova versione di una libreria.
@@ -89,7 +87,7 @@ Usare il modificatore `new` per nascondere i membri ereditati di una classe di b
 
 Vedere l'esempio seguente:
 
-[!code-csharp[Esempio di uso del modificatore new](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
 
 **Output**
 
@@ -107,7 +105,7 @@ Se non si specifica alcun modificatore `new`, una classe derivata nasconderà pe
 
 Il modificatore `override` indica che un'implementazione derivata estende l'implementazione di un membro della classe di base anziché nasconderlo. È necessario che al membro della classe di base sia applicato il modificatore `virtual`.
 
-[!code-csharp[Esempio di uso del modificatore override](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
 **Output**
 
@@ -119,4 +117,3 @@ Derived Method One: Derived Method One
 Il modificatore `override` viene valutato in fase di compilazione e il compilatore genera un errore se non trova un membro virtuale di cui eseguire l'override.
 
 Conoscere le tecniche descritte e sapere in quali situazioni usarle significa semplificare notevolmente la transizione da una versione all'altra di una libreria.
-

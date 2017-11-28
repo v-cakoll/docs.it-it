@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
+ms.openlocfilehash: 1de856a139ac7a6dee25f1dae54924e33f14a33b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14673f86d7d228bc1fc17a3154e0337b4c6e5f57
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="expression-trees-explained"></a>Nozioni di base sugli alberi delle espressioni
 
 [Precedente -- Panoramica](expression-trees.md)
@@ -50,7 +48,7 @@ A livello visivo, l'intera istruzione è una struttura ad albero: è possibile i
 
 Tutto ciò può apparire complicato, ma è molto funzionale. Seguendo la stessa procedura, è possibile scomporre espressioni molto più complesse. Si consideri l'espressione seguente:
 ```csharp
-var finalAnswer = this.SecretSauceFuncion(
+var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
     decisionServer.considerFinalOptions("hello")) +
     MoreSecretSauce('A', DateTime.Now, true);
@@ -75,4 +73,3 @@ Le API degli alberi delle espressioni consentono di creare strutture che rappres
 Non è possibile modificare un albero delle espressioni.  Sono infatti strutture dei dati immutabili. Se si vuole modificare un albero delle espressioni, è necessario creare un nuovo albero che sia una copia dell'originale e che contenga le modifiche desiderate. 
 
 [Successivo -- Tipi di framework che supportano alberi delle espressioni](expression-classes.md)
-
