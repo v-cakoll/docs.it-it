@@ -1,80 +1,80 @@
 ---
-title: "Procedura: aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator di Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli [Windows Form], modifica"
-  - "Controllo BindingNavigator [Windows Form], aggiunta di pulsanti"
+title: 'Procedura: aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator di Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms], manipulating
+- BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4bc4f53c404e3767b9f98ca5ab46b19db31f9c6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator di Windows Form
-<xref:System.Windows.Forms.BindingNavigator> è un controllo <xref:System.Windows.Forms.ToolStrip> specifico per lo spostamento e la modifica dei controlli nel form associati ai dati.  
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a><span data-ttu-id="84399-102">Procedura: aggiungere i pulsanti Carica, Salva e Annulla al controllo BindingNavigator di Windows Form</span><span class="sxs-lookup"><span data-stu-id="84399-102">How to: Add Load, Save, and Cancel Buttons to the Windows Forms BindingNavigator Control</span></span>
+<span data-ttu-id="84399-103">Il <xref:System.Windows.Forms.BindingNavigator> controllo è una speciale <xref:System.Windows.Forms.ToolStrip> controllo destinato per lo spostamento e modifica dei controlli sul form che sono associati a dati.</span><span class="sxs-lookup"><span data-stu-id="84399-103">The <xref:System.Windows.Forms.BindingNavigator> control is a special-purpose <xref:System.Windows.Forms.ToolStrip> control that is intended for navigating and manipulating controls on your form that are bound to data.</span></span>  
   
- Dal momento che si tratta di un controllo <xref:System.Windows.Forms.ToolStrip>, il componente <xref:System.Windows.Forms.BindingNavigator> può facilmente essere modificato in modo da includere comandi aggiuntivi o alternativi per l'utente.  
+ <span data-ttu-id="84399-104">Perché è un <xref:System.Windows.Forms.ToolStrip> (controllo), il <xref:System.Windows.Forms.BindingNavigator> componente può essere modificato facilmente per includere comandi aggiuntivi o alternativi per l'utente.</span><span class="sxs-lookup"><span data-stu-id="84399-104">Because it is a <xref:System.Windows.Forms.ToolStrip> control, the <xref:System.Windows.Forms.BindingNavigator> component can be easily modified to include additional or alternative commands for the user.</span></span>  
   
- Nella procedura indicata di seguito, un controllo <xref:System.Windows.Forms.TextBox> viene associato ai dati e il controllo <xref:System.Windows.Forms.ToolStrip> aggiunto al form viene modificato in modo da includere i pulsanti di caricamento, salvataggio e annullamento.  
+ <span data-ttu-id="84399-105">Nella procedura seguente, un <xref:System.Windows.Forms.TextBox> è associato a dati e <xref:System.Windows.Forms.ToolStrip> controllo aggiunto al form viene modificato per includere carica, Salva e Annulla.</span><span class="sxs-lookup"><span data-stu-id="84399-105">In the following procedure, a <xref:System.Windows.Forms.TextBox> control is bound to data, and the <xref:System.Windows.Forms.ToolStrip> control that is added to the form is modified to include load, save, and cancel buttons.</span></span>  
   
-### Per aggiungere i pulsante di caricamento, salvataggio e annullamento al componente BindingNavigator  
+### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a><span data-ttu-id="84399-106">Per aggiungere carica, Salva e Annulla pulsanti per il componente di BindingNavigator</span><span class="sxs-lookup"><span data-stu-id="84399-106">To add load, save, and cancel buttons to the BindingNavigator component</span></span>  
   
-1.  Aggiungere un controllo <xref:System.Windows.Forms.TextBox> al form.  
+1.  <span data-ttu-id="84399-107">Aggiungere un oggetto <xref:System.Windows.Forms.TextBox> al form.</span><span class="sxs-lookup"><span data-stu-id="84399-107">Add a <xref:System.Windows.Forms.TextBox> control to your form.</span></span>  
   
-2.  Associarlo a <xref:System.Windows.Forms.BindingSource>, il quale è associato a un'origine dati.  In questo esempio, <xref:System.Windows.Forms.BindingSource> è associato a un database.  
+2.  <span data-ttu-id="84399-108">Associarlo a un <xref:System.Windows.Forms.BindingSource>, che è associato a un'origine dati.</span><span class="sxs-lookup"><span data-stu-id="84399-108">Bind it to a <xref:System.Windows.Forms.BindingSource>, which is bound to a data source.</span></span> <span data-ttu-id="84399-109">Per questo esempio, il <xref:System.Windows.Forms.BindingSource> è associato a un database.</span><span class="sxs-lookup"><span data-stu-id="84399-109">For this example, the <xref:System.Windows.Forms.BindingSource> is bound to a database.</span></span>  
   
-3.  Una volta generato il dataset e il TableAdapter, trascinare un controllo <xref:System.Windows.Forms.BindingNavigator> nel form.  
+3.  <span data-ttu-id="84399-110">Dopo avere generato il set di dati e il TableAdapter, trascinare un <xref:System.Windows.Forms.BindingNavigator> al form.</span><span class="sxs-lookup"><span data-stu-id="84399-110">After the dataset and table adapter are generated, drag a <xref:System.Windows.Forms.BindingNavigator> control to the form.</span></span>  
   
-4.  Impostare la proprietà <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> del controllo <xref:System.Windows.Forms.BindingNavigator> su <xref:System.Windows.Forms.BindingSource> nel form associato ai controlli.  
+4.  <span data-ttu-id="84399-111">Impostare il <xref:System.Windows.Forms.BindingNavigator> del controllo <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> proprietà per il <xref:System.Windows.Forms.BindingSource> sul form che è associato ai controlli.</span><span class="sxs-lookup"><span data-stu-id="84399-111">Set the <xref:System.Windows.Forms.BindingNavigator> control's <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> property to the <xref:System.Windows.Forms.BindingSource> on the form that is bound to the controls.</span></span>  
   
-5.  Fare clic sul controllo <xref:System.Windows.Forms.BindingNavigator>.  
+5.  <span data-ttu-id="84399-112">Selezionare il controllo <xref:System.Windows.Forms.BindingNavigator>.</span><span class="sxs-lookup"><span data-stu-id="84399-112">Select the <xref:System.Windows.Forms.BindingNavigator> control.</span></span>  
   
-6.  Fare clic sull'icona dello smart tag \(![Glifo Smart Tag](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) per visualizzare la finestra di dialogo **Attività BindingNavigator** e selezionare **Modifica elementi**.  
+6.  <span data-ttu-id="84399-113">Fare clic sul glifo smart tag (![Smart Tag glifo](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) pertanto **attività BindingNavigator** finestra di dialogo e selezionare **Modifica elementi**.</span><span class="sxs-lookup"><span data-stu-id="84399-113">Click the smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) so the **BindingNavigator Tasks** dialog appears and select **Edit Items**.</span></span>  
   
-     Viene visualizzato l'**editor della raccolta Items**.  
+     <span data-ttu-id="84399-114">Il **Editor della raccolta Items** viene visualizzato.</span><span class="sxs-lookup"><span data-stu-id="84399-114">The **Items Collection Editor** appears.</span></span>  
   
-7.  Nell'**editor della raccolta Items**, effettuare quando indicato di seguito.  
+7.  <span data-ttu-id="84399-115">Nel **Editor della raccolta Items**, completare le operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="84399-115">In the **Items Collection Editor**, complete the following:</span></span>  
   
-    1.  Aggiungere un <xref:System.Windows.Forms.ToolStripSeparator> e tre elementi <xref:System.Windows.Forms.ToolStripButton> selezionando il tipo appropriato di <xref:System.Windows.Forms.ToolStripItem> e facendo clic sul pulsante **Aggiungi**.  
+    1.  <span data-ttu-id="84399-116">Aggiungi un <xref:System.Windows.Forms.ToolStripSeparator> e tre <xref:System.Windows.Forms.ToolStripButton> elementi selezionando il tipo appropriato di <xref:System.Windows.Forms.ToolStripItem> e scegliendo il **Aggiungi** pulsante.</span><span class="sxs-lookup"><span data-stu-id="84399-116">Add a <xref:System.Windows.Forms.ToolStripSeparator> and three <xref:System.Windows.Forms.ToolStripButton> items by selecting the appropriate type of <xref:System.Windows.Forms.ToolStripItem> and clicking the **Add** button.</span></span>  
   
-    2.  Impostare la proprietà <xref:System.Windows.Forms.ToolStripItem.Name%2A> dei pulsanti su `` LoadButton, `` SaveButton e `` CancelButton, rispettivamente.  
+    2.  <span data-ttu-id="84399-117">Impostare il <xref:System.Windows.Forms.ToolStripItem.Name%2A> proprietà dei pulsanti per**LoadButton**,**PulsanteSalva**, e**CancelButton**, rispettivamente.</span><span class="sxs-lookup"><span data-stu-id="84399-117">Set the <xref:System.Windows.Forms.ToolStripItem.Name%2A> property of the buttons to**LoadButton**,**SaveButton**, and**CancelButton**, respectively.</span></span>  
   
-    3.  Impostare la proprietà <xref:System.Windows.Forms.ToolStripItem.Text%2A> dei pulsanti su `` Load`,` Save e `` Cancel.  
+    3.  <span data-ttu-id="84399-118">Impostare il <xref:System.Windows.Forms.ToolStripItem.Text%2A> proprietà dei pulsanti per**carico** `,` **salvare**, e**Annulla**.</span><span class="sxs-lookup"><span data-stu-id="84399-118">Set the <xref:System.Windows.Forms.ToolStripItem.Text%2A> property of the buttons to**Load**`,` **Save**, and**Cancel**.</span></span>  
   
-    4.  Impostare la proprietà <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> per ognuno dei pulsanti su `` Text.  In alternativa, è possibile impostare questa proprietà su `` Image `` o `` ImageAndText ``  e impostare l'immagine da visualizzare nella proprietà <xref:System.Windows.Forms.ToolStripItem.Image%2A>.  
+    4.  <span data-ttu-id="84399-119">Impostare il <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> proprietà per ognuno dei pulsanti per**testo**.</span><span class="sxs-lookup"><span data-stu-id="84399-119">Set the <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> property for each of the buttons to**Text**.</span></span> <span data-ttu-id="84399-120">In alternativa, è possibile impostare questa proprietà**immagine**o**ImageAndText**e impostare l'immagine da visualizzare nella <xref:System.Windows.Forms.ToolStripItem.Image%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="84399-120">Alternatively, you can set this property to**Image**or**ImageAndText**and set the image to be displayed in the <xref:System.Windows.Forms.ToolStripItem.Image%2A> property.</span></span>  
   
-    5.  Scegliere **OK** per chiudere la finestra di dialogo. I pulsanti vengono aggiunti a <xref:System.Windows.Forms.ToolStrip>.  
+    5.  <span data-ttu-id="84399-121">Fare clic su **OK** per chiudere la finestra di dialogo. Vengono aggiunti i pulsanti di <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="84399-121">Click **OK** to close the dialog box.The buttons are added to the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-8.  Fare clic con il pulsante destro del mouse sul form, quindi scegliere **Visualizza codice**.  
+8.  <span data-ttu-id="84399-122">Il modulo di mouse e scegliere **Visualizza codice**.</span><span class="sxs-lookup"><span data-stu-id="84399-122">Right-click the form and choose **View Code**.</span></span>  
   
-9. Nell'editor di codice, trovare la riga di codice che carica i dati nel TableAdapter.  Il codice è stato generato quando è stata impostata l'associazione dati al passaggio 2.  Il codice dovrebbe risultare simile al seguente: `TableAdapterName.Fill(DataSetName.TableName)`.  Probabilmente sarà nell'evento <xref:System.Windows.Forms.Form.Load> del form.  
+9. <span data-ttu-id="84399-123">Nell'Editor di codice, individuare la riga di codice che carica i dati nell'adattatore di tabella.</span><span class="sxs-lookup"><span data-stu-id="84399-123">In the Code Editor, find the line of code that loads data into the table adapter.</span></span> <span data-ttu-id="84399-124">Questo codice è stato generato quando si configura l'associazione di dati nel passaggio 2.</span><span class="sxs-lookup"><span data-stu-id="84399-124">This code was generated when you set up the data binding in step 2.</span></span> <span data-ttu-id="84399-125">Il codice dovrebbe essere simile al seguente: `TableAdapterName.Fill(DataSetName.TableName)`.</span><span class="sxs-lookup"><span data-stu-id="84399-125">The code should be similar to the following: `TableAdapterName.Fill(DataSetName.TableName)`.</span></span> <span data-ttu-id="84399-126">Si verifica più probabilmente avere il formato <xref:System.Windows.Forms.Form.Load> evento.</span><span class="sxs-lookup"><span data-stu-id="84399-126">It will most likely be in the form's <xref:System.Windows.Forms.Form.Load> event.</span></span>  
   
-10. Creare un gestore per l'evento <xref:System.Windows.Forms.ToolStripItem.Click> di  `` **Load** `` <xref:System.Windows.Forms.ToolStripButton> creato in precedenza e spostarvi il codice di caricamento dati.  
+10. <span data-ttu-id="84399-127">Creare un gestore eventi per il <xref:System.Windows.Forms.ToolStripItem.Click> evento del**carico** <xref:System.Windows.Forms.ToolStripButton> è creato in precedenza e spostare il codice di caricamento dei dati al suo interno.</span><span class="sxs-lookup"><span data-stu-id="84399-127">Create an event handler for the <xref:System.Windows.Forms.ToolStripItem.Click> event of the**Load**<xref:System.Windows.Forms.ToolStripButton> you created earlier and move this data-loading code into it.</span></span>  
   
-     Il codice dovrebbe ora risultare simile al seguente:  
+     <span data-ttu-id="84399-128">Il codice dovrebbe risultare simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="84399-128">Your code should now look similar to the following:</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub LoadButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LoadButton.Click  
         TableAdapterName.Fill(DataSetName.TableName)  
     End Sub  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void LoadButton_Click(System.Object sender,   
         System.EventArgs e)  
     {  
@@ -82,19 +82,15 @@ caps.handback.revision: 17
     }  
     ```  
   
-11. Creare un gestore per l'evento <xref:System.Windows.Forms.ToolStripItem.Click> di **Save** `` <xref:System.Windows.Forms.ToolStripButton> creato in precedenza e scrivere il codice per aggiornare i dati nella tabella a cui è associato il controllo.  
+11. <span data-ttu-id="84399-129">Creare un gestore eventi per il <xref:System.Windows.Forms.ToolStripItem.Click> evento del **salvare** <xref:System.Windows.Forms.ToolStripButton> creato in precedenza e scrivere il codice per aggiornare i dati all'interno della tabella di controllo è associato a.</span><span class="sxs-lookup"><span data-stu-id="84399-129">Create an event handler for the <xref:System.Windows.Forms.ToolStripItem.Click> event of the **Save**<xref:System.Windows.Forms.ToolStripButton> you created earlier and write code to update the data within the table the control is bound to.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub SaveButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveButton.Click  
         TableAdapterName.Update(DataSetName.TableName)  
     End Sub  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void SaveButton_Click(System.Object sender,   
         System.EventArgs e)  
     {  
@@ -103,21 +99,17 @@ caps.handback.revision: 17
     ```  
   
     > [!NOTE]
-    >  In alcuni casi, il componente <xref:System.Windows.Forms.BindingNavigator> disporrà già di un pulsante `` **Salva**, ma non è stato generato alcun codice da Progettazione Windows Form.  In tal caso, inserire il codice precedente nel gestore dell'evento <xref:System.Windows.Forms.ToolStripItem.Click> per tale pulsante invece di creare un pulsante completamente nuovo in <xref:System.Windows.Forms.ToolStrip>.  Tuttavia, il pulsante è disabilitato per impostazione predefinita e quindi è necessario impostare la proprietà <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> del pulsante su `true` affinché funzioni correttamente.  
+    >  <span data-ttu-id="84399-130">In alcuni casi, il <xref:System.Windows.Forms.BindingNavigator> componente avranno già un**salvare** pulsante ma nessun codice verrà sono stati generati da Progettazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="84399-130">In some cases, the <xref:System.Windows.Forms.BindingNavigator> component will already have a**Save** button, but no code will have been generated by the Windows Forms Designer.</span></span> <span data-ttu-id="84399-131">In questo caso, è possibile inserire il codice precedente il <xref:System.Windows.Forms.ToolStripItem.Click> gestore eventi per tale pulsante, anziché creare un pulsante completamente nuovo nel <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="84399-131">In this case, you can place the preceding code in the <xref:System.Windows.Forms.ToolStripItem.Click> event handler for that button, rather than creating an entirely new button on the <xref:System.Windows.Forms.ToolStrip>.</span></span> <span data-ttu-id="84399-132">Tuttavia, il pulsante è disabilitato per impostazione predefinita, pertanto è necessario impostare il <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> proprietà del pulsante su `true` affinché funzioni correttamente.</span><span class="sxs-lookup"><span data-stu-id="84399-132">However, the button is disabled by default, so you must set the <xref:System.Windows.Forms.ToolBarButton.Enabled%2A> property of the button to `true` to have the button function correctly.</span></span>  
   
-12. Creare un gestore per l'evento <xref:System.Windows.Forms.ToolStripItem.Click> di  `` **Cancel** `` <xref:System.Windows.Forms.ToolStripButton> creato in precedenza e scrivere il codice per annullare le modifiche al record di dati visualizzato.  
+12. <span data-ttu-id="84399-133">Creare un gestore eventi per il <xref:System.Windows.Forms.ToolStripItem.Click> evento del**Annulla** <xref:System.Windows.Forms.ToolStripButton> è creato in precedenza e scrivere codice per annullare le modifiche al record di dati che viene visualizzato.</span><span class="sxs-lookup"><span data-stu-id="84399-133">Create an event handler for the <xref:System.Windows.Forms.ToolStripItem.Click> event of the**Cancel**<xref:System.Windows.Forms.ToolStripButton> you created earlier and write code to cancel any changes to the data record that is displayed.</span></span>  
   
-     \[Visual Basic\]  
-  
-    ```  
+    ```vb  
     Private Sub CancelButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelButton.Click  
         BindingSourceName.CancelEdit()  
     End Sub  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void CancelButton_Click(System.Object sender, System.EventArgs e)  
     {  
         BindingSourceName.CancelEdit();  
@@ -125,11 +117,11 @@ caps.handback.revision: 17
     ```  
   
     > [!NOTE]
-    >  L'ambito del metodo <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> è la riga di dati.  Salvare le modifiche apportate durante la visualizzazione del singolo record prima di procedere al successivo.  
+    >  <span data-ttu-id="84399-134">Il <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> metodo ambito è la riga di dati.</span><span class="sxs-lookup"><span data-stu-id="84399-134">The <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> method is scoped to the row of data.</span></span> <span data-ttu-id="84399-135">Salvare le modifiche apportate durante la visualizzazione del singolo record prima di spostarsi al record successivo.</span><span class="sxs-lookup"><span data-stu-id="84399-135">Save any changes you make while viewing that individual record before navigating to the next record.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.BindingNavigator>   
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.Windows.Forms.ToolStrip>   
- [Controllo BindingNavigator](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)   
- [Cenni preliminari sul componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+## <a name="see-also"></a><span data-ttu-id="84399-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="84399-136">See Also</span></span>  
+ <xref:System.Windows.Forms.BindingNavigator>  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ [<span data-ttu-id="84399-137">Controllo BindingNavigator</span><span class="sxs-lookup"><span data-stu-id="84399-137">BindingNavigator Control</span></span>](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ [<span data-ttu-id="84399-138">Cenni preliminari sul componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="84399-138">BindingSource Component Overview</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)

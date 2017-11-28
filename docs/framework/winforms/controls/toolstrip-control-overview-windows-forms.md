@@ -1,97 +1,97 @@
 ---
-title: "Cenni preliminari sul controllo ToolStrip (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Toolstrip"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "barre degli strumenti [Windows Form]"
-  - "barre degli strumenti [Windows Form], novità in Windows Form"
-  - "ToolStrip (controllo) [Windows Form], informazioni sul controllo ToolStrip"
-  - "novità [Windows Form], barre degli strumenti"
+title: Cenni preliminari sul controllo ToolStrip (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Toolstrip
+helpviewer_keywords:
+- ToolStrip control [Windows Forms], about ToolStrip control
+- toolbars [Windows Forms], what's new in Windows Forms
+- toolbars [Windows Forms]
+- what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 15e24e0350071fabd32342402abdf497937ee90d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul controllo ToolStrip (Windows Form)
-Il controllo <xref:System.Windows.Forms.ToolStrip> Windows Form e le relative classi associate forniscono un framework comune per combinare elementi dell'interfaccia utente nelle barre degli strumenti, nelle barre di stato e nei menu  I controlli <xref:System.Windows.Forms.ToolStrip> offrono molteplici funzionalità in fase di progettazione tra cui l'attivazione e la modifica sul posto, il layout personalizzato e il raggruppamento verticale\/orizzontale, ovvero la possibilità per le barre degli strumenti di condividere uno spazio orizzontale o verticale.  
+# <a name="toolstrip-control-overview-windows-forms"></a><span data-ttu-id="3e009-102">Cenni preliminari sul controllo ToolStrip (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="3e009-102">ToolStrip Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="3e009-103">Windows Form <xref:System.Windows.Forms.ToolStrip> controllo e le classi associate forniscono un framework comune per combinare gli elementi dell'interfaccia utente nelle barre degli strumenti, barre di stato e menu.</span><span class="sxs-lookup"><span data-stu-id="3e009-103">The Windows Forms <xref:System.Windows.Forms.ToolStrip> control and its associated classes provide a common framework for combining user interface elements into toolbars, status bars, and menus.</span></span> <span data-ttu-id="3e009-104"><xref:System.Windows.Forms.ToolStrip>controlli offrono esperienze in fase di progettazione che include l'attivazione sul posto e la modifica, layout personalizzato e raggruppamento verticale/orizzontale, ovvero la possibilità di barre degli strumenti di condividere lo spazio orizzontale o verticale.</span><span class="sxs-lookup"><span data-stu-id="3e009-104"><xref:System.Windows.Forms.ToolStrip> controls offer a rich design-time experience that includes in-place activation and editing, custom layout, and rafting, which is the ability of toolbars to share horizontal or vertical space.</span></span>  
   
- Benché il controllo <xref:System.Windows.Forms.ToolStrip> sostituisca il controllo delle versioni precedenti aggiungendo funzionalità, il controllo <xref:System.Windows.Forms.ToolBar> viene mantenuto per compatibilità con le versioni precedenti e per utilizzo futuro se lo si desidera.  
+ <span data-ttu-id="3e009-105">Sebbene <xref:System.Windows.Forms.ToolStrip> sostituisca e funzionalità per il controllo nelle versioni precedenti, <xref:System.Windows.Forms.ToolBar> viene mantenuto per compatibilità con le versioni precedenti e un utilizzo futuro, se si desidera.</span><span class="sxs-lookup"><span data-stu-id="3e009-105">Although <xref:System.Windows.Forms.ToolStrip> replaces and adds functionality to the control in previous versions, <xref:System.Windows.Forms.ToolBar> is retained for both backward compatibility and future use if desired.</span></span>  
   
-## Funzionalità dei controlli ToolStrip  
- Utilizzare il controllo <xref:System.Windows.Forms.ToolStrip> per:  
+## <a name="features-of-the-toolstrip-controls"></a><span data-ttu-id="3e009-106">Funzionalità dei controlli ToolStrip</span><span class="sxs-lookup"><span data-stu-id="3e009-106">Features of the ToolStrip Controls</span></span>  
+ <span data-ttu-id="3e009-107">Utilizzare il <xref:System.Windows.Forms.ToolStrip> il controllo a:</span><span class="sxs-lookup"><span data-stu-id="3e009-107">Use the <xref:System.Windows.Forms.ToolStrip> control to:</span></span>  
   
--   Presentare un'interfaccia utente comune tra tutti i contenitori.  
+-   <span data-ttu-id="3e009-108">Presentare un'interfaccia utente comune tra contenitori.</span><span class="sxs-lookup"><span data-stu-id="3e009-108">Present a common user interface across containers.</span></span>  
   
--   Creare barre degli strumenti di facile personalizzazione e di impiego frequente che supportino funzioni avanzate di interfaccia utente e layout, ad esempio ancoraggio, raggruppamento verticale\/orizzontale, pulsanti con testo e immagini, pulsanti e controlli a discesa, pulsanti di overflow e riordino di elementi <xref:System.Windows.Forms.ToolStrip> in fase di esecuzione.  
+-   <span data-ttu-id="3e009-109">Creare facilmente personalizzato, impiego frequente barre degli strumenti che supportano avanzate funzionalità di layout e l'interfaccia utente, ad esempio ancoraggio, raggruppamento verticale/orizzontale, i pulsanti con testo e immagini, caselle di riepilogo e i controlli, pulsanti di overflow e in fase di esecuzione riordinamento di <xref:System.Windows.Forms.ToolStrip> elementi.</span><span class="sxs-lookup"><span data-stu-id="3e009-109">Create easily customized, commonly employed toolbars that support advanced user interface and layout features, such as docking, rafting, buttons with text and images, drop-down buttons and controls, overflow buttons, and run-time reordering of <xref:System.Windows.Forms.ToolStrip> items.</span></span>  
   
--   Supportare l'overflow e il riordino degli elementi in fase di esecuzione.  La funzionalità di overflow sposta gli elementi in un menu a discesa quando lo spazio disponibile non è sufficiente per visualizzarli in un <xref:System.Windows.Forms.ToolStrip>.  
+-   <span data-ttu-id="3e009-110">Supportano l'overflow e il riordino degli elementi in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="3e009-110">Support overflow and run-time item reordering.</span></span> <span data-ttu-id="3e009-111">La funzionalità di overflow sposta gli elementi in un menu a discesa quando non vi è spazio sufficiente per visualizzarli in un <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="3e009-111">The overflow feature moves items to a drop-down menu when there is not enough room to display them in a <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
--   Supportare l'aspetto e il comportamento tipici del sistema operativo tramite un modello di rendering comune.  
+-   <span data-ttu-id="3e009-112">Supporta l'aspetto tipico e il comportamento del sistema operativo tramite un modello comune di rendering.</span><span class="sxs-lookup"><span data-stu-id="3e009-112">Support the typical appearance and behavior of the operating system through a common rendering model.</span></span>  
   
--   Gestire eventi in modo coerente per tutti i contenitori e gli elementi contenuti, nello stesso modo in cui si gestiscono eventi per altri controlli.  
+-   <span data-ttu-id="3e009-113">Gestire gli eventi in modo coerente per tutti i contenitori e gli elementi contenuti, nello stesso modo gestire gli eventi per altri controlli.</span><span class="sxs-lookup"><span data-stu-id="3e009-113">Handle events consistently for all containers and contained items, in the same way you handle events for other controls.</span></span>  
   
--   Trascinare elementi da un <xref:System.Windows.Forms.ToolStrip> a un altro o all'interno di un <xref:System.Windows.Forms.ToolStrip>.  
+-   <span data-ttu-id="3e009-114">Trascinare gli elementi da una <xref:System.Windows.Forms.ToolStrip> a un altro o in un <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="3e009-114">Drag items from one <xref:System.Windows.Forms.ToolStrip> to another or within a <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
--   Creare controlli a discesa ed editor di tipi con interfaccia utente con layout avanzati in una classe <xref:System.Windows.Forms.ToolStripDropDown>.  
+-   <span data-ttu-id="3e009-115">Creare i controlli elenco a discesa e utente editor di tipi di interfaccia con layout avanzati in un <xref:System.Windows.Forms.ToolStripDropDown>.</span><span class="sxs-lookup"><span data-stu-id="3e009-115">Create drop-down controls and user interface type editors with advanced layouts in a <xref:System.Windows.Forms.ToolStripDropDown>.</span></span>  
   
- Utilizzare la classe <xref:System.Windows.Forms.ToolStripControlHost> per servirsi di altri controlli in un <xref:System.Windows.Forms.ToolStrip> e ottenere le funzionalità di <xref:System.Windows.Forms.ToolStrip> per essi.  
+ <span data-ttu-id="3e009-116">Utilizzare il <xref:System.Windows.Forms.ToolStripControlHost> classe da utilizzare altri controlli in un <xref:System.Windows.Forms.ToolStrip> e ottenere <xref:System.Windows.Forms.ToolStrip> funzionalità relativa.</span><span class="sxs-lookup"><span data-stu-id="3e009-116">Use the <xref:System.Windows.Forms.ToolStripControlHost> class to use other controls on a <xref:System.Windows.Forms.ToolStrip> and gain <xref:System.Windows.Forms.ToolStrip> functionality for them.</span></span>  
   
- È possibile estendere le funzionalità e modificare l'aspetto e il comportamento utilizzando le classi <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripProfessionalRenderer> e <xref:System.Windows.Forms.ToolStripManager> insieme alle enumerazioni <xref:System.Windows.Forms.ToolStripRenderMode> e <xref:System.Windows.Forms.ToolStripManagerRenderMode>.  
+ <span data-ttu-id="3e009-117">È possibile estendere le funzionalità e modificare l'aspetto e il comportamento tramite il <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, e <xref:System.Windows.Forms.ToolStripManager> lungo con il <xref:System.Windows.Forms.ToolStripRenderMode> e <xref:System.Windows.Forms.ToolStripManagerRenderMode> enumerazioni.</span><span class="sxs-lookup"><span data-stu-id="3e009-117">You can extend the functionality and modify the appearance and behavior by using the <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, and <xref:System.Windows.Forms.ToolStripManager> along with the <xref:System.Windows.Forms.ToolStripRenderMode> and <xref:System.Windows.Forms.ToolStripManagerRenderMode> enumerations.</span></span>  
   
- Il controllo <xref:System.Windows.Forms.ToolStrip> è particolarmente configurabile ed estendibile e fornisce un gran numero di proprietà, metodi ed eventi per la personalizzazione di aspetto e comportamento.  Di seguito sono riportati alcuni membri di una certa rilevanza:  
+ <span data-ttu-id="3e009-118">Il <xref:System.Windows.Forms.ToolStrip> controllo è particolarmente configurabile ed estendibile e fornisce molte proprietà, metodi ed eventi per personalizzare l'aspetto e comportamento.</span><span class="sxs-lookup"><span data-stu-id="3e009-118">The <xref:System.Windows.Forms.ToolStrip> control is highly configurable and extensible, and it provides many properties, methods, and events to customize appearance and behavior.</span></span> <span data-ttu-id="3e009-119">Di seguito sono alcuni membri importanti:</span><span class="sxs-lookup"><span data-stu-id="3e009-119">Below are some noteworthy members:</span></span>  
   
-### Membri di ToolStrip importanti  
+### <a name="important-toolstrip-members"></a><span data-ttu-id="3e009-120">Membri importanti di ToolStrip</span><span class="sxs-lookup"><span data-stu-id="3e009-120">Important ToolStrip Members</span></span>  
   
-|Nome|Descrizione|  
+|<span data-ttu-id="3e009-121">Nome</span><span class="sxs-lookup"><span data-stu-id="3e009-121">Name</span></span>|<span data-ttu-id="3e009-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3e009-122">Description</span></span>|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Ottiene o imposta il bordo del contenitore padre al quale è fissato un <xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Ottiene o imposta un valore che indica se il trascinamento della selezione e il riordino di elementi sono gestiti in modo privato dalla classe <xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>|Ottiene o imposta un valore che indica il modo in cui il <xref:System.Windows.Forms.ToolStrip> definisce i relativi elementi.|  
-|<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>|Ottiene o imposta un valore che indica se una classe <xref:System.Windows.Forms.ToolStripItem> è collegata al <xref:System.Windows.Forms.ToolStrip> o alla classe <xref:System.Windows.Forms.ToolStripOverflowButton> oppure se è mobile tra i due.|  
-|<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|Ottiene un valore che indica se una classe <xref:System.Windows.Forms.ToolStripItem> visualizza altri elementi in un elenco a discesa quando si fa clic su <xref:System.Windows.Forms.ToolStripItem>.|  
-|<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|Ottiene la classe <xref:System.Windows.Forms.ToolStripItem> che rappresenta il pulsante di overflow di un <xref:System.Windows.Forms.ToolStrip> in cui l'overflow è attivato.|  
-|<xref:System.Windows.Forms.ToolStrip.Renderer%2A>|Ottiene o imposta un <xref:System.Windows.Forms.ToolStripRenderer> utilizzato per personalizzare l'aspetto e il comportamento di un <xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|Ottiene o imposta gli stili di disegno da applicare al <xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStrip.RendererChanged>|Generato quando la proprietà <xref:System.Windows.Forms.ToolStrip.Renderer%2A> viene modificata.|  
+|<xref:System.Windows.Forms.ToolStrip.Dock%2A>|<span data-ttu-id="3e009-123">Ottiene o imposta il bordo del contenitore padre un <xref:System.Windows.Forms.ToolStrip> è ancorato.</span><span class="sxs-lookup"><span data-stu-id="3e009-123">Gets or sets which edge of the parent container a <xref:System.Windows.Forms.ToolStrip> is docked to.</span></span>|  
+|<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|<span data-ttu-id="3e009-124">Ottiene o imposta un valore che indica se le operazioni di trascinamento della selezione e ridisposizione degli elementi devono essere gestite privatamente dalla classe <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="3e009-124">Gets or sets a value indicating whether drag-and-drop and item reordering are handled privately by the <xref:System.Windows.Forms.ToolStrip> class.</span></span>|  
+|<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>|<span data-ttu-id="3e009-125">Ottiene o imposta un valore che indica come il <xref:System.Windows.Forms.ToolStrip> definisce i relativi elementi.</span><span class="sxs-lookup"><span data-stu-id="3e009-125">Gets or sets a value indicating how the <xref:System.Windows.Forms.ToolStrip> lays out its items.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>|<span data-ttu-id="3e009-126">Ottiene o imposta se un <xref:System.Windows.Forms.ToolStripItem> è collegato il <xref:System.Windows.Forms.ToolStrip> o <xref:System.Windows.Forms.ToolStripOverflowButton> oppure può spostarsi tra i due.</span><span class="sxs-lookup"><span data-stu-id="3e009-126">Gets or sets whether a <xref:System.Windows.Forms.ToolStripItem> is attached to the <xref:System.Windows.Forms.ToolStrip> or <xref:System.Windows.Forms.ToolStripOverflowButton> or can float between the two.</span></span>|  
+|<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|<span data-ttu-id="3e009-127">Ottiene un valore che indica se un <xref:System.Windows.Forms.ToolStripItem> Visualizza altri elementi in un elenco a discesa elenco quando la <xref:System.Windows.Forms.ToolStripItem> si fa clic.</span><span class="sxs-lookup"><span data-stu-id="3e009-127">Gets a value indicating whether a <xref:System.Windows.Forms.ToolStripItem> displays other items in a drop-down list when the <xref:System.Windows.Forms.ToolStripItem> is clicked.</span></span>|  
+|<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|<span data-ttu-id="3e009-128">Ottiene l'oggetto <xref:System.Windows.Forms.ToolStripItem> che rappresenta il pulsante di overflow di un oggetto <xref:System.Windows.Forms.ToolStrip> con l'overflow abilitato.</span><span class="sxs-lookup"><span data-stu-id="3e009-128">Gets the <xref:System.Windows.Forms.ToolStripItem> that is the overflow button for a <xref:System.Windows.Forms.ToolStrip> with overflow enabled.</span></span>|  
+|<xref:System.Windows.Forms.ToolStrip.Renderer%2A>|<span data-ttu-id="3e009-129">Ottiene o imposta un <xref:System.Windows.Forms.ToolStripRenderer> consentono di personalizzare l'aspetto e comportamento (aspetto) di un <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="3e009-129">Gets or sets a <xref:System.Windows.Forms.ToolStripRenderer> used to customize the appearance and behavior (look and feel) of a <xref:System.Windows.Forms.ToolStrip>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|<span data-ttu-id="3e009-130">Ottiene o imposta gli stili di disegno da applicare per il <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="3e009-130">Gets or sets the painting styles to be applied to the <xref:System.Windows.Forms.ToolStrip>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStrip.RendererChanged>|<span data-ttu-id="3e009-131">Eccezione generata quando il <xref:System.Windows.Forms.ToolStrip.Renderer%2A> le modifiche alle proprietà.</span><span class="sxs-lookup"><span data-stu-id="3e009-131">Raised when the <xref:System.Windows.Forms.ToolStrip.Renderer%2A> property changes.</span></span>|  
   
- La flessibilità del controllo <xref:System.Windows.Forms.ToolStrip> è possibile grazie all'utilizzo di diverse classi correlate.  Di seguito ne sono riportate alcune di una certa rilevanza:  
+ <span data-ttu-id="3e009-132">Il <xref:System.Windows.Forms.ToolStrip> flessibilità del controllo viene ottenuta tramite l'utilizzo di un numero di classi correlate.</span><span class="sxs-lookup"><span data-stu-id="3e009-132">The <xref:System.Windows.Forms.ToolStrip> control's flexibility is achieved through the use of a number of companion classes.</span></span> <span data-ttu-id="3e009-133">Di seguito sono riportate alcune la più importante:</span><span class="sxs-lookup"><span data-stu-id="3e009-133">Below are some of the most noteworthy:</span></span>  
   
-### Classi importanti correlate a ToolStrip  
+### <a name="important-toolstrip-companion-classes"></a><span data-ttu-id="3e009-134">Classi importanti correlate al controllo ToolStrip</span><span class="sxs-lookup"><span data-stu-id="3e009-134">Important ToolStrip Companion Classes</span></span>  
   
-|Nome|Descrizione|  
+|<span data-ttu-id="3e009-135">Nome</span><span class="sxs-lookup"><span data-stu-id="3e009-135">Name</span></span>|<span data-ttu-id="3e009-136">Descrizione</span><span class="sxs-lookup"><span data-stu-id="3e009-136">Description</span></span>|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.MenuStrip>|Sostituisce la classe <xref:System.Windows.Forms.MainMenu> aggiungendo funzionalità.|  
-|<xref:System.Windows.Forms.StatusStrip>|Sostituisce la classe <xref:System.Windows.Forms.StatusBar> aggiungendo funzionalità.|  
-|<xref:System.Windows.Forms.ContextMenuStrip>|Sostituisce la classe <xref:System.Windows.Forms.ContextMenu> aggiungendo funzionalità.|  
-|<xref:System.Windows.Forms.ToolStripItem>|Classe base astratta che gestisce eventi e layout per tutti gli elementi che possono essere contenuti in un <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripControlHost> o <xref:System.Windows.Forms.ToolStripDropDown>.|  
-|<xref:System.Windows.Forms.ToolStripContainer>|Fornisce un pannello a un contenitore su ogni lato del form in cui è possibile disporre i controlli in vari modi.|  
-|<xref:System.Windows.Forms.ToolStripRenderer>|Gestisce la funzionalità di disegno per gli oggetti <xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStripProfessionalRenderer>|Attribuisce un aspetto in stile Microsoft Office.|  
-|<xref:System.Windows.Forms.ToolStripManager>|Controlla il rendering e il raggruppamento verticale\/orizzontale dei controlli <xref:System.Windows.Forms.ToolStrip> nonché l'unione degli oggetti <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu> e <xref:System.Windows.Forms.ToolStripMenuItem>.|  
-|<xref:System.Windows.Forms.ToolStripManagerRenderMode>|Specifica lo stile di disegno \(personalizzato, Windows XP o Microsoft Office Professional\) applicato a più oggetti <xref:System.Windows.Forms.ToolStrip> contenuti in un form.|  
-|<xref:System.Windows.Forms.ToolStripRenderMode>|Specifica lo stile di disegno \(personalizzato, Windows XP o Microsoft Office Professional\) applicato a un oggetto <xref:System.Windows.Forms.ToolStrip> contenuto in un form.|  
-|<xref:System.Windows.Forms.ToolStripControlHost>|Include altri controlli che non sono controlli <xref:System.Windows.Forms.ToolStrip> in modo specifico ma per i quali si desidera disporre delle funzionalità di <xref:System.Windows.Forms.ToolStrip>.|  
-|<xref:System.Windows.Forms.ToolStripItemPlacement>|Specifica se è necessario disporre una classe <xref:System.Windows.Forms.ToolStripItem> sul <xref:System.Windows.Forms.ToolStrip> principale, sul <xref:System.Windows.Forms.ToolStrip> di overflow o su nessuno dei due.|  
+|<xref:System.Windows.Forms.MenuStrip>|<span data-ttu-id="3e009-137">Sostituisce e aggiunge la funzionalità per la <xref:System.Windows.Forms.MainMenu> classe.</span><span class="sxs-lookup"><span data-stu-id="3e009-137">Replaces and adds functionality to the <xref:System.Windows.Forms.MainMenu> class.</span></span>|  
+|<xref:System.Windows.Forms.StatusStrip>|<span data-ttu-id="3e009-138">Sostituisce e aggiunge la funzionalità per la <xref:System.Windows.Forms.StatusBar> classe.</span><span class="sxs-lookup"><span data-stu-id="3e009-138">Replaces and adds functionality to the <xref:System.Windows.Forms.StatusBar> class.</span></span>|  
+|<xref:System.Windows.Forms.ContextMenuStrip>|<span data-ttu-id="3e009-139">Sostituisce e aggiunge la funzionalità per la <xref:System.Windows.Forms.ContextMenu> classe.</span><span class="sxs-lookup"><span data-stu-id="3e009-139">Replaces and adds functionality to the <xref:System.Windows.Forms.ContextMenu> class.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripItem>|<span data-ttu-id="3e009-140">Classe base astratta che gestisce gli eventi e il layout per tutti gli elementi che un <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripControlHost>, o <xref:System.Windows.Forms.ToolStripDropDown> può contenere.</span><span class="sxs-lookup"><span data-stu-id="3e009-140">Abstract base class that manages events and layout for all the elements that a <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripControlHost>, or <xref:System.Windows.Forms.ToolStripDropDown> can contain.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripContainer>|<span data-ttu-id="3e009-141">Fornisce un contenitore con un pannello su ciascun lato del form in cui è possibile disporre i controlli in vari modi.</span><span class="sxs-lookup"><span data-stu-id="3e009-141">Provides a container with a panel on each side of the form in which controls can be arranged in various ways.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripRenderer>|<span data-ttu-id="3e009-142">Gestisce la funzionalità di disegno per <xref:System.Windows.Forms.ToolStrip> oggetti.</span><span class="sxs-lookup"><span data-stu-id="3e009-142">Handles the painting functionality for <xref:System.Windows.Forms.ToolStrip> objects.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripProfessionalRenderer>|<span data-ttu-id="3e009-143">Fornisce l'aspetto di stile Microsoft Office.</span><span class="sxs-lookup"><span data-stu-id="3e009-143">Provides Microsoft Office-style appearance.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripManager>|<span data-ttu-id="3e009-144">Controlli <xref:System.Windows.Forms.ToolStrip> per il rendering e il raggruppamento e l'unione di <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu>, e <xref:System.Windows.Forms.ToolStripMenuItem> oggetti.</span><span class="sxs-lookup"><span data-stu-id="3e009-144">Controls <xref:System.Windows.Forms.ToolStrip> rendering and rafting, and the merging of <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu>, and <xref:System.Windows.Forms.ToolStripMenuItem> objects.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripManagerRenderMode>|<span data-ttu-id="3e009-145">Specifica lo stile di disegno (personalizzato, Windows XP o Microsoft Office Professional) applicato a più <xref:System.Windows.Forms.ToolStrip> oggetti contenuti in un form.</span><span class="sxs-lookup"><span data-stu-id="3e009-145">Specifies the painting style (custom, Windows XP, or Microsoft Office Professional) applied to multiple <xref:System.Windows.Forms.ToolStrip> objects contained in a form.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripRenderMode>|<span data-ttu-id="3e009-146">Specifica lo stile di disegno (personalizzato, Windows XP o Microsoft Office Professional) applicato a un <xref:System.Windows.Forms.ToolStrip> oggetto contenuto in un form.</span><span class="sxs-lookup"><span data-stu-id="3e009-146">Specifies the painting style (custom, Windows XP, or Microsoft Office Professional) applied to one <xref:System.Windows.Forms.ToolStrip> object contained in a form.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripControlHost>|<span data-ttu-id="3e009-147">Ospita altri controlli che non sono in particolare <xref:System.Windows.Forms.ToolStrip> controlli ma per il quale <xref:System.Windows.Forms.ToolStrip> funzionalità.</span><span class="sxs-lookup"><span data-stu-id="3e009-147">Hosts other controls that are not specifically <xref:System.Windows.Forms.ToolStrip> controls but for which you want <xref:System.Windows.Forms.ToolStrip> functionality.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripItemPlacement>|<span data-ttu-id="3e009-148">Specifica se un <xref:System.Windows.Forms.ToolStripItem> deve essere disposto in principale <xref:System.Windows.Forms.ToolStrip>, l'overflow <xref:System.Windows.Forms.ToolStrip>, o entrambe le opzioni.</span><span class="sxs-lookup"><span data-stu-id="3e009-148">Specifies whether a <xref:System.Windows.Forms.ToolStripItem> is to be laid out on the main <xref:System.Windows.Forms.ToolStrip>, on the overflow <xref:System.Windows.Forms.ToolStrip>, or neither.</span></span>|  
   
- Per ulteriori informazioni, vedere [Riepilogo della tecnologia ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md) e [Architettura del controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md).  
+ <span data-ttu-id="3e009-149">Per ulteriori informazioni, vedere [riepilogo della tecnologia ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md) e [architettura del controllo ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md).</span><span class="sxs-lookup"><span data-stu-id="3e009-149">For more information, see [ToolStrip Technology Summary](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md) and [ToolStrip Control Architecture](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ContextMenuStrip>   
- <xref:System.Windows.Forms.StatusStrip>   
- <xref:System.Windows.Forms.ToolStripItem>   
+## <a name="see-also"></a><span data-ttu-id="3e009-150">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3e009-150">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ContextMenuStrip>  
+ <xref:System.Windows.Forms.StatusStrip>  
+ <xref:System.Windows.Forms.ToolStripItem>  
  <xref:System.Windows.Forms.ToolStripDropDown>

@@ -1,81 +1,84 @@
 ---
-title: "Generazione di un client WCF dai metadati del servizio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Generazione di un client WCF dai metadati del servizio
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f0b35697761263b0a605f46fdb6dfbb472a354b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Generazione di un client WCF dai metadati del servizio
-In questo argomento viene illustrato come utilizzare le varie opzioni in Svcutil.exe per generare client da documenti dei metadati.  
+# <a name="generating-a-wcf-client-from-service-metadata"></a><span data-ttu-id="b2184-102">Generazione di un client WCF dai metadati del servizio</span><span class="sxs-lookup"><span data-stu-id="b2184-102">Generating a WCF Client from Service Metadata</span></span>
+<span data-ttu-id="b2184-103">In questo argomento viene illustrato come utilizzare le varie opzioni in Svcutil.exe per generare client da documenti dei metadati.</span><span class="sxs-lookup"><span data-stu-id="b2184-103">This topic describes how to use the various switches in Svcutil.exe to generate clients from metadata documents.</span></span>  
   
- Questi documenti dei metadati possono essere salvati in modo permanente o recuperati in linea.Il recupero in linea segue il protocollo WS\-MetadataExchange o il protocollo Microsoft Discovery \(DISCO\).Per recuperare metadati, Svcutil.exe genera contemporaneamente le richieste di metadati seguenti:  
+ <span data-ttu-id="b2184-104">Questi documenti dei metadati possono essere salvati in modo permanente o recuperati in linea.</span><span class="sxs-lookup"><span data-stu-id="b2184-104">Metadata documents can be on a durable storage or be retrieved online.</span></span> <span data-ttu-id="b2184-105">Il recupero in linea segue il protocollo WS-MetadataExchange o il protocollo Microsoft Discovery (DISCO).</span><span class="sxs-lookup"><span data-stu-id="b2184-105">Online retrieval follows either the WS-MetadataExchange protocol or the Microsoft Discovery (DISCO) protocol.</span></span> <span data-ttu-id="b2184-106">Per recuperare metadati, Svcutil.exe genera contemporaneamente le richieste di metadati seguenti:</span><span class="sxs-lookup"><span data-stu-id="b2184-106">Svcutil.exe issues the following metadata requests simultaneously to retrieve metadata:</span></span>  
   
--   Richiesta WS\-MetadataExchange \(MEX\) all'indirizzo fornito.  
+-   <span data-ttu-id="b2184-107">Richiesta WS-MetadataExchange (MEX) all'indirizzo fornito.</span><span class="sxs-lookup"><span data-stu-id="b2184-107">WS-MetadataExchange (MEX) request to the supplied address.</span></span>  
   
--   Richiesta MEX all'indirizzo fornito con `/mex` accodato.  
+-   <span data-ttu-id="b2184-108">Richiesta MEX all'indirizzo fornito con `/mex` accodato.</span><span class="sxs-lookup"><span data-stu-id="b2184-108">MEX request to the supplied address with `/mex` appended.</span></span>  
   
--   Richiesta DISCO \(utilizzando [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) dai servizi Web ASP.NET\) all'indirizzo fornito.  
+-   <span data-ttu-id="b2184-109">Richiesta DISCO (mediante il [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) dai servizi Web ASP.NET) all'indirizzo fornito.</span><span class="sxs-lookup"><span data-stu-id="b2184-109">DISCO request (using the [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) from ASP.NET Web services) to the supplied address.</span></span>  
   
- Lo strumento Svcutil.exe consente di generare il client in base al WSDL \(Web Services Description Language\) o al file dei criteri ricevuto dal servizio.Il nome dell’entità utente \(UPN\) viene generato concatenando il nome utente con "@" e aggiungendo quindi un nome di dominio completo \(FQDN\).Per utenti registrati su Active Directory, questo formato non è tuttavia valido e l’UPN generato dallo strumento provoca un errore di autenticazione Kerberos con il messaggio di errore seguente: **Tentativo di accesso non riuscito**. Per risolvere questo problema, è necessario correggere manualmente il file client generato da questo strumento.  
+ <span data-ttu-id="b2184-110">Lo strumento Svcutil.exe consente di generare il client in base al WSDL (Web Services Description Language) o al file dei criteri ricevuto dal servizio.</span><span class="sxs-lookup"><span data-stu-id="b2184-110">Svcutil.exe generates the client based on the Web Services Description Language (WSDL) or policy file received from the service.</span></span> <span data-ttu-id="b2184-111">Il nome dell’entità utente (UPN) viene generato concatenando il nome utente con "@" e aggiungendo quindi un nome di dominio completo (FQDN).</span><span class="sxs-lookup"><span data-stu-id="b2184-111">The user principal name (UPN) is generated by concatenating the user name with "@" and then adding a fully-qualified domain name (FQDN).</span></span> <span data-ttu-id="b2184-112">Tuttavia, per gli utenti registrati su Active Directory, questo formato non è valido e l'UPN generato dallo strumento provoca un errore di autenticazione Kerberos con il seguente messaggio di errore: **non è riuscito il tentativo di accesso.**</span><span class="sxs-lookup"><span data-stu-id="b2184-112">However, for users who registered on Active Directory, this format is not valid and the UPN that the tool generates causes a failure in the Kerberos authentication with the following error message: **The logon attempt failed.**</span></span> <span data-ttu-id="b2184-113">Per risolvere questo problema, è necessario correggere manualmente il file client generato da questo strumento.</span><span class="sxs-lookup"><span data-stu-id="b2184-113">To resolve this problem, manually fix the client file that the tool generated.</span></span>  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
 ```  
   
-## Riferimento e condivisione dei tipi  
+## <a name="referencing-and-sharing-types"></a><span data-ttu-id="b2184-114">Riferimento e condivisione dei tipi</span><span class="sxs-lookup"><span data-stu-id="b2184-114">Referencing and Sharing Types</span></span>  
   
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**\/reference:\<file path\>**|Fa riferimento a tipi nell'assembly specificato.Quando si generano client, utilizzare questa opzione per specificare assembly che potrebbero contenere tipi che rappresentano i metadati importati.<br /><br /> Forma abbreviata: `/r`|  
-|**\/excludeType:\<type\>**|Specifica un nome tipo completo o un nome completo del tipo dell’assembly da escludere dai tipi di contratto a cui si fa riferimento.<br /><br /> Forma abbreviata: `/et`|  
+|<span data-ttu-id="b2184-115">Opzione</span><span class="sxs-lookup"><span data-stu-id="b2184-115">Option</span></span>|<span data-ttu-id="b2184-116">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b2184-116">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="b2184-117">**/Reference:\<percorso del file >**</span><span class="sxs-lookup"><span data-stu-id="b2184-117">**/reference:\<file path>**</span></span>|<span data-ttu-id="b2184-118">Fa riferimento a tipi nell'assembly specificato.</span><span class="sxs-lookup"><span data-stu-id="b2184-118">References types in the specified assembly.</span></span> <span data-ttu-id="b2184-119">Quando si generano client, utilizzare questa opzione per specificare assembly che potrebbero contenere tipi che rappresentano i metadati importati.</span><span class="sxs-lookup"><span data-stu-id="b2184-119">When generating clients, use this option to specify assemblies that might contain types that represent the metadata being imported.</span></span><br /><br /> <span data-ttu-id="b2184-120">Forma abbreviata: `/r`</span><span class="sxs-lookup"><span data-stu-id="b2184-120">Short form: `/r`</span></span>|  
+|<span data-ttu-id="b2184-121">**/excludeType:\<tipo >**</span><span class="sxs-lookup"><span data-stu-id="b2184-121">**/excludeType:\<type>**</span></span>|<span data-ttu-id="b2184-122">Specifica un nome tipo completo o un nome completo del tipo dell’assembly da escludere dai tipi di contratto a cui si fa riferimento.</span><span class="sxs-lookup"><span data-stu-id="b2184-122">Specifies a fully-qualified or assembly-qualified type name to be excluded from referenced contract types.</span></span><br /><br /> <span data-ttu-id="b2184-123">Forma abbreviata: `/et`</span><span class="sxs-lookup"><span data-stu-id="b2184-123">Short form: `/et`</span></span>|  
   
-## Scelta di un serializzatore  
+## <a name="choosing-a-serializer"></a><span data-ttu-id="b2184-124">Scelta di un serializzatore</span><span class="sxs-lookup"><span data-stu-id="b2184-124">Choosing a Serializer</span></span>  
   
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**\/serializer:Auto**|Seleziona automaticamente il serializzatore.Utilizza il serializzatore `DataContract`.In caso di errore, viene utilizzato `XmlSerializer`.<br /><br /> Forma abbreviata: `/ser:Auto`|  
-|**\/serializer:DataContractSerializer**|Generare tipi di dati che utilizzano il serializzatore `DataContract` per la serializzazione e la deserializzazione.<br /><br /> Forma abbreviata: `/ser:DataContractSerializer`|  
-|**\/serializer:XmlSerializer**|Genera tipi di dati che utilizzano `XmlSerializer` per la serializzazione e la deserializzazione.<br /><br /> Forma abbreviata: `/ser:XmlSerializer`|  
-|**\/importXmlTypes**|Configura il serializzatore `DataContract` per importare tipi non `DataContract` come tipi `IXmlSerializable`.<br /><br /> Forma abbreviata: `/ixt`|  
-|**\/dataContractOnly**|Genera codice solo per i tipi `DataContract`.Vengono generati i tipi `ServiceContract`.<br /><br /> Per questa opzione è necessario specificare soltanto file di metadati locali.<br /><br /> Forma abbreviata: `/dconly`|  
+|<span data-ttu-id="b2184-125">Opzione</span><span class="sxs-lookup"><span data-stu-id="b2184-125">Option</span></span>|<span data-ttu-id="b2184-126">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b2184-126">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="b2184-127">**/serializer:Auto**</span><span class="sxs-lookup"><span data-stu-id="b2184-127">**/serializer:Auto**</span></span>|<span data-ttu-id="b2184-128">Seleziona automaticamente il serializzatore.</span><span class="sxs-lookup"><span data-stu-id="b2184-128">Automatically selects the serializer.</span></span> <span data-ttu-id="b2184-129">Utilizza il serializzatore `DataContract`.</span><span class="sxs-lookup"><span data-stu-id="b2184-129">This uses the `DataContract` serializer.</span></span> <span data-ttu-id="b2184-130">In caso di errore, viene utilizzato `XmlSerializer`.</span><span class="sxs-lookup"><span data-stu-id="b2184-130">If this fails, the `XmlSerializer` is used.</span></span><br /><br /> <span data-ttu-id="b2184-131">Forma abbreviata: `/ser:Auto`</span><span class="sxs-lookup"><span data-stu-id="b2184-131">Short Form: `/ser:Auto`</span></span>|  
+|<span data-ttu-id="b2184-132">**/serializer:DataContractSerializer**</span><span class="sxs-lookup"><span data-stu-id="b2184-132">**/serializer:DataContractSerializer**</span></span>|<span data-ttu-id="b2184-133">Generare tipi di dati che utilizzano il serializzatore `DataContract` per la serializzazione e la deserializzazione.</span><span class="sxs-lookup"><span data-stu-id="b2184-133">Generates data types that use the `DataContract` serializer for serialization and deserialization.</span></span><br /><br /> <span data-ttu-id="b2184-134">Forma abbreviata: `/ser:DataContractSerializer`</span><span class="sxs-lookup"><span data-stu-id="b2184-134">Short form: `/ser:DataContractSerializer`</span></span>|  
+|<span data-ttu-id="b2184-135">**/serializer: XmlSerializer**</span><span class="sxs-lookup"><span data-stu-id="b2184-135">**/serializer:XmlSerializer**</span></span>|<span data-ttu-id="b2184-136">Genera tipi di dati che utilizzano `XmlSerializer` per la serializzazione e la deserializzazione.</span><span class="sxs-lookup"><span data-stu-id="b2184-136">Generates data types that use the `XmlSerializer` for serialization and deserialization.</span></span><br /><br /> <span data-ttu-id="b2184-137">Forma abbreviata: `/ser:XmlSerializer`</span><span class="sxs-lookup"><span data-stu-id="b2184-137">Short form: `/ser:XmlSerializer`</span></span>|  
+|<span data-ttu-id="b2184-138">**/importXmlTypes**</span><span class="sxs-lookup"><span data-stu-id="b2184-138">**/importXmlTypes**</span></span>|<span data-ttu-id="b2184-139">Configura il serializzatore `DataContract` per importare tipi non `DataContract` come tipi `IXmlSerializable`.</span><span class="sxs-lookup"><span data-stu-id="b2184-139">Configures the `DataContract` serializer to import non-`DataContract` types as `IXmlSerializable` types.</span></span><br /><br /> <span data-ttu-id="b2184-140">Forma abbreviata: `/ixt`</span><span class="sxs-lookup"><span data-stu-id="b2184-140">Short form: `/ixt`</span></span>|  
+|<span data-ttu-id="b2184-141">**/dataContractOnly**</span><span class="sxs-lookup"><span data-stu-id="b2184-141">**/dataContractOnly**</span></span>|<span data-ttu-id="b2184-142">Genera codice solo per i tipi `DataContract`.</span><span class="sxs-lookup"><span data-stu-id="b2184-142">Generates code for `DataContract` types only.</span></span> <span data-ttu-id="b2184-143">Vengono generati i tipi `ServiceContract`.</span><span class="sxs-lookup"><span data-stu-id="b2184-143">`ServiceContract` types are generated.</span></span><br /><br /> <span data-ttu-id="b2184-144">Per questa opzione è necessario specificare soltanto file di metadati locali.</span><span class="sxs-lookup"><span data-stu-id="b2184-144">You should specify only local metadata files for this option.</span></span><br /><br /> <span data-ttu-id="b2184-145">Forma abbreviata: `/dconly`</span><span class="sxs-lookup"><span data-stu-id="b2184-145">Short form: `/dconly`</span></span>|  
   
-## Scelta di un linguaggio per il client  
+## <a name="choosing-a-language-for-the-client"></a><span data-ttu-id="b2184-146">Scelta di un linguaggio per il client</span><span class="sxs-lookup"><span data-stu-id="b2184-146">Choosing a Language for the Client</span></span>  
   
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**\/language:\<language\>**|Specifica il linguaggio di programmazione da utilizzare per la generazione del codice.Fornire un nome di linguaggio registrato nel file Machine.config o il nome completo di una classe che eredita da <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valori: c\#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c\+\+, mc, cpp<br /><br /> Impostazione predefinita: csharp<br /><br /> Forma abbreviata: `/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Classe CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).|  
+|<span data-ttu-id="b2184-147">Opzione</span><span class="sxs-lookup"><span data-stu-id="b2184-147">Option</span></span>|<span data-ttu-id="b2184-148">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b2184-148">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="b2184-149">**/Language:\<lingua >**</span><span class="sxs-lookup"><span data-stu-id="b2184-149">**/language:\<language>**</span></span>|<span data-ttu-id="b2184-150">Specifica il linguaggio di programmazione da utilizzare per la generazione del codice.</span><span class="sxs-lookup"><span data-stu-id="b2184-150">Specifies the programming language to use for code generation.</span></span> <span data-ttu-id="b2184-151">Fornire un nome di linguaggio registrato nel file Machine.config o il nome completo di una classe che eredita da <xref:System.CodeDom.Compiler.CodeDomProvider>.</span><span class="sxs-lookup"><span data-stu-id="b2184-151">Provide either a language name registered in the Machine.config file or the fully-qualified name of a class that inherits from <xref:System.CodeDom.Compiler.CodeDomProvider>.</span></span><br /><br /> <span data-ttu-id="b2184-152">Valori: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp</span><span class="sxs-lookup"><span data-stu-id="b2184-152">Values: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp</span></span><br /><br /> <span data-ttu-id="b2184-153">Impostazione predefinita: csharp</span><span class="sxs-lookup"><span data-stu-id="b2184-153">Default: csharp</span></span><br /><br /> <span data-ttu-id="b2184-154">Forma abbreviata: `/l`</span><span class="sxs-lookup"><span data-stu-id="b2184-154">Short form: `/l`</span></span><br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="b2184-155">[Classe CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).</span><span class="sxs-lookup"><span data-stu-id="b2184-155"> [CodeDomProvider Class](http://go.microsoft.com/fwlink/?LinkId=94778).</span></span>|  
   
-## Scelta di uno spazio dei nomi per il client  
+## <a name="choosing-a-namespace-for-the-client"></a><span data-ttu-id="b2184-156">Scelta di uno spazio dei nomi per il client</span><span class="sxs-lookup"><span data-stu-id="b2184-156">Choosing a Namespace for the Client</span></span>  
   
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**\/namespace:\<string,string\>**|Specifica un mapping da un WSDL o XML Schema `targetNamespace` a uno spazio dei nomi Common Language Runtime \(CLR\).L’utilizzo di un carattere jolly \(\*\) per `targetNamespace` consente di eseguire il mapping di tutti i `targetNamespaces` senza un mapping esplicito a quello spazio dei nomi CLR.<br /><br /> Per assicurarsi che il nome del contratto di messaggio non entri in conflitto con il nome dell'operazione, è necessario qualificare il riferimento al tipo con doppi due punti \(`::`\) o verificare che i nomi siano univoci.<br /><br /> Impostazione predefinita: derivata dallo spazio dei nomi di destinazione del documento dello schema per `DataContracts`.Lo spazio dei nomi predefinito viene utilizzato per tutti gli altri tipi generati.<br /><br /> Forma abbreviata: `/n`|  
+|<span data-ttu-id="b2184-157">Opzione</span><span class="sxs-lookup"><span data-stu-id="b2184-157">Option</span></span>|<span data-ttu-id="b2184-158">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b2184-158">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="b2184-159">**/namespace:\<string, string >**</span><span class="sxs-lookup"><span data-stu-id="b2184-159">**/namespace:\<string,string>**</span></span>|<span data-ttu-id="b2184-160">Specifica un mapping da un WSDL o XML Schema `targetNamespace` a uno spazio dei nomi Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="b2184-160">Specifies a mapping from a WSDL or XML Schema `targetNamespace` to a common language runtime (CLR) namespace.</span></span> <span data-ttu-id="b2184-161">L’utilizzo di un carattere jolly (*) per `targetNamespace` consente di eseguire il mapping di tutti i `targetNamespaces` senza un mapping esplicito a quello spazio dei nomi CLR.</span><span class="sxs-lookup"><span data-stu-id="b2184-161">Using a wildcard (*) for the `targetNamespace` maps all `targetNamespaces` without an explicit mapping to that CLR namespace.</span></span><br /><br /> <span data-ttu-id="b2184-162">Per assicurarsi che il nome del contratto di messaggio non entri in conflitto con il nome dell'operazione, è necessario qualificare il riferimento al tipo con doppi due punti (`::`) o verificare che i nomi siano univoci.</span><span class="sxs-lookup"><span data-stu-id="b2184-162">To make sure that the message contract name does not collide with the operation name, either qualify the type reference with double colons (`::`) or make sure the names are unique.</span></span><br /><br /> <span data-ttu-id="b2184-163">Impostazione predefinita: derivata dallo spazio dei nomi di destinazione del documento dello schema per `DataContracts`.</span><span class="sxs-lookup"><span data-stu-id="b2184-163">Default: Derived from the target namespace of the schema document for `DataContracts`.</span></span> <span data-ttu-id="b2184-164">Lo spazio dei nomi predefinito viene utilizzato per tutti gli altri tipi generati.</span><span class="sxs-lookup"><span data-stu-id="b2184-164">The default namespace is used for all other generated types.</span></span><br /><br /> <span data-ttu-id="b2184-165">Forma abbreviata: `/n`</span><span class="sxs-lookup"><span data-stu-id="b2184-165">Short form: `/n`</span></span>|  
   
-## Scelta di un'associazione dati  
+## <a name="choosing-a-data-binding"></a><span data-ttu-id="b2184-166">Scelta di un'associazione dati</span><span class="sxs-lookup"><span data-stu-id="b2184-166">Choosing a Data Binding</span></span>  
   
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**\/enableDataBinding**|Implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> su tutti i tipi `DataContract` per consentire l'associazione dati.<br /><br /> Forma abbreviata: `/edb`|  
+|<span data-ttu-id="b2184-167">Opzione</span><span class="sxs-lookup"><span data-stu-id="b2184-167">Option</span></span>|<span data-ttu-id="b2184-168">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b2184-168">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="b2184-169">**/enableDataBinding**</span><span class="sxs-lookup"><span data-stu-id="b2184-169">**/enableDataBinding**</span></span>|<span data-ttu-id="b2184-170">Implementa l'interfaccia <xref:System.ComponentModel.INotifyPropertyChanged> su tutti i tipi `DataContract` per consentire l'associazione dati.</span><span class="sxs-lookup"><span data-stu-id="b2184-170">Implements the <xref:System.ComponentModel.INotifyPropertyChanged> interface on all `DataContract` types to enable data binding.</span></span><br /><br /> <span data-ttu-id="b2184-171">Forma abbreviata: `/edb`</span><span class="sxs-lookup"><span data-stu-id="b2184-171">Short form: `/edb`</span></span>|  
   
-## Generazione della configurazione  
+## <a name="generating-configuration"></a><span data-ttu-id="b2184-172">Generazione della configurazione</span><span class="sxs-lookup"><span data-stu-id="b2184-172">Generating Configuration</span></span>  
   
-|Opzione|Descrizione|  
-|-------------|-----------------|  
-|**\/config:\<configFile\>**|Specifica il nome file per il file di configurazione generato.<br /><br /> Impostazione predefinita: output.config|  
-|**\/mergeConfig**|Incorpora la configurazione generata in un file esistente, anziché sovrascrivere il file esistente.|  
-|**\/noConfig**|Non viene generato alcun file di configurazione.|  
+|<span data-ttu-id="b2184-173">Opzione</span><span class="sxs-lookup"><span data-stu-id="b2184-173">Option</span></span>|<span data-ttu-id="b2184-174">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b2184-174">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="b2184-175">**/config:\<configFile >**</span><span class="sxs-lookup"><span data-stu-id="b2184-175">**/config:\<configFile>**</span></span>|<span data-ttu-id="b2184-176">Specifica il nome file per il file di configurazione generato.</span><span class="sxs-lookup"><span data-stu-id="b2184-176">Specifies the file name for the generated configuration file.</span></span><br /><br /> <span data-ttu-id="b2184-177">Impostazione predefinita: output.config</span><span class="sxs-lookup"><span data-stu-id="b2184-177">Default: output.config</span></span>|  
+|<span data-ttu-id="b2184-178">**/mergeConfig**</span><span class="sxs-lookup"><span data-stu-id="b2184-178">**/mergeConfig**</span></span>|<span data-ttu-id="b2184-179">Incorpora la configurazione generata in un file esistente, anziché sovrascrivere il file esistente.</span><span class="sxs-lookup"><span data-stu-id="b2184-179">Merges the generated configuration into an existing file, instead of overwriting the existing file.</span></span>|  
+|<span data-ttu-id="b2184-180">**/noConfig**</span><span class="sxs-lookup"><span data-stu-id="b2184-180">**/noConfig**</span></span>|<span data-ttu-id="b2184-181">Non genera file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="b2184-181">Do not generate configuration files.</span></span>|  
   
-## Vedere anche  
- [Utilizzo di metadati](../../../../docs/framework/wcf/feature-details/using-metadata.md)   
- [Panoramica dell'architettura dei metadati](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+## <a name="see-also"></a><span data-ttu-id="b2184-182">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b2184-182">See Also</span></span>  
+ [<span data-ttu-id="b2184-183">Utilizzo dei metadati</span><span class="sxs-lookup"><span data-stu-id="b2184-183">Using Metadata</span></span>](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
+ [<span data-ttu-id="b2184-184">Panoramica dell'architettura dei metadati</span><span class="sxs-lookup"><span data-stu-id="b2184-184">Metadata Architecture Overview</span></span>](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

@@ -1,57 +1,63 @@
 ---
-title: "Protezione del trasporto con un client anonimo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Protezione del trasporto con un client anonimo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: a4d4180a0a60e062ab6d8872b153d5bc8b416708
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Protezione del trasporto con un client anonimo
-In questo scenario [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata la protezione del trasporto \(HTTPS\) per garantirne la riservatezza e l'integrità.È necessario che il server sia autenticato con un certificato SSL \(Secure Sockets Layer\) e che il client ritenga attendibile il certificato del server.Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.  
+# <a name="transport-security-with-an-anonymous-client"></a><span data-ttu-id="b2f64-102">Protezione del trasporto con un client anonimo</span><span class="sxs-lookup"><span data-stu-id="b2f64-102">Transport Security with an Anonymous Client</span></span>
+<span data-ttu-id="b2f64-103">In questo scenario [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene utilizzata la protezione del trasporto (HTTPS) per garantirne la riservatezza e l'integrità.</span><span class="sxs-lookup"><span data-stu-id="b2f64-103">This [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] scenario uses transport security (HTTPS) to ensure confidentiality and integrity.</span></span> <span data-ttu-id="b2f64-104">È necessario che il server sia autenticato con un certificato SSL (Secure Sockets Layer) e che il client ritenga attendibile il certificato del server.</span><span class="sxs-lookup"><span data-stu-id="b2f64-104">The server must be authenticated with a Secure Sockets Layer (SSL) certificate, and the clients must trust the server's certificate.</span></span> <span data-ttu-id="b2f64-105">Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.</span><span class="sxs-lookup"><span data-stu-id="b2f64-105">The client is not authenticated by any mechanism and is, therefore, anonymous.</span></span>  
   
- Per un'applicazione di esempio, vedere [Sicurezza del trasporto WS](../../../../docs/framework/wcf/samples/ws-transport-security.md).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] sicurezza del trasporto, vedere [Panoramica sulla sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+ <span data-ttu-id="b2f64-106">Per un'applicazione di esempio, vedere [la sicurezza del trasporto WS](../../../../docs/framework/wcf/samples/ws-transport-security.md).</span><span class="sxs-lookup"><span data-stu-id="b2f64-106">For a sample application, see [WS Transport Security](../../../../docs/framework/wcf/samples/ws-transport-security.md).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b2f64-107">sicurezza del trasporto, vedere [Cenni preliminari sulla sicurezza di trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span><span class="sxs-lookup"><span data-stu-id="b2f64-107"> transport security, see [Transport Security Overview](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).</span></span>  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] utilizzo di un certificato con un servizio, vedere [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) e [Procedura: configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="b2f64-108">utilizzo di un certificato con un servizio, vedere [utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) e [procedura: configurare una porta con un certificato SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span><span class="sxs-lookup"><span data-stu-id="b2f64-108"> using a certificate with a service, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) and [How to: Configure a Port with an SSL Certificate](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).</span></span>  
   
- ![Uso della sicurezza del trasporto con un client anonimo](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931\-0cfb\-4aaa\-9272\-91d652b85d8d")  
+ <span data-ttu-id="b2f64-109">![Utilizzando la sicurezza del trasporto con un client anonimo](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")</span><span class="sxs-lookup"><span data-stu-id="b2f64-109">![Using transport security with an anonymous client](../../../../docs/framework/wcf/feature-details/media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif "8fa2e931-0cfb-4aaa-9272-91d652b85d8d")</span></span>  
   
-|Caratteristica|Descrizione|  
+|<span data-ttu-id="b2f64-110">Caratteristica</span><span class="sxs-lookup"><span data-stu-id="b2f64-110">Characteristic</span></span>|<span data-ttu-id="b2f64-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="b2f64-111">Description</span></span>|  
 |--------------------|-----------------|  
-|Modalità di sicurezza|Trasporto|  
-|Interoperabilità|Con i servizi Web e i client esistenti|  
-|Autenticazione \(server\)<br /><br /> Autenticazione \(client\)|Sì<br /><br /> A livello di applicazione \(nessun supporto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] \)|  
-|Integrità|Sì|  
-|Riservatezza|Sì|  
-|Transport|HTTPS|  
-|Associazione|<xref:System.ServiceModel.WsHttpBinding>|  
+|<span data-ttu-id="b2f64-112">Modalità di sicurezza</span><span class="sxs-lookup"><span data-stu-id="b2f64-112">Security Mode</span></span>|<span data-ttu-id="b2f64-113">Trasporto</span><span class="sxs-lookup"><span data-stu-id="b2f64-113">Transport</span></span>|  
+|<span data-ttu-id="b2f64-114">Interoperabilità</span><span class="sxs-lookup"><span data-stu-id="b2f64-114">Interoperability</span></span>|<span data-ttu-id="b2f64-115">Con i servizi Web e i client esistenti</span><span class="sxs-lookup"><span data-stu-id="b2f64-115">With existing Web services and clients</span></span>|  
+|<span data-ttu-id="b2f64-116">Autenticazione (server)</span><span class="sxs-lookup"><span data-stu-id="b2f64-116">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="b2f64-117">Autenticazione (client)</span><span class="sxs-lookup"><span data-stu-id="b2f64-117">Authentication (Client)</span></span>|<span data-ttu-id="b2f64-118">Sì</span><span class="sxs-lookup"><span data-stu-id="b2f64-118">Yes</span></span><br /><br /> <span data-ttu-id="b2f64-119">A livello di applicazione (nessun supporto [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] )</span><span class="sxs-lookup"><span data-stu-id="b2f64-119">Application level (no [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] support)</span></span>|  
+|<span data-ttu-id="b2f64-120">Integrità</span><span class="sxs-lookup"><span data-stu-id="b2f64-120">Integrity</span></span>|<span data-ttu-id="b2f64-121">Sì</span><span class="sxs-lookup"><span data-stu-id="b2f64-121">Yes</span></span>|  
+|<span data-ttu-id="b2f64-122">Riservatezza</span><span class="sxs-lookup"><span data-stu-id="b2f64-122">Confidentiality</span></span>|<span data-ttu-id="b2f64-123">Sì</span><span class="sxs-lookup"><span data-stu-id="b2f64-123">Yes</span></span>|  
+|<span data-ttu-id="b2f64-124">Trasporto</span><span class="sxs-lookup"><span data-stu-id="b2f64-124">Transport</span></span>|<span data-ttu-id="b2f64-125">HTTPS</span><span class="sxs-lookup"><span data-stu-id="b2f64-125">HTTPS</span></span>|  
+|<span data-ttu-id="b2f64-126">Binding</span><span class="sxs-lookup"><span data-stu-id="b2f64-126">Binding</span></span>|<span data-ttu-id="b2f64-127"><<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`></span><span class="sxs-lookup"><span data-stu-id="b2f64-127"><<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`></span></span>|  
   
-## Servizio  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.Eseguire una delle operazioni seguenti:  
+## <a name="service"></a><span data-ttu-id="b2f64-128">Service</span><span class="sxs-lookup"><span data-stu-id="b2f64-128">Service</span></span>  
+ <span data-ttu-id="b2f64-129">Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.</span><span class="sxs-lookup"><span data-stu-id="b2f64-129">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="b2f64-130">Eseguire una delle operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="b2f64-130">Do one of the following:</span></span>  
   
--   Creare un servizio autonomo utilizzando il codice senza alcuna configurazione.  
+-   <span data-ttu-id="b2f64-131">Creare un servizio autonomo usando il codice senza alcuna configurazione.</span><span class="sxs-lookup"><span data-stu-id="b2f64-131">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   Creare un servizio utilizzando la configurazione fornita, ma non definire alcun endpoint.  
+-   <span data-ttu-id="b2f64-132">Creare un servizio usando la configurazione fornita, ma non definire alcun endpoint.</span><span class="sxs-lookup"><span data-stu-id="b2f64-132">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### Codice  
- Nel codice seguente viene illustrato come creare un endpoint utilizzando la protezione del trasporto:  
+### <a name="code"></a><span data-ttu-id="b2f64-133">Codice</span><span class="sxs-lookup"><span data-stu-id="b2f64-133">Code</span></span>  
+ <span data-ttu-id="b2f64-134">Nel codice seguente viene illustrato come creare un endpoint utilizzando la protezione del trasporto:</span><span class="sxs-lookup"><span data-stu-id="b2f64-134">The following code shows how to create an endpoint using transport security:</span></span>  
   
  [!code-csharp[c_SecurityScenarios#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
  [!code-vb[c_SecurityScenarios#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]  
   
-### Configurazione  
- Nel codice seguente viene impostato lo stesso endpoint utilizzando la configurazione.Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.  
+### <a name="configuration"></a><span data-ttu-id="b2f64-135">Configurazione</span><span class="sxs-lookup"><span data-stu-id="b2f64-135">Configuration</span></span>  
+ <span data-ttu-id="b2f64-136">Nel codice seguente viene impostato lo stesso endpoint utilizzando la configurazione.</span><span class="sxs-lookup"><span data-stu-id="b2f64-136">The following code sets up the same endpoint using configuration.</span></span> <span data-ttu-id="b2f64-137">Il client non viene autenticato da alcun meccanismo ed è pertanto anonimo.</span><span class="sxs-lookup"><span data-stu-id="b2f64-137">The client is not authenticated by any mechanism, and is therefore anonymous.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -78,24 +84,24 @@ In questo scenario [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene
 </configuration>  
 ```  
   
-## Client  
- Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.Eseguire una delle operazioni seguenti:  
+## <a name="client"></a><span data-ttu-id="b2f64-138">Client</span><span class="sxs-lookup"><span data-stu-id="b2f64-138">Client</span></span>  
+ <span data-ttu-id="b2f64-139">Il codice e la configurazione seguenti devono essere eseguiti in modo indipendente.</span><span class="sxs-lookup"><span data-stu-id="b2f64-139">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="b2f64-140">Eseguire una delle operazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="b2f64-140">Do one of the following:</span></span>  
   
--   Creare un client autonomo utilizzando il codice \(e il codice client\).  
+-   <span data-ttu-id="b2f64-141">Creare un client autonomo usando il codice (e il codice client).</span><span class="sxs-lookup"><span data-stu-id="b2f64-141">Create a stand-alone client using the code (and client code).</span></span>  
   
--   Creare un client che non definisce alcun indirizzo di endpoint.Utilizzare invece il costruttore client che accetta il nome della configurazione come argomento.Ad esempio:  
+-   <span data-ttu-id="b2f64-142">Creare un client che non definisce alcun indirizzo di endpoint.</span><span class="sxs-lookup"><span data-stu-id="b2f64-142">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="b2f64-143">Usare invece il costruttore client che accetta il nome della configurazione come argomento.</span><span class="sxs-lookup"><span data-stu-id="b2f64-143">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="b2f64-144">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="b2f64-144">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Codice  
+### <a name="code"></a><span data-ttu-id="b2f64-145">Codice</span><span class="sxs-lookup"><span data-stu-id="b2f64-145">Code</span></span>  
  [!code-csharp[c_SecurityScenarios#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
  [!code-vb[c_SecurityScenarios#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]  
   
-### Configurazione  
- Per configurare il servizio, è possibile utilizzare la configurazione seguente anziché il codice.  
+### <a name="configuration"></a><span data-ttu-id="b2f64-146">Configurazione</span><span class="sxs-lookup"><span data-stu-id="b2f64-146">Configuration</span></span>  
+ <span data-ttu-id="b2f64-147">Per configurare il servizio, è possibile utilizzare la configurazione seguente anziché il codice.</span><span class="sxs-lookup"><span data-stu-id="b2f64-147">The following configuration can be used instead of the code to set up the service.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.serviceModel>  
     <bindings>  
@@ -118,8 +124,8 @@ In questo scenario [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] viene
 </configuration>  
 ```  
   
-## Vedere anche  
- [Cenni preliminari sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Sicurezza del trasporto WS](../../../../docs/framework/wcf/samples/ws-transport-security.md)   
- [Panoramica sulla sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)   
- [Modello di sicurezza per Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="b2f64-148">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b2f64-148">See Also</span></span>  
+ [<span data-ttu-id="b2f64-149">Cenni preliminari sulla sicurezza</span><span class="sxs-lookup"><span data-stu-id="b2f64-149">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="b2f64-150">Sicurezza del trasporto WS</span><span class="sxs-lookup"><span data-stu-id="b2f64-150">WS Transport Security</span></span>](../../../../docs/framework/wcf/samples/ws-transport-security.md)  
+ [<span data-ttu-id="b2f64-151">Panoramica della sicurezza del trasporto</span><span class="sxs-lookup"><span data-stu-id="b2f64-151">Transport Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [<span data-ttu-id="b2f64-152">Modello di sicurezza per Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="b2f64-152">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

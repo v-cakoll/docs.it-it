@@ -1,165 +1,171 @@
 ---
-title: "Procedura dettagliata: memorizzazione dei dati di un&#39;applicazione nella cache di un&#39;applicazione WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "memorizzazione nella cache [.NET Framework]"
-  - "memorizzazione nella cache [WPF]"
-  - "procedure dettagliate [WPF], memorizzazione nella cache"
+title: 'Procedura dettagliata: memorizzazione dei dati di un''applicazione nella cache di un''applicazione WPF'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- walkthroughs [WPF], caching
+- caching [.NET Framework]
+- caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-caps.latest.revision: 25
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7c04a2860b46460065a09de3dafedc7010753d36
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: memorizzazione dei dati di un&#39;applicazione nella cache di un&#39;applicazione WPF
-La memorizzazione nella cache consente di archiviare i dati in memoria per l'accesso rapido.  Quando si accede nuovamente ai dati, le applicazioni possono ottenere i dati dalla cache anziché recuperarli dall'origine.  Ciò può migliorare prestazioni e scalabilità.  Inoltre, la memorizzazione nella cache rende disponibili i dati quando l'origine dati non è temporaneamente disponibile.  
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a><span data-ttu-id="dec11-102">Procedura dettagliata: memorizzazione dei dati di un'applicazione nella cache di un'applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="dec11-102">Walkthrough: Caching Application Data in a WPF Application</span></span>
+<span data-ttu-id="dec11-103">La memorizzazione nella cache consente di inserire i dati in memoria per l'accesso rapido.</span><span class="sxs-lookup"><span data-stu-id="dec11-103">Caching enables you to store data in memory for rapid access.</span></span> <span data-ttu-id="dec11-104">Quando si accede nuovamente i dati, le applicazioni possono ottenere i dati dalla cache anziché recuperarli dall'origine dati originale.</span><span class="sxs-lookup"><span data-stu-id="dec11-104">When the data is accessed again, applications can get the data from the cache instead retrieving it from the original source.</span></span> <span data-ttu-id="dec11-105">In questo modo si possono ottenere migliori prestazioni e scalabilità.</span><span class="sxs-lookup"><span data-stu-id="dec11-105">This can improve performance and scalability.</span></span> <span data-ttu-id="dec11-106">Inoltre, se si memorizzano i dati nella cache, questi sono accessibili anche quando l'origine dati è temporaneamente non disponibile.</span><span class="sxs-lookup"><span data-stu-id="dec11-106">In addition, caching makes data available when the data source is temporarily unavailable.</span></span>  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornisce classi che consentono di utilizzare la memorizzazione nella cache nelle applicazioni di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  Queste classi si trovano nello spazio dei nomi di <xref:System.Runtime.Caching> .  
+ <span data-ttu-id="dec11-107">Il [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornisce le classi che consentono di utilizzare la memorizzazione nella cache [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applicazioni.</span><span class="sxs-lookup"><span data-stu-id="dec11-107">The [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] provides classes that enable you to use caching in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications.</span></span> <span data-ttu-id="dec11-108">Queste classi si trovano nel <xref:System.Runtime.Caching> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="dec11-108">These classes are located in the <xref:System.Runtime.Caching> namespace.</span></span>  
   
 > [!NOTE]
->  Lo spazio dei nomi <xref:System.Runtime.Caching> è nuovo in [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  Questo spazio dei nomi rende disponibile la memorizzazione nella cache a tutte le applicazioni [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  Nelle versioni precedenti di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] la memorizzazione nella cache è disponibile solo nello spazio dei nomi <xref:System.Web> e pertanto richiede una dipendenza nelle classi ASP.NET.  
+>  <span data-ttu-id="dec11-109">Il <xref:System.Runtime.Caching> è una novità di spazio dei nomi di [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dec11-109">The <xref:System.Runtime.Caching> namespace is new in the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="dec11-110">Questo spazio dei nomi consente la memorizzazione nella cache è disponibile per tutti [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applicazioni.</span><span class="sxs-lookup"><span data-stu-id="dec11-110">This namespace makes caching is available to all [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications.</span></span> <span data-ttu-id="dec11-111">Nelle versioni precedenti di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] la memorizzazione nella cache è disponibile solo nello spazio dei nomi <xref:System.Web> e pertanto richiede una dipendenza dalle classi ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="dec11-111">In previous versions of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes.</span></span>  
   
- In questa procedura dettagliata viene illustrato come utilizzare la funzionalità della memorizzazione nella cache, disponibile in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], come parte di un'applicazione [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Nella procedura dettagliata, viene memorizzato nella cache il contenuto di un file di testo.  
+ <span data-ttu-id="dec11-112">Questa procedura dettagliata viene illustrato come utilizzare la funzionalità di memorizzazione nella cache è disponibile nel [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] come parte di un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="dec11-112">This walkthrough shows you how to use the caching functionality that is available in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] as part of a [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.</span></span> <span data-ttu-id="dec11-113">Nella procedura dettagliata, nella cache il contenuto di un file di testo.</span><span class="sxs-lookup"><span data-stu-id="dec11-113">In the walkthrough, you cache the contents of a text file.</span></span>  
   
- Di seguito vengono illustrate le attività incluse nella procedura dettagliata:  
+ <span data-ttu-id="dec11-114">Di seguito vengono illustrate le attività incluse nella procedura dettagliata:</span><span class="sxs-lookup"><span data-stu-id="dec11-114">Tasks illustrated in this walkthrough include the following:</span></span>  
   
--   Creazione di un progetto di applicazione WPF.  
+-   <span data-ttu-id="dec11-115">Creazione di un progetto di applicazione WPF.</span><span class="sxs-lookup"><span data-stu-id="dec11-115">Creating a WPF application project.</span></span>  
   
--   Aggiunta di un riferimento a [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+-   <span data-ttu-id="dec11-116">Aggiunta di un riferimento di [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dec11-116">Adding a reference to the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span>  
   
--   Inizializzazione di una cache.  
+-   <span data-ttu-id="dec11-117">Inizializzazione di una cache.</span><span class="sxs-lookup"><span data-stu-id="dec11-117">Initializing a cache.</span></span>  
   
--   Aggiunta di una voce della cache che include il contenuto di un file di testo.  
+-   <span data-ttu-id="dec11-118">Aggiunta di una voce della cache che contiene il contenuto di un file di testo.</span><span class="sxs-lookup"><span data-stu-id="dec11-118">Adding a cache entry that contains the contents of a text file.</span></span>  
   
--   Fornitura di criteri dell'eliminazione per la voce della cache.  
+-   <span data-ttu-id="dec11-119">Fornire un criterio di eliminazione della voce della cache.</span><span class="sxs-lookup"><span data-stu-id="dec11-119">Providing an eviction policy for the cache entry.</span></span>  
   
--   Monitoraggio del percorso del file memorizzato nella cache e notifica all'istanza della cache delle modifiche dell'elemento monitorato.  
+-   <span data-ttu-id="dec11-120">Monitoraggio del percorso del file memorizzato nella cache e l'istanza di cache di notifica di modifica dell'elemento monitorato.</span><span class="sxs-lookup"><span data-stu-id="dec11-120">Monitoring the path of the cached file and notifying the cache instance about changes to the monitored item.</span></span>  
   
-## Prerequisiti  
- Per completare questa procedura dettagliata, è necessario disporre di quanto segue:  
+## <a name="prerequisites"></a><span data-ttu-id="dec11-121">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="dec11-121">Prerequisites</span></span>  
+ <span data-ttu-id="dec11-122">Per completare questa procedura dettagliata, è necessario:</span><span class="sxs-lookup"><span data-stu-id="dec11-122">In order to complete this walkthrough, you will need:</span></span>  
   
--   Microsoft [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+-   <span data-ttu-id="dec11-123">Microsoft [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dec11-123">Microsoft [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].</span></span>  
   
--   Un file di testo contenente una piccola quantità di testo.  Si visualizzerà il contenuto del file di testo in una finestra di messaggio. Nel codice illustrato nella procedura dettagliata si suppone che si utilizzi il file seguente:  
+-   <span data-ttu-id="dec11-124">Un file di testo che contiene una piccola quantità di testo.</span><span class="sxs-lookup"><span data-stu-id="dec11-124">A text file that contains a small amount of text.</span></span> <span data-ttu-id="dec11-125">(Si visualizzerà il contenuto del file di testo in una finestra di messaggio.) Il codice illustrato nella procedura dettagliata si presuppone che si sta usando il file seguente:</span><span class="sxs-lookup"><span data-stu-id="dec11-125">(You will display the contents of the text file in a message box.) The code illustrated in the walkthrough assumes that you are working with the following file:</span></span>  
   
      `c:\cache\cacheText.txt`  
   
-     Tuttavia, è possibile utilizzare qualsiasi file di testo e apportare piccole modifiche al codice di questa procedura dettagliata.  
+     <span data-ttu-id="dec11-126">Tuttavia, è possibile utilizzare qualsiasi file di testo e apportare piccole modifiche al codice in questa procedura dettagliata.</span><span class="sxs-lookup"><span data-stu-id="dec11-126">However, you can use any text file and make small changes to the code in this walkthrough.</span></span>  
   
-## Creazione di un progetto di applicazione WPF  
- Si inizierà con la creazione di un progetto di applicazione WPF.  
+## <a name="creating-a-wpf-application-project"></a><span data-ttu-id="dec11-127">Creazione di un progetto di applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="dec11-127">Creating a WPF Application Project</span></span>  
+ <span data-ttu-id="dec11-128">Si inizierà creando un progetto di applicazione WPF.</span><span class="sxs-lookup"><span data-stu-id="dec11-128">You will start by creating a WPF application project.</span></span>  
   
-#### Per creare un'applicazione WPF  
+#### <a name="to-create-a-wpf-application"></a><span data-ttu-id="dec11-129">Per creare un'applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="dec11-129">To create a WPF application</span></span>  
   
-1.  Avviare [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+1.  <span data-ttu-id="dec11-130">Avviare [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dec11-130">Start [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span>  
   
-2.  Scegliere **Nuovo** dal menu **File**, quindi **Nuovo progetto**.  
+2.  <span data-ttu-id="dec11-131">Nel **File** menu, fare clic su **New**, quindi fare clic su **nuovo progetto**.</span><span class="sxs-lookup"><span data-stu-id="dec11-131">In the **File** menu, click **New**, and then click **New Project**.</span></span>  
   
-     Verrà visualizzata la finestra di dialogo **Nuovo progetto**.  
+     <span data-ttu-id="dec11-132">Verrà visualizzata la finestra di dialogo **Nuovo progetto**.</span><span class="sxs-lookup"><span data-stu-id="dec11-132">The **New Project** dialog box is displayed.</span></span>  
   
-3.  In **Modelli installati** selezionare il linguaggio di programmazione da utilizzare \(**Visual Basic** o **Visual C\#**\).  
+3.  <span data-ttu-id="dec11-133">In **modelli installati**, selezionare il linguaggio di programmazione che si desidera utilizzare (**Visual Basic** o **Visual C#**).</span><span class="sxs-lookup"><span data-stu-id="dec11-133">Under **Installed Templates**, select the programming language you want to use (**Visual Basic** or **Visual C#**).</span></span>  
   
-4.  Nella finestra di dialogo **Nuovo progetto** selezionare **Applicazione WPF**.  
+4.  <span data-ttu-id="dec11-134">Nel **nuovo progetto** nella finestra di dialogo **applicazione WPF**.</span><span class="sxs-lookup"><span data-stu-id="dec11-134">In the **New Project** dialog box, select **WPF Application**.</span></span>  
   
     > [!NOTE]
-    >  Se il modello **Applicazione WPF** non è visualizzato, verificare che sia stata scelta come destinazione una versione di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] che supporta WPF.  Nella finestra di dialogo **Nuovo progetto** selezionare [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] dall'elenco.  
+    >  <span data-ttu-id="dec11-135">Se non viene visualizzato il **applicazione WPF** modello, assicurarsi che si intende utilizzare una versione di [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] che supporta WPF.</span><span class="sxs-lookup"><span data-stu-id="dec11-135">If you do not see the **WPF Application** template, make sure that you are targeting a version of the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] that supports WPF.</span></span> <span data-ttu-id="dec11-136">Nel **nuovo progetto** nella finestra di dialogo [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] dall'elenco.</span><span class="sxs-lookup"><span data-stu-id="dec11-136">In the **New Project** dialog box, select [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] from the list.</span></span>  
   
-5.  Nella casella di testo **Nome** immettere un nome per il progetto.  Ad esempio, è possibile immettere WPFCaching.  
+5.  <span data-ttu-id="dec11-137">Nel **nome** testo, immettere un nome per il progetto.</span><span class="sxs-lookup"><span data-stu-id="dec11-137">In the **Name** text box, enter a name for your project.</span></span> <span data-ttu-id="dec11-138">Ad esempio, è possibile immettere **WPFCaching**.</span><span class="sxs-lookup"><span data-stu-id="dec11-138">For example, you can enter **WPFCaching**.</span></span>  
   
-6.  Selezionare la casella di controllo **Crea directory per soluzione**.  
+6.  <span data-ttu-id="dec11-139">Selezionare il **Crea directory per soluzione** casella di controllo.</span><span class="sxs-lookup"><span data-stu-id="dec11-139">Select the **Create directory for solution** check box.</span></span>  
   
-7.  Scegliere **OK**.  
+7.  <span data-ttu-id="dec11-140">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="dec11-140">Click **OK**.</span></span>  
   
-     Il file MainWindow.xaml verrà visualizzato nella visualizzazione **Progettazione** in WPF Designer.  In [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] vengono creati la cartella **My Project**, il file Application.xaml e il file MainWindow.xaml.  
+     <span data-ttu-id="dec11-141">Verrà visualizzata la finestra di progettazione WPF in **progettazione** consente di visualizzare e visualizza il file MainWindow. Xaml.</span><span class="sxs-lookup"><span data-stu-id="dec11-141">The WPF Designer opens in **Design** view and displays the MainWindow.xaml file.</span></span> [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]<span data-ttu-id="dec11-142">Crea il **progetto** cartella, il file Application. XAML e il file MainWindow. Xaml.</span><span class="sxs-lookup"><span data-stu-id="dec11-142"> creates the **My Project** folder, the Application.xaml file, and the MainWindow.xaml file.</span></span>  
   
-## Scelta di .NET Framework come destinazione e aggiunta di un riferimento agli assembly di cache  
- Per impostazione predefinita, le applicazioni WPF sono destinate a [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].  Per utilizzare lo spazio dei nomi <xref:System.Runtime.Caching> in un'applicazione WPF, è necessario che l'applicazione sia destinata a [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], non a [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)], e includa un riferimento allo spazio dei nomi.  
+## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a><span data-ttu-id="dec11-143">Destinati a .NET Framework e aggiungere un riferimento all'assembly di memorizzazione nella cache</span><span class="sxs-lookup"><span data-stu-id="dec11-143">Targeting the .NET Framework and Adding a Reference to the Caching Assemblies</span></span>  
+ <span data-ttu-id="dec11-144">Per impostazione predefinita, sono destinate le applicazioni WPF di [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dec11-144">By default, WPF applications target the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].</span></span> <span data-ttu-id="dec11-145">Utilizzare il <xref:System.Runtime.Caching> dello spazio dei nomi in un'applicazione WPF, l'applicazione deve avere come destinazione il [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (non il [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) e deve includere un riferimento allo spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="dec11-145">To use the <xref:System.Runtime.Caching> namespace in a WPF application, the application must target the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (not the [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) and must include a reference to the namespace.</span></span>  
   
- Pertanto, il passaggio seguente consiste nella modifica della destinazione .NET Framework e nell'aggiunta di un riferimento allo spazio dei nomi <xref:System.Runtime.Caching>.  
+ <span data-ttu-id="dec11-146">Pertanto, il passaggio successivo consiste per modificare la destinazione di .NET Framework e aggiungere un riferimento di <xref:System.Runtime.Caching> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="dec11-146">Therefore, the next step is to change the .NET Framework target and add a reference to the <xref:System.Runtime.Caching> namespace.</span></span>  
   
 > [!NOTE]
->  La procedura per la modifica della destinazione .NET Framework è diversa in un progetto Visual Basic e in un progetto Visual C\#.  
+>  <span data-ttu-id="dec11-147">La procedura per modificare la destinazione di .NET Framework è diversa in un progetto Visual Basic e in un progetto Visual c#.</span><span class="sxs-lookup"><span data-stu-id="dec11-147">The procedure for changing the .NET Framework target is different in a Visual Basic project and in a Visual C# project.</span></span>  
   
-#### Per modificare la versione di .NET Framework di destinazione in Visual Basic  
+#### <a name="to-change-the-target-net-framework-in-visual-basic"></a><span data-ttu-id="dec11-148">Per modificare la destinazione di .NET Framework in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="dec11-148">To change the target .NET Framework in Visual Basic</span></span>  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto, quindi scegliere **Proprietà**.  
+1.  <span data-ttu-id="dec11-149">In **Esplora soluzioni**, fare doppio clic sul nome del progetto e quindi fare clic su **proprietà**.</span><span class="sxs-lookup"><span data-stu-id="dec11-149">In **Solutions Explorer**, right-click the project name, and then click **Properties**.</span></span>  
   
-     Verrà visualizzata la finestra delle proprietà per l'applicazione.  
+     <span data-ttu-id="dec11-150">Viene visualizzata la finestra di proprietà per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="dec11-150">The properties window for the application is displayed.</span></span>  
   
-2.  Fare clic sulla scheda **Compila**.  
+2.  <span data-ttu-id="dec11-151">Fare clic sulla scheda **Compila**.</span><span class="sxs-lookup"><span data-stu-id="dec11-151">Click the **Compile** tab.</span></span>  
   
-3.  Nella parte inferiore della finestra, fare clic su **Opzioni di compilazione avanzate ...**.  
+3.  <span data-ttu-id="dec11-152">Nella parte inferiore della finestra, fare clic su **opzioni di compilazione avanzate...** .</span><span class="sxs-lookup"><span data-stu-id="dec11-152">At the bottom of the window, click **Advanced Compile Options…**.</span></span>  
   
-     Verrà visualizzata la finestra di dialogo **Impostazioni del compilatore avanzate**.  
+     <span data-ttu-id="dec11-153">Il **impostazioni del compilatore avanzate** viene visualizzata la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="dec11-153">The **Advanced Compiler Settings** dialog box is displayed.</span></span>  
   
-4.  In l ' elenco di **framework di destinazione \(tutte le configurazioni\)** , [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]selezionato.  \(Non selezionare [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]\).  
+4.  <span data-ttu-id="dec11-154">Nel **il framework di destinazione (tutte le configurazioni)** elenco, selezionare [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dec11-154">In the **Target framework (all configurations)** list, select [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="dec11-155">(Non selezionare [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)</span><span class="sxs-lookup"><span data-stu-id="dec11-155">(Do not select [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)</span></span>  
   
-5.  Scegliere **OK**.  
+5.  <span data-ttu-id="dec11-156">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="dec11-156">Click **OK**.</span></span>  
   
-     Verrà visualizzata la finestra di dialogo **Modifica versione .NET Framework di destinazione**.  
+     <span data-ttu-id="dec11-157">Il **modifica Framework di destinazione** viene visualizzata la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="dec11-157">The **Target Framework Change** dialog box is displayed.</span></span>  
   
-6.  Nella finestra di dialogo **Modifica versione .NET Framework di destinazione** fare clic su **Sì**.  
+6.  <span data-ttu-id="dec11-158">Nel **modifica Framework di destinazione** la finestra di dialogo, fare clic su **Sì**.</span><span class="sxs-lookup"><span data-stu-id="dec11-158">In the **Target Framework Change** dialog box, click **Yes**.</span></span>  
   
-     Il progetto verrà chiuso e riaperto.  
+     <span data-ttu-id="dec11-159">Il progetto viene chiuso e riaperto.</span><span class="sxs-lookup"><span data-stu-id="dec11-159">The project is closed and is then reopened.</span></span>  
   
-7.  Per aggiungere un riferimento all'assembly di cache, effettuare i passaggi seguenti:  
+7.  <span data-ttu-id="dec11-160">Aggiungere un riferimento all'assembly di memorizzazione nella cache eseguendo la procedura seguente:</span><span class="sxs-lookup"><span data-stu-id="dec11-160">Add a reference to the caching assembly by following these steps:</span></span>  
   
-    1.  Fare clic con il pulsante destro del mouse sul nome del progetto in **Esplora soluzioni**, quindi scegliere **Aggiungi riferimento**.  
+    1.  <span data-ttu-id="dec11-161">In **Esplora**, fare doppio clic sul nome del progetto e quindi fare clic su **Aggiungi riferimento**.</span><span class="sxs-lookup"><span data-stu-id="dec11-161">In **Solution Explorer**, right-click the name of the project and then click **Add Reference**.</span></span>  
   
-    2.  Selezionare la scheda **.NET**, scegliere `System.Runtime.Caching`, quindi fare clic su **OK**.  
+    2.  <span data-ttu-id="dec11-162">Selezionare il **.NET** , selezionare `System.Runtime.Caching`, quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="dec11-162">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>  
   
-#### Per modificare la versione di .NET Framework di destinazione in un progetto Visual C\#  
+#### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a><span data-ttu-id="dec11-163">Per modificare la destinazione di .NET Framework in un progetto Visual c#</span><span class="sxs-lookup"><span data-stu-id="dec11-163">To change the target .NET Framework in a Visual C# project</span></span>  
   
-1.  In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nome del progetto, quindi scegliere **Proprietà**.  
+1.  <span data-ttu-id="dec11-164">In **Esplora**, fare doppio clic sul nome del progetto e quindi fare clic su **proprietà**.</span><span class="sxs-lookup"><span data-stu-id="dec11-164">In **Solution Explorer**, right-click the project name and then click **Properties**.</span></span>  
   
-     Verrà visualizzata la finestra delle proprietà per l'applicazione.  
+     <span data-ttu-id="dec11-165">Viene visualizzata la finestra di proprietà per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="dec11-165">The properties window for the application is displayed.</span></span>  
   
-2.  Fare clic sulla scheda **Applicazione**.  
+2.  <span data-ttu-id="dec11-166">Fare clic sulla scheda **Applicazione** .</span><span class="sxs-lookup"><span data-stu-id="dec11-166">Click the **Application** tab.</span></span>  
   
-3.  Nell'elenco **Framework di destinazione** selezionare [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  Non selezionare **.NET Framework 4 Client Profile**.  
+3.  <span data-ttu-id="dec11-167">Nel **framework di destinazione** elenco, selezionare [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dec11-167">In the **Target framework** list, select [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].</span></span> <span data-ttu-id="dec11-168">(Non selezionare **.NET Framework 4 Client Profile**.)</span><span class="sxs-lookup"><span data-stu-id="dec11-168">(Do not select **.NET Framework 4 Client Profile**.)</span></span>  
   
-4.  Per aggiungere un riferimento all'assembly di cache, effettuare i passaggi seguenti:  
+4.  <span data-ttu-id="dec11-169">Aggiungere un riferimento all'assembly di memorizzazione nella cache eseguendo la procedura seguente:</span><span class="sxs-lookup"><span data-stu-id="dec11-169">Add a reference to the caching assembly by following these steps:</span></span>  
   
-    1.  Fare clic con il pulsante destro del mouse sulla cartella **Riferimenti**, quindi scegliere **Aggiungi riferimento**.  
+    1.  <span data-ttu-id="dec11-170">Fare doppio clic su di **riferimenti** cartella e quindi fare clic su **Aggiungi riferimento**.</span><span class="sxs-lookup"><span data-stu-id="dec11-170">Right-click the **References** folder and then click **Add Reference**.</span></span>  
   
-    2.  Selezionare la scheda **.NET**, scegliere `System.Runtime.Caching`, quindi fare clic su **OK**.  
+    2.  <span data-ttu-id="dec11-171">Selezionare il **.NET** , selezionare `System.Runtime.Caching`, quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="dec11-171">Select the **.NET** tab, select `System.Runtime.Caching`, and then click **OK**.</span></span>  
   
-## Aggiunta di un pulsante alla finestra WPF  
- Successivamente, si aggiungerà un controllo pulsante e si creerà un gestore dell'evento per l'evento `Click` del pulsante.  Si aggiungerà quindi codice mediante il quale facendo clic sul pulsante verrà memorizzato nella cache e visualizzato il contenuto del file di testo.  
+## <a name="adding-a-button-to-the-wpf-window"></a><span data-ttu-id="dec11-172">Aggiunta di un pulsante nella finestra WPF</span><span class="sxs-lookup"><span data-stu-id="dec11-172">Adding a Button to the WPF Window</span></span>  
+ <span data-ttu-id="dec11-173">Quindi aggiungere un controllo button e creare un gestore eventi per il pulsante `Click` evento.</span><span class="sxs-lookup"><span data-stu-id="dec11-173">Next, you will add a button control and create an event handler for the button's `Click` event.</span></span> <span data-ttu-id="dec11-174">In un secondo momento si aggiungerà codice in modo che quando si fa clic sul pulsante, il contenuto del file di testo è memorizzati nella cache e visualizzato.</span><span class="sxs-lookup"><span data-stu-id="dec11-174">Later you will add code to so when you click the button, the contents of the text file are cached and displayed.</span></span>  
   
-#### Per aggiungere un pulsante  
+#### <a name="to-add-a-button-control"></a><span data-ttu-id="dec11-175">Per aggiungere un controllo pulsante</span><span class="sxs-lookup"><span data-stu-id="dec11-175">To add a button control</span></span>  
   
-1.  In **Esplora soluzioni** aprire il file MainWindow.xaml facendo doppio clic su di esso.  
+1.  <span data-ttu-id="dec11-176">In **Esplora**, fare doppio clic sul file MainWindow. XAML per aprirlo.</span><span class="sxs-lookup"><span data-stu-id="dec11-176">In **Solution Explorer**, double-click the MainWindow.xaml file to open it.</span></span>  
   
-2.  In **Controlli comuni WPF** nella **Casella degli strumenti** trascinare un controllo `Button` nella finestra `MainWindow`.  
+2.  <span data-ttu-id="dec11-177">Dal **della casella degli strumenti**in **controlli WPF comuni**, trascinare un `Button` il controllo al `MainWindow` finestra.</span><span class="sxs-lookup"><span data-stu-id="dec11-177">From the **Toolbox**, under **Common WPF Controls**, drag a `Button` control to the `MainWindow` window.</span></span>  
   
-3.  Nella finestra **Proprietà** impostare la proprietà `Content` del controllo `Button` su Ottieni cache.  
+3.  <span data-ttu-id="dec11-178">Nel **proprietà** finestra, impostare il `Content` proprietà del `Button` il controllo a **Ottieni Cache**.</span><span class="sxs-lookup"><span data-stu-id="dec11-178">In the **Properties** window, set the `Content` property of the `Button` control to **Get Cache**.</span></span>  
   
-## Inizializzazione della cache e memorizzazione di una voce nella cache  
- Successivamente, si aggiungerà il codice per eseguire le attività seguenti:  
+## <a name="initializing-the-cache-and-caching-an-entry"></a><span data-ttu-id="dec11-179">Inizializzazione della Cache e la memorizzazione nella cache una voce</span><span class="sxs-lookup"><span data-stu-id="dec11-179">Initializing the Cache and Caching an Entry</span></span>  
+ <span data-ttu-id="dec11-180">Successivamente, si aggiungerà il codice per eseguire le attività seguenti:</span><span class="sxs-lookup"><span data-stu-id="dec11-180">Next, you will add the code to perform the following tasks:</span></span>  
   
--   Creare un'istanza della classe cache \(ossia creare un'istanza di un nuovo oggetto <xref:System.Runtime.Caching.MemoryCache>\).  
+-   <span data-ttu-id="dec11-181">Creare un'istanza della classe cache, vale a dire, si creerà un nuovo <xref:System.Runtime.Caching.MemoryCache> oggetto.</span><span class="sxs-lookup"><span data-stu-id="dec11-181">Create an instance of the cache class—that is, you will instantiate a new <xref:System.Runtime.Caching.MemoryCache> object.</span></span>  
   
--   Specificare che la cache utilizza un oggetto <xref:System.Runtime.Caching.HostFileChangeMonitor> per monitorare le modifiche nel file di testo.  
+-   <span data-ttu-id="dec11-182">Specificare che la cache utilizza un <xref:System.Runtime.Caching.HostFileChangeMonitor> oggetto per monitorare le modifiche nel file di testo.</span><span class="sxs-lookup"><span data-stu-id="dec11-182">Specify that the cache uses a <xref:System.Runtime.Caching.HostFileChangeMonitor> object to monitor changes in the text file.</span></span>  
   
--   Leggere il file di testo e memorizzare nella cache il relativo contenuto come voce della cache.  
+-   <span data-ttu-id="dec11-183">Leggere il file di testo e il relativo contenuto memorizzato nella cache come una voce della cache.</span><span class="sxs-lookup"><span data-stu-id="dec11-183">Read the text file and cache its contents as a cache entry.</span></span>  
   
--   Visualizzare il contenuto del file di testo memorizzato nella cache.  
+-   <span data-ttu-id="dec11-184">Visualizzare il contenuto del file di testo memorizzati nella cache.</span><span class="sxs-lookup"><span data-stu-id="dec11-184">Display the contents of the cached text file.</span></span>  
   
-#### Per creare l'oggetto cache  
+#### <a name="to-create-the-cache-object"></a><span data-ttu-id="dec11-185">Per creare l'oggetto della cache</span><span class="sxs-lookup"><span data-stu-id="dec11-185">To create the cache object</span></span>  
   
-1.  Fare doppio clic sul pulsante appena aggiunto per creare un gestore dell'evento nel file MainWindow.Xaml.vb o MainWindow.xaml.cs.  
+1.  <span data-ttu-id="dec11-186">Fare doppio clic sul pulsante che appena aggiunto per creare un gestore eventi nel file MainWindow.xaml.cs o. Xaml. vb.</span><span class="sxs-lookup"><span data-stu-id="dec11-186">Double-click the button you just added in order to create an event handler in the MainWindow.xaml.cs or MainWindow.Xaml.vb file.</span></span>  
   
-2.  All'inizio del file \(prima della dichiarazione di classe\), aggiungere le istruzioni `Imports` \(Visual Basic\) o `using` \(C\#\) seguenti.  
+2.  <span data-ttu-id="dec11-187">Nella parte superiore del file (prima della dichiarazione di classe), aggiungere le seguenti `Imports` (Visual Basic) o `using` istruzioni (c#):</span><span class="sxs-lookup"><span data-stu-id="dec11-187">At the top of the file (before the class declaration), add the following `Imports` (Visual Basic) or `using` (C#) statements:</span></span>  
   
     ```csharp  
     using System.Runtime.Caching;  
@@ -171,7 +177,7 @@ La memorizzazione nella cache consente di archiviare i dati in memoria per l'acc
     Imports System.IO  
     ```  
   
-3.  Nel gestore dell'evento aggiungere il codice riportato di seguito per creare un'istanza dell'oggetto cache.  
+3.  <span data-ttu-id="dec11-188">Nel gestore eventi, aggiungere il codice seguente per creare un'istanza di oggetto della cache:</span><span class="sxs-lookup"><span data-stu-id="dec11-188">In the event handler, add the following code to instantiate the cache object:</span></span>  
   
     ```csharp  
     ObjectCache cache = MemoryCache.Default;  
@@ -181,9 +187,9 @@ La memorizzazione nella cache consente di archiviare i dati in memoria per l'acc
     Dim cache As ObjectCache = MemoryCache.Default  
     ```  
   
-     <xref:System.Runtime.Caching.ObjectCache> è una classe incorporata che fornisce una cache dell'oggetto in memoria.  
+     <span data-ttu-id="dec11-189">La <xref:System.Runtime.Caching.ObjectCache> classe è una classe incorporata che fornisce una cache di oggetti in memoria.</span><span class="sxs-lookup"><span data-stu-id="dec11-189">The <xref:System.Runtime.Caching.ObjectCache> class is a built-in class that provides an in-memory object cache.</span></span>  
   
-4.  Aggiungere il codice seguente per leggere il contenuto di una voce della cache denominata `filecontents`:  
+4.  <span data-ttu-id="dec11-190">Aggiungere il seguente codice per leggere il contenuto di una voce della cache denominata `filecontents`:</span><span class="sxs-lookup"><span data-stu-id="dec11-190">Add the following code to read the contents of a cache entry named `filecontents`:</span></span>  
   
     ```vb  
     Dim fileContents As String = TryCast(cache("filecontents"), String)  
@@ -193,7 +199,7 @@ La memorizzazione nella cache consente di archiviare i dati in memoria per l'acc
     string fileContents = cache["filecontents"] as string;  
     ```  
   
-5.  Aggiungere il codice seguente per verificare se la voce della cache denominata `filecontents` esiste:  
+5.  <span data-ttu-id="dec11-191">Aggiungere il codice seguente per verificare se la voce della cache denominata `filecontents` esiste:</span><span class="sxs-lookup"><span data-stu-id="dec11-191">Add the following code to check whether the cache entry named `filecontents` exists:</span></span>  
   
     ```vb  
     If fileContents Is Nothing Then  
@@ -208,9 +214,9 @@ La memorizzazione nella cache consente di archiviare i dati in memoria per l'acc
     }  
     ```  
   
-     Se la voce della cache specificata non esiste, è necessario leggere il file di testo e aggiungerlo alla cache come voce della cache.  
+     <span data-ttu-id="dec11-192">Se la voce della cache specificata non esiste, è necessario leggere il file di testo e aggiungerlo come una voce della cache nella cache.</span><span class="sxs-lookup"><span data-stu-id="dec11-192">If the specified cache entry does not exist, you must read the text file and add it as a cache entry to the cache.</span></span>  
   
-6.  Nel blocco `if/then` aggiungere il codice seguente per creare un nuovo oggetto <xref:System.Runtime.Caching.CacheItemPolicy> che specifica che la voce della cache scade dopo 10 secondi.  
+6.  <span data-ttu-id="dec11-193">Nel `if/then` di blocco, aggiungere il codice seguente per creare un nuovo <xref:System.Runtime.Caching.CacheItemPolicy> oggetto che specifica che la voce della cache scade dopo 10 secondi.</span><span class="sxs-lookup"><span data-stu-id="dec11-193">In the `if/then` block, add the following code to create a new <xref:System.Runtime.Caching.CacheItemPolicy> object that specifies that the cache entry expires after 10 seconds.</span></span>  
   
     ```vb  
     Dim policy As New CacheItemPolicy()  
@@ -222,9 +228,9 @@ La memorizzazione nella cache consente di archiviare i dati in memoria per l'acc
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);  
     ```  
   
-     Se non viene fornita alcuna informazione di eliminazione o scadenza, l'impostazione predefinita è <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration> secondo cui le voci della cache non scadono mai solo in base a un tempo assoluto.  Viceversa, le voci della cache scadono solo in condizioni di pressione della memoria.  Come procedura consigliata, è sempre opportuno fornire esplicitamente una scadenza assoluta o variabile.  
+     <span data-ttu-id="dec11-194">Se viene fornita alcuna informazione di eliminazione o la scadenza, il valore predefinito è <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, ovvero le voci della cache senza scadenza in base solo in un tempo assoluto.</span><span class="sxs-lookup"><span data-stu-id="dec11-194">If no eviction or expiration information is provided, the default is <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, which means the cache entries never expire based only on an absolute time.</span></span> <span data-ttu-id="dec11-195">Viceversa, le voci della cache scadono solo quando sono presenti richieste di memoria.</span><span class="sxs-lookup"><span data-stu-id="dec11-195">Instead, cache entries expire only when there is memory pressure.</span></span> <span data-ttu-id="dec11-196">Come procedura consigliata, è necessario fornire sempre in modo esplicito assoluto o una scadenza variabile.</span><span class="sxs-lookup"><span data-stu-id="dec11-196">As a best practice, you should always explicitly provide either an absolute or a siding expiration.</span></span>  
   
-7.  All'interno del blocco `if/then`, seguendo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per creare una raccolta per i percorsi file che si desidera monitorare e aggiungere il percorso del file di testo alla raccolta:  
+7.  <span data-ttu-id="dec11-197">All'interno di `if/then` blocco e il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per creare una raccolta per i percorsi dei file che si desidera monitorare e per aggiungere il percorso del file di testo per la raccolta:</span><span class="sxs-lookup"><span data-stu-id="dec11-197">Inside the `if/then` block and following the code you added in the previous step, add the following code to create a collection for the file paths that you want to monitor, and to add the path of the text file to the collection:</span></span>  
   
     ```vb  
     Dim filePaths As New List(Of String)()  
@@ -237,9 +243,9 @@ La memorizzazione nella cache consente di archiviare i dati in memoria per l'acc
     ```  
   
     > [!NOTE]
-    >  Se il file di testo da utilizzare non è `c:\cache\cacheText.txt` specificare il percorso del file di testo da utilizzare.  
+    >  <span data-ttu-id="dec11-198">Se il file di testo che si desidera utilizzare non è `c:\cache\cacheText.txt`, specificare il percorso in cui il file di testo che si desidera utilizzare.</span><span class="sxs-lookup"><span data-stu-id="dec11-198">If the text file you want to use is not `c:\cache\cacheText.txt`, specify the path where the text file is that you want to use.</span></span>  
   
-8.  Seguendo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per aggiungere un nuovo oggetto <xref:System.Runtime.Caching.HostFileChangeMonitor> alla raccolta di monitoraggio delle modifiche per la voce della cache:  
+8.  <span data-ttu-id="dec11-199">Dopo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per aggiungere un nuovo <xref:System.Runtime.Caching.HostFileChangeMonitor> oggetto alla raccolta di modifica consente di monitorare la voce della cache:</span><span class="sxs-lookup"><span data-stu-id="dec11-199">Following the code that you added in the previous step, add the following code to add a new <xref:System.Runtime.Caching.HostFileChangeMonitor> object to the collection of change monitors for the cache entry:</span></span>  
   
     ```vb  
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))  
@@ -249,9 +255,9 @@ La memorizzazione nella cache consente di archiviare i dati in memoria per l'acc
     policy.ChangeMonitors.Add(new HostFileChangeMonitor(filePaths));  
     ```  
   
-     L'oggetto <xref:System.Runtime.Caching.HostFileChangeMonitor> monitora il percorso del file di testo e notifica alla cache se si verificano modifiche.  In questo esempio la voce della cache scadrà se il contenuto del file viene modificato.  
+     <span data-ttu-id="dec11-200">Il <xref:System.Runtime.Caching.HostFileChangeMonitor> oggetto monitora il percorso del file di testo e notifica della cache se si verificano modifiche.</span><span class="sxs-lookup"><span data-stu-id="dec11-200">The <xref:System.Runtime.Caching.HostFileChangeMonitor> object monitors the text file's path and notifies the cache if changes occur.</span></span> <span data-ttu-id="dec11-201">In questo esempio, la voce della cache scadrà se il contenuto del file cambia.</span><span class="sxs-lookup"><span data-stu-id="dec11-201">In this example, the cache entry will expire if the content of the file changes.</span></span>  
   
-9. Seguendo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per leggere il contenuto del file di testo:  
+9. <span data-ttu-id="dec11-202">Il seguente codice aggiunto nel passaggio precedente, aggiungere il codice seguente per leggere il contenuto del file di testo:</span><span class="sxs-lookup"><span data-stu-id="dec11-202">Following the code that you added in the previous step, add the following code to read the contents of the text file:</span></span>  
   
     ```vb  
     fileContents = File.ReadAllText("c:\cache\cacheText.txt") & vbCrLf & DateTime.Now.ToString()  
@@ -261,9 +267,9 @@ La memorizzazione nella cache consente di archiviare i dati in memoria per l'acc
     fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + + "\n" + DateTime.Now;   
     ```  
   
-     Viene aggiunto il timestamp di data e ora per consentire di vedere la scadenza della voce della cache.  
+     <span data-ttu-id="dec11-203">In modo che è possibile vedere quando la voce della cache scade, viene aggiunto il timestamp di data e ora.</span><span class="sxs-lookup"><span data-stu-id="dec11-203">The date and time timestamp is added so that you will be able to see when the cache entry expires.</span></span>  
   
-10. Seguendo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per inserire il contenuto del file nell'oggetto cache come un'istanza di <xref:System.Runtime.Caching.CacheItem>:  
+10. <span data-ttu-id="dec11-204">Dopo il codice aggiunto nel passaggio precedente, aggiungere il codice seguente per inserire il contenuto del file oggetto cache come una <xref:System.Runtime.Caching.CacheItem> istanza:</span><span class="sxs-lookup"><span data-stu-id="dec11-204">Following the code that you added in the previous step, add the following code to insert the contents of the file into the cache object as a <xref:System.Runtime.Caching.CacheItem> instance:</span></span>  
   
     ```vb  
     cache.Set("filecontents", fileContents, policy)  
@@ -273,9 +279,9 @@ La memorizzazione nella cache consente di archiviare i dati in memoria per l'acc
     cache.Set("filecontents", fileContents, policy);  
     ```  
   
-     Specificare informazioni sulla voce della cache da eliminare passando l'oggetto <xref:System.Runtime.Caching.CacheItemPolicy> creato in precedenza come parametro.  
+     <span data-ttu-id="dec11-205">Specificare le informazioni sulla modalità di eliminazione della voce della cache mediante il passaggio di <xref:System.Runtime.Caching.CacheItemPolicy> oggetto creato in precedenza come parametro.</span><span class="sxs-lookup"><span data-stu-id="dec11-205">You specify information about how the cache entry should be evicted by passing the <xref:System.Runtime.Caching.CacheItemPolicy> object that you created earlier as a parameter.</span></span>  
   
-11. Dopo il blocco `if/then`, aggiungere il codice seguente per visualizzare il contenuto del file memorizzato nella cache in una finestra del messaggio.  
+11. <span data-ttu-id="dec11-206">Dopo il `if/then` di blocco, aggiungere il codice seguente per visualizzare il contenuto del file memorizzato nella cache in una finestra di messaggio:</span><span class="sxs-lookup"><span data-stu-id="dec11-206">After the `if/then` block, add the following code to display the cached file content in a message box:</span></span>  
   
     ```vb  
     MessageBox.Show(fileContents)  
@@ -285,52 +291,52 @@ La memorizzazione nella cache consente di archiviare i dati in memoria per l'acc
     MessageBox.Show(fileContents);  
     ```  
   
-12. Per compilare il progetto scegliere **Compila WPFCaching** dal menu **Compila**.  
+12. <span data-ttu-id="dec11-207">Nel **compilare** menu, fare clic su **compilare WPFCaching** per compilare il progetto.</span><span class="sxs-lookup"><span data-stu-id="dec11-207">In the **Build** menu, click **Build WPFCaching** to build your project.</span></span>  
   
-## Test della memorizzazione nella cache nell'applicazione WPF  
- È ora possibile eseguire il test dell'applicazione.  
+## <a name="testing-caching-in-the-wpf-application"></a><span data-ttu-id="dec11-208">Verifica la memorizzazione nella cache nell'applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="dec11-208">Testing Caching in the WPF Application</span></span>  
+ <span data-ttu-id="dec11-209">È ora possibile testare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="dec11-209">You can now test the application.</span></span>  
   
-#### Per sottoporre a test la memorizzazione nella cache nell'applicazione WPF  
+#### <a name="to-test-caching-in-the-wpf-application"></a><span data-ttu-id="dec11-210">Per testare la memorizzazione nella cache nell'applicazione WPF</span><span class="sxs-lookup"><span data-stu-id="dec11-210">To test caching in the WPF application</span></span>  
   
-1.  Premere CTRL\+F5 per eseguire l'applicazione.  
+1.  <span data-ttu-id="dec11-211">Premere CTRL+F5 per eseguire l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="dec11-211">Press CTRL+F5 to run the application.</span></span>  
   
-     Verrà visualizzata la finestra `MainWindow`.  
+     <span data-ttu-id="dec11-212">Il `MainWindow` verrà visualizzata la finestra.</span><span class="sxs-lookup"><span data-stu-id="dec11-212">The `MainWindow` window is displayed.</span></span>  
   
-2.  Fare clic su **Ottieni cache**.  
+2.  <span data-ttu-id="dec11-213">Fare clic su **ottenere Cache**.</span><span class="sxs-lookup"><span data-stu-id="dec11-213">Click **Get Cache**.</span></span>  
   
-     Il contenuto memorizzato nella cache del file di testo verrà visualizzato in una finestra di messaggio.  Si noti il timestamp nel file.  
+     <span data-ttu-id="dec11-214">Il contenuto memorizzato nella cache dal file di testo viene visualizzato in una finestra di messaggio.</span><span class="sxs-lookup"><span data-stu-id="dec11-214">The cached content from the text file is displayed in a message box.</span></span> <span data-ttu-id="dec11-215">Si noti il timestamp sul file.</span><span class="sxs-lookup"><span data-stu-id="dec11-215">Notice the timestamp on the file.</span></span>  
   
-3.  Chiudere la finestra di messaggio e fare di nuovo clic su **Ottieni cache**.  
+3.  <span data-ttu-id="dec11-216">Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente**.**</span><span class="sxs-lookup"><span data-stu-id="dec11-216">Close the message box and then click **Get Cache** again**.**</span></span>  
   
-     Il timestamp è invariato.  Questo indica che viene visualizzato il contenuto memorizzato nella cache.  
+     <span data-ttu-id="dec11-217">Il timestamp è invariato.</span><span class="sxs-lookup"><span data-stu-id="dec11-217">The timestamp is unchanged.</span></span> <span data-ttu-id="dec11-218">Indica che viene visualizzato il contenuto memorizzato nella cache.</span><span class="sxs-lookup"><span data-stu-id="dec11-218">This indicates the cached content is displayed.</span></span>  
   
-4.  Attendere 10 secondi o più, quindi fare nuovamente clic su **Ottieni cache**.  
+4.  <span data-ttu-id="dec11-219">Attendere 10 secondi o più, quindi fare clic su **Ottieni Cache** nuovamente.</span><span class="sxs-lookup"><span data-stu-id="dec11-219">Wait 10 seconds or more and then click **Get Cache** again.</span></span>  
   
-     Questa volta viene visualizzato un nuovo timestamp.  Questo indica che i criteri consentono alla voce della cache di scadere e che viene visualizzato il nuovo contenuto della cache.  
+     <span data-ttu-id="dec11-220">Questa fase viene visualizzato un nuovo timestamp.</span><span class="sxs-lookup"><span data-stu-id="dec11-220">This time a new timestamp is displayed.</span></span> <span data-ttu-id="dec11-221">Ciò indica che i criteri consentono la voce della cache scade e viene visualizzato nuovo contenuto memorizzato nella cache.</span><span class="sxs-lookup"><span data-stu-id="dec11-221">This indicates that the policy let the cache entry expire and that new cached content is displayed.</span></span>  
   
-5.  In un editor di testo aprire il file di testo creato.  Non apportare ancora alcuna modifica.  
+5.  <span data-ttu-id="dec11-222">In un editor di testo aprire il file di testo che è stato creato.</span><span class="sxs-lookup"><span data-stu-id="dec11-222">In a text editor, open the text file that you created.</span></span> <span data-ttu-id="dec11-223">Ancora, non apportare modifiche.</span><span class="sxs-lookup"><span data-stu-id="dec11-223">Do not make any changes yet.</span></span>  
   
-6.  Chiudere la finestra di messaggio e fare di nuovo clic su **Ottieni cache**.  
+6.  <span data-ttu-id="dec11-224">Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente**.**</span><span class="sxs-lookup"><span data-stu-id="dec11-224">Close the message box and then click **Get Cache** again**.**</span></span>  
   
-     Si noti nuovamente il timestamp.  
+     <span data-ttu-id="dec11-225">Di nuovo il timestamp.</span><span class="sxs-lookup"><span data-stu-id="dec11-225">Notice the timestamp again.</span></span>  
   
-7.  Apportare una modifica al file di testo e salvarlo.  
+7.  <span data-ttu-id="dec11-226">Apportare una modifica al file di testo e quindi salvare il file.</span><span class="sxs-lookup"><span data-stu-id="dec11-226">Make a change to the text file and then save the file.</span></span>  
   
-8.  Chiudere la finestra di messaggio e fare di nuovo clic su **Ottieni cache**.  
+8.  <span data-ttu-id="dec11-227">Chiudere la finestra di messaggio e quindi fare clic su **Ottieni Cache** nuovamente.</span><span class="sxs-lookup"><span data-stu-id="dec11-227">Close the message box and then click **Get Cache** again.</span></span>  
   
-     Questa finestra di messaggio contiene il contenuto aggiornato del file di testo e un nuovo timestamp.  Questo indica che il monitoraggio delle modifiche del file host ha immediatamente eliminato la voce della cache quando si è apportata la modifica, anche se il periodo di timeout assoluto non è scaduto.  
+     <span data-ttu-id="dec11-228">Questa finestra di messaggio contiene il contenuto aggiornato dal file di testo e un nuovo timestamp.</span><span class="sxs-lookup"><span data-stu-id="dec11-228">This message box contains the updated content from the text file and a new timestamp.</span></span> <span data-ttu-id="dec11-229">Ciò indica che il monitoraggio di modifica del file host rimosso la voce della cache immediatamente quando si modifica il file, anche se il periodo di timeout assoluto non scaduta.</span><span class="sxs-lookup"><span data-stu-id="dec11-229">This indicates that the host-file change monitor evicted the cache entry immediately when you changed the file, even though the absolute timeout period had not expired.</span></span>  
   
     > [!NOTE]
-    >  È possibile aumentare il tempo di eliminazione a 20 secondi o più, per disporre di più tempo per apportare la modifica nel file.  
+    >  <span data-ttu-id="dec11-230">È possibile aumentare il tempo di eliminazione a 20 secondi o più per concedere più tempo per apportare una modifica nel file.</span><span class="sxs-lookup"><span data-stu-id="dec11-230">You can increase the eviction time to 20 seconds or more to allow more time for you to make a change in the file.</span></span>  
   
-## Esempio di codice  
- Dopo avere completato questa procedura dettagliata, l'aspetto del codice per il progetto sarà simile all'esempio seguente.  
+## <a name="code-example"></a><span data-ttu-id="dec11-231">Esempio di codice</span><span class="sxs-lookup"><span data-stu-id="dec11-231">Code Example</span></span>  
+ <span data-ttu-id="dec11-232">Dopo aver completato questa procedura dettagliata, il codice per il progetto creato sarà simile all'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="dec11-232">After you have completed this walkthrough, the code for the project you created will resemble the following example.</span></span>  
   
  [!code-csharp[CachingWPFApplications#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]  
   
-## Vedere anche  
- <xref:System.Runtime.Caching.MemoryCache>   
- <xref:System.Runtime.Caching.ObjectCache>   
- <xref:System.Runtime.Caching>   
- [Memorizzazione nella cache in applicazioni .NET Framework](../../../../docs/framework/performance/caching-in-net-framework-applications.md)
+## <a name="see-also"></a><span data-ttu-id="dec11-233">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="dec11-233">See Also</span></span>  
+ <xref:System.Runtime.Caching.MemoryCache>  
+ <xref:System.Runtime.Caching.ObjectCache>  
+ <xref:System.Runtime.Caching>  
+ [<span data-ttu-id="dec11-234">Memorizzazione nella cache in applicazioni .NET Framework</span><span class="sxs-lookup"><span data-stu-id="dec11-234">Caching in .NET Framework Applications</span></span>](../../../../docs/framework/performance/caching-in-net-framework-applications.md)

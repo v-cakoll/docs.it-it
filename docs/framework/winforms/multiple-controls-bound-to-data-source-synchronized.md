@@ -1,53 +1,57 @@
 ---
-title: "Procedura: garantire la sincronizzazione di pi&#249; controlli associati alla stessa origine dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli [Windows Form], associazione di più controlli"
-  - "controlli [Windows Form], sincronizzazione con l'origine dati"
+title: "Procedura: garantire la sincronizzazione di più controlli associati alla stessa origine dati"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms], binding multiple
+- controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2573f342530e59fa05e7f24342f251990b2ce47d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: garantire la sincronizzazione di pi&#249; controlli associati alla stessa origine dati
-Spesso quando si utilizza l'associazione dati in Windows Form, più controlli vengono associati alla stessa origine dati.  In alcuni casi, può essere necessario eseguire altri passaggi per assicurarsi che le proprietà associate dei controlli rimangano sincronizzate tra loro e con l'origine dati.  Questi passaggi sono necessari in due situazioni:  
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a><span data-ttu-id="21bc0-102">Procedura: garantire la sincronizzazione di più controlli associati alla stessa origine dati</span><span class="sxs-lookup"><span data-stu-id="21bc0-102">How to: Ensure Multiple Controls Bound to the Same Data Source Remain Synchronized</span></span>
+<span data-ttu-id="21bc0-103">Quando si utilizza l'associazione dati in Windows Form, spesso più controlli associati alla stessa origine dati.</span><span class="sxs-lookup"><span data-stu-id="21bc0-103">Oftentimes when working with data binding in Windows Forms, multiple controls are bound to the same data source.</span></span> <span data-ttu-id="21bc0-104">In alcuni casi, potrebbe essere necessario effettuare altre azioni per assicurarsi che le proprietà dei controlli associate rimangano sincronizzate tra loro e l'origine dati.</span><span class="sxs-lookup"><span data-stu-id="21bc0-104">In some cases, it may be necessary to take extra steps to ensure that the bound properties of the controls remain synchronized with each other and the data source.</span></span> <span data-ttu-id="21bc0-105">Questi passaggi sono necessari in due situazioni:</span><span class="sxs-lookup"><span data-stu-id="21bc0-105">These steps are necessary in two situations:</span></span>  
   
--   Se l'origine dati non implementa <xref:System.ComponentModel.IBindingList> e pertanto genera gli eventi <xref:System.ComponentModel.IBindingList.ListChanged> di tipo <xref:System.ComponentModel.ListChangedType>.  
+-   <span data-ttu-id="21bc0-106">Se l'origine dati non implementa <xref:System.ComponentModel.IBindingList>e quindi generare <xref:System.ComponentModel.IBindingList.ListChanged> gli eventi di tipo <xref:System.ComponentModel.ListChangedType.ItemChanged>.</span><span class="sxs-lookup"><span data-stu-id="21bc0-106">If the data source does not implement <xref:System.ComponentModel.IBindingList>, and therefore generate <xref:System.ComponentModel.IBindingList.ListChanged> events of type <xref:System.ComponentModel.ListChangedType.ItemChanged>.</span></span>  
   
--   Se l'origine dati implementa <xref:System.ComponentModel.IEditableObject>.  
+-   <span data-ttu-id="21bc0-107">Se l'origine dati implementa <xref:System.ComponentModel.IEditableObject>.</span><span class="sxs-lookup"><span data-stu-id="21bc0-107">If the data source implements <xref:System.ComponentModel.IEditableObject>.</span></span>  
   
- Nel primo caso, è possibile utilizzare un componente <xref:System.Windows.Forms.BindingSource> per associare l'origine dati ai controlli.  Nel secondo caso, utilizzare un componente <xref:System.Windows.Forms.BindingSource>, gestire l'evento <xref:System.Windows.Forms.BindingSource.BindingComplete> ed eseguire una chiamata al metodo <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> sul controllo <xref:System.Windows.Forms.BindingManagerBase> associato.  
+ <span data-ttu-id="21bc0-108">Nel primo caso, è possibile utilizzare un <xref:System.Windows.Forms.BindingSource> per associare l'origine dati ai controlli.</span><span class="sxs-lookup"><span data-stu-id="21bc0-108">In the former case, you can use a <xref:System.Windows.Forms.BindingSource> to bind the data source to the controls.</span></span> <span data-ttu-id="21bc0-109">Nel secondo caso, utilizzare un <xref:System.Windows.Forms.BindingSource> e gestire il <xref:System.Windows.Forms.BindingSource.BindingComplete> eventi e chiamate <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> sull'oggetto associato <xref:System.Windows.Forms.BindingManagerBase>.</span><span class="sxs-lookup"><span data-stu-id="21bc0-109">In the latter case, you use a <xref:System.Windows.Forms.BindingSource> and handle the <xref:System.Windows.Forms.BindingSource.BindingComplete> event and call <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> on the associated <xref:System.Windows.Forms.BindingManagerBase>.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente viene illustrato come associare tre controlli, ossia due controlli casella di testo e un controllo <xref:System.Windows.Forms.DataGridView>, alla stessa colonna di un controllo <xref:System.Data.DataSet> utilizzando un componente <xref:System.Windows.Forms.BindingSource>.  Viene descritto come gestire l'evento <xref:System.Windows.Forms.BindingSource.BindingComplete> e assicurarsi che, quando il valore di testo di una delle caselle di testo viene modificato, l'altra casella di testo e il controllo <xref:System.Windows.Forms.DataGridView> vengano aggiornati con il valore corretto.  
+## <a name="example"></a><span data-ttu-id="21bc0-110">Esempio</span><span class="sxs-lookup"><span data-stu-id="21bc0-110">Example</span></span>  
+ <span data-ttu-id="21bc0-111">Esempio di codice riportato di seguito viene illustrato come associare tre controlli, due controlli casella di testo e un <xref:System.Windows.Forms.DataGridView> controllo, ovvero alla stessa colonna in un <xref:System.Data.DataSet> utilizzando un <xref:System.Windows.Forms.BindingSource> componente.</span><span class="sxs-lookup"><span data-stu-id="21bc0-111">The following code example demonstrates how to bind three controls—two text-box controls and a <xref:System.Windows.Forms.DataGridView> control—to the same column in a <xref:System.Data.DataSet> using a <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="21bc0-112">In questo esempio viene illustrato come gestire il <xref:System.Windows.Forms.BindingSource.BindingComplete> evento e verificare che, quando viene modificato il valore di testo di una casella di testo, la casella di testo aggiuntive e <xref:System.Windows.Forms.DataGridView> controllo vengono aggiornate con il valore corretto.</span><span class="sxs-lookup"><span data-stu-id="21bc0-112">This example demonstrates how to handle the <xref:System.Windows.Forms.BindingSource.BindingComplete> event and ensure that when the text value of one text box is changed, the additional text box and the <xref:System.Windows.Forms.DataGridView> control are updated with the correct value.</span></span>  
   
- Nell'esempio si utilizza un componente <xref:System.Windows.Forms.BindingSource> per associare l'origine dati e i controlli.  In alternativa, è possibile associare i controlli direttamente all'origine dati e recuperare il componente <xref:System.Windows.Forms.BindingManagerBase> per l'associazione dalla proprietà <xref:System.Windows.Forms.Control.BindingContext%2A> del form, quindi gestire l'evento <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> per <xref:System.Windows.Forms.BindingManagerBase>.  Per un esempio di come eseguire questa operazione, vedere la pagina Guida sull'evento <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> di <xref:System.Windows.Forms.BindingManagerBase>.  
+ <span data-ttu-id="21bc0-113">Nell'esempio viene utilizzato un <xref:System.Windows.Forms.BindingSource> per associare l'origine dati e i controlli.</span><span class="sxs-lookup"><span data-stu-id="21bc0-113">The example uses a <xref:System.Windows.Forms.BindingSource> to bind the data source and the controls.</span></span> <span data-ttu-id="21bc0-114">In alternativa, è possibile associare i controlli direttamente all'origine dati e recuperare il <xref:System.Windows.Forms.BindingManagerBase> per l'associazione del form <xref:System.Windows.Forms.Control.BindingContext%2A> e quindi gestire il <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> evento per il <xref:System.Windows.Forms.BindingManagerBase>.</span><span class="sxs-lookup"><span data-stu-id="21bc0-114">Alternatively, you can bind the controls directly to the data source and retrieve the <xref:System.Windows.Forms.BindingManagerBase> for the binding from the form's <xref:System.Windows.Forms.Control.BindingContext%2A> and then handle the <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> event for the <xref:System.Windows.Forms.BindingManagerBase>.</span></span> <span data-ttu-id="21bc0-115">Per un esempio di come eseguire questa operazione, vedere la pagina della Guida <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> evento di <xref:System.Windows.Forms.BindingManagerBase>.</span><span class="sxs-lookup"><span data-stu-id="21bc0-115">For an example of how to do this, see the Help page about the <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> event of <xref:System.Windows.Forms.BindingManagerBase>.</span></span>  
   
  [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
   
-## Compilazione del codice  
+## <a name="compiling-the-code"></a><span data-ttu-id="21bc0-116">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="21bc0-116">Compiling the Code</span></span>  
   
--   Per questo esempio di codice sono necessari i seguenti requisiti  
+-   <span data-ttu-id="21bc0-117">Questo esempio di codice richiede</span><span class="sxs-lookup"><span data-stu-id="21bc0-117">This code example requires</span></span>  
   
--   Riferimenti agli assembly <xref:System>, <xref:System.Windows.Forms> e <xref:System.Drawing>.  
+-   <span data-ttu-id="21bc0-118">Riferimenti agli assembly <xref:System>, <xref:System.Windows.Forms> e <xref:System.Drawing>.</span><span class="sxs-lookup"><span data-stu-id="21bc0-118">References to the <xref:System>, <xref:System.Windows.Forms>, and <xref:System.Drawing> assemblies.</span></span>  
   
--   Un form con l'evento <xref:System.Windows.Forms.Form.Load> gestito e una chiamata al metodo `InitializeControlsAndDataSource` nell'esempio dal gestore eventi <xref:System.Windows.Forms.Form.Load> del form.  
+-   <span data-ttu-id="21bc0-119">Un form con il <xref:System.Windows.Forms.Form.Load> evento come gestito e una chiamata al `InitializeControlsAndDataSource` metodo dell'esempio del form <xref:System.Windows.Forms.Form.Load> gestore dell'evento.</span><span class="sxs-lookup"><span data-stu-id="21bc0-119">A form with the <xref:System.Windows.Forms.Form.Load> event handled and a call to the `InitializeControlsAndDataSource` method in the example from the form's <xref:System.Windows.Forms.Form.Load> event handler.</span></span>  
   
-## Vedere anche  
- [Procedura: condividere dati associati tra form tramite il componente BindingSource](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)   
- [Notifica delle modifiche nell'associazione dati dei Windows Form](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)   
- [Interfacce correlate all'associazione dati](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)   
- [Associazione ai dati di Windows Form](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a><span data-ttu-id="21bc0-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="21bc0-120">See Also</span></span>  
+ [<span data-ttu-id="21bc0-121">Procedura: condividere dati associati tra form tramite il componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="21bc0-121">How to: Share Bound Data Across Forms Using the BindingSource Component</span></span>](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
+ [<span data-ttu-id="21bc0-122">Notifica delle modifiche nel data binding dei Windows Form</span><span class="sxs-lookup"><span data-stu-id="21bc0-122">Change Notification in Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [<span data-ttu-id="21bc0-123">Interfacce correlate al data binding</span><span class="sxs-lookup"><span data-stu-id="21bc0-123">Interfaces Related to Data Binding</span></span>](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
+ [<span data-ttu-id="21bc0-124">Data binding in Windows Form</span><span class="sxs-lookup"><span data-stu-id="21bc0-124">Windows Forms Data Binding</span></span>](../../../docs/framework/winforms/windows-forms-data-binding.md)

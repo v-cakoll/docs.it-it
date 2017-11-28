@@ -1,80 +1,81 @@
 ---
-title: "Il componente BindingSource | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource (componente) [Windows Form]"
-  - "associazione dati, Windows Form"
-  - "Windows Form, associazione di controlli a dati"
+title: Componente BindingSource
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data binding [Windows Forms], Windows Forms
+- Windows Forms, data binding control
+- BindingSource component [Windows Forms]
 ms.assetid: 3e2faf4c-f5b8-4fa6-9fbc-f59c37ec2fb9
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 006cafafdf8e3c3f4da77394d6155fa52e113b58
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Il componente BindingSource
-Encapsulates a data source for binding to controls.  
+# <a name="bindingsource-component"></a><span data-ttu-id="c4e55-102">Componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="c4e55-102">BindingSource Component</span></span>
+<span data-ttu-id="c4e55-103">Incapsula un'origine dati per l'associazione ai controlli.</span><span class="sxs-lookup"><span data-stu-id="c4e55-103">Encapsulates a data source for binding to controls.</span></span>  
   
- Il componente <xref:System.Windows.Forms.BindingSource> ha due scopi.  Innanzitutto fornisce un livello di riferimento indiretto durante il binding dei controlli di un form ai dati.  Questo si ottiene associando il componente <xref:System.Windows.Forms.BindingSource> all'origine dati e quindi associando i controlli del form al componente <xref:System.Windows.Forms.BindingSource>.  Tutte le altre interazioni con i dati, tra cui l'esplorazione, l'ordinamento, il filtro e l'aggiornamento, vengono eseguite mediante chiamate al componente <xref:System.Windows.Forms.BindingSource>.  
+ <span data-ttu-id="c4e55-104">Il componente <xref:System.Windows.Forms.BindingSource> ha due scopi.</span><span class="sxs-lookup"><span data-stu-id="c4e55-104">The <xref:System.Windows.Forms.BindingSource> component serves two purposes.</span></span> <span data-ttu-id="c4e55-105">Innanzitutto fornisce un livello di riferimento indiretto durante il binding dei controlli di un form ai dati.</span><span class="sxs-lookup"><span data-stu-id="c4e55-105">First, it provides a layer of indirection when binding the controls on a form to data.</span></span> <span data-ttu-id="c4e55-106">Questo si ottiene associando il componente <xref:System.Windows.Forms.BindingSource> all'origine dati e quindi associando i controlli del form al componente <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="c4e55-106">This is accomplished by binding the <xref:System.Windows.Forms.BindingSource> component to your data source, and then binding the controls on your form to the <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="c4e55-107">Tutte le altre interazioni con i dati, tra cui l'esplorazione, l'ordinamento, il filtro e l'aggiornamento, vengono eseguite mediante chiamate al componente <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="c4e55-107">All further interaction with the data, including navigating, sorting, filtering, and updating, is accomplished with calls to the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
- In secondo luogo, il componente <xref:System.Windows.Forms.BindingSource> può fungere da origine dati fortemente tipizzata.  Aggiungendo un tipo al componente <xref:System.Windows.Forms.BindingSource> con il metodo <xref:System.Windows.Forms.BindingSource.Add%2A>, viene creato un elenco di tale tipo.  
+ <span data-ttu-id="c4e55-108">In secondo luogo, il componente <xref:System.Windows.Forms.BindingSource> può fungere da origine dati fortemente tipizzata.</span><span class="sxs-lookup"><span data-stu-id="c4e55-108">Second, the <xref:System.Windows.Forms.BindingSource> component can act as a strongly typed data source.</span></span> <span data-ttu-id="c4e55-109">Aggiungendo un tipo al componente <xref:System.Windows.Forms.BindingSource> con il metodo <xref:System.Windows.Forms.BindingSource.Add%2A>, viene creato un elenco di tale tipo.</span><span class="sxs-lookup"><span data-stu-id="c4e55-109">Adding a type to the <xref:System.Windows.Forms.BindingSource> component with the <xref:System.Windows.Forms.BindingSource.Add%2A> method creates a list of that type.</span></span>  
   
-## In questa sezione  
- [Cenni preliminari sul componente BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
- Introduce i concetti generali del componente <xref:System.Windows.Forms.BindingSource>, che consente di associare un'origine dati a un controllo.  
+## <a name="in-this-section"></a><span data-ttu-id="c4e55-110">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="c4e55-110">In This Section</span></span>  
+ [<span data-ttu-id="c4e55-111">Cenni preliminari sul componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="c4e55-111">BindingSource Component Overview</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
+ <span data-ttu-id="c4e55-112">Introduce i concetti generali del componente <xref:System.Windows.Forms.BindingSource>, che consente di associare un'origine dati a un controllo.</span><span class="sxs-lookup"><span data-stu-id="c4e55-112">Introduces the general concepts of the <xref:System.Windows.Forms.BindingSource> component, which allows you to bind a data source to a control.</span></span>  
   
- [Procedura: associare controlli Windows Form a valori di database DBNull](../../../../docs/framework/winforms/controls/how-to-bind-windows-forms-controls-to-dbnull-database-values.md)  
- Mostra come gestire un valore <xref:System.DBNull> dell'origine dati con il componente <xref:System.Windows.Forms.BindingSource>.  
+ [<span data-ttu-id="c4e55-113">Procedura: associare controlli Windows Form a valori di database DBNull</span><span class="sxs-lookup"><span data-stu-id="c4e55-113">How to: Bind Windows Forms Controls to DBNull Database Values</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-windows-forms-controls-to-dbnull-database-values.md)  
+ <span data-ttu-id="c4e55-114">Mostra come gestire un valore <xref:System.DBNull> dell'origine dati con il componente <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="c4e55-114">Shows how to handle a <xref:System.DBNull> value from the data source using the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
- [Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Form](../../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)  
- Illustra l'uso del componente <xref:System.Windows.Forms.BindingSource> per applicare criteri di ordinamento e filtri ai dati visualizzati.  
+ [<span data-ttu-id="c4e55-115">Procedura: ordinare e filtrare i dati ADO.NET con il componente BindingSource Windows Form</span><span class="sxs-lookup"><span data-stu-id="c4e55-115">How to: Sort and Filter ADO.NET Data with the Windows Forms BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)  
+ <span data-ttu-id="c4e55-116">Illustra l'uso del componente <xref:System.Windows.Forms.BindingSource> per applicare criteri di ordinamento e filtri ai dati visualizzati.</span><span class="sxs-lookup"><span data-stu-id="c4e55-116">Demonstrates using the <xref:System.Windows.Forms.BindingSource> component to apply sorts and filters to displayed data.</span></span>  
   
- [Procedura: eseguire l'associazione a un servizio Web utilizzando il BindingSource Windows Form](../../../../docs/framework/winforms/controls/how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md)  
- Mostra come usare il componente <xref:System.Windows.Forms.BindingSource> per eseguire il binding a un servizio Web.  
+ [<span data-ttu-id="c4e55-117">Procedura: eseguire l'associazione a un servizio Web utilizzando il BindingSource Windows Form</span><span class="sxs-lookup"><span data-stu-id="c4e55-117">How to: Bind to a Web Service Using the Windows Forms BindingSource</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md)  
+ <span data-ttu-id="c4e55-118">Mostra come usare il componente <xref:System.Windows.Forms.BindingSource> per eseguire il binding a un servizio Web.</span><span class="sxs-lookup"><span data-stu-id="c4e55-118">Shows how to use the <xref:System.Windows.Forms.BindingSource> component to bind to a Web service.</span></span>  
   
- [Procedura: gestire gli errori e le eccezioni che si verificano con l'associazione dati](../../../../docs/framework/winforms/controls/how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)  
- Illustra l'uso del componente <xref:System.Windows.Forms.BindingSource> per gestire normalmente gli errori che si verificano in un'operazione di data binding.  
+ [<span data-ttu-id="c4e55-119">Procedura: gestire gli errori e le eccezioni che si verificano con l'associazione dati</span><span class="sxs-lookup"><span data-stu-id="c4e55-119">How to: Handle Errors and Exceptions that Occur with Databinding</span></span>](../../../../docs/framework/winforms/controls/how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)  
+ <span data-ttu-id="c4e55-120">Illustra l'uso del componente <xref:System.Windows.Forms.BindingSource> per gestire normalmente gli errori che si verificano in un'operazione di data binding.</span><span class="sxs-lookup"><span data-stu-id="c4e55-120">Demonstrates using the <xref:System.Windows.Forms.BindingSource> component to gracefully handle errors that occur in a data binding operation.</span></span>  
   
- [Procedura: associare un controllo Windows Form a un tipo](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
- Illustra l'uso di un componente <xref:System.Windows.Forms.BindingSource> per eseguire il binding a un tipo.  
+ [<span data-ttu-id="c4e55-121">Procedura: Associare un controllo di Windows Form a un tipo</span><span class="sxs-lookup"><span data-stu-id="c4e55-121">How to: Bind a Windows Forms Control to a Type</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
+ <span data-ttu-id="c4e55-122">Illustra l'uso di un componente <xref:System.Windows.Forms.BindingSource> per eseguire il binding a un tipo.</span><span class="sxs-lookup"><span data-stu-id="c4e55-122">Demonstrates using a <xref:System.Windows.Forms.BindingSource> component to bind to a type.</span></span>  
   
- [Procedura: associare un controllo Windows Form a un oggetto Factory](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-factory-object.md)  
- Illustra l'uso di un componente <xref:System.Windows.Forms.BindingSource> per eseguire il binding a un oggetto o metodo factory.  
+ [<span data-ttu-id="c4e55-123">Procedura: associare un controllo Windows Form a un oggetto Factory</span><span class="sxs-lookup"><span data-stu-id="c4e55-123">How to: Bind a Windows Forms Control to a Factory Object</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-factory-object.md)  
+ <span data-ttu-id="c4e55-124">Illustra l'uso di un componente <xref:System.Windows.Forms.BindingSource> per eseguire il binding a un oggetto o metodo factory.</span><span class="sxs-lookup"><span data-stu-id="c4e55-124">Demonstrates using a <xref:System.Windows.Forms.BindingSource> component to bind to a factory object or method.</span></span>  
   
- [Procedura: personalizzare l'aggiunta di elementi con BindingSource Windows Form](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)  
- Illustra l'uso di un componente <xref:System.Windows.Forms.BindingSource> per creare nuovi elementi e aggiungerli a un'origine dati.  
+ [<span data-ttu-id="c4e55-125">Procedura: personalizzare l'aggiunta di elementi con BindingSource Windows Form</span><span class="sxs-lookup"><span data-stu-id="c4e55-125">How to: Customize Item Addition with the Windows Forms BindingSource</span></span>](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)  
+ <span data-ttu-id="c4e55-126">Illustra l'uso di un componente <xref:System.Windows.Forms.BindingSource> per creare nuovi elementi e aggiungerli a un'origine dati.</span><span class="sxs-lookup"><span data-stu-id="c4e55-126">Demonstrates using a <xref:System.Windows.Forms.BindingSource> component to create new items and add them to a data source.</span></span>  
   
- [Procedura: generare notifiche di modifica utilizzando il metodo ResetItem di BindingSource](../../../../docs/framework/winforms/controls/how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)  
- Illustra l'uso di un componente <xref:System.Windows.Forms.BindingSource> per generare eventi di notifica di modifica per le origini dati che non supportano la notifica di modifica.  
+ [<span data-ttu-id="c4e55-127">Procedura: generare notifiche di modifica utilizzando il metodo ResetItem di BindingSource</span><span class="sxs-lookup"><span data-stu-id="c4e55-127">How to: Raise Change Notifications Using the BindingSource ResetItem Method</span></span>](../../../../docs/framework/winforms/controls/how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)  
+ <span data-ttu-id="c4e55-128">Illustra l'uso di un componente <xref:System.Windows.Forms.BindingSource> per generare eventi di notifica di modifica per le origini dati che non supportano la notifica di modifica.</span><span class="sxs-lookup"><span data-stu-id="c4e55-128">Demonstrates using a <xref:System.Windows.Forms.BindingSource> component to raise change-notification events for data sources that do not support change notification.</span></span>  
   
- [Procedura: generare notifiche di modifica utilizzando un BindingSource e l'interfaccia INotifyPropertyChanged](../../../../docs/framework/winforms/controls/raise-change-notifications--bindingsource.md)  
- Illustra come usare un tipo che eredita da <xref:System.ComponentModel.INotifyPropertyChanged> con un controllo <xref:System.Windows.Forms.BindingSource>.  
+ [<span data-ttu-id="c4e55-129">Procedura: generare notifiche di modifica utilizzando un BindingSource e l'interfaccia INotifyPropertyChanged</span><span class="sxs-lookup"><span data-stu-id="c4e55-129">How to: Raise Change Notifications Using a BindingSource and the INotifyPropertyChanged Interface</span></span>](../../../../docs/framework/winforms/controls/raise-change-notifications--bindingsource.md)  
+ <span data-ttu-id="c4e55-130">Illustra come usare un tipo che eredita da <xref:System.ComponentModel.INotifyPropertyChanged> con un controllo <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="c4e55-130">Demonstrates how to use a type that inherits from the <xref:System.ComponentModel.INotifyPropertyChanged> with a <xref:System.Windows.Forms.BindingSource> control.</span></span>  
   
- [Procedura: riflettere gli aggiornamenti dell'origine dati in un controllo Windows Form con BindingSource](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)  
- Illustra come rispondere alle modifiche nell'origine dati con il componente <xref:System.Windows.Forms.BindingSource>.  
+ [<span data-ttu-id="c4e55-131">Procedura: riflettere gli aggiornamenti dell'origine dati in un controllo Windows Form con BindingSource</span><span class="sxs-lookup"><span data-stu-id="c4e55-131">How to: Reflect Data Source Updates in a Windows Forms Control with the BindingSource</span></span>](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)  
+ <span data-ttu-id="c4e55-132">Illustra come rispondere alle modifiche nell'origine dati con il componente <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="c4e55-132">Demonstrates how to respond to changes in the data source using the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
- [Procedura: condividere dati associati tra form tramite il componente BindingSource](../../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
- Mostra come usare <xref:System.Windows.Forms.BindingSource> per associare più form alla stessa origine dati.  
+ [<span data-ttu-id="c4e55-133">Procedura: condividere dati associati tra form tramite il componente BindingSource</span><span class="sxs-lookup"><span data-stu-id="c4e55-133">How to: Share Bound Data Across Forms Using the BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
+ <span data-ttu-id="c4e55-134">Mostra come usare <xref:System.Windows.Forms.BindingSource> per associare più form alla stessa origine dati.</span><span class="sxs-lookup"><span data-stu-id="c4e55-134">Shows how to use the <xref:System.Windows.Forms.BindingSource> to bind multiple forms to the same data source.</span></span>  
   
-## Riferimenti  
+## <a name="reference"></a><span data-ttu-id="c4e55-135">Riferimento</span><span class="sxs-lookup"><span data-stu-id="c4e55-135">Reference</span></span>  
  <xref:System.Windows.Forms.BindingSource>  
- Fornisce la documentazione di riferimento per il componente <xref:System.Windows.Forms.BindingSource>.  
+ <span data-ttu-id="c4e55-136">Fornisce la documentazione di riferimento per il componente <xref:System.Windows.Forms.BindingSource>.</span><span class="sxs-lookup"><span data-stu-id="c4e55-136">Provides reference documentation for the <xref:System.Windows.Forms.BindingSource> component.</span></span>  
   
  <xref:System.Windows.Forms.BindingNavigator>  
- Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.BindingNavigator>.  
+ <span data-ttu-id="c4e55-137">Fornisce la documentazione di riferimento per il controllo <xref:System.Windows.Forms.BindingNavigator>.</span><span class="sxs-lookup"><span data-stu-id="c4e55-137">Provides reference documentation for the <xref:System.Windows.Forms.BindingNavigator> control.</span></span>  
   
-## Sezioni correlate  
- [Associazione ai dati di Windows Form](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- Contiene i collegamenti agli argomenti che descrivono l'architettura di data binding di Windows Form.  
+## <a name="related-sections"></a><span data-ttu-id="c4e55-138">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="c4e55-138">Related Sections</span></span>  
+ [<span data-ttu-id="c4e55-139">Associazione ai dati di Windows Form</span><span class="sxs-lookup"><span data-stu-id="c4e55-139">Windows Forms Data Binding</span></span>](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ <span data-ttu-id="c4e55-140">Contiene i collegamenti agli argomenti che descrivono l'architettura di data binding di Windows Form.</span><span class="sxs-lookup"><span data-stu-id="c4e55-140">Contains links to topics describing the Windows Forms data binding architecture.</span></span>  
   
- Vedere anche [Associazione di controlli ai dati in Visual Studio](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md)
+ <span data-ttu-id="c4e55-141">Vedere anche [Associazione di controlli ai dati in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="c4e55-141">Also see [Bind controls to data in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).</span></span>

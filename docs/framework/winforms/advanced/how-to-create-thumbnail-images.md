@@ -1,61 +1,65 @@
 ---
-title: "Procedura: creare miniature | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "immagini [Windows Form], creazione di anteprime in miniatura"
-  - "anteprime in miniatura delle immagini, creazione"
+title: 'Procedura: creare miniature'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- thumbnail images [Windows Forms], creating
+- images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2a3866274340932819a419c622c10072dd67c439
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare miniature
-Un'anteprima di immagine è una versione di un'immagine di dimensioni ridotte.  È possibile creare un'anteprima chiamando il metodo <xref:System.Drawing.Image.GetThumbnailImage%2A> di un oggetto <xref:System.Drawing.Image>.  
+# <a name="how-to-create-thumbnail-images"></a><span data-ttu-id="5cba1-102">Procedura: creare miniature</span><span class="sxs-lookup"><span data-stu-id="5cba1-102">How to: Create Thumbnail Images</span></span>
+<span data-ttu-id="5cba1-103">Un'immagine di anteprima è una versione ridotta di un'immagine.</span><span class="sxs-lookup"><span data-stu-id="5cba1-103">A thumbnail image is a small version of an image.</span></span> <span data-ttu-id="5cba1-104">È possibile creare un'immagine di anteprima chiamando il <xref:System.Drawing.Image.GetThumbnailImage%2A> metodo di un <xref:System.Drawing.Image> oggetto.</span><span class="sxs-lookup"><span data-stu-id="5cba1-104">You can create a thumbnail image by calling the <xref:System.Drawing.Image.GetThumbnailImage%2A> method of an <xref:System.Drawing.Image> object.</span></span>  
   
-## Esempio  
- Nell'esempio che segue viene costruito un oggetto <xref:System.Drawing.Image> da un file JPG.  Si suppone che l'immagine originale abbia una larghezza di 640 pixel e un'altezza di 479 pixel.  Viene creata un'anteprima dell'immagine con una larghezza di 100 pixel e un'altezza di 100 pixel.  
+## <a name="example"></a><span data-ttu-id="5cba1-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="5cba1-105">Example</span></span>  
+ <span data-ttu-id="5cba1-106">Nell'esempio seguente viene costruito un <xref:System.Drawing.Image> oggetto da un file JPG.</span><span class="sxs-lookup"><span data-stu-id="5cba1-106">The following example constructs an <xref:System.Drawing.Image> object from a JPG file.</span></span> <span data-ttu-id="5cba1-107">L'immagine originale ha una larghezza di 640 pixel e un'altezza di 479 pixel.</span><span class="sxs-lookup"><span data-stu-id="5cba1-107">The original image has a width of 640 pixels and a height of 479 pixels.</span></span> <span data-ttu-id="5cba1-108">Il codice crea un'immagine di anteprima che abbia una larghezza pari a 100 pixel e un'altezza pari a 100 pixel.</span><span class="sxs-lookup"><span data-stu-id="5cba1-108">The code creates a thumbnail image that has a width of 100 pixels and a height of 100 pixels.</span></span>  
   
- Nell'illustrazione che segue si mostra l'anteprima dell'immagine.  
+ <span data-ttu-id="5cba1-109">Nella figura seguente mostra l'immagine di anteprima.</span><span class="sxs-lookup"><span data-stu-id="5cba1-109">The following illustration shows the thumbnail image.</span></span>  
   
- ![Immagine di anteprima](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")  
+ <span data-ttu-id="5cba1-110">![Immagine di anteprima](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")</span><span class="sxs-lookup"><span data-stu-id="5cba1-110">![Thumbnail Image](../../../../docs/framework/winforms/advanced/media/thumbnail1.png "Thumbnail1")</span></span>  
   
 > [!NOTE]
->  In questo esempio, un metodo di callback viene dichiarato ma mai utilizzato.  Supporta tutte le versioni di GDI\+.  
+>  <span data-ttu-id="5cba1-111">In questo esempio, un metodo di callback viene dichiarato ma mai utilizzato.</span><span class="sxs-lookup"><span data-stu-id="5cba1-111">In this example, a callback method is declared, but never used.</span></span> <span data-ttu-id="5cba1-112">Supporta tutte le versioni di GDI+.</span><span class="sxs-lookup"><span data-stu-id="5cba1-112">This supports all versions of GDI+.</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.WorkingWithImages#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  Per eseguire l'esempio, attenersi alla seguente procedura:  
+## <a name="compiling-the-code"></a><span data-ttu-id="5cba1-113">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="5cba1-113">Compiling the Code</span></span>  
+ <span data-ttu-id="5cba1-114">L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="5cba1-114">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="5cba1-115">Per eseguire l'esempio, seguire questi passaggi:</span><span class="sxs-lookup"><span data-stu-id="5cba1-115">To run the example, follow these steps:</span></span>  
   
-1.  Creare una nuova applicazione Windows Form.  
+1.  <span data-ttu-id="5cba1-116">Creare una nuova applicazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="5cba1-116">Create a new Windows Forms application.</span></span>  
   
-2.  Aggiungere il codice di esempio al form.  
+2.  <span data-ttu-id="5cba1-117">Aggiungere il codice di esempio al form.</span><span class="sxs-lookup"><span data-stu-id="5cba1-117">Add the example code to the form.</span></span>  
   
-3.  Creare un gestore per l'evento <xref:System.Windows.Forms.Control.Paint> del form.  
+3.  <span data-ttu-id="5cba1-118">Creare un gestore per il form <xref:System.Windows.Forms.Control.Paint> evento</span><span class="sxs-lookup"><span data-stu-id="5cba1-118">Create a handler for the form's <xref:System.Windows.Forms.Control.Paint> event</span></span>  
   
-4.  Nel gestore di <xref:System.Windows.Forms.Control.Paint>, chiamare il metodo `GetThumbnail` e passare `e` per <xref:System.Windows.Forms.PaintEventArgs>.  
+4.  <span data-ttu-id="5cba1-119">Nel <xref:System.Windows.Forms.Control.Paint> gestore, chiamare il `GetThumbnail` (metodo) e passare `e` per <xref:System.Windows.Forms.PaintEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="5cba1-119">In the <xref:System.Windows.Forms.Control.Paint> handler, call the `GetThumbnail` method and pass `e` for <xref:System.Windows.Forms.PaintEventArgs>.</span></span>  
   
-5.  Individuare un file di immagine del quale si desidera creare un'anteprima.  
+5.  <span data-ttu-id="5cba1-120">Trovare un file di immagine che si desidera creare un'anteprima.</span><span class="sxs-lookup"><span data-stu-id="5cba1-120">Find an image file that you want to make a thumbnail of.</span></span>  
   
-6.  Nel metodo `GetThumbnail` specificare il percorso e il nome file dell'immagine.  
+6.  <span data-ttu-id="5cba1-121">Nel `GetThumbnail` (metodo), specificare il percorso e il nome dell'immagine.</span><span class="sxs-lookup"><span data-stu-id="5cba1-121">In the `GetThumbnail` method, specify the path and file name to your image.</span></span>  
   
-7.  Premere F5 per eseguire l'esempio.  
+7.  <span data-ttu-id="5cba1-122">Premere F5 per eseguire l'esempio.</span><span class="sxs-lookup"><span data-stu-id="5cba1-122">Press F5 to run the example.</span></span>  
   
-     Un'immagine di anteprima 100 x 100 verrà visualizzata nel form.  
+     <span data-ttu-id="5cba1-123">Un'immagine di anteprima di 100 per 100 viene visualizzato nel form.</span><span class="sxs-lookup"><span data-stu-id="5cba1-123">A 100 by 100 thumbnail image appears on the form.</span></span>  
   
-## Vedere anche  
- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Utilizzo di immagini, bitmap, icone e metafile](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="5cba1-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5cba1-124">See Also</span></span>  
+ [<span data-ttu-id="5cba1-125">Immagini, bitmap e metafile</span><span class="sxs-lookup"><span data-stu-id="5cba1-125">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="5cba1-126">Utilizzo di immagini, bitmap, icone e metafile</span><span class="sxs-lookup"><span data-stu-id="5cba1-126">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

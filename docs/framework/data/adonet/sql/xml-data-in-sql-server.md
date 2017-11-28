@@ -1,31 +1,34 @@
 ---
-title: "Dati XML in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Dati XML in SQL Server
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9849d319-f518-4e3d-a7cd-f8fdcaaa1d4d
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e00fe409a9628d160700b5eed4dd0f57f8a1c3bf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Dati XML in SQL Server
-SQL Server espone le funzionalità di SQLXML all'interno di .NET Framework.  Gli sviluppatori possono scrivere applicazioni che accedono ai dati XML da un'istanza SQL Server, trasportano i dati nell'ambiente .NET Framework, elaborano i dati e inviano gli aggiornamenti a SQL Server.  I dati XML possono essere usati in vari modi in SQL Server, ad esempio nell'archiviazione dei dati e come valori di parametro per il recupero dei dati.  La classe **SqlXml** in .NET Framework fornisce il supporto sul lato client per l'uso dei dati archiviati in una colonna XML in SQL Server.  Per altre informazioni, vedere "SQLXML Managed Classes" nella Documentazione online di SQL Server.  
+# <a name="xml-data-in-sql-server"></a><span data-ttu-id="1866a-102">Dati XML in SQL Server</span><span class="sxs-lookup"><span data-stu-id="1866a-102">XML Data in SQL Server</span></span>
+<span data-ttu-id="1866a-103">SQL Server espone le funzionalità di SQLXML all'interno di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="1866a-103">SQL Server exposes the functionality of SQLXML inside the .NET Framework.</span></span> <span data-ttu-id="1866a-104">Gli sviluppatori possono scrivere applicazioni che accedono ai dati XML da un'istanza SQL Server, trasportano i dati nell'ambiente .NET Framework, elaborano i dati e inviano gli aggiornamenti a SQL Server.</span><span class="sxs-lookup"><span data-stu-id="1866a-104">Developers can write applications that access XML data from an instance of SQL Server, bring the data into the .NET Framework environment, process the data, and send the updates back to SQL Server.</span></span> <span data-ttu-id="1866a-105">I dati XML possono essere usati in vari modi in SQL Server, ad esempio nell'archiviazione dei dati e come valori di parametro per il recupero dei dati.</span><span class="sxs-lookup"><span data-stu-id="1866a-105">XML data can be used in several ways in SQL Server, including data storage, and as parameter values for retrieving data.</span></span> <span data-ttu-id="1866a-106">Il **SqlXml** in .NET Framework fornisce il supporto sul lato client per l'utilizzo di dati archiviati in una colonna XML in SQL Server.</span><span class="sxs-lookup"><span data-stu-id="1866a-106">The **SqlXml** class in the .NET Framework provides the client-side support for working with data stored in an XML column within SQL Server.</span></span> <span data-ttu-id="1866a-107">Per altre informazioni, vedere "SQLXML Managed Classes" nella Documentazione online di SQL Server.</span><span class="sxs-lookup"><span data-stu-id="1866a-107">For more information, see "SQLXML Managed Classes" in SQL Server Books Online.</span></span>  
   
-## Contenuto della sezione  
- [Valori di colonna XML SQL](../../../../../docs/framework/data/adonet/sql/sql-xml-column-values.md)  
- Viene mostrato come recuperare e usare i dati XML recuperati da SQL Server.  
+## <a name="in-this-section"></a><span data-ttu-id="1866a-108">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="1866a-108">In This Section</span></span>  
+ [<span data-ttu-id="1866a-109">Valori di colonna SQL XML</span><span class="sxs-lookup"><span data-stu-id="1866a-109">SQL XML Column Values</span></span>](../../../../../docs/framework/data/adonet/sql/sql-xml-column-values.md)  
+ <span data-ttu-id="1866a-110">Viene mostrato come recuperare e usare i dati XML recuperati da SQL Server.</span><span class="sxs-lookup"><span data-stu-id="1866a-110">Demonstrates how to retrieve and work with XML data retrieved from SQL Server.</span></span>  
   
- [Specifica di valori XML come parametri](../../../../../docs/framework/data/adonet/sql/specifying-xml-values-as-parameters.md)  
- Viene mostrato come passare i dati XML usati come parametri a un comando.  
+ [<span data-ttu-id="1866a-111">Specifica di valori XML come parametri</span><span class="sxs-lookup"><span data-stu-id="1866a-111">Specifying XML Values as Parameters</span></span>](../../../../../docs/framework/data/adonet/sql/specifying-xml-values-as-parameters.md)  
+ <span data-ttu-id="1866a-112">Viene mostrato come passare i dati XML usati come parametri a un comando.</span><span class="sxs-lookup"><span data-stu-id="1866a-112">Demonstrates how to pass XML data as a parameter to a command.</span></span>  
   
-## Vedere anche  
- [SQL Server e ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="1866a-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1866a-113">See Also</span></span>  
+ [<span data-ttu-id="1866a-114">SQL Server e ADO.NET</span><span class="sxs-lookup"><span data-stu-id="1866a-114">SQL Server and ADO.NET</span></span>](../../../../../docs/framework/data/adonet/sql/index.md)  
+ [<span data-ttu-id="1866a-115">Provider gestiti ADO.NET e Centro per sviluppatori di set di dati</span><span class="sxs-lookup"><span data-stu-id="1866a-115">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

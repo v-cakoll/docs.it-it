@@ -1,43 +1,47 @@
 ---
-title: "Procedura: estrarre l&#39;icona associata a un file in Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "visualizzazione di un nome file e dell'icona del relativo tipo di file in un controllo ListView [Windows Form]"
-  - "estrazione delle icone associate a un tipo di file [Windows Form]"
-  - "estensione di file (icone) [Windows Form], visualizzazione in un controllo ListView"
+title: 'Procedura: estrarre l''icona associata a un file in Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- displaying a file name and its file type icon in a ListView control [Windows Forms]
+- file name extension icons [Windows Forms], displaying in a ListView
+- extracting icons associated with a file type [Windows Forms]
 ms.assetid: 88e2ad8b-c34f-415a-84f2-dad756b5c928
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 69999e598bfc57278c1793d3cc82e0055026267d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: estrarre l&#39;icona associata a un file in Windows Form
-Molti file includono icone incorporate che forniscono una rappresentazione visiva del tipo di file associato.  Ad esempio, i documenti di Microsoft Word contengono un'icona che li identifica come tali.  Quando si visualizzano i file in un controllo elenco o tabella, è possibile decidere di visualizzare l'icona che rappresenta il tipo di file accanto a ogni nome di file.  A tale scopo, utilizzare il metodo <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A>.  
+# <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a><span data-ttu-id="a9770-102">Procedura: estrarre l'icona associata a un file in Windows Form</span><span class="sxs-lookup"><span data-stu-id="a9770-102">How to: Extract the Icon Associated with a File in Windows Forms</span></span>
+<span data-ttu-id="a9770-103">Numero di file è incorporati icone che forniscono una rappresentazione visiva del tipo di file associato.</span><span class="sxs-lookup"><span data-stu-id="a9770-103">Many files have embedded icons that provide a visual representation of the associated file type.</span></span> <span data-ttu-id="a9770-104">Ad esempio, documenti di Microsoft Word contengono un'icona che li identifica come documenti di Word.</span><span class="sxs-lookup"><span data-stu-id="a9770-104">For example, Microsoft Word documents contain an icon that identifies them as Word documents.</span></span> <span data-ttu-id="a9770-105">Quando si visualizzano i file in un controllo elenco o tabella, si desidera visualizzare l'icona che rappresenta il tipo di file accanto a ogni nome di file.</span><span class="sxs-lookup"><span data-stu-id="a9770-105">When displaying files in a list control or table control, you may want to display the icon representing the file type next to each file name.</span></span> <span data-ttu-id="a9770-106">È possibile farlo facilmente tramite il <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="a9770-106">You can do this easily by using the <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> method.</span></span>  
   
-## Esempio  
- Nell'esempio di codice seguente viene illustrato come estrarre l'icona associata a un file e visualizzare il nome file e l'icona associata in un controllo <xref:System.Windows.Forms.ListView>.  
+## <a name="example"></a><span data-ttu-id="a9770-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="a9770-107">Example</span></span>  
+ <span data-ttu-id="a9770-108">Esempio di codice riportato di seguito viene illustrato come estrarre l'icona associata a un file e visualizzare il nome del file e l'icona associata in un <xref:System.Windows.Forms.ListView> controllo.</span><span class="sxs-lookup"><span data-stu-id="a9770-108">The following code example demonstrates how to extract the icon associated with a file and display the file name and its associated icon in a <xref:System.Windows.Forms.ListView> control.</span></span>  
   
  [!code-csharp[System.Drawing.Icon.ExtractAssociatedIconEx#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.Icon.ExtractAssociatedIconEx#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/VB/Form1.vb#1)]  
   
-## Compilazione del codice  
- Per compilare l'esempio:  
+## <a name="compiling-the-code"></a><span data-ttu-id="a9770-109">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="a9770-109">Compiling the Code</span></span>  
+ <span data-ttu-id="a9770-110">Per compilare l'esempio:</span><span class="sxs-lookup"><span data-stu-id="a9770-110">To compile the example:</span></span>  
   
--   Incollare il codice precedente in Windows Form e chiamare il metodo `ExtractAssociatedIconExample` dal costruttore del form o il metodo di gestione degli eventi <xref:System.Windows.Forms.Form.Load>.  
+-   <span data-ttu-id="a9770-111">Incollare il codice precedente in un Windows Form e chiamare il `ExtractAssociatedIconExample` metodo dal costruttore del form o <xref:System.Windows.Forms.Form.Load> il metodo di gestione degli eventi.</span><span class="sxs-lookup"><span data-stu-id="a9770-111">Paste the preceding code into a Windows Form, and call the `ExtractAssociatedIconExample` method from the form's constructor or <xref:System.Windows.Forms.Form.Load> event-handling method.</span></span>  
   
-     Sarà necessario assicurarsi che il form importi lo spazio dei nomi <xref:System.IO>.  
+     <span data-ttu-id="a9770-112">È necessario assicurarsi che il modulo Importa il <xref:System.IO> dello spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="a9770-112">You will need to make sure that your form imports the <xref:System.IO> namespace.</span></span>  
   
-## Vedere anche  
- [Immagini, bitmap e metafile](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Controllo ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="a9770-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a9770-113">See Also</span></span>  
+ [<span data-ttu-id="a9770-114">Immagini, bitmap e metafile</span><span class="sxs-lookup"><span data-stu-id="a9770-114">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="a9770-115">Controllo ListView</span><span class="sxs-lookup"><span data-stu-id="a9770-115">ListView Control</span></span>](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

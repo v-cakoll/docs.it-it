@@ -1,95 +1,95 @@
 ---
-title: "Configurazione del rilevamento per un flusso di lavoro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurazione del rilevamento per un flusso di lavoro
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: abc935da740f68006855854fac26e9d209dcd53c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Configurazione del rilevamento per un flusso di lavoro
-Un flusso di lavoro può essere eseguito in tre modi:  
+# <a name="configuring-tracking-for-a-workflow"></a><span data-ttu-id="2218c-102">Configurazione del rilevamento per un flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="2218c-102">Configuring Tracking for a Workflow</span></span>
+<span data-ttu-id="2218c-103">Un flusso di lavoro può essere eseguito in tre modi:</span><span class="sxs-lookup"><span data-stu-id="2218c-103">A workflow can execute in three ways:</span></span>  
   
--   Ospitato nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost>  
+-   <span data-ttu-id="2218c-104">Ospitato nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost></span><span class="sxs-lookup"><span data-stu-id="2218c-104">Hosted in <xref:System.ServiceModel.Activities.WorkflowServiceHost></span></span>  
   
--   Eseguito come un oggetto <xref:System.Activities.WorkflowApplication>  
+-   <span data-ttu-id="2218c-105">Eseguito come un oggetto <xref:System.Activities.WorkflowApplication></span><span class="sxs-lookup"><span data-stu-id="2218c-105">Executed as a <xref:System.Activities.WorkflowApplication></span></span>  
   
--   Eseguito direttamente usando l'oggetto <xref:System.Activities.WorkflowInvoker>  
+-   <span data-ttu-id="2218c-106">Eseguito direttamente usando l'oggetto <xref:System.Activities.WorkflowInvoker></span><span class="sxs-lookup"><span data-stu-id="2218c-106">Executed directly using <xref:System.Activities.WorkflowInvoker></span></span>  
   
- A seconda dell'opzione di hosting del flusso di lavoro, un partecipante del rilevamento può essere aggiunto tramite codice o un file di configurazione.  In questo argomento viene descritta la configurazione del rilevamento tramite l'aggiunta di un partecipante del rilevamento agli oggetti <xref:System.Activities.WorkflowApplication> e <xref:System.ServiceModel.Activities.WorkflowServiceHost> e viene illustrato come abilitare il rilevamento quando si usa l'oggetto <xref:System.Activities.WorkflowInvoker>.  
+ <span data-ttu-id="2218c-107">A seconda dell'opzione di hosting del flusso di lavoro, un partecipante del rilevamento può essere aggiunto tramite codice o un file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="2218c-107">Depending on the workflow hosting option, a tracking participant can be added either through code or through a configuration file.</span></span> <span data-ttu-id="2218c-108">In questo argomento viene descritta la configurazione del rilevamento tramite l'aggiunta di un partecipante del rilevamento agli oggetti <xref:System.Activities.WorkflowApplication> e <xref:System.ServiceModel.Activities.WorkflowServiceHost> e viene illustrato come abilitare il rilevamento quando si usa l'oggetto <xref:System.Activities.WorkflowInvoker>.</span><span class="sxs-lookup"><span data-stu-id="2218c-108">This topic describes how tracking is configured by adding a tracking participant to a <xref:System.Activities.WorkflowApplication> and to a <xref:System.ServiceModel.Activities.WorkflowServiceHost>, and how to enable tracking when using <xref:System.Activities.WorkflowInvoker>.</span></span>  
   
-## Configurazione del rilevamento dell'applicazione flusso di lavoro  
- Un flusso di lavoro può essere eseguito usando la classe <xref:System.Activities.WorkflowApplication>.  In questo argomento viene illustrata la configurazione del rilevamento per un'applicazione flusso di lavoro di [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tramite l'aggiunta di un partecipante del rilevamento all'host del flusso di lavoro <xref:System.Activities.WorkflowApplication>.  In questo caso, il flusso di lavoro viene eseguito come un'applicazione flusso di lavoro.  Quest'ultima viene configurata tramite codice \(anziché tramite un file di configurazione\), ovvero un file con estensione exe indipendente che usa la classe <xref:System.Activities.WorkflowApplication>.  Il partecipante del rilevamento viene aggiunto come estensione all'istanza <xref:System.Activities.WorkflowApplication>.  Tale operazione viene eseguita aggiungendo l'oggetto <xref:System.Activities.Tracking.TrackingParticipant> alla raccolta di estensioni per l'istanza WorkflowApplication.  
+## <a name="configuring-workflow-application-tracking"></a><span data-ttu-id="2218c-109">Configurazione del rilevamento dell'applicazione flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="2218c-109">Configuring Workflow Application Tracking</span></span>  
+ <span data-ttu-id="2218c-110">Un flusso di lavoro può essere eseguito usando la classe <xref:System.Activities.WorkflowApplication>.</span><span class="sxs-lookup"><span data-stu-id="2218c-110">A workflow can run using the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="2218c-111">In questo argomento viene illustrata la configurazione del rilevamento per un'applicazione flusso di lavoro di [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tramite l'aggiunta di un partecipante del rilevamento all'host del flusso di lavoro <xref:System.Activities.WorkflowApplication>.</span><span class="sxs-lookup"><span data-stu-id="2218c-111">This topic demonstrates how tracking is configured for a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] workflow application by adding a tracking participant to the <xref:System.Activities.WorkflowApplication> workflow host.</span></span> <span data-ttu-id="2218c-112">In questo caso, il flusso di lavoro viene eseguito come un'applicazione flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="2218c-112">In this case, the workflow runs as a workflow application.</span></span> <span data-ttu-id="2218c-113">Quest'ultima viene configurata tramite codice (anziché tramite un file di configurazione), ovvero un file con estensione exe indipendente che usa la classe <xref:System.Activities.WorkflowApplication>.</span><span class="sxs-lookup"><span data-stu-id="2218c-113">You configure a workflow application through code (rather than by using a configuration file), which is a self-hosted .exe file using the <xref:System.Activities.WorkflowApplication> class.</span></span> <span data-ttu-id="2218c-114">Il partecipante del rilevamento viene aggiunto come estensione all'istanza <xref:System.Activities.WorkflowApplication>.</span><span class="sxs-lookup"><span data-stu-id="2218c-114">The tracking participant is added as an extension to the <xref:System.Activities.WorkflowApplication> instance.</span></span> <span data-ttu-id="2218c-115">Tale operazione viene eseguita aggiungendo l'oggetto <xref:System.Activities.Tracking.TrackingParticipant> alla raccolta di estensioni per l'istanza WorkflowApplication.</span><span class="sxs-lookup"><span data-stu-id="2218c-115">This is done by adding the <xref:System.Activities.Tracking.TrackingParticipant> to the extensions collection for the WorkflowApplication instance.</span></span>  
   
- Per un'applicazione flusso di lavoro, è possibile aggiungere l'estensione di comportamento <xref:System.Activities.Tracking.EtwTrackingParticipant> come mostrato nel codice seguente.  
+ <span data-ttu-id="2218c-116">Per un'applicazione flusso di lavoro, è possibile aggiungere l'estensione di comportamento <xref:System.Activities.Tracking.EtwTrackingParticipant> come mostrato nel codice seguente.</span><span class="sxs-lookup"><span data-stu-id="2218c-116">For a workflow application, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> behavior extension as shown in the following code.</span></span>  
   
 ```csharp  
 LogActivity activity = new LogActivity();  
   
 WorkflowApplication instance = new WorkflowApplication(activity);  
 EtwTrackingParticipant trackingParticipant =  
-    new EtwTrackingParticipant  
+    new EtwTrackingParticipant  
 {  
   
-        TrackingProfile = new TrackingProfile  
-           {  
-               Name = "SampleTrackingProfile",  
-               ActivityDefinitionId = "ProcessOrder",  
-               Queries = new WorkflowInstanceQuery  
-               {  
-                  States = { "*" }  
-              }  
-          }  
-       };  
+        TrackingProfile = new TrackingProfile  
+           {  
+               Name = "SampleTrackingProfile",  
+               ActivityDefinitionId = "ProcessOrder",  
+               Queries = new WorkflowInstanceQuery  
+               {  
+                  States = { "*" }  
+              }  
+          }  
+       };  
 instance.Extensions.Add(trackingParticipant);  
-  
 ```  
   
-### Configurazione del rilevamento del servizio del flusso di lavoro  
- Un flusso di lavoro può essere esposto come servizio di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] nell'host del servizio <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  <xref:System.ServiceModel.Activities.WorkflowServiceHost> è un'implementazione specifica di .NET ServiceHost per un servizio basato sul flusso di lavoro.  Contenuto della sezione viene illustrato come configurare il rilevamento per un servizio flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in esecuzione nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  Viene configurato tramite un file Web.config \(per un servizio ospitato sul Web\) o un file App.config \(per un servizio ospitato in un'applicazione autonoma, ad esempio un'applicazione console\) specificando un comportamento del servizio oppure, tramite codice, aggiungendo un comportamento specifico del rilevamento alla raccolta <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> per l'host del servizio.  
+### <a name="configuring-workflow-service-tracking"></a><span data-ttu-id="2218c-117">Configurazione del rilevamento del servizio del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="2218c-117">Configuring Workflow Service Tracking</span></span>  
+ <span data-ttu-id="2218c-118">Un flusso di lavoro può essere esposto come servizio di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] nell'host del servizio <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="2218c-118">A workflow can be exposed as a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service when hosted in the <xref:System.ServiceModel.Activities.WorkflowServiceHost> service host.</span></span> <span data-ttu-id="2218c-119"><xref:System.ServiceModel.Activities.WorkflowServiceHost> è un'implementazione specifica di .NET ServiceHost per un servizio basato sul flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="2218c-119"><xref:System.ServiceModel.Activities.WorkflowServiceHost> is a specialized .NET ServiceHost implementation for a workflow-based service.</span></span> <span data-ttu-id="2218c-120">Contenuto della sezione viene illustrato come configurare il rilevamento per un servizio flusso di lavoro di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] in esecuzione nell'oggetto <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="2218c-120">This section explains how to configure tracking for a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow service running in <xref:System.ServiceModel.Activities.WorkflowServiceHost>.</span></span> <span data-ttu-id="2218c-121">Viene configurato tramite un file Web.config (per un servizio ospitato sul Web) o un file App.config (per un servizio ospitato in un'applicazione autonoma, ad esempio un'applicazione console) specificando un comportamento del servizio oppure, tramite codice, aggiungendo un comportamento specifico del rilevamento alla raccolta <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> per l'host del servizio.</span><span class="sxs-lookup"><span data-stu-id="2218c-121">It is configured through a Web.config file (for a Web-hosted service) or an App.config file (for a service hosted in a stand-alone application, such as a console application) by specifying a service behavior or through code by adding a tracking-specific behavior to the <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> collection for the service host.</span></span>  
   
- Per un servizio del flusso di lavoro ospitato nell'oggetto <xref:System.ServiceModel.WorkflowServiceHost>, è possibile aggiungere l'oggetto <xref:System.Activities.Tracking.EtwTrackingParticipant> usando l'elemento \<`behavior`\> in un file di configurazione, come mostrato nell'esempio seguente.  
+ <span data-ttu-id="2218c-122">Per un servizio del flusso di lavoro ospitato nell'oggetto <xref:System.ServiceModel.WorkflowServiceHost>, è possibile aggiungere l'oggetto <xref:System.Activities.Tracking.EtwTrackingParticipant> usando l'elemento <`behavior`> in un file di configurazione, come mostrato nell'esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="2218c-122">For a workflow service hosted in <xref:System.ServiceModel.WorkflowServiceHost>, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> using the <`behavior`> element in a configuration file, as shown in the following example.</span></span>  
   
-```  
-  
+```xml  
 <behaviors>  
    <serviceBehaviors>  
-        <behavior>  
-          <etwTracking profileName="Sample Tracking Profile" />  
-        </behavior>              
+        <behavior>  
+          <etwTracking profileName="Sample Tracking Profile" />  
+        </behavior>              
    </serviceBehaviors>  
 <behaviors>  
-  
 ```  
   
- In alternativa, per un servizio del flusso di lavoro ospitato nell'oggetto <xref:System.ServiceModel.WorkflowServiceHost>, è possibile aggiungere l'estensione di comportamento <xref:System.Activities.Tracking.EtwTrackingParticipant> tramite il codice.  Per aggiungere un partecipante del rilevamento personalizzato, creare una nuova estensione di comportamento e aggiungerla all'oggetto <xref:System.ServiceModel.ServiceHost> come mostrato nel codice di esempio seguente.  
+ <span data-ttu-id="2218c-123">In alternativa, per un servizio del flusso di lavoro ospitato nell'oggetto <xref:System.ServiceModel.WorkflowServiceHost>, è possibile aggiungere l'estensione di comportamento <xref:System.Activities.Tracking.EtwTrackingParticipant> tramite il codice.</span><span class="sxs-lookup"><span data-stu-id="2218c-123">Alternatively, for a workflow service hosted in <xref:System.ServiceModel.WorkflowServiceHost>, you can add the <xref:System.Activities.Tracking.EtwTrackingParticipant> behavior extension through code.</span></span> <span data-ttu-id="2218c-124">Per aggiungere un partecipante del rilevamento personalizzato, creare una nuova estensione di comportamento e aggiungerla all'oggetto <xref:System.ServiceModel.ServiceHost> come mostrato nel codice di esempio seguente.</span><span class="sxs-lookup"><span data-stu-id="2218c-124">To add a custom tracking participant, create a new behavior extension and add it to the <xref:System.ServiceModel.ServiceHost> as shown in the following example code.</span></span>  
   
 > [!NOTE]
->  Se si desidera visualizzare il codice di esempio in cui viene illustrato come creare un elemento del comportamento personalizzato che aggiunge un partecipante del rilevamento personalizzato, fare riferimento agli esempi di [Rilevamento](../../../docs/framework/windows-workflow-foundation/samples/tracking.md).  
+>  <span data-ttu-id="2218c-125">Se si desidera visualizzare codice di esempio che illustra come creare un elemento di comportamento personalizzato che aggiunge un partecipante del rilevamento personalizzato, vedere il [rilevamento](../../../docs/framework/windows-workflow-foundation/samples/tracking.md) esempi.</span><span class="sxs-lookup"><span data-stu-id="2218c-125">If you want to view sample code that shows how to create a custom behavior element that adds a custom tracking participant, refer to the [Tracking](../../../docs/framework/windows-workflow-foundation/samples/tracking.md) samples.</span></span>  
   
 ```  
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new   
-                                 Uri("http://localhost:8001/Sample"));  
+                                 Uri("http://localhost:8001/Sample"));  
 EtwTrackingBehavior trackingBehavior =   
-    new EtwTrackingBehavior  
-    {  
-        ProfileName = "Sample Tracking Profile"  
-    };  
+    new EtwTrackingBehavior  
+    {  
+        ProfileName = "Sample Tracking Profile"  
+    };  
 svcHost.Description.Behaviors.Add(trackingBehavior);  
 svcHost.Open();  
-  
 ```  
   
- Il partecipante del rilevamento viene aggiunto all'host del servizio del flusso di lavoro come estensione al comportamento.  
+ <span data-ttu-id="2218c-126">Il partecipante del rilevamento viene aggiunto all'host del servizio del flusso di lavoro come estensione al comportamento.</span><span class="sxs-lookup"><span data-stu-id="2218c-126">The tracking participant is added to the workflow service host as an extension to the behavior.</span></span>  
   
- Nel codice di esempio seguente viene mostrato come leggere un profilo di rilevamento dal file di configurazione.  
+ <span data-ttu-id="2218c-127">Nel codice di esempio seguente viene mostrato come leggere un profilo di rilevamento dal file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="2218c-127">This sample code below shows how to read a tracking profile from configuration file.</span></span>  
   
 ```  
 TrackingProfile GetProfile(string profileName, string displayName)  
@@ -126,10 +126,9 @@ TrackingProfile GetProfile(string profileName, string displayName)
             }  
   
             return trackingProfile;  
-  
 ```  
   
- In questo codice di esempio viene illustrato come aggiungere un profilo di rilevamento a un host del flusso di lavoro.  
+ <span data-ttu-id="2218c-128">In questo codice di esempio viene illustrato come aggiungere un profilo di rilevamento a un host del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="2218c-128">This sample code shows how to add a tracking profile to a workflow host.</span></span>  
   
 ```  
 WorkflowServiceHost workflowServiceHost = serviceHostBase as WorkflowServiceHost;  
@@ -144,133 +143,125 @@ if (null != workflowServiceHost)
 ```  
   
 > [!NOTE]
->  Per altre informazioni sui profili di rilevamento, vedere [Profili di rilevamento](http://go.microsoft.com/fwlink/?LinkId=201310).  
+>  <span data-ttu-id="2218c-129">Per ulteriori informazioni sui profili di rilevamento, fare riferimento a [profili di rilevamento](http://go.microsoft.com/fwlink/?LinkId=201310).</span><span class="sxs-lookup"><span data-stu-id="2218c-129">For more information on tracking profiles, refer to [Tracking Profiles](http://go.microsoft.com/fwlink/?LinkId=201310).</span></span>  
   
-### Configurazione del rilevamento tramite WorkflowInvoker  
- Per configurare il rilevamento per un flusso di lavoro eseguito usando l'oggetto <xref:System.Activities.WorkflowInvoker>, aggiungere il provider del rilevamento come estensione a un'istanza <xref:System.Activities.WorkflowInvoker>.  Il codice di esempio seguente proviene dall'esempio [Rilevamento personalizzato](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md).  
+### <a name="configuring-tracking-using-workflowinvoker"></a><span data-ttu-id="2218c-130">Configurazione del rilevamento tramite WorkflowInvoker</span><span class="sxs-lookup"><span data-stu-id="2218c-130">Configuring tracking using WorkflowInvoker</span></span>  
+ <span data-ttu-id="2218c-131">Per configurare il rilevamento per un flusso di lavoro eseguito usando l'oggetto <xref:System.Activities.WorkflowInvoker>, aggiungere il provider del rilevamento come estensione a un'istanza <xref:System.Activities.WorkflowInvoker>.</span><span class="sxs-lookup"><span data-stu-id="2218c-131">To configure tracking for a workflow executed using <xref:System.Activities.WorkflowInvoker>, add the tracking provider as an extension to a <xref:System.Activities.WorkflowInvoker> instance.</span></span> <span data-ttu-id="2218c-132">Esempio di codice seguente è dal [rilevamento personalizzato](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) esempio.</span><span class="sxs-lookup"><span data-stu-id="2218c-132">The following code example is from the [Custom Tracking](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) sample.</span></span>  
   
 ```  
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());  
 invoker.Extensions.Add(customTrackingParticipant);  
 invoker.Invoke();  
-  
 ```  
   
-### Visualizzazione dei record di rilevamento in Visualizzatore eventi  
- Esistono due log del Visualizzatore eventi di particolare interesse per il rilevamento dell'esecuzione di WF: il log analitico e il log debug.  Entrambi i log sono disponibili sotto il nodo Microsoft&#124;Windows&#124;Server applicazioni\-Applicazioni.  I log presenti in questa sezione contengono gli eventi relativi una singola applicazione piuttosto che gli eventi che interessano l'intero sistema.  
+### <a name="viewing-tracking-records-in-event-viewer"></a><span data-ttu-id="2218c-133">Visualizzazione dei record di rilevamento in Visualizzatore eventi</span><span class="sxs-lookup"><span data-stu-id="2218c-133">Viewing tracking records in Event Viewer</span></span>  
+ <span data-ttu-id="2218c-134">Esistono due log del Visualizzatore eventi di particolare interesse per il rilevamento dell'esecuzione di WF: il log analitico e il log debug.</span><span class="sxs-lookup"><span data-stu-id="2218c-134">There are two Event Viewer logs of particular interest to view when tracking WF execution - the Analytic log and the Debug log.</span></span> <span data-ttu-id="2218c-135">Entrambi si trovano in Microsoft &#124; Windows &#124; Nodo applicazioni Server dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="2218c-135">Both reside under the Microsoft&#124;Windows&#124;Application Server-Applications node.</span></span>  <span data-ttu-id="2218c-136">I log presenti in questa sezione contengono gli eventi relativi una singola applicazione piuttosto che gli eventi che interessano l'intero sistema.</span><span class="sxs-lookup"><span data-stu-id="2218c-136">Logs within this section contain events from a single application rather than events that have an impact on the entire system.</span></span>  
   
- Gli eventi di traccia di debug vengono scritti nel log di debug.  Per raccogliere gli eventi di traccia di debug di WF nel Visualizzatore eventi, abilitare il log di debug.  
+ <span data-ttu-id="2218c-137">Gli eventi di traccia di debug vengono scritti nel log di debug.</span><span class="sxs-lookup"><span data-stu-id="2218c-137">Debug trace events are written to the Debug Log.</span></span> <span data-ttu-id="2218c-138">Per raccogliere gli eventi di traccia di debug di WF nel Visualizzatore eventi, abilitare il log di debug.</span><span class="sxs-lookup"><span data-stu-id="2218c-138">To collect WF debug trace events in the Event Viewer, enable the Debug Log.</span></span>  
   
-1.  Per aprire Visualizzatore eventi, fare clic su **Start**, quindi su **Esegui**. Nella finestra di dialogo Esegui, digitare `eventvwr`.  
+1.  <span data-ttu-id="2218c-139">Per aprire il Visualizzatore eventi, fare clic su **avviare**, quindi fare clic su **eseguire.**</span><span class="sxs-lookup"><span data-stu-id="2218c-139">To open Event Viewer, click **Start**, and then click **Run.**</span></span> <span data-ttu-id="2218c-140">Nella finestra di dialogo Esegui digitare `eventvwr`.</span><span class="sxs-lookup"><span data-stu-id="2218c-140">In the Run dialog, type `eventvwr`.</span></span>  
   
-2.  Nella finestra di dialogo Visualizzatore eventi, espandere il nodo **Registri applicazioni e servizi**.  
+2.  <span data-ttu-id="2218c-141">Nella finestra di dialogo Visualizzatore eventi, espandere il **registri applicazioni e servizi** nodo.</span><span class="sxs-lookup"><span data-stu-id="2218c-141">In the Event Viewer dialog, expand the **Applications and Services Logs** node.</span></span>  
   
-3.  Espandere i nodi **Microsoft**, **Windows** e **Server applicazioni\-Applicazioni**.  
+3.  <span data-ttu-id="2218c-142">Espandere il **Microsoft**, **Windows**, e **Server applicazioni-applicazioni** nodi.</span><span class="sxs-lookup"><span data-stu-id="2218c-142">Expand the **Microsoft**, **Windows**, and **Application Server-Applications** nodes.</span></span>  
   
-4.  Fare clic con il pulsante destro del mouse sul nodo **Debug** sotto il nodo **Server applicazioni\-Applicazioni** e selezionare **Attiva log**.  
+4.  <span data-ttu-id="2218c-143">Fare doppio clic su di **Debug** nodo sotto il **Server applicazioni-applicazioni** nodo e selezionare **Attiva registro**.</span><span class="sxs-lookup"><span data-stu-id="2218c-143">Right-click the **Debug** node under the **Application Server-Applications** node, and select **Enable Log**.</span></span>  
   
-5.  Eseguire l'applicazione abilitata per il rilevamento per generare gli eventi di rilevamento.  
+5.  <span data-ttu-id="2218c-144">Eseguire l'applicazione abilitata per il rilevamento per generare gli eventi di rilevamento.</span><span class="sxs-lookup"><span data-stu-id="2218c-144">Execute your tracing-enabled application to generate tracing events.</span></span>  
   
-6.  Fare clic con il pulsante destro del mouse su **Debug** e selezionare **Aggiorna**. Gli eventi di traccia verranno visualizzati nel riquadro centrale.  
+6.  <span data-ttu-id="2218c-145">Fare doppio clic su di **Debug** nodo e selezionare **aggiornare.**</span><span class="sxs-lookup"><span data-stu-id="2218c-145">Right-click the **Debug** node and select **Refresh.**</span></span> <span data-ttu-id="2218c-146">Gli eventi di traccia verranno visualizzati nel riquadro centrale.</span><span class="sxs-lookup"><span data-stu-id="2218c-146">Tracing events should be visible in the center pane.</span></span>  
   
- In WF 4 è presente un partecipante del rilevamento mediante il quale vengono scritti i record di rilevamento in una sessione ETW \(Event Tracing for Windows\).  Il partecipante del rilevamento ETW viene configurato con un profilo di rilevamento per sottoscrivere i record di rilevamento.  Quando il rilevamento è abilitato, vengono generati record di rilevamento di errori su ETW.  Gli eventi di rilevamento ETW \(in un intervallo da 100 a 113\) corrispondenti agli eventi di rilevamento generati dal partecipante del rilevamento ETW vengono scritti nel log analitico.  
+ <span data-ttu-id="2218c-147">In WF 4 è presente un partecipante del rilevamento mediante il quale vengono scritti i record di rilevamento in una sessione ETW (Event Tracing for Windows).</span><span class="sxs-lookup"><span data-stu-id="2218c-147">WF 4 provides a tracking participant that writes tracking records to an ETW (Event Tracing for Windows) session.</span></span> <span data-ttu-id="2218c-148">Il partecipante del rilevamento ETW viene configurato con un profilo di rilevamento per sottoscrivere i record di rilevamento.</span><span class="sxs-lookup"><span data-stu-id="2218c-148">The ETW tracking participant is configured with a tracking profile to subscribe to tracking records.</span></span>  <span data-ttu-id="2218c-149">Quando il rilevamento è abilitato, vengono generati record di rilevamento di errori su ETW.</span><span class="sxs-lookup"><span data-stu-id="2218c-149">When tracking is enabled, errors tracking records are emitted to ETW.</span></span> <span data-ttu-id="2218c-150">Gli eventi di rilevamento ETW (in un intervallo da 100 a 113) corrispondenti agli eventi di rilevamento generati dal partecipante del rilevamento ETW vengono scritti nel log analitico.</span><span class="sxs-lookup"><span data-stu-id="2218c-150">ETW tracking events (between the range of 100-113) corresponding to the tracking events emitted by the ETW tracking participant are written to the Analytic Log.</span></span>  
   
- Per visualizzare i record di rilevamento, attenersi alla seguente procedura.  
+ <span data-ttu-id="2218c-151">Per visualizzare i record di rilevamento, attenersi alla seguente procedura.</span><span class="sxs-lookup"><span data-stu-id="2218c-151">To view tracking records, follow these steps.</span></span>  
   
-1.  Per aprire Visualizzatore eventi, fare clic su **Start**, quindi su **Esegui**. Nella finestra di dialogo Esegui, digitare `eventvwr`.  
+1.  <span data-ttu-id="2218c-152">Per aprire il Visualizzatore eventi, fare clic su **avviare**, quindi fare clic su **eseguire.**</span><span class="sxs-lookup"><span data-stu-id="2218c-152">To open Event Viewer, click **Start**, and then click **Run.**</span></span> <span data-ttu-id="2218c-153">Nella finestra di dialogo Esegui digitare `eventvwr`.</span><span class="sxs-lookup"><span data-stu-id="2218c-153">In the Run dialog, type `eventvwr`.</span></span>  
   
-2.  Nella finestra di dialogo Visualizzatore eventi, espandere il nodo **Registri applicazioni e servizi**.  
+2.  <span data-ttu-id="2218c-154">Nella finestra di dialogo Visualizzatore eventi, espandere il **registri applicazioni e servizi** nodo.</span><span class="sxs-lookup"><span data-stu-id="2218c-154">In the Event Viewer dialog, expand the **Applications and Services Logs** node.</span></span>  
   
-3.  Espandere i nodi **Microsoft**, **Windows** e **Server applicazioni\-Applicazioni**.  
+3.  <span data-ttu-id="2218c-155">Espandere il **Microsoft**, **Windows**, e **Server applicazioni-applicazioni** nodi.</span><span class="sxs-lookup"><span data-stu-id="2218c-155">Expand the **Microsoft**, **Windows**, and **Application Server-Applications** nodes.</span></span>  
   
-4.  Fare clic con il pulsante destro del mouse sul nodo **Analitico** sotto il nodo **Server applicazioni\-Applicazioni** e selezionare **Attiva log**.  
+4.  <span data-ttu-id="2218c-156">Fare doppio clic su di **analitico** nodo sotto il **Server applicazioni-applicazioni** nodo e selezionare **Attiva registro**.</span><span class="sxs-lookup"><span data-stu-id="2218c-156">Right-click the **Analytic** node under the **Application Server-Applications** node, and select **Enable Log**.</span></span>  
   
-5.  Eseguire l'applicazione abilitata per il rilevamento per generare record di rilevamento.  
+5.  <span data-ttu-id="2218c-157">Eseguire l'applicazione abilitata per il rilevamento per generare record di rilevamento.</span><span class="sxs-lookup"><span data-stu-id="2218c-157">Execute your tracking-enabled application to generate tracking records.</span></span>  
   
-6.  Fare clic con il pulsante destro del mouse sul nodo **Analitico** e scegliere **Aggiorna**. I record di rilevamento dovrebbero essere visibili nel riquadro centrale.  
+6.  <span data-ttu-id="2218c-158">Fare doppio clic su di **analitico** nodo e selezionare **aggiornare.**</span><span class="sxs-lookup"><span data-stu-id="2218c-158">Right-click the **Analytic** node and select **Refresh.**</span></span> <span data-ttu-id="2218c-159">I record di rilevamento dovrebbero essere visibili nel riquadro centrale.</span><span class="sxs-lookup"><span data-stu-id="2218c-159">Tracking records should be visible in the center pane.</span></span>  
   
- Nell'immagine seguente vengono mostrati gli eventi di rilevamento nel visualizzatore eventi.  
+ <span data-ttu-id="2218c-160">Nell'immagine seguente vengono mostrati gli eventi di rilevamento nel visualizzatore eventi.</span><span class="sxs-lookup"><span data-stu-id="2218c-160">The following image shows tracking events in the event viewer.</span></span>  
   
- ![Visualizzatore eventi con i record di traccia](../../../docs/framework/windows-workflow-foundation//media/trackingeventviewer.PNG "TrackingEventViewer")  
+ <span data-ttu-id="2218c-161">![Mostrare il Visualizzatore eventi i record di rilevamento](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")</span><span class="sxs-lookup"><span data-stu-id="2218c-161">![Event Viewer showing tracking records](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")</span></span>  
   
-### Registrazione di un ID provider specifico dell'applicazione  
- Se gli eventi devono essere scritti in un registro applicazioni specifico, attenersi alla seguente procedura per registrare il nuovo manifesto del provider.  
+### <a name="registering-an-application-specific-provider-id"></a><span data-ttu-id="2218c-162">Registrazione di un ID provider specifico dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="2218c-162">Registering an application-specific provider ID</span></span>  
+ <span data-ttu-id="2218c-163">Se gli eventi devono essere scritti in un registro applicazioni specifico, attenersi alla seguente procedura per registrare il nuovo manifesto del provider.</span><span class="sxs-lookup"><span data-stu-id="2218c-163">If events need to be written to a specific application log, follow these steps to register the new provider manifest.</span></span>  
   
-1.  Dichiarare l'ID provider nel file di configurazione dell'applicazione.  
+1.  <span data-ttu-id="2218c-164">Dichiarare l'ID provider nel file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="2218c-164">Declare the provider ID in the application configuration file.</span></span>  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
         <diagnostics etwProviderId="2720e974-9fe9-477a-bb60-81fe3bf91eec"/>  
     </system.serviceModel>  
-  
     ```  
   
-2.  Copiare il file manifesto da %windir%\\Microsoft.NET\\Framework\\\<versione più recente di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]\>\\Microsoft.Windows.ApplicationServer.Applications.man in un percorso temporaneo e rinominarlo Microsoft.Windows.ApplicationServer.Applications\_Provider1.man  
+2.  <span data-ttu-id="2218c-165">Copiare il file manifesto da %windir%\Microsoft.NET\Framework\\< versione più recente di [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man in un percorso temporaneo e rinominarlo Microsoft.Windows.ApplicationServer.Applications_Provider1.man</span><span class="sxs-lookup"><span data-stu-id="2218c-165">Copy the manifest file from %windir%\Microsoft.NET\Framework\\<latest version of [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]>\Microsoft.Windows.ApplicationServer.Applications.man to a temporary location, and rename it to Microsoft.Windows.ApplicationServer.Applications_Provider1.man</span></span>  
   
-3.  Modificare il GUID del file manifesto con il nuovo GUID.  
+3.  <span data-ttu-id="2218c-166">Modificare il GUID del file manifesto con il nuovo GUID.</span><span class="sxs-lookup"><span data-stu-id="2218c-166">Change the GUID in the manifest file to the new GUID.</span></span>  
   
-    ```  
+    ```xml  
     <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"  
-  
     ```  
   
-4.  Modificare il nome del provider se non si desidera disinstallare il provider predefinito.  
+4.  <span data-ttu-id="2218c-167">Modificare il nome del provider se non si desidera disinstallare il provider predefinito.</span><span class="sxs-lookup"><span data-stu-id="2218c-167">Change the provider name if you do not want to uninstall the default provider.</span></span>  
   
-    ```  
+    ```xml  
     <provider name="Microsoft-Windows-Application Server-Applications" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}"  
-  
     ```  
   
-5.  Se è stato modificato il nome del provider nel passaggio precedente, modificare i nomi dei canali nel file manifesto in base al nuovo nome del provider.  
+5.  <span data-ttu-id="2218c-168">Se è stato modificato il nome del provider nel passaggio precedente, modificare i nomi dei canali nel file manifesto in base al nuovo nome del provider.</span><span class="sxs-lookup"><span data-stu-id="2218c-168">If you changed the provider name in the previous step, change the channel names in the manifest file to the new provider name.</span></span>  
   
-    ```  
+    ```xml  
     <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Admin" chid="ADMIN_CHANNEL" symbol="ADMIN_CHANNEL" type="Admin" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ADMIN_CHANNEL.message)" />  
     <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Operational" chid="OPERATIONAL_CHANNEL" symbol="OPERATIONAL_CHANNEL" type="Operational" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.OPERATIONAL_CHANNEL.message)" />  
     <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Analytic" chid="ANALYTIC_CHANNEL" symbol="ANALYTIC_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ANALYTIC_CHANNEL.message)" />  
     <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Debug" chid="DEBUG_CHANNEL" symbol="DEBUG_CHANNEL" type="Debug" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.DEBUG_CHANNEL.message)" />  
     <channel name="Microsoft-Windows-Application Server-Applications_Provider1/Perf" chid="PERF_CHANNEL" symbol="PERF_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.PERF_CHANNEL.message)" />  
-  
     ```  
   
-6.  Generare la DLL di risorse attenendosi ai passaggi seguenti.  
+6.  <span data-ttu-id="2218c-169">Generare la DLL di risorse attenendosi ai passaggi seguenti.</span><span class="sxs-lookup"><span data-stu-id="2218c-169">Generate the resource DLL by following these steps.</span></span>  
   
-    1.  Installare Windows SDK.  Windows SDK include il compilatore di messaggi \([mc.exe](http://go.microsoft.com/fwlink/?LinkId=184606)\) e il compilatore di risorse \([rc.exe](http://go.microsoft.com/fwlink/?LinkId=184605)\).  
+    1.  <span data-ttu-id="2218c-170">Installare Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="2218c-170">Install the Windows SDK.</span></span> <span data-ttu-id="2218c-171">Windows SDK include il compilatore di messaggi ([mc.exe](http://go.microsoft.com/fwlink/?LinkId=184606)) e del compilatore di risorse ([rc.exe](http://go.microsoft.com/fwlink/?LinkId=184605)).</span><span class="sxs-lookup"><span data-stu-id="2218c-171">The Windows SDK includes the message compiler ([mc.exe](http://go.microsoft.com/fwlink/?LinkId=184606)) and resource compiler ([rc.exe](http://go.microsoft.com/fwlink/?LinkId=184605)).</span></span>  
   
-    2.  In un prompt dei comandi di Windows SDK, eseguire mc.exe nel nuovo file manifesto.  
+    2.  <span data-ttu-id="2218c-172">In un prompt dei comandi di Windows SDK, eseguire mc.exe nel nuovo file manifesto.</span><span class="sxs-lookup"><span data-stu-id="2218c-172">In a Windows SDK command prompt, run mc.exe on the new manifest file.</span></span>  
   
         ```  
         mc.exe Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
-  
         ```  
   
-    3.  Eseguire rc.exe nel file di risorse generato nel passaggio precedente.  
+    3.  <span data-ttu-id="2218c-173">Eseguire rc.exe nel file di risorse generato nel passaggio precedente.</span><span class="sxs-lookup"><span data-stu-id="2218c-173">Run rc.exe on the resource file generated in the previous step.</span></span>  
   
         ```  
-        rc.exe  Microsoft.Windows.ApplicationServer.Applications_Provider1.rc  
-  
+        rc.exe  Microsoft.Windows.ApplicationServer.Applications_Provider1.rc  
         ```  
   
-    4.  Creare un file cs vuoto denominato NewProviderReg.cs.  
+    4.  <span data-ttu-id="2218c-174">Creare un file cs vuoto denominato NewProviderReg.cs.</span><span class="sxs-lookup"><span data-stu-id="2218c-174">Create an empty cs file called NewProviderReg.cs.</span></span>  
   
-    5.  Creare una DLL di risorse usando il compilatore C\#.  
+    5.  <span data-ttu-id="2218c-175">Creare una DLL di risorse usando il compilatore C#.</span><span class="sxs-lookup"><span data-stu-id="2218c-175">Create a resource DLL using the C# compiler.</span></span>  
   
         ```  
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll  
         ```  
   
-    6.  Impostare il nome della DLL di risorse e messaggi nel file manifesto da `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` al nuovo nome della DLL.  
+    6.  <span data-ttu-id="2218c-176">Impostare il nome della DLL di risorse e messaggi nel file manifesto da `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` al nuovo nome della DLL.</span><span class="sxs-lookup"><span data-stu-id="2218c-176">Change the resource and message dl namel in the manifest file from `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` to the new dll name.</span></span>  
   
-        ```  
+        ```xml  
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">  
-  
         ```  
   
-    7.  Usare [wevtutil](http://go.microsoft.com/fwlink/?LinkId=184608) per registrare il manifesto.  
+    7.  <span data-ttu-id="2218c-177">Utilizzare [wevtutil](http://go.microsoft.com/fwlink/?LinkId=184608) per registrare il manifesto.</span><span class="sxs-lookup"><span data-stu-id="2218c-177">Use [wevtutil](http://go.microsoft.com/fwlink/?LinkId=184608) to register the manifest.</span></span>  
   
         ```  
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
         ```  
   
-## Vedere anche  
- [Concetti di monitoraggio](http://go.microsoft.com/fwlink/?LinkId=201273)   
- [Monitoraggio delle applicazioni](http://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a><span data-ttu-id="2218c-178">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2218c-178">See Also</span></span>  
+ [<span data-ttu-id="2218c-179">Monitoraggio dell'infrastruttura di App di Windows Server</span><span class="sxs-lookup"><span data-stu-id="2218c-179">Windows Server App Fabric Monitoring</span></span>](http://go.microsoft.com/fwlink/?LinkId=201273)  
+ [<span data-ttu-id="2218c-180">Monitoraggio delle applicazioni con App Fabric</span><span class="sxs-lookup"><span data-stu-id="2218c-180">Monitoring Applications with App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkId=201275)

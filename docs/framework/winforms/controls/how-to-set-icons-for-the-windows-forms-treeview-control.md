@@ -1,65 +1,67 @@
 ---
-title: "Procedura: impostare icone per il controllo TreeView Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "esempi [Windows Form], TreeView (controllo)"
-  - "icone, impostazione per il controllo TreeView"
-  - "ImageList (componente) [Windows Form], aggiunta di immagini"
-  - "nodi della struttura ad albero nel controllo TreeView, icone"
-  - "TreeView (controllo) [Windows Form], icone di nodi"
+title: 'Procedura: impostare icone per il controllo TreeView Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], TreeView control
+- TreeView control [Windows Forms], node icons
+- ImageList component [Windows Forms], adding images
+- icons [Windows Forms], setting for TreeView control
+- tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5abe07a80e457c4a0254b4c1a734cba2f6ed1766
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare icone per il controllo TreeView Windows Form
-Accanto a ciascun nodo è possibile che nel controllo <xref:System.Windows.Forms.TreeView> Windows Form vengano visualizzate delle icone,  posizionate a sinistra del testo del nodo.  Per visualizzarle, è necessario associare la visualizzazione struttura ad albero a un controllo <xref:System.Windows.Forms.ImageList>.  Per ulteriori informazioni sugli elenchi di immagini vedere [Componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) e [Procedura: aggiungere o rimuovere immagini tramite il componente ImageList Windows Form](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
+# <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a><span data-ttu-id="cb3a8-102">Procedura: impostare icone per il controllo TreeView Windows Form</span><span class="sxs-lookup"><span data-stu-id="cb3a8-102">How to: Set Icons for the Windows Forms TreeView Control</span></span>
+<span data-ttu-id="cb3a8-103">Windows Form <xref:System.Windows.Forms.TreeView> controllo può visualizzare icone accanto a ogni nodo.</span><span class="sxs-lookup"><span data-stu-id="cb3a8-103">The Windows Forms <xref:System.Windows.Forms.TreeView> control can display icons next to each node.</span></span> <span data-ttu-id="cb3a8-104">Le icone vengono posizionate immediatamente a sinistra del testo del nodo.</span><span class="sxs-lookup"><span data-stu-id="cb3a8-104">The icons are positioned to the immediate left of the node text.</span></span> <span data-ttu-id="cb3a8-105">Per visualizzare queste icone, è necessario associare la visualizzazione albero con un <xref:System.Windows.Forms.ImageList> controllo.</span><span class="sxs-lookup"><span data-stu-id="cb3a8-105">To display these icons, you must associate the tree view with an <xref:System.Windows.Forms.ImageList> control.</span></span> <span data-ttu-id="cb3a8-106">Per ulteriori informazioni sugli elenchi di immagini, vedere [componente ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) e [procedura: aggiungere o rimuovere immagini con il componente ImageList di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span><span class="sxs-lookup"><span data-stu-id="cb3a8-106">For more information about image lists, see [ImageList Component](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) and [How to: Add or Remove Images with the Windows Forms ImageList Component](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span></span>  
   
 > [!NOTE]
->  A causa di un bug nella versione 1.1 di Microsoft .NET Framework, non è possibile visualizzare le immagini immagini nei nodi <xref:System.Windows.Forms.TreeView> quando l'applicazione chiama il metodo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=fullName>.  Per ovviare a questo bug, eseguire una chiamata al metodo <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=fullName> nel metodo `Main` immediatamente dopo la chiamata al metodo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.  Questo bug è stato corretto in [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+>  <span data-ttu-id="cb3a8-107">Un bug in Microsoft .NET Framework versione 1.1 impedisce immagini nei <xref:System.Windows.Forms.TreeView> nodi quando l'applicazione chiama <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="cb3a8-107">A bug in Microsoft .NET Framework version 1.1 prevents images from appearing on <xref:System.Windows.Forms.TreeView> nodes when your application calls <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="cb3a8-108">Per risolvere questo errore, chiamare <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> nel `Main` metodo immediatamente dopo la chiamata <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.</span><span class="sxs-lookup"><span data-stu-id="cb3a8-108">To work around this bug, call <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> in your `Main` method immediately after calling <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.</span></span> <span data-ttu-id="cb3a8-109">Questo bug è stato risolto in [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cb3a8-109">This bug is fixed in [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].</span></span>  
   
-### Per visualizzare immagini in una visualizzazione struttura ad albero  
+### <a name="to-display-images-in-a-tree-view"></a><span data-ttu-id="cb3a8-110">Per visualizzare le immagini in una visualizzazione albero</span><span class="sxs-lookup"><span data-stu-id="cb3a8-110">To display images in a tree view</span></span>  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.TreeView.ImageList%2A> appropriata del controllo <xref:System.Windows.Forms.TreeView> sul controllo <xref:System.Windows.Forms.ImageList> esistente che si desidera utilizzare.  
+1.  <span data-ttu-id="cb3a8-111">Impostare il <xref:System.Windows.Forms.TreeView> del controllo <xref:System.Windows.Forms.TreeView.ImageList%2A> proprietà esistente <xref:System.Windows.Forms.ImageList> controllo che si desidera utilizzare.</span><span class="sxs-lookup"><span data-stu-id="cb3a8-111">Set the <xref:System.Windows.Forms.TreeView> control's <xref:System.Windows.Forms.TreeView.ImageList%2A> property to the existing <xref:System.Windows.Forms.ImageList> control you wish to use.</span></span>  
   
-     Queste proprietà possono essere impostate nella finestra di progettazione mediante la finestra Proprietà oppure nel codice.  
+     <span data-ttu-id="cb3a8-112">Queste proprietà possono essere impostate nella finestra di progettazione con la finestra proprietà o nel codice.</span><span class="sxs-lookup"><span data-stu-id="cb3a8-112">These properties can be set in the designer with the Properties window, or in code.</span></span>  
   
     ```vb  
     TreeView1.ImageList = ImageList1  
-  
     ```  
   
     ```csharp  
     treeView1.ImageList = imageList1;  
-  
     ```  
   
     ```cpp  
     treeView1->ImageList = imageList1;  
     ```  
   
-2.  Impostare le proprietà <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> e <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> del nodo.  La proprietà <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> determina l'immagine visualizzata per gli stati normale ed espanso del nodo, mentre la proprietà <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> determina l'immagine visualizzata per lo stato selezionato del nodo.  
+2.  <span data-ttu-id="cb3a8-113">Impostare il nodo <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> e <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="cb3a8-113">Set the node's <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> and <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> properties.</span></span> <span data-ttu-id="cb3a8-114">Il <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> proprietà determina l'immagine visualizzata per gli stati del nodo normale ed espanso e <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> proprietà determina l'immagine visualizzata per lo stato del nodo selezionato.</span><span class="sxs-lookup"><span data-stu-id="cb3a8-114">The <xref:System.Windows.Forms.TreeNode.ImageIndex%2A> property determines the image displayed for the node's normal and expanded states, and the <xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A> property determines the image displayed for the node's selected state.</span></span>  
   
-     Queste proprietà possono essere impostate nel codice o tramite l'editor TreeNode.  Per aprire l'editor TreeNode, fare clic sul pulsante con i puntini di sospensione \(![Schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) accanto alla proprietà <xref:System.Windows.Forms.TreeView.Nodes%2A> nella finestra Proprietà.  
+     <span data-ttu-id="cb3a8-115">Queste proprietà possono essere impostate nel codice o tramite l'Editor TreeNode.</span><span class="sxs-lookup"><span data-stu-id="cb3a8-115">These properties can be set in code, or within the TreeNode Editor.</span></span> <span data-ttu-id="cb3a8-116">Per aprire l'Editor TreeNode, fare clic sul pulsante con puntini di sospensione ( ![schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.TreeView.Nodes%2A> proprietà nella finestra Proprietà.</span><span class="sxs-lookup"><span data-stu-id="cb3a8-116">To open the TreeNode Editor, click the ellipsis button ( ![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.TreeView.Nodes%2A> property on the Properties window.</span></span>  
   
     ```vb  
     ' (Assumes that ImageList1 contains at least two images and  
     ' the TreeView control contains a selected image.)  
     TreeView1.SelectedNode.ImageIndex = 0  
     TreeView1.SelectedNode.SelectedImageIndex = 1  
-  
     ```  
   
     ```csharp  
@@ -67,7 +69,6 @@ Accanto a ciascun nodo è possibile che nel controllo <xref:System.Windows.Forms
     // the TreeView control contains a selected image.)  
     treeView1.SelectedNode.ImageIndex = 0;  
     treeView1.SelectedNode.SelectedImageIndex = 1;  
-  
     ```  
   
     ```cpp  
@@ -77,9 +78,9 @@ Accanto a ciascun nodo è possibile che nel controllo <xref:System.Windows.Forms
     treeView1->SelectedNode->SelectedImageIndex = 1;  
     ```  
   
-## Vedere anche  
- [Cenni preliminari sul controllo TreeView](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)   
- [Procedura: aggiungere e rimuovere nodi tramite il controllo TreeView di Windows Form](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)   
- [Procedura: scorrere tutti i nodi di un controllo TreeView Windows Form](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)   
- [Procedura: individuare il nodo di TreeView scelto](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)   
- [Procedura: aggiungere informazioni personalizzate a un controllo TreeView o ListView \(Windows Form\)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
+## <a name="see-also"></a><span data-ttu-id="cb3a8-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cb3a8-117">See Also</span></span>  
+ [<span data-ttu-id="cb3a8-118">Panoramica sul controllo TreeView</span><span class="sxs-lookup"><span data-stu-id="cb3a8-118">TreeView Control Overview</span></span>](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)  
+ [<span data-ttu-id="cb3a8-119">Procedura: Aggiungere e rimuovere nodi tramite il controllo TreeView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="cb3a8-119">How to: Add and Remove Nodes with the Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
+ [<span data-ttu-id="cb3a8-120">Procedura: Scorrere tutti i nodi di un controllo TreeView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="cb3a8-120">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)  
+ [<span data-ttu-id="cb3a8-121">Procedura: Individuare il nodo di TreeView scelto</span><span class="sxs-lookup"><span data-stu-id="cb3a8-121">How to: Determine Which TreeView Node Was Clicked</span></span>](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)  
+ [<span data-ttu-id="cb3a8-122">Procedura: Aggiungere informazioni personalizzate a un controllo TreeView o ListView (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="cb3a8-122">How to: Add Custom Information to a TreeView or ListView Control (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)

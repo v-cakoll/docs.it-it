@@ -1,48 +1,51 @@
 ---
-title: "Procedura: ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DoubleBuffered (proprietà)"
-  - "sfarfallio, riduzione in Windows Form"
-  - "grafica, riduzione dello sfarfallio a doppio buffer"
+title: 'Procedura: ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- flicker [Windows Forms], reducing in Windows Forms
+- graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d1b22babcc653f999ff500a5e52a12616fc1ae4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli
-Il doppio buffering utilizza una buffer di memoria per risolvere i problemi di sfarfallio associati a operazioni di disegno multiple.  Quando il doppio buffering è attivo, di tutte le operazioni di disegno viene eseguito il rendering anzitutto in un buffer di memoria anziché sull'area del disegno sullo schermo.  Una volta completate tutte le operazioni di disegno, il buffer di memoria viene copiato direttamente nell'area di disegno associata.  Dato che sullo schermo viene eseguita una sola operazione di tipo grafico, lo sfarfallio dell'immagine associato alle operazioni di disegno più complesse viene eliminato. Per la maggioranza delle applicazioni, il doppio buffering predefinito fornito da [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] determina i risultati ottimali.  I controlli standard di Windows Form sono a doppio buffering per impostazione predefinita.  È possibile attivare il doppio buffering predefinito nei form e nei controlli modificati in due modi.  È possibile impostare la proprietà <xref:System.Windows.Forms.Control.DoubleBuffered%2A> su `true`, oppure chiamare il metodo <xref:System.Windows.Forms.Control.SetStyle%2A> per impostare il flag <xref:System.Windows.Forms.ControlStyles> su `true`.  Entrambi i metodi attiveranno il doppio buffering predefinito per il form o controllo e forniranno un rendering della grafica privo di sfarfallio.  La chiamata del metodo <xref:System.Windows.Forms.Control.SetStyle%2A> è consigliata solo per i controlli personalizzati per i quali è stato scritto il codice di rendering.  
+# <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a><span data-ttu-id="16c31-102">Procedura: ridurre lo sfarfallio nella grafica con il doppio buffering per form e controlli</span><span class="sxs-lookup"><span data-stu-id="16c31-102">How to: Reduce Graphics Flicker with Double Buffering for Forms and Controls</span></span>
+<span data-ttu-id="16c31-103">Il doppio buffer usa un buffer di memoria per risolvere i problemi di sfarfallio associati a più operazioni di disegno.</span><span class="sxs-lookup"><span data-stu-id="16c31-103">Double buffering uses a memory buffer to address the flicker problems associated with multiple paint operations.</span></span> <span data-ttu-id="16c31-104">Quando il doppio buffer è abilitato, tutte le operazioni di disegno vengono prima sottoposte a rendering in un buffer di memoria invece che nella superficie di disegno visualizzata.</span><span class="sxs-lookup"><span data-stu-id="16c31-104">When double buffering is enabled, all paint operations are first rendered to a memory buffer instead of the drawing surface on the screen.</span></span> <span data-ttu-id="16c31-105">Dopo che tutte le operazioni di disegno sono state completate, il buffer di memoria viene copiato direttamente nella superficie di disegno associata.</span><span class="sxs-lookup"><span data-stu-id="16c31-105">After all paint operations are completed, the memory buffer is copied directly to the drawing surface associated with it.</span></span> <span data-ttu-id="16c31-106">Poiché solo una grafica operazione sullo schermo, viene eliminato lo sfarfallio dell'immagine associata a operazioni di disegno complesse. Per la maggior parte delle applicazioni, il doppio buffering predefinito fornito dal [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fornirà i migliori risultati.</span><span class="sxs-lookup"><span data-stu-id="16c31-106">Because only one graphics operation is performed on the screen, the image flickering associated with complex painting operations is eliminated.For most applications, the default double buffering provided by the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] will provide the best results.</span></span> <span data-ttu-id="16c31-107">Controlli Windows Form standard sono a doppio buffering per impostazione predefinita.</span><span class="sxs-lookup"><span data-stu-id="16c31-107">Standard Windows Forms controls are double buffered by default.</span></span> <span data-ttu-id="16c31-108">È possibile abilitare l'impostazione predefinita il doppio buffer nei moduli e nei controlli modificati in due modi.</span><span class="sxs-lookup"><span data-stu-id="16c31-108">You can enable default double buffering in your forms and authored controls in two ways.</span></span> <span data-ttu-id="16c31-109">È possibile impostare il <xref:System.Windows.Forms.Control.DoubleBuffered%2A> proprietà `true`, oppure è possibile chiamare il <xref:System.Windows.Forms.Control.SetStyle%2A> per impostare il <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag `true`.</span><span class="sxs-lookup"><span data-stu-id="16c31-109">You can either set the <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true`, or you can call the <xref:System.Windows.Forms.Control.SetStyle%2A> method to set the <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag to `true`.</span></span> <span data-ttu-id="16c31-110">Entrambi i metodi consentirà buffering doppio predefinito per un form o controllo e fornire il rendering di grafica sfarfallio.</span><span class="sxs-lookup"><span data-stu-id="16c31-110">Both methods will enable default double buffering for your form or control and provide flicker-free graphics rendering.</span></span> <span data-ttu-id="16c31-111">La chiamata di <xref:System.Windows.Forms.Control.SetStyle%2A> metodo è consigliato solo per i controlli personalizzati per cui è stato scritto il codice di rendering.</span><span class="sxs-lookup"><span data-stu-id="16c31-111">Calling the <xref:System.Windows.Forms.Control.SetStyle%2A> method is recommended only for custom controls for which you have written all the rendering code.</span></span>  
   
- Per scenari di doppio buffering più avanzati, ad esempio animazioni o gestione avanzata della memoria, è possibile implementare una logica di buffering doppio personalizzata.  Per ulteriori informazioni, vedere [Procedura: gestire manualmente le immagini memorizzate nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).  
+ <span data-ttu-id="16c31-112">Per scenari di memorizzazione nel buffer più avanzati, ad esempio animazione o gestione avanzata della memoria, è possibile implementare la propria logica di buffering doppio.</span><span class="sxs-lookup"><span data-stu-id="16c31-112">For more advanced double buffering scenarios, such as animation or advanced memory management, you can implement your own double buffering logic.</span></span> <span data-ttu-id="16c31-113">Per ulteriori informazioni, vedere [procedura: gestire manualmente le immagini memorizzate nel buffer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).</span><span class="sxs-lookup"><span data-stu-id="16c31-113">For more information, see [How to: Manually Manage Buffered Graphics](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md).</span></span>  
   
-### Per ridurre lo sfarfallio  
+### <a name="to-reduce-flicker"></a><span data-ttu-id="16c31-114">Per ridurre lo sfarfallio</span><span class="sxs-lookup"><span data-stu-id="16c31-114">To reduce flicker</span></span>  
   
--   Impostare la proprietà <xref:System.Windows.Forms.Control.DoubleBuffered%2A> su `true`.  
+-   <span data-ttu-id="16c31-115">Impostare la proprietà <xref:System.Windows.Forms.Control.DoubleBuffered%2A> su `true`.</span><span class="sxs-lookup"><span data-stu-id="16c31-115">Set the <xref:System.Windows.Forms.Control.DoubleBuffered%2A> property to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#31)]  
   
- \- oppure \-  
+ <span data-ttu-id="16c31-116">\- oppure -</span><span class="sxs-lookup"><span data-stu-id="16c31-116">\- or -</span></span>  
   
--   Chiamare il metodo <xref:System.Windows.Forms.Control.SetStyle%2A> per impostare il flag <xref:System.Windows.Forms.ControlStyles> su `true`.  
+-   <span data-ttu-id="16c31-117">Chiamare il <xref:System.Windows.Forms.Control.SetStyle%2A> per impostare il <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag `true`.</span><span class="sxs-lookup"><span data-stu-id="16c31-117">Call the <xref:System.Windows.Forms.Control.SetStyle%2A> method to set the <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag to `true`.</span></span>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#32)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Control.DoubleBuffered%2A>   
- <xref:System.Windows.Forms.Control.SetStyle%2A>   
- [Grafica a doppio buffer](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)   
- [Grafica e disegno in Windows Form](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="16c31-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="16c31-118">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.DoubleBuffered%2A>  
+ <xref:System.Windows.Forms.Control.SetStyle%2A>  
+ [<span data-ttu-id="16c31-119">Grafica a doppio buffer</span><span class="sxs-lookup"><span data-stu-id="16c31-119">Double Buffered Graphics</span></span>](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
+ [<span data-ttu-id="16c31-120">Grafica e disegno in Windows Form</span><span class="sxs-lookup"><span data-stu-id="16c31-120">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

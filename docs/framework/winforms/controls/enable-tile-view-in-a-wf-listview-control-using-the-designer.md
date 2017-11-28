@@ -1,50 +1,51 @@
 ---
-title: "Procedura: abilitare la visualizzazione affiancata in un controllo ListView Windows Form mediante la finestra di progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ListView (controllo) [Windows Form], visualizzazione affiancata"
-  - "visualizzazione affiancata (funzionalità)"
-  - "affiancamento, Windows Form, controlli"
+title: 'Procedura: abilitare la visualizzazione affiancata in un controllo ListView Windows Form mediante la finestra di progettazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tile view feature
+- ListView control [Windows Forms], tile view
+- tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cadf31d45f8650336c6ac6257a84655a978a9035
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: abilitare la visualizzazione affiancata in un controllo ListView Windows Form mediante la finestra di progettazione
-La funzione di visualizzazione affiancata del controllo <xref:System.Windows.Forms.ListView> consente di ottenere un equilibrio visivo tra informazioni in formato grafico e informazioni in formato testo.  Le informazioni in formato testo visualizzate per un elemento nella visualizzazione affiancata corrispondono alle informazioni di colonna definite per la visualizzazione dei dettagli.  La visualizzazione affiancata agisce in combinazione con le funzioni di raggruppamento o di segno di inserimento nel controllo <xref:System.Windows.Forms.ListView>.  
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a><span data-ttu-id="3724b-102">Procedura: abilitare la visualizzazione affiancata in un controllo ListView Windows Form mediante la finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="3724b-102">How to: Enable Tile View in a Windows Forms ListView Control Using the Designer</span></span>
+<span data-ttu-id="3724b-103">La funzionalità di visualizzazione del riquadro di <xref:System.Windows.Forms.ListView> controllo consente di fornire un equilibrio visivo tra informazioni grafiche e testuali.</span><span class="sxs-lookup"><span data-stu-id="3724b-103">The tile view feature of the <xref:System.Windows.Forms.ListView> control enables you to provide a visual balance between graphical and textual information.</span></span> <span data-ttu-id="3724b-104">Le informazioni testuali visualizzate per un elemento nella visualizzazione affiancata corrisponde alle informazioni della colonna definite per la visualizzazione dettagli.</span><span class="sxs-lookup"><span data-stu-id="3724b-104">The textual information displayed for an item in tile view is the same as the column information defined for details view.</span></span> <span data-ttu-id="3724b-105">La visualizzazione affiancata agisce in combinazione con l'inserimento o di raggruppamento contrassegnare le funzionalità di <xref:System.Windows.Forms.ListView> controllo.</span><span class="sxs-lookup"><span data-stu-id="3724b-105">Tile view functions in combination with either the grouping or insertion mark features in the <xref:System.Windows.Forms.ListView> control.</span></span>  
   
- La visualizzazione affiancata utilizza un'icona 32 x 32 e alcune righe di testo, come illustrato nella seguente immagine.  
+ <span data-ttu-id="3724b-106">La visualizzazione affiancata Usa un'icona di 32 x 32 e alcune righe di testo, come illustrato nella figura seguente.</span><span class="sxs-lookup"><span data-stu-id="3724b-106">The tile view uses a 32 x 32 icon and several lines of text, as shown in the following image.</span></span>  
   
- ![Visualizzazione affiancata in un controllo ListView](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")  
+ <span data-ttu-id="3724b-107">![Visualizzazione affiancata in un controllo ListView](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")</span><span class="sxs-lookup"><span data-stu-id="3724b-107">![Tile View in a ListView Control](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")</span></span>  
   
- Le proprietà e i metodi della visualizzazione affiancata consentono di specificare i campi di colonna da visualizzare per ciascun elemento, nonché di controllare collettivamente le dimensioni e l'aspetto di tutti gli elementi all'interno di una finestra di visualizzazione affiancata.  Per motivi di chiarezza, la prima riga di testo di una finestra affiancata corrisponde sempre al nome dell'elemento e non può essere modificata.  
+ <span data-ttu-id="3724b-108">Il riquadro proprietà e metodi consentono di specificare i campi colonna da visualizzare per ogni elemento e di controllare le dimensioni e l'aspetto di tutti gli elementi all'interno di una finestra di visualizzazione del riquadro di visualizzazione.</span><span class="sxs-lookup"><span data-stu-id="3724b-108">Tile view properties and methods enable you to specify which column fields to display for each item, and to collectively control the size and appearance of all items within a tile view window.</span></span> <span data-ttu-id="3724b-109">Per maggiore chiarezza, la prima riga di testo in un riquadro è sempre il nome dell'elemento; non può essere modificata.</span><span class="sxs-lookup"><span data-stu-id="3724b-109">For clarity, the first line of text in a tile is always the item's name; it cannot be changed.</span></span>  
   
- Nella seguente procedura è richiesto un progetto **Applicazione Windows** con un form contenente un controllo <xref:System.Windows.Forms.ListView>.  Per informazioni sull'impostazione di tali progetti, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa) e [Procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ <span data-ttu-id="3724b-110">La procedura seguente richiede un **applicazione Windows** progetto con un form contenente un <xref:System.Windows.Forms.ListView> controllo.</span><span class="sxs-lookup"><span data-stu-id="3724b-110">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="3724b-111">Per informazioni sull'impostazione di un progetto, vedere [procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="3724b-111">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  La visualizzazione affiancata è disponibile solo in [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] quando il metodo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=fullName> viene chiamato dall'applicazione.  Nei sistemi operativi precedenti, qualsiasi codice correlato alla visualizzazione affiancata non ha alcun effetto e il controllo <xref:System.Windows.Forms.ListView> viene rappresentato nella visualizzazione a icone grandi.  Per ulteriori informazioni, vedere <xref:System.Windows.Forms.ListView.View%2A?displayProperty=fullName>.  
+>  <span data-ttu-id="3724b-112">La visualizzazione affiancata è disponibile solo in [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] quando l'applicazione chiama il metodo <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="3724b-112">The tile view is available only on [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] when your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="3724b-113">Nei sistemi operativi precedenti, qualsiasi codice correlato alla visualizzazione affiancata non ha alcun effetto e il controllo <xref:System.Windows.Forms.ListView> viene visualizzato nella visualizzazione Icone grandi.</span><span class="sxs-lookup"><span data-stu-id="3724b-113">On earlier operating systems, any code related to the tile view has no effect, and the <xref:System.Windows.Forms.ListView> control displays in the large icon view.</span></span> <span data-ttu-id="3724b-114">Per altre informazioni, vedere <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="3724b-114">For more information, see <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.</span></span>  
 >   
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="3724b-115">Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.</span><span class="sxs-lookup"><span data-stu-id="3724b-115">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="3724b-116">Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .</span><span class="sxs-lookup"><span data-stu-id="3724b-116">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="3724b-117">Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="3724b-117">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Per impostare la visualizzazione affiancata nella finestra di progettazione  
+### <a name="to-set-tile-view-in-the-designer"></a><span data-ttu-id="3724b-118">Per impostare la visualizzazione affiancata nella finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="3724b-118">To set tile view in the designer</span></span>  
   
-1.  Selezionare il controllo <xref:System.Windows.Forms.ListView> nel form.  
+1.  <span data-ttu-id="3724b-119">Selezionare il <xref:System.Windows.Forms.ListView> controllo sul form.</span><span class="sxs-lookup"><span data-stu-id="3724b-119">Select the <xref:System.Windows.Forms.ListView> control on your form.</span></span>  
   
-2.  Nella finestra **Proprietà** selezionare la proprietà <xref:System.Windows.Forms.ListView.View%2A> e scegliere **Affianca**.  
+2.  <span data-ttu-id="3724b-120">Nel **proprietà** finestra, seleziona il <xref:System.Windows.Forms.ListView.View%2A> proprietà e scegliere **riquadro**.</span><span class="sxs-lookup"><span data-stu-id="3724b-120">In the **Properties** window, select the <xref:System.Windows.Forms.ListView.View%2A> property and choose **Tile**.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ListView.TileSize%2A>   
- [Windows XP Features and Windows Forms Controls](http://msdn.microsoft.com/it-it/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)   
- [Cenni preliminari sul controllo ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="3724b-121">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3724b-121">See Also</span></span>  
+ <xref:System.Windows.Forms.ListView.TileSize%2A>  
+ [<span data-ttu-id="3724b-122">Funzionalità di Windows XP e controlli di Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3724b-122">Windows XP Features and Windows Forms Controls</span></span>](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ [<span data-ttu-id="3724b-123">Panoramica del controllo ListView</span><span class="sxs-lookup"><span data-stu-id="3724b-123">ListView Control Overview</span></span>](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)

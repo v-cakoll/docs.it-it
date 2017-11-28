@@ -1,195 +1,188 @@
 ---
-title: "Stili e modelli di DataGrid | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], DataGrid"
-  - "DataGrid [WPF], stili e modelli"
-  - "parti [WPF], DataGrid"
-  - "stati [WPF], DataGrid"
-  - "stili [WPF], DataGrid"
-  - "modelli [WPF], DataGrid"
+title: Stili e modelli di DataGrid
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], DataGrid
+- ControlTemplate [WPF], DataGrid
+- DataGrid [WPF], styles and templates
+- templates [WPF], DataGrid
+- styles [WPF], DataGrid
+- parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b2dd7e47454cdfa806ce025d905073468f70f7cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Stili e modelli di DataGrid
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.DataGrid>.  È possibile modificare l'oggetto <xref:System.Windows.Controls.ControlTemplate> predefinito per conferire al controllo un aspetto univoco.  Per ulteriori informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="datagrid-styles-and-templates"></a><span data-ttu-id="92cd6-102">Stili e modelli di DataGrid</span><span class="sxs-lookup"><span data-stu-id="92cd6-102">DataGrid Styles and Templates</span></span>
+<span data-ttu-id="92cd6-103">In questo argomento vengono descritti gli stili e modelli per il <xref:System.Windows.Controls.DataGrid> controllo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.DataGrid> control.</span></span> <span data-ttu-id="92cd6-104">È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco.</span><span class="sxs-lookup"><span data-stu-id="92cd6-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="92cd6-105">Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="92cd6-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Parti di DataGrid  
- Nella tabella seguente sono elencate le parti denominate del controllo <xref:System.Windows.Controls.DataGrid>.  
+## <a name="datagrid-parts"></a><span data-ttu-id="92cd6-106">Parti di DataGrid</span><span class="sxs-lookup"><span data-stu-id="92cd6-106">DataGrid Parts</span></span>  
+ <span data-ttu-id="92cd6-107">La tabella seguente elenca le parti denominate la <xref:System.Windows.Controls.DataGrid> controllo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-107">The following table lists the named parts for the <xref:System.Windows.Controls.DataGrid> control.</span></span>  
   
-||||  
+|<span data-ttu-id="92cd6-108">Parte</span><span class="sxs-lookup"><span data-stu-id="92cd6-108">Part</span></span>|<span data-ttu-id="92cd6-109">Tipo</span><span class="sxs-lookup"><span data-stu-id="92cd6-109">Type</span></span>|<span data-ttu-id="92cd6-110">Descrizione</span><span class="sxs-lookup"><span data-stu-id="92cd6-110">Description</span></span>|  
 |-|-|-|  
-|Parte|Type|Descrizione|  
-|PART\_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Riga che contiene le intestazioni di colonna.|  
+|<span data-ttu-id="92cd6-111">PART_ColumnHeadersPresenter</span><span class="sxs-lookup"><span data-stu-id="92cd6-111">PART_ColumnHeadersPresenter</span></span>|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|<span data-ttu-id="92cd6-112">La riga che contiene le intestazioni di colonna.</span><span class="sxs-lookup"><span data-stu-id="92cd6-112">The row that contains the column headers.</span></span>|  
   
- Quando si crea <xref:System.Windows.Controls.ControlTemplate> per un oggetto <xref:System.Windows.Controls.DataGrid>, il modello potrebbe contenere <xref:System.Windows.Controls.ItemsPresenter> all'interno di <xref:System.Windows.Controls.ScrollViewer>.  L'oggetto <xref:System.Windows.Controls.ItemsPresenter> visualizza ogni elemento in <xref:System.Windows.Controls.DataGrid>; <xref:System.Windows.Controls.ScrollViewer> consente lo scorrimento all'interno del controllo.  Se <xref:System.Windows.Controls.ItemsPresenter> non è l'elemento figlio diretto di <xref:System.Windows.Controls.ScrollViewer>, è necessario assegnare a <xref:System.Windows.Controls.ItemsPresenter> il nome `ItemsPresenter`.  
+ <span data-ttu-id="92cd6-113">Quando si crea un <xref:System.Windows.Controls.ControlTemplate> per un <xref:System.Windows.Controls.DataGrid>, il modello potrebbe contenere un <xref:System.Windows.Controls.ItemsPresenter> all'interno di un <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="92cd6-113">When you create a <xref:System.Windows.Controls.ControlTemplate> for a <xref:System.Windows.Controls.DataGrid>, your template might contain an <xref:System.Windows.Controls.ItemsPresenter> within a <xref:System.Windows.Controls.ScrollViewer>.</span></span> <span data-ttu-id="92cd6-114">(Il <xref:System.Windows.Controls.ItemsPresenter> Visualizza ogni elemento nel <xref:System.Windows.Controls.DataGrid>; <xref:System.Windows.Controls.ScrollViewer> Abilita lo scorrimento all'interno del controllo).</span><span class="sxs-lookup"><span data-stu-id="92cd6-114">(The <xref:System.Windows.Controls.ItemsPresenter> displays each item in the <xref:System.Windows.Controls.DataGrid>; the <xref:System.Windows.Controls.ScrollViewer> enables scrolling within the control).</span></span>  <span data-ttu-id="92cd6-115">Se il <xref:System.Windows.Controls.ItemsPresenter> non è il figlio diretto del <xref:System.Windows.Controls.ScrollViewer>, è necessario assegnare il <xref:System.Windows.Controls.ItemsPresenter> il nome, `ItemsPresenter`.</span><span class="sxs-lookup"><span data-stu-id="92cd6-115">If the <xref:System.Windows.Controls.ItemsPresenter> is not the direct child of the <xref:System.Windows.Controls.ScrollViewer>, you must give the <xref:System.Windows.Controls.ItemsPresenter> the name, `ItemsPresenter`.</span></span>  
   
- Il modello predefinito per <xref:System.Windows.Controls.DataGrid> contiene n controllo <xref:System.Windows.Controls.ScrollViewer>.  Per ulteriori informazioni sulle parti definite da <xref:System.Windows.Controls.ScrollViewer>, vedere [Stili e modelli di ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).  
+ <span data-ttu-id="92cd6-116">Il modello predefinito per il <xref:System.Windows.Controls.DataGrid> contiene un <xref:System.Windows.Controls.ScrollViewer> controllo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-116">The default template for the <xref:System.Windows.Controls.DataGrid> contains a <xref:System.Windows.Controls.ScrollViewer> control.</span></span> <span data-ttu-id="92cd6-117">Per ulteriori informazioni sulle parti definite per il <xref:System.Windows.Controls.ScrollViewer>, vedere [ScrollViewer stili e modelli](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).</span><span class="sxs-lookup"><span data-stu-id="92cd6-117">For more information about the parts defined by the <xref:System.Windows.Controls.ScrollViewer>, see [ScrollViewer Styles and Templates](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).</span></span>  
   
-## Stati di DataGrid  
- Nella tabella seguente sono elencati gli stati visivi per il controllo <xref:System.Windows.Controls.DataGrid>.  
+## <a name="datagrid-states"></a><span data-ttu-id="92cd6-118">Stati di DataGrid</span><span class="sxs-lookup"><span data-stu-id="92cd6-118">DataGrid States</span></span>  
+ <span data-ttu-id="92cd6-119">Nella tabella seguente sono elencati gli stati visivi per la <xref:System.Windows.Controls.DataGrid> controllo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-119">The following table lists the visual states for the <xref:System.Windows.Controls.DataGrid> control.</span></span>  
   
-||||  
+|<span data-ttu-id="92cd6-120">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="92cd6-120">VisualState Name</span></span>|<span data-ttu-id="92cd6-121">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="92cd6-121">VisualStateGroup Name</span></span>|<span data-ttu-id="92cd6-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="92cd6-122">Description</span></span>|  
 |-|-|-|  
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
-|Disabled|CommonStates|Il controllo è disabilitato.|  
-|InvalidFocused|ValidationStates|Il controllo non è valido e presenta lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|Il controllo non è valido e non presenta lo stato attivo.|  
-|Valid|ValidationStates|Il controllo è valido.|  
+|<span data-ttu-id="92cd6-123">Normale</span><span class="sxs-lookup"><span data-stu-id="92cd6-123">Normal</span></span>|<span data-ttu-id="92cd6-124">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-124">CommonStates</span></span>|<span data-ttu-id="92cd6-125">Lo stato predefinito.</span><span class="sxs-lookup"><span data-stu-id="92cd6-125">The default state.</span></span>|  
+|<span data-ttu-id="92cd6-126">Disabilitato</span><span class="sxs-lookup"><span data-stu-id="92cd6-126">Disabled</span></span>|<span data-ttu-id="92cd6-127">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-127">CommonStates</span></span>|<span data-ttu-id="92cd6-128">Il controllo è disabilitato.</span><span class="sxs-lookup"><span data-stu-id="92cd6-128">The control is disabled.</span></span>|  
+|<span data-ttu-id="92cd6-129">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-129">InvalidFocused</span></span>|<span data-ttu-id="92cd6-130">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-130">ValidationStates</span></span>|<span data-ttu-id="92cd6-131">Il controllo non è valido e ha uno stato attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-131">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="92cd6-132">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-132">InvalidUnfocused</span></span>|<span data-ttu-id="92cd6-133">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-133">ValidationStates</span></span>|<span data-ttu-id="92cd6-134">Il controllo non è valido e non ha uno stato attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-134">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-135">Valido</span><span class="sxs-lookup"><span data-stu-id="92cd6-135">Valid</span></span>|<span data-ttu-id="92cd6-136">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-136">ValidationStates</span></span>|<span data-ttu-id="92cd6-137">Il controllo è valido.</span><span class="sxs-lookup"><span data-stu-id="92cd6-137">The control is valid.</span></span>|  
   
-## Parti di DataGridCell  
- L'elemento <xref:System.Windows.Controls.DataGridCell> non include parti denominate.  
+## <a name="datagridcell-parts"></a><span data-ttu-id="92cd6-138">Parti di DataGridCell</span><span class="sxs-lookup"><span data-stu-id="92cd6-138">DataGridCell Parts</span></span>  
+ <span data-ttu-id="92cd6-139">Il <xref:System.Windows.Controls.DataGridCell> elemento non dispone di parti denominate.</span><span class="sxs-lookup"><span data-stu-id="92cd6-139">The <xref:System.Windows.Controls.DataGridCell> element does not have any named parts.</span></span>  
   
-## Stati di DataGridCell  
- Nella tabella seguente sono elencati gli stati di visualizzazione per l'elemento <xref:System.Windows.Controls.DataGridCell>.  
+## <a name="datagridcell-states"></a><span data-ttu-id="92cd6-140">Stati di DataGridCell</span><span class="sxs-lookup"><span data-stu-id="92cd6-140">DataGridCell States</span></span>  
+ <span data-ttu-id="92cd6-141">Nella tabella seguente sono elencati gli stati visivi per il <xref:System.Windows.Controls.DataGridCell> elemento.</span><span class="sxs-lookup"><span data-stu-id="92cd6-141">The following table lists the visual states for the <xref:System.Windows.Controls.DataGridCell> element.</span></span>  
   
-||||  
+|<span data-ttu-id="92cd6-142">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="92cd6-142">VisualState Name</span></span>|<span data-ttu-id="92cd6-143">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="92cd6-143">VisualStateGroup Name</span></span>|<span data-ttu-id="92cd6-144">Descrizione</span><span class="sxs-lookup"><span data-stu-id="92cd6-144">Description</span></span>|  
 |-|-|-|  
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
-|MouseOver|CommonStates|Il puntatore del mouse è posizionato sulla cella.|  
-|Focused|FocusStates|La cella ha lo stato attivo.|  
-|Unfocused|FocusStates|La cella non ha lo stato attivo.|  
-|Corrente|CurrentStates|La cella è la cella attiva.|  
-|Regolare|CurrentStates|La cella non è la cella attiva.|  
-|Visualizzazione|InteractionStates|La cella è in modalità di visualizzazione.|  
-|Modifica|InteractionStates|La cella è in modalità di modifica.|  
-|Selezionato|SelectionStates|La cella è selezionata.|  
-|Non selezionato|SelectionStates|La cella non è selezionata.|  
-|InvalidFocused|ValidationStates|La cella non è valida e ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La cella non è valida e non ha lo stato attivo.|  
-|Valid|ValidationStates|La cella è valida.|  
+|<span data-ttu-id="92cd6-145">Normale</span><span class="sxs-lookup"><span data-stu-id="92cd6-145">Normal</span></span>|<span data-ttu-id="92cd6-146">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-146">CommonStates</span></span>|<span data-ttu-id="92cd6-147">Lo stato predefinito.</span><span class="sxs-lookup"><span data-stu-id="92cd6-147">The default state.</span></span>|  
+|<span data-ttu-id="92cd6-148">MouseOver</span><span class="sxs-lookup"><span data-stu-id="92cd6-148">MouseOver</span></span>|<span data-ttu-id="92cd6-149">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-149">CommonStates</span></span>|<span data-ttu-id="92cd6-150">Il puntatore del mouse è posizionato sulla cella.</span><span class="sxs-lookup"><span data-stu-id="92cd6-150">The mouse pointer is positioned over the cell.</span></span>|  
+|<span data-ttu-id="92cd6-151">Con stato attivo</span><span class="sxs-lookup"><span data-stu-id="92cd6-151">Focused</span></span>|<span data-ttu-id="92cd6-152">FocusStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-152">FocusStates</span></span>|<span data-ttu-id="92cd6-153">La cella è attiva.</span><span class="sxs-lookup"><span data-stu-id="92cd6-153">The cell has focus.</span></span>|  
+|<span data-ttu-id="92cd6-154">Con stato non attivo</span><span class="sxs-lookup"><span data-stu-id="92cd6-154">Unfocused</span></span>|<span data-ttu-id="92cd6-155">FocusStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-155">FocusStates</span></span>|<span data-ttu-id="92cd6-156">La cella non è attivo</span><span class="sxs-lookup"><span data-stu-id="92cd6-156">The cell does not have focus</span></span>|  
+|<span data-ttu-id="92cd6-157">Corrente</span><span class="sxs-lookup"><span data-stu-id="92cd6-157">Current</span></span>|<span data-ttu-id="92cd6-158">CurrentStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-158">CurrentStates</span></span>|<span data-ttu-id="92cd6-159">La cella è la cella corrente.</span><span class="sxs-lookup"><span data-stu-id="92cd6-159">The cell is the current cell.</span></span>|  
+|<span data-ttu-id="92cd6-160">Regular</span><span class="sxs-lookup"><span data-stu-id="92cd6-160">Regular</span></span>|<span data-ttu-id="92cd6-161">CurrentStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-161">CurrentStates</span></span>|<span data-ttu-id="92cd6-162">La cella non è la cella corrente.</span><span class="sxs-lookup"><span data-stu-id="92cd6-162">The cell is not the current cell.</span></span>|  
+|<span data-ttu-id="92cd6-163">Visualizzazione</span><span class="sxs-lookup"><span data-stu-id="92cd6-163">Display</span></span>|<span data-ttu-id="92cd6-164">InteractionStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-164">InteractionStates</span></span>|<span data-ttu-id="92cd6-165">La cella è in modalità di visualizzazione.</span><span class="sxs-lookup"><span data-stu-id="92cd6-165">The cell is in display mode.</span></span>|  
+|<span data-ttu-id="92cd6-166">Modifica</span><span class="sxs-lookup"><span data-stu-id="92cd6-166">Editing</span></span>|<span data-ttu-id="92cd6-167">InteractionStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-167">InteractionStates</span></span>|<span data-ttu-id="92cd6-168">La cella è in modalità di modifica.</span><span class="sxs-lookup"><span data-stu-id="92cd6-168">The cell is in edit mode.</span></span>|  
+|<span data-ttu-id="92cd6-169">Selezionato</span><span class="sxs-lookup"><span data-stu-id="92cd6-169">Selected</span></span>|<span data-ttu-id="92cd6-170">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-170">SelectionStates</span></span>|<span data-ttu-id="92cd6-171">La cella è selezionata.</span><span class="sxs-lookup"><span data-stu-id="92cd6-171">The cell is selected.</span></span>|  
+|<span data-ttu-id="92cd6-172">Deselezionato</span><span class="sxs-lookup"><span data-stu-id="92cd6-172">Unselected</span></span>|<span data-ttu-id="92cd6-173">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-173">SelectionStates</span></span>|<span data-ttu-id="92cd6-174">La cella non è selezionata.</span><span class="sxs-lookup"><span data-stu-id="92cd6-174">The cell is not selected.</span></span>|  
+|<span data-ttu-id="92cd6-175">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-175">InvalidFocused</span></span>|<span data-ttu-id="92cd6-176">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-176">ValidationStates</span></span>|<span data-ttu-id="92cd6-177">La cella non è valida e ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-177">The cell is not valid and has focus.</span></span>|  
+|<span data-ttu-id="92cd6-178">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-178">InvalidUnfocused</span></span>|<span data-ttu-id="92cd6-179">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-179">ValidationStates</span></span>|<span data-ttu-id="92cd6-180">La cella non è valida e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-180">The cell is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-181">Valido</span><span class="sxs-lookup"><span data-stu-id="92cd6-181">Valid</span></span>|<span data-ttu-id="92cd6-182">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-182">ValidationStates</span></span>|<span data-ttu-id="92cd6-183">La cella è valida.</span><span class="sxs-lookup"><span data-stu-id="92cd6-183">The cell is valid.</span></span>|  
   
-## Parti di DataGridRow  
- L'elemento <xref:System.Windows.Controls.DataGridRow> non include parti denominate.  
+## <a name="datagridrow-parts"></a><span data-ttu-id="92cd6-184">DataGridRow parti</span><span class="sxs-lookup"><span data-stu-id="92cd6-184">DataGridRow Parts</span></span>  
+ <span data-ttu-id="92cd6-185">Il <xref:System.Windows.Controls.DataGridRow> elemento non dispone di parti denominate.</span><span class="sxs-lookup"><span data-stu-id="92cd6-185">The <xref:System.Windows.Controls.DataGridRow> element does not have any named parts.</span></span>  
   
-## Stati di DataGridRow  
- Nella tabella seguente sono elencati gli stati di visualizzazione per l'elemento <xref:System.Windows.Controls.DataGridRow>.  
+## <a name="datagridrow-states"></a><span data-ttu-id="92cd6-186">DataGridRow stati</span><span class="sxs-lookup"><span data-stu-id="92cd6-186">DataGridRow States</span></span>  
+ <span data-ttu-id="92cd6-187">Nella tabella seguente sono elencati gli stati visivi per il <xref:System.Windows.Controls.DataGridRow> elemento.</span><span class="sxs-lookup"><span data-stu-id="92cd6-187">The following table lists the visual states for the <xref:System.Windows.Controls.DataGridRow> element.</span></span>  
   
-||||  
+|<span data-ttu-id="92cd6-188">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="92cd6-188">VisualState Name</span></span>|<span data-ttu-id="92cd6-189">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="92cd6-189">VisualStateGroup Name</span></span>|<span data-ttu-id="92cd6-190">Descrizione</span><span class="sxs-lookup"><span data-stu-id="92cd6-190">Description</span></span>|  
 |-|-|-|  
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
-|MouseOver|CommonStates|Il puntatore del mouse è posizionato sulla riga.|  
-|MouseOver\_Editing|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è in modalità di modifica.|  
-|MouseOver\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è selezionata.|  
-|MouseOver\_Unfocused\_Editing|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è in modalità di modifica e non ha lo stato attivo.|  
-|MouseOver\_Unfocused\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è selezionata e non ha lo stato attivo.|  
-|Normal\_AlternatingRow|CommonStates|La riga è una riga alterna.|  
-|Normal\_Editing|CommonStates|La riga è in modalità di modifica.|  
-|Normal\_Selected|CommonStates|La riga è selezionata.|  
-|Unfocused\_Editing|CommonStates|La riga è in modalità di modifica e non ha lo stato attivo.|  
-|Unfocused\_Selected|CommonStates|La riga è selezionata e non ha lo stato attivo.|  
-|InvalidFocused|ValidationStates|Il controllo non è valido e presenta lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|Il controllo non è valido e non presenta lo stato attivo.|  
-|Valid|ValidationStates|Il controllo è valido.|  
+|<span data-ttu-id="92cd6-191">Normale</span><span class="sxs-lookup"><span data-stu-id="92cd6-191">Normal</span></span>|<span data-ttu-id="92cd6-192">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-192">CommonStates</span></span>|<span data-ttu-id="92cd6-193">Lo stato predefinito.</span><span class="sxs-lookup"><span data-stu-id="92cd6-193">The default state.</span></span>|  
+|<span data-ttu-id="92cd6-194">MouseOver</span><span class="sxs-lookup"><span data-stu-id="92cd6-194">MouseOver</span></span>|<span data-ttu-id="92cd6-195">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-195">CommonStates</span></span>|<span data-ttu-id="92cd6-196">Il puntatore del mouse è posizionato sulla riga.</span><span class="sxs-lookup"><span data-stu-id="92cd6-196">The mouse pointer is positioned over the row.</span></span>|  
+|<span data-ttu-id="92cd6-197">MouseOver_Editing</span><span class="sxs-lookup"><span data-stu-id="92cd6-197">MouseOver_Editing</span></span>|<span data-ttu-id="92cd6-198">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-198">CommonStates</span></span>|<span data-ttu-id="92cd6-199">Il puntatore del mouse è posizionato sulla riga e la riga è in modalità di modifica.</span><span class="sxs-lookup"><span data-stu-id="92cd6-199">The mouse pointer is positioned over the row and the row is in edit mode.</span></span>|  
+|<span data-ttu-id="92cd6-200">MouseOver_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-200">MouseOver_Selected</span></span>|<span data-ttu-id="92cd6-201">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-201">CommonStates</span></span>|<span data-ttu-id="92cd6-202">Il puntatore del mouse è posizionato sulla riga e la riga è selezionata.</span><span class="sxs-lookup"><span data-stu-id="92cd6-202">The mouse pointer is positioned over the row and the row is selected.</span></span>|  
+|<span data-ttu-id="92cd6-203">MouseOver_Unfocused_Editing</span><span class="sxs-lookup"><span data-stu-id="92cd6-203">MouseOver_Unfocused_Editing</span></span>|<span data-ttu-id="92cd6-204">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-204">CommonStates</span></span>|<span data-ttu-id="92cd6-205">Il puntatore del mouse è posizionato sulla riga, la riga è in modalità di modifica e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-205">The mouse pointer is positioned over the row, the row is in edit mode, and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-206">MouseOver_Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-206">MouseOver_Unfocused_Selected</span></span>|<span data-ttu-id="92cd6-207">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-207">CommonStates</span></span>|<span data-ttu-id="92cd6-208">Il puntatore del mouse è posizionato sulla riga, la riga è selezionata e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-208">The mouse pointer is positioned over the row, the row is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-209">Normal_AlternatingRow</span><span class="sxs-lookup"><span data-stu-id="92cd6-209">Normal_AlternatingRow</span></span>|<span data-ttu-id="92cd6-210">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-210">CommonStates</span></span>|<span data-ttu-id="92cd6-211">La riga è una riga alternativo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-211">The row is an alternating row.</span></span>|  
+|<span data-ttu-id="92cd6-212">Normal_Editing</span><span class="sxs-lookup"><span data-stu-id="92cd6-212">Normal_Editing</span></span>|<span data-ttu-id="92cd6-213">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-213">CommonStates</span></span>|<span data-ttu-id="92cd6-214">La riga è in modalità di modifica.</span><span class="sxs-lookup"><span data-stu-id="92cd6-214">The row is in edit mode.</span></span>|  
+|<span data-ttu-id="92cd6-215">Normal_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-215">Normal_Selected</span></span>|<span data-ttu-id="92cd6-216">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-216">CommonStates</span></span>|<span data-ttu-id="92cd6-217">La riga è selezionata.</span><span class="sxs-lookup"><span data-stu-id="92cd6-217">The row is selected.</span></span>|  
+|<span data-ttu-id="92cd6-218">Unfocused_Editing</span><span class="sxs-lookup"><span data-stu-id="92cd6-218">Unfocused_Editing</span></span>|<span data-ttu-id="92cd6-219">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-219">CommonStates</span></span>|<span data-ttu-id="92cd6-220">La riga è in modalità di modifica e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-220">The row is in edit mode and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-221">Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-221">Unfocused_Selected</span></span>|<span data-ttu-id="92cd6-222">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-222">CommonStates</span></span>|<span data-ttu-id="92cd6-223">La riga è selezionata e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-223">The row is selected and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-224">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-224">InvalidFocused</span></span>|<span data-ttu-id="92cd6-225">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-225">ValidationStates</span></span>|<span data-ttu-id="92cd6-226">Il controllo non è valido e ha uno stato attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-226">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="92cd6-227">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-227">InvalidUnfocused</span></span>|<span data-ttu-id="92cd6-228">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-228">ValidationStates</span></span>|<span data-ttu-id="92cd6-229">Il controllo non è valido e non ha uno stato attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-229">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-230">Valido</span><span class="sxs-lookup"><span data-stu-id="92cd6-230">Valid</span></span>|<span data-ttu-id="92cd6-231">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-231">ValidationStates</span></span>|<span data-ttu-id="92cd6-232">Il controllo è valido.</span><span class="sxs-lookup"><span data-stu-id="92cd6-232">The control is valid.</span></span>|  
   
-## Parti di DataGridRowHeader  
- Nella tabella seguente sono elencate le parti denominate dell'elemento <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
+## <a name="datagridrowheader-parts"></a><span data-ttu-id="92cd6-233">Parti di DataGridRowHeader</span><span class="sxs-lookup"><span data-stu-id="92cd6-233">DataGridRowHeader Parts</span></span>  
+ <span data-ttu-id="92cd6-234">La tabella seguente elenca le parti denominate il <xref:System.Windows.Controls.Primitives.DataGridRowHeader> elemento.</span><span class="sxs-lookup"><span data-stu-id="92cd6-234">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridRowHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="92cd6-235">Parte</span><span class="sxs-lookup"><span data-stu-id="92cd6-235">Part</span></span>|<span data-ttu-id="92cd6-236">Tipo</span><span class="sxs-lookup"><span data-stu-id="92cd6-236">Type</span></span>|<span data-ttu-id="92cd6-237">Descrizione</span><span class="sxs-lookup"><span data-stu-id="92cd6-237">Description</span></span>|  
 |-|-|-|  
-|Parte|Type|Descrizione|  
-|PART\_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di riga dalla parte superiore.|  
-|PART\_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di riga dalla parte inferiore.|  
+|<span data-ttu-id="92cd6-238">PART_TopHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="92cd6-238">PART_TopHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="92cd6-239">L'elemento che viene utilizzato per ridimensionare l'intestazione di riga dall'inizio.</span><span class="sxs-lookup"><span data-stu-id="92cd6-239">The element that is used to resize the row header from the top.</span></span>|  
+|<span data-ttu-id="92cd6-240">PART_BottomHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="92cd6-240">PART_BottomHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="92cd6-241">L'elemento che viene utilizzato per ridimensionare l'intestazione di riga nella parte inferiore.</span><span class="sxs-lookup"><span data-stu-id="92cd6-241">The element that is used to resize the row header from the bottom.</span></span>|  
   
-## Stati di DataGridRowHeader  
- Nella tabella seguente sono elencati gli stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
+## <a name="datagridrowheader-states"></a><span data-ttu-id="92cd6-242">Stati di DataGridRowHeader</span><span class="sxs-lookup"><span data-stu-id="92cd6-242">DataGridRowHeader States</span></span>  
+ <span data-ttu-id="92cd6-243">Nella tabella seguente sono elencati gli stati visivi per il <xref:System.Windows.Controls.Primitives.DataGridRowHeader> elemento.</span><span class="sxs-lookup"><span data-stu-id="92cd6-243">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridRowHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="92cd6-244">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="92cd6-244">VisualState Name</span></span>|<span data-ttu-id="92cd6-245">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="92cd6-245">VisualStateGroup Name</span></span>|<span data-ttu-id="92cd6-246">Descrizione</span><span class="sxs-lookup"><span data-stu-id="92cd6-246">Description</span></span>|  
 |-|-|-|  
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
-|MouseOver|CommonStates|Il puntatore del mouse è posizionato sulla riga.|  
-|MouseOver\_CurrentRow|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è la riga attiva.|  
-|MouseOver\_CurrentRow\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è attiva e selezionata.|  
-|MouseOver\_EditingRow|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è in modalità di modifica.|  
-|MouseOver\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è selezionata.|  
-|MouseOver\_Unfocused\_CurrentRow\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è attiva e selezionata e non ha lo stato attivo.|  
-|MouseOver\_Unfocused\_EditingRow|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è in modalità di modifica e non ha lo stato attivo.|  
-|MouseOver\_Unfocused\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è selezionata e non ha lo stato attivo.|  
-|Normal\_CurrentRow|CommonStates|La riga è la riga attiva.|  
-|Normal\_CurrentRow\_Selected|CommonStates|La riga è la riga attiva ed è selezionata.|  
-|Normal\_EditingRow|CommonStates|La riga è in modalità di modifica.|  
-|Normal\_Selected|CommonStates|La riga è selezionata.|  
-|Unfocused\_CurrentRow\_Selected|CommonStates|La riga è la riga attiva, è selezionata e non ha lo stato attivo.|  
-|Unfocused\_EditingRow|CommonStates|La riga è in modalità di modifica e non ha lo stato attivo.|  
-|Unfocused\_Selected|CommonStates|La riga è selezionata e non ha lo stato attivo.|  
-|InvalidFocused|ValidationStates|Il controllo non è valido e presenta lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|Il controllo non è valido e non presenta lo stato attivo.|  
-|Valid|ValidationStates|Il controllo è valido.|  
+|<span data-ttu-id="92cd6-247">Normale</span><span class="sxs-lookup"><span data-stu-id="92cd6-247">Normal</span></span>|<span data-ttu-id="92cd6-248">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-248">CommonStates</span></span>|<span data-ttu-id="92cd6-249">Lo stato predefinito.</span><span class="sxs-lookup"><span data-stu-id="92cd6-249">The default state.</span></span>|  
+|<span data-ttu-id="92cd6-250">MouseOver</span><span class="sxs-lookup"><span data-stu-id="92cd6-250">MouseOver</span></span>|<span data-ttu-id="92cd6-251">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-251">CommonStates</span></span>|<span data-ttu-id="92cd6-252">Il puntatore del mouse è posizionato sulla riga.</span><span class="sxs-lookup"><span data-stu-id="92cd6-252">The mouse pointer is positioned over the row.</span></span>|  
+|<span data-ttu-id="92cd6-253">MouseOver_CurrentRow</span><span class="sxs-lookup"><span data-stu-id="92cd6-253">MouseOver_CurrentRow</span></span>|<span data-ttu-id="92cd6-254">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-254">CommonStates</span></span>|<span data-ttu-id="92cd6-255">Il puntatore del mouse è posizionato sulla riga e la riga è la riga corrente.</span><span class="sxs-lookup"><span data-stu-id="92cd6-255">The mouse pointer is positioned over the row and the row is the current row.</span></span>|  
+|<span data-ttu-id="92cd6-256">MouseOver_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-256">MouseOver_CurrentRow_Selected</span></span>|<span data-ttu-id="92cd6-257">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-257">CommonStates</span></span>|<span data-ttu-id="92cd6-258">Il puntatore del mouse è posizionato sulla riga e la riga è selezionata e corrente.</span><span class="sxs-lookup"><span data-stu-id="92cd6-258">The mouse pointer is positioned over the row, and the row is current and selected.</span></span>|  
+|<span data-ttu-id="92cd6-259">MouseOver_EditingRow</span><span class="sxs-lookup"><span data-stu-id="92cd6-259">MouseOver_EditingRow</span></span>|<span data-ttu-id="92cd6-260">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-260">CommonStates</span></span>|<span data-ttu-id="92cd6-261">Il puntatore del mouse è posizionato sulla riga e la riga è in modalità di modifica.</span><span class="sxs-lookup"><span data-stu-id="92cd6-261">The mouse pointer is positioned over the row and the row is in edit mode.</span></span>|  
+|<span data-ttu-id="92cd6-262">MouseOver_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-262">MouseOver_Selected</span></span>|<span data-ttu-id="92cd6-263">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-263">CommonStates</span></span>|<span data-ttu-id="92cd6-264">Il puntatore del mouse è posizionato sulla riga e la riga è selezionata.</span><span class="sxs-lookup"><span data-stu-id="92cd6-264">The mouse pointer is positioned over the row and the row is selected.</span></span>|  
+|<span data-ttu-id="92cd6-265">MouseOver_Unfocused_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-265">MouseOver_Unfocused_CurrentRow_Selected</span></span>|<span data-ttu-id="92cd6-266">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-266">CommonStates</span></span>|<span data-ttu-id="92cd6-267">Il puntatore del mouse è posizionato sulla riga, la riga è selezionata e corrente e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-267">The mouse pointer is positioned over the row, the row is current and selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-268">MouseOver_Unfocused_EditingRow</span><span class="sxs-lookup"><span data-stu-id="92cd6-268">MouseOver_Unfocused_EditingRow</span></span>|<span data-ttu-id="92cd6-269">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-269">CommonStates</span></span>|<span data-ttu-id="92cd6-270">Il puntatore del mouse è posizionato sulla riga, la riga è in modalità di modifica e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-270">The mouse pointer is positioned over the row, the row is in edit mode, and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-271">MouseOver_Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-271">MouseOver_Unfocused_Selected</span></span>|<span data-ttu-id="92cd6-272">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-272">CommonStates</span></span>|<span data-ttu-id="92cd6-273">Il puntatore del mouse è posizionato sulla riga, la riga è selezionata e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-273">The mouse pointer is positioned over the row, the row is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-274">Normal_CurrentRow</span><span class="sxs-lookup"><span data-stu-id="92cd6-274">Normal_CurrentRow</span></span>|<span data-ttu-id="92cd6-275">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-275">CommonStates</span></span>|<span data-ttu-id="92cd6-276">La riga è la riga corrente.</span><span class="sxs-lookup"><span data-stu-id="92cd6-276">The row is the current row.</span></span>|  
+|<span data-ttu-id="92cd6-277">Normal_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-277">Normal_CurrentRow_Selected</span></span>|<span data-ttu-id="92cd6-278">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-278">CommonStates</span></span>|<span data-ttu-id="92cd6-279">La riga è la riga corrente ed è selezionata.</span><span class="sxs-lookup"><span data-stu-id="92cd6-279">The row is the current row and is selected.</span></span>|  
+|<span data-ttu-id="92cd6-280">Normal_EditingRow</span><span class="sxs-lookup"><span data-stu-id="92cd6-280">Normal_EditingRow</span></span>|<span data-ttu-id="92cd6-281">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-281">CommonStates</span></span>|<span data-ttu-id="92cd6-282">La riga è in modalità di modifica.</span><span class="sxs-lookup"><span data-stu-id="92cd6-282">The row is in edit mode.</span></span>|  
+|<span data-ttu-id="92cd6-283">Normal_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-283">Normal_Selected</span></span>|<span data-ttu-id="92cd6-284">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-284">CommonStates</span></span>|<span data-ttu-id="92cd6-285">La riga è selezionata.</span><span class="sxs-lookup"><span data-stu-id="92cd6-285">The row is selected.</span></span>|  
+|<span data-ttu-id="92cd6-286">Unfocused_CurrentRow_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-286">Unfocused_CurrentRow_Selected</span></span>|<span data-ttu-id="92cd6-287">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-287">CommonStates</span></span>|<span data-ttu-id="92cd6-288">La riga è la riga corrente, è selezionata e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-288">The row is the current row, is selected, and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-289">Unfocused_EditingRow</span><span class="sxs-lookup"><span data-stu-id="92cd6-289">Unfocused_EditingRow</span></span>|<span data-ttu-id="92cd6-290">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-290">CommonStates</span></span>|<span data-ttu-id="92cd6-291">La riga è in modalità di modifica e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-291">The row is in edit mode and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-292">Unfocused_Selected</span><span class="sxs-lookup"><span data-stu-id="92cd6-292">Unfocused_Selected</span></span>|<span data-ttu-id="92cd6-293">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-293">CommonStates</span></span>|<span data-ttu-id="92cd6-294">La riga è selezionata e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-294">The row is selected and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-295">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-295">InvalidFocused</span></span>|<span data-ttu-id="92cd6-296">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-296">ValidationStates</span></span>|<span data-ttu-id="92cd6-297">Il controllo non è valido e ha uno stato attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-297">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="92cd6-298">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-298">InvalidUnfocused</span></span>|<span data-ttu-id="92cd6-299">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-299">ValidationStates</span></span>|<span data-ttu-id="92cd6-300">Il controllo non è valido e non ha uno stato attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-300">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-301">Valido</span><span class="sxs-lookup"><span data-stu-id="92cd6-301">Valid</span></span>|<span data-ttu-id="92cd6-302">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-302">ValidationStates</span></span>|<span data-ttu-id="92cd6-303">Il controllo è valido.</span><span class="sxs-lookup"><span data-stu-id="92cd6-303">The control is valid.</span></span>|  
   
-## Parti di DataGridColumnHeadersPresenter  
- Nella tabella seguente sono elencate le parti denominate dell'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
+## <a name="datagridcolumnheaderspresenter-parts"></a><span data-ttu-id="92cd6-304">Parti di DataGridColumnHeadersPresenter</span><span class="sxs-lookup"><span data-stu-id="92cd6-304">DataGridColumnHeadersPresenter Parts</span></span>  
+ <span data-ttu-id="92cd6-305">La tabella seguente elenca le parti denominate il <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> elemento.</span><span class="sxs-lookup"><span data-stu-id="92cd6-305">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> element.</span></span>  
   
-||||  
+|<span data-ttu-id="92cd6-306">Parte</span><span class="sxs-lookup"><span data-stu-id="92cd6-306">Part</span></span>|<span data-ttu-id="92cd6-307">Tipo</span><span class="sxs-lookup"><span data-stu-id="92cd6-307">Type</span></span>|<span data-ttu-id="92cd6-308">Descrizione</span><span class="sxs-lookup"><span data-stu-id="92cd6-308">Description</span></span>|  
 |-|-|-|  
-|Parte|Type|Descrizione|  
-|PART\_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Segnaposto per le intestazioni di colonna.|  
+|<span data-ttu-id="92cd6-309">PART_FillerColumnHeader</span><span class="sxs-lookup"><span data-stu-id="92cd6-309">PART_FillerColumnHeader</span></span>|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|<span data-ttu-id="92cd6-310">Segnaposto per le intestazioni di colonna.</span><span class="sxs-lookup"><span data-stu-id="92cd6-310">The placeholder for column headers.</span></span>|  
   
-## Stati di DataGridColumnHeadersPresenter  
- Nella tabella seguente sono elencati gli stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
+## <a name="datagridcolumnheaderspresenter-states"></a><span data-ttu-id="92cd6-311">Stati di DataGridColumnHeadersPresenter</span><span class="sxs-lookup"><span data-stu-id="92cd6-311">DataGridColumnHeadersPresenter States</span></span>  
+ <span data-ttu-id="92cd6-312">Nella tabella seguente sono elencati gli stati visivi per il <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> elemento.</span><span class="sxs-lookup"><span data-stu-id="92cd6-312">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> element.</span></span>  
   
-||||  
+|<span data-ttu-id="92cd6-313">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="92cd6-313">VisualState Name</span></span>|<span data-ttu-id="92cd6-314">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="92cd6-314">VisualStateGroup Name</span></span>|<span data-ttu-id="92cd6-315">Descrizione</span><span class="sxs-lookup"><span data-stu-id="92cd6-315">Description</span></span>|  
 |-|-|-|  
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|InvalidFocused|ValidationStates|La cella non è valida e ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La cella non è valida e non ha lo stato attivo.|  
-|Valid|ValidationStates|La cella è valida.|  
+|<span data-ttu-id="92cd6-316">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-316">InvalidFocused</span></span>|<span data-ttu-id="92cd6-317">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-317">ValidationStates</span></span>|<span data-ttu-id="92cd6-318">La cella non è valida e ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-318">The cell is not valid and has focus.</span></span>|  
+|<span data-ttu-id="92cd6-319">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-319">InvalidUnfocused</span></span>|<span data-ttu-id="92cd6-320">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-320">ValidationStates</span></span>|<span data-ttu-id="92cd6-321">La cella non è valida e non è attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-321">The cell is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-322">Valido</span><span class="sxs-lookup"><span data-stu-id="92cd6-322">Valid</span></span>|<span data-ttu-id="92cd6-323">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-323">ValidationStates</span></span>|<span data-ttu-id="92cd6-324">La cella è valida.</span><span class="sxs-lookup"><span data-stu-id="92cd6-324">The cell is valid.</span></span>|  
   
-## Parti di DataGridColumnHeader  
- Nella tabella seguente sono elencate le parti denominate dell'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
+## <a name="datagridcolumnheader-parts"></a><span data-ttu-id="92cd6-325">Parti di DataGridColumnHeader</span><span class="sxs-lookup"><span data-stu-id="92cd6-325">DataGridColumnHeader Parts</span></span>  
+ <span data-ttu-id="92cd6-326">La tabella seguente elenca le parti denominate il <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> elemento.</span><span class="sxs-lookup"><span data-stu-id="92cd6-326">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="92cd6-327">Parte</span><span class="sxs-lookup"><span data-stu-id="92cd6-327">Part</span></span>|<span data-ttu-id="92cd6-328">Tipo</span><span class="sxs-lookup"><span data-stu-id="92cd6-328">Type</span></span>|<span data-ttu-id="92cd6-329">Descrizione</span><span class="sxs-lookup"><span data-stu-id="92cd6-329">Description</span></span>|  
 |-|-|-|  
-|Parte|Type|Descrizione|  
-|PART\_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di colonna dalla sinistra.|  
-|PART\_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di colonna dalla destra.|  
+|<span data-ttu-id="92cd6-330">PART_LeftHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="92cd6-330">PART_LeftHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="92cd6-331">L'elemento che viene utilizzato per ridimensionare l'intestazione di colonna da sinistra.</span><span class="sxs-lookup"><span data-stu-id="92cd6-331">The element that is used to resize the column header from the left.</span></span>|  
+|<span data-ttu-id="92cd6-332">PART_RightHeaderGripper</span><span class="sxs-lookup"><span data-stu-id="92cd6-332">PART_RightHeaderGripper</span></span>|<xref:System.Windows.Controls.Primitives.Thumb>|<span data-ttu-id="92cd6-333">L'elemento che viene utilizzato per ridimensionare l'intestazione di colonna da destra.</span><span class="sxs-lookup"><span data-stu-id="92cd6-333">The element that is used to resize the column header from the right.</span></span>|  
   
-## Stati di DataGridColumnHeader  
- Nella tabella seguente sono elencati gli stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
+## <a name="datagridcolumnheader-states"></a><span data-ttu-id="92cd6-334">Stati di DataGridColumnHeader</span><span class="sxs-lookup"><span data-stu-id="92cd6-334">DataGridColumnHeader States</span></span>  
+ <span data-ttu-id="92cd6-335">Nella tabella seguente sono elencati gli stati visivi per il <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> elemento.</span><span class="sxs-lookup"><span data-stu-id="92cd6-335">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> element.</span></span>  
   
-||||  
+|<span data-ttu-id="92cd6-336">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="92cd6-336">VisualState Name</span></span>|<span data-ttu-id="92cd6-337">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="92cd6-337">VisualStateGroup Name</span></span>|<span data-ttu-id="92cd6-338">Descrizione</span><span class="sxs-lookup"><span data-stu-id="92cd6-338">Description</span></span>|  
 |-|-|-|  
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
-|MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
-|Pressed|CommonStates|Il controllo viene premuto.|  
-|SortAscending|SortStates|La colonna è ordinata in ordine crescente.|  
-|SortDescending|SortStates|La colonna è ordinata in ordine decrescente.|  
-|Unsorted|SortStates|La colonna non è ordinata.|  
-|InvalidFocused|ValidationStates|Il controllo non è valido e presenta lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|Il controllo non è valido e non presenta lo stato attivo.|  
-|Valid|ValidationStates|Il controllo è valido.|  
+|<span data-ttu-id="92cd6-339">Normale</span><span class="sxs-lookup"><span data-stu-id="92cd6-339">Normal</span></span>|<span data-ttu-id="92cd6-340">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-340">CommonStates</span></span>|<span data-ttu-id="92cd6-341">Lo stato predefinito.</span><span class="sxs-lookup"><span data-stu-id="92cd6-341">The default state.</span></span>|  
+|<span data-ttu-id="92cd6-342">MouseOver</span><span class="sxs-lookup"><span data-stu-id="92cd6-342">MouseOver</span></span>|<span data-ttu-id="92cd6-343">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-343">CommonStates</span></span>|<span data-ttu-id="92cd6-344">Il puntatore del mouse è posizionato sul controllo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-344">The mouse pointer is positioned over the control.</span></span>|  
+|<span data-ttu-id="92cd6-345">Premuto</span><span class="sxs-lookup"><span data-stu-id="92cd6-345">Pressed</span></span>|<span data-ttu-id="92cd6-346">CommonStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-346">CommonStates</span></span>|<span data-ttu-id="92cd6-347">Il controllo è premuto.</span><span class="sxs-lookup"><span data-stu-id="92cd6-347">The control is pressed.</span></span>|  
+|<span data-ttu-id="92cd6-348">SortAscending</span><span class="sxs-lookup"><span data-stu-id="92cd6-348">SortAscending</span></span>|<span data-ttu-id="92cd6-349">SortStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-349">SortStates</span></span>|<span data-ttu-id="92cd6-350">La colonna è ordinata in ordine crescente.</span><span class="sxs-lookup"><span data-stu-id="92cd6-350">The column is sorted in ascending order.</span></span>|  
+|<span data-ttu-id="92cd6-351">SortDescending</span><span class="sxs-lookup"><span data-stu-id="92cd6-351">SortDescending</span></span>|<span data-ttu-id="92cd6-352">SortStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-352">SortStates</span></span>|<span data-ttu-id="92cd6-353">La colonna è ordinata in ordine decrescente.</span><span class="sxs-lookup"><span data-stu-id="92cd6-353">The column is sorted in descending order.</span></span>|  
+|<span data-ttu-id="92cd6-354">Non ordinate</span><span class="sxs-lookup"><span data-stu-id="92cd6-354">Unsorted</span></span>|<span data-ttu-id="92cd6-355">SortStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-355">SortStates</span></span>|<span data-ttu-id="92cd6-356">La colonna non è ordinata.</span><span class="sxs-lookup"><span data-stu-id="92cd6-356">The column is not sorted.</span></span>|  
+|<span data-ttu-id="92cd6-357">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-357">InvalidFocused</span></span>|<span data-ttu-id="92cd6-358">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-358">ValidationStates</span></span>|<span data-ttu-id="92cd6-359">Il controllo non è valido e ha uno stato attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-359">The control is not valid and has focus.</span></span>|  
+|<span data-ttu-id="92cd6-360">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="92cd6-360">InvalidUnfocused</span></span>|<span data-ttu-id="92cd6-361">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-361">ValidationStates</span></span>|<span data-ttu-id="92cd6-362">Il controllo non è valido e non ha uno stato attivo.</span><span class="sxs-lookup"><span data-stu-id="92cd6-362">The control is not valid and does not have focus.</span></span>|  
+|<span data-ttu-id="92cd6-363">Valido</span><span class="sxs-lookup"><span data-stu-id="92cd6-363">Valid</span></span>|<span data-ttu-id="92cd6-364">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="92cd6-364">ValidationStates</span></span>|<span data-ttu-id="92cd6-365">Il controllo è valido.</span><span class="sxs-lookup"><span data-stu-id="92cd6-365">The control is valid.</span></span>|  
   
-## Esempio di ControlTemplate del controllo DataGrid  
- Nell'esempio seguente viene illustrato come definire un oggetto <xref:System.Windows.Controls.ControlTemplate> per il controllo <xref:System.Windows.Controls.DataGrid> e i tipi associati.  
+## <a name="datagrid-controltemplate-example"></a><span data-ttu-id="92cd6-366">Esempio di ControlTemplate del controllo DataGrid</span><span class="sxs-lookup"><span data-stu-id="92cd6-366">DataGrid ControlTemplate Example</span></span>  
+ <span data-ttu-id="92cd6-367">Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.DataGrid> controllo e i relativi tipi associati.</span><span class="sxs-lookup"><span data-stu-id="92cd6-367">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.DataGrid> control and its associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
+ [!code-xaml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
- Nell'esempio precedente vengono utilizzate una o più delle risorse seguenti.  
+ <span data-ttu-id="92cd6-368">L'esempio precedente usa una o più delle seguenti risorse.</span><span class="sxs-lookup"><span data-stu-id="92cd6-368">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Per l'esempio completo, vedere          [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ <span data-ttu-id="92cd6-369">Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="92cd6-369">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="92cd6-370">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="92cd6-370">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="92cd6-371">Stili e modelli di Control</span><span class="sxs-lookup"><span data-stu-id="92cd6-371">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="92cd6-372">Personalizzazione dei controlli</span><span class="sxs-lookup"><span data-stu-id="92cd6-372">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="92cd6-373">Applicazione di stili e modelli</span><span class="sxs-lookup"><span data-stu-id="92cd6-373">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="92cd6-374">Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="92cd6-374">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

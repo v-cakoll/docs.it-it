@@ -1,35 +1,27 @@
 ---
-title: 'Procedura: eseguire una Query per trovare frasi che contengono un Set specificato di parole (LINQ) (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: eseguire una query per trovare frasi che contengono un set definito di parole (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31561d586c9c05f502002efdfc455acb55159fed
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 523b1e681c97e14f1d0e49b82a426b0e0e54fa1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>Procedura: eseguire una query per trovare frasi che contengono un set definito di parole (LINQ) (Visual Basic)
-In questo esempio viene illustrato come trovare frasi in un file di testo che contengono corrispondenze per ognuno di un set specificato di parole. Anche se la matrice dei termini di ricerca è hardcoded in questo esempio, si potrebbe anche essere compilato in modo dinamico in fase di esecuzione. In questo esempio, la query restituisce le frasi che contengono le parole "Sempre", "dati" e "integrata".  
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a><span data-ttu-id="ff776-102">Procedura: eseguire una query per trovare frasi che contengono un set definito di parole (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff776-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="ff776-103">Questo esempio illustra come trovare frasi in un file di testo che contengono corrispondenze per ogni set di parole specificato.</span><span class="sxs-lookup"><span data-stu-id="ff776-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="ff776-104">Sebbene la matrice dei termini di ricerca sia hardcoded in questo esempio, può essere anche popolata in modo dinamico durante il runtime.</span><span class="sxs-lookup"><span data-stu-id="ff776-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="ff776-105">In questo esempio la query restituisce le frasi che contengono le parole "Historically", "data" e "integrated".</span><span class="sxs-lookup"><span data-stu-id="ff776-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>  
   
-## <a name="example"></a>Esempio  
+## <a name="example"></a><span data-ttu-id="ff776-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="ff776-106">Example</span></span>  
   
 ```vb  
 Class FindSentences  
@@ -75,12 +67,12 @@ End Class
 ' Historically, the world of data and the world of objects have not been well integrated  
 ```  
   
- La query funziona suddividendo prima il testo in frasi e quindi suddividendo le frasi in una matrice di stringhe che contengono ogni parola. Per ognuna di queste matrici, il <xref:System.Linq.Enumerable.Distinct%2A>metodo rimuove tutte le parole duplicate e quindi la query esegue un <xref:System.Linq.Enumerable.Intersect%2A>operazione sulla matrice di parole e `wordsToMatch` array.</xref:System.Linq.Enumerable.Intersect%2A> </xref:System.Linq.Enumerable.Distinct%2A> Se il conteggio dell'intersezione è lo stesso conteggio del `wordsToMatch` matrice, tutte le parole sono state trovate le parole e viene restituita la frase originale.  
+ <span data-ttu-id="ff776-107">La query funziona suddividendo prima il testo in frasi e quindi suddividendo le frasi in una matrice di stringhe contenenti ogni parola.</span><span class="sxs-lookup"><span data-stu-id="ff776-107">The query works by first splitting the text into sentences, and then splitting the sentences into an array of strings that hold each word.</span></span> <span data-ttu-id="ff776-108">Per ognuna di queste matrici, il metodo <xref:System.Linq.Enumerable.Distinct%2A> rimuove tutte le parole duplicate e quindi la query esegue un'operazione <xref:System.Linq.Enumerable.Intersect%2A> sulla matrice di parole e sulla matrice `wordsToMatch`.</span><span class="sxs-lookup"><span data-stu-id="ff776-108">For each of these arrays, the <xref:System.Linq.Enumerable.Distinct%2A> method removes all duplicate words, and then the query performs an <xref:System.Linq.Enumerable.Intersect%2A> operation on the word array and the `wordsToMatch` array.</span></span> <span data-ttu-id="ff776-109">Se il conteggio dell'intersezione corrisponde al conteggio della matrice `wordsToMatch`, significa che sono state trovate tutte le parole e viene restituita la frase originale.</span><span class="sxs-lookup"><span data-stu-id="ff776-109">If the count of the intersection is the same as the count of the `wordsToMatch` array, all words were found in the words and the original sentence is returned.</span></span>  
   
- Nella chiamata a <xref:System.String.Split%2A>, i segni di punteggiatura vengono usati come separatore per rimuoverli dalla stringa.</xref:System.String.Split%2A> Se questa operazione non, ad esempio, si potrebbe disporre di una stringa "Sempre", che non corrisponde a "Sempre" nel `wordsToMatch` matrice. È necessario utilizzare altri separatori, a seconda dei tipi di punteggiatura trovati nel testo di origine.  
+ <span data-ttu-id="ff776-110">Nella chiamata a <xref:System.String.Split%2A> vengono usati i segni di punteggiatura come separatori in modo da rimuoverli dalla stringa.</span><span class="sxs-lookup"><span data-stu-id="ff776-110">In the call to <xref:System.String.Split%2A>, the punctuation marks are used as separators in order to remove them from the string.</span></span> <span data-ttu-id="ff776-111">Se questa operazione non è stata eseguita, è possibile ad esempio avere una stringa "Historically" che non corrisponde a "Historically" nella matrice `wordsToMatch`.</span><span class="sxs-lookup"><span data-stu-id="ff776-111">If you did not do this, for example you could have a string "Historically," that would not match "Historically" in the `wordsToMatch` array.</span></span> <span data-ttu-id="ff776-112">È possibile che sia necessario usare altri separatori, a seconda dei tipi di punteggiatura individuati nel testo di origine.</span><span class="sxs-lookup"><span data-stu-id="ff776-112">You may have to use additional separators, depending on the types of punctuation found in the source text.</span></span>  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="ff776-113">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="ff776-113">Compiling the Code</span></span>  
+ <span data-ttu-id="ff776-114">Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.</span><span class="sxs-lookup"><span data-stu-id="ff776-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="ff776-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ff776-115">See Also</span></span>  
+ [<span data-ttu-id="ff776-116">LINQ e stringhe (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ff776-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

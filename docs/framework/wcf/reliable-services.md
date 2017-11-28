@@ -1,56 +1,59 @@
 ---
-title: "Servizi affidabili | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "contratti di servizio [WCF], servizi affidabili"
-  - "WCF [WCF], messaggistica affidabile"
-  - "WCF [WCF], sessioni affidabili"
-  - "Windows Communication Foundation [WCF], messaggistica affidabile"
-  - "Windows Communication Foundation [WCF], sessioni affidabili"
+title: Servizi affidabili
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF [WCF], reliable messaging
+- Windows Communication Foundation [WCF], reliable messaging
+- WCF [WCF], reliable sessions
+- Windows Communication Foundation [WCF], reliable sessions
+- service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4872afb097d01279b24697a7b385f336d34ea4f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Servizi affidabili
-Code e sessioni affidabili rappresentano le funzionalità di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] per l'implementazione della messaggistica affidabile.In questo argomento vengono illustrate le funzionalità di messaggistica affidabile di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+# <a name="reliable-services"></a><span data-ttu-id="0f19f-102">Servizi affidabili</span><span class="sxs-lookup"><span data-stu-id="0f19f-102">Reliable Services</span></span>
+<span data-ttu-id="0f19f-103">Code e sessioni affidabili rappresentano le funzionalità di [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] per l'implementazione della messaggistica affidabile.</span><span class="sxs-lookup"><span data-stu-id="0f19f-103">Queues and reliable sessions are the [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] features that implement reliable messaging.</span></span> <span data-ttu-id="0f19f-104">In questo argomento vengono illustrate le funzionalità di messaggistica affidabile di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0f19f-104">This topic explains the reliable messaging features of [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span></span>  
   
- La *messaggistica affidabile* riguarda il modo in cui un'origine di messaggistica affidabile \(definita *origine*\) trasferisce in modo affidabile i messaggi a una destinazione di messaggistica affidabile \(definita *destinazione*\).  
+ <span data-ttu-id="0f19f-105">*Messaggistica affidabile* riguarda il modo in un'origine di messaggistica affidabile (chiamato il *origine*) trasferisce in modo affidabile i messaggi a una destinazione di messaggistica affidabile (chiamata di *destinazione*).</span><span class="sxs-lookup"><span data-stu-id="0f19f-105">*Reliable messaging* is how a reliable messaging source (called the *source*) transfers messages reliably to a reliable messaging destination (called the *destination*).</span></span>  
   
- La messaggistica affidabile esegue le funzioni seguenti:  
+ <span data-ttu-id="0f19f-106">La messaggistica affidabile esegue le funzioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="0f19f-106">Reliable messaging performs the following functions:</span></span>  
   
--   Trasferisce le garanzie per i messaggi inviati da un'origine a una destinazione indipendentemente dagli errori di trasporto o di trasferimento dei messaggi.  
+-   <span data-ttu-id="0f19f-107">Trasferisce le garanzie per i messaggi inviati da un'origine a una destinazione indipendentemente dagli errori di trasporto o di trasferimento dei messaggi.</span><span class="sxs-lookup"><span data-stu-id="0f19f-107">Transfers assurances for messages sent from a source to a destination regardless of message transfer or transport failures.</span></span>  
   
--   Separa l'una dall'altra l'origine e la destinazione.In questo modo viene fornito un errore e un recupero indipendente dell'origine e della destinazione, nonché un trasferimento e un recapito affidabile dei messaggi, anche quando l'origine o la destinazione non è disponibile.  
+-   <span data-ttu-id="0f19f-108">Separa l'una dall'altra l'origine e la destinazione.</span><span class="sxs-lookup"><span data-stu-id="0f19f-108">Separates the source and the destination from each other.</span></span> <span data-ttu-id="0f19f-109">In questo modo viene fornito un errore e un recupero indipendente dell'origine e della destinazione, nonché un trasferimento e un recapito affidabile dei messaggi, anche quando l'origine o la destinazione non è disponibile.</span><span class="sxs-lookup"><span data-stu-id="0f19f-109">This provides independent failure and recovery of the source and the destination, as well as reliable transfer and delivery of messages, even when the source or destination is unavailable.</span></span>  
   
- La messaggistica affidabile comporta spesso il costo di una latenza elevata.Per *latenza* si intende il tempo che un messaggio impiega per giungere dall'origine alla destinazione.In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vengono pertanto forniti i tipi seguenti di messaggistica affidabile:  
+ <span data-ttu-id="0f19f-110">La messaggistica affidabile comporta spesso il costo di una latenza elevata.</span><span class="sxs-lookup"><span data-stu-id="0f19f-110">Reliable messaging frequently comes at the cost of high latency.</span></span> <span data-ttu-id="0f19f-111">*Latenza* è il tempo necessario per il messaggio raggiungere la destinazione dall'origine.</span><span class="sxs-lookup"><span data-stu-id="0f19f-111">*Latency* is the time it takes for the message to reach the destination from the source.</span></span> <span data-ttu-id="0f19f-112">In [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vengono pertanto forniti i tipi seguenti di messaggistica affidabile:</span><span class="sxs-lookup"><span data-stu-id="0f19f-112">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)], therefore, provides the following types of reliable messaging:</span></span>  
   
--   [Sessioni affidabili](../../../docs/framework/wcf/feature-details/reliable-sessions.md), che offrono un trasferimento affidabile senza il costo di una latenza elevata.  
+-   <span data-ttu-id="0f19f-113">[Le sessioni affidabili](../../../docs/framework/wcf/feature-details/reliable-sessions.md), che offre il trasferimento affidabile senza il costo di latenza elevata.</span><span class="sxs-lookup"><span data-stu-id="0f19f-113">[Reliable Sessions](../../../docs/framework/wcf/feature-details/reliable-sessions.md), which offers reliable transfer without the cost of high latency.</span></span>  
   
--   [Code in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), che offrono trasferimenti affidabili e separazione tra l'origine e la destinazione.  
+-   <span data-ttu-id="0f19f-114">[Le code in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), che offre sia trasferimento affidabile e la separazione tra l'origine e destinazione.</span><span class="sxs-lookup"><span data-stu-id="0f19f-114">[Queues in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md), which offers both reliable transfers and separation between the source and the destination.</span></span>  
   
-## Sessioni affidabili  
- Le sessioni affidabili forniscono un trasferimento affidabile end\-to\-end dei messaggi tra un'origine e una destinazione utilizzando il protocollo WS\-Reliable Messaging, indipendentemente dal numero o dal tipo di intermediari che separano gli endpoint di messaggistica \(origine e destinazione\).In questo modo vengono inclusi tutti gli intermediari di trasporto che non utilizzano SOAP \(ad esempio proxy HTTP\) o gli intermediari che utilizzano SOAP \(ad esempio bridge o router basati su SOAP\) necessari per il flusso dei messaggi tra gli endpoint.Le sessioni affidabili utilizzano una finestra di trasferimento in memoria per mascherare gli errori a livello di messaggio SOAP e riattivare le connessioni in caso di errori di trasporto.  
+## <a name="reliable-sessions"></a><span data-ttu-id="0f19f-115">Sessioni affidabili</span><span class="sxs-lookup"><span data-stu-id="0f19f-115">Reliable Sessions</span></span>  
+ <span data-ttu-id="0f19f-116">Le sessioni affidabili forniscono un trasferimento affidabile end-to-end dei messaggi tra un'origine e una destinazione utilizzando il protocollo WS-Reliable Messaging, indipendentemente dal numero o dal tipo di intermediari che separano gli endpoint di messaggistica (origine e destinazione).</span><span class="sxs-lookup"><span data-stu-id="0f19f-116">Reliable sessions provide end-to-end reliable transfer of messages between a source and a destination using the WS-Reliable Messaging protocol, regardless of the number or type of intermediaries that separate the messaging (source and destination) endpoints.</span></span> <span data-ttu-id="0f19f-117">In questo modo vengono inclusi tutti gli intermediari del trasporto che non utilizzano SOAP (ad esempio proxy HTTP) o gli intermediari che utilizzano SOAP (ad esempio bridge o router basati su SOAP) necessari per il flusso dei messaggi tra gli endpoint.</span><span class="sxs-lookup"><span data-stu-id="0f19f-117">This includes any transport intermediaries that do not use SOAP (for example, HTTP proxies) or intermediaries that use SOAP (for example, SOAP-based routers or bridges) that are required for messages to flow between the endpoints.</span></span> <span data-ttu-id="0f19f-118">Le sessioni affidabili utilizzano una finestra di trasferimento in memoria per mascherare gli errori a livello di messaggio SOAP e riattivare le connessioni in caso di errori di trasporto.</span><span class="sxs-lookup"><span data-stu-id="0f19f-118">Reliable sessions use an in-memory transfer window to mask SOAP message-level failures and re-establish connections in the case of transport failures.</span></span>  
   
- Le sessioni affidabili forniscono trasferimenti affidabili dei messaggi con una latenza bassa.Esse forniscono per i messaggi SOAP su qualsiasi proxy o intermediario l'equivalente di ciò che TCP fornisce per i pacchetti su bridge IP.[!INCLUDE[crabout](../../../includes/crabout-md.md)] sessioni affidabili, vedere [Sessioni affidabili](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+ <span data-ttu-id="0f19f-119">Le sessioni affidabili forniscono trasferimenti affidabili dei messaggi con una latenza bassa.</span><span class="sxs-lookup"><span data-stu-id="0f19f-119">Reliable sessions provide low-latency reliable message transfers.</span></span> <span data-ttu-id="0f19f-120">Provvedono ai messaggi SOAP su qualsiasi proxy o intermediario, in modo equivalente a TCP per i pacchetti su bridge IP.</span><span class="sxs-lookup"><span data-stu-id="0f19f-120">They provide for SOAP messages over any proxies or intermediaries, equivalent to what TCP provides for packets over IP bridges.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="0f19f-121">le sessioni affidabili, vedere [le sessioni affidabili](../../../docs/framework/wcf/feature-details/reliable-sessions.md).</span><span class="sxs-lookup"><span data-stu-id="0f19f-121"> reliable sessions, see [Reliable Sessions](../../../docs/framework/wcf/feature-details/reliable-sessions.md).</span></span>  
   
-### Code  
- Le code in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] forniscono il trasferimento affidabile dei messaggi e la separazione tra le origini e le destinazioni al costo di una latenza elevata.La comunicazione in coda di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] si basa sull'accodamento messaggi \(MSMQ\).  
+### <a name="queues"></a><span data-ttu-id="0f19f-122">Code</span><span class="sxs-lookup"><span data-stu-id="0f19f-122">Queues</span></span>  
+ <span data-ttu-id="0f19f-123">Le code in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] forniscono il trasferimento affidabile dei messaggi e la separazione tra le origini e le destinazioni al prezzo di una latenza elevata.</span><span class="sxs-lookup"><span data-stu-id="0f19f-123">Queues in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] provide both reliable transfers of messages and separation between sources and destinations at the cost of high latency.</span></span> <span data-ttu-id="0f19f-124">La comunicazione in coda di [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] si basa su Accodamento messaggi (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="0f19f-124">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] queued communication is built on top of Message Queuing (MSMQ).</span></span>  
   
- MSMQ viene fornito con Windows come componente facoltativo.Il servizio MSMQ viene eseguito come un servizio di Windows.Acquisisce i messaggi da trasmettere in una coda di trasmissione per conto dell'origine e li recapita a una coda di destinazione.La coda di destinazione accetta i messaggi per conto della destinazione a cui verranno recapitati in seguito quando la destinazione richiederà i messaggi.I gestori MSMQ implementano un protocollo di trasferimento messaggi affidabile in modo che i messaggi non vadano persi durante la trasmissione.Il protocollo può essere nativo o un protocollo basato su SOAP denominato SRMP \(SOAP Reliable Messagging Protocol\).  
+ <span data-ttu-id="0f19f-125">MSMQ viene fornito con Windows come componente facoltativo.</span><span class="sxs-lookup"><span data-stu-id="0f19f-125">MSMQ ships as an optional component with Windows.</span></span> <span data-ttu-id="0f19f-126">Il servizio MSMQ viene eseguito come un servizio di Windows.</span><span class="sxs-lookup"><span data-stu-id="0f19f-126">The MSMQ service runs as a Windows Service.</span></span> <span data-ttu-id="0f19f-127">Acquisisce i messaggi da trasmettere in una coda di trasmissione per conto dell'origine e li recapita a una coda di destinazione.</span><span class="sxs-lookup"><span data-stu-id="0f19f-127">It captures messages for transmission in a transmission queue on behalf of the source and delivers it to a target queue.</span></span> <span data-ttu-id="0f19f-128">La coda di destinazione accetta i messaggi per conto della destinazione a cui verranno recapitati in seguito quando la destinazione richiederà i messaggi.</span><span class="sxs-lookup"><span data-stu-id="0f19f-128">The target queue accepts messages on behalf of the destination for later delivery whenever the destination requests messages.</span></span> <span data-ttu-id="0f19f-129">I gestori MSMQ implementano un protocollo di trasferimento messaggi affidabile in modo che i messaggi non vadano persi durante la trasmissione.</span><span class="sxs-lookup"><span data-stu-id="0f19f-129">The MSMQ managers implement a reliable message-transfer protocol so that messages are not lost in transmission.</span></span> <span data-ttu-id="0f19f-130">Il protocollo può essere nativo o un protocollo basato su SOAP denominato SRMP (SOAP Reliable Messagging Protocol).</span><span class="sxs-lookup"><span data-stu-id="0f19f-130">The protocol can be native or a SOAP-based protocol called SOAP Reliable Messaging Protocol (SRMP).</span></span>  
   
- La separazione, abbinata ai trasferimenti affidabili dei messaggi tra le code, consente alle applicazioni ad accoppiamento debole di comunicare in modo affidabile.A differenza delle sessioni affidabili, non è necessario che l'origine e la destinazione siano in esecuzione contemporaneamente.Questo consente implicitamente scenari in cui le code vengono di fatto utilizzate come un meccanismo di livellamento del carico nei casi in cui il tasso di produzione di messaggi dell'origine e il tasso di utilizzo di messaggi della destinazione non corrispondono.[!INCLUDE[crabout](../../../includes/crabout-md.md)] code, vedere [Code in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ <span data-ttu-id="0f19f-131">La separazione, abbinata ai trasferimenti affidabili dei messaggi tra le code, consente alle applicazioni ad accoppiamento debole di comunicare in modo affidabile.</span><span class="sxs-lookup"><span data-stu-id="0f19f-131">The separation, coupled with reliable message transfers between queues, enables applications that are loosely coupled to communicate reliably.</span></span> <span data-ttu-id="0f19f-132">A differenza delle sessioni affidabili, non è necessario che l'origine e la destinazione siano in esecuzione contemporaneamente.</span><span class="sxs-lookup"><span data-stu-id="0f19f-132">Unlike reliable sessions, the source and destination do not have to be running at the same time.</span></span> <span data-ttu-id="0f19f-133">Questo consente implicitamente scenari in cui le code vengono di fatto utilizzate come un meccanismo di livellamento del carico nei casi in cui il tasso di produzione di messaggi dell'origine e il tasso di utilizzo di messaggi della destinazione non corrispondono.</span><span class="sxs-lookup"><span data-stu-id="0f19f-133">This implicitly enables scenarios where queues are, in effect, used as a load-leveling mechanism when the source's rate of message production and the destination's rate of the message consumption do not match.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="0f19f-134">le code, vedere [code in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="0f19f-134"> queues, see [Queues in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).</span></span>  
   
-## Vedere anche  
- [Panoramica delle sessioni affidabili](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)   
- [Accodamento in WCF](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="0f19f-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0f19f-135">See Also</span></span>  
+ [<span data-ttu-id="0f19f-136">Panoramica delle sessioni affidabili</span><span class="sxs-lookup"><span data-stu-id="0f19f-136">Reliable Sessions Overview</span></span>](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)  
+ [<span data-ttu-id="0f19f-137">Accodamento messaggi in WCF</span><span class="sxs-lookup"><span data-stu-id="0f19f-137">Queuing in WCF</span></span>](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

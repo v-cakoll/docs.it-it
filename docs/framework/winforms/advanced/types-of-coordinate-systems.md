@@ -1,105 +1,109 @@
 ---
-title: "Tipi di sistemi di coordinate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "sistemi coordinati"
-  - "sistema di coordinate del dispositivo"
-  - "sistema di coordinate della pagina"
-  - "trasformazione della pagina"
-  - "trasformazioni, pagina"
-  - "trasformazioni, complessive"
-  - "unità di misura"
-  - "sistema di coordinate complessive"
-  - "trasformazione complessiva"
+title: Tipi di sistemi di coordinate
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- transformations [Windows Forms], page
+- unit of measure
+- world coordinate system
+- page coordinate system
+- page transformation
+- device coordinate system
+- world transformation
+- coordinate systems
+- transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: be89584ee8e7a82c405bf8664bfad18ced6d989a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Tipi di sistemi di coordinate
-In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vengono utilizzati tre spazi di coordinate: complessivo, pagina e dispositivo.  Le coordinate complessive vengono utilizzate per la modellazione di un particolare grafico e in .NET Framework vengono passate ai metodi.  Le coordinate di pagina fanno riferimento al sistema di coordinate utilizzato su una superficie di disegno, ad esempio form o controllo.  Le coordinate di periferica vengono utilizzate dalla periferica fisica su cui si disegna, ad esempio uno schermo o un foglio di carta.  Quando si effettua una chiamata `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, al metodo <xref:System.Drawing.Graphics.DrawLine%2A> vengono passati i punti `(0, 0)` e `(160, 80)` inclusi nello spazio di coordinate complessivo.  Prima che in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sia possibile tracciare le linee sullo schermo, le coordinate subiscono una sequenza di trasformazioni.  Una trasformazione, chiamata trasformazione complessiva, converte le coordinate complessive in coordinate di pagina, mentre un'altra trasformazione, chiamata trasformazione di pagina, converte le coordinate di pagina in coordinate di periferica.  
+# <a name="types-of-coordinate-systems"></a><span data-ttu-id="496c1-102">Tipi di sistemi di coordinate</span><span class="sxs-lookup"><span data-stu-id="496c1-102">Types of Coordinate Systems</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="496c1-103">utilizza tre spazi di coordinate: world, pagina e dispositivo.</span><span class="sxs-lookup"><span data-stu-id="496c1-103"> uses three coordinate spaces: world, page, and device.</span></span> <span data-ttu-id="496c1-104">Coordinate sono le coordinate usate per modellare un particolare ambiente grafico e le coordinate passate ai metodi in .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="496c1-104">World coordinates are the coordinates used to model a particular graphic world and are the coordinates you pass to methods in the .NET Framework.</span></span> <span data-ttu-id="496c1-105">Le coordinate di pagina può fare riferimento al sistema di coordinate utilizzato da un'area di disegno, ad esempio un form o controllo.</span><span class="sxs-lookup"><span data-stu-id="496c1-105">Page coordinates refer to the coordinate system used by a drawing surface, such as a form or control.</span></span> <span data-ttu-id="496c1-106">Le coordinate di dispositivo vengono utilizzate dal dispositivo fisico da disegnare, ad esempio una schermata o un foglio di carta.</span><span class="sxs-lookup"><span data-stu-id="496c1-106">Device coordinates are the coordinates used by the physical device being drawn on, such as a screen or sheet of paper.</span></span> <span data-ttu-id="496c1-107">Quando si effettua una chiamata `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, passati per i punti di <xref:System.Drawing.Graphics.DrawLine%2A> metodo:`(0, 0)` e `(160, 80)`, sono nello spazio delle coordinate world.</span><span class="sxs-lookup"><span data-stu-id="496c1-107">When you make the call `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, the points that you pass to the <xref:System.Drawing.Graphics.DrawLine%2A> method—`(0, 0)` and `(160, 80)`—are in the world coordinate space.</span></span> <span data-ttu-id="496c1-108">Prima di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possibile tracciare le linee sullo schermo, le coordinate passano attraverso una sequenza di trasformazioni.</span><span class="sxs-lookup"><span data-stu-id="496c1-108">Before [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] can draw the line on the screen, the coordinates pass through a sequence of transformations.</span></span> <span data-ttu-id="496c1-109">Una trasformazione, ossia la trasformazione globale, converte le coordinate complessive alle coordinate di pagina e un'altra trasformazione, ossia la trasformazione della pagina, converte le coordinate di pagina in coordinate dispositivo.</span><span class="sxs-lookup"><span data-stu-id="496c1-109">One transformation, called the world transformation, converts world coordinates to page coordinates, and another transformation, called the page transformation, converts page coordinates to device coordinates.</span></span>  
   
-## Trasformazioni e sistemi di coordinate  
- Si supponga che sia necessario effettuare operazioni con un sistema di coordinate la cui origine si trova nel corpo dell'area client anziché nell'angolo superiore sinistro.  Si supponga ad esempio che l'origine desiderata si trovi a 100 pixel di distanza dal margine dell'area client e a 50 pixel di distanza dall'estremità superiore dell'area client.  Nell'immagine seguente viene mostrato tale sistema di coordinate.  
+## <a name="transforms-and-coordinate-systems"></a><span data-ttu-id="496c1-110">Sistemi di Coordinate e trasformazioni</span><span class="sxs-lookup"><span data-stu-id="496c1-110">Transforms and Coordinate Systems</span></span>  
+ <span data-ttu-id="496c1-111">Si supponga che si desidera lavorare con un sistema di coordinate che ha origine nel corpo dell'area client anziché nell'angolo superiore sinistro.</span><span class="sxs-lookup"><span data-stu-id="496c1-111">Suppose you want to work with a coordinate system that has its origin in the body of the client area rather than the upper-left corner.</span></span> <span data-ttu-id="496c1-112">Si supponga, ad esempio, che si desidera l'origine sia uguale a 100 pixel dal bordo sinistro dell'area client e 50 pixel dalla parte superiore dell'area client.</span><span class="sxs-lookup"><span data-stu-id="496c1-112">Say, for example, that you want the origin to be 100 pixels from the left edge of the client area and 50 pixels from the top of the client area.</span></span> <span data-ttu-id="496c1-113">Nella figura seguente viene illustrato un sistema di coordinate.</span><span class="sxs-lookup"><span data-stu-id="496c1-113">The following illustration shows such a coordinate system.</span></span>  
   
- ![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art01.png "AboutGdip05\_art01")  
+ <span data-ttu-id="496c1-114">![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art01.gif "AboutGdip05_art01")</span><span class="sxs-lookup"><span data-stu-id="496c1-114">![Coordinate System](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art01.gif "AboutGdip05_art01")</span></span>  
   
- Quando si effettua una chiamata `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, si ottengono le linee visualizzate nell'immagine seguente.  
+ <span data-ttu-id="496c1-115">Quando si effettua una chiamata `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, si ottengono le linee illustrata nella figura seguente.</span><span class="sxs-lookup"><span data-stu-id="496c1-115">When you make the call `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, you get the line shown in the following illustration.</span></span>  
   
- ![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art02.png "AboutGdip05\_art02")  
+ <span data-ttu-id="496c1-116">![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art02.gif "AboutGdip05_art02")</span><span class="sxs-lookup"><span data-stu-id="496c1-116">![Coordinate System](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art02.gif "AboutGdip05_art02")</span></span>  
   
- Le coordinate dei punti finali della linea nei tre spazi di coordinate sono le seguenti  
+ <span data-ttu-id="496c1-117">Le coordinate dei punti finali della linea in tre spazi di coordinate sono i seguenti:</span><span class="sxs-lookup"><span data-stu-id="496c1-117">The coordinates of the endpoints of your line in the three coordinate spaces are as follows:</span></span>  
   
 |||  
 |-|-|  
-|World|Da \(0, 0\) a \(160, 80\)|  
-|Page|Da \(100, 50\) a \(260, 130\)|  
-|Dispositivo|Da \(100, 50\) a \(260, 130\)|  
+|<span data-ttu-id="496c1-118">World</span><span class="sxs-lookup"><span data-stu-id="496c1-118">World</span></span>|<span data-ttu-id="496c1-119">(0, 0) a (160, 80)</span><span class="sxs-lookup"><span data-stu-id="496c1-119">(0, 0) to (160, 80)</span></span>|  
+|<span data-ttu-id="496c1-120">Pagina</span><span class="sxs-lookup"><span data-stu-id="496c1-120">Page</span></span>|<span data-ttu-id="496c1-121">(100, 50) a (260, 130)</span><span class="sxs-lookup"><span data-stu-id="496c1-121">(100, 50) to (260, 130)</span></span>|  
+|<span data-ttu-id="496c1-122">Dispositivo</span><span class="sxs-lookup"><span data-stu-id="496c1-122">Device</span></span>|<span data-ttu-id="496c1-123">(100, 50) a (260, 130)</span><span class="sxs-lookup"><span data-stu-id="496c1-123">(100, 50) to (260, 130)</span></span>|  
   
- Si noti che l'origine dello spazio di coordinate della pagina si trova nell'angolo superiore sinistro dell'area client. Tale valore sarà sempre costante.  Si noti inoltre che le coordinate della periferica corrispondono alle coordinate della pagina, poiché l'unità di misura utilizzata è il pixel.  Se si utilizza un'unità di misura diversa dai pixel \(ad esempio i pollici\), le coordinate della periferica non corrisponderanno alle coordinate della pagina.  
+ <span data-ttu-id="496c1-124">Si noti che lo spazio delle coordinate pagina ha origine nell'angolo superiore sinistro dell'area client. Questo sarà sempre il caso.</span><span class="sxs-lookup"><span data-stu-id="496c1-124">Note that the page coordinate space has its origin at the upper-left corner of the client area; this will always be the case.</span></span> <span data-ttu-id="496c1-125">Si noti inoltre che perché l'unità di misura è il pixel, le coordinate del dispositivo sono le stesse coordinate di pagina.</span><span class="sxs-lookup"><span data-stu-id="496c1-125">Also note that because the unit of measure is the pixel, the device coordinates are the same as the page coordinates.</span></span> <span data-ttu-id="496c1-126">Se si imposta l'unità di misura su un valore diverso da pixel (ad esempio pollici), le coordinate del dispositivo sarà diverse dalle coordinate della pagina.</span><span class="sxs-lookup"><span data-stu-id="496c1-126">If you set the unit of measure to something other than pixels (for example, inches), then the device coordinates will be different from the page coordinates.</span></span>  
   
- La trasformazione complessiva, che consente di associare le coordinate complessive alle coordinate della pagina, è contenuta nella proprietà <xref:System.Drawing.Graphics.Transform%2A> della classe <xref:System.Drawing.Graphics>.  La trasformazione complessiva riportata nell'esempio precedente consiste in una traslazione di 100 unità nella direzione x e 50 unità nella direzione y.  L'esempio seguente consente di impostare la trasformazione complessiva di un oggetto <xref:System.Drawing.Graphics> e di utilizzare tale oggetto per tracciare la linea mostrata nell'immagine precedente:  
+ <span data-ttu-id="496c1-127">La trasformazione globale, viene eseguito il mapping di coordinate complessive alle coordinate di pagina, viene mantenuta il <xref:System.Drawing.Graphics.Transform%2A> proprietà del <xref:System.Drawing.Graphics> classe.</span><span class="sxs-lookup"><span data-stu-id="496c1-127">The world transformation, which maps world coordinates to page coordinates, is held in the <xref:System.Drawing.Graphics.Transform%2A> property of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="496c1-128">Nell'esempio precedente, la trasformazione globale è una conversione di 100 unità nella direzione x e 50 unità nella direzione y.</span><span class="sxs-lookup"><span data-stu-id="496c1-128">In the preceding example, the world transformation is a translation 100 units in the x direction and 50 units in the y direction.</span></span> <span data-ttu-id="496c1-129">Nell'esempio seguente imposta la trasformazione globale di un <xref:System.Drawing.Graphics> dell'oggetto e quindi utilizza quello <xref:System.Drawing.Graphics> oggetto su cui disegnare la riga illustrata nella figura precedente:</span><span class="sxs-lookup"><span data-stu-id="496c1-129">The following example sets the world transformation of a <xref:System.Drawing.Graphics> object and then uses that <xref:System.Drawing.Graphics> object to draw the line shown in the preceding figure:</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.CoordinateSystems#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#31)]  
   
- La trasformazione di pagina consente di associare le coordinate della pagina alle coordinate della periferica.  Nella classe <xref:System.Drawing.Graphics> sono disponibili le proprietà <xref:System.Drawing.Graphics.PageUnit%2A> e <xref:System.Drawing.Graphics.PageScale%2A> per la modifica della trasformazione di pagina.  Nella classe <xref:System.Drawing.Graphics> sono inoltre disponibili due proprietà di sola lettura, <xref:System.Drawing.Graphics.DpiX%2A> e <xref:System.Drawing.Graphics.DpiY%2A>, che consentono di esaminare i punti in orizzontale e verticale per pollice della periferica di visualizzazione.  
+ <span data-ttu-id="496c1-130">La trasformazione della pagina esegue il mapping le coordinate di pagina in coordinate del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="496c1-130">The page transformation maps page coordinates to device coordinates.</span></span> <span data-ttu-id="496c1-131">Il <xref:System.Drawing.Graphics> classe fornisce il <xref:System.Drawing.Graphics.PageUnit%2A> e <xref:System.Drawing.Graphics.PageScale%2A> le proprietà per la modifica della trasformazione di pagina.</span><span class="sxs-lookup"><span data-stu-id="496c1-131">The <xref:System.Drawing.Graphics> class provides the <xref:System.Drawing.Graphics.PageUnit%2A> and <xref:System.Drawing.Graphics.PageScale%2A> properties for manipulating the page transformation.</span></span> <span data-ttu-id="496c1-132">Il <xref:System.Drawing.Graphics> classe fornisce anche due proprietà di sola lettura, <xref:System.Drawing.Graphics.DpiX%2A> e <xref:System.Drawing.Graphics.DpiY%2A>, per esaminare i punti per pollice del dispositivo di visualizzazione in orizzontali e verticali.</span><span class="sxs-lookup"><span data-stu-id="496c1-132">The <xref:System.Drawing.Graphics> class also provides two read-only properties, <xref:System.Drawing.Graphics.DpiX%2A> and <xref:System.Drawing.Graphics.DpiY%2A>, for examining the horizontal and vertical dots per inch of the display device.</span></span>  
   
- È possibile utilizzare la proprietà <xref:System.Drawing.Graphics.PageUnit%2A> della classe <xref:System.Drawing.Graphics> per specificare un'unità di misura diversa dal pixel.  
+ <span data-ttu-id="496c1-133">È possibile utilizzare il <xref:System.Drawing.Graphics.PageUnit%2A> proprietà la <xref:System.Drawing.Graphics> classe per specificare un'unità di misura diversa dal pixel.</span><span class="sxs-lookup"><span data-stu-id="496c1-133">You can use the <xref:System.Drawing.Graphics.PageUnit%2A> property of the <xref:System.Drawing.Graphics> class to specify a unit of measure other than the pixel.</span></span>  
   
 > [!NOTE]
->  Non è possibile impostare la proprietà <xref:System.Drawing.Graphics.PageUnit%2A> su <xref:System.Drawing.GraphicsUnit>, in quanto non si tratta di un'unità fisica e verrà generata un'eccezione.  
+>  <span data-ttu-id="496c1-134">Non è possibile impostare il <xref:System.Drawing.Graphics.PageUnit%2A> proprietà <xref:System.Drawing.GraphicsUnit.World>, in quanto non è un'unità fisica e genererà un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="496c1-134">You cannot set the <xref:System.Drawing.Graphics.PageUnit%2A> property to <xref:System.Drawing.GraphicsUnit.World>, as this is not a physical unit and will cause an exception.</span></span>  
   
- L'esempio seguente consente di tracciare una linea che unisce il punto \(0, 0\) e il punto \(2, 1\), dove il punto \(2, 1\) si trova 2 pollici a destra e 1 un pollice sotto rispetto al punto \(0, 0\):  
+ <span data-ttu-id="496c1-135">Nell'esempio seguente disegna una linea da (0, 0) a (2, 1), in cui il punto (2, 1) è di 2 pollici a destra e 1 pollice verso il basso tra il punto (0, 0):</span><span class="sxs-lookup"><span data-stu-id="496c1-135">The following example draws a line from (0, 0) to (2, 1), where the point (2, 1) is 2 inches to the right and 1 inch down from the point (0, 0):</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.CoordinateSystems#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#32)]  
   
 > [!NOTE]
->  Se quando si costruisce la penna non si specifica alcuno spessore, la linea tracciata nell'esempio seguente avrà spessore pari a un pollice.  È possibile specificare lo spessore della penna nel secondo argomento del costruttore <xref:System.Drawing.Pen>.  
+>  <span data-ttu-id="496c1-136">Se non si specifica una larghezza della penna quando si costruisce la penna, nell'esempio precedente verrà disegnare una linea di un pollice.</span><span class="sxs-lookup"><span data-stu-id="496c1-136">If you don't specify a pen width when you construct your pen, the preceding example will draw a line that is one inch wide.</span></span> <span data-ttu-id="496c1-137">È possibile specificare la larghezza della penna nel secondo argomento per il <xref:System.Drawing.Pen> costruttore:</span><span class="sxs-lookup"><span data-stu-id="496c1-137">You can specify the pen width in the second argument to the <xref:System.Drawing.Pen> constructor:</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#33](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#33)]
  [!code-vb[System.Drawing.CoordinateSystems#33](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#33)]  
   
- Se si suppone che nella periferica di visualizzazione siano disponibili 96 punti per pollice in direzione orizzontale e 96 punti per pollice in direzione verticale, i valori relativi ai punti finali della linea dell'esempio nei tre spazi di coordinate saranno i seguenti:  
+ <span data-ttu-id="496c1-138">Se si presuppone che il dispositivo di visualizzazione è di 96 punti per pollice in direzione orizzontale e 96 punti per pollice in direzione verticale, gli endpoint della riga nell'esempio precedente sono le seguenti coordinate in tre spazi di coordinate:</span><span class="sxs-lookup"><span data-stu-id="496c1-138">If we assume that the display device has 96 dots per inch in the horizontal direction and 96 dots per inch in the vertical direction, the endpoints of the line in the preceding example have the following coordinates in the three coordinate spaces:</span></span>  
   
 |||  
 |-|-|  
-|World|Da \(0, 0\) a \(2, 1\)|  
-|Page|Da \(0, 0\) a \(2, 1\)|  
-|Dispositivo|Da \(0, 0\) a \(192, 96\)|  
+|<span data-ttu-id="496c1-139">World</span><span class="sxs-lookup"><span data-stu-id="496c1-139">World</span></span>|<span data-ttu-id="496c1-140">(0, 0) a (2, 1)</span><span class="sxs-lookup"><span data-stu-id="496c1-140">(0, 0) to (2, 1)</span></span>|  
+|<span data-ttu-id="496c1-141">Pagina</span><span class="sxs-lookup"><span data-stu-id="496c1-141">Page</span></span>|<span data-ttu-id="496c1-142">(0, 0) a (2, 1)</span><span class="sxs-lookup"><span data-stu-id="496c1-142">(0, 0) to (2, 1)</span></span>|  
+|<span data-ttu-id="496c1-143">Dispositivo</span><span class="sxs-lookup"><span data-stu-id="496c1-143">Device</span></span>|<span data-ttu-id="496c1-144">(0, 0, a (192, 96)</span><span class="sxs-lookup"><span data-stu-id="496c1-144">(0, 0, to (192, 96)</span></span>|  
   
- Si noti che le coordinate di pagina corrispondono alle coordinate complessive, poiché l'origine dello spazio di coordinate complessivo si trova nell'angolo superiore sinistro dell'area client.  
+ <span data-ttu-id="496c1-145">Si noti che poiché l'origine di spazio di coordinate complessivo è l'angolo superiore sinistro dell'area client, le coordinate della pagina sono le stesse coordinate globali.</span><span class="sxs-lookup"><span data-stu-id="496c1-145">Note that because the origin of the world coordinate space is at the upper-left corner of the client area, the page coordinates are the same as the world coordinates.</span></span>  
   
- È possibile combinare trasformazioni complessive e di pagina per ottenere svariati effetti.  Si supponga ad esempio che si desideri utilizzare i pollici come unità di misura e che l'origine del sistema di coordinate si trovi a 2 pollici dal margine sinistro dell'area client e a 1\/2 pollice dall'estremità superiore dell'area client.  L'esempio seguente consente di impostare le trasformazioni complessiva e di pagina di un oggetto <xref:System.Drawing.Graphics> e di tracciare una riga dal punto \(0, 0\) al punto \(2, 1\):  
+ <span data-ttu-id="496c1-146">È possibile combinare le trasformazioni globali e di pagina per ottenere un'ampia gamma di effetti.</span><span class="sxs-lookup"><span data-stu-id="496c1-146">You can combine the world and page transformations to achieve a variety of effects.</span></span> <span data-ttu-id="496c1-147">Si supponga, ad esempio, che si desidera utilizzare pollici come unità di misura e si desidera che l'origine del sistema di coordinate sarà di 2 pollici dal bordo sinistro dell'area client e 1/2 pollice dalla parte superiore dell'area client.</span><span class="sxs-lookup"><span data-stu-id="496c1-147">For example, suppose you want to use inches as the unit of measure and you want the origin of your coordinate system to be 2 inches from the left edge of the client area and 1/2 inch from the top of the client area.</span></span> <span data-ttu-id="496c1-148">Nell'esempio seguente imposta le trasformazioni globali e di pagina di un <xref:System.Drawing.Graphics> dell'oggetto e quindi disegna una linea da (0, 0) a (2, 1):</span><span class="sxs-lookup"><span data-stu-id="496c1-148">The following example sets the world and page transformations of a <xref:System.Drawing.Graphics> object and then draws a line from (0, 0) to (2, 1):</span></span>  
   
  [!code-csharp[System.Drawing.CoordinateSystems#34](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.CoordinateSystems#34](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#34)]  
   
- Nell'immagine seguente vengono mostrati la linea e il sistema di coordinate.  
+ <span data-ttu-id="496c1-149">Nella figura seguente mostra la riga e sistema di coordinate.</span><span class="sxs-lookup"><span data-stu-id="496c1-149">The following illustration shows the line and coordinate system.</span></span>  
   
- ![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art03.png "AboutGdip05\_art03")  
+ <span data-ttu-id="496c1-150">![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art03.gif "AboutGdip05_art03")</span><span class="sxs-lookup"><span data-stu-id="496c1-150">![Coordinate System](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art03.gif "AboutGdip05_art03")</span></span>  
   
- Se si suppone che nella periferica di visualizzazione siano disponibili 96 punti per pollice in direzione orizzontale e 96 punti per pollice in direzione verticale, i valori relativi ai punti finali della linea dell'esempio nei tre spazi di coordinate saranno i seguenti:  
+ <span data-ttu-id="496c1-151">Se si presuppone che il dispositivo di visualizzazione è di 96 punti per pollice in direzione orizzontale e 96 punti per pollice in direzione verticale, gli endpoint della riga nell'esempio precedente sono le seguenti coordinate in tre spazi di coordinate:</span><span class="sxs-lookup"><span data-stu-id="496c1-151">If we assume that the display device has 96 dots per inch in the horizontal direction and 96 dots per inch in the vertical direction, the endpoints of the line in the preceding example have the following coordinates in the three coordinate spaces:</span></span>  
   
 |||  
 |-|-|  
-|World|Da \(0, 0\) a \(2, 1\)|  
-|Page|Da \(2, 0,5\) a \(4, 1,5\)|  
-|Dispositivo|Da \(192, 48\) a \(384, 144\)|  
+|<span data-ttu-id="496c1-152">World</span><span class="sxs-lookup"><span data-stu-id="496c1-152">World</span></span>|<span data-ttu-id="496c1-153">(0, 0) a (2, 1)</span><span class="sxs-lookup"><span data-stu-id="496c1-153">(0, 0) to (2, 1)</span></span>|  
+|<span data-ttu-id="496c1-154">Pagina</span><span class="sxs-lookup"><span data-stu-id="496c1-154">Page</span></span>|<span data-ttu-id="496c1-155">(2, 0,5) a (4, 1.5)</span><span class="sxs-lookup"><span data-stu-id="496c1-155">(2, 0.5) to (4, 1.5)</span></span>|  
+|<span data-ttu-id="496c1-156">Dispositivo</span><span class="sxs-lookup"><span data-stu-id="496c1-156">Device</span></span>|<span data-ttu-id="496c1-157">(192, 48) a (384, 144)</span><span class="sxs-lookup"><span data-stu-id="496c1-157">(192, 48) to (384, 144)</span></span>|  
   
-## Vedere anche  
- [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Rappresentazione tramite matrici delle trasformazioni](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)
+## <a name="see-also"></a><span data-ttu-id="496c1-158">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="496c1-158">See Also</span></span>  
+ [<span data-ttu-id="496c1-159">Sistemi di coordinate e trasformazioni</span><span class="sxs-lookup"><span data-stu-id="496c1-159">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="496c1-160">Rappresentazione tramite matrici delle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="496c1-160">Matrix Representation of Transformations</span></span>](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)

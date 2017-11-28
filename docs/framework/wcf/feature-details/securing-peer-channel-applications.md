@@ -1,53 +1,56 @@
 ---
-title: "Protezione di applicazioni del canale peer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Protezione di applicazioni del canale peer
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 02bad6b5c7460655f4d3a5851e4e74d7de12111f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Protezione di applicazioni del canale peer
-Analogamente alle altre associazioni in [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` ha la protezione attivata per impostazione predefinita e offre la protezione basata sul trasporto e\/o sui messaggi.  In questo argomento vengono illustrati questi due tipi di sicurezza.  Il tipo di sicurezza viene specificato dal tag della modalità di sicurezza nella specifica dell'associazione \(<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode` \).  
+# <a name="securing-peer-channel-applications"></a><span data-ttu-id="80efe-102">Protezione di applicazioni del canale peer</span><span class="sxs-lookup"><span data-stu-id="80efe-102">Securing Peer Channel Applications</span></span>
+<span data-ttu-id="80efe-103">Analogamente alle altre associazioni in [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` ha la protezione attivata per impostazione predefinita e offre la protezione basata sul trasporto e/o sui messaggi.</span><span class="sxs-lookup"><span data-stu-id="80efe-103">Like other bindings under the [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` has security enabled by default and offers both transport- and message-based security (or both).</span></span> <span data-ttu-id="80efe-104">In questo argomento vengono illustrati questi due tipi di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="80efe-104">This topic discusses these two types of security.</span></span> <span data-ttu-id="80efe-105">Il tipo di sicurezza viene specificato dal tag della modalità di sicurezza nella specifica dell'associazione (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode` ).</span><span class="sxs-lookup"><span data-stu-id="80efe-105">The type of security is specified by the security mode tag in the binding specification (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).</span></span>  
   
-## Protezione basata sul trasporto  
- Il canale peer supporta due tipi di credenziali di autenticazione per la protezione del trasporto ed entrambi richiedono l'impostazione della proprietà `ClientCredentialSettings.Peer` sulla `ChannelFactory` associata:  
+## <a name="transport-based-security"></a><span data-ttu-id="80efe-106">Protezione basata sul trasporto</span><span class="sxs-lookup"><span data-stu-id="80efe-106">Transport-Based Security</span></span>  
+ <span data-ttu-id="80efe-107">Il canale peer supporta due tipi di credenziali di autenticazione per la protezione del trasporto ed entrambi richiedono l'impostazione della proprietà `ClientCredentialSettings.Peer` sulla `ChannelFactory` associata:</span><span class="sxs-lookup"><span data-stu-id="80efe-107">Peer Channel supports two types of authentication credentials for securing transport, both of which require setting out the `ClientCredentialSettings.Peer` property on the associated `ChannelFactory`:</span></span>  
   
--   Password.  I client usano la conoscenza di una password segreta per autenticare le connessioni.  Quando viene usato questo tipo di credenziale, `ClientCredentialSettings.Peer.MeshPassword` deve passare una password valida e, facoltativamente, un'istanza di `X509Certificate2`.  
+-   <span data-ttu-id="80efe-108">Password.</span><span class="sxs-lookup"><span data-stu-id="80efe-108">Password.</span></span> <span data-ttu-id="80efe-109">I client usano la conoscenza di una password segreta per autenticare le connessioni.</span><span class="sxs-lookup"><span data-stu-id="80efe-109">Clients use knowledge of a secret password to authenticate connections.</span></span> <span data-ttu-id="80efe-110">Quando viene usato questo tipo di credenziale, `ClientCredentialSettings.Peer.MeshPassword` deve passare una password valida e, facoltativamente, un'istanza di `X509Certificate2`.</span><span class="sxs-lookup"><span data-stu-id="80efe-110">When this credential type is used, `ClientCredentialSettings.Peer.MeshPassword` must carry a valid password and optionally an `X509Certificate2` instance.</span></span>  
   
--   Certificato.  Viene usata l'autenticazione dell'applicazione specifica.  Quando viene usato questo tipo di credenziale, è necessario usare un'implementazione concreta di <xref:System.IdentityModel.Selectors.X509CertificateValidator> in `ClientCredentialSettings.Peer.PeerAuthentication`.  
+-   <span data-ttu-id="80efe-111">Certificato.</span><span class="sxs-lookup"><span data-stu-id="80efe-111">Certificate.</span></span> <span data-ttu-id="80efe-112">Viene usata l'autenticazione dell'applicazione specifica.</span><span class="sxs-lookup"><span data-stu-id="80efe-112">Specific application authentication is used.</span></span> <span data-ttu-id="80efe-113">Quando viene usato questo tipo di credenziale, è necessario usare un'implementazione concreta di <xref:System.IdentityModel.Selectors.X509CertificateValidator> in `ClientCredentialSettings.Peer.PeerAuthentication`.</span><span class="sxs-lookup"><span data-stu-id="80efe-113">When this credential type is used, you must use a concrete implementation of <xref:System.IdentityModel.Selectors.X509CertificateValidator> in `ClientCredentialSettings.Peer.PeerAuthentication`.</span></span>  
   
-## Protezione basata sui messaggi  
- Usando la protezione dei messaggi, un'applicazione può firmare i messaggi in uscita in modo che tutte le parti riceventi possano verificare che il messaggio sia stato inviato da una parte attendibile e non sia stato manomesso.  Il canale peer supporta attualmente solo la firma dei messaggi con la credenziale X.509.  
+## <a name="message-based-security"></a><span data-ttu-id="80efe-114">Protezione basata sui messaggi</span><span class="sxs-lookup"><span data-stu-id="80efe-114">Message-Based Security</span></span>  
+ <span data-ttu-id="80efe-115">Usando la protezione dei messaggi, un'applicazione può firmare i messaggi in uscita in modo che tutte le parti riceventi possano verificare che il messaggio sia stato inviato da una parte attendibile e non sia stato manomesso.</span><span class="sxs-lookup"><span data-stu-id="80efe-115">Using message security, an application can sign outgoing messages so that all receiving parties can verify the message is sent by a trusted party and that the message was not tampered with.</span></span> <span data-ttu-id="80efe-116">Il canale peer supporta attualmente solo la firma dei messaggi con la credenziale X.509.</span><span class="sxs-lookup"><span data-stu-id="80efe-116">Currently, Peer Channel supports only X.509 credential message signing.</span></span>  
   
-## Suggerimenti  
+## <a name="best-practices"></a><span data-ttu-id="80efe-117">Suggerimenti</span><span class="sxs-lookup"><span data-stu-id="80efe-117">Best Practices</span></span>  
   
--   Contenuto della sezione vengono illustrate le procedure consigliate per la protezione di applicazioni del canale peer.  
+-   <span data-ttu-id="80efe-118">Contenuto della sezione vengono illustrate le procedure consigliate per la protezione di applicazioni del canale peer.</span><span class="sxs-lookup"><span data-stu-id="80efe-118">This section discusses the best practices for securing Peer Channel applications.</span></span>  
   
-### Attivare la protezione con le applicazioni del canale peer  
- A causa della natura distribuita dei protocolli del canale peer, è difficile imporre appartenenza, riservatezza e privacy in una rete non protetta.  È inoltre importante ricordare di proteggere la comunicazione tra i client e il servizio resolver.  In PNRP \(Peer Name Resolution Protocol\) usare nomi protetti per evitare lo spoofing e altri attacchi comuni.  Proteggere un servizio resolver personalizzato attivando la protezione sui client di connessione usati per contattare il servizio resolver, prevedendo entrambe le forme di sicurezza, quella basata sul trasporto e quella basata sui messaggi.  
+### <a name="enable-security-with-peer-channel-applications"></a><span data-ttu-id="80efe-119">Attivare la protezione con le applicazioni del canale peer</span><span class="sxs-lookup"><span data-stu-id="80efe-119">Enable Security with Peer Channel Applications</span></span>  
+ <span data-ttu-id="80efe-120">A causa della natura distribuita dei protocolli del canale peer, è difficile imporre appartenenza, riservatezza e privacy in una rete non protetta.</span><span class="sxs-lookup"><span data-stu-id="80efe-120">Due to the distributed nature of the Peer Channel protocols, it is hard to enforce mesh membership, confidentiality, and privacy in an unsecured mesh.</span></span> <span data-ttu-id="80efe-121">È inoltre importante ricordare di proteggere la comunicazione tra i client e il servizio resolver.</span><span class="sxs-lookup"><span data-stu-id="80efe-121">It is also important to remember to secure communication between clients and the resolver service.</span></span> <span data-ttu-id="80efe-122">In PNRP (Peer Name Resolution Protocol) usare nomi protetti per evitare lo spoofing e altri attacchi comuni.</span><span class="sxs-lookup"><span data-stu-id="80efe-122">Under Peer Name Resolution Protocol (PNRP), use secure names to avoid spoofing and other common attacks.</span></span> <span data-ttu-id="80efe-123">Proteggere un servizio resolver personalizzato attivando la protezione sui client di connessione usati per contattare il servizio resolver, prevedendo entrambe le forme di sicurezza, quella basata sul trasporto e quella basata sui messaggi.</span><span class="sxs-lookup"><span data-stu-id="80efe-123">Secure a custom resolver service by enabling security on the connection clients use to contact the resolver service, including both message- and transport-based security.</span></span>  
   
-### Usare il modello di sicurezza più sicuro possibile  
- Ad esempio, se ogni membro della mesh deve essere identificato individualmente, usare il modello di autenticazione basato sui certificati.  Se ciò non è possibile, usare l'autenticazione basata sulle password, seguendo i consigli correnti per mantenerle protette,  tra cui sono inclusi i seguenti: condividere le password solo con parti attendibili, trasmettere le password usando un canale protetto, modificare le password frequentemente e verificare che le password siano complesse, che siano cioè lunghe almeno otto caratteri e includano almeno una lettera maiuscola e una minuscola, un numero e un carattere speciale.  
+### <a name="use-the-strongest-possible-security-model"></a><span data-ttu-id="80efe-124">Usare il modello di sicurezza più sicuro possibile</span><span class="sxs-lookup"><span data-stu-id="80efe-124">Use the Strongest Possible Security Model</span></span>  
+ <span data-ttu-id="80efe-125">Ad esempio, se ogni membro della mesh deve essere identificato individualmente, usare il modello di autenticazione basato sui certificati.</span><span class="sxs-lookup"><span data-stu-id="80efe-125">For example, if each member of the mesh needs to be individually identified, use certificate-based authentication model.</span></span> <span data-ttu-id="80efe-126">Se ciò non è possibile, usare l'autenticazione basata sulle password, seguendo i consigli correnti per mantenerle protette,</span><span class="sxs-lookup"><span data-stu-id="80efe-126">If that is not possible, use password-based authentication following current recommendations to keep them secure.</span></span> <span data-ttu-id="80efe-127">tra cui sono inclusi i seguenti: condividere le password solo con parti attendibili, trasmettere le password usando un canale protetto, modificare le password frequentemente e verificare che le password siano complesse, che siano cioè lunghe almeno otto caratteri e includano almeno una lettera maiuscola e una minuscola, un numero e un carattere speciale.</span><span class="sxs-lookup"><span data-stu-id="80efe-127">This includes sharing passwords only with trusted parties, transmitting passwords using a secure medium, changing passwords frequently, and ensuring that passwords are strong (at least eight characters long, include at least one letter from both cases, a digit, and a special character).</span></span>  
   
-### Non accettare mai certificati autofirmati  
- Non accettare mai una credenziale di certificato basata sui nomi dei soggetti.  Si noti che chiunque può creare un certificato e chiunque può scegliere un nome che si sta convalidando.  Per evitare la possibilità di spoofing, convalidare i certificati sulla base delle credenziali dell'autorità emittente \(un'autorità emittente attendibile o un'autorità di certificazione radice\).  
+### <a name="never-accept-self-signed-certificates"></a><span data-ttu-id="80efe-128">Non accettare mai certificati autofirmati</span><span class="sxs-lookup"><span data-stu-id="80efe-128">Never Accept Self-Signed Certificates</span></span>  
+ <span data-ttu-id="80efe-129">Non accettare mai una credenziale di certificato basata sui nomi dei soggetti.</span><span class="sxs-lookup"><span data-stu-id="80efe-129">Never accept a certificate credential based on subject names.</span></span> <span data-ttu-id="80efe-130">Si noti che chiunque può creare un certificato e chiunque può scegliere un nome che si sta convalidando.</span><span class="sxs-lookup"><span data-stu-id="80efe-130">Note that anyone can create a certificate, and anyone can choose a name that you are validating.</span></span> <span data-ttu-id="80efe-131">Per evitare la possibilità di spoofing, convalidare i certificati sulla base delle credenziali dell'autorità emittente (un'autorità emittente attendibile o un'autorità di certificazione radice).</span><span class="sxs-lookup"><span data-stu-id="80efe-131">To avoid the possibility of spoofing, validate certificates based on issuing authority credentials (either a trusted issuer or a root certification authority).</span></span>  
   
-### Usare l'autenticazione dei messaggi  
- Usare l'autenticazione dei messaggi per verificare che un messaggio abbia origine da una fonte attendibile e che non sia stato manomesso durante la trasmissione.  Senza l'autenticazione dei messaggi è facile per un client dannoso effettuare lo spoofing dei messaggi nella mesh o manometterli.  
+### <a name="use-message-authentication"></a><span data-ttu-id="80efe-132">Usare l'autenticazione dei messaggi</span><span class="sxs-lookup"><span data-stu-id="80efe-132">Use Message Authentication</span></span>  
+ <span data-ttu-id="80efe-133">Usare l'autenticazione dei messaggi per verificare che un messaggio abbia origine da una fonte attendibile e che non sia stato manomesso durante la trasmissione.</span><span class="sxs-lookup"><span data-stu-id="80efe-133">Use message authentication to verify that a message originated from a trusted source and that no one has tampered with the message during transmission.</span></span> <span data-ttu-id="80efe-134">Senza l'autenticazione dei messaggi è facile per un client dannoso effettuare lo spoofing dei messaggi nella mesh o manometterli.</span><span class="sxs-lookup"><span data-stu-id="80efe-134">Without message authentication, it is easy for a malicious client to spoof or tamper with messages in the mesh.</span></span>  
   
-## Esempi di codice del canale peer  
- [Scenari relativi al canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
+## <a name="peer-channel-code-examples"></a><span data-ttu-id="80efe-135">Esempi di codice del canale peer</span><span class="sxs-lookup"><span data-stu-id="80efe-135">Peer Channel Code Examples</span></span>  
+ [<span data-ttu-id="80efe-136">Scenari relativi al canale peer</span><span class="sxs-lookup"><span data-stu-id="80efe-136">Peer Channel Scenarios</span></span>](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
   
-## Vedere anche  
- [Protezione del canale peer](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)   
- [Creazione di un'applicazione del canale peer](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a><span data-ttu-id="80efe-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="80efe-137">See Also</span></span>  
+ [<span data-ttu-id="80efe-138">Protezione del canale peer</span><span class="sxs-lookup"><span data-stu-id="80efe-138">Peer Channel Security</span></span>](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
+ [<span data-ttu-id="80efe-139">Creazione di un'applicazione del canale Peer</span><span class="sxs-lookup"><span data-stu-id="80efe-139">Building a Peer Channel Application</span></span>](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

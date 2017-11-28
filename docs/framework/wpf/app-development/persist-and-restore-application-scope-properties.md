@@ -1,36 +1,42 @@
 ---
-title: "Procedura: salvare in modo permanente e ripristinare le propriet&#224; con ambito applicazione tra le sessioni di un&#39;applicazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "proprietà dell'ambito dell'applicazione, persistenza"
-  - "proprietà dell'ambito dell'applicazione, ripristino"
-  - "salvataggio permanente di proprietà dell'ambito dell'applicazione"
-  - "proprietà, persistenza"
-  - "proprietà, ripristino"
-  - "ripristino di proprietà dell'ambito dell'applicazione"
+title: "Procedura: salvare in modo permanente e ripristinare le proprietà con ambito applicazione tra le sessioni di un'applicazione"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- application-scope properties [WPF], persisting
+- persisting application-scope properties [WPF]
+- properties [WPF], persisting
+- restoring application-scope properties [WPF]
+- properties [WPF], restoring
+- application-scope properties [WPF], restoring
 ms.assetid: 55d5904a-f444-4eb5-abd3-6bc74dd14226
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6a7a2d3f2ee1be613cf10efe913b21d4b04912c9
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: salvare in modo permanente e ripristinare le propriet&#224; con ambito applicazione tra le sessioni di un&#39;applicazione
-In questo esempio viene illustrato come salvare in modo permanente le proprietà con ambito applicazione quando un'applicazione viene chiusa e come ripristinarle al successivo avvio dell'applicazione.  
+# <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a><span data-ttu-id="3188a-102">Procedura: salvare in modo permanente e ripristinare le proprietà con ambito applicazione tra le sessioni di un'applicazione</span><span class="sxs-lookup"><span data-stu-id="3188a-102">How to: Persist and Restore Application-Scope Properties Across Application Sessions</span></span>
+<span data-ttu-id="3188a-103">In questo esempio viene illustrato come rendere persistenti le proprietà dell'ambito di applicazione quando un'applicazione viene arrestato e come ripristinare le proprietà dell'ambito di applicazione quando un'applicazione è successiva avvio.</span><span class="sxs-lookup"><span data-stu-id="3188a-103">This example shows how to persist application-scope properties when an application shuts down, and how to restore application-scope properties when an application is next launch.</span></span>  
   
-## Esempio  
- Nell'applicazione le proprietà con ambito applicazione vengono salvate in modo permanente e ripristinate dallo spazio di memorizzazione isolato.  Tale spazio è un'area di memorizzazione protetta che può essere utilizzata in modo sicuro dalle applicazioni senza autorizzazione di accesso ai file.  
+## <a name="example"></a><span data-ttu-id="3188a-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="3188a-104">Example</span></span>  
+ <span data-ttu-id="3188a-105">Rende persistenti le proprietà dell'ambito dell'applicazione per l'applicazione e li Ripristina da un archivio isolato.</span><span class="sxs-lookup"><span data-stu-id="3188a-105">The application persists application-scope properties to, and restores them from, isolated storage.</span></span> <span data-ttu-id="3188a-106">Spazio di memorizzazione isolato è un'area di archiviazione protetto che può essere usata in modo sicuro dalle applicazioni senza autorizzazione di accesso ai file.</span><span class="sxs-lookup"><span data-stu-id="3188a-106">Isolated storage is a protected storage area that can safely be used by applications without file access permission.</span></span>  
   
- [!code-xml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
-[!code-xml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
+ [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml1)]  
+[!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml#persistrestoreappscopepropertiesxaml2)]  
   
  [!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs#persistrestoreappscopepropertiescodebehind1)]
  [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind1)]  

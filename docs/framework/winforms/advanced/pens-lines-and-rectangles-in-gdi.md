@@ -1,82 +1,86 @@
 ---
-title: "Penne, linee e rettangoli in GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "disegno, linee"
-  - "disegno, rettangoli"
-  - "esempi [Windows Form], disegno di linee e forme"
-  - "esempi [Windows Form], GDI+"
-  - "esempi [Windows Form], penne"
-  - "GDI+, linee"
-  - "GDI+, penne"
-  - "GDI+, rettangoli"
-  - "linee"
-  - "linee, tratteggiate"
-  - "rettangoli"
+title: Penne, linee e rettangoli in GDI+
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- lines
+- GDI+, lines
+- drawing [Windows Forms], rectangles
+- rectangles
+- drawing [Windows Forms], lines
+- GDI+, pens
+- examples [Windows Forms], drawing lines and shapes
+- examples [Windows Forms], pens
+- GDI+, rectangles
+- examples [Windows Forms], GDI+
+- lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5b72bbaef26e1c61f86e354adc7df7404469ee0d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Penne, linee e rettangoli in GDI+
-Per tracciare linee con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è necessario creare un oggetto <xref:System.Drawing.Graphics> e un oggetto <xref:System.Drawing.Pen>.  L'oggetto <xref:System.Drawing.Graphics> fornisce i metodi che consentono di tracciare effettivamente l'elemento, mentre nell'oggetto <xref:System.Drawing.Pen> sono memorizzati gli attributi, quale il colore, lo spessore e lo stile della linea.  
+# <a name="pens-lines-and-rectangles-in-gdi"></a><span data-ttu-id="cd2c4-102">Penne, linee e rettangoli in GDI+</span><span class="sxs-lookup"><span data-stu-id="cd2c4-102">Pens, Lines, and Rectangles in GDI+</span></span>
+<span data-ttu-id="cd2c4-103">Per disegnare linee con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è necessario creare un <xref:System.Drawing.Graphics> oggetto e un <xref:System.Drawing.Pen> oggetto.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-103">To draw lines with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] you need to create a <xref:System.Drawing.Graphics> object and a <xref:System.Drawing.Pen> object.</span></span> <span data-ttu-id="cd2c4-104">Il <xref:System.Drawing.Graphics> oggetto fornisce metodi che effettivamente svolgono il disegno, e <xref:System.Drawing.Pen> oggetto archivia gli attributi, ad esempio colore, larghezza e stile.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-104">The <xref:System.Drawing.Graphics> object provides the methods that actually do the drawing, and the <xref:System.Drawing.Pen> object stores attributes, such as line color, width, and style.</span></span>  
   
-## Creazione di una linea  
- Per tracciare una linea, chiamare il metodo <xref:System.Drawing.Graphics.DrawLine%2A> dell'oggetto <xref:System.Drawing.Graphics>.  L'oggetto <xref:System.Drawing.Pen> viene passato come uno degli argomenti al metodo <xref:System.Drawing.Graphics.DrawLine%2A>.  L'esempio seguente consente di tracciare una linea che unisce il punto \(4, 2\) al punto \(12, 6\):  
+## <a name="drawing-a-line"></a><span data-ttu-id="cd2c4-105">Creazione di una linea</span><span class="sxs-lookup"><span data-stu-id="cd2c4-105">Drawing a Line</span></span>  
+ <span data-ttu-id="cd2c4-106">Per disegnare una linea, chiamare il <xref:System.Drawing.Graphics.DrawLine%2A> metodo il <xref:System.Drawing.Graphics> oggetto.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-106">To draw a line, call the <xref:System.Drawing.Graphics.DrawLine%2A> method of the <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="cd2c4-107">Il <xref:System.Drawing.Pen> oggetto viene passato come uno degli argomenti per il <xref:System.Drawing.Graphics.DrawLine%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-107">The <xref:System.Drawing.Pen> object is passed as one of the arguments to the <xref:System.Drawing.Graphics.DrawLine%2A> method.</span></span> <span data-ttu-id="cd2c4-108">Nell'esempio seguente disegna una linea tra il punto (4, 2) per il punto (12, 6):</span><span class="sxs-lookup"><span data-stu-id="cd2c4-108">The following example draws a line from the point (4, 2) to the point (12, 6):</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#41)]
  [!code-vb[LinesCurvesAndShapes#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#41)]  
   
- <xref:System.Drawing.Graphics.DrawLine%2A> è un metodo di overload della classe <xref:System.Drawing.Graphics>, quindi è possibile fornire argomenti a tale metodo in svariati modi.  È ad esempio possibile costruire due oggetti <xref:System.Drawing.Point> e passarli come argomenti al metodo <xref:System.Drawing.Graphics.DrawLine%2A>:  
+ <span data-ttu-id="cd2c4-109"><xref:System.Drawing.Graphics.DrawLine%2A>un metodo di overload di <xref:System.Drawing.Graphics> classe, pertanto vi sono diversi modi, è possibile fornire argomenti.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-109"><xref:System.Drawing.Graphics.DrawLine%2A> is an overloaded method of the <xref:System.Drawing.Graphics> class, so there are several ways you can supply it with arguments.</span></span> <span data-ttu-id="cd2c4-110">Ad esempio, è possibile creare due <xref:System.Drawing.Point> oggetti e passare il <xref:System.Drawing.Point> oggetti come argomenti il <xref:System.Drawing.Graphics.DrawLine%2A> metodo:</span><span class="sxs-lookup"><span data-stu-id="cd2c4-110">For example, you can construct two <xref:System.Drawing.Point> objects and pass the <xref:System.Drawing.Point> objects as arguments to the <xref:System.Drawing.Graphics.DrawLine%2A> method:</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#42)]
  [!code-vb[LinesCurvesAndShapes#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#42)]  
   
-## Costruzione di una penna  
- Quando si costruisce un oggetto <xref:System.Drawing.Pen>, è possibile specificare determinati attributi.  Un costruttore `Pen` consente ad esempio di specificare il colore e lo spessore.  L'esempio seguente consente di tracciare una linea blu con spessore 2 da \(0, 0\) a \(60, 30\):  
+## <a name="constructing-a-pen"></a><span data-ttu-id="cd2c4-111">Creazione di un oggetto Pen</span><span class="sxs-lookup"><span data-stu-id="cd2c4-111">Constructing a Pen</span></span>  
+ <span data-ttu-id="cd2c4-112">È possibile specificare determinati attributi quando si costruisce un <xref:System.Drawing.Pen> oggetto.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-112">You can specify certain attributes when you construct a <xref:System.Drawing.Pen> object.</span></span> <span data-ttu-id="cd2c4-113">Ad esempio, uno `Pen` costruttore consente di specificare il colore e larghezza.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-113">For example, one `Pen` constructor allows you to specify color and width.</span></span> <span data-ttu-id="cd2c4-114">Nell'esempio seguente disegna una linea blu della larghezza 2 da (0, 0) a (60, 30):</span><span class="sxs-lookup"><span data-stu-id="cd2c4-114">The following example draws a blue line of width 2 from (0, 0) to (60, 30):</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#43)]
  [!code-vb[LinesCurvesAndShapes#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#43)]  
   
-## Linee tratteggiate ed estremità di linea  
- L'oggetto <xref:System.Drawing.Pen> espone inoltre proprietà, come <xref:System.Drawing.Pen.DashStyle%2A>, che possono essere utilizzate per specificare caratteristiche della linea.  L'esempio seguente consente di tracciare una linea tratteggiata da \(100, 50\) a \(300, 80\):  
+## <a name="dashed-lines-and-line-caps"></a><span data-ttu-id="cd2c4-115">Le linee tratteggiate e delimitatori di riga</span><span class="sxs-lookup"><span data-stu-id="cd2c4-115">Dashed Lines and Line Caps</span></span>  
+ <span data-ttu-id="cd2c4-116">Il <xref:System.Drawing.Pen> oggetto espone anche le proprietà, ad esempio <xref:System.Drawing.Pen.DashStyle%2A>, che consente di specificare le funzionalità della riga.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-116">The <xref:System.Drawing.Pen> object also exposes properties, such as <xref:System.Drawing.Pen.DashStyle%2A>, that you can use to specify features of the line.</span></span> <span data-ttu-id="cd2c4-117">Nell'esempio seguente disegna una linea tratteggiata da (100, 50) a (300, 80):</span><span class="sxs-lookup"><span data-stu-id="cd2c4-117">The following example draws a dashed line from (100, 50) to (300, 80):</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#44](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#44)]
  [!code-vb[LinesCurvesAndShapes#44](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#44)]  
   
- È possibile utilizzare le proprietà dell'oggetto <xref:System.Drawing.Pen> per impostare molti altri attributi della linea.  Le proprietà <xref:System.Drawing.Pen.StartCap%2A> e <xref:System.Drawing.Pen.EndCap%2A> specificano l'aspetto delle estremità della linea, che possono essere senza effetti, quadrate, arrotondate, triangolari oppure possono assumere una forma personalizzata.  La proprietà <xref:System.Drawing.Pen.LineJoin%2A> consente di specificare se le linee connesse siano unite con angoli netti, unite con angoli smussati, se siano arrotondate o troncate.  Nell'immagine seguente vengono mostrate linee con diversi stili di terminazione e unione.  
+ <span data-ttu-id="cd2c4-118">È possibile utilizzare le proprietà del <xref:System.Drawing.Pen> oggetto da impostare molti altri attributi della linea.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-118">You can use the properties of the <xref:System.Drawing.Pen> object to set many more attributes of the line.</span></span> <span data-ttu-id="cd2c4-119">Il <xref:System.Drawing.Pen.StartCap%2A> e <xref:System.Drawing.Pen.EndCap%2A> specificano l'aspetto delle estremità della linea, le entità finali possono anche essere flat quadrati, angoli arrotondati, triangolare, o una forma personalizzata.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-119">The <xref:System.Drawing.Pen.StartCap%2A> and <xref:System.Drawing.Pen.EndCap%2A> properties specify the appearance of the ends of the line; the ends can be flat, square, rounded, triangular, or a custom shape.</span></span> <span data-ttu-id="cd2c4-120">Il <xref:System.Drawing.Pen.LineJoin%2A> proprietà consente di specificare se le linee connesse siano (unita in join con angoli acuti), smussate, arrotondate o troncate.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-120">The <xref:System.Drawing.Pen.LineJoin%2A> property lets you specify whether connected lines are mitered (joined with sharp corners), beveled, rounded, or clipped.</span></span> <span data-ttu-id="cd2c4-121">Nella figura seguente mostra le righe con diversi stili di estremità e join.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-121">The following illustration shows lines with various cap and join styles.</span></span>  
   
- ![Linee](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art04.png "Aboutgdip02\_art04")  
+ <span data-ttu-id="cd2c4-122">![Righe](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art04.gif "Aboutgdip02_art04")</span><span class="sxs-lookup"><span data-stu-id="cd2c4-122">![Lines](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art04.gif "Aboutgdip02_art04")</span></span>  
   
-## Disegno di un rettangolo  
- La procedura per tracciare rettangoli in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è simile a quella che consente di tracciare linee.  Per tracciare un rettangolo, sono necessari un oggetto <xref:System.Drawing.Graphics> e un oggetto <xref:System.Drawing.Pen>.  L'oggetto <xref:System.Drawing.Graphics> fornisce il metodo <xref:System.Drawing.Graphics.DrawRectangle%2A>, mentre nell'oggetto <xref:System.Drawing.Pen> sono memorizzati gli attributi, quale il colore e lo spessore della linea.  L'oggetto <xref:System.Drawing.Pen> viene passato come uno degli argomenti del metodo <xref:System.Drawing.Graphics.DrawRectangle%2A>.  L'esempio seguente consente di tracciare un rettangolo con angolo superiore sinistro nel punto \(100, 50\), larghezza di 80 e altezza di 40:  
+## <a name="drawing-a-rectangle"></a><span data-ttu-id="cd2c4-123">Creazione di un rettangolo</span><span class="sxs-lookup"><span data-stu-id="cd2c4-123">Drawing a Rectangle</span></span>  
+ <span data-ttu-id="cd2c4-124">Disegno di rettangoli con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] è simile alla creazione di righe.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-124">Drawing rectangles with [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] is similar to drawing lines.</span></span> <span data-ttu-id="cd2c4-125">Per disegnare un rettangolo, è necessario un <xref:System.Drawing.Graphics> oggetto e un <xref:System.Drawing.Pen> oggetto.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-125">To draw a rectangle, you need a <xref:System.Drawing.Graphics> object and a <xref:System.Drawing.Pen> object.</span></span> <span data-ttu-id="cd2c4-126">Il <xref:System.Drawing.Graphics> oggetto fornisce un <xref:System.Drawing.Graphics.DrawRectangle%2A> (metodo) e <xref:System.Drawing.Pen> oggetto archivia gli attributi, ad esempio spessore e colore.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-126">The <xref:System.Drawing.Graphics> object provides a <xref:System.Drawing.Graphics.DrawRectangle%2A> method, and the <xref:System.Drawing.Pen> object stores attributes, such as line width and color.</span></span> <span data-ttu-id="cd2c4-127">Il <xref:System.Drawing.Pen> oggetto viene passato come uno degli argomenti per il <xref:System.Drawing.Graphics.DrawRectangle%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-127">The <xref:System.Drawing.Pen> object is passed as one of the arguments to the <xref:System.Drawing.Graphics.DrawRectangle%2A> method.</span></span> <span data-ttu-id="cd2c4-128">Nell'esempio seguente disegna un rettangolo con il relativo angolo superiore sinistro a (100, 50), una larghezza pari a 80 e l'altezza di 40:</span><span class="sxs-lookup"><span data-stu-id="cd2c4-128">The following example draws a rectangle with its upper-left corner at (100, 50), a width of 80, and a height of 40:</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#45](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#45)]
  [!code-vb[LinesCurvesAndShapes#45](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#45)]  
   
- <xref:System.Drawing.Graphics.DrawRectangle%2A> è un metodo di overload della classe <xref:System.Drawing.Graphics>, quindi è possibile fornire argomenti a tale metodo in svariati modi.  È ad esempio possibile costruire un oggetto <xref:System.Drawing.Rectangle> e passarlo come argomento al metodo <xref:System.Drawing.Graphics.DrawRectangle%2A>:  
+ <span data-ttu-id="cd2c4-129"><xref:System.Drawing.Graphics.DrawRectangle%2A>un metodo di overload di <xref:System.Drawing.Graphics> classe, pertanto vi sono diversi modi, è possibile fornire argomenti.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-129"><xref:System.Drawing.Graphics.DrawRectangle%2A> is an overloaded method of the <xref:System.Drawing.Graphics> class, so there are several ways you can supply it with arguments.</span></span> <span data-ttu-id="cd2c4-130">Ad esempio, è possibile costruire un <xref:System.Drawing.Rectangle> , quindi passare il <xref:System.Drawing.Rectangle> dell'oggetto per il <xref:System.Drawing.Graphics.DrawRectangle%2A> metodo come argomento:</span><span class="sxs-lookup"><span data-stu-id="cd2c4-130">For example, you can construct a <xref:System.Drawing.Rectangle> object and pass the <xref:System.Drawing.Rectangle> object to the <xref:System.Drawing.Graphics.DrawRectangle%2A> method as an argument:</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#46](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#46)]
  [!code-vb[LinesCurvesAndShapes#46](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#46)]  
   
- All'oggetto <xref:System.Drawing.Rectangle> sono associati metodi e proprietà per la modifica e la raccolta di informazioni relative al rettangolo.  I metodi <xref:System.Drawing.Rectangle.Inflate%2A> e <xref:System.Drawing.Rectangle.Offset%2A>, ad esempio, consentono di cambiare la dimensione e la posizione del rettangolo.  Il metodo <xref:System.Drawing.Rectangle.IntersectsWith%2A> fornisce informazioni sull'eventuale intersezione del rettangolo con un altro rettangolo specificato e il metodo <xref:System.Drawing.Rectangle.Contains%2A> indica se un dato punto si trova all'interno del rettangolo.  
+ <span data-ttu-id="cd2c4-131">Oggetto <xref:System.Drawing.Rectangle> oggetto dispone di metodi e proprietà per la modifica e la raccolta di informazioni relative al rettangolo.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-131">A <xref:System.Drawing.Rectangle> object has methods and properties for manipulating and gathering information about the rectangle.</span></span> <span data-ttu-id="cd2c4-132">Ad esempio, il <xref:System.Drawing.Rectangle.Inflate%2A> e <xref:System.Drawing.Rectangle.Offset%2A> i metodi di modificare le dimensioni e la posizione del rettangolo.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-132">For example, the <xref:System.Drawing.Rectangle.Inflate%2A> and <xref:System.Drawing.Rectangle.Offset%2A> methods change the size and position of the rectangle.</span></span> <span data-ttu-id="cd2c4-133">Il <xref:System.Drawing.Rectangle.IntersectsWith%2A> metodo indica se il rettangolo interseca un'altra rettangolo specificato e <xref:System.Drawing.Rectangle.Contains%2A> metodo indica se un determinato punto è all'interno del rettangolo.</span><span class="sxs-lookup"><span data-stu-id="cd2c4-133">The <xref:System.Drawing.Rectangle.IntersectsWith%2A> method tells you whether the rectangle intersects another given rectangle, and the <xref:System.Drawing.Rectangle.Contains%2A> method tells you whether a given point is inside the rectangle.</span></span>  
   
-## Vedere anche  
- <xref:System.Drawing.Graphics?displayProperty=fullName>   
- <xref:System.Drawing.Pen?displayProperty=fullName>   
- <xref:System.Drawing.Rectangle?displayProperty=fullName>   
- [Procedura: creare un oggetto Pen](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)   
- [Procedura: disegnare una linea in un Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)   
- [Procedura: creare una forma con contorno](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)
+## <a name="see-also"></a><span data-ttu-id="cd2c4-134">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cd2c4-134">See Also</span></span>  
+ <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ <xref:System.Drawing.Rectangle?displayProperty=nameWithType>  
+ [<span data-ttu-id="cd2c4-135">Procedura: Creare un oggetto Pen</span><span class="sxs-lookup"><span data-stu-id="cd2c4-135">How to: Create a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [<span data-ttu-id="cd2c4-136">Procedura: Disegnare una linea in un Windows Form</span><span class="sxs-lookup"><span data-stu-id="cd2c4-136">How to: Draw a Line on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
+ [<span data-ttu-id="cd2c4-137">Procedura: Creare una forma con contorno</span><span class="sxs-lookup"><span data-stu-id="cd2c4-137">How to: Draw an Outlined Shape</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)

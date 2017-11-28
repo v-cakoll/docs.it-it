@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - importing type library
 - interop assemblies, generating
@@ -21,42 +15,40 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ff406fb14a21b0425444d04e98bbaca127d3687b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: cf56d33a791dd91614d5ae37e3568ef660696af7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Procedura: generare assembly di interoperabilità da librerie dei tipi
-[Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) è uno strumento da riga di comando che converte in metadati le coclassi e le interfacce contenute in una libreria dei tipi COM. Questo strumento crea automaticamente un assembly di interoperabilità e lo spazio dei nomi per le informazioni sui tipi. Dopo che i metadati di una classe sono disponibili, i client gestiti possono creare istanze del tipo COM e chiamarne i metodi, come se si trattasse di un'istanza di .NET. Tlbimp.exe converte un'intera libreria dei tipi in metadati in una sola operazione e non può generare informazioni sui tipi per un subset dei tipi definiti in una libreria dei tipi.  
+# <a name="how-to-generate-interop-assemblies-from-type-libraries"></a><span data-ttu-id="6edcf-102">Procedura: generare assembly di interoperabilità da librerie dei tipi</span><span class="sxs-lookup"><span data-stu-id="6edcf-102">How to: Generate Interop Assemblies from Type Libraries</span></span>
+<span data-ttu-id="6edcf-103">[Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) è uno strumento da riga di comando che converte in metadati le coclassi e le interfacce contenute in una libreria dei tipi COM.</span><span class="sxs-lookup"><span data-stu-id="6edcf-103">The [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) is a command-line tool that converts the coclasses and interfaces contained in a COM type library to metadata.</span></span> <span data-ttu-id="6edcf-104">Questo strumento crea automaticamente un assembly di interoperabilità e lo spazio dei nomi per le informazioni sui tipi.</span><span class="sxs-lookup"><span data-stu-id="6edcf-104">This tool creates an interop assembly and namespace for the type information automatically.</span></span> <span data-ttu-id="6edcf-105">Dopo che i metadati di una classe sono disponibili, i client gestiti possono creare istanze del tipo COM e chiamarne i metodi, come se si trattasse di un'istanza di .NET.</span><span class="sxs-lookup"><span data-stu-id="6edcf-105">After the metadata of a class is available, managed clients can create instances of the COM type and call its methods, just as if it were a .NET instance.</span></span> <span data-ttu-id="6edcf-106">Tlbimp.exe converte un'intera libreria dei tipi in metadati in una sola operazione e non può generare informazioni sui tipi per un subset dei tipi definiti in una libreria dei tipi.</span><span class="sxs-lookup"><span data-stu-id="6edcf-106">Tlbimp.exe converts an entire type library to metadata at once and cannot generate type information for a subset of the types defined in a type library.</span></span>  
   
-### <a name="to-generate-an-interop-assembly-from-a-type-library"></a>Per generare un assembly di interoperabilità da una libreria dei tipi  
+### <a name="to-generate-an-interop-assembly-from-a-type-library"></a><span data-ttu-id="6edcf-107">Per generare un assembly di interoperabilità da una libreria dei tipi</span><span class="sxs-lookup"><span data-stu-id="6edcf-107">To generate an interop assembly from a type library</span></span>  
   
-1.  Utilizzare il seguente comando:  
+1.  <span data-ttu-id="6edcf-108">Utilizzare il seguente comando:</span><span class="sxs-lookup"><span data-stu-id="6edcf-108">Use the following command:</span></span>  
   
-     **tlbimp** \<*file-libreria-tipi*>  
+     <span data-ttu-id="6edcf-109">**tlbimp** \<*file-libreria-tipi*></span><span class="sxs-lookup"><span data-stu-id="6edcf-109">**tlbimp** \<*type-library-file*></span></span>  
   
-     L'aggiunta dell'opzione **/out:** produce un assembly di interoperabilità con un nome modificato, ad esempio LOANLib.dll. La modifica del nome di assembly di interoperabilità può essere utile per distinguerlo dalla DLL COM originale e impedire che si verifichino problemi a causa di nomi duplicati.  
+     <span data-ttu-id="6edcf-110">L'aggiunta dell'opzione **/out:** produce un assembly di interoperabilità con un nome modificato, ad esempio LOANLib.dll.</span><span class="sxs-lookup"><span data-stu-id="6edcf-110">Adding the **/out:** switch produces an interop assembly with an altered name, such as LOANLib.dll.</span></span> <span data-ttu-id="6edcf-111">La modifica del nome di assembly di interoperabilità può essere utile per distinguerlo dalla DLL COM originale e impedire che si verifichino problemi a causa di nomi duplicati.</span><span class="sxs-lookup"><span data-stu-id="6edcf-111">Altering the interop assembly name can help distinguish it from the original COM DLL and prevent problems that can occur from having duplicate names.</span></span>  
   
-## <a name="example"></a>Esempio  
- Il comando seguente produce l'assembly Loanlib.dll nello spazio dei nomi `Loanlib`.  
+## <a name="example"></a><span data-ttu-id="6edcf-112">Esempio</span><span class="sxs-lookup"><span data-stu-id="6edcf-112">Example</span></span>  
+ <span data-ttu-id="6edcf-113">Il comando seguente produce l'assembly Loanlib.dll nello spazio dei nomi `Loanlib`.</span><span class="sxs-lookup"><span data-stu-id="6edcf-113">The following command produces the Loanlib.dll assembly in the `Loanlib` namespace.</span></span>  
   
 ```  
 tlbimp Loanlib.dll  
 ```  
   
- Il comando seguente produce un assembly di interoperabilità con un nome modificato (LOANLib.dll).  
+ <span data-ttu-id="6edcf-114">Il comando seguente produce un assembly di interoperabilità con un nome modificato (LOANLib.dll).</span><span class="sxs-lookup"><span data-stu-id="6edcf-114">The following command produces an interop assembly with an altered name (LOANLib.dll).</span></span>  
   
 ```  
 tlbimp LoanLib.dll /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Importazione di una libreria dei tipi come assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)   
- [Esposizione di componenti COM a .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
-
+## <a name="see-also"></a><span data-ttu-id="6edcf-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6edcf-115">See Also</span></span>  
+ [<span data-ttu-id="6edcf-116">Importazione di una libreria dei tipi come assembly</span><span class="sxs-lookup"><span data-stu-id="6edcf-116">Importing a Type Library as an Assembly</span></span>](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
+ [<span data-ttu-id="6edcf-117">Esposizione di componenti COM a .NET Framework</span><span class="sxs-lookup"><span data-stu-id="6edcf-117">Exposing COM Components to the .NET Framework</span></span>](../../../docs/framework/interop/exposing-com-components.md)

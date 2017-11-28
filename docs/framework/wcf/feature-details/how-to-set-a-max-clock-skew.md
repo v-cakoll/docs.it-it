@@ -1,76 +1,81 @@
 ---
-title: "Procedura: impostare lo sfasamento massimo dei segnali di clock | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Proprietà MaxClockSkew"
-  - "WCF, associazioni personalizzate"
+title: 'Procedura: impostare lo sfasamento massimo dei segnali di clock'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- MaxClockSkew property
+- WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 16dc6c7dfc474a04e6f3b27db0efd8fb2ca78b82
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare lo sfasamento massimo dei segnali di clock
-È possibile un malfunzionamento delle funzioni dipendenti dall'orario quando le impostazioni dell'orologio in due computer sono differenti.  Per limitare questo problema, è possibile impostare la proprietà `MaxClockSkew` su un <xref:System.TimeSpan>.  Questa proprietà è disponibile in due classi:  
+# <a name="how-to-set-a-max-clock-skew"></a><span data-ttu-id="ef570-102">Procedura: impostare lo sfasamento massimo dei segnali di clock</span><span class="sxs-lookup"><span data-stu-id="ef570-102">How to: Set a Max Clock Skew</span></span>
+<span data-ttu-id="ef570-103">È possibile un malfunzionamento delle funzioni dipendenti dall'orario quando le impostazioni dell'orologio in due computer sono differenti.</span><span class="sxs-lookup"><span data-stu-id="ef570-103">Time-critical functions can be derailed if the clock settings on two computers are different.</span></span> <span data-ttu-id="ef570-104">Per limitare questo problema, è possibile impostare la proprietà `MaxClockSkew` su un <xref:System.TimeSpan>.</span><span class="sxs-lookup"><span data-stu-id="ef570-104">To mitigate this possibility, you can set the `MaxClockSkew` property to a <xref:System.TimeSpan>.</span></span> <span data-ttu-id="ef570-105">Questa proprietà è disponibile in due classi:</span><span class="sxs-lookup"><span data-stu-id="ef570-105">This property is available on two classes:</span></span>  
   
  <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
   
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
   
 > [!IMPORTANT]
->  Importante   Per una conversazione sicura, è necessario apportare modifiche alla proprietà `MaxClockSkew` quando il servizio o il client viene avviato automaticamente.  A tale scopo, è necessario impostare la proprietà sull'oggetto <xref:System.ServiceModel.Channels.SecurityBindingElement> restituito da <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A>.  
+>  <span data-ttu-id="ef570-106">Importante per una conversazione protetta, le modifiche per il `MaxClockSkew` proprietà deve essere resa quando il servizio o il client viene avviato automaticamente.</span><span class="sxs-lookup"><span data-stu-id="ef570-106">Important   For a secure conversation, changes to the `MaxClockSkew` property  must be made when the service or client is bootstrapped.</span></span> <span data-ttu-id="ef570-107">A tale scopo, è necessario impostare la proprietà sul <xref:System.ServiceModel.Channels.SecurityBindingElement> restituito dal <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A>.</span><span class="sxs-lookup"><span data-stu-id="ef570-107">To do this, you must set the property on the <xref:System.ServiceModel.Channels.SecurityBindingElement> returned by the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.BootstrapSecurityBindingElement%2A>.</span></span>  
   
- Per modificare la proprietà in una delle associazioni fornite dal sistema, è necessario trovare l'elemento di associazione di sicurezza nella raccolta di associazioni e impostare la proprietà `MaxClockSkew` su un valore nuovo.  Le due classi derivano da <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>.  Quando si recupera l'associazione di sicurezza dalla raccolta, è necessario eseguire il cast a uno di questi tipi per impostare correttamente la proprietà `MaxClockSkew`.  Nell'esempio seguente viene utilizzato <xref:System.ServiceModel.WSHttpBinding> che utilizza <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  Per un elenco che specifica quale tipo di associazione di sicurezza usare in ogni associazione fornita dal sistema, vedere [Associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).  
+ <span data-ttu-id="ef570-108">Per modificare la proprietà in una delle associazioni fornite dal sistema, è necessario trovare l'elemento di associazione di sicurezza nella raccolta di associazioni e impostare la proprietà `MaxClockSkew` su un valore nuovo.</span><span class="sxs-lookup"><span data-stu-id="ef570-108">To change the property on one of the system-provided bindings, you must find the security binding element in the collection of bindings and set the `MaxClockSkew` property to a new value.</span></span> <span data-ttu-id="ef570-109">Le due classi derivano da <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> e <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="ef570-109">Two classes derive from the <xref:System.ServiceModel.Channels.SecurityBindingElement>: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> and <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>.</span></span> <span data-ttu-id="ef570-110">Quando si recupera l'associazione di sicurezza dalla raccolta, è necessario eseguire il cast a uno di questi tipi per impostare correttamente la proprietà `MaxClockSkew`.</span><span class="sxs-lookup"><span data-stu-id="ef570-110">When retrieving the security binding from the collection, you must cast to one of these types in order to correctly set the `MaxClockSkew` property.</span></span> <span data-ttu-id="ef570-111">Nell'esempio seguente viene utilizzato <xref:System.ServiceModel.WSHttpBinding> che utilizza <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="ef570-111">The following example uses a <xref:System.ServiceModel.WSHttpBinding>, which uses the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.</span></span> <span data-ttu-id="ef570-112">Per un elenco che specifica quale tipo di associazione di sicurezza da utilizzare in ogni associazione fornita dal sistema, vedere [associazioni fornite dal sistema](../../../../docs/framework/wcf/system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="ef570-112">For a list that specifies which type of security binding to use in each system-provided binding, see [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).</span></span>  
   
-### Per creare un'associazione personalizzata con un nuovo valore dello sfasamento dei segnali di clock nel codice  
+### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a><span data-ttu-id="ef570-113">Per creare un'associazione personalizzata con un nuovo valore dello sfasamento dei segnali di clock nel codice</span><span class="sxs-lookup"><span data-stu-id="ef570-113">To create a custom binding with a new clock skew value in code</span></span>  
   
 1.  > [!WARNING]
-    >  Nota   Aggiungere riferimenti agli spazi dei nomi seguenti nel codice: <xref:System.ServiceModel.Channels>, <xref:System.ServiceModel.Description>, <xref:System.Security.Permissions>e <xref:System.ServiceModel.Security.Tokens>.  
+    >  <span data-ttu-id="ef570-114">Nota aggiungere riferimenti agli spazi dei nomi seguenti nel codice: <xref:System.ServiceModel.Channels>, <xref:System.ServiceModel.Description>, <xref:System.Security.Permissions>, e <xref:System.ServiceModel.Security.Tokens>.</span><span class="sxs-lookup"><span data-stu-id="ef570-114">Note   Add references to the following namespaces in your code: <xref:System.ServiceModel.Channels>, <xref:System.ServiceModel.Description>, <xref:System.Security.Permissions>, and <xref:System.ServiceModel.Security.Tokens>.</span></span>  
   
-     Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding> e impostarne la modalità di sicurezza su <xref:System.ServiceModel.SecurityMode>.  
+     <span data-ttu-id="ef570-115">Creare un'istanza della classe <xref:System.ServiceModel.WSHttpBinding> e impostarne la modalità di sicurezza su <xref:System.ServiceModel.SecurityMode.Message>.</span><span class="sxs-lookup"><span data-stu-id="ef570-115">Create an instance of a <xref:System.ServiceModel.WSHttpBinding> class and set its security mode to <xref:System.ServiceModel.SecurityMode.Message>.</span></span>  
   
-2.  Creare una nuova istanza della classe <xref:System.ServiceModel.Channels.BindingElementCollection> chiamando il metodo <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A>.  
+2.  <span data-ttu-id="ef570-116">Creare una nuova istanza della classe <xref:System.ServiceModel.Channels.BindingElementCollection> chiamando il metodo <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A>.</span><span class="sxs-lookup"><span data-stu-id="ef570-116">Create a new instance of the <xref:System.ServiceModel.Channels.BindingElementCollection> class by calling the <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A> method.</span></span>  
   
-3.  Utilizzare il metodo <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> della classe <xref:System.ServiceModel.Channels.BindingElementCollection> per trovare l'elemento di associazione di sicurezza.  
+3.  <span data-ttu-id="ef570-117">Utilizzare il metodo <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> della classe <xref:System.ServiceModel.Channels.BindingElementCollection> per trovare l'elemento di associazione di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="ef570-117">Use the <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> method of the <xref:System.ServiceModel.Channels.BindingElementCollection> class to find the security binding element.</span></span>  
   
-4.  Quando si utilizza il metodo <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A>, eseguire il cast al tipo effettivo.  Nell'esempio seguente viene eseguito il cast al tipo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+4.  <span data-ttu-id="ef570-118">Quando si utilizza il metodo <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A>, eseguire il cast al tipo effettivo.</span><span class="sxs-lookup"><span data-stu-id="ef570-118">When using the <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> method, cast to the actual type.</span></span> <span data-ttu-id="ef570-119">Nell'esempio seguente viene eseguito il cast al tipo <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="ef570-119">The example below casts to the <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> type.</span></span>  
   
-5.  Impostare la proprietà <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> sull'elemento di associazione di sicurezza.  
+5.  <span data-ttu-id="ef570-120">Impostare la proprietà <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> sull'elemento di associazione di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="ef570-120">Set the <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> property on the security binding element.</span></span>  
   
-6.  Creare un <xref:System.ServiceModel.ServiceHost> con un tipo di servizio e un indirizzo di base appropriati.  
+6.  <span data-ttu-id="ef570-121">Creare un <xref:System.ServiceModel.ServiceHost> con un tipo di servizio e un indirizzo di base appropriati.</span><span class="sxs-lookup"><span data-stu-id="ef570-121">Create a <xref:System.ServiceModel.ServiceHost> with an appropriate service type and base address.</span></span>  
   
-7.  Utilizzare il metodo <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> per aggiungere un endpoint e includere <xref:System.ServiceModel.Channels.CustomBinding>.  
+7.  <span data-ttu-id="ef570-122">Utilizzare il metodo <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> per aggiungere un endpoint e includere <xref:System.ServiceModel.Channels.CustomBinding>.</span><span class="sxs-lookup"><span data-stu-id="ef570-122">Use the <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> method to add an endpoint and include the <xref:System.ServiceModel.Channels.CustomBinding>.</span></span>  
   
      [!code-csharp[c_MaxClockSkew#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_maxclockskew/cs/source.cs#1)]
      [!code-vb[c_MaxClockSkew#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_maxclockskew/vb/source.vb#1)]  
   
-### Per impostare MaxClockSkew nella configurazione  
+### <a name="to-set-the-maxclockskew-in-configuration"></a><span data-ttu-id="ef570-123">Per impostare MaxClockSkew nella configurazione</span><span class="sxs-lookup"><span data-stu-id="ef570-123">To set the MaxClockSkew in configuration</span></span>  
   
-1.  Creare un [\<customBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) nella sezione dell'elemento [\<associazioni\>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md).  
+1.  <span data-ttu-id="ef570-124">Creare un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) nel [ \<associazioni >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sezione dell'elemento.</span><span class="sxs-lookup"><span data-stu-id="ef570-124">Create a [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) in the [\<bindings>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) element section.</span></span>  
   
-2.  Creare un elemento [\<associazione\>](../../../../docs/framework/misc/binding.md) e impostare l'attributo `name` su un valore appropriato.  Nell'esempio seguente viene impostato su `MaxClockSkewBinding`.  
+2.  <span data-ttu-id="ef570-125">Creare un [ \<associazione >](../../../../docs/framework/misc/binding.md) elemento e impostare il `name` attributo su un valore appropriato.</span><span class="sxs-lookup"><span data-stu-id="ef570-125">Create a [\<binding>](../../../../docs/framework/misc/binding.md) element and set the `name` attribute to an appropriate value.</span></span> <span data-ttu-id="ef570-126">Nell'esempio seguente viene impostato su `MaxClockSkewBinding`.</span><span class="sxs-lookup"><span data-stu-id="ef570-126">The following example sets it to `MaxClockSkewBinding`.</span></span>  
   
-3.  Aggiungere un elemento di codifica.  L'esempio seguente aggiunge un [\<codificaMessaggiTesto\>](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
+3.  <span data-ttu-id="ef570-127">Aggiungere un elemento di codifica.</span><span class="sxs-lookup"><span data-stu-id="ef570-127">Add an encoding element.</span></span> <span data-ttu-id="ef570-128">Nell'esempio seguente aggiunge un [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).</span><span class="sxs-lookup"><span data-stu-id="ef570-128">The example below adds a [\<textMessageEncoding>](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).</span></span>  
   
-4.  Aggiungere un elemento [\<sicurezza\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) e specificare un'impostazione appropriata per l'attributo `authenticationMode`.  Nell'esempio seguente l'attributo viene impostato su `Kerberos` per specificare che il servizio utilizza l'autenticazione di Windows.  
+4.  <span data-ttu-id="ef570-129">Aggiungere un [ \<sicurezza >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento e impostare il `authenticationMode` attributo per l'impostazione appropriata.</span><span class="sxs-lookup"><span data-stu-id="ef570-129">Add a [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) element and set the `authenticationMode` attribute to an appropriate setting.</span></span> <span data-ttu-id="ef570-130">Nell'esempio seguente l'attributo viene impostato su `Kerberos` per specificare che il servizio utilizza l'autenticazione di Windows.</span><span class="sxs-lookup"><span data-stu-id="ef570-130">The following example set the attribute to `Kerberos` to specify that the service use Windows authentication.</span></span>  
   
-5.  Aggiungere un elemento [\<impostazioniServizioLocali\>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) e impostare l'attributo `maxClockSkew` su un valore nel formato `"##:##:##"`.  Nell'esempio seguente viene impostato su 7 minuti.  Aggiungere facoltativamente un [\<impostazioniServizioLocali\>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) e specificare un'impostazione appropriata per l'attributo `maxClockSkew`.  
+5.  <span data-ttu-id="ef570-131">Aggiungere un [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) e impostare il `maxClockSkew` attributo su un valore sotto forma di `"##:##:##"`.</span><span class="sxs-lookup"><span data-stu-id="ef570-131">Add a [\<localServiceSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) and set the `maxClockSkew` attribute to a value in the form of `"##:##:##"`.</span></span> <span data-ttu-id="ef570-132">Nell'esempio seguente viene impostato su 7 minuti.</span><span class="sxs-lookup"><span data-stu-id="ef570-132">The following example sets it to 7 minutes.</span></span> <span data-ttu-id="ef570-133">Facoltativamente, aggiungere un [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) e impostare il `maxClockSkew` attributo per l'impostazione appropriata.</span><span class="sxs-lookup"><span data-stu-id="ef570-133">Optionally, add a [\<localServiceSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) and set the `maxClockSkew` attribute to an appropriate setting.</span></span>  
   
-6.  Aggiungere un elemento trasporto.  L'esempio seguente usa un [\<trasportoHttp\>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
+6.  <span data-ttu-id="ef570-134">Aggiungere un elemento trasporto.</span><span class="sxs-lookup"><span data-stu-id="ef570-134">Add a transport element.</span></span> <span data-ttu-id="ef570-135">Nell'esempio seguente viene utilizzato un [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).</span><span class="sxs-lookup"><span data-stu-id="ef570-135">The following example uses an [\<httpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).</span></span>  
   
-7.  Per una conversazione sicura, le impostazioni di sicurezza devono essere applicate all'avvio automatico nell'elemento [\<bootstrapConversazioneProtetta\>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md).  
+7.  <span data-ttu-id="ef570-136">Per una conversazione protetta, le impostazioni di sicurezza devono verificarsi al programma di avvio nel [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) elemento.</span><span class="sxs-lookup"><span data-stu-id="ef570-136">For a secure conversation, the security settings must occur at the bootstrap in the [\<secureConversationBootstrap>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) element.</span></span>  
   
-    ```  
-  
+    ```xml  
     <bindings>  
       <customBinding>  
         <binding name="MaxClockSkewBinding">  
@@ -87,11 +92,10 @@ caps.handback.revision: 13
         </binding>  
       </customBinding>  
     </bindings>  
-  
     ```  
   
-## Vedere anche  
- <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>   
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Procedura: creare un'associazione personalizzata utilizzando SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a><span data-ttu-id="ef570-137">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ef570-137">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
+ <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="ef570-138">Procedura: creare un'associazione personalizzata usando SecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="ef570-138">How to: Create a Custom Binding Using the SecurityBindingElement</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

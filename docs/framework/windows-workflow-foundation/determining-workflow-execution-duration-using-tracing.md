@@ -1,43 +1,47 @@
 ---
-title: "Determinazione della durata di esecuzione del flusso di lavoro tramite traccia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Determinazione della durata di esecuzione del flusso di lavoro tramite traccia
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f04ad0fd-edc7-4cbc-8979-356f2a1131c4
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: acdc4f7d58eb0f5737adb59b113ea24d723d3b61
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Determinazione della durata di esecuzione del flusso di lavoro tramite traccia
-In questo argomento viene illustrato come determinare il tempo necessario per l'esecuzione corretta di un flusso di lavoro indipendente tramite la traccia del flusso di lavoro.  
+# <a name="determining-workflow-execution-duration-using-tracing"></a><span data-ttu-id="7cc5f-102">Determinazione della durata di esecuzione del flusso di lavoro tramite traccia</span><span class="sxs-lookup"><span data-stu-id="7cc5f-102">Determining Workflow Execution Duration Using Tracing</span></span>
+<span data-ttu-id="7cc5f-103">In questo argomento viene illustrato come determinare il tempo necessario per l'esecuzione corretta di un flusso di lavoro indipendente tramite la traccia del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-103">This topic demonstrates how to determine the time it takes for a successfully completed, self-hosted workflow to execute by using workflow tracing.</span></span>  
   
-### Per determinare la durata di esecuzione di un'applicazione flusso di lavoro tramite la traccia del flusso di lavoro  
+### <a name="to-determine-workflow-application-execution-duration-by-using-workflow-tracing"></a><span data-ttu-id="7cc5f-104">Per determinare la durata di esecuzione di un'applicazione flusso di lavoro tramite la traccia del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="7cc5f-104">To determine workflow application execution duration by using workflow tracing</span></span>  
   
-1.  Aprire [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].Scegliere **Nuovo** dal menu **File**, quindi **Progetto**.In **C\#** selezionare il nodo **Flusso di lavoro**.Selezionare **Applicazione console flusso di lavoro** nell'elenco di modelli.Assegnare il nome `WorkflowDurationTracing` al nuovo progetto, quindi fare clic su **OK**.  
+1.  <span data-ttu-id="7cc5f-105">Aprire [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7cc5f-105">Open [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  <span data-ttu-id="7cc5f-106">Selezionare **File**, **nuova**, **progetto**.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-106">Select **File**, **New**, **Project**.</span></span>  <span data-ttu-id="7cc5f-107">In **c#**, selezionare il **flusso di lavoro** nodo.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-107">Under **C#**, select the **Workflow** node.</span></span>  <span data-ttu-id="7cc5f-108">Selezionare **applicazione Console flusso di lavoro** dall'elenco dei modelli.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-108">Select **Workflow Console Application** from the list of templates.</span></span>  <span data-ttu-id="7cc5f-109">Denominare il nuovo progetto `WorkflowDurationTracing` e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-109">Name the new project `WorkflowDurationTracing` and click **OK**.</span></span>  
   
-2.  Aprire Workflow1.xaml.Trascinare un'attività <xref:System.Activities.Statements.Delay> nell'area di progettazione.Assegnare il valore 00.00.10 \(dieci secondi\) alla proprietà Duration dell'attività.  
+2.  <span data-ttu-id="7cc5f-110">Aprire Workflow1.xaml.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-110">Open Workflow1.xaml.</span></span>  <span data-ttu-id="7cc5f-111">Trascinare un'attività <xref:System.Activities.Statements.Delay> nell'area di progettazione.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-111">Drag a <xref:System.Activities.Statements.Delay> activity onto the designer surface.</span></span> <span data-ttu-id="7cc5f-112">Assegnare il valore 00.00.10 (dieci secondi) alla proprietà Duration dell'attività.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-112">Assign the value 00:00:10 (ten seconds) to the Duration property of the activity.</span></span>  
   
-3.  Aprire il Visualizzatore eventi facendo clic sul pulsante **Start**, quindi scegliendo **Esegui** e immettendo `eventvwr.exe`.  
+3.  <span data-ttu-id="7cc5f-113">Aprire il Visualizzatore eventi fare clic su **avviare**, **eseguire**e l'immissione di `eventvwr.exe`.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-113">Open Event Viewer by clicking **Start**, **Run**, and entering `eventvwr.exe`.</span></span>  
   
-4.  Se la traccia del flusso di lavoro non è stata abilitata, espandere **Registri applicazioni e servizi**, **Microsoft**, **Windows**, **Server applicazioni\-Applicazioni**.Selezionare **Visualizza**, **Visualizza registri analitici e di debug**.Fare clic con il pulsante destro del mouse su **Debug** e selezionare **Attiva log**.Lasciare aperto il Visualizzatore eventi in modo che sia possibile visualizzare le tracce dopo l'esecuzione del flusso di lavoro.  
+4.  <span data-ttu-id="7cc5f-114">Se è stata abilitata la traccia del flusso di lavoro, espandere **registri applicazioni e servizi**, **Microsoft**, **Windows**, **Server applicazioni-applicazioni** .</span><span class="sxs-lookup"><span data-stu-id="7cc5f-114">If you haven’t enabled workflow tracing, expand **Applications and Services Logs**, **Microsoft**, **Windows**, **Application Server-Applications**.</span></span> <span data-ttu-id="7cc5f-115">Selezionare **vista**, **Mostra analitica e registri di Debug**.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-115">Select **View**, **Show Analytic and Debug Logs**.</span></span> <span data-ttu-id="7cc5f-116">Fare doppio clic su **Debug** e selezionare **Attiva registro**.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-116">Right-click **Debug** and select **Enable Log**.</span></span> <span data-ttu-id="7cc5f-117">Lasciare aperto il Visualizzatore eventi in modo che sia possibile visualizzare le tracce dopo l'esecuzione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-117">Leave Event Viewer open so that traces can be viewed after the workflow is run.</span></span>  
   
-5.  Premere CTRL\+SHIFT\+B per eseguire l'applicazione flusso di lavoro.  
+5.  <span data-ttu-id="7cc5f-118">Premere CTRL+SHIFT+B per eseguire l'applicazione flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-118">Execute the workflow application by pressing CTRL+SHIFT+B.</span></span>  
   
-6.  Nel Visualizzatore eventi trovare un recente evento con ID 1009 e un messaggio analogo al seguente.Annotare l'ora in cui il messaggio è stato registrato.  
+6.  <span data-ttu-id="7cc5f-119">Nel Visualizzatore eventi trovare un recente evento con ID 1009 e un messaggio analogo al seguente.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-119">In Event Viewer, find a recent event with ID 1009 and a message similar to the following.</span></span> <span data-ttu-id="7cc5f-120">Annotare l'ora in cui il messaggio è stato registrato.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-120">Make a note of the time that the message was logged.</span></span>  
   
- **Attività padre '', NomeVisualizzato: '', IDIstanza: '' Attività figlio pianificata 'RilevamentoDurataFlussodilavoro.Flussodilavoro1', NomeVisualizzato: 'Flussodilavoro1', IDIstanza: '1'.**  
+ <span data-ttu-id="7cc5f-121">**Attività padre ', DisplayName: ', InstanceId: ' figlio pianificato l'attività 'WorkflowDurationTracking.Workflow1', DisplayName: 'Flussodilavoro1', InstanceId: '1'.**</span><span class="sxs-lookup"><span data-stu-id="7cc5f-121">**Parent Activity '', DisplayName: '', InstanceId: '' scheduled child Activity 'WorkflowDurationTracking.Workflow1', DisplayName: 'Workflow1', InstanceId: '1'.**</span></span>  
   
-7.  Trovare un altro evento recente con ID 1001 e un messaggio analogo al seguente.Sottrarre l'ora del messaggio precedente dal valore registrato per questo messaggio per determinare la durata di esecuzione del flusso di lavoro che deve essere di circa 10 secondi.  
+7.  <span data-ttu-id="7cc5f-122">Trovare un altro evento recente con ID 1001 e un messaggio analogo al seguente.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-122">Find another recent event with ID 1001 and a message similar to the following.</span></span>  <span data-ttu-id="7cc5f-123">Sottrarre l'ora del messaggio precedente dal valore registrato per questo messaggio per determinare la durata di esecuzione del flusso di lavoro che deve essere di circa 10 secondi.</span><span class="sxs-lookup"><span data-stu-id="7cc5f-123">Subtract the previous message time from this message’s Logged value to determine workflow execution duration, which should be around 10 seconds.</span></span>  
   
- **ID IstanzaFlussodilavoro: '1bbac57b\-3322\-498e\-9e27\-8833fda3a5bf' completata con stato Chiuso.**  
+ <span data-ttu-id="7cc5f-124">**WorkflowInstance con Id: '1bbac57b-3322-498e-9e27-8833fda3a5bf' completata nello stato Closed.**</span><span class="sxs-lookup"><span data-stu-id="7cc5f-124">**WorkflowInstance Id: '1bbac57b-3322-498e-9e27-8833fda3a5bf' has completed in the Closed state.**</span></span>  
   
-## Vedere anche  
- [Traccia del flusso di lavoro](../../../docs/framework/windows-workflow-foundation//workflow-tracing.md)   
- [Concetti di monitoraggio](http://go.microsoft.com/fwlink/?LinkId=201273)   
- [Monitoraggio delle applicazioni](http://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a><span data-ttu-id="7cc5f-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="7cc5f-125">See Also</span></span>  
+ [<span data-ttu-id="7cc5f-126">Analisi del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="7cc5f-126">Workflow Tracing</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
+ [<span data-ttu-id="7cc5f-127">Monitoraggio dell'infrastruttura di App di Windows Server</span><span class="sxs-lookup"><span data-stu-id="7cc5f-127">Windows Server App Fabric Monitoring</span></span>](http://go.microsoft.com/fwlink/?LinkId=201273)  
+ [<span data-ttu-id="7cc5f-128">Monitoraggio delle applicazioni con App Fabric</span><span class="sxs-lookup"><span data-stu-id="7cc5f-128">Monitoring Applications with App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkId=201275)

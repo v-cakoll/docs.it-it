@@ -1,26 +1,29 @@
 ---
-title: "Elaborazione di messaggi ordinata in modalit&#224; di concorrenza singola | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Elaborazione di messaggi ordinata in modalità di concorrenza singola"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a1acf4c3edb51500c2ead2e4ba33c6d3cc9c953f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Elaborazione di messaggi ordinata in modalit&#224; di concorrenza singola
-WCF non fornisce alcuna garanzia sull'ordine in cui i messaggi vengono elaborati, a meno che il canale sottostante sia con sessione. Ad esempio, un servizio di WCF che utilizza MsmqInputChannel, che non è un canale con sessione, non riuscirà a elaborare i messaggi in ordine. Esistono alcune condizioni in cui uno sviluppatore desidera il comportamento di elaborazione in ordine, ma non desidera utilizzare sessioni.In questo argomento viene descritto come configurare questo comportamento quando un servizio è in esecuzione in modalità di concorrenza singola.  
+# <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a><span data-ttu-id="a8178-102">Elaborazione di messaggi ordinata in modalità di concorrenza singola</span><span class="sxs-lookup"><span data-stu-id="a8178-102">Ordered Processing of Messages in Single Concurrency Mode</span></span>
+<span data-ttu-id="a8178-103">WCF non garantisce l'ordine in cui vengono elaborati i messaggi, a meno che il canale sottostante sia con sessione.</span><span class="sxs-lookup"><span data-stu-id="a8178-103">WCF makes no guarantees about the order in which messages are processed, unless the underlying channel is sessionful.</span></span>  <span data-ttu-id="a8178-104">Ad esempio, un servizio WCF che utilizza MsmqInputChannel, che non è un canale con sessione, non sarà possibile elaborare messaggi in ordine.</span><span class="sxs-lookup"><span data-stu-id="a8178-104">For instance, a WCF service that uses MsmqInputChannel, which is not a sessionful channel, will fail to process messages in order.</span></span> <span data-ttu-id="a8178-105">Ci sono casi in cui uno sviluppatore può vuole che l'ordine nel comportamento di elaborazione ma non si desidera utilizzare sessioni.</span><span class="sxs-lookup"><span data-stu-id="a8178-105">There are some circumstances where a developer may want the in order processing behavior but not want to use sessions.</span></span> <span data-ttu-id="a8178-106">In questo argomento viene descritto come configurare questo comportamento quando un servizio è in esecuzione in modalità di concorrenza singola.</span><span class="sxs-lookup"><span data-stu-id="a8178-106">This topic describes how to configure this behavior when a service is running in Single Concurrency Mode.</span></span>  
   
-## Elaborazione di messaggi in ordine  
- All'oggetto  <xref:System.ServiceModel.ServiceBehaviorAttribute> è stata aggiunto un nuovo attributo denominato <xref:System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch%2A>.Quando la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch%2A> è impostata su True e la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> è impostata sul campo <xref:System.ServiceModel.ConcurrencyMode>, i messaggi inviati al servizio verranno elaborati in ordine.Nel frammento di codice seguente viene illustrato come impostare questi attributi.  
+## <a name="in-order-message-processing"></a><span data-ttu-id="a8178-107">Elaborazione di messaggi in ordine</span><span class="sxs-lookup"><span data-stu-id="a8178-107">In-order Message Processing</span></span>  
+ <span data-ttu-id="a8178-108">A <xref:System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch%2A> è stato aggiunto un nuovo attributo denominato <xref:System.ServiceModel.ServiceBehaviorAttribute>.</span><span class="sxs-lookup"><span data-stu-id="a8178-108">A new attribute called <xref:System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch%2A> has been added to the <xref:System.ServiceModel.ServiceBehaviorAttribute>.</span></span> <span data-ttu-id="a8178-109">Quando l'oggetto <xref:System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch%2A> è impostato su true e <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> è impostato su <xref:System.ServiceModel.ConcurrencyMode.Single>, i messaggi inviati al servizio verranno elaborati in ordine.</span><span class="sxs-lookup"><span data-stu-id="a8178-109">When <xref:System.ServiceModel.ServiceBehaviorAttribute.EnsureOrderedDispatch%2A> is set to true and <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> is set to <xref:System.ServiceModel.ConcurrencyMode.Single> messages sent to the service will be processed in order.</span></span> <span data-ttu-id="a8178-110">Nel frammento di codice seguente viene illustrato come impostare questi attributi.</span><span class="sxs-lookup"><span data-stu-id="a8178-110">The following code snippet illustrates how to set these attributes.</span></span>  
   
 ```  
 [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single, EnsureOrderedDispatch = true )]  
@@ -28,11 +31,10 @@ WCF non fornisce alcuna garanzia sull'ordine in cui i messaggi vengono elaborati
     {  
          // ...  
     }  
-  
 ```  
   
- Se la proprietà <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> è impostata su qualsiasi altro valore, viene generata un'eccezione <xref:System.InvalidOperationException>.  
+ <span data-ttu-id="a8178-111">Se l'oggetto <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> è impostato su qualsiasi altro valore, viene generato un oggetto <xref:System.InvalidOperationException>.</span><span class="sxs-lookup"><span data-stu-id="a8178-111">If <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> is set to any other value, an <xref:System.InvalidOperationException> is thrown.</span></span>  
   
-## Vedere anche  
- [Sessioni, istanze e concorrenza](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)   
- [Concorrenza](../../../../docs/framework/wcf/samples/concurrency.md)
+## <a name="see-also"></a><span data-ttu-id="a8178-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a8178-112">See Also</span></span>  
+ [<span data-ttu-id="a8178-113">Le sessioni, istanze e concorrenza</span><span class="sxs-lookup"><span data-stu-id="a8178-113">Sessions, Instancing, and Concurrency</span></span>](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)  
+ [<span data-ttu-id="a8178-114">Concorrenza</span><span class="sxs-lookup"><span data-stu-id="a8178-114">Concurrency</span></span>](../../../../docs/framework/wcf/samples/concurrency.md)

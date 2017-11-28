@@ -1,37 +1,39 @@
 ---
-title: "Controlli costitutivi | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli costitutivi"
-  - "controlli personalizzati [Windows Form], controlli costitutivi"
-  - "controlli utente [Windows Form], controlli costitutivi"
-  - "UserControl (classe)"
+title: Controlli costitutivi
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Windows Forms], constituent controls
+- constituent controls [Windows Forms]
+- user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 932b90d972aaa2305743b6fdaae546b0e2542cd5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Controlli costitutivi
-I controlli che costituiscono un controllo utente, o *controlli costitutivi*, sono relativamente poco flessibili per quanto riguarda il rendering grafico personalizzato.  Tutti i controlli per Windows Form gestiscono il proprio rendering mediante il metodo <xref:System.Windows.Forms.Control.OnPaint%2A>.  Poiché questo metodo è protetto, non è accessibile allo sviluppatore, quindi non è possibile impedirne l'esecuzione quando il controllo viene disegnato.  Ciò non significa, tuttavia, che non sia possibile aggiungere codice per definire l'aspetto dei controlli costitutivi.  Un ulteriore rendering può essere eseguito aggiungendo un gestore eventi.  Ad esempio, si supponga di creare un controllo <xref:System.Windows.Forms.UserControl> con un pulsante denominato `MyButton`.  Se si desidera disporre di un ulteriore rendering oltre a quello fornito dalla [classe Button](frlrfSystemWebUIWebControlsButtonClassTopic), è necessario aggiungere al controllo utente codice simile a quello riportato di seguito:  
+# <a name="constituent-controls"></a><span data-ttu-id="9116c-102">Controlli costitutivi</span><span class="sxs-lookup"><span data-stu-id="9116c-102">Constituent Controls</span></span>
+<span data-ttu-id="9116c-103">I controlli che costituiscono un controllo utente, detti anche *controlli costitutivi*, offrono scarsa flessibilità in termini di rendering personalizzato della grafica.</span><span class="sxs-lookup"><span data-stu-id="9116c-103">The controls that make up a user control, or *constituent controls* as they are termed, are relatively inflexible when it comes to custom graphics rendering.</span></span> <span data-ttu-id="9116c-104">Tutti i controlli Windows Form di gestire le proprie per il rendering tramite i propri <xref:System.Windows.Forms.Control.OnPaint%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="9116c-104">All Windows Forms controls handle their own rendering through their own <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span> <span data-ttu-id="9116c-105">Poiché questo metodo è protetto, non è accessibile allo sviluppatore e quindi non è possibile evitarne l'esecuzione quando il controllo viene disegnato.</span><span class="sxs-lookup"><span data-stu-id="9116c-105">Because this method is protected, it is not accessible to the developer, and thus cannot be prevented from executing when the control is painted.</span></span> <span data-ttu-id="9116c-106">Ciò non implica tuttavia che non sia possibile aggiungere codice per modificare l'aspetto dei controlli costitutivi.</span><span class="sxs-lookup"><span data-stu-id="9116c-106">This does not mean, however, that you cannot add code to affect the appearance of constituent controls.</span></span> <span data-ttu-id="9116c-107">Per eseguire un altro rendering, è possibile aggiungere un gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="9116c-107">Additional rendering can be accomplished by adding an event handler.</span></span> <span data-ttu-id="9116c-108">Ad esempio, si supponga di creare un <xref:System.Windows.Forms.UserControl> con un pulsante denominato `MyButton`.</span><span class="sxs-lookup"><span data-stu-id="9116c-108">For example, suppose you were authoring a <xref:System.Windows.Forms.UserControl> with a button named `MyButton`.</span></span> <span data-ttu-id="9116c-109">Se si desidera disporre di rendering aggiuntivi oltre a quello fornito dal <xref:System.Web.UI.WebControls.Button>, è necessario aggiungere codice al controllo utente simile al seguente:</span><span class="sxs-lookup"><span data-stu-id="9116c-109">If you wished to have additional rendering beyond what was provided by the <xref:System.Web.UI.WebControls.Button>, you would add code to your user control similar to the following:</span></span>  
   
 ```vb  
 Public Sub MyPaint(ByVal sender as Object, e as PaintEventArgs) Handles _  
    MyButton.Paint  
    'Additional rendering code goes here  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -47,13 +49,13 @@ System.Windows.Forms.PaintEventArgs e)
 ```  
   
 > [!NOTE]
->  Alcuni controlli per Windows Form, come <xref:System.Windows.Forms.TextBox>, sono disegnati direttamente da Windows.  In tali casi, l'esempio precedente non verrà mai chiamato dato che non viene mai chiamato il metodo <xref:System.Windows.Forms.Control.OnPaint%2A>.  
+>  <span data-ttu-id="9116c-110">Controlli di alcuni moduli di Windows, ad esempio <xref:System.Windows.Forms.TextBox>, sono disegnati direttamente da Windows.</span><span class="sxs-lookup"><span data-stu-id="9116c-110">Some Windows Forms controls, such as <xref:System.Windows.Forms.TextBox>, are painted directly by Windows.</span></span> <span data-ttu-id="9116c-111">In questi casi, il <xref:System.Windows.Forms.Control.OnPaint%2A> non viene mai chiamato e l'esempio precedente non verrà mai chiamato.</span><span class="sxs-lookup"><span data-stu-id="9116c-111">In these instances, the <xref:System.Windows.Forms.Control.OnPaint%2A> method is never called, and thus the above example will never be called.</span></span>  
   
- Il metodo creato viene eseguito a ogni esecuzione dell'evento `MyButton.Paint`, aggiungendo in tal modo un'ulteriore rappresentazione grafica al controllo.  Tenere presente che ciò non impedisce l'esecuzione di `MyButton.OnPaint`, pertanto il disegno, di solito ottenuto in seguito alla selezione di un pulsante, continua a essere eseguito insieme al disegno personalizzato.  Per informazioni dettagliate sulla tecnologia GDI\+ e sul rendering personalizzato, vedere [Creazione di immagini di tipo grafico con GDI\+](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  Se si desidera ottenere una rappresentazione univoca del controllo, il metodo ottimale consiste nel creare un controllo ereditato per il quale scrivere un codice di rendering personalizzato.  Per informazioni dettagliate, vedere [Controlli creati dall'utente](../../../../docs/framework/winforms/controls/user-drawn-controls.md).  
+ <span data-ttu-id="9116c-112">Viene quindi creato un metodo eseguito ogni volta che viene eseguito l'evento `MyButton.Paint`, aggiungendo in tal modo un'altra rappresentazione grafica al controllo.</span><span class="sxs-lookup"><span data-stu-id="9116c-112">This creates a method that executes every time the `MyButton.Paint` event executes, thereby adding additional graphical representation to your control.</span></span> <span data-ttu-id="9116c-113">Si noti che ciò non impedisce l'esecuzione di `MyButton.OnPaint` e quindi tutti i disegni eseguiti normalmente da un pulsante continueranno a essere eseguiti in aggiunta al disegno personalizzato.</span><span class="sxs-lookup"><span data-stu-id="9116c-113">Note that this does not prevent the execution of `MyButton.OnPaint`, and thus all of the painting usually performed by a button will still be performed in addition to your custom painting.</span></span> <span data-ttu-id="9116c-114">Per informazioni dettagliate sulla tecnologia GDI+ e sul rendering personalizzato, vedere [Creazione di immagini grafiche con GDI+](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).</span><span class="sxs-lookup"><span data-stu-id="9116c-114">For details about GDI+ technology and custom rendering, see the [Creating Graphical Images with GDI+](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).</span></span> <span data-ttu-id="9116c-115">Per avere una rappresentazione univoca del controllo, è consigliabile creare un controllo ereditato per cui scrivere il codice di rendering personalizzato.</span><span class="sxs-lookup"><span data-stu-id="9116c-115">If you wish to have a unique representation of your control, your best course of action is to create an inherited control, and to write custom rendering code for it.</span></span> <span data-ttu-id="9116c-116">Per informazioni dettagliate, vedere [Controlli creati dall'utente](../../../../docs/framework/winforms/controls/user-drawn-controls.md).</span><span class="sxs-lookup"><span data-stu-id="9116c-116">For details, see [User-Drawn Controls](../../../../docs/framework/winforms/controls/user-drawn-controls.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.UserControl>   
- <xref:System.Windows.Forms.Control.OnPaint%2A>   
- [Controlli creati dall'utente](../../../../docs/framework/winforms/controls/user-drawn-controls.md)   
- [Procedura: creare oggetti Graphics per disegnare](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
- [Tipi di controlli personalizzati](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a><span data-ttu-id="9116c-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9116c-117">See Also</span></span>  
+ <xref:System.Windows.Forms.UserControl>  
+ <xref:System.Windows.Forms.Control.OnPaint%2A>  
+ [<span data-ttu-id="9116c-118">Controlli creati dall'utente</span><span class="sxs-lookup"><span data-stu-id="9116c-118">User-Drawn Controls</span></span>](../../../../docs/framework/winforms/controls/user-drawn-controls.md)  
+ [<span data-ttu-id="9116c-119">Procedura: Creare oggetti Graphics per disegnare</span><span class="sxs-lookup"><span data-stu-id="9116c-119">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [<span data-ttu-id="9116c-120">Tipi di controlli personalizzati</span><span class="sxs-lookup"><span data-stu-id="9116c-120">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
