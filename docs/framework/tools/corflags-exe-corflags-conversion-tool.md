@@ -5,70 +5,62 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - CorFlags conversion tool
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: ca3e9dbe5578623ccc67898c6f08213c31ad8e23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 80fb48fc86d3010020a0a8a79bb2b4b7a6275368
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (strumento di conversione CorFlags)
-Lo strumento di conversione CorFlags consente di configurare la sezione CorFlags dell'intestazione di un'immagine eseguibile di tipo PE.  
+# <a name="corflagsexe-corflags-conversion-tool"></a><span data-ttu-id="795ed-102">CorFlags.exe (strumento di conversione CorFlags)</span><span class="sxs-lookup"><span data-stu-id="795ed-102">CorFlags.exe (CorFlags Conversion Tool)</span></span>
+<span data-ttu-id="795ed-103">Lo strumento di conversione CorFlags consente di configurare la sezione CorFlags dell'intestazione di un'immagine eseguibile di tipo PE.</span><span class="sxs-lookup"><span data-stu-id="795ed-103">The CorFlags Conversion tool allows you to configure the CorFlags section of the header of a portable executable image.</span></span>  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="795ed-104">Viene installato automaticamente con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="795ed-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="795ed-105">Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7.</span><span class="sxs-lookup"><span data-stu-id="795ed-105">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="795ed-106">Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="795ed-106">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- Al prompt dei comandi digitare quanto segue:  
+ <span data-ttu-id="795ed-107">Al prompt dei comandi digitare quanto segue:</span><span class="sxs-lookup"><span data-stu-id="795ed-107">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="795ed-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="795ed-108">Syntax</span></span>  
   
 ```  
 CorFlags.exe assembly [options]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a><span data-ttu-id="795ed-109">Parametri</span><span class="sxs-lookup"><span data-stu-id="795ed-109">Parameters</span></span>  
   
-|Parametro obbligatorio.|Descrizione|  
+|<span data-ttu-id="795ed-110">Parametro obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="795ed-110">Required parameter</span></span>|<span data-ttu-id="795ed-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="795ed-111">Description</span></span>|  
 |------------------------|-----------------|  
-|`assembly`|Nome dell'assembly per il quale configurare CorFlags.|  
+|`assembly`|<span data-ttu-id="795ed-112">Nome dell'assembly per il quale configurare CorFlags.</span><span class="sxs-lookup"><span data-stu-id="795ed-112">The name of the assembly for which to configure the CorFlags.</span></span>|  
   
-|Opzione|Descrizione|  
+|<span data-ttu-id="795ed-113">Opzione</span><span class="sxs-lookup"><span data-stu-id="795ed-113">Option</span></span>|<span data-ttu-id="795ed-114">Descrizione</span><span class="sxs-lookup"><span data-stu-id="795ed-114">Description</span></span>|  
 |------------|-----------------|  
-|**/32BIT[REQ]+**|Imposta il flag 32BITREQUIRED.|  
-|**/32BIT[REQ]-**|Cancella il flag 32BITREQUIRED.|  
-|**/32BITPREF+**|Imposta il flag 32BITPREFERRED. L'applicazione viene eseguita come processo a 32 bit anche sulle piattaforme a 64 bit. Impostare questo flag solo su file EXE. Se il flag viene impostato su una DLL, la DLL non viene caricata nei processi a 64 bit e viene generata un'eccezione <xref:System.BadImageFormatException>. Un file EXE con questo flag può essere caricato in un processo a 64 bit.<br /><br /> Nuovo in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
-|**/32BITPREF-**|Cancella il flag 32BITPREFERRED.<br /><br /> Nuovo in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
-|**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|**/Force**|Forza un aggiornamento anche se l'assembly ha un nome sicuro. **Importante:** se si aggiorna un assembly con nome sicuro è necessario firmarlo nuovamente prima di eseguirne il codice.|  
-|**/help**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|**/ILONLY+**|Imposta il flag ILONLY.|  
-|**/ILONLY-**|Cancella il flag ILONLY.|  
-|**/nologo**|Evita la visualizzazione del messaggio di avvio Microsoft.|  
-|**/RevertCLRHeader**|Ripristina la versione 2.0 dell'intestazione CLR.|  
-|**/UpgradeCLRHeader**|Esegue l'aggiornamento dell'intestazione CLR alla versione 2.5. **Nota:** per essere eseguiti a livello nativo, gli assembly devono disporre di un'intestazione CLR versione 2.5 o successiva.|  
+|<span data-ttu-id="795ed-115">**/32BIT[REQ]+**</span><span class="sxs-lookup"><span data-stu-id="795ed-115">**/32BIT[REQ]+**</span></span>|<span data-ttu-id="795ed-116">Imposta il flag 32BITREQUIRED.</span><span class="sxs-lookup"><span data-stu-id="795ed-116">Sets the 32BITREQUIRED flag.</span></span>|  
+|<span data-ttu-id="795ed-117">**/32BIT[REQ]-**</span><span class="sxs-lookup"><span data-stu-id="795ed-117">**/32BIT[REQ]-**</span></span>|<span data-ttu-id="795ed-118">Cancella il flag 32BITREQUIRED.</span><span class="sxs-lookup"><span data-stu-id="795ed-118">Clears the 32BITREQUIRED flag.</span></span>|  
+|<span data-ttu-id="795ed-119">**/32BITPREF+**</span><span class="sxs-lookup"><span data-stu-id="795ed-119">**/32BITPREF+**</span></span>|<span data-ttu-id="795ed-120">Imposta il flag 32BITPREFERRED.</span><span class="sxs-lookup"><span data-stu-id="795ed-120">Sets the 32BITPREFERRED flag.</span></span> <span data-ttu-id="795ed-121">L'applicazione viene eseguita come processo a 32 bit anche sulle piattaforme a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="795ed-121">The app runs as a 32-bit process even on 64-bit platforms.</span></span> <span data-ttu-id="795ed-122">Impostare questo flag solo su file EXE.</span><span class="sxs-lookup"><span data-stu-id="795ed-122">Set this flag only on EXE files.</span></span> <span data-ttu-id="795ed-123">Se il flag viene impostato su una DLL, la DLL non viene caricata nei processi a 64 bit e viene generata un'eccezione <xref:System.BadImageFormatException>.</span><span class="sxs-lookup"><span data-stu-id="795ed-123">If the flag is set on a DLL, the DLL fails to load in 64-bit processes, and a <xref:System.BadImageFormatException> exception is thrown.</span></span> <span data-ttu-id="795ed-124">Un file EXE con questo flag può essere caricato in un processo a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="795ed-124">An EXE file with this flag can be loaded into a 64-bit process.</span></span><br /><br /> <span data-ttu-id="795ed-125">Nuovo in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="795ed-125">New in the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span>|  
+|<span data-ttu-id="795ed-126">**/32BITPREF-**</span><span class="sxs-lookup"><span data-stu-id="795ed-126">**/32BITPREF-**</span></span>|<span data-ttu-id="795ed-127">Cancella il flag 32BITPREFERRED.</span><span class="sxs-lookup"><span data-stu-id="795ed-127">Clears the 32BITPREFERRED flag.</span></span><br /><br /> <span data-ttu-id="795ed-128">Nuovo in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span><span class="sxs-lookup"><span data-stu-id="795ed-128">New in the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span>|  
+|<span data-ttu-id="795ed-129">**/?**</span><span class="sxs-lookup"><span data-stu-id="795ed-129">**/?**</span></span>|<span data-ttu-id="795ed-130">Visualizza la sintassi e le opzioni di comando dello strumento.</span><span class="sxs-lookup"><span data-stu-id="795ed-130">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="795ed-131">**/Force**</span><span class="sxs-lookup"><span data-stu-id="795ed-131">**/Force**</span></span>|<span data-ttu-id="795ed-132">Forza un aggiornamento anche se l'assembly ha un nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="795ed-132">Forces an update even if the assembly is strong-named.</span></span> <span data-ttu-id="795ed-133">**Importante:** se si aggiorna un assembly con nome sicuro è necessario firmarlo nuovamente prima di eseguirne il codice.</span><span class="sxs-lookup"><span data-stu-id="795ed-133">**Important:**  If you update a strong-named assembly, you must sign it again before executing its code.</span></span>|  
+|<span data-ttu-id="795ed-134">**/help**</span><span class="sxs-lookup"><span data-stu-id="795ed-134">**/help**</span></span>|<span data-ttu-id="795ed-135">Visualizza la sintassi e le opzioni di comando dello strumento.</span><span class="sxs-lookup"><span data-stu-id="795ed-135">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="795ed-136">**/ILONLY+**</span><span class="sxs-lookup"><span data-stu-id="795ed-136">**/ILONLY+**</span></span>|<span data-ttu-id="795ed-137">Imposta il flag ILONLY.</span><span class="sxs-lookup"><span data-stu-id="795ed-137">Sets the ILONLY flag.</span></span>|  
+|<span data-ttu-id="795ed-138">**/ILONLY-**</span><span class="sxs-lookup"><span data-stu-id="795ed-138">**/ILONLY-**</span></span>|<span data-ttu-id="795ed-139">Cancella il flag ILONLY.</span><span class="sxs-lookup"><span data-stu-id="795ed-139">Clears the ILONLY flag.</span></span>|  
+|<span data-ttu-id="795ed-140">**/nologo**</span><span class="sxs-lookup"><span data-stu-id="795ed-140">**/nologo**</span></span>|<span data-ttu-id="795ed-141">Evita la visualizzazione del messaggio di avvio Microsoft.</span><span class="sxs-lookup"><span data-stu-id="795ed-141">Suppresses the Microsoft startup banner display.</span></span>|  
+|<span data-ttu-id="795ed-142">**/RevertCLRHeader**</span><span class="sxs-lookup"><span data-stu-id="795ed-142">**/RevertCLRHeader**</span></span>|<span data-ttu-id="795ed-143">Ripristina la versione 2.0 dell'intestazione CLR.</span><span class="sxs-lookup"><span data-stu-id="795ed-143">Reverts the CLR header version to 2.0.</span></span>|  
+|<span data-ttu-id="795ed-144">**/UpgradeCLRHeader**</span><span class="sxs-lookup"><span data-stu-id="795ed-144">**/UpgradeCLRHeader**</span></span>|<span data-ttu-id="795ed-145">Esegue l'aggiornamento dell'intestazione CLR alla versione 2.5.</span><span class="sxs-lookup"><span data-stu-id="795ed-145">Upgrades the CLR header version to 2.5.</span></span> <span data-ttu-id="795ed-146">**Nota:** per essere eseguiti a livello nativo, gli assembly devono disporre di un'intestazione CLR versione 2.5 o successiva.</span><span class="sxs-lookup"><span data-stu-id="795ed-146">**Note:**  Assemblies must have a CLR header version of 2.5 or greater to run natively.</span></span>|  
   
-## <a name="remarks"></a>Note  
- Se non viene specificata alcuna opzione, lo strumento di conversione CorFlags visualizza i flag relativi all'assembly specificato.  
+## <a name="remarks"></a><span data-ttu-id="795ed-147">Note</span><span class="sxs-lookup"><span data-stu-id="795ed-147">Remarks</span></span>  
+ <span data-ttu-id="795ed-148">Se non viene specificata alcuna opzione, lo strumento di conversione CorFlags visualizza i flag relativi all'assembly specificato.</span><span class="sxs-lookup"><span data-stu-id="795ed-148">If no options are specified, the CorFlags Conversion tool displays the flags for the specified assembly.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Strumenti](../../../docs/framework/tools/index.md)   
- [Applicazioni a 64 bit](../../../docs/framework/64-bit-apps.md)   
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="795ed-149">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="795ed-149">See Also</span></span>  
+ [<span data-ttu-id="795ed-150">Strumenti</span><span class="sxs-lookup"><span data-stu-id="795ed-150">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="795ed-151">Applicazioni a 64 bit</span><span class="sxs-lookup"><span data-stu-id="795ed-151">64-bit Applications</span></span>](../../../docs/framework/64-bit-apps.md)  
+ [<span data-ttu-id="795ed-152">Prompt dei comandi</span><span class="sxs-lookup"><span data-stu-id="795ed-152">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

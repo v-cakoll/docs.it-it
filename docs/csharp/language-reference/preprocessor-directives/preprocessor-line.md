@@ -1,43 +1,23 @@
 ---
 title: '#<a name="line-c-reference"></a>line (Riferimenti per C#)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#line'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#line directive [C#]'
+f1_keywords: '#line'
+helpviewer_keywords: '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3d2f42915d214349eebff40949482d7f603c0c2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 89eac93497deb2312e9da358a22e37db1e4a2f80
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="line-c-reference"></a>#line (Riferimenti per C#)
-`#line` consente di modificare il numero di riga del compilatore e, facoltativamente, l'output del nome del file per gli errori e gli avvisi. Nell'esempio seguente viene illustrata la modalità di segnalazione di due avvisi associati a numeri di riga. La direttiva `#line 200` forza l'impostazione del numero di riga su 200 (anche se l'impostazione predefinita è 7) e, fino alla successiva direttiva #line, il nome file viene indicato come "Special". La direttiva #line predefinita reimposta la numerazione predefinita delle righe, con il conteggio delle righe rinumerate dalla direttiva precedente.  
+# <a name="line-c-reference"></a><span data-ttu-id="3f3aa-102">#line (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="3f3aa-102">#line (C# Reference)</span></span>
+<span data-ttu-id="3f3aa-103">`#line` consente di modificare il numero di riga del compilatore e, facoltativamente, l'output del nome del file per gli errori e gli avvisi.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-103">`#line` lets you modify the compiler's line number and (optionally) the file name output for errors and warnings.</span></span> <span data-ttu-id="3f3aa-104">Nell'esempio seguente viene illustrata la modalità di segnalazione di due avvisi associati a numeri di riga.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-104">This example shows how to report two warnings associated with line numbers.</span></span> <span data-ttu-id="3f3aa-105">La direttiva `#line 200` forza l'impostazione del numero di riga su 200 (anche se l'impostazione predefinita è 7) e, fino alla successiva direttiva #line, il nome file viene indicato come "Special".</span><span class="sxs-lookup"><span data-stu-id="3f3aa-105">The `#line 200` directive forces the line number to be 200 (although the default is #7) and until the next #line directive, the filename will be reported as "Special".</span></span> <span data-ttu-id="3f3aa-106">La direttiva #line predefinita reimposta la numerazione predefinita delle righe, con il conteggio delle righe rinumerate dalla direttiva precedente.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-106">The #line default directive returns the line numbering to its default numbering, which counts the lines that were renumbered by the previous directive.</span></span>  
   
 ```csharp
 class MainClass  
@@ -57,19 +37,19 @@ class MainClass
 }  
 ```  
   
-## <a name="remarks"></a>Note  
- La direttiva `#line` può essere usata in un'istruzione automatizzata intermedia nel processo di compilazione. Se, ad esempio, sono state rimosse delle righe dal file del codice sorgente originale e si vuole che il compilatore generi comunque un output basato sulla numerazione originale delle righe del file, è possibile rimuovere le righe e simulare la numerazione originale tramite `#line`.  
+## <a name="remarks"></a><span data-ttu-id="3f3aa-107">Note</span><span class="sxs-lookup"><span data-stu-id="3f3aa-107">Remarks</span></span>  
+ <span data-ttu-id="3f3aa-108">La direttiva `#line` può essere usata in un'istruzione automatizzata intermedia nel processo di compilazione.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-108">The `#line` directive might be used in an automated, intermediate step in the build process.</span></span> <span data-ttu-id="3f3aa-109">Se, ad esempio, sono state rimosse delle righe dal file del codice sorgente originale e si vuole che il compilatore generi comunque un output basato sulla numerazione originale delle righe del file, è possibile rimuovere le righe e simulare la numerazione originale tramite `#line`.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-109">For example, if lines were removed from the original source code file, but you still wanted the compiler to generate output based on the original line numbering in the file, you could remove lines and then simulate the original line numbering with `#line`.</span></span>  
   
- La direttiva `#line hidden` nasconde al debugger le righe successive, in modo che quando lo sviluppatore eseguirà il codice un'istruzione alla volta, verranno eseguite tutte le righe racchiuse tra una direttiva `#line hidden` e la successiva direttiva `#line` (supposto che non si tratti di un'altra direttiva `#line hidden`). Questa opzione può essere usata anche per consentire ad ASP.NET di distinguere il codice definito dall'utente da quello generato dal computer. Sebbene ASP.NET rappresenti il consumer principale di questa funzionalità, è probabile che ne usufruiscano anche altri generatori di codice sorgente.  
+ <span data-ttu-id="3f3aa-110">La direttiva `#line hidden` nasconde al debugger le righe successive, in modo che quando lo sviluppatore eseguirà il codice un'istruzione alla volta, verranno eseguite tutte le righe racchiuse tra una direttiva `#line hidden` e la successiva direttiva `#line` (supposto che non si tratti di un'altra direttiva `#line hidden`).</span><span class="sxs-lookup"><span data-stu-id="3f3aa-110">The `#line hidden` directive hides the successive lines from the debugger, such that when the developer steps through the code, any lines between a `#line hidden` and the next `#line` directive (assuming that it is not another `#line hidden` directive) will be stepped over.</span></span> <span data-ttu-id="3f3aa-111">Questa opzione può essere usata anche per consentire ad ASP.NET di distinguere il codice definito dall'utente da quello generato dal computer.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-111">This option can also be used to allow ASP.NET to differentiate between user-defined and machine-generated code.</span></span> <span data-ttu-id="3f3aa-112">Sebbene ASP.NET rappresenti il consumer principale di questa funzionalità, è probabile che ne usufruiscano anche altri generatori di codice sorgente.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-112">Although ASP.NET is the primary consumer of this feature, it is likely that more source generators will make use of it.</span></span>  
   
- Una direttiva `#line hidden` non influisce sui nomi di file o sui numeri di riga nella segnalazione degli errori. In questo modo, se viene rilevato un errore in un blocco nascosto, nel compilatore verrà segnalato il nome del file corrente e il numero di riga dell'errore.  
+ <span data-ttu-id="3f3aa-113">Una direttiva `#line hidden` non influisce sui nomi di file o sui numeri di riga nella segnalazione degli errori.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-113">A `#line hidden` directive does not affect file names or line numbers in error reporting.</span></span> <span data-ttu-id="3f3aa-114">In questo modo, se viene rilevato un errore in un blocco nascosto, nel compilatore verrà segnalato il nome del file corrente e il numero di riga dell'errore.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-114">That is, if an error is encountered in a hidden block, the compiler will report the current file name and line number of the error.</span></span>  
   
- La direttiva `#line filename` specifica il nome del file che si vuole venga visualizzato nell'output del compilatore. Per impostazione predefinita, viene usato il nome effettivo del file del codice sorgente. Il nome del file deve essere racchiuso tra virgolette doppie (" ") e deve essere preceduto da un numero di riga.  
+ <span data-ttu-id="3f3aa-115">La direttiva `#line filename` specifica il nome del file che si vuole venga visualizzato nell'output del compilatore.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-115">The `#line filename` directive specifies the file name you want to appear in the compiler output.</span></span> <span data-ttu-id="3f3aa-116">Per impostazione predefinita, viene usato il nome effettivo del file del codice sorgente.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-116">By default, the actual name of the source code file is used.</span></span> <span data-ttu-id="3f3aa-117">Il nome del file deve essere racchiuso tra virgolette doppie (" ") e deve essere preceduto da un numero di riga.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-117">The file name must be in double quotation marks ("") and must be preceded by a line number.</span></span>  
   
- I file del codice sorgente possono contenere più direttive `#line`.  
+ <span data-ttu-id="3f3aa-118">I file del codice sorgente possono contenere più direttive `#line`.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-118">A source code file can have any number of `#line` directives.</span></span>  
   
-## <a name="example-1"></a>Esempio 1  
- Nell'esempio seguente viene illustrato come il debugger ignori le righe nascoste nel codice. Durante l'esecuzione dell'esempio, verranno visualizzate tre righe di testo. Tuttavia, se si imposta un punto di interruzione, come illustrato nell'esempio, e si preme F10 per eseguire il codice un'istruzione alla volta, si noterà che la riga nascosta verrà ignorata. La stessa cosa si verifica anche se si imposta un punto di interruzione in corrispondenza della riga nascosta.  
+## <a name="example-1"></a><span data-ttu-id="3f3aa-119">Esempio 1</span><span class="sxs-lookup"><span data-stu-id="3f3aa-119">Example 1</span></span>  
+ <span data-ttu-id="3f3aa-120">Nell'esempio seguente viene illustrato come il debugger ignori le righe nascoste nel codice.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-120">The following example shows how the debugger ignores the hidden lines in the code.</span></span> <span data-ttu-id="3f3aa-121">Durante l'esecuzione dell'esempio, verranno visualizzate tre righe di testo.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-121">When you run the example, it will display three lines of text.</span></span> <span data-ttu-id="3f3aa-122">Tuttavia, se si imposta un punto di interruzione, come illustrato nell'esempio, e si preme F10 per eseguire il codice un'istruzione alla volta, si noterà che la riga nascosta verrà ignorata.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-122">However, when you set a break point, as shown in the example, and hit F10 to step through the code, you will notice that the debugger ignores the hidden line.</span></span> <span data-ttu-id="3f3aa-123">La stessa cosa si verifica anche se si imposta un punto di interruzione in corrispondenza della riga nascosta.</span><span class="sxs-lookup"><span data-stu-id="3f3aa-123">Notice also that even if you set a break point at the hidden line, the debugger will still ignore it.</span></span>  
   
 ```csharp
 // preprocessor_linehidden.cs  
@@ -87,8 +67,7 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Direttive per il preprocessore C#](../../../csharp/language-reference/preprocessor-directives/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="3f3aa-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3f3aa-124">See Also</span></span>  
+ [<span data-ttu-id="3f3aa-125">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="3f3aa-125">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="3f3aa-126">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="3f3aa-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="3f3aa-127">Direttive per il preprocessore C#</span><span class="sxs-lookup"><span data-stu-id="3f3aa-127">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

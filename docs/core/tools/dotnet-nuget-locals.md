@@ -7,80 +7,79 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 2b66198ac3e33c640abda0c96fb05944f5ea91df
-ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="dotnet-nuget-locals"></a>dotnet nuget locals
+# <a name="dotnet-nuget-locals"></a><span data-ttu-id="30216-103">dotnet nuget locals</span><span class="sxs-lookup"><span data-stu-id="30216-103">dotnet nuget locals</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a><span data-ttu-id="30216-104">Nome</span><span class="sxs-lookup"><span data-stu-id="30216-104">Name</span></span>
 
-`dotnet nuget locals`: cancella o elenca risorse NuGet locali.
+<span data-ttu-id="30216-105">`dotnet nuget locals`: cancella o elenca risorse NuGet locali.</span><span class="sxs-lookup"><span data-stu-id="30216-105">`dotnet nuget locals` - Clears or lists local NuGet resources.</span></span>
 
-## <a name="synopsis"></a>Riepilogo
+## <a name="synopsis"></a><span data-ttu-id="30216-106">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="30216-106">Synopsis</span></span>
 
 `dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a><span data-ttu-id="30216-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="30216-107">Description</span></span>
 
-Il comando `dotnet nuget locals` cancella o elenca risorse NuGet locali presenti nella cache delle richieste HTTP, nella cache temporanea o nella cartella globale dei pacchetti a livello di computer.
+<span data-ttu-id="30216-108">Il comando `dotnet nuget locals` cancella o elenca risorse NuGet locali presenti nella cache delle richieste HTTP, nella cache temporanea o nella cartella globale dei pacchetti a livello di computer.</span><span class="sxs-lookup"><span data-stu-id="30216-108">The `dotnet nuget locals` command clears or lists local NuGet resources in the http-request cache, temporary cache, or machine-wide global packages folder.</span></span>
 
-## <a name="arguments"></a>Argomenti
+## <a name="arguments"></a><span data-ttu-id="30216-109">Argomenti</span><span class="sxs-lookup"><span data-stu-id="30216-109">Arguments</span></span>
 
 `CACHE_LOCATION`
 
-Uno dei valori seguenti:
+<span data-ttu-id="30216-110">Uno dei valori seguenti:</span><span class="sxs-lookup"><span data-stu-id="30216-110">One of the following values:</span></span>
 
-* `all` - Indica che l'operazione specificata viene applicata a tutti i tipi di cache, ovvero alla cache delle richieste HTTP, alla cache globale dei pacchetti e alla cache temporanea.
-* `http-cache` - Indica che l'operazione specificata viene applicata soltanto alla cache delle richieste HTTP. Le altre posizioni di cache non sono interessate.
-* `global-packages` - Indica che l'operazione specificata viene applicata soltanto alla cache dei pacchetti globale. Le altre posizioni di cache non sono interessate.
-* `temp` - Indica che l'operazione specificata viene applicata soltanto alla cache temporanea. Le altre posizioni di cache non sono interessate.
+* <span data-ttu-id="30216-111">`all` - Indica che l'operazione specificata viene applicata a tutti i tipi di cache, ovvero alla cache delle richieste HTTP, alla cache globale dei pacchetti e alla cache temporanea.</span><span class="sxs-lookup"><span data-stu-id="30216-111">`all` - Indicates that the specified operation is applied to all cache types: http-request cache, global packages cache, and the temporary cache.</span></span>
+* <span data-ttu-id="30216-112">`http-cache` - Indica che l'operazione specificata viene applicata soltanto alla cache delle richieste HTTP.</span><span class="sxs-lookup"><span data-stu-id="30216-112">`http-cache` - Indicates that the specified operation is applied only to the http-request cache.</span></span> <span data-ttu-id="30216-113">Le altre posizioni di cache non sono interessate.</span><span class="sxs-lookup"><span data-stu-id="30216-113">The other cache locations are not affected.</span></span>
+* <span data-ttu-id="30216-114">`global-packages` - Indica che l'operazione specificata viene applicata soltanto alla cache dei pacchetti globale.</span><span class="sxs-lookup"><span data-stu-id="30216-114">`global-packages` - Indicates that the specified operation is applied only to the global packages cache.</span></span> <span data-ttu-id="30216-115">Le altre posizioni di cache non sono interessate.</span><span class="sxs-lookup"><span data-stu-id="30216-115">The other cache locations are not affected.</span></span>
+* <span data-ttu-id="30216-116">`temp` - Indica che l'operazione specificata viene applicata soltanto alla cache temporanea.</span><span class="sxs-lookup"><span data-stu-id="30216-116">`temp` - Indicates that the specified operation is applied only to the temporary cache.</span></span> <span data-ttu-id="30216-117">Le altre posizioni di cache non sono interessate.</span><span class="sxs-lookup"><span data-stu-id="30216-117">The other cache locations are not affected.</span></span>
 
-## <a name="options"></a>Opzioni
+## <a name="options"></a><span data-ttu-id="30216-118">Opzioni</span><span class="sxs-lookup"><span data-stu-id="30216-118">Options</span></span>
 
 `-h|--help`
 
-Stampa una breve guida per il comando.
+<span data-ttu-id="30216-119">Stampa una breve guida per il comando.</span><span class="sxs-lookup"><span data-stu-id="30216-119">Prints out a short help for the command.</span></span>
 
 `-c|--clear`
 
-L'opzione "clear" consente di eseguire un'operazione di cancellazione sul tipo di cache specificato. Il contenuto delle directory della cache viene eliminato in modo ricorsivo. L'utente o il gruppo che esegue l'operazione deve disporre delle autorizzazioni per i file presenti nelle directory della cache. In caso contrario, viene visualizzato un messaggio di errore con l'indicazione delle cartelle e/o dei file che non sono stati cancellati.
+<span data-ttu-id="30216-120">L'opzione "clear" consente di eseguire un'operazione di cancellazione sul tipo di cache specificato.</span><span class="sxs-lookup"><span data-stu-id="30216-120">The clear option performs a clear operation on the specified cache type.</span></span> <span data-ttu-id="30216-121">Il contenuto delle directory della cache viene eliminato in modo ricorsivo.</span><span class="sxs-lookup"><span data-stu-id="30216-121">The contents of the cache directories are deleted recursively.</span></span> <span data-ttu-id="30216-122">L'utente o il gruppo che esegue l'operazione deve disporre delle autorizzazioni per i file presenti nelle directory della cache.</span><span class="sxs-lookup"><span data-stu-id="30216-122">The executing user/group must have permission to the files in the cache directories.</span></span> <span data-ttu-id="30216-123">In caso contrario, viene visualizzato un messaggio di errore con l'indicazione delle cartelle e/o dei file che non sono stati cancellati.</span><span class="sxs-lookup"><span data-stu-id="30216-123">If not, an error is displayed indicating the files/folders which were not cleared.</span></span>
 
 `-l|--list`
 
-L'opzione "list" viene usata per visualizzare la posizione del tipo di cache specificato. 
+<span data-ttu-id="30216-124">L'opzione "list" viene usata per visualizzare la posizione del tipo di cache specificato.</span><span class="sxs-lookup"><span data-stu-id="30216-124">The list option is used to display the location of the specified cache type.</span></span> 
 
 `--force-english-output`
 
-Forza la visualizzazione dell'output della riga di comando in inglese.
+<span data-ttu-id="30216-125">Forza la visualizzazione dell'output della riga di comando in inglese.</span><span class="sxs-lookup"><span data-stu-id="30216-125">Forces command-line output in English.</span></span>
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a><span data-ttu-id="30216-126">Esempi</span><span class="sxs-lookup"><span data-stu-id="30216-126">Examples</span></span>
 
-Visualizza i percorsi di tutte le directory locali della cache, ovvero directory della cache HTTP, directory della cache globale dei pacchetti e directory della cache temporanea:
+<span data-ttu-id="30216-127">Visualizza i percorsi di tutte le directory locali della cache, ovvero directory della cache HTTP, directory della cache globale dei pacchetti e directory della cache temporanea:</span><span class="sxs-lookup"><span data-stu-id="30216-127">Displays the paths of all the local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
 
 `dotnet nuget locals –l all`
 
-Visualizza il percorso della directory locale della cache HTTP:
+<span data-ttu-id="30216-128">Visualizza il percorso della directory locale della cache HTTP:</span><span class="sxs-lookup"><span data-stu-id="30216-128">Displays the path for the local http-cache directory:</span></span>
 
 `dotnet nuget locals --list http-cache`
 
-Cancella tutti i file da tutte le directory locali della cache, ovvero directory della cache HTTP, directory della cache globale dei pacchetti e directory della cache temporanea:
+<span data-ttu-id="30216-129">Cancella tutti i file da tutte le directory locali della cache, ovvero directory della cache HTTP, directory della cache globale dei pacchetti e directory della cache temporanea:</span><span class="sxs-lookup"><span data-stu-id="30216-129">Clears all files from all local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
 
 `dotnet nuget locals --clear all`
 
-Cancella tutti i file presenti nella directory locale della cache globale dei pacchetti:
+<span data-ttu-id="30216-130">Cancella tutti i file presenti nella directory locale della cache globale dei pacchetti:</span><span class="sxs-lookup"><span data-stu-id="30216-130">Clears all files in local global-packages cache directory:</span></span>
 
 `dotnet nuget locals -c global-packages`
 
-Cancella tutti i file presenti nella directory locale della cache temporanea:
+<span data-ttu-id="30216-131">Cancella tutti i file presenti nella directory locale della cache temporanea:</span><span class="sxs-lookup"><span data-stu-id="30216-131">Clears all files in local temporary cache directory:</span></span>
 
 `dotnet nuget locals -c temp`
 
-## <a name="troubleshooting"></a>Risoluzione dei problemi
+## <a name="troubleshooting"></a><span data-ttu-id="30216-132">Risoluzione dei problemi</span><span class="sxs-lookup"><span data-stu-id="30216-132">Troubleshooting</span></span>
 
-Per informazioni su problemi ed errori comuni relativi all'uso del comando `dotnet nuget locals`, vedere [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache) (Gestione della cache NuGet).
+<span data-ttu-id="30216-133">Per informazioni su problemi ed errori comuni relativi all'uso del comando `dotnet nuget locals`, vedere [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache) (Gestione della cache NuGet).</span><span class="sxs-lookup"><span data-stu-id="30216-133">For information on common problems and errors while using the `dotnet nuget locals` command, see [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache).</span></span>

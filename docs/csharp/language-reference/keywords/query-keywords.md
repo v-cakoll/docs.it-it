@@ -1,65 +1,46 @@
 ---
 title: Parole chiave di query (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 30526e7bc4f99110d421855866381d9b7934d31c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6dadce6d48e711032cca03a7f7c2ba02360e685f
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="query-keywords-c-reference"></a>Parole chiave di query (Riferimenti per C#)
-Questa sezione contiene le parole chiave contestuali usate nelle espressioni di query.  
+# <a name="query-keywords-c-reference"></a><span data-ttu-id="cbbae-102">Parole chiave di query (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="cbbae-102">Query Keywords (C# Reference)</span></span>
+<span data-ttu-id="cbbae-103">Questa sezione contiene le parole chiave contestuali usate nelle espressioni di query.</span><span class="sxs-lookup"><span data-stu-id="cbbae-103">This section contains the contextual keywords used in query expressions.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a><span data-ttu-id="cbbae-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="cbbae-104">In This Section</span></span>  
   
-|Clausola|Descrizione|  
+|<span data-ttu-id="cbbae-105">Clausola</span><span class="sxs-lookup"><span data-stu-id="cbbae-105">Clause</span></span>|<span data-ttu-id="cbbae-106">Descrizione</span><span class="sxs-lookup"><span data-stu-id="cbbae-106">Description</span></span>|  
 |------------|-----------------|  
-|[from](../../../csharp/language-reference/keywords/from-clause.md)|Specifica un'origine dati e una variabile di intervallo (simile a una variabile di iterazione).|  
-|[where](../../../csharp/language-reference/keywords/where-clause.md)|Filtra gli elementi di origine in base a una o più espressioni booleane separate da operatori logici AND e OR (`&&` o <code>&#124;&#124;</code>).|  
-|[select](../../../csharp/language-reference/keywords/select-clause.md)|Specifica il tipo e la forma che avranno gli elementi nella sequenza restituita quando verrà eseguita la query.|  
-|[group](../../../csharp/language-reference/keywords/group-clause.md)|Raggruppa i risultati delle query in base a un valore di chiave specificato.|  
-|[into](../../../csharp/language-reference/keywords/into.md)|Fornisce un identificatore che può servire come riferimento ai risultati di una clausola join, group o select.|  
-|[orderby](../../../csharp/language-reference/keywords/orderby-clause.md)|Ordina i risultati delle query in ordine crescente o decrescente in base all'operatore di confronto predefinito per il tipo di elemento.|  
-|[join](../../../csharp/language-reference/keywords/join-clause.md)|Unisce due origini dati in base a un confronto di uguaglianza tra due criteri di corrispondenza specificati.|  
-|[let](../../../csharp/language-reference/keywords/let-clause.md)|Introduce una variabile di intervallo per archiviare i risultati delle sottoespressioni in un'espressione di query.|  
-|[in](../../../csharp/language-reference/keywords/in.md)|Parola chiave contestuale in una clausola [join](../../../csharp/language-reference/keywords/join-clause.md).|  
-|[on](../../../csharp/language-reference/keywords/on.md)|Parola chiave contestuale in una clausola [join](../../../csharp/language-reference/keywords/join-clause.md).|  
-|[equals](../../../csharp/language-reference/keywords/equals.md)|Parola chiave contestuale in una clausola [join](../../../csharp/language-reference/keywords/join-clause.md).|  
-|[by](../../../csharp/language-reference/keywords/by.md)|Parola chiave contestuale in una clausola [group](../../../csharp/language-reference/keywords/group-clause.md).|  
-|[ascending](../../../csharp/language-reference/keywords/ascending.md)|Parola chiave contestuale in una clausola [orderby](../../../csharp/language-reference/keywords/orderby-clause.md).|  
-|[descending](../../../csharp/language-reference/keywords/descending.md)|Parola chiave contestuale in una clausola [orderby](../../../csharp/language-reference/keywords/orderby-clause.md).|  
+|[<span data-ttu-id="cbbae-107">from</span><span class="sxs-lookup"><span data-stu-id="cbbae-107">from</span></span>](../../../csharp/language-reference/keywords/from-clause.md)|<span data-ttu-id="cbbae-108">Specifica un'origine dati e una variabile di intervallo (simile a una variabile di iterazione).</span><span class="sxs-lookup"><span data-stu-id="cbbae-108">Specifies a data source and a range variable (similar to an iteration variable).</span></span>|  
+|[<span data-ttu-id="cbbae-109">where</span><span class="sxs-lookup"><span data-stu-id="cbbae-109">where</span></span>](../../../csharp/language-reference/keywords/where-clause.md)|<span data-ttu-id="cbbae-110">Filtra gli elementi di origine in base a una o più espressioni booleane separate da operatori logici AND e OR (`&&` o <code>&#124;&#124;</code>).</span><span class="sxs-lookup"><span data-stu-id="cbbae-110">Filters source elements based on one or more Boolean expressions separated by logical AND and OR operators ( `&&` or <code>&#124;&#124;</code> ).</span></span>|  
+|[<span data-ttu-id="cbbae-111">select</span><span class="sxs-lookup"><span data-stu-id="cbbae-111">select</span></span>](../../../csharp/language-reference/keywords/select-clause.md)|<span data-ttu-id="cbbae-112">Specifica il tipo e la forma che avranno gli elementi nella sequenza restituita quando verrà eseguita la query.</span><span class="sxs-lookup"><span data-stu-id="cbbae-112">Specifies the type and shape that the elements in the returned sequence will have when the query is executed.</span></span>|  
+|[<span data-ttu-id="cbbae-113">group</span><span class="sxs-lookup"><span data-stu-id="cbbae-113">group</span></span>](../../../csharp/language-reference/keywords/group-clause.md)|<span data-ttu-id="cbbae-114">Raggruppa i risultati delle query in base a un valore di chiave specificato.</span><span class="sxs-lookup"><span data-stu-id="cbbae-114">Groups query results according to a specified key value.</span></span>|  
+|[<span data-ttu-id="cbbae-115">into</span><span class="sxs-lookup"><span data-stu-id="cbbae-115">into</span></span>](../../../csharp/language-reference/keywords/into.md)|<span data-ttu-id="cbbae-116">Fornisce un identificatore che può servire come riferimento ai risultati di una clausola join, group o select.</span><span class="sxs-lookup"><span data-stu-id="cbbae-116">Provides an identifier that can serve as a reference to the results of a join, group or select clause.</span></span>|  
+|[<span data-ttu-id="cbbae-117">orderby</span><span class="sxs-lookup"><span data-stu-id="cbbae-117">orderby</span></span>](../../../csharp/language-reference/keywords/orderby-clause.md)|<span data-ttu-id="cbbae-118">Ordina i risultati delle query in ordine crescente o decrescente in base all'operatore di confronto predefinito per il tipo di elemento.</span><span class="sxs-lookup"><span data-stu-id="cbbae-118">Sorts query results in ascending or descending order based on the default comparer for the element type.</span></span>|  
+|[<span data-ttu-id="cbbae-119">join</span><span class="sxs-lookup"><span data-stu-id="cbbae-119">join</span></span>](../../../csharp/language-reference/keywords/join-clause.md)|<span data-ttu-id="cbbae-120">Unisce due origini dati in base a un confronto di uguaglianza tra due criteri di corrispondenza specificati.</span><span class="sxs-lookup"><span data-stu-id="cbbae-120">Joins two data sources based on an equality comparison between two specified matching criteria.</span></span>|  
+|[<span data-ttu-id="cbbae-121">let</span><span class="sxs-lookup"><span data-stu-id="cbbae-121">let</span></span>](../../../csharp/language-reference/keywords/let-clause.md)|<span data-ttu-id="cbbae-122">Introduce una variabile di intervallo per archiviare i risultati delle sottoespressioni in un'espressione di query.</span><span class="sxs-lookup"><span data-stu-id="cbbae-122">Introduces a range variable to store sub-expression results in a query expression.</span></span>|  
+|[<span data-ttu-id="cbbae-123">in</span><span class="sxs-lookup"><span data-stu-id="cbbae-123">in</span></span>](../../../csharp/language-reference/keywords/in.md)|<span data-ttu-id="cbbae-124">Parola chiave contestuale in una clausola [join](../../../csharp/language-reference/keywords/join-clause.md).</span><span class="sxs-lookup"><span data-stu-id="cbbae-124">Contextual keyword in a [join](../../../csharp/language-reference/keywords/join-clause.md) clause.</span></span>|  
+|[<span data-ttu-id="cbbae-125">on</span><span class="sxs-lookup"><span data-stu-id="cbbae-125">on</span></span>](../../../csharp/language-reference/keywords/on.md)|<span data-ttu-id="cbbae-126">Parola chiave contestuale in una clausola [join](../../../csharp/language-reference/keywords/join-clause.md).</span><span class="sxs-lookup"><span data-stu-id="cbbae-126">Contextual keyword in a [join](../../../csharp/language-reference/keywords/join-clause.md) clause.</span></span>|  
+|[<span data-ttu-id="cbbae-127">equals</span><span class="sxs-lookup"><span data-stu-id="cbbae-127">equals</span></span>](../../../csharp/language-reference/keywords/equals.md)|<span data-ttu-id="cbbae-128">Parola chiave contestuale in una clausola [join](../../../csharp/language-reference/keywords/join-clause.md).</span><span class="sxs-lookup"><span data-stu-id="cbbae-128">Contextual keyword in a [join](../../../csharp/language-reference/keywords/join-clause.md) clause.</span></span>|  
+|[<span data-ttu-id="cbbae-129">by</span><span class="sxs-lookup"><span data-stu-id="cbbae-129">by</span></span>](../../../csharp/language-reference/keywords/by.md)|<span data-ttu-id="cbbae-130">Parola chiave contestuale in una clausola [group](../../../csharp/language-reference/keywords/group-clause.md).</span><span class="sxs-lookup"><span data-stu-id="cbbae-130">Contextual keyword in a [group](../../../csharp/language-reference/keywords/group-clause.md) clause.</span></span>|  
+|[<span data-ttu-id="cbbae-131">ascending</span><span class="sxs-lookup"><span data-stu-id="cbbae-131">ascending</span></span>](../../../csharp/language-reference/keywords/ascending.md)|<span data-ttu-id="cbbae-132">Parola chiave contestuale in una clausola [orderby](../../../csharp/language-reference/keywords/orderby-clause.md).</span><span class="sxs-lookup"><span data-stu-id="cbbae-132">Contextual keyword in an [orderby](../../../csharp/language-reference/keywords/orderby-clause.md) clause.</span></span>|  
+|[<span data-ttu-id="cbbae-133">descending</span><span class="sxs-lookup"><span data-stu-id="cbbae-133">descending</span></span>](../../../csharp/language-reference/keywords/descending.md)|<span data-ttu-id="cbbae-134">Parola chiave contestuale in una clausola [orderby](../../../csharp/language-reference/keywords/orderby-clause.md).</span><span class="sxs-lookup"><span data-stu-id="cbbae-134">Contextual keyword in an [orderby](../../../csharp/language-reference/keywords/orderby-clause.md) clause.</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [Espressioni di query LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Nozioni di base su LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="cbbae-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cbbae-135">See Also</span></span>  
+ [<span data-ttu-id="cbbae-136">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="cbbae-136">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="cbbae-137">LINQ (Language-Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="cbbae-137">LINQ (Language-Integrated Query)</span></span>](../../programming-guide/concepts/linq/index.md)  
+ [<span data-ttu-id="cbbae-138">Espressioni di query LINQ</span><span class="sxs-lookup"><span data-stu-id="cbbae-138">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [<span data-ttu-id="cbbae-139">Nozioni di base su LINQ in C#</span><span class="sxs-lookup"><span data-stu-id="cbbae-139">Getting Started with LINQ in C#</span></span>](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

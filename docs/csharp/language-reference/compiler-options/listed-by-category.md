@@ -1,138 +1,119 @@
 ---
 title: Opzioni del compilatore C# elencate per categoria
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - Visual C# compiler, options listed by category
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c95c5c3d1c7ea2461e9bda9a1d58464e97ccc688
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
-ms.openlocfilehash: 584d0cb249644e6b4ffe15e115c49256f5fa2716
-ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="c-compiler-options-listed-by-category"></a>Opzioni del compilatore C# elencate per categoria
-Le seguenti opzioni del compilatore sono ordinate per categoria. Per un elenco alfabetico, vedere [Opzioni del compilatore C# in ordine alfabetico](../../../csharp/language-reference/compiler-options/listed-alphabetically.md).  
+# <a name="c-compiler-options-listed-by-category"></a><span data-ttu-id="2a6a1-102">Opzioni del compilatore C# elencate per categoria</span><span class="sxs-lookup"><span data-stu-id="2a6a1-102">C# Compiler Options Listed by Category</span></span>
+<span data-ttu-id="2a6a1-103">Le seguenti opzioni del compilatore sono ordinate per categoria.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-103">The following compiler options are sorted by category.</span></span> <span data-ttu-id="2a6a1-104">Per un elenco alfabetico, vedere [Opzioni del compilatore C# in ordine alfabetico](../../../csharp/language-reference/compiler-options/listed-alphabetically.md).</span><span class="sxs-lookup"><span data-stu-id="2a6a1-104">For an alphabetical list, see [C# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md).</span></span>  
   
-### <a name="optimization"></a>Ottimizzazione  
+### <a name="optimization"></a><span data-ttu-id="2a6a1-105">Ottimizzazione</span><span class="sxs-lookup"><span data-stu-id="2a6a1-105">Optimization</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a6a1-106">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a6a1-106">Option</span></span>|<span data-ttu-id="2a6a1-107">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a6a1-107">Purpose</span></span>|  
 |------------|-------------|  
-|[/filealign](../../../csharp/language-reference/compiler-options/filealign-compiler-option.md)|Specifica le dimensioni delle sezioni nel file di output.|  
-|[/optimize](../../../csharp/language-reference/compiler-options/optimize-compiler-option.md)|Abilita/disabilita le ottimizzazioni.|  
+|[<span data-ttu-id="2a6a1-108">/filealign</span><span class="sxs-lookup"><span data-stu-id="2a6a1-108">/filealign</span></span>](../../../csharp/language-reference/compiler-options/filealign-compiler-option.md)|<span data-ttu-id="2a6a1-109">Specifica le dimensioni delle sezioni nel file di output.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-109">Specifies the size of sections in the output file.</span></span>|  
+|[<span data-ttu-id="2a6a1-110">/optimize</span><span class="sxs-lookup"><span data-stu-id="2a6a1-110">/optimize</span></span>](../../../csharp/language-reference/compiler-options/optimize-compiler-option.md)|<span data-ttu-id="2a6a1-111">Abilita/disabilita le ottimizzazioni.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-111">Enables/disables optimizations.</span></span>|  
   
-### <a name="output-files"></a>File di output  
+### <a name="output-files"></a><span data-ttu-id="2a6a1-112">File di output</span><span class="sxs-lookup"><span data-stu-id="2a6a1-112">Output Files</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a6a1-113">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a6a1-113">Option</span></span>|<span data-ttu-id="2a6a1-114">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a6a1-114">Purpose</span></span>|  
 |------------|-------------|  
-|[/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)|Specifica un file XML in cui vengono scritti i commenti sulla documentazione elaborati.|  
-|[/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md)|Specifica il file di output.|  
-|[/pdb](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|Specifica il nome file e il percorso del file pdb.|  
-|[/platform](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|Specificare la piattaforma di output.|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Specificare una lingua per l'output del compilatore.|  
-|[/refout](refout-compiler-option.md)|Generare un assembly di riferimento oltre all'assembly principale.|  
-|[/refonly](refonly-compiler-option.md)|Generare un assembly di riferimento invece dell'assembly principale.|  
-|[/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|Specifica il formato del file di output tramite una delle cinque opzioni seguenti: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) o [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).|  
-|/modulename:\<string>|Specificare il nome del modulo di origine|  
+|[<span data-ttu-id="2a6a1-115">/doc</span><span class="sxs-lookup"><span data-stu-id="2a6a1-115">/doc</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)|<span data-ttu-id="2a6a1-116">Specifica un file XML in cui vengono scritti i commenti sulla documentazione elaborati.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-116">Specifies an XML file where processed documentation comments are to be written.</span></span>|  
+|[<span data-ttu-id="2a6a1-117">/out</span><span class="sxs-lookup"><span data-stu-id="2a6a1-117">/out</span></span>](../../../csharp/language-reference/compiler-options/out-compiler-option.md)|<span data-ttu-id="2a6a1-118">Specifica il file di output.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-118">Specifies the output file.</span></span>|  
+|[<span data-ttu-id="2a6a1-119">/pdb</span><span class="sxs-lookup"><span data-stu-id="2a6a1-119">/pdb</span></span>](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|<span data-ttu-id="2a6a1-120">Specifica il nome file e il percorso del file pdb.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-120">Specifies the file name and location of the .pdb file.</span></span>|  
+|[<span data-ttu-id="2a6a1-121">/platform</span><span class="sxs-lookup"><span data-stu-id="2a6a1-121">/platform</span></span>](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|<span data-ttu-id="2a6a1-122">Specificare la piattaforma di output.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-122">Specify the output platform.</span></span>|  
+|[<span data-ttu-id="2a6a1-123">/preferreduilang</span><span class="sxs-lookup"><span data-stu-id="2a6a1-123">/preferreduilang</span></span>](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|<span data-ttu-id="2a6a1-124">Specificare una lingua per l'output del compilatore.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-124">Specify a language for compiler output.</span></span>|  
+|[<span data-ttu-id="2a6a1-125">/refout</span><span class="sxs-lookup"><span data-stu-id="2a6a1-125">/refout</span></span>](refout-compiler-option.md)|<span data-ttu-id="2a6a1-126">Generare un assembly di riferimento oltre all'assembly principale.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-126">Generate a reference assembly in addition to the primary assembly.</span></span>|  
+|[<span data-ttu-id="2a6a1-127">/refonly</span><span class="sxs-lookup"><span data-stu-id="2a6a1-127">/refonly</span></span>](refonly-compiler-option.md)|<span data-ttu-id="2a6a1-128">Generare un assembly di riferimento invece dell'assembly principale.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-128">Generate a reference assembly instead of a primary assembly.</span></span>|  
+|[<span data-ttu-id="2a6a1-129">/target</span><span class="sxs-lookup"><span data-stu-id="2a6a1-129">/target</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|<span data-ttu-id="2a6a1-130">Specifica il formato del file di output tramite una delle cinque opzioni seguenti: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) o [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="2a6a1-130">Specifies the format of the output file using one of five options: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), or [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).</span></span>|  
+|<span data-ttu-id="2a6a1-131">/modulename:\<string></span><span class="sxs-lookup"><span data-stu-id="2a6a1-131">/modulename:\<string></span></span>|<span data-ttu-id="2a6a1-132">Specificare il nome del modulo di origine</span><span class="sxs-lookup"><span data-stu-id="2a6a1-132">Specify the name of the source module</span></span>|  
   
-### <a name="net-framework-assemblies"></a>Assembly .NET Framework  
+### <a name="net-framework-assemblies"></a><span data-ttu-id="2a6a1-133">Assembly .NET Framework</span><span class="sxs-lookup"><span data-stu-id="2a6a1-133">.NET Framework Assemblies</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a6a1-134">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a6a1-134">Option</span></span>|<span data-ttu-id="2a6a1-135">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a6a1-135">Purpose</span></span>|  
 |------------|-------------|  
-|[/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|Specifica uno o più moduli che devono fare parte di questo assembly.|  
-|[/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)|Indica al compilatore di aggiungere la chiave pubblica e di lasciare l'assembly non firmato.|  
-|[/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)|Specifica il nome del contenitore di chiavi crittografiche.|  
-|[/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)|Specifica il nome file contenente la chiave crittografica.|  
-|[/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)|Specifica la posizione degli assembly a cui si fa riferimento tramite [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).|  
-|[/nostdlib](../../../csharp/language-reference/compiler-options/nostdlib-compiler-option.md)|Indica al compilatore non di non fare importare la libreria standard (mscorlib.dll).|  
-|[/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|Importa i metadati da un file contenente un assembly.|  
-|/analyzer|Esegue gli analizzatori da questo assembly (forma breve: /a)|  
-|/additionalfile|Assegna un nome ad altri file che non influiscono direttamente sulla generazione del codice, ma possono essere usati dagli analizzatori per produrre errori o avvisi.|  
+|[<span data-ttu-id="2a6a1-136">/addmodule</span><span class="sxs-lookup"><span data-stu-id="2a6a1-136">/addmodule</span></span>](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|<span data-ttu-id="2a6a1-137">Specifica uno o più moduli che devono fare parte di questo assembly.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-137">Specifies one or more modules to be part of this assembly.</span></span>|  
+|[<span data-ttu-id="2a6a1-138">/delaysign</span><span class="sxs-lookup"><span data-stu-id="2a6a1-138">/delaysign</span></span>](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)|<span data-ttu-id="2a6a1-139">Indica al compilatore di aggiungere la chiave pubblica e di lasciare l'assembly non firmato.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-139">Instructs the compiler to add the public key but to leave the assembly unsigned.</span></span>|  
+|[<span data-ttu-id="2a6a1-140">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="2a6a1-140">/keycontainer</span></span>](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)|<span data-ttu-id="2a6a1-141">Specifica il nome del contenitore di chiavi crittografiche.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-141">Specifies the name of the cryptographic key container.</span></span>|  
+|[<span data-ttu-id="2a6a1-142">/keyfile</span><span class="sxs-lookup"><span data-stu-id="2a6a1-142">/keyfile</span></span>](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)|<span data-ttu-id="2a6a1-143">Specifica il nome file contenente la chiave crittografica.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-143">Specifies the filename containing the cryptographic key.</span></span>|  
+|[<span data-ttu-id="2a6a1-144">/lib</span><span class="sxs-lookup"><span data-stu-id="2a6a1-144">/lib</span></span>](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)|<span data-ttu-id="2a6a1-145">Specifica la posizione degli assembly a cui si fa riferimento tramite [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="2a6a1-145">Specifies the location of assemblies referenced by means of [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span></span>|  
+|[<span data-ttu-id="2a6a1-146">/nostdlib</span><span class="sxs-lookup"><span data-stu-id="2a6a1-146">/nostdlib</span></span>](../../../csharp/language-reference/compiler-options/nostdlib-compiler-option.md)|<span data-ttu-id="2a6a1-147">Indica al compilatore non di non fare importare la libreria standard (mscorlib.dll).</span><span class="sxs-lookup"><span data-stu-id="2a6a1-147">Instructs the compiler not to import the standard library (mscorlib.dll).</span></span>|  
+|[<span data-ttu-id="2a6a1-148">/reference</span><span class="sxs-lookup"><span data-stu-id="2a6a1-148">/reference</span></span>](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|<span data-ttu-id="2a6a1-149">Importa i metadati da un file contenente un assembly.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-149">Imports metadata from a file that contains an assembly.</span></span>|  
+|<span data-ttu-id="2a6a1-150">/analyzer</span><span class="sxs-lookup"><span data-stu-id="2a6a1-150">/analyzer</span></span>|<span data-ttu-id="2a6a1-151">Esegue gli analizzatori da questo assembly (forma breve: /a)</span><span class="sxs-lookup"><span data-stu-id="2a6a1-151">Run the analyzers from this assembly (Short form: /a)</span></span>|  
+|<span data-ttu-id="2a6a1-152">/additionalfile</span><span class="sxs-lookup"><span data-stu-id="2a6a1-152">/additionalfile</span></span>|<span data-ttu-id="2a6a1-153">Assegna un nome ad altri file che non influiscono direttamente sulla generazione del codice, ma possono essere usati dagli analizzatori per produrre errori o avvisi.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-153">Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.</span></span>|  
   
-### <a name="debuggingerror-checking"></a>Debug/Controllo errori  
+### <a name="debuggingerror-checking"></a><span data-ttu-id="2a6a1-154">Debug/Controllo errori</span><span class="sxs-lookup"><span data-stu-id="2a6a1-154">Debugging/Error Checking</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a6a1-155">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a6a1-155">Option</span></span>|<span data-ttu-id="2a6a1-156">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a6a1-156">Purpose</span></span>|  
 |------------|-------------|  
-|[/bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Crea un file contenente informazioni che rendono più semplice segnalare un bug.|  
-|[/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|Specifica se il calcolo di interi che supera i limiti del tipo di dati genererà un'eccezione in fase di esecuzione.|  
-|[/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md)|Indica al compilatore di generare informazioni di debug.|  
-|[/errorreport](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)|Imposta il comportamento relativo alla segnalazione degli errori.|  
-|[/fullpaths](../../../csharp/language-reference/compiler-options/fullpaths-compiler-option.md)|Specifica il percorso assoluto del file nell'output del compilatore.|  
-|[/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)|Elimina la generazione degli avvisi specificati da parte del compilatore.|  
-|[/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)|Imposta il livello degli avvisi.|  
-|[/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md)|Alza il livello degli avvisi a errori.|  
-|/ruleset:\<file>|Specificare un file di set di regole che disabilita la diagnostica specifica.|  
+|[<span data-ttu-id="2a6a1-157">/bugreport</span><span class="sxs-lookup"><span data-stu-id="2a6a1-157">/bugreport</span></span>](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|<span data-ttu-id="2a6a1-158">Crea un file contenente informazioni che rendono più semplice segnalare un bug.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-158">Creates a file that contains information that makes it easy to report a bug.</span></span>|  
+|[<span data-ttu-id="2a6a1-159">/checked</span><span class="sxs-lookup"><span data-stu-id="2a6a1-159">/checked</span></span>](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|<span data-ttu-id="2a6a1-160">Specifica se il calcolo di interi che supera i limiti del tipo di dati genererà un'eccezione in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-160">Specifies whether integer arithmetic that overflows the bounds of the data type will cause an exception at run time.</span></span>|  
+|[<span data-ttu-id="2a6a1-161">/debug</span><span class="sxs-lookup"><span data-stu-id="2a6a1-161">/debug</span></span>](../../../csharp/language-reference/compiler-options/debug-compiler-option.md)|<span data-ttu-id="2a6a1-162">Indica al compilatore di generare informazioni di debug.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-162">Instruct the compiler to emit debugging information.</span></span>|  
+|[<span data-ttu-id="2a6a1-163">/errorreport</span><span class="sxs-lookup"><span data-stu-id="2a6a1-163">/errorreport</span></span>](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)|<span data-ttu-id="2a6a1-164">Imposta il comportamento relativo alla segnalazione degli errori.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-164">Sets error reporting behavior.</span></span>|  
+|[<span data-ttu-id="2a6a1-165">/fullpaths</span><span class="sxs-lookup"><span data-stu-id="2a6a1-165">/fullpaths</span></span>](../../../csharp/language-reference/compiler-options/fullpaths-compiler-option.md)|<span data-ttu-id="2a6a1-166">Specifica il percorso assoluto del file nell'output del compilatore.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-166">Specifies the absolute path to the file in compiler output.</span></span>|  
+|[<span data-ttu-id="2a6a1-167">/nowarn</span><span class="sxs-lookup"><span data-stu-id="2a6a1-167">/nowarn</span></span>](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)|<span data-ttu-id="2a6a1-168">Elimina la generazione degli avvisi specificati da parte del compilatore.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-168">Suppresses the compiler's generation of specified warnings.</span></span>|  
+|[<span data-ttu-id="2a6a1-169">/warn</span><span class="sxs-lookup"><span data-stu-id="2a6a1-169">/warn</span></span>](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)|<span data-ttu-id="2a6a1-170">Imposta il livello degli avvisi.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-170">Sets the warning level.</span></span>|  
+|[<span data-ttu-id="2a6a1-171">/warnaserror</span><span class="sxs-lookup"><span data-stu-id="2a6a1-171">/warnaserror</span></span>](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md)|<span data-ttu-id="2a6a1-172">Alza il livello degli avvisi a errori.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-172">Promotes warnings to errors.</span></span>|  
+|<span data-ttu-id="2a6a1-173">/ruleset:\<file></span><span class="sxs-lookup"><span data-stu-id="2a6a1-173">/ruleset:\<file></span></span>|<span data-ttu-id="2a6a1-174">Specificare un file di set di regole che disabilita la diagnostica specifica.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-174">Specify a ruleset file that disables specific diagnostics.</span></span>|  
   
-### <a name="preprocessor"></a>Preprocessore  
+### <a name="preprocessor"></a><span data-ttu-id="2a6a1-175">Preprocessore</span><span class="sxs-lookup"><span data-stu-id="2a6a1-175">Preprocessor</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a6a1-176">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a6a1-176">Option</span></span>|<span data-ttu-id="2a6a1-177">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a6a1-177">Purpose</span></span>|  
 |------------|-------------|  
-|[/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md)|Definisce i simboli del preprocessore.|  
+|[<span data-ttu-id="2a6a1-178">/define</span><span class="sxs-lookup"><span data-stu-id="2a6a1-178">/define</span></span>](../../../csharp/language-reference/compiler-options/define-compiler-option.md)|<span data-ttu-id="2a6a1-179">Definisce i simboli del preprocessore.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-179">Defines preprocessor symbols.</span></span>|  
   
-### <a name="resources"></a>Risorse  
+### <a name="resources"></a><span data-ttu-id="2a6a1-180">Risorse</span><span class="sxs-lookup"><span data-stu-id="2a6a1-180">Resources</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a6a1-181">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a6a1-181">Option</span></span>|<span data-ttu-id="2a6a1-182">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a6a1-182">Purpose</span></span>|  
 |------------|-------------|  
-|[/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)|Rende disponibili per il progetto le informazioni sui tipi COM negli assembly specificati.|  
-|[/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)|Crea un collegamento a una risorsa gestita.|  
-|[/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|Incorpora una risorsa di .NET Framework nel file di output.|  
-|[/win32icon](../../../csharp/language-reference/compiler-options/win32icon-compiler-option.md)|Specifica un file ico da inserire nel file di output.|  
-|[/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)|Specifica una risorsa Win32 da inserire nel file di output.|  
+|[<span data-ttu-id="2a6a1-183">/link</span><span class="sxs-lookup"><span data-stu-id="2a6a1-183">/link</span></span>](../../../csharp/language-reference/compiler-options/link-compiler-option.md)|<span data-ttu-id="2a6a1-184">Rende disponibili per il progetto le informazioni sui tipi COM negli assembly specificati.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-184">Makes COM type information in specified assemblies available to the project.</span></span>|  
+|[<span data-ttu-id="2a6a1-185">/linkresource</span><span class="sxs-lookup"><span data-stu-id="2a6a1-185">/linkresource</span></span>](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)|<span data-ttu-id="2a6a1-186">Crea un collegamento a una risorsa gestita.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-186">Creates a link to a managed resource.</span></span>|  
+|[<span data-ttu-id="2a6a1-187">/resource</span><span class="sxs-lookup"><span data-stu-id="2a6a1-187">/resource</span></span>](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|<span data-ttu-id="2a6a1-188">Incorpora una risorsa di .NET Framework nel file di output.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-188">Embeds a .NET Framework resource into the output file.</span></span>|  
+|[<span data-ttu-id="2a6a1-189">/win32icon</span><span class="sxs-lookup"><span data-stu-id="2a6a1-189">/win32icon</span></span>](../../../csharp/language-reference/compiler-options/win32icon-compiler-option.md)|<span data-ttu-id="2a6a1-190">Specifica un file ico da inserire nel file di output.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-190">Specifies an .ico file to insert into the output file.</span></span>|  
+|[<span data-ttu-id="2a6a1-191">/win32res</span><span class="sxs-lookup"><span data-stu-id="2a6a1-191">/win32res</span></span>](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)|<span data-ttu-id="2a6a1-192">Specifica una risorsa Win32 da inserire nel file di output.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-192">Specifies a Win32 resource to insert into the output file.</span></span>|  
   
-### <a name="miscellaneous"></a>Varie  
+### <a name="miscellaneous"></a><span data-ttu-id="2a6a1-193">Varie</span><span class="sxs-lookup"><span data-stu-id="2a6a1-193">Miscellaneous</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a6a1-194">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a6a1-194">Option</span></span>|<span data-ttu-id="2a6a1-195">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a6a1-195">Purpose</span></span>|  
 |------------|-------------|  
-|[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|Specifica un file di risposta.|  
-|[/?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Elenca le opzioni del compilatore in stdout.|  
-|[/baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|Specifica l'indirizzo di base preferenziale in cui caricare una DLL.|  
-|[/codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|Specifica la tabella codici da usare per tutti i file del codice sorgente nella compilazione.|  
-|[/help](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Elenca le opzioni del compilatore in stdout.|  
-|[/highentropyva](../../../csharp/language-reference/compiler-options/highentropyva-compiler-option.md)|Specifica che il file eseguibile supporta ASLR (Address Space Layout Randomization).|  
-|[/langversion](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|Specifica la modalità della versione del linguaggio: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 o Latest |  
-|[/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md)|Specifica il percorso del metodo **Main**.|  
-|[/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)|Indica al compilatore di non eseguire la compilazione con csc.rsp.|  
-|[/nologo](../../../csharp/language-reference/compiler-options/nologo-compiler-option.md)|Elimina i messaggi informativi del compilatore.|  
-|[/recurse](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|Cerca nelle sottodirectory i file di origine da compilare.|  
-|[/subsystemversion](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|Specifica la versione minima del sottosistema che può essere utilizzata dal file eseguibile.|  
-|[/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)|Abilita la compilazione del codice che usa la parola chiave [unsafe](../../../csharp/language-reference/keywords/unsafe.md).|  
-|[/utf8output](../../../csharp/language-reference/compiler-options/utf8output-compiler-option.md)|Visualizza l'output del compilatore usando la codifica UTF-8.|  
-|/parallel[+&#124;-]|Specifica se usare la compilazione simultanea (+).|  
-|/checksumalgorithm:\<alg>|Specificare l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.  I valori supportati sono: SHA1 (predefinito) o SHA256.|  
+|[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|<span data-ttu-id="2a6a1-196">Specifica un file di risposta.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-196">Specifies a response file.</span></span>|  
+|[<span data-ttu-id="2a6a1-197">/?</span><span class="sxs-lookup"><span data-stu-id="2a6a1-197">/?</span></span>](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|<span data-ttu-id="2a6a1-198">Elenca le opzioni del compilatore in stdout.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-198">Lists compiler options to stdout.</span></span>|  
+|[<span data-ttu-id="2a6a1-199">/baseaddress</span><span class="sxs-lookup"><span data-stu-id="2a6a1-199">/baseaddress</span></span>](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|<span data-ttu-id="2a6a1-200">Specifica l'indirizzo di base preferenziale in cui caricare una DLL.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-200">Specifies the preferred base address at which to load a DLL.</span></span>|  
+|[<span data-ttu-id="2a6a1-201">/codepage</span><span class="sxs-lookup"><span data-stu-id="2a6a1-201">/codepage</span></span>](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|<span data-ttu-id="2a6a1-202">Specifica la tabella codici da usare per tutti i file del codice sorgente nella compilazione.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-202">Specifies the code page to use for all source code files in the compilation.</span></span>|  
+|[<span data-ttu-id="2a6a1-203">/help</span><span class="sxs-lookup"><span data-stu-id="2a6a1-203">/help</span></span>](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|<span data-ttu-id="2a6a1-204">Elenca le opzioni del compilatore in stdout.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-204">Lists compiler options to stdout.</span></span>|  
+|[<span data-ttu-id="2a6a1-205">/highentropyva</span><span class="sxs-lookup"><span data-stu-id="2a6a1-205">/highentropyva</span></span>](../../../csharp/language-reference/compiler-options/highentropyva-compiler-option.md)|<span data-ttu-id="2a6a1-206">Specifica che il file eseguibile supporta ASLR (Address Space Layout Randomization).</span><span class="sxs-lookup"><span data-stu-id="2a6a1-206">Specifies that the executable file supports address space layout randomization (ASLR).</span></span>|  
+|[<span data-ttu-id="2a6a1-207">/langversion</span><span class="sxs-lookup"><span data-stu-id="2a6a1-207">/langversion</span></span>](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|<span data-ttu-id="2a6a1-208">Specifica la modalità della versione del linguaggio: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 o Latest</span><span class="sxs-lookup"><span data-stu-id="2a6a1-208">Specify language version mode: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, or Latest</span></span> |  
+|[<span data-ttu-id="2a6a1-209">/main</span><span class="sxs-lookup"><span data-stu-id="2a6a1-209">/main</span></span>](../../../csharp/language-reference/compiler-options/main-compiler-option.md)|<span data-ttu-id="2a6a1-210">Specifica il percorso del metodo **Main**.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-210">Specifies the location of the **Main** method.</span></span>|  
+|[<span data-ttu-id="2a6a1-211">/noconfig</span><span class="sxs-lookup"><span data-stu-id="2a6a1-211">/noconfig</span></span>](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)|<span data-ttu-id="2a6a1-212">Indica al compilatore di non eseguire la compilazione con csc.rsp.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-212">Instructs the compiler not to compile with csc.rsp.</span></span>|  
+|[<span data-ttu-id="2a6a1-213">/nologo</span><span class="sxs-lookup"><span data-stu-id="2a6a1-213">/nologo</span></span>](../../../csharp/language-reference/compiler-options/nologo-compiler-option.md)|<span data-ttu-id="2a6a1-214">Elimina i messaggi informativi del compilatore.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-214">Suppresses compiler banner information.</span></span>|  
+|[<span data-ttu-id="2a6a1-215">/recurse</span><span class="sxs-lookup"><span data-stu-id="2a6a1-215">/recurse</span></span>](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|<span data-ttu-id="2a6a1-216">Cerca nelle sottodirectory i file di origine da compilare.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-216">Searches subdirectories for source files to compile.</span></span>|  
+|[<span data-ttu-id="2a6a1-217">/subsystemversion</span><span class="sxs-lookup"><span data-stu-id="2a6a1-217">/subsystemversion</span></span>](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|<span data-ttu-id="2a6a1-218">Specifica la versione minima del sottosistema che può essere utilizzata dal file eseguibile.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-218">Specifies the minimum version of the subsystem that the executable file can use.</span></span>|  
+|[<span data-ttu-id="2a6a1-219">/unsafe</span><span class="sxs-lookup"><span data-stu-id="2a6a1-219">/unsafe</span></span>](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)|<span data-ttu-id="2a6a1-220">Abilita la compilazione del codice che usa la parola chiave [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="2a6a1-220">Enables compilation of code that uses the [unsafe](../../../csharp/language-reference/keywords/unsafe.md) keyword.</span></span>|  
+|[<span data-ttu-id="2a6a1-221">/utf8output</span><span class="sxs-lookup"><span data-stu-id="2a6a1-221">/utf8output</span></span>](../../../csharp/language-reference/compiler-options/utf8output-compiler-option.md)|<span data-ttu-id="2a6a1-222">Visualizza l'output del compilatore usando la codifica UTF-8.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-222">Displays compiler output using UTF-8 encoding.</span></span>|  
+|<span data-ttu-id="2a6a1-223">/parallel[+&#124;-]</span><span class="sxs-lookup"><span data-stu-id="2a6a1-223">/parallel[+&#124;-]</span></span>|<span data-ttu-id="2a6a1-224">Specifica se usare la compilazione simultanea (+).</span><span class="sxs-lookup"><span data-stu-id="2a6a1-224">Specifies whether to use concurrent build (+).</span></span>|  
+|<span data-ttu-id="2a6a1-225">/checksumalgorithm:\<alg></span><span class="sxs-lookup"><span data-stu-id="2a6a1-225">/checksumalgorithm:\<alg></span></span>|<span data-ttu-id="2a6a1-226">Specificare l'algoritmo per il calcolo del checksum del file di origine archiviato nel file PDB.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-226">Specify the algorithm for calculating the source file checksum stored in PDB.</span></span>  <span data-ttu-id="2a6a1-227">I valori supportati sono: SHA1 (predefinito) o SHA256.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-227">Supported values are: SHA1 (default) or SHA256.</span></span>|  
   
-## <a name="obsolete-options"></a>Opzioni obsolete  
+## <a name="obsolete-options"></a><span data-ttu-id="2a6a1-228">Opzioni obsolete</span><span class="sxs-lookup"><span data-stu-id="2a6a1-228">Obsolete Options</span></span>  
   
-|Opzione|Scopo|  
+|<span data-ttu-id="2a6a1-229">Opzione</span><span class="sxs-lookup"><span data-stu-id="2a6a1-229">Option</span></span>|<span data-ttu-id="2a6a1-230">Scopo</span><span class="sxs-lookup"><span data-stu-id="2a6a1-230">Purpose</span></span>|  
 |---|---|  
-|/incremental|Abilita la compilazione incrementale.|  
+|<span data-ttu-id="2a6a1-231">/incremental</span><span class="sxs-lookup"><span data-stu-id="2a6a1-231">/incremental</span></span>|<span data-ttu-id="2a6a1-232">Abilita la compilazione incrementale.</span><span class="sxs-lookup"><span data-stu-id="2a6a1-232">Enables incremental compilation.</span></span>|  
   
-## <a name="see-also"></a>Vedere anche  
- [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
- [Opzioni del compilatore C# in ordine alfabetico](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
- [Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-
+## <a name="see-also"></a><span data-ttu-id="2a6a1-233">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2a6a1-233">See Also</span></span>  
+ [<span data-ttu-id="2a6a1-234">Opzioni del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="2a6a1-234">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="2a6a1-235">Opzioni del compilatore C# in ordine alfabetico</span><span class="sxs-lookup"><span data-stu-id="2a6a1-235">C# Compiler Options Listed Alphabetically</span></span>](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [<span data-ttu-id="2a6a1-236">Procedura: Impostare le variabili di ambiente per la riga di comando di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="2a6a1-236">How to: Set Environment Variables for the Visual Studio Command Line</span></span>](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)

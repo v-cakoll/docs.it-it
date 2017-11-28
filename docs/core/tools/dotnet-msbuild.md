@@ -7,46 +7,44 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 96e4eac528abad2b336a979a98c9be2bee5d17ee
-ms.contentlocale: it-it
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="dotnet-msbuild"></a>dotnet msbuild
+# <a name="dotnet-msbuild"></a><span data-ttu-id="e109b-103">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="e109b-103">dotnet msbuild</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nome
+## <a name="name"></a><span data-ttu-id="e109b-104">Nome</span><span class="sxs-lookup"><span data-stu-id="e109b-104">Name</span></span>
 
-`dotnet msbuild`: consente di compilare un progetto e tutte le relative dipendenze.
+<span data-ttu-id="e109b-105">`dotnet msbuild`: consente di compilare un progetto e tutte le relative dipendenze.</span><span class="sxs-lookup"><span data-stu-id="e109b-105">`dotnet msbuild` - Builds a project and all of its dependencies.</span></span>
 
-## <a name="synopsis"></a>Riepilogo
+## <a name="synopsis"></a><span data-ttu-id="e109b-106">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="e109b-106">Synopsis</span></span>
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-## <a name="description"></a>Descrizione
+## <a name="description"></a><span data-ttu-id="e109b-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e109b-107">Description</span></span>
 
-Il comando `dotnet msbuild` consente di accedere a un'istanza completamente funzionante di MSBuild.
+<span data-ttu-id="e109b-108">Il comando `dotnet msbuild` consente di accedere a un'istanza completamente funzionante di MSBuild.</span><span class="sxs-lookup"><span data-stu-id="e109b-108">The `dotnet msbuild` command allows access to a fully functional MSBuild.</span></span>
 
-Il comando ha le stesse funzionalità del client della riga di comando di MSBuild esistente. Le opzioni sono uguali. Usare [Riferimenti alla riga di comando di MSBuild](/visualstudio/msbuild/msbuild-command-line-reference) per ottenere informazioni sulle opzioni disponibili. 
+<span data-ttu-id="e109b-109">Il comando ha le stesse funzionalità del client della riga di comando di MSBuild esistente.</span><span class="sxs-lookup"><span data-stu-id="e109b-109">The command has the exact same capabilities as existing MSBuild command-line client.</span></span> <span data-ttu-id="e109b-110">Le opzioni sono uguali.</span><span class="sxs-lookup"><span data-stu-id="e109b-110">The options are all the same.</span></span> <span data-ttu-id="e109b-111">Usare [Riferimenti alla riga di comando di MSBuild](/visualstudio/msbuild/msbuild-command-line-reference) per ottenere informazioni sulle opzioni disponibili.</span><span class="sxs-lookup"><span data-stu-id="e109b-111">Use the [MSBuild Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) to obtain information on the available options.</span></span> 
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a><span data-ttu-id="e109b-112">Esempi</span><span class="sxs-lookup"><span data-stu-id="e109b-112">Examples</span></span>
 
-Compilare un progetto e le relative dipendenze:
+<span data-ttu-id="e109b-113">Compilare un progetto e le relative dipendenze:</span><span class="sxs-lookup"><span data-stu-id="e109b-113">Build a project and its dependencies:</span></span>
 
 `dotnet msbuild`
 
-Compilare un progetto e le relative dipendenze usando la configurazione per il rilascio:
+<span data-ttu-id="e109b-114">Compilare un progetto e le relative dipendenze usando la configurazione per il rilascio:</span><span class="sxs-lookup"><span data-stu-id="e109b-114">Build a project and its dependencies using Release configuration:</span></span>
 
 `dotnet msbuild /p:Configuration=Release`
 
-Eseguire la destinazione di pubblicazione e pubblicare per il RID `osx.10.11-x64`:
+<span data-ttu-id="e109b-115">Eseguire la destinazione di pubblicazione e pubblicare per il RID `osx.10.11-x64`:</span><span class="sxs-lookup"><span data-stu-id="e109b-115">Run the publish target and publish for the `osx.10.11-x64` RID:</span></span>
 
 `dotnet msbuild /t:Publish /p:RuntimeIdentifiers=osx.10.11-x64`
 
-Vedere l'intero progetto con tutte le destinazioni incluse dall'SDK:
+<span data-ttu-id="e109b-116">Vedere l'intero progetto con tutte le destinazioni incluse dall'SDK:</span><span class="sxs-lookup"><span data-stu-id="e109b-116">See the whole project with all targets included by the SDK:</span></span>
 
 `dotnet msbuild /pp`
-

@@ -1,157 +1,156 @@
 ---
-title: "Istruzione For...Next (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Step"
-  - "vb.Next"
-  - "vb.To"
-  - "vb.for"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "cicli infiniti"
-  - "Next (parola chiave), istruzioni For...Next"
-  - "For (parola chiave) [Visual Basic], istruzioni For...Next"
-  - "Step (parola chiave), istruzioni For...Next"
-  - "overload degli operatori, istruzione For...Next"
-  - "To (parola chiave), istruzioni For...Next"
-  - "cicli senza termine"
-  - "cicli, senza termine"
-  - "istruzioni, ripetizione"
-  - "Next (istruzione), For...Next"
-  - "For...Next (istruzioni)"
-  - "cicli (strutture), For...Next"
-  - "cicli, infiniti"
-  - "Exit (istruzione), istruzioni For...Next"
-  - "For (istruzione)"
+title: Istruzione For...Next (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Step
+- vb.Next
+- vb.To
+- vb.for
+helpviewer_keywords:
+- infinite loops
+- Next keyword [Visual Basic], For...Next statements
+- For keyword [Visual Basic], For...Next statements
+- Step keyword [Visual Basic], For...Next statements
+- operator overloading, For...Next statement
+- To keyword [Visual Basic], For...Next statements
+- endless loops
+- loops, endless
+- instructions, repeating
+- Next statement [Visual Basic], For...Next
+- For...Next statements
+- loop structures [Visual Basic], For...Next
+- loops, infinite
+- Exit statement [Visual Basic], For...Next statements
+- For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-caps.latest.revision: 64
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 64
+caps.latest.revision: "64"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 009c5a383cc3296f7f92888a344fa265547f1077
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Istruzione For...Next (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Consentono di ripetere un gruppo di istruzioni per il numero di volte specificato.  
+# <a name="fornext-statement-visual-basic"></a><span data-ttu-id="baa32-102">Istruzione For...Next (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="baa32-102">For...Next Statement (Visual Basic)</span></span>
+<span data-ttu-id="baa32-103">Ripete un gruppo di istruzioni di un numero di volte specificato.</span><span class="sxs-lookup"><span data-stu-id="baa32-103">Repeats a group of statements a specified number of times.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="baa32-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="baa32-104">Syntax</span></span>  
   
 ```  
-For counter [ As datatype ] = start To end [ Step step ]  
-    [ statements ]  
+For counter [ As datatype ] = start To end [ Step step ]  
+    [ statements ]  
     [ Continue For ]  
     [ statements ]  
-    [ Exit For ]  
-    [ statements ]  
-Next [ counter ]  
+    [ Exit For ]  
+    [ statements ]  
+Next [ counter ]  
 ```  
   
-## Parti  
+## <a name="parts"></a><span data-ttu-id="baa32-105">Parti</span><span class="sxs-lookup"><span data-stu-id="baa32-105">Parts</span></span>  
   
-|Parte|Descrizione|  
-|-----------|-----------------|  
-|`counter`|Obbligatorio nell'istruzione `For`.  Variabile numerica.  Variabile di controllo disponibile per il ciclo.  Per ulteriori informazioni, vedere [Argomento Counter](#BKMK_Counter) più avanti in questo argomento.|  
-|`datatype`|Opzionale.  Tipo di dati di `counter`.  Per ulteriori informazioni, vedere [Argomento Counter](#BKMK_Counter) più avanti in questo argomento.|  
-|`start`|Necessario.  Espressione numerica.  Valore iniziale di `counter`.|  
-|`end`|Necessario.  Espressione numerica.  Valore finale di `counter`.|  
-|`step`|Opzionale.  Espressione numerica.  Valore dell'incremento di `counter` a ogni iterazione del ciclo.|  
-|`statements`|Opzionale.  Una o più istruzioni inserite tra `For` e `Next` ed eseguite per il numero di volte specificato.|  
-|`Continue For`|Opzionale.  Consente di trasferire il controllo all'iterazione del ciclo successiva.|  
-|`Exit For`|Opzionale.  Trasferisce il controllo all'esterno del ciclo `For`.|  
-|`Next`|Necessario.  Termina la definizione del ciclo `For`.|  
+|<span data-ttu-id="baa32-106">Parte</span><span class="sxs-lookup"><span data-stu-id="baa32-106">Part</span></span>|<span data-ttu-id="baa32-107">Descrizione</span><span class="sxs-lookup"><span data-stu-id="baa32-107">Description</span></span>|  
+|----------|-----------------|  
+|`counter`|<span data-ttu-id="baa32-108">Obbligatorio nel `For` istruzione.</span><span class="sxs-lookup"><span data-stu-id="baa32-108">Required in the `For` statement.</span></span> <span data-ttu-id="baa32-109">Variabile numerica.</span><span class="sxs-lookup"><span data-stu-id="baa32-109">Numeric variable.</span></span> <span data-ttu-id="baa32-110">La variabile di controllo per il ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-110">The control variable for the loop.</span></span> <span data-ttu-id="baa32-111">Per ulteriori informazioni, vedere [argomento contatore](#BKMK_Counter) più avanti in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="baa32-111">For more information, see [Counter Argument](#BKMK_Counter) later in this topic.</span></span>|  
+|`datatype`|<span data-ttu-id="baa32-112">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="baa32-112">Optional.</span></span> <span data-ttu-id="baa32-113">Tipo di dati di `counter`.</span><span class="sxs-lookup"><span data-stu-id="baa32-113">Data type of `counter`.</span></span> <span data-ttu-id="baa32-114">Per ulteriori informazioni, vedere [argomento contatore](#BKMK_Counter) più avanti in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="baa32-114">For more information, see [Counter Argument](#BKMK_Counter) later in this topic.</span></span>|  
+|`start`|<span data-ttu-id="baa32-115">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="baa32-115">Required.</span></span> <span data-ttu-id="baa32-116">Espressione numerica.</span><span class="sxs-lookup"><span data-stu-id="baa32-116">Numeric expression.</span></span> <span data-ttu-id="baa32-117">Il valore iniziale di `counter`.</span><span class="sxs-lookup"><span data-stu-id="baa32-117">The initial value of `counter`.</span></span>|  
+|`end`|<span data-ttu-id="baa32-118">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="baa32-118">Required.</span></span> <span data-ttu-id="baa32-119">Espressione numerica.</span><span class="sxs-lookup"><span data-stu-id="baa32-119">Numeric expression.</span></span> <span data-ttu-id="baa32-120">Il valore finale di `counter`.</span><span class="sxs-lookup"><span data-stu-id="baa32-120">The final value of `counter`.</span></span>|  
+|`step`|<span data-ttu-id="baa32-121">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="baa32-121">Optional.</span></span> <span data-ttu-id="baa32-122">Espressione numerica.</span><span class="sxs-lookup"><span data-stu-id="baa32-122">Numeric expression.</span></span> <span data-ttu-id="baa32-123">Quantità in base alla quale `counter` viene incrementato ogni volta che il ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-123">The amount by which `counter` is incremented each time through the loop.</span></span>|  
+|`statements`|<span data-ttu-id="baa32-124">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="baa32-124">Optional.</span></span> <span data-ttu-id="baa32-125">Uno o più istruzioni tra `For` e `Next` che eseguono il numero di volte specificato.</span><span class="sxs-lookup"><span data-stu-id="baa32-125">One or more statements between `For` and `Next` that run the specified number of times.</span></span>|  
+|`Continue For`|<span data-ttu-id="baa32-126">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="baa32-126">Optional.</span></span> <span data-ttu-id="baa32-127">Trasferisce il controllo per l'iterazione del ciclo successivo.</span><span class="sxs-lookup"><span data-stu-id="baa32-127">Transfers control to the next loop iteration.</span></span>|  
+|`Exit For`|<span data-ttu-id="baa32-128">Parametro facoltativo.</span><span class="sxs-lookup"><span data-stu-id="baa32-128">Optional.</span></span> <span data-ttu-id="baa32-129">Trasferisce il controllo fuori il `For` ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-129">Transfers control out of the `For` loop.</span></span>|  
+|`Next`|<span data-ttu-id="baa32-130">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="baa32-130">Required.</span></span> <span data-ttu-id="baa32-131">Termina la definizione di `For` ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-131">Terminates the definition of the `For` loop.</span></span>|  
   
 > [!NOTE]
->  La parola chiave di `To` viene utilizzata in questa istruzione per specificare l'intervallo per il contatore.  È inoltre possibile utilizzare la parola chiave in [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) e nelle dichiarazioni di matrice.  Per ulteriori informazioni sulle dichiarazioni di matrice, vedere [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).  
+>  <span data-ttu-id="baa32-132">Il `To` parola chiave viene utilizzata in questa istruzione per specificare l'intervallo per il contatore.</span><span class="sxs-lookup"><span data-stu-id="baa32-132">The `To` keyword is used in this statement to specify the range for the counter.</span></span> <span data-ttu-id="baa32-133">È inoltre possibile utilizzare questa parola chiave nel [Seleziona... Istruzione case](../../../visual-basic/language-reference/statements/select-case-statement.md) e nelle dichiarazioni di matrice.</span><span class="sxs-lookup"><span data-stu-id="baa32-133">You can also use this keyword in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) and in array declarations.</span></span> <span data-ttu-id="baa32-134">Per ulteriori informazioni sulle dichiarazioni di matrice, vedere [Dim (istruzione)](../../../visual-basic/language-reference/statements/dim-statement.md).</span><span class="sxs-lookup"><span data-stu-id="baa32-134">For more information about array declarations, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).</span></span>  
   
-## Esempi semplici  
- Utilizzare una struttura di `For`…`Next` quando si desidera riprodurre un insieme di istruzioni per il numero di volte specificato.  
+## <a name="simple-examples"></a><span data-ttu-id="baa32-135">Esempi semplici</span><span class="sxs-lookup"><span data-stu-id="baa32-135">Simple Examples</span></span>  
+ <span data-ttu-id="baa32-136">Si utilizza un `For`... `Next` struttura quando si desidera ripetere un set di istruzioni di un numero di volte.</span><span class="sxs-lookup"><span data-stu-id="baa32-136">You use a `For`...`Next` structure when you want to repeat a set of statements a set number of times.</span></span>  
   
- Nell'esempio seguente, la variabile di `index` inizia con un valore di 1 e viene incrementata a ogni iterazione del ciclo, terminando dopo che il valore di intervalli di 5. `index`.  
+ <span data-ttu-id="baa32-137">Nell'esempio seguente, il `index` variabile inizia con un valore pari a 1 e viene incrementata a ogni iterazione del ciclo, che termina dopo il valore di `index` raggiunge 5.</span><span class="sxs-lookup"><span data-stu-id="baa32-137">In the following example, the `index` variable starts with a value of 1 and is incremented with each iteration of the loop, ending after the value of `index` reaches 5.</span></span>  
   
  [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
   
- Nell'esempio seguente, la variabile di `number` inizia a 2 e viene ridotta di 0,25 per ogni iterazione del ciclo, terminando dopo che il valore di 0 intervalli di `number`.  L'argomento di `Step` di `-.25` ridurre il valore di 0,25 per ogni iterazione del ciclo.  
+ <span data-ttu-id="baa32-138">Nell'esempio seguente, il `number` variabile inizia in corrispondenza di 2 e viene ridotto da 0,25 a ogni iterazione del ciclo, che termina dopo il valore di `number` raggiunge il valore 0.</span><span class="sxs-lookup"><span data-stu-id="baa32-138">In the following example, the `number` variable starts at 2 and is reduced by 0.25 on each iteration of the loop, ending after the value of `number` reaches 0.</span></span> <span data-ttu-id="baa32-139">Il `Step` argomento di `-.25` riduce il valore da 0,25 a ogni iterazione del ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-139">The `Step` argument of `-.25` reduces the value by 0.25 on each iteration of the loop.</span></span>  
   
  [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
   
 > [!TIP]
->  Funzionamento di [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md) o di [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) scaturiscono quando non si conosce in anticipo quante volte per eseguire le istruzioni del ciclo.  Se invece si prevede di eseguire il ciclo per un numero specifico di volte, si consiglia di utilizzare `For`...`Next`.  Il numero di iterazioni viene definito la prima volta che si entra nel ciclo.  
+>  <span data-ttu-id="baa32-140">Oggetto [mentre... End While (istruzione)](../../../visual-basic/language-reference/statements/while-end-while-statement.md) o [si... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md) funziona bene quando non si conosce in anticipo il numero di tentativi di eseguire le istruzioni nel ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-140">A [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) or [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md) works well when you don't know in advance how many times to run the statements in the loop.</span></span> <span data-ttu-id="baa32-141">Tuttavia, quando si prevede di eseguire il ciclo di un numero specifico di volte, una `For`... `Next` ciclo è una scelta migliore.</span><span class="sxs-lookup"><span data-stu-id="baa32-141">However, when you expect to run the loop a specific number of times, a `For`...`Next` loop is a better choice.</span></span> <span data-ttu-id="baa32-142">Determinare il numero di iterazioni quando si inizia il ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-142">You determine the number of iterations when you first enter the loop.</span></span>  
   
-## Cicli annidati  
- È possibile annidare cicli `For` inserendo un ciclo all'interno dell'altro.  Nell'esempio seguente vengono illustrate le strutture `For`...`Next` annidate con diversi valori di incremento.  Il ciclo esterno consente di creare una stringa per ogni iterazione del ciclo.  Nel ciclo interno, per ogni iterazione del ciclo viene ridotta una variabile del contatore di cicli.  
+## <a name="nesting-loops"></a><span data-ttu-id="baa32-143">Nidificazione di cicli</span><span class="sxs-lookup"><span data-stu-id="baa32-143">Nesting Loops</span></span>  
+ <span data-ttu-id="baa32-144">È possibile annidare `For` cicli inserendo un ciclo all'interno di un altro.</span><span class="sxs-lookup"><span data-stu-id="baa32-144">You can nest `For` loops by putting one loop within another.</span></span> <span data-ttu-id="baa32-145">Nell'esempio seguente viene nidificata `For`... `Next` strutture con diversi valori step.</span><span class="sxs-lookup"><span data-stu-id="baa32-145">The following example demonstrates nested `For`...`Next` structures that have different step values.</span></span> <span data-ttu-id="baa32-146">Il ciclo esterno crea una stringa per ogni iterazione del ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-146">The outer loop creates a string for every iteration of the loop.</span></span> <span data-ttu-id="baa32-147">Nel ciclo interno decrementa una variabile contatore del ciclo per ogni iterazione del ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-147">The inner loop decrements a loop counter variable for every iteration of the loop.</span></span>  
   
  [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
   
- Quando i cicli di annidamento, ogni ciclo deve essere una variabile univoca di `counter`.  
+ <span data-ttu-id="baa32-148">Durante la nidificazione dei cicli, ogni ciclo deve avere un univoco `counter` variabile.</span><span class="sxs-lookup"><span data-stu-id="baa32-148">When nesting loops, each loop must have a unique `counter` variable.</span></span>  
   
- È inoltre possibile annidare strutture di controllo di tipo diverso inserendole una all'interno dell'altra.  Per ulteriori informazioni, vedere [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ <span data-ttu-id="baa32-149">È inoltre possibile annidare i diversi tipi di strutture di controllo all'interno di altro.</span><span class="sxs-lookup"><span data-stu-id="baa32-149">You can also nest different kinds control structures within each other.</span></span> <span data-ttu-id="baa32-150">Per ulteriori informazioni, vedere [strutture di controllo nidificate](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).</span><span class="sxs-lookup"><span data-stu-id="baa32-150">For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).</span></span>  
   
-## L'uscita per e continua per  
- L'istruzione di `Exit For` immediatamente chiude il ciclo di `For`…`Next` e il trasferisce il controllo all'istruzione che segue l'istruzione di `Next`.  
+## <a name="exit-for-and-continue-for"></a><span data-ttu-id="baa32-151">Per quindi continuare per</span><span class="sxs-lookup"><span data-stu-id="baa32-151">Exit For and Continue For</span></span>  
+ <span data-ttu-id="baa32-152">Il `Exit For` istruzione termina immediatamente il `For`...`Next`</span><span class="sxs-lookup"><span data-stu-id="baa32-152">The `Exit For` statement immediately exits the `For`…`Next`</span></span> <span data-ttu-id="baa32-153">ciclo e trasferisce il controllo all'istruzione che segue il `Next` istruzione.</span><span class="sxs-lookup"><span data-stu-id="baa32-153">loop and transfers control to the statement that follows the `Next` statement.</span></span>  
   
- Tramite l'istruzione `Continue For` il controllo viene trasferito immediatamente alla successiva iterazione del ciclo.  Per ulteriori informazioni, vedere [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).  
+ <span data-ttu-id="baa32-154">Il `Continue For` istruzione trasferisce immediatamente il controllo all'iterazione successiva del ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-154">The `Continue For` statement transfers control immediately to the next iteration of the loop.</span></span> <span data-ttu-id="baa32-155">Per ulteriori informazioni, vedere [istruzione Continue](../../../visual-basic/language-reference/statements/continue-statement.md).</span><span class="sxs-lookup"><span data-stu-id="baa32-155">For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).</span></span>  
   
- Nell'esempio riportato di seguito viene illustrato l'utilizzo delle istruzioni `Continue For` e `Exit For`.  
+ <span data-ttu-id="baa32-156">Nell'esempio seguente viene illustrato l'utilizzo del `Continue For` e `Exit For` istruzioni.</span><span class="sxs-lookup"><span data-stu-id="baa32-156">The following example illustrates the use of the `Continue For` and `Exit For` statements.</span></span>  
   
  [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
   
- È possibile inserire un numero illimitato di istruzioni `Exit For` in un ciclo `For`…`Next`.  Se utilizzata all'interno di cicli `For`…`Next` annidati, l'istruzione `Exit For` consente l'uscita dal ciclo più interno e il trasferimento del controllo al livello di annidamento successivo superiore.  
+ <span data-ttu-id="baa32-157">È possibile inserire un numero qualsiasi di `Exit For` le istruzioni in un `For`...`Next`</span><span class="sxs-lookup"><span data-stu-id="baa32-157">You can put any number of `Exit For` statements in a `For`…`Next`</span></span> <span data-ttu-id="baa32-158">Ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-158">loop.</span></span> <span data-ttu-id="baa32-159">Se utilizzato all'interno di cicli `For`...`Next`</span><span class="sxs-lookup"><span data-stu-id="baa32-159">When used within nested `For`…`Next`</span></span> <span data-ttu-id="baa32-160">cicli, `Exit For` esce dal ciclo più interno e trasferisce il controllo del successivo livello superiore di annidamento.</span><span class="sxs-lookup"><span data-stu-id="baa32-160">loops, `Exit For` exits the innermost loop and transfers control to the next higher level of nesting.</span></span>  
   
- `Exit For` viene spesso utilizzato dopo la valutazione di una determinata condizione, ad esempio in una struttura di `If`…`Then`…`Else` \).  Si potrebbe decidere di utilizzare il controllo `Exit For` per le seguenti condizioni:  
+ <span data-ttu-id="baa32-161">`Exit For`viene spesso utilizzato dopo aver valutato alcune condizioni (ad esempio, in un `If`... `Then`... `Else` struttura).</span><span class="sxs-lookup"><span data-stu-id="baa32-161">`Exit For` is often used after you evaluate some condition (for example, in an `If`...`Then`...`Else` structure).</span></span> <span data-ttu-id="baa32-162">Si potrebbe voler usare `Exit For` per le condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="baa32-162">You might want to use `Exit For` for the following conditions:</span></span>  
   
--   La continuazione dell'iterazione non è necessaria oppure è impossibile.  Un valore errato o una richiesta di chiusura potrebbe creare tale condizione.  
+-   <span data-ttu-id="baa32-163">Continuare a eseguire l'iterazione è necessaria oppure è impossibile.</span><span class="sxs-lookup"><span data-stu-id="baa32-163">Continuing to iterate is unnecessary or impossible.</span></span> <span data-ttu-id="baa32-164">Un valore errato o una richiesta di terminazione è possibile creare questa condizione.</span><span class="sxs-lookup"><span data-stu-id="baa32-164">An erroneous value or a termination request might create this condition.</span></span>  
   
--   Un'istruzione di `Try`…`Catch`…`Finally` intercetta un'eccezione.  È possibile utilizzare `Exit For` alla fine del blocco `Finally`.  
+-   <span data-ttu-id="baa32-165">Oggetto `Try`... `Catch`... `Finally` istruzione rileva un'eccezione.</span><span class="sxs-lookup"><span data-stu-id="baa32-165">A `Try`...`Catch`...`Finally` statement catches an exception.</span></span> <span data-ttu-id="baa32-166">È possibile utilizzare `Exit For` alla fine del `Finally` blocco.</span><span class="sxs-lookup"><span data-stu-id="baa32-166">You might use `Exit For` at the end of the `Finally` block.</span></span>  
   
--   È un ciclo infinito, un ciclo che esegua un grande o addirittura numero di volte infinito.  Se si rileva una simile condizione, è possibile utilizzare `Exit For` per interrompere l'esecuzione del ciclo.  Per ulteriori informazioni, vedere [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+-   <span data-ttu-id="baa32-167">È necessario un ciclo infinito, ovvero un ciclo che è stato possibile eseguire un numero elevato o persino infinito di volte.</span><span class="sxs-lookup"><span data-stu-id="baa32-167">You have an endless loop, which is a loop that could run a large or even infinite number of times.</span></span> <span data-ttu-id="baa32-168">Se si rileva una condizione, è possibile utilizzare `Exit For` per interrompere il ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-168">If you detect such a condition, you can use `Exit For` to escape the loop.</span></span> <span data-ttu-id="baa32-169">Per ulteriori informazioni, vedere [si... Istruzione di ciclo](../../../visual-basic/language-reference/statements/do-loop-statement.md).</span><span class="sxs-lookup"><span data-stu-id="baa32-169">For more information, see [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).</span></span>  
   
-## Implementazione tecnica  
- Quando viene avviato un ciclo `For`...`Next`, in Visual Basic vengono restituiti `start`, `end` e `step`.  Visual Basic valuta questi valori solo attualmente e quindi assegnato `start` a `counter`.  Prima che il blocco di istruzioni funzioni, Visual Basic e `counter` a `end`.  Se `counter` è ancora maggiore del valore di `end` o più piccolo se `step` è negativo\), il ciclo di `For` termina e il controllo passa all'istruzione che segue l'istruzione di `Next`.  In caso contrario, il blocco di istruzioni viene eseguito.  
+## <a name="technical-implementation"></a><span data-ttu-id="baa32-170">Implementazione tecnica</span><span class="sxs-lookup"><span data-stu-id="baa32-170">Technical Implementation</span></span>  
+ <span data-ttu-id="baa32-171">Quando un `For`... `Next` ciclo viene avviato, in Visual Basic `start`, `end`, e `step`.</span><span class="sxs-lookup"><span data-stu-id="baa32-171">When a `For`...`Next` loop starts, Visual Basic evaluates `start`, `end`, and `step`.</span></span> <span data-ttu-id="baa32-172">Visual Basic restituisce questi valori solo in questa fase e quindi assegna `start` a `counter`.</span><span class="sxs-lookup"><span data-stu-id="baa32-172">Visual Basic evaluates these values only at this time and then assigns `start` to `counter`.</span></span> <span data-ttu-id="baa32-173">Prima dell'istruzione di blocco viene eseguito, Visual Basic Confronta `counter` a `end`.</span><span class="sxs-lookup"><span data-stu-id="baa32-173">Before the statement block runs, Visual Basic compares `counter` to `end`.</span></span> <span data-ttu-id="baa32-174">Se `counter` è già maggiore di `end` valore (o più piccolo se `step` è negativo), il `For` ciclo termina e il controllo passa all'istruzione che segue il `Next` istruzione.</span><span class="sxs-lookup"><span data-stu-id="baa32-174">If `counter` is already larger than the `end` value (or smaller if `step` is negative), the `For` loop ends and control passes to the statement that follows the `Next` statement.</span></span> <span data-ttu-id="baa32-175">In caso contrario, viene eseguito il blocco di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="baa32-175">Otherwise, the statement block runs.</span></span>  
   
- Ogni volta che Visual Basic incontra l'istruzione `Next`, incrementa il valore di `counter` di `step` e torna all'istruzione `For`.  La variabile `counter` viene nuovamente confrontata con il valore `end` e in base al risultato viene eseguito di nuovo il blocco oppure viene effettuata l'uscita dal ciclo.  Il processo continua finché `counter` non passa `end` oppure non si raggiunge un'istruzione `Exit For`.  
+ <span data-ttu-id="baa32-176">Ogni volta che rileva Visual Basic il `Next` istruzione, viene automaticamente incrementato `counter` da `step` e restituisce il `For` istruzione.</span><span class="sxs-lookup"><span data-stu-id="baa32-176">Each time Visual Basic encounters the `Next` statement, it increments `counter` by `step` and returns to the `For` statement.</span></span> <span data-ttu-id="baa32-177">Viene nuovamente confrontato `counter` a `end`, e viene eseguito il blocco oppure uscire dal ciclo, a seconda del risultato.</span><span class="sxs-lookup"><span data-stu-id="baa32-177">Again it compares `counter` to `end`, and again it either runs the block or exits the loop, depending on the result.</span></span> <span data-ttu-id="baa32-178">Questo processo continua fino a `counter` passa `end` o `Exit For` viene rilevata un'istruzione.</span><span class="sxs-lookup"><span data-stu-id="baa32-178">This process continues until `counter` passes `end` or an `Exit For` statement is encountered.</span></span>  
   
- Il ciclo non si interrompe finché `counter` non ha passato `end`.  Se `counter` è uguale a `end`, il ciclo continua.  Il confronto che determina se eseguire il blocco è `counter` \<\=`end` se `step` è positivo e `counter` \>\= `end` se `step` è negativo.  
+ <span data-ttu-id="baa32-179">Fino a quando non si arresta il ciclo `counter` ha superato `end`.</span><span class="sxs-lookup"><span data-stu-id="baa32-179">The loop doesn't stop until `counter` has passed `end`.</span></span> <span data-ttu-id="baa32-180">Se `counter` è uguale a `end`, il ciclo continua.</span><span class="sxs-lookup"><span data-stu-id="baa32-180">If `counter` is equal to `end`, the loop continues.</span></span> <span data-ttu-id="baa32-181">Il confronto che determina se eseguire il blocco è `counter`  <=  `end` se `step` è positivo e `counter`  >=  `end` se `step` è negativo.</span><span class="sxs-lookup"><span data-stu-id="baa32-181">The comparison that determines whether to run the block is `counter` <= `end` if `step` is positive and `counter` >= `end` if `step` is negative.</span></span>  
   
- Se si modifica il valore di `counter` mentre in un ciclo, il codice può essere più difficile da leggere e debug.  Modificando il valore di `start`, `end`, o `step` non influisce sui valori di iterazione che siano stati determinati quando il ciclo viene immesso.  
+ <span data-ttu-id="baa32-182">Se si modifica il valore di `counter` durante un ciclo, potrebbe essere più difficile da leggere ed eseguire il debug del codice.</span><span class="sxs-lookup"><span data-stu-id="baa32-182">If you change the value of `counter` while inside a loop, your code might be more difficult to read and debug.</span></span> <span data-ttu-id="baa32-183">Modifica del valore di `start`, `end`, o `step` non influenza i valori di iterazione che sono stati durante il ciclo prima di tutto è stato immesso.</span><span class="sxs-lookup"><span data-stu-id="baa32-183">Changing the value of `start`, `end`, or `step` doesn't affect the iteration values that were determined when the loop was first entered.</span></span>  
   
- Se annidate i cicli, il compilatore segnala un errore se rileva l'istruzione di `Next` di un livello di annidamento esterno prima dell'istruzione di `Next` di un livello interno.  Tuttavia, il compilatore può rilevare questo errore di sovrapposizione solo se si specifica `counter` in ogni istruzione `Next`.  
+ <span data-ttu-id="baa32-184">Se si annida cicli, il compilatore segnalerà un errore se viene individuata la `Next` istruzione di un livello di nidificazione esterno prima di `Next` istruzione di un livello interno.</span><span class="sxs-lookup"><span data-stu-id="baa32-184">If you nest loops, the compiler signals an error if it encounters the `Next` statement of an outer nesting level before the `Next` statement of an inner level.</span></span> <span data-ttu-id="baa32-185">Tuttavia, il compilatore può rilevare questa sovrapposizione errore solo se si specifica `counter` in ogni `Next` istruzione.</span><span class="sxs-lookup"><span data-stu-id="baa32-185">However, the compiler can detect this overlapping error only if you specify `counter` in every `Next` statement.</span></span>  
   
-### Argomento step  
- Dal valore di `step`, che può essere positivo o negativo,  Questo parametro consente l'elaborazione del ciclo nella seguente tabella:  
+### <a name="step-argument"></a><span data-ttu-id="baa32-186">Argomento di passaggio</span><span class="sxs-lookup"><span data-stu-id="baa32-186">Step Argument</span></span>  
+ <span data-ttu-id="baa32-187">Il valore di `step` può essere positivo o negativo.</span><span class="sxs-lookup"><span data-stu-id="baa32-187">The value of `step` can be either positive or negative.</span></span> <span data-ttu-id="baa32-188">Questo parametro determina l'elaborazione di ciclo in base alla tabella seguente:</span><span class="sxs-lookup"><span data-stu-id="baa32-188">This parameter determines loop processing according to the following table:</span></span>  
   
-|**Valore di Step**|**Il ciclo verrà eseguito se**|  
-|------------------------|------------------------------------|  
-|Positivo o zero|`counter` \<\= `end`|  
-|Negativo|`counter` \>\= `end`|  
+|<span data-ttu-id="baa32-189">**Valore di incremento**</span><span class="sxs-lookup"><span data-stu-id="baa32-189">**Step value**</span></span>|<span data-ttu-id="baa32-190">**Il ciclo viene eseguito se**</span><span class="sxs-lookup"><span data-stu-id="baa32-190">**Loop executes if**</span></span>|  
+|--------------------|--------------------------|  
+|<span data-ttu-id="baa32-191">Positivo o zero</span><span class="sxs-lookup"><span data-stu-id="baa32-191">Positive or zero</span></span>|`counter` <= `end`|  
+|<span data-ttu-id="baa32-192">Negativo</span><span class="sxs-lookup"><span data-stu-id="baa32-192">Negative</span></span>|`counter` >= `end`|  
   
- Il valore predefinito di `step` è 1.  
+ <span data-ttu-id="baa32-193">Il valore predefinito di `step` è 1.</span><span class="sxs-lookup"><span data-stu-id="baa32-193">The default value of `step` is 1.</span></span>  
   
-###  <a name="BKMK_Counter"></a> Argomento Counter  
- La tabella riportata di seguito indica se `counter` definisce una nuova variabile locale limitata all'intero ciclo di `For…Next`.  Questa scelta dipende da `datatype` è presente e se `counter` è già definito.  
+###  <span data-ttu-id="baa32-194"><a name="BKMK_Counter"></a>Argomento contatore</span><span class="sxs-lookup"><span data-stu-id="baa32-194"><a name="BKMK_Counter"></a> Counter Argument</span></span>  
+ <span data-ttu-id="baa32-195">Nella tabella seguente indica se `counter` definisce una nuova variabile locale con ambito limitato all'intero `For…Next` ciclo.</span><span class="sxs-lookup"><span data-stu-id="baa32-195">The following table indicates whether `counter` defines a new local variable that’s scoped to the entire `For…Next` loop.</span></span> <span data-ttu-id="baa32-196">Questo aspetto dipende dal fatto che `datatype` è presente e se `counter` è già definito.</span><span class="sxs-lookup"><span data-stu-id="baa32-196">This determination depends on whether `datatype` is present and whether `counter` is already defined.</span></span>  
   
-|È `datatype` presente?|`counter` è già definito?|Risultato \(se `counter` definisce una nuova variabile locale limitata all'intero ciclo di `For...Next` \)|  
-|----------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------------|  
-|No|Sì|No, perché `counter` è già definito.  Se l'ambito di `counter` non è locale alla routine, un avviso in fase di compilazione si verifica.|  
-|No|No|Sì.  Il tipo di dati viene dedotto da `start`, da `end`e da espressioni di `step`.  Per informazioni sull'inferenza del tipo, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
-|Sì|Sì|Sì, ma solo se la variabile esistente di `counter` è definita all'esterno della routine.  La variabile rimane separata.  Se l'ambito di una variabile esistente di `counter` è locale alla routine, un errore in fase di compilazione si verifica.|  
-|Sì|No|Sì.|  
+|<span data-ttu-id="baa32-197">È `datatype` presente?</span><span class="sxs-lookup"><span data-stu-id="baa32-197">Is `datatype` present?</span></span>|<span data-ttu-id="baa32-198">È `counter` già definito?</span><span class="sxs-lookup"><span data-stu-id="baa32-198">Is `counter` already defined?</span></span>|<span data-ttu-id="baa32-199">Risultato (se `counter` definisce una nuova variabile locale con ambito limitato all'intero `For...Next` ciclo)</span><span class="sxs-lookup"><span data-stu-id="baa32-199">Result (whether `counter` defines a new local variable that’s scoped to the entire `For...Next` loop)</span></span>|  
+|----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
+|<span data-ttu-id="baa32-200">No</span><span class="sxs-lookup"><span data-stu-id="baa32-200">No</span></span>|<span data-ttu-id="baa32-201">Sì</span><span class="sxs-lookup"><span data-stu-id="baa32-201">Yes</span></span>|<span data-ttu-id="baa32-202">No, in quanto `counter` è già definito.</span><span class="sxs-lookup"><span data-stu-id="baa32-202">No, because `counter` is already defined.</span></span> <span data-ttu-id="baa32-203">Se l'ambito di `counter` non è locale per la procedura, viene generato un avviso in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="baa32-203">If the scope of `counter` isn't local to the procedure, a compile-time warning occurs.</span></span>|  
+|<span data-ttu-id="baa32-204">No</span><span class="sxs-lookup"><span data-stu-id="baa32-204">No</span></span>|<span data-ttu-id="baa32-205">No</span><span class="sxs-lookup"><span data-stu-id="baa32-205">No</span></span>|<span data-ttu-id="baa32-206">Sì.</span><span class="sxs-lookup"><span data-stu-id="baa32-206">Yes.</span></span> <span data-ttu-id="baa32-207">Il tipo di dati viene dedotto dal `start`, `end`, e `step` espressioni.</span><span class="sxs-lookup"><span data-stu-id="baa32-207">The data type is inferred from the `start`, `end`, and `step` expressions.</span></span> <span data-ttu-id="baa32-208">Per informazioni sull'inferenza del tipo, vedere [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [locale l'inferenza del tipo](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span><span class="sxs-lookup"><span data-stu-id="baa32-208">For information about type inference, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span></span>|  
+|<span data-ttu-id="baa32-209">Sì</span><span class="sxs-lookup"><span data-stu-id="baa32-209">Yes</span></span>|<span data-ttu-id="baa32-210">Sì</span><span class="sxs-lookup"><span data-stu-id="baa32-210">Yes</span></span>|<span data-ttu-id="baa32-211">Sì, ma solo se l'oggetto esistente `counter` variabile viene definita all'esterno della routine.</span><span class="sxs-lookup"><span data-stu-id="baa32-211">Yes, but only if the existing `counter` variable is defined outside the procedure.</span></span> <span data-ttu-id="baa32-212">Tale variabile rimane separata.</span><span class="sxs-lookup"><span data-stu-id="baa32-212">That variable remains separate.</span></span> <span data-ttu-id="baa32-213">Se l'ambito dell'oggetto esistente `counter` variabile è locale per la procedura, si verifica un errore in fase di compilazione.</span><span class="sxs-lookup"><span data-stu-id="baa32-213">If the scope of the existing `counter` variable is local to the procedure, a compile-time error occurs.</span></span>|  
+|<span data-ttu-id="baa32-214">Sì</span><span class="sxs-lookup"><span data-stu-id="baa32-214">Yes</span></span>|<span data-ttu-id="baa32-215">No</span><span class="sxs-lookup"><span data-stu-id="baa32-215">No</span></span>|<span data-ttu-id="baa32-216">Sì.</span><span class="sxs-lookup"><span data-stu-id="baa32-216">Yes.</span></span>|  
   
- Il tipo di dati di `counter` determina il tipo dell'iterazione, che deve essere uno dei seguenti tipi:  
+ <span data-ttu-id="baa32-217">Il tipo di dati `counter` determina il tipo dell'iterazione, che deve essere uno dei seguenti tipi:</span><span class="sxs-lookup"><span data-stu-id="baa32-217">The data type of `counter` determines the type of the iteration, which must be one of the following types:</span></span>  
   
--   Oggetto `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single` o `Double`.  
+-   <span data-ttu-id="baa32-218">Oggetto `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, o `Double`.</span><span class="sxs-lookup"><span data-stu-id="baa32-218">A `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, or `Double`.</span></span>  
   
--   Enumerazione che viene dichiarata tramite un'[Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).  
+-   <span data-ttu-id="baa32-219">Un'enumerazione che viene dichiarato tramite un [istruzione Enum](../../../visual-basic/language-reference/statements/enum-statement.md).</span><span class="sxs-lookup"><span data-stu-id="baa32-219">An enumeration that you declare by using an [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).</span></span>  
   
--   Oggetto `Object`.  
+-   <span data-ttu-id="baa32-220">Oggetto `Object`.</span><span class="sxs-lookup"><span data-stu-id="baa32-220">An `Object`.</span></span>  
   
--   Tipo `T` che dispone dei seguenti operatori, dove `B` è un tipo che può essere utilizzato in un'espressione `Boolean`.  
+-   <span data-ttu-id="baa32-221">Un tipo `T` con gli operatori seguenti, in cui `B` è un tipo che può essere usato in un `Boolean` espressione.</span><span class="sxs-lookup"><span data-stu-id="baa32-221">A type `T` that has the following operators, where `B` is a type that can be used in a `Boolean` expression.</span></span>  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   
@@ -161,30 +160,30 @@ Next [ counter ]
   
      `Public Shared Operator + (op1 As T, op2 As T) As T`  
   
- È possibile specificare la variabile di `counter` nell'istruzione di `Next`.  Questa sintassi consente di migliorare la leggibilità del programma, specialmente se sono presenti cicli annidati di di `For`.  È necessario specificare la variabile visualizzato nell'istruzione corrispondente di `For`.  
+ <span data-ttu-id="baa32-222">È possibile specificare facoltativamente il `counter` variabile il `Next` istruzione.</span><span class="sxs-lookup"><span data-stu-id="baa32-222">You can optionally specify the `counter` variable in the `Next` statement.</span></span> <span data-ttu-id="baa32-223">Questa sintassi migliora la leggibilità del programma, soprattutto se hanno annidati `For` cicli.</span><span class="sxs-lookup"><span data-stu-id="baa32-223">This syntax improves the readability of your program, especially if you have nested `For` loops.</span></span> <span data-ttu-id="baa32-224">È necessario specificare la variabile che viene visualizzato nel corrispondente `For` istruzione.</span><span class="sxs-lookup"><span data-stu-id="baa32-224">You must specify the variable that appears in the corresponding `For` statement.</span></span>  
   
- Tramite le espressioni `start`, `end` e `step` è possibile restituire qualsiasi tipo di dati ampliabile al tipo di `counter`.  Se si utilizza un tipo definito per `counter`, potrebbe essere necessario definire l'operatore di conversione di `CType` per convertire i tipi di `start`, di `end`, o di `step` al tipo di `counter`.  
+ <span data-ttu-id="baa32-225">Il `start`, `end`, e `step` espressioni possono restituire qualsiasi tipo di dati che viene ampliato al tipo di `counter`.</span><span class="sxs-lookup"><span data-stu-id="baa32-225">The `start`, `end`, and `step` expressions can evaluate to any data type that widens to the type of `counter`.</span></span> <span data-ttu-id="baa32-226">Se si utilizza un tipo definito dall'utente per `counter`, potrebbe essere necessario definire il `CType` operatore di conversione per convertire i tipi di `start`, `end`, o `step` al tipo di `counter`.</span><span class="sxs-lookup"><span data-stu-id="baa32-226">If you use a user-defined type for `counter`, you might have to define the `CType` conversion operator to convert the types of `start`, `end`, or `step` to the type of `counter`.</span></span>  
   
-## Esempio  
- Nell'esempio seguente vengono rimossi tutti gli elementi da un elenco generico.  Anziché [Istruzione For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md), nell'esempio viene illustrata un'istruzione di `For`…`Next` che scorre in ordine decrescente.  L'esempio utilizza questa tecnica perché il metodo di `removeAt` determina gli elementi dopo l'elemento rimosso a un valore di indice più basso.  
+## <a name="example"></a><span data-ttu-id="baa32-227">Esempio</span><span class="sxs-lookup"><span data-stu-id="baa32-227">Example</span></span>  
+ <span data-ttu-id="baa32-228">Nell'esempio seguente rimuove tutti gli elementi da un elenco generico.</span><span class="sxs-lookup"><span data-stu-id="baa32-228">The following example removes all elements from a generic list.</span></span> <span data-ttu-id="baa32-229">Invece di un [For Each... Istruzione successiva](../../../visual-basic/language-reference/statements/for-each-next-statement.md), nell'esempio viene illustrato un `For`... `Next` istruzione che esegue l'iterazione in ordine decrescente.</span><span class="sxs-lookup"><span data-stu-id="baa32-229">Instead of a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md), the example shows a `For`...`Next` statement that iterates in descending order.</span></span> <span data-ttu-id="baa32-230">Nell'esempio viene utilizzata questa tecnica, in quanto il `removeAt` (metodo), gli elementi dopo l'elemento rimosso abbiano un valore di indice più basso.</span><span class="sxs-lookup"><span data-stu-id="baa32-230">The example uses this technique because the `removeAt` method causes elements after the removed element to have a lower index value.</span></span>  
   
  [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
   
-## Esempio  
- L'esempio seguente consente di scorrere un'enumerazione che viene dichiarata utilizzando [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).  
+## <a name="example"></a><span data-ttu-id="baa32-231">Esempio</span><span class="sxs-lookup"><span data-stu-id="baa32-231">Example</span></span>  
+ <span data-ttu-id="baa32-232">Nell'esempio seguente viene eseguito lo scorrimento di un'enumerazione che viene dichiarata utilizzando un [istruzione Enum](../../../visual-basic/language-reference/statements/enum-statement.md).</span><span class="sxs-lookup"><span data-stu-id="baa32-232">The following example iterates through an enumeration that's declared by using an [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).</span></span>  
   
  [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
   
-## Esempio  
- Nell'esempio seguente, la classe dei parametri dell'istruzione dispone di overload degli operatori per gli operatori `+`, `-`, `>=` e `<=`.  
+## <a name="example"></a><span data-ttu-id="baa32-233">Esempio</span><span class="sxs-lookup"><span data-stu-id="baa32-233">Example</span></span>  
+ <span data-ttu-id="baa32-234">Nell'esempio seguente, i parametri dell'istruzione utilizzano una classe che ha gli overload degli operatori per la `+`, `-`, `>=`, e `<=` operatori.</span><span class="sxs-lookup"><span data-stu-id="baa32-234">In the following example, the statement parameters use a class that has operator overloads for the `+`, `-`, `>=`, and `<=` operators.</span></span>  
   
  [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
   
-## Vedere anche  
- <xref:System.Collections.Generic.List%601>   
- [Loop Structures](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
- [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [Raccolte](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a><span data-ttu-id="baa32-235">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="baa32-235">See Also</span></span>  
+ <xref:System.Collections.Generic.List%601>  
+ [<span data-ttu-id="baa32-236">Strutture di ciclo</span><span class="sxs-lookup"><span data-stu-id="baa32-236">Loop Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [<span data-ttu-id="baa32-237">Istruzione While...End While</span><span class="sxs-lookup"><span data-stu-id="baa32-237">While...End While Statement</span></span>](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [<span data-ttu-id="baa32-238">Istruzione Do...Loop</span><span class="sxs-lookup"><span data-stu-id="baa32-238">Do...Loop Statement</span></span>](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [<span data-ttu-id="baa32-239">Strutture di controllo annidate</span><span class="sxs-lookup"><span data-stu-id="baa32-239">Nested Control Structures</span></span>](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [<span data-ttu-id="baa32-240">Istruzione Exit</span><span class="sxs-lookup"><span data-stu-id="baa32-240">Exit Statement</span></span>](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [<span data-ttu-id="baa32-241">Raccolte</span><span class="sxs-lookup"><span data-stu-id="baa32-241">Collections</span></span>](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)

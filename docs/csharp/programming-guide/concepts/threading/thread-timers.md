@@ -1,36 +1,27 @@
 ---
 title: Timer di thread (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 52ed71e8-4fd9-43a4-ae40-04cce7cff23f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9702360408340b28fcdcc8f197467a002f77ee51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 30037b5b6d798796e7f76fa045f882b7f335e0d7
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="thread-timers-c"></a>Timer di thread (C#)
-La classe <xref:System.Threading.Timer?displayProperty=fullName> è utile per l'esecuzione periodica di un'attività in un thread distinto. Ad esempio, è possibile usare un timer di thread per controllare lo stato e l'integrità di un database o per eseguire il backup dei file critici.  
+# <a name="thread-timers-c"></a><span data-ttu-id="b844a-102">Timer di thread (C#)</span><span class="sxs-lookup"><span data-stu-id="b844a-102">Thread Timers (C#)</span></span>
+<span data-ttu-id="b844a-103">La classe <xref:System.Threading.Timer?displayProperty=nameWithType> è utile per l'esecuzione periodica di un'attività in un thread distinto.</span><span class="sxs-lookup"><span data-stu-id="b844a-103">The <xref:System.Threading.Timer?displayProperty=nameWithType> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="b844a-104">Ad esempio, è possibile usare un timer di thread per controllare lo stato e l'integrità di un database o per eseguire il backup dei file critici.</span><span class="sxs-lookup"><span data-stu-id="b844a-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  
   
-## <a name="thread-timer-example"></a>Esempio di timer di thread  
- Nell'esempio seguente viene avviata un'attività ogni due secondi e viene usato un flag per avviare il metodo <xref:System.IDisposable.Dispose%2A> che arresta il timer. Lo stato viene inserito nella finestra di output.  
+## <a name="thread-timer-example"></a><span data-ttu-id="b844a-105">Esempio di timer di thread</span><span class="sxs-lookup"><span data-stu-id="b844a-105">Thread Timer Example</span></span>  
+ <span data-ttu-id="b844a-106">Nell'esempio seguente viene avviata un'attività ogni due secondi e viene usato un flag per avviare il metodo <xref:System.IDisposable.Dispose%2A> che arresta il timer.</span><span class="sxs-lookup"><span data-stu-id="b844a-106">The following example starts a task every two seconds and uses a flag to initiate the <xref:System.IDisposable.Dispose%2A> method that stops the timer.</span></span> <span data-ttu-id="b844a-107">Lo stato viene inserito nella finestra di output.</span><span class="sxs-lookup"><span data-stu-id="b844a-107">This example posts status to the output window.</span></span>  
   
 ```csharp  
 private class StateObjClass  
@@ -84,9 +75,8 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- I timer di thread risultano particolarmente utili quando l'oggetto <xref:System.Windows.Forms.Timer?displayProperty=fullName> non è disponibile, come nel caso dello sviluppo di applicazioni console.  
+ <span data-ttu-id="b844a-108">I timer di thread risultano particolarmente utili quando l'oggetto <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> non è disponibile, come nel caso dello sviluppo di applicazioni console.</span><span class="sxs-lookup"><span data-stu-id="b844a-108">Thread timers are particularly useful when the <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> object is unavailable, such as when you are developing console applications.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Threading>   
- [Applicazioni multithreading (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
-
+## <a name="see-also"></a><span data-ttu-id="b844a-109">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b844a-109">See Also</span></span>  
+ <xref:System.Threading>  
+ [<span data-ttu-id="b844a-110">Applicazioni multithreading (C#)</span><span class="sxs-lookup"><span data-stu-id="b844a-110">Multithreaded Applications (C#)</span></span>](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)

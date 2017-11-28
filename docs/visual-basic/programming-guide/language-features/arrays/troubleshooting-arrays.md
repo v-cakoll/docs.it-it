@@ -1,15 +1,12 @@
 ---
-title: Risoluzione dei problemi di matrici (Visual Basic) | Documenti di Microsoft
+title: Risoluzione dei problemi relativi alle matrici (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - troubleshooting arrays
 - arrays [Visual Basic], initialization errors
@@ -18,36 +15,22 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: db38c0c2a4f8b74a6b862f86f426b4d8837f4424
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0417ae8d37642a65b14cc81ae9dcf3a3c32d63ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="troubleshooting-arrays-visual-basic"></a>Risoluzione dei problemi relativi alle matrici (Visual Basic)
-Questa pagina sono elencati alcuni problemi comuni che possono verificarsi quando si lavora con le matrici.  
+# <a name="troubleshooting-arrays-visual-basic"></a><span data-ttu-id="14ce9-102">Risoluzione dei problemi relativi alle matrici (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="14ce9-102">Troubleshooting Arrays (Visual Basic)</span></span>
+<span data-ttu-id="14ce9-103">Questa pagina elenca alcuni problemi comuni che possono verificarsi quando si lavora con le matrici.</span><span class="sxs-lookup"><span data-stu-id="14ce9-103">This page lists some common problems that can occur when working with arrays.</span></span>  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Errori di compilazione dichiarazione e inizializzazione di una matrice  
- Errori di compilazione possono dipendere da un'incomprensione delle regole per la dichiarazione, la creazione e inizializzazione di matrici. Le cause più comuni di errori sono i seguenti:  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a><span data-ttu-id="14ce9-104">Errori di compilazione, la dichiarazione e inizializzazione di una matrice</span><span class="sxs-lookup"><span data-stu-id="14ce9-104">Compilation Errors Declaring and Initializing an Array</span></span>  
+ <span data-ttu-id="14ce9-105">Errori di compilazione possono essere generati da malinteso delle regole per la dichiarazione, la creazione e inizializzazione di matrici.</span><span class="sxs-lookup"><span data-stu-id="14ce9-105">Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays.</span></span> <span data-ttu-id="14ce9-106">Le cause più comuni di errori sono i seguenti:</span><span class="sxs-lookup"><span data-stu-id="14ce9-106">The most common causes of errors are the following:</span></span>  
   
--   Fornendo un [nuovo operatore](../../../../visual-basic/language-reference/operators/new-operator.md) clausola dopo aver specificato le lunghezze delle dimensioni nella dichiarazione di variabile di matrice. Le righe di codice seguente mostrano le dichiarazioni non valide di questo tipo.  
+-   <span data-ttu-id="14ce9-107">Fornisce un [nuovo operatore](../../../../visual-basic/language-reference/operators/new-operator.md) clausola dopo aver specificato le lunghezze delle dimensioni nella dichiarazione di variabile di matrice.</span><span class="sxs-lookup"><span data-stu-id="14ce9-107">Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration.</span></span> <span data-ttu-id="14ce9-108">Le righe di codice seguente mostrano le dichiarazioni non valide di questo tipo.</span><span class="sxs-lookup"><span data-stu-id="14ce9-108">The following code lines show invalid declarations of this type.</span></span>  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -55,15 +38,15 @@ Questa pagina sono elencati alcuni problemi comuni che possono verificarsi quand
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   Specifica le lunghezze delle dimensioni per più di una matrice di livello superiore di una matrice di matrici. L'esempio di codice seguente viene illustrata una dichiarazione di questo tipo non valida.  
+-   <span data-ttu-id="14ce9-109">Specifica le lunghezze della dimensione per più di una matrice di primo livello di una matrice di matrici.</span><span class="sxs-lookup"><span data-stu-id="14ce9-109">Specifying dimension lengths for more than the top-level array of a jagged array.</span></span> <span data-ttu-id="14ce9-110">L'esempio di codice seguente viene illustrata una dichiarazione di questo tipo non valida.</span><span class="sxs-lookup"><span data-stu-id="14ce9-110">The following code line shows an invalid declaration of this type.</span></span>  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   L'omissione di `New` parola chiave quando si specificano i valori dell'elemento. L'esempio di codice seguente viene illustrata una dichiarazione di questo tipo non valida.  
+-   <span data-ttu-id="14ce9-111">L'omissione di `New` parola chiave quando si specificano i valori degli elementi.</span><span class="sxs-lookup"><span data-stu-id="14ce9-111">Omitting the `New` keyword when specifying the element values.</span></span> <span data-ttu-id="14ce9-112">L'esempio di codice seguente viene illustrata una dichiarazione di questo tipo non valida.</span><span class="sxs-lookup"><span data-stu-id="14ce9-112">The following code line shows an invalid declaration of this type.</span></span>  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   Fornendo un `New` clausola senza parentesi graffe (`{}`). Le righe di codice seguente mostrano le dichiarazioni non valide di questo tipo.  
+-   <span data-ttu-id="14ce9-113">Fornisce un `New` clausola senza parentesi graffe (`{}`).</span><span class="sxs-lookup"><span data-stu-id="14ce9-113">Supplying a `New` clause without braces (`{}`).</span></span> <span data-ttu-id="14ce9-114">Le righe di codice seguente mostrano le dichiarazioni non valide di questo tipo.</span><span class="sxs-lookup"><span data-stu-id="14ce9-114">The following code lines show invalid declarations of this type.</span></span>  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -73,15 +56,15 @@ Questa pagina sono elencati alcuni problemi comuni che possono verificarsi quand
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>Accesso a una matrice fuori dai limiti  
- Il processo di inizializzazione di una matrice assegna un limite superiore e inferiore di ogni dimensione. L'accesso a un elemento della matrice debba specificare un indice valido o un indice, per ogni dimensione. Se il valore dell'indice è di sotto del limite inferiore o di sopra del limite superiore, un <xref:System.IndexOutOfRangeException>risultati dell'eccezione.</xref:System.IndexOutOfRangeException> Il compilatore non è in grado di rilevare un errore di questo tipo, si verifica un errore in fase di esecuzione.  
+## <a name="accessing-an-array-out-of-bounds"></a><span data-ttu-id="14ce9-115">L'accesso a una matrice fuori dai limiti</span><span class="sxs-lookup"><span data-stu-id="14ce9-115">Accessing an Array Out of Bounds</span></span>  
+ <span data-ttu-id="14ce9-116">Il processo di inizializzazione di una matrice assegna un limite superiore e inferiore a ogni dimensione.</span><span class="sxs-lookup"><span data-stu-id="14ce9-116">The process of initializing an array assigns an upper bound and a lower bound to each dimension.</span></span> <span data-ttu-id="14ce9-117">Ogni accesso a un elemento della matrice debba specificare un indice valido o un indice, per ogni dimensione.</span><span class="sxs-lookup"><span data-stu-id="14ce9-117">Every access to an element of the array must specify a valid index, or subscript, for every dimension.</span></span> <span data-ttu-id="14ce9-118">Se il valore dell'indice è di sotto del limite inferiore o di sopra del limite superiore, un <xref:System.IndexOutOfRangeException> risultati dell'eccezione.</span><span class="sxs-lookup"><span data-stu-id="14ce9-118">If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results.</span></span> <span data-ttu-id="14ce9-119">Il compilatore non è in grado di rilevare un errore, si verifica un errore in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="14ce9-119">The compiler cannot detect such an error, so an error occurs at run time.</span></span>  
   
-### <a name="determining-bounds"></a>Determinazione dei limiti  
- Se un altro componente passa una matrice al codice, ad esempio come un argomento di routine, non si conosce la dimensione della matrice o le lunghezze delle dimensioni. È sempre necessario determinare il limite superiore per ogni dimensione della matrice prima di tentare di accedere a tutti gli elementi. Se la matrice è stata creata in modo diverso da un [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] `New` clausola, potrebbe essere il limite inferiore diverso da 0 ed è più sicuro determinare tale limite.  
+### <a name="determining-bounds"></a><span data-ttu-id="14ce9-120">Definizione di limiti</span><span class="sxs-lookup"><span data-stu-id="14ce9-120">Determining Bounds</span></span>  
+ <span data-ttu-id="14ce9-121">Se un altro componente passa una matrice al codice, ad esempio come un argomento di routine, non si conosce la dimensione della matrice o le lunghezze delle dimensioni.</span><span class="sxs-lookup"><span data-stu-id="14ce9-121">If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions.</span></span> <span data-ttu-id="14ce9-122">Prima di tentare di accedere a tutti gli elementi, è sempre necessario determinare il limite superiore per tutte le dimensioni di una matrice.</span><span class="sxs-lookup"><span data-stu-id="14ce9-122">You should always determine the upper bound for every dimension of an array before you attempt to access any elements.</span></span> <span data-ttu-id="14ce9-123">Se la matrice è stata creata in modo diverso da un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `New` clausola, potrebbe essere il limite inferiore diverso da 0 ed è più sicuro determinare tale limite.</span><span class="sxs-lookup"><span data-stu-id="14ce9-123">If the array has been created by some means other than a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.</span></span>  
   
-### <a name="specifying-the-dimension"></a>Specifica la dimensione  
- Durante la determinazione dei limiti di una matrice multidimensionale, prestare attenzione a come specificare la dimensione. Il `dimension` parametri della <xref:System.Array.GetLowerBound%2A>e <xref:System.Array.GetUpperBound%2A>metodi sono basati su 0, mentre il `Rank` parametri di [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A>e <xref:Microsoft.VisualBasic.Information.UBound%2A>funzioni sono basati su 1.</xref:Microsoft.VisualBasic.Information.UBound%2A> </xref:Microsoft.VisualBasic.Information.LBound%2A> </xref:System.Array.GetUpperBound%2A> </xref:System.Array.GetLowerBound%2A>  
+### <a name="specifying-the-dimension"></a><span data-ttu-id="14ce9-124">Specifica la dimensione</span><span class="sxs-lookup"><span data-stu-id="14ce9-124">Specifying the Dimension</span></span>  
+ <span data-ttu-id="14ce9-125">Quando si determinano i limiti di una matrice multidimensionale, prestare attenzione a come specificare la dimensione.</span><span class="sxs-lookup"><span data-stu-id="14ce9-125">When determining the bounds of a multidimensional array, take care how you specify the dimension.</span></span> <span data-ttu-id="14ce9-126">Il `dimension` parametri del <xref:System.Array.GetLowerBound%2A> e <xref:System.Array.GetUpperBound%2A> metodi sono basate su 0, mentre il `Rank` parametri del [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A> e <xref:Microsoft.VisualBasic.Information.UBound%2A> funzioni sono basati su 1.</span><span class="sxs-lookup"><span data-stu-id="14ce9-126">The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Matrici](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Procedura: inizializzare una variabile di matrice in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+## <a name="see-also"></a><span data-ttu-id="14ce9-127">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="14ce9-127">See Also</span></span>  
+ [<span data-ttu-id="14ce9-128">Array</span><span class="sxs-lookup"><span data-stu-id="14ce9-128">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [<span data-ttu-id="14ce9-129">Procedura: Inizializzare una variabile di matrice in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="14ce9-129">How to: Initialize an Array Variable in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

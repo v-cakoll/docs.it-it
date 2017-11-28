@@ -10,147 +10,146 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
+ms.openlocfilehash: dad02c64d22fe0f127057202c082680f13261d7b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cc8f38d96f7f1c41f04d64c2acc2f53805b6b012
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="using-attributes-in-c"></a><span data-ttu-id="0cbc5-104">Uso degli attributi in C#</span><span class="sxs-lookup"><span data-stu-id="0cbc5-104">Using Attributes in C#</span></span> #
 
-# <a name="using-attributes-in-c"></a>Uso degli attributi in C# #
+<span data-ttu-id="0cbc5-105">Gli attributi consentono di associare informazioni al codice in modo dichiarativo.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-105">Attributes provide a way of associating information with code in a declarative way.</span></span> <span data-ttu-id="0cbc5-106">Offrono anche un elemento riutilizzabile che può essere applicato a vari tipi di destinazioni.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-106">They can also provide a reusable element that can be applied to a variety of targets.</span></span>
 
-Gli attributi consentono di associare informazioni al codice in modo dichiarativo. Offrono anche un elemento riutilizzabile che può essere applicato a vari tipi di destinazioni.
+<span data-ttu-id="0cbc5-107">L'attributo `[Obsolete]`, ad esempio,</span><span class="sxs-lookup"><span data-stu-id="0cbc5-107">Consider the `[Obsolete]` attribute.</span></span> <span data-ttu-id="0cbc5-108">può essere applicato a classi, struct, metodi, costruttori e altri elementi.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-108">It can be applied to classes, structs, methods, constructors, and more.</span></span> <span data-ttu-id="0cbc5-109">_Dichiara_ che l'elemento è obsoleto.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-109">It _declares_ that the element is obsolete.</span></span> <span data-ttu-id="0cbc5-110">Spetta quindi al compilatore C# cercare l'attributo ed eseguire di conseguenza le azioni appropriate.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-110">It's then up to the C# compiler to look for this attribute, and do some action in response.</span></span>
 
-L'attributo `[Obsolete]`, ad esempio, può essere applicato a classi, struct, metodi, costruttori e altri elementi. _Dichiara_ che l'elemento è obsoleto. Spetta quindi al compilatore C# cercare l'attributo ed eseguire di conseguenza le azioni appropriate.
+<span data-ttu-id="0cbc5-111">In questa esercitazione si illustreranno le procedure necessarie per aggiungere attributi al codice, creare e usare attributi personalizzati e usare alcuni attributi incorporati in .NET Core.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-111">In this tutorial, you'll be introduced to how to add attributes to your code, how to create and use your own attributes, and how to use some attributes that are built into .NET Core.</span></span>
 
-In questa esercitazione si illustreranno le procedure necessarie per aggiungere attributi al codice, creare e usare attributi personalizzati e usare alcuni attributi incorporati in .NET Core.
+## <a name="prerequisites"></a><span data-ttu-id="0cbc5-112">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="0cbc5-112">Prerequisites</span></span>
+<span data-ttu-id="0cbc5-113">È necessario configurare il computer per l'esecuzione di .NET Core.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-113">You’ll need to setup your machine to run .NET core.</span></span> <span data-ttu-id="0cbc5-114">Le istruzioni di installazione sono disponibili nella pagina [.NET Core](https://www.microsoft.com/net/core).</span><span class="sxs-lookup"><span data-stu-id="0cbc5-114">You can find the installation instructions on the [.NET Core](https://www.microsoft.com/net/core) page.</span></span>
+<span data-ttu-id="0cbc5-115">Questa applicazione può essere eseguita in Windows, Ubuntu Linux, macOS o in un contenitore Docker.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-115">You can run this application on Windows, Ubuntu Linux, macOS or in a Docker container.</span></span> <span data-ttu-id="0cbc5-116">È necessario installare l'editor di codice preferito.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-116">You’ll need to install your favorite code editor.</span></span> <span data-ttu-id="0cbc5-117">Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma,</span><span class="sxs-lookup"><span data-stu-id="0cbc5-117">The descriptions below use [Visual Studio Code](https://code.visualstudio.com/) which is an open source, cross platform editor.</span></span> <span data-ttu-id="0cbc5-118">ma è possibile usare gli strumenti con cui si ha maggiore familiarità.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-118">However, you can use whatever tools you are comfortable with.</span></span>
 
-## <a name="prerequisites"></a>Prerequisiti
-È necessario configurare il computer per l'esecuzione di .NET Core. Le istruzioni di installazione sono disponibili nella pagina [.NET Core](https://www.microsoft.com/net/core).
-Questa applicazione può essere eseguita in Windows, Ubuntu Linux, macOS o in un contenitore Docker. È necessario installare l'editor di codice preferito. Nelle descrizioni seguenti viene usato [Visual Studio Code](https://code.visualstudio.com/), un editor open source multipiattaforma, ma è possibile usare gli strumenti con cui si ha maggiore familiarità.
+## <a name="create-the-application"></a><span data-ttu-id="0cbc5-119">Creare l'applicazione</span><span class="sxs-lookup"><span data-stu-id="0cbc5-119">Create the Application</span></span>
 
-## <a name="create-the-application"></a>Creare l'applicazione
-
-Dopo avere installato tutti gli strumenti, creare una nuova applicazione .NET Core. Per usare il generatore da riga di comando, eseguire il comando seguente nella shell preferita:
+<span data-ttu-id="0cbc5-120">Dopo avere installato tutti gli strumenti, creare una nuova applicazione .NET Core.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-120">Now that you've installed all the tools, create a new .NET Core application.</span></span> <span data-ttu-id="0cbc5-121">Per usare il generatore da riga di comando, eseguire il comando seguente nella shell preferita:</span><span class="sxs-lookup"><span data-stu-id="0cbc5-121">To use the command line generator, execute the following command in your favorite shell:</span></span>
 
 `dotnet new console`
 
-Questo comando crea file di progetto .NET Core per sistemi barebone. Sarà necessario eseguire `dotnet restore` per ripristinare le dipendenze richieste per la compilazione del progetto.
+<span data-ttu-id="0cbc5-122">Questo comando crea file di progetto .NET Core per sistemi barebone.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-122">This command will create barebones .NET core project files.</span></span> <span data-ttu-id="0cbc5-123">Sarà necessario eseguire `dotnet restore` per ripristinare le dipendenze richieste per la compilazione del progetto.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-123">You will need to execute `dotnet restore` to restore the dependencies needed to compile this project.</span></span>
 
-Per eseguire il programma, usare `dotnet run`. Nella console viene visualizzato "Hello, World".
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-## <a name="how-to-add-attributes-to-code"></a>Come aggiungere attributi al codice
+<span data-ttu-id="0cbc5-124">Per eseguire il programma, usare `dotnet run`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-124">To execute the program, use `dotnet run`.</span></span> <span data-ttu-id="0cbc5-125">Nella console viene visualizzato "Hello, World".</span><span class="sxs-lookup"><span data-stu-id="0cbc5-125">You should see "Hello, World" output to the console.</span></span>
 
-In C# gli attributi sono classi che ereditano dalla classe di base `Attribute`. Qualsiasi classe che eredita da `Attribute` può essere usata come una sorta di "tag" in altre parti del codice.
-Si consideri, ad esempio, l'attributo denominato `ObsoleteAttribute`, usato per segnalare che il codice è obsoleto e non deve più essere usato. È possibile inserire questo attributo in una classe usando, ad esempio, parentesi quadre.
+## <a name="how-to-add-attributes-to-code"></a><span data-ttu-id="0cbc5-126">Come aggiungere attributi al codice</span><span class="sxs-lookup"><span data-stu-id="0cbc5-126">How to add attributes to code</span></span>
 
-[!code-csharp[Esempio attributo obsoleto](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
+<span data-ttu-id="0cbc5-127">In C# gli attributi sono classi che ereditano dalla classe di base `Attribute`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-127">In C#, attributes are classes that inherit from the `Attribute` base class.</span></span> <span data-ttu-id="0cbc5-128">Qualsiasi classe che eredita da `Attribute` può essere usata come una sorta di "tag" in altre parti del codice.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-128">Any class that inherits from `Attribute` can be used as a sort of "tag" on other pieces of code.</span></span>
+<span data-ttu-id="0cbc5-129">Si consideri, ad esempio, l'attributo denominato `ObsoleteAttribute`,</span><span class="sxs-lookup"><span data-stu-id="0cbc5-129">For instance, there is an attribute called `ObsoleteAttribute`.</span></span> <span data-ttu-id="0cbc5-130">usato per segnalare che il codice è obsoleto e non deve più essere usato.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-130">This is used to signal that code is obsolete and shouldn't be used anymore.</span></span> <span data-ttu-id="0cbc5-131">È possibile inserire questo attributo in una classe usando, ad esempio, parentesi quadre.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-131">You can place this attribute on a class, for instance, by using square brackets.</span></span>
 
-Anche se la classe è chiamata `ObsoleteAttribute`, nel codice è necessario usare solo `[Obsolete]`. Questa è una convenzione seguita da C#.
-Se si preferisce, è possibile usare il nome completo `[ObsoleteAttribute]`.
+[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
 
-Quando si contrassegna una classe come obsoleta, è opportuno fornire alcune informazioni sul *motivo* per cui è obsoleta e/o sull'*oggetto* da usare in alternativa. A questo scopo, passare un parametro stringa all'attributo Obsolete.
+<span data-ttu-id="0cbc5-132">Anche se la classe è chiamata `ObsoleteAttribute`, nel codice è necessario usare solo `[Obsolete]`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-132">Note that while the class is called `ObsoleteAttribute`, it's only necessary to use `[Obsolete]` in the code.</span></span> <span data-ttu-id="0cbc5-133">Questa è una convenzione seguita da C#.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-133">This is a convention that C# follows.</span></span>
+<span data-ttu-id="0cbc5-134">Se si preferisce, è possibile usare il nome completo `[ObsoleteAttribute]`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-134">You can use the full name `[ObsoleteAttribute]` if you choose.</span></span>
 
-[!code-csharp[Esempio di attributo obsoleto con parametri](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample2)]
+<span data-ttu-id="0cbc5-135">Quando si contrassegna una classe come obsoleta, è opportuno fornire alcune informazioni sul *motivo* per cui è obsoleta e/o sull'*oggetto* da usare in alternativa.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-135">When marking a class obsolete, it's a good idea to provide some information as to *why* it's obsolete, and/or *what* to use instead.</span></span> <span data-ttu-id="0cbc5-136">A questo scopo, passare un parametro stringa all'attributo Obsolete.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-136">Do this by passing a string parameter to the Obsolete attribute.</span></span>
 
-La stringa viene trasmessa come argomento a un costruttore `ObsoleteAttribute`, come se si scrivesse `var attr = new ObsoleteAttribute("some string")`.
+[!code-csharp[Obsolete attribute example with parameters](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample2)]
 
-I parametri che è possibile passare a un costruttore di attributo sono limitati a tipi o valori letterali semplici: `bool, int, double, string, Type, enums, etc` e matrici di questi tipi.
-Non è possibile usare un'espressione o una variabile, ma è possibile usare parametri posizionali o denominati.
+<span data-ttu-id="0cbc5-137">La stringa viene trasmessa come argomento a un costruttore `ObsoleteAttribute`, come se si scrivesse `var attr = new ObsoleteAttribute("some string")`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-137">The string is being passed as an argument to an `ObsoleteAttribute` constructor, just as if you were writing `var attr = new ObsoleteAttribute("some string")`.</span></span>
 
-## <a name="how-to-create-your-own-attribute"></a>Come creare un attributo personalizzato
+<span data-ttu-id="0cbc5-138">I parametri che è possibile passare a un costruttore di attributo sono limitati a tipi o valori letterali semplici: `bool, int, double, string, Type, enums, etc` e matrici di questi tipi.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-138">Parameters to an attribute constructor are limited to simple types/literals: `bool, int, double, string, Type, enums, etc` and arrays of those types.</span></span>
+<span data-ttu-id="0cbc5-139">Non è possibile usare un'espressione o una variabile,</span><span class="sxs-lookup"><span data-stu-id="0cbc5-139">You can not use an expression or a variable.</span></span> <span data-ttu-id="0cbc5-140">ma è possibile usare parametri posizionali o denominati.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-140">You are free to use positional or named parameters.</span></span>
 
-Creare un attributo è semplice come ereditarlo dalla classe di base `Attribute`.
+## <a name="how-to-create-your-own-attribute"></a><span data-ttu-id="0cbc5-141">Come creare un attributo personalizzato</span><span class="sxs-lookup"><span data-stu-id="0cbc5-141">How to create your own attribute</span></span>
 
-[!code-csharp[Creare un attributo personalizzato](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample1)]
+<span data-ttu-id="0cbc5-142">Creare un attributo è semplice come ereditarlo dalla classe di base `Attribute`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-142">Creating an attribute is as simple as inheriting from the `Attribute` base class.</span></span>
 
-Con quanto creato in precedenza, è possibile ora usare `[MySpecial]` (o `[MySpecialAttribute]`) come attributo in un'altra posizione della codebase.
+[!code-csharp[Create your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample1)]
 
-[!code-csharp[Uso di un attributo personalizzato](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample2)]
+<span data-ttu-id="0cbc5-143">Con quanto creato in precedenza, è possibile ora usare `[MySpecial]` (o `[MySpecialAttribute]`) come attributo in un'altra posizione della codebase.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-143">With the above, I can now use `[MySpecial]` (or `[MySpecialAttribute]`) as an attribute elsewhere in the code base.</span></span>
 
-Alcuni attributi presenti nella libreria di classi base .NET, come `ObsoleteAttribute`, attivano determinati comportamenti nel compilatore. Qualsiasi attributo creato, tuttavia, svolge solo la funzione di metadato e non genera alcun codice nella classe di attributo in esecuzione. È compito dell'utente intervenire sui metadati in un'altra parte del codice. Informazioni più dettagliate sono disponibili più avanti nell'esercitazione.
+[!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CreateAttributeExample2)]
 
-A questo punto è necessario prestare attenzione a un piccolo problema. Come specificato in precedenza, è possibile passare come argomenti solo determinati tipi di attributi. Quando si crea un tipo di attributo, tuttavia, il compilatore C# non impedisce la creazione di questi parametri. Nell'esempio seguente è stato creato un attributo con un costruttore compilato correttamente.
+<span data-ttu-id="0cbc5-144">Alcuni attributi presenti nella libreria di classi base .NET, come `ObsoleteAttribute`, attivano determinati comportamenti nel compilatore.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-144">Attributes in the .NET base class library like `ObsoleteAttribute` trigger certain behaviors within the compiler.</span></span> <span data-ttu-id="0cbc5-145">Qualsiasi attributo creato, tuttavia, svolge solo la funzione di metadato e non genera alcun codice nella classe di attributo in esecuzione.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-145">However, any attribute you create acts only as metadata, and doesn't result in any code within the attribute class being executed.</span></span> <span data-ttu-id="0cbc5-146">È compito dell'utente intervenire sui metadati in un'altra parte del codice. Informazioni più dettagliate sono disponibili più avanti nell'esercitazione.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-146">It's up to you to act on that metadata elsewhere in your code (more on that later in the tutorial).</span></span>
 
-[!code-csharp[Costruttore valido usato in un attributo](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGothca1)]
+<span data-ttu-id="0cbc5-147">A questo punto è necessario prestare attenzione a un piccolo problema.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-147">There is a 'gotcha' here to watch out for.</span></span> <span data-ttu-id="0cbc5-148">Come specificato in precedenza, è possibile passare come argomenti solo determinati tipi di attributi.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-148">As mentioned above, only certain types are allowed to be passed as arguments when using attributes.</span></span> <span data-ttu-id="0cbc5-149">Quando si crea un tipo di attributo, tuttavia, il compilatore C# non impedisce la creazione di questi parametri.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-149">However, when creating an attribute type, the C# compiler won't stop you from creating those parameters.</span></span> <span data-ttu-id="0cbc5-150">Nell'esempio seguente è stato creato un attributo con un costruttore compilato correttamente.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-150">In the below example, I've created an attribute with a constructor that compiles just fine.</span></span>
 
-Non sarà tuttavia possibile usare questo costruttore con la sintassi di attributo.
+[!code-csharp[Valid constructor used in an attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGothca1)]
 
-[!code-csharp[Tentativo non valido di usare il costruttore di attributi](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGotcha2)]
+<span data-ttu-id="0cbc5-151">Non sarà tuttavia possibile usare questo costruttore con la sintassi di attributo.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-151">However, you will be unable to use this constructor with attribute syntax.</span></span>
 
-Il codice precedente genererà un errore del compilatore come `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`
+[!code-csharp[Invalid attempt to use the attribute constructor](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeGotcha2)]
 
-## <a name="how-to-restrict-attribute-usage"></a>Come limitare l'uso degli attributi
+<span data-ttu-id="0cbc5-152">Il codice precedente genererà un errore del compilatore come `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`</span><span class="sxs-lookup"><span data-stu-id="0cbc5-152">The above will cause a compiler error like `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`</span></span>
 
-Gli attributi possono essere usati su diversi tipi di "destinatari". Gli esempi precedenti ne illustrano l'uso all'interno di classi, ma possono anche essere usati in:
+## <a name="how-to-restrict-attribute-usage"></a><span data-ttu-id="0cbc5-153">Come limitare l'uso degli attributi</span><span class="sxs-lookup"><span data-stu-id="0cbc5-153">How to restrict attribute usage</span></span>
 
-* Assembly
-* Classe
-* Costruttore
-* Delegato
-* Enum
-* Evento
-* Campo
-* GenericParameter
-* Interfaccia
-* Metodo
-* Modulo
-* Parametro
-* Proprietà
-* ReturnValue
-* Struct
+<span data-ttu-id="0cbc5-154">Gli attributi possono essere usati su diversi tipi di "destinatari".</span><span class="sxs-lookup"><span data-stu-id="0cbc5-154">Attributes can be used on a number of "targets".</span></span> <span data-ttu-id="0cbc5-155">Gli esempi precedenti ne illustrano l'uso all'interno di classi, ma possono anche essere usati in:</span><span class="sxs-lookup"><span data-stu-id="0cbc5-155">The above examples show them on classes, but they can also be used on:</span></span>
 
-Quando si crea una classe di attributo, per impostazione predefinita C# consente di usare l'attributo in una qualsiasi delle destinazioni possibili. Se si vuole limitare l'attributo ad alcune destinazioni, è possibile usare `AttributeUsageAttribute` nella classe di attributo, ovvero un attributo in un attributo.
+* <span data-ttu-id="0cbc5-156">Assembly</span><span class="sxs-lookup"><span data-stu-id="0cbc5-156">Assembly</span></span>
+* <span data-ttu-id="0cbc5-157">Classe</span><span class="sxs-lookup"><span data-stu-id="0cbc5-157">Class</span></span>
+* <span data-ttu-id="0cbc5-158">Costruttore</span><span class="sxs-lookup"><span data-stu-id="0cbc5-158">Constructor</span></span>
+* <span data-ttu-id="0cbc5-159">Delegato</span><span class="sxs-lookup"><span data-stu-id="0cbc5-159">Delegate</span></span>
+* <span data-ttu-id="0cbc5-160">Enum</span><span class="sxs-lookup"><span data-stu-id="0cbc5-160">Enum</span></span>
+* <span data-ttu-id="0cbc5-161">Evento</span><span class="sxs-lookup"><span data-stu-id="0cbc5-161">Event</span></span>
+* <span data-ttu-id="0cbc5-162">Campo</span><span class="sxs-lookup"><span data-stu-id="0cbc5-162">Field</span></span>
+* <span data-ttu-id="0cbc5-163">GenericParameter</span><span class="sxs-lookup"><span data-stu-id="0cbc5-163">GenericParameter</span></span>
+* <span data-ttu-id="0cbc5-164">Interfaccia</span><span class="sxs-lookup"><span data-stu-id="0cbc5-164">Interface</span></span>
+* <span data-ttu-id="0cbc5-165">Metodo</span><span class="sxs-lookup"><span data-stu-id="0cbc5-165">Method</span></span>
+* <span data-ttu-id="0cbc5-166">Modulo</span><span class="sxs-lookup"><span data-stu-id="0cbc5-166">Module</span></span>
+* <span data-ttu-id="0cbc5-167">Parametro</span><span class="sxs-lookup"><span data-stu-id="0cbc5-167">Parameter</span></span>
+* <span data-ttu-id="0cbc5-168">Proprietà</span><span class="sxs-lookup"><span data-stu-id="0cbc5-168">Property</span></span>
+* <span data-ttu-id="0cbc5-169">ReturnValue</span><span class="sxs-lookup"><span data-stu-id="0cbc5-169">ReturnValue</span></span>
+* <span data-ttu-id="0cbc5-170">Struct</span><span class="sxs-lookup"><span data-stu-id="0cbc5-170">Struct</span></span>
 
-[!code-csharp[Uso di un attributo personalizzato](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample1)]
+<span data-ttu-id="0cbc5-171">Quando si crea una classe di attributo, per impostazione predefinita C# consente di usare l'attributo in una qualsiasi delle destinazioni possibili.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-171">When you create an attribute class, by default, C# will allow you to use that attribute on any of the possible attribute targets.</span></span> <span data-ttu-id="0cbc5-172">Se si vuole limitare l'attributo ad alcune destinazioni, è possibile usare `AttributeUsageAttribute` nella classe di attributo,</span><span class="sxs-lookup"><span data-stu-id="0cbc5-172">If you want to restrict your attribute to certain targets, you can do so by using the `AttributeUsageAttribute` on your attribute class.</span></span> <span data-ttu-id="0cbc5-173">ovvero un attributo in un attributo.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-173">That's right, an attribute on an attribute!</span></span>
 
-Se si prova a inserire l'attributo precedente in un elemento diverso da una classe o da un tipo struct, si otterrà un errore del compilatore simile al seguente: `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`
+[!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample1)]
 
-[!code-csharp[Uso di un attributo personalizzato](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
+<span data-ttu-id="0cbc5-174">Se si prova a inserire l'attributo precedente in un elemento diverso da una classe o da un tipo struct, si otterrà un errore del compilatore simile al seguente: `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`</span><span class="sxs-lookup"><span data-stu-id="0cbc5-174">If you attempt to put the above attribute on something that's not a class or a struct, you will get a compiler error like `Attribute 'MyAttributeForClassAndStructOnly' is not valid on this declaration type. It is only valid on 'class, struct' declarations`</span></span>
 
-## <a name="how-to-use-attributes-attached-to-a-code-element"></a>Come usare attributi associati a un elemento di codice
+[!code-csharp[Using your own attribute](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
 
-Gli attributi agiscono come metadati. Senza una forza verso l'esterno, non hanno alcuna funzione.
+## <a name="how-to-use-attributes-attached-to-a-code-element"></a><span data-ttu-id="0cbc5-175">Come usare attributi associati a un elemento di codice</span><span class="sxs-lookup"><span data-stu-id="0cbc5-175">How to use attributes attached to a code element</span></span>
 
-Per trovare e intervenire sugli attributi, è in genere necessario usare la [reflection](../programming-guide/concepts/reflection.md). Il concetto di reflection non verrà approfondito in questa esercitazione ma, in termini generali, la reflection consente di scrivere codice C# che esamina altro codice.
+<span data-ttu-id="0cbc5-176">Gli attributi agiscono come metadati.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-176">Attributes act as metadata.</span></span> <span data-ttu-id="0cbc5-177">Senza una forza verso l'esterno, non hanno alcuna funzione.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-177">Without some outward force, they won't actually do anything.</span></span>
 
-È possibile, ad esempio, usare la reflection per ottenere informazioni su una classe: 
+<span data-ttu-id="0cbc5-178">Per trovare e intervenire sugli attributi, è in genere necessario usare la [reflection](../programming-guide/concepts/reflection.md).</span><span class="sxs-lookup"><span data-stu-id="0cbc5-178">To find and act on attributes, [Reflection](../programming-guide/concepts/reflection.md) is generally needed.</span></span> <span data-ttu-id="0cbc5-179">Il concetto di reflection non verrà approfondito in questa esercitazione ma, in termini generali, la reflection consente di scrivere codice C# che esamina altro codice.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-179">I won't cover Reflection in-depth in this tutorial, but the basic idea is that Reflection allows you to write code in C# that examines other code.</span></span>
 
-[!code-csharp[Acquisizione di informazioni sui tipi con la reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
+<span data-ttu-id="0cbc5-180">È possibile, ad esempio, usare la reflection per ottenere informazioni su una classe:</span><span class="sxs-lookup"><span data-stu-id="0cbc5-180">For instance, you can use Reflection to get information about a class:</span></span> 
 
-Verrà generato un output simile al seguente: `The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`
+[!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
-Dopo aver creato un oggetto `TypeInfo` (o `MemberInfo`, `FieldInfo` e così via), è possibile usare il metodo `GetCustomAttributes`. Verrà restituita una raccolta di oggetti `Attribute`.
-È possibile anche usare `GetCustomAttribute` e specificare un tipo di attributo.
+<span data-ttu-id="0cbc5-181">Verrà generato un output simile al seguente: `The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`</span><span class="sxs-lookup"><span data-stu-id="0cbc5-181">That will print out something like: `The assembly qualified name of MyClass is ConsoleApplication.MyClass, attributes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`</span></span>
 
-Di seguito è riportato un esempio d'uso di `GetCustomAttributes` in un'istanza di `MemberInfo` per `MyClass` (che, come specificato in precedenza, include un attributo `[Obsolete]`).
+<span data-ttu-id="0cbc5-182">Dopo aver creato un oggetto `TypeInfo` (o `MemberInfo`, `FieldInfo` e così via), è possibile usare il metodo `GetCustomAttributes`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-182">Once you have a `TypeInfo` object (or a `MemberInfo`, `FieldInfo`, etc), you can use the `GetCustomAttributes` method.</span></span> <span data-ttu-id="0cbc5-183">Verrà restituita una raccolta di oggetti `Attribute`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-183">This will return a collection of `Attribute` objects.</span></span>
+<span data-ttu-id="0cbc5-184">È possibile anche usare `GetCustomAttribute` e specificare un tipo di attributo.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-184">You can also use `GetCustomAttribute` and specify an Attribute type.</span></span>
 
-[!code-csharp[Acquisizione di informazioni sui tipi con la reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample2)]
+<span data-ttu-id="0cbc5-185">Di seguito è riportato un esempio d'uso di `GetCustomAttributes` in un'istanza di `MemberInfo` per `MyClass` (che, come specificato in precedenza, include un attributo `[Obsolete]`).</span><span class="sxs-lookup"><span data-stu-id="0cbc5-185">Here's an example of using `GetCustomAttributes` on a `MemberInfo` instance for `MyClass` (which we saw earlier has an `[Obsolete]` attribute on it).</span></span>
 
-Nella console verrà visualizzato l'output seguente: `Attribute on MyClass: ObsoleteAttribute`. Provare ad aggiungere altri attributi a `MyClass`.
+[!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample2)]
 
-È importante sottolineare che le istanze di questi oggetti `Attribute` vengono create in modo differito, ovvero non vengono create finché non si usa `GetCustomAttribute` o `GetCustomAttributes`.
-L'istanza, inoltre, viene creata ogni volta. Se si chiama `GetCustomAttributes` due volte in una riga, verranno restituite due istanze diverse di `ObsoleteAttribute`.
+<span data-ttu-id="0cbc5-186">Nella console verrà visualizzato l'output seguente: `Attribute on MyClass: ObsoleteAttribute`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-186">That will print to console: `Attribute on MyClass: ObsoleteAttribute`.</span></span> <span data-ttu-id="0cbc5-187">Provare ad aggiungere altri attributi a `MyClass`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-187">Try adding other attributes to `MyClass`.</span></span>
 
-## <a name="common-attributes-in-the-base-class-library-bcl"></a>Attributi comuni nella libreria di classi base
+<span data-ttu-id="0cbc5-188">È importante sottolineare che le istanze di questi oggetti `Attribute` vengono create in modo differito,</span><span class="sxs-lookup"><span data-stu-id="0cbc5-188">It's important to note that these `Attribute` objects are instantiated lazily.</span></span> <span data-ttu-id="0cbc5-189">ovvero non vengono create finché non si usa `GetCustomAttribute` o `GetCustomAttributes`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-189">That is, they won't be instantiated until you use `GetCustomAttribute` or `GetCustomAttributes`.</span></span>
+<span data-ttu-id="0cbc5-190">L'istanza, inoltre, viene creata ogni volta.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-190">They are also instantiated each time.</span></span> <span data-ttu-id="0cbc5-191">Se si chiama `GetCustomAttributes` due volte in una riga, verranno restituite due istanze diverse di `ObsoleteAttribute`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-191">Calling `GetCustomAttributes` twice in a row will return two different instances of `ObsoleteAttribute`.</span></span>
 
-Gli attributi vengono usati da molti tipi di strumenti e framework. NUnit si avvale di attributi come `[Test]` e `[TestFixture]`, usati dal test runner NUnit. ASP.NET MVC usa attributi come `[Authorize]` e fornisce un framework di filtri di azione per applicare questioni trasversali su azioni MVC. [PostSharp](https://www.postsharp.net) usa la sintassi di attributo per consentire la programmazione orientata agli aspetti in C#.
+## <a name="common-attributes-in-the-base-class-library-bcl"></a><span data-ttu-id="0cbc5-192">Attributi comuni nella libreria di classi base</span><span class="sxs-lookup"><span data-stu-id="0cbc5-192">Common attributes in the base class library (BCL)</span></span>
 
-Di seguito sono illustrati alcuni attributi importanti incorporati nelle librerie di classi base di .NET Core:
+<span data-ttu-id="0cbc5-193">Gli attributi vengono usati da molti tipi di strumenti e framework.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-193">Attributes are used by many tools and frameworks.</span></span> <span data-ttu-id="0cbc5-194">NUnit si avvale di attributi come `[Test]` e `[TestFixture]`, usati dal test runner NUnit.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-194">NUnit uses attributes like `[Test]` and `[TestFixture]` that are used by the NUnit test runner.</span></span> <span data-ttu-id="0cbc5-195">ASP.NET MVC usa attributi come `[Authorize]` e fornisce un framework di filtri di azione per applicare questioni trasversali su azioni MVC.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-195">ASP.NET MVC uses attributes like `[Authorize]` and provides an action filter framework to perform cross-cutting concerns on MVC actions.</span></span> <span data-ttu-id="0cbc5-196">[PostSharp](https://www.postsharp.net) usa la sintassi di attributo per consentire la programmazione orientata agli aspetti in C#.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-196">[PostSharp](https://www.postsharp.net) uses the attribute syntax to allow aspect-oriented programming in C#.</span></span>
 
-* `[Obsolete]`. Questo attributo è stato usato negli esempi precedenti e si trova nello spazio dei nomi `System`. È utile per fornire documentazione dichiarativa su una codebase in fase di modifica. È possibile specificare un messaggio sotto forma di stringa e usare un altro parametro booleano per convertire un avviso del compilatore in un errore del compilatore.
+<span data-ttu-id="0cbc5-197">Di seguito sono illustrati alcuni attributi importanti incorporati nelle librerie di classi base di .NET Core:</span><span class="sxs-lookup"><span data-stu-id="0cbc5-197">Here are a few notable attributes built into the .NET Core base class libraries:</span></span>
 
-* `[Conditional]`. Questo attributo si trova nello spazio dei nomi `System.Diagnostics` e può essere applicato a metodi (o a classi di attributo). È necessario passare una stringa al costruttore.
-Se la stringa corrisponde a una direttiva `#define`, qualsiasi chiamata al metodo (ma non il metodo stesso) verrà rimossa dal compilatore C#. Questo attributo viene in genere usato per attività di debug (diagnostica).
+* <span data-ttu-id="0cbc5-198">`[Obsolete]`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-198">`[Obsolete]`.</span></span> <span data-ttu-id="0cbc5-199">Questo attributo è stato usato negli esempi precedenti e si trova nello spazio dei nomi `System`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-199">This one was used in the above examples, and it lives in the `System` namespace.</span></span> <span data-ttu-id="0cbc5-200">È utile per fornire documentazione dichiarativa su una codebase in fase di modifica.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-200">It is useful to provide declarative documentation about a changing code base.</span></span> <span data-ttu-id="0cbc5-201">È possibile specificare un messaggio sotto forma di stringa e usare un altro parametro booleano per convertire un avviso del compilatore in un errore del compilatore.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-201">A message can be provided in the form of a string, and another boolean parameter can be used to escalate from a compiler warning to a compiler error.</span></span>
 
-* `[CallerMemberName]`. Questo attributo può essere usato nei parametri e si trova nello spazio dei nomi `System.Runtime.CompilerServices`. Consente di inserire il nome del metodo che chiama un altro metodo. Viene in genere usato per eliminare "stringhe magiche" quando si implementa INotifyPropertyChanged in vari framework di interfaccia utente. Ad esempio:
+* <span data-ttu-id="0cbc5-202">`[Conditional]`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-202">`[Conditional]`.</span></span> <span data-ttu-id="0cbc5-203">Questo attributo si trova nello spazio dei nomi `System.Diagnostics`</span><span class="sxs-lookup"><span data-stu-id="0cbc5-203">This attribute is in the `System.Diagnostics` namespace.</span></span> <span data-ttu-id="0cbc5-204">e può essere applicato a metodi (o a classi di attributo).</span><span class="sxs-lookup"><span data-stu-id="0cbc5-204">This attribute can be applied to methods (or attribute classes).</span></span> <span data-ttu-id="0cbc5-205">È necessario passare una stringa al costruttore.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-205">You must pass a string to the constructor.</span></span>
+<span data-ttu-id="0cbc5-206">Se la stringa corrisponde a una direttiva `#define`, qualsiasi chiamata al metodo (ma non il metodo stesso) verrà rimossa dal compilatore C#.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-206">If that string matches a `#define` directive, then any calls to that method (but not the method itself) will be removed by the C# compiler.</span></span> <span data-ttu-id="0cbc5-207">Questo attributo viene in genere usato per attività di debug (diagnostica).</span><span class="sxs-lookup"><span data-stu-id="0cbc5-207">Typically this is used for debugging (diagnostics) purposes.</span></span>
 
-[!code-csharp[Uso di CallerMemberName quando si implementa INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
+* <span data-ttu-id="0cbc5-208">`[CallerMemberName]`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-208">`[CallerMemberName]`.</span></span> <span data-ttu-id="0cbc5-209">Questo attributo può essere usato nei parametri e si trova nello spazio dei nomi `System.Runtime.CompilerServices`.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-209">This attribute can be used on parameters, and lives in the `System.Runtime.CompilerServices` namespace.</span></span> <span data-ttu-id="0cbc5-210">Consente di inserire il nome del metodo che chiama un altro metodo.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-210">This is an attribute that is used to inject the name of the method that is calling another method.</span></span> <span data-ttu-id="0cbc5-211">Viene in genere usato per eliminare "stringhe magiche" quando si implementa INotifyPropertyChanged in vari framework di interfaccia utente.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-211">This is typically used as a way to eliminate 'magic strings' when implementing INotifyPropertyChanged in various UI frameworks.</span></span> <span data-ttu-id="0cbc5-212">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="0cbc5-212">As an example:</span></span>
 
-Nel codice precedente non è necessario che sia inclusa una stringa `"Name"` letterale. In questo modo, infatti, si evitano bug correlati a errori di digitazione e si semplificano eventuali operazioni di refactoring/ridenominazione.
+[!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 
-## <a name="summary"></a>Riepilogo
+<span data-ttu-id="0cbc5-213">Nel codice precedente non è necessario che sia inclusa una stringa `"Name"` letterale.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-213">In the above code, you don't have to have a literal `"Name"` string.</span></span> <span data-ttu-id="0cbc5-214">In questo modo, infatti, si evitano bug correlati a errori di digitazione e si semplificano eventuali operazioni di refactoring/ridenominazione.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-214">This can help prevent typo-related bugs and also makes for smoother refactoring/renaming.</span></span>
 
-Gli attributi integrano funzioni dichiarative in C#. Rappresentano tuttavia elementi di codice simili ai metadati e da soli non hanno alcuna funzione.
+## <a name="summary"></a><span data-ttu-id="0cbc5-215">Riepilogo</span><span class="sxs-lookup"><span data-stu-id="0cbc5-215">Summary</span></span>
 
+<span data-ttu-id="0cbc5-216">Gli attributi integrano funzioni dichiarative in C#.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-216">Attributes bring declarative power to C#.</span></span> <span data-ttu-id="0cbc5-217">Rappresentano tuttavia elementi di codice simili ai metadati e da soli non hanno alcuna funzione.</span><span class="sxs-lookup"><span data-stu-id="0cbc5-217">But they are a form of code as meta-data, and don't act by themselves.</span></span>

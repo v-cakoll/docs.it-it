@@ -1,61 +1,41 @@
 ---
 title: 'Procedura: implementare conversioni tra struct definite dall''utente (Guida per programmatori C#)'
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- user-defined conversions [C#]
+helpviewer_keywords: user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 7d86cbd48347e6951f6b6883a385d80d68697c9c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cc8856bb3bf8943c1b6648f7d81447a3e59b9489
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>Procedura: implementare conversioni tra struct definite dall'utente (Guida per programmatori C#)
-Questo esempio definisce due struct, `RomanNumeral` e `BinaryNumeral`, e illustra le conversioni tra di loro.  
+# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a><span data-ttu-id="a6a78-102">Procedura: implementare conversioni tra struct definite dall'utente (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="a6a78-102">How to: Implement User-Defined Conversions Between Structs (C# Programming Guide)</span></span>
+<span data-ttu-id="a6a78-103">Questo esempio definisce due struct, `RomanNumeral` e `BinaryNumeral`, e illustra le conversioni tra di loro.</span><span class="sxs-lookup"><span data-stu-id="a6a78-103">This example defines two structs, `RomanNumeral` and `BinaryNumeral`, and demonstrates conversions between them.</span></span>  
   
-## <a name="example"></a>Esempio  
- [!code-cs[csProgGuideStatements#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_1.cs)]  
+## <a name="example"></a><span data-ttu-id="a6a78-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="a6a78-104">Example</span></span>  
+ [!code-csharp[csProgGuideStatements#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_1.cs)]  
   
-## <a name="robust-programming"></a>Programmazione efficiente  
+## <a name="robust-programming"></a><span data-ttu-id="a6a78-105">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="a6a78-105">Robust Programming</span></span>  
   
--   Nell'esempio precedente l'istruzione:  
+-   <span data-ttu-id="a6a78-106">Nell'esempio precedente l'istruzione:</span><span class="sxs-lookup"><span data-stu-id="a6a78-106">In the previous example, the statement:</span></span>  
   
-     [!code-cs[csProgGuideStatements#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_2.cs)]  
+     [!code-csharp[csProgGuideStatements#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_2.cs)]  
   
-     esegue una conversione da `RomanNumeral` a `BinaryNumeral`. Poiché non c'è una conversione diretta da `RomanNumeral` a `BinaryNumeral`, vengono usati un cast per la conversione da `RomanNumeral` a `int` e un altro cast per la conversione da `int` a `BinaryNumeral`.  
+     <span data-ttu-id="a6a78-107">esegue una conversione da `RomanNumeral` a `BinaryNumeral`.</span><span class="sxs-lookup"><span data-stu-id="a6a78-107">performs a conversion from a `RomanNumeral` to a `BinaryNumeral`.</span></span> <span data-ttu-id="a6a78-108">Poiché non c'è una conversione diretta da `RomanNumeral` a `BinaryNumeral`, vengono usati un cast per la conversione da `RomanNumeral` a `int` e un altro cast per la conversione da `int` a `BinaryNumeral`.</span><span class="sxs-lookup"><span data-stu-id="a6a78-108">Because there is no direct conversion from `RomanNumeral` to `BinaryNumeral`, a cast is used to convert from a `RomanNumeral` to an `int`, and another cast to convert from an `int` to a `BinaryNumeral`.</span></span>  
   
--   Anche l'istruzione  
+-   <span data-ttu-id="a6a78-109">Anche l'istruzione</span><span class="sxs-lookup"><span data-stu-id="a6a78-109">Also the statement</span></span>  
   
-     [!code-cs[csProgGuideStatements#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_3.cs)]  
+     [!code-csharp[csProgGuideStatements#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-user-defined-conversions-between-structs_3.cs)]  
   
-     esegue una conversione da `BinaryNumeral` a `RomanNumeral`. Poiché `RomanNumeral` definisce una conversione implicita da `BinaryNumeral`, non è necessario il cast.  
+     <span data-ttu-id="a6a78-110">esegue una conversione da `BinaryNumeral` a `RomanNumeral`.</span><span class="sxs-lookup"><span data-stu-id="a6a78-110">performs a conversion from a `BinaryNumeral` to a `RomanNumeral`.</span></span> <span data-ttu-id="a6a78-111">Poiché `RomanNumeral` definisce una conversione implicita da `BinaryNumeral`, non è necessario il cast.</span><span class="sxs-lookup"><span data-stu-id="a6a78-111">Because `RomanNumeral` defines an implicit conversion from `BinaryNumeral`, no cast is required.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Operatori di conversione](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)
-
+## <a name="see-also"></a><span data-ttu-id="a6a78-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a6a78-112">See Also</span></span>  
+ [<span data-ttu-id="a6a78-113">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="a6a78-113">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="a6a78-114">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="a6a78-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="a6a78-115">Operatori di conversione</span><span class="sxs-lookup"><span data-stu-id="a6a78-115">Conversion Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)

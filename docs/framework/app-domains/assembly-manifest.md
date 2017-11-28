@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,57 +15,55 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1df64129a0ae15b5bad387a62ca60bb4b1b92f7d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eb20bfac6717779f5394724617d247a6dc980c7e
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="assembly-manifest"></a>Manifesto dell'assembly
-Ogni assembly, sia esso statico o dinamico, include una raccolta di dati che descrivono le relazioni tra i diversi elementi che lo compongono. Tali metadati sono contenuti nel manifesto dell'assembly. Il manifesto dell'assembly contiene tutti i metadati necessari per specificare l'identità di sicurezza e i requisiti di versione dell'assembly e tutti i metadati necessari per definire l'ambito dell'assembly e risolvere i riferimenti a classi e risorse. Il manifesto dell'assembly può essere memorizzato in un file PE, che avrà estensione EXE o DLL e ospiterà anche codice Microsoft Intermediate Language (MSIL), oppure in un file PE autonomo che conterrà solo le informazioni del manifesto dell'assembly.  
+# <a name="assembly-manifest"></a><span data-ttu-id="324a6-102">Manifesto dell'assembly</span><span class="sxs-lookup"><span data-stu-id="324a6-102">Assembly Manifest</span></span>
+<span data-ttu-id="324a6-103">Ogni assembly, sia esso statico o dinamico, include una raccolta di dati che descrivono le relazioni tra i diversi elementi che lo compongono.</span><span class="sxs-lookup"><span data-stu-id="324a6-103">Every assembly, whether static or dynamic, contains a collection of data that describes how the elements in the assembly relate to each other.</span></span> <span data-ttu-id="324a6-104">Tali metadati sono contenuti nel manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="324a6-104">The assembly manifest contains this assembly metadata.</span></span> <span data-ttu-id="324a6-105">Il manifesto dell'assembly contiene tutti i metadati necessari per specificare l'identità di sicurezza e i requisiti di versione dell'assembly e tutti i metadati necessari per definire l'ambito dell'assembly e risolvere i riferimenti a classi e risorse.</span><span class="sxs-lookup"><span data-stu-id="324a6-105">An assembly manifest contains all the metadata needed to specify the assembly's version requirements and security identity, and all metadata needed to define the scope of the assembly and resolve references to resources and classes.</span></span> <span data-ttu-id="324a6-106">Il manifesto dell'assembly può essere memorizzato in un file PE, che avrà estensione EXE o DLL e ospiterà anche codice Microsoft Intermediate Language (MSIL), oppure in un file PE autonomo che conterrà solo le informazioni del manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="324a6-106">The assembly manifest can be stored in either a PE file (an .exe or .dll) with Microsoft intermediate language (MSIL) code or in a standalone PE file that contains only assembly manifest information.</span></span>  
   
- Nella figura che segue vengono illustrati i diversi modi in cui è possibile memorizzare il manifesto.  
+ <span data-ttu-id="324a6-107">Nella figura che segue vengono illustrati i diversi modi in cui è possibile memorizzare il manifesto.</span><span class="sxs-lookup"><span data-stu-id="324a6-107">The following illustration shows the different ways the manifest can be stored.</span></span>  
   
- ![Assembly a file singolo](../../../docs/framework/app-domains/media/assemblytypes.gif "assemblytypes")  
-Tipi di assembly  
+ <span data-ttu-id="324a6-108">![Assembly a file singolo](../../../docs/framework/app-domains/media/assemblytypes.gif "assemblytypes")</span><span class="sxs-lookup"><span data-stu-id="324a6-108">![A single&#45;file assembly](../../../docs/framework/app-domains/media/assemblytypes.gif "assemblytypes")</span></span>  
+<span data-ttu-id="324a6-109">Tipi di assembly</span><span class="sxs-lookup"><span data-stu-id="324a6-109">Types of assemblies</span></span>  
   
- Nel caso di un assembly con un solo file associato, il manifesto viene incorporato nel file PE per formare un assembly a file singolo. È possibile creare un assembly su più file con un manifesto autonomo o con il manifesto incorporato in uno dei file PE dell'assembly.  
+ <span data-ttu-id="324a6-110">Nel caso di un assembly con un solo file associato, il manifesto viene incorporato nel file PE per formare un assembly a file singolo.</span><span class="sxs-lookup"><span data-stu-id="324a6-110">For an assembly with one associated file, the manifest is incorporated into the PE file to form a single-file assembly.</span></span> <span data-ttu-id="324a6-111">È possibile creare un assembly su più file con un manifesto autonomo o con il manifesto incorporato in uno dei file PE dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="324a6-111">You can create a multifile assembly with a standalone manifest file or with the manifest incorporated into one of the PE files in the assembly.</span></span>  
   
- Il manifesto dell'assembly svolge le seguenti funzioni:  
+ <span data-ttu-id="324a6-112">Il manifesto dell'assembly svolge le seguenti funzioni:</span><span class="sxs-lookup"><span data-stu-id="324a6-112">Each assembly's manifest performs the following functions:</span></span>  
   
--   Enumera i file che compongono l'assembly.  
+-   <span data-ttu-id="324a6-113">Enumera i file che compongono l'assembly.</span><span class="sxs-lookup"><span data-stu-id="324a6-113">Enumerates the files that make up the assembly.</span></span>  
   
--   Determina in che modo i riferimenti ai tipi e alle risorse dell'assembly vengono collegati ai file che contengono le relative dichiarazioni e implementazioni.  
+-   <span data-ttu-id="324a6-114">Determina in che modo i riferimenti ai tipi e alle risorse dell'assembly vengono collegati ai file che contengono le relative dichiarazioni e implementazioni.</span><span class="sxs-lookup"><span data-stu-id="324a6-114">Governs how references to the assembly's types and resources map to the files that contain their declarations and implementations.</span></span>  
   
--   Enumera altri assembly da cui l'assembly dipende.  
+-   <span data-ttu-id="324a6-115">Enumera altri assembly da cui l'assembly dipende.</span><span class="sxs-lookup"><span data-stu-id="324a6-115">Enumerates other assemblies on which the assembly depends.</span></span>  
   
--   Fornisce un livello di riferimenti indiretti tra i consumatori dell'assembly e i dettagli di implementazione dell'assembly.  
+-   <span data-ttu-id="324a6-116">Fornisce un livello di riferimenti indiretti tra i consumatori dell'assembly e i dettagli di implementazione dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="324a6-116">Provides a level of indirection between consumers of the assembly and the assembly's implementation details.</span></span>  
   
--   Conferisce all'assembly la capacità di descrivere se stesso.  
+-   <span data-ttu-id="324a6-117">Conferisce all'assembly la capacità di descrivere se stesso.</span><span class="sxs-lookup"><span data-stu-id="324a6-117">Renders the assembly self-describing.</span></span>  
   
-## <a name="assembly-manifest-contents"></a>Contenuto del manifesto dell'assembly  
- Nella tabella che segue vengono mostrate le informazioni contenute nel manifesto dell'assembly. I primi quattro elementi (le informazioni sul nome, il numero di versione, le impostazioni cultura e il nome sicuro dell'assembly) costituiscono l'identità dell'assembly.  
+## <a name="assembly-manifest-contents"></a><span data-ttu-id="324a6-118">Contenuto del manifesto dell'assembly</span><span class="sxs-lookup"><span data-stu-id="324a6-118">Assembly Manifest Contents</span></span>  
+ <span data-ttu-id="324a6-119">Nella tabella che segue vengono mostrate le informazioni contenute nel manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="324a6-119">The following table shows the information contained in the assembly manifest.</span></span> <span data-ttu-id="324a6-120">I primi quattro elementi (le informazioni sul nome, il numero di versione, le impostazioni cultura e il nome sicuro dell'assembly) costituiscono l'identità dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="324a6-120">The first four items—the assembly name, version number, culture, and strong name information—make up the assembly's identity.</span></span>  
   
-|Informazioni|Descrizione|  
+|<span data-ttu-id="324a6-121">Informazioni</span><span class="sxs-lookup"><span data-stu-id="324a6-121">Information</span></span>|<span data-ttu-id="324a6-122">Descrizione</span><span class="sxs-lookup"><span data-stu-id="324a6-122">Description</span></span>|  
 |-----------------|-----------------|  
-|Nome assembly|Una stringa di testo che specifica il nome dell'assembly.|  
-|Numero di versione|Un numero di versione principale e secondario e un numero di revisione e di build. Common Language Runtime utilizza tali numeri per assicurare l'applicazione dei criteri per la gestione delle versioni.|  
-|Impostazioni cultura|Informazioni sulla lingua o sulle impostazioni cultura supportate dall'assembly. Questa informazione deve essere utilizzata solo per designare un assembly come assembly satellite contenente informazioni specifiche della lingua o delle impostazioni cultura. Un assembly con informazioni relative alle impostazioni cultura viene automaticamente considerato come assembly satellite.|  
-|Informazioni sul nome sicuro|La chiave pubblica rilasciata dall'editore se all'assembly è stato assegnato un nome sicuro.|  
-|Elenco di tutti i file dell'assembly|Un elenco di tutti i file contenuti nell'assembly e un nome di file. Si noti che tutti i file che compongono l'assembly devono essere contenuti nella stessa directory del file che contiene il manifesto dell'assembly.|  
-|Informazioni per il riferimento ai tipi|Informazioni utilizzate dal runtime per collegare il riferimento a un tipo al file che ne contiene la dichiarazione e l'implementazione. Vengono utilizzate per i tipi esportati dall'assembly.|  
-|Informazioni sugli assembly a cui si fa riferimento|Un elenco di tutti gli assembly a cui questo assembly fa riferimento in modo statico. Ciascun riferimento include il nome, i metadati (versione, impostazioni cultura, sistema operativo e così via) e la chiave pubblica dell'assembly, se questo ha un nome sicuro.|  
+|<span data-ttu-id="324a6-123">Nome assembly</span><span class="sxs-lookup"><span data-stu-id="324a6-123">Assembly name</span></span>|<span data-ttu-id="324a6-124">Una stringa di testo che specifica il nome dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="324a6-124">A text string specifying the assembly's name.</span></span>|  
+|<span data-ttu-id="324a6-125">Numero di versione</span><span class="sxs-lookup"><span data-stu-id="324a6-125">Version number</span></span>|<span data-ttu-id="324a6-126">Un numero di versione principale e secondario e un numero di revisione e di build.</span><span class="sxs-lookup"><span data-stu-id="324a6-126">A major and minor version number, and a revision and build number.</span></span> <span data-ttu-id="324a6-127">Common Language Runtime utilizza tali numeri per assicurare l'applicazione dei criteri per la gestione delle versioni.</span><span class="sxs-lookup"><span data-stu-id="324a6-127">The common language runtime uses these numbers to enforce version policy.</span></span>|  
+|<span data-ttu-id="324a6-128">Impostazioni cultura</span><span class="sxs-lookup"><span data-stu-id="324a6-128">Culture</span></span>|<span data-ttu-id="324a6-129">Informazioni sulla lingua o sulle impostazioni cultura supportate dall'assembly.</span><span class="sxs-lookup"><span data-stu-id="324a6-129">Information on the culture or language the assembly supports.</span></span> <span data-ttu-id="324a6-130">Questa informazione deve essere utilizzata solo per designare un assembly come assembly satellite contenente informazioni specifiche della lingua o delle impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="324a6-130">This information should be used only to designate an assembly as a satellite assembly containing culture- or language-specific information.</span></span> <span data-ttu-id="324a6-131">Un assembly con informazioni relative alle impostazioni cultura viene automaticamente considerato come assembly satellite.</span><span class="sxs-lookup"><span data-stu-id="324a6-131">(An assembly with culture information is automatically assumed to be a satellite assembly.)</span></span>|  
+|<span data-ttu-id="324a6-132">Informazioni sul nome sicuro</span><span class="sxs-lookup"><span data-stu-id="324a6-132">Strong name information</span></span>|<span data-ttu-id="324a6-133">La chiave pubblica rilasciata dall'editore se all'assembly è stato assegnato un nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="324a6-133">The public key from the publisher if the assembly has been given a strong name.</span></span>|  
+|<span data-ttu-id="324a6-134">Elenco di tutti i file dell'assembly</span><span class="sxs-lookup"><span data-stu-id="324a6-134">List of all files in the assembly</span></span>|<span data-ttu-id="324a6-135">Un elenco di tutti i file contenuti nell'assembly e un nome di file.</span><span class="sxs-lookup"><span data-stu-id="324a6-135">A hash of each file contained in the assembly and a file name.</span></span> <span data-ttu-id="324a6-136">Si noti che tutti i file che compongono l'assembly devono essere contenuti nella stessa directory del file che contiene il manifesto dell'assembly.</span><span class="sxs-lookup"><span data-stu-id="324a6-136">Note that all files that make up the assembly must be in the same directory as the file containing the assembly manifest.</span></span>|  
+|<span data-ttu-id="324a6-137">Informazioni per il riferimento ai tipi</span><span class="sxs-lookup"><span data-stu-id="324a6-137">Type reference information</span></span>|<span data-ttu-id="324a6-138">Informazioni utilizzate dal runtime per collegare il riferimento a un tipo al file che ne contiene la dichiarazione e l'implementazione.</span><span class="sxs-lookup"><span data-stu-id="324a6-138">Information used by the runtime to map a type reference to the file that contains its declaration and implementation.</span></span> <span data-ttu-id="324a6-139">Vengono utilizzate per i tipi esportati dall'assembly.</span><span class="sxs-lookup"><span data-stu-id="324a6-139">This is used for types that are exported from the assembly.</span></span>|  
+|<span data-ttu-id="324a6-140">Informazioni sugli assembly a cui si fa riferimento</span><span class="sxs-lookup"><span data-stu-id="324a6-140">Information on referenced assemblies</span></span>|<span data-ttu-id="324a6-141">Un elenco di tutti gli assembly a cui questo assembly fa riferimento in modo statico.</span><span class="sxs-lookup"><span data-stu-id="324a6-141">A list of other assemblies that are statically referenced by the assembly.</span></span> <span data-ttu-id="324a6-142">Ciascun riferimento include il nome, i metadati (versione, impostazioni cultura, sistema operativo e così via) e la chiave pubblica dell'assembly, se questo ha un nome sicuro.</span><span class="sxs-lookup"><span data-stu-id="324a6-142">Each reference includes the dependent assembly's name, assembly metadata (version, culture, operating system, and so on), and public key, if the assembly is strong named.</span></span>|  
   
- È possibile aggiungere o modificare alcune informazioni del manifesto dell'assembly utilizzando gli attributi dell'assembly nel proprio codice. È anche possibile modificare le informazioni sulla versione e alcuni attributi informativi, tra cui marchio, copyright, prodotto, società e versione informativa. Per un elenco completo degli attributi degli assembly vedere [Impostazione degli attributi di un assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).  
+ <span data-ttu-id="324a6-143">È possibile aggiungere o modificare alcune informazioni del manifesto dell'assembly utilizzando gli attributi dell'assembly nel proprio codice.</span><span class="sxs-lookup"><span data-stu-id="324a6-143">You can add or change some information in the assembly manifest by using assembly attributes in your code.</span></span> <span data-ttu-id="324a6-144">È anche possibile modificare le informazioni sulla versione e alcuni attributi informativi, tra cui marchio, copyright, prodotto, società e versione informativa.</span><span class="sxs-lookup"><span data-stu-id="324a6-144">You can change version information and informational attributes, including Trademark, Copyright, Product, Company, and Informational Version.</span></span> <span data-ttu-id="324a6-145">Per un elenco completo degli attributi degli assembly vedere [Impostazione degli attributi di un assembly](../../../docs/framework/app-domains/set-assembly-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="324a6-145">For a complete list of assembly attributes, see [Setting Assembly Attributes](../../../docs/framework/app-domains/set-assembly-attributes.md).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Contenuto degli assembly](../../../docs/framework/app-domains/assembly-contents.md)   
- [Controllo delle versioni degli assembly](../../../docs/framework/app-domains/assembly-versioning.md)   
- [Creazione di assembly satellite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
- [Assembly con nomi sicuri](../../../docs/framework/app-domains/strong-named-assemblies.md)
-
+## <a name="see-also"></a><span data-ttu-id="324a6-146">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="324a6-146">See Also</span></span>  
+ [<span data-ttu-id="324a6-147">Contenuto degli assembly</span><span class="sxs-lookup"><span data-stu-id="324a6-147">Assembly Contents</span></span>](../../../docs/framework/app-domains/assembly-contents.md)  
+ [<span data-ttu-id="324a6-148">Controllo delle versioni degli assembly</span><span class="sxs-lookup"><span data-stu-id="324a6-148">Assembly Versioning</span></span>](../../../docs/framework/app-domains/assembly-versioning.md)  
+ [<span data-ttu-id="324a6-149">Creazione di assembly satellite</span><span class="sxs-lookup"><span data-stu-id="324a6-149">Creating Satellite Assemblies</span></span>](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
+ [<span data-ttu-id="324a6-150">Assembly con nomi sicuri</span><span class="sxs-lookup"><span data-stu-id="324a6-150">Strong-Named Assemblies</span></span>](../../../docs/framework/app-domains/strong-named-assemblies.md)

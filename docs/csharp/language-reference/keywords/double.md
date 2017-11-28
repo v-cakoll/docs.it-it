@@ -1,90 +1,70 @@
 ---
 title: double (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - double
 - double_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- double data type [C#]
+helpviewer_keywords: double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 232dd97e152f943137604074f24b5de779168e59
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d5588f8391157fb56a5e5067bb8e11f9269fe733
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="double-c-reference"></a>double (Riferimenti per C#)
-La parola chiave `double` indica un tipo semplice che archivia valori a virgola mobile a 64 bit. Nella tabella riportata di seguito sono indicati l'intervallo approssimativo e il grado di precisione del tipo `double`.  
+# <a name="double-c-reference"></a><span data-ttu-id="b1f6e-102">double (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="b1f6e-102">double (C# Reference)</span></span>
+<span data-ttu-id="b1f6e-103">La parola chiave `double` indica un tipo semplice che archivia valori a virgola mobile a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="b1f6e-103">The `double` keyword signifies a simple type that stores 64-bit floating-point values.</span></span> <span data-ttu-id="b1f6e-104">Nella tabella riportata di seguito sono indicati l'intervallo approssimativo e il grado di precisione del tipo `double`.</span><span class="sxs-lookup"><span data-stu-id="b1f6e-104">The following table shows the precision and approximate range for the `double` type.</span></span>  
   
-|Tipo|Intervallo approssimativo|Precisione|Tipo .NET Framework|  
+|<span data-ttu-id="b1f6e-105">Tipo</span><span class="sxs-lookup"><span data-stu-id="b1f6e-105">Type</span></span>|<span data-ttu-id="b1f6e-106">Intervallo approssimativo</span><span class="sxs-lookup"><span data-stu-id="b1f6e-106">Approximate range</span></span>|<span data-ttu-id="b1f6e-107">Precisione</span><span class="sxs-lookup"><span data-stu-id="b1f6e-107">Precision</span></span>|<span data-ttu-id="b1f6e-108">Tipo .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b1f6e-108">.NET Framework type</span></span>|  
 |----------|-----------------------|---------------|-------------------------|  
-|`double`|Compreso tra ±5,0 × 10<sup>−324</sup> e ±1,7 × 10<sup>308</sup>|15-16 cifre|<xref:System.Double?displayProperty=fullName>|  
+|`double`|<span data-ttu-id="b1f6e-109">Compreso tra ±5,0 × 10<sup>−324</sup> e ±1,7 × 10<sup>308</sup></span><span class="sxs-lookup"><span data-stu-id="b1f6e-109">±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup></span></span>|<span data-ttu-id="b1f6e-110">15-16 cifre</span><span class="sxs-lookup"><span data-stu-id="b1f6e-110">15-16 digits</span></span>|<xref:System.Double?displayProperty=nameWithType>|  
   
-## <a name="literals"></a>Valori letterali  
- Per impostazione predefinita, un valore letterale numerico reale a destra dell'operatore di assegnazione viene gestito come tipo `double`. Se invece un numero intero deve essere trattato come `double`, usare il suffisso d o D, ad esempio:  
+## <a name="literals"></a><span data-ttu-id="b1f6e-111">Valori letterali</span><span class="sxs-lookup"><span data-stu-id="b1f6e-111">Literals</span></span>  
+ <span data-ttu-id="b1f6e-112">Per impostazione predefinita, un valore letterale numerico reale a destra dell'operatore di assegnazione viene gestito come tipo `double`.</span><span class="sxs-lookup"><span data-stu-id="b1f6e-112">By default, a real numeric literal on the right side of the assignment operator is treated as `double`.</span></span> <span data-ttu-id="b1f6e-113">Se invece un numero intero deve essere trattato come `double`, usare il suffisso d o D, ad esempio:</span><span class="sxs-lookup"><span data-stu-id="b1f6e-113">However, if you want an integer number to be treated as `double`, use the suffix d or D, for example:</span></span>  
   
 ```  
 double x = 3D;  
 ```  
   
-## <a name="conversions"></a>Conversioni  
- In una stessa espressione è possibile combinare tipi integrali numerici e tipi a virgola mobile. In questo caso i tipi integrali vengono convertiti in tipi a virgola mobile. La valutazione dell'espressione viene eseguita in base alle regole seguenti:  
+## <a name="conversions"></a><span data-ttu-id="b1f6e-114">Conversioni</span><span class="sxs-lookup"><span data-stu-id="b1f6e-114">Conversions</span></span>  
+ <span data-ttu-id="b1f6e-115">In una stessa espressione è possibile combinare tipi integrali numerici e tipi a virgola mobile.</span><span class="sxs-lookup"><span data-stu-id="b1f6e-115">You can mix numeric integral types and floating-point types in an expression.</span></span> <span data-ttu-id="b1f6e-116">In questo caso i tipi integrali vengono convertiti in tipi a virgola mobile.</span><span class="sxs-lookup"><span data-stu-id="b1f6e-116">In this case, the integral types are converted to floating-point types.</span></span> <span data-ttu-id="b1f6e-117">La valutazione dell'espressione viene eseguita in base alle regole seguenti:</span><span class="sxs-lookup"><span data-stu-id="b1f6e-117">The evaluation of the expression is performed according to the following rules:</span></span>  
   
--   Se uno dei tipi a virgola mobile è `double`, l'espressione restituirà un valore `double` o [bool](../../../csharp/language-reference/keywords/bool.md) in caso di espressioni relazionali o booleane.  
+-   <span data-ttu-id="b1f6e-118">Se uno dei tipi a virgola mobile è `double`, l'espressione restituirà un valore `double` o [bool](../../../csharp/language-reference/keywords/bool.md) in caso di espressioni relazionali o booleane.</span><span class="sxs-lookup"><span data-stu-id="b1f6e-118">If one of the floating-point types is `double`, the expression evaluates to `double`, or [bool](../../../csharp/language-reference/keywords/bool.md) in relational or Boolean expressions.</span></span>  
   
--   Se l'espressione non contiene alcun tipo `double` restituirà un valore [float](../../../csharp/language-reference/keywords/float.md) o [bool](../../../csharp/language-reference/keywords/bool.md) in caso di espressioni relazionali o booleane.  
+-   <span data-ttu-id="b1f6e-119">Se l'espressione non contiene alcun tipo `double` restituirà un valore [float](../../../csharp/language-reference/keywords/float.md) o [bool](../../../csharp/language-reference/keywords/bool.md) in caso di espressioni relazionali o booleane.</span><span class="sxs-lookup"><span data-stu-id="b1f6e-119">If there is no `double` type in the expression, it evaluates to [float](../../../csharp/language-reference/keywords/float.md), or [bool](../../../csharp/language-reference/keywords/bool.md) in relational or Boolean expressions.</span></span>  
   
- Un'espressione a virgola mobile può contenere gli insiemi di valori seguenti:  
+ <span data-ttu-id="b1f6e-120">Un'espressione a virgola mobile può contenere gli insiemi di valori seguenti:</span><span class="sxs-lookup"><span data-stu-id="b1f6e-120">A floating-point expression can contain the following sets of values:</span></span>  
   
--   Zero positivo e negativo.  
+-   <span data-ttu-id="b1f6e-121">Zero positivo e negativo.</span><span class="sxs-lookup"><span data-stu-id="b1f6e-121">Positive and negative zero.</span></span>  
   
--   Infinito positivo e negativo.  
+-   <span data-ttu-id="b1f6e-122">Infinito positivo e negativo.</span><span class="sxs-lookup"><span data-stu-id="b1f6e-122">Positive and negative infinity.</span></span>  
   
--   Non un numero (NaN).  
+-   <span data-ttu-id="b1f6e-123">Non un numero (NaN).</span><span class="sxs-lookup"><span data-stu-id="b1f6e-123">Not-a-Number value (NaN).</span></span>  
   
--   Insieme finito di valori diversi da zero.  
+-   <span data-ttu-id="b1f6e-124">Insieme finito di valori diversi da zero.</span><span class="sxs-lookup"><span data-stu-id="b1f6e-124">The finite set of nonzero values.</span></span>  
   
- Per altre informazioni su questi valori, vedere lo standard IEEE per l'aritmetica a virgola mobile binaria, disponibile nel sito Web [IEEE](http://go.microsoft.com/fwlink/?LinkId=26269).  
+ <span data-ttu-id="b1f6e-125">Per altre informazioni su questi valori, vedere lo standard IEEE per l'aritmetica a virgola mobile binaria, disponibile nel sito Web [IEEE](http://www.ieee.org).</span><span class="sxs-lookup"><span data-stu-id="b1f6e-125">For more information about these values, see IEEE Standard for Binary Floating-Point Arithmetic, available on the [IEEE](http://www.ieee.org) Web site.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente, i valori [int](../../../csharp/language-reference/keywords/int.md), [short](../../../csharp/language-reference/keywords/short.md), [float](../../../csharp/language-reference/keywords/float.md), e `double` vengono sommati per restituire un risultato `double`.  
+## <a name="example"></a><span data-ttu-id="b1f6e-126">Esempio</span><span class="sxs-lookup"><span data-stu-id="b1f6e-126">Example</span></span>  
+ <span data-ttu-id="b1f6e-127">Nell'esempio seguente, i valori [int](../../../csharp/language-reference/keywords/int.md), [short](../../../csharp/language-reference/keywords/short.md), [float](../../../csharp/language-reference/keywords/float.md), e `double` vengono sommati per restituire un risultato `double`.</span><span class="sxs-lookup"><span data-stu-id="b1f6e-127">In the following example, an [int](../../../csharp/language-reference/keywords/int.md), a [short](../../../csharp/language-reference/keywords/short.md), a [float](../../../csharp/language-reference/keywords/float.md), and a `double` are added together giving a `double` result.</span></span>  
   
- [!code-cs[csrefKeywordsTypes#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/double_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/double_1.cs)]  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a><span data-ttu-id="b1f6e-128">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="b1f6e-128">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Parole chiave di C#](../../../csharp/language-reference/keywords/index.md)   
- [Tabella dei valori predefiniti](../../../csharp/language-reference/keywords/default-values-table.md)   
- [Tabella dei tipi predefiniti](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [Tabella dei tipi a virgola mobile](../../../csharp/language-reference/keywords/floating-point-types-table.md)   
- [Tabella delle conversioni numeriche implicite](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
- [Tabella delle conversioni numeriche esplicite](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-
+## <a name="see-also"></a><span data-ttu-id="b1f6e-129">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b1f6e-129">See Also</span></span>  
+ [<span data-ttu-id="b1f6e-130">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="b1f6e-130">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="b1f6e-131">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="b1f6e-131">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="b1f6e-132">Parole chiave di C#</span><span class="sxs-lookup"><span data-stu-id="b1f6e-132">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="b1f6e-133">Tabella dei valori predefiniti</span><span class="sxs-lookup"><span data-stu-id="b1f6e-133">Default Values Table</span></span>](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [<span data-ttu-id="b1f6e-134">Tabella dei tipi incorporati</span><span class="sxs-lookup"><span data-stu-id="b1f6e-134">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [<span data-ttu-id="b1f6e-135">Tabella dei tipi a virgola mobile</span><span class="sxs-lookup"><span data-stu-id="b1f6e-135">Floating-Point Types Table</span></span>](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+ [<span data-ttu-id="b1f6e-136">Tabella delle conversioni numeriche implicite</span><span class="sxs-lookup"><span data-stu-id="b1f6e-136">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+ [<span data-ttu-id="b1f6e-137">Tabella delle conversioni numeriche esplicite</span><span class="sxs-lookup"><span data-stu-id="b1f6e-137">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

@@ -5,39 +5,32 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: ff3f56b08aa3d6c7cb05bafd98d26f4700fa4e5a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6cd1e2d621d133f80a2f6e650ae6aed94e6bbe33
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="configuring-assembly-binding-redirection"></a>Configurazione del reindirizzamento dell'associazione di assembly
-Per impostazione predefinita, le applicazioni usano l'insieme di assembly .NET Framework fornito con la versione di runtime usata per compilare l'applicazione. Per reindirizzare i riferimenti di associazione di assembly a una specifica versione degli assembly .NET Framework è possibile usare l'attributo **appliesTo** dell'elemento [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) di un file di configurazione dell'applicazione. Questo attributo facoltativo usa un numero di versione di .NET Framework per indicare la versione a cui deve essere applicato. Se non si specifica l'attributo **appliesTo** l'elemento **\<assemblyBinding>** viene applicato a tutte le versioni di .NET Framework.  
+# <a name="configuring-assembly-binding-redirection"></a><span data-ttu-id="33116-102">Configurazione del reindirizzamento dell'associazione di assembly</span><span class="sxs-lookup"><span data-stu-id="33116-102">Configuring Assembly Binding Redirection</span></span>
+<span data-ttu-id="33116-103">Per impostazione predefinita, le applicazioni usano l'insieme di assembly .NET Framework fornito con la versione di runtime usata per compilare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="33116-103">By default, applications use the set of .NET Framework assemblies that shipped with the runtime version used to compile the application.</span></span> <span data-ttu-id="33116-104">Per reindirizzare i riferimenti di associazione di assembly a una specifica versione degli assembly .NET Framework è possibile usare l'attributo **appliesTo** dell'elemento [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) di un file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="33116-104">You can use the **appliesTo** attribute on the [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) element in an application configuration file to redirect assembly binding references to a specific version of the .NET Framework assemblies.</span></span> <span data-ttu-id="33116-105">Questo attributo facoltativo usa un numero di versione di .NET Framework per indicare la versione a cui deve essere applicato.</span><span class="sxs-lookup"><span data-stu-id="33116-105">This optional attribute uses a .NET Framework version number to indicate which version it applies to.</span></span> <span data-ttu-id="33116-106">Se non si specifica l'attributo **appliesTo** l'elemento **\<assemblyBinding>** viene applicato a tutte le versioni di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="33116-106">If no **appliesTo** attribute is specified, the **\<assemblyBinding>** element applies to all versions of the .NET Framework.</span></span>  
   
- L'attributo **appliesTo** è stato introdotto in .NET Framework versione 1.1 e viene ignorato dalla versione 1.0. Quando si usa .NET Framework versione 1.0 vengono quindi applicati tutti gli elementi **\<assemblyBinding>** anche se viene specificato un attributo **appliesTo**.  
+ <span data-ttu-id="33116-107">L'attributo **appliesTo** è stato introdotto in .NET Framework versione 1.1 e viene ignorato dalla versione 1.0.</span><span class="sxs-lookup"><span data-stu-id="33116-107">The **appliesTo** attribute was introduced in the .NET Framework version 1.1; it is ignored by the .NET Framework version 1.0.</span></span> <span data-ttu-id="33116-108">Quando si usa .NET Framework versione 1.0 vengono quindi applicati tutti gli elementi **\<assemblyBinding>** anche se viene specificato un attributo **appliesTo**.</span><span class="sxs-lookup"><span data-stu-id="33116-108">This means that all **\<assemblyBinding>** elements are applied when using the .NET Framework version 1.0, even if an **appliesTo** attribute is specified.</span></span>  
   
 > [!NOTE]
->  Usare l'attributo **appliesTo** per limitare il reindirizzamento dell'associazione di assembly a una specifica versione del runtime.  
+>  <span data-ttu-id="33116-109">Usare l'attributo **appliesTo** per limitare il reindirizzamento dell'associazione di assembly a una specifica versione del runtime.</span><span class="sxs-lookup"><span data-stu-id="33116-109">Use the **appliesTo** attribute to limit assembly binding redirection to a specific version of the runtime.</span></span>  
   
- Ad esempio, per reindirizzare un'associazione di assembly per un assembly di .NET Framework versione 1.0, è necessario includere il codice XML seguente nel file di configurazione dell'applicazione.  
+ <span data-ttu-id="33116-110">Ad esempio, per reindirizzare un'associazione di assembly per un assembly di .NET Framework versione 1.0, è necessario includere il codice XML seguente nel file di configurazione dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="33116-110">For example, to redirect assembly binding for a .NET Framework version 1.0 assembly, you would include the following XML code in your application configuration file.</span></span>  
   
 ```xml  
 <runtime>  
@@ -49,9 +42,9 @@ Per impostazione predefinita, le applicazioni usano l'insieme di assembly .NET F
 </runtime>  
 ```  
   
- Gli elementi **\<assemblyBinding>** vengono elaborati nell'ordine specificato. È necessario immettere prima le informazioni di reindirizzamento di associazione di assembly per gli assembly di .NET Framework versione 1.0, poi le informazioni di reindirizzamento di associazione di assembly per gli assembly di .NET Framework versione 1.1. Immettere infine le informazioni di reindirizzamento dell'binding di assembly per qualsiasi reindirizzamento di assembly .NET Framework in cui non viene usato l'attributo **appliesTo** e che quindi viene applicato a tutte le versioni di .NET Framework. In caso di conflitto nel reindirizzamento, verrà usata la prima istruzione di reindirizzamento corrispondente nel file di configurazione.  
+ <span data-ttu-id="33116-111">Gli elementi **\<assemblyBinding>** vengono elaborati nell'ordine specificato.</span><span class="sxs-lookup"><span data-stu-id="33116-111">The **\<assemblyBinding>** elements are order-sensitive.</span></span> <span data-ttu-id="33116-112">È necessario immettere prima le informazioni di reindirizzamento di associazione di assembly per gli assembly di .NET Framework versione 1.0, poi le informazioni di reindirizzamento di associazione di assembly per gli assembly di .NET Framework versione 1.1.</span><span class="sxs-lookup"><span data-stu-id="33116-112">You should enter assembly binding redirection information for any .NET Framework version 1.0 assemblies first, followed by assembly binding redirection information for any .NET Framework version 1.1 assemblies.</span></span> <span data-ttu-id="33116-113">Immettere infine le informazioni di reindirizzamento dell'binding di assembly per qualsiasi reindirizzamento di assembly .NET Framework in cui non viene usato l'attributo **appliesTo** e che quindi viene applicato a tutte le versioni di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="33116-113">Finally, enter assembly binding redirection information for any .NET Framework assembly redirection that does not use the **appliesTo** attribute and therefore applies to all versions of the .NET Framework.</span></span> <span data-ttu-id="33116-114">In caso di conflitto nel reindirizzamento, verrà usata la prima istruzione di reindirizzamento corrispondente nel file di configurazione.</span><span class="sxs-lookup"><span data-stu-id="33116-114">In case of a conflict in redirection, the first matching redirection statement in the configuration file is used.</span></span>  
   
- Per reindirizzare, ad esempio, un riferimento a un assembly di .NET Framework versione 1.0 e un altro riferimento a un assembly di .NET Framework versione 1.1, è possibile usare il modello illustrato nel frammento di codice che segue.  
+ <span data-ttu-id="33116-115">Per reindirizzare, ad esempio, un riferimento a un assembly di .NET Framework versione 1.0 e un altro riferimento a un assembly di .NET Framework versione 1.1, è possibile usare il modello illustrato nel frammento di codice che segue.</span><span class="sxs-lookup"><span data-stu-id="33116-115">For example, to redirect one reference to a .NET Framework version 1.0 assembly and another reference to a .NET Framework version 1.1 assembly, you would use the pattern shown in the following pseudocode.</span></span>  
   
 ```xml  
 <assemblyBinding xmlns="..." appliesTo="v1.0.3705">   
@@ -67,11 +60,10 @@ Per impostazione predefinita, le applicazioni usano l'insieme di assembly .NET F
 </assemblyBinding>  
 ```  
   
-## <a name="debugging-configuration-file-errors"></a>Debug degli errori del file di configurazione  
- I file di configurazione vengono analizzati nel runtime al momento della creazione di un dominio applicazione e vengono quindi caricati in tale dominio applicazione. In Common Language Runtime, gli errori in un file di configurazione vengono gestiti ignorando la voce che genera l'errore. Un file di configurazione contenente XML in formato non corretto viene ignorato completamente. In caso di codice XML non valido, verranno ignorate solo le sezioni non valide.  
+## <a name="debugging-configuration-file-errors"></a><span data-ttu-id="33116-116">Debug degli errori del file di configurazione</span><span class="sxs-lookup"><span data-stu-id="33116-116">Debugging Configuration File Errors</span></span>  
+ <span data-ttu-id="33116-117">I file di configurazione vengono analizzati nel runtime al momento della creazione di un dominio applicazione e vengono quindi caricati in tale dominio applicazione.</span><span class="sxs-lookup"><span data-stu-id="33116-117">The runtime parses configuration files once when an application domain is created, and loads code into that application domain.</span></span> <span data-ttu-id="33116-118">In Common Language Runtime, gli errori in un file di configurazione vengono gestiti ignorando la voce che genera l'errore.</span><span class="sxs-lookup"><span data-stu-id="33116-118">The common language runtime handles errors in a configuration file by ignoring the entry.</span></span> <span data-ttu-id="33116-119">Un file di configurazione contenente XML in formato non corretto viene ignorato completamente.</span><span class="sxs-lookup"><span data-stu-id="33116-119">The runtime ignores the entire configuration file if it contains malformed XML.</span></span> <span data-ttu-id="33116-120">In caso di codice XML non valido, verranno ignorate solo le sezioni non valide.</span><span class="sxs-lookup"><span data-stu-id="33116-120">For invalid XML, only the invalid sections are ignored.</span></span>  
   
- È possibile determinare se un file di configurazione viene usato determinando se si verificano reindirizzamenti dell'associazione di assembly. Per visualizzare gli assembly caricati usare [Fuslogvw.exe (Visualizzatore log associazioni assembly)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md). Per visualizzare tutte le associazioni di assembly è necessario impostare una voce per **ForceLog** nel Registro di sistema.  
+ <span data-ttu-id="33116-121">È possibile determinare se un file di configurazione viene usato determinando se si verificano reindirizzamenti dell'associazione di assembly.</span><span class="sxs-lookup"><span data-stu-id="33116-121">You can determine whether a configuration file is being used by determining whether assembly binding redirects are occurring.</span></span> <span data-ttu-id="33116-122">Per visualizzare gli assembly caricati usare [Fuslogvw.exe (Visualizzatore log associazioni assembly)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md).</span><span class="sxs-lookup"><span data-stu-id="33116-122">Use the [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) to see which assemblies are being loaded.</span></span> <span data-ttu-id="33116-123">Per visualizzare tutte le associazioni di assembly è necessario impostare una voce per **ForceLog** nel Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="33116-123">To see all assembly binds, you must set an entry for **ForceLog** in the registry.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
-
+## <a name="see-also"></a><span data-ttu-id="33116-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="33116-124">See Also</span></span>  
+ [<span data-ttu-id="33116-125">Procedura: abilitare e disabilitare il reindirizzamento di associazione automatico</span><span class="sxs-lookup"><span data-stu-id="33116-125">How to: Enable and Disable Automatic Binding Redirection</span></span>](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

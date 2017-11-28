@@ -1,31 +1,27 @@
 ---
 title: Esempio di esecuzione posticipata (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: b902c58f801a6e157a971335895670e8a8bf2181
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fdbe45ceda1c7c1d82664bcf3b84b79b4fd85511
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="deferred-execution-example-c"></a>Esempio di esecuzione posticipata (C#)
-In questo argomento vengono illustrati gli effetti dell'esecuzione posticipata e della valutazione lazy sulle query LINQ to XML.  
+# <a name="deferred-execution-example-c"></a><span data-ttu-id="14a8e-102">Esempio di esecuzione posticipata (C#)</span><span class="sxs-lookup"><span data-stu-id="14a8e-102">Deferred Execution Example (C#)</span></span>
+<span data-ttu-id="14a8e-103">In questo argomento vengono illustrati gli effetti dell'esecuzione posticipata e della valutazione lazy sulle query LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="14a8e-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
   
-## <a name="example"></a>Esempio  
- Nell'esempio seguente è illustrato l'ordine di esecuzione quando si usa un metodo di estensione basato su esecuzione posticipata. Viene dichiarata una matrice di tre stringhe. Viene quindi scorsa la raccolta restituita da `ConvertCollectionToUpperCase`.  
+## <a name="example"></a><span data-ttu-id="14a8e-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="14a8e-104">Example</span></span>  
+ <span data-ttu-id="14a8e-105">Nell'esempio seguente è illustrato l'ordine di esecuzione quando si usa un metodo di estensione basato su esecuzione posticipata.</span><span class="sxs-lookup"><span data-stu-id="14a8e-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="14a8e-106">Viene dichiarata una matrice di tre stringhe.</span><span class="sxs-lookup"><span data-stu-id="14a8e-106">The example declares an array of three strings.</span></span> <span data-ttu-id="14a8e-107">Viene quindi scorsa la raccolta restituita da `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="14a8e-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -56,7 +52,7 @@ class Program
 }  
 ```  
   
- Questo esempio produce il seguente output:  
+ <span data-ttu-id="14a8e-108">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="14a8e-108">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source abc  
@@ -67,14 +63,13 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- Si noti che quando si scorre la raccolta restituita da `ConvertCollectionToUpperCase`, ogni elemento viene recuperato dalla matrice di stringhe di origine e viene convertito in lettere maiuscole prima del recupero dell'elemento successivo.  
+ <span data-ttu-id="14a8e-109">Si noti che quando si scorre la raccolta restituita da `ConvertCollectionToUpperCase`, ogni elemento viene recuperato dalla matrice di stringhe di origine e viene convertito in lettere maiuscole prima del recupero dell'elemento successivo.</span><span class="sxs-lookup"><span data-stu-id="14a8e-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
   
- L'intera matrice di stringhe non viene convertita in lettere maiuscole prima dell'elaborazione nel ciclo `foreach` di `Main` di ogni elemento della raccolta restituita.  
+ <span data-ttu-id="14a8e-110">L'intera matrice di stringhe non viene convertita in lettere maiuscole prima dell'elaborazione nel ciclo `foreach` di `Main` di ogni elemento della raccolta restituita.</span><span class="sxs-lookup"><span data-stu-id="14a8e-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
   
- Nell'argomento successivo di questa esercitazione viene illustrato il concatenamento di query:  
+ <span data-ttu-id="14a8e-111">Nell'argomento successivo di questa esercitazione viene illustrato il concatenamento di query:</span><span class="sxs-lookup"><span data-stu-id="14a8e-111">The next topic in this tutorial illustrates chaining queries together:</span></span>  
   
--   [Esempio di concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+-   [<span data-ttu-id="14a8e-112">Esempio di concatenamento di query (C#)</span><span class="sxs-lookup"><span data-stu-id="14a8e-112">Chaining Queries Example (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Esercitazione: Concatenamento di query (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
-
+## <a name="see-also"></a><span data-ttu-id="14a8e-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="14a8e-113">See Also</span></span>  
+ [<span data-ttu-id="14a8e-114">Esercitazione: Concatenamento di query (C#)</span><span class="sxs-lookup"><span data-stu-id="14a8e-114">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

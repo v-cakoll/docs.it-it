@@ -1,48 +1,39 @@
 ---
 title: Attributi (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f148f13f-a0d5-4f22-9c87-4b73d5dde270
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2993ef3f424aa6487681e194f21e0f82193342ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ab55021a073f914905e29163ba2a669f69d6dcab
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="attributes-c"></a>Attributi (C#)
-Gli attributi offrono un metodo efficace per l'associazione di metadati o informazioni dichiarative con il codice (assembly, tipi, metodi, proprietà e così via). Dopo aver associato un attributo a un'entità di programma, in fase di esecuzione è possibile eseguire una query su tale attributo usando una tecnica denominata *reflection*. Per altre informazioni, vedere [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
+# <a name="attributes-c"></a><span data-ttu-id="683b1-102">Attributi (C#)</span><span class="sxs-lookup"><span data-stu-id="683b1-102">Attributes (C#)</span></span>
+<span data-ttu-id="683b1-103">Gli attributi offrono un metodo efficace per l'associazione di metadati o informazioni dichiarative con il codice (assembly, tipi, metodi, proprietà e così via).</span><span class="sxs-lookup"><span data-stu-id="683b1-103">Attributes provide a powerful method of associating metadata, or declarative information, with code (assemblies, types, methods, properties, and so forth).</span></span> <span data-ttu-id="683b1-104">Dopo aver associato un attributo a un'entità di programma, in fase di esecuzione è possibile eseguire una query su tale attributo usando una tecnica denominata *reflection*.</span><span class="sxs-lookup"><span data-stu-id="683b1-104">After an attribute is associated with a program entity, the attribute can be queried at run time by using a technique called *reflection*.</span></span> <span data-ttu-id="683b1-105">Per altre informazioni, vedere [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md).</span><span class="sxs-lookup"><span data-stu-id="683b1-105">For more information, see [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md).</span></span>  
   
- Di seguito sono riportate le proprietà degli attributi:  
+ <span data-ttu-id="683b1-106">Di seguito sono riportate le proprietà degli attributi:</span><span class="sxs-lookup"><span data-stu-id="683b1-106">Attributes have the following properties:</span></span>  
   
--   Gli attributi aggiungono metadati al programma. I *metadati* sono informazioni relative ai tipi definiti in un programma. Tutti gli assembly .NET contengono un set specificato di metadati che descrive i tipi e membri dei tipi definiti nell'assembly. È possibile aggiungere attributi personalizzati per specificare altre informazioni eventualmente necessarie. Per altre informazioni, vedere [Creazione di attributi personalizzati (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md).  
+-   <span data-ttu-id="683b1-107">Gli attributi aggiungono metadati al programma.</span><span class="sxs-lookup"><span data-stu-id="683b1-107">Attributes add metadata to your program.</span></span> <span data-ttu-id="683b1-108">I *metadati* sono informazioni relative ai tipi definiti in un programma.</span><span class="sxs-lookup"><span data-stu-id="683b1-108">*Metadata* is information about the types defined in a program.</span></span> <span data-ttu-id="683b1-109">Tutti gli assembly .NET contengono un set specificato di metadati che descrive i tipi e membri dei tipi definiti nell'assembly.</span><span class="sxs-lookup"><span data-stu-id="683b1-109">All .NET assemblies contain a specified set of metadata that describes the types and type members defined in the assembly.</span></span> <span data-ttu-id="683b1-110">È possibile aggiungere attributi personalizzati per specificare altre informazioni eventualmente necessarie.</span><span class="sxs-lookup"><span data-stu-id="683b1-110">You can add custom attributes to specify any additional information that is required.</span></span> <span data-ttu-id="683b1-111">Per altre informazioni, vedere [Creazione di attributi personalizzati (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="683b1-111">For more information, see, [Creating Custom Attributes (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md).</span></span>  
   
--   È possibile applicare uno o più attributi a interi assembly, moduli o elementi di programma di minori dimensioni, ad esempio classi e proprietà.  
+-   <span data-ttu-id="683b1-112">È possibile applicare uno o più attributi a interi assembly, moduli o elementi di programma di minori dimensioni, ad esempio classi e proprietà.</span><span class="sxs-lookup"><span data-stu-id="683b1-112">You can apply one or more attributes to entire assemblies, modules, or smaller program elements such as classes and properties.</span></span>  
   
--   Gli attributi possono accettare argomenti nello stesso modo dei metodi e delle proprietà.  
+-   <span data-ttu-id="683b1-113">Gli attributi possono accettare argomenti nello stesso modo dei metodi e delle proprietà.</span><span class="sxs-lookup"><span data-stu-id="683b1-113">Attributes can accept arguments in the same way as methods and properties.</span></span>  
   
--   Il programma può esaminare i propri metadati oppure i metadati di un altro programma tramite reflection. Per altre informazioni, vedere [Accesso agli attributi tramite reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+-   <span data-ttu-id="683b1-114">Il programma può esaminare i propri metadati oppure i metadati di un altro programma tramite reflection.</span><span class="sxs-lookup"><span data-stu-id="683b1-114">Your program can examine its own metadata or the metadata in other programs by using reflection.</span></span> <span data-ttu-id="683b1-115">Per altre informazioni, vedere [Accesso agli attributi tramite reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span><span class="sxs-lookup"><span data-stu-id="683b1-115">For more information, see [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
   
-## <a name="using-attributes"></a>Uso degli attributi  
- È possibile usare attributi nella maggior parte delle dichiarazioni, anche se la validità di un attributo specifico può essere limitata ad alcuni tipi di dichiarazione. Per specificare un attributo in C#, inserire il nome dell'attributo, racchiuso tra parentesi quadre ([]), sopra la dichiarazione dell'entità a cui è applicato.  
+## <a name="using-attributes"></a><span data-ttu-id="683b1-116">Uso degli attributi</span><span class="sxs-lookup"><span data-stu-id="683b1-116">Using Attributes</span></span>  
+ <span data-ttu-id="683b1-117">È possibile usare attributi nella maggior parte delle dichiarazioni, anche se la validità di un attributo specifico può essere limitata ad alcuni tipi di dichiarazione.</span><span class="sxs-lookup"><span data-stu-id="683b1-117">Attributes can be placed on most any declaration, though a specific attribute might restrict the types of declarations on which it is valid.</span></span> <span data-ttu-id="683b1-118">Per specificare un attributo in C#, inserire il nome dell'attributo, racchiuso tra parentesi quadre ([]), sopra la dichiarazione dell'entità a cui è applicato.</span><span class="sxs-lookup"><span data-stu-id="683b1-118">In C#, you specify an attribute by placing the name of the attribute, enclosed in square brackets ([]), above the declaration of the entity to which it applies.</span></span>  
   
- Nell'esempio seguente l'attributo <xref:System.SerializableAttribute> viene usato per applicare una caratteristica specifica a una classe:  
+ <span data-ttu-id="683b1-119">Nell'esempio seguente l'attributo <xref:System.SerializableAttribute> viene usato per applicare una caratteristica specifica a una classe:</span><span class="sxs-lookup"><span data-stu-id="683b1-119">In this example, the <xref:System.SerializableAttribute> attribute is used to apply a specific characteristic to a class:</span></span>  
   
 ```csharp  
 [System.Serializable]  
@@ -52,7 +43,7 @@ public class SampleClass
 }  
 ```  
   
- Un metodo con l'attributo <xref:System.Runtime.InteropServices.DllImportAttribute> è dichiarato come segue:  
+ <span data-ttu-id="683b1-120">Un metodo con l'attributo <xref:System.Runtime.InteropServices.DllImportAttribute> è dichiarato come segue:</span><span class="sxs-lookup"><span data-stu-id="683b1-120">A method with the attribute <xref:System.Runtime.InteropServices.DllImportAttribute> is declared like this:</span></span>  
   
 ```csharp  
 using System.Runtime.InteropServices;  
@@ -63,7 +54,7 @@ using System.Runtime.InteropServices;
 extern static void SampleMethod();  
 ```  
   
- In una dichiarazione è possibile inserire più attributi:  
+ <span data-ttu-id="683b1-121">In una dichiarazione è possibile inserire più attributi:</span><span class="sxs-lookup"><span data-stu-id="683b1-121">More than one attribute can be placed on a declaration:</span></span>  
   
 ```csharp  
 using System.Runtime.InteropServices;  
@@ -75,7 +66,7 @@ void MethodB([Out][In] ref double x) { }
 void MethodC([In, Out] ref double x) { }  
 ```  
   
- Alcuni attributi possono essere specificati più volte per una stessa entità. Un esempio di attributo multiuso è <xref:System.Diagnostics.ConditionalAttribute>:  
+ <span data-ttu-id="683b1-122">Alcuni attributi possono essere specificati più volte per una stessa entità.</span><span class="sxs-lookup"><span data-stu-id="683b1-122">Some attributes can be specified more than once for a given entity.</span></span> <span data-ttu-id="683b1-123">Un esempio di attributo multiuso è <xref:System.Diagnostics.ConditionalAttribute>:</span><span class="sxs-lookup"><span data-stu-id="683b1-123">An example of such a multiuse attribute is <xref:System.Diagnostics.ConditionalAttribute>:</span></span>  
   
 ```csharp  
 [Conditional("DEBUG"), Conditional("TEST1")]  
@@ -86,10 +77,10 @@ void TraceMethod()
 ```  
   
 > [!NOTE]
->  Per convenzione tutti i nomi di attributo terminano con la parola "Attribute", in modo che sia possibile distinguerli da altri elementi di .NET Framework. Tuttavia, quando gli attributi vengono usati nel codice, non è necessario specificare il suffisso Attribute. Ad esempio, `[DllImport]` è equivalente a `[DllImportAttribute]`, mentre `DllImportAttribute` è il nome effettivo dell'attributo in .NET Framework.  
+>  <span data-ttu-id="683b1-124">Per convenzione tutti i nomi di attributo terminano con la parola "Attribute", in modo che sia possibile distinguerli da altri elementi di .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="683b1-124">By convention, all attribute names end with the word "Attribute" to distinguish them from other items in the .NET Framework.</span></span> <span data-ttu-id="683b1-125">Tuttavia, quando gli attributi vengono usati nel codice, non è necessario specificare il suffisso Attribute.</span><span class="sxs-lookup"><span data-stu-id="683b1-125">However, you do not need to specify the attribute suffix when using attributes in code.</span></span> <span data-ttu-id="683b1-126">Ad esempio, `[DllImport]` è equivalente a `[DllImportAttribute]`, mentre `DllImportAttribute` è il nome effettivo dell'attributo in .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="683b1-126">For example, `[DllImport]` is equivalent to `[DllImportAttribute]`, but `DllImportAttribute` is the attribute's actual name in the .NET Framework.</span></span>  
   
-### <a name="attribute-parameters"></a>Parametri degli attributi  
- Diversi attributi dispongono di parametri, che possono essere posizionali, senza nome o denominati. I parametri posizionali devono essere specificati in un determinato ordine e non possono essere omessi. I parametri denominati sono invece facoltativi e possono essere specificati in qualsiasi ordine. I parametri posizionali vengono specificati per primi. I tre attributi seguenti, ad esempio, sono equivalenti:  
+### <a name="attribute-parameters"></a><span data-ttu-id="683b1-127">Parametri degli attributi</span><span class="sxs-lookup"><span data-stu-id="683b1-127">Attribute Parameters</span></span>  
+ <span data-ttu-id="683b1-128">Diversi attributi dispongono di parametri, che possono essere posizionali, senza nome o denominati.</span><span class="sxs-lookup"><span data-stu-id="683b1-128">Many attributes have parameters, which can be positional, unnamed, or named.</span></span> <span data-ttu-id="683b1-129">I parametri posizionali devono essere specificati in un determinato ordine e non possono essere omessi. I parametri denominati sono invece facoltativi e possono essere specificati in qualsiasi ordine.</span><span class="sxs-lookup"><span data-stu-id="683b1-129">Any positional parameters must be specified in a certain order and cannot be omitted; named parameters are optional and can be specified in any order.</span></span> <span data-ttu-id="683b1-130">I parametri posizionali vengono specificati per primi.</span><span class="sxs-lookup"><span data-stu-id="683b1-130">Positional parameters are specified first.</span></span> <span data-ttu-id="683b1-131">I tre attributi seguenti, ad esempio, sono equivalenti:</span><span class="sxs-lookup"><span data-stu-id="683b1-131">For example, these three attributes are equivalent:</span></span>  
   
 ```csharp  
 [DllImport("user32.dll")]  
@@ -97,32 +88,32 @@ void TraceMethod()
 [DllImport("user32.dll", ExactSpelling=false, SetLastError=false)]  
 ```  
   
- Il primo parametro, ovvero il nome della DLL, è posizionale ed è sempre specificato per primo. Gli altri parametri sono denominati. In questo caso, entrambi i parametri denominati sono impostati automaticamente su false e possono quindi essere omessi. Per informazioni sui valori predefiniti dei parametri, fare riferimento alla documentazione di ciascun attributo.  
+ <span data-ttu-id="683b1-132">Il primo parametro, ovvero il nome della DLL, è posizionale ed è sempre specificato per primo. Gli altri parametri sono denominati.</span><span class="sxs-lookup"><span data-stu-id="683b1-132">The first parameter, the DLL name, is positional and always comes first; the others are named.</span></span> <span data-ttu-id="683b1-133">In questo caso, entrambi i parametri denominati sono impostati automaticamente su false e possono quindi essere omessi.</span><span class="sxs-lookup"><span data-stu-id="683b1-133">In this case, both named parameters default to false, so they can be omitted.</span></span> <span data-ttu-id="683b1-134">Per informazioni sui valori predefiniti dei parametri, fare riferimento alla documentazione di ciascun attributo.</span><span class="sxs-lookup"><span data-stu-id="683b1-134">Refer to the individual attribute's documentation for information on default parameter values.</span></span>  
   
-### <a name="attribute-targets"></a>Destinazioni degli attributi  
- La *destinazione* di un attributo è l'entità a cui tale attributo viene applicato. Un attributo, ad esempio, può essere applicato a una classe, a un metodo particolare o a un intero assembly. Per impostazione predefinita, un attributo viene applicato all'elemento che lo segue. È tuttavia possibile identificare in modo esplicito, ad esempio, se un attributo viene applicato a un metodo, al relativo parametro o al relativo valore restituito.  
+### <a name="attribute-targets"></a><span data-ttu-id="683b1-135">Destinazioni degli attributi</span><span class="sxs-lookup"><span data-stu-id="683b1-135">Attribute Targets</span></span>  
+ <span data-ttu-id="683b1-136">La *destinazione* di un attributo è l'entità a cui tale attributo viene applicato.</span><span class="sxs-lookup"><span data-stu-id="683b1-136">The *target* of an attribute is the entity to which the attribute applies.</span></span> <span data-ttu-id="683b1-137">Un attributo, ad esempio, può essere applicato a una classe, a un metodo particolare o a un intero assembly.</span><span class="sxs-lookup"><span data-stu-id="683b1-137">For example, an attribute may apply to a class, a particular method, or an entire assembly.</span></span> <span data-ttu-id="683b1-138">Per impostazione predefinita, un attributo viene applicato all'elemento che lo segue.</span><span class="sxs-lookup"><span data-stu-id="683b1-138">By default, an attribute applies to the element that it precedes.</span></span> <span data-ttu-id="683b1-139">È tuttavia possibile identificare in modo esplicito, ad esempio, se un attributo viene applicato a un metodo, al relativo parametro o al relativo valore restituito.</span><span class="sxs-lookup"><span data-stu-id="683b1-139">But you can also explicitly identify, for example, whether an attribute is applied to a method, or to its parameter, or to its return value.</span></span>  
   
- Per identificare in modo esplicito la destinazione di un attributo, usare la sintassi seguente:  
+ <span data-ttu-id="683b1-140">Per identificare in modo esplicito la destinazione di un attributo, usare la sintassi seguente:</span><span class="sxs-lookup"><span data-stu-id="683b1-140">To explicitly identify an attribute target, use the following syntax:</span></span>  
   
 ```csharp  
 [target : attribute-list]  
 ```  
   
- Nella tabella seguente sono elencati i possibili valori di `target`.  
+ <span data-ttu-id="683b1-141">Nella tabella seguente sono elencati i possibili valori di `target`.</span><span class="sxs-lookup"><span data-stu-id="683b1-141">The list of possible `target` values is shown in the following table.</span></span>  
   
-|Valore di destinazione|Si applica a|  
+|<span data-ttu-id="683b1-142">Valore di destinazione</span><span class="sxs-lookup"><span data-stu-id="683b1-142">Target value</span></span>|<span data-ttu-id="683b1-143">Si applica a</span><span class="sxs-lookup"><span data-stu-id="683b1-143">Applies to</span></span>|  
 |------------------|----------------|  
-|`assembly`|Intero assembly|  
-|`module`|Modulo di assembly corrente|  
-|`field`|Campo in una classe o uno struct|  
-|`event`|Evento|  
-|`method`|Metodo o funzioni di accesso alle proprietà `get` e `set`|  
-|`param`|Parametri del metodo o parametri della funzione di accesso alla proprietà `set`|  
-|`property`|Proprietà|  
-|`return`|Valore restituito di un metodo, un indicizzatore di proprietà o una funzione di accesso alla proprietà `get`|  
-|`type`|Struct, classe, interfaccia, enumeratore o delegato|  
+|`assembly`|<span data-ttu-id="683b1-144">Intero assembly</span><span class="sxs-lookup"><span data-stu-id="683b1-144">Entire assembly</span></span>|  
+|`module`|<span data-ttu-id="683b1-145">Modulo di assembly corrente</span><span class="sxs-lookup"><span data-stu-id="683b1-145">Current assembly module</span></span>|  
+|`field`|<span data-ttu-id="683b1-146">Campo in una classe o uno struct</span><span class="sxs-lookup"><span data-stu-id="683b1-146">Field in a class or a struct</span></span>|  
+|`event`|<span data-ttu-id="683b1-147">Evento</span><span class="sxs-lookup"><span data-stu-id="683b1-147">Event</span></span>|  
+|`method`|<span data-ttu-id="683b1-148">Metodo o funzioni di accesso alle proprietà `get` e `set`</span><span class="sxs-lookup"><span data-stu-id="683b1-148">Method or `get` and `set` property accessors</span></span>|  
+|`param`|<span data-ttu-id="683b1-149">Parametri del metodo o parametri della funzione di accesso alla proprietà `set`</span><span class="sxs-lookup"><span data-stu-id="683b1-149">Method parameters or `set` property accessor parameters</span></span>|  
+|`property`|<span data-ttu-id="683b1-150">Proprietà</span><span class="sxs-lookup"><span data-stu-id="683b1-150">Property</span></span>|  
+|`return`|<span data-ttu-id="683b1-151">Valore restituito di un metodo, un indicizzatore di proprietà o una funzione di accesso alla proprietà `get`</span><span class="sxs-lookup"><span data-stu-id="683b1-151">Return value of a method, property indexer, or `get` property accessor</span></span>|  
+|`type`|<span data-ttu-id="683b1-152">Struct, classe, interfaccia, enumeratore o delegato</span><span class="sxs-lookup"><span data-stu-id="683b1-152">Struct, class, interface, enum, or delegate</span></span>|  
   
- Nell'esempio seguente viene illustrato come applicare attributi ad assembly e moduli. Per altre informazioni, vedere [Attributi comuni (C#)](../../../../csharp/programming-guide/concepts/attributes/common-attributes.md).  
+ <span data-ttu-id="683b1-153">Nell'esempio seguente viene illustrato come applicare attributi ad assembly e moduli.</span><span class="sxs-lookup"><span data-stu-id="683b1-153">The following example shows how to apply attributes to assemblies and modules.</span></span> <span data-ttu-id="683b1-154">Per altre informazioni, vedere [Attributi comuni (C#)](../../../../csharp/programming-guide/concepts/attributes/common-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="683b1-154">For more information, see [Common Attributes (C#)](../../../../csharp/programming-guide/concepts/attributes/common-attributes.md).</span></span>  
   
 ```csharp  
 using System;  
@@ -131,7 +122,7 @@ using System.Reflection;
 [module: CLSCompliant(true)]  
 ```  
   
- Nell'esempio seguente viene illustrato come applicare gli attributi a metodi, parametri di metodo e valori restituiti dal metodo in C#.  
+ <span data-ttu-id="683b1-155">Nell'esempio seguente viene illustrato come applicare gli attributi a metodi, parametri di metodo e valori restituiti dal metodo in C#.</span><span class="sxs-lookup"><span data-stu-id="683b1-155">The following example shows how to apply attributes to methods, method parameters, and method return values in C#.</span></span>  
   
 ```csharp  
 // default: applies to method  
@@ -148,48 +139,47 @@ int Method3() { return 0; }
 ```  
   
 > [!NOTE]
->  Indipendentemente dalle destinazioni in cui l'oggetto `SomeAttr` è definito come valido, è necessario specificare la destinazione `return`, anche se `SomeAttr` viene definito in modo da essere valido solo per i valori restituiti. In altre parole, il compilatore non usa le informazioni `AttributeUsage` per risolvere le destinazioni degli attributi ambigue. Per altre informazioni, vedere [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md).  
+>  <span data-ttu-id="683b1-156">Indipendentemente dalle destinazioni in cui l'oggetto `SomeAttr` è definito come valido, è necessario specificare la destinazione `return`, anche se `SomeAttr` viene definito in modo da essere valido solo per i valori restituiti.</span><span class="sxs-lookup"><span data-stu-id="683b1-156">Regardless of the targets on which `SomeAttr` is defined to be valid, the `return` target has to be specified, even if `SomeAttr` were defined to apply only to return values.</span></span> <span data-ttu-id="683b1-157">In altre parole, il compilatore non usa le informazioni `AttributeUsage` per risolvere le destinazioni degli attributi ambigue.</span><span class="sxs-lookup"><span data-stu-id="683b1-157">In other words, the compiler will not use `AttributeUsage` information to resolve ambiguous attribute targets.</span></span> <span data-ttu-id="683b1-158">Per altre informazioni, vedere [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md).</span><span class="sxs-lookup"><span data-stu-id="683b1-158">For more information, see [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md).</span></span>  
   
-## <a name="common-uses-for-attributes"></a>Usi comuni degli attributi  
- Di seguito vengono elencati alcuni degli usi comuni degli attributi nel codice:  
+## <a name="common-uses-for-attributes"></a><span data-ttu-id="683b1-159">Usi comuni degli attributi</span><span class="sxs-lookup"><span data-stu-id="683b1-159">Common Uses for Attributes</span></span>  
+ <span data-ttu-id="683b1-160">Di seguito vengono elencati alcuni degli usi comuni degli attributi nel codice:</span><span class="sxs-lookup"><span data-stu-id="683b1-160">The following list includes a few of the common uses of attributes in code:</span></span>  
   
--   Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP. Per altre informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.  
+-   <span data-ttu-id="683b1-161">Contrassegno dei metodi mediante l'attributo `WebMethod` nei servizi Web per indicare che è possibile chiamare il metodo tramite il protocollo SOAP.</span><span class="sxs-lookup"><span data-stu-id="683b1-161">Marking methods using the `WebMethod` attribute in Web services to indicate that the method should be callable over the SOAP protocol.</span></span> <span data-ttu-id="683b1-162">Per altre informazioni, vedere <xref:System.Web.Services.WebMethodAttribute>.</span><span class="sxs-lookup"><span data-stu-id="683b1-162">For more information, see <xref:System.Web.Services.WebMethodAttribute>.</span></span>  
   
--   Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo. Per altre informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+-   <span data-ttu-id="683b1-163">Descrizione della procedura di marshalling dei parametri del metodo durante l'interazione con il codice nativo.</span><span class="sxs-lookup"><span data-stu-id="683b1-163">Describing how to marshal method parameters when interoperating with native code.</span></span> <span data-ttu-id="683b1-164">Per altre informazioni, vedere <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span><span class="sxs-lookup"><span data-stu-id="683b1-164">For more information, see <xref:System.Runtime.InteropServices.MarshalAsAttribute>.</span></span>  
   
--   Descrizione delle proprietà COM per classi, metodi e interfacce.  
+-   <span data-ttu-id="683b1-165">Descrizione delle proprietà COM per classi, metodi e interfacce.</span><span class="sxs-lookup"><span data-stu-id="683b1-165">Describing the COM properties for classes, methods, and interfaces.</span></span>  
   
--   Chiamata al codice non gestito che usa la classe <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+-   <span data-ttu-id="683b1-166">Chiamata al codice non gestito che usa la classe <xref:System.Runtime.InteropServices.DllImportAttribute>.</span><span class="sxs-lookup"><span data-stu-id="683b1-166">Calling unmanaged code using the <xref:System.Runtime.InteropServices.DllImportAttribute> class.</span></span>  
   
--   Descrizione dell'assembly con indicazione di titolo, versione, descrizione o marchio.  
+-   <span data-ttu-id="683b1-167">Descrizione dell'assembly con indicazione di titolo, versione, descrizione o marchio.</span><span class="sxs-lookup"><span data-stu-id="683b1-167">Describing your assembly in terms of title, version, description, or trademark.</span></span>  
   
--   Descrizione dei membri della classe da serializzare per la persistenza.  
+-   <span data-ttu-id="683b1-168">Descrizione dei membri della classe da serializzare per la persistenza.</span><span class="sxs-lookup"><span data-stu-id="683b1-168">Describing which members of a class to serialize for persistence.</span></span>  
   
--   Descrizione della procedura di mapping tra membri di una classe e nodi XML per la serializzazione XML.  
+-   <span data-ttu-id="683b1-169">Descrizione della procedura di mapping tra membri di una classe e nodi XML per la serializzazione XML.</span><span class="sxs-lookup"><span data-stu-id="683b1-169">Describing how to map between class members and XML nodes for XML serialization.</span></span>  
   
--   Descrizione dei requisiti di sicurezza per i metodi.  
+-   <span data-ttu-id="683b1-170">Descrizione dei requisiti di sicurezza per i metodi.</span><span class="sxs-lookup"><span data-stu-id="683b1-170">Describing the security requirements for methods.</span></span>  
   
--   Definizione delle caratteristiche usate per garantire la sicurezza.  
+-   <span data-ttu-id="683b1-171">Definizione delle caratteristiche usate per garantire la sicurezza.</span><span class="sxs-lookup"><span data-stu-id="683b1-171">Specifying characteristics used to enforce security.</span></span>  
   
--   Controllo delle ottimizzazioni tramite il compilatore JIT (Just-In-Time), in modo da garantire un semplice debug del codice.  
+-   <span data-ttu-id="683b1-172">Controllo delle ottimizzazioni tramite il compilatore JIT (Just-In-Time), in modo da garantire un semplice debug del codice.</span><span class="sxs-lookup"><span data-stu-id="683b1-172">Controlling optimizations by the just-in-time (JIT) compiler so the code remains easy to debug.</span></span>  
   
--   Recupero di informazioni relative al chiamante di un metodo.  
+-   <span data-ttu-id="683b1-173">Recupero di informazioni relative al chiamante di un metodo.</span><span class="sxs-lookup"><span data-stu-id="683b1-173">Obtaining information about the caller to a method.</span></span>  
   
-## <a name="related-sections"></a>Sezioni correlate  
- Per altre informazioni, vedere:  
+## <a name="related-sections"></a><span data-ttu-id="683b1-174">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="683b1-174">Related Sections</span></span>  
+ <span data-ttu-id="683b1-175">Per altre informazioni, vedere:</span><span class="sxs-lookup"><span data-stu-id="683b1-175">For more information, see:</span></span>  
   
--   [Creazione di attributi personalizzati (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+-   [<span data-ttu-id="683b1-176">Creazione di attributi personalizzati (C#)</span><span class="sxs-lookup"><span data-stu-id="683b1-176">Creating Custom Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
   
--   [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))  
+-   <span data-ttu-id="683b1-177">[Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Accesso agli attributi tramite reflection (C#))</span><span class="sxs-lookup"><span data-stu-id="683b1-177">[Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)</span></span>  
   
--   [Procedura: Creare un'unione C-C++ tramite attributi (C#)](../../../../csharp/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+-   [<span data-ttu-id="683b1-178">Procedura: Creare un'unione C-C++ tramite attributi (C#)</span><span class="sxs-lookup"><span data-stu-id="683b1-178">How to: Create a C/C++ Union by Using Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
--   [Attributi comuni (C#)](../../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+-   [<span data-ttu-id="683b1-179">Attributi comuni (C#)</span><span class="sxs-lookup"><span data-stu-id="683b1-179">Common Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
   
--   [Informazioni sul chiamante (C#)](../../../../csharp/programming-guide/concepts/caller-information.md)  
+-   [<span data-ttu-id="683b1-180">Informazioni sul chiamante (C#)</span><span class="sxs-lookup"><span data-stu-id="683b1-180">Caller Information (C#)</span></span>](../../../../csharp/programming-guide/concepts/caller-information.md)  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../../csharp/programming-guide/index.md)   
- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [Attributi](https://msdn.microsoft.com/library/5x6cd29c)
-
+## <a name="see-also"></a><span data-ttu-id="683b1-181">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="683b1-181">See Also</span></span>  
+ [<span data-ttu-id="683b1-182">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="683b1-182">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="683b1-183">Reflection (C#)</span><span class="sxs-lookup"><span data-stu-id="683b1-183">Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [<span data-ttu-id="683b1-184">Attributi</span><span class="sxs-lookup"><span data-stu-id="683b1-184">Attributes</span></span>](https://msdn.microsoft.com/library/5x6cd29c)

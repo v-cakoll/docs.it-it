@@ -1,157 +1,138 @@
 ---
 title: Operatori (Guida per programmatori C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22d2f6b93a18fcacbeea10ab60a1d078c632b0af
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="operators-c-programming-guide"></a>Operatori (Guida per programmatori C#)
-Nel linguaggio C# un *operatore* è un elemento del programma che si applica a uno o più *operandi* in un'espressione o in un'istruzione. Gli operatori che accettano un unico operando, ad esempio l'operatore di incremento (`++`) o `new`, sono denominati operatori *unari* . Quelli che accettano due operandi, ad esempio gli operatori aritmetici (`+`,`-`,`*`,`/`), sono denominati operatori *binari* . L'operatore condizionale (`?:`) accetta tre operandi ed è l'unico operatore ternario disponibile in C#.  
+# <a name="operators-c-programming-guide"></a><span data-ttu-id="730b1-102">Operatori (Guida per programmatori C#)</span><span class="sxs-lookup"><span data-stu-id="730b1-102">Operators (C# Programming Guide)</span></span>
+<span data-ttu-id="730b1-103">Nel linguaggio C# un *operatore* è un elemento del programma che si applica a uno o più *operandi* in un'espressione o in un'istruzione.</span><span class="sxs-lookup"><span data-stu-id="730b1-103">In C#, an *operator* is a program element that is applied to one or more *operands* in an expression or statement.</span></span> <span data-ttu-id="730b1-104">Gli operatori che accettano un unico operando, ad esempio l'operatore di incremento (`++`) o `new`, sono denominati operatori *unari* .</span><span class="sxs-lookup"><span data-stu-id="730b1-104">Operators that take one operand, such as the increment operator (`++`) or `new`, are referred to as *unary* operators.</span></span> <span data-ttu-id="730b1-105">Quelli che accettano due operandi, ad esempio gli operatori aritmetici (`+`,`-`,`*`,`/`), sono denominati operatori *binari* .</span><span class="sxs-lookup"><span data-stu-id="730b1-105">Operators that take two operands, such as arithmetic operators (`+`,`-`,`*`,`/`), are referred to as *binary* operators.</span></span> <span data-ttu-id="730b1-106">L'operatore condizionale (`?:`) accetta tre operandi ed è l'unico operatore ternario disponibile in C#.</span><span class="sxs-lookup"><span data-stu-id="730b1-106">One operator, the conditional operator (`?:`), takes three operands and is the sole ternary operator in C#.</span></span>  
   
- L'istruzione C# riportata di seguito contiene un unico operatore unario e un unico operando. L'operatore di incremento `++`modifica il valore dell'operando `y`.  
+ <span data-ttu-id="730b1-107">L'istruzione C# riportata di seguito contiene un unico operatore unario e un unico operando.</span><span class="sxs-lookup"><span data-stu-id="730b1-107">The following C# statement contains a single unary operator and a single operand.</span></span> <span data-ttu-id="730b1-108">L'operatore di incremento `++`modifica il valore dell'operando `y`.</span><span class="sxs-lookup"><span data-stu-id="730b1-108">The increment operator, `++`, modifies the value of the operand `y`.</span></span>  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
   
- L'istruzione C# riportata di seguito contiene due operatori binari, ciascuno con due operandi. L'operatore di assegnazione `=`ha come operandi la variabile integer `y` e l'espressione `2 + 3` . L'espressione `2 + 3` è costituita dall'operatore di addizione e due operandi, `2` e `3`.  
+ <span data-ttu-id="730b1-109">L'istruzione C# riportata di seguito contiene due operatori binari, ciascuno con due operandi.</span><span class="sxs-lookup"><span data-stu-id="730b1-109">The following C# statement contains two binary operators, each with two operands.</span></span> <span data-ttu-id="730b1-110">L'operatore di assegnazione `=`ha come operandi la variabile integer `y` e l'espressione `2 + 3` .</span><span class="sxs-lookup"><span data-stu-id="730b1-110">The assignment operator, `=`, has the integer variable `y` and the expression `2 + 3` as operands.</span></span> <span data-ttu-id="730b1-111">L'espressione `2 + 3` è costituita dall'operatore di addizione e due operandi, `2` e `3`.</span><span class="sxs-lookup"><span data-stu-id="730b1-111">The expression `2 + 3` itself consists of the addition operator and two operands, `2` and `3`.</span></span>  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>Operatori, valutazione e precedenza operatori  
- Un operando può essere un'espressione valida composta da codice di qualsiasi lunghezza e può includere un numero qualsiasi di sottoespressioni. In un'espressione che contiene più operatori, l'ordine in cui vengono applicati gli operatori è determinata dalla *precedenza tra operatori*, l' *associatività*e le parentesi.  
+## <a name="operators-evaluation-and-operator-precedence"></a><span data-ttu-id="730b1-112">Operatori, valutazione e precedenza operatori</span><span class="sxs-lookup"><span data-stu-id="730b1-112">Operators, Evaluation, and Operator Precedence</span></span>  
+ <span data-ttu-id="730b1-113">Un operando può essere un'espressione valida composta da codice di qualsiasi lunghezza e può includere un numero qualsiasi di sottoespressioni.</span><span class="sxs-lookup"><span data-stu-id="730b1-113">An operand can be a valid expression that is composed of any length of code, and it can comprise any number of sub expressions.</span></span> <span data-ttu-id="730b1-114">In un'espressione che contiene più operatori, l'ordine in cui vengono applicati gli operatori è determinata dalla *precedenza tra operatori*, l' *associatività*e le parentesi.</span><span class="sxs-lookup"><span data-stu-id="730b1-114">In an expression that contains multiple operators, the order in which the operators are applied is determined by *operator precedence*, *associativity*, and parentheses.</span></span>  
   
- Ogni operatore ha una precedenza definita. In un'espressione che contiene più operatori che dispongono di diversi livelli di precedenza, la precedenza degli operatori determina l'ordine in cui gli operatori verranno valutati. L'istruzione che segue, ad esempio, assegna il valore 3 a `n1`.  
+ <span data-ttu-id="730b1-115">Ogni operatore ha una precedenza definita.</span><span class="sxs-lookup"><span data-stu-id="730b1-115">Each operator has a defined precedence.</span></span> <span data-ttu-id="730b1-116">In un'espressione che contiene più operatori che dispongono di diversi livelli di precedenza, la precedenza degli operatori determina l'ordine in cui gli operatori verranno valutati.</span><span class="sxs-lookup"><span data-stu-id="730b1-116">In an expression that contains multiple operators that have different precedence levels, the precedence of the operators determines the order in which the operators are evaluated.</span></span> <span data-ttu-id="730b1-117">L'istruzione che segue, ad esempio, assegna il valore 3 a `n1`.</span><span class="sxs-lookup"><span data-stu-id="730b1-117">For example, the following statement assigns 3 to `n1`.</span></span>  
   
  `n1 = 11 - 2 * 4;`  
   
- La moltiplicazione viene eseguita per prima perché ha la precedenza sulla sottrazione.  
+ <span data-ttu-id="730b1-118">La moltiplicazione viene eseguita per prima perché ha la precedenza sulla sottrazione.</span><span class="sxs-lookup"><span data-stu-id="730b1-118">The multiplication is executed first because multiplication takes precedence over subtraction.</span></span>  
   
- Nella tabella riportata di seguito gli operatori sono suddivisi in categorie in base al tipo di operazione che eseguono. Le categorie sono elencate in ordine di precedenza.  
+ <span data-ttu-id="730b1-119">Nella tabella riportata di seguito gli operatori sono suddivisi in categorie in base al tipo di operazione che eseguono.</span><span class="sxs-lookup"><span data-stu-id="730b1-119">The following table separates the operators into categories based on the type of operation they perform.</span></span> <span data-ttu-id="730b1-120">Le categorie sono elencate in ordine di precedenza.</span><span class="sxs-lookup"><span data-stu-id="730b1-120">The categories are listed in order of precedence.</span></span>  
   
- **Operatori primari**  
+ <span data-ttu-id="730b1-121">**Operatori primari**</span><span class="sxs-lookup"><span data-stu-id="730b1-121">**Primary Operators**</span></span>  
   
-|Espressione|Descrizione|  
+|<span data-ttu-id="730b1-122">Espressione</span><span class="sxs-lookup"><span data-stu-id="730b1-122">Expression</span></span>|<span data-ttu-id="730b1-123">Descrizione</span><span class="sxs-lookup"><span data-stu-id="730b1-123">Description</span></span>|  
 |----------------|-----------------|  
-|x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Accesso ai membri<br /><br /> Accesso ai membri condizionali|  
-|f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Chiamata a metodi e delegati|  
-|a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|Accesso a matrici e indicizzatori<br /><br /> Accesso a matrici e indicizzatori condizionali|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|Post-incremento|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|Post-decremento|  
-|[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|Creazione di oggetti e delegati|  
-|`new` T(...){...}|Creazione di oggetti con inizializzatore. Vedere [Inizializzatori di oggetto e di insieme](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).|  
-|`new` {...}|Inizializzatore di oggetti anonimi. Vedere [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).|  
-|`new` T[...]|Creazione di matrici. Vdere [Matrici](../../../csharp/programming-guide/arrays/index.md).|  
-|[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)|Ottenere l'oggetto System.Type per T|  
-|[checked](../../../csharp/language-reference/keywords/checked.md)(x)|Valutare l'espressione in un contesto controllato (checked)|  
-|[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)|Valutare l'espressione in un contesto non controllato (unchecked)|  
-|[default](../../../csharp/language-reference/keywords/default.md) (T)|Ottenere il valore predefinito del tipo T|  
-|[delegate](../../../csharp/language-reference/keywords/delegate.md) {}|Funzione anonima (metodo anonimo)|  
+|<span data-ttu-id="730b1-124">x[.](../../../csharp/language-reference/operators/member-access-operator.md)y</span><span class="sxs-lookup"><span data-stu-id="730b1-124">x[.](../../../csharp/language-reference/operators/member-access-operator.md)y</span></span><br /><br /> <span data-ttu-id="730b1-125">x?.y</span><span class="sxs-lookup"><span data-stu-id="730b1-125">x?.y</span></span>|<span data-ttu-id="730b1-126">Accesso ai membri</span><span class="sxs-lookup"><span data-stu-id="730b1-126">Member access</span></span><br /><br /> <span data-ttu-id="730b1-127">Accesso ai membri condizionali</span><span class="sxs-lookup"><span data-stu-id="730b1-127">Conditional member access</span></span>|  
+|<span data-ttu-id="730b1-128">f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)</span><span class="sxs-lookup"><span data-stu-id="730b1-128">f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)</span></span>|<span data-ttu-id="730b1-129">Chiamata a metodi e delegati</span><span class="sxs-lookup"><span data-stu-id="730b1-129">Method and delegate invocation</span></span>|  
+|<span data-ttu-id="730b1-130">a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)</span><span class="sxs-lookup"><span data-stu-id="730b1-130">a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)</span></span><br /><br /> <span data-ttu-id="730b1-131">a?[x]</span><span class="sxs-lookup"><span data-stu-id="730b1-131">a?[x]</span></span>|<span data-ttu-id="730b1-132">Accesso a matrici e indicizzatori</span><span class="sxs-lookup"><span data-stu-id="730b1-132">Array and indexer access</span></span><br /><br /> <span data-ttu-id="730b1-133">Accesso a matrici e indicizzatori condizionali</span><span class="sxs-lookup"><span data-stu-id="730b1-133">Conditional array and indexer access</span></span>|  
+|<span data-ttu-id="730b1-134">x[++](../../../csharp/language-reference/operators/increment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="730b1-134">x[++](../../../csharp/language-reference/operators/increment-operator.md)</span></span>|<span data-ttu-id="730b1-135">Post-incremento</span><span class="sxs-lookup"><span data-stu-id="730b1-135">Post-increment</span></span>|  
+|<span data-ttu-id="730b1-136">x[--](../../../csharp/language-reference/operators/decrement-operator.md)</span><span class="sxs-lookup"><span data-stu-id="730b1-136">x[--](../../../csharp/language-reference/operators/decrement-operator.md)</span></span>|<span data-ttu-id="730b1-137">Post-decremento</span><span class="sxs-lookup"><span data-stu-id="730b1-137">Post-decrement</span></span>|  
+|<span data-ttu-id="730b1-138">[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)</span><span class="sxs-lookup"><span data-stu-id="730b1-138">[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)</span></span>|<span data-ttu-id="730b1-139">Creazione di oggetti e delegati</span><span class="sxs-lookup"><span data-stu-id="730b1-139">Object and delegate creation</span></span>|  
+|<span data-ttu-id="730b1-140">`new` T(...){...}</span><span class="sxs-lookup"><span data-stu-id="730b1-140">`new` T(...){...}</span></span>|<span data-ttu-id="730b1-141">Creazione di oggetti con inizializzatore.</span><span class="sxs-lookup"><span data-stu-id="730b1-141">Object creation with initializer.</span></span> <span data-ttu-id="730b1-142">Vedere [Inizializzatori di oggetto e di insieme](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span><span class="sxs-lookup"><span data-stu-id="730b1-142">See [Object and Collection Initializers](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span></span>|  
+|<span data-ttu-id="730b1-143">`new` {...}</span><span class="sxs-lookup"><span data-stu-id="730b1-143">`new` {...}</span></span>|<span data-ttu-id="730b1-144">Inizializzatore di oggetti anonimi.</span><span class="sxs-lookup"><span data-stu-id="730b1-144">Anonymous object initializer.</span></span> <span data-ttu-id="730b1-145">Vedere [Tipi anonimi](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="730b1-145">See [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>|  
+|<span data-ttu-id="730b1-146">`new` T[...]</span><span class="sxs-lookup"><span data-stu-id="730b1-146">`new` T[...]</span></span>|<span data-ttu-id="730b1-147">Creazione di matrici.</span><span class="sxs-lookup"><span data-stu-id="730b1-147">Array creation.</span></span> <span data-ttu-id="730b1-148">Vdere [Matrici](../../../csharp/programming-guide/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="730b1-148">See [Arrays](../../../csharp/programming-guide/arrays/index.md).</span></span>|  
+|<span data-ttu-id="730b1-149">[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)</span><span class="sxs-lookup"><span data-stu-id="730b1-149">[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)</span></span>|<span data-ttu-id="730b1-150">Ottenere l'oggetto System.Type per T</span><span class="sxs-lookup"><span data-stu-id="730b1-150">Obtain System.Type object for T</span></span>|  
+|<span data-ttu-id="730b1-151">[checked](../../../csharp/language-reference/keywords/checked.md)(x)</span><span class="sxs-lookup"><span data-stu-id="730b1-151">[checked](../../../csharp/language-reference/keywords/checked.md)(x)</span></span>|<span data-ttu-id="730b1-152">Valutare l'espressione in un contesto controllato (checked)</span><span class="sxs-lookup"><span data-stu-id="730b1-152">Evaluate expression in checked context</span></span>|  
+|<span data-ttu-id="730b1-153">[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)</span><span class="sxs-lookup"><span data-stu-id="730b1-153">[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)</span></span>|<span data-ttu-id="730b1-154">Valutare l'espressione in un contesto non controllato (unchecked)</span><span class="sxs-lookup"><span data-stu-id="730b1-154">Evaluate expression in unchecked context</span></span>|  
+|<span data-ttu-id="730b1-155">[default](../../../csharp/language-reference/keywords/default.md) (T)</span><span class="sxs-lookup"><span data-stu-id="730b1-155">[default](../../../csharp/language-reference/keywords/default.md) (T)</span></span>|<span data-ttu-id="730b1-156">Ottenere il valore predefinito del tipo T</span><span class="sxs-lookup"><span data-stu-id="730b1-156">Obtain default value of type T</span></span>|  
+|<span data-ttu-id="730b1-157">[delegate](../../../csharp/language-reference/keywords/delegate.md) {}</span><span class="sxs-lookup"><span data-stu-id="730b1-157">[delegate](../../../csharp/language-reference/keywords/delegate.md) {}</span></span>|<span data-ttu-id="730b1-158">Funzione anonima (metodo anonimo)</span><span class="sxs-lookup"><span data-stu-id="730b1-158">Anonymous function (anonymous method)</span></span>|  
   
- **Operatori unari**  
+ <span data-ttu-id="730b1-159">**Operatori unari**</span><span class="sxs-lookup"><span data-stu-id="730b1-159">**Unary Operators**</span></span>  
   
-|Espressione|Descrizione|  
+|<span data-ttu-id="730b1-160">Espressione</span><span class="sxs-lookup"><span data-stu-id="730b1-160">Expression</span></span>|<span data-ttu-id="730b1-161">Descrizione</span><span class="sxs-lookup"><span data-stu-id="730b1-161">Description</span></span>|  
 |----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|Identità|  
-|[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negazione|  
-|[!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Negazione logica|  
-|[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Negazione bit per bit|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|Pre-incremento|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|Pre-decremento|  
-|[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Convertire in modo esplicito x nel tipo T|  
+|<span data-ttu-id="730b1-162">[+](../../../csharp/language-reference/operators/addition-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="730b1-162">[+](../../../csharp/language-reference/operators/addition-operator.md)x</span></span>|<span data-ttu-id="730b1-163">Identità</span><span class="sxs-lookup"><span data-stu-id="730b1-163">Identity</span></span>|  
+|<span data-ttu-id="730b1-164">[-](../../../csharp/language-reference/operators/subtraction-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="730b1-164">[-](../../../csharp/language-reference/operators/subtraction-operator.md)x</span></span>|<span data-ttu-id="730b1-165">Negazione</span><span class="sxs-lookup"><span data-stu-id="730b1-165">Negation</span></span>|  
+|[!]<span data-ttu-id="730b1-166">(../../../csharp/language-reference/operators/logical-negation-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="730b1-166">(../../../csharp/language-reference/operators/logical-negation-operator.md)x</span></span>|<span data-ttu-id="730b1-167">Negazione logica</span><span class="sxs-lookup"><span data-stu-id="730b1-167">Logical negation</span></span>|  
+|<span data-ttu-id="730b1-168">[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="730b1-168">[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x</span></span>|<span data-ttu-id="730b1-169">Negazione bit per bit</span><span class="sxs-lookup"><span data-stu-id="730b1-169">Bitwise negation</span></span>|  
+|<span data-ttu-id="730b1-170">[++](../../../csharp/language-reference/operators/increment-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="730b1-170">[++](../../../csharp/language-reference/operators/increment-operator.md)x</span></span>|<span data-ttu-id="730b1-171">Pre-incremento</span><span class="sxs-lookup"><span data-stu-id="730b1-171">Pre-increment</span></span>|  
+|<span data-ttu-id="730b1-172">[--](../../../csharp/language-reference/operators/decrement-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="730b1-172">[--](../../../csharp/language-reference/operators/decrement-operator.md)x</span></span>|<span data-ttu-id="730b1-173">Pre-decremento</span><span class="sxs-lookup"><span data-stu-id="730b1-173">Pre-decrement</span></span>|  
+|<span data-ttu-id="730b1-174">[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="730b1-174">[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x</span></span>|<span data-ttu-id="730b1-175">Convertire in modo esplicito x nel tipo T</span><span class="sxs-lookup"><span data-stu-id="730b1-175">Explicitly convert x to type T</span></span>|  
   
- **Operatori di moltiplicazione**  
+ <span data-ttu-id="730b1-176">**Operatori di moltiplicazione**</span><span class="sxs-lookup"><span data-stu-id="730b1-176">**Multiplicative Operators**</span></span>  
   
-|Espressione|Descrizione|  
+|<span data-ttu-id="730b1-177">Espressione</span><span class="sxs-lookup"><span data-stu-id="730b1-177">Expression</span></span>|<span data-ttu-id="730b1-178">Descrizione</span><span class="sxs-lookup"><span data-stu-id="730b1-178">Description</span></span>|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|Moltiplicazione|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|Divisione|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|Resto|  
+|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|<span data-ttu-id="730b1-179">Moltiplicazione</span><span class="sxs-lookup"><span data-stu-id="730b1-179">Multiplication</span></span>|  
+|[/](../../../csharp/language-reference/operators/division-operator.md)|<span data-ttu-id="730b1-180">Divisione</span><span class="sxs-lookup"><span data-stu-id="730b1-180">Division</span></span>|  
+|[%](../../../csharp/language-reference/operators/modulus-operator.md)|<span data-ttu-id="730b1-181">Resto</span><span class="sxs-lookup"><span data-stu-id="730b1-181">Remainder</span></span>|  
   
- **Operatori di addizione**  
+ <span data-ttu-id="730b1-182">**Operatori di addizione**</span><span class="sxs-lookup"><span data-stu-id="730b1-182">**Additive Operators**</span></span>  
   
-|Espressione|Descrizione|  
+|<span data-ttu-id="730b1-183">Espressione</span><span class="sxs-lookup"><span data-stu-id="730b1-183">Expression</span></span>|<span data-ttu-id="730b1-184">Descrizione</span><span class="sxs-lookup"><span data-stu-id="730b1-184">Description</span></span>|  
 |----------------|-----------------|  
-|x [+](../../../csharp/language-reference/operators/addition-operator.md) y|Addizione, concatenazione di stringhe, combinazione di delegati|  
-|x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|Sottrazione, rimozione di delegati|  
+|<span data-ttu-id="730b1-185">x [+](../../../csharp/language-reference/operators/addition-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-185">x [+](../../../csharp/language-reference/operators/addition-operator.md) y</span></span>|<span data-ttu-id="730b1-186">Addizione, concatenazione di stringhe, combinazione di delegati</span><span class="sxs-lookup"><span data-stu-id="730b1-186">Addition, string concatenation, delegate combination</span></span>|  
+|<span data-ttu-id="730b1-187">x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-187">x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y</span></span>|<span data-ttu-id="730b1-188">Sottrazione, rimozione di delegati</span><span class="sxs-lookup"><span data-stu-id="730b1-188">Subtraction, delegate removal</span></span>|  
   
- **Operatori shift**  
+ <span data-ttu-id="730b1-189">**Operatori shift**</span><span class="sxs-lookup"><span data-stu-id="730b1-189">**Shift Operators**</span></span>  
   
-|Espressione|Descrizione|  
+|<span data-ttu-id="730b1-190">Espressione</span><span class="sxs-lookup"><span data-stu-id="730b1-190">Expression</span></span>|<span data-ttu-id="730b1-191">Descrizione</span><span class="sxs-lookup"><span data-stu-id="730b1-191">Description</span></span>|  
 |----------------|-----------------|  
-|x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|Spostamento a sinistra|  
-|x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|Spostamento a destra|  
+|<span data-ttu-id="730b1-192">x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-192">x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y</span></span>|<span data-ttu-id="730b1-193">Spostamento a sinistra</span><span class="sxs-lookup"><span data-stu-id="730b1-193">Shift left</span></span>|  
+|<span data-ttu-id="730b1-194">x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-194">x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y</span></span>|<span data-ttu-id="730b1-195">Spostamento a destra</span><span class="sxs-lookup"><span data-stu-id="730b1-195">Shift right</span></span>|  
   
- **Operatori relazionali e operatori di tipo**  
+ <span data-ttu-id="730b1-196">**Operatori relazionali e operatori di tipo**</span><span class="sxs-lookup"><span data-stu-id="730b1-196">**Relational and Type Operators**</span></span>  
   
-|Espressione|Descrizione|  
+|<span data-ttu-id="730b1-197">Espressione</span><span class="sxs-lookup"><span data-stu-id="730b1-197">Expression</span></span>|<span data-ttu-id="730b1-198">Descrizione</span><span class="sxs-lookup"><span data-stu-id="730b1-198">Description</span></span>|  
 |----------------|-----------------|  
-|x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|Minore di|  
-|x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|Maggiore di|  
-|x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|Minore o uguale a|  
-|x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|Maggiore o uguale a|  
-|x [is](../../../csharp/language-reference/keywords/is.md) T|Restituisce true se x è un oggetto T; in caso contrario, false|  
-|x [as](../../../csharp/language-reference/keywords/as.md) T|Restituisce x tipizzato come T oppure Null se x non è un oggetto T|  
+|<span data-ttu-id="730b1-199">x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-199">x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y</span></span>|<span data-ttu-id="730b1-200">Minore di</span><span class="sxs-lookup"><span data-stu-id="730b1-200">Less than</span></span>|  
+|<span data-ttu-id="730b1-201">x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-201">x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y</span></span>|<span data-ttu-id="730b1-202">Maggiore di</span><span class="sxs-lookup"><span data-stu-id="730b1-202">Greater than</span></span>|  
+|<span data-ttu-id="730b1-203">x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-203">x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y</span></span>|<span data-ttu-id="730b1-204">Minore o uguale a</span><span class="sxs-lookup"><span data-stu-id="730b1-204">Less than or equal</span></span>|  
+|<span data-ttu-id="730b1-205">x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-205">x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y</span></span>|<span data-ttu-id="730b1-206">Maggiore o uguale a</span><span class="sxs-lookup"><span data-stu-id="730b1-206">Greater than or equal</span></span>|  
+|<span data-ttu-id="730b1-207">x [is](../../../csharp/language-reference/keywords/is.md) T</span><span class="sxs-lookup"><span data-stu-id="730b1-207">x [is](../../../csharp/language-reference/keywords/is.md) T</span></span>|<span data-ttu-id="730b1-208">Restituisce true se x è un oggetto T; in caso contrario, false</span><span class="sxs-lookup"><span data-stu-id="730b1-208">Return true if x is a T, false otherwise</span></span>|  
+|<span data-ttu-id="730b1-209">x [as](../../../csharp/language-reference/keywords/as.md) T</span><span class="sxs-lookup"><span data-stu-id="730b1-209">x [as](../../../csharp/language-reference/keywords/as.md) T</span></span>|<span data-ttu-id="730b1-210">Restituisce x tipizzato come T oppure Null se x non è un oggetto T</span><span class="sxs-lookup"><span data-stu-id="730b1-210">Return x typed as T, or null if x is not a T</span></span>|  
   
- **Operatori di uguaglianza**  
+ <span data-ttu-id="730b1-211">**Operatori di uguaglianza**</span><span class="sxs-lookup"><span data-stu-id="730b1-211">**Equality Operators**</span></span>  
   
-|Espressione|Descrizione|  
+|<span data-ttu-id="730b1-212">Espressione</span><span class="sxs-lookup"><span data-stu-id="730b1-212">Expression</span></span>|<span data-ttu-id="730b1-213">Descrizione</span><span class="sxs-lookup"><span data-stu-id="730b1-213">Description</span></span>|  
 |----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|Uguale|  
-|x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|Non uguaglianza|  
+|<span data-ttu-id="730b1-214">x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-214">x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y</span></span>|<span data-ttu-id="730b1-215">Uguale</span><span class="sxs-lookup"><span data-stu-id="730b1-215">Equal</span></span>|  
+|<span data-ttu-id="730b1-216">x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-216">x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y</span></span>|<span data-ttu-id="730b1-217">Non uguaglianza</span><span class="sxs-lookup"><span data-stu-id="730b1-217">Not equal</span></span>|  
   
- **Operatori logici, condizionali e Null**  
+ <span data-ttu-id="730b1-218">**Operatori logici, condizionali e Null**</span><span class="sxs-lookup"><span data-stu-id="730b1-218">**Logical, Conditional, and Null Operators**</span></span>  
   
-|Categoria|Espressione|Descrizione|  
+|<span data-ttu-id="730b1-219">Categoria</span><span class="sxs-lookup"><span data-stu-id="730b1-219">Category</span></span>|<span data-ttu-id="730b1-220">Espressione</span><span class="sxs-lookup"><span data-stu-id="730b1-220">Expression</span></span>|<span data-ttu-id="730b1-221">Descrizione</span><span class="sxs-lookup"><span data-stu-id="730b1-221">Description</span></span>|  
 |--------------|----------------|-----------------|  
-|AND logico|x [&](../../../csharp/language-reference/operators/and-operator.md) y|AND Integer bit per bit, AND logico booleano|  
-|XOR logico|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|XOR Integer bit per bit, XOR logico booleano|  
-|OR logico|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|OR Integer bit per bit, OR logico booleano|  
-|AND condizionale|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Restituisce y solo se x è true|  
-|OR condizionale|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Restituisce y solo se x è false|  
-|Null-coalescing|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) s|Restituisce y se x è Null; in caso contrario x|  
-|Condizionale|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Restituisce y se x è true, z se x è false|  
+|<span data-ttu-id="730b1-222">AND logico</span><span class="sxs-lookup"><span data-stu-id="730b1-222">Logical AND</span></span>|<span data-ttu-id="730b1-223">x [&](../../../csharp/language-reference/operators/and-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-223">x [&](../../../csharp/language-reference/operators/and-operator.md) y</span></span>|<span data-ttu-id="730b1-224">AND Integer bit per bit, AND logico booleano</span><span class="sxs-lookup"><span data-stu-id="730b1-224">Integer bitwise AND, Boolean logical AND</span></span>|  
+|<span data-ttu-id="730b1-225">XOR logico</span><span class="sxs-lookup"><span data-stu-id="730b1-225">Logical XOR</span></span>|<span data-ttu-id="730b1-226">x [^](../../../csharp/language-reference/operators/xor-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-226">x [^](../../../csharp/language-reference/operators/xor-operator.md) y</span></span>|<span data-ttu-id="730b1-227">XOR Integer bit per bit, XOR logico booleano</span><span class="sxs-lookup"><span data-stu-id="730b1-227">Integer bitwise XOR, boolean logical XOR</span></span>|  
+|<span data-ttu-id="730b1-228">OR logico</span><span class="sxs-lookup"><span data-stu-id="730b1-228">Logical OR</span></span>|<span data-ttu-id="730b1-229">x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-229">x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y</span></span>|<span data-ttu-id="730b1-230">OR Integer bit per bit, OR logico booleano</span><span class="sxs-lookup"><span data-stu-id="730b1-230">Integer bitwise OR, boolean logical OR</span></span>|  
+|<span data-ttu-id="730b1-231">AND condizionale</span><span class="sxs-lookup"><span data-stu-id="730b1-231">Conditional AND</span></span>|<span data-ttu-id="730b1-232">x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-232">x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y</span></span>|<span data-ttu-id="730b1-233">Restituisce y solo se x è true</span><span class="sxs-lookup"><span data-stu-id="730b1-233">Evaluates y only if x is true</span></span>|  
+|<span data-ttu-id="730b1-234">OR condizionale</span><span class="sxs-lookup"><span data-stu-id="730b1-234">Conditional OR</span></span>|<span data-ttu-id="730b1-235">x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-235">x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y</span></span>|<span data-ttu-id="730b1-236">Restituisce y solo se x è false</span><span class="sxs-lookup"><span data-stu-id="730b1-236">Evaluates y only if x is false</span></span>|  
+|<span data-ttu-id="730b1-237">Null-coalescing</span><span class="sxs-lookup"><span data-stu-id="730b1-237">Null coalescing</span></span>|<span data-ttu-id="730b1-238">x [??](../../../csharp/language-reference/operators/null-conditional-operator.md)</span><span class="sxs-lookup"><span data-stu-id="730b1-238">x [??](../../../csharp/language-reference/operators/null-conditional-operator.md)</span></span> <span data-ttu-id="730b1-239">s</span><span class="sxs-lookup"><span data-stu-id="730b1-239">y</span></span>|<span data-ttu-id="730b1-240">Restituisce y se x è Null; in caso contrario x</span><span class="sxs-lookup"><span data-stu-id="730b1-240">Evaluates to y if x is null, to x otherwise</span></span>|  
+|<span data-ttu-id="730b1-241">Condizionale</span><span class="sxs-lookup"><span data-stu-id="730b1-241">Conditional</span></span>|<span data-ttu-id="730b1-242">x [?](../../../csharp/language-reference/operators/conditional-operator.md)</span><span class="sxs-lookup"><span data-stu-id="730b1-242">x [?](../../../csharp/language-reference/operators/conditional-operator.md)</span></span> <span data-ttu-id="730b1-243">y : z</span><span class="sxs-lookup"><span data-stu-id="730b1-243">y : z</span></span>|<span data-ttu-id="730b1-244">Restituisce y se x è true, z se x è false</span><span class="sxs-lookup"><span data-stu-id="730b1-244">Evaluates to y if x is true, z if x is false</span></span>|  
   
- **Operatori di assegnazione e operatori anonimi**  
+ <span data-ttu-id="730b1-245">**Operatori di assegnazione e operatori anonimi**</span><span class="sxs-lookup"><span data-stu-id="730b1-245">**Assignment and Anonymous Operators**</span></span>  
   
-|Espressione|Descrizione|  
+|<span data-ttu-id="730b1-246">Espressione</span><span class="sxs-lookup"><span data-stu-id="730b1-246">Expression</span></span>|<span data-ttu-id="730b1-247">Descrizione</span><span class="sxs-lookup"><span data-stu-id="730b1-247">Description</span></span>|  
 |----------------|-----------------|  
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|Assegnazione|  
-|x op= y|Assegnazione composta. Supporta gli operatori seguenti: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
-|(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Funzione anonima (espressione lambda)|  
+|[=](../../../csharp/language-reference/operators/assignment-operator.md)|<span data-ttu-id="730b1-248">Assegnazione</span><span class="sxs-lookup"><span data-stu-id="730b1-248">Assignment</span></span>|  
+|<span data-ttu-id="730b1-249">x op= y</span><span class="sxs-lookup"><span data-stu-id="730b1-249">x op= y</span></span>|<span data-ttu-id="730b1-250">Assegnazione composta.</span><span class="sxs-lookup"><span data-stu-id="730b1-250">Compound assignment.</span></span> <span data-ttu-id="730b1-251">Supporta gli operatori seguenti: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="730b1-251">Supports these operators: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)</span></span>|  
+|<span data-ttu-id="730b1-252">(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="730b1-252">(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y</span></span>|<span data-ttu-id="730b1-253">Funzione anonima (espressione lambda)</span><span class="sxs-lookup"><span data-stu-id="730b1-253">Anonymous function (lambda expression)</span></span>|  
   
-## <a name="associativity"></a>associatività  
- Quando in un'espressione sono presenti due o più operatori con la stessa precedenza, verranno valutati in base all'associazione. Gli operatori che prevedono l'associazione all'operando sinistro vengono valutati nell'ordine da sinistra a destra. L'espressione `x * y / z` viene ad esempio valutata come `(x * y) / z`. Gli operatori che prevedono l'associazione all'operando destro vengono valutati nell'ordine da destra a sinistra. Ad esempio, l'operatore di assegnazione prevede l'associazione all'operando destro. Se non fosse così, il codice seguente restituirà un errore.  
+## <a name="associativity"></a><span data-ttu-id="730b1-254">associatività</span><span class="sxs-lookup"><span data-stu-id="730b1-254">Associativity</span></span>  
+ <span data-ttu-id="730b1-255">Quando in un'espressione sono presenti due o più operatori con la stessa precedenza, verranno valutati in base all'associazione.</span><span class="sxs-lookup"><span data-stu-id="730b1-255">When two or more operators that have the same precedence are present in an expression, they are evaluated based on associativity.</span></span> <span data-ttu-id="730b1-256">Gli operatori che prevedono l'associazione all'operando sinistro vengono valutati nell'ordine da sinistra a destra.</span><span class="sxs-lookup"><span data-stu-id="730b1-256">Left-associative operators are evaluated in order from left to right.</span></span> <span data-ttu-id="730b1-257">L'espressione `x * y / z` viene ad esempio valutata come `(x * y) / z`.</span><span class="sxs-lookup"><span data-stu-id="730b1-257">For example, `x * y / z` is evaluated as `(x * y) / z`.</span></span> <span data-ttu-id="730b1-258">Gli operatori che prevedono l'associazione all'operando destro vengono valutati nell'ordine da destra a sinistra.</span><span class="sxs-lookup"><span data-stu-id="730b1-258">Right-associative operators are evaluated in order from right to left.</span></span> <span data-ttu-id="730b1-259">Ad esempio, l'operatore di assegnazione prevede l'associazione all'operando destro.</span><span class="sxs-lookup"><span data-stu-id="730b1-259">For example, the assignment operator is right associative.</span></span> <span data-ttu-id="730b1-260">Se non fosse così, il codice seguente restituirà un errore.</span><span class="sxs-lookup"><span data-stu-id="730b1-260">If it were not, the following code would result in an error.</span></span>  
   
 ```csharp  
 int a, b, c;  
@@ -164,35 +145,34 @@ a = (b = c);
 //(a = b) = c;  
 ```  
   
- Facendo un altro esempio, l'operatore ternario ([?:](../../../csharp/language-reference/operators/conditional-operator.md)) prevede l'associazione all'operando destro. La maggior parte degli operatori binari prevede l'associazione all'operando sinistro.  
+ <span data-ttu-id="730b1-261">Facendo un altro esempio, l'operatore ternario ([?:](../../../csharp/language-reference/operators/conditional-operator.md)) prevede l'associazione all'operando destro.</span><span class="sxs-lookup"><span data-stu-id="730b1-261">As another example the ternary operator ([?:](../../../csharp/language-reference/operators/conditional-operator.md)) is right associative.</span></span> <span data-ttu-id="730b1-262">La maggior parte degli operatori binari prevede l'associazione all'operando sinistro.</span><span class="sxs-lookup"><span data-stu-id="730b1-262">Most binary operators are left associative.</span></span>  
   
- Se gli operatori in un'espressione sono impostati su associativo o associativo da destra, gli operandi di ogni espressione vengono valutati per primi, da sinistra a destra. Negli esempi seguenti viene illustrato l'ordine di valutazione degli operatori e degli operandi.  
+ <span data-ttu-id="730b1-263">Se gli operatori in un'espressione sono impostati su associativo o associativo da destra, gli operandi di ogni espressione vengono valutati per primi, da sinistra a destra.</span><span class="sxs-lookup"><span data-stu-id="730b1-263">Whether the operators in an expression are left associative or right associative, the operands of each expression are evaluated first, from left to right.</span></span> <span data-ttu-id="730b1-264">Negli esempi seguenti viene illustrato l'ordine di valutazione degli operatori e degli operandi.</span><span class="sxs-lookup"><span data-stu-id="730b1-264">The following examples illustrate the order of evaluation of operators and operands.</span></span>  
   
-|Istruzione|Ordine di valutazione|  
+|<span data-ttu-id="730b1-265">Istruzione</span><span class="sxs-lookup"><span data-stu-id="730b1-265">Statement</span></span>|<span data-ttu-id="730b1-266">Ordine di valutazione</span><span class="sxs-lookup"><span data-stu-id="730b1-266">Order of evaluation</span></span>|  
 |---------------|-------------------------|  
-|`a = b`|a, b, =|  
-|`a = b + c`|a, b, c, +, =|  
-|`a = b + c * d`|a, b, c, d, *, +, =|  
-|`a = b * c + d`|a, b, c, *, d, +, =|  
-|`a = b - c + d`|a, b, c, -, d, +, =|  
-|`a += b -= c`|a, b, c, -=, +=|  
+|`a = b`|<span data-ttu-id="730b1-267">a, b, =</span><span class="sxs-lookup"><span data-stu-id="730b1-267">a, b, =</span></span>|  
+|`a = b + c`|<span data-ttu-id="730b1-268">a, b, c, +, =</span><span class="sxs-lookup"><span data-stu-id="730b1-268">a, b, c, +, =</span></span>|  
+|`a = b + c * d`|<span data-ttu-id="730b1-269">a, b, c, d, *, +, =</span><span class="sxs-lookup"><span data-stu-id="730b1-269">a, b, c, d, *, +, =</span></span>|  
+|`a = b * c + d`|<span data-ttu-id="730b1-270">a, b, c, *, d, +, =</span><span class="sxs-lookup"><span data-stu-id="730b1-270">a, b, c, *, d, +, =</span></span>|  
+|`a = b - c + d`|<span data-ttu-id="730b1-271">a, b, c, -, d, +, =</span><span class="sxs-lookup"><span data-stu-id="730b1-271">a, b, c, -, d, +, =</span></span>|  
+|`a += b -= c`|<span data-ttu-id="730b1-272">a, b, c, -=, +=</span><span class="sxs-lookup"><span data-stu-id="730b1-272">a, b, c, -=, +=</span></span>|  
   
-## <a name="adding-parentheses"></a>Aggiunta di parentesi  
- È possibile modificare l'ordine imposto dalla precedenza degli operatori e dall'associatività usando le parentesi. Ad esempio, il risultato dell'espressione `2 + 3 * 2` restituisce normalmente 8, in quanto gli operatori di moltiplicazione hanno la precedenza su quelli di addizione. Tuttavia, se si scrive l'espressione in questo modo `(2 + 3) * 2`, l'addizione è presa in considerazione prima della moltiplicazione e il risultato sarà 10. Negli esempi seguenti viene illustrato l'ordine di valutazione delle espressioni tra parentesi. Come negli esempi precedenti, gli operandi vengono valutati prima di applicare l'operatore.  
+## <a name="adding-parentheses"></a><span data-ttu-id="730b1-273">Aggiunta di parentesi</span><span class="sxs-lookup"><span data-stu-id="730b1-273">Adding Parentheses</span></span>  
+ <span data-ttu-id="730b1-274">È possibile modificare l'ordine imposto dalla precedenza degli operatori e dall'associatività usando le parentesi.</span><span class="sxs-lookup"><span data-stu-id="730b1-274">You can change the order imposed by operator precedence and associativity by using parentheses.</span></span> <span data-ttu-id="730b1-275">Ad esempio, il risultato dell'espressione `2 + 3 * 2` restituisce normalmente 8, in quanto gli operatori di moltiplicazione hanno la precedenza su quelli di addizione.</span><span class="sxs-lookup"><span data-stu-id="730b1-275">For example, `2 + 3 * 2` ordinarily evaluates to 8, because multiplicative operators take precedence over additive operators.</span></span> <span data-ttu-id="730b1-276">Tuttavia, se si scrive l'espressione in questo modo `(2 + 3) * 2`, l'addizione è presa in considerazione prima della moltiplicazione e il risultato sarà 10.</span><span class="sxs-lookup"><span data-stu-id="730b1-276">However, if you write the expression as `(2 + 3) * 2`, the addition is evaluated before the multiplication, and the result is 10.</span></span> <span data-ttu-id="730b1-277">Negli esempi seguenti viene illustrato l'ordine di valutazione delle espressioni tra parentesi.</span><span class="sxs-lookup"><span data-stu-id="730b1-277">The following examples illustrate the order of evaluation in parenthesized expressions.</span></span> <span data-ttu-id="730b1-278">Come negli esempi precedenti, gli operandi vengono valutati prima di applicare l'operatore.</span><span class="sxs-lookup"><span data-stu-id="730b1-278">As in previous examples, the operands are evaluated before the operator is applied.</span></span>  
   
-|Istruzione|Ordine di valutazione|  
+|<span data-ttu-id="730b1-279">Istruzione</span><span class="sxs-lookup"><span data-stu-id="730b1-279">Statement</span></span>|<span data-ttu-id="730b1-280">Ordine di valutazione</span><span class="sxs-lookup"><span data-stu-id="730b1-280">Order of evaluation</span></span>|  
 |---------------|-------------------------|  
-|`a = (b + c) * d`|a, b, c, +, d, *, =|  
-|`a = b - (c + d)`|a, b, c, d, +, -, =|  
-|`a = (b + c) * (d - e)`|a, b, c, +, d, e, -, *, =|  
+|`a = (b + c) * d`|<span data-ttu-id="730b1-281">a, b, c, +, d, *, =</span><span class="sxs-lookup"><span data-stu-id="730b1-281">a, b, c, +, d, *, =</span></span>|  
+|`a = b - (c + d)`|<span data-ttu-id="730b1-282">a, b, c, d, +, -, =</span><span class="sxs-lookup"><span data-stu-id="730b1-282">a, b, c, d, +, -, =</span></span>|  
+|`a = (b + c) * (d - e)`|<span data-ttu-id="730b1-283">a, b, c, +, d, e, -, *, =</span><span class="sxs-lookup"><span data-stu-id="730b1-283">a, b, c, +, d, e, -, *, =</span></span>|  
   
-## <a name="operator-overloading"></a>Overload degli operatori  
- È possibile modificare il comportamento degli operatori per classi e struct personalizzati. Questo processo è denominato *overload degli operatori*. Per altre informazioni, vedere [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).  
+## <a name="operator-overloading"></a><span data-ttu-id="730b1-284">Overload degli operatori</span><span class="sxs-lookup"><span data-stu-id="730b1-284">Operator Overloading</span></span>  
+ <span data-ttu-id="730b1-285">È possibile modificare il comportamento degli operatori per classi e struct personalizzati.</span><span class="sxs-lookup"><span data-stu-id="730b1-285">You can change the behavior of operators for custom classes and structs.</span></span> <span data-ttu-id="730b1-286">Questo processo è denominato *overload degli operatori*.</span><span class="sxs-lookup"><span data-stu-id="730b1-286">This process is referred to as *operator overloading*.</span></span> <span data-ttu-id="730b1-287">Per altre informazioni, vedere [Operatori che supportano l'overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span><span class="sxs-lookup"><span data-stu-id="730b1-287">For more information, see [Overloadable Operators](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span></span>  
   
-## <a name="related-sections"></a>Sezioni correlate  
- Per altre informazioni, vedere [Parole chiave per operatori](../../../csharp/language-reference/keywords/operator-keywords.md) e [Operatori C#](../../../csharp/language-reference/operators/index.md).  
+## <a name="related-sections"></a><span data-ttu-id="730b1-288">Sezioni correlate</span><span class="sxs-lookup"><span data-stu-id="730b1-288">Related Sections</span></span>  
+ <span data-ttu-id="730b1-289">Per altre informazioni, vedere [Parole chiave per operatori](../../../csharp/language-reference/keywords/operator-keywords.md) e [Operatori C#](../../../csharp/language-reference/operators/index.md).</span><span class="sxs-lookup"><span data-stu-id="730b1-289">For more information, see [Operator Keywords](../../../csharp/language-reference/keywords/operator-keywords.md) and [C# Operators](../../../csharp/language-reference/operators/index.md).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Istruzioni, espressioni e operatori](../../../csharp/programming-guide/statements-expressions-operators/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="730b1-290">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="730b1-290">See Also</span></span>  
+ [<span data-ttu-id="730b1-291">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="730b1-291">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="730b1-292">Istruzioni, espressioni e operatori</span><span class="sxs-lookup"><span data-stu-id="730b1-292">Statements, Expressions, and Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/index.md)

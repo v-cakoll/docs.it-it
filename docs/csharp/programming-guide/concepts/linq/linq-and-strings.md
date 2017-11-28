@@ -1,81 +1,71 @@
 ---
 title: LINQ e stringhe (C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: c7219c3b968f68d9a6c280749ffa6e8a1cb6938d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 49c51595ffff45df503308b9eba55fc67b4da2e8
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="linq-and-strings-c"></a>LINQ e stringhe (C#)
-È possibile usare LINQ per eseguire query e trasformare stringhe e raccolte di stringhe. LINQ può essere particolarmente utile con i dati semistrutturati nei file di testo. Le query LINQ possono essere usate in associazione a funzioni per valori stringa tradizionali ed espressioni regolari. Ad esempio, è possibile usare il metodo <xref:System.String.Split%2A> o <xref:System.Text.RegularExpressions.Regex.Split%2A> per creare una matrice di stringhe in cui sarà possibile eseguire query o apportare modifiche usando LINQ. È possibile usare il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> nella clausola `where` di una query LINQ. È anche possibile usare LINQ per eseguire query o modificare i risultati <xref:System.Text.RegularExpressions.MatchCollection> restituiti da un'espressione regolare.  
+# <a name="linq-and-strings-c"></a><span data-ttu-id="c9643-102">LINQ e stringhe (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-102">LINQ and Strings (C#)</span></span>
+<span data-ttu-id="c9643-103">È possibile usare LINQ per eseguire query e trasformare stringhe e raccolte di stringhe.</span><span class="sxs-lookup"><span data-stu-id="c9643-103">LINQ can be used to query and transform strings and collections of strings.</span></span> <span data-ttu-id="c9643-104">LINQ può essere particolarmente utile con i dati semistrutturati nei file di testo.</span><span class="sxs-lookup"><span data-stu-id="c9643-104">It can be especially useful with semi-structured data in text files.</span></span> <span data-ttu-id="c9643-105">Le query LINQ possono essere usate in associazione a funzioni per valori stringa tradizionali ed espressioni regolari.</span><span class="sxs-lookup"><span data-stu-id="c9643-105">LINQ queries can be combined with traditional string functions and regular expressions.</span></span> <span data-ttu-id="c9643-106">Ad esempio, è possibile usare il metodo <xref:System.String.Split%2A> o <xref:System.Text.RegularExpressions.Regex.Split%2A> per creare una matrice di stringhe in cui sarà possibile eseguire query o apportare modifiche usando LINQ.</span><span class="sxs-lookup"><span data-stu-id="c9643-106">For example, you can use the <xref:System.String.Split%2A> or <xref:System.Text.RegularExpressions.Regex.Split%2A> method to create an array of strings that you can then query or modify by using LINQ.</span></span> <span data-ttu-id="c9643-107">È possibile usare il metodo <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> nella clausola `where` di una query LINQ.</span><span class="sxs-lookup"><span data-stu-id="c9643-107">You can use the <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> method in the `where` clause of a LINQ query.</span></span> <span data-ttu-id="c9643-108">È anche possibile usare LINQ per eseguire query o modificare i risultati <xref:System.Text.RegularExpressions.MatchCollection> restituiti da un'espressione regolare.</span><span class="sxs-lookup"><span data-stu-id="c9643-108">And you can use LINQ to query or modify the <xref:System.Text.RegularExpressions.MatchCollection> results returned by a regular expression.</span></span>  
   
- È anche possibile usare le tecniche descritte in questa sezione per trasformare dati di testo semistrutturati in XML. Per altre informazioni, vedere [Procedura: Generare XML da file CSV](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd).  
+ <span data-ttu-id="c9643-109">È anche possibile usare le tecniche descritte in questa sezione per trasformare dati di testo semistrutturati in XML.</span><span class="sxs-lookup"><span data-stu-id="c9643-109">You can also use the techniques described in this section to transform semi-structured text data to XML.</span></span> <span data-ttu-id="c9643-110">Per altre informazioni, vedere [Procedura: Generare XML da file CSV](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd).</span><span class="sxs-lookup"><span data-stu-id="c9643-110">For more information, see [How to: Generate XML from CSV Files](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd).</span></span>  
   
- Gli esempi di questa sezione sono suddivisi in due categorie:  
+ <span data-ttu-id="c9643-111">Gli esempi di questa sezione sono suddivisi in due categorie:</span><span class="sxs-lookup"><span data-stu-id="c9643-111">The examples in this section fall into two categories:</span></span>  
   
-## <a name="querying-a-block-of-text"></a>Esecuzione di query in un blocco di testo  
- È possibile eseguire query, analizzare e modificare blocchi di testo suddividendoli in una matrice di stringhe più piccole sottoponibile a query usando il metodo <xref:System.String.Split%2A> o <xref:System.Text.RegularExpressions.Regex.Split%2A>. È possibile suddividere il testo di origine in parole, frasi, paragrafi, pagine o altri criteri e quindi eseguire altre suddivisioni se richieste nella query.  
+## <a name="querying-a-block-of-text"></a><span data-ttu-id="c9643-112">Esecuzione di query in un blocco di testo</span><span class="sxs-lookup"><span data-stu-id="c9643-112">Querying a Block of Text</span></span>  
+ <span data-ttu-id="c9643-113">È possibile eseguire query, analizzare e modificare blocchi di testo suddividendoli in una matrice di stringhe più piccole sottoponibile a query usando il metodo <xref:System.String.Split%2A> o <xref:System.Text.RegularExpressions.Regex.Split%2A>.</span><span class="sxs-lookup"><span data-stu-id="c9643-113">You can query, analyze, and modify text blocks by splitting them into a queryable array of smaller strings by using the <xref:System.String.Split%2A> method or the <xref:System.Text.RegularExpressions.Regex.Split%2A> method.</span></span> <span data-ttu-id="c9643-114">È possibile suddividere il testo di origine in parole, frasi, paragrafi, pagine o altri criteri e quindi eseguire altre suddivisioni se richieste nella query.</span><span class="sxs-lookup"><span data-stu-id="c9643-114">You can split the source text into words, sentences, paragraphs, pages, or any other criteria, and then perform additional splits if they are required in your query.</span></span>  
   
- [Procedura: Contare le occorrenze di una parola in una stringa (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
- Descrive come usare LINQ per eseguire query semplici nel testo.  
+ [<span data-ttu-id="c9643-115">Procedura: Contare le occorrenze di una parola in una stringa (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-115">How to: Count Occurrences of a Word in a String (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
+ <span data-ttu-id="c9643-116">Descrive come usare LINQ per eseguire query semplici nel testo.</span><span class="sxs-lookup"><span data-stu-id="c9643-116">Shows how to use LINQ for simple querying over text.</span></span>  
   
- [Procedura: Eseguire una query per trovare frasi che contengono un set definito di parole (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)  
- Descrive come suddividere file di testo su limiti arbitrari e come eseguire query in ogni parte.  
+ [<span data-ttu-id="c9643-117">Procedura: Eseguire una query per trovare frasi che contengono un set definito di parole (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-117">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)  
+ <span data-ttu-id="c9643-118">Descrive come suddividere file di testo su limiti arbitrari e come eseguire query in ogni parte.</span><span class="sxs-lookup"><span data-stu-id="c9643-118">Shows how to split text files on arbitrary boundaries and how to perform queries against each part.</span></span>  
   
- [Procedura: Eseguire una query per trovare caratteri in una stringa (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md)  
- Dimostra che una stringa è un tipo sottoponibile a query.  
+ [<span data-ttu-id="c9643-119">Procedura: Eseguire una query per trovare caratteri in una stringa (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-119">How to: Query for Characters in a String (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-characters-in-a-string-linq.md)  
+ <span data-ttu-id="c9643-120">Dimostra che una stringa è un tipo sottoponibile a query.</span><span class="sxs-lookup"><span data-stu-id="c9643-120">Demonstrates that a string is a queryable type.</span></span>  
   
- [Procedura: Combinare query LINQ con espressioni regolari (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)  
- Descrive come usare le espressioni regolari nelle query LINQ per un modello complesso corrispondente ai risultati della query filtrati.  
+ [<span data-ttu-id="c9643-121">Procedura: Combinare query LINQ con espressioni regolari (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-121">How to: Combine LINQ Queries with Regular Expressions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)  
+ <span data-ttu-id="c9643-122">Descrive come usare le espressioni regolari nelle query LINQ per un modello complesso corrispondente ai risultati della query filtrati.</span><span class="sxs-lookup"><span data-stu-id="c9643-122">Shows how to use regular expressions in LINQ queries for complex pattern matching on filtered query results.</span></span>  
   
-## <a name="querying-semi-structured-data-in-text-format"></a>Esecuzione di query in dati semistrutturati in formato testo  
- Numerosi tipi di file di testo sono costituiti da una serie di righe, spesso con formattazione simile, ad esempio file delimitati da tabulazione o virgola o righe a lunghezza fissa. Dopo la lettura del file di testo in memoria, è possibile usare LINQ per eseguire query e/o modificare le righe. Le query LINQ semplificano anche la combinazione di dati di più origini.  
+## <a name="querying-semi-structured-data-in-text-format"></a><span data-ttu-id="c9643-123">Esecuzione di query in dati semistrutturati in formato testo</span><span class="sxs-lookup"><span data-stu-id="c9643-123">Querying Semi-Structured Data in Text Format</span></span>  
+ <span data-ttu-id="c9643-124">Numerosi tipi di file di testo sono costituiti da una serie di righe, spesso con formattazione simile, ad esempio file delimitati da tabulazione o virgola o righe a lunghezza fissa.</span><span class="sxs-lookup"><span data-stu-id="c9643-124">Many different types of text files consist of a series of lines, often with similar formatting, such as tab- or comma-delimited files or fixed-length lines.</span></span> <span data-ttu-id="c9643-125">Dopo la lettura del file di testo in memoria, è possibile usare LINQ per eseguire query e/o modificare le righe.</span><span class="sxs-lookup"><span data-stu-id="c9643-125">After you read such a text file into memory, you can use LINQ to query and/or modify the lines.</span></span> <span data-ttu-id="c9643-126">Le query LINQ semplificano anche la combinazione di dati di più origini.</span><span class="sxs-lookup"><span data-stu-id="c9643-126">LINQ queries also simplify the task of combining data from multiple sources.</span></span>  
   
- [Procedura: Trovare la differenza dei set tra due elenchi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)  
- Descrive come trovare tutte le stringhe presenti in un elenco ma non in un altro elenco.  
+ [<span data-ttu-id="c9643-127">Procedura: Trovare la differenza dei set tra due elenchi (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-127">How to: Find the Set Difference Between Two Lists (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)  
+ <span data-ttu-id="c9643-128">Descrive come trovare tutte le stringhe presenti in un elenco ma non in un altro elenco.</span><span class="sxs-lookup"><span data-stu-id="c9643-128">Shows how to find all the strings that are present in one list but not the other.</span></span>  
   
- [Procedura: Ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)  
- Descrive come ordinare le righe di testo in base a una parola o un campo.  
+ [<span data-ttu-id="c9643-129">Procedura: Ordinare o filtrare i dati di testo in base a qualsiasi parola o campo (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-129">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)  
+ <span data-ttu-id="c9643-130">Descrive come ordinare le righe di testo in base a una parola o un campo.</span><span class="sxs-lookup"><span data-stu-id="c9643-130">Shows how to sort text lines based on any word or field.</span></span>  
   
- [Procedura: Riordinare i campi di un file delimitato (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md)  
- Descrive come riordinare i campi in una riga in un file con estensione csv.  
+ [<span data-ttu-id="c9643-131">Procedura: Riordinare i campi di un file delimitato (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-131">How to: Reorder the Fields of a Delimited File (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-reorder-the-fields-of-a-delimited-file-linq.md)  
+ <span data-ttu-id="c9643-132">Descrive come riordinare i campi in una riga in un file con estensione csv.</span><span class="sxs-lookup"><span data-stu-id="c9643-132">Shows how to reorder fields in a line in a .csv file.</span></span>  
   
- [Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
- Descrive come combinare elenchi di stringhe in diversi modi.  
+ [<span data-ttu-id="c9643-133">Procedura: Combinare e confrontare raccolte di stringhe (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-133">How to: Combine and Compare String Collections (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
+ <span data-ttu-id="c9643-134">Descrive come combinare elenchi di stringhe in diversi modi.</span><span class="sxs-lookup"><span data-stu-id="c9643-134">Shows how to combine string lists in various ways.</span></span>  
   
- [Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
- Descrive come creare raccolte di oggetti usando più file di testo come origini dati.  
+ [<span data-ttu-id="c9643-135">Procedura: Popolare le raccolte di oggetti da più origini (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-135">How to: Populate Object Collections from Multiple Sources (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
+ <span data-ttu-id="c9643-136">Descrive come creare raccolte di oggetti usando più file di testo come origini dati.</span><span class="sxs-lookup"><span data-stu-id="c9643-136">Shows how to create object collections by using multiple text files as data sources.</span></span>  
   
- [Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
- Descrive come combinare le stringhe in due elenchi in un'unica stringa usando una chiave corrispondente.  
+ [<span data-ttu-id="c9643-137">Procedura: Creare un join del contenuto da file non analoghi (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-137">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+ <span data-ttu-id="c9643-138">Descrive come combinare le stringhe in due elenchi in un'unica stringa usando una chiave corrispondente.</span><span class="sxs-lookup"><span data-stu-id="c9643-138">Shows how to combine strings in two lists into a single string by using a matching key.</span></span>  
   
- [Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)  
- Descrive come creare file nuovi usando un singolo file come origine dati.  
+ [<span data-ttu-id="c9643-139">Procedura: Suddividere un file in molti file usando i gruppi (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-139">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)  
+ <span data-ttu-id="c9643-140">Descrive come creare file nuovi usando un singolo file come origine dati.</span><span class="sxs-lookup"><span data-stu-id="c9643-140">Shows how to create new files by using a single file as a data source.</span></span>  
   
- [Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)  
- Descrive come eseguire calcoli matematici in dati di testo in file con estensione csv.  
+ [<span data-ttu-id="c9643-141">Procedura: Calcolare i valori di colonna in un file di testo CSV (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-141">How to: Compute Column Values in a CSV Text File (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)  
+ <span data-ttu-id="c9643-142">Descrive come eseguire calcoli matematici in dati di testo in file con estensione csv.</span><span class="sxs-lookup"><span data-stu-id="c9643-142">Shows how to perform mathematical computations on text data in .csv files.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
- [Procedura: generare XML da file CSV](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)
-
+## <a name="see-also"></a><span data-ttu-id="c9643-143">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c9643-143">See Also</span></span>  
+ [<span data-ttu-id="c9643-144">Language-Integrated Query (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c9643-144">Language-Integrated Query (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [<span data-ttu-id="c9643-145">Procedura: generare XML da file CSV</span><span class="sxs-lookup"><span data-stu-id="c9643-145">How to: Generate XML from CSV Files</span></span>](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)

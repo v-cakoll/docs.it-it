@@ -1,81 +1,61 @@
 ---
 title: -nowarn (opzioni del compilatore C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /nowarn
-dev_langs:
-- CSharp
+f1_keywords: /nowarn
 helpviewer_keywords:
 - nowarn compiler option [C#]
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 499203bb4714fa2d07b2c0e42958ffd0e472facc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3bae7e6d16c044b8f1aeba26de434cdf17479e82
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="nowarn-c-compiler-options"></a>/nowarn (opzioni del compilatore C#)
-L'opzione **/nowarn** impedisce al compilatore di visualizzare uno o più avvisi. Separare più numeri di avviso con una virgola.  
+# <a name="nowarn-c-compiler-options"></a><span data-ttu-id="d0500-102">/nowarn (opzioni del compilatore C#)</span><span class="sxs-lookup"><span data-stu-id="d0500-102">/nowarn (C# Compiler Options)</span></span>
+<span data-ttu-id="d0500-103">L'opzione **/nowarn** impedisce al compilatore di visualizzare uno o più avvisi.</span><span class="sxs-lookup"><span data-stu-id="d0500-103">The **/nowarn** option lets you suppress the compiler from displaying one or more warnings.</span></span> <span data-ttu-id="d0500-104">Separare più numeri di avviso con una virgola.</span><span class="sxs-lookup"><span data-stu-id="d0500-104">Separate multiple warning numbers with a comma.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="d0500-105">Sintassi</span><span class="sxs-lookup"><span data-stu-id="d0500-105">Syntax</span></span>  
   
 ```console  
 /nowarn:number1[,number2,...]  
 ```  
   
-## <a name="arguments"></a>Argomenti  
- `number1`, `number2`  
- Il numero o i numeri degli avvisi che il compilatore non deve visualizzare.  
+## <a name="arguments"></a><span data-ttu-id="d0500-106">Argomenti</span><span class="sxs-lookup"><span data-stu-id="d0500-106">Arguments</span></span>  
+ <span data-ttu-id="d0500-107">`number1`, `number2`</span><span class="sxs-lookup"><span data-stu-id="d0500-107">`number1`, `number2`</span></span>  
+ <span data-ttu-id="d0500-108">Il numero o i numeri degli avvisi che il compilatore non deve visualizzare.</span><span class="sxs-lookup"><span data-stu-id="d0500-108">Warning number(s) that you want the compiler to suppress.</span></span>  
   
-## <a name="remarks"></a>Note  
- Specificare solo la parte numerica dell'identificatore dell'avviso. Ad esempio, per eliminare l'avviso CS0028 è possibile specificare `/nowarn:28`.  
+## <a name="remarks"></a><span data-ttu-id="d0500-109">Note</span><span class="sxs-lookup"><span data-stu-id="d0500-109">Remarks</span></span>  
+ <span data-ttu-id="d0500-110">Specificare solo la parte numerica dell'identificatore dell'avviso.</span><span class="sxs-lookup"><span data-stu-id="d0500-110">You should only specify the numeric part of the warning identifier.</span></span> <span data-ttu-id="d0500-111">Ad esempio, per eliminare l'avviso CS0028 è possibile specificare `/nowarn:28`.</span><span class="sxs-lookup"><span data-stu-id="d0500-111">For example, if you want to suppress CS0028, you could specify `/nowarn:28`.</span></span>  
   
- Il compilatore ignorerà automaticamente i numeri di avviso passati a `/nowarn` validi nelle versioni precedenti ma rimossi dal compilatore. Ad esempio, CS0679 era valido nel compilatore in Visual Studio .NET 2002 ma è stato rimosso successivamente.  
+ <span data-ttu-id="d0500-112">Il compilatore ignorerà automaticamente i numeri di avviso passati a `/nowarn` validi nelle versioni precedenti ma rimossi dal compilatore.</span><span class="sxs-lookup"><span data-stu-id="d0500-112">The compiler will silently ignore warning numbers passed to `/nowarn` that were valid in previous releases, but that have been removed from the compiler.</span></span> <span data-ttu-id="d0500-113">Ad esempio, CS0679 era valido nel compilatore in Visual Studio .NET 2002 ma è stato rimosso successivamente.</span><span class="sxs-lookup"><span data-stu-id="d0500-113">For example, CS0679 was valid in the compiler in Visual Studio .NET 2002 but was subsequently removed.</span></span>  
   
- Gli avvisi seguenti non possono essere eliminati dall'opzione `/nowarn`:  
+ <span data-ttu-id="d0500-114">Gli avvisi seguenti non possono essere eliminati dall'opzione `/nowarn`:</span><span class="sxs-lookup"><span data-stu-id="d0500-114">The following warnings cannot be suppressed by the `/nowarn` option:</span></span>  
   
--   Avviso del compilatore (livello 1) CS2002  
+-   <span data-ttu-id="d0500-115">Avviso del compilatore (livello 1) CS2002</span><span class="sxs-lookup"><span data-stu-id="d0500-115">Compiler Warning (level 1) CS2002</span></span>  
   
--   Avviso del compilatore (livello 1) CS2023  
+-   <span data-ttu-id="d0500-116">Avviso del compilatore (livello 1) CS2023</span><span class="sxs-lookup"><span data-stu-id="d0500-116">Compiler Warning (level 1) CS2023</span></span>  
   
--   Avviso del compilatore (livello 1) CS2029  
+-   <span data-ttu-id="d0500-117">Avviso del compilatore (livello 1) CS2029</span><span class="sxs-lookup"><span data-stu-id="d0500-117">Compiler Warning (level 1) CS2029</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="d0500-118">Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d0500-118">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Aprire la pagina **Proprietà** del progetto. Per informazioni dettagliate, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1.  <span data-ttu-id="d0500-119">Aprire la pagina **Proprietà** del progetto.</span><span class="sxs-lookup"><span data-stu-id="d0500-119">Open the **Properties** page for the project.</span></span> <span data-ttu-id="d0500-120">Per informazioni dettagliate, vedere [Pagina Compilazione, Creazione progetti (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span><span class="sxs-lookup"><span data-stu-id="d0500-120">For details, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
   
-2.  Fare clic sulla pagina delle proprietà **Compilazione**.  
+2.  <span data-ttu-id="d0500-121">Fare clic sulla pagina delle proprietà **Compilazione**.</span><span class="sxs-lookup"><span data-stu-id="d0500-121">Click the **Build** property page.</span></span>  
   
-3.  Modificare la proprietà **Non visualizzare avvisi**.  
+3.  <span data-ttu-id="d0500-122">Modificare la proprietà **Non visualizzare avvisi**.</span><span class="sxs-lookup"><span data-stu-id="d0500-122">Modify the **Suppress Warnings** property.</span></span>  
   
- Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.  
+ <span data-ttu-id="d0500-123">Per informazioni su come impostare questa opzione del compilatore a livello di codice, vedere <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span><span class="sxs-lookup"><span data-stu-id="d0500-123">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)  (Opzioni del compilatore C#)  
- [Gestione delle proprietà di progetti e soluzioni](/visualstudio/ide/managing-project-and-solution-properties)   
- [Errori del compilatore C#](../../../csharp/language-reference/compiler-messages/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="d0500-124">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d0500-124">See Also</span></span>  
+ [<span data-ttu-id="d0500-125">Opzioni del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="d0500-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="d0500-126">Gestione delle proprietà di progetti e soluzioni</span><span class="sxs-lookup"><span data-stu-id="d0500-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)  
+ [<span data-ttu-id="d0500-127">Errori del compilatore C#</span><span class="sxs-lookup"><span data-stu-id="d0500-127">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)

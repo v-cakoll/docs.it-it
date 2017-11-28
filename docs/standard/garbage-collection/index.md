@@ -24,35 +24,34 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1636bf1cf047e7505be7567f5b5061df25d899c7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be94a3e0dee4cb27aee4d5c98ebc1d6ef0704ac9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="garbage-collection"></a>Garbage Collection
-Il Garbage Collector di .NET gestisce l'allocazione e il rilascio di memoria per l'applicazione. Ogni volta che si crea un nuovo oggetto, Common Language Runtime alloca memoria per l'oggetto dall'heap gestito. Lo spazio per i nuovi oggetti verrà allocato in questo modo dal runtime fino all'esaurimento dello spazio degli indirizzi nell'heap gestito. La memoria, tuttavia, non è infinita. Alla fine il Garbage Collector deve eseguire una raccolta per liberare memoria. Il modulo di ottimizzazione del Garbage Collector consente di determinare il momento migliore per l'esecuzione di una raccolta sulla base delle allocazioni in corso. Durante l'esecuzione di una raccolta, il Garbage Collector verifica la presenza di oggetti non più usati dall'applicazione nell'heap gestito ed esegue le operazioni necessarie per reclamare la relativa memoria.  
+# <a name="garbage-collection"></a><span data-ttu-id="158b1-102">Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="158b1-102">Garbage Collection</span></span>
+<span data-ttu-id="158b1-103">Il Garbage Collector di .NET gestisce l'allocazione e il rilascio di memoria per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="158b1-103">.NET's garbage collector manages the allocation and release of memory for your application.</span></span> <span data-ttu-id="158b1-104">Ogni volta che si crea un nuovo oggetto, Common Language Runtime alloca memoria per l'oggetto dall'heap gestito.</span><span class="sxs-lookup"><span data-stu-id="158b1-104">Each time you create a new object, the common language runtime allocates memory for the object from the managed heap.</span></span> <span data-ttu-id="158b1-105">Lo spazio per i nuovi oggetti verrà allocato in questo modo dal runtime fino all'esaurimento dello spazio degli indirizzi nell'heap gestito.</span><span class="sxs-lookup"><span data-stu-id="158b1-105">As long as address space is available in the managed heap, the runtime continues to allocate space for new objects.</span></span> <span data-ttu-id="158b1-106">La memoria, tuttavia, non è infinita.</span><span class="sxs-lookup"><span data-stu-id="158b1-106">However, memory is not infinite.</span></span> <span data-ttu-id="158b1-107">Alla fine il Garbage Collector deve eseguire una raccolta per liberare memoria.</span><span class="sxs-lookup"><span data-stu-id="158b1-107">Eventually the garbage collector must perform a collection in order to free some memory.</span></span> <span data-ttu-id="158b1-108">Il modulo di ottimizzazione del Garbage Collector consente di determinare il momento migliore per l'esecuzione di una raccolta sulla base delle allocazioni in corso.</span><span class="sxs-lookup"><span data-stu-id="158b1-108">The garbage collector's optimizing engine determines the best time to perform a collection, based upon the allocations being made.</span></span> <span data-ttu-id="158b1-109">Durante l'esecuzione di una raccolta, il Garbage Collector verifica la presenza di oggetti non più usati dall'applicazione nell'heap gestito ed esegue le operazioni necessarie per reclamare la relativa memoria.</span><span class="sxs-lookup"><span data-stu-id="158b1-109">When the garbage collector performs a collection, it checks for objects in the managed heap that are no longer being used by the application and performs the necessary operations to reclaim their memory.</span></span>  
   
 <a name="related_topics"></a>   
-## <a name="related-topics"></a>Argomenti correlati  
+## <a name="related-topics"></a><span data-ttu-id="158b1-110">Argomenti correlati</span><span class="sxs-lookup"><span data-stu-id="158b1-110">Related Topics</span></span>  
   
-|Titolo|Descrizione|  
+|<span data-ttu-id="158b1-111">Titolo</span><span class="sxs-lookup"><span data-stu-id="158b1-111">Title</span></span>|<span data-ttu-id="158b1-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="158b1-112">Description</span></span>|  
 |-----------|-----------------|  
-|[Principi fondamentali di Garbage Collection](../../../docs/standard/garbage-collection/fundamentals.md)|Descrive il funzionamento di Garbage Collection, la modalità di allocazione degli oggetti nell'heap gestito e altri concetti di base.|  
-|[Garbage Collection e prestazioni](../../../docs/standard/garbage-collection/performance.md)|Descrive i controlli delle prestazioni è possibile usare per diagnosticare i problemi di Garbage Collection e di prestazioni.|  
-|[Raccolte indotte](../../../docs/standard/garbage-collection/induced.md)|Descrive come eseguire un'operazione di Garbage Collection.|  
-|[Modalità di latenza](../../../docs/standard/garbage-collection/latency.md)|Descrive i modi per determinare l'ingerenza di Garbage Collection.|  
-|[Ottimizzazione per l'hosting Web condiviso](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Descrive come ottimizzare l'operazione di Garbage Collection nei server condivisi da più siti Web di piccole dimensioni.|  
-|[Notifiche di Garbage Collection](../../../docs/standard/garbage-collection/notifications.md)|Descrive come determinare quando è imminente una Garbage Collection completa e quando è stata completata.|  
-|[Monitoraggio delle risorse del dominio dell'applicazione](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Descrive come monitorare l'utilizzo della CPU e della memoria da un dominio dell'applicazione.|  
-|[Riferimenti deboli](../../../docs/standard/garbage-collection/weak-references.md)|Descrive i riferimenti che consentono al Garbage Collector di raccogliere un oggetto, pur senza impedire all'applicazione di accedervi.|  
+|[<span data-ttu-id="158b1-113">Principi fondamentali di Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="158b1-113">Fundamentals of Garbage Collection</span></span>](../../../docs/standard/garbage-collection/fundamentals.md)|<span data-ttu-id="158b1-114">Descrive il funzionamento di Garbage Collection, la modalità di allocazione degli oggetti nell'heap gestito e altri concetti di base.</span><span class="sxs-lookup"><span data-stu-id="158b1-114">Describes how garbage collection works, how objects are allocated on the managed heap, and other core concepts.</span></span>|  
+|[<span data-ttu-id="158b1-115">Garbage Collection e prestazioni</span><span class="sxs-lookup"><span data-stu-id="158b1-115">Garbage Collection and Performance</span></span>](../../../docs/standard/garbage-collection/performance.md)|<span data-ttu-id="158b1-116">Descrive i controlli delle prestazioni è possibile usare per diagnosticare i problemi di Garbage Collection e di prestazioni.</span><span class="sxs-lookup"><span data-stu-id="158b1-116">Describes the performance checks you can use to diagnose garbage collection and performance issues.</span></span>|  
+|[<span data-ttu-id="158b1-117">Raccolte indotte</span><span class="sxs-lookup"><span data-stu-id="158b1-117">Induced Collections</span></span>](../../../docs/standard/garbage-collection/induced.md)|<span data-ttu-id="158b1-118">Descrive come eseguire un'operazione di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="158b1-118">Describes how to make a garbage collection occur.</span></span>|  
+|[<span data-ttu-id="158b1-119">Modalità di latenza</span><span class="sxs-lookup"><span data-stu-id="158b1-119">Latency Modes</span></span>](../../../docs/standard/garbage-collection/latency.md)|<span data-ttu-id="158b1-120">Descrive i modi per determinare l'ingerenza di Garbage Collection.</span><span class="sxs-lookup"><span data-stu-id="158b1-120">Describes the modes that determine the intrusiveness of garbage collection.</span></span>|  
+|[<span data-ttu-id="158b1-121">Ottimizzazione per l'hosting Web condiviso</span><span class="sxs-lookup"><span data-stu-id="158b1-121">Optimization for Shared Web Hosting</span></span>](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|<span data-ttu-id="158b1-122">Descrive come ottimizzare l'operazione di Garbage Collection nei server condivisi da più siti Web di piccole dimensioni.</span><span class="sxs-lookup"><span data-stu-id="158b1-122">Describes how to optimize garbage collection on servers shared by several small Web sites.</span></span>|  
+|[<span data-ttu-id="158b1-123">Notifiche di Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="158b1-123">Garbage Collection Notifications</span></span>](../../../docs/standard/garbage-collection/notifications.md)|<span data-ttu-id="158b1-124">Descrive come determinare quando è imminente una Garbage Collection completa e quando è stata completata.</span><span class="sxs-lookup"><span data-stu-id="158b1-124">Describes how to determine when a full garbage collection is approaching and when it has completed.</span></span>|  
+|[<span data-ttu-id="158b1-125">Monitoraggio delle risorse del dominio dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="158b1-125">Application Domain Resource Monitoring</span></span>](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|<span data-ttu-id="158b1-126">Descrive come monitorare l'utilizzo della CPU e della memoria da un dominio dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="158b1-126">Describes how to monitor CPU and memory usage by an application domain.</span></span>|  
+|[<span data-ttu-id="158b1-127">Riferimenti deboli</span><span class="sxs-lookup"><span data-stu-id="158b1-127">Weak References</span></span>](../../../docs/standard/garbage-collection/weak-references.md)|<span data-ttu-id="158b1-128">Descrive i riferimenti che consentono al Garbage Collector di raccogliere un oggetto, pur senza impedire all'applicazione di accedervi.</span><span class="sxs-lookup"><span data-stu-id="158b1-128">Describes features that permit the garbage collector to collect an object while still allowing the application to access that object.</span></span>|  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a><span data-ttu-id="158b1-129">Riferimento</span><span class="sxs-lookup"><span data-stu-id="158b1-129">Reference</span></span>  
  <xref:System.GC?displayProperty=nameWithType>  
   
  <xref:System.GCCollectionMode?displayProperty=nameWithType>  
@@ -69,6 +68,5 @@ Il Garbage Collector di .NET gestisce l'allocazione e il rilascio di memoria per
   
  <xref:System.IDisposable?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>Vedere anche  
- [Pulizia delle risorse non gestite](../../../docs/standard/garbage-collection/unmanaged.md)
-
+## <a name="see-also"></a><span data-ttu-id="158b1-130">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="158b1-130">See Also</span></span>  
+ [<span data-ttu-id="158b1-131">Pulizia delle risorse non gestite</span><span class="sxs-lookup"><span data-stu-id="158b1-131">Cleaning Up Unmanaged Resources</span></span>](../../../docs/standard/garbage-collection/unmanaged.md)

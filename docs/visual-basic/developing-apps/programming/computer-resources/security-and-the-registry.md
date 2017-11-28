@@ -1,70 +1,51 @@
 ---
 title: Sicurezza e Registro di sistema (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - security [Visual Basic], registry
-- registry, security issues
+- registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0961d21417cbb5efcd9f38112c4e8ecb393faccd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ca25e9ce82baf9d9f59ecd887aaf2cbb301f4e3
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="security-and-the-registry-visual-basic"></a>Sicurezza e Registro di sistema (Visual Basic)
-In questo argomento vengono illustrate le implicazioni in termini di sicurezza della memorizzazione dei dati nel Registro di sistema.  
+# <a name="security-and-the-registry-visual-basic"></a><span data-ttu-id="9c854-102">Sicurezza e Registro di sistema (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9c854-102">Security and the Registry (Visual Basic)</span></span>
+<span data-ttu-id="9c854-103">In questo argomento vengono illustrate le implicazioni in termini di sicurezza della memorizzazione dei dati nel Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="9c854-103">This page discusses the security implications of storing data in the registry.</span></span>  
   
-## <a name="permissions"></a>Autorizzazioni  
- Archiviare come testo nel Registro di sistema informazioni riservate, quali le password, può presentare dei rischi, anche se la chiave del Registro di sistema è protetta da elenchi di controllo di accesso (ACL, Access Control List).  
+## <a name="permissions"></a><span data-ttu-id="9c854-104">Autorizzazioni</span><span class="sxs-lookup"><span data-stu-id="9c854-104">Permissions</span></span>  
+ <span data-ttu-id="9c854-105">Archiviare come testo nel Registro di sistema informazioni riservate, quali le password, può presentare dei rischi, anche se la chiave del Registro di sistema è protetta da elenchi di controllo di accesso (ACL, Access Control List).</span><span class="sxs-lookup"><span data-stu-id="9c854-105">It is not secure to store secrets, such as passwords, in the registry as plain text, even if the registry key is protected by ACLs (access control lists).</span></span>  
   
- L'uso del Registro di sistema può compromettere la sicurezza poiché consente l'accesso inappropriato alle risorse di sistema o alle informazioni protette. Per usare tali proprietà, è necessario avere autorizzazioni di lettura e scrittura derivanti dall'enumerazione <xref:System.Security.Permissions.RegistryPermissionAccess> che controlla l'accesso alle variabili del Registro di sistema. Qualsiasi codice eseguito con attendibilità completa, che in base ai criteri di sicurezza predefiniti corrisponde al codice installato nel disco rigido locale dell'utente, ha le autorizzazioni necessarie per accedere al Registro di sistema. Per altre informazioni, vedere la classe <xref:System.Security.Permissions.RegistryPermission>.  
+ <span data-ttu-id="9c854-106">L'uso del Registro di sistema può compromettere la sicurezza poiché consente l'accesso inappropriato alle risorse di sistema o alle informazioni protette.</span><span class="sxs-lookup"><span data-stu-id="9c854-106">Working with the registry may compromise security by allowing inappropriate access to system resources or protected information.</span></span> <span data-ttu-id="9c854-107">Per usare tali proprietà, è necessario avere autorizzazioni di lettura e scrittura derivanti dall'enumerazione <xref:System.Security.Permissions.RegistryPermissionAccess> che controlla l'accesso alle variabili del Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="9c854-107">To use these properties, you must have read and write permissions from the <xref:System.Security.Permissions.RegistryPermissionAccess> enumeration, which controls access to registry variables.</span></span> <span data-ttu-id="9c854-108">Qualsiasi codice eseguito con attendibilità completa, che in base ai criteri di sicurezza predefiniti corrisponde al codice installato nel disco rigido locale dell'utente, ha le autorizzazioni necessarie per accedere al Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="9c854-108">Any code running with full trust (under the default security policy, this is any code installed on the user's local hard disk) has the necessary permissions to access the registry.</span></span> <span data-ttu-id="9c854-109">Per altre informazioni, vedere la classe <xref:System.Security.Permissions.RegistryPermission>.</span><span class="sxs-lookup"><span data-stu-id="9c854-109">For more information, see <xref:System.Security.Permissions.RegistryPermission> class.</span></span>  
   
- Le variabili del Registro di sistema non devono essere memorizzate in posizioni di memoria accessibili da codice senza <xref:System.Security.Permissions.RegistryPermission>. Analogamente, concedere i privilegi minimi necessari a eseguire il lavoro.  
+ <span data-ttu-id="9c854-110">Le variabili del Registro di sistema non devono essere memorizzate in posizioni di memoria accessibili da codice senza <xref:System.Security.Permissions.RegistryPermission>.</span><span class="sxs-lookup"><span data-stu-id="9c854-110">Registry variables should not be stored in memory locations where code without <xref:System.Security.Permissions.RegistryPermission> can access them.</span></span> <span data-ttu-id="9c854-111">Analogamente, concedere i privilegi minimi necessari a eseguire il lavoro.</span><span class="sxs-lookup"><span data-stu-id="9c854-111">Similarly, when granting permissions, grant the minimum privileges necessary to get the job done.</span></span>  
   
- I valori di accesso alle autorizzazioni per il Registro di sistema sono definiti dall'enumerazione <xref:System.Security.Permissions.RegistryPermissionAccess>. Nella tabella riportata di seguito sono illustrati i dettagli dei membri.  
+ <span data-ttu-id="9c854-112">I valori di accesso alle autorizzazioni per il Registro di sistema sono definiti dall'enumerazione <xref:System.Security.Permissions.RegistryPermissionAccess>.</span><span class="sxs-lookup"><span data-stu-id="9c854-112">Registry permission access values are defined by the <xref:System.Security.Permissions.RegistryPermissionAccess> enumeration.</span></span> <span data-ttu-id="9c854-113">Nella tabella riportata di seguito sono illustrati i dettagli dei membri.</span><span class="sxs-lookup"><span data-stu-id="9c854-113">The following table details its members.</span></span>  
   
-|Valore|Accesso alle variabili del Registro di sistema|  
+|<span data-ttu-id="9c854-114">Valore</span><span class="sxs-lookup"><span data-stu-id="9c854-114">Value</span></span>|<span data-ttu-id="9c854-115">Accesso alle variabili del Registro di sistema</span><span class="sxs-lookup"><span data-stu-id="9c854-115">Access to Registry Variables</span></span>|  
 |-----------|----------------------------------|  
-|`AllAccess`|Creazione, lettura e scrittura|  
-|`Create`|Crea|  
-|`NoAccess`|Nessun accesso|  
-|`Read`|Lettura|  
-|`Write`|Write|  
+|`AllAccess`|<span data-ttu-id="9c854-116">Creazione, lettura e scrittura</span><span class="sxs-lookup"><span data-stu-id="9c854-116">Create, read, and write</span></span>|  
+|`Create`|<span data-ttu-id="9c854-117">Crea</span><span class="sxs-lookup"><span data-stu-id="9c854-117">Create</span></span>|  
+|`NoAccess`|<span data-ttu-id="9c854-118">Nessun accesso</span><span class="sxs-lookup"><span data-stu-id="9c854-118">No access</span></span>|  
+|`Read`|<span data-ttu-id="9c854-119">Lettura</span><span class="sxs-lookup"><span data-stu-id="9c854-119">Read</span></span>|  
+|`Write`|<span data-ttu-id="9c854-120">Write</span><span class="sxs-lookup"><span data-stu-id="9c854-120">Write</span></span>|  
   
-## <a name="checking-values-in-registry-keys"></a>Verifica dei valori nelle chiavi del Registro di sistema  
- Quando si crea un valore del Registro di sistema, è necessario decidere come procedere nel caso in cui tale valore esista già. È possibile che un altro processo, forse dannoso, abbia già creato il valore e possa accedervi. I dati inseriti nel valore del Registro di sistema sono disponibili per altri processi. Per evitare che ciò accada, usare il metodo `GetValue`. Restituisce `Nothing` se la chiave non esiste.  
+## <a name="checking-values-in-registry-keys"></a><span data-ttu-id="9c854-121">Verifica dei valori nelle chiavi del Registro di sistema</span><span class="sxs-lookup"><span data-stu-id="9c854-121">Checking Values in Registry Keys</span></span>  
+ <span data-ttu-id="9c854-122">Quando si crea un valore del Registro di sistema, è necessario decidere come procedere nel caso in cui tale valore esista già.</span><span class="sxs-lookup"><span data-stu-id="9c854-122">When you create a registry value, you need to decide what to do if that value already exists.</span></span> <span data-ttu-id="9c854-123">È possibile che un altro processo, forse dannoso, abbia già creato il valore e possa accedervi.</span><span class="sxs-lookup"><span data-stu-id="9c854-123">Another process, perhaps a malicious one, may have already created the value and have access to it.</span></span> <span data-ttu-id="9c854-124">I dati inseriti nel valore del Registro di sistema sono disponibili per altri processi.</span><span class="sxs-lookup"><span data-stu-id="9c854-124">When you put data in the registry value, the data is available to the other process.</span></span> <span data-ttu-id="9c854-125">Per evitare che ciò accada, usare il metodo `GetValue`.</span><span class="sxs-lookup"><span data-stu-id="9c854-125">To prevent this, use the `GetValue` method.</span></span> <span data-ttu-id="9c854-126">Restituisce `Nothing` se la chiave non esiste.</span><span class="sxs-lookup"><span data-stu-id="9c854-126">It returns `Nothing` if the key does not already exist.</span></span>  
   
 > [!IMPORTANT]
->  Durante la lettura del Registro di sistema da un'applicazione Web, l'identità dell'utente corrente dipende dall'autenticazione e dalla rappresentazione implementate nell'applicazione Web.  
+>  <span data-ttu-id="9c854-127">Durante la lettura del Registro di sistema da un'applicazione Web, l'identità dell'utente corrente dipende dall'autenticazione e dalla rappresentazione implementate nell'applicazione Web.</span><span class="sxs-lookup"><span data-stu-id="9c854-127">When reading the registry from a Web application, the identity of current user depends on the authentication and impersonation implemented in the Web application.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
- [Lettura e scrittura nel Registro di sistema](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-
+## <a name="see-also"></a><span data-ttu-id="9c854-128">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9c854-128">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ [<span data-ttu-id="9c854-129">Lettura e scrittura nel Registro di sistema</span><span class="sxs-lookup"><span data-stu-id="9c854-129">Reading from and Writing to the Registry</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

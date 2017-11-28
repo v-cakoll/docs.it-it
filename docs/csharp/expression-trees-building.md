@@ -10,54 +10,52 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="building-expression-trees"></a><span data-ttu-id="be1e3-104">Compilazione di alberi delle espressioni</span><span class="sxs-lookup"><span data-stu-id="be1e3-104">Building Expression Trees</span></span>
 
-# <a name="building-expression-trees"></a>Compilazione di alberi delle espressioni
+[<span data-ttu-id="be1e3-105">Precedente -- Interpretazione di espressioni</span><span class="sxs-lookup"><span data-stu-id="be1e3-105">Previous -- Interpreting Expressions</span></span>](expression-trees-interpreting.md)
 
-[Precedente -- Interpretazione di espressioni](expression-trees-interpreting.md)
+<span data-ttu-id="be1e3-106">Tutti gli alberi delle espressioni visti finora sono stati creati dal compilatore C#.</span><span class="sxs-lookup"><span data-stu-id="be1e3-106">All the expression trees you've seen so far have been created by the C# compiler.</span></span> <span data-ttu-id="be1e3-107">È stato sufficiente creare un'espressione lambda assegnata a una variabile tipizzata come un'espressione `Expression<Func<T>>` o di tipo simile.</span><span class="sxs-lookup"><span data-stu-id="be1e3-107">All you had to do was create a lambda expression that was assigned to a variable typed as an `Expression<Func<T>>` or some similar type.</span></span> <span data-ttu-id="be1e3-108">Questo tuttavia non è l'unico modo per creare un albero delle espressioni.</span><span class="sxs-lookup"><span data-stu-id="be1e3-108">That's not the only way to create an expression tree.</span></span> <span data-ttu-id="be1e3-109">In molti scenari potrebbe essere necessario compilare un'espressione in memoria in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="be1e3-109">For many scenarios you may find that you need to build an expression in memory at runtime.</span></span> 
 
-Tutti gli alberi delle espressioni visti finora sono stati creati dal compilatore C#. È stato sufficiente creare un'espressione lambda assegnata a una variabile tipizzata come un'espressione `Expression<Func<T>>` o di tipo simile. Questo tuttavia non è l'unico modo per creare un albero delle espressioni. In molti scenari potrebbe essere necessario compilare un'espressione in memoria in fase di esecuzione. 
+<span data-ttu-id="be1e3-110">La compilazione di alberi delle espressioni è complicata dal fatto che gli alberi delle espressioni non sono modificabili.</span><span class="sxs-lookup"><span data-stu-id="be1e3-110">Building Expression Trees is complicated by the fact that those expression trees are immutable.</span></span> <span data-ttu-id="be1e3-111">Ciò significa che l'albero deve essere compilato dalle foglie alla radice.</span><span class="sxs-lookup"><span data-stu-id="be1e3-111">Being immutable means that you must build the tree from the leaves up to the root.</span></span> <span data-ttu-id="be1e3-112">Ciò si riflette nelle API usate per compilare gli alberi delle espressioni: i metodi usati per compilare un nodo accettano tutti gli elementi figlio come argomenti.</span><span class="sxs-lookup"><span data-stu-id="be1e3-112">The APIs you'll use to build expression trees reflect this fact: The methods you'll use to build a node take all its children as arguments.</span></span> <span data-ttu-id="be1e3-113">I seguenti esempi illustrano le tecniche.</span><span class="sxs-lookup"><span data-stu-id="be1e3-113">Let's walk through a few examples to show you the techniques.</span></span>
 
-La compilazione di alberi delle espressioni è complicata dal fatto che gli alberi delle espressioni non sono modificabili. Ciò significa che l'albero deve essere compilato dalle foglie alla radice. Ciò si riflette nelle API usate per compilare gli alberi delle espressioni: i metodi usati per compilare un nodo accettano tutti gli elementi figlio come argomenti. I seguenti esempi illustrano le tecniche.
+## <a name="creating-nodes"></a><span data-ttu-id="be1e3-114">Creazione di nodi</span><span class="sxs-lookup"><span data-stu-id="be1e3-114">Creating Nodes</span></span>
 
-## <a name="creating-nodes"></a>Creazione di nodi
-
-Iniziamo con un esempio relativamente semplicemente, usando l'espressione di addizione già impiegata nelle sezioni seguenti:
+<span data-ttu-id="be1e3-115">Iniziamo con un esempio relativamente semplicemente,</span><span class="sxs-lookup"><span data-stu-id="be1e3-115">Let's start relatively simply again.</span></span> <span data-ttu-id="be1e3-116">usando l'espressione di addizione già impiegata nelle sezioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="be1e3-116">We'll use the addition expression I've been working with throughout these sections:</span></span>
 
 ```csharp
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-Per costruire l'albero delle espressioni, è necessario creare i nodi foglia.
-I nodi foglia sono costanti, e per costruirli è pertanto possibile usare il metodo `Expression.Constant`:
+<span data-ttu-id="be1e3-117">Per costruire l'albero delle espressioni, è necessario creare i nodi foglia.</span><span class="sxs-lookup"><span data-stu-id="be1e3-117">To construct that expression tree, you must construct the leaf nodes.</span></span>
+<span data-ttu-id="be1e3-118">I nodi foglia sono costanti, e per costruirli è pertanto possibile usare il metodo `Expression.Constant`:</span><span class="sxs-lookup"><span data-stu-id="be1e3-118">The leaf nodes are constants, so you can use the `Expression.Constant` method to create the nodes:</span></span>
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));
 var two = Expression.Constant(2, typeof(int));
 ```
 
-Successivamente, viene creata creato l'espressione di addizione:
+<span data-ttu-id="be1e3-119">Successivamente, viene creata creato l'espressione di addizione:</span><span class="sxs-lookup"><span data-stu-id="be1e3-119">Next, you'll build the addition expression:</span></span>
 
 ```csharp
 var addition = Expression.Add(one, two);
 ```
 
-Dopo aver creato l'espressione di addizione, è possibile creare l'espressione lambda:
+<span data-ttu-id="be1e3-120">Dopo aver creato l'espressione di addizione, è possibile creare l'espressione lambda:</span><span class="sxs-lookup"><span data-stu-id="be1e3-120">Once you've got the addition expression, you can create the lambda expression:</span></span>
 
 ```csharp
 var lamdba = Expression.Lambda(addition);
 ```
 
-Si tratta di un'espressione LambdaExpression molto semplice, perché non contiene argomenti.
-Più avanti in questa sezione verrà illustrato come eseguire il mapping degli argomenti ai parametri e compilare espressioni più complesse.
+<span data-ttu-id="be1e3-121">Si tratta di un'espressione LambdaExpression molto semplice, perché non contiene argomenti.</span><span class="sxs-lookup"><span data-stu-id="be1e3-121">This is a very simple LambdaExpression, because it contains no arguments.</span></span>
+<span data-ttu-id="be1e3-122">Più avanti in questa sezione verrà illustrato come eseguire il mapping degli argomenti ai parametri e compilare espressioni più complesse.</span><span class="sxs-lookup"><span data-stu-id="be1e3-122">Later in this section, you'll see how to map arguments to parameters and build more complicated expressions.</span></span>
 
-Per le espressioni semplici come questa, è possibile combinare tutte le chiamate in un'unica istruzione:
+<span data-ttu-id="be1e3-123">Per le espressioni semplici come questa, è possibile combinare tutte le chiamate in un'unica istruzione:</span><span class="sxs-lookup"><span data-stu-id="be1e3-123">For expressions that are as simple as this one, you may combine all the calls into a single statement:</span></span>
 
 ```csharp
 var lambda = Expression.Lambda(
@@ -68,25 +66,25 @@ var lambda = Expression.Lambda(
 );
 ```
 
-## <a name="building-a-tree"></a>Compilazione di una struttura ad albero
+## <a name="building-a-tree"></a><span data-ttu-id="be1e3-124">Compilazione di una struttura ad albero</span><span class="sxs-lookup"><span data-stu-id="be1e3-124">Building a Tree</span></span>
 
-Vengono illustrate le nozioni di base per la compilazione di un albero delle espressioni in memoria. Strutture ad albero più complesse implicano in genere più tipi di nodo e più nodi dell'albero. L'esempio seguente mostra due tipi di nodo che vengono in genere compilati quando si creano alberi delle espressioni: i nodi argomento e i nodi di chiamata al metodo.
+<span data-ttu-id="be1e3-125">Vengono illustrate le nozioni di base per la compilazione di un albero delle espressioni in memoria.</span><span class="sxs-lookup"><span data-stu-id="be1e3-125">That's the basics of building an expression tree in memory.</span></span> <span data-ttu-id="be1e3-126">Strutture ad albero più complesse implicano in genere più tipi di nodo e più nodi dell'albero.</span><span class="sxs-lookup"><span data-stu-id="be1e3-126">More complex trees generally mean more node types, and more nodes in the tree.</span></span> <span data-ttu-id="be1e3-127">L'esempio seguente mostra due tipi di nodo che vengono in genere compilati quando si creano alberi delle espressioni: i nodi argomento e i nodi di chiamata al metodo.</span><span class="sxs-lookup"><span data-stu-id="be1e3-127">Let's run through one more example and show two more node types that you will typically build when you create expression trees: the argument nodes, and method call nodes.</span></span>
 
-Di seguito viene compilato un albero delle espressioni per creare questa espressione:
+<span data-ttu-id="be1e3-128">Di seguito viene compilato un albero delle espressioni per creare questa espressione:</span><span class="sxs-lookup"><span data-stu-id="be1e3-128">Let's build an expression tree to create this expression:</span></span>
 
 ```csharp
 Expression<Func<double, double, double>> distanceCalc =
     (x, y) => Math.Sqrt(x * x + y * y);
 ```
  
-Si inizia creando espressioni per i parametri per `x` e `y`:
+<span data-ttu-id="be1e3-129">Si inizia creando espressioni per i parametri per `x` e `y`:</span><span class="sxs-lookup"><span data-stu-id="be1e3-129">You'll start by creating parameter expressions for `x` and `y`:</span></span>
 
 ```csharp
 var xParameter = Expression.Parameter(typeof(double), "x");
 var yParameter = Expression.Parameter(typeof(double), "y");
 ```
 
-Per creare le espressioni di addizione e moltiplicazione seguire il modello illustrato in precedenza:
+<span data-ttu-id="be1e3-130">Per creare le espressioni di addizione e moltiplicazione seguire il modello illustrato in precedenza:</span><span class="sxs-lookup"><span data-stu-id="be1e3-130">Creating the multiplication and addition expressions follows the pattern you've already seen:</span></span>
 
 ```csharp
 var xSquared = Expression.Multiply(xParameter, xParameter);
@@ -94,14 +92,14 @@ var ySquared = Expression.Multiply(yParameter, yParameter);
 var sum = Expression.Add(xSquared, ySquared);
 ```
 
-Quindi è necessario creare un'espressione di chiamata al metodo per la chiamata a `Math.Sqrt`.
+<span data-ttu-id="be1e3-131">Quindi è necessario creare un'espressione di chiamata al metodo per la chiamata a `Math.Sqrt`.</span><span class="sxs-lookup"><span data-stu-id="be1e3-131">Next, you need to create a method call expression for the call to `Math.Sqrt`.</span></span>
 
 ```csharp
 var sqrtMethod = typeof(Math).GetMethod("Sqrt", new[] { typeof(double) });
 var distance = Expression.Call(sqrtMethod, sum);
 ```
 
-Infine, inserire la chiamata al metodo in un'espressione lambda e verificare che gli argomenti nell'espressione lambda siano stati definiti:
+<span data-ttu-id="be1e3-132">Infine, inserire la chiamata al metodo in un'espressione lambda e verificare che gli argomenti nell'espressione lambda siano stati definiti:</span><span class="sxs-lookup"><span data-stu-id="be1e3-132">And  then finally, you put the method call into a lambda expression, and make sure to define the arguments to the lambda expression:</span></span>
 
 ```csharp
 var distanceLambda = Expression.Lambda(
@@ -110,17 +108,17 @@ var distanceLambda = Expression.Lambda(
     yParameter);
 ```
 
-In questo esempio più complesso, vengono illustrate altre due tecniche spesso necessarie per creare alberi delle espressioni.
+<span data-ttu-id="be1e3-133">In questo esempio più complesso, vengono illustrate altre due tecniche spesso necessarie per creare alberi delle espressioni.</span><span class="sxs-lookup"><span data-stu-id="be1e3-133">In this more complicated example, you see a couple more techniques that you will often need to create expression trees.</span></span>
 
-Innanzitutto è necessario creare gli oggetti che rappresentano i parametri o le variabili locali prima di usarli. Dopo aver creato questi oggetti, è possibile inserirli nell'albero delle espressioni secondo necessità.
+<span data-ttu-id="be1e3-134">Innanzitutto è necessario creare gli oggetti che rappresentano i parametri o le variabili locali prima di usarli.</span><span class="sxs-lookup"><span data-stu-id="be1e3-134">First, you need to create the objects that represent parameters or local variables before you use them.</span></span> <span data-ttu-id="be1e3-135">Dopo aver creato questi oggetti, è possibile inserirli nell'albero delle espressioni secondo necessità.</span><span class="sxs-lookup"><span data-stu-id="be1e3-135">Once you've created those objects, you can use them in your expression tree wherever you need.</span></span>
 
-È quindi necessario usare un sottoinsieme dell'API Reflection per creare un oggetto `MethodInfo`, così da poter creare un albero delle espressioni per accedere a tale metodo. È necessario limitarsi al sottoinsieme delle API Reflection disponibili nella piattaforma .NET Core. Anche queste tecniche possono essere estese ad altri alberi delle espressioni.
+<span data-ttu-id="be1e3-136">È quindi necessario usare un sottoinsieme dell'API Reflection per creare un oggetto `MethodInfo`, così da poter creare un albero delle espressioni per accedere a tale metodo.</span><span class="sxs-lookup"><span data-stu-id="be1e3-136">Second, you need to use a subset of the Reflection APIs to create a `MethodInfo` object so that you can create an expression tree to access that method.</span></span> <span data-ttu-id="be1e3-137">È necessario limitarsi al sottoinsieme delle API Reflection disponibili nella piattaforma .NET Core.</span><span class="sxs-lookup"><span data-stu-id="be1e3-137">You must limit yourself to the subset of the Reflection APIs that are available on the .NET Core platform.</span></span> <span data-ttu-id="be1e3-138">Anche queste tecniche possono essere estese ad altri alberi delle espressioni.</span><span class="sxs-lookup"><span data-stu-id="be1e3-138">Again, these techniques will extend to other expression trees.</span></span>
 
-## <a name="building-code-in-depth"></a>Compilazione di codice complesso
+## <a name="building-code-in-depth"></a><span data-ttu-id="be1e3-139">Compilazione di codice complesso</span><span class="sxs-lookup"><span data-stu-id="be1e3-139">Building Code In Depth</span></span>
 
-Non ci sono limiti alle possibilità di creare usando queste API. Tuttavia, più complicato è l'albero delle espressioni che si vuole compilare, più difficile sarà da gestire e leggere il codice. 
+<span data-ttu-id="be1e3-140">Non ci sono limiti alle possibilità di creare usando queste API.</span><span class="sxs-lookup"><span data-stu-id="be1e3-140">You aren't limited in what you can build using these APIs.</span></span> <span data-ttu-id="be1e3-141">Tuttavia, più complicato è l'albero delle espressioni che si vuole compilare, più difficile sarà da gestire e leggere il codice.</span><span class="sxs-lookup"><span data-stu-id="be1e3-141">However, the more complicated expression tree that you want to build, the more difficult the code is to manage and to read.</span></span> 
 
-Viene ora creato un albero delle espressioni che è l'equivalente di questo codice:
+<span data-ttu-id="be1e3-142">Viene ora creato un albero delle espressioni che è l'equivalente di questo codice:</span><span class="sxs-lookup"><span data-stu-id="be1e3-142">Let's build an expression tree that is the equivalent of this code:</span></span>
 
 ```csharp
 Func<int, int> factorialFunc = (n) =>
@@ -135,7 +133,7 @@ Func<int, int> factorialFunc = (n) =>
 };
 ```
 
-Si noti che non è stato compilato l'albero delle espressioni, ma il delegato. Usando la classe `Expression` non è possibile compilare espressioni lambda dell'istruzione. Ecco il codice necessario per compilare la stessa funzionalità. È complicato dal fatto che non esiste un'API per compilare un ciclo `while`, ed è invece necessario creare un ciclo contenente un test condizionale e una destinazione dell'etichetta per uscire dal ciclo. 
+<span data-ttu-id="be1e3-143">Si noti che non è stato compilato l'albero delle espressioni, ma il delegato.</span><span class="sxs-lookup"><span data-stu-id="be1e3-143">Notice above that I did not build the expression tree, but simply the delegate.</span></span> <span data-ttu-id="be1e3-144">Usando la classe `Expression` non è possibile compilare espressioni lambda dell'istruzione.</span><span class="sxs-lookup"><span data-stu-id="be1e3-144">Using the `Expression` class, you can't build statement lambdas.</span></span> <span data-ttu-id="be1e3-145">Ecco il codice necessario per compilare la stessa funzionalità.</span><span class="sxs-lookup"><span data-stu-id="be1e3-145">Here's the code that is required to build the same functionality.</span></span> <span data-ttu-id="be1e3-146">È complicato dal fatto che non esiste un'API per compilare un ciclo `while`, ed è invece necessario creare un ciclo contenente un test condizionale e una destinazione dell'etichetta per uscire dal ciclo.</span><span class="sxs-lookup"><span data-stu-id="be1e3-146">It's complicated by the fact that there isn't an API to build a `while` loop, instead you need to build a loop that contains a conditional test, and a label target to break out of the loop.</span></span> 
 
 ```csharp
 var nArgument = Expression.Parameter(typeof(int), "n");
@@ -169,15 +167,14 @@ BlockExpression body = Expression.Block(
 );
 ```
 
-Il codice per creare l'albero delle espressioni per la funzione fattoriale è più lungo, più complesso, e include numerose etichette e istruzioni di interruzione che è preferibile evitare nelle quotidiane attività di codifica. 
+<span data-ttu-id="be1e3-147">Il codice per creare l'albero delle espressioni per la funzione fattoriale è più lungo, più complesso, e include numerose etichette e istruzioni di interruzione che è preferibile evitare nelle quotidiane attività di codifica.</span><span class="sxs-lookup"><span data-stu-id="be1e3-147">The code to build the expression tree for the factorial function is quite a bit longer, more complicated, and it's riddled with labels and break statements and other elements we'd like to avoid in our everyday coding tasks.</span></span> 
 
-Per questa sezione è stato anche aggiornato il codice visitatore, per visitare ogni nodo in questo albero delle espressioni e scrivere le informazioni relative ai nodi creati in questo esempio. È possibile [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) dal repository GitHub dotnet/docs. Provare a compilare ed eseguire da soli gli esempi. Per istruzioni sul download, vedere [Esempi ed esercitazioni](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+<span data-ttu-id="be1e3-148">Per questa sezione è stato anche aggiornato il codice visitatore, per visitare ogni nodo in questo albero delle espressioni e scrivere le informazioni relative ai nodi creati in questo esempio.</span><span class="sxs-lookup"><span data-stu-id="be1e3-148">For this section, I've also updated the visitor code to visit every node in this expression tree and write out information about the nodes that are created in this sample.</span></span> <span data-ttu-id="be1e3-149">È possibile [visualizzare o scaricare il codice di esempio](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) dal repository GitHub dotnet/docs.</span><span class="sxs-lookup"><span data-stu-id="be1e3-149">You can [view or download the sample code](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) at the dotnet/docs GitHub repository.</span></span> <span data-ttu-id="be1e3-150">Provare a compilare ed eseguire da soli gli esempi.</span><span class="sxs-lookup"><span data-stu-id="be1e3-150">Experiment for yourself by building and running the samples.</span></span> <span data-ttu-id="be1e3-151">Per istruzioni sul download, vedere [Esempi ed esercitazioni](../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="be1e3-151">For download instructions, see [Samples and Tutorials](../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-## <a name="examining-the-apis"></a>Analisi delle API
+## <a name="examining-the-apis"></a><span data-ttu-id="be1e3-152">Analisi delle API</span><span class="sxs-lookup"><span data-stu-id="be1e3-152">Examining the APIs</span></span>
 
-Le API dell'albero delle espressioni sono tra le più difficili da esplorare .NET Core. La loro finalità è piuttosto complessa: consentono di scrivere codice che genera codice in fase di esecuzione. Sono intrinsecamente complicate perché devono offrire un equilibrio tra la capacità di supportare tutte le strutture di controllo disponibili nel linguaggio C# e mantenere l'area di superficie delle API di dimensioni ridotte. Questo equilibrio fa sì che molte strutture di controllo siano rappresentate non dai propri costrutti in C#, ma da costrutti che rappresentano la logica sottostante generata dal compilatore a partire da quei costrutti di livello superiore. 
+<span data-ttu-id="be1e3-153">Le API dell'albero delle espressioni sono tra le più difficili da esplorare .NET Core.</span><span class="sxs-lookup"><span data-stu-id="be1e3-153">The expression tree APIs are some of the more difficult to navigate in .NET Core, but that's fine.</span></span> <span data-ttu-id="be1e3-154">La loro finalità è piuttosto complessa: consentono di scrivere codice che genera codice in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="be1e3-154">Their purpose is a rather complex undertaking: writing code that generates code at runtime.</span></span> <span data-ttu-id="be1e3-155">Sono intrinsecamente complicate perché devono offrire un equilibrio tra la capacità di supportare tutte le strutture di controllo disponibili nel linguaggio C# e mantenere l'area di superficie delle API di dimensioni ridotte.</span><span class="sxs-lookup"><span data-stu-id="be1e3-155">They are necessarily complicated to provide a balance between supporting all the control structures available in the C# language and keeping the surface area of the APIs as small as reasonable.</span></span> <span data-ttu-id="be1e3-156">Questo equilibrio fa sì che molte strutture di controllo siano rappresentate non dai propri costrutti in C#, ma da costrutti che rappresentano la logica sottostante generata dal compilatore a partire da quei costrutti di livello superiore.</span><span class="sxs-lookup"><span data-stu-id="be1e3-156">This balance means that many control structures are represented not by their C# constructs, but by constructs that represent the underlying logic that the compiler generates from these higher level constructs.</span></span> 
 
-Inoltre, attualmente sono disponibili espressioni in C# che non possono essere compilate direttamente usando metodi della classe `Expression`. In generale, questi saranno gli operati e le espressioni più recenti aggiunte in C# 5 e C# 6. Ad esempio, non è possibile compilare espressioni `async` e non è possibile creare direttamente il nuovo operatore `?.`.
+<span data-ttu-id="be1e3-157">Inoltre, attualmente sono disponibili espressioni in C# che non possono essere compilate direttamente usando metodi della classe `Expression`.</span><span class="sxs-lookup"><span data-stu-id="be1e3-157">Also, at this time, there are C# expressions that cannot be built directly using `Expression` class methods.</span></span> <span data-ttu-id="be1e3-158">In generale, questi saranno gli operati e le espressioni più recenti aggiunte in C# 5 e C# 6.</span><span class="sxs-lookup"><span data-stu-id="be1e3-158">In general, these will be the newest operators and expressions added in C# 5 and C# 6.</span></span> <span data-ttu-id="be1e3-159">Ad esempio, non è possibile compilare espressioni `async` e non è possibile creare direttamente il nuovo operatore `?.`.</span><span class="sxs-lookup"><span data-stu-id="be1e3-159">(For example, `async` expressions cannot be built, and the new `?.` operator cannot be directly created.)</span></span>
 
-[Successivo -- Conversione di espressioni](expression-trees-translating.md)
-
+[<span data-ttu-id="be1e3-160">Successivo -- Conversione di espressioni</span><span class="sxs-lookup"><span data-stu-id="be1e3-160">Next -- Translating Expressions</span></span>](expression-trees-translating.md)

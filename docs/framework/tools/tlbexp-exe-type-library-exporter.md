@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exporting type library [.NET Framework]
 - exporter tool [.NET Framework]
@@ -21,80 +15,79 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 6bee059891cb2e0d572d97823ec6b1f8b29a4238
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aca6756baf6ee4673e73876d9c95f007fbe01b48
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (utilità di esportazione della libreria dei tipi)
-L'utilità di esportazione della libreria dei tipi genera una libreria di tipi che descrive i tipi definiti in un assembly di Common Language Runtime.  
+# <a name="tlbexpexe-type-library-exporter"></a><span data-ttu-id="e1707-102">Tlbexp.exe (utilità di esportazione della libreria dei tipi)</span><span class="sxs-lookup"><span data-stu-id="e1707-102">Tlbexp.exe (Type Library Exporter)</span></span>
+<span data-ttu-id="e1707-103">L'utilità di esportazione della libreria dei tipi genera una libreria di tipi che descrive i tipi definiti in un assembly di Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="e1707-103">The Type Library Exporter generates a type library that describes the types defined in a common language runtime assembly.</span></span>  
   
- Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ <span data-ttu-id="e1707-104">Viene installato automaticamente con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e1707-104">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="e1707-105">Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7.</span><span class="sxs-lookup"><span data-stu-id="e1707-105">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="e1707-106">Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="e1707-106">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>  
   
- Al prompt dei comandi digitare quanto segue:  
+ <span data-ttu-id="e1707-107">Al prompt dei comandi digitare quanto segue:</span><span class="sxs-lookup"><span data-stu-id="e1707-107">At the command prompt, type the following:</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="e1707-108">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e1707-108">Syntax</span></span>  
   
 ```  
 tlbexp assemblyName [options]  
 ```  
   
-#### <a name="parameters"></a>Parametri  
+#### <a name="parameters"></a><span data-ttu-id="e1707-109">Parametri</span><span class="sxs-lookup"><span data-stu-id="e1707-109">Parameters</span></span>  
   
-|Argomento|Descrizione|  
+|<span data-ttu-id="e1707-110">Argomento</span><span class="sxs-lookup"><span data-stu-id="e1707-110">Argument</span></span>|<span data-ttu-id="e1707-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e1707-111">Description</span></span>|  
 |--------------|-----------------|  
-|*assemblyName*|Assembly per il quale esportare una libreria dei tipi.|  
+|<span data-ttu-id="e1707-112">*assemblyName*</span><span class="sxs-lookup"><span data-stu-id="e1707-112">*assemblyName*</span></span>|<span data-ttu-id="e1707-113">Assembly per il quale esportare una libreria dei tipi.</span><span class="sxs-lookup"><span data-stu-id="e1707-113">The assembly for which to export a type library.</span></span>|  
   
-|Opzione|Descrizione|  
+|<span data-ttu-id="e1707-114">Opzione</span><span class="sxs-lookup"><span data-stu-id="e1707-114">Option</span></span>|<span data-ttu-id="e1707-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e1707-115">Description</span></span>|  
 |------------|-----------------|  
-|**/asmpath:** *directory*|Specifica il percorso in cui eseguire la ricerca degli assembly. Se si utilizza questa opzione, è necessario specificare in modo esplicito i percorsi in cui eseguire la ricerca degli assembly a cui si fa riferimento, inclusa la directory corrente.<br /><br /> Quando si usa l'opzione **asmpath**, l'utilità di esportazione della libreria dei tipi non cerca un assembly nella Global Assembly Cache (GAC).|  
-|**/help**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
-|**/names:** *filename*|Specifica la combinazione di maiuscole/minuscole per i nomi di una libreria dei tipi. L'argomento *filename* è un file di testo. Ogni riga del file specifica la combinazione di maiuscole/minuscole di un nome presente nella libreria dei tipi.|  
-|**/nologo**|Evita la visualizzazione del messaggio di avvio Microsoft.|  
-|**/oldnames**|Forza Tlbexp.exe a esportare i nomi di tipi decorati se si verifica un conflitto tra nomi di tipi. Questo era il comportamento predefinito nelle versioni di .NET Framework precedenti alla 2.0.|  
-|**/out:** *file*|Specifica il nome del file della libreria dei tipi da generare. Se si omette questa opzione, verrà generata una libreria dei tipi che avrà lo stesso nome dell'assembly (il nome effettivo dell'assembly, che non deve necessariamente coincidere con quello del file contenente l'assembly) e l'estensione .tlb.|  
-|**/silence:** `warningnumber`|Non visualizza l'avviso specificato. Questa opzione non può essere usata con **/silent**.|  
-|**/silent**|Evita la visualizzazione dei messaggi di operazione riuscita. Questa opzione non può essere usata con **/silence**.|  
-|**/tlbreference:** *typelibraryname*|Forza Tlbexp.exe a risolvere in modo esplicito i riferimenti alla libreria dei tipi senza consultare il Registro di sistema. Se ad esempio l'assembly B fa riferimento all'assembly A, è possibile utilizzare questa opzione per fornire un riferimento esplicito alla libreria dei tipi anziché basarsi sulla libreria dei tipi specificata nel Registro di sistema. Viene eseguito un controllo della versione per assicurare che la versione della libreria dei tipi corrisponda alla versione dell'assembly. In caso contrario, viene generato un errore.<br /><br /> L'opzione **tlbreference** consulta comunque il Registro di sistema se l'attributo <xref:System.Runtime.InteropServices.ComImportAttribute> viene applicato a un'interfaccia che viene successivamente implementata da un altro tipo.|  
-|**/tlbrefpath:** *path*|Percorso completo di una libreria dei tipi a cui è stato fatto riferimento.|  
-|**/win32**|Nella compilazione a 64 bit questa opzione specifica che Tlbexp.exe genera una libreria dei tipi a 32 bit.|  
-|**/win64**|Nella compilazione a 32 bit questa opzione specifica che Tlbexp.exe genera una libreria dei tipi a 64 bit.|  
-|**/verbose**|Specifica la modalità dettagliata. Visualizza l'elenco di tutti gli assembly a cui si fa riferimento per i quali è necessario generare una libreria dei tipi.|  
-|**/?**|Visualizza la sintassi e le opzioni di comando dello strumento.|  
+|<span data-ttu-id="e1707-116">**/asmpath:** *directory*</span><span class="sxs-lookup"><span data-stu-id="e1707-116">**/asmpath:** *directory*</span></span>|<span data-ttu-id="e1707-117">Specifica il percorso in cui eseguire la ricerca degli assembly.</span><span class="sxs-lookup"><span data-stu-id="e1707-117">Specifies the location to search for assemblies.</span></span> <span data-ttu-id="e1707-118">Se si utilizza questa opzione, è necessario specificare in modo esplicito i percorsi in cui eseguire la ricerca degli assembly a cui si fa riferimento, inclusa la directory corrente.</span><span class="sxs-lookup"><span data-stu-id="e1707-118">If you use this option, you must explicitly specify the locations to search for referenced assemblies, including the current directory.</span></span><br /><br /> <span data-ttu-id="e1707-119">Quando si usa l'opzione **asmpath**, l'utilità di esportazione della libreria dei tipi non cerca un assembly nella Global Assembly Cache (GAC).</span><span class="sxs-lookup"><span data-stu-id="e1707-119">When you use the **asmpath** option, the Type Library Exporter will not look for an assembly in the global assembly cache (GAC).</span></span>|  
+|<span data-ttu-id="e1707-120">**/help**</span><span class="sxs-lookup"><span data-stu-id="e1707-120">**/help**</span></span>|<span data-ttu-id="e1707-121">Visualizza la sintassi e le opzioni di comando dello strumento.</span><span class="sxs-lookup"><span data-stu-id="e1707-121">Displays command syntax and options for the tool.</span></span>|  
+|<span data-ttu-id="e1707-122">**/names:** *filename*</span><span class="sxs-lookup"><span data-stu-id="e1707-122">**/names:** *filename*</span></span>|<span data-ttu-id="e1707-123">Specifica la combinazione di maiuscole/minuscole per i nomi di una libreria dei tipi.</span><span class="sxs-lookup"><span data-stu-id="e1707-123">Specifies the capitalization of names in a type library.</span></span> <span data-ttu-id="e1707-124">L'argomento *filename* è un file di testo.</span><span class="sxs-lookup"><span data-stu-id="e1707-124">The *filename* argument is a text file.</span></span> <span data-ttu-id="e1707-125">Ogni riga del file specifica la combinazione di maiuscole/minuscole di un nome presente nella libreria dei tipi.</span><span class="sxs-lookup"><span data-stu-id="e1707-125">Each line in the file specifies the capitalization of one name in the type library.</span></span>|  
+|<span data-ttu-id="e1707-126">**/nologo**</span><span class="sxs-lookup"><span data-stu-id="e1707-126">**/nologo**</span></span>|<span data-ttu-id="e1707-127">Evita la visualizzazione del messaggio di avvio Microsoft.</span><span class="sxs-lookup"><span data-stu-id="e1707-127">Suppresses the Microsoft startup banner display.</span></span>|  
+|<span data-ttu-id="e1707-128">**/oldnames**</span><span class="sxs-lookup"><span data-stu-id="e1707-128">**/oldnames**</span></span>|<span data-ttu-id="e1707-129">Forza Tlbexp.exe a esportare i nomi di tipi decorati se si verifica un conflitto tra nomi di tipi.</span><span class="sxs-lookup"><span data-stu-id="e1707-129">Forces Tlbexp.exe to export decorated type names if there is a type name conflict.</span></span> <span data-ttu-id="e1707-130">Questo era il comportamento predefinito nelle versioni di .NET Framework precedenti alla 2.0.</span><span class="sxs-lookup"><span data-stu-id="e1707-130">Note that this was the default behavior in versions prior to the .NET Framework version 2.0.</span></span>|  
+|<span data-ttu-id="e1707-131">**/out:** *file*</span><span class="sxs-lookup"><span data-stu-id="e1707-131">**/out:** *file*</span></span>|<span data-ttu-id="e1707-132">Specifica il nome del file della libreria dei tipi da generare.</span><span class="sxs-lookup"><span data-stu-id="e1707-132">Specifies the name of the type library file to generate.</span></span> <span data-ttu-id="e1707-133">Se si omette questa opzione, verrà generata una libreria dei tipi che avrà lo stesso nome dell'assembly (il nome effettivo dell'assembly, che non deve necessariamente coincidere con quello del file contenente l'assembly) e l'estensione .tlb.</span><span class="sxs-lookup"><span data-stu-id="e1707-133">If you omit this option, Tlbexp.exe generates a type library with the same name as the assembly (the actual assembly name, which might not necessarily be the same as the file containing the assembly) and a .tlb extension.</span></span>|  
+|<span data-ttu-id="e1707-134">**/silence:** `warningnumber`</span><span class="sxs-lookup"><span data-stu-id="e1707-134">**/silence:** `warningnumber`</span></span>|<span data-ttu-id="e1707-135">Non visualizza l'avviso specificato.</span><span class="sxs-lookup"><span data-stu-id="e1707-135">Suppresses the display of the specified warning.</span></span> <span data-ttu-id="e1707-136">Questa opzione non può essere usata con **/silent**.</span><span class="sxs-lookup"><span data-stu-id="e1707-136">This option cannot be used with **/silent**.</span></span>|  
+|<span data-ttu-id="e1707-137">**/silent**</span><span class="sxs-lookup"><span data-stu-id="e1707-137">**/silent**</span></span>|<span data-ttu-id="e1707-138">Evita la visualizzazione dei messaggi di operazione riuscita.</span><span class="sxs-lookup"><span data-stu-id="e1707-138">Suppresses the display of success messages.</span></span> <span data-ttu-id="e1707-139">Questa opzione non può essere usata con **/silence**.</span><span class="sxs-lookup"><span data-stu-id="e1707-139">This option cannot be used with **/silence**.</span></span>|  
+|<span data-ttu-id="e1707-140">**/tlbreference:** *typelibraryname*</span><span class="sxs-lookup"><span data-stu-id="e1707-140">**/tlbreference:** *typelibraryname*</span></span>|<span data-ttu-id="e1707-141">Forza Tlbexp.exe a risolvere in modo esplicito i riferimenti alla libreria dei tipi senza consultare il Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="e1707-141">Forces Tlbexp.exe to explicitly resolve type library references without consulting the registry.</span></span> <span data-ttu-id="e1707-142">Se ad esempio l'assembly B fa riferimento all'assembly A, è possibile utilizzare questa opzione per fornire un riferimento esplicito alla libreria dei tipi anziché basarsi sulla libreria dei tipi specificata nel Registro di sistema.</span><span class="sxs-lookup"><span data-stu-id="e1707-142">For example, if assembly B references assembly A, you can use this option to provide an explicit type library reference, rather than relying on the type library specified in the registry.</span></span> <span data-ttu-id="e1707-143">Viene eseguito un controllo della versione per assicurare che la versione della libreria dei tipi corrisponda alla versione dell'assembly. In caso contrario, viene generato un errore.</span><span class="sxs-lookup"><span data-stu-id="e1707-143">Tlbexp.exe performs a version check to ensure that the type library version matches the assembly version; otherwise, it generates an error.</span></span><br /><br /> <span data-ttu-id="e1707-144">L'opzione **tlbreference** consulta comunque il Registro di sistema se l'attributo <xref:System.Runtime.InteropServices.ComImportAttribute> viene applicato a un'interfaccia che viene successivamente implementata da un altro tipo.</span><span class="sxs-lookup"><span data-stu-id="e1707-144">Note that the **tlbreference** option still consults the registry in cases where the <xref:System.Runtime.InteropServices.ComImportAttribute> attribute is applied to an interface that is then implemented by another type.</span></span>|  
+|<span data-ttu-id="e1707-145">**/tlbrefpath:** *path*</span><span class="sxs-lookup"><span data-stu-id="e1707-145">**/tlbrefpath:** *path*</span></span>|<span data-ttu-id="e1707-146">Percorso completo di una libreria dei tipi a cui è stato fatto riferimento.</span><span class="sxs-lookup"><span data-stu-id="e1707-146">Fully qualified path to a referenced type library.</span></span>|  
+|<span data-ttu-id="e1707-147">**/win32**</span><span class="sxs-lookup"><span data-stu-id="e1707-147">**/win32**</span></span>|<span data-ttu-id="e1707-148">Nella compilazione a 64 bit questa opzione specifica che Tlbexp.exe genera una libreria dei tipi a 32 bit.</span><span class="sxs-lookup"><span data-stu-id="e1707-148">When compiling on a 64-bit computer, this option specifies that Tlbexp.exe generates a 32-bit type library.</span></span>|  
+|<span data-ttu-id="e1707-149">**/win64**</span><span class="sxs-lookup"><span data-stu-id="e1707-149">**/win64**</span></span>|<span data-ttu-id="e1707-150">Nella compilazione a 32 bit questa opzione specifica che Tlbexp.exe genera una libreria dei tipi a 64 bit.</span><span class="sxs-lookup"><span data-stu-id="e1707-150">When compiling on a 32-bit computer, this option specifies that Tlbexp.exe generates a 64-bit type library.</span></span>|  
+|<span data-ttu-id="e1707-151">**/verbose**</span><span class="sxs-lookup"><span data-stu-id="e1707-151">**/verbose**</span></span>|<span data-ttu-id="e1707-152">Specifica la modalità dettagliata. Visualizza l'elenco di tutti gli assembly a cui si fa riferimento per i quali è necessario generare una libreria dei tipi.</span><span class="sxs-lookup"><span data-stu-id="e1707-152">Specifies verbose mode; displays a list of any referenced assemblies for which a type library needs to be generated.</span></span>|  
+|<span data-ttu-id="e1707-153">**/?**</span><span class="sxs-lookup"><span data-stu-id="e1707-153">**/?**</span></span>|<span data-ttu-id="e1707-154">Visualizza la sintassi e le opzioni di comando dello strumento.</span><span class="sxs-lookup"><span data-stu-id="e1707-154">Displays command syntax and options for the tool.</span></span>|  
   
 > [!NOTE]
->  Le opzioni della riga di comando di Tlbexp.exe non sono soggette alla distinzione tra maiuscole e minuscole e per specificarle non è necessario seguire un ordine particolare. Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione. Ad esempio, **/n** equivale a **/nologo** e **/o:** *outfile.tlb* equivale a **/out:** *outfile.tlb*.  
+>  <span data-ttu-id="e1707-155">Le opzioni della riga di comando di Tlbexp.exe non sono soggette alla distinzione tra maiuscole e minuscole e per specificarle non è necessario seguire un ordine particolare.</span><span class="sxs-lookup"><span data-stu-id="e1707-155">The command-line options for Tlbexp.exe are case-insensitive and can be supplied in any order.</span></span> <span data-ttu-id="e1707-156">Per identificarle in modo univoco, è sufficiente digitare solo una parte dell'opzione.</span><span class="sxs-lookup"><span data-stu-id="e1707-156">You only need to specify enough of the option to uniquely identify it.</span></span> <span data-ttu-id="e1707-157">Ad esempio, **/n** equivale a **/nologo** e **/o:** *outfile.tlb* equivale a **/out:** *outfile.tlb*.</span><span class="sxs-lookup"><span data-stu-id="e1707-157">For example, **/n** is equivalent to **/nologo**, and **/o:** *outfile.tlb* is equivalent to **/out:** *outfile.tlb*.</span></span>  
   
-## <a name="remarks"></a>Note  
- Tlbexp.exe consente di generare una libreria dei tipi che contiene le definizioni dei tipi definiti nell'assembly. Le applicazioni come Visual Basic 6.0 possono utilizzare la libreria dei tipi generata per operare un'associazione ai tipi .NET definiti nell'assembly.  
+## <a name="remarks"></a><span data-ttu-id="e1707-158">Note</span><span class="sxs-lookup"><span data-stu-id="e1707-158">Remarks</span></span>  
+ <span data-ttu-id="e1707-159">Tlbexp.exe consente di generare una libreria dei tipi che contiene le definizioni dei tipi definiti nell'assembly.</span><span class="sxs-lookup"><span data-stu-id="e1707-159">Tlbexp.exe generates a type library that contains definitions of the types defined in the assembly.</span></span> <span data-ttu-id="e1707-160">Le applicazioni come Visual Basic 6.0 possono utilizzare la libreria dei tipi generata per operare un'associazione ai tipi .NET definiti nell'assembly.</span><span class="sxs-lookup"><span data-stu-id="e1707-160">Applications such as Visual Basic 6.0 can use the generated type library to bind to the .NET types defined in the assembly.</span></span>  
   
 > [!IMPORTANT]
->  Non è possibile utilizzare Tlbexp.exe per esportare file di metadati Windows (.winmd). L'esportazione di assembly Windows Runtime non è supportata.  
+>  <span data-ttu-id="e1707-161">Non è possibile utilizzare Tlbexp.exe per esportare file di metadati Windows (.winmd).</span><span class="sxs-lookup"><span data-stu-id="e1707-161">You cannot use Tlbexp.exe to export Windows metadata (.winmd) files.</span></span> <span data-ttu-id="e1707-162">L'esportazione di assembly Windows Runtime non è supportata.</span><span class="sxs-lookup"><span data-stu-id="e1707-162">Exporting Windows Runtime assemblies is not supported.</span></span>  
   
- L'intero assembly viene convertito in un'unica operazione. Non è possibile utilizzare Tlbexp.exe per generare informazioni sui tipi per un sottoinsieme dei tipi definiti in un assembly.  
+ <span data-ttu-id="e1707-163">L'intero assembly viene convertito in un'unica operazione.</span><span class="sxs-lookup"><span data-stu-id="e1707-163">The entire assembly is converted at once.</span></span> <span data-ttu-id="e1707-164">Non è possibile utilizzare Tlbexp.exe per generare informazioni sui tipi per un sottoinsieme dei tipi definiti in un assembly.</span><span class="sxs-lookup"><span data-stu-id="e1707-164">You cannot use Tlbexp.exe to generate type information for a subset of the types defined in an assembly.</span></span>  
   
- Questo strumento non può essere usato per produrre una libreria dei tipi da un assembly importato mediante l'[utilità di importazione della libreria dei tipi (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Al contrario, è necessario riferirsi alla libreria dei tipi originale importata con Tlbimp.exe. È possibile esportare una libreria dei tipi da un assembly che fa riferimento agli assembly importati utilizzando Tlbimp.exe. Vedere la sezione degli esempi di seguito.  
+ <span data-ttu-id="e1707-165">Questo strumento non può essere usato per produrre una libreria dei tipi da un assembly importato mediante l'[utilità di importazione della libreria dei tipi (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span><span class="sxs-lookup"><span data-stu-id="e1707-165">You cannot use Tlbexp.exe to produce a type library from an assembly that was imported using the [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).</span></span> <span data-ttu-id="e1707-166">Al contrario, è necessario riferirsi alla libreria dei tipi originale importata con Tlbimp.exe.</span><span class="sxs-lookup"><span data-stu-id="e1707-166">Instead, you should refer to the original type library that was imported with Tlbimp.exe.</span></span> <span data-ttu-id="e1707-167">È possibile esportare una libreria dei tipi da un assembly che fa riferimento agli assembly importati utilizzando Tlbimp.exe.</span><span class="sxs-lookup"><span data-stu-id="e1707-167">You can export a type library from an assembly that references assemblies that were imported using Tlbimp.exe.</span></span> <span data-ttu-id="e1707-168">Vedere la sezione degli esempi di seguito.</span><span class="sxs-lookup"><span data-stu-id="e1707-168">See the examples section below.</span></span>  
   
- Tlbexp.exe colloca le librerie dei tipi generate nella directory di lavoro corrente o nella directory specificata per il file di output. Da un unico assembly possono essere generate più librerie dei tipi.  
+ <span data-ttu-id="e1707-169">Tlbexp.exe colloca le librerie dei tipi generate nella directory di lavoro corrente o nella directory specificata per il file di output.</span><span class="sxs-lookup"><span data-stu-id="e1707-169">Tlbexp.exe places generated type libraries in the current working directory or the directory specified for the output file.</span></span> <span data-ttu-id="e1707-170">Da un unico assembly possono essere generate più librerie dei tipi.</span><span class="sxs-lookup"><span data-stu-id="e1707-170">A single assembly might cause several type libraries to be generated.</span></span>  
   
- Tlbexp.exe genera una libreria dei tipi ma non la registra. Questo comportamento è opposto a quello dello [strumento di registrazione degli assembly (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), che effettua sia la generazione che la registrazione delle librerie dei tipi. Per generare e registrare una libreria dei tipi con COM, utilizzare Regasm.exe.  
+ <span data-ttu-id="e1707-171">Tlbexp.exe genera una libreria dei tipi ma non la registra.</span><span class="sxs-lookup"><span data-stu-id="e1707-171">Tlbexp.exe generates a type library but does not register it.</span></span> <span data-ttu-id="e1707-172">Questo comportamento è opposto a quello dello [strumento di registrazione degli assembly (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), che effettua sia la generazione che la registrazione delle librerie dei tipi.</span><span class="sxs-lookup"><span data-stu-id="e1707-172">This is in contrast to the [Assembly Registration tool (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md), which both generates and registers a type library.</span></span> <span data-ttu-id="e1707-173">Per generare e registrare una libreria dei tipi con COM, utilizzare Regasm.exe.</span><span class="sxs-lookup"><span data-stu-id="e1707-173">To generate and register a type library with COM, use Regasm.exe.</span></span>  
   
- Se non si specificano né l'opzione `/win32`, né l'opzione `/win64`, verrà generata una libreria dei tipi a 32 o 64 bit corrispondente al tipo di computer, a 32 o a 64 bit, utilizzato per l'esecuzione della compilazione. Ai fini della compilazione incrociata, è possibile utilizzare l'opzione `/win64` su un computer a 32 bit per generare una libreria dei tipi a 64 bit e l'opzione `/win32` su un computer a 64 bit per generare una libreria dei tipi a 32 bit. Nelle librerie dei tipi a 32 bit il valore di <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> viene impostato su <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>. Nelle librerie dei tipi a 64 bit il valore di <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> viene impostato su <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>. Tutti i tipi di dati (ad esempio i dati di tipo puntatore quali `IntPtr` e `UIntPtr`) vengono convertiti di conseguenza.  
+ <span data-ttu-id="e1707-174">Se non si specificano né l'opzione `/win32`, né l'opzione `/win64`, verrà generata una libreria dei tipi a 32 o 64 bit corrispondente al tipo di computer, a 32 o a 64 bit, utilizzato per l'esecuzione della compilazione.</span><span class="sxs-lookup"><span data-stu-id="e1707-174">If you do not specify either the `/win32` or `/win64` option, Tlbexp.exe generates a 32-bit or 64-bit type library that corresponds to the type of computer on which you are performing the compilation (32-bit or 64-bit computer).</span></span> <span data-ttu-id="e1707-175">Ai fini della compilazione incrociata, è possibile utilizzare l'opzione `/win64` su un computer a 32 bit per generare una libreria dei tipi a 64 bit e l'opzione `/win32` su un computer a 64 bit per generare una libreria dei tipi a 32 bit.</span><span class="sxs-lookup"><span data-stu-id="e1707-175">For cross-compilation purposes, you can use the `/win64` option on a 32-bit computer to generate a 64-bit type library and you can use the `/win32` option on a 64-bit computer to generate a 32-bit type library.</span></span> <span data-ttu-id="e1707-176">Nelle librerie dei tipi a 32 bit il valore di <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> viene impostato su <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>.</span><span class="sxs-lookup"><span data-stu-id="e1707-176">In 32-bit type libraries, the <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> value is set to <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>.</span></span> <span data-ttu-id="e1707-177">Nelle librerie dei tipi a 64 bit il valore di <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> viene impostato su <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>.</span><span class="sxs-lookup"><span data-stu-id="e1707-177">In 64-bit type libraries, the <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> value is set to <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>.</span></span> <span data-ttu-id="e1707-178">Tutti i tipi di dati (ad esempio i dati di tipo puntatore quali `IntPtr` e `UIntPtr`) vengono convertiti di conseguenza.</span><span class="sxs-lookup"><span data-stu-id="e1707-178">All data type transformations (for example, pointer-sized data types such as `IntPtr` and `UIntPtr`) are converted appropriately.</span></span>  
   
- Se si utilizza l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> per specificare un valore <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> di `VT_UNKOWN` o `VT_DISPATCH`, gli eventuali utilizzi successivi del campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> verranno ignorati. Date, ad esempio, le seguenti firme:  
+ <span data-ttu-id="e1707-179">Se si utilizza l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> per specificare un valore <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> di `VT_UNKOWN` o `VT_DISPATCH`, gli eventuali utilizzi successivi del campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> verranno ignorati.</span><span class="sxs-lookup"><span data-stu-id="e1707-179">If you use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to specify a <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> value of `VT_UNKOWN` or `VT_DISPATCH`, Tlbexp.exe ignores any subsequent use of the <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> field.</span></span> <span data-ttu-id="e1707-180">Date, ad esempio, le seguenti firme:</span><span class="sxs-lookup"><span data-stu-id="e1707-180">For example, given the following signatures:</span></span>  
   
 ```  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_DISPATCH, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructDispSafe(){return null;}  
 ```  
   
- verrà generata la seguente libreria dei tipi:  
+ <span data-ttu-id="e1707-181">verrà generata la seguente libreria dei tipi:</span><span class="sxs-lookup"><span data-stu-id="e1707-181">the following type library is generated:</span></span>  
   
 ```  
 [id(0x60020004)]  
@@ -103,52 +96,51 @@ HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);
 HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);  
 ```  
   
- Si noti che il campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> viene ignorato.  
+ <span data-ttu-id="e1707-182">Si noti che il campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> viene ignorato.</span><span class="sxs-lookup"><span data-stu-id="e1707-182">Note that Tlbexp.exe ignores the <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> field.</span></span>  
   
- Poiché le librerie dei tipi non possono contenere tutte le informazioni presenti negli assembly, può accadere che in Tlbexp.exe vengano ignorati alcuni dati durante il processo di esportazione. Per informazioni sul processo di trasformazione e sull'identificazione dell'origine di tutti i dati emessi in una libreria dei tipi, vedere [Riepilogo della conversione da assembly a libreria dei tipi](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+ <span data-ttu-id="e1707-183">Poiché le librerie dei tipi non possono contenere tutte le informazioni presenti negli assembly, può accadere che in Tlbexp.exe vengano ignorati alcuni dati durante il processo di esportazione.</span><span class="sxs-lookup"><span data-stu-id="e1707-183">Because type libraries cannot accommodate all the information found in assemblies, Tlbexp.exe might discard some data during the export process.</span></span> <span data-ttu-id="e1707-184">Per informazioni sul processo di trasformazione e sull'identificazione dell'origine di tutti i dati emessi in una libreria dei tipi, vedere [Riepilogo della conversione da assembly a libreria dei tipi](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896).</span><span class="sxs-lookup"><span data-stu-id="e1707-184">For an explanation of the transformation process and identification of the source of each piece of information emitted to a type library, see the [Assembly to Type Library Conversion Summary](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896).</span></span>  
   
- L'utilità di esportazione della libreria dei tipi esporta i metodi con parametri <xref:System.TypedReference> di tipo `VARIANT`, anche se l'oggetto <xref:System.TypedReference> non ha significato nel codice non gestito. Quando si esportano metodi con parametri <xref:System.TypedReference>, l'utilità in questione non genera un avviso o un errore e il codice non gestito che utilizza la libreria dei tipi risultante non viene eseguito correttamente.  
+ <span data-ttu-id="e1707-185">L'utilità di esportazione della libreria dei tipi esporta i metodi con parametri <xref:System.TypedReference> di tipo `VARIANT`, anche se l'oggetto <xref:System.TypedReference> non ha significato nel codice non gestito.</span><span class="sxs-lookup"><span data-stu-id="e1707-185">Note that the Type Library Exporter exports methods that have <xref:System.TypedReference> parameters as `VARIANT`, even though the <xref:System.TypedReference> object has no meaning in unmanaged code.</span></span> <span data-ttu-id="e1707-186">Quando si esportano metodi con parametri <xref:System.TypedReference>, l'utilità in questione non genera un avviso o un errore e il codice non gestito che utilizza la libreria dei tipi risultante non viene eseguito correttamente.</span><span class="sxs-lookup"><span data-stu-id="e1707-186">When you export methods that have <xref:System.TypedReference> parameters, the Type Library Exporter will not generate a warning or error and unmanaged code that uses the resulting type library will not run properly.</span></span>  
   
- L'utilità di esportazione della libreria dei tipi è supportata su Microsoft Windows 2000 e versioni successive.  
+ <span data-ttu-id="e1707-187">L'utilità di esportazione della libreria dei tipi è supportata su Microsoft Windows 2000 e versioni successive.</span><span class="sxs-lookup"><span data-stu-id="e1707-187">The Type Library Exporter is supported on Microsoft Windows 2000 and later.</span></span>  
   
-## <a name="examples"></a>Esempi  
- Il comando che segue genera una libreria dei tipi con lo stesso nome dell'assembly contenuto in `myTest.dll`.  
+## <a name="examples"></a><span data-ttu-id="e1707-188">Esempi</span><span class="sxs-lookup"><span data-stu-id="e1707-188">Examples</span></span>  
+ <span data-ttu-id="e1707-189">Il comando che segue genera una libreria dei tipi con lo stesso nome dell'assembly contenuto in `myTest.dll`.</span><span class="sxs-lookup"><span data-stu-id="e1707-189">The following command generates a type library with the same name as the assembly found in `myTest.dll`.</span></span>  
   
 ```  
 tlbexp myTest.dll  
 ```  
   
- Il comando che segue genera una libreria dei tipi con il nome `clipper.tlb`.  
+ <span data-ttu-id="e1707-190">Il comando che segue genera una libreria dei tipi con il nome `clipper.tlb`.</span><span class="sxs-lookup"><span data-stu-id="e1707-190">The following command generates a type library with the name `clipper.tlb`.</span></span>  
   
 ```  
 tlbexp myTest.dll /out:clipper.tlb  
 ```  
   
- Nell'esempio che segue è illustrato come utilizzare Tlbexp.exe per esportare una libreria dei tipi da un assembly che fa riferimento ad assembly importati mediante Tlbimp.exe.  
+ <span data-ttu-id="e1707-191">Nell'esempio che segue è illustrato come utilizzare Tlbexp.exe per esportare una libreria dei tipi da un assembly che fa riferimento ad assembly importati mediante Tlbimp.exe.</span><span class="sxs-lookup"><span data-stu-id="e1707-191">The following example illustrates using Tlbexp.exe to export a type library from an assembly that references assemblies that were imported using Tlbimp.exe.</span></span>  
   
- Utilizzare innanzitutto Tlbimp.exe per importare la libreria dei tipi `myLib.tlb` e salvarla con il nome `myLib.dll`.  
+ <span data-ttu-id="e1707-192">Utilizzare innanzitutto Tlbimp.exe per importare la libreria dei tipi `myLib.tlb` e salvarla con il nome `myLib.dll`.</span><span class="sxs-lookup"><span data-stu-id="e1707-192">First use Tlbimp.exe to import the type library `myLib.tlb` and save it as `myLib.dll`.</span></span>  
   
 ```  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
- Il comando che segue utilizza il compilatore C# per compilare `Sample.dll,` che fa riferimento al file `myLib.dll` creato nell'esempio precedente.  
+ <span data-ttu-id="e1707-193">Il comando che segue utilizza il compilatore C# per compilare `Sample.dll,` che fa riferimento al file `myLib.dll` creato nell'esempio precedente.</span><span class="sxs-lookup"><span data-stu-id="e1707-193">The following command uses the C# compiler to compile the `Sample.dll,` which references `myLib.dll` created in the previous example.</span></span>  
   
 ```  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
- Il comando che segue genera una libreria dei tipi per `Sample.dll` che fa riferimento a `myLib.dll`.  
+ <span data-ttu-id="e1707-194">Il comando che segue genera una libreria dei tipi per `Sample.dll` che fa riferimento a `myLib.dll`.</span><span class="sxs-lookup"><span data-stu-id="e1707-194">The following command generates a type library for `Sample.dll` that references `myLib.dll`.</span></span>  
   
 ```  
 tlbexp Sample.dll  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.InteropServices.TypeLibExporterFlags>   
- [Strumenti](../../../docs/framework/tools/index.md)   
- [Regasm.exe (strumento di registrazione di assembly)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)   
- [Riepilogo della conversione da assembly a libreria dei tipi](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)   
- [Tlbimp.exe (utilità di importazione della libreria dei tipi)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+## <a name="see-also"></a><span data-ttu-id="e1707-195">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e1707-195">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
+ [<span data-ttu-id="e1707-196">Strumenti</span><span class="sxs-lookup"><span data-stu-id="e1707-196">Tools</span></span>](../../../docs/framework/tools/index.md)  
+ [<span data-ttu-id="e1707-197">Regasm.exe (strumento di registrazione di assembly)</span><span class="sxs-lookup"><span data-stu-id="e1707-197">Regasm.exe (Assembly Registration Tool)</span></span>](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
+ [<span data-ttu-id="e1707-198">Riepilogo della conversione da assembly a libreria dei tipi</span><span class="sxs-lookup"><span data-stu-id="e1707-198">Assembly to Type Library Conversion Summary</span></span>](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
+ [<span data-ttu-id="e1707-199">Tlbimp.exe (utilità di importazione della libreria dei tipi)</span><span class="sxs-lookup"><span data-stu-id="e1707-199">Tlbimp.exe (Type Library Importer)</span></span>](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [<span data-ttu-id="e1707-200">Prompt dei comandi</span><span class="sxs-lookup"><span data-stu-id="e1707-200">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

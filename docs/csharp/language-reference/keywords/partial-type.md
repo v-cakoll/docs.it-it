@@ -1,62 +1,42 @@
 ---
 title: parziale (Tipo) (Riferimenti per C#)
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - partialtype
 - partialtype_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- partial types [C#]
+helpviewer_keywords: partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5212984cc577ce05fc4697e0d648fb5545528562
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5405455d933f6512cfa3a18e1a545556c5715151
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="partial-type-c-reference"></a>parziale (Tipo) (Riferimenti per C#)
-Le definizioni di tipi parziali consentono la suddivisione in più file della definizione di una classe, una struttura o un'interfaccia.  
+# <a name="partial-type-c-reference"></a><span data-ttu-id="c1d63-102">parziale (Tipo) (Riferimenti per C#)</span><span class="sxs-lookup"><span data-stu-id="c1d63-102">partial (Type) (C# Reference)</span></span>
+<span data-ttu-id="c1d63-103">Le definizioni di tipi parziali consentono la suddivisione in più file della definizione di una classe, una struttura o un'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="c1d63-103">Partial type definitions allow for the definition of a class, struct, or interface to be split into multiple files.</span></span>  
   
- In File1.cs:  
+ <span data-ttu-id="c1d63-104">In File1.cs:</span><span class="sxs-lookup"><span data-stu-id="c1d63-104">In File1.cs:</span></span>  
   
- [!code-cs[csrefKeywordsContextual#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-type_1.cs)]  
+ [!code-csharp[csrefKeywordsContextual#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-type_1.cs)]  
   
- In File2.cs la dichiarazione:  
+ <span data-ttu-id="c1d63-105">In File2.cs la dichiarazione:</span><span class="sxs-lookup"><span data-stu-id="c1d63-105">In File2.cs the declaration:</span></span>  
   
- [!code-cs[csrefKeywordsContextual#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-type_2.cs)]  
+ [!code-csharp[csrefKeywordsContextual#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-type_2.cs)]  
   
-## <a name="remarks"></a>Note  
- La suddivisione di un tipo di classe, struttura o interfaccia in più file può essere utile per progetti di grandi dimensioni o quando si usa codice generato automaticamente come quello fornito da [Progettazione Windows Form](http://msdn.microsoft.com/en-us/3c3d61f8-f36c-4d41-b9c3-398376fabb15). Un tipo parziale può contenere un [metodo parziale](../../../csharp/language-reference/keywords/partial-method.md). Per altre informazioni, vedere [Classi e metodi parziali](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
+## <a name="remarks"></a><span data-ttu-id="c1d63-106">Note</span><span class="sxs-lookup"><span data-stu-id="c1d63-106">Remarks</span></span>  
+ <span data-ttu-id="c1d63-107">La suddivisione di un tipo di classe, struttura o interfaccia in più file può essere utile per progetti di grandi dimensioni o quando si usa codice generato automaticamente come quello fornito da [Progettazione Windows Form](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="c1d63-107">Splitting a class, struct or interface type over several files can be useful when you are working with large projects, or with automatically generated code such as that provided by the [Windows Forms Designer](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).</span></span> <span data-ttu-id="c1d63-108">Un tipo parziale può contenere un [metodo parziale](../../../csharp/language-reference/keywords/partial-method.md).</span><span class="sxs-lookup"><span data-stu-id="c1d63-108">A partial type may contain a [partial method](../../../csharp/language-reference/keywords/partial-method.md).</span></span> <span data-ttu-id="c1d63-109">Per altre informazioni, vedere [Classi e metodi parziali](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).</span><span class="sxs-lookup"><span data-stu-id="c1d63-109">For more information, see [Partial Classes and Methods](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>  
   
-## <a name="c-language-specification"></a>Specifiche del linguaggio C#  
+## <a name="c-language-specification"></a><span data-ttu-id="c1d63-110">Specifiche del linguaggio C#</span><span class="sxs-lookup"><span data-stu-id="c1d63-110">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti per C#](../../../csharp/language-reference/index.md)   
- [Guida per programmatori C#](../../../csharp/programming-guide/index.md)   
- [Modificatori](../../../csharp/language-reference/keywords/modifiers.md)   
- [Introduzione ai generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)
-
+## <a name="see-also"></a><span data-ttu-id="c1d63-111">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c1d63-111">See Also</span></span>  
+ [<span data-ttu-id="c1d63-112">Riferimenti per C#</span><span class="sxs-lookup"><span data-stu-id="c1d63-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="c1d63-113">Guida per programmatori C#</span><span class="sxs-lookup"><span data-stu-id="c1d63-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="c1d63-114">Modificatori</span><span class="sxs-lookup"><span data-stu-id="c1d63-114">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
+ [<span data-ttu-id="c1d63-115">Introduzione ai generics</span><span class="sxs-lookup"><span data-stu-id="c1d63-115">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - PE files, MSIL Disassembler
 - portable executable files, MSIL Disassembler
@@ -22,111 +16,110 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 9ce101a1770329ab54ec8be86ec537a77f0fc112
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 90e732e1e8cf56e99ab1caabefc3ec09b7bda91b
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Disassembler IL)
+# <a name="ildasmexe-il-disassembler"></a><span data-ttu-id="e4aca-102">Ildasm.exe (Disassembler IL)</span><span class="sxs-lookup"><span data-stu-id="e4aca-102">Ildasm.exe (IL Disassembler)</span></span>
 
-Il disassembler IL è uno strumento complementare all'assembler IL (*Ilasm.exe*). *Ildasm.exe* accetta un file eseguibile di tipo PE contenente codice di linguaggio intermedio (IL) e crea un file di testo adatto come input per *Ilasm.exe*.
+<span data-ttu-id="e4aca-103">Il disassembler IL è uno strumento complementare all'assembler IL (*Ilasm.exe*).</span><span class="sxs-lookup"><span data-stu-id="e4aca-103">The IL Disassembler is a companion tool to the IL Assembler (*Ilasm.exe*).</span></span> <span data-ttu-id="e4aca-104">*Ildasm.exe* accetta un file eseguibile di tipo PE contenente codice di linguaggio intermedio (IL) e crea un file di testo adatto come input per *Ilasm.exe*.</span><span class="sxs-lookup"><span data-stu-id="e4aca-104">*Ildasm.exe* takes a portable executable (PE) file that contains intermediate language (IL) code and creates a text file suitable as input to *Ilasm.exe*.</span></span>
 
-Viene installato automaticamente con Visual Studio. Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7. Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+<span data-ttu-id="e4aca-105">Viene installato automaticamente con Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e4aca-105">This tool is automatically installed with Visual Studio.</span></span> <span data-ttu-id="e4aca-106">Per eseguire lo strumento, usare il prompt dei comandi per sviluppatori o il prompt dei comandi di Visual Studio in Windows 7.</span><span class="sxs-lookup"><span data-stu-id="e4aca-106">To run the tool, use the Developer Command Prompt (or the Visual Studio Command Prompt in Windows 7).</span></span> <span data-ttu-id="e4aca-107">Per altre informazioni, vedere [Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span><span class="sxs-lookup"><span data-stu-id="e4aca-107">For more information, see [Command Prompts](../../../docs/framework/tools/developer-command-prompt-for-vs.md).</span></span>
 
-Al prompt dei comandi digitare quanto segue:
+<span data-ttu-id="e4aca-108">Al prompt dei comandi digitare quanto segue:</span><span class="sxs-lookup"><span data-stu-id="e4aca-108">At the command prompt, type the following:</span></span>
 
-## <a name="syntax"></a>Sintassi
+## <a name="syntax"></a><span data-ttu-id="e4aca-109">Sintassi</span><span class="sxs-lookup"><span data-stu-id="e4aca-109">Syntax</span></span>
 
 ```
 ildasm [options] [PEfilename] [options]
 ```
 
-#### <a name="parameters"></a>Parametri
+#### <a name="parameters"></a><span data-ttu-id="e4aca-110">Parametri</span><span class="sxs-lookup"><span data-stu-id="e4aca-110">Parameters</span></span>
 
-Le opzioni che seguono sono disponibili per i file *.exe*, *.dll*, *.obj*, *.lib* e *.winmd*.
+<span data-ttu-id="e4aca-111">Le opzioni che seguono sono disponibili per i file *.exe*, *.dll*, *.obj*, *.lib* e *.winmd*.</span><span class="sxs-lookup"><span data-stu-id="e4aca-111">The following options are available for *.exe*, *.dll*, *.obj*, *.lib*, and *.winmd* files.</span></span>
 
-| Opzione | Descrizione |
+| <span data-ttu-id="e4aca-112">Opzione</span><span class="sxs-lookup"><span data-stu-id="e4aca-112">Option</span></span> | <span data-ttu-id="e4aca-113">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e4aca-113">Description</span></span> |
 | ------ | ----------- |
-|**/out =**`filename`|Crea un file di output con `filename` specificato anziché visualizzare i risultati in un'interfaccia utente grafica.|
-|**/rtf**|Genera l'output in formato RTF (Rich Text Format). Non valida con l'opzione **/text**.|
-|**/text**|Visualizza i risultati nella finestra della console, anziché in un'interfaccia utente grafica o in un file di output.|
-|**/html**|Genera l'output in formato HTML. Valida solo con l'opzione **/output**.|
-|**/?**|Visualizza la sintassi e le opzioni dei comandi dello strumento.|
+|<span data-ttu-id="e4aca-114">**/out =**`filename`</span><span class="sxs-lookup"><span data-stu-id="e4aca-114">**/out=** `filename`</span></span>|<span data-ttu-id="e4aca-115">Crea un file di output con `filename` specificato anziché visualizzare i risultati in un'interfaccia utente grafica.</span><span class="sxs-lookup"><span data-stu-id="e4aca-115">Creates an output file with the specified `filename`, rather than displaying the results in a graphical user interface.</span></span>|
+|<span data-ttu-id="e4aca-116">**/rtf**</span><span class="sxs-lookup"><span data-stu-id="e4aca-116">**/rtf**</span></span>|<span data-ttu-id="e4aca-117">Genera l'output in formato RTF (Rich Text Format).</span><span class="sxs-lookup"><span data-stu-id="e4aca-117">Produces output in rich text format.</span></span> <span data-ttu-id="e4aca-118">Non valida con l'opzione **/text**.</span><span class="sxs-lookup"><span data-stu-id="e4aca-118">Invalid with the **/text** option.</span></span>|
+|<span data-ttu-id="e4aca-119">**/text**</span><span class="sxs-lookup"><span data-stu-id="e4aca-119">**/text**</span></span>|<span data-ttu-id="e4aca-120">Visualizza i risultati nella finestra della console, anziché in un'interfaccia utente grafica o in un file di output.</span><span class="sxs-lookup"><span data-stu-id="e4aca-120">Displays the results to the console window, rather than in a graphical user interface or as an output file.</span></span>|
+|<span data-ttu-id="e4aca-121">**/html**</span><span class="sxs-lookup"><span data-stu-id="e4aca-121">**/html**</span></span>|<span data-ttu-id="e4aca-122">Genera l'output in formato HTML.</span><span class="sxs-lookup"><span data-stu-id="e4aca-122">Produces output in HTML format.</span></span> <span data-ttu-id="e4aca-123">Valida solo con l'opzione **/output**.</span><span class="sxs-lookup"><span data-stu-id="e4aca-123">Valid with the **/output** option only.</span></span>|
+|<span data-ttu-id="e4aca-124">**/?**</span><span class="sxs-lookup"><span data-stu-id="e4aca-124">**/?**</span></span>|<span data-ttu-id="e4aca-125">Visualizza la sintassi e le opzioni dei comandi dello strumento.</span><span class="sxs-lookup"><span data-stu-id="e4aca-125">Displays the command syntax and options for the tool.</span></span>|
 
-Le altre opzioni che seguono sono disponibili per i file *.exe*, *.dll* e *.winmd*.
+<span data-ttu-id="e4aca-126">Le altre opzioni che seguono sono disponibili per i file *.exe*, *.dll* e *.winmd*.</span><span class="sxs-lookup"><span data-stu-id="e4aca-126">The following additional options are available for *.exe*, *.dll*, and *.winmd* files.</span></span>
 
-| Opzione | Descrizione |
+| <span data-ttu-id="e4aca-127">Opzione</span><span class="sxs-lookup"><span data-stu-id="e4aca-127">Option</span></span> | <span data-ttu-id="e4aca-128">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e4aca-128">Description</span></span> |
 | ------ | ----------- |
-|**/bytes**|Mostra i byte effettivi, in formato esadecimale, come commenti di istruzioni.|
-|**/caverbal**|Genera blob di attributi personalizzati in forma descrittiva. Il formato predefinito è quello binario.|
-|**/linenum**|Include riferimenti alle righe di origine.|
-|**/nobar**|Evita la visualizzazione della finestra popup contenente l'indicatore di stato del processo del disassembler.|
-|**/noca**|Evita la generazione dell'output di attributi personalizzati.|
-|**/project**|Mostra i metadati come vengono visualizzati nel codice gestito invece che nel [!INCLUDE[wrt](../../../includes/wrt-md.md)]nativo. Se `PEfilename` non è un file di metadati Windows (*.winmd*), questa opzione non ha effetto. Vedere [Supporto .NET Framework per applicazioni Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
-|**/pubonly**|Disassembla solo membri e tipi pubblici. Equivale a **/visibility:PUB**.|
-|**/quoteallnames**|Racchiude tutti i nomi tra virgolette singole.|
-|**/raweh**|Mostra le clausole di gestione delle eccezioni in formato non elaborato.|
-|**/source**|Mostra le righe di origine come commenti.|
-|**/tokens**|Mostra i token dei metadati di classi e membri.|
-|**/visibility:** `vis`[+`vis`...]|Disassembla solo tipi o membri che presentano la visibilità specificata. Di seguito sono riportati i valori validi per `vis`:<br /><br /> **PUB** - Pubblico<br /><br /> **PRI** - Privato<br /><br /> **FAM** - Famiglia<br /><br /> **ASM** - Assembly<br /><br /> **FAA** - Famiglia e assembly<br /><br /> **FOA** - Famiglia o assembly<br /><br /> **PSC** - Ambito privato<br /><br /> Per le definizioni di questi modificatori di visibilità, vedere <xref:System.Reflection.MethodAttributes> e <xref:System.Reflection.TypeAttributes>.|
+|<span data-ttu-id="e4aca-129">**/bytes**</span><span class="sxs-lookup"><span data-stu-id="e4aca-129">**/bytes**</span></span>|<span data-ttu-id="e4aca-130">Mostra i byte effettivi, in formato esadecimale, come commenti di istruzioni.</span><span class="sxs-lookup"><span data-stu-id="e4aca-130">Shows actual bytes, in hexadecimal format, as instruction comments.</span></span>|
+|<span data-ttu-id="e4aca-131">**/caverbal**</span><span class="sxs-lookup"><span data-stu-id="e4aca-131">**/caverbal**</span></span>|<span data-ttu-id="e4aca-132">Genera blob di attributi personalizzati in forma descrittiva.</span><span class="sxs-lookup"><span data-stu-id="e4aca-132">Produces custom attribute blobs in verbal form.</span></span> <span data-ttu-id="e4aca-133">Il formato predefinito è quello binario.</span><span class="sxs-lookup"><span data-stu-id="e4aca-133">The default is binary form.</span></span>|
+|<span data-ttu-id="e4aca-134">**/linenum**</span><span class="sxs-lookup"><span data-stu-id="e4aca-134">**/linenum**</span></span>|<span data-ttu-id="e4aca-135">Include riferimenti alle righe di origine.</span><span class="sxs-lookup"><span data-stu-id="e4aca-135">Includes references to original source lines.</span></span>|
+|<span data-ttu-id="e4aca-136">**/nobar**</span><span class="sxs-lookup"><span data-stu-id="e4aca-136">**/nobar**</span></span>|<span data-ttu-id="e4aca-137">Evita la visualizzazione della finestra popup contenente l'indicatore di stato del processo del disassembler.</span><span class="sxs-lookup"><span data-stu-id="e4aca-137">Suppresses the disassembly progress indicator pop-up window.</span></span>|
+|<span data-ttu-id="e4aca-138">**/noca**</span><span class="sxs-lookup"><span data-stu-id="e4aca-138">**/noca**</span></span>|<span data-ttu-id="e4aca-139">Evita la generazione dell'output di attributi personalizzati.</span><span class="sxs-lookup"><span data-stu-id="e4aca-139">Suppresses the output of custom attributes.</span></span>|
+|<span data-ttu-id="e4aca-140">**/project**</span><span class="sxs-lookup"><span data-stu-id="e4aca-140">**/project**</span></span>|<span data-ttu-id="e4aca-141">Mostra i metadati come vengono visualizzati nel codice gestito invece che nel [!INCLUDE[wrt](../../../includes/wrt-md.md)]nativo.</span><span class="sxs-lookup"><span data-stu-id="e4aca-141">Displays metadata the way it appears to managed code, instead of the way it appears in the native [!INCLUDE[wrt](../../../includes/wrt-md.md)].</span></span> <span data-ttu-id="e4aca-142">Se `PEfilename` non è un file di metadati Windows (*.winmd*), questa opzione non ha effetto.</span><span class="sxs-lookup"><span data-stu-id="e4aca-142">If `PEfilename` is not a Windows metadata (*.winmd*) file, this option has no effect.</span></span> <span data-ttu-id="e4aca-143">Vedere [Supporto .NET Framework per applicazioni Windows Store e Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).</span><span class="sxs-lookup"><span data-stu-id="e4aca-143">See [.NET Framework Support for Windows Store Apps and Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).</span></span>|
+|<span data-ttu-id="e4aca-144">**/pubonly**</span><span class="sxs-lookup"><span data-stu-id="e4aca-144">**/pubonly**</span></span>|<span data-ttu-id="e4aca-145">Disassembla solo membri e tipi pubblici.</span><span class="sxs-lookup"><span data-stu-id="e4aca-145">Disassembles only public types and members.</span></span> <span data-ttu-id="e4aca-146">Equivale a **/visibility:PUB**.</span><span class="sxs-lookup"><span data-stu-id="e4aca-146">Equivalent to **/visibility:PUB**.</span></span>|
+|<span data-ttu-id="e4aca-147">**/quoteallnames**</span><span class="sxs-lookup"><span data-stu-id="e4aca-147">**/quoteallnames**</span></span>|<span data-ttu-id="e4aca-148">Racchiude tutti i nomi tra virgolette singole.</span><span class="sxs-lookup"><span data-stu-id="e4aca-148">Includes all names in single quotes.</span></span>|
+|<span data-ttu-id="e4aca-149">**/raweh**</span><span class="sxs-lookup"><span data-stu-id="e4aca-149">**/raweh**</span></span>|<span data-ttu-id="e4aca-150">Mostra le clausole di gestione delle eccezioni in formato non elaborato.</span><span class="sxs-lookup"><span data-stu-id="e4aca-150">Shows exception handling clauses in raw form.</span></span>|
+|<span data-ttu-id="e4aca-151">**/source**</span><span class="sxs-lookup"><span data-stu-id="e4aca-151">**/source**</span></span>|<span data-ttu-id="e4aca-152">Mostra le righe di origine come commenti.</span><span class="sxs-lookup"><span data-stu-id="e4aca-152">Shows original source lines as comments.</span></span>|
+|<span data-ttu-id="e4aca-153">**/tokens**</span><span class="sxs-lookup"><span data-stu-id="e4aca-153">**/tokens**</span></span>|<span data-ttu-id="e4aca-154">Mostra i token dei metadati di classi e membri.</span><span class="sxs-lookup"><span data-stu-id="e4aca-154">Shows metadata tokens of classes and members.</span></span>|
+|<span data-ttu-id="e4aca-155">**/visibility:** `vis`[+`vis`...]</span><span class="sxs-lookup"><span data-stu-id="e4aca-155">**/visibility:** `vis`[+`vis`...]</span></span>|<span data-ttu-id="e4aca-156">Disassembla solo tipi o membri che presentano la visibilità specificata.</span><span class="sxs-lookup"><span data-stu-id="e4aca-156">Disassembles only types or members with the specified visibility.</span></span> <span data-ttu-id="e4aca-157">Di seguito sono riportati i valori validi per `vis`:</span><span class="sxs-lookup"><span data-stu-id="e4aca-157">The following are valid values for `vis`:</span></span><br /><br /> <span data-ttu-id="e4aca-158">**PUB** - Pubblico</span><span class="sxs-lookup"><span data-stu-id="e4aca-158">**PUB** — Public</span></span><br /><br /> <span data-ttu-id="e4aca-159">**PRI** - Privato</span><span class="sxs-lookup"><span data-stu-id="e4aca-159">**PRI** — Private</span></span><br /><br /> <span data-ttu-id="e4aca-160">**FAM** - Famiglia</span><span class="sxs-lookup"><span data-stu-id="e4aca-160">**FAM** — Family</span></span><br /><br /> <span data-ttu-id="e4aca-161">**ASM** - Assembly</span><span class="sxs-lookup"><span data-stu-id="e4aca-161">**ASM** — Assembly</span></span><br /><br /> <span data-ttu-id="e4aca-162">**FAA** - Famiglia e assembly</span><span class="sxs-lookup"><span data-stu-id="e4aca-162">**FAA** — Family and Assembly</span></span><br /><br /> <span data-ttu-id="e4aca-163">**FOA** - Famiglia o assembly</span><span class="sxs-lookup"><span data-stu-id="e4aca-163">**FOA** — Family or Assembly</span></span><br /><br /> <span data-ttu-id="e4aca-164">**PSC** - Ambito privato</span><span class="sxs-lookup"><span data-stu-id="e4aca-164">**PSC** — Private Scope</span></span><br /><br /> <span data-ttu-id="e4aca-165">Per le definizioni di questi modificatori di visibilità, vedere <xref:System.Reflection.MethodAttributes> e <xref:System.Reflection.TypeAttributes>.</span><span class="sxs-lookup"><span data-stu-id="e4aca-165">For definitions of these visibility modifiers, see <xref:System.Reflection.MethodAttributes> and <xref:System.Reflection.TypeAttributes>.</span></span>|
 
-Le opzioni che seguono sono valide per i file *.exe*, *.dll* e *.winmd* solo per l'output su file o su console.
+<span data-ttu-id="e4aca-166">Le opzioni che seguono sono valide per i file *.exe*, *.dll* e *.winmd* solo per l'output su file o su console.</span><span class="sxs-lookup"><span data-stu-id="e4aca-166">The following options are valid for *.exe*, *.dll*, and *.winmd* files for file or console output only.</span></span>
 
-| Opzione | Descrizione |
+| <span data-ttu-id="e4aca-167">Opzione</span><span class="sxs-lookup"><span data-stu-id="e4aca-167">Option</span></span> | <span data-ttu-id="e4aca-168">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e4aca-168">Description</span></span> |
 | ------ | ----------- |
-|**/all**|Specifica una combinazione di opzioni **/header**, **/bytes**, **/stats**, **/classlist** e **/token**.|
-|**/classlist**|Include un elenco di classi definite nel modulo.|
-|**/forward**|Utilizza la dichiarazione con prototipo della classe.|
-|**/headers**|Include nell'output le informazioni sull'intestazione del file.|
-|**/item:** `class`[**::** `member`[`(sig`]]|Disassembla quanto segue a seconda dell'argomento fornito:<br /><br /> -   Disassembla l'oggetto `class` specificato.<br />-   Disassembla l'oggetto `member` di `class` specificato.<br />-   Disassembla l'oggetto `member` di `class` con la firma `sig` specificata. Il formato di `sig` è il seguente:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Nota** Nelle versioni 1.0 e 1.1 di .NET Framework `sig` deve essere seguito da una parentesi di chiusura: `(sig)`. A partire da .NET Framework 2.0 la parentesi di chiusura deve essere omessa: (`sig`.|
-|**/noil**|Evita l'output del codice dell'assembly IL.|
-|**/stats**|Include le statistiche relative all'immagine.|
-|**/typelist**|Genera l'elenco completo dei tipi per mantenere l'ordinamento dei tipi in un round trip.|
-|**/unicode**|Utilizza la codifica Unicode per l'output.|
-|**/utf8**|Utilizza la codifica UTF-8 per l'output. ANSI è l'argomento predefinito.|
+|<span data-ttu-id="e4aca-169">**/all**</span><span class="sxs-lookup"><span data-stu-id="e4aca-169">**/all**</span></span>|<span data-ttu-id="e4aca-170">Specifica una combinazione di opzioni **/header**, **/bytes**, **/stats**, **/classlist** e **/token**.</span><span class="sxs-lookup"><span data-stu-id="e4aca-170">Specifies a combination of the **/header**, **/bytes**, **/stats**, **/classlist**, and **/tokens** options.</span></span>|
+|<span data-ttu-id="e4aca-171">**/classlist**</span><span class="sxs-lookup"><span data-stu-id="e4aca-171">**/classlist**</span></span>|<span data-ttu-id="e4aca-172">Include un elenco di classi definite nel modulo.</span><span class="sxs-lookup"><span data-stu-id="e4aca-172">Includes a list of classes defined in the module.</span></span>|
+|<span data-ttu-id="e4aca-173">**/forward**</span><span class="sxs-lookup"><span data-stu-id="e4aca-173">**/forward**</span></span>|<span data-ttu-id="e4aca-174">Utilizza la dichiarazione con prototipo della classe.</span><span class="sxs-lookup"><span data-stu-id="e4aca-174">Uses forward class declaration.</span></span>|
+|<span data-ttu-id="e4aca-175">**/headers**</span><span class="sxs-lookup"><span data-stu-id="e4aca-175">**/headers**</span></span>|<span data-ttu-id="e4aca-176">Include nell'output le informazioni sull'intestazione del file.</span><span class="sxs-lookup"><span data-stu-id="e4aca-176">Includes file header information in the output.</span></span>|
+|<span data-ttu-id="e4aca-177">**/item:** `class`[**::** `member`[`(sig`]]</span><span class="sxs-lookup"><span data-stu-id="e4aca-177">**/item:** `class`[**::** `member`[`(sig`]]</span></span>|<span data-ttu-id="e4aca-178">Disassembla quanto segue a seconda dell'argomento fornito:</span><span class="sxs-lookup"><span data-stu-id="e4aca-178">Disassembles the following depending upon the argument supplied:</span></span><br /><br /> <span data-ttu-id="e4aca-179">-   Disassembla l'oggetto `class` specificato.</span><span class="sxs-lookup"><span data-stu-id="e4aca-179">-   Disassembles the specified `class`.</span></span><br /><span data-ttu-id="e4aca-180">-   Disassembla l'oggetto `member` di `class` specificato.</span><span class="sxs-lookup"><span data-stu-id="e4aca-180">-   Disassembles the specified `member` of the `class`.</span></span><br /><span data-ttu-id="e4aca-181">-   Disassembla l'oggetto `member` di `class` con la firma `sig` specificata.</span><span class="sxs-lookup"><span data-stu-id="e4aca-181">-   Disassembles the `member` of the `class` with the specified signature `sig`.</span></span> <span data-ttu-id="e4aca-182">Il formato di `sig` è il seguente:</span><span class="sxs-lookup"><span data-stu-id="e4aca-182">The format of `sig` is:</span></span><br />     <span data-ttu-id="e4aca-183">[`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)</span><span class="sxs-lookup"><span data-stu-id="e4aca-183">[`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)</span></span><br />     <span data-ttu-id="e4aca-184">**Nota** Nelle versioni 1.0 e 1.1 di .NET Framework `sig` deve essere seguito da una parentesi di chiusura: `(sig)`.</span><span class="sxs-lookup"><span data-stu-id="e4aca-184">**Note** In the .NET Framework versions 1.0 and 1.1, `sig` must be followed by a closing parenthesis: `(sig)`.</span></span> <span data-ttu-id="e4aca-185">A partire da .NET Framework 2.0 la parentesi di chiusura deve essere omessa: (`sig`.</span><span class="sxs-lookup"><span data-stu-id="e4aca-185">Starting with the Net Framework 2.0 the closing parenthesis must be omitted: (`sig`.</span></span>|
+|<span data-ttu-id="e4aca-186">**/noil**</span><span class="sxs-lookup"><span data-stu-id="e4aca-186">**/noil**</span></span>|<span data-ttu-id="e4aca-187">Evita l'output del codice dell'assembly IL.</span><span class="sxs-lookup"><span data-stu-id="e4aca-187">Suppresses IL assembly code output.</span></span>|
+|<span data-ttu-id="e4aca-188">**/stats**</span><span class="sxs-lookup"><span data-stu-id="e4aca-188">**/stats**</span></span>|<span data-ttu-id="e4aca-189">Include le statistiche relative all'immagine.</span><span class="sxs-lookup"><span data-stu-id="e4aca-189">Includes statistics on the image.</span></span>|
+|<span data-ttu-id="e4aca-190">**/typelist**</span><span class="sxs-lookup"><span data-stu-id="e4aca-190">**/typelist**</span></span>|<span data-ttu-id="e4aca-191">Genera l'elenco completo dei tipi per mantenere l'ordinamento dei tipi in un round trip.</span><span class="sxs-lookup"><span data-stu-id="e4aca-191">Produces the full list of types, to preserve type ordering in a round trip.</span></span>|
+|<span data-ttu-id="e4aca-192">**/unicode**</span><span class="sxs-lookup"><span data-stu-id="e4aca-192">**/unicode**</span></span>|<span data-ttu-id="e4aca-193">Utilizza la codifica Unicode per l'output.</span><span class="sxs-lookup"><span data-stu-id="e4aca-193">Uses Unicode encoding for the output.</span></span>|
+|<span data-ttu-id="e4aca-194">**/utf8**</span><span class="sxs-lookup"><span data-stu-id="e4aca-194">**/utf8**</span></span>|<span data-ttu-id="e4aca-195">Utilizza la codifica UTF-8 per l'output.</span><span class="sxs-lookup"><span data-stu-id="e4aca-195">Uses UTF-8 encoding for the output.</span></span> <span data-ttu-id="e4aca-196">ANSI è l'argomento predefinito.</span><span class="sxs-lookup"><span data-stu-id="e4aca-196">ANSI is the default.</span></span>|
 
-Le opzioni che seguono sono valide per i file *.exe*, *.dll*, *.obj*, *.lib* e *.winmd* solo per l'output su file o console.
+<span data-ttu-id="e4aca-197">Le opzioni che seguono sono valide per i file *.exe*, *.dll*, *.obj*, *.lib* e *.winmd* solo per l'output su file o console.</span><span class="sxs-lookup"><span data-stu-id="e4aca-197">The following options are valid for *.exe*, *.dll*, *.obj*, *.lib*, and *.winmd* files for file or console output only.</span></span>
 
-| Opzione | Descrizione |
+| <span data-ttu-id="e4aca-198">Opzione</span><span class="sxs-lookup"><span data-stu-id="e4aca-198">Option</span></span> | <span data-ttu-id="e4aca-199">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e4aca-199">Description</span></span> |
 | ------ | ----------- |
-|**/metadata**[=`specifier`]|Mostra i metadati, dove `specifier` è:<br /><br /> **MDHEADER**: visualizza le informazioni sull'intestazione e le dimensioni dei metadati.<br /><br /> **HEX**: visualizza le informazioni in esadecimali e in testo normale.<br /><br /> **CSV**: visualizza i conteggi di record e le dimensioni di heap.<br /><br /> **UNREX**: visualizza i riferimenti esterni non risolti.<br /><br /> **SCHEMA**: visualizza le informazioni sull'intestazione e lo schema dei metadati.<br /><br /> **RAW**: visualizza le tabelle di metadati non elaborate.<br /><br /> **HEAPS**: visualizza gli heap non elaborati.<br /><br /> **VALIDATE**: convalida la coerenza dei metadati.<br /><br /> È possibile specificare **/metadata** più volte, con valori diversi per `specifier`.|
+|<span data-ttu-id="e4aca-200">**/metadata**[=`specifier`]</span><span class="sxs-lookup"><span data-stu-id="e4aca-200">**/metadata**[=`specifier`]</span></span>|<span data-ttu-id="e4aca-201">Mostra i metadati, dove `specifier` è:</span><span class="sxs-lookup"><span data-stu-id="e4aca-201">Shows metadata, where `specifier` is:</span></span><br /><br /> <span data-ttu-id="e4aca-202">**MDHEADER**: visualizza le informazioni sull'intestazione e le dimensioni dei metadati.</span><span class="sxs-lookup"><span data-stu-id="e4aca-202">**MDHEADER** — Show the metadata header information and sizes.</span></span><br /><br /> <span data-ttu-id="e4aca-203">**HEX**: visualizza le informazioni in esadecimali e in testo normale.</span><span class="sxs-lookup"><span data-stu-id="e4aca-203">**HEX** — Show information in hex as well as in words.</span></span><br /><br /> <span data-ttu-id="e4aca-204">**CSV**: visualizza i conteggi di record e le dimensioni di heap.</span><span class="sxs-lookup"><span data-stu-id="e4aca-204">**CSV** — Show the record counts and heap sizes.</span></span><br /><br /> <span data-ttu-id="e4aca-205">**UNREX**: visualizza i riferimenti esterni non risolti.</span><span class="sxs-lookup"><span data-stu-id="e4aca-205">**UNREX** — Show unresolved externals.</span></span><br /><br /> <span data-ttu-id="e4aca-206">**SCHEMA**: visualizza le informazioni sull'intestazione e lo schema dei metadati.</span><span class="sxs-lookup"><span data-stu-id="e4aca-206">**SCHEMA** — Show the metadata header and schema information.</span></span><br /><br /> <span data-ttu-id="e4aca-207">**RAW**: visualizza le tabelle di metadati non elaborate.</span><span class="sxs-lookup"><span data-stu-id="e4aca-207">**RAW** — Show the raw metadata tables.</span></span><br /><br /> <span data-ttu-id="e4aca-208">**HEAPS**: visualizza gli heap non elaborati.</span><span class="sxs-lookup"><span data-stu-id="e4aca-208">**HEAPS** — Show the raw heaps.</span></span><br /><br /> <span data-ttu-id="e4aca-209">**VALIDATE**: convalida la coerenza dei metadati.</span><span class="sxs-lookup"><span data-stu-id="e4aca-209">**VALIDATE** — Validate the consistency of the metadata.</span></span><br /><br /> <span data-ttu-id="e4aca-210">È possibile specificare **/metadata** più volte, con valori diversi per `specifier`.</span><span class="sxs-lookup"><span data-stu-id="e4aca-210">You can specify **/metadata** multiple times, with different values for `specifier`.</span></span>|
 
-Le opzioni che seguono sono valide per i file *.lib* solo per l'output su file o su console. 
+<span data-ttu-id="e4aca-211">Le opzioni che seguono sono valide per i file *.lib* solo per l'output su file o su console. </span><span class="sxs-lookup"><span data-stu-id="e4aca-211">The following options are valid for *.lib* files for file or console output only.</span></span>
 
-| Opzione | Descrizione |
+| <span data-ttu-id="e4aca-212">Opzione</span><span class="sxs-lookup"><span data-stu-id="e4aca-212">Option</span></span> | <span data-ttu-id="e4aca-213">Descrizione</span><span class="sxs-lookup"><span data-stu-id="e4aca-213">Description</span></span> |
 | ------ | ----------- |
-|**/objectfile**=`filename`|Mostra i metadati di un singolo file oggetto nella libreria specificata.|
+|<span data-ttu-id="e4aca-214">**/objectfile**=`filename`</span><span class="sxs-lookup"><span data-stu-id="e4aca-214">**/objectfile**=`filename`</span></span>|<span data-ttu-id="e4aca-215">Mostra i metadati di un singolo file oggetto nella libreria specificata.</span><span class="sxs-lookup"><span data-stu-id="e4aca-215">Shows the metadata of a single object file in the specified library.</span></span>|
 
 > [!NOTE]
-> Tutte le opzioni per *Ildasm.exe* non sono soggette alla distinzione tre maiuscole e minuscole e vengono riconosciute dalle prime tre lettere. Ad esempio, **/quo** equivale a **/quoteallnames**. Le opzioni che specificano argomenti accettano i due punti (:) o un segno di uguale (=) come separatore tra l'opzione e l'argomento. **/output:** *nomefile*, ad esempio, equivale a **/output=** *nomefile*.
+> <span data-ttu-id="e4aca-216">Tutte le opzioni per *Ildasm.exe* non sono soggette alla distinzione tra maiuscole e minuscole e vengono riconosciute dalle prime tre lettere.</span><span class="sxs-lookup"><span data-stu-id="e4aca-216">All options for *Ildasm.exe* are case-insensitive and recognized by the first three letters.</span></span> <span data-ttu-id="e4aca-217">Ad esempio, **/quo** equivale a **/quoteallnames**.</span><span class="sxs-lookup"><span data-stu-id="e4aca-217">For example, **/quo** is equivalent to **/quoteallnames**.</span></span> <span data-ttu-id="e4aca-218">Le opzioni che specificano argomenti accettano i due punti (:) o un segno di uguale (=) come separatore tra l'opzione e l'argomento.</span><span class="sxs-lookup"><span data-stu-id="e4aca-218">Options that specify arguments accept either a colon (:) or an equal sign (=) as the separator between the option and the argument.</span></span> <span data-ttu-id="e4aca-219">**/output:** *nomefile*, ad esempio, equivale a **/output=** *nomefile*.</span><span class="sxs-lookup"><span data-stu-id="e4aca-219">For example, **/output:** *filename* is equivalent to **/output=** *filename*.</span></span>
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a><span data-ttu-id="e4aca-220">Note</span><span class="sxs-lookup"><span data-stu-id="e4aca-220">Remarks</span></span>
 
-*Ildasm.exe* opera solo su file di tipo PE su disco. e non su file installati nella Global Assembly Cache.
+<span data-ttu-id="e4aca-221">*Ildasm.exe* opera solo su file di tipo PE su disco.</span><span class="sxs-lookup"><span data-stu-id="e4aca-221">*Ildasm.exe* only operates on PE files on disk.</span></span> <span data-ttu-id="e4aca-222">e non su file installati nella Global Assembly Cache.</span><span class="sxs-lookup"><span data-stu-id="e4aca-222">It does not operate on files installed in the global assembly cache.</span></span>
 
-Il file di testo prodotto da *Ildasm.exe* può essere utilizzato come input per l'assembler IL(*Ilasm.exe*). Questo è utile, ad esempio, quando si compila codice in un linguaggio di programmazione che non supporta tutti gli attributi dei metadati del runtime. Dopo aver compilato il codice ed eseguito l'output tramite *Ildasm.exe*, il file di testo IL ottenuto potrà essere modificato manualmente per aggiungere gli attributi mancanti. Sarà quindi possibile elaborare questo file di testo mediante l'assembler IL per produrre un file eseguibile finale.
-
-> [!NOTE]
-> Attualmente non è possibile avvalersi di questa tecnica con file PE contenenti codice nativo incorporato, ad esempio file PE prodotti da Visual C++.  
-
-È possibile utilizzare la GUI predefinita del disassembler IL per visualizzare i metadati e il codice disassemblato di qualsiasi file PE esistente in una visualizzazione albero di tipo gerarchico. Per usare la GUI, digitare **ildasm** alla riga di comando senza specificare l'argomento *PEfilename* né alcuna opzione. Dal menu **File** è possibile passare al file di tipo PE che si vuole caricare in *Ildasm.exe*. Per salvare i metadati e il codice disassemblato visualizzati per il file PE selezionato, scegliere il comando **Dump** dal menu **File**. Per salvare solo la visualizzazione albero di tipo gerarchico, scegliere **Esegui il dump di TreeView** dal menu **File**. Per una guida dettagliata sul caricamento di un file in *Ildasm.exe* e sull'interpretazione dell'output, vedere l'esercitazione di *Ildasm.exe*, contenuta nella cartella Samples inclusa in [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
-
-Se si specifica per *Ildasm.exe* un argomento *PEfilename* che contiene risorse incorporate, lo strumento produrrà più file di output: un file di testo contenente codice IL e, per ogni risorsa gestita incorporata, un file con estensione resources prodotto usando il nome della risorsa dai metadati. Se in *PEfilename* è incorporata una risorsa non gestita, verrà prodotto un file con estensione res usando il nome file specificato dall'opzione **/output** per l'output IL.
+<span data-ttu-id="e4aca-223">Il file di testo prodotto da *Ildasm.exe* può essere utilizzato come input per l'assembler IL(*Ilasm.exe*).</span><span class="sxs-lookup"><span data-stu-id="e4aca-223">The text file produced by *Ildasm.exe* can be used as input to the IL Assembler (*Ilasm.exe*).</span></span> <span data-ttu-id="e4aca-224">Questo è utile, ad esempio, quando si compila codice in un linguaggio di programmazione che non supporta tutti gli attributi dei metadati del runtime.</span><span class="sxs-lookup"><span data-stu-id="e4aca-224">This is useful, for example, when compiling code in a programming language that does not support all the runtime metadata attributes.</span></span> <span data-ttu-id="e4aca-225">Dopo aver compilato il codice ed eseguito l'output tramite *Ildasm.exe*, il file di testo IL ottenuto potrà essere modificato manualmente per aggiungere gli attributi mancanti.</span><span class="sxs-lookup"><span data-stu-id="e4aca-225">After compiling the code and running its output through *Ildasm.exe*, the resulting IL text file can be hand-edited to add the missing attributes.</span></span> <span data-ttu-id="e4aca-226">Sarà quindi possibile elaborare questo file di testo mediante l'assembler IL per produrre un file eseguibile finale.</span><span class="sxs-lookup"><span data-stu-id="e4aca-226">You can then run this text file through the IL Assembler to produce a final executable file.</span></span>
 
 > [!NOTE]
-> *Ildasm.exe* mostra solo descrizioni di metadati per i file di input *.obj* e *.lib*. Il codice IL di questi tipi di file non viene disassemblato.
+> <span data-ttu-id="e4aca-227">Attualmente non è possibile avvalersi di questa tecnica con file PE contenenti codice nativo incorporato, ad esempio file PE prodotti da Visual C++.</span><span class="sxs-lookup"><span data-stu-id="e4aca-227">Currently, you cannot use this technique with PE files that contain embedded native code (for example, PE files produced by Visual C++).</span></span>  
 
-Per determinare se il file è gestito è possibile eseguire *Ildasm.exe* su un file .exe o *.dll* . Se il file non è gestito, verrà visualizzato un messaggio che comunica che il file non include alcuna intestazione Common Language Runtime valida e non può essere disassemblato. Se invece il file è gestito, l'operazione verrà eseguita correttamente.
+<span data-ttu-id="e4aca-228">È possibile utilizzare la GUI predefinita del disassembler IL per visualizzare i metadati e il codice disassemblato di qualsiasi file PE esistente in una visualizzazione albero di tipo gerarchico.</span><span class="sxs-lookup"><span data-stu-id="e4aca-228">You can use the default GUI in the IL Disassembler to view the metadata and disassembled code of any existing PE file in a hierarchical tree view.</span></span> <span data-ttu-id="e4aca-229">Per usare la GUI, digitare **ildasm** alla riga di comando senza specificare l'argomento *PEfilename* né alcuna opzione.</span><span class="sxs-lookup"><span data-stu-id="e4aca-229">To use the GUI, type **ildasm** at the command line without supplying the *PEfilename* argument or any options.</span></span> <span data-ttu-id="e4aca-230">Dal menu **File** è possibile passare al file di tipo PE che si vuole caricare in *Ildasm.exe*.</span><span class="sxs-lookup"><span data-stu-id="e4aca-230">From the **File** menu, you can navigate to the PE file that you want to load into *Ildasm.exe*.</span></span> <span data-ttu-id="e4aca-231">Per salvare i metadati e il codice disassemblato visualizzati per il file PE selezionato, scegliere il comando **Dump** dal menu **File**.</span><span class="sxs-lookup"><span data-stu-id="e4aca-231">To save the metadata and disassembled code displayed for the selected PE, select the **Dump** command from the **File** menu.</span></span> <span data-ttu-id="e4aca-232">Per salvare solo la visualizzazione albero di tipo gerarchico, scegliere **Esegui il dump di TreeView** dal menu **File**.</span><span class="sxs-lookup"><span data-stu-id="e4aca-232">To save the hierarchical tree view only, select the **Dump Treeview** command from the **File** menu.</span></span> <span data-ttu-id="e4aca-233">Per una guida dettagliata sul caricamento di un file in *Ildasm.exe* e sull'interpretazione dell'output, vedere l'esercitazione di *Ildasm.exe*, contenuta nella cartella Samples inclusa in [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e4aca-233">For a detailed guide to loading a file into *Ildasm.exe* and interpreting the output, see the *Ildasm.exe* Tutorial, located in the Samples folder that ships with the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].</span></span>
 
-## <a name="version-information"></a>Informazioni sulla versione
+<span data-ttu-id="e4aca-234">Se si specifica per *Ildasm.exe* un argomento *PEfilename* che contiene risorse incorporate, lo strumento produrrà più file di output: un file di testo contenente codice IL e, per ogni risorsa gestita incorporata, un file con estensione resources prodotto usando il nome della risorsa dai metadati.</span><span class="sxs-lookup"><span data-stu-id="e4aca-234">If you provide *Ildasm.exe* with a *PEfilename* argument that contains embedded resources, the tool produces multiple output files: a text file that contains IL code and, for each embedded managed resource, a .resources file produced using the resource's name from metadata.</span></span> <span data-ttu-id="e4aca-235">Se in *PEfilename* è incorporata una risorsa non gestita, verrà prodotto un file con estensione res usando il nome file specificato dall'opzione **/output** per l'output IL.</span><span class="sxs-lookup"><span data-stu-id="e4aca-235">If an unmanaged resource is embedded in *PEfilename*, a .res file is produced using the filename specified for IL output by the **/output** option.</span></span>
 
-A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* gestisce un BLOB (oggetto binario di grandi dimensioni) di marshalling non riconosciuto visualizzando il contenuto binario non elaborato. Ad esempio, il codice seguente mostra come viene visualizzato un BLOB di marshalling generato da un programma C#:
+> [!NOTE]
+> <span data-ttu-id="e4aca-236">*Ildasm.exe* mostra solo descrizioni di metadati per i file di input *.obj* e *.lib*.</span><span class="sxs-lookup"><span data-stu-id="e4aca-236">*Ildasm.exe* shows only metadata descriptions for *.obj* and *.lib* input files.</span></span> <span data-ttu-id="e4aca-237">Il codice IL di questi tipi di file non viene disassemblato.</span><span class="sxs-lookup"><span data-stu-id="e4aca-237">IL code for these file types is not disassembled.</span></span>
+
+<span data-ttu-id="e4aca-238">Per determinare se il file è gestito è possibile eseguire *Ildasm.exe* su un file .exe o *.dll* .</span><span class="sxs-lookup"><span data-stu-id="e4aca-238">You can run *Ildasm.exe* over an.exe or *.dll* file to determine whether the file is managed.</span></span> <span data-ttu-id="e4aca-239">Se il file non è gestito, verrà visualizzato un messaggio che comunica che il file non include alcuna intestazione Common Language Runtime valida e non può essere disassemblato.</span><span class="sxs-lookup"><span data-stu-id="e4aca-239">If the file is not managed, the tool displays a message stating that the file has no valid common language runtime header and cannot be disassembled.</span></span> <span data-ttu-id="e4aca-240">Se invece il file è gestito, l'operazione verrà eseguita correttamente.</span><span class="sxs-lookup"><span data-stu-id="e4aca-240">If the file is managed, the tool runs successfully.</span></span>
+
+## <a name="version-information"></a><span data-ttu-id="e4aca-241">Informazioni sulla versione</span><span class="sxs-lookup"><span data-stu-id="e4aca-241">Version Information</span></span>
+
+<span data-ttu-id="e4aca-242">A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* gestisce un BLOB (oggetto binario di grandi dimensioni) di marshalling non riconosciuto visualizzando il contenuto binario non elaborato.</span><span class="sxs-lookup"><span data-stu-id="e4aca-242">Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* handles an unrecognized marshal BLOB (binary large object) by displaying the raw binary content.</span></span> <span data-ttu-id="e4aca-243">Ad esempio, il codice seguente mostra come viene visualizzato un BLOB di marshalling generato da un programma C#:</span><span class="sxs-lookup"><span data-stu-id="e4aca-243">For example, the following code shows how a marshal BLOB generated by a C# program is displayed:</span></span>
 
 ```csharp
 public void Test([MarshalAs((short)70)] int test) { }
@@ -137,7 +130,7 @@ public void Test([MarshalAs((short)70)] int test) { }
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
-A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* visualizza gli attributi applicati alle implementazioni di interfaccia, come illustrato nel seguente estratto dell'output di *Ildasm.exe*:
+<span data-ttu-id="e4aca-244">A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* visualizza gli attributi applicati alle implementazioni di interfaccia, come illustrato nel seguente estratto dell'output di *Ildasm.exe*:</span><span class="sxs-lookup"><span data-stu-id="e4aca-244">Starting with the [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* displays attributes that are applied to interface implementations, as shown in the following excerpt from *Ildasm.exe* output:</span></span>
 
 ```
 .class public auto ansi beforefieldinit MyClass
@@ -150,59 +143,58 @@ A partire da [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* 
       …
 ```
 
-## <a name="examples"></a>Esempi
+## <a name="examples"></a><span data-ttu-id="e4aca-245">Esempi</span><span class="sxs-lookup"><span data-stu-id="e4aca-245">Examples</span></span>
 
-Il comando che segue visualizza i metadati e il codice disassemblato del file di tipo PE `MyHello.exe` nella GUI predefinita di *Ildasm.exe*.
+<span data-ttu-id="e4aca-246">Il comando che segue visualizza i metadati e il codice disassemblato del file di tipo PE `MyHello.exe` nella GUI predefinita di *Ildasm.exe*.</span><span class="sxs-lookup"><span data-stu-id="e4aca-246">The following command causes the metadata and disassembled code for the PE file `MyHello.exe` to display in the *Ildasm.exe* default GUI.</span></span>
 
 ```console
 ildasm myHello.exe
 ```
 
-Il comando che segue disassembla il file `MyFile.exe` e archivia nel file *MyFile.il* il testo ottenuto per l'assembler IL.
+<span data-ttu-id="e4aca-247">Il comando che segue disassembla il file `MyFile.exe` e archivia nel file *MyFile.il* il testo ottenuto per l'assembler IL.</span><span class="sxs-lookup"><span data-stu-id="e4aca-247">The following command disassembles the file `MyFile.exe` and stores the resulting IL Assembler text in the file *MyFile.il*.</span></span>
 
 ```console
 ildasm MyFile.exe /output:MyFile.il
 ```
 
-Il comando che segue disassembla il file `MyFile.exe` e visualizza nella finestra della console il testo ottenuto per l'assembler IL.
+<span data-ttu-id="e4aca-248">Il comando che segue disassembla il file `MyFile.exe` e visualizza nella finestra della console il testo ottenuto per l'assembler IL.</span><span class="sxs-lookup"><span data-stu-id="e4aca-248">The following command disassembles the file `MyFile.exe` and displays the resulting IL Assembler text to the console window.</span></span>
 
 ```console
 ildasm MyFile.exe /text
 ```
 
-Se il file `MyApp.exe` contiene risorse incorporate gestite e non gestite, il comando seguente produrrà quattro file: *MyApp.il*, *MyApp.res*, *Icons.resources* e *Message.resources*:
+<span data-ttu-id="e4aca-249">Se il file `MyApp.exe` contiene risorse incorporate gestite e non gestite, il comando seguente produrrà quattro file: *MyApp.il*, *MyApp.res*, *Icons.resources* e *Message.resources*:</span><span class="sxs-lookup"><span data-stu-id="e4aca-249">If the file `MyApp.exe` contains embedded managed and unmanaged resources, the following command produces four files: *MyApp.il*, *MyApp.res*, *Icons.resources*, and *Message.resources*:</span></span>
 
 ```console
 ildasm MyApp.exe /output:MyApp.il
 ```
 
-Il comando seguente disassembla il metodo `MyMethod` della classe `MyClass` in `MyFile.exe` e visualizza l'output nella finestra della console.
+<span data-ttu-id="e4aca-250">Il comando seguente disassembla il metodo `MyMethod` della classe `MyClass` in `MyFile.exe` e visualizza l'output nella finestra della console.</span><span class="sxs-lookup"><span data-stu-id="e4aca-250">The following command disassembles the method `MyMethod` within the class `MyClass` in `MyFile.exe` and displays the output to the console window.</span></span>
 
 ```console
 ildasm /item:MyClass::MyMethod MyFile.exe /text
 ```
 
-Nell'esempio precedente potrebbero essere presenti più metodi denominati `MyMethod` con firme diverse. Il comando seguente disassembla il metodo di istanza `MyMethod` con il tipo restituito **void** e i tipi di parametri **int32** e **string**.
+<span data-ttu-id="e4aca-251">Nell'esempio precedente potrebbero essere presenti più metodi denominati `MyMethod` con firme diverse.</span><span class="sxs-lookup"><span data-stu-id="e4aca-251">In the previous example, there could be several methods named `MyMethod` with different signatures.</span></span> <span data-ttu-id="e4aca-252">Il comando seguente disassembla il metodo di istanza `MyMethod` con il tipo restituito **void** e i tipi di parametri **int32** e **string**.</span><span class="sxs-lookup"><span data-stu-id="e4aca-252">The following command disassembles the instance method `MyMethod` with the return type of **void** and the parameter types **int32** and **string**.</span></span>
 
 ```console
 ildasm /item:"MyClass::MyMethod(instance void(int32,string)" MyFile.exe /text
 ```
 
 > [!NOTE]
-> In .NET Framework versioni 1.0 e 1.1 la parentesi sinistra che segue il nome del metodo deve essere bilanciata da una parentesi destra dopo la firma: `MyMethod(instance void(int32))`. A partire da .NET Framework 2.0 la parentesi di chiusura deve essere omessa: `MyMethod(instance void(int32)`.
+> <span data-ttu-id="e4aca-253">In .NET Framework versioni 1.0 e 1.1 la parentesi sinistra che segue il nome del metodo deve essere bilanciata da una parentesi destra dopo la firma: `MyMethod(instance void(int32))`.</span><span class="sxs-lookup"><span data-stu-id="e4aca-253">In the .NET Framework versions 1.0 and 1.1, the left parenthesis that follows the method name must be balanced by a right parenthesis after the signature: `MyMethod(instance void(int32))`.</span></span> <span data-ttu-id="e4aca-254">A partire da .NET Framework 2.0 la parentesi di chiusura deve essere omessa: `MyMethod(instance void(int32)`.</span><span class="sxs-lookup"><span data-stu-id="e4aca-254">Starting with the .NET Framework 2.0 the closing parenthesis must be omitted: `MyMethod(instance void(int32)`.</span></span>
 
-Per recuperare un metodo `static` (metodo`Shared` in Visual Basic), omettere la parola chiave `instance`. I tipi di classe che non sono tipi primitivi come `int32` e `string` devono includere lo spazio dei nomi e devono essere preceduti dalla parola chiave `class`. I tipi esterni devono essere preceduti dal nome della libreria tra parentesi quadre. Il comando che segue disassembla un metodo statico denominato `MyMethod` che ha un parametro di tipo <xref:System.AppDomain> e un tipo restituito di <xref:System.AppDomain>.
+<span data-ttu-id="e4aca-255">Per recuperare un metodo `static` (metodo`Shared` in Visual Basic), omettere la parola chiave `instance`.</span><span class="sxs-lookup"><span data-stu-id="e4aca-255">To retrieve a `static` method (`Shared` method in Visual Basic), omit the keyword `instance`.</span></span> <span data-ttu-id="e4aca-256">I tipi di classe che non sono tipi primitivi come `int32` e `string` devono includere lo spazio dei nomi e devono essere preceduti dalla parola chiave `class`.</span><span class="sxs-lookup"><span data-stu-id="e4aca-256">Class types that are not primitive types like `int32` and `string` must include the namespace and must be preceded by the keyword `class`.</span></span> <span data-ttu-id="e4aca-257">I tipi esterni devono essere preceduti dal nome della libreria tra parentesi quadre.</span><span class="sxs-lookup"><span data-stu-id="e4aca-257">External types must be preceded by the library name in square brackets.</span></span> <span data-ttu-id="e4aca-258">Il comando che segue disassembla un metodo statico denominato `MyMethod` che ha un parametro di tipo <xref:System.AppDomain> e un tipo restituito di <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="e4aca-258">The following command disassembles a static method named `MyMethod` that has one parameter of type <xref:System.AppDomain> and has a return type of <xref:System.AppDomain>.</span></span>
 
 ```console
 ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib]System.AppDomain)" MyFile.exe /text
 ```
 
-Un tipo annidato deve essere preceduto dalla classe in cui è contenuto, delimitata da una barra. Se ad esempio nella classe `MyNamespace.MyClass` è contenuta una classe annidata denominata `NestedClass`, la classe annidata viene identificata come segue: `class MyNamespace.MyClass/NestedClass`.
+<span data-ttu-id="e4aca-259">Un tipo annidato deve essere preceduto dalla classe in cui è contenuto, delimitata da una barra.</span><span class="sxs-lookup"><span data-stu-id="e4aca-259">A nested type must be preceded by its containing class, delimited by a forward slash.</span></span> <span data-ttu-id="e4aca-260">Se ad esempio nella classe `MyNamespace.MyClass` è contenuta una classe annidata denominata `NestedClass`, la classe annidata viene identificata come segue: `class MyNamespace.MyClass/NestedClass`.</span><span class="sxs-lookup"><span data-stu-id="e4aca-260">For example, if the `MyNamespace.MyClass` class contains a nested class named `NestedClass`, the nested class is identified as follows: `class MyNamespace.MyClass/NestedClass`.</span></span>
 
-## <a name="see-also"></a>Vedere anche
+## <a name="see-also"></a><span data-ttu-id="e4aca-261">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e4aca-261">See also</span></span>
 
-[Strumenti](../../../docs/framework/tools/index.md)  
-[Ilasm.exe (Assembler IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
-[Processo di esecuzione gestita](../../../docs/standard/managed-execution-process.md)  
-[Prompt dei comandi](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-
+[<span data-ttu-id="e4aca-262">Strumenti</span><span class="sxs-lookup"><span data-stu-id="e4aca-262">Tools</span></span>](../../../docs/framework/tools/index.md)  
+[<span data-ttu-id="e4aca-263">Ilasm.exe (Assembler IL)</span><span class="sxs-lookup"><span data-stu-id="e4aca-263">Ilasm.exe (IL Assembler)</span></span>](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+[<span data-ttu-id="e4aca-264">Processo di esecuzione gestita</span><span class="sxs-lookup"><span data-stu-id="e4aca-264">Managed Execution Process</span></span>](../../../docs/standard/managed-execution-process.md)  
+[<span data-ttu-id="e4aca-265">Prompt dei comandi</span><span class="sxs-lookup"><span data-stu-id="e4aca-265">Command Prompts</span></span>](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

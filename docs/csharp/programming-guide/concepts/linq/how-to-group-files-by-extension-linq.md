@@ -1,36 +1,27 @@
 ---
 title: 'Procedura: Raggruppare file per estensione (LINQ) (C#)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 71bee94ad5aec6cc7aaef480f72f4220716a2cd9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f60dc589ab6db8e7229ca1f276ac624e78d77327
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-group-files-by-extension-linq-c"></a>Procedura: Raggruppare file per estensione (LINQ) (C#)
-Questo esempio illustra come usare LINQ per eseguire operazioni avanzate di raggruppamento e ordinamento su elenchi di file o cartelle. Illustra anche come disporre l'output nella finestra della console usando i metodi <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A>.  
+# <a name="how-to-group-files-by-extension-linq-c"></a><span data-ttu-id="65b62-102">Procedura: Raggruppare file per estensione (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="65b62-102">How to: Group Files by Extension (LINQ) (C#)</span></span>
+<span data-ttu-id="65b62-103">Questo esempio illustra come usare LINQ per eseguire operazioni avanzate di raggruppamento e ordinamento su elenchi di file o cartelle.</span><span class="sxs-lookup"><span data-stu-id="65b62-103">This example shows how LINQ can be used to perform advanced grouping and sorting operations on lists of files or folders.</span></span> <span data-ttu-id="65b62-104">Illustra anche come disporre l'output nella finestra della console usando i metodi <xref:System.Linq.Enumerable.Skip%2A> e <xref:System.Linq.Enumerable.Take%2A>.</span><span class="sxs-lookup"><span data-stu-id="65b62-104">It also shows how to page output in the console window by using the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> methods.</span></span>  
   
-## <a name="example"></a>Esempio  
- La query seguente illustra come raggruppare il contenuto di un albero di directory specificato per l'estensione dei nomi dei file.  
+## <a name="example"></a><span data-ttu-id="65b62-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="65b62-105">Example</span></span>  
+ <span data-ttu-id="65b62-106">La query seguente illustra come raggruppare il contenuto di un albero di directory specificato per l'estensione dei nomi dei file.</span><span class="sxs-lookup"><span data-stu-id="65b62-106">The following query shows how to group the contents of a specified directory tree by the file name extension.</span></span>  
   
 ```csharp  
 class GroupByExtension  
@@ -119,12 +110,11 @@ class GroupByExtension
 }  
 ```  
   
- L'output di questo programma può essere lungo, a seconda dei dettagli del file system locale e dell'impostazione di `startFolder`. Per abilitare la visualizzazione di tutti i risultati, in questo esempio viene illustrato come scorrere i risultati. È possibile applicare le stesse tecniche ad applicazioni Windows e Web. Si noti che, poiché il codice dispone gli elementi in un gruppo, è necessario un ciclo `foreach` annidato. È disponibile anche una logica aggiuntiva per calcolare la posizione corrente nell'elenco e per consentire all'utente di interrompere lo scorrimento e uscire dal programma. In questo caso particolare la query di scorrimento viene eseguita sui risultati memorizzati nella cache della query originale. In altri contesti, come ad esempio LINQ to SQL, la memorizzazione nella cache non è necessaria.  
+ <span data-ttu-id="65b62-107">L'output di questo programma può essere lungo, a seconda dei dettagli del file system locale e dell'impostazione di `startFolder`.</span><span class="sxs-lookup"><span data-stu-id="65b62-107">The output from this program can be long, depending on the details of the local file system and what the `startFolder` is set to.</span></span> <span data-ttu-id="65b62-108">Per abilitare la visualizzazione di tutti i risultati, in questo esempio viene illustrato come scorrere i risultati.</span><span class="sxs-lookup"><span data-stu-id="65b62-108">To enable viewing of all results, this example shows how to page through results.</span></span> <span data-ttu-id="65b62-109">È possibile applicare le stesse tecniche ad applicazioni Windows e Web.</span><span class="sxs-lookup"><span data-stu-id="65b62-109">The same techniques can be applied to Windows and Web applications.</span></span> <span data-ttu-id="65b62-110">Si noti che, poiché il codice dispone gli elementi in un gruppo, è necessario un ciclo `foreach` annidato.</span><span class="sxs-lookup"><span data-stu-id="65b62-110">Notice that because the code pages the items in a group, a nested `foreach` loop is required.</span></span> <span data-ttu-id="65b62-111">È disponibile anche una logica aggiuntiva per calcolare la posizione corrente nell'elenco e per consentire all'utente di interrompere lo scorrimento e uscire dal programma.</span><span class="sxs-lookup"><span data-stu-id="65b62-111">There is also some additional logic to compute the current position in the list, and to enable the user to stop paging and exit the program.</span></span> <span data-ttu-id="65b62-112">In questo caso particolare la query di scorrimento viene eseguita sui risultati memorizzati nella cache della query originale.</span><span class="sxs-lookup"><span data-stu-id="65b62-112">In this particular case, the paging query is run against the cached results from the original query.</span></span> <span data-ttu-id="65b62-113">In altri contesti, come ad esempio LINQ to SQL, la memorizzazione nella cache non è necessaria.</span><span class="sxs-lookup"><span data-stu-id="65b62-113">In other contexts, such as LINQ to SQL, such caching is not required.</span></span>  
   
-## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto che usi .NET Framework 3.5 o versione successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="65b62-114">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="65b62-114">Compiling the Code</span></span>  
+ <span data-ttu-id="65b62-115">Creare un progetto che usi .NET Framework 3.5 o versione successiva con un riferimento a System.Core.dll e alle direttive `using` per gli spazi dei nomi System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="65b62-115">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to   System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [Directory di file e LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-
+## <a name="see-also"></a><span data-ttu-id="65b62-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="65b62-116">See Also</span></span>  
+ [<span data-ttu-id="65b62-117">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="65b62-117">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+ [<span data-ttu-id="65b62-118">Directory di file e LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="65b62-118">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

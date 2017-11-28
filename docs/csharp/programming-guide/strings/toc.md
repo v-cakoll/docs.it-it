@@ -7,5 +7,3 @@
 ## [Procedura: Eseguire la ricerca di stringhe usando espressioni regolari](how-to-search-strings-using-regular-expressions.md)
 ## [Procedura: Determinare se una stringa rappresenta un valore numerico](how-to-determine-whether-a-string-represents-a-numeric-value.md)
 ## [Procedura: Convertire una stringa in un oggetto DateTime](how-to-convert-a-string-to-a-datetime.md)
-## [Procedura: eseguire la conversione tra codifiche legacy e Unicode](how-to-convert-between-legacy-encodings-and-unicode.md)
-## [Procedura: Convertire il formato RTF in testo normale](how-to-convert-rtf-to-plain-text.md)

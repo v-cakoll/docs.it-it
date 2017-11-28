@@ -1,93 +1,74 @@
 ---
 title: 'Procedura: Leggere da file di testo a larghezza fissa in Visual Basic'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - fixed-width text file
-- reading text files, fixed-width
-- files, parsing
-- text files, tasks
-- text files, reading
+- reading text files [Visual Basic], fixed-width
+- files [Visual Basic], parsing
+- text files [Visual Basic], tasks
+- text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a5caa124af1bf4681a4c061f453ce5e09ec2dae7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fc45c6d6e4301b2786fefe947ed011ca95f8a79c
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>Procedura: Leggere da file di testo a larghezza fissa in Visual Basic
-L'oggetto `TextFieldParser` consente di analizzare in modo facile ed efficace i file di testo strutturati, ad esempio i log.  
+# <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a><span data-ttu-id="6afe9-102">Procedura: Leggere da file di testo a larghezza fissa in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6afe9-102">How to: read from fixed-width text files in Visual Basic</span></span>
+<span data-ttu-id="6afe9-103">L'oggetto `TextFieldParser` consente di analizzare in modo facile ed efficace i file di testo strutturati, ad esempio i log.</span><span class="sxs-lookup"><span data-stu-id="6afe9-103">The `TextFieldParser` object provides a way to easily and efficiently parse structured text files, such as logs.</span></span>  
   
- La proprietà `TextFieldType` definisce se il file analizzato è un file delimitato o un file con campi di testo a larghezza fissa. In un file di testo a larghezza fissa il campo alla fine può avere una larghezza variabile. Per specificare che il campo alla fine deve avere una larghezza variabile, definirlo in modo che abbia una larghezza minore o uguale a zero.  
+ <span data-ttu-id="6afe9-104">La proprietà `TextFieldType` definisce se il file analizzato è un file delimitato o un file con campi di testo a larghezza fissa.</span><span class="sxs-lookup"><span data-stu-id="6afe9-104">The `TextFieldType` property defines whether the parsed file is a delimited file or one that has fixed-width fields of text.</span></span> <span data-ttu-id="6afe9-105">In un file di testo a larghezza fissa il campo alla fine può avere una larghezza variabile.</span><span class="sxs-lookup"><span data-stu-id="6afe9-105">In a fixed-width text file, the field at the end can have a variable width.</span></span> <span data-ttu-id="6afe9-106">Per specificare che il campo alla fine deve avere una larghezza variabile, definirlo in modo che abbia una larghezza minore o uguale a zero.</span><span class="sxs-lookup"><span data-stu-id="6afe9-106">To specify that the field at the end has a variable width, define it to have a width less than or equal to zero.</span></span>  
   
-### <a name="to-parse-a-fixed-width-text-file"></a>Per analizzare un file di testo a larghezza fissa  
+### <a name="to-parse-a-fixed-width-text-file"></a><span data-ttu-id="6afe9-107">Per analizzare un file di testo a larghezza fissa</span><span class="sxs-lookup"><span data-stu-id="6afe9-107">To parse a fixed-width text file</span></span>  
   
-1.  Creare un nuovo oggetto `TextFieldParser`. Il codice riportato di seguito crea l'oggetto `TextFieldParser` denominato `Reader` e apre il file `test.log`.  
+1.  <span data-ttu-id="6afe9-108">Creare un nuovo oggetto `TextFieldParser`.</span><span class="sxs-lookup"><span data-stu-id="6afe9-108">Create a new `TextFieldParser`.</span></span> <span data-ttu-id="6afe9-109">Il codice riportato di seguito crea l'oggetto `TextFieldParser` denominato `Reader` e apre il file `test.log`.</span><span class="sxs-lookup"><span data-stu-id="6afe9-109">The following code creates the `TextFieldParser` named `Reader` and opens the file `test.log`.</span></span>  
   
      [!code-vb[VbFileIORead#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_1.vb)]  
   
-2.  Definire la proprietà `TextFieldType` come `FixedWidth`, impostandone la larghezza e il formato. Il codice seguente definisce le colonne di testo: la prima ha una larghezza di 5 caratteri, la seconda di 10 e la terza di 11, mentre la quarta ha una larghezza variabile.  
+2.  <span data-ttu-id="6afe9-110">Definire la proprietà `TextFieldType` come `FixedWidth`, impostandone la larghezza e il formato.</span><span class="sxs-lookup"><span data-stu-id="6afe9-110">Define the `TextFieldType` property as `FixedWidth`, defining the width and format.</span></span> <span data-ttu-id="6afe9-111">Il codice seguente definisce le colonne di testo: la prima ha una larghezza di 5 caratteri, la seconda di 10 e la terza di 11, mentre la quarta ha una larghezza variabile.</span><span class="sxs-lookup"><span data-stu-id="6afe9-111">The following code defines the columns of text; the first is 5 characters wide, the second 10, the third 11, and the fourth is of variable width.</span></span>  
   
      [!code-vb[VbFileIORead#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_2.vb)]  
   
-3.  Eseguire il ciclo attraverso i campi nel file. Se sono presenti righe danneggiate, segnalare un errore e continuare l'analisi.  
+3.  <span data-ttu-id="6afe9-112">Eseguire il ciclo attraverso i campi nel file.</span><span class="sxs-lookup"><span data-stu-id="6afe9-112">Loop through the fields in the file.</span></span> <span data-ttu-id="6afe9-113">Se sono presenti righe danneggiate, segnalare un errore e continuare l'analisi.</span><span class="sxs-lookup"><span data-stu-id="6afe9-113">If any lines are corrupted, report an error and continue parsing.</span></span>  
   
      [!code-vb[VbFileIORead#11](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_3.vb)]  
   
-4.  Chiudere i blocchi `While` e `Using` con `End While` ed `End Using`.  
+4.  <span data-ttu-id="6afe9-114">Chiudere i blocchi `While` e `Using` con `End While` ed `End Using`.</span><span class="sxs-lookup"><span data-stu-id="6afe9-114">Close the `While` and `Using` blocks with `End While` and `End Using`.</span></span>  
   
      [!code-vb[VbFileIORead#12](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_4.vb)]  
   
-## <a name="example"></a>Esempio  
- Nell'esempio riportato di seguito viene letto il file `test.log`.  
+## <a name="example"></a><span data-ttu-id="6afe9-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="6afe9-115">Example</span></span>  
+ <span data-ttu-id="6afe9-116">Nell'esempio riportato di seguito viene letto il file `test.log`.</span><span class="sxs-lookup"><span data-stu-id="6afe9-116">This example reads from the file `test.log`.</span></span>  
   
  [!code-vb[VbFileIORead#13](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_5.vb)]  
   
-## <a name="robust-programming"></a>Programmazione efficiente  
- Le seguenti condizioni possono generare un'eccezione:  
+## <a name="robust-programming"></a><span data-ttu-id="6afe9-117">Programmazione efficiente</span><span class="sxs-lookup"><span data-stu-id="6afe9-117">Robust programming</span></span>  
+ <span data-ttu-id="6afe9-118">Le seguenti condizioni possono generare un'eccezione:</span><span class="sxs-lookup"><span data-stu-id="6afe9-118">The following conditions may cause an exception:</span></span>  
   
--   Impossibile analizzare la riga usando il formato specificato (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Il messaggio di eccezione specifica la riga che ha generato l'eccezione, mentre alla proprietà <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> viene assegnato il testo contenuto nella riga.  
+-   <span data-ttu-id="6afe9-119">Impossibile analizzare la riga usando il formato specificato (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span><span class="sxs-lookup"><span data-stu-id="6afe9-119">A row cannot be parsed using the specified format (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>).</span></span> <span data-ttu-id="6afe9-120">Il messaggio di eccezione specifica la riga che ha generato l'eccezione, mentre alla proprietà <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> viene assegnato il testo contenuto nella riga.</span><span class="sxs-lookup"><span data-stu-id="6afe9-120">The exception message specifies the line causing the exception, while the <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> property is assigned to the text contained in the line.</span></span>  
   
--   File specificato inesistente (<xref:System.IO.FileNotFoundException>).  
+-   <span data-ttu-id="6afe9-121">File specificato inesistente (<xref:System.IO.FileNotFoundException>).</span><span class="sxs-lookup"><span data-stu-id="6afe9-121">The specified file does not exist (<xref:System.IO.FileNotFoundException>).</span></span>  
   
--   Un contesto di attendibilità parziale in cui gli utenti non dispongono di autorizzazioni sufficienti per accedere al file (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="6afe9-122">Un contesto di attendibilità parziale in cui gli utenti non dispongono di autorizzazioni sufficienti per accedere al file</span><span class="sxs-lookup"><span data-stu-id="6afe9-122">A partial-trust situation in which the user does not have sufficient permissions to access the file.</span></span> <span data-ttu-id="6afe9-123">(<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="6afe9-123">(<xref:System.Security.SecurityException>).</span></span>  
   
--   Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).  
+-   <span data-ttu-id="6afe9-124">Percorso del file troppo lungo (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="6afe9-124">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   L'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.UnauthorizedAccessException>).  
+-   <span data-ttu-id="6afe9-125">L'utente non dispone di autorizzazioni sufficienti per accedere al file (<xref:System.UnauthorizedAccessException>).</span><span class="sxs-lookup"><span data-stu-id="6afe9-125">The user does not have sufficient permissions to access the file (<xref:System.UnauthorizedAccessException>).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   
- [Procedura: Leggere da file di testo con valori delimitati da virgole](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)   
- [Procedura: Leggere da file di testo con più formati](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)   
- [Analisi dei file di testo con l'oggetto TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)   
- [Procedura dettagliata: Modifica di file e directory in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)   
- [Risoluzione dei problemi: lettura e scrittura nei file di testo](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)   
+## <a name="see-also"></a><span data-ttu-id="6afe9-126">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="6afe9-126">See also</span></span>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>  
+ [<span data-ttu-id="6afe9-127">Procedura: leggere da file di testo delimitati da virgola</span><span class="sxs-lookup"><span data-stu-id="6afe9-127">How to: Read From Comma-Delimited Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [<span data-ttu-id="6afe9-128">Procedura: leggere da file di testo con più formati</span><span class="sxs-lookup"><span data-stu-id="6afe9-128">How to: Read From Text Files with Multiple Formats</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [<span data-ttu-id="6afe9-129">Analisi dei file di testo con l'oggetto TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="6afe9-129">Parsing Text Files with the TextFieldParser Object</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+ [<span data-ttu-id="6afe9-130">Procedura dettagliata: Modifica di file e directory in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6afe9-130">Walkthrough: Manipulating Files and Directories in Visual Basic</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ [<span data-ttu-id="6afe9-131">Risoluzione dei problemi: lettura e scrittura nei file di testo</span><span class="sxs-lookup"><span data-stu-id="6afe9-131">Troubleshooting: Reading from and Writing to Text Files</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
  
-

@@ -1,69 +1,50 @@
 ---
 title: Esecuzione di operazioni di rete (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - network operations, performing
 - My.Computer.Network object, tasks
 ms.assetid: 8ecc47ce-7730-49cd-b21d-3a13477eec6b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3a0a4d4bd6bc07f4ca60ac781365f49c4af9e156
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 35e91047d5bd833c149e3a98978ca0eb22737331
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="performing-network-operations-visual-basic"></a>Esecuzione di operazioni di rete (Visual Basic)
-Nelle tabelle seguenti sono elencate le attività associate all'oggetto `My.Computer.Network`.  
+# <a name="performing-network-operations-visual-basic"></a><span data-ttu-id="b6824-102">Esecuzione di operazioni di rete (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6824-102">Performing Network Operations (Visual Basic)</span></span>
+<span data-ttu-id="b6824-103">Nelle tabelle seguenti sono elencate le attività associate all'oggetto `My.Computer.Network`.</span><span class="sxs-lookup"><span data-stu-id="b6824-103">The following tables list tasks associated with the `My.Computer.Network` object.</span></span>  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Procedura: Caricare un file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- Illustra come caricare un file e archiviarlo in un percorso remoto tramite `My.Computer.Network`.  
+## <a name="in-this-section"></a><span data-ttu-id="b6824-104">Contenuto della sezione</span><span class="sxs-lookup"><span data-stu-id="b6824-104">In This Section</span></span>  
+ [<span data-ttu-id="b6824-105">Procedura: Caricare un file</span><span class="sxs-lookup"><span data-stu-id="b6824-105">How to: Upload a File</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ <span data-ttu-id="b6824-106">Illustra come caricare un file e archiviarlo in un percorso remoto tramite `My.Computer.Network`.</span><span class="sxs-lookup"><span data-stu-id="b6824-106">Demonstrates how to upload a file and store it to a remote location using `My.Computer.Network`.</span></span>  
   
- [Procedura: Scaricare file](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- Illustra come scaricare un file da un percorso remoto tramite `My.Computer.Network`.  
+ [<span data-ttu-id="b6824-107">Procedura: Scaricare file</span><span class="sxs-lookup"><span data-stu-id="b6824-107">How to: Download a File</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+ <span data-ttu-id="b6824-108">Illustra come scaricare un file da un percorso remoto tramite `My.Computer.Network`.</span><span class="sxs-lookup"><span data-stu-id="b6824-108">Demonstrates how to download a file from a remote location using `My.Computer.Network`.</span></span>  
   
- [Procedura: Controllare lo stato di connessione](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
- Illustra come determinare se il computer ha una connessione di rete funzionante.  
+ [<span data-ttu-id="b6824-109">Procedura: Controllare lo stato di connessione</span><span class="sxs-lookup"><span data-stu-id="b6824-109">How to: Check Connection Status</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
+ <span data-ttu-id="b6824-110">Illustra come determinare se il computer ha una connessione di rete funzionante.</span><span class="sxs-lookup"><span data-stu-id="b6824-110">Shows how to determine whether the computer has a working network connection.</span></span>  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a><span data-ttu-id="b6824-111">Riferimento</span><span class="sxs-lookup"><span data-stu-id="b6824-111">Reference</span></span>  
  <xref:Microsoft.VisualBasic.Devices.Network>  
- Elenca i metodi, proprietà ed eventi per l'uso con della rete.  
+ <span data-ttu-id="b6824-112">Elenca i metodi, proprietà ed eventi per l'uso con della rete.</span><span class="sxs-lookup"><span data-stu-id="b6824-112">Lists methods, properties, and events for working with the network.</span></span>  
   
  <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
- Descrive il metodo `DownloadFile`.  
+ <span data-ttu-id="b6824-113">Descrive il metodo `DownloadFile`.</span><span class="sxs-lookup"><span data-stu-id="b6824-113">Describes the `DownloadFile` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.Devices.Network.Ping%2A>  
- Descrive il metodo `Ping`.  
+ <span data-ttu-id="b6824-114">Descrive il metodo `Ping`.</span><span class="sxs-lookup"><span data-stu-id="b6824-114">Describes the `Ping` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>  
- Descrive il metodo `UploadFile`.  
+ <span data-ttu-id="b6824-115">Descrive il metodo `UploadFile`.</span><span class="sxs-lookup"><span data-stu-id="b6824-115">Describes the `UploadFile` method.</span></span>  
   
  <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable%2A>  
- Descrive la proprietà `IsAvailable`.
-
+ <span data-ttu-id="b6824-116">Descrive la proprietà `IsAvailable`.</span><span class="sxs-lookup"><span data-stu-id="b6824-116">Describes the `IsAvailable` property.</span></span>

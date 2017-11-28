@@ -10,31 +10,29 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 96102f96-d403-4385-8ef6-5d80e406eb0c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: ffa97164736fc7f3edc450682d23bdf499b6eb34
-ms.contentlocale: it-it
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="globaljson-reference"></a><span data-ttu-id="00386-104">Informazioni di riferimento di global.json</span><span class="sxs-lookup"><span data-stu-id="00386-104">global.json reference</span></span>
 
-# <a name="globaljson-reference"></a>Informazioni di riferimento di global.json
+<span data-ttu-id="00386-105">Il file *global.json* consente di selezionare la versione degli strumenti di .NET Core usata nella proprietà `sdk`.</span><span class="sxs-lookup"><span data-stu-id="00386-105">The *global.json* file allows selection of the .NET Core tools version being used through the `sdk` property.</span></span>
 
-Il file *global.json* consente di selezionare la versione degli strumenti di .NET Core usata nella proprietà `sdk`.
+<span data-ttu-id="00386-106">Gli strumenti CLI di .NET Core cercano questo file nella directory di lavoro corrente (che non corrisponde necessariamente alla directory del progetto) o in una delle directory padre.</span><span class="sxs-lookup"><span data-stu-id="00386-106">.NET Core CLI tools look for this file in the current working directory (which isn't necessarily the same as the project directory) or one of its parent directories.</span></span>
 
-Gli strumenti CLI di .NET Core cercano questo file nella directory di lavoro corrente (che non corrisponde necessariamente alla directory del progetto) o in una delle directory padre.
+## <a name="sdk"></a><span data-ttu-id="00386-107">SDK</span><span class="sxs-lookup"><span data-stu-id="00386-107">sdk</span></span>
+<span data-ttu-id="00386-108">Tipo: Object</span><span class="sxs-lookup"><span data-stu-id="00386-108">Type: Object</span></span>
 
-## <a name="sdk"></a>SDK
-Tipo: Object
+<span data-ttu-id="00386-109">Specifica le informazioni sull'SDK.</span><span class="sxs-lookup"><span data-stu-id="00386-109">Specifies information about the SDK.</span></span>
 
-Specifica le informazioni sull'SDK.
+### <a name="version"></a><span data-ttu-id="00386-110">version</span><span class="sxs-lookup"><span data-stu-id="00386-110">version</span></span>
+<span data-ttu-id="00386-111">Tipo: String</span><span class="sxs-lookup"><span data-stu-id="00386-111">Type: String</span></span>
 
-### <a name="version"></a>version
-Tipo: String
+<span data-ttu-id="00386-112">La versione dell'SDK da usare.</span><span class="sxs-lookup"><span data-stu-id="00386-112">The version of the SDK to use.</span></span>
 
-La versione dell'SDK da usare.
-
-Ad esempio:
+<span data-ttu-id="00386-113">Ad esempio:</span><span class="sxs-lookup"><span data-stu-id="00386-113">For example:</span></span>
 
 ```json
 {
@@ -43,4 +41,3 @@ Ad esempio:
   }
 }
 ```
-

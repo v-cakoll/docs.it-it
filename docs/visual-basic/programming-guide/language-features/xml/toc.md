@@ -17,6 +17,3 @@
 ### [Procedura: Accedere agli elementi figlio XML](how-to-access-xml-child-elements.md)
 ### [Procedura: Accedere agli attributi XML](how-to-access-xml-attributes.md)
 ### [Procedura: Dichiarare e usare prefissi dello spazio dei nomi XML](how-to-declare-and-use-xml-namespace-prefixes.md)
-## [IntelliSense XML](xml-intellisense.md)
-### [Procedura: Abilitare IntelliSense XML](how-to-enable-xml-intellisense.md)
-### [Procedura guidata XML in schema](xml-to-schema-wizard.md)
