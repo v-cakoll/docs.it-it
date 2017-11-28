@@ -1,40 +1,32 @@
 ---
-title: Introduzione ai valori letterali XML in Visual Basic2 | Documenti di Microsoft
+title: Introduzione ai valori letterali XML in Visual Basic2
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 391dd14f971f91d4d128841a7ebd24981266846a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7ac96691b5b9274f67039f36bbdbfaf8abd03705
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introduzione ai valori letterali XML in Visual Basic
-Contenuto della sezione vengono fornite informazioni sulla creazione di alberi XML in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+Contenuto della sezione vengono fornite informazioni sulla creazione di alberi XML in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- Per informazioni sull'utilizzo dei risultati delle query LINQ come contenuto di una struttura ad albero XML, vedere [costruzione funzionale (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Per informazioni sull'utilizzo dei risultati di query LINQ come contenuto per un albero XML, vedere [costruzione funzionale (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Per ulteriori informazioni sui valori letterali XML in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], vedere [Panoramica di LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Per ulteriori informazioni sui valori letterali XML in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], vedere [Panoramica di LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
-## <a name="creating-xml-trees"></a>Creazione di alberi XML  
- Nell'esempio seguente viene illustrato come creare un <xref:System.Xml.Linq.XElement>in questo caso, `contacts`:</xref:System.Xml.Linq.XElement>  
+## <a name="creating-xml-trees"></a>Creazione di strutture ad albero XML  
+ Nell'esempio seguente viene illustrato come creare un oggetto <xref:System.Xml.Linq.XElement>, in questo caso `contacts`.  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -53,7 +45,7 @@ Dim contacts As XElement = _
 ```  
   
 ### <a name="creating-an-xelement-with-simple-content"></a>Creazione di un XElement con contenuto semplice  
- È possibile creare un <xref:System.Xml.Linq.XElement>con contenuto semplice, come indicato di seguito:</xref:System.Xml.Linq.XElement>  
+ È possibile creare un oggetto <xref:System.Xml.Linq.XElement> con contenuto semplice, come illustrato di seguito:  
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
@@ -67,7 +59,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="creating-an-empty-element"></a>Creazione di un elemento vuoto  
- È possibile creare un oggetto vuoto <xref:System.Xml.Linq.XElement>, come segue:</xref:System.Xml.Linq.XElement>  
+ È possibile creare un oggetto <xref:System.Xml.Linq.XElement> vuoto, come illustrato di seguito:  
   
 ```vb  
 Dim n As XElement = <Customer/>  
@@ -81,7 +73,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="using-embedded-expressions"></a>Uso di espressioni incorporate  
- Un'importante funzionalità dei valori letterali XML è che consentono di usare espressioni incorporate. Con le espressioni incorporate è possibile valutare un'espressione e inserirne i risultati nell'albero XML. Se l'espressione restituisce un tipo di <xref:System.Xml.Linq.XElement>, viene inserito un elemento nell'albero.</xref:System.Xml.Linq.XElement> Se l'espressione restituisce un tipo di <xref:System.Xml.Linq.XAttribute>, nell'albero viene inserito un attributo.</xref:System.Xml.Linq.XAttribute> È possibile inserire elementi e attributi nell'albero solo nei casi in cui sono validi.  
+ Un'importante funzionalità dei valori letterali XML è che consentono di usare espressioni incorporate. Con le espressioni incorporate è possibile valutare un'espressione e inserirne i risultati nell'albero XML. Se l'espressione restituisce un tipo di <xref:System.Xml.Linq.XElement>, nell'albero viene inserito un elemento. Se l'espressione restituisce un tipo di <xref:System.Xml.Linq.XAttribute>, nell'albero viene inserito un attributo. È possibile inserire elementi e attributi nell'albero solo nei casi in cui sono validi.  
   
  È importante notare che un'espressione incorporata può includere una sola espressione. Non è possibile incorporare più istruzioni. Se un'espressione si estende oltre una singola riga, è necessario usare il carattere di continuazione di riga.  
   
@@ -213,4 +205,4 @@ Child2 was attached
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di strutture ad albero XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+ [Creazione di alberi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

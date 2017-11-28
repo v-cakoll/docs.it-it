@@ -1,195 +1,188 @@
 ---
-title: "Stili e modelli di DataGrid | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], DataGrid"
-  - "DataGrid [WPF], stili e modelli"
-  - "parti [WPF], DataGrid"
-  - "stati [WPF], DataGrid"
-  - "stili [WPF], DataGrid"
-  - "modelli [WPF], DataGrid"
+title: Stili e modelli di DataGrid
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [WPF], DataGrid
+- ControlTemplate [WPF], DataGrid
+- DataGrid [WPF], styles and templates
+- templates [WPF], DataGrid
+- styles [WPF], DataGrid
+- parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b2dd7e47454cdfa806ce025d905073468f70f7cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Stili e modelli di DataGrid
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.DataGrid>.  È possibile modificare l'oggetto <xref:System.Windows.Controls.ControlTemplate> predefinito per conferire al controllo un aspetto univoco.  Per ulteriori informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="datagrid-styles-and-templates"></a>Stili e modelli di DataGrid
+In questo argomento vengono descritti gli stili e modelli per il <xref:System.Windows.Controls.DataGrid> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
-## Parti di DataGrid  
- Nella tabella seguente sono elencate le parti denominate del controllo <xref:System.Windows.Controls.DataGrid>.  
+## <a name="datagrid-parts"></a>Parti di DataGrid  
+ La tabella seguente elenca le parti denominate la <xref:System.Windows.Controls.DataGrid> controllo.  
   
-||||  
+|Parte|Tipo|Descrizione|  
 |-|-|-|  
-|Parte|Type|Descrizione|  
-|PART\_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Riga che contiene le intestazioni di colonna.|  
+|PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|La riga che contiene le intestazioni di colonna.|  
   
- Quando si crea <xref:System.Windows.Controls.ControlTemplate> per un oggetto <xref:System.Windows.Controls.DataGrid>, il modello potrebbe contenere <xref:System.Windows.Controls.ItemsPresenter> all'interno di <xref:System.Windows.Controls.ScrollViewer>.  L'oggetto <xref:System.Windows.Controls.ItemsPresenter> visualizza ogni elemento in <xref:System.Windows.Controls.DataGrid>; <xref:System.Windows.Controls.ScrollViewer> consente lo scorrimento all'interno del controllo.  Se <xref:System.Windows.Controls.ItemsPresenter> non è l'elemento figlio diretto di <xref:System.Windows.Controls.ScrollViewer>, è necessario assegnare a <xref:System.Windows.Controls.ItemsPresenter> il nome `ItemsPresenter`.  
+ Quando si crea un <xref:System.Windows.Controls.ControlTemplate> per un <xref:System.Windows.Controls.DataGrid>, il modello potrebbe contenere un <xref:System.Windows.Controls.ItemsPresenter> all'interno di un <xref:System.Windows.Controls.ScrollViewer>. (Il <xref:System.Windows.Controls.ItemsPresenter> Visualizza ogni elemento nel <xref:System.Windows.Controls.DataGrid>; <xref:System.Windows.Controls.ScrollViewer> Abilita lo scorrimento all'interno del controllo).  Se il <xref:System.Windows.Controls.ItemsPresenter> non è il figlio diretto del <xref:System.Windows.Controls.ScrollViewer>, è necessario assegnare il <xref:System.Windows.Controls.ItemsPresenter> il nome, `ItemsPresenter`.  
   
- Il modello predefinito per <xref:System.Windows.Controls.DataGrid> contiene n controllo <xref:System.Windows.Controls.ScrollViewer>.  Per ulteriori informazioni sulle parti definite da <xref:System.Windows.Controls.ScrollViewer>, vedere [Stili e modelli di ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).  
+ Il modello predefinito per il <xref:System.Windows.Controls.DataGrid> contiene un <xref:System.Windows.Controls.ScrollViewer> controllo. Per ulteriori informazioni sulle parti definite per il <xref:System.Windows.Controls.ScrollViewer>, vedere [ScrollViewer stili e modelli](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md).  
   
-## Stati di DataGrid  
- Nella tabella seguente sono elencati gli stati visivi per il controllo <xref:System.Windows.Controls.DataGrid>.  
+## <a name="datagrid-states"></a>Stati di DataGrid  
+ Nella tabella seguente sono elencati gli stati visivi per la <xref:System.Windows.Controls.DataGrid> controllo.  
   
-||||  
-|-|-|-|  
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
-|Disabled|CommonStates|Il controllo è disabilitato.|  
-|InvalidFocused|ValidationStates|Il controllo non è valido e presenta lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|Il controllo non è valido e non presenta lo stato attivo.|  
-|Valid|ValidationStates|Il controllo è valido.|  
-  
-## Parti di DataGridCell  
- L'elemento <xref:System.Windows.Controls.DataGridCell> non include parti denominate.  
-  
-## Stati di DataGridCell  
- Nella tabella seguente sono elencati gli stati di visualizzazione per l'elemento <xref:System.Windows.Controls.DataGridCell>.  
-  
-||||  
 |-|-|-|  
+|Normale|CommonStates|Lo stato predefinito.|  
+|Disabilitato|CommonStates|Il controllo è disabilitato.|  
+|InvalidFocused|ValidationStates|Il controllo non è valido e ha uno stato attivo.|  
+|InvalidUnfocused|ValidationStates|Il controllo non è valido e non ha uno stato attivo.|  
+|Valido|ValidationStates|Il controllo è valido.|  
+  
+## <a name="datagridcell-parts"></a>Parti di DataGridCell  
+ Il <xref:System.Windows.Controls.DataGridCell> elemento non dispone di parti denominate.  
+  
+## <a name="datagridcell-states"></a>Stati di DataGridCell  
+ Nella tabella seguente sono elencati gli stati visivi per il <xref:System.Windows.Controls.DataGridCell> elemento.  
+  
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
+|-|-|-|  
+|Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sulla cella.|  
-|Focused|FocusStates|La cella ha lo stato attivo.|  
-|Unfocused|FocusStates|La cella non ha lo stato attivo.|  
-|Corrente|CurrentStates|La cella è la cella attiva.|  
-|Regolare|CurrentStates|La cella non è la cella attiva.|  
+|Con stato attivo|FocusStates|La cella è attiva.|  
+|Con stato non attivo|FocusStates|La cella non è attivo|  
+|Corrente|CurrentStates|La cella è la cella corrente.|  
+|Regular|CurrentStates|La cella non è la cella corrente.|  
 |Visualizzazione|InteractionStates|La cella è in modalità di visualizzazione.|  
 |Modifica|InteractionStates|La cella è in modalità di modifica.|  
 |Selezionato|SelectionStates|La cella è selezionata.|  
-|Non selezionato|SelectionStates|La cella non è selezionata.|  
+|Deselezionato|SelectionStates|La cella non è selezionata.|  
 |InvalidFocused|ValidationStates|La cella non è valida e ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La cella non è valida e non ha lo stato attivo.|  
-|Valid|ValidationStates|La cella è valida.|  
+|InvalidUnfocused|ValidationStates|La cella non è valida e non è attivo.|  
+|Valido|ValidationStates|La cella è valida.|  
   
-## Parti di DataGridRow  
- L'elemento <xref:System.Windows.Controls.DataGridRow> non include parti denominate.  
+## <a name="datagridrow-parts"></a>DataGridRow parti  
+ Il <xref:System.Windows.Controls.DataGridRow> elemento non dispone di parti denominate.  
   
-## Stati di DataGridRow  
- Nella tabella seguente sono elencati gli stati di visualizzazione per l'elemento <xref:System.Windows.Controls.DataGridRow>.  
+## <a name="datagridrow-states"></a>DataGridRow stati  
+ Nella tabella seguente sono elencati gli stati visivi per il <xref:System.Windows.Controls.DataGridRow> elemento.  
   
-||||  
-|-|-|-|  
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
+|-|-|-|  
+|Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sulla riga.|  
-|MouseOver\_Editing|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è in modalità di modifica.|  
-|MouseOver\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è selezionata.|  
-|MouseOver\_Unfocused\_Editing|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è in modalità di modifica e non ha lo stato attivo.|  
-|MouseOver\_Unfocused\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è selezionata e non ha lo stato attivo.|  
-|Normal\_AlternatingRow|CommonStates|La riga è una riga alterna.|  
-|Normal\_Editing|CommonStates|La riga è in modalità di modifica.|  
-|Normal\_Selected|CommonStates|La riga è selezionata.|  
-|Unfocused\_Editing|CommonStates|La riga è in modalità di modifica e non ha lo stato attivo.|  
-|Unfocused\_Selected|CommonStates|La riga è selezionata e non ha lo stato attivo.|  
-|InvalidFocused|ValidationStates|Il controllo non è valido e presenta lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|Il controllo non è valido e non presenta lo stato attivo.|  
-|Valid|ValidationStates|Il controllo è valido.|  
+|MouseOver_Editing|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è in modalità di modifica.|  
+|MouseOver_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è selezionata.|  
+|MouseOver_Unfocused_Editing|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è in modalità di modifica e non è attivo.|  
+|MouseOver_Unfocused_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è selezionata e non è attivo.|  
+|Normal_AlternatingRow|CommonStates|La riga è una riga alternativo.|  
+|Normal_Editing|CommonStates|La riga è in modalità di modifica.|  
+|Normal_Selected|CommonStates|La riga è selezionata.|  
+|Unfocused_Editing|CommonStates|La riga è in modalità di modifica e non è attivo.|  
+|Unfocused_Selected|CommonStates|La riga è selezionata e non è attivo.|  
+|InvalidFocused|ValidationStates|Il controllo non è valido e ha uno stato attivo.|  
+|InvalidUnfocused|ValidationStates|Il controllo non è valido e non ha uno stato attivo.|  
+|Valido|ValidationStates|Il controllo è valido.|  
   
-## Parti di DataGridRowHeader  
- Nella tabella seguente sono elencate le parti denominate dell'elemento <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
+## <a name="datagridrowheader-parts"></a>Parti di DataGridRowHeader  
+ La tabella seguente elenca le parti denominate il <xref:System.Windows.Controls.Primitives.DataGridRowHeader> elemento.  
   
-||||  
+|Parte|Tipo|Descrizione|  
 |-|-|-|  
-|Parte|Type|Descrizione|  
-|PART\_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di riga dalla parte superiore.|  
-|PART\_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di riga dalla parte inferiore.|  
+|PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|L'elemento che viene utilizzato per ridimensionare l'intestazione di riga dall'inizio.|  
+|PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|L'elemento che viene utilizzato per ridimensionare l'intestazione di riga nella parte inferiore.|  
   
-## Stati di DataGridRowHeader  
- Nella tabella seguente sono elencati gli stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
+## <a name="datagridrowheader-states"></a>Stati di DataGridRowHeader  
+ Nella tabella seguente sono elencati gli stati visivi per il <xref:System.Windows.Controls.Primitives.DataGridRowHeader> elemento.  
   
-||||  
-|-|-|-|  
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
+|-|-|-|  
+|Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sulla riga.|  
-|MouseOver\_CurrentRow|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è la riga attiva.|  
-|MouseOver\_CurrentRow\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è attiva e selezionata.|  
-|MouseOver\_EditingRow|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è in modalità di modifica.|  
-|MouseOver\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è selezionata.|  
-|MouseOver\_Unfocused\_CurrentRow\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è attiva e selezionata e non ha lo stato attivo.|  
-|MouseOver\_Unfocused\_EditingRow|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è in modalità di modifica e non ha lo stato attivo.|  
-|MouseOver\_Unfocused\_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è selezionata e non ha lo stato attivo.|  
-|Normal\_CurrentRow|CommonStates|La riga è la riga attiva.|  
-|Normal\_CurrentRow\_Selected|CommonStates|La riga è la riga attiva ed è selezionata.|  
-|Normal\_EditingRow|CommonStates|La riga è in modalità di modifica.|  
-|Normal\_Selected|CommonStates|La riga è selezionata.|  
-|Unfocused\_CurrentRow\_Selected|CommonStates|La riga è la riga attiva, è selezionata e non ha lo stato attivo.|  
-|Unfocused\_EditingRow|CommonStates|La riga è in modalità di modifica e non ha lo stato attivo.|  
-|Unfocused\_Selected|CommonStates|La riga è selezionata e non ha lo stato attivo.|  
-|InvalidFocused|ValidationStates|Il controllo non è valido e presenta lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|Il controllo non è valido e non presenta lo stato attivo.|  
-|Valid|ValidationStates|Il controllo è valido.|  
+|MouseOver_CurrentRow|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è la riga corrente.|  
+|MouseOver_CurrentRow_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è selezionata e corrente.|  
+|MouseOver_EditingRow|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è in modalità di modifica.|  
+|MouseOver_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga e la riga è selezionata.|  
+|MouseOver_Unfocused_CurrentRow_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è selezionata e corrente e non è attivo.|  
+|MouseOver_Unfocused_EditingRow|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è in modalità di modifica e non è attivo.|  
+|MouseOver_Unfocused_Selected|CommonStates|Il puntatore del mouse è posizionato sulla riga, la riga è selezionata e non è attivo.|  
+|Normal_CurrentRow|CommonStates|La riga è la riga corrente.|  
+|Normal_CurrentRow_Selected|CommonStates|La riga è la riga corrente ed è selezionata.|  
+|Normal_EditingRow|CommonStates|La riga è in modalità di modifica.|  
+|Normal_Selected|CommonStates|La riga è selezionata.|  
+|Unfocused_CurrentRow_Selected|CommonStates|La riga è la riga corrente, è selezionata e non è attivo.|  
+|Unfocused_EditingRow|CommonStates|La riga è in modalità di modifica e non è attivo.|  
+|Unfocused_Selected|CommonStates|La riga è selezionata e non è attivo.|  
+|InvalidFocused|ValidationStates|Il controllo non è valido e ha uno stato attivo.|  
+|InvalidUnfocused|ValidationStates|Il controllo non è valido e non ha uno stato attivo.|  
+|Valido|ValidationStates|Il controllo è valido.|  
   
-## Parti di DataGridColumnHeadersPresenter  
- Nella tabella seguente sono elencate le parti denominate dell'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
+## <a name="datagridcolumnheaderspresenter-parts"></a>Parti di DataGridColumnHeadersPresenter  
+ La tabella seguente elenca le parti denominate il <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> elemento.  
   
-||||  
+|Parte|Tipo|Descrizione|  
 |-|-|-|  
-|Parte|Type|Descrizione|  
-|PART\_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Segnaposto per le intestazioni di colonna.|  
+|PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Segnaposto per le intestazioni di colonna.|  
   
-## Stati di DataGridColumnHeadersPresenter  
- Nella tabella seguente sono elencati gli stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
+## <a name="datagridcolumnheaderspresenter-states"></a>Stati di DataGridColumnHeadersPresenter  
+ Nella tabella seguente sono elencati gli stati visivi per il <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> elemento.  
   
-||||  
-|-|-|-|  
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
+|-|-|-|  
 |InvalidFocused|ValidationStates|La cella non è valida e ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La cella non è valida e non ha lo stato attivo.|  
-|Valid|ValidationStates|La cella è valida.|  
+|InvalidUnfocused|ValidationStates|La cella non è valida e non è attivo.|  
+|Valido|ValidationStates|La cella è valida.|  
   
-## Parti di DataGridColumnHeader  
- Nella tabella seguente sono elencate le parti denominate dell'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
+## <a name="datagridcolumnheader-parts"></a>Parti di DataGridColumnHeader  
+ La tabella seguente elenca le parti denominate il <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> elemento.  
   
-||||  
+|Parte|Tipo|Descrizione|  
 |-|-|-|  
-|Parte|Type|Descrizione|  
-|PART\_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di colonna dalla sinistra.|  
-|PART\_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Elemento utilizzato per ridimensionare l'intestazione di colonna dalla destra.|  
+|PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|L'elemento che viene utilizzato per ridimensionare l'intestazione di colonna da sinistra.|  
+|PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|L'elemento che viene utilizzato per ridimensionare l'intestazione di colonna da destra.|  
   
-## Stati di DataGridColumnHeader  
- Nella tabella seguente sono elencati gli stati di visualizzazione per l'elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
+## <a name="datagridcolumnheader-states"></a>Stati di DataGridColumnHeader  
+ Nella tabella seguente sono elencati gli stati visivi per il <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> elemento.  
   
-||||  
-|-|-|-|  
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
+|-|-|-|  
+|Normale|CommonStates|Lo stato predefinito.|  
 |MouseOver|CommonStates|Il puntatore del mouse è posizionato sul controllo.|  
-|Pressed|CommonStates|Il controllo viene premuto.|  
+|Premuto|CommonStates|Il controllo è premuto.|  
 |SortAscending|SortStates|La colonna è ordinata in ordine crescente.|  
 |SortDescending|SortStates|La colonna è ordinata in ordine decrescente.|  
-|Unsorted|SortStates|La colonna non è ordinata.|  
-|InvalidFocused|ValidationStates|Il controllo non è valido e presenta lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|Il controllo non è valido e non presenta lo stato attivo.|  
-|Valid|ValidationStates|Il controllo è valido.|  
+|Non ordinate|SortStates|La colonna non è ordinata.|  
+|InvalidFocused|ValidationStates|Il controllo non è valido e ha uno stato attivo.|  
+|InvalidUnfocused|ValidationStates|Il controllo non è valido e non ha uno stato attivo.|  
+|Valido|ValidationStates|Il controllo è valido.|  
   
-## Esempio di ControlTemplate del controllo DataGrid  
- Nell'esempio seguente viene illustrato come definire un oggetto <xref:System.Windows.Controls.ControlTemplate> per il controllo <xref:System.Windows.Controls.DataGrid> e i tipi associati.  
+## <a name="datagrid-controltemplate-example"></a>Esempio di ControlTemplate del controllo DataGrid  
+ Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.DataGrid> controllo e i relativi tipi associati.  
   
- [!code-xml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
+ [!code-xaml[ControlTemplateExamples#DataGrid](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
- Nell'esempio precedente vengono utilizzate una o più delle risorse seguenti.  
+ L'esempio precedente usa una o più delle seguenti risorse.  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Per l'esempio completo, vedere          [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041) .  
+ Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   
-## Vedere anche  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

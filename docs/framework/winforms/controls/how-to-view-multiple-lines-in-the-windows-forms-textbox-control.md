@@ -1,67 +1,67 @@
 ---
-title: "Procedura: visualizzare pi&#249; righe nel controllo TextBox Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ritorno a capo"
-  - "CRLF"
-  - "fine riga"
-  - "avanzamento riga"
-  - "MultiLine (proprietà del controllo TextBox)"
-  - "nuova riga"
-  - "ScrollBars (proprietà), controllo TextBox"
-  - "TextBox (controllo) [Windows Form], visualizzazione di più righe"
-  - "WordWrap (proprietà)"
+title: "Procedura: visualizzare più righe nel controllo TextBox Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- newline
+- end of line
+- ScrollBars property [Windows Forms], in TextBox control
+- CRLF
+- MultiLine property in TextBox control
+- line-feed
+- TextBox control [Windows Forms], viewing multiple lines
+- carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e8f39e031835275818504151e66834f0634b7f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: visualizzare pi&#249; righe nel controllo TextBox Windows Form
-In base all'impostazione predefinita, il controllo <xref:System.Windows.Forms.TextBox> Windows Form visualizza una sola riga di testo e non visualizza barre di scorrimento.  Se il testo è più lungo dello spazio disponibile, risulterà visibile solo parte di esso.  È possibile modificare tale comportamento predefinito impostando le proprietà <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> e <xref:System.Windows.Forms.TextBox.ScrollBars%2A> sui valori appropriati.  
+# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Procedura: visualizzare più righe nel controllo TextBox Windows Form
+Per impostazione predefinita, Windows Form <xref:System.Windows.Forms.TextBox> controllo Visualizza una singola riga di testo e non visualizzare le barre di scorrimento. Se il testo è maggiore dello spazio disponibile, è visibile solo una parte del testo. È possibile modificare questo comportamento predefinito impostando il <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, e <xref:System.Windows.Forms.TextBox.ScrollBars%2A> proprietà sui valori appropriati.  
   
-### Per visualizzare un ritorno a capo nel controllo TextBox  
+### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>Per visualizzare un ritorno a capo nel controllo TextBox  
   
--   Per visualizzare un ritorno a capo in un controllo <xref:System.Windows.Forms.TextBox> multilinea, utilizzare la proprietà <xref:System.Environment.NewLine%2A>.  
+-   Per visualizzare un ritorno a capo in una multi-riga di <xref:System.Windows.Forms.TextBox>, utilizzare il <xref:System.Environment.NewLine%2A> proprietà.  
   
-     I caratteri escape \(\\\) vengono interpretati in modo diverso in base al linguaggio.  In Visual Basic viene utilizzato `Chr$(13) & Chr$(10)` per la combinazione di ritorno a capo e avanzamento riga.  
+     Tenere presente che l'interpretazione dei caratteri di escape (\\) è specifico del linguaggio. Visual Basic utilizza `Chr$(13) & Chr$(10)` per la combinazione di caratteri ritorno a capo restituiti e avanzamento riga.  
   
-### Per visualizzare più righe nel controllo TextBox  
+### <a name="to-view-multiple-lines-in-the-textbox-control"></a>Per visualizzare più righe nel controllo TextBox  
   
-1.  Impostare la proprietà <xref:System.Windows.Forms.TextBox.Multiline%2A> su `true`.  Se <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> è `true` \(impostazione predefinita\), il testo all'interno del controllo risulterà organizzato in uno o più paragrafi. In caso contrario il testo verrà visualizzato come elenco le cui righe potrebbero apparire tagliate in corrispondenza del bordo del controllo.  
+1.  Impostare la proprietà <xref:System.Windows.Forms.TextBox.Multiline%2A> su `true`. Se <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> è `true` (impostazione predefinita), il testo nel controllo verrà quindi visualizzati come uno o più paragrafi; in caso contrario, verrà visualizzato un elenco, in cui alcune righe potrebbero essere ritagliata in base al bordo del controllo.  
   
 2.  Impostare la proprietà <xref:System.Windows.Forms.TextBox.ScrollBars%2A> su un valore appropriato.  
   
     |Valore|Descrizione|  
-    |------------|-----------------|  
-    |<xref:System.Windows.Forms.ScrollBars>|Utilizzare questo valore se il testo è costituito da un paragrafo quasi completamente adatto alle dimensioni del controllo.  L'utente può utilizzare il puntatore del mouse per spostarsi all'interno del controllo se il testo è troppo lungo e non può essere visualizzato completamente.|  
-    |<xref:System.Windows.Forms.ScrollBars>|Utilizzare questo valore se si desidera visualizzare un elenco di righe, alcune delle quali potrebbero superare in lunghezza il controllo <xref:System.Windows.Forms.TextBox>.|  
-    |<xref:System.Windows.Forms.ScrollBars>|Utilizzare questo valore se l'elenco può risultare più lungo rispetto all'altezza del controllo.|  
+    |-----------|-----------------|  
+    |<xref:System.Windows.Forms.ScrollBars.None>|Utilizzare questo valore se il testo sarà un paragrafo che adatta quasi sempre il controllo. L'utente può utilizzare il puntatore del mouse per spostarsi all'interno del controllo se il testo è troppo lungo da visualizzare in una sola volta.|  
+    |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Utilizzare questo valore se si desidera visualizzare un elenco di righe, alcuni dei quali può essere più lungo rispetto alla larghezza del <xref:System.Windows.Forms.TextBox> controllo.|  
+    |<xref:System.Windows.Forms.ScrollBars.Both>|Utilizzare questo valore se l'elenco può essere più lungo rispetto all'altezza del controllo.|  
   
 3.  Impostare la proprietà <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> su un valore appropriato.  
   
     |Valore|Descrizione|  
-    |------------|-----------------|  
-    |`false`|Il testo nel controllo non viene mandato a capo automaticamente e proseguirà verso destra fino a raggiungere l'interruzione della riga.  Utilizzare questo valore se è stata impostata la visualizzazione della barra di scorrimento <xref:System.Windows.Forms.ScrollBars> o <xref:System.Windows.Forms.ScrollBars>.|  
-    |`true` \(impostazione predefinita\)|La barra di scorrimento orizzontale non viene visualizzata.  Utilizzare questo valore se sono state selezionate le barre di scorrimento <xref:System.Windows.Forms.ScrollBars> o <xref:System.Windows.Forms.ScrollBars> per visualizzare uno o più paragrafi.|  
+    |-----------|-----------------|  
+    |`false`|Il testo del controllo non automaticamente inclusi, in modo che verrà scorrere verso destra fino a quando non viene raggiunta un'interruzione di riga. Utilizzare questo valore se si sceglie <xref:System.Windows.Forms.ScrollBars.Horizontal> barre di scorrimento o <xref:System.Windows.Forms.ScrollBars.Both>sopra.|  
+    |`true` (impostazione predefinita)|Non verrà visualizzata la barra di scorrimento orizzontale. Utilizzare questo valore se si sceglie <xref:System.Windows.Forms.ScrollBars.Vertical> barre di scorrimento o <xref:System.Windows.Forms.ScrollBars.None>precedente, per visualizzare uno o più paragrafi.|  
   
-## Vedere anche  
- <xref:System.Windows.Forms.TextBox>   
- [Cenni preliminari sul controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [Procedura: controllare il punto di inserimento in un controllo TextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [Procedura: creare una casella di testo Password con il controllo TextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [Procedura: creare una casella di testo in sola lettura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)   
- [Procedura: inserire virgolette in una stringa](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)   
- [Procedura: selezionare testo nel controllo TextBox Windows Form](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.TextBox>  
+ [Cenni preliminari sul controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [Procedura: Controllare il punto di inserimento in un controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [Procedura: Creare una casella di testo Password con il controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [Procedura: Creare una casella di testo in sola lettura](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [Procedura: Inserire virgolette in una stringa](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [Procedura: Selezionare testo nel controllo TextBox di Windows Form](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
  [Controllo TextBox](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

@@ -1,71 +1,75 @@
 ---
-title: "How to: Add Data to the Clipboard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Clipboard, copying data to"
-  - "data [Windows Forms], copying to Clipboard"
+title: 'Procedura: aggiungere dati agli Appunti'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Clipboard [Windows Forms], copying data to
+- data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 47858af6d4e3dc5f29632c5a74f2431a2cc200b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Add Data to the Clipboard
-La classe <xref:System.Windows.Forms.Clipboard> fornisce i metodi che consentono di interagire con la funzionalità Appunti del sistema operativo Windows.  Molte applicazioni utilizzano gli Appunti come repository temporaneo per i dati.  Negli elaboratori di testi, ad esempio, gli Appunti vengono utilizzati durante le operazioni di taglia e incolla.  Gli Appunti sono utili anche per trasferire i dati da un'applicazione a un'altra.  
+# <a name="how-to-add-data-to-the-clipboard"></a>Procedura: aggiungere dati agli Appunti
+La <xref:System.Windows.Forms.Clipboard> classe fornisce metodi che è possibile utilizzare per interagire con la funzionalità degli Appunti di sistema operativo Windows. Molte applicazioni utilizzano negli Appunti come archivio temporaneo per i dati. Elaboratori di testo, ad esempio, usare gli Appunti durante le operazioni di taglia e Incolla. Sono utili per il trasferimento di dati da un'applicazione a altra anche negli Appunti.  
   
- Quando si aggiungono dati agli Appunti, è possibile indicarne il formato in modo che i dati possano essere utilizzati da altre applicazioni che supportano tale formato.  È anche possibile aggiungere dati agli Appunti in più formati diversi per aumentare il numero delle altre applicazioni che possono utilizzare i dati.  
+ Quando si aggiungono dati negli Appunti, è possibile indicare il formato dei dati in modo che le altre applicazioni possono riconoscere i dati se è possibile utilizzare tale formato. È anche possibile aggiungere dati negli Appunti in più formati diversi per aumentare il numero di altre applicazioni che possono utilizzare i dati.  
   
- Un formato degli Appunti è costituito da una stringa che identifica il formato, in modo che un'applicazione che utilizza tale formato possa recuperare i dati associati.  La classe <xref:System.Windows.Forms.DataFormats> fornisce nomi di formato predefiniti che l'utente può impiegare.  È anche possibile utilizzare nomi di formato personalizzati oppure utilizzare un tipo di oggetto come formato.  
+ Un formato degli Appunti è una stringa che identifica il formato in modo che un'applicazione che utilizza tale formato può recuperare i dati associati. La <xref:System.Windows.Forms.DataFormats> classe fornisce i nomi di formato predefinito per l'uso. È inoltre possibile utilizzare nomi di formato personalizzati o utilizzare il tipo di oggetto come formato.  
   
- Per aggiungere dati agli Appunti in uno o più formati, utilizzare il metodo <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  A questo metodo è possibile passare un qualsiasi oggetto ma, per poter aggiungere dati in più formati, è necessario innanzitutto aggiungere i dati a un oggetto distinto appositamente progettato per gestire più formati.  In genere, i dati verranno aggiunti alla classe <xref:System.Windows.Forms.DataObject>, ma è possibile utilizzare qualsiasi tipo che implementi l'interfaccia <xref:System.Windows.Forms.IDataObject>.  
+ Per aggiungere i dati negli Appunti in uno o più formati, utilizzare il <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> metodo. È possibile passare qualsiasi oggetto a questo metodo, ma per aggiungere dati in più formati, è innanzitutto necessario aggiungere i dati per un oggetto separato, progettato per funzionare con più formati. In genere, si aggiungerà i dati in un <xref:System.Windows.Forms.DataObject>, ma è possibile utilizzare qualsiasi tipo che implementa il <xref:System.Windows.Forms.IDataObject> interfaccia.  
   
- In [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] è possibile aggiungere dati direttamente agli Appunti utilizzando nuovi metodi progettati per semplificare le attività di base relative agli Appunti.  Questi metodi devono essere utilizzati quando si gestiscono dati in un singolo formato comune, ad esempio testo.  
+ In [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], è possibile aggiungere dati direttamente negli Appunti utilizzando nuovi metodi progettati per semplificare le attività di base negli Appunti. Utilizzare questi metodi quando si lavora con dati in un formato comune, ad esempio testo.  
   
 > [!NOTE]
->  Tutte le applicazioni basate su Windows condividono gli Appunti.  Di conseguenza, quando si passa a un'altra applicazione, è possibile che il contenuto degli Appunti venga modificato.  
+>  Tutte le applicazioni basate su Windows condividono negli Appunti. Pertanto, il contenuto è soggetto a modifiche quando si passa a un'altra applicazione.  
 >   
->  La classe <xref:System.Windows.Forms.Clipboard> può essere utilizzata solo in thread impostati sulla modalità apartment a thread singolo \(STA, Single\-Threaded Apartment\).  Per utilizzare questa classe, verificare che il metodo `Main` sia contrassegnato con l'attributo <xref:System.STAThreadAttribute>.  
+>  La <xref:System.Windows.Forms.Clipboard> classe può essere utilizzata solo nei thread impostati sulla modalità single thread apartment (STA). Per utilizzare questa classe, assicurarsi che il `Main` metodo è contrassegnato con il <xref:System.STAThreadAttribute> attributo.  
 >   
->  Per essere inserito negli Appunti, è necessario che un oggetto sia serializzabile.  Per rendere un tipo serializzabile, contrassegnarlo con l'attributo <xref:System.SerializableAttribute>.  Se si passa un oggetto non serializzabile a un metodo degli Appunti, il metodo non riuscirà ma non verranno generate eccezioni.  Per ulteriori informazioni sulla serializzazione, vedere <xref:System.Runtime.Serialization>.  
+>  Un oggetto deve essere serializzabile per poter essere inserito negli Appunti. Per rendere un tipo serializzabile, contrassegnarlo con il <xref:System.SerializableAttribute> attributo. Se si passa un oggetto non serializzabile a un metodo negli Appunti, il metodo avrà esito negativo senza generare un'eccezione. Per altre informazioni sulla serializzazione, vedere <xref:System.Runtime.Serialization>.  
   
-### Per aggiungere dati agli Appunti in un singolo formato comune  
+### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Per aggiungere i dati negli Appunti in un formato comune  
   
-1.  Utilizzare il metodo <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, il metodo <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, il metodo <xref:System.Windows.Forms.Clipboard.SetImage%2A> o il metodo <xref:System.Windows.Forms.Clipboard.SetText%2A>.  Questi metodi sono disponibili solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1.  Utilizzare il <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, o <xref:System.Windows.Forms.Clipboard.SetText%2A> metodo. Questi metodi sono disponibili solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### Per aggiungere dati agli Appunti in un formato personalizzato  
+### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Per aggiungere i dati negli Appunti in un formato personalizzato  
   
-1.  Utilizzare il metodo <xref:System.Windows.Forms.Clipboard.SetData%2A> con un nome di formato personalizzato.  Questo metodo è disponibile solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1.  Utilizzare il <xref:System.Windows.Forms.Clipboard.SetData%2A> metodo con un nome di formato personalizzata. Questo metodo è disponibile solo in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
-     È anche possibile utilizzare nomi di formati predefiniti con il metodo <xref:System.Windows.Forms.Clipboard.SetData%2A>.  Per ulteriori informazioni, vedere <xref:System.Windows.Forms.DataFormats>.  
+     È inoltre possibile utilizzare nomi di formato predefiniti con il <xref:System.Windows.Forms.Clipboard.SetData%2A> metodo. Per altre informazioni, vedere <xref:System.Windows.Forms.DataFormats>.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### Per aggiungere dati agli Appunti in più formati  
+### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Per aggiungere i dati negli Appunti in più formati  
   
-1.  Utilizzare il metodo <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> e passare una classe <xref:System.Windows.Forms.DataObject> contenente i dati.  Questo metodo deve essere utilizzato per aggiungere dati agli Appunti nelle versioni precedenti a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1.  Utilizzare il <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> (metodo) e passare un <xref:System.Windows.Forms.DataObject> che contiene i dati. È necessario utilizzare questo metodo per aggiungere dati agli Appunti nelle versioni precedenti a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-## Vedere anche  
- [Drag\-and\-Drop Operations and Clipboard Support](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)   
- [How to: Retrieve Data from the Clipboard](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
+## <a name="see-also"></a>Vedere anche  
+ [Drag-and-Drop Operations and Clipboard Support](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md) (Supporto delle operazioni di trascinamento della selezione e degli Appunti)  
+ [Procedura: Recuperare dati dagli Appunti](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)

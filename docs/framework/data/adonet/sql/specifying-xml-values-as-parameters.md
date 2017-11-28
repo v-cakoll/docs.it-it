@@ -1,35 +1,41 @@
 ---
-title: "Specifica di valori XML come parametri | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Specifica di valori XML come parametri
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4d48cc329644873be268606409c154ffe832cd91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Specifica di valori XML come parametri
-Se una query richiede un parametro il cui valore è una stringa XML, è possibile fornire tale valore con un'istanza del tipo di dati **SqlXml**.  L'operazione è semplicissima in quanto le colonne XML in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] accettano valori di parametro esattamente come altri tipi di dati.  
+# <a name="specifying-xml-values-as-parameters"></a>Specifica di valori XML come parametri
+Se una query richiede un parametro il cui valore è una stringa XML, è possibile fornire tale valore utilizzando un'istanza di **SqlXml** tipo di dati. L'operazione è semplicissima in quanto le colonne XML in [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] accettano valori di parametro esattamente come altri tipi di dati.  
   
-## Esempio  
- La seguente applicazione console crea una nuova tabella nel database **AdventureWorks**.  La nuova tabella è composta dalla colonna **SalesID** e dalla colonna XML **SalesInfo**.  
+## <a name="example"></a>Esempio  
+ La seguente applicazione console crea una nuova tabella nel **AdventureWorks** database. La nuova tabella include una colonna denominata **SalesID** e una colonna XML denominato **SalesInfo**.  
   
 > [!NOTE]
->  Per impostazione predefinita, il database di esempio **AdventureWorks** non viene installato insieme a [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  Per installarlo, è sufficiente eseguire il programma di installazione di SQL Server.  
+>  Il **AdventureWorks** database di esempio non è installato per impostazione predefinita quando si installa [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Per installarlo, è sufficiente eseguire il programma di installazione di SQL Server.  
   
- Nell'esempio viene preparato un oggetto <xref:System.Data.SqlClient.SqlCommand> per inserire una riga nella nuova tabella.  Successivamente, i dati XML per la colonna **SalesInfo** vengono forniti da un file salvato.  
+ Nell'esempio viene preparato un oggetto <xref:System.Data.SqlClient.SqlCommand> per inserire una riga nella nuova tabella. Un file salvato fornisce i dati XML necessari per il **SalesInfo** colonna.  
   
- Per creare il file necessario per l'esecuzione dell'esempio, creare un nuovo file di testo nella stessa cartella del progetto.  Assegnare un nome al file MyTestStoreData.xml.  Aprire il file in Blocco note, quindi copiare e incollare il testo seguente:  
+ Per creare il file necessario per l'esecuzione dell'esempio, creare un nuovo file di testo nella stessa cartella del progetto. Assegnare un nome al file MyTestStoreData.xml. Aprire il file in Blocco note, quindi copiare e incollare il testo seguente:  
   
-```  
+```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
   <AnnualSales>300000</AnnualSales>  
   <AnnualRevenue>30000</AnnualRevenue>  
@@ -44,9 +50,7 @@ Se una query richiede un parametro il cui valore è una stringa XML, è possibil
 </StoreSurvey>  
 ```  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
 Imports System.Data.SqlTypes  
@@ -104,9 +108,7 @@ End Sub
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -167,7 +169,7 @@ class Class1
 }  
 ```  
   
-## Vedere anche  
- <xref:System.Data.SqlTypes.SqlXml>   
- [Dati XML in SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)   
- [Provider ADO.NET gestiti e centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Data.SqlTypes.SqlXml>  
+ [Dati XML in SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
+ [Provider gestiti ADO.NET e Centro per sviluppatori di set di dati](http://go.microsoft.com/fwlink/?LinkId=217917)

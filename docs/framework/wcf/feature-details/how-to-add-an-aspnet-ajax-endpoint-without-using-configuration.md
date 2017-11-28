@@ -1,35 +1,38 @@
 ---
-title: "Procedura: aggiungere un endpoint ASP.NET AJAX senza usare la configurazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: aggiungere un endpoint ASP.NET AJAX senza usare la configurazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e71e8f8f9b4c6f2a407febc8ba8ac045ecc0e239
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: aggiungere un endpoint ASP.NET AJAX senza usare la configurazione
+# <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Procedura: aggiungere un endpoint ASP.NET AJAX senza usare la configurazione
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consente di creare un servizio che espone un endpoint ASP.NET compatibile con AJAX che può essere chiamato da JavaScript su un sito Web client. Per creare tale endpoint è possibile utilizzare un file di configurazione, come con tutti gli altri endpoint WCF, o un metodo che non richiede elementi di configurazione. In questo argomento viene illustrato il secondo approccio.  
   
- Per creare servizi con endpoint ASP.NET AJAX senza configurazione, i servizi devono essere ospitati da Internet Information Services (IIS). Per attivare un endpoint ASP.NET AJAX utilizzando questo approccio, specificare il <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> come parametro Factory nella [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) direttiva nel file con estensione svc. Questa factory personalizzata è il componente che configura automaticamente un endpoint ASP.NET AJAX, in modo che possa essere chiamato da JavaScript su un sito Web client.  
+ Per creare servizi con endpoint ASP.NET AJAX senza configurazione, i servizi devono essere ospitati da Internet Information Services (IIS). Per attivare un endpoint ASP.NET AJAX, questo approccio, specificare il <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> come parametro nella Factory di [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) direttiva nel file con estensione svc. Questa factory personalizzata è il componente che configura automaticamente un endpoint ASP.NET AJAX, in modo che possa essere chiamato da JavaScript su un sito Web client.  
   
  Per un esempio funzionante, vedere il [AJAX senza configurazione del servizio](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md).  
   
- Per una descrizione di come configurare un endpoint ASP.NET AJAX utilizzando elementi di configurazione, vedere [procedura: utilizzare la configurazione per aggiungere un Endpoint ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
+ Per un riepilogo di come configurare un endpoint ASP.NET AJAX tramite elementi di configurazione, vedere [procedura: utilizzare la configurazione per aggiungere un Endpoint ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).  
   
 ### <a name="to-create-a-basic-wcf-service"></a>Per creare un servizio WFC di base  
   
-1.  Definire un base [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contratto di servizio con un'interfaccia contrassegnata con il <xref:System.ServiceModel.ServiceContractAttribute> attributo. Contrassegnare ogni operazione con il <xref:System.ServiceModel.OperationContractAttribute>. Assicurarsi di impostare il <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> proprietà.  
+1.  Definire un contratto di servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] di base con un'interfaccia contrassegnata con l'attributo <xref:System.ServiceModel.ServiceContractAttribute>. Contrassegnare ogni operazione con <xref:System.ServiceModel.OperationContractAttribute>. Assicurarsi di impostare la proprietà <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>.  
   
-    ```  
+    ```csharp  
     [ServiceContract(Namespace = "MyService")]]  
     public interface ICalculator  
     {  
@@ -44,7 +47,7 @@ caps.handback.revision: 14
   
 2.  Implementare il contratto di servizio `ICalculator` con `CalculatorService`.  
   
-    ```  
+    ```csharp  
     public class CalculatorService : ICalculator  
     {  
         public double Add(double n1, double n2)  
@@ -57,7 +60,7 @@ caps.handback.revision: 14
   
 3.  Definire uno spazio dei nomi per le implementazioni `ICalculator` e `CalculatorService` eseguendo il wrapping di queste ultime in un blocco dello spazio dei nomi.  
   
-    ```  
+    ```csharp  
     Namespace Microsoft.Ajax.Samples  
     {  
         //Include the code for ICalculator and Caculator here.  
@@ -66,7 +69,7 @@ caps.handback.revision: 14
   
 ### <a name="to-host-the-service-in-internet-information-services-without-configuration"></a>Per ospitare il servizio in Internet Information Services senza configurazione  
   
-1.  Creare un nuovo file denominato "file del servizio" con estensione svc nell'applicazione. Modificare questo file aggiungendo appropriati [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) informazioni della direttiva per il servizio. Specificare che il <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> deve essere utilizzato nel [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) (direttiva) per configurare automaticamente un endpoint ASP.NET AJAX.  
+1.  Creare un nuovo file denominato "file del servizio" con estensione svc nell'applicazione. Modificare il file aggiungendo appropriata [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) informazioni direttive per il servizio. Specificare che il <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> deve essere usata nel [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) direttiva per configurare automaticamente un endpoint ASP.NET AJAX.  
   
     ```  
     <%@ServiceHost   
@@ -81,29 +84,28 @@ caps.handback.revision: 14
   
 ### <a name="to-call-the-service"></a>Per chiamare il servizio  
   
-1.  L'endpoint è configurato in un indirizzo vuoto relativo al file con estensione svc, pertanto il servizio è ora disponibile e può essere richiamato inviando richieste a Service. svc /<> \</> \> , ad esempio, service.svc/Add per il `Add` operazione. È possibile utilizzarlo immettendo l'URL del servizio nella raccolta degli script del controllo Script Manager ASP.NET AJAX. Per un esempio, vedere il [AJAX senza configurazione del servizio](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md).  
+1.  L'endpoint è configurato in un indirizzo vuoto relativo al file con estensione svc, pertanto il servizio è ora disponibile e può essere richiamato inviando richieste a Service.svc /\<operazione >, ad esempio, Service.svc/Add per il `Add` operazione. È possibile utilizzarlo immettendo l'URL del servizio nella raccolta degli script del controllo Script Manager ASP.NET AJAX. Per un esempio, vedere il [AJAX senza configurazione del servizio](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md).  
   
 ## <a name="example"></a>Esempio  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
   
  L'endpoint configurato automaticamente viene creato in un indirizzo vuoto relativo all'URL di base. Può essere aggiunto e utilizzato con questo approccio anche un file di configurazione. Se il file di configurazione contiene definizioni di endpoint, questi endpoint vengono aggiunti all'endpoint configurato automaticamente.  
   
- Ad esempio, Service. svc utilizza il <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> e la directory del servizio contiene un file Web. config che definisce un endpoint per lo stesso servizio utilizzando il <xref:System.ServiceModel.BasicHttpBinding> nell'indirizzo relativo "soap". In questo caso, il servizio contiene due endpoint: uno in service.svc, che risponde alle richieste ASP.NET AJAX, e un altro in service.svc/soap, che risponde alle richieste SOAP.  
+ Ad esempio, service.svc utilizza <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> e la directory del servizio contiene un file Web.config che definisce un endpoint per lo stesso servizio utilizzando <xref:System.ServiceModel.BasicHttpBinding> nell'indirizzo relativo "soap". In questo caso, il servizio contiene due endpoint: uno in service.svc, che risponde alle richieste ASP.NET AJAX, e un altro in service.svc/soap, che risponde alle richieste SOAP.  
   
- Se il file di configurazione definisce un endpoint a un indirizzo relativo vuoto e <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> viene utilizzata, viene generata un'eccezione e il servizio non viene avviato.  
+ Se il file di configurazione definisce un endpoint in un indirizzo relativo vuoto e viene utilizzata la classe <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, viene generata un'eccezione e il servizio non viene avviato.  
   
- Non è possibile utilizzare la configurazione per modificare impostazioni sull'endpoint configurato automaticamente. Se qualsiasi impostazione (ad esempio una quota del lettore) deve essere modificato, non utilizzare l'approccio senza configurazione rimuovendo il <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> dal file con estensione svc e creando una voce di configurazione per l'endpoint.  
+ Non è possibile utilizzare la configurazione per modificare impostazioni sull'endpoint configurato automaticamente. Se è necessario modificare un'impostazione, quale la quota del lettore, non si deve utilizzare l'approccio senza configurazione rimuovendo <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> dal file con estensione svc e creando una voce di configurazione per l'endpoint.  
   
- Se il servizio richiede la modalità di compatibilità ASP.NET, ad esempio, se si utilizza il <xref:System.Web.HttpContext> classe o meccanismi di autorizzazione ASP.NET, un file di configurazione è comunque necessario per attivare questa modalità. L'elemento di configurazione richiesto è il [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) elemento che deve essere aggiunto come indicato di seguito.  
+ Se il servizio richiede la modalità di compatibilità ASP.NET, se ad esempio utilizza la classe <xref:System.Web.HttpContext> o meccanismi di autorizzazione ASP.NET, è comunque necessario un file di configurazione per attivare questa modalità. L'elemento di configurazione richiesto è il [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) elemento che deve essere aggiunto come indicato di seguito.  
   
  `<system.serviceModel>`  
   
- `<serviceHostingEnvironment aspNetCompatibilityEnabled=”true” /> </system.serviceModel>`  
+ `<serviceHostingEnvironment aspNetCompatibilityEnabled="true" /> </system.serviceModel>`  
   
  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]il [servizi WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) argomento.  
   
- Il <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> classe è una classe derivata di <xref:System.ServiceModel.Activation.ServiceHostFactory>. Per una spiegazione dettagliata del meccanismo factory di host di servizio, vedere il [estensione Hosting tramite ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md) argomento.  
+ La classe <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> è una classe derivata di <xref:System.ServiceModel.Activation.ServiceHostFactory>. Per una spiegazione dettagliata del meccanismo di factory host del servizio, vedere il [estensione Hosting tramite ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md) argomento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di servizi WCF per ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)   
- [Procedura: eseguire la migrazione di servizi Web ASP.NET per AJAX a WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+ [Creazione di servizi WCF per ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
+ [Procedura: eseguire la migrazione di servizi Web di ASP.NET con supporto AJAX a WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

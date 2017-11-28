@@ -1,28 +1,24 @@
 ---
-title: Dettagli di Office Open XML sui documenti WordprocessingML (Visual Basic) | Documenti di Microsoft
+title: Dettagli di Office aprire documenti WordprocessingML XML (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6b1e155c-7174-4244-a6de-0fddf9a0b0d7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e0389952d4d36241ce87d14241e4d8f13f66329f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 36d397853f042454fd14b888029dee7dbe383f68
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>Dettagli di Office Open XML sui documenti WordprocessingML (Visual Basic)
+# <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>Dettagli di Office aprire documenti WordprocessingML XML (Visual Basic)
 Contenuto della sezione vengono fornite informazioni sui dettagli relativi ai WordprocessingML di Office Open XML. Sono riportati esempi delle parti di un documento Open XML relative al documento e allo stile.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  

@@ -1,66 +1,67 @@
 ---
-title: "Procedura: creare un&#39;interfaccia di tipo Esplora risorse in un Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "form, Windows Explorer (tipo)"
-  - "SplitContainer (controllo) [Windows Form], interfaccia di tipo Esplora risorse"
-  - "Esplora risorse, creazione con Windows Form"
+title: 'Procedura: creare un''interfaccia di tipo Esplora risorse in un Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Explorer [Windows Forms], creating with Windows Forms
+- SplitContainer control [Windows Forms], Explorer-style interface
+- forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 96f2ca8189d6840bc68f063ef9b97539c24b0e6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un&#39;interfaccia di tipo Esplora risorse in un Windows Form
-In molte applicazioni viene scelto di utilizzare un'interfaccia analoga a quella di Esplora risorse, poiché è ormai familiare a tutti gli utenti.  
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procedura: creare un'interfaccia di tipo Esplora risorse in un Windows Form
+In Esplora risorse è una scelta dell'interfaccia utente comune per le applicazioni a causa la conoscenza pronta.  
   
- L'interfaccia di Esplora risorse è costituita essenzialmente da un controllo <xref:System.Windows.Forms.TreeView> e da un controllo <xref:System.Windows.Forms.ListView>, situati in due pannelli separati  ridimensionabili tramite una barra di divisione.  Questa disposizione dei controlli è particolarmente efficace per la visualizzazione e la ricerca di informazioni.  
+ In Esplora risorse, in pratica, è un <xref:System.Windows.Forms.TreeView> controllo e un <xref:System.Windows.Forms.ListView> controllo in due pannelli separati. Il ridimensionabili da una barra di divisione. Questa disposizione dei controlli è particolarmente efficace per la visualizzazione e la ricerca di informazioni.  
   
- La procedura che segue illustra come disporre i controlli in un form di tipo Esplora risorse,  ma non spiega come aggiungere la funzionalità di esplorazione file dell'applicazione Esplora risorse.  
+ La procedura seguente viene illustrato come disporre i controlli in un formato simile a Esplora risorse di Windows. Essi non viene illustrato come aggiungere le funzionalità di esplorazione file dell'applicazione in Esplora risorse.  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Per creare un Windows Form di tipo Esplora risorse  
+### <a name="to-create-a-windows-explorer-style-windows-form"></a>Per creare un modulo di Windows di tipo Esplora risorse di Windows  
   
-1.  Creare un nuovo progetto applicazione Windows.  Per informazioni dettagliate, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Creare un nuovo progetto applicazione Windows. Per informazioni dettagliate, vedere [Procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
-2.  Dalla **Casella degli strumenti**:  
+2.  Dal **della casella degli strumenti**:  
   
-    1.  Trascinare un controllo <xref:System.Windows.Forms.SplitContainer> sul form.  
+    1.  Trascinare un <xref:System.Windows.Forms.SplitContainer> controllo nel form.  
   
-    2.  Trascinare un controllo <xref:System.Windows.Forms.TreeView> nel pannello **SplitterPanel1**, ovvero il pannello del controllo <xref:System.Windows.Forms.SplitContainer> contrassegnato come **Panel1**.  
+    2.  Trascinare un <xref:System.Windows.Forms.TreeView> controllare in **SplitterPanel1** (il pannello del <xref:System.Windows.Forms.SplitContainer> controllo contrassegnato **Panel1**).  
   
-    3.  Trascinare un controllo <xref:System.Windows.Forms.ListView> nel pannello **SplitterPanel2**, ovvero il pannello del controllo <xref:System.Windows.Forms.SplitContainer> contrassegnato come **Panel2**.  
+    3.  Trascinare un <xref:System.Windows.Forms.ListView> controllare in **pannello SplitterPanel2** (il pannello del <xref:System.Windows.Forms.SplitContainer> controllo contrassegnato **Panel2**).  
   
-3.  Selezionare tutti e tre i controlli premendo il tasto CTRL e facendo clic su ciascun controllo.  Per selezionare il controllo <xref:System.Windows.Forms.SplitContainer>, fare clic sulla barra di divisione e non sui pannelli.  
+3.  Selezionare tutti i tre controlli premendo il tasto CTRL e facendo clic su essi a sua volta. Quando si seleziona il <xref:System.Windows.Forms.SplitContainer> controllo, fare clic sulla barra di divisione, anziché i pannelli.  
   
     > [!NOTE]
-    >  Non utilizzare il comando **Seleziona tutto** dal menu **Modifica**.  Se si utilizza tale comando, infatti, la proprietà necessaria per il passaggio successivo non verrà visualizzata nella finestra **Proprietà**.  
+    >  Non utilizzare il **Seleziona tutto** comando il **modifica** menu. Se in tal caso, la proprietà necessaria per il passaggio successivo non compariranno nella **proprietà** finestra.  
   
-4.  Nella finestra **Proprietà** impostare la proprietà <xref:System.Windows.Forms.SplitContainer.Dock%2A> su <xref:System.Windows.Forms.DockStyle>.  
+4.  Nel **proprietà** finestra, impostare il <xref:System.Windows.Forms.SplitContainer.Dock%2A> proprietà <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-5.  ‎Premere F5 per eseguire l'applicazione.  
+5.  Premere F5 per eseguire l'applicazione.  
   
-     Nel form viene visualizzata un'interfaccia in due parti, analoga a quella di Esplora risorse.  
+     Il modulo Visualizza un'interfaccia utente di due parti, simile a quella di Esplora risorse di Windows.  
   
     > [!NOTE]
     >  Quando si trascina la barra di divisione, i pannelli vengono ridimensionati.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.SplitContainer>   
- [Procedura: creare un'interfaccia utente a più riquadri con Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)   
- [Procedura: definire il ridimensionamento e il posizionamento in una finestra divisa](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)   
- [Procedura: suddividere una finestra orizzontalmente](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [Procedura: Creare un'interfaccia utente a più riquadri con Windows Form](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Procedura: Definire il ridimensionamento e il posizionamento in una finestra divisa](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [Procedura: Suddividere una finestra orizzontalmente](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
  [Controllo SplitContainer](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

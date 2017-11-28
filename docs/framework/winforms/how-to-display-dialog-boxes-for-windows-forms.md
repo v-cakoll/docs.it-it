@@ -1,43 +1,47 @@
 ---
-title: "How to: Display Dialog Boxes for Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, displaying"
-  - "Windows Forms dialog boxes, displaying"
-  - "Windows Forms, calling one form from another"
-  - "dialog boxes, displaying for Windows Forms"
+title: 'Procedura: visualizzare le finestre di dialogo per Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- Windows Forms, displaying
+- Windows Forms dialog boxes [Windows Forms], displaying
+- Windows Forms, calling one form from another
+- dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a3f827e9052260c1b836246d38c55e2cb2a9e5cc
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# How to: Display Dialog Boxes for Windows Forms
-Le finestre di dialogo vengono visualizzate nello stesso modo in cui sono visualizzati gli altri form dell'applicazione.  Il form di avvio viene caricato automaticamente quando si esegue l'applicazione.  Per visualizzare un secondo form o una seconda finestra di dialogo all'interno dell'applicazione, è necessario scrivere il codice che ne consente il caricamento e la visualizzazione.  Analogamente, per consentire la scomparsa del form o della finestra di dialogo, scrivere il codice per scaricare o nascondere l’elemento.  
+# <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Procedura: visualizzare le finestre di dialogo per Windows Form
+Viene visualizzata una finestra di dialogo nello stesso modo che visualizzare qualsiasi altra forma in un'applicazione. Il form di avvio carica automaticamente quando viene eseguita l'applicazione. Per rendere un secondo form o finestra di dialogo visualizzata nell'applicazione, scrivere codice per caricare e visualizzarlo. Analogamente, per rendere il modulo o finestra di dialogo casella scomparsa, scrivere il codice per scaricare o nasconderla.  
   
-### Per visualizzare una finestra di dialogo  
+### <a name="to-display-a-dialog-box"></a>Per visualizzare una finestra di dialogo  
   
-1.  Passare al gestore eventi tramite il quale si desidera aprire la finestra di dialogo.  Ciò può accadere quando si sceglie un comando di menu, quando si fa clic su un pulsante o quando si verifica un qualsiasi altro evento.  
+1.  Passare al gestore dell'evento a cui si desidera aprire la finestra di dialogo. Questa situazione può verificarsi quando un comando di menu è selezionato, quando viene premuto un pulsante o quando si verifica qualsiasi altro evento.  
   
-2.  Nel gestore eventi aggiungere il codice per aprire la finestra di dialogo.  Nell'esempio che segue viene utilizzato un evento Click relativo a un pulsante per visualizzare la finestra di dialogo:  
+2.  Nel gestore eventi, aggiungere il codice per aprire la finestra di dialogo. In questo esempio viene utilizzato un evento clic sul pulsante per visualizzare la finestra di dialogo:  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
        Dim dlg1 as new Form()  
        dlg1.ShowDialog()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ Le finestre di dialogo vengono visualizzate nello stesso modo in cui sono visual
        Form dlg1 = new Form();  
        dlg1.ShowDialog();  
     }  
-  
     ```  
   
     ```cpp  

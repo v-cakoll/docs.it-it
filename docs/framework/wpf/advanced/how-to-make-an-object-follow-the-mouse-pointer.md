@@ -1,39 +1,45 @@
 ---
-title: "Procedura: fare in modo che un oggetto segua il puntatore del mouse | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cursore (puntatore del mouse), creazione di oggetti che seguono"
-  - "che seguono il puntatore del mouse (cursore)"
-  - "puntatore del mouse (cursore), creazione di oggetti che seguono"
+title: 'Procedura: fare in modo che un oggetto segua il puntatore del mouse'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- following the mouse pointer (cursor)
+- mouse pointer (cursor), making objects follow
+- cursor (mouse pointer), making objects follow
 ms.assetid: 50b20415-14bc-405c-baf3-2fb254fffde3
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1991d2a4b43c679fe7e30f633742e01e281e19b3
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: fare in modo che un oggetto segua il puntatore del mouse
-In questo esempio viene illustrato come modificare le dimensioni di un oggetto quando il puntatore del mouse si sposta sullo schermo.  
+# <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>Procedura: fare in modo che un oggetto segua il puntatore del mouse
+In questo esempio viene illustrato come modificare le dimensioni di un oggetto quando si sposta il puntatore del mouse sullo schermo.  
   
- Nell'esempio è incluso un file [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] che crea [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e un file code\-behind che crea il gestore di eventi.  
+ L'esempio include un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file che crea il [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] e un file code-behind che crea il gestore dell'evento.  
   
-## Esempio  
- Nel codice [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] riportato di seguito viene creato [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], costituito da <xref:System.Windows.Shapes.Ellipse> all’interno di <xref:System.Windows.Controls.StackPanel> e viene allegato il gestore eventi per l’evento <xref:System.Windows.UIElement.MouseMove>.  
+## <a name="example"></a>Esempio  
+ Le operazioni seguenti [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] crea il [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], che include un <xref:System.Windows.Shapes.Ellipse> all'interno di un <xref:System.Windows.Controls.StackPanel>e associa il gestore eventi per il <xref:System.Windows.UIElement.MouseMove> evento.  
   
- [!code-xml[mouseMoveWithPointer#MouseMoveWithPointerXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
+ [!code-xaml[mouseMoveWithPointer#MouseMoveWithPointerXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml#mousemovewithpointerxaml)]  
   
- Nell’esempio di code\-behind riportato di seguito viene creati il gestore eventi <xref:System.Windows.UIElement.MouseMove>.  Quando il puntatore del mouse si sposta, l'altezza e la larghezza di <xref:System.Windows.Shapes.Ellipse> vengono aumentate e ridotte.  
+ Il codice seguente crea il <xref:System.Windows.UIElement.MouseMove> gestore dell'evento.  Quando il puntatore del mouse viene spostato, l'altezza e larghezza di <xref:System.Windows.Shapes.Ellipse> vengono aumentate e ridotte.  
   
  [!code-csharp[mouseMoveWithPointer#MouseMovePointerGetPosition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/mouseMoveWithPointer/CSharp/Window1.xaml.cs#mousemovepointergetposition)]
  [!code-vb[mouseMoveWithPointer#MouseMovePointerGetPosition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/mouseMoveWithPointer/VisualBasic/Window1.xaml.vb#mousemovepointergetposition)]  
   
-## Vedere anche  
- [Cenni preliminari sull’input](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sull'input](../../../../docs/framework/wpf/advanced/input-overview.md)

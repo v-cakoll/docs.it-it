@@ -1,24 +1,26 @@
 ---
-title: "Errore definito dall&#39;applicazione o dall&#39;oggetto | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID95"
+title: Errore definito dall'applicazione o dall'oggetto
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID95
 ms.assetid: 02b8e145-7988-48ad-abad-ed7656b4933c
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d6942e96e4257f899f1c2212fd2e18f4fc964fe4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# Errore definito dall&#39;applicazione o dall&#39;oggetto
+# <a name="application-defined-or-object-defined-error"></a>Errore definito dall'applicazione o dall'oggetto
 Si è verificato un errore definito dall'applicazione o dall'utente. Controllare l'errore.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
 -   Consultare l'errore per vedere dove è definito e come risolverlo.  
   
-## Vedere anche  
- [Error Types](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi di errore](../../visual-basic/programming-guide/language-features/error-types.md)

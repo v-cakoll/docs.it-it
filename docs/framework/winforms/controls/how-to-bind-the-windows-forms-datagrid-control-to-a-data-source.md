@@ -1,73 +1,74 @@
 ---
-title: "Procedura: associare il controllo DataGrid Windows Form a un&#39;origine dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli con associazione"
-  - "controlli con associazione, controllo DataGrid"
-  - "associazione dati, controllo DataGrid"
-  - "controlli con associazione a dati, DataGrid"
-  - "DataGrid (controllo) [Windows Form], associazione dati"
-  - "dataset [Windows Form], associazione al controllo DataGrid"
-  - "controlli Windows Form, associazione dati"
+title: 'Procedura: associare il controllo DataGrid Windows Form a un''origine dati'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- datasets [Windows Forms], binding to DataGrid control
+- data binding [Windows Forms], DataGrid control
+- DataGrid control [Windows Forms], data binding
+- bound controls [Windows Forms], DataGrid control
+- Windows Forms controls, data binding
+- bound controls [Windows Forms]
+- data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 185c094b32f0de7a1a26da144601961d92a625b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: associare il controllo DataGrid Windows Form a un&#39;origine dati
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Procedura: associare il controllo DataGrid Windows Form a un'origine dati
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  Per ulteriori informazioni vedere [Differenze tra i controlli DataGridView e DataGrid di Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+>  Benché il controllo <xref:System.Windows.Forms.DataGridView> sostituisca il controllo <xref:System.Windows.Forms.DataGrid> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.DataGrid> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro. Per altre informazioni, vedere [Differenze tra i controlli DataGridView e DataGrid Windows Form](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Il controllo <xref:System.Windows.Forms.DataGrid> Windows Form è specificamente progettato per la visualizzazione di informazioni di un'origine dati.  Il controllo viene associato in fase di esecuzione chiamando il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>.  Sebbene sia possibile visualizzare dati da numerose origini dati, quelle più comuni sono i dataset e le visualizzazioni dati.  
+ Windows Form <xref:System.Windows.Forms.DataGrid> controllo è progettato specificamente per visualizzare le informazioni da un'origine dati. Associare il controllo in fase di esecuzione chiamando il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo. Sebbene sia possibile visualizzare i dati da un'ampia gamma di origini dati, le cause più comuni sono i set di dati e le visualizzazioni dati.  
   
-### Per eseguire l'associazione dati del controllo DataGrid a livello di codice  
+### <a name="to-data-bind-the-datagrid-control-programmatically"></a>Per associare a livello di codice il controllo DataGrid  
   
-1.  Aggiungere codice per il riempimento del dataset.  
+1.  Scrivere codice per riempire il set di dati.  
   
-     Se l'origine dati è un dataset o una visualizzazione dati basata su una tabella di dataset, aggiungere codice al form per riempire il dataset.  
+     Se l'origine dati è un set di dati o una vista di dati basato su una tabella di set di dati, aggiungere codice al form per riempire il set di dati.  
   
-     L'esatto codice utilizzato dipende da dove il dataset ottiene i dati.  Se il dataset viene popolato direttamente da un database, verrà chiamato il metodo `Fill`  di un adattatore dati, come nell'esempio riportato di seguito, nel quale viene popolato un dataset denominato `DsCategories1`:  
+     Il codice esatto che è utilizzare dipende in cui il set di dati Ottiene i dati. Se il set di dati viene popolato direttamente da un database, si chiama in genere il `Fill` metodo di un adattatore di dati, come nell'esempio seguente, che popola un set di dati denominato `DsCategories1`:  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
-  
     ```  
   
     ```csharp  
     sqlDataAdapter1.Fill(DsCategories1);  
-  
     ```  
   
     ```cpp  
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-     Se la compilazione del dataset avviene da un servizio Web XML, verrà normalmente creata un'istanza del servizio nel codice e verrà chiamato uno dei relativi metodi per restituire un dataset.  Quindi, il dataset del servizio Web XML verrà unito al dataset locale.  Nell'esempio riportato di seguito viene illustrato come creare un'istanza di un servizio Web XML denominato `CategoriesService`, come chiamare il metodo `GetCategories` corrispondente e come unire il dataset risultante a un dataset locale, denominato `DsCategories1`:  
+     Se il set di dati viene riempito da un servizio Web XML, in genere creare un'istanza del servizio nel codice e quindi chiamare uno dei relativi metodi per restituire un set di dati. Quindi di unire il set di dati dal servizio Web XML in set di dati locale. Nell'esempio seguente viene illustrato come è possibile creare un'istanza di un servizio Web XML denominato `CategoriesService`, chiamare il relativo `GetCategories` (metodo) e merge, il set di dati risultante in un set di dati locale denominato `DsCategories1`:  
   
     ```vb  
     Dim ws As New MyProject.localhost.CategoriesService()  
     ws.Credentials = System.Net.CredentialCache.DefaultCredentials  
     DsCategories1.Merge(ws.GetCategories())  
-  
     ```  
   
     ```csharp  
     MyProject.localhost.CategoriesService ws = new MyProject.localhost.CategoriesService();  
     ws.Credentials = System.Net.CredentialCache.DefaultCredentials;  
     DsCategories1.Merge(ws.GetCategories());  
-  
     ```  
   
     ```cpp  
@@ -77,47 +78,43 @@ caps.handback.revision: 17
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  Chiamare il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> del controllo <xref:System.Windows.Forms.DataGrid>, passando l'origine dati e un membro dati.  Nel caso non fosse necessario passare un membro dati in modo esplicito, passare una stringa vuota.  
+2.  Chiamare il <xref:System.Windows.Forms.DataGrid> del controllo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> (metodo), passando l'origine dati e un membro dati. Se è necessario passare in modo esplicito un membro dati, passare una stringa vuota.  
   
     > [!NOTE]
-    >  Se si sta eseguendo l'associazione della griglia per la prima volta, è possibile impostare le proprietà <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> del controllo.  non sarà però più possibile reimpostarle, una volta eseguita l'operazione.  Si consiglia quindi di utilizzare sempre il metodo <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>.  
+    >  Se si desidera associare la griglia per la prima volta, è possibile impostare il controllo <xref:System.Windows.Forms.DataGrid.DataSource%2A> e <xref:System.Windows.Forms.DataGrid.DataMember%2A> proprietà. Tuttavia, non è possibile reimpostare le proprietà dopo che sono stati impostati. Pertanto, è consigliabile utilizzare sempre il <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodo.  
   
-     Nell'esempio seguente viene illustrato come effettuare l'associazione a livello di codice alla tabella Customers in un dataset denominato `DsCustomers1`:  
+     Nell'esempio seguente viene illustrato come è possibile associare a livello di codice alla tabella Customers in un set di dati denominato `DsCustomers1`:  
   
     ```vb  
     DataGrid1.SetDataBinding(DsCustomers1, "Customers")  
-  
     ```  
   
     ```csharp  
     DataGrid1.SetDataBinding(DsCustomers1, "Customers");  
-  
     ```  
   
     ```cpp  
     dataGrid1->SetDataBinding(dsCustomers1, "Customers");  
     ```  
   
-     Se la tabella Customers è l'unica tabella del dataset, sarà possibile, in alternativa, associare la griglia nel modo che segue:  
+     Se la tabella Customers è l'unica tabella nel set di dati, è in alternativa possibile associare la griglia in questo modo:  
   
     ```vb  
     DataGrid1.SetDataBinding(DsCustomers1, "")  
-  
     ```  
   
     ```csharp  
     DataGrid1.SetDataBinding(DsCustomers1, "");  
-  
     ```  
   
     ```cpp  
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  Se lo si desidera, aggiungere alla griglia gli stili di tabella e di colonna appropriati.  Se non viene definito alcuno stile di tabella, la tabella verrà ugualmente visualizzata, ma con una formattazione minima e con tutte le colonne visibili.  
+3.  (Facoltativo) Aggiungere gli stili tabella appropriata e gli stili di colonna nella griglia. Se sono presenti nessuno stile di tabella, verrà visualizzato nella tabella, ma con una formattazione minima e con tutte le colonne visibili.  
   
-## Vedere anche  
- [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)   
- [Procedura: aggiungere tabelle e colonne al controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)   
- [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [Associazione ai dati di Windows Form](../../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sul controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
+ [Procedura: Aggiungere tabelle e colonne al controllo DataGrid Windows Form](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
+ [Controllo DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [Data binding in Windows Form](../../../../docs/framework/winforms/windows-forms-data-binding.md)

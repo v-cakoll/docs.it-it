@@ -1,37 +1,42 @@
 ---
-title: "Procedura: rimuovere tutti gli strumenti decorativi visuali da un elemento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "elementi grafici, rimozione"
+title: 'Procedura: rimuovere tutti gli strumenti decorativi visuali da un elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: adorners [WPF], removing
 ms.assetid: fe5303a3-b76e-4643-aafb-51419032b47b
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e9b69b9150e8d2c2938c53fcd47e72b7fcb6d238
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: rimuovere tutti gli strumenti decorativi visuali da un elemento
-In questo esempio viene mostrato come rimuovere a livello di codice tutti gli strumenti decorativi visuali da un oggetto <xref:System.Windows.UIElement> specificato.  
+# <a name="how-to-remove-all-adorners-from-an-element"></a>Procedura: rimuovere tutti gli strumenti decorativi visuali da un elemento
+In questo esempio viene illustrato come rimuovere a livello di codice tutti gli strumenti decorativi da un oggetto specificato <xref:System.Windows.UIElement>.  
   
-## Esempio  
- In questo esempio di codice dettagliato vengono rimossi tutti gli strumenti decorativi visuali della matrice di strumenti decorativi visuali restituita dall'oggetto <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>.  Nell'esempio vengono recuperati gli strumenti decorativi visuali di un oggetto <xref:System.Windows.UIElement> denominato *myTextBox*.  Se l'elemento specificato nella chiamata a <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> non dispone di strumenti decorativi visuali, viene restituito `null`.  Questo codice verifica in modo esplicito una matrice null ed è particolarmente indicato per le applicazioni in cui si prevede che una matrice null sia comune.  
+## <a name="example"></a>Esempio  
+ Questo esempio di codice dettagliato rimuove tutti gli strumenti decorativi nella matrice di Adorner restituito da <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A>.  Questo esempio vengono recuperati gli strumenti decorativi su un <xref:System.Windows.UIElement> denominato *myTextBox*.  Se l'elemento specificato nella chiamata a <xref:System.Windows.Documents.AdornerLayer.GetAdorners%2A> senza strumenti decorativi visuali, `null` viene restituito.  Questo codice verifica la presenza di una matrice null, in modo esplicito ed è più adatto per le applicazioni in una matrice null deve essere abbastanza comune.  
   
  [!code-csharp[AdornersMiscCode#_RemoveAllAdornersLong](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removealladornerslong)]
  [!code-vb[AdornersMiscCode#_RemoveAllAdornersLong](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removealladornerslong)]  
   
-## Esempio  
- Questo esempio di codice ridotto è equivalente, da un punto di vista funzionale, all'esempio dettagliato mostrato in precedenza.  Questo codice non verifica in modo esplicito una matrice null, pertanto è possibile che venga generata un'eccezione <xref:System.NullReferenceException>.  Questo codice è particolarmente indicato per le applicazioni in cui si prevede che una matrice null sia rara.  
+## <a name="example"></a>Esempio  
+ In questo esempio di codice ridotto è funzionalmente equivalente all'esempio dettagliato illustrato in precedenza. Questo codice non controllano in modo esplicito una matrice null, pertanto è possibile che un <xref:System.NullReferenceException> può essere generata l'eccezione.  Questo codice è più adatto per le applicazioni in cui in cui è prevista una matrice null rari.  
   
  [!code-csharp[AdornersMiscCode#_RemoveAllAdornersShort](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdornersMiscCode/CSharp/Window1.xaml.cs#_removealladornersshort)]
  [!code-vb[AdornersMiscCode#_RemoveAllAdornersShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removealladornersshort)]  
   
-## Vedere anche  
- [Cenni preliminari sugli strumenti decorativi visuali](../../../../docs/framework/wpf/controls/adorners-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica sugli strumenti decorativi](../../../../docs/framework/wpf/controls/adorners-overview.md)

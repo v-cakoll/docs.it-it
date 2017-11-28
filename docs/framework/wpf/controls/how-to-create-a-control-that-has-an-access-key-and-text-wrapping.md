@@ -1,49 +1,50 @@
 ---
-title: "Procedura: creare un controllo dotato di un tasto di scelta e di una disposizione testo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "tasti di scelta, controllo"
-  - "controlli, tasti di scelta"
-  - "controlli, disposizione di testo"
-  - "chiavi, controllo"
-  - "disposizione di testo"
-  - "disposizione di testo"
+title: 'Procedura: creare un controllo dotato di un tasto di scelta e di una disposizione testo'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access keys [WPF], control for
+- controls [WPF], text wrapping
+- wrapping text [WPF]
+- keys [WPF], control for
+- controls [WPF], access keys
+- text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2a759011425a3f09a7b91b728442f8e8ea7b92fa
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Procedura: creare un controllo dotato di un tasto di scelta e di una disposizione testo
-In questo esempio viene illustrato come creare un controllo con un [tasto di scelta](GTMT) e con supporto della disposizione testo.  Nell'esempio viene utilizzato un controllo <xref:System.Windows.Controls.Label> per illustrare questi concetti.  
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Procedura: creare un controllo dotato di un tasto di scelta e di una disposizione testo
+Questo esempio illustra come creare un controllo dotato di un tasto di scelta e con un supporto di disposizione testo. Nell'esempio viene utilizzato un <xref:System.Windows.Controls.Label> controllo per illustrare questi concetti.  
   
-## Esempio  
- **Aggiungere disposizione testo all'etichetta**  
+## <a name="example"></a>Esempio  
+ **Aggiungere la disposizione del testo all'etichetta**  
   
- Il controllo <xref:System.Windows.Controls.Label> non supporta la disposizione testo.  Se è necessaria un'etichetta disposta su più righe, è possibile annidare un altro elemento che supporta la disposizione testo e inserirlo nell'etichetta.  Nell'esempio riportato di seguito viene illustrato come utilizzare un oggetto <xref:System.Windows.Controls.TextBlock> per creare un'etichetta disposta su più righe di testo.  
+ Il <xref:System.Windows.Controls.Label> controllo non supporta testo a capo. Se è necessaria un'etichetta che esegue il wrapping su più righe, è possibile annidare un altro elemento che supporta la disposizione testo e inserirlo nell'etichetta. Nell'esempio seguente viene illustrato come utilizzare un <xref:System.Windows.Controls.TextBlock> per creare un'etichetta che esegue il wrapping di più righe di testo.  
   
- <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]  -->
- <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  -->  
+ [!code-xaml[LabelSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
  **Aggiungere un tasto di scelta e una disposizione testo all'etichetta**  
   
- Se è necessario un oggetto <xref:System.Windows.Controls.Label> con un tasto di scelta, utilizzare l'elemento <xref:System.Windows.Controls.AccessText> all'interno di <xref:System.Windows.Controls.Label>.  
+ Se è necessario un <xref:System.Windows.Controls.Label> che dispone di una chiave di accesso (tasto di scelta), utilizzare il <xref:System.Windows.Controls.AccessText> elemento all'interno di <xref:System.Windows.Controls.Label>.  
   
- I controlli quali <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.Expander> e <xref:System.Windows.Controls.GroupBox> dispongono di modelli di controllo predefiniti.  Questi modelli contengono un oggetto <xref:System.Windows.Controls.ContentPresenter>.  Una delle proprietà che è possibile impostare su <xref:System.Windows.Controls.ContentPresenter> è <xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>\="true", che può essere utilizzata per specificare un tasto di scelta per il controllo.  
+ I controlli come <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.RadioButton>, <xref:System.Windows.Controls.CheckBox>, <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.Expander>, e <xref:System.Windows.Controls.GroupBox> dispone di modelli di controllo predefinito. Questi modelli contengono un <xref:System.Windows.Controls.ContentPresenter>. Una delle proprietà che è possibile impostare per il <xref:System.Windows.Controls.ContentPresenter> è <xref:System.Windows.Controls.ContentPresenter.RecognizesAccessKey%2A>= "true", che consente di specificare una chiave di accesso per il controllo.  
   
- Nell'esempio riportato di seguito viene illustrato come creare un oggetto <xref:System.Windows.Controls.Label> con un tasto di scelta e con supporto della disposizione testo.  Per abilitare la disposizione testo, nell'esempio viene impostata la proprietà <xref:System.Windows.Controls.AccessText.TextWrapping%2A> e viene utilizzato un carattere di sottolineatura per specificare il tasto di scelta.  Il carattere immediatamente successivo al carattere di sottolineatura è il tasto di scelta.  
+ Nell'esempio seguente viene illustrato come creare un <xref:System.Windows.Controls.Label> che dispone di una chiave di accesso e supporta la disposizione del testo. Per abilitare la disposizione testo, nell'esempio viene impostata la <xref:System.Windows.Controls.AccessText.TextWrapping%2A> proprietà e viene utilizzato un carattere di sottolineatura per specificare la chiave di accesso. Il carattere immediatamente successivo al carattere di sottolineatura è il tasto di scelta.  
   
- <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]  -->
- <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  -->  
+ [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
-## Vedere anche  
- [How to: Set the Target Property of a Label](http://msdn.microsoft.com/it-it/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+## <a name="see-also"></a>Vedere anche  
+ [Procedura: impostare la proprietà di destinazione di un controllo Label](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

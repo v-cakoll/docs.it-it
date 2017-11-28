@@ -1,22 +1,25 @@
 ---
-title: "Procedura: ospitare un servizio WCF in WAS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: ospitare un servizio WCF in WAS'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-caps.latest.revision: 25
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3069dfbde9fedc0a0c89d8f55ba1adcc852d5c24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: ospitare un servizio WCF in WAS
+# <a name="how-to-host-a-wcf-service-in-was"></a>Procedura: ospitare un servizio WCF in WAS
 In questo argomento vengono delineati i passaggi di base necessari per creare un servizio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ospitato nel servizio di attivazione dei processi di Windows, noto anche come WAS. WAS è il nuovo servizio di attivazione dei processi che rappresenta una generalizzazione delle funzionalità di Internet Information Services (IIS) utilizzabili con protocolli di trasporto non HTTP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilizza l'interfaccia dell'adattatore listener per comunicare richieste di attivazione ricevute tramite i protocolli non HTTP supportati da [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ad esempio TCP, named pipe e Accodamento messaggi.  
   
  Questa opzione di hosting richiede che i componenti di attivazione WAS vengano installati e configurati correttamente, ma non richiede la scrittura di codice di hosting come parte dell'applicazione. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]installazione e configurazione di WAS, vedere [procedura: installare e configurare componenti di attivazione WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
@@ -24,7 +27,7 @@ In questo argomento vengono delineati i passaggi di base necessari per creare un
 > [!WARNING]
 >  L'attivazione di WAS non è supportata se la pipeline di elaborazione delle richieste del server Web è impostata sulla modalità classica. Se è necessario utilizzare l'attivazione WAS, la pipeline di elaborazione delle richieste del server Web deve essere impostata sulla modalità integrata.  
   
- Quando un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene ospitato in WAS, vengono utilizzate le associazioni standard come di consueto. Tuttavia, quando si utilizza il <xref:System.ServiceModel.NetTcpBinding> e <xref:System.ServiceModel.NetNamedPipeBinding> per configurare un servizio ospitato in WAS, un vincolo deve essere soddisfatta. Quando endpoint diversi utilizzano lo stesso trasporto, le impostazioni dell'associazione devono corrispondere sulle sette proprietà seguenti:  
+ Quando un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene ospitato in WAS, vengono utilizzate le associazioni standard come di consueto. Tuttavia, quando si utilizzano <xref:System.ServiceModel.NetTcpBinding> e <xref:System.ServiceModel.NetNamedPipeBinding> per configurare un servizio ospitato in WAS, è necessario che sia rispettato un vincolo. Quando endpoint diversi utilizzano lo stesso trasporto, le impostazioni dell'associazione devono corrispondere sulle sette proprietà seguenti:  
   
 -   ConnectionBufferSize  
   
@@ -40,7 +43,7 @@ In questo argomento vengono delineati i passaggi di base necessari per creare un
   
 -   ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
   
- In caso contrario, l'endpoint che viene inizializzato primo determina sempre i valori di queste proprietà e gli endpoint aggiunti in seguito generano un <xref:System.ServiceModel.ServiceActivationException> se tali impostazioni non corrispondono.  
+ In caso contrario, l'endpoint che viene inizializzato per primo determina sempre i valori di queste proprietà e gli endpoint aggiunti in seguito generano un'eccezione <xref:System.ServiceModel.ServiceActivationException>, se non corrispondono alle impostazioni in questione.  
   
  Per la copia di origine di questo esempio, vedere [attivazione TCP](../../../../docs/framework/wcf/samples/tcp-activation.md).  
   
@@ -54,7 +57,7 @@ In questo argomento vengono delineati i passaggi di base necessari per creare un
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  Creare un file Web. config per definire il <xref:System.ServiceModel.NetTcpBinding> associazione da utilizzare per il `CalculatorService` endpoint.  
+3.  Creare un file Web.config per definire l'associazione <xref:System.ServiceModel.NetTcpBinding> che `CalculatorService` deve utilizzare.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -95,9 +98,9 @@ In questo argomento vengono delineati i passaggi di base necessari per creare un
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  La configurazione per il client che utilizza il <xref:System.ServiceModel.NetTcpBinding> viene generata anche da Svcutil.exe. Quando si utilizza Visual Studio, questo file deve essere denominato App.config.  
+4.  Anche la configurazione del client che utilizza la classe <xref:System.ServiceModel.NetTcpBinding> viene generata da Svcutil.exe. Quando si utilizza Visual Studio, questo file deve essere denominato App.config.  
   
-     <!-- TODO: review snippet reference [!code[C_HowTo_HostInWAS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]  -->  
+     [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
 5.  Creare un'istanza di `ClientCalculator` in un'applicazione, quindi chiamare le operazioni del servizio.  
   
@@ -106,5 +109,5 @@ In questo argomento vengono delineati i passaggi di base necessari per creare un
 6.  Compilare ed eseguire il client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attivazione TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)   
+ [Attivazione TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [Windows Server AppFabric con funzionalità di Hosting](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -1,47 +1,46 @@
 ---
-title: "&lt;code&gt; (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "code XML tag"
-  - "<code> XML tag"
+title: '&lt;codice&gt; (Visual Basic)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- code XML tag
+- <code> XML tag
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a7c1d8ab3db0c36c6a2935b9ffbef15e87df5ebc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;code&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Indica che il testo è composto da più righe di codice.  
+# <a name="ltcodegt-visual-basic"></a>&lt;codice&gt; (Visual Basic)
+Indica che il testo è più righe di codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+```xml  
 <code>content</code>  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `content`  
  Testo da contrassegnare come codice.  
   
-## Note  
- Utilizzare il tag `<code>` per indicare più righe come codice.  Utilizzare [\<c\>](../../../visual-basic/language-reference/xmldoc/c.md) per indicare che il testo incluso in una descrizione deve essere contrassegnato come codice.  
+## <a name="remarks"></a>Note  
+ Utilizzare il `<code>` tag per indicare più righe di codice. Usare [\<c>](../../../visual-basic/language-reference/xmldoc/c.md) per indicare che il testo all'interno di una descrizione deve essere contrassegnato come codice.  
   
- Eseguire la compilazione con [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare in un file i commenti relativi alla documentazione.  
+ Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
-## Esempio  
- Nell'esempio riportato di seguito il tag \<code\> viene utilizzato per includere un esempio di codice relativo all'utilizzo del campo `ID`.  
+## <a name="example"></a>Esempio  
+ Questo esempio viene utilizzato il \<codice > tag per includere il codice di esempio per l'utilizzo di `ID` campo.  
   
  [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/code_1.vb)]  
   
-## Vedere anche  
- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

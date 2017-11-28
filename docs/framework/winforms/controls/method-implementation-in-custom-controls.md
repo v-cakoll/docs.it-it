@@ -1,30 +1,34 @@
 ---
-title: "Implementazione dei metodi nei controlli personalizzati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli utente [Windows Form], implementazione del metodo"
-  - "overload di metodi controlli personalizzati [Windows Form]"
-  - "controlli personalizzati [Windows Form], implementazione del metodo"
-  - "metodi [Windows Form]"
-  - "metodi di controlli personalizzati [Windows Form]"
+title: Implementazione dei metodi nei controlli personalizzati
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- user controls [Windows Forms], method implementation
+- custom controls [Windows Forms], overloading methods
+- custom controls [Windows Forms], method implementation
+- methods [Windows Forms]
+- methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c992197b653fb3999870247a3a4cdb4015612ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Implementazione dei metodi nei controlli personalizzati
+# <a name="method-implementation-in-custom-controls"></a>Implementazione dei metodi nei controlli personalizzati
 Un metodo viene implementato in un controllo nello stesso modo in cui avviene in qualsiasi altro componente.  
   
  In Visual Basic, se un metodo deve restituire un valore, viene implementato come `Public Function`, mentre se non deve restituire alcun valore, viene implementato come `Public Sub`. I metodi vengono dichiarati usando la sintassi seguente:  
@@ -82,5 +86,5 @@ public void Spin(Widget driver)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eventi](../../../../docs/standard/events/index.md)   
- [Proprietà nei controlli Windows Form](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+ [Eventi](../../../../docs/standard/events/index.md)  
+ [Proprietà dei controlli Windows Form](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)

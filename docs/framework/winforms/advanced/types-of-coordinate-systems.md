@@ -1,105 +1,109 @@
 ---
-title: "Tipi di sistemi di coordinate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "sistemi coordinati"
-  - "sistema di coordinate del dispositivo"
-  - "sistema di coordinate della pagina"
-  - "trasformazione della pagina"
-  - "trasformazioni, pagina"
-  - "trasformazioni, complessive"
-  - "unità di misura"
-  - "sistema di coordinate complessive"
-  - "trasformazione complessiva"
+title: Tipi di sistemi di coordinate
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- transformations [Windows Forms], page
+- unit of measure
+- world coordinate system
+- page coordinate system
+- page transformation
+- device coordinate system
+- world transformation
+- coordinate systems
+- transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: be89584ee8e7a82c405bf8664bfad18ced6d989a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Tipi di sistemi di coordinate
-In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vengono utilizzati tre spazi di coordinate: complessivo, pagina e dispositivo.  Le coordinate complessive vengono utilizzate per la modellazione di un particolare grafico e in .NET Framework vengono passate ai metodi.  Le coordinate di pagina fanno riferimento al sistema di coordinate utilizzato su una superficie di disegno, ad esempio form o controllo.  Le coordinate di periferica vengono utilizzate dalla periferica fisica su cui si disegna, ad esempio uno schermo o un foglio di carta.  Quando si effettua una chiamata `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, al metodo <xref:System.Drawing.Graphics.DrawLine%2A> vengono passati i punti `(0, 0)` e `(160, 80)` inclusi nello spazio di coordinate complessivo.  Prima che in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] sia possibile tracciare le linee sullo schermo, le coordinate subiscono una sequenza di trasformazioni.  Una trasformazione, chiamata trasformazione complessiva, converte le coordinate complessive in coordinate di pagina, mentre un'altra trasformazione, chiamata trasformazione di pagina, converte le coordinate di pagina in coordinate di periferica.  
+# <a name="types-of-coordinate-systems"></a>Tipi di sistemi di coordinate
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]utilizza tre spazi di coordinate: world, pagina e dispositivo. Coordinate sono le coordinate usate per modellare un particolare ambiente grafico e le coordinate passate ai metodi in .NET Framework. Le coordinate di pagina può fare riferimento al sistema di coordinate utilizzato da un'area di disegno, ad esempio un form o controllo. Le coordinate di dispositivo vengono utilizzate dal dispositivo fisico da disegnare, ad esempio una schermata o un foglio di carta. Quando si effettua una chiamata `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, passati per i punti di <xref:System.Drawing.Graphics.DrawLine%2A> metodo:`(0, 0)` e `(160, 80)`, sono nello spazio delle coordinate world. Prima di [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] possibile tracciare le linee sullo schermo, le coordinate passano attraverso una sequenza di trasformazioni. Una trasformazione, ossia la trasformazione globale, converte le coordinate complessive alle coordinate di pagina e un'altra trasformazione, ossia la trasformazione della pagina, converte le coordinate di pagina in coordinate dispositivo.  
   
-## Trasformazioni e sistemi di coordinate  
- Si supponga che sia necessario effettuare operazioni con un sistema di coordinate la cui origine si trova nel corpo dell'area client anziché nell'angolo superiore sinistro.  Si supponga ad esempio che l'origine desiderata si trovi a 100 pixel di distanza dal margine dell'area client e a 50 pixel di distanza dall'estremità superiore dell'area client.  Nell'immagine seguente viene mostrato tale sistema di coordinate.  
+## <a name="transforms-and-coordinate-systems"></a>Sistemi di Coordinate e trasformazioni  
+ Si supponga che si desidera lavorare con un sistema di coordinate che ha origine nel corpo dell'area client anziché nell'angolo superiore sinistro. Si supponga, ad esempio, che si desidera l'origine sia uguale a 100 pixel dal bordo sinistro dell'area client e 50 pixel dalla parte superiore dell'area client. Nella figura seguente viene illustrato un sistema di coordinate.  
   
- ![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art01.png "AboutGdip05\_art01")  
+ ![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art01.gif "AboutGdip05_art01")  
   
- Quando si effettua una chiamata `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, si ottengono le linee visualizzate nell'immagine seguente.  
+ Quando si effettua una chiamata `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, si ottengono le linee illustrata nella figura seguente.  
   
- ![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art02.png "AboutGdip05\_art02")  
+ ![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art02.gif "AboutGdip05_art02")  
   
- Le coordinate dei punti finali della linea nei tre spazi di coordinate sono le seguenti  
+ Le coordinate dei punti finali della linea in tre spazi di coordinate sono i seguenti:  
   
 |||  
 |-|-|  
-|World|Da \(0, 0\) a \(160, 80\)|  
-|Page|Da \(100, 50\) a \(260, 130\)|  
-|Dispositivo|Da \(100, 50\) a \(260, 130\)|  
+|World|(0, 0) a (160, 80)|  
+|Pagina|(100, 50) a (260, 130)|  
+|Dispositivo|(100, 50) a (260, 130)|  
   
- Si noti che l'origine dello spazio di coordinate della pagina si trova nell'angolo superiore sinistro dell'area client. Tale valore sarà sempre costante.  Si noti inoltre che le coordinate della periferica corrispondono alle coordinate della pagina, poiché l'unità di misura utilizzata è il pixel.  Se si utilizza un'unità di misura diversa dai pixel \(ad esempio i pollici\), le coordinate della periferica non corrisponderanno alle coordinate della pagina.  
+ Si noti che lo spazio delle coordinate pagina ha origine nell'angolo superiore sinistro dell'area client. Questo sarà sempre il caso. Si noti inoltre che perché l'unità di misura è il pixel, le coordinate del dispositivo sono le stesse coordinate di pagina. Se si imposta l'unità di misura su un valore diverso da pixel (ad esempio pollici), le coordinate del dispositivo sarà diverse dalle coordinate della pagina.  
   
- La trasformazione complessiva, che consente di associare le coordinate complessive alle coordinate della pagina, è contenuta nella proprietà <xref:System.Drawing.Graphics.Transform%2A> della classe <xref:System.Drawing.Graphics>.  La trasformazione complessiva riportata nell'esempio precedente consiste in una traslazione di 100 unità nella direzione x e 50 unità nella direzione y.  L'esempio seguente consente di impostare la trasformazione complessiva di un oggetto <xref:System.Drawing.Graphics> e di utilizzare tale oggetto per tracciare la linea mostrata nell'immagine precedente:  
+ La trasformazione globale, viene eseguito il mapping di coordinate complessive alle coordinate di pagina, viene mantenuta il <xref:System.Drawing.Graphics.Transform%2A> proprietà del <xref:System.Drawing.Graphics> classe. Nell'esempio precedente, la trasformazione globale è una conversione di 100 unità nella direzione x e 50 unità nella direzione y. Nell'esempio seguente imposta la trasformazione globale di un <xref:System.Drawing.Graphics> dell'oggetto e quindi utilizza quello <xref:System.Drawing.Graphics> oggetto su cui disegnare la riga illustrata nella figura precedente:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.CoordinateSystems#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#31)]  
   
- La trasformazione di pagina consente di associare le coordinate della pagina alle coordinate della periferica.  Nella classe <xref:System.Drawing.Graphics> sono disponibili le proprietà <xref:System.Drawing.Graphics.PageUnit%2A> e <xref:System.Drawing.Graphics.PageScale%2A> per la modifica della trasformazione di pagina.  Nella classe <xref:System.Drawing.Graphics> sono inoltre disponibili due proprietà di sola lettura, <xref:System.Drawing.Graphics.DpiX%2A> e <xref:System.Drawing.Graphics.DpiY%2A>, che consentono di esaminare i punti in orizzontale e verticale per pollice della periferica di visualizzazione.  
+ La trasformazione della pagina esegue il mapping le coordinate di pagina in coordinate del dispositivo. Il <xref:System.Drawing.Graphics> classe fornisce il <xref:System.Drawing.Graphics.PageUnit%2A> e <xref:System.Drawing.Graphics.PageScale%2A> le proprietà per la modifica della trasformazione di pagina. Il <xref:System.Drawing.Graphics> classe fornisce anche due proprietà di sola lettura, <xref:System.Drawing.Graphics.DpiX%2A> e <xref:System.Drawing.Graphics.DpiY%2A>, per esaminare i punti per pollice del dispositivo di visualizzazione in orizzontali e verticali.  
   
- È possibile utilizzare la proprietà <xref:System.Drawing.Graphics.PageUnit%2A> della classe <xref:System.Drawing.Graphics> per specificare un'unità di misura diversa dal pixel.  
+ È possibile utilizzare il <xref:System.Drawing.Graphics.PageUnit%2A> proprietà la <xref:System.Drawing.Graphics> classe per specificare un'unità di misura diversa dal pixel.  
   
 > [!NOTE]
->  Non è possibile impostare la proprietà <xref:System.Drawing.Graphics.PageUnit%2A> su <xref:System.Drawing.GraphicsUnit>, in quanto non si tratta di un'unità fisica e verrà generata un'eccezione.  
+>  Non è possibile impostare il <xref:System.Drawing.Graphics.PageUnit%2A> proprietà <xref:System.Drawing.GraphicsUnit.World>, in quanto non è un'unità fisica e genererà un'eccezione.  
   
- L'esempio seguente consente di tracciare una linea che unisce il punto \(0, 0\) e il punto \(2, 1\), dove il punto \(2, 1\) si trova 2 pollici a destra e 1 un pollice sotto rispetto al punto \(0, 0\):  
+ Nell'esempio seguente disegna una linea da (0, 0) a (2, 1), in cui il punto (2, 1) è di 2 pollici a destra e 1 pollice verso il basso tra il punto (0, 0):  
   
  [!code-csharp[System.Drawing.CoordinateSystems#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.CoordinateSystems#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#32)]  
   
 > [!NOTE]
->  Se quando si costruisce la penna non si specifica alcuno spessore, la linea tracciata nell'esempio seguente avrà spessore pari a un pollice.  È possibile specificare lo spessore della penna nel secondo argomento del costruttore <xref:System.Drawing.Pen>.  
+>  Se non si specifica una larghezza della penna quando si costruisce la penna, nell'esempio precedente verrà disegnare una linea di un pollice. È possibile specificare la larghezza della penna nel secondo argomento per il <xref:System.Drawing.Pen> costruttore:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#33](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#33)]
  [!code-vb[System.Drawing.CoordinateSystems#33](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#33)]  
   
- Se si suppone che nella periferica di visualizzazione siano disponibili 96 punti per pollice in direzione orizzontale e 96 punti per pollice in direzione verticale, i valori relativi ai punti finali della linea dell'esempio nei tre spazi di coordinate saranno i seguenti:  
+ Se si presuppone che il dispositivo di visualizzazione è di 96 punti per pollice in direzione orizzontale e 96 punti per pollice in direzione verticale, gli endpoint della riga nell'esempio precedente sono le seguenti coordinate in tre spazi di coordinate:  
   
 |||  
 |-|-|  
-|World|Da \(0, 0\) a \(2, 1\)|  
-|Page|Da \(0, 0\) a \(2, 1\)|  
-|Dispositivo|Da \(0, 0\) a \(192, 96\)|  
+|World|(0, 0) a (2, 1)|  
+|Pagina|(0, 0) a (2, 1)|  
+|Dispositivo|(0, 0, a (192, 96)|  
   
- Si noti che le coordinate di pagina corrispondono alle coordinate complessive, poiché l'origine dello spazio di coordinate complessivo si trova nell'angolo superiore sinistro dell'area client.  
+ Si noti che poiché l'origine di spazio di coordinate complessivo è l'angolo superiore sinistro dell'area client, le coordinate della pagina sono le stesse coordinate globali.  
   
- È possibile combinare trasformazioni complessive e di pagina per ottenere svariati effetti.  Si supponga ad esempio che si desideri utilizzare i pollici come unità di misura e che l'origine del sistema di coordinate si trovi a 2 pollici dal margine sinistro dell'area client e a 1\/2 pollice dall'estremità superiore dell'area client.  L'esempio seguente consente di impostare le trasformazioni complessiva e di pagina di un oggetto <xref:System.Drawing.Graphics> e di tracciare una riga dal punto \(0, 0\) al punto \(2, 1\):  
+ È possibile combinare le trasformazioni globali e di pagina per ottenere un'ampia gamma di effetti. Si supponga, ad esempio, che si desidera utilizzare pollici come unità di misura e si desidera che l'origine del sistema di coordinate sarà di 2 pollici dal bordo sinistro dell'area client e 1/2 pollice dalla parte superiore dell'area client. Nell'esempio seguente imposta le trasformazioni globali e di pagina di un <xref:System.Drawing.Graphics> dell'oggetto e quindi disegna una linea da (0, 0) a (2, 1):  
   
  [!code-csharp[System.Drawing.CoordinateSystems#34](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.CoordinateSystems#34](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#34)]  
   
- Nell'immagine seguente vengono mostrati la linea e il sistema di coordinate.  
+ Nella figura seguente mostra la riga e sistema di coordinate.  
   
- ![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art03.png "AboutGdip05\_art03")  
+ ![Sistema di coordinate](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art03.gif "AboutGdip05_art03")  
   
- Se si suppone che nella periferica di visualizzazione siano disponibili 96 punti per pollice in direzione orizzontale e 96 punti per pollice in direzione verticale, i valori relativi ai punti finali della linea dell'esempio nei tre spazi di coordinate saranno i seguenti:  
+ Se si presuppone che il dispositivo di visualizzazione è di 96 punti per pollice in direzione orizzontale e 96 punti per pollice in direzione verticale, gli endpoint della riga nell'esempio precedente sono le seguenti coordinate in tre spazi di coordinate:  
   
 |||  
 |-|-|  
-|World|Da \(0, 0\) a \(2, 1\)|  
-|Page|Da \(2, 0,5\) a \(4, 1,5\)|  
-|Dispositivo|Da \(192, 48\) a \(384, 144\)|  
+|World|(0, 0) a (2, 1)|  
+|Pagina|(2, 0,5) a (4, 1.5)|  
+|Dispositivo|(192, 48) a (384, 144)|  
   
-## Vedere anche  
- [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
  [Rappresentazione tramite matrici delle trasformazioni](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)

@@ -1,39 +1,43 @@
 ---
-title: "Definizione di una propriet&#224; nei controlli Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli personalizzati [Windows Form], definizione delle proprietà nel codice"
-  - "proprietà [Windows Form], definizione nel codice"
+title: "Definizione di una proprietà nei controlli Windows Form"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [Windows Forms], defining in code
+- custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c3c25b9c408e5b8f0b76cdf87375875cdb06a13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Definizione di una propriet&#224; nei controlli Windows Form
-Per informazioni generali sulle proprietà vedere [Properties Overview](../Topic/Properties%20Overview.md).  Quando si definisce una proprietà è importante tenere presenti alcuni aspetti:  
+# <a name="defining-a-property-in-windows-forms-controls"></a>Definizione di una proprietà nei controlli Windows Form
+Per una panoramica delle proprietà, vedere [Cenni preliminari sulle proprietà](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Quando si definisce una proprietà sono da considerare i seguenti elementi:  
   
--   È necessario applicare attributi alle proprietà che si definiscono.  Gli attributi specificano le modalità di visualizzazione di una proprietà nella finestra di progettazione.  Per informazioni dettagliate vedere [Design\-Time Attributes for Components](../Topic/Design-Time%20Attributes%20for%20Components.md).  
+-   È necessario applicare attributi alle proprietà definite. Gli attributi specificano l'aspetto di una proprietà in una progettazione. Per informazioni dettagliate, vedere [Attributi per componenti in fase di progettazione](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
   
--   Se la modifica di una proprietà ha effetto sulla visualizzazione del controllo, chiamare il metodo <xref:System.Windows.Forms.Control.Invalidate%2A> \(che il controllo eredita da <xref:System.Windows.Forms.Control>\) dalla funzione di accesso `set`.  <xref:System.Windows.Forms.Control.Invalidate%2A> chiama a sua volta il metodo <xref:System.Windows.Forms.Control.OnPaint%2A>, che ridisegna il controllo.  Più chiamate a <xref:System.Windows.Forms.Control.Invalidate%2A> producono, ai fini di una maggiore efficienza, un'unica chiamata a <xref:System.Windows.Forms.Control.OnPaint%2A>.  
+-   Se la modifica della proprietà ha effetto sulla visualizzazione del controllo, chiamare il <xref:System.Windows.Forms.Control.Invalidate%2A> metodo (che il controllo eredita da <xref:System.Windows.Forms.Control>) dal `set` della funzione di accesso. <xref:System.Windows.Forms.Control.Invalidate%2A>a sua volta chiama il <xref:System.Windows.Forms.Control.OnPaint%2A> metodo, che consente di ricreare il controllo. Più chiamate al metodo <xref:System.Windows.Forms.Control.Invalidate%2A> risultato in una singola chiamata a <xref:System.Windows.Forms.Control.OnPaint%2A> per migliorare l'efficienza.  
   
--   La libreria di classi di .NET Framework fornisce convertitori di tipi per tipi di dati comuni quali Integer, numeri decimali, valori booleani e altri.  Lo scopo di un convertitore di tipi è in genere di operare una conversione da stringa a valore, ovvero da dati di tipo stringa ad altri tipi di dati.  I tipi di dati comuni sono associati a convertitori di tipi predefiniti che convertono i valori in stringhe e le stringhe nei tipi di dati appropriati.  Se si definisce una proprietà che rappresenta un tipo di dati personalizzato, ovvero non standard, sarà necessario applicare un attributo che specifichi il convertitore di tipi da associare a tale proprietà.  È inoltre possibile utilizzare un attributo per associare a una proprietà un editor di tipi con interfaccia utente personalizzato.  Un editor di tipi con interfaccia utente fornisce un'interfaccia utente per la modifica di una proprietà o di un tipo di dati.  La finestra Selezione colori è un esempio di editor di tipi con interfaccia utente.  Esempi di attributi sono forniti al termine di questo argomento.  
+-   La libreria di classi .NET Framework fornisce convertitori di tipi per tipi di dati comuni, ad esempio numeri interi, numeri decimali, valori booleani e altri. Lo scopo di un convertitore di tipi è in genere quello di fornire la conversione da stringa a valore (da dati stringa in altri tipi di dati). I tipi di dati comuni sono associati a convertitori di tipi predefiniti che convertono i valori in stringhe e le stringhe in tipi di dati appropriati. Se si definisce una proprietà che è un tipo di dati personalizzati (vale a dire non standard), è necessario applicare un attributo che specifica il convertitore di tipi da associare a tale proprietà. È inoltre possibile usare un attributo per associare un editor di tipi dell'interfaccia utente personalizzato a una proprietà. Un editor di tipi dell'interfaccia utente fornisce un'interfaccia utente per la modifica di un tipo di dati o proprietà. La selezione colori è un esempio di un editor di tipi dell'interfaccia utente. Alla fine di questo argomento vengono forniti esempi di attributi.  
   
     > [!NOTE]
-    >  Se non è disponibile alcun convertitore di tipi o editor di tipi con interfaccia utente per la proprietà personalizzata, sarà possibile implementarne uno come descritto in [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md).  
+    >  Se un convertitore di tipi o un editor di tipi dell'interfaccia utente non è disponibile per la proprietà personalizzata, è possibile implementarne uno come descritto in [Estensione del supporto in fase di progettazione](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
   
- Nel codice riportato di seguito viene definita una proprietà predefinita denominata `EndColor` per il controllo personalizzato `FlashTrackBar`.  
+ Il frammento di codice seguente definisce una proprietà personalizzata, chiamata `EndColor`, per il controllo personalizzato `FlashTrackBar`.  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -66,7 +70,6 @@ Public Class FlashTrackBar
    End Property  
    ...  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -102,7 +105,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- Nel codice riportato di seguito vengono associati un convertitore di tipi e un editor di tipi con interfaccia utente alla proprietà `Value`.  In questo caso `Value` è un intero e presenta un convertitore di tipi predefinito, ma l'attributo <xref:System.ComponentModel.TypeConverterAttribute> applica un convertitore di tipi personalizzato \(`FlashTrackBarValueConverter`\) che consente la visualizzazione di tale intero sotto forma di valore percentuale nella finestra di progettazione.  L'editor di tipi con interfaccia utente, `FlashTrackBarValueEditor`, consente la rappresentazione visiva della percentuale.  In questo esempio viene inoltre mostrato che il convertitore di tipi o l'editor specificato dall'attributo <xref:System.ComponentModel.TypeConverterAttribute> o <xref:System.ComponentModel.EditorAttribute> esegue l'override del convertitore predefinito.  
+ Nel frammento di codice seguente, un convertitore di tipi viene associato a un editor di tipi dell'interfaccia utente con la proprietà `Value`. In questo caso `Value` è di tipo integer e dispone di un convertitore di tipo predefinito, ma la <xref:System.ComponentModel.TypeConverterAttribute> attributo si applica un convertitore di tipi personalizzato (`FlashTrackBarValueConverter`) che consente la finestra di progettazione per visualizzarlo come percentuale. L'editor di tipi dell'interfaccia utente, `FlashTrackBarValueEditor`, consente di rappresentare visivamente la percentuale. In questo esempio viene inoltre mostrato che il convertitore di tipi o specificato dall'editor di <xref:System.ComponentModel.TypeConverterAttribute> o <xref:System.ComponentModel.EditorAttribute> attributo esegue l'override del convertitore predefinito.  
   
 ```vb  
 <Category("Flash"), _  
@@ -113,7 +116,6 @@ Description("The current value of the track bar.  You can enter an actual value 
 Public ReadOnly Property Value() As Integer  
 ...  
 End Property  
-  
 ```  
   
 ```csharp  
@@ -128,8 +130,8 @@ public int Value {
 }  
 ```  
   
-## Vedere anche  
- [Proprietà dei controlli Windows Form](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)   
- [Eventi per proprietà modificate](../../../../docs/framework/winforms/controls/property-changed-events.md)   
- [Attributi nei controlli Windows Form](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+## <a name="see-also"></a>Vedere anche  
+ [Proprietà dei controlli Windows Form](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Definizione dei valori predefiniti utilizzando i metodi ShouldSerialize e Reset](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ [Eventi di modifica delle proprietà](../../../../docs/framework/winforms/controls/property-changed-events.md)  
+ [Attributi nei controlli Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)

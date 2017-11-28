@@ -1,53 +1,57 @@
 ---
-title: "Utilizzo della trasformazione di tipo World | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "grafica, trasformazione complessiva"
-  - "trasformazione complessiva, esempi"
+title: Utilizzo della trasformazione di tipo World
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [Windows Forms], world transformation
+- world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5b2a8de0644e71a5e6ae1a5ca796f580f0c4f23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Utilizzo della trasformazione di tipo World
-La trasformazione di tipo World è una proprietà della classe <xref:System.Drawing.Graphics>.  I numeri che specificano la trasformazione di tipo World sono memorizzati in un oggetto <xref:System.Drawing.Drawing2D.Matrix> che rappresenta una matrice 3x3.  Le classi <xref:System.Drawing.Drawing2D.Matrix> e <xref:System.Drawing.Graphics> contengono numerosi metodi per l'impostazione dei numeri nella matrice della trasformazione di tipo World.  
+# <a name="using-the-world-transformation"></a>Utilizzo della trasformazione di tipo World
+La trasformazione globale è una proprietà del <xref:System.Drawing.Graphics> classe. I numeri che specificano la trasformazione globale vengono archiviati un <xref:System.Drawing.Drawing2D.Matrix> oggetto che rappresenta una matrice 3x3. Il <xref:System.Drawing.Drawing2D.Matrix> e <xref:System.Drawing.Graphics> classi dispongono di diversi metodi per l'impostazione dei numeri nella matrice di trasformazione globale.  
   
-## Tipi di trasformazione diversi  
- Nel codice di esempio riportato di seguito viene creato un rettangolo 50x50 che viene quindi collocato in corrispondenza del punto di origine \(0, 0\).  Il punto di origine si trova in corrispondenza dell'angolo superiore sinistro dell'area client.  
+## <a name="different-types-of-transformations"></a>Diversi tipi di trasformazioni  
+ Nell'esempio seguente, il codice prima creazione di un rettangolo di 50 × 50 e collocato in corrispondenza dell'origine (0, 0). L'origine si trova nell'angolo superiore sinistro dell'area client.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#11)]  
   
- Nel codice che segue viene applicata una trasformazione di adattamento che estende il rettangolo di un fattore 1,75 sull'asse x e lo riduce di un fattore 0,5 sull'asse y:  
+ Il codice seguente si applica una trasformazione di ridimensionamento che si espande il rettangolo di un fattore di 1,75 nella direzione x e riduce il rettangolo di un fattore pari a 0,5 nella direzione y:  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#12)]
  [!code-vb[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#12)]  
   
- Il risultato è un rettangolo che, rispetto all'originale, è più lungo sull'asse x e più corto sull'asse y.  
+ Il risultato è un rettangolo che è più lungo l'asse x e più breve nella direzione y rispetto all'originale.  
   
- Per ruotare il rettangolo anziché adattarlo utilizzare il seguente codice:  
+ Per ruotare il rettangolo anziché scalabilità, utilizzare il codice seguente:  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#13)]
  [!code-vb[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#13)]  
   
- Per effettuare la traslazione del rettangolo utilizzare il seguente codice:  
+ Per convertire il rettangolo, utilizzare il codice seguente:  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
-## Vedere anche  
- <xref:System.Drawing.Drawing2D.Matrix>   
- [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Utilizzo di trasformazioni nel codice gestito GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Drawing.Drawing2D.Matrix>  
+ [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Uso di trasformazioni nel codice gestito GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

@@ -1,36 +1,34 @@
 ---
-title: "File not found (Visual Basic Run-Time Error) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID53"
-dev_langs: 
-  - "VB"
+title: Impossibile trovare il file (errore di run-time Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 410c19d740275917225108d9173d9635fd211040
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# File not found (Visual Basic Run-Time Error)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Il file non è stato trovato dove specificato.  Le cause possibili dell'errore sono le seguenti:  
+# <a name="file-not-found-visual-basic-run-time-error"></a>Impossibile trovare il file (errore di run-time Visual Basic)
+Il file non trovato in cui è specificato. L'errore presenta le seguenti cause possibili:  
   
 -   Un'istruzione fa riferimento a un file che non esiste.  
   
--   Si è tentato di chiamare una routine in una libreria a collegamento dinamico \(DLL\), ma è impossibile trovare la libreria specificata nella clausola `Lib` dell'istruzione `Declare`.  
+-   Si è verificato un tentativo di chiamare una routine in una libreria di collegamento dinamico (DLL), ma la libreria specificata nel `Lib` clausola del `Declare` istruzione non è stata trovata.  
   
--   Si è tentato di aprire un progetto o di caricare un file di testo che non esiste.  
+-   Si è tentato di aprire un progetto o si carica un file di testo che non esiste.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Controllare che il nome del file e la specifica del percorso siano stati digitati correttamente.  
+1.  Controllare l'ortografia del nome file e la specifica del percorso.  
   
-## Vedere anche  
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)

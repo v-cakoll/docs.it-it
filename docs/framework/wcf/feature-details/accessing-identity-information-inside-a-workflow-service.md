@@ -1,25 +1,28 @@
 ---
-title: "Accesso alle informazioni sull&#39;identit&#224; in un servizio del flusso di lavoro | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Accesso alle informazioni sull'identità in un servizio del flusso di lavoro"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3b1a54f1c1529879074d2d0e7172fd52c5386c8f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Accesso alle informazioni sull&#39;identit&#224; in un servizio del flusso di lavoro
-Per accedere alle informazioni di identità in un servizio del flusso di lavoro, è necessario implementare l'interfaccia <xref:System.ServiceModel.Activities.IReceiveMessageCallback> in una proprietà di esecuzione personalizzata.Nel metodo <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False&autoUpgrade=True è possibile accedere all'elemento <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> per accedere alle informazioni di identità.In questo argomento viene descritta l'implementazione della proprietà di esecuzione e di un'attività personalizzata che esporrà tale proprietà all'attività <xref:System.ServiceModel.Activities.Receive> in fase di esecuzione.L'attività personalizzata implementerà lo stesso comportamento di un'attività <xref:System.ServiceModel.Activities.Sequence>, ad eccezione del fatto che quando un oggetto <xref:System.ServiceModel.Activities.Receive> viene posizionato all'interno dell'attività, verrà chiamato <xref:System.ServiceModel.Activities.IReceiveMessageCallback> e le informazioni di identità verranno recuperate.  
+# <a name="accessing-identity-information-inside-a-workflow-service"></a>Accesso alle informazioni sull'identità in un servizio del flusso di lavoro
+Per accedere alle informazioni di identità in un servizio del flusso di lavoro, è necessario implementare l'interfaccia <xref:System.ServiceModel.Activities.IReceiveMessageCallback> in una proprietà di esecuzione personalizzata. Nel <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False & autoUpgrade = True metodo, è possibile accedere il <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> per accedere alle informazioni di identità. In questo argomento viene descritta l'implementazione della proprietà di esecuzione e di un'attività personalizzata che esporrà tale proprietà all'attività <xref:System.ServiceModel.Activities.Receive> in fase di esecuzione.  L'attività personalizzata implementerà lo stesso comportamento di un <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` attività, ad eccezione che, quando un <xref:System.ServiceModel.Activities.Receive> viene posizionato all'interno, il <xref:System.ServiceModel.Activities.IReceiveMessageCallback> verrà chiamato e verranno recuperate le informazioni di identità.  
   
-### Implementare IReceiveMessageCallback  
+### <a name="implement-ireceivemessagecallback"></a>Implementare IReceiveMessageCallback  
   
 1.  Creare una soluzione [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] vuota.  
   
@@ -53,12 +56,11 @@ Per accedere alle informazioni di identità in un servizio del flusso di lavoro,
           }  
         }  
     }  
-  
     ```  
   
      In questo codice viene utilizzato <xref:System.ServiceModel.OperationContext> passato al metodo per accedere alle informazioni di identità.  
   
-### Implementare l'attività Native per aggiungere l'implementazione IReceiveMessageCallback a NativeActivityContext  
+### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Implementare l'attività Native per aggiungere l'implementazione IReceiveMessageCallback a NativeActivityContext  
   
 1.  Aggiungere una nuova classe derivata da <xref:System.Activities.NativeActivity> denominata `AccessIdentityScope`.  
   
@@ -72,7 +74,6 @@ Per accedere alle informazioni di identità in un servizio del flusso di lavoro,
         Variable<int> currentIndex;  
         CompletionCallback onChildComplete;  
     }  
-  
     ```  
   
 3.  Implementare il costruttore  
@@ -84,7 +85,6 @@ Per accedere alle informazioni di identità in un servizio del flusso di lavoro,
         this.variables = new Collection<Variable>();  
         this.currentIndex = new Variable<int>();  
     }  
-  
     ```  
   
 4.  Implementare le proprietà `Activities` e `Variables`.  
@@ -99,7 +99,6 @@ Per accedere alle informazioni di identità in un servizio del flusso di lavoro,
     {  
         get { return this.variables; }  
     }  
-  
     ```  
   
 5.  Eseguire l'override di <xref:System.Activities.NativeActivity.CacheMetadata%2A>.  
@@ -112,10 +111,9 @@ Per accedere alle informazioni di identità in un servizio del flusso di lavoro,
         //add the private implementation variable: currentIndex   
         metadata.AddImplementationVariable(this.currentIndex);  
     }  
-  
     ```  
   
-6.  Eseguire l'override del metodo <xref:System.Activities.NativeActivity.Execute%2A>.  
+6.  Eseguire l'override di <xref:System.Activities.NativeActivity.Execute%2A>.  
   
     ```  
     protected override void Execute(NativeActivityContext context)  
@@ -149,12 +147,11 @@ Per accedere alle informazioni di identità in un servizio del flusso di lavoro,
        //increment the currentIndex  
        this.currentIndex.Set(context, ++currentActivityIndex);  
     }  
-  
     ```  
   
-### Implementare il servizio di flusso di lavoro  
+### <a name="implement-the-workflow-service"></a>Implementare il servizio di flusso di lavoro  
   
-1.  Aprire la classe `Program` esistente.  
+1.  Aprire `Program` classe.  
   
 2.  Definire le costanti seguenti:  
   
@@ -164,7 +161,6 @@ Per accedere alle informazioni di identità in un servizio del flusso di lavoro,
        const string addr = "http://localhost:8080/Service";  
        static XName contract = XName.Get("IService", "http://tempuri.org");  
     }  
-  
     ```  
   
 3.  Aggiungere un metodo statico denominato `GetWorkflowService` che crea il servizio di flusso di lavoro.  
@@ -204,7 +200,6 @@ Per accedere alle informazioni di identità in un servizio del flusso di lavoro,
           }  
        };  
      }  
-  
     ```  
   
 4.  Nel metodo `Main` esistente ospitare il servizio di flusso di lavoro.  
@@ -226,10 +221,9 @@ Per accedere alle informazioni di identità in un servizio del flusso di lavoro,
           host.Close();  
        }  
     }  
-  
     ```  
   
-### Implementare un client flusso di lavoro  
+### <a name="implement-a-workflow-client"></a>Implementare un client flusso di lavoro  
   
 1.  Creare un nuovo progetto di applicazione console denominato `Client`.  
   
@@ -293,7 +287,6 @@ Per accedere alle informazioni di identità in un servizio del flusso di lavoro,
           };  
        }  
     }  
-  
     ```  
   
 4.  Aggiungere il codice di hosting seguente per implementare il metodo `Main()`.  
@@ -307,14 +300,12 @@ Per accedere alle informazioni di identità in un servizio del flusso di lavoro,
        Console.WriteLine("Press [ENTER] to exit");  
        Console.ReadLine();  
     }  
-  
     ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Di seguito è riportato il codice sorgente utilizzato in questo argomento.  
   
 ```  
-  
 // AccessIdentityCallback.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -352,11 +343,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // AccessIdentityScope.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -439,11 +428,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // Service.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -516,11 +503,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // client.cs   
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -596,10 +581,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
-## Vedere anche  
- [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Accesso a OperationContext](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)   
- [Creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo](../../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>Vedere anche  
+ [Servizi flusso di lavoro](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Accesso a OperationContext](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [Creazione di flussi di lavoro, attività ed espressioni tramite codice imperativo](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -1,73 +1,74 @@
 ---
-title: "Windows Forms Print Support | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Windows Forms, printing"
-  - "printing [Windows Forms]"
-  - "forms, printing (using designer)"
-  - "printing, Windows Forms, support"
-  - "printing [Windows Forms], print support"
+title: Supporto per la stampa in Windows Form
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, printing
+- printing [Windows Forms]
+- forms [Windows Forms], printing (using designer)
+- printing [Windows Forms], Windows Forms, support
+- printing [Windows Forms], print support
 ms.assetid: a4a2960c-eb70-48e2-b641-cfb222704e46
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 029d5ed424061807cf04446cbb10424ae20afba2
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/22/2017
 ---
-# Windows Forms Print Support
-La stampa in Windows Form consiste principalmente nell'utilizzo del componente [Componente PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md), che consente all'utente di stampare, e del controllo [Controllo PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md) e dei componenti [Componente PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) e [Componente PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) che forniscono un'interfaccia grafica di semplice utilizzo per gli utenti abituati al sistema operativo Windows.  
+# <a name="windows-forms-print-support"></a>Supporto per la stampa in Windows Form
+Stampa in Windows Form è costituita principalmente tramite il [sul componente PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) componente per consentire all'utente di stampare e il [controllo PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md) controllo [PrintDialog Componente](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) e [componente PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) i componenti per fornire un'interfaccia grafica familiare agli utenti di familiarizzare con il sistema operativo Windows.  
   
- In genere viene creata un nuova istanza del componente <xref:System.Drawing.Printing.PrintDocument>, vengono impostate le proprietà che descrivono il materiale da stampare utilizzando le classi <xref:System.Drawing.Printing.PrinterSettings> e <xref:System.Drawing.Printing.PageSettings> e viene chiamato il metodo <xref:System.Drawing.Printing.PrintDocument.Print%2A> per stampare il documento.  
+ In genere, si crea una nuova istanza del <xref:System.Drawing.Printing.PrintDocument> componente, impostare le proprietà che descrivono cosa stampare utilizzando il <xref:System.Drawing.Printing.PrinterSettings> e <xref:System.Drawing.Printing.PageSettings> classi e chiamare il <xref:System.Drawing.Printing.PrintDocument.Print%2A> metodo per stampare il documento.  
   
- Durante la stampa da un'applicazione basata su Windows, il componente <xref:System.Drawing.Printing.PrintDocument> consentirà di visualizzare una finestra di dialogo di interruzione di stampa per avvisare che il processo di stampa è in esecuzione e può essere eventualmente annullato.  
+ Nel corso di stampa da un'applicazione basata su Windows, il <xref:System.Drawing.Printing.PrintDocument> componente consentirà di visualizzare la finestra di dialogo Stampa interruzione per avvisare gli utenti per il fatto che si verifichi la stampa e per consentire il processo di stampa deve essere annullato.  
   
-## In questa sezione  
- [How to: Create Standard Windows Forms Print Jobs](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
- Vengono fornite informazioni su come utilizzare il componente <xref:System.Drawing.Printing.PrintDocument> per stampare da un Windows Form.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Procedura: Creare processi di stampa standard per Windows Form](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
+ Viene illustrato come utilizzare il <xref:System.Drawing.Printing.PrintDocument> per stampare da un Windows Form.  
   
- [How to: Capture User Input from a PrintDialog at Run Time](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
- Viene illustrato come modificare a livello di codice le opzioni di stampa selezionate utilizzando il componente <xref:System.Windows.Forms.PrintDialog>.  
+ [Procedura: Acquisire l'input dell'utente da un elemento PrintDialog in fase di esecuzione](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
+ Viene descritto come modificare alcune opzioni di stampa a livello di codice utilizzando il <xref:System.Windows.Forms.PrintDialog> componente.  
   
- [Procedura: selezionare le stampanti connesse al computer dell'utente in Windows Form](../../../../docs/framework/winforms/advanced/how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
- Viene descritto come selezionare la stampante utilizzando il componente <xref:System.Windows.Forms.PrintDialog> in fase di esecuzione.  
+ [Procedura: Selezionare le stampanti connesse al computer dell'utente in Windows Form](../../../../docs/framework/winforms/advanced/how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
+ Viene descritto come cambiare la stampante per stampare utilizzando il <xref:System.Windows.Forms.PrintDialog> componente in fase di esecuzione.  
   
- [How to: Print Graphics in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)  
- Viene fornita una descrizione relativa all'invio di grafica alla stampante.  
+ [Procedura: stampare grafica in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)  
+ Descrive l'invio di grafica per la stampante.  
   
- [How to: Print a Multi\-Page Text File in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
- Viene fornita una descrizione relativa all'invio di testo alla stampante.  
+ [Procedura: stampare un file di testo con più pagine in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
+ Descrive l'invio di testo alla stampante.  
   
- [How to: Complete Windows Forms Print Jobs](../../../../docs/framework/winforms/advanced/how-to-complete-windows-forms-print-jobs.md)  
- Vengono fornite informazioni su come notificare agli utenti il completamento di un processo di stampa.  
+ [Procedura: Completare processi di stampa in Windows Form](../../../../docs/framework/winforms/advanced/how-to-complete-windows-forms-print-jobs.md)  
+ Viene illustrato come avvisare gli utenti per il completamento di un processo di stampa.  
   
- [How to: Print a Windows Form](../../../../docs/framework/winforms/advanced/how-to-print-a-windows-form.md)  
- Viene illustrato come stampare una copia del form corrente.  
+ [Procedura: Stampare un Windows Form](../../../../docs/framework/winforms/advanced/how-to-print-a-windows-form.md)  
+ Viene illustrato come stampare una copia del modulo corrente.  
   
- [Procedura: stampare in Windows Form tramite l'anteprima di stampa](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)  
- Viene illustrato come utilizzare una classe <xref:System.Windows.Forms.PrintPreviewDialog> per la stampa di un documento.  
+ [Procedura: Stampare in Windows Form tramite l'anteprima di stampa](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)  
+ Viene illustrato come utilizzare un <xref:System.Windows.Forms.PrintPreviewDialog> per la stampa del documento.  
   
-## Sezioni correlate  
- [Componente PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
- Vengono fornite informazioni sull'utilizzo del componente <xref:System.Drawing.Printing.PrintDocument>.  
+## <a name="related-sections"></a>Sezioni correlate  
+ [PrintDocument (componente)](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)  
+ Viene illustrato l'utilizzo del <xref:System.Drawing.Printing.PrintDocument> componente.  
   
  [Componente PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
- Vengono fornite informazioni sull'utilizzo del componente <xref:System.Windows.Forms.PrintDialog>.  
+ Viene illustrato l'utilizzo del <xref:System.Windows.Forms.PrintDialog> componente.  
   
  [Controllo PrintPreviewDialog](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- Vengono fornite informazioni sull'utilizzo del controllo <xref:System.Windows.Forms.PrintPreviewDialog>.  
+ Viene illustrato l'utilizzo del <xref:System.Windows.Forms.PrintPreviewDialog> controllo.  
   
  [Componente PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)  
- Vengono fornite informazioni sull'utilizzo del componente <xref:System.Windows.Forms.PageSetupDialog>.  
+ Viene illustrato l'utilizzo del <xref:System.Windows.Forms.PageSetupDialog> componente.  
   
  <xref:System.Drawing.Printing>  
- Vengono descritte le classi dello spazio dei nomi <xref:System.Drawing.Printing>.
+ Vengono descritte le classi di <xref:System.Drawing.Printing> dello spazio dei nomi.
