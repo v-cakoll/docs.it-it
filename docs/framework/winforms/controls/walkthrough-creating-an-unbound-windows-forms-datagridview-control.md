@@ -1,105 +1,109 @@
 ---
-title: "Procedura dettagliata: creazione di un controllo DataGridView Windows Form non associato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "dati [Windows Form], visualizzazione senza associazione a origini dati"
-  - "dati [Windows Form], senza associazione"
-  - "DataGridView (controllo) [Windows Form], visualizzazione di dati non associati a un'origine dati"
-  - "DataGridView (controllo) [Windows Form], dati non associati"
-  - "procedure dettagliate [Windows Form], DataGridView (controllo)"
+title: 'Procedura dettagliata: creazione di un controllo DataGridView Windows Form non associato'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data [Windows Forms], displaying without binding to data source
+- DataGridView control [Windows Forms], unbound data
+- DataGridView control [Windows Forms], displaying data without binding to a data source
+- data [Windows Forms], unbound
+- walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e2c57cfbab4d3af6cebff96517383999ae5b73d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: creazione di un controllo DataGridView Windows Form non associato
-Spesso si desidera visualizzare dati in formato tabulare che non hanno origine da un database.  Ad esempio, si può desiderare di visualizzare i contenuti di una matrice bidimensionale di stringhe.  La classe <xref:System.Windows.Forms.DataGridView> fornisce un metodo semplice e personalizzabile per visualizzare i dati senza associarli a un'origine dati.  In questa procedura dettagliata viene illustrato come popolare un controllo <xref:System.Windows.Forms.DataGridView> e gestire l'aggiunta e l'eliminazione di righe in modalità "svincolata".  Per impostazione predefinita, l'utente può aggiungere nuove righe.  Per impedire l'aggiunta di nuove righe, impostare la proprietà <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> su `false`.  
+# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Procedura dettagliata: creazione di un controllo DataGridView Windows Form non associato
+È spesso può essere utile visualizzare dati in formato tabulare che non provengono da un database. Potrebbe ad esempio, si desidera visualizzare il contenuto di una matrice bidimensionale di stringhe. La <xref:System.Windows.Forms.DataGridView> classe fornisce un modo semplice e personalizzabile per visualizzare i dati senza associazione a un'origine dati. Questa procedura dettagliata viene illustrato come popolare un <xref:System.Windows.Forms.DataGridView> controllare e gestire l'aggiunta e l'eliminazione di righe in modalità "associata". Per impostazione predefinita, l'utente può aggiungere nuove righe. Per impedire l'aggiunta delle righe, impostare il <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> proprietà `false`.  
   
- Per copiare il codice nell'argomento corrente come un elenco singolo, vedere [Procedura: creare un controllo DataGridView di Windows Form non associato](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+ Per copiare il codice in questo argomento come elenco singolo, vedere [procedura: creare un controllo DataGridView di Windows Form non associato](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
-## Creazione del form  
+## <a name="creating-the-form"></a>Creazione del form  
   
-#### Per utilizzare un controllo DataGridView non associato  
+#### <a name="to-use-an-unbound-datagridview-control"></a>Per utilizzare un controllo DataGridView non associato  
   
-1.  Creare una classe che derivi dalla classe <xref:System.Windows.Forms.Form> e contenga le dichiarazioni di variabili di classe e il metodo `Main` riportati di seguito.  
+1.  Creare una classe che deriva da <xref:System.Windows.Forms.Form> e contiene le seguenti dichiarazioni di variabili e `Main` metodo.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#02](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#02](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#02)]  
   
-2.  Implementare un metodo `SetupLayout` nella definizione di classe del form per impostare il layout del form.  
+2.  Implementare un `SetupLayout` metodo nella definizione di classe del form per impostare il layout del form.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#20)]  
   
-3.  Creare un metodo `SetupDataGridView` per impostare le colonne e le proprietà della classe <xref:System.Windows.Forms.DataGridView>.  
+3.  Creare un `SetupDataGridView` metodo per impostare il <xref:System.Windows.Forms.DataGridView> colonne e le proprietà.  
   
-     Questo metodo aggiunge il controllo <xref:System.Windows.Forms.DataGridView> alla raccolta <xref:System.Windows.Forms.Control.Controls%2A> del form.  Successivamente, il numero delle colonne da visualizzare viene impostato mediante la proprietà <xref:System.Windows.Forms.DataGridView.ColumnCount%2A>.  L'impostazione dello stile predefinito per le intestazioni di colonna dipende dall'impostazione delle proprietà <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> e <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> di <xref:System.Windows.Forms.DataGridViewCellStyle> restituite dalla proprietà <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>.  
+     Questo metodo aggiunge il <xref:System.Windows.Forms.DataGridView> controllo sul form <xref:System.Windows.Forms.Control.Controls%2A> insieme. Successivamente, il numero di colonne da visualizzare viene impostato mediante il <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> proprietà. Lo stile predefinito per le intestazioni di colonna è impostato tramite l'impostazione di <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>, e <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> le proprietà del <xref:System.Windows.Forms.DataGridViewCellStyle> restituito dal <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> proprietà.  
   
-     Vengono impostate le proprietà del layout e dell'aspetto e vengono assegnati i nomi delle colonne.  Quando questo metodo viene chiuso, è possibile popolare il controllo <xref:System.Windows.Forms.DataGridView>.  
+     Vengono impostate le proprietà di layout e l'aspetto, e quindi vengono assegnati i nomi di colonna. Quando questo metodo termina, il <xref:System.Windows.Forms.DataGridView> controllo è pronto per essere compilato.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#30)]  
   
-4.  Creare un metodo `PopulateDataGridView` per aggiungere righe al controllo <xref:System.Windows.Forms.DataGridView>.  
+4.  Creare un `PopulateDataGridView` metodo a cui aggiungere righe di <xref:System.Windows.Forms.DataGridView> controllo.  
   
-     Ciascuna riga rappresenta una canzone e le informazioni associate.  
+     Ogni riga rappresenta un brano e le informazioni associate.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#40](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#40)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#40](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#40)]  
   
-5.  Con i metodi di utilità in funzione, è possibile associare gestori eventi.  
+5.  Con i metodi di utilità sul posto, è possibile collegare i gestori di eventi.  
   
-     Verranno gestiti gli eventi <xref:System.Windows.Forms.Control.Click> dei pulsanti **Add** e **Delete**, l'evento <xref:System.Windows.Forms.Form.Load> del form e l'evento <xref:System.Windows.Forms.DataGridView.CellFormatting> del controllo <xref:System.Windows.Forms.DataGridView>.  
+     È necessario gestire il **Aggiungi** e **eliminare** dei pulsanti <xref:System.Windows.Forms.Control.Click> eventi, il modulo <xref:System.Windows.Forms.Form.Load> evento e <xref:System.Windows.Forms.DataGridView> del controllo <xref:System.Windows.Forms.DataGridView.CellFormatting> evento.  
   
-     Quando viene generato l'evento <xref:System.Windows.Forms.Control.Click> del pulsante **Add**, alla classe <xref:System.Windows.Forms.DataGridView> viene aggiunta una nuova riga vuota.  
+     Quando il **Aggiungi** del pulsante <xref:System.Windows.Forms.Control.Click> una nuova riga vuota, viene generato l'evento, viene aggiunto per il <xref:System.Windows.Forms.DataGridView>.  
   
-     Quando viene generato l'evento <xref:System.Windows.Forms.Control.Click> del pulsante **Delete**, la riga selezionata viene eliminata, a meno che non sia la riga riservata ai nuovi record, che consente agli utenti di aggiungere nuove righe.  Questa riga è sempre l'ultima riga all'interno del controllo <xref:System.Windows.Forms.DataGridView>.  
+     Quando il **eliminare** del pulsante <xref:System.Windows.Forms.Control.Click> viene generato l'evento, viene eliminata la riga selezionata, a meno che non è la riga per nuovi record, che consente all'utente di aggiungere nuove righe. Questa riga è sempre l'ultima riga di <xref:System.Windows.Forms.DataGridView> controllo.  
   
-     Quando viene generato l'evento <xref:System.Windows.Forms.Form.Load> del form, vengono chiamati i metodi di utilità `SetupLayout`, `SetupDataGridView` e `PopulateDataGridView`.  
+     Quando il modulo <xref:System.Windows.Forms.Form.Load> viene generato l'evento, il `SetupLayout`, `SetupDataGridView`, e `PopulateDataGridView` vengono chiamati i metodi di utilità.  
   
-     Quando viene generato l'evento <xref:System.Windows.Forms.DataGridView.CellFormatting>, ciascuna cella della colonna `Date` viene formattata come data estesa, a meno che non sia possibile analizzare il valore della cella.  
+     Quando il <xref:System.Windows.Forms.DataGridView.CellFormatting> evento viene generato, ogni cella di `Date` colonna in formato data estesa, a meno che il valore della cella non può essere analizzato.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#10)]  
   
-## Verifica dell'applicazione  
- È ora possibile verificare il form per assicurarsi che funzioni correttamente.  
+## <a name="testing-the-application"></a>Verifica dell'applicazione  
+ È ora possibile testare il form per assicurarsi che tutto funzioni come previsto.  
   
-#### Per eseguire il test del form  
+#### <a name="to-test-the-form"></a>Per verificare il modulo  
   
--   ‎Premere F5 per eseguire l'applicazione.  
+-   Premere F5 per eseguire l'applicazione.  
   
-     Verrà visualizzato un controllo <xref:System.Windows.Forms.DataGridView> che conterrà le canzoni elencate in `PopulateDataGridView`.  Mediante il pulsante **Add Row** è possibile aggiungere nuove righe, mentre è possibile eliminare le righe selezionate mediante il pulsante **Delete Row**.  Il controllo <xref:System.Windows.Forms.DataGridView> non associato è l'archivio dati e i relativi dati sono indipendenti dalle origini esterne, come nel caso di una classe <xref:System.Data.DataSet> o di una matrice.  
+     Verrà visualizzato un <xref:System.Windows.Forms.DataGridView> controllo che visualizza le canzoni elencate in `PopulateDataGridView`. È possibile aggiungere nuove righe con la **Aggiungi riga** e sarà possibile eliminare righe selezionate con il **Elimina riga** pulsante. La cornice <xref:System.Windows.Forms.DataGridView> controllo è l'archivio dati e i dati sono indipendenti da qualsiasi origine esterna, ad esempio un <xref:System.Data.DataSet> o una matrice.  
   
-## Passaggi successivi  
- Questa applicazione fornisce un'idea di massima delle capacità del controllo <xref:System.Windows.Forms.DataGridView>.  È possibile personalizzare l'aspetto e il comportamento del controllo <xref:System.Windows.Forms.DataGridView> in diversi modi:  
+## <a name="next-steps"></a>Passaggi successivi  
+ Questa applicazione fornisce una conoscenza di base di <xref:System.Windows.Forms.DataGridView> funzionalità del controllo. È possibile personalizzare l'aspetto e il comportamento del <xref:System.Windows.Forms.DataGridView> controllo in diversi modi:  
   
--   Modificare gli stili di bordi e intestazioni.  Per ulteriori informazioni, vedere [Procedura: modificare gli stili dei bordi e delle linee della griglia nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).  
+-   Modificare gli stili del bordo e intestazione. Per ulteriori informazioni, vedere [procedura: modificare il bordo e gli stili delle linee della griglia nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).  
   
--   Consentire o limitare l'input utente nel controllo <xref:System.Windows.Forms.DataGridView>.  Per ulteriori informazioni, vedere [Procedura: impedire l'aggiunta o l'eliminazione di righe nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md) e [Procedura: impostare le colonne come in sola lettura nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+-   Abilitare o limitare l'input dell'utente per il <xref:System.Windows.Forms.DataGridView> controllo. Per ulteriori informazioni, vedere [procedura: impedire l'aggiunta delle righe e eliminazione nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md), e [come: rendere sola lettura di colonne nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
   
--   Verificare eventuali errori relativi al database nell'input utente.  Per ulteriori informazioni, vedere [Procedura dettagliata: gestione degli errori che si verificano durante l'immissione di dati nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
+-   Controllare l'input dell'utente per errori correlati al database. Per ulteriori informazioni, vedere [procedura dettagliata: gestione degli errori che si verificano durante l'immissione di dati nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
   
--   Gestire dataset di grandi dimensioni utilizzando la modalità virtuale.  Per ulteriori informazioni, vedere [Procedura dettagliata: implementazione della modalità virtuale nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+-   Gestire grandi set di dati utilizzando la modalità virtuale. Per ulteriori informazioni, vedere [procedura dettagliata: implementazione della modalità virtuale nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
   
--   Personalizzare l'aspetto delle celle.  Per ulteriori informazioni, vedere [Procedura: personalizzare l'aspetto delle celle nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) e [Procedura: impostare stili di cella predefiniti per il controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+-   Personalizzare l'aspetto delle celle. Per ulteriori informazioni, vedere [procedura: personalizzare l'aspetto di celle nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) e [procedura: impostare stili di cella predefiniti per il controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
-## Vedere anche  
- <xref:System.Windows.Forms.DataGridView>   
- [Visualizzazione di dati nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)   
- [Procedura: creare un controllo DataGridView di Windows Form non associato](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)   
- [Modalità di visualizzazione dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.DataGridView>  
+ [Visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Procedura: Creare un controllo DataGridView di Windows Form non associato](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)  
+ [Modalità di visualizzazione di dati nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

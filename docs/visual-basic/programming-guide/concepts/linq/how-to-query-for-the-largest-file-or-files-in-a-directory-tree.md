@@ -1,46 +1,38 @@
 ---
-title: "Procedura: eseguire una Query per il più grande o più file in una struttura di Directory (LINQ) (Visual Basic) | Documenti di Microsoft"
+title: "Procedura: eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 055cbdd5a5903417ab382d390e1215f0319c0b5a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bcdb73006958188ef14949e37b04c2913c3fa0a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Procedura: eseguire una query per trovare il file o i file più grandi in un albero di directory (LINQ) (Visual Basic)
-Questo esempio mostra cinque query relative alle dimensioni del file in byte:  
+Questo esempio illustra cinque query relative alla dimensione dei file in byte:  
   
 -   Come recuperare la dimensione in byte del file più grande.  
   
 -   Come recuperare la dimensione in byte del file più piccolo.  
   
--   Come recuperare il <xref:System.IO.FileInfo>file più grande o più piccolo dell'oggetto da uno o più cartelle in una cartella radice specificata.</xref:System.IO.FileInfo>  
+-   Come recuperare il file più grande o più piccolo dell'oggetto <xref:System.IO.FileInfo> da una o più cartelle in una cartella radice specificata.  
   
--   Come recuperare una sequenza, ad esempio i file di dimensioni maggiori di 10.  
+-   Come recuperare una sequenza, ad esempio i 10 file più grandi.  
   
--   Come ordinare i file in gruppi in base alle dimensioni in byte, ignorando i file che sono minori dimensioni specificate.  
+-   Come ordinare i file in gruppi in base alla dimensione del file in byte, ignorando i file di dimensione inferiore a un valore specificato.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente contiene cinque query distinte che illustrano come eseguire una query e i file di gruppo, in base alle dimensioni in byte. È possibile modificare con facilità questi esempi per basare la query su un'altra proprietà del <xref:System.IO.FileInfo>oggetto.</xref:System.IO.FileInfo>  
+ L'esempio seguente contiene cinque query distinte che illustrano come eseguire una query e raggruppare i file in base alle dimensioni in byte. È possibile modificare facilmente questi esempi per basare la query su un'altra proprietà dell'oggetto <xref:System.IO.FileInfo>.  
   
 ```vb  
 Module QueryBySize  
@@ -130,13 +122,13 @@ Module QueryBySize
 End Module  
 ```  
   
- Per restituire uno o più completare <xref:System.IO.FileInfo>oggetti, la query deve prima esaminare ciascuno di essi nei dati di origine e poi ordinarli in base al valore della proprietà Length.</xref:System.IO.FileInfo> Può quindi restituire il singolo oggetto o la sequenza con le lunghezze maggiori. Utilizzare <xref:System.Linq.Enumerable.First%2A>per restituire il primo elemento in un elenco.</xref:System.Linq.Enumerable.First%2A> Utilizzare <xref:System.Linq.Enumerable.Take%2A>per restituire il primo numero n di elementi.</xref:System.Linq.Enumerable.Take%2A> Specificare un ordinamento decrescente per inserire gli elementi più piccoli all'inizio dell'elenco.  
+ Per restituire uno o più oggetti <xref:System.IO.FileInfo> completi, è necessario che la query esamini prima di tutto ogni oggetto nell'origine dati e quindi ordini gli oggetti in base al valore della relativa proprietà Length. La query potrà quindi restituire il singolo oggetto o la sequenza con le lunghezze maggiori. Usare <xref:System.Linq.Enumerable.First%2A> per restituire il primo elemento di un elenco. Usare <xref:System.Linq.Enumerable.Take%2A> per restituire i primi n elementi. Specificare un ordinamento decrescente per inserire gli elementi più piccoli all'inizio dell'elenco.  
   
- La query effettua a un metodo separato per ottenere le dimensioni del file in byte per gestire una possibile eccezione generata nel caso in cui è stato eliminato un file in un altro thread nel periodo di tempo dopo il <xref:System.IO.FileInfo>è stato creato l'oggetto nella chiamata a `GetFiles`.</xref:System.IO.FileInfo> Anche il <xref:System.IO.FileInfo>oggetto è già stato creato, l'eccezione può verificarsi perché un <xref:System.IO.FileInfo>oggetto tenta di aggiornare il relativo <xref:System.IO.FileInfo.Length%2A>proprietà utilizzando la dimensione più corrente in byte la prima volta che si accede alla proprietà.</xref:System.IO.FileInfo.Length%2A> </xref:System.IO.FileInfo> </xref:System.IO.FileInfo> Inserendo questa operazione in un blocco try-catch all'esterno della query, si seguita la regola di evitare operazioni di query che possono causare effetti collaterali. In generale, è necessario prestare particolare attenzione durante l'utilizzo di eccezioni, per assicurarsi che un'applicazione non viene lasciata in uno stato sconosciuto.  
+ La query effettua una chiamata a un metodo separato per ottenere le dimensioni dei file in byte per gestire la possibile eccezione che viene generata nel caso in cui un file sia stato eliminato in un altro thread nel periodo trascorso dalla creazione dell'oggetto <xref:System.IO.FileInfo> nella chiamata a `GetFiles`. Anche se l'oggetto <xref:System.IO.FileInfo> è già stato creato, è possibile che si verifichi un'eccezione perché un oggetto <xref:System.IO.FileInfo> tenterà di aggiornare la relativa proprietà <xref:System.IO.FileInfo.Length%2A> usando le dimensioni in byte più recenti quando viene eseguito per la prima volta l'accesso alla proprietà. Inserendo questa operazione in un blocco try/catch all'esterno della query, si segue la regola di evitare le operazioni nelle query che possono causare effetti collaterali. In generale, è necessario prestare particolare attenzione durante la gestione delle eccezioni per assicurarsi che un'applicazione non venga lasciata in uno stato sconosciuto.  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+ Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

@@ -1,41 +1,47 @@
 ---
-title: "Procedura: recuperare un testo selezionato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recupero di testo"
-  - "testo, recupero"
-  - "TextBox (controllo), recupero di testo"
+title: 'Procedura: recuperare un testo selezionato'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text [WPF], retrieving
+- TextBox control [WPF], retrieving text
+- retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8d5e1c362c02d2d1d9e1840ea2a55df6875a80ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: recuperare un testo selezionato
-In questo esempio viene illustrato l'utilizzo della proprietà <xref:System.Windows.Controls.TextBox.SelectedText%2A> per recuperare il testo selezionato dall'utente in un controllo <xref:System.Windows.Controls.TextBox>.  
+# <a name="how-to-retrieve-a-text-selection"></a>Procedura: recuperare un testo selezionato
+In questo esempio viene illustrato come utilizzare il <xref:System.Windows.Controls.TextBox.SelectedText%2A> proprietà per recuperare il testo che l'utente ha selezionato in un <xref:System.Windows.Controls.TextBox> controllo.  
   
-## Esempio  
- Nel seguente esempio [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] viene mostrata la definizione di un controllo <xref:System.Windows.Controls.TextBox> contenente del testo da selezionare e di un controllo <xref:System.Windows.Controls.Button> specificando un metodo <xref:System.Windows.Controls.Button.OnClick%2A>.  
+## <a name="example"></a>Esempio  
+ Le operazioni seguenti [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] riportato di seguito viene illustrata la definizione di un <xref:System.Windows.Controls.TextBox> controllo che contiene del testo da selezionare, e un <xref:System.Windows.Controls.Button> controllo con un oggetto specificato <xref:System.Windows.Controls.Button.OnClick%2A> metodo.  
   
- In questo esempio, un pulsante con un gestore eventi <xref:System.Windows.Controls.Primitives.ButtonBase.Click> associato viene utilizzato per recuperare il testo selezionato.  Quando l'utente fa clic sul pulsante, il metodo <xref:System.Windows.Controls.Button.OnClick%2A> copia in una stringa il testo selezionato nella casella di testo.  La particolare modalità di recupero del testo selezionato \(il clic su un pulsante\), nonché l'operazione eseguita su tale selezione \(la copia del testo selezionato in una stringa\) possono essere facilmente modificate in funzione di una molteplicità di scenari.  
+ In questo esempio, un pulsante con un oggetto associato <xref:System.Windows.Controls.Primitives.ButtonBase.Click> gestore eventi viene utilizzato per recuperare il testo selezionato. Quando l'utente fa clic sul pulsante, il <xref:System.Windows.Controls.Button.OnClick%2A> metodo copia testo selezionato nella casella di testo in una stringa. Particolari circostanze per cui la selezione di testo viene recuperata (facendo clic su un pulsante), nonché l'azione eseguita su tale selezione (copia la selezione di testo in una stringa), possono essere facilmente modificati per supportare un'ampia gamma di scenari.  
   
- [!code-xml[TextBox_MiscCode#_TextBoxSelectTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxselecttextxaml)]  
+ [!code-xaml[TextBox_MiscCode#_TextBoxSelectTextXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textboxselecttextxaml)]  
   
-## Esempio  
- Nel seguente esempio [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] viene mostrato un gestore di eventi <xref:System.Windows.Controls.Button.OnClick%2A> per il pulsante definito in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] di questo esempio.  
+## <a name="example"></a>Esempio  
+ Le operazioni seguenti [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] esempio viene illustrato un <xref:System.Windows.Controls.Button.OnClick%2A> gestore eventi per il pulsante definito nel [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per questo esempio.  
   
  [!code-csharp[TextBox_MiscCode#_SelectText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_selecttext)]
  [!code-vb[TextBox_MiscCode#_SelectText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_selecttext)]  
   
-## Vedere anche  
- [Cenni preliminari sulla classe TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)   
- [Cenni generali sul controllo RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sulla classe TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [Cenni preliminari sul controllo RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

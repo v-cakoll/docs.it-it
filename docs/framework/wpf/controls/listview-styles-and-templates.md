@@ -1,82 +1,83 @@
 ---
-title: "Stili e modelli di ListView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], ListView"
-  - "ListView [WPF], stili e modelli"
-  - "parti [WPF], ListView"
-  - "stati [WPF], ListView"
-  - "stili [WPF], ListView"
-  - "modelli [WPF], ListView"
+title: Stili e modelli di ListView
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- parts [WPF], ListView
+- states [WPF], ListView
+- ControlTemplate [WPF], ListView
+- styles [WPF], ListView
+- ListView [WPF], styles and templates
+- templates [WPF], ListView
 ms.assetid: d2387356-2171-4785-822a-7247e024b4ee
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ccd597aa6d517bb3a7dda347c26c0eaf731a278f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Stili e modelli di ListView
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.ListView>.  È possibile modificare l'oggetto <xref:System.Windows.Controls.ControlTemplate> predefinito per conferire al controllo un aspetto univoco.  Per ulteriori informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="listview-styles-and-templates"></a>Stili e modelli di ListView
+In questo argomento vengono descritti gli stili e modelli per il <xref:System.Windows.Controls.ListView> controllo. È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco. Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
-## Parti del controllo ListView  
- Il controllo <xref:System.Windows.Controls.ListView> non include parti denominate.  
+## <a name="listview-parts"></a>Parti del controllo ListView  
+ Il <xref:System.Windows.Controls.ListView> controllo non dispone di parti denominate.  
   
- Quando si crea <xref:System.Windows.Controls.ControlTemplate> per un oggetto <xref:System.Windows.Controls.ListView>, il modello potrebbe contenere <xref:System.Windows.Controls.ItemsPresenter> all'interno di <xref:System.Windows.Controls.ScrollViewer>.  L'oggetto <xref:System.Windows.Controls.ItemsPresenter> visualizza ogni elemento in <xref:System.Windows.Controls.ListView>; <xref:System.Windows.Controls.ScrollViewer> consente lo scorrimento all'interno del controllo.  Se <xref:System.Windows.Controls.ItemsPresenter> non è l'elemento figlio diretto di <xref:System.Windows.Controls.ScrollViewer>, è necessario assegnare a <xref:System.Windows.Controls.ItemsPresenter> il nome `ItemsPresenter`.  
+ Quando si crea un <xref:System.Windows.Controls.ControlTemplate> per un <xref:System.Windows.Controls.ListView>, il modello potrebbe contenere un <xref:System.Windows.Controls.ItemsPresenter> all'interno di un <xref:System.Windows.Controls.ScrollViewer>. (Il <xref:System.Windows.Controls.ItemsPresenter> Visualizza ogni elemento nel <xref:System.Windows.Controls.ListView>; <xref:System.Windows.Controls.ScrollViewer> Abilita lo scorrimento all'interno del controllo).  Se il <xref:System.Windows.Controls.ItemsPresenter> non è il figlio diretto del <xref:System.Windows.Controls.ScrollViewer>, è necessario assegnare il <xref:System.Windows.Controls.ItemsPresenter> il nome, `ItemsPresenter`.  
   
-## Stati del controllo ListView  
- Nella tabella seguente sono elencati gli stati visivi per il controllo <xref:System.Windows.Controls.ListView>.  
+## <a name="listview-states"></a>Stati di ListView  
+ Nella tabella seguente sono elencati gli stati visivi per la <xref:System.Windows.Controls.ListView> controllo.  
   
-||||  
-|-|-|-|  
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Valid|ValidationStates|Il controllo utilizza la classe <xref:System.Windows.Controls.Validation> e la proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `false`.|  
-|InvalidFocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo non ha lo stato attivo.|  
-  
-## Parti del controllo ListViewItem  
- Il controllo <xref:System.Windows.Controls.ListViewItem> non include parti denominate.  
-  
-## Stati del controllo ListViewItem  
- Nella tabella seguente sono elencati gli stati per il controllo <xref:System.Windows.Controls.ListViewItem>.  
-  
-||||  
 |-|-|-|  
+|Valido|ValidationStates|Il controllo Usa il <xref:System.Windows.Controls.Validation> classe e <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.|  
+|InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.|  
+|InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.|  
+  
+## <a name="listviewitem-parts"></a>ListViewItem parti  
+ Il <xref:System.Windows.Controls.ListViewItem> controllo non dispone di parti denominate.  
+  
+## <a name="listviewitem-states"></a>Stati ListViewItem  
+ Nella tabella seguente sono elencati gli stati per il <xref:System.Windows.Controls.ListViewItem> controllo.  
+  
 |Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Normal|CommonStates|Stato predefinito.|  
-|Disabled|CommonStates|Il controllo è disabilitato.|  
-|MouseOver|CommonStates|Il puntatore del mouse si trova sopra il controllo <xref:System.Windows.Controls.ComboBox>.|  
-|Focused|FocusStates|Il controllo ha lo stato attivo.|  
-|Unfocused|FocusStates|Il controllo non ha lo stato attivo.|  
-|Selezionato|SelectionStates|L'elemento è attualmente selezionato.|  
-|Non selezionato|SelectionStates|L'elemento non è attualmente selezionato.|  
-|SelectedUnfocused|SelectionStates|L'elemento è selezionato, ma non dispone dello stato attivo.|  
-|Valid|ValidationStates|Il controllo utilizza la classe <xref:System.Windows.Controls.Validation> e la proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `false`.|  
-|InvalidFocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo non ha lo stato attivo.|  
+|-|-|-|  
+|Normale|CommonStates|Lo stato predefinito.|  
+|Disabilitato|CommonStates|Il controllo è disabilitato.|  
+|MouseOver|CommonStates|Il puntatore del mouse è posizionato il <xref:System.Windows.Controls.ComboBox> controllo.|  
+|Con stato attivo|FocusStates|Il controllo ha lo stato attivo.|  
+|Con stato non attivo|FocusStates|Il controllo non ha lo stato attivo.|  
+|Selezionato|SelectionStates|L'elemento selezionato.|  
+|Deselezionato|SelectionStates|L'elemento non è selezionato.|  
+|SelectedUnfocused|SelectionStates|L'elemento è selezionato, ma non ha uno stato attivo.|  
+|Valido|ValidationStates|Il controllo Usa il <xref:System.Windows.Controls.Validation> classe e <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.|  
+|InvalidFocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.|  
+|InvalidUnfocused|ValidationStates|Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.|  
   
-## Esempi di ControlTemplate del controllo ListView  
- Nell'esempio seguente viene illustrato come definire un oggetto <xref:System.Windows.Controls.ControlTemplate> per il controllo <xref:System.Windows.Controls.ListView> e i tipi associati.  
+## <a name="listview-controltemplate-examples"></a>Esempi di ControlTemplate del controllo ListView  
+ Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.ListView> controllo e i relativi tipi associati.  
   
- [!code-xml[ControlTemplateExamples#ListView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listview.xaml#listview)]  
+ [!code-xaml[ControlTemplateExamples#ListView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listview.xaml#listview)]  
   
- Negli esempi di <xref:System.Windows.Controls.ControlTemplate> vengono utilizzate una o più delle risorse seguenti.  
+ Il <xref:System.Windows.Controls.ControlTemplate> negli esempi viene utilizzato uno o più delle seguenti risorse.  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplate](http://go.microsoft.com/fwlink/?LinkID=160041) \(la pagina potrebbe essere in inglese\).  
+ Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   
-## Vedere anche  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

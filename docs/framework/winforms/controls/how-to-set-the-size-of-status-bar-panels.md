@@ -1,36 +1,41 @@
 ---
-title: "Procedura: impostare la dimensione dei pannelli della barra di stato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pannelli, impostazione delle dimensioni in barre di stato"
-  - "barre di stato, impostazione delle dimensioni del pannello"
-  - "StatusBar (controllo) [Windows Form], dimensione del pannello"
+title: 'Procedura: impostare la dimensione dei pannelli della barra di stato'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- StatusBar control [Windows Forms], panel size
+- status bars [Windows Forms], setting panel size
+- panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bc9eca130b238ac686e88ebbc6e8491bc7be93bf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare la dimensione dei pannelli della barra di stato
+# <a name="how-to-set-the-size-of-status-bar-panels"></a>Procedura: impostare la dimensione dei pannelli della barra di stato
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.ToolStripStatusLabel> sostituisca il controllo <xref:System.Windows.Forms.StatusBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.StatusBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  
+>  Benché il controllo <xref:System.Windows.Forms.ToolStripStatusLabel> sostituisca il controllo <xref:System.Windows.Forms.StatusBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.StatusBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.  
   
- Ciascuna istanza della classe <xref:System.Windows.Forms.StatusBarPanel> all'interno di un controllo [Controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) dispone di un determinato numero di proprietà dinamiche che ne stabiliscono la larghezza e il ridimensionamento in fase di esecuzione.  
+ Ogni istanza del <xref:System.Windows.Forms.StatusBarPanel> classe all'interno di un [controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) controllo ha un numero di proprietà dinamiche che determinano la larghezza e il ridimensionamento in fase di esecuzione.  
   
-### Per impostare le dimensioni di un pannello  
+### <a name="to-set-the-size-of-a-panel"></a>Per impostare le dimensioni di un pannello  
   
-1.  Nella routine impostare le proprietà <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A> e <xref:System.Windows.Forms.StatusBarPanel.Width%2A> \(o eventuali subset inclusi al loro interno\) per i pannelli della barra di stato utilizzando il relativo indice passato alla proprietà <xref:System.Windows.Forms.StatusBar.Panels%2A> della raccolta <xref:System.Windows.Forms.StatusBarPanel>.  
+1.  In una routine, impostare il <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, e <xref:System.Windows.Forms.StatusBarPanel.Width%2A> proprietà (o qualsiasi sottoinsieme al suo interno) per la barra di stato visualizza pannelli utilizzando il relativo indice passato tramite la <xref:System.Windows.Forms.StatusBar.Panels%2A> proprietà del <xref:System.Windows.Forms.StatusBarPanel> insieme.  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
@@ -42,7 +47,6 @@ caps.handback.revision: 14
     ' Enable the StatusBar control to display panels.  
        StatusBar1.ShowPanels = True  
         End Sub  
-  
     ```  
   
     ```csharp  
@@ -55,7 +59,6 @@ caps.handback.revision: 14
        statusBar1.Panels[0].Width = 200;  
        statusBar1.ShowPanels = true;  
     }  
-  
     ```  
   
     ```cpp  
@@ -72,9 +75,9 @@ caps.handback.revision: 14
        }  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.StatusBar>   
- <xref:System.Windows.Forms.ToolStripStatusLabel>   
- [Procedura dettagliata: aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)   
- [Procedura: individuare il pannello selezionato nel controllo StatusBar Windows Form](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.StatusBar>  
+ <xref:System.Windows.Forms.ToolStripStatusLabel>  
+ [Procedura dettagliata: Aggiornamento delle informazioni sulla barra di stato in fase di esecuzione](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
+ [Procedura: Individuare il pannello selezionato nel controllo StatusBar di Windows Form](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
  [Cenni preliminari sul controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

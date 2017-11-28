@@ -1,65 +1,64 @@
 ---
-title: "How to: Move Data Into and Out of a Variable (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "variables [Visual Basic], retrieving values"
-  - "variables [Visual Basic], storing data"
+title: 'Procedura: spostare i dati all''interno e all''esterno di una variabile (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- variables [Visual Basic], retrieving values
+- variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: fefb1979e35cd7b5fa1917f8f1a57af575e51234
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Move Data Into and Out of a Variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Per memorizzare un valore in una variabile, è necessario inserirne il nome a sinistra di un'istruzione di assegnazione.  
+# <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Procedura: spostare i dati all'interno e all'esterno di una variabile (Visual Basic)
+Archiviare un valore in una variabile inserendo il nome della variabile sul lato sinistro di un'istruzione di assegnazione.  
   
-## Inserimento di dati in una variabile  
+## <a name="putting-data-in-a-variable"></a>Inserimento di dati in una variabile  
   
-#### Per memorizzare un valore in una variabile  
+#### <a name="to-store-a-value-in-a-variable"></a>Per archiviare un valore in una variabile  
   
--   Utilizzare il nome della variabile a sinistra di un'istruzione di assegnazione.  
+-   Utilizzare il nome della variabile sul lato sinistro di un'istruzione di assegnazione.  
   
-     Nell'esempio riportato di seguito viene impostato il valore della variabile `alpha`.  
+     Nell'esempio seguente imposta il valore della variabile `alpha`.  
   
     ```  
     alpha = (beta * 6.27) / (gamma + 2.1)  
     ```  
   
-     Il valore generato a destra dell'istruzione di assegnazione viene memorizzato nella variabile.  
+     Il valore generato sul lato destro dell'istruzione di assegnazione è archiviato nella variabile.  
   
-## Recupero di dati da una variabile  
- Per recuperare il valore di una variabile, includerne il nome in un'espressione.  
+## <a name="getting-data-from-a-variable"></a>Recupero di dati da una variabile  
+ Per recuperare il valore di una variabile, includendo il nome della variabile in un'espressione.  
   
-#### Per recuperare un valore da una variabile  
+#### <a name="to-retrieve-a-value-from-a-variable"></a>Per recuperare un valore da una variabile  
   
--   Utilizzare il nome della variabile in un'espressione.  Le variabili possono essere utilizzate in tutte le occasioni in cui è consentito l'utilizzo di una costante o di un valore letterale, con l'unica eccezione delle espressioni in cui viene definito il valore di una costante.  
+-   Utilizzare il nome della variabile in un'espressione. È possibile utilizzare una variabile in qualsiasi punto è possibile utilizzare una costante o valore letterale, tranne in un'espressione che definisce il valore di una costante.  
   
-     In alternativa  
+     -oppure-  
   
--   Utilizzare il nome della variabile che segue il segno di uguale \(`=`\) in un'istruzione di assegnazione.  
+-   Utilizzare il nome della variabile seguente uguali (`=`) eseguire l'accesso in un'istruzione di assegnazione.  
   
-     Nell'esempio riportato di seguito il valore della variabile `startValue` viene letto, dopodiché il valore della variabile `counter` viene utilizzato in un'espressione.  
+     Nell'esempio seguente legge il valore della variabile `startValue` e quindi utilizza il valore della variabile `counter` in un'espressione.  
   
     ```  
     counter = startValue  
     cellValue = (counter + 5) ^ 2  
     ```  
   
-     Il valore della variabile partecipa nell'espressione con le stesse modalità di una costante e viene quindi memorizzato nella variabile o proprietà a sinistra dell'istruzione di assegnazione.  
+     Il valore della variabile fa parte dell'espressione come una costante, e quindi viene archiviato nella variabile o proprietà sul lato sinistro dell'istruzione di assegnazione.  
   
-## Vedere anche  
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [Dichiarazione di variabili](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Object Variables](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+## <a name="see-also"></a>Vedere anche  
+ [Variabili](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [Dichiarazione di variabile](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [Variabili oggetto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

@@ -1,51 +1,50 @@
 ---
-title: "&lt;typeparam&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "typeparam XML tag"
-  - "<typeparam> XML tag"
+title: '&lt;typeparam&gt; (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- typeparam XML tag
+- <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b654fe6fc93642693730256b523fee999aa55937
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;typeparam&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Definisce un nome e una descrizione di un parametro di tipo.  
+# <a name="lttypeparamgt-visual-basic"></a>&lt;typeparam&gt; (Visual Basic)
+Definisce un parametro di tipo nome e una descrizione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```  
+```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `name`  
- Nome del parametro del tipo.  Racchiudere il nome tra virgolette doppie \(" "\).  
+ Nome del parametro di tipo. Racchiudere il nome tra virgolette doppie (" ").  
   
  `description`  
  Descrizione del parametro di tipo.  
   
-## Note  
- Utilizzare il tag `<typeparam>` nel commento per una dichiarazione di tipo o membro generico per descrivere uno dei parametri di tipo.  
+## <a name="remarks"></a>Note  
+ Utilizzare il `<typeparam>` tag nel commento per un tipo generico o una dichiarazione di membro generico descrivere uno dei parametri di tipo.  
   
- Eseguire la compilazione con [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare in un file i commenti relativi alla documentazione.  
+ Compilare con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) per elaborare i commenti relativi alla documentazione in un file.  
   
-## Esempio  
- In questo esempio il tag `<typeparam>` viene utilizzato per descrivere il parametro `id`.  
+## <a name="example"></a>Esempio  
+ Questo esempio viene utilizzato il `<typeparam>` tag per descrivere il `id` parametro.  
   
  [!code-vb[VbVbcnXmlDocComments#8](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/typeparam_1.vb)]  
   
-## Vedere anche  
- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tag di commento XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

@@ -1,38 +1,43 @@
 ---
-title: "Procedura: impostare le immagini in fase di esecuzione (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "bitmap [Windows Form], visualizzazione nel controllo PictureBox [Windows Form]"
-  - "esempi [Windows Form], PictureBox (controllo)"
-  - "immagini [Windows Form], aggiunta con il controllo PictureBox [Windows Form]"
-  - "PictureBox (controllo) [Windows Form], aggiunta di immagini"
-  - "PictureBox (controllo) [Windows Form], aggiunta di immagini"
-  - "immagini, impostazione della visualizzazione"
+title: 'Procedura: impostare le immagini in fase di esecuzione (Windows Form)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- pictures [Windows Forms], setting display
+- examples [Windows Forms], PictureBox control
+- bitmaps [Windows Forms], displaying in PictureBox control [Windows Forms]
+- PictureBox control [Windows Forms], adding images
+- images [Windows Forms], adding with PictureBox control [Windows Forms]
+- PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 429c0c928d8bff4f837186040288d9447fc18687
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare le immagini in fase di esecuzione (Windows Form)
-È possibile impostare a livello di codice l'immagine visualizzata da un controllo <xref:System.Windows.Forms.PictureBox> Windows Form.  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Procedura: impostare le immagini in fase di esecuzione (Windows Form)
+È possibile impostare a livello di codice l'immagine visualizzata da un Windows Form <xref:System.Windows.Forms.PictureBox> controllo.  
   
-### Per impostare un'immagine a livello di codice  
+### <a name="to-set-a-picture-programmatically"></a>Per impostare un'immagine a livello di codice  
   
--   Impostare la proprietà <xref:System.Windows.Forms.PictureBox.Image%2A> tramite il metodo <xref:System.Drawing.Image.FromFile%2A> della classe <xref:System.Drawing.Image>.  
+-   Impostare il <xref:System.Windows.Forms.PictureBox.Image%2A> proprietà utilizzando il <xref:System.Drawing.Image.FromFile%2A> metodo la <xref:System.Drawing.Image> classe.  
   
-     Nell'esempio seguente il percorso impostato per la posizione dell'immagine coincide con la cartella Documenti.  Questa scelta è dovuta al fatto che si suppone che questa directory sia presente sulla maggior parte dei computer con sistema operativo Windows.  La scelta di questa posizione consente inoltre di eseguire l'applicazione senza problemi agli utenti che dispongono di livelli di accesso minimo.  Nell'esempio riportato di seguito si presuppone che un controllo <xref:System.Windows.Forms.PictureBox> sia già stato aggiunto al form.  
+     Nell'esempio seguente, il percorso impostato per la posizione dell'immagine è la cartella documenti. Ciò accade in quanto è possibile presupporre che la maggior parte dei computer che eseguono il sistema operativo Windows includerà questa directory. Ciò consente inoltre agli utenti del sistema con livelli di accesso minimo di eseguire l'applicazione senza problemi. Nell'esempio seguente si presuppone un form con un <xref:System.Windows.Forms.PictureBox> controllo già aggiunto.  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -43,7 +48,6 @@ caps.handback.revision: 14
        (System.Environment.SpecialFolder.Personal) _  
        & "\Image.gif")  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -56,7 +60,6 @@ caps.handback.revision: 14
        (System.Environment.SpecialFolder.Personal)  
        + @"\Image.gif");  
     }  
-  
     ```  
   
     ```cpp  
@@ -72,16 +75,15 @@ caps.handback.revision: 14
        }  
     ```  
   
-### Per cancellare un'immagine  
+### <a name="to-clear-a-graphic"></a>Per cancellare un'immagine  
   
--   Rilasciare innanzitutto la memoria utilizzata dall'immagine, quindi cancellare l'oggetto grafico.  In caso di problemi di gestione della memoria, sarà possibile utilizzare successivamente la procedura di Garbage Collection.  
+-   Innanzitutto, rilasciare la memoria utilizzata dall'immagine e quindi deselezionare l'icona. Operazione di Garbage collection consente di liberare la memoria in un secondo momento se la gestione della memoria diventa un problema.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
        PictureBox1.Image.Dispose()  
        PictureBox1.Image = Nothing  
     End If  
-  
     ```  
   
     ```csharp  
@@ -90,7 +92,6 @@ caps.handback.revision: 14
        pictureBox1.Image.Dispose();  
        pictureBox1.Image = null;  
     }  
-  
     ```  
   
     ```cpp  
@@ -102,14 +103,14 @@ caps.handback.revision: 14
     ```  
   
     > [!NOTE]
-    >  Per ulteriori informazioni sui motivi per i quali è preferibile utilizzare il metodo <xref:System.Drawing.Image.Dispose%2A> in questo modo, vedere [Cleaning Up Unmanaged Resources](../../../../docs/standard/garbage-collection/unmanaged.md).  
+    >  Per ulteriori informazioni sui motivi per cui è necessario utilizzare il <xref:System.Drawing.Image.Dispose%2A> metodo in questo modo, vedere [la pulizia di risorse non gestite](../../../../docs/standard/garbage-collection/unmanaged.md).  
   
-     Con questo codice l'immagine verrà cancellata anche se è stata caricata nel controllo in fase di progettazione.  
+     Questo codice l'immagine verrà cancellata anche se è stata caricata nel controllo in fase di progettazione.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.PictureBox>   
- <xref:System.Drawing.Image.FromFile%2A?displayProperty=fullName>   
- [Cenni preliminari sul controllo PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)   
- [Procedura: caricare un'immagine utilizzando la finestra di progettazione](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)   
- [Procedura: modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.PictureBox>  
+ <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>  
+ [Panoramica sul controllo PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [Procedura: Caricare un'immagine usando la finestra di progettazione](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ [Procedura: Modificare le dimensioni o la posizione di un'immagine in fase di esecuzione](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
  [Controllo PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)

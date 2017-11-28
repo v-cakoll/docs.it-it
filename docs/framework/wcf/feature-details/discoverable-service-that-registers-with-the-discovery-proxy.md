@@ -1,22 +1,25 @@
 ---
-title: "Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e6633491ec3b01a4ca3494639e9537c9f6441da5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione
 Quello che segue è il secondo di quattro argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [procedura: implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), è implementato un proxy di individuazione. In questo argomento viene creato un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che invia messaggi di annuncio (`Hello` e `Bye`) al proxy dell'individuazione, determinandone la registrazione e il relativo annullamento dal proxy di individuazione.  
   
 ### <a name="to-define-the-service-contract"></a>Per definire il contratto di servizio  
@@ -33,14 +36,14 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
   
 4.  Aggiungere le istruzioni using seguenti.  
   
-    ```  
+    ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
 5.  Definire il contratto di servizio all'interno di CalculatorService.cs.  
   
-    ```  
+    ```csharp  
     // Define a service contract.  
         [ServiceContract(Namespace = "http://Microsoft.Samples.Discovery")]  
         public interface ICalculatorService  
@@ -54,12 +57,11 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
             [OperationContract]  
             double Divide(double n1, double n2);  
         }  
-  
     ```  
   
 6.  Implementare inoltre il contratto di servizio all'interno di CalculatorService.cs.  
   
-    ```  
+    ```csharp  
     // Service class which implements the service contract.      
         public class CalculatorService : ICalculatorService  
         {  
@@ -95,7 +97,6 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
                 return result;  
             }  
         }  
-  
     ```  
   
 ### <a name="to-host-the-service"></a>Per ospitare il servizio  
@@ -104,18 +105,16 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
   
 2.  Aggiungere le istruzioni using seguenti.  
   
-    ```  
+    ```csharp 
     using System;  
     using System.ServiceModel;  
     using System.ServiceModel.Description;  
     using System.ServiceModel.Discovery;  
-  
     ```  
   
 3.  Nel metodo `Main()` aggiungere il codice seguente:  
   
-    ```  
-  
+    ```csharp  
     // Define the base address of the service  
     Uri baseAddress = new Uri("net.tcp://localhost:9002/CalculatorService/" + Guid.NewGuid().ToString());  
     // Define the endpoint address where announcement messages will be sent  
@@ -165,12 +164,12 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
     }  
     ```  
   
- L'implementazione di un servizio individuabile è quindi completata. Continuare a [procedura: implementare un'applicazione Client che utilizza il Proxy di individuazione per cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
+ L'implementazione di un servizio individuabile è quindi completata. Continuare a [procedura: implementare un'applicazione Client che utilizza il Proxy di individuazione per trovare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
   
 ## <a name="example"></a>Esempio  
  Quello che segue è l'elenco completo del codice usato in questo argomento.  
   
-```  
+```csharp  
 // CalculatorService.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -231,10 +230,9 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
-```  
+```csharp  
 // Program.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -295,10 +293,8 @@ namespace Microsoft.Samples.Discovery
     }  
 }  
 ```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
+
 ## <a name="see-also"></a>Vedere anche  
- [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)   
- [Procedura: implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [Procedura: implementare un'applicazione Client che utilizza il Proxy di individuazione per cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+ [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [Procedura: implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [Procedura: implementare un'applicazione Client che utilizza il Proxy di individuazione per trovare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

@@ -1,37 +1,39 @@
 ---
-title: "Procedura: associare una visualizzazione struttura ad albero a dati di profondit&#224; non determinabile | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TreeView (controllo) [WPF], associazione a dati di profondità indeterminata"
+title: "Procedura: associare una visualizzazione struttura ad albero a dati di profondità non determinabile"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b16cae3a91eae73a4480484d89bb075862256b25
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: associare una visualizzazione struttura ad albero a dati di profondit&#224; non determinabile
-Possono verificarsi condizioni in cui è necessario eseguire l'associazione di un oggetto <xref:System.Windows.Controls.TreeView> a un un'origine dati di cui non è nota la profondità.  Questa situazione può verificarsi quando i dati sono ricorsivi, ad esempio un file system, dove le cartelle possono contenere cartelle, o una struttura organizzativa di una società, dove i dipendenti dispongono di altri dipendenti come referenti diretti.  
+# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Procedura: associare una visualizzazione struttura ad albero a dati di profondità non determinabile
+Talvolta potrebbe essere quando si desidera associare un <xref:System.Windows.Controls.TreeView> a un'origine dati di profondità non è noto.  Ciò può verificarsi quando i dati sono ricorsivi, ad esempio un file system, in cui le cartelle possono contenere cartelle, o struttura organizzativa di una società, in cui i dipendenti hanno altri dipendenti diretti.  
   
- L'origine dati deve disporre di un modello a oggetti gerarchico.  Ad esempio, una classe `Employee` potrebbe contenere una raccolta di oggetti Employee che sono i referenti diretti di un dipendente.  Se i dati vengono rappresentati in un modo non gerarchico, è necessario compilare una rappresentazione gerarchica dei dati.  
+ L'origine dati deve disporre di un modello gerarchico di oggetti. Ad esempio, un `Employee` classe potrebbe contenere una raccolta di oggetti dipendenti che sono i report diretti di un dipendente. Se i dati vengono rappresentati in modo che non è di tipo gerarchico, è necessario generare una rappresentazione gerarchica dei dati.  
   
- Se si imposta la proprietà <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=fullName> e se <xref:System.Windows.Controls.ItemsControl> genera un oggetto <xref:System.Windows.Controls.ItemsControl> per ogni elemento figlio, l'oggetto <xref:System.Windows.Controls.ItemsControl> figlio utilizzerà lo stesso oggetto <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> dell'oggetto padre.  Ad esempio, se si imposta la proprietà <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> su un oggetto <xref:System.Windows.Controls.TreeView> con associazione a dati, ogni oggetto <xref:System.Windows.Controls.TreeViewItem> generato utilizza l'oggetto <xref:System.Windows.DataTemplate> assegnato alla proprietà <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> dell'oggetto <xref:System.Windows.Controls.TreeView>.  
+ Quando si imposta la <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A?displayProperty=nameWithType> proprietà e, se il <xref:System.Windows.Controls.ItemsControl> genera un <xref:System.Windows.Controls.ItemsControl> per ogni elemento figlio, quindi l'elemento figlio <xref:System.Windows.Controls.ItemsControl> utilizza lo stesso <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> come elemento padre. Ad esempio, se si imposta la <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> proprietà in un controllo con associazione a dati <xref:System.Windows.Controls.TreeView>, ogni <xref:System.Windows.Controls.TreeViewItem> generato utilizza il <xref:System.Windows.DataTemplate> assegnato al <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> proprietà del <xref:System.Windows.Controls.TreeView>.  
   
- <xref:System.Windows.HierarchicalDataTemplate> consente di specificare l'oggetto <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> per un oggetto <xref:System.Windows.Controls.TreeViewItem> o per qualsiasi oggetto <xref:System.Windows.Controls.HeaderedItemsControl> nel modello di dati.  Quando si imposta la proprietà <xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=fullName>, tale valore viene utilizzato quando viene applicato l'oggetto <xref:System.Windows.HierarchicalDataTemplate>.  Utilizzando un oggetto <xref:System.Windows.HierarchicalDataTemplate>, è possibile impostare in modo ricorsivo l'oggetto <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> per ogni oggetto <xref:System.Windows.Controls.TreeViewItem> nell'oggetto <xref:System.Windows.Controls.TreeView>.  
+ Il <xref:System.Windows.HierarchicalDataTemplate> consente di specificare il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> per un <xref:System.Windows.Controls.TreeViewItem>, o qualsiasi <xref:System.Windows.Controls.HeaderedItemsControl>, sul modello di dati. Quando si imposta la <xref:System.Windows.HierarchicalDataTemplate.ItemsSource%2A?displayProperty=nameWithType> proprietà, questo valore è utilizzato quando il <xref:System.Windows.HierarchicalDataTemplate> viene applicato. Utilizzando un <xref:System.Windows.HierarchicalDataTemplate>, è possibile impostare in modo ricorsivo il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> per ogni <xref:System.Windows.Controls.TreeViewItem> nel <xref:System.Windows.Controls.TreeView>.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come eseguire l'associazione di un oggetto <xref:System.Windows.Controls.TreeView> ai dati gerarchici e utilizzare un oggetto <xref:System.Windows.HierarchicalDataTemplate> per specificare l'oggetto <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> per ogni oggetto <xref:System.Windows.Controls.TreeViewItem>.  L'oggetto <xref:System.Windows.Controls.TreeView> esegue l'associazione ai dati XML che rappresentano i dipendenti di una società.  Ogni elemento `Employee` può contenere altri elementi `Employee` per indicare la struttura gerarchica.  Poiché i dati sono ricorsivi, <xref:System.Windows.HierarchicalDataTemplate> può essere applicato a ogni livello.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come associare un <xref:System.Windows.Controls.TreeView> per i dati gerarchici e utilizzare un <xref:System.Windows.HierarchicalDataTemplate> per specificare il <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> per ogni <xref:System.Windows.Controls.TreeViewItem>.  Il <xref:System.Windows.Controls.TreeView> associato ai dati XML che rappresentano i dipendenti di una società.  Ogni `Employee` elemento può contenere altre `Employee` degli elementi per indicare la struttura gerarchica. Poiché i dati sono ricorsivi, il <xref:System.Windows.HierarchicalDataTemplate> può essere applicato a ogni livello.  
   
- [!code-xml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
+ [!code-xaml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
-## Vedere anche  
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Cenni preliminari sui modelli di dati](../../../../docs/framework/wpf/data/data-templating-overview.md)
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Panoramica sui modelli di dati](../../../../docs/framework/wpf/data/data-templating-overview.md)

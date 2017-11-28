@@ -1,38 +1,36 @@
 ---
-title: "&#39;Class&#39; statement must end with a matching &#39;End Class&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30481"
-  - "bc30481"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30481"
+title: '&#39; Classe &#39; l''istruzione deve terminare con un corrispondente &#39; Classe di fine &#39;'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30481
+- bc30481
+helpviewer_keywords: BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e8643a0a5b55e220ca8dd53065500fe4b1e473d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;Class&#39; statement must end with a matching &#39;End Class&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-L'istruzione `Class` è utilizzata per iniziare un blocco `Class`, pertanto può trovarsi solo all'inizio del blocco e quest'ultimo deve terminare con un'istruzione `End Class` corrispondente.  L'istruzione `Class` è ridondante oppure il blocco `Class` non è stato terminato con un'istruzione `End Class`.  
+# <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39; Classe &#39; l'istruzione deve terminare con un corrispondente &#39; Classe di fine &#39;
+`Class`viene utilizzato per avviare un `Class` blocco, quindi può comparire solo all'inizio del blocco, con un corrispondente `End Class` che termina il blocco di istruzione. È presente una ridondanza `Class` istruzione oppure non è stato terminato il `Class` blocco con `End Class`.  
   
  **ID errore:** BC30481  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
--   Individuare e rimuovere l'istruzione `Class` superflua.  
+-   Individuare e rimuovere il `Class` istruzione.  
   
--   Concludere il blocco `Class` con un'istruzione `End Class` corrispondente.  
+-   Terminare il `Class` blocco con un corrispondente `End Class`.  
   
-## Vedere anche  
- [End \<keyword\> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md)   
- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)
+## <a name="see-also"></a>Vedere anche  
+ [Fine \<parola chiave > istruzione](../../../visual-basic/language-reference/statements/end-keyword-statement.md)  
+ [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)

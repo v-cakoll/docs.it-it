@@ -1,22 +1,28 @@
 ---
-title: "Modalit&#224; di mapping del modello a oggetti di diffusione WCF ad Atom e RSS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modalità di mapping del modello a oggetti di diffusione WCF ad Atom e RSS"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9e6af3dc911cdf67e7290d339122821c00fe6bc6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Modalit&#224; di mapping del modello a oggetti di diffusione WCF ad Atom e RSS
+# <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Modalità di mapping del modello a oggetti di diffusione WCF ad Atom e RSS
 Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vengono creati feed ed elementi utilizzando le classi seguenti:  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
@@ -35,9 +41,9 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- Un oggetto <xref:System.ServiceModel.Syndication.SyndicationFeed> può essere serializzato in qualsiasi formato di diffusione per il quale è definito un formattatore.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene fornito con due formattatori: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> e <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ Un oggetto <xref:System.ServiceModel.Syndication.SyndicationFeed> può essere serializzato in qualsiasi formato di diffusione per il quale è definito un formattatore. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] viene fornito con due formattatori: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> e <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
- Il modello a oggetti basato su <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> è più strettamente conforme alla specifica Atom 1.0 che non alla specifica RSS 2.0.Ciò è dovuto al fatto che Atom 1.0 è una specifica più sostanziale e definisce elementi ambigui o che sono stati omessi dalla specifica RSS 2.0.Di conseguenza, numerosi elementi nel modello a oggetti di diffusione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non hanno rappresentazione diretta nella specifica RSS 2.0.Quando si serializzano oggetti <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> in RSS 2.0, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente di serializzare gli elementi di dati specifici di Atom come elementi di estensione qualificati con lo spazio dei nomi conformi alla specifica Atom.Questa procedura può essere controllata con un parametro passato al costruttore <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ Il modello a oggetti basato su <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> è più strettamente conforme alla specifica Atom 1.0 che non alla specifica RSS 2.0. Ciò è dovuto al fatto che Atom 1.0 è una specifica più sostanziale e definisce elementi ambigui o che sono stati omessi dalla specifica RSS 2.0. Di conseguenza, numerosi elementi nel modello a oggetti di diffusione di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non hanno rappresentazione diretta nella specifica RSS 2.0. Quando si serializzano oggetti <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> in RSS 2.0, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] consente di serializzare gli elementi di dati specifici di Atom come elementi di estensione qualificati con lo spazio dei nomi conformi alla specifica Atom. Questa procedura può essere controllata con un parametro passato al costruttore <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
  Negli esempi di codice inclusi in questo argomento, per eseguire la serializzazione effettiva viene utilizzato uno dei due metodi illustrati qui.  
   
@@ -51,15 +57,15 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
   
-## SyndicationFeed  
- Nell'esempio di codice seguente viene illustrato come serializzare la classe <xref:System.ServiceModel.Syndication.SyndicationFeed> in Atom 1.0 e RSS 2.0.  
+## <a name="syndicationfeed"></a>SyndicationFeed  
+ Nell'esempio di codice seguente viene illustrato come serializzare la classe <xref:System.ServiceModel.Syndication.SyndicationFeed> per i formati Atom 1.0 e RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#0)]
  [!code-vb[SyndicationMapping#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#0)]  
   
  Nel codice XML seguente viene mostrato come serializzare <xref:System.ServiceModel.Syndication.SyndicationFeed> per il formato Atom 1.0.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <feed xml:lang="EN-US" xmlns="http://www.w3.org/2005/Atom">  
   <title type="text">My Feed Title</title>  
@@ -108,7 +114,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
  Nel codice XML seguente viene mostrato come serializzare <xref:System.ServiceModel.Syndication.SyndicationFeed> per il formato RSS 2.0.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0">  
   <channel>  
@@ -148,7 +154,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
 </rss>  
 ```  
   
-## SyndicationItem  
+## <a name="syndicationitem"></a>SyndicationItem  
  Nell'esempio di codice seguente viene illustrato come serializzare la classe <xref:System.ServiceModel.Syndication.SyndicationItem> per i formati Atom 1.0 e RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#1)]
@@ -156,7 +162,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
  Nel codice XML seguente viene mostrato come serializzare <xref:System.ServiceModel.Syndication.SyndicationItem> per il formato Atom 1.0.  
   
-```  
+```xml  
 <entry xmlns="http://www.w3.org/2005/Atom">  
   <id>ItemID</id>  
   <title type="text">Item Title</title>  
@@ -198,7 +204,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
  Nel codice XML seguente viene mostrato come serializzare <xref:System.ServiceModel.Syndication.SyndicationItem> per il formato RSS 2.0.  
   
-```  
+```xml  
 <item>  
   <guid isPermaLink="false">ItemID</guid>  
   <link>http://myitemuri/</link>  
@@ -234,7 +240,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
 </item>  
 ```  
   
-## SyndicationPerson  
+## <a name="syndicationperson"></a>SyndicationPerson  
  Nell'esempio di codice seguente viene illustrato come serializzare la classe <xref:System.ServiceModel.Syndication.SyndicationPerson> per i formati Atom 1.0 e RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#2)]
@@ -242,7 +248,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
  Nel codice XML seguente viene mostrato come serializzare <xref:System.ServiceModel.Syndication.SyndicationPerson> per il formato Atom 1.0.  
   
-```  
+```xml  
   <author>  
     <name>Jesper Aaberg</name>  
     <uri>http://Contoso/Aaberg</uri>  
@@ -257,7 +263,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
  Nell'XML seguente viene illustrato come serializzare la classe <xref:System.ServiceModel.Syndication.SyndicationPerson> per il formato RSS 2.0 se esiste un solo <xref:System.ServiceModel.Syndication.SyndicationPerson> rispettivamente nelle raccolte `Authors` o `Contributors`.  
   
-```  
+```xml  
 <author>Jesper.Aaberg@contoso.com</author>  
 <a10:contributor>  
     <a10:name>Lene Aaling</a10:name>  
@@ -268,7 +274,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
  Nell'XML seguente viene illustrato come serializzare la classe <xref:System.ServiceModel.Syndication.SyndicationPerson> per il formato RSS 2.0 se esiste più di un <xref:System.ServiceModel.Syndication.SyndicationPerson> rispettivamente nelle raccolte `Authors` o `Contributors`.  
   
-```  
+```xml  
 <a10:author>  
     <a10:name>Jesper Aaberg</a10:name>  
     <a10:uri>http://Contoso/Aaberg</a10:uri>  
@@ -291,7 +297,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
 </a10:contributor>  
 ```  
   
-## SyndicationLink  
+## <a name="syndicationlink"></a>SyndicationLink  
  Nell'esempio di codice seguente viene illustrato come serializzare la classe <xref:System.ServiceModel.Syndication.SyndicationLink> per i formati Atom 1.0 e RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#3)]
@@ -305,7 +311,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
  `<a10:link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
-## SyndicationCategory  
+## <a name="syndicationcategory"></a>SyndicationCategory  
  Nell'esempio di codice seguente viene illustrato come serializzare la classe <xref:System.ServiceModel.Syndication.SyndicationCategory> per i formati Atom 1.0 e RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#4)]
@@ -319,7 +325,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
  `<category domain="categoryScheme">categoryName</category>`  
   
-## TextSyndicationContent  
+## <a name="textsyndicationcontent"></a>TextSyndicationContent  
  Nell'esempio di codice seguente viene illustrato come serializzare la classe <xref:System.ServiceModel.Syndication.TextSyndicationContent> per i formati Atom 1.0 e RSS 2.0 quando viene creato <xref:System.ServiceModel.Syndication.TextSyndicationContent> con contenuto HTML.  
   
  [!code-csharp[SyndicationMapping#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#5)]
@@ -363,7 +369,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
  `<description><html> some xhtml </html></description>`  
   
-## UrlSyndicationContent  
+## <a name="urlsyndicationcontent"></a>UrlSyndicationContent  
  Nell'esempio di codice seguente viene illustrato come serializzare la classe <xref:System.ServiceModel.Syndication.UrlSyndicationContent> per i formati Atom 1.0 e RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#8)]
@@ -379,7 +385,7 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
  `<content type="audio" src="http://Contoso/someurl/" xmlns="http://www.w3.org/2005/Atom" />`  
   
-## XmlSyndicationContent  
+## <a name="xmlsyndicationcontent"></a>XmlSyndicationContent  
  Nell'esempio di codice seguente viene illustrato come serializzare la classe <xref:System.ServiceModel.Syndication.XmlSyndicationContent> per i formati Atom 1.0 e RSS 2.0.  
   
  [!code-csharp[SyndicationMapping#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#9)]
@@ -401,9 +407,9 @@ Quando si sviluppa un servizio di diffusione [!INCLUDE[indigo1](../../../../incl
   
  `</content>`  
   
-## Vedere anche  
- [Panoramica sulla diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)   
- [Architettura di diffusione](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)   
- [Procedura: creare un feed RSS di base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)   
- [Procedura: creare un feed Atom di base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)   
- [Procedura: esporre un feed come Atom e RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica sulla diffusione WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [Architettura di diffusione](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
+ [Procedura: creare un Feed RSS di base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [Procedura: creare un Feed Atom di base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [Procedura: esporre un Feed come Atom e RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

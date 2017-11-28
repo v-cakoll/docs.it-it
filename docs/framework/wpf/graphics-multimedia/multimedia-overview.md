@@ -1,125 +1,128 @@
 ---
-title: "Panoramica delle funzionalit&#224; multimediali | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "supporto"
-  - "elementi multimediali"
+title: "Panoramica delle funzionalità multimediali"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multimedia [WPF]
+- media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7097f5bd58573315681c61d0380e58638a4c4fb1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Panoramica delle funzionalit&#224; multimediali
-In questo argomento vengono introdotte le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], che consentono di integrare audio e video nelle applicazioni, in modo da migliorare l'esperienza utente.  
+# <a name="multimedia-overview"></a>Panoramica delle funzionalità multimediali
+Le funzionalità multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] consentono di integrare audio e video nelle applicazioni per migliorare l'esperienza utente. Questo argomento introduce le funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-   
+ 
   
 <a name="mediaapi"></a>   
-## API multimediali  
- Le classi <xref:System.Windows.Controls.MediaElement> e <xref:System.Windows.Media.MediaPlayer> sono utilizzate per presentare contenuto audio o video.  Queste classi possono essere controllate in modo interattivo oppure tramite un orologio.  È possibile utilizzare queste classi sul controllo [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 per la riproduzione di contenuti multimediali. La classe utilizzata dipende dallo scenario.  
+## <a name="media-api"></a>API multimediali  
+ Il <xref:System.Windows.Controls.MediaElement> e <xref:System.Windows.Media.MediaPlayer> classi vengono utilizzate per presentare il contenuto audio o video. Queste classi possono essere controllate in modo interattivo o da un orologio. È possibile usare queste classi sul controllo [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 per la riproduzione multimediale. La classe da usare dipende dallo scenario.  
   
- <xref:System.Windows.Controls.MediaElement> è una classe <xref:System.Windows.UIElement> supportata dal [Layout](../../../../docs/framework/wpf/advanced/layout.md) e può essere utilizzata in un gran numero di controlli.  È inoltre utilizzabile in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e nel codice. <xref:System.Windows.Media.MediaPlayer>, d'altra parte, è progettato per oggetti <xref:System.Windows.Media.Drawing> e non include il supporto del layout.  I contenuti multimediali caricati mediante <xref:System.Windows.Media.MediaPlayer> possono essere presentati unicamente utilizzando una classe <xref:System.Windows.Media.VideoDrawing> o tramite l'interazione diretta con una classe <xref:System.Windows.Media.DrawingContext>.  La classe <xref:System.Windows.Media.MediaPlayer> non può essere utilizzata in XAML.  
+ <xref:System.Windows.Controls.MediaElement>è un <xref:System.Windows.UIElement> è supportato dal [Layout](../../../../docs/framework/wpf/advanced/layout.md) e può essere utilizzato come contenuto di molti controlli. È anche utilizzabile in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] nonché nel codice. <xref:System.Windows.Media.MediaPlayer>, d'altra parte, è progettato per <xref:System.Windows.Media.Drawing> degli oggetti e non offre il supporto di layout. Contenuti multimediali caricati mediante un <xref:System.Windows.Media.MediaPlayer> possono essere presentati solo utilizzando un <xref:System.Windows.Media.VideoDrawing> o interagendo direttamente con un <xref:System.Windows.Media.DrawingContext>. <xref:System.Windows.Media.MediaPlayer>non può essere utilizzata in XAML.  
   
- Per ulteriori informazioni sugli oggetti e sul contesto di disegno, vedere [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Per altre informazioni sugli oggetti e sul contesto di disegno, vedere [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
 > [!NOTE]
->  Quando si distribuiscono contenuti multimediali con l'applicazione, non è possibile utilizzare un file multimediale come risorsa di progetto.  Invece, è necessario impostare il tipo di contenuti multimediali su `Content` nel file del progetto e `CopyToOutputDirectory` su `PreserveNewest` o su `Always`.  
+>  Quando si distribuiscono elementi multimediali con l'applicazione, non è possibile usare un file multimediale come risorsa di progetto. È necessario invece impostare il tipo di contenuto multimediale su `Content` nel file del progetto e `CopyToOutputDirectory` su `PreserveNewest` o su `Always`.  
   
 <a name="mediaplaybackmodes"></a>   
-## Modalità di riproduzione di contenuti multimediali  
+## <a name="media-playback-modes"></a>Modalità di riproduzione di elementi multimediali  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.MediaElement> e <xref:System.Windows.Media.MediaPlayer> dispongono di membri simili.  I collegamenti di questa sezione si riferiscono ai membri della classe <xref:System.Windows.Controls.MediaElement>.  A meno che non sia indicato in modo specifico, i membri collegati nella classe <xref:System.Windows.Controls.MediaElement> sono reperibili anche nella classe <xref:System.Windows.Media.MediaPlayer>.  
+>  Entrambi <xref:System.Windows.Controls.MediaElement> e <xref:System.Windows.Media.MediaPlayer> dispongono di membri simili. I collegamenti in questa sezione si riferiscono al <xref:System.Windows.Controls.MediaElement> i membri della classe. Se non specificato diversamente, i membri collegati nella <xref:System.Windows.Controls.MediaElement> classe può essere rilevata anche nel <xref:System.Windows.Media.MediaPlayer> classe.  
   
- Per comprendere la riproduzione di contenuti multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], è necessario conoscere le diverse modalità che è possibile utilizzare per riprodurre questo tipo di contenuti.  <xref:System.Windows.Controls.MediaElement> e <xref:System.Windows.Media.MediaPlayer> possono essere utilizzate entrambe in due modalità multimediali diverse, vale a dire la modalità indipendente e la modalità orologio.  La modalità multimediale è determinata dalla proprietà <xref:System.Windows.Controls.MediaElement.Clock%2A>.  Se la proprietà <xref:System.Windows.Controls.MediaElement.Clock%2A> è `null`, l'oggetto multimediale si trova nella modalità indipendente.  Se, invece, il valore della proprietà <xref:System.Windows.Controls.MediaElement.Clock%2A> è diverso da null, l'oggetto multimediale si trova nella modalità orologio.  Per impostazione predefinita, gli oggetti multimediali si trovano nella modalità indipendente.  
+ Per comprendere la riproduzione di elementi multimediali in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], è necessario conoscere le diverse modalità che è possibile usare per riprodurre questi elementi. Entrambi <xref:System.Windows.Controls.MediaElement> e <xref:System.Windows.Media.MediaPlayer> può essere utilizzato in due modalità di supporti diversi, la modalità indipendente e clock. La modalità di supporto è determinata dal <xref:System.Windows.Controls.MediaElement.Clock%2A> proprietà. Quando <xref:System.Windows.Controls.MediaElement.Clock%2A> è `null`, l'oggetto di supporto è in modalità indipendente. Quando il <xref:System.Windows.Controls.MediaElement.Clock%2A> è diverso da null, l'oggetto di supporto è in modalità orologio. Per impostazione predefinita, gli oggetti multimediali sono in modalità indipendente.  
   
-### Modalità indipendente  
- In modalità indipendente, la riproduzione dei contenuti multimediali dipende dai contenuti stessi.  Questa modalità consente le possibilità indicate di seguito:  
+### <a name="independent-mode"></a>Modalità indipendente  
+ In modalità indipendente la riproduzione dei contenuti multimediali dipende dai contenuti stessi. Questa modalità presenta le opzioni seguenti:  
   
--   È possibile specificare direttamente l'<xref:System.Uri> dei contenuti multimediali.  
+-   Dell'elemento multimediale <xref:System.Uri> possono essere specificati direttamente.  
   
--   È possibile controllare direttamente la riproduzione dei contenuti multimediali.  
+-   È possibile controllare direttamente la riproduzione degli elementi multimediali.  
   
--   È possibile modificare le proprietà <xref:System.Windows.Controls.MediaElement.Position%2A> e <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> dei contenuti multimediali.  
+-   Dell'elemento multimediale <xref:System.Windows.Controls.MediaElement.Position%2A> e <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> proprietà possono essere modificate.  
   
- I contenuti multimediali vengono caricati impostando la proprietà <xref:System.Windows.Controls.MediaElement.Source%2A> dell'oggetto <xref:System.Windows.Controls.MediaElement> oppure chiamando il metodo <xref:System.Windows.Media.MediaPlayer.Open%2A>dell'oggetto <xref:System.Windows.Media.MediaPlayer>.  
+ Contenuti multimediali vengono caricati o impostando la <xref:System.Windows.Controls.MediaElement> dell'oggetto <xref:System.Windows.Controls.MediaElement.Source%2A> proprietà o chiamando il <xref:System.Windows.Media.MediaPlayer> dell'oggetto <xref:System.Windows.Media.MediaPlayer.Open%2A> metodo.  
   
- Per controllare la riproduzione di contenuti multimediali in modalità indipendente, è possibile utilizzare i metodi di controllo dell'oggetto multimediale.  I metodi di controllo disponibili sono <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A> e <xref:System.Windows.Controls.MediaElement.Stop%2A>.  Per <xref:System.Windows.Controls.MediaElement>, il controllo interattivo mediante questi metodi è disponibile solo quando la proprietà <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> è impostata su <xref:System.Windows.Controls.MediaState>.  Questi metodi non sono disponibili quando l'oggetto multimediale è in modalità orologio.  
+ Per controllare la riproduzione degli elementi multimediali in modalità indipendente, è possibile usare i metodi di controllo dell'oggetto multimediale. I metodi di controllo disponibili sono <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, e <xref:System.Windows.Controls.MediaElement.Stop%2A>. Per <xref:System.Windows.Controls.MediaElement>, il controllo interattivo mediante questi metodi è disponibile solo quando il <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> è impostato su <xref:System.Windows.Controls.MediaState.Manual>. Questi metodi non sono disponibili quando l'oggetto multimediale è in modalità orologio.  
   
- Per un esempio della modalità indipendente, vedere [Controllare un oggetto MediaElement \(riproduzione, sospensione, interruzione, volume e velocità\)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md).  
+ Vedere [Controllare un oggetto MediaElement (Play, Pause, Stop, Volume e Speed)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md) per un esempio della modalità indipendente.  
   
-### Modalità orologio  
- In modalità orologio, la riproduzione di contenuti multimediali dipende da una classe <xref:System.Windows.Media.MediaTimeline>.  La modalità orologio presenta le seguenti caratteristiche:  
+### <a name="clock-mode"></a>Modalità orologio  
+ In modalità orologio, un <xref:System.Windows.Media.MediaTimeline> avvia la riproduzione di supporti. La modalità orologio presenta le caratteristiche seguenti:  
   
--   L'<xref:System.Uri> dei contenuti multimediali è impostato in modo indiretto tramite una classe <xref:System.Windows.Media.MediaTimeline>.  
+-   Dell'elemento multimediale <xref:System.Uri> è impostata indirettamente tramite una <xref:System.Windows.Media.MediaTimeline>.  
   
--   La riproduzione dei contenuti multimediali può essere controllata mediante l'orologio.  Non è possibile utilizzare i metodi di controllo dell'oggetto multimediale.  
+-   La riproduzione degli elementi multimediali può essere controllata dall'orologio. Non è possibile usare i metodi di controllo dell'oggetto multimediale.  
   
--   I contenuti multimediali vengono caricati impostando la proprietà <xref:System.Windows.Media.MediaTimeline.Source%2A> di un oggetto <xref:System.Windows.Media.MediaTimeline>, creando l'orologio dalla sequenza temporale e assegnandolo all'oggetto multimediale.  I contenuti multimediali vengono inoltre caricati in questo modo quando una classe <xref:System.Windows.Media.MediaTimeline> all'interno di un oggetto <xref:System.Windows.Media.Animation.Storyboard> ha come destinazione <xref:System.Windows.Controls.MediaElement>.  
+-   Contenuti multimediali vengono caricati impostando un <xref:System.Windows.Media.MediaTimeline> dell'oggetto <xref:System.Windows.Media.MediaTimeline.Source%2A> proprietà, creando l'orologio dalla sequenza temporale e assegnandolo all'oggetto di supporto. Contenuti multimediali vengono caricati anche in questo modo quando un <xref:System.Windows.Media.MediaTimeline> all'interno di un <xref:System.Windows.Media.Animation.Storyboard> destinazioni un <xref:System.Windows.Controls.MediaElement>.  
   
- Per controllare la riproduzione di contenuti multimediali in modalità orologio, è necessario utilizzare i metodi di controllo della classe <xref:System.Windows.Media.Animation.ClockController>.  Un oggetto <xref:System.Windows.Media.Animation.ClockController> si ottiene dalla proprietà <xref:System.Windows.Media.Animation.ClockController> della classe <xref:System.Windows.Media.MediaClock>.  Se si tenta di utilizzare i metodi di controllo di un oggetto <xref:System.Windows.Controls.MediaElement> o <xref:System.Windows.Media.MediaPlayer> in modalità orologio, verrà generata un'eccezione <xref:System.InvalidOperationException>.  
+ Per controllare la riproduzione multimediale in modalità orologio, il <xref:System.Windows.Media.Animation.ClockController> metodi di controllo devono essere utilizzati. Oggetto <xref:System.Windows.Media.Animation.ClockController> ottenuto dal <xref:System.Windows.Media.Animation.ClockController> proprietà del <xref:System.Windows.Media.MediaClock>. Se si tenta di utilizzare i metodi di controllo di un <xref:System.Windows.Controls.MediaElement> o <xref:System.Windows.Media.MediaPlayer> dell'oggetto in modalità di orologio, un <xref:System.InvalidOperationException> verrà generata.  
   
- Per ulteriori informazioni sugli orologi e sulle sequenze temporali, vedere la sezione [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Per altre informazioni sugli orologi e sulle sequenze temporali, vedere [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
- Per un esempio della modalità orologio, vedere [Controllare un MediaElement utilizzando uno storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md).  
+ Vedere [Controllare un MediaElement utilizzando uno storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md) per un esempio della modalità orologio.  
   
 <a name="mediaelement"></a>   
-## Classe MediaElement  
- Per aggiungere contenuti multimediali a un'applicazione è sufficiente aggiungere un controllo <xref:System.Windows.Controls.MediaElement> all'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dell'applicazione e fornire un <xref:System.Uri> ai contenuti multimediali che si desidera includere.  Tutti i tipi di contenuti multimediali supportati da [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 sono supportati in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Nell'esempio seguente viene illustrato un utilizzo semplice di <xref:System.Windows.Controls.MediaElement> in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+## <a name="mediaelement-class"></a>Classe MediaElement  
+ Aggiunge supporto a un'applicazione è semplice come l'aggiunta di un <xref:System.Windows.Controls.MediaElement> controllo il [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dell'applicazione e fornendo un <xref:System.Uri> nei supporti che si desidera includere. Tutti i tipi di elementi multimediali supportati da [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 sono supportati in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Nell'esempio seguente viene illustrato un utilizzo semplice del <xref:System.Windows.Controls.MediaElement> in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
- [!code-xml[MediaElement_snip#SimpleMediaElementUsageWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
+ [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
   
- Nell'esempio, i contenuti multimediali vengono riprodotti automaticamente appena vengono caricati.  Al termine della riproduzione, i contenuti multimediali vengono chiusi e tutte le risorse multimediali rilasciate \(inclusa la memoria video\).  Quello appena descritto è il comportamento predefinito dell'oggetto <xref:System.Windows.Controls.MediaElement> ed è controllato dalle proprietà <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> e <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>.  
+ In questo esempio gli elementi multimediali vengono riprodotti automaticamente appena vengono caricati. Al termine della riproduzione gli elementi multimediali vengono chiusi e tutte le risorse multimediali rilasciate (inclusa la memoria video). Si tratta del comportamento predefinito del <xref:System.Windows.Controls.MediaElement> oggetto ed è controllato dal <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> e <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> proprietà.  
   
-### Controllo di un oggetto MediaElement  
- Le proprietà <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> e <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> consentono di controllare il comportamento dell'oggetto <xref:System.Windows.Controls.MediaElement> rispettivamente quando la proprietà <xref:System.Windows.FrameworkElement.IsLoaded%2A> è `true` oppure `false`.  Le proprietà di <xref:System.Windows.Controls.MediaState> vengono impostate per influire sul comportamento della riproduzione dei contenuti multimediali.  Ad esempio, il valore predefinito della proprietà <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> è <xref:System.Windows.Controls.MediaState>, mentre il valore predefinito della proprietà <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> è <xref:System.Windows.Controls.MediaState>.  Ciò significa che non appena l'oggetto <xref:System.Windows.Controls.MediaElement> viene caricato e il [preroll](GTMT) è completo, la riproduzione dei contenuti multimediali ha inizio.  Al termine della riproduzione, i contenuti multimediali vengono chiusi e tutte le risorse multimediali rilasciate.  
+### <a name="controlling-a-mediaelement"></a>Controllo di un oggetto MediaElement  
+ Il <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> e <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> proprietà controllano il comportamento del <xref:System.Windows.Controls.MediaElement> quando <xref:System.Windows.FrameworkElement.IsLoaded%2A> è `true` o `false`, rispettivamente. Il <xref:System.Windows.Controls.MediaState> le proprietà impostate influiscono sul comportamento di riproduzione supporti. Ad esempio, il valore predefinito <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> è <xref:System.Windows.Controls.MediaState.Play> e il valore predefinito <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> è <xref:System.Windows.Controls.MediaState.Close>. Ciò significa che non appena il <xref:System.Windows.Controls.MediaElement> viene caricato e il preroll è completo, che inizia il supporto per la riproduzione. Al termine della riproduzione gli elementi multimediali vengono chiusi e tutte le risorse multimediali rilasciate.  
   
- Le proprietà <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> e <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> non rappresentano l'unico modo per controllare la riproduzione dei contenuti multimediali.  In modalità orologio, l'oggetto <xref:System.Windows.Controls.MediaElement> può essere controllato dall'orologio oppure dai metodi di controllo interattivi, se la proprietà <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> è impostata su <xref:System.Windows.Controls.MediaState>.  La scelta tra i due metodi viene gestita dall'oggetto <xref:System.Windows.Controls.MediaElement> mediante la valutazione delle seguenti proprietà.  
+ Il <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> e <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> proprietà non sono l'unico modo per controllare la riproduzione multimediale. In modalità orologio, è possibile controllare l'orologio di <xref:System.Windows.Controls.MediaElement> e i metodi di controllo interattivo sono controllare quando il <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> è <xref:System.Windows.Controls.MediaState.Manual>. <xref:System.Windows.Controls.MediaElement>gestisce la concorrenza per il controllo mediante la valutazione di proprietà seguenti.  
   
-1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>.  Disponibile quando vengono scaricati i contenuti multimediali.  In tal modo viene garantito che tutte le risorse multimediali siano rilasciate per impostazione predefinita, anche quando un oggetto <xref:System.Windows.Media.MediaClock> è associato all'oggetto <xref:System.Windows.Controls.MediaElement>.  
+1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. Disponibile quando vengono scaricati gli elementi multimediali. In questo modo si garantisce che tutte le risorse multimediali vengono rilasciate per impostazione predefinita, anche quando un <xref:System.Windows.Media.MediaClock> è associato il <xref:System.Windows.Controls.MediaElement>.  
   
-2.  <xref:System.Windows.Media.MediaClock>.  Disponibile quando i contenuti multimediali dispongono di una proprietà <xref:System.Windows.Controls.MediaElement.Clock%2A>.  Se i contenuti multimediali vengono scaricati, la proprietà <xref:System.Windows.Media.MediaClock> ha effetto solo se la proprietà <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> è impostata su <xref:System.Windows.Controls.MediaState>.  La modalità orologio esegue sempre l'override del comportamento caricato dell'oggetto <xref:System.Windows.Controls.MediaElement>.  
+2.  <xref:System.Windows.Media.MediaClock>. Disponibile quando i supporti sono un <xref:System.Windows.Controls.MediaElement.Clock%2A>. Se i supporti vengono scaricati, il <xref:System.Windows.Media.MediaClock> diventeranno effettive fino al <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> è <xref:System.Windows.Controls.MediaState.Manual>. Modalità di orologio Ignora sempre il comportamento di caricamento di <xref:System.Windows.Controls.MediaElement>.  
   
-3.  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>.  Disponibile quando vengono caricati i contenuti multimediali.  
+3.  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>. Disponibile quando vengono caricati gli elementi multimediali.  
   
-4.  Metodi di controllo interattivi.  Disponibili quando la proprietà <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> è impostata su <xref:System.Windows.Controls.MediaState>.  I metodi di controllo disponibili sono <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A> e <xref:System.Windows.Controls.MediaElement.Stop%2A>.  
+4.  Metodi di controllo interattivi. Sul posto quando <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> è <xref:System.Windows.Controls.MediaState.Manual>. I metodi di controllo disponibili sono <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, e <xref:System.Windows.Controls.MediaElement.Stop%2A>.  
   
-### Visualizzazione di un oggetto MediaElement  
- Per visualizzare un oggetto <xref:System.Windows.Controls.MediaElement>, è necessario disporre di contenuti di cui eseguire il rendering, le cui proprietà <xref:System.Windows.FrameworkElement.ActualWidth%2A> e <xref:System.Windows.FrameworkElement.ActualHeight%2A> siano impostate su zero fino a quando i contenuti non vengono caricati.  Per contenuti esclusivamente audio, il valore di queste proprietà è sempre zero.  Per contenuti video, una volta generato l'evento <xref:System.Windows.Controls.MediaElement.MediaOpened>, le proprietà <xref:System.Windows.FrameworkElement.ActualWidth%2A> e <xref:System.Windows.FrameworkElement.ActualHeight%2A> segnaleranno la dimensione dei contenuti multimediali caricati.  Pertanto, fino a quando i contenuti multimediali non vengono caricati, l'oggetto <xref:System.Windows.Controls.MediaElement> non occuperà alcuno spazio fisico nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], a meno che non venga impostata la proprietà <xref:System.Windows.FrameworkElement.Width%2A> o <xref:System.Windows.FrameworkElement.Height%2A>.  
+### <a name="displaying-a-mediaelement"></a>Visualizzazione di un oggetto MediaElement  
+ Per visualizzare un <xref:System.Windows.Controls.MediaElement> deve avere il contenuto per il rendering e sarà relativo <xref:System.Windows.FrameworkElement.ActualWidth%2A> e <xref:System.Windows.FrameworkElement.ActualHeight%2A> le proprietà impostate su zero fino a quando non viene caricato il contenuto. Per contenuti esclusivamente audio, il valore di queste proprietà è sempre zero. Per il contenuto video, una volta il <xref:System.Windows.Controls.MediaElement.MediaOpened> evento è stato generato il <xref:System.Windows.FrameworkElement.ActualWidth%2A> e <xref:System.Windows.FrameworkElement.ActualHeight%2A> verrà indicata la dimensione del supporto caricato. Ciò significa che fino a quando non viene caricato media, il <xref:System.Windows.Controls.MediaElement> non occupa spazio fisico nel [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] , a meno che il <xref:System.Windows.FrameworkElement.Width%2A> o <xref:System.Windows.FrameworkElement.Height%2A> sono impostate.  
   
- Se le proprietà <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> vengono impostate, i contenuti multimediali occuperanno l'area destinata all'oggetto <xref:System.Windows.Controls.MediaElement>.  Per conservare le [proporzioni](GTMT) originali dei contenuti multimediali, è necessario impostare solo una tra le proprietà <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A>.  Se si impostano entrambe le proprietà <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A>, il contenuto multimediale verrà presentato con una dimensione fissa, un comportamento che potrebbe non essere appropriato.  
+ Se si impostano entrambe il <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> proprietà causerà adattata per riempire l'area disponibile per il supporto di <xref:System.Windows.Controls.MediaElement>. Per mantenere le proporzioni del supporto originale, ovvero il <xref:System.Windows.FrameworkElement.Width%2A> o <xref:System.Windows.FrameworkElement.Height%2A> della proprietà deve essere impostato, ma non entrambi. Se si impostano entrambe le <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> proprietà causerà il supporto per la presentazione in una dimensione fissa che potrebbe non essere appropriata.  
   
- Per evitare questa situazione, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] può effettuare il [preroll](GTMT) del contenuto multimediale.  Questa operazione viene eseguita impostando la proprietà <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> su <xref:System.Windows.Controls.MediaState> oppure su <xref:System.Windows.Controls.MediaState>.  In uno stato <xref:System.Windows.Controls.MediaState> verrà effettuato il preroll del contenuto multimediale e verrà presentato il primo fotogramma.  In uno stato <xref:System.Windows.Controls.MediaState> verrà effettuato il [preroll](GTMT) del contenuto multimediale e verrà avviata la riproduzione.  
+ Per evitare questa situazione, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] può effettuare il preroll del contenuto multimediale. Questa operazione viene eseguita impostando il <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> al <xref:System.Windows.Controls.MediaState.Play> o <xref:System.Windows.Controls.MediaState.Pause>. In un <xref:System.Windows.Controls.MediaState.Pause> lo stato, il supporto verrà effettuato il preroll e presenta il primo frame. In un <xref:System.Windows.Controls.MediaState.Play> stato, il supporto verrà effettuato il preroll e iniziare la riproduzione.  
   
 <a name="mediaplayer"></a>   
-## Classe MediaPlayer  
- Mentre la classe <xref:System.Windows.Controls.MediaElement> è un elemento framework, la classe <xref:System.Windows.Media.MediaPlayer> è progettata per essere utilizzata negli oggetti <xref:System.Windows.Media.Drawing>.  Gli oggetti Drawing vengono utilizzati quando è possibile sacrificare le funzionalità a livello di framework per migliorare le prestazioni oppure se occorrono funzionalità <xref:System.Windows.Freezable>.  <xref:System.Windows.Media.MediaPlayer> consente di avvalersi di queste funzionalità e di fornire contenuti multimediali alle applicazioni.  Come <xref:System.Windows.Controls.MediaElement>, <xref:System.Windows.Media.MediaPlayer> può essere utilizzata in modalità indipendente oppure orologio, ma non dispone degli stati caricato e scaricato dell'oggetto <xref:System.Windows.Controls.MediaElement>.  In tal modo la complessità del controllo della riproduzione di <xref:System.Windows.Media.MediaPlayer> viene ridotta.  
+## <a name="mediaplayer-class"></a>Classe MediaPlayer  
+ Mentre il <xref:System.Windows.Controls.MediaElement> classe è un elemento framework, il <xref:System.Windows.Media.MediaPlayer> classe è progettata per essere utilizzato in <xref:System.Windows.Media.Drawing> oggetti. Gli oggetti di disegno vengono utilizzati quando è possibile sacrificare le funzionalità di livello di framework per migliorare le prestazioni o quando è necessario <xref:System.Windows.Freezable> funzionalità. <xref:System.Windows.Media.MediaPlayer>Consente di sfruttare queste funzionalità fornendo contenuti multimediali nelle applicazioni. Ad esempio <xref:System.Windows.Controls.MediaElement>, <xref:System.Windows.Media.MediaPlayer> può essere utilizzato in indipendente o modalità ma non di clock non dispone di <xref:System.Windows.Controls.MediaElement> stati caricato e scaricato oggetto. Questo riduce la complessità del controllo di riproduzione di <xref:System.Windows.Media.MediaPlayer>.  
   
-### Controllo di un oggetto MediaPlayer  
- Dal momento che <xref:System.Windows.Media.MediaPlayer> non dispone di stati, esistono solo due modi per controllare la riproduzione dei contenuti multimediali.  
+### <a name="controlling-mediaplayer"></a>Controllo di un oggetto MediaPlayer  
+ Poiché <xref:System.Windows.Media.MediaPlayer> è senza stato, sono disponibili solo due modi per controllare la riproduzione multimediale.  
   
-1.  Metodi di controllo interattivi.  Disponibili nella modalità indipendente \(proprietà `null` <xref:System.Windows.Media.MediaPlayer.Clock%2A>\).  
+1.  Metodi di controllo interattivi. Sul posto in modalità indipendenti (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> proprietà).  
   
-2.  <xref:System.Windows.Media.MediaClock>.  Disponibile quando i contenuti multimediali dispongono di una proprietà <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
+2.  <xref:System.Windows.Media.MediaClock>. Disponibile quando i supporti sono un <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
-### Visualizzazione di un oggetto MediaPlayer  
- Da un punto di vista tecnico, è impossibile visualizzare un oggetto <xref:System.Windows.Media.MediaPlayer>, in quanto non dispone di una rappresentazione fisica.  Tuttavia, tale oggetto può essere utilizzato per presentare contenuti multimediali in un oggetto <xref:System.Windows.Media.Drawing> mediante la classe <xref:System.Windows.Media.VideoDrawing>.  Nell'esempio riportato di seguito viene illustrato l'utilizzo di una classe <xref:System.Windows.Media.VideoDrawing> per la visualizzazione di contenuti multimediali.  
+### <a name="displaying-a-mediaplayer"></a>Visualizzazione di un oggetto MediaPlayer  
+ Tecnicamente, un <xref:System.Windows.Media.MediaPlayer> non possono essere visualizzati poiché non dispone di alcuna rappresentazione fisica. Tuttavia, può essere utilizzato per presentare i supporti in un <xref:System.Windows.Media.Drawing> utilizzando la <xref:System.Windows.Media.VideoDrawing> classe. Nell'esempio seguente viene illustrato l'utilizzo di un <xref:System.Windows.Media.VideoDrawing> per visualizzare gli elementi multimediali.  
   
  [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
- Per ulteriori informazioni sugli oggetti <xref:System.Windows.Media.Drawing>, vedere [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Vedere il [panoramica sugli oggetti disegno](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md) per ulteriori informazioni su <xref:System.Windows.Media.Drawing> oggetti.  
   
-## Vedere anche  
- <xref:System.Windows.Media.DrawingGroup>   
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Media.DrawingGroup>  
+ [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
  [Procedure relative](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)

@@ -1,51 +1,53 @@
 ---
-title: "Procedura: utilizzare modificatori e propriet&#224; GenerateMember | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Designer_GenerateMember"
-  - "Designer_Modifiers"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "form di base"
-  - "ereditarietà di form"
-  - "GenerateMember (proprietà)"
-  - "ereditarietà, form"
-  - "form ereditati"
-  - "form ereditati, Windows Form"
-  - "Modifiers (proprietà)"
-  - "Windows Form, ereditarietà"
+title: "Procedura: utilizzare modificatori e proprietà GenerateMember"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+f1_keywords:
+- Designer_GenerateMember
+- Designer_Modifiers
+helpviewer_keywords:
+- base forms
+- inheritance [Windows Forms], forms
+- inherited forms [Windows Forms], Windows Forms
+- inherited forms
+- form inheritance
+- Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bcb79525e557a66ed471bc38dcbdd444d75ba6b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: utilizzare modificatori e propriet&#224; GenerateMember
-Con il posizionamento di un componente in un Windows Form vengono messe a disposizione dall'ambiente di progettazione due proprietà: `GenerateMember` e `Modifiers`.  La proprietà `GenerateMember` consente di specificare il momento in cui Progettazione Windows Form dovrà generare una variabile membro per un componente.  La proprietà `Modifiers` rappresenta il modificatore di accesso assegnato a tale variabile membro.  Se il valore della proprietà `GenerateMember` è `false`, il valore della proprietà `Modifiers` non avrà alcun effetto.  
+# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Procedura: utilizzare modificatori e proprietà GenerateMember
+Quando si inserisce un componente in un Windows Form, due proprietà sono fornite dall'ambiente di progettazione: `GenerateMember` e `Modifiers`. Il `GenerateMember` proprietà consente di specificare quando la finestra di progettazione Windows Form genera una variabile membro per un componente. Il `Modifiers` proprietà è il modificatore di accesso assegnato a tale variabile membro. Se il valore della `GenerateMember` proprietà `false`, il valore della `Modifiers` proprietà non ha alcun effetto.  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Per specificare se un componente è un membro del form  
+### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Per specificare se un componente è un membro del modulo  
   
-1.  In Progettazione Windows Form aprire il form.  
+1.  In Progettazione Windows Form, aprire il form.  
   
-2.  Aprire la **Casella degli strumenti** e posizionare tre controlli <xref:System.Windows.Forms.Button> nel form.  
+2.  Aprire il **della casella degli strumenti**e nel form, inserire tre <xref:System.Windows.Forms.Button> controlli.  
   
-3.  Impostare le proprietà `GenerateMember` e `Modifiers` di ciascun controllo <xref:System.Windows.Forms.Button> sui valori indicati nella tabella seguente.  
+3.  Impostare il `GenerateMember` e `Modifiers` proprietà per ogni <xref:System.Windows.Forms.Button> controllo in base alla tabella seguente.  
   
-    |Nome del pulsante|Valore di GenerateMember|Valore di Modifiers|  
-    |-----------------------|------------------------------|-------------------------|  
+    |Nome pulsante|Valore di GenerateMember|Valore di Modifiers|  
+    |-----------------|--------------------------|---------------------|  
     |`button1`|`true`|`private`|  
     |`button2`|`true`|`protected`|  
     |`button3`|`false`|Nessuna modifica|  
@@ -54,9 +56,9 @@ Con il posizionamento di un componente in un Windows Form vengono messe a dispos
   
 5.  In **Esplora soluzioni** fare clic sul pulsante **Mostra tutti i file**.  
   
-6.  Aprire il nodo **Form1**, quindi nell'**Editor di codice** aprire il file **Form1.Designer.vb** o **Form1.Designer.cs**.  Questo file contiene il codice creato da Progettazione Windows Form.  
+6.  Aprire il **Form1** nodo e il **Editor di codice**, aprire il **Form1** o **Form1. Designer.cs** file. Questo file contiene il codice generato da Progettazione Windows Form.  
   
-7.  Trovare le dichiarazioni dei tre pulsanti.  Nell'esempio di codice riportato di seguito sono illustrate le differenze specificate dalle proprietà `GenerateMember` e `Modifiers`.  
+7.  Trovare le dichiarazioni per tre pulsanti. Esempio di codice seguente mostra le differenze specificate dal `GenerateMember` e `Modifiers` proprietà.  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
@@ -65,10 +67,10 @@ Con il posizionamento di un componente in un Windows Form vengono messe a dispos
      [!code-vb[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
->  Per impostazione predefinita, in Progettazione Windows Form viene assegnato il modificatore `private` \(`Friend` in Visual Basic\) ai controlli contenitore come <xref:System.Windows.Forms.Panel>.  Se il controllo di base <xref:System.Windows.Forms.UserControl> o <xref:System.Windows.Forms.Form> include un controllo contenitore, non accetterà nuovi elementi figlio nei controlli e nei form ereditati.  La soluzione è cambiare il modificate del controllo contenitore di base in `protected` o `public`.  
+>  Per impostazione predefinita, Progettazione Windows Form viene assegnato il `private` (`Friend` in Visual Basic) per i controlli contenitore come modificatore di <xref:System.Windows.Forms.Panel>. Se la base <xref:System.Windows.Forms.UserControl> o <xref:System.Windows.Forms.Form> dispone di un controllo contenitore, non verranno accettati nuovi elementi figlio nei moduli e dei controlli ereditati. La soluzione consiste nel modificare il modificatore del controllo contenitore di base per `protected` o `public`.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Button>   
- [Ereditarietà visiva di Windows Form](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)   
- [Procedura dettagliata: dimostrazione dell'ereditarietà visiva](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)   
- [Procedura: ereditare Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.Button>  
+ [Ereditarietà visiva di Windows Form](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
+ [Procedura dettagliata: dimostrazione dell'ereditarietà visiva](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
+ [Procedura: ereditare Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)

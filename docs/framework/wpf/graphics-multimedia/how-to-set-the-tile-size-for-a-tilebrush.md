@@ -1,51 +1,54 @@
 ---
-title: "Procedura: impostare la dimensione degli elementi affiancati di un TileBrush | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TileBrush, dimensione delle tessere"
-  - "Viewport (proprietà di TileBrush)"
+title: 'Procedura: impostare la dimensione degli elementi affiancati di un TileBrush'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TileBrush [WPF], size of tilepropertys
+- Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 484419c05c3d607212ea6d565777cf49cbfdbc19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare la dimensione degli elementi affiancati di un TileBrush
-In questo esempio viene illustrato come impostare la dimensione degli elementi affiancati di un oggetto <xref:System.Windows.Media.TileBrush>.  Per impostazione predefinita, un oggetto <xref:System.Windows.Media.TileBrush> genera un solo elemento affiancato che riempie completamente l'area da disegnare.  È possibile eseguire l'override di questo comportamento impostando le proprietà <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A>.  
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Procedura: impostare la dimensione degli elementi affiancati di un TileBrush
+In questo esempio viene illustrato come impostare la dimensione dei riquadri per un <xref:System.Windows.Media.TileBrush>. Per impostazione predefinita, un <xref:System.Windows.Media.TileBrush> produce un singolo riquadro che riempie completamente l'area da disegnare. È possibile eseguire l'override di questo comportamento impostando la <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> proprietà.  
   
- La proprietà <xref:System.Windows.Media.TileBrush.Viewport%2A> specifica la dimensione della tessera per un oggetto <xref:System.Windows.Media.TileBrush>.  Per impostazione predefinita, il valore della proprietà <xref:System.Windows.Media.TileBrush.Viewport%2A> è relativo alla dimensione dell'area disegnata.  Per specificare una dimensione assoluta della tessera tramite la proprietà <xref:System.Windows.Media.TileBrush.Viewport%2A>, impostare la proprietà <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> su <xref:System.Windows.Media.BrushMappingMode>.  
+ Il <xref:System.Windows.Media.TileBrush.Viewport%2A> proprietà specifica la dimensione dei riquadri per un <xref:System.Windows.Media.TileBrush>. Per impostazione predefinita, il valore di <xref:System.Windows.Media.TileBrush.Viewport%2A> proprietà è relativo alle dimensioni dell'area da disegnare. Per rendere il <xref:System.Windows.Media.TileBrush.Viewport%2A> proprietà specificare una dimensione assoluta della tessera, impostare il <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> proprietà <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene utilizzato un oggetto <xref:System.Windows.Media.ImageBrush>, un tipo di <xref:System.Windows.Media.TileBrush>, per disegnare un rettangolo con elementi affiancati.  Nell'esempio ogni elemento viene impostato al 50% per 50% dell'area di output \(rettangolo\).  Di conseguenza, il rettangolo viene riempito con quattro proiezioni dell'immagine.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.ImageBrush>, un tipo di <xref:System.Windows.Media.TileBrush>per disegnare un rettangolo con i riquadri. L'esempio imposta ogni tessera su un valore pari a 50% x 50% dell'area di output (rettangolo). Di conseguenza, il rettangolo viene disegnato con quattro proiezioni dell'immagine.  
   
- Nella figura che segue viene illustrato l'output che si ottiene dall'esempio.  
+ L'immagine seguente illustra l'output generato dall'esempio.
   
  ![Esempio di affiancamento con un tratto con immagine](../../../../docs/framework/wpf/graphics-multimedia/media/0.png "0")  
   
  [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]  
   
- Nell'esempio successivo viene creato un oggetto <xref:System.Windows.Media.ImageBrush>, le cui proprietà <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> vengono impostate, rispettivamente, su `0,0,25,25` e <xref:System.Windows.Media.BrushMappingMode>, quindi l'oggetto viene utilizzato per disegnare un altro rettangolo.  Di conseguenza, il pennello genera elementi affiancati con una larghezza di 25 [pixel](GTMT) e un'altezza di 25 [pixel](GTMT).  
+ Nell'esempio successivo viene creato un <xref:System.Windows.Media.ImageBrush>, imposta il relativo <xref:System.Windows.Media.TileBrush.Viewport%2A> per `0,0,25,25` e il relativo <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> per <xref:System.Windows.Media.BrushMappingMode.Absolute>che viene utilizzato per disegnare il rettangolo di un altro. Di conseguenza, il pennello genera tessere con una larghezza pari a 25 pixel e un'altezza pari a 25 pixel.  
   
- Nella figura che segue viene illustrato l'output che si ottiene dall'esempio.  
+ L'immagine seguente illustra l'output generato dall'esempio.  
   
  ![TileBrush affiancato con un viewport di 0,0,0.25,0.25](../../../../docs/framework/wpf/graphics-multimedia/media/25x25viewport.png "25x25viewport")  
   
  [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]  
   
- Gli esempi riportati in precedenza fanno parte di un esempio più esteso.  Per l'esempio completo, vedere [Esempio ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005) \(la pagina potrebbe essere in inglese\).  
+ Gli esempi precedenti fanno parte di un esempio più esaustivo. Per l'esempio completo, vedere [esempio ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005).  
   
- Benché in questo esempio venga utilizzata la classe <xref:System.Windows.Media.ImageBrush>, le proprietà <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> si comportano allo stesso modo per gli altri oggetti <xref:System.Windows.Media.TileBrush>, ovvero per <xref:System.Windows.Media.DrawingBrush> e <xref:System.Windows.Media.VisualBrush>.  Per ulteriori informazioni sugli oggetti <xref:System.Windows.Media.ImageBrush> e gli altri oggetti  <xref:System.Windows.Media.TileBrush>, vedere [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Sebbene questo esempio viene utilizzato il <xref:System.Windows.Media.ImageBrush> (classe), il <xref:System.Windows.Media.TileBrush.Viewport%2A> e <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> si comportano in modo identico per l'altro <xref:System.Windows.Media.TileBrush> oggetti, vale a dire per <xref:System.Windows.Media.DrawingBrush> e <xref:System.Windows.Media.VisualBrush>. Per ulteriori informazioni su <xref:System.Windows.Media.ImageBrush> e l'altro <xref:System.Windows.Media.TileBrush> degli oggetti, vedere [il disegno di immagini, disegni e oggetti visivi](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
-## Vedere anche  
- <xref:System.Windows.Media.TileBrush>   
- [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Media.TileBrush>  
+ [Disegnare con oggetti Image, Drawing e Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
  [Creare modelli di elementi affiancati differenti con un TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)

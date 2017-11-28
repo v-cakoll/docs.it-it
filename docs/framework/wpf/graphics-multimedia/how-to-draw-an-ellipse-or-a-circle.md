@@ -1,43 +1,46 @@
 ---
-title: "Procedura: disegnare un&#39;ellisse o un cerchio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cerchi, disegno"
-  - "disegno di cerchi"
-  - "disegno di ellissi"
-  - "ellissi, disegno"
-  - "grafica, disegno di cerchi"
-  - "grafica, disegno di ellissi"
+title: 'Procedura: disegnare un''ellisse o un cerchio'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ellipses [WPF], drawing
+- circles [WPF], drawing
+- drawing circles [WPF]
+- drawing ellipses [WPF]
+- graphics [WPF], drawing circles
+- graphics [WPF], drawing ellipses
 ms.assetid: 99763b8c-bfc8-44be-8231-8a70daf5481a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4da623c34b4c3b84dee0f02d631d032eb1c061d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: disegnare un&#39;ellisse o un cerchio
-In questo esempio viene illustrato come disegnare ellissi e cerchi utilizzando l'elemento <xref:System.Windows.Shapes.Ellipse>.  Per disegnare un'ellisse, creare un elemento <xref:System.Windows.Shapes.Ellipse> e specificare le relative proprietà <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A>.  Utilizzare la proprietà <xref:System.Windows.Shapes.Shape.Fill%2A> per specificare l'oggetto <xref:System.Windows.Media.Brush> utilizzato per disegnare l'interno dell'ellisse.  Utilizzare la proprietà <xref:System.Windows.Shapes.Shape.Stroke%2A> per specificare l'oggetto <xref:System.Windows.Media.Brush> utilizzato per disegnare il contorno dell'ellisse.  La proprietà <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> specifica lo spessore del contorno dell'ellisse.  
+# <a name="how-to-draw-an-ellipse-or-a-circle"></a>Procedura: disegnare un'ellisse o un cerchio
+In questo esempio viene illustrato come creare i puntini di sospensione e cerchi utilizzando il <xref:System.Windows.Shapes.Ellipse> elemento. Per disegnare un'ellisse, creare un <xref:System.Windows.Shapes.Ellipse> elemento e specificare il relativo <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A>. Utilizzare il relativo <xref:System.Windows.Shapes.Shape.Fill%2A> proprietà per specificare il <xref:System.Windows.Media.Brush> che viene usato per colorare l'interno dell'ellisse. Utilizzare il relativo <xref:System.Windows.Shapes.Shape.Stroke%2A> proprietà per specificare il <xref:System.Windows.Media.Brush> utilizzato per disegnare il contorno dell'ellisse. Il <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> proprietà specifica lo spessore del contorno dell'ellisse.  
   
- Per disegnare un cerchio, impostare le proprietà <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> dell'elemento <xref:System.Windows.Shapes.Ellipse> sullo stesso valore.  
+ Per disegnare un cerchio, impostare il <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> del <xref:System.Windows.Shapes.Ellipse> elemento uguale a altro.  
   
- Nell'esempio seguente vengono disegnati quattro elementi <xref:System.Windows.Shapes.Ellipse> all'interno di un oggetto <xref:System.Windows.Controls.Canvas>.  
+ Nell'esempio seguente disegna quattro <xref:System.Windows.Shapes.Ellipse> elementi all'interno di un <xref:System.Windows.Controls.Canvas>.  
   
-## Esempio  
- [!code-xml[drawingwithshapeelements#EllipseExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/ellipseexample.xaml#ellipseexample1)]  
+## <a name="example"></a>Esempio  
+ [!code-xaml[drawingwithshapeelements#EllipseExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/ellipseexample.xaml#ellipseexample1)]  
   
- Anche se in questo esempio viene utilizzato un oggetto <xref:System.Windows.Controls.Canvas> per contenere l'ellisse, è possibile utilizzare gli elementi ellisse e tutti gli altri elementi forma con qualsiasi oggetto <xref:System.Windows.Controls.Panel> o <xref:System.Windows.Controls.Control> che supporta contenuto non testuale.  
+ Sebbene questo esempio viene utilizzato un <xref:System.Windows.Controls.Canvas> per contenere i puntini di sospensione, è possibile utilizzare gli elementi di puntini di sospensione (e tutti gli altri elementi forma) con qualsiasi <xref:System.Windows.Controls.Panel> o <xref:System.Windows.Controls.Control> che supporta il contenuto non di testo.  
   
- Questo esempio è stato estratto da un esempio più ampio; per la versione completa, vedere [Esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037) \(la pagina potrebbe essere in inglese\).  
+ In questo esempio fa parte di un esempio più ampio; per l'esempio completo, vedere [esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## Vedere anche  
- <xref:System.Windows.Shapes.Ellipse>   
- <xref:System.Windows.Shapes.Shape>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Shapes.Ellipse>  
+ <xref:System.Windows.Shapes.Shape>  
  [Esempio di elementi forma](http://go.microsoft.com/fwlink/?LinkID=160037)

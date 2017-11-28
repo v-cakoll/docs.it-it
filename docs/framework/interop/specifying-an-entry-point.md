@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - EntryPoint field
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f8d8f4a561248b7022b08ee15c9a726a58b80318
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7406e256acaea0c535c222386c529c4087bbdc6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-an-entry-point"></a>Specifica di un punto di ingresso
 Un punto di ingresso identifica la posizione di una funzione in una DLL. All'interno di un progetto gestito, il nome originale o il punto di ingresso ordinale di una funzione di destinazione identifica tale funzione attraverso il limite di interoperabilità. È anche possibile mappare il punto di ingresso a un nome diverso, rinominando in effetti la funzione.  
@@ -46,7 +39,7 @@ Un punto di ingresso identifica la posizione di una funzione in una DLL. All'int
  Questo argomento illustra come rinominare una funzione di DLL nel codice gestito.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Ridenominazione di una funzione in Visual Basic  
- Visual Basic usa la parola chiave **Function** nell'istruzione **Declare** per impostare il campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=fullName>. L'esempio seguente mostra una dichiarazione di base.  
+ Visual Basic usa la parola chiave **Function** nell'istruzione **Declare** per impostare il campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>. L'esempio seguente mostra una dichiarazione di base.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -71,7 +64,7 @@ End Class
 ```  
   
 ## <a name="renaming-a-function-in-c-and-c"></a>Ridenominazione di una funzione in C# e C++  
- È possibile usare il campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=fullName> per specificare una funzione di DLL in base al nome o al numero ordinale. Se il nome della funzione nella definizione del metodo corrisponde al punto di ingresso nella DLL, non è necessario identificare in modo esplicito la funzione con il campo **EntryPoint**. In caso contrario, usare uno dei seguenti formati di attributo per indicare un nome o il numero ordinale:  
+ È possibile usare il campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> per specificare una funzione di DLL in base al nome o al numero ordinale. Se il nome della funzione nella definizione del metodo corrisponde al punto di ingresso nella DLL, non è necessario identificare in modo esplicito la funzione con il campo **EntryPoint**. In caso contrario, usare uno dei seguenti formati di attributo per indicare un nome o il numero ordinale:  
   
 ```  
 [DllImport("dllname", EntryPoint="Functionname")]  
@@ -104,8 +97,7 @@ extern "C" int MsgBox(HWND hWnd,
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Esempi di platform invoke](../../../docs/framework/interop/platform-invoke-examples.md)   
+ <xref:System.Runtime.InteropServices.DllImportAttribute>  
+ [Creazione di prototipi nel codice gestito](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [Esempi di platform invoke](../../../docs/framework/interop/platform-invoke-examples.md)  
  [Marshalling dei dati con platform invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
-

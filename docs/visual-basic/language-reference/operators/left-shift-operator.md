@@ -1,90 +1,87 @@
 ---
-title: "&lt;&lt; Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.<<"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "bit shift operators"
-  - "<< operator [Visual Basic]"
-  - "operator <<, Visual Basic left shift operator"
+title: '&lt;&lt;Operatore (Visual Basic)'
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.<<
+helpviewer_keywords:
+- bit shift operators [Visual Basic]
+- << operator [Visual Basic]
+- operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 56cfb227f7e5c68de802c1f2cfb842a770f65ae0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;&lt; Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Esegue uno spostamento aritmetico a sinistra su uno schema di bit.  
+# <a name="ltlt-operator-visual-basic"></a>&lt;&lt;Operatore (Visual Basic)
+Esegue uno spostamento a sinistra aritmetico in uno schema di bit.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 result = pattern << amount  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  `result`  
- Obbligatorio.  Valore numerico integrale.  Risultato dello spostamento dello schema di bit.  Il tipo di dati corrisponde a quello di `pattern`.  
+ Obbligatorio. Valore numerico integrale. Il risultato di spostamento dello schema di bit. Il tipo di dati è uguale a quello di `pattern`.  
   
  `pattern`  
- Obbligatorio.  Espressione numerica integrale.  Schema di bit da spostare.  Il tipo di dati deve essere integrale \(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` o `ULong`\).  
+ Obbligatorio. Espressione numerica integrale. Lo schema di bit da spostare. Il tipo di dati deve essere un tipo integrale (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, o `ULong`).  
   
  `amount`  
- Obbligatorio.  Espressione numerica.  Numero di bit per spostare lo schema di bit.  Il tipo di dati deve essere `Integer` o ampliato a `Integer`.  
+ Obbligatorio. Espressione numerica. Il numero di bit da spostare lo schema di bit. Il tipo di dati deve essere `Integer` o ampliarsi `Integer`.  
   
-## Note  
- Gli spostamenti aritmetici non sono circolari. In altre parole, i bit spostati oltre una delle estremità del risultato non vengono reintrodotti all'altra estremità.  In uno spostamento aritmetico a sinistra, i bit spostati oltre l'intervallo del tipo di dati del risultato vengono ignorati e le posizioni dei bit liberate a destra sono impostate su zero.  
+## <a name="remarks"></a>Note  
+ Aritmetici non sono circolare, ovvero i bit spostati oltre un'estremità del risultato non sono reintrodotto a altra estremità. In uno spostamento a sinistra aritmetico, vengono eliminati i bit spostati oltre l'intervallo del tipo di dati di risultati, e le posizioni dei bit liberate a destra vengono impostate su zero.  
   
- Per impedire lo spostamento di un numero di bit superiore a quello che il risultato può contenere, il valore di `amount` verrà nascosto con una maschera di dimensioni corrispondente al tipo di dati di `pattern`.  Il valore binario AND di questi valori viene utilizzato per l'entità dello spostamento.  Le maschere di dimensioni sono le seguenti:  
+ Per evitare lo spostamento di un bit più che il risultato può contenere, Visual Basic nasconde il valore di `amount` con una maschera di dimensioni che corrisponde al tipo di dati di `pattern`. L'operazione di AND binaria di questi valori viene utilizzato per l'entità dello spostamento. Di seguito sono riportate le maschere di dimensioni:  
   
-|Tipo di dati di `pattern`|Maschera di dimensioni \(decimale\)|Maschera di dimensioni \(esadecimale\)|  
-|-------------------------------|-----------------------------------------|--------------------------------------------|  
-|`SByte`, `Byte`|7|&H00000007|  
-|`Short`, `UShort`|15|&H0000000F|  
-|`Integer`, `UInteger`|31|&H0000001F|  
-|`Long`, `ULong`|63|&H0000003F|  
+|Tipo di dati`pattern`|Maschera di dimensioni (decimale)|Maschera di dimensioni (esadecimale)|  
+|----------------------------|---------------------------|-------------------------------|  
+|`SByte`, `Byte`|7|& H00000007|  
+|`Short`, `UShort`|15|& H0000000F|  
+|`Integer`, `UInteger`|31|& H0000001F|  
+|`Long`, `ULong`|63|& H0000003F|  
   
- Se `amount` è uguale a zero, il valore di `result` sarà identico al valore di `pattern`.  Se `amount` è negativo, verrà accettato come valore senza segno e nascosto con la maschera di dimensioni appropriata.  
+ Se `amount` è zero, il valore di `result` è identico al valore di `pattern`. Se `amount` è negativo, verrà considerato come un valore senza segno e nascosto con la maschera di dimensioni appropriate.  
   
- Gli spostamenti aritmetici non generano mai eccezioni di overflow.  
+ Aritmetici non generano mai eccezioni di overflow.  
   
 > [!NOTE]
->  L'operatore `<<` può essere sottoposto a *overload*. In altri termini, una classe o una struttura può ridefinirne il comportamento quando un operando specifica il tipo di tale classe o struttura.  Se il codice utilizza l'operatore su una classe o una struttura di questo tipo, è importante comprendere il comportamento ridefinito di tale operatore.  Per ulteriori informazioni, vedere [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  Il `<<` operatore può essere *overload*, il che significa che una classe o struttura ridefinire il comportamento quando un operando ha il tipo di quella classe o struttura. Se il codice utilizza l'operatore su una classe o una struttura, assicurarsi di aver compreso il comportamento ridefinito. Per ulteriori informazioni, vedere [routine di operatore](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Esempio  
- Nell'esempio riportato di seguito l'operatore `<<` viene utilizzato per eseguire spostamenti aritmetici a sinistra su valori integrali.  Il risultato presenta sempre lo stesso tipo di dati dell'espressione in cui è stato effettuato lo spostamento.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente usa il `<<` operatore per eseguire operazioni aritmetiche sinistra su valori integrali. Il risultato dispone sempre gli stessi dati di tipo dell'espressione viene spostato.  
   
  [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-operator_1.vb)]  
   
- Di seguito sono riportati i risultati dell'esempio precedente:  
+ I risultati dell'esempio precedente sono come segue:  
   
--   `result1` è 192 \(0000 0000 1100 0000\).  
+-   `result1`è 192 (0000 0000 1100 0000).  
   
--   `result2` è 3072 \(0000 1100 0000 0000\).  
+-   `result2`è 3072 (0000 1100 0000 0000).  
   
--   `result3` è \-32768 \(1000 0000 0000 0000\).  
+-   `result3`è compreso tra -32768 (1000 0000 0000 0000).  
   
--   `result4` è 384 \(0000 0001 1000 0000\).  
+-   `result4`è 384 (0000 0001 1000 0000).  
   
--   `result5` è 0 \(con uno spostamento di 15 posizioni a sinistra\).  
+-   `result5`è 0 (spostato 15 posizioni a sinistra).  
   
- L'entità dello spostamento per `result4` viene calcolata come 17 AND 15, pari a 1.  
+ L'entità dello spostamento per `result4` viene calcolata come 17 e 15, pari a 1.  
   
-## Vedere anche  
- [Bit Shift Operators](../../../visual-basic/language-reference/operators/bit-shift-operators.md)   
- [Assignment Operators](../../../visual-basic/language-reference/operators/assignment-operators.md)   
- [\<\<\= Operator](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operatori di spostamento bit](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [Operatori di assegnazione](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [Operatore <<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [Precedenza tra gli operatori in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Elenco degli operatori per funzionalità](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [Operatori aritmetici in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

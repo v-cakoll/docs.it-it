@@ -1,41 +1,40 @@
 ---
-title: "How to: Dispose of a System Resource (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Using statement, disposing of system resources"
-  - "Visual Basic code, control flow"
-  - "system resources, disposing of"
-  - "resources [Visual Basic], disposing of system"
-  - "system resources"
-  - "Using statement, Using...End Using"
-  - "Using block"
+title: 'Procedura: eliminare una risorsa di sistema (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- Using statement [Visual Basic], disposing of system resources
+- Visual Basic code, control flow
+- system resources, disposing of
+- resources [Visual Basic], disposing of system
+- system resources
+- Using statement [Visual Basic], Using...End Using
+- Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 5b5c65c9d123c6f481852eb249cb4d479a180c5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Dispose of a System Resource (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-È possibile utilizzare un blocco `Using` per garantire l'eliminazione di una risorsa da parte del sistema quando il codice esce dal blocco.  Questa funzionalità risulta utile quando si utilizza una risorsa di sistema che impiega una grande quantità di memoria o che deve essere utilizzata da altri componenti.  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Procedura: eliminare una risorsa di sistema (Visual Basic)
+È possibile utilizzare un `Using` blocco per garantire che il sistema elimina una risorsa quando il codice esce dal blocco. Ciò è utile se si utilizza una risorsa di sistema che utilizza una grande quantità di memoria o che anche altri componenti desidera utilizzare.  
   
-### Per eliminare una connessione di database quando non è più utilizzata dal codice  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Per eliminare una connessione al database quando il codice è finito di usarlo  
   
-1.  Accertarsi di includere l'[Imports Statement \(.NET Namespace and Type\)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) appropriata per la connessione di database all'inizio del file di origine \(in questo caso, lo spazio dei nomi <xref:System.Data.SqlClient>\).  
+1.  Assicurarsi di includere appropriata [istruzione Imports (tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) per la connessione al database all'inizio del file di origine (in questo caso, <xref:System.Data.SqlClient>).  
   
-2.  Creare un blocco `Using` con le istruzioni `Using` ed `End Using`.  All'interno del blocco inserire il codice relativo alla connessione di database.  
+2.  Creare un `Using` blocco con il `Using` e `End Using` istruzioni. All'interno del blocco, inserire il codice che gestisce la connessione al database.  
   
-3.  Dichiarare la connessione e creare un'istanza di quest'ultima come parte dell'istruzione `Using`.  
+3.  Dichiarare la connessione e creare un'istanza come parte di `Using` istruzione.  
   
     ```  
     ' Insert the following line at the beginning of your source file.  
@@ -47,17 +46,17 @@ caps.handback.revision: 15
     End Sub  
     ```  
   
-     La risorsa viene eliminata dal sistema indipendentemente dal modo con cui si esce dal blocco, compreso il caso di un'eccezione non gestita.  
+     Il sistema elimina la risorsa indipendentemente da come si esce dal blocco, incluso il caso di un'eccezione non gestita.  
   
-     Tenere presente che non è possibile accedere a `sqc` dall'esterno del blocco `Using` perché il relativo ambito è limitato al blocco stesso.  
+     Si noti che è possibile accedere a `sqc` di fuori di `Using` blocco, perché il relativo ambito è limitato al blocco.  
   
-     È possibile utilizzare questa stessa tecnica su una risorsa di sistema, ad esempio un handle di file o un wrapper COM.  È possibile utilizzare un blocco `Using` per essere certi che la risorsa sia disponibile per altri componenti dopo l'uscita dal blocco `Using` stesso.  
+     È possibile utilizzare la stessa tecnica su una risorsa di sistema, ad esempio un handle di file o un oggetto COM wrapper. Si utilizza un `Using` blocco quando si desidera assicurarsi che la risorsa disponibile per altri componenti dopo la chiusura di `Using` blocco.  
   
-## Vedere anche  
- <xref:System.Data.SqlClient.SqlConnection>   
- [Control Flow](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
- [Decision Structures](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
- [Loop Structures](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Other Control Structures](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)   
- [Nested Control Structures](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Data.SqlClient.SqlConnection>  
+ [Flusso di controllo](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
+ [Strutture decisionali](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
+ [Strutture di ciclo](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
+ [Altre strutture di controllo](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
+ [Strutture di controllo annidate](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
+ [Istruzione Using](../../../../visual-basic/language-reference/statements/using-statement.md)

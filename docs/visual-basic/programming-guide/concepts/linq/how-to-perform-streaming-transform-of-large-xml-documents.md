@@ -1,44 +1,36 @@
 ---
-title: 'Procedura: eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f35e42e29e316fe1610a011263aa68e622fb95a5
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d211cbd1c94d485e0c41d23eb12dcae28ae7ad6e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Procedura: eseguire la trasformazione del flusso di documenti XML di grandi dimensioni (Visual Basic)
 A volte è necessario trasformare file XML di grandi dimensioni e scrivere l'applicazione in modo tale che il footprint di memoria dell'applicazione sia prevedibile. Se si tenta di popolare un albero XML con un file XML molto grande, l'uso della memoria sarà proporzionale alla dimensione del file (ovvero, eccessivo). Pertanto, è necessario usare una tecnica di flusso in sostituzione.  
   
- Le tecniche di flusso sono maggiormente indicate nelle situazioni in cui è necessario elaborare solo una volta il documento di origine ed è possibile elaborare gli elementi in base all'ordine in cui sono riportati nel documento. Standard determinati operatori di query, ad esempio <xref:System.Linq.Enumerable.OrderBy%2A>, scorrono l'origine, raccolgono tutti i dati, li ordinano e infine restituiscono il primo elemento nella sequenza.</xref:System.Linq.Enumerable.OrderBy%2A> Si noti che se si usa un operatore di query che materializza l'origine prima di restituire il primo elemento, non verrà mantenuto un footprint di memoria ridotto per l'applicazione.  
+ Le tecniche di flusso sono maggiormente indicate nelle situazioni in cui è necessario elaborare solo una volta il documento di origine ed è possibile elaborare gli elementi in base all'ordine in cui sono riportati nel documento. Determinati operatori di query standard, ad esempio <xref:System.Linq.Enumerable.OrderBy%2A>, scorrono l'origine, raccolgono tutti i dati, li ordinano e infine restituiscono il primo elemento nella sequenza. Si noti che se si usa un operatore di query che materializza l'origine prima di restituire il primo elemento, non verrà mantenuto un footprint di memoria ridotto per l'applicazione.  
   
- Anche se si utilizza la tecnica descritta in [procedura: flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), se si tenta di assemblare un albero XML che contiene il documento trasformato, l'utilizzo della memoria sarà eccessivo.  
+ Anche se si usa la tecnica descritta in [come: flusso di frammenti XML con accesso alle informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), se si tenta di assemblare un albero XML che contiene il documento trasformato, l'uso della memoria sarà eccessivo.  
   
- Sono disponibili due approcci principali: Un approccio consiste nell'utilizzare le caratteristiche di elaborazione posticipata di <xref:System.Xml.Linq.XStreamingElement>.</xref:System.Xml.Linq.XStreamingElement> Un altro approccio consiste nel creare un <xref:System.Xml.XmlWriter>e utilizzare le funzionalità di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] per scrivere elementi in un <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlWriter> In questo argomento vengono descritti entrambi gli approcci.  
+ Sono disponibili due approcci principali: il primo consiste nell'usare le caratteristiche di elaborazione posticipata di <xref:System.Xml.Linq.XStreamingElement>. L'altro prevede la creazione di un oggetto <xref:System.Xml.XmlWriter> e l'uso delle funzionalità di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per scrivere elementi in un oggetto <xref:System.Xml.XmlWriter>. In questo argomento vengono descritti entrambi gli approcci.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente si basa sull'esempio in [procedura: flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ Nell'esempio seguente si basa sull'esempio in [come: flusso di frammenti XML con accesso alle informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- In questo esempio utilizza le funzionalità di esecuzione posticipata di <xref:System.Xml.Linq.XStreamingElement>per trasmettere l'output.</xref:System.Xml.Linq.XStreamingElement> È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.  
+ In questo esempio vengono usate le funzionalità di esecuzione posticipata di <xref:System.Xml.Linq.XStreamingElement> per generare il flusso di output. È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.  
   
  Si noti che il metodo dell'asse personalizzato (`StreamCustomerItem`) è stato scritto in modo tale da prevedere un documento contenente elementi `Customer`, `Name` e `Item`, disposti come nel documento Source.xml seguente. Tuttavia, un'implementazione più solida sarebbe in grado di analizzare un documento non valido.  
   
@@ -263,15 +255,15 @@ End Class
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene inoltre si basa sull'esempio in [procedura: flusso di frammenti XML con accesso a informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ Nell'esempio seguente si basa inoltre su nell'esempio riportato in [come: flusso di frammenti XML con accesso alle informazioni di intestazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- Questo esempio viene utilizzata la funzionalità di [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] per scrivere elementi in un <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.  
+ In questo esempio viene usata la funzionalità di [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] per scrivere elementi in <xref:System.Xml.XmlWriter>. È possibile trasformare un documento di dimensioni molto grandi mantenendo un footprint di memoria ridotto.  
   
  Si noti che il metodo dell'asse personalizzato (`StreamCustomerItem`) è stato scritto in modo tale da prevedere un documento contenente elementi `Customer`, `Name` e `Item`, disposti come nel documento Source.xml seguente. Tuttavia, un'implementazione più affidabile convaliderebbe il documento di origine con uno schema XSD oppure verrebbe preparata per analizzare un documento non valido.  
   
  In questo esempio viene usato lo stesso documento di origine, Source.xml, dell'esempio precedente in questo argomento. Viene inoltre prodotto esattamente lo stesso output.  
   
- Utilizzo <xref:System.Xml.Linq.XStreamingElement>per il flusso di output che XML, è preferibile rispetto alla scrittura di un <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.Linq.XStreamingElement>  
+ Per generare il flusso di output XML, è preferibile usare <xref:System.Xml.Linq.XStreamingElement> anziché scrivere in <xref:System.Xml.XmlWriter>.  
   
 ```vb  
 Module Module1  
@@ -457,4 +449,4 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ to XML (Visual Basic) di programmazione avanzata](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ [Avanzate di LINQ to XML programmazione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

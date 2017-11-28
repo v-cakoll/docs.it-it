@@ -1,34 +1,36 @@
 ---
-title: "Protezione di servizi e client | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "protezione del messaggio [WCF]"
+title: Protezione di servizi e client
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: ed37992b5488d33b9292bdd54eef47f9eb12f225
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Protezione di servizi e client
-Le informazioni in questa sezione si concentrano sulla programmazione della protezione in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  Quest'attività include, in genere, la selezione di un'associazione fornita dal sistema appropriata, l'impostazione delle proprietà dell'elemento di sicurezza e quindi l'impostazione delle proprietà dei comportamenti del servizio che regolano la modalità di recupero delle credenziali che devono essere usate dal servizio o dal client.  Queste tecniche soddisfano i requisiti di sicurezza della maggior parte degli utenti nella maggior parte degli scenari, come illustrato in [Scenari di sicurezza comuni](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md).  Se lo scenario richiede le più funzionalità, vedere innanzitutto [Funzionalità di sicurezza con associazioni personalizzate](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); se non è visibile alcuna soluzione, vedere [Estensione della protezione](../../../../docs/framework/wcf/extending/extending-security.md).  Se si sta creando \(o si sta interoperando con\) un sistema che usa attestazioni dettagliate, vedere gli argomenti in [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+# <a name="securing-services-and-clients"></a>Protezione di servizi e client
+Le informazioni in questa sezione si concentrano sulla programmazione della protezione in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Quest'attività include, in genere, la selezione di un'associazione fornita dal sistema appropriata, l'impostazione delle proprietà dell'elemento di sicurezza e quindi l'impostazione delle proprietà dei comportamenti del servizio che regolano la modalità di recupero delle credenziali che devono essere usate dal servizio o dal client. Queste tecniche di soddisfare i requisiti di sicurezza della maggior parte degli utenti per la maggior parte degli scenari, come illustrato nel [comuni scenari di sicurezza](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Se lo scenario richiede altre funzionalità, vedere prima [funzionalità di sicurezza con associazioni personalizzate](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); se una soluzione non è evidente, vedere [estensione sicurezza](../../../../docs/framework/wcf/extending/extending-security.md). Se Crea (o si interagisce con) un sistema che utilizza le attestazioni avanzate, vedere gli argomenti in [autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
-## In questa sezione  
- [Programmazione delle funzionalità di sicurezza di WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Programmazione della sicurezza WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
  Panoramica del modello di programmazione usato per proteggere i messaggi.  
   
- [Panoramica sulla sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [Panoramica della sicurezza del trasporto](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
  Panoramica delle modalità di sicurezza dei messaggi tramite il livello di trasporto.  
   
- [Protezione dei messaggi](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [Sicurezza dei messaggi](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  Riepilogo dei motivi per l'uso della protezione a livello di messaggio in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
  [Sessioni protette](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
@@ -37,15 +39,15 @@ Le informazioni in questa sezione si concentrano sulla programmazione della prot
  [Utilizzo dei certificati](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  Spiegazione di alcune delle attività comuni necessarie quando si usano certificati X.509.  
   
-## Riferimenti  
+## <a name="reference"></a>Riferimento  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Security>  
   
-## Sezioni correlate  
- [Concetti sulla protezione](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Concetti sulla sicurezza](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
   
  [Estensione della protezione](../../../../docs/framework/wcf/extending/extending-security.md)  
   
@@ -59,6 +61,6 @@ Le informazioni in questa sezione si concentrano sulla programmazione della prot
   
  [Autorizzazione](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## Vedere anche  
- [Programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Programmazione WCF di base](../../../../docs/framework/wcf/basic-wcf-programming.md)  
  [Modello di sicurezza per Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

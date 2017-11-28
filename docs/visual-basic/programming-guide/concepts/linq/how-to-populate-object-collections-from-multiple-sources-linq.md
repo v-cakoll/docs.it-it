@@ -1,43 +1,35 @@
 ---
-title: "Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic) | Documenti di Microsoft"
+title: "Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25f504d862ef2176dc90a31fbccf18777b9d3d0a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 3b52042078667ccfbefadcdf1cef5ab0873cc97b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)
-In questo esempio viene illustrato come unire dati da origini diverse in una sequenza di nuovi tipi.  
+In questo esempio viene illustrato come unire dati da origini diverse in una sequenza di tipi nuovi.  
   
 > [!NOTE]
->  Non tentare di aggiungere dati in memoria o i dati nel file system con i dati che è ancora in un database. Tali join tra domini può generare risultati non definiti a causa di diversi modi in cui le operazioni di join possono essere definite per le query di database e altri tipi di origini. Inoltre, è possibile che tale operazione potrebbe generare un'eccezione di memoria esaurita se la quantità di dati nel database è sufficientemente grande. Per unire i dati da un database per i dati in memoria, chiamare innanzitutto `ToList` o `ToArray` nel database di eseguire una query e quindi eseguire il join nella raccolta restituita.  
+>  Non tentare di creare un join di dati in memoria o nel file system con dati che sono ancora in un database. Questi join tra domini possono generare risultati non definiti a causa dei diversi modi in cui vengono definite le operazioni di join per le query di database e per altri tipi di origini. È anche possibile che tale operazione possa generare un'eccezione di memoria insufficiente se la quantità di dati nel database è piuttosto grande. Per creare un join di dati di un database con i dati in memoria, chiamare prima `ToList` o `ToArray` nella query di database e quindi creare il join nella raccolta restituita.  
   
 ### <a name="to-create-the-data-file"></a>Per creare il file di dati  
   
 -   Copiare i file Names. csv e scores nella cartella del progetto, come descritto in [procedura: unire contenuto da diversi file (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene illustrato come utilizzare un tipo denominato `Student` per archiviare i dati uniti da due insiemi di stringhe che simulano i dati del foglio di calcolo in formato CSV in memoria. Il primo insieme di stringhe rappresenta i nomi degli studenti e gli ID e la seconda raccolta rappresenta l'ID dello studente (nella prima colonna) e i punteggi di quattro esami. L'ID viene utilizzato come chiave esterna.  
+ Nell'esempio seguente viene illustrato come usare un tipo denominato `Student` per archiviare i dati uniti da due raccolte di stringhe in memoria che simulano i dati del foglio di calcolo in formato CSV. La prima raccolta di stringhe rappresenta i nomi e gli ID degli studenti e la seconda raccolta rappresenta gli ID degli studenti, nella prima colonna, e i punteggi di quattro esami. L'ID viene usato come chiave esterna.  
   
 ```vb  
 Class Student  
@@ -112,9 +104,9 @@ End Class
 ' The average score of Tucker Michael is 92  
 ```  
   
- Nel [clausola Select](../../../../visual-basic/language-reference/queries/select-clause.md) clausola, un inizializzatore di oggetto viene utilizzato per creare un'istanza di ogni nuovo `Student` oggetto con i dati dalle due origini.  
+ Nel [clausola Select](../../../../visual-basic/language-reference/queries/select-clause.md) clausola, un inizializzatore di oggetto viene utilizzato per creare un'istanza di ogni nuovo `Student` oggetto usando i dati dalle due origini.  
   
- Se non è necessario archiviare i risultati di una query, tipi anonimi possono essere più conveniente di tipi denominati. Tipi denominati sono necessari se si passano i risultati della query all'esterno del metodo in cui viene eseguita la query. Nell'esempio seguente esegue la stessa attività dell'esempio precedente, ma utilizza tipi anonimi anziché tipi denominati:  
+ Se non è necessario archiviare i risultati della query, può essere più utile usare i tipi anonimi rispetto ai tipi denominati. I tipi denominati sono necessari se si passano i risultati della query al di fuori del metodo in cui viene eseguita la query. Nell'esempio seguente viene eseguita la stessa attività dell'esempio precedente, ma vengono usati i tipi anonimi anziché i tipi denominati:  
   
 ```vb  
 ' Merge the data by using an anonymous type.   
@@ -141,7 +133,7 @@ Next
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+ Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
 ## <a name="see-also"></a>Vedere anche  
  [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

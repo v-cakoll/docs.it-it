@@ -1,71 +1,75 @@
 ---
-title: "Trasformazioni globali e locali | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "matrici, utilizzo delle trasformazioni"
-  - "trasformazioni, globali"
-  - "trasformazioni, locali"
+title: Trasformazioni globali e locali
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- matrices [Windows Forms], using transformations
+- transformations [Windows Forms], global
+- transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 432402fefc6c958fbab0b1450a429d9b130b8239
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Trasformazioni globali e locali
-Una trasformazione globale è una trasformazione che influisce su tutti gli elementi tracciati da un dato oggetto <xref:System.Drawing.Graphics>.  Una trasformazione locale, invece, è una trasformazione che influisce su un elemento specifico da tracciare.  
+# <a name="global-and-local-transformations"></a>Trasformazioni globali e locali
+Una trasformazione globale è una trasformazione che si applica a ogni elemento creato da un determinato <xref:System.Drawing.Graphics> oggetto. Al contrario, una trasformazione locale è una trasformazione che si applica a un elemento specifico da disegnare.  
   
-## Trasformazioni globali  
- Per creare una trasformazione globale, costruire un oggetto <xref:System.Drawing.Graphics>, quindi modificarne la proprietà <xref:System.Drawing.Graphics.Transform%2A>.  Tale proprietà è un oggetto <xref:System.Drawing.Drawing2D.Matrix>, quindi è in grado di contenere qualunque sequenza di trasformazioni affini.  La trasformazione memorizzata nella proprietà <xref:System.Drawing.Graphics.Transform%2A> viene denominata trasformazione complessiva.  Nella classe <xref:System.Drawing.Graphics> sono disponibili svariati metodi per la compilazione di una trasformazione complessiva composta: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A> e <xref:System.Drawing.Graphics.TranslateTransform%2A>.  L'esempio seguente consente di tracciare due volte un'ellisse: una volta prima della creazione di una trasformazione complessiva e una volta dopo tale creazione.  Durante la trasformazione l'ellisse viene ridimensionata con un fattore di 0,5 in direzione y, quindi traslata di 50 unità in direzione x e infine ruotata di 30 gradi.  
+## <a name="global-transformations"></a>Trasformazioni globali  
+ Per creare una trasformazione globale, costruire un <xref:System.Drawing.Graphics> e quindi modificare il relativo <xref:System.Drawing.Graphics.Transform%2A> proprietà. Il <xref:System.Drawing.Graphics.Transform%2A> proprietà è un <xref:System.Drawing.Drawing2D.Matrix> dell'oggetto, pertanto può contenere qualsiasi sequenza di trasformazioni affini. La trasformazione memorizzata nella <xref:System.Drawing.Graphics.Transform%2A> proprietà viene chiamata la trasformazione globale. Il <xref:System.Drawing.Graphics> classe fornisce numerosi metodi per la compilazione di una trasformazione complessiva composta: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, e <xref:System.Drawing.Graphics.TranslateTransform%2A>. Nell'esempio seguente disegna un'ellisse due volte: una volta prima di creare una trasformazione globale e una volta dopo. La trasformazione Ridimensiona prima di un fattore pari a 0,5 nella direzione y, quindi converte 50 unità nella direzione x e quindi ruotata di 30 gradi.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.CoordinateSystems#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#21)]  
   
- Nell'immagine seguente vengono mostrate le matrici utilizzate durante la trasformazione.  
+ Nella figura seguente mostra le matrici utilizzate durante la trasformazione.  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05\_art14")  
+ ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art14.gif "AboutGdip05_art14")  
   
 > [!NOTE]
->  Nell'esempio precedente l'ellisse viene ruotata lungo l'origine del sistema di coordinate, situata nell'angolo superiore sinistro dell'area client.  Il risultato prodotto da tale rotazione differisce dal risultato ottenuto tramite una rotazione dell'ellisse lungo il centro.  
+>  Nell'esempio precedente, i puntini di sospensione viene ruotata intorno all'origine del sistema di coordinate, che si trova nell'angolo superiore sinistro dell'area client. Ciò produce un risultato diverso rispetto a rotazione dell'ellisse lungo il centro.  
   
-## Trasformazioni locali  
- Un trasformazione locale influisce su uno specifico elemento da tracciare.  Nell'oggetto <xref:System.Drawing.Drawing2D.GraphicsPath> ad esempio è disponibile il metodo <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A>, che consente di trasformare i singoli dati di tale percorso.  L'esempio seguente consente di tracciare un rettangolo senza alcuna trasformazione e un percorso con una trasformazione di rotazione.  Si supponga che non venga applicata alcuna trasformazione complessiva.  
+## <a name="local-transformations"></a>Trasformazioni locali  
+ Una trasformazione locale si applica a un elemento specifico da disegnare. Ad esempio, un <xref:System.Drawing.Drawing2D.GraphicsPath> oggetto ha un <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> metodo che consente di trasformare i dati del percorso. Nell'esempio seguente disegna un rettangolo senza alcuna trasformazione e un percorso di una trasformazione di rotazione. (Si presuppone che non sia presente alcuna trasformazione globale).  
   
  [!code-csharp[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.CoordinateSystems#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#22)]  
   
- È possibile combinare trasformazioni complessive e locali per ottenere svariati risultati.  È ad esempio possibile utilizzare la trasformazione complessiva per modificare il sistema di coordinate e utilizzare le trasformazioni locali per la rotazione e il ridimensionamento di oggetti tracciati nel nuovo sistema di coordinate.  
+ È possibile combinare la trasformazione globale con le trasformazioni locale per ottenere un'ampia gamma di risultati. Ad esempio, è possibile utilizzare la trasformazione globale per modificare il sistema di coordinate e trasformazioni locale per ruotare e ridimensionare gli oggetti disegnati sul nuovo sistema di coordinate.  
   
- Si supponga che si desideri creare un sistema di coordinate con origine situata a 200 pixel di distanza dal margine sinistro dell'area client e a 150 pixel di distanza dal margine superiore dell'area client.  Si supponga inoltre che l'unità di misura desiderata siano i pixel e che l'asse x sia rivolto verso destra e l'asse y verso l'alto.  L'asse y del sistema di coordinate predefinito è rivolto verso il basso. È quindi necessario effettuare una reflection lungo l'asse orizzontale.  Nell'immagine seguente viene mostrata la matrice relativa a tale reflection.  
+ Si supponga un sistema di coordinate con relativa origine di 200 pixel dal bordo sinistro dell'area client e 150 pixel dalla parte superiore dell'area client. Si supponga inoltre che l'unità di misura per il pixel, con l'asse x a destra e l'asse y verso l'alto. Il sistema di coordinate è l'asse y rivolta verso il basso, pertanto è necessario eseguire un riflesso tra l'asse orizzontale. Nella figura seguente viene illustrata la matrice di tale tipo di reflection.  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.png "AboutGdip05\_art15")  
+ ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art15.gif "AboutGdip05_art15")  
   
- Si supponga inoltre che sia necessario effettuare una traslazione di 200 unità verso destra e di 150 unità verso il basso.  
+ Si supponga, quindi che è necessario eseguire una conversione di 200 unità a destra e 150 verso il basso.  
   
- L'esempio seguente consente di ottenere il sistema di coordinate appena descritto, impostando la trasformazione complessiva di un oggetto <xref:System.Drawing.Graphics>.  
+ Nell'esempio seguente definisce il sistema di coordinate appena descritto, impostando la trasformazione globale di un <xref:System.Drawing.Graphics> oggetto.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.CoordinateSystems#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#23)]  
   
- Il codice seguente \(inserito alla fine dell'esempio precedente\) consente di creare un percorso costituito da un unico rettangolo, il cui angolo inferiore sinistro è situato in corrispondenza dell'origine del nuovo sistema di coordinate.  Il rettangolo viene riempito una volta senza eseguire la trasformazione locale e una volta eseguendo tale trasformazione.  La trasformazione locale consiste in un ridimensionamento orizzontale con un fattore di 2, seguito da una rotazione di 30 gradi.  
+ Il codice seguente (inserito alla fine dell'esempio precedente) crea un percorso costituito da un singolo rettangolo con il relativo angolo inferiore sinistro all'origine del nuovo sistema di coordinate. Il rettangolo viene compilato una sola volta senza alcuna trasformazione locale e una volta con una trasformazione locale. La trasformazione locale è costituito un ridimensionamento orizzontale di un fattore pari a 2, seguito da una rotazione di 30 gradi.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#24)]
  [!code-vb[System.Drawing.CoordinateSystems#24](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#24)]  
   
- Nell'immagine seguente vengono mostrati il nuovo sistema di coordinate e i due rettangoli.  
+ Nella figura seguente mostra il nuovo sistema di coordinate e i due rettangoli.  
   
- ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.png "AboutGdip05\_art16")  
+ ![Trasformazioni](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")  
   
-## Vedere anche  
- [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Utilizzo di trasformazioni nel codice gestito GDI\+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a>Vedere anche  
+ [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Uso di trasformazioni nel codice gestito GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

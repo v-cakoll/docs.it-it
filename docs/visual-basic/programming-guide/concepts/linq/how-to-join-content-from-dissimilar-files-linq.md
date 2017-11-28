@@ -1,37 +1,29 @@
 ---
-title: 'Procedura: unire contenuto da file dissimili (LINQ) (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: unire contenuto da file dissimili (LINQ) (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 040290eb7ba768585254f92e17360c6f5d273311
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 00a3e776afbed3fd87a1f91eb83ada5d505aadfe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Procedura: unire contenuto da file dissimili (LINQ) (Visual Basic)
-In questo esempio viene illustrato come unire i dati da due file delimitato da virgole che condividono un valore comune utilizzato come una chiave corrispondente. Questa tecnica può essere utile se è necessario combinare dati provenienti da due fogli di calcolo, o da un foglio di calcolo e da un file che dispone di un altro formato, in un nuovo file. È possibile modificare l'esempio funzioni con qualsiasi tipo di testo strutturati.  
+In questo esempio viene illustrato come eseguire un join di dati da due file con valori delimitati da virgole che condividono un valore comune usato come una chiave corrispondente. Questa tecnica può essere utile se è necessario combinare dati provenienti da due fogli di calcolo, o da un foglio di calcolo e da un file con un altro formato, in un nuovo file. È possibile modificare l'esempio in modo che funzioni con qualsiasi tipo di testo strutturato.  
   
 ### <a name="to-create-the-data-files"></a>Per creare i file di dati  
   
-1.  Copiare le righe seguenti in un file denominato scores. csv e salvarlo nella cartella di progetto. Il file rappresenta i dati del foglio di calcolo. La colonna 1 è l'ID dello studente e colonne 2 a 5 sono i punteggi dei test.  
+1.  Copiare le righe seguenti in un file denominato scores.csv e salvarlo nella cartella del progetto. Il file rappresenta i dati del foglio di calcolo. La colonna 1 è l'ID studente e le colonne da 2 a 5 sono i punteggi dei test.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -48,7 +40,7 @@ In questo esempio viene illustrato come unire i dati da due file delimitato da v
     122, 94, 92, 91, 91  
     ```  
   
-2.  Copiare le righe seguenti in un file denominato Names. csv e salvarlo nella cartella di progetto. Il file rappresenta un foglio di calcolo che contiene il cognome dello studente, nome e ID dello studente.  
+2.  Copiare le righe seguenti in un file denominato names.csv e salvarlo nella cartella del progetto. Il file rappresenta un foglio di calcolo che contiene il cognome, il nome e l'ID degli studenti.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -135,8 +127,8 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
- Creare un progetto destinato a .NET Framework versione 3.5 o versione successiva con un riferimento a System.Core.dll e una `Imports` istruzione per lo spazio dei nomi System. Linq.  
+ Creare un progetto che usi .NET Framework versione 3.5 o successiva con un riferimento a System.Core.dll e un'istruzione `Imports` per lo spazio dei nomi System.Linq.  
   
 ## <a name="see-also"></a>Vedere anche  
- [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [Directory di File (Visual Basic) e LINQ](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ e stringhe (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ e directory file (Visual Basic))

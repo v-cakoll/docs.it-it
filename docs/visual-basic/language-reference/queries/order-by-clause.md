@@ -1,65 +1,64 @@
 ---
-title: "Order By Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryOrderBy"
-  - "vb.QueryAscending"
-  - "vb.QueryDescending"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "queries [Visual Basic], Order By"
-  - "Order By clause"
-  - "Order By statement"
+title: Clausola Order By (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryOrderBy
+- vb.QueryAscending
+- vb.QueryDescending
+helpviewer_keywords:
+- queries [Visual Basic], Order By
+- Order By clause [Visual Basic]
+- Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 21ee21942b966668a67b14aba72b8f9fc5ee903c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Order By Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="order-by-clause-visual-basic"></a>Clausola Order By (Visual Basic)
 Specifica l'ordinamento dei risultati di una query.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  `orderExp1`  
- Obbligatorio.  Uno o più campi dal risultato corrente della query che identificano come ordinare i valori restituiti.  I nomi di campo devono essere separati da virgole \(\).  È possibile identificare ogni campo come ordinato in senso crescente o decrescente utilizzando le parole chiave `Ascending` o `Descending`.  Se non viene specificata la parola chiave `Ascending` o `Descending`, l'ordinamento predefinito è in senso crescente.  I campi di ordinamento hanno la precedenza da sinistra verso destra.  
+ Obbligatorio. Uno o più campi dai risultati della query corrente che specificano come ordinare i valori restituiti. I nomi dei campi devono essere separati da virgole (,). È possibile identificare ogni campo, come ordinato in ordine crescente o decrescente utilizzando il `Ascending` o `Descending` parole chiave. Se non `Ascending` o `Descending` (parola chiave) è specificato, l'ordinamento predefinito è crescente. I campi di ordinamento ha la precedenza da sinistra a destra.  
   
-## Note  
- È possibile utilizzare la clausola `Order By` per ordinare i risultati di una query.  La clausola `Order By` può ordinare un risultato solo in base alla variabile di intervallo per l'ambito corrente.  Ad esempio, la clausola `Select` introduce un nuovo ambito in un'espressione di query con nuove variabili di iterazione per tale ambito.  Le variabili di intervallo definite prima di una clausola `Select` in una query non sono disponibili dopo la clausola `Select`.  Pertanto, se si desidera ordinare i risultati tramite un campo non disponibile nella clausola `Select`, è necessario inserire la clausola `Order By` prima della clausola `Select`.  Ad esempio quando si desidera ordinare la query tramite campi che non vengono restituiti come parte del risultato.  
+## <a name="remarks"></a>Note  
+ È possibile utilizzare il `Order By` clausola per ordinare i risultati di una query. Il `Order By` clausola può ordinare solo un risultato in base alla variabile di intervallo per l'ambito corrente. Ad esempio, il `Select` clausola introduce un nuovo ambito in un'espressione di query con nuove variabili di iterazione per tale ambito. Le variabili definite prima di intervallo un `Select` in una query non sono disponibili dopo il `Select` clausola. Pertanto, se si desidera ordinare i risultati in base a un campo che non è disponibile nel `Select` clausola, è necessario inserire il `Order By` clausola prima il `Select` clausola. Un esempio di quando è necessario eseguire questa operazione è quando si desidera ordinare la query per i campi che non vengono restituiti come parte del risultato.  
   
- Il senso crescente e decrescente ordinare per un campo viene determinato dall'implementazione dell'interfaccia <xref:System.IComparable> per il tipo di dati del campo.  Se il tipo di dati non implementa l'interfaccia <xref:System.IComparable>, il senso di ordinamento viene ignorato.  
+ Ordinamento crescente e decrescente per un campo è determinato dall'implementazione del <xref:System.IComparable> interfaccia per il tipo di dati del campo. Se il tipo di dati non implementa il <xref:System.IComparable> interfaccia, l'ordinamento viene ignorato.  
   
-## Esempio  
- Nell'espressione di query seguente viene utilizzata una clausola `From` per dichiarare una variabile di intervallo `book` per la raccolta `books`.  La clausola `Order By` ordina in senso crescente \(impostazione predefinita\) in base al prezzo il risultato della query.  I libri con lo stesso prezzo vengono ordinati in senso crescente in base al titolo.  Mediante la clausola `Select` vengono selezionate le proprietà `Title` e `Price` come valori restituiti dalla query.  
+## <a name="example"></a>Esempio  
+ La query seguente espressione utilizza un `From` clausola per dichiarare una variabile di intervallo `book` per il `books` insieme. Il `Order By` clausola ordina i risultati della query in base al prezzo in senso crescente (impostazione predefinita). Documentazione con lo stesso prezzo vengono ordinati in base a titolo in ordine crescente. Il `Select` clausola seleziona il `Title` e `Price` proprietà come valori restituiti dalla query.  
   
  [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
   
-## Esempio  
- Nell'espressione di query seguente viene utilizzata la clausola `Order By` per ordinare in senso decrescente il risultato della query in base al prezzo.  I libri con lo stesso prezzo vengono ordinati in senso crescente in base al titolo.  
+## <a name="example"></a>Esempio  
+ La query seguente espressione utilizza la `Order By` clausola per ordinare il risultato della query in base al prezzo in ordine decrescente. Documentazione con lo stesso prezzo vengono ordinati in base a titolo in ordine crescente.  
   
  [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
   
-## Esempio  
- Nell'espressione di query seguente viene utilizzata una clausola `Select` per selezionare il titolo del libro, il prezzo, la data di pubblicazione e l'autore.  Vengono quindi popolati i campi `Title`, `Price`, `PublishDate`e `Author` della variabile di intervallo per il nuovo ambito.  La clausola `Order By` ordina la nuova variabile di intervallo per autore, titolo del libro e poi prezzo.  Ogni colonna viene ordinata nel senso predefinito \(crescente\).  
+## <a name="example"></a>Esempio  
+ La query seguente espressione utilizza un `Select` clausola per selezionare il titolo del libro, prezzo, data di pubblicazione e la creazione. Viene quindi popolato il `Title`, `Price`, `PublishDate`, e `Author` campi della variabile di intervallo per il nuovo ambito. Il `Order By` clausola ordina la nuova variabile di intervallo per il nome dell'autore, titolo del libro e prezzo. Ogni colonna viene ordinata in ordine predefinito (crescente).  
   
  [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
-## Vedere anche  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)
+## <a name="see-also"></a>Vedere anche  
+ [Introduzione a LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [Query](../../../visual-basic/language-reference/queries/queries.md)  
+ [Clausola Select](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [Clausola From](../../../visual-basic/language-reference/queries/from-clause.md)

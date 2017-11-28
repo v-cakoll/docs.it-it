@@ -1,41 +1,33 @@
 ---
-title: "Annullare attività asincrone dopo un periodo di tempo (Visual Basic) | Documenti di Microsoft"
+title: "Annullare attività asincrone dopo un periodo di tempo (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6708bd92d8dc2455b9dcb8e02dcc0a4455e00cda
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b8f479a0b8897ba86c4bd750c87afe15600e1df3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Annullare attività asincrone dopo un periodo di tempo (Visual Basic)
-È possibile annullare un'operazione asincrona dopo un periodo di tempo utilizzando il <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=fullName>metodo se non si desidera attendere il completamento dell'operazione.</xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=fullName> Questo metodo pianifica l'annullamento di eventuali attività associate che non completata entro il periodo di tempo definito dal `CancelAfter` espressione.  
+È possibile annullare un'operazione asincrona dopo un periodo di tempo tramite il metodo <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> se non si vuole attendere fino al completamento dell'operazione. Questo metodo pianifica l'annullamento di qualsiasi attività associata che non è stata completata nel periodo di tempo designato dall'espressione `CancelAfter`.  
   
- Questo esempio viene aggiunto al codice che è stato sviluppato in [annullare un'attività asincrona o un elenco di attività (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) per scaricare un elenco di siti Web e per visualizzare la lunghezza del contenuto di ciascuna di esse.  
+ Questo esempio viene aggiunto al codice che è stato sviluppato in [annullare un'attività asincrona o un elenco di attività (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) per scaricare un elenco di siti Web e visualizzare la lunghezza del contenuto di ciascuna di esse.  
   
 > [!NOTE]
->  Per eseguire gli esempi, è necessario disporre di Visual Studio 2012 o versione successiva e .NET Framework 4.5 o versioni successive installato nel computer in uso.  
+>  Per eseguire gli esempi, è necessario disporre di Visual Studio 2012 o versione successiva e .NET Framework 4.5 o versione successiva è installato nel computer in uso.  
   
 ## <a name="downloading-the-example"></a>Download dell'esempio  
- È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [esempio asincrono: Fine ottimizzazione dell'applicazione](http://go.microsoft.com/fwlink/?LinkId=255046) e attenersi alla seguente procedura.  
+ È possibile scaricare il progetto completo di Windows Presentation Foundation (WPF) da [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Esempio di attività asincrona: ottimizzazione dell'applicazione) e seguire la procedura seguente.  
   
 1.  Decomprimere il file scaricato e quindi avviare Visual Studio.  
   
@@ -43,22 +35,22 @@ ms.lasthandoff: 03/13/2017
   
 3.  Nel **Apri progetto** la finestra di dialogo, aprire la cartella che contiene il codice di esempio che è stato decompresso e quindi aprire il file di soluzione (sln) per AsyncFineTuningVB.  
   
-4.  In **Esplora**, aprire il menu di scelta rapida per il **CancelAfterTime** del progetto, quindi fare clic **imposta come progetto di avvio**.  
+4.  In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto **CancelAfterTime** e scegliere **Imposta come progetto di avvio**.  
   
-5.  Premere il tasto F5 per eseguire il progetto.  
+5.  Premere F5 per eseguire il progetto.  
   
-     Premere i tasti Ctrl + F5 per eseguire il progetto senza eseguirne il debug.  
+     Premere CTRL + F5 per eseguire il progetto senza il debug.  
   
-6.  Eseguire il programma più volte per verificare che l'output potrebbe essere visualizzato l'output per tutti i siti Web, nessun sito Web o alcuni siti web.  
+6.  Eseguire il programma più volte per verificare che l'output visualizzi il contenuto per tutti i siti Web, per nessun sito Web o per alcuni siti Web.  
   
- Se non si desidera scaricare il progetto, è possibile esaminare il file MainWindow.xaml.vb alla fine di questo argomento.  
+ Se non si desidera scaricare il progetto, è possibile esaminare il file. Xaml. vb alla fine di questo argomento.  
   
 ## <a name="building-the-example"></a>Compilazione dell'esempio  
- Nell'esempio riportato in questo argomento viene aggiunto al progetto che è stato sviluppato in [annullare un'attività asincrona o un elenco di attività (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) per annullare un elenco di attività. Nell'esempio viene utilizzata la stessa interfaccia utente, anche se il **Annulla** pulsante non viene utilizzato in modo esplicito.  
+ Nell'esempio di questo argomento viene aggiunto al progetto che è stato sviluppato in [annullare un'attività asincrona o un elenco di attività (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) per annullare un elenco di attività. L'esempio usa la stessa interfaccia utente, sebbene il pulsante **Annulla** non viene usato in modo esplicito.  
   
- Per compilare l'esempio è l'utente passo passo, seguire le istruzioni nella sezione "Download di esempio", ma scegliere **CancelAListOfTasks** come il **progetto di avvio**. A tale progetto, aggiungere le modifiche in questo argomento.  
+ Per compilare l'esempio passo a passo, seguire le istruzioni nella sezione "Download dell'esempio", ma scegliere **CancelAListOfTasks** come **progetto di avvio**. Aggiungere al progetto le modifiche illustrate in questo argomento.  
   
- Per specificare un tempo massimo prima che l'attività viene contrassegnata come annullata, aggiungere una chiamata a `CancelAfter` a `startButton_Click`, come illustrato nell'esempio seguente. L'aggiunta è contrassegnato con un asterisco.  
+ Per specificare un tempo massimo prima che le attività vengano contrassegnate come annullate, aggiungere una chiamata a `CancelAfter` al pulsante `startButton_Click`, come illustrato nell'esempio seguente. L'aggiunta viene contrassegnata con asterischi.  
   
 ```vb  
 Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -88,7 +80,7 @@ Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
- Eseguire il programma più volte per verificare che l'output potrebbe essere visualizzato l'output per tutti i siti Web, nessun sito Web o alcuni siti web. L'output seguente è riportato un esempio.  
+ Eseguire il programma più volte per verificare che l'output visualizzi il contenuto per tutti i siti Web, per nessun sito Web o per alcuni siti Web. L'output seguente rappresenta un esempio.  
   
 ```  
 Length of the downloaded string: 35990.  
@@ -101,11 +93,11 @@ Downloads canceled.
 ```  
   
 ## <a name="complete-example"></a>Esempio completo  
- Il codice seguente è il testo completo del file MainWindow.xaml.vb per l'esempio. Gli asterischi contrassegnare gli elementi che sono stati aggiunti per questo esempio.  
+ Il codice seguente è il testo completo del file. Xaml. vb per l'esempio. Gli asterischi contrassegnano gli elementi che sono stati aggiunti per questo esempio.  
   
- Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.</xref:System.Net.Http>  
+ Si noti che è necessario aggiungere un riferimento per <xref:System.Net.Http>.  
   
- È possibile scaricare il progetto da [esempio asincrono: Fine ottimizzazione dell'applicazione](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ È possibile scaricare il progetto da [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Esempio di attività asincrona: ottimizzazione dell'applicazione).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -207,8 +199,8 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Procedura dettagliata: Accesso al Web tramite Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Annullare un'attività asincrona o un elenco di attività (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)   
- [Ottimizzazione dell'applicazione Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [Esempio asincrono: Ottimizzazione dell'applicazione](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Programmazione asincrona con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [Procedura dettagliata: Accesso al Web con Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [Annullare un'attività asincrona o un elenco di attività (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
+ [Ottimizzazione dell'applicazione Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Esempio di attività asincrona: Ottimizzazione dell'applicazione)

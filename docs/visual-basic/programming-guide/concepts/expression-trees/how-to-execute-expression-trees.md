@@ -1,43 +1,35 @@
 ---
-title: 'Procedura: eseguire alberi delle espressioni (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: eseguire alberi delle espressioni (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e12c45b417310f097d597561b2652ee793a4b2c0
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 45a13f13659472b7620b6df070815ace1d6fb0de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>Procedura: eseguire alberi delle espressioni (Visual Basic)
-In questo argomento viene illustrato come eseguire una struttura ad albero dell'espressione. L'esecuzione di una struttura ad albero dell'espressione potrebbe restituire un valore, o può eseguire solo un'azione, ad esempio si chiama un metodo.  
+In questo argomento viene illustrato come eseguire un albero delle espressioni. L'esecuzione di un albero delle espressioni può restituire un valore o può eseguire solo un'azione, ad esempio la chiamata a un metodo.  
   
- Solo gli alberi delle espressioni che rappresentano le espressioni lambda possono essere eseguite. Gli alberi delle espressioni che rappresentano le espressioni lambda sono di tipo <xref:System.Linq.Expressions.LambdaExpression>o <xref:System.Linq.Expressions.Expression%601>.</xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression> Per eseguire tali alberi delle espressioni, chiamare il <xref:System.Linq.Expressions.LambdaExpression.Compile%2A>per creare un delegato eseguibile e quindi richiamare il delegato.</xref:System.Linq.Expressions.LambdaExpression.Compile%2A>  
+ Possono essere eseguite solo gli alberi delle espressioni che rappresentano espressioni lambda. Gli alberi delle espressioni che rappresentano espressioni lambda sono di tipo <xref:System.Linq.Expressions.LambdaExpression> o <xref:System.Linq.Expressions.Expression%601>. Per eseguire gli alberi delle espressioni, chiamare il metodo <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> per creare un delegato eseguibile e quindi richiamare il delegato.  
   
 > [!NOTE]
->  Se non è noto il tipo del delegato, ovvero l'espressione lambda è di tipo <xref:System.Linq.Expressions.LambdaExpression>e non <xref:System.Linq.Expressions.Expression%601>, è necessario chiamare il <xref:System.Delegate.DynamicInvoke%2A>metodo sul delegato anziché richiamarlo direttamente.</xref:System.Delegate.DynamicInvoke%2A> </xref:System.Linq.Expressions.Expression%601> </xref:System.Linq.Expressions.LambdaExpression>  
+>  Se il tipo del delegato non è noto, ovvero l'espressione lambda è di tipo <xref:System.Linq.Expressions.LambdaExpression> e non <xref:System.Linq.Expressions.Expression%601>, è necessario chiamare il metodo <xref:System.Delegate.DynamicInvoke%2A> sul delegato invece che richiamarlo direttamente.  
   
- Se una struttura ad albero dell'espressione non rappresenta un'espressione lambda, è possibile creare una nuova espressione lambda che utilizza l'albero delle espressioni originale come corpo, chiamando il <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29>(metodo).</xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> Quindi, è possibile eseguire l'espressione lambda come descritto in precedenza in questa sezione.  
+ Se un albero delle espressioni non rappresenta un'espressione lambda, è possibile creare una nuova espressione lambda con l'albero delle espressioni originale come corpo, chiamando il metodo <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29>. Sarà quindi possibile eseguire l'espressione lambda come descritto precedentemente in questa sezione.  
   
 ## <a name="example"></a>Esempio  
- Esempio di codice seguente viene illustrato come eseguire una struttura ad albero dell'espressione che rappresenta l'elevamento di un numero a una potenza creando un'espressione lambda e dell'esecuzione. Il risultato, che rappresenta il numero elevato alla potenza, viene visualizzato.  
+ Nell'esempio di codice seguente viene descritto come eseguire un albero delle espressioni che rappresenta l'elevamento di un numero a una potenza mediante la creazione e l'esecuzione di un'espressione lambda. Verrà visualizzato il risultato che rappresenta il numero elevato a potenza.  
   
 ```vb  
 ' The expression tree to execute.  
@@ -61,10 +53,10 @@ MsgBox(result)
   
 ## <a name="compiling-the-code"></a>Compilazione del codice  
   
--   Aggiungere un riferimento a System.Core.dll progetto se non è già fatto riferimento.  
+-   Aggiungere un riferimento di progetto a System.Core.dll, se non è già presente.  
   
 -   Includere lo spazio dei nomi System.Linq.Expressions.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)   
- [Procedura: modificare strutture ad albero di espressione (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+ [Alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
+ [Procedura: modificare alberi delle espressioni (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

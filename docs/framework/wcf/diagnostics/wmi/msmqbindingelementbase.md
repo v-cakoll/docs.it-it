@@ -1,25 +1,28 @@
 ---
-title: "MsmqBindingElementBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: MsmqBindingElementBase
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 009596ee8fd7218a07487183d932e91dad07797c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# MsmqBindingElementBase
+# <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class MsmqBindingElementBase : TransportBindingElement  
@@ -38,95 +41,95 @@ class MsmqBindingElementBase : TransportBindingElement
 };  
 ```  
   
-## Metodi  
+## <a name="methods"></a>Metodi  
  La classe MsmqBindingElementBase non definisce alcun metodo.  
   
-## Proprietà  
+## <a name="properties"></a>Proprietà  
  La classe MsmqBindingElementBase ha le proprietà seguenti:  
   
-### CustomDeadLetterQueue  
+### <a name="customdeadletterqueue"></a>CustomDeadLetterQueue  
  Tipo di dati: stringa  
   
- Tipo di accesso: in sola lettura.  
+ Tipo di accesso: sola lettura  
   
  URI che contiene il percorso della coda dei messaggi non recapitabili per ogni applicazione, in cui vengono collocati i messaggi scaduti o che non possono essere trasferiti o recapitati.  
   
-### DeadLetterQueue  
+### <a name="deadletterqueue"></a>DeadLetterQueue  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Valore di enumerazione che indica il tipo di coda dei messaggi non recapitabili da utilizzare.  
   
-### Durevole  
+### <a name="durable"></a>Durevole  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Valore che indica se i messaggi elaborati da questa associazione sono durevoli o volatili.  
   
-### ExactlyOnce  
+### <a name="exactlyonce"></a>ExactlyOnce  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Valore booleano che indica se i messaggi elaborati da questa associazione vengono ricevuti una sola volta.  
   
-### MaxRetryCycles  
+### <a name="maxretrycycles"></a>MaxRetryCycles  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Numero massimo di cicli di ripetizione dei tentativi di recapito dei messaggi all'applicazione ricevente.  
   
-### ReceiveErrorHandling  
+### <a name="receiveerrorhandling"></a>ReceiveErrorHandling  
  Tipo di dati: stringa  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Impostazioni per la gestione dei messaggi non elaborabili.  
   
-### ReceiveRetryCount  
+### <a name="receiveretrycount"></a>ReceiveRetryCount  
  Tipo di dati: sint32  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Numero massimo di tentativi immediati su un messaggio letto dalla coda dell'applicazione.  
   
-### RetryCycleDelay  
- Tipo di dati: data e ora  
+### <a name="retrycycledelay"></a>RetryCycleDelay  
+ Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Valore che indica l'intervallo di tempo tra i cicli di ripetizione dei tentativi di recapitare un messaggio che è impossibile recapitare immediatamente.  
   
-### TimeToLive  
+### <a name="timetolive"></a>TimeToLive  
  Tipo di dati: DateTime  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Valore che indica per quanto tempo i messaggi elaborati da questa associazione possono rimanere nella coda prima di scadere.  
   
-### UseMsmqTracing  
+### <a name="usemsmqtracing"></a>UseMsmqTracing  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Valore booleano che indica se i messaggi elaborati da questa associazione devono essere tracciati.  
   
-### UseSourceJournal  
+### <a name="usesourcejournal"></a>UseSourceJournal  
  Tipo di dati: booleano  
   
- Tipo di accesso: sola lettura.  
+ Tipo di accesso: sola lettura  
   
  Valore booleano che indica se le copie dei messaggi elaborati da questa associazione devono essere archiviate nella coda journal di origine.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |MOF|Dichiarato in Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Spazio dei nomi|Definito in root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Spazio dei nomi|Definito in root\ServiceModel|  
   
-## Vedere anche  
- <xref:System.ServiceModel.NetMsmqBinding>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.ServiceModel.NetMsmqBinding>  
  <xref:System.ServiceModel.MsmqBindingBase>

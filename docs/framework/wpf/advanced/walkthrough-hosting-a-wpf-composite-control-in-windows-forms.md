@@ -1,130 +1,131 @@
 ---
-title: "Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "hosting di contenuto WPF in Windows Form"
+title: 'Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-caps.latest.revision: 34
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 31
+caps.latest.revision: "34"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5dc0a0f7b579feca6150e299cd7f0ef3a6e7a5e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente dettagliato per la creazione di applicazioni.  Tuttavia, quando si dispone di una grande quantità di codice [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], può essere opportuno estendere l'applicazione [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] esistente con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anziché riscriverla dall'inizio.  Uno scenario comune è dato dalla situazione in cui si desidera incorporare uno o più controlli implementati con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] all'interno dell'applicazione [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)].  Per ulteriori informazioni sulla personalizzazione dei controlli WPF, vedere [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md).  
+# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Procedura dettagliata: hosting di controlli compositi di WPF in Windows Form
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornisce un ambiente completo per la creazione di applicazioni. Tuttavia, quando si dispone di un investimento sostanziale in [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] codice, può essere più efficace estendere esistente [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] un'applicazione con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anziché riscriverla, da zero. Uno scenario comune è quando si desidera incorporare uno o più controlli implementati con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] all'interno del [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] dell'applicazione. Per ulteriori informazioni sulla personalizzazione dei controlli WPF, vedere [controllo personalizzazione](../../../../docs/framework/wpf/controls/control-customization.md).  
   
- In questa procedura dettagliata viene descritta un'applicazione che ospita un controllo composito [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] per eseguire l'immissione di dati in un'applicazione [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)].  Il controllo composito è compresso in una DLL.  Questa procedura generale può essere estesa ad applicazioni e controlli più complessi.  Questa procedura dettagliata è stata progettata in modo che risulti quasi identica per aspetto e funzionalità a [Procedura dettagliata: hosting di controlli Windows Form compositi in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md).  La differenza primaria risiede nel fatto che lo scenario di hosting risulta invertito.  
+ Questa procedura dettagliata viene descritta un'applicazione che ospita un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito per eseguire l'immissione di dati in un [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] dell'applicazione. Il controllo composito è compresso in una DLL. Questa procedura generale può essere estesa ad applicazioni e controlli più complessi. Questa procedura dettagliata è progettata per essere pressoché identiche in aspetto e funzionalità a [procedura dettagliata: Hosting di controlli Windows Form composito in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). La principale differenza è che lo scenario di hosting è invertito.  
   
- La procedura dettagliata è divisa in due sezioni.  Nella prima sezione viene brevemente descritta l'implementazione del controllo composito [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Nella seconda sezione viene illustrato in dettaglio come ospitare il controllo composito in un'applicazione [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)], come ricevere eventi dal controllo e come accedere ad alcune delle proprietà del controllo.  
+ La procedura guidata è suddivisa in due sezioni. La prima sezione viene descritto brevemente l'implementazione del [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito. La seconda sezione illustra in dettaglio come ospitare il controllo composito in una [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] ricevere gli eventi dal controllo, applicazione e accedere ad alcune delle proprietà del controllo.  
   
- Di seguito vengono elencate le attività illustrate nella procedura dettagliata:  
+ Le attività illustrate nella procedura dettagliata sono le seguenti:  
   
 -   Implementazione del controllo composito WPF.  
   
--   Implementazione dell'applicazione host Windows Form.  
+-   Implementazione dell'applicazione host Windows Forms.  
   
- Per un elenco di codice completo delle attività illustrate in questa procedura dettagliata, vedere [Esempio di hosting di controlli compositi di WPF in Windows Form](http://go.microsoft.com/fwlink/?LinkID=159996) \(la pagina potrebbe essere in inglese\).  
+ Per un elenco di codice completo delle attività illustrate in questa procedura dettagliata, vedere [ospita un controllo composito WPF in Windows Form](http://go.microsoft.com/fwlink/?LinkID=159996).  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
-## Implementazione del controllo composito WPF.  
- Il controllo composito [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizzato in questo esempio è un semplice form di immissione dati che accetta il nome e l'indirizzo dell'utente.  Quando l'utente fa clic su uno di due pulsanti per indicare che l'attività è terminata, il controllo genera un evento personalizzato per la restituzione delle informazioni all'host.  Nell’immagine riportata di seguito viene illustrato il controllo sottoposto a rendering.  
+## <a name="implementing-the-wpf-composite-control"></a>Implementazione del controllo composito WPF  
+ Il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito utilizzato in questo esempio è un form di immissione di dati semplici che accetta nome e l'indirizzo dell'utente. Quando l'utente fa clic su uno dei due pulsanti per indicare che l'attività è completata, il controllo genera un evento personalizzato per restituire tali informazioni all'host. La figura seguente mostra il controllo sottoposto a rendering.  
   
- ![Controllo WPF semplice](../../../../docs/framework/wpf/advanced/media/avaloncontrol.png "AvalonControl")  
+ ![Il controllo WPF semplice](../../../../docs/framework/wpf/advanced/media/avaloncontrol.png "AvalonControl")  
 Controllo composito WPF  
   
-### Creazione del progetto  
+### <a name="creating-the-project"></a>Creazione del progetto  
  Per avviare il progetto:  
   
-1.  Avviare [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] e aprire la finestra di dialogo **Nuovo progetto**.  
+1.  Avviare [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]e aprire il **nuovo progetto** la finestra di dialogo.  
   
-2.  Nella categoria Visual C\# e Windows, selezionare il modello **Libreria di controlli utente WPF**.  
+2.  In Visual c# e la categoria di Windows, selezionare il **libreria di controlli utente WPF** modello.  
   
 3.  Denominare il nuovo progetto `MyControls`.  
   
-4.  Come posizione, specificare una cartella di livello principale denominata in modo appropriato, ad esempio `WindowsFormsHostingWpfControl`.  Successivamente, l'applicazione host verrà posizionata in questa cartella.  
+4.  Per il percorso, specificare una cartella di primo livello denominata in modo appropriato, ad esempio `WindowsFormsHostingWpfControl`. Successivamente, si immetterà l'applicazione host in questa cartella.  
   
-5.  Scegliere **OK** per creare il progetto.  Il progetto predefinito contiene un singolo controllo denominato `UserControl1`.  
+5.  Fare clic su **OK** per creare il progetto. Il progetto predefinito contiene un singolo controllo denominato `UserControl1`.  
   
-6.  In Esplora soluzioni rinominare `UserControl1` in `MyControl1`.  
+6.  In Esplora soluzioni rinominare `UserControl1` a `MyControl1`.  
   
- Il progetto dovrebbe presentare riferimenti alle DLL di sistema riportate di seguito.  Se alcune di queste DLL non sono incluse per impostazione predefinita, aggiungerle al progetto.  
+ Il progetto dovrebbe includere riferimenti alle DLL di sistema seguenti. Se alcune di queste DLL non sono incluse per impostazione predefinita, aggiungerle al progetto.  
   
 -   PresentationCore  
   
 -   PresentationFramework  
   
--   Sistema  
+-   System  
   
 -   WindowsBase  
   
-### Creazione dell'interfaccia utente  
- L'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] per il controllo composito è implementata con [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  Il controllo composito [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] è costituito da cinque elementi <xref:System.Windows.Controls.TextBox>.  A ogni elemento <xref:System.Windows.Controls.TextBox> è associato un elemento <xref:System.Windows.Controls.TextBlock> con funzione di etichetta.  Nella parte inferiore sono presenti due elementi <xref:System.Windows.Controls.Button>, **OK** e **Cancel**.  Quando l'utente fa clic su uno dei due pulsanti, il controllo genera un evento personalizzato per la restituzione delle informazioni all'host.  
+### <a name="creating-the-user-interface"></a>Creazione dell'interfaccia utente  
+ Il [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] per il controllo composito è implementato con [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Il controllo composito [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] è costituito da cinque <xref:System.Windows.Controls.TextBox> elementi. Ogni <xref:System.Windows.Controls.TextBox> è associato un elemento <xref:System.Windows.Controls.TextBlock> elemento che funge da un'etichetta. Esistono due <xref:System.Windows.Controls.Button> gli elementi nella parte inferiore, **OK** e **Annulla**. Quando l'utente fa clic su uno di questi pulsanti, il controllo genera un evento personalizzato per restituire le informazioni all'host.  
   
-#### Layout di base  
- I vari elementi dell'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sono contenuti in un elemento <xref:System.Windows.Controls.Grid>.  È possibile utilizzare <xref:System.Windows.Controls.Grid> per disporre il contenuto del controllo composito in modo molto simile a come si utilizzerebbe un elemento `Table` nel codice HTML.  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] è inoltre disponibile un elemento <xref:System.Windows.Documents.Table>, ma <xref:System.Windows.Controls.Grid> rappresenta un'alternativa più semplice e più appropriata per semplici attività di layout.  
+#### <a name="basic-layout"></a>Layout di base  
+ I vari [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] gli elementi sono contenuti un <xref:System.Windows.Controls.Grid> elemento. È possibile utilizzare <xref:System.Windows.Controls.Grid> per disporre il contenuto del composita controllo praticamente la stessa modalità si utilizzerebbe un `Table` elemento in formato HTML. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]è anche un <xref:System.Windows.Documents.Table> elemento, ma <xref:System.Windows.Controls.Grid> è più semplice e più appropriata per semplici attività di layout.  
   
- Nel codice XAML seguente viene mostrato il layout di base.  Questo codice XAML definisce la struttura complessiva del controllo specificando il numero di colonne e di righe dell'elemento <xref:System.Windows.Controls.Grid>.  
+ Il codice XAML seguente illustra il layout di base. Questo codice XAML definisce la struttura generale del controllo specificando il numero di colonne e righe di <xref:System.Windows.Controls.Grid> elemento.  
   
- In MyControl1.xaml sostituire il codice XAML esistente con il seguente :  
+ In MyControl1.xaml sostituire il codice XAML esistente con il seguente.  
   
- [!code-xml[WindowsFormsHostingWpfControl#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#101)]  
-[!code-xml[WindowsFormsHostingWpfControl#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#102)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#101)]  
+[!code-xaml[WindowsFormsHostingWpfControl#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#102)]  
   
-#### Aggiunta di elementi TextBlock e TextBox alla griglia  
- Un elemento dell'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] viene posizionato nella griglia impostando gli attributi <xref:System.Windows.Controls.Grid.RowProperty> e <xref:System.Windows.Controls.Grid.ColumnProperty> dell'elemento sul numero di righe e colonne appropriato.  Ricordare che la numerazione delle righe e delle colonne è in base zero.  Affinché un elemento occupi più colonne è necessario impostare il relativo attributo <xref:System.Windows.Controls.Grid.ColumnSpanProperty>.  Per ulteriori informazioni sugli elementi <xref:System.Windows.Controls.Grid>, vedere [Creare un elemento griglia](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md).  
+#### <a name="adding-textblock-and-textbox-elements-to-the-grid"></a>Aggiunta di elementi TextBlock e TextBox alla griglia  
+ Inserire un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elemento nella griglia impostando l'elemento <xref:System.Windows.Controls.Grid.RowProperty> e <xref:System.Windows.Controls.Grid.ColumnProperty> gli attributi per il numero di riga e colonna appropriato. Ricordare che la numerazione di righe e colonne e in base zero. È possibile disporre di un elemento occupa più colonne impostando il relativo <xref:System.Windows.Controls.Grid.ColumnSpanProperty> attributo. Per ulteriori informazioni su <xref:System.Windows.Controls.Grid> elementi, vedere [creare un elemento griglia](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md).  
   
- Nel codice XAML seguente sono riportati gli elementi <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.TextBlock> del controllo composito con i relativi attributi <xref:System.Windows.Controls.Grid.RowProperty> e <xref:System.Windows.Controls.Grid.ColumnProperty>, impostati per inserire correttamente gli elementi nella griglia.  
+ Il codice XAML seguente viene illustrato il controllo composito <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.TextBlock> gli elementi con i relativi <xref:System.Windows.Controls.Grid.RowProperty> e <xref:System.Windows.Controls.Grid.ColumnProperty> gli attributi, che possono essere impostati per inserire correttamente gli elementi nella griglia.  
   
- In MyControl1.xaml, aggiungere il codice XAML seguente all'interno dell'elemento <xref:System.Windows.Controls.Grid>.  
+ In Mycontrol1, aggiungere il codice XAML seguente all'interno di <xref:System.Windows.Controls.Grid> elemento.  
   
- [!code-xml[WindowsFormsHostingWpfControl#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#103)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#103)]  
   
-#### Applicazione di uno stile agli elementi dell'interfaccia utente  
- Molti degli elementi del form di immissione dati sono simili nell'aspetto, il che significa che presentano impostazioni identiche per molte delle loro proprietà.  Anziché impostare separatamente gli attributi di ciascun elemento, il codice XAML precedente utilizza gli elementi <xref:System.Windows.Style> per definire impostazioni delle proprietà standard per classi di elementi.  In questo modo, è possibile ridurre la complessità del controllo e modificare l'aspetto di più elementi attraverso un singolo attributo di stile.  
+#### <a name="styling-the-ui-elements"></a>Applicazione di stili agli elementi dell'interfaccia utente  
+ Molti degli elementi nel form di immissione dati hanno un aspetto simile, che significa che hanno impostazioni identiche per alcune delle loro proprietà. Anziché impostare separatamente i relativi attributi, Usa il codice XAML precedente <xref:System.Windows.Style> elementi per definire le impostazioni delle proprietà standard per le classi di elementi. Questo approccio riduce la complessità del controllo e consente di modificare l'aspetto di più elementi tramite un unico attributo di stile.  
   
- Poiché gli elementi <xref:System.Windows.Style> sono contenuti nella proprietà <xref:System.Windows.FrameworkElement.Resources%2A> dell'elemento <xref:System.Windows.Controls.Grid>, possono essere utilizzati da tutti gli elementi nel controllo.  Se a uno stile è stato assegnato un nome, per applicarlo a un elemento aggiungere un elemento <xref:System.Windows.Style> impostato sul nome dello stile.  Gli stili a cui non è stato assegnato alcun nome diventano lo stile predefinito dell'elemento.  Per ulteriori informazioni sugli stili [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Il <xref:System.Windows.Style> gli elementi sono contenuti nel <xref:System.Windows.Controls.Grid> dell'elemento <xref:System.Windows.FrameworkElement.Resources%2A> proprietà, possono essere utilizzati da tutti gli elementi nel controllo. Se è denominato uno stile, applicarlo a un elemento tramite l'aggiunta di un <xref:System.Windows.Style> impostato su nome dello stile. Gli stili che non sono denominati diventano lo stile predefinito per l'elemento. Per ulteriori informazioni su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stili, vedere [stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
- Nel codice XAML seguente vengono illustrati gli elementi <xref:System.Windows.Style> per il controllo composito.  Per vedere come gli stili vengono applicati agli elementi, vedere il codice XAML precedente.  Ad esempio, l'ultimo elemento <xref:System.Windows.Controls.TextBlock> presenta lo stile `inlineText`, mentre l'ultimo elemento <xref:System.Windows.Controls.TextBox> utilizza lo stile predefinito.  
+ Il codice XAML seguente viene illustrata la <xref:System.Windows.Style> elementi per il controllo composito. Per visualizzare come gli stili vengono applicati agli elementi, vedere il codice XAML precedente. Ad esempio, l'ultima <xref:System.Windows.Controls.TextBlock> elemento ha il `inlineText` stile e l'ultimo <xref:System.Windows.Controls.TextBox> elemento utilizza lo stile predefinito.  
   
- In MyControl1.xaml, aggiungere il codice XAML seguente immediatamente dopo l'elemento <xref:System.Windows.Controls.Grid> iniziale.  
+ In Mycontrol1, aggiungere il codice XAML seguente subito dopo il <xref:System.Windows.Controls.Grid> elemento iniziale.  
   
- [!code-xml[WindowsFormsHostingWpfControl#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#104)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#104)]  
   
-#### Aggiunta dei pulsanti OK e Annulla  
- Gli elementi finali del controllo composito sono gli elementi <xref:System.Windows.Controls.Button> **OK** e **Annulla**, i quali occupano le prime due colonne dell'ultima riga dell'elemento <xref:System.Windows.Controls.Grid>.  Questi elementi utilizzano un gestore eventi comune, `ButtonClicked`, e lo stile <xref:System.Windows.Controls.Button> predefinito definito nel codice XAML precedente.  
+#### <a name="adding-the-ok-and-cancel-buttons"></a>Aggiunta dei pulsanti OK e Cancel  
+ Gli elementi finali sul controllo composito sono il **OK** e **Annulla** <xref:System.Windows.Controls.Button> elementi che occupano le prime due colonne dell'ultima riga del <xref:System.Windows.Controls.Grid>. Questi elementi utilizzano un gestore eventi comune, `ButtonClicked`e il valore predefinito <xref:System.Windows.Controls.Button> stile definito nel codice XAML precedente.  
   
- In MyControl1.xaml, aggiungere il codice XAML seguente dopo l'ultimo elemento <xref:System.Windows.Controls.TextBox>.  La parte [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] del controllo composito è ora completata.  
+ In Mycontrol1, aggiungere il seguente codice XAML dopo l'ultimo <xref:System.Windows.Controls.TextBox> elemento. Il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] parte del controllo composito è stata completata.  
   
- [!code-xml[WindowsFormsHostingWpfControl#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#105)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#105)]  
   
-### Implementazione del file code\-behind  
- Nel file code\-behind, MyControl1.xaml.cs, sono implementate tre attività essenziali:  
+### <a name="implementing-the-code-behind-file"></a>Implementazione del file code-behind  
+ Il file code-behind, MyControl1.xaml.cs, implementate tre attività essenziali:
   
-1.  Gestione dell'evento che si verifica quando l'utente fa clic su uno dei pulsanti.  
+1.  Gestisce l'evento che si verifica quando l'utente fa clic su uno dei pulsanti.  
   
-2.  Recupero dei dati dagli elementi <xref:System.Windows.Controls.TextBox> e relativo assemblaggio in un oggetto argomento dell'evento personalizzato.  
+2.  Recupera i dati di <xref:System.Windows.Controls.TextBox> elementi e il pacchetto in un oggetto argomento dell'evento personalizzato.  
   
-3.  Generazione dell'evento `OnButtonClick` personalizzato che notifica all'host la fine dell'operazione dell'utente e conseguente passaggio dei dati all'host.  
+3.  Genera l'oggetto personalizzato `OnButtonClick` evento, che notifica all'host che l'utente ha terminato e passa i dati all'host.  
   
- Il controllo espone inoltre alcune proprietà di colori e tipi di carattere che consentono di modificare l'aspetto della pagina.  A differenza della classe <xref:System.Windows.Forms.Integration.WindowsFormsHost>, utilizzata per l'hosting di un controllo [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)], la classe <xref:System.Windows.Forms.Integration.ElementHost> espone unicamente la proprietà <xref:System.Windows.Controls.Panel.Background%2A> del controllo.  Per mantenere le similitudini tra questo esempio di codice e quello illustrato nella [Procedura dettagliata: hosting di controlli Windows Form compositi in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), il controllo espone direttamente le proprietà rimanenti.  
+ Il controllo espone inoltre un numero di proprietà di colore e tipo di carattere che consentono di modificare l'aspetto. A differenza di <xref:System.Windows.Forms.Integration.WindowsFormsHost> classe, che viene usata all'host un [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] (controllo), il <xref:System.Windows.Forms.Integration.ElementHost> classe espone il controllo <xref:System.Windows.Controls.Panel.Background%2A> solo per la proprietà. Per mantenere le similitudini tra questo esempio di codice e l'esempio illustrato in [procedura dettagliata: Hosting di controlli Windows Form composito in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), il controllo espone le proprietà rimanenti direttamente.  
   
-#### Struttura di base del file code\-behind  
- Il file code\-behind è costituito da un singolo spazio dei nomi, `MyControls`, che conterrà due classi, `MyControl1` e `MyControlEventArgs`.  
+#### <a name="the-basic-structure-of-the-code-behind-file"></a>Struttura di base del file code-behind  
+ Il file code-behind è costituito da un singolo spazio dei nomi, `MyControls`, che conterrà due classi, `MyControl1` e `MyControlEventArgs`.  
   
 ```  
-  
 namespace MyControls  
 {  
   public partial class MyControl1 : Grid  
@@ -136,86 +137,85 @@ namespace MyControls
     //...  
   }  
 }  
-  
 ```  
   
- La prima classe, `MyControl1`, è una classe parziale che contiene il codice che implementa la funzionalità dell'[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] definita in MyControl1.xaml.  Quando viene analizzato il file MyControl1.xaml, il codice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene convertito nella stessa classe parziale e le due classi parziali vengono unite per formare il controllo compilato.  Per questo motivo, il nome della classe nel file code\-behind deve corrispondere al nome della classe assegnato a MyControl1.xaml e deve ereditare dall'elemento radice del controllo.  La seconda classe, `MyControlEventArgs`, è una classe di argomenti degli eventi che consente di reinviare i dati all'host.  
+ La prima classe `MyControl1`, è una classe parziale contenente il codice che implementa la funzionalità del [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] definiti in MyControl1. Xaml. Quando viene analizzato Mycontrol1, il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene convertito nella stessa classe parziale, e vengono unite le due classi parziali per formare il controllo compilato. Per questo motivo, il nome della classe nel file code-behind deve corrispondere al nome della classe assegnato a MyControl1.xaml e deve ereditare dall'elemento radice del controllo. La seconda classe, `MyControlEventArgs`, è una classe di argomenti di evento che viene utilizzata per inviare i dati all'host.  
   
- Aprire il file MyControl1.xaml.cs.  Modificare la dichiarazione di classe esistente in modo che abbia il seguente nome e erediti da <xref:System.Windows.Controls.Grid>.  
+ Aprire MyControl1.xaml.cs. Modificare la dichiarazione di classe esistente in modo che abbia il seguente nome eredita da <xref:System.Windows.Controls.Grid>.  
   
  [!code-csharp[WindowsFormsHostingWpfControl#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#21)]  
   
-#### Inizializzazione del controllo  
- Nel codice riportato di seguito vengono implementate diverse attività di base:  
+#### <a name="initializing-the-control"></a>Inizializzazione del controllo  
+ Il codice seguente implementa alcune attività di base:  
   
--   Dichiarazione di un evento privato, `OnButtonClick`, e del delegato associato, `MyControlEventHandler`.  
+-   Dichiara un evento privato, `OnButtonClick`e del delegato associato, `MyControlEventHandler`.  
   
--   Creazione di molteplici variabili globali private per l'archiviazione dei dati dell'utente.  Questi dati vengono esposti tramite proprietà corrispondenti.  
+-   Crea diverse variabili globali private che archiviano i dati dell'utente. Questi dati vengono esposti tramite le proprietà corrispondenti.  
   
--   Implementazione di un gestore, `Init`, per l'evento <xref:System.Windows.FrameworkElement.Loaded> del controllo.  Questo gestore inizializza le variabili globali assegnando ad esse i valori definiti in MyControl1.xaml.  A tale scopo, utilizza la proprietà <xref:System.Windows.FrameworkElement.Name%2A> assegnata a un elemento <xref:System.Windows.Controls.TextBlock> tipico, `nameLabel`, per accedere alle impostazioni delle proprietà di quell'elemento.  
+-   Implementa un gestore, `Init`, per il controllo <xref:System.Windows.FrameworkElement.Loaded> evento. Questo gestore inizializza le variabili globali assegnando loro i valori definiti in MyControl1.xaml. A tale scopo, viene utilizzato il <xref:System.Windows.FrameworkElement.Name%2A> assegnato a un tipico <xref:System.Windows.Controls.TextBlock> elemento `nameLabel`, per accedere alle impostazioni di proprietà dell'elemento.  
   
- Eliminare il costruttore esistente e aggiungere il codice seguente alla classe `MyControl1`.  
+ Eliminare il costruttore esistente e aggiungere il codice seguente per la `MyControl1` classe.  
   
  [!code-csharp[WindowsFormsHostingWpfControl#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#11)]  
   
-#### Gestione degli eventi Click dei pulsanti  
- L'utente indica il termine dell'attività di immissione dati facendo clic sul pulsante **OK** o **Annulla** nella parte inferiore.  Entrambi i pulsanti utilizzano lo stesso gestore dell'evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>, `ButtonClicked`.  A entrambi i pulsanti è stato assegnato un nome, `btnOK` o `btnCancel`, attraverso il quale il gestore è in grado di determinare su quale pulsante è stato fatto clic esaminando il valore dell'argomento `sender`.  Tramite il gestore è possibile eseguire le attività riportate di seguito:  
+#### <a name="handling-the-buttons-click-events"></a>Gestione degli eventi clic dei pulsanti  
+ L'utente indica che l'attività di immissione dati è stata completata, fare clic su uno di **OK** pulsante o **Annulla** pulsante. Entrambi i pulsanti utilizzano lo stesso <xref:System.Windows.Controls.Primitives.ButtonBase.Click> gestore eventi, `ButtonClicked`. Entrambi i pulsanti hanno un nome, `btnOK` o `btnCancel`, che consente al gestore di determinare quale pulsante è stato scelto dall'analisi del valore di `sender` argomento. Il gestore esegue le operazioni seguenti:  
   
--   Creazione di un oggetto `MyControlEventArgs` che contiene i dati degli elementi <xref:System.Windows.Controls.TextBox>.  
+-   Crea un `MyControlEventArgs` oggetto che contiene i dati di <xref:System.Windows.Controls.TextBox> elementi.  
   
--   Se l'utente fa clic sul pulsante **Annulla**, imposta la proprietà `IsOK` dell'oggetto `MyControlEventArgs` su `false`.  
+-   Se l'utente ha fatto clic il **Annulla** pulsante, imposta il `MyControlEventArgs` dell'oggetto `IsOK` proprietà `false`.  
   
--   Generazione dell'evento `OnButtonClick` per indicare all'host la fine delle operazioni dell'utente e il passaggio dei dati raccolti all'host stesso.  
+-   Genera il `OnButtonClick` evento per indicare all'host che l'utente termina e il passaggio dei dati raccolti.  
   
- Aggiungere il codice seguente alla classe `MyControl1`, dopo il metodo `Init`.  
+ Aggiungere il codice seguente per il `MyControl1` classe, dopo il `Init` metodo.  
   
  [!code-csharp[WindowsFormsHostingWpfControl#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#12)]  
   
-#### Creazione di proprietà  
- La parte restante della classe espone semplicemente le proprietà che corrispondono alle variabili globali descritte in precedenza.  Quando una proprietà viene modificata, la funzione di accesso set modifica l'aspetto del controllo modificando le proprietà dell'elemento corrispondente e aggiornando le variabili globali sottostanti.  
+#### <a name="creating-properties"></a>Creazione di proprietà  
+ Il resto della classe espone semplicemente proprietà che corrispondono alle variabili globali precedentemente illustrate. Quando una proprietà viene modificata, la funzione di accesso impostata modifica l'aspetto del controllo cambiando le proprietà degli elementi corrispondenti e aggiornando le variabili globali sottostanti.  
   
- Aggiungere il codice riportato di seguito alla classe `MyControl1`.  
+ Aggiungere il codice seguente per la `MyControl1` classe.  
   
  [!code-csharp[WindowsFormsHostingWpfControl#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#13)]  
   
-#### Reinvio dei dati all'host  
- Il componente finale del file è la classe `MyControlEventArgs` utilizzata per reinviare i dati raccolti all'host.  
+#### <a name="sending-the-data-back-to-the-host"></a>Invio di dati di nuovo all'host  
+ Il componente finale nel file è la `MyControlEventArgs` classe, che viene utilizzato per inviare i dati raccolti all'host.  
   
- Aggiungere il codice riportato di seguito allo spazio dei nomi `MyControls`:  L'implementazione non presenta particolari difficoltà e non verrà trattata ulteriormente.  
+ Aggiungere il codice seguente per il `MyControls` dello spazio dei nomi. L'implementazione è semplice e non verrà ulteriormente illustrata.  
   
  [!code-csharp[WindowsFormsHostingWpfControl#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#14)]  
   
- Compilare la soluzione.  La compilazione creerà una DLL denominata MyControls.dll.  
+ Compilare la soluzione. La compilazione genererà una DLL denominata MyControls.dll.  
   
 <a name="winforms_host_section"></a>   
-## Implementazione dell'applicazione host Windows Form  
- L'applicazione host [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] utilizza un oggetto <xref:System.Windows.Forms.Integration.ElementHost> per l'hosting del controllo composito [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  L'applicazione gestisce l'evento `OnButtonClick` per ricevere i dati dal controllo composito.  Nell'applicazione è inoltre disponibile un insieme di pulsanti di opzione utilizzabili per modificare l'aspetto del controllo.  Di seguito viene illustrata l'applicazione.  
+## <a name="implementing-the-windows-forms-host-application"></a>Implementazione dell'applicazione host Windows Forms  
+ Il [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] ospitare l'applicazione utilizza un <xref:System.Windows.Forms.Integration.ElementHost> oggetto host di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito. Gli handle di applicazioni di `OnButtonClick` eventi per ricevere i dati dal controllo composito. L'applicazione presenta anche un insieme di pulsanti di opzione che è possibile utilizzare per modificare l'aspetto del controllo. La figura seguente mostra l'applicazione.  
   
  ![Windows Form che ospita un controllo Avalon](../../../../docs/framework/wpf/advanced/media/wfhost.png "WFHost")  
-Controllo composito WPF ospitato in un'applicazione Windows Form  
+Controllo composito WPF ospitato in un'applicazione Windows Forms  
   
-### Creazione del progetto  
+### <a name="creating-the-project"></a>Creazione del progetto  
  Per avviare il progetto:  
   
-1.  Avviare [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] e aprire la finestra di dialogo **Nuovo progetto**.  
+1.  Avviare [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]e aprire il **nuovo progetto** la finestra di dialogo.  
   
-2.  Nella categoria Visual C\# e Windows, selezionare il modello **Applicazione Windows Form**.  
+2.  In Visual c# e la categoria di Windows, selezionare il **Windows Forms Application** modello.  
   
 3.  Denominare il nuovo progetto `WFHost`.  
   
-4.  Come posizione, specificare la stessa cartella di livello principale che contiene il progetto MyControls.  
+4.  Come percorso, specificare la stessa cartella di livello superiore che contiene il progetto MyControls.  
   
-5.  Scegliere **OK** per creare il progetto.  
+5.  Fare clic su **OK** per creare il progetto.  
   
- È inoltre necessario aggiungere riferimenti alla DLL che contiene `MyControl1` e altri assembly.  
+ È inoltre necessario aggiungere i riferimenti alla DLL contenente `MyControl1` e altri assembly.  
   
-1.  Fare clic con il pulsante destro del mouse in Esplora soluzioni e selezionare **Aggiungi riferimento**.  
+1.  Il nome del progetto in Esplora soluzioni e scegliere **Aggiungi riferimento**.  
   
-2.  Fare clic sulla scheda **Sfoglia** e passare alla cartella che contiene MyControls.dll.  In questa procedura dettagliata, questa cartella è MyControls\\bin\\Debug.  
+2.  Fare clic su di **Sfoglia** scheda e passare alla cartella che contiene MyControls. In questa procedura dettagliata la cartella è MyControls\bin\Debug.  
   
-3.  Selezionare MyControls.dll, quindi scegliere **OK**.  
+3.  Selezionare MyControls e quindi fare clic su **OK**.  
   
-4.  Aggiungere riferimenti agli assembly riportati di seguito.  
+4.  Aggiungere riferimenti agli assembly indicati di seguito.  
   
     -   PresentationCore  
   
@@ -227,112 +227,112 @@ Controllo composito WPF ospitato in un'applicazione Windows Form
   
     -   WindowsFormsIntegration  
   
-### Implementazione dell'interfaccia utente per l'applicazione  
- L'interfaccia utente per l'applicazione Windows Form contiene diversi controlli per interagire con il controllo composito WPF.  
+### <a name="implementing-the-user-interface-for-the-application"></a>Implementazione dell'interfaccia utente per l'applicazione  
+ L'interfaccia utente per l'applicazione Windows Form contiene vari controlli per interagire con il controllo composito WPF.  
   
-1.  In Progettazione Windows Form aprire Form1.  
+1.  Aprire Form1 in Progettazione Windows Form.  
   
-2.  Ingrandire il form affinché possa contenere i controlli.  
+2.  Ingrandire il form per cui inserire i controlli.  
   
-3.  Nell'angolo superiore destro del form aggiungere un controllo <xref:System.Windows.Forms.Panel?displayProperty=fullName> per contenere il controllo composito [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+3.  Nell'angolo superiore destro del form, aggiungere un <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> controllo per contenere il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito.  
   
-4.  Aggiungere i controlli <xref:System.Windows.Forms.GroupBox?displayProperty=fullName> seguenti al form.  
+4.  Aggiungere il seguente <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> controlli al form.  
   
-    |Nome|Text|  
+    |Nome|Testo|  
     |----------|----------|  
     |groupBox1|Colore di sfondo|  
-    |groupBox2|Foreground Color|  
-    |groupBox3|Font Size|  
-    |groupBox4|Font Family|  
+    |groupBox2|Colore primo piano|  
+    |groupBox3|Dimensione carattere|  
+    |groupBox4|Famiglia di caratteri|  
     |groupBox5|Stile|  
-    |groupBox6|Font Weight|  
-    |groupBox7|Data from control|  
+    |groupBox6|Spessore carattere|  
+    |groupBox7|Dati dal controllo|  
   
-5.  Aggiungere i controlli <xref:System.Windows.Forms.RadioButton?displayProperty=fullName> seguenti ai controlli <xref:System.Windows.Forms.GroupBox?displayProperty=fullName>.  
+5.  Aggiungere il seguente <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> controlli per il <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> controlli.  
   
-    |GroupBox|Nome|Text|  
+    |GroupBox|Nome|Testo|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|Originale|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
     |groupBox1|radioBackgroundLightSalmon|LightSalmon|  
     |groupBox2|radioForegroundOriginal|Originale|  
     |groupBox2|radioForegroundRed|Rosso|  
-    |groupBox2|radioForegroundYellow|Yellow|  
+    |groupBox2|radioForegroundYellow|Giallo|  
     |groupBox3|radioSizeOriginal|Originale|  
     |groupBox3|radioSizeTen|10|  
     |groupBox3|radioSizeTwelve|12|  
     |groupBox4|radioFamilyOriginal|Originale|  
     |groupBox4|radioFamilyTimes|Times New Roman|  
     |groupBox4|radioFamilyWingDings|WingDings|  
-    |groupBox5|radioStyleOriginal|Normal|  
-    |groupBox5|radioStyleItalic|Italic|  
+    |groupBox5|radioStyleOriginal|Normale|  
+    |groupBox5|radioStyleItalic|Corsivo|  
     |groupBox6|radioWeightOriginal|Originale|  
     |groupBox6|radioWeightBold|Grassetto|  
   
-6.  Aggiungere i controlli <xref:System.Windows.Forms.Label?displayProperty=fullName> seguenti all'ultimo <xref:System.Windows.Forms.GroupBox?displayProperty=fullName>.  Questi controlli visualizzano i dati restituiti dal controllo composito [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+6.  Aggiungere il seguente <xref:System.Windows.Forms.Label?displayProperty=nameWithType> controlla all'ultimo <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Questi controlli visualizzano i dati restituiti dal [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito.  
   
-    |GroupBox|Nome|Text|  
+    |GroupBox|Nome|Testo|  
     |--------------|----------|----------|  
-    |groupBox7|lblName|Name:|  
-    |groupBox7|lblAddress|Street Address:|  
-    |groupBox7|lblCity|City:|  
-    |groupBox7|lblState|State:|  
-    |groupBox7|lblZip|Zip:|  
+    |groupBox7|lblName|Nome:|  
+    |groupBox7|lblAddress|Indirizzo:|  
+    |groupBox7|lblCity|Città:|  
+    |groupBox7|lblState|Stato:|  
+    |groupBox7|lblZip|CAP:|  
   
-### Inizializzazione del form  
- Il codice di hosting viene in genere implementato nel gestore dell'evento <xref:System.Windows.Forms.Form.Load> del form.  Nel codice seguente sono riportati il gestore dell'evento <xref:System.Windows.Forms.Form.Load>, un gestore per l'evento <xref:System.Windows.FrameworkElement.Loaded> del controllo composito [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e dichiarazioni per molteplici variabili globali che verranno utilizzate in un secondo momento.  
+### <a name="initializing-the-form"></a>Inizializzazione del form  
+ Il codice di hosting viene in genere implementato il formato <xref:System.Windows.Forms.Form.Load> gestore dell'evento. Il codice seguente illustra il <xref:System.Windows.Forms.Form.Load> gestore dell'evento, un gestore per il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo composito <xref:System.Windows.FrameworkElement.Loaded> evento e le dichiarazioni di diverse variabili globali utilizzate in un secondo momento.  
   
- In Progettazione Windows Form fare doppio clic sul form per creare un gestore dell'evento <xref:System.Windows.Forms.Form.Load>.  Nella parte superiore di Form1.cs, aggiungere le istruzioni `using` seguenti.  
+ In Progettazione Windows Form, fare doppio clic sul form per creare un <xref:System.Windows.Forms.Form.Load> gestore dell'evento. All'inizio di Form1. cs, aggiungere le seguenti `using` istruzioni.  
   
  [!code-csharp[WindowsFormsHostingWpfControl#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#10)]  
   
- Sostituire il contenuto della classe `Form1` esistente con il codice riportato di seguito.  
+ Sostituire il contenuto dell'oggetto esistente `Form1` classe con il codice seguente.  
   
  [!code-csharp[WindowsFormsHostingWpfControl#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#2)]  
   
- Il metodo `Form1_Load` nel codice precedente mostra la procedura generale per l'hosting di un controllo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ Il `Form1_Load` metodo nel codice precedente viene illustrata la procedura generale per l'hosting di un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo:  
   
-1.  Creare un nuovo oggetto <xref:System.Windows.Forms.Integration.ElementHost>.  
+1.  Creare un nuovo <xref:System.Windows.Forms.Integration.ElementHost> oggetto.  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.Control.Dock%2A> del controllo su <xref:System.Windows.Forms.DockStyle?displayProperty=fullName>.  
+2.  Impostare il controllo <xref:System.Windows.Forms.Control.Dock%2A> proprietà <xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>.  
   
-3.  Aggiungere il controllo <xref:System.Windows.Forms.Integration.ElementHost> alla raccolta <xref:System.Windows.Forms.Control.Controls%2A>del controllo <xref:System.Windows.Forms.Panel>.  
+3.  Aggiungere il <xref:System.Windows.Forms.Integration.ElementHost> controllo il <xref:System.Windows.Forms.Panel> del controllo <xref:System.Windows.Forms.Control.Controls%2A> insieme.  
   
-4.  Creare un'istanza del controllo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+4.  Creare un'istanza di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllo.  
   
-5.  Ospitare il controllo composito nel form assegnando il controllo alla proprietà <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> del controllo <xref:System.Windows.Forms.Integration.ElementHost>.  
+5.  Ospitare il controllo composito nel form assegnando il controllo per il <xref:System.Windows.Forms.Integration.ElementHost> del controllo <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> proprietà.  
   
- Le due righe rimanenti nel metodo `Form1_Load` associano i gestori a due eventi del controllo:  
+ Le due righe rimanenti nel `Form1_Load` metodo associano i gestori per due eventi di controllo:  
   
--   `OnButtonClick` è un evento personalizzato che viene generato dal controllo composito quando l'utente fa clic sul pulsante **OK** o **Annulla**.  L'evento deve essere gestito per ottenere la risposta dell'utente e per raccogliere i dati specificati.  
+-   `OnButtonClick`è un evento personalizzato che viene generato dal controllo composito quando l'utente sceglie il **OK** o **Annulla** pulsante. Si gestisce l'evento per ottenere la risposta dell'utente e per raccogliere i dati specificati dall'utente.  
   
--   <xref:System.Windows.FrameworkElement.Loaded> è un evento standard che viene generato da un controllo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dopo essere stato caricato completamente.  L'evento viene utilizzato perché nell'esempio è necessario inizializzare molteplici variabili globali utilizzando le proprietà del controllo.  Al momento dell'evento <xref:System.Windows.Forms.Form.Load> del form, il controllo non è ancora caricato completamente e quei valori sono ancora impostati su `null`.  Per poter accedere a queste proprietà, è necessario attendere che si verifichi l'evento <xref:System.Windows.FrameworkElement.Loaded> del controllo.  
+-   <xref:System.Windows.FrameworkElement.Loaded>è un evento standard che viene generato da un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controllare quando è stato caricato completamente. L'evento è usato qui poiché nell'esempio è necessario inizializzare diverse variabili globali usando le proprietà del controllo. Al momento nel formato <xref:System.Windows.Forms.Form.Load> evento, il controllo non è stato caricato completamente e tali valori sono ancora impostati su `null`. È necessario attendere fino a quando il controllo <xref:System.Windows.FrameworkElement.Loaded> evento si verifica prima di poter accedere a tali proprietà.  
   
- Il gestore dell'evento <xref:System.Windows.FrameworkElement.Loaded> viene descritto nel codice precedente.  Il gestore `OnButtonClick` viene descritto nella sezione successiva.  
+ Il <xref:System.Windows.FrameworkElement.Loaded> gestore dell'evento è illustrato nel codice precedente. Il `OnButtonClick` gestore è descritto nella sezione successiva.  
   
-### Gestione di OnButtonClick  
- L'evento `OnButtonClick` si verifica quando l'utente fa clic sul pulsante **OK** o **Annulla**.  
+### <a name="handling-onbuttonclick"></a>Gestione dell'evento OnButtonClick  
+ Il `OnButtonClick` evento si verifica quando l'utente sceglie il **OK** o **Annulla** pulsante.  
   
- Il gestore eventi controlla il campo `IsOK` dell'argomento dell'evento per determinare su quale pulsante è stato fatto clic.  Le variabili `lbl`*dati* corrispondono ai controlli <xref:System.Windows.Forms.Label> descritti in precedenza.  Se l'utente fa clic sul pulsante **OK**, i dati dei controlli <xref:System.Windows.Controls.TextBox> del controllo vengono assegnati al controllo <xref:System.Windows.Forms.Label> corrispondente.  Se l'utente fa clic su **Cancel**, i valori di <xref:System.Windows.Forms.Label.Text%2A> vengono impostati sulle stringhe predefinite.  
+ Il gestore eventi controlla dell'argomento dell'evento `IsOK` campo per determinare quale pulsante è stato fatto clic. Il `lbl` *dati* variabili corrispondano per il <xref:System.Windows.Forms.Label> controlli descritti in precedenza. Se l'utente sceglie il **OK** pulsante, i dati del controllo <xref:System.Windows.Controls.TextBox> controlli viene assegnato alla corrispondente <xref:System.Windows.Forms.Label> controllo. Se l'utente fa clic **Annulla**, <xref:System.Windows.Forms.Label.Text%2A> valori vengono impostati per le stringhe predefinite.  
   
- Aggiungere il codice del gestore dell'evento clic sul pulsante alla classe `Form1`.  
+ Aggiungere il seguente pulsante fare clic su codice del gestore eventi per il `Form1` classe.  
   
  [!code-csharp[WindowsFormsHostingWpfControl#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#3)]  
   
- Compilare ed eseguire l'applicazione.  Aggiungere testo al controllo composito WPF, quindi scegliere **OK**.  Il testo viene visualizzato nelle etichette.  A questo punto, il codice non è stato aggiunto per gestire i pulsanti di opzione.  
+ Compilare ed eseguire l'applicazione. Aggiungere del testo nel controllo composito WPF e quindi fare clic su **OK**. Il testo viene visualizzato nelle etichette. A questo punto, il codice non è stato aggiunto ai pulsanti di opzione.  
   
-### Modifica dell'aspetto del controllo  
- I controlli <xref:System.Windows.Forms.RadioButton> presenti nel form consentono all'utente di modificare i colori di sfondo e di primo piano del controllo composito [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], nonché molte proprietà dei tipi di carattere.  Il colore di sfondo è esposto dall'oggetto <xref:System.Windows.Forms.Integration.ElementHost>.  Le proprietà rimanenti sono esposte come proprietà personalizzate del controllo.  
+### <a name="modifying-the-appearance-of-the-control"></a>Modifica dell'aspetto del controllo  
+ Il <xref:System.Windows.Forms.RadioButton> controlli nel form consentirà all'utente di modificare il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , nonché molte proprietà dei caratteri di colori di sfondo e primo piano di controllo composito. Il colore di sfondo è esposto dal <xref:System.Windows.Forms.Integration.ElementHost> oggetto. Le proprietà restanti sono esposte come proprietà personalizzate del controllo.  
   
- Fare doppio clic su ogni controllo <xref:System.Windows.Forms.RadioButton> nel form per creare gestori per l'evento <xref:System.Windows.Forms.RadioButton.CheckedChanged>.  Sostituire i gestori dell'evento <xref:System.Windows.Forms.RadioButton.CheckedChanged> con il codice riportato di seguito.  
+ Fare doppio clic su ogni <xref:System.Windows.Forms.RadioButton> controllo sul form per creare <xref:System.Windows.Forms.RadioButton.CheckedChanged> gestori eventi. Sostituire il <xref:System.Windows.Forms.RadioButton.CheckedChanged> gestori di eventi con il codice seguente.  
   
  [!code-csharp[WindowsFormsHostingWpfControl#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#4)]  
   
- Compilare ed eseguire l'applicazione.  Fare clic sui diversi pulsanti di opzione per visualizzare l'effetto sul controllo composito WPF.  
+ Compilare ed eseguire l'applicazione. Fare clic sui vari pulsanti di opzione per vedere l'effetto sul controllo composito WPF.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [WPF Designer](http://msdn.microsoft.com/it-it/c6c65214-8411-4e16-b254-163ed4099c26)   
- [Procedura dettagliata: hosting di controlli Windows Form compositi in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [WPF Designer](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [Procedura dettagliata: Hosting di controlli Windows Form compositi in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
  [Procedura dettagliata: hosting di controlli compositi 3D di WPF in Windows Form](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

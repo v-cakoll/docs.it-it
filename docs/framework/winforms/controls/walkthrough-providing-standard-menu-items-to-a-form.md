@@ -1,134 +1,138 @@
 ---
-title: "Procedura dettagliata: inserimento di voci di menu standard in un form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "voci di menu, standard"
-  - "StatusStrip (controllo) [Windows Form]"
-  - "barre degli strumenti [Windows Form], procedure dettagliate"
-  - "ToolStrip (controllo) [Windows Form]"
+title: 'Procedura dettagliata: inserimento di voci di menu standard in un form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- menu items [Windows Forms], standard
+- toolbars [Windows Forms], walkthroughs
+- StatusStrip control [Windows Forms]
+- ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1eccb033dd07f634f3629fd6f314eaa3df56b422
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: inserimento di voci di menu standard in un form
-È possibile inserire un menu standard nei form con il controllo <xref:System.Windows.Forms.MenuStrip>.  
+# <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Procedura dettagliata: inserimento di voci di menu standard in un form
+È possibile fornire un menu standard nei form tramite il controllo <xref:System.Windows.Forms.MenuStrip>.  
   
- In questa procedura dettagliata verrà illustrato come utilizzare un controllo <xref:System.Windows.Forms.MenuStrip> per creare un menu standard.  Il form inoltre sarà in grado di fornire una risposta alla selezione di una voce di menu.  Nella procedura dettagliata verranno illustrate le seguenti attività:  
+ Questa procedura dettagliata viene illustrato come utilizzare un <xref:System.Windows.Forms.MenuStrip> controllo per creare un menu standard. Il modulo risponde anche quando un utente seleziona una voce di menu. Nella procedura dettagliata vengono illustrate le attività seguenti:  
   
--   Creazione di un progetto Windows Form  
+-   Creazione di un progetto Windows Form.  
   
--   Creazione di un menu standard  
+-   Creazione di un menu standard.  
   
--   Creazione di un controllo <xref:System.Windows.Forms.StatusStrip>  
+-   Creazione di un <xref:System.Windows.Forms.StatusStrip> controllo.  
   
--   Gestione della selezione delle voci di menu.  
+-   Gestisce la selezione di elementi di menu.  
   
- Al termine, si disporrà di un form con un menu standard dove le voci di menu selezionate saranno visualizzate in un controllo <xref:System.Windows.Forms.StatusStrip>.  
+ Al termine, si disporrà di un form con un menu standard che consente di visualizzare voci di menu selezionate in un <xref:System.Windows.Forms.StatusStrip> controllo.  
   
- Per copiare il codice nell'argomento corrente come un elenco singolo, vedere [Procedura: specificare voci di menu standard in un form](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).  
+ Per copiare il codice in questo argomento come elenco singolo, vedere [procedura: fornire le voci di Menu Standard a un Form](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma. Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** . Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## Prerequisiti  
- Per completare questa procedura dettagliata, è necessario disporre di quanto segue:  
+## <a name="prerequisites"></a>Prerequisiti  
+ Per completare questa procedura dettagliata, è necessario:  
   
--   Disporre di autorizzazioni sufficienti per creare ed eseguire progetti di applicazioni Windows Form sul computer sul quale è installato [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+-   Disporre di autorizzazioni sufficienti creare ed eseguire progetti di applicazione Windows Form nel computer in cui [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] è installato.  
   
-## Creazione del progetto  
- Il primo passaggio indica come creare il progetto e impostare il form.  
+## <a name="creating-the-project"></a>Creazione del progetto  
+ Il primo passaggio consiste nella creazione del progetto e nella configurazione del form.  
   
-#### Per creare il progetto  
+#### <a name="to-create-the-project"></a>Per creare il progetto  
   
-1.  Creare un progetto Applicazione Windows denominato StandardMenuForm.  
+1.  Creare un progetto di applicazione Windows denominato **StandardMenuForm**.  
   
-     Per ulteriori informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+     Per altre informazioni, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
-2.  In Progettazione Windows Form selezionare il form.  
+2.  In Progettazione Windows Form, selezionare il form.  
   
-## Creazione di un menu standard  
- In Progettazione Windows Form è possibile popolare automaticamente un controllo <xref:System.Windows.Forms.MenuStrip> con voci di menu standard.  
+## <a name="creating-a-standard-menu"></a>Creazione di un Menu Standard  
+ Progettazione Windows Form è possibile popolare automaticamente un <xref:System.Windows.Forms.MenuStrip> controllo con voci di menu standard.  
   
-#### Per creare un menu standard  
+#### <a name="to-create-a-standard-menu"></a>Per creare un menu standard  
   
-1.  Dalla **Casella degli strumenti** trascinare un controllo <xref:System.Windows.Forms.MenuStrip> nel form.  
+1.  Dal **della casella degli strumenti**, trascinare un <xref:System.Windows.Forms.MenuStrip> controllo nel form.  
   
-2.  Fare clic sul glifo dello smart tag del controllo <xref:System.Windows.Forms.MenuStrip> \(![Glifo Smart Tag](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) e selezionare **Inserisci elementi standard**.  
+2.  Fare clic su di <xref:System.Windows.Forms.MenuStrip> glifo dello smart tag del controllo (![Smart Tag glifo](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) e selezionare **Inserisci elementi Standard**.  
   
-     Il controllo <xref:System.Windows.Forms.MenuStrip> verrà popolato con le voci di menu standard.  
+     Il <xref:System.Windows.Forms.MenuStrip> controllo venga popolato con le voci di menu standard.  
   
-3.  Fare clic su **File** per visualizzare le relative voci di menu predefinite e le icone corrispondenti.  
+3.  Fare clic su di **File** voce di menu per visualizzare le relative voci di menu predefinite e icone corrispondenti.  
   
-## Creazione di un controllo StatusStrip  
- Utilizzare il controllo <xref:System.Windows.Forms.StatusStrip> per visualizzare lo stato delle applicazioni Windows Form.  Nell'esempio corrente, le voci di menu selezionate dall'utente vengono visualizzate in un controllo <xref:System.Windows.Forms.StatusStrip>.  
+## <a name="creating-a-statusstrip-control"></a>Creazione di un controllo StatusStrip  
+ Utilizzare il <xref:System.Windows.Forms.StatusStrip> controllo per visualizzare lo stato delle applicazioni Windows Form. Nell'esempio corrente, le voci di menu selezionate dall'utente vengono visualizzate un <xref:System.Windows.Forms.StatusStrip> controllo.  
   
-#### Per creare un controllo StatusStrip  
+#### <a name="to-create-a-statusstrip-control"></a>Per creare un controllo StatusStrip  
   
-1.  Dalla **Casella degli strumenti** trascinare un controllo <xref:System.Windows.Forms.StatusStrip> nel form.  
+1.  Dal **della casella degli strumenti**, trascinare un <xref:System.Windows.Forms.StatusStrip> controllo nel form.  
   
-     Il controllo <xref:System.Windows.Forms.StatusStrip> verrà ancorato automaticamente al bordo inferiore del form.  
+     Il <xref:System.Windows.Forms.StatusStrip> controllo viene ancorato automaticamente nella parte inferiore del form.  
   
-2.  Fare clic sul pulsante a discesa del controllo <xref:System.Windows.Forms.StatusStrip> e scegliere **StatusLabel** per aggiungere un controllo <xref:System.Windows.Forms.ToolStripStatusLabel> al controllo <xref:System.Windows.Forms.StatusStrip>.  
+2.  Fare clic su di <xref:System.Windows.Forms.StatusStrip> del controllo pulsante di menu a discesa e selezionare **StatusLabel** per aggiungere un <xref:System.Windows.Forms.ToolStripStatusLabel> controllo il <xref:System.Windows.Forms.StatusStrip> controllo.  
   
-## Gestione della selezione delle voci  
- Gestire l'evento <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> in risposta alla selezione di una voce di menu.  
+## <a name="handling-item-selection"></a>Selezione di elementi di gestione  
+ Gestire il <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> evento rispondere quando l'utente seleziona una voce di menu.  
   
-#### Per gestire la selezione delle voci  
+#### <a name="to-handle-item-selection"></a>Per gestire la selezione di elementi  
   
-1.  Scegliere la voce di menu **File** creata nella sezione Creazione di un menu standard.  
+1.  Fare clic su di **File** voce di menu che è stato creato in creazione una sezione di Menu Standard.  
   
-2.  Nella finestra **Proprietà** fare clic su **Eventi**.  
+2.  Nel **proprietà** finestra, fare clic su **eventi**.  
   
-3.  Fare doppio clic sull'evento <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>.  
+3.  Fare doppio clic su di <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> evento.  
   
-     In Progettazione Windows Form verrà generato un gestore eventi per l'evento <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>.  
+     Progettazione Windows Form genera un gestore eventi per il <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> evento.  
   
-4.  Inserire il codice riportato di seguito nel gestore eventi.  
+4.  Inserire il codice seguente nel gestore eventi.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  Inserire la definizione del metodo di utilità `UpdateStatus` nel form.  
+5.  Inserire il `UpdateStatus` definizione di metodo di utilità nel form.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
   
-## Verifica  
+## <a name="checkpoint"></a>Checkpoint  
   
-#### Per eseguire il test del form  
+#### <a name="to-test-your-form"></a>Per verificare il modulo  
   
-1.  Premere F5 per compilare ed eseguire il form.  
+1.  Premere F5 per compilare ed eseguire il modulo.  
   
-2.  Fare clic sulla voce di menu **File** per aprire il menu.  
+2.  Fare clic su di **File** voce di menu per aprire il menu.  
   
-3.  Fare clic su una delle voci del menu **File** per selezionarla.  
+3.  Nel **File** menu, fare clic su uno degli elementi per selezionarlo.  
   
-     Nel controllo <xref:System.Windows.Forms.StatusStrip> verrà visualizzata la voce selezionata.  
+     Il <xref:System.Windows.Forms.StatusStrip> controllo Visualizza l'elemento selezionato.  
   
-## Passaggi successivi  
- In questa procedura dettagliata è stato creato un form con un menu standard.  È possibile utilizzare la famiglia di controlli <xref:System.Windows.Forms.ToolStrip> per molte altre finalità:  
+## <a name="next-steps"></a>Passaggi successivi  
+ In questa procedura dettagliata, è stato creato un form con un menu standard. È possibile utilizzare il <xref:System.Windows.Forms.ToolStrip> famiglia di controlli per molte altre operazioni:  
   
--   Creazione di menu di scelta rapida per i controlli con la classe <xref:System.Windows.Forms.ContextMenuStrip>.  Per ulteriori informazioni, vedere [Cenni preliminari sul componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
+-   Creare menu di scelta rapida per i controlli con <xref:System.Windows.Forms.ContextMenuStrip>. Per ulteriori informazioni, vedere [Cenni preliminari sul componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
   
--   Creazione di un form MDI \(Multiple Document Interface, interfaccia a documenti multipli\) con controlli <xref:System.Windows.Forms.ToolStrip> ancorati.  Per ulteriori informazioni, vedere [Procedura dettagliata: creazione di un form MDI con unione di menu e controlli ToolStrip](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+-   Creare un form MDI (interfaccia) con ancoraggio <xref:System.Windows.Forms.ToolStrip> controlli. Per ulteriori informazioni, vedere [procedura dettagliata: creazione di un Form MDI con unione di Menu e controlli ToolStrip](../../../../docs/framework/winforms/controls/walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
--   Attribuzione di un aspetto professionale ai controlli <xref:System.Windows.Forms.ToolStrip>.  Per ulteriori informazioni, vedere [Procedura: impostare il renderer ToolStrip per un'applicazione](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
+-   Assegnare il <xref:System.Windows.Forms.ToolStrip> controlla un aspetto professionale. Per ulteriori informazioni, vedere [procedura: impostare il ToolStrip Renderer per un'applicazione](../../../../docs/framework/winforms/controls/how-to-set-the-toolstrip-renderer-for-an-application.md).  
   
-## Vedere anche  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.StatusStrip>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.StatusStrip>  
  [Controllo MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

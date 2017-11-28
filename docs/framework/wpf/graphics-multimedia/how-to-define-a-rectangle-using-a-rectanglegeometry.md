@@ -1,45 +1,49 @@
 ---
-title: "Procedura: definire un rettangolo utilizzando RectangleGeometry | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classi, RectangleGeometry"
-  - "grafica [WPF], rettangoli"
-  - "RectangleGeometry (classe)"
-  - "rettangoli, creazione con la classe RectangleGeometry"
+title: 'Procedura: definire un rettangolo utilizzando RectangleGeometry'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], rectangles
+- rectangles [WPF], creating with RectangleGeometry class
 ms.assetid: e40b8a8e-54b8-416b-a9f2-be6dca9fdf0b
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 678d6f36c02c63825782b9f1c860285450a6a9f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: definire un rettangolo utilizzando RectangleGeometry
-In questo esempio viene illustrato come utilizzare la classe <xref:System.Windows.Media.RectangleGeometry> per tracciare un rettangolo.  
+# <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>Procedura: definire un rettangolo utilizzando RectangleGeometry
+In questo esempio viene illustrato come utilizzare la <xref:System.Windows.Media.RectangleGeometry> classe per descrivere un rettangolo.  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come creare ed eseguire il rendering di un oggetto <xref:System.Windows.Media.RectangleGeometry>.  La posizione relativa e le dimensioni del rettangolo vengono definite da una struttura <xref:System.Windows.Rect>.  La posizione relativa è `50,50` e l'altezza e la larghezza sono entrambe `25`, valori che consentono la creazione di un quadrato.  L'interno del rettangolo viene disegnato con un pennello <xref:System.Windows.Media.Brushes.LemonChiffon%2A>, mentre il contorno con un tratto di spessore <xref:System.Windows.Media.Brushes.Black%2A> pari a `1`.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come creare ed eseguire il rendering di un <xref:System.Windows.Media.RectangleGeometry>.  La posizione relativa e le dimensioni del rettangolo sono definite da un <xref:System.Windows.Rect> struttura. La posizione relativa è `50,50` e l'altezza e larghezza sono entrambi `25` la creazione di un quadrato. Viene disegnato l'interno del rettangolo con un <xref:System.Windows.Media.Brushes.LemonChiffon%2A> pennello e il relativo profilo viene disegnato con un <xref:System.Windows.Media.Brushes.Black%2A> tratto con uno spessore pari a `1`.  
   
- [!code-xml[GeometryOverviewSamples_snip#GraphicsMMRectangleGeometryExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmrectanglegeometryexample)]  
+ [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMRectangleGeometryExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/GeometryExamples.xaml#graphicsmmrectanglegeometryexample)]  
   
  [!code-csharp[GeometryOverviewSamples_procedural_snip#GraphicsMMRectangleGeometryExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/CSharp/GeometryExamples.cs#graphicsmmrectanglegeometryexample)]
  [!code-vb[GeometryOverviewSamples_procedural_snip#GraphicsMMRectangleGeometryExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GeometryOverviewSamples_procedural_snip/visualbasic/geometryexamples.vb#graphicsmmrectanglegeometryexample)]  
   
- ![RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rectangle.png "graphicsmm\_rectangle")  
+ ![RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rectangle.gif "graphicsmm_rectangle")  
 RectangleGeometry  
   
- Anche se in questo esempio viene utilizzato un elemento <xref:System.Windows.Shapes.Path> per eseguire il rendering dell'oggetto <xref:System.Windows.Media.RectangleGeometry>, esistono molti altri modi per utilizzare gli oggetti <xref:System.Windows.Media.RectangleGeometry>.  Ad esempio, un oggetto <xref:System.Windows.Media.RectangleGeometry> può essere utilizzato per specificare la proprietà <xref:System.Windows.UIElement.Clip%2A> di un oggetto <xref:System.Windows.UIElement> o la proprietà <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> di un oggetto <xref:System.Windows.Media.GeometryDrawing>.  
+ Sebbene in questo esempio viene utilizzato un <xref:System.Windows.Shapes.Path> elemento per il rendering di <xref:System.Windows.Media.RectangleGeometry>, esistono molti altri modi per utilizzare <xref:System.Windows.Media.RectangleGeometry> oggetti. Ad esempio, un <xref:System.Windows.Media.RectangleGeometry> può essere usato per specificare il <xref:System.Windows.UIElement.Clip%2A> di un <xref:System.Windows.UIElement> o <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> di un <xref:System.Windows.Media.GeometryDrawing>.  
   
- Le altre classi di geometrie semplici includono <xref:System.Windows.Media.LineGeometry> e <xref:System.Windows.Media.EllipseGeometry>.  Queste geometrie, come quelle più complesse, possono anche essere create utilizzando un oggetto <xref:System.Windows.Media.PathGeometry> o un oggetto <xref:System.Windows.Media.StreamGeometry>.  
+ Le altre classi geometry semplice <xref:System.Windows.Media.LineGeometry> e <xref:System.Windows.Media.EllipseGeometry>. Le geometrie, come quelle più complesse, possono essere create anche usando un <xref:System.Windows.Media.PathGeometry> o <xref:System.Windows.Media.StreamGeometry>.  
   
-## Vedere anche  
- [Cenni preliminari sulle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [Creare una forma composta](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)   
- [Creare una forma utilizzando un oggetto PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sulle classi Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [Creare una forma composta](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [Creare una forma usando un oggetto PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)

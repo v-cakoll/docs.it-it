@@ -1,49 +1,55 @@
 ---
-title: "Cenni preliminari sull&#39;oggetto ContextMenu | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ContextMenu (controlli) [WPF], informazioni sui controlli ContextMenu"
-  - "controlli, ContextMenu"
+title: Cenni preliminari sull'oggetto ContextMenu
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], ContextMenu
+- ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-caps.latest.revision: 25
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f3061b7fed225f00bf6bb91efe529de35a5a036a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sull&#39;oggetto ContextMenu
-La classe <xref:System.Windows.Controls.ContextMenu> rappresenta l'elemento che espone le funzionalità utilizzando un oggetto <xref:System.Windows.Controls.Menu> specifico del contesto.  In genere, un utente espone <xref:System.Windows.Controls.ContextMenu> nell'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] facendo clic con il pulsante destro del mouse.  In questo argomento viene presentato l'elemento <xref:System.Windows.Controls.ContextMenu> e vengono forniti alcuni esempi di utilizzo in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e nel codice.  
+# <a name="contextmenu-overview"></a>Cenni preliminari sull'oggetto ContextMenu
+Il <xref:System.Windows.Controls.ContextMenu> classe rappresenta l'elemento che espone le funzionalità utilizzando un contesto specifico <xref:System.Windows.Controls.Menu>. In genere, un utente espone il <xref:System.Windows.Controls.ContextMenu> nel [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] facendo clic con il pulsante del mouse. Questo argomento vengono presentate le <xref:System.Windows.Controls.ContextMenu> elemento e vengono forniti esempi di utilizzo in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e il codice.  
   
-   
+  
   
 <a name="contextmenu_control"></a>   
-## Controllo ContextMenu  
- <xref:System.Windows.Controls.ContextMenu> viene associato a un controllo specifico.  L'elemento <xref:System.Windows.Controls.ContextMenu> consente di visualizzare un elenco di elementi che specificano opzioni o comandi associati a un particolare controllo, quale ad esempio <xref:System.Windows.Controls.Button>.  Per visualizzare il menu, occorre fare clic con il pulsante destro del mouse sul controllo.  In genere, quando si fa clic su un oggetto <xref:System.Windows.Controls.MenuItem> viene aperto un sottomenu oppure si esegue un comando in un'applicazione.  
+## <a name="contextmenu-control"></a>Controllo ContextMenu  
+ Oggetto <xref:System.Windows.Controls.ContextMenu> è collegato a un controllo specifico. Il <xref:System.Windows.Controls.ContextMenu> elemento consente di visualizzare un elenco di elementi che specificano i comandi o le opzioni che sono associate a un particolare controllo, ad esempio, un <xref:System.Windows.Controls.Button>. Gli utenti possono fare clic con il pulsante destro del mouse sul controllo per visualizzare il menu. In genere, facendo clic su un <xref:System.Windows.Controls.MenuItem> viene aperto un sottomenu o fa sì che un'applicazione eseguire un comando.  
   
 <a name="creating_contextmenus"></a>   
-## Creazione di ContextMenu  
- Nei seguenti esempi viene illustrato come creare un oggetto <xref:System.Windows.Controls.ContextMenu> con vari sottomenu.  I controlli <xref:System.Windows.Controls.ContextMenu> sono associati a pulsanti.  
+## <a name="creating-contextmenus"></a>Creazione di elementi ContextMenu  
+ Gli esempi seguenti mostrano come creare un <xref:System.Windows.Controls.ContextMenu> con sottomenu. Il <xref:System.Windows.Controls.ContextMenu> i controlli vengono associati ai controlli pulsante.  
   
- [!code-xml[ContextMenu#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#1)]  
+ [!code-xaml[ContextMenu#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#1)]  
   
  [!code-csharp[ContextMenu#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml.cs#2)]
  [!code-vb[ContextMenu#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ContextMenu/VisualBasic/Pane1.xaml.vb#2)]  
   
 <a name="applying_styles_to_contextmenu"></a>   
-## Applicazione di stili a ContextMenu  
- Utilizzando un oggetto <xref:System.Windows.Style> di un controllo, è possibile modificare in modo significativo l'aspetto e il comportamento di <xref:System.Windows.Controls.ContextMenu> senza alcuna necessità di scrivere un controllo personalizzato.  Oltre a impostare proprietà visive, è anche possibile applicare stili a parti di un controllo.  Ad esempio, è possibile modificare il comportamento di parti del controllo utilizzando le proprietà oppure aggiungere altre parti o modificare il layout di <xref:System.Windows.Controls.ContextMenu>.  Nei seguenti esempi vengono illustrati diversi metodi per aggiungere gli stili ai controlli <xref:System.Windows.Controls.ContextMenu>.  
+## <a name="applying-styles-to-a-contextmenu"></a>Applicazione di stili a un elemento ContextMenu  
+ Tramite un controllo <xref:System.Windows.Style>, è possibile modificare in modo significativo l'aspetto e il comportamento di un <xref:System.Windows.Controls.ContextMenu> senza scrivere un controllo personalizzato. Oltre a impostare proprietà visive, è anche possibile applicare stili alle parti di un controllo. Ad esempio, è possibile modificare il comportamento di parti del controllo utilizzando le proprietà oppure è possibile aggiungere parti a, o modificare il layout di un <xref:System.Windows.Controls.ContextMenu>. Gli esempi seguenti illustrano diversi modi per aggiungere gli stili <xref:System.Windows.Controls.ContextMenu> controlli.  
   
- Nel primo esempio viene definito uno stile denominato `SimpleSysResources`, in cui viene illustrato come utilizzare le impostazioni di sistema correnti nello stile.  Nell'esempio vengono assegnati <xref:System.Windows.SystemColors.MenuHighlightBrushKey%2A> come colore di <xref:System.Windows.Controls.Control.Background%2A> e <xref:System.Windows.SystemColors.MenuTextBrushKey%2A> come colore di <xref:System.Windows.Controls.Control.Foreground%2A> per <xref:System.Windows.Controls.ContextMenu>.  
+ Nel primo esempio viene definito uno stile denominato `SimpleSysResources`, che illustra come usare le impostazioni di sistema correnti nello stile. Nell'esempio viene assegnato <xref:System.Windows.SystemColors.MenuHighlightBrushKey%2A> come il <xref:System.Windows.Controls.Control.Background%2A> colore e <xref:System.Windows.SystemColors.MenuTextBrushKey%2A> come il <xref:System.Windows.Controls.Control.Foreground%2A> colore del <xref:System.Windows.Controls.ContextMenu>.  
   
-```  
+```xaml  
 <Style x:Key="SimpleSysResources" TargetType="{x:Type MenuItem}">  
   <Setter Property = "Background" Value=   
     "{DynamicResource {x:Static SystemColors.MenuHighlightBrushKey}}"/>  
@@ -52,9 +58,9 @@ La classe <xref:System.Windows.Controls.ContextMenu> rappresenta l'elemento che 
 </Style>  
 ```  
   
- Nell'esempio successivo viene utilizzato l'elemento <xref:System.Windows.Trigger> per modificare l'aspetto di <xref:System.Windows.Controls.Menu> in risposta a eventi generati in <xref:System.Windows.Controls.ContextMenu>.  Quando un utente sposta il mouse sul menu, l'aspetto degli elementi di <xref:System.Windows.Controls.ContextMenu> viene modificato.  
+ L'esempio seguente usa il <xref:System.Windows.Trigger> elemento per modificare l'aspetto di un <xref:System.Windows.Controls.Menu> in risposta agli eventi generati nel <xref:System.Windows.Controls.ContextMenu>. Quando si sposta il puntatore del mouse sul menu, l'aspetto del <xref:System.Windows.Controls.ContextMenu> elementi modifiche.  
   
-```  
+```xaml  
 <Style x:Key="Triggers" TargetType="{x:Type MenuItem}">  
   <Style.Triggers>  
     <Trigger Property="MenuItem.IsMouseOver" Value="true">  
@@ -66,11 +72,11 @@ La classe <xref:System.Windows.Controls.ContextMenu> rappresenta l'elemento che 
 </Style>  
 ```  
   
-## Vedere anche  
- <xref:System.Windows.Controls.ContextMenu>   
- <xref:System.Windows.Style>   
- <xref:System.Windows.Controls.Menu>   
- <xref:System.Windows.Controls.MenuItem>   
- [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)   
- [Stili e modelli di ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Controls.ContextMenu>  
+ <xref:System.Windows.Style>  
+ <xref:System.Windows.Controls.Menu>  
+ <xref:System.Windows.Controls.MenuItem>  
+ [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)  
+ [Stili e modelli di ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
  [Esempio di raccolta di controlli WPF](http://go.microsoft.com/fwlink/?LinkID=160053)

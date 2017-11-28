@@ -1,37 +1,35 @@
 ---
-title: "Overflow (Visual Basic Run-Time Error) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrERRID_Overflow"
-dev_langs: 
-  - "VB"
+title: Overflow (errore di run-time Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d1908ad576a499e79102aff23e3e2f11d7d99d52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Overflow (Visual Basic Run-Time Error)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Un overflow si verifica quando si tenta di effettuare un'assegnazione che supera i limiti della destinazione dell'assegnazione.  
+# <a name="overflow-visual-basic-run-time-error"></a>Overflow (errore di run-time Visual Basic)
+Quando si tenta un'assegnazione che supera i limiti della destinazione dell'assegnazione di un overflow.  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Assicurarsi che i risultati delle assegnazioni, dei calcoli e delle conversioni di tipo di dati non siano troppo grandi per essere rappresentati all'interno dell'intervallo di variabili consentito per il tipo di valore specificato e assegnare il valore a una variabile di un tipo in grado di contenere, se necessario, un intervallo più grande di valori.  
+1.  Assicurarsi che i risultati di tipo di dati, calcoli e le assegnazioni di conversioni non sono troppo grandi per essere rappresentate all'interno dell'intervallo di variabili consentito per il tipo di valore e assegnare il valore a una variabile di un tipo che possono contenere un intervallo più ampio di valori , se necessario.  
   
-2.  Assicurarsi che le assegnazioni alle proprietà rientrino in un intervallo valido per la proprietà per cui sono effettuate.  
+2.  Verificare che le assegnazioni alle proprietà corrispondono all'intervallo della proprietà a cui sono state apportate.  
   
-3.  Assicurarsi che i numeri utilizzati nei calcoli assegnati forzatamente a valori integer non diano risultati superiori ai valori integer.  
+3.  Assicurarsi che i numeri utilizzati nei calcoli che vengono assegnati forzatamente a numeri interi non hanno risultati superiori ai valori integer.  
   
-## Vedere anche  
- <xref:System.Int32.MaxValue?displayProperty=fullName>   
- <xref:System.Double.MaxValue?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Error Types](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Int32.MaxValue?displayProperty=nameWithType>  
+ <xref:System.Double.MaxValue?displayProperty=nameWithType>  
+ [Tipi di dati](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Tipi di errore](../../../visual-basic/programming-guide/language-features/error-types.md)

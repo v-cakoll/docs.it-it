@@ -1,44 +1,48 @@
 ---
-title: "Procedura: visualizzare una tavolozza dei colori con il componente ColorDialog | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "finestra di dialogo dei colori, visualizzazione di tavolozze dei colori"
-  - "tavolozze dei colori, finestra di dialogo"
-  - "tavolozze dei colori, visualizzazione nel componente ColorDialog"
-  - "Color (proprietà)"
-  - "ColorDialog (componente), visualizzazione di tavolozze dei colori"
-  - "colori, selezionabili dall'utente"
-  - "colori, visualizzazione di tavolozze"
-  - "tavolozze, visualizzazione di colori"
+title: 'Procedura: visualizzare una tavolozza dei colori con il componente ColorDialog'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- palettes [Windows Forms], showing color
+- color dialog box [Windows Forms], showing color palettes
+- colors [Windows Forms], allowing users to select
+- color palettes [Windows Forms], dialog box
+- ColorDialog component [Windows Forms], showing color palettes
+- color palettes [Windows Forms], showing in ColorDialog component
+- colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: af773141039d049e010742f339ec4f9363d73cc3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: visualizzare una tavolozza dei colori con il componente ColorDialog
-Il componente [ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md) visualizza una tavolozza dei colori e restituisce una proprietà contenente il colore selezionato dall'utente.  
+# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>Procedura: visualizzare una tavolozza dei colori con il componente ColorDialog
+Il [ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md) componente Visualizza una tavolozza di colori e restituisce una proprietà che contiene il colore in cui l'utente ha selezionato.  
   
-### Per scegliere un colore mediante il componente ColorDialog  
+### <a name="to-choose-a-color-using-the-colordialog-component"></a>Per scegliere un colore utilizzando il componente ColorDialog  
   
-1.  Aprire la finestra di dialogo mediante il metodo <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  
+1.  Visualizzare la finestra di dialogo utilizzando il <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> metodo.  
   
-2.  Utilizzare la proprietà <xref:System.Windows.Forms.DialogResult> per determinare in che modo è stata chiusa la finestra di dialogo.  
+2.  Utilizzare il <xref:System.Windows.Forms.DialogResult> proprietà per determinare la modalità in cui è stata chiusa la finestra di dialogo.  
   
-3.  Utilizzare la proprietà <xref:System.Windows.Forms.ColorDialog.Color%2A> del componente <xref:System.Windows.Forms.ColorDialog> per impostare il colore scelto.  
+3.  Utilizzare il <xref:System.Windows.Forms.ColorDialog.Color%2A> proprietà del <xref:System.Windows.Forms.ColorDialog> componenti su cui impostare il colore scelto.  
   
-     Nell'esempio che segue viene utilizzato il gestore eventi <xref:System.Windows.Forms.Control.Click> del controllo <xref:System.Windows.Forms.Button> per aprire un componente <xref:System.Windows.Forms.ColorDialog>.  Quando viene scelto un colore e si fa clic su **OK**, il colore di sfondo del controllo <xref:System.Windows.Forms.Button> viene impostato sul colore scelto.  Si presuppone che il form contenga un controllo <xref:System.Windows.Forms.Button> e un componente <xref:System.Windows.Forms.ColorDialog>.  
+     Nell'esempio seguente, il <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Click> gestore eventi viene aperto un <xref:System.Windows.Forms.ColorDialog> componente. Quando un colore viene scelto e l'utente fa clic su **OK**, <xref:System.Windows.Forms.Button> il colore di sfondo del controllo è impostato sul colore scelto. Nell'esempio si presuppone il modulo contiene un <xref:System.Windows.Forms.Button> controllo e un <xref:System.Windows.Forms.ColorDialog> componente.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -47,7 +51,6 @@ Il componente [ColorDialog](../../../../docs/framework/winforms/controls/colordi
           Button1.BackColor = ColorDialog1.Color  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -58,7 +61,6 @@ Il componente [ColorDialog](../../../../docs/framework/winforms/controls/colordi
           button1.BackColor = colorDialog1.Color;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -73,11 +75,10 @@ Il componente [ColorDialog](../../../../docs/framework/winforms/controls/colordi
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Inserire il codice seguente nel costruttore del form per registrare il gestore eventi.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]e [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Inserire il codice seguente nel costruttore del form per registrare il gestore eventi.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -85,6 +86,6 @@ Il componente [ColorDialog](../../../../docs/framework/winforms/controls/colordi
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ColorDialog>   
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.ColorDialog>  
  [Componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)

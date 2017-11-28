@@ -1,38 +1,37 @@
 ---
-title: "Formattazione di HTTP Web WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Formattazione di HTTP Web WCF
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3a41c6c7304234535993d83329c4faa464218e3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Formattazione di HTTP Web WCF
-Il modello di programmazione HTTP Web WCF consente di determinare in modo dinamico il formato migliore in cui un'operazione di servizio debba restituire la risposta.  Vengono supportati due metodi per determinare un formato appropriato: automatico ed esplicito.  
+# <a name="wcf-web-http-formatting"></a>Formattazione di HTTP Web WCF
+Il modello di programmazione HTTP Web WCF consente di determinare in modo dinamico il formato migliore in cui un'operazione di servizio debba restituire la risposta. Vengono supportati due metodi per determinare un formato appropriato: automatico ed esplicito.  
   
-## Formattazione automatica  
- Se abilitata, la formattazione automatica sceglie il formato migliore nel quale verrà restituita la risposta,  controllando gli elementi seguenti, in ordine:  
+## <a name="automatic-formatting"></a>Formattazione automatica  
+ Se abilitata, la formattazione automatica sceglie il formato migliore nel quale verrà restituita la risposta, controllando gli elementi seguenti, in ordine:  
   
 1.  i tipi di supporto nell'intestazione Accept del messaggio di richiesta;  
   
-2.  il valore content\-type del messaggio di richiesta;  
+2.  il valore content-type del messaggio di richiesta;  
   
 3.  l'impostazione del formato predefinita nell'operazione;  
   
 4.  l'impostazione del formato predefinita in WebHttpBehavior.  
   
- Se il messaggio di richiesta contiene un'intestazione Accept, l'infrastruttura di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cerca un tipo supportato.  Se l'intestazione `Accept` specifica le priorità per i propri tipi di supporto, queste vengono rispettate.  Se non viene individuato alcun formato adatto nell'intestazione `Accept`, viene usato il valore content\-type del messaggio di richiesta.  Se non viene specificato alcun valore content\-type adatto, viene usata l'impostazione del formato predefinita per l'operazione.  Il formato predefinito viene impostato con il parametro `ResponseFormat` degli attributi <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>.  Se non viene specificato alcun formato predefinito nell'operazione, viene usato il valore della proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>.  La formattazione automatica si basa sulla proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  Se tale proprietà è impostata su `true`, l'infrastruttura di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] determina il formato migliore da usare.  La selezione automatica del formato è disabilitata per impostazione predefinita per la compatibilità con le versioni precedenti.  La selezione automatica del formato automatica può essere abilitata a livello di codice o tramite la configurazione.  Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato nel codice.  
+ Se il messaggio di richiesta contiene un'intestazione Accept, l'infrastruttura di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cerca un tipo supportato. Se l'intestazione `Accept` specifica le priorità per i propri tipi di supporto, queste vengono rispettate. Se non viene individuato alcun formato adatto nell'intestazione `Accept`, viene usato il valore content-type del messaggio di richiesta. Se non viene specificato alcun valore content-type adatto, viene usata l'impostazione del formato predefinita per l'operazione. Il formato predefinito viene impostato con il parametro `ResponseFormat` degli attributi <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>. Se non viene specificato alcun formato predefinito nell'operazione, viene usato il valore della proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. La formattazione automatica si basa sulla proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Se tale proprietà è impostata su `true`, l'infrastruttura di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] determina il formato migliore da usare. La selezione automatica del formato è disabilitata per impostazione predefinita per la compatibilità con le versioni precedenti. La selezione automatica del formato automatica può essere abilitata a livello di codice o tramite la configurazione. Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato nel codice.  
   
-```  
+```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     
 Uri baseAddress = new Uri("http://localhost:8000");  
   
@@ -60,14 +59,13 @@ try
 }  
   catch(CommunicationException ex)  
   {  
-     Console.WriteLine(“An exception occurred: “ + ex.Message());  
+     Console.WriteLine("An exception occurred: " + ex.Message());  
   }  
-  
 ```  
   
- La formattazione automatica può inoltre essere abilitata tramite la configurazione.  È possibile impostare la proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> direttamente nell'elemento <xref:System.ServiceModel.Description.WebHttpBehavior> o mediante l'elemento <xref:System.ServiceModel.Description.WebHttpEndpoint>.  Nell'esempio seguente viene indicato come abilitare la selezione automatica del formato nell'elemento <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+ La formattazione automatica può inoltre essere abilitata tramite la configurazione. È possibile impostare la proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> direttamente nell'elemento <xref:System.ServiceModel.Description.WebHttpBehavior> o mediante l'elemento <xref:System.ServiceModel.Description.WebHttpEndpoint>. Nell'esempio seguente viene indicato come abilitare la selezione automatica del formato nell'elemento <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
-```  
+```xml  
 <system.serviceModel>  
   <behaviors>  
     <endpointBehaviors>  
@@ -87,7 +85,7 @@ try
   
  Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato mediante <xref:System.ServiceModel.Description.WebHttpEndpoint>.  
   
-```  
+```xml  
 <system.serviceModel>  
     <standardEndpoints>  
       <webHttpEndpoint>  
@@ -98,12 +96,12 @@ try
   </system.serviceModel>  
 ```  
   
-## Formattazione esplicita  
- Come indicato nel nome, nella formattazione esplicita lo sviluppatore determina il formato migliore da usare all'interno del codice operativo.  Se il formato migliore è XML o JSON, lo sviluppatore imposta <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> su <xref:System.ServiceModel.Web.WebMessageFormat> o <xref:System.ServiceModel.Web.WebMessageFormat>.  Se la proprietà <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> non è impostata in modo esplicito, viene usato il formato predefinito dell'operazione.  
+## <a name="explicit-formatting"></a>Formattazione esplicita  
+ Come indicato nel nome, nella formattazione esplicita lo sviluppatore determina il formato migliore da usare all'interno del codice operativo. Se il formato migliore è XML o JSON, lo sviluppatore imposta <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> su <xref:System.ServiceModel.Web.WebMessageFormat.Xml> o <xref:System.ServiceModel.Web.WebMessageFormat.Json>. Se la proprietà <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> non è impostata in modo esplicito, viene usato il formato predefinito dell'operazione.  
   
- Nell'esempio seguente viene verificato il parametro della stringa di query di formato per un formato da usare.  Se è stato specificato, viene impostato il formato dell'operazione mediante <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>.  
+ Nell'esempio seguente viene verificato il parametro della stringa di query di formato per un formato da usare. Se è stato specificato, viene impostato il formato dell'operazione mediante <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>.  
   
-```  
+```csharp
 public class Service : IService  
 {  
     [WebGet]  
@@ -131,7 +129,7 @@ public class Service : IService
     }  
 ```  
   
- Se è necessario supportare formati diversi da XML o JSON, definire l'operazione per ottenere un tipo restituito di <xref:System.ServiceModel.Channels.Message>.  All'interno del codice operativo, determinare il formato appropriato da usare e creare quindi un oggetto <xref:System.ServiceModel.Channels.Message> usando uno dei metodi seguenti:  
+ Se è necessario supportare formati diversi da XML o JSON, definire l'operazione per ottenere un tipo restituito di <xref:System.ServiceModel.Channels.Message>. All'interno del codice operativo, determinare il formato appropriato da usare e creare quindi un oggetto <xref:System.ServiceModel.Channels.Message> usando uno dei metodi seguenti:  
   
 -   `WebOperationContext.CreateAtom10Response`  
   
@@ -143,10 +141,9 @@ public class Service : IService
   
 -   `WebOperationContext.CreateXmlResponse`  
   
- Ognuno di questi metodi usa il contenuto e crea un messaggio con il formato appropriato.  Il metodo `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` può essere usato per ottenere un elenco di formati preferiti dal client in ordine di preferenza decrescente.  Nell'esempio seguente viene indicato come usare `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` per determinare il formato da usare e viene quindi impiegato il metodo di risposta di creazione appropriato per creare il messaggio di risposta.  
+ Ognuno di questi metodi usa il contenuto e crea un messaggio con il formato appropriato. Il metodo `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` può essere usato per ottenere un elenco di formati preferiti dal client in ordine di preferenza decrescente. Nell'esempio seguente viene indicato come usare `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` per determinare il formato da usare e viene quindi impiegato il metodo di risposta di creazione appropriato per creare il messaggio di risposta.  
   
-```  
-  
+```csharp
 public class Service : IService  
 {  
     public Message EchoListWithGet(string list)  
@@ -170,13 +167,12 @@ public class Service : IService
     return CreateXmlResponse(returnList);  
     }  
 }  
-  
 ```  
   
-## Vedere anche  
- <xref:System.UriTemplate>   
- <xref:System.UriTemplateMatch>   
- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [UriTemplate e UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)   
- [Panoramica sul modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)   
- [Modello a oggetti per la programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.UriTemplate>  
+ <xref:System.UriTemplateMatch>  
+ [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [UriTemplate e UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ [Cenni preliminari sul modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ [Modello a oggetti di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

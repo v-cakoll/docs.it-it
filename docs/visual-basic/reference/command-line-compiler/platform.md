@@ -1,41 +1,24 @@
 ---
-title: /Platform (Visual Basic) | Documenti di Microsoft
-ms.date: 2015-07-20
+title: /platform (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - platform compiler option [Visual Basic]
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6216ee056bc9dd8dd7dfd95b9d5a031880209370
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 4d52ade26bc249625a77720fe05ad9c1ab58b04f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="platform-visual-basic"></a>/platform (Visual Basic)
 Consente di specificare la versione di Common Language Runtime (CLR) in grado di eseguire il file di output.  
@@ -55,7 +38,7 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
 |`Itanium`|Compila l'assembly in modo da essere eseguito da CLR a 64 bit su un computer dotato di processore Itanium.|  
 |`arm`|Compila l'assembly in modo da essere eseguito su un computer con processore ARM (Advanced RISC Machine).|  
 |`anycpu`|Compila l'assembly in modo da essere eseguito su qualsiasi piattaforma. L'applicazione verrà eseguita come applicazione a 32 bit su versioni di Windows a 32 bit e come applicazione a 64 bit su versioni di Windows a 64 bit. Questo flag è il valore predefinito.|  
-|`anycpu32bitpreferred`|Compila l'assembly in modo da essere eseguito su qualsiasi piattaforma. L'applicazione verrà eseguita come applicazione a 32 bit sia nelle versioni di Windows a 32 bit che in quelle a 64 bit. Questo flag è valido solo per i file eseguibili (EXE) e richiede [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net_v45_md.md)].|  
+|`anycpu32bitpreferred`|Compila l'assembly in modo da essere eseguito su qualsiasi piattaforma. L'applicazione verrà eseguita come applicazione a 32 bit sia nelle versioni di Windows a 32 bit che in quelle a 64 bit. Questo flag è valido solo per i file eseguibili (EXE) e richiede [!INCLUDE[net_v45](~/includes/net-v45-md.md)].|  
   
 ## <a name="remarks"></a>Note  
  Per specificare il tipo di processore di destinazione del file di output, usare l'opzione `/platform`.  
@@ -66,13 +49,13 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
   
 -   Operazioni aritmetiche che includono dimensioni costanti.  
   
--   Piattaforma non corretta richiamare o dichiarazioni COM che utilizzano `Integer` per gli handle anziché <xref:System.IntPtr>.</xref:System.IntPtr>  
+-   Dichiarazioni pInvoke o COM non corrette che usano `Integer` anziché <xref:System.IntPtr> per gli handle.  
   
--   Esegue il cast <xref:System.IntPtr>a `Integer`.</xref:System.IntPtr>  
+-   Casting di <xref:System.IntPtr> su `Integer`.  
   
 -   Uso dell'interoperabilità pInvoke o COM con componenti non disponibili in tutte le piattaforme.  
   
- Il **/platform** opzione sarà possibile limitare alcuni problemi se si conosce presenti le premesse sull'architettura verrà eseguito il codice. In particolare:  
+ Il **/platform** opzione sarà possibile limitare alcuni problemi se si conosce presenti le premesse sull'architettura di cui verrà eseguito il codice. In particolare:  
   
 -   Se si specifica l'opzione per una piattaforma a 64 bit e l'applicazione viene eseguita su un computer a 32 bit, il messaggio di errore verrà visualizzato con maggiore anticipo e sarà maggiormente descrittivo del problema specifico rispetto all'errore che si verifica senza usare questa opzione.  
   
@@ -88,17 +71,17 @@ Consente di specificare la versione di Common Language Runtime (CLR) in grado di
   
 -   Gli eseguibili compilati con l'opzione `/platform:anycpu32bitpreferred` potranno essere eseguiti da CLR a 32 bit.  
   
- Per ulteriori informazioni su come sviluppare un'applicazione da eseguire su una versione a 64 bit di Windows, vedere [applicazioni a 64 bit](https://msdn.microsoft.com/library/ms241064).  
+ Per ulteriori informazioni su come sviluppare un'applicazione da eseguire in una versione a 64 bit di Windows, vedere [applicazioni a 64 bit](https://msdn.microsoft.com/library/ms241064).  
   
 ### <a name="to-set-platform-in-the-visual-studio-ide"></a>Per impostare /platform nell'IDE di Visual Studio  
   
 1.  In **Esplora**, scegliere il progetto, aprire il **progetto** menu e quindi fare clic su **proprietà**.  
   
-     Per ulteriori informazioni, vedere [NIB: gestione di proprietà del progetto con Progettazione](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
+     Per ulteriori informazioni, vedere [NIB: gestione di proprietà del progetto con la finestra di progettazione del progetto](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
   
-2.  Nel **compilare** selezionare o deselezionare il **preferisci 32 bit** casella di controllo o nella **CPU di destinazione** elenco, scegliere un valore.  
+2.  Nel **compilare** selezionare o deselezionare il **preferisci 32 bit** casella di controllo, o, nel **CPU di destinazione** elenco, scegliere un valore.  
   
-     Per ulteriori informazioni, vedere [pagina Compila, Progettazione progetti (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     Per ulteriori informazioni, vedere [pagina Compila, Progettazione progetti (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente mostra come usare l'opzione del compilatore `/platform`.  
@@ -108,6 +91,6 @@ vbc /platform:x86 myFile.vb
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [/target (Visual Basic)](target.md)   
- [Compilatore della riga di comando di Visual Basic](index.md)   
+ [/target (Visual Basic)](target.md)  
+ [Compilatore della riga di comando di Visual Basic](index.md)  
  [Esempi di righe di comando di compilazione](sample-compilation-command-lines.md)

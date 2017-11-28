@@ -1,48 +1,46 @@
 ---
-title: "Public (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Public"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Public keyword"
-  - "Public keyword, syntax"
-  - "Public access modifier"
+title: Public (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Public
+helpviewer_keywords:
+- Public keyword [Visual Basic]
+- Public keyword [Visual Basic], syntax
+- Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e6cd70adf6ec31c56f39d0443d320dd1b00b00d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Public (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Specifica che uno o più elementi di programmazione dichiarati non presentano restrizioni di accesso.  
+# <a name="public-visual-basic"></a>Public (Visual Basic)
+Specifica che uno o più elementi di programmazione dichiarati non sono restrizioni di accesso.  
   
-## Note  
- Se si pubblica un componente o un insieme di componenti, ad esempio una libreria di classi, solitamente si richiede che gli elementi di programmazione siano accessibili a tutto il codice che interagisce con l'assembly.  Per conferire tale accesso illimitato a un elemento, è possibile dichiararlo con la parola chiave `Public`.  
+## <a name="remarks"></a>Note  
+ Se si esegue la pubblicazione di un componente o un set di componenti, ad esempio una libreria di classi, si desidera in genere gli elementi di programmazione deve essere accessibile da qualsiasi codice che interagisce con l'assembly. Per conferire tale accesso illimitato a un elemento, è possibile dichiarare con `Public`.  
   
- L'accesso pubblico è il livello normale per un elemento di programmazione a cui non sia necessario limitare l'accesso.  Se non diversamente dichiarato, il livello di accesso di un elemento dichiarato all'interno di un'interfaccia, un modulo, una classe o una struttura è per impostazione predefinita `Public`.  
+ Accesso pubblico è il livello normale per un elemento di programmazione quando non è necessario limitare l'accesso. Si noti che il livello di accesso di un elemento dichiarato all'interno di un'interfaccia, modulo, classe o struttura per impostazione predefinita `Public` se non si dichiara in caso contrario.  
   
-## Regole  
+## <a name="rules"></a>Regole  
   
--   **Contesto della dichiarazione.** È possibile utilizzare la parola chiave `Public` solo a livello di modulo, di interfaccia o di spazio dei nomi.  In altri termini, il contesto della dichiarazione per un elemento `Public` deve essere un file di origine, uno spazio dei nomi, un'interfaccia, un modulo, una classe o una struttura, ma non può essere una routine.  
+-   **Contesto della dichiarazione.** È possibile utilizzare `Public` solo a livello di modulo, interfaccia o spazio dei nomi. Ciò significa che il contesto della dichiarazione per un `Public` elemento deve essere un file di origine, lo spazio dei nomi, interfaccia, modulo, classe o struttura e non può essere una stored procedure.  
   
-## Comportamento  
+## <a name="behavior"></a>Comportamento  
   
--   **Livello di accesso.** Tutto il codice in grado di accedere a un modulo, una classe o una struttura può accedere ai relativi elementi `Public`.  
+-   **Livello di accesso.** Tutto il codice che è possibile accedere a un modulo, classe o struttura possa accedere ai relativi `Public` elementi.  
   
--   **Accesso predefinito.** Le variabili locali all'interno di una routine per impostazione predefinita dispongono di accesso pubblico e non è possibile utilizzare modificatori di accesso per tali variabili.  
+-   **Accesso predefinito.** Le variabili locali all'interno di una routine per impostazione predefinita per l'accesso pubblico ed è possono utilizzare i modificatori di accesso su di essi.  
   
--   **Modificatori di accesso.** Le parole chiave che specificano il livello di accesso sono dette *modificatori di accesso*.  Per un confronto tra i modificatori di accesso, vedere [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+-   **Modificatori di accesso.** Le parole chiave che specificano il livello di accesso vengono chiamate *modificatori di accesso*. Per un confronto tra i modificatori di accesso, vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- Il modificatore `Public` può essere utilizzato nei seguenti contesti:  
+ Il modificatore `Public` può essere usato nei contesti seguenti:  
   
  [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -72,11 +70,11 @@ Specifica che uno o più elementi di programmazione dichiarati non presentano re
   
  [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Vedere anche  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)   
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Procedures](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Vedere anche  
+ [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Livelli di accesso in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [Routine](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [Strutture](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Oggetti e classi](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

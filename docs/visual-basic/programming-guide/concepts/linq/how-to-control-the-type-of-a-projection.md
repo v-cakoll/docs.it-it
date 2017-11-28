@@ -1,34 +1,30 @@
 ---
-title: 'Procedura: controllare il tipo di proiezione (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: controllare il tipo di una proiezione (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a0171276-0b46-4817-aee5-a8d5191b12fe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1dd461b51c661121497f9c641d64124f8aee44cb
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 32c2c747fd2f1137fbf2ead28886669c041d065c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Procedura: controllare il tipo di proiezione (Visual Basic)
-Per proiezione si intende il processo in cui un unico set di dati viene accettato e filtrato, ne viene cambiata la forma e persino il tipo. Le proiezioni vengono eseguite nella maggior parte delle espressioni di query. La maggior parte delle espressioni di query illustrate in questa sezione restituiscono <xref:System.Collections.Generic.IEnumerable%601>di <xref:System.Xml.Linq.XElement>, ma è possibile controllare il tipo di proiezione per creare raccolte di altri tipi.</xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> In questo argomento viene illustrato come eseguire questa operazione.  
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Procedura: controllare il tipo di una proiezione (Visual Basic)
+Per proiezione si intende il processo in cui un unico set di dati viene accettato e filtrato, ne viene cambiata la forma e persino il tipo. Le proiezioni vengono eseguite nella maggior parte delle espressioni di query. Quasi tutte le espressioni di query illustrate in questa sezione restituiscono il tipo <xref:System.Collections.Generic.IEnumerable%601> di <xref:System.Xml.Linq.XElement>, tuttavia è possibile controllare il tipo della proiezione per creare raccolte di altri tipi. In questo argomento viene illustrato come eseguire questa operazione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene definito un nuovo tipo `Customer`. L'espressione di query crea quindi un'istanza per nuovi oggetti `Customer` nella clausola `Select`. Il tipo dell'espressione di query da <xref:System.Collections.Generic.IEnumerable%601>di `Customer`.</xref:System.Collections.Generic.IEnumerable%601>  
+ Nell'esempio seguente viene definito un nuovo tipo `Customer`. L'espressione di query crea quindi un'istanza per nuovi oggetti `Customer` nella clausola `Select`. Il tipo dell'espressione di query diventa quindi <xref:System.Collections.Generic.IEnumerable%601> di `Customer`.  
   
- In questo esempio viene utilizzato il documento XML seguente: [File XML di esempio: Customers e Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ Questo esempio usa il documento XML seguente: [File XML di esempio: clienti e ordini (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Public Class Customer  
@@ -88,7 +84,6 @@ Sub Main()
         Console.WriteLine(cust)  
     Next  
 End Sub  
-  
 ```  
   
  L'output del codice è il seguente:  
@@ -101,5 +96,5 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A>   
+ <xref:System.Linq.Enumerable.Select%2A>  
  [Proiezioni e trasformazioni (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

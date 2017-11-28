@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: ddd27a1609ea06bcd333d0a1927d1cd22495744b
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 19116aba3049dce6612ca1a7170030f7ced6705e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Novità di Windows Identity Foundation 4.5
 La prima versione di Windows Identity Foundation (WIF) è stata rilasciata come download autonomo ed è nota come WIF 3.5 perché è stata introdotta nello stesso periodo di .NET 3.5 SP1. Con .NET 4.5 WIF è diventato parte di .NET Framework. La disponibilità delle classi WIF direttamente nel framework consente una maggiore integrazione dell'identità basata sulle attestazioni in .NET, semplificando l'uso delle attestazioni. Le applicazioni scritte per WIF 3.5 devono essere modificate per sfruttare il nuovo modello. Per informazioni, vedere [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -27,10 +25,10 @@ La prima versione di Windows Identity Foundation (WIF) è stata rilasciata come 
  Di seguito sono descritti alcuni elementi di rilievo delle principali modifiche.  
   
 ## <a name="wif-is-now-part-of-the-net-framework"></a>WIF fa ora parte di .NET Framework  
- Le classi WIF sono ora estese tra vari assembly, i principali dei quali sono `mscorlib`, `System.IdentityModel`, `System.IdentityModel.Services` e `System.ServiceModel`. Analogamente, le classi WIF sono distribuite in diversi spazi dei nomi: <xref:System.Security.Claims?displayProperty=fullName>, diversi spazi dei nomi [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) e <xref:System.ServiceModel.Security?displayProperty=fullName>. Lo spazio dei nomi <xref:System.Security.Claims?displayProperty=fullName> contiene le nuove classi <xref:System.Security.Claims.ClaimsPrincipal> e <xref:System.Security.Claims.ClaimsIdentity> (vedere sotto). Tutte le entità in .NET ora derivano da <xref:System.Security.Claims.ClaimsPrincipal>. Per informazioni dettagliate sugli spazi dei nomi WIF e sui tipi di classi in essi contenute, vedere [Informazioni di riferimento sulle API WIF](../../../docs/framework/security/wif-api-reference.md). Per informazioni sulla corrispondenza degli spazi dei nomi tra WIF 3.5 e WIF 4.5, vedere [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md).  
+ Le classi di WIF sono ora estese tra vari assembly, i principali dei quali sono `mscorlib`, `System.IdentityModel`, `System.IdentityModel.Services` e `System.ServiceModel`. Analogamente, le classi WIF sono distribuite in diversi spazi dei nomi: <xref:System.Security.Claims?displayProperty=nameWithType>, diversi spazi dei nomi [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) e <xref:System.ServiceModel.Security?displayProperty=nameWithType>. Lo spazio dei nomi <xref:System.Security.Claims?displayProperty=nameWithType> contiene le nuove classi <xref:System.Security.Claims.ClaimsPrincipal> e <xref:System.Security.Claims.ClaimsIdentity> (vedere sotto). Tutte le entità in .NET ora derivano da <xref:System.Security.Claims.ClaimsPrincipal>. Per informazioni dettagliate sugli spazi dei nomi WIF e sui tipi di classi in essi contenute, vedere [Informazioni di riferimento sulle API WIF](../../../docs/framework/security/wif-api-reference.md). Per informazioni sulla corrispondenza degli spazi dei nomi tra WIF 3.5 e WIF 4.5, vedere [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md).  
   
 ## <a name="new-claims-model-and-principal-object"></a>Nuovi modello attestazioni e oggetto entità  
- Le attestazioni sono il nucleo fondamentale di .NET Framework 4.5. Le classi attestazione di base (<xref:System.Security.Claims.Claim>, <xref:System.Security.Claims.ClaimsIdentity>, <xref:System.Security.Claims.ClaimsPrincipal>, <xref:System.Security.Claims.ClaimTypes> e <xref:System.Security.Claims.ClaimValueTypes>) risiedono tutte direttamente in `mscorlib` nello spazio dei nomi <xref:System.Security.Claims?displayProperty=fullName>. Non è più necessario utilizzare le interfacce per inserire le attestazioni nel sistema di identità .NET: <xref:System.Security.Principal.WindowsPrincipal>, <xref:System.Security.Principal.GenericPrincipal> e <xref:System.Web.Security.RolePrincipal> ora ereditano da <xref:System.Security.Claims.ClaimsPrincipal>; <xref:System.Security.Principal.WindowsIdentity>, <xref:System.Security.Principal.GenericIdentity> e <xref:System.Web.Security.FormsIdentity> ora ereditano da <xref:System.Security.Claims.ClaimsIdentity>. In breve, ogni classe di entità consente ora di soddisfare le attestazioni. Le interfacce e le classi di integrazione di WIF 3.5(`WindowsClaimsIdentity`, `WindowsClaimsPrincipal`, `IClaimsPrincipal`, `IClaimsIdentity`) sono state quindi rimosse. Inoltre, la classe <xref:System.Security.Claims.ClaimsIdentity> ora espone i metodi che semplificano l'esecuzione di query sulla raccolta delle attestazioni di identità.  
+ Le attestazioni sono il nucleo fondamentale di .NET Framework 4.5. Le classi attestazione di base (<xref:System.Security.Claims.Claim>, <xref:System.Security.Claims.ClaimsIdentity>, <xref:System.Security.Claims.ClaimsPrincipal>, <xref:System.Security.Claims.ClaimTypes> e <xref:System.Security.Claims.ClaimValueTypes>) risiedono tutte direttamente in `mscorlib` nello spazio dei nomi <xref:System.Security.Claims?displayProperty=nameWithType>. Non è più necessario utilizzare le interfacce per inserire le attestazioni nel sistema di identità .NET: <xref:System.Security.Principal.WindowsPrincipal>, <xref:System.Security.Principal.GenericPrincipal> e <xref:System.Web.Security.RolePrincipal> ora ereditano da <xref:System.Security.Claims.ClaimsPrincipal>; <xref:System.Security.Principal.WindowsIdentity>, <xref:System.Security.Principal.GenericIdentity> e <xref:System.Web.Security.FormsIdentity> ora ereditano da <xref:System.Security.Claims.ClaimsIdentity>. In breve, ogni classe di entità consente ora di soddisfare le attestazioni. Le interfacce e le classi di integrazione di WIF 3.5(`WindowsClaimsIdentity`, `WindowsClaimsPrincipal`, `IClaimsPrincipal`, `IClaimsIdentity`) sono state quindi rimosse. Inoltre, la classe <xref:System.Security.Claims.ClaimsIdentity> ora espone i metodi che semplificano l'esecuzione di query sulla raccolta delle attestazioni di identità.  
   
 ## <a name="changes-to-the-wif-45-visual-studio-experience"></a>Modifiche all'esperienza di WIF 4.5 con Visual Studio  
   
@@ -42,7 +40,7 @@ La prima versione di Windows Identity Foundation (WIF) è stata rilasciata come 
   
 ## <a name="changes-to-the-wif-45-api"></a>Modifiche all'API di WIF 4.5  
   
--   In generale, le classi correlate alle attestazioni si trovano nello spazio dei nomi <xref:System.Security.Claims?displayProperty=fullName>, le classi correlate a WCF, ovvero i contratti di servizio, i canali, le factory canale e gli host servizio usati per scenari WS-Trust, si trovano in <xref:System.ServiceModel.Security?displayProperty=fullName>, tutte le altre classi WIF sono distribuite tra diversi spazi dei nomi [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004), inclusi, ad esempio, le classi che rappresentano artefatti WS-* e SAML, i gestori di token e le classi correlate, oltre che le classi usate negli scenari WS-Federation. Per informazioni, vedere [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) e [WIF API Reference](../../../docs/framework/security/wif-api-reference.md) (Informazioni di riferimento sulle API WIF).  
+-   In generale, le classi correlate alle attestazioni si trovano nello spazio dei nomi <xref:System.Security.Claims?displayProperty=nameWithType>, le classi correlate a WCF, ovvero i contratti di servizio, i canali, le factory canale e gli host servizio usati per scenari WS-Trust, si trovano in <xref:System.ServiceModel.Security?displayProperty=nameWithType>, tutte le altre classi WIF sono distribuite tra diversi spazi dei nomi [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004), inclusi, ad esempio, le classi che rappresentano artefatti WS-* e SAML, i gestori di token e le classi correlate, oltre che le classi usate negli scenari WS-Federation. Per informazioni, vedere [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) e [WIF API Reference](../../../docs/framework/security/wif-api-reference.md) (Informazioni di riferimento sulle API WIF).  
   
 -   La chiave del computer è stata abilitata per l'utilizzo nei cookie di sessione per gli scenari di web farm. Per altre informazioni, vedere [WIF e Web farm](../../../docs/framework/security/wif-and-web-farms.md).  
   
@@ -54,7 +52,7 @@ La prima versione di Windows Identity Foundation (WIF) è stata rilasciata come 
   
 ## <a name="wcf-changes-as-a-result-of-wif-integration"></a>Modifiche a WCF come conseguenza dell'integrazione di WIF:  
   
--   Il modello di identità basato sulle attestazioni di WCF è stato sostituito da WIF. Ciò significa che le classi negli spazi dei nomi <xref:System.IdentityModel.Claims?displayProperty=fullName>, <xref:System.IdentityModel.Policy?displayProperty=fullName> e <xref:System.IdentityModel.Selectors?displayProperty=fullName> devono essere eliminate a favore dell'utilizzo delle classi WIF.  
+-   Il modello di identità basato sulle attestazioni di WCF è stato sostituito da WIF. Ciò significa che le classi negli spazi dei nomi <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType> e <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> devono essere eliminate a favore dell'utilizzo delle classi di WIF.  
   
 -   WIF viene ora abilitato in un servizio WCF specificando l'attributo `useIdentityConfiguration` nell'elemento `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>` come nel codice XML seguente:  
   
@@ -68,8 +66,7 @@ La prima versione di Windows Identity Foundation (WIF) è stata rilasciata come 
      Quando si usa **Identity and Access Tool per Visual Studio 2012** (vedere **Modifiche all'esperienza con Visual Studio** in precedenza), lo strumento aggiunge un elemento `<serviceCredentials>` con l'attributo `useIdentityConfiguration` impostato sul file di configurazione. Aggiunge anche un elemento [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) corrispondente che contiene le impostazioni di configurazione di WIF, un binding e altre impostazioni necessarie per l'outsourcing dell'autenticazione al servizio token di sicurezza scelto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)   
- [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)   
- [Informazioni di riferimento sulle API WIF](../../../docs/framework/security/wif-api-reference.md)   
+ [Linee guida per la migrazione di un'applicazione compilata con le versioni di WIF dalla 3.5 alla 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
+ [Mapping dello spazio dei nomi tra WIF 3.5 e WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+ [Riferimento per le API di WIF](../../../docs/framework/security/wif-api-reference.md)  
  [Guida di riferimento per la configurazione di WIF](../../../docs/framework/security/wif-configuration-reference.md)
-

@@ -1,48 +1,51 @@
 ---
-title: "Procedura: visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "date, visualizzazione nel controllo DateTimePicker"
-  - "DateTimePicker (controllo) [Windows Form], stili di visualizzazione"
-  - "esempi [Windows Form], DateTimePicker (controllo)"
+title: 'Procedura: visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- DateTimePicker control [Windows Forms], display styles
+- examples [Windows Forms], DateTimePicker control
+- dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b92fec7565aad2a881f714f9232eae10bf7633c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form
-Il controllo <xref:System.Windows.Forms.DateTimePicker> di Windows Form consente di formattare in modo flessibile le date e le ore visualizzate nel controllo.  La proprietà <xref:System.Windows.Forms.DateTimePicker.Format%2A> consente di selezionare uno dei formati predefiniti elencati nell'enumerazione <xref:System.Windows.Forms.DateTimePickerFormat>.  Se nessuno dei formati soddisfa le proprie esigenze, è possibile creare un formato personalizzato utilizzando i caratteri di formato elencati in <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
+# <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Procedura: visualizzare una data in un formato personalizzato con il controllo DateTimePicker di Windows Form
+Windows Form <xref:System.Windows.Forms.DateTimePicker> controllo offre flessibilità nella formattazione la visualizzazione di date e ore nel controllo. Il <xref:System.Windows.Forms.DateTimePicker.Format%2A> proprietà consente di selezionare uno dei formati predefiniti elencati nella <xref:System.Windows.Forms.DateTimePickerFormat>. Se nessuna di esse soddisfa le proprie esigenze, è possibile creare un formato personalizzato utilizzando i caratteri di formato elencati <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
   
-### Per visualizzare un formato personalizzato  
+### <a name="to-display-a-custom-format"></a>Per visualizzare un formato personalizzato  
   
 1.  Impostare la proprietà <xref:System.Windows.Forms.DateTimePicker.Format%2A> su `DateTimePickerFormat.Custom`.  
   
-2.  Impostare la proprietà <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> su una stringa di formato.  
+2.  Impostare il <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> proprietà in una stringa di formato.  
   
     ```vb  
     DateTimePicker1.Format = DateTimePickerFormat.Custom  
     ' Display the date as "Mon 27 Feb 2012".  
     DateTimePicker1.CustomFormat = "ddd dd MMM yyyy"  
-  
     ```  
   
     ```csharp  
     dateTimePicker1.Format = DateTimePickerFormat.Custom;  
     // Display the date as "Mon 27 Feb 2012".  
     dateTimePicker1.CustomFormat = "ddd dd MMM yyyy";  
-  
     ```  
   
     ```cpp  
@@ -51,18 +54,16 @@ Il controllo <xref:System.Windows.Forms.DateTimePicker> di Windows Form consente
     dateTimePicker1->CustomFormat = "ddd dd MMM yyyy";  
     ```  
   
-### Per aggiungere testo al valore formattato  
+### <a name="to-add-text-to-the-formatted-value"></a>Per aggiungere testo del valore formattato  
   
-1.  Utilizzare le virgolette singole per racchiudere i caratteri che non rappresentano elementi di formato, ad esempio "M", o di delimitazione, ad esempio ":".  La stringa di formato riportata di seguito, ad esempio, visualizza la data corrente nel formato "Today is: 05:30:31 Friday March 02, 2012" nelle impostazioni cultura lingua inglesi \(Stati Uniti\).  
+1.  Utilizzare virgolette per racchiudere i caratteri che non sono un carattere di formato come "M" o un delimitatore come ":". Ad esempio, la stringa di formato riportato di seguito visualizza la data corrente con il formato "oggi: 05:30:31 venerdì 02 marzo 2012" in inglese (Stati Uniti) delle impostazioni cultura.  
   
     ```vb  
     DateTimePicker1.CustomFormat = "'Today is:' hh:mm:ss dddd MMMM dd, yyyy"  
-  
     ```  
   
     ```csharp  
     dateTimePicker1.CustomFormat = "'Today is:' hh:mm:ss dddd MMMM dd, yyyy";  
-  
     ```  
   
     ```cpp  
@@ -70,8 +71,8 @@ Il controllo <xref:System.Windows.Forms.DateTimePicker> di Windows Form consente
        "'Today is:' hh:mm:ss dddd MMMM dd, yyyy";  
     ```  
   
-     In base alle impostazioni cultura, qualsiasi carattere non racchiuso tra virgolette singole può essere modificato.  La stringa di formato riportata sopra, ad esempio, visualizza la data corrente nel formato "Today is: 05:30:31 Friday March 02, 2012" nelle impostazioni cultura inglesi \(Stati Uniti\).  Notare che il primo segno di due punti è racchiuso tra virgolette singole, poiché non viene utilizzato come carattere di delimitazione come avviene in "hh:mm:ss".  In altre impostazioni cultura, il formato potrebbe essere visualizzato come "Today is: 05.30.31 Friday March 02, 2012".  
+     A seconda delle impostazioni cultura, qualsiasi carattere non racchiusi tra virgolette può essere modificato. Ad esempio, la stringa di formato precedente consente di visualizzare la data corrente con il formato "oggi: 05:30:31 venerdì 02 marzo 2012" in inglese (Stati Uniti) delle impostazioni cultura. Si noti che i primi due punti sono racchiuso tra virgolette singole, poiché non è progettato per essere un carattere di delimitazione, come in "hh". In un'altra lingua, il formato potrebbe essere visualizzato come "oggi: 05.30.31 venerdì 02 marzo 2012".  
   
-## Vedere anche  
- [Controllo DateTimePicker](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)   
- [Procedura: impostare e restituire date con il controllo DateTimePicker Windows Form](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+## <a name="see-also"></a>Vedere anche  
+ [Controllo DateTimePicker](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
+ [Procedura: Impostare e restituire date con il controllo DateTimePicker di Windows Form](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

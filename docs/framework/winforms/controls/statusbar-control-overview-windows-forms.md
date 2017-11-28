@@ -1,40 +1,40 @@
 ---
-title: "Cenni preliminari sul controllo StatusBar (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "StatusBar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "barre di stato"
-  - "StatusBar (controllo) [Windows Form], informazioni sul controllo StatusBar"
+title: Cenni preliminari sul controllo StatusBar (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: StatusBar
+helpviewer_keywords:
+- StatusBar control [Windows Forms], about StatusBar control
+- status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9c26463fae5beca23026a71dd83b19bf3eb52875
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul controllo StatusBar (Windows Form)
+# <a name="statusbar-control-overview-windows-forms"></a>Cenni preliminari sul controllo StatusBar (Windows Form)
 > [!IMPORTANT]
->  Benché i controlli <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> sostituiscano i controlli <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> delle versioni precedenti aggiungendo funzionalità, i controlli <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> vengono mantenuti per compatibilità con le versioni precedenti e per utilizzo futuro se lo si desidera.  
+>  Il <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> controlli sostituire e aggiungere funzionalità a di <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> controlli; tuttavia, il <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> vengono mantenuti per compatibilità con le versioni precedenti e per utilizzo futuro, se si Scegliere.  
   
- Il controllo [Controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) di Windows Form viene utilizzato sui form come un'area, in genere visualizzata nella parte inferiore di una finestra, nella quale un'applicazione può visualizzare i vari tipi di informazioni sullo stato.  I controlli <xref:System.Windows.Forms.StatusBar> possono includere pannelli in cui sono visualizzati testo o icone per indicare lo stato oppure una serie di icone animate per indicare l'esecuzione di un processo, ad esempio [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] per indicare il salvataggio di un documento.  
+ Windows Form [controllo StatusBar](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) viene usato nei form come un'area solitamente rappresentata nella parte inferiore di una finestra, in cui un'applicazione può visualizzare vari tipi di informazioni sullo stato. <xref:System.Windows.Forms.StatusBar>controlli che possono disporre pannelli della barra di stato su di essi che visualizzano testo o icone per indicare lo stato o una serie di icone per indicare che un processo è in corso; un'animazione ad esempio, [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] che indica che il documento viene salvato.  
   
-## Utilizzo del controllo StatusBar  
- In Internet Explorer la barra di stato viene utilizzata per indicare l'URL di una pagina quando il mouse si sposta sul collegamento ipertestuale. In [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] sono visualizzate informazioni sulla posizione della pagina e della sezione, nonché le modalità di modifica, come la sovrascrittura e l'utilizzo dei segni di revisione. In [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] la barra di stato viene utilizzata per fornire informazioni sensibili al contesto, quali informazioni su come utilizzare le finestre ancorabili quando sono ancorate o mobili.  
+## <a name="using-the-statusbar-control"></a>Utilizzo del controllo StatusBar  
+ Internet Explorer utilizza una barra di stato per indicare l'URL di una pagina quando il mouse si sposta sul collegamento ipertestuale. [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] fornisce informazioni sul percorso della pagina, la sezione posizione e le modalità, ad esempio la sovrascrittura e; il rilevamento delle revisioni di modifica e [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] utilizza la barra di stato per fornire informazioni sensibili al contesto, ad esempio relativo a come modificare ancorabile Windows come ancorato o mobile.  
   
- È possibile visualizzare un singolo messaggio sulla barra di stato impostando la proprietà <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> su `false` \(impostazione predefinita\) e la proprietà <xref:System.Windows.Forms.StatusBar.Text%2A> della barra di stato sul testo che si desidera visualizzare nella barra di stato.  È possibile dividere la barra di stato in pannelli per visualizzare più tipi di informazioni, impostando la proprietà <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> su `true` e utilizzando il metodo <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> della classe <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
+ È possibile visualizzare un singolo messaggio sulla barra di stato impostando il <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> proprietà `false` (predefinito) e impostando il <xref:System.Windows.Forms.StatusBar.Text%2A> proprietà della barra di stato per il testo da visualizzare nella barra di stato. È possibile dividere la barra di stato in pannelli per visualizzare più di un tipo di informazioni mediante l'impostazione di <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> proprietà `true` e utilizzando il <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> metodo di <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
   
-## Vedere anche  
- <xref:System.Windows.Forms.StatusBar>   
- <xref:System.Windows.Forms.ToolStripStatusLabel>   
- [Procedura: individuare il pannello selezionato nel controllo StatusBar Windows Form](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+## <a name="see-also"></a>Vedere anche  
+ <xref:System.Windows.Forms.StatusBar>  
+ <xref:System.Windows.Forms.ToolStripStatusLabel>  
+ [Procedura: Individuare il pannello selezionato nel controllo StatusBar di Windows Form](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)

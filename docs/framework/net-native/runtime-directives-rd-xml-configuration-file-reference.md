@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 68f1e217cdc6433270ecb8afe4149d2e37e4b014
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2ecfc61c5b586dd3385890d73ded729a38fb41c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Riferimento a file di configurazione di direttive di runtime (rd.xml)
 Un file di direttive di runtime (rd.xml) è un file di configurazione XML che specifica se gli elementi del programma designato sono disponibili per la reflection. Ecco un esempio di un file di direttive di runtime:  
@@ -53,41 +51,41 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
  [Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
+ . . .  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]   
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (sottoclassi del tipo contenitore) [O:1]   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
- [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (il tipo contenitore è un attributo) [O:1]   
+ . . .  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (sottoclassi del tipo contenitore) [O:1]  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ . . .  
+ [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
+ . . .  
+ [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (il tipo contenitore è un attributo) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]   
+ [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]  
  [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]   
+ [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
  [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
+ . . .  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]   
+ [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]  
  [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]  
@@ -97,36 +95,36 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
  [Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
+ . . .  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]   
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (sottoclassi del tipo contenitore) [O:1]   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
- [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (il tipo contenitore è un attributo) [O:1]   
+ . . .  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (sottoclassi del tipo contenitore) [O:1]  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ . . .  
+ [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
+ . . .  
+ [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (il tipo contenitore è un attributo) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]   
+ [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
  [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
+ . . .  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
+ . . .  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
  [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
@@ -167,11 +165,11 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
   
 -   `Serialize`. Controlla l'accesso in fase di esecuzione ai costruttori, ai campi e alle proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie di terze parti, ad esempio il serializzatore JSON di Newtonsoft.  
   
--   `DataContractSerializer`. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.  
+-   `DataContractSerializer`. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
   
--   `DataContractJsonSerializer`. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.  
+-   `DataContractJsonSerializer`. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
   
--   `XmlSerializer`. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.  
+-   `XmlSerializer`. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.  
   
 -   `MarshalObject`. Criteri di controlli per il marshalling dei tipi di riferimento per WinRT e COM.  
   
@@ -396,7 +394,7 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
   
 -   Se il metodo è generico, i tipi su cui viene creata un'istanza del metodo sono contrassegnati con il criterio `Browse`.  
   
--   Il metodo può essere richiamato da `MethodInfo.Invoke` e la creazione del delegato è resa possibile da <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=fullName>.  
+-   Il metodo può essere richiamato da `MethodInfo.Invoke` e la creazione del delegato è resa possibile da <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.  
   
  L'applicazione del criterio `Dynamic` a un campo implica le seguenti modifiche:  
   
@@ -417,7 +415,7 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
   
  L'applicazione del criterio `Activation` a un metodo implica le seguenti modifiche:  
   
--   Il costruttore può essere richiamato dai metodi <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=fullName> e <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>. Per i metodi, il criterio `Activation` influisce solo sui costruttori.  
+-   Il costruttore può essere richiamato dai metodi <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> e <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>. Per i metodi, il criterio `Activation` influisce solo sui costruttori.  
   
  L'applicazione del criterio `Activation` a un campo non ha alcun effetto.  
   
@@ -470,6 +468,5 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
  Per altre informazioni, vedere la sezione relativa alle differenze nei serializzatori in [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-

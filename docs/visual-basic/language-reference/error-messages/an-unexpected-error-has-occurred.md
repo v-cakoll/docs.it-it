@@ -1,38 +1,20 @@
 ---
-title: "Si è verificato un errore imprevisto perché non è possibile acquisire una risorsa del sistema operativo necessaria per l&quot;avvio singola istanza | Documenti di Microsoft"
-ms.date: 2015-07-20
+title: Errore imprevisto. Impossibile acquisire una risorsa del sistema operativo necessaria per l'avvio di istanze singole
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrAppModel_CantGetMemoryMappedFile
-dev_langs:
-- VB
+f1_keywords: vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 44432a2c393abb01141d09cf5f28c6fd29c5bc43
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8969303d66e946d5579c6cca592b5701c4ebd632
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Errore imprevisto. Impossibile acquisire una risorsa del sistema operativo necessaria per l'avvio di istanze singole
 L'applicazione non è riuscita ad acquisire una risorsa del sistema operativo necessaria. Alcune possibili cause di questo problema sono:  
@@ -54,6 +36,6 @@ L'applicazione non è riuscita ad acquisire una risorsa del sistema operativo ne
 4.  Prendere nota delle circostanze in cui si è verificato l'errore e contattare il Servizio Supporto Tecnico Clienti Microsoft.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Application Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)  (Pagina Applicazione, Creazione progetti (Visual Basic))  
- [Nozioni di base del debugger](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)   
- [Comunicazioni con Microsoft](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [Pagina Applicazione, Creazione progetti (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
+ [Debugger Basics](/visualstudio/debugger/debugger-basics) (Nozioni di base sul debugger)  
+ [Comunicazioni con Microsoft](/visualstudio/ide/talk-to-us)

@@ -1,40 +1,47 @@
 ---
-title: "Procedura: creare un partecipante del rilevamento personalizzato | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: creare un partecipante del rilevamento personalizzato'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ef647068e6ec757de391015f4959335c29038cfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un partecipante del rilevamento personalizzato
-Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'esecuzione del flusso di lavoro.Il runtime del flusso di lavoro genera i record di rilevamento che descrivono gli eventi del ciclo di vita di flusso del lavoro, gli eventi del ciclo di vita delle attività, le riprese dei segnalibri e gli errori.Tali record di rilevamento vengono utilizzati dai partecipanti del rilevamento.In [!INCLUDE[wf](../../../includes/wf-md.md)] viene fornito un partecipante del rilevamento standard che scrive record di rilevamento come eventi ETW \(Event Tracing for Windows\).Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato.In questo passaggio dell'esercitazione viene illustrato come creare un profilo di rilevamento e un partecipante di rilevamento personalizzati che acquisiscono l'output delle attività di `WriteLine` per renderlo visibile all'utente.  
+# <a name="how-to-create-a-custom-tracking-participant"></a>Procedura: creare un partecipante del rilevamento personalizzato
+Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'esecuzione del flusso di lavoro. Il runtime del flusso di lavoro genera i record di rilevamento che descrivono gli eventi del ciclo di vita di flusso del lavoro, gli eventi del ciclo di vita delle attività, le riprese dei segnalibri e gli errori. Tali record di rilevamento vengono usati dai partecipanti del rilevamento. In [!INCLUDE[wf](../../../includes/wf-md.md)] viene fornito un partecipante del rilevamento standard che scrive record di rilevamento come eventi ETW (Event Tracing for Windows). Se tale partecipante non soddisfa i propri requisiti, è anche possibile scrivere un partecipante del rilevamento personalizzato. In questo passaggio dell'esercitazione viene illustrato come creare un profilo di rilevamento e un partecipante di rilevamento personalizzati che acquisiscono l'output delle attività di `WriteLine` per renderlo visibile all'utente.  
   
 > [!NOTE]
->  Ogni argomento nell'Esercitazione introduttiva dipende dagli argomenti precedenti.Per completare questo argomento, è necessario completare prima gli argomenti precedenti.Per scaricare una versione completa o visualizzare una procedura dettagliata dell'esercitazione in un video, vedere la pagina relativa all'[esercitazione introduttiva di Windows Workflow Foundation \(WF45\)](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Ogni argomento nell'Esercitazione introduttiva dipende dagli argomenti precedenti. Per completare questo argomento, è necessario completare prima gli argomenti precedenti. Per scaricare una versione completa o visualizzare una procedura dettagliata video dell'esercitazione, vedere [Windows Workflow Foundation (WF45) - esercitazione introduttiva](http://go.microsoft.com/fwlink/?LinkID=248976).  
   
-## In questo argomento  
+## <a name="in-this-topic"></a>Contenuto dell'argomento  
   
--   [Per creare un partecipante di rilevamento personalizzato](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
+-   [Per creare il partecipante del rilevamento personalizzato](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
   
--   [Per creare il profilo di rilevamento e registrare il partecipante di rilevamento](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
+-   [Per creare il profilo di rilevamento e registrare il partecipante del rilevamento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
   
--   [Per visualizzare le informazioni di rilevamento](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
+-   [Per visualizzare le informazioni di rilevamento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
   
--   [Per compilare ed eseguire l'applicazione](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
+-   [Per compilare ed eseguire l'applicazione](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CustomTrackingParticipant"></a> Per creare un partecipante di rilevamento personalizzato  
+###  <a name="BKMK_CustomTrackingParticipant"></a>Per creare il partecipante del rilevamento personalizzato  
   
-1.  Fare clic con il pulsante destro del mouse su **NumberGuessWorkflowHost** in **Esplora soluzioni** e scegliere **Aggiungi**, **Classe**.Digitare `StatusTrackingParticipant` nella casella **Nome**, quindi fare clic su **Aggiungi**.  
+1.  Fare doppio clic su **NumberGuessWorkflowHost** in **Esplora** e scegliere **Aggiungi**, **classe**. Tipo `StatusTrackingParticipant` nel **nome** casella e fare clic su **Aggiungi**.  
   
-2.  Aggiungere le seguenti istruzioni `using` \(o `Imports`\) nella parte superiore del file con le altre istruzioni `using` \(o `Imports`\).  
+2.  Aggiungere le seguenti istruzioni `using` (o `Imports`) nella parte superiore del file con le altre istruzioni `using` (o `Imports`).  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -61,7 +68,7 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
     }  
     ```  
   
-4.  Aggiungere il seguente override del metodo `Track`.Esistono vari tipi di record di rilevamento.In questo caso, si utilizza l'output delle attività di `WriteLine` contenute nei record di rilevamento delle attività.Se `TrackingRecord` è un `ActivityTrackingRecord` di un'attività `WriteLine`, `Text` di `WriteLine` viene aggiunto a un file denominato dopo l'elemento `InstanceId` del flusso di lavoro.In questa esercitazione, il file viene salvato nella cartella corrente dell'applicazione host.  
+4.  Aggiungere il seguente override del metodo `Track`. Esistono vari tipi di record di rilevamento. In questo caso, si usa l'output delle attività di `WriteLine` contenute nei record di rilevamento delle attività. Se `TrackingRecord` è un `ActivityTrackingRecord` di un'attività `WriteLine`, `Text` di `WriteLine` viene aggiunto a un file denominato dopo l'elemento `InstanceId` del flusso di lavoro. In questa esercitazione, il file viene salvato nella cartella corrente dell'applicazione host.  
   
     ```vb  
     Protected Overrides Sub Track(record As TrackingRecord, timeout As TimeSpan)  
@@ -104,13 +111,13 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
     }  
     ```  
   
-     Se non è specificato alcun profilo di rilevamento, viene utilizzato il profilo di rilevamento predefinito.Quando viene utilizzato il profilo di rilevamento predefinito, i record di rilevamento vengono generati per tutti gli elementi `ActivityStates`.Dal momento che è necessario acquisire il testo solo una volta durante il ciclo di vita dell'attività `WriteLine`, si estrae solo il testo dello stato `ActivityStates.Executing`.In [Per creare il profilo di rilevamento e registrare il partecipante di rilevamento](../../../docs/framework/windows-workflow-foundation//how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), viene creato un profilo di rilevamento che specifica che vengono generati solo i record di rilevamento `ActivityStates.Executing` di `WriteLine`.  
+     Se non è specificato alcun profilo di rilevamento, viene usato il profilo di rilevamento predefinito. Quando viene usato il profilo di rilevamento predefinito, i record di rilevamento vengono generati per tutti gli elementi `ActivityStates`. Dal momento che è necessario acquisire il testo solo una volta durante il ciclo di vita dell'attività `WriteLine`, si estrae solo il testo dello stato `ActivityStates.Executing`. In [per creare il profilo di rilevamento e registrare il partecipante del rilevamento](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), viene creato un profilo di rilevamento che specifica che solo `WriteLine` `ActivityStates.Executing` vengono generati record di rilevamento.  
   
-###  <a name="BKMK_TrackingProfile"></a> Per creare il profilo di rilevamento e registrare il partecipante di rilevamento  
+###  <a name="BKMK_TrackingProfile"></a>Per creare il profilo di rilevamento e registrare il partecipante del rilevamento  
   
-1.  Fare clic con il pulsante destro del mouse su **WorkflowHostForm** in **Esplora soluzioni**, quindi scegliere **Visualizza codice**.  
+1.  Fare doppio clic su **WorkflowHostForm** in **Esplora** e scegliere **Visualizza codice**.  
   
-2.  Aggiungere la seguente istruzione `using` \(o `Imports`\) nella parte superiore del file con le altre istruzioni `using` \(o `Imports`\).  
+2.  Aggiungere la seguente istruzione `using` (o `Imports`) nella parte superiore del file con le altre istruzioni `using` (o `Imports`).  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -227,9 +234,9 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a> Per visualizzare le informazioni di rilevamento  
+###  <a name="BKMK_DisplayTracking"></a>Per visualizzare le informazioni di rilevamento  
   
-1.  Fare clic con il pulsante destro del mouse su **WorkflowHostForm** in **Esplora soluzioni**, quindi scegliere **Visualizza codice**.  
+1.  Fare doppio clic su **WorkflowHostForm** in **Esplora** e scegliere **Visualizza codice**.  
   
 2.  Nel gestore `InstanceId_SelectedIndexChanged`, aggiungere il codice seguente subito dopo il codice che cancella la finestra di stato.  
   
@@ -252,7 +259,7 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
     }  
     ```  
   
-     Quando viene selezionato un nuovo flusso di lavoro nell'elenco dei flusso di lavoro, i record di rilevamento del flusso di lavoro vengono caricati e visualizzati nella finestra di stato.Nell'esempio seguente viene mostrato il gestore `InstanceId_SelectedIndexChanged` completato.  
+     Quando viene selezionato un nuovo flusso di lavoro nell'elenco dei flusso di lavoro, i record di rilevamento del flusso di lavoro vengono caricati e visualizzati nella finestra di stato. Nell'esempio seguente viene mostrato il gestore `InstanceId_SelectedIndexChanged` completato.  
   
     ```vb  
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged  
@@ -320,32 +327,31 @@ Il rilevamento del flusso di lavoro fornisce la visibilità nello stato dell'ese
             instance.Abandon();  
         }  
     }  
-  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a> Per compilare ed eseguire l'applicazione  
+###  <a name="BKMK_BuildAndRun"></a>Per compilare ed eseguire l'applicazione  
   
-1.  Premere CTRL\+MAIUSC\+B per compilare l'applicazione.  
+1.  Premere CTRL+MAIUSC+B per compilare l'applicazione.  
   
-2.  Premere CTRL\+F5 per avviare l'applicazione.  
+2.  Premere CTRL+F5 per avviare l'applicazione.  
   
-3.  Selezionare un intervallo per il gioco per determinare un numero e il tipo di flusso di lavoro da avviare, quindi fare clic su **Nuova partita**.Immettere un tentativo nella casella **Guess**, quindi fare clic su **Go** per inviare il tentativo.Si noti che lo stato del flusso di lavoro viene visualizzato nella finestra di stato.Questo output viene acquisito dalle attività `WriteLine`.Passare a un altro flusso di lavoro selezionandone uno dalla casella combinata **ID istanza flusso di lavoro**. Lo stato del flusso di lavoro corrente viene rimosso.Passare di nuovo al flusso di lavoro precedente. Notare che lo stato viene ripristinato, in modo simile all'esempio seguente.  
+3.  Selezionare un intervallo per il gioco e il tipo di flusso di lavoro per avviare e fare clic su **nuova partita**. Immettere un tentativo nella **ipotesi** casella e fare clic su **passare** per inviare il tentativo. Si noti che lo stato del flusso di lavoro viene visualizzato nella finestra di stato. Questo output viene acquisito dalle attività `WriteLine`. Passare a un flusso di lavoro diverso selezionandone uno dal **Id istanza del flusso di lavoro** casella combinata e notare che lo stato del flusso di lavoro corrente viene rimosso. Passare di nuovo al flusso di lavoro precedente. Notare che lo stato viene ripristinato, in modo simile all'esempio seguente.  
   
     > [!NOTE]
-    >  Se si passa a un flusso di lavoro che è stato avviato prima dell'abilitazione del rilevamento non viene visualizzato alcuno stato.Tuttavia se si creano tentativi aggiuntivi, lo stato viene salvato in quanto il rilevamento viene così abilitato.  
+    >  Se si passa a un flusso di lavoro che è stato avviato prima dell'abilitazione del rilevamento non viene visualizzato alcuno stato. Tuttavia se si creano tentativi aggiuntivi, lo stato viene salvato in quanto il rilevamento viene così abilitato.  
   
- **Please enter a number between 1 and 10**   
-**Your guess is too high.**   
-**Please enter a number between 1 and 10**    
+ **Immettere un numero compreso tra 1 e 10**  
+**La stima è troppo alta.**   
+**Immettere un numero compreso tra 1 e 10**    
     > [!NOTE]
-    >  Queste informazioni sono utili per la scelta dell'intervallo del numero casuale, ma non contiene alcuna informazione sui tentativi effettuati in precedenza.Questa informazione è contenuta nel prossimo passaggio, [Procedura: ospitare più versioni di un flusso di lavoro side\-by\-side](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+    >  Queste informazioni sono utili per la scelta dell'intervallo del numero casuale, ma non contiene alcuna informazione sui tentativi effettuati in precedenza. Queste informazioni sono nel passaggio successivo, [come: più versioni di Host di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
      Annotare l'ID istanza del flusso di lavoro e giocare fino al completamento.  
   
-4.  Aprire Esplora risorse e passare alla cartella **NumberGuessWorkflowHost\\bin\\debug** \(o **bin\\release** a seconda delle impostazioni del progetto\).Si noti che oltre ai file eseguibili di progetto, sono presenti file con nomi file GUID.Identificare quello corrispondente all'ID istanza del flusso di lavoro dal flusso di lavoro completato nel passaggio precedente e aprirlo in Blocco Note.Le informazioni sul rilevamento contengono dati simili al seguente esempio.  
+4.  Aprire Esplora risorse e passare al **NumberGuessWorkflowHost\bin\debug** cartella (o **bin\release** a seconda delle impostazioni di progetto). Si noti che oltre ai file eseguibili di progetto, sono presenti file con nomi file GUID. Identificare quello corrispondente all'ID istanza del flusso di lavoro dal flusso di lavoro completato nel passaggio precedente e aprirlo in Blocco Note. Le informazioni sul rilevamento contengono dati simili al seguente esempio.  
   
- **Please enter a number between 1 and 10**   
-**Your guess is too high.**   
-**Please enter a number between 1 and 10**   
-**Your guess is too high.**   
-**Please enter a number between 1 and 10**      Oltre all'assenza dei tentativi dell'utente, questi dati di rilevamento non contengono informazioni sul tentativo finale del flusso di lavoro.Ciò accade perché le informazioni di rilevamento sono costituite solo dall'output di `WriteLine` restituito dal flusso di lavoro e il messaggio finale visualizzato viene in tal modo creato dal gestore `Completed` dopo il completamento del flusso di lavoro.Il passaggio successivo dell'esercitazione, [Procedura: ospitare più versioni di un flusso di lavoro side\-by\-side](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md), le attività `WriteLine` esistenti vengono modificate per visualizzare i tentativi dell'utente e viene aggiunta un'altra attività `WriteLine` che visualizza i risultati finali.Una volta integrate tali modifiche, in [Procedura: ospitare più versioni di un flusso di lavoro side\-by\-side](../../../docs/framework/windows-workflow-foundation//how-to-host-multiple-versions-of-a-workflow-side-by-side.md) viene illustrato come ospitare più versioni di un flusso di lavoro contemporaneamente.
+ **Immettere un numero compreso tra 1 e 10**  
+**La stima è troppo alta.**   
+**Immettere un numero compreso tra 1 e 10**   
+**La stima è troppo alta.**   
+**Immettere un numero compreso tra 1 e 10** oltre all'assenza dei tentativi dell'utente, questi dati di rilevamento non contiene informazioni sul tentativo finale del flusso di lavoro. Ciò accade perché le informazioni di rilevamento sono costituite solo dall'output di `WriteLine` restituito dal flusso di lavoro e il messaggio finale visualizzato viene in tal modo creato dal gestore `Completed` dopo il completamento del flusso di lavoro. Nel passaggio successivo dell'esercitazione, [come: più versioni di Host di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), esistente `WriteLine` le attività sono state modificate per visualizzare i tentativi dell'utente e un ulteriore `WriteLine` attività viene aggiunta che Consente di visualizzare i risultati finali. Dopo queste modifiche sono integrate, [come: più versioni di Host di un flusso di lavoro Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) viene illustrato come ospitare più versioni di un flusso di lavoro nello stesso momento.

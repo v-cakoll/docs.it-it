@@ -1,75 +1,74 @@
 ---
-title: "How to: Create a Procedure (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedures, defining"
-  - "Visual Basic code, procedures"
-  - "Visual Basic code, reusing"
-  - "procedure declarations"
-  - "procedures, about procedures"
+title: 'Procedura: creare una routine (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- Visual Basic code, reusing
+- procedure declarations
+- procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 56a44918b7a1426d215cee0ff2981f5763432a48
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create a Procedure (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una routine deve essere racchiusa tra un'istruzione di dichiarazione di inizio \(`Sub` o `Function`\) e una di fine \(`End Sub` o `End Function`\).  Tra le due istruzioni è racchiuso tutto il codice della routine.  
+# <a name="how-to-create-a-procedure-visual-basic"></a>Procedura: creare una routine (Visual Basic)
+Una routine racchiusa tra un'istruzione di dichiarazione iniziale (`Sub` o `Function`) e un'istruzione di dichiarazione finale (`End Sub` o `End Function`). Codice di procedura è compresa tra queste istruzioni.  
   
- Una routine non può contenere un'altra routine, pertanto le istruzioni di inizio e di fine devono essere esterne a qualsiasi altra routine.  
+ Una routine non può contenere un'altra routine, pertanto le relative istruzioni iniziale e finale devono essere all'esterno di qualsiasi altra routine.  
   
- Se si dispone di codice che esegue la stessa attività in posizioni diverse, è possibile scrivere l'attività una sola volta come routine, quindi chiamarla dalle diverse posizioni del codice.  
+ Se si dispone di codice che esegue la stessa attività in posizioni diverse, è possibile scrivere l'attività una sola volta come una stored procedure e quindi chiamare da diverse posizioni nel codice.  
   
-### Per creare una routine che non restituisce alcun valore  
+### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>Per creare una routine che non restituisce un valore  
   
-1.  Utilizzare un'istruzione `Sub` all'esterno di qualsiasi altra routine, seguita da un'istruzione `End Sub`.  
+1.  All'esterno di qualsiasi altra routine, utilizzare un `Sub` istruzione, seguito da un `End Sub` istruzione.  
   
-2.  Nell'istruzione `Sub` far seguire la parola chiave `Sub` dal nome della routine, quindi dall'elenco dei parametri racchiuso tra parentesi.  
+2.  Nel `Sub` istruzione, seguire la `Sub` (parola chiave) con il nome della routine, quindi l'elenco di parametri tra parentesi.  
   
-3.  Inserire le istruzioni del codice della routine tra le istruzioni `Sub` e `End Sub`.  
+3.  Inserire istruzioni di codice della stored procedure tra il `Sub` e `End Sub` istruzioni.  
   
-### Per creare una routine che restituisce un valore  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>Per creare una stored procedure che restituisce un valore  
   
-1.  Al di fuori di qualsiasi altra routine, utilizzare un'istruzione `Function` seguita da un'istruzione `End Function`.  
+1.  All'esterno di qualsiasi altra routine, utilizzare un `Function` istruzione, seguito da un `End Function` istruzione.  
   
-2.  Nell'istruzione `Function` far seguire la parola chiave `Function` dal nome della routine, quindi dall'elenco dei parametri tra parentesi, infine da una clausola `As` che specifica il tipo di dati del valore restituito.  
+2.  Nel `Function` istruzione, seguire la `Function` (parola chiave) con il nome della routine, quindi l'elenco di parametri tra parentesi e quindi un `As` clausola che specifica il tipo di dati del valore restituito.  
   
-3.  Inserire le istruzioni del codice della routine tra le istruzioni `Function` e `End Function`.  
+3.  Inserire istruzioni di codice della stored procedure tra il `Function` e `End Function` istruzioni.  
   
-4.  Utilizzare un'istruzione `Return` per restituire il valore al codice chiamante.  
+4.  Utilizzare un `Return` istruzione per restituire il valore al codice chiamante.  
   
-### Per collegare la nuova routine ai vecchi blocchi di codice ripetitivi  
+### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>Per collegare la nuova routine con i blocchi di codice precedenti ricorrenti  
   
-1.  Accertarsi di aver definito la nuova routine in una posizione che ne consenta l'accesso da parte del vecchio codice.  
+1.  Verificare che si definisce la nuova procedura in una posizione in cui il vecchio codice ha accesso a esso.  
   
-2.  Nel vecchio blocco di codice ripetitivo sostituire le istruzioni che eseguono l'attività ripetitiva con un'istruzione singola che chiama la routine `Sub` o `Function`.  
+2.  Nel blocco di codice precedente, ricorrenti, sostituire le istruzioni che eseguono attività ricorrenti con una singola istruzione che chiama il `Sub` o `Function` stored procedure.  
   
-3.  Se la routine è una `Function` che restituisce un valore, verificare che l'istruzione di chiamata esegua un'azione con il valore restituito, ad esempio lo memorizzi in una variabile, onde evitare che il valore venga perduto.  
+3.  Se la routine è un `Function` che restituisce un valore, verificare che l'istruzione di chiamata esegua un'azione con il valore restituito, ad esempio archiviare i dati in una variabile, in caso contrario il valore andranno perso.  
   
-## Esempio  
- La routine `Function` che segue consente di calcolare il lato più lungo, o ipotenusa, di un triangolo retto, dati i valori degli altri due lati.  
+## <a name="example"></a>Esempio  
+ Le operazioni seguenti `Function` procedure calcola il lato più lungo, ovvero l'ipotenusa, di un triangolo rettangolo, in base ai valori per i due lati.  
   
  [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure_1.vb)]  
   
-## Vedere anche  
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Routine Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Routine Property](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Recursive Procedures](../../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)   
- [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Programmazione orientata ad oggetti](../Topic/Object-Oriented%20Programming%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Vedere anche  
+ [Routine](./index.md)  
+ [Routine Sub](./sub-procedures.md)  
+ [Routine Function](./function-procedures.md)  
+ [Routine Property](./property-procedures.md)  
+ [Routine di operatore](./operator-procedures.md)  
+ [Parametri e argomenti delle routine](./procedure-parameters-and-arguments.md)  
+ [Routine ricorsive](./recursive-procedures.md)  
+ [Overload della routine](./procedure-overloading.md)  
+ [Oggetti e classi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [Programmazione orientata ad oggetti](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)

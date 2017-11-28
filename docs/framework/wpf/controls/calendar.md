@@ -1,63 +1,66 @@
 ---
-title: "Calendar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Calendar (controllo) [WPF]"
-  - "controlli [WPF], Calendar"
+title: Calendar
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [WPF], Calendar
+- Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 857f6b3be1467ec54fd27c76679279c0d0960690
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Calendar
+# <a name="calendar"></a>Calendar
 Un calendario consente a un utente di selezionare una data mediante una rappresentazione visiva del calendario.  
   
- Un controllo <xref:System.Windows.Controls.Calendar> può essere utilizzato in modo autonomo o come parte a discesa di un controllo <xref:System.Windows.Controls.DatePicker>.  Per ulteriori informazioni, vedere <xref:System.Windows.Controls.DatePicker>.  
+ Oggetto <xref:System.Windows.Controls.Calendar> controllo può essere utilizzato in modo autonomo o come parte dell'elenco a discesa un <xref:System.Windows.Controls.DatePicker> controllo. Per altre informazioni, vedere <xref:System.Windows.Controls.DatePicker>.  
   
- Nell'illustrazione riportata di seguito vengono mostrati due controlli <xref:System.Windows.Controls.Calendar>, uno con selezioni e date con blackout e uno senza.  
+ Nella figura seguente vengono illustrati due <xref:System.Windows.Controls.Calendar> controlli, uno con le selezioni e le date di blackout e uno senza.  
   
- ![Controlli del calendario](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP\_CalendarControls")  
-Controlli calendario  
+ ![Controlli calendario](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")  
+Controlli del calendario  
   
- Nella tabella riportata di seguito vengono fornite le informazioni sulle attività che di solito sono associate a <xref:System.Windows.Controls.Calendar>.  
+ Nella tabella seguente vengono fornite informazioni sulle attività che sono in genere associati il <xref:System.Windows.Controls.Calendar>.  
   
-|Task|Implementazione|  
-|----------|---------------------|  
-|Specificare date che non possono essere selezionate.|Utilizzare la proprietà <xref:System.Windows.Controls.Calendar.BlackoutDates%2A>.|  
-|Visualizzare un mese, un intero anno o un decennio tramite <xref:System.Windows.Controls.Calendar>.|Impostare la proprietà <xref:System.Windows.Controls.Calendar.DisplayMode%2A> su Mese, Anno o Decennio.|  
-|Specificare se l'utente può selezionare una data, un intervallo di date o più intervalli di date.|Utilizzare <xref:System.Windows.Controls.Calendar.SelectionMode%2A>.|  
-|Specificare l'intervallo di date che viene visualizzato da <xref:System.Windows.Controls.Calendar>.|Utilizzare le proprietà <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> e <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A>.|  
-|Specificare se la data corrente è evidenziata.|Utilizzare la proprietà <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A>.  Per impostazione predefinita, il valore di <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> è `true`.|  
-|Modificare la dimensione di <xref:System.Windows.Controls.Calendar>.|Utilizzare un oggetto <xref:System.Windows.Controls.Viewbox> o impostare la proprietà <xref:System.Windows.FrameworkElement.LayoutTransform%2A> su un oggetto <xref:System.Windows.Media.ScaleTransform>.  Si noti che se si impostano le proprietà <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> di <xref:System.Windows.Controls.Calendar>, le dimensioni del calendario effettivo non vengono modificate.|  
+|Attività|Implementazione|  
+|----------|--------------------|  
+|Specificare le date che non possono essere selezionate.|Usare la proprietà <xref:System.Windows.Controls.Calendar.BlackoutDates%2A>.|  
+|Dispone il <xref:System.Windows.Controls.Calendar> visualizzare un mese, un intero anno o un decennio.|Impostare il <xref:System.Windows.Controls.Calendar.DisplayMode%2A> proprietà per mese, anno o decennio.|  
+|Specificare se l'utente può selezionare una data, un intervallo di date o più intervalli di date.|Utilizzare il <xref:System.Windows.Controls.Calendar.SelectionMode%2A>.|  
+|Specificare l'intervallo di date che di <xref:System.Windows.Controls.Calendar> Visualizza.|Utilizzare il <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> e <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> proprietà.|  
+|Specificare se la data corrente è evidenziata.|Usare la proprietà <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A>. Per impostazione predefinita, <xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> è `true`.|  
+|Modificare le dimensioni del <xref:System.Windows.Controls.Calendar>.|Utilizzare un <xref:System.Windows.Controls.Viewbox> o impostare il <xref:System.Windows.FrameworkElement.LayoutTransform%2A> proprietà per un <xref:System.Windows.Media.ScaleTransform>. Si noti che se si imposta la <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> le proprietà di un <xref:System.Windows.Controls.Calendar>, il calendario effettivo non cambia le dimensioni.|  
   
- È possibile navigare all'interno del controllo <xref:System.Windows.Controls.Calendar> mediante il mouse o la tastiera.  Nella tabella seguente vengono descritte le operazioni di navigazione tramite tastiera.  
+ Il <xref:System.Windows.Controls.Calendar> controllo fornisce le operazioni di base con il mouse o tastiera. Nella tabella seguente sono riepilogate navigazione tramite tastiera.  
   
 |Combinazione di tasti|<xref:System.Windows.Controls.Calendar.DisplayMode%2A>|Azione|  
-|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------|  
-|FRECCIA|<xref:System.Windows.Controls.CalendarMode>|Modifica la proprietà <xref:System.Windows.Controls.Calendar.SelectedDate%2A> se la proprietà <xref:System.Windows.Controls.Calendar.SelectionMode%2A> non è impostata su <xref:System.Windows.Controls.CalendarSelectionMode>.|  
-|FRECCIA|<xref:System.Windows.Controls.CalendarMode>|Modifica il mese della proprietà <xref:System.Windows.Controls.Calendar.DisplayDate%2A>.  Si noti che <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non cambia.|  
-|FRECCIA|<xref:System.Windows.Controls.CalendarMode>|Modifica l'anno di <xref:System.Windows.Controls.Calendar.DisplayDate%2A>.  Si noti che <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non cambia.|  
-|MAIUSC\+FRECCIA|<xref:System.Windows.Controls.CalendarMode>|Se la proprietà <xref:System.Windows.Controls.Calendar.SelectionMode%2A> non è impostata su <xref:System.Windows.Controls.CalendarSelectionMode> o <xref:System.Windows.Controls.CalendarSelectionMode>, estende l'intervallo di date selezionate.|  
-|HOME|<xref:System.Windows.Controls.CalendarMode>|Imposta <xref:System.Windows.Controls.Calendar.SelectedDate%2A> sul primo giorno del mese corrente.|  
-|HOME|<xref:System.Windows.Controls.CalendarMode>|Imposta il mese di <xref:System.Windows.Controls.Calendar.DisplayDate%2A> sul primo mese dell'anno.  La proprietà <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non viene modificata.|  
-|HOME|<xref:System.Windows.Controls.CalendarMode>|Imposta l'anno di <xref:System.Windows.Controls.Calendar.DisplayDate%2A> sul primo anno del decennio.  La proprietà <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non viene modificata.|  
-|FINE|<xref:System.Windows.Controls.CalendarMode>|Imposta <xref:System.Windows.Controls.Calendar.SelectedDate%2A> sull'ultimo giorno del mese corrente.|  
-|FINE|<xref:System.Windows.Controls.CalendarMode>|Imposta il mese di <xref:System.Windows.Controls.Calendar.DisplayDate%2A> sull'ultimo mese dell'anno.  La proprietà <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non viene modificata.|  
-|FINE|<xref:System.Windows.Controls.CalendarMode>|Imposta l'anno di <xref:System.Windows.Controls.Calendar.DisplayDate%2A> sull'ultimo anno del decennio.  La proprietà <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non viene modificata.|  
-|CTRL\+FRECCIA SU|Uno|Consente di passare <xref:System.Windows.Controls.Calendar.DisplayMode%2A> al valore successivo superiore.  Se la proprietà <xref:System.Windows.Controls.Calendar.DisplayMode%2A> è già impostata su <xref:System.Windows.Controls.CalendarMode>, non verrà eseguita alcuna azione.|  
-|CTRL\+freccia GIÙ|Uno|Consente di passare <xref:System.Windows.Controls.Calendar.DisplayMode%2A> al valore successivo inferiore.  Se la proprietà <xref:System.Windows.Controls.Calendar.DisplayMode%2A> è già impostata su <xref:System.Windows.Controls.CalendarMode>, non verrà eseguita alcuna azione.|  
-|BARRA SPAZIATRICE o INVIO|<xref:System.Windows.Controls.CalendarMode> o <xref:System.Windows.Controls.CalendarMode>|Consente di passare <xref:System.Windows.Controls.Calendar.DisplayMode%2A> a <xref:System.Windows.Controls.CalendarMode> o <xref:System.Windows.Controls.CalendarMode> rappresentati dall'elemento con stato attivo.|  
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|------------|  
+|FRECCIA|<xref:System.Windows.Controls.CalendarMode.Month>|Modifiche di <xref:System.Windows.Controls.Calendar.SelectedDate%2A> proprietà se il <xref:System.Windows.Controls.Calendar.SelectionMode%2A> proprietà non è impostata su <xref:System.Windows.Controls.CalendarSelectionMode.None>.|  
+|FRECCIA|<xref:System.Windows.Controls.CalendarMode.Year>|Imposta il mese del <xref:System.Windows.Controls.Calendar.DisplayDate%2A> proprietà. Si noti che il <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non cambia.|  
+|FRECCIA|<xref:System.Windows.Controls.CalendarMode.Decade>|Modificare l'anno del <xref:System.Windows.Controls.Calendar.DisplayDate%2A>. Si noti che il <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non cambia.|  
+|MAIUSC + FRECCIA|<xref:System.Windows.Controls.CalendarMode.Month>|Se <xref:System.Windows.Controls.Calendar.SelectionMode%2A> non è impostata su <xref:System.Windows.Controls.CalendarSelectionMode.SingleDate> o <xref:System.Windows.Controls.CalendarSelectionMode.None>, estende l'intervallo di date selezionato.|  
+|HOME|<xref:System.Windows.Controls.CalendarMode.Month>|Modifiche di <xref:System.Windows.Controls.Calendar.SelectedDate%2A> al primo giorno del mese corrente.|  
+|HOME|<xref:System.Windows.Controls.CalendarMode.Year>|Imposta il mese del <xref:System.Windows.Controls.Calendar.DisplayDate%2A> al primo mese dell'anno. Il <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non cambia.|  
+|HOME|<xref:System.Windows.Controls.CalendarMode.Decade>|Modificare l'anno del <xref:System.Windows.Controls.Calendar.DisplayDate%2A> per il primo anno del decennio. Il <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non cambia.|  
+|FINE|<xref:System.Windows.Controls.CalendarMode.Month>|Modifiche di <xref:System.Windows.Controls.Calendar.SelectedDate%2A> all'ultimo giorno del mese corrente.|  
+|FINE|<xref:System.Windows.Controls.CalendarMode.Year>|Imposta il mese del <xref:System.Windows.Controls.Calendar.DisplayDate%2A> per il mese dell'anno. Il <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non cambia.|  
+|FINE|<xref:System.Windows.Controls.CalendarMode.Decade>|Modificare l'anno del <xref:System.Windows.Controls.Calendar.DisplayDate%2A> per l'ultimo anno del decennio. Il <xref:System.Windows.Controls.Calendar.SelectedDate%2A> non cambia.|  
+|CTRL+FRECCIA SU|Qualsiasi|Passa al successivo più grande <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Se <xref:System.Windows.Controls.Calendar.DisplayMode%2A> già <xref:System.Windows.Controls.CalendarMode.Decade>, nessuna azione.|  
+|CTRL+freccia GIÙ|Qualsiasi|Passa al successivo più piccoli <xref:System.Windows.Controls.Calendar.DisplayMode%2A>. Se <xref:System.Windows.Controls.Calendar.DisplayMode%2A> già <xref:System.Windows.Controls.CalendarMode.Month>, nessuna azione.|  
+|Barra spaziatrice o invio|<xref:System.Windows.Controls.CalendarMode.Year> o <xref:System.Windows.Controls.CalendarMode.Decade>|Opzioni <xref:System.Windows.Controls.Calendar.DisplayMode%2A> per il <xref:System.Windows.Controls.CalendarMode.Month> o <xref:System.Windows.Controls.CalendarMode.Year> rappresentato dall'elemento attivo.|  
   
-## Vedere anche  
- [Controlli](../../../../docs/framework/wpf/controls/index.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controlli](../../../../docs/framework/wpf/controls/index.md)  
  [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)

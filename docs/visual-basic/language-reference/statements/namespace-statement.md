@@ -1,36 +1,34 @@
 ---
-title: "Namespace Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Namespace"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "namespaces, root"
-  - "Namespace statement"
-  - "namespaces, nested"
-  - "declaring namespaces, syntax"
-  - "namespaces, declaring"
-  - "root namespaces"
-  - "declarations, namespaces"
+title: Istruzione Namespace
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Namespace
+helpviewer_keywords:
+- namespaces [Visual Basic], root
+- Namespace statement [Visual Basic]
+- namespaces [Visual Basic], nested
+- declaring namespaces [Visual Basic], syntax
+- namespaces [Visual Basic], declaring
+- root namespaces
+- declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-caps.latest.revision: 39
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 39
+caps.latest.revision: "39"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9863286a8eda2559ab678c77a81cc7d6063c3e3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Namespace Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Consente di dichiarare il nome di uno spazio dei nomi e provoca la compilazione del codice sorgente che segue la dichiarazione all'interno di tale spazio dei nomi.  
+# <a name="namespace-statement"></a>Istruzione Namespace
+Dichiara il nome di uno spazio dei nomi e fa sì che il codice sorgente che segue la dichiarazione deve essere compilato all'interno di tale spazio dei nomi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 Namespace [Global.] { name | name.name }  
@@ -38,68 +36,68 @@ Namespace [Global.] { name | name.name }
 End Namespace  
 ```  
   
-## Parti  
+## <a name="parts"></a>Parti  
  Global  
- Parametro facoltativo.  Consente di definire uno spazio dei nomi dallo spazio dei nomi radice del progetto.  Vedere [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Parametro facoltativo. Consente di definire uno spazio dei nomi lo spazio dei nomi radice del progetto. Vedere [gli spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
- Obbligatorio.  Nome univoco che identifica lo spazio dei nomi.  È necessario che sia un identificativo valido di Visual Basic.  Per ulteriori informazioni, vedere [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Obbligatorio. Un nome univoco che identifica lo spazio dei nomi. Deve essere un valido identificatore Visual Basic. Per ulteriori informazioni, vedere [nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `componenttypes`  
- Parametro facoltativo.  Elementi che compongono lo spazio dei nomi.  Questi includono, tra l'altro, enumerazioni, strutture, interfacce, classi, moduli, delegati e altri spazi dei nomi.  
+ Parametro facoltativo. Elementi che costituiscono lo spazio dei nomi. Queste includono, ma non sono limitate a, enumerazioni, strutture, interfacce, classi, moduli, i delegati e altri spazi dei nomi.  
   
  `End Namespace`  
- Consente di terminare un blocco `Namespace`.  
+ Termina un `Namespace` blocco.  
   
-## Note  
- Gli spazi dei nomi vengono utilizzati come sistema organizzativo  in quanto forniscono un metodo di classificazione e presentazione degli elementi di programmazione esposti ad altri programmi e applicazioni.  Si noti che uno spazio dei nomi non corrisponde a *tipo* nel senso che una classe o una struttura essere\-non possibile dichiarare un elemento di programmazione per disporre il tipo di dati dello spazio dei nomi.  
+## <a name="remarks"></a>Note  
+ Spazi dei nomi vengono utilizzati come sistema organizzativo. Forniscono un modo per classificare e presentare gli elementi di programmazione che vengono esposti ad altre applicazioni e programmi. Si noti che non è uno spazio dei nomi un *tipo* nel senso che è una classe o struttura, è possibile dichiarare un elemento di programmazione per il tipo di dati di uno spazio dei nomi.  
   
- Tutti gli elementi di programmazione dichiarati dopo un'istruzione `Namespace` appartengono a tale spazio dei nomi.  Gli elementi continuano ad essere compilati nello spazio dei nomi dichiarato per ultimo fino a quando non viene rilevata un'istruzione `End Namespace` o un'altra istruzione `Namespace`.  
+ Tutti gli elementi di programmazione dichiarati dopo un `Namespace` istruzione appartengono allo spazio dei nomi. Visual Basic continua a compilare elementi nello spazio dei nomi dichiarato ultimo finché incontra uno un `End Namespace` istruzione o un'altra `Namespace` istruzione.  
   
- Se uno spazio dei nomi è già definito, anche all'esterno del progetto, è possibile aggiungere elementi di programmazione.  A tale scopo, utilizzare un oggetto `Namespace` istruzione per eseguire Visual Basic per compilare gli elementi nello spazio dei nomi.  
+ Se uno spazio dei nomi è già definita, anche all'esterno del progetto, è possibile aggiungere elementi di programmazione. A tale scopo, utilizzare un `Namespace` istruzione per indicare a Visual Basic per compilare gli elementi in tale spazio dei nomi.  
   
- L'istruzione `Namespace` può essere utilizzata solo a livello del file o dello spazio dei nomi.  Il altri termini, il *contesto della dichiarazione* per uno spazio dei nomi deve essere costituito di un file di origine o uno spazio dei nomi e non può essere una classe, una struttura, un modulo, un'interfaccia o una routine.  Per ulteriori informazioni, vedere [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ È possibile utilizzare un `Namespace` istruzione solo a livello di file o spazio dei nomi. Ciò significa che il *contesto della dichiarazione* per uno spazio dei nomi deve essere un file di origine o un altro spazio dei nomi e non può essere una classe, struttura, modulo, interfaccia o stored procedure. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- È possibile dichiarare uno spazio dei nomi all'interno di un altro.  Non esiste un limite rigoroso ai livelli di annidamento che è possibile dichiarare. Tenere presente comunque che quando altro codice accede agli elementi dichiarati nello spazio dei nomi più interno, è necessario utilizzare una stringa di qualificazione contenente tutti i nomi degli spazi dei nomi della gerarchia di annidamento.  
+ È possibile dichiarare uno spazio dei nomi all'interno di altra. Non è previsto alcun limite strict ai livelli di nidificazione è possibile dichiarare, ma tenere presente che quando l'altro codice accede a elementi dichiarati nello spazio dei nomi più interno, è necessario utilizzare una stringa di qualificazione che contiene tutti i nomi di spazio dei nomi nella gerarchia di annidamento.  
   
-## Livello di accesso  
- Gli spazi dei nomi vengono considerati come se fossero a `Public` livello di accesso.  È possibile accedere a uno spazio dei nomi dal codice in un punto qualsiasi nello stesso progetto, da altri progetti che fanno riferimento al progetto e da qualsiasi assembly compilato dal progetto.  
+## <a name="access-level"></a>Livello di accesso  
+ Spazi dei nomi sono trattati come se fossero un `Public` livello di accesso. Uno spazio dei nomi sono accessibili da qualsiasi codice nello stesso progetto, da altri progetti che fanno riferimento al progetto e da qualsiasi assembly compilato dal progetto.  
   
- Gli elementi di programmazione dichiarati a livello di spazio dei nomi, ovvero in uno spazio dei nomi ma non all'interno di altri elementi, possono disporre di accesso `Public` o `Friend`.  Se non viene specificato, il livello di accesso di tale elemento utilizza  `Friend` per impostazione predefinita.  Tra gli elementi che è possibile dichiarare a livello dello spazio dei nomi sono compresi classi, strutture, moduli, interfacce, enumerazioni e delegati.  Per ulteriori informazioni, vedere [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Gli elementi di programmazione dichiarati a livello di spazio dei nomi, ovvero in uno spazio dei nomi ma non all'interno di qualsiasi altro elemento, possono avere `Public` o `Friend` accesso. Se non viene specificato, il livello di accesso di tale elemento utilizza `Friend` per impostazione predefinita. Gli elementi che è possibile dichiarare il livello di spazio dei nomi includono classi, strutture, moduli, interfacce, enumerazioni e delegati. Per altre informazioni, vedere [Contesti delle dichiarazioni e livelli di accesso predefiniti](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
-## Spazio dei nomi radice  
- Tutti i nomi degli spazi dei nomi del progetto sono basati su uno *spazio dei nomi radice*.  In Visual Studio il nome del progetto viene assegnato come spazio dei nomi di primo livello predefinito per tutto il codice all'interno del progetto.  Se il progetto è denominato `Payroll` ad esempio, i relativi elementi di programmazione apparterranno allo spazio dei nomi `Payroll`.  Se si dichiara `Namespace funding`, il nome completo di quello spazio dei nomi sarà `Payroll.funding`.  
+## <a name="root-namespace"></a>Namespace radice  
+ Tutti i nomi di spazio dei nomi nel progetto sono basati su un *spazio dei nomi radice*. Visual Studio assegna il nome del progetto come spazio dei nomi radice predefinito per tutto il codice del progetto. Se, ad esempio, il progetto è denominato `Payroll`, i relativi elementi di programmazione appartengono allo spazio dei nomi `Payroll`. Se si dichiara `Namespace funding`, il nome completo dello spazio dei nomi è `Payroll.funding`.  
   
- Se si desidera specificare uno spazio dei nomi esistente in un'istruzione `Namespace`, come nell'esempio della classe elenco generica, è possibile impostare lo spazio dei nomi di primo livello su un valore null.  A questo scopo, scegliere **Proprietà progetto** dal menu **Progetto**, quindi eliminare il contenuto della voce **Spazio dei nomi di primo livello** in modo che la casella risulti vuota.  Se non si è eseguita questa operazione nell'esempio della classe elenco generica, `System.Collections.Generic` verrebbe considerato come nuovo spazio dei nomi all'interno del progetto `Payroll`, con il nome completo di `Payroll.System.Collections.Generic`.  
+ Se si desidera specificare uno spazio dei nomi esistente in un `Namespace` istruzione, come nell'esempio di classe di elenco generico, è possibile impostare lo spazio dei nomi radice con un valore null. A tale scopo, fare clic su **le proprietà del progetto** dal **progetto** menu e quindi deselezionare la **spazio dei nomi radice** voce in modo che la casella è vuota. Se non è questo nell'esempio della classe di elenco generico, il compilatore Visual Basic richiederebbe `System.Collections.Generic` come un nuovo spazio dei nomi all'interno di progetto `Payroll`, con il nome completo del `Payroll.System.Collections.Generic`.  
   
- In alternativa, è possibile utilizzare la parola chiave `Global` per fare riferimento agli elementi degli spazi dei nomi definiti all'esterno del progetto.  In questo modo è possibile mantenere il nome del progetto come spazio dei nomi di primo livello.  In questo modo si riduce la possibilità di unire in modo non intenzionale gli elementi di programmazione a quelli degli spazi dei nomi esistenti.  Per ulteriori informazioni, vedere “parola chiave globale la sezione in nomi completi„ in [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ In alternativa, è possibile utilizzare il `Global` (parola chiave) per fare riferimento agli elementi di spazi dei nomi definiti all'esterno del progetto. In questo modo consente di mantenere il nome dello spazio dei nomi radice del progetto. In questo modo si riduce la possibilità di involontariamente unire gli elementi di programmazione a quelli degli spazi dei nomi esistenti. Per ulteriori informazioni, vedere la sezione "Global (parola chiave) in nomi completi" in [spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
- `Global` la parola chiave può essere utilizzata in un'istruzione dello spazio dei nomi.  Ciò consente di definire uno spazio dei nomi dallo spazio dei nomi radice del progetto.  Per ulteriori informazioni, vedere “parola chiave globale la sezione in istruzioni dello spazio dei nomi„ in [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Il `Global` parola chiave può essere utilizzata anche in un'istruzione Namespace. Ciò consente di definire uno spazio dei nomi all'esterno dello spazio dei nomi radice del progetto. Per ulteriori informazioni, vedere la sezione "Parola chiave Global in istruzioni Namespace" [spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
- **Risoluzione dei problemi.** Lo spazio dei nomi di primo livello può condurre a concatenazioni impreviste di nomi degli spazi dei nomi.  Se si fa riferimento agli spazi dei nomi definiti all'esterno del progetto, il compilatore di Visual Basic può interpretarli come spazi dei nomi annidati nello spazio dei nomi di primo livello.  In casi di questo tipo, il compilatore non riconosce i tipi che sono già stati definiti negli spazi dei nomi esterni.  Per evitare questo problema, impostare lo spazio dei nomi radice con un valore null come descritto in “nello spazio dei nomi radice,„ o utilizzare `Global` parola chiave per accedere agli elementi degli spazi dei nomi esterni.  
+ **Risoluzione dei problemi.** Lo spazio dei nomi radice può causare impreviste concatenazioni di spazi dei nomi. Se si fa riferimento a spazi dei nomi definiti all'esterno del progetto, il compilatore Visual Basic può interpretarli come spazi dei nomi annidati nello spazio dei nomi radice. In tal caso, il compilatore non riconosce tutti i tipi che sono stati già definiti negli spazi dei nomi esterno. Per evitare questo problema, impostare lo spazio dei nomi radice per un valore null come descritto in "Radice Namespace" oppure utilizzare il `Global` (parola chiave) per accedere agli elementi di spazi dei nomi esterni.  
   
-## Attributi e modificatori  
- Non è possibile applicare gli attributi a uno spazio dei nomi.  Un attributo fornisce informazioni ai metadati dell'assembly, che non è significativo per i classificatori di origine come gli spazi dei nomi.  
+## <a name="attributes-and-modifiers"></a>Gli attributi e modificatori  
+ Non è possibile applicare attributi per uno spazio dei nomi. Un attributo fornisce informazioni per i metadati dell'assembly, che non è significativa per classificatori di origine, ad esempio spazi dei nomi.  
   
- Non è possibile applicare modificatori di accesso o di routine o qualsiasi altro modificatore a uno spazio dei nomi.  Poiché non si tratta di un tipo, questi modificatori non sono significativi.  
+ Non è possibile applicare qualsiasi accesso o modificatori di routine o altri modificatori, uno spazio dei nomi. Perché non è un tipo, questi modificatori non sono significativi.  
   
-## Esempio  
- Nell'esempio illustrato di seguito vengono dichiarati due spazi dei nomi, uno annidato nell'altro.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente dichiara due spazi dei nomi nidificati l'uno in altro.  
   
  [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
   
-## Esempio  
- Nell'esempio illustrato di seguito vengono dichiarati più spazi dei nomi annidati in un'unica riga in modo equivalente all'esempio precedente.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente dichiara più spazi dei nomi annidati in una singola riga, ed è equivalente all'esempio precedente.  
   
  [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
   
-## Esempio  
- Nell'esempio illustrato di seguito si accede alla classe definita negli esempi precedenti.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente accede alla classe definita negli esempi precedenti.  
   
  [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
   
-## Esempio  
- Nell'esempio seguente viene definito lo scheletro di una nuova classe elenco e viene aggiunta questa classe allo spazio dei nomi <xref:System.Collections.Generic?displayProperty=fullName>.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene definito lo scheletro di una nuova classe di elenco generico e lo aggiunge al <xref:System.Collections.Generic?displayProperty=nameWithType> dello spazio dei nomi.  
   
 ```vb  
 Namespace System.Collections.Generic  
@@ -110,7 +108,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## Vedere anche  
- [Imports Statement \(.NET Namespace and Type\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Istruzione Imports (tipo e spazio dei nomi .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [Nomi di elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  [Spazi dei nomi in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
