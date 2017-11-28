@@ -1,42 +1,45 @@
 ---
-title: "Procedura: disporre i form figlio MDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "form figlio, disposizione"
-  - "MDI, disposizione di form figlio"
+title: 'Procedura: disporre i form figlio MDI'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- child forms [Windows Forms], arranging
+- MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5273327c283f873352f62462cc4be59e4b34351f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: disporre i form figlio MDI
-Le applicazioni hanno spesso dei comandi di menu per azioni quali Affianca, Sovrapponi e Disponi che controllano il layout dei form figlio MDI aperti.  È possibile usare il metodo <xref:System.Windows.Forms.Form.LayoutMdi%2A> con uno dei valori di enumerazione <xref:System.Windows.Forms.MdiLayout> per ridisporre i form figlio in un form padre MDI.  
+# <a name="how-to-arrange-mdi-child-forms"></a><span data-ttu-id="e2b76-102">Procedura: disporre i form figlio MDI</span><span class="sxs-lookup"><span data-stu-id="e2b76-102">How to: Arrange MDI Child Forms</span></span>
+<span data-ttu-id="e2b76-103">Le applicazioni hanno spesso dei comandi di menu per azioni quali Affianca, Sovrapponi e Disponi che controllano il layout dei form figlio MDI aperti.</span><span class="sxs-lookup"><span data-stu-id="e2b76-103">Often, applications will have menu commands for actions such as Tile, Cascade, and Arrange, which control the layout of the open MDI child forms.</span></span> <span data-ttu-id="e2b76-104">È possibile usare il metodo <xref:System.Windows.Forms.Form.LayoutMdi%2A> con uno dei valori di enumerazione <xref:System.Windows.Forms.MdiLayout> per ridisporre i form figlio in un form padre MDI.</span><span class="sxs-lookup"><span data-stu-id="e2b76-104">You can use the <xref:System.Windows.Forms.Form.LayoutMdi%2A> method with one of the <xref:System.Windows.Forms.MdiLayout> enumeration values to rearrange the child forms in an MDI parent form.</span></span>  
   
- I valori di enumerazione <xref:System.Windows.Forms.MdiLayout> visualizzano i form figlio sovrapposti, affiancati orizzontalmente o verticalmente o sotto forma di icone disposte nella parte inferiore del form MDI.  Questi valori hanno lo stesso effetto dei comandi Windows corrispondenti, **Sovrapponi le finestre**, **Mostra le finestre affiancate**, **Mostra le finestre in pila** e **Mostra desktop**.  
+ <span data-ttu-id="e2b76-105">I valori di enumerazione <xref:System.Windows.Forms.MdiLayout> visualizzano i form figlio sovrapposti, affiancati orizzontalmente o verticalmente o sotto forma di icone disposte nella parte inferiore del form MDI.</span><span class="sxs-lookup"><span data-stu-id="e2b76-105">The <xref:System.Windows.Forms.MdiLayout> enumeration values display child forms as cascading, as horizontally or vertically tiled, or as child form icons arranged along the lower portion of the MDI form.</span></span> <span data-ttu-id="e2b76-106">Questi valori hanno lo stesso effetto dei comandi di Windows **Sovrapponi finestre**, **Mostra le finestre affiancate**, **Mostra le finestre in pila**, e **Mostra il desktop** , rispettivamente.</span><span class="sxs-lookup"><span data-stu-id="e2b76-106">These values have the same effect as the Windows commands **Cascade windows**, **Show windows side by side**, **Show windows stacked**, and **Show the desktop**, respectively.</span></span>  
   
- Spesso questi metodi vengono usati come gestori eventi chiamati da un evento della voce di menu <xref:System.Windows.Forms.Control.Click>.  In questo modo, una voce di menu con testo "Sovrapponi le finestre" può avere l'effetto desiderato sulle finestre figlio MDI.  
+ <span data-ttu-id="e2b76-107">Spesso questi metodi vengono usati come gestori eventi chiamati da un evento della voce di menu <xref:System.Windows.Forms.Control.Click>.</span><span class="sxs-lookup"><span data-stu-id="e2b76-107">Often, these methods are used as the event handlers called by a menu item's <xref:System.Windows.Forms.Control.Click> event.</span></span> <span data-ttu-id="e2b76-108">In questo modo, una voce di menu con testo "Sovrapponi le finestre" può avere l'effetto desiderato sulle finestre figlio MDI.</span><span class="sxs-lookup"><span data-stu-id="e2b76-108">In this way, a menu item with the text "Cascade Windows" can have the desired effect on the MDI child windows.</span></span>  
   
-### Per disporre i form figlio  
+### <a name="to-arrange-child-forms"></a><span data-ttu-id="e2b76-109">Per disporre i form figlio</span><span class="sxs-lookup"><span data-stu-id="e2b76-109">To arrange child forms</span></span>  
   
-1.  In un metodo usare il metodo <xref:System.Windows.Forms.Form.LayoutMdi%2A> per impostare l'enumerazione <xref:System.Windows.Forms.MdiLayout> per il form padre MDI.  Nel seguente esempio viene usato il valore di enumerazione <xref:System.Windows.Forms.MdiLayout?displayProperty=fullName> per le finestre figlio del form padre MDI \(`Form1`\).  L'enumerazione viene usata nel codice durante l'esecuzione del gestore eventi per l'evento <xref:System.Windows.Forms.Control.Click> della voce di menu **Sovrapponi le finestre**.  
+1.  <span data-ttu-id="e2b76-110">In un metodo usare il metodo <xref:System.Windows.Forms.Form.LayoutMdi%2A> per impostare l'enumerazione <xref:System.Windows.Forms.MdiLayout> per il form padre MDI.</span><span class="sxs-lookup"><span data-stu-id="e2b76-110">In a method, use the <xref:System.Windows.Forms.Form.LayoutMdi%2A> method to set the <xref:System.Windows.Forms.MdiLayout> enumeration for the MDI parent form.</span></span> <span data-ttu-id="e2b76-111">Nel seguente esempio viene usato il valore di enumerazione <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> per le finestre figlio del form padre MDI (`Form1`).</span><span class="sxs-lookup"><span data-stu-id="e2b76-111">The following example uses the <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> enumeration value for the child windows of the MDI parent form (`Form1`).</span></span> <span data-ttu-id="e2b76-112">L'enumerazione viene utilizzata nel codice durante il gestore eventi per il <xref:System.Windows.Forms.Control.Click> evento del **Sovrapponi le finestre** voce di menu.</span><span class="sxs-lookup"><span data-stu-id="e2b76-112">The enumeration is used in code during the event handler for the <xref:System.Windows.Forms.Control.Click> event of the **Cascade Windows** menu item.</span></span>  
   
     ```vb  
     Protected Sub CascadeWindows_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)  
        Me.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -46,17 +49,17 @@ Le applicazioni hanno spesso dei comandi di menu per azioni quali Affianca, Sovr
     ```  
   
     > [!NOTE]
-    >  È anche possibile affiancare le finestre e disporle sotto forma di icona modificando i valori di enumerazione <xref:System.Windows.Forms.MdiLayout> usati.  
+    >  <span data-ttu-id="e2b76-113">È anche possibile affiancare le finestre e disporle sotto forma di icona modificando i valori di enumerazione <xref:System.Windows.Forms.MdiLayout> usati.</span><span class="sxs-lookup"><span data-stu-id="e2b76-113">You can also tile windows and arranging windows as icons by changing the <xref:System.Windows.Forms.MdiLayout> enumeration value used.</span></span>  
   
-2.  Se si usa Visual C\#, inserire il codice seguente nel costruttore del form per registrare il gestore eventi.  
+2.  <span data-ttu-id="e2b76-114">Se si usa Visual C#, inserire il codice seguente nel costruttore del form per registrare il gestore eventi.</span><span class="sxs-lookup"><span data-stu-id="e2b76-114">If you’re using Visual C#, place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
     ```  
   
-## Vedere anche  
- [Applicazioni MDI \(Interfaccia a documenti multipli, Multiple\-Document Interface\)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)   
- [Procedura: creare form padre MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [Procedura: creare form figlio MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [Procedura: determinare il figlio MDI attivo](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)   
- [Procedura: inviare dati al figlio MDI attivo](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
+## <a name="see-also"></a><span data-ttu-id="e2b76-115">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e2b76-115">See Also</span></span>  
+ [<span data-ttu-id="e2b76-116">Applicazioni MDI (Interfaccia a documenti multipli, Multiple-Document Interface)</span><span class="sxs-lookup"><span data-stu-id="e2b76-116">Multiple-Document Interface (MDI) Applications</span></span>](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
+ [<span data-ttu-id="e2b76-117">Procedura: Creare form padre MDI</span><span class="sxs-lookup"><span data-stu-id="e2b76-117">How to: Create MDI Parent Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [<span data-ttu-id="e2b76-118">Procedura: Creare form figlio MDI</span><span class="sxs-lookup"><span data-stu-id="e2b76-118">How to: Create MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [<span data-ttu-id="e2b76-119">Procedura: Determinare il figlio MDI attivo</span><span class="sxs-lookup"><span data-stu-id="e2b76-119">How to: Determine the Active MDI Child</span></span>](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
+ [<span data-ttu-id="e2b76-120">Procedura: Inviare dati al figlio MDI attivo</span><span class="sxs-lookup"><span data-stu-id="e2b76-120">How to: Send Data to the Active MDI Child</span></span>](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)

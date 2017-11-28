@@ -1,81 +1,82 @@
 ---
-title: "Procedura: impostare formati di dati e stili di cella predefiniti per il controllo DataGridView di Windows Form utilizzando la finestra di progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "celle, impostazione di stili"
-  - "dati [Windows Form], impostazione di formati"
-  - "formati di dati"
-  - "DataGridView (controllo) [Windows Form], stili della cella"
+title: 'Procedura: impostare formati di dati e stili di cella predefiniti per il controllo DataGridView di Windows Form utilizzando la finestra di progettazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], cell styles
+- cells [Windows Forms], setting styles
+- data formats
+- data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 28f81efa3d9f63127ad9748aaba9ce3483246a69
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: impostare formati di dati e stili di cella predefiniti per il controllo DataGridView di Windows Form utilizzando la finestra di progettazione
-Per creare un effetto di tipo registro, il controllo <xref:System.Windows.Forms.DataGridView> consente di specificare gli stili predefiniti e i formati di dati delle celle per l'intero controllo, per specifiche colonne, per intestazioni di righe e colonne e per le righe alterne.  Gli stili predefiniti impostati per le colonne e per le righe alterne hanno la priorità sugli stili predefiniti impostati per l'intero controllo.  Inoltre, gli stili impostati nel codice per singole righe e celle hanno la priorità sugli stili predefiniti.  
+# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a><span data-ttu-id="2ac4f-102">Procedura: impostare formati di dati e stili di cella predefiniti per il controllo DataGridView di Windows Form utilizzando la finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="2ac4f-102">How to: Set Default Cell Styles and Data Formats for the Windows Forms DataGridView Control Using the Designer</span></span>
+<span data-ttu-id="2ac4f-103">Il <xref:System.Windows.Forms.DataGridView> controllo consente di specificare gli stili di cella predefiniti e formati di dati per l'intero controllo, per colonne specifiche, per le intestazioni di riga e colonna e per le righe per creare un effetto registro alterne.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-103">The <xref:System.Windows.Forms.DataGridView> control lets you specify default cell styles and cell data formats for the entire control, for specific columns, for row and column headers, and for alternating rows to create a ledger effect.</span></span> <span data-ttu-id="2ac4f-104">Gli stili predefiniti impostati per l'intero controllo vengono sostituiti dagli stili predefiniti impostati per le colonne e righe alterne.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-104">Default styles set for the entire control are overridden by default styles set for columns and alternating rows.</span></span> <span data-ttu-id="2ac4f-105">Inoltre, gli stili impostati nel codice per le singole righe e le celle sostituiranno gli stili predefiniti.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-105">Additionally, styles that you set in code for individual rows and cells override the default styles.</span></span>  
   
- Per ulteriori informazioni sugli stili delle celle, vedere [Stili della cella nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  Per impostare gli stili per le righe alterne, vedere [Procedura: impostare stili di righe alterne per il controllo DataGridView di Windows Form utilizzando la finestra di progettazione](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
+ <span data-ttu-id="2ac4f-106">Per ulteriori informazioni sugli stili di cella, vedere [stili della cella nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="2ac4f-106">For more information about cell styles, see [Cell Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).</span></span> <span data-ttu-id="2ac4f-107">Per impostare gli stili per le righe alterne, vedere [procedura: impostare stili di righe alterne per il controllo Windows Form DataGridView usando la finestra di progettazione](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md).</span><span class="sxs-lookup"><span data-stu-id="2ac4f-107">To set styles for alternating rows, see [How to: Set Alternating Row Styles for the Windows Forms DataGridView Control Using the Designer](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md).</span></span>  
   
- È possibili impostare gli stili anche utilizzando la proprietà <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> per controllare tutte le righe che verranno aggiunte al controllo.  Per ulteriori informazioni sul modello delle righe, vedere [Procedura: utilizzare il modello di riga personalizzare le righe nel controllo DataGridView di Windows Form](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md).  
+ <span data-ttu-id="2ac4f-108">È inoltre possibile impostare gli stili utilizzando il <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> proprietà per controllare tutte le righe che verranno aggiunti al controllo.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-108">You can also set styles using the <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> property to affect all rows that will be added to the control.</span></span> <span data-ttu-id="2ac4f-109">Per ulteriori informazioni sul modello di riga, vedere [procedura: utilizzare il modello di riga per personalizzare le righe nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md).</span><span class="sxs-lookup"><span data-stu-id="2ac4f-109">For more information about the row template, see [How to: Use the Row Template to Customize Rows in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md).</span></span>  
   
- Nelle seguenti procedure è richiesto un progetto **Applicazione Windows** con un form contenente un controllo <xref:System.Windows.Forms.DataGridView>.  Per informazioni sull'impostazione di tali progetti, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa) e [Procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
-  
-> [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-### Per impostare gli stili predefiniti per tutte le celle del controllo  
-  
-1.  Selezionare il controllo <xref:System.Windows.Forms.DataGridView> nella finestra di progettazione.  
-  
-2.  Nella finestra **Proprietà**, fare clic sul pulsante con i puntini di sospensione \(![Schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) accanto alla proprietà <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> o <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>.  Verrà visualizzata la finestra di dialogo **Generatore CellStyle**.  
-  
-3.  Definire lo stile impostando le proprietà e utilizzando il pannello **Anteprima** per confermare le scelte.  
+ <span data-ttu-id="2ac4f-110">Le procedure seguenti richiedono un **applicazione Windows** progetto con un form contenente un <xref:System.Windows.Forms.DataGridView> controllo.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-110">The following procedures require a **Windows Application** project with a form containing a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="2ac4f-111">Per informazioni sull'impostazione di un progetto, vedere [procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="2ac4f-111">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  Se sono attivati stili di visualizzazione, alle intestazioni di riga e colonna \(ad eccezione della proprietà <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>\) viene applicato automaticamente lo stile del tema corrente e viene eseguito l'override dei valori delle proprietà <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> e <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>.  
+>  <span data-ttu-id="2ac4f-112">Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-112">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="2ac4f-113">Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .</span><span class="sxs-lookup"><span data-stu-id="2ac4f-113">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="2ac4f-114">Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="2ac4f-114">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+  
+### <a name="to-set-default-styles-for-all-cells-in-the-control"></a><span data-ttu-id="2ac4f-115">Per impostare gli stili predefiniti per tutte le celle nel controllo</span><span class="sxs-lookup"><span data-stu-id="2ac4f-115">To set default styles for all cells in the control</span></span>  
+  
+1.  <span data-ttu-id="2ac4f-116">Selezionare il <xref:System.Windows.Forms.DataGridView> controllo nella finestra di progettazione.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-116">Select the <xref:System.Windows.Forms.DataGridView> control in the designer.</span></span>  
+  
+2.  <span data-ttu-id="2ac4f-117">Nel **proprietà** finestra, fare clic sul pulsante con i puntini di sospensione (![schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, o <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-117">In the **Properties** window, click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, or <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> property.</span></span> <span data-ttu-id="2ac4f-118">Il **Generatore CellStyle** viene visualizzata la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-118">The **CellStyle Builder** dialog box appears.</span></span>  
+  
+3.  <span data-ttu-id="2ac4f-119">Definire lo stile impostando le proprietà, utilizzando il **anteprima** riquadro per confermare le scelte.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-119">Define the style by setting the properties, using the **Preview** pane to confirm your choices.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="2ac4f-120">Se sono abilitati gli stili di visualizzazione, le intestazioni di riga e colonna (ad eccezione del <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) viene automaticamente applicato uno stile dal tema corrente, si esegue l'override di <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> e <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> i valori delle proprietà.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-120">If visual styles are enabled, the row and column headers (except for the <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) are automatically styled by the current theme, overriding the <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> and <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> property values.</span></span>  
 >   
->  Nella finestra di progettazione è possibile impostare gli stili delle celle per più controlli <xref:System.Windows.Forms.DataGridView> selezionati, ma solo se prevedono valori identici per la proprietà dello stile delle celle da modificare.  Se gli stili delle celle impostati per la proprietà differiscono, la finestra **Proprietà** del **Generatore CellStyle** sarà vuota.  
+>  <span data-ttu-id="2ac4f-121">È possibile impostare gli stili di cella per la selezione multipla <xref:System.Windows.Forms.DataGridView> controlla utilizzando la finestra di progettazione, ma solo se hanno valori identici per la proprietà di stile di cella che si desidera modificare.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-121">You can set cell styles for multiple selected <xref:System.Windows.Forms.DataGridView> controls using the designer, but only if they have identical values for the cell style property you want to modify.</span></span> <span data-ttu-id="2ac4f-122">Se uno o più stili differiscono per la proprietà, il **proprietà** windows del **Generatore CellStyle** la finestra di dialogo sarà vuota.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-122">If any cell styles differ for that property, the **Properties** windows of the **CellStyle Builder** dialog box will be blank.</span></span>  
   
-### Per impostare gli stili predefiniti per le celle in singole colonne  
+### <a name="to-set-default-styles-for-cells-in-individual-columns"></a><span data-ttu-id="2ac4f-123">Per impostare gli stili predefiniti per le celle nelle singole colonne</span><span class="sxs-lookup"><span data-stu-id="2ac4f-123">To set default styles for cells in individual columns</span></span>  
   
-1.  Fare clic con il pulsante destro del mouse sul controllo <xref:System.Windows.Forms.DataGridView> nella finestra di progettazione e scegliere **Modifica colonne**.  
+1.  <span data-ttu-id="2ac4f-124">Fare doppio clic su di <xref:System.Windows.Forms.DataGridView> controllare nella finestra di progettazione e scegliere **Modifica colonne**.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-124">Right-click the <xref:System.Windows.Forms.DataGridView> control in the designer and choose **Edit Columns**.</span></span>  
   
-2.  Selezionare una colonna dall'elenco **Colonne selezionate**.  
+2.  <span data-ttu-id="2ac4f-125">Selezionare una colonna dal **colonne selezionate** elenco.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-125">Select a column from the **Selected Columns** list.</span></span>  
   
-3.  Nella griglia **Proprietà colonne**, fare clic sul pulsante con i puntini di sospensione \(![Schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) accanto alla proprietà <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>.  Verrà visualizzata la finestra di dialogo **Generatore CellStyle**.  
+3.  <span data-ttu-id="2ac4f-126">Nel **proprietà colonna** griglia, fare clic sul pulsante con i puntini di sospensione (![schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-126">In the **Column Properties** grid, click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> property.</span></span> <span data-ttu-id="2ac4f-127">Il **Generatore CellStyle** viene visualizzata la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-127">The **CellStyle Builder** dialog box appears.</span></span>  
   
-4.  Definire lo stile impostando le proprietà e utilizzando il pannello **Anteprima** per confermare le scelte.  
+4.  <span data-ttu-id="2ac4f-128">Definire lo stile impostando le proprietà, utilizzando il **anteprima** riquadro per confermare le scelte.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-128">Define the style by setting the properties, using the **Preview** pane to confirm your choices.</span></span>  
   
-### Per impostare il formato dei dati nelle celle  
+### <a name="to-format-data-in-cells"></a><span data-ttu-id="2ac4f-129">Per formattare i dati delle celle</span><span class="sxs-lookup"><span data-stu-id="2ac4f-129">To format data in cells</span></span>  
   
-1.  Utilizzare una delle precedenti procedure per visualizzare una finestra di dialogo **Generatore CellStyle** relativa a una proprietà per lo stile predefinito delle celle.  
+1.  <span data-ttu-id="2ac4f-130">Utilizzare una delle procedure precedenti per visualizzare un **Generatore CellStyle** la finestra di dialogo correlate a una proprietà di stile di cella predefinito.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-130">Use one of the preceding procedures to display a **CellStyle Builder** dialog box related to a default cell style property.</span></span>  
   
-2.  Nella finestra di dialogo **Generatore CellStyle**, fare clic sul pulsante con i puntini di sospensione \(![Schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) accanto alla proprietà <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>.  Verrà visualizzata la finestra di dialogo **Stringa di formato**.  
+2.  <span data-ttu-id="2ac4f-131">Nel **Generatore CellStyle** finestra di dialogo fare clic sul pulsante con i puntini di sospensione (![schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) accanto al <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-131">In the **CellStyle Builder** dialog box, click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> property.</span></span> <span data-ttu-id="2ac4f-132">Il **stringa di formato** viene visualizzata la finestra di dialogo.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-132">The **Format String** dialog box appears.</span></span>  
   
-3.  Selezionare un tipo di formato, quindi modificare i dettagli del tipo, ad esempio il numero delle posizioni decimali da visualizzare, utilizzando la casella **Esempio** per confermare le scelte.  
+3.  <span data-ttu-id="2ac4f-133">Selezionare un tipo di formato, quindi modificare i dettagli del tipo (ad esempio il numero di posizioni decimali da visualizzare), utilizzando il **esempio** casella per confermare le scelte.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-133">Select a format type, then modify the details of the type (such as the number of decimal places to display), using the **Sample** box to confirm your choices.</span></span>  
   
-4.  Se il controllo <xref:System.Windows.Forms.DataGridView> deve essere associato a un'origine dati che probabilmente contiene valori null, compilare la casella di testo **Valore null**.  Tale valore viene visualizzato quando il valore della cella è uguale a un riferimento null \(`Nothing` in Visual Basic\) o <xref:System.DBNull.Value?displayProperty=fullName>.  
+4.  <span data-ttu-id="2ac4f-134">Se si desidera associare il <xref:System.Windows.Forms.DataGridView> controllo a un'origine dati che è probabile che contengono valori null, compilare il **valore Null** casella di testo.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-134">If you are binding the <xref:System.Windows.Forms.DataGridView> control to a data source that is likely to contain null values, fill in the **Null Value** text box.</span></span> <span data-ttu-id="2ac4f-135">Questo valore viene visualizzato quando il valore della cella è uguale a un riferimento null (`Nothing` in Visual Basic) o <xref:System.DBNull.Value?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2ac4f-135">This value is displayed when the cell value is equal to a null reference (`Nothing` in Visual Basic) or <xref:System.DBNull.Value?displayProperty=nameWithType>.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewCellStyle>   
- <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=fullName>   
- [Stili della cella nel controllo DataGridView Windows Form](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)   
- [Procedura: impostare stili di righe alterne per il controllo DataGridView di Windows Form utilizzando la finestra di progettazione](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa)   
- [Procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="2ac4f-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2ac4f-136">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>  
+ <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="2ac4f-137">Stili delle celle nel controllo DataGridView di Windows Form</span><span class="sxs-lookup"><span data-stu-id="2ac4f-137">Cell Styles in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="2ac4f-138">Procedura: Impostare stili di righe alterne per il controllo DataGridView di Windows Form usando la finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="2ac4f-138">How to: Set Alternating Row Styles for the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="2ac4f-139">Procedura: creare un progetto di applicazione Windows</span><span class="sxs-lookup"><span data-stu-id="2ac4f-139">How to: Create a Windows Application Project</span></span>](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [<span data-ttu-id="2ac4f-140">Procedura: Aggiungere controlli a un Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2ac4f-140">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

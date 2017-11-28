@@ -1,36 +1,42 @@
 ---
-title: "Procedura: controllare in modo interattivo un oggetto Clock | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "orologi, controllo in modo interattivo"
-  - "controllo degli orologi in modo interattivo"
+title: 'Procedura: controllare in modo interattivo un oggetto Clock'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controlling clocks interactively [WPF]
+- clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: debe65ef1587171dc2f324a19da4b43e7274c438
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: controllare in modo interattivo un oggetto Clock
-La proprietà <xref:System.Windows.Media.Animation.ClockController> di un oggetto <xref:System.Windows.Media.Animation.Clock> consente di avviare, sospendere, riprendere, cercare e arrestare l'oggetto clock, nonché di spostarlo alla fine del segmento di tempo.  Solo l'oggetto clock radice di una struttura ad albero delle temporizzazioni può essere controllato in modo interattivo.  
+# <a name="how-to-interactively-control-a-clock"></a><span data-ttu-id="3830c-102">Procedura: controllare in modo interattivo un oggetto Clock</span><span class="sxs-lookup"><span data-stu-id="3830c-102">How to: Interactively Control a Clock</span></span>
+<span data-ttu-id="3830c-103">Oggetto <xref:System.Windows.Media.Animation.Clock> dell'oggetto <xref:System.Windows.Media.Animation.ClockController> proprietà consente di in modo interattivo avviare, sospendere, riprendere, ricerca, spostare l'orologio al periodo di riempimento e arrestare l'orologio.</span><span class="sxs-lookup"><span data-stu-id="3830c-103">A <xref:System.Windows.Media.Animation.Clock> object's <xref:System.Windows.Media.Animation.ClockController> property enables you to interactively start, pause, resume, seek, advance the clock to its fill period, and stop the clock.</span></span> <span data-ttu-id="3830c-104">È possibile controllare in modo interattivo solo il clock radice di un struttura ad albero di temporizzazione.</span><span class="sxs-lookup"><span data-stu-id="3830c-104">Only the root clock of a timing tree can be interactively controlled.</span></span>  
   
 > [!NOTE]
->  Sono disponibili altre modalità per controllare in modo interattivo le animazioni che non richiedono l'utilizzo diretto di oggetti clock da parte dell'utente; ad esempio, è possibile utilizzare gli storyboard.  Gli storyboard sono supportati nel markup e nel codice.  Per un esempio, vedere [Animare una proprietà utilizzando uno storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) oppure [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+>  <span data-ttu-id="3830c-105">Esistono altri modi per in modo interattivo le animazioni di controllo che non richiedono di utilizzare direttamente i clock: è anche possibile usare gli storyboard.</span><span class="sxs-lookup"><span data-stu-id="3830c-105">There are other ways to interactively control animations that don't require you to work directly with clocks: you can also use Storyboards.</span></span> <span data-ttu-id="3830c-106">Gli storyboard sono supportati nel markup e codice.</span><span class="sxs-lookup"><span data-stu-id="3830c-106">Storyboards are supported in both markup and code.</span></span> <span data-ttu-id="3830c-107">Per un esempio, vedere [animazione di una proprietà utilizzando uno Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) o [panoramica dell'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span><span class="sxs-lookup"><span data-stu-id="3830c-107">For an example, see [Animate a Property by Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) or the [Animation Overview](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).</span></span>  
   
- Nell'esempio seguente vengono utilizzati vari pulsanti per controllare in modo interattivo clock dell'animazione.  
+ <span data-ttu-id="3830c-108">Nell'esempio seguente, molti pulsanti consentono di controllare in modo interattivo un orologio dell'animazione.</span><span class="sxs-lookup"><span data-stu-id="3830c-108">In the following example, several buttons are used to interactively control an animation clock.</span></span>  
   
-## Esempio  
+## <a name="example"></a><span data-ttu-id="3830c-109">Esempio</span><span class="sxs-lookup"><span data-stu-id="3830c-109">Example</span></span>  
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMClockControllerExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ClockControllerExample.cs#graphicsmmclockcontrollerexample)]
  [!code-vb[timingbehaviors_procedural_snip#GraphicsMMClockControllerExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/clockcontrollerexample.vb#graphicsmmclockcontrollerexample)]  
   
-## Vedere anche  
- [Animare una proprietà utilizzando uno storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)   
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3830c-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3830c-110">See Also</span></span>  
+ [<span data-ttu-id="3830c-111">Animare una proprietà utilizzando uno storyboard</span><span class="sxs-lookup"><span data-stu-id="3830c-111">Animate a Property by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
+ [<span data-ttu-id="3830c-112">Cenni preliminari sull'animazione</span><span class="sxs-lookup"><span data-stu-id="3830c-112">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

@@ -1,87 +1,93 @@
 ---
-title: "Panoramica sul controllo ToolTip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controlli, Descrizione comando"
-  - "ToolTip (controllo), informazioni sul controllo ToolTip"
+title: Panoramica sul controllo ToolTip
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ToolTip control [WPF], about ToolTip control
+- controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31bd56323e90368f850ae54854e6f50b63d5f7fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Panoramica sul controllo ToolTip
-Una descrizione comandi è una piccola finestra popup che viene visualizzata quando l'utente posiziona il puntatore del mouse su un elemento, ad esempio <xref:System.Windows.Controls.Button>.  In questo argomento viene definita la descrizione comandi e viene descritto come creare e personalizzare il relativo contenuto.  
+# <a name="tooltip-overview"></a><span data-ttu-id="c7da5-102">Panoramica sul controllo ToolTip</span><span class="sxs-lookup"><span data-stu-id="c7da5-102">ToolTip Overview</span></span>
+<span data-ttu-id="c7da5-103">Una descrizione comandi è una piccola finestra popup che viene visualizzato quando l'utente posiziona il puntatore del mouse su un elemento, ad esempio un <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="c7da5-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="c7da5-104">L'argomento introduce la descrizione comando e illustra come creare e personalizzare il relativo contenuto.</span><span class="sxs-lookup"><span data-stu-id="c7da5-104">This topic introduces the tooltip and discusses how to create and customize tooltip content.</span></span>  
   
-   
+ 
   
 <a name="what_is_a_tooltip"></a>   
-## Definizione di descrizione comandi  
- Quando un utente sposta il puntatore del mouse su un elemento associato a una descrizione comandi, viene visualizzata una finestra con il relativo contenuto \(ad esempio contenuto di testo in cui viene descritta la funzione di un controllo\) per un intervallo di tempo specificato.  Se l'utente rimuove il puntatore del mouse dal controllo, la finestra scompare perché il contenuto della descrizione comandi non può ricevere lo stato attivo.  
+## <a name="what-is-a-tooltip"></a><span data-ttu-id="c7da5-105">Che cos'è una descrizione comando?</span><span class="sxs-lookup"><span data-stu-id="c7da5-105">What Is a Tooltip?</span></span>  
+ <span data-ttu-id="c7da5-106">Quando si sposta il puntatore del mouse su un elemento per cui esiste una descrizione comando, viene visualizzata una finestra con contenuto relativo all'elemento (ad esempio, testo che descrive la funzione di un controllo) per un periodo di tempo specificato.</span><span class="sxs-lookup"><span data-stu-id="c7da5-106">When a user moves the mouse pointer over an element that has a tooltip, a window that contains tooltip content (for example, text content that describes the function of a control) appears for a specified amount of time.</span></span> <span data-ttu-id="c7da5-107">Se si sposta il puntatore del mouse all'esterno del controllo, la finestra scompare perché il contenuto della descrizione comando non può ricevere lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="c7da5-107">If the user moves the mouse pointer away from the control, the window disappears because the tooltip content cannot receive focus.</span></span>  
   
- Il contenuto di una descrizione comandi può essere costituito da una o più righe di testo, immagini, forme o altro contenuto visivo.  Per definire una descrizione comandi per un controllo, impostare una delle proprietà seguenti sul contenuto della descrizione comandi.  
+ <span data-ttu-id="c7da5-108">Il contenuto di una descrizione comando può essere costituito da una o più righe di testo, immagini, forme o altro contenuto visivo.</span><span class="sxs-lookup"><span data-stu-id="c7da5-108">The content of a tooltip can contain one or more lines of text, images, shapes, or other visual content.</span></span> <span data-ttu-id="c7da5-109">Per definire una descrizione comando per un controllo, impostare una delle proprietà seguenti sul contenuto della descrizione comando.</span><span class="sxs-lookup"><span data-stu-id="c7da5-109">You define a tooltip for a control by setting one of the following properties to the tooltip content.</span></span>  
   
--   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=fullName>  
+-   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=fullName>  
+-   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
- La proprietà da utilizzare varia a seconda che il controllo che definisce la descrizione comandi erediti dalla classe <xref:System.Windows.FrameworkContentElement> o <xref:System.Windows.FrameworkElement>.  
+ <span data-ttu-id="c7da5-110">La proprietà da utilizzare varia a seconda se il controllo che definisce la descrizione comando eredita il <xref:System.Windows.FrameworkContentElement> o <xref:System.Windows.FrameworkElement> classe.</span><span class="sxs-lookup"><span data-stu-id="c7da5-110">Which property you use depends on whether the control that defines the tooltip inherits from the <xref:System.Windows.FrameworkContentElement> or <xref:System.Windows.FrameworkElement> class.</span></span>  
   
 <a name="create_tooltip"></a>   
-## Creazione di una descrizione comandi  
- Nell'esempio seguente viene illustrato come creare una semplice descrizione comandi impostando la proprietà <xref:System.Windows.FrameworkElement.ToolTip%2A> per un controllo <xref:System.Windows.Controls.Button> su una stringa di testo.  
+## <a name="creating-a-tooltip"></a><span data-ttu-id="c7da5-111">Creazione di una descrizione comando</span><span class="sxs-lookup"><span data-stu-id="c7da5-111">Creating a ToolTip</span></span>  
+ <span data-ttu-id="c7da5-112">Nell'esempio seguente viene illustrato come creare una semplice descrizione comandi impostando il <xref:System.Windows.FrameworkElement.ToolTip%2A> proprietà per un <xref:System.Windows.Controls.Button> controllo in una stringa di testo.</span><span class="sxs-lookup"><span data-stu-id="c7da5-112">The following example shows how to create a simple tooltip by setting the <xref:System.Windows.FrameworkElement.ToolTip%2A> property for a <xref:System.Windows.Controls.Button> control to a text string.</span></span>  
   
- [!code-xml[GroupBoxSnippet#ToolTipString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipstring)]  
+ [!code-xaml[GroupBoxSnippet#ToolTipString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipstring)]  
   
- È anche possibile definire una descrizione comandi come oggetto <xref:System.Windows.Controls.ToolTip>.  Nell'esempio seguente viene utilizzato [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per specificare un oggetto <xref:System.Windows.Controls.ToolTip> come descrizione comandi di un elemento <xref:System.Windows.Controls.TextBox>.  Si noti che l'oggetto <xref:System.Windows.Controls.ToolTip> viene specificato impostando la proprietà <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=fullName>.  
+ <span data-ttu-id="c7da5-113">È inoltre possibile definire una descrizione comandi come un <xref:System.Windows.Controls.ToolTip> oggetto.</span><span class="sxs-lookup"><span data-stu-id="c7da5-113">You can also define a tooltip as a <xref:System.Windows.Controls.ToolTip> object.</span></span> <span data-ttu-id="c7da5-114">L'esempio seguente usa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] per specificare un <xref:System.Windows.Controls.ToolTip> oggetto come descrizione comando di un <xref:System.Windows.Controls.TextBox> elemento.</span><span class="sxs-lookup"><span data-stu-id="c7da5-114">The following example uses [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] to specify a <xref:System.Windows.Controls.ToolTip> object as the tooltip of a <xref:System.Windows.Controls.TextBox> element.</span></span> <span data-ttu-id="c7da5-115">Si noti che nell'esempio viene specificato il <xref:System.Windows.Controls.ToolTip> impostando il <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType> proprietà.</span><span class="sxs-lookup"><span data-stu-id="c7da5-115">Note that the example specifies the <xref:System.Windows.Controls.ToolTip> by setting the <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType> property.</span></span>  
   
- [!code-xml[ToolTipSimple#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#tooltip)]  
+ [!code-xaml[ToolTipSimple#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#tooltip)]  
   
- Nell'esempio seguente viene utilizzato codice per generare un oggetto <xref:System.Windows.Controls.ToolTip>.  Viene creato un oggetto <xref:System.Windows.Controls.ToolTip> \(`tt`\) che viene associato a un oggetto <xref:System.Windows.Controls.Button>.  
+ <span data-ttu-id="c7da5-116">Nell'esempio seguente viene utilizzato codice per generare un <xref:System.Windows.Controls.ToolTip> oggetto.</span><span class="sxs-lookup"><span data-stu-id="c7da5-116">The following example uses code to generate a <xref:System.Windows.Controls.ToolTip> object.</span></span> <span data-ttu-id="c7da5-117">Nell'esempio viene creato un <xref:System.Windows.Controls.ToolTip> (`tt`) e lo associa a un <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="c7da5-117">The example creates a <xref:System.Windows.Controls.ToolTip> (`tt`) and associates it with a <xref:System.Windows.Controls.Button>.</span></span>  
   
  [!code-csharp[ToolTipSimple#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml.cs#2)]
  [!code-vb[ToolTipSimple#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipSimple/VisualBasic/Window1.xaml.vb#2)]  
   
- È anche possibile creare contenuto della descrizione comandi non definito come oggetto <xref:System.Windows.Controls.ToolTip> racchiudendo tale contenuto in un elemento di layout, ad esempio <xref:System.Windows.Controls.DockPanel>.  Nell'esempio seguente viene illustrato come impostare la proprietà <xref:System.Windows.FrameworkElement.ToolTip%2A> di un oggetto <xref:System.Windows.Controls.TextBox> sul contenuto racchiuso in un controllo <xref:System.Windows.Controls.DockPanel>.  
+ <span data-ttu-id="c7da5-118">È inoltre possibile creare il contenuto della descrizione comandi che non è definito come un <xref:System.Windows.Controls.ToolTip> oggetto racchiudendo il contenuto in un elemento di layout, ad esempio un <xref:System.Windows.Controls.DockPanel>.</span><span class="sxs-lookup"><span data-stu-id="c7da5-118">You can also create tooltip content that is not defined as a <xref:System.Windows.Controls.ToolTip> object by enclosing the tooltip content in a layout element, such as a <xref:System.Windows.Controls.DockPanel>.</span></span> <span data-ttu-id="c7da5-119">Nell'esempio seguente viene illustrato come impostare il <xref:System.Windows.FrameworkElement.ToolTip%2A> proprietà di un <xref:System.Windows.Controls.TextBox> al contenuto che è racchiuso tra un <xref:System.Windows.Controls.DockPanel> controllo.</span><span class="sxs-lookup"><span data-stu-id="c7da5-119">The following example shows how to set the <xref:System.Windows.FrameworkElement.ToolTip%2A> property of a <xref:System.Windows.Controls.TextBox> to content that is enclosed in a <xref:System.Windows.Controls.DockPanel> control.</span></span>  
   
- [!code-xml[GroupBoxSnippet#ToolTipDockPanel](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipdockpanel)]  
+ [!code-xaml[GroupBoxSnippet#ToolTipDockPanel](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipdockpanel)]  
   
 <a name="Using_the_ToolTip_and_ToolTipService_Properties"></a>   
-## Utilizzo delle proprietà delle classi ToolTip e ToolTipService  
- È possibile personalizzare il contenuto della descrizione comandi impostando proprietà visive e applicando stili.  Se il contenuto della descrizione comandi viene definito come oggetto <xref:System.Windows.Controls.ToolTip>, è possibile impostare le proprietà visive dell'oggetto <xref:System.Windows.Controls.ToolTip>.  In caso contrario, è necessario impostare [proprietà connesse](GTMT) equivalenti sulla classe <xref:System.Windows.Controls.ToolTipService>.  
+## <a name="using-the-properties-of-the-tooltip-and-tooltipservice-classes"></a><span data-ttu-id="c7da5-120">Uso delle proprietà delle classi ToolTip e ToolTipService</span><span class="sxs-lookup"><span data-stu-id="c7da5-120">Using the Properties of the ToolTip and ToolTipService Classes</span></span>  
+ <span data-ttu-id="c7da5-121">È possibile personalizzare il contenuto della descrizione comando impostando proprietà visive e applicando stili.</span><span class="sxs-lookup"><span data-stu-id="c7da5-121">You can customize tooltip content by setting visual properties and applying styles.</span></span> <span data-ttu-id="c7da5-122">Se si definisce la descrizione comando contenuta come un <xref:System.Windows.Controls.ToolTip> dell'oggetto, è possibile impostare le proprietà visive del <xref:System.Windows.Controls.ToolTip> oggetto.</span><span class="sxs-lookup"><span data-stu-id="c7da5-122">If you define the tooltip content as a <xref:System.Windows.Controls.ToolTip> object, you can set the visual properties of the <xref:System.Windows.Controls.ToolTip> object.</span></span> <span data-ttu-id="c7da5-123">In caso contrario, è necessario impostare le proprietà associate equivalente nel <xref:System.Windows.Controls.ToolTipService> classe.</span><span class="sxs-lookup"><span data-stu-id="c7da5-123">Otherwise, you must set equivalent attached properties on the <xref:System.Windows.Controls.ToolTipService> class.</span></span>  
   
- Per un esempio di come impostare le proprietà per specificare la posizione del contenuto della descrizione comandi utilizzando le proprietà <xref:System.Windows.Controls.ToolTip> e <xref:System.Windows.Controls.ToolTipService>, vedere [Posizionare un oggetto ToolTip](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).  
+ <span data-ttu-id="c7da5-124">Per un esempio di come impostare le proprietà per specificare la posizione del contenuto della descrizione comandi utilizzando il <xref:System.Windows.Controls.ToolTip> e <xref:System.Windows.Controls.ToolTipService> proprietà, vedere [posizionare una descrizione comandi](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).</span><span class="sxs-lookup"><span data-stu-id="c7da5-124">For an example of how to set properties in order to specify the position of tooltip content by using the <xref:System.Windows.Controls.ToolTip> and <xref:System.Windows.Controls.ToolTipService> properties, see [Position a ToolTip](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).</span></span>  
   
 <a name="StylingToolTip"></a>   
-## Applicazione di stili a una descrizione comandi  
- È possibile applicare uno stile a un oggetto <xref:System.Windows.Controls.ToolTip> definendo un oggetto <xref:System.Windows.Style> personalizzato.  Nell'esempio seguente viene definito un oggetto <xref:System.Windows.Style> denominato `Simple` che illustra come eseguire l'offset del posizionamento dell'oggetto <xref:System.Windows.Controls.ToolTip> e come modificarne l'aspetto impostando <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A> e <xref:System.Windows.Controls.Control.FontWeight%2A>.  
+## <a name="styling-a-tooltip"></a><span data-ttu-id="c7da5-125">Applicazione di stili a una descrizione comando</span><span class="sxs-lookup"><span data-stu-id="c7da5-125">Styling a ToolTip</span></span>  
+ <span data-ttu-id="c7da5-126">Puoi applicare stili a un <xref:System.Windows.Controls.ToolTip> definendo una classe personalizzata <xref:System.Windows.Style>.</span><span class="sxs-lookup"><span data-stu-id="c7da5-126">You can style a <xref:System.Windows.Controls.ToolTip> by defining a custom <xref:System.Windows.Style>.</span></span> <span data-ttu-id="c7da5-127">L'esempio seguente definisce un <xref:System.Windows.Style> chiamato `Simple` che mostra come la posizione di offset il <xref:System.Windows.Controls.ToolTip> e modificarne l'aspetto impostando il <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, e <xref:System.Windows.Controls.Control.FontWeight%2A>.</span><span class="sxs-lookup"><span data-stu-id="c7da5-127">The following example defines a <xref:System.Windows.Style> called `Simple` that shows how to offset the placement of the <xref:System.Windows.Controls.ToolTip> and change its appearance by setting the <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, and <xref:System.Windows.Controls.Control.FontWeight%2A>.</span></span>  
   
- [!code-xml[ToolTipSimple#Style](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#style)]  
+ [!code-xaml[ToolTipSimple#Style](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#style)]  
   
 <a name="UsingtheToolTipServiceTimeIntervalProperties"></a>   
-## Utilizzo delle proprietà di ToolTipService relative all'intervallo di tempo  
- La classe <xref:System.Windows.Controls.ToolTipService> fornisce le proprietà seguenti per impostare i tempi di visualizzazione della descrizione comandi: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> e <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
+## <a name="using-the-time-interval-properties-of-tooltipservice"></a><span data-ttu-id="c7da5-128">Uso delle proprietà di ToolTipService relative all'intervallo di tempo</span><span class="sxs-lookup"><span data-stu-id="c7da5-128">Using the Time Interval Properties of ToolTipService</span></span>  
+ <span data-ttu-id="c7da5-129">Il <xref:System.Windows.Controls.ToolTipService> classe fornisce le proprietà seguenti per impostare una descrizione comando i tempi di visualizzazione: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, e <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.</span><span class="sxs-lookup"><span data-stu-id="c7da5-129">The <xref:System.Windows.Controls.ToolTipService> class provides the following properties for you to set tooltip display times: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, and <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.</span></span>  
   
- Utilizzare le proprietà <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> e <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> per specificare un ritardo, in genere breve, prima che venga visualizzato un oggetto <xref:System.Windows.Controls.ToolTip> e anche per specificare la durata della visualizzazione di <xref:System.Windows.Controls.ToolTip>.  Per ulteriori informazioni, vedere [How to: Delay the Display of a ToolTip](http://msdn.microsoft.com/it-it/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ <span data-ttu-id="c7da5-130">Utilizzare il <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> e <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> le proprietà per specificare un ritardo, in genere breve, prima che un <xref:System.Windows.Controls.ToolTip> viene visualizzata e anche per specificare per quanto tempo un <xref:System.Windows.Controls.ToolTip> rimane visibile.</span><span class="sxs-lookup"><span data-stu-id="c7da5-130">Use the <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> and <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> properties to specify a delay, typically brief, before a <xref:System.Windows.Controls.ToolTip> appears and also to specify how long a <xref:System.Windows.Controls.ToolTip> remains visible.</span></span> <span data-ttu-id="c7da5-131">Per altre informazioni, vedere [Procedura: ritardare la visualizzazione di un oggetto ToolTip](http://msdn.microsoft.com/en-us/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).</span><span class="sxs-lookup"><span data-stu-id="c7da5-131">For more information, see [How to: Delay the Display of a ToolTip](http://msdn.microsoft.com/en-us/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).</span></span>  
   
- La proprietà <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> determina se le descrizioni comandi di controlli diversi vengono visualizzate senza un ritardo iniziale quando il puntatore del mouse viene spostato rapidamente da uno all'altro.  Per ulteriori informazioni sulla proprietà <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, vedere [Utilizzare la proprietà BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
+ <span data-ttu-id="c7da5-132">Il <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> proprietà determina se le descrizioni comandi per controlli diversi senza un ritardo iniziale quando il puntatore del mouse si sposta rapidamente tra di essi.</span><span class="sxs-lookup"><span data-stu-id="c7da5-132">The <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> property determines if tooltips for different controls appear without an initial delay when you move the mouse pointer quickly between them.</span></span> <span data-ttu-id="c7da5-133">Per ulteriori informazioni sul <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> proprietà, vedere [utilizzare la proprietà BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).</span><span class="sxs-lookup"><span data-stu-id="c7da5-133">For more information about the <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> property, see [Use the BetweenShowDelay Property](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).</span></span>  
   
- Nell'esempio seguente viene illustrato come impostare queste proprietà per una descrizione comandi.  
+ <span data-ttu-id="c7da5-134">L'esempio seguente mostra come impostare queste proprietà per una descrizione comando.</span><span class="sxs-lookup"><span data-stu-id="c7da5-134">The following example shows how to set these properties for a tooltip.</span></span>  
   
- [!code-xml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
+ [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
-## Vedere anche  
- <xref:System.Windows.Controls.ToolTipService>   
- <xref:System.Windows.Controls.ToolTip>   
- <xref:System.Windows.Controls.ToolTipEventArgs>   
- <xref:System.Windows.Controls.ToolTipEventHandler>   
- [Procedure relative](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="c7da5-135">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c7da5-135">See Also</span></span>  
+ <xref:System.Windows.Controls.ToolTipService>  
+ <xref:System.Windows.Controls.ToolTip>  
+ <xref:System.Windows.Controls.ToolTipEventArgs>  
+ <xref:System.Windows.Controls.ToolTipEventHandler>  
+ [<span data-ttu-id="c7da5-136">Procedure relative</span><span class="sxs-lookup"><span data-stu-id="c7da5-136">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)

@@ -1,64 +1,65 @@
 ---
-title: "Procedura: aggiungere pulsanti a un controllo ToolBar mediante la finestra di progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "esempi [Windows Form], barre degli strumenti"
-  - "ToolBar (controllo) [Windows Form], aggiunta di pulsanti"
-  - "ToolBar (controllo) [Windows Form], aggiunta di menu a discesa"
-  - "ToolBar (controllo) [Windows Form], aggiunta di separatori"
-  - "barre degli strumenti [Windows Form], aggiunta di pulsanti"
+title: 'Procedura: aggiungere pulsanti a un controllo ToolBar mediante la finestra di progettazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Windows Forms], adding buttons
+- ToolBar control [Windows Forms], adding buttons
+- ToolBar control [Windows Forms], adding separators
+- examples [Windows Forms], toolbars
+- ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0ecc0fce00dbef1f5b91aad16f32cb7dd7759ac8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: aggiungere pulsanti a un controllo ToolBar mediante la finestra di progettazione
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a><span data-ttu-id="9470e-102">Procedura: aggiungere pulsanti a un controllo ToolBar mediante la finestra di progettazione</span><span class="sxs-lookup"><span data-stu-id="9470e-102">How to: Add Buttons to a ToolBar Control Using the Designer</span></span>
 > [!NOTE]
->  Benché il controllo <xref:System.Windows.Forms.ToolStrip> sostituisca il controllo <xref:System.Windows.Forms.ToolBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ToolBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale utilizzo futuro.  
+>  <span data-ttu-id="9470e-103">Benché il controllo <xref:System.Windows.Forms.ToolStrip> sostituisca il controllo <xref:System.Windows.Forms.ToolBar> aggiungendovi funzionalità, il controllo <xref:System.Windows.Forms.ToolBar> viene mantenuto per compatibilità con le versioni precedenti e per un eventuale uso futuro.</span><span class="sxs-lookup"><span data-stu-id="9470e-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- Una parte integrante del controllo <xref:System.Windows.Forms.ToolBar> è costituita dai pulsanti che vi vengono aggiunti.  Questi pulsanti possono essere utilizzati per semplificare l'accesso ai comandi di menu oppure possono essere posizionati in un'altra area dell'interfaccia utente dell'applicazione per esporre agli utenti i comandi che non sono disponibili nella struttura di menu.  
+ <span data-ttu-id="9470e-104">Parte integrante di <xref:System.Windows.Forms.ToolBar> i pulsanti e aggiungervi è.</span><span class="sxs-lookup"><span data-stu-id="9470e-104">An integral part of the <xref:System.Windows.Forms.ToolBar> control is the buttons you add to it.</span></span> <span data-ttu-id="9470e-105">Possono essere usati per fornire facile accesso ai comandi di menu o, in alternativa, possono essere posizionati in un'altra area dell'interfaccia utente dell'applicazione per esporre i comandi per gli utenti che non sono disponibili nella struttura di menu.</span><span class="sxs-lookup"><span data-stu-id="9470e-105">These can be used to provide easy access to menu commands or, alternately, they can be placed in another area of the user interface of your application to expose commands to your users that are not available in the menu structure.</span></span>  
   
- Nella seguente procedura è richiesto un progetto **Applicazione Windows** con un form contenente un controllo <xref:System.Windows.Forms.ToolBar>.  Per informazioni sull'impostazione di tali progetti, vedere [How to: Create a Windows Application Project](http://msdn.microsoft.com/it-it/b2f93fed-c635-4705-8d0e-cf079a264efa) e [Procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ <span data-ttu-id="9470e-106">La procedura seguente richiede un **applicazione Windows** progetto con un form contenente un <xref:System.Windows.Forms.ToolBar> controllo.</span><span class="sxs-lookup"><span data-stu-id="9470e-106">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.ToolBar> control.</span></span> <span data-ttu-id="9470e-107">Per informazioni sull'impostazione di un progetto, vedere [procedura: creare un progetto di applicazione Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) e [procedura: aggiungere controlli a un Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="9470e-107">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  È possibile che le finestre di dialogo e i comandi di menu visualizzati siano diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/esporta impostazioni** dal menu **Strumenti**.  Per ulteriori informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="9470e-108">Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.</span><span class="sxs-lookup"><span data-stu-id="9470e-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="9470e-109">Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .</span><span class="sxs-lookup"><span data-stu-id="9470e-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="9470e-110">Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="9470e-110">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Per aggiungere pulsanti in fase di progettazione  
+### <a name="to-add-buttons-at-design-time"></a><span data-ttu-id="9470e-111">Per aggiungere i pulsanti in fase di progettazione</span><span class="sxs-lookup"><span data-stu-id="9470e-111">To add buttons at design time</span></span>  
   
-1.  Fare clic sul controllo <xref:System.Windows.Forms.ToolBar>.  
+1.  <span data-ttu-id="9470e-112">Selezionare il controllo <xref:System.Windows.Forms.ToolBar>.</span><span class="sxs-lookup"><span data-stu-id="9470e-112">Select the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
-2.  Nella finestra **Proprietà** fare clic sulla proprietà <xref:System.Windows.Forms.ToolBar.Buttons%2A> per selezionarla, quindi fare clic sul pulsante con i **puntini di sospensione** \(![Schermata VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) per aprire l'**Editor della raccolta ToolBarButton**.  
+2.  <span data-ttu-id="9470e-113">Nel **proprietà** finestra, fare clic su di <xref:System.Windows.Forms.ToolBar.Buttons%2A> proprietà per selezionarlo, quindi fare clic sul **i puntini di sospensione** (![schermata VisualStudioEllipsesButton] (../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) per aprire la **insieme ToolBarButton**.</span><span class="sxs-lookup"><span data-stu-id="9470e-113">In the **Properties** window, click the <xref:System.Windows.Forms.ToolBar.Buttons%2A> property to select it and click the **Ellipsis** (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) button to open the **ToolBarButton Collection Editor**.</span></span>  
   
-3.  Utilizzare i pulsanti **Aggiungi** e **Rimuovi** per aggiungere e rimuovere pulsanti dal controllo <xref:System.Windows.Forms.ToolBar>.  
+3.  <span data-ttu-id="9470e-114">Utilizzare il **Aggiungi** e **rimuovere** pulsanti per aggiungere e rimuovere i pulsanti dal <xref:System.Windows.Forms.ToolBar> controllo.</span><span class="sxs-lookup"><span data-stu-id="9470e-114">Use the **Add** and **Remove** buttons to add and remove buttons from the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
-4.  Configurare le proprietà dei singoli pulsanti nella finestra **Proprietà** visualizzata nel riquadro sul lato destro dell'editor.  Nella tabella riportata di seguito sono indicate alcune importanti proprietà di cui tenere conto.  
+4.  <span data-ttu-id="9470e-115">Configurare le proprietà dei singoli pulsanti il **proprietà** finestra che viene visualizzata nel riquadro a destra dell'editor.</span><span class="sxs-lookup"><span data-stu-id="9470e-115">Configure the properties of the individual buttons in the **Properties** window that appears in the pane on the right side of the editor.</span></span> <span data-ttu-id="9470e-116">Nella tabella seguente mostra alcune proprietà importanti da considerare.</span><span class="sxs-lookup"><span data-stu-id="9470e-116">The following table shows some important properties to consider.</span></span>  
   
-    |Proprietà|Descrizione|  
-    |---------------|-----------------|  
-    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|Imposta il menu da visualizzare nel pulsante a discesa della barra degli strumenti.  La proprietà <xref:System.Windows.Forms.ToolBarButton.Style%2A> del pulsante della barra degli strumenti deve essere impostata su <xref:System.Windows.Forms.ToolBarButtonStyle>.  Questa proprietà accetta un'istanza della classe <xref:System.Windows.Forms.ContextMenu> come riferimento.|  
-    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|Imposta se un pulsante della barra degli strumenti per l'attivazione\/disattivazione dello stile è parzialmente premuto.  La proprietà <xref:System.Windows.Forms.ToolBarButton.Style%2A> del pulsante della barra degli strumenti deve essere impostata su <xref:System.Windows.Forms.ToolBarButtonStyle>.|  
-    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|Imposta se un pulsante di barra degli strumenti per l'attivazione\/disattivazione dello stile è attualmente premuto.  La proprietà <xref:System.Windows.Forms.ToolBarButton.Style%2A> del pulsante della barra degli strumenti deve essere impostata su <xref:System.Windows.Forms.ToolBarButtonStyle> o <xref:System.Windows.Forms.ToolBarButtonStyle>.|  
-    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|Imposta lo stile del pulsante della barra degli strumenti.  Deve essere uno dei valori dell'enumerazione <xref:System.Windows.Forms.ToolBarButtonStyle>.|  
-    |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|Stringa di testo visualizzata dal pulsante.|  
-    |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|Testo visualizzato come una descrizione comando per il pulsante.|  
+    |<span data-ttu-id="9470e-117">Proprietà</span><span class="sxs-lookup"><span data-stu-id="9470e-117">Property</span></span>|<span data-ttu-id="9470e-118">Descrizione</span><span class="sxs-lookup"><span data-stu-id="9470e-118">Description</span></span>|  
+    |--------------|-----------------|  
+    |<xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A>|<span data-ttu-id="9470e-119">Imposta il menu da visualizzare nel pulsante di menu a discesa della barra degli strumenti.</span><span class="sxs-lookup"><span data-stu-id="9470e-119">Sets the menu to be displayed in the drop-down toolbar button.</span></span> <span data-ttu-id="9470e-120">Pulsante della barra degli strumenti <xref:System.Windows.Forms.ToolBarButton.Style%2A> proprietà deve essere impostata su <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>.</span><span class="sxs-lookup"><span data-stu-id="9470e-120">The toolbar button's <xref:System.Windows.Forms.ToolBarButton.Style%2A> property must be set to <xref:System.Windows.Forms.ToolBarButtonStyle.DropDownButton>.</span></span> <span data-ttu-id="9470e-121">Questa proprietà accetta un'istanza di <xref:System.Windows.Forms.ContextMenu> classe come riferimento.</span><span class="sxs-lookup"><span data-stu-id="9470e-121">This property takes an instance of the <xref:System.Windows.Forms.ContextMenu> class as a reference.</span></span>|  
+    |<xref:System.Windows.Forms.ToolBarButton.PartialPush%2A>|<span data-ttu-id="9470e-122">Determina se un interruttore della barra degli strumenti è parzialmente premuto.</span><span class="sxs-lookup"><span data-stu-id="9470e-122">Sets whether a toggle-style toolbar button is partially pushed.</span></span> <span data-ttu-id="9470e-123">Pulsante della barra degli strumenti <xref:System.Windows.Forms.ToolBarButton.Style%2A> proprietà deve essere impostata su <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>.</span><span class="sxs-lookup"><span data-stu-id="9470e-123">The toolbar button's <xref:System.Windows.Forms.ToolBarButton.Style%2A> property must be set to <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton>.</span></span>|  
+    |<xref:System.Windows.Forms.ToolBarButton.Pushed%2A>|<span data-ttu-id="9470e-124">Determina se un interruttore della barra degli strumenti è attualmente premuto.</span><span class="sxs-lookup"><span data-stu-id="9470e-124">Sets whether a toggle-style toolbar button is currently in the pushed state.</span></span> <span data-ttu-id="9470e-125">Pulsante della barra degli strumenti <xref:System.Windows.Forms.ToolBarButton.Style%2A> proprietà deve essere impostata su <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton> o <xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>.</span><span class="sxs-lookup"><span data-stu-id="9470e-125">The toolbar button's <xref:System.Windows.Forms.ToolBarButton.Style%2A> property must be set to <xref:System.Windows.Forms.ToolBarButtonStyle.ToggleButton> or <xref:System.Windows.Forms.ToolBarButtonStyle.PushButton>.</span></span>|  
+    |<xref:System.Windows.Forms.ToolBarButton.Style%2A>|<span data-ttu-id="9470e-126">Imposta lo stile del pulsante della barra degli strumenti.</span><span class="sxs-lookup"><span data-stu-id="9470e-126">Sets the style of the toolbar button.</span></span> <span data-ttu-id="9470e-127">Deve essere uno dei valori di <xref:System.Windows.Forms.ToolBarButtonStyle> enumerazione.</span><span class="sxs-lookup"><span data-stu-id="9470e-127">Must be one of the values in the <xref:System.Windows.Forms.ToolBarButtonStyle> enumeration.</span></span>|  
+    |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|<span data-ttu-id="9470e-128">La stringa di testo visualizzata dal pulsante.</span><span class="sxs-lookup"><span data-stu-id="9470e-128">The text string displayed by the button.</span></span>|  
+    |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|<span data-ttu-id="9470e-129">Il testo visualizzato come descrizione comando del pulsante.</span><span class="sxs-lookup"><span data-stu-id="9470e-129">The text that appears as a ToolTip for the button.</span></span>|  
   
-5.  Scegliere **OK** per chiudere la finestra di dialogo e creare i pannelli specificati.  
+5.  <span data-ttu-id="9470e-130">Fare clic su **OK** per chiudere la finestra di dialogo e creare i pannelli specificati.</span><span class="sxs-lookup"><span data-stu-id="9470e-130">Click **OK** to close the dialog box and create the panels you specified.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.ToolBar>   
- [Procedura: definire un'icona per un pulsante ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)   
- [Procedura: attivare eventi di menu per i pulsanti di una barra degli strumenti](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)   
- [Cenni preliminari sul controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)   
- [Controllo ToolBar](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="9470e-131">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9470e-131">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolBar>  
+ [<span data-ttu-id="9470e-132">Procedura: Definire un'icona per un pulsante ToolBar</span><span class="sxs-lookup"><span data-stu-id="9470e-132">How to: Define an Icon for a ToolBar Button</span></span>](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [<span data-ttu-id="9470e-133">Procedura: Attivare eventi di menu per i pulsanti di una barra degli strumenti</span><span class="sxs-lookup"><span data-stu-id="9470e-133">How to: Trigger Menu Events for Toolbar Buttons</span></span>](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [<span data-ttu-id="9470e-134">Panoramica sul controllo ToolBar</span><span class="sxs-lookup"><span data-stu-id="9470e-134">ToolBar Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
+ [<span data-ttu-id="9470e-135">Controllo ToolBar</span><span class="sxs-lookup"><span data-stu-id="9470e-135">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

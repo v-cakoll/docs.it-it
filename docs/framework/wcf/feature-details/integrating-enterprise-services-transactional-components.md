@@ -1,34 +1,37 @@
 ---
-title: "Integrazione di componenti transazionali di Enterprise Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Integrazione di componenti transazionali di Enterprise Services
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7c2420c700d893e6c2c19b72beed0e605ffd4853
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Integrazione di componenti transazionali di Enterprise Services
-In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] è disponibile un meccanismo automatico per l'integrazione con Enterprise Services \(vedere [Integrazione con applicazioni COM\+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)\).Può tuttavia essere necessario disporre della flessibilità di sviluppare servizi che utilizzano internamente componenti transazionali ospitati all'interno di Enterprise Services.Poiché la funzionalità Transactions di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] si basa sull'infrastruttura di <xref:System.Transactions>, il processo per l'integrazione di Enterprise Services con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è identico a quello per la specifica dell'interoperabilità tra <xref:System.Transactions> ed Enterprise Services, come descritto in [Interoperabilità con le transazioni Enterprise Services e COM\+](http://go.microsoft.com/fwlink/?LinkId=94949) \(la pagina potrebbe essere in inglese\).  
+# <a name="integrating-enterprise-services-transactional-components"></a><span data-ttu-id="46937-102">Integrazione di componenti transazionali di Enterprise Services</span><span class="sxs-lookup"><span data-stu-id="46937-102">Integrating Enterprise Services Transactional Components</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="46937-103">fornisce un meccanismo automatico per l'integrazione di Enterprise Services (vedere [l'integrazione con applicazioni COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)).</span><span class="sxs-lookup"><span data-stu-id="46937-103"> provides an automatic mechanism for integrating with Enterprise Services (see [Integrating with COM+ Applications](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)).</span></span> <span data-ttu-id="46937-104">Può tuttavia essere necessario disporre della flessibilità di sviluppare servizi che utilizzano internamente componenti transazionali ospitati all'interno di Enterprise Services.</span><span class="sxs-lookup"><span data-stu-id="46937-104">However, you may want the flexibility to develop services that internally use transactional components hosted within Enterprise Services.</span></span> <span data-ttu-id="46937-105">Poiché il [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funzionalità delle transazioni si basa sul <xref:System.Transactions> infrastruttura, il processo per l'integrazione di Enterprise Services con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] è identico a quello per la specifica di interoperabilità tra <xref:System.Transactions> ed Enterprise Servizi, come descritto [interoperabilità con servizi aziendali e le transazioni COM+](http://go.microsoft.com/fwlink/?LinkId=94949).</span><span class="sxs-lookup"><span data-stu-id="46937-105">Because the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Transactions feature is built on the <xref:System.Transactions> infrastructure, the process for integrating Enterprise Services with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] is identical to that for specifying interoperability between <xref:System.Transactions> and Enterprise Services, as outlined in [Interoperability with Enterprise Services and COM+ Transactions](http://go.microsoft.com/fwlink/?LinkId=94949).</span></span>  
   
- Per fornire il livello desiderato di interoperabilità tra la transazione propagata in ingresso e la transazione in contesto COM\+, l'implementazione del servizio deve creare un'istanza della classe <xref:System.Transactions.TransactionScope> e deve utilizzare il valore appropriato ricavato dall'enumerazione <xref:System.Transactions.EnterpriseServicesInteropOption>.  
+ <span data-ttu-id="46937-106">Per fornire il livello desiderato di interoperabilità tra la transazione propagata in ingresso e la transazione in contesto COM+, l'implementazione del servizio deve creare un'istanza della classe <xref:System.Transactions.TransactionScope> e deve utilizzare il valore appropriato ricavato dall'enumerazione <xref:System.Transactions.EnterpriseServicesInteropOption>.</span><span class="sxs-lookup"><span data-stu-id="46937-106">To provide the desired level of interoperability between the incoming flowed transaction and the COM+ context transaction, the service implementation must create a <xref:System.Transactions.TransactionScope> instance and use the appropriate value from the <xref:System.Transactions.EnterpriseServicesInteropOption> enumeration.</span></span>  
   
-## Integrazione di Enterprise Services con un'operazione del servizio  
- Nel codice seguente viene illustrata un'operazione, con propagazione transazionale Allowed, che crea una classe <xref:System.Transactions.TransactionScope> con l'opzione <xref:System.Transactions.EnterpriseServicesInteropOption>.In questo scenario vengono applicate le condizioni seguenti:  
+## <a name="integrating-enterprise-services-with-a-service-operation"></a><span data-ttu-id="46937-107">Integrazione di Enterprise Services con un'operazione del servizio</span><span class="sxs-lookup"><span data-stu-id="46937-107">Integrating Enterprise Services with a Service Operation</span></span>  
+ <span data-ttu-id="46937-108">Nel codice seguente viene illustrata un'operazione, con propagazione transazionale Allowed, che crea una classe <xref:System.Transactions.TransactionScope> con l'opzione <xref:System.Transactions.EnterpriseServicesInteropOption.Full>.</span><span class="sxs-lookup"><span data-stu-id="46937-108">The following code demonstrates an operation, with Allowed transaction flow, that creates a <xref:System.Transactions.TransactionScope> with the <xref:System.Transactions.EnterpriseServicesInteropOption.Full> option.</span></span> <span data-ttu-id="46937-109">In questo scenario vengono applicate le condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="46937-109">The following conditions apply in this scenario:</span></span>  
   
--   Se il client propaga una transazione, l'operazione, inclusa la chiamata al componente Enterprise Services, viene eseguita all'interno dell'ambito di tale transazione.L'utilizzo di <xref:System.Transactions.EnterpriseServicesInteropOption> garantisce la sincronizzazione della transazione con il contesto <xref:System.EnterpriseServices>, il che significa che la transazione di ambiente per <xref:System.Transactions> e <xref:System.EnterpriseServices> è la stessa.  
+-   <span data-ttu-id="46937-110">Se il client propaga una transazione, l'operazione, inclusa la chiamata al componente Enterprise Services, viene eseguita all'interno dell'ambito di tale transazione.</span><span class="sxs-lookup"><span data-stu-id="46937-110">If the client flows a transaction, the operation, including the call to the Enterprise Services component, is executed within the scope of that transaction.</span></span> <span data-ttu-id="46937-111">L'utilizzo di <xref:System.Transactions.EnterpriseServicesInteropOption.Full> garantisce la sincronizzazione della transazione con il contesto <xref:System.EnterpriseServices>, il che significa che la transazione di ambiente per <xref:System.Transactions> e <xref:System.EnterpriseServices> è la stessa.</span><span class="sxs-lookup"><span data-stu-id="46937-111">Using <xref:System.Transactions.EnterpriseServicesInteropOption.Full> ensures that the transaction is synchronized with the <xref:System.EnterpriseServices> context, which means that the ambient transaction for <xref:System.Transactions> and the <xref:System.EnterpriseServices> is the same.</span></span>  
   
--   Se il client non propaga una transazione, l'impostazione di <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> su `true` crea un nuovo ambito di transazione per l'operazione.Analogamente, l'utilizzo di <xref:System.Transactions.EnterpriseServicesInteropOption> garantisce che la transazione dell'operazione sia la stessa transazione utilizzata all'interno del contesto del componente <xref:System.EnterpriseServices>.  
+-   <span data-ttu-id="46937-112">Se il client non propaga una transazione, l'impostazione di <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> su `true` crea un nuovo ambito di transazione per l'operazione.</span><span class="sxs-lookup"><span data-stu-id="46937-112">If the client does not flow a transaction, setting <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> to `true` creates a new transaction scope for the operation.</span></span> <span data-ttu-id="46937-113">Analogamente, l'utilizzo di <xref:System.Transactions.EnterpriseServicesInteropOption.Full> garantisce che la transazione dell'operazione sia la stessa transazione utilizzata all'interno del contesto del componente <xref:System.EnterpriseServices>.</span><span class="sxs-lookup"><span data-stu-id="46937-113">Similarly, using <xref:System.Transactions.EnterpriseServicesInteropOption.Full> ensures that the operation’s transaction is the same as the transaction used inside the <xref:System.EnterpriseServices> component's context.</span></span>  
   
- Eventuali chiamate aggiuntive al metodo avvengono anch'esse nell'ambito della stessa transazione dell'operazione.  
+ <span data-ttu-id="46937-114">Eventuali chiamate aggiuntive al metodo avvengono anch'esse nell'ambito della stessa transazione dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="46937-114">Any additional method calls also occur within the scope of the same operation’s transaction.</span></span>  
   
 ```  
 [ServiceContract()]  
@@ -66,10 +69,10 @@ public class CustomerService : ICustomerServiceContract
 }  
 ```  
   
- Se non è necessaria alcuna sincronizzazione tra la transazione corrente di un'operazione e le chiamate ai componenti Enterprise Services transazionali, utilizzare l'opzione <xref:System.Transactions.EnterpriseServicesInteropOption> quando si crea l'istanza di <xref:System.Transactions.TransactionScope>.  
+ <span data-ttu-id="46937-115">Se non è necessaria alcuna sincronizzazione tra la transazione corrente di un'operazione e le chiamate ai componenti Enterprise Services transazionali, utilizzare l'opzione <xref:System.Transactions.EnterpriseServicesInteropOption.None> quando si crea l'istanza di <xref:System.Transactions.TransactionScope>.</span><span class="sxs-lookup"><span data-stu-id="46937-115">If no synchronization is required between an operation’s current transaction and calls to transactional Enterprise Services components, then use the <xref:System.Transactions.EnterpriseServicesInteropOption.None> option when instantiating the <xref:System.Transactions.TransactionScope> instance.</span></span>  
   
-## Integrazione di Enterprise Services con un client  
- Nell'esempio seguente viene illustrato il codice client utilizzando un'istanza della classe <xref:System.Transactions.TransactionScope> con l'impostazione <xref:System.Transactions.EnterpriseServicesInteropOption>In questo scenario, le chiamate alle operazioni del servizio che supportano la propagazione transazionale avvengono nell'ambito della stessa transazione delle chiamate ai componenti Enterprise Services.  
+## <a name="integrating-enterprise-services-with-a-client"></a><span data-ttu-id="46937-116">Integrazione di Enterprise Services con un client</span><span class="sxs-lookup"><span data-stu-id="46937-116">Integrating Enterprise Services with a Client</span></span>  
+ <span data-ttu-id="46937-117">Nell'esempio seguente viene illustrato il codice client utilizzando un'istanza della classe <xref:System.Transactions.TransactionScope> con l'impostazione <xref:System.Transactions.EnterpriseServicesInteropOption.Full></span><span class="sxs-lookup"><span data-stu-id="46937-117">The following code demonstrates client code using a <xref:System.Transactions.TransactionScope> instance with the <xref:System.Transactions.EnterpriseServicesInteropOption.Full> setting.</span></span> <span data-ttu-id="46937-118">In questo scenario, le chiamate alle operazioni del servizio che supportano la propagazione transazionale avvengono nell'ambito della stessa transazione delle chiamate ai componenti Enterprise Services.</span><span class="sxs-lookup"><span data-stu-id="46937-118">In this scenario, calls to service operations that support transaction flow occur within the scope of the same transaction as the calls to Enterprise Services components.</span></span>  
   
 ```  
 static void Main()  
@@ -99,6 +102,6 @@ static void Main()
 }  
 ```  
   
-## Vedere anche  
- [Integrazione con applicazioni COM\+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)   
- [Integrazione con applicazioni COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+## <a name="see-also"></a><span data-ttu-id="46937-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="46937-119">See Also</span></span>  
+ [<span data-ttu-id="46937-120">L'integrazione con applicazioni COM+</span><span class="sxs-lookup"><span data-stu-id="46937-120">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [<span data-ttu-id="46937-121">Integrazione con applicazioni COM</span><span class="sxs-lookup"><span data-stu-id="46937-121">Integrating with COM Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

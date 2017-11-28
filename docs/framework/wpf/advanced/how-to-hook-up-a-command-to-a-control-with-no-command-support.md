@@ -1,55 +1,61 @@
 ---
-title: "Procedura: associare un comando a un controllo senza supporto del comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "classi, Controllo, collegamento di un RoutedCommand"
-  - "classi, RoutedCommand, collegamento a un controllo"
-  - "Control (classe), collegamento di un RoutedCommand"
-  - "RoutedCommand (classe), collegamento a un controllo"
+title: 'Procedura: associare un comando a un controllo senza supporto del comando'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Control class [WPF], attaching a RoutedCommand
+- classes [WPF], Control [WPF], attaching a RoutedCommand
+- RoutedCommand class [WPF], attaching to a Control
+- classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6f38a6f900ee2b253708da4b63bdc2f474fa3ab1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: associare un comando a un controllo senza supporto del comando
-Nell'esempio seguente viene mostrato come associare un oggetto <xref:System.Windows.Input.RoutedCommand> a un oggetto <xref:System.Windows.Controls.Control> che non dispone di un supporto incorporato per il comando.  Per un esempio completo in cui i comandi vengono associati a più origini vedere l'[esempio di creazione di un RoutedCommand personalizzato](http://go.microsoft.com/fwlink/?LinkID=159980) \(la pagina potrebbe essere in inglese\).  
+# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a><span data-ttu-id="77eb1-102">Procedura: associare un comando a un controllo senza supporto del comando</span><span class="sxs-lookup"><span data-stu-id="77eb1-102">How to: Hook Up a Command to a Control with No Command Support</span></span>
+<span data-ttu-id="77eb1-103">Nell'esempio seguente viene illustrato come associare un <xref:System.Windows.Input.RoutedCommand> per un <xref:System.Windows.Controls.Control> che non dispongono del supporto incorporato per il comando.</span><span class="sxs-lookup"><span data-stu-id="77eb1-103">The following example shows how to hook up a <xref:System.Windows.Input.RoutedCommand> to a <xref:System.Windows.Controls.Control> which does not have built in support for the command.</span></span>  <span data-ttu-id="77eb1-104">Per un esempio completo in cui i comandi sono associati a più origini, vedere l'esempio [Create a Custom RoutedCommand Sample](http://go.microsoft.com/fwlink/?LinkID=159980) (Creare un esempio di oggetto RoutedCommand personalizzato).</span><span class="sxs-lookup"><span data-stu-id="77eb1-104">For a complete sample which hooks up commands to multiple sources, see the [Create a Custom RoutedCommand Sample](http://go.microsoft.com/fwlink/?LinkID=159980) sample.</span></span>  
   
-## Esempio  
- In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] viene fornita una libreria dei comandi comuni regolarmente riscontrati dai programmatori di applicazioni.  La libreria dei comandi include le classi seguenti: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands> e <xref:System.Windows.Documents.EditingCommands>.  
+## <a name="example"></a><span data-ttu-id="77eb1-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="77eb1-105">Example</span></span>  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="77eb1-106"> fornisce una libreria di comandi comuni usati regolarmente dai programmatori di applicazioni.</span><span class="sxs-lookup"><span data-stu-id="77eb1-106"> provides a library of common commands which application programmers encounter regularly.</span></span>  <span data-ttu-id="77eb1-107">Le classi che costituiscono la libreria del comando sono: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, e <xref:System.Windows.Documents.EditingCommands>.</span><span class="sxs-lookup"><span data-stu-id="77eb1-107">The classes which comprise the command library are: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, and <xref:System.Windows.Documents.EditingCommands>.</span></span>  
   
- Gli oggetti <xref:System.Windows.Input.RoutedCommand> statici che compongono queste classi non forniscono la logica di comando.  Quest'ultima viene associata al comando con un oggetto <xref:System.Windows.Input.CommandBinding>.  Molti controlli di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dispongono del supporto incorporato di alcuni dei comandi della relativa libreria.  <xref:System.Windows.Controls.TextBox>, ad esempio, supporta molti dei comandi di modifica dell'applicazione, ad esempio <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A> e <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Lo sviluppatore di applicazioni non deve eseguire alcuna operazione particolare affinché questi comandi funzionino con tali controlli.  Se quando il comando viene eseguito la destinazione comando è <xref:System.Windows.Controls.TextBox>, quest'ultima gestirà il comando utilizzando l'oggetto <xref:System.Windows.Input.CommandBinding> incorporato nel controllo.  
+ <span data-ttu-id="77eb1-108">Il metodo statico <xref:System.Windows.Input.RoutedCommand> gli oggetti che compongono queste classi forniscono la logica di comando.</span><span class="sxs-lookup"><span data-stu-id="77eb1-108">The static <xref:System.Windows.Input.RoutedCommand> objects which make up these classes do not supply command logic.</span></span>  <span data-ttu-id="77eb1-109">La logica per il comando è associata al comando con un <xref:System.Windows.Input.CommandBinding>.</span><span class="sxs-lookup"><span data-stu-id="77eb1-109">The logic for the command is associated with the command with a <xref:System.Windows.Input.CommandBinding>.</span></span>  <span data-ttu-id="77eb1-110">Tuttavia, molti controlli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dispone del supporto incorporato per alcuni dei comandi nella libreria del comando.</span><span class="sxs-lookup"><span data-stu-id="77eb1-110">Many controls in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] have built in support for some of the commands in the command library.</span></span>  <span data-ttu-id="77eb1-111"><xref:System.Windows.Controls.TextBox>, ad esempio, supporta molti dei comandi di modifica dell'applicazione, ad esempio <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, e <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.</span><span class="sxs-lookup"><span data-stu-id="77eb1-111"><xref:System.Windows.Controls.TextBox>, for example, supports many of the application edit commands such as <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, and <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.</span></span>  <span data-ttu-id="77eb1-112">Lo sviluppatore dell'applicazione non deve eseguire operazioni particolari per garantire il funzionamento di questi comandi con tali controlli.</span><span class="sxs-lookup"><span data-stu-id="77eb1-112">The application developer does not have to do anything special to get these commands to work with these controls.</span></span>  <span data-ttu-id="77eb1-113">Se il <xref:System.Windows.Controls.TextBox> è la destinazione di comando quando viene eseguito il comando, gestirà il comando utilizzando il <xref:System.Windows.Input.CommandBinding> che è incorporato nel controllo.</span><span class="sxs-lookup"><span data-stu-id="77eb1-113">If the <xref:System.Windows.Controls.TextBox> is the command target when the command is executed, it will handle the command using the <xref:System.Windows.Input.CommandBinding> that is built into the control.</span></span>  
   
- Nell'esempio seguente viene mostrato l'utilizzo di un oggetto <xref:System.Windows.Controls.Button> come origine comando per il comando <xref:System.Windows.Input.ApplicationCommands.Open%2A>.  Viene creato un oggetto <xref:System.Windows.Input.CommandBinding> che associa l'oggetto <xref:System.Windows.Input.CanExecuteRoutedEventHandler> specificato e <xref:System.Windows.Input.CanExecuteRoutedEventHandler> all'oggetto <xref:System.Windows.Input.RoutedCommand>.  
+ <span data-ttu-id="77eb1-114">Nell'esempio seguente viene illustrato come utilizzare un <xref:System.Windows.Controls.Button> come l'origine del comando per il <xref:System.Windows.Input.ApplicationCommands.Open%2A> comando.</span><span class="sxs-lookup"><span data-stu-id="77eb1-114">The following shows how to use a <xref:System.Windows.Controls.Button> as the command source for the <xref:System.Windows.Input.ApplicationCommands.Open%2A> command.</span></span>  <span data-ttu-id="77eb1-115">Oggetto <xref:System.Windows.Input.CommandBinding> creato che associa l'oggetto specificato <xref:System.Windows.Input.CanExecuteRoutedEventHandler> e <xref:System.Windows.Input.CanExecuteRoutedEventHandler> con il <xref:System.Windows.Input.RoutedCommand>.</span><span class="sxs-lookup"><span data-stu-id="77eb1-115">A <xref:System.Windows.Input.CommandBinding> is created that associates the specified <xref:System.Windows.Input.CanExecuteRoutedEventHandler> and the <xref:System.Windows.Input.CanExecuteRoutedEventHandler> with the <xref:System.Windows.Input.RoutedCommand>.</span></span>  
   
- Innanzi tutto viene creata l'origine comando.  Come origine comando viene utilizzato un oggetto <xref:System.Windows.Controls.Button>.  
+ <span data-ttu-id="77eb1-116">Innanzitutto, viene creato l'origine del comando.</span><span class="sxs-lookup"><span data-stu-id="77eb1-116">First, the command source is created.</span></span>  <span data-ttu-id="77eb1-117">Oggetto <xref:System.Windows.Controls.Button> viene utilizzato come origine del comando.</span><span class="sxs-lookup"><span data-stu-id="77eb1-117">A <xref:System.Windows.Controls.Button> is used as the command source.</span></span>  
   
- [!code-xml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
   
  [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
   
- Vengono creati quindi gli oggetti <xref:System.Windows.Input.ExecutedRoutedEventHandler> e <xref:System.Windows.Input.CanExecuteRoutedEventHandler>.  L'oggetto <xref:System.Windows.Input.ExecutedRoutedEventHandler> consente di visualizzare un oggetto <xref:System.Windows.MessageBox> per indicare che il comando è stato eseguito.  L'oggetto <xref:System.Windows.Input.CanExecuteRoutedEventHandler> imposta la proprietà <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> su `true`.  In genere, il gestore di CanExecute effettua dei controlli più accurati per verificare se è possibile eseguire il comando sulla destinazione comando corrente.  
+ <span data-ttu-id="77eb1-118">Successivamente, il <xref:System.Windows.Input.ExecutedRoutedEventHandler> e <xref:System.Windows.Input.CanExecuteRoutedEventHandler> vengono creati.</span><span class="sxs-lookup"><span data-stu-id="77eb1-118">Next, the <xref:System.Windows.Input.ExecutedRoutedEventHandler> and the <xref:System.Windows.Input.CanExecuteRoutedEventHandler> are created.</span></span>  <span data-ttu-id="77eb1-119">Il <xref:System.Windows.Input.ExecutedRoutedEventHandler> apre semplicemente un <xref:System.Windows.MessageBox> per indicare che il comando eseguito.</span><span class="sxs-lookup"><span data-stu-id="77eb1-119">The <xref:System.Windows.Input.ExecutedRoutedEventHandler> simply opens a <xref:System.Windows.MessageBox> to signify that the command executed.</span></span>  <span data-ttu-id="77eb1-120">Il <xref:System.Windows.Input.CanExecuteRoutedEventHandler> imposta il <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> proprietà `true`.</span><span class="sxs-lookup"><span data-stu-id="77eb1-120">The <xref:System.Windows.Input.CanExecuteRoutedEventHandler> sets the <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> property to `true`.</span></span>  <span data-ttu-id="77eb1-121">In genere, può eseguire gestore eseguirebbe controlli più affidabile per vedere se è Impossibile eseguire il comando sulla destinazione del comando corrente.</span><span class="sxs-lookup"><span data-stu-id="77eb1-121">Normally, the can execute handler would perform more robust checks to see if the command could execute on the current command target.</span></span>  
   
  [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
  [!code-vb[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
   
- Infine, viene creato un oggetto <xref:System.Windows.Input.CommandBinding> nell'oggetto <xref:System.Windows.Window> radice dell'applicazione che associa i gestori degli eventi indirizzati al comando <xref:System.Windows.Input.ApplicationCommands.Open%2A>.  
+ <span data-ttu-id="77eb1-122">Infine, un <xref:System.Windows.Input.CommandBinding> viene creato nella directory principale <xref:System.Windows.Window> dell'applicazione che associa i gestori di eventi indirizzati per il <xref:System.Windows.Input.ApplicationCommands.Open%2A> comando.</span><span class="sxs-lookup"><span data-stu-id="77eb1-122">Finally, a <xref:System.Windows.Input.CommandBinding> is created on the root <xref:System.Windows.Window> of the application that associates the routed events handlers to the <xref:System.Windows.Input.ApplicationCommands.Open%2A> command.</span></span>  
   
- [!code-xml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
  [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
-## Vedere anche  
- [Cenni preliminari sull'esecuzione di comandi](../../../../docs/framework/wpf/advanced/commanding-overview.md)   
- [Associare un comando a un controllo con supporto dei comandi](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)
+## <a name="see-also"></a><span data-ttu-id="77eb1-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="77eb1-123">See Also</span></span>  
+ [<span data-ttu-id="77eb1-124">Panoramica sull'esecuzione di comandi</span><span class="sxs-lookup"><span data-stu-id="77eb1-124">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [<span data-ttu-id="77eb1-125">Associare un comando a un controllo con supporto dei comandi</span><span class="sxs-lookup"><span data-stu-id="77eb1-125">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)

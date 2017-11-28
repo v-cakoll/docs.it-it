@@ -1,27 +1,30 @@
 ---
-title: "Procedure consigliate: Intermediari | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedure consigliate: intermediari'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3185761ef784051c7508c3684d46997521483f04
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedure consigliate: Intermediari
-Per assicurarsi della corretta chiusura dei canali lato servizio nell'intermediario, è necessario prestare attenzione affinché gli errori vengano gestiti correttamente quando si chiamano gli intermediari.  
+# <a name="best-practices-intermediaries"></a><span data-ttu-id="9ffb0-102">Procedure consigliate: intermediari</span><span class="sxs-lookup"><span data-stu-id="9ffb0-102">Best Practices: Intermediaries</span></span>
+<span data-ttu-id="9ffb0-103">Assicurarsi di gestire gli errori correttamente nella chiamata agli intermediari verificando che i canali lato servizio degli intermediari vengano chiusi in modo appropriato.</span><span class="sxs-lookup"><span data-stu-id="9ffb0-103">Care must be taken to handle faults correctly when calling intermediaries to make sure service side channels on the intermediary are closed properly.</span></span>  
   
- Si consideri lo scenario seguente.Tramite un client viene effettuata una chiamata a un intermediario mediante il quale, successivamente, viene chiamato un servizio back\-end.Tramite il servizio back\-end non viene definito alcun contratto di errori, pertanto qualsiasi errore generato da questo servizio sarà trattato come un errore non tipizzato.Tramite il servizio back\-end viene generato un oggetto <xref:System.ApplicationException> e tramite WCF viene interrotto correttamente il canale lato servizio.L'oggetto <xref:System.ApplicationException> viene quindi esposto come oggetto <xref:System.ServiceModel.FaultException> generato per l'intermediario.Tramite l'intermediario viene generato di nuovo l'oggetto <xref:System.ApplicationException>.In WCF questo oggetto viene interpretato come errore non tipizzato dall'intermediario e viene inoltrato al client.Al momento della ricezione dell'errore, i canali lato client sia dell'intermediario sia del client presentano un errore.Il canale lato servizio dell'intermediario, tuttavia, rimane aperto dal momento che in WCF questo errore non viene riconosciuto come irreversibile.  
+ <span data-ttu-id="9ffb0-104">Si consideri lo scenario seguente.</span><span class="sxs-lookup"><span data-stu-id="9ffb0-104">Consider the following scenario.</span></span> <span data-ttu-id="9ffb0-105">Un client esegue una chiamata a un intermediario che quindi chiama un servizio back-end.</span><span class="sxs-lookup"><span data-stu-id="9ffb0-105">A client makes a call to an intermediary which then calls a back-end service.</span></span>  <span data-ttu-id="9ffb0-106">Il servizio back-end non definisce contratti di errori, pertanto qualsiasi errore generato da questo servizio verrà considerato come errore non tipizzato.</span><span class="sxs-lookup"><span data-stu-id="9ffb0-106">The back-end service defines no fault contract, so any fault thrown from that service will be treated as an un-typed fault.</span></span>  <span data-ttu-id="9ffb0-107">Il servizio back-end di genera un <xref:System.ApplicationException> e WCF viene correttamente interrotto il canale lato servizio.</span><span class="sxs-lookup"><span data-stu-id="9ffb0-107">The back-end service throws an <xref:System.ApplicationException> and WCF correctly aborts the service-side channel.</span></span> <span data-ttu-id="9ffb0-108">L'oggetto <xref:System.ApplicationException> viene quindi rilevato come oggetto <xref:System.ServiceModel.FaultException> generato per l'intermediario.</span><span class="sxs-lookup"><span data-stu-id="9ffb0-108">The <xref:System.ApplicationException> then surfaces as a <xref:System.ServiceModel.FaultException> that is thrown to the intermediary.</span></span> <span data-ttu-id="9ffb0-109">L'intermediario genera nuovamente l'oggetto <xref:System.ApplicationException>.</span><span class="sxs-lookup"><span data-stu-id="9ffb0-109">The intermediary re-throws the <xref:System.ApplicationException>.</span></span> <span data-ttu-id="9ffb0-110">In WCF l'eccezione viene interpretata come errore non tipizzato proveniente dall'intermediario e inoltrata al client.</span><span class="sxs-lookup"><span data-stu-id="9ffb0-110">WCF interprets this as an un-typed fault from the intermediary and forwards it on to the client.</span></span> <span data-ttu-id="9ffb0-111">Alla ricezione dell'errore, sia l'intermediario che il client lo imputano ai rispettivi canali lato client.</span><span class="sxs-lookup"><span data-stu-id="9ffb0-111">Upon receiving the fault, both the intermediary and the client fault their client-side channels.</span></span> <span data-ttu-id="9ffb0-112">Il canale lato servizio dell'intermediario rimane tuttavia aperto perché non viene rilevato che l'errore è irreversibile.</span><span class="sxs-lookup"><span data-stu-id="9ffb0-112">The intermediary’s service-side channel however remains open because WCF doesn’t know the fault is fatal.</span></span>  
   
- La procedura consigliata in questo scenario consiste nel rilevare se l'errore proveniente dal servizio è irreversibile e, in tal caso, il canale lato client dell'intermediario deve presentare un errore, come mostrato nel frammento di codice riportato di seguito.  
+ <span data-ttu-id="9ffb0-113">La procedura consigliata in questo scenario è rilevare se l'errore proveniente dal servizio è irreversibile. In caso affermativo, l'intermediario dovrebbe bloccare il proprio canale lato servizio come illustrato nel seguente frammento di codice.</span><span class="sxs-lookup"><span data-stu-id="9ffb0-113">The best practice in this scenario is to detect if the fault coming from the service is fatal and if so the intermediary should fault its service-side channel as shown in the following code snippet.</span></span>  
   
 ```csharp  
 catch (Exception e)  
@@ -37,9 +40,8 @@ catch (Exception e)
         throw;  
     }  
 }  
-  
 ```  
   
-## Vedere anche  
- [Gestione errori WCF](../../../docs/framework/wcf/wcf-error-handling.md)   
- [Specifica e gestione di errori in contratti e servizi](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a><span data-ttu-id="9ffb0-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="9ffb0-114">See Also</span></span>  
+ [<span data-ttu-id="9ffb0-115">Gestione errori WCF</span><span class="sxs-lookup"><span data-stu-id="9ffb0-115">WCF Error Handling</span></span>](../../../docs/framework/wcf/wcf-error-handling.md)  
+ [<span data-ttu-id="9ffb0-116">Specifica e gestione degli errori in contratti e servizi</span><span class="sxs-lookup"><span data-stu-id="9ffb0-116">Specifying and Handling Faults in Contracts and Services</span></span>](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

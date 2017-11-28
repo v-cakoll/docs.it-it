@@ -1,80 +1,78 @@
 ---
-title: "Inherits Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Inherits"
-  - "Inherits"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Inherits statement"
-  - "Inherits statement, syntax"
+title: Inherits Statement
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Inherits
+- Inherits
+helpviewer_keywords:
+- Inherits statement [Visual Basic]
+- Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ae9ba54c3fd1ec3332c9f6260bc19a1293270ad8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Inherits Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Consente alla classe o interfaccia corrente di ereditare gli attributi, le variabili, i campi, le proprietà, le routine e gli eventi da un'altra classe o interfaccia.  
+# <a name="inherits-statement"></a><span data-ttu-id="b5322-102">Inherits Statement</span><span class="sxs-lookup"><span data-stu-id="b5322-102">Inherits Statement</span></span>
+<span data-ttu-id="b5322-103">Fa sì che la classe corrente o l'interfaccia da cui ereditare attributi, le variabili, proprietà, procedure e gli eventi di un'altra classe o un set di interfacce.</span><span class="sxs-lookup"><span data-stu-id="b5322-103">Causes the current class or interface to inherit the attributes, variables, properties, procedures, and events from another class or set of interfaces.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="b5322-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="b5322-104">Syntax</span></span>  
   
 ```  
 Inherits basetypenames  
 ```  
   
-## Parti  
+## <a name="parts"></a><span data-ttu-id="b5322-105">Parti</span><span class="sxs-lookup"><span data-stu-id="b5322-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|Termine|Definizione|  
-|`basetypenames`|Obbligatorio.  Nome della classe dalla quale deriva la classe.<br /><br /> In alternativa<br /><br /> Nomi delle interfacce dalle quali deriva lì'interfaccia.  Utilizzare le virgole per separare più nomi.|  
+|<span data-ttu-id="b5322-106">Termine</span><span class="sxs-lookup"><span data-stu-id="b5322-106">Term</span></span>|<span data-ttu-id="b5322-107">Definizione</span><span class="sxs-lookup"><span data-stu-id="b5322-107">Definition</span></span>|  
+|---|---|  
+|`basetypenames`|<span data-ttu-id="b5322-108">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="b5322-108">Required.</span></span> <span data-ttu-id="b5322-109">Il nome della classe da cui deriva questa classe.</span><span class="sxs-lookup"><span data-stu-id="b5322-109">The name of the class from which this class derives.</span></span><br /><br /> <span data-ttu-id="b5322-110">-oppure-</span><span class="sxs-lookup"><span data-stu-id="b5322-110">-or-</span></span><br /><br /> <span data-ttu-id="b5322-111">I nomi delle interfacce da cui deriva questa interfaccia.</span><span class="sxs-lookup"><span data-stu-id="b5322-111">The names of the interfaces from which this interface derives.</span></span> <span data-ttu-id="b5322-112">Utilizzare le virgole per separare più nomi.</span><span class="sxs-lookup"><span data-stu-id="b5322-112">Use commas to separate multiple names.</span></span>|  
   
-## Note  
- È necessario che l'istruzione `Inherits` sia utilizzata nella prima riga non vuota e non riservata a commenti di una definizione di classe o di interfaccia.  Inserire tale istruzioni immediatamente dopo l'istruzione `Class` o `Interface`.  
+## <a name="remarks"></a><span data-ttu-id="b5322-113">Note</span><span class="sxs-lookup"><span data-stu-id="b5322-113">Remarks</span></span>  
+ <span data-ttu-id="b5322-114">Se utilizzato, il `Inherits` istruzione deve essere la prima riga non vuota e non di commento in una definizione di classe o interfaccia.</span><span class="sxs-lookup"><span data-stu-id="b5322-114">If used, the `Inherits` statement must be the first non-blank, non-comment line in a class or interface definition.</span></span> <span data-ttu-id="b5322-115">Deve seguire immediatamente la `Class` o `Interface` istruzione.</span><span class="sxs-lookup"><span data-stu-id="b5322-115">It should immediately follow the `Class` or `Interface` statement.</span></span>  
   
- È possibile utilizzare `Inherits` solo in una classe o interfaccia.  Ciò significa che il contesto della dichiarazione per un'ereditarietà non può essere un file di origine, spazio dei nomi, struttura, modulo, routine o blocco.  
+ <span data-ttu-id="b5322-116">È possibile utilizzare `Inherits` solo in una classe o interfaccia.</span><span class="sxs-lookup"><span data-stu-id="b5322-116">You can use `Inherits` only in a class or interface.</span></span> <span data-ttu-id="b5322-117">Ciò significa che il contesto della dichiarazione di un'ereditarietà non può essere un file di origine, lo spazio dei nomi, struttura, modulo, routine o blocco.</span><span class="sxs-lookup"><span data-stu-id="b5322-117">This means the declaration context for an inheritance cannot be a source file, namespace, structure, module, procedure, or block.</span></span>  
   
-## Regole  
+## <a name="rules"></a><span data-ttu-id="b5322-118">Regole</span><span class="sxs-lookup"><span data-stu-id="b5322-118">Rules</span></span>  
   
--   **Ereditarietà della classe.** Se una classe utilizza l'istruzione `Inherits` è possibile specificare una sola classe di base.  
+-   <span data-ttu-id="b5322-119">**Ereditarietà della classe.**</span><span class="sxs-lookup"><span data-stu-id="b5322-119">**Class Inheritance.**</span></span> <span data-ttu-id="b5322-120">Se una classe utilizza il `Inherits` istruzione, è possibile specificare solo una classe base.</span><span class="sxs-lookup"><span data-stu-id="b5322-120">If a class uses the `Inherits` statement, you can specify only one base class.</span></span>  
   
-     Una classe non può ereditare da una classe annidata all'interno di essa.  
+     <span data-ttu-id="b5322-121">Una classe non può ereditare da una classe annidata al suo interno.</span><span class="sxs-lookup"><span data-stu-id="b5322-121">A class cannot inherit from a class nested within it.</span></span>  
   
--   **Ereditarietà di interfaccia.** Se un'interfaccia utilizzata l'istruzione `Inherits`, è possibile specificare una o più interfacce di base.  È possibile ereditare da due interfacce anche se ognuna di esse definisce un membro con lo stesso nome.  In questo caso il codice di implementazione deve utilizzare la qualifica per specificare quale membro sta implementando.  
+-   <span data-ttu-id="b5322-122">**Ereditarietà dell'interfaccia.**</span><span class="sxs-lookup"><span data-stu-id="b5322-122">**Interface Inheritance.**</span></span> <span data-ttu-id="b5322-123">Se un'interfaccia viene utilizzata la `Inherits` istruzione, è possibile specificare uno o più interfacce di base.</span><span class="sxs-lookup"><span data-stu-id="b5322-123">If an interface uses the `Inherits` statement, you can specify one or more base interfaces.</span></span> <span data-ttu-id="b5322-124">È possibile ereditare da due interfacce, anche se ciascuna di esse definisce un membro con lo stesso nome.</span><span class="sxs-lookup"><span data-stu-id="b5322-124">You can inherit from two interfaces even if they each define a member with the same name.</span></span> <span data-ttu-id="b5322-125">Se si esegue questa operazione, il codice di implementazione deve utilizzare la qualificazione di nomi per specificare quale membro che sta implementando.</span><span class="sxs-lookup"><span data-stu-id="b5322-125">If you do so, the implementing code must use name qualification to specify which member it is implementing.</span></span>  
   
-     Un'interfaccia non può ereditare da un'altra interfaccia con un livello di accesso più restrittivo.  Un'interfaccia `Public`, ad esempio, non può ereditare da un'interfaccia con accesso `Friend`.  
+     <span data-ttu-id="b5322-126">Un'interfaccia non può ereditare da un'altra interfaccia con un livello di accesso più restrittivo.</span><span class="sxs-lookup"><span data-stu-id="b5322-126">An interface cannot inherit from another interface with a more restrictive access level.</span></span> <span data-ttu-id="b5322-127">Ad esempio, un `Public` interfaccia non può ereditare da un `Friend` interfaccia.</span><span class="sxs-lookup"><span data-stu-id="b5322-127">For example, a `Public` interface cannot inherit from a `Friend` interface.</span></span>  
   
-     Un'interfaccia non può ereditare da un'interfaccia annidata all'interno di essa.  
+     <span data-ttu-id="b5322-128">Un'interfaccia non può ereditare da un'interfaccia annidata al suo interno.</span><span class="sxs-lookup"><span data-stu-id="b5322-128">An interface cannot inherit from an interface nested within it.</span></span>  
   
- Un esempio di ereditarietà di classe in .NET Framework è la classe <xref:System.ArgumentException>, che eredita dalla classe <xref:System.SystemException>.  Questo fornisce a <xref:System.ArgumentException> tutte le proprietà e le routine predefinite richieste da eccezioni del sistema, quali la proprietà <xref:System.Exception.Message%2A> e il metodo <xref:System.Exception.ToString%2A>.  
+ <span data-ttu-id="b5322-129">Un esempio di ereditarietà delle classi in .NET Framework è la <xref:System.ArgumentException> (classe), che eredita dalla <xref:System.SystemException> classe.</span><span class="sxs-lookup"><span data-stu-id="b5322-129">An example of class inheritance in the .NET Framework is the <xref:System.ArgumentException> class, which inherits from the <xref:System.SystemException> class.</span></span> <span data-ttu-id="b5322-130">Viene fornita al <xref:System.ArgumentException> tutte le proprietà predefinite le procedure necessarie per le eccezioni di sistema, ad esempio il <xref:System.Exception.Message%2A> proprietà e <xref:System.Exception.ToString%2A> metodo.</span><span class="sxs-lookup"><span data-stu-id="b5322-130">This provides to <xref:System.ArgumentException> all the predefined properties and procedures required by system exceptions, such as the <xref:System.Exception.Message%2A> property and the <xref:System.Exception.ToString%2A> method.</span></span>  
   
- Un esempio di ereditarietà di interfaccia in .NET Framework è la classe <xref:System.Collections.ICollection>, che eredita dall'interfaccia <xref:System.Collections.IEnumerable>.  Con questa operazione <xref:System.Collections.ICollection> eredita la definizione dell'enumeratore richiesto per scorrere una raccolta.  
+ <span data-ttu-id="b5322-131">Un esempio di ereditarietà dell'interfaccia in .NET Framework è la <xref:System.Collections.ICollection> interfaccia che eredita dal <xref:System.Collections.IEnumerable> interfaccia.</span><span class="sxs-lookup"><span data-stu-id="b5322-131">An example of interface inheritance in the .NET Framework is the <xref:System.Collections.ICollection> interface, which inherits from the <xref:System.Collections.IEnumerable> interface.</span></span> <span data-ttu-id="b5322-132">In questo modo <xref:System.Collections.ICollection> eredita la definizione dell'enumeratore richiesto per scorrere una raccolta.</span><span class="sxs-lookup"><span data-stu-id="b5322-132">This causes <xref:System.Collections.ICollection> to inherit the definition of the enumerator required to traverse a collection.</span></span>  
   
-## Esempio  
- Nell'esempio seguente viene utilizzata l'istruzione `Inherits` per illustrare come una classe denominata `thisClass` può ereditare tutti i membri di una classe base denominata `anotherClass`.  
+## <a name="example"></a><span data-ttu-id="b5322-133">Esempio</span><span class="sxs-lookup"><span data-stu-id="b5322-133">Example</span></span>  
+ <span data-ttu-id="b5322-134">L'esempio seguente usa il `Inherits` istruzione per mostrare come una classe denominata `thisClass` può ereditare tutti i membri di una classe base denominata `anotherClass`.</span><span class="sxs-lookup"><span data-stu-id="b5322-134">The following example uses the `Inherits` statement to show how a class named `thisClass` can inherit all the members of a base class named `anotherClass`.</span></span>  
   
  [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrata l'ereditarietà di interfacce multiple.  
+## <a name="example"></a><span data-ttu-id="b5322-135">Esempio</span><span class="sxs-lookup"><span data-stu-id="b5322-135">Example</span></span>  
+ <span data-ttu-id="b5322-136">L'esempio seguente mostra l'ereditarietà di più interfacce.</span><span class="sxs-lookup"><span data-stu-id="b5322-136">The following example shows inheritance of multiple interfaces.</span></span>  
   
  [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
   
- L'interfaccia denominata `thisInterface` comprende ora tutte le definizioni nelle interfacce <xref:System.IComparable>, <xref:System.IDisposable> e <xref:System.IFormattable>. I membri ereditati forniscono rispettivamente il confronto specifico per tipo di due oggetti, mediante il rilascio delle risorse allocate, e l'espressione del valore di un oggetto come `String`.  Una classe che implementa `thisInterface` deve implementare ogni membro di ogni interfaccia base.  
+ <span data-ttu-id="b5322-137">L'interfaccia denominata `thisInterface` ora include tutte le definizioni di <xref:System.IComparable>, <xref:System.IDisposable>, e <xref:System.IFormattable> interfacce dei membri ereditati forniscono rispettivamente per il confronto di tipo specifico di due oggetti, come rilasciare le risorse allocate e il valore di un oggetto come esprimere una `String`.</span><span class="sxs-lookup"><span data-stu-id="b5322-137">The interface named `thisInterface` now includes all the definitions in the <xref:System.IComparable>, <xref:System.IDisposable>, and <xref:System.IFormattable> interfaces The inherited members provide respectively for type-specific comparison of two objects, releasing allocated resources, and expressing the value of an object as a `String`.</span></span> <span data-ttu-id="b5322-138">Una classe che implementa `thisInterface` deve implementare ogni membro di ogni interfaccia di base.</span><span class="sxs-lookup"><span data-stu-id="b5322-138">A class that implements `thisInterface` must implement every member of every base interface.</span></span>  
   
-## Vedere anche  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)   
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)   
- [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="b5322-139">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="b5322-139">See Also</span></span>  
+ [<span data-ttu-id="b5322-140">MustInherit</span><span class="sxs-lookup"><span data-stu-id="b5322-140">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
+ [<span data-ttu-id="b5322-141">NotInheritable</span><span class="sxs-lookup"><span data-stu-id="b5322-141">NotInheritable</span></span>](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
+ [<span data-ttu-id="b5322-142">Oggetti e classi</span><span class="sxs-lookup"><span data-stu-id="b5322-142">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [<span data-ttu-id="b5322-143">Nozioni fondamentali sull'ereditarietà</span><span class="sxs-lookup"><span data-stu-id="b5322-143">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [<span data-ttu-id="b5322-144">Interfacce</span><span class="sxs-lookup"><span data-stu-id="b5322-144">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

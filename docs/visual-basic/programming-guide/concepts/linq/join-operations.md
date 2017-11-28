@@ -1,54 +1,46 @@
 ---
-title: Creare un join Operations (Visual Basic) | Documenti di Microsoft
+title: Operazioni (Visual Basic) di join
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dce1adb5b918674bc8ee8fc48c8ff5b3c3814a88
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 21ff2c466db223720edf00be91c3516c641762ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="join-operations-visual-basic"></a>Creare un join Operations (Visual Basic)
-Oggetto *join* di due origini dati è un'associazione di oggetti di un'origine dati con oggetti che condividono un attributo comune in un'altra origine dati.  
+# <a name="join-operations-visual-basic"></a><span data-ttu-id="52fab-102">Operazioni (Visual Basic) di join</span><span class="sxs-lookup"><span data-stu-id="52fab-102">Join Operations (Visual Basic)</span></span>
+<span data-ttu-id="52fab-103">Un *join* di due origini dati è un'associazione di oggetti in un'origine dati con oggetti che condividono un attributo comune in un'altra origine dati.</span><span class="sxs-lookup"><span data-stu-id="52fab-103">A *join* of two data sources is the association of objects in one data source with objects that share a common attribute in another data source.</span></span>  
   
- La creazione di un join è un'operazione importante nelle query che fanno riferimento a origini dati le cui relazioni reciproche non possono essere seguite direttamente. Nella programmazione orientata a oggetti ciò potrebbe corrispondere a una correlazione non modellata tra oggetti, ad esempio la direzione inversa di una relazione unidirezionale. Un esempio di relazione unidirezionale è costituito da una classe Customer che include una proprietà di tipo City, ma la classe City non include una proprietà che sia una raccolta di oggetti Customer. Se si ha un elenco di oggetti City e si vogliono trovare tutti i clienti in ogni città, è possibile usare un'operazione join per individuarli.  
+ <span data-ttu-id="52fab-104">La creazione di un join è un'operazione importante nelle query che fanno riferimento a origini dati le cui relazioni reciproche non possono essere seguite direttamente.</span><span class="sxs-lookup"><span data-stu-id="52fab-104">Joining is an important operation in queries that target data sources whose relationships to each other cannot be followed directly.</span></span> <span data-ttu-id="52fab-105">Nella programmazione orientata a oggetti ciò potrebbe corrispondere a una correlazione non modellata tra oggetti, ad esempio la direzione inversa di una relazione unidirezionale.</span><span class="sxs-lookup"><span data-stu-id="52fab-105">In object-oriented programming, this could mean a correlation between objects that is not modeled, such as the backwards direction of a one-way relationship.</span></span> <span data-ttu-id="52fab-106">Un esempio di relazione unidirezionale è costituito da una classe Customer che include una proprietà di tipo City, ma la classe City non include una proprietà che sia una raccolta di oggetti Customer.</span><span class="sxs-lookup"><span data-stu-id="52fab-106">An example of a one-way relationship is a Customer class that has a property of type City, but the City class does not have a property that is a collection of Customer objects.</span></span> <span data-ttu-id="52fab-107">Se si ha un elenco di oggetti City e si vogliono trovare tutti i clienti in ogni città, è possibile usare un'operazione join per individuarli.</span><span class="sxs-lookup"><span data-stu-id="52fab-107">If you have a list of City objects and you want to find all the customers in each city, you could use a join operation to find them.</span></span>  
   
- I metodi di join disponibili nel framework LINQ sono <xref:System.Linq.Enumerable.Join%2A>e <xref:System.Linq.Enumerable.GroupJoin%2A>.</xref:System.Linq.Enumerable.GroupJoin%2A> </xref:System.Linq.Enumerable.Join%2A> Questi metodi eseguono equijoin, ovvero join che associano due origini dati in base all'uguaglianza delle rispettive chiavi. Per un confronto, si noti che Transact-SQL supporta operatori join diversi da 'uguale a', ad esempio l'operatore 'minore di'. In termini di database relazionali, <xref:System.Linq.Enumerable.Join%2A>implementa un inner join, un tipo di join in cui vengono restituiti solo gli oggetti che hanno una corrispondenza nel set di dati.</xref:System.Linq.Enumerable.Join%2A> Il <xref:System.Linq.Enumerable.GroupJoin%2A>metodo non ha equivalenti diretti in termini di database relazionale, ma implementa un superset di inner join e left outer join.</xref:System.Linq.Enumerable.GroupJoin%2A> Un left outer join è un join che restituisce ogni elemento della prima origine dati (a sinistra), anche se non ha elementi correlati in altra origine dati.  
+ <span data-ttu-id="52fab-108">I metodi di join disponibili nel framework LINQ sono <xref:System.Linq.Enumerable.Join%2A> e <xref:System.Linq.Enumerable.GroupJoin%2A>.</span><span class="sxs-lookup"><span data-stu-id="52fab-108">The join methods provided in the LINQ framework are <xref:System.Linq.Enumerable.Join%2A> and <xref:System.Linq.Enumerable.GroupJoin%2A>.</span></span> <span data-ttu-id="52fab-109">Questi metodi eseguono equijoin, ovvero join che associano due origini dati in base all'uguaglianza delle rispettive chiavi.</span><span class="sxs-lookup"><span data-stu-id="52fab-109">These methods perform equijoins, or joins that match two data sources based on equality of their keys.</span></span> <span data-ttu-id="52fab-110">Per un confronto, si noti che Transact-SQL supporta operatori join diversi da 'uguale a', ad esempio l'operatore 'minore di'. In termini di database relazionale, <xref:System.Linq.Enumerable.Join%2A> implementa un inner join, ovvero un tipo di join in cui sono restituiti solo gli oggetti con una corrispondenza nell'altro set di dati.</span><span class="sxs-lookup"><span data-stu-id="52fab-110">(For comparison, Transact-SQL supports join operators other than 'equals', for example the 'less than' operator.) In relational database terms, <xref:System.Linq.Enumerable.Join%2A> implements an inner join, a type of join in which only those objects that have a match in the other data set are returned.</span></span> <span data-ttu-id="52fab-111">Il metodo <xref:System.Linq.Enumerable.GroupJoin%2A> non ha equivalenti diretti in termini di database relazionale, ma implementa un superset di inner join e left outer join.</span><span class="sxs-lookup"><span data-stu-id="52fab-111">The <xref:System.Linq.Enumerable.GroupJoin%2A> method has no direct equivalent in relational database terms, but it implements a superset of inner joins and left outer joins.</span></span> <span data-ttu-id="52fab-112">Un left outer join è un join che restituisce ogni elemento della prima origine dati (a sinistra), anche se non ha elementi correlati nell'altra origine dati.</span><span class="sxs-lookup"><span data-stu-id="52fab-112">A left outer join is a join that returns each element of the first (left) data source, even if it has no correlated elements in the other data source.</span></span>  
   
- L'illustrazione seguente mostra una visualizzazione concettuale dei due set e degli elementi dei set che sono inclusi in un inner join o in un left outer join.  
+ <span data-ttu-id="52fab-113">L'illustrazione seguente mostra una visualizzazione concettuale dei due set e degli elementi dei set che sono inclusi in un inner join o in un left outer join.</span><span class="sxs-lookup"><span data-stu-id="52fab-113">The following illustration shows a conceptual view of two sets and the elements within those sets that are included in either an inner join or a left outer join.</span></span>  
   
- ![Due cerchi sovrapposti che mostrano interno/esterno. ] (../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ <span data-ttu-id="52fab-114">![Due cerchi sovrapposti che indicano inner join&#47;outer join.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "Cerchi di join")</span><span class="sxs-lookup"><span data-stu-id="52fab-114">![Two overlapping circles showing inner&#47;outer.](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")</span></span>  
   
-## <a name="methods"></a>Metodi  
+## <a name="methods"></a><span data-ttu-id="52fab-115">Metodi</span><span class="sxs-lookup"><span data-stu-id="52fab-115">Methods</span></span>  
   
-|Nome metodo|Descrizione|Sintassi delle espressioni di Query Visual Basic|Altre informazioni|  
+|<span data-ttu-id="52fab-116">Nome metodo</span><span class="sxs-lookup"><span data-stu-id="52fab-116">Method Name</span></span>|<span data-ttu-id="52fab-117">Descrizione</span><span class="sxs-lookup"><span data-stu-id="52fab-117">Description</span></span>|<span data-ttu-id="52fab-118">Sintassi delle espressioni di Query Visual Basic</span><span class="sxs-lookup"><span data-stu-id="52fab-118">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="52fab-119">Altre informazioni</span><span class="sxs-lookup"><span data-stu-id="52fab-119">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|Join|Unisce due sequenze in base a funzioni selector chiave ed estrae coppie di valori|`From x In …, y In … Where x.a = y.a`<br /><br /> -oppure-<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Join%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=fullName></xref:System.Linq.Queryable.Join%2A?displayProperty=fullName>|  
-|GroupJoin|Unisce due sequenze in base a funzioni selector chiave e raggruppa le corrispondenze risultanti per ogni elemento.|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=fullName></xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=fullName></xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=fullName>|  
+|<span data-ttu-id="52fab-120">Join</span><span class="sxs-lookup"><span data-stu-id="52fab-120">Join</span></span>|<span data-ttu-id="52fab-121">Unisce due sequenze in base a funzioni selector chiave ed estrae coppie di valori</span><span class="sxs-lookup"><span data-stu-id="52fab-121">Joins two sequences based on key selector functions and extracts pairs of values.</span></span>|`From x In …, y In … Where x.a = y.a`<br /><br /> <span data-ttu-id="52fab-122">-oppure-</span><span class="sxs-lookup"><span data-stu-id="52fab-122">-or-</span></span><br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="52fab-123">GroupJoin</span><span class="sxs-lookup"><span data-stu-id="52fab-123">GroupJoin</span></span>|<span data-ttu-id="52fab-124">Unisce due sequenze in base a funzioni selector chiave e raggruppa le corrispondenze risultanti per ogni elemento.</span><span class="sxs-lookup"><span data-stu-id="52fab-124">Joins two sequences based on key selector functions and groups the resulting matches for each element.</span></span>|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq></xref:System.Linq>   
- [Cenni preliminari sugli operatori di Query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Tipi anonimi](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Formulare query su prodotto incrociato e join](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)   
- [Clausola join](../../../../visual-basic/language-reference/queries/join-clause.md)   
- [Procedura: unire contenuto da file dissimili (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)   
- [Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+## <a name="see-also"></a><span data-ttu-id="52fab-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="52fab-125">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="52fab-126">Panoramica degli operatori query standard (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52fab-126">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="52fab-127">Tipi anonimi</span><span class="sxs-lookup"><span data-stu-id="52fab-127">Anonymous Types</span></span>](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [<span data-ttu-id="52fab-128">Formulare query di prodotto incrociato e join</span><span class="sxs-lookup"><span data-stu-id="52fab-128">Formulate Joins and Cross-Product Queries</span></span>](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [<span data-ttu-id="52fab-129">Clausola Join</span><span class="sxs-lookup"><span data-stu-id="52fab-129">Join Clause</span></span>](../../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="52fab-130">Procedura: unire contenuto da file dissimili (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52fab-130">How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+ [<span data-ttu-id="52fab-131">Procedura: popolare raccolte di oggetti da più origini (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52fab-131">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

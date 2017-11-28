@@ -1,86 +1,92 @@
 ---
-title: "Ottimizzazione delle prestazioni: layout e progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "considerazioni di progettazione"
-  - "passaggio di layout"
-  - "layout, ottimizzazione delle prestazioni"
+title: 'Ottimizzazione delle prestazioni: layout e progettazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- layout [WPF], optimizing performance
+- design considerations [WPF]
+- layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 13763e0487314fdbe7ab6fcb8b7b8711715e7a6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Ottimizzazione delle prestazioni: layout e progettazione
-La progettazione dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può influire sulle relative prestazioni, poiché crea un sovraccarico non necessario durante il calcolo del layout e la convalida dei riferimenti agli oggetti.  La costruzione degli oggetti, in particolare in fase di esecuzione, può influire sulle caratteristiche di prestazione dell'applicazione.  
+# <a name="optimizing-performance-layout-and-design"></a><span data-ttu-id="73f1f-102">Ottimizzazione delle prestazioni: layout e progettazione</span><span class="sxs-lookup"><span data-stu-id="73f1f-102">Optimizing Performance: Layout and Design</span></span>
+<span data-ttu-id="73f1f-103">La progettazione dell'applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] può influire sulle relative prestazioni, poiché crea un sovraccarico non necessario durante il calcolo del layout e la convalida dei riferimenti agli oggetti.</span><span class="sxs-lookup"><span data-stu-id="73f1f-103">The design of your [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application can impact its performance by creating unnecessary overhead in calculating layout and validating object references.</span></span> <span data-ttu-id="73f1f-104">La costruzione di oggetti, soprattutto in fase di runtime, può influire sulle caratteristiche di prestazioni dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="73f1f-104">The construction of objects, particularly at run time, can affect the performance characteristics of your application.</span></span>  
   
- In questo argomento vengono forniti i requisiti relativi alle prestazioni in queste aree.  
+ <span data-ttu-id="73f1f-105">Questo argomento offre utili suggerimenti per il miglioramento delle prestazioni in queste aree.</span><span class="sxs-lookup"><span data-stu-id="73f1f-105">This topic provides performance recommendations in these areas.</span></span>  
   
-## Layout  
- Con il termine "passaggio di layout" si intende descrivere il processo di misurazione e disposizione dei membri di una raccolta di elementi figlio dell'oggetto derivato dall'oggetto <xref:System.Windows.Controls.Panel> e di disegno sullo schermo.  Il passaggio di layout è un processo molto complesso dal punto di vista matematico: più alto è il numero di elementi figlio presenti nella raccolta, maggiore è il numero di calcoli necessari.  Ad esempio, ogni volta che un oggetto <xref:System.Windows.UIElement> figlio della raccolta cambia posizione, il sistema di layout può eseguire un nuovo passaggio.  Data la stretta relazione tra caratteristiche dell'oggetto e comportamento del layout, è importante comprendere il tipo di eventi che possono richiamare il sistema di layout.  Le prestazioni dell'applicazione risulteranno migliori riducendo il più possibile le chiamate non necessarie al passaggio di layout.  
+## <a name="layout"></a><span data-ttu-id="73f1f-106">Layout</span><span class="sxs-lookup"><span data-stu-id="73f1f-106">Layout</span></span>  
+ <span data-ttu-id="73f1f-107">Il termine "passaggio di layout" descrive il processo di misurazione e disposizione dei membri di un <xref:System.Windows.Controls.Panel>-insieme di elementi figlio e di disegno sullo schermo dell'oggetto derivato.</span><span class="sxs-lookup"><span data-stu-id="73f1f-107">The term "layout pass" describes the process of measuring and arranging the members of a <xref:System.Windows.Controls.Panel>-derived object's collection of children, and then drawing them onscreen.</span></span> <span data-ttu-id="73f1f-108">Il passaggio di layout è un processo molto complesso dal punto di vista matematico: più alto è il numero di elementi figlio presenti nella raccolta, maggiore è il numero di calcoli necessari.</span><span class="sxs-lookup"><span data-stu-id="73f1f-108">The layout pass is a mathematically-intensive process—the larger the number of children in the collection, the greater the number of calculations required.</span></span> <span data-ttu-id="73f1f-109">Ad esempio, ogni volta che un elemento figlio <xref:System.Windows.UIElement> le modifiche alla posizione dell'oggetto nella raccolta, ha la possibilità di eseguire un nuovo passaggio dal sistema di layout.</span><span class="sxs-lookup"><span data-stu-id="73f1f-109">For example, each time a child <xref:System.Windows.UIElement> object in the collection changes its position, it has the potential to trigger a new pass by the layout system.</span></span> <span data-ttu-id="73f1f-110">Data la stretta correlazione tra le caratteristiche dell'oggetto e il comportamento del layout, è importante capire i tipi di eventi che possono richiamare il sistema di layout.</span><span class="sxs-lookup"><span data-stu-id="73f1f-110">Because of the close relationship between object characteristics and layout behavior, it's important to understand the type of events that can invoke the layout system.</span></span> <span data-ttu-id="73f1f-111">Le prestazioni dell'applicazione risulteranno migliori se si riuscirà a ridurre al massimo le chiamate non necessarie al passaggio di layout.</span><span class="sxs-lookup"><span data-stu-id="73f1f-111">Your application will perform better by reducing as much as possible any unnecessary invocations of the layout pass.</span></span>  
   
- Per ogni membro figlio di una raccolta vengono completati due passaggi, uno di misurazione e uno di disposizione.  Ogni oggetto figlio fornisce la propria implementazione sottoposta a override dei metodi <xref:System.Windows.UIElement.Measure%2A> e <xref:System.Windows.UIElement.Arrange%2A> per fornire uno specifico comportamento di layout.  Nella sua forma più semplice, il layout è un sistema ricorsivo di ridimensionamento, posizionamento e disegno sullo schermo di un elemento.  
+ <span data-ttu-id="73f1f-112">Per ogni membro figlio di una raccolta vengono completati due passaggi: un passaggio di misurazione e uno di disposizione.</span><span class="sxs-lookup"><span data-stu-id="73f1f-112">The layout system completes two passes for each child member in a collection: a measure pass, and an arrange pass.</span></span> <span data-ttu-id="73f1f-113">Ogni oggetto figlio fornisce la propria implementazione sottoposta a override del <xref:System.Windows.UIElement.Measure%2A> e <xref:System.Windows.UIElement.Arrange%2A> metodi per fornire il proprio comportamento in layout specifici.</span><span class="sxs-lookup"><span data-stu-id="73f1f-113">Each child object provides its own overridden implementation of the <xref:System.Windows.UIElement.Measure%2A> and <xref:System.Windows.UIElement.Arrange%2A> methods in order to provide its own specific layout behavior.</span></span> <span data-ttu-id="73f1f-114">Nella forma più semplice, il layout è un sistema ricorsivo che fa sì che un elemento venga ridimensionato, posizionato e disegnato sullo schermo.</span><span class="sxs-lookup"><span data-stu-id="73f1f-114">At its simplest, layout is a recursive system that leads to an element being sized, positioned, and drawn onscreen.</span></span>  
   
--   Il processo di layout di un oggetto <xref:System.Windows.UIElement> figlio ha inizio con la fase di misurazione delle relative proprietà principali.  
+-   <span data-ttu-id="73f1f-115">Un elemento figlio <xref:System.Windows.UIElement> oggetto inizia il processo di layout con la misurazione delle relative proprietà core.</span><span class="sxs-lookup"><span data-stu-id="73f1f-115">A child <xref:System.Windows.UIElement> object begins the layout process by first having its core properties measured.</span></span>  
   
--   Vengono valutate le proprietà <xref:System.Windows.FrameworkElement> dell'oggetto correlate alle dimensioni, ad esempio <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>e <xref:System.Windows.FrameworkElement.Margin%2A>.  
+-   <span data-ttu-id="73f1f-116">L'oggetto <xref:System.Windows.FrameworkElement> le proprietà correlate alle dimensioni, ad esempio <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, e <xref:System.Windows.FrameworkElement.Margin%2A>, vengono valutati.</span><span class="sxs-lookup"><span data-stu-id="73f1f-116">The object's <xref:System.Windows.FrameworkElement> properties that are related to size, such as <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, and <xref:System.Windows.FrameworkElement.Margin%2A>, are evaluated.</span></span>  
   
--   Viene applicata la logica specifica dell'oggetto <xref:System.Windows.Controls.Panel>, ad esempio la proprietà <xref:System.Windows.Controls.DockPanel.Dock%2A> di <xref:System.Windows.Controls.DockPanel> o la proprietà <xref:System.Windows.Controls.StackPanel.Orientation%2A> di <xref:System.Windows.Controls.StackPanel>.  
+-   <span data-ttu-id="73f1f-117"><xref:System.Windows.Controls.Panel>-viene applicata la logica specifica, ad esempio il <xref:System.Windows.Controls.DockPanel.Dock%2A> proprietà del <xref:System.Windows.Controls.DockPanel>, o <xref:System.Windows.Controls.StackPanel.Orientation%2A> proprietà del <xref:System.Windows.Controls.StackPanel>.</span><span class="sxs-lookup"><span data-stu-id="73f1f-117"><xref:System.Windows.Controls.Panel>-specific logic is applied, such as the <xref:System.Windows.Controls.DockPanel.Dock%2A> property of the <xref:System.Windows.Controls.DockPanel>, or the <xref:System.Windows.Controls.StackPanel.Orientation%2A> property of the <xref:System.Windows.Controls.StackPanel>.</span></span>  
   
--   Il contenuto viene disposto, o posizionato, dopo la misurazione di tutti gli oggetti figlio.  
+-   <span data-ttu-id="73f1f-118">Il contenuto viene disposto, o posizionato, dopo la misurazione di tutti gli oggetti figlio.</span><span class="sxs-lookup"><span data-stu-id="73f1f-118">Content is arranged, or positioned, after all child objects have been measured.</span></span>  
   
--   La raccolta di oggetti figlio viene disegnato sullo schermo.  
+-   <span data-ttu-id="73f1f-119">La raccolta di oggetti figlio viene disegnata sullo schermo.</span><span class="sxs-lookup"><span data-stu-id="73f1f-119">The collection of child objects is drawn to the screen.</span></span>  
   
- Il passaggio di layout viene nuovamente richiamato qualora si verifichi una delle azioni elencate di seguito:  
+ <span data-ttu-id="73f1f-120">Il passaggio di layout viene nuovamente richiamato qualora si verifichi una delle azioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="73f1f-120">The layout pass process is invoked again if any of the following actions occur:</span></span>  
   
--   Un oggetto figlio viene aggiunto alla raccolta.  
+-   <span data-ttu-id="73f1f-121">Un oggetto figlio viene aggiunto alla raccolta.</span><span class="sxs-lookup"><span data-stu-id="73f1f-121">A child object is added to the collection.</span></span>  
   
--   Viene applicata una proprietà <xref:System.Windows.FrameworkElement.LayoutTransform%2A> all'oggetto figlio.  
+-   <span data-ttu-id="73f1f-122">Oggetto <xref:System.Windows.FrameworkElement.LayoutTransform%2A> viene applicato all'oggetto figlio.</span><span class="sxs-lookup"><span data-stu-id="73f1f-122">A <xref:System.Windows.FrameworkElement.LayoutTransform%2A> is applied to the child object.</span></span>  
   
--   Viene chiamato il metodo <xref:System.Windows.UIElement.UpdateLayout%2A> per l'oggetto figlio.  
+-   <span data-ttu-id="73f1f-123">Il <xref:System.Windows.UIElement.UpdateLayout%2A> metodo viene chiamato per l'oggetto figlio.</span><span class="sxs-lookup"><span data-stu-id="73f1f-123">The <xref:System.Windows.UIElement.UpdateLayout%2A> method is called for the child object.</span></span>  
   
--   Quando viene apportata una modifica al valore di una [proprietà di dipendenza](GTMT) contrassegnata con metadati che influiscono sul passaggio di misurazione o disposizione.  
+-   <span data-ttu-id="73f1f-124">Se viene apportata una modifica al valore di una proprietà di dipendenza contrassegnata con metadati che incidono sul passaggio di misurazione o disposizione.</span><span class="sxs-lookup"><span data-stu-id="73f1f-124">When a change occurs to the value of a dependency property that is marked with metadata affecting the measure or arrange passes.</span></span>  
   
-### Utilizzare il pannello più efficiente, se possibile  
- La complessità del processo di layout dipende direttamente dal comportamento di layout degli elementi derivati da <xref:System.Windows.Controls.Panel> utilizzati.  Un controllo <xref:System.Windows.Controls.Grid> o <xref:System.Windows.Controls.StackPanel>, ad esempio, fornisce un numero maggiore di funzionalità rispetto a un controllo <xref:System.Windows.Controls.Canvas>.  All'aumento delle funzionalità corrisponde, tuttavia, un maggiore dispendio in termini di prestazioni.  Pertanto, se le funzionalità fornite da un controllo <xref:System.Windows.Controls.Grid> non sono necessarie, è consigliabile utilizzare le alternative meno costose, ad esempio un oggetto <xref:System.Windows.Controls.Canvas> o un pannello personalizzato.  
+### <a name="use-the-most-efficient-panel-where-possible"></a><span data-ttu-id="73f1f-125">Usare il pannello più efficiente, se possibile</span><span class="sxs-lookup"><span data-stu-id="73f1f-125">Use the Most Efficient Panel where Possible</span></span>  
+ <span data-ttu-id="73f1f-126">La complessità del processo di layout è basata direttamente sul comportamento di layout di <xref:System.Windows.Controls.Panel>-utilizzare elementi derivati.</span><span class="sxs-lookup"><span data-stu-id="73f1f-126">The complexity of the layout process is directly based on the layout behavior of the <xref:System.Windows.Controls.Panel>-derived elements you use.</span></span> <span data-ttu-id="73f1f-127">Ad esempio, un <xref:System.Windows.Controls.Grid> o <xref:System.Windows.Controls.StackPanel> controllo fornisce molte più funzionalità rispetto a un <xref:System.Windows.Controls.Canvas> controllo.</span><span class="sxs-lookup"><span data-stu-id="73f1f-127">For example, a <xref:System.Windows.Controls.Grid> or <xref:System.Windows.Controls.StackPanel> control provides much more functionality than a <xref:System.Windows.Controls.Canvas> control.</span></span> <span data-ttu-id="73f1f-128">All'aumento delle funzionalità corrisponde, tuttavia, un maggiore dispendio in termini di prestazioni.</span><span class="sxs-lookup"><span data-stu-id="73f1f-128">The price for this greater increase in functionality is a greater increase in performance costs.</span></span> <span data-ttu-id="73f1f-129">Tuttavia, se la funzionalità non è necessario che un <xref:System.Windows.Controls.Grid> fornisce controllo, utilizzare le alternative meno costose, ad esempio un <xref:System.Windows.Controls.Canvas> o un riquadro personalizzato.</span><span class="sxs-lookup"><span data-stu-id="73f1f-129">However, if you do not require the functionality that a <xref:System.Windows.Controls.Grid> control provides, you should use the less costly alternatives, such as a <xref:System.Windows.Controls.Canvas> or a custom panel.</span></span>  
   
- Per ulteriori informazioni, vedere [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md).  
+ <span data-ttu-id="73f1f-130">Per altre informazioni, vedere [Cenni preliminari sugli elementi Panel](../../../../docs/framework/wpf/controls/panels-overview.md).</span><span class="sxs-lookup"><span data-stu-id="73f1f-130">For more information, see [Panels Overview](../../../../docs/framework/wpf/controls/panels-overview.md).</span></span>  
   
-### Aggiornare anziché sostituire una proprietà RenderTransform  
- È possibile aggiornare un oggetto <xref:System.Windows.Media.Transform> anziché sostituirlo come valore di una proprietà <xref:System.Windows.UIElement.RenderTransform%2A>.  Questa possibilità riguarda soprattutto gli scenari con animazione.  Aggiornando un oggetto <xref:System.Windows.Media.Transform> esistente si evita di dare inizio a un calcolo di layout non necessario.  
+### <a name="update-rather-than-replace-a-rendertransform"></a><span data-ttu-id="73f1f-131">Aggiornare anziché sostituire una proprietà RenderTransform</span><span class="sxs-lookup"><span data-stu-id="73f1f-131">Update Rather than Replace a RenderTransform</span></span>  
+ <span data-ttu-id="73f1f-132">Potrebbe essere in grado di aggiornare un <xref:System.Windows.Media.Transform> anziché sostituirlo come valore di un <xref:System.Windows.UIElement.RenderTransform%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="73f1f-132">You may be able to update a <xref:System.Windows.Media.Transform> rather than replacing it as the value of a <xref:System.Windows.UIElement.RenderTransform%2A> property.</span></span> <span data-ttu-id="73f1f-133">Questa possibilità può essere attuata soprattutto negli scenari con animazioni.</span><span class="sxs-lookup"><span data-stu-id="73f1f-133">This is particularly true in scenarios that involve animation.</span></span> <span data-ttu-id="73f1f-134">Aggiornando esistente <xref:System.Windows.Media.Transform>, evitare di avviare un calcolo di layout non necessari.</span><span class="sxs-lookup"><span data-stu-id="73f1f-134">By updating an existing <xref:System.Windows.Media.Transform>, you avoid initiating an unnecessary layout calculation.</span></span>  
   
-### Compilare la struttura ad albero dall'alto in basso  
- Quando si aggiunge o rimuove un nodo dall'[albero logico](GTMT), le convalide di proprietà vengono annullate sull'elemento padre e su tutti gli elementi figlio del nodo.  Di conseguenza, è consigliabile attenersi a un pattern di costruzione dall'alto in basso per evitare il costo di annullamenti di convalide non necessari su nodi che sono già stati convalidati.  Nella tabella riportata di seguito viene illustrata la differenza nella velocità di esecuzione che si riscontra compilando una struttura ad albero dall'alto in basso o dal basso in alto, dove la struttura ad albero presenta 150 livelli di profondità con un singolo oggetto <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Controls.DockPanel> a ogni livello.  
+### <a name="build-your-tree-top-down"></a><span data-ttu-id="73f1f-135">Compilare la struttura ad albero dall'alto in basso</span><span class="sxs-lookup"><span data-stu-id="73f1f-135">Build Your Tree Top-Down</span></span>  
+ <span data-ttu-id="73f1f-136">Quando si aggiunge o si rimuove un nodo dall'albero logico, le convalide di proprietà vengono annullate sull'elemento padre e su tutti gli elementi figlio del nodo.</span><span class="sxs-lookup"><span data-stu-id="73f1f-136">When a node is added or removed from the logical tree, property invalidations are raised on the node's parent and all its children.</span></span> <span data-ttu-id="73f1f-137">Di conseguenza, è sempre consigliabile seguire un pattern di costruzione dall'alto in basso per evitare il costo di annullamenti di convalide non necessari su nodi già convalidati.</span><span class="sxs-lookup"><span data-stu-id="73f1f-137">As a result, a top-down construction pattern should always be followed to avoid the cost of unnecessary invalidations on nodes that have already been validated.</span></span> <span data-ttu-id="73f1f-138">Nella tabella seguente viene illustrata la differenza tra la creazione di una struttura di alto in basso o dal basso in alto, in cui la struttura ad albero è 150 livelli con una singola, la velocità di esecuzione <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Controls.DockPanel> a ogni livello.</span><span class="sxs-lookup"><span data-stu-id="73f1f-138">The following table shows the difference in execution speed between building a tree top-down versus bottom-up, where the tree is 150 levels deep with a single <xref:System.Windows.Controls.TextBlock> and <xref:System.Windows.Controls.DockPanel> at each level.</span></span>  
   
-|**Azione**|**Compilazione della struttura ad albero \(in ms\)**|**Rendering: include la compilazione della struttura ad albero \(in ms\)**|  
-|----------------|----------------------------------------------------------|--------------------------------------------------------------------------------|  
-|Dal basso in alto|366|454|  
-|Dall'alto in basso|11|96|  
+|<span data-ttu-id="73f1f-139">**Azione**</span><span class="sxs-lookup"><span data-stu-id="73f1f-139">**Action**</span></span>|<span data-ttu-id="73f1f-140">**Compilazione della struttura ad albero (in ms)**</span><span class="sxs-lookup"><span data-stu-id="73f1f-140">**Tree building (in ms)**</span></span>|<span data-ttu-id="73f1f-141">**Rendering: include la compilazione della struttura ad albero (in ms)**</span><span class="sxs-lookup"><span data-stu-id="73f1f-141">**Render—includes tree building (in ms)**</span></span>|  
+|----------------|---------------------------------|-------------------------------------------------|  
+|<span data-ttu-id="73f1f-142">Dal basso in alto</span><span class="sxs-lookup"><span data-stu-id="73f1f-142">Bottom-up</span></span>|<span data-ttu-id="73f1f-143">366</span><span class="sxs-lookup"><span data-stu-id="73f1f-143">366</span></span>|<span data-ttu-id="73f1f-144">454</span><span class="sxs-lookup"><span data-stu-id="73f1f-144">454</span></span>|  
+|<span data-ttu-id="73f1f-145">Dall'alto in basso</span><span class="sxs-lookup"><span data-stu-id="73f1f-145">Top-down</span></span>|<span data-ttu-id="73f1f-146">11</span><span class="sxs-lookup"><span data-stu-id="73f1f-146">11</span></span>|<span data-ttu-id="73f1f-147">96</span><span class="sxs-lookup"><span data-stu-id="73f1f-147">96</span></span>|  
   
- Nell'esempio di codice riportato di seguito viene illustrato come creare una struttura ad albero dall'alto in basso.  
+ <span data-ttu-id="73f1f-148">L'esempio di codice seguente illustra come creare una struttura ad albero dall'alto in basso.</span><span class="sxs-lookup"><span data-stu-id="73f1f-148">The following code example demonstrates how to create a tree top down.</span></span>  
   
  [!code-csharp[Performance#PerformanceSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
  [!code-vb[Performance#PerformanceSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
   
- Per ulteriori informazioni sull'albero logico, vedere [Strutture ad albero in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
+ <span data-ttu-id="73f1f-149">Per altre informazioni sull'albero logico, vedere [Strutture ad albero in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).</span><span class="sxs-lookup"><span data-stu-id="73f1f-149">For more information on the logical tree, see [Trees in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).</span></span>  
   
-## Vedere anche  
- [Ottimizzazione delle prestazioni di applicazioni WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [Pianificazione delle prestazioni dell'applicazione](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)   
- [Sfruttare appieno l'hardware](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [Grafica bidimensionale e creazione di immagini](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [Comportamento dell'oggetto](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [Risorse delle applicazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [Associazione dati](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [Altri suggerimenti relativi alle prestazioni](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)   
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="73f1f-150">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="73f1f-150">See Also</span></span>  
+ [<span data-ttu-id="73f1f-151">Ottimizzazione delle prestazioni di applicazioni WPF</span><span class="sxs-lookup"><span data-stu-id="73f1f-151">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="73f1f-152">Pianificazione delle prestazioni dell'applicazione</span><span class="sxs-lookup"><span data-stu-id="73f1f-152">Planning for Application Performance</span></span>](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [<span data-ttu-id="73f1f-153">Sfruttare appieno l'hardware</span><span class="sxs-lookup"><span data-stu-id="73f1f-153">Taking Advantage of Hardware</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [<span data-ttu-id="73f1f-154">Grafica bidimensionale e creazione di immagini</span><span class="sxs-lookup"><span data-stu-id="73f1f-154">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="73f1f-155">Comportamento dell'oggetto</span><span class="sxs-lookup"><span data-stu-id="73f1f-155">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="73f1f-156">Risorse di applicazioni</span><span class="sxs-lookup"><span data-stu-id="73f1f-156">Application Resources</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [<span data-ttu-id="73f1f-157">Testo</span><span class="sxs-lookup"><span data-stu-id="73f1f-157">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="73f1f-158">Data binding</span><span class="sxs-lookup"><span data-stu-id="73f1f-158">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="73f1f-159">Altri suggerimenti relativi alle prestazioni</span><span class="sxs-lookup"><span data-stu-id="73f1f-159">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
+ [<span data-ttu-id="73f1f-160">Layout</span><span class="sxs-lookup"><span data-stu-id="73f1f-160">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)

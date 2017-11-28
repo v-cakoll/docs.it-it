@@ -1,55 +1,58 @@
 ---
-title: "Architettura di attivazione WAS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Architettura di attivazione WAS
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3ecd0ab8e285ff8c05ad8b39f68e5b2d0a3c7886
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Architettura di attivazione WAS
-In questo argomento vengono definiti e illustrati i componenti del servizio di attivazione dei processi di Windows \(noto anche come WAS\).  
+# <a name="was-activation-architecture"></a><span data-ttu-id="d2af4-102">Architettura di attivazione WAS</span><span class="sxs-lookup"><span data-stu-id="d2af4-102">WAS Activation Architecture</span></span>
+<span data-ttu-id="d2af4-103">In questo argomento vengono definiti e illustrati i componenti del servizio di attivazione dei processi di Windows (noto anche come WAS).</span><span class="sxs-lookup"><span data-stu-id="d2af4-103">This topic itemizes and discusses the components of the Windows Process Activation Service (also known as WAS).</span></span>  
   
-## Componenti di attivazione  
- WAS è costituito da numerosi componenti architettonici:  
+## <a name="activation-components"></a><span data-ttu-id="d2af4-104">Componenti di attivazione</span><span class="sxs-lookup"><span data-stu-id="d2af4-104">Activation Components</span></span>  
+ <span data-ttu-id="d2af4-105">WAS è costituito da numerosi componenti architettonici:</span><span class="sxs-lookup"><span data-stu-id="d2af4-105">WAS consists of several architectural components:</span></span>  
   
--   Adattatori listener.Servizi di Windows che ricevono messaggi su specifici protocolli di rete e comunicano con WAS per indirizzare i messaggi in arrivo al processo di lavoro corretto.  
+-   <span data-ttu-id="d2af4-106">Adattatori listener.</span><span class="sxs-lookup"><span data-stu-id="d2af4-106">Listener adapters.</span></span> <span data-ttu-id="d2af4-107">Servizi di Windows che ricevono messaggi su specifici protocolli di rete e comunicano con WAS per indirizzare i messaggi in arrivo al processo di lavoro corretto.</span><span class="sxs-lookup"><span data-stu-id="d2af4-107">Windows services that receive messages on specific network protocols and communicate with WAS to route incoming messages to the correct worker process.</span></span>  
   
--   WAS.Servizio di Windows che gestisce la creazione e la durata dei processi di lavoro.  
+-   <span data-ttu-id="d2af4-108">WAS.</span><span class="sxs-lookup"><span data-stu-id="d2af4-108">WAS.</span></span> <span data-ttu-id="d2af4-109">Servizio di Windows che gestisce la creazione e la durata dei processi di lavoro.</span><span class="sxs-lookup"><span data-stu-id="d2af4-109">The Windows service that manages the creation and lifetime of worker processes.</span></span>  
   
--   File eseguibile del processo di lavoro generico \(w3wp.exe\).  
+-   <span data-ttu-id="d2af4-110">File eseguibile del processo di lavoro generico (w3wp.exe).</span><span class="sxs-lookup"><span data-stu-id="d2af4-110">The generic worker process executable (w3wp.exe).</span></span>  
   
--   Gestore applicazioni.Gestisce la creazione e la durata dei domini applicazione che ospitano applicazioni all'interno del processo di lavoro.  
+-   <span data-ttu-id="d2af4-111">Gestore applicazioni.</span><span class="sxs-lookup"><span data-stu-id="d2af4-111">Application manager.</span></span> <span data-ttu-id="d2af4-112">Gestisce la creazione e la durata dei domini applicazione che ospitano applicazioni all'interno del processo di lavoro.</span><span class="sxs-lookup"><span data-stu-id="d2af4-112">Manages the creation and lifetime of application domains that host applications within the worker process.</span></span>  
   
--   Gestori del protocollo.Componenti specifici del protocollo che vengono eseguiti nel processo di lavoro e gestiscono le comunicazioni tra il processo di lavoro e i singoli adattatori listener.Esistono due tipi di gestori del protocollo: del processo e AppDomain.  
+-   <span data-ttu-id="d2af4-113">Gestori del protocollo.</span><span class="sxs-lookup"><span data-stu-id="d2af4-113">Protocol handlers.</span></span> <span data-ttu-id="d2af4-114">Componenti specifici del protocollo che vengono eseguiti nel processo di lavoro e gestiscono le comunicazioni tra il processo di lavoro e i singoli adattatori listener.</span><span class="sxs-lookup"><span data-stu-id="d2af4-114">Protocol-specific components that run in the worker process and manage communication between the worker process and the individual listener adapters.</span></span> <span data-ttu-id="d2af4-115">Esistono due tipi di gestori del protocollo: del processo e AppDomain.</span><span class="sxs-lookup"><span data-stu-id="d2af4-115">Two types of protocol handlers exist: process protocol handlers and AppDomain protocol handlers.</span></span>  
   
- Quando WAS attiva un'istanza del processo di lavoro, carica i gestori del protocollo del processo necessari nel processo di lavoro e utilizza il gestore applicazioni per creare un dominio applicazione per ospitare l'applicazione.Il dominio applicazione carica il codice dell'applicazione e i gestori del protocollo AppDomain richiesti dai protocolli di rete utilizzati dall'applicazione.  
+ <span data-ttu-id="d2af4-116">Quando WAS attiva un'istanza del processo di lavoro, carica i gestori del protocollo del processo necessari nel processo di lavoro e utilizza il gestore applicazioni per creare un dominio applicazione per ospitare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d2af4-116">When WAS activates a worker process instance, it loads the process protocol handlers required into the worker process and uses the application manager to create an application domain to host the application.</span></span> <span data-ttu-id="d2af4-117">Il dominio applicazione carica il codice dell'applicazione e i gestori del protocollo AppDomain richiesti dai protocolli di rete utilizzati dall'applicazione.</span><span class="sxs-lookup"><span data-stu-id="d2af4-117">The application domain loads the application’s code as well as the AppDomain protocol handlers that the network protocols used by the application require.</span></span>  
   
- ![Architettura WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
+ <span data-ttu-id="d2af4-118">![ARCHITETTURA di](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")</span><span class="sxs-lookup"><span data-stu-id="d2af4-118">![WAS Architecture](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")</span></span>  
   
-### Adattatori listener  
- Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano.Nella tabella seguente sono elencati gli adattatori listener per i protocolli [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+### <a name="listener-adapters"></a><span data-ttu-id="d2af4-119">Adattatori listener</span><span class="sxs-lookup"><span data-stu-id="d2af4-119">Listener Adapters</span></span>  
+ <span data-ttu-id="d2af4-120">Gli adattatori listener sono servizi di Windows singoli che implementano la logica di comunicazione di rete utilizzata per ricevere i messaggi tramite il protocollo di rete sul quale ascoltano.</span><span class="sxs-lookup"><span data-stu-id="d2af4-120">Listener adapters are individual Windows services that implement the network communication logic used to receive messages using the network protocol on which they listen.</span></span> <span data-ttu-id="d2af4-121">Nella tabella seguente sono elencati gli adattatori listener per i protocolli [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d2af4-121">The following table lists the listener adapters for [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protocols.</span></span>  
   
-|Nome del servizio dell’adattatore listener|Protocollo|Note|  
-|------------------------------------------------|----------------|----------|  
-|W3SVC|http|Componente comune che fornisce l’attivazione HTTP per IIS 7.0 e per [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
-|NetTcpActivator|net.tcp|Dipende dal servizio NetTcpPortSharing.|  
-|NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|Per utilizzo con applicazioni di accodamento messaggi basate su [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
-|NetMsmqActivator|msmq.formatname|Fornisce la compatibilità delle applicazioni di accodamento messaggi esistenti con le versioni precedenti.|  
+|<span data-ttu-id="d2af4-122">Nome del servizio dell’adattatore listener</span><span class="sxs-lookup"><span data-stu-id="d2af4-122">Listener adapter service name</span></span>|<span data-ttu-id="d2af4-123">Protocollo</span><span class="sxs-lookup"><span data-stu-id="d2af4-123">Protocol</span></span>|<span data-ttu-id="d2af4-124">Note</span><span class="sxs-lookup"><span data-stu-id="d2af4-124">Notes</span></span>|  
+|-----------------------------------|--------------|-----------|  
+|<span data-ttu-id="d2af4-125">W3SVC</span><span class="sxs-lookup"><span data-stu-id="d2af4-125">W3SVC</span></span>|<span data-ttu-id="d2af4-126">http</span><span class="sxs-lookup"><span data-stu-id="d2af4-126">http</span></span>|<span data-ttu-id="d2af4-127">Componente comune che fornisce l’attivazione HTTP per IIS 7.0 e per [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d2af4-127">Common component that provides HTTP activation for both IIS 7.0 and [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span>|  
+|<span data-ttu-id="d2af4-128">NetTcpActivator</span><span class="sxs-lookup"><span data-stu-id="d2af4-128">NetTcpActivator</span></span>|<span data-ttu-id="d2af4-129">net.tcp</span><span class="sxs-lookup"><span data-stu-id="d2af4-129">net.tcp</span></span>|<span data-ttu-id="d2af4-130">Dipende dal servizio NetTcpPortSharing.</span><span class="sxs-lookup"><span data-stu-id="d2af4-130">Depends on the NetTcpPortSharing service.</span></span>|  
+|<span data-ttu-id="d2af4-131">NetPipeActivator</span><span class="sxs-lookup"><span data-stu-id="d2af4-131">NetPipeActivator</span></span>|<span data-ttu-id="d2af4-132">net.pipe</span><span class="sxs-lookup"><span data-stu-id="d2af4-132">net.pipe</span></span>||  
+|<span data-ttu-id="d2af4-133">NetMsmqActivator</span><span class="sxs-lookup"><span data-stu-id="d2af4-133">NetMsmqActivator</span></span>|<span data-ttu-id="d2af4-134">net.msmq</span><span class="sxs-lookup"><span data-stu-id="d2af4-134">net.msmq</span></span>|<span data-ttu-id="d2af4-135">Per utilizzo con applicazioni di accodamento messaggi basate su [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d2af4-135">For use with [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-based Message Queuing applications.</span></span>|  
+|<span data-ttu-id="d2af4-136">NetMsmqActivator</span><span class="sxs-lookup"><span data-stu-id="d2af4-136">NetMsmqActivator</span></span>|<span data-ttu-id="d2af4-137">msmq.formatname</span><span class="sxs-lookup"><span data-stu-id="d2af4-137">msmq.formatname</span></span>|<span data-ttu-id="d2af4-138">Fornisce la compatibilità delle applicazioni di accodamento messaggi esistenti con le versioni precedenti.</span><span class="sxs-lookup"><span data-stu-id="d2af4-138">Provides backwards compatibility with existing Message Queuing applications.</span></span>|  
   
- Gli adattatori listener per protocolli specifici vengono registrati durante l'installazione nel file applicationHost.config, come illustrato nell'esempio XML seguente.  
+ <span data-ttu-id="d2af4-139">Gli adattatori listener per protocolli specifici vengono registrati durante l'installazione nel file applicationHost.config, come illustrato nell'esempio XML seguente.</span><span class="sxs-lookup"><span data-stu-id="d2af4-139">Listener adapters for specific protocols are registered during installation in the applicationHost.config file, as shown in the following XML example.</span></span>  
   
-```  
+```xml  
 <system.applicationHost>  
     <listenerAdapters>  
         <add name="http" />  
@@ -65,10 +68,10 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
 </system.applicationHost>  
 ```  
   
-### Gestori del protocollo  
- I gestori del processo e del protocollo AppDomain per protocolli specifici vengono registrati nel file Web.config a livello di computer.  
+### <a name="protocol-handlers"></a><span data-ttu-id="d2af4-140">Gestori del protocollo</span><span class="sxs-lookup"><span data-stu-id="d2af4-140">Protocol Handlers</span></span>  
+ <span data-ttu-id="d2af4-141">I gestori del processo e del protocollo AppDomain per protocolli specifici vengono registrati nel file Web.config a livello di computer.</span><span class="sxs-lookup"><span data-stu-id="d2af4-141">Process and AppDomain protocol handlers for specific protocols are registered in the machine-level Web.config file.</span></span>  
   
-```  
+```xml  
 <system.web>  
    <protocols>  
       <add name="net.tcp"   
@@ -81,7 +84,7 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
         processHandlerType=  
          "System.ServiceModel.WasHosting.NamedPipeProcessProtocolHandler"  
           appDomainHandlerType=  
-           "System.ServiceModel.WasHosting.NamedPipeAppDomainProtocolHandler”/>  
+           "System.ServiceModel.WasHosting.NamedPipeAppDomainProtocolHandler"/>  
       <add name="net.msmq"  
         processHandlerType=  
          "System.ServiceModel.WasHosting.MsmqProcessProtocolHandler"  
@@ -92,6 +95,6 @@ In questo argomento vengono definiti e illustrati i componenti del servizio di a
 </system.web>  
 ```  
   
-## Vedere anche  
- [Configurazione WAS per l'utilizzo con WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)   
- [Funzionalità di hosting di AppFabric](http://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="d2af4-142">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="d2af4-142">See Also</span></span>  
+ [<span data-ttu-id="d2af4-143">Configurazione WAS per l'utilizzo con WCF</span><span class="sxs-lookup"><span data-stu-id="d2af4-143">Configuring WAS for Use with WCF</span></span>](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
+ [<span data-ttu-id="d2af4-144">Windows Server AppFabric con funzionalità di Hosting</span><span class="sxs-lookup"><span data-stu-id="d2af4-144">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=201276)

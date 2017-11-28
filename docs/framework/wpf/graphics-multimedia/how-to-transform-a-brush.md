@@ -1,54 +1,60 @@
 ---
-title: "Procedura: trasformare un oggetto Brush | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "pennelli, rotazione di contenuti"
-  - "pennelli, Transform (proprietà)"
-  - "rotazione di contenuti di pennelli"
+title: 'Procedura: trasformare un oggetto Brush'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- brushes [WPF], rotating contents
+- brushes [WPF], Transform property
+- rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a36ba5bce60b88d662f03fcff75a6fa04cad039d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: trasformare un oggetto Brush
-In questo esempio viene illustrato come trasformare gli oggetti <xref:System.Windows.Media.Brush> utilizzando le due proprietà di trasformazione <xref:System.Windows.Media.Brush.RelativeTransform%2A> e <xref:System.Windows.Media.Brush.Transform%2A>.  
+# <a name="how-to-transform-a-brush"></a><span data-ttu-id="c7092-102">Procedura: trasformare un oggetto Brush</span><span class="sxs-lookup"><span data-stu-id="c7092-102">How to: Transform a Brush</span></span>
+<span data-ttu-id="c7092-103">In questo esempio viene illustrato come trasformare <xref:System.Windows.Media.Brush> oggetti utilizzando le proprietà di due trasformazione: <xref:System.Windows.Media.Brush.RelativeTransform%2A> e <xref:System.Windows.Media.Brush.Transform%2A>.</span><span class="sxs-lookup"><span data-stu-id="c7092-103">This example shows how to transform <xref:System.Windows.Media.Brush> objects by using their two transformation properties: <xref:System.Windows.Media.Brush.RelativeTransform%2A> and <xref:System.Windows.Media.Brush.Transform%2A>.</span></span>  
   
- Negli esempi seguenti viene utilizzato un oggetto <xref:System.Windows.Media.RotateTransform> per ruotare di 45 gradi il contenuto di un oggetto <xref:System.Windows.Media.ImageBrush>.  
+ <span data-ttu-id="c7092-104">Negli esempi seguenti viene utilizzato un <xref:System.Windows.Media.RotateTransform> per ruotare il contenuto di un <xref:System.Windows.Media.ImageBrush> di 45 gradi.</span><span class="sxs-lookup"><span data-stu-id="c7092-104">The following examples use a <xref:System.Windows.Media.RotateTransform> to rotate the content of an <xref:System.Windows.Media.ImageBrush> by 45 degrees.</span></span>  
   
- Nell'immagine seguente è illustrato l'oggetto <xref:System.Windows.Media.ImageBrush> senza <xref:System.Windows.Media.RotateTransform>, con <xref:System.Windows.Media.RotateTransform> applicato alla proprietà <xref:System.Windows.Media.Brush.RelativeTransform%2A> e con <xref:System.Windows.Media.RotateTransform> applicato alla proprietà <xref:System.Windows.Media.Brush.Transform%2A>.  
+ <span data-ttu-id="c7092-105">Nella figura seguente il <xref:System.Windows.Media.ImageBrush> senza un <xref:System.Windows.Media.RotateTransform>, con la <xref:System.Windows.Media.RotateTransform> applicato al <xref:System.Windows.Media.Brush.RelativeTransform%2A> proprietà e con il <xref:System.Windows.Media.RotateTransform> applicato al <xref:System.Windows.Media.Brush.Transform%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="c7092-105">The following illustration shows the <xref:System.Windows.Media.ImageBrush> without a <xref:System.Windows.Media.RotateTransform>, with the <xref:System.Windows.Media.RotateTransform> applied to the <xref:System.Windows.Media.Brush.RelativeTransform%2A> property, and with the <xref:System.Windows.Media.RotateTransform> applied to the <xref:System.Windows.Media.Brush.Transform%2A> property.</span></span>  
   
- ![Impostazioni RelativeTransform e Transform di Brush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk\_graphicsmm\_transformandrelativetransform")  
+ <span data-ttu-id="c7092-106">![Impostazioni RelativeTransform e Transform di Brush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")</span><span class="sxs-lookup"><span data-stu-id="c7092-106">![Brush RelativeTransform and Transform settings](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")</span></span>  
   
-## Esempio  
- Nel primo esempio viene applicato un oggetto <xref:System.Windows.Media.RotateTransform> alla proprietà <xref:System.Windows.Media.Brush.RelativeTransform%2A> di un oggetto <xref:System.Windows.Media.ImageBrush>.  Le proprietà <xref:System.Windows.Media.RotateTransform.CenterX%2A> e <xref:System.Windows.Media.RotateTransform.CenterY%2A> di un oggetto <xref:System.Windows.Media.RotateTransform> sono entrambe impostate su 0,5 che è la coordinata relativa del punto centrale di questo contenuto.  Di conseguenza, il contenuto <xref:System.Windows.Media.ImageBrush> ruota intorno al relativo centro.  
+## <a name="example"></a><span data-ttu-id="c7092-107">Esempio</span><span class="sxs-lookup"><span data-stu-id="c7092-107">Example</span></span>  
+ <span data-ttu-id="c7092-108">Il primo esempio viene applicato un <xref:System.Windows.Media.RotateTransform> per il <xref:System.Windows.Media.Brush.RelativeTransform%2A> proprietà di un <xref:System.Windows.Media.ImageBrush>.</span><span class="sxs-lookup"><span data-stu-id="c7092-108">The first example applies a <xref:System.Windows.Media.RotateTransform> to the <xref:System.Windows.Media.Brush.RelativeTransform%2A> property of an <xref:System.Windows.Media.ImageBrush>.</span></span> <span data-ttu-id="c7092-109">Il <xref:System.Windows.Media.RotateTransform.CenterX%2A> e <xref:System.Windows.Media.RotateTransform.CenterY%2A> le proprietà di un <xref:System.Windows.Media.RotateTransform> sono entrambe impostate su 0,5, che è la coordinata relativa del punto centrale del contenuto dell'oggetto.</span><span class="sxs-lookup"><span data-stu-id="c7092-109">The <xref:System.Windows.Media.RotateTransform.CenterX%2A> and <xref:System.Windows.Media.RotateTransform.CenterY%2A> properties of a <xref:System.Windows.Media.RotateTransform> object are both set to 0.5, which is the relative coordinate of the center point of this content.</span></span> <span data-ttu-id="c7092-110">Di conseguenza, il <xref:System.Windows.Media.ImageBrush> contenuto ruota intorno al centro.</span><span class="sxs-lookup"><span data-stu-id="c7092-110">As a result, the <xref:System.Windows.Media.ImageBrush> content rotates about its center.</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushrelativetransformexample)]
- [!code-xml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
+ [!code-xaml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
   
- Anche nel secondo esempio viene applicato un oggetto <xref:System.Windows.Media.RotateTransform> a un oggetto <xref:System.Windows.Media.ImageBrush>, ma viene utilizzata la proprietà <xref:System.Windows.Media.Brush.Transform%2A> anziché la proprietà <xref:System.Windows.Media.Brush.RelativeTransform%2A>.  
+ <span data-ttu-id="c7092-111">Si applica anche nel secondo esempio una <xref:System.Windows.Media.RotateTransform> per un <xref:System.Windows.Media.ImageBrush>; tuttavia, questo esempio viene utilizzato il <xref:System.Windows.Media.Brush.Transform%2A> proprietà anziché il <xref:System.Windows.Media.Brush.RelativeTransform%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="c7092-111">The second example also applies a <xref:System.Windows.Media.RotateTransform> to an <xref:System.Windows.Media.ImageBrush>; however, this example uses the <xref:System.Windows.Media.Brush.Transform%2A> property instead of the <xref:System.Windows.Media.Brush.RelativeTransform%2A> property.</span></span>  
   
- Per ruotare il pennello intorno al relativo centro, le proprietà <xref:System.Windows.Media.RotateTransform.CenterX%2A> e <xref:System.Windows.Media.RotateTransform.CenterY%2A> dell'oggetto <xref:System.Windows.Media.RotateTransform> vengono impostate su coordinate assolute.  Poiché il pennello disegna un rettangolo di 175 per 90 [pixel](GTMT), il punto centrale del rettangolo è \(87,5, 45\).  
+ <span data-ttu-id="c7092-112">Per ruotare il pennello rispetto al centro, nell'esempio viene impostato il <xref:System.Windows.Media.RotateTransform.CenterX%2A> e <xref:System.Windows.Media.RotateTransform.CenterY%2A> le proprietà del <xref:System.Windows.Media.RotateTransform> oggetto coordinate assolute.</span><span class="sxs-lookup"><span data-stu-id="c7092-112">To rotate the brush about its center, the example sets the <xref:System.Windows.Media.RotateTransform.CenterX%2A> and <xref:System.Windows.Media.RotateTransform.CenterY%2A> properties of the <xref:System.Windows.Media.RotateTransform> object to absolute coordinates.</span></span> <span data-ttu-id="c7092-113">Poiché il pennello disegna un rettangolo di 175 x 90 pixel, il punto centrale del rettangolo è (87,5, 45).</span><span class="sxs-lookup"><span data-stu-id="c7092-113">Because the brush paints a rectangle that is 175 by 90 pixels, the center point of the rectangle is (87.5, 45).</span></span>  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushtransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushtransformexample)]
- [!code-xml[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
+ [!code-xaml[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
   
- Per una descrizione del funzionamento delle proprietà <xref:System.Windows.Media.Brush.RelativeTransform%2A> e <xref:System.Windows.Media.Brush.Transform%2A>, vedere [Cenni preliminari sulle proprietà di trasformazione Brush](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md).  
+ <span data-ttu-id="c7092-114">Per una descrizione di come <xref:System.Windows.Media.Brush.RelativeTransform%2A> e <xref:System.Windows.Media.Brush.Transform%2A> proprietà, vedere il [Brush Transformation Overview](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md).</span><span class="sxs-lookup"><span data-stu-id="c7092-114">For a description of how the <xref:System.Windows.Media.Brush.RelativeTransform%2A> and <xref:System.Windows.Media.Brush.Transform%2A> properties work, see the [Brush Transformation Overview](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md).</span></span>  
   
- Per l'esempio completo, vedere [Esempio Brush](http://go.microsoft.com/fwlink/?LinkID=159973) \(la pagina potrebbe essere in inglese\).  Per ulteriori informazioni sui pennelli, vedere [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ <span data-ttu-id="c7092-115">Per l'esempio completo, vedere [Brushes Sample (Esempio di pennelli)](http://go.microsoft.com/fwlink/?LinkID=159973).</span><span class="sxs-lookup"><span data-stu-id="c7092-115">For the complete sample, see [Brushes Sample](http://go.microsoft.com/fwlink/?LinkID=159973).</span></span> <span data-ttu-id="c7092-116">Per altre informazioni sui pennelli, vedere [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).</span><span class="sxs-lookup"><span data-stu-id="c7092-116">For more information about brushes, see [Painting with Solid Colors and Gradients Overview](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).</span></span>  
   
-## Vedere anche  
- [Cenni preliminari sulle proprietà di trasformazione Brush](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)   
- [Cenni sul disegno con colori a tinta unita e sfumature](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)   
- [Cenni preliminari sulle trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c7092-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c7092-117">See Also</span></span>  
+ [<span data-ttu-id="c7092-118">Panoramica sulle proprietà di trasformazione Brush</span><span class="sxs-lookup"><span data-stu-id="c7092-118">Brush Transformation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
+ [<span data-ttu-id="c7092-119">Cenni sul disegno con colori a tinta unita e sfumature</span><span class="sxs-lookup"><span data-stu-id="c7092-119">Painting with Solid Colors and Gradients Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [<span data-ttu-id="c7092-120">Cenni preliminari sulle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="c7092-120">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

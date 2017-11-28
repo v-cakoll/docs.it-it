@@ -1,56 +1,48 @@
 ---
-title: Ordinamento dei dati (Visual Basic) | Documenti di Microsoft
+title: Ordinamento dei dati (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d6a009573f9ff3eba71875945128ee6cd37ac37b
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8f17c6ecad721dd3a48a01c09693b0a1cf723a5b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorting-data-visual-basic"></a>Ordinamento dei dati (Visual Basic)
-Un'operazione di ordinamento Ordina gli elementi di una sequenza in base a uno o più attributi. Il primo criterio di ordinamento consente di applicare un ordinamento principale agli elementi. Specificando un secondo criterio di ordinamento, è possibile ordinare gli elementi all'interno di ogni gruppo di ordinamento principale.  
+# <a name="sorting-data-visual-basic"></a><span data-ttu-id="248a7-102">Ordinamento dei dati (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="248a7-102">Sorting Data (Visual Basic)</span></span>
+<span data-ttu-id="248a7-103">Un'operazione di ordinamento consente di ordinare gli elementi di una sequenza in base a uno o più attributi.</span><span class="sxs-lookup"><span data-stu-id="248a7-103">A sorting operation orders the elements of a sequence based on one or more attributes.</span></span> <span data-ttu-id="248a7-104">Il primo criterio di ordinamento consente di applicare un ordinamento principale agli elementi.</span><span class="sxs-lookup"><span data-stu-id="248a7-104">The first sort criterion performs a primary sort on the elements.</span></span> <span data-ttu-id="248a7-105">Specificando un secondo criterio di ordinamento, è possibile ordinare gli elementi all'interno di ogni gruppo di ordinamento principale.</span><span class="sxs-lookup"><span data-stu-id="248a7-105">By specifying a second sort criterion, you can sort the elements within each primary sort group.</span></span>  
   
- Nella figura seguente mostra i risultati di un'operazione di ordinamento alfabetico su una sequenza di caratteri.  
+ <span data-ttu-id="248a7-106">La figura seguente illustra i risultati di un'operazione di ordinamento alfabetico in una sequenza di caratteri.</span><span class="sxs-lookup"><span data-stu-id="248a7-106">The following illustration shows the results of an alphabetical sort operation on a sequence of characters.</span></span>  
   
- ![Operazione di ordinamento LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ <span data-ttu-id="248a7-107">![Operazione di ordinamento LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")</span><span class="sxs-lookup"><span data-stu-id="248a7-107">![LINQ Sorting Operation](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")</span></span>  
   
- Nella sezione seguente sono elencati i metodi dell'operatore query standard che ordinano i dati.  
+ <span data-ttu-id="248a7-108">La sezione seguente elenca i metodi dell'operatore query standard che ordina i dati.</span><span class="sxs-lookup"><span data-stu-id="248a7-108">The standard query operator methods that sort data are listed in the following section.</span></span>  
   
-## <a name="methods"></a>Metodi  
+## <a name="methods"></a><span data-ttu-id="248a7-109">Metodi</span><span class="sxs-lookup"><span data-stu-id="248a7-109">Methods</span></span>  
   
-|Nome metodo|Descrizione|Sintassi delle espressioni di Query Visual Basic|Altre informazioni|  
+|<span data-ttu-id="248a7-110">Nome metodo</span><span class="sxs-lookup"><span data-stu-id="248a7-110">Method Name</span></span>|<span data-ttu-id="248a7-111">Descrizione</span><span class="sxs-lookup"><span data-stu-id="248a7-111">Description</span></span>|<span data-ttu-id="248a7-112">Sintassi delle espressioni di Query Visual Basic</span><span class="sxs-lookup"><span data-stu-id="248a7-112">Visual Basic Query Expression Syntax</span></span>|<span data-ttu-id="248a7-113">Altre informazioni</span><span class="sxs-lookup"><span data-stu-id="248a7-113">More Information</span></span>|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|OrderBy|Ordina i valori in ordine crescente.|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=fullName></xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=fullName></xref:System.Linq.Queryable.OrderBy%2A?displayProperty=fullName>|  
-|OrderByDescending|Ordina i valori in ordine decrescente.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=fullName></xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=fullName></xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=fullName>|  
-|ThenBy|Esegue un ordinamento secondario in ordine crescente.|`Order By …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=fullName></xref:System.Linq.Queryable.ThenBy%2A?displayProperty=fullName>|  
-|ThenByDescending|Esegue un ordinamento secondario in ordine decrescente.|`Order By …, … Descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=fullName></xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=fullName></xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=fullName>|  
-|Reverse|Inverte l'ordine degli elementi in una raccolta.|Non applicabile.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=fullName></xref:System.Linq.Enumerable.Reverse%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=fullName></xref:System.Linq.Queryable.Reverse%2A?displayProperty=fullName>|  
+|<span data-ttu-id="248a7-114">OrderBy</span><span class="sxs-lookup"><span data-stu-id="248a7-114">OrderBy</span></span>|<span data-ttu-id="248a7-115">Ordina i valori in ordine crescente.</span><span class="sxs-lookup"><span data-stu-id="248a7-115">Sorts values in ascending order.</span></span>|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="248a7-116">OrderByDescending</span><span class="sxs-lookup"><span data-stu-id="248a7-116">OrderByDescending</span></span>|<span data-ttu-id="248a7-117">Ordina i valori in ordine decrescente.</span><span class="sxs-lookup"><span data-stu-id="248a7-117">Sorts values in descending order.</span></span>|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="248a7-118">ThenBy</span><span class="sxs-lookup"><span data-stu-id="248a7-118">ThenBy</span></span>|<span data-ttu-id="248a7-119">Esegue un ordinamento secondario crescente.</span><span class="sxs-lookup"><span data-stu-id="248a7-119">Performs a secondary sort in ascending order.</span></span>|`Order By …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="248a7-120">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="248a7-120">ThenByDescending</span></span>|<span data-ttu-id="248a7-121">Esegue un ordinamento secondario decrescente.</span><span class="sxs-lookup"><span data-stu-id="248a7-121">Performs a secondary sort in descending order.</span></span>|`Order By …, … Descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="248a7-122">Reverse</span><span class="sxs-lookup"><span data-stu-id="248a7-122">Reverse</span></span>|<span data-ttu-id="248a7-123">Inverte l'ordine degli elementi in una Collection.</span><span class="sxs-lookup"><span data-stu-id="248a7-123">Reverses the order of the elements in a collection.</span></span>|<span data-ttu-id="248a7-124">Non applicabile.</span><span class="sxs-lookup"><span data-stu-id="248a7-124">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|  
   
-## <a name="query-expression-syntax-examples"></a>Esempi di sintassi delle espressioni di query  
+## <a name="query-expression-syntax-examples"></a><span data-ttu-id="248a7-125">Esempi di sintassi delle espressioni di query</span><span class="sxs-lookup"><span data-stu-id="248a7-125">Query Expression Syntax Examples</span></span>  
   
-### <a name="primary-sort-examples"></a>Esempi di ordinamento principale  
+### <a name="primary-sort-examples"></a><span data-ttu-id="248a7-126">Esempi di ordinamento primario</span><span class="sxs-lookup"><span data-stu-id="248a7-126">Primary Sort Examples</span></span>  
   
-#### <a name="primary-ascending-sort"></a>Ordinamento crescente principale  
- Nell'esempio seguente viene illustrato come utilizzare il `Order By` clausola in una query LINQ per ordinare le stringhe in una matrice in base alla lunghezza di stringa, in ordine crescente.  
+#### <a name="primary-ascending-sort"></a><span data-ttu-id="248a7-127">Ordinamento primario crescente</span><span class="sxs-lookup"><span data-stu-id="248a7-127">Primary Ascending Sort</span></span>  
+ <span data-ttu-id="248a7-128">Nell'esempio seguente viene illustrato come usare la clausola `Order By` in una query LINQ per ordinare le stringhe in una matrice in base alla lunghezza di stringa, in ordine crescente.</span><span class="sxs-lookup"><span data-stu-id="248a7-128">The following example demonstrates how to use the `Order By` clause in a LINQ query to sort the strings in an array by string length, in ascending order.</span></span>  
   
 ```vb  
 Dim words = {"the", "quick", "brown", "fox", "jumps"}  
@@ -76,8 +68,8 @@ MsgBox(sb.ToString())
 ' jumps  
 ```  
   
-#### <a name="primary-descending-sort"></a>Ordinamento decrescente principale  
- Nell'esempio seguente viene illustrato come utilizzare il `Order By Descending` clausola in una query LINQ per ordinare le stringhe in base alla prima lettera, in ordine decrescente.  
+#### <a name="primary-descending-sort"></a><span data-ttu-id="248a7-129">Ordinamento primario decrescente</span><span class="sxs-lookup"><span data-stu-id="248a7-129">Primary Descending Sort</span></span>  
+ <span data-ttu-id="248a7-130">Nell'esempio seguente viene illustrato come usare la clausola `Order By Descending` in una query LINQ per ordinare le stringhe in base alla prima lettera, in ordine decrescente.</span><span class="sxs-lookup"><span data-stu-id="248a7-130">The next example demonstrates how to use the `Order By Descending` clause in a LINQ query to sort the strings by their first letter, in descending order.</span></span>  
   
 ```vb  
 Dim words = {"the", "quick", "brown", "fox", "jumps"}  
@@ -103,10 +95,10 @@ MsgBox(sb.ToString())
 ' brown  
 ```  
   
-### <a name="secondary-sort-examples"></a>Esempi di ordinamento secondaria  
+### <a name="secondary-sort-examples"></a><span data-ttu-id="248a7-131">Esempi di ordinamento secondario</span><span class="sxs-lookup"><span data-stu-id="248a7-131">Secondary Sort Examples</span></span>  
   
-#### <a name="secondary-ascending-sort"></a>Ordinamento crescente secondario  
- Nell'esempio seguente viene illustrato come utilizzare il `Order By` clausola in una query LINQ per eseguire un ordinamento primario e secondario delle stringhe in una matrice. Le stringhe vengono ordinate principalmente dalla lunghezza e poi in base alla prima lettera della stringa, in ordine crescente.  
+#### <a name="secondary-ascending-sort"></a><span data-ttu-id="248a7-132">Ordinamento secondario crescente</span><span class="sxs-lookup"><span data-stu-id="248a7-132">Secondary Ascending Sort</span></span>  
+ <span data-ttu-id="248a7-133">Nell'esempio seguente viene illustrato come usare la clausola `Order By` in una query LINQ per eseguire un ordinamento primario e secondario delle stringhe in una matrice.</span><span class="sxs-lookup"><span data-stu-id="248a7-133">The following example demonstrates how to use the `Order By` clause in a LINQ query to perform a primary and secondary sort of the strings in an array.</span></span> <span data-ttu-id="248a7-134">Le stringhe vengono ordinate prima in base alla lunghezza e poi in base alla prima lettera della stringa, in ordine crescente.</span><span class="sxs-lookup"><span data-stu-id="248a7-134">The strings are sorted primarily by length and secondarily by the first letter of the string, both in ascending order.</span></span>  
   
 ```vb  
 Dim words = {"the", "quick", "brown", "fox", "jumps"}  
@@ -132,8 +124,8 @@ MsgBox(sb.ToString())
 ' quick  
 ```  
   
-#### <a name="secondary-descending-sort"></a>Ordinamento decrescente secondario  
- Nell'esempio seguente viene illustrato come utilizzare il `Order By Descending` clausola in una query LINQ per eseguire un ordinamento principale, in ordine crescente e un ordinamento secondario, in ordine decrescente. Le stringhe vengono ordinate principalmente dalla lunghezza e poi in base alla prima lettera della stringa.  
+#### <a name="secondary-descending-sort"></a><span data-ttu-id="248a7-135">Ordinamento secondario in ordine decrescente</span><span class="sxs-lookup"><span data-stu-id="248a7-135">Secondary Descending Sort</span></span>  
+ <span data-ttu-id="248a7-136">L'esempio seguente illustra come usare la clausola `Order By Descending` in una query LINQ per eseguire un ordinamento primario, in ordine crescente, e un ordinamento secondario, in ordine decrescente.</span><span class="sxs-lookup"><span data-stu-id="248a7-136">The next example demonstrates how to use the `Order By Descending` clause in a LINQ query to perform a primary sort, in ascending order, and a secondary sort, in descending order.</span></span> <span data-ttu-id="248a7-137">Le stringhe vengono ordinate principalmente in base alla lunghezza e poi in base alla prima lettera della stringa.</span><span class="sxs-lookup"><span data-stu-id="248a7-137">The strings are sorted primarily by length and secondarily by the first letter of the string.</span></span>  
   
 ```vb  
 Dim words = {"the", "quick", "brown", "fox", "jumps"}  
@@ -159,9 +151,9 @@ MsgBox(sb.ToString())
 ' brown  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- <xref:System.Linq></xref:System.Linq>   
- [Cenni preliminari sugli operatori di Query standard (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Clausola Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Procedura: ordinare i risultati della Query](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)   
- [Procedura: ordinare o filtrare i dati di testo da qualsiasi parola o campo (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+## <a name="see-also"></a><span data-ttu-id="248a7-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="248a7-138">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="248a7-139">Panoramica degli operatori query standard (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="248a7-139">Standard Query Operators Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="248a7-140">Clausola Order By</span><span class="sxs-lookup"><span data-stu-id="248a7-140">Order By Clause</span></span>](../../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [<span data-ttu-id="248a7-141">Procedura: Ordinare i risultati di query</span><span class="sxs-lookup"><span data-stu-id="248a7-141">How to: Sort Query Results</span></span>](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)  
+ [<span data-ttu-id="248a7-142">Procedura: ordinare o filtrare i dati di testo da qualsiasi parola o campo (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="248a7-142">How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

@@ -1,75 +1,58 @@
 ---
-title: /win32resource | Documenti di Microsoft
-ms.date: 2015-07-20
+title: /win32resource
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - /win32resource
 - win32resource
-dev_langs:
-- VB
 helpviewer_keywords:
 - /win32resource compiler option [Visual Basic]
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 37902590d5a05d7fdb2a521f3c3de2ad88c2c502
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d839b1100b1ae76fbd4653ebc60c79db11b77685
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="win32resource"></a>/win32resource
-Inserisce un file di risorse Win32 nel file di output.  
+# <a name="win32resource"></a><span data-ttu-id="a9fc6-102">/win32resource</span><span class="sxs-lookup"><span data-stu-id="a9fc6-102">/win32resource</span></span>
+<span data-ttu-id="a9fc6-103">Inserisce un file di risorse Win32 nel file di output.</span><span class="sxs-lookup"><span data-stu-id="a9fc6-103">Inserts a Win32 resource file in the output file.</span></span>  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="syntax"></a><span data-ttu-id="a9fc6-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="a9fc6-104">Syntax</span></span>  
   
 ```  
 /win32resource:filename  
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a><span data-ttu-id="a9fc6-105">Argomenti</span><span class="sxs-lookup"><span data-stu-id="a9fc6-105">Arguments</span></span>  
  `filename`  
- Il nome del file di risorse da aggiungere al file di output. Racchiudere il nome del file tra virgolette ("") se contiene uno spazio.  
+ <span data-ttu-id="a9fc6-106">Il nome del file di risorse da aggiungere al file di output.</span><span class="sxs-lookup"><span data-stu-id="a9fc6-106">The name of the resource file to add to your output file.</span></span> <span data-ttu-id="a9fc6-107">Racchiudere il nome del file tra virgolette ("") se contiene uno spazio.</span><span class="sxs-lookup"><span data-stu-id="a9fc6-107">Enclose the file name in quotation marks (" ") if it contains a space.</span></span>  
   
-## <a name="remarks"></a>Note  
- È possibile creare un file di risorse Win32 con il compilatore di risorse (RC) di Microsoft Windows.  
+## <a name="remarks"></a><span data-ttu-id="a9fc6-108">Note</span><span class="sxs-lookup"><span data-stu-id="a9fc6-108">Remarks</span></span>  
+ <span data-ttu-id="a9fc6-109">È possibile creare un file di risorse Win32 con il compilatore di risorse (RC) di Microsoft Windows.</span><span class="sxs-lookup"><span data-stu-id="a9fc6-109">You can create a Win32 resource file with the Microsoft Windows Resource Compiler (RC).</span></span>  
   
- Una risorsa Win32 può contenere versione o informazioni bitmap (icona) che consente di identificare l'applicazione in **Esplora File**. Se non si specifica `/win32resource`, il compilatore genera informazioni di versione basate sulla versione dell'assembly. Il `/win32resource` e `/win32icon` opzioni si escludono a vicenda.  
+ <span data-ttu-id="a9fc6-110">Una risorsa Win32 può contenere una versione o le informazioni di bitmap (icona) che consente di identificare l'applicazione in **Esplora File**.</span><span class="sxs-lookup"><span data-stu-id="a9fc6-110">A Win32 resource can contain version or bitmap (icon) information that helps identify your application in **File Explorer**.</span></span> <span data-ttu-id="a9fc6-111">Se non si specifica `/win32resource`, il compilatore genera le informazioni sulla versione in base alla versione di assembly.</span><span class="sxs-lookup"><span data-stu-id="a9fc6-111">If you do not specify `/win32resource`, the compiler generates version information based on the assembly version.</span></span> <span data-ttu-id="a9fc6-112">Il `/win32resource` e `/win32icon` opzioni si escludono a vicenda.</span><span class="sxs-lookup"><span data-stu-id="a9fc6-112">The `/win32resource` and `/win32icon` options are mutually exclusive.</span></span>  
   
- Vedere [/linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) per fare riferimento a un [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] file di risorse, o [/resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) per collegare un [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] file di risorse.  
+ <span data-ttu-id="a9fc6-113">Vedere [/linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) per fare riferimento un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse, o [/resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) per collegare un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] file di risorse.</span><span class="sxs-lookup"><span data-stu-id="a9fc6-113">See [/linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) to reference a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] resource file, or [/resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) to attach a [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] resource file.</span></span>  
   
 > [!NOTE]
->  Il `/win32resource` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio, è disponibile solo durante la compilazione dalla riga di comando.  
+>  <span data-ttu-id="a9fc6-114">Il `/win32resource` opzione non è disponibile all'interno dell'ambiente di sviluppo di Visual Studio; è disponibile solo durante la compilazione dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="a9fc6-114">The `/win32resource` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>Esempio  
- Il codice seguente Compila `In.vb` e allegare un file di risorse Win32 `Rf.res`:  
+## <a name="example"></a><span data-ttu-id="a9fc6-115">Esempio</span><span class="sxs-lookup"><span data-stu-id="a9fc6-115">Example</span></span>  
+ <span data-ttu-id="a9fc6-116">Il codice seguente Compila `In.vb` e allegare il file di risorse Win32, `Rf.res`:</span><span class="sxs-lookup"><span data-stu-id="a9fc6-116">The following code compiles `In.vb` and attaches a Win32 resource file, `Rf.res`:</span></span>  
   
 ```  
 vbc /win32resource:rf.res in.vb  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Compilatore della riga di comando di Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [Esempi di righe di comando di compilazione](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="a9fc6-117">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a9fc6-117">See Also</span></span>  
+ [<span data-ttu-id="a9fc6-118">Compilatore della riga di comando di Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a9fc6-118">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="a9fc6-119">Esempi di righe di comando di compilazione</span><span class="sxs-lookup"><span data-stu-id="a9fc6-119">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

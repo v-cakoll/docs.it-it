@@ -1,89 +1,85 @@
 ---
-title: "XML Value Property (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.XmlPropertyExtensionValue"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Value property [Visual Basic]"
-  - "Visual Basic code, accessing XML"
-  - "XML axis [Visual Basic], Value"
-  - "XML Value property [Visual Basic]"
+title: "Proprietà Value XML (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.XmlPropertyExtensionValue
+helpviewer_keywords:
+- Value property [Visual Basic]
+- Visual Basic code, accessing XML
+- XML axis [Visual Basic], Value
+- XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6c52ac09e209d6e3f0cfd877a071cbbe3ab96f18
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# XML Value Property (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Consente di accedere al valore del primo elemento di una raccolta di oggetti <xref:System.Xml.Linq.XElement>.  
+# <a name="xml-value-property-visual-basic"></a><span data-ttu-id="5cbdf-102">Proprietà Value XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5cbdf-102">XML Value Property (Visual Basic)</span></span>
+<span data-ttu-id="5cbdf-103">Fornisce l'accesso al valore del primo elemento di una raccolta di <xref:System.Xml.Linq.XElement> oggetti.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-103">Provides access to the value of the first element of a collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
-## Sintassi  
+## <a name="syntax"></a><span data-ttu-id="5cbdf-104">Sintassi</span><span class="sxs-lookup"><span data-stu-id="5cbdf-104">Syntax</span></span>  
   
 ```  
-  
 object.Value  
 ```  
   
-## Parti  
+## <a name="parts"></a><span data-ttu-id="5cbdf-105">Parti</span><span class="sxs-lookup"><span data-stu-id="5cbdf-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|Termine|Definizione|  
-|`object`|Obbligatorio.  Raccolta di oggetti <xref:System.Xml.Linq.XElement>.|  
+|<span data-ttu-id="5cbdf-106">Termine</span><span class="sxs-lookup"><span data-stu-id="5cbdf-106">Term</span></span>|<span data-ttu-id="5cbdf-107">Definizione</span><span class="sxs-lookup"><span data-stu-id="5cbdf-107">Definition</span></span>|  
+|---|---|  
+|`object`|<span data-ttu-id="5cbdf-108">Obbligatorio.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-108">Required.</span></span> <span data-ttu-id="5cbdf-109">Raccolta di oggetti <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-109">Collection of <xref:System.Xml.Linq.XElement> objects.</span></span>|  
   
-## Valore restituito  
- Oggetto `String` che contiene il valore del primo elemento della raccolta, o `Nothing` se la raccolta è vuota.  
+## <a name="return-value"></a><span data-ttu-id="5cbdf-110">Valore restituito</span><span class="sxs-lookup"><span data-stu-id="5cbdf-110">Return Value</span></span>  
+ <span data-ttu-id="5cbdf-111">Oggetto `String` che contiene il valore del primo elemento della raccolta, o `Nothing` se la raccolta è vuota.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-111">A `String` that contains the value of the first element of the collection, or `Nothing` if the collection is empty.</span></span>  
   
-## Note  
- La proprietà <xref:System.Xml.Linq.XElement.Value%2A> semplifica l'accesso al valore del primo elemento in una raccolta di oggetti <xref:System.Xml.Linq.XElement>.  Questa proprietà dapprima controlla se la raccolta contiene almeno un oggetto.  Se la raccolta è vuota, questa proprietà restituisce `Nothing`.  In caso contrario la proprietà restituisce il valore della proprietà <xref:System.Xml.Linq.XElement.Value%2A> del primo elemento della raccolta.  
+## <a name="remarks"></a><span data-ttu-id="5cbdf-112">Note</span><span class="sxs-lookup"><span data-stu-id="5cbdf-112">Remarks</span></span>  
+ <span data-ttu-id="5cbdf-113">Il <xref:System.Xml.Linq.XElement.Value%2A> proprietà rende più semplice accedere al valore del primo elemento in una raccolta di <xref:System.Xml.Linq.XElement> oggetti.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-113">The <xref:System.Xml.Linq.XElement.Value%2A> property makes it easy to access the value of the first element in a collection of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="5cbdf-114">Questa proprietà controlla innanzitutto se la raccolta contiene almeno un oggetto.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-114">This property first checks whether the collection contains at least one object.</span></span> <span data-ttu-id="5cbdf-115">Se la raccolta è vuota, questa proprietà restituisce `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-115">If the collection is empty, this property returns `Nothing`.</span></span> <span data-ttu-id="5cbdf-116">In caso contrario, questa proprietà restituisce il valore di <xref:System.Xml.Linq.XElement.Value%2A> proprietà del primo elemento nella raccolta.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-116">Otherwise, this property returns the value of the <xref:System.Xml.Linq.XElement.Value%2A> property of the first element in the collection.</span></span>  
   
 > [!NOTE]
->  Quando si accede al valore di un attributo XML utilizzando l'identificatore '@', il valore dell'attributo viene restituito come un oggetto `String` e non è necessario specificare in modo esplicito la proprietà <xref:System.Xml.Linq.XAttribute.Value%2A>.  
+>  <span data-ttu-id="5cbdf-117">Quando si accede al valore di un attributo XML utilizzando il ' @' identificatore, il valore dell'attributo viene restituito come un `String` e non è necessario specificare in modo esplicito il <xref:System.Xml.Linq.XAttribute.Value%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-117">When you access the value of an XML attribute using the '@' identifier, the attribute value is returned as a `String` and you do not need to explicitly specify the <xref:System.Xml.Linq.XAttribute.Value%2A> property.</span></span>  
   
- Per accedere agli altri elementi in una raccolta è possibile utilizzare la proprietà dell'indicizzatore di estensione XML.  Per ulteriori informazioni, vedere [Extension Indexer Property](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
+ <span data-ttu-id="5cbdf-118">Per accedere agli altri elementi in una raccolta, è possibile utilizzare la proprietà dell'indicizzatore di estensione XML.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-118">To access other elements in a collection, you can use the XML extension indexer property.</span></span> <span data-ttu-id="5cbdf-119">Per ulteriori informazioni, vedere [proprietà dell'indicizzatore di estensione](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).</span><span class="sxs-lookup"><span data-stu-id="5cbdf-119">For more information, see [Extension Indexer Property](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).</span></span>  
   
-## Ereditarietà  
- La maggior parte degli utenti non dovranno implementare <xref:System.Collections.Generic.IEnumerable%601>e possono pertanto ignorare questa sezione.  
+## <a name="inheritance"></a><span data-ttu-id="5cbdf-120">Ereditarietà</span><span class="sxs-lookup"><span data-stu-id="5cbdf-120">Inheritance</span></span>  
+ <span data-ttu-id="5cbdf-121">La maggior parte degli utenti non dovrà implementare <xref:System.Collections.Generic.IEnumerable%601>ed è pertanto possibile ignorare questa sezione.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-121">Most users will not have to implement <xref:System.Collections.Generic.IEnumerable%601>, and can therefore ignore this section.</span></span>  
   
- La proprietà <xref:System.Xml.Linq.XElement.Value%2A> è una proprietà di estensione per i tipi che implementano `IEnumerable(Of XElement)`.  L'associazione di questa proprietà di estensione è simile all'associazione di metodi di estensione: se un tipo implementa una delle interfacce e definisce una proprietà che ha il nome "Valore", tale proprietà ha precedenza sulla proprietà di estensione.  In altre parole, si può eseguire l'override di questa proprietà <xref:System.Xml.Linq.XElement.Value%2A> definendo una nuova proprietà in una classe che implementa `IEnumerable(Of XElement)`.  
+ <span data-ttu-id="5cbdf-122">Il <xref:System.Xml.Linq.XElement.Value%2A> proprietà è una proprietà di estensione per tipi che implementano `IEnumerable(Of XElement)`.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-122">The <xref:System.Xml.Linq.XElement.Value%2A> property is an extension property for types that implement `IEnumerable(Of XElement)`.</span></span> <span data-ttu-id="5cbdf-123">L'associazione di questa proprietà di estensione è simile all'associazione di metodi di estensione: se un tipo implementa una delle interfacce e definisce una proprietà con il nome "Value", tale proprietà ha la precedenza sulla proprietà di estensione.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-123">The binding of this extension property is like the binding of extension methods: if a type implements one of the interfaces and defines a property that has the name "Value", that property has precedence over the extension property.</span></span> <span data-ttu-id="5cbdf-124">In altre parole, questo <xref:System.Xml.Linq.XElement.Value%2A> può eseguire l'override di proprietà mediante la definizione di una nuova proprietà in una classe che implementa `IEnumerable(Of XElement)`.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-124">In other words, this <xref:System.Xml.Linq.XElement.Value%2A> property can be overridden by defining a new property in a class that implements `IEnumerable(Of XElement)`.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come utilizzare la proprietà <xref:System.Xml.Linq.XElement.Value%2A> per accedere al primo nodo di una raccolta di oggetti <xref:System.Xml.Linq.XElement>.  Nell'esempio viene utilizzata la proprietà axis figlio per ottenere la raccolta di tutti i nodi figlio denominati `phone` inclusi nell'oggetto `contact`.  
+## <a name="example"></a><span data-ttu-id="5cbdf-125">Esempio</span><span class="sxs-lookup"><span data-stu-id="5cbdf-125">Example</span></span>  
+ <span data-ttu-id="5cbdf-126">Nell'esempio seguente viene illustrato come utilizzare il <xref:System.Xml.Linq.XElement.Value%2A> proprietà per accedere al primo nodo in una raccolta di <xref:System.Xml.Linq.XElement> oggetti.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-126">The following example shows how to use the <xref:System.Xml.Linq.XElement.Value%2A> property to access the first node in a collection of <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="5cbdf-127">Nell'esempio viene utilizzata la proprietà di asse figlio per ottenere la raccolta di tutti i nodi figlio denominati `phone` che si trovano i `contact` oggetto.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-127">The example uses the child axis property to get the collection of all child nodes named `phone` that are in the `contact` object.</span></span>  
   
  [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
   
- Verrà visualizzato il seguente testo:  
+ <span data-ttu-id="5cbdf-128">Questo codice visualizza il testo seguente:</span><span class="sxs-lookup"><span data-stu-id="5cbdf-128">This code displays the following text:</span></span>  
   
  `Phone number: 206-555-0144`  
   
-## Esempio  
- Nell'esempio seguente viene illustrato come ottenere il valore di un attributo XML da una raccolta di oggetti <xref:System.Xml.Linq.XAttribute>.  In questo esempio viene utilizzato l'attributo della proprietà axis per visualizzare il valore dell'attributo `type` per tutti gli elementi di `phone`.  
+## <a name="example"></a><span data-ttu-id="5cbdf-129">Esempio</span><span class="sxs-lookup"><span data-stu-id="5cbdf-129">Example</span></span>  
+ <span data-ttu-id="5cbdf-130">Nell'esempio seguente viene illustrato come ottenere il valore di un attributo XML da una raccolta di <xref:System.Xml.Linq.XAttribute> oggetti.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-130">The following example shows how to get the value of an XML attribute from a collection of <xref:System.Xml.Linq.XAttribute> objects.</span></span> <span data-ttu-id="5cbdf-131">Nell'esempio viene utilizzata la proprietà axis dell'attributo per visualizzare il valore del `type` attributo per tutti gli il `phone` elementi.</span><span class="sxs-lookup"><span data-stu-id="5cbdf-131">The example uses the attribute axis property to display the value of the `type` attribute for all of the the `phone` elements.</span></span>  
   
  [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   
- Verrà visualizzato il seguente testo:  
+ <span data-ttu-id="5cbdf-132">Questo codice visualizza il testo seguente:</span><span class="sxs-lookup"><span data-stu-id="5cbdf-132">This code displays the following text:</span></span>  
   
  `home`  
   
  `work`  
   
-## Vedere anche  
- <xref:System.Xml.Linq.XElement>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
- [XML Literals](../../../visual-basic/language-reference/xml-literals/index.md)   
- [Creating XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [Metodi di estensione](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)   
- [Extension Indexer Property](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)   
- [XML Child Axis Property](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)   
- [XML Attribute Axis Property](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+## <a name="see-also"></a><span data-ttu-id="5cbdf-133">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="5cbdf-133">See Also</span></span>  
+ <xref:System.Xml.Linq.XElement>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ [<span data-ttu-id="5cbdf-134">Proprietà Axis XML</span><span class="sxs-lookup"><span data-stu-id="5cbdf-134">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [<span data-ttu-id="5cbdf-135">Valori letterali XML</span><span class="sxs-lookup"><span data-stu-id="5cbdf-135">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [<span data-ttu-id="5cbdf-136">Creazione di XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5cbdf-136">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [<span data-ttu-id="5cbdf-137">Metodi di estensione</span><span class="sxs-lookup"><span data-stu-id="5cbdf-137">Extension Methods</span></span>](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  
+ [<span data-ttu-id="5cbdf-138">Proprietà dell'indicizzatore di estensione</span><span class="sxs-lookup"><span data-stu-id="5cbdf-138">Extension Indexer Property</span></span>](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)  
+ [<span data-ttu-id="5cbdf-139">Proprietà Child Axis XML</span><span class="sxs-lookup"><span data-stu-id="5cbdf-139">XML Child Axis Property</span></span>](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)  
+ [<span data-ttu-id="5cbdf-140">Proprietà axis dell'attributo XML</span><span class="sxs-lookup"><span data-stu-id="5cbdf-140">XML Attribute Axis Property</span></span>](../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)

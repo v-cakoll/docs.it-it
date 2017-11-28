@@ -1,41 +1,42 @@
 ---
-title: "A reference was created to embedded interop assembly &#39;&lt;assembly1&gt;&#39; because of an indirect reference to that assembly from assembly &#39;&lt;assembly2&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc40059"
-  - "bc40059"
-helpviewer_keywords: 
-  - "VBC40059"
-  - "BC40059"
+title: "È stato creato un riferimento all'assembly di interoperabilità incorporato &#39; &lt;assembly1&gt;&#39; a causa di un riferimento indiretto all'assembly dall'assembly &#39;&lt; Assembly2&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc40059
+- bc40059
+helpviewer_keywords:
+- VBC40059
+- BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: bc2fbb044fc839aa24abf3dc1ea864457efb0653
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# A reference was created to embedded interop assembly &#39;&lt;assembly1&gt;&#39; because of an indirect reference to that assembly from assembly &#39;&lt;assembly2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-È stato creato un riferimento all'assembly di interoperabilità incorporato '\<assembly1\>' a causa di un riferimento indiretto a tale assembly dall'assembly '\<assembly2\>'.Modificare la proprietà "Incorpora tipi di interoperabilità" su un assembly.  
+# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a><span data-ttu-id="72163-102">È stato creato un riferimento all'assembly di interoperabilità incorporato &#39; &lt;assembly1&gt;&#39; a causa di un riferimento indiretto all'assembly dall'assembly &#39;&lt; Assembly2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="72163-102">A reference was created to embedded interop assembly &#39;&lt;assembly1&gt;&#39; because of an indirect reference to that assembly from assembly &#39;&lt;assembly2&gt;&#39;</span></span>
+<span data-ttu-id="72163-103">È stato creato un riferimento all'assembly di interoperabilità incorporato '\<assembly1>' a causa di un riferimento indiretto a tale assembly creato dall'assembly '\<assembly2>'.</span><span class="sxs-lookup"><span data-stu-id="72163-103">A reference was created to embedded interop assembly '\<assembly1>' because of an indirect reference to that assembly from assembly '\<assembly2>'.</span></span> <span data-ttu-id="72163-104">Provare a modificare la proprietà 'Incorpora tipi di interoperabilità' in un assembly.</span><span class="sxs-lookup"><span data-stu-id="72163-104">Consider changing the 'Embed Interop Types' property on either assembly.</span></span>  
   
- È stato aggiunto un riferimento a un assembly \(assembly1\) che dispone della proprietà `Embed Interop Types` impostata su `True`.  Ciò indica al compilatore di incorporare informazioni sul tipo di interoperabilità da tale assembly.  Tuttavia, il compilatore non può incorporare informazioni sul tipo di interoperabilità da tale assembly perché anche un altro assembly a cui si è fatto riferimento \(assembly2\) fa riferimento a quell'assembly \(assembly1\) e dispone della proprietà `Embed Interop Types` impostata su `False`.  
+ <span data-ttu-id="72163-105">È stato aggiunto un riferimento a un assembly (assembly1) con la proprietà `Embed Interop Types` impostata su `True`.</span><span class="sxs-lookup"><span data-stu-id="72163-105">You have added a reference to an assembly (assembly1) that has the `Embed Interop Types` property set to `True`.</span></span> <span data-ttu-id="72163-106">Si dà così istruzione al compilatore di incorporare le informazioni sui tipi di interoperabilità da tale assembly.</span><span class="sxs-lookup"><span data-stu-id="72163-106">This instructs the compiler to embed interop type information from that assembly.</span></span> <span data-ttu-id="72163-107">Il compilatore non può tuttavia incorporare le informazioni sui tipi di interoperabilità da tale assembly perché anche un altro assembly a cui si fa riferimento (assembly2) fa riferimento a tale assembly (assembly1) e ha la proprietà `Embed Interop Types` impostata su `False`.</span><span class="sxs-lookup"><span data-stu-id="72163-107">However, the compiler cannot embed interop type information from that assembly because another assembly that you have referenced (assembly2) also references that assembly (assembly1) and has the `Embed Interop Types` property set to `False`.</span></span>  
   
 > [!NOTE]
->  L'impostazione della proprietà `Embed Interop Types` per un riferimento all'assembly su `True` equivale a fare riferimento all'assembly utilizzando l'opzione `/link` per il compilatore della riga di comando.  
+>  <span data-ttu-id="72163-108">L'impostazione della proprietà `Embed Interop Types` per un riferimento a un assembly su `True` equivale a fare riferimento all'assembly usando l'opzione del compilatore della riga di comando `/link`.</span><span class="sxs-lookup"><span data-stu-id="72163-108">Setting the `Embed Interop Types` property on an assembly reference to `True` is equivalent to referencing the assembly by using the `/link` option for the command-line compiler.</span></span>  
   
- **ID errore:** BC40059  
+ <span data-ttu-id="72163-109">**ID errore:** BC40059</span><span class="sxs-lookup"><span data-stu-id="72163-109">**Error ID:** BC40059</span></span>  
   
-### Se viene visualizzato questo avvertimento  
+### <a name="to-address-this-warning"></a><span data-ttu-id="72163-110">Per risolvere questo avviso</span><span class="sxs-lookup"><span data-stu-id="72163-110">To address this warning</span></span>  
   
--   Per incorporare informazioni sul tipo di interoperabilità per entrambi gli assembly, impostare la proprietà `Embed Interop Types` per tutti i riferimenti all'assembly1 su `True`.  
+-   <span data-ttu-id="72163-111">Per incorporare le informazioni sui tipi di interoperabilità per entrambi gli assembly, impostare la proprietà `Embed Interop Types` per tutti i riferimenti a assembly1 su `True`.</span><span class="sxs-lookup"><span data-stu-id="72163-111">To embed interop type information for both assemblies, set the `Embed Interop Types` property on all references to assembly1 to `True`.</span></span>  
   
--   Per rimuovere l'avviso, è possibile impostare la proprietà `Embed Interop Types` dell'assembly1 su `False`.  In questo caso, le informazioni sul tipo di interoperabilità vengono fornite da un assembly di interoperabilità primario.  
+-   <span data-ttu-id="72163-112">Per rimuovere l'avviso, è possibile impostare la proprietà `Embed Interop Types` di assembly1 su `False`.</span><span class="sxs-lookup"><span data-stu-id="72163-112">To remove the warning, you can set the `Embed Interop Types` property of assembly1 to `False`.</span></span> <span data-ttu-id="72163-113">In questo caso, vengono fornite informazioni di tipo di interoperabilità dall'assembly di interoperabilità primario (PIA).</span><span class="sxs-lookup"><span data-stu-id="72163-113">In this case, interop type information is provided by a primary interop assembly (PIA).</span></span>  
   
-## Vedere anche  
- [\/link](../../../visual-basic/reference/command-line-compiler/link.md)   
- [Programming with Primary Interop Assemblies](http://msdn.microsoft.com/it-it/306fa1d6-0703-4004-9e93-d0a57f1be81e)
+## <a name="see-also"></a><span data-ttu-id="72163-114">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="72163-114">See Also</span></span>  
+ [<span data-ttu-id="72163-115">/link (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="72163-115">/link (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/link.md)  
+ [<span data-ttu-id="72163-116">Programmazione con assembly di interoperabilità primari</span><span class="sxs-lookup"><span data-stu-id="72163-116">Programming with Primary Interop Assemblies</span></span>](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)

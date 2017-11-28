@@ -1,113 +1,114 @@
 ---
-title: "Procedura dettagliata: assegnazione del contenuto WPF in Windows Form in fase di progettazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controllo ElementHost, assegnazione di contenuti WPF in fase di progettazione"
-  - "interoperabilità [WPF]"
-  - "Windows Form, assegnazioni di contenuto"
-  - "contenuto WPF [Windows Form], assegnazione in fase di progettazione"
-  - "controllo utente WPF, hosting in Windows Form"
+title: 'Procedura dettagliata: assegnazione del contenuto WPF in Windows Form in fase di progettazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WPF content [Windows Forms], assigning at design time
+- ElementHost control [Windows Forms], assigning WPF content at design time
+- interoperability [WPF]
+- Windows Forms, content assignments
+- WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0fa9e40a0a32d0bc9484a86da0f94d62f5c25aa7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura dettagliata: assegnazione del contenuto WPF in Windows Form in fase di progettazione
-Questa procedura dettagliata illustra come selezionare i tipi di controllo Windows Presentation Foundation \(WPF\) da visualizzare nel form.  È possibile selezionare qualsiasi tipo di controllo WPF incluso nel progetto.  
+# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a><span data-ttu-id="1edb3-102">Procedura dettagliata: assegnazione del contenuto WPF in Windows Form in fase di progettazione</span><span class="sxs-lookup"><span data-stu-id="1edb3-102">Walkthrough: Assigning WPF Content on Windows Forms at Design Time</span></span>
+<span data-ttu-id="1edb3-103">Questa procedura dettagliata illustra come selezionare i tipi di controllo Windows Presentation Foundation (WPF) da visualizzare nel form.</span><span class="sxs-lookup"><span data-stu-id="1edb3-103">This walkthrough show you how to select the Windows Presentation Foundation (WPF) control types you want to display on your form.</span></span> <span data-ttu-id="1edb3-104">È possibile selezionare qualsiasi tipo di controllo WPF incluso nel progetto.</span><span class="sxs-lookup"><span data-stu-id="1edb3-104">You can select any WPF control types which are included in your project.</span></span>  
   
- Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:  
+ <span data-ttu-id="1edb3-105">Questa procedura dettagliata prevede l'esecuzione delle attività seguenti:</span><span class="sxs-lookup"><span data-stu-id="1edb3-105">In this walkthrough, you perform the following tasks:</span></span>  
   
--   Creare il progetto.  
+-   <span data-ttu-id="1edb3-106">Creare il progetto.</span><span class="sxs-lookup"><span data-stu-id="1edb3-106">Create the project.</span></span>  
   
--   Creare i tipi di controllo WPF.  
+-   <span data-ttu-id="1edb3-107">Creare i tipi di controllo WPF.</span><span class="sxs-lookup"><span data-stu-id="1edb3-107">Create the WPF control types.</span></span>  
   
--   Selezionare i controlli WPF.  
-  
-> [!NOTE]
->  Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.  Per modificare le impostazioni, scegliere **Importa\/Esporta impostazioni** dal menu **Strumenti**.  Per altre informazioni, vedere [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/it-it/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
-  
-## Prerequisiti  
- Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:  
-  
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
-  
-## Creazione del progetto  
- Il primo passaggio consiste nella creazione del progetto Windows Form.  
+-   <span data-ttu-id="1edb3-108">Selezionare i controlli WPF.</span><span class="sxs-lookup"><span data-stu-id="1edb3-108">Select WPF controls.</span></span>  
   
 > [!NOTE]
->  Con il contenuto WPF sono supportati solo progetti C\# e Visual Basic.  
+>  <span data-ttu-id="1edb3-109">Le finestre di dialogo e i comandi di menu visualizzati potrebbero essere diversi da quelli descritti nella Guida a seconda delle impostazioni attive o dell'edizione del programma.</span><span class="sxs-lookup"><span data-stu-id="1edb3-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="1edb3-110">Per modificare le impostazioni, scegliere **Importa/Esporta impostazioni** dal menu **Strumenti** .</span><span class="sxs-lookup"><span data-stu-id="1edb3-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="1edb3-111">Per altre informazioni, vedere [Personalizzazione delle impostazioni di sviluppo in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="1edb3-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-#### Per creare il progetto  
+## <a name="prerequisites"></a><span data-ttu-id="1edb3-112">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="1edb3-112">Prerequisites</span></span>  
+ <span data-ttu-id="1edb3-113">Per completare la procedura dettagliata, è necessario disporre dei componenti seguenti:</span><span class="sxs-lookup"><span data-stu-id="1edb3-113">You need the following components to complete this walkthrough:</span></span>  
   
--   Creare un nuovo progetto Windows Forms Application in Visual Basic o Visual C\# denominato `SelectingWpfContent`.  
+-   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)]<span data-ttu-id="1edb3-114">.</span><span class="sxs-lookup"><span data-stu-id="1edb3-114">.</span></span>  
   
-## Creazione di tipi di controllo WPF  
- Dopo avere aggiunto i tipi di controllo WPF al progetto, è possibile includerli in controlli <xref:System.Windows.Forms.Integration.ElementHost> diversi.  
+## <a name="creating-the-project"></a><span data-ttu-id="1edb3-115">Creazione del progetto</span><span class="sxs-lookup"><span data-stu-id="1edb3-115">Creating the Project</span></span>  
+ <span data-ttu-id="1edb3-116">Il primo passaggio consiste nella creazione del progetto Windows Form.</span><span class="sxs-lookup"><span data-stu-id="1edb3-116">The first step is to create the Windows Forms project.</span></span>  
   
-#### Per creare i tipi di controllo WPF  
+> [!NOTE]
+>  <span data-ttu-id="1edb3-117">Con il contenuto WPF sono supportati solo progetti C# e Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="1edb3-117">When hosting WPF content, only C# and Visual Basic projects are supported.</span></span>  
   
-1.  Aggiungere un nuovo progetto WPF <xref:System.Windows.Controls.UserControl> alla soluzione.  Usare il nome predefinito per il tipo di controllo, `UserControl1.xaml`.  Per altre informazioni, vedere [Procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+#### <a name="to-create-the-project"></a><span data-ttu-id="1edb3-118">Per creare il progetto</span><span class="sxs-lookup"><span data-stu-id="1edb3-118">To create the project</span></span>  
   
-2.  In visualizzazione Progettazione verificare che `UserControl1` sia selezionato.  Per altre informazioni, vedere [Procedura: selezionare e spostare elementi sull'area di progettazione](http://msdn.microsoft.com/it-it/54cb70b6-b35b-46e4-a0cc-65189399c474).  
+-   <span data-ttu-id="1edb3-119">Creare un nuovo progetto applicazione Windows Forms in Visual Basic o Visual c# denominato `SelectingWpfContent`.</span><span class="sxs-lookup"><span data-stu-id="1edb3-119">Create a new Windows Forms Application project in Visual Basic or Visual C# named `SelectingWpfContent`.</span></span>  
   
-3.  Nella finestra **Proprietà** impostare il valore delle proprietà <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> su `200`.  
+## <a name="creating-the-wpf-control-types"></a><span data-ttu-id="1edb3-120">Creazione di tipi di controllo WPF</span><span class="sxs-lookup"><span data-stu-id="1edb3-120">Creating the WPF Control Types</span></span>  
+ <span data-ttu-id="1edb3-121">Dopo avere aggiunto i tipi di controllo WPF al progetto, è possibile includerli in controlli <xref:System.Windows.Forms.Integration.ElementHost> diversi.</span><span class="sxs-lookup"><span data-stu-id="1edb3-121">After you add WPF control types to the project, you can host them in different <xref:System.Windows.Forms.Integration.ElementHost> controls.</span></span>  
   
-4.  Aggiungere un controllo <xref:System.Windows.Controls.TextBox?displayProperty=fullName> a <xref:System.Windows.Controls.UserControl> e impostare il valore della proprietà <xref:System.Windows.Controls.TextBox.Text%2A> su Hosted Content.  
+#### <a name="to-create-wpf-control-types"></a><span data-ttu-id="1edb3-122">Per creare i tipi di controllo WPF</span><span class="sxs-lookup"><span data-stu-id="1edb3-122">To create WPF control types</span></span>  
   
-5.  Aggiungere un secondo controllo WPF <xref:System.Windows.Controls.UserControl> al progetto.  Usare il nome predefinito per il tipo di controllo, `UserControl2.xaml`.  
+1.  <span data-ttu-id="1edb3-123">Aggiungere un nuovo progetto WPF <xref:System.Windows.Controls.UserControl> alla soluzione.</span><span class="sxs-lookup"><span data-stu-id="1edb3-123">Add a new WPF <xref:System.Windows.Controls.UserControl> project to the solution.</span></span> <span data-ttu-id="1edb3-124">Usare il nome predefinito per il tipo di controllo, `UserControl1.xaml`.</span><span class="sxs-lookup"><span data-stu-id="1edb3-124">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="1edb3-125">Per ulteriori informazioni, vedere [procedura dettagliata: creazione di nuovo contenuto WPF in Windows Form in fase di progettazione](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="1edb3-125">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
   
-6.  Nella finestra **Proprietà** impostare il valore delle proprietà <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> su `200`.  
+2.  <span data-ttu-id="1edb3-126">In visualizzazione Progettazione verificare che `UserControl1` sia selezionato.</span><span class="sxs-lookup"><span data-stu-id="1edb3-126">In Design view, make sure that `UserControl1` is selected.</span></span> <span data-ttu-id="1edb3-127">Per ulteriori informazioni, vedere [procedura: selezionare e spostare elementi nella finestra di progettazione](http://msdn.microsoft.com/en-us/54cb70b6-b35b-46e4-a0cc-65189399c474).</span><span class="sxs-lookup"><span data-stu-id="1edb3-127">For more information, see [How to: Select and Move Elements on the Design Surface](http://msdn.microsoft.com/en-us/54cb70b6-b35b-46e4-a0cc-65189399c474).</span></span>  
   
-7.  Aggiungere un controllo <xref:System.Windows.Controls.TextBox?displayProperty=fullName> a <xref:System.Windows.Controls.UserControl> e impostare il valore della proprietà <xref:System.Windows.Controls.TextBox.Text%2A> su Hosted Content 2.  
+3.  <span data-ttu-id="1edb3-128">Nel **proprietà** finestra, impostare il valore della <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> proprietà `200`.</span><span class="sxs-lookup"><span data-stu-id="1edb3-128">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties to `200`.</span></span>  
   
- **Nota**: in generale, è opportuno ospitare contenuto WPF più sofisticato.  Il controllo <xref:System.Windows.Controls.TextBox?displayProperty=fullName> è qui usato a solo a titolo esemplificativo.  
+4.  <span data-ttu-id="1edb3-129">Aggiungere un <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> controllo il <xref:System.Windows.Controls.UserControl> e impostare il valore della <xref:System.Windows.Controls.TextBox.Text%2A> proprietà **contenuto ospitato**.</span><span class="sxs-lookup"><span data-stu-id="1edb3-129">Add a <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.TextBox.Text%2A> property to **Hosted Content**.</span></span>  
   
-1.  Compilare il progetto.  
+5.  <span data-ttu-id="1edb3-130">Aggiungere un secondo controllo WPF <xref:System.Windows.Controls.UserControl> al progetto.</span><span class="sxs-lookup"><span data-stu-id="1edb3-130">Add a second WPF <xref:System.Windows.Controls.UserControl> to the project.</span></span> <span data-ttu-id="1edb3-131">Usare il nome predefinito per il tipo di controllo, `UserControl2.xaml`.</span><span class="sxs-lookup"><span data-stu-id="1edb3-131">Use the default name for the control type, `UserControl2.xaml`.</span></span>  
   
-## Selezione di controlli WPF  
- È possibile assegnare contenuto WPF diverso a un controllo <xref:System.Windows.Forms.Integration.ElementHost> che include già contenuto.  
+6.  <span data-ttu-id="1edb3-132">Nel **proprietà** finestra, impostare il valore della <xref:System.Windows.FrameworkElement.Width%2A> e <xref:System.Windows.FrameworkElement.Height%2A> proprietà `200`.</span><span class="sxs-lookup"><span data-stu-id="1edb3-132">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties to `200`.</span></span>  
   
-#### Per selezionare i controlli WPF  
+7.  <span data-ttu-id="1edb3-133">Aggiungere un <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> controllo il <xref:System.Windows.Controls.UserControl> e impostare il valore della <xref:System.Windows.Controls.TextBox.Text%2A> proprietà **Hosted Content 2**.</span><span class="sxs-lookup"><span data-stu-id="1edb3-133">Add a <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.TextBox.Text%2A> property to **Hosted Content 2**.</span></span>  
   
-1.  Aprire `Form1` in Progettazione Windows Form.  
+ <span data-ttu-id="1edb3-134">**Nota** In generale, è opportuno ospitare contenuto WPF più sofisticato.</span><span class="sxs-lookup"><span data-stu-id="1edb3-134">**Note** In general, you should host more sophisticated WPF content.</span></span> <span data-ttu-id="1edb3-135">Il controllo <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> è qui usato a solo a titolo esemplificativo.</span><span class="sxs-lookup"><span data-stu-id="1edb3-135">The <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> control is used here for illustrative purposes only.</span></span>  
   
-2.  Nella **Casella degli strumenti** fare doppio clic su `UserControl1` per creare un'istanza di `UserControl1` nel form.  
+1.  <span data-ttu-id="1edb3-136">Compilare il progetto.</span><span class="sxs-lookup"><span data-stu-id="1edb3-136">Build the project.</span></span>  
   
-     L'istanza di `UserControl1` viene inclusa in un nuovo controllo <xref:System.Windows.Forms.Integration.ElementHost> denominato `elementHost1`.  
+## <a name="selecting-wpf-controls"></a><span data-ttu-id="1edb3-137">Selezione di controlli WPF</span><span class="sxs-lookup"><span data-stu-id="1edb3-137">Selecting WPF Controls</span></span>  
+ <span data-ttu-id="1edb3-138">È possibile assegnare contenuto WPF diverso a un controllo <xref:System.Windows.Forms.Integration.ElementHost> che include già contenuto.</span><span class="sxs-lookup"><span data-stu-id="1edb3-138">You can assign different WPF content to an <xref:System.Windows.Forms.Integration.ElementHost> control, which is already hosting content.</span></span>  
   
-3.  Nel pannello smart tag per `elementHost1`, aprire l'elenco a discesa **Selezione contenuto ospitato**.  
+#### <a name="to-select-wpf-controls"></a><span data-ttu-id="1edb3-139">Per selezionare i controlli WPF</span><span class="sxs-lookup"><span data-stu-id="1edb3-139">To select WPF controls</span></span>  
   
-4.  Dall'elenco a discesa selezionare **UserControl2**.  
+1.  <span data-ttu-id="1edb3-140">Aprire `Form1` in Progettazione Windows Form.</span><span class="sxs-lookup"><span data-stu-id="1edb3-140">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-     Il controllo `elementHost1` include ora un'istanza del tipo `UserControl2`.  
+2.  <span data-ttu-id="1edb3-141">Nel **della casella degli strumenti**, fare doppio clic su `UserControl1` per creare un'istanza di `UserControl1` nel form.</span><span class="sxs-lookup"><span data-stu-id="1edb3-141">In the **Toolbox**, double-click `UserControl1` to create an instance of `UserControl1` on the form.</span></span>  
   
-5.  Nella finestra **Proprietà** verificare che la proprietà <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> sia impostata su **UserControl2**.  
+     <span data-ttu-id="1edb3-142">L'istanza di `UserControl1` viene inclusa in un nuovo controllo <xref:System.Windows.Forms.Integration.ElementHost> denominato `elementHost1`.</span><span class="sxs-lookup"><span data-stu-id="1edb3-142">An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
   
-6.  Nella **Casella degli strumenti** trascinare un controllo <xref:System.Windows.Forms.Integration.ElementHost> dal gruppo **Interoperabilità WPF** nel form.  
+3.  <span data-ttu-id="1edb3-143">Nel pannello smart tag per `elementHost1`, aprire il **selezione contenuto ospitato** elenco a discesa.</span><span class="sxs-lookup"><span data-stu-id="1edb3-143">In the smart tag panel for `elementHost1`, open the **Select Hosted Content** drop-down list.</span></span>  
   
-     Il nome predefinito del nuovo controllo è `elementHost2`.  
+4.  <span data-ttu-id="1edb3-144">Selezionare **UserControl2** dall'elenco a discesa.</span><span class="sxs-lookup"><span data-stu-id="1edb3-144">Select **UserControl2** from the drop-down list box.</span></span>  
   
-7.  Nel pannello smart tag per `elementHost2`, aprire l'elenco a discesa **Selezione contenuto ospitato**.  
+     <span data-ttu-id="1edb3-145">Il controllo `elementHost1` include ora un'istanza del tipo `UserControl2`.</span><span class="sxs-lookup"><span data-stu-id="1edb3-145">The `elementHost1` control now hosts an instance of the `UserControl2` type.</span></span>  
   
-8.  Dall'elenco a discesa selezionare **UserControl1**.  
+5.  <span data-ttu-id="1edb3-146">Nel **proprietà** finestra, verificare che il <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> è impostata su **UserControl2**.</span><span class="sxs-lookup"><span data-stu-id="1edb3-146">In the **Properties** window, confirm that the <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> property is set to **UserControl2**.</span></span>  
   
-9. Il controllo `elementHost2` include ora un'istanza del tipo `UserControl1`.  
+6.  <span data-ttu-id="1edb3-147">Dal **della casella degli strumenti**nella **interoperabilità WPF** gruppo, trascinare un <xref:System.Windows.Forms.Integration.ElementHost> controllo nel form.</span><span class="sxs-lookup"><span data-stu-id="1edb3-147">From the **Toolbox**, in the **WPF Interoperability** group, drag an <xref:System.Windows.Forms.Integration.ElementHost> control onto the form.</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Migrazione e interoperabilità](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)   
- [Utilizzo di controlli WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)   
- [WPF Designer](http://msdn.microsoft.com/it-it/c6c65214-8411-4e16-b254-163ed4099c26)
+     <span data-ttu-id="1edb3-148">Il nome predefinito del nuovo controllo è `elementHost2`.</span><span class="sxs-lookup"><span data-stu-id="1edb3-148">The default name for the new control is `elementHost2`.</span></span>  
+  
+7.  <span data-ttu-id="1edb3-149">Nel pannello smart tag per `elementHost2`, aprire il **selezione contenuto ospitato** elenco a discesa.</span><span class="sxs-lookup"><span data-stu-id="1edb3-149">In the smart tag panel for `elementHost2`, open the **Select Hosted Content** drop-down list.</span></span>  
+  
+8.  <span data-ttu-id="1edb3-150">Selezionare **UserControl1** dall'elenco a discesa.</span><span class="sxs-lookup"><span data-stu-id="1edb3-150">Select **UserControl1** from the drop-down list.</span></span>  
+  
+9. <span data-ttu-id="1edb3-151">Il controllo `elementHost2` include ora un'istanza del tipo `UserControl1`.</span><span class="sxs-lookup"><span data-stu-id="1edb3-151">The `elementHost2` control now hosts an instance of the `UserControl1` type.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="1edb3-152">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1edb3-152">See Also</span></span>  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [<span data-ttu-id="1edb3-153">Migrazione e interoperabilità</span><span class="sxs-lookup"><span data-stu-id="1edb3-153">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [<span data-ttu-id="1edb3-154">Uso di controlli WPF</span><span class="sxs-lookup"><span data-stu-id="1edb3-154">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+ [<span data-ttu-id="1edb3-155">WPF Designer</span><span class="sxs-lookup"><span data-stu-id="1edb3-155">WPF Designer</span></span>](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)

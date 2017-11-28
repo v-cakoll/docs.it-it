@@ -1,79 +1,86 @@
 ---
-title: "Procedura: creare un flusso di lavoro della macchina a stati | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: creare un flusso di lavoro della macchina a stati'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 797cdc425c0f3088aa2b75c0285ca6bea2dd425b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: creare un flusso di lavoro della macchina a stati
-I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate.In questo argomento viene illustrata in dettaglio la creazione di un flusso di lavoro in cui vengono utilizzate sia attività incorporate, ad esempio <xref:System.Activities.Statements.StateMachine>, sia attività personalizzate dell'argomento [Procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md) precedente.Il flusso di lavoro consente di modellare un gioco per determinare un numero.  
+# <a name="how-to-create-a-state-machine-workflow"></a><span data-ttu-id="2b4e0-102">Procedura: creare un flusso di lavoro della macchina a stati</span><span class="sxs-lookup"><span data-stu-id="2b4e0-102">How to: Create a State Machine Workflow</span></span>
+<span data-ttu-id="2b4e0-103">I flussi di lavoro possono essere costruiti da attività incorporate e da attività personalizzate.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-103">Workflows can be constructed from built-in activities as well as from custom activities.</span></span> <span data-ttu-id="2b4e0-104">Passaggi in questo argomento per la creazione di un flusso di lavoro che utilizza entrambe le attività predefinite, ad esempio il <xref:System.Activities.Statements.StateMachine> attività e le attività personalizzate dal precedente [procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) argomento.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-104">This topic steps through creating a workflow that uses both built-in activities such as the <xref:System.Activities.Statements.StateMachine> activity, and the custom activities from the previous [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) topic.</span></span> <span data-ttu-id="2b4e0-105">Il flusso di lavoro consente di modellare un gioco per determinare un numero.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-105">The workflow models a number guessing game.</span></span>  
   
 > [!NOTE]
->  Ogni argomento nell'Esercitazione introduttiva dipende dagli argomenti precedenti.Per completare questo argomento, è necessario completare prima [Procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md).  
+>  <span data-ttu-id="2b4e0-106">Ogni argomento nell'Esercitazione introduttiva dipende dagli argomenti precedenti.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-106">Each topic in the Getting Started tutorial depends on the previous topics.</span></span> <span data-ttu-id="2b4e0-107">Per completare questo argomento, è necessario prima completare [procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).</span><span class="sxs-lookup"><span data-stu-id="2b4e0-107">To complete this topic, you must first complete [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).</span></span>  
   
 > [!NOTE]
->  Per scaricare una versione completa dell'esercitazione, vedere [Windows Workflow Foundation \(WF45\) \- esercitazione introduttiva](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  <span data-ttu-id="2b4e0-108">Per scaricare una versione completa dell'esercitazione, vedere [Windows Workflow Foundation (WF45) - esercitazione introduttiva](http://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="2b4e0-108">To download a completed version of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-### Per creare il flusso di lavoro  
+### <a name="to-create-the-workflow"></a><span data-ttu-id="2b4e0-109">Per creare il flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="2b4e0-109">To create the workflow</span></span>  
   
-1.  Fare clic con il pulsante destro del mouse su **NumberGuessWorkflowActivities** in **Esplora soluzioni** e selezionare **Aggiungi**, **Nuovo elemento**.  
+1.  <span data-ttu-id="2b4e0-110">Fare doppio clic su **NumberGuessWorkflowActivities** in **Esplora** e selezionare **Aggiungi**, **nuovo elemento**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-110">Right-click **NumberGuessWorkflowActivities** in **Solution Explorer** and select **Add**, **New Item**.</span></span>  
   
-2.  Nel nodo **Installato**, **Elementi comuni**, selezionare **Flusso di lavoro**.Selezionare **Attività** dall'elenco **Flusso di lavoro**.  
+2.  <span data-ttu-id="2b4e0-111">Nel **installato**, **elementi comuni** nodo, seleziona **flusso di lavoro**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-111">In the **Installed**, **Common Items** node, select **Workflow**.</span></span> <span data-ttu-id="2b4e0-112">Selezionare **attività** dal **flusso di lavoro** elenco.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-112">Select **Activity** from the **Workflow** list.</span></span>  
   
-3.  Digitare `StateMachineNumberGuessWorkflow` nella casella **Nome**, quindi fare clic su **Aggiungi**.  
+3.  <span data-ttu-id="2b4e0-113">Tipo `StateMachineNumberGuessWorkflow` nel **nome** casella e fare clic su **Aggiungi**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-113">Type `StateMachineNumberGuessWorkflow` into the **Name** box and click **Add**.</span></span>  
   
-4.  Trascinare un'attività **StateMachine** dalla sezione **Macchina a stati** della **Casella degli strumenti** e rilasciarla sull'etichetta **Rilasciare l'attività** nell'area di progettazione del flusso di lavoro.  
+4.  <span data-ttu-id="2b4e0-114">Trascinare un **StateMachine** attività dal **macchina a stati** sezione del **della casella degli strumenti** e rilasciarla il **Rilascia attività qui** etichetta nel finestra di progettazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-114">Drag a **StateMachine** activity from the **State Machine** section of the **Toolbox** and drop it onto the **Drop activity here** label on the workflow design surface.</span></span>  
   
-### Per creare variabili e argomenti del flusso di lavoro  
+### <a name="to-create-the-workflow-variables-and-arguments"></a><span data-ttu-id="2b4e0-115">Per creare variabili e argomenti del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="2b4e0-115">To create the workflow variables and arguments</span></span>  
   
-1.  Fare doppio clic su **StateMachineNumberGuessWorkflow.xaml** in **Esplora soluzioni** per visualizzare il flusso di lavoro nella finestra di progettazione nel caso non sia già visibile.  
+1.  <span data-ttu-id="2b4e0-116">Fare doppio clic su **Statemachinenumberguessworkflow** in **Esplora** per visualizzare il flusso di lavoro nella finestra di progettazione, se non è già visualizzato.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-116">Double-click **StateMachineNumberGuessWorkflow.xaml** in **Solution Explorer** to display the workflow in the designer, if it is not already displayed.</span></span>  
   
-2.  Fare clic su **Argomenti** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il riquadro **Argomenti**.  
+2.  <span data-ttu-id="2b4e0-117">Fare clic su **argomenti** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il **argomenti** riquadro.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-117">Click **Arguments** in the lower-left side of the workflow designer to display the **Arguments** pane.</span></span>  
   
-3.  Fare clic su **Crea argomento**.  
+3.  <span data-ttu-id="2b4e0-118">Fare clic su **Crea argomento**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-118">Click **Create Argument**.</span></span>  
   
-4.  Digitare `MaxNumber` nella casella **Nome**, selezionare **Interno** dall'elenco a discesa **Direzione**, selezionare **Int32** dall'elenco a discesa **Tipo di argomento**, quindi premere INVIO per salvare l'argomento.  
+4.  <span data-ttu-id="2b4e0-119">Tipo `MaxNumber` nel **nome** , quindi selezionare **In** dal **direzione** elenco a discesa, seleziona **Int32** dal **Tipo di argomento** elenco a discesa e quindi premere INVIO per salvare l'argomento.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-119">Type `MaxNumber` into the **Name** box, select **In** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER to save the argument.</span></span>  
   
-5.  Fare clic su **Crea argomento**.  
+5.  <span data-ttu-id="2b4e0-120">Fare clic su **Crea argomento**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-120">Click **Create Argument**.</span></span>  
   
-6.  Digitare `Turns` nella casella **Nome** che si trova sotto l'argomento `MaxNumber` appena aggiunto, selezionare **Esterno** dall'elenco a discesa **Direzione**, selezionare **Int32** dall'elenco a discesa **Tipo di argomento**, quindi premere INVIO.  
+6.  <span data-ttu-id="2b4e0-121">Tipo `Turns` nel **nome** casella che si trova sotto appena aggiunta `MaxNumber` argomento, selezionare **Out** dal **direzione** -elenco a discesa, seleziona  **Int32** dal **tipo di argomento** elenco a discesa e quindi premere INVIO.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-121">Type `Turns` into the **Name** box that is below the newly added `MaxNumber` argument, select **Out** from the **Direction** drop-down list, select **Int32** from the **Argument type** drop-down list, and then press ENTER.</span></span>  
   
-7.  Fare clic su **Argomenti** nel lato inferiore sinistro di ActivityDesigner per chiudere il riquadro **Argomenti**.  
+7.  <span data-ttu-id="2b4e0-122">Fare clic su **argomenti** nel lato inferiore sinistro dell'ActivityDesigner per chiudere la **argomenti** riquadro.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-122">Click **Arguments** in the lower-left side of the activity designer to close the **Arguments** pane.</span></span>  
   
-8.  Fare clic su **Variabili** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il riquadro **Variabili**.  
+8.  <span data-ttu-id="2b4e0-123">Fare clic su **variabili** nel lato inferiore sinistro della finestra di progettazione del flusso di lavoro per visualizzare il **variabili** riquadro.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-123">Click **Variables** in the lower-left side of the workflow designer to display the **Variables** pane.</span></span>  
   
-9. Fare clic su **Crea variabile**.  
-  
-    > [!TIP]
-    >  Se non viene visualizzata la casella **Crea variabile**, fare clic sull'attività <xref:System.Activities.Statements.StateMachine> nella finestra di progettazione del flusso di lavoro per selezionarla.  
-  
-10. Digitare `Guess` nella casella **Nome**, selezionare **Int32** dall'elenco a discesa **Tipo di variabile**, quindi premere INVIO per salvare la variabile.  
-  
-11. Fare clic su **Crea variabile**.  
-  
-12. Digitare `Target` nella casella **Nome**, selezionare **Int32** dall'elenco a discesa **Tipo di variabile**, quindi premere INVIO per salvare la variabile.  
-  
-13. Fare clic su **Variabili** nel lato inferiore sinistro di ActivityDesigner per chiudere il riquadro **Variabili**.  
-  
-### Per aggiungere le attività del flusso di lavoro  
-  
-1.  Fare clic su **State1** per selezionare questa opzione.Nella **Finestra Proprietà**, modificare **DisplayName** in `Initialize Target`.  
+9. <span data-ttu-id="2b4e0-124">Fare clic su **creare variabile**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-124">Click **Create Variable**.</span></span>  
   
     > [!TIP]
-    >  Se la **Finestra proprietà** non è visualizzata, scegliere **Finestra Proprietà** dal menu **Visualizza**.  
+    >  <span data-ttu-id="2b4e0-125">Se non **Crea variabile** viene visualizzata, fare clic su di <xref:System.Activities.Statements.StateMachine> attività nell'area di progettazione del flusso di lavoro per selezionarla.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-125">If no **Create Variable** box is displayed, click the <xref:System.Activities.Statements.StateMachine> activity on the workflow designer surface to select it.</span></span>  
   
-2.  Fare doppio clic sullo stato **Initialize Target** appena rinominato nella finestra di progettazione del flusso di lavoro per espanderlo.  
+10. <span data-ttu-id="2b4e0-126">Tipo `Guess` nel **nome** , quindi selezionare **Int32** dal **tipo di variabile** elenco a discesa e quindi premere INVIO per salvare la variabile.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-126">Type `Guess` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
   
-3.  Trascinare un'attività **Assign** dalla sezione **Primitive** della **Casella degli strumenti** e rilasciarla nella sezione **Entry** dello stato.Digitare `Target` nella casella **A** e l'espressione seguente nella casella **Immettere un'espressione C\#** o **Immettere un'espressione VB**.  
+11. <span data-ttu-id="2b4e0-127">Fare clic su **creare variabile**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-127">Click **Create Variable**.</span></span>  
+  
+12. <span data-ttu-id="2b4e0-128">Tipo `Target` nel **nome** , quindi selezionare **Int32** dal **tipo di variabile** elenco a discesa e quindi premere INVIO per salvare la variabile.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-128">Type `Target` into the **Name** box, select **Int32** from the **Variable type** drop-down list, and then press ENTER to save the variable.</span></span>  
+  
+13. <span data-ttu-id="2b4e0-129">Fare clic su **variabili** nel lato inferiore sinistro dell'ActivityDesigner per chiudere la **variabili** riquadro.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-129">Click **Variables** in the lower-left side of the activity designer to close the **Variables** pane.</span></span>  
+  
+### <a name="to-add-the-workflow-activities"></a><span data-ttu-id="2b4e0-130">Per aggiungere le attività del flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="2b4e0-130">To add the workflow activities</span></span>  
+  
+1.  <span data-ttu-id="2b4e0-131">Fare clic su **State1** per selezionarlo.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-131">Click **State1** to select it.</span></span> <span data-ttu-id="2b4e0-132">Nel **finestra proprietà**, modificare il **DisplayName** a `Initialize Target`.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-132">In the **Properties Window**, change the **DisplayName** to `Initialize Target`.</span></span>  
+  
+    > [!TIP]
+    >  <span data-ttu-id="2b4e0-133">Se il **finestra proprietà** non è visualizzata, selezionare **finestra proprietà** dal **vista** menu.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-133">If the **Properties Window** is not displayed, select **Properties Window** from the **View** menu.</span></span>  
+  
+2.  <span data-ttu-id="2b4e0-134">Fare doppio clic su appena rinominata **Initialize Target** dello stato nella finestra di progettazione del flusso di lavoro per espanderlo.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-134">Double-click the newly renamed **Initialize Target** state in the workflow designer to expand it.</span></span>  
+  
+3.  <span data-ttu-id="2b4e0-135">Trascinare un **assegnare** attività dal **primitive** sezione il **della casella degli strumenti** e rilasciarla il **voce** sezione dello stato.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-135">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and drop it onto the **Entry** section of the state.</span></span> <span data-ttu-id="2b4e0-136">Tipo `Target` nel **a** casella e l'espressione seguente nella **immettere un'espressione c#** o **immettere un'espressione VB** casella.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-136">Type `Target` into the **To** box and the following expression into the **Enter a C# expression** or **Enter a VB expression** box.</span></span>  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -84,17 +91,17 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     ```  
   
     > [!TIP]
-    >  Se la finestra **Casella degli strumenti** non è visualizzata, scegliere **Casella degli strumenti** dal menu **Visualizza**.  
+    >  <span data-ttu-id="2b4e0-137">Se il **della casella degli strumenti** non verrà visualizzata la finestra, selezionare **della casella degli strumenti** dal **vista** menu.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-137">If the **Toolbox** window is not displayed, select **Toolbox** from the **View** menu.</span></span>  
   
-4.  Tornare alla visualizzazione generale della macchina a stati nella finestra di progettazione del flusso di lavoro facendo clic su **StateMachine** nella visualizzazione della barra di navigazione nella parte superiore della finestra di progettazione del flusso di lavoro.  
+4.  <span data-ttu-id="2b4e0-138">Tornare a generale dello stato di visualizzazione nella finestra di progettazione del flusso di lavoro della macchina, fare clic su **StateMachine** della barra di navigazione visualizzato nella parte superiore della finestra di progettazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-138">Return to the overall state machine view in the workflow designer by clicking **StateMachine** in the breadcrumb display at the top of the workflow designer.</span></span>  
   
-5.  Trascinare un'attività **State** dalla sezione **Macchina a stati** della **Casella degli strumenti** nella finestra di progettazione del flusso di lavoro e spostarla sullo stato **Initialize Target**.Si noti che nel momento in cui il nuovo stato viene passato sopra lo stato **Initialize Target**, vengono visualizzati quattro triangoli intorno a quest'ultimo stato.Rilasciare il nuovo stato sul triangolo che si trova immediatamente sotto lo stato **Initialize Target**.Ciò consente di posizionare il nuovo stato sul flusso di lavoro e crea una transizione dallo stato **Initialize Target** al nuovo stato.  
+5.  <span data-ttu-id="2b4e0-139">Trascinare un **stato** attività dal **macchina a stati** sezione del **della casella degli strumenti** nella finestra di progettazione del flusso di lavoro e passarla sul **Initialize Target** stato.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-139">Drag a **State** activity from the **State Machine** section of the **Toolbox** onto the workflow designer and hover it over the **Initialize Target** state.</span></span> <span data-ttu-id="2b4e0-140">Si noti che verranno visualizzati quattro triangoli intorno il **Initialize Target** lo stato quando il nuovo stato è su di esso.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-140">Note that four triangles will appear around the **Initialize Target** state when the new state is over it.</span></span> <span data-ttu-id="2b4e0-141">Rilasciare il nuovo stato sul triangolo che si trova immediatamente sotto il **Initialize Target** dello stato.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-141">Drop the new state on the triangle that is immediately below the **Initialize Target** state.</span></span> <span data-ttu-id="2b4e0-142">Si inserisce il nuovo stato sul flusso di lavoro e si crea una transizione dal **Initialize Target** dello stato per il nuovo stato.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-142">This places the new state onto the workflow and creates a transition from the **Initialize Target** state to the new state.</span></span>  
   
-6.  Fare clic su **State1** per selezionarlo, modificare **DisplayName** in `Enter Guess`, quindi fare doppio clic sullo stato nella finestra di progettazione del flusso di lavoro per espanderlo.  
+6.  <span data-ttu-id="2b4e0-143">Fare clic su **State1** per selezionarlo, modificare il **DisplayName** a `Enter Guess`, quindi fare doppio clic su stato nella finestra di progettazione del flusso di lavoro per espanderlo.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-143">Click **State1** to select it, change the **DisplayName** to `Enter Guess`, and then double-click the state in the workflow designer to expand it.</span></span>  
   
-7.  Trascinare un'attività **WriteLine** dalla sezione **Primitive** della **Casella degli strumenti** e rilasciarla nella sezione **Entry** dello stato.  
+7.  <span data-ttu-id="2b4e0-144">Trascinare un **WriteLine** attività dal **primitive** sezione del **della casella degli strumenti** e rilasciarla il **voce** sezione dello stato.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-144">Drag a **WriteLine** activity from the **Primitives** section of the **Toolbox** and drop it onto the **Entry** section of the state.</span></span>  
   
-8.  Digitare la seguente espressione nella casella della proprietà **Text** dell'attività **WriteLine**.  
+8.  <span data-ttu-id="2b4e0-145">Digitare l'espressione seguente nella **testo** casella della proprietà del **WriteLine**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-145">Type the following expression into the **Text** property box of the **WriteLine**.</span></span>  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -104,23 +111,23 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     "Please enter a number between 1 and " + MaxNumber  
     ```  
   
-9. Trascinare un'attività **Assign** dalla sezione **Primitive** della **Casella degli strumenti** e rilasciarla nella sezione **Exit** dello stato.  
+9. <span data-ttu-id="2b4e0-146">Trascinare un **assegnare** attività dal **primitive** sezione del **della casella degli strumenti** e rilasciare il **uscita** sezione dello stato.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-146">Drag an **Assign** activity from the **Primitives** section of the **Toolbox** and drop onto the **Exit** section of the state.</span></span>  
   
-10. Digitare `Turns` nella casella **A** e `Turns + 1` nella casella **Immettere un'espressione C\#** o **Immettere un'espressione VB**.  
+10. <span data-ttu-id="2b4e0-147">Tipo `Turns` nel **a** casella e `Turns + 1` nel **immettere un'espressione c#** o **immettere un'espressione VB** casella.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-147">Type `Turns` into the **To** box and `Turns + 1` into the **Enter a C# expression** or **Enter a VB expression** box.</span></span>  
   
-11. Tornare alla visualizzazione generale della macchina a stati nella finestra di progettazione del flusso di lavoro facendo clic su **StateMachine** nella visualizzazione della barra di navigazione nella parte superiore della finestra di progettazione del flusso di lavoro.  
+11. <span data-ttu-id="2b4e0-148">Tornare a generale dello stato di visualizzazione nella finestra di progettazione del flusso di lavoro della macchina, fare clic su **StateMachine** della barra di navigazione visualizzato nella parte superiore della finestra di progettazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-148">Return to the overall state machine view in the workflow designer by clicking **StateMachine** in the breadcrumb display at the top of the workflow designer.</span></span>  
   
-12. Trascinare un'attività **FinalState** dalla sezione **Macchina a stati** della **Casella degli strumenti**, passarla sopra lo stato **Enter Guess** e rilasciarla sul triangolo che viene visualizzato a destra dello stato **Enter Guess** in modo da creare una transizione tra **Enter Guess** e **FinalState**.  
+12. <span data-ttu-id="2b4e0-149">Trascinare un **FinalState** attività dal **macchina a stati** sezione del **della casella degli strumenti**, passarlo sul **Enter Guess** stato e l'eliminazione nel triangolo che viene visualizzato a destra del **Enter Guess** stato in modo che una transizione viene creata tra **Enter Guess** e **FinalState**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-149">Drag a **FinalState** activity from the **State Machine** section of the **Toolbox**, hover it over the **Enter Guess** state, and drop it onto the triangle that appears to the right of the **Enter Guess** state so that a transition is created between **Enter Guess** and **FinalState**.</span></span>  
   
-13. Il nome predefinito della transizione è **T2**.Fare clic sulla transizione nella finestra di progettazione del flusso di lavoro per selezionarla e impostarne il **DisplayName** su **Guess Correct**.Selezionare **FinalState** e trascinarlo verso destra in modo da creare lo spazio per il nome completo della transizione da visualizzare senza sovrapporre uno dei due stati.Ciò faciliterà il completamento dei passaggi rimanenti nell'esercitazione.  
+13. <span data-ttu-id="2b4e0-150">Il nome predefinito della transizione è **T2**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-150">The default name of the transition is **T2**.</span></span> <span data-ttu-id="2b4e0-151">Fare clic sulla transizione nella finestra di progettazione del flusso di lavoro per selezionarla e impostare il relativo **DisplayName** a **Guess Correct**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-151">Click the transition in the workflow designer to select it, and set its **DisplayName** to **Guess Correct**.</span></span> <span data-ttu-id="2b4e0-152">Quindi fare clic e selezionare il **FinalState**e trascinarla a destra, in modo che vi sia spazio per il nome completo della transizione da visualizzare senza sovrapporre uno dei due stati.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-152">Then click and select the **FinalState**, and drag it to the right so that there is room for the full transition name to be displayed without overlaying either of the two states.</span></span> <span data-ttu-id="2b4e0-153">Ciò faciliterà il completamento dei passaggi rimanenti nell'esercitazione.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-153">This will make it easier to complete the remaining steps in the tutorial.</span></span>  
   
-14. Fare doppio clic sulla transizione **Guess Correct** appena rinominata nella finestra di progettazione del flusso di lavoro per espanderlo.  
+14. <span data-ttu-id="2b4e0-154">Fare doppio clic su appena rinominata **Guess Correct** transizione nella finestra di progettazione del flusso di lavoro per espanderlo.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-154">Double-click the newly renamed **Guess Correct** transition in the workflow designer to expand it.</span></span>  
   
-15. Trascinare un'attività **ReadInt** dalla sezione **NumberGuessWorkflowActivities** della **Casella degli strumenti** e rilasciarla nella sezione **Trigger** della transizione.  
+15. <span data-ttu-id="2b4e0-155">Trascinare un **ReadInt** attività dal **NumberGuessWorkflowActivities** sezione il **della casella degli strumenti** e rilasciarlo nel **Trigger** sezione della transizione.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-155">Drag a **ReadInt** activity from the **NumberGuessWorkflowActivities** section of the **Toolbox** and drop it in the **Trigger** section of the transition.</span></span>  
   
-16. Nella **Finestra Proprietà** dell'attività **ReadInt** digitare `"EnterGuess"`, incluse le virgolette, nella casella del valore della proprietà **BookmarkName** e digitare `Guess` nella casella del valore della proprietà **Result**.  
+16. <span data-ttu-id="2b4e0-156">Nel **finestra proprietà** per il **ReadInt** attività, digitare `"EnterGuess"` incluse le virgolette nel **BookmarkName** casella valore della proprietà e tipo `Guess`nel **risultato** casella Valore proprietà</span><span class="sxs-lookup"><span data-stu-id="2b4e0-156">In the **Properties Window** for the **ReadInt** activity, type `"EnterGuess"` including the quotes into the **BookmarkName** property value box, and type `Guess` into the **Result** property value box</span></span>  
   
-17. Digitare la seguente espressione nella casella del valore della proprietà **Condition** della transizione **Guess Correct**.  
+17. <span data-ttu-id="2b4e0-157">Digitare l'espressione seguente nella **Guess Correct** della transizione **condizione** casella valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-157">Type the following expression into the **Guess Correct** transition’s **Condition** property value box.</span></span>  
   
     ```vb  
     Guess = Target  
@@ -130,22 +137,22 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     Guess == Target  
     ```  
   
-18. Tornare alla visualizzazione generale della macchina a stati nella finestra di progettazione del flusso di lavoro facendo clic su **StateMachine** nella visualizzazione della barra di navigazione nella parte superiore della finestra di progettazione del flusso di lavoro.  
+18. <span data-ttu-id="2b4e0-158">Tornare a generale dello stato di visualizzazione nella finestra di progettazione del flusso di lavoro della macchina, fare clic su **StateMachine** della barra di navigazione visualizzato nella parte superiore della finestra di progettazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-158">Return to the overall state machine view in the workflow designer by clicking **StateMachine** in the breadcrumb display at the top of the workflow designer.</span></span>  
   
     > [!NOTE]
-    >  La transizione si verifica quando viene ricevuto un evento trigger e <xref:System.Activities.Statements.Transition.Condition%2A>, se presente, restituisce `True`.Per quanto riguarda questa transizione, se `Guess` dell'utente corrisponde a `Target` generato casualmente, il controllo passa a **FinalState** e il flusso di lavoro viene completato.  
+    >  <span data-ttu-id="2b4e0-159">La transizione si verifica quando viene ricevuto un evento trigger e <xref:System.Activities.Statements.Transition.Condition%2A>, se presente, restituisce `True`.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-159">A transition occurs when the trigger event is received and the <xref:System.Activities.Statements.Transition.Condition%2A>, if present, evaluates to `True`.</span></span> <span data-ttu-id="2b4e0-160">Per questa transizione, se l'utente `Guess` corrispondente generato casualmente `Target`, quindi il controllo passa al **FinalState** e completa il flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-160">For this transition, if the user’s `Guess` matches the randomly generated `Target`, then control passes to the **FinalState** and the workflow completes.</span></span>  
   
-19. A seconda della correttezza dell'ipotesi, è possibile che per il flusso di lavoro venga eseguita la transizione a **FinalState** o venga ripristinato lo stato **Enter Guess** per un altro tentativo.Entrambe le transizioni condividono lo stesso trigger di attesa che l'ipotesi dell'utente sia ricevuta tramite l'attività **ReadInt**.Questa transizione è denominata transizione condivisa.Per creare una transizione condivisa, fare clic sul cerchio che indica l'inizio della transizione **Guess Correct** e trascinarlo nello stato desiderato.In questo caso la transizione è una transizione autodirezionale, quindi trascinare il punto iniziale della transizione **Guess Correct** e rilasciarlo sulla parte inferiore dello stato **Enter Guess**.Dopo aver creato la transizione, selezionarla nella finestra di progettazione del flusso di lavoro e impostarne la proprietà **DisplayName** su **Guess Incorrect**.  
-  
-    > [!NOTE]
-    >  Le transizioni condivise possono essere inoltre create dalla finestra di progettazione della transizione facendo clic su **Aggiungi transizione del trigger condivisa** nella parte inferiore della finestra di progettazione della transizione e selezionando lo stato di destinazione desiderato dall'elenco a discesa **Stati disponibili per la connessione**.  
+19. <span data-ttu-id="2b4e0-161">A seconda che la stima sia corretta, il flusso di lavoro deve eseguire la transizione al **FinalState** o di **Enter Guess** dello stato per un altro tentativo.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-161">Depending on whether the guess is correct, the workflow should transition either to the **FinalState** or back to the **Enter Guess** state for another try.</span></span> <span data-ttu-id="2b4e0-162">Entrambe le transizioni condividono lo stesso trigger di attesa che l'ipotesi dell'utente deve essere ricevuto tramite il **ReadInt** attività.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-162">Both transitions share the same trigger of waiting for the user’s guess to be received via the **ReadInt** activity.</span></span> <span data-ttu-id="2b4e0-163">Questa transizione è denominata transizione condivisa.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-163">This is called a shared transition.</span></span> <span data-ttu-id="2b4e0-164">Per creare una transizione condivisa, fare clic sul cerchio che indica l'inizio del **Guess Correct** transizione e trascinarlo nello stato desiderato.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-164">To create a shared transition, click the circle that indicates the start of the **Guess Correct** transition and drag it to the desired state.</span></span> <span data-ttu-id="2b4e0-165">In questo caso la transizione è una transizione automatica, quindi trascinare il punto iniziale del **Guess Correct** transizione e rilasciarlo indietro nella parte inferiore del **Enter Guess** stato.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-165">In this case the transition is a self-transition, so drag the start point of the **Guess Correct** transition and drop it back onto the bottom of the **Enter Guess** state.</span></span> <span data-ttu-id="2b4e0-166">Dopo aver creato la transizione, selezionarla nella finestra di progettazione del flusso di lavoro e impostare il relativo **DisplayName** proprietà **Guess Incorrect**.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-166">After creating the transition, select it in the workflow designer and set its **DisplayName** property to **Guess Incorrect**.</span></span>  
   
     > [!NOTE]
-    >  Si noti che se <xref:System.Activities.Statements.Transition.Condition%2A> di una transizione restituisce `false` \(o tutti gli stati di una transizione trigger condivisa restituiscono `false`\), la transizione non si verificherà e tutti i trigger per tutte le transizioni dallo stato verranno rinviati.In questa esercitazione, questa situazione non può verificarsi a causa della modalità con cui le condizioni vengono configurate \(esistono azioni specifiche per verificare se il valore indicato è corretto o errato\).  
+    >  <span data-ttu-id="2b4e0-167">Le transizioni condivise possono anche essere create dalla finestra di progettazione della transizione facendo **Aggiungi transizione del trigger condivisa** nella parte inferiore della finestra di progettazione di transizione e selezionando lo stato di destinazione desiderato dal  **Gli stati disponibili per la connessione** elenco a discesa.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-167">Shared transitions can also be created from within the transition designer by clicking **Add shared trigger transition** at the bottom of the transition designer, and then selecting the desired target state from the **Available states to connect** drop-down.</span></span>  
   
-20. Fare doppio clic sulla transizione **Guess Incorrect** nella finestra di progettazione del flusso di lavoro per espanderla.Si noti che **Trigger** è già impostato sulla stessa attività **ReadInt** utilizzata dalla transizione **Guess Correct**.  
+    > [!NOTE]
+    >  <span data-ttu-id="2b4e0-168">Si noti che se <xref:System.Activities.Statements.Transition.Condition%2A> di una transizione restituisce `false` (o tutti gli stati di una transizione trigger condivisa restituiscono `false`), la transizione non si verificherà e tutti i trigger per tutte le transizioni dallo stato verranno rinviati.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-168">Note that if the <xref:System.Activities.Statements.Transition.Condition%2A> of a transition evaluates to `false` (or all of the conditions of a shared trigger transition evaluate to `false`), the transition will not occur and all triggers for all the transitions from the state will be rescheduled.</span></span> <span data-ttu-id="2b4e0-169">In questa esercitazione, questa situazione non può verificarsi a causa della modalità con cui le condizioni vengono configurate (esistono azioni specifiche per verificare se il valore indicato è corretto o errato).</span><span class="sxs-lookup"><span data-stu-id="2b4e0-169">In this tutorial, this situation cannot happen because of the way the conditions are configured (we have specific actions for whether the guess is correct or incorrect).</span></span>  
   
-21. Digitare l'espressione seguente nella casella del valore di proprietà **Condition**.  
+20. <span data-ttu-id="2b4e0-170">Fare doppio clic su di **Guess Incorrect** transizione nella finestra di progettazione del flusso di lavoro per espanderlo.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-170">Double-click the **Guess Incorrect** transition in the workflow designer to expand it.</span></span> <span data-ttu-id="2b4e0-171">Si noti che il **Trigger** è già impostato sullo stesso **ReadInt** attività che è stato utilizzato il **Guess Correct** transizione.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-171">Note that the **Trigger** is already set to the same **ReadInt** activity that was used by the **Guess Correct** transition.</span></span>  
+  
+21. <span data-ttu-id="2b4e0-172">Digitare l'espressione seguente nella **condizione** casella valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-172">Type the following expression into the **Condition** property value box.</span></span>  
   
     ```vb  
     Guess <> Target  
@@ -155,45 +162,45 @@ I flussi di lavoro possono essere costruiti da attività incorporate e da attivi
     Guess != Target  
     ```  
   
-22. Trascinare un'attività **If** dalla sezione **Control Flow** della **Casella degli strumenti** e rilasciarla nella sezione **Action** della transizione.  
+22. <span data-ttu-id="2b4e0-173">Trascinare un **se** attività dal **flusso di controllo** sezione il **della casella degli strumenti** e rilasciarlo nel **azione** sezione della transizione.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-173">Drag an **If** activity from the **Control Flow** section of the **Toolbox** and drop it in the **Action** section of the transition.</span></span>  
   
-23. Digitare l'espressione seguente nella casella del valore di proprietà **Condition** dell'attività **If**.  
+23. <span data-ttu-id="2b4e0-174">Digitare l'espressione seguente nella **se** dell'attività **condizione** casella valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-174">Type the following expression into the **If** activity’s **Condition** property value box.</span></span>  
   
-    ```vb-c#  
+    ```
     Guess < Target  
     ```  
   
-24. Trascinare due attività **WriteLine** dalla sezione **Primitive** della **Casella degli strumenti** e rilasciarle in modo che una si trovi nella sezione **Then** dell'attività **If** e l'altra si trovi nella sezione **Else**.  
+24. <span data-ttu-id="2b4e0-175">Trascinare due **WriteLine** le attività dal **primitive** sezione del **della casella degli strumenti** e rilasciarle in modo che uno è il **quindi** sezione di il **se** attività e l'altro è il **Else** sezione.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-175">Drag two **WriteLine** activities from the **Primitives** section of the **Toolbox** and drop them so that one is in the **Then** section of the **If** activity, and one is in the **Else** section.</span></span>  
   
-25. Fare clic sull'attività **WriteLine** nella sezione **Then** per selezionarla, quindi digitare la seguente espressione nella casella del valore della proprietà **Text**.  
+25. <span data-ttu-id="2b4e0-176">Fare clic sul **WriteLine** attività di **quindi** sezione per selezionarlo, quindi digitare l'espressione seguente nel **testo** casella valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-176">Click the **WriteLine** activity in the **Then** section to select it, and type the following expression into the **Text** property value box.</span></span>  
   
-    ```vb-c#  
+    ```
     "Your guess is too low."  
     ```  
   
-26. Fare clic sull'attività **WriteLine** nella sezione **Else** per selezionarla, quindi digitare la seguente espressione nella casella del valore della proprietà **Text**.  
+26. <span data-ttu-id="2b4e0-177">Fare clic sul **WriteLine** attività di **Else** sezione per selezionarlo, quindi digitare l'espressione seguente nel **testo** casella valore della proprietà.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-177">Click the **WriteLine** activity in the **Else** section to select it, and type the following expression into the **Text** property value box.</span></span>  
   
-    ```vb-c#  
+    ```
     "Your guess is too high."  
     ```  
   
-27. Tornare alla visualizzazione generale della macchina a stati nella finestra di progettazione del flusso di lavoro facendo clic su **StateMachine** nella visualizzazione della barra di navigazione nella parte superiore della finestra di progettazione del flusso di lavoro.  
+27. <span data-ttu-id="2b4e0-178">Tornare a generale dello stato di visualizzazione nella finestra di progettazione del flusso di lavoro della macchina, fare clic su **StateMachine** della barra di navigazione visualizzato nella parte superiore della finestra di progettazione del flusso di lavoro.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-178">Return to the overall state machine view in the workflow designer by clicking **StateMachine** in the breadcrumb display at the top of the workflow designer.</span></span>  
   
-     Nell'esempio seguente viene illustrato il flusso di lavoro completato.  
+     <span data-ttu-id="2b4e0-179">Nell'esempio seguente viene illustrato il flusso di lavoro completato.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-179">The following example illustrates the completed workflow.</span></span>  
   
-     ![Flusso di lavoro della macchina a stati completato](../../../docs/framework/windows-workflow-foundation//media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+     <span data-ttu-id="2b4e0-180">![Flusso di lavoro macchina a stati completato](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")</span><span class="sxs-lookup"><span data-stu-id="2b4e0-180">![Completed State Machine Workflow](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")</span></span>  
   
-### Per compilare il flusso di lavoro  
+### <a name="to-build-the-workflow"></a><span data-ttu-id="2b4e0-181">Per compilare il flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="2b4e0-181">To build the workflow</span></span>  
   
-1.  Per compilare la soluzione, premere CTRL\+MAIUSC\+B.  
+1.  <span data-ttu-id="2b4e0-182">Per compilare la soluzione, premere CTRL+MAIUSC+B.</span><span class="sxs-lookup"><span data-stu-id="2b4e0-182">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-     Per istruzioni sull'esecuzione del flusso di lavoro, vedere l'argomento successivo [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md).Se è già stato completato il passaggio [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md) con uno stile di flusso di lavoro diverso e si desidera eseguirlo tramite il flusso di lavoro della macchina a stati da questo passaggio, andare alla sezione [Per compilare ed eseguire l'applicazione](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md#BKMK_ToRunTheApplication) di [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md).  
+     <span data-ttu-id="2b4e0-183">Per istruzioni su come eseguire il flusso di lavoro, vedere l'argomento successivo, [procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="2b4e0-183">For instructions on how to run the workflow, please see the next topic, [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span></span> <span data-ttu-id="2b4e0-184">Se è già stata completata la [come: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) spostarsi con uno stile diverso del flusso di lavoro e desidera eseguirlo tramite il flusso di lavoro macchina da questo passaggio, ignorare il [per compilare ed eseguire l'applicazione](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) sezione [procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="2b4e0-184">If you have already completed the [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) step with a different style of workflow and wish to run it using the state machine workflow from this step, skip ahead to the [To build and run the application](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) section of [How to: Run a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Activities.Statements.Flowchart>   
- <xref:System.Activities.Statements.FlowDecision>   
- [Programmazione di Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//programming.md)   
- [Progettazione di flussi di lavoro](../../../docs/framework/windows-workflow-foundation//designing-workflows.md)   
- [Esercitazione introduttiva](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)   
- [Procedura: creare un'attività](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md)   
- [Procedura: eseguire un flusso di lavoro](../../../docs/framework/windows-workflow-foundation//how-to-run-a-workflow.md)
+## <a name="see-also"></a><span data-ttu-id="2b4e0-185">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="2b4e0-185">See Also</span></span>  
+ <xref:System.Activities.Statements.Flowchart>  
+ <xref:System.Activities.Statements.FlowDecision>  
+ [<span data-ttu-id="2b4e0-186">Programmazione di Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="2b4e0-186">Windows Workflow Foundation Programming</span></span>](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [<span data-ttu-id="2b4e0-187">Progettazione di flussi di lavoro</span><span class="sxs-lookup"><span data-stu-id="2b4e0-187">Designing Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
+ [<span data-ttu-id="2b4e0-188">Esercitazione introduttiva</span><span class="sxs-lookup"><span data-stu-id="2b4e0-188">Getting Started Tutorial</span></span>](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
+ [<span data-ttu-id="2b4e0-189">Procedura: Creare un'attività</span><span class="sxs-lookup"><span data-stu-id="2b4e0-189">How to: Create an Activity</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [<span data-ttu-id="2b4e0-190">Procedura: Eseguire un flusso di lavoro</span><span class="sxs-lookup"><span data-stu-id="2b4e0-190">How to: Run a Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

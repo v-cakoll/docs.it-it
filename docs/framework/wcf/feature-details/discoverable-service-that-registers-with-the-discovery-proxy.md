@@ -1,46 +1,49 @@
 ---
-title: "Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 'Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e6633491ec3b01a4ca3494639e9537c9f6441da5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione
-Quello che segue è il secondo di quattro argomenti incentrato sull'implementazione di un proxy di individuazione. Nell'argomento precedente, [procedura: implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), è implementato un proxy di individuazione. In questo argomento viene creato un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che invia messaggi di annuncio (`Hello` e `Bye`) al proxy dell'individuazione, determinandone la registrazione e il relativo annullamento dal proxy di individuazione.  
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a><span data-ttu-id="cabbf-102">Procedura: implementare un servizio individuabile che esegue la registrazione al proxy di individuazione</span><span class="sxs-lookup"><span data-stu-id="cabbf-102">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>
+<span data-ttu-id="cabbf-103">Quello che segue è il secondo di quattro argomenti incentrato sull'implementazione di un proxy di individuazione.</span><span class="sxs-lookup"><span data-stu-id="cabbf-103">This topic is the second of four topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="cabbf-104">Nell'argomento precedente, [procedura: implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), è implementato un proxy di individuazione.</span><span class="sxs-lookup"><span data-stu-id="cabbf-104">In the previous topic, [How to: Implement a Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), you implemented a discovery proxy.</span></span> <span data-ttu-id="cabbf-105">In questo argomento viene creato un servizio [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] che invia messaggi di annuncio (`Hello` e `Bye`) al proxy dell'individuazione, determinandone la registrazione e il relativo annullamento dal proxy di individuazione.</span><span class="sxs-lookup"><span data-stu-id="cabbf-105">In this topic, you create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that sends announcement messages (`Hello` and `Bye`) to the discovery proxy, causing it to register and unregister itself with the discovery proxy.</span></span>  
   
-### <a name="to-define-the-service-contract"></a>Per definire il contratto di servizio  
+### <a name="to-define-the-service-contract"></a><span data-ttu-id="cabbf-106">Per definire il contratto di servizio</span><span class="sxs-lookup"><span data-stu-id="cabbf-106">To define the service contract</span></span>  
   
-1.  Aggiungere un nuovo progetto applicazione console denominato `DiscoveryProxyExample` alla soluzione `Service`.  
+1.  <span data-ttu-id="cabbf-107">Aggiungere un nuovo progetto applicazione console denominato `DiscoveryProxyExample` alla soluzione `Service`.</span><span class="sxs-lookup"><span data-stu-id="cabbf-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Service`.</span></span>  
   
-2.  Aggiungere riferimenti agli assembly riportati di seguito:  
+2.  <span data-ttu-id="cabbf-108">Aggiungere riferimenti agli assembly riportati di seguito:</span><span class="sxs-lookup"><span data-stu-id="cabbf-108">Add references to the following assemblies:</span></span>  
   
-    1.  System.ServiceModel  
+    1.  <span data-ttu-id="cabbf-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="cabbf-109">System.ServiceModel</span></span>  
   
-    2.  System.ServiceModel.Discovery  
+    2.  <span data-ttu-id="cabbf-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="cabbf-110">System.ServiceModel.Discovery</span></span>  
   
-3.  Aggiungere al progetto una nuova classe denominata `CalculatorService`.  
+3.  <span data-ttu-id="cabbf-111">Aggiungere al progetto una nuova classe denominata `CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="cabbf-111">Add a new class to the project called `CalculatorService`.</span></span>  
   
-4.  Aggiungere le istruzioni using seguenti.  
+4.  <span data-ttu-id="cabbf-112">Aggiungere le istruzioni using seguenti.</span><span class="sxs-lookup"><span data-stu-id="cabbf-112">Add the following using statements.</span></span>  
   
-    ```  
+    ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
-5.  Definire il contratto di servizio all'interno di CalculatorService.cs.  
+5.  <span data-ttu-id="cabbf-113">Definire il contratto di servizio all'interno di CalculatorService.cs.</span><span class="sxs-lookup"><span data-stu-id="cabbf-113">Within CalculatorService.cs, define the service contract.</span></span>  
   
-    ```  
+    ```csharp  
     // Define a service contract.  
         [ServiceContract(Namespace = "http://Microsoft.Samples.Discovery")]  
         public interface ICalculatorService  
@@ -54,12 +57,11 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
             [OperationContract]  
             double Divide(double n1, double n2);  
         }  
-  
     ```  
   
-6.  Implementare inoltre il contratto di servizio all'interno di CalculatorService.cs.  
+6.  <span data-ttu-id="cabbf-114">Implementare inoltre il contratto di servizio all'interno di CalculatorService.cs.</span><span class="sxs-lookup"><span data-stu-id="cabbf-114">Also within CalculatorService.cs, implement the service contract.</span></span>  
   
-    ```  
+    ```csharp  
     // Service class which implements the service contract.      
         public class CalculatorService : ICalculatorService  
         {  
@@ -95,27 +97,24 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
                 return result;  
             }  
         }  
-  
     ```  
   
-### <a name="to-host-the-service"></a>Per ospitare il servizio  
+### <a name="to-host-the-service"></a><span data-ttu-id="cabbf-115">Per ospitare il servizio</span><span class="sxs-lookup"><span data-stu-id="cabbf-115">To host the service</span></span>  
   
-1.  Aprire il file Program.cs generato in fase di creazione del progetto.  
+1.  <span data-ttu-id="cabbf-116">Aprire il file Program.cs generato in fase di creazione del progetto.</span><span class="sxs-lookup"><span data-stu-id="cabbf-116">Open the Program.cs file that was generated when you created the project.</span></span>  
   
-2.  Aggiungere le istruzioni using seguenti.  
+2.  <span data-ttu-id="cabbf-117">Aggiungere le istruzioni using seguenti.</span><span class="sxs-lookup"><span data-stu-id="cabbf-117">Add the following using statements.</span></span>  
   
-    ```  
+    ```csharp 
     using System;  
     using System.ServiceModel;  
     using System.ServiceModel.Description;  
     using System.ServiceModel.Discovery;  
-  
     ```  
   
-3.  Nel metodo `Main()` aggiungere il codice seguente:  
+3.  <span data-ttu-id="cabbf-118">Nel metodo `Main()` aggiungere il codice seguente:</span><span class="sxs-lookup"><span data-stu-id="cabbf-118">Within the `Main()` method, add the following code:</span></span>  
   
-    ```  
-  
+    ```csharp  
     // Define the base address of the service  
     Uri baseAddress = new Uri("net.tcp://localhost:9002/CalculatorService/" + Guid.NewGuid().ToString());  
     // Define the endpoint address where announcement messages will be sent  
@@ -165,12 +164,12 @@ Quello che segue è il secondo di quattro argomenti incentrato sull'implementazi
     }  
     ```  
   
- L'implementazione di un servizio individuabile è quindi completata. Continuare a [procedura: implementare un'applicazione Client che utilizza il Proxy di individuazione per cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).  
+ <span data-ttu-id="cabbf-119">L'implementazione di un servizio individuabile è quindi completata.</span><span class="sxs-lookup"><span data-stu-id="cabbf-119">You have completed implementing a discoverable service.</span></span> <span data-ttu-id="cabbf-120">Continuare a [procedura: implementare un'applicazione Client che utilizza il Proxy di individuazione per trovare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span><span class="sxs-lookup"><span data-stu-id="cabbf-120">Continue on to [How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span></span>  
   
-## <a name="example"></a>Esempio  
- Quello che segue è l'elenco completo del codice usato in questo argomento.  
+## <a name="example"></a><span data-ttu-id="cabbf-121">Esempio</span><span class="sxs-lookup"><span data-stu-id="cabbf-121">Example</span></span>  
+ <span data-ttu-id="cabbf-122">Quello che segue è l'elenco completo del codice usato in questo argomento.</span><span class="sxs-lookup"><span data-stu-id="cabbf-122">This is the full listing of the code used in this topic.</span></span>  
   
-```  
+```csharp  
 // CalculatorService.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -231,10 +230,9 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
-```  
+```csharp  
 // Program.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -295,10 +293,8 @@ namespace Microsoft.Samples.Discovery
     }  
 }  
 ```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
-## <a name="see-also"></a>Vedere anche  
- [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)   
- [Procedura: implementare un Proxy di individuazione](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)   
- [Procedura: implementare un'applicazione Client che utilizza il Proxy di individuazione per cercare un servizio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+
+## <a name="see-also"></a><span data-ttu-id="cabbf-123">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cabbf-123">See Also</span></span>  
+ [<span data-ttu-id="cabbf-124">WCF Discovery</span><span class="sxs-lookup"><span data-stu-id="cabbf-124">WCF Discovery</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [<span data-ttu-id="cabbf-125">Procedura: implementare un Proxy di individuazione</span><span class="sxs-lookup"><span data-stu-id="cabbf-125">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [<span data-ttu-id="cabbf-126">Procedura: implementare un'applicazione Client che utilizza il Proxy di individuazione per trovare un servizio</span><span class="sxs-lookup"><span data-stu-id="cabbf-126">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

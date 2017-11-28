@@ -1,37 +1,41 @@
 ---
-title: "Eventi per propriet&#224; modificate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli personalizzati [Windows Form], modifica delle proprietà (mediante il codice)"
-  - "proprietà [Windows Form], modifiche"
+title: "Eventi per proprietà modificate"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Windows Forms], property changes (using code)
+- properties [Windows Forms], changes
 ms.assetid: 268039ec-5aaa-4d76-b902-acccb036c850
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7685891e99f1dcb2ca9e515c7dc6d7730ff0b2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Eventi per propriet&#224; modificate
-Se si desidera che un controllo invii notifiche quando viene modificata la proprietà denominata *NomeProprietà*, definire un evento denominato *NomeProprietà*`Changed` e un metodo denominato `On`*NomeProprietà*`Changed` che generi l'evento.  In base alla convenzione di denominazione adottata in Windows Forms, viene aggiunta la parola *Changed* al nome della proprietà.  Il tipo delegato associato a eventi di proprietà modificata è <xref:System.EventHandler> mentre il tipo di dati dell'evento è <xref:System.EventArgs>.  La classe base <xref:System.Windows.Forms.Control> definisce numerosi eventi di proprietà modificata, quali <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged> e altri.  Per informazioni generali sugli eventi, vedere [Eventi](../../../../docs/standard/events/index.md) e [Eventi nei controlli di Windows Form](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md).  
+# <a name="property-changed-events"></a><span data-ttu-id="023c4-102">Eventi per proprietà modificate</span><span class="sxs-lookup"><span data-stu-id="023c4-102">Property-Changed Events</span></span>
+<span data-ttu-id="023c4-103">Se si desidera che il controllo per inviare notifiche quando una proprietà denominata *PropertyName* , definire un evento denominato *PropertyName* `Changed` e un metodo denominato `On` *PropertyName* `Changed` che genera l'evento.</span><span class="sxs-lookup"><span data-stu-id="023c4-103">If you want your control to send notifications when a property named *PropertyName* changes, define an event named *PropertyName*`Changed` and a method named `On`*PropertyName*`Changed` that raises the event.</span></span> <span data-ttu-id="023c4-104">La convenzione di denominazione in Windows Form consiste nell'aggiungere la parola *Changed* per il nome della proprietà.</span><span class="sxs-lookup"><span data-stu-id="023c4-104">The naming convention in Windows Forms is to append the word *Changed* to the name of the property.</span></span> <span data-ttu-id="023c4-105">Il tipo del delegato di evento associata per gli eventi di modifica della proprietà è <xref:System.EventHandler>, e il tipo di dati di evento è <xref:System.EventArgs>.</span><span class="sxs-lookup"><span data-stu-id="023c4-105">The associated event delegate type for property-changed events is <xref:System.EventHandler>, and the event data type is <xref:System.EventArgs>.</span></span> <span data-ttu-id="023c4-106">La classe di base <xref:System.Windows.Forms.Control> definisce molti eventi di modifica della proprietà, ad esempio <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>e altri.</span><span class="sxs-lookup"><span data-stu-id="023c4-106">The base class <xref:System.Windows.Forms.Control> defines many property-changed events, such as <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>, and others.</span></span> <span data-ttu-id="023c4-107">Per informazioni generali sugli eventi, vedere [eventi](../../../../docs/standard/events/index.md) e [eventi nei controlli Windows Form](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md).</span><span class="sxs-lookup"><span data-stu-id="023c4-107">For background information about events, see [Events](../../../../docs/standard/events/index.md) and [Events in Windows Forms Controls](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md).</span></span>  
   
- L'utilità degli eventi per proprietà modificate risiede nel fatto che consentono ai consumer di un controllo di associare gestori eventi che rispondano alla modifica rilevata.  Se è necessario che il controllo risponda a un evento di proprietà modificata da esso generato, eseguire l'override del metodo `On`*NomeProprietà*`Changed` corrispondente anziché collegare un delegato all'evento.  In genere i controlli rispondono agli eventi per proprietà modificate aggiornando altre proprietà o ridisegnando interamente o in parte la propria superficie di disegno.  
+ <span data-ttu-id="023c4-108">Gli eventi di modifica della proprietà sono utili perché consentono ai consumer di un controllo di associare gestori di eventi che rispondono alla modifica.</span><span class="sxs-lookup"><span data-stu-id="023c4-108">Property-changed events are useful because they allow consumers of a control to attach event handlers that respond to the change.</span></span> <span data-ttu-id="023c4-109">Se il controllo deve rispondere a un evento di modifica della proprietà da esso generato, eseguire l'override corrispondente `On` *PropertyName* `Changed` metodo anziché associare un delegato all'evento.</span><span class="sxs-lookup"><span data-stu-id="023c4-109">If your control needs to respond to a property-changed event that it raises, override the corresponding `On`*PropertyName*`Changed` method instead of attaching a delegate to the event.</span></span> <span data-ttu-id="023c4-110">Un controllo in genere risponde a un evento di modifica della proprietà eseguendo l'aggiornamento di altre proprietà o ridisegnando alcuni o tutti della relativa superficie di disegno.</span><span class="sxs-lookup"><span data-stu-id="023c4-110">A control typically responds to a property-changed event by updating other properties or by redrawing some or all of its drawing surface.</span></span>  
   
- Nell'esempio riportato di seguito viene illustrato come il controllo personalizzato `FlashTrackBar` risponda ad alcuni degli eventi di proprietà modificata ereditati da <xref:System.Windows.Forms.Control>.  Per l'esempio completo, vedere [Procedura: creare un controllo di Windows Form che visualizzi lo stato di avanzamento](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ <span data-ttu-id="023c4-111">L'esempio seguente mostra come `FlashTrackBar` controllo personalizzato risponda ad alcuni degli eventi di modifica della proprietà che eredita da <xref:System.Windows.Forms.Control>.</span><span class="sxs-lookup"><span data-stu-id="023c4-111">The following example shows how the `FlashTrackBar` custom control responds to some of the property-changed events that it inherits from <xref:System.Windows.Forms.Control>.</span></span> <span data-ttu-id="023c4-112">Per l'esempio completo, vedere [procedura: creare un Windows Form controllo che mostra lo stato di avanzamento](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span><span class="sxs-lookup"><span data-stu-id="023c4-112">For the complete sample, see [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#2)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#2)]  
   
-## Vedere anche  
- [Eventi](../../../../docs/standard/events/index.md)   
- [Eventi nei controlli di Windows Form](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)   
- [Proprietà dei controlli Windows Form](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+## <a name="see-also"></a><span data-ttu-id="023c4-113">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="023c4-113">See Also</span></span>  
+ [<span data-ttu-id="023c4-114">Eventi</span><span class="sxs-lookup"><span data-stu-id="023c4-114">Events</span></span>](../../../../docs/standard/events/index.md)  
+ [<span data-ttu-id="023c4-115">Eventi dei controlli di Windows Form</span><span class="sxs-lookup"><span data-stu-id="023c4-115">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [<span data-ttu-id="023c4-116">Proprietà dei controlli Windows Form</span><span class="sxs-lookup"><span data-stu-id="023c4-116">Properties in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)

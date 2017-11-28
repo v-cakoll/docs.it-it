@@ -1,64 +1,64 @@
 ---
-title: "Procedura: localizzare un&#39;applicazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "applicazioni, localizzazione"
-  - "localizzazione, applicazioni"
-  - "LocBaml (strumento)"
+title: 'Procedura: Localizzare un''applicazione'
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- localization [WPF], applications
+- LocBaml tool [WPF]
+- applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-caps.latest.revision: 37
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 33
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: df52c44ca72108ffc984bed169daae654c01aa87
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: localizzare un&#39;applicazione
-Questa esercitazione spiega come creare un'applicazione localizzata usando lo strumento LocBaml.  
+# <a name="how-to-localize-an-application"></a><span data-ttu-id="062f3-102">Procedura: Localizzare un'applicazione</span><span class="sxs-lookup"><span data-stu-id="062f3-102">How to: Localize an Application</span></span>
+<span data-ttu-id="062f3-103">Questa esercitazione spiega come creare un'applicazione localizzata usando lo strumento LocBaml.</span><span class="sxs-lookup"><span data-stu-id="062f3-103">This tutorial explains how to create a localized application by using the LocBaml tool.</span></span>  
   
 > [!NOTE]
->  Lo strumento LocBaml non è un'applicazione di produzione.  Viene presentato come esempio in cui vengono usate alcune delle API di localizzazione e illustra come scrivere uno strumento di localizzazione.  
->   
->    
+>  <span data-ttu-id="062f3-104">Lo strumento LocBaml non è un'applicazione di produzione.</span><span class="sxs-lookup"><span data-stu-id="062f3-104">The LocBaml tool is not a production-ready application.</span></span> <span data-ttu-id="062f3-105">Viene presentato come esempio in cui vengono usate alcune delle API di localizzazione e illustra come scrivere uno strumento di localizzazione.</span><span class="sxs-lookup"><span data-stu-id="062f3-105">It is presented as a sample that uses some of the localization APIs and illustrates how you might write a localization tool.</span></span>  
   
 <a name="Introduction"></a>   
-## Panoramica  
- Questo documento offre un approccio graduale alla localizzazione di un'applicazione.  Innanzitutto viene preparata l'applicazione in modo che sia possibile estrarre il testo da convertire.  Dopo la conversione del testo, il testo convertito verrà incluso in una nuova copia dell'applicazione originale.  
+## <a name="overview"></a><span data-ttu-id="062f3-106">Panoramica</span><span class="sxs-lookup"><span data-stu-id="062f3-106">Overview</span></span>  
+ <span data-ttu-id="062f3-107">Questo documento offre un approccio graduale alla localizzazione di un'applicazione.</span><span class="sxs-lookup"><span data-stu-id="062f3-107">This discussion gives you a step-by-step approach to localizing an application.</span></span> <span data-ttu-id="062f3-108">Innanzitutto viene preparata l'applicazione in modo che sia possibile estrarre il testo da convertire.</span><span class="sxs-lookup"><span data-stu-id="062f3-108">First, you will prepare your application so that the text that will be translated can be extracted.</span></span> <span data-ttu-id="062f3-109">Dopo la conversione del testo, il testo convertito verrà incluso in una nuova copia dell'applicazione originale.</span><span class="sxs-lookup"><span data-stu-id="062f3-109">After the text is translated, you will merge the translated text into a new copy of the original application.</span></span>  
   
 <a name="Requirements"></a>   
-## Requisiti  
- Nel corso di questa discussione verrà usato [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], un compilatore eseguito dalla riga di comando.  
+## <a name="requirements"></a><span data-ttu-id="062f3-110">Requisiti</span><span class="sxs-lookup"><span data-stu-id="062f3-110">Requirements</span></span>  
+ <span data-ttu-id="062f3-111">Nel corso di questa discussione verrà usato [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], un compilatore eseguito dalla riga di comando.</span><span class="sxs-lookup"><span data-stu-id="062f3-111">Over the course of this discussion, you will use [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], which is a compiler that runs from the command line.</span></span>  
   
- Inoltre, verrà spiegato come usare un file di progetto.  Per istruzioni su come usare [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] e i file di progetto, vedere [Compilazione e distribuzione](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).  
+ <span data-ttu-id="062f3-112">Inoltre, verrà spiegato come usare un file di progetto.</span><span class="sxs-lookup"><span data-stu-id="062f3-112">Also, you will be instructed to use a project file.</span></span> <span data-ttu-id="062f3-113">Per istruzioni su come usare [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] e file di progetto, vedere [compilare e distribuire](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).</span><span class="sxs-lookup"><span data-stu-id="062f3-113">For instructions on how to use [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] and project files, see [Build and Deploy](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).</span></span>  
   
- Tutti gli esempi di questa discussione usano en\-US \(inglese\-Stati Uniti\) come impostazioni cultura.  In questo modo è possibile eseguire i passaggi degli esempi senza installare un'altra lingua.  
+ <span data-ttu-id="062f3-114">Tutti gli esempi di questa discussione usano en-US (inglese-Stati Uniti) come impostazioni cultura.</span><span class="sxs-lookup"><span data-stu-id="062f3-114">All the examples in this discussion use en-US (English-US) as the culture.</span></span> <span data-ttu-id="062f3-115">In questo modo è possibile eseguire i passaggi degli esempi senza installare un'altra lingua.</span><span class="sxs-lookup"><span data-stu-id="062f3-115">This enables you to work through the steps of the examples without installing a different language.</span></span>  
   
 <a name="create_sample_app"></a>   
-## Creare un'applicazione di esempio  
- In questo passaggio viene preparata l'applicazione per la localizzazione.  Negli esempi di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] viene fornito un esempio HelloApp che verrà usato per gli esempi di codice in questa discussione.  Per usare questo esempio, scaricare i file [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] dall'[esempio dello strumento LocBaml](http://go.microsoft.com/fwlink/?LinkID=160016).  
+## <a name="create-a-sample-application"></a><span data-ttu-id="062f3-116">Creare un'applicazione di esempio</span><span class="sxs-lookup"><span data-stu-id="062f3-116">Create a Sample Application</span></span>  
+ <span data-ttu-id="062f3-117">In questo passaggio viene preparata l'applicazione per la localizzazione.</span><span class="sxs-lookup"><span data-stu-id="062f3-117">In this step, you will prepare your application for localization.</span></span> <span data-ttu-id="062f3-118">Negli esempi di [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] viene fornito un esempio HelloApp che verrà usato per gli esempi di codice in questa discussione.</span><span class="sxs-lookup"><span data-stu-id="062f3-118">In the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] samples, a HelloApp sample is supplied that will be used for the code examples in this discussion.</span></span> <span data-ttu-id="062f3-119">Se si desidera usare questo esempio, scaricare il [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i file dal [strumento LocBaml](http://go.microsoft.com/fwlink/?LinkID=160016).</span><span class="sxs-lookup"><span data-stu-id="062f3-119">If you would like to use this sample, download the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] files from the [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).</span></span>  
   
-1.  Sviluppare l'applicazione fino al punto in cui si vuole iniziare la localizzazione.  
+1.  <span data-ttu-id="062f3-120">Sviluppare l'applicazione fino al punto in cui si vuole iniziare la localizzazione.</span><span class="sxs-lookup"><span data-stu-id="062f3-120">Develop your application to the point where you want to start localization.</span></span>  
   
-2.  Specificare la lingua di sviluppo nel file di progetto in modo che [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] possa generare un assembly principale e un assembly satellite \(un file con estensione .resources.dll\) in cui includere le risorse della lingua di sistema.  Il file di progetto nell'esempio HelloApp è HelloApp.csproj.  In questo file la lingua di sviluppo viene identificata come segue:  
+2.  <span data-ttu-id="062f3-121">Specificare la lingua di sviluppo nel file di progetto in modo che [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] possa generare un assembly principale e un assembly satellite (un file con estensione .resources.dll) in cui includere le risorse della lingua di sistema.</span><span class="sxs-lookup"><span data-stu-id="062f3-121">Specify the development language in the project file so that [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] generates a main assembly and a satellite assembly (a file with the .resources.dll extension) to contain the neutral language resources.</span></span> <span data-ttu-id="062f3-122">Il file di progetto nell'esempio HelloApp è HelloApp.csproj.</span><span class="sxs-lookup"><span data-stu-id="062f3-122">The project file in the HelloApp sample is HelloApp.csproj.</span></span> <span data-ttu-id="062f3-123">In questo file la lingua di sviluppo viene identificata come segue:</span><span class="sxs-lookup"><span data-stu-id="062f3-123">In that file, you will find the development language identified as follows:</span></span>  
   
      `<UICulture>en-US</UICulture>`  
   
-3.  Aggiungere gli UID ai file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  Gli UID vengono usati per rilevare le modifiche apportate ai file e per identificare gli elementi da convertire.  Per aggiungere gli UID ai file, eseguire **updateuid** nel file di progetto:  
+3.  <span data-ttu-id="062f3-124">Aggiungere gli UID ai file [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="062f3-124">Add Uids to your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] files.</span></span> <span data-ttu-id="062f3-125">Gli UID vengono usati per rilevare le modifiche apportate ai file e per identificare gli elementi da convertire.</span><span class="sxs-lookup"><span data-stu-id="062f3-125">Uids are used to keep track of changes to files and to identify items that must be translated.</span></span> <span data-ttu-id="062f3-126">Per aggiungere gli UID ai file, eseguire **updateuid** sul file di progetto:</span><span class="sxs-lookup"><span data-stu-id="062f3-126">To add Uids to your files, run **updateuid** on your project file:</span></span>  
   
-     **msbuild \/t:updateuid helloapp.csproj**  
+     <span data-ttu-id="062f3-127">**msbuild /t:updateuid helloapp.csproj**</span><span class="sxs-lookup"><span data-stu-id="062f3-127">**msbuild /t:updateuid helloapp.csproj**</span></span>  
   
-     Per verificare che non ci siano UID mancanti o duplicati, eseguire **checkuid**:  
+     <span data-ttu-id="062f3-128">Per verificare che si non mancanti o duplicati degli Uids, eseguire **checkuid**:</span><span class="sxs-lookup"><span data-stu-id="062f3-128">To verify that you have no missing or duplicate Uids, run **checkuid**:</span></span>  
   
-     **msbuild \/t:checkuid helloapp.csproj**  
+     <span data-ttu-id="062f3-129">**msbuild /t:checkuid helloapp.csproj**</span><span class="sxs-lookup"><span data-stu-id="062f3-129">**msbuild /t:checkuid helloapp.csproj**</span></span>  
   
-     Dopo l'esecuzione di **updateuid**, i file dovrebbero contenere gli UID.  Ad esempio, il file Pane1.xaml di HelloApp dovrebbe includere quanto segue:  
+     <span data-ttu-id="062f3-130">Dopo aver eseguito **updateuid**, i file devono contenere UID.</span><span class="sxs-lookup"><span data-stu-id="062f3-130">After running **updateuid**, your files should contain Uids.</span></span> <span data-ttu-id="062f3-131">Ad esempio, il file Pane1.xaml di HelloApp dovrebbe includere quanto segue:</span><span class="sxs-lookup"><span data-stu-id="062f3-131">For example, in the Pane1.xaml file of HelloApp, you should find the following:</span></span>  
   
      `<StackPanel x:Uid="StackPanel_1">`  
   
@@ -69,153 +69,152 @@ Questa esercitazione spiega come creare un'applicazione localizzata usando lo st
      `</StackPanel>`  
   
 <a name="create_dll"></a>   
-## Creare l'assembly satellite per le risorse della lingua di sistema  
- Dopo aver configurato l'applicazione per generare un assembly satellite per le risorse della lingua di sistema, è necessario compilare l'applicazione.  Viene generato l'assembly principale dell'applicazione, nonché l'assembly satellite per le risorse della lingua di sistema richiesto da LocBaml per la localizzazione.  Per compilare l'applicazione:  
+## <a name="create-the-neutral-language-resources-satellite-assembly"></a><span data-ttu-id="062f3-132">Creare l'assembly satellite per le risorse della lingua di sistema</span><span class="sxs-lookup"><span data-stu-id="062f3-132">Create the Neutral Language Resources Satellite Assembly</span></span>  
+ <span data-ttu-id="062f3-133">Dopo aver configurato l'applicazione per generare un assembly satellite per le risorse della lingua di sistema, è necessario compilare l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="062f3-133">After the application is configured to generate a neutral language resources satellite assembly, you build the application.</span></span> <span data-ttu-id="062f3-134">Viene generato l'assembly principale dell'applicazione, nonché l'assembly satellite per le risorse della lingua di sistema richiesto da LocBaml per la localizzazione.</span><span class="sxs-lookup"><span data-stu-id="062f3-134">This generates the main application assembly, as well as the neutral language resources satellite assembly that is required by LocBaml for localization.</span></span> <span data-ttu-id="062f3-135">Per compilare l'applicazione:</span><span class="sxs-lookup"><span data-stu-id="062f3-135">To build the application:</span></span>  
   
-1.  Compilare HelloApp per creare [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
+1.  <span data-ttu-id="062f3-136">Compilare HelloApp per creare [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="062f3-136">Compile HelloApp to create a [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:</span></span>  
   
-     **msbuild helloapp.csproj**  
+     <span data-ttu-id="062f3-137">**msbuild helloapp.csproj**</span><span class="sxs-lookup"><span data-stu-id="062f3-137">**msbuild helloapp.csproj**</span></span>  
   
-2.  L'assembly principale dell'applicazione appena creato, HelloApp.exe, viene inserito nella cartella seguente:  
+2.  <span data-ttu-id="062f3-138">L'assembly principale dell'applicazione appena creato, HelloApp.exe, viene inserito nella cartella seguente:</span><span class="sxs-lookup"><span data-stu-id="062f3-138">The newly created main application assembly, HelloApp.exe, is created in the following folder:</span></span>  
   
      `C:\HelloApp\Bin\Debug\`  
   
-3.  L'assembly satellite per le risorse della lingua di sistema appena creato, HelloApp.resources.dll, viene inserito nella cartella seguente:  
+3.  <span data-ttu-id="062f3-139">L'assembly satellite per le risorse della lingua di sistema appena creato, HelloApp.resources.dll, viene inserito nella cartella seguente:</span><span class="sxs-lookup"><span data-stu-id="062f3-139">The newly created neutral language resources satellite assembly, HelloApp.resources.dll, is created in the following folder:</span></span>  
   
      `C:\HelloApp\Bin\Debug\en-US\`  
   
 <a name="build_locbaml"></a>   
-## Compilare lo strumento LocBaml  
+## <a name="build-the-locbaml-tool"></a><span data-ttu-id="062f3-140">Compilare lo strumento LocBaml</span><span class="sxs-lookup"><span data-stu-id="062f3-140">Build the LocBaml Tool</span></span>  
   
-1.  Tutti i file necessari per compilare LocBaml si trovano negli esempi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Scaricare i file [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] dall'[esempio dello strumento LocBaml](http://go.microsoft.com/fwlink/?LinkID=160016).  
+1.  <span data-ttu-id="062f3-141">Tutti i file necessari per compilare LocBaml si trovano negli esempi in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="062f3-141">All the files necessary to build LocBaml are located in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] samples.</span></span> <span data-ttu-id="062f3-142">Scaricare il [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] i file dal [strumento LocBaml](http://go.microsoft.com/fwlink/?LinkID=160016).</span><span class="sxs-lookup"><span data-stu-id="062f3-142">Download the [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] files from the [LocBaml Tool Sample](http://go.microsoft.com/fwlink/?LinkID=160016).</span></span>  
   
-2.  Eseguire il file di progetto \(LocBaml.csproj\) per compilare lo strumento dalla riga di comando:  
+2.  <span data-ttu-id="062f3-143">Eseguire il file di progetto (LocBaml.csproj) per compilare lo strumento dalla riga di comando:</span><span class="sxs-lookup"><span data-stu-id="062f3-143">From the command line, run the project file (locbaml.csproj) to build the tool:</span></span>  
   
-     **msbuild locbaml.csproj**  
+     <span data-ttu-id="062f3-144">**msbuild locbaml.csproj**</span><span class="sxs-lookup"><span data-stu-id="062f3-144">**msbuild locbaml.csproj**</span></span>  
   
-3.  Passare alla directory Bin\\Release per trovare il file eseguibile appena creato \(locbaml.exe\).  Esempio: C:\\LocBaml\\Bin\\Release\\locbaml.exe  
+3.  <span data-ttu-id="062f3-145">Passare alla directory Bin\Release per trovare il file eseguibile appena creato (locbaml.exe).</span><span class="sxs-lookup"><span data-stu-id="062f3-145">Go to the Bin\Release directory to find the newly created executable file (locbaml.exe).</span></span> <span data-ttu-id="062f3-146">Esempio: C:\LocBaml\Bin\Release\locbaml.exe</span><span class="sxs-lookup"><span data-stu-id="062f3-146">Example:C:\LocBaml\Bin\Release\locbaml.exe.</span></span>  
   
-4.  Le opzioni che è possibile specificare quando si esegue LocBaml sono le seguenti:  
+4.  <span data-ttu-id="062f3-147">Le opzioni che è possibile specificare quando si esegue LocBaml sono le seguenti:</span><span class="sxs-lookup"><span data-stu-id="062f3-147">The options that you can specify when you run LocBaml are as follows:</span></span>  
   
-    -   **parse** o **\-p:** analizza Baml, le risorse o i file [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] per generare un file CSV o TXT.  
+    -   <span data-ttu-id="062f3-148">**analizzare** o **-p:** analizza Baml, risorse, o [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] per generare un file con estensione csv o txt.</span><span class="sxs-lookup"><span data-stu-id="062f3-148">**parse** or **-p:** Parses Baml, resources, or [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] files to generate a .csv or .txt file.</span></span>  
   
-    -   **generate** o **\-g:** genera un file binario localizzato usando un file convertito.  
+    -   <span data-ttu-id="062f3-149">**generare** o **-g** genera un file binario localizzato utilizzando un file convertito.</span><span class="sxs-lookup"><span data-stu-id="062f3-149">**generate** or **-g:** Generates a localized binary file by using a translated file.</span></span>  
   
-    -   **out** o **\-o** \[*filedirectory*\]**:** nome del file di output.  
+    -   <span data-ttu-id="062f3-150">**out** o **-o** {*directoryfile*] **:** nome file di Output.</span><span class="sxs-lookup"><span data-stu-id="062f3-150">**out** or **-o** {*filedirectory*] **:** Output file name.</span></span>  
   
-    -   **culture** o **\-cul** \[*culture*\]**:** impostazioni locali degli assembly di output.  
+    -   <span data-ttu-id="062f3-151">**impostazioni cultura** o **- cul** {*delle impostazioni cultura*] **:** internazionali degli assembly di output.</span><span class="sxs-lookup"><span data-stu-id="062f3-151">**culture** or **-cul** {*culture*] **:** Locale of output assemblies.</span></span>  
   
-    -   **translation** o **\-trans** \[*translation.csv*\]**:** file convertito o localizzato.  
+    -   <span data-ttu-id="062f3-152">**conversione** o **- trans** {*Translation. csv*] **:** file tradotto o localizzato.</span><span class="sxs-lookup"><span data-stu-id="062f3-152">**translation** or **-trans** {*translation.csv*] **:** Translated or localized file.</span></span>  
   
-    -   **asmpath** o **\-asmpath:** \[*filedirectory*\]**:** se il codice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] contiene controlli personalizzati, è necessario fornire **asmpath** all'assembly dei controlli personalizzati.  
+    -   <span data-ttu-id="062f3-153">**asmpath** o **- asmpath:** {*directoryfile*] **:** se il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] codice contiene controlli personalizzati, è necessario specificare il  **asmpath** all'assembly del controllo personalizzato.</span><span class="sxs-lookup"><span data-stu-id="062f3-153">**asmpath** or **-asmpath:** {*filedirectory*] **:** If your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] code contains custom controls, you must supply the **asmpath** to the custom control assembly.</span></span>  
   
-    -   **nologo:** non visualizza loghi o informazioni sul copyright.  
+    -   <span data-ttu-id="062f3-154">**nologo:** non visualizza loghi o informazioni sul copyright.</span><span class="sxs-lookup"><span data-stu-id="062f3-154">**nologo:** Displays no logo or copyright information.</span></span>  
   
-    -   **verbose:** visualizza le informazioni sulla modalità dettagliata.  
+    -   <span data-ttu-id="062f3-155">**verbose:** visualizza le informazioni sulla modalità dettagliata.</span><span class="sxs-lookup"><span data-stu-id="062f3-155">**verbose:** Displays verbose mode information.</span></span>  
   
     > [!NOTE]
-    >  Se è necessario un elenco delle opzioni quando si esegue lo strumento, digitare **LocBaml.exe** e premere INVIO.  
+    >  <span data-ttu-id="062f3-156">Se è necessario un elenco delle opzioni quando si esegue lo strumento, digitare **LocBaml.exe** e premere INVIO.</span><span class="sxs-lookup"><span data-stu-id="062f3-156">If you need a list of the options when you are running the tool, type     **LocBaml.exe** and press ENTER.</span></span>  
   
 <a name="parse_dll"></a>   
-## Usare LocBaml per analizzare un file  
- Ora che è stato creato lo strumento LocBaml, è possibile usarlo per analizzare HelloApp.resources.dll ed estrarre il contenuto testuale che verrà localizzato.  
+## <a name="use-locbaml-to-parse-a-file"></a><span data-ttu-id="062f3-157">Usare LocBaml per analizzare un file</span><span class="sxs-lookup"><span data-stu-id="062f3-157">Use LocBaml to Parse a File</span></span>  
+ <span data-ttu-id="062f3-158">Ora che è stato creato lo strumento LocBaml, è possibile usarlo per analizzare HelloApp.resources.dll ed estrarre il contenuto testuale che verrà localizzato.</span><span class="sxs-lookup"><span data-stu-id="062f3-158">Now that you have created the LocBaml tool, you are ready to use it to parse HelloApp.resources.dll to extract the text content that will be localized.</span></span>  
   
-1.  Copiare LocBaml.exe nella cartella bin\\debug dell'applicazione in cui è stato creato l'assembly principale dell'applicazione.  
+1.  <span data-ttu-id="062f3-159">Copiare LocBaml.exe nella cartella bin\debug dell'applicazione in cui è stato creato l'assembly principale dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="062f3-159">Copy LocBaml.exe to your application's bin\debug folder, where the main application assembly was created.</span></span>  
   
-2.  Per analizzare il file dell'assembly satellite e archiviare l'output come file CSV, usare il comando seguente:  
+2.  <span data-ttu-id="062f3-160">Per analizzare il file dell'assembly satellite e archiviare l'output come file CSV, usare il comando seguente:</span><span class="sxs-lookup"><span data-stu-id="062f3-160">To parse the satellite assembly file and store the output as a .csv file, use the following command:</span></span>  
   
-     **LocBaml.exe \/parse HelloApp.resources.dll \/out:Hello.csv**  
+     <span data-ttu-id="062f3-161">**LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**</span><span class="sxs-lookup"><span data-stu-id="062f3-161">**LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**</span></span>  
   
     > [!NOTE]
-    >  Se il file di input, HelloApp.resources.dll, non è nella stessa directory di LocBaml.exe, spostare uno dei file in modo che entrambi siano nella stessa directory.  
+    >  <span data-ttu-id="062f3-162">Se il file di input, HelloApp.resources.dll, non è nella stessa directory di LocBaml.exe, spostare uno dei file in modo che entrambi siano nella stessa directory.</span><span class="sxs-lookup"><span data-stu-id="062f3-162">If the input file, HelloApp.resources.dll, is not in the same directory as LocBaml.exe move one of the files so that both files are in the same directory.</span></span>  
   
-3.  Quando si esegue LocBaml per analizzare i file, l'output è costituito da sette campi delimitati da virgole \(file CSV\) o da tabulazioni \(file TXT\).  Di seguito viene visualizzato il file CSV analizzato per HelloApp.resources.dll:  
+3.  <span data-ttu-id="062f3-163">Quando si esegue LocBaml per analizzare i file, l'output è costituito da sette campi delimitati da virgole (file CSV) o da tabulazioni (file TXT).</span><span class="sxs-lookup"><span data-stu-id="062f3-163">When you run LocBaml to parse files, the output consists of seven fields delimited by commas (.csv files) or tabs (.txt files).</span></span> <span data-ttu-id="062f3-164">Di seguito viene visualizzato il file CSV analizzato per HelloApp.resources.dll:</span><span class="sxs-lookup"><span data-stu-id="062f3-164">The following shows the parsed .csv file for the HelloApp.resources.dll:</span></span>
+
+   | |
+   |-|
+   |<span data-ttu-id="062f3-165">HelloApp.g.en-US.resources:window1.baml,Stack1:System.Windows.Controls.StackPanel.$Content,Ignore,FALSE, FALSE,,#Text1;#Text2;</span><span class="sxs-lookup"><span data-stu-id="062f3-165">HelloApp.g.en-US.resources:window1.baml,Stack1:System.Windows.Controls.StackPanel.$Content,Ignore,FALSE, FALSE,,#Text1;#Text2;</span></span>|
+   |<span data-ttu-id="062f3-166">HelloApp.g.en-US.resources:window1.baml,Text1:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Hello World</span><span class="sxs-lookup"><span data-stu-id="062f3-166">HelloApp.g.en-US.resources:window1.baml,Text1:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Hello World</span></span>|
+   |<span data-ttu-id="062f3-167">HelloApp.g.en-US.resources:window1.baml,Text2:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Goodbye World</span><span class="sxs-lookup"><span data-stu-id="062f3-167">HelloApp.g.en-US.resources:window1.baml,Text2:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Goodbye World</span></span>|
+
+   <span data-ttu-id="062f3-168">I campi di sette sono:</span><span class="sxs-lookup"><span data-stu-id="062f3-168">The seven fields are:</span></span>  
   
-    ||  
-    |-|  
-    |HelloApp.g.en\-US.resources:window1.baml,Stack1:System.Windows.Controls.StackPanel.$Content,Ignore,FALSE, FALSE,,\#Text1;\#Text2;|  
-    |HelloApp.g.en\-US.resources:window1.baml,Text1:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Hello World|  
-    |HelloApp.g.en\-US.resources:window1.baml,Text2:System.Windows.Controls.TextBlock.$Content,None,TRUE, TRUE,,Goodbye World|  
+   1.  <span data-ttu-id="062f3-169">**Nome BAML**.</span><span class="sxs-lookup"><span data-stu-id="062f3-169">**BAML Name**.</span></span> <span data-ttu-id="062f3-170">Il nome della risorsa BAML rispetto all'assembly satellite per la lingua di origine.</span><span class="sxs-lookup"><span data-stu-id="062f3-170">The name of the BAML resource with respect to the source language satellite assembly.</span></span>  
   
-     I campi di sette sono:  
+   2.  <span data-ttu-id="062f3-171">**Chiave di risorsa**.</span><span class="sxs-lookup"><span data-stu-id="062f3-171">**Resource Key**.</span></span> <span data-ttu-id="062f3-172">L'identificatore della risorsa localizzata.</span><span class="sxs-lookup"><span data-stu-id="062f3-172">The localized resource identifier.</span></span>  
   
-    1.  **Nome BAML**.  Il nome della risorsa BAML rispetto all'assembly satellite per la lingua di origine.  
+   3.  <span data-ttu-id="062f3-173">**Categoria**.</span><span class="sxs-lookup"><span data-stu-id="062f3-173">**Category**.</span></span> <span data-ttu-id="062f3-174">Tipo di valore.</span><span class="sxs-lookup"><span data-stu-id="062f3-174">The value type.</span></span> <span data-ttu-id="062f3-175">Vedere [commenti e gli attributi di localizzazione](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span><span class="sxs-lookup"><span data-stu-id="062f3-175">See [Localization Attributes and Comments](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span></span>  
   
-    2.  **Chiave di risorsa**.  L'identificatore della risorsa localizzata.  
+   4.  <span data-ttu-id="062f3-176">**Leggibilità**.</span><span class="sxs-lookup"><span data-stu-id="062f3-176">**Readability**.</span></span> <span data-ttu-id="062f3-177">Se il valore può essere letto da un localizzatore.</span><span class="sxs-lookup"><span data-stu-id="062f3-177">Whether the value can be read by a localizer.</span></span> <span data-ttu-id="062f3-178">Vedere [commenti e gli attributi di localizzazione](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span><span class="sxs-lookup"><span data-stu-id="062f3-178">See [Localization Attributes and Comments](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span></span>  
   
-    3.  **Categoria**.  Tipo di valore.  Vedere [Attributi e commenti di localizzazione](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   5.  <span data-ttu-id="062f3-179">**Modificabilità**.</span><span class="sxs-lookup"><span data-stu-id="062f3-179">**Modifiability**.</span></span> <span data-ttu-id="062f3-180">Se il valore può essere modificato da un localizzatore.</span><span class="sxs-lookup"><span data-stu-id="062f3-180">Whether the value can be modified by a localizer.</span></span> <span data-ttu-id="062f3-181">Vedere [commenti e gli attributi di localizzazione](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span><span class="sxs-lookup"><span data-stu-id="062f3-181">See [Localization Attributes and Comments](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span></span>  
   
-    4.  **Leggibilità**.  Se il valore può essere letto da un localizzatore.  Vedere [Attributi e commenti di localizzazione](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   6.  <span data-ttu-id="062f3-182">**Commenti**.</span><span class="sxs-lookup"><span data-stu-id="062f3-182">**Comments**.</span></span> <span data-ttu-id="062f3-183">Descrizione aggiuntiva del valore per determinarne la modalità di localizzazione.</span><span class="sxs-lookup"><span data-stu-id="062f3-183">Additional description of the value to help determine how a value is localized.</span></span> <span data-ttu-id="062f3-184">Vedere [commenti e gli attributi di localizzazione](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span><span class="sxs-lookup"><span data-stu-id="062f3-184">See [Localization Attributes and Comments](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).</span></span>  
   
-    5.  **Modificabilità**.  Se il valore può essere modificato da un localizzatore.  Vedere [Attributi e commenti di localizzazione](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   7.  <span data-ttu-id="062f3-185">**Valore**.</span><span class="sxs-lookup"><span data-stu-id="062f3-185">**Value**.</span></span> <span data-ttu-id="062f3-186">Il valore di testo da convertire nelle impostazioni cultura desiderate.</span><span class="sxs-lookup"><span data-stu-id="062f3-186">The text value to translate to the desired culture.</span></span>  
   
-    6.  **Commenti**.  Descrizione aggiuntiva del valore per determinarne la modalità di localizzazione.  Vedere [Attributi e commenti di localizzazione](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   <span data-ttu-id="062f3-187">La tabella seguente mostra come viene eseguito il mapping di questi campi ai valori delimitati del file CSV:</span><span class="sxs-lookup"><span data-stu-id="062f3-187">The following table shows how these fields map to the delimited values of the .csv file:</span></span>  
   
-    7.  **Valore**.  Il valore di testo da convertire nelle impostazioni cultura desiderate.  
+   |<span data-ttu-id="062f3-188">Nome BAML</span><span class="sxs-lookup"><span data-stu-id="062f3-188">BAML name</span></span>|<span data-ttu-id="062f3-189">Chiave di risorsa</span><span class="sxs-lookup"><span data-stu-id="062f3-189">Resource key</span></span>|<span data-ttu-id="062f3-190">Categoria</span><span class="sxs-lookup"><span data-stu-id="062f3-190">Category</span></span>|<span data-ttu-id="062f3-191">Leggibilità</span><span class="sxs-lookup"><span data-stu-id="062f3-191">Readability</span></span>|<span data-ttu-id="062f3-192">Modificabilità</span><span class="sxs-lookup"><span data-stu-id="062f3-192">Modifiability</span></span>|<span data-ttu-id="062f3-193">Commenti</span><span class="sxs-lookup"><span data-stu-id="062f3-193">Comments</span></span>|<span data-ttu-id="062f3-194">Valore</span><span class="sxs-lookup"><span data-stu-id="062f3-194">Value</span></span>|  
+   |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
+   |<span data-ttu-id="062f3-195">HelloApp.g.en-US.resources:window1.baml</span><span class="sxs-lookup"><span data-stu-id="062f3-195">HelloApp.g.en-US.resources:window1.baml</span></span>|<span data-ttu-id="062f3-196">Stack1:System.Windows.Controls.StackPanel.$Content</span><span class="sxs-lookup"><span data-stu-id="062f3-196">Stack1:System.Windows.Controls.StackPanel.$Content</span></span>|<span data-ttu-id="062f3-197">Ignora</span><span class="sxs-lookup"><span data-stu-id="062f3-197">Ignore</span></span>|<span data-ttu-id="062f3-198">FALSE</span><span class="sxs-lookup"><span data-stu-id="062f3-198">FALSE</span></span>|<span data-ttu-id="062f3-199">FALSE</span><span class="sxs-lookup"><span data-stu-id="062f3-199">FALSE</span></span>||<span data-ttu-id="062f3-200">#Text1;#Text2</span><span class="sxs-lookup"><span data-stu-id="062f3-200">#Text1;#Text2</span></span>|
+   |<span data-ttu-id="062f3-201">HelloApp.g.en-US.resources:window1.baml</span><span class="sxs-lookup"><span data-stu-id="062f3-201">HelloApp.g.en-US.resources:window1.baml</span></span>|<span data-ttu-id="062f3-202">Text1:System.Windows.Controls.TextBlock.$Content</span><span class="sxs-lookup"><span data-stu-id="062f3-202">Text1:System.Windows.Controls.TextBlock.$Content</span></span>|<span data-ttu-id="062f3-203">nessuno</span><span class="sxs-lookup"><span data-stu-id="062f3-203">None</span></span>|<span data-ttu-id="062f3-204">TRUE</span><span class="sxs-lookup"><span data-stu-id="062f3-204">TRUE</span></span>|<span data-ttu-id="062f3-205">TRUE</span><span class="sxs-lookup"><span data-stu-id="062f3-205">TRUE</span></span>||<span data-ttu-id="062f3-206">Hello World</span><span class="sxs-lookup"><span data-stu-id="062f3-206">Hello World</span></span>|
+   |<span data-ttu-id="062f3-207">HelloApp.g.en-US.resources:window1.baml</span><span class="sxs-lookup"><span data-stu-id="062f3-207">HelloApp.g.en-US.resources:window1.baml</span></span>|<span data-ttu-id="062f3-208">Text2:System.Windows.Controls.TextBlock.$Content</span><span class="sxs-lookup"><span data-stu-id="062f3-208">Text2:System.Windows.Controls.TextBlock.$Content</span></span>|<span data-ttu-id="062f3-209">nessuno</span><span class="sxs-lookup"><span data-stu-id="062f3-209">None</span></span>|<span data-ttu-id="062f3-210">TRUE</span><span class="sxs-lookup"><span data-stu-id="062f3-210">TRUE</span></span>|<span data-ttu-id="062f3-211">TRUE</span><span class="sxs-lookup"><span data-stu-id="062f3-211">TRUE</span></span>||<span data-ttu-id="062f3-212">Goodbye World</span><span class="sxs-lookup"><span data-stu-id="062f3-212">Goodbye World</span></span>|
   
-     La tabella seguente mostra come viene eseguito il mapping di questi campi ai valori delimitati del file CSV:  
+   <span data-ttu-id="062f3-213">Si noti che tutti i valori per il **commenti** campo non contengono valori; se un campo non dispone di un valore, è vuoto.</span><span class="sxs-lookup"><span data-stu-id="062f3-213">Notice that all the values for the **Comments** field contain no values; if a field doesn't have a value, it is empty.</span></span> <span data-ttu-id="062f3-214">Si noti inoltre che l'elemento nella prima riga non è né leggibile né modificabile e presenta "Ignora" come relativo **categoria** valore, che indica che il valore non è localizzabile.</span><span class="sxs-lookup"><span data-stu-id="062f3-214">Also notice that the item in the first row is neither readable nor modifiable, and has "Ignore" as its **Category** value, all of which indicates that the value is not localizable.</span></span>  
   
-    |Nome BAML|Chiave di risorsa|Categoria|Leggibilità|Modificabilità|Commenti|Valore|  
-    |---------------|-----------------------|---------------|-----------------|--------------------|--------------|------------|  
-    |HelloApp.g.en\-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignora|FALSE|FALSE||\#Text1;\#Text2|  
-    |HelloApp.g.en\-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|nessuno|TRUE|TRUE||Hello World|  
-    |HelloApp.g.en\-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|nessuno|TRUE|TRUE||Goodbye World|  
-  
-     Tutti i valori nel campo **Commenti** non contengono valori. Se un campo non contiene valori, è vuoto.  Inoltre, l'elemento nella prima riga non è né leggibile né modificabile e ha "Ignora" come valore del campo **Categoria**, il che indica che il valore non è localizzabile.  
-  
-4.  Per facilitare l'individuazione degli elementi localizzabili nei file analizzati, in particolare nei file di grandi dimensioni, è possibile ordinare o filtrare gli elementi per **Categoria**, **Leggibilità** e **Modificabilità**.  Ad esempio, è possibile escludere i valori non leggibili e non modificabili.  
+4.  <span data-ttu-id="062f3-215">Per facilitare l'individuazione di elementi localizzabili nei file analizzati, in particolare nei file di grandi dimensioni, è possibile ordinare o filtrare gli elementi per **categoria**, **leggibilità**, e **modificabilità**.</span><span class="sxs-lookup"><span data-stu-id="062f3-215">To facilitate discovery of localizable items in parsed files, particularly in large files, you can sort or filter the items by **Category**, **Readability**, and **Modifiability**.</span></span> <span data-ttu-id="062f3-216">Ad esempio, è possibile escludere i valori non leggibili e non modificabili.</span><span class="sxs-lookup"><span data-stu-id="062f3-216">For example, you can filter out unreadable and unmodifiable values.</span></span>  
   
 <a name="translate_loc_content"></a>   
-## Convertire il contenuto localizzabile  
- Usare gli strumenti disponibili per convertire il contenuto estratto.  Un metodo efficace consiste nello scrivere le risorse in un file CSV e visualizzarle in [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], apportando le modifiche alla conversione nell'ultima colonna \(valore\).  
+## <a name="translate-the-localizable-content"></a><span data-ttu-id="062f3-217">Convertire il contenuto localizzabile</span><span class="sxs-lookup"><span data-stu-id="062f3-217">Translate the Localizable Content</span></span>  
+ <span data-ttu-id="062f3-218">Usare gli strumenti disponibili per convertire il contenuto estratto.</span><span class="sxs-lookup"><span data-stu-id="062f3-218">Use any tool that you have available to translate the extracted content.</span></span> <span data-ttu-id="062f3-219">Un metodo efficace consiste nello scrivere le risorse in un file CSV e visualizzarle in [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], apportando le modifiche alla conversione nell'ultima colonna (valore).</span><span class="sxs-lookup"><span data-stu-id="062f3-219">A good way to do this is to write the resources to a .csv file and view them in [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)], making translation changes to the last column (value).</span></span>  
   
 <a name="merge_translations"></a>   
-## Usare LocBaml per generare un nuovo file resources.dll  
- Il contenuto identificato analizzando HelloApp.resources.dll con LocBaml è stato convertito e deve essere reinserito nell'applicazione originale.  Usare l'opzione **generate** o **\-g** per generare un nuovo file resources.dll.  
+## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a><span data-ttu-id="062f3-220">Usare LocBaml per generare un nuovo file resources.dll</span><span class="sxs-lookup"><span data-stu-id="062f3-220">Use LocBaml to Generate a New .resources.dll File</span></span>  
+ <span data-ttu-id="062f3-221">Il contenuto identificato analizzando HelloApp.resources.dll con LocBaml è stato convertito e deve essere reinserito nell'applicazione originale.</span><span class="sxs-lookup"><span data-stu-id="062f3-221">The content that was identified by parsing HelloApp.resources.dll with LocBaml has been translated and must be merged back into the original application.</span></span> <span data-ttu-id="062f3-222">Utilizzare il **generare** o **-g** opzione per generare un nuovo. i file resources.</span><span class="sxs-lookup"><span data-stu-id="062f3-222">Use the **generate** or **-g** option to generate a new .resources.dll file.</span></span>  
   
-1.  Usare la sintassi seguente per generare un nuovo file HelloApp.resources.dll.  Contrassegnare le impostazioni cultura come en\-US \(\/cul:en\-US\).  
+1.  <span data-ttu-id="062f3-223">Usare la sintassi seguente per generare un nuovo file HelloApp.resources.dll.</span><span class="sxs-lookup"><span data-stu-id="062f3-223">Use the following syntax to generate a new HelloApp.resources.dll file.</span></span> <span data-ttu-id="062f3-224">Contrassegnare le impostazioni cultura come en-US (/cul:en-US).</span><span class="sxs-lookup"><span data-stu-id="062f3-224">Mark the culture as en-US (/cul:en-US).</span></span>  
   
-     **LocBaml.exe \/generate HelloApp.resources.dll \/trans:Hello.csv \/out:c:\\ \/cul:en\-US**  
+     <span data-ttu-id="062f3-225">**LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**</span><span class="sxs-lookup"><span data-stu-id="062f3-225">**LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**</span></span>  
   
     > [!NOTE]
-    >  Se il file di input Hello.csv non è presente nella stessa directory del file eseguibile LocBaml.exe, spostare uno dei file in modo che entrambi siano nella stessa directory.  
+    >  <span data-ttu-id="062f3-226">Se il file di input Hello.csv non è presente nella stessa directory del file eseguibile LocBaml.exe, spostare uno dei file in modo che entrambi siano nella stessa directory.</span><span class="sxs-lookup"><span data-stu-id="062f3-226">If the input file, Hello.csv, is not in the same directory as the executable, LocBaml.exe, move one of the files so that both files are in the same directory.</span></span>  
   
-2.  Sostituire il file HelloApp.resources.dll precedente nella directory C:\\HelloApp\\Bin\\Debug\\en\-US\\HelloApp.resources.dll con il file HelloApp.resources.dll appena creato.  
+2.  <span data-ttu-id="062f3-227">Sostituire il file HelloApp.resources.dll precedente nella directory C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll con il file HelloApp.resources.dll appena creato.</span><span class="sxs-lookup"><span data-stu-id="062f3-227">Replace the old HelloApp.resources.dll file in the C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll directory with your newly created HelloApp.resources.dll file.</span></span>  
   
-3.  Ora "Hello World" e "Goodbye World" possono essere convertiti nell'applicazione.  
+3.  <span data-ttu-id="062f3-228">Ora "Hello World" e "Goodbye World" possono essere convertiti nell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="062f3-228">"Hello World" and "Goodbye World" should now be translated in your application.</span></span>  
   
-4.  Per eseguire la conversione in una lingua diversa, usare le impostazioni cultura della lingua in cui si sta eseguendo la conversione.  L'esempio seguente mostra come eseguire la conversione in lingua francese canadese:  
+4.  <span data-ttu-id="062f3-229">Per eseguire la conversione in una lingua diversa, usare le impostazioni cultura della lingua in cui si sta eseguendo la conversione.</span><span class="sxs-lookup"><span data-stu-id="062f3-229">To translate to a different culture, use the culture of the language that you are translating to.</span></span> <span data-ttu-id="062f3-230">L'esempio seguente mostra come eseguire la conversione in lingua francese canadese:</span><span class="sxs-lookup"><span data-stu-id="062f3-230">The following example shows how to translate to French-Canadian:</span></span>  
   
-     **LocBaml.exe \/generate HelloApp.resources.dll \/trans:Hellofr\-CA.csv \/out:c:\\ \/cul:fr\-CA**  
+     <span data-ttu-id="062f3-231">**LocBaml.exe genera HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c: \ /cul:fr-autorità di certificazione**</span><span class="sxs-lookup"><span data-stu-id="062f3-231">**LocBaml.exe /generate HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c:\ /cul:fr-CA**</span></span>  
   
-5.  Nello stesso assembly dell'assembly principale dell'applicazione, creare una nuova cartella specifica per le impostazioni cultura dove ospitare il nuovo assembly satellite.  Per la lingua francese canadese, la cartella sarà fr\-CA.  
+5.  <span data-ttu-id="062f3-232">Nello stesso assembly dell'assembly principale dell'applicazione, creare una nuova cartella specifica per le impostazioni cultura dove ospitare il nuovo assembly satellite.</span><span class="sxs-lookup"><span data-stu-id="062f3-232">In the same assembly as the main application assembly, create a new culture-specific folder to house the new satellite assembly.</span></span> <span data-ttu-id="062f3-233">Per la lingua francese canadese, la cartella sarà fr-CA.</span><span class="sxs-lookup"><span data-stu-id="062f3-233">For French-Canadian, the folder would be fr-CA.</span></span>  
   
-6.  Copiare l'assembly satellite generato nella nuova cartella.  
+6.  <span data-ttu-id="062f3-234">Copiare l'assembly satellite generato nella nuova cartella.</span><span class="sxs-lookup"><span data-stu-id="062f3-234">Copy the generated satellite assembly to the new folder.</span></span>  
   
-7.  Per testare il nuovo assembly satellite, è necessario modificare le impostazioni cultura con cui verrà eseguita l'applicazione.  Questa operazione può essere eseguita in due modi:  
+7.  <span data-ttu-id="062f3-235">Per testare il nuovo assembly satellite, è necessario modificare le impostazioni cultura con cui verrà eseguita l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="062f3-235">To test the new satellite assembly, you need to change the culture under which your application will run.</span></span> <span data-ttu-id="062f3-236">Questa operazione può essere eseguita in due modi:</span><span class="sxs-lookup"><span data-stu-id="062f3-236">You can do this in one of two ways:</span></span>  
   
-    -   Modificare le impostazioni internazionali del sistema operativo \(**Start** &#124; **Pannello di controllo** &#124; **Opzioni internazionali e della lingua**\).  
+    -   <span data-ttu-id="062f3-237">Modificare le impostazioni internazionali del sistema operativo (**avviare** &#124; **Pannello di controllo** &#124; **Internazionali e della lingua**).</span><span class="sxs-lookup"><span data-stu-id="062f3-237">Change your operating system's regional settings (**Start** &#124; **Control Panel** &#124; **Regional and Language Options**).</span></span>  
   
-    -   Aggiungere il codice seguente al file App.xaml.cs nell'applicazione:  
+    -   <span data-ttu-id="062f3-238">Aggiungere il codice seguente al file App.xaml.cs nell'applicazione:</span><span class="sxs-lookup"><span data-stu-id="062f3-238">In your application, add the following code to App.xaml.cs:</span></span>  
   
-         [!code-xml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]  
-  
-         [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
-         [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
+   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
+   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
+   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
   
 <a name="Some_Tips_for_Using_LocBaml"></a>   
-## Alcuni suggerimenti per l'uso di LocBaml  
+## <a name="some-tips-for-using-locbaml"></a><span data-ttu-id="062f3-239">Alcuni suggerimenti per l'uso di LocBaml</span><span class="sxs-lookup"><span data-stu-id="062f3-239">Some Tips for Using LocBaml</span></span>  
   
--   Tutti gli assembly dipendenti che definiscono i controlli personalizzati devono essere copiati nella directory locale di LocBaml o installati in Global Assembly Cache.  È un passaggio necessario perché l'API di localizzazione deve avere accesso agli assembly dipendenti quando legge [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].  
+-   <span data-ttu-id="062f3-240">Tutti gli assembly dipendenti che definiscono i controlli personalizzati devono essere copiati nella directory locale di LocBaml o installati in Global Assembly Cache.</span><span class="sxs-lookup"><span data-stu-id="062f3-240">All dependent assemblies that define custom controls must be copied into the local directory of LocBaml or installed into the GAC.</span></span> <span data-ttu-id="062f3-241">È un passaggio necessario perché l'API di localizzazione deve avere accesso agli assembly dipendenti quando legge [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="062f3-241">This is necessary because the localization API must have access to the dependent assemblies when it reads the [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)].</span></span>  
   
--   Se l'assembly principale è firmato, anche la DLL di risorse generata deve essere firmata per poter essere caricata.  
+-   <span data-ttu-id="062f3-242">Se l'assembly principale è firmato, anche la DLL di risorse generata deve essere firmata per poter essere caricata.</span><span class="sxs-lookup"><span data-stu-id="062f3-242">If the main assembly is signed, the generated resource DLL must also be signed in order for it to be loaded.</span></span>  
   
--   La versione della DLL di risorsa localizzata deve essere sincronizzata con l'assembly principale.  
+-   <span data-ttu-id="062f3-243">La versione della DLL di risorsa localizzata deve essere sincronizzata con l'assembly principale.</span><span class="sxs-lookup"><span data-stu-id="062f3-243">The version of the localized resource DLL needs to be synchronized with the main assembly.</span></span>  
   
 <a name="Whats_Next"></a>   
-## Argomenti successivi  
- A questo punto dovrebbero essere state acquisite le conoscenze di base sull'uso dello strumento LocBaml.  Si dovrebbe essere in grado di creare un file che contiene UID.  Usando lo strumento LocBaml, si dovrebbe essere in grado di analizzare un file per estrarre il contenuto localizzabile e, dopo la conversione del contenuto, generare un file resources.dll che inserisce il contenuto convertito.  Questo argomento non include tutti i dettagli, ma offre le informazioni necessarie per usare LocBaml per la localizzazione delle applicazioni.  
+## <a name="whats-next"></a><span data-ttu-id="062f3-244">Argomenti successivi</span><span class="sxs-lookup"><span data-stu-id="062f3-244">What's Next</span></span>  
+ <span data-ttu-id="062f3-245">A questo punto dovrebbero essere state acquisite le conoscenze di base sull'uso dello strumento LocBaml.</span><span class="sxs-lookup"><span data-stu-id="062f3-245">You should now have a basic understanding of how to use the LocBaml tool.</span></span>  <span data-ttu-id="062f3-246">Si dovrebbe essere in grado di creare un file che contiene UID.</span><span class="sxs-lookup"><span data-stu-id="062f3-246">You should be able to make a file that contains Uids.</span></span> <span data-ttu-id="062f3-247">Usando lo strumento LocBaml, si dovrebbe essere in grado di analizzare un file per estrarre il contenuto localizzabile e, dopo la conversione del contenuto, generare un file resources.dll che inserisce il contenuto convertito.</span><span class="sxs-lookup"><span data-stu-id="062f3-247">By using the LocBaml tool, you should be able to parse a file to extract the localizable content, and after the content is translated, you should be able to generate a .resources.dll file that merges the translated content.</span></span> <span data-ttu-id="062f3-248">Questo argomento non include tutti i dettagli, ma offre le informazioni necessarie per usare LocBaml per la localizzazione delle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="062f3-248">This topic does not include every possible detail, but you now have the knowledge necessary to use LocBaml for localizing your applications.</span></span>  
   
-## Vedere anche  
- [Globalizzazione per WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)   
- [Cenni preliminari sull'utilizzo del layout automatico](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+## <a name="see-also"></a><span data-ttu-id="062f3-249">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="062f3-249">See Also</span></span>  
+ [<span data-ttu-id="062f3-250">Globalizzazione per WPF</span><span class="sxs-lookup"><span data-stu-id="062f3-250">Globalization for WPF</span></span>](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
+ [<span data-ttu-id="062f3-251">Cenni preliminari sull'utilizzo del layout automatico</span><span class="sxs-lookup"><span data-stu-id="062f3-251">Use Automatic Layout Overview</span></span>](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

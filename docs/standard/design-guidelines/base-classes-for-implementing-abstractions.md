@@ -1,48 +1,46 @@
 ---
-title: "Classi di base per l&#39;implementazione di astrazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "astrazioni [.NET Framework]"
-  - "classi base, astrazioni"
+title: Classi base per l'implementazione di astrazioni
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- abstractions [.NET Framework]
+- base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6c8cd779dba0e7ce559e29af7b16bf04b3d0dc2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Classi di base per l&#39;implementazione di astrazioni
-In teoria, una classe diventa una classe di base quando un'altra classe è derivata da esso. Ai fini di questa sezione, tuttavia, una classe di base è una classe progettata principalmente per fornire un'astrazione comune o per altre classi di riutilizzare parte implementazione tuttavia l'ereditarietà predefinita. Classi di base si trovano in genere al centro delle gerarchie di ereditarietà, tra un'astrazione alla radice di una gerarchia e diverse implementazioni personalizzate nella parte inferiore.  
+# <a name="base-classes-for-implementing-abstractions"></a><span data-ttu-id="a552f-102">Classi base per l'implementazione di astrazioni</span><span class="sxs-lookup"><span data-stu-id="a552f-102">Base Classes for Implementing Abstractions</span></span>
+<span data-ttu-id="a552f-103">In teoria, una classe diventa una classe di base quando un'altra classe è derivata da esso.</span><span class="sxs-lookup"><span data-stu-id="a552f-103">Strictly speaking, a class becomes a base class when another class is derived from it.</span></span> <span data-ttu-id="a552f-104">Ai fini di questa sezione, tuttavia, una classe di base è una classe progettata principalmente per fornire un'astrazione comune o per le altre classi di riutilizzare alcuni implementazione predefinita tramite ereditarietà.</span><span class="sxs-lookup"><span data-stu-id="a552f-104">For the purpose of this section, however, a base class is a class designed mainly to provide a common abstraction or for other classes to reuse some default implementation though inheritance.</span></span> <span data-ttu-id="a552f-105">Classi di base si trovano in genere all'interno di gerarchie di ereditarietà, tra un'astrazione alla radice di una gerarchia e diverse implementazioni personalizzate nella parte inferiore.</span><span class="sxs-lookup"><span data-stu-id="a552f-105">Base classes usually sit in the middle of inheritance hierarchies, between an abstraction at the root of a hierarchy and several custom implementations at the bottom.</span></span>  
   
- Fungono da supporti di implementazione per l'implementazione di astrazioni. Ad esempio, una delle astrazioni del Framework per le raccolte ordinate di elementi è il <xref:System.Collections.Generic.IList%601> interfaccia. Implementazione di <xref:System.Collections.Generic.IList%601> non è semplice, e pertanto il Framework fornisce diverse classi di base, ad esempio <xref:System.Collections.ObjectModel.Collection%601> e <xref:System.Collections.ObjectModel.KeyedCollection%602>, che fungono da helper per l'implementazione di raccolte personalizzate.  
+ <span data-ttu-id="a552f-106">Fungono helper di implementazione per l'implementazione di astrazioni.</span><span class="sxs-lookup"><span data-stu-id="a552f-106">They serve as implementation helpers for implementing abstractions.</span></span> <span data-ttu-id="a552f-107">Ad esempio, una delle astrazioni del Framework per le raccolte ordinate di elementi è il <xref:System.Collections.Generic.IList%601> interfaccia.</span><span class="sxs-lookup"><span data-stu-id="a552f-107">For example, one of the Framework’s abstractions for ordered collections of items is the <xref:System.Collections.Generic.IList%601> interface.</span></span> <span data-ttu-id="a552f-108">Implementazione di <xref:System.Collections.Generic.IList%601> non è semplice, e pertanto il Framework fornisce diverse classi di base, ad esempio <xref:System.Collections.ObjectModel.Collection%601> e <xref:System.Collections.ObjectModel.KeyedCollection%602>, che fungono da helper per l'implementazione di raccolte personalizzate.</span><span class="sxs-lookup"><span data-stu-id="a552f-108">Implementing <xref:System.Collections.Generic.IList%601> is not trivial, and therefore the Framework provides several base classes, such as <xref:System.Collections.ObjectModel.Collection%601> and <xref:System.Collections.ObjectModel.KeyedCollection%602>, which serve as helpers for implementing custom collections.</span></span>  
   
- Classi di base in genere non sono adatte a fungere da astrazioni autonomamente, perché tendono a contenere una quantità eccessiva di implementazione. Ad esempio, la `Collection<T>` classe di base contiene un numero elevato di implementazione legato al fatto che implementa il metodo non generico `IList` interfaccia \(per la migliore integrazione con le raccolte non generiche\) e al fatto che è una raccolta di elementi archiviati nella memoria in uno dei relativi campi.  
+ <span data-ttu-id="a552f-109">Classi di base in genere non sono adatte a fungere da astrazioni di per sé, perché tendono a contenere una quantità eccessiva di implementazione.</span><span class="sxs-lookup"><span data-stu-id="a552f-109">Base classes are usually not suited to serve as abstractions by themselves, because they tend to contain too much implementation.</span></span> <span data-ttu-id="a552f-110">Ad esempio, il `Collection<T>` classe di base contiene un numero elevato di implementazione relativi al fatto che implementa il metodo non generico `IList` interfaccia (per migliore integrazione con le raccolte non generiche) e al fatto che è una raccolta di elementi archiviati in memoria in uno dei relativi campi.</span><span class="sxs-lookup"><span data-stu-id="a552f-110">For example, the `Collection<T>` base class contains lots of implementation related to the fact that it implements the nongeneric `IList` interface (to integrate better with nongeneric collections) and to the fact that it is a collection of items stored in memory in one of its fields.</span></span>  
   
- Come illustrato in precedenza, classi base possono fornire una Guida in linea preziosissima per gli utenti che desiderano implementare astrazioni, ma allo stesso tempo possono essere un ostacolo significativo. Aggiungono della superficie di attacco e aumentare la profondità delle gerarchie di ereditarietà e così concettualmente complicare il framework. Di conseguenza, le classi di base da utilizzare solo se forniscono valore aggiunto significativo agli utenti di framework. Essi devono essere evitate se forniscono valore solo per gli implementatori di framework, in cui è necessario considerare fortemente case delega a un'implementazione interna anziché ereditarietà da una classe base.  
+ <span data-ttu-id="a552f-111">Come illustrato in precedenza, le classi di base possono fornire Guida essenziale per gli utenti che devono implementare astrazioni, ma nello stesso momento possono essere significative passività.</span><span class="sxs-lookup"><span data-stu-id="a552f-111">As previously discussed, base classes can provide invaluable help for users who need to implement abstractions, but at the same time they can be a significant liability.</span></span> <span data-ttu-id="a552f-112">Aggiungono della superficie di attacco e aumentare la profondità delle gerarchie di ereditarietà e pertanto concettualmente complicare il framework.</span><span class="sxs-lookup"><span data-stu-id="a552f-112">They add surface area and increase the depth of inheritance hierarchies and so conceptually complicate the framework.</span></span> <span data-ttu-id="a552f-113">Pertanto, le classi di base devono essere utilizzate solo se un valore significativo forniscono agli utenti di framework.</span><span class="sxs-lookup"><span data-stu-id="a552f-113">Therefore, base classes should be used only if they provide significant value to the users of the framework.</span></span> <span data-ttu-id="a552f-114">Essi deve essere evitate se forniscono valore solo per i responsabili dell'implementazione di framework, in cui è necessario considerare fortemente case delega a un'implementazione interna invece dell'ereditarietà da una classe base.</span><span class="sxs-lookup"><span data-stu-id="a552f-114">They should be avoided if they provide value only to the implementers of the framework, in which case delegation to an internal implementation instead of inheritance from a base class should be strongly considered.</span></span>  
   
- **✓ PROVARE** le classi di base che astratta anche se non contengono alcun membro astratto. Ovviamente questo comunica agli utenti che la classe è progettata esclusivamente per essere ereditata.  
+ <span data-ttu-id="a552f-115">**Provare a ✓** le classi di base che astratta anche se non contengono alcun membro astratto.</span><span class="sxs-lookup"><span data-stu-id="a552f-115">**✓ CONSIDER** making base classes abstract even if they don’t contain any abstract members.</span></span> <span data-ttu-id="a552f-116">Questo chiaramente comunica agli utenti che la classe è progettata esclusivamente per essere ereditata.</span><span class="sxs-lookup"><span data-stu-id="a552f-116">This clearly communicates to the users that the class is designed solely to be inherited from.</span></span>  
   
- **✓ PROVARE** collocare le classi base in uno spazio dei nomi separato dai tipi di scenario principale. Per definizione, le classi di base sono destinate a scenari di estensibilità avanzata e pertanto non sono interessanti per la maggior parte degli utenti.  
+ <span data-ttu-id="a552f-117">**Provare a ✓** collocare le classi base in uno spazio dei nomi separato dai tipi di scenario principale.</span><span class="sxs-lookup"><span data-stu-id="a552f-117">**✓ CONSIDER** placing base classes in a separate namespace from the mainline scenario types.</span></span> <span data-ttu-id="a552f-118">Per definizione, le classi di base sono destinate a scenari di estensibilità avanzate e pertanto non sono interessanti per la maggior parte degli utenti.</span><span class="sxs-lookup"><span data-stu-id="a552f-118">By definition, base classes are intended for advanced extensibility scenarios and therefore are not interesting to the majority of users.</span></span>  
   
- **X evitare** denominazione delle classi di base con un suffisso "Base" se la classe è destinata all'utilizzo delle API pubbliche.  
+ <span data-ttu-id="a552f-119">**X evitare** denominazione delle classi di base con un suffisso "Base" se la classe è destinata all'utilizzo nelle API pubbliche.</span><span class="sxs-lookup"><span data-stu-id="a552f-119">**X AVOID** naming base classes with a "Base" suffix if the class is intended for use in public APIs.</span></span>  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*  
+ <span data-ttu-id="a552f-120">*Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="a552f-120">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Ristampato con l'autorizzazione di Pearson formazione, Inc. da [Framework Design Guidelines: convenzioni idiomi e modelli per librerie .NET riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicati il 22 ottobre 2008 da Addison\-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ <span data-ttu-id="a552f-121">*State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="a552f-121">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vedere anche  
- [Linee guida](../../../docs/standard/design-guidelines/index.md)   
- [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a><span data-ttu-id="a552f-122">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a552f-122">See Also</span></span>  
+ [<span data-ttu-id="a552f-123">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="a552f-123">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="a552f-124">Progettazione di estendibilità</span><span class="sxs-lookup"><span data-stu-id="a552f-124">Designing for Extensibility</span></span>](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

@@ -1,176 +1,221 @@
 ---
-title: 'Procedura dettagliata: Incorporamento dei tipi da assembly in Visual Studio (Visual Basic) gestiti | Documenti di Microsoft'
+title: 'Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: adc58e081cd9b874a841d84b11d92cbffb6ba6b8
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4411b40d8ffbdf2b74c49152db675286d91b43ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)
-Se si incorporano informazioni sul tipo da un assembly gestito sicuro, è possibile un'associazione debole dei tipi in un'applicazione per ottenere l'indipendenza dalla versione. Vale a dire, il programma può essere scritto per utilizzare tipi di più versioni di una libreria gestita senza dover ricompilare per ogni versione.  
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a><span data-ttu-id="c2895-102">Procedura dettagliata: Incorporamento dei tipi da assembly gestiti in Visual Studio (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c2895-102">Walkthrough: Embedding Types from Managed Assemblies in Visual Studio (Visual Basic)</span></span>
+<span data-ttu-id="c2895-103">Se si incorporano informazioni sul tipo da un assembly gestito con nome sicuro, è possibile effettuare un accoppiamento debole dei tipi in un'applicazione per ottenere l'indipendenza dalla versione.</span><span class="sxs-lookup"><span data-stu-id="c2895-103">If you embed type information from a strong-named managed assembly, you can loosely couple types in an application to achieve version independence.</span></span> <span data-ttu-id="c2895-104">Ovvero, il programma può essere scritto in modo da usare tipi di più versioni di una libreria gestita senza dover essere ricompilato per ogni versione.</span><span class="sxs-lookup"><span data-stu-id="c2895-104">That is, your program can be written to use types from multiple versions of a managed library without having to be recompiled for each version.</span></span>  
   
- L'incorporamento dei tipi viene spesso utilizzato con l'interoperabilità COM, ad esempio un'applicazione che utilizza gli oggetti di automazione di Microsoft Office. Incorporamento di informazioni sul tipo consente la stessa build di un programma per l'utilizzo delle diverse versioni di Microsoft Office in computer diversi. Tuttavia, è possibile utilizzare anche incorporamento dei tipi con una soluzione completamente gestita.  
+ <span data-ttu-id="c2895-105">L'incorporamento dei tipi viene spesso usato con l'interoperabilità COM, ad esempio nel caso di un'applicazione che usa gli oggetti di automazione di Microsoft Office.</span><span class="sxs-lookup"><span data-stu-id="c2895-105">Type embedding is frequently used with COM interop, such as an application that uses automation objects from Microsoft Office.</span></span> <span data-ttu-id="c2895-106">L'incorporamento di informazioni sul tipo consente alla stessa build di un programma di funzionare con versioni diverse di Microsoft Office in computer diversi.</span><span class="sxs-lookup"><span data-stu-id="c2895-106">Embedding type information enables the same build of a program to work with different versions of Microsoft Office on different computers.</span></span> <span data-ttu-id="c2895-107">Tuttavia, è anche possibile usare l'incorporamento dei tipi con una soluzione completamente gestita.</span><span class="sxs-lookup"><span data-stu-id="c2895-107">However, you can also use type embedding with a fully managed solution.</span></span>  
   
- Informazioni sul tipo possono essere incorporati da un assembly che ha le caratteristiche seguenti:  
+ <span data-ttu-id="c2895-108">Le informazioni sul tipo possono essere incorporate da un assembly con le caratteristiche seguenti:</span><span class="sxs-lookup"><span data-stu-id="c2895-108">Type information can be embedded from an assembly that has the following characteristics:</span></span>  
   
--   L'assembly espone almeno un'interfaccia pubblica.  
+-   <span data-ttu-id="c2895-109">L'assembly espone almeno un'interfaccia pubblica.</span><span class="sxs-lookup"><span data-stu-id="c2895-109">The assembly exposes at least one public interface.</span></span>  
   
--   Le interfacce incorporate vengono annotate con un `ComImport` attributo e un `Guid` attributo (e un GUID univoco).  
+-   <span data-ttu-id="c2895-110">Le interfacce incorporate vengono annotate con un attributo `ComImport` e un attributo `Guid` (e un GUID univoco).</span><span class="sxs-lookup"><span data-stu-id="c2895-110">The embedded interfaces are annotated with a `ComImport` attribute and a `Guid` attribute (and a unique GUID).</span></span>  
   
--   L'assembly viene annotato con il `ImportedFromTypeLib` attributo o `PrimaryInteropAssembly` attributo e un livello di assembly `Guid` attributo. (Per impostazione predefinita, i modelli di progetto Visual Basic includono un livello di assembly `Guid` attributo.)  
+-   <span data-ttu-id="c2895-111">L'assembly viene annotato con l'attributo `ImportedFromTypeLib` o l'attributo `PrimaryInteropAssembly` e un attributo `Guid` a livello di assembly.</span><span class="sxs-lookup"><span data-stu-id="c2895-111">The assembly is annotated with the `ImportedFromTypeLib` attribute or the `PrimaryInteropAssembly` attribute, and an assembly-level `Guid` attribute.</span></span> <span data-ttu-id="c2895-112">(Per impostazione predefinita, i modelli di progetto Visual Basic includono un livello di assembly `Guid` attributo.)</span><span class="sxs-lookup"><span data-stu-id="c2895-112">(By default, Visual Basic project templates include an assembly-level `Guid` attribute.)</span></span>  
   
- Dopo aver specificato le interfacce pubbliche che possono essere incorporate, è possibile creare classi di runtime che implementano tali interfacce. Un programma client può quindi incorporare le informazioni sul tipo per tali interfacce in fase di progettazione facendo riferimento all'assembly che contiene le interfacce pubbliche e l'impostazione di `Embed Interop Types` proprietà di riferimento su `True`. Ciò equivale a utilizzando il compilatore della riga di comando e fare riferimento all'assembly utilizzando il `/link` l'opzione del compilatore. Il programma client può quindi caricare le istanze degli oggetti di runtime tipizzati come tali interfacce. Se si crea una nuova versione dell'assembly con nome sicuro di runtime, il programma client non devono essere ricompilate con l'assembly di runtime aggiornato. Al contrario, il programma client continua a utilizzare qualsiasi versione di assembly di runtime è disponibile, utilizzando le informazioni sul tipo incorporato per le interfacce pubbliche.  
+ <span data-ttu-id="c2895-113">Dopo aver specificato le interfacce pubbliche che possono essere incorporate, è possibile creare classi di runtime che implementano tali interfacce.</span><span class="sxs-lookup"><span data-stu-id="c2895-113">After you have specified the public interfaces that can be embedded, you can create runtime classes that implement those interfaces.</span></span> <span data-ttu-id="c2895-114">Un programma client può quindi incorporare le informazioni sul tipo per tali interfacce in fase di progettazione facendo riferimento all'assembly che contiene le interfacce pubbliche e impostando la proprietà `Embed Interop Types` del riferimento su `True`.</span><span class="sxs-lookup"><span data-stu-id="c2895-114">A client program can then embed the type information for those interfaces at design time by referencing the assembly that contains the public interfaces and setting the `Embed Interop Types` property of the reference to `True`.</span></span> <span data-ttu-id="c2895-115">Ciò equivale a usare il compilatore della riga di comando e fare riferimento all'assembly usando l'opzione del compilatore `/link`.</span><span class="sxs-lookup"><span data-stu-id="c2895-115">This is equivalent to using the command line compiler and referencing the assembly by using the `/link` compiler option.</span></span> <span data-ttu-id="c2895-116">Il programma client può quindi caricare le istanze degli oggetti di runtime tipizzati come tali interfacce.</span><span class="sxs-lookup"><span data-stu-id="c2895-116">The client program can then load instances of your runtime objects typed as those interfaces.</span></span> <span data-ttu-id="c2895-117">Se si crea una nuova versione dell'assembly di runtime con nome sicuro, il programma client non deve essere ricompilato con l'assembly di runtime aggiornato.</span><span class="sxs-lookup"><span data-stu-id="c2895-117">If you create a new version of your strong-named runtime assembly, the client program does not have to be recompiled with the updated runtime assembly.</span></span> <span data-ttu-id="c2895-118">Il programma client continua invece a usare qualsiasi versione dell'assembly di runtime disponibile, usando le informazioni sul tipo incorporate per le interfacce pubbliche.</span><span class="sxs-lookup"><span data-stu-id="c2895-118">Instead, the client program continues to use whichever version of the runtime assembly is available to it, using the embedded type information for the public interfaces.</span></span>  
   
- Poiché la funzione principale di incorporamento dei tipi è supporta l'incorporamento di informazioni sui tipi da assembly di interoperabilità COM, le limitazioni seguenti si applicano quando si incorporano informazioni sul tipo in una soluzione completamente gestita:  
+ <span data-ttu-id="c2895-119">Poiché la funzione principale dell'incorporamento dei tipi è supportare l'incorporamento delle informazioni sui tipi dagli assembly di interoperabilità COM, le limitazioni seguenti si applicano quando si incorporano informazioni sul tipo in una soluzione completamente gestita:</span><span class="sxs-lookup"><span data-stu-id="c2895-119">Because the primary function of type embedding is to support embedding of type information from COM interop assemblies, the following limitations apply when you embed type information in a fully managed solution:</span></span>  
   
--   Solo gli attributi specifici per l'interoperabilità COM sono incorporati. altri attributi vengono ignorati.  
+-   <span data-ttu-id="c2895-120">Vengono incorporati solo gli attributi specifici per l'interoperabilità COM, gli altri attributi vengono ignorati.</span><span class="sxs-lookup"><span data-stu-id="c2895-120">Only attributes specific to COM interop are embedded; other attributes are ignored.</span></span>  
   
--   Se un tipo utilizza parametri generici e il tipo del parametro generico è un tipo incorporato, è Impossibile utilizzare tale tipo attraverso un limite di assembly. Esempi di oltrepassare il limite di un assembly chiama un metodo da un altro assembly o un tipo deriva da un tipo definito in un altro assembly.  
+-   <span data-ttu-id="c2895-121">Se un tipo usa parametri generici e il tipo del parametro generico è un tipo incorporato, non è possibile usare quel tipo superando un limite di assembly.</span><span class="sxs-lookup"><span data-stu-id="c2895-121">If a type uses generic parameters and the type of the generic parameter is an embedded type, that type cannot be used across an assembly boundary.</span></span> <span data-ttu-id="c2895-122">Esempi di superamento di un limite di assembly sono chiamare un metodo da un altro assembly o derivare un tipo da un tipo definito in un altro assembly.</span><span class="sxs-lookup"><span data-stu-id="c2895-122">Examples of crossing an assembly boundary include calling a method from another assembly or a deriving a type from a type defined in another assembly.</span></span>  
   
--   Le costanti non sono incorporate.  
+-   <span data-ttu-id="c2895-123">Le costanti non vengono incorporate.</span><span class="sxs-lookup"><span data-stu-id="c2895-123">Constants are not embedded.</span></span>  
   
--   La <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName>classe non supporta un tipo incorporato come chiave.</xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> È possibile implementare un tipo di dizionario per supportare un tipo incorporato come chiave.  
+-   <span data-ttu-id="c2895-124">La classe <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> non supporta un tipo incorporato come chiave.</span><span class="sxs-lookup"><span data-stu-id="c2895-124">The <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> class does not support an embedded type as a key.</span></span> <span data-ttu-id="c2895-125">È possibile implementare un proprio tipo di dizionario per supportare un tipo incorporato come chiave.</span><span class="sxs-lookup"><span data-stu-id="c2895-125">You can implement your own dictionary type to support an embedded type as a key.</span></span>  
   
- In questa procedura dettagliata, verranno effettuate le operazioni seguenti:  
+ <span data-ttu-id="c2895-126">In questa procedura dettagliata, si eseguiranno le operazioni:</span><span class="sxs-lookup"><span data-stu-id="c2895-126">In this walkthrough, you will do the following:</span></span>  
   
--   Creare un assembly con nome sicuro che dispone di un'interfaccia pubblica che contiene informazioni sul tipo che può essere incorporati.  
+-   <span data-ttu-id="c2895-127">Creare un assembly con nome sicuro che ha un'interfaccia pubblica che contiene informazioni sul tipo che possono essere incorporate.</span><span class="sxs-lookup"><span data-stu-id="c2895-127">Create a strong-named assembly that has a public interface that contains type information that can be embedded.</span></span>  
   
--   Creare un assembly con nome sicuro di runtime che implementa l'interfaccia pubblica.  
+-   <span data-ttu-id="c2895-128">Creare un assembly di runtime con nome sicuro che implementa tale interfaccia pubblica.</span><span class="sxs-lookup"><span data-stu-id="c2895-128">Create a strong-named runtime assembly that implements that public interface.</span></span>  
   
--   Creare un programma client che incorpora le informazioni sul tipo dell'interfaccia pubblica e crea un'istanza della classe da assembly di runtime.  
+-   <span data-ttu-id="c2895-129">Creare un programma client che incorpora le informazioni sul tipo dell'interfaccia pubblica e crea un'istanza della classe dall'assembly di runtime.</span><span class="sxs-lookup"><span data-stu-id="c2895-129">Create a client program that embeds the type information from the public interface and creates an instance of the class from the runtime assembly.</span></span>  
   
--   Modificare e ricompilare l'assembly di runtime.  
+-   <span data-ttu-id="c2895-130">Modificare e ricompilare l'assembly di runtime.</span><span class="sxs-lookup"><span data-stu-id="c2895-130">Modify and rebuild the runtime assembly.</span></span>  
   
--   Eseguire il programma client per verificare che la nuova versione dell'assembly di runtime viene usata senza dover ricompilare il programma client.  
+-   <span data-ttu-id="c2895-131">Eseguire il programma client per verificare se la nuova versione dell'assembly di runtime viene usata senza dover ricompilare il programma client.</span><span class="sxs-lookup"><span data-stu-id="c2895-131">Run the client program to see that the new version of the runtime assembly is being used without having to recompile the client program.</span></span>  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="creating-an-interface"></a>Creazione di un'interfaccia  
+## <a name="creating-an-interface"></a><span data-ttu-id="c2895-132">Creare un'interfaccia</span><span class="sxs-lookup"><span data-stu-id="c2895-132">Creating an Interface</span></span>  
   
-#### <a name="to-create-the-type-equivalence-interface-project"></a>Per creare il progetto di interfaccia di equivalenza del tipo  
+#### <a name="to-create-the-type-equivalence-interface-project"></a><span data-ttu-id="c2895-133">Per creare il progetto di interfaccia di equivalenza del tipo</span><span class="sxs-lookup"><span data-stu-id="c2895-133">To create the type equivalence interface project</span></span>  
   
-1.  In Visual Studio, nel **File** dal menu **New** e quindi fare clic su **progetto**.  
+1.  <span data-ttu-id="c2895-134">In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="c2895-134">In Visual Studio, on the **File** menu, point to **New** and then click **Project**.</span></span>  
   
-2.  Nel **nuovo progetto** della finestra di dialogo di **tipi di progetto** riquadro, assicurarsi che **Windows** è selezionata. Selezionare **libreria di classi** nel **modelli** riquadro. Nel **nome** digitare `TypeEquivalenceInterface`, quindi fare clic su **OK**. Viene creato il nuovo progetto.  
+2.  <span data-ttu-id="c2895-135">Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**.</span><span class="sxs-lookup"><span data-stu-id="c2895-135">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="c2895-136">Selezionare **Libreria di classi** nel riquadro **Modelli**.</span><span class="sxs-lookup"><span data-stu-id="c2895-136">Select **Class Library** in the **Templates** pane.</span></span> <span data-ttu-id="c2895-137">Nella casella **Nome** digitare `TypeEquivalenceInterface` e quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="c2895-137">In the **Name** box, type `TypeEquivalenceInterface`, and then click **OK**.</span></span> <span data-ttu-id="c2895-138">Il nuovo progetto viene creato.</span><span class="sxs-lookup"><span data-stu-id="c2895-138">The new project is created.</span></span>  
   
-3.  In **Esplora**, il file Class1. vb e fare clic su **rinominare**. Rinominare il file in `ISampleInterface.vb` e premere INVIO. Ridenominazione del file verrà anche rinominare la classe come `ISampleInterface`. Questa classe rappresenterà l'interfaccia pubblica per la classe.  
+3.  <span data-ttu-id="c2895-139">In **Esplora**, il file Class1. vb e fare clic su **rinominare**.</span><span class="sxs-lookup"><span data-stu-id="c2895-139">In **Solution Explorer**, right-click the Class1.vb file and click **Rename**.</span></span> <span data-ttu-id="c2895-140">Rinominare il file `ISampleInterface.vb` e premere INVIO.</span><span class="sxs-lookup"><span data-stu-id="c2895-140">Rename the file to `ISampleInterface.vb` and press ENTER.</span></span> <span data-ttu-id="c2895-141">Modificando il nome del file, anche la classe verrà rinominata `ISampleInterface`.</span><span class="sxs-lookup"><span data-stu-id="c2895-141">Renaming the file will also rename the class to `ISampleInterface`.</span></span> <span data-ttu-id="c2895-142">Questa classe rappresenterà l'interfaccia pubblica per la classe.</span><span class="sxs-lookup"><span data-stu-id="c2895-142">This class will represent the public interface for the class.</span></span>  
   
-4.  Pulsante destro del mouse sul progetto TypeEquivalenceInterface e fare clic su **proprietà**. Fare clic sulla scheda **Compila**. Impostare il percorso di output a un percorso valido sul computer di sviluppo, ad esempio `C:\TypeEquivalenceSample`. Questo percorso verrà utilizzato anche in un passaggio successivo in questa procedura dettagliata.  
+4.  <span data-ttu-id="c2895-143">Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceInterface e fare clic su **Proprietà**.</span><span class="sxs-lookup"><span data-stu-id="c2895-143">Right-click the TypeEquivalenceInterface project and click **Properties**.</span></span> <span data-ttu-id="c2895-144">Fare clic sulla scheda **Compila**. Impostare il percorso di output su un percorso valido nel computer di sviluppo, ad esempio `C:\TypeEquivalenceSample`.</span><span class="sxs-lookup"><span data-stu-id="c2895-144">Click the **Compile** tab. Set the output path to a valid location on your development computer, such as `C:\TypeEquivalenceSample`.</span></span> <span data-ttu-id="c2895-145">Questo percorso verrà usato anche in un passaggio successivo di questa procedura dettagliata.</span><span class="sxs-lookup"><span data-stu-id="c2895-145">This location will also be used in a later step in this walkthrough.</span></span>  
   
-5.  Durante la modifica delle proprietà del progetto, scegliere il **firma** scheda. Selezionare il **firmare l'assembly** (opzione). Nel **Scegli un file chiave con nome sicuro** elenco, fare clic su ** <New...> **.</New...> Nel **nome file di chiave** digitare `key.snk`. Cancella il **Proteggi file di chiave con una password** casella di controllo. Fare clic su **OK**.  
+5.  <span data-ttu-id="c2895-146">Durante la modifica delle proprietà del progetto scegliere la scheda **Firma**. Selezionare l opzione **Firma assembly**.</span><span class="sxs-lookup"><span data-stu-id="c2895-146">While still editing the project properties, click the **Signing** tab. Select the **Sign the assembly** option.</span></span> <span data-ttu-id="c2895-147">Nell'elenco **Scegli un file chiave con nome sicuro** fare clic su **<Nuovo…>**.</span><span class="sxs-lookup"><span data-stu-id="c2895-147">In the **Choose a strong name key file** list, click **<New...>**.</span></span> <span data-ttu-id="c2895-148">Nella casella **Nome file di chiave** digitare `key.snk`.</span><span class="sxs-lookup"><span data-stu-id="c2895-148">In the **Key file name** box, type `key.snk`.</span></span> <span data-ttu-id="c2895-149">Deselezionare la casella di controllo **Proteggi file di chiave con una password**.</span><span class="sxs-lookup"><span data-stu-id="c2895-149">Clear the **Protect my key file with a password** check box.</span></span> <span data-ttu-id="c2895-150">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="c2895-150">Click **OK**.</span></span>  
   
-6.  Aprire il file vb. Aggiungere il codice seguente al file di classe ISampleInterface per creare l'interfaccia ISampleInterface.  
+6.  <span data-ttu-id="c2895-151">Aprire il file vb.</span><span class="sxs-lookup"><span data-stu-id="c2895-151">Open the ISampleInterface.vb file.</span></span> <span data-ttu-id="c2895-152">Aggiungere il codice seguente al file della classe ISampleInterface per creare l'interfaccia ISampleInterface.</span><span class="sxs-lookup"><span data-stu-id="c2895-152">Add the following code to the ISampleInterface class file to create the ISampleInterface interface.</span></span>  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
-7.  Nel **strumenti** menu, fare clic su **crea Guid**. Nel **Crea GUID** la finestra di dialogo, fare clic su **il formato del Registro di sistema** e quindi fare clic su **copia**. Fare clic su **Esci**.  
+    ```vb  
+    Imports System.Runtime.InteropServices  
   
-8.  Nel `Guid` attributo, eliminare il GUID di esempio e incollare il GUID copiato dal **Crea GUID** la finestra di dialogo. Rimuovere le parentesi graffe ({}) dal GUID copiato.  
+    <ComImport()>  
+    <Guid("8DA56996-A151-4136-B474-32784559F6DF")>  
+    Public Interface ISampleInterface  
+        Sub GetUserInput()  
+        ReadOnly Property UserInput As String  
+    End Interface  
+    ```  
   
-9. Nel **progetto** menu, fare clic su **Mostra tutti i file**.  
+7.  <span data-ttu-id="c2895-153">Scegliere **Crea GUID** dal menu **Strumenti**.</span><span class="sxs-lookup"><span data-stu-id="c2895-153">On the **Tools** menu, click **Create Guid**.</span></span> <span data-ttu-id="c2895-154">Nella finestra di dialogo **Crea GUID** fare clic su **Formato del Registro di sistema** e quindi fare clic su **Copia**.</span><span class="sxs-lookup"><span data-stu-id="c2895-154">In the **Create GUID** dialog box, click **Registry Format** and then click **Copy**.</span></span> <span data-ttu-id="c2895-155">Fare clic su **Esci**.</span><span class="sxs-lookup"><span data-stu-id="c2895-155">Click **Exit**.</span></span>  
   
-10. In **Esplora**, espandere il **progetto** cartella. Fare doppio clic il file AssemblyInfo. vb. Aggiungere l'attributo seguente al file.  
+8.  <span data-ttu-id="c2895-156">Nell'attributo `Guid` eliminare il GUID di esempio e incollare il GUID copiato dalla finestra di dialogo **Crea GUID**.</span><span class="sxs-lookup"><span data-stu-id="c2895-156">In the `Guid` attribute, delete the sample GUID and paste in the GUID that you copied from the **Create GUID** dialog box.</span></span> <span data-ttu-id="c2895-157">Rimuovere le parentesi graffe ({}) dal GUID copiato.</span><span class="sxs-lookup"><span data-stu-id="c2895-157">Remove the braces ({}) from the copied GUID.</span></span>  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-     Salvare il file.  
+9. <span data-ttu-id="c2895-158">Scegliere **Mostra tutti i file** dal menu **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="c2895-158">On the **Project** menu, click **Show All Files**.</span></span>  
   
-11. Salvare il progetto.  
+10. <span data-ttu-id="c2895-159">In **Esplora**, espandere il **progetto** cartella.</span><span class="sxs-lookup"><span data-stu-id="c2895-159">In **Solution Explorer**, expand the **My Project** folder.</span></span> <span data-ttu-id="c2895-160">Fare doppio clic il file AssemblyInfo. vb.</span><span class="sxs-lookup"><span data-stu-id="c2895-160">Double-click the AssemblyInfo.vb.</span></span> <span data-ttu-id="c2895-161">Aggiungere il seguente attributo al file.</span><span class="sxs-lookup"><span data-stu-id="c2895-161">Add the following attribute to the file.</span></span>  
   
-12. Pulsante destro del mouse sul progetto TypeEquivalenceInterface e fare clic su **Build**. Il file con estensione dll della libreria di classi viene compilato e salvato nel percorso di output di compilazione specificata (ad esempio, C:\TypeEquivalenceSample).  
+    ```vb  
+    <Assembly: ImportedFromTypeLib("")>  
+    ```  
   
-## <a name="creating-a-runtime-class"></a>Creazione di una classe di Runtime  
+     <span data-ttu-id="c2895-162">Salvare il file.</span><span class="sxs-lookup"><span data-stu-id="c2895-162">Save the file.</span></span>  
   
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>Per creare il progetto di runtime di equivalenza del tipo  
+11. <span data-ttu-id="c2895-163">Salvare il progetto.</span><span class="sxs-lookup"><span data-stu-id="c2895-163">Save the project.</span></span>  
   
-1.  In Visual Studio, nel **File** dal menu **New** e quindi fare clic su **progetto**.  
+12. <span data-ttu-id="c2895-164">Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceInterface e fare clic su **Compila**.</span><span class="sxs-lookup"><span data-stu-id="c2895-164">Right-click the TypeEquivalenceInterface project and click **Build**.</span></span> <span data-ttu-id="c2895-165">Il file DLL della libreria di classi viene compilato e salvato nel percorso dell'output di compilazione specificato, ad esempio C:\TypeEquivalenceSample.</span><span class="sxs-lookup"><span data-stu-id="c2895-165">The class library .dll file is compiled and saved to the specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
   
-2.  Nel **nuovo progetto** della finestra di dialogo di **tipi di progetto** riquadro, assicurarsi che **Windows** è selezionata. Selezionare **libreria di classi** nel **modelli** riquadro. Nel **nome** digitare `TypeEquivalenceRuntime`, quindi fare clic su **OK**. Viene creato il nuovo progetto.  
+## <a name="creating-a-runtime-class"></a><span data-ttu-id="c2895-166">Creare una classe di runtime</span><span class="sxs-lookup"><span data-stu-id="c2895-166">Creating a Runtime Class</span></span>  
   
-3.  In **Esplora**, il file Class1. vb e fare clic su **rinominare**. Rinominare il file in `SampleClass.vb` e premere INVIO. Ridenominazione del file consente inoltre di rinominare la classe `SampleClass`. Questa classe implementerà il `ISampleInterface` interfaccia.  
+#### <a name="to-create-the-type-equivalence-runtime-project"></a><span data-ttu-id="c2895-167">Per creare il progetto di runtime di equivalenza del tipo</span><span class="sxs-lookup"><span data-stu-id="c2895-167">To create the type equivalence runtime project</span></span>  
   
-4.  Pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **proprietà**. Fare clic sulla scheda **Compila**. Impostare il percorso di output nello stesso percorso usato nel progetto TypeEquivalenceInterface, ad esempio, `C:\TypeEquivalenceSample`.  
+1.  <span data-ttu-id="c2895-168">In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="c2895-168">In Visual Studio, on the **File** menu, point to **New** and then click **Project**.</span></span>  
   
-5.  Durante la modifica delle proprietà del progetto, scegliere il **firma** scheda. Selezionare il **firmare l'assembly** (opzione). Nel **Scegli un file chiave con nome sicuro** elenco, fare clic su ** <New...> **.</New...> Nel **nome file di chiave** digitare `key.snk`. Cancella il **Proteggi file di chiave con una password** casella di controllo. Fare clic su **OK**.  
+2.  <span data-ttu-id="c2895-169">Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**.</span><span class="sxs-lookup"><span data-stu-id="c2895-169">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="c2895-170">Selezionare **Libreria di classi** nel riquadro **Modelli**.</span><span class="sxs-lookup"><span data-stu-id="c2895-170">Select **Class Library** in the **Templates** pane.</span></span> <span data-ttu-id="c2895-171">Nella casella **Nome** digitare `TypeEquivalenceRuntime` e quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="c2895-171">In the **Name** box, type `TypeEquivalenceRuntime`, and then click **OK**.</span></span> <span data-ttu-id="c2895-172">Il nuovo progetto viene creato.</span><span class="sxs-lookup"><span data-stu-id="c2895-172">The new project is created.</span></span>  
   
-6.  Pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Aggiungi riferimento**. Fare clic su di **Sfoglia** scheda e passare alla cartella del percorso di output. Selezionare il file TypeEquivalenceInterface. dll e fare clic su **OK**.  
+3.  <span data-ttu-id="c2895-173">In **Esplora**, il file Class1. vb e fare clic su **rinominare**.</span><span class="sxs-lookup"><span data-stu-id="c2895-173">In **Solution Explorer**, right-click the Class1.vb file and click **Rename**.</span></span> <span data-ttu-id="c2895-174">Rinominare il file `SampleClass.vb` e premere INVIO.</span><span class="sxs-lookup"><span data-stu-id="c2895-174">Rename the file to `SampleClass.vb` and press ENTER.</span></span> <span data-ttu-id="c2895-175">Modificando il nome del file, anche la classe verrà rinominata `SampleClass`.</span><span class="sxs-lookup"><span data-stu-id="c2895-175">Renaming the file also renames the class to `SampleClass`.</span></span> <span data-ttu-id="c2895-176">Questa classe implementerà l'interfaccia `ISampleInterface`.</span><span class="sxs-lookup"><span data-stu-id="c2895-176">This class will implement the `ISampleInterface` interface.</span></span>  
   
-7.  Nel **progetto** menu, fare clic su **Mostra tutti i file**.  
+4.  <span data-ttu-id="c2895-177">Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Proprietà**.</span><span class="sxs-lookup"><span data-stu-id="c2895-177">Right-click the TypeEquivalenceRuntime project and click **Properties**.</span></span> <span data-ttu-id="c2895-178">Fare clic sulla scheda **Compila**. Impostare il percorso di output sullo stesso percorso usato nel progetto TypeEquivalenceInterface, ad esempio `C:\TypeEquivalenceSample`.</span><span class="sxs-lookup"><span data-stu-id="c2895-178">Click the **Compile** tab. Set the output path to the same location you used in the TypeEquivalenceInterface project, for example, `C:\TypeEquivalenceSample`.</span></span>  
   
-8.  In **Esplora**, espandere il **riferimenti** cartella. Selezionare il riferimento TypeEquivalenceInterface. Nella finestra proprietà per il riferimento TypeEquivalenceInterface, impostare il **versione specifica** proprietà **False**.  
+5.  <span data-ttu-id="c2895-179">Durante la modifica delle proprietà del progetto scegliere la scheda **Firma**. Selezionare l opzione **Firma assembly**.</span><span class="sxs-lookup"><span data-stu-id="c2895-179">While still editing the project properties, click the **Signing** tab. Select the **Sign the assembly** option.</span></span> <span data-ttu-id="c2895-180">Nell'elenco **Scegli un file chiave con nome sicuro** fare clic su **<Nuovo…>**.</span><span class="sxs-lookup"><span data-stu-id="c2895-180">In the **Choose a strong name key file** list, click **<New...>**.</span></span> <span data-ttu-id="c2895-181">Nella casella **Nome file di chiave** digitare `key.snk`.</span><span class="sxs-lookup"><span data-stu-id="c2895-181">In the **Key file name** box, type `key.snk`.</span></span> <span data-ttu-id="c2895-182">Deselezionare la casella di controllo **Proteggi file di chiave con una password**.</span><span class="sxs-lookup"><span data-stu-id="c2895-182">Clear the **Protect my key file with a password** check box.</span></span> <span data-ttu-id="c2895-183">Fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="c2895-183">Click **OK**.</span></span>  
   
-9. Aggiungere il codice seguente al file di classe SampleClass per creare la classe SampleClass.  
+6.  <span data-ttu-id="c2895-184">Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Aggiungi riferimento**.</span><span class="sxs-lookup"><span data-stu-id="c2895-184">Right-click the TypeEquivalenceRuntime project and click **Add Reference**.</span></span> <span data-ttu-id="c2895-185">Fare clic sulla scheda **Sfoglia** e passare alla cartella del percorso di output.</span><span class="sxs-lookup"><span data-stu-id="c2895-185">Click the **Browse** tab and browse to the output path folder.</span></span> <span data-ttu-id="c2895-186">Selezionare il file TypeEquivalenceInterface.dll e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="c2895-186">Select the TypeEquivalenceInterface.dll file and click **OK**.</span></span>  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
-10. Salvare il progetto.  
+7.  <span data-ttu-id="c2895-187">Scegliere **Mostra tutti i file** dal menu **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="c2895-187">On the **Project** menu, click **Show All Files**.</span></span>  
   
-11. Pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Build**. Il file con estensione dll della libreria di classi viene compilato e salvato nel percorso di output di compilazione specificata (ad esempio, C:\TypeEquivalenceSample).  
+8.  <span data-ttu-id="c2895-188">In **Esplora soluzioni** espandere la cartella **Riferimenti**.</span><span class="sxs-lookup"><span data-stu-id="c2895-188">In **Solution Explorer**, expand the **References** folder.</span></span> <span data-ttu-id="c2895-189">Selezionare il riferimento TypeEquivalenceInterface.</span><span class="sxs-lookup"><span data-stu-id="c2895-189">Select the TypeEquivalenceInterface reference.</span></span> <span data-ttu-id="c2895-190">Nella finestra Proprietà del riferimento TypeEquivalenceInterface impostare la proprietà **Versione specifica** su **False**.</span><span class="sxs-lookup"><span data-stu-id="c2895-190">In the Properties window for the TypeEquivalenceInterface reference, set the **Specific Version** property to **False**.</span></span>  
   
-## <a name="creating-a-client-project"></a>Creazione di un progetto Client  
+9. <span data-ttu-id="c2895-191">Aggiungere il codice seguente al file della classe SampleClass per creare la classe SampleClass.</span><span class="sxs-lookup"><span data-stu-id="c2895-191">Add the following code to the SampleClass class file to create the SampleClass class.</span></span>  
   
-#### <a name="to-create-the-type-equivalence-client-project"></a>Per creare il progetto client di equivalenza del tipo  
+    ```vb  
+    Imports TypeEquivalenceInterface  
   
-1.  In Visual Studio, nel **File** dal menu **New** e quindi fare clic su **progetto**.  
+    Public Class SampleClass  
+        Implements ISampleInterface  
   
-2.  Nel **nuovo progetto** della finestra di dialogo di **tipi di progetto** riquadro, assicurarsi che **Windows** è selezionata. Selezionare **applicazione Console** nel **modelli** riquadro. Nel **nome** digitare `TypeEquivalenceClient`, quindi fare clic su **OK**. Viene creato il nuovo progetto.  
+        Private p_UserInput As String  
+        Public ReadOnly Property UserInput() As String Implements ISampleInterface.UserInput  
+            Get  
+                Return p_UserInput  
+            End Get  
+        End Property  
   
-3.  Pulsante destro del mouse sul progetto TypeEquivalenceClient e fare clic su **proprietà**. Fare clic sulla scheda **Compila**. Impostare il percorso di output nello stesso percorso usato nel progetto TypeEquivalenceInterface, ad esempio, `C:\TypeEquivalenceSample`.  
+        Public Sub GetUserInput() Implements ISampleInterface.GetUserInput  
+            Console.WriteLine("Please enter a value:")  
+            p_UserInput = Console.ReadLine()  
+        End Sub  
+    End Class  
+    ```  
   
-4.  Pulsante destro del mouse sul progetto TypeEquivalenceClient e fare clic su **Aggiungi riferimento**. Fare clic su di **Sfoglia** scheda e passare alla cartella del percorso di output. Selezionare il file TypeEquivalenceInterface. dll (non TypeEquivalenceRuntime. dll) e fare clic su **OK**.  
+10. <span data-ttu-id="c2895-192">Salvare il progetto.</span><span class="sxs-lookup"><span data-stu-id="c2895-192">Save the project.</span></span>  
   
-5.  Nel **progetto** menu, fare clic su **Mostra tutti i file**.  
+11. <span data-ttu-id="c2895-193">Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Compila**.</span><span class="sxs-lookup"><span data-stu-id="c2895-193">Right-click the TypeEquivalenceRuntime project and click **Build**.</span></span> <span data-ttu-id="c2895-194">Il file DLL della libreria di classi viene compilato e salvato nel percorso dell'output di compilazione specificato, ad esempio C:\TypeEquivalenceSample.</span><span class="sxs-lookup"><span data-stu-id="c2895-194">The class library .dll file is compiled and saved to the specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
   
-6.  In **Esplora**, espandere il **riferimenti** cartella. Selezionare il riferimento TypeEquivalenceInterface. Nella finestra proprietà per il riferimento TypeEquivalenceInterface, impostare il **Embed Interop Types** proprietà **True**.  
+## <a name="creating-a-client-project"></a><span data-ttu-id="c2895-195">Creare un progetto client</span><span class="sxs-lookup"><span data-stu-id="c2895-195">Creating a Client Project</span></span>  
   
-7.  Aggiungere il codice seguente al file Module1. vb per creare il programma client.  
+#### <a name="to-create-the-type-equivalence-client-project"></a><span data-ttu-id="c2895-196">Per creare il progetto client di equivalenza del tipo</span><span class="sxs-lookup"><span data-stu-id="c2895-196">To create the type equivalence client project</span></span>  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
-8.  Premere CTRL + F5 per compilare ed eseguire il programma.  
+1.  <span data-ttu-id="c2895-197">In Visual Studio scegliere **Nuovo** dal menu **File** e quindi fare clic su **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="c2895-197">In Visual Studio, on the **File** menu, point to **New** and then click **Project**.</span></span>  
   
-## <a name="modifying-the-interface"></a>Modifica dell'interfaccia  
+2.  <span data-ttu-id="c2895-198">Nel riquadro **Tipi di progetto** della finestra di dialogo **Nuovo progetto** verificare che sia selezionata l'opzione **Windows**.</span><span class="sxs-lookup"><span data-stu-id="c2895-198">In the **New Project** dialog box, in the **Project Types** pane, make sure that **Windows** is selected.</span></span> <span data-ttu-id="c2895-199">Selezionare **Applicazione console** nel riquadro **Modelli**.</span><span class="sxs-lookup"><span data-stu-id="c2895-199">Select **Console Application** in the **Templates** pane.</span></span> <span data-ttu-id="c2895-200">Nella casella **Nome** digitare `TypeEquivalenceClient` e quindi fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="c2895-200">In the **Name** box, type `TypeEquivalenceClient`, and then click **OK**.</span></span> <span data-ttu-id="c2895-201">Il nuovo progetto viene creato.</span><span class="sxs-lookup"><span data-stu-id="c2895-201">The new project is created.</span></span>  
   
-#### <a name="to-modify-the-interface"></a>Per modificare l'interfaccia  
+3.  <span data-ttu-id="c2895-202">Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceClient e fare clic su **Proprietà**.</span><span class="sxs-lookup"><span data-stu-id="c2895-202">Right-click the TypeEquivalenceClient project and click **Properties**.</span></span> <span data-ttu-id="c2895-203">Fare clic sulla scheda **Compila**. Impostare il percorso di output sullo stesso percorso usato nel progetto TypeEquivalenceInterface, ad esempio `C:\TypeEquivalenceSample`.</span><span class="sxs-lookup"><span data-stu-id="c2895-203">Click the **Compile** tab. Set the output path to the same location you used in the TypeEquivalenceInterface project, for example, `C:\TypeEquivalenceSample`.</span></span>  
   
-1.  In Visual Studio, nel **File** dal menu **aprire**, quindi fare clic su **progetto/soluzione**.  
+4.  <span data-ttu-id="c2895-204">Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceClient e fare clic su **Aggiungi riferimento**.</span><span class="sxs-lookup"><span data-stu-id="c2895-204">Right-click the TypeEquivalenceClient project and click **Add Reference**.</span></span> <span data-ttu-id="c2895-205">Fare clic sulla scheda **Sfoglia** e passare alla cartella del percorso di output.</span><span class="sxs-lookup"><span data-stu-id="c2895-205">Click the **Browse** tab and browse to the output path folder.</span></span> <span data-ttu-id="c2895-206">Selezionare il file TypeEquivalenceInterface.dll (non TypeEquivalenceRuntime.dll) e fare clic su **OK**.</span><span class="sxs-lookup"><span data-stu-id="c2895-206">Select the TypeEquivalenceInterface.dll file (not the TypeEquivalenceRuntime.dll) and click **OK**.</span></span>  
   
-2.  Nel **Apri progetto** la finestra di dialogo, fare clic sul progetto TypeEquivalenceInterface, quindi fare clic su **proprietà**. Fare clic sulla scheda **Applicazione** . Fare clic su di **informazioni sull'Assembly** pulsante. Modifica il **versione dell'Assembly** e **versione File** valori `2.0.0.0`.  
+5.  <span data-ttu-id="c2895-207">Scegliere **Mostra tutti i file** dal menu **Progetto**.</span><span class="sxs-lookup"><span data-stu-id="c2895-207">On the **Project** menu, click **Show All Files**.</span></span>  
   
-3.  Aprire il file vb. Aggiungere la riga di codice seguente all'interfaccia ISampleInterface.  
+6.  <span data-ttu-id="c2895-208">In **Esplora soluzioni** espandere la cartella **Riferimenti**.</span><span class="sxs-lookup"><span data-stu-id="c2895-208">In **Solution Explorer**, expand the **References** folder.</span></span> <span data-ttu-id="c2895-209">Selezionare il riferimento TypeEquivalenceInterface.</span><span class="sxs-lookup"><span data-stu-id="c2895-209">Select the TypeEquivalenceInterface reference.</span></span> <span data-ttu-id="c2895-210">Nella finestra Proprietà del riferimento TypeEquivalenceInterface impostare la proprietà **Incorpora tipi di interoperabilità** su **True**.</span><span class="sxs-lookup"><span data-stu-id="c2895-210">In the Properties window for the TypeEquivalenceInterface reference, set the **Embed Interop Types** property to **True**.</span></span>  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
-     Salvare il file.  
+7.  <span data-ttu-id="c2895-211">Aggiungere il codice seguente al file Module1. vb per creare il programma client.</span><span class="sxs-lookup"><span data-stu-id="c2895-211">Add the following code to the Module1.vb file to create the client program.</span></span>  
   
-4.  Salvare il progetto.  
+    ```vb  
+    Imports TypeEquivalenceInterface  
+    Imports System.Reflection  
   
-5.  Pulsante destro del mouse sul progetto TypeEquivalenceInterface e fare clic su **Build**. Una nuova versione del file. dll della libreria di classe viene compilata e salvata nel percorso di output di compilazione specificato (ad esempio, C:\TypeEquivalenceSample).  
+    Module Module1  
   
-## <a name="modifying-the-runtime-class"></a>Modifica la classe di Runtime  
+        Sub Main()  
+            Dim sampleAssembly = Assembly.Load("TypeEquivalenceRuntime")  
+            Dim sampleClass As ISampleInterface = CType( _  
+                sampleAssembly.CreateInstance("TypeEquivalenceRuntime.SampleClass"), ISampleInterface)  
+            sampleClass.GetUserInput()  
+            Console.WriteLine(sampleClass.UserInput)  
+            Console.WriteLine(sampleAssembly.GetName().Version)  
+            Console.ReadLine()  
+        End Sub  
   
-#### <a name="to-modify-the-runtime-class"></a>Per modificare la classe di runtime  
+    End Module  
+    ```  
   
-1.  In Visual Studio, nel **File** dal menu **aprire**, quindi fare clic su **progetto/soluzione**.  
+8.  <span data-ttu-id="c2895-212">Premere CTRL+F5 per compilare ed eseguire il programma.</span><span class="sxs-lookup"><span data-stu-id="c2895-212">Press CTRL+F5 to build and run the program.</span></span>  
   
-2.  Nel **Apri progetto** finestra di dialogo, fare clic sul progetto TypeEquivalenceRuntime e scegliere **proprietà**. Fare clic sulla scheda **Applicazione** . Fare clic su di **informazioni sull'Assembly** pulsante. Modifica il **versione dell'Assembly** e **versione File** valori `2.0.0.0`.  
+## <a name="modifying-the-interface"></a><span data-ttu-id="c2895-213">Modificare l'interfaccia</span><span class="sxs-lookup"><span data-stu-id="c2895-213">Modifying the Interface</span></span>  
   
-3.  Aprire il SampleClass.vbfile. Aggiungere le seguenti righe di codice alla classe SampleClass.  
+#### <a name="to-modify-the-interface"></a><span data-ttu-id="c2895-214">Per modificare l'interfaccia</span><span class="sxs-lookup"><span data-stu-id="c2895-214">To modify the interface</span></span>  
+  
+1.  <span data-ttu-id="c2895-215">In Visual Studio scegliere **Apri** dal menu **File** e quindi fare clic su **Progetto/Soluzione**.</span><span class="sxs-lookup"><span data-stu-id="c2895-215">In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.</span></span>  
+  
+2.  <span data-ttu-id="c2895-216">Nella finestra di dialogo **Apri progetto** fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceInterface e quindi fare clic su **Proprietà**.</span><span class="sxs-lookup"><span data-stu-id="c2895-216">In the **Open Project** dialog box, right-click the TypeEquivalenceInterface project, and then click **Properties**.</span></span> <span data-ttu-id="c2895-217">Fare clic sulla scheda **Applicazione** . Fare clic sul pulsante **Informazioni assembly**.</span><span class="sxs-lookup"><span data-stu-id="c2895-217">Click the **Application** tab. Click the **Assembly Information** button.</span></span> <span data-ttu-id="c2895-218">Modificare i valori di **Versione assembly** e **Versione file** in `2.0.0.0`.</span><span class="sxs-lookup"><span data-stu-id="c2895-218">Change the **Assembly Version** and **File Version** values to `2.0.0.0`.</span></span>  
+  
+3.  <span data-ttu-id="c2895-219">Aprire il file vb.</span><span class="sxs-lookup"><span data-stu-id="c2895-219">Open the ISampleInterface.vb file.</span></span> <span data-ttu-id="c2895-220">Aggiungere la riga di codice seguente all'interfaccia ISampleInterface.</span><span class="sxs-lookup"><span data-stu-id="c2895-220">Add the following line of code to the ISampleInterface interface.</span></span>  
+  
+    ```vb  
+    Function GetDate() As Date  
+    ```  
+  
+     <span data-ttu-id="c2895-221">Salvare il file.</span><span class="sxs-lookup"><span data-stu-id="c2895-221">Save the file.</span></span>  
+  
+4.  <span data-ttu-id="c2895-222">Salvare il progetto.</span><span class="sxs-lookup"><span data-stu-id="c2895-222">Save the project.</span></span>  
+  
+5.  <span data-ttu-id="c2895-223">Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceInterface e fare clic su **Compila**.</span><span class="sxs-lookup"><span data-stu-id="c2895-223">Right-click the TypeEquivalenceInterface project and click **Build**.</span></span> <span data-ttu-id="c2895-224">Una nuova versione del file DLL della libreria di classi viene compilata e salvata nel percorso dell'output di compilazione specificato, ad esempio C:\TypeEquivalenceSample.</span><span class="sxs-lookup"><span data-stu-id="c2895-224">A new version of the class library .dll file is compiled and saved in the specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
+  
+## <a name="modifying-the-runtime-class"></a><span data-ttu-id="c2895-225">Modificare la classe di runtime</span><span class="sxs-lookup"><span data-stu-id="c2895-225">Modifying the Runtime Class</span></span>  
+  
+#### <a name="to-modify-the-runtime-class"></a><span data-ttu-id="c2895-226">Per modificare la classe di runtime</span><span class="sxs-lookup"><span data-stu-id="c2895-226">To modify the runtime class</span></span>  
+  
+1.  <span data-ttu-id="c2895-227">In Visual Studio scegliere **Apri** dal menu **File** e quindi fare clic su **Progetto/Soluzione**.</span><span class="sxs-lookup"><span data-stu-id="c2895-227">In Visual Studio, on the **File** menu, point to **Open**, and then click **Project/Solution**.</span></span>  
+  
+2.  <span data-ttu-id="c2895-228">Nella finestra di dialogo **Apri progetto** fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Proprietà**.</span><span class="sxs-lookup"><span data-stu-id="c2895-228">In the **Open Project** dialog box, right-click the TypeEquivalenceRuntime project and click **Properties**.</span></span> <span data-ttu-id="c2895-229">Fare clic sulla scheda **Applicazione** . Fare clic sul pulsante **Informazioni assembly**.</span><span class="sxs-lookup"><span data-stu-id="c2895-229">Click the **Application** tab. Click the **Assembly Information** button.</span></span> <span data-ttu-id="c2895-230">Modificare i valori di **Versione assembly** e **Versione file** in `2.0.0.0`.</span><span class="sxs-lookup"><span data-stu-id="c2895-230">Change the **Assembly Version** and **File Version** values to `2.0.0.0`.</span></span>  
+  
+3.  <span data-ttu-id="c2895-231">Aprire il SampleClass.vbfile.</span><span class="sxs-lookup"><span data-stu-id="c2895-231">Open the SampleClass.vbfile.</span></span> <span data-ttu-id="c2895-232">Aggiungere le seguenti righe di codice alla classe SampleClass.</span><span class="sxs-lookup"><span data-stu-id="c2895-232">Add the following lines of code to the SampleClass class.</span></span>  
   
 ```vb  
 Public Function GetDate() As DateTime Implements ISampleInterface.GetDate  
@@ -180,15 +225,14 @@ End Function
   
      Save the file.  
   
-4.  Salvare il progetto.  
+4.  <span data-ttu-id="c2895-233">Salvare il progetto.</span><span class="sxs-lookup"><span data-stu-id="c2895-233">Save the project.</span></span>  
   
-5.  Pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Build**. Una versione aggiornata del file. dll della libreria di classe viene compilata e salvata nel percorso di output di compilazione specificata in precedenza (ad esempio, C:\TypeEquivalenceSample).  
+5.  <span data-ttu-id="c2895-234">Fare clic con il pulsante destro del mouse sul progetto TypeEquivalenceRuntime e fare clic su **Compila**.</span><span class="sxs-lookup"><span data-stu-id="c2895-234">Right-click the TypeEquivalenceRuntime project and click **Build**.</span></span> <span data-ttu-id="c2895-235">Una versione aggiornata del file DLL della libreria di classi viene compilata e salvata nel percorso dell'output di compilazione specificato in precedenza, ad esempio C:\TypeEquivalenceSample.</span><span class="sxs-lookup"><span data-stu-id="c2895-235">An updated version of the class library .dll file is compiled and saved in the previously specified build output path (for example, C:\TypeEquivalenceSample).</span></span>  
   
-6.  In Esplora File, aprire la cartella del percorso di output (ad esempio, C:\TypeEquivalenceSample). Fare doppio clic su TypeEquivalenceClient.exe per eseguire il programma. Il programma rifletterà la nuova versione dell'assembly TypeEquivalenceRuntime senza essere stato ricompilato.  
+6.  <span data-ttu-id="c2895-236">In Esplora File aprire la cartella del percorso di output, ad esempio C:\TypeEquivalenceSample.</span><span class="sxs-lookup"><span data-stu-id="c2895-236">In File Explorer, open the output path folder (for example, C:\TypeEquivalenceSample).</span></span> <span data-ttu-id="c2895-237">Fare doppio clic su TypeEquivalenceClient.exe per eseguire il programma.</span><span class="sxs-lookup"><span data-stu-id="c2895-237">Double-click the TypeEquivalenceClient.exe to run the program.</span></span> <span data-ttu-id="c2895-238">Il programma rifletterà la nuova versione dell'assembly TypeEquivalenceRuntime senza dover essere ricompilato.</span><span class="sxs-lookup"><span data-stu-id="c2895-238">The program will reflect the new version of the TypeEquivalenceRuntime assembly without having been recompiled.</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [/Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)   
- [Concetti di programmazione](../../../../visual-basic/programming-guide/concepts/index.md)   
- [Programmazione con assembly](http://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6)   
- [Gli assembly e Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="c2895-239">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="c2895-239">See Also</span></span>  
+ [<span data-ttu-id="c2895-240">/link (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c2895-240">/link (Visual Basic)</span></span>](../../../../visual-basic/reference/command-line-compiler/link.md)  
+ [<span data-ttu-id="c2895-241">Nozioni di base sulla programmazione</span><span class="sxs-lookup"><span data-stu-id="c2895-241">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [<span data-ttu-id="c2895-242">Programmazione con gli assembly</span><span class="sxs-lookup"><span data-stu-id="c2895-242">Programming with Assemblies</span></span>](../../../../framework/app-domains/programming-with-assemblies.md)  
+ [<span data-ttu-id="c2895-243">Assembly e Global Assembly Cache (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c2895-243">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)

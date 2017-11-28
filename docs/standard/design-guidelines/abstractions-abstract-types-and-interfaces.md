@@ -1,52 +1,50 @@
 ---
-title: "Astrazioni (interfacce e tipi astratti) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "astratta interfacce [.NET Framework]"
-  - "interfacce astratte [.NET Framework]"
-  - "tipi astratti [.NET Framework]"
-  - "astratta tipi [.NET Framework]"
+title: Astrazioni (interfacce e tipi astratti)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interfaces [.NET Framework], abstract
+- abstract interfaces [.NET Framework]
+- abstract types [.NET Framework]
+- types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d601ab89b08dd9e9bd0b27d2cfb1c495c33a2786
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Astrazioni (interfacce e tipi astratti)
-Un'astrazione è un tipo che descrive un contratto, ma non fornisce un'implementazione completa del contratto. Astrazioni vengono in genere implementate come classi astratte o interfacce, e hanno un set ben definito della documentazione di riferimento che descrive la semantica dei tipi di implementazione del contratto richiesta. Alcune delle astrazioni più importanti in .NET Framework includono <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, e <xref:System.Object>.  
+# <a name="abstractions-abstract-types-and-interfaces"></a><span data-ttu-id="10379-102">Astrazioni (interfacce e tipi astratti)</span><span class="sxs-lookup"><span data-stu-id="10379-102">Abstractions (Abstract Types and Interfaces)</span></span>
+<span data-ttu-id="10379-103">Un'astrazione è un tipo che descrive un contratto, ma non fornisce un'implementazione completa del contratto.</span><span class="sxs-lookup"><span data-stu-id="10379-103">An abstraction is a type that describes a contract but does not provide a full implementation of the contract.</span></span> <span data-ttu-id="10379-104">Astrazioni sono in genere implementate come classi astratte o interfacce, e hanno un set ben definito della documentazione di riferimento che descrive la semantica dei tipi che implementa il contratto richiesta.</span><span class="sxs-lookup"><span data-stu-id="10379-104">Abstractions are usually implemented as abstract classes or interfaces, and they come with a well-defined set of reference documentation describing the required semantics of the types implementing the contract.</span></span> <span data-ttu-id="10379-105">Le astrazioni più importanti in .NET Framework includono <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, e <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="10379-105">Some of the most important abstractions in the .NET Framework include <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, and <xref:System.Object>.</span></span>  
   
- È possibile estendere Framework implementando un tipo concreto che supporta il contratto di un'astrazione e utilizzo di questo tipo concreto con framework API consumer \(opera in\) l'astrazione.  
+ <span data-ttu-id="10379-106">È possibile estendere Framework implementando un tipo concreto che supporta il contratto di astrazione e utilizzo di questo tipo concreto con framework API consumer (eseguito) l'astrazione.</span><span class="sxs-lookup"><span data-stu-id="10379-106">You can extend frameworks by implementing a concrete type that supports the contract of an abstraction and using this concrete type with framework APIs consuming (operating on) the abstraction.</span></span>  
   
- È molto difficile progettare un'astrazione significativa e utile che è in grado di sopportare il test di tempo. La difficoltà principale riceve il set di membri, non è più e meno non corretto. Se un'astrazione ha troppi membri, diventa difficile o addirittura impossibili da implementare. In caso affermativo troppo pochi membri per la funzionalità promesso diventa inutile in molti scenari interessanti.  
+ <span data-ttu-id="10379-107">Un'astrazione utile e significativa che è in grado di resistere il test di tempo è molto difficile da progettare.</span><span class="sxs-lookup"><span data-stu-id="10379-107">A meaningful and useful abstraction that is able to withstand the test of time is very difficult to design.</span></span> <span data-ttu-id="10379-108">La difficoltà principale sta per diventare il set corretto di membri, non sono più presenti e non un numero inferiore.</span><span class="sxs-lookup"><span data-stu-id="10379-108">The main difficulty is getting the right set of members, no more and no fewer.</span></span> <span data-ttu-id="10379-109">Se un'astrazione ha troppi membri, diventa difficili o impossibili da implementare.</span><span class="sxs-lookup"><span data-stu-id="10379-109">If an abstraction has too many members, it becomes difficult or even impossible to implement.</span></span> <span data-ttu-id="10379-110">Se dispone di membri insufficienti per la funzionalità promesso, diventa inutilizzabile in molti scenari interessanti.</span><span class="sxs-lookup"><span data-stu-id="10379-110">If it has too few members for the promised functionality, it becomes useless in many interesting scenarios.</span></span>  
   
- Troppi astrazioni in un framework anche influire negativamente sull'usabilità del framework. È spesso molto difficile da comprendere un'astrazione senza informazioni sulle modalità di integrazione nell'immagine più grande di implementazioni concrete e le API utilizzano l'astrazione. Inoltre, i nomi delle astrazioni e i relativi membri sono necessariamente astratti che spesso li rende difficile e inaccessibile senza prima conoscere il contesto più ampio del loro utilizzo.  
+ <span data-ttu-id="10379-111">Troppi astrazioni in un framework anche influire negativamente sull'usabilità del framework.</span><span class="sxs-lookup"><span data-stu-id="10379-111">Too many abstractions in a framework also negatively affect usability of the framework.</span></span> <span data-ttu-id="10379-112">È spesso molto difficile da comprendere un'astrazione senza conoscere come si inserisca nell'immagine più grande di API che viene applicato l'astrazione e le implementazioni concrete.</span><span class="sxs-lookup"><span data-stu-id="10379-112">It is often quite difficult to understand an abstraction without understanding how it fits into the larger picture of the concrete implementations and the APIs operating on the abstraction.</span></span> <span data-ttu-id="10379-113">Inoltre, i nomi di astrazioni e i relativi membri sono necessariamente astratti che spesso rende difficile e inaccessibile senza prima conoscere il contesto più ampio del loro utilizzo.</span><span class="sxs-lookup"><span data-stu-id="10379-113">Also, names of abstractions and their members are necessarily abstract, which often makes them cryptic and unapproachable without first understanding the broader context of their usage.</span></span>  
   
- Tuttavia, le astrazioni forniscono l'estensibilità estremamente potente che spesso non possono corrispondere ad altri meccanismi di estensibilità. Sono alla base di molti modelli di architettura, ad esempio plug\-in, inversione del controllo \(IoC\), le pipeline e così via. Inoltre, sono estremamente importanti per la testabilità di Framework. Astrazioni buona rendono possibile sottoporre a stub pesante dipendenze allo scopo di unit test. In sintesi, astrazioni sono responsabili per la ricchezza ricercata dei moderni Framework orientato a oggetti.  
+ <span data-ttu-id="10379-114">Tuttavia, astrazioni forniscono estensibilità estremamente efficaci che spesso non possono corrispondere a altri meccanismi di estensibilità.</span><span class="sxs-lookup"><span data-stu-id="10379-114">However, abstractions provide extremely powerful extensibility that the other extensibility mechanisms cannot often match.</span></span> <span data-ttu-id="10379-115">Sono alla base di molti modelli di architettura, ad esempio plug-in, inversione di controllo (IoC), le pipeline e così via.</span><span class="sxs-lookup"><span data-stu-id="10379-115">They are at the core of many architectural patterns, such as plug-ins, inversion of control (IoC), pipelines, and so on.</span></span> <span data-ttu-id="10379-116">Sono inoltre estremamente importante per la testabilità del Framework.</span><span class="sxs-lookup"><span data-stu-id="10379-116">They are also extremely important for testability of frameworks.</span></span> <span data-ttu-id="10379-117">Buona astrazioni rendono possibile sottoporre a stub pesante dipendenze allo scopo di unit test.</span><span class="sxs-lookup"><span data-stu-id="10379-117">Good abstractions make it possible to stub out heavy dependencies for the purpose of unit testing.</span></span> <span data-ttu-id="10379-118">In breve, le astrazioni sono responsabili per la ricchezza dei framework orientata agli oggetti moderno ricercata.</span><span class="sxs-lookup"><span data-stu-id="10379-118">In summary, abstractions are responsible for the sought-after richness of the modern object-oriented frameworks.</span></span>  
   
- **X non** fornisce astrazioni a meno che non vengono verificati per lo sviluppo di diverse implementazioni concrete e le API utilizzano le astrazioni.  
+ <span data-ttu-id="10379-119">**X non** forniscono astrazioni a meno che non vengono verificati per lo sviluppo di diverse implementazioni concrete e utilizzano le astrazioni di API.</span><span class="sxs-lookup"><span data-stu-id="10379-119">**X DO NOT** provide abstractions unless they are tested by developing several concrete implementations and APIs consuming the abstractions.</span></span>  
   
- **✓ si** scegliere con attenzione tra una classe astratta e un'interfaccia quando si progetta un'astrazione.  
+ <span data-ttu-id="10379-120">**✓ SI** quando si progetta un'astrazione scegliere con attenzione tra una classe astratta e un'interfaccia.</span><span class="sxs-lookup"><span data-stu-id="10379-120">**✓ DO** choose carefully between an abstract class and an interface when designing an abstraction.</span></span>  
   
- **✓ PROVARE** fornire test di riferimento per le implementazioni concrete delle astrazioni. Tali test dovrebbero consentire agli utenti di verificare la corretta implementazione del contratto.  
+ <span data-ttu-id="10379-121">**Provare a ✓** fornire test di riferimento per le implementazioni concrete di astrazioni.</span><span class="sxs-lookup"><span data-stu-id="10379-121">**✓ CONSIDER** providing reference tests for concrete implementations of abstractions.</span></span> <span data-ttu-id="10379-122">Tali test dovrebbero consentire agli utenti di verificare la corretta implementazione del contratto.</span><span class="sxs-lookup"><span data-stu-id="10379-122">Such tests should allow users to test whether their implementations correctly implement the contract.</span></span>  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*  
+ <span data-ttu-id="10379-123">*Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="10379-123">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Ristampato con l'autorizzazione di Pearson formazione, Inc. da [Framework Design Guidelines: convenzioni idiomi e modelli per librerie .NET riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicati il 22 ottobre 2008 da Addison\-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ <span data-ttu-id="10379-124">*State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="10379-124">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vedere anche  
- [Linee guida](../../../docs/standard/design-guidelines/index.md)   
- [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a><span data-ttu-id="10379-125">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="10379-125">See Also</span></span>  
+ [<span data-ttu-id="10379-126">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="10379-126">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="10379-127">Progettazione di estendibilità</span><span class="sxs-lookup"><span data-stu-id="10379-127">Designing for Extensibility</span></span>](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

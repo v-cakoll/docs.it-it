@@ -1,42 +1,45 @@
 ---
-title: "Procedura: aggiungere un&#39;animazione alle traslazioni tridimensionali | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "3D (conversioni), animazione"
-  - "animazione, 3D (conversioni)"
+title: 'Procedura: aggiungere un''animazione alle traslazioni tridimensionali'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], 3-D translations
+- 3-D translations [WPF], animating
 ms.assetid: d4eece1f-0cd2-4a2c-8370-293354c380e4
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a0477943b715a23a1d6992f7e9da885ffa01061c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: aggiungere un&#39;animazione alle traslazioni tridimensionali
-In questo argomento viene illustrata la procedura per aggiungere un'animazione a una trasformazione di traslazione impostata in un modello [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)].  
+# <a name="how-to-animate-3-d-translations"></a><span data-ttu-id="ad441-102">Procedura: aggiungere un'animazione alle traslazioni tridimensionali</span><span class="sxs-lookup"><span data-stu-id="ad441-102">How to: Animate 3-D Translations</span></span>
+<span data-ttu-id="ad441-103">In questo argomento viene illustrato come aggiungere un'animazione a una trasformazione conversione impostata su un [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] modello.</span><span class="sxs-lookup"><span data-stu-id="ad441-103">This topic demonstrates how to animate a translation transformation set on a [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] model.</span></span>  
   
- Nel codice riportato di seguito viene mostrata l'applicazione di un oggetto <xref:System.Windows.Media.Media3D.TranslateTransform3D> alla proprietà <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> di un oggetto <xref:System.Windows.Media.Media3D.GeometryModel3D>.  
+ <span data-ttu-id="ad441-104">Il codice seguente viene illustrata l'applicazione di un <xref:System.Windows.Media.Media3D.TranslateTransform3D> dell'oggetto per il <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> proprietà di un <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span><span class="sxs-lookup"><span data-stu-id="ad441-104">The code below shows the application of a <xref:System.Windows.Media.Media3D.TranslateTransform3D> object to the <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> property of a <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
   
- [!code-xml[Animation3DGallery_snip#Translation3DAnimationInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationinline1)]  
+ [!code-xaml[Animation3DGallery_snip#Translation3DAnimationInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationinline1)]  
   
- È possibile aggiungere un'animazione alla proprietà <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A> di tale oggetto <xref:System.Windows.Media.Media3D.TranslateTransform3D> utilizzando il codice riportato di seguito.  
+ <span data-ttu-id="ad441-105">Il <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A> proprietà di questo <xref:System.Windows.Media.Media3D.TranslateTransform3D> oggetto animato utilizzando il codice riportato di seguito.</span><span class="sxs-lookup"><span data-stu-id="ad441-105">The <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A> property of this <xref:System.Windows.Media.Media3D.TranslateTransform3D> object is animated using the code below.</span></span>  
   
- [!code-xml[Animation3DGallery_snip#Translation3DAnimationInline2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationinline2)]  
+ [!code-xaml[Animation3DGallery_snip#Translation3DAnimationInline2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationinline2)]  
   
-## Esempio  
- Nel codice riportato di seguito viene illustrato l'esempio completo.  
+## <a name="example"></a><span data-ttu-id="ad441-106">Esempio</span><span class="sxs-lookup"><span data-stu-id="ad441-106">Example</span></span>  
+ <span data-ttu-id="ad441-107">Il codice seguente viene illustrato l'esempio completo.</span><span class="sxs-lookup"><span data-stu-id="ad441-107">The following code shows the entire sample.</span></span>  
   
- [!code-xml[Animation3DGallery_snip#Translation3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
+ [!code-xaml[Animation3DGallery_snip#Translation3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
   
-## Vedere anche  
- [Cenni preliminari sull'animazione](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Creare una scena tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)   
- [Cenni preliminari sulla grafica tridimensionale](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)   
- [Cenni preliminari sulle trasformazioni](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a><span data-ttu-id="ad441-108">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ad441-108">See Also</span></span>  
+ [<span data-ttu-id="ad441-109">Cenni preliminari sull'animazione</span><span class="sxs-lookup"><span data-stu-id="ad441-109">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="ad441-110">Creare una scena tridimensionale</span><span class="sxs-lookup"><span data-stu-id="ad441-110">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="ad441-111">Panoramica sulla grafica tridimensionale</span><span class="sxs-lookup"><span data-stu-id="ad441-111">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
+ [<span data-ttu-id="ad441-112">Cenni preliminari sulle trasformazioni</span><span class="sxs-lookup"><span data-stu-id="ad441-112">Transforms Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

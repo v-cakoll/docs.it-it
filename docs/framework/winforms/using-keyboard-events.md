@@ -1,53 +1,54 @@
 ---
-title: "Using Keyboard Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "KeyPress event"
-  - "keyboards, keyboard events"
-  - "KeyUp event"
-  - "KeyDown event"
-  - "keyboard events"
-  - "events [Windows Forms], keyboard"
+title: Utilizzo degli eventi di tastiera
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- KeyPress event [Windows Forms]
+- keyboards [Windows Forms], keyboard events
+- KeyUp event
+- KeyDown event
+- keyboard events
+- events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 19bad48188a039baeeb6365a2cd38671f83fca4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Using Keyboard Events
-La maggioranza dei programmi di Windows Form elabora gli input della tastiera tramite gestione dei relativi eventi.  Questo argomento fornisce una panoramica degli eventi di tastiera, inclusi dettagli su quando usare ogni evento e sui dati forniti per ogni evento.  Vedere anche [Panoramica dei gestori eventi \(Windows Form\)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Panoramica degli eventi \(Windows Form\)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
+# <a name="using-keyboard-events"></a><span data-ttu-id="4e8e6-102">Utilizzo degli eventi di tastiera</span><span class="sxs-lookup"><span data-stu-id="4e8e6-102">Using Keyboard Events</span></span>
+<span data-ttu-id="4e8e6-103">La maggioranza dei programmi di Windows Form elabora gli input della tastiera tramite gestione dei relativi eventi.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-103">Most Windows Forms programs process keyboard input by handling the keyboard events.</span></span> <span data-ttu-id="4e8e6-104">Questo argomento fornisce una panoramica degli eventi di tastiera, inclusi dettagli su quando usare ogni evento e sui dati forniti per ogni evento.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-104">This topic provides an overview of the keyboard events, including details on when to use each event and the data that is supplied for each event.</span></span>  <span data-ttu-id="4e8e6-105">Vedere anche [panoramica dei gestori eventi (Windows Form)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Cenni preliminari sugli eventi (Windows Form)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="4e8e6-105">Also see [Event Handlers Overview (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Events Overview (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).</span></span>  
   
-## Eventi della tastiera  
- Windows Form include due eventi che si verificano quando un utente preme un tasto e un evento che si verifica quando un utente rilascia un tasto:  
+## <a name="keyboard-events"></a><span data-ttu-id="4e8e6-106">Eventi della tastiera</span><span class="sxs-lookup"><span data-stu-id="4e8e6-106">Keyboard Events</span></span>  
+ <span data-ttu-id="4e8e6-107">Windows Form include due eventi che si verificano quando un utente preme un tasto e un evento che si verifica quando un utente rilascia un tasto:</span><span class="sxs-lookup"><span data-stu-id="4e8e6-107">Windows Forms provides two events that occur when a user presses a keyboard key and one event when a user releases a keyboard key:</span></span>  
   
--   L'evento <xref:System.Windows.Forms.Control.KeyDown> si verifica una volta.  
+-   <span data-ttu-id="4e8e6-108">L'evento <xref:System.Windows.Forms.Control.KeyDown> si verifica una volta.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-108">The <xref:System.Windows.Forms.Control.KeyDown> event occurs once</span></span>  
   
--   L'evento <xref:System.Windows.Forms.Control.KeyPress>, che può verificarsi più volte quando un utente tiene premuto lo stesso tasto.  
+-   <span data-ttu-id="4e8e6-109">L'evento <xref:System.Windows.Forms.Control.KeyPress>, che può verificarsi più volte quando un utente tiene premuto lo stesso tasto.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-109">The <xref:System.Windows.Forms.Control.KeyPress> event, which can occur multiple times when a user holds down the same key.</span></span>  
   
--   L'evento <xref:System.Windows.Forms.Control.KeyUp> si verifica una volta quando un utente rilascia un tasto.  
+-   <span data-ttu-id="4e8e6-110">L'evento <xref:System.Windows.Forms.Control.KeyUp> si verifica una volta quando un utente rilascia un tasto. </span><span class="sxs-lookup"><span data-stu-id="4e8e6-110">The <xref:System.Windows.Forms.Control.KeyUp> event occurs once when a user releases a key.</span></span>  
   
- Quando un utente preme un tasto, Windows Form determina quale evento generare in base al fatto che il messaggio della tastiera specifichi un tasto carattere o fisico.  Per altre informazioni sui tasti caratteri e sui tasti fisici, vedere [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md).  
+ <span data-ttu-id="4e8e6-111">Quando un utente preme un tasto, Windows Form determina quale evento generare in base al fatto che il messaggio della tastiera specifichi un tasto carattere o fisico.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-111">When a user presses a key, Windows Forms determines which event to raise based on whether the keyboard message specifies a character key or a physical key.</span></span> <span data-ttu-id="4e8e6-112">Per ulteriori informazioni sulle chiavi fisiche e di carattere, vedere [tastiera funzionamento dell'Input](../../../docs/framework/winforms/how-keyboard-input-works.md).</span><span class="sxs-lookup"><span data-stu-id="4e8e6-112">For more information about character and physical keys, see [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md).</span></span>  
   
- La tabella seguente illustra i tre eventi di tastiera.  
+ <span data-ttu-id="4e8e6-113">La tabella seguente illustra i tre eventi di tastiera.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-113">The following table describes the three keyboard events.</span></span>  
   
-|Evento della tastiera|Descrizione|Risultati|  
-|---------------------------|-----------------|---------------|  
-|<xref:System.Windows.Forms.Control.KeyDown>|L'evento viene generato quando un utente preme un tasto fisico.|Il gestore per <xref:System.Windows.Forms.Control.KeyDown> riceve:<br /><br /> <ul><li>Un parametro <xref:System.Windows.Forms.KeyEventArgs>, che fornisce la proprietà <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> \(che specifica un tasto fisico\).</li><li>La proprietà <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> \(MAIUSC, CTRL o ALT\).</li><li>La proprietà <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>, che combina il codice tasto e il modificatore.  Il parametro <xref:System.Windows.Forms.KeyEventArgs> include inoltre:<br /><br /> <ul><li>La proprietà <xref:System.Windows.Forms.KeyEventArgs.Handled%2A>, che può essere impostata per impedire al controllo sottostante di ricevere il tasto.</li><li>La proprietà <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A>, utilizzabile per eliminare gli eventi <xref:System.Windows.Forms.Control.KeyPress> e <xref:System.Windows.Forms.Control.KeyUp> per la sequenza di tasti.</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyPress>|L'evento viene generato quando il tasto o i tasti premuti corrispondono a un carattere.  Ad esempio, se un utente preme i tasti MAIUSC e "a" minuscola, il risultato sarà la lettera "A" maiuscola.|<xref:System.Windows.Forms.Control.KeyPress> viene generato dopo <xref:System.Windows.Forms.Control.KeyDown>.<br /><br /> <ul><li>Il gestore per <xref:System.Windows.Forms.Control.KeyPress> riceve:</li><li>Un parametro <xref:System.Windows.Forms.KeyPressEventArgs>, che include il codice carattere del tasto premuto.   Il codice carattere è univoco per ogni combinazione di tasto carattere e tasto modificatore.<br /><br />     Ad esempio, il tasto "A" avrà il risultato seguente:<br /><br /> <ul><li>Il codice carattere 65, se premuto con il tasto MAIUSC</li><li>Oppure il tasto BLOC MAIUSC, 97 se premuto da solo</li><li>E 1, se premuto con il tasto CTRL</li></ul></li></ul>|  
-|<xref:System.Windows.Forms.Control.KeyUp>|L'evento viene generato quando un utente rilascia un tasto fisico.|Il gestore per <xref:System.Windows.Forms.Control.KeyUp> riceve:<br /><br /> <ul><li>Un parametro <xref:System.Windows.Forms.KeyEventArgs>:<br /><br /> <ul><li>Che fornisce la proprietà <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> \(che specifica un tasto fisico\).</li><li>La proprietà <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> \(MAIUSC, CTRL o ALT\).</li><li>La proprietà <xref:System.Globalization.SortKey.KeyData%2A>, che combina il codice tasto e il modificatore.</li></ul></li></ul>|  
+|<span data-ttu-id="4e8e6-114">Evento della tastiera</span><span class="sxs-lookup"><span data-stu-id="4e8e6-114">Keyboard event</span></span>|<span data-ttu-id="4e8e6-115">Descrizione</span><span class="sxs-lookup"><span data-stu-id="4e8e6-115">Description</span></span>|<span data-ttu-id="4e8e6-116">Risultati</span><span class="sxs-lookup"><span data-stu-id="4e8e6-116">Results</span></span>|  
+|--------------------|-----------------|-------------|  
+|<xref:System.Windows.Forms.Control.KeyDown>|<span data-ttu-id="4e8e6-117">L'evento viene generato quando un utente preme un tasto fisico.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-117">This event is raised when a user presses a physical key.</span></span>|<span data-ttu-id="4e8e6-118">Il gestore per <xref:System.Windows.Forms.Control.KeyDown> riceve:</span><span class="sxs-lookup"><span data-stu-id="4e8e6-118">The handler for <xref:System.Windows.Forms.Control.KeyDown> receives:</span></span><br /><br /> <ul><li><span data-ttu-id="4e8e6-119">Un parametro <xref:System.Windows.Forms.KeyEventArgs>, che fornisce la proprietà <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (che specifica un tasto fisico).</span><span class="sxs-lookup"><span data-stu-id="4e8e6-119">A <xref:System.Windows.Forms.KeyEventArgs> parameter, which provides the <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> property (which specifies a physical keyboard button).</span></span></li><li><span data-ttu-id="4e8e6-120">La proprietà <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> (MAIUSC, CTRL o ALT).</span><span class="sxs-lookup"><span data-stu-id="4e8e6-120">The <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> property (SHIFT, CTRL, or ALT).</span></span></li><li><span data-ttu-id="4e8e6-121">La proprietà <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A>, che combina il codice tasto e il modificatore.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-121">The <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> property (which combines the key code and modifier).</span></span> <span data-ttu-id="4e8e6-122">Il parametro <xref:System.Windows.Forms.KeyEventArgs> include inoltre:</span><span class="sxs-lookup"><span data-stu-id="4e8e6-122">The <xref:System.Windows.Forms.KeyEventArgs> parameter also provides:</span></span><br /><br /> <ul><li><span data-ttu-id="4e8e6-123">La proprietà <xref:System.Windows.Forms.KeyEventArgs.Handled%2A>, che può essere impostata per impedire al controllo sottostante di ricevere il tasto.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-123">The <xref:System.Windows.Forms.KeyEventArgs.Handled%2A> property, which can be set to prevent the underlying control from receiving the key.</span></span></li><li><span data-ttu-id="4e8e6-124">La proprietà <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A>, utilizzabile per eliminare gli eventi <xref:System.Windows.Forms.Control.KeyPress> e <xref:System.Windows.Forms.Control.KeyUp> per la sequenza di tasti.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-124">The <xref:System.Windows.Forms.KeyEventArgs.SuppressKeyPress%2A> property, which can be used to suppress the <xref:System.Windows.Forms.Control.KeyPress> and <xref:System.Windows.Forms.Control.KeyUp> events for that keystroke.</span></span></li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyPress>|<span data-ttu-id="4e8e6-125">L'evento viene generato quando il tasto o i tasti premuti corrispondono a un carattere.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-125">This event is raised when the key or keys pressed result in a character.</span></span> <span data-ttu-id="4e8e6-126">Ad esempio, se un utente preme i tasti MAIUSC e "a" minuscola, il risultato sarà la lettera "A" maiuscola.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-126">For example, a user presses SHIFT and the lowercase "a" keys, which result in a capital letter "A" character.</span></span>|<span data-ttu-id="4e8e6-127"><xref:System.Windows.Forms.Control.KeyPress> viene generato dopo <xref:System.Windows.Forms.Control.KeyDown>.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-127"><xref:System.Windows.Forms.Control.KeyPress> is raised after <xref:System.Windows.Forms.Control.KeyDown>.</span></span><br /><br /> <ul><li><span data-ttu-id="4e8e6-128">Il gestore per <xref:System.Windows.Forms.Control.KeyPress> riceve:</span><span class="sxs-lookup"><span data-stu-id="4e8e6-128">The handler for <xref:System.Windows.Forms.Control.KeyPress> receives:</span></span></li><li><span data-ttu-id="4e8e6-129">Un parametro <xref:System.Windows.Forms.KeyPressEventArgs>, che include il codice carattere del tasto premuto.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-129">A <xref:System.Windows.Forms.KeyPressEventArgs> parameter, which contains the character code of the key that was pressed.</span></span> <span data-ttu-id="4e8e6-130">Il codice carattere è univoco per ogni combinazione di tasto carattere e tasto modificatore.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-130">This character code is unique for every combination of a character key and a modifier key.</span></span><br /><br />     <span data-ttu-id="4e8e6-131">Ad esempio, il tasto "A" avrà il risultato seguente:</span><span class="sxs-lookup"><span data-stu-id="4e8e6-131">For example, the "A" key will generate:</span></span><br /><br /> <ul><li><span data-ttu-id="4e8e6-132">Il codice carattere 65, se premuto con il tasto MAIUSC</span><span class="sxs-lookup"><span data-stu-id="4e8e6-132">The character code 65, if it is pressed with the SHIFT key</span></span></li><li><span data-ttu-id="4e8e6-133">Oppure il tasto BLOC MAIUSC, 97 se premuto da solo</span><span class="sxs-lookup"><span data-stu-id="4e8e6-133">Or the CAPS LOCK key, 97 if it is pressed by itself,</span></span></li><li><span data-ttu-id="4e8e6-134">E 1, se premuto con il tasto CTRL</span><span class="sxs-lookup"><span data-stu-id="4e8e6-134">And 1, if it is pressed with the CTRL key.</span></span></li></ul></li></ul>|  
+|<xref:System.Windows.Forms.Control.KeyUp>|<span data-ttu-id="4e8e6-135">L'evento viene generato quando un utente rilascia un tasto fisico.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-135">This event is raised when a user releases a physical key.</span></span>|<span data-ttu-id="4e8e6-136">Il gestore per <xref:System.Windows.Forms.Control.KeyUp> riceve:</span><span class="sxs-lookup"><span data-stu-id="4e8e6-136">The handler for <xref:System.Windows.Forms.Control.KeyUp> receives:</span></span><br /><br /> <ul><li><span data-ttu-id="4e8e6-137">Un parametro <xref:System.Windows.Forms.KeyEventArgs>:</span><span class="sxs-lookup"><span data-stu-id="4e8e6-137">A <xref:System.Windows.Forms.KeyEventArgs> parameter:</span></span><br /><br /> <ul><li><span data-ttu-id="4e8e6-138">Che fornisce la proprietà <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> (che specifica un tasto fisico).</span><span class="sxs-lookup"><span data-stu-id="4e8e6-138">Which provides the <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> property (which specifies a physical keyboard button).</span></span></li><li><span data-ttu-id="4e8e6-139">La proprietà <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> (MAIUSC, CTRL o ALT).</span><span class="sxs-lookup"><span data-stu-id="4e8e6-139">The <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> property (SHIFT, CTRL, or ALT).</span></span></li><li><span data-ttu-id="4e8e6-140">La proprietà <xref:System.Globalization.SortKey.KeyData%2A>, che combina il codice tasto e il modificatore.</span><span class="sxs-lookup"><span data-stu-id="4e8e6-140">The <xref:System.Globalization.SortKey.KeyData%2A> property (which combines the key code and modifier).</span></span></li></ul></li></ul>|  
   
-## Vedere anche  
- [Keyboard Input in a Windows Forms Application](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)   
- [How Keyboard Input Works](../../../docs/framework/winforms/how-keyboard-input-works.md)   
- [Mouse Input in a Windows Forms Application](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a><span data-ttu-id="4e8e6-141">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4e8e6-141">See Also</span></span>  
+ [<span data-ttu-id="4e8e6-142">Input da tastiera in un'applicazione Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4e8e6-142">Keyboard Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [<span data-ttu-id="4e8e6-143">Funzionamento dell'input da tastiera</span><span class="sxs-lookup"><span data-stu-id="4e8e6-143">How Keyboard Input Works</span></span>](../../../docs/framework/winforms/how-keyboard-input-works.md)  
+ [<span data-ttu-id="4e8e6-144">Input del mouse in un'applicazione Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4e8e6-144">Mouse Input in a Windows Forms Application</span></span>](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

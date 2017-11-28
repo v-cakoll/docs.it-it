@@ -1,72 +1,73 @@
 ---
-title: "Stili e modelli di StatusBar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate [WPF], StatusBar"
-  - "parti [WPF], StatusBar"
-  - "stati [WPF], StatusBar"
-  - "StatusBar [WPF], stili e modelli"
-  - "stili [WPF], StatusBar"
-  - "modelli [WPF], StatusBar"
+title: Stili e modelli di StatusBar
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ControlTemplate [WPF], StatusBar
+- styles [WPF], StatusBar
+- templates [WPF], StatusBar
+- states [WPF], StatusBar
+- parts [WPF], StatusBar
+- StatusBar [WPF], styles and templates
 ms.assetid: 9f5e1c25-81eb-4756-a0ac-d9e1fbe33ee2
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 570edc023467fb6e95cdcba23b75ac53397797c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Stili e modelli di StatusBar
-In questo argomento vengono descritti gli stili e i modelli per il controllo <xref:System.Windows.Controls.Primitives.StatusBar>.  È possibile modificare l'oggetto <xref:System.Windows.Controls.ControlTemplate> predefinito per conferire al controllo un aspetto univoco.  Per ulteriori informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+# <a name="statusbar-styles-and-templates"></a><span data-ttu-id="a7361-102">Stili e modelli di StatusBar</span><span class="sxs-lookup"><span data-stu-id="a7361-102">StatusBar Styles and Templates</span></span>
+<span data-ttu-id="a7361-103">In questo argomento vengono descritti gli stili e modelli per il <xref:System.Windows.Controls.Primitives.StatusBar> controllo.</span><span class="sxs-lookup"><span data-stu-id="a7361-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.Primitives.StatusBar> control.</span></span> <span data-ttu-id="a7361-104">È possibile modificare il valore predefinito <xref:System.Windows.Controls.ControlTemplate> per fornire al controllo un aspetto univoco.</span><span class="sxs-lookup"><span data-stu-id="a7361-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="a7361-105">Per altre informazioni, vedere [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="a7361-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Parti di StatusBar  
- Il controllo <xref:System.Windows.Controls.Primitives.StatusBar> non include parti denominate.  
+## <a name="statusbar-parts"></a><span data-ttu-id="a7361-106">Parti di StatusBar</span><span class="sxs-lookup"><span data-stu-id="a7361-106">StatusBar Parts</span></span>  
+ <span data-ttu-id="a7361-107">Il <xref:System.Windows.Controls.Primitives.StatusBar> controllo non dispone di parti denominate.</span><span class="sxs-lookup"><span data-stu-id="a7361-107">The <xref:System.Windows.Controls.Primitives.StatusBar> control does not have any named parts.</span></span>  
   
-## Stati di StatusBar  
- Nella tabella seguente sono elencati gli stati visivi per il controllo <xref:System.Windows.Controls.Primitives.StatusBar>.  
+## <a name="statusbar-states"></a><span data-ttu-id="a7361-108">Stati di StatusBar</span><span class="sxs-lookup"><span data-stu-id="a7361-108">StatusBar States</span></span>  
+ <span data-ttu-id="a7361-109">Nella tabella seguente sono elencati gli stati visivi per la <xref:System.Windows.Controls.Primitives.StatusBar> controllo.</span><span class="sxs-lookup"><span data-stu-id="a7361-109">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.StatusBar> control.</span></span>  
   
-||||  
+|<span data-ttu-id="a7361-110">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="a7361-110">VisualState Name</span></span>|<span data-ttu-id="a7361-111">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="a7361-111">VisualStateGroup Name</span></span>|<span data-ttu-id="a7361-112">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a7361-112">Description</span></span>|  
 |-|-|-|  
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Valid|ValidationStates|Il controllo utilizza la classe <xref:System.Windows.Controls.Validation> e la proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `false`.|  
-|InvalidFocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo non ha lo stato attivo.|  
+|<span data-ttu-id="a7361-113">Valido</span><span class="sxs-lookup"><span data-stu-id="a7361-113">Valid</span></span>|<span data-ttu-id="a7361-114">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="a7361-114">ValidationStates</span></span>|<span data-ttu-id="a7361-115">Il controllo Usa il <xref:System.Windows.Controls.Validation> classe e <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.</span><span class="sxs-lookup"><span data-stu-id="a7361-115">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="a7361-116">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="a7361-116">InvalidFocused</span></span>|<span data-ttu-id="a7361-117">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="a7361-117">ValidationStates</span></span>|<span data-ttu-id="a7361-118">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="a7361-118">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="a7361-119">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="a7361-119">InvalidUnfocused</span></span>|<span data-ttu-id="a7361-120">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="a7361-120">ValidationStates</span></span>|<span data-ttu-id="a7361-121">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.</span><span class="sxs-lookup"><span data-stu-id="a7361-121">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Parti di StatusBarItem  
- Il controllo <xref:System.Windows.Controls.Primitives.StatusBarItem> non include parti denominate.  
+## <a name="statusbaritem-parts"></a><span data-ttu-id="a7361-122">Parti di StatusBarItem</span><span class="sxs-lookup"><span data-stu-id="a7361-122">StatusBarItem Parts</span></span>  
+ <span data-ttu-id="a7361-123">Il <xref:System.Windows.Controls.Primitives.StatusBarItem> controllo non dispone di parti denominate.</span><span class="sxs-lookup"><span data-stu-id="a7361-123">The <xref:System.Windows.Controls.Primitives.StatusBarItem> control does not have any named parts.</span></span>  
   
-## Stati di StatusBar  
- Nella tabella seguente sono elencati gli stati visivi per il controllo <xref:System.Windows.Controls.Primitives.StatusBarItem>.  
+## <a name="statusbar-states"></a><span data-ttu-id="a7361-124">Stati di StatusBar</span><span class="sxs-lookup"><span data-stu-id="a7361-124">StatusBar States</span></span>  
+ <span data-ttu-id="a7361-125">Nella tabella seguente sono elencati gli stati visivi per la <xref:System.Windows.Controls.Primitives.StatusBarItem> controllo.</span><span class="sxs-lookup"><span data-stu-id="a7361-125">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.StatusBarItem> control.</span></span>  
   
-||||  
+|<span data-ttu-id="a7361-126">Nome VisualState</span><span class="sxs-lookup"><span data-stu-id="a7361-126">VisualState Name</span></span>|<span data-ttu-id="a7361-127">Nome VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="a7361-127">VisualStateGroup Name</span></span>|<span data-ttu-id="a7361-128">Descrizione</span><span class="sxs-lookup"><span data-stu-id="a7361-128">Description</span></span>|  
 |-|-|-|  
-|Nome VisualState|Nome VisualStateGroup|Descrizione|  
-|Valid|ValidationStates|Il controllo utilizza la classe <xref:System.Windows.Controls.Validation> e la proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `false`.|  
-|InvalidFocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo ha lo stato attivo.|  
-|InvalidUnfocused|ValidationStates|La proprietà associata <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName> è `true` e il controllo non ha lo stato attivo.|  
+|<span data-ttu-id="a7361-129">Valido</span><span class="sxs-lookup"><span data-stu-id="a7361-129">Valid</span></span>|<span data-ttu-id="a7361-130">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="a7361-130">ValidationStates</span></span>|<span data-ttu-id="a7361-131">Il controllo Usa il <xref:System.Windows.Controls.Validation> classe e <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `false`.</span><span class="sxs-lookup"><span data-stu-id="a7361-131">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="a7361-132">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="a7361-132">InvalidFocused</span></span>|<span data-ttu-id="a7361-133">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="a7361-133">ValidationStates</span></span>|<span data-ttu-id="a7361-134">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo ha lo stato attivo.</span><span class="sxs-lookup"><span data-stu-id="a7361-134">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="a7361-135">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="a7361-135">InvalidUnfocused</span></span>|<span data-ttu-id="a7361-136">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="a7361-136">ValidationStates</span></span>|<span data-ttu-id="a7361-137">Il <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> proprietà associata è `true` ha il controllo non è attivo.</span><span class="sxs-lookup"><span data-stu-id="a7361-137">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Esempio di ControlTemplate del controllo StatusBar  
- Nell'esempio seguente viene illustrato come definire un oggetto <xref:System.Windows.Controls.ControlTemplate> per il controllo <xref:System.Windows.Controls.Primitives.StatusBar>.  
+## <a name="statusbar-controltemplate-example"></a><span data-ttu-id="a7361-138">Esempio di ControlTemplate del controllo StatusBar</span><span class="sxs-lookup"><span data-stu-id="a7361-138">StatusBar ControlTemplate Example</span></span>  
+ <span data-ttu-id="a7361-139">Nell'esempio seguente viene illustrato come definire un <xref:System.Windows.Controls.ControlTemplate> per il <xref:System.Windows.Controls.Primitives.StatusBar> controllo.</span><span class="sxs-lookup"><span data-stu-id="a7361-139">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.Primitives.StatusBar> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#StatusBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/statusbar.xaml#statusbar)]  
+ [!code-xaml[ControlTemplateExamples#StatusBar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/statusbar.xaml#statusbar)]  
   
- <xref:System.Windows.Controls.ControlTemplate> utilizza una o più delle risorse seguenti.  
+ <span data-ttu-id="a7361-140">Il <xref:System.Windows.Controls.ControlTemplate> utilizza uno o più delle seguenti risorse.</span><span class="sxs-lookup"><span data-stu-id="a7361-140">The <xref:System.Windows.Controls.ControlTemplate> uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplate](http://go.microsoft.com/fwlink/?LinkID=160041) \(la pagina potrebbe essere in inglese\).  
+ <span data-ttu-id="a7361-141">Per l'esempio completo, vedere [Esempio di applicazione di stili con ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).</span><span class="sxs-lookup"><span data-stu-id="a7361-141">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Stili e modelli di Control](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [Personalizzazione dei controlli](../../../../docs/framework/wpf/controls/control-customization.md)   
- [Applicazione di stili e modelli](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="a7361-142">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a7361-142">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="a7361-143">Stili e modelli di Control</span><span class="sxs-lookup"><span data-stu-id="a7361-143">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="a7361-144">Personalizzazione dei controlli</span><span class="sxs-lookup"><span data-stu-id="a7361-144">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="a7361-145">Applicazione di stili e modelli</span><span class="sxs-lookup"><span data-stu-id="a7361-145">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="a7361-146">Personalizzazione dell'aspetto di un controllo esistente mediante la creazione di un oggetto ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="a7361-146">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

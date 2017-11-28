@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 68f1e217cdc6433270ecb8afe4149d2e37e4b014
-ms.contentlocale: it-it
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2ecfc61c5b586dd3385890d73ded729a38fb41c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="runtime-directives-rdxml-configuration-file-reference"></a>Riferimento a file di configurazione di direttive di runtime (rd.xml)
-Un file di direttive di runtime (rd.xml) è un file di configurazione XML che specifica se gli elementi del programma designato sono disponibili per la reflection. Ecco un esempio di un file di direttive di runtime:  
+# <a name="runtime-directives-rdxml-configuration-file-reference"></a><span data-ttu-id="1f7e4-102">Riferimento a file di configurazione di direttive di runtime (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="1f7e4-102">Runtime Directives (rd.xml) Configuration File Reference</span></span>
+<span data-ttu-id="1f7e4-103">Un file di direttive di runtime (rd.xml) è un file di configurazione XML che specifica se gli elementi del programma designato sono disponibili per la reflection.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-103">A runtime directives (.rd.xml) file is an XML configuration file that specifies whether designated program elements are available for reflection.</span></span> <span data-ttu-id="1f7e4-104">Ecco un esempio di un file di direttive di runtime:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-104">Here’s an example of a runtime directives file:</span></span>  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -42,100 +40,100 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
 </Directives>  
 ```  
   
-## <a name="the-structure-of-a-runtime-directives-file"></a>La struttura di un file di direttive di runtime  
- Il file di direttive di runtime usa lo spazio dei nomi `http://schemas.microsoft.com/netfx/2013/01/metadata`.  
+## <a name="the-structure-of-a-runtime-directives-file"></a><span data-ttu-id="1f7e4-105">La struttura di un file di direttive di runtime</span><span class="sxs-lookup"><span data-stu-id="1f7e4-105">The structure of a runtime directives file</span></span>  
+ <span data-ttu-id="1f7e4-106">Il file di direttive di runtime usa lo spazio dei nomi `http://schemas.microsoft.com/netfx/2013/01/metadata`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-106">The runtime directives file uses the `http://schemas.microsoft.com/netfx/2013/01/metadata` namespace.</span></span>  
   
- L'elemento radice è l'elemento [Directives](../../../docs/framework/net-native/directives-element-net-native.md). Può contenere zero o più elementi [Library](../../../docs/framework/net-native/library-element-net-native.md) e zero o un elemento [Application](../../../docs/framework/net-native/application-element-net-native.md), come illustrato nella struttura seguente. Gli attributi dell'elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) possono definire criteri di reflection di runtime a livello di applicazione oppure possono fungere da contenitore per gli elementi figlio. L'elemento [Library](../../../docs/framework/net-native/library-element-net-native.md), invece, è semplicemente un contenitore. Gli elementi figlio degli elementi [Application](../../../docs/framework/net-native/application-element-net-native.md) e [Library](../../../docs/framework/net-native/library-element-net-native.md) definiscono i tipi, i metodi, i campi, le proprietà e gli eventi disponibili per la reflection.  
+ <span data-ttu-id="1f7e4-107">L'elemento radice è l'elemento [Directives](../../../docs/framework/net-native/directives-element-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="1f7e4-107">The root element is the [Directives](../../../docs/framework/net-native/directives-element-net-native.md) element.</span></span> <span data-ttu-id="1f7e4-108">Può contenere zero o più elementi [Library](../../../docs/framework/net-native/library-element-net-native.md) e zero o un elemento [Application](../../../docs/framework/net-native/application-element-net-native.md), come illustrato nella struttura seguente.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-108">It can contain zero or more [Library](../../../docs/framework/net-native/library-element-net-native.md) elements, and zero or one [Application](../../../docs/framework/net-native/application-element-net-native.md) element, as shown in the following structure.</span></span> <span data-ttu-id="1f7e4-109">Gli attributi dell'elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) possono definire criteri di reflection di runtime a livello di applicazione oppure possono fungere da contenitore per gli elementi figlio.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-109">The attributes of the [Application](../../../docs/framework/net-native/application-element-net-native.md) element can define application-wide runtime reflection policy, or it can serve as a container for child elements.</span></span> <span data-ttu-id="1f7e4-110">L'elemento [Library](../../../docs/framework/net-native/library-element-net-native.md), invece, è semplicemente un contenitore.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-110">The [Library](../../../docs/framework/net-native/library-element-net-native.md) element, on the other hand, is simply a container.</span></span> <span data-ttu-id="1f7e4-111">Gli elementi figlio degli elementi [Application](../../../docs/framework/net-native/application-element-net-native.md) e [Library](../../../docs/framework/net-native/library-element-net-native.md) definiscono i tipi, i metodi, i campi, le proprietà e gli eventi disponibili per la reflection.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-111">The children of the [Application](../../../docs/framework/net-native/application-element-net-native.md) and [Library](../../../docs/framework/net-native/library-element-net-native.md) elements define the types, methods, fields, properties, and events that are available for reflection.</span></span>  
   
- Per le informazioni di riferimento, scegliere gli elementi dalla struttura seguente o vedere [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md). Nella seguente gerarchia, i puntini di sospensione contrassegnano una struttura ricorsiva. Le informazioni tra parentesi quadre indicano se tale elemento è facoltativo oppure obbligatorio e, se viene usato, il numero di istanze consentito (una o molte).  
+ <span data-ttu-id="1f7e4-112">Per le informazioni di riferimento, scegliere gli elementi dalla struttura seguente o vedere [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md).</span><span class="sxs-lookup"><span data-stu-id="1f7e4-112">For reference information, choose elements from the following structure or see [Runtime Directive Elements](../../../docs/framework/net-native/runtime-directive-elements.md).</span></span> <span data-ttu-id="1f7e4-113">Nella seguente gerarchia, i puntini di sospensione contrassegnano una struttura ricorsiva.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-113">In the following hierarchy, the ellipsis marks a recursive structure.</span></span> <span data-ttu-id="1f7e4-114">Le informazioni tra parentesi quadre indicano se tale elemento è facoltativo oppure obbligatorio e, se viene usato, il numero di istanze consentito (una o molte).</span><span class="sxs-lookup"><span data-stu-id="1f7e4-114">The information in brackets indicates whether that element is optional or required, and if it is used, how many instances (one or many) are allowed.</span></span>  
   
- [Directives](../../../docs/framework/net-native/directives-element-net-native.md) [1:1]  
- [Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1]  
- [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
- [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
- [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]   
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (sottoclassi del tipo contenitore) [O:1]   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
- [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (il tipo contenitore è un attributo) [O:1]   
- [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
- [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]   
- [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
- [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]   
- [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
- [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
- [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
- [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]   
- [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
- [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]  
- [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
- [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
- [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
- [Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M]  
- [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
- [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
- [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]   
- . . .   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (sottoclassi del tipo contenitore) [O:1]   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
- [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (il tipo contenitore è un attributo) [O:1]   
- [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
- [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]   
- [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
- [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
- [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- . . .   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]  
- . . .   
- [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]  
- [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
- [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
- [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
+ <span data-ttu-id="1f7e4-115">[Directives](../../../docs/framework/net-native/directives-element-net-native.md) [1:1]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-115">[Directives](../../../docs/framework/net-native/directives-element-net-native.md) [1:1]</span></span>  
+ <span data-ttu-id="1f7e4-116">[Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-116">[Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1]</span></span>  
+ <span data-ttu-id="1f7e4-117">[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-117">[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-118">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-118">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-119">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-119">.</span></span> <span data-ttu-id="1f7e4-120">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-120">.</span></span> <span data-ttu-id="1f7e4-121">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-121">.</span></span>  
+ <span data-ttu-id="1f7e4-122">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-122">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-123">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-123">.</span></span> <span data-ttu-id="1f7e4-124">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-124">.</span></span> <span data-ttu-id="1f7e4-125">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-125">.</span></span>  
+ <span data-ttu-id="1f7e4-126">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-126">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-127">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-127">.</span></span> <span data-ttu-id="1f7e4-128">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-128">.</span></span> <span data-ttu-id="1f7e4-129">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-129">.</span></span>  
+ <span data-ttu-id="1f7e4-130">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-130">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-131">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-131">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-132">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-132">.</span></span> <span data-ttu-id="1f7e4-133">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-133">.</span></span> <span data-ttu-id="1f7e4-134">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-134">.</span></span>  
+ <span data-ttu-id="1f7e4-135">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-135">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-136">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-136">.</span></span> <span data-ttu-id="1f7e4-137">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-137">.</span></span> <span data-ttu-id="1f7e4-138">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-138">.</span></span>  
+ <span data-ttu-id="1f7e4-139">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-139">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-140">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-140">.</span></span> <span data-ttu-id="1f7e4-141">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-141">.</span></span> <span data-ttu-id="1f7e4-142">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-142">.</span></span>  
+ <span data-ttu-id="1f7e4-143">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-143">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-144">[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (sottoclassi del tipo contenitore) [O:1]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-144">[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses of the containing type) [O:1]</span></span>  
+ <span data-ttu-id="1f7e4-145">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-145">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-146">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-146">.</span></span> <span data-ttu-id="1f7e4-147">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-147">.</span></span> <span data-ttu-id="1f7e4-148">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-148">.</span></span>  
+ <span data-ttu-id="1f7e4-149">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-149">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-150">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-150">.</span></span> <span data-ttu-id="1f7e4-151">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-151">.</span></span> <span data-ttu-id="1f7e4-152">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-152">.</span></span>  
+ <span data-ttu-id="1f7e4-153">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (il tipo contenitore è un attributo) [O:1]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-153">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (containing type is an attribute) [O:1]</span></span>  
+ <span data-ttu-id="1f7e4-154">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-154">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-155">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-155">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-156">[Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-156">[Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-157">[TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-157">[TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-158">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-158">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-159">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-159">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-160">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-160">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-161">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-161">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-162">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-162">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-163">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-163">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-164">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-164">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-165">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-165">.</span></span> <span data-ttu-id="1f7e4-166">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-166">.</span></span> <span data-ttu-id="1f7e4-167">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-167">.</span></span>  
+ <span data-ttu-id="1f7e4-168">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-168">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-169">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-169">.</span></span> <span data-ttu-id="1f7e4-170">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-170">.</span></span> <span data-ttu-id="1f7e4-171">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-171">.</span></span>  
+ <span data-ttu-id="1f7e4-172">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-172">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-173">[Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-173">[Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-174">[TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-174">[TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-175">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-175">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-176">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-176">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-177">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-177">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-178">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-178">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-179">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-179">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-180">[Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-180">[Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-181">[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-181">[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-182">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-182">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-183">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-183">.</span></span> <span data-ttu-id="1f7e4-184">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-184">.</span></span> <span data-ttu-id="1f7e4-185">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-185">.</span></span>  
+ <span data-ttu-id="1f7e4-186">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-186">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-187">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-187">.</span></span> <span data-ttu-id="1f7e4-188">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-188">.</span></span> <span data-ttu-id="1f7e4-189">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-189">.</span></span>  
+ <span data-ttu-id="1f7e4-190">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-190">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-191">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-191">.</span></span> <span data-ttu-id="1f7e4-192">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-192">.</span></span> <span data-ttu-id="1f7e4-193">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-193">.</span></span>  
+ <span data-ttu-id="1f7e4-194">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-194">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-195">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-195">[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-196">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-196">.</span></span> <span data-ttu-id="1f7e4-197">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-197">.</span></span> <span data-ttu-id="1f7e4-198">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-198">.</span></span>  
+ <span data-ttu-id="1f7e4-199">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-199">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-200">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-200">.</span></span> <span data-ttu-id="1f7e4-201">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-201">.</span></span> <span data-ttu-id="1f7e4-202">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-202">.</span></span>  
+ <span data-ttu-id="1f7e4-203">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-203">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-204">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-204">.</span></span> <span data-ttu-id="1f7e4-205">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-205">.</span></span> <span data-ttu-id="1f7e4-206">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-206">.</span></span>  
+ <span data-ttu-id="1f7e4-207">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-207">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-208">[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (sottoclassi del tipo contenitore) [O:1]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-208">[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (subclasses of the containing type) [O:1]</span></span>  
+ <span data-ttu-id="1f7e4-209">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-209">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-210">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-210">.</span></span> <span data-ttu-id="1f7e4-211">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-211">.</span></span> <span data-ttu-id="1f7e4-212">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-212">.</span></span>  
+ <span data-ttu-id="1f7e4-213">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-213">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-214">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-214">.</span></span> <span data-ttu-id="1f7e4-215">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-215">.</span></span> <span data-ttu-id="1f7e4-216">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-216">.</span></span>  
+ <span data-ttu-id="1f7e4-217">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (il tipo contenitore è un attributo) [O:1]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-217">[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (containing type is an attribute) [O:1]</span></span>  
+ <span data-ttu-id="1f7e4-218">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-218">[GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-219">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-219">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-220">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-220">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-221">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-221">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-222">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-222">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-223">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-223">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-224">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-224">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-225">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-225">[Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-226">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-226">.</span></span> <span data-ttu-id="1f7e4-227">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-227">.</span></span> <span data-ttu-id="1f7e4-228">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-228">.</span></span>  
+ <span data-ttu-id="1f7e4-229">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (tipo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-229">[TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (constructed generic type) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-230">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-230">.</span></span> <span data-ttu-id="1f7e4-231">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-231">.</span></span> <span data-ttu-id="1f7e4-232">.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-232">.</span></span>  
+ <span data-ttu-id="1f7e4-233">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-233">[Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-234">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (metodo generico costruito) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-234">[MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (constructed generic method) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-235">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-235">[Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-236">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-236">[Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]</span></span>  
+ <span data-ttu-id="1f7e4-237">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span><span class="sxs-lookup"><span data-stu-id="1f7e4-237">[Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]</span></span>  
   
- L'elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) può non avere attributi oppure può avere gli attributi dei criteri descritti nella sezione [Direttive e criteri di runtime](#Directives).  
+ <span data-ttu-id="1f7e4-238">L'elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) può non avere attributi oppure può avere gli attributi dei criteri descritti nella sezione [Direttive e criteri di runtime](#Directives).</span><span class="sxs-lookup"><span data-stu-id="1f7e4-238">The [Application](../../../docs/framework/net-native/application-element-net-native.md) element can have no attributes, or it can have the policy attributes discussed in the [Runtime directive and policy section](#Directives).</span></span>  
   
- Un elemento [Library](../../../docs/framework/net-native/library-element-net-native.md) ha un solo attributo, `Name`, che specifica il nome di una libreria o di un assembly, senza l'estensione del file. Ad esempio, l'elemento [Library](../../../docs/framework/net-native/library-element-net-native.md) seguente si applica a un assembly denominato Extensions.dll.  
+ <span data-ttu-id="1f7e4-239">Un elemento [Library](../../../docs/framework/net-native/library-element-net-native.md) ha un solo attributo, `Name`, che specifica il nome di una libreria o di un assembly, senza l'estensione del file.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-239">A [Library](../../../docs/framework/net-native/library-element-net-native.md) element has a single attribute, `Name`, that specifies the name of a library or assembly, without its file extension.</span></span> <span data-ttu-id="1f7e4-240">Ad esempio, l'elemento [Library](../../../docs/framework/net-native/library-element-net-native.md) seguente si applica a un assembly denominato Extensions.dll.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-240">For example, the following [Library](../../../docs/framework/net-native/library-element-net-native.md) element applies to an assembly named Extensions.dll.</span></span>  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -149,55 +147,55 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
 ```  
   
 <a name="Directives"></a>   
-## <a name="runtime-directives-and-policy"></a>Direttive e criteri di runtime  
- L'elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) stesso e gli elementi figlio degli elementi [Library](../../../docs/framework/net-native/library-element-net-native.md) e [Application](../../../docs/framework/net-native/application-element-net-native.md) esprimono criteri, ovvero definiscono il modo in cui un'app può applicare la reflection a un elemento del programma. Il tipo di criterio è definito da un attributo dell'elemento (ad esempio, `Serialize`). Il valore di criterio è definito dal valore dell'attributo (ad esempio, `Serialize="Required"`).  
+## <a name="runtime-directives-and-policy"></a><span data-ttu-id="1f7e4-241">Direttive e criteri di runtime</span><span class="sxs-lookup"><span data-stu-id="1f7e4-241">Runtime directives and policy</span></span>  
+ <span data-ttu-id="1f7e4-242">L'elemento [Application](../../../docs/framework/net-native/application-element-net-native.md) stesso e gli elementi figlio degli elementi [Library](../../../docs/framework/net-native/library-element-net-native.md) e [Application](../../../docs/framework/net-native/application-element-net-native.md) esprimono criteri, ovvero definiscono il modo in cui un'app può applicare la reflection a un elemento del programma.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-242">The [Application](../../../docs/framework/net-native/application-element-net-native.md) element itself and the child elements of the [Library](../../../docs/framework/net-native/library-element-net-native.md) and [Application](../../../docs/framework/net-native/application-element-net-native.md) elements express policy; that is, they define the way in which an app can apply reflection to a program element.</span></span> <span data-ttu-id="1f7e4-243">Il tipo di criterio è definito da un attributo dell'elemento (ad esempio, `Serialize`).</span><span class="sxs-lookup"><span data-stu-id="1f7e4-243">The policy type is defined by an attribute of the element (for example, `Serialize`).</span></span> <span data-ttu-id="1f7e4-244">Il valore di criterio è definito dal valore dell'attributo (ad esempio, `Serialize="Required"`).</span><span class="sxs-lookup"><span data-stu-id="1f7e4-244">The policy value is defined by the attribute’s value (for example, `Serialize="Required"`).</span></span>  
   
- Qualsiasi criterio specificato da un attributo di un elemento si applica a tutti gli elementi figlio che non specificano un valore per tale criterio. Ad esempio, se vengono specificati criteri da un elemento [Type](../../../docs/framework/net-native/type-element-net-native.md), tali criteri si applicano a tutti i tipi e membri contenuti per i quali non sono stati esplicitamente specificati i criteri.  
+ <span data-ttu-id="1f7e4-245">Qualsiasi criterio specificato da un attributo di un elemento si applica a tutti gli elementi figlio che non specificano un valore per tale criterio.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-245">Any policy specified by an attribute of an element applies to all child elements that don’t specify a value for that policy.</span></span> <span data-ttu-id="1f7e4-246">Ad esempio, se vengono specificati criteri da un elemento [Type](../../../docs/framework/net-native/type-element-net-native.md), tali criteri si applicano a tutti i tipi e membri contenuti per i quali non sono stati esplicitamente specificati i criteri.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-246">For example, if a policy is specified by a [Type](../../../docs/framework/net-native/type-element-net-native.md) element, that policy applies to all contained types and members for which a policy is not explicitly specified.</span></span>  
   
- I criteri che possono essere espressi dagli elementi [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) e [Type](../../../docs/framework/net-native/type-element-net-native.md) differiscono da quelli che possono essere espressi per i singoli membri (dagli elementi [Method](../../../docs/framework/net-native/method-element-net-native.md), [Property](../../../docs/framework/net-native/property-element-net-native.md), [Field](../../../docs/framework/net-native/field-element-net-native.md) ed [Event](../../../docs/framework/net-native/event-element-net-native.md)).  
+ <span data-ttu-id="1f7e4-247">I criteri che possono essere espressi dagli elementi [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) e [Type](../../../docs/framework/net-native/type-element-net-native.md) differiscono da quelli che possono essere espressi per i singoli membri (dagli elementi [Method](../../../docs/framework/net-native/method-element-net-native.md), [Property](../../../docs/framework/net-native/property-element-net-native.md), [Field](../../../docs/framework/net-native/field-element-net-native.md) ed [Event](../../../docs/framework/net-native/event-element-net-native.md)).</span><span class="sxs-lookup"><span data-stu-id="1f7e4-247">The policy that can be expressed by the [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md), and [Type](../../../docs/framework/net-native/type-element-net-native.md) elements differs from the policy that can be expressed for individual members (by the [Method](../../../docs/framework/net-native/method-element-net-native.md), [Property](../../../docs/framework/net-native/property-element-net-native.md), [Field](../../../docs/framework/net-native/field-element-net-native.md), and [Event](../../../docs/framework/net-native/event-element-net-native.md) elements).</span></span>  
   
-### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Specifica di criteri per assembly, spazi dei nomi e tipi  
- Gli elementi [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) e [Type](../../../docs/framework/net-native/type-element-net-native.md) supportano i tipi di criteri seguenti:  
+### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a><span data-ttu-id="1f7e4-248">Specifica di criteri per assembly, spazi dei nomi e tipi</span><span class="sxs-lookup"><span data-stu-id="1f7e4-248">Specifying policy for assemblies, namespaces, and types</span></span>  
+ <span data-ttu-id="1f7e4-249">Gli elementi [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) e [Type](../../../docs/framework/net-native/type-element-net-native.md) supportano i tipi di criteri seguenti:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-249">The [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md), and [Type](../../../docs/framework/net-native/type-element-net-native.md) elements support the following policy types:</span></span>  
   
--   `Activate`. Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.  
+-   <span data-ttu-id="1f7e4-250">`Activate`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-250">`Activate`.</span></span> <span data-ttu-id="1f7e4-251">Controlla l'accesso in fase di esecuzione ai costruttori per abilitare l'attivazione di istanze.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-251">Controls runtime access to constructors, to enable activation of instances.</span></span>  
   
--   `Browse`. Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.  
+-   <span data-ttu-id="1f7e4-252">`Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-252">`Browse`.</span></span> <span data-ttu-id="1f7e4-253">Controlla le query per le informazioni sugli elementi di programma, ma non abilita l'accesso in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-253">Controls querying for information about program elements but does not enable any runtime access.</span></span>  
   
--   `Dynamic`. Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.  
+-   <span data-ttu-id="1f7e4-254">`Dynamic`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-254">`Dynamic`.</span></span> <span data-ttu-id="1f7e4-255">Controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-255">Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span>  
   
--   `Serialize`. Controlla l'accesso in fase di esecuzione ai costruttori, ai campi e alle proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie di terze parti, ad esempio il serializzatore JSON di Newtonsoft.  
+-   <span data-ttu-id="1f7e4-256">`Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-256">`Serialize`.</span></span> <span data-ttu-id="1f7e4-257">Controlla l'accesso in fase di esecuzione ai costruttori, ai campi e alle proprietà per abilitare la serializzazione e la deserializzazione delle istanze del tipo da parte di librerie di terze parti, ad esempio il serializzatore JSON di Newtonsoft.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-257">Controls runtime access to constructors, fields, and properties, to enable type instances to be serialized and serialized by third-party libraries such as the Newtonsoft JSON serializer.</span></span>  
   
--   `DataContractSerializer`. Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.  
+-   <span data-ttu-id="1f7e4-258">`DataContractSerializer`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-258">`DataContractSerializer`.</span></span> <span data-ttu-id="1f7e4-259">Controlla i criteri per la serializzazione che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-259">Controls policy for serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>  
   
--   `DataContractJsonSerializer`. Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>.  
+-   <span data-ttu-id="1f7e4-260">`DataContractJsonSerializer`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-260">`DataContractJsonSerializer`.</span></span> <span data-ttu-id="1f7e4-261">Controlla i criteri per la serializzazione JSON che usano la classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-261">Controls policy for JSON serialization that uses the <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> class.</span></span>  
   
--   `XmlSerializer`. Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>.  
+-   <span data-ttu-id="1f7e4-262">`XmlSerializer`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-262">`XmlSerializer`.</span></span> <span data-ttu-id="1f7e4-263">Controlla i criteri per la serializzazione XML che usano la classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-263">Controls policy for XML serialization that uses the <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> class.</span></span>  
   
--   `MarshalObject`. Criteri di controlli per il marshalling dei tipi di riferimento per WinRT e COM.  
+-   <span data-ttu-id="1f7e4-264">`MarshalObject`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-264">`MarshalObject`.</span></span> <span data-ttu-id="1f7e4-265">Criteri di controlli per il marshalling dei tipi di riferimento per WinRT e COM.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-265">Controls policy for marshaling reference types to WinRT and COM.</span></span>  
   
--   `MarshalDelegate`. Controlla i criteri per il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.  
+-   <span data-ttu-id="1f7e4-266">`MarshalDelegate`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-266">`MarshalDelegate`.</span></span> <span data-ttu-id="1f7e4-267">Controlla i criteri per il marshalling dei tipi delegati come puntatori a funzioni al codice nativo.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-267">Controls policy for marshaling delegate types as function pointers to native code.</span></span>  
   
--   `MarshalStructure` . Controlla i criteri per il marshalling delle strutture al codice nativo.  
+-   <span data-ttu-id="1f7e4-268">`MarshalStructure` .</span><span class="sxs-lookup"><span data-stu-id="1f7e4-268">`MarshalStructure` .</span></span> <span data-ttu-id="1f7e4-269">Controlla i criteri per il marshalling delle strutture al codice nativo.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-269">Controls policy for marshaling structures to native code.</span></span>  
   
- Le impostazioni associate a questi tipi di criteri sono:  
+ <span data-ttu-id="1f7e4-270">Le impostazioni associate a questi tipi di criteri sono:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-270">The settings associated with these policy types are:</span></span>  
   
--   `All`. Attivare il criterio per tutti i tipi e membri che la catena di strumenti non riesce a rimuovere.  
+-   <span data-ttu-id="1f7e4-271">`All`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-271">`All`.</span></span> <span data-ttu-id="1f7e4-272">Attivare il criterio per tutti i tipi e membri che la catena di strumenti non riesce a rimuovere.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-272">Enable the policy for all types and members that the tool chain does not remove.</span></span>  
   
--   `Auto`. Usare il comportamento predefinito (non specificare un criterio è equivalente a impostare tale criterio su `Auto` a meno che tale criterio sia sottoposto a override, ad esempio da un elemento padre).  
+-   <span data-ttu-id="1f7e4-273">`Auto`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-273">`Auto`.</span></span> <span data-ttu-id="1f7e4-274">Usare il comportamento predefinito</span><span class="sxs-lookup"><span data-stu-id="1f7e4-274">Use the default behavior.</span></span> <span data-ttu-id="1f7e4-275">(non specificare un criterio è equivalente a impostare tale criterio su `Auto` a meno che tale criterio sia sottoposto a override, ad esempio da un elemento padre).</span><span class="sxs-lookup"><span data-stu-id="1f7e4-275">(Not specifying a policy is equivalent to setting that policy to `Auto` unless that policy is overridden, for example by a parent element.)</span></span>  
   
--   `Excluded`. Disattivare il criterio per l'elemento di programma.  
+-   <span data-ttu-id="1f7e4-276">`Excluded`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-276">`Excluded`.</span></span> <span data-ttu-id="1f7e4-277">Disattivare il criterio per l'elemento di programma.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-277">Disable the policy for the program element.</span></span>  
   
--   `Public`. Attivare i criteri per i tipi o i membri pubblici, a meno che la catena di strumenti non determini che il tipo o il membro non è necessario e lo rimuova (in quest'ultimo caso, è necessario usare `Required Public` per garantire che il membro venga mantenuto e abbia funzionalità di reflection.)  
+-   <span data-ttu-id="1f7e4-278">`Public`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-278">`Public`.</span></span> <span data-ttu-id="1f7e4-279">Attivare i criteri per i tipi o i membri pubblici, a meno che la catena di strumenti non determini che il tipo o il membro non è necessario e lo rimuova</span><span class="sxs-lookup"><span data-stu-id="1f7e4-279">Enable the policy for public types or members unless the tool chain determines that the member is unnecessary and therefore removes it.</span></span> <span data-ttu-id="1f7e4-280">(in quest'ultimo caso, è necessario usare `Required Public` per garantire che il membro venga mantenuto e abbia funzionalità di reflection.)</span><span class="sxs-lookup"><span data-stu-id="1f7e4-280">(In the latter case, you must use `Required Public` to ensure that the member is kept and has reflection capabilities.)</span></span>  
   
--   `PublicAndInternal`. Attivare il criterio per i tipi o membri pubblici e interni se la catena di strumenti non li rimuove.  
+-   <span data-ttu-id="1f7e4-281">`PublicAndInternal`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-281">`PublicAndInternal`.</span></span> <span data-ttu-id="1f7e4-282">Attivare il criterio per i tipi o membri pubblici e interni se la catena di strumenti non li rimuove.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-282">Enable the policy for public and internal types or members if the tool chain doesn't remove them.</span></span>  
   
--   `Required Public`. Richiedere che la catena di strumenti mantenga i tipi e i membri pubblici, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.  
+-   <span data-ttu-id="1f7e4-283">`Required Public`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-283">`Required Public`.</span></span> <span data-ttu-id="1f7e4-284">Richiedere che la catena di strumenti mantenga i tipi e i membri pubblici, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-284">Require the tool chain to keep public types and members whether or not they are used, and enable the policy for them.</span></span>  
   
--   `Required PublicAndInternal`. Richiedere che la catena di strumenti mantenga i tipi e i membri pubblici e interni, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.  
+-   <span data-ttu-id="1f7e4-285">`Required PublicAndInternal`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-285">`Required PublicAndInternal`.</span></span> <span data-ttu-id="1f7e4-286">Richiedere che la catena di strumenti mantenga i tipi e i membri pubblici e interni, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-286">Require the tool chain to keep both public and internal types and members whether or not they are used, and enable the policy for them.</span></span>  
   
--   `Required All`. Richiedere che la catena di strumenti mantenga tutti i tipi e i membri, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.  
+-   <span data-ttu-id="1f7e4-287">`Required All`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-287">`Required All`.</span></span> <span data-ttu-id="1f7e4-288">Richiedere che la catena di strumenti mantenga tutti i tipi e i membri, indipendentemente dal fatto che vengano usati o no, e attivare i relativi criteri.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-288">Require the tool chain to keep all types and members whether or not they are used, and enable the policy for them.</span></span>  
   
- Il seguente file di direttive di runtime, ad esempio, definisce i criteri per tutti i tipi e membri nell'assembly DataClasses.dll. Consente la reflection per la serializzazione di tutte le proprietà pubbliche, consente di cercare tutti i tipi e membri del tipo, consente l'attivazione per tutti i tipi (a causa dell'attributo `Dynamic`) e abilita la reflection per tutti i tipi e membri pubblici.  
+ <span data-ttu-id="1f7e4-289">Il seguente file di direttive di runtime, ad esempio, definisce i criteri per tutti i tipi e membri nell'assembly DataClasses.dll.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-289">For example, the following runtime directives file defines policy for all types and members in the assembly DataClasses.dll.</span></span> <span data-ttu-id="1f7e4-290">Consente la reflection per la serializzazione di tutte le proprietà pubbliche, consente di cercare tutti i tipi e membri del tipo, consente l'attivazione per tutti i tipi (a causa dell'attributo `Dynamic`) e abilita la reflection per tutti i tipi e membri pubblici.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-290">It enables reflection for serialization of all public properties, enables browsing for all types and type members, enables activation for all types (because of the `Dynamic` attribute), and enables reflection for all public types and members.</span></span>  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -212,50 +210,50 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
 </Directives>  
 ```  
   
-### <a name="specifying-policy-for-members"></a>Specifica di criteri per i membri  
- Gli elementi [Property](../../../docs/framework/net-native/property-element-net-native.md) e [Field](../../../docs/framework/net-native/field-element-net-native.md) supportano i tipi di criteri seguenti:  
+### <a name="specifying-policy-for-members"></a><span data-ttu-id="1f7e4-291">Specifica di criteri per i membri</span><span class="sxs-lookup"><span data-stu-id="1f7e4-291">Specifying policy for members</span></span>  
+ <span data-ttu-id="1f7e4-292">Gli elementi [Property](../../../docs/framework/net-native/property-element-net-native.md) e [Field](../../../docs/framework/net-native/field-element-net-native.md) supportano i tipi di criteri seguenti:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-292">The [Property](../../../docs/framework/net-native/property-element-net-native.md) and [Field](../../../docs/framework/net-native/field-element-net-native.md) elements support the following policy types:</span></span>  
   
--   `Browse`: controlla le query per le informazioni su questo membro, ma non abilita l'accesso in fase di esecuzione.  
+-   <span data-ttu-id="1f7e4-293">`Browse`: controlla le query per le informazioni su questo membro, ma non abilita l'accesso in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-293">`Browse` - Controls querying for information about this member but does not enable any runtime access.</span></span>  
   
--   `Dynamic`: controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica. Controlla anche la ricerca di informazioni sul tipo contenitore.  
+-   <span data-ttu-id="1f7e4-294">`Dynamic`: controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-294">`Dynamic` - Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span> <span data-ttu-id="1f7e4-295">Controlla anche la ricerca di informazioni sul tipo contenitore.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-295">Also controls querying for information about the containing type.</span></span>  
   
--   `Serialize`: controlla l'accesso in fase di esecuzione al membro per abilitare istanze di tipi da serializzare e deserializzare da parte di librerie quali il serializzatore JSON di Newtonsoft. Questi criteri possono essere applicati a costruttori, campi e proprietà.  
+-   <span data-ttu-id="1f7e4-296">`Serialize`: controlla l'accesso in fase di esecuzione al membro per abilitare istanze di tipi da serializzare e deserializzare da parte di librerie quali il serializzatore JSON di Newtonsoft.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-296">`Serialize` - Controls runtime access to the member to enable type instances to be serialized and deserialized by libraries such as the Newtonsoft JSON serializer.</span></span> <span data-ttu-id="1f7e4-297">Questi criteri possono essere applicati a costruttori, campi e proprietà.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-297">This policy can be applied to constructors, fields, and properties.</span></span>  
   
- Gli elementi [Method](../../../docs/framework/net-native/method-element-net-native.md) ed [Event](../../../docs/framework/net-native/event-element-net-native.md) supportano i tipi di criteri seguenti:  
+ <span data-ttu-id="1f7e4-298">Gli elementi [Method](../../../docs/framework/net-native/method-element-net-native.md) ed [Event](../../../docs/framework/net-native/event-element-net-native.md) supportano i tipi di criteri seguenti:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-298">The [Method](../../../docs/framework/net-native/method-element-net-native.md) and [Event](../../../docs/framework/net-native/event-element-net-native.md) elements support the following policy types:</span></span>  
   
--   `Browse`: controlla le query per le informazioni su questo membro, ma non abilita l'accesso in fase di esecuzione.  
+-   <span data-ttu-id="1f7e4-299">`Browse`: controlla le query per le informazioni su questo membro, ma non abilita l'accesso in fase di esecuzione.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-299">`Browse` - Controls querying for information about this member but doesn’t enable any runtime access.</span></span>  
   
--   `Dynamic`: controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica. Controlla anche la ricerca di informazioni sul tipo contenitore.  
+-   <span data-ttu-id="1f7e4-300">`Dynamic`: controlla l'accesso in fase di esecuzione a tutti i membri dei tipi, inclusi costruttori, metodi, campi, proprietà ed eventi, per abilitare la programmazione dinamica.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-300">`Dynamic` - Controls runtime access to all type members, including constructors, methods, fields, properties, and events, to enable dynamic programming.</span></span> <span data-ttu-id="1f7e4-301">Controlla anche la ricerca di informazioni sul tipo contenitore.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-301">Also controls querying for information about the containing type.</span></span>  
   
- Le impostazioni associate a questi tipi di criteri sono:  
+ <span data-ttu-id="1f7e4-302">Le impostazioni associate a questi tipi di criteri sono:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-302">The settings associated with these policy types are:</span></span>  
   
--   `Auto`: usare il comportamento predefinito (non specificare un criterio equivale a impostare tale criterio su `Auto` a meno che un elemento esegua l'override).  
+-   <span data-ttu-id="1f7e4-303">`Auto`: usare il comportamento predefinito</span><span class="sxs-lookup"><span data-stu-id="1f7e4-303">`Auto` - Use the default behavior.</span></span> <span data-ttu-id="1f7e4-304">(non specificare un criterio equivale a impostare tale criterio su `Auto` a meno che un elemento esegua l'override).</span><span class="sxs-lookup"><span data-stu-id="1f7e4-304">(Not specifying a policy is equivalent to setting that policy to `Auto` unless something overrides it.)</span></span>  
   
--   `Excluded`: non includere mai i metadati per il membro.  
+-   <span data-ttu-id="1f7e4-305">`Excluded`: non includere mai i metadati per il membro.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-305">`Excluded` - Never include metadata for the member.</span></span>  
   
--   `Included`: abilitare il criterio se il tipo padre è presente nell'output.  
+-   <span data-ttu-id="1f7e4-306">`Included`: abilitare il criterio se il tipo padre è presente nell'output.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-306">`Included` - Enable the policy if the parent type is present in the output.</span></span>  
   
--   `Required`: richiedere che la catena di strumenti conservi questo membro anche se sembra non essere in uso e abilitare i relativi criteri.  
+-   <span data-ttu-id="1f7e4-307">`Required`: richiedere che la catena di strumenti conservi questo membro anche se sembra non essere in uso e abilitare i relativi criteri.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-307">`Required` - Require the tool chain to keep this member even if appears to be unused, and enable policy for it.</span></span>  
   
-## <a name="runtime-directives-file-semantics"></a>Semantica dei file di runtime direttive  
- È possibile definire criteri contemporaneamente per gli elementi di livello più alto e più basso. Ad esempio, è possibile definire dei criteri per un assembly e per alcuni dei tipi di contenuti in tale assembly. Se non è rappresentato un particolare elemento di livello inferiore, esso eredita i criteri del padre. Ad esempio, se è presente un elemento `Assembly`, ma gli elementi `Type` sono assenti, il criterio specificato nell'elemento `Assembly` viene applicato a ciascun tipo nell'assembly. Più elementi possono anche applicare criteri allo stesso elemento di programma. Ad esempio, elementi [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) separati potrebbero definire lo stesso elemento di criteri per lo stesso assembly in modo diverso. Le sezioni seguenti spiegano come risolvere il criterio per un determinato tipo in questi casi.  
+## <a name="runtime-directives-file-semantics"></a><span data-ttu-id="1f7e4-308">Semantica dei file di runtime direttive</span><span class="sxs-lookup"><span data-stu-id="1f7e4-308">Runtime directives file semantics</span></span>  
+ <span data-ttu-id="1f7e4-309">È possibile definire criteri contemporaneamente per gli elementi di livello più alto e più basso.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-309">Policy can be defined simultaneously for both higher-level and lower-level elements.</span></span> <span data-ttu-id="1f7e4-310">Ad esempio, è possibile definire dei criteri per un assembly e per alcuni dei tipi di contenuti in tale assembly.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-310">For example, policy can be defined for an assembly, and for some of the types contained in that assembly.</span></span> <span data-ttu-id="1f7e4-311">Se non è rappresentato un particolare elemento di livello inferiore, esso eredita i criteri del padre.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-311">If a particular lower-level element is not represented, it inherits the policy of its parent.</span></span> <span data-ttu-id="1f7e4-312">Ad esempio, se è presente un elemento `Assembly`, ma gli elementi `Type` sono assenti, il criterio specificato nell'elemento `Assembly` viene applicato a ciascun tipo nell'assembly.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-312">For example, if an `Assembly` element is present but `Type` elements are not, the policy specified in the `Assembly` element applies to each type in the assembly.</span></span> <span data-ttu-id="1f7e4-313">Più elementi possono anche applicare criteri allo stesso elemento di programma.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-313">Multiple elements can also apply policy to the same program element.</span></span> <span data-ttu-id="1f7e4-314">Ad esempio, elementi [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) separati potrebbero definire lo stesso elemento di criteri per lo stesso assembly in modo diverso.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-314">For example, separate [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) elements might define the same policy element for the same assembly differently.</span></span> <span data-ttu-id="1f7e4-315">Le sezioni seguenti spiegano come risolvere il criterio per un determinato tipo in questi casi.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-315">The following sections explain how the policy for a particular type is resolved in those cases.</span></span>  
   
- Un elemento [Type](../../../docs/framework/net-native/type-element-net-native.md) o [Method](../../../docs/framework/net-native/method-element-net-native.md) di un tipo o un metodo generico applica i relativi criteri a tutte le istanze che non hanno criteri propri. Ad esempio, un elemento `Type` che specifica i criteri per <xref:System.Collections.Generic.List%601> si applica a tutte le istanze costruite di tale tipo generico, a meno che non venga eseguito l'override per un particolare tipo generico costruito (come `List<Int32>`) da un elemento `TypeInstantiation`. In caso contrario, gli elementi definiscono i criteri per l'elemento di programma denominato.  
+ <span data-ttu-id="1f7e4-316">Un elemento [Type](../../../docs/framework/net-native/type-element-net-native.md) o [Method](../../../docs/framework/net-native/method-element-net-native.md) di un tipo o un metodo generico applica i relativi criteri a tutte le istanze che non hanno criteri propri.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-316">A [Type](../../../docs/framework/net-native/type-element-net-native.md) or [Method](../../../docs/framework/net-native/method-element-net-native.md) element of a generic type or method applies its policy to all instantiations that do not have their own policy.</span></span> <span data-ttu-id="1f7e4-317">Ad esempio, un elemento `Type` che specifica i criteri per <xref:System.Collections.Generic.List%601> si applica a tutte le istanze costruite di tale tipo generico, a meno che non venga eseguito l'override per un particolare tipo generico costruito (come `List<Int32>`) da un elemento `TypeInstantiation`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-317">For example, a `Type` element that specifies policy for <xref:System.Collections.Generic.List%601> applies to all constructed instances of that generic type, unless it's overridden for a particular constructed generic type (such as a `List<Int32>`) by a `TypeInstantiation` element.</span></span> <span data-ttu-id="1f7e4-318">In caso contrario, gli elementi definiscono i criteri per l'elemento di programma denominato.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-318">Otherwise, elements define policy for the program element named.</span></span>  
   
- Quando un elemento è ambiguo, il motore ricerca corrispondenze e, se ne trova di esatte, le usa. Se trova più corrispondenze, si riceverà un avviso o un errore.  
+ <span data-ttu-id="1f7e4-319">Quando un elemento è ambiguo, il motore ricerca corrispondenze e, se ne trova di esatte, le usa.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-319">When an element is ambiguous, the engine looks for matches, and if it finds an exact match, it will use it.</span></span> <span data-ttu-id="1f7e4-320">Se trova più corrispondenze, si riceverà un avviso o un errore.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-320">If it finds multiple matches, there will be a warning or error.</span></span>  
   
-### <a name="if-two-directives-apply-policy-to-the-same-program-element"></a>Se due direttive applicano criteri allo stesso elemento di programma  
- Se due elementi in diversi file di direttive di runtime provano a impostare lo stesso tipo di criteri per lo stesso elemento di programma (ad esempio un tipo o assembly) su valori diversi, il conflitto viene risolto come segue:  
+### <a name="if-two-directives-apply-policy-to-the-same-program-element"></a><span data-ttu-id="1f7e4-321">Se due direttive applicano criteri allo stesso elemento di programma</span><span class="sxs-lookup"><span data-stu-id="1f7e4-321">If two directives apply policy to the same program element</span></span>  
+ <span data-ttu-id="1f7e4-322">Se due elementi in diversi file di direttive di runtime provano a impostare lo stesso tipo di criteri per lo stesso elemento di programma (ad esempio un tipo o assembly) su valori diversi, il conflitto viene risolto come segue:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-322">If two elements in different runtime directives files try to set the same policy type for the same program element (such as an assembly or type) to different values, the conflict is resolved as follows:</span></span>  
   
-1.  Se l'elemento `Excluded` è presente, ha la precedenza.  
+1.  <span data-ttu-id="1f7e4-323">Se l'elemento `Excluded` è presente, ha la precedenza.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-323">If the `Excluded` element is present, it has precedence.</span></span>  
   
-2.  `Required` ha la precedenza su non `Required`.  
+2.  <span data-ttu-id="1f7e4-324">`Required` ha la precedenza su non `Required`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-324">`Required` has precedence over not `Required`.</span></span>  
   
-3.  `All` ha la precedenza su `PublicAndInternal`, che a sua volta ha la precedenza su `Public`.  
+3.  <span data-ttu-id="1f7e4-325">`All` ha la precedenza su `PublicAndInternal`, che a sua volta ha la precedenza su `Public`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-325">`All` has precedence over `PublicAndInternal`, which has precedence over `Public`.</span></span>  
   
-4.  Qualsiasi impostazione esplicita ha la precedenza su `Auto`.  
+4.  <span data-ttu-id="1f7e4-326">Qualsiasi impostazione esplicita ha la precedenza su `Auto`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-326">Any explicit setting has precedence over `Auto`.</span></span>  
   
- Ad esempio, se un singolo progetto include i due file di direttive di runtime seguenti, i criteri di serializzazione per DataClasses.dll vengono impostati su `Required Public` e `All`. In questo caso, il criterio di serializzazione sarebbe risolto come `Required All`.  
+ <span data-ttu-id="1f7e4-327">Ad esempio, se un singolo progetto include i due file di direttive di runtime seguenti, i criteri di serializzazione per DataClasses.dll vengono impostati su `Required Public` e `All`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-327">For example, if a single project includes the following two runtime directives files, the serialization policy for DataClasses.dll is set to both `Required Public` and `All`.</span></span> <span data-ttu-id="1f7e4-328">In questo caso, il criterio di serializzazione sarebbe risolto come `Required All`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-328">In this case, the serialization policy would be resolved as `Required All`.</span></span>  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -279,12 +277,12 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
 </Directives>  
 ```  
   
- Tuttavia, se due direttive in un unico file di direttive di runtime prova a impostare lo stesso tipo di criteri per l'elemento del programma stesso, lo strumento di definizione di schema XML visualizza un messaggio di errore.  
+ <span data-ttu-id="1f7e4-329">Tuttavia, se due direttive in un unico file di direttive di runtime prova a impostare lo stesso tipo di criteri per l'elemento del programma stesso, lo strumento di definizione di schema XML visualizza un messaggio di errore.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-329">However, if two directives in a single runtime directives file try to set the same policy type for the same program element, the XML Scheme Definition tool displays an error message.</span></span>  
   
-### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a>Se gli elementi figlio e padre applicano lo stesso tipo di criteri  
- Gli elementi figlio eseguono l'override dei relativi elementi padre, inclusa l'impostazione `Excluded`. L'override è il motivo principale per cui è preferibile specificare `Auto`.  
+### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a><span data-ttu-id="1f7e4-330">Se gli elementi figlio e padre applicano lo stesso tipo di criteri</span><span class="sxs-lookup"><span data-stu-id="1f7e4-330">If child and parent elements apply the same policy type</span></span>  
+ <span data-ttu-id="1f7e4-331">Gli elementi figlio eseguono l'override dei relativi elementi padre, inclusa l'impostazione `Excluded`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-331">Child elements override their parent elements, including the `Excluded` setting.</span></span> <span data-ttu-id="1f7e4-332">L'override è il motivo principale per cui è preferibile specificare `Auto`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-332">Overriding is the main reason you would want to specify `Auto`.</span></span>  
   
- Nell'esempio seguente, l'impostazione dei criteri di serializzazione per tutto quanto presente in `DataClasses` ma assente in `DataClasses.ViewModels` corrisponderebbe a `Required Public`, e tutto quanto presente sia in `DataClasses` sia in `DataClasses.ViewModels` corrisponderebbe a `All`.  
+ <span data-ttu-id="1f7e4-333">Nell'esempio seguente, l'impostazione dei criteri di serializzazione per tutto quanto presente in `DataClasses` ma assente in `DataClasses.ViewModels` corrisponderebbe a `Required Public`, e tutto quanto presente sia in `DataClasses` sia in `DataClasses.ViewModels` corrisponderebbe a `All`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-333">In the following example, the serialization policy setting for everything in `DataClasses` that’s not in `DataClasses.ViewModels` would be `Required Public`, and everything that's in both `DataClasses` and `DataClasses.ViewModels` would be `All`.</span></span>  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -299,8 +297,8 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
 </Directives>  
 ```  
   
-### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a>Se i generics aperti e gli elementi di un'istanza applicano lo stesso tipo di criteri  
- Nell'esempio seguente, a `Dictionary<int,int>` viene assegnato il criterio `Browse` solo se il motore ha un motivo differente per assegnare il criterio `Browse` (che altrimenti sarebbe il comportamento predefinito). Per qualsiasi altra istanza di <xref:System.Collections.Generic.Dictionary%602> sarà possibile esplorare tutti i membri.  
+### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a><span data-ttu-id="1f7e4-334">Se i generics aperti e gli elementi di un'istanza applicano lo stesso tipo di criteri</span><span class="sxs-lookup"><span data-stu-id="1f7e4-334">If open generics and instantiated elements apply the same policy type</span></span>  
+ <span data-ttu-id="1f7e4-335">Nell'esempio seguente, a `Dictionary<int,int>` viene assegnato il criterio `Browse` solo se il motore ha un motivo differente per assegnare il criterio `Browse` (che altrimenti sarebbe il comportamento predefinito). Per qualsiasi altra istanza di <xref:System.Collections.Generic.Dictionary%602> sarà possibile esplorare tutti i membri.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-335">In the following example, `Dictionary<int,int>` is assigned the `Browse` policy only if the engine has another reason to give it the `Browse` policy (which would otherwise be the default behavior); every other instantiation of <xref:System.Collections.Generic.Dictionary%602> will have all of its members browsable.</span></span>  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -319,157 +317,156 @@ Un file di direttive di runtime (rd.xml) è un file di configurazione XML che sp
 </Directives>  
 ```  
   
-### <a name="how-policy-is-inferred"></a>Come vengono dedotti i criteri  
- Ogni tipo di criteri ha un diverso insieme di regole che determinano in che modo la presenza di tale tipo di criterio ha effetto su altri costrutti.  
+### <a name="how-policy-is-inferred"></a><span data-ttu-id="1f7e4-336">Come vengono dedotti i criteri</span><span class="sxs-lookup"><span data-stu-id="1f7e4-336">How policy is inferred</span></span>  
+ <span data-ttu-id="1f7e4-337">Ogni tipo di criteri ha un diverso insieme di regole che determinano in che modo la presenza di tale tipo di criterio ha effetto su altri costrutti.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-337">Each policy type has a different set of rules that determine how the presence of that policy type affects other constructs.</span></span>  
   
-#### <a name="the-effect-of-browse-policy"></a>Effetto del criterio Browse  
- L'applicazione del criterio `Browse` a un tipo implica le seguenti modifiche:  
+#### <a name="the-effect-of-browse-policy"></a><span data-ttu-id="1f7e4-338">Effetto del criterio Browse</span><span class="sxs-lookup"><span data-stu-id="1f7e4-338">The effect of Browse policy</span></span>  
+ <span data-ttu-id="1f7e4-339">L'applicazione del criterio `Browse` a un tipo implica le seguenti modifiche:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-339">Applying the `Browse` policy to a type involves the following policy changes:</span></span>  
   
--   Il tipo di base del tipo viene contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-340">Il tipo di base del tipo viene contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-340">The base type of the type is marked with the `Browse` policy.</span></span>  
   
--   Se il tipo è un generico istanziato, la versione priva di istanze del tipo è contrassegnata con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-341">Se il tipo è un generico istanziato, la versione priva di istanze del tipo è contrassegnata con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-341">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Browse` policy.</span></span>  
   
--   Se il tipo è un delegato, il metodo `Invoke` del tipo è contrassegnato con il criterio `Dynamic`.  
+-   <span data-ttu-id="1f7e4-342">Se il tipo è un delegato, il metodo `Invoke` del tipo è contrassegnato con il criterio `Dynamic`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-342">If the type is a delegate, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>  
   
--   Ciascuna interfaccia del tipo viene contrassegnata con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-343">Ciascuna interfaccia del tipo viene contrassegnata con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-343">Each interface of the type is marked with the `Browse` policy.</span></span>  
   
--   Il tipo di ciascun attributo applicato al tipo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-344">Il tipo di ciascun attributo applicato al tipo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-344">The type of each attribute applied to the type is marked with the `Browse` policy.</span></span>  
   
--   Se il tipo è generico, ogni tipo di vincolo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-345">Se il tipo è generico, ogni tipo di vincolo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-345">If the type is generic, each constraint type is marked with the `Browse` policy.</span></span>  
   
--   Se il tipo è generico, i tipi su cui viene creata un'istanza del tipo sono contrassegnati con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-346">Se il tipo è generico, i tipi su cui viene creata un'istanza del tipo sono contrassegnati con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-346">If the type is generic, the types over which the type is instantiated are marked with the `Browse` policy.</span></span>  
   
- L'applicazione del criterio `Browse` a un metodo implica le seguenti modifiche:  
+ <span data-ttu-id="1f7e4-347">L'applicazione del criterio `Browse` a un metodo implica le seguenti modifiche:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-347">Applying the `Browse` policy to a method involves the following policy changes:</span></span>  
   
--   Ogni tipo di parametro del metodo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-348">Ogni tipo di parametro del metodo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-348">Each parameter type of the method is marked with the `Browse` policy.</span></span>  
   
--   Il tipo restituito del metodo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-349">Il tipo restituito del metodo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-349">The return type of the method is marked with the `Browse` policy.</span></span>  
   
--   Il tipo contenitore del metodo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-350">Il tipo contenitore del metodo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-350">The containing type of the method is marked with the `Browse` policy.</span></span>  
   
--   Se il metodo è un metodo generico istanziato, il metodo generico privo di istanze è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-351">Se il metodo è un metodo generico istanziato, il metodo generico privo di istanze è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-351">If the method is an instantiated generic method, the uninstantiated generic method is marked with the `Browse` policy.</span></span>  
   
--   Il tipo di ciascun attributo applicato al metodo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-352">Il tipo di ciascun attributo applicato al metodo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-352">The type of each attribute applied to the method is marked with the `Browse` policy.</span></span>  
   
--   Se il metodo è generico, ogni tipo di vincolo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-353">Se il metodo è generico, ogni tipo di vincolo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-353">If the method is generic, each constraint type is marked with the `Browse` policy.</span></span>  
   
--   Se il metodo è generico, i tipi su cui viene creata un'istanza del metodo sono contrassegnati con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-354">Se il metodo è generico, i tipi su cui viene creata un'istanza del metodo sono contrassegnati con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-354">If the method is generic, the types over which the method is instantiated are marked with the `Browse` policy.</span></span>  
   
- L'applicazione del criterio `Browse` a un campo implica le seguenti modifiche:  
+ <span data-ttu-id="1f7e4-355">L'applicazione del criterio `Browse` a un campo implica le seguenti modifiche:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-355">Applying the `Browse` policy to a field involves the following policy changes:</span></span>  
   
--   Il tipo di ciascun attributo applicato al campo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-356">Il tipo di ciascun attributo applicato al campo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-356">The type of each attribute applied to the field is marked with the `Browse` policy.</span></span>  
   
--   Il tipo del campo viene contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-357">Il tipo del campo viene contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-357">The type of the field is marked with the `Browse` policy.</span></span>  
   
--   Il tipo al quale appartiene il campo viene contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-358">Il tipo al quale appartiene il campo viene contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-358">The type to which the field belongs is marked with the `Browse` policy.</span></span>  
   
-#### <a name="the-effect-of-dynamic-policy"></a>Effetto dei criteri Dynamic  
- L'applicazione del criterio `Dynamic` a un tipo implica le seguenti modifiche:  
+#### <a name="the-effect-of-dynamic-policy"></a><span data-ttu-id="1f7e4-359">Effetto dei criteri Dynamic</span><span class="sxs-lookup"><span data-stu-id="1f7e4-359">The effect of Dynamic policy</span></span>  
+ <span data-ttu-id="1f7e4-360">L'applicazione del criterio `Dynamic` a un tipo implica le seguenti modifiche:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-360">Applying the `Dynamic` policy to a type involves the following policy changes:</span></span>  
   
--   Il tipo di base del tipo viene contrassegnato con il criterio `Dynamic`.  
+-   <span data-ttu-id="1f7e4-361">Il tipo di base del tipo viene contrassegnato con il criterio `Dynamic`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-361">The base type of the type is marked with the `Dynamic` policy.</span></span>  
   
--   Se il tipo è un generico istanziato, la versione priva di istanze del tipo è contrassegnata con il criterio `Dynamic`.  
+-   <span data-ttu-id="1f7e4-362">Se il tipo è un generico istanziato, la versione priva di istanze del tipo è contrassegnata con il criterio `Dynamic`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-362">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Dynamic` policy.</span></span>  
   
--   Se il tipo è un delegato, il metodo `Invoke` del tipo è contrassegnato con il criterio `Dynamic`.  
+-   <span data-ttu-id="1f7e4-363">Se il tipo è un delegato, il metodo `Invoke` del tipo è contrassegnato con il criterio `Dynamic`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-363">If the type is a delegate type, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>  
   
--   Ciascuna interfaccia del tipo viene contrassegnata con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-364">Ciascuna interfaccia del tipo viene contrassegnata con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-364">Each interface of the type is marked with the `Browse` policy.</span></span>  
   
--   Il tipo di ciascun attributo applicato al tipo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-365">Il tipo di ciascun attributo applicato al tipo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-365">The type of each attribute applied to the type is marked with the `Browse` policy.</span></span>  
   
--   Se il tipo è generico, ogni tipo di vincolo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-366">Se il tipo è generico, ogni tipo di vincolo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-366">If the type is generic, each constraint type is marked with the `Browse` policy.</span></span>  
   
--   Se il tipo è generico, i tipi su cui viene creata un'istanza del tipo sono contrassegnati con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-367">Se il tipo è generico, i tipi su cui viene creata un'istanza del tipo sono contrassegnati con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-367">If the type is generic, the types over which the type is instantiated are marked with the `Browse` policy.</span></span>  
   
- L'applicazione del criterio `Dynamic` a un metodo implica le seguenti modifiche:  
+ <span data-ttu-id="1f7e4-368">L'applicazione del criterio `Dynamic` a un metodo implica le seguenti modifiche:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-368">Applying the `Dynamic` policy to a method involves the following policy changes:</span></span>  
   
--   Ogni tipo di parametro del metodo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-369">Ogni tipo di parametro del metodo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-369">Each parameter type of the method is marked with the `Browse` policy.</span></span>  
   
--   Il tipo restituito del metodo è contrassegnato con il criterio `Dynamic`.  
+-   <span data-ttu-id="1f7e4-370">Il tipo restituito del metodo è contrassegnato con il criterio `Dynamic`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-370">The return type of the method is marked with the `Dynamic` policy.</span></span>  
   
--   Il tipo contenitore del metodo è contrassegnato con il criterio `Dynamic`.  
+-   <span data-ttu-id="1f7e4-371">Il tipo contenitore del metodo è contrassegnato con il criterio `Dynamic`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-371">The containing type of the method is marked with the `Dynamic` policy.</span></span>  
   
--   Se il metodo è un metodo generico istanziato, il metodo generico privo di istanze è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-372">Se il metodo è un metodo generico istanziato, il metodo generico privo di istanze è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-372">If the method is an instantiated generic method, the uninstantiated generic method is marked with the `Browse` policy.</span></span>  
   
--   Il tipo di ciascun attributo applicato al metodo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-373">Il tipo di ciascun attributo applicato al metodo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-373">The type of each attribute applied to the method is marked with the `Browse` policy.</span></span>  
   
--   Se il metodo è generico, ogni tipo di vincolo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-374">Se il metodo è generico, ogni tipo di vincolo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-374">If the method is generic, each constraint type is marked with the `Browse` policy.</span></span>  
   
--   Se il metodo è generico, i tipi su cui viene creata un'istanza del metodo sono contrassegnati con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-375">Se il metodo è generico, i tipi su cui viene creata un'istanza del metodo sono contrassegnati con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-375">If the method is generic, the types over which the method is instantiated are marked with the `Browse` policy.</span></span>  
   
--   Il metodo può essere richiamato da `MethodInfo.Invoke` e la creazione del delegato è resa possibile da <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=fullName>.  
+-   <span data-ttu-id="1f7e4-376">Il metodo può essere richiamato da `MethodInfo.Invoke` e la creazione del delegato è resa possibile da <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-376">The method can be invoked by `MethodInfo.Invoke`, and delegate creation becomes possible by <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.</span></span>  
   
- L'applicazione del criterio `Dynamic` a un campo implica le seguenti modifiche:  
+ <span data-ttu-id="1f7e4-377">L'applicazione del criterio `Dynamic` a un campo implica le seguenti modifiche:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-377">Applying the `Dynamic` policy to a field involves the following policy changes:</span></span>  
   
--   Il tipo di ciascun attributo applicato al campo è contrassegnato con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-378">Il tipo di ciascun attributo applicato al campo è contrassegnato con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-378">The type of each attribute applied to the field is marked with the `Browse` policy.</span></span>  
   
--   Il tipo del campo viene contrassegnato con il criterio `Dynamic`.  
+-   <span data-ttu-id="1f7e4-379">Il tipo del campo viene contrassegnato con il criterio `Dynamic`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-379">The type of the field is marked with the `Dynamic` policy.</span></span>  
   
--   Il tipo al quale appartiene il campo viene contrassegnato con il criterio `Dynamic`.  
+-   <span data-ttu-id="1f7e4-380">Il tipo al quale appartiene il campo viene contrassegnato con il criterio `Dynamic`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-380">The type to which the field belongs is marked with the `Dynamic` policy.</span></span>  
   
-#### <a name="the-effect-of-activation-policy"></a>Effetto del criterio Activation  
- L'applicazione del criterio Activation a un tipo implica le seguenti modifiche:  
+#### <a name="the-effect-of-activation-policy"></a><span data-ttu-id="1f7e4-381">Effetto del criterio Activation</span><span class="sxs-lookup"><span data-stu-id="1f7e4-381">The effect of Activation policy</span></span>  
+ <span data-ttu-id="1f7e4-382">L'applicazione del criterio Activation a un tipo implica le seguenti modifiche:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-382">Applying the Activation policy to a type involves the following policy changes:</span></span>  
   
--   Se il tipo è un generico istanziato, la versione priva di istanze del tipo è contrassegnata con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-383">Se il tipo è un generico istanziato, la versione priva di istanze del tipo è contrassegnata con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-383">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Browse` policy.</span></span>  
   
--   Se il tipo è un delegato, il metodo `Invoke` del tipo è contrassegnato con il criterio `Dynamic`.  
+-   <span data-ttu-id="1f7e4-384">Se il tipo è un delegato, il metodo `Invoke` del tipo è contrassegnato con il criterio `Dynamic`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-384">If the type is a delegate type, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>  
   
--   I costruttori del tipo vengono contrassegnati con il criterio `Activation`.  
+-   <span data-ttu-id="1f7e4-385">I costruttori del tipo vengono contrassegnati con il criterio `Activation`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-385">Constructors of the type are marked with the `Activation` policy.</span></span>  
   
- L'applicazione del criterio `Activation` a un metodo implica le seguenti modifiche:  
+ <span data-ttu-id="1f7e4-386">L'applicazione del criterio `Activation` a un metodo implica le seguenti modifiche:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-386">Applying the `Activation` policy to a method involves the following policy change:</span></span>  
   
--   Il costruttore può essere richiamato dai metodi <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=fullName> e <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>. Per i metodi, il criterio `Activation` influisce solo sui costruttori.  
+-   <span data-ttu-id="1f7e4-387">Il costruttore può essere richiamato dai metodi <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> e <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-387">The constructor can be invoked by the <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> and <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> methods.</span></span> <span data-ttu-id="1f7e4-388">Per i metodi, il criterio `Activation` influisce solo sui costruttori.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-388">For methods, the `Activation` policy affects constructors only.</span></span>  
   
- L'applicazione del criterio `Activation` a un campo non ha alcun effetto.  
+ <span data-ttu-id="1f7e4-389">L'applicazione del criterio `Activation` a un campo non ha alcun effetto.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-389">Applying the `Activation` policy to a field has no effect.</span></span>  
   
-#### <a name="the-effect-of-serialize-policy"></a>Effetto del criterio Serialize  
- Il criterio `Serialize` consente l'utilizzo dei serializzatori basati su reflection più comuni. Tuttavia, poiché gli schemi di accesso alla reflection esatti dei serializzatori non Microsoft non sono noti a Microsoft, questo criterio potrebbe non essere completamente efficace.  
+#### <a name="the-effect-of-serialize-policy"></a><span data-ttu-id="1f7e4-390">Effetto del criterio Serialize</span><span class="sxs-lookup"><span data-stu-id="1f7e4-390">The effect of Serialize policy</span></span>  
+ <span data-ttu-id="1f7e4-391">Il criterio `Serialize` consente l'utilizzo dei serializzatori basati su reflection più comuni.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-391">The `Serialize` policy enables the use of common reflection-based serializers.</span></span> <span data-ttu-id="1f7e4-392">Tuttavia, poiché gli schemi di accesso alla reflection esatti dei serializzatori non Microsoft non sono noti a Microsoft, questo criterio potrebbe non essere completamente efficace.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-392">However, because the exact reflection access patterns of non-Microsoft serializers are not known to Microsoft, this policy may not be entirely effective.</span></span>  
   
- L'applicazione del criterio `Serialize` a un tipo implica le seguenti modifiche:  
+ <span data-ttu-id="1f7e4-393">L'applicazione del criterio `Serialize` a un tipo implica le seguenti modifiche:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-393">Applying the `Serialize` policy to a type involves the following policy changes:</span></span>  
   
--   Il tipo di base del tipo viene contrassegnato con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-394">Il tipo di base del tipo viene contrassegnato con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-394">The base type of the type is marked with the `Serialize` policy.</span></span>  
   
--   Se il tipo è un generico istanziato, la versione priva di istanze del tipo è contrassegnata con il criterio `Browse`.  
+-   <span data-ttu-id="1f7e4-395">Se il tipo è un generico istanziato, la versione priva di istanze del tipo è contrassegnata con il criterio `Browse`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-395">If the type is an instantiated generic, the uninstantiated version of the type is marked with the `Browse` policy.</span></span>  
   
--   Se il tipo è un delegato, il metodo `Invoke` del tipo è contrassegnato con il criterio `Dynamic`.  
+-   <span data-ttu-id="1f7e4-396">Se il tipo è un delegato, il metodo `Invoke` del tipo è contrassegnato con il criterio `Dynamic`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-396">If the type is a delegate type, the `Invoke` method on the type is marked with the `Dynamic` policy.</span></span>  
   
--   Se il tipo è un'enumerazione, una matrice del tipo è contrassegnata con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-397">Se il tipo è un'enumerazione, una matrice del tipo è contrassegnata con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-397">If the type is an enumeration, an array of the type is marked with the `Serialize` policy.</span></span>  
   
--   Se il tipo implementa <xref:System.Collections.Generic.IEnumerable%601>, `T` viene contrassegnato con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-398">Se il tipo implementa <xref:System.Collections.Generic.IEnumerable%601>, `T` viene contrassegnato con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-398">If the type implements <xref:System.Collections.Generic.IEnumerable%601>, `T` is marked with the `Serialize` policy.</span></span>  
   
--   Se il tipo è <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IList%601>, <xref:System.Collections.Generic.ICollection%601>, <xref:System.Collections.Generic.IReadOnlyCollection%601> o <xref:System.Collections.Generic.IReadOnlyList%601>, `T[]` e <xref:System.Collections.Generic.List%601> vengono contrassegnati con il criterio `Serialize`, ma nessuno membro del tipo di interfaccia viene contrassegnato con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-399">Se il tipo è <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IList%601>, <xref:System.Collections.Generic.ICollection%601>, <xref:System.Collections.Generic.IReadOnlyCollection%601> o <xref:System.Collections.Generic.IReadOnlyList%601>, `T[]` e <xref:System.Collections.Generic.List%601> vengono contrassegnati con il criterio `Serialize`, ma nessuno membro del tipo di interfaccia viene contrassegnato con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-399">If the type is <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IList%601>, <xref:System.Collections.Generic.ICollection%601>, <xref:System.Collections.Generic.IReadOnlyCollection%601>, or <xref:System.Collections.Generic.IReadOnlyList%601>, then `T[]` and <xref:System.Collections.Generic.List%601> marked with the `Serialize` policy., but no members of the interface type are marked with the `Serialize` policy.</span></span>  
   
--   Se il tipo è <xref:System.Collections.Generic.List%601>, nessun membro del tipo viene contrassegnato con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-400">Se il tipo è <xref:System.Collections.Generic.List%601>, nessun membro del tipo viene contrassegnato con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-400">If the type is <xref:System.Collections.Generic.List%601>, no members of the type are marked with the `Serialize` policy.</span></span>  
   
--   Se il tipo è <xref:System.Collections.Generic.IDictionary%602>, <xref:System.Collections.Generic.Dictionary%602> viene contrassegnato con il criterio `Serialize`, ma nessun membro del tipo viene contrassegnato con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-401">Se il tipo è <xref:System.Collections.Generic.IDictionary%602>, <xref:System.Collections.Generic.Dictionary%602> viene contrassegnato con il criterio `Serialize`,</span><span class="sxs-lookup"><span data-stu-id="1f7e4-401">If the type is <xref:System.Collections.Generic.IDictionary%602>, <xref:System.Collections.Generic.Dictionary%602> is marked with the `Serialize` policy.</span></span> <span data-ttu-id="1f7e4-402">ma nessun membro del tipo viene contrassegnato con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-402">but no members of the type are marked with the `Serialize` policy.</span></span>  
   
--   Se il tipo è <xref:System.Collections.Generic.Dictionary%602>, nessun membro del tipo viene contrassegnato con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-403">Se il tipo è <xref:System.Collections.Generic.Dictionary%602>, nessun membro del tipo viene contrassegnato con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-403">If the type is <xref:System.Collections.Generic.Dictionary%602>, no members of the type are marked with the `Serialize` policy.</span></span>  
   
--   Se il tipo implementa <xref:System.Collections.Generic.IDictionary%602>, `TKey` e `TValue` vengono contrassegnati con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-404">Se il tipo implementa <xref:System.Collections.Generic.IDictionary%602>, `TKey` e `TValue` vengono contrassegnati con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-404">If the type implements <xref:System.Collections.Generic.IDictionary%602>, `TKey` and `TValue` are marked with the `Serialize` policy.</span></span>  
   
--   Ogni costruttore, ogni funzione di accesso della proprietà e ogni campo è contrassegnato con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-405">Ogni costruttore, ogni funzione di accesso della proprietà e ogni campo è contrassegnato con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-405">Each constructor, each property accessor, and each field is marked with the `Serialize` policy.</span></span>  
   
- L'applicazione del criterio `Serialize` a un metodo implica le seguenti modifiche:  
+ <span data-ttu-id="1f7e4-406">L'applicazione del criterio `Serialize` a un metodo implica le seguenti modifiche:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-406">Applying the `Serialize` policy to a method involves the following policy changes:</span></span>  
   
--   Il tipo contenitore è contrassegnato con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-407">Il tipo contenitore è contrassegnato con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-407">The containing type is marked with the `Serialize` policy.</span></span>  
   
--   Il tipo restituito del metodo è contrassegnato con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-408">Il tipo restituito del metodo è contrassegnato con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-408">The return type of the method is marked with the `Serialize` policy.</span></span>  
   
- L'applicazione del criterio `Serialize` a un campo implica le seguenti modifiche:  
+ <span data-ttu-id="1f7e4-409">L'applicazione del criterio `Serialize` a un campo implica le seguenti modifiche:</span><span class="sxs-lookup"><span data-stu-id="1f7e4-409">Applying the `Serialize` policy to a field involves the following policy changes:</span></span>  
   
--   Il tipo contenitore è contrassegnato con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-410">Il tipo contenitore è contrassegnato con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-410">The containing type is marked with the `Serialize` policy.</span></span>  
   
--   Il tipo del campo viene contrassegnato con il criterio `Serialize`.  
+-   <span data-ttu-id="1f7e4-411">Il tipo del campo viene contrassegnato con il criterio `Serialize`.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-411">The type of the field is marked with the `Serialize` policy.</span></span>  
   
-#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserialier-policies"></a>Effetto dei criteri XmlSerializer, DataContractSerializer e DataContractJsonSerialier  
- A differenza del criterio `Serialize`, destinato ai serializzatori basati sulla reflection, i criteri `XmlSerializer`, `DataContractSerializer` e `DataContractJsonSerializer` sono usati per abilitare un set di serializzatori noti alla catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Questi serializzatori non vengono implementati tramite reflection, ma l'insieme di tipi che possono essere serializzati in fase di esecuzione è determinato in modo simile come tipi soggetti a reflection.  
+#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserialier-policies"></a><span data-ttu-id="1f7e4-412">Effetto dei criteri XmlSerializer, DataContractSerializer e DataContractJsonSerialier</span><span class="sxs-lookup"><span data-stu-id="1f7e4-412">The effect of XmlSerializer, DataContractSerializer, and DataContractJsonSerialier policies</span></span>  
+ <span data-ttu-id="1f7e4-413">A differenza del criterio `Serialize`, destinato ai serializzatori basati sulla reflection, i criteri `XmlSerializer`, `DataContractSerializer` e `DataContractJsonSerializer` sono usati per abilitare un set di serializzatori noti alla catena di strumenti [!INCLUDE[net_native](../../../includes/net-native-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1f7e4-413">Unlike the `Serialize` policy, which is intended for reflection-based serializers, the `XmlSerializer`, `DataContractSerializer`, and `DataContractJsonSerializer` policies are used to enable a set of serializers that are known to the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain.</span></span> <span data-ttu-id="1f7e4-414">Questi serializzatori non vengono implementati tramite reflection, ma l'insieme di tipi che possono essere serializzati in fase di esecuzione è determinato in modo simile come tipi soggetti a reflection.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-414">These serializers are not implemented by using reflection, but the set of types that can be serialized at run time is determined in a similar manner as types that are reflectable.</span></span>  
   
- L'applicazione di uno di questi criteri a un tipo consente di serializzare il tipo con il serializzatore corrispondente. Inoltre, eventuali tipi che il motore di serializzazione determina come serializzabili saranno indicati come tali.  
+ <span data-ttu-id="1f7e4-415">L'applicazione di uno di questi criteri a un tipo consente di serializzare il tipo con il serializzatore corrispondente.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-415">Applying one of these policies to a type enables the type to be serialized with the matching serializer.</span></span> <span data-ttu-id="1f7e4-416">Inoltre, eventuali tipi che il motore di serializzazione determina come serializzabili saranno indicati come tali.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-416">Also, any types that the serialization engine can statically determine as needing serialization will also be serializable.</span></span>  
   
- Questi criteri non hanno alcun effetto sui metodi o campi.  
+ <span data-ttu-id="1f7e4-417">Questi criteri non hanno alcun effetto sui metodi o campi.</span><span class="sxs-lookup"><span data-stu-id="1f7e4-417">These policies have no effect on methods or fields.</span></span>  
   
- Per altre informazioni, vedere la sezione relativa alle differenze nei serializzatori in [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native).  
+ <span data-ttu-id="1f7e4-418">Per altre informazioni, vedere la sezione relativa alle differenze nei serializzatori in [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) (Migrazione dell'app di Windows Store a .NET Native).</span><span class="sxs-lookup"><span data-stu-id="1f7e4-418">For more information, see the "Differences in Serializers" section in [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).</span></span>  
   
-## <a name="see-also"></a>Vedere anche  
- [Elementi direttiva di runtime](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [Reflection e .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
-
+## <a name="see-also"></a><span data-ttu-id="1f7e4-419">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1f7e4-419">See Also</span></span>  
+ [<span data-ttu-id="1f7e4-420">Elementi direttiva di runtime</span><span class="sxs-lookup"><span data-stu-id="1f7e4-420">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [<span data-ttu-id="1f7e4-421">Reflection e .NET Native</span><span class="sxs-lookup"><span data-stu-id="1f7e4-421">Reflection and .NET Native</span></span>](../../../docs/framework/net-native/reflection-and-net-native.md)

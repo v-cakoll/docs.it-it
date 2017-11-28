@@ -1,82 +1,80 @@
 ---
-title: "Public (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Public"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Public keyword"
-  - "Public keyword, syntax"
-  - "Public access modifier"
+title: Public (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Public
+helpviewer_keywords:
+- Public keyword [Visual Basic]
+- Public keyword [Visual Basic], syntax
+- Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e6cd70adf6ec31c56f39d0443d320dd1b00b00d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Public (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Specifica che uno o più elementi di programmazione dichiarati non presentano restrizioni di accesso.  
+# <a name="public-visual-basic"></a><span data-ttu-id="edceb-102">Public (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="edceb-102">Public (Visual Basic)</span></span>
+<span data-ttu-id="edceb-103">Specifica che uno o più elementi di programmazione dichiarati non sono restrizioni di accesso.</span><span class="sxs-lookup"><span data-stu-id="edceb-103">Specifies that one or more declared programming elements have no access restrictions.</span></span>  
   
-## Note  
- Se si pubblica un componente o un insieme di componenti, ad esempio una libreria di classi, solitamente si richiede che gli elementi di programmazione siano accessibili a tutto il codice che interagisce con l'assembly.  Per conferire tale accesso illimitato a un elemento, è possibile dichiararlo con la parola chiave `Public`.  
+## <a name="remarks"></a><span data-ttu-id="edceb-104">Note</span><span class="sxs-lookup"><span data-stu-id="edceb-104">Remarks</span></span>  
+ <span data-ttu-id="edceb-105">Se si esegue la pubblicazione di un componente o un set di componenti, ad esempio una libreria di classi, si desidera in genere gli elementi di programmazione deve essere accessibile da qualsiasi codice che interagisce con l'assembly.</span><span class="sxs-lookup"><span data-stu-id="edceb-105">If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly.</span></span> <span data-ttu-id="edceb-106">Per conferire tale accesso illimitato a un elemento, è possibile dichiarare con `Public`.</span><span class="sxs-lookup"><span data-stu-id="edceb-106">To confer such unlimited access on an element, you can declare it with `Public`.</span></span>  
   
- L'accesso pubblico è il livello normale per un elemento di programmazione a cui non sia necessario limitare l'accesso.  Se non diversamente dichiarato, il livello di accesso di un elemento dichiarato all'interno di un'interfaccia, un modulo, una classe o una struttura è per impostazione predefinita `Public`.  
+ <span data-ttu-id="edceb-107">Accesso pubblico è il livello normale per un elemento di programmazione quando non è necessario limitare l'accesso.</span><span class="sxs-lookup"><span data-stu-id="edceb-107">Public access is the normal level for a programming element when you do not need to limit access to it.</span></span> <span data-ttu-id="edceb-108">Si noti che il livello di accesso di un elemento dichiarato all'interno di un'interfaccia, modulo, classe o struttura per impostazione predefinita `Public` se non si dichiara in caso contrario.</span><span class="sxs-lookup"><span data-stu-id="edceb-108">Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.</span></span>  
   
-## Regole  
+## <a name="rules"></a><span data-ttu-id="edceb-109">Regole</span><span class="sxs-lookup"><span data-stu-id="edceb-109">Rules</span></span>  
   
--   **Contesto della dichiarazione.** È possibile utilizzare la parola chiave `Public` solo a livello di modulo, di interfaccia o di spazio dei nomi.  In altri termini, il contesto della dichiarazione per un elemento `Public` deve essere un file di origine, uno spazio dei nomi, un'interfaccia, un modulo, una classe o una struttura, ma non può essere una routine.  
+-   <span data-ttu-id="edceb-110">**Contesto della dichiarazione.**</span><span class="sxs-lookup"><span data-stu-id="edceb-110">**Declaration Context.**</span></span> <span data-ttu-id="edceb-111">È possibile utilizzare `Public` solo a livello di modulo, interfaccia o spazio dei nomi.</span><span class="sxs-lookup"><span data-stu-id="edceb-111">You can use `Public` only at module, interface, or namespace level.</span></span> <span data-ttu-id="edceb-112">Ciò significa che il contesto della dichiarazione per un `Public` elemento deve essere un file di origine, lo spazio dei nomi, interfaccia, modulo, classe o struttura e non può essere una stored procedure.</span><span class="sxs-lookup"><span data-stu-id="edceb-112">This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.</span></span>  
   
-## Comportamento  
+## <a name="behavior"></a><span data-ttu-id="edceb-113">Comportamento</span><span class="sxs-lookup"><span data-stu-id="edceb-113">Behavior</span></span>  
   
--   **Livello di accesso.** Tutto il codice in grado di accedere a un modulo, una classe o una struttura può accedere ai relativi elementi `Public`.  
+-   <span data-ttu-id="edceb-114">**Livello di accesso.**</span><span class="sxs-lookup"><span data-stu-id="edceb-114">**Access Level.**</span></span> <span data-ttu-id="edceb-115">Tutto il codice che è possibile accedere a un modulo, classe o struttura possa accedere ai relativi `Public` elementi.</span><span class="sxs-lookup"><span data-stu-id="edceb-115">All code that can access a module, class, or structure can access its `Public` elements.</span></span>  
   
--   **Accesso predefinito.** Le variabili locali all'interno di una routine per impostazione predefinita dispongono di accesso pubblico e non è possibile utilizzare modificatori di accesso per tali variabili.  
+-   <span data-ttu-id="edceb-116">**Accesso predefinito.**</span><span class="sxs-lookup"><span data-stu-id="edceb-116">**Default Access.**</span></span> <span data-ttu-id="edceb-117">Le variabili locali all'interno di una routine per impostazione predefinita per l'accesso pubblico ed è possono utilizzare i modificatori di accesso su di essi.</span><span class="sxs-lookup"><span data-stu-id="edceb-117">Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.</span></span>  
   
--   **Modificatori di accesso.** Le parole chiave che specificano il livello di accesso sono dette *modificatori di accesso*.  Per un confronto tra i modificatori di accesso, vedere [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+-   <span data-ttu-id="edceb-118">**Modificatori di accesso.**</span><span class="sxs-lookup"><span data-stu-id="edceb-118">**Access Modifiers.**</span></span> <span data-ttu-id="edceb-119">Le parole chiave che specificano il livello di accesso vengono chiamate *modificatori di accesso*.</span><span class="sxs-lookup"><span data-stu-id="edceb-119">The keywords that specify access level are called *access modifiers*.</span></span> <span data-ttu-id="edceb-120">Per un confronto tra i modificatori di accesso, vedere [accedere livelli in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="edceb-120">For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
- Il modificatore `Public` può essere utilizzato nei seguenti contesti:  
+ <span data-ttu-id="edceb-121">Il modificatore `Public` può essere usato nei contesti seguenti:</span><span class="sxs-lookup"><span data-stu-id="edceb-121">The `Public` modifier can be used in these contexts:</span></span>  
   
- [Istruzione Class](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="edceb-122">Istruzione Class</span><span class="sxs-lookup"><span data-stu-id="edceb-122">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [Istruzione Const](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [<span data-ttu-id="edceb-123">Istruzione Const</span><span class="sxs-lookup"><span data-stu-id="edceb-123">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Istruzione Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="edceb-124">Istruzione Declare</span><span class="sxs-lookup"><span data-stu-id="edceb-124">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [Istruzione Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [<span data-ttu-id="edceb-125">Istruzione Delegate</span><span class="sxs-lookup"><span data-stu-id="edceb-125">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [Istruzione Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="edceb-126">Istruzione Dim</span><span class="sxs-lookup"><span data-stu-id="edceb-126">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Istruzione Enum](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="edceb-127">Istruzione Enum</span><span class="sxs-lookup"><span data-stu-id="edceb-127">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [Istruzione Event](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="edceb-128">Istruzione Event</span><span class="sxs-lookup"><span data-stu-id="edceb-128">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Istruzione Function](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="edceb-129">Istruzione Function</span><span class="sxs-lookup"><span data-stu-id="edceb-129">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Istruzione Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="edceb-130">Istruzione Interface</span><span class="sxs-lookup"><span data-stu-id="edceb-130">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Istruzione Module](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [<span data-ttu-id="edceb-131">Istruzione Module</span><span class="sxs-lookup"><span data-stu-id="edceb-131">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
   
- [Istruzione Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="edceb-132">Istruzione Operator</span><span class="sxs-lookup"><span data-stu-id="edceb-132">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
- [Istruzione Property](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="edceb-133">Istruzione Property</span><span class="sxs-lookup"><span data-stu-id="edceb-133">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Istruzione Structure](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [<span data-ttu-id="edceb-134">Istruzione Structure</span><span class="sxs-lookup"><span data-stu-id="edceb-134">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [Istruzione Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="edceb-135">Istruzione Sub</span><span class="sxs-lookup"><span data-stu-id="edceb-135">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Vedere anche  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)   
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Procedures](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a><span data-ttu-id="edceb-136">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="edceb-136">See Also</span></span>  
+ [<span data-ttu-id="edceb-137">Protected</span><span class="sxs-lookup"><span data-stu-id="edceb-137">Protected</span></span>](../../../visual-basic/language-reference/modifiers/protected.md)  
+ [<span data-ttu-id="edceb-138">Friend</span><span class="sxs-lookup"><span data-stu-id="edceb-138">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [<span data-ttu-id="edceb-139">Private</span><span class="sxs-lookup"><span data-stu-id="edceb-139">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
+ [<span data-ttu-id="edceb-140">Livelli di accesso in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="edceb-140">Access levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="edceb-141">Routine</span><span class="sxs-lookup"><span data-stu-id="edceb-141">Procedures</span></span>](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [<span data-ttu-id="edceb-142">Strutture</span><span class="sxs-lookup"><span data-stu-id="edceb-142">Structures</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [<span data-ttu-id="edceb-143">Oggetti e classi</span><span class="sxs-lookup"><span data-stu-id="edceb-143">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

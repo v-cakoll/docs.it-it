@@ -1,60 +1,63 @@
 ---
-title: "Ricerca di individuazione e FindCriteria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ricerca di individuazione e FindCriteria
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c2eca9553862cf1349272142e4165c3cfd2e4f3f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Ricerca di individuazione e FindCriteria
-Un'operazione di ricerca dell'individuazione viene inizializzata da un client per individuare uno o più servizi ed è una delle azioni principali nell'ambito dell'individuazione.L'esecuzione di una ricerca invia un messaggio WS\-Discovery Probe sulla rete.I servizi che corrispondono ai criteri specificati inviano una risposta con i messaggi WS\-Discovery ProbeMatch.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] messaggi di individuazione, vedere il documento relativo alla [specifica WS\-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
+# <a name="discovery-find-and-findcriteria"></a><span data-ttu-id="a5ea4-102">Ricerca di individuazione e FindCriteria</span><span class="sxs-lookup"><span data-stu-id="a5ea4-102">Discovery Find and FindCriteria</span></span>
+<span data-ttu-id="a5ea4-103">Un'operazione di ricerca dell'individuazione viene inizializzata da un client per individuare uno o più servizi ed è una delle azioni principali nell'ambito dell'individuazione.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-103">A discovery find operation is initiated by a client to discover one or more services and is one of the main actions in discovery.</span></span> <span data-ttu-id="a5ea4-104">L'esecuzione di una ricerca invia un messaggio WS-Discovery Probe sulla rete.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-104">Performing a find sends a WS-Discovery Probe message over the network.</span></span> <span data-ttu-id="a5ea4-105">I servizi che corrispondono ai criteri specificati inviano una risposta con i messaggi WS-Discovery ProbeMatch.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-105">Services that match the criteria specified reply with WS-Discovery ProbeMatch messages.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a5ea4-106">messaggi di individuazione, vedere il [specifica WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).</span><span class="sxs-lookup"><span data-stu-id="a5ea4-106"> discovery messages, see the [WS-Discovery specification](http://go.microsoft.com/fwlink/?LinkID=122347).</span></span>  
   
-## DiscoveryClient  
- La classe <xref:System.ServiceModel.Discovery.DiscoveryClient> fornisce il meccanismo necessario per eseguire operazioni di ricerca e agevola l'esecuzione delle operazioni del client di individuazione.Contiene un metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> che esegue una ricerca sincrona \(bloccante\) scoperta e un metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> che viene inizializzato con una ricerca asincrona non bloccante.Entrambi i metodi utilizzano un parametro <xref:System.ServiceModel.Discovery.FindCriteria> e forniscono risultati all'utente tramite un oggetto <xref:System.ServiceModel.Discovery.FindResponse>.  
+## <a name="discoveryclient"></a><span data-ttu-id="a5ea4-107">DiscoveryClient</span><span class="sxs-lookup"><span data-stu-id="a5ea4-107">DiscoveryClient</span></span>  
+ <span data-ttu-id="a5ea4-108">La classe <xref:System.ServiceModel.Discovery.DiscoveryClient> fornisce il meccanismo necessario per eseguire operazioni di ricerca e agevola l'esecuzione delle operazioni del client di individuazione.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-108">The <xref:System.ServiceModel.Discovery.DiscoveryClient> class provides the mechanism to perform find operations and makes performing discovery client operations easy.</span></span> <span data-ttu-id="a5ea4-109">Contiene un metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> che esegue una ricerca sincrona (bloccante) scoperta e un metodo <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> che viene inizializzato con una ricerca asincrona non bloccante.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-109">It contains a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> method, which performs a (blocking) synchronous find, and a <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> method, which initiates a non-blocking asynchronous find.</span></span> <span data-ttu-id="a5ea4-110">Entrambi i metodi utilizzano un parametro <xref:System.ServiceModel.Discovery.FindCriteria> e forniscono risultati all'utente tramite un oggetto <xref:System.ServiceModel.Discovery.FindResponse>.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-110">Both methods take a <xref:System.ServiceModel.Discovery.FindCriteria> parameter, and provide results to the user through a <xref:System.ServiceModel.Discovery.FindResponse> object.</span></span>  
   
-## FindCriteria  
- <xref:System.ServiceModel.Discovery.FindCriteria> dispone di varie proprietà, raggruppabili in criteri di ricerca, che specificano i servizi ricercati e cercano criteri di terminazione \(durata della ricerca\).Un elemento <xref:System.ServiceModel.Discovery.FindCriteria> può contenere più criteri di ricerca.Per impostazione predefinita, il servizio deve individuare corrispondenze per tutti i componenti. In caso contrario, non viene considerato un servizio corrispondente.Se si desidera cercare servizi che corrispondono solo a determinati criteri, è possibile implementare la logica di ricerca personalizzata nel servizio oppure utilizzare più query.  
+## <a name="findcriteria"></a><span data-ttu-id="a5ea4-111">FindCriteria</span><span class="sxs-lookup"><span data-stu-id="a5ea4-111">FindCriteria</span></span>  
+ <span data-ttu-id="a5ea4-112"><xref:System.ServiceModel.Discovery.FindCriteria> dispone di varie proprietà, raggruppabili in criteri di ricerca, che specificano i servizi ricercati e cercano criteri di terminazione (durata della ricerca).</span><span class="sxs-lookup"><span data-stu-id="a5ea4-112"><xref:System.ServiceModel.Discovery.FindCriteria> has several properties, which can be grouped into search criteria, which specify what services you are looking for, and find termination criteria (how long the search should last).</span></span> <span data-ttu-id="a5ea4-113">Un elemento <xref:System.ServiceModel.Discovery.FindCriteria> può contenere più criteri di ricerca.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-113">A <xref:System.ServiceModel.Discovery.FindCriteria> can contain multiple search criteria.</span></span> <span data-ttu-id="a5ea4-114">Per impostazione predefinita, il servizio deve individuare corrispondenze per tutti i componenti. In caso contrario, non viene considerato un servizio corrispondente.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-114">By default, the service has to match all of the components otherwise it does not consider itself a matching service.</span></span> <span data-ttu-id="a5ea4-115">Se si desidera cercare servizi che corrispondono solo a determinati criteri, è possibile implementare la logica di ricerca personalizzata nel servizio oppure utilizzare più query.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-115">If you want to find services that only match some of the criteria, you can implement custom find logic on the service or you can use multiple queries.</span></span>  
   
- I criteri di ricerca includono:  
+ <span data-ttu-id="a5ea4-116">I criteri di ricerca includono:</span><span class="sxs-lookup"><span data-stu-id="a5ea4-116">Search criteria include:</span></span>  
   
--   <xref:System.ServiceModel.Discovery.ContractTypeNames%2A> \- Facoltativo.Nome del contratto del servizio cercato e criteri in genere utilizzati in fase di ricerca di un servizio.Se viene specificato più di un nome di contratto, verrà inviata una risposta solo dagli endpoint del servizio corrispondenti a TUTTI i contratti.In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] un endpoint può supportare un solo contratto.  
+-   <span data-ttu-id="a5ea4-117"><xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-117"><xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - Optional.</span></span> <span data-ttu-id="a5ea4-118">Nome del contratto del servizio cercato e criteri in genere utilizzati in fase di ricerca di un servizio.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-118">The contract name of the service being searched for and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="a5ea4-119">Se viene specificato più di un nome di contratto, verrà inviata una risposta solo dagli endpoint del servizio corrispondenti a TUTTI i contratti.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-119">If more than one contract name is specified, only service endpoints matching ALL contracts reply.</span></span> <span data-ttu-id="a5ea4-120">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] un endpoint può supportare un solo contratto.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-120">Note that in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] an endpoint can only support one contract.</span></span>  
   
--   <xref:System.ServiceModel.Discovery.Scopes%2A> \- Facoltativo.Gli ambiti sono URI assoluti utilizzati per suddividere in categorie singoli endpoint servizio.Potrebbe risultare opportuno utilizzare questo ambito negli scenari in cui più endpoint espongono lo stesso contratto e si desidera un metodo di ricerca di un subset degli endpoint.Se viene specificato più di un ambito, verrà inviata una risposta solo dagli endpoint del servizio corrispondenti a TUTTI gli ambiti.  
+-   <span data-ttu-id="a5ea4-121"><xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - Facoltativo.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-121"><xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - Optional.</span></span> <span data-ttu-id="a5ea4-122">Gli ambiti sono URI assoluti utilizzati per suddividere in categorie singoli endpoint servizio.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-122">Scopes are absolute URIs that are used to categorize individual service endpoints.</span></span> <span data-ttu-id="a5ea4-123">Potrebbe risultare opportuno utilizzare questo ambito negli scenari in cui più endpoint espongono lo stesso contratto e si desidera un metodo di ricerca di un subset degli endpoint.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-123">You may want to use this in scenarios where multiple endpoints expose the same contract and you want a way to search for a subset of the endpoints.</span></span> <span data-ttu-id="a5ea4-124">Se viene specificato più di un ambito, verrà inviata una risposta solo dagli endpoint del servizio corrispondenti a TUTTI gli ambiti.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-124">If more than one scope is specified, only service endpoints matching ALL scopes reply.</span></span>  
   
--   <xref:System.ServiceModel.Discovery.ScopeMatchBy%2A> \- Specifica l'algoritmo di corrispondenza da utilizzare per individuare la corrispondenza tra l'ambito nel messaggio del Probe e quello dell'endpoint.Sono supportate cinque regole di corrispondenza degli ambiti:  
+-   <span data-ttu-id="a5ea4-125"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> - Specifica l'algoritmo di corrispondenza da utilizzare per individuare la corrispondenza tra l'ambito nel messaggio del Probe e quello dell'endpoint.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-125"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> - Specifies the matching algorithm to use while matching the scopes in the Probe message with that of the endpoint.</span></span> <span data-ttu-id="a5ea4-126">Sono supportate cinque regole di corrispondenza degli ambiti:</span><span class="sxs-lookup"><span data-stu-id="a5ea4-126">There are five supported scope-matching rules:</span></span>  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact%2A> esegue un confronto di base tra le stringhe con distinzione tra maiuscole e minuscole.  
+    -   <span data-ttu-id="a5ea4-127"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> esegue un confronto di base tra le stringhe con distinzione tra maiuscole e minuscole.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-127"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> does a basic case-sensitive string comparison.</span></span>  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix%2A> individua la corrispondenza in base a segmenti separati da "\/".Una ricerca di http:\/\/contoso\/building1 corrisponde a un servizio con ambito http:\/\/contoso\/building\/floor1.Non corrisponde a http:\/\/contoso\/building100, perché gli ultimi due segmenti non corrispondono.  
+    -   <span data-ttu-id="a5ea4-128"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>corrispondenze da segmenti separati da "/".</span><span class="sxs-lookup"><span data-stu-id="a5ea4-128"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> matches by segments separated by "/".</span></span> <span data-ttu-id="a5ea4-129">Una ricerca di http://contoso/building1 corrisponde a un servizio con ambito http://contoso/building/floor1.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-129">A search for http://contoso/building1 matches a service with scope http://contoso/building/floor1.</span></span> <span data-ttu-id="a5ea4-130">Non corrisponde a http://contoso/building100, perché gli ultimi due segmenti non corrispondono.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-130">Note that it does not match http://contoso/building100 because the last two segments do not match.</span></span>  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap%2A> individua la corrispondenza degli ambiti in base ai segmenti utilizzando un URL LDAP.  
+    -   <span data-ttu-id="a5ea4-131"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> individua la corrispondenza degli ambiti in base ai segmenti utilizzando un URL LDAP.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-131"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> matches scopes by segments using an LDAP URL.</span></span>  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid%2A> individua la corrispondenza esatta degli ambiti utilizzando una stringa UUID.  
+    -   <span data-ttu-id="a5ea4-132"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> individua la corrispondenza esatta degli ambiti utilizzando una stringa UUID.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-132"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> matches scopes exactly using a UUID string.</span></span>  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone%2A> individua la corrispondenza con i soli servizi che non specificano un ambito.  
+    -   <span data-ttu-id="a5ea4-133"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> individua la corrispondenza con i soli servizi che non specificano un ambito.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-133"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> matches only those services that do not specify a scope.</span></span>  
   
-     Se non si specifica una regola di corrispondenza degli ambiti, verrà utilizzato <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix%2A>.  
+     <span data-ttu-id="a5ea4-134">Se non si specifica una regola di corrispondenza degli ambiti, verrà utilizzato <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix>.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-134">If a scope-matching rule is not specified, <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix> is used.</span></span>  
   
- I criteri di terminazione includono:  
+ <span data-ttu-id="a5ea4-135">I criteri di terminazione includono:</span><span class="sxs-lookup"><span data-stu-id="a5ea4-135">Termination criteria include:</span></span>  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> \- Tempo massimo di attesa di risposte dai servizi in una rete.La durata predefinita è 20 secondi.  
+1.  <span data-ttu-id="a5ea4-136"><xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> - Tempo massimo di attesa di risposte dai servizi in una rete.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-136"><xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> - The maximum time to wait for replies from services on the network.</span></span> <span data-ttu-id="a5ea4-137">La durata predefinita è 20 secondi.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-137">The default duration is 20 seconds.</span></span>  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> \- Numero massimo di risposte da attendere.Se le risposte <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> vengono ricevute prima della scadenza specificata dalla proprietà <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>, l'operazione di ricerca termina.  
+2.  <span data-ttu-id="a5ea4-138"><xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> - Numero massimo di risposte da attendere.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-138"><xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> - The maximum number of replies to wait for.</span></span> <span data-ttu-id="a5ea4-139">Se le risposte <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> vengono ricevute prima della scadenza specificata dalla proprietà <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>, l'operazione di ricerca termina.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-139">If <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> replies are received before <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> has elapsed, the find operation ends.</span></span>  
   
-## FindResponse  
- <xref:System.ServiceModel.Discovery.FindResponse> dispone di una proprietà della raccolta <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> che contiene qualsiasi replica inviata da servizi corrispondenti sulla rete.Se nessun servizio invia una risposta, la raccolta è vuota.Se uno o più servizi inviano una risposta, ogni replica viene archiviata in un oggetto <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> che contiene l'indirizzo, il contratto e alcune informazioni aggiuntive sul servizio.  
+## <a name="findresponse"></a><span data-ttu-id="a5ea4-140">FindResponse</span><span class="sxs-lookup"><span data-stu-id="a5ea4-140">FindResponse</span></span>  
+ <span data-ttu-id="a5ea4-141"><xref:System.ServiceModel.Discovery.FindResponse> dispone di una proprietà della raccolta <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> che contiene qualsiasi replica inviata da servizi corrispondenti sulla rete.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-141"><xref:System.ServiceModel.Discovery.FindResponse> has an <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> collection property that contains any replies sent by matching services on the network.</span></span> <span data-ttu-id="a5ea4-142">Se nessun servizio invia una risposta, la raccolta è vuota.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-142">If no services replied, the collection is empty.</span></span> <span data-ttu-id="a5ea4-143">Se uno o più servizi inviano una risposta, ogni replica viene archiviata in un oggetto <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> che contiene l'indirizzo, il contratto e alcune informazioni aggiuntive sul servizio.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-143">If one or more services replied, each reply is stored in an <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> object, which contains the address, contract, and some additional information about the service.</span></span>  
   
- Nell'esempio seguente viene mostrato come eseguire un'operazione di ricerca nel codice.  
+ <span data-ttu-id="a5ea4-144">Nell'esempio seguente viene mostrato come eseguire un'operazione di ricerca nel codice.</span><span class="sxs-lookup"><span data-stu-id="a5ea4-144">The following example shows how to perform a find operation in code.</span></span>  
   
 ```  
 // Create DiscoveryClient  
@@ -69,12 +72,11 @@ findCriteria.Duration = TimeSpan.FromSeconds(10);
 FindResponse findResponse = discoveryClient.Find(findCriteria);  
   
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)  
-  
 ```  
   
-## Vedere anche  
- [Panoramica di WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [Utilizzo del canale client di individuazione](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)   
- [Individuazione con ambiti](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)   
- [Ricerca asincrona](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)   
- [Di base](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a><span data-ttu-id="a5ea4-145">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a5ea4-145">See Also</span></span>  
+ [<span data-ttu-id="a5ea4-146">Panoramica di WCF Discovery</span><span class="sxs-lookup"><span data-stu-id="a5ea4-146">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="a5ea4-147">Utilizzo del canale Client di individuazione</span><span class="sxs-lookup"><span data-stu-id="a5ea4-147">Using the Discovery Client Channel</span></span>](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [<span data-ttu-id="a5ea4-148">Individuazione con ambiti</span><span class="sxs-lookup"><span data-stu-id="a5ea4-148">Discovery with Scopes</span></span>](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
+ [<span data-ttu-id="a5ea4-149">Ricerca asincrona</span><span class="sxs-lookup"><span data-stu-id="a5ea4-149">Asynchronous Find</span></span>](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
+ [<span data-ttu-id="a5ea4-150">Funzionalità di base</span><span class="sxs-lookup"><span data-stu-id="a5ea4-150">Basic</span></span>](../../../../docs/framework/wcf/samples/basic-sample.md)

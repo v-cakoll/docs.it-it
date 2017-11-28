@@ -1,74 +1,78 @@
 ---
-title: "Procedura: utilizzare una matrice di colori per trasformare un singolo colore | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "matrici di colore, utilizzo"
-  - "colori delle immagini, trasformazione"
+title: 'Procedura: Usare una matrice di colori per trasformare un singolo colore'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- image colors [Windows Forms], transforming
+- color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 60da29b60d2b9b5b98c76a0a9c3ae73ac9142bbd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: utilizzare una matrice di colori per trasformare un singolo colore
-In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vengono fornite le classi <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> per l’archiviazione e la modifica delle immagini.  Gli oggetti <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> consentono di memorizzare il colore di ogni pixel come un numero a 32 bit: 8 bit per ogni componente \(rosso, verde, blu e alfa\).  Ciascuna delle quattro componenti è un numero da 0 a 255; 0 indica assenza di intensità e 255 intensità piena.  La componente alfa consente di specificare la trasparenza del colore: 0 indica la trasparenza completa e 255 l'opacità completa.  
+# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a><span data-ttu-id="3e4c6-102">Procedura: Usare una matrice di colori per trasformare un singolo colore</span><span class="sxs-lookup"><span data-stu-id="3e4c6-102">How to: Use a Color Matrix to Transform a Single Color</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="3e4c6-103">fornisce il <xref:System.Drawing.Image> e <xref:System.Drawing.Bitmap> classi per l'archiviazione e la modifica di immagini.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-103"> provides the <xref:System.Drawing.Image> and <xref:System.Drawing.Bitmap> classes for storing and manipulating images.</span></span> <span data-ttu-id="3e4c6-104"><xref:System.Drawing.Image>e <xref:System.Drawing.Bitmap> oggetti archiviano il colore di ciascun pixel come numero a 32 bit: 8 bit ogni per rosso, verde, blu e alfa.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-104"><xref:System.Drawing.Image> and <xref:System.Drawing.Bitmap> objects store the color of each pixel as a 32-bit number: 8 bits each for red, green, blue, and alpha.</span></span> <span data-ttu-id="3e4c6-105">Ognuno dei quattro componenti è un numero compreso tra 0 e 255, dove 0 rappresenta nessun intensità e 255 che rappresenta intensità completo.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-105">Each of the four components is a number from 0 through 255, with 0 representing no intensity and 255 representing full intensity.</span></span> <span data-ttu-id="3e4c6-106">Il componente alfa specifica la trasparenza del colore: 0 è completamente trasparente e 255 è completamente opaco.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-106">The alpha component specifies the transparency of the color: 0 is fully transparent, and 255 is fully opaque.</span></span>  
   
- Un vettore di colore è un 4 tupla del form \(rosso, verde, blu e alfa\).  Il vettore di colore \(0, 255, 0, 255\), ad esempio, rappresenta un colore opaco privo di rosso o blu, ma con il verde a intensità piena.  
+ <span data-ttu-id="3e4c6-107">Un vettore di colore è una tupla con 4 del modulo (rosso, verde, blu e alfa).</span><span class="sxs-lookup"><span data-stu-id="3e4c6-107">A color vector is a 4-tuple of the form (red, green, blue, alpha).</span></span> <span data-ttu-id="3e4c6-108">Ad esempio, il vettore (0, 255, 0, 255) di colore rappresenta un colore opaco che non ha rosso o blu, ma è verde intensità completo.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-108">For example, the color vector (0, 255, 0, 255) represents an opaque color that has no red or blue, but has green at full intensity.</span></span>  
   
- In un'altra convenzione di rappresentazione dei colori viene utilizzato il numero 1 per indicare la piena intensità.  Utilizzando questa convenzione il colore descritto nel paragrafo precedente sarebbe rappresentato dal vettore \(0, 1, 0, 1\).  In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] la piena intensità viene convenzionalmente indicata con 1 quando si eseguono trasformazioni di colore.  
+ <span data-ttu-id="3e4c6-109">Un'altra convenzione per la rappresentazione di colori utilizza il numero 1 per intensità completo.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-109">Another convention for representing colors uses the number 1 for full intensity.</span></span> <span data-ttu-id="3e4c6-110">Utilizzando questa convenzione, il colore descritto nel paragrafo precedente viene rappresentato tramite il vettore (0, 1, 0, 1).</span><span class="sxs-lookup"><span data-stu-id="3e4c6-110">Using that convention, the color described in the preceding paragraph would be represented by the vector (0, 1, 0, 1).</span></span> [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="3e4c6-111">utilizza la convenzione di 1 come intensità completo quando si eseguono trasformazioni di colore.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-111"> uses the convention of 1 as full intensity when it performs color transformations.</span></span>  
   
- È possibile applicare ai vettori di colore trasformazioni lineari, quali rotazione e adattamento, moltiplicandoli per una matrice 4×4.  Tuttavia non è possibile utilizzare una matrice 4×4 per eseguire una traslazione \(non lineare\).  Se si aggiunge una quinta coordinata finta, ad esempio il numero 1, a ciascuno dei vettori di colore, è possibile utilizzare una matrice 5×5 per applicare qualsiasi combinazione di trasformazioni lineari e traslazioni.  Una trasformazione composta da una trasformazione lineare seguita da una traslazione viene detta trasformazione affine.  
+ <span data-ttu-id="3e4c6-112">È possibile applicare trasformazioni lineari (rotazione, ridimensionamento e così via) a vettori di colore moltiplicando i vettori di colore per una matrice 4x4.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-112">You can apply linear transformations (rotation, scaling, and the like) to color vectors by multiplying the color vectors by a 4×4 matrix.</span></span> <span data-ttu-id="3e4c6-113">Tuttavia, è possibile utilizzare una matrice 4x4 per eseguire una conversione (non lineare).</span><span class="sxs-lookup"><span data-stu-id="3e4c6-113">However, you cannot use a 4×4 matrix to perform a translation (nonlinear).</span></span> <span data-ttu-id="3e4c6-114">Se si aggiunge una quinta coordinata finta (ad esempio, il numero 1) per ognuno dei vettori di colore, è possibile utilizzare una matrice di 5 × 5 per applicare qualsiasi combinazione di trasformazioni lineari e traduzioni.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-114">If you add a dummy fifth coordinate (for example, the number 1) to each of the color vectors, you can use a 5×5 matrix to apply any combination of linear transformations and translations.</span></span> <span data-ttu-id="3e4c6-115">Una trasformazione costituita da una trasformazione lineare seguita da una traduzione è definita una trasformazione affine.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-115">A transformation consisting of a linear transformation followed by a translation is called an affine transformation.</span></span>  
   
- Si supponga ad esempio di voler iniziare con il colore \(0.2, 0.0, 0.4, 1.0\) e applicare le trasformazioni che seguono:  
+ <span data-ttu-id="3e4c6-116">Si supponga, ad esempio, che si desidera iniziare con il colore (0,2, 0,0, 0,4, 1.0) e applicare le trasformazioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="3e4c6-116">For example, suppose you want to start with the color (0.2, 0.0, 0.4, 1.0) and apply the following transformations:</span></span>  
   
-1.  Raddoppiare la componente rossa  
+1.  <span data-ttu-id="3e4c6-117">Raddoppiare il componente rosso</span><span class="sxs-lookup"><span data-stu-id="3e4c6-117">Double the red component</span></span>  
   
-2.  Aggiungere 0,2 alle componenti rossa, verde e blu  
+2.  <span data-ttu-id="3e4c6-118">Aggiungere 0,2 ai componenti rossi, verde e blu</span><span class="sxs-lookup"><span data-stu-id="3e4c6-118">Add 0.2 to the red, green, and blue components</span></span>  
   
- Con la moltiplicazione di matrice riportata di seguito verranno eseguite le coppie di trasformazioni nell'ordine indicato.  
+ <span data-ttu-id="3e4c6-119">Moltiplicazione seguente eseguirà la coppia di trasformazioni nell'ordine elencato.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-119">The following matrix multiplication will perform the pair of transformations in the order listed.</span></span>  
   
- ![Ricolorazione](../../../../docs/framework/winforms/advanced/media/recoloring01.png "recoloring01")  
+ <span data-ttu-id="3e4c6-120">![Nuova colorazione](../../../../docs/framework/winforms/advanced/media/recoloring01.gif "recoloring01")</span><span class="sxs-lookup"><span data-stu-id="3e4c6-120">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring01.gif "recoloring01")</span></span>  
   
- Gli elementi di una matrice di colore sono indicizzati in base zero per riga e quindi per colonna.  La voce in corrispondenza della quinta riga e della terza colonna della matrice M, ad esempio, è indicata da M\[4\]\[2\].  
+ <span data-ttu-id="3e4c6-121">Gli elementi di una matrice di colori vengono indicizzati (in base zero) da righe e quindi colonne.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-121">The elements of a color matrix are indexed (zero-based) by row and then column.</span></span> <span data-ttu-id="3e4c6-122">Ad esempio, la voce nella quinta riga e nella terza colonna della matrice M è identificata da M [4] [2].</span><span class="sxs-lookup"><span data-stu-id="3e4c6-122">For example, the entry in the fifth row and third column of matrix M is denoted by M[4][2].</span></span>  
   
- La matrice di identità 5×5, riportata nell'illustrazione che segue, presenta 1 sulla diagonale e 0 in qualsiasi altro punto.  Se si moltiplica un vettore di colore per la matrice di identità il vettore di colore non cambia.  Un modo comodo per formare la matrice di una trasformazione di colore è cominciare con la matrice di identità, quindi apportare una piccola modifica che produca la trasformazione desiderata.  
+ <span data-ttu-id="3e4c6-123">La matrice di identità di 5 × 5 (mostrato nella figura seguente), 1 sulla diagonale e 0 in qualsiasi altro.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-123">The 5×5 identity matrix (shown in the following illustration) has 1s on the diagonal and 0s everywhere else.</span></span> <span data-ttu-id="3e4c6-124">Se si moltiplica un vettore di colore per la matrice di identità, il vettore di colore rimane invariato.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-124">If you multiply a color vector by the identity matrix, the color vector does not change.</span></span> <span data-ttu-id="3e4c6-125">Un modo pratico per formare la matrice di trasformazione di colore è iniziare con la matrice di identità e apportare una piccola modifica che produce la trasformazione desiderata.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-125">A convenient way to form the matrix of a color transformation is to start with the identity matrix and make a small change that produces the desired transformation.</span></span>  
   
- ![Ricolorazione](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")  
+ <span data-ttu-id="3e4c6-126">![Nuova colorazione](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")</span><span class="sxs-lookup"><span data-stu-id="3e4c6-126">![Recoloring](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")</span></span>  
   
- Per informazioni dettagliate sulle matrici e le trasformazioni, vedere [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ <span data-ttu-id="3e4c6-127">Per informazioni dettagliate sulle matrici e le trasformazioni, vedere [sistemi di Coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).</span><span class="sxs-lookup"><span data-stu-id="3e4c6-127">For a more detailed discussion of matrices and transformations, see [Coordinate Systems and Transformations](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).</span></span>  
   
-## Esempio  
- Nell'esempio che segue viene applicata la trasformazione descritta nei paragrafi precedenti a un'immagine monocromatica \(0.2, 0.0, 0.4, 1.0\).  
+## <a name="example"></a><span data-ttu-id="3e4c6-128">Esempio</span><span class="sxs-lookup"><span data-stu-id="3e4c6-128">Example</span></span>  
+ <span data-ttu-id="3e4c6-129">Nell'esempio seguente accetta un'immagine è monocromatica (0,2, 0,0, 0,4, 1.0) e si applica la trasformazione descritta nei paragrafi precedenti.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-129">The following example takes an image that is all one color (0.2, 0.0, 0.4, 1.0) and applies the transformation described in the preceding paragraphs.</span></span>  
   
- Nell'illustrazione che segue si mostra l'immagine originale a sinistra e l'immagine trasformata a destra.  
+ <span data-ttu-id="3e4c6-130">Nella figura seguente mostra l'immagine originale a sinistra e l'immagine trasformato a destra.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-130">The following illustration shows the original image on the left and the transformed image on the right.</span></span>  
   
- ![Colori](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")  
+ <span data-ttu-id="3e4c6-131">![Colori](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")</span><span class="sxs-lookup"><span data-stu-id="3e4c6-131">![Colors](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")</span></span>  
   
- Nel codice riportato di seguito la ricolorazione è eseguita tramite i seguenti passaggi:  
+ <span data-ttu-id="3e4c6-132">Il codice nell'esempio seguente usa la procedura seguente per la ricolorazione:</span><span class="sxs-lookup"><span data-stu-id="3e4c6-132">The code in the following example uses the following steps to perform the recoloring:</span></span>  
   
-1.  Inizializzazione di un oggetto <xref:System.Drawing.Imaging.ColorMatrix>.  
+1.  <span data-ttu-id="3e4c6-133">Inizializzare un <xref:System.Drawing.Imaging.ColorMatrix> oggetto.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-133">Initialize a <xref:System.Drawing.Imaging.ColorMatrix> object.</span></span>  
   
-2.  Creazione di un oggetto <xref:System.Drawing.Imaging.ImageAttributes> e passaggio dell'oggetto <xref:System.Drawing.Imaging.ColorMatrix> al metodo <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> dell'oggetto <xref:System.Drawing.Imaging.ImageAttributes>.  
+2.  <span data-ttu-id="3e4c6-134">Creare un <xref:System.Drawing.Imaging.ImageAttributes> , quindi passare il <xref:System.Drawing.Imaging.ColorMatrix> dell'oggetto per il <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> metodo il <xref:System.Drawing.Imaging.ImageAttributes> oggetto.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-134">Create an <xref:System.Drawing.Imaging.ImageAttributes> object and pass the <xref:System.Drawing.Imaging.ColorMatrix> object to the <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> method of the <xref:System.Drawing.Imaging.ImageAttributes> object.</span></span>  
   
-3.  Passaggio dell'oggetto <xref:System.Drawing.Imaging.ImageAttributes> al metodo <xref:System.Drawing.Graphics.DrawImage%2A> di un oggetto <xref:System.Drawing.Graphics>.  
+3.  <span data-ttu-id="3e4c6-135">Passare il <xref:System.Drawing.Imaging.ImageAttributes> dell'oggetto per il <xref:System.Drawing.Graphics.DrawImage%2A> metodo di un <xref:System.Drawing.Graphics> oggetto.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-135">Pass the <xref:System.Drawing.Imaging.ImageAttributes> object to the <xref:System.Drawing.Graphics.DrawImage%2A> method of a <xref:System.Drawing.Graphics> object.</span></span>  
   
  [!code-csharp[System.Drawing.RecoloringImages#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.RecoloringImages#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
   
-## Compilazione del codice  
- L'esempio riportato in precedenza è stato creato per essere utilizzato con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="3e4c6-136">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="3e4c6-136">Compiling the Code</span></span>  
+ <span data-ttu-id="3e4c6-137">L'esempio precedente è progettato per l'uso con Windows Form e richiede <xref:System.Windows.Forms.PaintEventArgs> `e`, un parametro del gestore eventi <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="3e4c6-137">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## Vedere anche  
- [Ricolorazione di immagini](../../../../docs/framework/winforms/advanced/recoloring-images.md)   
- [Sistemi di coordinate e trasformazioni](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+## <a name="see-also"></a><span data-ttu-id="3e4c6-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="3e4c6-138">See Also</span></span>  
+ [<span data-ttu-id="3e4c6-139">Ricolorazione di immagini</span><span class="sxs-lookup"><span data-stu-id="3e4c6-139">Recoloring Images</span></span>](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
+ [<span data-ttu-id="3e4c6-140">Sistemi di coordinate e trasformazioni</span><span class="sxs-lookup"><span data-stu-id="3e4c6-140">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)

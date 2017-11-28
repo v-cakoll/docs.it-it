@@ -1,95 +1,98 @@
 ---
-title: "Procedura: agganciare e ancorare controlli figlio in un controllo TableLayoutPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "net.ComponentModel.StyleCollectionEditor.TLP.AnchorDock"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controlli figlio, ancoraggio"
-  - "controlli [Windows Form], figlio"
-  - "layout [Windows Form], controlli figlio"
-  - "TableLayoutPanel (controllo) [Windows Form], controlli figlio"
+title: 'Procedura: agganciare e ancorare controlli figlio in un controllo TableLayoutPanel'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+f1_keywords: net.ComponentModel.StyleCollectionEditor.TLP.AnchorDock
+helpviewer_keywords:
+- layout [Windows Forms], child controls
+- controls [Windows Forms], child
+- child controls [Windows Forms], anchoring and docking
+- TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 15a725f7a5a4b61f826756c4c3f0d2a20c8a5011
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: agganciare e ancorare controlli figlio in un controllo TableLayoutPanel
-Il controllo <xref:System.Windows.Forms.TableLayoutPanel> supporta le proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> nei controlli figlio.  
+# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a><span data-ttu-id="ab4ee-102">Procedura: agganciare e ancorare controlli figlio in un controllo TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="ab4ee-102">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>
+<span data-ttu-id="ab4ee-103">Il controllo <xref:System.Windows.Forms.TableLayoutPanel> supporta le proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e <xref:System.Windows.Forms.Control.Dock%2A> nei controlli figlio.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-103">The <xref:System.Windows.Forms.TableLayoutPanel> control supports the <xref:System.Windows.Forms.Control.Anchor%2A> and <xref:System.Windows.Forms.Control.Dock%2A> properties in its child controls.</span></span>  
   
-### Per allineare un controllo figlio in una cella TableLayoutPanel  
+### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a><span data-ttu-id="ab4ee-104">Per allineare un controllo figlio in una cella TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="ab4ee-104">To align a child control in a TableLayoutPanel cell</span></span>  
   
-1.  Creare un controllo <xref:System.Windows.Forms.TableLayoutPanel> nel form.  
+1.  <span data-ttu-id="ab4ee-105">Creare un controllo <xref:System.Windows.Forms.TableLayoutPanel> nel form.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-105">Create a <xref:System.Windows.Forms.TableLayoutPanel> control on your form.</span></span>  
   
-2.  Impostare il valore delle proprietà del controllo <xref:System.Windows.Forms.TableLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> e <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>, su 1.  
+2.  <span data-ttu-id="ab4ee-106">Impostare il valore della <xref:System.Windows.Forms.TableLayoutPanel> del controllo <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> e <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> proprietà **1**.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-106">Set the value of the <xref:System.Windows.Forms.TableLayoutPanel> control's <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> and <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> properties to **1**.</span></span>  
   
-3.  Creare un controllo <xref:System.Windows.Forms.Button> nel controllo <xref:System.Windows.Forms.TableLayoutPanel>.  <xref:System.Windows.Forms.Button> occupa l'angolo superiore sinistro della cella.  
+3.  <span data-ttu-id="ab4ee-107">Creare un controllo <xref:System.Windows.Forms.Button> nel controllo <xref:System.Windows.Forms.TableLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-107">Create a <xref:System.Windows.Forms.Button> control in the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span> <span data-ttu-id="ab4ee-108"><xref:System.Windows.Forms.Button> occupa l'angolo superiore sinistro della cella.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-108">The <xref:System.Windows.Forms.Button> occupies the upper-left corner of the cell.</span></span>  
   
-4.  Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `A sinistra`.  Il controllo <xref:System.Windows.Forms.Button> viene spostato per allinearlo al bordo sinistro della cella.  
-  
-    > [!NOTE]
-    >  Questo comportamento è diverso dal comportamento di altri controlli contenitore.  In altri controlli contenitore, il controllo figlio non viene spostato quando viene impostata la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e la distanza tra il controllo ancorato e i limiti del contenitore padre viene stabilita al momento dell’impostazione della proprietà <xref:System.Windows.Forms.Control.Anchor%2A>.  
-  
-5.  Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `In alto, A sinistra`.  Il controllo <xref:System.Windows.Forms.Button> viene spostato in modo che occupi l'angolo superiore sinistro della cella.  
-  
-6.  Ripetere il passaggio 5 con un valore `In alto, A destra` per spostare il controllo <xref:System.Windows.Forms.Button> nell'angolo superiore destro della cella.  Ripetere l’operazione con i valori `In basso, A sinistra` e `In basso, A destra`.  
-  
-### Per estendere un controllo figlio in una cella TableLayoutPanel  
-  
-1.  Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `A sinistra, A destra`.  Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato in modo da estendersi per tutta la cella.  
+4.  <span data-ttu-id="ab4ee-109">Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `Left`.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-109">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Left`.</span></span> <span data-ttu-id="ab4ee-110">Il controllo <xref:System.Windows.Forms.Button> viene spostato per allinearlo al bordo sinistro della cella.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-110">The <xref:System.Windows.Forms.Button> control moves to align with the left border of the cell.</span></span>  
   
     > [!NOTE]
-    >  Questo comportamento è diverso dal comportamento di altri controlli contenitore.  In altri controlli contenitore, il controllo figlio non viene ridimensionato quando la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> è impostata su `A sinistra, A destra` o `In alto, In basso`.  
+    >  <span data-ttu-id="ab4ee-111">Questo comportamento è diverso dal comportamento di altri controlli contenitore.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-111">This behavior differs from the behavior of other container controls.</span></span> <span data-ttu-id="ab4ee-112">In altri controlli contenitore, il controllo figlio non viene spostato quando viene impostata la proprietà <xref:System.Windows.Forms.Control.Anchor%2A> e la distanza tra il controllo ancorato e i limiti del contenitore padre viene stabilita al momento dell’impostazione della proprietà <xref:System.Windows.Forms.Control.Anchor%2A>.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-112">In other container controls, the child control does not move when the <xref:System.Windows.Forms.Control.Anchor%2A> property is set, and the distance between the anchored control and the parent container's boundary is fixed at the time the <xref:System.Windows.Forms.Control.Anchor%2A> property is set.</span></span>  
   
-2.  Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `In alto, In basso`.  Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato in modo da estendersi dalla parte superiore a quella inferiore della cella.  
+5.  <span data-ttu-id="ab4ee-113">Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `Top, Left`.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-113">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Top, Left`.</span></span> <span data-ttu-id="ab4ee-114">Il controllo <xref:System.Windows.Forms.Button> viene spostato in modo che occupi l'angolo superiore sinistro della cella.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-114">The <xref:System.Windows.Forms.Button> control moves to occupy the top-left corner of the cell.</span></span>  
   
-3.  Modificare il valore del <xref:System.Windows.Forms.Button> del controllo <xref:System.Windows.Forms.Control.Anchor%2A> proprietà `In alto, In basso, A sinistra, A destra`.  Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato per riempire la cella.  
+6.  <span data-ttu-id="ab4ee-115">Ripetere il passaggio 5 con un valore di `Top, Right` per spostare il <xref:System.Windows.Forms.Button> controllo nell'angolo superiore destro della cella.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-115">Repeat step 5 with a value of `Top, Right` to move the <xref:System.Windows.Forms.Button> control to the top-right corner of the cell.</span></span> <span data-ttu-id="ab4ee-116">Ripetere l'operazione con i valori di `Bottom, Left` e `Bottom, Right`.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-116">Repeat with values of `Bottom, Left` and `Bottom, Right`.</span></span>  
   
-4.  Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `Nessuno`.  Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato e centrato nella cella.  
+### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a><span data-ttu-id="ab4ee-117">Per estendere un controllo figlio in una cella TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="ab4ee-117">To stretch a child control in a TableLayoutPanel cell</span></span>  
   
-5.  Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Dock%2A>, su <xref:System.Windows.Forms.DockStyle>.  Il controllo <xref:System.Windows.Forms.Button> viene spostato per allinearlo al bordo sinistro della cella.  Il controllo <xref:System.Windows.Forms.Button> conserva la larghezza, ma l'altezza viene ridimensionata per riempire la cella in verticale.  
+1.  <span data-ttu-id="ab4ee-118">Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `Left, Right`.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-118">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Left, Right`.</span></span> <span data-ttu-id="ab4ee-119">Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato in modo da estendersi per tutta la cella.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-119">The <xref:System.Windows.Forms.Button> control is resized to stretch across the cell.</span></span>  
   
     > [!NOTE]
-    >  È lo stesso comportamento che si verifica in altri controlli contenitore.  
+    >  <span data-ttu-id="ab4ee-120">Questo comportamento è diverso dal comportamento di altri controlli contenitore.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-120">This behavior differs from the behavior of other container controls.</span></span> <span data-ttu-id="ab4ee-121">In altri controlli contenitore, il controllo figlio non viene ridimensionato quando la <xref:System.Windows.Forms.Control.Anchor%2A> è impostata su `Left, Right` o `Top, Bottom`.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-121">In other container controls, the child control is not resized when the <xref:System.Windows.Forms.Control.Anchor%2A> property is set to `Left, Right` or `Top, Bottom`.</span></span>  
   
-6.  Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Dock%2A>, su <xref:System.Windows.Forms.DockStyle>.  Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato per riempire la cella.  
+2.  <span data-ttu-id="ab4ee-122">Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `Top, Bottom`.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-122">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Top, Bottom`.</span></span> <span data-ttu-id="ab4ee-123">Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato in modo da estendersi dalla parte superiore a quella inferiore della cella.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-123">The <xref:System.Windows.Forms.Button> control is resized to stretch from the top to the bottom of the cell.</span></span>  
   
-## Esempio  
- La figura seguente mostra cinque pulsanti ancorati in cinque celle <xref:System.Windows.Forms.TableLayoutPanel> separate.  
+3.  <span data-ttu-id="ab4ee-124">Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `Top, Bottom, Left, Right`.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-124">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `Top, Bottom, Left, Right`.</span></span> <span data-ttu-id="ab4ee-125">Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato per riempire la cella.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-125">The <xref:System.Windows.Forms.Button> control is resized to fill the cell.</span></span>  
   
- ![Ancoraggio TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.png "VS\_TLPanchor")  
+4.  <span data-ttu-id="ab4ee-126">Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Anchor%2A>, su `None`.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-126">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Anchor%2A> property to `None`.</span></span> <span data-ttu-id="ab4ee-127">Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato e centrato nella cella.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-127">The <xref:System.Windows.Forms.Button> control is resized and centered in the cell.</span></span>  
   
- La figura seguente mostra quattro pulsanti ancorati agli angoli di quattro celle <xref:System.Windows.Forms.TableLayoutPanel> separate.  
+5.  <span data-ttu-id="ab4ee-128">Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Dock%2A>, su <xref:System.Windows.Forms.DockStyle.Left>.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-128">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Left>.</span></span> <span data-ttu-id="ab4ee-129">Il controllo <xref:System.Windows.Forms.Button> viene spostato per allinearlo al bordo sinistro della cella.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-129">The <xref:System.Windows.Forms.Button> control moves to align with the left border of the cell.</span></span> <span data-ttu-id="ab4ee-130">Il controllo <xref:System.Windows.Forms.Button> conserva la larghezza, ma l'altezza viene ridimensionata per riempire la cella in verticale.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-130">The <xref:System.Windows.Forms.Button> control retains its width, but its height is resized to fill the cell vertically.</span></span>  
   
- ![Ancoraggio TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.png "VS\_TLPanchor2")  
+    > [!NOTE]
+    >  <span data-ttu-id="ab4ee-131">È lo stesso comportamento che si verifica in altri controlli contenitore.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-131">This is the same behavior that occurs in other container controls.</span></span>  
   
- La figura seguente mostra tre pulsanti estesi mediante ancoraggio in tre celle <xref:System.Windows.Forms.TableLayoutPanel> separate.  
+6.  <span data-ttu-id="ab4ee-132">Modificare il valore della proprietà del controllo <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Control.Dock%2A>, su <xref:System.Windows.Forms.DockStyle.Fill>.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-132">Change the value of the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="ab4ee-133">Il controllo <xref:System.Windows.Forms.Button> viene ridimensionato per riempire la cella.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-133">The <xref:System.Windows.Forms.Button> control is resized to fill the cell.</span></span>  
   
- ![Ancoraggio TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.gif "VS\_TLPAnchor3")  
+## <a name="example"></a><span data-ttu-id="ab4ee-134">Esempio</span><span class="sxs-lookup"><span data-stu-id="ab4ee-134">Example</span></span>  
+ <span data-ttu-id="ab4ee-135">La figura seguente mostra cinque pulsanti ancorati in cinque celle <xref:System.Windows.Forms.TableLayoutPanel> separate.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-135">The following illustration shows five buttons anchored in five separate <xref:System.Windows.Forms.TableLayoutPanel> cells.</span></span>  
   
- L'esempio di codice seguente mostra tutte le combinazioni dei valori della proprietà <xref:System.Windows.Forms.Control.Anchor%2A> per un controllo <xref:System.Windows.Forms.Button> in un controllo <xref:System.Windows.Forms.TableLayoutPanel>.  
+ <span data-ttu-id="ab4ee-136">![Ancoraggio TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.gif "VS_TLPanchor")</span><span class="sxs-lookup"><span data-stu-id="ab4ee-136">![TableLayoutPanel Anchoring](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.gif "VS_TLPanchor")</span></span>  
+  
+ <span data-ttu-id="ab4ee-137">La figura seguente mostra quattro pulsanti ancorati agli angoli di quattro celle <xref:System.Windows.Forms.TableLayoutPanel> separate.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-137">The following illustration shows four buttons anchored in the corners of four separate <xref:System.Windows.Forms.TableLayoutPanel> cells.</span></span>  
+  
+ <span data-ttu-id="ab4ee-138">![Ancoraggio TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.gif "VS_TLPanchor2")</span><span class="sxs-lookup"><span data-stu-id="ab4ee-138">![TableLayoutPanel Anchoring](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.gif "VS_TLPanchor2")</span></span>  
+  
+ <span data-ttu-id="ab4ee-139">La figura seguente mostra tre pulsanti estesi mediante ancoraggio in tre celle <xref:System.Windows.Forms.TableLayoutPanel> separate.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-139">The following illustration shows three buttons stretched by anchoring in three separate <xref:System.Windows.Forms.TableLayoutPanel> cells.</span></span>  
+  
+ <span data-ttu-id="ab4ee-140">![Ancoraggio TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.gif "VS_TLPAnchor3")</span><span class="sxs-lookup"><span data-stu-id="ab4ee-140">![TableLayoutPanel Anchoring](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.gif "VS_TLPAnchor3")</span></span>  
+  
+ <span data-ttu-id="ab4ee-141">L'esempio di codice seguente mostra tutte le combinazioni dei valori della proprietà <xref:System.Windows.Forms.Control.Anchor%2A> per un controllo <xref:System.Windows.Forms.Button> in un controllo <xref:System.Windows.Forms.TableLayoutPanel>.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-141">The following code example demonstrates all the combinations of <xref:System.Windows.Forms.Control.Anchor%2A> property values for a <xref:System.Windows.Forms.Button> control in a <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
  [!code-csharp[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/CS/TlpAnchorExampleForm.cs#1)]
  [!code-vb[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/VB/TlpAnchorExampleForm.vb#1)]  
   
-## Compilazione del codice  
- L'esempio presenta i requisiti seguenti:  
+## <a name="compiling-the-code"></a><span data-ttu-id="ab4ee-142">Compilazione del codice</span><span class="sxs-lookup"><span data-stu-id="ab4ee-142">Compiling the Code</span></span>  
+ <span data-ttu-id="ab4ee-143">L'esempio presenta i requisiti seguenti:</span><span class="sxs-lookup"><span data-stu-id="ab4ee-143">This example requires:</span></span>  
   
--   Riferimenti agli assembly System, System.Data, System.Drawing e System.Windows.Forms.  
+-   <span data-ttu-id="ab4ee-144">Riferimenti agli assembly System, System.Data, System.Drawing e System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-144">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- Per informazioni sulla compilazione di questo esempio dalla riga di comando per [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], vedere [Compilazione dalla riga di comando](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) o [Compilazione dalla riga di comando con csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  È anche possibile compilare questo esempio in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] incollando il codice in un nuovo progetto.  Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Form completo tramite Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ <span data-ttu-id="ab4ee-145">Per informazioni sulla compilazione di questo esempio dalla riga di comando per [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], vedere [Compilazione dalla riga di comando](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Compilazione dalla riga di comando con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="ab4ee-145">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="ab4ee-146">È anche possibile compilare questo esempio in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] incollando il codice in un nuovo progetto.</span><span class="sxs-lookup"><span data-stu-id="ab4ee-146">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="ab4ee-147">Vedere anche [Procedura: Compilare ed eseguire un esempio di codice Windows Forms completo con Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="ab4ee-147">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.TableLayoutPanel>   
- [Controllo TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="ab4ee-148">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="ab4ee-148">See Also</span></span>  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
+ [<span data-ttu-id="ab4ee-149">Controllo TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="ab4ee-149">TableLayoutPanel Control</span></span>](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

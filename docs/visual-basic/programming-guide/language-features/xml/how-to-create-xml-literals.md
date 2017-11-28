@@ -1,54 +1,36 @@
 ---
-title: 'Procedura: creare valori letterali XML (Visual Basic) | Documenti di Microsoft'
+title: 'Procedura: creare valori letterali XML (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- XML literals [Visual Basic], creating
+helpviewer_keywords: XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 72d96f36fc17f32ac3ee3ea97175f112fcd21681
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ce1bf763529b436158c2d74811c4938182166f92
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-xml-literals-visual-basic"></a>Procedura: creare valori letterali XML (Visual Basic)
-È possibile creare un documento XML, frammento o elemento direttamente nel codice utilizzando un valore letterale XML. Negli esempi in questo argomento viene illustrato come creare un elemento XML che dispone di tre elementi figlio e come creare un documento XML.  
+# <a name="how-to-create-xml-literals-visual-basic"></a><span data-ttu-id="0c804-102">Procedura: creare valori letterali XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0c804-102">How to: Create XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="0c804-103">È possibile creare un documento XML, frammento o elemento direttamente nel codice utilizzando un valore letterale XML.</span><span class="sxs-lookup"><span data-stu-id="0c804-103">You can create an XML document, fragment, or element directly in code by using an XML literal.</span></span> <span data-ttu-id="0c804-104">Negli esempi in questo argomento viene illustrato come creare un elemento XML che dispone di tre elementi figlio e come creare un documento XML.</span><span class="sxs-lookup"><span data-stu-id="0c804-104">The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.</span></span>  
   
- È inoltre possibile utilizzare il [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] API per creare [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] oggetti. Per ulteriori informazioni, vedere <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement>  
+ <span data-ttu-id="0c804-105">È inoltre possibile utilizzare il [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API per creare [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oggetti.</span><span class="sxs-lookup"><span data-stu-id="0c804-105">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="0c804-106">Per altre informazioni, vedere <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="0c804-106">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
   
-### <a name="to-create-an-xml-element"></a>Per creare un elemento XML  
+### <a name="to-create-an-xml-element"></a><span data-ttu-id="0c804-107">Per creare un elemento XML</span><span class="sxs-lookup"><span data-stu-id="0c804-107">To create an XML element</span></span>  
   
--   Creare il XML inline utilizzando la sintassi del valore letterale XML, che corrisponde all'effettiva sintassi XML.  
+-   <span data-ttu-id="0c804-108">Creare il XML inline utilizzando la sintassi del valore letterale XML, che corrisponde alla sintassi XML effettivo.</span><span class="sxs-lookup"><span data-stu-id="0c804-108">Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.</span></span>  
   
-     [!code-vb[VbXMLSamples n.&5;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
   
-     Eseguire il codice. L'output di questo codice è:  
+     <span data-ttu-id="0c804-109">Eseguire il codice.</span><span class="sxs-lookup"><span data-stu-id="0c804-109">Run the code.</span></span> <span data-ttu-id="0c804-110">L'output di questo codice è:</span><span class="sxs-lookup"><span data-stu-id="0c804-110">The output of this code is:</span></span>  
   
      `<contact>`  
   
@@ -60,13 +42,13 @@ ms.lasthandoff: 03/13/2017
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a>Per creare un documento XML  
+### <a name="to-create-an-xml-document"></a><span data-ttu-id="0c804-111">Per creare un documento XML</span><span class="sxs-lookup"><span data-stu-id="0c804-111">To create an XML document</span></span>  
   
--   Creare il documento XML inline. Il codice seguente crea un documento XML con la sintassi letterale, una dichiarazione XML, un'istruzione di elaborazione, un commento e un elemento che contiene un altro elemento.  
+-   <span data-ttu-id="0c804-112">Creare il documento XML inline.</span><span class="sxs-lookup"><span data-stu-id="0c804-112">Create the XML document inline.</span></span> <span data-ttu-id="0c804-113">Il codice seguente crea un documento XML con una sintassi del valore letterale, una dichiarazione XML, un'istruzione di elaborazione, un commento e un elemento che contiene un altro elemento.</span><span class="sxs-lookup"><span data-stu-id="0c804-113">The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.</span></span>  
   
-     [!code-vb[&#30; VbXMLSamples](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
   
-     Eseguire il codice. L'output di questo codice è:  
+     <span data-ttu-id="0c804-114">Eseguire il codice.</span><span class="sxs-lookup"><span data-stu-id="0c804-114">Run the code.</span></span> <span data-ttu-id="0c804-115">L'output di questo codice è:</span><span class="sxs-lookup"><span data-stu-id="0c804-115">The output of this code is:</span></span>  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   
@@ -78,8 +60,8 @@ ms.lasthandoff: 03/13/2017
   
      `</books>`  
   
-## <a name="see-also"></a>Vedere anche  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   
- [Creazione di XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [Valore letterale elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)   
- [Valore letterale di documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+## <a name="see-also"></a><span data-ttu-id="0c804-116">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="0c804-116">See Also</span></span>  
+ [<span data-ttu-id="0c804-117">XML</span><span class="sxs-lookup"><span data-stu-id="0c804-117">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
+ [<span data-ttu-id="0c804-118">Creazione di XML in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0c804-118">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [<span data-ttu-id="0c804-119">Valore letterale elemento XML</span><span class="sxs-lookup"><span data-stu-id="0c804-119">XML Element Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
+ [<span data-ttu-id="0c804-120">Valore letterale di documento XML</span><span class="sxs-lookup"><span data-stu-id="0c804-120">XML Document Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

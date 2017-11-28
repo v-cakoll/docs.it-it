@@ -1,48 +1,46 @@
 ---
-title: "Membri protetti | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "protetto membri [.NET Framework]"
-  - "membri protetti"
-  - "non è sealed classi [.NET Framework]"
-  - "membri protetti di classi [.NET Framework]"
-  - "classi non sealed"
-  - "personalizzazione del comportamento (classe)"
+title: Membri protetti
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- members [.NET Framework], protected
+- protected members
+- classes [.NET Framework], unsealed
+- classes [.NET Framework], protected members
+- unsealed classes
+- customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7c3aacd0f08641c01200f0b1791a78413a306590
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Membri protetti
-Membri protetti da soli non forniscono alcun estendibilità, ma può rendere più potente di estendibilità tramite la creazione di sottoclassi. Possono essere utilizzati per esporre le opzioni di personalizzazione avanzate senza complicare inutilmente l'interfaccia pubblica principale.  
+# <a name="protected-members"></a><span data-ttu-id="1f5e1-102">Membri protetti</span><span class="sxs-lookup"><span data-stu-id="1f5e1-102">Protected Members</span></span>
+<span data-ttu-id="1f5e1-103">Membri protetti da soli non forniscono alcun estendibilità, ma può rendere più potente di estendibilità tramite la creazione di sottoclassi.</span><span class="sxs-lookup"><span data-stu-id="1f5e1-103">Protected members by themselves do not provide any extensibility, but they can make extensibility through subclassing more powerful.</span></span> <span data-ttu-id="1f5e1-104">Possono essere utilizzati per esporre le opzioni di personalizzazione avanzate senza inutilmente complica l'interfaccia pubblica principale.</span><span class="sxs-lookup"><span data-stu-id="1f5e1-104">They can be used to expose advanced customization options without unnecessarily complicating the main public interface.</span></span>  
   
- Finestre di progettazione di Framework devono prestare attenzione ai membri protetti perché il nome "protetto" può offrire un falso senso di sicurezza. Chiunque è in grado di sottoclasse di una classe non sealed e membri di accesso protetto e pertanto le stesse procedure di codifica difensive utilizzati per i membri pubblici applicano ai membri protetti.  
+ <span data-ttu-id="1f5e1-105">Finestre di progettazione Framework necessario prestare attenzione ai membri protetti perché il nome "protetto" può concedere a un falso senso di sicurezza.</span><span class="sxs-lookup"><span data-stu-id="1f5e1-105">Framework designers need to be careful with protected members because the name "protected" can give a false sense of security.</span></span> <span data-ttu-id="1f5e1-106">Chiunque sia in grado di sottoclasse di una classe non sealed e i membri di accesso protetto e pertanto le stesse difensivo procedure di codifica utilizzati per i membri pubblici applicano ai membri protetti.</span><span class="sxs-lookup"><span data-stu-id="1f5e1-106">Anyone is able to subclass an unsealed class and access protected members, and so all the same defensive coding practices used for public members apply to protected members.</span></span>  
   
- **✓ PROVARE** utilizzando i membri per la personalizzazione avanzata protetti.  
+ <span data-ttu-id="1f5e1-107">**Provare a ✓** utilizzando membri per la personalizzazione avanzata protetti.</span><span class="sxs-lookup"><span data-stu-id="1f5e1-107">**✓ CONSIDER** using protected members for advanced customization.</span></span>  
   
- **✓ si** trattare i membri protetti in classi non sealed come pubblici allo scopo di analisi di sicurezza, documentazione e compatibilità.  
+ <span data-ttu-id="1f5e1-108">**✓ SI** trattare i membri protetti nelle classi non sealed come public allo scopo di analisi di sicurezza, documentazione e compatibilità.</span><span class="sxs-lookup"><span data-stu-id="1f5e1-108">**✓ DO** treat protected members in unsealed classes as public for the purpose of security, documentation, and compatibility analysis.</span></span>  
   
- Chiunque può ereditare da una classe e accedere ai membri protetti.  
+ <span data-ttu-id="1f5e1-109">Chiunque può ereditare da una classe e accedere ai membri protetti.</span><span class="sxs-lookup"><span data-stu-id="1f5e1-109">Anyone can inherit from a class and access the protected members.</span></span>  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*  
+ <span data-ttu-id="1f5e1-110">*Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="1f5e1-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Ristampato con l'autorizzazione di Pearson formazione, Inc. da [Framework Design Guidelines: convenzioni idiomi e modelli per librerie .NET riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicati il 22 ottobre 2008 da Addison\-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ <span data-ttu-id="1f5e1-111">*State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="1f5e1-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vedere anche  
- [Linee guida](../../../docs/standard/design-guidelines/index.md)   
- [Progettazione finalizzata all'estensibilità](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a><span data-ttu-id="1f5e1-112">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="1f5e1-112">See Also</span></span>  
+ [<span data-ttu-id="1f5e1-113">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="1f5e1-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="1f5e1-114">Progettazione di estendibilità</span><span class="sxs-lookup"><span data-stu-id="1f5e1-114">Designing for Extensibility</span></span>](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

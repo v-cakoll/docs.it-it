@@ -1,42 +1,42 @@
 ---
-title: "Cenni preliminari sul componente NotifyIcon (Windows Form) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NotifyIcon"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "NotifyIcon (componente), informazioni sul componente NotifyIcon"
-  - "icone della barra delle applicazioni, informazioni sulle icone della barra delle applicazioni"
-  - "icone della barra delle applicazioni, utilizzo in Windows Form"
+title: Cenni preliminari sul componente NotifyIcon (Windows Form)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: NotifyIcon
+helpviewer_keywords:
+- NotifyIcon component [Windows Forms], about NotifyIcon component
+- system tray icons [Windows Forms], about system tray icons
+- system tray icons [Windows Forms], using in Windows Forms
 ms.assetid: 5b9189fa-d4ae-41a6-9b97-eb1f44bb1a69
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d951d45232437026cc41d8e40284207ea1c64ab9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Cenni preliminari sul componente NotifyIcon (Windows Form)
-Il componente <xref:System.Windows.Forms.NotifyIcon> di Windows Form viene in genere usato per la visualizzazione di icone per i processi eseguiti in background e, per la maggior parte del tempo, non presenta alcuna interfaccia utente.  Un esempio può essere rappresentato da un programma di protezione dai virus, al quale è possibile accedere facendo clic su un'icona riportata nell'area di notifica dello stato della barra delle applicazioni.  
+# <a name="notifyicon-component-overview-windows-forms"></a><span data-ttu-id="82d71-102">Cenni preliminari sul componente NotifyIcon (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="82d71-102">NotifyIcon Component Overview (Windows Forms)</span></span>
+<span data-ttu-id="82d71-103">Il componente <xref:System.Windows.Forms.NotifyIcon> di Windows Form viene in genere usato per la visualizzazione di icone per i processi eseguiti in background e, per la maggior parte del tempo, non presenta alcuna interfaccia utente.</span><span class="sxs-lookup"><span data-stu-id="82d71-103">The Windows Forms <xref:System.Windows.Forms.NotifyIcon> component is typically used to display icons for processes that run in the background and do not show a user interface much of the time.</span></span> <span data-ttu-id="82d71-104">Un esempio può essere rappresentato da un programma di protezione dai virus, al quale è possibile accedere facendo clic su un'icona riportata nell'area di notifica dello stato della barra delle applicazioni.</span><span class="sxs-lookup"><span data-stu-id="82d71-104">An example would be a virus protection program that can be accessed by clicking an icon in the status notification area of the taskbar.</span></span>  
   
-## Proprietà chiave di NotifyIcons  
- Ogni componente di <xref:System.Windows.Forms.NotifyIcon> visualizza una singola icona nell'area di stato.  Se vengono eseguiti in background tre processi e si vuole visualizzare un'icona per ognuno di essi, è necessario aggiungere al form tre componenti <xref:System.Windows.Forms.NotifyIcon>.  Le proprietà chiave del componente <xref:System.Windows.Forms.NotifyIcon> sono <xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A>.  La proprietà <xref:System.Windows.Forms.NotifyIcon.Icon%2A> imposta l'icona visualizzata nell'area di notifica.  Affinché l'icona venga visualizzata, è anche necessario impostare la proprietà <xref:System.Windows.Forms.NotifyIcon.Visible%2A> su `true`.  
+## <a name="key-properties-of-notifyicons"></a><span data-ttu-id="82d71-105">Proprietà chiave di NotifyIcons</span><span class="sxs-lookup"><span data-stu-id="82d71-105">Key Properties of NotifyIcons</span></span>  
+ <span data-ttu-id="82d71-106">Ogni componente di <xref:System.Windows.Forms.NotifyIcon> visualizza una singola icona nell'area di stato.</span><span class="sxs-lookup"><span data-stu-id="82d71-106">Each <xref:System.Windows.Forms.NotifyIcon> component displays a single icon in the status area.</span></span> <span data-ttu-id="82d71-107">Se vengono eseguiti in background tre processi e si vuole visualizzare un'icona per ognuno di essi, è necessario aggiungere al form tre componenti <xref:System.Windows.Forms.NotifyIcon>.</span><span class="sxs-lookup"><span data-stu-id="82d71-107">If you have three background processes and wish to display an icon for each, you must add three <xref:System.Windows.Forms.NotifyIcon> components to the form.</span></span> <span data-ttu-id="82d71-108">Le proprietà chiave del componente <xref:System.Windows.Forms.NotifyIcon> sono <xref:System.Windows.Forms.NotifyIcon.Icon%2A> e <xref:System.Windows.Forms.NotifyIcon.Visible%2A>.</span><span class="sxs-lookup"><span data-stu-id="82d71-108">The key properties of the <xref:System.Windows.Forms.NotifyIcon> component are <xref:System.Windows.Forms.NotifyIcon.Icon%2A> and <xref:System.Windows.Forms.NotifyIcon.Visible%2A>.</span></span> <span data-ttu-id="82d71-109">La proprietà <xref:System.Windows.Forms.NotifyIcon.Icon%2A> imposta l'icona visualizzata nell'area di notifica.</span><span class="sxs-lookup"><span data-stu-id="82d71-109">The <xref:System.Windows.Forms.NotifyIcon.Icon%2A> property sets the icon that appears in the status area.</span></span> <span data-ttu-id="82d71-110">Affinché l'icona venga visualizzata, è anche necessario impostare la proprietà <xref:System.Windows.Forms.NotifyIcon.Visible%2A> su `true`.</span><span class="sxs-lookup"><span data-stu-id="82d71-110">In order for the icon to appear, the <xref:System.Windows.Forms.NotifyIcon.Visible%2A> property must be set to `true`.</span></span>  
   
- Se si usa [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], è disponibile un'ampia libreria di immagini standard da usare con il controllo <xref:System.Windows.Forms.NotifyIcon>.  
+ <span data-ttu-id="82d71-111">Se si usa [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], è disponibile un'ampia libreria di immagini standard da usare con il controllo <xref:System.Windows.Forms.NotifyIcon>.</span><span class="sxs-lookup"><span data-stu-id="82d71-111">If you are using [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], you have access to a large library of standard images that you can use with the <xref:System.Windows.Forms.NotifyIcon> control.</span></span>  
   
-## Opzioni di NotifyIcons  
- Al controllo <xref:System.Windows.Forms.NotifyIcon> è possibile associare suggerimenti, menu di scelta rapida e descrizioni comandi per assistere l'utente.  
+## <a name="notifyicons-options"></a><span data-ttu-id="82d71-112">Opzioni di NotifyIcons</span><span class="sxs-lookup"><span data-stu-id="82d71-112">NotifyIcons Options</span></span>  
+ <span data-ttu-id="82d71-113">Al controllo <xref:System.Windows.Forms.NotifyIcon> è possibile associare suggerimenti, menu di scelta rapida e descrizioni comandi per assistere l'utente.</span><span class="sxs-lookup"><span data-stu-id="82d71-113">You can associate balloon tips, shortcut menus, and ToolTips with a <xref:System.Windows.Forms.NotifyIcon> to assist the user.</span></span>  
   
- I suggerimenti possono essere inseriti in un controllo <xref:System.Windows.Forms.NotifyIcon> chiamando il metodo <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> e specificando l'intervallo di tempo per la visualizzazione del suggerimento.  È anche possibile specificare il testo, l'icona e il titolo del suggerimento per le proprietà <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> e <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A> rispettivamente.  Ai componenti <xref:System.Windows.Forms.NotifyIcon> è possibile anche associare descrizioni comandi e menu di scelta rapida.  Per altre informazioni, vedere [Cenni preliminari sul componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md) e [Cenni preliminari sul componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
+ <span data-ttu-id="82d71-114">I suggerimenti possono essere inseriti in un controllo <xref:System.Windows.Forms.NotifyIcon> chiamando il metodo <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> e specificando l'intervallo di tempo per la visualizzazione del suggerimento.</span><span class="sxs-lookup"><span data-stu-id="82d71-114">You can display balloon tips for a <xref:System.Windows.Forms.NotifyIcon> by calling the <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> method specifying the time span you wish the balloon tip to display.</span></span> <span data-ttu-id="82d71-115">È anche possibile specificare il testo, l'icona e il titolo del suggerimento per le proprietà <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> e <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A> rispettivamente.</span><span class="sxs-lookup"><span data-stu-id="82d71-115">You can also specify the text, icon and title of the balloon tip with the <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> and <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A>, respectively.</span></span> <span data-ttu-id="82d71-116">Ai componenti <xref:System.Windows.Forms.NotifyIcon> è possibile anche associare descrizioni comandi e menu di scelta rapida.</span><span class="sxs-lookup"><span data-stu-id="82d71-116"><xref:System.Windows.Forms.NotifyIcon> components can also have associated ToolTips and shortcut menus.</span></span> <span data-ttu-id="82d71-117">Per ulteriori informazioni, vedere [Cenni preliminari sul componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md) e [Cenni preliminari sul componente ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="82d71-117">For more information, see [ToolTip Component Overview](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md) and [ContextMenu Component Overview](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).</span></span>  
   
-## Vedere anche  
- <xref:System.Windows.Forms.NotifyIcon>   
- [Componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="82d71-118">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="82d71-118">See Also</span></span>  
+ <xref:System.Windows.Forms.NotifyIcon>  
+ [<span data-ttu-id="82d71-119">Componente NotifyIcon</span><span class="sxs-lookup"><span data-stu-id="82d71-119">NotifyIcon Component</span></span>](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)

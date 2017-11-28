@@ -1,40 +1,43 @@
 ---
-title: "Procedura: utilizzare un disegno come origine di immagini | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "disegni, come origini di immagini"
-  - "grafica, disegni, come origini di immagini"
-  - "origini di immagini, disegni"
+title: 'Procedura: utilizzare un disegno come origine di immagini'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [WPF], drawings [WPF], as image sources
+- image sources [WPF], drawings
+- drawings [WPF], as image sources
 ms.assetid: dcf71c7b-9e86-4b8e-8e39-0d0ce0389ef4
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e100bc29afb17a37bc0c66621261347bea6d210
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: utilizzare un disegno come origine di immagini
-In questo esempio viene mostrato come utilizzare un oggetto <xref:System.Windows.Media.Drawing> come oggetto <xref:System.Windows.Controls.Image.Source%2A> per un controllo <xref:System.Windows.Controls.Image>.  Per visualizzare un oggetto <xref:System.Windows.Media.Drawing> con un controllo <xref:System.Windows.Controls.Image>, utilizzare un oggetto <xref:System.Windows.Media.DrawingImage> come <xref:System.Windows.Controls.Image.Source%2A> del controllo <xref:System.Windows.Controls.Image> e impostare la proprietà <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=fullName> dell'oggetto <xref:System.Windows.Media.DrawingImage> sul disegno che si desidera visualizzare.  
+# <a name="how-to-use-a-drawing-as-an-image-source"></a><span data-ttu-id="cceba-102">Procedura: utilizzare un disegno come origine di immagini</span><span class="sxs-lookup"><span data-stu-id="cceba-102">How to: Use a Drawing as an Image Source</span></span>
+<span data-ttu-id="cceba-103">In questo esempio viene illustrato come utilizzare un <xref:System.Windows.Media.Drawing> come il <xref:System.Windows.Controls.Image.Source%2A> per un <xref:System.Windows.Controls.Image> controllo.</span><span class="sxs-lookup"><span data-stu-id="cceba-103">This example shows how to use a <xref:System.Windows.Media.Drawing> as the <xref:System.Windows.Controls.Image.Source%2A> for an <xref:System.Windows.Controls.Image> control.</span></span> <span data-ttu-id="cceba-104">Per visualizzare un <xref:System.Windows.Media.Drawing> con un <xref:System.Windows.Controls.Image> controllo, utilizzare un <xref:System.Windows.Media.DrawingImage> come il <xref:System.Windows.Controls.Image> del controllo <xref:System.Windows.Controls.Image.Source%2A> e impostare il <xref:System.Windows.Media.DrawingImage> dell'oggetto <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> proprietà per il disegno che si desidera visualizzare.</span><span class="sxs-lookup"><span data-stu-id="cceba-104">To display a <xref:System.Windows.Media.Drawing> with an <xref:System.Windows.Controls.Image> control, use a <xref:System.Windows.Media.DrawingImage> as the <xref:System.Windows.Controls.Image> control's <xref:System.Windows.Controls.Image.Source%2A> and set the <xref:System.Windows.Media.DrawingImage> object's <xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType> property to the drawing you want to display.</span></span>  
   
-## Esempio  
- Nell'esempio riportato di seguito viene utilizzato un oggetto <xref:System.Windows.Media.DrawingImage> e un controllo <xref:System.Windows.Controls.Image> per visualizzare un oggetto <xref:System.Windows.Media.GeometryDrawing>.  Questo esempio produce il seguente output:  
+## <a name="example"></a><span data-ttu-id="cceba-105">Esempio</span><span class="sxs-lookup"><span data-stu-id="cceba-105">Example</span></span>  
+ <span data-ttu-id="cceba-106">Nell'esempio seguente viene utilizzato un <xref:System.Windows.Media.DrawingImage> e <xref:System.Windows.Controls.Image> controllo per visualizzare un <xref:System.Windows.Media.GeometryDrawing>.</span><span class="sxs-lookup"><span data-stu-id="cceba-106">The following example uses a <xref:System.Windows.Media.DrawingImage> and an <xref:System.Windows.Controls.Image> control to display a <xref:System.Windows.Media.GeometryDrawing>.</span></span> <span data-ttu-id="cceba-107">Questo esempio produce il seguente output:</span><span class="sxs-lookup"><span data-stu-id="cceba-107">This example produces the following output:</span></span>  
   
- ![GeometryDrawing di due ellissi](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.png "graphicsmm\_geodraw")  
-Un oggetto DrawingImage  
+ <span data-ttu-id="cceba-108">![GeometryDrawing di due ellissi](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span><span class="sxs-lookup"><span data-stu-id="cceba-108">![A GeometryDrawing of two ellipses](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-geodraw.jpg "graphicsmm_geodraw")</span></span>  
+<span data-ttu-id="cceba-109">Oggetto DrawingImage</span><span class="sxs-lookup"><span data-stu-id="cceba-109">A DrawingImage</span></span>  
   
  [!code-csharp[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingImageExample.cs#drawingimageexamplewholepage)]
- [!code-xml[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingImageExample.xaml#drawingimageexamplewholepage)]  
+ [!code-xaml[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingImageExample.xaml#drawingimageexamplewholepage)]  
   
-## Vedere anche  
- <xref:System.Windows.Freezable.Freeze%2A>   
- [Disegnare un'immagine con ImageDrawing](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)   
- [Cenni preliminari sugli oggetti Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)   
- [Cenni preliminari sugli oggetti Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [Attributo PresentationOptions:Freeze](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+## <a name="see-also"></a><span data-ttu-id="cceba-110">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="cceba-110">See Also</span></span>  
+ <xref:System.Windows.Freezable.Freeze%2A>  
+ [<span data-ttu-id="cceba-111">Disegnare un'immagine con ImageDrawing</span><span class="sxs-lookup"><span data-stu-id="cceba-111">Draw an Image Using ImageDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
+ [<span data-ttu-id="cceba-112">Cenni preliminari sugli oggetti Drawing</span><span class="sxs-lookup"><span data-stu-id="cceba-112">Drawing Objects Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [<span data-ttu-id="cceba-113">Cenni preliminari sugli oggetti Freezable</span><span class="sxs-lookup"><span data-stu-id="cceba-113">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="cceba-114">Attributo PresentationOptions:Freeze</span><span class="sxs-lookup"><span data-stu-id="cceba-114">PresentationOptions:Freeze Attribute</span></span>](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)

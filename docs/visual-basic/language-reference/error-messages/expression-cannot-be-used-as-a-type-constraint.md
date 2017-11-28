@@ -1,58 +1,56 @@
 ---
-title: "&#39;&lt;expression&gt;&#39; cannot be used as a type constraint | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc32061"
-  - "vbc32061"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC32061"
+title: "&#39; &lt;espressione&gt;&#39; non può essere utilizzato come vincolo di tipo"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc32061
+- vbc32061
+helpviewer_keywords: BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 054c05747491afb02601df00225a703560cbe91c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;&lt;expression&gt;&#39; cannot be used as a type constraint
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Un elenco di vincoli include un'espressione che non rappresenta un vincolo valido su un parmetro di tipo.  
+# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="4c946-102">&#39; &lt;espressione&gt;&#39; non può essere utilizzato come vincolo di tipo</span><span class="sxs-lookup"><span data-stu-id="4c946-102">&#39;&lt;expression&gt;&#39; cannot be used as a type constraint</span></span>
+<span data-ttu-id="4c946-103">Un elenco di vincoli comprende un'espressione che non rappresenta un vincolo valido per un parametro di tipo.</span><span class="sxs-lookup"><span data-stu-id="4c946-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  
   
- Un elenco di vincoli impone i requisiti sull'argomento di tipo passato al parametro di tipo.  È possibile specificare i requisiti seguenti in qualsiasi combinazione:  
+ <span data-ttu-id="4c946-104">Un elenco di vincoli impone requisiti per l'argomento di tipo passato al parametro di tipo.</span><span class="sxs-lookup"><span data-stu-id="4c946-104">A constraint list imposes requirements on the type argument passed to the type parameter.</span></span> <span data-ttu-id="4c946-105">Si possono specificare i requisiti seguenti in qualsiasi combinazione:</span><span class="sxs-lookup"><span data-stu-id="4c946-105">You can specify the following requirements in any combination:</span></span>  
   
--   È necessario che l'argomento di tipo implementi una o più interfacce  
+-   <span data-ttu-id="4c946-106">L'argomento di tipo deve implementare una o più interfacce</span><span class="sxs-lookup"><span data-stu-id="4c946-106">The type argument must implement one or more interfaces</span></span>  
   
--   È necessario che l'argomento di tipo erediti da una classe al massimo  
+-   <span data-ttu-id="4c946-107">L'argomento di tipo deve ereditare al massimo da una classe</span><span class="sxs-lookup"><span data-stu-id="4c946-107">The type argument must inherit from at most one class</span></span>  
   
--   È necessario che l'argomento di tipo esponga un costruttore senza parametri accessibile dal codice di creazione \(compreso il vincolo `New`\)  
+-   <span data-ttu-id="4c946-108">L'argomento di tipo deve esporre un costruttore senza parametri a cui il codice di creazione possa accedere (includere il vincolo `New` )</span><span class="sxs-lookup"><span data-stu-id="4c946-108">The type argument must expose a parameterless constructor that the creating code can access (include the `New` constraint)</span></span>  
   
- Se non si include nessun altra classe o interfaccia specifica nell'elenco di vincoli, è possibile imporre un requisito più generale specificando una delle seguenti condizioni:  
+ <span data-ttu-id="4c946-109">Se non si include alcuna classe o interfaccia specifica nell'elenco di vincoli, è possibile imporre un requisito più generale specificando una delle condizioni seguenti:</span><span class="sxs-lookup"><span data-stu-id="4c946-109">If you do not include any specific class or interface in the constraint list, you can impose a more general requirement by specifying one of the following:</span></span>  
   
--   L'argomento di tipo deve essere un tipo di valore \(compreso il vincolo `Structure`\)  
+-   <span data-ttu-id="4c946-110">L'argomento di tipo deve essere un tipo valore (includere il vincolo `Structure` )</span><span class="sxs-lookup"><span data-stu-id="4c946-110">The type argument must be a value type (include the `Structure` constraint)</span></span>  
   
--   È necessario che l'argomento di tipo sia un tipo di riferimento \(compreso il vincolo `Class`\)  
+-   <span data-ttu-id="4c946-111">L'argomento di tipo deve essere un tipo riferimento (includere il vincolo `Class` )</span><span class="sxs-lookup"><span data-stu-id="4c946-111">The type argument must be a reference type (include the `Class` constraint)</span></span>  
   
- Non è possibile specificare `Structure` e `Class` per lo stesso parametro di tipo e non è possibile specificarne uno più di una volta.  
+ <span data-ttu-id="4c946-112">Non è possibile specificare sia `Structure` che `Class` per lo stesso parametro di tipo e non è possibile specificare uno dei due vincoli più volte.</span><span class="sxs-lookup"><span data-stu-id="4c946-112">You cannot specify both `Structure` and `Class` for the same type parameter, and you cannot specify either one more than once.</span></span>  
   
- **ID errore:** BC32061  
+ <span data-ttu-id="4c946-113">**ID errore:** BC32061</span><span class="sxs-lookup"><span data-stu-id="4c946-113">**Error ID:** BC32061</span></span>  
   
-### Per correggere l'errore  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4c946-114">Per correggere l'errore</span><span class="sxs-lookup"><span data-stu-id="4c946-114">To correct this error</span></span>  
   
--   Verificare che l'espressione e i suoi elementi siano digitati correttamente.  
+-   <span data-ttu-id="4c946-115">Verificare che l'espressione e i suoi elementi siano digitati correttamente.</span><span class="sxs-lookup"><span data-stu-id="4c946-115">Verify that the expression and its elements are spelled correctly.</span></span>  
   
--   Se l'espressione non si qualifica per l'elenco di requisiti precedente, rimuoverlo dall'elenco di vincoli.  
+-   <span data-ttu-id="4c946-116">Se l'espressione non soddisfa l'elenco di requisiti precedente, rimuoverla dall'elenco di vincoli.</span><span class="sxs-lookup"><span data-stu-id="4c946-116">If the expression does not qualify for the preceding list of requirements, remove it from the constraint list.</span></span>  
   
--   Se l'espressione fa riferimento a un'interfaccia o una classe, verificare che il compilatore abbia accesso a quell'interfaccia o classe.  Potrebbe essere necessario qualificarne il nome, e aggiungere un riferimento al progetto.  Per ulteriori informazioni, vedere "Riferimenti ai progetti" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+-   <span data-ttu-id="4c946-117">Se l'espressione fa riferimento a un'interfaccia o a una classe, verificare che il compilatore possa accedere a quell'interfaccia o a quella classe.</span><span class="sxs-lookup"><span data-stu-id="4c946-117">If the expression refers to an interface or class, verify that the compiler has access to that interface or class.</span></span> <span data-ttu-id="4c946-118">Potrebbe essere necessario qualificarne il nome e anche aggiungere un riferimento al progetto.</span><span class="sxs-lookup"><span data-stu-id="4c946-118">You might need to qualify its name, and you might need to add a reference to your project.</span></span> <span data-ttu-id="4c946-119">Per ulteriori informazioni, vedere "Riferimenti ai progetti" in [riferimenti a elementi dichiarati](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="4c946-119">For more information, see "References to Projects" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-## Vedere anche  
- [Tipi generici in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Value Types and Reference Types](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Procedura: aggiungere o rimuovere riferimenti utilizzando la finestra di dialogo Aggiungi riferimento](http://msdn.microsoft.com/it-it/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+## <a name="see-also"></a><span data-ttu-id="4c946-120">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="4c946-120">See Also</span></span>  
+ [<span data-ttu-id="4c946-121">Tipi generici in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4c946-121">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="4c946-122">Tipi valore e tipi riferimento</span><span class="sxs-lookup"><span data-stu-id="4c946-122">Value Types and Reference Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="4c946-123">Riferimenti a elementi dichiarati</span><span class="sxs-lookup"><span data-stu-id="4c946-123">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="4c946-124">NIB Procedura: Aggiungere o rimuovere riferimenti utilizzando la finestra di dialogo Aggiungi riferimento</span><span class="sxs-lookup"><span data-stu-id="4c946-124">NIB How to: Add or Remove References By Using the Add Reference Dialog Box</span></span>](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)

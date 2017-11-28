@@ -1,88 +1,94 @@
 ---
-title: "Nozioni di base sull&#39;input penna | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animazione, colori dei pennelli sfumati"
-  - "pennelli, animazione dei colori"
-  - "pennello sfumato, animazione dei colori"
-  - "codice procedurale anziché XAML"
-  - "XAML, codice procedurale anziché"
+title: Nozioni di base sull'input penna
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- procedural code in lieu of XAML [WPF]
+- gradient brush [WPF], animating colors of
+- XAML [WPF], procedural code in lieu of
+- animation [WPF], gradient brush colors
+- brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc8ffe9ad68060d9dfbcafe99133a736237a2bb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Nozioni di base sull&#39;input penna
-Incorporare l'input penna nelle applicazioni è più facile che mai.  Nata per effetto del metodo di programmazione di Windows Forms e COM, questa tecnologia si è evoluta fino a raggiungere la piena integrazione in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Non è necessario installare SDK o librerie di runtime distinte.  
+# <a name="getting-started-with-ink"></a><span data-ttu-id="aa543-102">Nozioni di base sull'input penna</span><span class="sxs-lookup"><span data-stu-id="aa543-102">Getting Started with Ink</span></span>
+<span data-ttu-id="aa543-103">Inserimento di input penna nelle applicazioni è più semplice che mai.</span><span class="sxs-lookup"><span data-stu-id="aa543-103">Incorporating digital ink into your applications is easier than ever.</span></span> <span data-ttu-id="aa543-104">Input penna è stato migliorato da un corollario al metodo COM e Windows Form di programmazione per raggiungere la piena integrazione in corso il [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aa543-104">Ink has evolved from being a corollary to the COM and Windows Forms method of programming to achieving full integration into the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="aa543-105">Non è necessario installare gli SDK separati o le librerie di runtime.</span><span class="sxs-lookup"><span data-stu-id="aa543-105">You do not need to install separate SDKs or runtime libraries.</span></span>  
   
-## Prerequisiti  
- Per poter utilizzare gli esempi seguenti, è necessario installare Microsoft Visual Studio 2005 e [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].  È inoltre necessario disporre di conoscenze su come scrivere applicazioni per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Per ulteriori informazioni su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [Procedura dettagliata: introduzione a WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+## <a name="prerequisites"></a><span data-ttu-id="aa543-106">Prerequisiti</span><span class="sxs-lookup"><span data-stu-id="aa543-106">Prerequisites</span></span>  
+ <span data-ttu-id="aa543-107">Per utilizzare gli esempi seguenti, è innanzitutto necessario installare Microsoft Visual Studio 2005 e [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aa543-107">To use the following examples, you must first install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].</span></span> <span data-ttu-id="aa543-108">È anche necessario avere conoscenze su come scrivere applicazioni per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aa543-108">You should also understand how to write applications for the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="aa543-109">Per ulteriori informazioni sui concetti introduttivi di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vedere [procedura dettagliata: applicazione desktop WPF prima](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span><span class="sxs-lookup"><span data-stu-id="aa543-109">For more information about getting started with the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], see [Walkthrough: My first WPF desktop application](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).</span></span>  
   
-## Avvio rapido  
- Questa sezione consente di scrivere una semplice applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che raccoglie input penna.  
+## <a name="quick-start"></a><span data-ttu-id="aa543-110">Avvio rapido</span><span class="sxs-lookup"><span data-stu-id="aa543-110">Quick Start</span></span>  
+ <span data-ttu-id="aa543-111">In questa sezione consente di scrivere un semplice [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione che raccoglie input penna.</span><span class="sxs-lookup"><span data-stu-id="aa543-111">This section helps you write a simple [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that collects ink.</span></span>  
   
- Se questa operazione non è già stata eseguita, installare Microsoft Visual Studio 2005 e [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)].  È in genere necessario compilare le applicazioni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prima di poterle visualizzare, anche se sono costituite interamente da codice [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  Tuttavia, [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] include un'applicazione, XAMLPad, progettata per velocizzare il processo di implementazione di un'interfaccia utente basata su [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  È possibile utilizzare tale applicazione per visualizzare e iniziare a eseguire i primi esempi riportati in questo documento.  Il processo di creazione di applicazioni compilate da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene descritto più avanti in questo documento.  
+ <span data-ttu-id="aa543-112">Se non già stato fatto, installare Microsoft Visual Studio 2005 e [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aa543-112">If you haven't already done so, install Microsoft Visual Studio 2005 and the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)].</span></span> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="aa543-113">le applicazioni in genere devono essere compilate prima possibile visualizzarli, anche se sono costituite interamente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aa543-113"> applications usually must be compiled before you can view them, even if they consist entirely of [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="aa543-114">Tuttavia, il [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] include un'applicazione, XamlPad, progettata per velocizzare il processo di implementazione di un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-interfaccia utente basata su.</span><span class="sxs-lookup"><span data-stu-id="aa543-114">However, the [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] includes an application, XamlPad, designed to speed up the process of implementing a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-based UI.</span></span> <span data-ttu-id="aa543-115">Per visualizzare e globalmente con i primi esempi riportati in questo documento, è possibile utilizzare tale applicazione.</span><span class="sxs-lookup"><span data-stu-id="aa543-115">You can use that application to view and tinker with the first few samples in this document.</span></span> <span data-ttu-id="aa543-116">Il processo di creazione di applicazioni compilate da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] viene descritta più avanti in questo documento.</span><span class="sxs-lookup"><span data-stu-id="aa543-116">The process of creating compiled applications from [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] is covered later in this document.</span></span>  
   
- Per avviare XAMLPad, fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, **Microsoft Windows SDK**, **Strumenti**e quindi **XAMLPad**.  Nel riquadro di rendering XAMLPad esegue il rendering del codice XAML scritto nel riquadro del codice.  È possibile modificare il codice XAML. In questo caso, le modifiche verranno immediatamente visualizzate nel riquadro di rendering.  
+ <span data-ttu-id="aa543-117">Per avviare XAMLPad, fare clic su di **avviare** dal menu **tutti i programmi**, scegliere **Microsoft Winndows SDK**, scegliere **strumenti**, fare clic su **XAMLPad**.</span><span class="sxs-lookup"><span data-stu-id="aa543-117">To launch XAMLPad, click the **Start** menu, point to **All Programs**, point to **Microsoft Winndows SDK**, point to **Tools**, and click **XAMLPad**.</span></span> <span data-ttu-id="aa543-118">Nel riquadro di rendering XAMLPad esegue il rendering del codice XAML scritto nel riquadro del codice.</span><span class="sxs-lookup"><span data-stu-id="aa543-118">In the rendering pane, XAMLPad renders the XAML code written in the code pane.</span></span> <span data-ttu-id="aa543-119">È possibile modificare il codice XAML, e le modifiche vengano visualizzate immediatamente nel riquadro di rendering.</span><span class="sxs-lookup"><span data-stu-id="aa543-119">You can edit the XAML code, and the changes immediately appear in the rendering pane.</span></span>  
   
-#### Input penna già disponibile  
- Per avviare la prima applicazione [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che supporta l'input penna:  
+#### <a name="got-ink"></a><span data-ttu-id="aa543-120">Hai input penna?</span><span class="sxs-lookup"><span data-stu-id="aa543-120">Got Ink?</span></span>  
+ <span data-ttu-id="aa543-121">Per avviare la prima [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applicazione che supporta l'input penna:</span><span class="sxs-lookup"><span data-stu-id="aa543-121">To start your first [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application that supports ink:</span></span>  
   
-1.  Aprire Microsoft Visual Studio 2005  
+1.  <span data-ttu-id="aa543-122">Aprire Microsoft Visual Studio 2005</span><span class="sxs-lookup"><span data-stu-id="aa543-122">Open Microsoft Visual Studio 2005</span></span>  
   
-2.  Creare una nuova **applicazione Windows \(WPF\)**  
+2.  <span data-ttu-id="aa543-123">Creare un nuovo **applicazione WPF (Windows)**</span><span class="sxs-lookup"><span data-stu-id="aa543-123">Create a new **Windows Application (WPF)**</span></span>  
   
-3.  Digitare `<InkCanvas/>` tra i tag `<Grid>`  
+3.  <span data-ttu-id="aa543-124">Tipo `<InkCanvas/>` tra il `<Grid>` tag</span><span class="sxs-lookup"><span data-stu-id="aa543-124">Type `<InkCanvas/>` between the `<Grid>` tags</span></span>  
   
-4.  Premere **F5** per avviare l'applicazione nel debugger  
+4.  <span data-ttu-id="aa543-125">Premere **F5** per avviare l'applicazione nel debugger</span><span class="sxs-lookup"><span data-stu-id="aa543-125">Press **F5** to launch your application in the debugger</span></span>  
   
-5.  Utilizzando uno stilo o il mouse, scrivere hello world nella finestra  
+5.  <span data-ttu-id="aa543-126">Tramite uno stilo o un mouse, scrivere **HelloWorld** nella finestra</span><span class="sxs-lookup"><span data-stu-id="aa543-126">Using a stylus or mouse, write **hello world** in the window</span></span>  
   
- È stato scritto l'equivalente dell'input penna di un'applicazione "hello world" con appena 12 battute di tasti.  
+ <span data-ttu-id="aa543-127">Si è scritto l'equivalente di input penna di un'applicazione "hello world" con sequenze di tasti solo 12.</span><span class="sxs-lookup"><span data-stu-id="aa543-127">You've written the ink equivalent of a "hello world" application with only 12 keystrokes!</span></span>  
   
-#### Personalizzare l'applicazione  
- Per sfruttare alcune funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)],  sostituire tutto il contenuto tra il tag di apertura \<Window\> e il tag di chiusura \<\/Window\> con il seguente markup per ottenere uno sfondo con pennello a sfumatura sulla superficie dell'input penna.  
+#### <a name="spice-up-your-application"></a><span data-ttu-id="aa543-128">Personalizzare l'applicazione</span><span class="sxs-lookup"><span data-stu-id="aa543-128">Spice Up Your Application</span></span>  
+ <span data-ttu-id="aa543-129">Per sfruttare alcune funzionalità del [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="aa543-129">Let’s take advantage of some features of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  <span data-ttu-id="aa543-130">Sostituire tutto il contenuto tra l'apertura \<finestra > e di chiusura \</Window > tag con il markup seguente per ottenere uno sfondo con pennello sfumato sull'area di input penna.</span><span class="sxs-lookup"><span data-stu-id="aa543-130">Replace everything between the opening \<Window> and closing \</Window> tags with the following markup to get a gradient brush background on your inking surface.</span></span>  
   
- [!code-xml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
-[!code-xml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
+ [!code-xaml[DigitalInkTopics#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1)]  
+[!code-xaml[DigitalInkTopics#1a](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#1a)]  
   
-#### Utilizzo dell'animazione  
- Per aggiungere un effetto divertente, animare i colori del pennello a sfumatura.  Aggiungere il seguente codice [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dopo il tag di chiusura `</InkCanvas>` ma prima del tag di chiusura `</Page>`.  
+#### <a name="using-animation"></a><span data-ttu-id="aa543-131">Utilizzo dell'animazione</span><span class="sxs-lookup"><span data-stu-id="aa543-131">Using Animation</span></span>  
+ <span data-ttu-id="aa543-132">Per una divertente, animare i colori del pennello sfumato.</span><span class="sxs-lookup"><span data-stu-id="aa543-132">For fun, let's animate the colors of the gradient brush.</span></span> <span data-ttu-id="aa543-133">Aggiungere il seguente [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dopo la chiusura `</InkCanvas>` tag ma prima della chiusura `</Page>` tag.</span><span class="sxs-lookup"><span data-stu-id="aa543-133">Add the following [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] after the closing `</InkCanvas>` tag but before the closing `</Page>` tag.</span></span>  
   
- [!code-xml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
+ [!code-xaml[DigitalInkTopics#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml#2)]  
   
-#### Aggiunta di codice sottostante a XAML  
- Anche se il linguaggio XAML consente di progettare molto agevolmente l'interfaccia utente, per le applicazioni reali è necessario aggiungere codice per gestire gli eventi.  Di seguito è riportato un semplice esempio in cui l'input penna viene ingrandito in risposta a un clic con il pulsante destro del mouse:  
+#### <a name="adding-some-code-behind-the-xaml"></a><span data-ttu-id="aa543-134">Aggiunta di codice sottostante a XAML</span><span class="sxs-lookup"><span data-stu-id="aa543-134">Adding Some Code Behind the XAML</span></span>  
+ <span data-ttu-id="aa543-135">Mentre XAML è molto semplice progettare l'interfaccia utente, qualsiasi applicazione reale deve aggiungere il codice per gestire gli eventi.</span><span class="sxs-lookup"><span data-stu-id="aa543-135">While XAML makes it very easy to design the user interface, any real-world application needs to add code to handle events.</span></span> <span data-ttu-id="aa543-136">Di seguito è riportato un esempio semplice che consente di ingrandire l'input penna in risposta al pulsante destro del mouse:</span><span class="sxs-lookup"><span data-stu-id="aa543-136">Here is a simple example that zooms in on the ink in response to a right-click from a mouse:</span></span>  
   
- Impostare il gestore `MouseRightButtonUp` in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:  
+ <span data-ttu-id="aa543-137">Impostare il `MouseRightButtonUp` gestore il [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="aa543-137">Set the `MouseRightButtonUp` handler in your [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:</span></span>  
   
- [!code-xml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
+ [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]  
   
- In Esplora soluzioni di Visual Studio espandere Windows1.xaml e aprire il file code\-behind, ossia Window1.xaml.cs o Window1.xaml.vb se si utilizza Visual Basic.  Aggiungere il codice del gestore eventi seguente:  
+ <span data-ttu-id="aa543-138">In Esplora soluzioni di Visual Studio, espandere Windows1. XAML e aprire il file code-behind, Window1.xaml.cs o Window1. XAML se si utilizza Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="aa543-138">In Visual Studio’s Solution Explorer, expand Windows1.xaml and open the code-behind file, Window1.xaml.cs or Window1.xaml.vb if you are using Visual Basic.</span></span> <span data-ttu-id="aa543-139">Aggiungere il codice del gestore eventi seguente:</span><span class="sxs-lookup"><span data-stu-id="aa543-139">Add the following event handler code:</span></span>  
   
  [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
  [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]  
   
- A questo punto, eseguire l'applicazione.  Aggiungere un input penna e quindi fare clic con il pulsante destro del mouse o eseguire un'operazione equivalente tenendo premuto un tasto con uno stilo.  
+ <span data-ttu-id="aa543-140">A questo punto, eseguire l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="aa543-140">Now, run your application.</span></span> <span data-ttu-id="aa543-141">Aggiungere un input penna e quindi fare clic con il mouse o eseguire un equivalente premere e tenere con stilo.</span><span class="sxs-lookup"><span data-stu-id="aa543-141">Add some ink and then right-click with the mouse or perform a press-and-hold equivalent with a stylus.</span></span>  
   
-#### Utilizzo di codice procedurale anziché XAML  
- È possibile accedere a tutte le funzionalità di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] da codice procedurale.  Di seguito è riportata un'applicazione "Hello Ink World" di [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che non utilizza [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  Incollare il codice seguente in un'applicazione console vuota in Visual Studio.  Aggiungere i riferimenti agli assembly PresentationCore, PresentationFramework e WindowsBase, quindi compilare l'applicazione premendo **F5**:  
+#### <a name="using-procedural-code-instead-of-xaml"></a><span data-ttu-id="aa543-142">Usando codice procedurale anziché XAML</span><span class="sxs-lookup"><span data-stu-id="aa543-142">Using Procedural Code Instead of XAML</span></span>  
+ <span data-ttu-id="aa543-143">È possibile accedere a tutti [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funzionalità dal codice procedurale.</span><span class="sxs-lookup"><span data-stu-id="aa543-143">You can access all [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] features from procedural code.</span></span> <span data-ttu-id="aa543-144">In questo caso è un'applicazione "Hello Ink World" per [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] che non utilizza [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] affatto.</span><span class="sxs-lookup"><span data-stu-id="aa543-144">Here is a "Hello Ink World" application for [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] that doesn’t use any [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] at all.</span></span> <span data-ttu-id="aa543-145">Incollare il codice seguente in un'applicazione Console vuota in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="aa543-145">Paste the code below into an empty Console Application in Visual Studio.</span></span> <span data-ttu-id="aa543-146">Aggiungere riferimenti agli assembly WindowsBase, PresentationCore e PresentationFramework e compilare l'applicazione premendo **F5**:</span><span class="sxs-lookup"><span data-stu-id="aa543-146">Add references to the PresentationCore, PresentationFramework, and WindowsBase assemblies, and build the application by pressing **F5**:</span></span>  
   
  [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
  [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
   
-## Vedere anche  
- [Input penna](../../../../docs/framework/wpf/advanced/digital-ink.md)   
- [Raccolta di input penna](../../../../docs/framework/wpf/advanced/collecting-ink.md)   
- [Riconoscimento della grafia](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)   
- [Memorizzazione dell'input penna](../../../../docs/framework/wpf/advanced/storing-ink.md)
+## <a name="see-also"></a><span data-ttu-id="aa543-147">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="aa543-147">See Also</span></span>  
+ [<span data-ttu-id="aa543-148">Input penna</span><span class="sxs-lookup"><span data-stu-id="aa543-148">Digital Ink</span></span>](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [<span data-ttu-id="aa543-149">Raccolta di input penna</span><span class="sxs-lookup"><span data-stu-id="aa543-149">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
+ [<span data-ttu-id="aa543-150">Riconoscimento della grafia</span><span class="sxs-lookup"><span data-stu-id="aa543-150">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
+ [<span data-ttu-id="aa543-151">Archiviazione dell'input penna</span><span class="sxs-lookup"><span data-stu-id="aa543-151">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)

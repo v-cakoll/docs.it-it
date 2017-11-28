@@ -1,55 +1,61 @@
 ---
-title: "Procedura: eseguire l&#39;associazione a un servizio Web | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "associazione dati, servizio Web"
-  - "associazione dati, servizio Web"
-  - "servizio Web (associazione)"
+title: 'Procedura: eseguire l''associazione a un servizio Web'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- binding data [WPF], Web service
+- Web service binding [WPF]
+- data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d1b81949d6d91420c828564debd311af47dfdfd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Procedura: eseguire l&#39;associazione a un servizio Web
-Nell'esempio riportato di seguito viene illustrato come eseguire l'associazione a oggetti restituiti dalle chiamate al metodo di servizio Web.  
+# <a name="how-to-bind-to-a-web-service"></a><span data-ttu-id="e7d16-102">Procedura: eseguire l'associazione a un servizio Web</span><span class="sxs-lookup"><span data-stu-id="e7d16-102">How to: Bind to a Web Service</span></span>
+<span data-ttu-id="e7d16-103">In questo esempio viene illustrato come associare gli oggetti restituiti dalle chiamate al metodo del servizio Web.</span><span class="sxs-lookup"><span data-stu-id="e7d16-103">This example shows how to bind to objects returned by Web service method calls.</span></span>  
   
-## Esempio  
- In questo esempio viene utilizzato [MSDN\/TechNet Publishing System \(MTPS\) Content Service](http://go.microsoft.com/fwlink/?LinkId=95677) per recuperare l'elenco di lingue supportate da uno specifico documento.  
+## <a name="example"></a><span data-ttu-id="e7d16-104">Esempio</span><span class="sxs-lookup"><span data-stu-id="e7d16-104">Example</span></span>  
+ <span data-ttu-id="e7d16-105">Questo esempio viene utilizzato il [servizio contenuto MSDN o TechNet Publishing System (MTPS)](http://go.microsoft.com/fwlink/?LinkId=95677) per recuperare l'elenco delle lingue supportate da un documento specificato.</span><span class="sxs-lookup"><span data-stu-id="e7d16-105">This example uses the [MSDN/TechNet Publishing System (MTPS) Content Service](http://go.microsoft.com/fwlink/?LinkId=95677) to retrieve the list of languages supported by a specified document.</span></span>  
   
- Prima di chiamare un servizio Web, è necessario creare un relativo riferimento.  Per creare un riferimento Web al servizio MTPS utilizzando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], attenersi alla seguente procedura.  
+ <span data-ttu-id="e7d16-106">Prima di chiamare un servizio Web, è necessario creare un riferimento a esso.</span><span class="sxs-lookup"><span data-stu-id="e7d16-106">Before you call a Web service, you need to create a reference to it.</span></span> <span data-ttu-id="e7d16-107">Per creare un riferimento Web al servizio MTPS utilizzando [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], seguire i passaggi seguenti:</span><span class="sxs-lookup"><span data-stu-id="e7d16-107">To create a Web reference to the MTPS service using [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], follow the following steps:</span></span>  
   
-1.  Aprire il progetto in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  
+1.  <span data-ttu-id="e7d16-108">Aprire il progetto in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e7d16-108">Open your project in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].</span></span>  
   
-2.  Scegliere **Aggiungi riferimento Web** dal menu **Progetto**.  
+2.  <span data-ttu-id="e7d16-109">Dal **progetto** menu, fare clic su **Aggiungi riferimento Web**.</span><span class="sxs-lookup"><span data-stu-id="e7d16-109">From the **Project** menu, click **Add Web Reference**.</span></span>  
   
-3.  Nella finestra di dialogo, impostare l'**URL** su [http:\/\/services.msdn.microsoft.com\/contentservices\/contentservice.asmx?wsdl](http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
+3.  <span data-ttu-id="e7d16-110">Nella finestra di dialogo, impostare il **URL** a [http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).</span><span class="sxs-lookup"><span data-stu-id="e7d16-110">In the dialog box, set the **URL** to [http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).</span></span>  
   
-4.  Premere **Vai** e quindi **Aggiungi riferimento**.  
+4.  <span data-ttu-id="e7d16-111">Premere **passare** e quindi **aggiungere riferimento**.</span><span class="sxs-lookup"><span data-stu-id="e7d16-111">Press **Go** and then **Add Reference**.</span></span>  
   
- Successivamente, chiamare il metodo di servizio Web e impostare <xref:System.Windows.FrameworkElement.DataContext%2A> del controllo o finestra appropriati sull'oggetto restituito.  Il metodo **GetContent** del servizio MTPS accetta un riferimento all'oggetto **getContentRequest**.  Pertanto, nell'esempio riportato di seguito viene impostato prima un oggetto della richiesta:  
+ <span data-ttu-id="e7d16-112">Successivamente, si chiama il metodo del servizio Web e impostare il <xref:System.Windows.FrameworkElement.DataContext%2A> appropriati del controllo o la finestra per l'oggetto restituito.</span><span class="sxs-lookup"><span data-stu-id="e7d16-112">Next, you call the Web service method and set the <xref:System.Windows.FrameworkElement.DataContext%2A> of the appropriate control or window to the returned object.</span></span> <span data-ttu-id="e7d16-113">Il **GetContent** metodo del servizio MTPS accetta un riferimento di **getContentRequest** oggetto.</span><span class="sxs-lookup"><span data-stu-id="e7d16-113">The **GetContent** method of the MTPS service takes a reference to the **getContentRequest** object.</span></span> <span data-ttu-id="e7d16-114">Pertanto, l'esempio seguente imposta prima di tutto un oggetto della richiesta:</span><span class="sxs-lookup"><span data-stu-id="e7d16-114">Therefore, the following example first sets up a request object:</span></span>  
   
  [!code-csharp[BindToWebService#Namespace](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- Dopo aver impostato <xref:System.Windows.FrameworkElement.DataContext%2A>, è possibile creare associazioni alle proprietà dell'oggetto su cui è stato impostato <xref:System.Windows.FrameworkElement.DataContext%2A>.  In questo esempio, <xref:System.Windows.FrameworkElement.DataContext%2A> è impostato sull'oggetto **getContentResponse** restituito dal metodo **GetContent**.  Nell'esempio riportato di seguito, <xref:System.Windows.Controls.ItemsControl> viene associato e visualizza i valori **locale** di **availableVersionsAndLocales** di **getContentResponse**.  
+ <span data-ttu-id="e7d16-115">Dopo il <xref:System.Windows.FrameworkElement.DataContext%2A> è stato impostato, è possibile creare associazioni per le proprietà dell'oggetto di <xref:System.Windows.FrameworkElement.DataContext%2A> è stata impostata su.</span><span class="sxs-lookup"><span data-stu-id="e7d16-115">After the <xref:System.Windows.FrameworkElement.DataContext%2A> has been set, you can create bindings to the properties of the object that the <xref:System.Windows.FrameworkElement.DataContext%2A> has been set to.</span></span> <span data-ttu-id="e7d16-116">In questo esempio, il <xref:System.Windows.FrameworkElement.DataContext%2A> è impostato sul **getContentResponse** oggetto restituito dal **GetContent** metodo.</span><span class="sxs-lookup"><span data-stu-id="e7d16-116">In this example, the <xref:System.Windows.FrameworkElement.DataContext%2A> is set to the **getContentResponse** object returned by the **GetContent** method.</span></span> <span data-ttu-id="e7d16-117">Nell'esempio seguente, il <xref:System.Windows.Controls.ItemsControl> viene associato e visualizza il **delle impostazioni locali** valori di **availableVersionsAndLocales** di **getContentResponse**.</span><span class="sxs-lookup"><span data-stu-id="e7d16-117">In the following example, the <xref:System.Windows.Controls.ItemsControl> binds to and displays the **locale** values of **availableVersionsAndLocales** of **getContentResponse**.</span></span>  
   
- [!code-xml[BindToWebService#Binding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
+ [!code-xaml[BindToWebService#Binding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- Per informazioni sulla struttura di **getContentResponse**, vedere [Content Service documentation](http://services.msdn.microsoft.com/ContentServices/ContentService.asmx) \(informazioni in lingua inglese\).  
+ <span data-ttu-id="e7d16-118">Per informazioni sulla struttura di **getContentResponse**, vedere [Content Service documentation](http://services.msdn.microsoft.com/ContentServices/ContentService.asmx).</span><span class="sxs-lookup"><span data-stu-id="e7d16-118">For information about the structure of **getContentResponse**, see [Content Service documentation](http://services.msdn.microsoft.com/ContentServices/ContentService.asmx).</span></span>  
   
-## Vedere anche  
- [Cenni preliminari sull'associazione dati](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Cenni preliminari sulle origini di associazione](../../../../docs/framework/wpf/data/binding-sources-overview.md)   
- [Rendere i dati disponibili per l'associazione in XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="e7d16-119">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="e7d16-119">See Also</span></span>  
+ [<span data-ttu-id="e7d16-120">Cenni preliminari sull'associazione dati</span><span class="sxs-lookup"><span data-stu-id="e7d16-120">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="e7d16-121">Panoramica delle origini di associazione</span><span class="sxs-lookup"><span data-stu-id="e7d16-121">Binding Sources Overview</span></span>](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
+ [<span data-ttu-id="e7d16-122">Rendere i dati disponibili per l'associazione in XAML</span><span class="sxs-lookup"><span data-stu-id="e7d16-122">Make Data Available for Binding in XAML</span></span>](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)

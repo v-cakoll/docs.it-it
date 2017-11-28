@@ -1,61 +1,59 @@
 ---
-title: "Metodi di estensione | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Metodi di estensione
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: b7edc3420eabe4de20a2fe39f38ae5eee53b593c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Metodi di estensione
-Metodi di estensione sono una funzionalità del linguaggio che consente metodi statici per essere chiamato utilizzando la sintassi di chiamata del metodo di istanza. Questi metodi devono accettare almeno un parametro, che rappresenta l'istanza che è il metodo su cui operare.  
+# <a name="extension-methods"></a><span data-ttu-id="61678-102">Metodi di estensione</span><span class="sxs-lookup"><span data-stu-id="61678-102">Extension Methods</span></span>
+<span data-ttu-id="61678-103">Metodi di estensione rappresentano una funzionalità del linguaggio che consente di metodi statici per chiamare utilizzando la sintassi di chiamata del metodo di istanza.</span><span class="sxs-lookup"><span data-stu-id="61678-103">Extension methods are a language feature that allows static methods to be called using instance method call syntax.</span></span> <span data-ttu-id="61678-104">Questi metodi devono accettare almeno un parametro, che rappresenta l'istanza che è il metodo su cui operare.</span><span class="sxs-lookup"><span data-stu-id="61678-104">These methods must take at least one parameter, which represents the instance the method is to operate on.</span></span>  
   
- La classe che definisce tali metodi di estensione è definita come la classe "sponsor" e devono essere dichiarati come static. Per utilizzare i metodi di estensione, uno necessario importare lo spazio dei nomi che definisce la classe di sponsor.  
+ <span data-ttu-id="61678-105">La classe che definisce i metodi di tale estensione è definita come la classe "sponsor" e deve essere dichiarata come statica.</span><span class="sxs-lookup"><span data-stu-id="61678-105">The class that defines such extension methods is referred to as the "sponsor" class, and it must be declared as static.</span></span> <span data-ttu-id="61678-106">Per utilizzare i metodi di estensione, uno necessario importare lo spazio dei nomi che definisce la classe sponsor.</span><span class="sxs-lookup"><span data-stu-id="61678-106">To use extension methods, one must import the namespace defining the sponsor class.</span></span>  
   
- **X evitare** frivolously definisce i metodi di estensione, soprattutto in tipi non si è proprietari.  
+ <span data-ttu-id="61678-107">**X evitare** frivolously definisce i metodi di estensione, soprattutto in tipi non si è proprietari.</span><span class="sxs-lookup"><span data-stu-id="61678-107">**X AVOID** frivolously defining extension methods, especially on types you don’t own.</span></span>  
   
- Se si è proprietari codice sorgente di un tipo, provare a utilizzare normali metodi di istanza. Se non si è proprietari e si desidera aggiungere un metodo, prestare molta attenzione. Il libero utilizzo dei metodi di estensione è in grado di occupare le API di tipi che non sono stati progettati per questi metodi.  
+ <span data-ttu-id="61678-108">Se si è proprietari di codice sorgente di un tipo, provare a utilizzare i normali metodi di istanza.</span><span class="sxs-lookup"><span data-stu-id="61678-108">If you do own source code of a type, consider using regular instance methods instead.</span></span> <span data-ttu-id="61678-109">Se non si è proprietari e si desidera aggiungere un metodo, prestare molta attenzione.</span><span class="sxs-lookup"><span data-stu-id="61678-109">If you don’t own, and you want to add a method, be very careful.</span></span> <span data-ttu-id="61678-110">Il libero utilizzo di metodi di estensione è potenzialmente ingombrare l'API di tipi che non sono stati progettati per disporre di questi metodi.</span><span class="sxs-lookup"><span data-stu-id="61678-110">Liberal use of extension methods has the potential of cluttering APIs of types that were not designed to have these methods.</span></span>  
   
- **✓ PROVARE** utilizzando metodi di estensione in uno dei seguenti scenari:  
+ <span data-ttu-id="61678-111">**Provare a ✓** utilizzando i metodi di estensione in uno dei seguenti scenari:</span><span class="sxs-lookup"><span data-stu-id="61678-111">**✓ CONSIDER** using extension methods in any of the following scenarios:</span></span>  
   
--   Per fornire supporto funzionalità rilevanti per ogni implementazione di un'interfaccia, se ha funzionalità possono essere scritti in termini di interfaccia principale. In questo modo le implementazioni concrete in caso contrario non è possibile assegnare alle interfacce. Ad esempio, il `LINQ to Objects` gli operatori vengono implementati come metodi di estensione per tutti <xref:System.Collections.Generic.IEnumerable%601> tipi. Pertanto, qualsiasi `IEnumerable<>` implementazione è automaticamente abilitata per LINQ.  
+-   <span data-ttu-id="61678-112">Per fornire supporto funzionalità rilevanti per ogni implementazione di un'interfaccia, se ha funzionalità possono essere scritti in termini di interfaccia principale.</span><span class="sxs-lookup"><span data-stu-id="61678-112">To provide helper functionality relevant to every implementation of an interface, if said functionality can be written in terms of the core interface.</span></span> <span data-ttu-id="61678-113">In questo modo le implementazioni concrete in caso contrario non è possibile assegnare alle interfacce.</span><span class="sxs-lookup"><span data-stu-id="61678-113">This is because concrete implementations cannot otherwise be assigned to interfaces.</span></span> <span data-ttu-id="61678-114">Ad esempio, il `LINQ to Objects` gli operatori vengono implementati come metodi di estensione per tutti i <xref:System.Collections.Generic.IEnumerable%601> tipi.</span><span class="sxs-lookup"><span data-stu-id="61678-114">For example, the `LINQ to Objects` operators are implemented as extension methods for all <xref:System.Collections.Generic.IEnumerable%601> types.</span></span> <span data-ttu-id="61678-115">Pertanto, qualsiasi `IEnumerable<>` implementazione è automaticamente abilitato per LINQ.</span><span class="sxs-lookup"><span data-stu-id="61678-115">Thus, any `IEnumerable<>` implementation is automatically LINQ-enabled.</span></span>  
   
--   Quando un metodo di istanza introdurrebbe una dipendenza da un tipo, ma tale dipendenza comporta l'interruzione di regole di gestione delle dipendenze. Ad esempio, una dipendenza da <xref:System.String> a <xref:System.Uri?displayProperty=fullName> probabilmente non è opportuno e pertanto `String.ToUri()` metodo di istanza restituzione `System.Uri` sarebbe la progettazione errata da una prospettiva di gestione delle dipendenze. Un metodo di estensione statici `Uri.ToUri(this string str)` restituzione `System.Uri` sarebbe migliore progettazione.  
+-   <span data-ttu-id="61678-116">Quando un metodo di istanza introdurrebbe una dipendenza su un tipo, ma tale dipendenza causa l'interruzione di regole di gestione di dipendenza.</span><span class="sxs-lookup"><span data-stu-id="61678-116">When an instance method would introduce a dependency on some type, but such a dependency would break dependency management rules.</span></span> <span data-ttu-id="61678-117">Ad esempio, una dipendenza da <xref:System.String> per <xref:System.Uri?displayProperty=nameWithType> probabilmente non è consigliabile e pertanto `String.ToUri()` il metodo di istanza restituzione `System.Uri` sarebbe la progettazione errata da una prospettiva di gestione di dipendenza.</span><span class="sxs-lookup"><span data-stu-id="61678-117">For example, a dependency from <xref:System.String> to <xref:System.Uri?displayProperty=nameWithType> is probably not desirable, and so `String.ToUri()` instance method returning `System.Uri` would be the wrong design from a dependency management perspective.</span></span> <span data-ttu-id="61678-118">Un metodo di estensione statici `Uri.ToUri(this string str)` restituzione `System.Uri` sarebbe migliore progettazione.</span><span class="sxs-lookup"><span data-stu-id="61678-118">A static extension method `Uri.ToUri(this string str)` returning `System.Uri` would be a much better design.</span></span>  
   
- **X evitare** la definizione di metodi di estensione su <xref:System.Object?displayProperty=fullName>.  
+ <span data-ttu-id="61678-119">**X evitare** la definizione di metodi di estensione su <xref:System.Object?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="61678-119">**X AVOID** defining extension methods on <xref:System.Object?displayProperty=nameWithType>.</span></span>  
   
- Gli utenti di Visual Basic non saranno in grado di chiamare tali metodi nei riferimenti agli oggetti utilizzando la sintassi del metodo di estensione. VB non supporta la chiamata di questi metodi perché, in Visual Basic, dichiarare un riferimento come oggetto forza tutte le chiamate di metodo su di essa per ritardo associato \(membro effettivo denominato viene determinato in fase di esecuzione\), mentre le associazioni ai metodi di estensione vengono determinate in fase di compilazione \(associazione anticipata\).  
+ <span data-ttu-id="61678-120">Gli utenti di Visual Basic non saranno in grado di chiamare tali metodi nei riferimenti agli oggetti utilizzando la sintassi del metodo di estensione.</span><span class="sxs-lookup"><span data-stu-id="61678-120">VB users will not be able to call such methods on object references using the extension method syntax.</span></span> <span data-ttu-id="61678-121">Visual Basic non supporta la chiamata di questi metodi perché, in Visual Basic, dichiarare un riferimento come oggetto forza tutte le chiamate di metodo in modo da essere tardiva associato (membro effettivo chiamato viene determinata in fase di esecuzione), mentre le associazioni ai metodi di estensione vengono determinate in fase di compilazione (associazione anticipata associato).</span><span class="sxs-lookup"><span data-stu-id="61678-121">VB does not support calling such methods because, in VB, declaring a reference as Object forces all method invocations on it to be late bound (actual member called is determined at runtime), while bindings to extension methods are determined at compile-time (early bound).</span></span>  
   
- Si noti che la linea guida si applicano ad altri linguaggi, in cui è presente lo stesso comportamento di associazione, o in cui non sono supportati i metodi di estensione.  
+ <span data-ttu-id="61678-122">Si noti che la linea guida si applica ad altri linguaggi, in cui è presente lo stesso comportamento di associazione, o in cui non sono supportati i metodi di estensione.</span><span class="sxs-lookup"><span data-stu-id="61678-122">Note that the guideline applies to other languages where the same binding behavior is present, or where extension methods are not supported.</span></span>  
   
- **X non** inserire i metodi di estensione nello spazio dei nomi stesso come tipo esteso a meno che non sia per l'aggiunta di metodi a interfacce o per la gestione delle dipendenze.  
+ <span data-ttu-id="61678-123">**X non** inserire i metodi di estensione nello spazio dei nomi stesso come il tipo esteso a meno che non sia per l'aggiunta di metodi a interfacce o per la gestione delle dipendenze.</span><span class="sxs-lookup"><span data-stu-id="61678-123">**X DO NOT** put extension methods in the same namespace as the extended type unless it is for adding methods to interfaces or for dependency management.</span></span>  
   
- **X evitare** la definizione di due o più metodi di estensione con la stessa firma, anche se si trovano in diversi spazi dei nomi.  
+ <span data-ttu-id="61678-124">**X evitare** la definizione di due o più metodi di estensione con la stessa firma, anche se si trovano in spazi dei nomi diversi.</span><span class="sxs-lookup"><span data-stu-id="61678-124">**X AVOID** defining two or more extension methods with the same signature, even if they reside in different namespaces.</span></span>  
   
- **✓ PROVARE** la definizione di metodi di estensione nello spazio dei nomi stesso come tipo esteso se il tipo è un'interfaccia e i metodi di estensione sono concepiti per essere utilizzate in molti o tutti i casi.  
+ <span data-ttu-id="61678-125">**Provare a ✓** che definisce i metodi di estensione nello spazio dei nomi stesso come il tipo esteso se il tipo è un'interfaccia e i metodi di estensione sono concepiti per essere utilizzate in molti o tutti i casi.</span><span class="sxs-lookup"><span data-stu-id="61678-125">**✓ CONSIDER** defining extension methods in the same namespace as the extended type if the type is an interface and if the extension methods are meant to be used in most or all cases.</span></span>  
   
- **X non** definire metodi di estensione che implementa una funzionalità negli spazi dei nomi in genere associati con altre funzionalità. Definire invece li nello spazio dei nomi associato alla funzione che a cui appartengono.  
+ <span data-ttu-id="61678-126">**X non** definire metodi di estensione che implementa una funzionalità negli spazi dei nomi in genere associata con altre funzionalità.</span><span class="sxs-lookup"><span data-stu-id="61678-126">**X DO NOT** define extension methods implementing a feature in namespaces normally associated with other features.</span></span> <span data-ttu-id="61678-127">Invece, definirli nello spazio dei nomi associato alla funzionalità a che cui appartengono.</span><span class="sxs-lookup"><span data-stu-id="61678-127">Instead, define them in the namespace associated with the feature they belong to.</span></span>  
   
- **X evitare** generico di denominazione degli spazi dei nomi dedicato ai metodi di estensione \(ad esempio, "estensioni"\). Utilizzare un nome descrittivo \(ad esempio, "Routing"\) invece.  
+ <span data-ttu-id="61678-128">**X evitare** generico di denominazione degli spazi dei nomi dedicato ai metodi di estensione (ad esempio, "estensioni").</span><span class="sxs-lookup"><span data-stu-id="61678-128">**X AVOID** generic naming of namespaces dedicated to extension methods (e.g., "Extensions").</span></span> <span data-ttu-id="61678-129">Utilizzare un nome descrittivo (ad esempio, "Routing") invece.</span><span class="sxs-lookup"><span data-stu-id="61678-129">Use a descriptive name (e.g., "Routing") instead.</span></span>  
   
- *Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti sono riservati.*  
+ <span data-ttu-id="61678-130">*Parti © 2005, 2009 Microsoft Corporation. Tutti i diritti riservati.*</span><span class="sxs-lookup"><span data-stu-id="61678-130">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Ristampato con l'autorizzazione di Pearson formazione, Inc. da [Framework Design Guidelines: convenzioni idiomi e modelli per librerie .NET riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicati il 22 ottobre 2008 da Addison\-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*  
+ <span data-ttu-id="61678-131">*State ristampate dall'autorizzazione di Pearson Education, Inc. da [linee guida: convenzioni, idiomi e modelli per le librerie .NET di riutilizzabile, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina e Brad Abrams, pubblicato il 22 ottobre 2008 di Addison-Wesley Professional come parte della serie di sviluppo di Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="61678-131">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vedere anche  
- [Indicazioni per la progettazione di membri](../../../docs/standard/design-guidelines/member.md)   
- [Linee guida](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="61678-132">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="61678-132">See Also</span></span>  
+ [<span data-ttu-id="61678-133">Linee guida di progettazione di membro</span><span class="sxs-lookup"><span data-stu-id="61678-133">Member Design Guidelines</span></span>](../../../docs/standard/design-guidelines/member.md)  
+ [<span data-ttu-id="61678-134">Linee guida per la progettazione di Framework</span><span class="sxs-lookup"><span data-stu-id="61678-134">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

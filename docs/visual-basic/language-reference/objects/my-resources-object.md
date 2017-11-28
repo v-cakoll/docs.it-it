@@ -1,107 +1,89 @@
 ---
-title: Oggetto My. Resources | Documenti di Microsoft
-ms.date: 2015-07-20
+title: Oggetto My.Resources
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - My.Resources
 - My.Resources.MyResources.ResourceManager
 - My.Resources.MyResources.Culture
-dev_langs:
-- VB
-helpviewer_keywords:
-- My.Resources object
+helpviewer_keywords: My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6ad5bd4e33438256719b59cb0936cf6bc8525ab1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b2a2de7229f59e7deea29fe4186a5e466459d9fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="myresources-object"></a>Oggetto My.Resources
-Fornisce classi e proprietà per accedere alle risorse dell'applicazione.  
+# <a name="myresources-object"></a><span data-ttu-id="019b4-102">Oggetto My.Resources</span><span class="sxs-lookup"><span data-stu-id="019b4-102">My.Resources Object</span></span>
+<span data-ttu-id="019b4-103">Fornisce proprietà e le classi per accedere alle risorse dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="019b4-103">Provides properties and classes for accessing the application's resources.</span></span>  
   
-## <a name="remarks"></a>Note  
- Il `My.Resources` oggetto fornisce accesso alle risorse dell'applicazione e consente in modo dinamico di recuperare le risorse per l'applicazione. Per ulteriori informazioni, vedere [risorse dell'applicazione di gestione (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-resources-dotnet).  
+## <a name="remarks"></a><span data-ttu-id="019b4-104">Note</span><span class="sxs-lookup"><span data-stu-id="019b4-104">Remarks</span></span>  
+ <span data-ttu-id="019b4-105">Il `My.Resources` oggetto fornisce l'accesso alle risorse dell'applicazione e consente in modo dinamico le risorse di recuperare per l'applicazione.</span><span class="sxs-lookup"><span data-stu-id="019b4-105">The `My.Resources` object provides access to the application's resources and lets you dynamically retrieve resources for your application.</span></span> <span data-ttu-id="019b4-106">Per ulteriori informazioni, vedere [risorse dell'applicazione di gestione (.NET)](/visualstudio/ide/managing-application-resources-dotnet).</span><span class="sxs-lookup"><span data-stu-id="019b4-106">For more information, see [Managing Application Resources (.NET)](/visualstudio/ide/managing-application-resources-dotnet).</span></span>  
   
- Il `My.Resources` oggetto espone solo le risorse globali. Non fornisce accesso ai file di risorse associati ai form. È necessario accedere alle risorse di modulo dal modulo. Per altre informazioni, vedere [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5).  
+ <span data-ttu-id="019b4-107">Il `My.Resources` oggetto espone solo le risorse globali.</span><span class="sxs-lookup"><span data-stu-id="019b4-107">The `My.Resources` object exposes only global resources.</span></span> <span data-ttu-id="019b4-108">Non fornisce accesso ai file di risorse associato al form.</span><span class="sxs-lookup"><span data-stu-id="019b4-108">It does not provide access to resource files associated with forms.</span></span> <span data-ttu-id="019b4-109">È necessario accedere alle risorse di modulo dal modulo.</span><span class="sxs-lookup"><span data-stu-id="019b4-109">You must access the form resources from the form.</span></span> <span data-ttu-id="019b4-110">Per altre informazioni, vedere [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5).</span><span class="sxs-lookup"><span data-stu-id="019b4-110">For more information, see [Walkthrough: Localizing Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5).</span></span>  
   
- È possibile accedere a file di risorse specifiche delle impostazioni cultura dell'applicazione dal `My.Resources` oggetto. Per impostazione predefinita, il `My.Resources` oggetto cerca le risorse dal file di risorse che corrisponde alla lingua nel <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A>proprietà.</xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> Tuttavia, è possibile ignorare questo comportamento e specificare determinate impostazioni cultura da utilizzare per le risorse. Per ulteriori informazioni, vedere [risorse nelle applicazioni Desktop](http://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890).  
+ <span data-ttu-id="019b4-111">È possibile accedere a file di risorse specifiche delle impostazioni cultura dell'applicazione dal `My.Resources` oggetto.</span><span class="sxs-lookup"><span data-stu-id="019b4-111">You can access the application's culture-specific resource files from the `My.Resources` object.</span></span> <span data-ttu-id="019b4-112">Per impostazione predefinita, il `My.Resources` oggetto cerca le risorse dal file di risorse che corrisponde alle impostazioni cultura nel <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> proprietà.</span><span class="sxs-lookup"><span data-stu-id="019b4-112">By default, the `My.Resources` object looks up resources from the resource file that matches the culture in the <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> property.</span></span> <span data-ttu-id="019b4-113">Tuttavia, è possibile eseguire l'override di questo comportamento e specificare determinate impostazioni cultura da utilizzare per le risorse.</span><span class="sxs-lookup"><span data-stu-id="019b4-113">However, you can override this behavior and specify a particular culture to use for the resources.</span></span> <span data-ttu-id="019b4-114">Per altre informazioni, vedere [Risorse nelle applicazioni desktop](../../../framework/resources/index.md).</span><span class="sxs-lookup"><span data-stu-id="019b4-114">For more information, see [Resources in Desktop Apps](../../../framework/resources/index.md).</span></span>  
   
-## <a name="properties"></a>Proprietà  
- Le proprietà del `My.Resources` oggetto fornisce accesso in sola lettura alle risorse dell'applicazione. Per aggiungere o rimuovere risorse, utilizzare il **progettazione**. Per ulteriori informazioni, vedere [procedura: aggiungere o rimuovere risorse](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d). È possibile accedere alle risorse aggiunte mediante il **progettazione** utilizzando `My.Resources.``resourceName`.  
+## <a name="properties"></a><span data-ttu-id="019b4-115">Proprietà</span><span class="sxs-lookup"><span data-stu-id="019b4-115">Properties</span></span>  
+ <span data-ttu-id="019b4-116">Le proprietà del `My.Resources` oggetto fornire accesso in sola lettura alle risorse dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="019b4-116">The properties of the `My.Resources` object provide read-only access to your application's resources.</span></span> <span data-ttu-id="019b4-117">Per aggiungere o rimuovere risorse, utilizzare il **progettazione**.</span><span class="sxs-lookup"><span data-stu-id="019b4-117">To add or remove resources, use the **Project Designer**.</span></span> <span data-ttu-id="019b4-118">Per ulteriori informazioni, vedere [procedura: aggiungere o rimuovere risorse](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span><span class="sxs-lookup"><span data-stu-id="019b4-118">For more information, see [How to: Add or Remove Resources](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span></span> <span data-ttu-id="019b4-119">È possibile accedere alle risorse aggiunte mediante il **progettazione** utilizzando `My.Resources.``resourceName`.</span><span class="sxs-lookup"><span data-stu-id="019b4-119">You can access resources added through the **Project Designer** by using `My.Resources.``resourceName`.</span></span>  
   
- È inoltre possibile aggiungere o rimuovere i file di risorse selezionando il progetto in **Esplora** e facendo clic su **Aggiungi nuovo elemento** o **Aggiungi elemento esistente** dal **progetto** menu. È possibile accedere alle risorse aggiunte in questo modo tramite `My.Resources.``resourceFileName`.`resourceName`.  
+ <span data-ttu-id="019b4-120">È anche possibile aggiungere o rimuovere i file di risorse, selezionare il progetto in **Esplora** e facendo clic su **Aggiungi nuovo elemento** o **Aggiungi elemento esistente** dal  **Progetto** menu.</span><span class="sxs-lookup"><span data-stu-id="019b4-120">You can also add or remove resource files by selecting your project in **Solution Explorer** and clicking **Add New Item** or **Add Existing Item** from the **Project** menu.</span></span> <span data-ttu-id="019b4-121">È possibile accedere alle risorse aggiunte in questo modo tramite `My.Resources.``resourceFileName`.`resourceName`.</span><span class="sxs-lookup"><span data-stu-id="019b4-121">You can access resources added in this manner by using `My.Resources.``resourceFileName`.`resourceName`.</span></span>  
   
- Ogni risorsa ha un nome, categoria e valore, e queste impostazioni determinano l'aspetto delle proprietà per accedere alla risorsa nel `My.Resources` oggetto. Per le risorse aggiunte nel **progettazione**:  
+ <span data-ttu-id="019b4-122">Ogni risorsa ha un nome, categoria e valore, e queste impostazioni determinano l'aspetto delle proprietà per accedere alla risorsa nel `My.Resources` oggetto.</span><span class="sxs-lookup"><span data-stu-id="019b4-122">Each resource has a name, category, and value, and these resource settings determine how the property to access the resource appears in the `My.Resources` object.</span></span> <span data-ttu-id="019b4-123">Per le risorse aggiunte nel **progettazione**:</span><span class="sxs-lookup"><span data-stu-id="019b4-123">For resources added in the **Project Designer**:</span></span>  
   
--   Il nome determina il nome della proprietà,  
+-   <span data-ttu-id="019b4-124">Il nome determina il nome della proprietà,</span><span class="sxs-lookup"><span data-stu-id="019b4-124">The name determines the name of the property,</span></span>  
   
--   I dati della risorsa sono il valore della proprietà,  
+-   <span data-ttu-id="019b4-125">I dati delle risorse sono il valore della proprietà,</span><span class="sxs-lookup"><span data-stu-id="019b4-125">The resource data is the value of the property,</span></span>  
   
--   La categoria determina il tipo della proprietà:  
+-   <span data-ttu-id="019b4-126">La categoria determina il tipo della proprietà:</span><span class="sxs-lookup"><span data-stu-id="019b4-126">The category determines the type of the property:</span></span>  
   
-|Categoria|Tipo di dati di proprietà|  
+|<span data-ttu-id="019b4-127">Categoria</span><span class="sxs-lookup"><span data-stu-id="019b4-127">Category</span></span>|<span data-ttu-id="019b4-128">Tipo di dati di proprietà</span><span class="sxs-lookup"><span data-stu-id="019b4-128">Property data type</span></span>|  
 |---|---|  
-|**Stringhe**|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
-|**Immagini**|<xref:System.Drawing.Bitmap></xref:System.Drawing.Bitmap>|  
-|**Icone**|<xref:System.Drawing.Icon></xref:System.Drawing.Icon>|  
-|**Audio**|<xref:System.IO.UnmanagedMemoryStream></xref:System.IO.UnmanagedMemoryStream><br /><br /> La <xref:System.IO.UnmanagedMemoryStream>classe deriva dalla <xref:System.IO.Stream>classe, pertanto può essere utilizzato con metodi che accettano flussi, ad esempio il <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>(metodo).</xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> </xref:System.IO.Stream> </xref:System.IO.UnmanagedMemoryStream>|  
-|**File**|-   [Stringa](../../../visual-basic/language-reference/data-types/string-data-type.md) per file di testo.<br />- <xref:System.Drawing.Bitmap>per i file di immagine.</xref:System.Drawing.Bitmap><br />- <xref:System.Drawing.Icon>per i file icona.</xref:System.Drawing.Icon><br />- <xref:System.IO.UnmanagedMemoryStream>per i file audio.</xref:System.IO.UnmanagedMemoryStream>|  
-|**Altro**|Determinato dalle informazioni nella finestra di progettazione **tipo** colonna.|  
+|<span data-ttu-id="019b4-129">**Stringhe**</span><span class="sxs-lookup"><span data-stu-id="019b4-129">**Strings**</span></span>|[<span data-ttu-id="019b4-130">String</span><span class="sxs-lookup"><span data-stu-id="019b4-130">String</span></span>](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
+|<span data-ttu-id="019b4-131">**Immagini**</span><span class="sxs-lookup"><span data-stu-id="019b4-131">**Images**</span></span>|<xref:System.Drawing.Bitmap>|  
+|<span data-ttu-id="019b4-132">**Icone**</span><span class="sxs-lookup"><span data-stu-id="019b4-132">**Icons**</span></span>|<xref:System.Drawing.Icon>|  
+|<span data-ttu-id="019b4-133">**Audio**</span><span class="sxs-lookup"><span data-stu-id="019b4-133">**Audio**</span></span>|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <span data-ttu-id="019b4-134">Il <xref:System.IO.UnmanagedMemoryStream> deriva dalla classe di <xref:System.IO.Stream> classe può essere utilizzato con metodi che accettano flussi, ad esempio il <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> (metodo).</span><span class="sxs-lookup"><span data-stu-id="019b4-134">The <xref:System.IO.UnmanagedMemoryStream> class derives from the <xref:System.IO.Stream> class, so it can be used with methods that take streams, such as the <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> method.</span></span>|  
+|<span data-ttu-id="019b4-135">**File**</span><span class="sxs-lookup"><span data-stu-id="019b4-135">**Files**</span></span>|<span data-ttu-id="019b4-136">-   [Stringa](../../../visual-basic/language-reference/data-types/string-data-type.md) per file di testo.</span><span class="sxs-lookup"><span data-stu-id="019b4-136">-   [String](../../../visual-basic/language-reference/data-types/string-data-type.md) for text files.</span></span><br /><span data-ttu-id="019b4-137">-   <xref:System.Drawing.Bitmap>file di immagine.</span><span class="sxs-lookup"><span data-stu-id="019b4-137">-   <xref:System.Drawing.Bitmap> for image files.</span></span><br /><span data-ttu-id="019b4-138">-   <xref:System.Drawing.Icon>per i file di icona.</span><span class="sxs-lookup"><span data-stu-id="019b4-138">-   <xref:System.Drawing.Icon> for icon files.</span></span><br /><span data-ttu-id="019b4-139">-   <xref:System.IO.UnmanagedMemoryStream>per i file audio.</span><span class="sxs-lookup"><span data-stu-id="019b4-139">-   <xref:System.IO.UnmanagedMemoryStream> for sound files.</span></span>|  
+|<span data-ttu-id="019b4-140">**Altro**</span><span class="sxs-lookup"><span data-stu-id="019b4-140">**Other**</span></span>|<span data-ttu-id="019b4-141">Determinata dalle informazioni nella finestra di progettazione **tipo** colonna.</span><span class="sxs-lookup"><span data-stu-id="019b4-141">Determined by the information in the designer's **Type** column.</span></span>|  
   
-## <a name="classes"></a>Classi  
- Il `My.Resources` oggetto espone ogni file di risorse come una classe con le proprietà condivise. Il nome della classe è identico al nome del file di risorse. Come descritto nella sezione precedente, le risorse in un file di risorse sono esposte come proprietà nella classe.  
+## <a name="classes"></a><span data-ttu-id="019b4-142">Classi</span><span class="sxs-lookup"><span data-stu-id="019b4-142">Classes</span></span>  
+ <span data-ttu-id="019b4-143">Il `My.Resources` oggetto espone ogni file di risorse come una classe con le proprietà condivise.</span><span class="sxs-lookup"><span data-stu-id="019b4-143">The `My.Resources` object exposes each resource file as a class with shared properties.</span></span> <span data-ttu-id="019b4-144">Il nome della classe è identico al nome del file di risorse.</span><span class="sxs-lookup"><span data-stu-id="019b4-144">The class name is the same as the name of the resource file.</span></span> <span data-ttu-id="019b4-145">Come descritto nella sezione precedente, le risorse in un file di risorse sono esposte come proprietà nella classe.</span><span class="sxs-lookup"><span data-stu-id="019b4-145">As described in the previous section, the resources in a resource file are exposed as properties in the class.</span></span>  
   
-## <a name="example"></a>Esempio  
- In questo esempio imposta il titolo di un form per la risorsa di stringa denominata `Form1Title` nel file di risorse dell'applicazione. Per eseguire l'esempio, l'applicazione deve disporre di una stringa denominata `Form1Title` nel relativo file di risorse. Per ulteriori informazioni, vedere [procedura: aggiungere o rimuovere risorse](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).  
+## <a name="example"></a><span data-ttu-id="019b4-146">Esempio</span><span class="sxs-lookup"><span data-stu-id="019b4-146">Example</span></span>  
+ <span data-ttu-id="019b4-147">In questo esempio imposta il titolo di un form per la risorsa di stringa denominata `Form1Title` nel file di risorse dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="019b4-147">This example sets the title of a form to the string resource named `Form1Title` in the application resource file.</span></span> <span data-ttu-id="019b4-148">Per eseguire l'esempio, l'applicazione deve avere una stringa denominata `Form1Title` nel relativo file di risorse.</span><span class="sxs-lookup"><span data-stu-id="019b4-148">For the example to work, the application must have a string named `Form1Title` in its resource file.</span></span> <span data-ttu-id="019b4-149">Per ulteriori informazioni, vedere [procedura: aggiungere o rimuovere risorse](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span><span class="sxs-lookup"><span data-stu-id="019b4-149">For more information, see [How to: Add or Remove Resources](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span></span>  
   
- [!code-vb[VbVbalrMyResources n.&1;](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
   
-## <a name="example"></a>Esempio  
- In questo esempio imposta l'icona del form sull'icona denominata `Form1Icon` che viene archiviato nel file di risorse dell'applicazione. Per eseguire l'esempio, l'applicazione deve contenere un'icona denominata `Form1Icon` nel relativo file di risorse.  
+## <a name="example"></a><span data-ttu-id="019b4-150">Esempio</span><span class="sxs-lookup"><span data-stu-id="019b4-150">Example</span></span>  
+ <span data-ttu-id="019b4-151">In questo esempio imposta l'icona del form per l'icona denominato `Form1Icon` che viene archiviato nel file di risorse dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="019b4-151">This example sets the icon of the form to the icon named `Form1Icon` that is stored in the application's resource file.</span></span> <span data-ttu-id="019b4-152">Per eseguire l'esempio, l'applicazione deve avere un'icona denominata `Form1Icon` nel relativo file di risorse.</span><span class="sxs-lookup"><span data-stu-id="019b4-152">For the example to work, the application must have an icon named `Form1Icon` in its resource file.</span></span>  
   
- [!code-vb[VbVbalrMyResources n.&2;](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
+ [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
   
-## <a name="example"></a>Esempio  
- In questo esempio imposta l'immagine di sfondo di un form per la risorsa immagine denominata `Form1Background`, ovvero nel file di risorse dell'applicazione. Per eseguire questo esempio, l'applicazione deve contenere una risorsa immagine denominata `Form1Background` nel relativo file di risorse.  
+## <a name="example"></a><span data-ttu-id="019b4-153">Esempio</span><span class="sxs-lookup"><span data-stu-id="019b4-153">Example</span></span>  
+ <span data-ttu-id="019b4-154">In questo esempio imposta l'immagine di sfondo di un form per la risorsa immagine denominata `Form1Background`, ovvero nel file di risorse dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="019b4-154">This example sets the background image of a form to the image resource named `Form1Background`, which is in the application resource file.</span></span> <span data-ttu-id="019b4-155">Per eseguire questo esempio, l'applicazione deve avere una risorsa immagine denominata `Form1Background` nel relativo file di risorse.</span><span class="sxs-lookup"><span data-stu-id="019b4-155">For this example to work, the application must have an image resource named `Form1Background` in its resource file.</span></span>  
   
- [!code-vb[VbVbalrMyResources n.&3;](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
+ [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
   
-## <a name="example"></a>Esempio  
- In questo esempio riproduce il suono che viene archiviato come una risorsa audio denominata `Form1Greeting` nel file di risorse dell'applicazione. Per eseguire l'esempio, l'applicazione deve contenere una risorsa audio denominata `Form1Greeting` nel relativo file di risorse. Il `My.Computer.Audio.Play` metodo è disponibile solo per le applicazioni Windows Form.  
+## <a name="example"></a><span data-ttu-id="019b4-156">Esempio</span><span class="sxs-lookup"><span data-stu-id="019b4-156">Example</span></span>  
+ <span data-ttu-id="019b4-157">In questo esempio riproduce il suono che viene archiviato come una risorsa audio denominata `Form1Greeting` nel file di risorse dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="019b4-157">This example plays the sound that is stored as an audio resource named `Form1Greeting` in the application's resource file.</span></span> <span data-ttu-id="019b4-158">Per eseguire l'esempio, l'applicazione deve contenere una risorsa audio denominata `Form1Greeting` nel relativo file di risorse.</span><span class="sxs-lookup"><span data-stu-id="019b4-158">For the example to work, the application must have an audio resource named `Form1Greeting` in its resource file.</span></span> <span data-ttu-id="019b4-159">Il `My.Computer.Audio.Play` metodo è disponibile solo per le applicazioni Windows Form.</span><span class="sxs-lookup"><span data-stu-id="019b4-159">The `My.Computer.Audio.Play` method is available only for Windows Forms applications.</span></span>  
   
- [!code-vb[VbVbalrMyResources n.&4;](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
+ [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
   
-## <a name="example"></a>Esempio  
- In questo esempio recupera la versione in lingua francese di una risorsa di stringa dell'applicazione. La risorsa è denominata `Message`. Per modificare le impostazioni cultura che il `My.Resources` oggetto utilizza, l'esempio utilizza <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.</xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>  
+## <a name="example"></a><span data-ttu-id="019b4-160">Esempio</span><span class="sxs-lookup"><span data-stu-id="019b4-160">Example</span></span>  
+ <span data-ttu-id="019b4-161">In questo esempio recupera la versione in lingua francese di una risorsa di stringa dell'applicazione.</span><span class="sxs-lookup"><span data-stu-id="019b4-161">This example retrieves the French-culture version of a  string resource of the application.</span></span> <span data-ttu-id="019b4-162">La risorsa è denominata `Message`.</span><span class="sxs-lookup"><span data-stu-id="019b4-162">The resource is named `Message`.</span></span> <span data-ttu-id="019b4-163">Per modificare le impostazioni cultura che il `My.Resources` oggetto utilizza, l'esempio Usa <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.</span><span class="sxs-lookup"><span data-stu-id="019b4-163">To change the culture that the `My.Resources` object uses, the example uses <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.</span></span>  
   
- Per eseguire questo esempio, l'applicazione deve disporre di una stringa denominata `Message` in relativa risorsa file e l'applicazione deve avere la versione in lingua francese del file di risorse, ovvero Resources.fr-FR. resx. Per ulteriori informazioni, vedere [procedura: aggiungere o rimuovere risorse](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d). Se l'applicazione non dispone della versione in lingua francese del file di risorse, il `My.Resource` oggetto recupera la risorsa dal file di risorse di impostazioni cultura predefinite.  
+ <span data-ttu-id="019b4-164">Per eseguire questo esempio, l'applicazione deve avere una stringa denominata `Message` nella relativa risorsa file e l'applicazione devono avere la versione in lingua francese del file di risorse, ovvero Resources.fr-FR. resx.</span><span class="sxs-lookup"><span data-stu-id="019b4-164">For this example to work, the application must have a string named `Message` in its resource file, and the application should have the French-culture version of that resource file, Resources.fr-FR.resx.</span></span> <span data-ttu-id="019b4-165">Per ulteriori informazioni, vedere [procedura: aggiungere o rimuovere risorse](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span><span class="sxs-lookup"><span data-stu-id="019b4-165">For more information, see [How to: Add or Remove Resources](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d).</span></span> <span data-ttu-id="019b4-166">Se l'applicazione non ha la versione in lingua francese del file di risorse, il `My.Resource` oggetto recupera la risorsa dal file di risorse delle impostazioni cultura predefinite.</span><span class="sxs-lookup"><span data-stu-id="019b4-166">If the application does not have the French-culture version of the resource file, the `My.Resource` object retrieves the resource from the default-culture resource file.</span></span>  
   
- [!code-vb[VbVbalrMyResources&#10;](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
+ [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
   
-## <a name="see-also"></a>Vedere anche  
- [Procedura: aggiungere o rimuovere risorse](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)   
- [La gestione delle risorse dell'applicazione (.NET)](https://docs.microsoft.com/visualstudio/ide/managing-application-resources-dotnet)   
- [Risorse nelle applicazioni Desktop](http://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890)   
- [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+## <a name="see-also"></a><span data-ttu-id="019b4-167">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="019b4-167">See Also</span></span>  
+ [<span data-ttu-id="019b4-168">Procedura: Aggiungere o rimuovere risorse</span><span class="sxs-lookup"><span data-stu-id="019b4-168">How to: Add or Remove Resources</span></span>](http://msdn.microsoft.com/en-us/7b77bc06-3952-4799-b029-def3f8f7f88d)  
+ [<span data-ttu-id="019b4-169">Gestione delle risorse delle applicazioni (.NET)</span><span class="sxs-lookup"><span data-stu-id="019b4-169">Managing Application Resources (.NET)</span></span>](/visualstudio/ide/managing-application-resources-dotnet)  
+ [<span data-ttu-id="019b4-170">Risorse nelle applicazioni desktop</span><span class="sxs-lookup"><span data-stu-id="019b4-170">Resources in Desktop Apps</span></span>](../../../framework/resources/index.md)  
+ [<span data-ttu-id="019b4-171">Procedura dettagliata: Localizzazione di Windows Form</span><span class="sxs-lookup"><span data-stu-id="019b4-171">Walkthrough: Localizing Windows Forms</span></span>](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)

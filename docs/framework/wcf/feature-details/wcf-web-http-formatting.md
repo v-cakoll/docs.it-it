@@ -1,38 +1,37 @@
 ---
-title: "Formattazione di HTTP Web WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Formattazione di HTTP Web WCF
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3a41c6c7304234535993d83329c4faa464218e3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/21/2017
 ---
-# Formattazione di HTTP Web WCF
-Il modello di programmazione HTTP Web WCF consente di determinare in modo dinamico il formato migliore in cui un'operazione di servizio debba restituire la risposta.  Vengono supportati due metodi per determinare un formato appropriato: automatico ed esplicito.  
+# <a name="wcf-web-http-formatting"></a><span data-ttu-id="a85e1-102">Formattazione di HTTP Web WCF</span><span class="sxs-lookup"><span data-stu-id="a85e1-102">WCF Web HTTP formatting</span></span>
+<span data-ttu-id="a85e1-103">Il modello di programmazione HTTP Web WCF consente di determinare in modo dinamico il formato migliore in cui un'operazione di servizio debba restituire la risposta.</span><span class="sxs-lookup"><span data-stu-id="a85e1-103">The WCF Web HTTP programming model allows you to dynamically determine the best format for a service operation to return its response in.</span></span> <span data-ttu-id="a85e1-104">Vengono supportati due metodi per determinare un formato appropriato: automatico ed esplicito.</span><span class="sxs-lookup"><span data-stu-id="a85e1-104">Two methods for determining an appropriate format are supported: automatic and explicit.</span></span>  
   
-## Formattazione automatica  
- Se abilitata, la formattazione automatica sceglie il formato migliore nel quale verrà restituita la risposta,  controllando gli elementi seguenti, in ordine:  
+## <a name="automatic-formatting"></a><span data-ttu-id="a85e1-105">Formattazione automatica</span><span class="sxs-lookup"><span data-stu-id="a85e1-105">Automatic formatting</span></span>  
+ <span data-ttu-id="a85e1-106">Se abilitata, la formattazione automatica sceglie il formato migliore nel quale verrà restituita la risposta,</span><span class="sxs-lookup"><span data-stu-id="a85e1-106">When enabled, automatic formatting chooses the best format in which to return the response.</span></span> <span data-ttu-id="a85e1-107">controllando gli elementi seguenti, in ordine:</span><span class="sxs-lookup"><span data-stu-id="a85e1-107">It determines the best format by checking the following, in order:</span></span>  
   
-1.  i tipi di supporto nell'intestazione Accept del messaggio di richiesta;  
+1.  <span data-ttu-id="a85e1-108">i tipi di supporto nell'intestazione Accept del messaggio di richiesta;</span><span class="sxs-lookup"><span data-stu-id="a85e1-108">The media types in the request message’s Accept header.</span></span>  
   
-2.  il valore content\-type del messaggio di richiesta;  
+2.  <span data-ttu-id="a85e1-109">il valore content-type del messaggio di richiesta;</span><span class="sxs-lookup"><span data-stu-id="a85e1-109">The content-type of the request message.</span></span>  
   
-3.  l'impostazione del formato predefinita nell'operazione;  
+3.  <span data-ttu-id="a85e1-110">l'impostazione del formato predefinita nell'operazione;</span><span class="sxs-lookup"><span data-stu-id="a85e1-110">The default format setting in the operation.</span></span>  
   
-4.  l'impostazione del formato predefinita in WebHttpBehavior.  
+4.  <span data-ttu-id="a85e1-111">l'impostazione del formato predefinita in WebHttpBehavior.</span><span class="sxs-lookup"><span data-stu-id="a85e1-111">The default format setting in the WebHttpBehavior.</span></span>  
   
- Se il messaggio di richiesta contiene un'intestazione Accept, l'infrastruttura di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cerca un tipo supportato.  Se l'intestazione `Accept` specifica le priorità per i propri tipi di supporto, queste vengono rispettate.  Se non viene individuato alcun formato adatto nell'intestazione `Accept`, viene usato il valore content\-type del messaggio di richiesta.  Se non viene specificato alcun valore content\-type adatto, viene usata l'impostazione del formato predefinita per l'operazione.  Il formato predefinito viene impostato con il parametro `ResponseFormat` degli attributi <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>.  Se non viene specificato alcun formato predefinito nell'operazione, viene usato il valore della proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>.  La formattazione automatica si basa sulla proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  Se tale proprietà è impostata su `true`, l'infrastruttura di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] determina il formato migliore da usare.  La selezione automatica del formato è disabilitata per impostazione predefinita per la compatibilità con le versioni precedenti.  La selezione automatica del formato automatica può essere abilitata a livello di codice o tramite la configurazione.  Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato nel codice.  
+ <span data-ttu-id="a85e1-112">Se il messaggio di richiesta contiene un'intestazione Accept, l'infrastruttura di [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] cerca un tipo supportato.</span><span class="sxs-lookup"><span data-stu-id="a85e1-112">If the request message contains an Accept header the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infrastructure searches for a type that it supports.</span></span> <span data-ttu-id="a85e1-113">Se l'intestazione `Accept` specifica le priorità per i propri tipi di supporto, queste vengono rispettate.</span><span class="sxs-lookup"><span data-stu-id="a85e1-113">If the `Accept` header specifies priorities for its media types, they are honored.</span></span> <span data-ttu-id="a85e1-114">Se non viene individuato alcun formato adatto nell'intestazione `Accept`, viene usato il valore content-type del messaggio di richiesta.</span><span class="sxs-lookup"><span data-stu-id="a85e1-114">If no suitable format is found in the `Accept` header, the content-type of the request message is used.</span></span> <span data-ttu-id="a85e1-115">Se non viene specificato alcun valore content-type adatto, viene usata l'impostazione del formato predefinita per l'operazione.</span><span class="sxs-lookup"><span data-stu-id="a85e1-115">If no suitable content-type is specified, the default format setting for the operation is used.</span></span> <span data-ttu-id="a85e1-116">Il formato predefinito viene impostato con il parametro `ResponseFormat` degli attributi <xref:System.ServiceModel.Web.WebGetAttribute> e <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="a85e1-116">The default format is set with the `ResponseFormat` parameter of the <xref:System.ServiceModel.Web.WebGetAttribute> and <xref:System.ServiceModel.Web.WebInvokeAttribute> attributes.</span></span> <span data-ttu-id="a85e1-117">Se non viene specificato alcun formato predefinito nell'operazione, viene usato il valore della proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>.</span><span class="sxs-lookup"><span data-stu-id="a85e1-117">If no default format is specified on the operation, the value of the <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> property is used.</span></span> <span data-ttu-id="a85e1-118">La formattazione automatica si basa sulla proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.</span><span class="sxs-lookup"><span data-stu-id="a85e1-118">Automatic formatting relies on the <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> property.</span></span> <span data-ttu-id="a85e1-119">Se tale proprietà è impostata su `true`, l'infrastruttura di [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] determina il formato migliore da usare.</span><span class="sxs-lookup"><span data-stu-id="a85e1-119">When this property is set to `true`, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure determines the best format to use.</span></span> <span data-ttu-id="a85e1-120">La selezione automatica del formato è disabilitata per impostazione predefinita per la compatibilità con le versioni precedenti.</span><span class="sxs-lookup"><span data-stu-id="a85e1-120">Automatic format selection is disabled by default for backwards compatibility.</span></span> <span data-ttu-id="a85e1-121">La selezione automatica del formato automatica può essere abilitata a livello di codice o tramite la configurazione.</span><span class="sxs-lookup"><span data-stu-id="a85e1-121">Automatic format selection can be enabled programmatically or through configuration.</span></span> <span data-ttu-id="a85e1-122">Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato nel codice.</span><span class="sxs-lookup"><span data-stu-id="a85e1-122">The following example shows how to enable automatic format selection in code.</span></span>  
   
-```  
+```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     
 Uri baseAddress = new Uri("http://localhost:8000");  
   
@@ -60,14 +59,13 @@ try
 }  
   catch(CommunicationException ex)  
   {  
-     Console.WriteLine(“An exception occurred: “ + ex.Message());  
+     Console.WriteLine("An exception occurred: " + ex.Message());  
   }  
-  
 ```  
   
- La formattazione automatica può inoltre essere abilitata tramite la configurazione.  È possibile impostare la proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> direttamente nell'elemento <xref:System.ServiceModel.Description.WebHttpBehavior> o mediante l'elemento <xref:System.ServiceModel.Description.WebHttpEndpoint>.  Nell'esempio seguente viene indicato come abilitare la selezione automatica del formato nell'elemento <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+ <span data-ttu-id="a85e1-123">La formattazione automatica può inoltre essere abilitata tramite la configurazione.</span><span class="sxs-lookup"><span data-stu-id="a85e1-123">Automatic formatting can also be enabled through configuration.</span></span> <span data-ttu-id="a85e1-124">È possibile impostare la proprietà <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> direttamente nell'elemento <xref:System.ServiceModel.Description.WebHttpBehavior> o mediante l'elemento <xref:System.ServiceModel.Description.WebHttpEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="a85e1-124">You can set the <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> property directly on the <xref:System.ServiceModel.Description.WebHttpBehavior> or using the <xref:System.ServiceModel.Description.WebHttpEndpoint>.</span></span> <span data-ttu-id="a85e1-125">Nell'esempio seguente viene indicato come abilitare la selezione automatica del formato nell'elemento <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="a85e1-125">The following example shows how to enable the automatic format selection on the <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <behaviors>  
     <endpointBehaviors>  
@@ -85,9 +83,9 @@ try
 </system.serviceModel>  
 ```  
   
- Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato mediante <xref:System.ServiceModel.Description.WebHttpEndpoint>.  
+ <span data-ttu-id="a85e1-126">Nell'esempio seguente viene mostrato come abilitare la selezione automatica del formato mediante <xref:System.ServiceModel.Description.WebHttpEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="a85e1-126">The following example shows how to enable automatic format selection using <xref:System.ServiceModel.Description.WebHttpEndpoint>.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
     <standardEndpoints>  
       <webHttpEndpoint>  
@@ -98,12 +96,12 @@ try
   </system.serviceModel>  
 ```  
   
-## Formattazione esplicita  
- Come indicato nel nome, nella formattazione esplicita lo sviluppatore determina il formato migliore da usare all'interno del codice operativo.  Se il formato migliore è XML o JSON, lo sviluppatore imposta <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> su <xref:System.ServiceModel.Web.WebMessageFormat> o <xref:System.ServiceModel.Web.WebMessageFormat>.  Se la proprietà <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> non è impostata in modo esplicito, viene usato il formato predefinito dell'operazione.  
+## <a name="explicit-formatting"></a><span data-ttu-id="a85e1-127">Formattazione esplicita</span><span class="sxs-lookup"><span data-stu-id="a85e1-127">Explicit formatting</span></span>  
+ <span data-ttu-id="a85e1-128">Come indicato nel nome, nella formattazione esplicita lo sviluppatore determina il formato migliore da usare all'interno del codice operativo.</span><span class="sxs-lookup"><span data-stu-id="a85e1-128">As the name implies, in explicit formatting the developer determines the best format to use within the operation code.</span></span> <span data-ttu-id="a85e1-129">Se il formato migliore è XML o JSON, lo sviluppatore imposta <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> su <xref:System.ServiceModel.Web.WebMessageFormat.Xml> o <xref:System.ServiceModel.Web.WebMessageFormat.Json>.</span><span class="sxs-lookup"><span data-stu-id="a85e1-129">If the best format is XML or JSON the developer sets <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> to either <xref:System.ServiceModel.Web.WebMessageFormat.Xml> or <xref:System.ServiceModel.Web.WebMessageFormat.Json>.</span></span> <span data-ttu-id="a85e1-130">Se la proprietà <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> non è impostata in modo esplicito, viene usato il formato predefinito dell'operazione.</span><span class="sxs-lookup"><span data-stu-id="a85e1-130">If the <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> property is not explicitly set, then the operation’s default format is used.</span></span>  
   
- Nell'esempio seguente viene verificato il parametro della stringa di query di formato per un formato da usare.  Se è stato specificato, viene impostato il formato dell'operazione mediante <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>.  
+ <span data-ttu-id="a85e1-131">Nell'esempio seguente viene verificato il parametro della stringa di query di formato per un formato da usare.</span><span class="sxs-lookup"><span data-stu-id="a85e1-131">The following example checks the format query string parameter for a format to use.</span></span> <span data-ttu-id="a85e1-132">Se è stato specificato, viene impostato il formato dell'operazione mediante <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>.</span><span class="sxs-lookup"><span data-stu-id="a85e1-132">If it has been specified, it sets the operation’s format using <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>.</span></span>  
   
-```  
+```csharp
 public class Service : IService  
 {  
     [WebGet]  
@@ -131,7 +129,7 @@ public class Service : IService
     }  
 ```  
   
- Se è necessario supportare formati diversi da XML o JSON, definire l'operazione per ottenere un tipo restituito di <xref:System.ServiceModel.Channels.Message>.  All'interno del codice operativo, determinare il formato appropriato da usare e creare quindi un oggetto <xref:System.ServiceModel.Channels.Message> usando uno dei metodi seguenti:  
+ <span data-ttu-id="a85e1-133">Se è necessario supportare formati diversi da XML o JSON, definire l'operazione per ottenere un tipo restituito di <xref:System.ServiceModel.Channels.Message>.</span><span class="sxs-lookup"><span data-stu-id="a85e1-133">If you need to support formats other than XML or JSON, define your operation to have a return type of <xref:System.ServiceModel.Channels.Message>.</span></span> <span data-ttu-id="a85e1-134">All'interno del codice operativo, determinare il formato appropriato da usare e creare quindi un oggetto <xref:System.ServiceModel.Channels.Message> usando uno dei metodi seguenti:</span><span class="sxs-lookup"><span data-stu-id="a85e1-134">Within the operation code, determine the appropriate format to use and then create a <xref:System.ServiceModel.Channels.Message> object using one of the following methods:</span></span>  
   
 -   `WebOperationContext.CreateAtom10Response`  
   
@@ -143,10 +141,9 @@ public class Service : IService
   
 -   `WebOperationContext.CreateXmlResponse`  
   
- Ognuno di questi metodi usa il contenuto e crea un messaggio con il formato appropriato.  Il metodo `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` può essere usato per ottenere un elenco di formati preferiti dal client in ordine di preferenza decrescente.  Nell'esempio seguente viene indicato come usare `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` per determinare il formato da usare e viene quindi impiegato il metodo di risposta di creazione appropriato per creare il messaggio di risposta.  
+ <span data-ttu-id="a85e1-135">Ognuno di questi metodi usa il contenuto e crea un messaggio con il formato appropriato.</span><span class="sxs-lookup"><span data-stu-id="a85e1-135">Each of these methods takes content and creates a message with the appropriate format.</span></span> <span data-ttu-id="a85e1-136">Il metodo `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` può essere usato per ottenere un elenco di formati preferiti dal client in ordine di preferenza decrescente.</span><span class="sxs-lookup"><span data-stu-id="a85e1-136">The `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` method can be used to get a list of formats preferred by the client in order of decreasing preference.</span></span> <span data-ttu-id="a85e1-137">Nell'esempio seguente viene indicato come usare `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` per determinare il formato da usare e viene quindi impiegato il metodo di risposta di creazione appropriato per creare il messaggio di risposta.</span><span class="sxs-lookup"><span data-stu-id="a85e1-137">The following example shows how to use `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` to determine the format to use and then uses the appropriate create response method to create the response message.</span></span>  
   
-```  
-  
+```csharp
 public class Service : IService  
 {  
     public Message EchoListWithGet(string list)  
@@ -170,13 +167,12 @@ public class Service : IService
     return CreateXmlResponse(returnList);  
     }  
 }  
-  
 ```  
   
-## Vedere anche  
- <xref:System.UriTemplate>   
- <xref:System.UriTemplateMatch>   
- [Modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
- [UriTemplate e UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)   
- [Panoramica sul modello di programmazione HTTP Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)   
- [Modello a oggetti per la programmazione HTTP Web di WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a><span data-ttu-id="a85e1-138">Vedere anche</span><span class="sxs-lookup"><span data-stu-id="a85e1-138">See also</span></span>  
+ <xref:System.UriTemplate>  
+ <xref:System.UriTemplateMatch>  
+ [<span data-ttu-id="a85e1-139">Modello di programmazione HTTP Web WCF</span><span class="sxs-lookup"><span data-stu-id="a85e1-139">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [<span data-ttu-id="a85e1-140">UriTemplate e UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="a85e1-140">UriTemplate and UriTemplateTable</span></span>](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ [<span data-ttu-id="a85e1-141">Cenni preliminari sul modello di programmazione HTTP Web WCF</span><span class="sxs-lookup"><span data-stu-id="a85e1-141">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
+ [<span data-ttu-id="a85e1-142">Modello a oggetti di programmazione HTTP Web WCF</span><span class="sxs-lookup"><span data-stu-id="a85e1-142">WCF Web HTTP Programming Object Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
